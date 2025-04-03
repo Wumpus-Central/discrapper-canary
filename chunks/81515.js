@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'XQuery',
         aliases: ['xpath', 'xq', 'xqm'],
@@ -128,5 +128,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

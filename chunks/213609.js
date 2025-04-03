@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => S,
+    Z: () => I,
     h: () => O
 });
 var r = n(192379),
@@ -12,8 +12,8 @@ var r = n(192379),
     u = n(493773),
     d = n(592125),
     f = n(944486),
-    p = n(914010),
-    _ = n(626135),
+    _ = n(914010),
+    p = n(626135),
     h = n(367907),
     m = n(565384);
 function g(e, t, n) {
@@ -45,7 +45,7 @@ function E(e) {
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,19 +57,19 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = (0, l.trackMaker)({
-    analyticEventConfigs: _.AnalyticEventConfigs,
+let v = (0, l.trackMaker)({
+    analyticEventConfigs: p.AnalyticEventConfigs,
     dispatcher: c.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
@@ -82,14 +82,14 @@ function O(e) {
         null == e.name &&
         (0, m.Ez)().some((e) => {
             var t;
-            return null === (t = e._stackContext) || void 0 === t ? void 0 : t.isSlide;
+            return null == (t = e._stackContext) ? void 0 : t.isSlide;
         })
     )
         return;
     (0, m.Ps)(e);
-    let s = null !== (t = null == a ? void 0 : a.guild_id) && void 0 !== t ? t : p.Z.getGuildId(),
-        c = null !== (n = null == a ? void 0 : a.channel_id) && void 0 !== n ? n : f.Z.getChannelId(s),
-        u = (0, _.expandEventProperties)(
+    let s = null != (t = null == a ? void 0 : a.guild_id) ? t : _.Z.getGuildId(),
+        c = null != (n = null == a ? void 0 : a.channel_id) ? n : f.Z.getChannelId(s),
+        u = (0, p.expandEventProperties)(
             E(
                 {
                     impression_type: o,
@@ -100,13 +100,10 @@ function O(e) {
                 a
             )
         );
-    if (r) {
-        (0, m.dT)(null, null);
-        return;
-    }
-    null != i && null != o && ((0, _.debugLogEvent)(i, u), y(i, u)), (0, m.dT)(i, u);
+    if (r) return void (0, m.dT)(null, null);
+    null != i && null != o && ((0, p.debugLogEvent)(i, u), v(i, u)), (0, m.dT)(i, u);
 }
-function S(e) {
+function I(e) {
     let t =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
@@ -122,7 +119,7 @@ function S(e) {
             r && (i.current = e);
             let l = !o()(a.current, n);
             if ((l && (a.current = n), !r && !l)) return;
-            let c = b(E({}, e), { sequenceId: s()('impression_') });
+            let c = y(E({}, e), { sequenceId: s()('impression_') });
             return (
                 O(c, t.disableTrack),
                 () => {

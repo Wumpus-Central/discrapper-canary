@@ -1,7 +1,7 @@
 n.d(t, {
     AH: () => T,
     Ag: () => M,
-    CS: () => y,
+    CS: () => v,
     EW: () => L,
     OR: () => x,
     QB: () => N,
@@ -38,8 +38,8 @@ var r = n(990547),
     g = n(566078),
     E = n(981631),
     b = n(388032);
-let v = 5;
-async function y(e) {
+let y = 5;
+async function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
         let n = (
@@ -55,7 +55,7 @@ async function y(e) {
                 type: 'QUESTS_USER_STATUS_UPDATE',
                 user_status: n.quest_user_status
             });
-        else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0) return { errorHints: n.error_hints_v2.slice(0, v) };
+        else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0) return { errorHints: n.error_hints_v2.slice(0, y) };
     } catch (r) {
         var n;
         let e = new a.Z(r);
@@ -70,7 +70,7 @@ async function y(e) {
                     }
                 ]
             };
-        let t = null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : b.NW.string(b.t.xSCvBQ);
+        let t = null != (n = e.getAnyErrorMessage()) ? n : b.NW.string(b.t.xSCvBQ);
         return {
             errorHints: [
                 {
@@ -103,7 +103,7 @@ async function I() {
                     .map((e) => (0, p.WP)(e))
                     .filter((e) => {
                         var t;
-                        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || g.r.build(e.config).rewardPlatforms.length > 0;
+                        return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null || g.r.build(e.config).rewardPlatforms.length > 0;
                     }),
                 n = e.body.excluded_quests;
             o.Z.dispatch({
@@ -137,7 +137,7 @@ async function S(e) {
                     quest_id: t,
                     terminal: i,
                     is_overlay: __OVERLAY__,
-                    stack_trace: null !== (s = Error().stack) && void 0 !== s ? s : '',
+                    stack_trace: null != (s = Error().stack) ? s : '',
                     is_playtime_eligible: !0
                 }
             },
@@ -437,7 +437,7 @@ async function U(e, t) {
             properties: {
                 quest_id: e,
                 timestamp_sec: t.toString(),
-                stack_trace: null !== (n = Error().stack) && void 0 !== n ? n : ''
+                stack_trace: null != (n = Error().stack) ? n : ''
             }
         },
         rejectWithError: !1
@@ -445,13 +445,11 @@ async function U(e, t) {
 }
 async function G(e) {
     let t = (0, m.z)(m.i.VIDEO_PLAYER_TRANSCRIPT, e);
-    if (null == t) {
-        h.ZP.getState().setTranscriptAsset({
+    if (null == t)
+        return void h.ZP.getState().setTranscriptAsset({
             questId: e.id,
             fetchStatus: h.iF.FAILURE
         });
-        return;
-    }
     h.ZP.getState().setTranscriptAsset({
         questId: e.id,
         fetchStatus: h.iF.FETCHING

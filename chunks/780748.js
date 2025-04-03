@@ -6,35 +6,23 @@ var r = n(192379),
     s = n(417662),
     l = n(981631);
 function c(e) {
-    let { editor: t, channel: n, disableEnterToSubmit: c, onKeyDown: u, onKeyUp: d, onTab: f, onEnter: p, allowNewLines: _, submit: h, hideAutocomplete: m, moveSelection: g } = e;
+    let { editor: t, channel: n, disableEnterToSubmit: c, onKeyDown: u, onKeyUp: d, onTab: f, onEnter: _, allowNewLines: p, submit: h, hideAutocomplete: m, moveSelection: g } = e;
     return {
         handleKeyDown: r.useCallback(
             (e) => {
                 var r;
                 switch (e.which) {
                     case l.yXg.ARROW_UP:
-                        if (g(-1)) {
-                            e.preventDefault();
-                            return;
-                        }
+                        if (g(-1)) return void e.preventDefault();
                         break;
                     case l.yXg.ARROW_DOWN:
-                        if (g(1)) {
-                            e.preventDefault();
-                            return;
-                        }
+                        if (g(1)) return void e.preventDefault();
                         break;
                     case l.yXg.P:
-                        if ((0, s.E)(e, { ctrl: !0 }) && g(-1)) {
-                            e.preventDefault();
-                            return;
-                        }
+                        if ((0, s.E)(e, { ctrl: !0 }) && g(-1)) return void e.preventDefault();
                         break;
                     case l.yXg.N:
-                        if ((0, s.E)(e, { ctrl: !0 }) && g(1)) {
-                            e.preventDefault();
-                            return;
-                        }
+                        if ((0, s.E)(e, { ctrl: !0 }) && g(1)) return void e.preventDefault();
                         break;
                     case l.yXg.ESCAPE:
                         null == m || m();
@@ -50,18 +38,18 @@ function c(e) {
                         }
                         break;
                     case l.yXg.ENTER:
-                        if ((0, s.E)(e, {}) && (null == p ? void 0 : p(e))) {
+                        if ((0, s.E)(e, {}) && (null == _ ? void 0 : _(e))) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
                 }
-                if ((null === (r = t.onKeyDown) || void 0 === r ? void 0 : r.call(t, e)) === !0) {
+                if ((null == (r = t.onKeyDown) ? void 0 : r.call(t, e)) === !0) {
                     e.preventDefault(), e.stopPropagation();
                     return;
                 }
-                e.which !== l.yXg.ENTER || ((e.altKey || e.shiftKey || (c && !e.ctrlKey) || (0, a.L6)(t)) && _) || (e.preventDefault(), e.stopPropagation(), h()), null == u || u(e);
+                e.which !== l.yXg.ENTER || ((e.altKey || e.shiftKey || (c && !e.ctrlKey) || (0, a.L6)(t)) && p) || (e.preventDefault(), e.stopPropagation(), h()), null == u || u(e);
             },
-            [_, n.id, c, t, m, g, p, u, f, h]
+            [p, n.id, c, t, m, g, _, u, f, h]
         ),
         handleKeyUp: r.useCallback(
             (e) => {

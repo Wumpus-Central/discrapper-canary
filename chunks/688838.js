@@ -3,14 +3,14 @@ a.d(e, {
     Fi: () => r,
     Fr: () => l,
     Sq: () => i,
-    pE: () => _
+    pE: () => o
 });
 let r = '?',
     n = /\(error: (.*)\)/,
-    o = /captureMessage|captureException/;
-function _(...t) {
+    _ = /captureMessage|captureException/;
+function o(...t) {
     let e = t.sort((t, e) => t[0] - e[0]).map((t) => t[1]);
-    return (t, a = 0, _ = 0) => {
+    return (t, a = 0, o = 0) => {
         let i = [],
             s = t.split('\n');
         for (let t = a; t < s.length; t++) {
@@ -25,27 +25,26 @@ function _(...t) {
                         break;
                     }
                 }
-                if (i.length >= 50 + _) break;
+                if (i.length >= 50 + o) break;
             }
         }
-        return (function (t) {
-            if (!t.length) return [];
-            let e = Array.from(t);
-            return (
-                /sentryWrapped/.test(c(e).function || '') && e.pop(),
-                e.reverse(),
-                o.test(c(e).function || '') && (e.pop(), o.test(c(e).function || '') && e.pop()),
-                e.slice(0, 50).map((t) => ({
-                    ...t,
-                    filename: t.filename || c(e).filename,
-                    function: t.function || r
-                }))
-            );
-        })(i.slice(_));
+        var E = i.slice(o);
+        if (!E.length) return [];
+        let l = Array.from(E);
+        return (
+            /sentryWrapped/.test(c(l).function || '') && l.pop(),
+            l.reverse(),
+            _.test(c(l).function || '') && (l.pop(), _.test(c(l).function || '') && l.pop()),
+            l.slice(0, 50).map((t) => ({
+                ...t,
+                filename: t.filename || c(l).filename,
+                function: t.function || r
+            }))
+        );
     };
 }
 function i(t) {
-    return Array.isArray(t) ? _(...t) : t;
+    return Array.isArray(t) ? o(...t) : t;
 }
 function c(t) {
     return t[t.length - 1] || {};

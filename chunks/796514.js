@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = 'HTTP/([32]|1\\.[01])',
         r = /[A-Za-z][A-Za-z0-9-]*/,
@@ -82,5 +82,4 @@ function t(e) {
             e.inherit(i, { relevance: 0 })
         ]
     };
-}
-e.exports = t;
+};

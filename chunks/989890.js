@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'DNS Zone',
         aliases: ['bind', 'zone'],
@@ -20,5 +20,4 @@ function t(e) {
             e.inherit(e.NUMBER_MODE, { begin: /\b\d+[dhwm]?/ })
         ]
     };
-}
-e.exports = t;
+};

@@ -22,10 +22,7 @@ function u(e, t, n) {
 let d = 4 * s.Z.Millis.HOUR;
 class f extends o.Z {
     _initialize() {
-        if ((0, a.U)()) {
-            (0, i.pf)();
-            return;
-        }
+        if ((0, a.U)()) return void (0, i.pf)();
         setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => c.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, l.q)(), 10 * s.Z.Millis.SECOND), (this.intervalID = setInterval(l.q, d));
     }
     _terminate() {

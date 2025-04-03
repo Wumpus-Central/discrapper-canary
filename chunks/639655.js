@@ -1,4 +1,4 @@
-n.d(t, { I: () => _ }), n(653041), n(411104), n(610885), n(126298), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(47120);
+n.d(t, { I: () => p }), n(653041), n(411104), n(610885), n(126298), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(47120);
 var r = n(710845),
     i = n(358085),
     o = n(374023),
@@ -79,13 +79,10 @@ d.push(
                 null != this._inflate && ((this._inflate.onEnd = null), (this._inflate.chunks = [])), (this._inflate = null);
             }
             handleFlushEnd(e) {
-                let t;
-                let n = this._pako,
+                let t,
+                    n = this._pako,
                     i = this._inflate;
-                if (null == i) {
-                    new r.Z('GatewayCompressionHandler').error('flush end happened on closed compression adapter');
-                    return;
-                }
+                if (null == i) return void new r.Z('GatewayCompressionHandler').error('flush end happened on closed compression adapter');
                 if (e !== n.Z_OK) throw Error('zlib error, '.concat(e, ', ').concat(i.strm.msg));
                 let { chunks: o } = i,
                     a = o.length;
@@ -167,7 +164,7 @@ d.push(
             }
         }
     );
-class p extends f {
+class _ extends f {
     static canUse() {
         return !0;
     }
@@ -183,9 +180,9 @@ class p extends f {
     }
     close() {}
 }
-function _(e) {
-    if (o.s.isDiscordGatewayPlaintextSet()) return new p(e);
+function p(e) {
+    if (o.s.isDiscordGatewayPlaintextSet()) return new _(e);
     for (var t of d) if (t.canUse()) return new t(e);
-    return new p(e);
+    return new _(e);
 }
-d.push(p);
+d.push(_);

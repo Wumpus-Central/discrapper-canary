@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'variable',
             variants: [{ begin: '\\b([gtps][A-Z]{1}[a-zA-Z0-9]*)(\\[.+\\])?(?:\\s*?)' }, { begin: '\\$_[A-Z]+' }],
@@ -62,5 +62,4 @@ function t(e) {
         ].concat(n),
         illegal: ';$|^\\[|^=|&|\\{'
     };
-}
-e.exports = t;
+};

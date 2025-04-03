@@ -12,19 +12,19 @@ var r = n(566885),
             u = 4 === e,
             d = 6 === e,
             f = 7 === e,
-            p = 5 === e || d;
-        return function (_, h, m, g) {
-            for (var E, v, b = a(_), y = o(b), O = r(h, m), S = s(y), I = 0, T = g || l, N = t ? T(_, S) : n || f ? T(_, 0) : void 0; S > I; I++)
-                if ((p || I in y) && ((v = O((E = y[I]), I, b)), e)) {
-                    if (t) N[I] = v;
-                    else if (v)
+            _ = 5 === e || d;
+        return function (p, h, m, g) {
+            for (var E, b, y = a(p), v = o(y), O = r(h, m), I = s(v), S = 0, T = g || l, N = t ? T(p, I) : n || f ? T(p, 0) : void 0; I > S; S++)
+                if ((_ || S in v) && ((b = O((E = v[S]), S, y)), e))
+                    if (t) N[S] = b;
+                    else if (b)
                         switch (e) {
                             case 3:
                                 return !0;
                             case 5:
                                 return E;
                             case 6:
-                                return I;
+                                return S;
                             case 2:
                                 c(N, E);
                         }
@@ -35,7 +35,6 @@ var r = n(566885),
                             case 7:
                                 c(N, E);
                         }
-                }
             return d ? -1 : i || u ? u : N;
         };
     };

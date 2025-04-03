@@ -57,7 +57,7 @@ class o {
         if (this.isLocaleLoading(t) && !this.isLocaleLoaded(this.defaultLocale)) return this.fallbackMessage;
         let i = this.getMessageValue(e, this.defaultLocale);
         if (null != i) return i;
-        let o = null === (n = this.fallbackLoader) || void 0 === n ? void 0 : n.get(e, t);
+        let o = null == (n = this.fallbackLoader) ? void 0 : n.get(e, t);
         if (null != o) return o;
         let a = null != this._debugKeyMap ? `"${this._debugKeyMap[e]}" (${e})` : void 0,
             s = null != this._localeFileMap ? `${t} (${this._localeFileMap[t]})` : t,
@@ -66,7 +66,7 @@ class o {
     }
     getMessageValue(e, t) {
         var n, r, o;
-        let a = null === (n = this._parseCache[t]) || void 0 === n ? void 0 : n[e];
+        let a = null == (n = this._parseCache[t]) ? void 0 : n[e];
         if (a) return a;
         if (null == this.messages[t]) {
             this.supportedLocales.includes(t) && this._loadLocale(t);
@@ -75,23 +75,19 @@ class o {
         let s = this.messages[t][e];
         if (null != s) {
             let n = new i.InternalIntlMessage(s, t);
-            return ((null !== (r = (o = this._parseCache)[t]) && void 0 !== r ? r : (o[t] = {}))[e] = n), n;
+            return ((null != (r = (o = this._parseCache)[t]) ? r : (o[t] = {}))[e] = n), n;
         }
     }
     _loadLocale(e) {
         return r(this, void 0, void 0, function* () {
             var t, n, r, i;
             if (null != this.messages[e]) return;
-            if ((null === (t = this._localeLoadingPromises[e]) || void 0 === t ? void 0 : t.current) != null) {
-                yield null === (n = this._localeLoadingPromises[e]) || void 0 === n ? void 0 : n.current;
-                return;
-            }
-            if (null == this.localeImportMap[e]) {
+            if ((null == (t = this._localeLoadingPromises[e]) ? void 0 : t.current) != null) return void (yield null == (n = this._localeLoadingPromises[e]) ? void 0 : n.current);
+            if (null == this.localeImportMap[e])
                 if (!this.supportedLocales.includes(e)) return;
-                throw Error(`Requested to load locale ${e}, which should be supported, but no source for translation data was provided.`);
-            }
+                else throw Error(`Requested to load locale ${e}, which should be supported, but no source for translation data was provided.`);
             let o = this.localeImportMap[e](),
-                a = null !== (i = null === (r = this._localeLoadingPromises[e]) || void 0 === r ? void 0 : r.initialized) && void 0 !== i && i;
+                a = null != (i = null == (r = this._localeLoadingPromises[e]) ? void 0 : r.initialized) && i;
             (this._localeLoadingPromises[e] = {
                 initialized: a,
                 current: o
@@ -112,7 +108,7 @@ class o {
     }
     isLocaleLoading(e) {
         var t;
-        return (null === (t = this._localeLoadingPromises[e]) || void 0 === t ? void 0 : t.current) != null;
+        return (null == (t = this._localeLoadingPromises[e]) ? void 0 : t.current) != null;
     }
     isLocaleLoaded(e, t = !1) {
         let n = this._localeLoadingPromises[e];

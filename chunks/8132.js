@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /^[a-zA-Z][a-zA-Z0-9-]*/,
         r = ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
@@ -41,5 +41,4 @@ function t(e) {
             e.NUMBER_MODE
         ]
     };
-}
-e.exports = t;
+};

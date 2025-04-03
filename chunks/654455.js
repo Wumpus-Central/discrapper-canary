@@ -1,5 +1,5 @@
 n.d(t, {
-    LU: () => b,
+    LU: () => y,
     ZP: () => N
 }),
     n(47120),
@@ -16,7 +16,7 @@ var r,
 n(689079);
 var d = n(674563),
     f = n(526761);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -70,17 +70,24 @@ function m(e, t) {
 }
 let g = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
     E = { pendingUsages: [] },
-    v = new c.ZP({
+    b = new c.ZP({
         computeBonus: () => 1,
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: d.yP
     });
-function b(e, t) {
-    return e.filter((e) => !e.includes(':') || ((null == t ? void 0 : t.guild) != null && t.guild.id === e.split(':')[1])).map((e) => e.split(':')[0]);
-}
 function y(e, t) {
+    return e
+        .filter((e) => {
+            if (e.includes(':'))
+                if ((null == t ? void 0 : t.guild) != null) return t.guild.id === e.split(':')[1];
+                else return !1;
+            return !0;
+        })
+        .map((e) => e.split(':')[0]);
+}
+function v(e, t) {
     return 0 > Number(t.id) ? t.id : (null == e ? void 0 : e.guild) != null && null != t.guildId ? ''.concat(t.id, ':').concat(e.guild.id) : t.id;
 }
 function O(e) {
@@ -91,28 +98,28 @@ function O(e) {
     if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     E.pendingUsages = [];
 }
-function S(e) {
+function I(e) {
     let { command: t, context: n } = e;
     if (!g.includes(t.type)) return !1;
-    let r = y(n, t);
+    let r = v(n, t);
     E.pendingUsages.push({
         key: r,
         timestamp: Date.now()
     }),
-        v.track(r),
-        v.compute();
+        b.track(r),
+        b.compute();
 }
-function I() {
+function S() {
     var e, t;
-    let n = null !== (t = null === (e = u.Z.frecencyWithoutFetchingLatest.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== t ? t : {};
-    v.overwriteHistory(
-        o().mapValues(n, (e) => m(_({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+    let n = null != (t = null == (e = u.Z.frecencyWithoutFetchingLatest.applicationCommandFrecency) ? void 0 : e.applicationCommands) ? t : {};
+    b.overwriteHistory(
+        o().mapValues(n, (e) => m(p({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
         E.pendingUsages
     );
 }
 class T extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (E = e), this.syncWith([u.Z], I);
+        null != e && (E = e), this.syncWith([u.Z], S);
     }
     getState() {
         return E;
@@ -121,18 +128,18 @@ class T extends (r = a.ZP.PersistedStore) {
         return E.pendingUsages.length > 0;
     }
     getCommandFrecencyWithoutLoadingLatest() {
-        return v;
+        return b;
     }
     getScoreWithoutLoadingLatest(e, t) {
         var n;
-        return null !== (n = v.getScore(y(e, t))) && void 0 !== n ? n : 0;
+        return null != (n = b.getScore(v(e, t))) ? n : 0;
     }
     getTopCommandsWithoutLoadingLatest() {
-        return v.frequently;
+        return b.frequently;
     }
 }
-p(T, 'displayName', 'ApplicationCommandFrecencyStore'), p(T, 'persistKey', 'ApplicationCommandFrecencyV2');
+_(T, 'displayName', 'ApplicationCommandFrecencyStore'), _(T, 'persistKey', 'ApplicationCommandFrecencyV2');
 let N = new T(s.Z, {
-    APPLICATION_COMMAND_USED: S,
+    APPLICATION_COMMAND_USED: I,
     USER_SETTINGS_PROTO_UPDATE: O
 });

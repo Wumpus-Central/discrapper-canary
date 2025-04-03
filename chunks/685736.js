@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-let _ = new i.Z('Messages');
+let p = new i.Z('Messages');
 class h {
     static computeUsersAndMembers(e) {
         (0, d.Z)(e);
@@ -56,7 +56,7 @@ class h {
     constructor(e) {
         if ((f(this, 'connectionId', null), f(this, 'users', []), f(this, 'members', []), f(this, 'messages', []), e.length > 0)) {
             var t;
-            let n = null === (t = e[0]) || void 0 === t ? void 0 : t.connectionId,
+            let n = null == (t = e[0]) ? void 0 : t.connectionId,
                 [r, i] = h.computeUsersAndMembers(e);
             e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n), (this.users = r), (this.members = i), (this.messages = e.map((e) => e.message));
         }
@@ -76,7 +76,7 @@ class m {
         }
     }
     handleMessageCreate(e, t) {
-        !e.optimistic && !e.isPushNotification && null == e.sendMessageOptions && (0, u.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t);
+        e.optimistic || e.isPushNotification || null != e.sendMessageOptions || ((0, u.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t));
     }
     handleMessageUpdate(e, t) {
         null != e.message.id && null != e.message.channel_id && (0, u.$)(e.message.channel_id) && (g(e.message) ? this.upsertOne(e.guildId, e.message.channel_id, e.message, t) : this.updateOne(e.guildId, e.message.channel_id, e.message, t));
@@ -125,14 +125,11 @@ class m {
         i.replaceAll(e, t, d), i.trimChannel(e, t, c.ZP.saveLimit(t));
     }
     async updateOne(e, t, n, r) {
-        if (null == n.id) {
-            _.warn('updateOne: message.id is null; cannot update a message if we do not know its id.');
-            return;
-        }
+        if (null == n.id) return void p.warn('updateOne: message.id is null; cannot update a message if we do not know its id.');
         let i = s.Z.messages(r.database),
             a = await i.get(e, t, n.id),
             c = o.Z.lastTimeConnectedChanged();
-        null != a && i.put(e, t, l.a.fromMessage(e, t, p({}, a.message, n), c));
+        null != a && i.put(e, t, l.a.fromMessage(e, t, _({}, a.message, n), c));
     }
     deleteOne(e, t, n, r) {
         s.Z.messagesTransaction(r).deleteMessage(e, t, n);

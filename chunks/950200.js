@@ -28,7 +28,7 @@ if (!t)
             return Math.max.apply(null, n ? t.map(e, n) : e);
         }
     };
-var n = (function () {
+e.exports = (function () {
     var e = 5,
         n = 3,
         r = 1000,
@@ -112,27 +112,27 @@ var n = (function () {
                 u,
                 d,
                 f,
-                p = 0,
-                _ = [],
+                _ = 0,
+                p = [],
                 h = [];
             if (s == r)
                 for (l = n.r1; l <= n.r2; l++) {
                     for (d = 0, c = n.g1; c <= n.g2; c++) for (u = n.b1; u <= n.b2; u++) d += e[(f = o(l, c, u))] || 0;
-                    (p += d), (_[l] = p);
+                    (_ += d), (p[l] = _);
                 }
             else if (s == i)
                 for (l = n.g1; l <= n.g2; l++) {
                     for (d = 0, c = n.r1; c <= n.r2; c++) for (u = n.b1; u <= n.b2; u++) d += e[(f = o(c, l, u))] || 0;
-                    (p += d), (_[l] = p);
+                    (_ += d), (p[l] = _);
                 }
             else
                 for (l = n.b1; l <= n.b2; l++) {
                     for (d = 0, c = n.r1; c <= n.r2; c++) for (u = n.g1; u <= n.g2; u++) d += e[(f = o(c, u, l))] || 0;
-                    (p += d), (_[l] = p);
+                    (_ += d), (p[l] = _);
                 }
             return (
-                _.forEach(function (e, t) {
-                    h[t] = p - e;
+                p.forEach(function (e, t) {
+                    h[t] = _ - e;
                 }),
                 m(s == r ? 'r' : s == i ? 'g' : 'b')
             );
@@ -147,9 +147,9 @@ var n = (function () {
                 c = e + '2',
                 u = 0;
             for (l = n[s]; l <= n[c]; l++)
-                if (_[l] > p / 2) {
-                    for (i = n.copy(), o = n.copy(), a = (t = l - n[s]) <= (r = n[c] - l) ? Math.min(n[c] - 1, ~~(l + r / 2)) : Math.max(n[s], ~~(l - 1 - t / 2)); !_[a]; ) a++;
-                    for (u = h[a]; !u && _[a - 1]; ) u = h[--a];
+                if (p[l] > _ / 2) {
+                    for (i = n.copy(), o = n.copy(), a = (t = l - n[s]) <= (r = n[c] - l) ? Math.min(n[c] - 1, ~~(l + r / 2)) : Math.max(n[s], ~~(l - 1 - t / 2)); !p[a]; ) a++;
+                    for (u = h[a]; !u && p[a - 1]; ) u = h[--a];
                     return (i[c] = a), (o[s] = i[c] + 1), [i, o];
                 }
         }
@@ -189,9 +189,9 @@ var n = (function () {
                         u = 1 << (8 - e),
                         d = 0,
                         f = 0,
-                        p = 0;
-                    for (a = n.r1; a <= n.r2; a++) for (s = n.g1; s <= n.g2; s++) for (l = n.b1; l <= n.b2; l++) (c += i = r[o(a, s, l)] || 0), (d += i * (a + 0.5) * u), (f += i * (s + 0.5) * u), (p += i * (l + 0.5) * u);
-                    c ? (n._avg = [~~(d / c), ~~(f / c), ~~(p / c)]) : (n._avg = [~~((u * (n.r1 + n.r2 + 1)) / 2), ~~((u * (n.g1 + n.g2 + 1)) / 2), ~~((u * (n.b1 + n.b2 + 1)) / 2)]);
+                        _ = 0;
+                    for (a = n.r1; a <= n.r2; a++) for (s = n.g1; s <= n.g2; s++) for (l = n.b1; l <= n.b2; l++) (c += i = r[o(a, s, l)] || 0), (d += i * (a + 0.5) * u), (f += i * (s + 0.5) * u), (_ += i * (l + 0.5) * u);
+                    c ? (n._avg = [~~(d / c), ~~(f / c), ~~(_ / c)]) : (n._avg = [~~((u * (n.r1 + n.r2 + 1)) / 2), ~~((u * (n.g1 + n.g2 + 1)) / 2), ~~((u * (n.b1 + n.b2 + 1)) / 2)]);
                 }
                 return n._avg;
             },
@@ -245,10 +245,10 @@ var n = (function () {
                     s++;
                 });
                 var f = u(e, o),
-                    p = new a(function (e, n) {
+                    _ = new a(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });
-                function _(e, t) {
+                function p(e, t) {
                     for (var n, i = 1, a = 0; a < r; ) {
                         if (!(n = e.pop()).count()) {
                             e.push(n), a++;
@@ -260,20 +260,19 @@ var n = (function () {
                         if (!l || (e.push(l), c && (e.push(c), i++), i >= t || a++ > r)) return;
                     }
                 }
-                p.push(f), _(p, i * n);
+                _.push(f), p(_, i * n);
                 for (
                     var h = new a(function (e, n) {
                         return t.naturalOrder(e.count() * e.volume(), n.count() * n.volume());
                     });
-                    p.size();
+                    _.size();
 
                 )
-                    h.push(p.pop());
-                _(h, n - h.size());
+                    h.push(_.pop());
+                p(h, n - h.size());
                 for (var m = new l(); h.size(); ) m.push(h.pop());
                 return m;
             }
         }
     );
-})();
-e.exports = n.quantize;
+})().quantize;

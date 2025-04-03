@@ -43,13 +43,45 @@ var r = n(363406),
                   var a = n[o];
                   return i.call(t, o) ? (t[o] = e(t[o], a, r)) : (t[o] = a), t;
               }, a);
-    },
-    u = function (e, t) {
+    };
+e.exports = {
+    arrayToObject: l,
+    assign: function (e, t) {
         return Object.keys(t).reduce(function (e, n) {
             return (e[n] = t[n]), e;
         }, e);
     },
-    d = function (e, t, n) {
+    combine: function (e, t) {
+        return [].concat(e, t);
+    },
+    compact: function (e) {
+        for (
+            var t = [
+                    {
+                        obj: { o: e },
+                        prop: 'o'
+                    }
+                ],
+                n = [],
+                r = 0;
+            r < t.length;
+            ++r
+        )
+            for (var i = t[r], o = i.obj[i.prop], a = Object.keys(o), l = 0; l < a.length; ++l) {
+                var c = a[l],
+                    u = o[c];
+                'object' == typeof u &&
+                    null !== u &&
+                    -1 === n.indexOf(u) &&
+                    (t.push({
+                        obj: o,
+                        prop: c
+                    }),
+                    n.push(u));
+            }
+        return s(t), e;
+    },
+    decode: function (e, t, n) {
         var r = e.replace(/\+/g, ' ');
         if ('iso-8859-1' === n) return r.replace(/%[0-9a-f]{2}/gi, unescape);
         try {
@@ -58,7 +90,7 @@ var r = n(363406),
             return r;
         }
     },
-    f = function (e, t, n, i, o) {
+    encode: function (e, t, n, i, o) {
         if (0 === e.length) return e;
         var s = e;
         if (('symbol' == typeof e ? (s = Symbol.prototype.toString.call(e)) : 'string' != typeof e && (s = String(e)), 'iso-8859-1' === n))
@@ -87,58 +119,18 @@ var r = n(363406),
         }
         return l;
     },
-    p = function (e) {
-        for (
-            var t = [
-                    {
-                        obj: { o: e },
-                        prop: 'o'
-                    }
-                ],
-                n = [],
-                r = 0;
-            r < t.length;
-            ++r
-        )
-            for (var i = t[r], o = i.obj[i.prop], a = Object.keys(o), l = 0; l < a.length; ++l) {
-                var c = a[l],
-                    u = o[c];
-                'object' == typeof u &&
-                    null !== u &&
-                    -1 === n.indexOf(u) &&
-                    (t.push({
-                        obj: o,
-                        prop: c
-                    }),
-                    n.push(u));
-            }
-        return s(t), e;
-    },
-    _ = function (e) {
-        return '[object RegExp]' === Object.prototype.toString.call(e);
-    },
-    h = function (e) {
+    isBuffer: function (e) {
         return !!e && 'object' == typeof e && !!(e.constructor && e.constructor.isBuffer && e.constructor.isBuffer(e));
     },
-    m = function (e, t) {
-        return [].concat(e, t);
+    isRegExp: function (e) {
+        return '[object RegExp]' === Object.prototype.toString.call(e);
     },
-    g = function (e, t) {
+    maybeMap: function (e, t) {
         if (o(e)) {
             for (var n = [], r = 0; r < e.length; r += 1) n.push(t(e[r]));
             return n;
         }
         return t(e);
-    };
-e.exports = {
-    arrayToObject: l,
-    assign: u,
-    combine: m,
-    compact: p,
-    decode: d,
-    encode: f,
-    isBuffer: h,
-    isRegExp: _,
-    maybeMap: g,
+    },
     merge: c
 };

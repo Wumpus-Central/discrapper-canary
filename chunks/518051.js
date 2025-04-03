@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'AVR Assembly',
         case_insensitive: !0,
@@ -39,5 +39,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

@@ -13,9 +13,8 @@
         return;
     }
     function d(e, t, n, r) {
-        var i = Object.create((t && t.prototype instanceof E ? t : E).prototype),
-            o = new w(r || []);
-        return (i._invoke = A(e, n, o)), i;
+        var i = Object.create((t && t.prototype instanceof E ? t : E).prototype);
+        return (i._invoke = A(e, n, new w(r || []))), i;
     }
     function f(e, t, n) {
         try {
@@ -31,22 +30,22 @@
         }
     }
     (u = t.regeneratorRuntime = c ? e.exports : {}).wrap = d;
-    var p = 'suspendedStart',
-        _ = 'suspendedYield',
+    var _ = 'suspendedStart',
+        p = 'suspendedYield',
         h = 'executing',
         m = 'completed',
         g = {};
     function E() {}
-    function v() {}
     function b() {}
-    var y = {};
-    y[a] = function () {
+    function y() {}
+    var v = {};
+    v[a] = function () {
         return this;
     };
     var O = Object.getPrototypeOf,
-        S = O && O(O(D([])));
-    S && S !== r && i.call(S, a) && (y = S);
-    var I = (b.prototype = E.prototype = Object.create(y));
+        I = O && O(O(D([])));
+    I && I !== r && i.call(I, a) && (v = I);
+    var S = (y.prototype = E.prototype = Object.create(v));
     function T(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
             e[t] = function (e) {
@@ -92,12 +91,12 @@
         this._invoke = r;
     }
     function A(e, t, n) {
-        var r = p;
+        var r = _;
         return function (i, o) {
             if (r === h) throw Error('Generator is already running');
             if (r === m) {
                 if ('throw' === i) throw o;
-                return x();
+                return L();
             }
             for (n.method = i, n.arg = o; ; ) {
                 var a = n.delegate;
@@ -110,13 +109,13 @@
                 }
                 if ('next' === n.method) n.sent = n._sent = n.arg;
                 else if ('throw' === n.method) {
-                    if (r === p) throw ((r = m), n.arg);
+                    if (r === _) throw ((r = m), n.arg);
                     n.dispatchException(n.arg);
                 } else 'return' === n.method && n.abrupt('return', n.arg);
                 r = h;
                 var l = f(e, t, n);
                 if ('normal' === l.type) {
-                    if (((r = n.done ? m : _), l.arg === g)) continue;
+                    if (((r = n.done ? m : p), l.arg === g)) continue;
                     return {
                         value: l.arg,
                         done: n.done
@@ -165,23 +164,23 @@
                 return (o.next = o);
             }
         }
-        return { next: x };
+        return { next: L };
     }
-    function x() {
+    function L() {
         return {
             value: n,
             done: !0
         };
     }
-    (v.prototype = I.constructor = b),
-        (b.constructor = v),
-        (b[l] = v.displayName = 'GeneratorFunction'),
+    (b.prototype = S.constructor = y),
+        (y.constructor = b),
+        (y[l] = b.displayName = 'GeneratorFunction'),
         (u.isGeneratorFunction = function (e) {
             var t = 'function' == typeof e && e.constructor;
-            return !!t && (t === v || 'GeneratorFunction' === (t.displayName || t.name));
+            return !!t && (t === b || 'GeneratorFunction' === (t.displayName || t.name));
         }),
         (u.mark = function (e) {
-            return Object.setPrototypeOf ? Object.setPrototypeOf(e, b) : ((e.__proto__ = b), l in e || (e[l] = 'GeneratorFunction')), (e.prototype = Object.create(I)), e;
+            return Object.setPrototypeOf ? Object.setPrototypeOf(e, y) : ((e.__proto__ = y), l in e || (e[l] = 'GeneratorFunction')), (e.prototype = Object.create(S)), e;
         }),
         (u.awrap = function (e) {
             return { __await: e };
@@ -199,12 +198,12 @@
                       return e.done ? e.value : i.next();
                   });
         }),
-        T(I),
-        (I[l] = 'Generator'),
-        (I[a] = function () {
+        T(S),
+        (S[l] = 'Generator'),
+        (S[a] = function () {
             return this;
         }),
-        (I.toString = function () {
+        (S.toString = function () {
             return '[object Generator]';
         }),
         (u.keys = function (e) {
@@ -248,7 +247,7 @@
                             c = i.call(a, 'finallyLoc');
                         if (l && c) {
                             if (this.prev < a.catchLoc) return r(a.catchLoc, !0);
-                            if (this.prev < a.finallyLoc) return r(a.finallyLoc);
+                            else if (this.prev < a.finallyLoc) return r(a.finallyLoc);
                         } else if (l) {
                             if (this.prev < a.catchLoc) return r(a.catchLoc, !0);
                         } else if (c) {

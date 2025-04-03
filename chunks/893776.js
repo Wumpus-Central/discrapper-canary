@@ -15,15 +15,15 @@ var i = n(990547),
     u = n(882037),
     d = n(710845),
     f = n(777639),
-    p = n(703656),
-    _ = n(365007),
+    _ = n(703656),
+    p = n(365007),
     h = n(314897),
     m = n(480294),
     g = n(573261),
     E = n(572691),
-    v = n(981631),
-    b = n(792101);
-function y(e, t, n) {
+    b = n(981631),
+    y = n(792101);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,12 +47,12 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function S(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,17 +85,14 @@ function R(e) {
     let t = O({ type: 'LOGOUT' }, e);
     l.Z.dispatch(t).catch((e) => {
         var t;
-        throw (T.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
+        throw (T.error('Error while dispatching LOGOUT', e), null == (t = window.DiscordErrors) || t.softCrash(e), e);
     });
 }
 function P() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Z5c.DEFAULT_LOGGED_OUT;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.Z5c.DEFAULT_LOGGED_OUT;
     if ((R(), null == e)) return;
     let t = (0, f.D)();
-    if (null == t) {
-        (0, p.uL)(e);
-        return;
-    }
+    if (null == t) return void (0, _.uL)(e);
     E.Z.popAll(),
         t.reset({
             index: 0,
@@ -119,10 +116,10 @@ let w = {
                 isPasswordAttempt: !0
             }),
             g.Z.post(
-                I(
+                S(
                     O(
                         {
-                            url: v.ANM.LOGIN,
+                            url: b.ANM.LOGIN,
                             body: {
                                 login: t,
                                 password: n,
@@ -173,17 +170,17 @@ let w = {
                 (e) => {
                     var r, i, o;
                     let a = new c.yZ(e);
-                    if (null != e.body && (null === (r = e.body) || void 0 === r ? void 0 : r.suspended_user_token) != null)
+                    if (null != e.body && (null == (r = e.body) ? void 0 : r.suspended_user_token) != null)
                         throw (
                             (l.Z.dispatch({
                                 type: 'LOGIN_SUSPENDED_USER',
-                                suspendedUserToken: null === (o = e.body) || void 0 === o ? void 0 : o.suspended_user_token
+                                suspendedUserToken: null == (o = e.body) ? void 0 : o.suspended_user_token
                             }),
                             a)
                         );
-                    let s = null === (i = e.body) || void 0 === i ? void 0 : i.code;
+                    let s = null == (i = e.body) ? void 0 : i.code;
                     throw (
-                        (s === v.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && '' !== n
+                        (s === b.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && '' !== n
                             ? l.Z.dispatch({
                                   type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
                                   credentials: {
@@ -191,7 +188,7 @@ let w = {
                                       password: n
                                   }
                               })
-                            : s === v.evJ.ACCOUNT_DISABLED && null != n && '' !== n
+                            : s === b.evJ.ACCOUNT_DISABLED && null != n && '' !== n
                               ? l.Z.dispatch({
                                     type: 'LOGIN_ACCOUNT_DISABLED',
                                     credentials: {
@@ -199,7 +196,7 @@ let w = {
                                         password: n
                                     }
                                 })
-                              : s === v.evJ.PHONE_VERIFICATION_REQUIRED
+                              : s === b.evJ.PHONE_VERIFICATION_REQUIRED
                                 ? l.Z.dispatch({
                                       type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED',
                                       credentials: {
@@ -220,7 +217,7 @@ let w = {
     loginMFAv2(e) {
         let { code: t, ticket: n, source: r, giftCodeSKUId: o, isMultiAccount: a, mfaType: s } = e;
         return g.Z.post({
-            url: v.ANM.LOGIN_MFA(s),
+            url: b.ANM.LOGIN_MFA(s),
             body: {
                 code: t,
                 ticket: n,
@@ -242,14 +239,12 @@ let w = {
             })
             .catch((e) => {
                 var t;
-                if (null != e.body && null != e.body.suspended_user_token) {
-                    l.Z.dispatch({
+                if (null != e.body && null != e.body.suspended_user_token)
+                    return void l.Z.dispatch({
                         type: 'LOGIN_SUSPENDED_USER',
                         suspendedUserToken: e.body.suspended_user_token
                     });
-                    return;
-                }
-                if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === v.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
+                if ((null == (t = e.body) ? void 0 : t.code) === b.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
                 throw e;
             });
     },
@@ -258,7 +253,7 @@ let w = {
         return (
             null == n || n.abort('Starting non-conditional mediation'),
             l.Z.dispatch({ type: 'PASSWORDLESS_START' }),
-            (0, _.d$)()
+            (0, p.d$)()
                 .then((e) => {
                     let { challenge: n, ticket: o } = e;
                     return t(n).then((e) =>
@@ -284,7 +279,7 @@ let w = {
     loginWebAuthn(e) {
         let { ticket: t, credential: n, source: r, giftCodeSKUId: o } = e;
         return g.Z.post({
-            url: v.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+            url: b.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
             body: {
                 credential: n,
                 ticket: t,
@@ -310,13 +305,11 @@ let w = {
                     });
             })
             .catch((e) => {
-                if (null != e.body && null != e.body.suspended_user_token) {
-                    l.Z.dispatch({
+                if (null != e.body && null != e.body.suspended_user_token)
+                    return void l.Z.dispatch({
                         type: 'LOGIN_SUSPENDED_USER',
                         suspendedUserToken: e.body.suspended_user_token
                     });
-                    return;
-                }
                 throw (
                     (l.Z.dispatch({
                         type: 'PASSWORDLESS_FAILURE',
@@ -356,23 +349,23 @@ let w = {
     },
     logout() {
         var e;
-        let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Z5c.DEFAULT_LOGGED_OUT,
+        let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.Z5c.DEFAULT_LOGGED_OUT,
             n = arguments.length > 1 ? arguments[1] : void 0;
         return g.Z.post(
-            I(
+            S(
                 O(
                     {
-                        url: v.ANM.LOGOUT,
+                        url: b.ANM.LOGOUT,
                         body: {
-                            provider: (0, b.xJ)(),
-                            token: s.K.get(v.JkL),
-                            voip_provider: b.mv,
-                            voip_token: s.K.get(v.scU)
+                            provider: (0, y.xJ)(),
+                            token: s.K.get(b.JkL),
+                            voip_provider: y.mv,
+                            voip_token: s.K.get(b.scU)
                         },
                         oldFormErrors: !0,
                         trackedActionData: { event: i.NetworkActionNames.USER_LOGOUT }
                     },
-                    null != n && { headers: { authorization: null !== (e = o.getToken(n)) && void 0 !== e ? e : '' } }
+                    null != n && { headers: { authorization: null != (e = o.getToken(n)) ? e : '' } }
                 ),
                 { rejectWithError: !1 }
             )
@@ -399,10 +392,10 @@ let w = {
         );
     },
     verifySSOToken() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Z5c.DEFAULT_LOGGED_OUT;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.Z5c.DEFAULT_LOGGED_OUT;
         return a.tn
             .get({
-                url: v.ANM.ME,
+                url: b.ANM.ME,
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
@@ -410,7 +403,7 @@ let w = {
     },
     async verify(e) {
         let t = await g.Z.post({
-            url: v.ANM.VERIFY,
+            url: b.ANM.VERIFY,
             body: { token: e },
             trackedActionData: { event: i.NetworkActionNames.USER_VERIFY },
             rejectWithError: !1
@@ -425,21 +418,21 @@ let w = {
     },
     authorizePayment: (e) =>
         g.Z.post({
-            url: v.ANM.AUTHORIZE_PAYMENT,
+            url: b.ANM.AUTHORIZE_PAYMENT,
             body: { token: e },
             trackedActionData: { event: i.NetworkActionNames.AUTHORIZE_PAYMENT },
             rejectWithError: !0
         }),
     authorizeIPAddress: (e) =>
         g.Z.post({
-            url: v.ANM.AUTHORIZE_IP,
+            url: b.ANM.AUTHORIZE_IP,
             body: { token: e },
             trackedActionData: { event: i.NetworkActionNames.AUTHORIZE_IP },
             rejectWithError: !0
         }),
     verifyResend: () =>
         g.Z.post({
-            url: v.ANM.VERIFY_RESEND,
+            url: b.ANM.VERIFY_RESEND,
             oldFormErrors: !0,
             trackedActionData: { event: i.NetworkActionNames.USER_VERIFY_RESEND },
             rejectWithError: !1
@@ -451,16 +444,16 @@ let w = {
                 password: t,
                 source: n
             },
-            o = s.K.get(v.JkL),
-            a = (0, b.xJ)();
+            o = s.K.get(b.JkL),
+            a = (0, y.xJ)();
         null != a && null != o && ((r.push_provider = a), (r.push_token = o));
-        let u = s.K.get(v.scU);
-        null != b.mv && null != u && ((r.push_voip_provider = b.mv), (r.push_voip_token = u));
+        let u = s.K.get(b.scU);
+        null != y.mv && null != u && ((r.push_voip_provider = y.mv), (r.push_voip_token = u));
         try {
             let {
                 body: { mfa: e, sms: t, webauthn: n, ticket: o, token: a, backup: s, totp: l }
             } = await g.Z.post({
-                url: v.ANM.RESET_PASSWORD,
+                url: b.ANM.RESET_PASSWORD,
                 body: r,
                 oldFormErrors: !0,
                 trackedActionData: { event: i.NetworkActionNames.USER_RESET_PASSWORD },
@@ -492,7 +485,7 @@ let w = {
             l.Z.dispatch({ type: 'LOGIN_MFA' }),
             (
                 await g.Z.post({
-                    url: v.ANM.RESET_PASSWORD,
+                    url: b.ANM.RESET_PASSWORD,
                     body: {
                         code: n,
                         ticket: r,
@@ -516,7 +509,7 @@ let w = {
         try {
             return (
                 await g.Z.post({
-                    url: v.ANM.FORGOT_PASSWORD,
+                    url: b.ANM.FORGOT_PASSWORD,
                     body: { login: e },
                     oldFormErrors: !0,
                     trackedActionData: { event: i.NetworkActionNames.FORGOT_PASSWORD },
@@ -527,7 +520,7 @@ let w = {
             );
         } catch (n) {
             let t = new c.yZ(n);
-            if (t.code === v.evJ.PHONE_VERIFICATION_REQUIRED)
+            if (t.code === b.evJ.PHONE_VERIFICATION_REQUIRED)
                 return (
                     l.Z.dispatch({
                         type: 'LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION',
@@ -568,7 +561,7 @@ let w = {
               }, N)),
               (A = a.tn
                   .get({
-                      url: v.ANM.AUTH_LOCATION_METADATA,
+                      url: b.ANM.AUTH_LOCATION_METADATA,
                       retries: 2,
                       oldFormErrors: !0,
                       rejectWithError: !0
@@ -577,7 +570,7 @@ let w = {
                       (e) => {
                           var t, n, i, o, a;
                           if ((clearTimeout(r), null == m.Z.getAuthenticationConsentRequired())) {
-                              let t = null === (o = null == e ? void 0 : null === (i = e.body) || void 0 === i ? void 0 : i.consent_required) || void 0 === o || o;
+                              let t = null == (o = null == e || null == (i = e.body) ? void 0 : i.consent_required) || o;
                               l.Z.dispatch({
                                   type: 'SET_CONSENT_REQUIRED',
                                   consentRequired: t
@@ -586,10 +579,10 @@ let w = {
                           if (
                               (l.Z.dispatch({
                                   type: 'SET_LOCATION_METADATA',
-                                  countryCode: null !== (a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== a ? a : void 0
+                                  countryCode: null != (a = null == e || null == (t = e.body) ? void 0 : t.country_code) ? a : void 0
                               }),
                               (A = null),
-                              (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null)
+                              (null == e || null == (n = e.body) ? void 0 : n.promotional_email_opt_in) != null)
                           ) {
                               let t = e.body.promotional_email_opt_in;
                               (0, u.K4)({

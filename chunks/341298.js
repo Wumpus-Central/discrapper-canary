@@ -22,10 +22,7 @@ function u(e) {
 }
 function d(e) {
     return new Promise((t, n) => {
-        if (i.Z.getGuildId() === e) {
-            t();
-            return;
-        }
+        if (i.Z.getGuildId() === e) return void t();
         let r = setTimeout(() => {
                 a(), n();
             }, s),

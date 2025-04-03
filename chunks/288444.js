@@ -21,8 +21,8 @@ function f(e, t, n) {
         e
     );
 }
-let p = 3,
-    _ = 180000;
+let _ = 3,
+    p = 180000;
 function h() {
     let e = c.Z.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
@@ -32,7 +32,7 @@ function h() {
 function m() {
     if (!h()) return;
     let e = c.Z.getCurrentClientVoiceChannelId(null);
-    null != e && (i.Z.sendBotMessage(e, d.NW.formatToPlainString(d.t.XYof5O, { number: p })), o.default.selectVoiceChannel(null));
+    null != e && (i.Z.sendBotMessage(e, d.NW.formatToPlainString(d.t.XYof5O, { number: _ })), o.default.selectVoiceChannel(null));
 }
 class g extends a.Z {
     constructor(...e) {
@@ -42,14 +42,11 @@ class g extends a.Z {
                 this.idleTimeout.stop();
             }),
             f(this, 'handleEmbeddedActivityDisconnect', () => {
-                h() && this.idleTimeout.start(_, m, !0);
+                h() && this.idleTimeout.start(p, m, !0);
             }),
             f(this, 'handleVoiceStateUpdates', () => {
-                if (!h()) {
-                    this.idleTimeout.stop();
-                    return;
-                }
-                this.idleTimeout.start(_, m, !1);
+                if (!h()) return void this.idleTimeout.stop();
+                this.idleTimeout.start(p, m, !1);
             }),
             f(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,

@@ -28,14 +28,14 @@ function g(e, t, n) {
 }
 let E = +u.Z.Millis.MINUTE,
     b = 2,
-    v = +u.Z.Millis.SECOND,
-    y = (0, h.T)({ location: m.dr.QUESTS_MANAGER });
+    y = +u.Z.Millis.SECOND,
+    v = (0, h.T)({ location: m.dr.QUESTS_MANAGER });
 function O(e) {
     return !(0, p.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 class I extends i.Z {
     syncHeartbeats(e, t) {
-        for (let n of ('VOICE_STATE_UPDATES' !== t && 'PASSIVE_UPDATE_V2' !== t && y.log('~ syncHeartbeats -> syncing heartbeats for taskTypes: '.concat(e.join(', '), ' (triggered by: ').concat(t, ')')), e)) {
+        for (let n of ('VOICE_STATE_UPDATES' !== t && 'PASSIVE_UPDATE_V2' !== t && v.log('~ syncHeartbeats -> syncing heartbeats for taskTypes: '.concat(e.join(', '), ' (triggered by: ').concat(t, ')')), e)) {
             let e = this.heartbeats[n],
                 t = this.getActivelyProgressingQuestIds(n);
             for (let r of new Set(Object.keys(e))) t.has(r) || this.terminateHeartbeat(r, n);
@@ -58,8 +58,8 @@ class I extends i.Z {
         let e = new Set(),
             t = a.ZP.getRunningGames(),
             n = _.Z.quests;
-        for (let r of (y.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ', t), t)) if (null != r.id) for (let t of n.values()) O(t) && (0, p.Nj)({ quest: t }) && t.config.application.id === r.id && e.add(t.id);
-        return y.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ', e), e;
+        for (let r of (v.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ', t), t)) if (null != r.id) for (let t of n.values()) O(t) && (0, p.Nj)({ quest: t }) && t.config.application.id === r.id && e.add(t.id);
+        return v.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ', e), e;
     }
     getActivelyProgressingStreamOnDesktopQuestIds() {
         let e = new Set(),
@@ -67,21 +67,21 @@ class I extends i.Z {
         if (null == t || c.ZP.countVoiceStatesForChannel(t.channelId) < b) return e;
         let n = l.Z.getStreamerActiveStreamMetadata();
         if (null == n) return e;
-        y.log('~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ', n);
+        v.log('~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ', n);
         let r = n.id;
         if (null == r) return e;
         for (let t of _.Z.quests.values()) O(t) && (0, p.Dr)({ quest: t }) && t.config.application.id === r && e.add(t.id);
-        return y.log('~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ', e), e;
+        return v.log('~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ', e), e;
     }
     getActivelyProgressingActivityQuestIds() {
         let e = new Set(),
             t = o.ZP.getSelfEmbeddedActivities(),
             n = t.size > 0;
-        if ((y.log('~ getActivelyProgressingActivityQuestIds -> Embedded activities: ', t), !n)) return e;
+        if ((v.log('~ getActivelyProgressingActivityQuestIds -> Embedded activities: ', t), !n)) return e;
         let r = _.Z.quests;
         for (let n of t.keys()) for (let t of r.values()) O(t) && (0, p.pO)(t) && t.config.application.id === n && e.add(t.id);
         for (let t of r.values()) O(t) && (0, p.KM)(t) && n && e.add(t.id);
-        return y.log('~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ', e), e;
+        return v.log('~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ', e), e;
     }
     constructor(...e) {
         super(...e),
@@ -95,46 +95,43 @@ class I extends i.Z {
                 if (null == t || null == t.config || null == t.userStatus) return E;
                 let { progressSeconds: n, targetSeconds: i } = (0, p.il)(t, r.T.DESKTOP),
                     o = Math.max(0, (i - n) * u.Z.Millis.SECOND);
-                return o <= E ? o + v : E;
+                return o <= E ? o + y : E;
             }),
             g(this, 'initiateHeartbeat', (e, t) => {
                 let n = this.heartbeats[t];
-                if (n.has(e)) {
-                    y.log('~ initiateHeartbeat -> Heartbeat already initiated for questId: '.concat(e));
-                    return;
-                }
+                if (n.has(e)) return void v.log('~ initiateHeartbeat -> Heartbeat already initiated for questId: '.concat(e));
                 let i = () => {
                     if (this.getActivelyProgressingQuestIds(t).has(e)) {
                         if (t === r.X.STREAM_ON_DESKTOP) {
                             let n = l.Z.getCurrentUserActiveStream();
                             if (null == n) {
-                                y.log('~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: '.concat(e)), this.terminateHeartbeat(e, t);
+                                v.log('~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: '.concat(e)), this.terminateHeartbeat(e, t);
                                 return;
                             }
                             let r = (0, s.V9)(n);
-                            y.log('~ initiateHeartbeat -> Sending heartbeat for questId: '.concat(e)),
+                            v.log('~ initiateHeartbeat -> Sending heartbeat for questId: '.concat(e)),
                                 (0, f.m0)({
                                     questId: e,
                                     streamKey: r
                                 });
-                        } else y.log('~ initiateHeartbeat -> Sending heartbeat for questId: '.concat(e)), (0, f.m0)({ questId: e });
+                        } else v.log('~ initiateHeartbeat -> Sending heartbeat for questId: '.concat(e)), (0, f.m0)({ questId: e });
                         let o = this.calculateHeartbeatDurationMs(e),
                             a = window.setTimeout(i, o);
                         n.set(e, a);
-                    } else y.log('~ initiateHeartbeat -> Quest '.concat(e, ' is no longer actively progressing, terminating heartbeat')), this.terminateHeartbeat(e, t);
+                    } else v.log('~ initiateHeartbeat -> Quest '.concat(e, ' is no longer actively progressing, terminating heartbeat')), this.terminateHeartbeat(e, t);
                 };
-                y.log('~ initiateHeartbeat -> Initiating heartbeat for Quest '.concat(e)), i();
+                v.log('~ initiateHeartbeat -> Initiating heartbeat for Quest '.concat(e)), i();
             }),
             g(this, 'terminateHeartbeat', (e, t) => {
                 let n = this.heartbeats[t],
                     r = _.Z.quests,
                     i = n.get(e);
                 if (null != i) {
-                    y.log('~ terminateHeartbeat -> Terminating heartbeat for questId: '.concat(e)), window.clearTimeout(i), n.delete(e);
+                    v.log('~ terminateHeartbeat -> Terminating heartbeat for questId: '.concat(e)), window.clearTimeout(i), n.delete(e);
                     let t = r.get(e);
                     null != t &&
                         O(t) &&
-                        (y.log('~ terminateHeartbeat -> Sending terminal heartbeat for questId: '.concat(e)),
+                        (v.log('~ terminateHeartbeat -> Sending terminal heartbeat for questId: '.concat(e)),
                         (0, f.m0)({
                             questId: e,
                             terminal: !0
@@ -143,11 +140,11 @@ class I extends i.Z {
             }),
             g(this, 'handleSendHeartbeatSuccess', (e) => {
                 let { questId: t, userStatus: n } = e;
-                if ((y.log('~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: '.concat(t, ')')), null != n.completedAt)) for (let e of (y.log('~ handleSendHeartbeatSuccess -> Quest '.concat(t, ' completed, terminating any heartbeats for it')), Object.keys(this.heartbeats))) this.terminateHeartbeat(t, e);
+                if ((v.log('~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: '.concat(t, ')')), null != n.completedAt)) for (let e of (v.log('~ handleSendHeartbeatSuccess -> Quest '.concat(t, ' completed, terminating any heartbeats for it')), Object.keys(this.heartbeats))) this.terminateHeartbeat(t, e);
             }),
             g(this, 'handleSendHeartbeatFailure', (e) => {
                 let { questId: t } = e;
-                y.log('~ handleSendHeartbeatFailure -> Heartbeat failed for questId: '.concat(t));
+                v.log('~ handleSendHeartbeatFailure -> Heartbeat failed for questId: '.concat(t));
             }),
             g(this, 'actions', {
                 QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: () => this.syncHeartbeats([r.X.PLAY_ON_DESKTOP, r.X.STREAM_ON_DESKTOP], 'QUESTS_FETCH_CURRENT_QUESTS_SUCCESS'),

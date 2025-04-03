@@ -490,8 +490,7 @@ let l = [
     u = {};
 l.forEach((e) => {
     var t;
-    null === (t = e.domains) ||
-        void 0 === t ||
+    null == (t = e.domains) ||
         t.forEach((t) => {
             u[t] = e;
         });
@@ -499,7 +498,7 @@ l.forEach((e) => {
 let d = {
     get(e) {
         var t;
-        return null !== (t = c[e]) && void 0 !== t ? t : null;
+        return null != (t = c[e]) ? t : null;
     },
     getByUrl(e) {
         let t = a.Z.toURLSafe(e);

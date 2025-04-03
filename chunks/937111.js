@@ -24,8 +24,8 @@ function c(e, t, n) {
 let u = null,
     d = {},
     f = !1,
-    p = {},
-    _ = {};
+    _ = {},
+    p = {};
 function h(e) {
     return {
         joinRequestId: e.join_request_id,
@@ -48,7 +48,7 @@ function m(e) {
 function g(e) {
     let { guildJoinRequests: t } = e;
     (f = !1),
-        (p = {}),
+        (_ = {}),
         (d = {}),
         t.forEach((e) => {
             let { guild_id: t } = e;
@@ -57,14 +57,11 @@ function g(e) {
 }
 function E(e) {
     let { request: t, guildId: n } = e;
-    if (null == t) {
-        m(n);
-        return;
-    }
+    if (null == t) return void m(n);
     let r = h(t);
     (0, l.d3)(r) ? m(n) : (d[n] = r);
 }
-function v(e) {
+function b(e) {
     let { guildId: t, request: n } = e;
     if (null == n) return;
     let r = h(n),
@@ -72,11 +69,11 @@ function v(e) {
     if (null != i && r.userId !== i.id) return !1;
     (0, l.d3)(r) ? m(t) : (d[t] = r);
 }
-function b(e) {
+function y(e) {
     let { guildId: t } = e;
     m(t);
 }
-function y(e) {
+function v(e) {
     let { guild: t } = e;
     m(t.id);
 }
@@ -87,7 +84,7 @@ function O(e) {
         let { guild_id: e } = r;
         d[e] = h(r);
         let { id: t, name: i, icon: o, features: a, splash: s } = n;
-        p[t] = {
+        _[t] = {
             id: t,
             name: i,
             icon: o,
@@ -96,12 +93,12 @@ function O(e) {
         };
     }
 }
-function S(e) {
+function I(e) {
     let { guilds: t } = e;
     (f = !0),
         t.forEach((e) => {
             let { id: t, name: n, features: r, icon: i, splash: o } = e;
-            p[t] = {
+            _[t] = {
                 id: t,
                 name: n,
                 features: r,
@@ -110,15 +107,15 @@ function S(e) {
             };
         });
 }
-function I(e) {
+function S(e) {
     let { guildId: t, cooldown: n } = e;
-    _[t] = null != n ? n : 0;
+    p[t] = null != n ? n : 0;
 }
 function T(e) {
     let { form: t, guildId: n } = e;
     if ((null == t ? void 0 : t.guild) != null) {
         let { id: e, name: r, icon: i, features: o, splash: a } = t.guild;
-        p[n] = {
+        _[n] = {
             id: e,
             name: r,
             icon: i,
@@ -148,7 +145,7 @@ class R extends (r = i.ZP.Store) {
             .filter((e) => null != e);
     }
     getJoinRequestGuild(e) {
-        return null != p[e] ? new a.ZP(p[e]) : null;
+        return null != _[e] ? new a.ZP(_[e]) : null;
     }
     get hasFetchedRequestToJoinGuilds() {
         return f;
@@ -157,22 +154,22 @@ class R extends (r = i.ZP.Store) {
         return null != u;
     }
     getCooldown(e) {
-        return _[e];
+        return p[e];
     }
 }
 c(R, 'displayName', 'UserGuildJoinRequestStore');
 let P = new R(o.Z, {
     CONNECTION_OPEN: g,
-    GUILD_JOIN_REQUEST_UPDATE: v,
-    GUILD_JOIN_REQUEST_CREATE: v,
-    GUILD_JOIN_REQUEST_DELETE: b,
+    GUILD_JOIN_REQUEST_UPDATE: b,
+    GUILD_JOIN_REQUEST_CREATE: b,
+    GUILD_JOIN_REQUEST_DELETE: y,
     USER_GUILD_JOIN_REQUEST_UPDATE: E,
-    GUILD_DELETE: y,
-    USER_JOIN_REQUEST_GUILDS_FETCH: S,
+    GUILD_DELETE: v,
+    USER_JOIN_REQUEST_GUILDS_FETCH: I,
     MEMBER_VERIFICATION_FORM_UPDATE: T,
     INVITE_ACCEPT_SUCCESS: O,
     ACK_APPROVED_GUILD_JOIN_REQUEST: N,
     USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: A,
     USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: C,
-    USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: I
+    USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: S
 });

@@ -1,11 +1,11 @@
 n.d(t, {
-    Ce: () => p,
+    Ce: () => _,
     Ji: () => d,
     _G: () => E,
-    _I: () => _,
+    _I: () => p,
     _S: () => m,
     fD: () => h,
-    mG: () => b,
+    mG: () => y,
     pU: () => f,
     r4: () => T
 }),
@@ -29,7 +29,7 @@ let c = void 0,
 function f(e) {
     return ''.concat(location.protocol, '//').concat(location.host).concat(e);
 }
-function p() {
+function _() {
     let e = s.Z.safeParseWithQuery(f(u));
     return null == e
         ? Promise.resolve(null)
@@ -46,8 +46,8 @@ function p() {
                   () => null
               ));
 }
-function _(e) {
-    if (b(e)) return Promise.resolve(y(e));
+function p(e) {
+    if (y(e)) return Promise.resolve(v(e));
     let t = s.Z.safeParseWithQuery(e);
     return null == t
         ? Promise.resolve(null)
@@ -74,8 +74,7 @@ function m() {
         var e;
         let t = r.parse(window.document.cookie)[l.ZF];
         if (null == t) return {};
-        let n = JSON.parse(atob(t.substring(t.indexOf('.') + 1)));
-        return null !== (e = n.$meta.experiments) && void 0 !== e ? e : {};
+        return null != (e = JSON.parse(atob(t.substring(t.indexOf('.') + 1))).$meta.experiments) ? e : {};
     } catch (e) {
         return {};
     }
@@ -84,12 +83,12 @@ let g = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__devel
 function E(e) {
     return null != e && g.test(e);
 }
-let v = RegExp('^dev://branch/([\\w-./]+)$', 'i');
-function b(e) {
-    return null != e && v.test(e);
-}
+let b = RegExp('^dev://branch/([\\w-./]+)$', 'i');
 function y(e) {
-    let t = e.match(v);
+    return null != e && b.test(e);
+}
+function v(e) {
+    let t = e.match(b);
     if (null == t || 2 !== t.length) return null;
     let n = (0, a.getNativePlatform)(),
         r = t[1];
@@ -105,16 +104,16 @@ function y(e) {
     };
 }
 let O = 's',
-    S = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    I = new Set(['/__development/link', '/__development/link/']);
+    I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
+    S = new Set(['/__development/link', '/__development/link/']);
 function T(e) {
-    if (b(e))
+    if (y(e))
         return {
             payload: null,
             url: e
         };
     let t = s.Z.safeParseWithQuery(e);
-    if (null == t || !S.has(t.hostname) || !(O in t.query) || !I.has(t.pathname)) return null;
+    if (null == t || !I.has(t.hostname) || !(O in t.query) || !S.has(t.pathname)) return null;
     for (let e in t.query) e !== O && delete t.query[e];
     return {
         payload: t.query[O],

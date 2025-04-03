@@ -9,12 +9,12 @@ var r = n(544891),
     u = n(70956),
     d = n(981631);
 let f = 10 * u.Z.Millis.MINUTE,
-    p = 10 * u.Z.Millis.MINUTE,
-    _ = +u.Z.Millis.MINUTE,
+    _ = 10 * u.Z.Millis.MINUTE,
+    p = +u.Z.Millis.MINUTE,
     h = {};
 function m(e, t) {
     null == h[t] && (h[t] = new o.V7()),
-        h[t].start(f + Math.random() * p, () => {
+        h[t].start(f + Math.random() * _, () => {
             null != l.Z.getLibraryApplication(e, t) && g(e, t);
         });
 }
@@ -28,7 +28,7 @@ async function g(e, t) {
             branchId: t,
             locale: o
         }),
-        n && (await (0, i._v)(Math.random() * _)),
+        n && (await (0, i._v)(Math.random() * p)),
         r.tn
             .get({
                 url: d.ANM.APPLICATION_LIVE_BUILD(e, t),
@@ -42,14 +42,12 @@ async function g(e, t) {
             .then(
                 (n) => {
                     let r = n.body;
-                    if (0 === r.manifests.length) {
-                        a.Z.dispatch({
+                    if (0 === r.manifests.length)
+                        return void a.Z.dispatch({
                             type: 'APPLICATION_BUILD_NOT_FOUND',
                             applicationId: e,
                             branchId: t
                         });
-                        return;
-                    }
                     a.Z.dispatch({
                         type: 'APPLICATION_BUILD_FETCH_SUCCESS',
                         applicationId: e,

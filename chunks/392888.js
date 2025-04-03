@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => E,
-    Z: () => v
+    Z: () => b
 }),
     n(47120);
 var r = n(200651);
@@ -14,7 +14,7 @@ var i = n(544891),
     u = n(312400),
     d = n(115345),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -68,9 +68,7 @@ function m(e, t) {
 }
 class g extends s.Z {
     handlePostConnectionOpen() {
-        if (!o.K.get('turnedOffNewNotifications') && l.Z.hasConsented(f.pjP.PERSONALIZATION)) {
-            if (u.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && !c.ZP.useNewNotifications) 0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment();
-        }
+        !o.K.get('turnedOffNewNotifications') && l.Z.hasConsented(f.pjP.PERSONALIZATION) && u.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && (c.ZP.useNewNotifications || (0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment()));
     }
     async checkOldUserExperiment() {
         let { logExposure: e, autoOpen: t } = u.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
@@ -83,32 +81,32 @@ class g extends s.Z {
             }),
             l = (0, d._Y)(s),
             { default: c } = await n.e('53512').then(n.bind(n, 753521));
-        if (!(0, a.$sL)())
-            u.fs.trackExposure({ location: 'NotificationMigrationManager' }),
-                t &&
-                    ((0, d.cG)(o, l)
-                        ? (0, a.h7j)(
-                              (e) =>
-                                  (0, r.jsx)(
-                                      c,
-                                      m(_({}, e), {
-                                          dismissable: !1,
-                                          guildPain: o,
-                                          myUsage: l
-                                      })
-                                  ),
-                              {
-                                  onCloseRequest: () => {}
-                              }
-                          )
-                        : (0, d.ly)());
+        !(0, a.$sL)() &&
+            (u.fs.trackExposure({ location: 'NotificationMigrationManager' }),
+            t &&
+                ((0, d.cG)(o, l)
+                    ? (0, a.h7j)(
+                          (e) =>
+                              (0, r.jsx)(
+                                  c,
+                                  m(p({}, e), {
+                                      dismissable: !1,
+                                      guildPain: o,
+                                      myUsage: l
+                                  })
+                              ),
+                          {
+                              onCloseRequest: () => {}
+                          }
+                      )
+                    : (0, d.ly)()));
     }
     checkNewUserExperiment() {
         let { logExposure: e, enabled: t } = u.ad.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
         e && (u.ad.trackExposure({ location: 'NotificationMigrationManager' }), t && (0, d.ly)());
     }
     constructor(...e) {
-        super(...e), p(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+        super(...e), _(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
 async function E(e) {
@@ -124,7 +122,7 @@ async function E(e) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                m(_({}, n), {
+                m(p({}, n), {
                     dismissable: e,
                     guildPain: t,
                     myUsage: s
@@ -132,4 +130,4 @@ async function E(e) {
             );
     });
 }
-let v = new g();
+let b = new g();

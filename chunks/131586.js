@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = ['bool', 'byte', 'char', 'decimal', 'delegate', 'double', 'dynamic', 'enum', 'float', 'int', 'long', 'nint', 'nuint', 'object', 'sbyte', 'short', 'string', 'ulong', 'uint', 'ushort'],
         n = ['public', 'private', 'protected', 'static', 'internal', 'protected', 'abstract', 'async', 'extern', 'override', 'unsafe', 'virtual', 'new', 'sealed', 'partial'],
         r = ['default', 'false', 'null', 'true'],
@@ -39,19 +39,19 @@ function t(e) {
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, e.BACKSLASH_ESCAPE, d]
         },
-        p = {
+        _ = {
             className: 'string',
             begin: /\$@"/,
             end: '"',
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, u]
         },
-        _ = e.inherit(p, {
+        p = e.inherit(_, {
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, d]
         });
-    (u.contains = [p, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.C_BLOCK_COMMENT_MODE]), (d.contains = [_, f, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
+    (u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.C_BLOCK_COMMENT_MODE]), (d.contains = [p, f, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
     let h = {
-            variants: [s, p, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
+            variants: [s, _, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
         },
         m = {
             begin: '<',
@@ -173,5 +173,4 @@ function t(e) {
             E
         ]
     };
-}
-e.exports = t;
+};

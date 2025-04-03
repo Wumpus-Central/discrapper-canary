@@ -51,7 +51,7 @@ let c = new Set(['ETIMEDOUT', 'ECONNRESET', 'EADDRINUSE', 'ECONNREFUSED', 'EPIPE
         } catch (e) {
             console.error(e);
         }
-    return !!((t && t.status && u.has(t.status)) || (e && ((e.code && c.has(e.code)) || (e.timeout && 'ECONNABORTED' === e.code) || e.crossDomain)));
+    return !!((t && t.status && u.has(t.status)) || (e && ((e.code && c.has(e.code)) || (e.timeout && 'ECONNABORTED' === e.code) || e.crossDomain))) || !1;
 }),
     (l.prototype._retry = function () {
         return this.clearTimeout(), this.req && ((this.req = null), (this.req = this.request())), (this._aborted = !1), (this.timedout = !1), (this.timedoutError = null), this._end();
@@ -63,10 +63,7 @@ let c = new Set(['ETIMEDOUT', 'ECONNRESET', 'EADDRINUSE', 'ECONNREFUSED', 'EPIPE
                 (this._fullfilledPromise = new Promise((t, n) => {
                     e.on('abort', () => {
                         if (this._maxRetries && this._maxRetries > this._retries) return;
-                        if (this.timedout && this.timedoutError) {
-                            n(this.timedoutError);
-                            return;
-                        }
+                        if (this.timedout && this.timedoutError) return void n(this.timedoutError);
                         let e = Error('Aborted');
                         (e.code = 'ABORTED'), (e.status = this.status), (e.method = this.method), (e.url = this.url), n(e);
                     }),

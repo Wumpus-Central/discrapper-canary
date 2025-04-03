@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(124072),
     d = n(692629),
     f = n(131704),
-    p = n(592125),
-    _ = n(430824),
+    _ = n(592125),
+    p = n(430824),
     h = n(900849),
     m = n(746878),
     g = n(981631);
@@ -28,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,12 +56,12 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,24 +77,21 @@ async function O(e, t, n) {
         }),
         null != e)
     ) {
-        let n = _.Z.getGuild(e);
+        let n = p.Z.getGuild(e);
         if ((null == n ? void 0 : n.joinedAt) == null)
             try {
                 await h.Ub(e, {}, { channelId: t });
                 return;
             } catch (e) {}
     }
-    let r = p.Z.getChannel(t);
-    if (null != r && null == n && (0, f.bw)(r.type) && (0, l.YO)(r)) {
-        a.default.selectVoiceChannel(r.id);
-        return;
-    }
+    let r = _.Z.getChannel(t);
+    if (null != r && null == n && (0, f.bw)(r.type) && (0, l.YO)(r)) return void a.default.selectVoiceChannel(r.id);
     (0, c.Z)(g.Z5c.CHANNEL(e, t, n));
 }
-function S(e) {
+function I(e) {
     return {
         react(t, a, s) {
-            let l = p.Z.getChannel(t.channelId),
+            let l = _.Z.getChannel(t.channelId),
                 c = s.noStyleAndInteraction
                     ? void 0
                     : (n) => {
@@ -110,9 +107,9 @@ function S(e) {
                                       var i;
                                       return (0, r.jsx)(
                                           e,
-                                          y(v({}, n), {
+                                          v(b({}, n), {
                                               channel: l,
-                                              channelId: null !== (i = null == l ? void 0 : l.id) && void 0 !== i ? i : t.channelId,
+                                              channelId: null != (i = null == l ? void 0 : l.id) ? i : t.channelId,
                                               originalLink: t.originalLink,
                                               messageId: t.messageId
                                           })

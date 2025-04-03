@@ -1,7 +1,6 @@
 function r(e) {
     var t;
-    null === (t = window.DiscordSentry) ||
-        void 0 === t ||
+    null == (t = window.DiscordSentry) ||
         t.addBreadcrumb({
             type: 'default',
             level: 'info',

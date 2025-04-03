@@ -4,10 +4,9 @@ class i {
         return r;
     }
     constructor(e, t) {
-        if (((t = o(t)), e instanceof i)) {
+        if (((t = o(t)), e instanceof i))
             if (!!t.loose === e.loose) return e;
-            e = e.value;
-        }
+            else e = e.value;
         c('comparator', (e = e.trim().split(/\s+/).join(' ')), t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === r ? (this.value = '') : (this.value = this.operator + this.semver.version), c('comp', this);
     }
     parse(e) {

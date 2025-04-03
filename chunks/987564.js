@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = 'if eq ne lt lte gt gte select default math sep';
     return {
         name: 'Dust',
@@ -32,5 +32,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

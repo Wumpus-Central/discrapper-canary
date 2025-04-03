@@ -1,9 +1,9 @@
 n.d(t, {
     $6: () => P,
     MP: () => T,
-    Mg: () => y,
+    Mg: () => v,
     Nl: () => C,
-    Ns: () => v,
+    Ns: () => b,
     Rx: () => N,
     nX: () => w,
     sc: () => R
@@ -62,11 +62,11 @@ function m(e) {
 }
 let g = 4,
     E = new f.Yd('SDP');
-var v = (function (e) {
+var b = (function (e) {
     return (e.SENDRECV = 'sendrecv'), (e.SENDONLY = 'sendonly'), (e.RECVONLY = 'recvonly'), (e.INACTIVE = 'inactive'), e;
 })({});
-let b = 'UDP/TLS/RTP/SAVPF';
-function y(e) {
+let y = 'UDP/TLS/RTP/SAVPF';
+function v(e) {
     switch (e) {
         case 'recvonly':
             return 'sendonly';
@@ -137,7 +137,7 @@ function I(e) {
     });
 }
 function S(e) {
-    let { mid: t, type: n, setup: r, direction: o, baseSDP: a, codec: s, payload: l, bitrate: c, ssrcs: f, extensions: h, rtxPayload: E, sendingVideo: v, enableAudioNack: y } = e;
+    let { mid: t, type: n, setup: r, direction: o, baseSDP: a, codec: s, payload: l, bitrate: c, ssrcs: f, extensions: h, rtxPayload: E, sendingVideo: b, enableAudioNack: v } = e;
     if ('inactive' === o && !p.WS)
         return {
             connection: {
@@ -148,7 +148,7 @@ function S(e) {
             fmtp: [],
             payloads: l,
             port: 0,
-            protocol: b,
+            protocol: y,
             rtp: [
                 {
                     codec: 'NULL',
@@ -164,7 +164,7 @@ function S(e) {
     } = d.parse(a);
     if (
         ((O.type = n),
-        (O.protocol = b),
+        (O.protocol = y),
         (O.payloads = l),
         (O.setup = r),
         (O.mid = t),
@@ -203,11 +203,10 @@ function S(e) {
                         payload: l
                     }
                 ]),
-                !0 === y)
+                !0 === v)
             ) {
                 var I;
-                null === (I = O.rtcpFb) ||
-                    void 0 === I ||
+                null == (I = O.rtcpFb) ||
                     I.push({
                         type: 'nack',
                         payload: l
@@ -221,7 +220,7 @@ function S(e) {
             }),
                 s === _.ad.OPUS &&
                     O.fmtp.push({
-                        config: 'minptime=10;useinbandfec=1;usedtx='.concat(v ? '0' : '1'),
+                        config: 'minptime=10;useinbandfec=1;usedtx='.concat(b ? '0' : '1'),
                         payload: l
                     }),
                 (O.maxptime = 60);
@@ -287,7 +286,7 @@ function T(e) {
             if ('video' === f && (0 === l || 0 === d)) return;
             let g = 'audio' === f ? i : s,
                 E = 'audio' === f ? o : l,
-                v = 'audio' === f ? a : c;
+                b = 'audio' === f ? a : c;
             p.push(
                 S({
                     mid: m,
@@ -297,7 +296,7 @@ function T(e) {
                     baseSDP: n,
                     codec: g,
                     payload: E,
-                    bitrate: v,
+                    bitrate: b,
                     ssrcs: O(u, r, 'audio' === f ? 'a' : 'v'),
                     extensions: _
                 })
@@ -369,21 +368,21 @@ function N(e) {
     return (
         d.forEach((e) => {
             let t,
-                { ssrc: d, cname: m, type: g, direction: E, mid: v } = e;
+                { ssrc: d, cname: m, type: g, direction: E, mid: b } = e;
             '' !== m ? (t = O(m, d, 'audio' === g ? 'a' : 'v')) : ((t = []), 'sendonly' === E ? (E = 'inactive') : 'sendrecv' === E && (E = 'recvonly'));
-            let b = 'audio' === g ? r : a,
-                y = 'audio' === g ? i : s,
+            let y = 'audio' === g ? r : a,
+                v = 'audio' === g ? i : s,
                 I = 'audio' === g ? null : u,
                 T = 'audio' === g ? o : l;
             p.push(
                 S({
-                    mid: v,
+                    mid: b,
                     type: g,
                     setup: h,
                     direction: E,
                     baseSDP: n,
-                    codec: b,
-                    payload: y,
+                    codec: y,
+                    payload: v,
                     bitrate: T,
                     ssrcs: t,
                     extensions: f,
@@ -459,7 +458,7 @@ function R(e) {
     var t;
     let { codecs: n } = C(e),
         r = n.find((e) => e.name === _.ad.VP8),
-        i = RegExp('^a=ice|a=extmap|a=fingerprint|opus|VP8|'.concat(null !== (t = null == r ? void 0 : r.rtxPayloadType) && void 0 !== t ? t : 0, ' rtx'), 'i');
+        i = RegExp('^a=ice|a=extmap|a=fingerprint|opus|VP8|'.concat(null != (t = null == r ? void 0 : r.rtxPayloadType) ? t : 0, ' rtx'), 'i');
     return {
         sdp: [...new Set(e.split(/\r\n/).filter((e) => i.test(e)))].join('\n'),
         codecs: n

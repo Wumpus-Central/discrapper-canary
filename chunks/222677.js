@@ -1,9 +1,9 @@
 n.d(t, {
-    $E: () => x,
+    $E: () => L,
     T6: () => w,
-    TW: () => I,
+    TW: () => S,
     U0: () => R,
-    WO: () => L,
+    WO: () => x,
     rU: () => P,
     wX: () => D
 });
@@ -17,14 +17,14 @@ var r = n(544891),
     u = n(314897),
     d = n(592125),
     f = n(375954),
-    p = n(626135),
-    _ = n(585483),
+    _ = n(626135),
+    p = n(585483),
     h = n(70956),
     m = n(176354),
     g = n(563114),
     E = n(981631),
-    v = n(388032);
-function b(e, t, n) {
+    b = n(388032);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function O(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function S(e, t) {
         e
     );
 }
-var I = (function (e) {
+var S = (function (e) {
     return (e.MESSAGE = 'Message'), (e.FORUM_TOOLBAR = 'Forum Toolbar'), (e.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (e.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (e.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (e.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (e.MESSAGE_REACTION_PICKER = 'Message Reaction Picker'), (e.MESSAGE_SHORTCUT = 'Message Shortcut'), e;
 })({});
 function T(e, t, n) {
@@ -89,13 +89,13 @@ function T(e, t, n) {
         switch (o && o.code) {
             case E.evJ.TOO_MANY_REACTIONS:
                 a.Z.show({
-                    title: v.NW.string(v.t.lFddsb),
-                    body: v.NW.string(v.t.h27eIi),
-                    confirmText: v.NW.string(v.t.BddRzc)
+                    title: b.NW.string(b.t.lFddsb),
+                    body: b.NW.string(b.t.h27eIi),
+                    confirmText: b.NW.string(b.t.BddRzc)
                 });
                 break;
             case E.evJ.REACTION_BLOCKED:
-                _.S.dispatch(E.CkL.SHAKE_APP, {
+                p.S.dispatch(E.CkL.SHAKE_APP, {
                     duration: 200,
                     intensity: 2
                 });
@@ -109,10 +109,10 @@ function N(e, t, n, r, i) {
         type: e,
         channelId: t,
         messageId: n,
-        userId: null !== (a = null == i ? void 0 : i.userId) && void 0 !== a ? a : u.default.getId(),
+        userId: null != (a = null == i ? void 0 : i.userId) ? a : u.default.getId(),
         emoji: r,
         optimistic: !0,
-        colors: null !== (s = null == i ? void 0 : i.colors) && void 0 !== s ? s : [],
+        colors: null != (s = null == i ? void 0 : i.colors) ? s : [],
         reactionType: (null == i ? void 0 : i.burst) ? l.O.BURST : l.O.NORMAL
     });
 }
@@ -123,7 +123,7 @@ function A(e) {
 }
 function C(e, t, n) {
     var r;
-    let i = null !== (r = n.id) && void 0 !== r ? r : n.name;
+    let i = null != (r = n.id) ? r : n.name;
     return E.ANM.POLL_ANSWER_VOTERS(e, t, i);
 }
 async function R(e) {
@@ -163,15 +163,13 @@ async function P(e, t, n) {
     let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'Message',
         u = arguments.length > 4 ? arguments[4] : void 0,
         f = null != u && !!u.burst,
-        _ = null != u && !!u.isRetry;
-    if (!_ && k(e, t, n, f)) {
-        a.Z.show({
-            title: v.NW.string(v.t['uaUU/v']),
-            body: v.NW.string(v.t.psMorq),
-            confirmText: v.NW.string(v.t['NX+WJC'])
+        p = null != u && !!u.isRetry;
+    if (!p && k(e, t, n, f))
+        return void a.Z.show({
+            title: b.NW.string(b.t['uaUU/v']),
+            body: b.NW.string(b.t.psMorq),
+            confirmText: b.NW.string(b.t['NX+WJC'])
         });
-        return;
-    }
     let h = await M(n, f);
     return (
         N('MESSAGE_REACTION_ADD', e, t, n, {
@@ -198,14 +196,14 @@ async function P(e, t, n) {
                 if ('Message Shortcut' === o) {
                     var r;
                     let i = d.Z.getChannel(e);
-                    p.default.track(
+                    _.default.track(
                         E.rMx.MESSAGE_SHORTCUT_ACTION_SENT,
-                        y(
+                        v(
                             {
                                 channel_id: e,
                                 guild_id: null == i ? void 0 : i.guild_id,
                                 original_message_id: t,
-                                emoji_id: null !== (r = n.id) && void 0 !== r ? r : n.name,
+                                emoji_id: null != (r = n.id) ? r : n.name,
                                 action: 'react'
                             },
                             (0, s.hH)(null == i ? void 0 : i.guild_id),
@@ -214,13 +212,13 @@ async function P(e, t, n) {
                     );
                 }
                 f
-                    ? (i.uv.announce(v.NW.formatToPlainString(v.t['RJlG+f'], { name: n.name })),
+                    ? (i.uv.announce(b.NW.formatToPlainString(b.t['RJlG+f'], { name: n.name })),
                       g.Z.triggerFullscreenAnimation({
                           channelId: e,
                           messageId: t,
-                          emoji: S(y({}, n), { animated: !1 })
+                          emoji: I(v({}, n), { animated: !1 })
                       }))
-                    : i.uv.announce(v.NW.formatToPlainString(v.t.ol4acH, { name: n.name }));
+                    : i.uv.announce(b.NW.formatToPlainString(b.t.ol4acH, { name: n.name }));
             })
             .catch((r) => {
                 T(
@@ -230,8 +228,8 @@ async function P(e, t, n) {
                             burst: f,
                             isRetry: !0
                         }),
-                    { isRetry: _ }
-                ) && (N('MESSAGE_REACTION_REMOVE', e, t, n, { burst: f }), f ? i.uv.announce(v.NW.formatToPlainString(v.t['fJeu8/'], { name: n.name })) : i.uv.announce(v.NW.formatToPlainString(v.t.UUn5V1, { name: n.name })));
+                    { isRetry: p }
+                ) && (N('MESSAGE_REACTION_REMOVE', e, t, n, { burst: f }), f ? i.uv.announce(b.NW.formatToPlainString(b.t['fJeu8/'], { name: n.name })) : i.uv.announce(b.NW.formatToPlainString(b.t.UUn5V1, { name: n.name })));
             })
     );
 }
@@ -258,7 +256,7 @@ async function D(e, t, n) {
                 T(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
             });
 }
-async function x(e, t, n, i) {
+async function L(e, t, n, i) {
     let o = null != i && !!i.isRetry;
     await c.Z.unarchiveThreadIfNecessary(e);
     let a = null === n.id ? n.name : ''.concat(n.name, ':').concat(n.id);
@@ -269,10 +267,10 @@ async function x(e, t, n, i) {
             rejectWithError: !1
         })
         .catch((r) => {
-            T(r, () => x(e, t, n, { isRetry: !0 }), { isRetry: o });
+            T(r, () => L(e, t, n, { isRetry: !0 }), { isRetry: o });
         });
 }
-async function L(e) {
+async function x(e) {
     let { channelId: t, messageId: n, emoji: o, location: a = 'Message', userId: s, options: u } = e,
         d = null != u && !!u.burst,
         f = null != u && !!u.isRetry;
@@ -299,14 +297,14 @@ async function L(e) {
                 rejectWithError: !1
             })
             .then(() => {
-                (null == u ? void 0 : u.burst) ? i.uv.announce(v.NW.formatToPlainString(v.t['3l9f6u'], { name: o.name })) : i.uv.announce(v.NW.formatToPlainString(v.t['DQxi+/'], { name: o.name }));
+                (null == u ? void 0 : u.burst) ? i.uv.announce(b.NW.formatToPlainString(b.t['3l9f6u'], { name: o.name })) : i.uv.announce(b.NW.formatToPlainString(b.t['DQxi+/'], { name: o.name }));
             })
             .catch(async (e) => {
                 if (
                     T(
                         e,
                         () =>
-                            L({
+                            x({
                                 channelId: t,
                                 messageId: n,
                                 emoji: o,
@@ -326,7 +324,7 @@ async function L(e) {
                         burst: d,
                         colors: e
                     }),
-                        (null == u ? void 0 : u.burst) ? i.uv.announce(v.NW.formatToPlainString(v.t.OamVbW, { name: o.name })) : i.uv.announce(v.NW.formatToPlainString(v.t['tD9+b2'], { name: o.name }));
+                        (null == u ? void 0 : u.burst) ? i.uv.announce(b.NW.formatToPlainString(b.t.OamVbW, { name: o.name })) : i.uv.announce(b.NW.formatToPlainString(b.t['tD9+b2'], { name: o.name }));
                 }
             });
 }

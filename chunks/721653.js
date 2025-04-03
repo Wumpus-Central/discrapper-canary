@@ -2,7 +2,7 @@ var r = n(687249),
     i = n(779518),
     o = 1,
     a = 2;
-function s(e, t, n, s) {
+e.exports = function (e, t, n, s) {
     var l = n.length,
         c = l,
         u = !s;
@@ -13,16 +13,15 @@ function s(e, t, n, s) {
     }
     for (; ++l < c; ) {
         var f = (d = n[l])[0],
-            p = e[f],
-            _ = d[1];
+            _ = e[f],
+            p = d[1];
         if (u && d[2]) {
-            if (void 0 === p && !(f in e)) return !1;
+            if (void 0 === _ && !(f in e)) return !1;
         } else {
             var h = new r();
-            if (s) var m = s(p, _, f, e, t, h);
-            if (!(void 0 === m ? i(_, p, o | a, s, h) : m)) return !1;
+            if (s) var m = s(_, p, f, e, t, h);
+            if (!(void 0 === m ? i(p, _, o | a, s, h) : m)) return !1;
         }
     }
     return !0;
-}
-e.exports = s;
+};

@@ -6,7 +6,7 @@ let t = '[A-Za-z$_][0-9A-Za-z$_]*',
     a = ['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'],
     s = ['arguments', 'this', 'super', 'console', 'window', 'document', 'localStorage', 'sessionStorage', 'module', 'global'],
     l = [].concat(a, i, o);
-function c(e) {
+e.exports = function (e) {
     let c = e.regex,
         u = (e, { after: t }) => {
             let n = '</' + e[0].slice(1);
@@ -14,24 +14,18 @@ function c(e) {
         },
         d = t,
         f = '<>',
-        p = '</>',
-        _ = /<[A-Za-z0-9\\._:-]+\s*\/>/,
+        _ = '</>',
+        p = /<[A-Za-z0-9\\._:-]+\s*\/>/,
         h = /<[A-Za-z0-9\\._:-]+/,
         m = /\/[A-Za-z0-9\\._:-]+>|\/>/,
         g = (e, t) => {
-            let n;
-            let r = e[0].length + e.index,
+            let n,
+                r = e[0].length + e.index,
                 i = e.input[r];
-            if ('<' === i || ',' === i) {
-                t.ignoreMatch();
-                return;
-            }
+            if ('<' === i || ',' === i) return void t.ignoreMatch();
             '>' !== i || u(e, { after: r }) || t.ignoreMatch();
             let o = e.input.substring(r);
-            if ((n = o.match(/^\s*=/)) || ((n = o.match(/^\s+extends\s+/)) && 0 === n.index)) {
-                t.ignoreMatch();
-                return;
-            }
+            if ((n = o.match(/^\s*=/)) || ((n = o.match(/^\s+extends\s+/)) && 0 === n.index)) return void t.ignoreMatch();
         },
         E = {
             $pattern: t,
@@ -40,28 +34,28 @@ function c(e) {
             built_in: l,
             'variable.language': s
         },
-        v = '[0-9](_?[0-9])*',
-        b = `\\.(${v})`,
-        y = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
+        b = '[0-9](_?[0-9])*',
+        y = `\\.(${b})`,
+        v = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
         O = {
             className: 'number',
-            variants: [{ begin: `(\\b(${y})((${b})|\\.)?|(${b}))[eE][+-]?(${v})\\b` }, { begin: `\\b(${y})\\b((${b})\\b|\\.)?|(${b})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
+            variants: [{ begin: `(\\b(${v})((${y})|\\.)?|(${y}))[eE][+-]?(${b})\\b` }, { begin: `\\b(${v})\\b((${y})\\b|\\.)?|(${y})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
             relevance: 0
         },
-        S = {
+        I = {
             className: 'subst',
             begin: '\\$\\{',
             end: '\\}',
             keywords: E,
             contains: []
         },
-        I = {
+        S = {
             begin: '.?html`',
             end: '',
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, S],
+                contains: [e.BACKSLASH_ESCAPE, I],
                 subLanguage: 'xml'
             }
         },
@@ -71,7 +65,7 @@ function c(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, S],
+                contains: [e.BACKSLASH_ESCAPE, I],
                 subLanguage: 'css'
             }
         },
@@ -81,7 +75,7 @@ function c(e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, S],
+                contains: [e.BACKSLASH_ESCAPE, I],
                 subLanguage: 'graphql'
             }
         },
@@ -89,7 +83,7 @@ function c(e) {
             className: 'string',
             begin: '`',
             end: '`',
-            contains: [e.BACKSLASH_ESCAPE, S]
+            contains: [e.BACKSLASH_ESCAPE, I]
         },
         C = {
             className: 'comment',
@@ -131,14 +125,14 @@ function c(e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, I, T, N, A, { match: /\$\d+/ }, O];
-    S.contains = R.concat({
+        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, T, N, A, { match: /\$\d+/ }, O];
+    I.contains = R.concat({
         begin: /\{/,
         end: /\}/,
         keywords: E,
         contains: ['self'].concat(R)
     });
-    let P = [].concat(C, S.contains),
+    let P = [].concat(C, I.contains),
         w = P.concat([
             {
                 begin: /(\s*)\(/,
@@ -156,7 +150,7 @@ function c(e) {
             keywords: E,
             contains: w
         },
-        x = {
+        L = {
             variants: [
                 {
                     match: [/class/, /\s+/, d, /\s+/, /extends/, /\s+/, c.concat(d, '(', c.concat(/\./, d), ')*')],
@@ -176,7 +170,7 @@ function c(e) {
                 }
             ]
         },
-        L = {
+        x = {
             relevance: 0,
             match: c.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
             className: 'title.class',
@@ -228,7 +222,7 @@ function c(e) {
             className: 'property',
             relevance: 0
         },
-        Z = {
+        F = {
             match: [/get|set/, /\s+/, d, /(?=\()/],
             className: {
                 1: 'keyword',
@@ -236,9 +230,9 @@ function c(e) {
             },
             contains: [{ begin: /\(\)/ }, D]
         },
-        F = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
-        V = {
-            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(F)],
+        V = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
+        Z = {
+            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(V)],
             keywords: 'async',
             className: {
                 1: 'keyword',
@@ -252,7 +246,7 @@ function c(e) {
         keywords: E,
         exports: {
             PARAMS_CONTAINS: w,
-            CLASS_REFERENCE: L
+            CLASS_REFERENCE: x
         },
         illegal: /#(?![$_A-z])/,
         contains: [
@@ -264,20 +258,20 @@ function c(e) {
             M,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            I,
+            S,
             T,
             N,
             A,
             C,
             { match: /\$\d+/ },
             O,
-            L,
+            x,
             {
                 scope: 'attr',
                 match: d + c.lookahead(':'),
                 relevance: 0
             },
-            V,
+            Z,
             {
                 begin: '(' + e.RE_STARTERS_RE + '|\\b(case|return|throw)\\b)\\s*',
                 keywords: 'return throw case',
@@ -287,7 +281,7 @@ function c(e) {
                     e.REGEXP_MODE,
                     {
                         className: 'function',
-                        begin: F,
+                        begin: V,
                         returnBegin: !0,
                         end: '\\s*=>',
                         contains: [
@@ -327,9 +321,9 @@ function c(e) {
                         variants: [
                             {
                                 begin: f,
-                                end: p
+                                end: _
                             },
-                            { match: _ },
+                            { match: p },
                             {
                                 begin: h,
                                 'on:begin': g,
@@ -378,10 +372,9 @@ function c(e) {
             },
             G,
             j,
-            x,
-            Z,
+            L,
+            F,
             { match: /\$[(.]/ }
         ]
     };
-}
-e.exports = c;
+};

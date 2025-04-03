@@ -21,8 +21,8 @@ function d(e, t, n) {
     );
 }
 let f = 'League of Legends',
-    p = new r.V7(),
-    _ = !1,
+    _ = new r.V7(),
+    p = !1,
     h = !1;
 function m(e) {
     return e.some((e) => e.name === f);
@@ -43,31 +43,31 @@ function g() {
 }
 async function E(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
-    if (!_ && (!h || !r)) {
-        p.stop();
+    if (!p && (!h || !r)) {
+        _.stop();
         try {
-            _ = !0;
+            p = !0;
             let { next_update_timestamp: e } = await (0, l._7)({
                 riotConnectionId: t,
                 lolConnectionId: n,
                 onlyUpdateIfStale: r
             });
-            (_ = !1), (h = !1);
+            (p = !1), (h = !1);
             let i = new Date(1000 * e),
                 o = new Date(),
                 a = Math.max(0, i.getTime() - o.getTime());
-            p.start(a, () =>
+            _.start(a, () =>
                 (0, l._7)({
                     riotConnectionId: t,
                     lolConnectionId: n
                 })
             );
         } catch (e) {
-            (_ = !1), (h = !0);
+            (p = !1), (h = !0);
         }
     }
 }
-function v() {
+function b() {
     return Object.values(a.Z.getGuilds()).some(
         (e) =>
             e.hasFeature(u.oNc.LEADERBOARD_ENABLED) &&
@@ -78,18 +78,15 @@ function v() {
             })
     );
 }
-function b(e) {
+function y(e) {
     s.default.track(u.rMx.LEAGUE_OF_LEGENDS_MATCH_DATA_NOT_FETCHING, { reason: e });
 }
-class y extends i.Z {
+class v extends i.Z {
     handleRunningGameChange(e) {
         let { removed: t } = e;
-        if (v() && m(t)) {
+        if (b() && m(t)) {
             let e = g();
-            if ('string' == typeof e) {
-                b(e);
-                return;
-            }
+            if ('string' == typeof e) return void y(e);
             E({
                 riotConnectionId: e.riotConnection.id,
                 lolConnectionId: e.lolConnection.id
@@ -99,10 +96,10 @@ class y extends i.Z {
     handleDependantStoreChanges() {
         let e = g(),
             t = 'string' != typeof e,
-            n = v() && t;
-        p.isStarted() && !n
-            ? p.stop()
-            : !p.isStarted() &&
+            n = b() && t;
+        _.isStarted() && !n
+            ? _.stop()
+            : !_.isStarted() &&
               n &&
               E({
                   riotConnectionId: e.riotConnection.id,
@@ -114,4 +111,4 @@ class y extends i.Z {
         super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(a.Z, this.handleDependantStoreChanges).set(o.Z, this.handleDependantStoreChanges));
     }
 }
-let O = new y();
+let O = new v();

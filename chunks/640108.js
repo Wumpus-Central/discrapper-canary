@@ -22,8 +22,8 @@ var r,
     g = n(544406),
     E = n(268353),
     b = n(866960),
-    v = n(181058),
-    y = n(626135),
+    y = n(181058),
+    v = n(626135),
     O = n(70956),
     I = n(36703),
     S = n(228488),
@@ -35,8 +35,8 @@ var r,
     P = n(981631),
     w = n(217702),
     D = n(388032),
-    L = n(984323),
-    x = n(612064);
+    L = n(480183),
+    x = n(893354);
 function M(e, t, n) {
     return (
         t in e
@@ -155,7 +155,7 @@ class z extends (r = a.Component) {
     componentDidUpdate(e) {
         var t, n, r, i, o;
         let { hide: a, playing: s } = this.props;
-        a && !e.hide ? (this.animateControls(1, s), null === (t = this.volumeButton) || void 0 === t || t.blur(), null === (n = (r = this.props).onControlsHide) || void 0 === n || n.call(r)) : !a && e.hide && (this.animateControls(0, s), null === (i = (o = this.props).onControlsShow) || void 0 === i || i.call(o));
+        a && !e.hide ? (this.animateControls(1, s), null == (t = this.volumeButton) || t.blur(), null == (n = (r = this.props).onControlsHide) || n.call(r)) : !a && e.hide && (this.animateControls(0, s), null == (i = (o = this.props).onControlsShow) || i.call(o));
     }
     updateProgress(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -203,7 +203,7 @@ class z extends (r = a.Component) {
                     onClick: i,
                     tabIndex: a ? -1 : 0,
                     'aria-label': D.NW.string(D.t.hsvh0t),
-                    children: (0, o.jsx)(v.Z, { className: L.controlIcon }, 'replay')
+                    children: (0, o.jsx)(y.Z, { className: L.controlIcon }, 'replay')
                 })
               : (0, o.jsx)(_.P3F, {
                     className: L.videoButton,
@@ -399,7 +399,7 @@ class J {
     sendEvent() {
         this.analyticsEnabled &&
             (null == this.errorCode && null == this.errorMessage && !1 === this.metadata.hasValidFrame && ((this.errorCode = 4), (this.errorMessage = 'No valid video frames detected - codec may be unsupported')),
-            y.default.track(P.rMx.MEDIA_PLAY_FINISHED, {
+            v.default.track(P.rMx.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -430,7 +430,7 @@ class J {
     }
     updatePlayTime(e) {
         var t, n;
-        (this.playTimeSec += Math.max((null !== (t = this.lastPlayingTime) && void 0 !== t ? t : e) - (null !== (n = this.playbackStartTime) && void 0 !== n ? n : 0), 0)), (this.playWallTimeMs += this.timeInState());
+        (this.playTimeSec += Math.max((null != (t = this.lastPlayingTime) ? t : e) - (null != (n = this.playbackStartTime) ? n : 0), 0)), (this.playWallTimeMs += this.timeInState());
     }
     constructor(e) {
         M(this, 'metadata', void 0),
@@ -720,7 +720,7 @@ class $ extends (i = a.PureComponent) {
                 props: { type: t, autoPlay: n, playable: r = !0, onVolumeShow: i, onVolumeHide: a, onControlsHide: s, onControlsShow: l },
                 state: { buffers: c, currentTime: u, duration: d, hasClickedPlay: f, hideControls: _, muted: p, playing: h, fullscreen: m, volume: g, dragging: b }
             } = this,
-            v = this.getWidth();
+            y = this.getWidth();
         return f || n || t === Z.AUDIO
             ? (0, o.jsx)(z, {
                   buffers: c,
@@ -744,7 +744,7 @@ class $ extends (i = a.PureComponent) {
                   dragging: b,
                   type: t,
                   ref: this.controlsRef,
-                  width: m ? window.screen.width : v,
+                  width: m ? window.screen.width : y,
                   disabled: !r,
                   children:
                       t === Z.VIDEO
@@ -860,8 +860,8 @@ class $ extends (i = a.PureComponent) {
         let t = e.videoHeight,
             n = e.currentTime,
             r = e.readyState;
-        if (0 === t && r >= 2) {
-            setTimeout(() => {
+        if (0 === t && r >= 2)
+            return void setTimeout(() => {
                 if (null == e) return;
                 let t = e.videoHeight,
                     r = e.currentTime;
@@ -874,8 +874,6 @@ class $ extends (i = a.PureComponent) {
                     return;
                 }
             }, 1500);
-            return;
-        }
         if (t > 0) {
             this._analytics.metadata.hasValidFrame = !0;
             return;
@@ -955,10 +953,7 @@ class $ extends (i = a.PureComponent) {
                 'handleBuffer',
                 u().debounce(() => {
                     let { current: e } = this.mediaRef;
-                    if (null == e) {
-                        this.setState({ buffers: [] });
-                        return;
-                    }
+                    if (null == e) return void this.setState({ buffers: [] });
                     this.setState({ buffers: Y(e) });
                 }, 400)
             ),
@@ -984,10 +979,7 @@ class $ extends (i = a.PureComponent) {
                     state: { hasClickedPlay: t, playing: n },
                     props: { onClick: r, autoPlay: i, autoMute: o }
                 } = this;
-                if (null != r) {
-                    r(e);
-                    return;
-                }
+                if (null != r) return void r(e);
                 e.stopPropagation(),
                     i && !t && n && o
                         ? this.setState({
@@ -1015,7 +1007,7 @@ class $ extends (i = a.PureComponent) {
             }),
             M(this, 'handleDragStart', (e) => {
                 var t, n;
-                this.setState({ dragging: e }), this._analytics.onDragStart(null !== (n = null === (t = this.mediaRef.current) || void 0 === t ? void 0 : t.currentTime) && void 0 !== n ? n : null);
+                this.setState({ dragging: e }), this._analytics.onDragStart(null != (n = null == (t = this.mediaRef.current) ? void 0 : t.currentTime) ? n : null);
             }),
             M(this, 'handleDragEnd', () => {
                 this.setState({ dragging: null }), (this._lastMove = Date.now());
@@ -1032,11 +1024,11 @@ class $ extends (i = a.PureComponent) {
             M(this, 'handleError', (e) => {
                 var t, n, r, i;
                 let o = e.currentTarget;
-                (this._analytics.errorCode = null !== (r = null === (t = o.error) || void 0 === t ? void 0 : t.code) && void 0 !== r ? r : null), (this._analytics.errorMessage = null !== (i = null === (n = o.error) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : null), this._analytics.onError(e);
+                (this._analytics.errorCode = null != (r = null == (t = o.error) ? void 0 : t.code) ? r : null), (this._analytics.errorMessage = null != (i = null == (n = o.error) ? void 0 : n.message) ? i : null), this._analytics.onError(e);
             }),
             (this._analytics = new J({
                 src: e.src,
-                mimeType: null === (n = e.mimeType) || void 0 === n ? void 0 : n.join('/'),
+                mimeType: null == (n = e.mimeType) ? void 0 : n.join('/'),
                 fileSize: e.fileSizeBytes
             }));
         let { autoPlay: r, autoMute: i, volume: o, playable: s } = this.props,

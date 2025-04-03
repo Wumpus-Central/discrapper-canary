@@ -5,10 +5,7 @@ function o(e, t) {
     let [n, o] = r.useState();
     return (
         r.useEffect(() => {
-            if (null == e || null != t) {
-                o(void 0);
-                return;
-            }
+            if (null == e || null != t) return void o(void 0);
             (0, i.Z)().then((t) => {
                 null != t &&
                     t.identifyGame(e, (e, t) => {

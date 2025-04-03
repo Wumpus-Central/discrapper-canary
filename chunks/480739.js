@@ -95,11 +95,11 @@ class f {
             a(this, 'onFeedItemUnseen', void 0),
             a(this, 'initialize', () => {
                 var e, t;
-                o.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), o.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), o.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), o.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), o.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = (t = this).onInitialize) || void 0 === e || e.call(t);
+                o.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), o.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), o.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), o.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), o.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), null == (e = (t = this).onInitialize) || e.call(t);
             }),
             a(this, 'terminate', () => {
                 var e, t;
-                o.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), o.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), o.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), o.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), o.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = (t = this).onTerminate) || void 0 === e || e.call(t), this.maybeFlushSeenItems(0);
+                o.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), o.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), o.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), o.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), o.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), null == (e = (t = this).onTerminate) || e.call(t), this.maybeFlushSeenItems(0);
             }),
             a(this, 'handleFeedItemFlush', (e) => {
                 let { id: t, force: n } = e;
@@ -111,12 +111,9 @@ class f {
                     i = e.timestampMillis,
                     o = e.feedItemId;
                 if (r !== this._id) return;
-                if (this._paused) {
-                    this._pausedFeedItemIds.add(o);
-                    return;
-                }
+                if (this._paused) return void this._pausedFeedItemIds.add(o);
                 let a = this.getTrackedFeedItem(o).maybeMarkSeen(i);
-                null === (t = (n = this).onFeedItemSeen) || void 0 === t || t.call(n, o, a);
+                null == (t = (n = this).onFeedItemSeen) || t.call(n, o, a);
             }),
             a(this, 'handleFeedItemUnseen', (e) => {
                 var t, n;
@@ -126,7 +123,7 @@ class f {
                 if (r !== this._id) return;
                 this._paused && this._pausedFeedItemIds.delete(o);
                 let a = this.getTrackedFeedItem(o).maybeMarkUnseen(i);
-                null === (t = (n = this).onFeedItemUnseen) || void 0 === t || t.call(n, o, a), this.maybeFlushSeenItems();
+                null == (t = (n = this).onFeedItemUnseen) || t.call(n, o, a), this.maybeFlushSeenItems();
             }),
             a(this, 'getTrackedFeedItem', (e) => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new d()), this.trackedFeedItems[e])),
             a(
@@ -136,7 +133,7 @@ class f {
                     new Set(
                         Object.keys(this.trackedFeedItems).filter((e) => {
                             var t;
-                            return null === (t = this.trackedFeedItems[e]) || void 0 === t ? void 0 : t.isVisible();
+                            return null == (t = this.trackedFeedItems[e]) ? void 0 : t.isVisible();
                         })
                     )
             ),

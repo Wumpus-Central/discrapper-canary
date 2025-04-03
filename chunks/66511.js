@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(952265),
@@ -63,23 +63,23 @@ function p(e, t) {
 let h = () => {
         o.default.track(u.rMx.MODAL_DISMISSED, { type: c.N4 });
     },
-    g = (e) => {
+    m = (e) => {
         o.default.track(u.rMx.OPEN_MODAL, {
             type: c.N4,
             guild_id: e
         });
     },
-    m = {
+    g = {
         openMemberVerificationModal(e, t, o) {
             if (__OVERLAY__) return;
-            g(e);
+            m(e);
             let u = async (t) => {
                     await a.ZP.submitVerificationForm(e, t);
                 },
                 d = (0, s.K2)(e, 'MemberVerificationModalActionCreators');
             (0, i.ZD)(
                 async () => {
-                    let { default: t } = d ? await Promise.all([n.e('84335'), n.e('54408'), n.e('99916'), n.e('10409'), n.e('23303')]).then(n.bind(n, 309135)) : await Promise.all([n.e('99916'), n.e('81038'), n.e('95676')]).then(n.bind(n, 645264));
+                    let { default: t } = d ? await Promise.all([n.e('99916'), n.e('66921'), n.e('12492')]).then(n.bind(n, 309135)) : await Promise.all([n.e('99916'), n.e('80026'), n.e('92531'), n.e('16350')]).then(n.bind(n, 645264));
                     return (n) =>
                         (0, r.jsx)(
                             t,
@@ -89,13 +89,9 @@ let h = () => {
                                 onComplete: u,
                                 onClose: function () {
                                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                                    if (!e) {
-                                        if (l.rb.getState().hasUnsubmittedChanges) {
-                                            (0, l.PE)(!0);
-                                            return;
-                                        }
-                                        h();
-                                    }
+                                    if (!e)
+                                        if (l.rb.getState().hasUnsubmittedChanges) return void (0, l.PE)(!0);
+                                        else h();
                                     n.onClose();
                                 }
                             })
@@ -117,7 +113,7 @@ let h = () => {
         openMemberVerificationPreviewModal(e) {
             let t = (0, s.K2)(e, 'openMemberVerificationPreviewModal');
             (0, i.ZD)(async () => {
-                let { default: i } = t ? await Promise.all([n.e('84335'), n.e('54408'), n.e('99916'), n.e('10409'), n.e('23303')]).then(n.bind(n, 309135)) : await Promise.all([n.e('99916'), n.e('81038'), n.e('95676')]).then(n.bind(n, 645264));
+                let { default: i } = t ? await Promise.all([n.e('99916'), n.e('66921'), n.e('12492')]).then(n.bind(n, 309135)) : await Promise.all([n.e('99916'), n.e('80026'), n.e('92531'), n.e('16350')]).then(n.bind(n, 645264));
                 return (t) =>
                     (0, r.jsx)(
                         i,

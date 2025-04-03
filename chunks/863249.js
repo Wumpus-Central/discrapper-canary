@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => T,
-    q0: () => S,
-    xo: () => I
+    q0: () => I,
+    xo: () => S
 }),
     n(266796);
 var r = n(544891),
@@ -14,13 +14,13 @@ var r = n(544891),
     u = n(160404),
     d = n(264229),
     f = n(271383),
-    p = n(701190),
-    _ = n(594174),
+    _ = n(701190),
+    p = n(594174),
     h = n(626135),
     m = n(246364),
     g = n(981631),
     E = n(388032);
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +44,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,14 +66,14 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = -1;
-function I(e) {
+let I = -1;
+function S(e) {
     i.Z.dispatch({
         type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW',
         guildId: e
@@ -81,8 +81,8 @@ function I(e) {
 }
 let T = {
     fetchVerificationForm: async (e, t) => {
-        let n = null != t ? t : p.Z.getInviteKeyForGuildId(e),
-            o = _.default.getCurrentUser(),
+        let n = null != t ? t : _.Z.getInviteKeyForGuildId(e),
+            o = p.default.getCurrentUser(),
             a = !f.ZP.isMember(e, null == o ? void 0 : o.id);
         try {
             let t = await r.tn.get({
@@ -180,10 +180,7 @@ let T = {
     },
     submitVerificationForm: async function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 200;
-        if (u.Z.isFullServerPreview(e)) {
-            (0, c.aq)(e, { memberOptions: { isPending: !1 } });
-            return;
-        }
+        if (u.Z.isFullServerPreview(e)) return void (0, c.aq)(e, { memberOptions: { isPending: !1 } });
         try {
             let { body: o } = await r.tn.put({
                 url: g.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
@@ -199,7 +196,7 @@ let T = {
                     guildId: e,
                     request: o
                 }),
-                (0, m.YG)(t.formFields) && n !== S && setTimeout(() => I(e), n),
+                (0, m.YG)(t.formFields) && n !== I && setTimeout(() => S(e), n),
                 o
             );
         } catch (t) {
@@ -209,17 +206,17 @@ let T = {
                     throw (
                         ((0, a.Zy)(),
                         o.Z.show({
-                            title: E.NW.string(E.t['2bHM5e']),
-                            body: E.NW.string(E.t.D0lNBA),
-                            confirmText: E.NW.string(E.t.qFctfH)
+                            title: E.NW.string(E.t.MmIrpa),
+                            body: E.NW.string(E.t.yjpDQ0),
+                            confirmText: E.NW.string(E.t.XNGT1N)
                         }),
-                        O(b({}, t), { message: E.NW.string(E.t.D0lNBA) }))
+                        O(y({}, t), { message: E.NW.string(E.t.yjpDQ0) }))
                     );
                 case 403:
-                    throw O(b({}, t), { message: E.NW.string(E.t.bu2hl5) });
+                    throw O(y({}, t), { message: E.NW.string(E.t['8T1rxM']) });
                 default:
-                    var l;
-                    throw O(b({}, t), { message: null !== (l = new s.Hx(t).getAnyErrorMessage()) && void 0 !== l ? l : E.NW.string(E.t.R0RpRU) });
+                    var l, d;
+                    throw O(y({}, t), { message: null != (d = ((l = new s.Hx(t)), l.getAnyErrorMessage())) ? d : E.NW.string(E.t.R0RpRU) });
             }
         }
     },

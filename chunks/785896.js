@@ -22,42 +22,39 @@ let u = (e, t, n) => {
         let { emojiId: t, refreshPositionKey: n } = e,
             { joinedEmojiSourceGuildRecord: s, emoji: d } = (0, i.cj)([a.ZP, o.Z], () => u(a.ZP, o.Z, t)),
             f = null != s,
-            p = null != s && s.hasFeature(c.oNc.DISCOVERABLE),
-            _ = (!f || p) && null != t,
-            [h, m] = r.useState(_),
+            _ = null != s && s.hasFeature(c.oNc.DISCOVERABLE),
+            p = (!f || _) && null != t,
+            [h, m] = r.useState(p),
             [g, E] = r.useState(null),
-            v = null != s ? l.JO.createFromGuildRecord(s) : null,
-            [b, y] = r.useState(v),
-            [O, S] = r.useState(null),
-            I = r.useRef(n);
+            b = null != s ? l.JO.createFromGuildRecord(s) : null,
+            [y, v] = r.useState(b),
+            [O, I] = r.useState(null),
+            S = r.useRef(n);
         return (
             r.useEffect(() => {
-                I.current = n;
+                S.current = n;
             }),
             r.useEffect(() => {
                 var e, n;
-                null === (e = I.current) || void 0 === e || e.call(I);
+                null == (e = S.current) || e.call(S);
                 let r = async () => {
                     var e;
                     let n = null != t ? await (0, l.Fi)(t) : null;
                     if (null != n)
                         switch ((E(n.type), n.type)) {
                             case l.w6.APPLICATION:
-                                S(n.application);
+                                I(n.application);
                                 break;
                             case l.w6.GUILD:
-                                y(n.guild);
+                                v(n.guild);
                         }
-                    m(!1), null === (e = I.current) || void 0 === e || e.call(I);
+                    m(!1), null == (e = S.current) || e.call(S);
                 };
-                if (_) {
-                    r();
-                    return;
-                }
-                null === (n = I.current) || void 0 === n || n.call(I);
-            }, [t, _]),
+                if (p) return void r();
+                null == (n = S.current) || n.call(S);
+            }, [t, p]),
             {
-                expressionSourceGuild: b,
+                expressionSourceGuild: y,
                 expressionSourceApplication: O,
                 sourceType: g,
                 joinedEmojiSourceGuildRecord: s,

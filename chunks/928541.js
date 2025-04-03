@@ -1,12 +1,12 @@
 a.d(e, {
     $2: () => i,
-    WD: () => _,
+    WD: () => o,
     cW: () => c
 });
 var r,
     n,
-    o = a(573736);
-function _(t) {
+    _ = a(573736);
+function o(t) {
     return new c((e) => {
         e(t);
     });
@@ -66,10 +66,7 @@ class c {
                     (n = !0), (r = e), t && t();
                 }
             ).then(() => {
-                if (n) {
-                    a(r);
-                    return;
-                }
+                if (n) return void a(r);
                 e(r);
             });
         });
@@ -87,10 +84,7 @@ class c {
     __init3() {
         this._setResult = (t, e) => {
             if (this._state === n.PENDING) {
-                if ((0, o.J8)(e)) {
-                    e.then(this._resolve, this._reject);
-                    return;
-                }
+                if ((0, _.J8)(e)) return void e.then(this._resolve, this._reject);
                 (this._state = t), (this._value = e), this._executeHandlers();
             }
         };
@@ -101,7 +95,7 @@ class c {
             let t = this._handlers.slice();
             (this._handlers = []),
                 t.forEach((t) => {
-                    !t[0] && (this._state === n.RESOLVED && t[1](this._value), this._state === n.REJECTED && t[2](this._value), (t[0] = !0));
+                    t[0] || (this._state === n.RESOLVED && t[1](this._value), this._state === n.REJECTED && t[2](this._value), (t[0] = !0));
                 });
         };
     }

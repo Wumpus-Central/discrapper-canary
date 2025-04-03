@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = ['string', 'char', 'byte', 'int', 'long', 'bool', 'decimal', 'single', 'double', 'DateTime', 'xml', 'array', 'hashtable', 'void'],
         n = 'Add|Clear|Close|Copy|Enter|Exit|Find|Format|Get|Hide|Join|Lock|Move|New|Open|Optimize|Pop|Push|Redo|Remove|Rename|Reset|Resize|Search|Select|Set|Show|Skip|Split|Step|Switch|Undo|Unlock|Watch|Backup|Checkpoint|Compare|Compress|Convert|ConvertFrom|ConvertTo|Dismount|Edit|Expand|Export|Group|Import|Initialize|Limit|Merge|Mount|Out|Publish|Restore|Save|Sync|Unpublish|Update|Approve|Assert|Build|Complete|Confirm|Deny|Deploy|Disable|Enable|Install|Invoke|Register|Request|Restart|Resume|Start|Stop|Submit|Suspend|Uninstall|Unregister|Wait|Debug|Measure|Ping|Repair|Resolve|Test|Trace|Connect|Disconnect|Read|Receive|Send|Write|Block|Grant|Protect|Revoke|Unblock|Unprotect|Use|ForEach|Sort|Tee|Where',
         r = '-and|-as|-band|-bnot|-bor|-bxor|-casesensitive|-ccontains|-ceq|-cge|-cgt|-cle|-clike|-clt|-cmatch|-cne|-cnotcontains|-cnotlike|-cnotmatch|-contains|-creplace|-csplit|-eq|-exact|-f|-file|-ge|-gt|-icontains|-ieq|-ige|-igt|-ile|-ilike|-ilt|-imatch|-in|-ine|-inotcontains|-inotlike|-inotmatch|-ireplace|-is|-isnot|-isplit|-join|-le|-like|-lt|-match|-ne|-not|-notcontains|-notin|-notlike|-notmatch|-or|-regex|-replace|-shl|-shr|-split|-wildcard|-xor',
@@ -79,11 +79,11 @@ function t(e) {
             ],
             contains: [d]
         }),
-        p = {
+        _ = {
             className: 'built_in',
             variants: [{ begin: '('.concat(n, ')+(-)[\\w\\d]+') }]
         },
-        _ = {
+        p = {
             className: 'class',
             beginKeywords: 'class enum',
             end: /\s*[{]/,
@@ -149,7 +149,7 @@ function t(e) {
             begin: /@\B/,
             relevance: 0
         },
-        v = {
+        b = {
             className: 'function',
             begin: /\[.*\]\s*[\w]+[ ]??\(/,
             end: /$/,
@@ -165,8 +165,8 @@ function t(e) {
                 e.inherit(e.TITLE_MODE, { endsParent: !0 })
             ]
         },
-        b = [v, f, a, e.NUMBER_MODE, c, u, p, s, l, E],
-        y = {
+        y = [b, f, a, e.NUMBER_MODE, c, u, _, s, l, E],
+        v = {
             begin: /\[/,
             end: /\]/,
             excludeBegin: !0,
@@ -174,7 +174,7 @@ function t(e) {
             relevance: 0,
             contains: [].concat(
                 'self',
-                b,
+                y,
                 {
                     begin: '(' + t.join('|') + ')',
                     className: 'built_in',
@@ -188,14 +188,13 @@ function t(e) {
             )
         };
     return (
-        v.contains.unshift(y),
+        b.contains.unshift(v),
         {
             name: 'PowerShell',
             aliases: ['pwsh', 'ps', 'ps1'],
             case_insensitive: !0,
             keywords: i,
-            contains: b.concat(_, h, m, g, y)
+            contains: y.concat(p, h, m, g, v)
         }
     );
-}
-e.exports = t;
+};

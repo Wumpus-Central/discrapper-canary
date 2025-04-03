@@ -28,43 +28,42 @@ function a(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var s = n(706057),
-    l = (function (e) {
-        function t(e, n) {
-            i(this, t);
-            var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (r._strings = e), (r._values = n), r;
-        }
-        return (
-            a(t, e),
-            r(t, [
-                {
-                    key: '__transformValue',
-                    value: function (e) {
-                        return e instanceof s ? e.__getValue() : e;
-                    }
-                },
-                {
-                    key: '__getValue',
-                    value: function () {
-                        for (var e = this._strings[0], t = 0; t < this._values.length; ++t) e += this.__transformValue(this._values[t]) + this._strings[1 + t];
-                        return e;
-                    }
-                },
-                {
-                    key: '__attach',
-                    value: function () {
-                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof s && this._values[e].__addChild(this);
-                    }
-                },
-                {
-                    key: '__detach',
-                    value: function () {
-                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof s && this._values[e].__removeChild(this);
-                    }
+var s = n(706057);
+e.exports = (function (e) {
+    function t(e, n) {
+        i(this, t);
+        var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return (r._strings = e), (r._values = n), r;
+    }
+    return (
+        a(t, e),
+        r(t, [
+            {
+                key: '__transformValue',
+                value: function (e) {
+                    return e instanceof s ? e.__getValue() : e;
                 }
-            ]),
-            t
-        );
-    })(n(438648));
-e.exports = l;
+            },
+            {
+                key: '__getValue',
+                value: function () {
+                    for (var e = this._strings[0], t = 0; t < this._values.length; ++t) e += this.__transformValue(this._values[t]) + this._strings[1 + t];
+                    return e;
+                }
+            },
+            {
+                key: '__attach',
+                value: function () {
+                    for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof s && this._values[e].__addChild(this);
+                }
+            },
+            {
+                key: '__detach',
+                value: function () {
+                    for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof s && this._values[e].__removeChild(this);
+                }
+            }
+        ]),
+        t
+    );
+})(n(438648));

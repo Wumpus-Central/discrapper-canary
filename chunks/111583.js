@@ -9,7 +9,7 @@ var i,
     u = n(314897),
     d = n(300429),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -42,12 +42,12 @@ let h = 10 * c.Z.Millis.SECOND,
     m = 1.5 * c.Z.Millis.SECOND,
     g = 5,
     E = {},
-    v = Object.freeze({});
-function b(e) {
-    var t;
-    return null !== (t = E[e]) && void 0 !== t ? t : v;
-}
+    b = Object.freeze({});
 function y(e) {
+    var t;
+    return null != (t = E[e]) ? t : b;
+}
+function v(e) {
     let { channelId: t } = e,
         n = u.default.getId();
     if (null == n || t === l.V) return !1;
@@ -57,36 +57,39 @@ function y(e) {
     if (null != r && (null != r.timeout || r.prevSend + o > i)) return !1;
     let c = setTimeout(
         () => {
-            if (null != r && r.channelId === t && n === u.default.getId() && null != r.timeout)
-                (r.timeout = null),
-                    !(R(t) > g) &&
-                        a.tn
-                            .post({
-                                url: f.ANM.TYPING(t),
-                                oldFormErrors: !0,
-                                rejectWithError: !0
-                            })
-                            .then((e) => {
-                                if (200 === e.status) {
-                                    var n, r;
-                                    let i = null !== (n = e.body.message_send_cooldown_ms) && void 0 !== n ? n : 0,
-                                        o = null !== (r = e.body.thread_create_cooldown_ms) && void 0 !== r ? r : 0;
-                                    i > 0 &&
+            null != r &&
+                r.channelId === t &&
+                n === u.default.getId() &&
+                null != r.timeout &&
+                ((r.timeout = null),
+                R(t) > g ||
+                    a.tn
+                        .post({
+                            url: f.ANM.TYPING(t),
+                            oldFormErrors: !0,
+                            rejectWithError: !0
+                        })
+                        .then((e) => {
+                            if (200 === e.status) {
+                                var n, r;
+                                let i = null != (n = e.body.message_send_cooldown_ms) ? n : 0,
+                                    o = null != (r = e.body.thread_create_cooldown_ms) ? r : 0;
+                                i > 0 &&
+                                    s.Z.dispatch({
+                                        type: 'SLOWMODE_SET_COOLDOWN',
+                                        channelId: t,
+                                        slowmodeType: d.S.SendMessage,
+                                        cooldownMs: i
+                                    }),
+                                    o > 0 &&
                                         s.Z.dispatch({
                                             type: 'SLOWMODE_SET_COOLDOWN',
                                             channelId: t,
-                                            slowmodeType: d.S.SendMessage,
-                                            cooldownMs: i
-                                        }),
-                                        o > 0 &&
-                                            s.Z.dispatch({
-                                                type: 'SLOWMODE_SET_COOLDOWN',
-                                                channelId: t,
-                                                slowmodeType: d.S.CreateThread,
-                                                cooldownMs: o
-                                            });
-                                }
-                            });
+                                            slowmodeType: d.S.CreateThread,
+                                            cooldownMs: o
+                                        });
+                            }
+                        }));
         },
         null == r || r.prevSend > i - 2 * o ? m : 0
     );
@@ -106,7 +109,7 @@ function O(e) {
     if (null == r || r.channelId !== e) return !1;
     null != r.timeout && clearTimeout(r.timeout), (r = null);
 }
-function S(e) {
+function I(e) {
     let { channelId: t } = e,
         n = u.default.getId();
     return (
@@ -122,7 +125,7 @@ function S(e) {
         }))
     );
 }
-function I(e, t) {
+function S(e, t) {
     return setTimeout(() => {
         s.Z.dispatch({
             type: 'TYPING_STOP',
@@ -133,14 +136,14 @@ function I(e, t) {
 }
 function T(e) {
     let { channelId: t, userId: n } = e,
-        r = _({}, b(t));
-    clearTimeout(r[n]), (r[n] = I(t, n)), (E[t] = r);
+        r = p({}, y(t));
+    clearTimeout(r[n]), (r[n] = S(t, n)), (E[t] = r);
 }
 function N(e) {
     let { channelId: t, userId: n } = e,
         r = E[t];
     if (null == r || null == r[n]) return !1;
-    let i = _({}, r);
+    let i = p({}, r);
     clearTimeout(i[n]), delete i[n], (E[t] = i);
 }
 function A(e) {
@@ -162,23 +165,23 @@ function C() {
     E = {};
 }
 function R(e) {
-    let t = b(e);
-    return t === v ? 0 : Object.keys(t).length;
+    let t = y(e);
+    return t === b ? 0 : Object.keys(t).length;
 }
 class P extends (i = o.ZP.Store) {
     getTypingUsers(e) {
-        return b(e);
+        return y(e);
     }
     isTyping(e, t) {
-        return null != b(e)[t];
+        return null != y(e)[t];
     }
 }
-p(P, 'displayName', 'TypingStore');
+_(P, 'displayName', 'TypingStore');
 let w = new P(s.Z, {
     TYPING_START: T,
     TYPING_STOP: N,
-    TYPING_START_LOCAL: y,
-    TYPING_STOP_LOCAL: S,
+    TYPING_START_LOCAL: v,
+    TYPING_STOP_LOCAL: I,
     CONNECTION_OPEN: C,
     OVERLAY_INITIALIZE: C,
     MESSAGE_CREATE: A

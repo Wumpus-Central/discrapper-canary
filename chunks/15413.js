@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             begin: "^'{3,}[ \\t]*$",
@@ -174,5 +174,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

@@ -6,7 +6,7 @@ var t = '[0-9](_*[0-9])*',
         variants: [{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` }, { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${n})[fFdD]?\\b` }, { begin: `\\b(${t})[fFdD]\\b` }, { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${r})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
         relevance: 0
     };
-function o(e) {
+e.exports = function (e) {
     let t = {
             keyword: 'abstract as val var vararg get set class object open private protected public noinline crossinline dynamic final enum if else do while for when throw try catch finally import package is in fun override companion reified inline lateinit init interface annotation data sealed internal infix operator out by constructor super tailrec where const inner suspend typealias external expect actual',
             built_in: 'Byte Short Char Int Long Boolean Float Double Void Unit Nothing',
@@ -91,10 +91,10 @@ function o(e) {
                 }
             ]
         },
-        p = f;
+        _ = f;
     return (
-        (p.variants[1].contains = [f]),
-        (f.variants[1].contains = [p]),
+        (_.variants[1].contains = [f]),
+        (f.variants[1].contains = [_]),
         {
             name: 'Kotlin',
             aliases: ['kt', 'kts'],
@@ -203,5 +203,4 @@ function o(e) {
             ]
         }
     );
-}
-e.exports = o;
+};

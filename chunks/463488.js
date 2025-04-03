@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /[a-zA-Z]\w*/,
         r = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
@@ -55,14 +55,14 @@ function t(e) {
             begin: /"""/,
             end: /"""/
         },
-        p = {
+        _ = {
             className: 'property',
             begin: t.concat(/\./, t.lookahead(n)),
             end: n,
             excludeBegin: !0,
             relevance: 0
         },
-        _ = {
+        p = {
             relevance: 0,
             match: t.concat(/\b_/, n),
             scope: 'variable'
@@ -91,32 +91,32 @@ function t(e) {
                 'self'
             ]
         }),
-        v = {
+        b = {
             scope: 'subst',
             begin: /%\(/,
             end: /\)/,
-            contains: [m, h, l, _, d]
+            contains: [m, h, l, p, d]
         },
-        b = {
+        y = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [
-                v,
+                b,
                 {
                     scope: 'char.escape',
                     variants: [{ match: /\\\\|\\["0%abefnrtv]/ }, { match: /\\x[0-9A-F]{2}/ }, { match: /\\u[0-9A-F]{4}/ }, { match: /\\U[0-9A-F]{8}/ }]
                 }
             ]
         };
-    v.contains.push(b);
-    let y = [...r, ...o, ...i],
+    b.contains.push(y);
+    let v = [...r, ...o, ...i],
         O = {
             relevance: 0,
-            match: t.concat('\\b(?!', y.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: t.concat('\\b(?!', v.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
         },
-        S = {
+        I = {
             scope: 'comment',
             variants: [
                 {
@@ -140,7 +140,6 @@ function t(e) {
             'variable.language': o,
             literal: i
         },
-        contains: [S, m, b, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, u, g, c, l, d, _, p, O]
+        contains: [I, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, u, g, c, l, d, p, _, O]
     };
-}
-e.exports = t;
+};

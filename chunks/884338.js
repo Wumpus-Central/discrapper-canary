@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => N,
+    Z: () => A,
     u: () => O
 }),
     n(653041),
@@ -18,7 +18,7 @@ var r,
     p = n(598077),
     h = n(594174),
     m = n(426563),
-    g = n(99427);
+    g = n(472840);
 function E(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function b(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,12 +60,12 @@ function v(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -102,7 +102,7 @@ function T() {
             return g.size24;
     }
 }
-class A extends (r = o.PureComponent) {
+class N extends (r = o.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: o } = this.props,
             a = [],
@@ -121,7 +121,7 @@ class A extends (r = o.PureComponent) {
                               className: g.avatarContainer,
                               children: s
                           },
-                          I(null !== (u = e[c]) && void 0 !== u ? u : null, c)
+                          I(null != (u = e[c]) ? u : null, c)
                       )
                     : (0, i.jsx)(
                           d.ZP,
@@ -145,7 +145,7 @@ class A extends (r = o.PureComponent) {
         if (!r) {
             if (null != n) {
                 if (n >= t) return (0, i.jsx)(o.Fragment, { children: a(''.concat(t, '+'), t) }, 'more-users');
-                if (n > s.length) {
+                else if (n > s.length) {
                     let e = n - s.length;
                     return (0, i.jsx)(o.Fragment, { children: a('+'.concat(e), e) }, 'more-users');
                 }
@@ -180,7 +180,7 @@ class A extends (r = o.PureComponent) {
                 c()(null != l, 'UserSummaryItem.render - renderPopout: popoutUserId cannot be null'),
                 (0, i.jsx)(
                     _.Z,
-                    y(b(y(b({}, this.props), { user: p && null != d ? d : void 0 }), e), {
+                    v(b(v(b({}, this.props), { user: p && null != d ? d : void 0 }), e), {
                         userId: l,
                         guildId: this.props.guildId
                     })
@@ -191,7 +191,7 @@ class A extends (r = o.PureComponent) {
             children: (n) =>
                 (0, i.jsxs)(
                     'div',
-                    y(
+                    v(
                         b(
                             {
                                 className: s()(e, g.container, T(t)),
@@ -212,9 +212,9 @@ class A extends (r = o.PureComponent) {
             E(this, '_ref', o.createRef()),
             E(this, 'defaultRenderUser', (e, t, n) => {
                 let { showUserPopout: r, guildId: o, size: a } = this.props;
-                if (null == e) {
+                if (null == e)
                     if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)('div', { className: g.emptyUser });
-                    {
+                    else {
                         let e = (null != n ? n : 0) % m.Z.DEFAULT_AVATARS.length,
                             t = m.Z.DEFAULT_AVATARS[e];
                         return (0, i.jsx)('img', {
@@ -223,7 +223,6 @@ class A extends (r = o.PureComponent) {
                             className: g.avatar
                         });
                     }
-                }
                 let s = (0, i.jsx)(
                     'img',
                     {
@@ -250,11 +249,11 @@ class A extends (r = o.PureComponent) {
             });
     }
 }
-E(A, 'defaultProps', {
+E(N, 'defaultProps', {
     max: 10,
     renderMoreUsers: S,
     renderIcon: !1,
     showDefaultAvatarsForNullUsers: !1,
     size: O.SIZE_24
 });
-let N = A;
+let A = N;

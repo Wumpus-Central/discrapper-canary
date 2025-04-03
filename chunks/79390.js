@@ -4,12 +4,12 @@ n.d(t, {
     UI: () => P,
     Uu: () => N,
     _N: () => w,
-    cS: () => x,
+    cS: () => L,
     cZ: () => G,
-    e1: () => F,
+    e1: () => V,
     eQ: () => R,
     fw: () => C,
-    uY: () => L,
+    uY: () => x,
     x9: () => k
 }),
     n(757143),
@@ -26,15 +26,15 @@ var r = n(392711),
     u = n(566006),
     d = n(739566),
     f = n(592125),
-    p = n(542578),
-    _ = n(375954),
+    _ = n(542578),
+    p = n(375954),
     h = n(496675),
     m = n(699516),
     g = n(70956),
     E = n(5192),
-    v = n(489887),
-    b = n(981631),
-    y = n(388032);
+    b = n(489887),
+    y = n(981631),
+    v = n(388032);
 function O(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function O(e, t, n) {
         e
     );
 }
-function S(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,7 +81,7 @@ function T(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -106,25 +106,25 @@ function R(e) {
     return !1;
 }
 function P(e) {
-    return (0, l.e7)([h.Z], () => !!(null != e && e.id !== c.V && b.TPd.POLLS.has(e.type)) && (!!e.isPrivate() || (h.Z.can(b.Plq.SEND_MESSAGES, e) && h.Z.can(b.Plq.SEND_POLLS, e))));
+    return (0, l.e7)([h.Z], () => null != e && e.id !== c.V && !!y.TPd.POLLS.has(e.type) && (!!e.isPrivate() || (h.Z.can(y.Plq.SEND_MESSAGES, e) && h.Z.can(y.Plq.SEND_POLLS, e))));
 }
 function w() {
     return !1;
 }
 function D(e, t, n) {
-    return 0 === e.length && null == t.find((e) => x(e, n));
+    return 0 === e.length && null == t.find((e) => L(e, n));
 }
-function x(e, t) {
+function L(e, t) {
     if (t === a.C.IMAGE_ONLY_ANSWERS) return null != e.image;
     {
         var n;
-        let t = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
+        let t = null == (n = e.text) ? void 0 : n.trim();
         return null != t && t.length > 0;
     }
 }
-function L(e, t) {
+function x(e, t) {
     var n;
-    let r = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
+    let r = null == (n = e.text) ? void 0 : n.trim();
     return t === a.C.DEFAULT && null != e.image && (null == r || 0 === r.length);
 }
 function M(e) {
@@ -134,42 +134,40 @@ function k(e) {
     var t;
     if (null == e) return;
     let n =
-            null == e
+            null == e || null == (t = e.answers)
                 ? void 0
-                : null === (t = e.answers) || void 0 === t
-                  ? void 0
-                  : t.map((e, t) => {
-                        var n, r;
-                        let i = null === (n = e.poll_media) || void 0 === n ? void 0 : n.emoji,
-                            o = T(S({}, e.poll_media), {
-                                emoji:
-                                    null != i
-                                        ? {
-                                              id: i.id,
-                                              name: null !== (r = i.name) && void 0 !== r ? r : ''
-                                          }
-                                        : void 0
-                            });
-                        return T(S({}, e), {
-                            answer_id: t + 1,
-                            poll_media: o
-                        });
-                    }),
+                : t.map((e, t) => {
+                      var n, r;
+                      let i = null == (n = e.poll_media) ? void 0 : n.emoji,
+                          o = T(I({}, e.poll_media), {
+                              emoji:
+                                  null != i
+                                      ? {
+                                            id: i.id,
+                                            name: null != (r = i.name) ? r : ''
+                                        }
+                                      : void 0
+                          });
+                      return T(I({}, e), {
+                          answer_id: t + 1,
+                          poll_media: o
+                      });
+                  }),
         r = (null == e ? void 0 : e.duration) != null ? M(e.duration) : '0';
-    return T(S({}, e), {
+    return T(I({}, e), {
         expiry: r,
         answers: n
     });
 }
 function j(e, t) {
     var n, r, i, o;
-    let a = null !== (o = null === (i = e.embeds[0]) || void 0 === i ? void 0 : null === (r = i.fields) || void 0 === r ? void 0 : null === (n = r.find((e) => 'poll_question_text' === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== o ? o : '';
+    let a = null != (o = null == (i = e.embeds[0]) || null == (r = i.fields) || null == (n = r.find((e) => 'poll_question_text' === e.rawName)) ? void 0 : n.rawValue) ? o : '';
     return null != t ? (0, s.aF)(a, t) : a;
 }
 function U(e) {
     let t = (0, d.ZH)(e),
-        n = j(e, v.Dv);
-    return y.NW.format(y.t.Vn97KS, {
+        n = j(e, b.Dv);
+    return v.NW.format(v.t.Vn97KS, {
         username: t.nick,
         title: n
     });
@@ -177,7 +175,7 @@ function U(e) {
 function G(e) {
     return e.reduce((e, t) => {
         var n, r;
-        return e + (null !== (r = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== r ? r : 0);
+        return e + (null != (r = null == (n = t.count_details) ? void 0 : n.vote) ? r : 0);
     }, 0);
 }
 function B(e, t) {
@@ -187,60 +185,61 @@ function B(e, t) {
             animated: !1
         },
         r = e.getChannelId(),
-        o = p.Z.getReactions(r, e.id, n, v.$J, u.O.VOTE),
+        o = _.Z.getReactions(r, e.id, n, b.$J, u.O.VOTE),
         a = f.Z.getChannel(r),
         s = null == a || a.isPrivate() ? null : a.getGuildId();
     return i()(o)
         .reject((e) => m.Z.isBlockedOrIgnored(e.id))
-        .take(v.$J)
+        .take(b.$J)
         .map((e) => E.ZP.getName(s, null == a ? void 0 : a.id, e))
         .value();
 }
-function Z(e, t) {
+function F(e, t) {
     let n = Math.max(0, t - e.length);
-    return 1 === e.length
-        ? n > 0
-            ? y.NW.formatToPlainString(y.t['SV/iZm'], {
-                  a: e[0],
-                  n: n.toLocaleString()
-              })
-            : e[0]
-        : 2 === e.length
-          ? n > 0
-              ? y.NW.formatToPlainString(y.t.YBnZKy, {
-                    a: e[0],
-                    b: e[1],
-                    n: n.toLocaleString()
-                })
-              : y.NW.formatToPlainString(y.t['O5+f5e'], {
-                    a: e[0],
-                    b: e[1]
-                })
-          : 3 !== e.length
-            ? y.NW.formatToPlainString(y.t.yVX6kJ, { n: n.toLocaleString() })
-            : n > 0
-              ? y.NW.formatToPlainString(y.t['ThXp+P'], {
-                    a: e[0],
-                    b: e[1],
-                    c: e[2],
-                    n: n.toLocaleString()
-                })
-              : y.NW.formatToPlainString(y.t['0UzBMz'], {
-                    a: e[0],
-                    b: e[1],
-                    c: e[2]
-                });
+    if (1 === e.length)
+        if (n > 0)
+            return v.NW.formatToPlainString(v.t['SV/iZm'], {
+                a: e[0],
+                n: n.toLocaleString()
+            });
+        else return e[0];
+    if (2 === e.length)
+        if (n > 0)
+            return v.NW.formatToPlainString(v.t.YBnZKy, {
+                a: e[0],
+                b: e[1],
+                n: n.toLocaleString()
+            });
+        else
+            return v.NW.formatToPlainString(v.t['O5+f5e'], {
+                a: e[0],
+                b: e[1]
+            });
+    return 3 !== e.length
+        ? v.NW.formatToPlainString(v.t.yVX6kJ, { n: n.toLocaleString() })
+        : n > 0
+          ? v.NW.formatToPlainString(v.t['ThXp+P'], {
+                a: e[0],
+                b: e[1],
+                c: e[2],
+                n: n.toLocaleString()
+            })
+          : v.NW.formatToPlainString(v.t['0UzBMz'], {
+                a: e[0],
+                b: e[1],
+                c: e[2]
+            });
 }
-function F(e, t, n) {
+function V(e, t, n) {
     var r, i;
-    let o = _.Z.getMessage(t, e);
+    let o = p.Z.getMessage(t, e);
     if (null == o) return '';
     let a = o.getReaction({
             id: n,
             name: '',
             animated: !1
         }),
-        s = null !== (i = null == a ? void 0 : null === (r = a.count_details) || void 0 === r ? void 0 : r.vote) && void 0 !== i ? i : 0,
+        s = null != (i = null == a || null == (r = a.count_details) ? void 0 : r.vote) ? i : 0,
         l = B(o, n);
-    return 0 === l.length ? '' : Z(l, s);
+    return 0 === l.length ? '' : F(l, s);
 }

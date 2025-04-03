@@ -40,58 +40,57 @@ function s(e, t) {
 var l = n(706057),
     c = n(438648),
     u = n(888550),
-    d = n(27065),
-    f = (function (e) {
-        function t(e) {
-            o(this, t);
-            var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return !(e = d.current(e) || {}).transform || e.transform instanceof l || (e = r({}, e, { transform: new u(e.transform) })), (n._style = e), n;
-        }
-        return (
-            s(t, e),
-            i(t, [
-                {
-                    key: '__getValue',
-                    value: function () {
-                        var e = {};
-                        for (var t in this._style) {
-                            var n = this._style[t];
-                            n instanceof l ? (e[t] = n.__getValue()) : (e[t] = n);
-                        }
-                        return e;
+    d = n(27065);
+e.exports = (function (e) {
+    function t(e) {
+        o(this, t);
+        var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return !(e = d.current(e) || {}).transform || e.transform instanceof l || (e = r({}, e, { transform: new u(e.transform) })), (n._style = e), n;
+    }
+    return (
+        s(t, e),
+        i(t, [
+            {
+                key: '__getValue',
+                value: function () {
+                    var e = {};
+                    for (var t in this._style) {
+                        var n = this._style[t];
+                        n instanceof l ? (e[t] = n.__getValue()) : (e[t] = n);
                     }
-                },
-                {
-                    key: '__getAnimatedValue',
-                    value: function () {
-                        var e = {};
-                        for (var t in this._style) {
-                            var n = this._style[t];
-                            n instanceof l && (e[t] = n.__getAnimatedValue());
-                        }
-                        return e;
+                    return e;
+                }
+            },
+            {
+                key: '__getAnimatedValue',
+                value: function () {
+                    var e = {};
+                    for (var t in this._style) {
+                        var n = this._style[t];
+                        n instanceof l && (e[t] = n.__getAnimatedValue());
                     }
-                },
-                {
-                    key: '__attach',
-                    value: function () {
-                        for (var e in this._style) {
-                            var t = this._style[e];
-                            t instanceof l && t.__addChild(this);
-                        }
-                    }
-                },
-                {
-                    key: '__detach',
-                    value: function () {
-                        for (var e in this._style) {
-                            var t = this._style[e];
-                            t instanceof l && t.__removeChild(this);
-                        }
+                    return e;
+                }
+            },
+            {
+                key: '__attach',
+                value: function () {
+                    for (var e in this._style) {
+                        var t = this._style[e];
+                        t instanceof l && t.__addChild(this);
                     }
                 }
-            ]),
-            t
-        );
-    })(c);
-e.exports = f;
+            },
+            {
+                key: '__detach',
+                value: function () {
+                    for (var e in this._style) {
+                        var t = this._style[e];
+                        t instanceof l && t.__removeChild(this);
+                    }
+                }
+            }
+        ]),
+        t
+    );
+})(c);

@@ -15,18 +15,18 @@ var r = n(512722),
     u = n(749210),
     d = n(904245),
     f = n(911969),
-    p = n(386696),
-    _ = n(957730),
+    _ = n(386696),
+    p = n(957730),
     h = n(968437),
     m = n(928477),
     g = n(665906),
     E = n(695346),
-    v = n(592125),
-    b = n(496675),
-    y = n(594174),
+    b = n(592125),
+    y = n(496675),
+    v = n(594174),
     O = n(70956),
-    S = n(51144),
-    I = n(895924),
+    I = n(51144),
+    S = n(895924),
     T = n(689079),
     N = n(981631),
     A = n(590433),
@@ -83,35 +83,35 @@ function D(e, t) {
         e
     );
 }
-let x = n(227419).Z,
-    L = (e, t) => {
+let L = n(227419).Z,
+    x = (e, t) => {
         var n;
-        return null === (n = e.find((e) => e.name === t)) || void 0 === n ? void 0 : n.value;
+        return null == (n = e.find((e) => e.name === t)) ? void 0 : n.value;
     },
     M = {
         [T.bi.BUILT_IN]: {
             id: T.bi.BUILT_IN,
-            type: I.Qi.BUILT_IN,
+            type: S.Qi.BUILT_IN,
             get name() {
                 return C.NW.string(C.t.fI5MTU);
             }
         },
         [T.bi.FRECENCY]: {
             id: T.bi.FRECENCY,
-            type: I.Qi.BUILT_IN,
+            type: S.Qi.BUILT_IN,
             get name() {
                 return C.NW.string(C.t['+cGVV1']);
             }
         }
     },
     k = [
-        ...x,
+        ...L,
         {
             id: '-1',
             untranslatedName: 'shrug',
             displayName: 'shrug',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN_TEXT,
+            inputType: S.iw.BUILT_IN_TEXT,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.j5xUSU);
@@ -134,7 +134,7 @@ let x = n(227419).Z,
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: ''.concat(n, ' \xAF\\_(ツ)_/\xAF').trim() };
             }
         },
@@ -143,7 +143,7 @@ let x = n(227419).Z,
             untranslatedName: 'tableflip',
             displayName: 'tableflip',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN_TEXT,
+            inputType: S.iw.BUILT_IN_TEXT,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.nrQRcX);
@@ -166,7 +166,7 @@ let x = n(227419).Z,
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: ''.concat(n, ' (\u256F\xB0\u25A1\xB0)\u256F\uFE35 \u253B\u2501\u253B').trim() };
             }
         },
@@ -175,7 +175,7 @@ let x = n(227419).Z,
             untranslatedName: 'unflip',
             displayName: 'unflip',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN_TEXT,
+            inputType: S.iw.BUILT_IN_TEXT,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.pnnn8f);
@@ -198,7 +198,7 @@ let x = n(227419).Z,
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: ''.concat(n, ' \u252C\u2500\u252Cノ( º _ ºノ)').trim() };
             }
         },
@@ -207,7 +207,7 @@ let x = n(227419).Z,
             untranslatedName: 'tts',
             displayName: 'tts',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN_TEXT,
+            inputType: S.iw.BUILT_IN_TEXT,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.jZcIiY);
@@ -231,12 +231,12 @@ let x = n(227419).Z,
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && !t.isPrivate() && E.OW.getSetting() && b.Z.can(N.Plq.SEND_TTS_MESSAGES, t);
+                return null != t && !t.isPrivate() && E.OW.getSetting() && y.Z.can(N.Plq.SEND_TTS_MESSAGES, t);
             },
             execute: (e) => {
                 var t;
                 return {
-                    content: null !== (t = L(e, 'message')) && void 0 !== t ? t : '',
+                    content: null != (t = x(e, 'message')) ? t : '',
                     tts: !0
                 };
             }
@@ -246,7 +246,7 @@ let x = n(227419).Z,
             untranslatedName: 'me',
             displayName: 'me',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN_TEXT,
+            inputType: S.iw.BUILT_IN_TEXT,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.UGO8fX);
@@ -270,7 +270,7 @@ let x = n(227419).Z,
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: '_'.concat(n, '_') };
             }
         },
@@ -279,7 +279,7 @@ let x = n(227419).Z,
             untranslatedName: 'spoiler',
             displayName: 'spoiler',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN_TEXT,
+            inputType: S.iw.BUILT_IN_TEXT,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.v0eDdX);
@@ -303,7 +303,7 @@ let x = n(227419).Z,
             ],
             execute: (e) => {
                 var t;
-                let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
+                let n = null != (t = x(e, 'message')) ? t : '';
                 return { content: (0, N.XmY)(n).trim() };
             }
         },
@@ -312,7 +312,7 @@ let x = n(227419).Z,
             untranslatedName: 'nick',
             displayName: 'nick',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN,
+            inputType: S.iw.BUILT_IN,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.jiHfS0);
@@ -335,13 +335,13 @@ let x = n(227419).Z,
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && !t.isPrivate() && (b.Z.can(N.Plq.CHANGE_NICKNAME, t) || b.Z.can(N.Plq.MANAGE_NICKNAMES, t));
+                return null != t && !t.isPrivate() && (y.Z.can(N.Plq.CHANGE_NICKNAME, t) || y.Z.can(N.Plq.MANAGE_NICKNAMES, t));
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
-                let o = null !== (n = L(e, 'new_nick')) && void 0 !== n ? n : '';
+                let o = null != (n = x(e, 'new_nick')) ? n : '';
                 l.Z.changeNickname(r.id, i.id, N.ME, o || '');
             }
         },
@@ -350,7 +350,7 @@ let x = n(227419).Z,
             untranslatedName: 'thread',
             displayName: 'thread',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN,
+            inputType: S.iw.BUILT_IN,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.t6ZAS0);
@@ -391,10 +391,10 @@ let x = n(227419).Z,
             execute: async (e, t) => {
                 var n, r;
                 let { channel: i } = t,
-                    o = null !== (n = L(e, 'name')) && void 0 !== n ? n : '',
-                    a = null !== (r = L(e, 'message')) && void 0 !== r ? r : '',
+                    o = null != (n = x(e, 'name')) ? n : '',
+                    a = null != (r = x(e, 'message')) ? r : '',
                     l = await (0, m.gK)(i, o, s.d.PUBLIC_THREAD, (0, h.WD)(i, null), 'Slash Command');
-                d.Z.sendMessage(l.id, _.ZP.parse(l, a));
+                d.Z.sendMessage(l.id, p.ZP.parse(l, a));
             }
         },
         {
@@ -402,7 +402,7 @@ let x = n(227419).Z,
             untranslatedName: 'kick',
             displayName: 'kick',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN,
+            inputType: S.iw.BUILT_IN,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t['03N0UF']);
@@ -438,22 +438,19 @@ let x = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return b.Z.can(N.Plq.KICK_MEMBERS, t);
+                return y.Z.can(N.Plq.KICK_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
-                let o = null !== (n = L(e, 'user')) && void 0 !== n ? n : '';
-                if (!b.Z.canManageUser(N.Plq.KICK_MEMBERS, o, r)) {
-                    d.Z.sendBotMessage(i.id, C.NW.string(C.t['6RIwPD']));
-                    return;
-                }
+                let o = null != (n = x(e, 'user')) ? n : '';
+                if (!y.Z.canManageUser(N.Plq.KICK_MEMBERS, o, r)) return void d.Z.sendBotMessage(i.id, C.NW.string(C.t['6RIwPD']));
                 (async () => {
                     var t;
-                    let n = y.default.getUser(o);
+                    let n = v.default.getUser(o);
                     if (null == n) throw Error();
-                    await u.Z.kickUser(r.id, o, null !== (t = L(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, C.NW.formatToPlainString(C.t['9wzHDQ'], { user: S.ZP.getUserTag(n) }));
+                    await u.Z.kickUser(r.id, o, null != (t = x(e, 'reason')) ? t : ''), d.Z.sendBotMessage(i.id, C.NW.formatToPlainString(C.t['9wzHDQ'], { user: I.ZP.getUserTag(n) }));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, C.NW.string(C.t.l0gNlp));
                 });
@@ -464,7 +461,7 @@ let x = n(227419).Z,
             untranslatedName: 'ban',
             displayName: 'ban',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN,
+            inputType: S.iw.BUILT_IN,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.HWuskp);
@@ -551,24 +548,21 @@ let x = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return b.Z.can(N.Plq.BAN_MEMBERS, t);
+                return y.Z.can(N.Plq.BAN_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
-                let o = null !== (n = L(e, 'user')) && void 0 !== n ? n : '';
-                if (!b.Z.canManageUser(N.Plq.BAN_MEMBERS, o, r)) {
-                    d.Z.sendBotMessage(i.id, C.NW.string(C.t.R27LJi));
-                    return;
-                }
+                let o = null != (n = x(e, 'user')) ? n : '';
+                if (!y.Z.canManageUser(N.Plq.BAN_MEMBERS, o, r)) return void d.Z.sendBotMessage(i.id, C.NW.string(C.t.R27LJi));
                 (async () => {
                     var t, n;
                     if ('' === o) throw Error();
-                    let a = null !== (t = L(e, 'delete_messages')) && void 0 !== t ? t : 0,
-                        s = null !== (n = L(e, 'reason')) && void 0 !== n ? n : '',
-                        l = y.default.getUser(o);
-                    await u.Z.banUser(r.id, o, a, s), d.Z.sendBotMessage(i.id, C.NW.formatToPlainString(C.t.YflWdH, { user: null != l ? S.ZP.getUserTag(l) : o }));
+                    let a = null != (t = x(e, 'delete_messages')) ? t : 0,
+                        s = null != (n = x(e, 'reason')) ? n : '',
+                        l = v.default.getUser(o);
+                    await u.Z.banUser(r.id, o, a, s), d.Z.sendBotMessage(i.id, C.NW.formatToPlainString(C.t.YflWdH, { user: null != l ? I.ZP.getUserTag(l) : o }));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, C.NW.string(C.t.w2J6Qk));
                 });
@@ -579,7 +573,7 @@ let x = n(227419).Z,
             untranslatedName: 'timeout',
             displayName: 'timeout',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN,
+            inputType: S.iw.BUILT_IN,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.KkPcen);
@@ -603,7 +597,7 @@ let x = n(227419).Z,
                 {
                     name: 'duration',
                     displayName: 'duration',
-                    type: f.jw.STRING,
+                    type: f.jw.INTEGER,
                     get description() {
                         return C.NW.string(C.t.SNqN1d);
                     },
@@ -635,21 +629,18 @@ let x = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return b.Z.can(N.Plq.MODERATE_MEMBERS, t);
+                return y.Z.can(N.Plq.MODERATE_MEMBERS, t);
             },
             execute: (e, t) => {
                 let { guild: n, channel: r } = t;
                 if (null == n || null == r) return;
-                let i = L(e, 'user');
-                if (!(0, p.F)(n.id, i)) {
-                    d.Z.sendBotMessage(r.id, C.NW.string(C.t.F5pqSU));
-                    return;
-                }
+                let i = x(e, 'user');
+                if (!(0, _.F)(n.id, i)) return void d.Z.sendBotMessage(r.id, C.NW.string(C.t.F5pqSU));
                 (async () => {
                     var t, o;
-                    let s = null !== (t = L(e, 'duration')) && void 0 !== t ? t : '',
-                        l = null !== (o = L(e, 'reason')) && void 0 !== o ? o : '',
-                        c = y.default.getUser(i);
+                    let s = null != (t = x(e, 'duration')) ? t : '',
+                        l = null != (o = x(e, 'reason')) ? o : '',
+                        c = v.default.getUser(i);
                     if (null == c) throw Error();
                     await u.Z.setCommunicationDisabledUntil({
                         guildId: n.id,
@@ -661,7 +652,7 @@ let x = n(227419).Z,
                         d.Z.sendBotMessage(
                             r.id,
                             C.NW.formatToPlainString(C.t.BbRV6u, {
-                                user: S.ZP.getUserTag(c),
+                                user: I.ZP.getUserTag(c),
                                 duration: s
                             })
                         );
@@ -675,7 +666,7 @@ let x = n(227419).Z,
             untranslatedName: 'msg',
             displayName: 'msg',
             type: f.yU.CHAT,
-            inputType: I.iw.BUILT_IN,
+            inputType: S.iw.BUILT_IN,
             applicationId: T.bi.BUILT_IN,
             get untranslatedDescription() {
                 return C.NW.string(C.t.Dg8XZ2);
@@ -709,7 +700,7 @@ let x = n(227419).Z,
                     required: !0,
                     get maxLength() {
                         var j;
-                        return (null === (j = y.default.getCurrentUser()) || void 0 === j ? void 0 : j.premiumType) ? N.en1 : N.J6R;
+                        return (null == (j = v.default.getCurrentUser()) ? void 0 : j.premiumType) ? N.en1 : N.J6R;
                     }
                 }
             ],
@@ -717,12 +708,12 @@ let x = n(227419).Z,
                 var n;
                 let { channel: r } = t;
                 if (null == r) return;
-                let o = L(e, 'user'),
-                    a = null !== (n = L(e, 'message')) && void 0 !== n ? n : '';
+                let o = x(e, 'user'),
+                    a = null != (n = x(e, 'message')) ? n : '';
                 (async () => {
                     await c.Z.openPrivateChannel(o).then((e) => {
-                        let t = v.Z.getChannel(e);
-                        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, _.ZP.parse(t, a));
+                        let t = b.Z.getChannel(e);
+                        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, p.ZP.parse(t, a));
                     });
                 })().catch(() => {
                     d.Z.sendBotMessage(r.id, C.NW.string(C.t['3XaE9/']));
@@ -733,5 +724,5 @@ let x = n(227419).Z,
     U = k.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
     G = (e, t, n) => {
         let r = t ? k : U;
-        return r.filter((t) => e.includes(t.type) && (!n || t.inputType === I.iw.BUILT_IN_TEXT || t.inputType === I.iw.BUILT_IN_INTEGRATION));
+        return r.filter((t) => e.includes(t.type) && (!n || t.inputType === S.iw.BUILT_IN_TEXT || t.inputType === S.iw.BUILT_IN_INTEGRATION));
     };

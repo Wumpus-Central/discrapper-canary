@@ -21,11 +21,8 @@ function s(e, t) {
     return (
         r.useLayoutEffect(() => {
             let r = (e) => {
-                    if ((!t || n > 0) && c) {
-                        u(!1);
-                        return;
-                    }
-                    !((!c && n > 0) || (e instanceof KeyboardEvent && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || a.indexOf(e.key) >= 0))) && u((e) => !e);
+                    if ((!t || n > 0) && c) return void u(!1);
+                    (!c && n > 0) || (e instanceof KeyboardEvent && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || a.indexOf(e.key) >= 0)) || u((e) => !e);
                 },
                 i = c ? 'keyup' : 'mousemove';
             return t && e.addEventListener(i, r), () => (null == e ? void 0 : e.removeEventListener(i, r));

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     e.regex;
     let t = e.COMMENT(/\(;/, /;\)/);
     t.contains.push('self');
@@ -54,5 +54,4 @@ function t(e) {
             r
         ]
     };
-}
-e.exports = t;
+};

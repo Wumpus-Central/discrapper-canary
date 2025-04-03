@@ -34,11 +34,11 @@ function d(e) {
     return (null == e ? void 0 : e.ownerDocument.activeElement) === e;
 }
 function f(e) {
-    let { navId: t, columnCounts: n, focusedX: f, focusedY: _, onSelect: p, prepareFocus: h, getNewFocusPosition: m, dispatch: g, maintainFocusPosition: E, enabled: b, autoFocusElement: v, useVirtualFocus: y } = e,
+    let { navId: t, columnCounts: n, focusedX: f, focusedY: _, onSelect: p, prepareFocus: h, getNewFocusPosition: m, dispatch: g, maintainFocusPosition: E, enabled: b, autoFocusElement: y, useVirtualFocus: v } = e,
         O = r.useRef(b),
         I = u(c(t, f, _)),
         [S, T] = r.useState(!1),
-        [A, N] = r.useState(!1),
+        [N, A] = r.useState(!1),
         [C, R] = r.useState(!1),
         [P] = r.useState(
             () =>
@@ -57,17 +57,17 @@ function f(e) {
     r.useEffect(() => () => P.clean(), [P]);
     let w = r.useCallback(
             (e) => {
-                if (!O.current || !v) return !1;
+                if (!O.current || !y) return !1;
                 e.focus();
             },
-            [v]
+            [y]
         ),
         D = r.useCallback(
             (e, n) => {
                 let r = c(t, e, n);
                 (null != h ? h(e, n, r) : Promise.resolve()).then(() => {
                     let e = u(r);
-                    null != e ? (w(e), N(!1)) : requestAnimationFrame(() => N(!0));
+                    null != e ? (w(e), A(!1)) : requestAnimationFrame(() => A(!0));
                 });
             },
             [t, h, w]
@@ -84,10 +84,8 @@ function f(e) {
                         y: r
                     }),
                     !e)
-                ) {
-                    R(!0);
-                    return;
-                }
+                )
+                    return void R(!0);
                 let o = u(c(t, n, r));
                 null != o && (R(!0), w(o));
             },
@@ -98,10 +96,7 @@ function f(e) {
         if (!x || !S) return;
         M(!1);
         let e = u(c(t, f, _));
-        if (null != e) {
-            w(e);
-            return;
-        }
+        if (null != e) return void w(e);
         T(!1);
         let n = u(c(t));
         null != n && w(n);
@@ -110,15 +105,15 @@ function f(e) {
         O.current && null == e && M(!0);
     }, []);
     r.useEffect(() => {
-        S && A && null != I && (w(I), N(!1));
-    }, [A, I]),
+        S && N && null != I && (w(I), A(!1));
+    }, [N, I]),
         r.useEffect(() => {
             S && (C || D(f, _), R(!1));
         }, [f, _]);
     let j = r.useCallback(
             (e) => {
                 if (!O.current) return;
-                if (!y && s.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
+                if (!v && s.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                     e.preventDefault(), e.stopPropagation(), L();
                     return;
                 }
@@ -135,11 +130,11 @@ function f(e) {
                         0 !== n.length && (0 !== f || 0 !== _ || t !== o.Us.NAVIGATE_LEFT) && (e.preventDefault(), e.stopPropagation()), g({ type: t });
                         return;
                     case o.Us.SELECT_FOCUSED_ITEM:
-                        if ((v && !d(I)) || e.repeat) return;
+                        if ((y && !d(I)) || e.repeat) return;
                         e.preventDefault(), e.stopPropagation(), g({ type: t }), null != p ? p(f, _, e) : null != I && I.click();
                 }
             },
-            [L, g, v, I, p, f, _]
+            [L, g, y, I, p, f, _]
         ),
         U = r.useCallback((e) => (e.currentTarget !== e.target ? (S || (T(!0), R(!0)), !1) : S ? (L(!1), !1) : void (E && null != I ? D(f, _) : L(!0))), [S, E, I, L, D, f, _]),
         G = r.useCallback((e) => {
@@ -207,7 +202,7 @@ function _(e) {
             focusedY: s,
             columnCounts: n
         }),
-        { columnCounts: v, focusedX: y, focusedY: O } = E,
+        { columnCounts: y, focusedX: v, focusedY: O } = E,
         [I] = r.useState(() => (0, a.P2)(b, 16));
     return (
         r.useEffect(() => {
@@ -218,8 +213,8 @@ function _(e) {
         }, [n]),
         f({
             navId: t,
-            columnCounts: v,
-            focusedX: y,
+            columnCounts: y,
+            focusedX: v,
             focusedY: O,
             dispatch: I,
             onSelect: l,

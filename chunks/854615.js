@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'variable',
             begin: /\b_+[a-zA-Z]\w*/
@@ -2524,5 +2524,4 @@ function t(e) {
         contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, t, n, r, s],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/]
     };
-}
-e.exports = t;
+};

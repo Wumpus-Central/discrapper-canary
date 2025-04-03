@@ -1,34 +1,31 @@
 a.d(e, {
     CC: () => i,
-    GY: () => _
+    GY: () => o
 });
 var r = a(899517);
 let n = new Map(),
-    o = new Set();
-function _(t, e) {
+    _ = new Set();
+function o(t, e) {
     try {
         e.exception.values.forEach((e) => {
             if (e.stacktrace)
-                for (let _ of e.stacktrace.frames || []) {
-                    var a;
-                    if (!_.filename || _.module_metadata) continue;
-                    let e =
-                        ((a = _.filename),
-                        !(function (t) {
-                            if (r.n._sentryModuleMetadata)
-                                for (let e of Object.keys(r.n._sentryModuleMetadata)) {
-                                    let a = r.n._sentryModuleMetadata[e];
-                                    if (!o.has(e)) {
-                                        for (let r of (o.add(e), t(e).reverse()))
-                                            if (r.filename) {
-                                                n.set(r.filename, a);
-                                                break;
-                                            }
-                                    }
+                for (let a of e.stacktrace.frames || []) {
+                    if (!a.filename || a.module_metadata) continue;
+                    let e = (function (t, e) {
+                        if (r.n._sentryModuleMetadata)
+                            for (let e of Object.keys(r.n._sentryModuleMetadata)) {
+                                let a = r.n._sentryModuleMetadata[e];
+                                if (!_.has(e)) {
+                                    for (let r of (_.add(e), t(e).reverse()))
+                                        if (r.filename) {
+                                            n.set(r.filename, a);
+                                            break;
+                                        }
                                 }
-                        })(t),
-                        n.get(a));
-                    e && (_.module_metadata = e);
+                            }
+                        return n.get(e);
+                    })(t, a.filename);
+                    e && (a.module_metadata = e);
                 }
         });
     } catch (t) {}

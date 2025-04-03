@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             begin: /<\/?[A-Za-z_]/,
@@ -146,10 +146,10 @@ function t(e) {
         d = e.inherit(c, { contains: [] }),
         f = e.inherit(u, { contains: [] });
     c.contains.push(f), u.contains.push(d);
-    let p = [n, l];
+    let _ = [n, l];
     return (
         [c, u, d, f].forEach((e) => {
-            e.contains = e.contains.concat(p);
+            e.contains = e.contains.concat(_);
         }),
         {
             name: 'Markdown',
@@ -161,7 +161,7 @@ function t(e) {
                         {
                             begin: '^#{1,6}',
                             end: '$',
-                            contains: (p = p.concat(c, u))
+                            contains: (_ = _.concat(c, u))
                         },
                         {
                             begin: '(?=^.+?\\n[=-]{2,}$)',
@@ -170,7 +170,7 @@ function t(e) {
                                 {
                                     begin: '^',
                                     end: '\\n',
-                                    contains: p
+                                    contains: _
                                 }
                             ]
                         }
@@ -183,7 +183,7 @@ function t(e) {
                 {
                     className: 'quote',
                     begin: '^>\\s+',
-                    contains: p,
+                    contains: _,
                     end: '$'
                 },
                 i,
@@ -197,5 +197,4 @@ function t(e) {
             ]
         }
     );
-}
-e.exports = t;
+};

@@ -1,2 +1,1 @@
-var r = a(545576);
-t.exports = r('document', 'documentElement');
+t.exports = a(545576)('document', 'documentElement');

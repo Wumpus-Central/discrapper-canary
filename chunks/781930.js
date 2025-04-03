@@ -117,11 +117,12 @@ let a = (e) => (t) => {
             let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : h)) || void 0;
             return a(f.getItem.bind(f))(l.name)
                 .then((e) => {
-                    if (e) {
+                    if (e)
                         if ('number' != typeof e.version || e.version === l.version) return [!1, e.state];
-                        if (l.migrate) return [!0, l.migrate(e.state, e.version)];
-                        console.error("State loaded from storage couldn't be migrated since no migrate function was provided");
-                    }
+                        else {
+                            if (l.migrate) return [!0, l.migrate(e.state, e.version)];
+                            console.error("State loaded from storage couldn't be migrated since no migrate function was provided");
+                        }
                     return [!1, void 0];
                 })
                 .then((e) => {

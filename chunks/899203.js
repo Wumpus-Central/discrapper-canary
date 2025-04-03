@@ -6,11 +6,10 @@ var t = (function () {
     }
     return t;
 })();
-function n(e, n, r, i) {
+e.exports = function (e, n, r, i) {
     var o = t,
         a = i + r;
     e ^= -1;
     for (var s = i; s < a; s++) e = (e >>> 8) ^ o[(e ^ n[s]) & 255];
     return -1 ^ e;
-}
-e.exports = n;
+};

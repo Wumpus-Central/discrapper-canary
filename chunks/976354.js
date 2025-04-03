@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = '[a-zA-Z_\\-+\\*\\/<=>&#][a-zA-Z0-9_\\-+*\\/<=>&#!]*',
         n = '\\|[^]*?\\|',
         r = '(-|\\+)?\\d+(\\.\\d+|\\/\\d+)?((d|e|f|l|s|D|E|F|L|S)(\\+|-)?\\d+)?',
@@ -42,7 +42,7 @@ function t(e) {
             end: '\\)',
             contains: ['self', i, a, o, u]
         },
-        p = {
+        _ = {
             contains: [o, a, l, c, f, u],
             variants: [
                 {
@@ -57,7 +57,7 @@ function t(e) {
                 { begin: "'" + n }
             ]
         },
-        _ = {
+        p = {
             variants: [{ begin: "'" + t }, { begin: "#'" + t + '(::' + t + ')*' }]
         },
         h = {
@@ -82,12 +82,11 @@ function t(e) {
             },
             m
         ]),
-        (m.contains = [p, _, h, i, o, a, s, l, c, d, u]),
+        (m.contains = [_, p, h, i, o, a, s, l, c, d, u]),
         {
             name: 'Lisp',
             illegal: /\S/,
-            contains: [o, e.SHEBANG(), i, a, s, p, _, h, u]
+            contains: [o, e.SHEBANG(), i, a, s, _, p, h, u]
         }
     );
-}
-e.exports = t;
+};

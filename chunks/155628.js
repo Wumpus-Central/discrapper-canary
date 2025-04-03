@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = '[A-Za-zА-Яа-яёЁ_!][A-Za-zА-Яа-яёЁ_0-9]*',
         n = '[A-Za-zА-Яа-яёЁ_][A-Za-zА-Яа-яёЁ_0-9]*',
         r = 'and и else иначе endexcept endfinally endforeach конецвсе endif конецесли endwhile конецпока except exitfor finally foreach все if если in в not не or или try while пока ',
@@ -50,16 +50,16 @@ function t(e) {
                 }
             ]
         },
-        p = {
+        _ = {
             $pattern: t,
             keyword: r,
             built_in: a,
             class: s,
             literal: l
         },
-        _ = {
+        p = {
             begin: '\\.\\s*' + e.UNDERSCORE_IDENT_RE,
-            keywords: p,
+            keywords: _,
             relevance: 0
         },
         h = {
@@ -70,10 +70,10 @@ function t(e) {
         },
         m = {
             className: 'variable',
-            keywords: p,
+            keywords: _,
             begin: t,
             relevance: 0,
-            contains: [h, _]
+            contains: [h, p]
         },
         g = n + '\\(',
         E = {
@@ -87,21 +87,20 @@ function t(e) {
             returnBegin: !0,
             excludeEnd: !0
         },
-        v = {
+        b = {
             className: 'function',
             begin: g,
             end: '\\)$',
             returnBegin: !0,
-            keywords: p,
+            keywords: _,
             illegal: '[\\[\\]\\|\\$\\?%,~#@]',
-            contains: [E, _, m, u, c, f]
+            contains: [E, p, m, u, c, f]
         };
     return {
         name: 'ISBL',
         case_insensitive: !0,
-        keywords: p,
+        keywords: _,
         illegal: '\\$|\\?|%|,|;$|~|#|@|</',
-        contains: [v, h, _, m, u, c, f]
+        contains: [b, h, p, m, u, c, f]
     };
-}
-e.exports = t;
+};

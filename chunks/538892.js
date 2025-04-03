@@ -10,7 +10,6 @@ var t = '\uD800-\uDFFF',
     u = '(?:\\u200d(?:' + [o, a, s].join('|') + ')' + c + l + ')*',
     d = c + l + u,
     f = RegExp(i + '(?=' + i + ')|' + ('(?:' + [o + r + '?', r, a, s, n].join('|')) + ')' + d, 'g');
-function p(e) {
+e.exports = function (e) {
     return e.match(f) || [];
-}
-e.exports = p;
+};

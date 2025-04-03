@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = '([0-9]_*)+',
         n = '([0-9a-fA-F]_*)+',
         r = '([01]_*)+',
@@ -25,7 +25,7 @@ function t(e) {
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
         },
-        p = {
+        _ = {
             begin: '\\(',
             end: '\\)',
             illegal: '"',
@@ -40,10 +40,10 @@ function t(e) {
                 c
             ]
         },
-        _ = {
+        p = {
             begin: /\{/,
             end: /\}/,
-            contains: p.contains
+            contains: _.contains
         },
         h = {
             className: 'number',
@@ -60,14 +60,14 @@ function t(e) {
                 beginKeywords: 'module',
                 end: 'where',
                 keywords: 'module where',
-                contains: [p, c],
+                contains: [_, c],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: '\\bimport\\b',
                 end: '$',
                 keywords: 'import qualified as hiding',
-                contains: [p, c],
+                contains: [_, c],
                 illegal: '\\W\\.|;'
             },
             {
@@ -75,19 +75,19 @@ function t(e) {
                 begin: '^(\\s*)?(class|instance)\\b',
                 end: 'where',
                 keywords: 'class family instance where',
-                contains: [f, p, c]
+                contains: [f, _, c]
             },
             {
                 className: 'class',
                 begin: '\\b(data|(new)?type)\\b',
                 end: '$',
                 keywords: 'data family type newtype deriving',
-                contains: [u, f, p, _, c]
+                contains: [u, f, _, p, c]
             },
             {
                 beginKeywords: 'default',
                 end: '$',
-                contains: [f, p, c]
+                contains: [f, _, c]
             },
             {
                 beginKeywords: 'infix infixl infixr',
@@ -127,5 +127,4 @@ function t(e) {
             { begin: '->|<-' }
         ]
     };
-}
-e.exports = t;
+};

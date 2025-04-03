@@ -1,8 +1,8 @@
 a.d(e, { l: () => R });
 var r = a(157079),
     n = a(151122),
-    o = a(233517),
-    _ = a(263449),
+    _ = a(233517),
+    o = a(263449),
     i = a(946471),
     c = a(622916),
     s = a(694043),
@@ -24,16 +24,19 @@ let R = (0, n._I)((t = {}) => {
                 (n = e),
                 (0, s.t$)() &&
                     (0, E.Uf)((t) => {
-                        if ((0, _.s3)() !== a) return;
+                        if ((0, o.s3)() !== a) return;
                         let { response: e, args: r } = t,
                             [i, c] = r;
                         e &&
-                            !(function (t, e, a, r) {
+                            (function (t, e, a, r) {
                                 if (f(t, a.status, a.url)) {
-                                    var n, _;
-                                    let t, i, c, s;
-                                    let E = ((n = e), (!(_ = r) && n instanceof Request) || (n instanceof Request && n.bodyUsed) ? n : new Request(n, _));
-                                    T() && (([t, c] = d('Cookie', E)), ([i, s] = d('Set-Cookie', a)));
+                                    var n, o;
+                                    let t,
+                                        i,
+                                        c,
+                                        s,
+                                        E = ((n = e), (!(o = r) && n instanceof Request) || (n instanceof Request && n.bodyUsed) ? n : new Request(n, o));
+                                    N() && (([t, c] = d('Cookie', E)), ([i, s] = d('Set-Cookie', a)));
                                     let l = p({
                                         url: E.url,
                                         method: E.method,
@@ -43,7 +46,7 @@ let R = (0, n._I)((t = {}) => {
                                         requestCookies: c,
                                         responseCookies: s
                                     });
-                                    (0, o.eN)(l);
+                                    (0, _.eN)(l);
                                 }
                             })(n, i, e, c);
                     }),
@@ -51,7 +54,7 @@ let R = (0, n._I)((t = {}) => {
                 (u = e),
                 'XMLHttpRequest' in l.n &&
                     (0, r.UK)((t) => {
-                        if ((0, _.s3)() !== i) return;
+                        if ((0, o.s3)() !== i) return;
                         let e = t.xhr,
                             a = e[r.xU];
                         if (!a) return;
@@ -59,8 +62,8 @@ let R = (0, n._I)((t = {}) => {
                         try {
                             !(function (t, e, a, r) {
                                 if (f(t, e.status, e.responseURL)) {
-                                    let t, n, _;
-                                    if (T()) {
+                                    let t, n, o;
+                                    if (N()) {
                                         try {
                                             let t = e.getResponseHeader('Set-Cookie') || e.getResponseHeader('set-cookie') || void 0;
                                             t && (n = A(t));
@@ -68,7 +71,7 @@ let R = (0, n._I)((t = {}) => {
                                             I.X && c.kg.log('Could not extract cookies from response headers');
                                         }
                                         try {
-                                            _ = (function (t) {
+                                            o = (function (t) {
                                                 let e = t.getAllResponseHeaders();
                                                 return e
                                                     ? e.split('\r\n').reduce((t, e) => {
@@ -87,10 +90,10 @@ let R = (0, n._I)((t = {}) => {
                                         method: a,
                                         status: e.status,
                                         requestHeaders: t,
-                                        responseHeaders: _,
+                                        responseHeaders: o,
                                         responseCookies: n
                                     });
-                                    (0, o.eN)(i);
+                                    (0, _.eN)(i);
                                 }
                             })(u, e, n, s);
                         } catch (t) {
@@ -101,16 +104,16 @@ let R = (0, n._I)((t = {}) => {
     };
 });
 function d(t, e) {
-    let a;
-    let r = (function (t) {
-        let e = {};
-        return (
-            t.forEach((t, a) => {
-                e[a] = t;
-            }),
-            e
-        );
-    })(e.headers);
+    let a,
+        r = (function (t) {
+            let e = {};
+            return (
+                t.forEach((t, a) => {
+                    e[a] = t;
+                }),
+                e
+            );
+        })(e.headers);
     try {
         let e = r[t] || r[t.toLowerCase()] || void 0;
         e && (a = A(e));
@@ -126,7 +129,8 @@ function A(t) {
     }, {});
 }
 function f(t, e, a) {
-    return t.failedRequestStatusCodes.some((t) => ('number' == typeof t ? t === e : e >= t[0] && e <= t[1])) && t.failedRequestTargets.some((t) => ('string' == typeof t ? a.includes(t) : t.test(a))) && !(0, i.W)(a, (0, _.s3)());
+    var r, n;
+    return (r = t.failedRequestStatusCodes), r.some((t) => ('number' == typeof t ? t === e : e >= t[0] && e <= t[1])) && ((n = t.failedRequestTargets), n.some((t) => ('string' == typeof t ? a.includes(t) : t.test(a)))) && !(0, i.W)(a, (0, o.s3)());
 }
 function p(t) {
     let e = `HTTP Client Error with status code: ${t.status}`,
@@ -168,7 +172,7 @@ function p(t) {
         a
     );
 }
-function T() {
-    let t = (0, _.s3)();
+function N() {
+    let t = (0, o.s3)();
     return !!t && !!t.getOptions().sendDefaultPii;
 }

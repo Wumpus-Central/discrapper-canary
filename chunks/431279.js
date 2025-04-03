@@ -9,8 +9,8 @@ var r,
     u = n(730606),
     d = n(312097),
     f = n(506071),
-    p = n(701865),
-    _ = n(168672);
+    _ = n(701865),
+    p = n(838157);
 function h(e, t, n) {
     return (
         t in e
@@ -63,18 +63,18 @@ function E(e, t) {
         e
     );
 }
-function v(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,11 +83,11 @@ function b(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class y extends (r = o.PureComponent) {
+class v extends (r = o.PureComponent) {
     render() {
         let e = this.props,
             { appContext: t, isWindowFocused: n } = e,
-            r = v(e, ['appContext', 'isWindowFocused']);
+            r = b(e, ['appContext', 'isWindowFocused']);
         return (0, i.jsx)(
             c.ZP,
             E(m({}, r), {
@@ -101,10 +101,7 @@ class y extends (r = o.PureComponent) {
         super(...e),
             h(this, 'onMouseEnter', (e) => {
                 let { src: t, width: n, height: r, onMouseEnter: i, handlePreloadImage: o } = this.props;
-                if ((null == i || i(e), null != o)) {
-                    o();
-                    return;
-                }
+                if ((null == i || i(e), null != o)) return void o();
                 (0, u.Qk)({
                     src: t,
                     width: n,
@@ -114,12 +111,12 @@ class y extends (r = o.PureComponent) {
             }),
             h(this, 'modalContext', (0, s.VnL)(this.props.appContext)),
             h(this, 'onCloseImage', () => {
-                (0, s.Mr3)(p.U, this.modalContext);
+                (0, s.Mr3)(_.U, this.modalContext);
             }),
             h(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: i, src: o, original: s, width: l, height: c, animated: u, srcIsAnimated: f, children: p, shouldHideMediaOptions: h = !1, sourceMetadata: m, analyticsSource: g } = this.props,
+                let { alt: i, src: o, original: s, width: l, height: c, animated: u, srcIsAnimated: f, children: _, shouldHideMediaOptions: h = !1, sourceMetadata: m, analyticsSource: g } = this.props,
                     E = {
                         url: o,
                         width: l,
@@ -129,14 +126,14 @@ class y extends (r = o.PureComponent) {
                         zoomThumbnailPlaceholder: n,
                         animated: u,
                         srcIsAnimated: f,
-                        children: p,
+                        children: _,
                         trigger: r,
                         sourceMetadata: m,
                         original: null != s ? s : o
                     };
                 (0, a.k)(e.currentTarget) && e.currentTarget.blur(),
                     (0, d.K)({
-                        className: _.modal,
+                        className: p.modal,
                         onClose: this.onCloseImage,
                         items: [E],
                         shouldHideMediaOptions: h,
@@ -150,14 +147,14 @@ function O(e) {
     let t = (0, l.bp)(),
         n = (0, f.n)();
     return (0, i.jsx)(
-        y,
+        v,
         E(m({}, e), {
             isWindowFocused: n,
             appContext: t
         })
     );
 }
-h(y, 'defaultProps', {
+h(v, 'defaultProps', {
     shouldLink: !0,
     autoPlay: !1,
     animated: !1

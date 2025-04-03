@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'params',
             begin: /\(/,
@@ -41,5 +41,4 @@ function t(e) {
         },
         contains: [e.HASH_COMMENT_MODE, e.QUOTE_STRING_MODE, i, n, r, t]
     };
-}
-e.exports = t;
+};

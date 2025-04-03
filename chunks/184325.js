@@ -17,19 +17,19 @@ var i = n(120356),
     g = n(976015),
     E = n(594174),
     b = n(626135),
-    v = n(111361),
-    y = n(291175),
+    y = n(111361),
+    v = n(291175),
     O = n(785717),
     I = n(221292),
     S = n(485341),
     T = n(687158),
-    A = n(228168),
-    N = n(981631),
+    N = n(228168),
+    A = n(981631),
     C = n(215023),
     R = n(474936),
     P = n(681642),
     w = n(388032),
-    D = n(219041);
+    D = n(286020);
 function L(e, t, n) {
     return (
         t in e
@@ -76,19 +76,19 @@ function k(e) {
         { analyticsLocations: j } = (0, c.ZP)(l.Z.BADGE),
         { context: U, trackUserProfileAction: G } = (0, O.KZ)(),
         B = E.default.getCurrentUser(),
-        F = (0, v.yd)(null == B ? void 0 : B.premiumType, R.p9.TIER_2),
-        V = (0, T.Of)(null !== (t = null == B ? void 0 : B.id) && void 0 !== t ? t : null),
+        F = (0, y.yd)(null == B ? void 0 : B.premiumType, R.p9.TIER_2),
+        V = (0, T.Of)(null != (t = null == B ? void 0 : B.id) ? t : null),
         Z = (0, S.Z)(V).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)('div', {
         className: o()(D.container, i),
         'aria-label': w.NW.string(w.t.VWV0y8),
         role: 'group',
-        children: n.map((e) => {
-            var t;
-            let n = e.id === m.l.ORB_PROFILE_BADGE,
-                i = (0, y.fv)(e.id),
-                c = null != i || e.id === P.a,
-                E = (t) => {
+        children: n.map((e, t) => {
+            var n;
+            let i = e.id === m.l.ORB_PROFILE_BADGE,
+                c = (0, v.fv)(e.id),
+                E = null != c || e.id === P.a,
+                y = (t) => {
                     if (
                         (G({ action: 'PRESS_BADGE' }),
                         (0, I.NE)(
@@ -100,20 +100,18 @@ function k(e) {
                                 U
                             )
                         ),
-                        n)
-                    ) {
-                        (0, u.mK)({
+                        i)
+                    )
+                        return void (0, u.mK)({
                             openInLayer: !1,
                             tab: C.AW.ORBS,
                             analyticsLocations: j,
                             analyticsSource: l.Z.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE
                         });
-                        return;
-                    }
-                    if (c) {
+                    if (E) {
                         if (
                             (t.preventDefault(),
-                            b.default.track(N.rMx.TIERED_TENURE_BADGE_CLICKED, {
+                            b.default.track(A.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
                                 premium_type: F,
                                 viewed_user_id: null == g ? void 0 : g.userId
@@ -121,7 +119,7 @@ function k(e) {
                             F)
                         ) {
                             (null == g ? void 0 : g.userId) === (null == B ? void 0 : B.id)
-                                ? (0, h.uL)(N.Z5c.NITRO_HOME)
+                                ? (0, h.uL)(A.Z5c.NITRO_HOME)
                                 : (0, f.k)({
                                       analyticsLocations: j,
                                       displayProfile: g
@@ -142,11 +140,11 @@ function k(e) {
                             void (null == L || L())
                         );
                     }
-                    let r = null != e.link ? (0, s.default)(e.link, { analyticsLocations: j }) : null;
-                    if (null != r) return null == L || L(), r(t);
+                    let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: j }) : null;
+                    if (null != n) return null == L || L(), n(t);
                 },
-                v = () => {
-                    e.id === S.i && b.default.track(N.rMx.QUEST_CONTENT_VIEWED, x({}, (0, _.mH)(p.jn.QUEST_BADGE))),
+                O = () => {
+                    e.id === S.i && b.default.track(A.rMx.QUEST_CONTENT_VIEWED, x({}, (0, _.mH)(p.jn.QUEST_BADGE))),
                         G({ action: 'HOVER_BADGE' }),
                         (0, I.Qf)(
                             x(
@@ -158,31 +156,31 @@ function k(e) {
                             )
                         );
                 },
-                O = M({
+                T = M({
                     badge: e,
-                    tieredTenureBadge: c && e.id !== P.a ? i : void 0,
+                    tieredTenureBadge: E && e.id !== P.a ? c : void 0,
                     currentUserOwnsOrbBadge: Z
                 });
             return (0, r.jsx)(
                 a.DY3,
                 {
-                    text: O,
+                    text: T,
                     'aria-label': e.description,
                     forceOpen: null != k && k(e.id),
-                    delay: A.vB,
+                    delay: N.vB,
                     children: (0, r.jsx)(a.eee, {
-                        onClick: E,
-                        onMouseEnter: v,
+                        onClick: y,
+                        onMouseEnter: O,
                         href: e.link,
                         children: (0, r.jsx)('img', {
                             alt: ' ',
                             'aria-hidden': !0,
-                            src: null !== (t = e.iconSrc) && void 0 !== t ? t : (0, A.Ej)(e.icon),
+                            src: null != (n = e.iconSrc) ? n : (0, N.Ej)(e.icon),
                             className: o()(D.badge, d)
                         })
                     })
                 },
-                e.id
+                ''.concat(e.id, '-').concat(t)
             );
         })
     });

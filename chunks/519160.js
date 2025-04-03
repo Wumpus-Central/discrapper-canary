@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => y,
-    gN: () => v
+    gN: () => E
 }),
     n(47120),
     n(411104);
@@ -11,7 +11,7 @@ var r,
     s = n.n(a),
     l = n(748780),
     c = n(112724),
-    u = n(575599);
+    u = n(838013);
 function d(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,12 +53,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -70,9 +70,11 @@ let h = {
         overshootClamping: !0
     },
     m = 100,
-    g = 'center',
-    E = 'right';
-function v(e, t) {
+    g = {
+        CENTER: 'center',
+        RIGHT: 'right'
+    };
+function E(e, t) {
     return ((e % t) + t) % t;
 }
 class b extends (r = o.Component) {
@@ -81,14 +83,14 @@ class b extends (r = o.Component) {
     }
     componentDidUpdate(e) {
         let { align: t, animate: n, currentIndex: r, items: i, width: o } = this.props,
-            a = v(r, i.length),
-            s = v(e.currentIndex, i.length);
-        (a !== s || i.length !== e.items.length) && this.updateAnimatedIndex(a, s), o !== e.width ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t)) : n && (t !== e.align || a !== s) && l.Z.spring(this.animatedAlignmentOffset, _(f({}, h), { toValue: this.getAlignmentOffset(t) })).start();
+            a = E(r, i.length),
+            s = E(e.currentIndex, i.length);
+        (a !== s || i.length !== e.items.length) && this.updateAnimatedIndex(a, s), o !== e.width ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t)) : n && (t !== e.align || a !== s) && l.Z.spring(this.animatedAlignmentOffset, p(f({}, h), { toValue: this.getAlignmentOffset(t) })).start();
     }
     getAlignmentOffset(e) {
         let { width: t, itemSize: n, currentIndex: r, gutter: i, items: o } = this.props,
-            a = i * v(r, o.length) * 2;
-        return e === g ? (t - n.width) / 2 + a : e === E ? t - n.width - i + a : i + a;
+            a = i * E(r, o.length) * 2;
+        return e === g.CENTER ? (t - n.width) / 2 + a : e === g.RIGHT ? t - n.width - i + a : i + a;
     }
     getCarouselTranslate() {
         let { itemSize: e, edgeItems: t } = this.props;
@@ -97,7 +99,7 @@ class b extends (r = o.Component) {
     animateToIndex(e, t) {
         let { animatedIndex: n } = this,
             { items: r, edgeItems: i } = this.props;
-        i > 0 && (0 === e && t === r.length - 1 ? n.setValue(-1) : 0 === t && e === r.length - 1 && r.length > 2 && n.setValue(r.length)), l.Z.spring(n, _(f({}, h), { toValue: e })).start();
+        i > 0 && (0 === e && t === r.length - 1 ? n.setValue(-1) : 0 === t && e === r.length - 1 && r.length > 2 && n.setValue(r.length)), l.Z.spring(n, p(f({}, h), { toValue: e })).start();
     }
     updateAnimatedIndex(e, t) {
         let { animatedIndex: n, animatedOpacity: r } = this,
@@ -132,11 +134,11 @@ class b extends (r = o.Component) {
         });
     }
     renderCarouselItems() {
-        let e;
-        let { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: r } = this,
+        let e,
+            { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: r } = this,
             { renderItem: o, items: a, itemSize: s, edgeItems: c, gutter: d } = this.props,
-            { margin: f, width: p } = s,
-            _ = this.getCarouselTranslate(),
+            { margin: f, width: _ } = s,
+            p = this.getCarouselTranslate(),
             h = this.getItemStyle(),
             m = (e = c > 0 ? [...a.slice(-c), ...a, ...a.slice(0, c)] : a).map((e, t) =>
                 (0, i.jsx)(
@@ -156,7 +158,7 @@ class b extends (r = o.Component) {
                 left: l.Z.add(
                     t.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [-_, -f - p - _ - d * (a.length - 1)]
+                        outputRange: [-p, -f - _ - p - d * (a.length - 1)]
                     }),
                     n
                 )
@@ -203,7 +205,7 @@ class b extends (r = o.Component) {
 d(b, 'defaultProps', {
     animate: !0,
     edgeItems: 2,
-    align: g,
+    align: g.CENTER,
     gutter: 0,
     hideOverflow: !0
 });

@@ -57,18 +57,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,7 +92,7 @@ class h extends i.Component {
         this._animationCleanup();
     }
     shake(e, t) {
-        (this.animProps = this.getDefaultAnimProps(e, t)), !this.state.shaking && this.setState({ shaking: !0 }, this._animate);
+        (this.animProps = this.getDefaultAnimProps(e, t)), this.state.shaking || this.setState({ shaking: !0 }, this._animate);
     }
     stop() {
         this.state.shaking && this.setState({ shaking: !1 });
@@ -103,7 +103,7 @@ class h extends i.Component {
     render() {
         let e = this.props,
             { children: t } = e,
-            n = p(e, ['children']);
+            n = _(e, ['children']);
         return (0, r.jsx)(
             'div',
             f(u({}, n), {
@@ -119,10 +119,7 @@ class h extends i.Component {
             c(this, 'ref', i.createRef()),
             c(this, '_animate', () => {
                 let { animProps: e } = this;
-                if (!this.state.shaking || e.progress > e.duration || null == this.ref.current) {
-                    this._animationComplete();
-                    return;
-                }
+                if (!this.state.shaking || e.progress > e.duration || null == this.ref.current) return void this._animationComplete();
                 let t = Date.now();
                 if (((e.progress += t - e.last), (e.last = t), e.frameCount % 2 != 0)) {
                     let t = e.lastDirection * e.intensity,

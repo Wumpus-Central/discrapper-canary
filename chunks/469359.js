@@ -1,15 +1,15 @@
-let r, n, o;
+let r, n, _;
 a.d(e, { O: () => E });
-var _ = a(578346),
+var o = a(578346),
     i = a(370336),
     c = a(394798),
     s = a(395848);
 function E(t) {
-    (0, _.Hj)('dom', t), (0, _.D2)('dom', l);
+    (0, o.Hj)('dom', t), (0, o.D2)('dom', l);
 }
 function l() {
     if (!s.m.document) return;
-    let t = _.rK.bind(null, 'dom'),
+    let t = o.rK.bind(null, 'dom'),
         e = u(t, !0);
     s.m.document.addEventListener('click', e, !1),
         s.m.document.addEventListener('keypress', e, !1),
@@ -23,12 +23,12 @@ function l() {
                         if ('click' === a || 'keypress' == a)
                             try {
                                 let r = (this.__sentry_instrumentation_handlers__ = this.__sentry_instrumentation_handlers__ || {}),
-                                    o = (r[a] = r[a] || { refCount: 0 });
-                                if (!o.handler) {
+                                    _ = (r[a] = r[a] || { refCount: 0 });
+                                if (!_.handler) {
                                     let r = u(t);
-                                    (o.handler = r), e.call(this, a, r, n);
+                                    (_.handler = r), e.call(this, a, r, n);
                                 }
-                                o.refCount++;
+                                _.refCount++;
                             } catch (t) {}
                         return e.call(this, a, r, n);
                     };
@@ -48,34 +48,35 @@ function l() {
 }
 function u(t, e = !1) {
     return (a) => {
+        var o;
         if (!a || a._sentryCaptured) return;
-        let _ = (function (t) {
+        let E = (function (t) {
             try {
                 return t.target;
             } catch (t) {
                 return null;
             }
         })(a);
-        if ('keypress' === a.type && (!_ || !_.tagName || ('INPUT' !== _.tagName && 'TEXTAREA' !== _.tagName && !_.isContentEditable))) return;
-        (0, i.xp)(a, '_sentryCaptured', !0), _ && !_._sentryId && (0, i.xp)(_, '_sentryId', (0, c.DM)());
-        let E = 'keypress' === a.type ? 'input' : a.type;
+        if (((o = a.type), 'keypress' === o && (!E || !E.tagName || ('INPUT' !== E.tagName && 'TEXTAREA' !== E.tagName && !E.isContentEditable && 1)))) return;
+        (0, i.xp)(a, '_sentryCaptured', !0), E && !E._sentryId && (0, i.xp)(E, '_sentryId', (0, c.DM)());
+        let l = 'keypress' === a.type ? 'input' : a.type;
         !(function (t) {
             if (t.type !== n) return !1;
             try {
-                if (!t.target || t.target._sentryId !== o) return !1;
+                if (!t.target || t.target._sentryId !== _) return !1;
             } catch (t) {}
             return !0;
         })(a) &&
             (t({
                 event: a,
-                name: E,
+                name: l,
                 global: e
             }),
             (n = a.type),
-            (o = _ ? _._sentryId : void 0)),
+            (_ = E ? E._sentryId : void 0)),
             clearTimeout(r),
             (r = s.m.setTimeout(() => {
-                (o = void 0), (n = void 0);
+                (_ = void 0), (n = void 0);
             }, 1000));
     };
 }

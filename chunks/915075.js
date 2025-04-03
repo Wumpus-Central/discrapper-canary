@@ -1,7 +1,7 @@
 let t = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends', 'using'],
     n = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
     r = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
-function i(e) {
+e.exports = function (e) {
     let i = ['npm', 'print'],
         o = ['yes', 'no', 'on', 'off', 'it', 'that', 'void'],
         a = ['then', 'unless', 'until', 'loop', 'of', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not', 'it', 'that', 'otherwise', 'from', 'to', 'til', 'fallthrough', 'case', 'enum', 'native', 'list', 'map', '__hasProp', '__extends', '__slice', '__bind', '__indexOf'],
@@ -86,7 +86,7 @@ function i(e) {
             }
         ];
     u.contains = f;
-    let p = {
+    let _ = {
             className: 'params',
             begin: '\\(',
             returnBegin: !0,
@@ -99,7 +99,7 @@ function i(e) {
                 }
             ]
         },
-        _ = { begin: '(#=>|=>|\\|>>|-?->|!->)' },
+        p = { begin: '(#=>|=>|\\|>>|-?->|!->)' },
         h = {
             variants: [
                 {
@@ -123,10 +123,10 @@ function i(e) {
         contains: f.concat([
             e.COMMENT('\\/\\*', '\\*\\/'),
             e.HASH_COMMENT_MODE,
-            _,
+            p,
             {
                 className: 'function',
-                contains: [c, p],
+                contains: [c, _],
                 returnBegin: !0,
                 variants: [
                     {
@@ -153,5 +153,4 @@ function i(e) {
             }
         ])
     };
-}
-e.exports = i;
+};

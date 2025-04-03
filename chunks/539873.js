@@ -9,19 +9,19 @@ var r = n(200651),
     u = n(100527),
     d = n(313201),
     f = n(540059),
-    p = n(98278),
-    _ = n(311476),
+    _ = n(98278),
+    p = n(311476),
     h = n(587446),
     m = n(996073),
     g = n(327943),
     E = n(997945),
-    v = n(401460),
-    b = n(441319),
-    y = n(981631),
+    b = n(401460),
+    y = n(441319),
+    v = n(981631),
     O = n(526761),
-    S = n(388032),
-    I = n(370177),
-    T = n(429465);
+    I = n(388032),
+    S = n(888090),
+    T = n(716827);
 function N(e, t, n) {
     return (
         t in e
@@ -77,24 +77,24 @@ function R(e, t) {
 function P(e) {
     let { className: t, disabled: o, isEditor: N, renderCTAButtons: C } = e,
         [P, w] = (0, s.Wu)([g.Z], () => [g.Z.getCurrentDesktopIcon(), g.Z.isUpsellPreview]),
-        { enabled: D } = _.Z.getCurrentConfig(
+        { enabled: D } = p.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
             {
                 autoTrackExposure: w,
                 disable: !w
             }
         ),
-        x = i.useRef(null);
-    (0, m.Z)(x, O.h1.CUSTOM_APP_ICONS);
-    let L = (0, d.Dt)(),
+        L = i.useRef(null);
+    (0, m.Z)(L, O.h1.CUSTOM_APP_ICONS);
+    let x = (0, d.Dt)(),
         M = (0, l.arW)({
             orientation: 'horizontal',
-            labelledBy: L
+            labelledBy: x
         }),
         k = (0, f.Q3)('AppIconSelectionGroup'),
         j = (e) => {
-            if (D && !N && e !== E.aH.DEFAULT) {
-                (0, l.ZDy)(async () => {
+            if (D && !N && e !== E.aH.DEFAULT)
+                return void (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('69052').then(n.bind(n, 184250));
                     return (t) =>
                         (0, r.jsx)(
@@ -103,64 +103,62 @@ function P(e) {
                                 {
                                     analyticsSource: u.Z.APP_ICON_SELECTOR,
                                     analyticsLocation: {
-                                        section: y.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
-                                        object: y.qAy.BUTTON_ICON
+                                        section: v.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
+                                        object: v.qAy.BUTTON_ICON
                                     }
                                 },
                                 t
                             )
                         );
                 });
-                return;
-            }
             c.Z.dispatch({
                 type: 'APP_ICON_UPDATED',
                 id: e
             });
         };
     return (0, r.jsx)('div', {
-        ref: x,
+        ref: L,
         children: (0, r.jsx)(
             'div',
             R(A({}, M), {
-                className: I.__invalid_container,
+                className: S.__invalid_container,
                 children: (0, r.jsxs)('div', {
                     className: t,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: I.header,
+                            className: S.header,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: I.headings,
+                                    className: S.headings,
                                     children: [
                                         !N &&
                                             (0, r.jsxs)('div', {
-                                                className: I.title,
+                                                className: S.title,
                                                 children: [
                                                     (0, r.jsx)(l.X6q, {
-                                                        className: I.titleText,
+                                                        className: S.titleText,
                                                         variant: k ? 'text-lg/medium' : 'text-md/medium',
-                                                        children: S.NW.string(S.t.NThqT0)
+                                                        children: I.NW.string(I.t.NThqT0)
                                                     }),
-                                                    !D && (0, r.jsx)(h.Z, { className: I.premiumIcon })
+                                                    !D && (0, r.jsx)(h.Z, { className: S.premiumIcon })
                                                 ]
                                             }),
                                         D
                                             ? N
                                                 ? null
                                                 : (0, r.jsxs)('div', {
-                                                      className: I.description,
+                                                      className: S.description,
                                                       children: [
                                                           (0, r.jsx)(l.SrA, {
                                                               size: 'md',
                                                               color: 'currentColor',
-                                                              className: I.nitroWheel
+                                                              className: S.nitroWheel
                                                           }),
                                                           (0, r.jsx)(l.X6q, {
                                                               variant: 'text-sm/normal',
-                                                              children: S.NW.format(S.t.x2dQxM, {
+                                                              children: I.NW.format(I.t.x2dQxM, {
                                                                   onClick: () => {
-                                                                      (0, p.$)();
+                                                                      (0, _.$)();
                                                                   }
                                                               })
                                                           })
@@ -169,7 +167,7 @@ function P(e) {
                                             : (0, r.jsx)(l.X6q, {
                                                   variant: 'text-sm/normal',
                                                   className: a()({ [T.subtext]: k }),
-                                                  children: S.NW.string(S.t.IgENJi)
+                                                  children: I.NW.string(I.t.IgENJi)
                                               })
                                     ]
                                 }),
@@ -177,15 +175,15 @@ function P(e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: a()(I.presets, { [I.presetsJustified]: D && N }),
-                            children: (0, b.wu)()
+                            className: a()(S.presets, { [S.presetsJustified]: D && N }),
+                            children: (0, y.wu)()
                                 .filter((e) => {
                                     let { isHidden: t } = e;
                                     return !t;
                                 })
                                 .map((e, t) =>
                                     (0, r.jsx)(
-                                        v.Z,
+                                        b.Z,
                                         {
                                             icon: e,
                                             isSelected: P === e.id,

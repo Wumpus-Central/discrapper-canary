@@ -8,24 +8,25 @@ var r = n(903425),
     u = '[object Error]',
     d = '[object Function]',
     f = '[object Map]',
-    p = '[object Number]',
-    _ = '[object Object]',
+    _ = '[object Number]',
+    p = '[object Object]',
     h = '[object RegExp]',
     m = '[object Set]',
     g = '[object String]',
     E = '[object WeakMap]',
-    v = '[object ArrayBuffer]',
-    b = '[object DataView]',
-    y = '[object Float64Array]',
+    b = '[object ArrayBuffer]',
+    y = '[object DataView]',
+    v = '[object Float64Array]',
     O = '[object Int8Array]',
-    S = '[object Int16Array]',
-    I = '[object Int32Array]',
+    I = '[object Int16Array]',
+    S = '[object Int32Array]',
     T = '[object Uint8Array]',
     N = '[object Uint8ClampedArray]',
     A = '[object Uint16Array]',
     C = '[object Uint32Array]',
     R = {};
-function P(e) {
-    return o(e) && i(e.length) && !!R[r(e)];
-}
-(R['[object Float32Array]'] = R[y] = R[O] = R[S] = R[I] = R[T] = R[N] = R[A] = R[C] = !0), (R[a] = R[s] = R[v] = R[l] = R[b] = R[c] = R[u] = R[d] = R[f] = R[p] = R[_] = R[h] = R[m] = R[g] = R[E] = !1), (e.exports = P);
+(R['[object Float32Array]'] = R[v] = R[O] = R[I] = R[S] = R[T] = R[N] = R[A] = R[C] = !0),
+    (R[a] = R[s] = R[b] = R[l] = R[y] = R[c] = R[u] = R[d] = R[f] = R[_] = R[p] = R[h] = R[m] = R[g] = R[E] = !1),
+    (e.exports = function (e) {
+        return o(e) && i(e.length) && !!R[r(e)];
+    });

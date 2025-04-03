@@ -67,8 +67,8 @@ let s = n(606419),
     u = n(615252),
     d = n(517024),
     f = d.isObject,
-    p = d.mixin,
-    _ = d.hasOwn,
+    _ = d.mixin,
+    p = d.hasOwn,
     h = n(509337),
     m = n(675246);
 function g() {}
@@ -81,57 +81,58 @@ let E = (t = e.exports);
         if (r.XMLHttpRequest) return new r.XMLHttpRequest();
         throw Error('Browser-only version of superagent could not find XHR');
     });
-let v = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
-function b(e) {
+let b = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
+function y(e) {
     if (!f(e)) return e;
     let t = [];
-    for (let n in e) _(e, n) && y(t, n, e[n]);
+    for (let n in e) p(e, n) && v(t, n, e[n]);
     return t.join('&');
 }
-function y(e, t, n) {
+function v(e, t, n) {
     if (void 0 !== n) {
-        if (null === n) {
-            e.push(encodeURI(t));
-            return;
-        }
+        if (null === n) return void e.push(encodeURI(t));
         if (Array.isArray(n)) {
             var r,
                 o = i(n);
             try {
                 for (o.s(); !(r = o.n()).done; ) {
                     let n = r.value;
-                    y(e, t, n);
+                    v(e, t, n);
                 }
             } catch (e) {
                 o.e(e);
             } finally {
                 o.f();
             }
-        } else if (f(n)) for (let r in n) _(n, r) && y(e, `${t}[${r}]`, n[r]);
+        } else if (f(n)) for (let r in n) p(n, r) && v(e, `${t}[${r}]`, n[r]);
         else e.push(encodeURI(t) + '=' + encodeURIComponent(n));
     }
 }
 function O(e) {
-    let t, n;
-    let r = {},
+    let t,
+        n,
+        r = {},
         i = e.split('&');
     for (let e = 0, o = i.length; e < o; ++e) -1 === (n = (t = i[e]).indexOf('=')) ? (r[decodeURIComponent(t)] = '') : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
     return r;
 }
-function S(e) {
-    let t, n, r, i;
-    let o = e.split(/\r?\n/),
+function I(e) {
+    let t,
+        n,
+        r,
+        i,
+        o = e.split(/\r?\n/),
         a = {};
-    for (let e = 0, s = o.length; e < s; ++e) -1 !== (t = (n = o[e]).indexOf(':')) && ((r = n.slice(0, t).toLowerCase()), (i = v(n.slice(t + 1))), (a[r] = i));
+    for (let e = 0, s = o.length; e < s; ++e) -1 !== (t = (n = o[e]).indexOf(':')) && ((r = n.slice(0, t).toLowerCase()), (i = b(n.slice(t + 1))), (a[r] = i));
     return a;
 }
-function I(e) {
+function S(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
 function T(e) {
     (this.req = e), (this.xhr = this.req.xhr), (this.text = ('HEAD' !== this.req.method && ('' === this.xhr.responseType || 'text' === this.xhr.responseType)) || void 0 === this.xhr.responseType ? this.xhr.responseText : null), (this.statusText = this.req.xhr.statusText);
     let t = this.xhr.status;
-    1223 === t && (t = 204), this._setStatusProperties(t), (this.headers = S(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
+    1223 === t && (t = 204), this._setStatusProperties(t), (this.headers = I(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
 }
 function N(e, t) {
     let n = this;
@@ -158,7 +159,7 @@ function N(e, t) {
             e ? ((e.original = t), (e.response = r), (e.status = e.status || r.status), n.callback(e, r)) : n.callback(null, r);
         });
 }
-(E.serializeObject = b),
+(E.serializeObject = y),
     (E.parseString = O),
     (E.types = {
         html: 'text/html',
@@ -176,10 +177,10 @@ function N(e, t) {
         'application/x-www-form-urlencoded': O,
         'application/json': JSON.parse
     }),
-    p(T.prototype, h.prototype),
+    _(T.prototype, h.prototype),
     (T.prototype._parseBody = function (e) {
         let t = E.parse[this.type];
-        return this.req._parser ? this.req._parser(this, e) : (!t && I(this.type) && (t = E.parse['application/json']), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
+        return this.req._parser ? this.req._parser(this, e) : (!t && S(this.type) && (t = E.parse['application/json']), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
     }),
     (T.prototype.toError = function () {
         let e = this.req,
@@ -190,7 +191,7 @@ function N(e, t) {
     }),
     (E.Response = T),
     s(N.prototype),
-    p(N.prototype, u.prototype),
+    _(N.prototype, u.prototype),
     (N.prototype.type = function (e) {
         return this.set('Content-Type', E.types[e] || e), this;
     }),
@@ -208,7 +209,7 @@ function N(e, t) {
         return this._auth(e, t, n, r);
     }),
     (N.prototype.query = function (e) {
-        return 'string' != typeof e && (e = b(e)), e && this._query.push(e), this;
+        return 'string' != typeof e && (e = y(e)), e && this._query.push(e), this;
     }),
     (N.prototype.attach = function (e, t, n) {
         if (t) {
@@ -260,8 +261,8 @@ function N(e, t) {
             n = this._formData || this._data;
         this._setTimeouts(),
             t.addEventListener('readystatechange', () => {
-                let n;
-                let r = t.readyState;
+                let n,
+                    r = t.readyState;
                 if ((r >= 2 && e._responseTimeoutTimer && clearTimeout(e._responseTimeoutTimer), 4 === r)) {
                     try {
                         n = t.status;
@@ -291,9 +292,9 @@ function N(e, t) {
         if ((this._withCredentials && (t.withCredentials = !0), !this._formData && 'GET' !== this.method && 'HEAD' !== this.method && 'string' != typeof n && !this._isHost(n))) {
             let e = this._header['content-type'],
                 t = this._serializer || E.serialize[e ? e.split(';')[0] : ''];
-            !t && I(e) && (t = E.serialize['application/json']), t && (n = t(n));
+            !t && S(e) && (t = E.serialize['application/json']), t && (n = t(n));
         }
-        for (let e in this.header) null !== this.header[e] && _(this.header, e) && t.setRequestHeader(e, this.header[e]);
+        for (let e in this.header) null !== this.header[e] && p(this.header, e) && t.setRequestHeader(e, this.header[e]);
         this._responseType && (t.responseType = this._responseType), this.emit('request', this), t.send(void 0 === n ? null : n);
     }),
     (E.agent = () => new m());

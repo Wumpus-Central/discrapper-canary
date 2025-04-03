@@ -51,7 +51,8 @@ function l(e) {
     }),
     (i.prototype._cumulate = function (e) {
         if (this.n !== this.last_cumulate && (e || !this.CX || !(this.CX > this.n / this.last_cumulate))) {
-            var t = 0;
+            var t = 0,
+                n = this;
             this.centroids.each(function (e) {
                 (e.mean_cumn = t + e.n / 2), (t = e.cumn = t + e.n);
             }),
@@ -128,12 +129,14 @@ function l(e) {
     }),
     (i.prototype._percentile = function (e) {
         if (0 !== this.size()) {
-            this._cumulate(!0), this.centroids.min(), this.centroids.max();
-            var t = this.n * e,
-                n = this.bound_mean_cumn(t),
-                r = n[0],
-                i = n[1];
-            return i === r || null === r || null === i ? (r || i).mean : this.discrete ? (t <= r.cumn ? r.mean : i.mean) : r.mean + ((t - r.mean_cumn) * (i.mean - r.mean)) / (i.mean_cumn - r.mean_cumn);
+            this._cumulate(!0);
+            var t = this.centroids.min(),
+                n = this.centroids.max(),
+                r = this.n * e,
+                i = this.bound_mean_cumn(r),
+                o = i[0],
+                a = i[1];
+            return a === o || null === o || null === a ? (o || a).mean : this.discrete ? (r <= o.cumn ? o.mean : a.mean) : o.mean + ((r - o.mean_cumn) * (a.mean - o.mean)) / (a.mean_cumn - o.mean_cumn);
         }
     }),
     (i.prototype.compress = function () {

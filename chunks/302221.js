@@ -3,12 +3,12 @@ n.d(t, {
     BM: () => j,
     Cj: () => f,
     WY: () => A,
-    YD: () => L,
+    YD: () => x,
     ZJ: () => m,
-    aD: () => _,
+    aD: () => p,
     j: () => D,
-    k8: () => x,
-    oo: () => p,
+    k8: () => L,
+    oo: () => _,
     pz: () => h,
     vq: () => g,
     xj: () => k
@@ -93,7 +93,7 @@ function f(e, t) {
             throw Error('Invalid hex color format');
     }
 }
-function p(e) {
+function _(e) {
     let [t, n, r] = i()(e).rgb();
     return {
         r: t,
@@ -101,8 +101,8 @@ function p(e) {
         b: r
     };
 }
-function _(e, t) {
-    let { r: n, g: r, b: i } = p(e);
+function p(e, t) {
+    let { r: n, g: r, b: i } = _(e);
     return 'rgba('.concat(n, ', ').concat(r, ', ').concat(i, ', ').concat(t, ')');
 }
 function h(e, t, n) {
@@ -138,7 +138,7 @@ function E(e, t, n) {
         };
     return '#'.concat(i(0)).concat(i(8)).concat(i(4));
 }
-function v(e) {
+function b(e) {
     let t, n, r, i, o;
     var a = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
     if (null == a) return null;
@@ -148,21 +148,21 @@ function v(e) {
     let u = s / 255,
         d = l / 255,
         f = c / 255,
-        p = Math.max(u, d, f),
-        _ = p - Math.min(u, d, f),
-        h = (e) => (p - e) / 6 / _ + 0.5,
+        _ = Math.max(u, d, f),
+        p = _ - Math.min(u, d, f),
+        h = (e) => (_ - e) / 6 / p + 0.5,
         m = (e) => Math.round(100 * e) / 100;
     return (
-        0 === _ ? (i = o = 0) : ((o = _ / p), (t = h(u)), (n = h(d)), (r = h(f)), (i = u === p ? r - n : d === p ? 1 / 3 + t - r : f === p ? 2 / 3 + n - t : 0) < 0 ? (i += 1) : i > 1 && (i -= 1)),
+        0 === p ? (i = o = 0) : ((o = p / _), (t = h(u)), (n = h(d)), (r = h(f)), (i = u === _ ? r - n : d === _ ? 1 / 3 + t - r : f === _ ? 2 / 3 + n - t : 0) < 0 ? (i += 1) : i > 1 && (i -= 1)),
         {
             h: Math.round(360 * i),
             s: m(100 * o),
-            v: m(100 * p)
+            v: m(100 * _)
         }
     );
 }
-function b(e, t, n) {
-    return p(E(e, t, n));
+function y(e, t, n) {
+    return _(E(e, t, n));
 }
 d(
     c(
@@ -193,10 +193,10 @@ d(
     ),
     { '#5865f2': () => s.NW.string(s.t['Cn/LJy']) }
 );
-let y = 30,
+let v = 30,
     O = 80,
-    S = 20,
-    I = 30,
+    I = 20,
+    S = 30,
     T = 40,
     N = 15;
 function A(e) {
@@ -206,11 +206,11 @@ function A(e) {
         a = r,
         s = i,
         l = o;
-    s < y && (s += I), l > O && (l -= T), l < S && (l += N);
+    s < v && (s += S), l > O && (l -= T), l < I && (l += N);
     let c = 360 / (t + 1);
     for (; n.length < t; ) {
         (a -= c) < 0 && (a += 360);
-        let { r: e, g: t, b: r } = b(a, s, l);
+        let { r: e, g: t, b: r } = y(a, s, l);
         n.push([e, t, r]);
     }
     return n;
@@ -228,8 +228,9 @@ function R(e) {
     return (Math.max(r, i) + 0.05) / (Math.min(r, i) + 0.05);
 }
 function P(e, t, n) {
-    let r, i;
-    let o = Math.max((e /= 255), (t /= 255), (n /= 255)),
+    let r,
+        i,
+        o = Math.max((e /= 255), (t /= 255), (n /= 255)),
         a = Math.min(e, t, n),
         s = (o + a) / 2;
     if (o === a) r = i = 0;
@@ -272,7 +273,7 @@ function D(e, t) {
         r = P(e.red, e.green, e.blue);
     return n ? (r.lightness = r.lightness + t > 1 ? 0.9 : r.lightness + t) : (r.lightness = r.lightness - t < 0 ? 0.1 : r.lightness - t), w(r.hue, r.saturation, r.lightness);
 }
-function x(e) {
+function L(e) {
     let { colors: t, ratio: n = 5, saturationFactor: r = 1 } = e;
     if (t.length < 2) return;
     let i = t[0],
@@ -283,16 +284,16 @@ function x(e) {
         c = R([i, a]),
         u = P(i.red, i.green, i.blue);
     for (u.saturation *= r; c < n && null != u; ) {
-        if (l) {
+        if (l)
             if (u.lightness < 0.95) u.lightness += 0.05;
             else break;
-        } else if (u.lightness > 0.05) u.lightness -= 0.05;
+        else if (u.lightness > 0.05) u.lightness -= 0.05;
         else break;
         c = R([w(u.hue, u.saturation, u.lightness), t[1]]);
     }
     return w(u.hue, u.saturation, u.lightness);
 }
-function L(e) {
+function x(e) {
     return e
         .slice(0, 3)
         .map((e) => {
@@ -300,7 +301,7 @@ function L(e) {
             return {
                 hex: e,
                 hsv:
-                    null !== (t = v(e)) && void 0 !== t
+                    null != (t = b(e))
                         ? t
                         : {
                               h: 0,
@@ -321,7 +322,7 @@ function k(e) {
     let { colorRGB: n, saturationFactor: r = 1 } = e;
     if (null == n) return n;
     let i = P(n.red, n.green, n.blue);
-    return null == i ? (null == n ? void 0 : n.toHexString()) : null === (t = w(i.hue, i.saturation * r, i.lightness)) || void 0 === t ? void 0 : t.toHexString();
+    return null == i ? (null == n ? void 0 : n.toHexString()) : null == (t = w(i.hue, i.saturation * r, i.lightness)) ? void 0 : t.toHexString();
 }
 function j(e, t, n) {
     let r = parseInt(e.substring(1, 3), 16),

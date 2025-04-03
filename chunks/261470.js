@@ -29,10 +29,9 @@ class i {
         this._fails += 1;
         let t = 2 * this._current;
         if ((this.jitter && (t *= Math.random()), (this._current = Math.min(this._current + t, this.max)), null != e)) {
-            if (null != this._timeoutId) {
+            if (null != this._timeoutId)
                 if (this._callback !== e) throw Error('callback already pending');
-                this.cancel();
-            }
+                else this.cancel();
             (this._callback = e),
                 (this._timeoutId = setTimeout(() => {
                     try {

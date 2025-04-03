@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -64,22 +64,13 @@ function h(e) {
     let t = a.Z.getChannel(e.channelId);
     if (null == t) return e;
     let n = (0, r.e)(t);
-    return _(f({}, e), { guildId: null != n ? n : u.ME });
+    return p(f({}, e), { guildId: null != n ? n : u.ME });
 }
 async function m(e, t) {
     let n = (0, s.Qj)(e);
-    if (null != n && !(await (0, l.Z)(n))) {
-        (0, c.k)({ kind: 'channel' });
-        return;
-    }
-    if (null == n) {
-        (0, i.uL)(e, t);
-        return;
-    }
+    if (null != n && !(await (0, l.Z)(n))) return void (0, c.k)({ kind: 'channel' });
+    if (null == n) return void (0, i.uL)(e, t);
     let r = h(n);
-    if (null == r.channelId) {
-        (0, o.X)(r.guildId);
-        return;
-    }
+    if (null == r.channelId) return void (0, o.X)(r.guildId);
     null != r.threadId ? (0, i.uL)(u.Z5c.CHANNEL_THREAD_VIEW(r.guildId, r.channelId, r.threadId, r.messageId), t) : (0, i.uL)(u.Z5c.CHANNEL(r.guildId, r.channelId, r.messageId), t);
 }

@@ -39,7 +39,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,12 +81,12 @@ function h(e, t) {
 let m = 3,
     g = 8;
 function E() {}
-let v = 20 * c.Z.Millis.SECOND,
-    b = 3,
-    y = +c.Z.Millis.MINUTE,
+let b = 20 * c.Z.Millis.SECOND,
+    y = 3,
+    v = +c.Z.Millis.MINUTE,
     O = 0.25,
-    S = 0.1,
-    I = 5 * c.Z.Millis.SECOND,
+    I = 0.1,
+    S = 5 * c.Z.Millis.SECOND,
     T = 2,
     N = 8;
 function A(e) {
@@ -127,7 +127,7 @@ function R(e) {
 }
 function P(e) {
     var t;
-    return null !==
+    return null !=
         (t =
             null == e
                 ? void 0
@@ -148,7 +148,7 @@ function P(e) {
                                     height: e.max_resolution.height
                                 }
                               : void 0
-                  }))) && void 0 !== t
+                  })))
         ? t
         : [];
 }
@@ -163,7 +163,7 @@ class D extends a.Z {
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this.handleClose(!1, 0, 'The connection timed out after '.concat(e, ' ms - did not receive OP_HELLO in time.'));
-            }, v));
+            }, b));
         let e = (this.webSocket = new WebSocket(''.concat(this.url, '?v=').concat(g)));
         (e.binaryType = 'arraybuffer'),
             (e.onopen = () => {
@@ -173,12 +173,11 @@ class D extends a.Z {
             }),
             (e.onmessage = (e) => {
                 let { op: t, seq: n, d: r } = this.parseWebSocketMessage(e);
-                if ((n && (this.lastRecvSeqNum = n), l.default.isLoggingGatewayEvents)) {
+                if ((n && (this.lastRecvSeqNum = n), l.default.isLoggingGatewayEvents))
                     if (r instanceof Uint8Array) {
                         let e = [...r].map((e) => e.toString(16).padStart(2, '0')).join('');
                         this.logger.info('~> '.concat(t, ': 0x').concat(e));
                     } else this.logger.info('~> '.concat(t, ': ').concat(JSON.stringify(r)));
-                }
                 switch (t) {
                     case 8:
                         this.clearHelloTimeout(), this.handleHello(r);
@@ -290,15 +289,15 @@ class D extends a.Z {
     }
     doResumeOrClose() {
         let e = Date.now();
-        null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= y) ? (this.doResume(), (this.lastHeartbeatAckTime = e)) : this.disconnect(!1, 4801, 'Cannot resume connection.');
+        null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= v) ? (this.doResume(), (this.lastHeartbeatAckTime = e)) : this.disconnect(!1, 4801, 'Cannot resume connection.');
     }
     doResume() {
         var e, t, n;
-        let r = null !== (e = this.lastRecvSeqNum) && void 0 !== e ? e : -1;
+        let r = null != (e = this.lastRecvSeqNum) ? e : -1;
         this.logger.info(
             '[RESUME] resuming session. serverId='
-                .concat(null !== (t = this.serverId) && void 0 !== t ? t : '', ' sessionId=')
-                .concat(null !== (n = this.sessionId) && void 0 !== n ? n : '', ' seqAck=')
+                .concat(null != (t = this.serverId) ? t : '', ' sessionId=')
+                .concat(null != (n = this.sessionId) ? n : '', ' seqAck=')
                 .concat(r)
         ),
             this.emit('resuming'),
@@ -312,14 +311,14 @@ class D extends a.Z {
     }
     handleHello(e) {
         var t, n, r;
-        if (((this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : m), this.serverVersion <= 3)) {
-            let t = u.isPlatformEmbedded ? O : S;
+        if (((this.serverVersion = null != (t = e.v) ? t : m), this.serverVersion <= 3)) {
+            let t = u.isPlatformEmbedded ? O : I;
             this.heartbeatInterval = e.heartbeat_interval * t;
-        } else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), u.isPlatformEmbedded || (this.heartbeatInterval = Math.min(I, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+        } else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), u.isPlatformEmbedded || (this.heartbeatInterval = Math.min(S, null != (n = this.heartbeatInterval) ? n : NaN));
         let i = Date.now() - this.connectionStartTime;
         this.logger.info(
             '[HELLO] heartbeat interval: '
-                .concat(null !== (r = this.heartbeatInterval) && void 0 !== r ? r : '??', ', version: ')
+                .concat(null != (r = this.heartbeatInterval) ? r : '??', ', version: ')
                 .concat(this.serverVersion, ', took ')
                 .concat(i, ' ms')
         ),
@@ -335,7 +334,7 @@ class D extends a.Z {
     }
     handleClose(e, t, n) {
         if (((this.connectionState = 0), (e = e || !1), this.cleanupWebSocket(), 4004 === t || 4015 === t || 4011 === t || 4006 === t)) return this.disconnect(e, t, n);
-        if (this.backoff.fails > b) this.logger.warn('[WS CLOSED] Backoff exceed. Resetting.'), this.disconnect(e, t, n);
+        if (this.backoff.fails > y) this.logger.warn('[WS CLOSED] Backoff exceed. Resetting.'), this.disconnect(e, t, n);
         else {
             let r = this.backoff.fail(() => this.reconnect(e, t, n));
             this.logger.warn(
@@ -401,7 +400,7 @@ class D extends a.Z {
     sendHeartbeat() {
         if (this.serverVersion >= N) {
             var e;
-            let t = null !== (e = this.lastRecvSeqNum) && void 0 !== e ? e : -1;
+            let t = null != (e = this.lastRecvSeqNum) ? e : -1;
             this.logger.info('Sending heartbeat with last received sequence number: '.concat(t)),
                 this.send(3, {
                     t: Date.now(),
@@ -459,13 +458,13 @@ class D extends a.Z {
         this.close();
     }
     selectProtocol(e, t, n, r) {
-        let i;
-        let o = {};
+        let i,
+            o = {};
         null == n
             ? (i = null)
             : 'sdp' in n && null != n.sdp && '' !== n.sdp
               ? ((i = n.sdp),
-                (o = h(p({}, n), {
+                (o = h(_({}, n), {
                     codecs: A(n.codecs),
                     rtc_connection_id: t
                 })))
@@ -480,14 +479,14 @@ class D extends a.Z {
                     port: n.port,
                     mode: n.mode
                 }),
-                (o = h(p({}, n), {
+                (o = h(_({}, n), {
                     codecs: A(n.codecs),
                     rtc_connection_id: t,
                     experiments: r
                 }))),
             this.send(
                 1,
-                p(
+                _(
                     {
                         protocol: e,
                         data: i

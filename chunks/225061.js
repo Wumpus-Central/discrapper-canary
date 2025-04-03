@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = "a-zA-Z_\\-!.?+*=<>&'",
         n = '[#]?[' + t + '][' + t + '0-9/;:$#]*',
         r = 'def defonce defprotocol defstruct defmulti defmethod defn- defn defmacro deftype defrecord',
@@ -44,12 +44,12 @@ function t(e) {
             className: 'literal',
             begin: /\b(true|false|nil)\b/
         },
-        p = {
+        _ = {
             begin: '\\[|(#::?' + n + ')?\\{',
             end: '[\\]\\}]',
             relevance: 0
         },
-        _ = {
+        p = {
             className: 'symbol',
             begin: '[:]{1,2}' + n
         },
@@ -68,34 +68,36 @@ function t(e) {
             relevance: 0,
             starts: m
         },
-        E = [u, h, s, l, c, d, _, p, a, f, o],
-        v = {
-            beginKeywords: r,
-            keywords: {
-                $pattern: n,
-                keyword: r
-            },
-            end: '(\\[|#|\\d|"|:|\\{|\\)|\\(|$)',
-            contains: [
-                {
-                    className: 'title',
-                    begin: n,
-                    relevance: 0,
-                    excludeEnd: !0,
-                    endsParent: !0
-                }
-            ].concat(E)
-        };
+        E = [u, h, s, l, c, d, p, _, a, f, o];
     return (
-        (h.contains = [v, g, m]),
+        (h.contains = [
+            {
+                beginKeywords: r,
+                keywords: {
+                    $pattern: n,
+                    keyword: r
+                },
+                end: '(\\[|#|\\d|"|:|\\{|\\)|\\(|$)',
+                contains: [
+                    {
+                        className: 'title',
+                        begin: n,
+                        relevance: 0,
+                        excludeEnd: !0,
+                        endsParent: !0
+                    }
+                ].concat(E)
+            },
+            g,
+            m
+        ]),
         (m.contains = E),
-        (p.contains = E),
+        (_.contains = E),
         {
             name: 'Clojure',
             aliases: ['clj', 'edn'],
             illegal: /\S/,
-            contains: [u, h, s, l, c, d, _, p, a, f]
+            contains: [u, h, s, l, c, d, p, _, a, f]
         }
     );
-}
-e.exports = t;
+};

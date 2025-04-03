@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Mojolicious',
         subLanguage: 'xml',
@@ -21,5 +21,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(977457);
+n.d(t, { Z: () => _ }), n(977457);
 var r = n(392711),
     i = n.n(r),
     o = n(250407),
@@ -51,8 +51,7 @@ class f {
         s.Z.addChangeListener(
             i().throttle(() => {
                 var e;
-                null === (e = c.Z.database()) ||
-                    void 0 === e ||
+                null == (e = c.Z.database()) ||
                     e.transaction((e) => {
                         let t = s.Z.getGuildId();
                         null == t || isNaN(Number(t))
@@ -66,4 +65,4 @@ class f {
         );
     }
 }
-let p = new f();
+let _ = new f();

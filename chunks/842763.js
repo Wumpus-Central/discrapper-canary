@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = 'foreach do while for if from to step else on-error and or not in',
         n = 'global local beep delay put len typeof pick log time set find environment terminal error execute parse resolve toarray tobool toid toip toip6 tonum tostr totime',
         r = 'add remove enable disable set get print export edit find run debug error info warning',
@@ -111,5 +111,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

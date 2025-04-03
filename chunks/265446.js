@@ -13,15 +13,9 @@ function s(e) {
             e.insertBreak();
         }),
         (e.insertText = (t) => {
-            if (0 > t.indexOf('\r') && 0 > t.indexOf('\n')) {
-                n(t);
-                return;
-            }
+            if (0 > t.indexOf('\r') && 0 > t.indexOf('\n')) return void n(t);
             let o = t.split(/\r\n|\r|\n/);
-            if (!l(e)) {
-                n(o.join(' '));
-                return;
-            }
+            if (!l(e)) return void n(o.join(' '));
             r.T.withSingleEntry(e, () => {
                 let t = !1;
                 for (let r of o) t && i.Q.splitNodes(e, { always: !0 }), n(r), (t = !0);

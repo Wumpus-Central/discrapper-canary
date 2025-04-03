@@ -5,15 +5,14 @@ var r = n(484155),
     s = n(682653),
     l = n(454745),
     c = Object.prototype.hasOwnProperty;
-function u(e, t) {
+e.exports = function (e, t) {
     var n = o(e),
         u = !n && i(e),
         d = !n && !u && a(e),
         f = !n && !u && !d && l(e),
-        p = n || u || d || f,
-        _ = p ? r(e.length, String) : [],
-        h = _.length;
-    for (var m in e) (t || c.call(e, m)) && !(p && ('length' == m || (d && ('offset' == m || 'parent' == m)) || (f && ('buffer' == m || 'byteLength' == m || 'byteOffset' == m)) || s(m, h))) && _.push(m);
-    return _;
-}
-e.exports = u;
+        _ = n || u || d || f,
+        p = _ ? r(e.length, String) : [],
+        h = p.length;
+    for (var m in e) (t || c.call(e, m)) && !(_ && ('length' == m || (d && ('offset' == m || 'parent' == m)) || (f && ('buffer' == m || 'byteLength' == m || 'byteOffset' == m)) || s(m, h))) && p.push(m);
+    return p;
+};

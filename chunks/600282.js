@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             className: 'string',
@@ -40,7 +40,7 @@ function t(e) {
         f = e.COMMENT(null, /$/, {
             variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }]
         }),
-        p = {
+        _ = {
             className: 'meta',
             begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
             end: /$/,
@@ -59,7 +59,6 @@ function t(e) {
             literal: 'true false nothing'
         },
         illegal: '//|\\{|\\}|endif|gosub|variant|wend|^\\$ ',
-        contains: [n, r, l, c, u, d, f, p]
+        contains: [n, r, l, c, u, d, f, _]
     };
-}
-e.exports = t;
+};

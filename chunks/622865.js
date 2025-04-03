@@ -45,7 +45,7 @@ function _(e) {
             return e.update();
         });
 }
-var p = (function (e) {
+e.exports = (function (e) {
     function t(e) {
         i(this, t);
         var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
@@ -158,4 +158,3 @@ var p = (function (e) {
         t
     );
 })(s);
-e.exports = p;

@@ -60,14 +60,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,10 +76,10 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = /url\(['"](.*)['"]\)/,
+let p = /url\(['"](.*)['"]\)/,
     h = (e) => {
         if (null == e || '' === e || 'none' === e) return null;
-        let t = e.match(_);
+        let t = e.match(p);
         return null != t ? t[1] : e;
     };
 function m(e) {
@@ -92,17 +92,12 @@ function g(e) {
             let { cached: n, loaded: r } = this.state,
                 { style: i } = this.props,
                 o = null != i ? h(i.backgroundImage) : null;
-            null == o && o !== n
+            (null == o && o !== n) || this.cachedURLs.indexOf(o) >= 0
                 ? this.setState({
                       loaded: !0,
                       cached: o
                   })
-                : this.cachedURLs.indexOf(o) >= 0
-                  ? this.setState({
-                        loaded: !0,
-                        cached: o
-                    })
-                  : null != o && o !== n && !0 === r && this.setState({ loaded: !1 }, () => this.preloadURL(o));
+                : null != o && o !== n && !0 === r && this.setState({ loaded: !1 }, () => this.preloadURL(o));
         }
         preloadURL(e) {
             this.canceller && this.canceller(),

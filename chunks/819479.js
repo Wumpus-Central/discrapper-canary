@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
         keyword: ['break', 'case', 'chan', 'const', 'continue', 'default', 'defer', 'else', 'fallthrough', 'for', 'func', 'go', 'goto', 'if', 'import', 'interface', 'map', 'package', 'range', 'return', 'select', 'struct', 'switch', 'type', 'var'],
         type: ['bool', 'byte', 'complex64', 'complex128', 'error', 'float32', 'float64', 'int8', 'int16', 'int32', 'int64', 'string', 'uint8', 'uint16', 'uint32', 'uint64', 'int', 'uint', 'uintptr', 'rune'],
@@ -69,5 +69,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

@@ -70,15 +70,15 @@ let c = (function (e, t) {
             }
             let [d, f] = o.M8.isRange(n) ? o.M8.edges(n) : o.bN.edges(e, n);
             if (null != i || null != a) {
-                var p, _, h;
+                var _, p, h;
                 if (s) {
                     let t =
-                        null !==
-                            (p = o.bN.before(e, d, {
-                                distance: i,
-                                unit: a
-                            })) && void 0 !== p
-                            ? p
+                        null !=
+                        (_ = o.bN.before(e, d, {
+                            distance: i,
+                            unit: a
+                        }))
+                            ? _
                             : o.bN.start(e, []);
                     if ('character' === a && (null != i ? i : 1) === 1 && o.C0.equals(d.path, f.path)) {
                         let n = o.bN.leaf(e, d.path),
@@ -86,22 +86,22 @@ let c = (function (e, t) {
                         r.length > 0 &&
                             null != r[r.length - 1].match(/[\u0E00-\u0E7F]/) &&
                             (t =
-                                null !==
-                                    (_ = o.bN.before(e, d, {
-                                        distance: i,
-                                        unit: 'offset'
-                                    })) && void 0 !== _
-                                    ? _
+                                null !=
+                                (p = o.bN.before(e, d, {
+                                    distance: i,
+                                    unit: 'offset'
+                                }))
+                                    ? p
                                     : o.bN.start(e, []));
                     }
                     d = t;
                 } else
                     f =
-                        null !==
-                            (h = o.bN.after(e, f, {
-                                distance: i,
-                                unit: a
-                            })) && void 0 !== h
+                        null !=
+                        (h = o.bN.after(e, f, {
+                            distance: i,
+                            unit: a
+                        }))
                             ? h
                             : o.bN.end(e, []);
             }
@@ -124,7 +124,7 @@ let c = (function (e, t) {
             var i;
             let a = o.bN.getSelectionOverlap(e, n),
                 [s, l] = o.M8.edges(n),
-                c = null !== (i = o.bN.before(e, s)) && void 0 !== i ? i : o.bN.start(e, []),
+                c = null != (i = o.bN.before(e, s)) ? i : o.bN.start(e, []),
                 u = o.bN.after(e, l);
             o.M8.isExpanded(n) &&
                 r.YR.delete(e, {
@@ -173,7 +173,7 @@ let c = (function (e, t) {
         voidToText(e, t, n) {
             var i;
             let a = o.bN.getSelectionOverlap(e, n),
-                s = null !== (i = o.bN.before(e, n)) && void 0 !== i ? i : o.bN.start(e, []),
+                s = null != (i = o.bN.before(e, n)) ? i : o.bN.start(e, []),
                 l = {
                     path: s.path,
                     offset: s.offset + t.length
@@ -188,7 +188,7 @@ let c = (function (e, t) {
         removeInline(e, t) {
             var n;
             let i = o.bN.getSelectionOverlap(e, t),
-                a = null !== (n = o.bN.before(e, t)) && void 0 !== n ? n : o.bN.start(e, []);
+                a = null != (n = o.bN.before(e, t)) ? n : o.bN.start(e, []);
             r.YR.delete(e, {
                 at: t,
                 voids: !0
@@ -217,10 +217,7 @@ let c = (function (e, t) {
             if (null != a)
                 for (let i = 0; i < a[0].children.length; i++) {
                     let s = a[0].children[i];
-                    if (o.aj.isType(s, 'applicationCommandOption') && s.optionName === t) {
-                        n ? r.YR.select(e, [0, i]) : r.YR.select(e, o.bN.end(e, [0, i]));
-                        return;
-                    }
+                    if (o.aj.isType(s, 'applicationCommandOption') && s.optionName === t) return void (n ? r.YR.select(e, [0, i]) : r.YR.select(e, o.bN.end(e, [0, i])));
                 }
         },
         selectPreviousCommandOption(e) {
@@ -259,10 +256,7 @@ let c = (function (e, t) {
             let { reverse: n = !1, unit: i = 'character', edge: a } = null != t ? t : {},
                 s = e.selection;
             if (null == s) return;
-            if (void 0 === a && o.M8.isExpanded(s)) {
-                r.YR.collapse(e, { edge: n ? 'start' : 'end' });
-                return;
-            }
+            if (void 0 === a && o.M8.isExpanded(s)) return void r.YR.collapse(e, { edge: n ? 'start' : 'end' });
             let l = o.bN.leaf(e, s.anchor.path);
             if (null == l) return;
             let c = n ? o.bN.before : o.bN.after,
@@ -301,8 +295,8 @@ function u(e, t, n, r, i) {
 function d(e, t, n, r, i) {
     var o, a;
     if (null == t.anchor && null == t.focus) return;
-    let s = u(null === (o = e.selection) || void 0 === o ? void 0 : o.anchor, t.anchor, n, r, i),
-        l = u(null === (a = e.selection) || void 0 === a ? void 0 : a.focus, t.focus, n, r, i);
+    let s = u(null == (o = e.selection) ? void 0 : o.anchor, t.anchor, n, r, i),
+        l = u(null == (a = e.selection) ? void 0 : a.focus, t.focus, n, r, i);
     if (null == s || null == l) return;
     let d = {
         anchor: s,

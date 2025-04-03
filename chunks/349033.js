@@ -27,8 +27,8 @@ let i = /.+/g,
 function a(e, t, n) {
     if (null == t) return null;
     for (let r = 0; r < t.length; r++) {
-        let i;
-        let o = t[r],
+        let i,
+            o = t[r],
             a = s(e.match(o.regex), n);
         if (null != a) {
             let { cache: e } = o;
@@ -51,18 +51,16 @@ class l {
         (this._rules = []), (this._followers = {}), (this._nonTokenType = null != e ? e : o);
     }
     addRule(e) {
-        let t;
-        let { type: n, follows: r, validator: i } = e,
+        let t,
+            { type: n, follows: r, validator: i } = e,
             { regex: o } = e;
-        if (('^' !== o.source.charAt(0) && (o = new RegExp('^'.concat(o.source), o.flags)), null != i && (t = new Map()), null == r)) {
-            this._rules.push({
+        if (('^' !== o.source.charAt(0) && (o = new RegExp('^'.concat(o.source), o.flags)), null != i && (t = new Map()), null == r))
+            return void this._rules.push({
                 regex: o,
                 type: n,
                 validator: i,
                 cache: t
             });
-            return;
-        }
         r.forEach((e) => {
             null == this._followers[e] && (this._followers[e] = []),
                 this._followers[e].push({
@@ -88,17 +86,17 @@ class l {
     clearCache() {
         for (let e in (this._rules.forEach((e) => {
             var t;
-            return null === (t = e.cache) || void 0 === t ? void 0 : t.clear();
+            return null == (t = e.cache) ? void 0 : t.clear();
         }),
         this._followers))
             this._followers[e].forEach((e) => {
                 var t;
-                return null === (t = e.cache) || void 0 === t ? void 0 : t.clear();
+                return null == (t = e.cache) ? void 0 : t.clear();
             });
     }
     _getMatch(e, t, n) {
-        let r;
-        let i = null != t ? t.type : null;
+        let r,
+            i = null != t ? t.type : null;
         return (null == t ? void 0 : t.end) === n && (r = a(e, this._followers[String(i)], n)), null == r && (r = a(e, this._rules, n)), r;
     }
     constructor(e = [], t) {
@@ -133,7 +131,7 @@ class c {
         if ((r(this, 'match', void 0), r(this, 'start', void 0), r(this, 'type', void 0), r(this, '_data', void 0), e instanceof c)) (this.match = [...e.match]), (this.start = e.start), (this.type = e.type), null != e._data && (this._data = e._data);
         else if (null != e) {
             var n;
-            (this.match = [...e]), (this.start = 'string' == typeof e ? 0 : null !== (n = e.index) && void 0 !== n ? n : 0), (this.type = t);
+            (this.match = [...e]), (this.start = 'string' == typeof e ? 0 : null != (n = e.index) ? n : 0), (this.type = t);
         } else (this.match = []), (this.start = 0), (this.type = t);
     }
 }

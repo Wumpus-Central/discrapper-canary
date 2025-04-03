@@ -21,11 +21,8 @@ function c(e, t, n) {
 function u(e) {
     var t, n;
     let { guild: i } = e.invite,
-        c = null !== (n = e.invite.flags) && void 0 !== n ? n : 0;
-    if (null != i && (null == i ? void 0 : null === (t = i.features) || void 0 === t ? void 0 : t.includes(l.oNc.HUB))) {
-        o.Z.onOpenHubInvite(e.invite);
-        return;
-    }
+        c = null != (n = e.invite.flags) ? n : 0;
+    if (null != i && (null == i || null == (t = i.features) ? void 0 : t.includes(l.oNc.HUB))) return void o.Z.onOpenHubInvite(e.invite);
     !((0, a.yE)(c, r.$.IS_GUEST_INVITE) || (0, a.yE)(c, r.$.IS_APPLICATION_BYPASS)) && null != i && (0, s.u)(i) && (0, s._)(i.id);
 }
 class d extends i.Z {

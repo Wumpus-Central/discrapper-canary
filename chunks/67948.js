@@ -6,7 +6,7 @@ var r = n(333897),
     l = /^0b[01]+$/i,
     c = /^0o[0-7]+$/i,
     u = parseInt;
-function d(e) {
+e.exports = function (e) {
     if ('number' == typeof e) return e;
     if (o(e)) return a;
     if (i(e)) {
@@ -17,5 +17,4 @@ function d(e) {
     e = r(e);
     var n = l.test(e);
     return n || c.test(e) ? u(e.slice(2), n ? 2 : 8) : s.test(e) ? a : +e;
-}
-e.exports = d;
+};

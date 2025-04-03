@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             keyword: ['assert', 'else', 'if', 'in', 'inherit', 'let', 'or', 'rec', 'then', 'with'],
@@ -68,13 +68,13 @@ function t(e) {
                 }
             ]
         },
-        p = {
+        _ = {
             scope: 'subst',
             begin: /\$\{/,
             end: /\}/,
             keywords: n
         },
-        _ = {
+        p = {
             scope: 'char.escape',
             match: /\\(?!\$)./
         },
@@ -89,12 +89,12 @@ function t(e) {
                             scope: 'char.escape',
                             match: /''\$/
                         },
-                        p,
+                        _,
                         {
                             scope: 'char.escape',
                             match: /'''/
                         },
-                        _
+                        p
                     ]
                 },
                 {
@@ -105,8 +105,8 @@ function t(e) {
                             scope: 'char.escape',
                             match: /\\\$/
                         },
-                        p,
-                        _
+                        _,
+                        p
                     ]
                 }
             ]
@@ -133,7 +133,7 @@ function t(e) {
             c
         ];
     return (
-        (p.contains = g),
+        (_.contains = g),
         {
             name: 'Nix',
             aliases: ['nixos'],
@@ -152,5 +152,4 @@ function t(e) {
             ])
         }
     );
-}
-e.exports = t;
+};

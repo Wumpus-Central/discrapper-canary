@@ -10,15 +10,14 @@ var o = n(192379),
     u = 'exited',
     d = 'entering',
     f = 'entered',
-    p = 'exiting',
-    _ = (function (e) {
+    _ = 'exiting',
+    p = (function (e) {
         function t(t, n) {
-            r = e.call(this, t, n) || this;
             var r,
-                i,
+                i = e.call(this, t, n) || this,
                 o = n,
                 a = o && !o.isMounting ? t.enter : t.appear;
-            return (r.appearStatus = null), t.in ? (a ? ((i = u), (r.appearStatus = d)) : (i = f)) : (i = t.unmountOnExit || t.mountOnEnter ? c : u), (r.state = { status: i }), (r.nextCallback = null), r;
+            return (i.appearStatus = null), t.in ? (a ? ((r = u), (i.appearStatus = d)) : (r = f)) : (r = t.unmountOnExit || t.mountOnEnter ? c : u), (i.state = { status: r }), (i.nextCallback = null), i;
         }
         (0, i.Z)(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
@@ -33,7 +32,7 @@ var o = n(192379),
                 var t = null;
                 if (e !== this.props) {
                     var n = this.state.status;
-                    this.props.in ? n !== d && n !== f && (t = d) : (n === d || n === f) && (t = p);
+                    this.props.in ? n !== d && n !== f && (t = d) : (n === d || n === f) && (t = _);
                 }
                 this.updateStatus(!1, t);
             }),
@@ -68,12 +67,10 @@ var o = n(192379),
                     i = this.context ? this.context.isMounting : t,
                     o = this.getTimeouts(),
                     a = i ? o.appear : o.enter;
-                if ((!t && !r) || s.Z.disabled) {
-                    this.safeSetState({ status: f }, function () {
+                if ((!t && !r) || s.Z.disabled)
+                    return void this.safeSetState({ status: f }, function () {
                         n.props.onEntered(e);
                     });
-                    return;
-                }
                 this.props.onEnter(e, i),
                     this.safeSetState({ status: d }, function () {
                         n.props.onEntering(e, i),
@@ -88,14 +85,12 @@ var o = n(192379),
                 var t = this,
                     n = this.props.exit,
                     r = this.getTimeouts();
-                if (!n || s.Z.disabled) {
-                    this.safeSetState({ status: u }, function () {
+                if (!n || s.Z.disabled)
+                    return void this.safeSetState({ status: u }, function () {
                         t.props.onExited(e);
                     });
-                    return;
-                }
                 this.props.onExit(e),
-                    this.safeSetState({ status: p }, function () {
+                    this.safeSetState({ status: _ }, function () {
                         t.props.onExiting(e),
                             t.onTransitionEnd(e, r.exit, function () {
                                 t.safeSetState({ status: u }, function () {
@@ -126,10 +121,7 @@ var o = n(192379),
             (n.onTransitionEnd = function (e, t, n) {
                 this.setNextCallback(n);
                 var r = null == t && !this.props.addEndListener;
-                if (!e || r) {
-                    setTimeout(this.nextCallback, 0);
-                    return;
-                }
+                if (!e || r) return void setTimeout(this.nextCallback, 0);
                 this.props.addEndListener && this.props.addEndListener(e, this.nextCallback), null != t && setTimeout(this.nextCallback, t);
             }),
             (n.render = function () {
@@ -146,9 +138,9 @@ var o = n(192379),
         );
     })(o.Component);
 function h() {}
-(_.contextType = l.Z),
-    (_.propTypes = {}),
-    (_.defaultProps = {
+(p.contextType = l.Z),
+    (p.propTypes = {}),
+    (p.defaultProps = {
         in: !1,
         mountOnEnter: !1,
         unmountOnExit: !1,
@@ -162,9 +154,9 @@ function h() {}
         onExiting: h,
         onExited: h
     }),
-    (_.UNMOUNTED = 0),
-    (_.EXITED = 1),
-    (_.ENTERING = 2),
-    (_.ENTERED = 3),
-    (_.EXITING = 4);
-let m = _;
+    (p.UNMOUNTED = 0),
+    (p.EXITED = 1),
+    (p.ENTERING = 2),
+    (p.ENTERED = 3),
+    (p.EXITING = 4);
+let m = p;

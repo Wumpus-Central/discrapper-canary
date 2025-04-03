@@ -1,7 +1,7 @@
 var r = n(256098),
     i = n(436091),
     o = n(438330);
-function a(e) {
+e.exports = function (e) {
     return function (t, n, a) {
         var s = Object(t);
         if (!i(t)) {
@@ -14,5 +14,4 @@ function a(e) {
         var c = e(t, n, a);
         return c > -1 ? s[l ? t[c] : c] : void 0;
     };
-}
-e.exports = a;
+};

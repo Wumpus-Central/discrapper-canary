@@ -552,14 +552,14 @@ let t = (e) => ({
         .sort()
         .reverse(),
     s = i.concat(o).sort().reverse();
-function l(e) {
+e.exports = function (e) {
     let l = t(e),
         c = s,
         u = '[\\w-]+',
         d = '(' + u + '|@\\{' + u + '\\})',
         f = [],
-        p = [],
-        _ = function (e) {
+        _ = [],
+        p = function (e) {
             return {
                 className: 'string',
                 begin: '~?' + e + '.*?' + e
@@ -580,15 +580,15 @@ function l(e) {
         g = {
             begin: '\\(',
             end: '\\)',
-            contains: p,
+            contains: _,
             keywords: m,
             relevance: 0
         };
-    p.push(
+    _.push(
         e.C_LINE_COMMENT_MODE,
         e.C_BLOCK_COMMENT_MODE,
-        _("'"),
-        _('"'),
+        p("'"),
+        p('"'),
         l.CSS_NUMBER_MODE,
         {
             begin: '(url|data-uri)\\(',
@@ -614,17 +614,17 @@ function l(e) {
         { beginKeywords: 'and not' },
         l.FUNCTION_DISPATCH
     );
-    let E = p.concat({
+    let E = _.concat({
             begin: /\{/,
             end: /\}/,
             contains: f
         }),
-        v = {
+        b = {
             beginKeywords: 'when',
             endsWithParent: !0,
-            contains: [{ beginKeywords: 'and not' }].concat(p)
+            contains: [{ beginKeywords: 'and not' }].concat(_)
         },
-        b = {
+        y = {
             begin: d + '\\s*:',
             returnBegin: !0,
             end: /[;}]/,
@@ -640,19 +640,19 @@ function l(e) {
                         endsWithParent: !0,
                         illegal: '[<=$]',
                         relevance: 0,
-                        contains: p
+                        contains: _
                     }
                 }
             ]
         },
-        y = {
+        v = {
             className: 'keyword',
             begin: '@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b',
             starts: {
                 end: '[;{}]',
                 keywords: m,
                 returnEnd: !0,
-                contains: p,
+                contains: _,
                 relevance: 0
             }
         },
@@ -671,7 +671,7 @@ function l(e) {
                 contains: E
             }
         },
-        S = {
+        I = {
             variants: [
                 {
                     begin: '[\\.#:&\\[>]',
@@ -689,7 +689,7 @@ function l(e) {
             contains: [
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                v,
+                b,
                 h('keyword', 'all\\b'),
                 h('variable', '@\\{' + u + '\\}'),
                 {
@@ -720,13 +720,13 @@ function l(e) {
                 l.FUNCTION_DISPATCH
             ]
         },
-        I = {
+        S = {
             begin: u + ':(:)?' + `(${c.join('|')})`,
             returnBegin: !0,
-            contains: [S]
+            contains: [I]
         };
     return (
-        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, y, O, I, b, S, v, l.FUNCTION_DISPATCH),
+        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, v, O, S, y, I, b, l.FUNCTION_DISPATCH),
         {
             name: 'Less',
             case_insensitive: !0,
@@ -734,5 +734,4 @@ function l(e) {
             contains: f
         }
     );
-}
-e.exports = l;
+};

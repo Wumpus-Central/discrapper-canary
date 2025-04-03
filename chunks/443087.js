@@ -59,8 +59,8 @@ function t(e) {
             begin: t.optional(i) + e.IDENT_RE,
             relevance: 0
         },
-        p = t.optional(i) + e.IDENT_RE + '\\s*\\(',
-        _ = {
+        _ = t.optional(i) + e.IDENT_RE + '\\s*\\(',
+        p = {
             type: ['bool', 'char', 'char16_t', 'char32_t', 'char8_t', 'double', 'float', 'int', 'long', 'short', 'void', 'wchar_t', 'unsigned', 'signed', 'const', 'static'],
             keyword: ['alignas', 'alignof', 'and', 'and_eq', 'asm', 'atomic_cancel', 'atomic_commit', 'atomic_noexcept', 'auto', 'bitand', 'bitor', 'break', 'case', 'catch', 'class', 'co_await', 'co_return', 'co_yield', 'compl', 'concept', 'const_cast|10', 'consteval', 'constexpr', 'constinit', 'continue', 'decltype', 'default', 'delete', 'do', 'dynamic_cast|10', 'else', 'enum', 'explicit', 'export', 'extern', 'false', 'final', 'for', 'friend', 'goto', 'if', 'import', 'inline', 'module', 'mutable', 'namespace', 'new', 'noexcept', 'not', 'not_eq', 'nullptr', 'operator', 'or', 'or_eq', 'override', 'private', 'protected', 'public', 'reflexpr', 'register', 'reinterpret_cast|10', 'requires', 'return', 'sizeof', 'static_assert', 'static_cast|10', 'struct', 'switch', 'synchronized', 'template', 'this', 'thread_local', 'throw', 'transaction_safe', 'transaction_safe_dynamic', 'true', 'try', 'typedef', 'typeid', 'typename', 'union', 'using', 'virtual', 'volatile', 'while', 'xor', 'xor_eq'],
             literal: ['NULL', 'false', 'nullopt', 'nullptr', 'true'],
@@ -91,12 +91,12 @@ function t(e) {
                     end: /;/
                 }
             ],
-            keywords: _,
+            keywords: p,
             contains: m.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
+                    keywords: p,
                     contains: m.concat(['self']),
                     relevance: 0
                 }
@@ -105,20 +105,20 @@ function t(e) {
         },
         E = {
             className: 'function',
-            begin: '(' + a + '[\\*&\\s]+)+' + p,
+            begin: '(' + a + '[\\*&\\s]+)+' + _,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: _,
+            keywords: p,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: r,
-                    keywords: _,
+                    keywords: p,
                     relevance: 0
                 },
                 {
-                    begin: p,
+                    begin: _,
                     returnBegin: !0,
                     contains: [f],
                     relevance: 0
@@ -140,7 +140,7 @@ function t(e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
+                    keywords: p,
                     relevance: 0,
                     contains: [
                         n,
@@ -151,7 +151,7 @@ function t(e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: _,
+                            keywords: p,
                             relevance: 0,
                             contains: ['self', n, e.C_BLOCK_COMMENT_MODE, c, u, s]
                         }
@@ -166,7 +166,7 @@ function t(e) {
     return {
         name: 'C++',
         aliases: ['cc', 'c++', 'h++', 'hpp', 'hh', 'hxx', 'cxx'],
-        keywords: _,
+        keywords: p,
         illegal: '</',
         classNameAliases: { 'function.dispatch': 'built_in' },
         contains: [].concat(g, E, h, m, [
@@ -174,12 +174,12 @@ function t(e) {
             {
                 begin: '\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array|tuple|optional|variant|function|flat_map|flat_set)\\s*<(?!<)',
                 end: '>',
-                keywords: _,
+                keywords: p,
                 contains: ['self', s]
             },
             {
                 begin: e.IDENT_RE + '::',
-                keywords: _
+                keywords: p
             },
             {
                 match: [/\b(?:enum(?:\s+(?:class|struct))?|class|struct|union)/, /\s+/, /\w+/],
@@ -191,7 +191,7 @@ function t(e) {
         ])
     };
 }
-function n(e) {
+e.exports = function (e) {
     let n = ['boolean', 'byte', 'word', 'String'],
         r = ['KeyboardController', 'MouseController', 'SoftwareSerial', 'EthernetServer', 'EthernetClient', 'LiquidCrystal', 'RobotControl', 'GSMVoiceCall', 'EthernetUDP', 'EsploraTFT', 'HttpClient', 'RobotMotor', 'WiFiClient', 'GSMScanner', 'FileSystem', 'Scheduler', 'GSMServer', 'YunClient', 'YunServer', 'IPAddress', 'GSMClient', 'GSMModem', 'Keyboard', 'Ethernet', 'Console', 'GSMBand', 'Esplora', 'Stepper', 'Process', 'WiFiUDP', 'GSM_SMS', 'Mailbox', 'USBHost', 'Firmata', 'PImage', 'Client', 'Server', 'GSMPIN', 'FileIO', 'Bridge', 'Serial', 'EEPROM', 'Stream', 'Mouse', 'Audio', 'Servo', 'File', 'Task', 'GPRS', 'WiFi', 'Wire', 'TFT', 'GSM', 'SPI', 'SD'],
         i = ['setup', 'loop', 'runShellCommandAsynchronously', 'analogWriteResolution', 'retrieveCallingNumber', 'printFirmwareVersion', 'analogReadResolution', 'sendDigitalPortPair', 'noListenOnLocalhost', 'readJoystickButton', 'setFirmwareVersion', 'readJoystickSwitch', 'scrollDisplayRight', 'getVoiceCallStatus', 'scrollDisplayLeft', 'writeMicroseconds', 'delayMicroseconds', 'beginTransmission', 'getSignalStrength', 'runAsynchronously', 'getAsynchronously', 'listenOnLocalhost', 'getCurrentCarrier', 'readAccelerometer', 'messageAvailable', 'sendDigitalPorts', 'lineFollowConfig', 'countryNameWrite', 'runShellCommand', 'readStringUntil', 'rewindDirectory', 'readTemperature', 'setClockDivider', 'readLightSensor', 'endTransmission', 'analogReference', 'detachInterrupt', 'countryNameRead', 'attachInterrupt', 'encryptionType', 'readBytesUntil', 'robotNameWrite', 'readMicrophone', 'robotNameRead', 'cityNameWrite', 'userNameWrite', 'readJoystickY', 'readJoystickX', 'mouseReleased', 'openNextFile', 'scanNetworks', 'noInterrupts', 'digitalWrite', 'beginSpeaker', 'mousePressed', 'isActionDone', 'mouseDragged', 'displayLogos', 'noAutoscroll', 'addParameter', 'remoteNumber', 'getModifiers', 'keyboardRead', 'userNameRead', 'waitContinue', 'processInput', 'parseCommand', 'printVersion', 'readNetworks', 'writeMessage', 'blinkVersion', 'cityNameRead', 'readMessage', 'setDataMode', 'parsePacket', 'isListening', 'setBitOrder', 'beginPacket', 'isDirectory', 'motorsWrite', 'drawCompass', 'digitalRead', 'clearScreen', 'serialEvent', 'rightToLeft', 'setTextSize', 'leftToRight', 'requestFrom', 'keyReleased', 'compassRead', 'analogWrite', 'interrupts', 'WiFiServer', 'disconnect', 'playMelody', 'parseFloat', 'autoscroll', 'getPINUsed', 'setPINUsed', 'setTimeout', 'sendAnalog', 'readSlider', 'analogRead', 'beginWrite', 'createChar', 'motorsStop', 'keyPressed', 'tempoWrite', 'readButton', 'subnetMask', 'debugPrint', 'macAddress', 'writeGreen', 'randomSeed', 'attachGPRS', 'readString', 'sendString', 'remotePort', 'releaseAll', 'mouseMoved', 'background', 'getXChange', 'getYChange', 'answerCall', 'getResult', 'voiceCall', 'endPacket', 'constrain', 'getSocket', 'writeJSON', 'getButton', 'available', 'connected', 'findUntil', 'readBytes', 'exitValue', 'readGreen', 'writeBlue', 'startLoop', 'IPAddress', 'isPressed', 'sendSysex', 'pauseMode', 'gatewayIP', 'setCursor', 'getOemKey', 'tuneWrite', 'noDisplay', 'loadImage', 'switchPIN', 'onRequest', 'onReceive', 'changePIN', 'playFile', 'noBuffer', 'parseInt', 'overflow', 'checkPIN', 'knobRead', 'beginTFT', 'bitClear', 'updateIR', 'bitWrite', 'position', 'writeRGB', 'highByte', 'writeRed', 'setSpeed', 'readBlue', 'noStroke', 'remoteIP', 'transfer', 'shutdown', 'hangCall', 'beginSMS', 'endWrite', 'attached', 'maintain', 'noCursor', 'checkReg', 'checkPUK', 'shiftOut', 'isValid', 'shiftIn', 'pulseIn', 'connect', 'println', 'localIP', 'pinMode', 'getIMEI', 'display', 'noBlink', 'process', 'getBand', 'running', 'beginSD', 'drawBMP', 'lowByte', 'setBand', 'release', 'bitRead', 'prepare', 'pointTo', 'readRed', 'setMode', 'noFill', 'remove', 'listen', 'stroke', 'detach', 'attach', 'noTone', 'exists', 'buffer', 'height', 'bitSet', 'circle', 'config', 'cursor', 'random', 'IRread', 'setDNS', 'endSMS', 'getKey', 'micros', 'millis', 'begin', 'print', 'write', 'ready', 'flush', 'width', 'isPIN', 'blink', 'clear', 'press', 'mkdir', 'rmdir', 'close', 'point', 'yield', 'image', 'BSSID', 'click', 'delay', 'read', 'text', 'move', 'peek', 'beep', 'rect', 'line', 'open', 'seek', 'fill', 'size', 'turn', 'stop', 'home', 'find', 'step', 'tone', 'sqrt', 'RSSI', 'SSID', 'end', 'bit', 'tan', 'cos', 'sin', 'pow', 'map', 'abs', 'max', 'min', 'get', 'run', 'put'],
@@ -199,5 +199,4 @@ function n(e) {
         a = t(e),
         s = a.keywords;
     return (s.type = [...s.type, ...n]), (s.literal = [...s.literal, ...o]), (s.built_in = [...s.built_in, ...r]), (s._hints = i), (a.name = 'Arduino'), (a.aliases = ['ino']), (a.supersetOf = 'cpp'), a;
-}
-e.exports = n;
+};

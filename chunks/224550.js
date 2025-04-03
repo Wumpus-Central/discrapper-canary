@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(215023),
     p = n(474936),
     h = n(388032),
-    m = n(88519);
+    m = n(215893);
 let g = (e, t, n, r) => {
         if (null == e || null == t || null == n) {
             let e = Error('Missing base rate for legal fine print'),
@@ -23,8 +23,11 @@ let g = (e, t, n, r) => {
         return (0, u.og)((0, u.T4)(e.amount, e.currency), t, n);
     },
     E = function (e) {
-        let t, n, s, E;
-        let { subscriptionPlan: b, isGift: v, isTrial: y, isOrbCheckout: O, isEmbeddedIAP: I, renewalInvoice: S, paymentSourceType: T, hide: N, purchaseType: A, productLine: C, basePrice: R, currentSubscription: P, skuId: w } = e,
+        let t,
+            n,
+            s,
+            E,
+            { subscriptionPlan: b, isGift: y, isTrial: v, isOrbCheckout: O, isEmbeddedIAP: I, renewalInvoice: S, paymentSourceType: T, hide: N, purchaseType: A, productLine: C, basePrice: R, currentSubscription: P, skuId: w } = e,
             D = (0, i.e7)([a.ZP], () => a.ZP.inReverseTrial());
         if (N) return null;
         let L = null == e.planGroup ? [] : e.planGroup;
@@ -36,7 +39,7 @@ let g = (e, t, n, r) => {
                 purchaseType: A || f.GZQ.SUBSCRIPTION,
                 plan: b,
                 premiumSubscription: null == P ? null : P,
-                isGift: !!v,
+                isGift: !!y,
                 planGroup: L,
                 isPrepaidPaymentSource: !1
             }),
@@ -57,7 +60,7 @@ let g = (e, t, n, r) => {
             });
             let e = '';
             (e = w === _.Vt.ORB_PROFILE_BADGE ? h.NW.string(h.t.APcKRk) : w === _.Vt.FRACTIONAL_PREMIUM ? h.NW.string(h.t.FhJ74u) : h.NW.string(h.t.jCRYDw)), Array.isArray(j) ? (j = [...j, e]) : (j += ' '.concat(e));
-        } else if (I) {
+        } else if (I)
             if (null != s && (null == S ? void 0 : S.subscriptionPeriodEnd) != null) j = h.NW.format(h.t['2VPTa2'], { subtotalRate: E });
             else
                 switch (t) {
@@ -73,10 +76,10 @@ let g = (e, t, n, r) => {
                     default:
                         throw Error('Unexpected interval: '.concat(t));
                 }
-        } else if (A === f.GZQ.ONE_TIME)
+        else if (A === f.GZQ.ONE_TIME)
             switch (C) {
                 case f.POd.COLLECTIBLES:
-                    (U = M), (j = v ? h.NW.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.NW.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
+                    (U = M), (j = y ? h.NW.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS }) : h.NW.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.GUILD_PRODUCT:
                     (U = M), (j = h.NW.format(h.t['GEAQ+v'], { paidURL: f.EYA.PAID_TERMS }));
@@ -84,13 +87,13 @@ let g = (e, t, n, r) => {
                 default:
                     (U = k), (j = h.NW.string(h.t['9/siSU']));
             }
-        else if (null == b || v)
-            switch ((v && (U = M), t)) {
+        else if (null == b || y)
+            switch ((y && (U = M), t)) {
                 case p.rV.MONTH:
-                    (j = v ? h.NW.string(h.t.IjNapq) : h.NW.string(h.t['/sGXPj'])), (j = v ? h.NW.string(h.t.IjNapq) : 1 === n ? h.NW.string(h.t['/sGXPj']) : h.NW.formatToPlainString(h.t.Fqjiho, { intervalCount: n }));
+                    (j = y ? h.NW.string(h.t.IjNapq) : h.NW.string(h.t['/sGXPj'])), (j = y ? h.NW.string(h.t.IjNapq) : 1 === n ? h.NW.string(h.t['/sGXPj']) : h.NW.formatToPlainString(h.t.Fqjiho, { intervalCount: n }));
                     break;
                 case p.rV.YEAR:
-                    j = v ? h.NW.string(h.t.vAfbGx) : h.NW.string(h.t.IGzFc3);
+                    j = y ? h.NW.string(h.t.vAfbGx) : h.NW.string(h.t.IGzFc3);
                     break;
                 case void 0:
                     j = '';
@@ -99,16 +102,16 @@ let g = (e, t, n, r) => {
                     throw Error('Unexpected interval: '.concat(t));
             }
         else {
-            let e;
-            let r = (0, o.K)({
-                purchaseType: f.GZQ.SUBSCRIPTION,
-                plan: b,
-                premiumSubscription: null == P ? null : P,
-                isGift: !1,
-                planGroup: L,
-                isPrepaidPaymentSource: !1
-            });
-            y || (e = g(R, t, n, b.id)),
+            let e,
+                r = (0, o.K)({
+                    purchaseType: f.GZQ.SUBSCRIPTION,
+                    plan: b,
+                    premiumSubscription: null == P ? null : P,
+                    isGift: !1,
+                    planGroup: L,
+                    isPrepaidPaymentSource: !1
+                });
+            v || (e = g(R, t, n, b.id)),
                 (j = (null == P ? void 0 : P.isPausedAllowsResumeButNotUpdates)
                     ? h.NW.format(h.t.B6oNwM, {
                           primaryText: r,
@@ -132,7 +135,7 @@ let g = (e, t, n, r) => {
                               contactUsArticle: f.EYA.CONTACT,
                               subscriptionFAQArticle: l.Z.getArticleURL(f.BhN.BILLING)
                           })
-                        : y
+                        : v
                           ? h.NW.format(h.t['Hvo/Z2'], {
                                 buttonText: r,
                                 interval: c.ZP.formatInterval(null == b ? void 0 : b.interval),

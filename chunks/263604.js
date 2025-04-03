@@ -1,5 +1,4 @@
 var r = n(97742);
-function i(e) {
+e.exports = function (e) {
     return null == e ? '' : r(e);
-}
-e.exports = i;
+};

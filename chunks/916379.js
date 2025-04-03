@@ -1,7 +1,7 @@
 let t = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends', 'using'],
     n = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
     r = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
-function i(e) {
+e.exports = function (e) {
     let i = ['npm', 'print'],
         o = ['yes', 'no', 'on', 'off'],
         a = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
@@ -85,8 +85,8 @@ function i(e) {
             }
         ];
     d.contains = f;
-    let p = e.inherit(e.TITLE_MODE, { begin: u }),
-        _ = '(\\(.*\\)\\s*)?\\B[-=]>',
+    let _ = e.inherit(e.TITLE_MODE, { begin: u }),
+        p = '(\\(.*\\)\\s*)?\\B[-=]>',
         h = {
             className: 'params',
             begin: '\\([^\\(]',
@@ -126,10 +126,10 @@ function i(e) {
             e.HASH_COMMENT_MODE,
             {
                 className: 'function',
-                begin: '^\\s*' + u + '\\s*=\\s*' + _,
+                begin: '^\\s*' + u + '\\s*=\\s*' + p,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [p, h]
+                contains: [_, h]
             },
             {
                 begin: /[:\(,=]\s*/,
@@ -137,7 +137,7 @@ function i(e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: _,
+                        begin: p,
                         end: '[-=]>',
                         returnBegin: !0,
                         contains: [h]
@@ -154,5 +154,4 @@ function i(e) {
             }
         ]
     };
-}
-e.exports = i;
+};

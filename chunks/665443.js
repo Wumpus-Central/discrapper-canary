@@ -11,10 +11,9 @@
                         var a = n.apply(null, i);
                         a && e.push(a);
                     }
-                } else if ('object' === o) {
+                } else if ('object' === o)
                     if (i.toString === Object.prototype.toString) for (var s in i) t.call(i, s) && i[s] && e.push(s);
                     else e.push(i.toString());
-                }
             }
         }
         return e.join(' ');

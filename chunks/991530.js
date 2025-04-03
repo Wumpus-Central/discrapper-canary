@@ -1,2 +1,1 @@
-function t() {}
-e.exports = t;
+e.exports = function () {};

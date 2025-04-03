@@ -1,6 +1,5 @@
-function t(e) {
+e.exports = function (e) {
     return function (t) {
         return e(t);
     };
-}
-e.exports = t;
+};

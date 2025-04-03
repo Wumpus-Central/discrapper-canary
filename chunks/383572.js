@@ -1,7 +1,4 @@
 e.exports = function (e) {
-    if (e.preventDefault) {
-        e.preventDefault();
-        return;
-    }
+    if (e.preventDefault) return void e.preventDefault();
     e.returnValue = !1;
 };

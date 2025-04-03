@@ -7,10 +7,9 @@ function r(e, t, n, r) {
     let a = [];
     for (let o = 0; o < i.length; o++) {
         let s = i[o];
-        if (e[s] !== t[s] && (null == n || !n.includes(s))) {
+        if (e[s] !== t[s] && (null == n || !n.includes(s)))
             if (null == r) return !1;
-            a.push(s);
-        }
+            else a.push(s);
     }
     return null != r && a.length > 0 && r('shallowEqual: unequal keys: '.concat(a.join(', '))), 0 === a.length;
 }

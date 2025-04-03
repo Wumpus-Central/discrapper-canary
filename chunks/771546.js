@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = '(_?[ui](8|16|32|64|128))?',
         n = '(_?f(32|64))?',
         r = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?',
@@ -143,7 +143,7 @@ function t(e) {
             ],
             relevance: 0
         },
-        p = [
+        _ = [
             l,
             u,
             d,
@@ -249,14 +249,13 @@ function t(e) {
             }
         ];
     return (
-        (a.contains = p),
-        (l.contains = p.slice(1)),
+        (a.contains = _),
+        (l.contains = _.slice(1)),
         {
             name: 'Crystal',
             aliases: ['cr'],
             keywords: o,
-            contains: p
+            contains: _
         }
     );
-}
-e.exports = t;
+};

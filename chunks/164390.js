@@ -30,22 +30,15 @@ function s(e, t, n, o) {
 }
 function l(e, r, i, o, a, c, u) {
     if (((c += 1), 'object' == typeof e && null !== e)) {
-        for (d = 0; d < o.length; d++)
-            if (o[d] === e) {
-                s(n, e, r, a);
-                return;
-            }
-        if ((void 0 !== u.depthLimit && c > u.depthLimit) || (void 0 !== u.edgesLimit && i + 1 > u.edgesLimit)) {
-            s(t, e, r, a);
-            return;
-        }
+        for (d = 0; d < o.length; d++) if (o[d] === e) return void s(n, e, r, a);
+        if ((void 0 !== u.depthLimit && c > u.depthLimit) || (void 0 !== u.edgesLimit && i + 1 > u.edgesLimit)) return void s(t, e, r, a);
         if ((o.push(e), Array.isArray(e))) for (d = 0; d < e.length; d++) l(e[d], d, d, o, e, c, u);
         else {
             var d,
                 f = Object.keys(e);
             for (d = 0; d < f.length; d++) {
-                var p = f[d];
-                l(e[p], p, d, o, e, c, u);
+                var _ = f[d];
+                l(e[_], _, d, o, e, c, u);
             }
         }
         o.pop();
@@ -72,31 +65,24 @@ function u(e, t, n, a) {
 }
 function d(e, i, o, a, l, u, f) {
     if (((u += 1), 'object' == typeof e && null !== e)) {
-        for (p = 0; p < a.length; p++)
-            if (a[p] === e) {
-                s(n, e, i, l);
-                return;
-            }
+        for (_ = 0; _ < a.length; _++) if (a[_] === e) return void s(n, e, i, l);
         try {
             if ('function' == typeof e.toJSON) return;
         } catch (e) {
             return;
         }
-        if ((void 0 !== f.depthLimit && u > f.depthLimit) || (void 0 !== f.edgesLimit && o + 1 > f.edgesLimit)) {
-            s(t, e, i, l);
-            return;
-        }
-        if ((a.push(e), Array.isArray(e))) for (p = 0; p < e.length; p++) d(e[p], p, p, a, e, u, f);
+        if ((void 0 !== f.depthLimit && u > f.depthLimit) || (void 0 !== f.edgesLimit && o + 1 > f.edgesLimit)) return void s(t, e, i, l);
+        if ((a.push(e), Array.isArray(e))) for (_ = 0; _ < e.length; _++) d(e[_], _, _, a, e, u, f);
         else {
-            var p,
-                _ = {},
+            var _,
+                p = {},
                 h = Object.keys(e).sort(c);
-            for (p = 0; p < h.length; p++) {
-                var m = h[p];
-                d(e[m], m, p, a, e, u, f), (_[m] = e[m]);
+            for (_ = 0; _ < h.length; _++) {
+                var m = h[_];
+                d(e[m], m, _, a, e, u, f), (p[m] = e[m]);
             }
-            if (void 0 === l) return _;
-            r.push([l, i, e]), (l[i] = _);
+            if (void 0 === l) return p;
+            r.push([l, i, e]), (l[i] = p);
         }
         a.pop();
     }

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = e.COMMENT('//', '$', { contains: [{ begin: /\\\n/ }] }),
         r = 'decltype\\(auto\\)',
@@ -59,8 +59,8 @@ function t(e) {
             begin: t.optional(i) + e.IDENT_RE,
             relevance: 0
         },
-        p = t.optional(i) + e.IDENT_RE + '\\s*\\(',
-        _ = {
+        _ = t.optional(i) + e.IDENT_RE + '\\s*\\(',
+        p = {
             keyword: ['asm', 'auto', 'break', 'case', 'continue', 'default', 'do', 'else', 'enum', 'extern', 'for', 'fortran', 'goto', 'if', 'inline', 'register', 'restrict', 'return', 'sizeof', 'typeof', 'typeof_unqual', 'struct', 'switch', 'typedef', 'union', 'volatile', 'while', '_Alignas', '_Alignof', '_Atomic', '_Generic', '_Noreturn', '_Static_assert', '_Thread_local', 'alignas', 'alignof', 'noreturn', 'static_assert', 'thread_local', '_Pragma'],
             type: ['float', 'double', 'signed', 'unsigned', 'int', 'short', 'long', 'char', 'void', '_Bool', '_BitInt', '_Complex', '_Imaginary', '_Decimal32', '_Decimal64', '_Decimal96', '_Decimal128', '_Decimal64x', '_Decimal128x', '_Float16', '_Float32', '_Float64', '_Float128', '_Float32x', '_Float64x', '_Float128x', 'const', 'static', 'constexpr', 'complex', 'bool', 'imaginary'],
             literal: 'true false NULL',
@@ -82,12 +82,12 @@ function t(e) {
                     end: /;/
                 }
             ],
-            keywords: _,
+            keywords: p,
             contains: h.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
+                    keywords: p,
                     contains: h.concat(['self']),
                     relevance: 0
                 }
@@ -95,20 +95,20 @@ function t(e) {
             relevance: 0
         },
         g = {
-            begin: '(' + a + '[\\*&\\s]+)+' + p,
+            begin: '(' + a + '[\\*&\\s]+)+' + _,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: _,
+            keywords: p,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: r,
-                    keywords: _,
+                    keywords: p,
                     relevance: 0
                 },
                 {
-                    begin: p,
+                    begin: _,
                     returnBegin: !0,
                     contains: [e.inherit(f, { className: 'title.function' })],
                     relevance: 0
@@ -121,7 +121,7 @@ function t(e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
+                    keywords: p,
                     relevance: 0,
                     contains: [
                         n,
@@ -132,7 +132,7 @@ function t(e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: _,
+                            keywords: p,
                             relevance: 0,
                             contains: ['self', n, e.C_BLOCK_COMMENT_MODE, c, u, s]
                         }
@@ -147,14 +147,14 @@ function t(e) {
     return {
         name: 'C',
         aliases: ['h'],
-        keywords: _,
+        keywords: p,
         disableAutodetect: !0,
         illegal: '</',
         contains: [].concat(m, g, h, [
             d,
             {
                 begin: e.IDENT_RE + '::',
-                keywords: _
+                keywords: p
             },
             {
                 className: 'class',
@@ -166,8 +166,7 @@ function t(e) {
         exports: {
             preprocessor: d,
             strings: c,
-            keywords: _
+            keywords: p
         }
     };
-}
-e.exports = t;
+};

@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => l,
-    Z: () => b
+    Z: () => y
 }),
     n(653041),
     n(47120),
@@ -91,18 +91,18 @@ function f(e, t) {
     }
     return r;
 }
-function p(e, t) {
+function _(e, t) {
     let { items: n } = t,
         r = s(o({}, e), {
             items: n,
             focusPath: f(n, e.focusPath)
         });
-    return s(o({}, r), { focusIndex: v(r) });
+    return s(o({}, r), { focusIndex: b(r) });
 }
-function _(e, t) {
+function p(e, t) {
     let { path: n } = t,
         r = s(o({}, e), { focusPath: f(e.items, n) });
-    return s(o({}, r), { focusIndex: v(r) });
+    return s(o({}, r), { focusIndex: b(r) });
 }
 function h(e, t) {
     let n = u(e),
@@ -113,7 +113,7 @@ function h(e, t) {
     let a = s(o({}, e), {
         focusPath: [...e.focusPath.slice(0, -1), r[i].key]
     });
-    return s(o({}, a), { focusIndex: v(a) });
+    return s(o({}, a), { focusIndex: b(a) });
 }
 function m(e, t) {
     let n = u(e),
@@ -124,7 +124,7 @@ function m(e, t) {
     let a = s(o({}, e), {
         focusPath: [...e.focusPath.slice(0, -1), r[i].key]
     });
-    return s(o({}, a), { focusIndex: v(a) });
+    return s(o({}, a), { focusIndex: b(a) });
 }
 function g(e, t) {
     var n;
@@ -132,24 +132,24 @@ function g(e, t) {
         i = d(e);
     if (null == i) return e;
     let a = i[c(i, r)],
-        l = null == a ? void 0 : null === (n = a.children) || void 0 === n ? void 0 : n[0];
+        l = null == a || null == (n = a.children) ? void 0 : n[0];
     if (null == l) return e;
     let f = s(o({}, e), {
         focusPath: [...e.focusPath, l.key]
     });
-    return s(o({}, f), { focusIndex: v(f) });
+    return s(o({}, f), { focusIndex: b(f) });
 }
 function E(e, t) {
     if (e.focusPath.length <= 1) return e;
     let n = s(o({}, e), { focusPath: e.focusPath.slice(0, -1) });
-    return s(o({}, n), { focusIndex: v(n) });
+    return s(o({}, n), { focusIndex: b(n) });
 }
-function v(e) {
+function b(e) {
     let t = u(e),
         n = d(e);
     return null == n ? -1 : c(n, t);
 }
-function b(e, t) {
+function y(e, t) {
     switch (t.type) {
         case r.Us.NAVIGATE_UP:
             return h(e, t);
@@ -160,13 +160,12 @@ function b(e, t) {
         case r.Us.NAVIGATE_OUT:
             return E(e, t);
         case 'UPDATE_ITEMS':
-            return p(e, t);
-        case 'SET_FOCUS_PATH':
             return _(e, t);
+        case 'SET_FOCUS_PATH':
+            return p(e, t);
         case r.Us.SELECT_FOCUSED_ITEM:
-            break;
+            return e;
         default:
             throw Error('Menu navigator was given an unhandled action '.concat(t.type));
     }
-    return e;
 }

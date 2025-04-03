@@ -37,7 +37,10 @@ function a(e, t) {
 var s = {
     resolve: function () {
         for (var e, t, n = '', a = !1, s = arguments.length - 1; s >= -1 && !a; s--) s >= 0 ? (t = arguments[s]) : (void 0 === e && (e = r.cwd()), (t = e)), i(t), 0 !== t.length && ((n = t + '/' + n), (a = 47 === t.charCodeAt(0)));
-        return ((n = o(n, !a)), a) ? (n.length > 0 ? '/' + n : '/') : n.length > 0 ? n : '.';
+        if (((n = o(n, !a)), a))
+            if (n.length > 0) return '/' + n;
+            else return '/';
+        return n.length > 0 ? n : '.';
     },
     normalize: function (e) {
         if ((i(e), 0 === e.length)) return '.';
@@ -64,7 +67,7 @@ var s = {
             if (d === c) {
                 if (l > c) {
                     if (47 === t.charCodeAt(a + d)) return t.slice(a + d + 1);
-                    if (0 === d) return t.slice(a + d);
+                    else if (0 === d) return t.slice(a + d);
                 } else o > c && (47 === e.charCodeAt(n + d) ? (u = d) : 0 === d && (u = 0));
                 break;
             }
@@ -72,9 +75,9 @@ var s = {
             if (f !== t.charCodeAt(a + d)) break;
             47 === f && (u = d);
         }
-        var p = '';
-        for (d = n + u + 1; d <= r; ++d) (d === r || 47 === e.charCodeAt(d)) && (0 === p.length ? (p += '..') : (p += '/..'));
-        return p.length > 0 ? p + t.slice(a + u) : ((a += u), 47 === t.charCodeAt(a) && ++a, t.slice(a));
+        var _ = '';
+        for (d = n + u + 1; d <= r; ++d) (d === r || 47 === e.charCodeAt(d)) && (0 === _.length ? (_ += '..') : (_ += '/..'));
+        return _.length > 0 ? _ + t.slice(a + u) : ((a += u), 47 === t.charCodeAt(a) && ++a, t.slice(a));
     },
     _makeLong: function (e) {
         return e;

@@ -1,4 +1,4 @@
-n.d(t, { p: () => v }), n(789020);
+n.d(t, { p: () => y }), n(789020);
 var r = n(252258),
     i = n(570140),
     o = n(881052),
@@ -30,31 +30,29 @@ async function m(e) {
 }
 async function g(e) {
     let { currentEmbeddedApplication: t, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: n, onConfirmActivityLaunchChecksAlertOpen: r } = e;
-    return !!(
-        null == t ||
-        (await new Promise((e) => {
-            let i = l.ZP.getSelfEmbeddedActivities().get(t.id),
-                o = (0, f.pY)(null == i ? void 0 : i.location),
-                s = a.Z.getChannel(o);
-            if (null == i || null == s) {
-                e(!0);
-                return;
-            }
-            null == r || r(),
-                (0, u.Z)(
-                    t,
-                    s,
-                    () => {
-                        (0, p.Z)().leaveActivity({
-                            location: i.location,
-                            applicationId: t.id,
-                            shouldClosePopout: n
-                        }),
-                            e(!0);
-                    },
-                    () => e(!1)
-                );
-        }))
+    return (
+        (null == t ||
+            !!(await new Promise((e) => {
+                let i = l.ZP.getSelfEmbeddedActivities().get(t.id),
+                    o = (0, f.pY)(null == i ? void 0 : i.location),
+                    s = a.Z.getChannel(o);
+                if (null == i || null == s) return void e(!0);
+                null == r || r(),
+                    (0, u.Z)(
+                        t,
+                        s,
+                        () => {
+                            (0, p.Z)().leaveActivity({
+                                location: i.location,
+                                applicationId: t.id,
+                                shouldClosePopout: n
+                            }),
+                                e(!0);
+                        },
+                        () => e(!1)
+                    );
+            }))) &&
+        !0
     );
 }
 async function E(e) {
@@ -67,13 +65,12 @@ async function E(e) {
                 : await m({
                       applicationId: n,
                       channelId: null == r ? void 0 : r.id,
-                      guildId: null !== (l = null == r ? void 0 : r.getGuildId()) && void 0 !== l ? l : void 0,
+                      guildId: null != (l = null == r ? void 0 : r.getGuildId()) ? l : void 0,
                       isContextless: a
                   });
         if (
             null == e ||
-            (null !== (u = null === (s = e.embeddedActivityConfig) || void 0 === s ? void 0 : s.requires_age_gate) &&
-                void 0 !== u &&
+            (null != (u = null == (s = e.embeddedActivityConfig) ? void 0 : s.requires_age_gate) &&
                 u &&
                 !(await new Promise((t) => {
                     null == o || o(),
@@ -98,7 +95,7 @@ async function b(e) {
                 : await m({
                       applicationId: r,
                       channelId: null == i ? void 0 : i.id,
-                      guildId: null !== (t = null == i ? void 0 : i.getGuildId()) && void 0 !== t ? t : void 0,
+                      guildId: null != (t = null == i ? void 0 : i.getGuildId()) ? t : void 0,
                       isContextless: a
                   });
     return (
@@ -114,14 +111,14 @@ async function b(e) {
             }))
     );
 }
-async function v(e) {
-    return !!(
-        (await g({
+async function y(e) {
+    return (
+        !!(await g({
             currentEmbeddedApplication: e.currentEmbeddedApplication,
             shouldClosePopoutOnLeaveCurrentEmbeddedApplication: e.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
             onConfirmActivityLaunchChecksAlertOpen: e.onConfirmActivityLaunchChecksAlertOpen
         })) &&
-        (await E(e)) &&
-        (await b(e))
+        !!(await E(e)) &&
+        !!(await b(e))
     );
 }

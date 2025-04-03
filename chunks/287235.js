@@ -1,5 +1,5 @@
 n.d(t, {
-    JD: () => p,
+    JD: () => _,
     Wd: () => d,
     mF: () => u
 }),
@@ -26,39 +26,35 @@ async function f(e) {
     if (null == u) return;
     let d = null,
         f = null,
-        p = e.target;
-    for (; null != p; ) {
-        if (p.hasAttribute(s)) {
-            (d = p.getAttribute(s)), (f = p);
+        _ = e.target;
+    for (; null != _; ) {
+        if (_.hasAttribute(s)) {
+            (d = _.getAttribute(s)), (f = _);
             break;
         }
-        p = p.parentElement;
+        _ = _.parentElement;
     }
-    let _ = (0, i.E)({
+    let p = (0, i.E)({
         getFocusableElements: () => Array.from(u.querySelectorAll('['.concat(s, '="').concat(null != d ? d : l, '"]'))),
         getActiveElement: () => u.activeElement
     });
-    if ((null === (t = (0, o.uB)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
-        null === (n = _.getFirstFocusableElement()) || void 0 === n || n.focus();
+    if ((null == (t = (0, o.uB)(e)) ? void 0 : t.activeElement) == null || null == f) {
+        null == (n = p.getFirstFocusableElement()) || n.focus();
         return;
     }
     e.getModifierState('Shift')
-        ? null ===
-              (r = await _.getPreviousFocusableElement({
+        ? null ==
+              (r = await p.getPreviousFocusableElement({
                   wrap: !0,
                   from: f
-              })) ||
-          void 0 === r ||
-          r.focus()
-        : null ===
-              (c = await _.getNextFocusableElement({
+              })) || r.focus()
+        : null ==
+              (c = await p.getNextFocusableElement({
                   wrap: !0,
                   from: f
-              })) ||
-          void 0 === c ||
-          c.focus();
+              })) || c.focus();
 }
-function p(e) {
+function _(e) {
     r.useEffect(() => {
         if (e)
             return (

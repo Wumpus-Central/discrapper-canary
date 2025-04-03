@@ -1,7 +1,7 @@
 var r = n(954955),
     i = n(661233),
     o = 'Expected a function';
-function a(e, t, n) {
+e.exports = function (e, t, n) {
     var a = !0,
         s = !0;
     if ('function' != typeof e) throw TypeError(o);
@@ -13,5 +13,4 @@ function a(e, t, n) {
             trailing: s
         })
     );
-}
-e.exports = a;
+};

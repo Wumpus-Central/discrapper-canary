@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = '[a-zA-Z_][a-zA-Z0-9_.]*(!|\\?)?',
         r = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?',
@@ -77,7 +77,7 @@ function t(e) {
             begin: '~[A-Z](?=' + l + ')',
             contains: c.map((t) => e.inherit(t, { contains: [u(t.end)] }))
         },
-        p = {
+        _ = {
             className: 'regex',
             variants: [
                 {
@@ -100,7 +100,7 @@ function t(e) {
                 }
             ]
         },
-        _ = {
+        p = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE, o],
             variants: [
@@ -159,8 +159,8 @@ function t(e) {
             end: /\bdo\b|$|;/
         }),
         g = [
-            _,
             p,
+            _,
             f,
             d,
             e.HASH_COMMENT_MODE,
@@ -170,7 +170,7 @@ function t(e) {
             {
                 className: 'symbol',
                 begin: ':(?![\\s:])',
-                contains: [_, { begin: r }],
+                contains: [p, { begin: r }],
                 relevance: 0
             },
             {
@@ -198,5 +198,4 @@ function t(e) {
             contains: g
         }
     );
-}
-e.exports = t;
+};

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /([-a-zA-Z$._][\w$.-]*)/,
         r = {
@@ -62,5 +62,4 @@ function t(e) {
             a
         ]
     };
-}
-e.exports = t;
+};

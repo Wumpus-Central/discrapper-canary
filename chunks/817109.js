@@ -17,7 +17,7 @@ function i(e, t) {
             message: e,
             code: t
         };
-    if (null != e.body) {
+    if (null != e.body)
         if (null != e.body.message && !Array.isArray(e.body.message) && (null == e.body.code || !Array.isArray(e.body.code)))
             return {
                 message: e.body.message,
@@ -25,7 +25,7 @@ function i(e, t) {
                 retryAfter: e.body.retry_after,
                 status: e.status
             };
-        {
+        else {
             let t = e.body,
                 n = null != t ? Object.values(t)[0] : null;
             return {
@@ -34,7 +34,6 @@ function i(e, t) {
                 status: e.status
             };
         }
-    }
     return {};
 }
 n.d(t, { H: () => o }), n(411104);

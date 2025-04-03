@@ -12,7 +12,7 @@ var r = n(615287),
     u = n(626135),
     d = n(367907),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,19 +36,23 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
 function h() {
-    let e, t, n, r, o;
-    let a = s.Z.getGoLiveSource();
+    let e,
+        t,
+        n,
+        r,
+        o,
+        a = s.Z.getGoLiveSource();
     if (null != a && ((e = a.quality.resolution), (t = a.quality.frameRate), null != a.desktopSource)) {
         var l, c;
         n = a.desktopSource.soundshareSession;
         let e = null != a.desktopSource.sourcePid ? i.ZP.getGameForPID(a.desktopSource.sourcePid) : null;
-        (r = null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : null), (o = null !== (c = null == e ? void 0 : e.id) && void 0 !== c ? c : null);
+        (r = null != (l = null == e ? void 0 : e.name) ? l : null), (o = null != (c = null == e ? void 0 : e.id) ? c : null);
     }
     return {
         video_input_resolution: e,
@@ -61,16 +65,16 @@ function h() {
 function m(e, t) {
     var n;
     let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        p = __OVERLAY__ ? c.Z.getGame() : (0, a.pL)(),
-        h = i.ZP.getRunningGames().find((e) => e.name === (null == p ? void 0 : p.name)),
-        m = null !== (n = o.default.getRenderMethod(null == h ? void 0 : h.pid)) && void 0 !== n ? n : r.gl.Disabled;
+        _ = __OVERLAY__ ? c.Z.getGame() : (0, a.pL)(),
+        h = i.ZP.getRunningGames().find((e) => e.name === (null == _ ? void 0 : _.name)),
+        m = null != (n = o.default.getRenderMethod(null == h ? void 0 : h.pid)) ? n : null;
     switch (
-        ((t = _(
+        ((t = p(
             {},
             {
-                overlay_game_name: null != p ? p.name : 'Unknown Game',
-                overlay_app_id: null != p ? p.id : null,
-                overlay_render_method: r.gl[m],
+                overlay_game_name: null != _ ? _.name : 'Unknown Game',
+                overlay_app_id: null != _ ? _.id : null,
+                overlay_render_method: null != m ? r.gl[m] : null,
                 media_session_id: l.Z.getMediaSessionId()
             },
             t

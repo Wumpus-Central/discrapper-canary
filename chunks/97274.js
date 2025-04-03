@@ -9,7 +9,7 @@ var t = '[0-9](_*[0-9])*',
 function o(e, t, n) {
     return -1 === n ? '' : e.replace(t, (r) => o(e, t, n - 1));
 }
-function a(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = '[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*',
         r = n + o('(?:<' + n + '~~~(?:\\s*,\\s*' + n + '~~~)*>)?', /~~~/g, 2),
@@ -125,5 +125,4 @@ function a(e) {
             s
         ]
     };
-}
-e.exports = a;
+};

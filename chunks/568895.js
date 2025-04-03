@@ -4,7 +4,8 @@ var r = !0,
 function o(e, t) {
     if (!e) {
         if (r) throw Error(i);
-        var n = 'function' == typeof t ? t() : t;
-        throw Error(n ? ''.concat(i, ': ').concat(n) : i);
+        var n = 'function' == typeof t ? t() : t,
+            o = n ? ''.concat(i, ': ').concat(n) : i;
+        throw Error(o);
     }
 }

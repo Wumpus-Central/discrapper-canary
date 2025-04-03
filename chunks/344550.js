@@ -1,5 +1,4 @@
 var r = n(706057);
-function i(e) {
+e.exports = function (e) {
     return e instanceof r;
-}
-e.exports = i;
+};

@@ -11,7 +11,7 @@ var r,
     f = n(1561),
     _ = n(993365),
     p = n(981631),
-    h = n(412487);
+    h = n(619552);
 function m(e, t, n) {
     return (
         t in e
@@ -64,18 +64,18 @@ function b(e, t) {
         e
     );
 }
-function v(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function y(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -116,22 +116,22 @@ function S(e) {
 }
 let T = a.forwardRef(function (e, t) {
     var { children: n, id: r } = e,
-        i = v(e, ['children', 'id']);
+        i = y(e, ['children', 'id']);
     return (0, o.jsx)(
         'div',
         b(g({}, i), {
             ref: t,
             role: 'tabpanel',
-            id: A(r),
+            id: N(r),
             tabIndex: -1,
             children: n
         })
     );
 });
-function A(e) {
+function N(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
-function N(e, t) {
+function A(e, t) {
     if (null == e) return;
     let n = {};
     return 'Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, u.wK)(e, 0.1)), (n.color = e)), n;
@@ -141,32 +141,34 @@ class C extends (r = a.Component) {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
             { hover: i, active: o } = this.state;
         if (null != e) {
-            if ('side' === r) return (null != t && n === t) || o ? N(e, 'Selected') : i ? N(e, 'Hover') : N(e);
+            if ('side' === r) return (null != t && n === t) || o ? A(e, 'Selected') : i ? A(e, 'Hover') : A(e);
             if ('top' === r)
-                return n === t
-                    ? {
-                          borderColor: e,
-                          color: e
-                      }
-                    : i
-                      ? {
-                            borderColor: (0, u.wK)(e, 0.1),
-                            color: (0, u.wK)(e, 0.6)
-                        }
-                      : {
-                            borderColor: 'transparent',
-                            color: (0, u.wK)(e, 0.4)
-                        };
+                if (n === t)
+                    return {
+                        borderColor: e,
+                        color: e
+                    };
+                else if (i)
+                    return {
+                        borderColor: (0, u.wK)(e, 0.1),
+                        color: (0, u.wK)(e, 0.6)
+                    };
+                else
+                    return {
+                        borderColor: 'transparent',
+                        color: (0, u.wK)(e, 0.4)
+                    };
             if ('top-pill' === r)
-                return n === t
-                    ? {
-                          backgroundColor: (0, u.wK)(e, 0.2),
-                          color: e
-                      }
-                    : {
-                          backgroundColor: e,
-                          color: d.Z.unsafe_rawColors.WHITE_500.css
-                      };
+                if (n === t)
+                    return {
+                        backgroundColor: (0, u.wK)(e, 0.2),
+                        color: e
+                    };
+                else
+                    return {
+                        backgroundColor: e,
+                        color: d.Z.unsafe_rawColors.WHITE_500.css
+                    };
         }
     }
     render() {
@@ -184,7 +186,7 @@ class C extends (r = a.Component) {
             style: this.getStyle(),
             role: 'tab',
             'aria-selected': p,
-            'aria-controls': p ? A(''.concat(n)) : void 0,
+            'aria-controls': p ? N(''.concat(n)) : void 0,
             'aria-disabled': a,
             tabIndex: p ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,
@@ -206,7 +208,7 @@ class C extends (r = a.Component) {
             }),
             m(this, 'handleClick', (e) => {
                 let { disabled: t, onClick: n, id: r, onItemSelect: i } = this.props;
-                !t && (null != n ? n(e) : null != i && i(r));
+                t || (null != n ? n(e) : null != i && i(r));
             }),
             m(this, 'handleMouseDown', () => {
                 let { color: e } = this.props;
@@ -258,7 +260,7 @@ class R extends (i = a.Component) {
                     },
                     getActiveElement: () => {
                         var e;
-                        return null === (e = this.tabBarRef.current) || void 0 === e ? void 0 : e.ownerDocument.activeElement;
+                        return null == (e = this.tabBarRef.current) ? void 0 : e.ownerDocument.activeElement;
                     }
                 })
             ),

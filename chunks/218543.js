@@ -226,7 +226,7 @@ class m extends h {
     }
     recordMessageRender(e, t, r, i) {
         let { default: o } = n(709054);
-        if (!this.renderLatestMessages.hasData()) {
+        if (!this.renderLatestMessages.hasData())
             if ((this.renderMessages.record(), t.length > 0 && this.renderMessagesWithCache.record(), r)) {
                 if ((this.renderLatestMessages.record(), null == this.cachedChannelId)) {
                     this.messageCacheMissingReason = 'no-cache';
@@ -251,12 +251,11 @@ class m extends h {
                     this.messageCacheAgeSeconds = Math.floor((o.extractTimestamp(r) - o.extractTimestamp(n)) / 1000);
                     let s = t.filter((e) => {
                         var t;
-                        return null === (t = this.cachedMessageIds) || void 0 === t ? void 0 : t.includes(e);
+                        return null == (t = this.cachedMessageIds) ? void 0 : t.includes(e);
                     }).length;
-                    (this.messageCacheCount = null !== (a = this.cachedChannelCounts.get(e)) && void 0 !== a ? a : null), (this.messageCacheHavingCount = s), (this.messageCacheMissingCount = t.length - s), (this.messageRenderFullCount = t.length), (this.messageRenderCachedCount = this.cachedMessageIds.length), (this.messageRenderHasMoreAfter = i);
+                    (this.messageCacheCount = null != (a = this.cachedChannelCounts.get(e)) ? a : null), (this.messageCacheHavingCount = s), (this.messageCacheMissingCount = t.length - s), (this.messageRenderFullCount = t.length), (this.messageRenderCachedCount = this.cachedMessageIds.length), (this.messageRenderHasMoreAfter = i);
                 }
             } else (null == this.cachedChannelId || e === this.cachedChannelId) && ((this.cachedChannelId = e), (this.cachedMessageIds = t), t.length > 0 && (this.messageCacheMissingReason = null));
-        }
     }
     getStartTime(e) {
         return this.extraProperties.headless_task_ran && null != this.firstAppActiveTime ? this.firstAppActiveTime : null == e || e <= 0 ? this.loadIndex.start : e;
@@ -320,7 +319,7 @@ class m extends h {
                 .filter((e) => e.log.startsWith('Require '))
                 .map((e) => {
                     var t;
-                    return null !== (t = e.delta) && void 0 !== t ? t : 0;
+                    return null != (t = e.delta) ? t : 0;
                 })
                 .sum();
         return l(a({}, this.extraProperties), {
@@ -436,12 +435,12 @@ class m extends h {
             message_render_cached_count: this.messageRenderCachedCount,
             message_render_has_more_after: this.messageRenderHasMoreAfter,
             duration_major_js_imports: this.loadImports.end - this.loadIndex.start + f,
-            cache_num_guilds: null === (t = this.cacheInfo) || void 0 === t ? void 0 : t.guilds,
-            cache_num_private_channels: null === (i = this.cacheInfo) || void 0 === i ? void 0 : i.privateChannels,
-            cache_num_basic_channels: null === (o = this.cacheInfo) || void 0 === o ? void 0 : o.basicChannels,
-            cache_num_basic_channels_stale: null === (s = this.cacheInfo) || void 0 === s ? void 0 : s.basicChannelsStale,
-            cache_num_full_channels: null === (c = this.cacheInfo) || void 0 === c ? void 0 : c.fullChannels,
-            cache_num_full_channel_guilds: null === (u = this.cacheInfo) || void 0 === u ? void 0 : u.fullChannelGuilds,
+            cache_num_guilds: null == (t = this.cacheInfo) ? void 0 : t.guilds,
+            cache_num_private_channels: null == (i = this.cacheInfo) ? void 0 : i.privateChannels,
+            cache_num_basic_channels: null == (o = this.cacheInfo) ? void 0 : o.basicChannels,
+            cache_num_basic_channels_stale: null == (s = this.cacheInfo) ? void 0 : s.basicChannelsStale,
+            cache_num_full_channels: null == (c = this.cacheInfo) ? void 0 : c.fullChannels,
+            cache_num_full_channel_guilds: null == (u = this.cacheInfo) ? void 0 : u.fullChannelGuilds,
             num_imports_at_load_index_end: this.loadIndex.endNumImports,
             num_imports_at_init_end: this.init.endNumImports,
             num_imports_at_load_mini_cache_end: this.loadMiniCache.endNumImports,

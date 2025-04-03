@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'GLSL',
         keywords: {
@@ -20,5 +20,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

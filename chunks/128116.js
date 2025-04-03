@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'keyword',
             begin: '\\$(f[asn]|t|vp[rtd]|children)'
@@ -47,5 +47,4 @@ function t(e) {
         },
         contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, r, o, i, t, a, s]
     };
-}
-e.exports = t;
+};

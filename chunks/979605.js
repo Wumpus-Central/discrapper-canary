@@ -1,7 +1,7 @@
 var t = Object.prototype.hasOwnProperty;
 function n(e) {
     if (!(this instanceof n)) throw TypeError("Constructor PseudoMap requires 'new'");
-    if ((this.clear(), e)) {
+    if ((this.clear(), e))
         if (e instanceof n || ('function' == typeof Map && e instanceof Map))
             e.forEach(function (e, t) {
                 this.set(t, e);
@@ -11,7 +11,6 @@ function n(e) {
                 this.set(e[0], e[1]);
             }, this);
         else throw TypeError('invalid argument');
-    }
 }
 function r(e, t) {
     return e === t || (e != e && t != t);

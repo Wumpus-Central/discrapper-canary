@@ -5,9 +5,8 @@ n.d(t, {
 var r = n(544891),
     i = n(570140);
 function o() {
-    var e;
     return r.tn.get({
-        url: ''.concat(((e = 'https:'), 'https:')).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT),
+        url: ''.concat('https:').concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT),
         rejectWithError: !1
     });
 }

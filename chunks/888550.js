@@ -28,68 +28,67 @@ function a(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var s = n(706057),
-    l = (function (e) {
-        function t(e) {
-            i(this, t);
-            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (n._transforms = e), n;
-        }
-        return (
-            a(t, e),
-            r(t, [
-                {
-                    key: '__getValue',
-                    value: function () {
-                        return this._transforms.map(function (e) {
-                            var t = {};
-                            for (var n in e) {
-                                var r = e[n];
-                                r instanceof s ? (t[n] = r.__getValue()) : (t[n] = r);
-                            }
-                            return t;
-                        });
-                    }
-                },
-                {
-                    key: '__getAnimatedValue',
-                    value: function () {
-                        return this._transforms.map(function (e) {
-                            var t = {};
-                            for (var n in e) {
-                                var r = e[n];
-                                r instanceof s ? (t[n] = r.__getAnimatedValue()) : (t[n] = r);
-                            }
-                            return t;
-                        });
-                    }
-                },
-                {
-                    key: '__attach',
-                    value: function () {
-                        var e = this;
-                        this._transforms.forEach(function (t) {
-                            for (var n in t) {
-                                var r = t[n];
-                                r instanceof s && r.__addChild(e);
-                            }
-                        });
-                    }
-                },
-                {
-                    key: '__detach',
-                    value: function () {
-                        var e = this;
-                        this._transforms.forEach(function (t) {
-                            for (var n in t) {
-                                var r = t[n];
-                                r instanceof s && r.__removeChild(e);
-                            }
-                        });
-                    }
+var s = n(706057);
+e.exports = (function (e) {
+    function t(e) {
+        i(this, t);
+        var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return (n._transforms = e), n;
+    }
+    return (
+        a(t, e),
+        r(t, [
+            {
+                key: '__getValue',
+                value: function () {
+                    return this._transforms.map(function (e) {
+                        var t = {};
+                        for (var n in e) {
+                            var r = e[n];
+                            r instanceof s ? (t[n] = r.__getValue()) : (t[n] = r);
+                        }
+                        return t;
+                    });
                 }
-            ]),
-            t
-        );
-    })(n(438648));
-e.exports = l;
+            },
+            {
+                key: '__getAnimatedValue',
+                value: function () {
+                    return this._transforms.map(function (e) {
+                        var t = {};
+                        for (var n in e) {
+                            var r = e[n];
+                            r instanceof s ? (t[n] = r.__getAnimatedValue()) : (t[n] = r);
+                        }
+                        return t;
+                    });
+                }
+            },
+            {
+                key: '__attach',
+                value: function () {
+                    var e = this;
+                    this._transforms.forEach(function (t) {
+                        for (var n in t) {
+                            var r = t[n];
+                            r instanceof s && r.__addChild(e);
+                        }
+                    });
+                }
+            },
+            {
+                key: '__detach',
+                value: function () {
+                    var e = this;
+                    this._transforms.forEach(function (t) {
+                        for (var n in t) {
+                            var r = t[n];
+                            r instanceof s && r.__removeChild(e);
+                        }
+                    });
+                }
+            }
+        ]),
+        t
+    );
+})(n(438648));

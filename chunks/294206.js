@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(309006),
     E = n(695346),
     b = n(594174),
-    v = n(208049),
-    y = n(763296),
+    y = n(208049),
+    v = n(763296),
     O = n(697426),
     I = n(242291),
     S = n(830253),
@@ -29,7 +29,7 @@ var r = n(200651),
     N = n(675654),
     A = n(509571),
     C = n(388032),
-    R = n(335886);
+    R = n(419718);
 function P(e, t, n) {
     return (
         t in e
@@ -147,10 +147,10 @@ function V(e) {
 }
 function Z(e) {
     let { sound: t, refreshEnabled: n, disabled: o = !1 } = e,
-        s = (0, l.e7)([y.Z], () => y.Z.isFavoriteSound(t.soundId), [t.soundId]),
+        s = (0, l.e7)([v.Z], () => v.Z.isFavoriteSound(t.soundId), [t.soundId]),
         c = i.useCallback(
             (e) => {
-                e.stopPropagation(), e.currentTarget.blur(), s ? (0, v.hs)(t.soundId) : (0, v.TB)(t.soundId);
+                e.stopPropagation(), e.currentTarget.blur(), s ? (0, y.hs)(t.soundId) : (0, y.TB)(t.soundId);
             },
             [s, t.soundId]
         );
@@ -193,8 +193,8 @@ let W = i.forwardRef(function (e, t) {
     var n,
         o,
         u,
-        v,
         y,
+        v,
         P,
         D,
         M,
@@ -204,8 +204,8 @@ let W = i.forwardRef(function (e, t) {
         eh = x(e, ['sound', 'channel', 'containerClassName', 'className', 'focused', 'forceSecondaryActions', 'interactive', 'enableSecondaryActions', 'suppressPlaySound', 'onMouseEnter', 'onSelectItem', 'analyticsLocations', 'buttonOverlay', 'showLockForDisabledSound', 'inNitroLockedSection', 'refreshEnabled', 'isAnimated', 'isPlayingSoundOverride', 'isSoundmoji', 'soundmojiVisualEffectRef', 'tooltipOverride', 'tooltipClassName', 'tooltipContentClassName']);
     let { name: em, emojiId: eg, emojiName: eE } = Y,
         eb = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
-        ev = (0, T.z)(Y, null == K ? void 0 : K.guild_id),
-        { playSoundboardSound: ey, previewSound: eO, isPlayingSound: eI, isPreviewingSound: eS } = (0, S.Z)(Y, null !== (y = null == K ? void 0 : K.id) && void 0 !== y ? y : null, null !== (P = eu ? E.AY.getSetting() : null === (n = E.kU.getSetting()) || void 0 === n ? void 0 : n.volume) && void 0 !== P ? P : 100, !eu && (null == K ? void 0 : K.isVocal()) ? A.w.VOICE : A.w.DEFAULT),
+        ey = (0, T.z)(Y, null == K ? void 0 : K.guild_id),
+        { playSoundboardSound: ev, previewSound: eO, isPlayingSound: eI, isPreviewingSound: eS } = (0, S.Z)(Y, null != (v = null == K ? void 0 : K.id) ? v : null, null != (P = eu ? E.AY.getSetting() : null == (n = E.kU.getSetting()) ? void 0 : n.volume) ? P : 100, !eu && (null == K ? void 0 : K.isVocal()) ? A.w.VOICE : A.w.DEFAULT),
         { createMultipleConfettiAt: eT } = i.useContext(p.h),
         eN = i.useRef(null),
         eA = H(Y.soundId, eN.current),
@@ -219,19 +219,16 @@ let W = i.forwardRef(function (e, t) {
         eM = !(0, I.Nq)(eb, Y, K) && !eu,
         ek = X || ($ && !eM),
         ej = i.useRef(null),
-        eU = (null !== (D = null === (o = ej.current) || void 0 === o ? void 0 : o.scrollHeight) && void 0 !== D ? D : 0) > (null !== (M = null === (u = ej.current) || void 0 === u ? void 0 : u.offsetHeight) && void 0 !== M ? M : 0),
-        eG = null !== (F = h.Wq.useStore().bottomPosition) && void 0 !== F ? F : 0,
-        eB = (null !== (W = null === (v = eN.current) || void 0 === v ? void 0 : v.getBoundingClientRect().bottom) && void 0 !== W ? W : 0) + 50 > eG ? 'top' : 'bottom',
+        eU = (null != (D = null == (o = ej.current) ? void 0 : o.scrollHeight) ? D : 0) > (null != (M = null == (u = ej.current) ? void 0 : u.offsetHeight) ? M : 0),
+        eG = null != (F = h.Wq.useStore().bottomPosition) ? F : 0,
+        eB = (null != (W = null == (y = eN.current) ? void 0 : y.getBoundingClientRect().bottom) ? W : 0) + 50 > eG ? 'top' : 'bottom',
         [eF, eV] = i.useState(!1),
         eZ = eM && eo;
     function eH() {
-        ee || ey(er);
+        ee || ev(er);
     }
     function eW(e) {
-        if ((ew && !eC && ((eR.current = Math.min(eR.current + G, U)), Math.random() < eR.current && eT(eA.x, eA.y, void 0, void 0, { sprite: N.vv })), null != en)) {
-            en(e);
-            return;
-        }
+        if ((ew && !eC && ((eR.current = Math.min(eR.current + G, U)), Math.random() < eR.current && eT(eA.x, eA.y, void 0, void 0, { sprite: N.vv })), null != en)) return void en(e);
         eH();
     }
     let eY = V({
@@ -402,12 +399,12 @@ let W = i.forwardRef(function (e, t) {
                             {
                                 onClick: (t) => {
                                     var n;
-                                    null == e || null === (n = e.onClick) || void 0 === n || n.call(e), null == eW || eW(t);
+                                    null == e || null == (n = e.onClick) || n.call(e), null == eW || eW(t);
                                 },
-                                onContextMenu: $ && !eM ? ev : void 0,
+                                onContextMenu: $ && !eM ? ey : void 0,
                                 onMouseOver: () => {
                                     var t;
-                                    return null != ef || (eU && es && !0 !== eu) ? (null === (t = e.onMouseEnter) || void 0 === t ? void 0 : t.call(e)) : null;
+                                    return null != ef || (eU && es && !0 !== eu) ? (null == (t = e.onMouseEnter) ? void 0 : t.call(e)) : null;
                                 },
                                 children: [
                                     (0, r.jsxs)('div', {

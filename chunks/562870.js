@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'OCaml',
         aliases: ['ml'],
@@ -46,5 +46,4 @@ function t(e) {
             { begin: /->/ }
         ]
     };
-}
-e.exports = t;
+};

@@ -50,10 +50,7 @@ class _ extends o.Z {
                     if (null != d && 0 >= s.default.compare(o, d)) return;
                     let p = await i.Z.fetchChangelog(o, a.default.locale);
                     if (null == p) return;
-                    if (null == _ || null == l.Z.lastSeenChangelogDate()) {
-                        i.Z.markChangelogAsSeen(o, p.date);
-                        return;
-                    }
+                    if (null == _ || null == l.Z.lastSeenChangelogDate()) return void i.Z.markChangelogAsSeen(o, p.date);
                     if (l.Z.isLocked()) return;
                     new Date(p.date) > new Date(_) && (0, u.Z)();
                 } finally {

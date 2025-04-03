@@ -12,20 +12,20 @@ function f(e, t) {
     if (null == e || null == t) throw Error('cmd and name required');
     return ''.concat(e, ':').concat(t);
 }
-let p = a.parse(location.search.slice(1)),
-    _ = parseInt(null != p.rpc && '' !== p.rpc ? p.rpc : u.V6Z, 10),
+let _ = a.parse(location.search.slice(1)),
+    p = parseInt(null != _.rpc && '' !== _.rpc ? _.rpc : u.V6Z, 10),
     h = null;
 class m extends r.EventEmitter {
     get port() {
-        return _;
+        return p;
     }
     get connected() {
         return null != h && h.readyState === WebSocket.OPEN;
     }
     connect() {
         if (null == h) {
-            if (_ > d) {
-                (_ = u.V6Z), this.emit('disconnected');
+            if (p > d) {
+                (p = u.V6Z), this.emit('disconnected');
                 return;
             }
             try {
@@ -46,16 +46,12 @@ class m extends r.EventEmitter {
                     }
                     let { cmd: n, evt: r, nonce: i, data: o } = t;
                     if (n === u.Etm.DISPATCH) {
-                        if (r === u.zMe.READY) {
-                            this.emit('connected');
-                            return;
-                        }
+                        if (r === u.zMe.READY) return void this.emit('connected');
                         if (r === u.zMe.ERROR) {
                             this.emit('error', new c.Z({ errorCode: o.code }, o.message)), this.disconnect();
                             return;
                         }
-                        this.emit(f(n, r), o);
-                        return;
+                        return void this.emit(f(n, r), o);
                     }
                     let a = null;
                     r === u.zMe.ERROR && ((a = new c.Z({ errorCode: o.code }, o.message)), (o = null)), this.emit(f(n, i), a, o);
@@ -65,7 +61,7 @@ class m extends r.EventEmitter {
     }
     disconnect(e) {
         if (null != e && 'code' in e && [u.$VG.CLOSE_ABNORMAL, u.$VG.INVALID_CLIENTID].includes(e.code)) {
-            _++, (h = null), this.connect();
+            p++, (h = null), this.connect();
             return;
         }
         null != h && (this.emit('disconnected'), h.close(), (h = null));

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Node REPL',
         contains: [
@@ -15,5 +15,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

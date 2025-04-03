@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => E,
-    p: () => m
+    p: () => g
 }),
     n(47120),
     n(411104),
@@ -30,7 +30,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function g(e) {
     }
     return e;
 }
-var m = (function (e) {
+var g = (function (e) {
     return (e[(e.AUDIO_BITRATE = 0)] = 'AUDIO_BITRATE'), (e[(e.VIDEO_RESOLUTION_SCALE = 1)] = 'VIDEO_RESOLUTION_SCALE'), (e[(e.VIDEO_BITRATE = 2)] = 'VIDEO_BITRATE'), (e[(e.VIDEO_FRAMERATE = 3)] = 'VIDEO_FRAMERATE'), e;
 })({});
 class E extends s.Z {
@@ -121,8 +121,8 @@ class E extends s.Z {
         for (let e of r.getTracks()) {
             var a, s;
             let t = e.getConstraints(),
-                n = null === (a = t.width) || void 0 === a ? void 0 : a.max,
-                r = null === (s = t.height) || void 0 === s ? void 0 : s.max;
+                n = null == (a = t.width) ? void 0 : a.max,
+                r = null == (s = t.height) ? void 0 : s.max;
             (n !== i || r !== o) && (this.logger.info('BaseWebRTCConnection.updateVideoQuality: old: '.concat(n, ' x ').concat(r, ', new: ').concat(i, ' x ').concat(o)), (t.width = { max: i }), (t.height = { max: o }), e.applyConstraints(t));
         }
     }
@@ -151,11 +151,8 @@ class E extends s.Z {
         return new Promise((t, n) => {
             for (let t of this.videoStreamParameters) {
                 let r = e.findIndex((e) => e.rid === t.rid);
-                if (-1 === r) {
-                    n(Error('Invalid rid'));
-                    return;
-                }
-                a()(this.videoStreamParameters[r], e[r]) || (this.videoStreamParameters[r] = g({}, e[r]));
+                if (-1 === r) return void n(Error('Invalid rid'));
+                a()(this.videoStreamParameters[r], e[r]) || (this.videoStreamParameters[r] = m({}, e[r]));
             }
             t();
         });
@@ -182,13 +179,10 @@ class E extends s.Z {
     }
     hasDesktopSource() {
         var e;
-        return null === (e = this.input) || void 0 === e ? void 0 : e.hasDesktopSource();
+        return null == (e = this.input) ? void 0 : e.hasDesktopSource();
     }
     createOutput(e, t) {
-        if (t.discordIsTearingDown) {
-            this.logger.info('BaseWebRTCConnection.createOutput: ignoring track being torn down: '.concat(t.id));
-            return;
-        }
+        if (t.discordIsTearingDown) return void this.logger.info('BaseWebRTCConnection.createOutput: ignoring track being torn down: '.concat(t.id));
         let n = this.outputs[e];
         if (null == n) {
             var r;
@@ -197,10 +191,10 @@ class E extends s.Z {
                 n.on(u.X.Speaking, (t) => this.emit(l.Sh.Speaking, e, t, this.audioSSRC)),
                 n.on(u.X.Video, (t) => {
                     var n;
-                    return this.emitUnsafe(l.Sh.Video, e, t, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (n = this.videoStreamParameters[0].rtxSsrc) && void 0 !== n ? n : 0, this.videoStreamParameters);
+                    return this.emitUnsafe(l.Sh.Video, e, t, this.audioSSRC, this.videoStreamParameters[0].ssrc, null != (n = this.videoStreamParameters[0].rtxSsrc) ? n : 0, this.videoStreamParameters);
                 }),
                 n.on(u.X.InteractionRequired, (e) => this.emit(l.Sh.InteractionRequired, e)),
-                n.setSpeakingFlags(null !== (r = this.localSpeakingFlags[e]) && void 0 !== r ? r : _.Dg.NONE),
+                n.setSpeakingFlags(null != (r = this.localSpeakingFlags[e]) ? r : _.Dg.NONE),
                 n.setSinkId(this.sinkId),
                 (this.outputs[e] = n);
         }
@@ -282,7 +276,7 @@ class E extends s.Z {
             h(this, 'handleVideoPermission', (e) => this.emit(l.Sh.VideoPermission, e)),
             h(this, 'handleVideo', (e) => {
                 var t;
-                return this.emit(l.Sh.Video, this.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (t = this.videoStreamParameters[0].rtxSsrc) && void 0 !== t ? t : 0, this.videoStreamParameters);
+                return this.emit(l.Sh.Video, this.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null != (t = this.videoStreamParameters[0].rtxSsrc) ? t : 0, this.videoStreamParameters);
             }),
             h(this, 'handleDesktopSourceEnd', () => this.emit(l.Sh.DesktopSourceEnd)),
             h(this, 'handleStream', (e) => this.setStream(e)),
@@ -309,10 +303,7 @@ class E extends s.Z {
                 this.interacted || 'running' !== this.input.getAudioState() || (this.interact(), this.emit(l.Sh.InteractionRequired, !1));
             }),
             h(this, 'handleStats', (e) => {
-                if (this.connectionState === _.$j.DISCONNECTED) {
-                    this.off(l.Sh.Stats, this.handleStats);
-                    return;
-                }
+                if (this.connectionState === _.$j.DISCONNECTED) return void this.off(l.Sh.Stats, this.handleStats);
                 null != e && (this.webrtcStats.update(e), (this.stats = e), Date.now() - this.lastPingTime >= _.$B && (this.emit(l.Sh.Ping, e.transport.ping), (this.lastPingTime = Date.now())));
             }),
             (this.input = new c.Z(n)),

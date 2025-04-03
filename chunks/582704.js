@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Tagger Script',
         contains: [
@@ -34,5 +34,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

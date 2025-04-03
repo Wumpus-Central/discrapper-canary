@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = "[a-z'][a-zA-Z0-9_']*",
         n = '(' + t + ':' + t + '|' + t + ')',
         r = {
@@ -64,11 +64,11 @@ function t(e) {
             scope: 'string',
             match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/
         },
-        p = {
+        _ = {
             scope: 'string',
             match: /"""("*)(?!")[\s\S]*?"""\1/
         },
-        _ = {
+        p = {
             scope: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -120,8 +120,8 @@ function t(e) {
             end: 'end',
             keywords: r
         };
-    h.contains = [i, a, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, s, _, p, e.QUOTE_STRING_MODE, o, l, c, u, d, f];
-    let m = [i, a, h, s, _, p, e.QUOTE_STRING_MODE, o, l, c, u, d, f];
+    h.contains = [i, a, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, s, p, _, e.QUOTE_STRING_MODE, o, l, c, u, d, f];
+    let m = [i, a, h, s, p, _, e.QUOTE_STRING_MODE, o, l, c, u, d, f];
     (s.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
     let g = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-moduledoc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec', '-on_load', '-nifs'],
         E = {
@@ -160,11 +160,11 @@ function t(e) {
                     $pattern: '-' + e.IDENT_RE,
                     keyword: g.map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [E, _, p, e.QUOTE_STRING_MODE]
+                contains: [E, p, _, e.QUOTE_STRING_MODE]
             },
             o,
-            _,
             p,
+            _,
             e.QUOTE_STRING_MODE,
             d,
             c,
@@ -174,5 +174,4 @@ function t(e) {
             { begin: /\.$/ }
         ]
     };
-}
-e.exports = t;
+};

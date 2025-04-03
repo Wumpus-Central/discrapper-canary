@@ -1,8 +1,8 @@
 a.d(e, { s: () => f });
 var r = a(394798),
     n = a(101284),
-    o = a(370336),
-    _ = a(622916),
+    _ = a(370336),
+    o = a(622916),
     i = a(263449),
     c = a(255768),
     s = a(380132),
@@ -63,10 +63,10 @@ class f {
         return (this._name = t), this;
     }
     end(t) {
-        !this._endTime && ((this._endTime = (0, u.$k)(t)), (0, R.w)(this), this._onSpanEnded());
+        this._endTime || ((this._endTime = (0, u.$k)(t)), (0, R.w)(this), this._onSpanEnded());
     }
     getSpanJSON() {
-        return (0, o.Jr)({
+        return (0, _.Jr)({
             data: this._attributes,
             description: this._name,
             op: this._attributes[l.$J],
@@ -89,13 +89,13 @@ class f {
         return !this._endTime && !!this._sampled;
     }
     addEvent(t, e, a) {
-        c.X && _.kg.log('[Tracing] Adding an event to span:', t);
+        c.X && o.kg.log('[Tracing] Adding an event to span:', t);
         let r = p(e) ? e : a || (0, n.ph)(),
-            o = p(e) ? {} : e || {},
+            _ = p(e) ? {} : e || {},
             i = {
                 name: t,
                 time: (0, u.$k)(r),
-                attributes: o
+                attributes: _
             };
         return this._events.push(i), this;
     }
@@ -105,35 +105,30 @@ class f {
     _onSpanEnded() {
         let t = (0, i.s3)();
         if ((t && t.emit('spanEnd', this), !(this._isStandaloneSpan || this === (0, u.Gx)(this)))) return;
-        if (this._isStandaloneSpan) {
-            this._sampled
+        if (this._isStandaloneSpan)
+            return void (this._sampled
                 ? (function (t) {
                       let e = (0, i.s3)();
                       if (!e) return;
                       let a = t[1];
-                      if (!a || 0 === a.length) {
-                          e.recordDroppedEvent('before_send', 'span');
-                          return;
-                      }
+                      if (!a || 0 === a.length) return e.recordDroppedEvent('before_send', 'span');
                       let r = e.getTransport();
                       r &&
                           r.send(t).then(null, (t) => {
-                              c.X && _.kg.error('Error while sending span:', t);
+                              c.X && o.kg.error('Error while sending span:', t);
                           });
                   })((0, s.uE)([this], t))
-                : (c.X && _.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), t && t.recordDroppedEvent('sample_rate', 'span'));
-            return;
-        }
+                : (c.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), t && t.recordDroppedEvent('sample_rate', 'span')));
         let e = this._convertSpanToTransaction();
         e && ((0, A.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
     }
     _convertSpanToTransaction() {
-        if (!T((0, u.XU)(this))) return;
-        this._name || (c.X && _.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
+        if (!N((0, u.XU)(this))) return;
+        this._name || (c.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
         let { scope: t, isolationScope: e } = (0, A.I1)(this),
             a = (t || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
-            c.X && _.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), a && a.recordDroppedEvent('sample_rate', 'transaction');
+            c.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), a && a.recordDroppedEvent('sample_rate', 'transaction');
             return;
         }
         let r = (0, u.Dp)(this)
@@ -142,7 +137,7 @@ class f {
                     return t !== this && !((e = t) instanceof f && e.isStandaloneSpan());
                 })
                 .map((t) => (0, u.XU)(t))
-                .filter(T),
+                .filter(N),
             n = this._attributes[l.Zj],
             s = {
                 contexts: { trace: (0, u.HR)(this) },
@@ -154,18 +149,18 @@ class f {
                 sdkProcessingMetadata: {
                     capturedSpanScope: t,
                     capturedSpanIsolationScope: e,
-                    ...(0, o.Jr)({ dynamicSamplingContext: (0, I.jC)(this) })
+                    ...(0, _.Jr)({ dynamicSamplingContext: (0, I.jC)(this) })
                 },
                 _metrics_summary: (0, E.y)(this),
                 ...(n && { transaction_info: { source: n } })
             },
             R = (0, d.l)(this._events);
-        return R && Object.keys(R).length && (c.X && _.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (s.measurements = R)), s;
+        return R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (s.measurements = R)), s;
     }
 }
 function p(t) {
     return (t && 'number' == typeof t) || t instanceof Date || Array.isArray(t);
 }
-function T(t) {
+function N(t) {
     return !!t.start_timestamp && !!t.timestamp && !!t.span_id && !!t.trace_id;
 }

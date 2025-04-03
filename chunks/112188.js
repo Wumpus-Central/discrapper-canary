@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = '[A-Za-z_][0-9A-Za-z_]*',
         r = {
@@ -118,5 +118,4 @@ function t(e) {
         ],
         illegal: /#(?!!)/
     };
-}
-e.exports = t;
+};

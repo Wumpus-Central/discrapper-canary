@@ -16,8 +16,8 @@ function p() {
 async function h() {
     _.verbose('Fetching blocked domain list');
     try {
-        let e;
-        let t = parseInt((await i.tn.get(u)).text),
+        let e,
+            t = parseInt((await i.tn.get(u)).text),
             n = l.Z.getCurrentRevision();
         if ((_.verbose('Server revision: '.concat(t, ', Client revision: ').concat(n)), null === n || n !== t)) {
             try {
@@ -35,10 +35,7 @@ async function h() {
                         rejectWithError: !1
                     })
                 ).body;
-                if (0 === o.ADDED.length && 0 === o.REMOVED.length) {
-                    _.verbose('No changes to blocked domains list.');
-                    return;
-                }
+                if (0 === o.ADDED.length && 0 === o.REMOVED.length) return void _.verbose('No changes to blocked domains list.');
                 _.verbose('Retrieved delta, domains added: '.concat(o.ADDED.length, ', domains removed: ').concat(o.REMOVED.length));
                 let a = await r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => l.Z.getBlockedDomainList());
                 if (null === a) throw Error('Blocked domain list is null');
@@ -54,10 +51,7 @@ async function h() {
                     (e = Object.keys(a).filter((e) => a[e])),
                     _.verbose('Delta applied successfully');
             } catch (t) {
-                if ((_.verbose('Unable to process domain list delta: '.concat(t.message)), (0, s.K)())) {
-                    _.verbose('Slow network detected, not downloading full list');
-                    return;
-                }
+                if ((_.verbose('Unable to process domain list delta: '.concat(t.message)), (0, s.K)())) return void _.verbose('Slow network detected, not downloading full list');
                 _.verbose('Downloading the full bad domains file'),
                     (e = (
                         await i.tn.get({

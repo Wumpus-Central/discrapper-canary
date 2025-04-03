@@ -24,11 +24,7 @@ let c = async (e) => {
                     })
                 ).body,
                 o = e.wait_ms_until_next_fetch;
-            if (null != o) {
-                let t = new Date(Date.now() + o);
-                e.expired_at = t.toISOString();
-            }
-            return e;
+            return null != o && (e.expired_at = new Date(Date.now() + o).toISOString()), e;
         } catch (e) {
             throw new o.Hx(e);
         }
@@ -79,7 +75,7 @@ let c = async (e) => {
                 null == n || n();
         } catch (t) {
             var o, a;
-            let e = null !== (a = null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.message) && void 0 !== a ? a : l.NW.string(l.t.FMbL3t);
+            let e = null != (a = null == t || null == (o = t.body) ? void 0 : o.message) ? a : l.NW.string(l.t.FMbL3t);
             i.Z.dispatch({
                 type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE',
                 error: e

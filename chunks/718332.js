@@ -3,22 +3,22 @@ var r = n(102074),
     o = n(803607),
     a = 1,
     s = 2;
-function l(e, t, n, l, c, u) {
+e.exports = function (e, t, n, l, c, u) {
     var d = n & a,
         f = e.length,
-        p = t.length;
-    if (f != p && !(d && p > f)) return !1;
-    var _ = u.get(e);
-    if (_ && u.get(t)) return _ == t;
+        _ = t.length;
+    if (f != _ && !(d && _ > f)) return !1;
+    var p = u.get(e);
+    if (p && u.get(t)) return p == t;
     var h = -1,
         m = !0,
         g = n & s ? new r() : void 0;
     for (u.set(e, t), u.set(t, e); ++h < f; ) {
         var E = e[h],
-            v = t[h];
-        if (l) var b = d ? l(v, E, h, t, e, u) : l(E, v, h, e, t, u);
-        if (void 0 !== b) {
-            if (b) continue;
+            b = t[h];
+        if (l) var y = d ? l(b, E, h, t, e, u) : l(E, b, h, e, t, u);
+        if (void 0 !== y) {
+            if (y) continue;
             m = !1;
             break;
         }
@@ -31,11 +31,10 @@ function l(e, t, n, l, c, u) {
                 m = !1;
                 break;
             }
-        } else if (!(E === v || c(E, v, n, l, u))) {
+        } else if (!(E === b || c(E, b, n, l, u))) {
             m = !1;
             break;
         }
     }
     return u.delete(e), u.delete(t), m;
-}
-e.exports = l;
+};

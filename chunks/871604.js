@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(572004),
     E = n(591759),
     b = n(135431),
-    v = n(621853),
-    y = n(429974),
+    y = n(621853),
+    v = n(429974),
     O = n(475413),
     I = n(981631),
     S = n(388032);
@@ -73,15 +73,15 @@ function C(e, t) {
 function R(e) {
     var { user: t, closePopout: n } = e,
         T = A(e, ['user', 'closePopout']);
-    let C = (0, o.e7)([v.Z], () => {
+    let C = (0, o.e7)([y.Z], () => {
             var e;
-            return null === (e = v.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
+            return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
         R = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
         P = (0, o.e7)([p.Z], () => p.Z.getChannel(R)),
         w = (0, o.e7)([p.Z], () => {
             var e;
-            return null === (e = p.Z.getChannel(R)) || void 0 === e ? void 0 : e.guild_id;
+            return null == (e = p.Z.getChannel(R)) ? void 0 : e.guild_id;
         }),
         D = i.useMemo(
             () =>
@@ -96,14 +96,13 @@ function R(e) {
         L = (0, s.Z)({ context: D }),
         x = t.id,
         M = i.useCallback(() => {
-            if (null != C) {
+            if (null != C)
                 if (L) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
                         t = p.Z.getChannel(e),
                         r = null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? f.Ie.SIDEBAR : f.Ie.NORMAL;
-                    l.__(c._b.TEXT, r, { applicationId: C.id }), (0, a.Mr3)((0, y.z)(x, w)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: C.id });
+                    l.__(c._b.TEXT, r, { applicationId: C.id }), (0, a.Mr3)((0, v.z)(x, w)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: C.id });
                 } else (0, b.L)(N({ applicationId: C.id }, C));
-            }
         }, [L, C, x, w, n]),
         k = L ? S.NW.string(S.t['Cia+Aw']) : S.NW.string(S.t.NgXl3N);
     if (null == C || !(0, d.E)(C)) return null;

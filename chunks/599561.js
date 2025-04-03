@@ -7233,7 +7233,7 @@ let t = [
     '$WolframID',
     '$WolframUUID'
 ];
-function n(e) {
+e.exports = function (e) {
     let n = e.regex,
         r = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
         i = /(\w*\.\w+|\w+\.\w*|\w+)/,
@@ -7249,14 +7249,14 @@ function n(e) {
             begin: n.concat(a, n.optional(c), n.optional(u))
         },
         f = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        p = new Set(t),
-        _ = {
+        _ = new Set(t),
+        p = {
             variants: [
                 {
                     className: 'builtin-symbol',
                     begin: f,
                     'on:begin': (e, t) => {
-                        p.has(e[0]) || t.ignoreMatch();
+                        _.has(e[0]) || t.ignoreMatch();
                     }
                 },
                 {
@@ -7285,12 +7285,12 @@ function n(e) {
             relevance: 0,
             begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/
         },
-        v = {
+        b = {
             className: 'brace',
             relevance: 0,
             begin: /[[\](){}]/
         },
-        b = {
+        y = {
             className: 'message-name',
             relevance: 0,
             begin: n.concat('::', f)
@@ -7307,7 +7307,6 @@ function n(e) {
             'builtin-symbol': 'built_in',
             'message-name': 'string'
         },
-        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), g, E, b, _, h, e.QUOTE_STRING_MODE, d, m, v]
+        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), g, E, y, p, h, e.QUOTE_STRING_MODE, d, m, b]
     };
-}
-e.exports = n;
+};

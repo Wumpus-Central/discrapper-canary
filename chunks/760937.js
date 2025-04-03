@@ -1,5 +1,5 @@
 var r = n(565580);
-function i(e, t) {
+e.exports = function (e, t) {
     var n = -1,
         i = e.length,
         o = i - 1;
@@ -9,5 +9,4 @@ function i(e, t) {
         (e[a] = e[n]), (e[n] = s);
     }
     return (e.length = t), e;
-}
-e.exports = i;
+};

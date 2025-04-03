@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'CMake',
         aliases: ['cmake.in'],
@@ -16,5 +16,4 @@ function t(e) {
             e.NUMBER_MODE
         ]
     };
-}
-e.exports = t;
+};

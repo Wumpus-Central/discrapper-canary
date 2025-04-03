@@ -15,7 +15,6 @@ var r = n(867996),
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') +
             '$'
     );
-function p(e) {
+e.exports = function (e) {
     return !(!o(e) || i(e)) && (r(e) ? f : l).test(a(e));
-}
-e.exports = p;
+};

@@ -5,14 +5,13 @@ var r = n(442837),
 function a(e) {
     return (0, r.e7)([o.Z], () => {
         var t;
-        let n;
-        let r = null != e ? o.Z.getUserProfile(e) : null,
+        let n,
+            r = null != e ? o.Z.getUserProfile(e) : null,
             a = null == r ? void 0 : r.premiumSince;
         return null == r || null == a
             ? null
             : (null == r ||
-                  null === (t = r.badges) ||
-                  void 0 === t ||
+                  null == (t = r.badges) ||
                   t.forEach((e) => {
                       let t = (0, i.gn)(e.id);
                       null != t && (n = t);

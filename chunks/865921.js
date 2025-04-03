@@ -1,4 +1,4 @@
-n.d(t, { v: () => _ }), n(47120);
+n.d(t, { v: () => p }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(399606),
@@ -9,33 +9,25 @@ var r = n(200651),
     u = n(409813),
     d = n(48931),
     f = n(456251),
-    p = n(981631);
-function _(e) {
+    _ = n(981631);
+function p(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: _, hasFetchedSkus: h, paymentSources: m, hasFetchedPaymentSources: g, application: E, skusById: v, selectedSkuId: b } = (0, c.JL)(),
-        { isGift: y } = (0, l.wD)(),
-        [O, S] = i.useState(!0),
-        [I, T] = (0, o.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
+        { blockedPayments: p, hasFetchedSkus: h, paymentSources: m, hasFetchedPaymentSources: g, application: E, skusById: b, selectedSkuId: y } = (0, c.JL)(),
+        { isGift: v } = (0, l.wD)(),
+        [O, I] = i.useState(!0),
+        [S, T] = (0, o.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
     return (i.useEffect(() => {
         let e = null != E;
-        h && g && e && S(I);
-    }, [h, g, E, I]),
+        h && g && e && I(S);
+    }, [h, g, E, S]),
     i.useEffect(() => {
-        if (O || _ || null == b) return;
-        let e = v[b];
-        if (y && (null == e ? void 0 : e.productLine) === p.POd.COLLECTIBLES) {
-            t(u.h8.GIFT_CUSTOMIZATION);
-            return;
-        }
-        if (0 === Object.keys(m).length) {
-            t(u.h8.ADD_PAYMENT_STEPS);
-            return;
-        }
-        t(u.h8.REVIEW);
-    }, [O, _, t, m, y, v, b]),
+        if (O || p || null == y) return;
+        let e = b[y];
+        return v && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES ? void t(u.h8.GIFT_CUSTOMIZATION) : 0 === Object.keys(m).length ? void t(u.h8.ADD_PAYMENT_STEPS) : void t(u.h8.REVIEW);
+    }, [O, p, t, m, v, b, y]),
     O)
         ? (0, r.jsx)(f.Z, {})
-        : _
+        : p
           ? (0, r.jsx)(a.Vq, { onClose: n })
           : null != T
             ? (0, r.jsx)(d.Z, { onClose: n })

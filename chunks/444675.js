@@ -2,15 +2,25 @@ var e,
     a,
     r,
     n = (t.exports = {});
-function o() {
+function _() {
     throw Error('setTimeout has not been defined');
 }
-function _() {
+function o() {
     throw Error('clearTimeout has not been defined');
+}
+try {
+    e = 'function' == typeof setTimeout ? setTimeout : _;
+} catch (t) {
+    e = _;
+}
+try {
+    a = 'function' == typeof clearTimeout ? clearTimeout : o;
+} catch (t) {
+    a = o;
 }
 function i(t) {
     if (e === setTimeout) return setTimeout(t, 0);
-    if ((e === o || !e) && setTimeout) return (e = setTimeout), setTimeout(t, 0);
+    if ((e === _ || !e) && setTimeout) return (e = setTimeout), setTimeout(t, 0);
     try {
         return e(t, 0);
     } catch (a) {
@@ -21,18 +31,6 @@ function i(t) {
         }
     }
 }
-!(function () {
-    try {
-        e = 'function' == typeof setTimeout ? setTimeout : o;
-    } catch (t) {
-        e = o;
-    }
-    try {
-        a = 'function' == typeof clearTimeout ? clearTimeout : _;
-    } catch (t) {
-        a = _;
-    }
-})();
 var c = [],
     s = !1,
     E = -1;
@@ -51,7 +49,7 @@ function u() {
             (s = !1),
             (function (t) {
                 if (a === clearTimeout) return clearTimeout(t);
-                if ((a === _ || !a) && clearTimeout) return (a = clearTimeout), clearTimeout(t);
+                if ((a === o || !a) && clearTimeout) return (a = clearTimeout), clearTimeout(t);
                 try {
                     a(t);
                 } catch (e) {

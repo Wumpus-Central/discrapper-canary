@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(47120), n(789020);
+n.d(t, { Z: () => x }), n(47120), n(789020);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -68,11 +68,11 @@ function E(e) {
         .keyBy('threadId')
         .value();
 }
-function v(e) {
-    var t;
-    null === (t = e.threads) || void 0 === t || t.forEach(b);
-}
 function b(e) {
+    var t;
+    null == (t = e.threads) || t.forEach(y);
+}
+function y(e) {
     c.AW.has(e.type) &&
         null != e.member &&
         ((h[e.id] = {
@@ -83,15 +83,15 @@ function b(e) {
             muteConfig: e.member.muteConfig,
             joinTimestamp: new Date(e.member.joinTimestamp)
         }),
-        y(e.id));
+        v(e.id));
 }
-function y(e) {
+function v(e) {
     let t = h[e];
     m.clearTimer(e),
         !0 === t.muted
             ? ((g = new Set(g)).add(e),
               m.setTimer(e, t.muteConfig, () => {
-                  (h[e].muted = !1), (g = new Set(g)).delete(e), x.emitChange();
+                  (h[e].muted = !1), (g = new Set(g)).delete(e), L.emitChange();
               }) && ((h[e].muted = !1), (g = new Set(g)).delete(e)))
             : (g = new Set(g)).delete(e);
 }
@@ -100,19 +100,19 @@ function O(e) {
         (g = new Set()),
         (h = {}),
         e.guilds.forEach((e) => {
-            v(e);
+            b(e);
         });
 }
-function S(e) {
+function I(e) {
     let { joinedThreads: t } = e;
     h = o()(t)
-        .map((e) => _(f({}, e), { joinTimestamp: new Date(e.joinTimestamp) }))
+        .map((e) => p(f({}, e), { joinTimestamp: new Date(e.joinTimestamp) }))
         .keyBy('threadId')
         .value();
 }
-function I(e) {
+function S(e) {
     let { guild: t } = e;
-    E(t.id), v(t);
+    E(t.id), b(t);
 }
 function T(e) {
     let { guild: t } = e;
@@ -120,7 +120,7 @@ function T(e) {
 }
 function N(e) {
     let { channel: t } = e;
-    b(t);
+    y(t);
 }
 function A(e) {
     let { guildId: t, members: n } = e;
@@ -135,7 +135,7 @@ function A(e) {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp)
             }),
-                y(e.id);
+                v(e.id);
         });
 }
 function C(e) {
@@ -153,7 +153,7 @@ function R(e) {
         muteConfig: e.muteConfig,
         joinTimestamp: new Date(e.joinTimestamp)
     }),
-        y(e.id);
+        v(e.id);
 }
 function P(e) {
     let { id: t, userId: n, guildId: r, isJoining: i } = e;
@@ -173,9 +173,8 @@ function w(e) {
     var t, n;
     let r = !1;
     return (
-        (null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(u.default.getId())) && e.id in h && ((h = f({}, h)), delete h[e.id], (r = !0)),
-        null === (n = e.addedMembers) ||
-            void 0 === n ||
+        (null == (t = e.removedMemberIds) ? void 0 : t.includes(u.default.getId())) && e.id in h && ((h = f({}, h)), delete h[e.id], (r = !0)),
+        null == (n = e.addedMembers) ||
             n.forEach((t) => {
                 t.userId === u.default.getId() &&
                     (((h = f({}, h))[e.id] = {
@@ -186,7 +185,7 @@ function w(e) {
                         muteConfig: t.muteConfig,
                         joinTimestamp: new Date(t.joinTimestamp)
                     }),
-                    y(e.id),
+                    v(e.id),
                     (r = !0));
             }),
         r
@@ -198,18 +197,18 @@ class D extends (r = a.ZP.Store) {
     }
     joinTimestamp(e) {
         var t;
-        return null === (t = h[e]) || void 0 === t ? void 0 : t.joinTimestamp;
+        return null == (t = h[e]) ? void 0 : t.joinTimestamp;
     }
     flags(e) {
         var t;
-        return null === (t = h[e]) || void 0 === t ? void 0 : t.flags;
+        return null == (t = h[e]) ? void 0 : t.flags;
     }
     getInitialOverlayState() {
         return Object.values(h);
     }
     getMuteConfig(e) {
         var t;
-        return null === (t = h[e]) || void 0 === t ? void 0 : t.muteConfig;
+        return null == (t = h[e]) ? void 0 : t.muteConfig;
     }
     getMutedThreads() {
         return g;
@@ -219,10 +218,10 @@ class D extends (r = a.ZP.Store) {
     }
 }
 d(D, 'displayName', 'JoinedThreadsStore');
-let x = new D(s.Z, {
+let L = new D(s.Z, {
         CONNECTION_OPEN: O,
-        OVERLAY_INITIALIZE: S,
-        GUILD_CREATE: I,
+        OVERLAY_INITIALIZE: I,
+        GUILD_CREATE: S,
         GUILD_DELETE: T,
         THREAD_CREATE: N,
         THREAD_LIST_SYNC: A,
@@ -235,4 +234,4 @@ let x = new D(s.Z, {
         THREAD_MEMBER_LOCAL_UPDATE: P,
         THREAD_MEMBERS_UPDATE: w
     }),
-    L = x;
+    x = L;

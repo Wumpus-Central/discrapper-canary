@@ -64,8 +64,8 @@ function b(e, t) {
         e
     );
 }
-let v = new i.Yd('OverlayActionCreators'),
-    y = {
+let y = new i.Yd('OverlayActionCreators'),
+    v = {
         track(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -118,11 +118,8 @@ let v = new i.Yd('OverlayActionCreators'),
             });
         },
         setInstanceLocked(e) {
-            if (!__OVERLAY__) {
-                v.error('Attempting to start an overlay session outside of the overlay context');
-                return;
-            }
-            y.setInputLocked(e, (0, _.getPID)());
+            if (!__OVERLAY__) return void y.error('Attempting to start an overlay session outside of the overlay context');
+            v.setInputLocked(e, (0, _.getPID)());
         },
         setEnabled(e, t) {
             o.Z.dispatch({
@@ -204,10 +201,7 @@ let v = new i.Yd('OverlayActionCreators'),
             o.Z.dispatch({ type: 'OVERLAY_DISABLE_EXTERNAL_LINK_ALERT' });
         },
         startSession() {
-            if (!__OVERLAY__) {
-                v.error('Attempting to start an overlay session outside of the overlay context');
-                return;
-            }
+            if (!__OVERLAY__) return void y.error('Attempting to start an overlay session outside of the overlay context');
             o.Z.dispatch({ type: 'OVERLAY_START_SESSION' });
         },
         activateRegion(e) {
@@ -240,8 +234,8 @@ let v = new i.Yd('OverlayActionCreators'),
                 type: 'OVERLAY_NOTIFICATION_EVENT',
                 notificationType: e,
                 action: t,
-                gameName: null !== (n = null == i ? void 0 : i.name) && void 0 !== n ? n : null,
-                gameId: null !== (r = null == i ? void 0 : i.id) && void 0 !== r ? r : null
+                gameName: null != (n = null == i ? void 0 : i.name) ? n : null,
+                gameId: null != (r = null == i ? void 0 : i.id) ? r : null
             });
         },
         setPinChat(e) {
@@ -266,13 +260,13 @@ let v = new i.Yd('OverlayActionCreators'),
                     width: 312,
                     height: 0
                 },
-                v = {
+                y = {
                     top: 0,
                     left: 0,
                     right: 0,
                     bottom: 0
                 },
-                y = {
+                v = {
                     width: 0,
                     height: 0
                 };
@@ -287,15 +281,15 @@ let v = new i.Yd('OverlayActionCreators'),
                             (m = (0, f.vS)(r, i, l)), (E = (0, f.w_)(i, l)), (0, p.E9)(n);
                             break;
                         case h.Odu.GUILDS_TEXT:
-                            (v = (0, f.vS)(r, i, l)), (y = (0, f.w_)(i, l)), (0, p.E9)(n);
+                            (y = (0, f.vS)(r, i, l)), (v = (0, f.w_)(i, l)), (0, p.E9)(n);
                     }
                 }),
                 e)
             ) {
-                let e = 'auto' === y.width ? a.minSize.width : y.width;
+                let e = 'auto' === v.width ? a.minSize.width : v.width;
                 e -= i.minSize.width;
-                let [n, o] = (0, f.o4)(v, b(g({}, y), { width: i.minSize.width }), l),
-                    [s, u] = (0, f.uq)(v, b(g({}, y), { width: e }), l, {
+                let [n, o] = (0, f.o4)(y, b(g({}, v), { width: i.minSize.width }), l),
+                    [s, u] = (0, f.uq)(y, b(g({}, v), { width: e }), l, {
                         x: 10,
                         y: 10
                     }),
@@ -417,4 +411,4 @@ let v = new i.Yd('OverlayActionCreators'),
             });
         }
     },
-    O = y;
+    O = v;

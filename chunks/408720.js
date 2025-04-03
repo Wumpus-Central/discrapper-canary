@@ -1,8 +1,8 @@
-a.d(e, { f: () => T });
+a.d(e, { f: () => N });
 var r = a(469359),
     n = a(157079),
-    o = a(393523),
-    _ = a(151122),
+    _ = a(393523),
+    o = a(151122),
     i = a(263449),
     c = a(572299),
     s = a(910731),
@@ -15,7 +15,7 @@ var r = a(469359),
     A = a(873567),
     f = a(454463),
     p = a(163162);
-let T = (0, _._I)((t = {}) => {
+let N = (0, o._I)((t = {}) => {
     let e = {
         console: !0,
         dom: !0,
@@ -28,7 +28,7 @@ let T = (0, _._I)((t = {}) => {
     return {
         name: 'Breadcrumbs',
         setup(t) {
-            var a, _, T, N, L, h, O;
+            var a, o, N, T, L, h, O;
             e.console &&
                 (0, s.e)(
                     ((a = t),
@@ -43,10 +43,9 @@ let T = (0, _._I)((t = {}) => {
                             level: (0, R.V)(t.level),
                             message: (0, d.nK)(t.args, ' ')
                         };
-                        if ('assert' === t.level) {
+                        if ('assert' === t.level)
                             if (!1 !== t.args[0]) return;
-                            (e.message = `Assertion failed: ${(0, d.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1));
-                        }
+                            else (e.message = `Assertion failed: ${(0, d.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1));
                         (0, c.n)(e, {
                             input: t.args,
                             level: t.level
@@ -55,18 +54,18 @@ let T = (0, _._I)((t = {}) => {
                 ),
                 e.dom &&
                     (0, r.O)(
-                        ((_ = t),
-                        (T = e.dom),
+                        ((o = t),
+                        (N = e.dom),
                         function (t) {
                             let e, a;
-                            if ((0, i.s3)() !== _) return;
-                            let r = 'object' == typeof T ? T.serializeAttribute : void 0,
-                                n = 'object' == typeof T && 'number' == typeof T.maxStringLength ? T.maxStringLength : void 0;
+                            if ((0, i.s3)() !== o) return;
+                            let r = 'object' == typeof N ? N.serializeAttribute : void 0,
+                                n = 'object' == typeof N && 'number' == typeof N.maxStringLength ? N.maxStringLength : void 0;
                             n && n > 1024 && (f.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${n} was configured. Sentry will use 1024 instead.`), (n = 1024)), 'string' == typeof r && (r = [r]);
                             try {
-                                var o;
-                                let _ = t.event,
-                                    i = (o = _) && o.target ? _.target : _;
+                                var _;
+                                let o = t.event,
+                                    i = (_ = o) && _.target ? o.target : o;
                                 (e = (0, I.Rt)(i, {
                                     keyAttrs: r,
                                     maxStringLength: n
@@ -90,13 +89,13 @@ let T = (0, _._I)((t = {}) => {
                     ),
                 e.xhr &&
                     (0, n.UK)(
-                        ((N = t),
+                        ((T = t),
                         function (t) {
-                            if ((0, i.s3)() !== N) return;
+                            if ((0, i.s3)() !== T) return;
                             let { startTimestamp: e, endTimestamp: a } = t,
                                 r = t.xhr[n.xU];
                             if (!e || !a || !r) return;
-                            let { method: o, url: _, status_code: s, body: E } = r,
+                            let { method: _, url: o, status_code: s, body: E } = r,
                                 l = {
                                     xhr: t.xhr,
                                     input: E,
@@ -107,8 +106,8 @@ let T = (0, _._I)((t = {}) => {
                                 {
                                     category: 'xhr',
                                     data: {
-                                        method: o,
-                                        url: _,
+                                        method: _,
+                                        url: o,
                                         status_code: s
                                     },
                                     type: 'http'
@@ -123,7 +122,7 @@ let T = (0, _._I)((t = {}) => {
                         function (t) {
                             if ((0, i.s3)() !== L) return;
                             let { startTimestamp: e, endTimestamp: a } = t;
-                            if (!(!a || (t.fetchData.url.match(/sentry_key/) && 'POST' === t.fetchData.method))) {
+                            if (a && (!t.fetchData.url.match(/sentry_key/) || 'POST' !== t.fetchData.method))
                                 if (t.error) {
                                     let r = t.fetchData,
                                         n = {
@@ -147,7 +146,7 @@ let T = (0, _._I)((t = {}) => {
                                             ...t.fetchData,
                                             status_code: r && r.status
                                         },
-                                        o = {
+                                        _ = {
                                             input: t.args,
                                             response: r,
                                             startTimestamp: e,
@@ -159,14 +158,13 @@ let T = (0, _._I)((t = {}) => {
                                             data: n,
                                             type: 'http'
                                         },
-                                        o
+                                        _
                                     );
                                 }
-                            }
                         })
                     ),
                 e.history &&
-                    (0, o.a)(
+                    (0, _.a)(
                         ((h = t),
                         function (t) {
                             if ((0, i.s3)() !== h) return;
@@ -174,9 +172,9 @@ let T = (0, _._I)((t = {}) => {
                                 a = t.to,
                                 r = (0, A.en)(p.m9.location.href),
                                 n = e ? (0, A.en)(e) : void 0,
-                                o = (0, A.en)(a);
+                                _ = (0, A.en)(a);
                             (n && n.path) || (n = r),
-                                r.protocol === o.protocol && r.host === o.host && (a = o.relative),
+                                r.protocol === _.protocol && r.host === _.host && (a = _.relative),
                                 r.protocol === n.protocol && r.host === n.host && (e = n.relative),
                                 (0, c.n)({
                                     category: 'navigation',

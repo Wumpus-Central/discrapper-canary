@@ -1,7 +1,7 @@
 n.d(t, {
     Bk: () => eE,
-    CB: () => ev,
-    ZP: () => ey,
+    CB: () => ey,
+    ZP: () => ev,
     r$: () => eb
 }),
     n(789020),
@@ -23,14 +23,14 @@ var r = n(525654),
     g = n(895924),
     E = n(625128),
     b = n(972830),
-    v = n(305325),
-    y = n(63568),
+    y = n(305325),
+    v = n(63568),
     O = n(281956),
     I = n(931261),
     S = n(15274),
     T = n(924301),
-    A = n(461014),
-    N = n(82085),
+    N = n(461014),
+    A = n(82085),
     C = n(264229),
     R = n(652898),
     P = n(895886),
@@ -120,15 +120,15 @@ function eu(e) {
     let l = {};
     switch (e.target_type) {
         case en.Iq.STREAM:
-            (l.targetType = e.target_type), (l.targetUserId = null === (r = e.target_user) || void 0 === r ? void 0 : r.id);
+            (l.targetType = e.target_type), (l.targetUserId = null == (r = e.target_user) ? void 0 : r.id);
             break;
         case en.Iq.EMBEDDED_APPLICATION:
-            (l.targetType = e.target_type), (l.targetApplicationId = null === (i = e.target_application) || void 0 === i ? void 0 : i.id);
+            (l.targetType = e.target_type), (l.targetApplicationId = null == (i = e.target_application) ? void 0 : i.id);
             break;
         case en.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
             l.targetType = e.target_type;
     }
-    return (null == G.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id) || e.new_member) && null != e.channel && (0, x.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, K.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, a.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, K.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, a.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null === (n = e.inviter) || void 0 === n ? void 0 : n.id), l;
+    return (null == G.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) && null != e.channel && (0, x.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, K.yE)(null != (o = e.flags) ? o : 0, a.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, K.yE)(null != (s = e.flags) ? s : 0, a.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null == (n = e.inviter) ? void 0 : n.id), l;
 }
 function ed(e, t) {
     return es(eo({}, e), { invite_guild_scheduled_event_id: t.guildScheduledEventId });
@@ -138,7 +138,7 @@ function ef(e, t, n) {
     if ((null == n ? void 0 : n.targetType) === en.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return ee.oC.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !x.tx.has(t.type) && (0, I.s)(e)) return ee.oC.GUILD_HOME;
     let o = k.Z.getChannel(t.id);
-    return V.Z.can($.Plq.VIEW_CHANNEL, o) ? t.id : null !== (i = null === (r = j.ZP.getDefaultChannel(e, !0, $.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
+    return V.Z.can($.Plq.VIEW_CHANNEL, o) ? t.id : null != (i = null == (r = j.ZP.getDefaultChannel(e, !0, $.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id) ? i : t.id;
 }
 function e_(e, t) {
     let { type: n } = e,
@@ -153,7 +153,7 @@ function e_(e, t) {
 function ep(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: o = [] } = e,
         a = G.Z.getGuild(t),
-        s = (0, y.K2)(t, 'invite') ? (null == a ? void 0 : a.hasFeature($.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) : (null == a ? void 0 : a.hasFeature($.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && !(null == a ? void 0 : a.hasFeature($.oNc.PREVIEW_ENABLED)),
+        s = (0, v.K2)(t, 'invite') ? (null == a ? void 0 : a.hasFeature($.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) : (null == a ? void 0 : a.hasFeature($.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && !(null == a ? void 0 : a.hasFeature($.oNc.PREVIEW_ENABLED)),
         { targetUserId: l, targetType: c, targetApplicationId: u, isGuestInvite: f, isApplicationBypassInvite: _ } = null != i ? i : {};
     if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && Z.Z.getGuildId() !== t) return;
     let { type: p } = r,
@@ -194,7 +194,7 @@ function ep(e) {
                                           commandOrigin: g.bB.CHAT
                                       }));
                           };
-                      !f && (0, O.n)(t, [G.Z, B.Z, H.default, U.ZP]) ? (0, v.hk)(t, a) : a();
+                      !f && (0, O.n)(t, [G.Z, B.Z, H.default, U.ZP]) ? (0, y.hk)(t, a) : a();
                   });
           })
         : (0, h.l5)(E) &&
@@ -260,7 +260,7 @@ let eg = function (e, t) {
                     ((null == t ? void 0 : t.guildScheduledEvent) != null
                         ? eh(t)
                         : ep({
-                              guildId: null !== (r = i.getGuildId()) && void 0 !== r ? r : $.ME,
+                              guildId: null != (r = i.getGuildId()) ? r : $.ME,
                               channel: i,
                               options: t,
                               analyticsLocations: n
@@ -278,18 +278,18 @@ function eb(e, t, n) {
     W.default.track($.rMx.INVITE_EMBED_ACTIONED, {
         action: t,
         invite_code: e.code,
-        invite_type: null === (r = e.type) || void 0 === r ? void 0 : r.toString(),
+        invite_type: null == (r = e.type) ? void 0 : r.toString(),
         location_stack: null != n ? n : null
     });
 }
-function ev(e, t, n) {
+function ey(e, t, n) {
     W.default.track($.rMx.INVITE_SERVER_CLICKED, {
         guild_id: e,
         action: t,
         location_stack: null != n ? n : null
     });
 }
-let ey = {
+let ev = {
     resolveInvite: em,
     getInviteContext: (e, t) => ({
         location: e,
@@ -443,7 +443,7 @@ let ey = {
             c = M.default.getSessionId(),
             d = ed(i, s),
             _ = H.default.getCurrentUser();
-        return null !== (t = null == _ ? void 0 : _.hasFlag($.xW$.QUARANTINED)) && void 0 !== t && t
+        return null != (t = null == _ ? void 0 : _.hasFlag($.xW$.QUARANTINED)) && t
             ? ((0, P.default)(), new Promise((e, t) => t(Error())))
             : (f.Z.dispatch({
                   type: 'INVITE_ACCEPT',
@@ -467,7 +467,7 @@ let ey = {
                           });
                           let i = T.ZP.getGuildScheduledEvent(s.guildScheduledEventId),
                               c = es(eo({}, e.body), { guild_scheduled_event: i }),
-                              u = null !== (r = null == c ? void 0 : c.guild_id) && void 0 !== r ? r : null == c ? void 0 : null === (t = c.guild) || void 0 === t ? void 0 : t.id;
+                              u = null != (r = null == c ? void 0 : c.guild_id) ? r : null == c || null == (t = c.guild) ? void 0 : t.id;
                           if (!a && null != u && c.new_member) {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 17181));
                               await e({ guildId: u });
@@ -481,8 +481,8 @@ let ey = {
                                   type: 'INVITE_ACCEPT_FAILURE',
                                   code: l,
                                   error: {
-                                      message: null === (t = e.body) || void 0 === t ? void 0 : t.message,
-                                      code: null === (n = e.body) || void 0 === n ? void 0 : n.code
+                                      message: null == (t = e.body) ? void 0 : t.message,
+                                      code: null == (n = e.body) ? void 0 : n.code
                                   }
                               }),
                               new p.Z(e))
@@ -508,15 +508,9 @@ let ey = {
     transitionToInvite(e, t, n) {
         var r, i;
         let { channel: o, guild: s } = e;
-        if (null != s && (null === (r = s.features) || void 0 === r ? void 0 : r.includes($.oNc.HUB))) {
-            N.Z.onOpenHubInvite(e);
-            return;
-        }
-        let l = (0, K.yE)(null !== (i = e.flags) && void 0 !== i ? i : 0, a.$.IS_APPLICATION_BYPASS);
-        if (null != s && !l && (0, A.u)(s)) {
-            (0, A._)(s.id);
-            return;
-        }
+        if (null != s && (null == (r = s.features) ? void 0 : r.includes($.oNc.HUB))) return void A.Z.onOpenHubInvite(e);
+        let l = (0, K.yE)(null != (i = e.flags) ? i : 0, a.$.IS_APPLICATION_BYPASS);
+        if (null != s && !l && (0, N.u)(s)) return void (0, N._)(s.id);
         if (null == o) return;
         let c = eu(e);
         null != t && (c.transitionTo = t),
@@ -545,8 +539,8 @@ let ey = {
     },
     openApp(e, t, n, r, o) {
         var a, u;
-        let d;
-        let _ = null != e ? (0, C.fU)(e) : null,
+        let d,
+            _ = null != e ? (0, C.fU)(e) : null,
             p = null == _ ? void 0 : _.baseCode;
         if (
             (f.Z.dispatch({
@@ -554,14 +548,12 @@ let ey = {
                 code: e
             }),
             null != i().ua && i().ua.toLowerCase().indexOf('googlebot') > -1)
-        ) {
-            f.Z.dispatch({
+        )
+            return void f.Z.dispatch({
                 type: 'INVITE_APP_NOT_OPENED',
                 code: e
             });
-            return;
-        }
-        if ((null === (a = i().os) || void 0 === a ? void 0 : a.family) === 'Android' || (null === (u = i().os) || void 0 === u ? void 0 : u.family) === 'iOS') {
+        if ((null == (a = i().os) ? void 0 : a.family) === 'Android' || (null == (u = i().os) ? void 0 : u.family) === 'iOS') {
             let e = null != p ? (0, s.z0)(p) : (0, s.Gk)(),
                 t = (0, l.WS)();
             (d = (0, l.ZP)(e, {
@@ -594,5 +586,5 @@ let ey = {
         });
     },
     transitionToInviteChannelSync: eg,
-    trackInviteServerClicked: ev
+    trackInviteServerClicked: ey
 };

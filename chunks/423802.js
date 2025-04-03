@@ -24,15 +24,15 @@ function l(e, t, n) {
         u = void 0 === l ? a.MATCHES : l,
         d = i.baseSort,
         f = void 0 === d ? s : d,
-        _ = i.sorter;
+        p = i.sorter;
     return (
-        void 0 === _
+        void 0 === p
             ? function (e) {
                   return e.sort(function (e, t) {
-                      return p(e, t, f);
+                      return _(e, t, f);
                   });
               }
-            : _
+            : p
     )(e.reduce(h, [])).map(function (e) {
         return e.item;
     });
@@ -70,16 +70,16 @@ function c(e, t, n, r) {
                 c = e.keyThreshold,
                 d = t.itemValue,
                 f = t.attributes,
-                p = u(d, n, r),
-                _ = s,
+                _ = u(d, n, r),
+                p = s,
                 h = f.minRanking,
                 m = f.maxRanking,
                 g = f.threshold;
             return (
-                p < h && p >= a.MATCHES ? (p = h) : p > m && (p = m),
-                p > o && ((o = p), (l = i), (c = g), (_ = d)),
+                _ < h && _ >= a.MATCHES ? (_ = h) : _ > m && (_ = m),
+                _ > o && ((o = _), (l = i), (c = g), (p = d)),
                 {
-                    rankedValue: _,
+                    rankedValue: p,
                     rank: o,
                     keyIndex: l,
                     keyThreshold: c
@@ -95,7 +95,7 @@ function c(e, t, n, r) {
     );
 }
 function u(e, t, n) {
-    return ((e = _(e, n)), (t = _(t, n)).length > e.length) ? a.NO_MATCH : e === t ? a.CASE_SENSITIVE_EQUAL : (e = e.toLowerCase()) === (t = t.toLowerCase()) ? a.EQUAL : e.startsWith(t) ? a.STARTS_WITH : e.includes(' ' + t) ? a.WORD_STARTS_WITH : e.includes(t) ? a.CONTAINS : 1 === t.length ? a.NO_MATCH : d(e).includes(t) ? a.ACRONYM : f(e, t);
+    return ((e = p(e, n)), (t = p(t, n)).length > e.length) ? a.NO_MATCH : e === t ? a.CASE_SENSITIVE_EQUAL : (e = e.toLowerCase()) === (t = t.toLowerCase()) ? a.EQUAL : e.startsWith(t) ? a.STARTS_WITH : e.includes(' ' + t) ? a.WORD_STARTS_WITH : e.includes(t) ? a.CONTAINS : 1 === t.length ? a.NO_MATCH : d(e).includes(t) ? a.ACRONYM : f(e, t);
 }
 function d(e) {
     var t = '';
@@ -126,7 +126,7 @@ function f(e, t) {
     for (var l = 1, c = t.length; l < c; l++) if (!((r = i(t[l], e, r)) > -1)) return a.NO_MATCH;
     return o(r - s);
 }
-function p(e, t, n) {
+function _(e, t, n) {
     var r = -1,
         i = 1,
         o = e.rank,
@@ -135,7 +135,7 @@ function p(e, t, n) {
         l = t.keyIndex;
     return o !== s ? (o > s ? r : i) : a === l ? n(e, t) : a < l ? r : i;
 }
-function _(e, t) {
+function p(e, t) {
     return (e = '' + e), t.keepDiacritics || (e = o()(e)), e;
 }
 function h(e, t) {
@@ -153,12 +153,11 @@ function m(e, t) {
     for (var n = e.split('.'), r = [t], i = 0, o = n.length; i < o; i++) {
         for (var a = n[i], s = [], l = 0, c = r.length; l < c; l++) {
             var u = r[l];
-            if (null != u) {
+            if (null != u)
                 if (Object.hasOwnProperty.call(u, a)) {
                     var d = u[a];
                     null != d && s.push(d);
                 } else '*' === a && (s = s.concat(u));
-            }
         }
         r = s;
     }
@@ -170,7 +169,7 @@ function m(e, t) {
 }
 function g(e, t) {
     for (var n = [], r = 0, i = t.length; r < i; r++)
-        for (var o = t[r], a = v(o), s = h(e, o), l = 0, c = s.length; l < c; l++)
+        for (var o = t[r], a = b(o), s = h(e, o), l = 0, c = s.length; l < c; l++)
             n.push({
                 itemValue: s[l],
                 attributes: a
@@ -181,6 +180,6 @@ var E = {
     maxRanking: 1 / 0,
     minRanking: -1 / 0
 };
-function v(e) {
+function b(e) {
     return 'string' == typeof e ? E : (0, r.Z)({}, E, e);
 }

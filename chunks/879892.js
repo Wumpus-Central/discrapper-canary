@@ -68,14 +68,14 @@ function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function v(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,14 +84,14 @@ function v(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let y = 'apply-guild-boost-modal';
+let v = 'apply-guild-boost-modal';
 async function O(e) {
-    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: v, onClose: O, closeLayer: I, onSubscriptionConfirmation: S, onSubscribeComplete: T, guild: N, handleSubscribeModalClose: A, disablePremiumUpsell: C, inPopout: R, applicationId: P, intent: w } = e,
+    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: y, onClose: O, closeLayer: I, onSubscriptionConfirmation: S, onSubscribeComplete: T, guild: N, handleSubscribeModalClose: A, disablePremiumUpsell: C, inPopout: R, applicationId: P, intent: w } = e,
         D = R ? i.u1M : i.z1l,
         L = l.default.getCurrentUser();
     if (null == L) return;
-    if (!L.verified) {
-        (0, i.ZDy)(
+    if (!L.verified)
+        return void (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e('20102').then(n.bind(n, 444688));
                 return (t) => {
@@ -102,8 +102,6 @@ async function O(e) {
             },
             { contextKey: D }
         );
-        return;
-    }
     let x = [];
     u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(o.jg()), x.push((0, a.X8)())), x.length > 0 && (await Promise.allSettled(x));
     let M = (0, f.vx)(c.Z.boostSlots),
@@ -119,12 +117,12 @@ async function O(e) {
                     location_section: h.section
                 });
         };
-    if (k > 0 && (null == v || k >= v)) {
+    if (k > 0 && (null == y || k >= y)) {
         let e;
-        1 === k ? (e = M.slice(0, 1)) : null != v && (e = M.slice(0, v)),
+        1 === k ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
-                    let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('44640')]).then(n.bind(n, 760558));
+                    let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('80978')]).then(n.bind(n, 760558));
                     return (n) => {
                         var { onClose: i } = n,
                             o = b(n, ['onClose']);
@@ -142,9 +140,9 @@ async function O(e) {
                     };
                 },
                 {
-                    modalKey: y,
+                    modalKey: v,
                     onCloseRequest: () => {
-                        (0, i.Mr3)(y), j(!1);
+                        (0, i.Mr3)(v), j(!1);
                     },
                     contextKey: D
                 }
@@ -156,7 +154,7 @@ async function O(e) {
             analyticsSourceLocation: g,
             guildId: N.id,
             closeLayer: U,
-            totalNumberOfSlotsToAssign: null != v ? v : 1,
+            totalNumberOfSlotsToAssign: null != y ? y : 1,
             onCloseModal: j,
             disablePremiumUpsell: C,
             onSubscriptionConfirmation: S,

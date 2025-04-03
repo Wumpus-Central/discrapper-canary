@@ -4,7 +4,7 @@ var r,
     o = n(192379),
     a = n(120356),
     s = n.n(a),
-    l = n(346151);
+    l = n(640103);
 function c(e, t, n) {
     return (
         t in e
@@ -39,29 +39,31 @@ class d extends (r = o.PureComponent) {
         let { streamId: n } = e;
         if (t.aReady) {
             if (n !== t.aStreamId)
-                return null == n
-                    ? {
-                          bStreamId: n,
-                          bReady: !0,
-                          aStreamId: null,
-                          aReady: !1
-                      }
-                    : {
-                          bStreamId: n,
-                          bReady: !1
-                      };
+                if (null == n)
+                    return {
+                        bStreamId: n,
+                        bReady: !0,
+                        aStreamId: null,
+                        aReady: !1
+                    };
+                else
+                    return {
+                        bStreamId: n,
+                        bReady: !1
+                    };
         } else if (n !== t.bStreamId)
-            return null == n
-                ? {
-                      aStreamId: n,
-                      aReady: !0,
-                      bStreamId: null,
-                      bReady: !1
-                  }
-                : {
-                      aStreamId: n,
-                      aReady: !1
-                  };
+            if (null == n)
+                return {
+                    aStreamId: n,
+                    aReady: !0,
+                    bStreamId: null,
+                    bReady: !1
+                };
+            else
+                return {
+                    aStreamId: n,
+                    aReady: !1
+                };
         return null;
     }
     renderVideo(e, t) {

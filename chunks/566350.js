@@ -1,7 +1,7 @@
 function t(e, n = {}) {
     return (n.variants = e), n;
 }
-function n(e) {
+e.exports = function (e) {
     let n = e.regex,
         r = '[A-Za-z0-9_$]+',
         i = t([
@@ -98,5 +98,4 @@ function n(e) {
         ],
         illegal: /#|<\//
     };
-}
-e.exports = n;
+};

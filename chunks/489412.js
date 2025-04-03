@@ -1,22 +1,21 @@
-var n = r(936940),
-    i = r(161581).RegExp,
-    o = n(function () {
-        var t = i('a', 'y');
+var r = a(936940),
+    n = a(161581).RegExp,
+    _ = r(function () {
+        var t = n('a', 'y');
         return (t.lastIndex = 2), null !== t.exec('abcd');
     }),
-    a =
-        o ||
-        n(function () {
-            return !i('a', 'y').sticky;
-        }),
-    c =
-        o ||
-        n(function () {
-            var t = i('^r', 'gy');
-            return (t.lastIndex = 2), null !== t.exec('str');
+    o =
+        _ ||
+        r(function () {
+            return !n('a', 'y').sticky;
         });
 t.exports = {
-    BROKEN_CARET: c,
-    MISSED_STICKY: a,
-    UNSUPPORTED_Y: o
+    BROKEN_CARET:
+        _ ||
+        r(function () {
+            var t = n('^r', 'gy');
+            return (t.lastIndex = 2), null !== t.exec('str');
+        }),
+    MISSED_STICKY: o,
+    UNSUPPORTED_Y: _
 };

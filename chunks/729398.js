@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             className: 'params',
@@ -47,5 +47,4 @@ function t(e) {
             a
         ]
     };
-}
-e.exports = t;
+};

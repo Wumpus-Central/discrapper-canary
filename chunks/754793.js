@@ -17,10 +17,7 @@ function r(e, t) {
     });
 var i = {
         arraySet: function (e, t, n, r, i) {
-            if (t.subarray && e.subarray) {
-                e.set(t.subarray(n, n + r), i);
-                return;
-            }
+            if (t.subarray && e.subarray) return void e.set(t.subarray(n, n + r), i);
             for (var o = 0; o < r; o++) e[i + o] = t[n + o];
         },
         flattenChunks: function (e) {

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'subst',
             variants: [{ begin: '\\$[A-Za-z0-9_]+' }]
@@ -106,5 +106,4 @@ function t(e) {
             { begin: '=>' }
         ]
     };
-}
-e.exports = t;
+};

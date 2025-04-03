@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = "a-zA-Z_\\-!.?+*=<>&#'",
         n = '[' + t + '][' + t + '0-9/;:]*',
         r = {
@@ -34,11 +34,11 @@ function t(e) {
             className: 'symbol',
             begin: '[:]{1,2}' + n
         },
-        p = {
+        _ = {
             begin: '\\(',
             end: '\\)'
         },
-        _ = {
+        p = {
             endsWithParent: !0,
             relevance: 0
         },
@@ -47,19 +47,18 @@ function t(e) {
             relevance: 0,
             keywords: r,
             begin: n,
-            starts: _
+            starts: p
         },
-        m = [p, a, u, d, s, f, c, o, l, i];
+        m = [_, a, u, d, s, f, c, o, l, i];
     return (
-        (p.contains = [e.COMMENT('comment', ''), h, _]),
-        (_.contains = m),
+        (_.contains = [e.COMMENT('comment', ''), h, p]),
+        (p.contains = m),
         (c.contains = m),
         {
             name: 'Hy',
             aliases: ['hylang'],
             illegal: /\S/,
-            contains: [e.SHEBANG(), p, a, u, d, s, f, c, o, l]
+            contains: [e.SHEBANG(), _, a, u, d, s, f, c, o, l]
         }
     );
-}
-e.exports = t;
+};

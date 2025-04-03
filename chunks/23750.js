@@ -1,6 +1,6 @@
 n.d(t, {
     Hx: () => E,
-    ZP: () => v,
+    ZP: () => y,
     pi: () => g
 }),
     n(789020),
@@ -73,7 +73,7 @@ class g extends i.Z {
     }
     constructor(e) {
         var t, n, r, i, o, a, s, l, c, u, d, p, h;
-        super(), _(this, 'type', void 0), _(this, 'content', void 0), _(this, 'attachments', void 0), _(this, 'embeds', void 0), _(this, 'timestamp', void 0), _(this, 'editedTimestamp', void 0), _(this, 'flags', void 0), _(this, 'components', void 0), _(this, 'codedLinks', void 0), _(this, 'stickers', void 0), _(this, 'stickerItems', void 0), _(this, 'soundboardSounds', void 0), (this.type = null !== (t = e.type) && void 0 !== t ? t : f.uaV.DEFAULT), (this.content = null !== (n = e.content) && void 0 !== n ? n : ''), (this.attachments = null !== (r = e.attachments) && void 0 !== r ? r : []), (this.embeds = null !== (i = e.embeds) && void 0 !== i ? i : []), (this.timestamp = null !== (o = e.timestamp) && void 0 !== o ? o : new Date()), (this.editedTimestamp = null !== (a = e.editedTimestamp) && void 0 !== a ? a : null), (this.flags = null !== (s = e.flags) && void 0 !== s ? s : 0), (this.components = null !== (l = e.components) && void 0 !== l ? l : []), (this.codedLinks = null !== (c = e.codedLinks) && void 0 !== c ? c : []), (this.stickers = null !== (u = e.stickers) && void 0 !== u ? u : []), (this.stickerItems = null !== (p = null !== (d = e.sticker_items) && void 0 !== d ? d : e.stickerItems) && void 0 !== p ? p : []), (this.soundboardSounds = null !== (h = e.soundboard_sounds) && void 0 !== h ? h : e.soundboardSounds);
+        super(), _(this, 'type', void 0), _(this, 'content', void 0), _(this, 'attachments', void 0), _(this, 'embeds', void 0), _(this, 'timestamp', void 0), _(this, 'editedTimestamp', void 0), _(this, 'flags', void 0), _(this, 'components', void 0), _(this, 'codedLinks', void 0), _(this, 'stickers', void 0), _(this, 'stickerItems', void 0), _(this, 'soundboardSounds', void 0), (this.type = null != (t = e.type) ? t : f.uaV.DEFAULT), (this.content = null != (n = e.content) ? n : ''), (this.attachments = null != (r = e.attachments) ? r : []), (this.embeds = null != (i = e.embeds) ? i : []), (this.timestamp = null != (o = e.timestamp) ? o : new Date()), (this.editedTimestamp = null != (a = e.editedTimestamp) ? a : null), (this.flags = null != (s = e.flags) ? s : 0), (this.components = null != (l = e.components) ? l : []), (this.codedLinks = null != (c = e.codedLinks) ? c : []), (this.stickers = null != (u = e.stickers) ? u : []), (this.stickerItems = null != (p = null != (d = e.sticker_items) ? d : e.stickerItems) ? p : []), (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds);
     }
 }
 class E extends i.Z {
@@ -98,7 +98,7 @@ class b extends g {
     getContentMessage() {
         if ((0, a.Z)(this)) {
             var e;
-            return null === (e = this.messageSnapshots[0]) || void 0 === e ? void 0 : e.message;
+            return null == (e = this.messageSnapshots[0]) ? void 0 : e.message;
         }
         return this;
     }
@@ -113,7 +113,7 @@ class b extends g {
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.O.NORMAL,
             i = -1,
             a = this.reactions.map((a, c) => {
-                if ((0, l.ir)(a.emoji, e)) {
+                if ((0, l.ir)(a.emoji, e))
                     if (((i = c), r === s.O.BURST)) {
                         if (t && a.me) return a;
                         let e = t && a.me_burst ? a.burst_count : a.burst_count + 1,
@@ -130,7 +130,7 @@ class b extends g {
                         });
                     } else if (r === s.O.VOTE) {
                         var u, f;
-                        let e = null !== (f = null === (u = a.count_details) || void 0 === u ? void 0 : u.vote) && void 0 !== f ? f : 0,
+                        let e = null != (f = null == (u = a.count_details) ? void 0 : u.vote) ? f : 0,
                             n = t && a.me_vote ? e : e + 1;
                         a = m(p({}, a), {
                             count_details: m(p({}, a.count_details), { vote: n }),
@@ -145,7 +145,6 @@ class b extends g {
                             me: !!t || a.me
                         });
                     }
-                }
                 return a;
             });
         return (
@@ -219,7 +218,7 @@ class b extends g {
                         });
                     } else if (a === s.O.VOTE) {
                         var r, i;
-                        let e = null !== (i = null === (r = t.count_details) || void 0 === r ? void 0 : r.vote) && void 0 !== i ? i : 0,
+                        let e = null != (i = null == (r = t.count_details) ? void 0 : r.vote) ? i : 0,
                             n = o && !t.me_vote ? e : e - 1;
                         t = m(p({}, t), {
                             count_details: m(p({}, t.count_details), { vote: n }),
@@ -237,10 +236,10 @@ class b extends g {
                 }
                 return t;
             }),
-            { count: d, burst_count: f, count_details: _ } = null !== (t = u[c]) && void 0 !== t ? t : {},
-            h = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
-            g = null !== (r = null == _ ? void 0 : _.burst) && void 0 !== r ? r : 0,
-            E = null !== (i = null == _ ? void 0 : _.vote) && void 0 !== i ? i : 0;
+            { count: d, burst_count: f, count_details: _ } = null != (t = u[c]) ? t : {},
+            h = null != (n = null == _ ? void 0 : _.normal) ? n : 0,
+            g = null != (r = null == _ ? void 0 : _.burst) ? r : 0,
+            E = null != (i = null == _ ? void 0 : _.vote) ? i : 0;
         return -1 !== c && d <= 0 && f <= 0 && h <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set('reactions', u);
     }
     removeReactionsForEmoji(e) {
@@ -260,7 +259,7 @@ class b extends g {
     }
     hasPotions() {
         var e, t;
-        return (null !== (t = null === (e = this.potions) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0;
+        return (null != (t = null == (e = this.potions) ? void 0 : e.length) ? t : 0) > 0;
     }
     isComponentsV2() {
         return (0, u.yE)(this.flags, f.iLy.IS_COMPONENTS_V2);
@@ -271,8 +270,8 @@ class b extends g {
     canDeleteOwnMessage(e) {
         var t, n, i;
         if (this.author.id === e) return !0;
-        let o = null !== (i = null === (t = this.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners) && void 0 !== i ? i : {};
-        return (null === (n = this.interactionMetadata) || void 0 === n ? void 0 : n.user.id) === e && 1 === Object.keys(o).length && r.Y.USER_INSTALL in o;
+        let o = null != (i = null == (t = this.interactionMetadata) ? void 0 : t.authorizing_integration_owners) ? i : {};
+        return (null == (n = this.interactionMetadata) ? void 0 : n.user.id) === e && 1 === Object.keys(o).length && r.Y.USER_INSTALL in o;
     }
     toJS() {
         return m(p({}, this), {
@@ -286,7 +285,7 @@ class b extends g {
     }
     constructor(e) {
         var t, n;
-        super(e), _(this, 'id', void 0), _(this, 'channel_id', void 0), _(this, 'author', void 0), _(this, 'bot', void 0), _(this, 'customRenderedContent', void 0), _(this, 'pinned', void 0), _(this, 'mentions', void 0), _(this, 'mentionRoles', void 0), _(this, 'mentionChannels', void 0), _(this, 'mentionEveryone', void 0), _(this, 'mentioned', void 0), _(this, 'tts', void 0), _(this, 'giftCodes', void 0), _(this, 'state', void 0), _(this, 'nonce', void 0), _(this, 'blocked', void 0), _(this, 'ignored', void 0), _(this, 'call', void 0), _(this, 'webhookId', void 0), _(this, 'reactions', void 0), _(this, 'applicationId', void 0), _(this, 'application', void 0), _(this, 'activity', void 0), _(this, 'activityInstance', void 0), _(this, 'interaction', void 0), _(this, 'interactionData', void 0), _(this, 'interactionMetadata', void 0), _(this, 'interactionError', void 0), _(this, 'messageReference', void 0), _(this, 'isSearchHit', void 0), _(this, 'roleSubscriptionData', void 0), _(this, 'purchaseNotification', void 0), _(this, 'poll', void 0), _(this, 'potions', void 0), _(this, 'loggingName', void 0), _(this, 'referralTrialOfferId', void 0), _(this, 'giftInfo', void 0), _(this, 'giftingPrompt', void 0), _(this, 'messageSnapshots', void 0), _(this, 'isUnsupported', void 0), _(this, 'changelogId', void 0), _(this, 'colorString', void 0), _(this, 'nick', void 0), (this.id = e.id), (this.channel_id = e.channel_id), (this.author = e.author), (this.customRenderedContent = e.customRenderedContent), (this.mentions = e.mentions || []), (this.mentionRoles = e.mentionRoles || []), (this.mentionChannels = e.mentionChannels || []), (this.mentioned = e.mentioned || !1), (this.pinned = e.pinned || !1), (this.mentionEveryone = e.mentionEveryone || !1), (this.tts = e.tts || !1), (this.giftCodes = e.giftCodes || []), (this.state = e.state || f.yb.SENT), (this.nonce = e.nonce || null), (this.blocked = e.blocked || !1), (this.ignored = e.ignored || !1), (this.call = e.call || null), (this.bot = e.bot || !1), (this.webhookId = e.webhookId || null), (this.reactions = e.reactions || []), (this.applicationId = e.application_id || e.applicationId || null), (this.application = e.application || null), (this.activity = e.activity || null), (this.activityInstance = e.activity_instance || e.activityInstance || null), (this.messageReference = e.messageReference || null), (this.isSearchHit = e.hit || e.isSearchHit || !1), (this.loggingName = e.loggingName || null), (this.colorString = e.colorString), (this.nick = e.nick), (this.interaction = e.interaction || null), (this.interactionData = e.interactionData || null), (this.interactionMetadata = e.interactionMetadata || null), (this.interactionError = e.interactionError || null), (this.roleSubscriptionData = e.roleSubscriptionData), (this.purchaseNotification = e.purchaseNotification), (this.poll = e.poll), (this.potions = e.potions), (this.referralTrialOfferId = e.referralTrialOfferId || null), (this.giftInfo = null !== (t = e.gift_info) && void 0 !== t ? t : e.giftInfo), (this.giftingPrompt = e.giftingPrompt || null), (this.messageSnapshots = e.messageSnapshots || []), (this.isUnsupported = e.isUnsupported || !1), (this.changelogId = null !== (n = e.changelog_id) && void 0 !== n ? n : e.changelogId || null);
+        super(e), _(this, 'id', void 0), _(this, 'channel_id', void 0), _(this, 'author', void 0), _(this, 'bot', void 0), _(this, 'customRenderedContent', void 0), _(this, 'pinned', void 0), _(this, 'mentions', void 0), _(this, 'mentionRoles', void 0), _(this, 'mentionChannels', void 0), _(this, 'mentionEveryone', void 0), _(this, 'mentioned', void 0), _(this, 'tts', void 0), _(this, 'giftCodes', void 0), _(this, 'state', void 0), _(this, 'nonce', void 0), _(this, 'blocked', void 0), _(this, 'ignored', void 0), _(this, 'call', void 0), _(this, 'webhookId', void 0), _(this, 'reactions', void 0), _(this, 'applicationId', void 0), _(this, 'application', void 0), _(this, 'activity', void 0), _(this, 'activityInstance', void 0), _(this, 'interaction', void 0), _(this, 'interactionData', void 0), _(this, 'interactionMetadata', void 0), _(this, 'interactionError', void 0), _(this, 'messageReference', void 0), _(this, 'isSearchHit', void 0), _(this, 'roleSubscriptionData', void 0), _(this, 'purchaseNotification', void 0), _(this, 'poll', void 0), _(this, 'potions', void 0), _(this, 'loggingName', void 0), _(this, 'referralTrialOfferId', void 0), _(this, 'giftInfo', void 0), _(this, 'giftingPrompt', void 0), _(this, 'messageSnapshots', void 0), _(this, 'isUnsupported', void 0), _(this, 'changelogId', void 0), _(this, 'chatWallpaperInfo', void 0), _(this, 'colorString', void 0), _(this, 'nick', void 0), (this.id = e.id), (this.channel_id = e.channel_id), (this.author = e.author), (this.customRenderedContent = e.customRenderedContent), (this.mentions = e.mentions || []), (this.mentionRoles = e.mentionRoles || []), (this.mentionChannels = e.mentionChannels || []), (this.mentioned = e.mentioned || !1), (this.pinned = e.pinned || !1), (this.mentionEveryone = e.mentionEveryone || !1), (this.tts = e.tts || !1), (this.giftCodes = e.giftCodes || []), (this.state = e.state || f.yb.SENT), (this.nonce = e.nonce || null), (this.blocked = e.blocked || !1), (this.ignored = e.ignored || !1), (this.call = e.call || null), (this.bot = e.bot || !1), (this.webhookId = e.webhookId || null), (this.reactions = e.reactions || []), (this.applicationId = e.application_id || e.applicationId || null), (this.application = e.application || null), (this.activity = e.activity || null), (this.activityInstance = e.activity_instance || e.activityInstance || null), (this.messageReference = e.messageReference || null), (this.isSearchHit = e.hit || e.isSearchHit || !1), (this.loggingName = e.loggingName || null), (this.colorString = e.colorString), (this.nick = e.nick), (this.interaction = e.interaction || null), (this.interactionData = e.interactionData || null), (this.interactionMetadata = e.interactionMetadata || null), (this.interactionError = e.interactionError || null), (this.roleSubscriptionData = e.roleSubscriptionData), (this.purchaseNotification = e.purchaseNotification), (this.poll = e.poll), (this.potions = e.potions), (this.referralTrialOfferId = e.referralTrialOfferId || null), (this.giftInfo = null != (t = e.gift_info) ? t : e.giftInfo), (this.giftingPrompt = e.giftingPrompt || null), (this.messageSnapshots = e.messageSnapshots || []), (this.isUnsupported = e.isUnsupported || !1), (this.changelogId = null != (n = e.changelog_id) ? n : e.changelogId || null), (this.chatWallpaperInfo = e.chatWallpaperInfo || null);
     }
 }
-let v = b;
+let y = b;

@@ -27,8 +27,8 @@ var r = n(192379),
                 attributes: {}
             }),
             f = d[0],
-            p = d[1],
-            _ = r.useMemo(function () {
+            _ = d[1],
+            p = r.useMemo(function () {
                 return {
                     name: 'updateState',
                     enabled: !0,
@@ -37,7 +37,7 @@ var r = n(192379),
                         var t = e.state,
                             n = Object.keys(t.elements);
                         i.flushSync(function () {
-                            p({
+                            _({
                                 styles: (0, l.sq)(
                                     n.map(function (e) {
                                         return [e, t.styles[e] || {}];
@@ -61,7 +61,7 @@ var r = n(192379),
                         placement: u.placement,
                         strategy: u.strategy,
                         modifiers: [].concat(u.modifiers, [
-                            _,
+                            p,
                             {
                                 name: 'applyStyles',
                                 enabled: !1
@@ -70,7 +70,7 @@ var r = n(192379),
                     };
                     return s()(a.current, e) ? a.current || e : ((a.current = e), e);
                 },
-                [u.onFirstUpdate, u.placement, u.strategy, u.modifiers, _]
+                [u.onFirstUpdate, u.placement, u.strategy, u.modifiers, p]
             ),
             m = r.useRef();
         return (
@@ -83,11 +83,12 @@ var r = n(192379),
             (0, l.LI)(
                 function () {
                     if (null != e && null != t) {
-                        var r = (n.createPopper || o.fi)(e, t, h);
+                        var r = n.createPopper || o.fi,
+                            i = r(e, t, h);
                         return (
-                            (m.current = r),
+                            (m.current = i),
                             function () {
-                                r.destroy(), (m.current = null);
+                                i.destroy(), (m.current = null);
                             }
                         );
                     }

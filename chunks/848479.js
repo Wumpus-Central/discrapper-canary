@@ -20,35 +20,32 @@ let l = new r.Yd('ProcessUtilsElectron');
 class c extends o.h {
     setupReportingTimer() {
         var e, t;
-        let n = null === i.Z || void 0 === i.Z ? void 0 : null === (e = i.Z.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
-        if (null == n) {
-            l.log('setMemoryInformation not available.');
-            return;
-        }
+        let n = null === i.Z || void 0 === i.Z || null == (e = i.Z.processUtils) ? void 0 : e.setMemoryInformation;
+        if (null == n) return void l.log('setMemoryInformation not available.');
         function r(e) {
             return Math.ceil(e / 1024);
         }
-        (null === (t = performance.memory) || void 0 === t ? void 0 : t.usedJSHeapSize) == null && l.error('usedJSHeapSize is not available.'),
+        (null == (t = performance.memory) ? void 0 : t.usedJSHeapSize) == null && l.error('usedJSHeapSize is not available.'),
             setInterval(() => {
                 var e, t, i;
-                let o = null !== (t = null === (e = performance.memory) || void 0 === e ? void 0 : e.usedJSHeapSize) && void 0 !== t ? t : 0;
+                let o = null != (t = null == (e = performance.memory) ? void 0 : e.usedJSHeapSize) ? t : 0;
                 n({
-                    memoryUsageKB: null !== (i = this.lastMemoryUsageKB) && void 0 !== i ? i : 0,
+                    memoryUsageKB: null != (i = this.lastMemoryUsageKB) ? i : 0,
                     usedJSHeapSizeKB: r(o)
                 });
             }, 10000);
     }
     getProcessUptime() {
         var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getProcessUptime) || void 0 === e ? void 0 : e.call(t);
+        return null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getProcessUptime) ? void 0 : e.call(t);
     }
     getCurrentCPUUsagePercent() {
         var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(t);
+        return null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getCurrentCPUUsagePercent) ? void 0 : e.call(t);
     }
     getCumulativeCPUUsage() {
         var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(t);
+        return null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getCumulativeCPUUsage) ? void 0 : e.call(t);
     }
     getCurrentMemoryUsageKB() {
         let e = c.getCurrentMemoryUsageKBCore();
@@ -76,11 +73,11 @@ class c extends o.h {
     }
     getMemoryUsageElectronRendererUsedHeapSize() {
         var e, t;
-        return null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getUsedHeapSize) || void 0 === e ? void 0 : e.call(t);
+        return null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getUsedHeapSize) ? void 0 : e.call(t);
     }
     constructor() {
         var e, t;
-        super(), s(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === i.Z || void 0 === i.Z ? void 0 : null === (t = i.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t)), this.setupReportingTimer();
+        super(), s(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getCPUCoreCount) ? void 0 : e.call(t)), this.setupReportingTimer();
     }
 }
 let u = new c();

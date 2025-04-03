@@ -1,5 +1,5 @@
 var r = n(158698);
-function i(e, t) {
+e.exports = function (e, t) {
     if (e !== t) {
         var n = void 0 !== e,
             i = null === e,
@@ -13,5 +13,4 @@ function i(e, t) {
         if ((!i && !a && !u && e < t) || (u && n && o && !i && !a) || (l && n && o) || (!s && o) || !c) return -1;
     }
     return 0;
-}
-e.exports = i;
+};

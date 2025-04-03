@@ -9,7 +9,7 @@ function o(e) {
     }),
     e.fields)) {
         let e = n.localName;
-        if (!n.opt) {
+        if (!n.opt)
             if (n.oneof) t[n.oneof] = { oneofKind: void 0 };
             else if (n.repeat) t[e] = [];
             else
@@ -23,7 +23,6 @@ function o(e) {
                     case 'map':
                         t[e] = {};
                 }
-        }
     }
     return t;
 }

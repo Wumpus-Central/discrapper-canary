@@ -15,25 +15,22 @@ function h(e, t) {
     let n = c.ZP.getSelfEmbeddedActivityForLocation(t);
     if (null == n) return;
     let h = i.Z.getApplication(n.applicationId),
-        g = (0, d.pY)(n.location),
-        m = (0, u.ZP)({
+        m = (0, d.pY)(n.location),
+        g = (0, u.ZP)({
             application: h,
-            channelId: g
+            channelId: m
         });
-    if (null != m) {
-        (0, a.Z)(m);
-        return;
-    }
-    null != g &&
-        ((0, s.uL)(p.Z5c.CHANNEL(e, g)),
-        (0, f.Z)(g)
+    if (null != g) return void (0, a.Z)(g);
+    null != m &&
+        ((0, s.uL)(p.Z5c.CHANNEL(e, m)),
+        (0, f.Z)(m)
             ? (r.Z.selectParticipant(
-                  g,
+                  m,
                   (0, o.gN)({
                       applicationId: n.applicationId,
                       instanceId: null == n ? void 0 : n.compositeInstanceId
                   })
               ),
-              r.Z.updateLayout(g, p.AEg.NO_CHAT))
+              r.Z.updateLayout(m, p.AEg.NO_CHAT))
             : (0, l.tg)(_.Ez.PANEL));
 }

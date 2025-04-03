@@ -8,8 +8,7 @@ function i(e) {
     let t = {};
     if (e) {
         var n;
-        null === (n = r.Children.map(e, (e) => e)) ||
-            void 0 === n ||
+        null == (n = r.Children.map(e, (e) => e)) ||
             n.forEach((e) => {
                 let n = e.key;
                 null != n && (t[n] = e);

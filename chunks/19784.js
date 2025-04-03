@@ -1,9 +1,10 @@
 n.d(t, { V: () => o });
-var r = n(239189);
-n(444675);
-var i = function (e) {
-        return (0, r.requestAnimationFrame)(e);
-    },
+var r = n(239189),
+    i =
+        (n(444675),
+        function (e) {
+            return (0, r.requestAnimationFrame)(e);
+        }),
     o = (function () {
         return function (e) {
             void 0 === e && (e = i);
@@ -23,16 +24,16 @@ var i = function (e) {
                         })),
                         s.splice(~t ? t : s.length, 0, e));
                 },
-                p = function () {
+                _ = function () {
                     if (!t)
                         try {
-                            m(), e(p);
+                            m(), e(_);
                         } catch (e) {
                             console.error(e);
                         }
                 },
-                _ = function () {
-                    t && ((t = !1), 0 == o && ((o = r.now()), e(p)));
+                p = function () {
+                    t && ((t = !1), 0 == o && ((o = r.now()), e(_)));
                 },
                 h = [];
             this.setTimeout = function (e, t) {
@@ -51,7 +52,7 @@ var i = function (e) {
                         handler: e,
                         cancel: i
                     };
-                return h.splice(o, 0, s), _(), s;
+                return h.splice(o, 0, s), p(), s;
             };
             var m = (this.advance = function () {
                 var e = r.now();
@@ -93,10 +94,10 @@ var i = function (e) {
                 }
             });
             (this.start = function (e) {
-                l > e.priority ? c.add(e) : (f(e), _());
+                l > e.priority ? c.add(e) : (f(e), p());
             }),
                 (this.onFrame = function (e) {
-                    u.add(e), _();
+                    u.add(e), p();
                 }),
                 (this.onWrite = function (e) {
                     n ? e(o) : d.add(e);

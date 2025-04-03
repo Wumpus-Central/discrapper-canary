@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             keyword: 'in of on if for while finally var new function do return void else break catch instanceof with throw case default try this switch continue typeof delete let yield const export super debugger as async await import',
@@ -132,5 +132,4 @@ function t(e) {
         ],
         illegal: /#/
     };
-}
-e.exports = t;
+};

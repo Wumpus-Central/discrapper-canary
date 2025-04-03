@@ -1,11 +1,11 @@
-n.d(t, { l: () => _ }), n(47120);
+n.d(t, { l: () => p }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(846519),
     l = n(186325),
-    c = n(630501);
+    c = n(954332);
 let u = 200;
 var d = (function (e) {
     return (e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE'), e;
@@ -15,7 +15,7 @@ let f = Object.freeze({
         2: c.scale,
         3: c.fade
     }),
-    p = Object.freeze({
+    _ = Object.freeze({
         top: c.animatorTop,
         bottom: c.animatorBottom,
         left: c.animatorLeft,
@@ -23,24 +23,23 @@ let f = Object.freeze({
         center: c.animatorCenter,
         window_center: c.animatorCenter
     });
-function _(e) {
+function p(e) {
     let { position: t, type: n, children: o } = e,
         { reducedMotion: d } = i.useContext(l.S),
-        _ = d.enabled ? 3 : n,
+        p = d.enabled ? 3 : n,
         [h, m] = i.useState(null != t),
         [g] = i.useState(() => new s.V7()),
-        [E, v] = i.useState(!0),
-        b = i.useRef(null);
+        [E, b] = i.useState(!0),
+        y = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
             var e;
-            null === (e = b.current) ||
-                void 0 === e ||
+            null == (e = y.current) ||
                 e.addEventListener('transitionend', () => {
-                    v(!1);
+                    b(!1);
                 }),
                 setTimeout(() => {
-                    v(!1);
+                    b(!1);
                 }, u);
         }, []),
         i.useEffect(() => () => g.stop(), [g]),
@@ -49,12 +48,12 @@ function _(e) {
         }, [t, g]),
         (0, r.jsx)('div', {
             'data-popout-animating': E,
-            className: a()(null != t ? p[t] : null, {
-                [f[_]]: null != t,
+            className: a()(null != t ? _[t] : null, {
+                [f[p]]: null != t,
                 [c.didRender]: h
             }),
             children: o
         })
     );
 }
-_.Types = d;
+p.Types = d;

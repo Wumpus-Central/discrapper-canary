@@ -1,4 +1,3 @@
-function t() {
+e.exports = function () {
     return !1;
-}
-e.exports = t;
+};

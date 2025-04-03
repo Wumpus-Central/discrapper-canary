@@ -13,14 +13,11 @@ function a(e, t) {
         i = r(e, t);
     if (null != i) {
         var a;
-        null === (a = o.get(e)) || void 0 === a || a.push(i);
+        null == (a = o.get(e)) || a.push(i);
     }
 }
 function s() {
-    if (!(0, i.A)()) {
-        o.clear();
-        return;
-    }
+    if (!(0, i.A)()) return void o.clear();
     let { default: e } = n(672513);
     for (let [t, n] of o) r.default.track(t, e(t, n));
     o.clear();

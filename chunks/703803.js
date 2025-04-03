@@ -1,0 +1,21 @@
+e.exports = {
+    spoilerMarkdownContent: 'spoilerMarkdownContent__54ab5',
+    spoilerContent: 'spoilerContent__54ab5',
+    hidden: 'hidden__54ab5',
+    opaque: 'opaque__54ab5',
+    spoilerContainer: 'spoilerContainer__54ab5',
+    embedContainer: 'embedContainer__54ab5',
+    attachmentContainer: 'attachmentContainer__54ab5',
+    hiddenSpoiler: 'hiddenSpoiler__54ab5',
+    spoilerInnerContainer: 'spoilerInnerContainer__54ab5',
+    obscureWarning: 'obscureWarning__54ab5',
+    constrainedObscureContent: 'constrainedObscureContent__54ab5',
+    explicitContentWarning: 'explicitContentWarning__54ab5 obscureWarning__54ab5',
+    explicitContentWarningText: 'explicitContentWarningText__54ab5',
+    spoilerWarning: 'spoilerWarning__54ab5 obscureWarning__54ab5',
+    embed: 'embed__54ab5',
+    obscuredTextContent: 'obscuredTextContent__54ab5',
+    obscuredTextContentInner: 'obscuredTextContentInner__54ab5',
+    obscureButtonContainer: 'obscureButtonContainer__54ab5',
+    obscureHoverButton: 'obscureHoverButton__54ab5'
+};

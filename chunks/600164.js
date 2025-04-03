@@ -3,8 +3,8 @@ var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(963345),
-    l = n(968693);
+    s = n(794913),
+    l = n(893354);
 function c(e, t, n) {
     return (
         t in e
@@ -57,18 +57,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,32 +101,9 @@ let h = {
         WRAP: l.wrap,
         WRAP_REVERSE: l.wrapReverse
     },
-    v = (e) => {
-        var { children: t, className: n, shrink: o = 1, grow: l = 1, basis: c = 'auto', style: d, wrap: _ = !1 } = e,
-            h = p(e, ['children', 'className', 'shrink', 'grow', 'basis', 'style', 'wrap']);
-        let m = u(
-            {
-                className: (n = null != n ? n : s.flexChild),
-                style: u(
-                    {
-                        flexGrow: l,
-                        flexShrink: o,
-                        flexBasis: c
-                    },
-                    d
-                )
-            },
-            h
-        );
-        if (!_ && 'string' != typeof t && 1 === i.Children.count(t)) {
-            let e = i.Children.only(t);
-            return (m.style = u({}, m.style, e.props.style)), (m.className = a()(e.props.className, n)), i.cloneElement(e, m);
-        }
-        return (0, r.jsx)('div', f(u({}, m), { children: t }));
-    },
     b = (e) => {
-        var { children: t, className: n, direction: i = h.HORIZONTAL, justify: o = m.START, align: l = g.STRETCH, wrap: c = E.NO_WRAP, shrink: d = 1, grow: _ = 1, basis: v = 'auto', style: b } = e,
-            y = p(e, ['children', 'className', 'direction', 'justify', 'align', 'wrap', 'shrink', 'grow', 'basis', 'style']);
+        var { children: t, className: n, direction: i = h.HORIZONTAL, justify: o = m.START, align: l = g.STRETCH, wrap: c = E.NO_WRAP, shrink: d = 1, grow: p = 1, basis: b = 'auto', style: y } = e,
+            v = _(e, ['children', 'className', 'direction', 'justify', 'align', 'wrap', 'shrink', 'grow', 'basis', 'style']);
         return (0, r.jsx)(
             'div',
             f(
@@ -135,18 +112,44 @@ let h = {
                         style: u(
                             {
                                 flexShrink: d,
-                                flexGrow: _,
-                                flexBasis: v
+                                flexGrow: p,
+                                flexBasis: b
                             },
-                            b
+                            y
                         ),
                         className: a()(s.flex, i, o, l, c, n)
                     },
-                    y
+                    v
                 ),
                 { children: t }
             )
         );
     };
-(b.Child = v), (b.Direction = h), (b.Align = g), (b.Justify = m), (b.Wrap = E);
+(b.Child = (e) => {
+    var { children: t, className: n, shrink: o = 1, grow: l = 1, basis: c = 'auto', style: d, wrap: p = !1 } = e,
+        h = _(e, ['children', 'className', 'shrink', 'grow', 'basis', 'style', 'wrap']);
+    let m = u(
+        {
+            className: (n = null != n ? n : s.flexChild),
+            style: u(
+                {
+                    flexGrow: l,
+                    flexShrink: o,
+                    flexBasis: c
+                },
+                d
+            )
+        },
+        h
+    );
+    if (!p && 'string' != typeof t && 1 === i.Children.count(t)) {
+        let e = i.Children.only(t);
+        return (m.style = u({}, m.style, e.props.style)), (m.className = a()(e.props.className, n)), i.cloneElement(e, m);
+    }
+    return (0, r.jsx)('div', f(u({}, m), { children: t }));
+}),
+    (b.Direction = h),
+    (b.Align = g),
+    (b.Justify = m),
+    (b.Wrap = E);
 let y = b;

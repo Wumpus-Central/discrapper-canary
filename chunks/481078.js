@@ -13,10 +13,7 @@ class s extends Error {
 }
 function l(e, t, n, a, u, d = {}, f, _) {
     var p;
-    if (1 === t.length && 'string' == typeof t[0]) {
-        e.pushLiteralText(t[0]);
-        return;
-    }
+    if (1 === t.length && 'string' == typeof t[0]) return void e.pushLiteralText(t[0]);
     let h = 0;
     for (let m of t) {
         if ('string' == typeof m) {
@@ -53,7 +50,7 @@ function l(e, t, n, a, u, d = {}, f, _) {
             case i.FormatJsNodeType.Number: {
                 let t = m[2],
                     n = t in u.number ? u.number[t] : null != t ? (0, r.parseNumberSkeleton)((0, r.parseNumberSkeletonFromString)(t)) : void 0,
-                    i = 'number' != typeof E ? E : E * (null !== (p = null == n ? void 0 : n.scale) && void 0 !== p ? p : 1);
+                    i = 'number' != typeof E ? E : E * (null != (p = null == n ? void 0 : n.scale) ? p : 1);
                 e.pushLiteralText(a.formatNumber(i, n));
                 break;
             }
@@ -85,7 +82,7 @@ function l(e, t, n, a, u, d = {}, f, _) {
                     o = (() => {
                         var e;
                         let n = `=${E}`;
-                        return n in t ? t[n] : null !== (e = t[a.getPluralRules({ type: i }).select(E - (null != r ? r : 0))]) && void 0 !== e ? e : t.other;
+                        return n in t ? t[n] : null != (e = t[a.getPluralRules({ type: i }).select(E - (null != r ? r : 0))]) ? e : t.other;
                     })();
                 if (null == o) throw `${E} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(', ')}`;
                 l(e, o, n, a, u, d, E - (null != r ? r : 0));

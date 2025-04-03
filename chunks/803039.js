@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /(?![A-Za-z0-9])(?![$])/,
         r = t.concat(/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/, n),
@@ -53,8 +53,8 @@ function t(e) {
             begin: /<<<[ \t]*'(\w+)'\n/,
             end: /[ \t]*(\w+)\b/
         }),
-        p = '[ \t\n]',
-        _ = {
+        _ = '[ \t\n]',
+        p = {
             scope: 'string',
             variants: [u, c, d, f]
         },
@@ -66,7 +66,7 @@ function t(e) {
         m = ['false', 'null', 'true'],
         g = ['__CLASS__', '__DIR__', '__FILE__', '__FUNCTION__', '__COMPILER_HALT_OFFSET__', '__LINE__', '__METHOD__', '__NAMESPACE__', '__TRAIT__', 'die', 'echo', 'exit', 'include', 'include_once', 'print', 'require', 'require_once', 'array', 'abstract', 'and', 'as', 'binary', 'bool', 'boolean', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'do', 'double', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'enum', 'eval', 'extends', 'final', 'finally', 'float', 'for', 'foreach', 'from', 'global', 'goto', 'if', 'implements', 'instanceof', 'insteadof', 'int', 'integer', 'interface', 'isset', 'iterable', 'list', 'match|0', 'mixed', 'new', 'never', 'object', 'or', 'private', 'protected', 'public', 'readonly', 'real', 'return', 'string', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'void', 'while', 'xor', 'yield'],
         E = ['Error|0', 'AppendIterator', 'ArgumentCountError', 'ArithmeticError', 'ArrayIterator', 'ArrayObject', 'AssertionError', 'BadFunctionCallException', 'BadMethodCallException', 'CachingIterator', 'CallbackFilterIterator', 'CompileError', 'Countable', 'DirectoryIterator', 'DivisionByZeroError', 'DomainException', 'EmptyIterator', 'ErrorException', 'Exception', 'FilesystemIterator', 'FilterIterator', 'GlobIterator', 'InfiniteIterator', 'InvalidArgumentException', 'IteratorIterator', 'LengthException', 'LimitIterator', 'LogicException', 'MultipleIterator', 'NoRewindIterator', 'OutOfBoundsException', 'OutOfRangeException', 'OuterIterator', 'OverflowException', 'ParentIterator', 'ParseError', 'RangeException', 'RecursiveArrayIterator', 'RecursiveCachingIterator', 'RecursiveCallbackFilterIterator', 'RecursiveDirectoryIterator', 'RecursiveFilterIterator', 'RecursiveIterator', 'RecursiveIteratorIterator', 'RecursiveRegexIterator', 'RecursiveTreeIterator', 'RegexIterator', 'RuntimeException', 'SeekableIterator', 'SplDoublyLinkedList', 'SplFileInfo', 'SplFileObject', 'SplFixedArray', 'SplHeap', 'SplMaxHeap', 'SplMinHeap', 'SplObjectStorage', 'SplObserver', 'SplPriorityQueue', 'SplQueue', 'SplStack', 'SplSubject', 'SplTempFileObject', 'TypeError', 'UnderflowException', 'UnexpectedValueException', 'UnhandledMatchError', 'ArrayAccess', 'BackedEnum', 'Closure', 'Fiber', 'Generator', 'Iterator', 'IteratorAggregate', 'Serializable', 'Stringable', 'Throwable', 'Traversable', 'UnitEnum', 'WeakReference', 'WeakMap', 'Directory', '__PHP_Incomplete_Class', 'parent', 'php_user_filter', 'self', 'static', 'stdClass'],
-        v = {
+        b = {
             keyword: g,
             literal: ((e) => {
                 let t = [];
@@ -79,11 +79,11 @@ function t(e) {
             })(m),
             built_in: E
         },
-        b = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
-        y = {
+        y = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
+        v = {
             variants: [
                 {
-                    match: [/new/, t.concat(p, '+'), t.concat('(?!', b(E).join('\\b|'), '\\b)'), i],
+                    match: [/new/, t.concat(_, '+'), t.concat('(?!', y(E).join('\\b|'), '\\b)'), i],
                     scope: {
                         1: 'keyword',
                         4: 'title.class'
@@ -92,7 +92,7 @@ function t(e) {
             ]
         },
         O = t.concat(r, '\\b(?!\\()'),
-        S = {
+        I = {
             variants: [
                 {
                     match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), O],
@@ -122,7 +122,7 @@ function t(e) {
                 }
             ]
         },
-        I = {
+        S = {
             scope: 'attr',
             match: t.concat(r, t.lookahead(':'), t.lookahead(/(?!::)/))
         },
@@ -130,17 +130,17 @@ function t(e) {
             relevance: 0,
             begin: /\(/,
             end: /\)/,
-            keywords: v,
-            contains: [I, a, S, e.C_BLOCK_COMMENT_MODE, _, h, y]
+            keywords: b,
+            contains: [S, a, I, e.C_BLOCK_COMMENT_MODE, p, h, v]
         },
         N = {
             relevance: 0,
-            match: [/\b/, t.concat('(?!fn\\b|function\\b|', b(g).join('\\b|'), '|', b(E).join('\\b|'), '\\b)'), r, t.concat(p, '*'), t.lookahead(/(?=\()/)],
+            match: [/\b/, t.concat('(?!fn\\b|function\\b|', y(g).join('\\b|'), '|', y(E).join('\\b|'), '\\b)'), r, t.concat(_, '*'), t.lookahead(/(?=\()/)],
             scope: { 3: 'title.function.invoke' },
             contains: [T]
         };
     T.contains.push(N);
-    let A = [I, S, e.C_BLOCK_COMMENT_MODE, _, h, y],
+    let A = [S, I, e.C_BLOCK_COMMENT_MODE, p, h, v],
         C = {
             begin: t.concat(/#\[\s*\\?/, t.either(i, o)),
             beginScope: 'meta',
@@ -169,7 +169,7 @@ function t(e) {
         };
     return {
         case_insensitive: !1,
-        keywords: v,
+        keywords: b,
         contains: [
             C,
             e.HASH_COMMENT_MODE,
@@ -204,7 +204,7 @@ function t(e) {
             },
             a,
             N,
-            S,
+            I,
             {
                 match: [/const/, /\s/, r],
                 scope: {
@@ -212,7 +212,7 @@ function t(e) {
                     3: 'variable.constant'
                 }
             },
-            y,
+            v,
             {
                 scope: 'function',
                 relevance: 0,
@@ -233,8 +233,8 @@ function t(e) {
                         end: '\\)',
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        keywords: v,
-                        contains: ['self', C, a, S, e.C_BLOCK_COMMENT_MODE, _, h]
+                        keywords: b,
+                        contains: ['self', C, a, I, e.C_BLOCK_COMMENT_MODE, p, h]
                     }
                 ]
             },
@@ -274,9 +274,8 @@ function t(e) {
                     e.UNDERSCORE_TITLE_MODE
                 ]
             },
-            _,
+            p,
             h
         ]
     };
-}
-e.exports = t;
+};

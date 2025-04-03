@@ -5,7 +5,7 @@ n.d(t, {
     jz: () => A,
     kC: () => O,
     l3: () => N,
-    o3: () => I,
+    o3: () => S,
     vP: () => C
 }),
     n(474991),
@@ -31,22 +31,22 @@ var r = n(392711),
     u = n(981631),
     d = n(817384);
 let f = /sketchfab/i,
-    p = /^https:\/\/sketchfab\.com/i,
-    _ = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    _ = /^https:\/\/sketchfab\.com/i,
+    p = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
     h = 1492472454139,
     m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
     g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
     E = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop');
-function v(e) {
+function b(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function b(e, t, n) {
-    if ((null != t && f.test(t.name)) || p.test(n.url)) return !1;
+function y(e, t, n) {
+    if ((null != t && f.test(t.name)) || _.test(n.url)) return !1;
     let r = null != n.proxy_url || /^https:/i.test(n.url);
-    return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && _.test(t.name)), r;
+    return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
 }
-function y(e) {
+function v(e) {
     let { url: t, proxy_url: n, width: r, height: i, placeholder: o, placeholder_version: a, flags: s } = e;
     return {
         url: t,
@@ -93,33 +93,32 @@ function O(e, t, n) {
             }),
         null != n.timestamp && (r.timestamp = a()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, s.ho)(n.color, !0)),
-        null != n.thumbnail && v(n.thumbnail))
+        null != n.thumbnail && b(n.thumbnail))
     )
         switch (r.type) {
             case u.hBH.ARTICLE:
             case u.hBH.IMAGE:
-                r.image = y(n.thumbnail);
+                r.image = v(n.thumbnail);
                 break;
             default:
-                r.thumbnail = y(n.thumbnail);
+                r.thumbnail = v(n.thumbnail);
         }
     if (
-        (null != n.image && v(n.image) && (r.image = y(n.image)),
+        (null != n.image && b(n.image) && (r.image = v(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                v(n.video) &&
+                b(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
-                    url: S(n.video.proxy_url, { format: 'webp' })
+                    url: I(n.video.proxy_url, { format: 'webp' })
                 }),
-            null != r.thumbnail && v(n.video) && b(t, n.provider, n.video) && (r.video = y(n.video))),
+            null != r.thumbnail && b(n.video) && y(t, n.provider, n.video) && (r.video = v(n.video))),
         d.k.has(r.type))
     ) {
         var o;
-        let e = null !== (o = n.fields) && void 0 !== o ? o : [];
-        r.fields = e.map((e) => {
+        r.fields = (null != (o = n.fields) ? o : []).map((e) => {
             let { name: t, value: n, inline: r } = e;
             return {
                 rawName: t,
@@ -130,7 +129,7 @@ function O(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function S(e, t) {
+function I(e, t) {
     let n = new URL(e);
     return (
         Object.keys(t).forEach((e) => {
@@ -139,15 +138,12 @@ function S(e, t) {
         n.toString()
     );
 }
-function I(e) {
+function S(e) {
     let t = new Map(),
         n = [];
     return (
         e.forEach((e) => {
-            if (null == e.url) {
-                n.push(e);
-                return;
-            }
+            if (null == e.url) return void n.push(e);
             let r = t.get(e.url);
             if (null == r) {
                 n.push(e), t.set(e.url, e);
@@ -175,7 +171,7 @@ function C(e, t, n) {
               maxMediaWidth: t,
               maxMediaHeight: n
           }
-        : (null === (r = e.provider) || void 0 === r ? void 0 : r.name) === 'TikTok'
+        : (null == (r = e.provider) ? void 0 : r.name) === 'TikTok'
           ? {
                 maxMediaWidth: 400,
                 maxMediaHeight: 450

@@ -6,7 +6,7 @@ var r = n(581282),
 class s {
     constructor(e) {
         var t;
-        this.fields = null !== (t = e.fields) && void 0 !== t ? t : [];
+        this.fields = null != (t = e.fields) ? t : [];
     }
     write(e, t) {
         let n = {},
@@ -93,21 +93,13 @@ class s {
         return r;
     }
     enum(e, t, n, r, i, o) {
-        if ('google.protobuf.NullValue' == e[0]) return null;
-        if (void 0 === t) {
-            (0, a.hu)(r);
-            return;
-        }
-        if (0 !== t || i || r) return ((0, a.hu)('number' == typeof t), (0, a.hu)(Number.isInteger(t)), o || !e[1].hasOwnProperty(t)) ? t : e[2] ? e[2] + e[1][t] : e[1][t];
+        return 'google.protobuf.NullValue' == e[0] ? null : void 0 === t ? void (0, a.hu)(r) : 0 !== t || i || r ? (((0, a.hu)('number' == typeof t), (0, a.hu)(Number.isInteger(t)), o || !e[1].hasOwnProperty(t)) ? t : e[2] ? e[2] + e[1][t] : e[1][t]) : void 0;
     }
     message(e, t, n, r) {
         return void 0 === t ? (r.emitDefaultValues ? null : void 0) : e.internalJsonWrite(t, r);
     }
     scalar(e, t, n, s, l) {
-        if (void 0 === t) {
-            (0, a.hu)(s);
-            return;
-        }
+        if (void 0 === t) return void (0, a.hu)(s);
         let c = l || s;
         switch (e) {
             case o.wx.INT32:

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'string',
             variants: [
@@ -113,5 +113,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

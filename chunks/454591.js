@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'number',
             begin: /[$%]\d+/
@@ -63,5 +63,4 @@ function t(e) {
         ],
         illegal: /\S/
     };
-}
-e.exports = t;
+};

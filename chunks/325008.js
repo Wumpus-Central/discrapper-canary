@@ -1,5 +1,4 @@
-var r = a(936940);
-t.exports = !r(function () {
+t.exports = !a(936940)(function () {
     return (
         7 !==
         Object.defineProperty({}, 1, {

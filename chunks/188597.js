@@ -2,7 +2,7 @@ n.d(t, {
     $s: () => C,
     A0: () => R,
     Sg: () => T,
-    ow: () => b,
+    ow: () => y,
     rQ: () => N,
     t$: () => A,
     tM: () => O
@@ -18,8 +18,8 @@ var r = n(544891),
     u = n(314897),
     d = n(709054),
     f = n(603721),
-    p = n(282397),
-    _ = n(622449),
+    _ = n(282397),
+    p = n(622449),
     h = n(96989),
     m = n(981631),
     g = n(388032);
@@ -36,7 +36,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,17 +52,17 @@ function v(e) {
     }
     return e;
 }
-function b(e) {
+function y(e) {
     return null == e || '' === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 900000;
 }
-function y(e) {
+function v(e) {
     return null == e || '' === e || Number.isNaN(e) ? Date.now() : d.default.extractTimestamp(e) + 3000;
 }
 let O = async (e) => {
-    let { componentType: t, messageId: n, messageFlags: i, customId: o, componentId: s, applicationId: l, channelId: _, guildId: h, localState: g } = e,
+    let { componentType: t, messageId: n, messageFlags: i, customId: o, componentId: s, applicationId: l, channelId: p, guildId: h, localState: g } = e,
         E = d.default.fromTimestamp(Date.now());
-    if (!p.ZP.canQueueInteraction(n, E)) return;
-    await c.Z.unarchiveThreadIfNecessary(_),
+    if (!_.ZP.canQueueInteraction(n, E)) return;
+    await c.Z.unarchiveThreadIfNecessary(p),
         (0, f.kz)(E, {
             messageId: n,
             data: {
@@ -71,39 +71,39 @@ let O = async (e) => {
                 customId: o,
                 componentId: s
             },
-            onFailure: (e, t) => I(_, e, t)
+            onFailure: (e, t) => S(p, e, t)
         }),
         null != g && (0, f.B0)(n, E, g, s);
-    let b = {
+    let y = {
         type: a.B8.MESSAGE_COMPONENT,
         nonce: E,
         guild_id: h,
-        channel_id: _,
+        channel_id: p,
         message_flags: i,
         message_id: n,
         application_id: l,
         session_id: u.default.getSessionId(),
-        data: v(
+        data: b(
             {
                 component_type: t,
                 custom_id: o
             },
-            S(g)
+            I(g)
         )
     };
     await r.tn.post(
         {
             url: m.ANM.INTERACTIONS,
-            body: b,
+            body: y,
             timeout: 3000,
             rejectWithError: !1
         },
         (e) => {
-            T(E, e, l, _, h);
+            T(E, e, l, p, h);
         }
     );
 };
-function S(e) {
+function I(e) {
     if (null == e) return null;
     if (e.type === a.re.STRING_SELECT || e.type === a.re.TEXT_INPUT) return e;
     let t = e.selectedOptions.map((e) => e.value);
@@ -112,15 +112,15 @@ function S(e) {
         values: t
     };
 }
-let I = (e, t, n) => {
+let S = (e, t, n) => {
         null == n && null != t && o.Z.sendClydeError(e, t);
     },
     T = (e, t, n, r, o) => {
         if (!t.ok) {
-            if (!t.hasErr) {
-                var a;
-                if (t.status >= 400 && t.status < 500 && t.body) {
-                    if (t.body.code === m.evJ.INVALID_FORM_BODY && t.body.errors) {
+            if (!t.hasErr)
+                if (t.status >= 400 && t.status < 500 && t.body)
+                    if (t.body.code !== m.evJ.INVALID_FORM_BODY || !t.body.errors) return void (0, f.yr)(e, t.body.code, t.body.message, t.status);
+                    else {
                         let a = (0, h.e)(t.body.errors);
                         null != a &&
                             ('INTERACTION_APPLICATION_COMMAND_INVALID_VERSION' === a.code || 'INTERACTION_APPLICATION_COMMAND_INVALID' === a.code) &&
@@ -133,12 +133,11 @@ let I = (e, t, n) => {
                             (0, f.yr)(e, void 0, null == a ? void 0 : a.message);
                         return;
                     }
-                    (0, f.yr)(e, t.body.code, t.body.message, t.status);
+                else {
+                    var a;
+                    (0, f.yr)(e, null == (a = t.body) ? void 0 : a.code);
                     return;
                 }
-                (0, f.yr)(e, null === (a = t.body) || void 0 === a ? void 0 : a.code);
-                return;
-            }
             (0, f.yr)(e);
         }
     };
@@ -147,12 +146,12 @@ var N = (function (e) {
 })({});
 let A = (e, t) => {
     let n = null == t ? void 0 : t.state,
-        r = e.state === m.yb.SENT && b(e.id) < Date.now(),
-        i = e.state === m.yb.SEND_FAILED && y(e.id) < Date.now(),
+        r = e.state === m.yb.SENT && y(e.id) < Date.now(),
+        i = e.state === m.yb.SEND_FAILED && v(e.id) < Date.now(),
         o = (null == t ? void 0 : t.data.interactionType) === a.B8.APPLICATION_COMMAND,
         s = e.isCommandType();
-    if ((o && n === _.F.QUEUED) || (s && e.state === m.yb.SENDING && null != t)) return 0;
-    if ((o && n === _.F.CREATED) || (e.hasFlag(m.iLy.LOADING) && !r)) return 1;
+    if ((o && n === p.F.QUEUED) || (s && e.state === m.yb.SENDING && null != t)) return 0;
+    if ((o && n === p.F.CREATED) || (e.hasFlag(m.iLy.LOADING) && !r)) return 1;
     if (null != e.interaction && e.hasFlag(m.iLy.LOADING) && r) return 3;
     if (null != e.interaction && !e.hasFlag(m.iLy.LOADING) && i) return 3;
     if (s && e.state === m.yb.SEND_FAILED) return 2;

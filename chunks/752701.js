@@ -60,14 +60,12 @@ var a = n(161796),
     })();
 function u(e, t, n, r, i, o, a, s) {
     var l = e;
-    if (l < t) {
+    if (l < t)
         if ('identity' === a) return l;
-        'clamp' === a && (l = t);
-    }
-    if (l > n) {
+        else 'clamp' === a && (l = t);
+    if (l > n)
         if ('identity' === s) return l;
-        'clamp' === s && (l = n);
-    }
+        else 'clamp' === s && (l = n);
     return r === i ? r : t === n ? (e <= t ? r : i) : (t === -1 / 0 ? (l = -l) : n === 1 / 0 ? (l -= t) : (l = (l - t) / (n - t)), (l = o(l)), r === -1 / 0 ? (l = -l) : i === 1 / 0 ? (l += r) : (l = l * (i - r) + r), l);
 }
 function d(e) {

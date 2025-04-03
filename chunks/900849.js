@@ -1,7 +1,7 @@
 n.d(t, {
     Az: () => b,
     Eg: () => A,
-    IZ: () => v,
+    IZ: () => y,
     PP: () => E,
     Ub: () => g,
     c6: () => T,
@@ -9,7 +9,7 @@ n.d(t, {
     mT: () => N,
     qn: () => O,
     rC: () => S,
-    tI: () => y
+    tI: () => v
 }),
     n(301563),
     n(266796),
@@ -130,10 +130,10 @@ function b(e, t) {
         recommendations_source: n
     });
 }
-function v(e) {
+function y(e) {
     d.default.track(f.rMx.SEARCH_CLOSED, { load_id: e });
 }
-function y(e, t) {
+function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     d.default.track(f.rMx.SEARCH_STARTED, {
         search_type: f.aib.GUILD_DISCOVERY,
@@ -187,15 +187,20 @@ function N(e) {
 async function A(e) {
     try {
         var t, n;
-        let o = await i.tn.get({
-                url: f.ANM.GUILD_DISCOVERY,
-                query: r.stringify({ guild_ids: e }),
-                oldFormErrors: !0,
-                rejectWithError: !0
-            }),
-            a = null === (n = o.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
-        if (null == a) return a;
-        return E(a);
+        let o =
+            null ==
+                (n = (
+                    await i.tn.get({
+                        url: f.ANM.GUILD_DISCOVERY,
+                        query: r.stringify({ guild_ids: e }),
+                        oldFormErrors: !0,
+                        rejectWithError: !0
+                    })
+                ).body) || null == (t = n.guilds)
+                ? void 0
+                : t[0];
+        if (null == o) return o;
+        return E(o);
     } catch (e) {
         return null;
     }

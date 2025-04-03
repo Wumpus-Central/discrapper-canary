@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -78,14 +78,14 @@ class g {
     reset() {
         var e, t, n;
         let r = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._initialized && (null === (e = this._members) || void 0 === e || e.reset(), null === (t = this._pagination) || void 0 === t || t.reset(), null === (n = this._search) || void 0 === n || n.reset(), r && this.initialize());
+        this._initialized && (null == (e = this._members) || e.reset(), null == (t = this._pagination) || t.reset(), null == (n = this._search) || n.reset(), r && this.initialize());
     }
     get searchChunkSize() {
         return null != this._pagination && this._initialized ? (0, c.t3)(this._pagination.getPaginationState()) : 0;
     }
     getMember(e) {
         var t;
-        return null != this._members && this._initialized && null !== (t = this._members.getMemberByUserId(e)) && void 0 !== t ? t : null;
+        return null != this._members && this._initialized && null != (t = this._members.getMemberByUserId(e)) ? t : null;
     }
     getMembersByIndex(e) {
         return null != this._members && this._initialized ? [this._members.values(e), this._members.version] : [[], 0];
@@ -98,7 +98,7 @@ class g {
     }
     _getIsIncludedInSearch(e, t) {
         if (null == this._search || this._search.hasDefaultQuery) return [!1, !1];
-        let n = p({}, e, t),
+        let n = _({}, e, t),
             r = this._search.isMemberIncludedInSearchResults(n),
             i = r !== e.isIncludedInSearchResults;
         return [r, i];
@@ -158,9 +158,9 @@ class g {
         for (let o of e) {
             if (null == o.joinedAt) continue;
             let e = o;
-            if ((t && (e = h(p({}, e), { isIncludedInSearchResults: !0 })), n)) {
+            if ((t && (e = h(_({}, e), { isIncludedInSearchResults: !0 })), n)) {
                 let t = (0, s.Dw)(o.joinedAt);
-                e = h(p({}, e), {
+                e = h(_({}, e), {
                     isCurrentGuildMemberByTimestamp: t <= this._members.newMemberTimestamp,
                     refreshTimestamp: this.lastRefreshTimestamp
                 });
@@ -195,9 +195,8 @@ class g {
             [...(0, r.cloneDeep)(this.getMembersByIndex(l.R_.CURRENT_GUILD_MEMBER)[0]), ...(0, r.cloneDeep)(this.getMembersByIndex(l.R_.NEW_GUILD_MEMBER)[0])].forEach((t) => {
                 var n, r, i;
                 let o = (0, d.b)(t, e),
-                    a = null !== (i = null === (n = this._search) || void 0 === n ? void 0 : n.isMemberIncludedInSearchResults(t)) && void 0 !== i && i;
-                null === (r = this._members) ||
-                    void 0 === r ||
+                    a = null != (i = null == (n = this._search) ? void 0 : n.isMemberIncludedInSearchResults(t)) && i;
+                null == (r = this._members) ||
                     r.updateMember(t, {
                         sort: o,
                         isIncludedInSearchResults: a
@@ -279,7 +278,7 @@ class g {
         return null == this._search || !this._initialized || this._search.hasDefaultQuery;
     }
     resetSearchState() {
-        return !!(null != this._search && this._initialized && this._search.resetSearchState()) && this.updatePaginationChunks();
+        return null != this._search && !!this._initialized && !!this._search.resetSearchState() && this.updatePaginationChunks();
     }
     getTotalResultsCount() {
         return null != this._search && null != this._pagination && this._initialized ? (this._search.hasDefaultQuery && null != this._defaultSearchTotalResultsCount ? this._defaultSearchTotalResultsCount : this._pagination.getPaginationState().totalResultsCount) : 0;
@@ -290,7 +289,7 @@ class g {
     }
     clearPaginationState() {
         var e;
-        null === (e = this._pagination) || void 0 === e || e.reset();
+        null == (e = this._pagination) || e.reset();
     }
     getPaginationState() {
         return null != this._pagination && this._initialized ? this._pagination.getPaginationState() : (0, c.IF)();

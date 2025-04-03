@@ -15,8 +15,8 @@ var o,
     g = n(358085),
     E = n(199902),
     b = n(314897),
-    v = n(131951),
-    y = n(158776),
+    y = n(131951),
+    v = n(158776),
     O = n(19780),
     I = n(981631),
     S = n(65154);
@@ -33,8 +33,8 @@ function T(e, t, n) {
         e
     );
 }
-let A = {},
-    N = {},
+let N = {},
+    A = {},
     C = {},
     R = {},
     P = {},
@@ -51,7 +51,7 @@ function M(e, t, n) {
             serverId: t,
             initialLayout: w,
             analyticsContext: n,
-            isStreamer: null != N[e],
+            isStreamer: null != A[e],
             parentMediaSessionId: O.Z.getMediaSessionId()
         })
     );
@@ -76,7 +76,7 @@ function G(e) {
             ownerId: b.default.getId()
         });
     if (
-        ((A[u] = i),
+        ((N[u] = i),
         c().forEach(D, (e) => {
             let { analyticsContext: t, isOwner: n } = e;
             t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
@@ -87,7 +87,7 @@ function G(e) {
     ) {
         let e = f.ZP.getGameForPID(o);
         null != e &&
-            (N[u] = {
+            (A[u] = {
                 name: e.name,
                 id: e.id,
                 exe: e.exeName,
@@ -98,7 +98,7 @@ function G(e) {
 }
 function B(e) {
     let { appContext: t, streamKey: n } = e;
-    (A[n] = t),
+    (N[n] = t),
         c().forEach(D, (e) => {
             let { analyticsContext: n, isOwner: r } = e;
             n.setActionContext(t), r && n.trackEnd();
@@ -112,14 +112,14 @@ function F(e) {
     i = t;
     let a = D[t];
     if (null == a && null != n) {
-        null == C[t] && (N[t] = null);
+        null == C[t] && (A[t] = null);
         let e = (0, p.my)(t);
-        null == N[t] && null == R[t] && (N[t] = (0, h.L2)(e, y.Z));
+        null == A[t] && null == R[t] && (A[t] = (0, h.L2)(e, v.Z));
         let i = new _.A({
             streamRegion: r,
-            streamApplication: N[t],
+            streamApplication: A[t],
             streamSourceType: $(R[t]),
-            actionContext: A[t],
+            actionContext: N[t],
             numViewers: null != o ? o.length : 0,
             goLiveModalDurationMs: P[t]
         });
@@ -191,10 +191,10 @@ function X(e) {
     return null != a && 'video' === a.type
         ? {
               type: 'streamer',
-              packetsSentOrReceived: null !== (n = a.packetsSent) && void 0 !== n ? n : 0,
-              packetsLost: null !== (r = a.packetsLost) && void 0 !== r ? r : 0,
-              frameRate: null !== (i = a.frameRateEncode) && void 0 !== i ? i : 0,
-              resolution: null !== (o = null === (t = a.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== o ? o : 0,
+              packetsSentOrReceived: null != (n = a.packetsSent) ? n : 0,
+              packetsLost: null != (r = a.packetsLost) ? r : 0,
+              frameRate: null != (i = a.frameRateEncode) ? i : 0,
+              resolution: null != (o = null == (t = a.resolution) ? void 0 : t.height) ? o : 0,
               bitrate: 0
           }
         : null;
@@ -206,28 +206,30 @@ function J(e) {
     return null != s && 'video' === s.type
         ? {
               type: 'spectator',
-              packetsSentOrReceived: null !== (n = s.packetsReceived) && void 0 !== n ? n : 0,
-              packetsLost: null !== (r = s.packetsLost) && void 0 !== r ? r : 0,
-              frameRate: null !== (i = s.frameRateDecode) && void 0 !== i ? i : 0,
-              bitrate: null !== (o = s.bitrate) && void 0 !== o ? o : 0,
-              resolution: null !== (a = null === (t = s.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== a ? a : 0
+              packetsSentOrReceived: null != (n = s.packetsReceived) ? n : 0,
+              packetsLost: null != (r = s.packetsLost) ? r : 0,
+              frameRate: null != (i = s.frameRateDecode) ? i : 0,
+              bitrate: null != (o = s.bitrate) ? o : 0,
+              resolution: null != (a = null == (t = s.resolution) ? void 0 : t.height) ? a : 0
           }
         : null;
 }
 function $(e) {
     var t, n, r;
     if (null == e) return 'unknown';
-    if (g.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
+    if (g.isPlatformEmbedded || (null == (t = platform) ? void 0 : t.name) === 'Chrome') {
         if (e.startsWith('web-contents-media-stream:')) return 'tab';
-        if (e.startsWith('window:')) return 'window';
-        if (e.startsWith('screen:')) return 'screen';
-    } else if ((null === (n = platform) || void 0 === n ? void 0 : n.name) === 'Firefox') return '' !== e ? 'window' : 'screen';
-    else if ((null === (r = platform) || void 0 === r ? void 0 : r.name) === 'Safari') return 'window';
+        else if (e.startsWith('window:')) return 'window';
+        else if (e.startsWith('screen:')) return 'screen';
+    } else if ((null == (n = platform) ? void 0 : n.name) === 'Firefox')
+        if ('' !== e) return 'window';
+        else return 'screen';
+    else if ((null == (r = platform) ? void 0 : r.name) === 'Safari') return 'window';
     return 'unknown';
 }
 class ee extends (o = u.ZP.Store) {
     getActiveStreamKey() {
-        return (0, m.Z)(v.Z) ? i : null;
+        return (0, m.Z)(y.Z) ? i : null;
     }
     getRTCConnections() {
         return D;
@@ -239,7 +241,7 @@ class ee extends (o = u.ZP.Store) {
         return D[e];
     }
     getStatsHistory(e, t, n) {
-        if (!(0, m.Z)(v.Z) || null == t) return null;
+        if (!(0, m.Z)(y.Z) || null == t) return null;
         if (n) {
             let n = E.Z.getActiveStreamForUser(t, e);
             if (null == n || 0 === E.Z.getViewerIds(n).length) return null;
@@ -247,7 +249,7 @@ class ee extends (o = u.ZP.Store) {
         return L.map((e) => (n ? X(e.rtp.outbound) : J(e.rtp.inbound[t])));
     }
     getQuality() {
-        if (!(0, m.Z)(v.Z)) return I.IE4.UNKNOWN;
+        if (!(0, m.Z)(y.Z)) return I.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             t = null != e ? D[e] : null;
         return null != t ? t.quality : I.IE4.UNKNOWN;
@@ -306,7 +308,7 @@ class ee extends (o = u.ZP.Store) {
 T(ee, 'displayName', 'StreamRTCConnectionStore');
 let et = new ee(
     d.Z,
-    !v.Z.isSupported() || __OVERLAY__
+    !y.Z.isSupported() || __OVERLAY__
         ? {}
         : {
               CONNECTION_OPEN: j,

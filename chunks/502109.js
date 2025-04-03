@@ -17,8 +17,8 @@ var r = n(200651),
     _ = n(622999),
     p = n(981631),
     h = n(388032),
-    g = n(17310);
-function m(e, t, n) {
+    m = n(844424);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,12 +42,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,18 +59,18 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,8 +90,8 @@ function O(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let S = new l.Z('PaymentRequest'),
-    I = Object.values({
+let I = new l.Z('PaymentRequest'),
+    S = Object.values({
         applePay: 'applePay',
         googlePay: 'googlePay',
         link: 'link',
@@ -100,11 +100,8 @@ let S = new l.Z('PaymentRequest'),
 class T extends i.Component {
     componentDidMount() {
         if (!(0, f.isDesktop)()) {
-            if (!this.isBrowserCompatible()) {
-                this.onPaymentRequestFailure();
-                return;
-            }
-            (this.disableWallets = I.filter((e) => e !== this.paymentRequestWallet).sort()),
+            if (!this.isBrowserCompatible()) return void this.onPaymentRequestFailure();
+            (this.disableWallets = S.filter((e) => e !== this.paymentRequestWallet).sort()),
                 (0, _.d2)().then((e) => {
                     this.initPaymentRequest(e);
                 });
@@ -115,7 +112,7 @@ class T extends i.Component {
         if (null == e) {
             let e = 'Payment request is not ready';
             return (
-                S.error(e),
+                I.error(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -125,7 +122,7 @@ class T extends i.Component {
         if (null == t) {
             let e = 'Payment request is unavailable or has not been set up in this browser. ';
             return (
-                S.error(e, 'Stripe CanMakePaymentResult: ', t),
+                I.error(e, 'Stripe CanMakePaymentResult: ', t),
                 {
                     available: !1,
                     errorMessage: e
@@ -162,11 +159,11 @@ class T extends i.Component {
         var e, t;
         let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.zxk.Colors.BRAND,
             i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.zxk.Looks.FILLED;
-        return null !== (t = this.props.loadingComponent) && void 0 !== t
+        return null != (t = this.props.loadingComponent)
             ? t
             : (0, r.jsx)(s.zxk, {
                   color: n,
-                  className: null !== (e = this.props.className) && void 0 !== e ? e : g.button,
+                  className: null != (e = this.props.className) ? e : m.button,
                   submitting: !0,
                   look: i
               });
@@ -175,24 +172,24 @@ class T extends i.Component {
         var t,
             n,
             { iconType: i, buttonText: o } = e,
-            a = y(e, ['iconType', 'buttonText']);
+            a = v(e, ['iconType', 'buttonText']);
         return (0, r.jsx)(
             s.zxk,
-            b(
+            y(
                 E(
                     {
                         onClick: this.attemptPaymentRequest,
-                        className: null !== (t = this.props.className) && void 0 !== t ? t : g.button,
+                        className: null != (t = this.props.className) ? t : m.button,
                         submitting: this.state.submitting
                     },
                     a
                 ),
                 {
                     children: (0, r.jsxs)('div', {
-                        className: g.centerContainer,
+                        className: m.centerContainer,
                         children: [
                             (0, r.jsx)(c.ZP, {
-                                className: null !== (n = this.props.iconClassName) && void 0 !== n ? n : g.buttonIcon,
+                                className: null != (n = this.props.iconClassName) ? n : m.buttonIcon,
                                 type: i
                             }),
                             o
@@ -210,11 +207,11 @@ class T extends i.Component {
                 (0, r.jsx)(c.ZP, {
                     type: c.ZP.Types.PAYMENT_REQUEST,
                     size: c.Uy.MEDIUM,
-                    className: g.paymentRequestIcon
+                    className: m.paymentRequestIcon
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
-                    className: g.connectionInstructions,
+                    className: m.connectionInstructions,
                     children: h.NW.string(h.t.f19PPT)
                 })
             ]
@@ -237,14 +234,14 @@ class T extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'initialState', {
+            g(this, 'initialState', {
                 submitting: !0,
                 paymentRequest: null,
                 canMakePaymentResult: null
             }),
-            m(this, 'state', E({}, this.initialState)),
-            m(this, 'disableWallets', []),
-            m(this, 'initPaymentRequest', async (e) => {
+            g(this, 'state', E({}, this.initialState)),
+            g(this, 'disableWallets', []),
+            g(this, 'initPaymentRequest', async (e) => {
                 if (null == e) return;
                 this.setState({
                     submitting: !0,
@@ -273,7 +270,7 @@ class T extends i.Component {
                     });
                 let r = await t.canMakePayment();
                 return (
-                    S.info('PaymentRequest availablity check', r),
+                    I.info('PaymentRequest availablity check', r),
                     this.setState(
                         {
                             submitting: !1,
@@ -287,16 +284,10 @@ class T extends i.Component {
                     r
                 );
             }),
-            m(this, 'attemptPaymentRequest', () => {
-                if ((0, f.isDesktop)()) {
-                    this.props.onChooseType(p.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet);
-                    return;
-                }
+            g(this, 'attemptPaymentRequest', () => {
+                if ((0, f.isDesktop)()) return void this.props.onChooseType(p.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet);
                 let { available: e } = this.validatePaymentRequest();
-                if (!e) {
-                    this.onPaymentRequestFailure();
-                    return;
-                }
+                if (!e) return void this.onPaymentRequestFailure();
                 let { paymentRequest: t } = this.state;
                 e && null != t && (t.show(), this.props.onChooseType(p.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet));
             });
@@ -310,7 +301,7 @@ class N extends T {
         if (!this.isBrowserCompatible()) {
             let e = 'Browser does not support Google Pay';
             return (
-                S.warn(e),
+                I.warn(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -321,7 +312,7 @@ class N extends T {
         if (null == e) {
             let e = 'Payment request is not ready';
             return (
-                S.error(e),
+                I.error(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -331,7 +322,7 @@ class N extends T {
         if (null == t || !t.googlePay) {
             let e = 'Google Pay is unavailable or has not been set up in this browser. ';
             return (
-                S.error(e, 'Stripe CanMakePaymentResult: ', t),
+                I.error(e, 'Stripe CanMakePaymentResult: ', t),
                 {
                     available: !1,
                     errorMessage: e
@@ -350,11 +341,11 @@ class N extends T {
                 (0, r.jsx)(c.ZP, {
                     type: c.ZP.Types.G_PAY,
                     size: c.Uy.MEDIUM,
-                    className: g.paymentRequestIcon
+                    className: m.paymentRequestIcon
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
-                    className: g.connectionInstructions,
+                    className: m.connectionInstructions,
                     children: h.NW.string(h.t.ueoGeX)
                 })
             ]
@@ -370,7 +361,7 @@ class N extends T {
               });
     }
     constructor(...e) {
-        super(...e), m(this, 'state', E({}, this.initialState)), m(this, 'paymentRequestWallet', 'googlePay');
+        super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'googlePay');
     }
 }
 class A extends T {
@@ -381,7 +372,7 @@ class A extends T {
         if (!this.isBrowserCompatible()) {
             let e = 'Browser does not support Apple Pay';
             return (
-                S.warn(e),
+                I.warn(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -392,7 +383,7 @@ class A extends T {
         if (null == e) {
             let e = 'Payment request is not ready';
             return (
-                S.error(e),
+                I.error(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -402,7 +393,7 @@ class A extends T {
         if (null == t || !t.applePay) {
             let e = 'Apple Pay is unavailable or has not been set up in this browser. ';
             return (
-                S.error(e, 'Apple Pay Stripe CanMakePaymentResult: ', t),
+                I.error(e, 'Apple Pay Stripe CanMakePaymentResult: ', t),
                 {
                     available: !1,
                     errorMessage: e
@@ -421,11 +412,11 @@ class A extends T {
                 (0, r.jsx)(c.ZP, {
                     type: c.ZP.Types.APPLE,
                     size: c.Uy.MEDIUM,
-                    className: a()(g.paymentRequestIcon, g.appleConnectorIcon)
+                    className: a()(m.paymentRequestIcon, m.appleConnectorIcon)
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
-                    className: g.connectionInstructions,
+                    className: m.connectionInstructions,
                     children: h.NW.string(h.t.iv8pQU)
                 })
             ]
@@ -441,6 +432,6 @@ class A extends T {
               });
     }
     constructor(...e) {
-        super(...e), m(this, 'state', E({}, this.initialState)), m(this, 'paymentRequestWallet', 'applePay');
+        super(...e), g(this, 'state', E({}, this.initialState)), g(this, 'paymentRequestWallet', 'applePay');
     }
 }

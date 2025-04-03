@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = ['assembly', 'module', 'package', 'import', 'alias', 'class', 'interface', 'object', 'given', 'value', 'assign', 'void', 'function', 'new', 'of', 'extends', 'satisfies', 'abstracts', 'in', 'out', 'return', 'break', 'continue', 'throw', 'assert', 'dynamic', 'if', 'else', 'switch', 'case', 'for', 'while', 'try', 'catch', 'finally', 'then', 'let', 'this', 'outer', 'super', 'is', 'exists', 'nonempty'],
         n = ['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small'],
         r = ['doc', 'by', 'license', 'see', 'throws', 'tagged'],
@@ -54,5 +54,4 @@ function t(e) {
             ].concat(o)
         }
     );
-}
-e.exports = t;
+};

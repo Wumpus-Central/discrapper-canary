@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r = n(846519),
     i = n(147913),
     o = n(603113),
@@ -9,8 +9,8 @@ var r = n(846519),
     u = n(606304),
     d = n(938475),
     f = n(70956),
-    p = n(367907),
-    _ = n(981631);
+    _ = n(367907),
+    p = n(981631);
 function h(e, t, n) {
     return (
         t in e
@@ -52,8 +52,8 @@ class E extends i.Z {
         if (this._currentUserSpeaking) {
             let e = l.Z.getChannelId(),
                 t = l.Z.getGuildId();
-            (0, p.yw)(
-                _.rMx.START_SPEAKING,
+            (0, _.yw)(
+                p.rMx.START_SPEAKING,
                 m(
                     {
                         mode: s.Z.getMode(),
@@ -76,8 +76,8 @@ class E extends i.Z {
         if (s.Z.isDeaf() || !this._anyoneElseSpeaking) return;
         let e = l.Z.getChannelId(),
             t = l.Z.getGuildId();
-        (0, p.yw)(
-            _.rMx.START_LISTENING,
+        (0, _.yw)(
+            p.rMx.START_LISTENING,
             m(
                 {
                     mute: s.Z.isMute(),
@@ -98,7 +98,7 @@ class E extends i.Z {
         this._reset(), u.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
-        let e = c.Z.findActivity((e) => e.type === _.IIU.PLAYING),
+        let e = c.Z.findActivity((e) => e.type === p.IIU.PLAYING),
             t = a.ZP.getCurrentGameForAnalytics();
         return {
             game_platform: (0, o.Z)(e),
@@ -116,10 +116,7 @@ class E extends i.Z {
             h(this, '_handleRTCConnectionStoreChanged', () => {
                 let e = l.Z.getChannelId();
                 if (this._voiceChannelId !== e) {
-                    if (((this._voiceChannelId = e), null == e)) {
-                        this._reset();
-                        return;
-                    }
+                    if (((this._voiceChannelId = e), null == e)) return void this._reset();
                     null == this._reportInterval &&
                         ((this._reportInterval = new r.Xp()),
                         this._reportInterval.start(g, () => {
@@ -135,4 +132,4 @@ class E extends i.Z {
             });
     }
 }
-let v = new E();
+let b = new E();

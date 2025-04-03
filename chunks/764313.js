@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = ['__FILE__', '__LINE__'],
         r = ['begin_keywords', 'celldefine', 'default_nettype', 'default_decay_time', 'default_trireg_strength', 'define', 'delay_mode_distributed', 'delay_mode_path', 'delay_mode_unit', 'delay_mode_zero', 'else', 'elsif', 'end_keywords', 'endcelldefine', 'endif', 'ifdef', 'ifndef', 'include', 'line', 'nounconnected_drive', 'pragma', 'resetall', 'timescale', 'unconnected_drive', 'undef', 'undefineall'];
@@ -51,5 +51,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

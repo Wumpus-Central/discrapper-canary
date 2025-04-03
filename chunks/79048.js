@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /[\p{XID_Start}_]\p{XID_Continue}*/u,
         r = ['and', 'as', 'assert', 'async', 'await', 'break', 'case', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'match', 'nonlocal|10', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'],
@@ -90,7 +90,7 @@ function t(e) {
             relevance: 0,
             variants: [{ begin: `(\\b(${c})|(${u}))[eE][+-]?(${c})[jJ]?(?=${d})` }, { begin: `(${u})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` }, { begin: `\\b(${c})[jJ](?=${d})` }]
         },
-        p = {
+        _ = {
             className: 'comment',
             begin: t.lookahead(/# type:/),
             end: /$/,
@@ -104,7 +104,7 @@ function t(e) {
                 }
             ]
         },
-        _ = {
+        p = {
             className: 'params',
             variants: [
                 {
@@ -146,7 +146,7 @@ function t(e) {
                     scope: 'keyword'
                 },
                 l,
-                p,
+                _,
                 e.HASH_COMMENT_MODE,
                 {
                     match: [/\bdef/, /\s+/, n],
@@ -154,7 +154,7 @@ function t(e) {
                         1: 'keyword',
                         3: 'title.function'
                     },
-                    contains: [_]
+                    contains: [p]
                 },
                 {
                     variants: [
@@ -175,10 +175,9 @@ function t(e) {
                     className: 'meta',
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [f, _, l]
+                    contains: [f, p, l]
                 }
             ]
         }
     );
-}
-e.exports = t;
+};

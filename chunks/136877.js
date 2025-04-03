@@ -46,7 +46,7 @@ function c(e, t) {
 var u = n(192379),
     d = n(758772),
     f = n(879643);
-function _(e) {
+e.exports = function (e) {
     var t = (function (t) {
         function n() {
             return s(this, n), l(this, (n.__proto__ || Object.getPrototypeOf(n)).apply(this, arguments));
@@ -129,5 +129,4 @@ function _(e) {
         }),
         t
     );
-}
-e.exports = _;
+};

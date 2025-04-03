@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Maxima',
         keywords: {
@@ -33,5 +33,4 @@ function t(e) {
         ],
         illegal: /@/
     };
-}
-e.exports = t;
+};

@@ -1,15 +1,15 @@
 n.d(t, {
-    AE: () => y,
+    AE: () => v,
     FP: () => g,
     I1: () => O,
     O0: () => T,
     Qb: () => h,
     W2: () => m,
     Xj: () => N,
-    _d: () => b,
-    dA: () => I,
+    _d: () => y,
+    dA: () => S,
     uw: () => E,
-    vY: () => v
+    vY: () => b
 }),
     n(47120);
 var r = n(379649),
@@ -34,7 +34,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function p(e) {
     }
     return e;
 }
-let _ = 3;
+let p = 3;
 async function h(e) {
     let t = await u.X2(e);
     i.Z.dispatch({
@@ -105,7 +105,7 @@ async function E(e, t) {
         n
     );
 }
-async function v(e) {
+async function b(e) {
     var t;
     i.Z.dispatch({
         type: 'GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN',
@@ -116,17 +116,17 @@ async function v(e) {
         type: 'GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS',
         groupListing: n
     }),
-    null !== (t = n.subscription_listings) && void 0 !== t ? t : []))
+    null != (t = n.subscription_listings) ? t : []))
         r.subscription_plans[0].id === e && (await a.GZ(r.id, void 0, void 0, !0));
 }
-async function b(e, t, n) {
+async function y(e, t, n) {
     await u.es(e, t, n),
         i.Z.dispatch({
             type: 'GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING',
             listingId: n
         });
 }
-async function y(e, t, n) {
+async function v(e, t, n) {
     let r = await u.V_(e, t, n);
     i.Z.dispatch({
         type: 'GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING',
@@ -140,7 +140,7 @@ async function O(e, t, n) {
         subscriptionTrial: r
     });
 }
-async function S(e, t) {
+async function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = await u.K5(e, t, n);
     return (
@@ -151,13 +151,13 @@ async function S(e, t) {
         r
     );
 }
-async function I(e) {
+async function S(e) {
     let { guildId: t, groupListingId: n, data: r, analyticsContext: o, onBeforeDispatchNewListing: a } = e,
         c = await u.aG(t, n, r);
     return (
         l.default.track(
             d.rMx.ROLE_SUBSCRIPTION_LISTING_CREATED,
-            p(
+            _(
                 {
                     role_subscription_listing_id: c.id,
                     role_subscription_group_listing_id: n,
@@ -167,7 +167,7 @@ async function I(e) {
                 (0, s.hH)(t)
             )
         ),
-        await S(t, n, { includeArchivedListings: !0 }),
+        await I(t, n, { includeArchivedListings: !0 }),
         null == a || a(c),
         i.Z.dispatch({
             type: 'GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING',
@@ -184,22 +184,20 @@ async function T(e) {
             type: 'GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING',
             listing: a
         }),
-        await S(t, r, { includeArchivedListings: !0 }),
+        await I(t, r, { includeArchivedListings: !0 }),
         a
     );
 }
 async function N(e) {
     let { signal: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = !1;
-    for (let o = 0; o < _; o++)
+    for (let o = 0; o < p; o++)
         try {
-            if (null == t ? void 0 : t.aborted) {
-                i.Z.dispatch({
+            if (null == t ? void 0 : t.aborted)
+                return void i.Z.dispatch({
                     type: 'GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED',
                     guildId: e
                 });
-                return;
-            }
             i.Z.dispatch({
                 type: 'GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS',
                 guildId: e

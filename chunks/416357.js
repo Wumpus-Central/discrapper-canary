@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Golo',
         keywords: {
@@ -15,5 +15,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

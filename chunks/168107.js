@@ -93,13 +93,11 @@ let p = {
         );
     },
     showAgeVerificationGetStartedModal: (e) => {
-        if ((0, a.kJ)() && (0, o.G7)('age_verification_utils')) {
-            (0, i.ZDy)(async () => {
+        if ((0, a.kJ)() && (0, o.G7)('age_verification_utils'))
+            return void (0, i.ZDy)(async () => {
                 let { default: t } = await n.e('22447').then(n.bind(n, 686768));
                 return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
             });
-            return;
-        }
         (0, i.ZDy)(async () => {
             let { default: t } = await n.e('80144').then(n.bind(n, 634997));
             return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));

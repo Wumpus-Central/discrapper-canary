@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'N1QL',
         case_insensitive: !0,
@@ -37,5 +37,4 @@ function t(e) {
             e.C_BLOCK_COMMENT_MODE
         ]
     };
-}
-e.exports = t;
+};

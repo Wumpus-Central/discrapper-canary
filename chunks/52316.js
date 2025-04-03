@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             variants: [e.COMMENT('--', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
@@ -75,5 +75,4 @@ function t(e) {
         ],
         illegal: /;/
     };
-}
-e.exports = t;
+};

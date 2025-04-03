@@ -22,8 +22,8 @@ function f(e, t, n) {
         e
     );
 }
-let p = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
-    _ = new s.Yd('Flux'),
+let _ = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
+    p = new s.Yd('Flux'),
     h = 100,
     m = 10,
     g = '__subscriptions';
@@ -35,7 +35,7 @@ class E {
         return new Promise((t, n) => {
             this._waitQueue.push(() => {
                 try {
-                    null == this.functionCache[e.type] && ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)), b(this.functionCache[e.type], 'dispatch_' + e.type)), this.functionCache[e.type](e), t();
+                    null == this.functionCache[e.type] && ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)), y(this.functionCache[e.type], 'dispatch_' + e.type)), this.functionCache[e.type](e), t();
                 } catch (e) {
                     n(e);
                 }
@@ -53,9 +53,8 @@ class E {
                         var e;
                         let t = u.qC();
                         throw (
-                            (_.error('LastFewActions', t),
-                            null === (e = this._sentryUtils) ||
-                                void 0 === e ||
+                            (p.error('LastFewActions', t),
+                            null == (e = this._sentryUtils) ||
                                 e.addBreadcrumb({
                                     message: 'Dispatcher: Dispatch loop detected',
                                     data: { lastFewActions: t }
@@ -74,7 +73,7 @@ class E {
         this._dispatchWithLogging(e);
     }
     _dispatchWithLogging(e) {
-        o()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), o()(e.type, 'Dispatch.dispatch(...) called without an action type'), p.has(e.type) && _.log('Dispatching '.concat(e.type)), (0, l.B1)(e.type), u.IH(e.type);
+        o()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), o()(e.type, 'Dispatch.dispatch(...) called without an action type'), _.has(e.type) && p.log('Dispatching '.concat(e.type)), (0, l.B1)(e.type), u.IH(e.type);
         let t = this.actionLogger.log(e, (t) => {
             try {
                 (this._currentDispatchActionType = e.type), this._dispatch(e, t);
@@ -82,7 +81,7 @@ class E {
                 this._currentDispatchActionType = null;
             }
         });
-        t.totalTime > h && _.verbose('Slow dispatch on '.concat(e.type, ': ').concat(t.totalTime, 'ms'));
+        t.totalTime > h && p.verbose('Slow dispatch on '.concat(e.type, ': ').concat(t.totalTime, 'ms'));
         try {
             (0, l.L8)('DISPATCH['.concat(e.type, ']'), e.type);
         } catch (e) {}
@@ -124,16 +123,16 @@ class E {
         this._actionHandlers.addDependencies(e, t);
     }
     constructor(e = 0, t, n) {
-        (f(this, '_defaultBand', void 0), f(this, '_interceptors', []), f(this, '_subscriptions', {}), f(this, '_waitQueue', []), f(this, '_processingWaitQueue', !1), f(this, '_currentDispatchActionType', null), f(this, '_actionHandlers', new v()), f(this, '_sentryUtils', void 0), f(this, 'actionLogger', void 0), f(this, 'functionCache', {}), (this._defaultBand = e), (this._sentryUtils = n), null != t) ? (this.actionLogger = t) : (this.actionLogger = new d.Z()),
+        (f(this, '_defaultBand', void 0), f(this, '_interceptors', []), f(this, '_subscriptions', {}), f(this, '_waitQueue', []), f(this, '_processingWaitQueue', !1), f(this, '_currentDispatchActionType', null), f(this, '_actionHandlers', new b()), f(this, '_sentryUtils', void 0), f(this, 'actionLogger', void 0), f(this, 'functionCache', {}), (this._defaultBand = e), (this._sentryUtils = n), null != t) ? (this.actionLogger = t) : ('undefined' == typeof window || 1, (this.actionLogger = new d.Z())),
             this.actionLogger.on('trace', (e, t, n) => {
                 a.Z.isTracing && n >= m && a.Z.mark('\uD83E\uDDA5', t, n);
             });
     }
 }
-class v {
+class b {
     getOrderedActionHandlers(e) {
         var t;
-        return null !== (t = this._orderedActionHandlers[e.type]) && void 0 !== t ? t : this._computeOrderedActionHandlers(e.type);
+        return null != (t = this._orderedActionHandlers[e.type]) ? t : this._computeOrderedActionHandlers(e.type);
     }
     register(e, t, n, r) {
         let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
@@ -142,7 +141,7 @@ class v {
         for (let n in t) {
             let r = t[n],
                 i = (e) => r(e);
-            b(i, ''.concat(e, '_').concat(n)), (a[n] = i);
+            y(i, ''.concat(e, '_').concat(n)), (a[n] = i);
         }
         return (
             this._dependencyGraph.addNode(i, {
@@ -186,7 +185,7 @@ class v {
     }
     _computeOrderedActionHandlers(e) {
         var t;
-        let n = null !== (t = this._orderedCallbackTokens) && void 0 !== t ? t : this._computeOrderedCallbackTokens(),
+        let n = null != (t = this._orderedCallbackTokens) ? t : this._computeOrderedCallbackTokens(),
             r = [];
         for (let t = 0, i = n.length; t < i; t++) {
             let { name: i, actionHandler: o, storeDidChange: a } = this._dependencyGraph.getNodeData(n[t]),
@@ -216,6 +215,6 @@ class v {
         f(this, '_orderedActionHandlers', {}), f(this, '_orderedCallbackTokens', null), f(this, '_lastID', 1), f(this, '_dependencyGraph', new r.DepGraph());
     }
 }
-function b(e, t) {
+function y(e, t) {
     Object.defineProperty(e, 'name', { value: t });
 }

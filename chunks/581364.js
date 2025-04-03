@@ -67,7 +67,7 @@ function b(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -79,12 +79,12 @@ function v(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -111,7 +111,7 @@ function O(e) {
         untranslatedName: [o.name, ..._].join(' '),
         serverLocalizedName: a.name_localized,
         applicationId: s,
-        type: null !== (t = o.type) && void 0 !== t ? t : u.yU.CHAT,
+        type: null != (t = o.type) ? t : u.yU.CHAT,
         inputType: p.iw.BOT,
         untranslatedDescription: a.description,
         options: I(a.options),
@@ -120,8 +120,8 @@ function O(e) {
         defaultMemberPermissions: null == o.default_member_permissions ? void 0 : c.vB(o.default_member_permissions),
         dmPermission: o.dm_permission,
         permissions: i,
-        displayName: [null !== (n = o.name_localized) && void 0 !== n ? n : o.name, ...m].join(' '),
-        displayDescription: null !== (r = a.description_localized) && void 0 !== r ? r : a.description,
+        displayName: [null != (n = o.name_localized) ? n : o.name, ...m].join(' '),
+        displayDescription: null != (r = a.description_localized) ? r : a.description,
         nsfw: o.nsfw,
         contexts: o.contexts,
         integration_types: o.integration_types,
@@ -134,22 +134,22 @@ function I(e) {
         ? void 0
         : e.map((e) => {
               var t, n;
-              let r = y(b({}, e), {
+              let r = v(b({}, e), {
                   choices: S(e.choices),
                   options: I(e.options),
                   serverLocalizedName: e.name_localized,
-                  displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name,
-                  displayDescription: null !== (n = e.description_localized) && void 0 !== n ? n : e.description
+                  displayName: null != (t = e.name_localized) ? t : e.name,
+                  displayDescription: null != (n = e.description_localized) ? n : e.description
               });
               return e.type === u.jw.CHANNEL && 'channel_types' in e
-                  ? y(b({}, r), { channelTypes: e.channel_types })
+                  ? v(b({}, r), { channelTypes: e.channel_types })
                   : (e.type === u.jw.NUMBER || e.type === u.jw.INTEGER) && ('min_value' in e || 'max_value' in e)
-                    ? y(b({}, r), {
+                    ? v(b({}, r), {
                           minValue: e.min_value,
                           maxValue: e.max_value
                       })
                     : e.type === u.jw.STRING && ('min_length' in e || 'max_length' in e)
-                      ? y(b({}, r), {
+                      ? v(b({}, r), {
                             minLength: e.min_length,
                             maxLength: e.max_length
                         })
@@ -161,7 +161,7 @@ function S(e) {
         ? void 0
         : e.map((e) => {
               var t;
-              return y(b({}, e), { displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name });
+              return v(b({}, e), { displayName: null != (t = e.name_localized) ? t : e.name });
           });
 }
 function T(e) {
@@ -201,7 +201,7 @@ function T(e) {
                     {
                         name: c[e].name,
                         type: u.jw.SUB_COMMAND_GROUP,
-                        displayName: null !== (t = c[e].name_localized) && void 0 !== t ? t : c[e].name
+                        displayName: null != (t = c[e].name_localized) ? t : c[e].name
                     }
                 ]),
                 useKeyedPermissions: s
@@ -218,7 +218,7 @@ function T(e) {
                     {
                         name: d[e].name,
                         type: u.jw.SUB_COMMAND,
-                        displayName: null !== (n = d[e].name_localized) && void 0 !== n ? n : d[e].name
+                        displayName: null != (n = d[e].name_localized) ? n : d[e].name
                     }
                 ]),
                 useKeyedPermissions: s
@@ -331,14 +331,17 @@ function x(e) {
     }
 }
 function M(e) {
-    return null == e ? void 0 : e.id === h.bi.BUILT_IN ? p.ub.BUILT_IN : e.id === h.bi.FRECENCY ? p.ub.FRECENCY : p.ub.APP;
+    if (null != e)
+        if (e.id === h.bi.BUILT_IN) return p.ub.BUILT_IN;
+        else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
+        else return p.ub.APP;
 }
 function k(e, t) {
     var n, r;
     return {
         type: p.Qi.APPLICATION,
         id: e.id,
-        name: null !== (r = null == e ? void 0 : null === (n = e.bot) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : e.name,
+        name: null != (r = null == e || null == (n = e.bot) ? void 0 : n.username) ? r : e.name,
         icon: e.icon,
         application: e,
         isUserApp: null != t && t
@@ -362,7 +365,7 @@ function U(e) {
     var t, n;
     let { command: r, location: i, triggerSection: o, queryLength: a, sectionName: s, query: l, searchResultsPosition: c, source: u } = e;
     (0, d.yw)(m.rMx.APPLICATION_COMMAND_SELECTED, {
-        command_id: null !== (n = null === (t = r.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : r.id,
+        command_id: null != (n = null == (t = r.rootCommand) ? void 0 : t.id) ? n : r.id,
         application_id: r.applicationId,
         location: i,
         section: o,
@@ -380,6 +383,6 @@ function G(e) {
 }
 function B(e, t) {
     var n;
-    let r = null === (n = t.result) || void 0 === n ? void 0 : n.sections;
+    let r = null == (n = t.result) ? void 0 : n.sections;
     return null != r && e in r;
 }

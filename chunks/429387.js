@@ -551,7 +551,7 @@ let t = (e) => ({
     ]
         .sort()
         .reverse();
-function s(e) {
+e.exports = function (e) {
     let s = t(e),
         l = 'and or not only',
         c = {
@@ -644,5 +644,4 @@ function s(e) {
             s.FUNCTION_DISPATCH
         ]
     };
-}
-e.exports = s;
+};

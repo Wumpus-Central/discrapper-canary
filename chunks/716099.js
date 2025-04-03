@@ -38,42 +38,41 @@ function s(e, t) {
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 var l = n(706057);
-n(622865);
-var c = (function (e) {
-    function t(e, n, r, i, s) {
-        o(this, t);
-        var l = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (l._value = e), (l._parent = n), (l._animationClass = r), (l._animationConfig = i), (l._callback = s), l.__attach(), l;
-    }
-    return (
-        s(t, e),
-        i(t, [
-            {
-                key: '__getValue',
-                value: function () {
-                    return this._parent.__getValue();
+n(622865),
+    (e.exports = (function (e) {
+        function t(e, n, r, i, s) {
+            o(this, t);
+            var l = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return (l._value = e), (l._parent = n), (l._animationClass = r), (l._animationConfig = i), (l._callback = s), l.__attach(), l;
+        }
+        return (
+            s(t, e),
+            i(t, [
+                {
+                    key: '__getValue',
+                    value: function () {
+                        return this._parent.__getValue();
+                    }
+                },
+                {
+                    key: '__attach',
+                    value: function () {
+                        this._parent.__addChild(this);
+                    }
+                },
+                {
+                    key: '__detach',
+                    value: function () {
+                        this._parent.__removeChild(this);
+                    }
+                },
+                {
+                    key: 'update',
+                    value: function () {
+                        this._value.animate(new this._animationClass(r({}, this._animationConfig, { toValue: this._animationConfig.toValue.__getValue() })), this._callback);
+                    }
                 }
-            },
-            {
-                key: '__attach',
-                value: function () {
-                    this._parent.__addChild(this);
-                }
-            },
-            {
-                key: '__detach',
-                value: function () {
-                    this._parent.__removeChild(this);
-                }
-            },
-            {
-                key: 'update',
-                value: function () {
-                    this._value.animate(new this._animationClass(r({}, this._animationConfig, { toValue: this._animationConfig.toValue.__getValue() })), this._callback);
-                }
-            }
-        ]),
-        t
-    );
-})(l);
-e.exports = c;
+            ]),
+            t
+        );
+    })(l));

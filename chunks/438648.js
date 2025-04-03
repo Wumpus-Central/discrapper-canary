@@ -28,7 +28,7 @@ function a(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var s = (function (e) {
+e.exports = (function (e) {
     function t() {
         i(this, t);
         var e = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
@@ -47,10 +47,7 @@ var s = (function (e) {
                 key: '__removeChild',
                 value: function (e) {
                     var t = this._children.indexOf(e);
-                    if (-1 === t) {
-                        console.warn("Trying to remove a child that doesn't exist");
-                        return;
-                    }
+                    if (-1 === t) return void console.warn("Trying to remove a child that doesn't exist");
                     this._children.splice(t, 1), 0 === this._children.length && this.__detach();
                 }
             },
@@ -64,4 +61,3 @@ var s = (function (e) {
         t
     );
 })(n(706057));
-e.exports = s;

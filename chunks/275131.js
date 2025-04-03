@@ -9,7 +9,7 @@ var r = n(664751),
     u = n(726115),
     d = n(128449),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,25 +22,22 @@ function p(e, t, n) {
         e
     );
 }
-class _ extends s.Z {
+class p extends s.Z {
     constructor(...e) {
         super(...e),
-            p(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
-            p(this, 'queue', new Set()),
-            p(this, 'isFetchEnabled', !1),
-            p(this, 'handleConnectionOpen', () => {
+            _(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
+            _(this, 'queue', new Set()),
+            _(this, 'isFetchEnabled', !1),
+            _(this, 'handleConnectionOpen', () => {
                 (this.isFetchEnabled = !0),
                     this.queue.forEach((e) => {
                         e === d.Hk ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
                     });
             }),
-            p(this, 'fetchFeaturedGuilds', async (e) => {
+            _(this, 'fetchFeaturedGuilds', async (e) => {
                 var t;
-                if (!this.isFetchEnabled) {
-                    this.queue.add(d.Hk);
-                    return;
-                }
-                let n = null !== (t = null == e ? void 0 : e.forceRefresh) && void 0 !== t && t,
+                if (!this.isFetchEnabled) return void this.queue.add(d.Hk);
+                let n = null != (t = null == e ? void 0 : e.forceRefresh) && t,
                     s = c.Z.getLastFetchTimestamp({ categoryId: d.Hk });
                 if (n || (0, u.Ew)(s)) {
                     a.Z.dispatch({
@@ -76,12 +73,9 @@ class _ extends s.Z {
                     }
                 }
             }),
-            p(this, 'fetchCategoryFeaturedGuilds', async (e) => {
+            _(this, 'fetchCategoryFeaturedGuilds', async (e) => {
                 let { categoryId: t, forceRefresh: n = !1 } = e;
-                if (!this.isFetchEnabled) {
-                    this.queue.add(t);
-                    return;
-                }
+                if (!this.isFetchEnabled) return void this.queue.add(t);
                 let i = c.Z.getLastFetchTimestamp({ categoryId: t });
                 if (n || (0, u.Ew)(i)) {
                     a.Z.dispatch({
@@ -116,4 +110,4 @@ class _ extends s.Z {
             });
     }
 }
-let h = new _();
+let h = new p();

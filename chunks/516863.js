@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.COMMENT(/^\s*@?rem\b/, /$/, { relevance: 10 });
     return {
         name: 'Batch file (DOS)',
@@ -28,5 +28,4 @@ function t(e) {
             t
         ]
     };
-}
-e.exports = t;
+};

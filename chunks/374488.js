@@ -551,14 +551,14 @@ let t = (e) => ({
     ]
         .sort()
         .reverse();
-function s(e) {
+e.exports = function (e) {
     let s = e.regex,
         l = t(e),
         c = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
         u = 'and or not only',
         d = /@-?\w[\w]*(-\w+)*/,
         f = '[a-zA-Z-][a-zA-Z0-9_-]*',
-        p = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+        _ = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: 'CSS',
         case_insensitive: !0,
@@ -597,14 +597,14 @@ function s(e) {
                     l.HEXCOLOR,
                     l.IMPORTANT,
                     l.CSS_NUMBER_MODE,
-                    ...p,
+                    ..._,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: { built_in: 'url data-uri' },
                         contains: [
-                            ...p,
+                            ..._,
                             {
                                 className: 'string',
                                 begin: /[^)]/,
@@ -641,7 +641,7 @@ function s(e) {
                                 begin: /[a-z-]+(?=:)/,
                                 className: 'attribute'
                             },
-                            ...p,
+                            ..._,
                             l.CSS_NUMBER_MODE
                         ]
                     }
@@ -653,5 +653,4 @@ function s(e) {
             }
         ]
     };
-}
-e.exports = s;
+};

@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.COMMENT(/\{/, /\}/, { contains: ['self'] });
     return {
         name: 'Parser3',
@@ -34,5 +34,4 @@ function t(e) {
             e.C_NUMBER_MODE
         ]
     };
-}
-e.exports = t;
+};

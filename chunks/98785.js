@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
         className: 'literal',
         begin: /[+-]+/,
@@ -35,5 +35,4 @@ function t(e) {
             t
         ]
     };
-}
-e.exports = t;
+};

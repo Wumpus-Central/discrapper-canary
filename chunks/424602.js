@@ -1,10 +1,9 @@
 n.d(t, {
-    PM: () => d,
+    PM: () => u,
     _f: () => a,
-    aZ: () => u,
+    aZ: () => c,
     aq: () => o,
-    gu: () => l,
-    xN: () => s
+    gu: () => s
 });
 var r = n(818083),
     i = n(987338);
@@ -55,22 +54,8 @@ let o = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
-        kind: 'user',
-        id: '2024-10_weighted_sample_activity_shelf',
-        label: 'Weighted Sample Activity Shelf',
-        defaultConfig: { enabled: !1 },
-        commonTriggerPoint: i.$P.VOICE_CALL,
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable weighted sample for activity shelf',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    l = '1211781489931452447',
-    c = (0, r.B)({
+    s = '1211781489931452447',
+    l = (0, r.B)({
         kind: 'guild',
         id: '2025-02_filter_wordle_from_voice_channel_launcher',
         label: 'Filter Wordle From Voice Channel Launcher',
@@ -83,10 +68,10 @@ let o = (0, r.B)({
             }
         ]
     });
-function u(e, t) {
-    return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && c.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+function c(e, t) {
+    return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && l.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
 }
-let d = (0, r.B)({
+let u = (0, r.B)({
     kind: 'user',
     id: '2025-03_app_launcher_pep_button_label',
     label: 'Change PEP Button Label To Play',

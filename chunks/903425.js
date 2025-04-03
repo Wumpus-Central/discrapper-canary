@@ -4,7 +4,6 @@ var r = n(56135),
     a = '[object Null]',
     s = '[object Undefined]',
     l = r ? r.toStringTag : void 0;
-function c(e) {
+e.exports = function (e) {
     return null == e ? (void 0 === e ? s : a) : l && l in Object(e) ? i(e) : o(e);
-}
-e.exports = c;
+};

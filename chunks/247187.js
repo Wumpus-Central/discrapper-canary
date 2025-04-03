@@ -1,6 +1,5 @@
-n = { value: !0 };
 for (
-    var n,
+    var n = { value: !0 },
         r = 'undefined' != typeof window && /Mac|iPod|iPhone|iPad/.test(window.navigator.platform),
         i = {
             alt: 'altKey',
@@ -104,9 +103,9 @@ function d(e, t) {
             var h = d.value,
                 m = h.endsWith('?') && h.length > 1;
             m && (h = h.slice(0, -1));
-            var g = _(h),
+            var g = p(h),
                 E = i[g];
-            (1 !== a && E) || (n ? (r.key = g) : (r.which = p(h))), E && (r[E] = !m || null);
+            (1 !== a && E) || (n ? (r.key = g) : (r.which = _(h))), E && (r[E] = !m || null);
         }
     } catch (e) {
         (c = !0), (u = e);
@@ -127,10 +126,10 @@ function f(e, t) {
     }
     return !0;
 }
-function p(e) {
-    return a[(e = _(e))] || e.toUpperCase().charCodeAt(0);
-}
 function _(e) {
+    return a[(e = p(e))] || e.toUpperCase().charCodeAt(0);
+}
+function p(e) {
     return (e = o[(e = e.toLowerCase())] || e);
 }
 (n = l), (n = l), (n = c), (t.isKeyHotkey = u);

@@ -26,10 +26,7 @@ function c(e, t) {
                 return () => {
                     t.querySelectorAll('['.concat(r, ']')).forEach((e) => {
                         let t = e.getAttribute(r);
-                        if (null != t) {
-                            let n = parseInt(t, 10);
-                            e.tabIndex = n;
-                        }
+                        null != t && (e.tabIndex = parseInt(t, 10));
                     });
                 };
             }

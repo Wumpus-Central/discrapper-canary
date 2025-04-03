@@ -31,25 +31,11 @@ var p = n(853897),
                     u = l.y;
                 void 0 !== c && void 0 !== u && ((i[a] = c), (o[a] = u));
             }
-            return O([n(e.x, i), n(e.y, o)], { stopTogether: !1 });
+            return y([n(e.x, i), n(e.y, o)], { stopTogether: !1 });
         }
         return null;
     },
     E = function e(t, n) {
-        return (
-            g(t, n, e) || {
-                start: function (e) {
-                    var r = t,
-                        i = n;
-                    r.stopTracking(), n.toValue instanceof o ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
-                },
-                stop: function () {
-                    t.stopAnimation();
-                }
-            }
-        );
-    },
-    b = function e(t, n) {
         return (
             g(t, n, e) || {
                 start: function (e) {
@@ -63,21 +49,7 @@ var p = n(853897),
             }
         );
     },
-    v = function e(t, n) {
-        return (
-            g(t, n, e) || {
-                start: function (e) {
-                    var r = t,
-                        i = n;
-                    r.stopTracking(), r.animate(new h(i), e);
-                },
-                stop: function () {
-                    t.stopAnimation();
-                }
-            }
-        );
-    },
-    y = function (e) {
+    b = function (e) {
         var t = 0;
         return {
             start: function (n) {
@@ -95,7 +67,7 @@ var p = n(853897),
             }
         };
     },
-    O = function (e, t) {
+    y = function (e, t) {
         var n = 0,
             r = {},
             i = !(t && !1 === t.stopTogether),
@@ -124,21 +96,21 @@ var p = n(853897),
             };
         return o;
     },
-    I = function (e) {
-        return b(new a(0), {
+    v = function (e) {
+        return E(new a(0), {
             toValue: 0,
             delay: e,
             duration: 0
         });
     },
-    S = function (e, t) {
-        return O(
+    O = function (e, t) {
+        return y(
             t.map(function (t, n) {
-                return y([I(e * n), t]);
+                return b([v(e * n), t]);
             })
         );
     },
-    T = function (e, t) {
+    I = function (e, t) {
         return function () {
             for (var n = arguments.length, r = Array(n), o = 0; o < n; o++) r[o] = arguments[o];
             var s = function e(t, n, r) {
@@ -157,9 +129,35 @@ var p = n(853897),
 e.exports = {
     Value: a,
     ValueXY: s,
-    decay: v,
-    timing: b,
-    spring: E,
+    decay: function e(t, n) {
+        return (
+            g(t, n, e) || {
+                start: function (e) {
+                    var r = t,
+                        i = n;
+                    r.stopTracking(), r.animate(new h(i), e);
+                },
+                stop: function () {
+                    t.stopAnimation();
+                }
+            }
+        );
+    },
+    timing: E,
+    spring: function e(t, n) {
+        return (
+            g(t, n, e) || {
+                start: function (e) {
+                    var r = t,
+                        i = n;
+                    r.stopTracking(), n.toValue instanceof o ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
+                },
+                stop: function () {
+                    t.stopAnimation();
+                }
+            }
+        );
+    },
     add: function (e, t) {
         return new l(e, t);
     },
@@ -173,11 +171,11 @@ e.exports = {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new d(e, n);
     },
-    delay: I,
-    sequence: y,
-    parallel: O,
-    stagger: S,
-    event: T,
+    delay: v,
+    sequence: b,
+    parallel: y,
+    stagger: O,
+    event: I,
     isAnimated: _,
     createAnimatedComponent: n(136877),
     inject: {

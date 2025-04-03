@@ -1,6 +1,6 @@
 var r = n(805100),
     i = n(580897);
-function o(e, t, n, o) {
+e.exports = function (e, t, n, o) {
     var a = !n;
     n || (n = {});
     for (var s = -1, l = t.length; ++s < l; ) {
@@ -9,5 +9,4 @@ function o(e, t, n, o) {
         void 0 === u && (u = e[c]), a ? i(n, c, u) : r(n, c, u);
     }
     return n;
-}
-e.exports = o;
+};

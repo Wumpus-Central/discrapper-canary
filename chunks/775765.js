@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = /[dualxmsipngr]{0,12}/,
         r = {
@@ -43,7 +43,7 @@ function t(e) {
             return t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, o, /(?:\\.|[^\\\/])*?/, i, n);
         },
         f = (e, r, i) => t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, i, n),
-        p = [
+        _ = [
             s,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
@@ -168,14 +168,13 @@ function t(e) {
             }
         ];
     return (
-        (i.contains = p),
-        (o.contains = p),
+        (i.contains = _),
+        (o.contains = _),
         {
             name: 'Perl',
             aliases: ['pl', 'pm'],
             keywords: r,
-            contains: p
+            contains: _
         }
     );
-}
-e.exports = t;
+};

@@ -53,10 +53,7 @@ function m(e, t, n, s, l) {
     return (
         (0, r.useEffect)(() => {
             if (null == f) return;
-            if (null == e || null == e.current) {
-                p({ background: f });
-                return;
-            }
+            if (null == e || null == e.current) return void p({ background: f });
             let t = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width,
                     n = 0.8 * t,

@@ -17,7 +17,7 @@ function o(e) {
 function a(...e) {
     return '(' + (o(e).capture ? '' : '?:') + e.map((e) => n(e)).join('|') + ')';
 }
-function s(e) {
+e.exports = function (e) {
     let n = {
             scope: 'keyword',
             match: /\b(yield|return|let|do|match|use)!/
@@ -40,14 +40,14 @@ function s(e) {
             end: /``/
         },
         f = /\B('|\^)/,
-        p = {
+        _ = {
             scope: 'symbol',
             variants: [{ match: i(f, /``.*?``/) }, { match: i(f, e.UNDERSCORE_IDENT_RE) }],
             relevance: 0
         },
-        _ = function ({ includeEqual: e }) {
-            let n;
-            let o = i('[', ...Array.from((n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?')).map(t), ']'),
+        p = function ({ includeEqual: e }) {
+            let n,
+                o = i('[', ...Array.from((n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?')).map(t), ']'),
                 s = a(o, /\./),
                 l = i(s, r(s)),
                 c = a(i(l, s, '*'), i(o, '+'));
@@ -57,8 +57,8 @@ function s(e) {
                 relevance: 0
             };
         },
-        h = _({ includeEqual: !0 }),
-        m = _({ includeEqual: !1 }),
+        h = p({ includeEqual: !0 }),
+        m = p({ includeEqual: !1 }),
         g = function (t, n) {
             return {
                 begin: i(t, r(i(/\s*/, a(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
@@ -66,12 +66,12 @@ function s(e) {
                 end: r(a(/\n/, /=/)),
                 relevance: 0,
                 keywords: e.inherit(l, { type: s }),
-                contains: [c, p, e.inherit(d, { scope: null }), m]
+                contains: [c, _, e.inherit(d, { scope: null }), m]
             };
         },
         E = g(/:/, 'operator'),
-        v = g(/\bof\b/, 'keyword'),
-        b = {
+        b = g(/\bof\b/, 'keyword'),
+        y = {
             begin: [/(^|\s+)/, /type/, /\s+/, u],
             beginScope: {
                 2: 'keyword',
@@ -82,7 +82,7 @@ function s(e) {
             contains: [
                 c,
                 e.inherit(d, { scope: null }),
-                p,
+                _,
                 {
                     scope: 'operator',
                     match: /<|>/
@@ -90,7 +90,7 @@ function s(e) {
                 E
             ]
         },
-        y = {
+        v = {
             scope: 'computation-expression',
             match: /\b[_a-z]\w*(?=\s*\{)/
         },
@@ -99,10 +99,10 @@ function s(e) {
             beginScope: { 2: 'meta' },
             end: r(/\s|$/)
         },
-        S = {
+        I = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
-        I = {
+        S = {
             scope: 'string',
             begin: /"/,
             end: /"/,
@@ -150,7 +150,7 @@ function s(e) {
             match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (A.contains = [R, C, T, I, w, n, c, d, E, y, O, S, p, h]),
+        (A.contains = [R, C, T, S, w, n, c, d, E, v, O, I, _, h]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -160,27 +160,26 @@ function s(e) {
             contains: [
                 n,
                 {
-                    variants: [P, R, C, N, T, I, w]
+                    variants: [P, R, C, N, T, S, w]
                 },
                 c,
                 d,
-                b,
+                y,
                 {
                     scope: 'meta',
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [d, N, T, I, w, S]
+                    contains: [d, N, T, S, w, I]
                 },
-                v,
+                b,
                 E,
-                y,
+                v,
                 O,
-                S,
-                p,
+                I,
+                _,
                 h
             ]
         }
     );
-}
-e.exports = s;
+};

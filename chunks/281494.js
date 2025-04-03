@@ -100,7 +100,7 @@ let m = () => (
                     type: 'BILLING_REFERRALS_REMAINING_FETCH_SUCCESS',
                     referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
                     sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
-                    refresh_at: null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null,
+                    refresh_at: null != (n = null == (t = e.body) ? void 0 : t.refresh_at) ? n : null,
                     recipient_status: r,
                     has_eligible_friends: e.body.has_eligible_friends
                 });
@@ -116,13 +116,18 @@ async function g(e) {
     for (let i of e)
         try {
             var o;
-            let e = await r.tn.post({
-                    url: s.ANM.CREATE_REFERRAL(i),
-                    oldFormErrors: !0,
-                    rejectWithError: !0
-                }),
-                a = null !== (o = e.body) && void 0 !== o ? o : null;
-            null != a && t.push(a), n.set(i, 1);
+            let e =
+                null !=
+                (o = (
+                    await r.tn.post({
+                        url: s.ANM.CREATE_REFERRAL(i),
+                        oldFormErrors: !0,
+                        rejectWithError: !0
+                    })
+                ).body)
+                    ? o
+                    : null;
+            null != e && t.push(e), n.set(i, 1);
         } catch (e) {
             a.Z.captureException(e), n.set(i, 2);
         }
@@ -137,18 +142,23 @@ async function g(e) {
 async function E(e) {
     try {
         var t;
-        let n = await r.tn.get({
-                url: s.ANM.REFERRAL_OFFER_ID_RESOLVE(e),
-                oldFormErrors: !0,
-                rejectWithError: !1
-            }),
-            o = null !== (t = n.body) && void 0 !== t ? t : null;
+        let n =
+            null !=
+            (t = (
+                await r.tn.get({
+                    url: s.ANM.REFERRAL_OFFER_ID_RESOLVE(e),
+                    oldFormErrors: !0,
+                    rejectWithError: !1
+                })
+            ).body)
+                ? t
+                : null;
         return (
             i.Z.dispatch({
                 type: 'BILLING_REFERRAL_RESOLVE_SUCCESS',
-                userTrialOffer: o
+                userTrialOffer: n
             }),
-            { userTrialOffer: o }
+            { userTrialOffer: n }
         );
     } catch (t) {
         i.Z.dispatch({

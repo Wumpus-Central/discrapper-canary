@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex.either(...['(?:NeedsTeXFormat|RequirePackage|GetIdInfo)', 'Provides(?:Expl)?(?:Package|Class|File)', '(?:DeclareOption|ProcessOptions)', '(?:documentclass|usepackage|input|include)', 'makeat(?:letter|other)', 'ExplSyntax(?:On|Off)', '(?:new|renew|provide)?command', '(?:re)newenvironment', '(?:New|Renew|Provide|Declare)(?:Expandable)?DocumentCommand', '(?:New|Renew|Provide|Declare)DocumentEnvironment', '(?:(?:e|g|x)?def|let)', '(?:begin|end)', '(?:part|chapter|(?:sub){0,2}section|(?:sub)?paragraph)', 'caption', '(?:label|(?:eq|page|name)?ref|(?:paren|foot|super)?cite)', '(?:alpha|beta|[Gg]amma|[Dd]elta|(?:var)?epsilon|zeta|eta|[Tt]heta|vartheta)', '(?:iota|(?:var)?kappa|[Ll]ambda|mu|nu|[Xx]i|[Pp]i|varpi|(?:var)rho)', '(?:[Ss]igma|varsigma|tau|[Uu]psilon|[Pp]hi|varphi|chi|[Pp]si|[Oo]mega)', '(?:frac|sum|prod|lim|infty|times|sqrt|leq|geq|left|right|middle|[bB]igg?)', '(?:[lr]angle|q?quad|[lcvdi]?dots|d?dot|hat|tilde|bar)'].map((e) => e + '(?![a-zA-Z@:_])')),
         n = new RegExp(['(?:__)?[a-zA-Z]{2,}_[a-zA-Z](?:_?[a-zA-Z])+:[a-zA-Z]*', '[lgc]__?[a-zA-Z](?:_?[a-zA-Z])*_[a-zA-Z]{2,}', '[qs]__?[a-zA-Z](?:_?[a-zA-Z])+', 'use(?:_i)?:[a-zA-Z]*', '(?:else|fi|or):', '(?:if|cs|exp):w', '(?:hbox|vbox):n', '::[a-zA-Z]_unbraced', '::[a-zA-Z:]'].map((e) => e + '(?![a-zA-Z:_])').join('|')),
         r = [{ begin: /\^{6}[0-9a-f]{6}/ }, { begin: /\^{5}[0-9a-f]{5}/ }, { begin: /\^{4}[0-9a-f]{4}/ }, { begin: /\^{3}[0-9a-f]{3}/ }, { begin: /\^{2}[0-9a-f]{2}/ }, { begin: /\^{2}[\u0000-\u007f]/ }],
@@ -106,7 +106,7 @@ function t(e) {
                 u(l, n)
             );
         },
-        p = (t = 'string') =>
+        _ = (t = 'string') =>
             e.END_SAME_AS_BEGIN({
                 className: t,
                 begin: /(.|\r?\n)/,
@@ -115,7 +115,7 @@ function t(e) {
                 excludeEnd: !0,
                 endsParent: !0
             }),
-        _ = function (e) {
+        p = function (e) {
             return {
                 className: 'string',
                 end: '(?=\\\\end\\{' + e + '\\})'
@@ -147,12 +147,12 @@ function t(e) {
         name: 'LaTeX',
         aliases: ['tex'],
         contains: [
-            ...['verb', 'lstinline'].map((e) => d(e, { contains: [p()] })),
-            d('mint', u(l, { contains: [p()] })),
+            ...['verb', 'lstinline'].map((e) => d(e, { contains: [_()] })),
+            d('mint', u(l, { contains: [_()] })),
             d(
                 'mintinline',
                 u(l, {
-                    contains: [h(), p()]
+                    contains: [h(), _()]
                 })
             ),
             d('url', {
@@ -160,10 +160,9 @@ function t(e) {
             }),
             d('hyperref', { contains: [h('link')] }),
             d('href', u(c, { contains: [h('link')] })),
-            ...[].concat(...['', '\\*'].map((e) => [f('verbatim' + e, _('verbatim' + e)), f('filecontents' + e, u(l, _('filecontents' + e))), ...['', 'B', 'L'].map((t) => f(t + 'Verbatim' + e, u(c, _(t + 'Verbatim' + e))))])),
-            f('minted', u(c, u(l, _('minted')))),
+            ...[].concat(...['', '\\*'].map((e) => [f('verbatim' + e, p('verbatim' + e)), f('filecontents' + e, u(l, p('filecontents' + e))), ...['', 'B', 'L'].map((t) => f(t + 'Verbatim' + e, u(c, p(t + 'Verbatim' + e))))])),
+            f('minted', u(c, u(l, p('minted')))),
             ...i
         ]
     };
-}
-e.exports = t;
+};

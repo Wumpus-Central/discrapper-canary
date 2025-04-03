@@ -1,7 +1,7 @@
 var t = 800,
     n = 16,
     r = Date.now;
-function i(e) {
+e.exports = function (e) {
     var i = 0,
         o = 0;
     return function () {
@@ -12,5 +12,4 @@ function i(e) {
         } else i = 0;
         return e.apply(void 0, arguments);
     };
-}
-e.exports = i;
+};

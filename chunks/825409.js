@@ -1,5 +1,5 @@
 n.d(t, {
-    m: () => p,
+    m: () => _,
     q: () => c
 }),
     n(47120),
@@ -84,15 +84,13 @@ class f extends u {
             (this._parsedMessages = this._createProxy(this._context));
     }
 }
-class p extends r.EventEmitter {
+class _ extends r.EventEmitter {
     updateMessagesForExperiment(e, t) {
         let n = this._fetchMessages(e);
-        if (n instanceof Promise) {
-            n.then((n) => {
+        if (n instanceof Promise)
+            return void n.then((n) => {
                 this._applyMessagesForLocale(t(n), e);
             });
-            return;
-        }
         this._applyMessagesForLocale(t(n), e);
     }
     setLocale(e) {
@@ -119,7 +117,7 @@ class p extends r.EventEmitter {
                 return {
                     value: n,
                     name: r,
-                    localizedName: null !== (t = this.Messages[n]) && void 0 !== t ? t : r
+                    localizedName: null != (t = this.Messages[n]) ? t : r
                 };
             })
             .sort((e, t) => {
@@ -136,7 +134,7 @@ class p extends r.EventEmitter {
     }
     getDefaultLocale() {
         var e, t, n;
-        let r = null !== (e = c()) && void 0 !== e ? e : l,
+        let r = null != (e = c()) ? e : l,
             i = this._languages
                 .filter((e) => {
                     let { enabled: t } = e;
@@ -148,7 +146,7 @@ class p extends r.EventEmitter {
                 });
         if (i.includes(r)) return r;
         let o = r.split('-');
-        return i.includes(o[0]) ? o[0] : 'zh' === o[0] && o.length > 1 && 'Hant' === o[1] ? (null !== (t = i.find((e) => 'zh-TW' === e)) && void 0 !== t ? t : l) : null !== (n = i.find((e) => e.split('-')[0] === o[0])) && void 0 !== n ? n : l;
+        return i.includes(o[0]) ? o[0] : 'zh' === o[0] && o.length > 1 && 'Hant' === o[1] ? (null != (t = i.find((e) => 'zh-TW' === e)) ? t : l) : null != (n = i.find((e) => e.split('-')[0] === o[0])) ? n : l;
     }
     _loadMessagesForLocale(e) {
         let t = this._fetchMessages(e);

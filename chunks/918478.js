@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             className: 'number',
             relevance: 0,
@@ -63,5 +63,4 @@ function t(e) {
             t
         ]
     };
-}
-e.exports = t;
+};

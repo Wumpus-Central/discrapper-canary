@@ -5,7 +5,7 @@ var r = n(886985),
     s = n(939556),
     l = n(322909),
     c = n(118666);
-function u(e, t, n) {
+e.exports = function (e, t, n) {
     var u = -1;
     return (
         (t = r(t.length ? t : [c], s(i))),
@@ -24,5 +24,4 @@ function u(e, t, n) {
             }
         )
     );
-}
-e.exports = u;
+};

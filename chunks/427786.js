@@ -73,7 +73,10 @@ function t(e) {
     }),
     (t.prototype.peekBack = function () {
         var e = this._length;
-        if (0 !== e) return this[(this._front + e - 1) & (this._capacity - 1)];
+        if (0 !== e) {
+            var t = (this._front + e - 1) & (this._capacity - 1);
+            return this[t];
+        }
     }),
     (t.prototype.peekFront = function () {
         if (0 !== this._length) return this[this._front];
@@ -135,10 +138,9 @@ function i(e) {
     return (e >>>= 0), (e -= 1), (e |= e >> 1), (e |= e >> 2), (e |= e >> 4), (e |= e >> 8), (e |= e >> 16) + 1;
 }
 function o(e) {
-    if ('number' != typeof e) {
+    if ('number' != typeof e)
         if (!n(e)) return 16;
-        e = e.length;
-    }
+        else e = e.length;
     return i(Math.min(Math.max(16, e), 1073741824));
 }
 e.exports = t;

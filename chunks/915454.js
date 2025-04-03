@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.COMMENT('--', '$'),
         n = '\\$([a-zA-Z_]?|[a-zA-Z_][a-zA-Z_0-9]*)\\$',
         r = '<<\\s*[a-zA-Z_][a-zA-Z_0-9$]*\\s*>>',
@@ -151,5 +151,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

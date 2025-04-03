@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = { begin: '`[\\s\\S]' };
     return {
         name: 'AutoHotkey',
@@ -50,5 +50,4 @@ function t(e) {
             { begin: ',\\s*,' }
         ]
     };
-}
-e.exports = t;
+};

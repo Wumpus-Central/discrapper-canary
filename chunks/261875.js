@@ -25,12 +25,12 @@ class f extends r.ZP.Store {
         this.waitFor(s.default), this.carefullySpeculativelyOpen(l.n()), this.handleAuthenticationStoreChanged(), s.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
     }
     databaseName(e) {
-        return _(e);
+        return p(e);
     }
     database(e) {
         if (null != e) {
             var t;
-            return null !== (t = this.databases.get(e)) && void 0 !== t ? t : null;
+            return null != (t = this.databases.get(e)) ? t : null;
         }
         return null;
     }
@@ -71,10 +71,7 @@ class f extends r.ZP.Store {
         }
     }
     async carefullySpeculativelyOpen(e) {
-        if (this.preventWritingCachesAgainThisSession) {
-            u.verbose('Not opening database because caches have been manually cleared.');
-            return;
-        }
+        if (this.preventWritingCachesAgainThisSession) return void u.verbose('Not opening database because caches have been manually cleared.');
         if (null != e) {
             let t = await m(e);
             null == t || this.databases.has(e) ? (u.verbose('discarding speculative database ('.concat(e, ' \u2192 ').concat(t, ')')), null == t || t.close()) : (u.verbose('added speculative database ('.concat(e, ' \u2192 ').concat(t, ')')), this.databases.set(e, t), this.emitChange());
@@ -96,7 +93,7 @@ class f extends r.ZP.Store {
             c(this, 'preventWritingCachesAgainThisSession', !1);
     }
 }
-function p(e, t) {
+function _(e, t) {
     for (let n = 0; n < e; n++)
         try {
             return t();
@@ -105,20 +102,20 @@ function p(e, t) {
         }
     return null;
 }
-function _(e) {
+function p(e) {
     return '@account.'.concat(e);
 }
 function h(e) {
     if (d) {
         let t = 50,
-            n = _(e);
-        return u.verbose('synchronously opening '.concat(n)), p(t, () => i.vo.openSyncUnsafe(n, { invalidateDisabledHandles: !0 }));
+            n = p(e);
+        return u.verbose('synchronously opening '.concat(n)), _(t, () => i.vo.openSyncUnsafe(n, { invalidateDisabledHandles: !0 }));
     }
     return null;
 }
 async function m(e) {
     if (d) {
-        let t = _(e);
+        let t = p(e);
         u.verbose('speculatively opening '.concat(t));
         try {
             return await i.vo.open(t);

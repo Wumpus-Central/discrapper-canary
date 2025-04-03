@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => L }), n(47120);
+n.d(t, { ZP: () => x }), n(47120);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -9,8 +9,8 @@ var r,
     u = n(430824),
     d = n(594174),
     f = n(979651),
-    p = n(700785),
-    _ = n(146085),
+    _ = n(700785),
+    p = n(146085),
     h = n(590415);
 function m(e, t, n) {
     return (
@@ -30,44 +30,44 @@ let g = {},
         speaker: !1,
         moderator: !1
     };
-function v(e, t) {
+function b(e, t) {
     let n = f.Z.getVoiceStateForChannel(t, e);
     return (0, h.gf)(n) === h.xO.ON_STAGE;
 }
-function b(e, t, n) {
-    return p.BT({
-        permission: _.yP,
+function y(e, t, n) {
+    return _.BT({
+        permission: p.yP,
         user: e,
         context: t,
         overwrites: n.permissionOverwrites,
         roles: u.Z.getRoles(t.id)
     });
 }
-function y(e, t) {
+function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = l.Z.getChannel(t),
         i = null == r ? void 0 : r.getGuildId(),
         o = u.Z.getGuild(i);
     return null != o && null != r && r.isGuildStageVoice()
         ? {
-              speaker: v(e, t),
-              moderator: n ? b(e, o, r) : null
+              speaker: b(e, t),
+              moderator: n ? y(e, o, r) : null
           }
         : E;
 }
 function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == g[t] && (g[t] = {});
-    let r = y(e, t, n);
+    let r = v(e, t, n);
     return (g[t][e] = r), r;
 }
-function S(e, t) {
+function I(e, t) {
     var n;
     if (null == t) return !1;
     let r = l.Z.getChannel(t);
-    return !!(null != r && r.isGuildStageVoice()) && (null === (n = g[t]) || void 0 === n || delete n[e], !0);
+    return null != r && !!r.isGuildStageVoice() && (null == (n = g[t]) || delete n[e], !0);
 }
-function I(e, t) {
+function S(e, t) {
     for (let n in g) {
         let r = l.Z.getBasicChannel(n);
         null != r && r.guild_id === t && delete g[n][e];
@@ -89,7 +89,7 @@ function A(e) {
 }
 function C(e) {
     let { guildId: t, user: n } = e;
-    return null != n && null != t && I(n.id, t);
+    return null != n && null != t && S(n.id, t);
 }
 function R(e) {
     let { voiceStates: t } = e;
@@ -97,7 +97,7 @@ function R(e) {
         !o().isEmpty(g) &&
         t.reduce((e, t) => {
             let { userId: n, channelId: r } = t;
-            return S(n, r) || e;
+            return I(n, r) || e;
         }, !1)
     );
 }
@@ -114,7 +114,7 @@ function D(e) {
         (null == n || n.guild_id === t.id) && delete g[e];
     }
 }
-class x extends (r = a.ZP.Store) {
+class L extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.ZP, l.Z, u.Z, d.default, f.Z);
     }
@@ -123,7 +123,7 @@ class x extends (r = a.ZP.Store) {
     }
     isModerator(e, t) {
         var n;
-        return null !== (n = this.getPermissionsForUser(e, t, !0).moderator) && void 0 !== n && n;
+        return null != (n = this.getPermissionsForUser(e, t, !0).moderator) && n;
     }
     isAudienceMember(e, t) {
         let n = this.getPermissionsForUser(e, t);
@@ -133,12 +133,15 @@ class x extends (r = a.ZP.Store) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (null == e || null == t) return E;
-        let i = null === (n = g[t]) || void 0 === n ? void 0 : n[e];
-        return null != i ? (r && null == i.moderator ? O(e, t, !0) : i) : O(e, t, r);
+        let i = null == (n = g[t]) ? void 0 : n[e];
+        if (null != i)
+            if (r && null == i.moderator) return O(e, t, !0);
+            else return i;
+        return O(e, t, r);
     }
 }
-m(x, 'displayName', 'StageChannelRoleStore');
-let L = new x(s.Z, {
+m(L, 'displayName', 'StageChannelRoleStore');
+let x = new L(s.Z, {
     CHANNEL_UPDATES: N,
     CONNECTION_OPEN: w,
     GUILD_MEMBER_REMOVE: C,

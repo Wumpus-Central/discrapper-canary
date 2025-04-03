@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.COMMENT(/\(\*/, /\*\)/),
         n = {
             className: 'attribute',
@@ -31,5 +31,4 @@ function t(e) {
         illegal: /\S/,
         contains: [t, n, r]
     };
-}
-e.exports = t;
+};

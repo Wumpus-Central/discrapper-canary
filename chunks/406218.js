@@ -10,28 +10,32 @@ var r = n(345074),
     i = n(339085),
     o = n(633302),
     a = n(823379),
-    s = n(405222);
+    s = n(330705);
 function l(e) {
     let { guildId: t, emojiId: n, emojiName: r } = e,
         a = i.De.get(t);
-    return null == n && null == r ? null : null != n ? (null != a ? a.getById(n) : null) : null != r ? o.ZP.getByName(r) : null;
+    if (null == n && null == r) return null;
+    if (null != n)
+        if (null != a) return a.getById(n);
+        else return null;
+    return null != r ? o.ZP.getByName(r) : null;
 }
 let c = { label: '' };
 function u(e, t) {
     let n = Array(r.Sn).fill(c);
     for (let o of t) {
         var i;
-        !(o.position < 0) &&
-            !(o.position >= r.Sn) &&
+        o.position < 0 ||
+            o.position >= r.Sn ||
             (n[o.position] = {
                 label: o.label,
                 emoji:
-                    null !==
-                        (i = l({
-                            guildId: e,
-                            emojiId: o.emoji_id,
-                            emojiName: o.emoji_name
-                        })) && void 0 !== i
+                    null !=
+                    (i = l({
+                        guildId: e,
+                        emojiId: o.emoji_id,
+                        emojiName: o.emoji_name
+                    }))
                         ? i
                         : void 0
             });
@@ -57,17 +61,17 @@ function f(e) {
     return {
         id: e.id,
         name: e.name,
-        description: null !== (t = e.description) && void 0 !== t ? t : '',
+        description: null != (t = e.description) ? t : '',
         icon: e.icon_hash,
         customBanner: e.custom_banner_hash,
         onlineCount: e.online_count,
         memberCount: e.member_count,
-        brandColorPrimary: null !== (n = e.brand_color_primary) && void 0 !== n ? n : null,
+        brandColorPrimary: null != (n = e.brand_color_primary) ? n : null,
         visibility: e.visibility,
-        traits: u(e.id, null !== (r = e.traits) && void 0 !== r ? r : []),
-        gameApplicationIds: null !== (i = e.game_application_ids) && void 0 !== i ? i : [],
+        traits: u(e.id, null != (r = e.traits) ? r : []),
+        gameApplicationIds: null != (i = e.game_application_ids) ? i : [],
         gameActivity: d(e.game_activity),
-        features: null !== (o = e.features) && void 0 !== o ? o : [],
+        features: null != (o = e.features) ? o : [],
         tag: e.tag,
         badge: e.badge,
         badgeColorPrimary: e.badge_color_primary,
@@ -93,9 +97,9 @@ function _(e) {
                         : {
                               label: e.label,
                               position: t,
-                              emoji_id: null === (n = e.emoji) || void 0 === n ? void 0 : n.id,
-                              emoji_name: null === (r = e.emoji) || void 0 === r ? void 0 : r.name,
-                              emoji_animated: null === (i = e.emoji) || void 0 === i ? void 0 : i.animated
+                              emoji_id: null == (n = e.emoji) ? void 0 : n.id,
+                              emoji_name: null == (r = e.emoji) ? void 0 : r.name,
+                              emoji_animated: null == (i = e.emoji) ? void 0 : i.animated
                           };
                 })
                 .filter(a.lm)),
@@ -130,16 +134,16 @@ function h(e) {
           : {
                 id: l.id,
                 name: l.name,
-                description: null !== (t = l.description) && void 0 !== t ? t : '',
+                description: null != (t = l.description) ? t : '',
                 icon: l.icon,
                 customBanner: l.banner,
-                onlineCount: null !== (r = null !== (n = l.approximate_presence_count) && void 0 !== n ? n : e.approximate_presence_count) && void 0 !== r ? r : 0,
-                memberCount: null !== (o = null !== (i = l.approximate_member_count) && void 0 !== i ? i : e.approximate_member_count) && void 0 !== o ? o : 0,
+                onlineCount: null != (r = null != (n = l.approximate_presence_count) ? n : e.approximate_presence_count) ? r : 0,
+                memberCount: null != (o = null != (i = l.approximate_member_count) ? i : e.approximate_member_count) ? o : 0,
                 visibility: s.k.NOT_SPECIFIED,
                 traits: [],
                 gameApplicationIds: [],
                 gameActivity: {},
-                features: null !== (a = l.features) && void 0 !== a ? a : [],
+                features: null != (a = l.features) ? a : [],
                 brandColorPrimary: null,
                 tag: null,
                 badge: null,

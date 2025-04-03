@@ -9,8 +9,8 @@ var r = n(264344),
     u = n(236842),
     d = n(649318),
     f = n(199857),
-    p = n(65154),
-    _ = n(436620);
+    _ = n(65154),
+    p = n(436620);
 function h(e, t, n) {
     return (
         t in e
@@ -34,22 +34,19 @@ class g extends s.Z {
     setCodecs(e, t, n) {
         var r, i, o;
         let a;
-        (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t) && ((a = this.codecs.find((t) => t.name === e)), (this.fpc.audioCodec = e), (this.fpc.audioPayloadType = null !== (r = null == a ? void 0 : a.payloadType) && void 0 !== r ? r : 0), (a = this.codecs.find((e) => e.name === t)), (this.fpc.videoCodec = t), (this.fpc.videoPayloadType = null !== (i = null == a ? void 0 : a.payloadType) && void 0 !== i ? i : 0), (this.fpc.rtxPayloadType = null !== (o = null == a ? void 0 : a.rtxPayloadType) && void 0 !== o ? o : 0), this.pc.negotiationNeeded());
+        (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t) && ((a = this.codecs.find((t) => t.name === e)), (this.fpc.audioCodec = e), (this.fpc.audioPayloadType = null != (r = null == a ? void 0 : a.payloadType) ? r : 0), (a = this.codecs.find((e) => e.name === t)), (this.fpc.videoCodec = t), (this.fpc.videoPayloadType = null != (i = null == a ? void 0 : a.payloadType) ? i : 0), (this.fpc.rtxPayloadType = null != (o = null == a ? void 0 : a.rtxPayloadType) ? o : 0), this.pc.negotiationNeeded());
     }
     setStream(e) {
         (this.fpc.direction = null != e ? d.Ns.SENDRECV : d.Ns.SENDONLY), this.pc.setStream(null != e ? e : null);
     }
     createUser(e, t, n) {
         var r;
-        if (0 === t) {
-            this.logger.warn('Attempting to create user '.concat(e, ' with 0 audio SSRC'));
-            return;
-        }
+        if (0 === t) return void this.logger.warn('Attempting to create user '.concat(e, ' with 0 audio SSRC'));
         this.logger.info(
             'Creating user: '
                 .concat(e, ' with audio SSRC: ')
                 .concat(t, ' and video SSRCs: ')
-                .concat(null !== (r = null == n ? void 0 : n.join(',')) && void 0 !== r ? r : 0)
+                .concat(null != (r = null == n ? void 0 : n.join(',')) ? r : 0)
         );
         let i = null != n && n.length > 0 ? n[0] : 0;
         this.fpc.addStream(e, t, i);
@@ -85,13 +82,13 @@ class g extends s.Z {
         s.on('addtrack', (e, t) => this.createOutput(m(e), t)),
             s.on('removetrack', (e, t) => this.destroyOutput(m(e), t)),
             s.once('connected', () => {
-                this.input.reset(), this.setConnectionState(p.$j.CONNECTED), this.on(a.Sh.Stats, this.handleStats), this.input.on(c.G.VoiceActivity, this.handleVoiceActivity);
+                this.input.reset(), this.setConnectionState(_.$j.CONNECTED), this.on(a.Sh.Stats, this.handleStats), this.input.on(c.G.VoiceActivity, this.handleVoiceActivity);
             }),
-            s.on('connecting', () => this.setConnectionState(p.$j.DTLS_CONNECTING)),
-            s.on('checking', () => this.setConnectionState(p.$j.ICE_CHECKING)),
-            s.on('failed', () => this.setConnectionState(p.$j.NO_ROUTE)),
-            s.on('disconnected', () => this.setConnectionState(p.$j.DISCONNECTED)),
-            s.on('closed', () => this.setConnectionState(p.$j.DISCONNECTED)),
+            s.on('connecting', () => this.setConnectionState(_.$j.DTLS_CONNECTING)),
+            s.on('checking', () => this.setConnectionState(_.$j.ICE_CHECKING)),
+            s.on('failed', () => this.setConnectionState(_.$j.NO_ROUTE)),
+            s.on('disconnected', () => this.setConnectionState(_.$j.DISCONNECTED)),
+            s.on('closed', () => this.setConnectionState(_.$j.DISCONNECTED)),
             s.on('offer', (e) => {
                 let { sdp: t } = e,
                     { outboundStreams: n, codecs: r, audioSSRC: o, videoSSRC: s, rtxSSRC: l } = (0, d.Nl)(t);
@@ -110,5 +107,5 @@ class g extends s.Z {
 function E(e, t, n, r) {
     let a = ''.concat(null != i().name && '' !== i().name ? i().name : 'unknown', ' ').concat(null != i().version && '' !== i().version ? i().version : 'unknown'),
         s = new o.Yd('Connection('.concat(e, ')'));
-    return _.WS ? (s.info('Using Unified Plan ('.concat(a, ')')), new f.Z(e, t, n, r)) : (s.info('Using Plan B ('.concat(a, ')')), new g(e, t, n, r));
+    return p.WS ? (s.info('Using Unified Plan ('.concat(a, ')')), new f.Z(e, t, n, r)) : (s.info('Using Plan B ('.concat(a, ')')), new g(e, t, n, r));
 }

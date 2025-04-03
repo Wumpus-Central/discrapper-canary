@@ -15,9 +15,9 @@ var r = n(873546),
     m = n(506895),
     g = n(960904),
     E = n(830121),
-    v = n(15274),
-    b = n(924301),
-    y = n(543842),
+    b = n(15274),
+    y = n(924301),
+    v = n(543842),
     O = n(754688),
     I = n(336197),
     S = n(977156),
@@ -49,12 +49,9 @@ async function U(e) {
         n = t;
     }
     if (null == n) return;
-    if (n.state === M.r2o.EXPIRED || n.state === M.r2o.BANNED || n.state === M.r2o.ERROR) {
-        await j(n, e.code);
-        return;
-    }
+    if (n.state === M.r2o.EXPIRED || n.state === M.r2o.BANNED || n.state === M.r2o.ERROR) return void (await j(n, e.code));
     let r = w.ZP.getFlattenedGuildIds(),
-        i = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id;
+        i = null == n || null == (t = n.guild) ? void 0 : t.id;
     null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await j(n, e.code);
 }
 let G = {
@@ -77,13 +74,13 @@ function B(e) {
                               applicationId: a,
                               skuId: void 0
                           }
-                        : null !== (i = (0, p.Q)(a)) && void 0 !== i
+                        : null != (i = (0, p.Q)(a))
                           ? i
                           : {
                                 applicationId: void 0,
                                 skuId: void 0
                             },
-                c = null !== (o = P.Z.getGuildId()) && void 0 !== o ? o : void 0;
+                c = null != (o = P.Z.getGuildId()) ? o : void 0;
             return (
                 null == s
                     ? (0, x.Z)(e)
@@ -103,7 +100,7 @@ function B(e) {
                               t({
                                   tab: r.APPS,
                                   applicationId: s,
-                                  section: (0, y.Z)(i, C.type === g.g.APP_DIRECTORY_PROFILE ? i.ABOUT : i.STORE),
+                                  section: (0, v.Z)(i, C.type === g.g.APP_DIRECTORY_PROFILE ? i.ABOUT : i.STORE),
                                   skuId: l
                               });
                           })),
@@ -141,7 +138,7 @@ function B(e) {
                 );
             {
                 var E;
-                let e = null == r ? void 0 : null === (E = r.bot) || void 0 === E ? void 0 : E.id;
+                let e = null == r || null == (E = r.bot) ? void 0 : E.id;
                 return (
                     null != e &&
                     (a.Z.openPrivateChannel(e)
@@ -189,7 +186,7 @@ function B(e) {
                 }),
             !0
         );
-    let { host: w, hostname: j, pathname: B, search: V, hash: F } = null !== (t = L.Z.toURLSafe(e)) && void 0 !== t ? t : {},
+    let { host: w, hostname: j, pathname: B, search: F, hash: V } = null != (t = L.Z.toURLSafe(e)) ? t : {},
         Z = L.Z.isDiscordHostname(null != j ? j : null) || L.Z.isDiscordLocalhost(null != w ? w : null, null != j ? j : null);
     if (Z && ((null == B ? void 0 : B.startsWith('/application-directory')) || (null == B ? void 0 : B.startsWith('/discovery/applications')))) {
         let e = B.split('/'),
@@ -201,8 +198,8 @@ function B(e) {
             let r, a, s;
             if ((null == t || t.preventDefault(), i)) {
                 var l, c, u;
-                let e = new URLSearchParams(V);
-                (r = null !== (l = e.get('q')) && void 0 !== l ? l : void 0), (a = null !== (c = e.get('category_id')) && void 0 !== c ? c : void 0), (s = null !== (u = e.get('page')) && void 0 !== u ? u : void 0);
+                let e = new URLSearchParams(F);
+                (r = null != (l = e.get('q')) ? l : void 0), (a = null != (c = e.get('category_id')) ? c : void 0), (s = null != (u = e.get('page')) ? u : void 0);
             } else o && (a = e[4]);
             return (
                 n
@@ -227,7 +224,7 @@ function B(e) {
             navigationReplace: !1,
             openChannel: !0
         };
-        return null != V && (e.search = V), null != F && (e.hash = F), (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0);
+        return null != F && (e.search = F), null != V && (e.hash = V), (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0);
     }
     if (null != B && Z) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
@@ -240,8 +237,8 @@ function B(e) {
             null == e || e.preventDefault();
             let t = P.Z.getGuildId();
             null != H.guildId && '' !== H.guildId && H.guildId !== t && (0, I.Z)(M.Z5c.CHANNEL(H.guildId));
-            let n = b.ZP.getGuildScheduledEvent(H.guildEventId);
-            return null != n && (0, v.bO)({ eventId: n.id }), !0;
+            let n = y.ZP.getGuildScheduledEvent(H.guildEventId);
+            return null != n && (0, b.bO)({ eventId: n.id }), !0;
         };
     if (Z && (null == B ? void 0 : B.startsWith('/settings/'))) {
         let { default: e } = n(722589),

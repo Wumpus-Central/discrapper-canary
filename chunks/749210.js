@@ -15,18 +15,18 @@ var r = n(990547),
     u = n(895886),
     d = n(35225),
     f = n(703656),
-    p = n(314897),
-    _ = n(664915),
+    _ = n(314897),
+    p = n(664915),
     h = n(984933),
     m = n(430824),
     g = n(944486),
     E = n(914010),
-    v = n(594174),
-    b = n(626135),
-    y = n(700785),
+    b = n(594174),
+    y = n(626135),
+    v = n(700785),
     O = n(74538),
-    S = n(573261),
-    I = n(668781),
+    I = n(573261),
+    S = n(668781),
     T = n(981631),
     N = n(388032);
 function A(e, t, n) {
@@ -101,20 +101,20 @@ function D(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let x = (e) => {
-        I.Z.show({
+let L = (e) => {
+        S.Z.show({
             title: N.NW.string(N.t.cTaRxM),
             body: N.NW.formatToPlainString(N.t['VSd+Ag'], { quantity: e })
         });
     },
-    L = (e) => {
+    x = (e) => {
         a.Z.dispatch({
             type: 'GUILD_DELETE',
             guild: { id: e }
         });
     },
     M = () => {
-        I.Z.show({
+        S.Z.show({
             title: N.NW.string(N.t.ZZlox8),
             body: N.NW.string(N.t.ZUEGFh)
         });
@@ -134,17 +134,17 @@ let U = {
     joinGuild: async function (e) {
         var t, r, i, s, l;
         let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { source: d, loadId: _, lurkLocation: h } = c,
-            b = null !== (t = c.lurker) && void 0 !== t && t,
-            y = v.default.getCurrentUser();
-        if (null !== (r = null == y ? void 0 : y.hasFlag(T.xW$.QUARANTINED)) && void 0 !== r && r) return (0, u.default)(), new Promise((e, t) => t(Error()));
+            { source: d, loadId: p, lurkLocation: h } = c,
+            y = null != (t = c.lurker) && t,
+            v = b.default.getCurrentUser();
+        if (null != (r = null == v ? void 0 : v.hasFlag(T.xW$.QUARANTINED)) && r) return (0, u.default)(), new Promise((e, t) => t(Error()));
         a.Z.wait(() =>
             a.Z.dispatch({
                 type: 'GUILD_JOIN',
                 guildId: e,
-                lurker: b,
+                lurker: y,
                 source: d,
-                loadId: _
+                loadId: p
             })
         );
         try {
@@ -153,10 +153,10 @@ let U = {
                 i = await o.tn.put({
                     url: T.ANM.GUILD_JOIN(e),
                     query: {
-                        lurker: b,
-                        session_id: b ? p.default.getSessionId() : null,
-                        recommendation_load_id: _,
-                        location: b && null != h ? h : null
+                        lurker: y,
+                        session_id: y ? _.default.getSessionId() : null,
+                        recommendation_load_id: p,
+                        location: y && null != h ? h : null
                     },
                     context: { source: d },
                     oldFormErrors: !0,
@@ -186,7 +186,7 @@ let U = {
                         guildId: i.body.id,
                         count: i.body.approximate_presence_count
                     }),
-                !b)
+                !y)
             ) {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 17181));
                 await t({
@@ -196,11 +196,11 @@ let U = {
             }
             return i;
         } catch (t) {
-            if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === T.evJ.TOO_MANY_USER_GUILDS) {
-                let e = v.default.getCurrentUser();
-                O.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? x(T.tHP) : x(T.DZw);
+            if ((null == (i = t.body) ? void 0 : i.code) === T.evJ.TOO_MANY_USER_GUILDS) {
+                let e = b.default.getCurrentUser();
+                O.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? L(T.tHP) : L(T.DZw);
             }
-            throw ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === T.evJ.GUILD_AT_CAPACITY && M(), b && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === T.evJ.UNKNOWN_GUILD && L(e), t);
+            throw ((null == (s = t.body) ? void 0 : s.code) === T.evJ.GUILD_AT_CAPACITY && M(), y && (null == (l = t.body) ? void 0 : l.code) === T.evJ.UNKNOWN_GUILD && x(e), t);
         }
     },
     waitForGuild: k,
@@ -209,7 +209,7 @@ let U = {
             i = t;
         (null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (i = P(C({}, t), { welcomeModalChannelId: null != r ? r : void 0 })), (0, f.uL)(T.Z5c.CHANNEL(e, r), i), await new Promise(setImmediate);
     },
-    deleteGuild: L,
+    deleteGuild: x,
     selectGuild(e) {
         (0, c.a)(e);
     },
@@ -258,7 +258,7 @@ let U = {
         }),
     setCommunicationDisabledUntil(e) {
         let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: o, reason: a, location: s } = e;
-        return S.Z.patch({
+        return I.Z.patch({
             url: T.ANM.GUILD_MEMBER(t, n),
             reason: a,
             body: { communication_disabled_until: i },
@@ -306,7 +306,7 @@ let U = {
         let r = {
             name: null != t && '' !== t ? t : N.NW.string(N.t.QBMHvL),
             color: null != n ? n : 0,
-            permissions: y.Hn
+            permissions: v.Hn
         };
         try {
             let t = await o.tn.post({
@@ -433,7 +433,7 @@ let U = {
         });
     },
     createGuildFolderLocal(e, t) {
-        b.default.track(T.rMx.GUILD_FOLDER_CREATED),
+        y.default.track(T.rMx.GUILD_FOLDER_CREATED),
             a.Z.dispatch({
                 type: 'GUILD_FOLDER_CREATE_LOCAL',
                 sourceIds: e,
@@ -455,8 +455,8 @@ let U = {
         });
     },
     toggleGuildFolderExpand(e) {
-        let t = _.Z.isFolderExpanded(e);
-        b.default.track(T.rMx.GUILD_FOLDER_CLICKED, {
+        let t = p.Z.isFolderExpanded(e);
+        y.default.track(T.rMx.GUILD_FOLDER_CLICKED, {
             source: 'sidebar',
             action: t ? 'collapsed' : 'expanded'
         }),
@@ -482,10 +482,7 @@ let U = {
         });
     },
     nsfwReturnToSafety(e) {
-        if (null == e) {
-            (0, f.uL)(T.Z5c.FRIENDS);
-            return;
-        }
+        if (null == e) return void (0, f.uL)(T.Z5c.FRIENDS);
         let t = h.ZP.getDefaultChannel(e);
         null == t || t.isNSFW() ? (0, f.uL)(T.Z5c.FRIENDS) : (0, f.uL)(T.Z5c.CHANNEL(e, t.id));
     },

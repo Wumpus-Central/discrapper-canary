@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = '[^\\(\\)\\[\\]\\{\\}",\'`;#|\\\\\\s]+',
         n = '(-|\\+)?\\d+([./]\\d+)?',
         r = n + '[+\\-]' + n + 'i',
@@ -50,13 +50,13 @@ function t(e) {
                 }
             ]
         },
-        p = {
+        _ = {
             className: 'name',
             relevance: 0,
             begin: t,
             keywords: i
         },
-        _ = {
+        p = {
             variants: [
                 {
                     begin: '\\(',
@@ -73,7 +73,7 @@ function t(e) {
                     endsWithParent: !0,
                     returnBegin: !0,
                     contains: [
-                        p,
+                        _,
                         {
                             endsParent: !0,
                             variants: [
@@ -90,18 +90,17 @@ function t(e) {
                         }
                     ]
                 },
-                p,
+                _,
                 d
             ]
         };
     return (
-        (d.contains = [o, a, s, c, u, f, _].concat(l)),
+        (d.contains = [o, a, s, c, u, f, p].concat(l)),
         {
             name: 'Scheme',
             aliases: ['scm'],
             illegal: /\S/,
-            contains: [e.SHEBANG(), a, s, u, f, _].concat(l)
+            contains: [e.SHEBANG(), a, s, u, f, p].concat(l)
         }
     );
-}
-e.exports = t;
+};

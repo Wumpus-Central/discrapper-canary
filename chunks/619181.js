@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Oracle Rules Language',
         keywords: {
@@ -23,5 +23,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

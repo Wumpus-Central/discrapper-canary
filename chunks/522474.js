@@ -43,7 +43,7 @@ function b(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,12 +55,12 @@ function v(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -132,10 +132,7 @@ function U(e, t, r) {
         a = new URL(t).origin,
         s = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
         l = URL.canParse(n.p) ? new URL(n.p).origin : '';
-    if (a !== s && a !== l) {
-        S.warn('Not injecting stylesheet, unrecognized origin', a);
-        return;
-    }
+    if (a !== s && a !== l) return void S.warn('Not injecting stylesheet, unrecognized origin', a);
     let c = i.createElement('link');
     (c.href = t), (c.rel = 'stylesheet'), (c.integrity = r), o()(null != i.head, 'Document head was null'), i.head.appendChild(c);
 }
@@ -145,10 +142,7 @@ function G(e, t) {
 function B(e) {
     let t = A[e],
         n = R[e];
-    if (null == t) {
-        S.warn('Failed to open window', e);
-        return;
-    }
+    if (null == t) return void S.warn('Failed to open window', e);
     let r = t.document;
     (0, h.uF)(r, D), t.addEventListener('focus', D), t.addEventListener('blur', D), t.addEventListener('resize', L), x ? M(e, t) : G(e, t);
     let i = (0, l.createRoot)(r.getElementById(w));
@@ -164,7 +158,7 @@ function F(e) {
     if (a && i) return S.info('Already has open window, skipping focus'), !1;
     let { defaultWidth: s, defaultHeight: l, defaultAlwaysOnTop: c = !1 } = n,
         u = O(n, ['defaultWidth', 'defaultHeight', 'defaultAlwaysOnTop']),
-        d = y(b({}, u), {
+        d = v(b({}, u), {
             width: null != s ? s : u.width,
             height: null != l ? l : u.height
         }),
@@ -173,7 +167,7 @@ function F(e) {
     if (null != h) {
         let { width: e, height: t, x: n, y: r, alwaysOnTop: i } = h;
         (f = null != i ? i : c),
-            (d = y(b({}, d), {
+            (d = v(b({}, d), {
                 width: null != e && 0 !== e ? e : s,
                 height: null != t && 0 !== t ? t : l,
                 left: n,
@@ -219,7 +213,7 @@ function W(e) {
 function Y(e) {
     let { key: t } = e,
         n = A[t];
-    null == n || n.closed || (k(t), f.default.preventPopoutClose || W(n));
+    null != n && !n.closed && (k(t), f.default.preventPopoutClose || W(n));
 }
 function K() {
     for (let e of Object.keys(A)) {
@@ -258,12 +252,12 @@ class Q extends (r = c.ZP.PersistedStore) {
     getWindowFocused(e) {
         var t, n;
         let r = A[e];
-        return null !== (n = null == r ? void 0 : null === (t = r.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n;
+        return null != (n = null == r || null == (t = r.document) ? void 0 : t.hasFocus()) && n;
     }
     getWindowVisible(e) {
         var t;
         let n = A[e];
-        return (null == n ? void 0 : null === (t = n.document) || void 0 === t ? void 0 : t.visibilityState) === 'visible';
+        return (null == n || null == (t = n.document) ? void 0 : t.visibilityState) === 'visible';
     }
     getState() {
         return T;
@@ -274,7 +268,7 @@ class Q extends (r = c.ZP.PersistedStore) {
     isWindowFullScreen(e) {
         var t, n;
         let r = A[e];
-        return (null == r ? void 0 : null === (n = r.document) || void 0 === n ? void 0 : null === (t = n.fullscreenElement) || void 0 === t ? void 0 : t.id) === w;
+        return (null == r || null == (n = r.document) || null == (t = n.fullscreenElement) ? void 0 : t.id) === w;
     }
     unmountWindow(e) {
         return this.isWindowFullyInitialized(e) || S.warn('Attempted to unmount partially initialized window '.concat(e)), Z(e);

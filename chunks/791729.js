@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = e.COMMENT('--', '$'),
         r = {
@@ -399,11 +399,11 @@ function t(e) {
             'last',
             'view'
         ].filter((e) => !l.includes(e)),
-        p = {
+        _ = {
             scope: 'variable',
             match: /@[a-z0-9][a-z0-9_]*/
         },
-        _ = {
+        p = {
             scope: 'operator',
             match: /[-+*/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?/,
             relevance: 0
@@ -442,14 +442,13 @@ function t(e) {
             },
             g,
             h,
-            p,
+            _,
             r,
             i,
             e.C_NUMBER_MODE,
             e.C_BLOCK_COMMENT_MODE,
             n,
-            _
+            p
         ]
     };
-}
-e.exports = t;
+};

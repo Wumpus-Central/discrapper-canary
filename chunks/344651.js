@@ -17,14 +17,14 @@ var o = n(442837),
     g = n(48481),
     E = n(131704),
     b = n(209747),
-    v = n(598077),
-    y = n(592125),
+    y = n(598077),
+    v = n(592125),
     O = n(271383),
     I = n(819640),
     S = n(594174),
     T = n(979651),
-    A = n(509545),
-    N = n(78839),
+    N = n(509545),
+    A = n(78839),
     C = n(936101),
     R = n(868158),
     P = n(483012),
@@ -114,14 +114,14 @@ let U = new d.Z('ConnectionStore'),
                           channels: []
                       };
             let r = (0, E.q_)(t),
-                i = y.Z.getChannel(t.id),
+                i = v.Z.getChannel(t.id),
                 o =
                     null == i
                         ? void 0
                         : i.merge(
                               M(L({}, r), {
                                   recipients: i.recipients,
-                                  bitrate: null !== (n = r.bitrate) && void 0 !== n ? n : i.bitrate
+                                  bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
                           );
             return e.channels.push(null != o ? o : r), e;
@@ -212,7 +212,7 @@ function z(e, t, n) {
     var r, o;
     let { roles: a, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
         g = O.ZP.getMember(e, t.id);
-    (!(null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, a) && (0, u.sr)(null !== (r = g.avatarDecoration) && void 0 !== r ? r : null, null != c ? c : null)) || g.premiumSince !== f || g.isPending !== _ || g.joinedAt !== p || g.communicationDisabledUntil !== h || g.flags !== d || (null !== (o = g.unusualDMActivityUntil) && void 0 !== o ? o : null) !== (null != m ? m : null)) &&
+    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, a) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (o = g.unusualDMActivityUntil) ? o : null) === (null != m ? m : null)) ||
         K({
             type: 'GUILD_MEMBER_ADD',
             guildId: e,
@@ -248,7 +248,7 @@ function Q(e) {
             lastModified: e.last_modified,
             status: e.status,
             activities: e.activities,
-            hiddenActivities: null !== (t = e.hidden_activities) && void 0 !== t ? t : [],
+            hiddenActivities: null != (t = e.hidden_activities) ? t : [],
             active: !!e.active,
             clientInfo: e.client_info
         };
@@ -267,7 +267,7 @@ function X(e) {
 }
 W(
     ['INITIAL_GUILD'],
-    (e) => ('full' === e.data_mode ? null : y.o.loadGuildIds([e.id])),
+    (e) => ('full' === e.data_mode ? null : v.o.loadGuildIds([e.id])),
     (e) => {
         m.Z.initialGuild.measure(() => {
             o.ZP.Emitter.batched(() => {
@@ -293,8 +293,8 @@ W(
                                 selfVideo: e.self_video || !1,
                                 suppress: e.suppress,
                                 selfStream: e.self_stream || !1,
-                                requestToSpeakTimestamp: null !== (n = e.request_to_speak_timestamp) && void 0 !== n ? n : null,
-                                discoverable: null === (r = e.discoverable) || void 0 === r || r
+                                requestToSpeakTimestamp: null != (n = e.request_to_speak_timestamp) ? n : null,
+                                discoverable: null == (r = e.discoverable) || r
                             };
                         })
                     }),
@@ -321,8 +321,8 @@ W(
                     e.presences = r(e.presences || []);
                 });
                 let o = e.presences ? r(e.presences) : [],
-                    a = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map((e) => (0, E.q_)(e)),
-                    s = null !== (n = e.game_invites) && void 0 !== n ? n : [];
+                    a = (null != (t = e.lazy_private_channels) ? t : []).map((e) => (0, E.q_)(e)),
+                    s = null != (n = e.game_invites) ? n : [];
                 m.Z.dispatchReadySupplemental.measure(() => {
                     K({
                         type: 'CONNECTION_OPEN_SUPPLEMENTAL',
@@ -348,8 +348,8 @@ W(
                             selfVideo: t.self_video || !1,
                             suppress: t.suppress,
                             selfStream: t.self_stream || !1,
-                            requestToSpeakTimestamp: null !== (n = t.request_to_speak_timestamp) && void 0 !== n ? n : null,
-                            discoverable: null === (r = t.discoverable) || void 0 === r || r
+                            requestToSpeakTimestamp: null != (n = t.request_to_speak_timestamp) ? n : null,
+                            discoverable: null == (r = t.discoverable) || r
                         });
                     });
                 }),
@@ -371,19 +371,16 @@ W(
                 r = e.guilds
                     .filter((e) => {
                         var t, n;
-                        return !e.unavailable && 'partial' === e.data_mode && ((null !== (t = e.partial_updates.channels) && void 0 !== t ? t : []).length > 0 || (null !== (n = e.partial_updates.deleted_channel_ids) && void 0 !== n ? n : []).length > 0 || void 0);
+                        return !e.unavailable && 'partial' === e.data_mode && ((null != (t = e.partial_updates.channels) ? t : []).length > 0 || (null != (n = e.partial_updates.deleted_channel_ids) ? n : []).length > 0 || void 0);
                     })
                     .map((e) => e.id);
-            return Promise.all([n, null !== (t = y.o.loadGuildIds(r)) && void 0 !== t ? t : Promise.resolve()]).then((e) => {
+            return Promise.all([n, null != (t = v.o.loadGuildIds(r)) ? t : Promise.resolve()]).then((e) => {
                 let [t] = e;
                 return t;
             });
         },
         (e, t, n) => {
-            if (e.user.bot) {
-                K({ type: 'LOGOUT' });
-                return;
-            }
+            if (e.user.bot) return void K({ type: 'LOGOUT' });
             m.Z.ready.measure(() => {
                 o.ZP.Emitter.batched(() => {
                     let t = (e = m.Z.hydrateReady.measure(() => R.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
@@ -421,7 +418,7 @@ W(
                             consents: e.consents,
                             sessions: Q(e.sessions || []),
                             pendingPayments: e.pending_payments,
-                            countryCode: null !== (n = e.country_code) && void 0 !== n ? n : void 0,
+                            countryCode: null != (n = e.country_code) ? n : void 0,
                             guildJoinRequests: e.guild_join_requests || [],
                             userSettingsProto: a,
                             apiCodeVersion: e.api_code_version,
@@ -493,7 +490,7 @@ W(
     }),
     W(
         ['MESSAGE_CREATE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             q(e),
                 null != e.author &&
@@ -509,7 +506,7 @@ W(
     ),
     W(
         ['MESSAGE_UPDATE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             q(e),
                 K({
@@ -521,7 +518,7 @@ W(
     ),
     W(
         ['MESSAGE_DELETE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'MESSAGE_DELETE',
@@ -533,7 +530,7 @@ W(
     ),
     W(
         ['MESSAGE_DELETE_BULK'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'MESSAGE_DELETE_BULK',
@@ -545,7 +542,7 @@ W(
     ),
     W(
         ['MESSAGE_ACK'],
-        (e) => y.o.loadGuildFromChannelId(e.channel_id),
+        (e) => v.o.loadGuildFromChannelId(e.channel_id),
         (e) => {
             K({
                 type: 'MESSAGE_ACK',
@@ -574,7 +571,7 @@ W(
     }),
     W(
         ['CHANNEL_PINS_ACK'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'CHANNEL_PINS_ACK',
@@ -586,7 +583,7 @@ W(
     ),
     W(
         ['CHANNEL_PINS_UPDATE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'CHANNEL_PINS_UPDATE',
@@ -597,7 +594,7 @@ W(
     ),
     W(
         ['CHANNEL_CREATE', 'CHANNEL_DELETE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             K({
                 type: t,
@@ -631,14 +628,14 @@ W(
     }),
     W(
         ['CHANNEL_UPDATE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             G.add(e);
         }
     ),
     W(
         ['THREAD_CREATE', 'THREAD_UPDATE', 'THREAD_DELETE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
                 r = k(e, ['newly_created']);
@@ -651,13 +648,13 @@ W(
     ),
     W(
         ['THREAD_LIST_SYNC'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'THREAD_LIST_SYNC',
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
-                    let t = y.Z.getChannel(e.parent_id);
+                    let t = v.Z.getChannel(e.parent_id);
                     return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, E.q_)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
@@ -686,7 +683,7 @@ W(
             guildId: e.guild_id,
             memberCount: e.member_count,
             addedMembers:
-                null === (t = e.added_members) || void 0 === t
+                null == (t = e.added_members)
                     ? void 0
                     : t.map((t) => ({
                           id: t.id,
@@ -715,7 +712,7 @@ W(
         B.add(e);
     }),
     H(['CHANNEL_RECIPIENT_ADD', 'CHANNEL_RECIPIENT_REMOVE'], (e, t) => {
-        let n = y.Z.getBasicChannel(e.channel_id);
+        let n = v.Z.getBasicChannel(e.channel_id);
         K({
             type: t,
             channelId: e.channel_id,
@@ -726,7 +723,7 @@ W(
     }),
     W(
         ['GUILD_CREATE'],
-        (e) => ('full' === e.data_mode ? null : y.o.loadGuildIds([e.id])),
+        (e) => ('full' === e.data_mode ? null : v.o.loadGuildIds([e.id])),
         (e) => {
             if (e.unavailable)
                 K({
@@ -752,8 +749,8 @@ W(
                                 selfVideo: e.self_video || !1,
                                 suppress: e.suppress,
                                 selfStream: e.self_stream || !1,
-                                requestToSpeakTimestamp: null !== (n = e.request_to_speak_timestamp) && void 0 !== n ? n : null,
-                                discoverable: null === (r = e.discoverable) || void 0 === r || r
+                                requestToSpeakTimestamp: null != (n = e.request_to_speak_timestamp) ? n : null,
+                                discoverable: null == (r = e.discoverable) || r
                             };
                         })
                     });
@@ -853,7 +850,7 @@ W(
     }),
     W(
         ['GUILD_ROLE_CREATE', 'GUILD_ROLE_UPDATE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             K({
                 type: t,
@@ -864,7 +861,7 @@ W(
     ),
     W(
         ['GUILD_ROLE_DELETE'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'GUILD_ROLE_DELETE',
@@ -1054,8 +1051,8 @@ W(
                         selfVideo: e.self_video || !1,
                         suppress: e.suppress,
                         selfStream: e.self_stream || !1,
-                        requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
-                        discoverable: null === (n = e.discoverable) || void 0 === n || n,
+                        requestToSpeakTimestamp: null != (t = e.request_to_speak_timestamp) ? t : null,
+                        discoverable: null == (n = e.discoverable) || n,
                         oldChannelId: T.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
                     }
                 ]
@@ -1096,8 +1093,8 @@ W(
                         selfVideo: e.self_video || !1,
                         suppress: e.suppress,
                         selfStream: e.self_stream || !1,
-                        requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
-                        discoverable: null === (n = e.discoverable) || void 0 === n || n
+                        requestToSpeakTimestamp: null != (t = e.request_to_speak_timestamp) ? t : null,
+                        discoverable: null == (n = e.discoverable) || n
                     };
                 })
             });
@@ -1222,7 +1219,7 @@ W(
         });
     }),
     H(['USER_PAYMENT_SOURCES_UPDATE'], () => {
-        I.Z.hasLayers() && (n(355467).tZ(), l.Gn(A.Z.getFetchedSKUIDs()));
+        I.Z.hasLayers() && (n(355467).tZ(), l.Gn(N.Z.getFetchedSKUIDs()));
     }),
     H(['USER_SUBSCRIPTIONS_UPDATE'], () => {
         c.k(), I.Z.hasLayers() && n(355467).jg();
@@ -1230,13 +1227,13 @@ W(
     H(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
         K({
             type: 'GUILD_BOOST_SLOT_CREATE',
-            guildBoostSlot: b.Z.createFromServer(e, N.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: b.Z.createFromServer(e, A.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     H(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE'], (e) => {
         K({
             type: 'GUILD_BOOST_SLOT_UPDATE',
-            guildBoostSlot: b.Z.createFromServer(e, N.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: b.Z.createFromServer(e, A.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     H(['BILLING_POPUP_BRIDGE_CALLBACK'], (e) => {
@@ -1633,7 +1630,7 @@ W(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new v.Z(e.user),
+                user: new y.Z(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -1649,7 +1646,7 @@ W(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new v.Z(e.user),
+                user: new y.Z(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -1683,7 +1680,7 @@ W(
     }),
     W(
         ['EMBEDDED_ACTIVITY_UPDATE_V2'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'EMBEDDED_ACTIVITY_UPDATE_V2',
@@ -1723,7 +1720,7 @@ W(
     }),
     W(
         ['CHANNEL_SYNC'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
                 G.add(e);
@@ -1746,7 +1743,7 @@ W(
     }),
     W(
         ['PASSIVE_UPDATE_V2'],
-        (e) => y.o.loadGuildIds([e.guild_id]),
+        (e) => v.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'PASSIVE_UPDATE_V2',
@@ -1763,7 +1760,7 @@ W(
                         channelId: e.channel_id,
                         deaf: e.deaf || !1,
                         mute: e.mute || !1,
-                        requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
+                        requestToSpeakTimestamp: null != (t = e.request_to_speak_timestamp) ? t : null,
                         selfDeaf: e.self_deaf || !1,
                         selfMute: e.self_mute || !1,
                         selfStream: e.self_stream || !1,
@@ -1771,7 +1768,7 @@ W(
                         sessionId: e.session_id,
                         suppress: e.suppress,
                         userId: e.user_id,
-                        discoverable: null === (n = e.discoverable) || void 0 === n || n
+                        discoverable: null == (n = e.discoverable) || n
                     };
                 }),
                 removedVoiceStateUsers: e.removed_voice_states

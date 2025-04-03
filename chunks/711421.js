@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             className: 'meta',
@@ -148,5 +148,4 @@ function t(e) {
             n
         ]
     };
-}
-e.exports = t;
+};

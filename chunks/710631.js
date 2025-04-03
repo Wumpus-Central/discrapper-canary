@@ -9,14 +9,14 @@ var r = n(200651),
     u = n(159300),
     d = n(592125),
     f = n(984933),
-    p = n(430824),
-    _ = n(496675),
+    _ = n(430824),
+    p = n(496675),
     h = n(699516),
     m = n(771845),
     g = n(594174),
     E = n(981631),
-    v = n(388032);
-function b(e, t, n) {
+    b = n(388032);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -57,7 +57,7 @@ function O(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,7 +68,7 @@ function S(e, t) {
         e
     );
 }
-let I = 'max_uses',
+let S = 'max_uses',
     T = 'User Invite Context Menu',
     N = 'context_menu';
 function A(e, t) {
@@ -80,32 +80,29 @@ function C(e) {
     let { user: t, guildId: n, onAction: s } = e,
         c = (0, o.e7)([g.default], () => g.default.getCurrentUser(), []),
         d = (0, o.Wu)(
-            [m.ZP, p.Z, _.Z],
+            [m.ZP, _.Z, p.Z],
             () => {
                 let e = m.ZP.getFlattenedGuildIds(),
                     t = [];
                 return (
                     e.forEach((e) => {
-                        let r = p.Z.getGuild(e);
-                        null != r && (0, u.b)(_.Z, r) && r.id !== n && t.push(r);
+                        let r = _.Z.getGuild(e);
+                        null != r && (0, u.b)(p.Z, r) && r.id !== n && t.push(r);
                     }),
                     t
                 );
             },
             [n]
         ),
-        [b, O] = i.useState({});
+        [y, O] = i.useState({});
     function N(e, t) {
         let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
         if (null != n) {
-            if ((O(S(y({}, b), { [e.id]: !0 })), !_.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)) {
-                A(t, e.vanityURLCode);
-                return;
-            }
-            l.Z.createInvite(
+            if ((O(I(v({}, y), { [e.id]: !0 })), !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)) return void A(t, e.vanityURLCode);
+            l.ZP.createInvite(
                 n.id,
                 {
-                    [I]: 1,
+                    [S]: 1,
                     unique: !0
                 },
                 T
@@ -116,15 +113,15 @@ function C(e) {
         ? null
         : (0, r.jsx)(a.sNh, {
               id: 'invite-to-server',
-              label: v.NW.string(v.t.Sd8Ix8),
+              label: b.NW.string(b.t.Sd8Ix8),
               children: d.map((e) =>
-                  b[e.id]
+                  y[e.id]
                       ? (0, r.jsx)(
                             a.sNh,
                             {
                                 id: e.id,
                                 disabled: !0,
-                                label: v.NW.string(v.t.PuLLzM)
+                                label: b.NW.string(b.t.PuLLzM)
                             },
                             e.id
                         )

@@ -97,24 +97,24 @@ function E(e, t) {
             function t() {
                 var e, t, n, r, i, o;
                 let { width: a, height: s } = E.current,
-                    l = null !== (n = null === (e = h.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
-                    c = null !== (r = null === (t = h.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== r ? r : 0;
+                    l = null != (n = null == (e = h.current) ? void 0 : e.videoWidth) ? n : 0,
+                    c = null != (r = null == (t = h.current) ? void 0 : t.videoHeight) ? r : 0;
                 if (a !== l || s !== c) {
                     let e = {
                         width: l,
                         height: c
                     };
-                    null === (i = (o = b.current).onResize) || void 0 === i || i.call(o, e), (E.current = e);
+                    null == (i = (o = b.current).onResize) || i.call(o, e), (E.current = e);
                 }
             }
             function n() {
                 var e, t;
-                _.info('handleReady for '.concat(b.current.streamId, ', have onReady callback = ').concat(null != b.current.onReady)), null === (e = (t = b.current).onReady) || void 0 === e || e.call(t);
+                _.info('handleReady for '.concat(b.current.streamId, ', have onReady callback = ').concat(null != b.current.onReady)), null == (e = (t = b.current).onReady) || e.call(t);
             }
             function r() {
                 if (!b.current.paused) {
                     var e;
-                    null === (e = h.current) || void 0 === e || e.play();
+                    null == (e = h.current) || e.play();
                 }
             }
             let i = new ResizeObserver((e) => {
@@ -123,7 +123,7 @@ function E(e, t) {
                     if (r.target !== h.current) continue;
                     let e = window.devicePixelRatio * r.target.clientWidth,
                         i = window.devicePixelRatio * r.target.clientHeight;
-                    null === (t = (n = b.current).onContainerResized) || void 0 === t || t.call(n, b.current.streamId, e, i);
+                    null == (t = (n = b.current).onContainerResized) || t.call(n, b.current.streamId, e, i);
                 }
             });
             if (null != e) {
@@ -136,7 +136,7 @@ function E(e, t) {
         }),
         i.useEffect(() => {
             let e = h.current;
-            if (null != e) {
+            if (null != e)
                 if (!o)
                     return (
                         _.info('attaching srcObject for '.concat(n)),
@@ -145,8 +145,7 @@ function E(e, t) {
                             g(n), (e.srcObject = null);
                         }
                     );
-                null != e.srcObject && ((e.srcObject = null), g(n));
-            }
+                else null != e.srcObject && ((e.srcObject = null), g(n));
         }, [o, n]),
         (0, r.jsx)(
             'div',

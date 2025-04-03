@@ -76,69 +76,66 @@ function h(e) {
     let { userId: t, applicationId: n, location: r, friendToken: i, onConfirm: o, onCancel: c } = e,
         u = (0, a.pB)('useFriendRequestActions'),
         d = s.Z.isStranger(t);
-    if (null != n || !u || !1 === d)
-        return p({
-            userId: t,
-            applicationId: n,
-            location: r,
-            friendToken: i,
-            confirmStrangerRequest: !0
-        }).then(() => {
-            null == o || o();
-        });
-    if (d && u) {
-        (0, l.c)({
-            onConfirm: () => {
-                p({
+    return null == n && u && !1 !== d
+        ? d && u
+            ? void (0, l.c)({
+                  onConfirm: () => {
+                      p({
+                          userId: t,
+                          applicationId: n,
+                          location: r,
+                          friendToken: i,
+                          confirmStrangerRequest: !0
+                      }),
+                          null == o || o();
+                  },
+                  onCancel: () => {
+                      null == c || c();
+                  }
+              })
+            : u
+              ? void p({
                     userId: t,
                     applicationId: n,
                     location: r,
-                    friendToken: i,
-                    confirmStrangerRequest: !0
-                }),
-                    null == o || o();
-            },
-            onCancel: () => {
-                null == c || c();
-            }
-        });
-        return;
-    }
-    if (u) {
-        p({
-            userId: t,
-            applicationId: n,
-            location: r,
-            friendToken: i
-        })
-            .then((e) => {
-                m(e, {
-                    userId: t,
-                    applicationId: n,
-                    location: r,
-                    friendToken: i,
-                    onConfirm: o,
-                    onCancel: c
-                }) ||
-                    null == o ||
-                    o();
-            })
-            .catch((e) => {
-                m(e, {
-                    userId: t,
-                    applicationId: n,
-                    location: r,
-                    friendToken: i,
-                    onConfirm: o,
-                    onCancel: c
-                });
-            });
-        return;
-    }
+                    friendToken: i
+                })
+                    .then((e) => {
+                        m(e, {
+                            userId: t,
+                            applicationId: n,
+                            location: r,
+                            friendToken: i,
+                            onConfirm: o,
+                            onCancel: c
+                        }) ||
+                            null == o ||
+                            o();
+                    })
+                    .catch((e) => {
+                        m(e, {
+                            userId: t,
+                            applicationId: n,
+                            location: r,
+                            friendToken: i,
+                            onConfirm: o,
+                            onCancel: c
+                        });
+                    })
+              : void 0
+        : p({
+              userId: t,
+              applicationId: n,
+              location: r,
+              friendToken: i,
+              confirmStrangerRequest: !0
+          }).then(() => {
+              null == o || o();
+          });
 }
 function m(e, t) {
     var n;
-    return (null === (n = e.body) || void 0 === n ? void 0 : n.code) === c.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION
+    return (null == (n = e.body) ? void 0 : n.code) === c.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION
         ? (r.Z.dispatch({
               type: 'UPDATE_STRANGER_STATUS',
               userId: t.userId,
@@ -147,11 +144,11 @@ function m(e, t) {
           (0, l.c)({
               onConfirm: () => {
                   var e;
-                  p(_(d({}, t), { confirmStrangerRequest: !0 })), null === (e = t.onConfirm) || void 0 === e || e.call(t);
+                  p(_(d({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t);
               },
               onCancel: () => {
                   var e;
-                  null === (e = t.onCancel) || void 0 === e || e.call(t);
+                  null == (e = t.onCancel) || e.call(t);
               }
           }),
           !0)

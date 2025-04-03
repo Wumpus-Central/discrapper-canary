@@ -9,10 +9,7 @@ class i {
             priority: (t = Object.assign({ priority: 0 }, t)).priority,
             run: e
         };
-        if (this.size && this._queue[this.size - 1].priority >= t.priority) {
-            this._queue.push(n);
-            return;
-        }
+        if (this.size && this._queue[this.size - 1].priority >= t.priority) return void this._queue.push(n);
         let i = r.default(this._queue, n, (e, t) => t.priority - e.priority);
         this._queue.splice(i, 0, n);
     }

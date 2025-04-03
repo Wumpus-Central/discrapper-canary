@@ -9,28 +9,25 @@ var r = n(200651),
     u = n(481060),
     d = n(889963),
     f = n(388032),
-    p = n(231683);
-function _(e) {
+    _ = n(578949);
+function p(e) {
     let { page: t, totalPageCount: n, disabled: o, onPageChange: s } = e,
         [d, f] = i.useState(!1),
-        [_, h] = i.useState(null),
-        m = null != _ && _ >= 1 && _ <= n,
+        [p, h] = i.useState(null),
+        m = null != p && p >= 1 && p <= n,
         g = (e) => {
             let t = parseInt(e);
-            if ('' === e || isNaN(t)) {
-                h(null);
-                return;
-            }
+            if ('' === e || isNaN(t)) return void h(null);
             h(t);
         },
         E = (e) => {
-            'Enter' === e.key && null != _ && m && (s(_), f(!1), h(null));
+            'Enter' === e.key && null != p && m && (s(p), f(!1), h(null));
         };
     return o
         ? (0, r.jsx)(
               u.X6q,
               {
-                  className: p.gap,
+                  className: _.gap,
                   'aria-hidden': !0,
                   variant: 'heading-sm/semibold',
                   children: '\u2026'
@@ -42,9 +39,9 @@ function _(e) {
                 c.o,
                 {
                     autoFocus: !0,
-                    className: p.jumpToPageInlineInput,
+                    className: _.jumpToPageInlineInput,
                     size: c.o.Sizes.MINI,
-                    value: null == _ ? '' : ''.concat(_),
+                    value: null == p ? '' : ''.concat(p),
                     onChange: g,
                     onBlur: () => {
                         f(!1), h(null);
@@ -59,7 +56,7 @@ function _(e) {
                 {
                     onClick: () => f(!0),
                     children: (0, r.jsx)(u.X6q, {
-                        className: a()(p.roundButton, p.gap),
+                        className: a()(_.roundButton, _.gap),
                         'aria-hidden': !0,
                         variant: 'heading-sm/semibold',
                         children: '\u2026'
@@ -71,16 +68,16 @@ function _(e) {
 function h(e) {
     let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: o, disablePaginationGap: c, onPageChange: h, hideMaxPage: m = !1, className: g } = e,
         E = Math.ceil(n / i);
-    function v(e) {
+    function b(e) {
         null != h && h(e);
     }
-    function b(e) {
+    function y(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             s.zx,
             {
-                className: p.endButton,
-                innerClassName: p.endButtonInner,
+                className: _.endButton,
+                innerClassName: _.endButtonInner,
                 look: s.zx.Looks.BLANK,
                 color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
@@ -90,7 +87,7 @@ function h(e) {
                     (0, r.jsx)(u.V7D, {
                         size: 'md',
                         color: 'currentColor',
-                        className: p.iconCaret,
+                        className: _.iconCaret,
                         'aria-hidden': !0
                     }),
                     (0, r.jsx)('span', { children: f.NW.string(f.t['13/7kZ']) })
@@ -99,13 +96,13 @@ function h(e) {
             t
         );
     }
-    function y(e) {
+    function v(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             s.zx,
             {
-                className: p.endButton,
-                innerClassName: p.endButtonInner,
+                className: _.endButton,
+                innerClassName: _.endButtonInner,
                 look: s.zx.Looks.BLANK,
                 color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
@@ -116,7 +113,7 @@ function h(e) {
                     (0, r.jsx)(u.Fbu, {
                         size: 'md',
                         color: 'currentColor',
-                        className: p.iconCaret,
+                        className: _.iconCaret,
                         'aria-hidden': !0
                     })
                 ]
@@ -128,7 +125,7 @@ function h(e) {
         return (0, r.jsx)(
             l.P,
             {
-                className: a()(p.roundButton, { [p.activeButton]: e.selected }),
+                className: a()(_.roundButton, { [_.activeButton]: e.selected }),
                 onClick: e.selected ? void 0 : e.navigateToPage,
                 'aria-label': f.NW.formatToPlainString(f.t.IGMs8f, { pageNumber: e.targetPage }),
                 'aria-current': e.selected ? 'page' : void 0,
@@ -137,9 +134,9 @@ function h(e) {
             e.key
         );
     }
-    function S(e) {
+    function I(e) {
         return (0, r.jsx)(
-            _,
+            p,
             {
                 page: e,
                 totalPageCount: E,
@@ -149,23 +146,23 @@ function h(e) {
             e.key
         );
     }
-    function I(e) {
+    function S(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
             ? (0, r.jsx)('div', {
-                  className: a()(p.pageControlContainer, g),
+                  className: a()(_.pageControlContainer, g),
                   children: (0, r.jsx)('nav', {
-                      className: p.pageControl,
+                      className: _.pageControl,
                       children: t.map((e) => {
                           switch (e.type) {
                               case d.s.BACK:
-                                  return b(e);
+                                  return y(e);
                               case d.s.PAGE:
                                   return O(e);
                               case d.s.GAP:
-                                  return S(e);
+                                  return I(e);
                               case d.s.NEXT:
-                                  return y(e);
+                                  return v(e);
                               default:
                                   return null;
                           }
@@ -179,7 +176,7 @@ function h(e) {
         selectedPage: t,
         maxVisiblePages: o,
         hideMaxPage: m,
-        onPageChange: v,
-        children: I
+        onPageChange: b,
+        children: S
     });
 }

@@ -32,66 +32,65 @@ var s = n(438648);
 n(706057);
 var l = n(622865),
     c = n(752701),
-    u = n(998217),
-    d = (function (e) {
-        function t(e, n) {
-            i(this, t);
-            var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (r._a = 'number' == typeof e ? new l(e) : e), (r._b = 'number' == typeof n ? new l(n) : n), (r._listeners = {}), r;
-        }
-        return (
-            a(t, e),
-            r(t, [
-                {
-                    key: '__getValue',
-                    value: function () {
-                        return this._a.__getValue() + this._b.__getValue();
-                    }
-                },
-                {
-                    key: 'addListener',
-                    value: function (e) {
-                        var t = this;
-                        !this._aListener &&
-                            this._a.addListener &&
-                            (this._aListener = this._a.addListener(function () {
-                                for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
-                            })),
-                            !this._bListener &&
-                                this._b.addListener &&
-                                (this._bListener = this._b.addListener(function () {
-                                    for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
-                                }));
-                        var n = guid();
-                        return (this._listeners[n] = e), n;
-                    }
-                },
-                {
-                    key: 'removeListener',
-                    value: function (e) {
-                        delete this._listeners[e];
-                    }
-                },
-                {
-                    key: 'interpolate',
-                    value: function (e) {
-                        return new u(this, c.create(e));
-                    }
-                },
-                {
-                    key: '__attach',
-                    value: function () {
-                        this._a.__addChild(this), this._b.__addChild(this);
-                    }
-                },
-                {
-                    key: '__detach',
-                    value: function () {
-                        this._a.__removeChild(this), this._b.__removeChild(this);
-                    }
+    u = n(998217);
+e.exports = (function (e) {
+    function t(e, n) {
+        i(this, t);
+        var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        return (r._a = 'number' == typeof e ? new l(e) : e), (r._b = 'number' == typeof n ? new l(n) : n), (r._listeners = {}), r;
+    }
+    return (
+        a(t, e),
+        r(t, [
+            {
+                key: '__getValue',
+                value: function () {
+                    return this._a.__getValue() + this._b.__getValue();
                 }
-            ]),
-            t
-        );
-    })(s);
-e.exports = d;
+            },
+            {
+                key: 'addListener',
+                value: function (e) {
+                    var t = this;
+                    !this._aListener &&
+                        this._a.addListener &&
+                        (this._aListener = this._a.addListener(function () {
+                            for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
+                        })),
+                        !this._bListener &&
+                            this._b.addListener &&
+                            (this._bListener = this._b.addListener(function () {
+                                for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
+                            }));
+                    var n = guid();
+                    return (this._listeners[n] = e), n;
+                }
+            },
+            {
+                key: 'removeListener',
+                value: function (e) {
+                    delete this._listeners[e];
+                }
+            },
+            {
+                key: 'interpolate',
+                value: function (e) {
+                    return new u(this, c.create(e));
+                }
+            },
+            {
+                key: '__attach',
+                value: function () {
+                    this._a.__addChild(this), this._b.__addChild(this);
+                }
+            },
+            {
+                key: '__detach',
+                value: function () {
+                    this._a.__removeChild(this), this._b.__removeChild(this);
+                }
+            }
+        ]),
+        t
+    );
+})(s);

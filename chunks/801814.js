@@ -31,10 +31,7 @@ n.d(t, { Z: () => a });
 class a {
     handleDownloadingModule(e) {
         if (!o(e.name)) {
-            if (null != this._downloadingModules[e.name]) {
-                console.warn('Duplicate downloading-module event for module ', e.name);
-                return;
-            }
+            if (null != this._downloadingModules[e.name]) return void console.warn('Duplicate downloading-module event for module ', e.name);
             this._downloadingModules[e.name] = {
                 startTime: BigInt(e.now),
                 foreground: e.foreground
@@ -57,10 +54,7 @@ class a {
     handleDownloadedModule(e) {
         if (o(e.name)) return;
         let t = this._downloadingModules[e.name];
-        if (null == t) {
-            console.warn('Downloaded complete without corresponding downloading event for module ', e.name);
-            return;
-        }
+        if (null == t) return void console.warn('Downloaded complete without corresponding downloading event for module ', e.name);
         let n = t.foreground ? 'foreground' : 'background',
             r = ''.concat(n, '_download_ms_').concat(e.name),
             i = ''.concat(n, '_bytes_').concat(e.name),
@@ -70,10 +64,7 @@ class a {
     }
     handleInstallingModule(e) {
         if (!o(e.name)) {
-            if (null != this._installingModules[e.name]) {
-                console.warn('Duplicate installing-module event for module ', e.name);
-                return;
-            }
+            if (null != this._installingModules[e.name]) return void console.warn('Duplicate installing-module event for module ', e.name);
             this._installingModules[e.name] = {
                 startTime: BigInt(e.now),
                 foreground: e.foreground,

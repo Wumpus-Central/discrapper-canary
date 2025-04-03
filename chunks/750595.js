@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = {
             match: [/^\s*(?=\S)/, /[^:]+/, /:\s*/, /$/],
             className: {
@@ -49,5 +49,4 @@ function t(e) {
             n
         ]
     };
-}
-e.exports = t;
+};

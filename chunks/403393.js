@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     return {
         name: 'Intel x86 Assembly',
         case_insensitive: !0,
@@ -62,5 +62,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

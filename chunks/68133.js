@@ -23,7 +23,7 @@ async function l(e, t) {
 async function c(e) {
     var t;
     try {
-        if (null === (t = null == e ? void 0 : e.contentDocument) || void 0 === t ? void 0 : t.body) return await E(e.contentDocument.body, {}, !0);
+        if (null == (t = null == e ? void 0 : e.contentDocument) ? void 0 : t.body) return await E(e.contentDocument.body, {}, !0);
     } catch (e) {}
     return e.cloneNode(!1);
 }
@@ -35,8 +35,7 @@ async function f(e, t, n) {
     var r, o;
     let a = [];
     return (
-        d(e) && e.assignedNodes ? (a = (0, i.qo)(e.assignedNodes())) : (0, i.oY)(e, HTMLIFrameElement) && (null === (r = e.contentDocument) || void 0 === r ? void 0 : r.body) ? (a = (0, i.qo)(e.contentDocument.body.childNodes)) : (a = (0, i.qo)((null !== (o = e.shadowRoot) && void 0 !== o ? o : e).childNodes)),
-        0 === a.length ||
+        0 === (a = d(e) && e.assignedNodes ? (0, i.qo)(e.assignedNodes()) : (0, i.oY)(e, HTMLIFrameElement) && (null == (r = e.contentDocument) ? void 0 : r.body) ? (0, i.qo)(e.contentDocument.body.childNodes) : (0, i.qo)((null != (o = e.shadowRoot) ? o : e).childNodes)).length ||
             (0, i.oY)(e, HTMLVideoElement) ||
             (await a.reduce(
                 (e, r) =>
@@ -50,7 +49,7 @@ async function f(e, t, n) {
         t
     );
 }
-function p(e, t) {
+function _(e, t) {
     let n = t.style;
     if (!n) return;
     let r = window.getComputedStyle(e);
@@ -65,7 +64,7 @@ function p(e, t) {
               (0, i.oY)(e, HTMLIFrameElement) && 'display' === o && 'inline' === a && (a = 'block'), 'd' === o && t.getAttribute('d') && (a = `path(${t.getAttribute('d')})`), n.setProperty(o, a, r.getPropertyPriority(o));
           });
 }
-function _(e, t) {
+function p(e, t) {
     (0, i.oY)(e, HTMLTextAreaElement) && (t.innerHTML = e.value), (0, i.oY)(e, HTMLInputElement) && t.setAttribute('value', e.value);
 }
 function h(e, t) {
@@ -75,7 +74,7 @@ function h(e, t) {
     }
 }
 function m(e, t) {
-    return (0, i.oY)(t, Element) && (p(e, t), (0, r.b)(e, t), _(e, t), h(e, t)), t;
+    return (0, i.oY)(t, Element) && (_(e, t), (0, r.b)(e, t), p(e, t), h(e, t)), t;
 }
 async function g(e, t) {
     let n = e.querySelectorAll ? e.querySelectorAll('use') : [];

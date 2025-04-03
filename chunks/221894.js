@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = 'true false yes no null',
         n = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
         r = {
@@ -151,11 +151,11 @@ function t(e) {
             o,
             a
         ],
-        p = [...f];
+        _ = [...f];
     return (
-        p.pop(),
-        p.push(s),
-        (c.contains = p),
+        _.pop(),
+        _.push(s),
+        (c.contains = _),
         {
             name: 'YAML',
             case_insensitive: !0,
@@ -163,5 +163,4 @@ function t(e) {
             contains: f
         }
     );
-}
-e.exports = t;
+};

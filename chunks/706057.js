@@ -12,7 +12,7 @@ var t = (function () {
 function n(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-var r = (function () {
+e.exports = (function () {
     function e() {
         n(this, e);
     }
@@ -54,4 +54,3 @@ var r = (function () {
         e
     );
 })();
-e.exports = r;

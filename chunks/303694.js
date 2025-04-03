@@ -19,13 +19,11 @@ let o = (e) => {
         return null;
     },
     a = (e, t, n) => {
-        switch (e) {
-            case 'linked-roles':
-                var i;
-                if (null == n) break;
-                let o = r.Z.getRole(n, t);
-                if (null == o || (null === (i = o.tags) || void 0 === i ? void 0 : i.guild_connections) !== null) break;
-                return o.name;
+        if ('linked-roles' === e) {
+            var i;
+            if (null == n) return null;
+            let e = r.Z.getRole(n, t);
+            return null == e || (null == (i = e.tags) ? void 0 : i.guild_connections) !== null ? null : e.name;
         }
         return null;
     };
