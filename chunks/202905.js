@@ -15,7 +15,7 @@ var r = n(200651),
     f = n(651390),
     b = n(981631),
     x = n(388032),
-    j = n(653990);
+    j = n(217288);
 let N = {
     id: '0',
     name: '',
@@ -31,6 +31,7 @@ let N = {
     brandColorPrimary: null,
     tag: null,
     badge: null,
+    badgeHash: null,
     badgeColorPrimary: null,
     badgeColorSecondary: null
 };
@@ -41,9 +42,9 @@ function v(e) {
             guildProfile: p.Z.getGuildProfile()
         })),
         _ = null == n ? void 0 : n.id,
-        y = (0, l.e7)([c.Z], () => c.Z.get(_)),
+        C = (0, l.e7)([c.Z], () => c.Z.get(_)),
         { fetchGuildProfile: O } = (0, d.u)(_),
-        C = (null == v ? void 0 : v.visibility) == null || !s.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
+        y = (null == v ? void 0 : v.visibility) == null || !s.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
         I = (null == v ? void 0 : v.visibility) === s.k.PUBLIC_WITH_RECRUITMENT,
         E = (0, g.Dj)({
             guildId: _,
@@ -60,7 +61,7 @@ function v(e) {
             m.Z.setSection(b.pNK.PROFILE);
         }, []);
     if (null == n) return null;
-    let w = null != t ? t : null == y ? void 0 : y.formFields;
+    let w = null != t ? t : null == C ? void 0 : C.formFields;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6, {
@@ -100,7 +101,7 @@ function v(e) {
                                               onChange: T,
                                               value: I,
                                               hideBorder: !0,
-                                              disabled: C,
+                                              disabled: y,
                                               children: x.NW.string(x.t['N/0239'])
                                           }),
                                           (0, r.jsx)(a.xv, {
@@ -108,7 +109,7 @@ function v(e) {
                                               color: 'text-secondary',
                                               children: x.NW.string(x.t['3TSZYG'])
                                           }),
-                                          C &&
+                                          y &&
                                               (0, r.jsx)(a.xv, {
                                                   variant: 'text-xs/normal',
                                                   color: 'text-muted',
