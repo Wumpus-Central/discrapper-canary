@@ -63,18 +63,18 @@ function T(e, t) {
     );
 }
 function b(e) {
-    let { channel: t, guild: n, inviteTarget: s } = e,
-        { guildProfile: r, fetchGuildProfile: a } = (0, x.u)(n.id);
+    let { channel: t, guild: n } = e,
+        { guildProfile: s, fetchGuildProfile: r } = (0, x.u)(n.id);
     i.useEffect(() => {
-        a();
-    }, [a]);
-    let o = (0, h.KS)(t, n),
-        d = null,
-        c = null;
+        r();
+    }, [r]);
+    let a = (0, h.KS)(t, n),
+        o = null,
+        d = null;
     if (null !== t) {
-        d = null == t ? void 0 : t.name;
-        let e = (0, p.a5)({ type: s.type });
-        c = (0, l.jsxs)(u.Text, {
+        o = null == t ? void 0 : t.name;
+        let e = (0, p.a5)({ type: t.type });
+        d = (0, l.jsxs)(u.Text, {
             className: S.inviteTargetContent,
             variant: 'text-xs/medium',
             color: 'header-muted',
@@ -88,9 +88,9 @@ function b(e) {
             ]
         });
     } else
-        (d = n.name),
-            (c =
-                null === r
+        (o = n.name),
+            (d =
+                null === s
                     ? null
                     : (0, l.jsxs)('div', {
                           className: S.guildPresence,
@@ -102,7 +102,7 @@ function b(e) {
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'header-muted',
-                                          children: j.NW.format(j.t['LC+S+v'], { membersOnline: r.onlineCount })
+                                          children: j.NW.format(j.t['LC+S+v'], { membersOnline: s.onlineCount })
                                       })
                                   ]
                               }),
@@ -113,7 +113,7 @@ function b(e) {
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'header-muted',
-                                          children: j.NW.format(j.t.zRl6XV, { count: r.memberCount })
+                                          children: j.NW.format(j.t.zRl6XV, { count: s.memberCount })
                                       })
                                   ]
                               })
@@ -125,8 +125,8 @@ function b(e) {
             (0, l.jsxs)('div', {
                 className: S.inviteTargetHeading,
                 children: [
-                    null !== o &&
-                        (0, l.jsx)(o, {
+                    null !== a &&
+                        (0, l.jsx)(a, {
                             className: S.inviteTargetIcon,
                             size: 'xs'
                         }),
@@ -134,11 +134,11 @@ function b(e) {
                         variant: 'heading-md/semibold',
                         color: 'header-secondary',
                         lineClamp: 1,
-                        children: d
+                        children: o
                     })
                 ]
             }),
-            c
+            d
         ]
     });
 }
@@ -168,52 +168,52 @@ function _(e) {
 }
 function y(e) {
     var t;
-    let { className: s, guild: h, channel: x, inviteTarget: p, sendInvite: y, inviteKey: O, sending: P, options: Z, setOptions: A, isApplicationBypassAllowed: w, isGuestInviteAllowed: R, isTemporaryInviteAllowed: k } = e,
-        [M] = (0, o.Wu)([v.Z], () => [v.Z.hideInstantInvites]),
-        [W, D] = i.useState(!1),
-        [L, U] = i.useState(!1),
-        V = i.useRef(null),
+    let { className: s, guild: h, channel: x, sendInvite: p, inviteKey: y, sending: O, options: P, setOptions: Z, isApplicationBypassAllowed: A, isGuestInviteAllowed: w, isTemporaryInviteAllowed: R } = e,
+        [k] = (0, o.Wu)([v.Z], () => [v.Z.hideInstantInvites]),
+        [M, W] = i.useState(!1),
+        [D, L] = i.useState(!1),
+        U = i.useRef(null),
+        V = (0, m.Dt)(),
         B = (0, m.Dt)(),
         F = (0, m.Dt)(),
-        G = (0, m.Dt)(),
-        z = (0, I.Z)(O),
-        H = M ? j.NW.string(j.t['6HzNgY']) : z,
-        q = i.useCallback(
-            () => (
-                D(!0),
-                (0, N.JG)(z),
-                (V.current = setTimeout(() => {
-                    D(!1);
-                }, 1000)),
-                () => {
-                    null !== V.current && clearTimeout(V.current);
-                }
-            ),
-            [D, z]
-        ),
+        G = null == y,
+        [z, H] = G ? [null, null] : [(0, I.Z)(y), (0, I.Z)(y, !1)],
+        q = i.useCallback(() => {
+            if (!G && null != z)
+                return (
+                    W(!0),
+                    (0, N.JG)(z),
+                    (U.current = setTimeout(() => {
+                        W(!1);
+                    }, 1000)),
+                    () => {
+                        null !== U.current && clearTimeout(U.current);
+                    }
+                );
+        }, [G, W, z]),
         Y = i.useCallback(
             (e) => {
-                A({ max_age: e });
+                Z({ max_age: e });
             },
-            [A]
+            [Z]
         ),
         K = i.useCallback(
             (e) => {
-                A({ max_uses: e });
+                Z({ max_uses: e });
             },
-            [A]
+            [Z]
         ),
         X = i.useCallback(
             (e) => {
-                Z.flags === e ? A({ flags: void 0 }) : A({ flags: e });
+                P.flags === e ? Z({ flags: void 0 }) : Z({ flags: e });
             },
-            [Z, A]
+            [P, Z]
         ),
         J = i.useCallback(
             (e) => {
-                A({ temporary: e });
+                Z({ temporary: e });
             },
-            [A]
+            [Z]
         ),
         Q = i.useCallback(
             (e) => {
@@ -227,18 +227,18 @@ function y(e) {
                             (0, l.jsx)(
                                 e,
                                 T(E({}, t), {
-                                    initialOptions: Z,
+                                    initialOptions: P,
                                     onChangeMaxAge: Y,
                                     onChangeMaxUses: K
                                 })
                             );
                     });
             },
-            [Z, Y, K]
+            [P, Y, K]
         ),
         $ = f.H.find((e) => {
             let { value: t } = e;
-            return t === Z.max_age;
+            return t === P.max_age;
         });
     return (0, l.jsxs)('div', {
         className: r()(s, S.footer),
@@ -258,8 +258,7 @@ function y(e) {
                     (0, l.jsx)(b, {
                         guild: h,
                         channel: x,
-                        inviteTarget: p,
-                        isStreamerMode: M
+                        isStreamerMode: k
                     }),
                     (0, l.jsx)(u.ua7, {
                         position: 'top',
@@ -270,7 +269,7 @@ function y(e) {
                                 T(E({ className: S.settingsButton }, e), {
                                     onClick: () => {
                                         var t;
-                                        null == e || null == (t = e.onClick) || t.call(e), U((e) => !e);
+                                        null == e || null == (t = e.onClick) || t.call(e), L((e) => !e);
                                     },
                                     children: (0, l.jsx)(u.ewm, {
                                         size: 'refresh_sm',
@@ -281,7 +280,7 @@ function y(e) {
                     })
                 ]
             }),
-            L &&
+            D &&
                 (0, l.jsxs)(C, {
                     children: [
                         (0, l.jsxs)(_, {
@@ -324,9 +323,9 @@ function y(e) {
                                 })
                             ]
                         }),
-                        w &&
+                        A &&
                             (0, l.jsxs)(_, {
-                                htmlFor: B,
+                                htmlFor: V,
                                 children: [
                                     (0, l.jsxs)('div', {
                                         className: S.advancedOptionContent,
@@ -350,15 +349,15 @@ function y(e) {
                                         ]
                                     }),
                                     (0, l.jsx)(u.rsf, {
-                                        id: B,
-                                        checked: Z.flags === a.$.IS_APPLICATION_BYPASS,
+                                        id: V,
+                                        checked: P.flags === a.$.IS_APPLICATION_BYPASS,
                                         onChange: () => X(a.$.IS_APPLICATION_BYPASS)
                                     })
                                 ]
                             }),
-                        R &&
+                        w &&
                             (0, l.jsxs)(_, {
-                                htmlFor: F,
+                                htmlFor: B,
                                 children: [
                                     (0, l.jsxs)('div', {
                                         className: S.advancedOptionContent,
@@ -382,15 +381,15 @@ function y(e) {
                                         ]
                                     }),
                                     (0, l.jsx)(u.rsf, {
-                                        id: F,
-                                        checked: Z.flags === a.$.IS_GUEST_INVITE,
+                                        id: B,
+                                        checked: P.flags === a.$.IS_GUEST_INVITE,
                                         onChange: () => X(a.$.IS_GUEST_INVITE)
                                     })
                                 ]
                             }),
-                        k &&
+                        R &&
                             (0, l.jsxs)(_, {
-                                htmlFor: G,
+                                htmlFor: F,
                                 children: [
                                     (0, l.jsxs)('div', {
                                         className: S.advancedOptionContent,
@@ -414,8 +413,8 @@ function y(e) {
                                         ]
                                     }),
                                     (0, l.jsx)(u.rsf, {
-                                        id: G,
-                                        checked: !!Z.temporary,
+                                        id: F,
+                                        checked: !!P.temporary,
                                         onChange: (e) => J(e)
                                     })
                                 ]
@@ -427,11 +426,8 @@ function y(e) {
                 children: [
                     (0, l.jsx)(u.ua7, {
                         position: 'top',
-                        'aria-label': H,
-                        text: (0, l.jsx)(u.Text, {
-                            variant: 'text-sm/medium',
-                            children: H
-                        }),
+                        text: H,
+                        shouldShow: !G && !k,
                         children: (e) =>
                             (0, l.jsx)(
                                 u.zxk,
@@ -445,11 +441,12 @@ function y(e) {
                                         e
                                     ),
                                     {
+                                        disabled: G,
                                         onClick: () => {
                                             var t;
                                             null == e || null == (t = e.onClick) || t.call(e), q();
                                         },
-                                        children: W
+                                        children: M
                                             ? (0, l.jsxs)(l.Fragment, {
                                                   children: [
                                                       (0, l.jsx)(u.dz2, {
@@ -475,8 +472,8 @@ function y(e) {
                     (0, l.jsxs)(u.zxk, {
                         className: S.button,
                         innerClassName: S.buttonInner,
-                        onClick: () => y(),
-                        disabled: P,
+                        onClick: () => p(),
+                        disabled: G || O,
                         children: [
                             (0, l.jsx)('span', { children: j.NW.string(j.t.BcAABg) }),
                             (0, l.jsx)(u.Uuj, {
