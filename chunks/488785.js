@@ -9,7 +9,7 @@ var r = n(200651),
     u = n(570140),
     d = n(596454),
     p = n(607070),
-    h = n(742675);
+    h = n(15536);
 let f = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
     m = i.memo(function (e) {
         var t;
@@ -81,7 +81,10 @@ function g(e) {
         ? null
         : (0, r.jsx)('div', {
               className: h.container,
-              style: { top: n - 16 },
+              style: {
+                  top: n - 50,
+                  left: '52%'
+              },
               'aria-hidden': !0,
               children: o.map((e) =>
                   (0, r.jsx)(
