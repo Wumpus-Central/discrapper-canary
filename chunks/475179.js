@@ -100,5 +100,14 @@ let u = {
                       a.S.dispatch(s.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
                 : a.S.dispatch(s.CkL.FOCUS_CHAT_BUTTON);
+    },
+    jumpToVoiceChannelMessage(e, t, n, i) {
+        r.Z.dispatch({
+            type: 'CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE',
+            guildId: e,
+            channelId: t,
+            messageId: n,
+            jumpType: i
+        });
     }
 };
