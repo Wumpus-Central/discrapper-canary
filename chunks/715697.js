@@ -1,46 +1,50 @@
-t.d(l, { Z: () => d }), t(301563);
+t.d(l, { Z: () => m }), t(301563);
 var n = t(200651);
 t(192379);
 var r = t(120356),
     i = t.n(r),
     s = t(729594),
-    a = t(635477),
-    o = t(902692),
-    u = t(94488);
-function d(e) {
+    a = t(442837),
+    o = t(780384),
+    u = t(210887),
+    d = t(635477),
+    c = t(902692),
+    h = t(94488);
+function m(e) {
     let {
-        className: l,
-        embed: { url: t }
-    } = e;
+            className: l,
+            embed: { url: t }
+        } = e,
+        r = (0, a.e7)([u.Z], () => (0, o.wj)(u.Z.theme));
     if (null == t) return null;
-    let r = null,
-        d = null,
-        c = null;
+    let m = null,
+        p = null,
+        g = null;
     try {
-        var h;
+        var b;
         let e = s.parse(t, !0);
-        (r = e.host), (d = e.pathname), (c = null != (h = e.query.i) ? h : null), Array.isArray(c) && (c = c[0]);
+        (m = e.host), (p = e.pathname), (g = null != (b = e.query.i) ? b : null), Array.isArray(g) && (g = g[0]);
     } catch (e) {
         return null;
     }
-    if (!(0, a.L)(r) || null == d) return null;
-    let m = d.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
-    null != m && (d = d.substr(m[1].length + 1));
-    let p = d.split('/'),
-        g = null != p[1] ? p[1].toLowerCase() : null;
-    null != c && (g = 'song');
-    let b = 450;
+    if (!(0, d.L)(m) || null == p) return null;
+    let f = p.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+    null != f && (p = p.substr(f[1].length + 1));
+    let v = p.split('/'),
+        y = null != v[1] ? v[1].toLowerCase() : null;
+    null != g && (y = 'song');
+    let x = 450;
     return (
-        'song' === g ? (b = 175) : 'music-video' === g && (b = 371),
-        (d = d.substr(1)),
+        'song' === y ? (x = 175) : 'music-video' === y && (x = 371),
+        (p = p.substr(1)),
         (0, n.jsx)('iframe', {
-            className: i()(u.embedAppleMusic, l),
-            src: o.P.EMBED(d, c),
+            className: i()(h.embedAppleMusic, l),
+            src: c.P.EMBED(p, r ? 'dark' : 'light', g),
             style: {
                 maxWidth: 660,
                 minWidth: 300,
                 width: '100%',
-                height: b
+                height: x
             },
             frameBorder: 0,
             sandbox: 'allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation',
