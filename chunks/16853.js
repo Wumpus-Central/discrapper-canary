@@ -4,8 +4,9 @@ n(192379);
 var i = n(481060),
     l = n(643560);
 let o = (e) => {
-    let { entry: t, hideEditButton: n, children: o, onRequestOpen: a, onRequestClose: s } = e;
+    let { entry: t, hideEditButton: n, children: o, onRequestOpen: a, onRequestClose: s, targetElementRef: c } = e;
     return (0, r.jsx)(i.yRy, {
+        targetElementRef: c,
         onRequestOpen: a,
         onRequestClose: s,
         animation: i.yRy.Animation.NONE,

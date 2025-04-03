@@ -25,9 +25,9 @@ var r = n(200651),
     y = n(16853),
     x = n(981631),
     j = n(388032),
-    O = n(803321),
-    N = n(883760);
-function E(e) {
+    O = n(166698),
+    E = n(883760);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function E(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ function P(e, t) {
         e
     );
 }
-function I(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +97,7 @@ let S = (e) => {
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: N
+                src: E
             }),
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
@@ -111,26 +111,27 @@ let S = (e) => {
 function Z(e) {
     let { entry: t } = e,
         [l, a] = i.useState(!1),
-        { canEdit: c } = (0, v.Z)(t);
+        c = i.useRef(null),
+        { canEdit: u } = (0, v.Z)(t);
     return (0, r.jsx)('div', {
         className: o()(O.actionButtonsContainer, { [O.forceButtonsShow]: l }),
         children: (0, r.jsxs)(p.ZP, {
             children: [
-                c
+                u
                     ? (0, r.jsx)(s.ua7, {
                           text: j.NW.string(j.t.XnuOvL),
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
-                                  l = I(e, ['onClick']);
+                                  l = P(e, ['onClick']);
                               return (0, r.jsx)(
                                   p.zx,
-                                  P(E({}, l), {
+                                  I(N({}, l), {
                                       onClick: () => {
                                           null == i || i(),
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e('34191').then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, P(E({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, I(N({}, n), { entry: t }));
                                               });
                                       },
                                       'aria-label': j.NW.string(j.t.XnuOvL),
@@ -145,22 +146,24 @@ function Z(e) {
                       })
                     : null,
                 (0, r.jsx)(y.Z, {
+                    targetElementRef: c,
                     onRequestOpen: () => a(!0),
                     onRequestClose: () => a(!1),
                     entry: t,
                     hideEditButton: !0,
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = I(e, ['onClick']);
+                            n = P(e, ['onClick']);
                         return (0, r.jsx)(s.ua7, {
                             text: j.NW.string(j.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
-                                    l = I(e, ['onClick']);
+                                    l = P(e, ['onClick']);
                                 return (0, r.jsx)(
                                     p.zx,
-                                    P(E({}, n, l), {
+                                    I(N({}, n, l), {
+                                        ref: c,
                                         onClick: (e) => {
                                             null == i || i(), t(e);
                                         },
@@ -193,12 +196,12 @@ let T = (e) => {
                 p(!1);
             }
         },
-        N = C.ZP.getGuildSplashURL({
+        E = C.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
             size: 300 * (0, m.x_)()
         }),
-        I =
+        P =
             null !==
                 (t = C.ZP.getGuildIconURL({
                     id: l.guildId,
@@ -215,7 +218,7 @@ let T = (e) => {
             onContextMenu: (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, P(E({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, I(N({}, t), { entry: l }));
                 });
             },
             children: [
@@ -225,9 +228,9 @@ let T = (e) => {
                         (0, r.jsx)('div', {
                             className: O.splash,
                             children:
-                                null != N &&
+                                null != E &&
                                 (0, r.jsx)('img', {
-                                    src: N,
+                                    src: E,
                                     alt: '',
                                     className: O.splashImage
                                 })
@@ -242,7 +245,7 @@ let T = (e) => {
                                     className: O.iconMask,
                                     children: (0, r.jsx)(h.Z, {
                                         className: O.icon,
-                                        iconSrc: I,
+                                        iconSrc: P,
                                         guild: new b.ZP(l),
                                         size: h.Z.Sizes.MEDIUM,
                                         active: !0
