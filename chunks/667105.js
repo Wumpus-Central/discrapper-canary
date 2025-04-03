@@ -1,11 +1,11 @@
 n.d(t, {
-    DH: () => G,
-    Ks: () => U,
-    Ws: () => F,
+    DH: () => B,
+    Ks: () => G,
+    Ws: () => V,
     g2: () => k,
     hf: () => x,
     k3: () => j,
-    qN: () => B,
+    qN: () => F,
     tP: () => M
 }),
     n(47120);
@@ -26,14 +26,14 @@ var r = n(200651),
     g = n(272008),
     E = n(113434),
     b = n(569984),
-    v = n(497505),
-    y = n(918701),
+    y = n(497505),
+    v = n(918701),
     O = n(977156),
     I = n(920916),
     S = n(669041),
     T = n(341907),
-    A = n(46140),
-    N = n(981631),
+    N = n(46140),
+    A = n(981631),
     C = n(215023),
     R = n(388032);
 function P(e, t, n) {
@@ -92,7 +92,7 @@ function x(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: o } = e,
         s = (0, a.e7)([_.default], () => {
             var e;
-            return null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasVerifiedEmailOrPhone();
+            return null == (e = _.default.getCurrentUser()) ? void 0 : e.hasVerifiedEmailOrPhone();
         }),
         l = (0, h.O5)();
     return i.useCallback(() => {
@@ -105,13 +105,13 @@ function x(e) {
                 questContentRowIndex: o
             }),
             s
-                ? (0, y.Bg)(t.config)
+                ? (0, v.Bg)(t.config)
                     ? (0, T.openQuestsNitroRewardModal)(t, n)
-                    : (0, y.Xv)(t.config)
+                    : (0, v.Xv)(t.config)
                       ? (0, I.m)(t, n)
-                      : (0, y.vQ)(t.config)
+                      : (0, v.vQ)(t.config)
                         ? (0, T.openQuestInGameRewardModal)(t, n)
-                        : (0, y.xN)(t.config)
+                        : (0, v.xN)(t.config)
                           ? (0, T.openQuestOrbsRewardModal)(t, n)
                           : (0, T.openQuestsRewardCodeModal)({
                                 questId: t.id,
@@ -124,7 +124,7 @@ function x(e) {
 function M(e) {
     var t;
     let n = (0, a.Wu)([u.ZP], () => u.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
-    return null != n && Date.now() - 25920000000 <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0);
+    return null != n && Date.now() - 25920000000 <= (null != (t = n.lastLaunched) ? t : 0);
 }
 let k = (e) => {
         let { useReducedMotion: t, className: n } = e,
@@ -165,7 +165,7 @@ let k = (e) => {
             a = (n) => {
                 var r;
                 let a = n.target;
-                (null == a ? void 0 : null === (r = a.tagName) || void 0 === r ? void 0 : r.toLowerCase()) === 'a' &&
+                (null == a || null == (r = a.tagName) ? void 0 : r.toLowerCase()) === 'a' &&
                     o({
                         questId: e,
                         questContent: t,
@@ -178,9 +178,20 @@ let k = (e) => {
         });
     };
 function U(e) {
+    return e.config.features.includes(N.S7.START_QUEST_CTA)
+        ? {
+              text: R.NW.string(R.t.ToGcxM),
+              questContentCTA: h.jZ.START_QUEST
+          }
+        : {
+              text: R.NW.string(R.t.l7E81t),
+              questContentCTA: h.jZ.ACCEPT_QUEST
+          };
+}
+function G(e) {
     var t;
     let { quest: n, progressState: r, isCollectibleQuest: o, location: a, questContentPosition: s, questContentRowIndex: u, inGiftInventory: _, isVideoQuest: p, inGameQuest: b } = e,
-        v = x({
+        y = x({
             quest: n,
             location: a,
             questContentPosition: s,
@@ -199,7 +210,7 @@ function U(e) {
                 analyticsSource: l.Z.QUEST_HOME_PAGE
             });
         }, []),
-        D = null === (t = (0, m.WD)()) || void 0 === t ? void 0 : t.getId();
+        D = null == (t = (0, m.WD)()) ? void 0 : t.getId();
     return i.useMemo(() => {
         switch (r) {
             case E.OH.UNACCEPTED:
@@ -207,7 +218,7 @@ function U(e) {
                     t = h.jZ.ACCEPT_QUEST;
                 return (
                     p && ((e = R.NW.string(R.t.umdNio)), (t = h.jZ.START_QUEST)),
-                    b && (n.config.features.includes(A.S7.START_QUEST_CTA) ? ((e = R.NW.string(R.t.E80Bdn)), (t = h.jZ.START_QUEST)) : ((e = R.NW.string(R.t.l7E81t)), (t = h.jZ.ACCEPT_QUEST))),
+                    b && ({ text: e, questContentCTA: t } = U(n)),
                     {
                         text: e,
                         tooltipText: e,
@@ -218,7 +229,7 @@ function U(e) {
                                 questContentPosition: s,
                                 questContentRowIndex: u
                             }),
-                                p ? (0, T.openVideoQuestModal)(n) : b && n.config.features.includes(A.S7.START_QUEST_CTA) && (0, f.uL)(N.Z5c.ACTIVITY_DETAILS(n.config.application.id));
+                                p ? (0, T.openVideoQuestModal)(n) : b && n.config.features.includes(N.S7.START_QUEST_CTA) && (0, f.uL)(A.Z5c.ACTIVITY_DETAILS(n.config.application.id));
                         }
                     }
                 );
@@ -229,7 +240,7 @@ function U(e) {
                         text: R.NW.string(R.t.Cfye4u),
                         tooltipText: null,
                         onClick: () =>
-                            (0, y.gI)(
+                            (0, v.gI)(
                                 { quest: n },
                                 {
                                     content: a,
@@ -242,10 +253,20 @@ function U(e) {
                     };
                 if (p)
                     return {
-                        text: (0, y.F9)(I),
+                        text: (0, v.F9)(I),
                         tooltipText: R.NW.string(R.t.hsbwjo),
                         onClick: () => (0, T.openVideoQuestModal)(n)
                     };
+                if (b && n.config.features.includes(N.S7.START_QUEST_CTA)) {
+                    let { text: e } = U(n);
+                    return {
+                        text: e,
+                        tooltipText: R.NW.string(R.t.hsbwjo),
+                        onClick: () => {
+                            n.config.features.includes(N.S7.START_QUEST_CTA) && (0, f.uL)(A.Z5c.ACTIVITY_DETAILS(n.config.application.id));
+                        }
+                    };
+                }
                 return {
                     text: R.NW.string(R.t.cfY4PD),
                     tooltipText: R.NW.string(R.t.hsbwjo),
@@ -255,22 +276,22 @@ function U(e) {
                 return {
                     text: R.NW.string(R.t.cfY4PD),
                     tooltipText: null,
-                    onClick: v
+                    onClick: y
                 };
             case E.OH.CLAIMED:
                 let i = {
                     tooltipText: null,
-                    onClick: v
+                    onClick: y
                 };
                 if (o) return L(w({}, i), { text: R.NW.string(R.t.MAS7uL) });
-                if ((0, y.vQ)(n.config)) return L(w({}, i), { text: R.NW.string(R.t.vTgCW1) });
-                if ((0, y.Bg)(n.config))
+                if ((0, v.vQ)(n.config)) return L(w({}, i), { text: R.NW.string(R.t.vTgCW1) });
+                if ((0, v.Bg)(n.config))
                     return {
                         tooltipText: null,
                         onClick: S,
                         text: R.NW.string(R.t['eQX+go'])
                     };
-                else if ((0, y.xN)(n.config))
+                else if ((0, v.xN)(n.config))
                     return {
                         tooltipText: null,
                         text: R.NW.string(R.t.WYchdX),
@@ -278,15 +299,15 @@ function U(e) {
                     };
                 return L(w({}, i), { text: R.NW.string(R.t.bAGFz8) });
         }
-    }, [r, p, O, _, v, o, n, a, s, u, D, I, S, P, b]);
+    }, [r, p, O, _, y, o, n, a, s, u, D, I, S, P, b]);
 }
-function G() {
+function B() {
     return (0, a.e7)([b.Z], () => {
         var e, t;
-        return null !== (t = null !== (e = b.Z.questDeliveryOverride) && void 0 !== e ? e : (0, y.PM)(b.Z.quests, b.Z.questToDeliverForPlacement, v.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : null;
+        return null != (t = null != (e = b.Z.questDeliveryOverride) ? e : (0, v.PM)(b.Z.quests, b.Z.questToDeliverForPlacement, y.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) ? t : null;
     });
 }
-function B(e) {
+function F(e) {
     var t;
     let { location: n, quest: r } = e,
         i = (0, O.Zy)({ location: n }),
@@ -296,16 +317,16 @@ function B(e) {
             hasFetchedSubscriptions: p.ZP.hasFetchedSubscriptions()
         })),
         c = (0, a.e7)([b.Z], () => null != b.Z.questDeliveryOverride);
-    if (null == r || ((0, y.Bg)(r.config) && (!l || (null == s ? void 0 : s.isPurchasedExternally)))) return !1;
-    let u = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        d = !c && null != r.userStatus && (0, y.zE)(r.userStatus, v.jn.QUEST_BAR);
+    if (null == r || ((0, v.Bg)(r.config) && (!l || (null == s ? void 0 : s.isPurchasedExternally)))) return !1;
+    let u = (null == (t = r.userStatus) ? void 0 : t.claimedAt) != null,
+        d = !c && null != r.userStatus && (0, v.zE)(r.userStatus, y.jn.QUEST_BAR);
     return i && !d && !u && !o;
 }
-function F(e) {
+function V(e) {
     let { location: t } = e,
-        n = B({
+        n = F({
             location: t,
-            quest: G()
+            quest: B()
         });
     return 0 !== (0, a.e7)([b.Z], () => b.Z.lastFetchedCurrentQuests) && !n;
 }
