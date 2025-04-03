@@ -1,8 +1,8 @@
 n.d(t, {
     B0: () => h,
     M4: () => R,
-    Nt: () => _,
-    RV: () => b,
+    Nt: () => p,
+    RV: () => y,
     VP: () => C,
     X: () => A,
     ZD: () => g,
@@ -11,8 +11,8 @@ n.d(t, {
     i_: () => P,
     k8: () => N,
     ox: () => m,
-    qJ: () => y,
-    yL: () => v
+    qJ: () => v,
+    yL: () => b
 }),
     n(411104),
     n(977457),
@@ -65,7 +65,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,29 +76,29 @@ function p(e, t) {
         e
     );
 }
-async function _(e, t) {
+async function p(e, t) {
     var n;
-    let r = I(e),
+    let r = S(e),
         o = await i.tn.get({
             url: c.ANM.GET_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
             rejectWithError: !1
         });
-    return null !== (n = o.body) && void 0 !== n ? n : JSON.parse(o.text);
+    return null != (n = o.body) ? n : JSON.parse(o.text);
 }
 async function h(e, t) {
     var n;
-    let r = S(e),
+    let r = I(e),
         o = await i.tn.get({
             url: c.ANM.GET_UNAUTHENTICATED_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
             rejectWithError: !1
         });
-    return null !== (n = o.body) && void 0 !== n ? n : JSON.parse(o.text);
+    return null != (n = o.body) ? n : JSON.parse(o.text);
 }
 async function m(e, t) {
-    let n = I(e),
-        r = await _(e, t);
+    let n = S(e),
+        r = await p(e, t);
     await i.tn.post({
         url: c.ANM.SUBMIT_REPORT_MENU(n),
         body: T(r, e, [
@@ -114,21 +114,21 @@ function g(e, t, n) {
     return s.ZP.get('iar_skip_api_report_submit')
         ? Promise.resolve()
         : i.tn.post({
-              url: c.ANM.SUBMIT_REPORT_MENU(I(t)),
+              url: c.ANM.SUBMIT_REPORT_MENU(S(t)),
               body: T(e, t, n),
               rejectWithError: !1
           });
 }
 function E(e, t, n, r) {
     if (s.ZP.get('iar_skip_api_report_submit')) return Promise.resolve();
-    let o = S(t);
+    let o = I(t);
     return i.tn.post({
         url: c.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(o),
         body: T(e, t, n, r),
         rejectWithError: !1
     });
 }
-function v(e, t) {
+function b(e, t) {
     return i.tn.post({
         url: c.ANM.SEND_UNAUTHENTICATED_REPORT_PINCODE(e),
         body: {
@@ -138,7 +138,7 @@ function v(e, t) {
         rejectWithError: !1
     });
 }
-async function b(e, t, n) {
+async function y(e, t, n) {
     return (
         await i.tn.post({
             url: c.ANM.VERIFY_UNAUTHENTICATED_REPORT(e),
@@ -151,7 +151,7 @@ async function b(e, t, n) {
         })
     ).body;
 }
-async function y() {
+async function v() {
     return await i.tn.get({
         url: c.ANM.DSA_EXPERIMENT_UNAUTHENTICATED,
         rejectWithError: !1
@@ -166,12 +166,12 @@ async function O(e) {
         })
     ).body;
 }
-function S(e) {
+function I(e) {
     let t = e.name;
     if (!Object.values(l.BM).includes(t)) throw Error('Invalid report type '.concat(e.name));
     return t;
 }
-function I(e) {
+function S(e) {
     let t = e.name;
     if (!Object.values(l.b).includes(t)) throw Error('Invalid report type '.concat(e.name));
     return t;
@@ -211,7 +211,7 @@ let T = (e, t, n, r) => {
         };
     if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
         let { channel_id: e, id: n } = t.record;
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             channel_id: e,
             message_id: n
@@ -219,14 +219,14 @@ let T = (e, t, n, r) => {
     }
     if (t.name === l.b.GUILD || t.name === l.b.GUILD_DISCOVERY) {
         let { id: e } = t.record;
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             guild_id: e
         });
     }
     if (t.name === l.b.GUILD_DIRECTORY_ENTRY) {
         let { guildId: e, channelId: n } = t.record;
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             channel_id: n,
             guild_id: e
@@ -234,7 +234,7 @@ let T = (e, t, n, r) => {
     }
     if (t.name === l.b.STAGE_CHANNEL) {
         let { id: e, guild_id: n, channel_id: r } = t.record;
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             channel_id: r,
             guild_id: n,
@@ -243,32 +243,38 @@ let T = (e, t, n, r) => {
     }
     if (t.name === l.b.GUILD_SCHEDULED_EVENT) {
         let { id: e, guild_id: n } = t.record;
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             guild_id: n,
             guild_scheduled_event_id: e
         });
     } else if (t.name === l.b.USER)
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             user_id: t.record.id,
             guild_id: t.contextualGuildId
         });
     else if (t.name === l.BM.USER)
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             user_id: t.record.id,
             guild_id: t.contextualGuildId,
             email_token: r
         });
     else if (t.name === l.BM.MESSAGE)
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             message_id: t.record.id,
             email_token: r
         });
+    else if (t.name === l.BM.GUILD)
+        return _(d({}, c, s), {
+            name: t.name,
+            guild_id: t.record.id,
+            email_token: r
+        });
     else if (t.name === l.b.APPLICATION)
-        return p(d({}, c, s), {
+        return _(d({}, c, s), {
             name: t.name,
             application_id: t.record.id,
             guild_id: t.contextualGuildId,
@@ -301,7 +307,7 @@ function C(e, t, n, r, i) {
     return (
         e.some((e) => {
             var t;
-            return !0 === e.should_submit_data && ((null == r ? void 0 : r[e.name]) == null || (null == r ? void 0 : r[e.name].value) === '' || !(null == r ? void 0 : null === (t = r[e.name]) || void 0 === t ? void 0 : t.isValid));
+            return !0 === e.should_submit_data && ((null == r ? void 0 : r[e.name]) == null || (null == r ? void 0 : r[e.name].value) === '' || !(null == r || null == (t = r[e.name]) ? void 0 : t.isValid));
         }) ||
         t.some((e) => !0 === e.should_submit_data && ((null == r ? void 0 : r[e.name]) == null || (null == r ? void 0 : r[e.name].value) === '')) ||
         ((null == n ? void 0 : n.should_submit_data) === !0 && (null == i || 0 === Object.keys(i).length))
