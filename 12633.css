@@ -41177,6 +41177,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     color: var(--white-500)
 }
 
+.visual-refresh .whiteText_f43ba5,
+.visual-refresh .whiteText_f43ba5 a {
+    color: inherit
+}
+
 .children__7bffb {
     flex-direction: column
 }

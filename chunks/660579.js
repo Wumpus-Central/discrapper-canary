@@ -56,20 +56,20 @@ function u(e) {
         c = l(e, ['children', 'className', 'onShowToolbar']);
     let u = i.useRef(null),
         [d, f] = i.useState(!1),
-        p = () => {
+        _ = () => {
             null == a || a(), f(!0);
         },
-        _ = () => {
+        p = () => {
             f(!1);
         };
     return (0, r.jsxs)('div', {
         className: n,
-        onMouseEnter: p,
-        onMouseLeave: _,
-        onFocus: p,
+        onMouseEnter: _,
+        onMouseLeave: p,
+        onFocus: _,
         onBlur: (e) => {
             var t;
-            (null === (t = u.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || _();
+            (null == (t = u.current) ? void 0 : t.contains(e.relatedTarget)) || p();
         },
         ref: u,
         children: [
@@ -78,6 +78,7 @@ function u(e) {
                 o.ZP,
                 s(
                     {
+                        targetRef: u,
                         isVisible: d,
                         isExpandable: !1
                     },
