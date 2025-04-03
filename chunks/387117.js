@@ -85,13 +85,43 @@ let r = {
         guildbar: {
             AVATAR_SIZE: {
                 resolve(e) {
-                    let { enabledExperiments: t } = e;
+                    let { enabledExperiments: t, density: n } = e;
                     if (0 === t.length) return 48;
-                    for (let e of t) if ('visual-refresh' === e) return 40;
+                    for (let e of t)
+                        switch (e) {
+                            case 'refresh-fast-follow-avatars':
+                                switch (n) {
+                                    case 'compact':
+                                        return 40;
+                                    case 'default':
+                                    case 'cozy':
+                                        return 44;
+                                    default:
+                                        return 48;
+                                }
+                            case 'visual-refresh':
+                                return 40;
+                        }
                     return 48;
                 }
             },
-            FOLDER_SIZE: { resolve: () => 48 }
+            FOLDER_SIZE: {
+                resolve(e) {
+                    let { enabledExperiments: t, density: n } = e;
+                    if (0 === t.length) return 48;
+                    for (let e of t)
+                        if ('refresh-fast-follow-avatars' === e)
+                            switch (n) {
+                                case 'compact':
+                                default:
+                                    return 48;
+                                case 'default':
+                                case 'cozy':
+                                    return 52;
+                            }
+                    return 48;
+                }
+            }
         },
         modal: {
             HORIZONTAL_PADDING: {

@@ -1,4 +1,4 @@
-n.d(t, { w: () => v }), n(47120);
+n.d(t, { w: () => y }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -7,43 +7,44 @@ var r = n(200651),
     l = n(481060),
     c = n(607070),
     u = n(392358),
-    d = n(540059),
-    f = n(928518),
-    _ = n(823961),
-    p = n(706454),
-    h = n(210887),
-    m = n(451478),
-    g = n(998502),
-    E = n(264783),
-    b = n(892071);
-function v(e) {
+    d = n(591146),
+    f = n(540059),
+    _ = n(928518),
+    p = n(823961),
+    h = n(706454),
+    m = n(210887),
+    g = n(451478),
+    E = n(998502),
+    b = n(264783),
+    v = n(892071);
+function y(e) {
     let { windowKey: t, children: n } = e,
         o = null != t,
-        v = (0, d.Q3)('RootThemeContextProvider'),
-        y = (0, d.R6)('RootThemeContextProvider'),
-        [O] = i.useState(() => g.ZP.getEnableHardwareAcceleration()),
+        y = (0, f.Q3)('RootThemeContextProvider'),
+        O = (0, f.R6)('RootThemeContextProvider'),
+        [I] = i.useState(() => E.ZP.getEnableHardwareAcceleration()),
         {
-            locale: I,
-            theme: S,
-            focused: T,
+            locale: S,
+            theme: T,
+            focused: N,
             currentWindow: A,
-            fontScale: N,
-            fontScaleClass: C,
-            keyboardModeEnabled: R,
-            saturation: P,
-            desaturateUserColors: w,
-            useForcedColors: D,
-            systemForcedColors: L,
-            useReducedMotion: x,
-            alwaysShowLinkDecorations: M,
-            confettiMode: k
-        } = (0, s.cj)([p.default, c.Z, h.Z, m.Z, f.Z, _.Z], () => {
+            fontScale: C,
+            fontScaleClass: R,
+            keyboardModeEnabled: P,
+            saturation: w,
+            desaturateUserColors: D,
+            useForcedColors: L,
+            systemForcedColors: x,
+            useReducedMotion: M,
+            alwaysShowLinkDecorations: k,
+            confettiMode: j
+        } = (0, s.cj)([h.default, c.Z, m.Z, g.Z, _.Z, p.Z], () => {
             var e;
             return {
-                locale: p.default.locale,
-                theme: h.Z.theme,
-                focused: o ? f.Z.getWindowFocused(t) : m.Z.isFocused(),
-                currentWindow: o && null !== (e = f.Z.getWindow(t)) && void 0 !== e ? e : window,
+                locale: h.default.locale,
+                theme: m.Z.theme,
+                focused: o ? _.Z.getWindowFocused(t) : g.Z.isFocused(),
+                currentWindow: o && null !== (e = _.Z.getWindow(t)) && void 0 !== e ? e : window,
                 fontScale: c.Z.fontScale,
                 fontScaleClass: c.Z.fontScaleClass,
                 keyboardModeEnabled: c.Z.keyboardModeEnabled,
@@ -53,37 +54,43 @@ function v(e) {
                 systemForcedColors: c.Z.systemForcedColors,
                 useReducedMotion: c.Z.useReducedMotion,
                 alwaysShowLinkDecorations: c.Z.alwaysShowLinkDecorations,
-                confettiMode: _.Z.confettiMode
+                confettiMode: p.Z.confettiMode
             };
         }),
-        j = (0, u.Z)(A, __OVERLAY__ || T),
-        U = 0;
-    1 !== P && (U = (0, l.OdO)(U, l.bgu.REDUCE_SATURATION_ENABLED));
-    let G = (0, E.A)();
+        U = (0, u.Z)(A, __OVERLAY__ || N),
+        G = 0;
+    1 !== w && (G = (0, l.OdO)(G, l.bgu.REDUCE_SATURATION_ENABLED));
+    let B = (0, b.A)(),
+        F = (0, d.M)('RootThemeContextProvider'),
+        V = (0, d.C)('RootThemeContextProvider');
     return (0, r.jsx)(l.wMY, {
-        theme: S,
-        flags: U,
-        saturation: P,
-        density: G,
-        children: (0, r.jsx)(b.cE, {
-            isRefreshEnabled: v,
-            isRefreshChatInputEnabled: y,
-            lang: I,
-            theme: S,
-            density: G,
-            focused: T,
-            fontScale: N,
-            fontScaleClass: C,
-            keyboardModeEnabled: R,
-            mouseMode: j,
-            saturation: P,
-            desaturateUserColors: w,
-            useForcedColors: D,
-            systemForcedColors: L,
-            useReducedMotion: x,
-            alwaysShowLinkDecorations: M,
-            hardwareAccelerationEnabled: O,
-            rootClassName: a()({ 'confetti-mode': k }),
+        theme: T,
+        flags: G,
+        saturation: w,
+        density: B,
+        children: (0, r.jsx)(v.cE, {
+            isRefreshEnabled: y,
+            isRefreshChatInputEnabled: O,
+            lang: S,
+            theme: T,
+            density: B,
+            focused: N,
+            fontScale: C,
+            fontScaleClass: R,
+            keyboardModeEnabled: P,
+            mouseMode: U,
+            saturation: w,
+            desaturateUserColors: D,
+            useForcedColors: L,
+            systemForcedColors: x,
+            useReducedMotion: M,
+            alwaysShowLinkDecorations: k,
+            hardwareAccelerationEnabled: I,
+            rootClassName: a()({
+                'confetti-mode': j,
+                'refresh-fast-follow-avatars': F,
+                'refresh-fast-follow-guild-bg': V
+            }),
             children: n
         })
     });

@@ -55874,6 +55874,7 @@ html.disable-forced-colors * {
     --text-primary: var(--neutral-1);
     --text-secondary: var(--neutral-15);
     --text-warning: var(--yellow-new-24);
+    --app-background-frame: var(--neutral-81);
     --app-border-frame: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-base-low: var(--neutral-69);
     --background-base-lower: var(--neutral-72);
@@ -56001,6 +56002,7 @@ html.disable-forced-colors * {
         --text-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-secondary: color-mix(in oklab, var(--neutral-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab, var(--yellow-new-24) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --app-background-frame: color-mix(in oklab, var(--neutral-81) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --app-border-frame: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-base-lower: color-mix(in oklab, var(--neutral-72) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -56156,6 +56158,7 @@ html.disable-forced-colors * {
     --text-primary: var(--neutral-71);
     --text-secondary: var(--neutral-44);
     --text-warning: var(--yellow-new-54);
+    --app-background-frame: var(--neutral-7);
     --app-border-frame: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --background-base-low: var(--neutral-2);
     --background-base-lower: var(--neutral-2);
@@ -56273,6 +56276,7 @@ html.disable-forced-colors * {
         --text-primary: color-mix(in oklab, var(--neutral-71) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-secondary: color-mix(in oklab, var(--neutral-44) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab, var(--yellow-new-54) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --app-background-frame: color-mix(in oklab, var(--neutral-7) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --app-border-frame: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-base-lower: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -56423,6 +56427,7 @@ html.disable-forced-colors * {
     --text-primary: var(--neutral-7);
     --text-secondary: var(--neutral-27);
     --text-warning: var(--yellow-new-38);
+    --app-background-frame: var(--neutral-100);
     --app-border-frame: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --background-base-low: var(--neutral-95);
     --background-base-lower: var(--neutral-97);
@@ -56538,6 +56543,7 @@ html.disable-forced-colors * {
         --text-primary: color-mix(in oklab, var(--neutral-7) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-secondary: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab, var(--yellow-new-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --app-background-frame: color-mix(in oklab, var(--neutral-100) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --app-border-frame: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-95) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-base-lower: color-mix(in oklab, var(--neutral-97) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -56712,6 +56718,7 @@ html.disable-forced-colors * {
     --text-primary: var(--neutral-2);
     --text-secondary: var(--neutral-22);
     --text-warning: var(--yellow-new-32);
+    --app-background-frame: var(--neutral-99);
     --app-border-frame: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-base-low: var(--neutral-82);
     --background-base-lower: var(--neutral-86);
@@ -56837,6 +56844,7 @@ html.disable-forced-colors * {
         --text-primary: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-secondary: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab, var(--yellow-new-32) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --app-background-frame: color-mix(in oklab, var(--neutral-99) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --app-border-frame: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-82) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-base-lower: color-mix(in oklab, var(--neutral-86) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -57516,6 +57524,17 @@ html.disable-forced-colors * {
     --channels-name-line-height: 28px;
     --channels-spine-inverted-offset-top: 9px;
     --channels-spine-offset-left: 28px
+}
+
+.refresh-fast-follow-avatars.density-compact {
+    --guildbar-avatar-size: 40px;
+    --guildbar-folder-size: 48px
+}
+
+.refresh-fast-follow-avatars.density-cozy,
+.refresh-fast-follow-avatars.density-default {
+    --guildbar-avatar-size: 44px;
+    --guildbar-folder-size: 52px
 }
 
 a,
@@ -58257,7 +58276,7 @@ img[alt] {
 }
 
 .visual-refresh {
-    --custom-guild-list-padding: min(var(--space-md));
+    --custom-guild-list-padding: var(--space-md);
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)*2);
     --custom-guild-sidebar-width: 268px;
     --custom-app-sidebar-target-width: calc(var(--custom-guild-sidebar-width) + var(--custom-guild-list-width));
@@ -58268,6 +58287,13 @@ img[alt] {
     --custom-channel-textarea-text-area-height: calc(44px + var(--space-xs));
     --custom-chat-aligned-icon-offset: ((var(--chat-avatar-size) - var(--chat-input-icon-size))/2);
     --custom-message-margin-horizontal: var(--space-md)
+}
+
+.visual-refresh.refresh-fast-follow-avatars {
+    --custom-guild-list-padding: min(var(--space-md), var(--space-16));
+    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)*2);
+    --custom-app-top-bar-height: calc(24px + var(--space-xs));
+    --custom-channel-header-height: var(--guildbar-avatar-size)
 }
 
 .visual-refresh.density-compact {
