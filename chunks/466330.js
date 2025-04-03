@@ -1,14 +1,15 @@
 t.d(n, { Z: () => f });
 var r = t(200651);
 t(192379);
-var c = t(442837),
-    l = t(481060),
-    a = t(159300),
-    i = t(984933),
-    o = t(496675),
-    u = t(981631),
-    s = t(388032);
-function b(e) {
+var l = t(442837),
+    c = t(481060),
+    i = t(340541),
+    o = t(159300),
+    a = t(984933),
+    u = t(496675),
+    s = t(981631),
+    b = t(388032);
+function d(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -34,35 +35,41 @@ function b(e) {
     return e;
 }
 function f(e) {
-    let { source: n, guild: t, channel: r, stageInstance: l } = e,
-        s = (0, c.e7)([i.ZP], () => i.ZP.getDefaultChannel(t.id, !0, u.Plq.CREATE_INSTANT_INVITE)),
-        b = (0, c.e7)([o.Z], () => (0, a.b)(o.Z, t, r, l)),
-        f = d(n, t, b && null != r ? r : s),
-        p = O(n);
-    return null == r && n === u.t4x.GUILD_CONTEXT_MENU ? null : b || null != s ? f : p;
+    let { source: n, guild: t, channel: r, stageInstance: c } = e,
+        i = (0, l.e7)([a.ZP], () => a.ZP.getDefaultChannel(t.id, !0, s.Plq.CREATE_INSTANT_INVITE)),
+        b = (0, l.e7)([u.Z], () => (0, o.b)(u.Z, t, r, c)),
+        d = p(n, t, b && null != r ? r : i),
+        f = E(n, r);
+    return null == r && n === s.t4x.GUILD_CONTEXT_MENU ? null : b || null != i ? d : f;
 }
-let d = (e, n, c) =>
-        (0, r.jsx)(l.sNh, {
+function O(e) {
+    let n,
+        t = (null == e ? void 0 : e.type) === s.d4z.GUILD_VOICE;
+    return (0, i.jW)({ location: 'invite_menu_item' }) ? (t ? b.NW.string(b.t['EE+P0N']) : b.NW.string(b.t['0jeAXl'])) : b.NW.string(b.t.BN75l5);
+}
+let p = (e, n, l) => {
+        let i = O(l);
+        return (0, r.jsx)(c.sNh, {
             id: 'invite-people',
-            label: s.NW.string(s.t.BN75l5),
+            label: i,
             color: 'brand',
-            icon: e === u.t4x.GUILD_HEADER ? l.ejJ : void 0,
+            icon: e === s.t4x.GUILD_HEADER ? c.ejJ : void 0,
             action: () =>
-                (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([t.e('7654'), t.e('96814')]).then(t.bind(t, 560114));
+                (0, c.ZDy)(async () => {
+                    let { default: c } = await Promise.all([t.e('7654'), t.e('96814')]).then(t.bind(t, 560114));
                     return (t) => {
-                        var a, i;
+                        var i, o;
                         return (0, r.jsx)(
-                            l,
-                            ((a = b({}, t)),
-                            (i = i =
+                            c,
+                            ((i = d({}, t)),
+                            (o = o =
                                 {
                                     guild: n,
-                                    channel: c,
+                                    channel: l,
                                     source: e
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
+                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
                                 : (function (e, n) {
                                       var t = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -70,23 +77,26 @@ let d = (e, n, c) =>
                                           t.push.apply(t, r);
                                       }
                                       return t;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
+                                  })(Object(o)).forEach(function (e) {
+                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                                   }),
-                            a)
+                            i)
                         );
                     };
                 })
-        }),
-    O = (e) =>
-        (0, r.jsx)(l.sNh, {
+        });
+    },
+    E = (e, n) => {
+        let l = O(n);
+        return (0, r.jsx)(c.sNh, {
             id: 'invite-people',
-            label: s.NW.string(s.t.BN75l5),
+            label: l,
             color: 'brand',
-            icon: e === u.t4x.GUILD_HEADER ? l.ejJ : void 0,
+            icon: e === s.t4x.GUILD_HEADER ? c.ejJ : void 0,
             action: () =>
-                (0, l.ZDy)(async () => {
+                (0, c.ZDy)(async () => {
                     let { default: e } = await t.e('88358').then(t.bind(t, 598402));
-                    return (n) => (0, r.jsx)(e, b({}, n));
+                    return (n) => (0, r.jsx)(e, d({}, n));
                 })
         });
+    };
