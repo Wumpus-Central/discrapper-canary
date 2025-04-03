@@ -1,29 +1,25 @@
-a.d(e, {
-    Z1: () => o,
-    ph: () => _,
-    yW: () => n
+s.d(e, {
+    ph: () => r,
+    yW: () => i
 });
-var r = a(899517);
-function n() {
+var n = s(899517);
+function i() {
     return Date.now() / 1000;
 }
-let _ = (function () {
-        let { performance: t } = r.n;
-        if (!t || !t.now) return n;
-        let e = Date.now() - t.now(),
-            a = void 0 == t.timeOrigin ? e : t.timeOrigin;
-        return () => (a + t.now()) / 1000;
-    })(),
-    o = (() => {
-        let { performance: t } = r.n;
-        if (!t || !t.now) return;
-        let e = t.now(),
-            a = Date.now(),
-            n = t.timeOrigin ? Math.abs(t.timeOrigin + e - a) : 3600000,
-            _ = t.timing && t.timing.navigationStart,
-            o = 'number' == typeof _ ? Math.abs(_ + e - a) : 3600000;
-        if (n < 3600000 || o < 3600000)
-            if (n <= o) return t.timeOrigin;
-            else return _;
-        return a;
-    })();
+let r = (function () {
+    let { performance: t } = n.n;
+    if (!t || !t.now) return i;
+    let e = Date.now() - t.now(),
+        s = void 0 == t.timeOrigin ? e : t.timeOrigin;
+    return () => (s + t.now()) / 1000;
+})();
+(() => {
+    let { performance: t } = n.n;
+    if (!t || !t.now) return;
+    let e = t.now(),
+        s = Date.now(),
+        i = t.timeOrigin ? Math.abs(t.timeOrigin + e - s) : 3600000,
+        r = t.timing && t.timing.navigationStart,
+        o = 'number' == typeof r ? Math.abs(r + e - s) : 3600000;
+    if ((i < 3600000 || o < 3600000) && i <= o) return t.timeOrigin;
+})();

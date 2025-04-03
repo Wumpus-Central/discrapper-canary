@@ -1,0 +1,21 @@
+e.exports = {
+    formGroup: 'formGroup_dbc4b7',
+    customStatusInputTitle: 'customStatusInputTitle_dbc4b7',
+    inputContainer: 'inputContainer_dbc4b7',
+    hiddenPlaceholder: 'hiddenPlaceholder_dbc4b7',
+    emojiButton: 'emojiButton_dbc4b7',
+    emojiButtonContainer: 'emojiButtonContainer_dbc4b7',
+    emoji: 'emoji_dbc4b7',
+    input: 'input_dbc4b7',
+    clearButtonWrapper: 'clearButtonWrapper_dbc4b7',
+    clearButton: 'clearButton_dbc4b7',
+    clearIcon: 'clearIcon_dbc4b7',
+    header: 'header_dbc4b7',
+    headerTitle: 'headerTitle_dbc4b7',
+    headerCloseButton: 'headerCloseButton_dbc4b7',
+    footer: 'footer_dbc4b7',
+    clearAfterSelectContainer: 'clearAfterSelectContainer_dbc4b7',
+    profilePreview: 'profilePreview_dbc4b7',
+    needInspiration: 'needInspiration_dbc4b7',
+    needInspirationDisabled: 'needInspirationDisabled_dbc4b7'
+};

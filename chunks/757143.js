@@ -1,82 +1,75 @@
-var r = n(197187),
-    i = n(926515),
-    o = n(581031),
-    a = n(527221),
-    s = n(936940),
-    l = n(24033),
-    c = n(354848),
-    u = n(35179),
-    d = n(959318),
-    f = n(552028),
-    _ = n(714050),
-    p = n(676125),
-    h = n(344597),
-    m = n(995739),
-    g = n(115726),
-    E = n(651673),
-    b = n(641236)('replace'),
-    y = Math.max,
-    v = Math.min,
-    O = o([].concat),
-    I = o([].push),
+var n = r(197187),
+    i = r(926515),
+    o = r(581031),
+    a = r(527221),
+    c = r(936940),
+    u = r(24033),
+    s = r(354848),
+    l = r(35179),
+    f = r(959318),
+    p = r(552028),
+    v = r(714050),
+    g = r(676125),
+    x = r(344597),
+    d = r(995739),
+    h = r(115726),
+    E = r(651673),
+    y = r(641236)('replace'),
+    I = Math.max,
+    R = Math.min,
+    b = o([].concat),
+    A = o([].push),
     S = o(''.indexOf),
-    T = o(''.slice),
-    N = function (e) {
-        return void 0 === e ? e : String(e);
-    },
-    A = (function () {
-        return '$0' === 'a'.replace(/./, '$0');
-    })(),
-    C = (function () {
-        return !!/./[b] && '' === /./[b]('a', '$0');
-    })();
+    $ = o(''.slice),
+    m = '$0' === 'a'.replace(/./, '$0'),
+    w = !!/./[y] && '' === /./[y]('a', '$0');
 a(
     'replace',
-    function (e, t, n) {
-        var o = C ? '$' : '$0';
+    function (t, e, r) {
+        var o = w ? '$' : '$0';
         return [
-            function (e, n) {
-                var r = p(this),
-                    o = u(e) ? void 0 : m(e, b);
-                return o ? i(o, e, r, n) : i(t, _(r), e, n);
+            function (t, r) {
+                var n = g(this),
+                    o = l(t) ? void 0 : d(t, y);
+                return o ? i(o, t, n, r) : i(e, v(n), t, r);
             },
-            function (e, i) {
-                var a = l(this),
-                    s = _(e);
+            function (t, i) {
+                var a = u(this),
+                    c = v(t);
                 if ('string' == typeof i && -1 === S(i, o) && -1 === S(i, '$<')) {
-                    var u = n(t, a, s, i);
-                    if (u.done) return u.value;
+                    var l = r(e, a, c, i);
+                    if (l.done) return l.value;
                 }
-                var p = c(i);
-                p || (i = _(i));
-                var m = a.global;
-                m && ((P = a.unicode), (a.lastIndex = 0));
-                for (var b = []; null !== (D = E(a, s)) && (I(b, D), m); ) {
-                    '' === _(D[0]) && (a.lastIndex = h(s, f(a.lastIndex), P));
+                var g = s(i);
+                g || (i = v(i));
+                var d = a.global;
+                d && ((T = a.unicode), (a.lastIndex = 0));
+                for (var y = []; null !== (O = E(a, c)) && (A(y, O), d); ) {
+                    '' === v(O[0]) && (a.lastIndex = x(c, p(a.lastIndex), T));
                 }
-                for (var A = '', C = 0, R = 0; R < b.length; R++) {
-                    for (var P, w, D = b[R], L = _(D[0]), x = y(v(d(D.index), s.length), 0), M = [], k = 1; k < D.length; k++) I(M, N(D[k]));
-                    var j = D.groups;
-                    if (p) {
-                        var U = O([L], M, x, s);
-                        void 0 !== j && I(U, j), (w = _(r(i, void 0, U)));
-                    } else w = g(L, s, x, M, j, i);
-                    x >= C && ((A += T(s, C, x) + w), (C = x + L.length));
+                for (var m = '', w = 0, k = 0; k < y.length; k++) {
+                    for (var C, T, _, O = y[k], M = v(O[0]), D = I(R(f(O.index), c.length), 0), K = [], N = 1; N < O.length; N++) A(K, void 0 === (C = O[N]) ? C : String(C));
+                    var P = O.groups;
+                    if (g) {
+                        var U = b([M], K, D, c);
+                        void 0 !== P && A(U, P), (_ = v(n(i, void 0, U)));
+                    } else _ = h(M, c, D, K, P, i);
+                    D >= w && ((m += $(c, w, D) + _), (w = D + M.length));
                 }
-                return A + T(s, C);
+                return m + $(c, w);
             }
         ];
     },
-    !!s(function () {
-        var e = /./;
+    !!c(function () {
+        var t = /./;
         return (
-            (e.exec = function () {
-                var e = [];
-                return (e.groups = { a: '7' }), e;
+            (t.exec = function () {
+                var t = [];
+                return (t.groups = { a: '7' }), t;
             }),
-            '7' !== ''.replace(e, '$<a>')
+            '7' !== ''.replace(t, '$<a>')
         );
     }) ||
-        !A ||
-        C
+        !m ||
+        w
 );

@@ -15,7 +15,15 @@ let r = (0, n(818083).B)({
         treatments: [
             {
                 id: 1,
-                label: 'Enable new defaults',
+                label: 'Set afk_timer default to 1 min',
+                config: {
+                    enabled: !0,
+                    defaultTimeout: 60
+                }
+            },
+            {
+                id: 2,
+                label: 'Set afk_timer default to 2 min',
                 config: {
                     enabled: !0,
                     defaultTimeout: 120

@@ -1,44 +1,16 @@
-a.d(e, {
-    $e: () => E,
-    aF: () => c,
-    lW: () => s,
-    nZ: () => i,
-    s3: () => u,
-    wi: () => l
+s.d(e, {
+    aF: () => r,
+    s3: () => o
 });
-var r = a(899517),
-    n = a(833873),
-    _ = a(356442),
-    o = a(307854);
-function i() {
-    let t = (0, _.c)();
-    return (0, n.G)(t).getCurrentScope();
-}
-function c() {
-    let t = (0, _.c)();
+var n = s(833873),
+    i = s(356442);
+function r() {
+    let t = (0, i.c)();
     return (0, n.G)(t).getIsolationScope();
 }
-function s() {
-    return (0, r.Y)('globalScope', () => new o.s());
-}
-function E(...t) {
-    let e = (0, _.c)(),
-        a = (0, n.G)(e);
-    if (2 === t.length) {
-        let [e, r] = t;
-        return e ? a.withSetScope(e, r) : a.withScope(r);
-    }
-    return a.withScope(t[0]);
-}
-function l(...t) {
-    let e = (0, _.c)(),
-        a = (0, n.G)(e);
-    if (2 === t.length) {
-        let [e, r] = t;
-        return e ? a.withSetIsolationScope(e, r) : a.withIsolationScope(r);
-    }
-    return a.withIsolationScope(t[0]);
-}
-function u() {
-    return i().getClient();
+function o() {
+    return (function () {
+        let t = (0, i.c)();
+        return (0, n.G)(t).getCurrentScope();
+    })().getClient();
 }

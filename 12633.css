@@ -19757,12 +19757,12 @@ span.clanTag__5d473 {
 .streamerModeEnabledBtn_aa3ffd {
     margin-top: 20px;
     font-weight: 700;
-    font-size: 1.125rem;
+    font-size: 18px;
     color: var(--white-500);
     background-color: var(--twitch);
     padding: 10px 20px;
     border-radius: 3px;
-    line-height: 1.8125rem;
+    line-height: 29px;
     text-transform: uppercase;
     cursor: pointer
 }
@@ -33246,7 +33246,7 @@ html:not(.visual-refresh) .root_e5f3a9 {
     align-items: center;
     min-height: 48px;
     border-radius: 4px;
-    padding: 8px 20px;
+    padding: 10px 20px;
     margin-top: 16px;
     margin-bottom: 16px
 }
@@ -56718,7 +56718,7 @@ html.disable-forced-colors * {
     --text-primary: var(--neutral-2);
     --text-secondary: var(--neutral-22);
     --text-warning: var(--yellow-new-32);
-    --app-background-frame: var(--neutral-99);
+    --app-background-frame: var(--neutral-96);
     --app-border-frame: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-base-low: var(--neutral-82);
     --background-base-lower: var(--neutral-86);
@@ -56844,7 +56844,7 @@ html.disable-forced-colors * {
         --text-primary: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-secondary: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab, var(--yellow-new-32) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --app-background-frame: color-mix(in oklab, var(--neutral-99) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --app-background-frame: color-mix(in oklab, var(--neutral-96) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --app-border-frame: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-82) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-base-lower: color-mix(in oklab, var(--neutral-86) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));

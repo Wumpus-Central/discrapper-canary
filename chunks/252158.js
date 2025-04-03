@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(47120), n(653041), n(26686);
+n.d(t, { Z: () => F }), n(47120), n(653041), n(26686);
 var r = n(570140),
     i = n(147913),
     o = n(358221),
@@ -86,7 +86,7 @@ let M = {
             let { voiceChannelId: t, voiceState: n } = e,
                 r = f.Z.getChannel(t),
                 i = (null == r ? void 0 : r.isGuildStageVoice()) && (null == n ? void 0 : n.suppress),
-                o = h.Z.getMediaSessionId();
+                o = h.ZP.getMediaSessionId();
             if (null != r && null != o && !1 === p.Z.getInputDetected() && !i && !p.Z.isSelfMute()) return [R({ type: v.u.NO_AUDIO_INPUT_DETECTED }, (0, I.Y9)())];
         },
         makeErrorContextKey: (e) => ''.concat(e.mediaSessionId, ':').concat(e.audioInputDeviceName)
@@ -97,7 +97,7 @@ let M = {
                 r = f.Z.getChannel(t),
                 i = (null == r ? void 0 : r.isGuildStageVoice()) && (null == n ? void 0 : n.suppress),
                 o = 0 === Object.keys(p.Z.getInputDevices()).length,
-                a = h.Z.getMediaSessionId();
+                a = h.ZP.getMediaSessionId();
             if (o && null != r && null != a && !i) return [R({ type: v.u.NO_INPUT_DEVICES }, (0, I.Y9)())];
         },
         makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
@@ -236,6 +236,20 @@ let M = {
                 })
                 .map((e) => R({ type: v.u.VIDEO_STREAM_RECEIVER_READY_TIMEOUT }, e)),
         makeErrorContextKey: (e) => ''.concat(e.mediaContext, ':').concat(e.userId)
+    },
+    [v.u.CAMERA_SEND_LOW_FPS]: {
+        getActiveErrors: (e) => {
+            let { videoErrors: t } = e;
+            return null == t
+                ? void 0
+                : t
+                      .filter((e) => {
+                          let { videoError: t } = e;
+                          return (null == t ? void 0 : t.avError) === v.u.CAMERA_SEND_LOW_FPS;
+                      })
+                      .map((e) => R({ type: v.u.CAMERA_SEND_LOW_FPS }, e));
+        },
+        makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
     }
 };
 function k(e) {
@@ -255,14 +269,23 @@ function U(e) {
             o = i === d.default.getId();
         if (!o && null == u.Z.getActiveStreamForUser(i, r)) continue;
         let a = o && null != _.Z.getHookError(N.K3D.SOUND),
-            s = (0, l.Z)(g.Z.getQuality(), g.Z.getStatsHistory(r, i, o), a, e),
+            s = (0, l.w)(g.Z.getQuality(), g.Z.getStatsHistory(r, i, o), a, e),
             c = n.id,
             f = g.Z.getMediaSessionId(c);
         null != s && null != f && t.push(R({ streamError: s }, (0, I.rT)(c)));
     }
     return t;
 }
-class G extends i.Z {
+function G(e) {
+    if (null == e) return null;
+    let t = [];
+    for (let n of o.Z.getVideoParticipants(e)) {
+        let r = (0, l.H)(h.ZP.getStatsHistory(e, n.id));
+        null != r && null != h.ZP.getMediaSessionId() && t.push(R({ videoError: r }, (0, I.Y9)()));
+    }
+    return t;
+}
+class B extends i.Z {
     _initialize() {
         (0, S.H3)('AVErrorManager');
     }
@@ -273,30 +296,32 @@ class G extends i.Z {
             i = null != n && null != (t = b.Z.getVoiceStateForChannel(n)) ? t : null,
             o = U(n),
             a = u.Z.getAllActiveStreams(),
-            s = new Map();
+            s = G(n),
+            l = new Map();
         for (let e of Object.values(M)) {
             let t = e.getActiveErrors({
                 voiceChannelId: n,
                 voiceState: i,
                 streamErrors: o,
-                activeStreams: a
+                activeStreams: a,
+                videoErrors: s
             });
-            if (null != t) for (let e of t) s.set(j(e), e);
+            if (null != t) for (let e of t) l.set(j(e), e);
         }
-        let l = T.Z.getActiveErrors();
-        if (!(l instanceof Map)) return void L.error('existingErrors is not a Map: '.concat(l, ' type: ').concat(Object.prototype.toString.call(l)));
-        if (0 === s.size && 0 === l.size) return;
-        let c = new Set(s.keys()),
-            d = new Set(l.keys());
-        if (c.size > d.size)
-            for (let e of x(c, d)) {
-                let t = s.get(e);
+        let c = T.Z.getActiveErrors();
+        if (!(c instanceof Map)) return void L.error('existingErrors is not a Map: '.concat(c, ' type: ').concat(Object.prototype.toString.call(c)));
+        if (0 === l.size && 0 === c.size) return;
+        let d = new Set(l.keys()),
+            f = new Set(c.keys());
+        if (d.size > f.size)
+            for (let e of x(d, f)) {
+                let t = l.get(e);
                 null != t && (0, v.kr)(t);
             }
-        if (d.size > c.size)
-            for (let e of x(d, c)) {
+        if (f.size > d.size)
+            for (let e of x(f, d)) {
                 let t = e,
-                    n = l.get(t);
+                    n = c.get(t);
                 if (null != n) {
                     let { type: e } = n,
                         t = P(n, ['type']);
@@ -305,7 +330,7 @@ class G extends i.Z {
             }
         r.Z.dispatch({
             type: 'ACTIVE_AV_ERRORS_CHANGED',
-            activeErrors: s
+            activeErrors: l
         });
     }
     handleReportAVError(e) {
@@ -341,4 +366,4 @@ class G extends i.Z {
             });
     }
 }
-let B = new G();
+let F = new B();
