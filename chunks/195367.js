@@ -127,7 +127,7 @@ function O(e) {
         F = (e, t) => {
             if (null == e || void 0 === t) return void X(null);
             (0, s.ZDy)(async () => {
-                let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('43434')]).then(n.bind(n, 73620));
+                let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
                 return (n) =>
                     (0, r.jsx)(
                         l,
@@ -139,8 +139,7 @@ function O(e) {
                                     let { imageUri: t } = e;
                                     return X(t);
                                 },
-                                uploadType: p.pC.SCHEDULED_EVENT_IMAGE,
-                                allowSkip: !0
+                                uploadType: p.pC.SCHEDULED_EVENT_IMAGE
                             },
                             n
                         )
