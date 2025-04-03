@@ -44464,6 +44464,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-bottom: 1px solid var(--background-modifier-accent)
 }
 
+.theme-midnight .container__9293f.transparent__9293f {
+    border-bottom: none
+}
+
 .theme-dark .themed__9293f {
     background: var(--bg-overlay-2, var(--__header-bar-background))
 }
@@ -44512,6 +44516,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     flex-wrap: wrap;
     margin-top: -10px;
     margin-right: -10px
+}
+
+.container__459fb.gradient__459fb {
+    flex-wrap: nowrap
 }
 
 .customContainer__459fb,
@@ -44596,6 +44604,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     width: 100%;
     height: 50px;
     border-radius: 4px
+}
+
+.colorPickerSwatch__459fb.gradientPreset__459fb {
+    width: 40px;
+    height: 20px
 }
 
 .colorPickerSwatch__459fb.disabled__459fb {
