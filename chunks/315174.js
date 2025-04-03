@@ -153,7 +153,7 @@ let S = (e) => {
     let { open: t } = e,
         n = t ? c.u04 : c.CJ0;
     return (0, r.jsx)(n, {
-        size: 'refresh_sm',
+        size: 'xs',
         color: 'currentColor'
     });
 };
@@ -246,27 +246,17 @@ function N(e) {
                     position: 'bottom',
                     children: (e) =>
                         (0, r.jsx)(
-                            c.zxk,
-                            O(
-                                v(
-                                    {
-                                        className: _.inviteButton,
-                                        size: c.zxk.Sizes.ICON,
-                                        look: c.zxk.Looks.BLANK
-                                    },
-                                    e
-                                ),
-                                {
-                                    onClick: () => {
-                                        var t;
-                                        null == (t = e.onClick) || t.call(e), h();
-                                    },
-                                    children: (0, r.jsx)(c.ejJ, {
-                                        size: 'refresh_sm',
-                                        color: 'currentColor'
-                                    })
-                                }
-                            )
+                            c.P3F,
+                            O(v({ className: _.inviteButton }, e), {
+                                onClick: () => {
+                                    var t;
+                                    null == (t = e.onClick) || t.call(e), h();
+                                },
+                                children: (0, r.jsx)(c.ejJ, {
+                                    size: 'refresh_sm',
+                                    color: 'currentColor'
+                                })
+                            })
                         )
                 })
         ]
