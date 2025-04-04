@@ -5,5 +5,6 @@ e.exports = {
     colorPickerDropperLeft: 'colorPickerDropperLeft__488d9',
     colorPickerDropperRight: 'colorPickerDropperRight__488d9',
     colorPickerDropperInner: 'colorPickerDropperInner__488d9',
-    colorPickerDropperGradient: 'colorPickerDropperGradient__488d9'
+    colorPickerDropperGradient: 'colorPickerDropperGradient__488d9',
+    disabled: 'disabled__488d9'
 };
