@@ -1,1 +1,3 @@
-e.exports = '/assets/a75044c6bce01295.svg';
+e.exports = function (e) {
+    return null === e || ('function' != typeof e && 'object' != typeof e);
+};
