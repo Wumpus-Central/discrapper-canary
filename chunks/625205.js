@@ -1,76 +1,92 @@
-n.d(t, { Z: () => E }), n(47120);
-var r = n(200651);
-n(192379);
-var i = n(392711),
-    s = n.n(i),
-    a = n(442837),
-    l = n(780384),
-    o = n(481060),
-    c = n(846027),
-    d = n(906732),
-    u = n(687058),
-    m = n(253052),
-    g = n(463395),
-    p = n(131951),
-    h = n(210887),
-    f = n(962100),
-    b = n(65154),
-    N = n(388032),
-    x = n(209782),
-    _ = n(20493);
-function E() {
+n.d(t, { Z: () => S }), n(388685);
+var r = n(200651),
+    i = n(192379),
+    s = n(392711),
+    a = n.n(s),
+    l = n(442837),
+    o = n(780384),
+    c = n(481060),
+    d = n(846027),
+    u = n(906732),
+    m = n(687058),
+    g = n(253052),
+    p = n(463395),
+    h = n(131951),
+    f = n(358085),
+    b = n(210887),
+    N = n(494620),
+    x = n(962100),
+    _ = n(65154),
+    E = n(388032),
+    j = n(209782),
+    O = n(20493);
+let C = f.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
+function S() {
     let e,
         t,
-        { analyticsLocations: i } = (0, d.ZP)(),
-        E = (0, a.e7)([h.Z], () => h.Z.theme),
+        { analyticsLocations: s } = (0, u.ZP)(),
+        f = (0, l.e7)([b.Z], () => b.Z.theme),
         {
-            canSetInputDevice: j,
-            canSetOutputDevice: O,
-            inputDeviceId: C,
-            outputDeviceId: S
-        } = (0, a.cj)([p.Z], () => ({
-            canSetInputDevice: p.Z.supports(b.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: p.Z.supports(b.AN.AUDIO_OUTPUT_DEVICE),
-            inputDeviceId: p.Z.getInputDeviceId(),
-            outputDeviceId: p.Z.getOutputDeviceId()
+            canSetInputDevice: S,
+            canSetOutputDevice: v,
+            inputDeviceId: T,
+            outputDeviceId: I
+        } = (0, l.cj)([h.Z], () => ({
+            canSetInputDevice: h.Z.supports(_.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: h.Z.supports(_.AN.AUDIO_OUTPUT_DEVICE),
+            inputDeviceId: h.Z.getInputDeviceId(),
+            outputDeviceId: h.Z.getOutputDeviceId()
         })),
-        v = (0, u.Z)(),
-        T = (0, m.Z)();
-    j ||
-        (e = (0, r.jsx)(o.R94, {
-            type: o.R94.Types.DESCRIPTION,
-            className: _.marginTop8,
-            children: N.NW.format(N.t['1iK6UV'], { onDownloadClick: () => (0, f.y)('Help Text Input Devices') })
+        y = (0, m.Z)(),
+        A = (0, g.Z)(),
+        P = i.useMemo(() => {
+            let e = a()(y).find((e) => e.id === T),
+                t = a()(A).find((e) => e.id === I),
+                n = C.some((t) => {
+                    var n;
+                    return null == e || null == (n = e.hardwareId) ? void 0 : n.startsWith(t);
+                }),
+                r = C.some((e) => {
+                    var n;
+                    return null == t || null == (n = t.hardwareId) ? void 0 : n.startsWith(e);
+                });
+            return n && r && (null == e ? void 0 : e.containerId) != null && e.containerId === (null == t ? void 0 : t.containerId);
+        }, [y, A, T, I]);
+    S ||
+        (e = (0, r.jsx)(c.R94, {
+            type: c.R94.Types.DESCRIPTION,
+            className: O.marginTop8,
+            children: E.NW.format(E.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
         })),
-        O ||
-            (t = (0, r.jsx)(o.R94, {
-                type: o.R94.Types.DESCRIPTION,
-                className: _.marginTop8,
-                children: N.NW.format(N.t.Ow0dbG, { onDownloadClick: () => (0, f.y)('Help Text Output Devices') })
+        v ||
+            (t = (0, r.jsx)(c.R94, {
+                type: c.R94.Types.DESCRIPTION,
+                className: O.marginTop8,
+                children: E.NW.format(E.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
             }));
-    let I = s()(v).values().first(),
-        y = null != I ? I.disabled : null != e,
-        A = s()(T).values().first(),
-        P = null != A ? A.disabled : null != t;
-    function R(e) {
+    let R = a()(y).values().first(),
+        D = null != R ? R.disabled : null != e,
+        Z = a()(A).values().first(),
+        w = null != Z ? Z.disabled : null != t;
+    function k(e) {
         let t,
             { label: i, value: s } = e;
-        if (g.Z.isCertified(s)) {
-            let e = (0, l.ap)(E) ? n(561259) : n(887695);
+        if (p.Z.isCertified(s)) {
+            let e = (0, o.ap)(f) ? n(561259) : n(887695);
             t = (0, r.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: x.deviceOptionCertified
+                className: j.deviceOptionCertified
             });
         }
         return (0, r.jsxs)(
             'span',
             {
-                className: x.deviceOption,
+                className: j.deviceOption,
                 children: [
                     (0, r.jsx)('span', {
-                        className: x.deviceOptionLabel,
-                        children: g.Z.getCertifiedDeviceName(s, i)
+                        className: j.deviceOptionLabel,
+                        children: p.Z.getCertifiedDeviceName(s, i)
                     }),
                     t
                 ]
@@ -78,66 +94,76 @@ function E() {
             s
         );
     }
-    function D(e) {
-        return R(e[0]);
+    function W(e) {
+        return k(e[0]);
     }
     return (0, r.jsxs)('div', {
-        className: x.devices,
+        className: j.devices,
         children: [
-            (0, r.jsx)('div', {
-                className: x.column,
-                children: (0, r.jsxs)(o.xJW, {
-                    title: N.NW.string(N.t.hHMYbW),
-                    children: [
-                        (0, r.jsx)(o.q4e, {
-                            value: C,
-                            onChange: (e) =>
-                                c.Z.setInputDevice(e, {
-                                    location: 'Settings',
-                                    analyticsLocations: i
+            (0, r.jsxs)('div', {
+                className: j.deviceColumns,
+                children: [
+                    (0, r.jsx)('div', {
+                        className: j.column,
+                        children: (0, r.jsxs)(c.xJW, {
+                            title: E.NW.string(E.t.hHMYbW),
+                            children: [
+                                (0, r.jsx)(c.q4e, {
+                                    value: T,
+                                    onChange: (e) =>
+                                        d.Z.setInputDevice(e, {
+                                            location: 'Settings',
+                                            analyticsLocations: s
+                                        }),
+                                    options: a().map(y, (e) => {
+                                        let { id: t, name: n } = e;
+                                        return {
+                                            value: t,
+                                            label: n
+                                        };
+                                    }),
+                                    isDisabled: D,
+                                    renderOptionValue: W,
+                                    renderOptionLabel: k
                                 }),
-                            options: s().map(v, (e) => {
-                                let { id: t, name: n } = e;
-                                return {
-                                    value: t,
-                                    label: n
-                                };
-                            }),
-                            isDisabled: y,
-                            renderOptionValue: D,
-                            renderOptionLabel: R
-                        }),
-                        e
-                    ]
-                })
+                                e
+                            ]
+                        })
+                    }),
+                    (0, r.jsx)('div', {
+                        className: j.column,
+                        children: (0, r.jsxs)(c.xJW, {
+                            title: E.NW.string(E.t.dl18zc),
+                            children: [
+                                (0, r.jsx)(c.q4e, {
+                                    value: I,
+                                    onChange: (e) =>
+                                        d.Z.setOutputDevice(e, {
+                                            location: 'Settings',
+                                            analyticsLocations: s
+                                        }),
+                                    options: a().map(A, (e) => {
+                                        let { id: t, name: n } = e;
+                                        return {
+                                            value: t,
+                                            label: n
+                                        };
+                                    }),
+                                    isDisabled: w,
+                                    renderOptionValue: W,
+                                    renderOptionLabel: k
+                                }),
+                                t
+                            ]
+                        })
+                    })
+                ]
             }),
-            (0, r.jsx)('div', {
-                className: x.column,
-                children: (0, r.jsxs)(o.xJW, {
-                    title: N.NW.string(N.t.dl18zc),
-                    children: [
-                        (0, r.jsx)(o.q4e, {
-                            value: S,
-                            onChange: (e) =>
-                                c.Z.setOutputDevice(e, {
-                                    location: 'Settings',
-                                    analyticsLocations: i
-                                }),
-                            options: s().map(T, (e) => {
-                                let { id: t, name: n } = e;
-                                return {
-                                    value: t,
-                                    label: n
-                                };
-                            }),
-                            isDisabled: P,
-                            renderOptionValue: D,
-                            renderOptionLabel: R
-                        }),
-                        t
-                    ]
+            P &&
+                (0, r.jsx)(N.Z, {
+                    look: N.z.WARNING,
+                    children: E.NW.string(E.t.Ioz3g4)
                 })
-            })
         ]
     });
 }

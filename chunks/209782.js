@@ -3,5 +3,6 @@ e.exports = {
     deviceOption: 'deviceOption_fe5040',
     deviceOptionLabel: 'deviceOptionLabel_fe5040',
     devices: 'devices_fe5040',
+    deviceColumns: 'deviceColumns_fe5040',
     column: 'column_fe5040'
 };

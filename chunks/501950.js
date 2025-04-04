@@ -4,9 +4,9 @@ n.d(t, {
     Hg: () => l,
     l0: () => u
 }),
-    n(301563),
-    n(757143),
-    n(733860);
+    n(35282),
+    n(704826),
+    n(290780);
 var r = n(264344),
     i = n.n(r),
     o = n(992774),
@@ -15,7 +15,7 @@ function s(e, t) {
     var n;
     let r = !1,
         o = t.map((t, n) => {
-            let { guid: i, guid: o, name: s, name: l, index: c, facing: u } = t;
+            let { guid: i, guid: o, name: s, name: l, index: c, facing: u, hardwareId: d, containerId: f } = t;
             return (
                 /^default/.test(s) ? ((r = !0), (i = a.w5), (s = s.replace('default', 'Default'))) : (i = null != i && '' !== i ? i : s),
                 null != c && (n = c),
@@ -26,7 +26,9 @@ function s(e, t) {
                     name: s,
                     originalName: l,
                     originalId: o,
-                    facing: u
+                    facing: u,
+                    hardwareId: d,
+                    containerId: f
                 }
             );
         });
