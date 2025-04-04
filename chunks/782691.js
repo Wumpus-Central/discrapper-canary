@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120), n(653041), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(26686);
+n.d(t, { Z: () => C }), n(47120), n(757143), n(301563), n(653041), n(26686), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -6,10 +6,10 @@ var r = n(200651),
     l = n(979554),
     o = n(442837),
     c = n(481060),
-    d = n(53281),
-    u = n(921813),
-    m = n(594174),
-    g = n(572004),
+    d = n(23645),
+    u = n(53281),
+    m = n(921813),
+    g = n(594174),
     p = n(373071),
     h = n(489495),
     f = n(189),
@@ -68,16 +68,17 @@ let j = {
     C = (e) => {
         let { effect: t, back: n } = e,
             { upsertConfig: s } = (0, p.n6)(),
-            C = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+            C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             [S, v] = i.useState(!0),
             T = i.useRef(null),
             [I, y] = i.useState(!1),
             [A, P] = i.useState(!1),
-            [R, D] = i.useState(t.name),
-            [Z, w] = i.useState([]),
-            [k, W] = i.useState(j),
-            L = i.useRef([]),
-            B = i.useMemo(
+            [R, D] = i.useState([]),
+            [Z, w] = i.useState(j),
+            k = i.useRef([]),
+            [W, L] = i.useState(t.name),
+            B = W.toLowerCase().replace(/\s+/g, '_'),
+            M = i.useMemo(
                 () => ({
                     type: l.Z.PROFILE_EFFECT,
                     id: O,
@@ -86,27 +87,27 @@ let j = {
                     description: O,
                     accessibilityLabel: O,
                     reducedMotionSrc: '',
-                    effects: Z,
+                    effects: R,
                     animationType: 0
                 }),
-                [Z]
+                [R]
             ),
-            M = (e) => {
+            U = (e) => {
                 let t = e.currentTarget.files;
                 return null == t ? null : t[0];
             },
-            U = (e, t) => {
-                let n = M(t);
+            V = (e, t) => {
+                let n = U(t);
                 null != n &&
                     (0, h.i0)(n, (t) => {
-                        W((r) => E(_({}, r), { [e]: (0, h.z)(t, n) }));
+                        w((r) => E(_({}, r), { [e]: (0, h.z)(t, n) }));
                     });
             },
-            V = (e, t) => {
-                let n = M(e);
+            G = (e, t) => {
+                let n = U(e);
                 null != n &&
                     (0, h.i0)(n, (e) => {
-                        w((r) => {
+                        D((r) => {
                             let i = [...r],
                                 s = r[t];
                             if (null == s) return r;
@@ -123,16 +124,16 @@ let j = {
                         });
                     });
             },
-            G = (e) => {
-                W((t) => E(_({}, t), { [e]: null }));
+            F = (e) => {
+                w((t) => E(_({}, t), { [e]: null }));
             };
         i.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 &&
-                w(
+                D(
                     [...e].map((e) => {
                         let t = (0, h.$j)(e.base64);
-                        return (e.src = t), L.current.push(t), e;
+                        return (e.src = t), k.current.push(t), e;
                     })
                 );
         }, [t.config.effects]),
@@ -143,35 +144,35 @@ let j = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, h.$j)(n.base64);
-                            (n.src = e), L.current.push(e), W((e) => E(_({}, e), { [t]: n }));
+                            (n.src = e), k.current.push(e), w((e) => E(_({}, e), { [t]: n }));
                         }
                     });
             }, [t.config.stillFrames]);
-        let F = {
+        let H = {
                 effect: t,
                 upsertConfig: s
             },
-            H = i.useRef(F);
+            z = i.useRef(H);
         return (i.useEffect(() => {
-            H.current = F;
+            z.current = H;
         }),
         i.useEffect(() => {
-            let { effect: e, upsertConfig: t } = H.current;
+            let { effect: e, upsertConfig: t } = z.current;
             t({
                 id: e.id,
-                name: R,
+                name: W,
                 config: {
-                    effects: Z,
-                    stillFrames: k
+                    effects: R,
+                    stillFrames: Z
                 }
             });
-        }, [Z, k, R]),
+        }, [R, Z, W]),
         i.useEffect(
             () => () => {
-                L.current.forEach((e) => {
+                k.current.forEach((e) => {
                     URL.revokeObjectURL(e);
                 }),
-                    (L.current = []);
+                    (k.current = []);
             },
             []
         ),
@@ -198,7 +199,7 @@ let j = {
                                           alt: '',
                                           width: 450
                                       }),
-                                      S && (0, r.jsx)(f.Z, { config: B })
+                                      S && (0, r.jsx)(f.Z, { config: M })
                                   ]
                               }),
                               (0, r.jsxs)('div', {
@@ -213,10 +214,10 @@ let j = {
                                               }),
                                               (0, r.jsx)('input', {
                                                   type: 'text',
-                                                  value: R,
+                                                  value: W,
                                                   className: b.input,
                                                   onChange: (e) => {
-                                                      D(e.target.value);
+                                                      L(e.target.value);
                                                   }
                                               })
                                           ]
@@ -267,14 +268,14 @@ let j = {
                                                   color: c.Ttl.GREEN,
                                                   children: [
                                                       'Upload Animated Layer',
-                                                      (0, r.jsx)(d.Z, {
+                                                      (0, r.jsx)(u.Z, {
                                                           ref: T,
                                                           onChange: (e) => {
-                                                              let t = M(e);
+                                                              let t = U(e);
                                                               null != t &&
                                                                   (0, h.i0)(t, async (e) => {
-                                                                      let n = await (0, h.Xv)(e, t, Z.length);
-                                                                      w((e) => [...e, n]);
+                                                                      let n = await (0, h.Xv)(e, t, R.length);
+                                                                      D((e) => [...e, n]);
                                                                   });
                                                           },
                                                           multiple: !1
@@ -294,9 +295,9 @@ let j = {
                                                   color: c.Ttl.GREEN,
                                                   children: [
                                                       'Upload thumbnail.png',
-                                                      (0, r.jsx)(d.Z, {
+                                                      (0, r.jsx)(u.Z, {
                                                           ref: T,
-                                                          onChange: (e) => U(h.cq.THUMBNAIL, e),
+                                                          onChange: (e) => V(h.cq.THUMBNAIL, e),
                                                           multiple: !1
                                                       })
                                                   ]
@@ -305,9 +306,9 @@ let j = {
                                                   color: c.Ttl.GREEN,
                                                   children: [
                                                       'Upload static.png',
-                                                      (0, r.jsx)(d.Z, {
+                                                      (0, r.jsx)(u.Z, {
                                                           ref: T,
-                                                          onChange: (e) => U(h.cq.STATIC, e),
+                                                          onChange: (e) => V(h.cq.STATIC, e),
                                                           multiple: !1
                                                       })
                                                   ]
@@ -316,9 +317,9 @@ let j = {
                                                   color: c.Ttl.GREEN,
                                                   children: [
                                                       'Upload reduced_motion.png',
-                                                      (0, r.jsx)(d.Z, {
+                                                      (0, r.jsx)(u.Z, {
                                                           ref: T,
-                                                          onChange: (e) => U(h.cq.REDUCED_MOTION, e),
+                                                          onChange: (e) => V(h.cq.REDUCED_MOTION, e),
                                                           multiple: !1
                                                       })
                                                   ]
@@ -343,7 +344,7 @@ let j = {
                                           children: [
                                               (0, r.jsx)(c.Text, {
                                                   variant: 'text-sm/semibold',
-                                                  children: 'Export both configs for the drop package'
+                                                  children: 'Please download both configs for the drop package!'
                                               }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: 'text-sm/bold',
@@ -353,21 +354,34 @@ let j = {
                                               (0, r.jsxs)('div', {
                                                   className: b.row,
                                                   children: [
-                                                      (0, r.jsx)(c.zxk, {
-                                                          size: c.PhG.SMALL,
-                                                          color: c.Ttl.BRAND,
-                                                          onClick: () => {
-                                                              (0, g.JG)((0, h.HV)(Z)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
-                                                          },
-                                                          children: 'Export Timing Config'
+                                                      (0, r.jsx)(d.Z, {
+                                                          fileContents: () => (0, h.yR)(R),
+                                                          contentType: 'text/plain',
+                                                          fileName: ''.concat(B, '_timing_config.txt'),
+                                                          children: (0, r.jsx)(c.zxk, {
+                                                              size: c.PhG.SMALL,
+                                                              color: c.Ttl.BRAND,
+                                                              children: 'Download Timing Config'
+                                                          })
                                                       }),
-                                                      (0, r.jsx)(c.zxk, {
-                                                          size: c.PhG.SMALL,
-                                                          color: c.Ttl.BRAND,
-                                                          onClick: () => {
-                                                              (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
-                                                          },
-                                                          children: 'Export Full Config'
+                                                      (0, r.jsx)(d.Z, {
+                                                          fileContents: () =>
+                                                              JSON.stringify(
+                                                                  E(_({}, t), {
+                                                                      name: W,
+                                                                      config: E(_({}, t.config), {
+                                                                          effects: R,
+                                                                          stillFrames: Z
+                                                                      })
+                                                                  })
+                                                              ),
+                                                          contentType: 'text/plain',
+                                                          fileName: ''.concat(B, '_config.txt'),
+                                                          children: (0, r.jsx)(c.zxk, {
+                                                              size: c.PhG.SMALL,
+                                                              color: c.Ttl.BRAND,
+                                                              children: 'Download Full Config'
+                                                          })
                                                       })
                                                   ]
                                               })
@@ -382,7 +396,7 @@ let j = {
                                               }),
                                               (0, r.jsx)('div', {
                                                   className: b.stillFramesContainer,
-                                                  children: Object.entries(k).map((e) => {
+                                                  children: Object.entries(Z).map((e) => {
                                                       let [t, n] = e;
                                                       return (0, r.jsxs)(
                                                           'div',
@@ -403,7 +417,7 @@ let j = {
                                                                           size: c.PhG.TINY,
                                                                           color: c.Ttl.RED,
                                                                           look: c.iLD.OUTLINED,
-                                                                          onClick: () => G(t),
+                                                                          onClick: () => F(t),
                                                                           children: 'Clear'
                                                                       })
                                                               ]
@@ -414,7 +428,7 @@ let j = {
                                               })
                                           ]
                                       }),
-                                      Z.some((e) => {
+                                      R.some((e) => {
                                           var t;
                                           return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                       }) &&
@@ -436,14 +450,14 @@ let j = {
                                               (0, r.jsxs)('div', {
                                                   className: a()(b.userProfilePreview, b.preview),
                                                   children: [
-                                                      (0, r.jsx)(u.Z, {
+                                                      (0, r.jsx)(m.Z, {
                                                           user: C,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffectId: null,
                                                           canUsePremiumCustomization: !0,
                                                           isTryItOutFlow: !0
                                                       }),
-                                                      (0, r.jsx)(f.Z, { config: B })
+                                                      (0, r.jsx)(f.Z, { config: M })
                                                   ]
                                               })
                                       })
@@ -458,12 +472,12 @@ let j = {
                                               color: c.Ttl.RED,
                                               look: c.iLD.OUTLINED,
                                               onClick: () => {
-                                                  w([]), W(j);
+                                                  D([]), w(j);
                                               },
                                               children: 'Clear Assets'
                                           })
                                       }),
-                                      Z.map((e, t) =>
+                                      R.map((e, t) =>
                                           (0, r.jsxs)(
                                               'div',
                                               {
@@ -528,7 +542,7 @@ let j = {
                                                                           value: e.start,
                                                                           className: b.input,
                                                                           onChange: (e) => {
-                                                                              w((n) => {
+                                                                              D((n) => {
                                                                                   let r = [...n],
                                                                                       i = n[t];
                                                                                   return (i.start = +e.target.value), (r[t] = i), r;
@@ -550,7 +564,7 @@ let j = {
                                                                           value: e.duration,
                                                                           className: b.input,
                                                                           onChange: (e) => {
-                                                                              w((n) => {
+                                                                              D((n) => {
                                                                                   let r = [...n],
                                                                                       i = n[t];
                                                                                   return (i.duration = +e.target.value), (r[t] = i), r;
@@ -577,7 +591,7 @@ let j = {
                                                                           checked: e.loop,
                                                                           className: b.checkBox,
                                                                           onChange: (e) => {
-                                                                              w((n) => {
+                                                                              D((n) => {
                                                                                   let r = [...n],
                                                                                       i = n[t];
                                                                                   return (i.loop = e.target.checked), (r[t] = i), r;
@@ -601,7 +615,7 @@ let j = {
                                                                                   value: e.loopDelay,
                                                                                   className: b.input,
                                                                                   onChange: (e) => {
-                                                                                      w((n) => {
+                                                                                      D((n) => {
                                                                                           let r = [...n],
                                                                                               i = n[t];
                                                                                           return (i.loopDelay = +e.target.value), (r[t] = i), r;
@@ -625,9 +639,9 @@ let j = {
                                                                           color: 'always-white',
                                                                           children: 'Add Alternative'
                                                                       }),
-                                                                      (0, r.jsx)(d.Z, {
+                                                                      (0, r.jsx)(u.Z, {
                                                                           ref: T,
-                                                                          onChange: (e) => V(e, t),
+                                                                          onChange: (e) => G(e, t),
                                                                           multiple: !1
                                                                       })
                                                                   ]
@@ -636,7 +650,7 @@ let j = {
                                                                   color: c.Ttl.RED,
                                                                   look: c.iLD.LINK,
                                                                   onClick: () => {
-                                                                      w((t) => t.filter((t) => t !== e));
+                                                                      D((t) => t.filter((t) => t !== e));
                                                                   },
                                                                   children: 'Remove Layer'
                                                               })
