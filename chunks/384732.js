@@ -8,6 +8,7 @@ e.exports = {
     footer: 'footer__61aee',
     powerupImageContainer: 'powerupImageContainer__61aee',
     powerupImage: 'powerupImage__61aee',
+    gradientRoleColorsImage: 'gradientRoleColorsImage__61aee',
     exampleImage: 'exampleImage__61aee',
     error: 'error__61aee'
 };

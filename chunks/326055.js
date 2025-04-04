@@ -1,17 +1,19 @@
-n.d(t, { default: () => d }), n(47120), n(266796);
+n.d(t, { default: () => f }), n(47120), n(266796);
 var r = n(200651),
     o = n(192379),
-    a = n(481060),
-    i = n(156732),
-    s = n(262212),
-    c = n(845602),
-    l = n(535396),
-    u = n(384732);
-function d(e) {
+    a = n(120356),
+    i = n.n(a),
+    s = n(481060),
+    l = n(156732),
+    c = n(262212),
+    u = n(845602),
+    d = n(535396),
+    p = n(384732);
+function f(e) {
     var t,
         n,
-        { guildId: d, powerup: p } = e,
-        f = (function (e, t) {
+        { guildId: a, powerup: f } = e,
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -30,11 +32,11 @@ function d(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let [_, m] = o.useState(void 0),
-        g = (0, i.Z)(p),
-        b = o.useMemo(() => (p.skuId === l.IN ? (0, r.jsx)(c.Z, { guildId: d }) : void 0), [p, d]);
+    let [m, g] = o.useState(void 0),
+        b = (0, l.Z)(f),
+        C = o.useMemo(() => (f.skuId === d.IN ? (0, r.jsx)(u.Z, { guildId: a }) : void 0), [f, a]);
     return (0, r.jsxs)(
-        a.Y0X,
+        s.Y0X,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -61,68 +63,68 @@ function d(e) {
             return e;
         })(
             {
-                className: u.modal,
-                size: a.CgR.DYNAMIC
+                className: p.modal,
+                size: s.CgR.DYNAMIC
             },
-            f
+            _
         )),
         (n = n =
             {
                 children: [
-                    (0, r.jsxs)(a.hzk, {
-                        className: u.modalContentContainer,
+                    (0, r.jsxs)(s.hzk, {
+                        className: p.modalContentContainer,
                         scrollbarType: 'none',
                         children: [
                             (0, r.jsxs)('div', {
-                                className: u.sidebar,
+                                className: p.sidebar,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: u.powerupImageContainer,
+                                        className: p.powerupImageContainer,
                                         children: (0, r.jsx)('img', {
-                                            className: u.powerupImage,
+                                            className: i()(p.powerupImage, { [p.gradientRoleColorsImage]: f.skuId === d.If }),
                                             alt: '',
-                                            src: g
+                                            src: b
                                         })
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: u.contentContainer,
+                                        className: p.contentContainer,
                                         children: [
-                                            (0, r.jsx)(a.X6q, {
+                                            (0, r.jsx)(s.X6q, {
                                                 variant: 'heading-xl/extrabold',
-                                                children: p.title
+                                                children: f.title
                                             }),
-                                            (0, r.jsx)(a.Text, {
-                                                className: u.description,
+                                            (0, r.jsx)(s.Text, {
+                                                className: p.description,
                                                 variant: 'text-sm/normal',
-                                                children: p.description
+                                                children: f.description
                                             }),
-                                            null != _ &&
-                                                (0, r.jsx)(a.Text, {
-                                                    className: u.error,
+                                            null != m &&
+                                                (0, r.jsx)(s.Text, {
+                                                    className: p.error,
                                                     color: 'status-danger',
                                                     variant: 'text-sm/semibold',
-                                                    children: _
+                                                    children: m
                                                 }),
-                                            (0, r.jsx)(s.ZP, {
-                                                className: u.footer,
-                                                guildId: d,
-                                                powerup: p,
-                                                onError: m
+                                            (0, r.jsx)(c.ZP, {
+                                                className: p.footer,
+                                                guildId: a,
+                                                powerup: f,
+                                                onError: g
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            null != b &&
+                            null != C &&
                                 (0, r.jsx)('div', {
-                                    className: u.exampleImage,
-                                    children: b
+                                    className: p.exampleImage,
+                                    children: C
                                 })
                         ]
                     }),
-                    (0, r.jsx)(a.olH, {
-                        className: u.close,
-                        onClick: f.onClose
+                    (0, r.jsx)(s.olH, {
+                        className: p.close,
+                        onClick: _.onClose
                     })
                 ]
             }),
