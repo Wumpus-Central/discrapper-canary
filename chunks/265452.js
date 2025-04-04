@@ -309,7 +309,7 @@ function en(e) {
     null != x ? (j = B.Iq.STREAM) : null != I && (j = B.Iq.EMBEDDED_APPLICATION);
     let [E, T] = i.useState([]),
         [y, A] = i.useState(''),
-        [w, M] = i.useState(q({}, X, null == I ? {} : { target_application_id: I }, null == j ? {} : { target_type: j })),
+        [w, M] = i.useState(q({}, X, null == I ? {} : { target_application_id: I }, null == j ? {} : { target_type: j }, null == x ? {} : { target_user_id: x })),
         [Y, K] = i.useState(!1),
         [J, Q] = i.useState(null),
         $ = i.useRef(null),
@@ -385,7 +385,7 @@ function en(e) {
             var e;
             let t,
                 n = null != (e = b.Z.getStageInstanceByChannel(null == eo ? void 0 : eo.id)) ? e : null;
-            return null === (t = ec && void 0 !== s.vanityURLCode ? s.vanityURLCode : (null == n ? void 0 : n.invite_code) !== void 0 ? n.invite_code : null != eu ? eu.code : null) ? null : (0, W.tV)({ baseCode: t });
+            return null === (t = ec && null != s.vanityURLCode ? s.vanityURLCode : (null == n ? void 0 : n.invite_code) != null ? n.invite_code : null != eu ? eu.code : null) ? null : (0, W.tV)({ baseCode: t });
         }, [ec, s, eu, eo]),
         ej = i.useCallback(() => {
             let e = null == eo ? void 0 : eo.id;

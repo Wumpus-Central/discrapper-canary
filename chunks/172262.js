@@ -19,14 +19,14 @@ var t,
     x = f(o, 'queueMicrotask'),
     k = x && x.value;
 if (!k) {
-    var v = new d(),
-        R = function () {
+    var R = new d(),
+        v = function () {
             var e, n;
-            for (l && (e = m.domain) && e.exit(); (n = v.get()); )
+            for (l && (e = m.domain) && e.exit(); (n = R.get()); )
                 try {
                     n();
                 } catch (e) {
-                    throw (v.head && t(), e);
+                    throw (R.head && t(), e);
                 }
             e && e.enter();
         };
@@ -35,24 +35,24 @@ if (!k) {
             ? (((i = y.resolve(void 0)).constructor = y),
               (a = u(i.then, i)),
               (t = function () {
-                  a(R);
+                  a(v);
               }))
             : l
               ? (t = function () {
-                    m.nextTick(R);
+                    m.nextTick(v);
                 })
               : ((b = u(b, o)),
                 (t = function () {
-                    b(R);
+                    b(v);
                 }))
         : ((r = !0),
           (c = p.createTextNode('')),
-          new h(R).observe(c, { characterData: !0 }),
+          new h(v).observe(c, { characterData: !0 }),
           (t = function () {
               c.data = r = !r;
           })),
         (k = function (e) {
-            v.head || t(), v.add(e);
+            R.head || t(), R.add(e);
         });
 }
 e.exports = k;
