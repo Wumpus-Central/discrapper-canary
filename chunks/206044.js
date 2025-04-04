@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(47120);
+n.d(t, { Z: () => M }), n(47120);
 var r = n(200651),
     s = n(192379),
     o = n(120356),
@@ -72,7 +72,7 @@ function _(e, t) {
 }
 let I = (0, a.animated)(d.CJ0),
     D = (0, a.animated)(x.Z),
-    M = (e) => {
+    A = (e) => {
         var { quest: t, location: n, questContentPosition: o } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -131,9 +131,9 @@ let I = (0, a.animated)(d.CJ0),
                 )
         });
     },
-    A = (e) => {
+    M = (e) => {
         var t, n;
-        let { isFocused: o, isQuestExpired: u, quest: x, location: g, size: b, expansionSpring: A, isAnimating: W, isExpanded: Z, isInConcurrentQuestExperiment: k, contentPosition: L, toggleExpanded: B } = e,
+        let { isFocused: o, isQuestExpired: u, quest: x, location: g, size: b, expansionSpring: M, isAnimating: W, isExpanded: Z, isInConcurrentQuestExperiment: k, contentPosition: L, toggleExpanded: B } = e,
             { ref: U, height: Q } = (0, m.Z)(),
             { ref: F, width: z, scrollWidth: G } = (0, m.Z)(),
             H = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -189,7 +189,7 @@ let I = (0, a.animated)(d.CJ0),
             children: [
                 (0, r.jsx)(D, {
                     style: {
-                        opacity: A.to({
+                        opacity: M.to({
                             range: [0, 1],
                             output: [0.25, 1]
                         })
@@ -218,7 +218,7 @@ let I = (0, a.animated)(d.CJ0),
                             className: i()(w.headerContent, { [w.headerContentEmbed]: K }),
                             style: {
                                 y: Y
-                                    ? A.to({
+                                    ? M.to({
                                           range: [0, 1],
                                           output: [E.DJ, 0]
                                       })
@@ -229,7 +229,7 @@ let I = (0, a.animated)(d.CJ0),
                                     (0, r.jsx)(a.animated.div, {
                                         className: w.headerCollapsedContent,
                                         style: {
-                                            opacity: A.to({
+                                            opacity: M.to({
                                                 range: [0, 1],
                                                 output: [1, 0]
                                             }),
@@ -275,7 +275,7 @@ let I = (0, a.animated)(d.CJ0),
                                         [w.outerContainerEmbed]: K
                                     }),
                                     style: {
-                                        opacity: A.to({
+                                        opacity: M.to({
                                             range: [0, 1],
                                             output: [0, 1]
                                         }),
@@ -324,7 +324,7 @@ let I = (0, a.animated)(d.CJ0),
                                         }),
                                         !u &&
                                             Y &&
-                                            (0, r.jsx)(M, {
+                                            (0, r.jsx)(A, {
                                                 quest: x,
                                                 location: g,
                                                 questContentPosition: L
@@ -337,7 +337,7 @@ let I = (0, a.animated)(d.CJ0),
                             className: w.iconsContainer,
                             style: {
                                 top: Y
-                                    ? A.to({
+                                    ? M.to({
                                           range: [0, 1],
                                           output: [E.DJ / 2 - E.Z$ / 2, E.jc]
                                       })
@@ -354,7 +354,7 @@ let I = (0, a.animated)(d.CJ0),
                                     children: (e) =>
                                         (0, r.jsx)(a.animated.div, {
                                             style: {
-                                                opacity: A,
+                                                opacity: M,
                                                 visibility: W || Z ? 'inherit' : 'hidden'
                                             },
                                             'aria-hidden': !W && !Z,
@@ -379,7 +379,7 @@ let I = (0, a.animated)(d.CJ0),
                                         'aria-label': Z ? P.NW.string(P.t.iTcumZ) : P.NW.string(P.t.dcl9MT),
                                         children: (0, r.jsx)(I, {
                                             style: {
-                                                rotate: A.to({
+                                                rotate: M.to({
                                                     range: [0, 1],
                                                     output: [0, 180]
                                                 })

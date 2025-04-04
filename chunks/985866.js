@@ -32,9 +32,9 @@ var n = r(200651),
     W = r(652380),
     P = r(644646),
     D = r(78826),
-    q = r(46140),
-    A = r(675654),
-    B = r(388032),
+    A = r(46140),
+    B = r(675654),
+    q = r(388032),
     L = r(442686);
 function Z(e) {
     var t;
@@ -53,7 +53,7 @@ function Z(e) {
             var t, r, n, a;
             let { quest: o, rewardCode: s, hasTieredRewardCodes: i } = e,
                 l = (null == (t = o.userStatus) ? void 0 : t.claimedAt) != null || null != s,
-                c = i ? '' : B.NW.string(B.t.UUKbio),
+                c = i ? '' : q.NW.string(q.t.UUKbio),
                 d = i
                     ? (0, I.o9)({
                           quest: o,
@@ -62,9 +62,9 @@ function Z(e) {
                     : null,
                 u = R.r.build(o.config),
                 p = null != d && null != (a = d.messages.name) ? a : u.defaultReward.messages.name,
-                _ = i ? B.NW.string(B.t.cfY4PD) : u.defaultReward.messages.name;
+                _ = i ? q.NW.string(q.t.cfY4PD) : u.defaultReward.messages.name;
             return {
-                subHeader: l ? B.NW.string(B.t.YpswQk) : c,
+                subHeader: l ? q.NW.string(q.t.YpswQk) : c,
                 header: l ? p : _
             };
         })({
@@ -92,7 +92,7 @@ function Z(e) {
                         className: s()(L.rewardTileAsset, { [L.rewardTileAssetLoading]: C || g }),
                         quest: r,
                         questContent: p.trackingCtx.content,
-                        location: q.dr.REWARD_CODE_MODAL
+                        location: A.dr.REWARD_CODE_MODAL
                     })
                 ]
             }),
@@ -237,7 +237,7 @@ function z(e) {
         eo(!0);
     });
     let ei = null;
-    E && null != ee ? (ei = B.NW.string(B.t.srzsU1)) : null != ee ? (ei = B.NW.string(B.t.PJBpdX)) : et && (ei = B.NW.string(B.t.JRU8dn));
+    E && null != ee ? (ei = q.NW.string(q.t.srzsU1)) : null != ee ? (ei = q.NW.string(q.t.PJBpdX)) : et && (ei = q.NW.string(q.t.JRU8dn));
     let el =
             null != ei
                 ? (0, n.jsx)(u.X6q, {
@@ -255,7 +255,7 @@ function z(e) {
                     variant: 'text-sm/normal',
                     color: 'text-normal',
                     className: L.bodyCopy,
-                    children: s ? B.NW.format(B.t.m0btAQ, {}) : B.NW.format(B.t['ZUA/Ul'], { rewardName: i.defaultReward.messages.name })
+                    children: s ? q.NW.format(q.t.m0btAQ, {}) : q.NW.format(q.t['ZUA/Ul'], { rewardName: i.defaultReward.messages.name })
                 });
             let l = (0, I.C1)({
                 quest: t,
@@ -289,10 +289,10 @@ function z(e) {
         eu = null;
     et &&
         (eu = (0, n.jsxs)(u.xJW, {
-            title: B.NW.string(B.t.vVcTtL),
+            title: q.NW.string(q.t.vVcTtL),
             children: [
                 (0, n.jsx)(u.PhF, {
-                    placeholder: B.NW.string(B.t.EMrUHR),
+                    placeholder: q.NW.string(q.t.EMrUHR),
                     options: ed,
                     select: (e) => {
                         eo(!1), z(e);
@@ -322,7 +322,7 @@ function z(e) {
                         });
                     }
                 }),
-                es ? (0, n.jsx)(u.pdY, { error: B.NW.string(B.t.rbZBMT) }) : null
+                es ? (0, n.jsx)(u.pdY, { error: q.NW.string(q.t.rbZBMT) }) : null
             ]
         }));
     let ep = null == ee && (Y || V),
@@ -330,9 +330,9 @@ function z(e) {
         em = null;
     null != ee
         ? (em = (0, n.jsx)(u.xJW, {
-              title: B.NW.string(B.t.srzsU1),
+              title: q.NW.string(q.t.srzsU1),
               children: (0, n.jsx)(p.Z, {
-                  value: Q ? B.NW.string(B.t['0n2u0t']) : ee.code,
+                  value: Q ? q.NW.string(q.t['0n2u0t']) : ee.code,
                   delay: 1000,
                   buttonColor: u.zxk.Colors.BRAND,
                   onCopy: () => {
@@ -349,10 +349,10 @@ function z(e) {
         : es &&
           !et &&
           (em = (0, n.jsx)(u.xJW, {
-              title: B.NW.string(B.t.srzsU1),
+              title: q.NW.string(q.t.srzsU1),
               children: (0, n.jsx)(u.oil, {
                   disabled: !0,
-                  error: B.NW.string(B.t.rbZBMT),
+                  error: q.NW.string(q.t.rbZBMT),
                   inputClassName: L.errorInput
               })
           }));
@@ -369,7 +369,7 @@ function z(e) {
                       }),
             [K, s, null == ee ? void 0 : ee.tier]
         ),
-        eb = a.useMemo(() => ((null == ef ? void 0 : ef.redemptionLink) == null || '' === ef.redemptionLink ? null : (null == ee ? void 0 : ee.code) == null || '' === ee.code ? ef.redemptionLink : ef.redemptionLink.replace(q.Dp, encodeURIComponent(ee.code))), [ef, ee]),
+        eb = a.useMemo(() => ((null == ef ? void 0 : ef.redemptionLink) == null || '' === ef.redemptionLink ? null : (null == ee ? void 0 : ee.code) == null || '' === ee.code ? ef.redemptionLink : ef.redemptionLink.replace(A.Dp, encodeURIComponent(ee.code))), [ef, ee]),
         eg = (0, N.G)({
             claimCode: er,
             fetchCode: en,
@@ -385,8 +385,8 @@ function z(e) {
         eC = et && V,
         eh = !eC && ((et && null == M) || ep),
         ew = null != eb && '' !== eb,
-        ey = B.NW.string(B.t['23SS+/']);
-    et ? (ey = B.NW.string(B.t.SLZMi4)) : !et && es ? (ey = B.NW.string(B.t.gNJHHh)) : ew && (ey = B.NW.string(B.t['+zx47e']));
+        ey = q.NW.string(q.t['23SS+/']);
+    et ? (ey = q.NW.string(q.t.SLZMi4)) : !et && es ? (ey = q.NW.string(q.t.gNJHHh)) : ew && (ey = q.NW.string(q.t['+zx47e']));
     let ex = !X && null != ee && !E && !es,
         eO = null != e_ && K,
         ej = (0, S.Gd)(s.id);
@@ -414,7 +414,7 @@ function z(e) {
                                 }),
                                 !eO &&
                                     (0, n.jsx)(D.p, {
-                                        source: q.dr.REWARD_CODE_MODAL,
+                                        source: A.dr.REWARD_CODE_MODAL,
                                         questId: s.id,
                                         children: (0, n.jsx)(Z, {
                                             quest: s,
@@ -444,7 +444,7 @@ function z(e) {
                                                         variant: 'text-sm/medium',
                                                         color: 'text-muted',
                                                         className: L.cosponsorName,
-                                                        children: B.NW.format(B.t.CSf4ER, { cosponsorName: s.config.cosponsorMetadata.name })
+                                                        children: q.NW.format(q.t.CSf4ER, { cosponsorName: s.config.cosponsorMetadata.name })
                                                     }),
                                                     (0, n.jsx)(u.Text, {
                                                         variant: 'text-md/normal',
@@ -473,8 +473,8 @@ function z(e) {
                 (0, n.jsx)(h.Z, {
                     confettiTarget: F.current,
                     confettiCanvas: G,
-                    sprites: A.CA,
-                    colors: A.Br
+                    sprites: B.CA,
+                    colors: B.Br
                 })
         ]
     });

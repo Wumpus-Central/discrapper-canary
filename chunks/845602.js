@@ -1,15 +1,15 @@
-n.d(t, { Z: () => p });
-var r = n(200651),
-    o = n(957537),
-    a = n(755641),
-    i = n(742409),
-    s = n(369509),
-    c = n(116175),
-    l = n(388032),
-    u = n(817239),
-    d = n(606217);
+t.d(n, { Z: () => p });
+var r = t(200651),
+    o = t(957537),
+    a = t(755641),
+    i = t(742409),
+    s = t(369509),
+    l = t(116175),
+    c = t(388032),
+    u = t(817239),
+    d = t(606217);
 function p(e) {
-    let { guildId: t } = e;
+    let { guildId: n } = e;
     return (0, r.jsxs)('div', {
         className: d.container,
         children: [
@@ -19,15 +19,15 @@ function p(e) {
                     avatar: o.Z,
                     username: 'Roka',
                     usernameStyle: { color: 'var(--brand-400)' },
-                    message: l.NW.string(u.Z.bpghV1),
+                    message: c.NW.string(u.Z.bpghV1),
                     decorations: (0, r.jsx)(s.S, {
-                        guildId: t,
+                        guildId: n,
                         tag: 'GGEZ',
-                        badge: c.ZD.HEART
+                        badge: l.ZD.HEART
                     })
                 })
             }),
-            (0, r.jsx)(a.g, { selectedBadge: c.ZD.HEART })
+            (0, r.jsx)(a.g, { selectedBadge: l.ZD.HEART })
         ]
     });
 }

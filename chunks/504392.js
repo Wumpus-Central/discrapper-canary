@@ -1,4 +1,4 @@
-t.d(n, { Z: () => C }), t(266796);
+t.d(n, { Z: () => N }), t(266796);
 var r = t(200651),
     o = t(192379),
     i = t(120356),
@@ -8,36 +8,36 @@ var r = t(200651),
     c = t(413335),
     d = t(984370),
     u = t(713081),
-    p = t(905128),
-    m = t(27237),
+    m = t(905128),
+    p = t(27237),
     x = t(51859),
     _ = t(953478),
     v = t(460608),
-    f = t(279604),
-    g = t(332538),
+    g = t(279604),
+    f = t(332538),
     b = t(535396),
     j = t(680278),
     h = t(388032),
     Z = t(782285);
-let N = [b.Us.LEVEL, b.Us.PERK];
-function C(e) {
+let C = [b.Us.LEVEL, b.Us.PERK];
+function N(e) {
     let { guildId: n, powerupSkuId: t } = e,
-        i = (0, g.Z)(n);
+        i = (0, f.Z)(n);
     o.useEffect(() => {
         (0, u.Sn)(n), (0, u.Fm)(n);
     }, [n]),
         o.useEffect(() => {
             (0, u.jd)(n);
         }, [n, i]);
-    let C = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(n)),
-        w = o.useRef(!1);
+    let N = (0, a.e7)([m.Z], () => m.Z.getStateForGuild(n)),
+        I = o.useRef(!1);
     return (o.useEffect(() => {
         var e, r;
         if (null == t) return;
-        let o = null == C || null == (r = C.powerups) || null == (e = r.get) ? void 0 : e.call(r, t);
-        null == o || w.current || ((0, f.KE)(n, o), (w.current = !0));
-    }, [n, t, null == C ? void 0 : C.powerups]),
-    (null == C ? void 0 : C.catalog) == null)
+        let o = null == N || null == (r = N.powerups) || null == (e = r.get) ? void 0 : e.call(r, t);
+        null == o || I.current || ((0, g.KE)(n, o), (I.current = !0));
+    }, [n, t, null == N ? void 0 : N.powerups]),
+    (null == N ? void 0 : N.catalog) == null)
         ? null
         : (0, r.jsxs)('div', {
               className: Z.container,
@@ -60,8 +60,8 @@ function C(e) {
                       children: [
                           (0, r.jsx)('div', {
                               className: Z.powerupsContainer,
-                              children: N.map((e) => {
-                                  let t = C.catalog.get(e);
+                              children: C.map((e) => {
+                                  let t = N.catalog.get(e);
                                   if (null == t) return;
                                   let { title: o, description: i } = (function (e) {
                                       switch (e) {
@@ -102,7 +102,7 @@ function C(e) {
                                                       switch (e.type) {
                                                           case b.Us.LEVEL:
                                                               return (0, r.jsx)(
-                                                                  m.ZP,
+                                                                  p.ZP,
                                                                   {
                                                                       guildId: n,
                                                                       index: o,

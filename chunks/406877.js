@@ -1,37 +1,37 @@
-n.d(t, { Z: () => c }), n(47120);
+n.d(e, { Z: () => s }), n(47120);
 var r = n(192379),
-    i = n(668781),
-    a = n(881052),
+    a = n(668781),
+    o = n(881052),
     l = n(824389),
-    o = n(179838),
-    s = n(388032);
-function c(e, t) {
-    let [n, c] = r.useState(!1);
+    i = n(179838),
+    c = n(388032);
+function s(t, e) {
+    let [n, s] = r.useState(!1);
     return {
         isLoading: n,
         downloadAttachment: r.useCallback(
             async (n) => {
-                if (null != e && null != t) {
-                    c(!0);
+                if (null != t && null != e) {
+                    s(!0);
                     try {
                         let { url: r } = await l.gs({
-                            guildId: e,
-                            productId: t,
+                            guildId: t,
+                            productId: e,
                             attachmentId: n
                         });
-                        await o.L(r);
-                    } catch (t) {
-                        let e = t instanceof a.Hx ? t.getAnyErrorMessage() : void 0;
-                        i.Z.show({
-                            title: s.NW.string(s.t.R0RpRU),
-                            body: null != e ? e : s.NW.string(s.t.eAn6z8)
+                        await i.L(r);
+                    } catch (e) {
+                        let t = e instanceof o.Hx ? e.getAnyErrorMessage() : void 0;
+                        a.Z.show({
+                            title: c.NW.string(c.t.R0RpRU),
+                            body: null != t ? t : c.NW.string(c.t.eAn6z8)
                         });
                     } finally {
-                        c(!1);
+                        s(!1);
                     }
                 }
             },
-            [e, t]
+            [t, e]
         )
     };
 }

@@ -8,13 +8,13 @@ var r = t(200651),
     c = t(808189),
     d = t(413335),
     u = t(690786),
-    p = t(838968),
-    m = t(262212),
+    m = t(838968),
+    p = t(262212),
     x = t(279604),
     _ = t(981631),
     v = t(680278),
-    f = t(388032),
-    g = t(568413),
+    g = t(388032),
+    f = t(568413),
     b = t(117172);
 function j(e) {
     let n,
@@ -22,14 +22,14 @@ function j(e) {
     return (
         (n = t && !1 !== o ? 'full' : t && !1 === o ? 'half' : 'none'),
         (0, r.jsxs)('div', {
-            className: g.progressContainer,
+            className: f.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: s()(g.progress, g[i], g[n]) }),
+                (0, r.jsx)('div', { className: s()(f.progress, f[i], f[n]) }),
                 (0, r.jsx)('div', {
-                    className: s()(g.boostContainer, { [g.boostContainerActive]: t }),
+                    className: s()(f.boostContainer, { [f.boostContainerActive]: t }),
                     children: (0, r.jsx)(d.Z, {
                         size: 'sm',
-                        className: g.boost,
+                        className: f.boost,
                         fill: 'white'
                     })
                 })
@@ -49,14 +49,14 @@ function h(e) {
                       (0, r.jsxs)(
                           'div',
                           {
-                              className: g.perkRow,
+                              className: f.perkRow,
                               children: [
                                   (0, r.jsx)(e.icon, {
                                       color: l.TVs.colors.TEXT_MUTED,
                                       size: 'sm'
                                   }),
                                   (0, r.jsx)(a.xv, {
-                                      className: g.perkText,
+                                      className: f.perkText,
                                       color: 'text-muted',
                                       variant: 'text-sm/medium',
                                       children: e.getCopy()
@@ -68,15 +68,15 @@ function h(e) {
                   );
         }, [n]);
     return (0, r.jsxs)('div', {
-        className: g.perkRowContainer,
+        className: f.perkRowContainer,
         children: [
             t,
             (0, r.jsx)('div', {
-                className: g.perkRow,
+                className: f.perkRow,
                 children: (0, r.jsx)(a.xv, {
                     color: 'text-muted',
                     variant: 'text-sm/medium',
-                    children: f.NW.string(v.Z.nIj3LS)
+                    children: g.NW.string(v.Z.nIj3LS)
                 })
             })
         ]
@@ -91,10 +91,10 @@ function Z(e) {
     return (
         (0, x.KT)(_),
         (n = 0 === i ? 'start' : null == l ? 'end' : 'middle'),
-        (0, r.jsxs)(p.Z, {
+        (0, r.jsxs)(m.Z, {
             guildId: t,
             powerup: s,
-            className: g.card,
+            className: f.card,
             children: [
                 (0, r.jsx)(j, {
                     position: n,
@@ -109,8 +109,8 @@ function Z(e) {
                             children: s.title
                         }),
                         (0, r.jsx)(h, { index: i }),
-                        (0, r.jsx)(p.u, {
-                            className: g.footer,
+                        (0, r.jsx)(m.u, {
+                            className: f.footer,
                             guildId: t,
                             powerup: s
                         })
@@ -118,7 +118,7 @@ function Z(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: b.buttonContainer,
-                    children: (0, r.jsx)(m.ZP, {
+                    children: (0, r.jsx)(p.ZP, {
                         guildId: t,
                         powerup: s,
                         onError: v
