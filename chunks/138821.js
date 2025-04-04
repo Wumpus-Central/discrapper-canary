@@ -5,6 +5,7 @@ e.exports = {
     wrapper: 'wrapper_f910d0',
     ringingOutgoing: 'ringingOutgoing_f910d0',
     ringingIncoming: 'ringingIncoming_f910d0',
+    statusContainer: 'statusContainer_f910d0',
     status: 'status_f910d0',
     voiceAvatar: 'voiceAvatar_f910d0',
     border: 'border_f910d0',

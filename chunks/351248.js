@@ -166,6 +166,7 @@ function j(e) {
                     children: (0, r.jsx)(
                         f.Z,
                         {
+                            userId: l.id,
                             src: l.getAvatarURL(b, (0, d.pxk)(C), s && y),
                             size: C,
                             muted: null != (t = null == o ? void 0 : o.isVoiceMuted()) && t,
