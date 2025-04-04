@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => P });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -17,45 +17,47 @@ var i = n(120356),
     b = n(600164),
     _ = n(984370),
     E = n(278605),
-    O = n(299657),
-    N = n(594174),
-    y = n(74538),
-    I = n(981631),
-    v = n(474936),
-    C = n(388032),
-    S = n(881207);
-let T = s.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser() }))(
+    O = n(585612),
+    N = n(299657),
+    y = n(594174),
+    I = n(74538),
+    v = n(981631),
+    C = n(474936),
+    S = n(388032),
+    T = n(881207);
+let P = s.ZP.connectStores([y.default], () => ({ user: y.default.getCurrentUser() }))(
     (0, h.Z)(
         (0, p.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: i } = (0, m.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
                 s = (0, E.xP)('ApplicationStoreHome'),
-                p = (0, y.I5)(n),
-                h = s && !p,
-                N = (0, f.ZP)();
+                p = (0, O.C)('ApplicationStoreHome'),
+                h = (0, I.I5)(n),
+                y = (s && !h) || p,
+                P = (0, f.ZP)();
             return t
                 ? (0, r.jsxs)('div', {
-                      className: S.homeWrapperNormal,
+                      className: T.homeWrapperNormal,
                       children: [
                           (0, r.jsx)(d.Z, {
-                              section: I.jXE.NAVIGATION,
+                              section: v.jXE.NAVIGATION,
                               children: (0, r.jsx)(u.f6W, {
-                                  theme: N,
+                                  theme: P,
                                   children: (e) =>
                                       (0, r.jsxs)(_.Z, {
                                           isAuthenticated: t,
-                                          className: l()(S.headerBar, e, {
-                                              [S.headerBarV2LightBackground]: h && !(0, c.wj)(N),
-                                              [S.headerBarV2DarkBackground]: h && (0, c.wj)(N)
+                                          className: l()(T.headerBar, e, {
+                                              [T.headerBarV2LightBackground]: y && !(0, c.wj)(P),
+                                              [T.headerBarV2DarkBackground]: y && (0, c.wj)(P)
                                           }),
                                           role: 'navigation',
                                           children: [
                                               (0, r.jsx)(_.Z.Icon, {
                                                   icon: u.SrA,
                                                   'aria-hidden': !0,
-                                                  color: h ? o.Z.PREMIUM_TIER_2_PINK : void 0
+                                                  color: y ? o.Z.PREMIUM_TIER_2_PINK : void 0
                                               }),
-                                              (0, r.jsx)(_.Z.Title, { children: C.NW.string(C.t.Ipxkoq) })
+                                              (0, r.jsx)(_.Z.Title, { children: S.NW.string(S.t.Ipxkoq) })
                                           ]
                                       })
                               })
@@ -67,13 +69,13 @@ let T = s.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                                       ? (0, r.jsx)(b.Z, {
                                             align: b.Z.Align.CENTER,
                                             justify: b.Z.Justify.CENTER,
-                                            children: (0, r.jsx)(u.$jN, { className: S.spinner })
+                                            children: (0, r.jsx)(u.$jN, { className: T.spinner })
                                         })
-                                      : (0, r.jsx)(O.Z, { entrypoint: v.EZ.ApplicationStoreHome })
+                                      : (0, r.jsx)(N.Z, { entrypoint: C.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, r.jsx)(a.l_, { to: I.Z5c.LOGIN });
+                : (0, r.jsx)(a.l_, { to: v.Z5c.LOGIN });
         })
     )
 );

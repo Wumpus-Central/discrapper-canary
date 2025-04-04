@@ -68,6 +68,9 @@ let _ = (e) => {
                         break;
                     case p.dm.SHOW_YOUR_STYLE:
                         t = N.yourStyleBackground;
+                        break;
+                    case p.dm.PERMADECOS:
+                        t = N.permadecosBackground;
                 }
                 return t;
             })(t),
@@ -148,7 +151,7 @@ let _ = (e) => {
                     )
                 });
             },
-            L = j % 2 == 0;
+            L = j % 2 != 0;
         return (0, r.jsx)('div', {
             className: a()(y, {
                 [N.whatsNewBoxContainer]: !O,
