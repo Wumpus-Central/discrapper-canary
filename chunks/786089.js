@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -27,7 +27,7 @@ let T = (0, i.memo)(function (e) {
     var t, n, l, T, P, j;
     let { quest: A } = e,
         [Z, x] = (0, i.useState)(!1),
-        [L, w] = (0, i.useState)(24),
+        [w, L] = (0, i.useState)(24),
         [R, D] = (0, i.useState)(!1),
         k = (0, i.useRef)(null),
         M = (0, i.useRef)(null),
@@ -51,13 +51,34 @@ let T = (0, i.memo)(function (e) {
         let n = k.current.getBoundingClientRect(),
             r = M.current.getBoundingClientRect(),
             i = U.current.getBoundingClientRect();
-        w((r.top - n.top - i.height) / 2);
+        L((r.top - n.top - i.height) / 2);
     });
     let X = (0, u.wj)(B),
         J = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
         $ = (0, i.useMemo)(() => (0, N.fh)(A, N.eC.REWARD), [A]),
         ee = Z ? V + 8 : 0,
-        et = () => {
+        et = (0, _.mH)(O.jn.TROPHY_CASE_CARD),
+        { content_position: en, row_index: er } = et,
+        ei = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(et, ['content_position', 'row_index']),
+        el = () => {
             x(!0),
                 b.default.track(
                     v.rMx.QUEST_HOVER,
@@ -85,11 +106,11 @@ let T = (0, i.memo)(function (e) {
                                 });
                         }
                         return e;
-                    })({ quest_id: A.id }, (0, _.mH)(O.jn.TROPHY_CASE_CARD))
+                    })({ quest_id: A.id }, ei)
                 );
         },
-        en = () => x(!1),
-        er = (e) => {
+        ea = () => x(!1),
+        eo = (e) => {
             D(!0),
                 b.default.track(v.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
@@ -103,10 +124,10 @@ let T = (0, i.memo)(function (e) {
               children: (0, r.jsxs)('div', {
                   ref: k,
                   tabIndex: 0,
-                  onFocus: et,
-                  onBlur: en,
-                  onMouseEnter: et,
-                  onMouseLeave: en,
+                  onFocus: el,
+                  onBlur: ea,
+                  onMouseEnter: el,
+                  onMouseLeave: ea,
                   className: a()(S.container, { [S.hovered]: Z }),
                   children: [
                       null != G &&
@@ -115,7 +136,7 @@ let T = (0, i.memo)(function (e) {
                           (0, r.jsx)('div', {
                               ref: U,
                               className: S.decoWrapper,
-                              style: { top: L },
+                              style: { top: w },
                               children: (0, r.jsx)(f.Z, {
                                   avatarDecorationOverride: Q,
                                   user: G,
@@ -131,14 +152,14 @@ let T = (0, i.memo)(function (e) {
                                   children: (0, r.jsx)('source', {
                                       src: $.url,
                                       type: null != (j = $.mimetype) ? j : void 0,
-                                      onError: () => er($.url)
+                                      onError: () => eo($.url)
                                   })
                               })
                             : (0, r.jsx)('img', {
                                   className: S.image,
                                   src: $.url,
                                   alt: A.config.messages.questName,
-                                  onError: () => er($.url)
+                                  onError: () => eo($.url)
                               }),
                       (0, r.jsx)('div', {
                           className: a()(S.overlay, {

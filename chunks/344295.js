@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(789020), n(47120);
+n.d(t, { Z: () => H }), n(997841), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -104,9 +104,8 @@ class V extends i.PureComponent {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
         return D.a ? F.REGISTER : e.login ? F.LOGIN : F.REGISTER;
     }
-    track(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            { invite: r } = this.props,
+    track(e, t, n) {
+        let { invite: r } = this.props,
             i = this.getInviteKey(),
             o = (0, N.jX)(i),
             a = t
