@@ -42,6 +42,7 @@ let A = Object.freeze({
         USER_PROFILE: (t) => '/users/'.concat(t, '/profile'),
         USER_GUILD_PROFILE: (t, e) => '/guilds/'.concat(t, '/profile/').concat(e),
         USER_CHANNELS: '/users/@me/channels',
+        USER_WARP_LICENSE: '/users/@me/warp/license',
         DM_CHANNEL: (t) => '/users/@me/dms/'.concat(t),
         USER_SETTINGS_PROTO: (t) => '/users/@me/settings-proto/'.concat(t),
         USER_ACTIVITY_METADATA: (t, e, a) =>
