@@ -56,16 +56,16 @@ let O = (0, o.Z)((e) => {
         A = T.filter(j),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
         R = v(C),
-        M = x(C, I),
-        k = {
-            [u.pV.SPEAKER]: M,
+        k = x(C, I),
+        M = {
+            [u.pV.SPEAKER]: k,
             [u.pV.AUDIENCE]: R,
             [u.pV.SELECTED]: 1
         },
         L = (0, d.Dx)(o.id),
-        [D, W] = (0, d.aP)(o.id, k, L),
+        [D, W] = (0, d.aP)(o.id, M, L),
         U = [Math.max(null != (t = D[0]) ? t : 1, 1), Math.max(null != (n = D[1]) ? n : 1, 1), D[2]],
-        { speakerTileWidth: B, speakerTileHeight: H } = y(C, M),
+        { speakerTileWidth: B, speakerTileHeight: H } = y(C, k),
         F = N ? C - 32 : Math.min(C - 64, 3 * B + 8),
         G = (e) => e === D.length - 1 || (0 === S && 1 === e),
         [V, z] = i.useState(!1),

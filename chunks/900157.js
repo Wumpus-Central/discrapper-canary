@@ -73,17 +73,17 @@ function T(e) {
         A = (0, a.e7)([y.Z], () => y.Z.getChannel(t)),
         w = (0, a.e7)([v.Z], () => v.Z.getGuild(null == A ? void 0 : A.getGuildId())),
         R = (0, f.ZP)(A);
-    var M = A;
-    let k = (0, a.e7)([j.Z], () => null != M && !o().isEmpty(j.Z.getVoiceStatesForChannel(M.id)));
+    var k = A;
+    let M = (0, a.e7)([j.Z], () => null != k && !o().isEmpty(j.Z.getVoiceStatesForChannel(k.id)));
     i.useEffect(() => {
-        k &&
-            null != M &&
+        M &&
+            null != k &&
             (s.Z.dispatch({
                 type: 'SIDEBAR_CLOSE',
-                baseChannelId: M.parent_id
+                baseChannelId: k.parent_id
             }),
-            (0, C.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
-    }, [k, M]);
+            (0, C.ad)(k, { source: E.on.VOICE_AUTO_OPEN }));
+    }, [M, k]);
     let L = i.useRef(!1);
     if (
         (i.useEffect(() => {

@@ -1,8 +1,8 @@
 e.exports = {
     row: 'row__15634',
-    active: 'active__15634',
-    soundPreviewIcon: 'soundPreviewIcon__15634',
     soundEditContainer: 'soundEditContainer__15634',
+    soundPreviewIcon: 'soundPreviewIcon__15634',
+    active: 'active__15634',
     tableTitle: 'tableTitle__15634',
     boostingIconWrapper: 'boostingIconWrapper__15634',
     soundName: 'soundName__15634',

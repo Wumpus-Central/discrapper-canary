@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(117530),
     w = n(459273),
     R = n(838440),
-    M = n(127654),
-    k = n(241309),
+    k = n(127654),
+    M = n(241309),
     L = n(928477),
     D = n(456077),
     W = n(488131),
@@ -213,7 +213,7 @@ function q(e) {
                         let m = null != (s = r.name) ? s : '',
                             g = null == n && 0 === m.length,
                             b = '' === e && (null == i || 0 === i.length) && 0 === l.length;
-                        if ((c(g ? (0, k.V_)() : null), d(b ? (0, k.T4)() : null), g || b))
+                        if ((c(g ? (0, M.V_)() : null), d(b ? (0, M.T4)() : null), g || b))
                             return (
                                 h(!1),
                                 {
@@ -242,7 +242,7 @@ function q(e) {
                             await f(e, i, l);
                         } catch (e) {
                             return (
-                                (null == (u = e.body) ? void 0 : u.code) === B.evJ.AUTOMOD_TITLE_BLOCKED && c((0, k.Gx)(e.body, t)),
+                                (null == (u = e.body) ? void 0 : u.code) === B.evJ.AUTOMOD_TITLE_BLOCKED && c((0, M.Gx)(e.body, t)),
                                 h(!1),
                                 {
                                     shouldClear: !1,
@@ -390,7 +390,7 @@ function X(e) {
     var t;
     let { parentChannel: n, parentMessageId: i, threadSettings: l, updateThreadSettings: o, error: a, disabled: c } = e,
         d = null != (t = l.name) ? t : '',
-        p = (0, k.Op)(a, { content: d }),
+        p = (0, M.Op)(a, { content: d }),
         h = (0, L.Od)(n, i),
         f = null != i,
         m = (0, y.Dt)();
@@ -452,7 +452,7 @@ function Q(e) {
             handler: g
         });
     let x = (0, a.e7)([T.Z], () => T.Z.can(B.Plq.ATTACH_FILES, t)),
-        v = (0, k.Op)(p, { content: n.textValue });
+        v = (0, M.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(C.Z, {
@@ -477,7 +477,7 @@ function Q(e) {
                 onBlur: g,
                 onChange: b,
                 onSubmit: y,
-                promptToUpload: M.d
+                promptToUpload: k.d
             })
         ]
     });

@@ -72,8 +72,8 @@ function T(e) {
     let { channel: t, themeable: T, whichPopoutIsOpen: A, setWhichPopoutIsOpen: w } = e,
         { parentAnalyticsLocation: R } = (0, u.ZP)(),
         {
-            Component: M,
-            events: { onMouseEnter: k, onMouseLeave: L }
+            Component: k,
+            events: { onMouseEnter: M, onMouseLeave: L }
         } = (0, a.j)(),
         D = t.getGuildId(),
         { mute: W, suppress: U } = (0, _.Z)(t),
@@ -152,7 +152,7 @@ function T(e) {
                                   {
                                       themeable: T,
                                       label: Q(),
-                                      iconComponent: M,
+                                      iconComponent: k,
                                       disabled: H,
                                       onContextMenu: J
                                   },
@@ -163,7 +163,7 @@ function T(e) {
                                       (0, j.v)(R, j.d.SOUNDBOARD), null == e || e.onClick(t);
                                   },
                                   onMouseEnter: (t) => {
-                                      e.onMouseEnter(t), k();
+                                      e.onMouseEnter(t), M();
                                   },
                                   onMouseLeave: () => {
                                       e.onMouseLeave(), L();

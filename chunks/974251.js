@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(316595),
     w = n(193910),
     R = n(951211),
-    M = n(981631),
-    k = n(356659),
+    k = n(981631),
+    M = n(356659),
     L = n(921944),
     D = n(388032),
     W = n(911777);
@@ -91,13 +91,13 @@ let H = i.memo(function (e) {
         ee = (0, a.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(F.id)),
         { showClipsHeaderEntrypoint: et } = f.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         en = (0, a.e7)([C.qc], () => C.qc.hasHotspot(C.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        er = (0, c.s9z)((e) => (0, c.DEQ)(e, k.Qr)),
+        er = (0, c.s9z)((e) => (0, c.DEQ)(e, M.Qr)),
         ei = (0, a.e7)([E.Z], () => E.Z.hasLayers()),
         el = (0, a.e7)([m.Z], () => m.Z.hasClips()),
         [eo, ea] = i.useState(null),
         es = (0, f.Go)() && (Q || el),
         ec = F.isPrivate(),
-        eu = (0, a.e7)([I.Z], () => ec || (I.Z.can(M.Plq.ATTACH_FILES, F) && I.Z.can(M.Plq.SEND_MESSAGES, F))),
+        eu = (0, a.e7)([I.Z], () => ec || (I.Z.can(k.Plq.ATTACH_FILES, F) && I.Z.can(k.Plq.SEND_MESSAGES, F))),
         ed = (0, d.Z)(J);
     (null == ed ? void 0 : ed.newClipIds.length) !== (null == J ? void 0 : J.newClipIds.length) && (null != (t = null == J ? void 0 : J.newClipIds.length) ? t : 0) > 0 && null == eo && en && ee && !er && !et && !ei && ea('recentClips');
     let ep = (e, t, n) => {
@@ -107,7 +107,7 @@ let H = i.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                S.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
+                S.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
         },
         eh = (0, a.e7)([N.Z], () => N.Z.hasCurrentUserSentMessageSinceAppStart());
     function ef() {
@@ -116,7 +116,7 @@ let H = i.memo(function (e) {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, B(U({}, t), { channelId: F.id }));
             },
-            { modalKey: k.Qr }
+            { modalKey: M.Qr }
         ),
             ea(null);
     }
@@ -126,9 +126,9 @@ let H = i.memo(function (e) {
             return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            S.S.subscribe(M.CkL.UPLOAD_FILE, e),
+            S.S.subscribe(k.CkL.UPLOAD_FILE, e),
             () => {
-                S.S.unsubscribe(M.CkL.UPLOAD_FILE, e);
+                S.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
             }
         );
     });

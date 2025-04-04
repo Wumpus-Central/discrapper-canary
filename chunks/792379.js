@@ -57,8 +57,8 @@ function w(e) {
 function R(e) {
     let { user: t, channel: n } = e,
         R = __OVERLAY__ || !(0, d.Z)(t.id),
-        M = (0, b.ZP)(t.id),
-        k = (0, s.ZP)(),
+        k = (0, b.ZP)(t.id),
+        M = (0, s.ZP)(),
         { analyticsLocations: L } = (0, u.ZP)(c.Z.PROFILE_PANEL),
         D = (0, m.ZB)({
             layout: 'SIMPLIFIED_DM_PANEL',
@@ -77,9 +77,9 @@ function R(e) {
             children: (0, r.jsxs)(O.Z, {
                 ref: W,
                 user: t,
-                displayProfile: M,
+                displayProfile: k,
                 profileType: S.y0.PANEL,
-                themeOverride: k,
+                themeOverride: M,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
@@ -92,13 +92,13 @@ function R(e) {
                                 children: [
                                     (0, r.jsx)(y.Z, {
                                         user: t,
-                                        displayProfile: M,
+                                        displayProfile: k,
                                         profileType: S.y0.PANEL,
                                         animateOnHover: !U
                                     }),
                                     (0, r.jsx)(_.Z, {
                                         user: t,
-                                        displayProfile: M,
+                                        displayProfile: k,
                                         channelId: n.id,
                                         profileType: S.y0.PANEL,
                                         onOpenProfile: R ? void 0 : B
@@ -113,10 +113,10 @@ function R(e) {
                                         user: t,
                                         profileType: S.y0.PANEL,
                                         nickname: f.ZP.getName(null, n.id, t),
-                                        pronouns: null == M ? void 0 : M.pronouns,
+                                        pronouns: null == k ? void 0 : k.pronouns,
                                         onOpenProfile: R ? void 0 : B,
                                         tags: (0, r.jsx)(C.Z, {
-                                            displayProfile: M,
+                                            displayProfile: k,
                                             profileType: S.y0.PANEL
                                         })
                                     }),
@@ -127,7 +127,7 @@ function R(e) {
                                                 heading: Z.NW.string(Z.t['61W33d']),
                                                 headingColor: 'header-primary',
                                                 children: (0, r.jsx)(x.Z, {
-                                                    userBio: null == M ? void 0 : M.bio,
+                                                    userBio: null == k ? void 0 : k.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: U
@@ -167,9 +167,9 @@ function R(e) {
                                 children: Z.NW.string(Z.t['+Xp3ho'])
                             })
                         }),
-                    (null == M ? void 0 : M.profileEffectId) != null &&
+                    (null == k ? void 0 : k.profileEffectId) != null &&
                         (0, r.jsx)(h.Z, {
-                            profileEffectId: null == M ? void 0 : M.profileEffectId,
+                            profileEffectId: null == k ? void 0 : k.profileEffectId,
                             isHovering: U
                         })
                 ]

@@ -27,8 +27,8 @@ let v = (e) => {
         { seconds: A } = (0, c.Z)(null != Z ? Z : new Date()),
         w = A > 0,
         { mode: R } = (0, m.ZP)({ location: 'ActionBarSoundboardButton' }),
-        M = (0, b.Z)({ location: 'ActionBarSoundboardButton' }),
-        { coloredIconsEnabled: k, squareButtonsEnabled: L } = (0, g.Z)({ location: 'ActionBarSoundboardButton' }),
+        k = (0, b.Z)({ location: 'ActionBarSoundboardButton' }),
+        { coloredIconsEnabled: M, squareButtonsEnabled: L } = (0, g.Z)({ location: 'ActionBarSoundboardButton' }),
         { parentAnalyticsLocation: D } = (0, u.ZP)(),
         W = i.useCallback(
             (e) => {
@@ -48,8 +48,8 @@ let v = (e) => {
         H = (j || P) && (l === C.D.EMOJI || null == l);
     return (0, r.jsx)(s.yRy, {
         shouldShow: H,
-        animation: M ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
-        animationPosition: M ? 'top' : 'bottom',
+        animation: k ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
+        animationPosition: k ? 'top' : 'bottom',
         position: 'bottom',
         align: 'center',
         spacing: 16,
@@ -71,10 +71,10 @@ let v = (e) => {
             let { onClick: t, onKeyDown: i } = e;
             return (0, r.jsx)(h.Z, {
                 isCenterButton: !0,
-                color: P ? (k ? 'primaryDark' : R === m.BK.GroupedButtonsRedMic || L ? 'green' : void 0) : void 0,
+                color: P ? (M ? 'primaryDark' : R === m.BK.GroupedButtonsRedMic || L ? 'green' : void 0) : void 0,
                 totalCooldownSeconds: T,
                 remainingCooldownSeconds: A,
-                className: o()(!M && x.controlButton, n),
+                className: o()(!k && x.controlButton, n),
                 onKeyDown: (e) => {
                     e.keyCode === y.yXg.ENTER && e.keyCode === y.yXg.SPACE && B(e, i);
                 },

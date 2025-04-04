@@ -99,10 +99,10 @@ function Z(e) {
             },
             'animate-always'
         ),
-        M = (0, v.Zp)(n, T),
-        k = M ? P.NW.formatToPlainString(P.t.qFqINz, { guildName: n.name }) : P.NW.formatToPlainString(P.t.bFwASk, { guildName: n.name }),
-        L = M ? P.NW.string(P.t.eA1ymp) : P.NW.string(P.t.MF0Ntb),
-        D = M ? P.NW.formatToPlainString(P.t['60PXOz'], { guildName: n.name }) : P.NW.formatToPlainString(P.t.i27ioq, { guildName: n.name });
+        k = (0, v.Zp)(n, T),
+        M = k ? P.NW.formatToPlainString(P.t.qFqINz, { guildName: n.name }) : P.NW.formatToPlainString(P.t.bFwASk, { guildName: n.name }),
+        L = k ? P.NW.string(P.t.eA1ymp) : P.NW.string(P.t.MF0Ntb),
+        D = k ? P.NW.formatToPlainString(P.t['60PXOz'], { guildName: n.name }) : P.NW.formatToPlainString(P.t.i27ioq, { guildName: n.name });
     return R((e, t) => {
         var i, l;
         return (
@@ -167,7 +167,7 @@ function Z(e) {
                                         children: (0, r.jsx)(c.X6q, {
                                             variant: 'heading-md/bold',
                                             color: 'header-primary',
-                                            children: k
+                                            children: M
                                         })
                                     }),
                                     (0, r.jsx)('div', {

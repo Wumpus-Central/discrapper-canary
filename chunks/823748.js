@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(677601),
     w = n(541716),
     R = n(236091),
-    M = n(663993),
-    k = n(252618),
+    k = n(663993),
+    M = n(252618),
     L = n(540059),
     D = n(201493),
     W = n(605236),
@@ -85,8 +85,8 @@ var r = n(200651),
     eA = n(430670),
     ew = n(524329),
     eR = n(995532),
-    eM = n(738643),
-    ek = n(433355),
+    ek = n(738643),
+    eM = n(433355),
     eL = n(592125),
     eD = n(703558),
     eW = n(486472),
@@ -162,7 +162,7 @@ function tr(e, t) {
         e
     );
 }
-let ti = (0, M.Un)({
+let ti = (0, k.Un)({
     createPromise: () => n.e('49131').then(n.bind(n, 434878)),
     webpackId: 434878,
     renderLoader: () =>
@@ -440,7 +440,7 @@ class tl extends i.PureComponent {
             b = null == t ? void 0 : t.name;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(k.yY, {
+                (0, r.jsx)(M.yY, {
                     location: b,
                     subsection: null != n ? n : void 0
                 }),
@@ -771,12 +771,12 @@ let to = (0, j.Z)(tl),
                     })
                 );
         }, [R, c, j, I]);
-        let M = (0, p.e7)([N.ZP], () => {
+        let k = (0, p.e7)([N.ZP], () => {
                 var e;
                 return N.ZP.getSelfEmbeddedActivityForChannel(null != (e = null == c ? void 0 : c.id) ? e : e3.lds);
             }),
-            k = (0, p.e7)([N.ZP], () => N.ZP.getActivityPanelMode()),
-            D = null != M && !(0, P.Z)(null == c ? void 0 : c.id) && k === e7.Ez.PANEL,
+            M = (0, p.e7)([N.ZP], () => N.ZP.getActivityPanelMode()),
+            D = null != k && !(0, P.Z)(null == c ? void 0 : c.id) && M === e7.Ez.PANEL,
             U = (0, p.e7)([eq.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eq.Z.getVoiceStatesForChannel(c.id)), [c]),
             B = null != c && c.isPrivate() && !D && x,
             F = (null == c ? void 0 : c.isGuildVocal()) || B || U,
@@ -787,17 +787,17 @@ let to = (0, j.Z)(tl),
             K = (0, p.e7)([T.Z], () => (null != c ? T.Z.getSelectedParticipant(c.id) : null)),
             X = (0, p.e7)([eY.default], () => eY.default.getCurrentUser()),
             Q = (0, ed.Z)(null == C ? void 0 : C.id),
-            J = (0, eM.Z)(G, null == C ? void 0 : C.id),
+            J = (0, ek.Z)(G, null == C ? void 0 : C.id),
             { section: $, channelSidebarState: ee } = (0, p.cj)(
-                [ek.ZP],
+                [eM.ZP],
                 () => ({
-                    section: ek.ZP.getSection(a, null == c ? void 0 : c.isDM()),
-                    channelSidebarState: ek.ZP.getSidebarState(a)
+                    section: eM.ZP.getSection(a, null == c ? void 0 : c.isDM()),
+                    channelSidebarState: eM.ZP.getSidebarState(a)
                 }),
                 [a, c]
             ),
             et = null == C ? void 0 : C.id,
-            en = (0, p.e7)([ek.ZP], () => ek.ZP.getGuildSidebarState(et), [et]),
+            en = (0, p.e7)([eM.ZP], () => eM.ZP.getGuildSidebarState(et), [et]),
             er = (0, p.e7)([ez.Z], () => ez.Z.getGuildId()) === e3.I_8,
             ei = (0, em.o)(K, X),
             el = (0, ef.lL)('Channel', !0, X, ei),

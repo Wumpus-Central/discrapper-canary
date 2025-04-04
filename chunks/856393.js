@@ -35,8 +35,8 @@ var r = n(200651),
     A = n(107169),
     w = n(891551),
     R = n(314897),
-    M = n(979696),
-    k = n(430824),
+    k = n(979696),
+    M = n(430824),
     L = n(496675),
     D = n(944486),
     W = n(358085),
@@ -127,7 +127,7 @@ function ec(e) {
     let { channel: t } = e,
         n = (0, f.bp)(),
         i = (0, s.e7)([L.Z], () => L.Z.can(ee.Plq.CREATE_INSTANT_INVITE, t)),
-        l = (0, s.e7)([k.Z], () => k.Z.getGuild(t.guild_id)),
+        l = (0, s.e7)([M.Z], () => M.Z.getGuild(t.guild_id)),
         o = (0, s.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id)),
         a = i || (null == o ? void 0 : o.invite_code) != null,
         c = (0, O.Q3)('StageChannelInviteButton');
@@ -157,7 +157,7 @@ function eu(e) {
         w = (0, u._q$)('StageChannelCall'),
         { isOnStartStageScreen: R } = (0, V.ZP)();
     (0, V.MV)(n);
-    let k = (0, s.e7)([M.Z], () => M.Z.getToastsEnabled(n.id)),
+    let M = (0, s.e7)([k.Z], () => k.Z.getToastsEnabled(n.id)),
         W = (0, $.Z)(n) ? (null != N ? '84px' : '124px') : null != N ? '0px' : '48px';
     return (
         w && R && (W = '0px'),
@@ -226,7 +226,7 @@ function eu(e) {
                     channel: n
                 }),
             renderChatToasts: () =>
-                !k || _ || I
+                !M || _ || I
                     ? null
                     : (0, r.jsx)(C.ZP, {
                           children: (0, r.jsx)(S.Z, {
@@ -265,7 +265,7 @@ function ed(e) {
             }),
             [t.id]
         ),
-        Z = (0, s.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
+        Z = (0, s.e7)([M.Z], () => M.Z.getGuild(t.guild_id), [t.guild_id]),
         { hasParticipantsPanel: T } = (0, v.Z)({ location: 'StageChannelCall' });
     (0, h.ZP)(() => {
         null == c.K.get(ei) &&
@@ -305,7 +305,7 @@ function ed(e) {
     });
     let { width: A = 0, ref: w } = (0, p.Z)(),
         R = A - 550,
-        M = !O || (O && I === ee.IlC.POPOUT);
+        k = !O || (O && I === ee.IlC.POPOUT);
     return (0, r.jsx)(g.Gt, {
         value: E,
         children: (0, r.jsxs)(C.B2, {
@@ -344,7 +344,7 @@ function ed(e) {
                             className: er.channelChatWrapper,
                             children: [
                                 P &&
-                                    M &&
+                                    k &&
                                     (0, r.jsx)(y.Z, {
                                         channel: t,
                                         guild: Z,
@@ -352,7 +352,7 @@ function ed(e) {
                                     }),
                                 S &&
                                     T &&
-                                    M &&
+                                    k &&
                                     (0, r.jsx)(x.Z, {
                                         channel: t,
                                         maxWidth: R

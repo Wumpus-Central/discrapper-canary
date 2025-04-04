@@ -1,7 +1,7 @@
 e.exports = {
     wrapper: 'wrapper__10e9a',
-    headingWrapper: 'headingWrapper__10e9a',
     stepsWrapper: 'stepsWrapper__10e9a',
+    headingWrapper: 'headingWrapper__10e9a',
     heading: 'heading__10e9a',
     stepWrapper: 'stepWrapper__10e9a',
     stepContent: 'stepContent__10e9a',

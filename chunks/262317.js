@@ -36,8 +36,8 @@ var r,
     A = n(927923),
     w = n(70722),
     R = n(388032),
-    M = n(587382);
-function k(e, t, n) {
+    k = n(587382);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,7 +61,7 @@ function L(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -87,7 +87,7 @@ function D(e, t) {
 function W(e) {
     let { numUsers: t } = e;
     return (0, i.jsx)('div', {
-        className: M.moreContainer,
+        className: k.moreContainer,
         children: (0, i.jsxs)(c.Text, {
             color: 'text-muted',
             variant: 'text-sm/medium',
@@ -99,14 +99,14 @@ function U(e) {
     let { numAudience: t, collapsed: n } = e,
         r = n ? t : R.NW.formatToPlainString(R.t['+v2pNz'], { count: t });
     return (0, i.jsxs)('div', {
-        className: a()(M.audienceContainer, { [M.audienceContainerCollapsed]: n }),
+        className: a()(k.audienceContainer, { [k.audienceContainerCollapsed]: n }),
         children: [
             (0, i.jsx)('div', {
-                className: M.audienceIconContainer,
+                className: k.audienceIconContainer,
                 children: (0, i.jsx)(c.VWR, {
                     size: 'md',
                     color: 'currentColor',
-                    className: M.audienceIcon
+                    className: k.audienceIcon
                 })
             }),
             (0, i.jsx)(c.Text, {
@@ -127,7 +127,7 @@ class B extends (r = l.PureComponent) {
         let { userPopoutOpen: t } = this.state,
             { connectUserDragSource: n, canDrag: r, isSelfOnOtherClient: l, user: o, channel: a } = this.props,
             s = (0, i.jsx)('div', {
-                className: M.draggable,
+                className: k.draggable,
                 'data-dnd-name': a.name,
                 onMouseEnter: l ? void 0 : this.handleMouseEnter,
                 onMouseLeave: l ? void 0 : this.handleHidePreview,
@@ -150,23 +150,23 @@ class B extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'domElementRef', l.createRef()),
-            k(this, 'state', { userPopoutOpen: !1 }),
-            k(this, 'handleClickUser', () => {
+            M(this, 'domElementRef', l.createRef()),
+            M(this, 'state', { userPopoutOpen: !1 }),
+            M(this, 'handleClickUser', () => {
                 this.setState({ userPopoutOpen: !this.state.userPopoutOpen });
             }),
-            k(this, 'handleCloseUserPopout', () => {
+            M(this, 'handleCloseUserPopout', () => {
                 this.setState({ userPopoutOpen: !1 });
             }),
-            k(this, 'handleHidePreview', () => {
+            M(this, 'handleHidePreview', () => {
                 let { hidePreview: e, isStreaming: t, user: n } = this.props;
                 t && (null == e || e(n.id));
             }),
-            k(this, 'handleMouseEnter', () => {
+            M(this, 'handleMouseEnter', () => {
                 let { user: e, showPreview: t, isStreaming: n } = this.props;
                 n && !this.state.userPopoutOpen && (null == t || t(e.id));
             }),
-            k(this, 'handleWatchStream', () => {
+            M(this, 'handleWatchStream', () => {
                 let { user: e, channel: t, isWatching: n, hidePreview: r } = this.props;
                 if (!this.canWatchStream) return;
                 let i = {
@@ -177,11 +177,11 @@ class B extends (r = l.PureComponent) {
                 };
                 N.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(i), u.Z.selectParticipant(i.channelId, (0, C.V9)(i))) : (0, h.iV)(i), null == r || r(e.id);
             }),
-            k(this, 'handleJoinVoice', () => {
+            M(this, 'handleJoinVoice', () => {
                 let { user: e, channel: t, hidePreview: n } = this.props;
                 P.Z.can(s.$e(T.Plq.CONNECT, T.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
             }),
-            k(this, 'handleUserContextMenu', (e) => {
+            M(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: r } = this.props;
                 (0, d.jW)(e, async () => {
                     let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
@@ -199,7 +199,7 @@ class B extends (r = l.PureComponent) {
                         );
                 });
             }),
-            k(this, 'renderUserPopout', (e) => {
+            M(this, 'renderUserPopout', (e) => {
                 let { channel: t, user: n } = this.props,
                     r = t.getGuildId();
                 return (0, i.jsx)(
@@ -215,7 +215,7 @@ class B extends (r = l.PureComponent) {
                     )
                 );
             }),
-            k(this, 'renderStreamPopout', () => {
+            M(this, 'renderStreamPopout', () => {
                 let { user: e, channel: t, previewIsOpen: n, location: r } = this.props;
                 return (0, i.jsx)(v.Z, {
                     user: e,
@@ -225,11 +225,11 @@ class B extends (r = l.PureComponent) {
                     location: r
                 });
             }),
-            k(this, 'renderUser', (e) => {
+            M(this, 'renderUser', (e) => {
                 let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: r, shouldShowPreview: l, mute: o, localMute: s, localVideoDisabled: u, speaking: d, disconnected: p, user: h, deaf: f, priority: m, collapsed: g, isStreaming: b, isGuest: C, nick: y, video: x, serverMute: v, serverDeaf: j, tabIndex: O, embeddedApplication: N, channel: I, ringing: P, isSelf: S, application: Z } = this.props,
                     { userPopoutOpen: T } = this.state,
                     w = A.al.has(null != n ? n : ''),
-                    k = {
+                    M = {
                         user: h,
                         speaking: d,
                         disconnected: p,
@@ -251,7 +251,7 @@ class B extends (r = l.PureComponent) {
                         otherClientSessionType: n,
                         voicePlatform: r,
                         embeddedApplication: N,
-                        avatarContainerClass: a()({ [M.userAvatar]: !0 }),
+                        avatarContainerClass: a()({ [k.userAvatar]: !0 }),
                         disabled: t && !w,
                         selected: T,
                         onClick: w ? void 0 : this.handleClickUser,
@@ -287,7 +287,7 @@ class B extends (r = l.PureComponent) {
                                     }
                                     return i;
                                 })(e, ['onClick', 'onContextMenu']);
-                            return (0, i.jsx)(E.ZP, L({ ref: this.domElementRef }, k, r));
+                            return (0, i.jsx)(E.ZP, L({ ref: this.domElementRef }, M, r));
                         }
                     });
                 }
@@ -301,7 +301,7 @@ class B extends (r = l.PureComponent) {
                     children: () =>
                         (0, i.jsx)(
                             E.ZP,
-                            D(L({}, k), {
+                            D(L({}, M), {
                                 ref: this.domElementRef,
                                 onMouseDown: e.onMouseDown,
                                 onKeyDown: e.onKeyDown
@@ -311,5 +311,5 @@ class B extends (r = l.PureComponent) {
             });
     }
 }
-k(B, 'defaultProps', { isSelfOnOtherClient: !1 });
+M(B, 'defaultProps', { isSelfOnOtherClient: !1 });
 let H = (0, f.$)(B);

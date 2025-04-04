@@ -108,8 +108,8 @@ let w = i.memo(function (e) {
             w = (0, g.E)(t.guild_id, null == P ? void 0 : P.colorStrings),
             R = i.useMemo(() => ({ [j]: [l.user.id] }), [j, l.user.id]);
         (0, f.$)(R);
-        let M = l.rtsState === E.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-        function k() {
+        let k = l.rtsState === E.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        function M() {
             (0, v.DT)(t, l.user.id, !1);
         }
         function L() {
@@ -195,7 +195,7 @@ let w = i.memo(function (e) {
                     }
                 }),
                 (0, r.jsx)(u.ua7, {
-                    text: M ? S.NW.string(S.t.h9rsTU) : S.NW.string(S.t.f0T7hI),
+                    text: k ? S.NW.string(S.t.h9rsTU) : S.NW.string(S.t.f0T7hI),
                     children: (e) =>
                         (0, r.jsx)(
                             u.zxk,
@@ -203,8 +203,8 @@ let w = i.memo(function (e) {
                                 innerClassName: Z.buttonContainer,
                                 look: u.zxk.Looks.BLANK,
                                 size: u.zxk.Sizes.NONE,
-                                onClick: k,
-                                disabled: M || m,
+                                onClick: M,
+                                disabled: k || m,
                                 children: (0, r.jsx)(u.Lrb, {
                                     size: 'xs',
                                     color: 'currentColor'
@@ -232,7 +232,7 @@ let w = i.memo(function (e) {
             ]
         });
     }),
-    M = i.memo(function (e) {
+    k = i.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, N.h)(t.id);
         return (0, r.jsx)(u.j7V, {
@@ -242,7 +242,7 @@ let w = i.memo(function (e) {
             children: S.NW.string(S.t.GYCh0d)
         });
     }),
-    k = i.memo(function () {
+    M = i.memo(function () {
         return (0, r.jsxs)('div', {
             className: Z.emptyStateContainer,
             children: [
@@ -293,9 +293,9 @@ function L(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, r.jsx)(M, { channel: t }, 'rts-toggle');
+                            return (0, r.jsx)(k, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === l.length) return (0, r.jsx)(k, {}, 'participants-empty');
+                            if (0 === l.length) return (0, r.jsx)(M, {}, 'participants-empty');
                             let e = l[i];
                             return (0, r.jsx)(
                                 R,

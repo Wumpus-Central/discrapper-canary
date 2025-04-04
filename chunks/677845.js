@@ -26,8 +26,8 @@ function N(e) {
     let { participants: t, onClick: n, onDoubleClick: N, onContextMenu: I, channel: P, className: S, inCall: Z, totalNumberOfParticipants: T, paused: A = !1 } = e,
         w = (0, c.bp)() === O.IlC.POPOUT,
         R = (0, a.e7)([_.Z], () => _.Z.getGuild(P.guild_id), [P.guild_id]),
-        { dismissedActivityEntryPointTileChannel: M } = (0, v.d)(),
-        k = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
+        { dismissedActivityEntryPointTileChannel: k } = (0, v.d)(),
+        M = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
         L = (0, b.bt)(P.id, t),
         D = i.useCallback(() => {
             (0, o.j)(() => {
@@ -35,19 +35,19 @@ function N(e) {
             });
         }, [P.id]);
     i.useEffect(() => {
-        null != M &&
-            P.id !== M &&
+        null != k &&
+            P.id !== k &&
             (0, o.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
-    }, [P.id, M]);
+    }, [P.id, k]);
     let W = (0, a.e7)([C.Z], () => P.isPrivate() || (0, m.b)(C.Z, R, P), [R, P]),
         U = (null == R ? void 0 : R.afkChannelId) === P.id,
         B = P.userLimit <= 0 || P.userLimit > 1,
         H = (0, a.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
         F = (0, f.N)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, d.KF)(P.id) !== d.jy.CAN_LAUNCH,
-        V = null != M && M === P.id,
+        V = null != k && k === P.id,
         z = L.map(
             (e) => (t) =>
                 (0, r.jsx)(
@@ -83,9 +83,9 @@ function N(e) {
     ),
         null != R &&
             !U &&
-            (!(k >= 2) || !H || G || F || V
+            (!(M >= 2) || !H || G || F || V
                 ? B &&
-                  1 === k &&
+                  1 === M &&
                   W &&
                   (H && !G
                       ? z.push((e) =>
@@ -95,7 +95,7 @@ function N(e) {
                                 width: e,
                                 inPopout: w,
                                 handleClose: D,
-                                userParticipantCount: k
+                                userParticipantCount: M
                             })
                         )
                       : z.push((e) =>
@@ -113,7 +113,7 @@ function N(e) {
                           width: e,
                           inPopout: w,
                           handleClose: D,
-                          userParticipantCount: k
+                          userParticipantCount: M
                       })
                   ));
     let Y = i.useCallback(

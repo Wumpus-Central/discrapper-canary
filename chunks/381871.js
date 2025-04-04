@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(474936),
     w = n(526761),
     R = n(388032),
-    M = n(934680);
-let k = T.Hz.CHAT,
+    k = n(934680);
+let M = T.Hz.CHAT,
     L = {
         section: S.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
@@ -53,7 +53,7 @@ function W(e) {
                     !_.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
-                        intention: k
+                        intention: M
                     })
             )
             .slice(0, Z.e5),
@@ -113,7 +113,7 @@ function W(e) {
                     (0, r.jsx)('div', {
                         onMouseEnter: C,
                         children: (0, r.jsx)(g.ZP, {
-                            className: M.reducedMotionTooltip,
+                            className: k.reducedMotionTooltip,
                             header: R.NW.string(R.t['6gGHnZ']),
                             content: R.NW.string(R.t.S2RGUF),
                             onClick: () => {

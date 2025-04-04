@@ -44,10 +44,10 @@ function y(e) {
         A = x ? _.d : _.Z,
         w = (0, h.Z)(t, n, y, v, P === m.BK.GroupedButtonsRedMic || S),
         R = (0, c.O)(T ? 'unmute' : 'mute'),
-        M = (0, u.P)(T ? 'unmute' : 'mute'),
-        { activeVoice: k } = (0, b.o)(),
-        L = null != k,
-        D = L ? M : R,
+        k = (0, u.P)(T ? 'unmute' : 'mute'),
+        { activeVoice: M } = (0, b.o)(),
+        L = null != M,
+        D = L ? k : R,
         { events: W, play: U } = D;
     i.useEffect(() => () => U(), [U, T]);
     let B = D.Component;

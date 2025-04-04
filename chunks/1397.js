@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(271383),
     w = n(430824),
     R = n(607744),
-    M = n(496675),
-    k = n(594174),
+    k = n(496675),
+    M = n(594174),
     L = n(700785),
     D = n(862679),
     W = n(981631),
@@ -244,7 +244,7 @@ class z extends i.PureComponent {
             F(this, 'handleResendVerification', () => {
                 var e;
                 c.Z.verifyResend();
-                let t = null == (e = k.default.getCurrentUser()) ? void 0 : e.email;
+                let t = null == (e = M.default.getCurrentUser()) ? void 0 : e.email;
                 null != t &&
                     (0, s.h7j)((e) =>
                         (0, r.jsx)(
@@ -340,7 +340,7 @@ function Y(e) {
         d = l.type === W.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(W.oNc.NEWS),
         h = (0, a.e7)([T.Z], () => (d ? T.Z.getFollowerStatsForChannel(l.id) : null)),
         g = (0, a.e7)([E.Z], () => E.Z.isLurking(s)),
-        b = (0, a.e7)([k.default], () => k.default.getCurrentUser()),
+        b = (0, a.e7)([M.default], () => M.default.getCurrentUser()),
         C = null != (t = null == b ? void 0 : b.isStaff()) && t,
         j = (0, a.e7)([A.ZP], () => {
             var e, t;
@@ -349,7 +349,7 @@ function Y(e) {
         N = !!(0, x.Dc)(c),
         I = (j || u.notClaimed) && N,
         P = (0, a.e7)([O.Z], () => O.Z.shouldShowPopout(s)),
-        S = (0, a.e7)([M.Z], () => M.Z.can(W.Plq.SEND_MESSAGES, l)),
+        S = (0, a.e7)([k.Z], () => k.Z.can(W.Plq.SEND_MESSAGES, l)),
         D = (0, a.e7)([v.Z], () => v.Z.getRequest(s)),
         [U, B] = (0, f.L_)(s),
         H = (0, f.Cc)(s),

@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(961048),
     w = n(179424),
     R = n(786915),
-    M = n(975146),
-    k = n(991617),
+    k = n(975146),
+    M = n(991617),
     L = n(597998),
     D = n(606304),
     W = n(594174),
@@ -237,7 +237,7 @@ function $(e) {
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
-                                M.Z,
+                                k.Z,
                                 Q(X({}, e), {
                                     buttonRef: L,
                                     isActive: n,
@@ -264,7 +264,7 @@ function $(e) {
                           'deselect-participant'
                       )
                     : (0, r.jsx)(
-                          k.Z,
+                          M.Z,
                           {
                               className: K.button,
                               channelId: et,
@@ -326,7 +326,7 @@ function $(e) {
         ep &&
             e_.push(
                 (0, r.jsx)(
-                    M.Z,
+                    k.Z,
                     {
                         className: o()(K.button, { [K.lastButton]: s }),
                         onClick: () => d.Z.toggleParticipantsList(n.id, !el)

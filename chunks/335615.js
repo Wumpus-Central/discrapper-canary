@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(540059),
     w = n(623624),
     R = n(518738),
-    M = n(570096),
-    k = n(850020),
+    k = n(570096),
+    M = n(850020),
     L = n(155409),
     D = n(184301),
     W = n(347475),
@@ -253,7 +253,7 @@ let es = i.memo((e) => {
                 },
                 [i, t]
             ),
-            p = (0, k.K)({
+            p = (0, M.K)({
                 location: 'ChannelMembers',
                 user: l
             });
@@ -473,7 +473,7 @@ class ed extends i.Component {
                             }),
                             e
                         );
-                        return o.entry.content_type === p.s.LEADERBOARD ? (0, r.jsx)(M.N, { children: t }, e) : t;
+                        return o.entry.content_type === p.s.LEADERBOARD ? (0, r.jsx)(k.N, { children: t }, e) : t;
                     }
                     if (o.type === B.so.HIDDEN_CONTENT_INVENTORY) return (0, r.jsx)(N.Z, {}, 'content-inventory-hidden-entry');
                 }

@@ -65,12 +65,12 @@ function y(e) {
     let A = (0, u.bp)(),
         { parentAnalyticsLocation: w } = (0, d.ZP)(),
         R = null == y ? void 0 : y.getGuildId(),
-        M = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R) : null), [R]),
-        k = (0, a.e7)([f.Z], () => (null != t ? f.Z.getApplicationActivity(t) : void 0));
-    return null != k && (null == N ? void 0 : N.location.kind) === o.E.CONTEXTLESS
+        k = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R) : null), [R]),
+        M = (0, a.e7)([f.Z], () => (null != t ? f.Z.getApplicationActivity(t) : void 0));
+    return null != M && (null == N ? void 0 : N.location.kind) === o.E.CONTEXTLESS
         ? (0, r.jsx)(g.Z, {
               onClick: () => {
-                  null != w && (0, p.v)(w, p.d.INVITE), c.h7(k, !1, A);
+                  null != w && (0, p.v)(w, p.d.INVITE), c.h7(M, !1, A);
               },
               iconComponent: null == t || E ? s.ejJ : s.gQj,
               label: null != t ? _.NW.string(_.t['OzOM/v']) : _.NW.string(_.t['6F9ivr']),
@@ -79,13 +79,13 @@ function y(e) {
               size: S,
               buttonText: Z
           })
-        : null != M && null != y && m.Z.can(b.Plq.CREATE_INSTANT_INVITE, y)
+        : null != k && null != y && m.Z.can(b.Plq.CREATE_INSTANT_INVITE, y)
           ? (0, r.jsx)(
                 g.Z,
                 C(
                     {
                         onClick: () => {
-                            l()(null != M, 'guild cannot be null'),
+                            l()(null != k, 'guild cannot be null'),
                                 l()(null != y, 'channel cannot be null'),
                                 null != w && (0, p.v)(w, p.d.INVITE),
                                 (function (e) {
@@ -131,7 +131,7 @@ function y(e) {
                                             }
                                         );
                                 })({
-                                    guild: M,
+                                    guild: k,
                                     channel: y,
                                     streamUserId: null == i ? void 0 : i.ownerId,
                                     applicationId: t,

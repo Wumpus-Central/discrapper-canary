@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => M }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -55,7 +55,7 @@ function R(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,8 +73,8 @@ function M(e, t) {
         e
     );
 }
-function k(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: k } = e,
+function M(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: M } = e,
         { ref: L, width: D } = (0, h.Z)(),
         [W, U] = i.useState(3),
         [B, H] = i.useState(!n),
@@ -83,7 +83,7 @@ function k(e) {
         { firstMessage: z } = (0, P.cl)(V),
         Y = (0, s.e7)([j.Z], () => j.Z.hasJoined(t)),
         { disableReactionUpdates: q, disableReactionCreates: K, isLurking: X, isGuest: Q, isPendingMember: J } = (0, _.Z)(V),
-        $ = (0, s.e7)([E.Z], () => E.Z.getChannel(k)),
+        $ = (0, s.e7)([E.Z], () => E.Z.getChannel(M)),
         ee = (0, I.Bs)($),
         et = (0, s.e7)([m.Z], () => m.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         en = i.useCallback(
@@ -202,7 +202,7 @@ function k(e) {
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         u.zxk,
-                                        M(R({}, e), {
+                                        k(R({}, e), {
                                             look: u.zxk.Looks.BLANK,
                                             size: u.zxk.Sizes.SMALL,
                                             onClick: eo,
@@ -223,7 +223,7 @@ function k(e) {
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         u.zxk,
-                                        M(R({}, e), {
+                                        k(R({}, e), {
                                             look: u.zxk.Looks.BLANK,
                                             size: u.zxk.Sizes.SMALL,
                                             onClick: ea,
@@ -254,7 +254,7 @@ function k(e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             u.zxk,
-                                            M(R({}, e), {
+                                            k(R({}, e), {
                                                 look: u.zxk.Looks.BLANK,
                                                 size: u.zxk.Sizes.SMALL,
                                                 onClick: es,

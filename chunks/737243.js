@@ -39,7 +39,7 @@ let h = i.memo(function (e) {
                 referencedAvatarProfile: !1
             });
         }, [x]),
-        M = i.useCallback(
+        k = i.useCallback(
             () =>
                 (0, p.Z)({
                     message: h,
@@ -74,7 +74,7 @@ let h = i.memo(function (e) {
         onClickTargetUsername: T,
         onTargetUserContextMenu: Z,
         onPopoutRequestClose: R,
-        renderTargetMessage: M
+        renderTargetMessage: k
     });
 });
 function f(e, t, n) {

@@ -67,8 +67,8 @@ let E = i.memo(function (e) {
     let { baseMessage: n, referencedMessage: E, channel: N, compact: I = !1, referencedUsernameProfile: P, referencedAvatarProfile: S, setPopout: Z, isReplySpineClickable: T, showReplySpine: A } = e,
         w = E.state === h.Y.LOADED ? E.message : void 0,
         R = (0, b.Uj)(w),
-        M = (0, c.p)(),
-        k = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        k = (0, c.p)(),
+        M = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         L = i.useMemo(() => {
             if (null == w) return null;
             let e = (0, a.Z)(w);
@@ -115,7 +115,7 @@ let E = i.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: M
+                        shouldFilterKeywords: k
                     },
                     n = e.isFirstMessageInForumPost(N)
                         ? O(j({}, t), {
@@ -125,13 +125,13 @@ let E = i.memo(function (e) {
                           })
                         : O(j({}, t), {
                               formatInline: !0,
-                              allowHeading: k,
-                              allowList: k
+                              allowHeading: M,
+                              allowList: M
                           });
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [w, R, N, k, M]),
+        }, [w, R, N, M, k]),
         { isReplyAuthorBlocked: D, isReplyAuthorIgnored: W } = (0, l.cj)(
             [f.Z],
             () => ({

@@ -56,8 +56,8 @@ function w(e) {
 }
 function R(e) {
     let { user: t, currentUser: n, channel: R } = e,
-        M = __OVERLAY__,
-        k = (0, g.ZP)(t.id),
+        k = __OVERLAY__,
+        M = (0, g.ZP)(t.id),
         L = (0, c.ZP)(),
         D = (0, f.ZB)({
             layout: 'SIMPLIFIED_DM_PANEL',
@@ -84,7 +84,7 @@ function R(e) {
                 children: (0, r.jsxs)(x.Z, {
                     ref: U,
                     user: t,
-                    displayProfile: k,
+                    displayProfile: M,
                     profileType: Z.y0.PANEL,
                     themeOverride: L,
                     children: [
@@ -111,7 +111,7 @@ function R(e) {
                                     children: [
                                         (0, r.jsx)(C.Z, {
                                             user: t,
-                                            displayProfile: k,
+                                            displayProfile: M,
                                             profileType: Z.y0.PANEL,
                                             animateOnHover: !B,
                                             className: A.banner
@@ -123,10 +123,10 @@ function R(e) {
                                         (0, r.jsx)(_.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
-                                            displayProfile: k,
+                                            displayProfile: M,
                                             channelId: R.id,
                                             profileType: Z.y0.PANEL,
-                                            onOpenProfile: M ? void 0 : G
+                                            onOpenProfile: k ? void 0 : G
                                         }),
                                         (0, r.jsx)(N.Z, {
                                             location: 'UserProfilePanel',
@@ -140,15 +140,15 @@ function R(e) {
                                 (0, r.jsx)(P.Z, {
                                     user: t,
                                     currentUser: n,
-                                    displayProfile: k,
+                                    displayProfile: M,
                                     channel: R,
                                     isHovering: null == H.interactionType && B,
-                                    onOpenProfile: M ? void 0 : G
+                                    onOpenProfile: k ? void 0 : G
                                 }),
                                 (0, r.jsx)(S.Z, { user: t })
                             ]
                         }),
-                        !M &&
+                        !k &&
                             (0, r.jsx)('footer', {
                                 className: A.footer,
                                 children: (0, r.jsx)(a.zxk, {
@@ -171,9 +171,9 @@ function R(e) {
                                     children: T.NW.string(T.t['+Xp3ho'])
                                 })
                             }),
-                        (null == k ? void 0 : k.profileEffectId) != null &&
+                        (null == M ? void 0 : M.profileEffectId) != null &&
                             (0, r.jsx)(h.Z, {
-                                profileEffectId: null == k ? void 0 : k.profileEffectId,
+                                profileEffectId: null == M ? void 0 : M.profileEffectId,
                                 isHovering: B
                             })
                     ]

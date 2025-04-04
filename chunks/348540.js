@@ -29,11 +29,11 @@ var i = n(442837),
     S = n(969627);
 function Z(e) {
     let { user: t, currentUser: n, displayProfile: Z, channel: T, isHovering: A, onOpenProfile: w } = e,
-        { relationshipType: R, originApplicationId: M } = (0, i.cj)([c.Z], () => ({
+        { relationshipType: R, originApplicationId: k } = (0, i.cj)([c.Z], () => ({
             relationshipType: c.Z.getRelationshipType(t.id),
             originApplicationId: c.Z.getOriginApplicationId(t.id)
         })),
-        k = (0, o.vh)(t.id),
+        M = (0, o.vh)(t.id),
         L = (0, a.Y)({
             userId: t.id,
             location: 'UserProfilePanelBody'
@@ -74,11 +74,11 @@ function Z(e) {
                     children: (0, r.jsx)(C.Z, {
                         user: t,
                         channelId: T.id,
-                        applicationId: D ? M : void 0
+                        applicationId: D ? k : void 0
                     })
                 }),
             D &&
-                k.map((e) =>
+                M.map((e) =>
                     (0, r.jsx)(
                         j.Z.Overlay,
                         {

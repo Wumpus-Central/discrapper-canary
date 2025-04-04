@@ -1,7 +1,7 @@
 n.d(t, {
     TS: () => L,
     ud: () => w,
-    v0: () => M
+    v0: () => k
 }),
     n(47120);
 var r = n(200651),
@@ -244,7 +244,7 @@ function w(e) {
                 ? (0, r.jsxs)(A, {
                       channel: t,
                       children: [
-                          k(C, t.type === P.d4z.GUILD_ANNOUNCEMENT ? Z.NW.string(Z.t.l1dkSE) : Z.NW.string(Z.t.Pnajj4)),
+                          M(C, t.type === P.d4z.GUILD_ANNOUNCEMENT ? Z.NW.string(Z.t.l1dkSE) : Z.NW.string(Z.t.Pnajj4)),
                           (0, r.jsx)(N.Z.Title, {
                               level: v,
                               onContextMenu: d,
@@ -255,7 +255,7 @@ function w(e) {
                   })
                 : (0, r.jsxs)(i.Fragment, {
                       children: [
-                          k(C, t.type === P.d4z.GUILD_ANNOUNCEMENT ? Z.NW.string(Z.t.l1dkSE) : Z.NW.string(Z.t.Pnajj4)),
+                          M(C, t.type === P.d4z.GUILD_ANNOUNCEMENT ? Z.NW.string(Z.t.l1dkSE) : Z.NW.string(Z.t.Pnajj4)),
                           (0, r.jsx)(N.Z.Title, {
                               level: v,
                               onContextMenu: d,
@@ -268,7 +268,7 @@ function w(e) {
         case P.d4z.GUILD_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    k(C, Z.NW.string(Z.t.BVZqJi)),
+                    M(C, Z.NW.string(Z.t.BVZqJi)),
                     (0, r.jsx)(N.Z.Title, {
                         level: v,
                         onContextMenu: d,
@@ -280,7 +280,7 @@ function w(e) {
         case P.d4z.GUILD_STAGE_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    k(C, Z.NW.string(Z.t.EErMzM)),
+                    M(C, Z.NW.string(Z.t.EErMzM)),
                     (0, r.jsx)(N.Z.Title, {
                         level: v,
                         onContextMenu: d,
@@ -297,7 +297,7 @@ function w(e) {
                 let e = (0, h.KS)(l, a);
                 E = (0, r.jsxs)(i.Fragment, {
                     children: [
-                        k(e, Z.NW.string(Z.t.Pnajj4)),
+                        M(e, Z.NW.string(Z.t.Pnajj4)),
                         (0, r.jsx)(N.Z.Title, {
                             level: v,
                             onContextMenu: g,
@@ -313,7 +313,7 @@ function w(e) {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     E,
-                    k(S ? null : C, Z.NW.string(Z.t['7Xm5QE'])),
+                    M(S ? null : C, Z.NW.string(Z.t['7Xm5QE'])),
                     (0, r.jsx)(N.Z.Title, {
                         level: v,
                         onContextMenu: d,
@@ -363,7 +363,7 @@ let R = (e) => {
         i = (0, a.e7)([y.default], () => y.default.getUser(t.getRecipientId()));
     return t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == i ? void 0 : i.isStaff()) ? (0, r.jsx)(d.Z, { type: d.Z.Types.STAFF_ONLY_DM }) : null;
 };
-function M(e, t) {
+function k(e, t) {
     switch (e.type) {
         case P.d4z.DM:
             return (0, r.jsxs)(r.Fragment, {
@@ -388,7 +388,7 @@ function M(e, t) {
             return null;
     }
 }
-function k(e, t) {
+function M(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null !== e &&

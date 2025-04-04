@@ -35,11 +35,11 @@ function w(e) {
         a = (0, m.ZP)(t, !0),
         w = t.guild_id,
         R = (0, d.e7)([v.Z], () => (null != w ? v.Z.getRoles(w) : void 0)),
-        M = (0, d.e7)([O.default, v.Z], () => {
+        k = (0, d.e7)([O.default, v.Z], () => {
             var e;
             return O.default.getUser(null == (e = v.Z.getGuild(w)) ? void 0 : e.ownerId);
         }),
-        k = i.useMemo(
+        M = i.useMemo(
             () =>
                 null != w
                     ? s()(R)
@@ -51,7 +51,7 @@ function w(e) {
         ),
         L = i.useMemo(
             () =>
-                s()(k)
+                s()(M)
                     .filter((e) => {
                         if (null == w) return !1;
                         let n = E.I0({
@@ -61,13 +61,13 @@ function w(e) {
                         return c.e$(n, Z.Plq.ADMINISTRATOR) || c.e$(n, Z.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, w, k]
+            [t, w, M]
         ),
         D = (0, d.Wu)(
             [O.default],
             () => {
                 let e = {};
-                for (let n of (null != M && (e[M.id] = M), Object.values(t.permissionOverwrites))) {
+                for (let n of (null != k && (e[k.id] = k), Object.values(t.permissionOverwrites))) {
                     if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
                     let t = O.default.getUser(n.id);
                     null != t && (e[t.id] = t);
@@ -86,7 +86,7 @@ function w(e) {
                     })
                     .value();
             },
-            [t, M]
+            [t, k]
         ),
         W = j.Z.can(Z.Plq.MANAGE_CHANNELS, t) || j.Z.can(Z.Plq.MANAGE_ROLES, t),
         U = i.useCallback(() => l(!1), []);

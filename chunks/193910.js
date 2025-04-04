@@ -54,8 +54,8 @@ function T() {
     );
 }
 function A(e) {
-    let { channel: t, options: o, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: M } = e,
-        { analyticsLocations: k } = (0, p.ZP)(),
+    let { channel: t, options: o, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
+        { analyticsLocations: M } = (0, p.ZP)(),
         L = (0, g.Dt)({ channel: t });
     function D() {
         (0, b.R6)(t, void 0, 'Plus Button');
@@ -64,7 +64,7 @@ function A(e) {
         C.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
     }
     function U() {
-        M();
+        k();
     }
     function B() {
         (0, h.EW)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
@@ -129,7 +129,7 @@ function A(e) {
             (0, d.Z)({
                 channel: t,
                 openInPopout: !1,
-                analyticsLocations: k
+                analyticsLocations: M
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -232,7 +232,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.JOIN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
@@ -253,7 +253,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.LISTEN,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }
@@ -274,7 +274,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.WATCH,
                                             activity: n,
-                                            location: k[k.length - 1]
+                                            location: M[M.length - 1]
                                         })
                                     );
                                 }

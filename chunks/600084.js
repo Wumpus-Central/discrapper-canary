@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(734386),
     w = n(184279),
     R = n(438306),
-    M = n(544142),
-    k = n(128557),
+    k = n(544142),
+    M = n(128557),
     L = n(981631),
     D = n(176505),
     W = n(388032),
@@ -44,8 +44,8 @@ function H(e) {
         o = (0, l.e7)([x.ZP], () => null != n.guild_id && n === x.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, r.jsx)(I.Z, { channel: n });
-    if (C.Ec.has(n.type)) return (0, r.jsx)(M.Z, { channel: n });
-    if (o) return (0, r.jsx)(k.Z, { channel: n });
+    if (C.Ec.has(n.type)) return (0, r.jsx)(k.Z, { channel: n });
+    if (o) return (0, r.jsx)(M.Z, { channel: n });
     if (i) return (0, r.jsx)(A.Z, { channel: n });
     return (0, r.jsx)(R.Z, { channel: n });
 }
@@ -56,11 +56,11 @@ function F(e) {
         { type: x } = p,
         I = (0, l.e7)([j.default], () => (p.isPrivate() ? j.default.getUser(p.getRecipientId()) : null)),
         A = O.ZP.useUserTag(I),
-        { canManageRoles: R, canReadMessageHistory: M } = (0, l.cj)([v.Z], () => ({
+        { canManageRoles: R, canReadMessageHistory: k } = (0, l.cj)([v.Z], () => ({
             canManageRoles: v.Z.can(L.Plq.MANAGE_ROLES, p),
             canReadMessageHistory: v.Z.can(L.Plq.READ_MESSAGE_HISTORY, p)
         })),
-        k = (0, l.e7)([b.Z], () => (x === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, x]),
+        M = (0, l.e7)([b.Z], () => (x === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, x]),
         { systemDMRedesignEnabled: F } = g.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null != (t = p.isSystemDM()) && t }),
         G = (0, u.Z)(null != (n = null == I ? void 0 : I.id) ? n : L.lds),
         { authorizedAppToken: V, authorizedAppsFetchState: z } = (0, l.cj)([y.Z], () => {
@@ -73,8 +73,8 @@ function F(e) {
         Y = c.Z.useExperiment({ location: 'EmptyMessages' }).enabledDesktop;
     if (
         (i.useEffect(() => {
-            x === L.d4z.DM && null == k && null != I && a.Z.wait(() => (0, _.Z)(p.getRecipientId(), I.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [k, x, p, I]),
+            x === L.d4z.DM && null == M && null != I && a.Z.wait(() => (0, _.Z)(p.getRecipientId(), I.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+        }, [M, x, p, I]),
         i.useEffect(() => {
             (null == I ? void 0 : I.bot) && z === y.M.NOT_FETCHED && s.Z.fetch();
         }, [null == I ? void 0 : I.bot, z]),
@@ -149,7 +149,7 @@ function F(e) {
                 channel: p,
                 children: W.NW.format(W.t.MFwcqK, { name: C })
             });
-    return M
+    return k
         ? (0, r.jsx)(H, {
               channel: p,
               canManageRoles: R

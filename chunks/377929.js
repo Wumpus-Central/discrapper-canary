@@ -113,7 +113,7 @@ function P(e) {
         A = (0, h.Z)(t),
         w = (0, _.Z)(t),
         R = x.vF.useSetting(),
-        M = (0, a.e7)([v.Z], () => !o().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
+        k = (0, a.e7)([v.Z], () => !o().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(s.v2r, {
         navId: 'thread-context',
         onClose: n,
@@ -128,7 +128,7 @@ function P(e) {
                     N,
                     T,
                     E,
-                    R && !M
+                    R && !k
                         ? (0, r.jsx)(s.sNh, {
                               id: 'open',
                               label: O.NW.string(O.t.bX7EaG),

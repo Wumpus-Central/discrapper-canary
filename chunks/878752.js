@@ -34,8 +34,8 @@ function I(e) {
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: M } = d.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        k = (0, s.Z)(_.Z),
+        { enableViewerClipping: k } = d.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        M = (0, s.Z)(_.Z),
         L = (0, h.Zm)(t, 'VoiceEffectsActionBar') ? [l.z.CONSUMABLE_HD_POTION_UPSELL] : [],
         [D, W] = (0, c.US)(L, void 0, !0),
         U = D === l.z.CONSUMABLE_HD_POTION_UPSELL,
@@ -44,7 +44,7 @@ function I(e) {
     let H = (0, m.Z)(t),
         F = !Z && H,
         G = !Z && B,
-        V = M && k,
+        V = k && M,
         z = R && n;
     return (0, r.jsxs)(a.Gt, {
         value: S,

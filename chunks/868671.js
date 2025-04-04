@@ -35,10 +35,10 @@ function v(e) {
         A = (0, i.e7)([a.Z], () => a.Z.getChannel(v)),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
         R = (0, h.E)(w),
-        M = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
-        [k, L, D, W] = r.useMemo(() => {
+        k = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
+        [M, L, D, W] = r.useMemo(() => {
             let e;
-            if (null == I || 0 === I.length || null == N || !M) return [t, n, x];
+            if (null == I || 0 === I.length || null == N || !k) return [t, n, x];
             let r = O ? I.length : S ? 4 : 3,
                 i = I.slice(0, r);
             e = Z
@@ -73,7 +73,7 @@ function v(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, I, O, t, j, N, n, x, Z, M, S]),
+        }, [v, I, O, t, j, N, n, x, Z, k, S]),
         U = r.useRef(0),
         B = r.useRef(I),
         H = r.useRef(),
@@ -105,7 +105,7 @@ function v(e) {
                         r = n.slice(0, U.current);
                     !Z &&
                         T &&
-                        M &&
+                        k &&
                         ((0, f.e)(C.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: N,
                             first_shown_at: H.current,
@@ -123,10 +123,10 @@ function v(e) {
                             }));
                 }
             ),
-            [N, v, j, Z, T, M]
+            [N, v, j, Z, T, k]
         ),
         {
-            groups: k,
+            groups: M,
             rows: L,
             version: D,
             updateMaxRowSeen: G

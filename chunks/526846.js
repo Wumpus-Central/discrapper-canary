@@ -31,8 +31,8 @@ var r = n(200651),
     A = n(981631),
     w = n(388032),
     R = n(210408);
-let M = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    k = 'vc-activities-'.concat((0, a.Z)());
+let k = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
+    M = 'vc-activities-'.concat((0, a.Z)());
 function L(e) {
     var t;
     let n,
@@ -42,20 +42,20 @@ function L(e) {
             return (
                 i.useEffect(() => {
                     (0, y.XK)({
-                        surface: M,
+                        surface: k,
                         activeState: e
                     });
                 }, [e]),
                 {
                     fetchState: (0, d.e7)([x.Z], () =>
                         x.Z.getFetchState({
-                            surface: M,
+                            surface: k,
                             activeState: e
                         })
                     ),
                     voiceBannerCollection: (0, d.e7)([x.Z], () =>
                         x.Z.getCollections({
-                            surface: M,
+                            surface: k,
                             activeState: e
                         })
                     )[0]
@@ -122,9 +122,9 @@ let D = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             s || c();
         }, [c, s]);
-    let M = (0, h.bp)(),
+    let k = (0, h.bp)(),
         { analyticsLocations: D } = (0, g.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-        W = M === A.IlC.POPOUT,
+        W = k === A.IlC.POPOUT,
         U =
             ((n = a.getGuildId()),
             (l = a),
@@ -165,14 +165,14 @@ let D = i.forwardRef(function (e, t) {
         children: (0, r.jsx)(j.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                'aria-labelledby': k,
+                'aria-labelledby': M,
                 className: y,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: k,
+                                id: M,
                                 children: w.NW.string(w.t['2lnYtL'])
                             })
                         })

@@ -75,7 +75,7 @@ function Z(e) {
             iconSize: I.WW
         }),
         R = (0, C.cv)(n),
-        M =
+        k =
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
@@ -102,7 +102,7 @@ function Z(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: o()(P.messageContentWrapper, { [P.mentioned]: n.mentioned }),
-                children: [null != M ? null : w, null != (t = null != T ? T : M) ? t : (0, r.jsx)('span', { children: Z }), null != M ? null : A]
+                children: [null != k ? null : w, null != (t = null != T ? T : k) ? t : (0, r.jsx)('span', { children: Z }), null != k ? null : A]
             }),
             (0, r.jsx)('img', {
                 alt: '',
