@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(47120), n(653041), n(26686);
+n.d(t, { Z: () => V }), n(47120), n(653041), n(26686);
 var r = n(570140),
     i = n(147913),
     o = n(358221),
@@ -74,13 +74,14 @@ function w(e, t) {
     return i;
 }
 let D = 30,
-    L = new a.Z('AVErrorManager');
-function x(e, t) {
+    L = 30,
+    x = new a.Z('AVErrorManager');
+function M(e, t) {
     let n = new Set();
     for (let r of e) t.has(r) || n.add(r);
     return n;
 }
-let M = {
+let k = {
     [v.u.NO_AUDIO_INPUT_DETECTED]: {
         getActiveErrors: (e) => {
             let { voiceChannelId: t, voiceState: n } = e,
@@ -202,14 +203,15 @@ let M = {
     },
     [v.u.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH]: {
         getActiveErrors: () => {
-            var e, t, n;
-            let r = null != (n = null == (t = c.Z.getFirstConnectionStatsByContext(A.Yn.DEFAULT)) || null == (e = t.stats.rtp.outbound.find((e) => 'audio' === e.type)) ? void 0 : e.sampleRateMismatchPercent) ? n : 0;
-            if (Math.abs(r) > D)
+            var e, t, n, r, i;
+            if ((null != (r = null == (e = h.ZP.getRTCConnection()) ? void 0 : e.getDurationSeconds()) ? r : 0) < L) return;
+            let o = null != (i = null == (n = c.Z.getFirstConnectionStatsByContext(A.Yn.DEFAULT)) || null == (t = n.stats.rtp.outbound.find((e) => 'audio' === e.type)) ? void 0 : t.sampleRateMismatchPercent) ? i : 0;
+            if (Math.abs(o) > D)
                 return [
                     R(
                         {
                             type: v.u.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH,
-                            audioCaptureSampleRateMismatchPercent: r
+                            audioCaptureSampleRateMismatchPercent: o
                         },
                         (0, I.Y9)()
                     )
@@ -252,14 +254,14 @@ let M = {
         makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
     }
 };
-function k(e) {
-    return M[e.type];
-}
 function j(e) {
-    let t = k(e);
-    return ''.concat(e.type, ':').concat(null == t ? void 0 : t.makeErrorContextKey(e));
+    return k[e.type];
 }
 function U(e) {
+    let t = j(e);
+    return ''.concat(e.type, ':').concat(null == t ? void 0 : t.makeErrorContextKey(e));
+}
+function G(e) {
     if (null == e) return null;
     let t = [];
     for (let n of o.Z.getStreamParticipants(e)) {
@@ -276,7 +278,7 @@ function U(e) {
     }
     return t;
 }
-function G(e) {
+function B(e) {
     if (null == e) return null;
     let t = [];
     for (let n of o.Z.getVideoParticipants(e)) {
@@ -285,7 +287,7 @@ function G(e) {
     }
     return t;
 }
-class B extends i.Z {
+class F extends i.Z {
     _initialize() {
         (0, S.H3)('AVErrorManager');
     }
@@ -294,11 +296,11 @@ class B extends i.Z {
         if (__OVERLAY__) return;
         let n = null != (e = m.Z.getVoiceChannelId()) ? e : null,
             i = null != n && null != (t = b.Z.getVoiceStateForChannel(n)) ? t : null,
-            o = U(n),
+            o = G(n),
             a = u.Z.getAllActiveStreams(),
-            s = G(n),
+            s = B(n),
             l = new Map();
-        for (let e of Object.values(M)) {
+        for (let e of Object.values(k)) {
             let t = e.getActiveErrors({
                 voiceChannelId: n,
                 voiceState: i,
@@ -306,26 +308,26 @@ class B extends i.Z {
                 activeStreams: a,
                 videoErrors: s
             });
-            if (null != t) for (let e of t) l.set(j(e), e);
+            if (null != t) for (let e of t) l.set(U(e), e);
         }
         let c = T.Z.getActiveErrors();
-        if (!(c instanceof Map)) return void L.error('existingErrors is not a Map: '.concat(c, ' type: ').concat(Object.prototype.toString.call(c)));
+        if (!(c instanceof Map)) return void x.error('existingErrors is not a Map: '.concat(c, ' type: ').concat(Object.prototype.toString.call(c)));
         if (0 === l.size && 0 === c.size) return;
         let d = new Set(l.keys()),
             f = new Set(c.keys());
         if (d.size > f.size)
-            for (let e of x(d, f)) {
+            for (let e of M(d, f)) {
                 let t = l.get(e);
                 null != t && (0, v.kr)(t);
             }
         if (f.size > d.size)
-            for (let e of x(f, d)) {
+            for (let e of M(f, d)) {
                 let t = e,
                     n = c.get(t);
                 if (null != n) {
                     let { type: e } = n,
                         t = P(n, ['type']);
-                    L.info('Error resolved: '.concat(e, ' ').concat(JSON.stringify(t)));
+                    x.info('Error resolved: '.concat(e, ' ').concat(JSON.stringify(t)));
                 }
             }
         r.Z.dispatch({
@@ -366,4 +368,4 @@ class B extends i.Z {
             });
     }
 }
-let F = new B();
+let V = new F();
