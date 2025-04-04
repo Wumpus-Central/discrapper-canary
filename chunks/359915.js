@@ -37,15 +37,28 @@ class u extends o.Z {
         var t, n, r;
         let { channelId: i, message: o } = e,
             c = l.Z.getChannel(i);
-        if ((null === (t = o.author) || void 0 === t ? void 0 : t.id) !== s.default.getId() || !(null == c ? void 0 : c.isActiveThread())) return;
-        let u = new Date(null !== (r = null === (n = c.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== r ? r : 0).getTime();
+        if ((null == (t = o.author) ? void 0 : t.id) !== s.default.getId() || !(null == c ? void 0 : c.isActiveThread())) return;
+        let u = new Date(null != (r = null == (n = c.threadMetadata) ? void 0 : n.archiveTimestamp) ? r : 0).getTime();
         Date.now() - u < 5000 && a.Z.resort(c.parent_id);
+    }
+    handleGuildDelete(e) {
+        let { guild: t } = e,
+            n = l.Z.getAllThreadsForGuild(t.id);
+        0 !== n.length &&
+            r.ZP.Emitter.batched(() => {
+                for (let e of n)
+                    i.Z.dispatch({
+                        type: 'THREAD_DELETE',
+                        channel: e
+                    });
+            });
     }
     constructor(...e) {
         super(...e),
             c(this, 'actions', {
                 CHANNEL_DELETE: this.handleChannelDelete,
-                MESSAGE_CREATE: this.handleMessageCreate
+                MESSAGE_CREATE: this.handleMessageCreate,
+                GUILD_DELETE: this.handleGuildDelete
             });
     }
 }
