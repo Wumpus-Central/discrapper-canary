@@ -222,7 +222,6 @@ function j(e) {
         [c, u] = i.useState(!1),
         d = c ? s.V_R : s.qJs,
         p = (0, r.jsx)(s.M0o, {
-            className: I.expandButton,
             onClick: () => u(!c),
             color: s.YX$.PRIMARY,
             size: s.tT7.SIZE_24,
