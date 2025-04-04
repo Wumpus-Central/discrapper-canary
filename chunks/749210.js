@@ -303,17 +303,25 @@ let G = {
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-    async createRole(e, t, n) {
-        let r = {
+    async createRole(e, t, n, r) {
+        let c = {
             name: null != t && '' !== t ? t : A.NW.string(A.t.QBMHvL),
             color: null != n ? n : 0,
+            colors:
+                null != r
+                    ? r
+                    : {
+                          primary: null != n ? n : 0,
+                          secondary: null,
+                          tertiary: null
+                      },
             permissions: O.Hn
         };
         try {
             let t = await o.tn.post({
                     url: N.ANM.GUILD_ROLES(e),
                     oldFormErrors: !0,
-                    body: r,
+                    body: c,
                     rejectWithError: !1
                 }),
                 n = t.body;
