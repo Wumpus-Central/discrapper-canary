@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120), n(653041), n(26686);
+n.d(t, { Z: () => C }), n(47120), n(653041), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(26686);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -76,7 +76,8 @@ let j = {
             [R, D] = i.useState(t.name),
             [Z, w] = i.useState([]),
             [k, W] = i.useState(j),
-            L = i.useMemo(
+            L = i.useRef([]),
+            B = i.useMemo(
                 () => ({
                     type: l.Z.PROFILE_EFFECT,
                     id: O,
@@ -90,19 +91,19 @@ let j = {
                 }),
                 [Z]
             ),
-            B = (e) => {
+            M = (e) => {
                 let t = e.currentTarget.files;
                 return null == t ? null : t[0];
             },
-            M = (e, t) => {
-                let n = B(t);
+            U = (e, t) => {
+                let n = M(t);
                 null != n &&
                     (0, h.i0)(n, (t) => {
                         W((r) => E(_({}, r), { [e]: (0, h.z)(t, n) }));
                     });
             },
-            U = (e, t) => {
-                let n = B(e);
+            V = (e, t) => {
+                let n = M(e);
                 null != n &&
                     (0, h.i0)(n, (e) => {
                         w((r) => {
@@ -122,31 +123,40 @@ let j = {
                         });
                     });
             },
-            V = (e) => {
+            G = (e) => {
                 W((t) => E(_({}, t), { [e]: null }));
             };
         i.useEffect(() => {
             let e = t.config.effects;
-            e.length > 0 && w([...e].map((e) => ((e.src = (0, h.$j)(e.base64)), e)));
+            e.length > 0 &&
+                w(
+                    [...e].map((e) => {
+                        let t = (0, h.$j)(e.base64);
+                        return (e.src = t), L.current.push(t), e;
+                    })
+                );
         }, [t.config.effects]),
             i.useEffect(() => {
                 let e = t.config.stillFrames;
                 null != e &&
                     Object.entries(e).forEach((e) => {
                         let [t, n] = e;
-                        null != n && ((n.src = (0, h.$j)(n.base64)), W((e) => E(_({}, e), { [t]: n })));
+                        if (null != n) {
+                            let e = (0, h.$j)(n.base64);
+                            (n.src = e), L.current.push(e), W((e) => E(_({}, e), { [t]: n }));
+                        }
                     });
             }, [t.config.stillFrames]);
-        let G = {
+        let F = {
                 effect: t,
                 upsertConfig: s
             },
-            F = i.useRef(G);
+            H = i.useRef(F);
         return (i.useEffect(() => {
-            F.current = G;
+            H.current = F;
         }),
         i.useEffect(() => {
-            let { effect: e, upsertConfig: t } = F.current;
+            let { effect: e, upsertConfig: t } = H.current;
             t({
                 id: e.id,
                 name: R,
@@ -156,6 +166,15 @@ let j = {
                 }
             });
         }, [Z, k, R]),
+        i.useEffect(
+            () => () => {
+                L.current.forEach((e) => {
+                    URL.revokeObjectURL(e);
+                }),
+                    (L.current = []);
+            },
+            []
+        ),
         null == C)
             ? (0, r.jsx)('div', {})
             : (0, r.jsxs)('div', {
@@ -179,7 +198,7 @@ let j = {
                                           alt: '',
                                           width: 450
                                       }),
-                                      S && (0, r.jsx)(f.Z, { config: L })
+                                      S && (0, r.jsx)(f.Z, { config: B })
                                   ]
                               }),
                               (0, r.jsxs)('div', {
@@ -251,7 +270,7 @@ let j = {
                                                       (0, r.jsx)(d.Z, {
                                                           ref: T,
                                                           onChange: (e) => {
-                                                              let t = B(e);
+                                                              let t = M(e);
                                                               null != t &&
                                                                   (0, h.i0)(t, async (e) => {
                                                                       let n = await (0, h.Xv)(e, t, Z.length);
@@ -277,7 +296,7 @@ let j = {
                                                       'Upload thumbnail.png',
                                                       (0, r.jsx)(d.Z, {
                                                           ref: T,
-                                                          onChange: (e) => M(h.cq.THUMBNAIL, e),
+                                                          onChange: (e) => U(h.cq.THUMBNAIL, e),
                                                           multiple: !1
                                                       })
                                                   ]
@@ -288,7 +307,7 @@ let j = {
                                                       'Upload static.png',
                                                       (0, r.jsx)(d.Z, {
                                                           ref: T,
-                                                          onChange: (e) => M(h.cq.STATIC, e),
+                                                          onChange: (e) => U(h.cq.STATIC, e),
                                                           multiple: !1
                                                       })
                                                   ]
@@ -299,7 +318,7 @@ let j = {
                                                       'Upload reduced_motion.png',
                                                       (0, r.jsx)(d.Z, {
                                                           ref: T,
-                                                          onChange: (e) => M(h.cq.REDUCED_MOTION, e),
+                                                          onChange: (e) => U(h.cq.REDUCED_MOTION, e),
                                                           multiple: !1
                                                       })
                                                   ]
@@ -384,7 +403,7 @@ let j = {
                                                                           size: c.PhG.TINY,
                                                                           color: c.Ttl.RED,
                                                                           look: c.iLD.OUTLINED,
-                                                                          onClick: () => V(t),
+                                                                          onClick: () => G(t),
                                                                           children: 'Clear'
                                                                       })
                                                               ]
@@ -424,7 +443,7 @@ let j = {
                                                           canUsePremiumCustomization: !0,
                                                           isTryItOutFlow: !0
                                                       }),
-                                                      (0, r.jsx)(f.Z, { config: L })
+                                                      (0, r.jsx)(f.Z, { config: B })
                                                   ]
                                               })
                                       })
@@ -608,7 +627,7 @@ let j = {
                                                                       }),
                                                                       (0, r.jsx)(d.Z, {
                                                                           ref: T,
-                                                                          onChange: (e) => U(e, t),
+                                                                          onChange: (e) => V(e, t),
                                                                           multiple: !1
                                                                       })
                                                                   ]

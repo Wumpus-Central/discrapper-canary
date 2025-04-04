@@ -1,16 +1,24 @@
 n.d(t, {
-    mr: () => E,
-    n6: () => m,
-    sg: () => g
+    lb: () => E,
+    mr: () => b,
+    n6: () => g
 }),
-    n(47120);
+    n(315314),
+    n(309749),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120),
+    n(653041);
 var r,
-    i = n(788347),
-    o = n(372793),
-    a = n(731965),
-    s = n(433517),
-    l = n(489495);
-function c(e, t, n) {
+    i = n(192379),
+    o = n(788347),
+    a = n(372793),
+    s = n(731965),
+    l = n(433517),
+    c = n(489495);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +31,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +42,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,48 +59,77 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = '__DEBUG_PROFILE_EFFECTS_STORE',
-    p = { profileEffects: null != (r = s.K.get(_)) ? r : {} },
-    h = (e) => {
-        s.K.set(_, e.profileEffects);
+let p = '__DEBUG_PROFILE_EFFECTS_STORE',
+    h = { profileEffects: null != (r = l.K.get(p)) ? r : {} },
+    m = (e) => {
+        l.K.set(p, e.profileEffects);
     },
-    m = (0, o.F)((e) =>
-        f(u({}, p), {
+    g = (0, a.F)((e) =>
+        _(d({}, h), {
             upsertConfig: (t) =>
-                (0, a.j)(() => {
+                (0, s.j)(() => {
                     e((e) => {
-                        let n = u({}, e);
-                        return (n.profileEffects[t.id] = t), h(n), n;
+                        let n = d({}, e);
+                        return (n.profileEffects[t.id] = t), m(n), n;
                     });
                 }),
             deleteConfig: (t) =>
-                (0, a.j)(() => {
+                (0, s.j)(() => {
                     e((e) => {
-                        let n = u({}, e);
-                        return delete n.profileEffects[t], h(n), n;
+                        let n = d({}, e);
+                        return delete n.profileEffects[t], m(n), n;
                     });
                 })
         })
     ),
-    g = () =>
-        m((e) => {
+    E = () =>
+        g((e) => {
             let { profileEffects: t } = e;
             return Object.values(t);
-        }, i.X),
-    E = (e) => {
-        let t = m((t) => (null != e ? t.profileEffects[e] : null));
-        if (null == t) return null;
-        let n = [...t.config.effects].map((e) => ((e.src = (0, l.$j)(e.base64)), e));
-        return f(u({}, t), { config: f(u({}, t.config), { effects: n }) });
+        }, o.X),
+    b = (e) => {
+        let t = g((t) => (null != e ? t.profileEffects[e] : null)),
+            n = i.useRef([]);
+        return (
+            i.useEffect(
+                () => () => {
+                    n.current.forEach((e) => {
+                        URL.revokeObjectURL(e);
+                    }),
+                        (n.current = []);
+                },
+                []
+            ),
+            i.useMemo(() => {
+                if (null == t) return null;
+                let e = (e) => {
+                        let t = (0, c.$j)(e);
+                        return n.current.push(t), t;
+                    },
+                    r = t.config.effects.map((t) => _(d({}, t), { src: e(t.base64) })),
+                    i = t.config.stillFrames,
+                    o = null != i ? d({}, i) : {};
+                for (let t in o) {
+                    let n = o[t];
+                    null != n && (o[t] = _(d({}, n), { src: e(n.base64) }));
+                }
+                return _(d({}, t), {
+                    config: _(d({}, t.config), {
+                        effects: r,
+                        stillFrames: o
+                    })
+                });
+            }, [t])
+        );
     };
