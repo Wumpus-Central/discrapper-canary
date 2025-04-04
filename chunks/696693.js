@@ -6,7 +6,6 @@ e.exports = {
     errorContentContainer: 'errorContentContainer_cf1d1c',
     errorHeader: 'errorHeader_cf1d1c',
     header: 'header_cf1d1c',
-    amountLabel: 'amountLabel_cf1d1c',
     closeBtn: 'closeBtn_cf1d1c',
     videoLayers: 'videoLayers_cf1d1c',
     entryVideo: 'entryVideo_cf1d1c',
