@@ -162,6 +162,7 @@ function A(e) {
             ? (N(i, b),
               {
                   categories: i,
+                  allSounds: b,
                   isFetching: O,
                   soundCounts: {
                       favoriteSoundCount: 0,
@@ -219,6 +220,7 @@ function A(e) {
               }),
               {
                   categories: i,
+                  allSounds: b,
                   isFetching: O,
                   soundCounts: {
                       favoriteSoundCount: v.size,
