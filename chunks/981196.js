@@ -9,18 +9,18 @@ function l(e) {
         if ('tzid' !== s[u] && (0, i.q9)(l, s[u])) {
             var d = s[u].toUpperCase(),
                 f = e[s[u]],
-                p = '';
+                _ = '';
             if (!(!(0, i.EN)(f) || ((0, i.kJ)(f) && !f.length))) {
                 switch (d) {
                     case 'FREQ':
-                        p = r.Ci.FREQUENCIES[e.freq];
+                        _ = r.Ci.FREQUENCIES[e.freq];
                         break;
                     case 'WKST':
-                        p = (0, i.hj)(f) ? new o.O(f).toString() : f.toString();
+                        _ = (0, i.hj)(f) ? new o.O(f).toString() : f.toString();
                         break;
                     case 'BYWEEKDAY':
                         (d = 'BYDAY'),
-                            (p = (0, i.qo)(f)
+                            (_ = (0, i.qo)(f)
                                 .map(function (e) {
                                     return e instanceof o.O ? e : (0, i.kJ)(e) ? new o.O(e[0], e[1]) : new o.O(e);
                                 })
@@ -30,15 +30,15 @@ function l(e) {
                         n = c(f, e.tzid);
                         break;
                     case 'UNTIL':
-                        p = (0, a.Od)(f, !e.tzid);
+                        _ = (0, a.Od)(f, !e.tzid);
                         break;
                     default:
                         if ((0, i.kJ)(f)) {
-                            for (var _ = [], h = 0; h < f.length; h++) _[h] = String(f[h]);
-                            p = _.toString();
-                        } else p = String(f);
+                            for (var p = [], h = 0; h < f.length; h++) p[h] = String(f[h]);
+                            _ = p.toString();
+                        } else _ = String(f);
                 }
-                p && t.push([d, p]);
+                _ && t.push([d, _]);
             }
         }
     var m = t

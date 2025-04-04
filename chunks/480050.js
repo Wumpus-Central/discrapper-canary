@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(481060),
     c = n(607070),
     u = n(956664),
-    d = n(969263);
+    d = n(592697);
 function f(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-let _ = 400,
+let p = 400,
     h = Object.freeze({
         friction: 30,
         tension: 300
@@ -79,10 +79,10 @@ function g(e, t, n, r, i) {
     };
 }
 function E(e) {
-    let { children: t, active: n, onClick: o, className: f, width: E, height: v, maxWidth: b, maxHeight: y } = e,
+    let { children: t, active: n, onClick: o, className: f, width: E, height: b, maxWidth: y, maxHeight: v } = e,
         O = i.useRef(null),
-        S = (0, u.vV)(E, v, b, y),
-        { width: I, height: T } = g(E, v, b, y, n),
+        I = (0, u.vV)(E, b, y, v),
+        { width: S, height: T } = g(E, b, y, v, n),
         [N, A] = (0, l.q_F)(() => ({
             scale: 1,
             config: h
@@ -93,16 +93,16 @@ function E(e) {
             config: h
         })),
         [P, w] = i.useState(!1),
-        [D, x] = i.useState({
+        [D, L] = i.useState({
             x: 0,
             y: 0
         }),
-        L = (null != I ? I : 0) > window.innerWidth || (null != T ? T : 0) > window.innerHeight;
+        x = (null != S ? S : 0) > window.innerWidth || (null != T ? T : 0) > window.innerHeight;
     i.useEffect(() => {
         let e = c.Z.useReducedMotion;
         n
             ? A({
-                  scale: S,
+                  scale: I,
                   immediate: e
               })
             : (A({
@@ -114,12 +114,12 @@ function E(e) {
                   y: 0,
                   immediate: e
               }));
-    }, [n, A, S, C, R]);
+    }, [n, A, I, C, R]);
     let M = (e, t) => {
             var n;
-            let r = null == I ? (null === (n = O.current) || void 0 === n ? void 0 : n.getBoundingClientRect()) : null,
+            let r = null == S ? (null == (n = O.current) ? void 0 : n.getBoundingClientRect()) : null,
                 i = m({
-                    width: null != I ? I : r.width,
+                    width: null != S ? S : r.width,
                     height: null != T ? T : r.height,
                     offset: {
                         x: C.x.goal,
@@ -137,7 +137,7 @@ function E(e) {
                 0 === e.button &&
                 (e.preventDefault(),
                 w(!0),
-                x({
+                L({
                     x: e.clientX,
                     y: e.clientY
                 }));
@@ -147,7 +147,7 @@ function E(e) {
                 0 === e.button && (null == o || o(e));
                 return;
             }
-            (e.clientX - D.x) ** 2 + (e.clientY - D.y) ** 2 < _ && (null == o || o(e)), w(!1);
+            (e.clientX - D.x) ** 2 + (e.clientY - D.y) ** 2 < p && (null == o || o(e)), w(!1);
         };
     return (0, r.jsx)(s.animated.div, {
         ref: O,
@@ -159,10 +159,10 @@ function E(e) {
         onClick: (e) => e.stopPropagation(),
         className: a()(f, d.wrapper, {
             [d.panning]: n && P,
-            [d.pannable]: n && L
+            [d.pannable]: n && x
         }),
-        style: p({}, N, C),
+        style: _({}, N, C),
         children: t
     });
 }
-let v = i.memo(E);
+let b = i.memo(E);

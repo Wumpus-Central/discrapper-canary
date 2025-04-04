@@ -9,8 +9,8 @@ var i = n(392711),
     u = n(594174),
     d = n(70956),
     f = n(51144),
-    p = n(388032);
-let _ = new (s())({ maxAge: +d.Z.Millis.MINUTE });
+    _ = n(388032);
+let p = new (s())({ maxAge: +d.Z.Millis.MINUTE });
 function h(e, t, n) {
     null != r && clearTimeout(r),
         (r = setTimeout(() => {
@@ -33,15 +33,15 @@ function h(e, t, n) {
 }
 function m(e, t) {
     let n = ''.concat(null != e ? e : '', ':').concat(t),
-        r = _.get(n);
+        r = p.get(n);
     if (null != r) return r;
-    _.set(n, !0);
+    p.set(n, !0);
 }
 let g = {
     getGuildNameSuggestion: function (e) {
         let t = u.default.getCurrentUser(),
             n = f.oY(t);
-        return null == n || 0 === n.length ? '' : p.NW.formatToPlainString(p.t.Y6Qfjo, { username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
+        return null == n || 0 === n.length ? '' : _.NW.formatToPlainString(_.t.Y6Qfjo, { username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
     },
     requestMembers(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,

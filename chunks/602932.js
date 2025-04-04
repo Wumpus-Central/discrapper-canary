@@ -20,12 +20,12 @@ e.exports = function (e, t) {
               var s = c(arguments.length, 1) > n,
                   d = o(r) ? r : u(r),
                   f = s ? l(arguments, n) : [],
-                  p = s
+                  _ = s
                       ? function () {
                             i(d, this, f);
                         }
                       : d;
-              return t ? e(p, a) : e(p);
+              return t ? e(_, a) : e(_);
           }
         : e;
 };

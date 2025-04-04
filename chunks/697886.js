@@ -1,4 +1,4 @@
-n.d(t, { h: () => p });
+n.d(t, { h: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(692547),
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => {
+let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '' } = e,
+        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, a.m)(s),
-        g = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : c,
-        E = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : f;
+        g = null != (t = null == m ? void 0 : m.width) ? t : c,
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
     return (0, r.jsxs)(
         'svg',
         u(l({}, (0, o.Z)(h)), {
@@ -94,16 +94,16 @@ let p = (e) => {
             viewBox: '0 0 24 24',
             children: [
                 (0, r.jsx)('path', {
-                    fill: 'string' == typeof p ? p : p.css,
+                    fill: 'string' == typeof _ ? _ : _.css,
                     d: 'M17.34 11.06c-.18.28-.56.32-.8.1-.34-.28-.7-.53-1.08-.75a.52.52 0 0 1-.19-.18l-1.95-3.25a.5.5 0 0 1 0-.51l2.1-3.5A2 2 0 0 1 17.13 2h3.16a1.5 1.5 0 0 1 1.28 2.3l-4.23 6.76ZM3.7 2h3.17a2 2 0 0 1 1.71.97L12 8.67l.25.41c.1.18-.03.42-.25.42-1.73 0-3.31.63-4.54 1.67-.24.2-.62.17-.8-.1L2.43 4.28C1.81 3.3 2.53 2 3.71 2ZM12 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z',
-                    className: _
+                    className: p
                 }),
                 (0, r.jsx)('path', {
-                    fill: 'string' == typeof p ? p : p.css,
+                    fill: 'string' == typeof _ ? _ : _.css,
                     fillRule: 'evenodd',
                     d: 'M12 22a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Zm0-2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z',
                     clipRule: 'evenodd',
-                    className: _
+                    className: p
                 })
             ]
         })

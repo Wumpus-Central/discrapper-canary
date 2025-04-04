@@ -5,11 +5,11 @@ var i = n(481060),
     o = n(782568),
     a = n(583434),
     s = n(124072),
-    l = n(692629),
+    l = n(891984),
     c = n(626135),
     u = n(981631),
     d = n(388032),
-    f = n(239648);
+    f = n(897384);
 function _(e) {
     var t;
     let { shopLink: n, skuId: o, onClick: c } = e,
@@ -26,7 +26,7 @@ function _(e) {
                     className: f.icon,
                     color: i.TVs.colors.MENTION_FOREGROUND
                 }),
-                null !== (t = null == u ? void 0 : u.name) && void 0 !== t ? t : d.NW.string(d.t['Ij+2ra']),
+                null != (t = null == u ? void 0 : u.name) ? t : d.NW.string(d.t['Ij+2ra']),
                 (0, r.jsx)(l.Z, {})
             ]
         },

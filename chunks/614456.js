@@ -11,7 +11,7 @@ class c {
     }
     prepare() {
         var e;
-        if (void 0 === this.fMap) for (let t of ((this.fMap = {}), null !== (e = this.info.fields) && void 0 !== e ? e : [])) (this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t);
+        if (void 0 === this.fMap) for (let t of ((this.fMap = {}), null != (e = this.info.fields) ? e : [])) (this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t);
     }
     assert(e, t, n) {
         if (!e) {
@@ -23,8 +23,8 @@ class c {
         this.prepare();
         let i = [];
         for (let [a, s] of Object.entries(e)) {
-            let e;
-            let l = this.fMap[a];
+            let e,
+                l = this.fMap[a];
             if (!l) {
                 if (!n.ignoreUnknownFields) throw Error(`Found unknown field while reading ${this.info.typeName} from JSON format. JSON key: ${a}`);
                 continue;

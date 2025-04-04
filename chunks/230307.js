@@ -23,14 +23,14 @@ let l = {},
 function f() {
     (l = {}), (c = null);
 }
-function p(e) {
+function _(e) {
     let { statistics: t } = e;
     t.forEach((e) => {
         l[e.application_id] = e;
     }),
         (c = Date.now());
 }
-function _(e) {
+function p(e) {
     let { duration: t, applicationId: n, distributor: r } = e,
         i = l[n],
         o = new Date().toISOString(),
@@ -38,7 +38,7 @@ function _(e) {
         c = 0;
     if (null != i) {
         var u;
-        (s = i.total_duration), (c = null !== (u = i.total_discord_sku_duration) && void 0 !== u ? u : 0);
+        (s = i.total_duration), (c = null != (u = i.total_discord_sku_duration) ? u : 0);
     }
     (s += t),
         r === a.GQo.DISCORD && (c += t),
@@ -83,7 +83,7 @@ class h extends (r = i.ZP.Store) {
 }
 s(h, 'displayName', 'LibraryApplicationStatisticsStore');
 let m = new h(o.Z, {
-    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: p,
-    ACTIVITY_UPDATE_START: _,
+    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: _,
+    ACTIVITY_UPDATE_START: p,
     LOGOUT: f
 });

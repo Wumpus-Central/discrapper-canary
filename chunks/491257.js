@@ -15,10 +15,10 @@ e.exports = function (e, n, r, i) {
         var u,
             d,
             f,
-            p,
-            _ = e[c].replace(a, '%20'),
-            h = _.indexOf(r);
-        h >= 0 ? ((u = _.substr(0, h)), (d = _.substr(h + 1))) : ((u = _), (d = '')), (f = decodeURIComponent(u)), (p = decodeURIComponent(d)), t(o, f) ? (Array.isArray(o[f]) ? o[f].push(p) : (o[f] = [o[f], p])) : (o[f] = p);
+            _,
+            p = e[c].replace(a, '%20'),
+            h = p.indexOf(r);
+        h >= 0 ? ((u = p.substr(0, h)), (d = p.substr(h + 1))) : ((u = p), (d = '')), (f = decodeURIComponent(u)), (_ = decodeURIComponent(d)), t(o, f) ? (Array.isArray(o[f]) ? o[f].push(_) : (o[f] = [o[f], _])) : (o[f] = _);
     }
     return o;
 };

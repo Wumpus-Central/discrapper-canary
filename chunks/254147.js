@@ -1,4 +1,4 @@
-n.d(t, { W: () => p });
+n.d(t, { W: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(692547),
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => {
+let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '' } = e,
+        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, a.m)(s),
-        g = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : c,
-        E = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : f;
+        g = null != (t = null == m ? void 0 : m.width) ? t : c,
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
     return (0, r.jsx)(
         'svg',
         u(l({}, (0, o.Z)(h)), {
@@ -93,11 +93,11 @@ let p = (e) => {
             fill: 'none',
             viewBox: '0 0 24 24',
             children: (0, r.jsx)('path', {
-                fill: 'string' == typeof p ? p : p.css,
+                fill: 'string' == typeof _ ? _ : _.css,
                 fillRule: 'evenodd',
                 d: 'M4.45 6.9 5 6.61v4.88c0 .28.22.5.5.5h4a.5.5 0 0 0 .5-.5V10a2 2 0 1 1 4 0v1.5c0 .28.22.5.5.5h4a.5.5 0 0 0 .5-.5V6.62l.55.27a1 1 0 1 0 .9-1.78l-7.1-3.56a3 3 0 0 0-2.7 0l-7.1 3.56a1 1 0 1 0 .9 1.78ZM13 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM3 13a1 1 0 1 0 0 2h1.59L9 19.41V22a1 1 0 1 0 2 0v-1h2v1a1 1 0 1 0 2 0v-2.59L19.41 15H21a1 1 0 1 0 0-2H3Zm13.59 2H15v1.59L16.59 15ZM13 19v-1h-2v1h2Zm-4-2.41L7.41 15H9v1.59Zm4-.59v-1h-2v1h2Z',
                 clipRule: 'evenodd',
-                className: _
+                className: p
             })
         })
     );

@@ -73,8 +73,8 @@ function _(e, t, n) {
     return parseFloat(t);
 }
 function p({ hue: e, saturation: t, lightness: n, alpha: r }) {
-    let i;
-    let o = (1 - Math.abs(2 * (n /= 255) - 1)) * (t /= 255),
+    let i,
+        o = (1 - Math.abs(2 * (n /= 255) - 1)) * (t /= 255),
         a = o * (1 - Math.abs(((e / 60) % 2) - 1)),
         s = n - o / 2,
         l = (i = e < 60 ? [o, a, 0] : e < 120 ? [a, o, 0] : e < 180 ? [0, o, a] : e < 240 ? [0, a, o] : e < 300 ? [a, 0, o] : [o, 0, a]).map((e) => Math.round((e + s) * 255));
@@ -181,19 +181,19 @@ class E {
         return 0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) + 0.7152 * (t <= 0.03928 ? t / 12.92 : Math.pow((t + 0.055) / 1.055, 2.4)) + 0.0722 * (n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4));
     }
 }
-function v(e, t) {
+function b(e, t) {
     let n = e.alpha,
         r = (1 - n) * t.red + n * e.red,
         i = (1 - n) * t.green + n * e.green;
     return new E(r, i, (1 - n) * t.blue + n * e.blue, e.alpha + t.alpha * (1 - e.alpha));
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return 'var(--focus-primary)';
     let { saturation: n } = e.toHSL(),
         r = e.getRelativeLuminance();
     return n <= 0.4 ? 'var(--focus-primary)' : 'u' > typeof t ? (r < (t.brightnessTreshold || 0.2) ? 'var(--focus-light, rgba(255,255,255,0.7))' : 'var(--focus-dark, rgba(0, 0, 0, 0.85))') : 'rgba(255,255,255,0.7)';
 }
-function y(e) {
+function v(e) {
     let t = [];
     for (let n of e.styles.slice(1)) {
         let e = E.parseString(n.backgroundColor);
@@ -202,7 +202,7 @@ function y(e) {
             t.push(e);
         }
     }
-    return t.push(new E(255, 255, 255, 1)), t.reduce(v);
+    return t.push(new E(255, 255, 255, 1)), t.reduce(b);
 }
 let O = '--__adaptive-focus-ring-color',
     I = '--__adaptive-focus-ring-radius';
@@ -293,11 +293,11 @@ class N {
                 }),
             null != this.targetElement && null != this.targetAncestry)
         ) {
-            let n = y(this.targetAncestry);
+            let n = v(this.targetAncestry);
             t = {
                 ...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
                 zIndex: null != (e = this.zIndex) ? e : this.getNextZIndexForAncestry(this.targetAncestry),
-                [O]: b(n, this.themeOptions),
+                [O]: y(n, this.themeOptions),
                 [I]: this.getBorderRadius(this.targetAncestry)
             };
         }
@@ -389,7 +389,7 @@ function G(e) {
         [h, m] = o.useState(!1),
         g = o.useContext(C),
         E = o.Children.only(_),
-        { onBlur: v, onFocus: b, ...y } = E.props,
+        { onBlur: b, onFocus: y, ...v } = E.props,
         O = o.useMemo(
             () => ({
                 className: l,
@@ -440,21 +440,21 @@ function G(e) {
         }, [t, O, r, g, a, s]);
     let I = o.useCallback(
             (e) => {
-                g.hide(), (p.current = !1), m(!1), null == v || v(e);
+                g.hide(), (p.current = !1), m(!1), null == b || b(e);
             },
-            [v, g]
+            [b, g]
         ),
         S = o.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
-                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, O)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, O)), null == b || b(e);
+                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, O)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, O)), null == y || y(e);
             },
-            [s, t, b, g, O]
+            [s, t, y, g, O]
         );
     return n && null == a && null == r
         ? o.cloneElement(E, {
-              ...y,
-              className: d(y.className, p.current ? c : void 0, h ? u : void 0),
+              ...v,
+              className: d(v.className, p.current ? c : void 0, h ? u : void 0),
               onBlur: I,
               onFocus: S
           })

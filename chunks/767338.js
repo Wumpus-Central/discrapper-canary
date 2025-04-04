@@ -58,18 +58,18 @@ function d(e, t) {
 function f(e) {
     if (Array.isArray(e)) return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,7 +81,7 @@ function _(e, t) {
 var h = (0, r.createContext)(null),
     m = function (e) {
         var t = e.portal,
-            n = p(e, ['portal']),
+            n = _(e, ['portal']),
             l = s((0, r.useState)(null), 2),
             c = l[0],
             u = l[1];

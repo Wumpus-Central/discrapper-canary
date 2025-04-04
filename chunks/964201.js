@@ -1,4 +1,4 @@
-n.d(t, { q: () => p });
+n.d(t, { q: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(692547),
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => {
+let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '' } = e,
+        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, a.m)(s),
-        g = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : c,
-        E = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : f;
+        g = null != (t = null == m ? void 0 : m.width) ? t : c,
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
     return (0, r.jsx)(
         'svg',
         u(l({}, (0, o.Z)(h)), {
@@ -93,9 +93,9 @@ let p = (e) => {
             fill: 'none',
             viewBox: '0 0 24 24',
             children: (0, r.jsx)('path', {
-                fill: 'string' == typeof p ? p : p.css,
+                fill: 'string' == typeof _ ? _ : _.css,
                 d: 'M19.38 11.38a3 3 0 0 0 4.24 0l.03-.03a.5.5 0 0 0 0-.7L13.35.35a.5.5 0 0 0-.7 0l-.03.03a3 3 0 0 0 0 4.24L13 5l-2.92 2.92-3.65-.34a2 2 0 0 0-1.6.58l-.62.63a1 1 0 0 0 0 1.42l9.58 9.58a1 1 0 0 0 1.42 0l.63-.63a2 2 0 0 0 .58-1.6l-.34-3.64L19 11l.38.38ZM9.07 17.07a.5.5 0 0 1-.08.77l-5.15 3.43a.5.5 0 0 1-.63-.06l-.42-.42a.5.5 0 0 1-.06-.63L6.16 15a.5.5 0 0 1 .77-.08l2.14 2.14Z',
-                className: _
+                className: p
             })
         })
     );

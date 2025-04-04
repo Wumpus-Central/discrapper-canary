@@ -2,7 +2,7 @@ n.r(t),
     n.d(t, {
         WebAudioAPISound: () => S,
         WebAudioSound: () => I,
-        playGiftSound: () => y,
+        playGiftSound: () => v,
         voiceSinkId: () => m
     }),
     n(47120),
@@ -40,14 +40,14 @@ async function E(e) {
         r = await t.arrayBuffer();
     return (0, a.N)().decodeAudioData(r);
 }
-function v(e) {
+function b(e) {
     let t = g.get(e);
     return null == t && ((t = E(e)), g.set(e, t)), t;
 }
-function b(e, t) {
+function y(e, t) {
     return !!t.startsWith(e) && null != t.substring(e.length).match(h);
 }
-function y(e, t) {
+function v(e, t) {
     let n = new Audio((0, s.Z)(e));
     (n.volume = (0, l.Z)(t)), n.play();
 }
@@ -67,7 +67,7 @@ async function O() {
             }
             let s = t.filter((e) => 'audiooutput' === e.kind && 'communications' !== e.deviceId),
                 l = s[r];
-            if (b(a.name, null !== (e = null == l ? void 0 : l.label) && void 0 !== e ? e : '')) {
+            if (y(a.name, null != (e = null == l ? void 0 : l.label) ? e : '')) {
                 m = l.deviceId;
                 return;
             }
@@ -100,7 +100,7 @@ let I = class {
         }
         pause() {
             var e;
-            null === (e = this._audio) || void 0 === e || e.then((e) => e.pause());
+            null == (e = this._audio) || e.then((e) => e.pause());
         }
         stop() {
             this.destroyAudio();
@@ -127,7 +127,7 @@ let I = class {
             var e;
             return (
                 (this._audio =
-                    null !== (e = this._audio) && void 0 !== e
+                    null != (e = this._audio)
                         ? e
                         : new Promise((e, t) => {
                               let r = new Audio();
@@ -209,12 +209,12 @@ let I = class {
         async ensureAudio() {
             if (null == this._ensureAudioPromise) {
                 let e = Math.min((c.Z.getOutputVolume() / 100) * this._volume, 1);
-                this._ensureAudioPromise = v(this.name)
+                this._ensureAudioPromise = b(this.name)
                     .then((t) => {
                         if (null == t) return Promise.reject(Error('Failed to load audio: '.concat(this.name)));
                         if (((this._audioContext = (0, a.N)()), (this._gain = new GainNode(this._audioContext)), (this._gain.gain.value = e), u.isPlatformEmbedded)) {
                             var n, r;
-                            null === (n = (r = this._audioContext).setSinkId) || void 0 === n || n.call(r, this.outputChannel === d.w.DEFAULT ? _ : m);
+                            null == (n = (r = this._audioContext).setSinkId) || n.call(r, this.outputChannel === d.w.DEFAULT ? _ : m);
                         }
                         return (
                             (this._buffer = t),

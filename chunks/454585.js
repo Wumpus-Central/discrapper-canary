@@ -57,49 +57,49 @@ function f(e, t) {
         e
     );
 }
-let p = null;
-function _(e, t) {
+let _ = null;
+function p(e, t) {
     let n = {};
-    return null != e.mention && null != p && (n = { mention: p }), (0, l.Z)([e, ...t, n]);
+    return null != e.mention && null != _ && (n = { mention: _ }), (0, l.Z)([e, ...t, n]);
 }
-p = n(878611).Z;
+_ = n(878611).Z;
 let h = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0
     },
-    m = _(s.Z.RULES, [(0, a.Z)({ enableBuildOverrides: !0 })]),
-    g = i().omit(_(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline'),
-    E = _(s.Z.CHANNEL_TOPIC_RULES, [(0, a.Z)(f(u({}, h), { emojiTooltipPosition: 'bottom' })), { codeBlock: { react: s.Z.RULES.text.react } }]),
-    v = _(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, a.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
-    b = _(s.Z.EMBED_TITLE_RULES, [(0, a.Z)(h)]),
-    y = _(s.Z.INLINE_REPLY_RULES, [(0, a.Z)(h)]),
-    O = _(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, a.Z)(h)]),
-    S = _(s.Z.GUILD_EVENT_RULES, [(0, a.Z)(h)]),
-    I = _(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Z)(h)]),
-    T = i().omit(_(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+    m = p(s.Z.RULES, [(0, a.Z)({ enableBuildOverrides: !0 })]),
+    g = i().omit(p(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline'),
+    E = p(s.Z.CHANNEL_TOPIC_RULES, [(0, a.Z)(f(u({}, h), { emojiTooltipPosition: 'bottom' })), { codeBlock: { react: s.Z.RULES.text.react } }]),
+    b = p(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, a.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
+    y = p(s.Z.EMBED_TITLE_RULES, [(0, a.Z)(h)]),
+    v = p(s.Z.INLINE_REPLY_RULES, [(0, a.Z)(h)]),
+    O = p(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, a.Z)(h)]),
+    I = p(s.Z.GUILD_EVENT_RULES, [(0, a.Z)(h)]),
+    S = p(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.Z)(h)]),
+    T = i().omit(p(s.Z.RULES, [(0, a.Z)(h)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
     N = { text: s.Z.RULES.text },
     A = {
-        combineAndInjectMentionRule: _,
+        combineAndInjectMentionRule: p,
         createReactRules: a.Z,
         defaultReactRuleOptions: h,
         defaultRules: m,
-        guildEventRules: S,
+        guildEventRules: I,
         notifCenterV2MessagePreviewRules: T,
         lockscreenWidgetMessageRules: N,
         astParserFor: o._p,
         reactParserFor: o.w4,
         parse: o.w4(m),
         parseTopic: (e, t, n, r) => o.w4(E)(e, t, u({ allowLinks: !0 }, n), r),
-        parseVoiceChannelStatus: o.w4(v),
-        parseEmbedTitle: o.w4(b),
-        parseInlineReply: o.w4(y),
+        parseVoiceChannelStatus: o.w4(b),
+        parseEmbedTitle: o.w4(y),
+        parseInlineReply: o.w4(v),
         parseGuildVerificationFormRule: o.w4(O),
-        parseGuildEventDescription: o.w4(S),
-        parseAutoModerationSystemMessage: o.w4(I),
+        parseGuildEventDescription: o.w4(I),
+        parseAutoModerationSystemMessage: o.w4(S),
         parseForumPostGuidelines: o.w4(g),
         parseToAST: o._p(m),
         parseTopicToAST: o._p(E),
-        parseEmbedTitleToAST: o._p(b),
-        parseInlineReplyToAST: o._p(y),
-        parseAutoModerationSystemMessageToAST: o._p(I)
+        parseEmbedTitleToAST: o._p(y),
+        parseInlineReplyToAST: o._p(v),
+        parseAutoModerationSystemMessageToAST: o._p(S)
     };

@@ -12,7 +12,7 @@ var i = n(481060),
     f = n(388032);
 let _ = 'guild-boost-purchase-modal';
 async function p(e) {
-    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: h, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: b = 1, disablePremiumUpsell: v, onSubscribeComplete: y, onSubscriptionConfirmation: O, inPopout: I, applicationId: S, intent: T } = e,
+    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: h, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: b = 1, disablePremiumUpsell: y, onSubscribeComplete: v, onSubscriptionConfirmation: O, inPopout: I, applicationId: S, intent: T } = e,
         N = I ? i.u1M : i.z1l,
         A = l.ZP.getPremiumTypeSubscription();
     if (null != A && A.isPurchasedExternally && null != A.paymentGateway) {
@@ -35,7 +35,7 @@ async function p(e) {
     };
     await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('22646'), n.e('24920'), n.e('13409')]).then(n.bind(n, 343649));
+            let { default: e } = await Promise.all([n.e('22646'), n.e('24920'), n.e('29922')]).then(n.bind(n, 343649));
             return (n) => {
                 let { transitionState: i, onClose: o } = n;
                 return (0, r.jsx)(e, {
@@ -49,9 +49,9 @@ async function p(e) {
                     guildId: m,
                     totalNumberOfSlotsToAssign: b,
                     closeGuildPerksModal: g,
-                    disablePremiumUpsell: v,
+                    disablePremiumUpsell: y,
                     onSubscriptionConfirmation: O,
-                    onSubscribeComplete: y,
+                    onSubscribeComplete: v,
                     applicationId: S,
                     intent: T
                 });

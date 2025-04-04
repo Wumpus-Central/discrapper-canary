@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    g: () => p
+    g: () => _
 });
 var r = n(200651);
 n(192379);
@@ -8,7 +8,7 @@ var i = n(481060),
     o = n(600164),
     a = n(612853),
     s = n(388032),
-    l = n(958003);
+    l = n(240150);
 function c(e, t, n) {
     return (
         t in e
@@ -61,17 +61,17 @@ function f(e, t) {
         e
     );
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e;
 })({});
-let _ = (e) => {
-    let { onBack: t, backText: n, primaryIcon: c, primaryCTA: d, primaryType: p, primaryText: _, primaryTooltip: h, primaryDisabled: m, primarySubmitting: g, onPrimary: E, secondaryText: v, onSecondary: b } = e,
-        y = () => {
-            if (null == d || null == _) return null;
+let p = (e) => {
+    let { onBack: t, backText: n, primaryIcon: c, primaryCTA: d, primaryType: _, primaryText: p, primaryTooltip: h, primaryDisabled: m, primarySubmitting: g, onPrimary: E, secondaryText: b, onSecondary: y } = e,
+        v = () => {
+            if (null == d || null == p) return null;
             let e = 2 === d ? i.gtL : i.zxk,
                 t = {
                     innerClassName: l.button,
-                    type: p,
+                    type: _,
                     disabled: m,
                     submitting: g,
                     color: 0 === d ? i.zxk.Colors.BRAND : i.zxk.Colors.GREEN,
@@ -91,7 +91,7 @@ let _ = (e) => {
                                                 color: 'currentColor',
                                                 className: l.primaryIcon
                                             }),
-                                      _
+                                      p
                                   ]
                               })
                           )
@@ -106,21 +106,21 @@ let _ = (e) => {
                                         color: 'currentColor',
                                         className: l.primaryIcon
                                     }),
-                              _
+                              p
                           ]
                       })
                   );
         },
         O = () =>
-            null == v
+            null == b
                 ? null
                 : (0, r.jsx)(i.zxk, {
                       color: i.zxk.Colors.PRIMARY,
                       look: i.zxk.Looks.LINK,
-                      onClick: b,
-                      children: v
+                      onClick: y,
+                      children: b
                   }),
-        S = () =>
+        I = () =>
             null == t
                 ? null
                 : (0, r.jsx)(i.zxk, {
@@ -133,8 +133,8 @@ let _ = (e) => {
     return (0, r.jsxs)(i.mzw, {
         justify: o.Z.Justify.BETWEEN,
         align: o.Z.Align.CENTER,
-        children: [y(), O(), (0, r.jsx)(a.Z, {}), S()]
+        children: [v(), O(), (0, r.jsx)(a.Z, {}), I()]
     });
 };
-_.CTAType = p;
-let h = _;
+p.CTAType = _;
+let h = p;

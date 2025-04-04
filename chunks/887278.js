@@ -1,7 +1,7 @@
 n.d(t, {
-    $1: () => v,
+    $1: () => b,
     YT: () => O,
-    pn: () => S
+    pn: () => I
 }),
     n(411104);
 var r = n(570140),
@@ -14,8 +14,8 @@ var r = n(570140),
     u = n(358085),
     d = n(998502),
     f = n(789465),
-    p = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -73,18 +73,18 @@ let E = {
     ptb: [1, 0, 1005, 2],
     stable: [1, 0, 9001, 2]
 };
-function v() {
+function b() {
     var e;
-    return !(null === d.ZP || void 0 === d.ZP ? void 0 : null === (e = d.ZP.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(d.ZP, 'discord_hook', E));
+    return !(null === d.ZP || void 0 === d.ZP || null == (e = d.ZP.isModuleVersionAtLeast) ? void 0 : e.call(d.ZP, 'discord_hook', E));
 }
-async function b() {
+async function y() {
     if (!(0, u.isWindows)()) return Promise.reject(Error('Hook is only available on Windows'));
-    if (v()) return Promise.reject(Error('Hook module is too old'));
+    if (b()) return Promise.reject(Error('Hook module is too old'));
     await d.ZP.ensureModule('discord_hook');
     let e = await d.ZP.requireModule('discord_hook');
-    return y(e), e;
+    return v(e), e;
 }
-function y(e) {
+function v(e) {
     if (null == e.setFlags) return;
     let t = 0,
         n = f.Z.getCurrentConfig({ location: 'edd7d3_1' }, { autoTrackExposure: !1 });
@@ -93,15 +93,15 @@ function y(e) {
     null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)), e.setFlags(t);
 }
 function O(e, t) {
-    return b().then((n) => {
+    return y().then((n) => {
         var l;
-        let u = null === (l = a.ZP.getGameForPID(e)) || void 0 === l ? void 0 : l.name,
+        let u = null == (l = a.ZP.getGameForPID(e)) ? void 0 : l.name,
             d = s.Z.getGameByName(u),
             f = null;
         return new Promise((s) => {
             let l = (e, n) => {
                     c.default.track(
-                        p.rMx.HOOK_RESULT,
+                        _.rMx.HOOK_RESULT,
                         h(
                             {
                                 game_name: u,
@@ -115,8 +115,8 @@ function O(e, t) {
                         null != f && (clearTimeout(f), (f = null)),
                         n ? s() : s((e = null != e ? e : 'Unknown hook error'));
                 },
-                _ = a.ZP.getOverlayOptionsForPID(e),
-                m = g(h({}, o.r, _), { elevate: a.ZP.shouldElevateProcessForPID(e) });
+                p = a.ZP.getOverlayOptionsForPID(e),
+                m = g(h({}, o.r, p), { elevate: a.ZP.shouldElevateProcessForPID(e) });
             null == m.allowHook || m.allowHook
                 ? ((f = setTimeout(() => {
                       n.cancelAttachToProcess(e), l('Timed out waiting for hook response', !1);
@@ -127,8 +127,8 @@ function O(e, t) {
         });
     });
 }
-function S(e) {
-    return b().then((t) => {
+function I(e) {
+    return y().then((t) => {
         t.cancelAttachToProcess(e);
     });
 }

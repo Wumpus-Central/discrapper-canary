@@ -27,7 +27,7 @@ function s(e, t, n) {
             return (
                 i &&
                     a(e).then((e) => {
-                        !t && s(e);
+                        t || s(e);
                     }),
                 () => {
                     t = !0;

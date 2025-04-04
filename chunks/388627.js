@@ -20,7 +20,7 @@ function d() {
     let [e = PopoutWindowStore] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [PopoutWindowStore];
     return e.getWindowVisible(OVERLAY_V3_KEY);
 }
-n(340101), n(501787);
+n(340101), n(757744), n(501787);
 function f(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
@@ -55,9 +55,9 @@ function p() {
     return (null == g || null == g.id || null == g.name) && (null == E || null == E.application_id)
         ? void 0
         : {
-              id: null !== (e = null == g ? void 0 : g.id) && void 0 !== e ? e : null == E ? void 0 : E.application_id,
+              id: null != (e = null == g ? void 0 : g.id) ? e : null == E ? void 0 : E.application_id,
               altId: null == E ? void 0 : E.application_id,
-              name: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : null == E ? void 0 : E.name
+              name: null != (t = null == g ? void 0 : g.name) ? t : null == E ? void 0 : E.name
           };
 }
 function h() {

@@ -2,7 +2,7 @@ n.d(t, {
     In: () => b,
     Lr: () => m,
     PR: () => E,
-    Sr: () => v,
+    Sr: () => y,
     k: () => h,
     mB: () => g
 }),
@@ -142,7 +142,7 @@ async function b(e) {
         );
     }
 }
-async function v(e, t) {
+async function y(e, t) {
     l.Z.dispatch({
         type: 'MUTUAL_FRIENDS_FETCH_START',
         userId: e

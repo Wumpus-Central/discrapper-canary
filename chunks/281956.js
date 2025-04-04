@@ -15,12 +15,12 @@ function c(e) {
     let u = t.getGuild(e),
         { notClaimed: d } = n.getCheck(e),
         f = r.getCurrentUser(),
-        p = !1;
+        _ = !1;
     if (null != f) {
-        var _, h;
-        p = null !== (h = null === (_ = c.getMember(e, f.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== h && h;
+        var p, h;
+        _ = null != (h = null == (p = c.getMember(e, f.id)) ? void 0 : p.isPending) && h;
     }
-    return (p || d) && !!(0, l.Dc)(u);
+    return (_ || d) && !!(0, l.Dc)(u);
 }
 function u(e) {
     return (0, r.e7)([o.Z, a.Z, s.default, i.ZP], () => null != e && c(e, [o.Z, a.Z, s.default, i.ZP]), [e]);

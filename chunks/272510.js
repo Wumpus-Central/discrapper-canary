@@ -44,15 +44,15 @@ function g(e) {
 function E(e) {
     let { user: t, guildId: n, viewProfileItem: m, appContext: E } = e,
         b = i.useRef(null),
-        { trackUserProfileAction: v } = (0, _.KZ)(),
-        { analyticsLocations: y, newestAnalyticsLocation: O } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        { trackUserProfileAction: y } = (0, _.KZ)(),
+        { analyticsLocations: v, newestAnalyticsLocation: O } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
         I = (0, d.Z)({
             user: t,
             guildId: n,
             onAction: () =>
-                v({
+                y({
                     action: 'PRESS_INVITE_TO_SERVER',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 })
         }),
         S = (0, c.Z)({
@@ -62,19 +62,19 @@ function E(e) {
             color: 'danger',
             appContext: E,
             onBlock: () =>
-                v({
+                y({
                     action: 'BLOCK',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 }),
             onIgnore: () =>
-                v({
+                y({
                     action: 'IGNORE',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 }),
             onUnblock: () =>
-                v({
+                y({
                     action: 'UNBLOCK',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 })
         }),
         T = (0, u.Z)({
@@ -83,39 +83,39 @@ function E(e) {
             location: O,
             appContext: E,
             onBlock: () =>
-                v({
+                y({
                     action: 'BLOCK',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 }),
             onIgnore: () =>
-                v({
+                y({
                     action: 'IGNORE',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 }),
             onUnignore: () =>
-                v({
+                y({
                     action: 'UNIGNORE',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 })
         }),
-        A = (0, f.Z)({
+        N = (0, f.Z)({
             user: t,
             guildId: n,
             location: O,
             appContext: E,
             color: 'danger',
             onAction: () =>
-                v({
+                y({
                     action: 'REPORT',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 })
         }),
-        N = [
+        A = [
             [m, I],
             [
                 T,
                 S,
-                A,
+                N,
                 (0, f.T)({
                     user: t,
                     guildId: n,
@@ -123,9 +123,9 @@ function E(e) {
                     appContext: E,
                     color: 'danger',
                     onAction: () =>
-                        v({
+                        y({
                             action: 'REPORT',
-                            analyticsLocations: y
+                            analyticsLocations: v
                         })
                 })
             ],
@@ -134,17 +134,17 @@ function E(e) {
                     id: t.id,
                     label: h.NW.string(h.t['/AXYnJ']),
                     onSuccess: () =>
-                        v({
+                        y({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: y
+                            analyticsLocations: v
                         })
                 })
             ]
         ];
-    return N.every((e) => e.every((e) => null == e))
+    return A.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(s.Gt, {
-              value: y,
+              value: v,
               children: (0, r.jsx)(o.yRy, {
                   targetElementRef: b,
                   renderPopout: (e) => {
@@ -154,7 +154,7 @@ function E(e) {
                           onSelect: void 0,
                           onClose: t,
                           'aria-label': h.NW.string(h.t.AXIHpa),
-                          children: N.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
+                          children: A.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
                       });
                   },
                   children: (e) =>

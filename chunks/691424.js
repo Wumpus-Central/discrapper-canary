@@ -13,11 +13,11 @@ var r = n(200651),
     p = n(779699),
     h = n(359875),
     m = n(124072),
-    g = n(692629),
+    g = n(891984),
     E = n(695503),
-    v = n(628692),
-    b = n(590956),
-    y = n(703656),
+    b = n(628692),
+    y = n(590956),
+    v = n(703656),
     O = n(271383),
     I = n(430824),
     S = n(572004),
@@ -31,8 +31,8 @@ var r = n(200651),
     D = n(311739),
     L = n(981631),
     x = n(176505),
-    M = n(509045),
-    k = n(332952);
+    M = n(73433),
+    k = n(283574);
 function j(e, t, n) {
     return (
         t in e
@@ -85,14 +85,14 @@ function B(e, t) {
         e
     );
 }
-function V(e) {
+function F(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
             let { key: a, channelId: s, messageId: l } = o;
             return e.src
                 ? (0, r.jsx)(
-                      b.c,
+                      y.c,
                       {
                           node: e,
                           tooltipPosition: t,
@@ -106,7 +106,7 @@ function V(e) {
         }
     };
 }
-function F(e) {
+function V(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
@@ -117,7 +117,7 @@ function F(e) {
                 e = B(U({}, e), { name: t ? ':'.concat(d.name, ':') : d.name });
             }
             return (0, r.jsx)(
-                b.Y,
+                y.Y,
                 {
                     isInteracting: u,
                     node: e,
@@ -135,7 +135,7 @@ function Z(e, t, n) {
     let r = I.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.hasFeature(L.oNc.COMMUNITY) && (0, y.uL)(L.Z5c.CHANNEL(e, t));
+        r.hasFeature(L.oNc.COMMUNITY) && (0, v.uL)(L.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case 'home':
@@ -193,7 +193,7 @@ function H(e) {
               })
     });
 }
-n(490448);
+n(484944);
 let W = {
     blockQuote: {
         react: (e, t, n) =>
@@ -289,7 +289,7 @@ let W = {
     },
     soundboard: {
         react: (e, t, n) =>
-            (0, r.jsx)(v.ZP, {
+            (0, r.jsx)(b.ZP, {
                 channelId: e.channelId,
                 messageId: e.messageId,
                 soundId: e.soundId,
@@ -382,8 +382,8 @@ function Y(e) {
     return B(U({}, W), {
         link: (0, w.Z)(e),
         devLink: (0, P.Z)(e),
-        emoji: V(e),
-        customEmoji: F(e),
+        emoji: F(e),
+        customEmoji: V(e),
         channelMention: (0, C.Z)(e),
         commandMention: (0, R.ZP)(e),
         attachmentLink: (0, A.Z)(e),

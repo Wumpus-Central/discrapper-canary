@@ -11,7 +11,7 @@ var r,
     f = n(436774),
     _ = n(302221),
     p = n(474936),
-    h = n(571310);
+    h = n(970612);
 function m(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,18 +64,18 @@ function v(e, t) {
         e
     );
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function y(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -332,13 +332,13 @@ class S extends (r = o.PureComponent) {
 }
 function T(e) {
     var { theme: t } = e,
-        n = b(e, ['theme']);
+        n = y(e, ['theme']);
     let r = (0, d.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(),
         o = (0, d.dQu)(c.Z.unsafe_rawColors.BRAND_500).hex(),
         a = (0, u.wj)(t) ? r : o;
     return (0, i.jsx)(
         S,
-        v(g({}, n), {
+        b(g({}, n), {
             theme: t,
             flashColor: a
         })

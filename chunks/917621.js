@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(503438),
     x = n(981631),
     y = n(616922),
-    E = n(388032),
-    v = n(638128);
+    v = n(388032),
+    E = n(638128);
 function O(e, t, n) {
     return (
         t in e
@@ -71,11 +71,11 @@ function C(e) {
         c = i.useRef(null);
     return t.unknownUser
         ? (0, r.jsx)('div', {
-              className: v.partyMember,
+              className: E.partyMember,
               children: (0, r.jsx)(o.qEK, {
                   src: t.user.getAvatarURL(a, (0, o.pxk)(o.EFr.SIZE_24)),
                   size: o.EFr.SIZE_24,
-                  className: l()(v.partyAvatar, n),
+                  className: l()(E.partyAvatar, n),
                   'aria-label': t.user.username
               })
           })
@@ -95,7 +95,7 @@ function C(e) {
                                   N(
                                       {
                                           innerRef: c,
-                                          className: v.partyMemberKnown
+                                          className: E.partyMemberKnown
                                       },
                                       i,
                                       e
@@ -104,7 +104,7 @@ function C(e) {
                                       children: (0, r.jsx)(o.qEK, {
                                           src: t.user.getAvatarURL(a, (0, o.pxk)(o.EFr.SIZE_24)),
                                           size: o.EFr.SIZE_24,
-                                          className: l()(v.partyAvatar, n),
+                                          className: l()(E.partyAvatar, n),
                                           'aria-label': t.user.username
                                       })
                                   }
@@ -164,14 +164,14 @@ class I extends i.PureComponent {
         let { activityActionType: e, name: t } = this.props;
         switch (e) {
             case x.mFx.LISTEN:
-                return E.NW.formatToPlainString(E.t['/8czHx'], { name: t });
+                return v.NW.formatToPlainString(v.t['/8czHx'], { name: t });
             case x.mFx.WATCH:
-                return E.NW.formatToPlainString(E.t.BBJXVl, { name: t });
+                return v.NW.formatToPlainString(v.t.BBJXVl, { name: t });
             case x.mFx.JOIN:
-                return E.NW.string(E.t['hC/Ze3']);
+                return v.NW.string(v.t['hC/Ze3']);
             case x.mFx.JOIN_REQUEST:
             default:
-                return E.NW.string(E.t.Ckxb6u);
+                return v.NW.string(v.t.Ckxb6u);
         }
     }
     renderPartyStatus() {
@@ -180,13 +180,13 @@ class I extends i.PureComponent {
         if (this.isDeadInvite())
             switch (e) {
                 case x.mFx.LISTEN:
-                    return E.NW.string(E.t['84qx9v']);
+                    return v.NW.string(v.t['84qx9v']);
                 case x.mFx.WATCH:
-                    return E.NW.string(E.t.B9kbnZ);
+                    return v.NW.string(v.t.B9kbnZ);
                 case x.mFx.JOIN:
                 case x.mFx.JOIN_REQUEST:
                 default:
-                    return E.NW.string(E.t['2Gbof3']);
+                    return v.NW.string(v.t['2Gbof3']);
             }
         return !a || i || this.isEmbeddedActivityApplication() || e !== x.mFx.JOIN
             ? this.isActionType(x.mFx.LISTEN) || this.isActionType(x.mFx.WATCH)
@@ -195,9 +195,9 @@ class I extends i.PureComponent {
                           (0, r.jsx)(
                               'div',
                               {
-                                  className: v.details,
+                                  className: E.details,
                                   children: (0, r.jsx)(o.eee, {
-                                      className: v.textLink,
+                                      className: E.textLink,
                                       onClick: this.handleOpenSpotifyTrack,
                                       children: s.details
                                   })
@@ -207,8 +207,8 @@ class I extends i.PureComponent {
                           (0, r.jsx)(
                               'div',
                               {
-                                  className: v.state,
-                                  children: E.NW.format(E.t.uU9le3, {
+                                  className: E.state,
+                                  children: v.NW.format(v.t.uU9le3, {
                                       artists: s.state,
                                       artistsHook: (e, t) =>
                                           null != s.state
@@ -216,7 +216,7 @@ class I extends i.PureComponent {
                                                     c.Z,
                                                     {
                                                         artists: s.state,
-                                                        linkClassName: v.textLink,
+                                                        linkClassName: E.textLink,
                                                         canOpen: null != s.sync_id,
                                                         onOpenSpotifyArtist: this.handleOpenSpotifyArtist
                                                     },
@@ -229,29 +229,29 @@ class I extends i.PureComponent {
                           )
                       ]
                     : this.isActionType(x.mFx.LISTEN)
-                      ? E.NW.string(E.t.gXYoq6)
-                      : E.NW.string(E.t.eyKDl5)
+                      ? v.NW.string(v.t.gXYoq6)
+                      : v.NW.string(v.t.eyKDl5)
                 : this.isActionType(x.mFx.JOIN_REQUEST)
                   ? this.isPartyFull()
-                      ? E.NW.string(E.t.jfrMtr)
+                      ? v.NW.string(v.t.jfrMtr)
                       : this.hasPartySize() && 0 !== d
-                        ? E.NW.formatToPlainString(E.t.XWapnZ, { number: d - u })
+                        ? v.NW.formatToPlainString(v.t.XWapnZ, { number: d - u })
                         : null
                   : this.isInParty()
-                    ? E.NW.string(E.t.KC26NT)
+                    ? v.NW.string(v.t.KC26NT)
                     : t || n || i || this.isEmbeddedActivityApplication()
                       ? this.isPartyFull()
-                          ? E.NW.string(E.t.jfrMtr)
+                          ? v.NW.string(v.t.jfrMtr)
                           : this.hasPartySize() && 0 !== d
-                            ? E.NW.formatToPlainString(E.t.XWapnZ, { number: d - u })
+                            ? v.NW.formatToPlainString(v.t.XWapnZ, { number: d - u })
                             : null
-                      : E.NW.formatToPlainString(E.t.SqJBnJ, { name: l })
-            : E.NW.string(E.t.c3EWuL);
+                      : v.NW.formatToPlainString(v.t.SqJBnJ, { name: l })
+            : v.NW.string(v.t.c3EWuL);
     }
     renderActionButton() {
         let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: i, partyId: a, activity: l, message: s, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
             d = {
-                className: v.actionButton,
+                className: E.actionButton,
                 size: o.zxk.Sizes.SMALL
             },
             p = null != u ? u(d) : null;
@@ -273,31 +273,31 @@ class I extends i.PureComponent {
                             t || !e || this.isDeadInvite() || this.isEmbeddedActivityApplication()
                                 ? this.canJoin()
                                     ? {
-                                          children: E.NW.string(E.t.VJlc0d),
+                                          children: v.NW.string(v.t.VJlc0d),
                                           onClick: this.handleJoin
                                       }
                                     : this.canSync()
                                       ? {
-                                            children: E.NW.string(E.t.VJlc0d),
+                                            children: v.NW.string(v.t.VJlc0d),
                                             onClick: this.handleSync
                                         }
                                       : this.canSendInvite()
                                         ? {
-                                              children: E.NW.string(E.t['hC/Ze3']),
+                                              children: v.NW.string(v.t['hC/Ze3']),
                                               onClick: this.handleInvite,
                                               disabled: i
                                           }
                                         : this.isInParty()
                                           ? {
-                                                children: E.NW.string(E.t.KC26NT),
+                                                children: v.NW.string(v.t.KC26NT),
                                                 disabled: !0
                                             }
                                           : {
-                                                children: this.isActionType(x.mFx.JOIN_REQUEST) ? E.NW.string(E.t['hC/Ze3']) : E.NW.string(E.t.VJlc0d),
+                                                children: this.isActionType(x.mFx.JOIN_REQUEST) ? v.NW.string(v.t['hC/Ze3']) : v.NW.string(v.t.VJlc0d),
                                                 disabled: !0
                                             }
                                 : {
-                                      children: E.NW.string(E.t.gUZonZ),
+                                      children: v.NW.string(v.t.gUZonZ),
                                       onClick: this.handleDownloadApp
                                   }
                         ),
@@ -312,7 +312,7 @@ class I extends i.PureComponent {
         return (0, r.jsx)(
             'div',
             {
-                className: v.moreUsers,
+                className: E.moreUsers,
                 children: e
             },
             n
@@ -334,7 +334,7 @@ class I extends i.PureComponent {
         for (; s.length < u; ) s.push(null);
         return (0, r.jsx)(d.Z, {
             guildId: i,
-            className: v.partyMembers,
+            className: E.partyMembers,
             users: s,
             max: l > 0 ? Math.min(l, 6) : 6,
             renderUser: this.renderUser,
@@ -347,11 +347,11 @@ class I extends i.PureComponent {
             c = this.isDeadInvite(),
             u = null;
         null == t || null == i || a
-            ? !a && c && (u = (0, r.jsx)('div', { className: v.artworkSpotifySessionEnded }))
+            ? !a && c && (u = (0, r.jsx)('div', { className: E.artworkSpotifySessionEnded }))
             : (u = (0, r.jsx)('img', {
                   alt: '',
                   src: t,
-                  className: (0, f.l)(v, 'artwork', this.getActionableMode())
+                  className: (0, f.l)(E, 'artwork', this.getActionableMode())
               }));
         let d = null != i && null != u && null != i.assets && null != i.assets.large_text && '' !== i.assets.large_text && !c && (0, b.Z)(i) ? i.assets.large_text : null,
             p =
@@ -370,29 +370,29 @@ class I extends i.PureComponent {
                       })
                     : u;
         return (0, r.jsxs)('div', {
-            className: l()(v.invite, e),
+            className: l()(E.invite, e),
             children: [
                 (0, r.jsx)('div', {
-                    className: v.coverImageWrapper,
+                    className: E.coverImageWrapper,
                     children: (0, r.jsx)('div', {
-                        className: l()((0, f.l)(v, 'coverImage', this.getActionableMode()), null != u ? v.blurred : null),
+                        className: l()((0, f.l)(E, 'coverImage', this.getActionableMode()), null != u ? E.blurred : null),
                         style: { backgroundImage: null != t ? "url('".concat(t, "')") : void 0 }
                     })
                 }),
                 (0, r.jsxs)(s.Z, {
-                    className: v.fullHeight,
+                    className: E.fullHeight,
                     children: [
                         (0, r.jsxs)(s.Z, {
                             direction: s.Z.Direction.VERTICAL,
                             children: [
                                 (0, r.jsx)(o.Text, {
-                                    className: v.header,
+                                    className: E.header,
                                     variant: 'text-sm/medium',
                                     color: 'text-muted',
                                     children: this.renderHeaderText()
                                 }),
                                 (0, r.jsx)(s.Z.Child, {
-                                    className: v.partyStatus,
+                                    className: E.partyStatus,
                                     children: this.renderPartyStatus()
                                 }),
                                 (0, r.jsxs)(s.Z, {
@@ -400,14 +400,14 @@ class I extends i.PureComponent {
                                     children: [
                                         (0, r.jsxs)(s.Z, {
                                             align: s.Z.Align.CENTER,
-                                            className: v.actionAndParty,
+                                            className: E.actionAndParty,
                                             basis: 0,
                                             style: { marginRight: 0 },
                                             children: [this.renderActionButton(), this.renderParty()]
                                         }),
                                         null == u && a
                                             ? (0, r.jsx)('div', {
-                                                  className: v.name,
+                                                  className: E.name,
                                                   children: n
                                               })
                                             : null
@@ -420,7 +420,7 @@ class I extends i.PureComponent {
                 }),
                 (0, r.jsx)(o.eee, {
                     href: m.Z.getArticleURL(this.getHelpdeskArticleURL()),
-                    className: v.helpIcon,
+                    className: E.helpIcon,
                     children: (0, r.jsx)(o.idN, {
                         color: 'currentColor',
                         size: 'xxs'
@@ -472,7 +472,7 @@ class I extends i.PureComponent {
                           },
                           n
                       )
-                    : (0, r.jsx)('div', { className: l()(v.partyMemberEmpty, t) }, n);
+                    : (0, r.jsx)('div', { className: l()(E.partyMemberEmpty, t) }, n);
             });
     }
 }

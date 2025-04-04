@@ -53,11 +53,11 @@ function f(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].authenticated = !0);
 }
-function p(e) {
+function _(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].count--, 0 === u[t.id].count && delete u[t.id]);
 }
-function _(e) {
+function p(e) {
     let { connectedApps: t } = e;
     u = c({}, t);
 }
@@ -77,8 +77,8 @@ class h extends (r = a.ZP.Store) {
 }
 l(h, 'displayName', 'ConnectedAppsStore');
 let m = new h(s.Z, {
-    OVERLAY_INITIALIZE: _,
+    OVERLAY_INITIALIZE: p,
     RPC_APP_CONNECTED: d,
     RPC_APP_AUTHENTICATED: f,
-    RPC_APP_DISCONNECTED: p
+    RPC_APP_DISCONNECTED: _
 });

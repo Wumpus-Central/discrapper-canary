@@ -47,52 +47,52 @@ function u(e) {
 }
 function d(e, t) {
     var n, r, s, c, u, d, f, _, p, m, g, E, b;
-    let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
-        y = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
+    let y = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
+        v = null != (n = e.premium_subscription_count) ? n : 0;
     if (null == e.properties) {
         i()(null != t, 'If guild.properties is null, existingGuild must be passed in');
         let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
-            n = v instanceof Date ? v.getTime() : v;
-        return y === t.premiumSubscriberCount && e === n
+            n = y instanceof Date ? y.getTime() : y;
+        return v === t.premiumSubscriberCount && e === n
             ? t
             : t.merge({
-                  joinedAt: v,
-                  premiumSubscriberCount: y
+                  joinedAt: y,
+                  premiumSubscriberCount: v
               });
     }
     let O = {
         id: e.id,
-        joinedAt: v,
-        premiumSubscriberCount: y,
-        name: null !== (r = e.properties.name) && void 0 !== r ? r : '',
+        joinedAt: y,
+        premiumSubscriberCount: v,
+        name: null != (r = e.properties.name) ? r : '',
         description: e.properties.description,
         icon: e.properties.icon,
         splash: e.properties.splash,
         banner: e.properties.banner,
         homeHeader: e.properties.home_header,
-        features: new Set(null !== (s = e.properties.features) && void 0 !== s ? s : []),
-        preferredLocale: null !== (c = e.properties.preferred_locale) && void 0 !== c ? c : 'en-us',
+        features: new Set(null != (s = e.properties.features) ? s : []),
+        preferredLocale: null != (c = e.properties.preferred_locale) ? c : 'en-us',
         ownerId: e.properties.owner_id,
         application_id: e.properties.application_id,
         afkChannelId: e.properties.afk_channel_id,
         afkTimeout: e.properties.afk_timeout,
         systemChannelId: e.properties.system_channel_id,
-        verificationLevel: null !== (u = e.properties.verification_level) && void 0 !== u ? u : l.sFg.NONE,
-        explicitContentFilter: null !== (d = e.properties.explicit_content_filter) && void 0 !== d ? d : l.lxg.DISABLED,
-        defaultMessageNotifications: null !== (f = e.properties.default_message_notifications) && void 0 !== f ? f : l.bL.ALL_MESSAGES,
-        mfaLevel: null !== (_ = e.properties.mfa_level) && void 0 !== _ ? _ : l.BpS.NONE,
+        verificationLevel: null != (u = e.properties.verification_level) ? u : l.sFg.NONE,
+        explicitContentFilter: null != (d = e.properties.explicit_content_filter) ? d : l.lxg.DISABLED,
+        defaultMessageNotifications: null != (f = e.properties.default_message_notifications) ? f : l.bL.ALL_MESSAGES,
+        mfaLevel: null != (_ = e.properties.mfa_level) ? _ : l.BpS.NONE,
         vanityURLCode: e.properties.vanity_url_code,
-        premiumTier: null !== (p = e.properties.premium_tier) && void 0 !== p ? p : l.Eu4.NONE,
+        premiumTier: null != (p = e.properties.premium_tier) ? p : l.Eu4.NONE,
         premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
         systemChannelFlags: e.properties.system_channel_flags,
         discoverySplash: e.properties.discovery_splash,
         rulesChannelId: e.properties.rules_channel_id,
         safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
         publicUpdatesChannelId: e.properties.public_updates_channel_id,
-        maxStageVideoChannelUsers: null !== (m = e.properties.max_stage_video_channel_users) && void 0 !== m ? m : -1,
-        maxVideoChannelUsers: null !== (g = e.properties.max_video_channel_users) && void 0 !== g ? g : -1,
-        maxMembers: null !== (E = e.properties.max_members) && void 0 !== E ? E : -1,
-        nsfwLevel: null !== (b = e.properties.nsfw_level) && void 0 !== b ? b : l.V_K.DEFAULT,
+        maxStageVideoChannelUsers: null != (m = e.properties.max_stage_video_channel_users) ? m : -1,
+        maxVideoChannelUsers: null != (g = e.properties.max_video_channel_users) ? g : -1,
+        maxMembers: null != (E = e.properties.max_members) ? E : -1,
+        nsfwLevel: null != (b = e.properties.nsfw_level) ? b : l.V_K.DEFAULT,
         hubType: e.properties.hub_type,
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         profile: e.properties.profile,
@@ -105,38 +105,38 @@ function f(e, t) {
 }
 function _(e, t) {
     var n, r, i, o, a, s, c, u, d, f, _, p, h;
-    let m = null !== (n = e.properties) && void 0 !== n ? n : g(t),
+    let m = null != (n = e.properties) ? n : g(t),
         E = {
             id: e.id,
-            name: null !== (r = m.name) && void 0 !== r ? r : '',
+            name: null != (r = m.name) ? r : '',
             description: m.description,
             icon: m.icon,
             splash: m.splash,
             banner: m.banner,
             homeHeader: m.home_header,
-            features: new Set(null !== (i = m.features) && void 0 !== i ? i : []),
-            preferredLocale: null !== (o = m.preferred_locale) && void 0 !== o ? o : 'en-us',
+            features: new Set(null != (i = m.features) ? i : []),
+            preferredLocale: null != (o = m.preferred_locale) ? o : 'en-us',
             ownerId: m.owner_id,
             application_id: m.application_id,
             afkChannelId: m.afk_channel_id,
             afkTimeout: m.afk_timeout,
             systemChannelId: m.system_channel_id,
-            verificationLevel: null !== (a = m.verification_level) && void 0 !== a ? a : l.sFg.NONE,
-            explicitContentFilter: null !== (s = m.explicit_content_filter) && void 0 !== s ? s : l.lxg.DISABLED,
-            defaultMessageNotifications: null !== (c = m.default_message_notifications) && void 0 !== c ? c : l.bL.ALL_MESSAGES,
-            mfaLevel: null !== (u = m.mfa_level) && void 0 !== u ? u : l.BpS.NONE,
+            verificationLevel: null != (a = m.verification_level) ? a : l.sFg.NONE,
+            explicitContentFilter: null != (s = m.explicit_content_filter) ? s : l.lxg.DISABLED,
+            defaultMessageNotifications: null != (c = m.default_message_notifications) ? c : l.bL.ALL_MESSAGES,
+            mfaLevel: null != (u = m.mfa_level) ? u : l.BpS.NONE,
             vanityURLCode: m.vanity_url_code,
-            premiumTier: null !== (d = m.premium_tier) && void 0 !== d ? d : l.Eu4.NONE,
+            premiumTier: null != (d = m.premium_tier) ? d : l.Eu4.NONE,
             premiumProgressBarEnabled: m.premium_progress_bar_enabled || !1,
             systemChannelFlags: m.system_channel_flags,
             discoverySplash: m.discovery_splash,
             rulesChannelId: m.rules_channel_id,
             safetyAlertsChannelId: m.safety_alerts_channel_id,
             publicUpdatesChannelId: m.public_updates_channel_id,
-            maxStageVideoChannelUsers: null !== (f = m.max_stage_video_channel_users) && void 0 !== f ? f : -1,
-            maxVideoChannelUsers: null !== (_ = m.max_video_channel_users) && void 0 !== _ ? _ : -1,
-            maxMembers: null !== (p = m.max_members) && void 0 !== p ? p : -1,
-            nsfwLevel: null !== (h = m.nsfw_level) && void 0 !== h ? h : l.V_K.DEFAULT,
+            maxStageVideoChannelUsers: null != (f = m.max_stage_video_channel_users) ? f : -1,
+            maxVideoChannelUsers: null != (_ = m.max_video_channel_users) ? _ : -1,
+            maxMembers: null != (p = m.max_members) ? p : -1,
+            nsfwLevel: null != (h = m.nsfw_level) ? h : l.V_K.DEFAULT,
             hubType: m.hub_type,
             latestOnboardingQuestionId: m.latest_onboarding_question_id,
             profile: m.profile
@@ -251,7 +251,7 @@ function g(e) {
 }
 function E(e) {
     var t;
-    for (let n in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : [])), e.roles)) (0, s.cf)(e.roles[n]);
+    for (let n in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null != (t = e.features) ? t : [])), e.roles)) (0, s.cf)(e.roles[n]);
     return (0, o.gh)(e, a.ZP);
 }
 function b(e, t, n, r) {

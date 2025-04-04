@@ -1,14 +1,14 @@
 n.d(t, {
-    Ew: () => b,
+    Ew: () => y,
     Iv: () => O,
     Mf: () => m,
     PM: () => T,
     QW: () => E,
-    Uv: () => y,
-    Xp: () => S,
+    Uv: () => v,
+    Xp: () => I,
     a$: () => g,
-    lg: () => v,
-    vL: () => I,
+    lg: () => b,
+    vL: () => S,
     vb: () => h
 }),
     n(411104),
@@ -54,7 +54,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,12 +66,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -153,7 +153,7 @@ function E(e) {
             return null;
     }
 }
-function v(e) {
+function b(e) {
     switch (e) {
         case l.vf.FEATURED:
             return l.Hk;
@@ -173,10 +173,10 @@ function v(e) {
             (0, a.vE)(e);
     }
 }
-function b(e) {
+function y(e) {
     return null == e || Date.now() - e > l.AF;
 }
-function y(e) {
+function v(e) {
     return {
         id: e.id,
         name: e.name,
@@ -211,16 +211,16 @@ function O(e) {
         emojis: []
     };
 }
-function S() {
+function I() {
     var e;
     let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default],
         n = (0, l.Cf)(),
         r = t.locale;
-    return (null !== (e = n.find((e) => e.code === r)) && void 0 !== e ? e : n[0]).code;
+    return (null != (e = n.find((e) => e.code === r)) ? e : n[0]).code;
 }
-async function I(e) {
+async function S(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: a, options: l } = e,
-        u = _(f({}, l), { loadId: t });
+        u = p(f({}, l), { loadId: t });
     await s.Ub(n, a, u),
         o.default.track(c.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,

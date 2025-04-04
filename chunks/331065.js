@@ -64,7 +64,7 @@ class c extends r.Z {
         var t;
         return l(a({}, e), {
             summary: e.summary.default,
-            description: null === (t = e.description) || void 0 === t ? void 0 : t.default
+            description: null == (t = e.description) ? void 0 : t.default
         });
     }
     constructor(e) {

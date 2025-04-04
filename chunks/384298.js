@@ -18,17 +18,17 @@ var i = n(657707),
 function E(e) {
     let { channel: t, onAction: n, onClose: E } = e,
         { profileType: b } = (0, _.z)(),
-        v = (0, o.e7)([d.Z], () => d.Z.isInChannel(t.id)),
-        y = (0, o.e7)([u.Z], () => t.isPrivate() || u.Z.can(m.Plq.CONNECT, t)),
+        y = (0, o.e7)([d.Z], () => d.Z.isInChannel(t.id)),
+        v = (0, o.e7)([u.Z], () => t.isPrivate() || u.Z.can(m.Plq.CONNECT, t)),
         { chatButtonEnabled: O } = (0, f.s)({ location: 'UserProfileActivityVoiceChannelButtons' });
-    if (!y) return null;
+    if (!v) return null;
     let I = () => (b === h.y0.FULL_SIZE ? g.NW.string(g.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? g.NW.string(g.t['7hwn2N']) : t.isGuildStageVoice() ? g.NW.string(g.t.Acqcoq) : g.NW.string(g.t.BXxdl5)),
         S = () => (b === h.y0.FULL_SIZE ? g.NW.string(g.t.VJlc0d) : t.isDM() || t.isGroupDM() ? g.NW.string(g.t.ozoE2N) : t.isGuildStageVoice() ? g.NW.string(g.t['7vb2cX']) : g.NW.string(g.t['96ANUF']));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(p.tG, {
-                text: v ? I() : S(),
-                themeColor: v ? 'secondary' : 'primary',
+                text: y ? I() : S(),
+                themeColor: y ? 'secondary' : 'primary',
                 fullWidth: !0,
                 onClick: (e) => {
                     e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, c.Cq)(t) : (s.default.selectVoiceChannel(t.id), (0, l.Kh)(t.id)), null == E || E();
@@ -38,8 +38,8 @@ function E(e) {
                 t.isGuildVocal() &&
                 (0, r.jsx)(p.ef, {
                     icon: i.kBi,
-                    tooltipText: v ? g.NW.string(g.t.kkKapK) : g.NW.string(g.t.ZXxLQk),
-                    themeColor: v ? 'secondary' : 'primary',
+                    tooltipText: y ? g.NW.string(g.t.kkKapK) : g.NW.string(g.t.ZXxLQk),
+                    themeColor: y ? 'secondary' : 'primary',
                     onClick: (e) => {
                         e.stopPropagation(), null == n || n({ action: 'OPEN_VOICE_CHAT' }), a.Z.updateChatOpen(t.id, !0), (0, l.Kh)(t.id), null == E || E();
                     }

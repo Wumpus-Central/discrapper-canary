@@ -3,13 +3,13 @@ n.d(t, {
     Cl: () => p,
     GT: () => E,
     MR: () => _,
-    Wb: () => m,
-    Xs: () => v,
+    Wb: () => g,
+    Xs: () => b,
     YE: () => u,
     _k: () => c,
     kG: () => f,
     km: () => d,
-    u7: () => g
+    u7: () => m
 });
 var r = n(55563),
     i = n(513785),
@@ -37,12 +37,12 @@ function p(e, t) {
 }
 function h(e, t) {
     var n;
-    return null != t && (null === (n = t.avatarDecoration) || void 0 === n ? void 0 : n.skuId) === e;
-}
-function g(e) {
-    return null != e.redeemable_at && null != e.next_tenure_reward_id;
+    return null != t && (null == (n = t.avatarDecoration) ? void 0 : n.skuId) === e;
 }
 function m(e) {
+    return null != e.redeemable_at && null != e.next_tenure_reward_id;
+}
+function g(e) {
     switch (e) {
         case a.EB.PENDING:
             return l.NW.string(l.t.jyYgZ2);
@@ -56,6 +56,6 @@ function m(e) {
 function E() {
     return i.Z.getTenureRewardStatusForRewardId(a.Ft.FREE_AVATAR_DECO_1_MONTH);
 }
-function v(e) {
+function b(e) {
     if (e === a.Ft.FREE_AVATAR_DECO_1_MONTH) return a.nW.AVATAR_DECO;
 }

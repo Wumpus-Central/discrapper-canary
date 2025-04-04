@@ -61,4 +61,4 @@ function a(e) {
         }
     return n && ((t += r[o]), (t += '='), 1 == n && (t += '=')), t;
 }
-(i['-'.charCodeAt(0)] = r.indexOf('+')), (i['_'.charCodeAt(0)] = r.indexOf('/'));
+(i[45] = r.indexOf('+')), (i[95] = r.indexOf('/'));

@@ -14,8 +14,8 @@ var n,
     d = RegExp.prototype.exec,
     h = d,
     E = a(''.charAt),
-    I = a(''.indexOf),
-    y = a(''.replace),
+    y = a(''.indexOf),
+    I = a(''.replace),
     R = a(''.slice),
     b = ((i = /b*/g), o(d, (n = /a/), 'a'), o(d, i, 'a'), 0 !== n.lastIndex || 0 !== i.lastIndex),
     A = s.BROKEN_CARET,
@@ -34,17 +34,17 @@ var n,
             $ = v.raw;
         if ($) return ($.lastIndex = this.lastIndex), (e = o(h, $, g)), (this.lastIndex = $.lastIndex), e;
         var m = v.groups,
-            k = A && this.sticky,
-            w = o(u, this),
+            w = A && this.sticky,
+            k = o(u, this),
             C = this.source,
             T = 0,
             _ = g;
         if (
-            (k && (-1 === I((w = y(w, 'y', '')), 'g') && (w += 'g'), (_ = R(g, this.lastIndex)), this.lastIndex > 0 && (!this.multiline || (this.multiline && '\n' !== E(g, this.lastIndex - 1))) && ((C = '(?: ' + C + ')'), (_ = ' ' + _), T++), (r = RegExp('^(?:' + C + ')', w))),
-            S && (r = RegExp('^' + C + '$(?!\\s)', w)),
+            (w && (-1 === y((k = I(k, 'y', '')), 'g') && (k += 'g'), (_ = R(g, this.lastIndex)), this.lastIndex > 0 && (!this.multiline || (this.multiline && '\n' !== E(g, this.lastIndex - 1))) && ((C = '(?: ' + C + ')'), (_ = ' ' + _), T++), (r = RegExp('^(?:' + C + ')', k))),
+            S && (r = RegExp('^' + C + '$(?!\\s)', k)),
             b && (n = this.lastIndex),
-            (i = o(d, k ? r : this, _)),
-            k ? (i ? ((i.input = R(i.input, T)), (i[0] = R(i[0], T)), (i.index = this.lastIndex), (this.lastIndex += i[0].length)) : (this.lastIndex = 0)) : b && i && (this.lastIndex = this.global ? i.index + i[0].length : n),
+            (i = o(d, w ? r : this, _)),
+            w ? (i ? ((i.input = R(i.input, T)), (i[0] = R(i[0], T)), (i.index = this.lastIndex), (this.lastIndex += i[0].length)) : (this.lastIndex = 0)) : b && i && (this.lastIndex = this.global ? i.index + i[0].length : n),
             S &&
                 i &&
                 i.length > 1 &&

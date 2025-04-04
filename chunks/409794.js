@@ -1,11 +1,11 @@
-n.d(t, { X: () => _ });
+n.d(t, { X: () => p });
 var r = n(200651),
     i = n(192379),
     o = n(803997),
     a = n.n(o),
     s = n(793030),
     l = n(200269),
-    c = n(778482);
+    c = n(954338);
 function u(e, t, n) {
     return (
         t in e
@@ -39,14 +39,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -55,18 +55,18 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = i.forwardRef(function (e, t) {
+let p = i.forwardRef(function (e, t) {
     var { variant: n, className: i } = e,
         o = f(e, ['variant', 'className']);
     let u = (0, l.x)(),
-        p = 'h'.concat(Math.min(u, 6));
+        _ = 'h'.concat(Math.min(u, 6));
     return (0, r.jsx)(
         s.xv,
         d(
             {
                 ref: t,
                 variant: n,
-                tag: p,
+                tag: _,
                 className: a()(c.defaultColor, i)
             },
             u > 6 ? { 'data-excessive-heading-level': u } : {},

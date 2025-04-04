@@ -1,7 +1,7 @@
 n.d(t, {
-    AJ: () => b,
+    AJ: () => y,
     Ep: () => O,
-    te: () => v,
+    te: () => b,
     zP: () => E
 }),
     n(47120);
@@ -11,7 +11,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(481060),
     l = n(388032),
-    c = n(875182);
+    c = n(831704);
 function u(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -110,7 +110,7 @@ function g() {
             e.forEach((e) => {
                 var t;
                 let { target: n } = e;
-                null === (t = r.get(n)) || void 0 === t || t(e);
+                null == (t = r.get(n)) || t(e);
             });
         });
     return (
@@ -119,7 +119,7 @@ function g() {
             key: 'horizontal-overflow-list',
             onUpdate: (e) => {
                 var n;
-                let r = null === (n = e.target) || void 0 === n ? void 0 : n.getBoundingClientRect();
+                let r = null == (n = e.target) ? void 0 : n.getBoundingClientRect();
                 null != r && t(r.width);
             },
             resizeObserver: o,
@@ -145,7 +145,7 @@ function E(e) {
         i.useLayoutEffect(() => {
             var e;
             if (null == d.current) return;
-            (l.current.length = n.length), (c.current = null !== (e = d.current.getBoundingClientRect().width) && void 0 !== e ? e : 0);
+            (l.current.length = n.length), (c.current = null != (e = d.current.getBoundingClientRect().width) ? e : 0);
             let i = m({
                 items: n,
                 maxLines: r,
@@ -168,22 +168,22 @@ function E(e) {
         )
     );
 }
-function v(e) {
+function b(e) {
     var { items: t, renderItem: n } = e,
-        i = _(e, ['items', 'renderItem']);
+        i = p(e, ['items', 'renderItem']);
     return (0, r.jsx)(
         s.ua7,
-        p(d({}, i), {
+        _(d({}, i), {
             text: (0, r.jsx)('div', {
                 className: c.tooltip,
                 children: t.map(n)
             }),
             'aria-label': 'overflow',
-            children: (e) => (0, r.jsx)('div', p(d({}, e), { children: n(l.NW.formatToPlainString(l.t.vGclWl, { count: t.length })) }))
+            children: (e) => (0, r.jsx)('div', _(d({}, e), { children: n(l.NW.formatToPlainString(l.t.vGclWl, { count: t.length })) }))
         })
     );
 }
-function b(e) {
+function y(e) {
     let { onItemLayout: t, index: n, children: o } = e,
         a = i.useRef(null);
     return (
@@ -196,33 +196,33 @@ function b(e) {
         })
     );
 }
-function y(e) {
+function v(e) {
     return 'string' == typeof e ? e : e.key;
 }
 function O(e) {
     let { className: t, items: n, renderItem: o, itemGapPx: s = 0, maxLines: u, renderOverflow: d } = e,
-        { ref: f, width: p } = g(),
+        { ref: f, width: _ } = g(),
         {
-            lastVisibleIndex: _,
+            lastVisibleIndex: p,
             onItemLayout: h,
             overflowItemsRef: m
         } = E({
             items: n,
             itemGapPx: s,
             maxLines: u,
-            containerWidth: p
+            containerWidth: _
         }),
         O = i.useCallback(
             (e) =>
-                (0, r.jsx)(v, {
+                (0, r.jsx)(b, {
                     items: e,
                     renderItem: o
                 }),
             [o]
         ),
-        S = null != d ? d : O,
-        I = i.useMemo(() => n.slice(0, _ + 1), [n, _]),
-        T = i.useMemo(() => n.slice(_ + 1), [n, _]);
+        I = null != d ? d : O,
+        S = i.useMemo(() => n.slice(0, p + 1), [n, p]),
+        T = i.useMemo(() => n.slice(p + 1), [n, p]);
     return (0, r.jsxs)('div', {
         className: a()(t, c.items),
         ref: f,
@@ -235,13 +235,13 @@ function O(e) {
                         className: c.itemMeasurements,
                         children: n.map((e, t) =>
                             (0, r.jsx)(
-                                b,
+                                y,
                                 {
                                     index: t,
                                     onItemLayout: h,
                                     children: o(e)
                                 },
-                                y(e)
+                                v(e)
                             )
                         )
                     }),
@@ -252,8 +252,8 @@ function O(e) {
                     })
                 ]
             }),
-            I.map(o),
-            T.length > 0 && S(T)
+            S.map(o),
+            T.length > 0 && I(T)
         ]
     });
 }

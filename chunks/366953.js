@@ -7,7 +7,7 @@ var r = n(433517);
 let i = 'recentBuildOverrides';
 function o() {
     var e;
-    return (null !== (e = r.K.get(i)) && void 0 !== e ? e : []).filter((e) => null == e.exp || e.exp > Date.now());
+    return (null != (e = r.K.get(i)) ? e : []).filter((e) => null == e.exp || e.exp > Date.now());
 }
 function a(e, t) {
     if (null == t || null == e || null == e.targetBuildOverride.discord_web) return;

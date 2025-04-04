@@ -1,8 +1,8 @@
 n.d(t, {
-    A4: () => p,
+    A4: () => _,
     E9: () => d,
     Os: () => c,
-    jx: () => _,
+    jx: () => p,
     nv: () => l,
     sz: () => f,
     te: () => s,
@@ -14,7 +14,7 @@ var r = n(570140),
     o = n(355863),
     a = n(145597);
 function s(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Gr;
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.OVERLAY_DEFAULT_RESOLUTION;
     r.Z.dispatch({
         type: 'LAYOUT_CREATE',
         layoutId: e,
@@ -59,10 +59,10 @@ function f(e) {
         layoutId: e
     });
 }
-function p(e) {
-    _([e]);
-}
 function _(e) {
+    p([e]);
+}
+function p(e) {
     r.Z.dispatch({
         type: 'LAYOUT_CREATE_WIDGETS',
         widgetConfigs: e

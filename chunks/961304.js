@@ -27,11 +27,11 @@ var u = (function (e) {
 class d extends i.Z {
     play() {
         var e;
-        null === (e = this.audioElement) || void 0 === e || e.play();
+        null == (e = this.audioElement) || e.play();
     }
     destroy() {
         var e;
-        null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, a.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(s.Dg.NONE), this.removeAllListeners();
+        null == (e = this.audioElement) || e.pause(), null != this.videoStreamId && (0, a.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(s.Dg.NONE), this.removeAllListeners();
     }
     addTrack(e) {
         if (this.stream.getTracks().includes(e)) return this.stream.getTracks().length;

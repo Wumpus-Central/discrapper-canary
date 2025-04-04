@@ -25,7 +25,7 @@ let _ = [
 function E(e) {
     let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: j, guildId: O, className: C, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: I = !1 } = e,
         y = I ? o.gtL : o.zxk,
-        A = (0, u.Tq)({ location: 'AvatarSection' }),
+        A = (0, u.T)({ location: 'AvatarSection' }),
         P = [];
     A && P.push(l.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE);
     let [R, D] = (0, c.US)(P),

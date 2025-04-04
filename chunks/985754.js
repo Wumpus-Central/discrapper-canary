@@ -1,5 +1,5 @@
 n.d(t, {
-    Gv: () => _,
+    Gv: () => p,
     Wo: () => f,
     vB: () => h
 }),
@@ -33,48 +33,48 @@ let u = new Set([l.pK.ARS, l.pK.CLP, l.pK.COP]),
         [s.HeQ.CASH_APP]: () => c.NW.string(c.t['+rbTmJ']),
         [s.HeQ.APPLE]: () => c.NW.string(c.t.RFi12t)
     },
-    p = [s.HeQ.EPS, s.HeQ.BANCONTACT, s.HeQ.IDEAL, s.HeQ.SOFORT, s.HeQ.GIROPAY, s.HeQ.SEPA_DEBIT, s.HeQ.PAYSAFE_CARD],
-    _ = (e, t, n, r) => {
+    _ = [s.HeQ.EPS, s.HeQ.BANCONTACT, s.HeQ.IDEAL, s.HeQ.SOFORT, s.HeQ.GIROPAY, s.HeQ.SEPA_DEBIT, s.HeQ.PAYSAFE_CARD],
+    p = (e, t, n, r) => {
         if (null == e) return '';
         let o = (0, i.q9)(e);
         return t === l.pK.EUR ? (n ? c.NW.formatToPlainString(c.t['+5bXbW'], { country: o }) : c.NW.formatToPlainString(c.t['0jblPj'], { currencyISOCode: t.toUpperCase() })) : r ? c.NW.formatToPlainString(c.t['dBFL//'], { countryName: o }) : c.NW.formatToPlainString(c.t.RJ4939, { country: o });
     },
     h = (e) => {
-        let { localizedPricingPromo: t, subscription: n, forceSingleLine: r = !1, userLocale: _ } = e,
-            { countryCode: h, amount: g, currency: E, paymentSourceTypes: v } = t,
-            b = 0 !== v.length,
-            y = m(h),
+        let { localizedPricingPromo: t, subscription: n, forceSingleLine: r = !1, userLocale: p } = e,
+            { countryCode: h, amount: g, currency: E, paymentSourceTypes: b } = t,
+            y = 0 !== b.length,
+            v = m(h),
             O = (0, a.T4)(g, E, {
                 style: 'currency',
                 currency: E,
                 currencyDisplay: 'symbol',
-                localeOverride: y
+                localeOverride: v
             }),
-            S = c.NW.format(c.t['4cHbQ0'], {
+            I = c.NW.format(c.t['4cHbQ0'], {
                 helpCenterLink: o.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
                 currencyISOCode: E.toUpperCase(),
                 localizedPriceWithCurrencySymbol: O
             });
         if (
             (d.has(E) &&
-                (S = c.NW.format(c.t['5kvQMz'], {
+                (I = c.NW.format(c.t['5kvQMz'], {
                     helpCenterLink: o.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
                     localizedPriceWithCurrencySymbol: O
                 })),
             u.has(E) &&
-                (S = c.NW.format(c.t.BrYPGh, {
+                (I = c.NW.format(c.t.BrYPGh, {
                     helpCenterLink: o.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
                     currencyISOCode: E.toUpperCase(),
                     localizedPriceWithCurrencySymbol: O
                 })),
             null == n ||
                 n.hasPremiumNitroMonthly ||
-                (S = c.NW.format(c.t.xnD0NT, {
+                (I = c.NW.format(c.t.xnD0NT, {
                     helpCenterLink: o.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
                     currencyISOCode: E.toUpperCase()
                 })),
             E === l.pK.EUR &&
-                (S = r
+                (I = r
                     ? c.NW.format(c.t.o60rUF, {
                           country: (0, i.q9)(h),
                           currencyISOCode: E.toUpperCase(),
@@ -84,27 +84,27 @@ let u = new Set([l.pK.ARS, l.pK.CLP, l.pK.COP]),
                           currencyISOCode: E.toUpperCase(),
                           helpCenterLink: o.Z.getArticleURL(s.BhN.LOCALIZED_PRICING)
                       })),
-            b)
+            y && 1)
         ) {
-            let e = [...p.filter((e) => v.includes(e)), ...v.filter((e) => !p.includes(e))].slice(0, 2).map((e) => {
+            let e = [..._.filter((e) => b.includes(e)), ...b.filter((e) => !_.includes(e))].slice(0, 2).map((e) => {
                 var t, n;
-                return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.call(f)) && void 0 !== n ? n : c.NW.string(c.t.jdPblp);
+                return null != (n = null == (t = f[e]) ? void 0 : t.call(f)) ? n : c.NW.string(c.t.jdPblp);
             });
-            v.length >= 3 && e.push(c.NW.string(c.t.Tp5NkZ));
-            let t = new Intl.ListFormat(_, {
+            b.length >= 3 && e.push(c.NW.string(c.t.Tp5NkZ));
+            let t = new Intl.ListFormat(p, {
                 style: 'short',
                 type: 'conjunction'
             });
-            S = c.NW.format(c.t.QqRQPj, {
+            I = c.NW.format(c.t.QqRQPj, {
                 helpCenterLink: o.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
                 paymentMethods: t.format(e)
             });
         }
         return {
             localizedPricingBannerHeader: c.NW.formatToPlainString(c.t.BuFSam, { country: (0, i.q9)(h) }),
-            localizedPricingBannerBody: S,
+            localizedPricingBannerBody: I,
             localizedPricingBannerLinkOnly: c.NW.format(c.t.XufWPj, { helpCenterLink: o.Z.getArticleURL(s.BhN.LOCALIZED_PRICING) }),
-            localizedPricingBannerSubNotif: b ? void 0 : c.NW.string(c.t.YDdBe3)
+            localizedPricingBannerSubNotif: y ? void 0 : c.NW.string(c.t.YDdBe3)
         };
     },
     m = (e) => {

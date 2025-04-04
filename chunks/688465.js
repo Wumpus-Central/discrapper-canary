@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(692547),
@@ -76,7 +76,7 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     var { className: t, color: n = i.Z.unsafe_rawColors.BRAND_500.css } = e,
         s = d(e, ['className', 'color']);
     return (0, r.jsx)(

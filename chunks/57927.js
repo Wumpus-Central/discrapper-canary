@@ -9,15 +9,15 @@ var n = s(200651),
     o = s(481060),
     m = s(367907),
     x = s(565138),
-    h = s(430824),
-    u = s(771845),
+    u = s(430824),
+    h = s(771845),
     j = s(9156),
     g = s(626135),
     N = s(789662),
     _ = s(981631),
     b = s(388032),
-    v = s(907723);
-function f(e) {
+    f = s(907723);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var s = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(s);
@@ -62,7 +62,7 @@ function p(e, t) {
 }
 function C(e) {
     let { guildPlans: t, overrideGuild: s } = e,
-        r = (0, d.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
+        r = (0, d.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()),
         [a, l] = i.useMemo(
             () =>
                 c()(t)
@@ -86,7 +86,7 @@ function C(e) {
             [s, t]
         );
     return (0, n.jsxs)('div', {
-        className: v.container,
+        className: f.container,
         children: [
             (0, n.jsx)(W, {
                 header: b.NW.string(b.t.tGGAdX),
@@ -106,13 +106,13 @@ function C(e) {
 function W(e) {
     let { header: t, subheader: s, guildPlans: i, onClick: r } = e;
     return (0, n.jsxs)('div', {
-        className: v.column,
+        className: f.column,
         children: [
             (0, n.jsxs)('div', {
-                className: v.header,
+                className: f.header,
                 children: [
                     (0, n.jsxs)(o.Text, {
-                        className: v.__invalid_sectionTitle,
+                        className: f.__invalid_sectionTitle,
                         variant: 'text-md/medium',
                         color: 'header-primary',
                         children: [t, ' (', i.length, ')']
@@ -125,9 +125,9 @@ function W(e) {
                 ]
             }),
             (0, n.jsx)(o.Ttm, {
-                className: v.scroller,
+                className: f.scroller,
                 children: (0, n.jsx)('div', {
-                    className: v.guilds,
+                    className: f.guilds,
                     children: i.map((e) =>
                         (0, n.jsx)(
                             T,
@@ -146,13 +146,13 @@ function W(e) {
 function T(e) {
     var t;
     let { plan: s, onClick: i } = e,
-        r = (0, d.e7)([h.Z], () => h.Z.getGuild(s.guildId));
+        r = (0, d.e7)([u.Z], () => u.Z.getGuild(s.guildId));
     if (null == r) return null;
     let l = (null != (t = s.overrideMode) ? t : s.mode) === N.AR.UseGreyDot;
     function c() {
         g.default.track(
             _.rMx.NOTIFICATION_MIGRATION_GUILD_CHANGED,
-            p(f({}, (0, m.hH)(s.guildId)), {
+            p(v({}, (0, m.hH)(s.guildId)), {
                 is_selected: !l,
                 is_muted: j.ZP.isMuted(s.guildId),
                 notification_setting: j.ZP.getMessageNotifications(s.guildId)
@@ -169,7 +169,7 @@ function T(e) {
                     children: r.name
                 }),
                 (0, n.jsxs)('div', {
-                    className: v.tooltipRow,
+                    className: f.tooltipRow,
                     children: [
                         (0, n.jsx)(o.kBi, {
                             size: 'xxs',
@@ -183,7 +183,7 @@ function T(e) {
                     ]
                 }),
                 (0, n.jsxs)('div', {
-                    className: v.tooltipRow,
+                    className: f.tooltipRow,
                     children: [
                         (0, n.jsx)(o.iFz, {
                             size: 'xxs',
@@ -197,7 +197,7 @@ function T(e) {
                     ]
                 }),
                 (0, n.jsxs)('div', {
-                    className: v.tooltipRow,
+                    className: f.tooltipRow,
                     children: [
                         (0, n.jsx)(o.Dkj, {
                             size: 'xxs',
@@ -213,23 +213,23 @@ function T(e) {
             ]
         }),
         'aria-label': s.debugReason,
-        tooltipClassName: v.tooltip,
+        tooltipClassName: f.tooltip,
         children: (e) =>
             (0, n.jsxs)(
                 o.P3F,
-                p(f({}, e), {
-                    className: a()(v.guild, l ? v.selected : void 0),
+                p(v({}, e), {
+                    className: a()(f.guild, l ? f.selected : void 0),
                     onClick: c,
                     children: [
                         (0, n.jsx)(o.owK, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: v.checkmark,
+                            className: f.checkmark,
                             secondaryColor: 'white'
                         }),
                         (0, n.jsx)(x.Z, {
                             'aria-hidden': !0,
-                            className: v.guildIcon,
+                            className: f.guildIcon,
                             guild: r,
                             size: x.Z.Sizes.MEDIUM,
                             active: !0,

@@ -32,7 +32,7 @@ let j = (e) => {
             });
         }, [O, t]),
         P = _ && C,
-        N = (0, r.jsx)(l.P3F, {
+        E = (0, r.jsx)(l.P3F, {
             onClick: S,
             className: a()(b.clickable, { [b.logo]: P }),
             children: (0, r.jsx)(m.ZP, {
@@ -69,7 +69,7 @@ let j = (e) => {
                 quest: t,
                 expansionSpring: n,
                 isFullyExpanded: P,
-                partnerBranding: N,
+                partnerBranding: E,
                 useReducedMotion: y
             }),
             (0, r.jsxs)(i.animated.div, {

@@ -4,7 +4,7 @@ n.d(t, {
     ZP: () => C,
     jy: () => S
 });
-var i = n(115911),
+var i = n(252258),
     o = n(570140),
     a = n(519938),
     s = n(317770),
@@ -19,15 +19,15 @@ var i = n(115911),
     m = n(636449),
     g = n(317381),
     E = n(719296),
-    v = n(958185),
-    b = n(981631);
-function y(e, t, n) {
-    if ((0, m.R)({ isContextless: t.location.kind === i.X.CONTEXTLESS }) || d.Z.isOpen(n)) return !1;
+    b = n(958185),
+    y = n(981631);
+function v(e, t, n) {
+    if ((0, m.R)({ isContextless: t.location.kind === i.E.CONTEXTLESS }) || d.Z.isOpen(n)) return !1;
     if (null != r) {
         let e = r;
         o.Z.wait(() => a.xv(e));
     }
-    o.Z.wait(() => a.bA(n, b.NYg.EMBED_IFRAME, { channel: e })), (r = n);
+    o.Z.wait(() => a.bA(n, y.NYg.EMBED_IFRAME, { channel: e })), (r = n);
 }
 function O() {
     let e = r;
@@ -43,16 +43,16 @@ function S(e) {
 }
 function T() {
     let e = g.ZP.getConnectedActivityChannelId(),
-        t = g.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : b.lds),
+        t = g.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : y.lds),
         n = c.Z.getChannel(e);
     if (null == e || null == n || null == t) return O();
     {
         let e = (0, E.Z)(t.location.id, t.applicationId);
-        return y(n, t, e);
+        return v(n, t, e);
     }
 }
 function N() {
-    return (0, v.Z)({
+    return (0, b.Z)({
         LayerStore: u.Z,
         PopoutWindowStore: l.Z
     })
@@ -61,10 +61,10 @@ function N() {
 }
 class A extends s.Z {
     _initialize() {
-        _.Z.addChangeListener(T), p.Z.addChangeListener(T), f.Z.addChangeListener(T), h.Z.addChangeListener(T), l.Z.addChangeListener(T), g.ZP.addChangeListener(T), u.Z.addChangeListener(N);
+        _.Z.addChangeListener(T), p.Z.addChangeListener(T), f.ZP.addChangeListener(T), h.Z.addChangeListener(T), l.Z.addChangeListener(T), g.ZP.addChangeListener(T), u.Z.addChangeListener(N);
     }
     _terminate() {
-        _.Z.removeChangeListener(T), p.Z.removeChangeListener(T), f.Z.removeChangeListener(T), h.Z.removeChangeListener(T), l.Z.removeChangeListener(T), g.ZP.removeChangeListener(T), u.Z.removeChangeListener(N);
+        _.Z.removeChangeListener(T), p.Z.removeChangeListener(T), f.ZP.removeChangeListener(T), h.Z.removeChangeListener(T), l.Z.removeChangeListener(T), g.ZP.removeChangeListener(T), u.Z.removeChangeListener(N);
     }
 }
 let C = new A();

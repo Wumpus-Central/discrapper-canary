@@ -106,7 +106,7 @@ class u extends Error {
     }
     getAnyErrorMessage() {
         var e, t;
-        return null !== (t = null === (e = this.getAnyErrorMessageAndField()) || void 0 === e ? void 0 : e.error) && void 0 !== t ? t : this.message;
+        return null != (t = null == (e = this.getAnyErrorMessageAndField()) ? void 0 : e.error) ? t : this.message;
     }
     getAnyErrorMessageAndField() {
         let e = this.errors,

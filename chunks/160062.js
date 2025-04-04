@@ -14,12 +14,12 @@ function o(e) {
 }
 function a(e, t) {
     var n;
-    let r = null == e ? void 0 : null === (n = e.find((e) => e.displayName === t)) || void 0 === n ? void 0 : n.value;
+    let r = null == e || null == (n = e.find((e) => e.displayName === t)) ? void 0 : n.value;
     if ('string' == typeof r) return r;
 }
 function s(e, t) {
     var n;
-    let r = null == e ? void 0 : null === (n = e.find((e) => e.displayName === t)) || void 0 === n ? void 0 : n.value;
+    let r = null == e || null == (n = e.find((e) => e.displayName === t)) ? void 0 : n.value;
     if ('number' == typeof r) return r;
 }
 function l(e, t, n) {

@@ -1,27 +1,27 @@
 var n = e(161581),
     o = e(824232),
     i = e(957833),
-    u = e(996173),
-    a = e(251069),
-    c = e(641236),
-    s = c('iterator'),
-    f = c('toStringTag'),
-    l = u.values,
+    a = e(996173),
+    s = e(251069),
+    u = e(641236),
+    c = u('iterator'),
+    f = u('toStringTag'),
+    l = a.values,
     p = function (t, r) {
         if (t) {
-            if (t[s] !== l)
+            if (t[c] !== l)
                 try {
-                    a(t, s, l);
+                    s(t, c, l);
                 } catch (r) {
-                    t[s] = l;
+                    t[c] = l;
                 }
-            if ((t[f] || a(t, f, r), o[r])) {
-                for (var e in u)
-                    if (t[e] !== u[e])
+            if ((t[f] || s(t, f, r), o[r])) {
+                for (var e in a)
+                    if (t[e] !== a[e])
                         try {
-                            a(t, e, u[e]);
+                            s(t, e, a[e]);
                         } catch (r) {
-                            t[e] = u[e];
+                            t[e] = a[e];
                         }
             }
         }

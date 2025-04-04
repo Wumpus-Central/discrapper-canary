@@ -5,7 +5,7 @@ var r = n(399606),
 let a = () => {
     let e = (0, r.cj)([i.Z], () => {
         var e, t;
-        return null !== (t = null === (e = i.Z.settings.textAndImages) || void 0 === e ? void 0 : e.explicitContentSettings) && void 0 !== t ? t : (0, o.l4)();
+        return null != (t = null == (e = i.Z.settings.textAndImages) ? void 0 : e.explicitContentSettings) ? t : (0, o.l4)();
     });
     return {
         explicitContentGuilds: (0, o.tG)({ setting: null == e ? void 0 : e.explicitContentGuilds }),

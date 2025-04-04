@@ -10,7 +10,7 @@ var i = n(772848),
     u = n(409813),
     d = n(608579),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -82,31 +82,31 @@ function E(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = 'payment-modal',
-    b = 'gift-payment-modal',
-    y = new Set([u.h8.REVIEW, u.h8.CONFIRM, u.h8.GIFT_CUSTOMIZATION]);
+let b = 'payment-modal',
+    y = 'gift-payment-modal',
+    v = new Set([u.h8.REVIEW, u.h8.CONFIRM, u.h8.GIFT_CUSTOMIZATION]);
 function O(e) {
-    let t;
-    let { skuId: n, isGift: u = !1, giftMessage: p, giftingOrigin: h, onClose: E, onComplete: O, analyticsLocations: S, analyticsObject: I, giftRecipient: T, variantsReturnStyle: N } = e,
+    let t,
+        { skuId: n, isGift: u = !1, giftMessage: _, giftingOrigin: h, onClose: E, onComplete: O, analyticsLocations: I, analyticsObject: S, giftRecipient: T, variantsReturnStyle: N } = e,
         A = !1,
         C = (0, i.Z)(),
         R = (e) => {
             t = e;
         },
-        P = u ? b : v;
+        P = u ? y : b;
     (0, o.ZDy)(
         async () => (e) => {
             var { onClose: t, returnRef: i } = e,
                 o = g(e, ['onClose', 'returnRef']);
             return (0, r.jsx)(
                 d.Z,
-                m(_({}, o), {
+                m(p({}, o), {
                     loadId: C,
                     skuId: n,
                     isGift: u,
-                    giftMessage: p,
+                    giftMessage: _,
                     giftingOrigin: h,
-                    analyticsLocations: S,
+                    analyticsLocations: I,
                     giftRecipient: T,
                     onClose: (e) => {
                         t(), null == E || E(e);
@@ -126,10 +126,10 @@ function O(e) {
                     c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: C,
                         payment_type: f.Zuq[f.GZQ.ONE_TIME],
-                        location: I,
+                        location: S,
                         is_gift: u,
                         sku_id: n,
-                        location_stack: S
+                        location_stack: I
                     }),
                     (0, a.fw)(),
                     (0, s.p)(),
@@ -141,7 +141,7 @@ function O(e) {
                         });
             },
             onCloseRequest: () => {
-                null != t && y.has(t) && (0, o.Mr3)(P);
+                null != t && v.has(t) && (0, o.Mr3)(P);
             }
         }
     );

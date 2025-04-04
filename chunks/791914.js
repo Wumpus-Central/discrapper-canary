@@ -17,8 +17,8 @@ var i = n(399606),
     _ = n(388032),
     b = n(413813);
 function x(e) {
-    let { tab: t, setTab: n, children: x, badgeState: y, closePopout: E } = e,
-        { showReminders: v } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+    let { tab: t, setTab: n, children: x, badgeState: y, closePopout: v } = e,
+        { showReminders: E } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: O, inInbox: N } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         j = (0, f.Us)({ location: 'RecentsHeader' }),
         { enabled: C } = u.Z.useExperiment({ location: 'RecentsHeader' }),
@@ -44,7 +44,7 @@ function x(e) {
                     }),
                     (0, r.jsxs)('div', {
                         className: b.controls,
-                        children: [x, (0, r.jsx)(g.Z, { closePopout: E })]
+                        children: [x, (0, r.jsx)(g.Z, { closePopout: v })]
                     })
                 ]
             }),
@@ -108,7 +108,7 @@ function x(e) {
                                   children: 0 === S ? _.NW.string(_.t['2pAkDA']) : _.NW.formatToPlainString(_.t.I4fryM, { count: S })
                               })
                             : null,
-                        v && !O
+                        E && !O
                             ? (0, r.jsx)(l.njP.Item, {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,

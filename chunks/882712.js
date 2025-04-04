@@ -26,12 +26,12 @@ var c = (function (e) {
 let u = 0,
     d = null,
     f = null;
-function p(e) {
+function _(e) {
     let { error: t } = e,
         n = t instanceof a.ZP ? t : new a.ZP(t);
     s.Z.isConnected() && n.code === a.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
-function _(e) {
+function p(e) {
     (u = 2), (d = e.purchaseTokenHash), (f = e.expiresAt);
 }
 function h() {
@@ -50,9 +50,9 @@ class m extends (r = i.ZP.Store) {
 }
 l(m, 'displayName', 'PurchaseTokenAuthStore');
 let g = new m(o.Z, {
-    SKU_PURCHASE_FAIL: p,
-    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: p,
-    USER_PAYMENT_CLIENT_ADD: _,
+    SKU_PURCHASE_FAIL: _,
+    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
+    USER_PAYMENT_CLIENT_ADD: p,
     BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: h,
     BILLING_SUBSCRIPTION_UPDATE_START: h,
     PAYMENT_AUTHENTICATION_CLEAR_ERROR: h,

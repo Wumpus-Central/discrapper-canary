@@ -1,49 +1,49 @@
 n.d(t, {
-    BalanceWidgetEarnedOrbsCoachmarkModal: () => k,
+    BalanceWidgetEarnedOrbsCoachmarkModal: () => S,
     E: () => C
 });
 var r = n(200651);
 n(192379);
-var o = n(120356),
-    a = n.n(o),
-    c = n(442837),
-    i = n(481060),
-    s = n(607070),
-    l = n(70097),
-    b = n(751648),
+var i = n(120356),
+    s = n.n(i),
+    a = n(442837),
+    l = n(481060),
+    o = n(607070),
+    c = n(70097),
+    d = n(751648),
     u = n(790542),
-    d = n(317257),
-    f = n(970815),
+    m = n(317257),
+    g = n(970815),
     p = n(622562),
-    m = n(432792),
-    O = n(937860),
-    h = n(981631),
-    g = n(388032),
-    j = n(806539),
+    h = n(432792),
+    f = n(937860),
+    b = n(981631),
+    N = n(388032),
+    x = n(806539),
     _ = n(293401),
-    y = n(447489),
-    v = n(484885);
-let x = () => {
-        let e = (0, c.e7)([s.Z], () => s.Z.useReducedMotion);
+    E = n(447489),
+    j = n(484885);
+let O = () => {
+        let e = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
         return (0, r.jsx)('div', {
             className: _.centerContent,
             children: e
                 ? (0, r.jsx)('img', {
-                      src: y.Z,
+                      src: E.Z,
                       className: _.orbAsset,
                       alt: 'Orb'
                   })
-                : (0, r.jsxs)(l.Z, {
+                : (0, r.jsxs)(c.Z, {
                       autoPlay: !0,
                       loop: !0,
                       className: _.orbAsset,
                       children: [
                           (0, r.jsx)('source', {
-                              src: v.Z,
+                              src: j.Z,
                               type: 'video/webm'
                           }),
                           (0, r.jsx)('img', {
-                              src: y.Z,
+                              src: E.Z,
                               className: _.orbAsset,
                               alt: 'Orb'
                           })
@@ -52,30 +52,30 @@ let x = () => {
         });
     },
     C = (e) => {
-        let { descriptionText: t = g.NW.string(g.t['6If1Cw']), onClose: n = () => {} } = e;
+        let { descriptionText: t = N.NW.string(N.t['6If1Cw']), onClose: n = () => {} } = e;
         return (0, r.jsxs)('div', {
-            className: a()(_.container, j.baseCardOutline),
+            className: s()(_.container, x.baseCardOutline),
             children: [
-                (0, r.jsx)(O.s, { onClick: n }),
-                (0, r.jsx)(m.VK, {
+                (0, r.jsx)(f.s, { onClick: n }),
+                (0, r.jsx)(h.VK, {
                     rightOffset: 20,
                     invertTail: !0,
                     tailSpineClassName: _.coachmarkTailSpine,
                     tailTargetInnerClassName: _.coachmarkTailTargetInner
                 }),
-                (0, r.jsx)(x, {}),
+                (0, r.jsx)(O, {}),
                 (0, r.jsx)('div', {
                     className: _.contentContainer,
                     children: (0, r.jsxs)('div', {
                         className: _.textContainer,
                         children: [
-                            (0, r.jsx)(i.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: 'heading-md/bold',
                                 color: 'header-primary',
                                 className: _.coachmarkTitle,
-                                children: g.NW.string(g.t['D/nzVl'])
+                                children: N.NW.string(N.t['D/nzVl'])
                             }),
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 className: _.coachmarkDescription,
                                 children: t
@@ -86,35 +86,35 @@ let x = () => {
             ]
         });
     };
-function k(e) {
-    var { backgroundElementRef: t, onClickPill: n, onClose: o, onCloseCallback: a } = e;
+function S(e) {
+    var { backgroundElementRef: t, onClickPill: n, onClose: i, onCloseCallback: s } = e;
     !(function (e, t) {
         if (null != e) {
             var n,
                 r,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        i = {},
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
         }
     })(e, ['backgroundElementRef', 'onClickPill', 'onClose', 'onCloseCallback']);
-    let { balance: c } = (0, u.A)(),
-        i = async () => {
-            await (0, b.j2)(), await o(), a();
+    let { balance: a } = (0, u.A)(),
+        l = async () => {
+            await (0, d.j2)(), await i(), s();
         };
-    return (0, r.jsxs)(p.E, {
+    return (0, r.jsxs)(p.E9, {
         className: _.coachmarkModalContainer,
         backgroundElementRef: t,
-        onGetBoundingRect: h.dG4,
+        onGetBoundingRect: b.dG4,
         getOffsetsRelativeToElement: () => ({
             top: 0,
             right: 0
@@ -125,14 +125,14 @@ function k(e) {
             right: 32
         },
         children: [
-            (0, r.jsx)(f.A4, {
+            (0, r.jsx)(g.A4, {
                 onClick: async () => {
-                    await i(), n();
+                    await l(), n();
                 },
-                balance: c,
-                balanceWidgetMode: d.b.DEFAULT
+                balance: a,
+                balanceWidgetMode: m.b.DEFAULT
             }),
-            (0, r.jsx)(C, { onClose: i })
+            (0, r.jsx)(C, { onClose: l })
         ]
     });
 }

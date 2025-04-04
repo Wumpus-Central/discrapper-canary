@@ -9,8 +9,8 @@ var r = n(594190),
     u = n(709054),
     d = n(356659),
     f = n(981631),
-    p = n(388032);
-function _(e) {
+    _ = n(388032);
+function p(e) {
     var t, n;
     if (null != e) {
         let { ownerId: t } = i.my(e);
@@ -26,20 +26,20 @@ function _(e) {
         c = null == l ? void 0 : l.pid,
         u = null != l ? (null != c ? r.ZP.getGameForPID(c) : null) : r.ZP.getVisibleGame();
     return {
-        sourceName: null !== (t = null == l ? void 0 : l.sourceName) && void 0 !== t ? t : null == u ? void 0 : u.name,
-        sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == u ? void 0 : u.id
+        sourceName: null != (t = null == l ? void 0 : l.sourceName) ? t : null == u ? void 0 : u.name,
+        sourceApplicationId: null != (n = null == l ? void 0 : l.id) ? n : null == u ? void 0 : u.id
     };
 }
 function h(e) {
-    let { sourceName: t, sourceApplicationId: n } = _(e),
-        r = l.Z.getChannelId(),
+    let { sourceName: t, sourceApplicationId: n } = p(e),
+        r = l.ZP.getChannelId(),
         i = [a.default.getId()];
     return (
         null != r && (i = Object.keys(c.Z.getVoiceStatesForChannel(r))),
         {
             id: u.default.fromTimestamp(Date.now()),
             version: d.Bg,
-            applicationName: null != t ? t : p.NW.string(p.t.qtSJxc),
+            applicationName: null != t ? t : _.NW.string(_.t.qtSJxc),
             applicationId: n,
             users: i,
             clipMethod: 'manual',

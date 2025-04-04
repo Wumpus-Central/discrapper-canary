@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => f,
-    Z: () => I
+    Z: () => S
 });
 var r,
     i = n(392711),
@@ -65,51 +65,51 @@ var f = (function (e) {
 let _ = [],
     p = {},
     h = {},
-    g = {};
-function m(e) {
+    m = {};
+function g(e) {
     let { surface: t, activeState: n } = e;
     return 'surface:'.concat(t, ' activeState:').concat(n);
 }
 function E(e) {
     let { surface: t, activeState: n } = e;
     h = d(c({}, h), {
-        [m({
+        [g({
             surface: t,
             activeState: n
         })]: 0
     });
 }
-function v(e) {
-    return o().sortBy(e, ['position', 'id']);
-}
 function b(e) {
     return o().sortBy(e, ['position', 'id']);
 }
 function y(e) {
+    return o().sortBy(e, ['position', 'id']);
+}
+function v(e) {
     let { collections: t, surface: n, activeState: r } = e,
-        i = m({
+        i = g({
             surface: n,
             activeState: r
         }),
-        o = v(t.map((e) => ((e.application_directory_collection_items = b(e.application_directory_collection_items)), e)));
+        o = b(t.map((e) => ((e.application_directory_collection_items = y(e.application_directory_collection_items)), e)));
     (p = d(c({}, p), { [i]: o })), (h = d(c({}, h), { [i]: 1 }));
     let a = Date.now();
-    g = d(c({}, g), { [i]: a });
+    m = d(c({}, m), { [i]: a });
 }
 function O(e) {
     let { surface: t, activeState: n } = e;
     h = d(c({}, h), {
-        [m({
+        [g({
             surface: t,
             activeState: n
         })]: 2
     });
 }
-class S extends (r = a.ZP.Store) {
+class I extends (r = a.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { surface: t, activeState: n } = e;
-        return g[
-            m({
+        return m[
+            g({
                 surface: t,
                 activeState: n
             })
@@ -118,7 +118,7 @@ class S extends (r = a.ZP.Store) {
     getFetchState(e) {
         let { surface: t, activeState: n } = e;
         return h[
-            m({
+            g({
                 surface: t,
                 activeState: n
             })
@@ -127,21 +127,21 @@ class S extends (r = a.ZP.Store) {
     getCollections(e) {
         var t;
         let { surface: n, activeState: r } = e;
-        return null !==
+        return null !=
             (t =
                 p[
-                    m({
+                    g({
                         surface: n,
                         activeState: r
                     })
-                ]) && void 0 !== t
+                ])
             ? t
             : _;
     }
 }
-l(S, 'displayName', void 0);
-let I = new S(s.Z, {
+l(I, 'displayName', void 0);
+let S = new I(s.Z, {
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS: E,
-    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: y,
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: v,
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: O
 });

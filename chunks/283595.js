@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(47120), n(789020), n(177593);
+n.d(t, { Z: () => Z }), n(47120), n(789020), n(177593);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -9,8 +9,8 @@ var r,
     u = n(630388),
     d = n(780570),
     f = n(314897),
-    p = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -63,51 +63,51 @@ function g(e, t) {
     );
 }
 let E = 'LibraryApplicationStore';
-function v() {
+function b() {
     var e;
-    return null !== (e = s.K.get(E)) && void 0 !== e ? e : {};
+    return null != (e = s.K.get(E)) ? e : {};
 }
-let b = !1,
-    y = {},
+let y = !1,
+    v = {},
     O = {},
-    S = new Set(),
-    I = {},
+    I = new Set(),
+    S = {},
     T = {},
     N = !1;
 function A() {
-    s.K.set(E, g(h({}, v()), { activeLaunchOptionIds: T }));
+    s.K.set(E, g(h({}, b()), { activeLaunchOptionIds: T }));
 }
 function C() {
-    s.K.set(E, g(h({}, v()), { activeLibraryApplicationBranchIds: I }));
+    s.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: S }));
 }
 function R(e) {
     for (let t of e) {
         let e = c.Z.createFromServer(t);
-        y[(0, d.Tu)(e.id, e.branchId)] = e;
+        v[(0, d.Tu)(e.id, e.branchId)] = e;
     }
 }
 function P() {
-    b = !1;
+    y = !1;
 }
 function w(e) {
     let { libraryApplications: t } = e;
-    (y = {}), R(t), (b = !0);
+    (v = {}), R(t), (y = !0);
 }
 function D(e) {
     let { libraryApplications: t } = e;
     R(t);
 }
-function x(e) {
+function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
         i = (0, d.Tu)(t, n),
         o = B(t, n);
-    null != o && !o.isHidden() && u.yE(r, p.eHb.HIDDEN) && (N = !0), S.add(i);
+    null != o && !o.isHidden() && u.yE(r, _.eHb.HIDDEN) && (N = !0), I.add(i);
 }
-function L(e) {
+function x(e) {
     let { libraryApplication: t } = e,
         n = c.Z.createFromServer(t),
         r = (0, d.Tu)(n.id, n.branchId);
-    (y[r] = n), S.delete(r);
+    (v[r] = n), I.delete(r);
 }
 function M(e) {
     let { applicationId: t, branchId: n, launchOptionId: r } = e;
@@ -115,8 +115,8 @@ function M(e) {
 }
 function k(e) {
     let { applicationId: t, branchId: n } = e;
-    if (I[t] === n) return !1;
-    (I[t] = n), C();
+    if (S[t] === n) return !1;
+    (S[t] = n), C();
 }
 function j(e) {
     let { libraryApplications: t } = e;
@@ -126,7 +126,7 @@ function U() {
     O = {};
 }
 function G(e) {
-    let t = Z();
+    let t = F();
     return (
         Object.keys(t).forEach((n) => {
             e(t[n]) || delete t[n];
@@ -137,25 +137,25 @@ function G(e) {
 function B(e, t) {
     var n;
     let r = (0, d.Tu)(e, t);
-    return null !== (n = y[r]) && void 0 !== n ? n : O[r];
+    return null != (n = v[r]) ? n : O[r];
 }
-function Z() {
-    return h({}, O, y);
+function F() {
+    return h({}, O, v);
 }
-class F extends (r = a.ZP.Store) {
+class V extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
-        null != e && (null == e.activeLaunchOptionIds ? A() : (T = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (I = e.activeLibraryApplicationBranchIds));
+        null != e && (null == e.activeLaunchOptionIds ? A() : (T = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (S = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         return G((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
-        return Z();
+        return F();
     }
     hasLibraryApplication() {
-        return Object.keys(Z()).length > 0;
+        return Object.keys(F()).length > 0;
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -169,14 +169,14 @@ class F extends (r = a.ZP.Store) {
     }
     getActiveLibraryApplication(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = I[e];
+            n = S[e];
         if (null != n) {
             var r;
             let i = (0, d.Tu)(e, n),
-                o = null !== (r = y[i]) && void 0 !== r ? r : O[i];
+                o = null != (r = v[i]) ? r : O[i];
             if (null != o && (0, d.Je)(o) && (t || !o.isHidden())) return o;
         }
-        let i = Z();
+        let i = F();
         for (let n in i)
             if (i[n].id === e) {
                 let e = i[n];
@@ -184,16 +184,16 @@ class F extends (r = a.ZP.Store) {
             }
     }
     isUpdatingFlags(e, t) {
-        return S.has((0, d.Tu)(e, t));
+        return I.has((0, d.Tu)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
         return T[(0, d.Tu)(e, t)];
     }
     get fetched() {
-        return b;
+        return y;
     }
     get entitledBranchIds() {
-        return o()(Z())
+        return o()(F())
             .values()
             .filter((e) => (0, d.Je)(e))
             .map((e) => e.branchId)
@@ -204,18 +204,18 @@ class F extends (r = a.ZP.Store) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (b) return setImmediate(e), !1;
+            if (y) return setImmediate(e), !1;
         });
     }
 }
-_(F, 'displayName', 'LibraryApplicationStore');
-let V = new F(l.Z, {
+p(V, 'displayName', 'LibraryApplicationStore');
+let Z = new V(l.Z, {
     LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: D,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_START: x,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
-    LIBRARY_APPLICATION_UPDATE: L,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_START: L,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
+    LIBRARY_APPLICATION_UPDATE: x,
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: M,
     LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: k,
     LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: j,

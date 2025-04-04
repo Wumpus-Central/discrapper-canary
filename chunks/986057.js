@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var r = n(846027),
     i = n(147913),
     o = n(353926),
@@ -28,8 +28,8 @@ function _() {
     });
 }
 function p() {
-    if (!_() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.Z.isConnected() || null == l.Z.getActiveVoiceFilter()) return !1;
-    let e = c.Z.getChannelId(),
+    if (!_() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.ZP.isConnected() || null == l.Z.getActiveVoiceFilter()) return !1;
+    let e = c.ZP.getChannelId(),
         t = null != e ? s.Z.getChannel(e) : null,
         { mute: n, selfMute: r, suppress: i } = (0, a.b)({ channel: t });
     return !(n || r || i);
@@ -55,4 +55,4 @@ class h extends i.Z {
             f(this, 'stores', new Map().set(o.Z, this.handleExperimentStateChange));
     }
 }
-let g = new h();
+let m = new h();

@@ -19,8 +19,8 @@ var r = n(200651),
     m = n(710867),
     g = n(312904),
     E = n(186917),
-    b = n(687322);
-function v(e, t, n) {
+    b = n(422786);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function v(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,20 +44,20 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
 let O = (e) => {
-        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: o = !1, isHovering: s = !1, useOpacityOnHover: l = !0, autoPlay: c = !0, restartMethod: u, urlQueryString: m, profileEffectConfig: E, noBorderRadius: v = !1, introDelay: y = d.lG } = e,
+        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: o = !1, isHovering: s = !1, useOpacityOnHover: l = !0, autoPlay: c = !0, restartMethod: u, urlQueryString: m, profileEffectConfig: E, noBorderRadius: y = !1, introDelay: v = d.lG } = e,
             O = i.useRef(null),
             [I, S] = i.useState([]);
         (0, g.Z)(E);
-        let [T, A] = i.useState(0),
-            [N, C] = i.useState(0),
+        let [T, N] = i.useState(0),
+            [A, C] = i.useState(0),
             { accessibilityLabel: R } = E,
-            [P, w] = i.useState(-y),
+            [P, w] = i.useState(-v),
             {
                 stop: D,
                 reset: L,
@@ -65,9 +65,9 @@ let O = (e) => {
             } = (0, _.Z)((e) => {
                 w((t) => t + e);
             }),
-            M = i.useRef(y);
+            M = i.useRef(v);
         i.useEffect(() => {
-            M.current = y;
+            M.current = v;
         }),
             i.useEffect(() => {
                 w(-M.current), S((0, p.H)(E.effects));
@@ -79,7 +79,7 @@ let O = (e) => {
                     let r = n.start + n.duration;
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
-                    A(t),
+                    N(t),
                     C(e);
             }, [C, I]);
         let [k, j] = i.useState(!1);
@@ -91,7 +91,7 @@ let O = (e) => {
                 ref: O,
                 className: a()(b.profileEffects, { [b.hovered]: s && l }),
                 children: (0, r.jsx)('div', {
-                    className: v ? b.innerNoRadius : b.inner,
+                    className: y ? b.innerNoRadius : b.inner,
                     children: I.map((e, i) => {
                         if (!x.current && E.animationType === f.Q.PERSISTENT && null != E.staticFrameSrc && 0 === i && !0 === c) {
                             var o, a, s, l;
@@ -101,8 +101,8 @@ let O = (e) => {
                                 {
                                     className: b.effect,
                                     style: {
-                                        top: null !== (s = null === (o = e.position) || void 0 === o ? void 0 : o.y) && void 0 !== s ? s : 0 - t,
-                                        left: null !== (l = null === (a = e.position) || void 0 === a ? void 0 : a.x) && void 0 !== l ? l : 0
+                                        top: null != (s = null == (o = e.position) ? void 0 : o.y) ? s : 0 - t,
+                                        left: null != (l = null == (a = e.position) ? void 0 : a.x) ? l : 0
                                     },
                                     src: n,
                                     alt: R
@@ -122,7 +122,7 @@ let O = (e) => {
                                 setHasPlayedThrough: j,
                                 urlQueryString: m,
                                 maxLoops: n,
-                                loopEnd: N,
+                                loopEnd: A,
                                 bannerAdjustment: t
                             },
                             e.src + i
@@ -167,7 +167,7 @@ let O = (e) => {
                       useOpacityOnHover: e.useOpacityOnHover
                   })
                 : o
-                  ? (0, r.jsx)(O, y({ profileEffectConfig: g }, e))
+                  ? (0, r.jsx)(O, v({ profileEffectConfig: g }, e))
                   : (0, r.jsx)(m.Z, {
                         profileEffectConfig: g,
                         onReady: () => {

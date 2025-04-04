@@ -24,10 +24,10 @@ function s(e) {
     let i = r.Z.getGameByName(e.name),
         o = 'exePath' in e ? e.exePath : e.exe;
     return {
-        gameName: null !== (t = e.name) && void 0 !== t ? t : void 0,
+        gameName: null != (t = e.name) ? t : void 0,
         gameId: null == i ? void 0 : i.id,
         exe: null != o ? a(o) : void 0,
-        distributor: null !== (n = e.distributor) && void 0 !== n ? n : void 0
+        distributor: null != (n = e.distributor) ? n : void 0
     };
 }
 function l(e, t) {

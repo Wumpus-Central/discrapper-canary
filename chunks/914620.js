@@ -13,20 +13,20 @@ var r = n(200651),
     p = n(722300),
     h = n(910200),
     m = n(323220),
-    g = n(535960);
+    g = n(595732);
 let E = 50001;
 function b(e) {
     let { guildId: t, name: n, setPopoutRef: o } = e,
         { analyticsLocations: b } = (0, u.ZP)(c.Z.GUILD_PROFILE),
-        { guildProfile: v, fetchGuildProfile: y, fetchStatus: O } = (0, _.u)(t),
+        { guildProfile: y, fetchGuildProfile: v, fetchStatus: O } = (0, _.u)(t),
         I = (0, s.e7)([f.Z], () => f.Z.getErrorCode(t)),
         S = i.useRef(null),
         T = i.useCallback(() => {
-            y(!0);
-        }, [y]);
+            v(!0);
+        }, [v]);
     i.useEffect(() => {
-        y();
-    }, [y]),
+        v();
+    }, [v]),
         i.useEffect(() => {
             (0, d.vb)(t, b);
         }, [t, b]),
@@ -40,7 +40,7 @@ function b(e) {
                       className: a()(g.container, g.spinnerContainer),
                       children: (0, r.jsx)(l.$jN, {})
                   })
-                : null == v && I === E
+                : null == y && I === E
                   ? (0, r.jsx)('div', {
                         className: g.container,
                         children: (0, r.jsx)(m.Z, {
@@ -48,7 +48,7 @@ function b(e) {
                             name: n
                         })
                     })
-                  : null == v
+                  : null == y
                     ? (0, r.jsx)('div', {
                           className: g.container,
                           children: (0, r.jsx)(p.Z, {
@@ -58,13 +58,13 @@ function b(e) {
                       })
                     : (0, r.jsx)('div', {
                           className: g.container,
-                          children: (0, r.jsx)(h.ZP, { profile: v })
+                          children: (0, r.jsx)(h.ZP, { profile: y })
                       }),
-        [O, v, I, t, n, T]
+        [O, y, I, t, n, T]
     );
     return (0, r.jsx)(l.VqE, {
         ref: S,
-        'aria-label': null == v ? void 0 : v.name,
+        'aria-label': null == y ? void 0 : y.name,
         children: N
     });
 }

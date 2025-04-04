@@ -5,22 +5,22 @@ var r = n(200651),
     a = n.n(o),
     s = n(670596),
     l = n(561779),
-    c = n(504841);
+    c = n(993817);
 let u = (e) => ''.concat(e.toFixed(0), '%'),
     d = i.forwardRef(function (e, t) {
-        let { value: n, minValue: o = 0, maxValue: d = 100, onChange: f, onInteraction: p, renderValue: _ = u, 'aria-label': h } = e,
+        let { value: n, minValue: o = 0, maxValue: d = 100, onChange: f, onInteraction: _, renderValue: p = u, 'aria-label': h } = e,
             m = i.useRef(null),
-            g = i.useRef(a().debounce(() => (null == p ? void 0 : p(s.U.SLIDER)), 100));
+            g = i.useRef(a().debounce(() => (null == _ ? void 0 : _(s.U.SLIDER)), 100));
         i.useImperativeHandle(
             t,
             () => ({
                 focus: () => {
                     var e;
-                    return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
+                    return null == (e = m.current) ? void 0 : e.focus();
                 },
                 blur: () => {
                     var e;
-                    return null === (e = m.current) || void 0 === e ? void 0 : e.blur();
+                    return null == (e = m.current) ? void 0 : e.blur();
                 },
                 activate: () => !1
             }),
@@ -41,7 +41,7 @@ let u = (e) => ''.concat(e.toFixed(0), '%'),
                 maxValue: d,
                 onValueChange: E,
                 asValueChanges: f,
-                onValueRender: _,
+                onValueRender: p,
                 orientation: 'horizontal',
                 'aria-label': h
             })

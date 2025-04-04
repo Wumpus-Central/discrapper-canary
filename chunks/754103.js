@@ -5,7 +5,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(481060),
     l = n(600164),
-    c = n(251127);
+    c = n(360797);
 function u(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -109,10 +109,10 @@ class m extends i.PureComponent {
             u(this, 'renderFormSection', (e) => {
                 let t = this.props,
                     { values: n, onFieldChange: i, onFieldFocus: o, onFieldBlur: l, layout: c } = t,
-                    u = _(t, ['values', 'onFieldChange', 'onFieldFocus', 'onFieldBlur', 'layout']),
-                    { getClassNameForLayout: f, renderInput: h, title: m, name: g, id: E, placeholder: v } = e,
-                    b = p(d({}, _(e, ['getClassNameForLayout', 'renderInput', 'title', 'name', 'id', 'placeholder'])), {
-                        placeholder: null == v ? void 0 : v(),
+                    u = p(t, ['values', 'onFieldChange', 'onFieldFocus', 'onFieldBlur', 'layout']),
+                    { getClassNameForLayout: f, renderInput: h, title: m, name: g, id: E, placeholder: b } = e,
+                    y = _(d({}, p(e, ['getClassNameForLayout', 'renderInput', 'title', 'name', 'id', 'placeholder'])), {
+                        placeholder: null == b ? void 0 : b(),
                         layout: c,
                         error: this.getError(g),
                         value: n[g],
@@ -128,7 +128,7 @@ class m extends i.PureComponent {
                         className: a()(null == f ? void 0 : f(c)),
                         title: m(),
                         titleId: E,
-                        children: h(b, u)
+                        children: h(y, u)
                     },
                     g
                 );

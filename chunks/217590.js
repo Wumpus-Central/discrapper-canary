@@ -1,7 +1,7 @@
 n.d(t, {
     Iw: () => h,
-    On: () => _,
-    Yk: () => p,
+    On: () => p,
+    Yk: () => _,
     cQ: () => u,
     ev: () => c,
     m1: () => f,
@@ -56,9 +56,9 @@ let c = (e) => {
             is_suggestion: n
         });
     },
-    p = (e, t, n) => {
-        let i;
-        let { sticker: s } = e;
+    _ = (e, t, n) => {
+        let i,
+            { sticker: s } = e;
         s.type === o.n0.GUILD && (i = s.guild_id),
             r.ZP.trackWithMetadata(a.rMx.SEARCH_RESULT_SELECTED, {
                 load_id: s.id,
@@ -70,9 +70,9 @@ let c = (e) => {
                 query: t
             });
     },
-    _ = (e) => {
-        let t;
-        let { sticker: n, category: i } = e;
+    p = (e) => {
+        let t,
+            { sticker: n, category: i } = e;
         n.type === o.n0.GUILD && (t = n.guild_id),
             r.ZP.trackWithMetadata(a.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
                 type: l.cd.EMOJI_PICKER_STICKER_CLICKED,

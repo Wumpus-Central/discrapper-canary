@@ -1,12 +1,12 @@
 n.d(t, {
     Cg: () => P,
-    Y0: () => x,
+    Y0: () => L,
     YA: () => G,
     fM: () => D,
     hz: () => k,
     mz: () => j,
     ol: () => U,
-    xB: () => L
+    xB: () => x
 });
 var r = n(200651),
     i = n(192379),
@@ -18,18 +18,18 @@ var r = n(200651),
     u = n(143450),
     d = n(186325),
     f = n(693789),
-    p = n(507274),
-    _ = n(84735),
+    _ = n(507274),
+    p = n(84735),
     h = n(261833),
     m = n(742746),
     g = n(147479),
     E = n(481060),
-    v = n(600164),
-    b = n(602091),
-    y = n(231338),
+    b = n(600164),
+    y = n(602091),
+    v = n(231338),
     O = n(388032),
-    S = n(639211);
-function I(e, t, n) {
+    I = n(423931);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -105,38 +105,38 @@ var P = (function (e) {
     return (e.SMALL = 'small'), (e.MEDIUM = 'medium'), (e.LARGE = 'large'), (e.DYNAMIC = 'dynamic'), e;
 })({});
 let w = Object.freeze({
-    small: S.small,
-    medium: S.medium,
-    large: S.large,
+    small: I.small,
+    medium: I.medium,
+    large: I.large,
     dynamic: null
 });
 var D = (function (e) {
     return (e.DEFAULT = 'default'), (e.SUBTLE = 'subtle'), e;
 })({});
-function x(e) {
+function L(e) {
     var t,
-        { transitionState: n, children: o, size: f = 'small', role: h = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: v = y.dG, returnRef: O, animation: I = 'default' } = e,
+        { transitionState: n, children: o, size: f = 'small', role: h = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: b = v.dG, returnRef: O, animation: S = 'default' } = e,
         N = C(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation']);
-    let R = n === b.Dv.ENTERING || n === b.Dv.ENTERED,
+    let R = n === y.Dv.ENTERING || n === y.Dv.ENTERED,
         { reducedMotion: P } = i.useContext(d.S),
         D = (0, u.q)(
             {
                 opacity: +!!R,
-                transform: R || P.enabled || 'subtle' === I ? 'scale(1)' : 'scale(0.7)',
+                transform: R || P.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
                     clamp: !0
                 },
-                onRest: v
+                onRest: b
             },
             'animate-always'
         ),
-        x = i.useRef(null),
-        L = null != N['aria-label'],
+        L = i.useRef(null),
+        x = null != N['aria-label'],
         M = null != N['aria-labelledby'],
         k = i.useId(),
-        j = null !== (t = N['aria-labelledby']) && void 0 !== t ? t : k,
+        j = null != (t = N['aria-labelledby']) ? t : k,
         U = i.useMemo(
             () => ({
                 headerId: j,
@@ -144,31 +144,31 @@ function x(e) {
             }),
             [j, M]
         );
-    return (0, r.jsx)(b.zM.Provider, {
+    return (0, r.jsx)(y.zM.Provider, {
         value: U,
         children: (0, r.jsx)(
-            p.V,
+            _.V,
             A(
                 T(
                     {
-                        className: S.focusLock,
+                        className: I.focusLock,
                         role: h,
                         returnRef: O,
                         impressionType: l.ImpressionTypes.MODAL,
-                        'aria-labelledby': L ? void 0 : U.headerId
+                        'aria-labelledby': x ? void 0 : U.headerId
                     },
                     N
                 ),
                 {
                     children: (0, r.jsx)(s.animated.div, {
-                        className: a()(m, S.root, w[f], {
-                            [S.fullscreenOnMobile]: g,
-                            [S.rootWithShadow]: !E
+                        className: a()(m, I.root, w[f], {
+                            [I.fullscreenOnMobile]: g,
+                            [I.rootWithShadow]: !E
                         }),
-                        ref: x,
+                        ref: L,
                         style: D,
-                        children: (0, r.jsx)(_.J, {
-                            containerRef: x,
+                        children: (0, r.jsx)(p.J, {
+                            containerRef: L,
                             children: o
                         })
                     })
@@ -177,17 +177,17 @@ function x(e) {
         )
     });
 }
-function L(e) {
+function x(e) {
     var t, n, o, s, l;
-    let { headerId: c, headerIdIsManaged: u } = i.useContext(b.zM);
-    return (0, r.jsx)(v.Z, {
+    let { headerId: c, headerIdIsManaged: u } = i.useContext(y.zM);
+    return (0, r.jsx)(b.Z, {
         grow: 0,
         shrink: 0,
-        direction: null !== (t = e.direction) && void 0 !== t ? t : v.Z.Direction.HORIZONTAL,
-        justify: null !== (n = e.justify) && void 0 !== n ? n : v.Z.Justify.START,
-        align: null !== (o = e.align) && void 0 !== o ? o : v.Z.Align.CENTER,
-        wrap: null !== (s = e.wrap) && void 0 !== s ? s : v.Z.Wrap.NO_WRAP,
-        className: a()(S.header, e.className, { [S.separator]: null === (l = e.separator) || void 0 === l || l }),
+        direction: null != (t = e.direction) ? t : b.Z.Direction.HORIZONTAL,
+        justify: null != (n = e.justify) ? n : b.Z.Justify.START,
+        align: null != (o = e.align) ? o : b.Z.Align.CENTER,
+        wrap: null != (s = e.wrap) ? s : b.Z.Wrap.NO_WRAP,
+        className: a()(I.header, e.className, { [I.separator]: null == (l = e.separator) || l }),
         id: u ? void 0 : c,
         children: e.children
     });
@@ -211,7 +211,7 @@ function k(e) {
         A(
             T(
                 {
-                    className: a()(S.content, t),
+                    className: a()(I.content, t),
                     ref: i
                 },
                 s
@@ -222,14 +222,14 @@ function k(e) {
 }
 function j(e) {
     var t, n, i, o, s;
-    return (0, r.jsx)(v.Z, {
+    return (0, r.jsx)(b.Z, {
         grow: 0,
         shrink: 0,
-        direction: null !== (t = e.direction) && void 0 !== t ? t : v.Z.Direction.HORIZONTAL_REVERSE,
-        justify: null !== (n = e.justify) && void 0 !== n ? n : v.Z.Justify.START,
-        align: null !== (i = e.align) && void 0 !== i ? i : v.Z.Align.STRETCH,
-        wrap: null !== (o = e.wrap) && void 0 !== o ? o : v.Z.Wrap.NO_WRAP,
-        className: a()(S.footer, e.className, { [S.footerSeparator]: null === (s = e.separator) || void 0 === s || s }),
+        direction: null != (t = e.direction) ? t : b.Z.Direction.HORIZONTAL_REVERSE,
+        justify: null != (n = e.justify) ? n : b.Z.Justify.START,
+        align: null != (i = e.align) ? i : b.Z.Align.STRETCH,
+        wrap: null != (o = e.wrap) ? o : b.Z.Wrap.NO_WRAP,
+        className: a()(I.footer, e.className, { [I.footerSeparator]: null == (s = e.separator) || s }),
         children: (0, r.jsx)(E.y5t, { children: e.children })
     });
 }
@@ -240,15 +240,15 @@ function U(e) {
         look: f.zx.Looks.BLANK,
         size: f.zx.Sizes.NONE,
         onClick: e.onClick,
-        innerClassName: a()(e.innerClassName, { [S.closeWithCircleBackground]: e.withCircleBackground }),
+        innerClassName: a()(e.innerClassName, { [I.closeWithCircleBackground]: e.withCircleBackground }),
         className: a()(e.className, {
-            [S.hideOnFullscreen]: e.hideOnFullscreen,
-            [S.close]: !e.withCircleBackground
+            [I.hideOnFullscreen]: e.hideOnFullscreen,
+            [I.close]: !e.withCircleBackground
         }),
         children: (0, r.jsx)(h.D, {
             size: 'md',
             color: 'currentColor',
-            className: a()(e.innerClassName, S.closeIcon)
+            className: a()(e.innerClassName, I.closeIcon)
         })
     });
 }

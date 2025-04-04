@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -21,10 +21,10 @@ function u(e, t, n) {
 }
 let d = new l.Z('GuildAvailabilityStore'),
     f = new Set();
-function p(e) {
+function _(e) {
     (f = new Set(e.unavailableGuilds)), e.unavailableGuilds.length > 0 && d.warn(''.concat(e.unavailableGuilds.length, ' guilds are unavailable on connection open: ').concat(e.unavailableGuilds));
 }
-function _(e) {
+function p(e) {
     if (!f.has(e.guildId)) return !1;
     f.delete(e.guildId);
 }
@@ -59,12 +59,12 @@ class E extends (r = a.ZP.Store) {
     }
 }
 u(E, 'displayName', 'GuildAvailabilityStore');
-let v = new E(s.Z, {
-    CONNECTION_OPEN: p,
-    OVERLAY_INITIALIZE: p,
+let b = new E(s.Z, {
+    CONNECTION_OPEN: _,
+    OVERLAY_INITIALIZE: _,
     GUILD_UNAVAILABLE: h,
     GUILD_DELETE: g,
     GUILD_CREATE: m,
     GUILD_UPDATE: m,
-    GUILD_GEO_RESTRICTED: _
+    GUILD_GEO_RESTRICTED: p
 });

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => v,
+    Z: () => b,
     p: () => g
 }),
     n(47120);
@@ -11,23 +11,23 @@ var r = n(200651),
     l = n(956664),
     c = n(212459),
     u = n(730606),
-    d = n(570124);
+    d = n(179963);
 let f = 24,
-    p = 36,
-    _ = 88,
-    h = 76,
-    m = 256;
+    _ = 36,
+    p = 76,
+    h = 88,
+    m = 272;
 function g(e, t) {
-    let n = window.innerWidth - (e ? _ : f) * 2,
-        r = window.innerHeight - 2 * h - 2 * p;
+    let n = window.innerWidth - (e ? p : f) * 2,
+        r = window.innerHeight - 2 * h;
     if (!(0, l._H)(t))
         return {
             width: n,
             height: r
         };
     let { width: i, height: o } = t,
-        a = window.innerWidth - 2 * m - 2 * f,
-        s = (e ? window.innerHeight - 2 * h : window.innerHeight) - 2 * p,
+        a = window.innerWidth - 2 * m,
+        s = window.innerHeight - (e ? h : _) * 2,
         c = (0, l.Tj)({
             width: i,
             height: o,
@@ -46,11 +46,11 @@ function E(e) {
     let { items: t, currentIndex: n, children: o } = e,
         { entering: l } = (0, c.Y)(),
         f = t[n],
-        p = g(t.length > 1, {
+        _ = g(t.length > 1, {
             width: f.width,
             height: f.height
         }),
-        [_, h] = i.useState(0);
+        [p, h] = i.useState(0);
     return (
         i.useEffect(() => {
             let e = () => h((e) => e + 1);
@@ -67,10 +67,10 @@ function E(e) {
             'div',
             {
                 className: a()(d.mediaArea, { [d.animated]: l }),
-                children: p.width > 0 && p.height > 0 && o(p.width, p.height)
+                children: _.width > 0 && _.height > 0 && o(_.width, _.height)
             },
             f.url
         )
     );
 }
-let v = i.memo(E);
+let b = i.memo(E);

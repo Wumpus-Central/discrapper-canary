@@ -6,8 +6,8 @@ n.d(t, {
     LX: () => C,
     TH: () => M,
     UO: () => k,
-    k6: () => L,
-    l_: () => S,
+    k6: () => x,
+    l_: () => I,
     rs: () => w,
     s6: () => h
 });
@@ -23,8 +23,8 @@ var o = n(539528),
 n(165566);
 var d = n(226512),
     f = n(26095),
-    p = n.n(f),
-    _ = (function (e) {
+    _ = n.n(f),
+    p = (function (e) {
         var t = (0, a.Z)();
         return (t.displayName = e), t;
     })('Router-History'),
@@ -74,7 +74,7 @@ var d = n(226512),
                             staticContext: this.props.staticContext
                         }
                     },
-                    i.createElement(_.Provider, {
+                    i.createElement(p.Provider, {
                         children: this.props.children || null,
                         value: this.props.history
                     })
@@ -107,17 +107,17 @@ var g = (function (e) {
         );
     })(i.Component),
     E = {},
-    v = 10000,
-    b = 0;
-function y(e) {
+    b = 10000,
+    y = 0;
+function v(e) {
     if (E[e]) return E[e];
     var t = u().compile(e);
-    return b < v && ((E[e] = t), b++), t;
+    return y < b && ((E[e] = t), y++), t;
 }
 function O(e, t) {
-    return void 0 === e && (e = '/'), void 0 === t && (t = {}), '/' === e ? e : y(e)(t, { pretty: !0 });
+    return void 0 === e && (e = '/'), void 0 === t && (t = {}), '/' === e ? e : v(e)(t, { pretty: !0 });
 }
-function S(e) {
+function I(e) {
     var t = e.computedMatch,
         n = e.to,
         r = e.push,
@@ -142,12 +142,12 @@ function S(e) {
               });
     });
 }
-var I = {},
+var S = {},
     T = 10000,
     N = 0;
 function A(e, t) {
     var n = '' + t.end + t.strict + t.sensitive,
-        r = I[n] || (I[n] = {});
+        r = S[n] || (S[n] = {});
     if (r[e]) return r[e];
     var i = [],
         o = {
@@ -265,21 +265,21 @@ function D(e) {
                 return t || (0, s.Z)(!1), i.createElement(e, (0, l.Z)({}, r, t, { ref: n }));
             });
         };
-    return (n.displayName = t), (n.WrappedComponent = e), p()(n, e);
+    return (n.displayName = t), (n.WrappedComponent = e), _()(n, e);
 }
-var x = i.useContext;
-function L() {
-    return x(_);
+var L = i.useContext;
+function x() {
+    return L(p);
 }
 function M() {
-    return x(h).location;
+    return L(h).location;
 }
 function k() {
-    var e = x(h).match;
+    var e = L(h).match;
     return e ? e.params : {};
 }
 function j(e) {
     var t = M(),
-        n = x(h).match;
+        n = L(h).match;
     return e ? C(t.pathname, e) : n;
 }

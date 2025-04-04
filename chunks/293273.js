@@ -9,15 +9,15 @@ var r,
     u = n(317381),
     d = n(676035),
     f = n(594190),
-    p = n(406066),
-    _ = n(768419),
+    _ = n(406066),
+    p = n(768419),
     h = n(695346),
     m = n(581883),
     g = n(199902),
     E = n(272053),
-    v = n(77498),
-    b = n(981631);
-function y(e, t, n) {
+    b = n(77498),
+    y = n(981631);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,23 +41,23 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-let S = [],
-    I = {};
+let I = [],
+    S = {};
 function T() {
     let e = [],
         t = h.Ok.getSetting();
     null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, d.I)(t));
-    let n = p.Z.getActivities();
+    let n = _.Z.getActivities();
     e.push(...n);
     let r = E.Z.getStream();
-    null != r && e.push(O({ type: b.IIU.STREAMING }, r));
+    null != r && e.push(O({ type: y.IIU.STREAMING }, r));
     let i = new Set();
-    s().forEach(I, (t) => {
+    s().forEach(S, (t) => {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
@@ -67,61 +67,61 @@ function T() {
         u = null != g.Z.getCurrentUserActiveStream(),
         m = l || (c && !u);
     if (null != a && null != a.name && !m) {
-        var y, T;
+        var v, T;
         e.push({
-            type: b.IIU.PLAYING,
+            type: y.IIU.PLAYING,
             name: a.name,
-            application_id: null !== (T = a.id) && void 0 !== T ? T : null === (y = v.Z.getGameByName(a.name)) || void 0 === y ? void 0 : y.id,
+            application_id: null != (T = a.id) ? T : null == (v = b.Z.getGameByName(a.name)) ? void 0 : v.id,
             timestamps: { start: a.start }
         });
     }
-    let N = _.Z.getActivity();
-    null != N && e.push(O({ type: b.IIU.LISTENING }, N)), o()(S, e) || (S = e);
+    let N = p.Z.getActivity();
+    null != N && e.push(O({ type: y.IIU.LISTENING }, N)), o()(I, e) || (I = e);
 }
 function N() {
-    (I = {}), T();
+    (S = {}), T();
 }
 function A(e) {
     let { socketId: t, pid: n, activity: r } = e;
-    if (o()(I[t], [n, r])) return !1;
-    null != r ? (I[t] = [n, r]) : delete I[t], T();
+    if (o()(S[t], [n, r])) return !1;
+    null != r ? (S[t] = [n, r]) : delete S[t], T();
 }
 function C(e) {
     let { socketId: t } = e;
-    delete I[t], T();
+    delete S[t], T();
 }
 function R(e) {
     let { localActivities: t } = e;
-    (I = O({}, t)), T();
+    (S = O({}, t)), T();
 }
 class P extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.ZP, u.ZP, E.Z, g.Z, _.Z, m.Z, v.Z), this.syncWith([p.Z], () => T());
+        this.waitFor(f.ZP, u.ZP, E.Z, g.Z, p.Z, m.Z, b.Z), this.syncWith([_.Z], () => T());
     }
     getActivities() {
-        return S;
+        return I;
     }
     getPrimaryActivity() {
-        return S[0];
+        return I[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
     }
     getCustomStatusActivity() {
-        return this.findActivity((e) => e.type === b.IIU.CUSTOM_STATUS);
+        return this.findActivity((e) => e.type === y.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return S.find(e);
+        return I.find(e);
     }
     getApplicationActivities() {
-        return I;
+        return S;
     }
     getActivityForPID(e) {
-        for (let [t, n] of Object.values(I)) if (t === e) return n;
+        for (let [t, n] of Object.values(S)) if (t === e) return n;
         return null;
     }
 }
-y(P, 'displayName', 'LocalActivityStore');
+v(P, 'displayName', 'LocalActivityStore');
 let w = new P(c.Z, {
     OVERLAY_INITIALIZE: R,
     START_SESSION: N,

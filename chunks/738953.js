@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(47120);
+n.d(t, { Z: () => F }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(642128),
@@ -15,9 +15,9 @@ var r = n(200651),
     m = n(430824),
     g = n(785717),
     E = n(221292),
-    v = n(687158),
-    b = n(510659),
-    y = n(113557),
+    b = n(687158),
+    y = n(510659),
+    v = n(113557),
     O = n(867176),
     I = n(451834),
     S = n(502762),
@@ -32,7 +32,7 @@ var r = n(200651),
     L = n(228168),
     x = n(981631),
     M = n(388032),
-    k = n(231930);
+    k = n(200669);
 function j(e, t, n) {
     return (
         t in e
@@ -85,25 +85,25 @@ function B(e, t) {
         e
     );
 }
-function V(e) {
-    let { user: t, currentUser: n, guildId: j, channelId: G, messageId: V, roleId: F, closePopout: Z, setPopoutRef: H, disableUserProfileLink: W = __OVERLAY__, newAnalyticsLocations: Y = [], appContext: K = x.IlC.APP } = e,
+function F(e) {
+    let { user: t, currentUser: n, guildId: j, channelId: G, messageId: F, roleId: V, closePopout: Z, setPopoutRef: H, disableUserProfileLink: W = __OVERLAY__, newAnalyticsLocations: Y = [], appContext: K = x.IlC.APP } = e,
         { analyticsLocations: z } = (0, d.ZP)([...Y, u.Z.BITE_SIZE_PROFILE_POPOUT]),
         q = (0, g.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
             guildId: j,
             channelId: G,
-            messageId: V,
-            roleId: F
+            messageId: F,
+            roleId: V
         }),
         Q = (0, a.e7)([m.Z], () => (null != j ? m.Z.getGuild(j) : null)),
         X = (0, a.e7)([h.ZP], () => (null != j ? h.ZP.getMember(j, t.id) : null)),
         J = i.useMemo(() => (null != j ? { [j]: [t.id] } : {}), [j, t.id]);
     (0, c.$)(J);
     let $ = i.useRef(null),
-        ee = (0, v.ZP)(t.id, j),
+        ee = (0, b.ZP)(t.id, j),
         et = (0, l.Z)($),
-        en = (0, b.$m)(),
+        en = (0, y.$m)(),
         er = (0, s.q_F)({
             opacity: +(null != en.interactionType),
             config: { duration: 150 }
@@ -153,7 +153,7 @@ function V(e) {
         children: (0, r.jsx)(g.Mt, {
             value: q,
             shouldTrackViewOnMount: null == X || null != X.fullProfileLoadedTimestamp,
-            children: (0, r.jsx)(b.NJ, {
+            children: (0, r.jsx)(y.NJ, {
                 value: en,
                 children: (0, r.jsxs)(s.VqE, {
                     ref: $,
@@ -208,7 +208,7 @@ function V(e) {
                                             className: k.toast,
                                             onClose: Z
                                         }),
-                                        (0, r.jsx)(y.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             displayProfile: ee,

@@ -97,10 +97,10 @@ function m(e, t) {
 function g(e) {
     var { user: t, guildId: n, channelId: u, profileType: f, onClose: h, children: g } = e,
         E = p(e, ['user', 'guildId', 'channelId', 'profileType', 'onClose', 'children']);
-    let { interactionType: b, interactionSource: v, resetInteraction: y, interactionSourceId: O, interactionPopoutTargetRef: I } = (0, o.Xo)(),
+    let { interactionType: b, interactionSource: y, resetInteraction: v, interactionSourceId: O, interactionPopoutTargetRef: I } = (0, o.Xo)(),
         S = f === c.y0.FULL_SIZE ? (0, l.z)(t.id, n) : void 0,
-        T = v === E.sourceType && b === c.P.REACT,
-        N = v === E.sourceType && b === c.P.REPLY,
+        T = y === E.sourceType && b === c.P.REACT,
+        N = y === E.sourceType && b === c.P.REPLY,
         A = (T || N) && O === E.sourceId;
     return (0, r.jsx)(
         i.yRy,
@@ -128,7 +128,7 @@ function g(e) {
                         );
                     },
                     onRequestClose: () => {
-                        y(), null == h || h();
+                        v(), null == h || h();
                     },
                     shouldShow: A
                 },

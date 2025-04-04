@@ -26,19 +26,19 @@ class l extends r.Z {
             userId: e.user_id,
             gifterId: e.gifter_user_id,
             type: e.type,
-            branches: null !== (t = e.branches) && void 0 !== t ? t : [],
+            branches: null != (t = e.branches) ? t : [],
             startsAt: null != e.starts_at ? new Date(e.starts_at) : null,
             endsAt: null != e.ends_at ? new Date(e.ends_at) : null,
             subscriptionId: e.subscription_id,
             subscriptionPlanId: null != e.subscription_plan ? e.subscription_plan.id : null,
             parentId: null != e.parent_id ? e.parent_id : null,
             consumed: null != e.consumed ? e.consumed : null,
-            giftCodeBatchId: null !== (n = e.gift_code_batch_id) && void 0 !== n ? n : null,
+            giftCodeBatchId: null != (n = e.gift_code_batch_id) ? n : null,
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
             sku: null != e.sku ? o.Z.createFromServer(e.sku) : null,
-            sourceType: null !== (r = e.source_type) && void 0 !== r ? r : null
+            sourceType: null != (r = e.source_type) ? r : null
         });
     }
     get isGiftable() {

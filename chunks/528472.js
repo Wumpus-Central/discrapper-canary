@@ -41,7 +41,7 @@ class u {
                         bitrate: l
                     }
                 },
-                _ = await (null === (o = navigator.mediaCapabilities) || void 0 === o ? void 0 : o.decodingInfo(f));
+                _ = await (null == (o = navigator.mediaCapabilities) ? void 0 : o.decodingInfo(f));
             return {
                 videoCodec: e,
                 videoProfile: t,
@@ -52,9 +52,9 @@ class u {
                 audioProfile: s,
                 audioBitrate: l,
                 capability: {
-                    supported: null !== (c = null == _ ? void 0 : _.supported) && void 0 !== c && c,
-                    smooth: null !== (u = null == _ ? void 0 : _.smooth) && void 0 !== u && u,
-                    powerEfficient: null !== (d = null == _ ? void 0 : _.powerEfficient) && void 0 !== d && d
+                    supported: null != (c = null == _ ? void 0 : _.supported) && c,
+                    smooth: null != (u = null == _ ? void 0 : _.smooth) && u,
+                    powerEfficient: null != (d = null == _ ? void 0 : _.powerEfficient) && d
                 }
             };
         } catch (o) {
@@ -417,7 +417,7 @@ class u {
         var n;
         if (null === this.capabilities || void 0 === this.capabilities) return !1;
         let r = this.capabilities.capabilities.find((n) => n.videoCodec === e && n.videoProfile === t);
-        return null !== (n = null == r ? void 0 : r.capability.supported) && void 0 !== n && n;
+        return null != (n = null == r ? void 0 : r.capability.supported) && n;
     }
     constructor() {
         o(this, 'capabilities', null), o(this, 'isDetecting', !1), o(this, 'detectionPromise', null), o(this, 'hasAttemptedDetection', !1);

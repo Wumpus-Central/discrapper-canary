@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => y,
-    d: () => b
+    S: () => v,
+    d: () => y
 }),
     n(47120),
     n(230036),
@@ -74,7 +74,7 @@ function g(e) {
 function E(e, t) {
     return e.size === t.size && Array.from(e).every((e) => t.has(e));
 }
-class v {
+class b {
     set value(e) {
         e && !this.state && (this.begin = this.timestampProducer.now()), !e && this.state && ((this.total += this.timestampProducer.now() - Number(this.begin)), (this.begin = null)), (this.state = e);
     }
@@ -91,10 +91,10 @@ class v {
         _(this, 'timestampProducer', void 0), _(this, 'begin', void 0), _(this, 'total', void 0), _(this, 'state', void 0), (this.timestampProducer = t), (this.total = 0), (this.state = e), (this.begin = e ? t.now() : null);
     }
 }
-var b = (function (e) {
+var y = (function (e) {
     return (e.FpsUpdate = 'fps-update'), e;
 })({});
-class y extends o.Z {
+class v extends o.Z {
     addUserToStatsCollectionPausedSet(e) {
         this.statCollectionPausedUsers.add(e);
     }
@@ -182,12 +182,12 @@ class y extends o.Z {
             }
             return {
                 codec_asymmetric_session: h,
-                codec_h264_encode_duration_sec: null !== (n = m.get(f.u7.H264)) && void 0 !== n ? n : 0,
-                codec_h265_encode_duration_sec: null !== (r = m.get(f.u7.H265)) && void 0 !== r ? r : 0,
-                codec_vp8_encode_duration_sec: null !== (i = m.get(f.u7.VP8)) && void 0 !== i ? i : 0,
-                codec_vp9_encode_duration_sec: null !== (o = m.get(f.u7.VP9)) && void 0 !== o ? o : 0,
-                codec_av1_encode_duration_sec: null !== (a = m.get(f.u7.AV1)) && void 0 !== a ? a : 0,
-                codec_unknown_encode_duration_sec: null !== (s = m.get(f.u7.UNKNOWN)) && void 0 !== s ? s : 0
+                codec_h264_encode_duration_sec: null != (n = m.get(f.u7.H264)) ? n : 0,
+                codec_h265_encode_duration_sec: null != (r = m.get(f.u7.H265)) ? r : 0,
+                codec_vp8_encode_duration_sec: null != (i = m.get(f.u7.VP8)) ? i : 0,
+                codec_vp9_encode_duration_sec: null != (o = m.get(f.u7.VP9)) ? o : 0,
+                codec_av1_encode_duration_sec: null != (a = m.get(f.u7.AV1)) ? a : 0,
+                codec_unknown_encode_duration_sec: null != (s = m.get(f.u7.UNKNOWN)) ? s : 0
             };
         }
         {
@@ -196,12 +196,12 @@ class y extends o.Z {
                 e.has(t) && (m = e.get(t)),
                 {
                     codec_asymmetric_session: h,
-                    codec_h264_decode_duration_sec: null !== (l = m.get(f.u7.H264)) && void 0 !== l ? l : 0,
-                    codec_h265_decode_duration_sec: null !== (c = m.get(f.u7.H265)) && void 0 !== c ? c : 0,
-                    codec_vp8_decode_duration_sec: null !== (u = m.get(f.u7.VP8)) && void 0 !== u ? u : 0,
-                    codec_vp9_decode_duration_sec: null !== (d = m.get(f.u7.VP9)) && void 0 !== d ? d : 0,
-                    codec_av1_decode_duration_sec: null !== (_ = m.get(f.u7.AV1)) && void 0 !== _ ? _ : 0,
-                    codec_unknown_decode_duration_sec: null !== (p = m.get(f.u7.UNKNOWN)) && void 0 !== p ? p : 0
+                    codec_h264_decode_duration_sec: null != (l = m.get(f.u7.H264)) ? l : 0,
+                    codec_h265_decode_duration_sec: null != (c = m.get(f.u7.H265)) ? c : 0,
+                    codec_vp8_decode_duration_sec: null != (u = m.get(f.u7.VP8)) ? u : 0,
+                    codec_vp9_decode_duration_sec: null != (d = m.get(f.u7.VP9)) ? d : 0,
+                    codec_av1_decode_duration_sec: null != (_ = m.get(f.u7.AV1)) ? _ : 0,
+                    codec_unknown_decode_duration_sec: null != (p = m.get(f.u7.UNKNOWN)) ? p : 0
                 }
             );
         }
@@ -211,13 +211,13 @@ class y extends o.Z {
         return (
             i().forEach(this.outboundStats, (t, n) => {
                 var r, i, o, a, s;
-                let l;
-                let c = null === (r = this.connection) || void 0 === r ? void 0 : r.getStreamParameters();
+                let l,
+                    c = null == (r = this.connection) ? void 0 : r.getStreamParameters();
                 c.length > 1 &&
                     c.forEach((e) => {
                         if (parseInt(n) === e.ssrc) {
                             var t;
-                            l = null !== (t = e.quality) && void 0 !== t ? t : 50;
+                            l = null != (t = e.quality) ? t : 50;
                         }
                     });
                 let u = [1, 5, 10, 25, 50, 75],
@@ -225,13 +225,13 @@ class y extends o.Z {
                     _ = t.vmafHistogram.getReport(u),
                     h = t.psnrHistogram.getReport(u),
                     E = t.targetBitrateHistogram.getReport(d),
-                    v = t.outboundBandwidthSurplus.getReport(d),
-                    b = this.videoEntropy.getReport(d),
-                    y = t.aggregationDuration / 1000;
+                    b = t.outboundBandwidthSurplus.getReport(d),
+                    y = this.videoEntropy.getReport(d),
+                    v = t.aggregationDuration / 1000;
                 e.push(
                     m(p({}, this.getStats(t)), {
-                        target_fps: y > 0 ? Math.round((null !== (i = t.targetFrames) && void 0 !== i ? i : 0) / y) : 0,
-                        target_bitrate_network: y > 0 ? Math.round(((null !== (o = t.targetBytesNetwork) && void 0 !== o ? o : 0) * 8) / y) : 0,
+                        target_fps: v > 0 ? Math.round((null != (i = t.targetFrames) ? i : 0) / v) : 0,
+                        target_bitrate_network: v > 0 ? Math.round(((null != (o = t.targetBytesNetwork) ? o : 0) * 8) / v) : 0,
                         target_bitrate_network_percentile1: E.count > 0 ? E.percentiles[1] : null,
                         target_bitrate_network_percentile5: E.count > 0 ? E.percentiles[5] : null,
                         target_bitrate_network_percentile10: E.count > 0 ? E.percentiles[10] : null,
@@ -239,15 +239,15 @@ class y extends o.Z {
                         target_bitrate_network_percentile50: E.count > 0 ? E.percentiles[50] : null,
                         target_bitrate_network_percentile75: E.count > 0 ? E.percentiles[75] : null,
                         target_bitrate_network_percentile99: E.count > 0 ? E.percentiles[99] : null,
-                        target_bitrate_max: y > 0 ? Math.round(((null !== (a = t.targetBytesMax) && void 0 !== a ? a : 0) * 8) / y) : 0,
-                        outbound_bandwidth_estimate: y > 0 ? Math.round(((null !== (s = t.outboundBytesAvailable) && void 0 !== s ? s : 0) * 8) / y) : 0,
-                        outbound_bandwidth_surplus_percentile1: v.count > 0 ? v.percentiles[1] : null,
-                        outbound_bandwidth_surplus_percentile5: v.count > 0 ? v.percentiles[5] : null,
-                        outbound_bandwidth_surplus_percentile10: v.count > 0 ? v.percentiles[10] : null,
-                        outbound_bandwidth_surplus_percentile25: v.count > 0 ? v.percentiles[25] : null,
-                        outbound_bandwidth_surplus_percentile50: v.count > 0 ? v.percentiles[50] : null,
-                        outbound_bandwidth_surplus_percentile75: v.count > 0 ? v.percentiles[75] : null,
-                        outbound_bandwidth_surplus_percentile99: v.count > 0 ? v.percentiles[99] : null,
+                        target_bitrate_max: v > 0 ? Math.round(((null != (a = t.targetBytesMax) ? a : 0) * 8) / v) : 0,
+                        outbound_bandwidth_estimate: v > 0 ? Math.round(((null != (s = t.outboundBytesAvailable) ? s : 0) * 8) / v) : 0,
+                        outbound_bandwidth_surplus_percentile1: b.count > 0 ? b.percentiles[1] : null,
+                        outbound_bandwidth_surplus_percentile5: b.count > 0 ? b.percentiles[5] : null,
+                        outbound_bandwidth_surplus_percentile10: b.count > 0 ? b.percentiles[10] : null,
+                        outbound_bandwidth_surplus_percentile25: b.count > 0 ? b.percentiles[25] : null,
+                        outbound_bandwidth_surplus_percentile50: b.count > 0 ? b.percentiles[50] : null,
+                        outbound_bandwidth_surplus_percentile75: b.count > 0 ? b.percentiles[75] : null,
+                        outbound_bandwidth_surplus_percentile99: b.count > 0 ? b.percentiles[99] : null,
                         duration_encoder_nvidia_cuda: g(t.encoderBuckets[f.Su.NVIDIA_CUDA]),
                         duration_encoder_nvidia_direct3d: g(t.encoderBuckets[f.Su.NVIDIA_DIRECT_3D]),
                         duration_encoder_openh264: g(t.encoderBuckets[f.Su.OPENH264]),
@@ -284,13 +284,13 @@ class y extends o.Z {
                         duration_both_simulcast_streams_encoded: g(this.bothSimulcastStreamsEncoded.totalDurationSeconds()),
                         duration_fps_bandwidth_limited: g(this.bandwidthLimitedFramerate.totalDurationSeconds()),
                         duration_resolution_bandwidth_limited: g(this.bandwidthLimitedResolution.totalDurationSeconds()),
-                        video_entropy_percentile1: b.count > 0 ? b.percentiles[1] : null,
-                        video_entropy_percentile5: b.count > 0 ? b.percentiles[5] : null,
-                        video_entropy_percentile10: b.count > 0 ? b.percentiles[10] : null,
-                        video_entropy_percentile25: b.count > 0 ? b.percentiles[25] : null,
-                        video_entropy_percentile50: b.count > 0 ? b.percentiles[50] : null,
-                        video_entropy_percentile75: b.count > 0 ? b.percentiles[75] : null,
-                        video_entropy_percentile99: b.count > 0 ? b.percentiles[99] : null
+                        video_entropy_percentile1: y.count > 0 ? y.percentiles[1] : null,
+                        video_entropy_percentile5: y.count > 0 ? y.percentiles[5] : null,
+                        video_entropy_percentile10: y.count > 0 ? y.percentiles[10] : null,
+                        video_entropy_percentile25: y.count > 0 ? y.percentiles[25] : null,
+                        video_entropy_percentile50: y.count > 0 ? y.percentiles[50] : null,
+                        video_entropy_percentile75: y.count > 0 ? y.percentiles[75] : null,
+                        video_entropy_percentile99: y.count > 0 ? y.percentiles[99] : null
                     })
                 );
             }),
@@ -421,19 +421,19 @@ class y extends o.Z {
                 },
                 h
             ),
-            { bytes: v, framesDropped: b, framesCodecError: y, framesCodec: O, framesNetwork: I, packets: S, packetsLost: T, nackCount: N, pliCount: A, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: V, qualityDecodeErrors: F, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: W, qualitySizeMismatches: Y } = e.aggregatedProperties;
+            { bytes: b, framesDropped: y, framesCodecError: v, framesCodec: O, framesNetwork: I, packets: S, packetsLost: T, nackCount: N, pliCount: A, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: W, qualitySizeMismatches: Y } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((E.sender_freeze_count = P), (E.sender_total_freezes_duration = D), (E.sender_total_frames_duration = L)) : ((E.receiver_freeze_count = P), (E.receiver_total_freezes_duration = D), (E.receiver_total_frames_duration = L), (E.receiver_pause_count = R), (E.receiver_total_pauses_duration = w)),
             m(p({}, E), {
-                avg_bitrate: r > 0 ? Math.round(((null != v ? v : 0) * 8) / r) : 0,
+                avg_bitrate: r > 0 ? Math.round(((null != b ? b : 0) * 8) / r) : 0,
                 avg_fps: r > 0 ? Math.round((null != O ? O : 0) / r) : 0,
-                num_bytes: v,
+                num_bytes: b,
                 num_packets_lost: T,
                 num_packets: S,
                 num_frames: I,
-                num_frames_codec_error: y,
+                num_frames_codec_error: v,
                 time_to_first_frame_ms: e.timeToFirstFrame,
-                num_frames_dropped: b,
+                num_frames_dropped: y,
                 num_nacks: N,
                 num_plis: A,
                 qp_sum: C,
@@ -444,8 +444,8 @@ class y extends o.Z {
                 cryptor_duration: U,
                 cryptor_attempts: G,
                 cryptor_missing_key_count: B,
-                cryptor_invalid_nonce_count: V,
-                encoder_quality_decode_errors: F,
+                cryptor_invalid_nonce_count: F,
+                encoder_quality_decode_errors: V,
                 encoder_quality_decoder_reboots: Z,
                 encoder_quality_score_errors: H,
                 encoder_quality_frame_drops: W,
@@ -456,7 +456,7 @@ class y extends o.Z {
     receivedStats(e, t, n) {
         var r, o;
         let s = t.transport,
-            c = (0, l.isWeb)() ? 1 : null !== (o = null === (r = s.receiverReports) || void 0 === r ? void 0 : r.length) && void 0 !== o ? o : 0,
+            c = (0, l.isWeb)() ? 1 : null != (o = null == (r = s.receiverReports) ? void 0 : r.length) ? o : 0,
             u = new Set(),
             d = new Set();
         this.updateSendState({ receivers: c });
@@ -470,7 +470,7 @@ class y extends o.Z {
                 if (null != r) {
                     let t = r.ssrc,
                         S = this.outboundStats[t];
-                    null == S && (console.warn('Unknown outbound video stream with SSRC: '.concat(t)), (S = new f.nt(this.timestampProducer)), (this.outboundStats[t] = S)), null == S.timeToFirstFrame && (r.framesEncoded > 0 || (null !== (i = r.frameRateInput) && void 0 !== i ? i : 0) > 0) && (S.timeToFirstFrame = Math.max(0, e - S.startTime)), null != h && h >= 0 && this.videoEntropy.addSample(h);
+                    null == S && (console.warn('Unknown outbound video stream with SSRC: '.concat(t)), (S = new f.nt(this.timestampProducer)), (this.outboundStats[t] = S)), null == S.timeToFirstFrame && (r.framesEncoded > 0 || (null != (i = r.frameRateInput) ? i : 0) > 0) && (S.timeToFirstFrame = Math.max(0, e - S.startTime)), null != h && h >= 0 && this.videoEntropy.addSample(h);
                     let T = n.find((e) => e.ssrc === t);
                     var i,
                         o,
@@ -481,9 +481,9 @@ class y extends o.Z {
                         m,
                         g,
                         E,
-                        v,
                         b,
                         y,
+                        v,
                         O = !0;
                     if (this.connection.context === a.Yn.STREAM) {
                         var I = this.connection.getRemoteVideoSinkWants(t);
@@ -493,7 +493,7 @@ class y extends o.Z {
                     if ((N !== S.isVideoStopped && S.setVideoStopped(N, f.Mq.SenderStopped), !N)) {
                         S.appendAndIncrementStats(f.z4.parseOutboundStats(r, e)), S.encoderCodec !== f.u7.UNKNOWN && u.add(S.encoderCodec);
                         let t = null == T ? void 0 : T.maxBitrate;
-                        S.appendTargetRates(null == T ? void 0 : T.maxFrameRate, null !== (l = r.bitrateTarget) && void 0 !== l ? l : Math.min(null !== (o = s.availableOutgoingBitrate) && void 0 !== o ? o : 0, null != t ? t : 0), t, s.availableOutgoingBitrate), (S.averageEncodeTime = null !== (c = r.averageEncodeTime) && void 0 !== c ? c : 0), (S.framesDroppedRateLimiter = null !== (d = r.framesDroppedRateLimiter) && void 0 !== d ? d : null), (S.framesDroppedEncoderQueue = null !== (p = r.framesDroppedEncoderQueue) && void 0 !== p ? p : null), (S.framesDroppedCongestionWindow = null !== (m = r.framesDroppedCongestionWindow) && void 0 !== m ? m : null), (S.framesDroppedEncoder = null !== (g = r.framesDroppedEncoder) && void 0 !== g ? g : null), (this.hqSimulcastStreamEncoded.value = null !== (E = r.hqSimulcastStreamEncoded) && void 0 !== E && E), (this.lqSimulcastStreamEncoded.value = null !== (v = r.lqSimulcastStreamEncoded) && void 0 !== v && v), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null !== (b = r.bandwidthLimitedResolution) && void 0 !== b && b), (this.bandwidthLimitedFramerate.value = null !== (y = r.bandwidthLimitedFrameRate) && void 0 !== y && y);
+                        S.appendTargetRates(null == T ? void 0 : T.maxFrameRate, null != (l = r.bitrateTarget) ? l : Math.min(null != (o = s.availableOutgoingBitrate) ? o : 0, null != t ? t : 0), t, s.availableOutgoingBitrate), (S.averageEncodeTime = null != (c = r.averageEncodeTime) ? c : 0), (S.framesDroppedRateLimiter = null != (d = r.framesDroppedRateLimiter) ? d : null), (S.framesDroppedEncoderQueue = null != (p = r.framesDroppedEncoderQueue) ? p : null), (S.framesDroppedCongestionWindow = null != (m = r.framesDroppedCongestionWindow) ? m : null), (S.framesDroppedEncoder = null != (g = r.framesDroppedEncoder) ? g : null), (this.hqSimulcastStreamEncoded.value = null != (E = r.hqSimulcastStreamEncoded) && E), (this.lqSimulcastStreamEncoded.value = null != (b = r.lqSimulcastStreamEncoded) && b), (this.bothSimulcastStreamsEncoded.value = this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value), (this.bandwidthLimitedResolution.value = null != (y = r.bandwidthLimitedResolution) && y), (this.bandwidthLimitedFramerate.value = null != (v = r.bandwidthLimitedFrameRate) && v);
                     }
                 }
             }),
@@ -567,21 +567,21 @@ class y extends o.Z {
                 let n = this.connection.getStreamParameters();
                 this.receivedStats(t, e, n);
             }),
-            (this.paused = new v(!1, t)),
-            (this.zeroReceivers = new v(!1, t)),
-            (this.videoStopped = new v(!1, t)),
-            (this.videoEffectDuration = new v(!1, t)),
-            (this.hqSimulcastStreamEncoded = new v(!1, t)),
-            (this.lqSimulcastStreamEncoded = new v(!1, t)),
-            (this.bothSimulcastStreamsEncoded = new v(!1, t)),
-            (this.hqSimulcastStreamWatched = new v(!1, t)),
-            (this.lqSimulcastStreamWatched = new v(!1, t)),
-            (this.hqSimulcastStreamEligible = new v(!1, t)),
-            (this.lqSimulcastStreamEligible = new v(!1, t)),
-            (this.windowOccluded = new v(!1, t)),
-            (this.videoStoppedForOcclusion = new v(!1, t)),
-            (this.bandwidthLimitedFramerate = new v(!1, t)),
-            (this.bandwidthLimitedResolution = new v(!1, t)),
+            (this.paused = new b(!1, t)),
+            (this.zeroReceivers = new b(!1, t)),
+            (this.videoStopped = new b(!1, t)),
+            (this.videoEffectDuration = new b(!1, t)),
+            (this.hqSimulcastStreamEncoded = new b(!1, t)),
+            (this.lqSimulcastStreamEncoded = new b(!1, t)),
+            (this.bothSimulcastStreamsEncoded = new b(!1, t)),
+            (this.hqSimulcastStreamWatched = new b(!1, t)),
+            (this.lqSimulcastStreamWatched = new b(!1, t)),
+            (this.hqSimulcastStreamEligible = new b(!1, t)),
+            (this.lqSimulcastStreamEligible = new b(!1, t)),
+            (this.windowOccluded = new b(!1, t)),
+            (this.videoStoppedForOcclusion = new b(!1, t)),
+            (this.bandwidthLimitedFramerate = new b(!1, t)),
+            (this.bandwidthLimitedResolution = new b(!1, t)),
             (this.videoEntropy = new u.b());
     }
 }

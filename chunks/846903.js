@@ -30,8 +30,8 @@ class c extends i {
                     )).intervalCap && e.intervalCap >= 1
             ))
         )
-            throw TypeError(`Expected \`intervalCap\` to be a number from 1 and up, got \`${null !== (n = null === (t = e.intervalCap) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : ''}\` (${typeof e.intervalCap})`);
-        if (void 0 === e.interval || !(Number.isFinite(e.interval) && e.interval >= 0)) throw TypeError(`Expected \`interval\` to be a finite number >= 0, got \`${null !== (i = null === (r = e.interval) || void 0 === r ? void 0 : r.toString()) && void 0 !== i ? i : ''}\` (${typeof e.interval})`);
+            throw TypeError(`Expected \`intervalCap\` to be a number from 1 and up, got \`${null != (n = null == (t = e.intervalCap) ? void 0 : t.toString()) ? n : ''}\` (${typeof e.intervalCap})`);
+        if (void 0 === e.interval || !(Number.isFinite(e.interval) && e.interval >= 0)) throw TypeError(`Expected \`interval\` to be a finite number >= 0, got \`${null != (i = null == (r = e.interval) ? void 0 : r.toString()) ? i : ''}\` (${typeof e.interval})`);
         (this._carryoverConcurrencyCount = e.carryoverConcurrencyCount), (this._isIntervalIgnored = e.intervalCap === 1 / 0 || 0 === e.interval), (this._intervalCap = e.intervalCap), (this._interval = e.interval), (this._queue = new e.queueClass()), (this._queueClass = e.queueClass), (this.concurrency = e.concurrency), (this._timeout = e.timeout), (this._throwOnTimeout = !0 === e.throwOnTimeout), (this._isPaused = !1 === e.autoStart);
     }
     get _doesIntervalAllowAnother() {
@@ -77,8 +77,8 @@ class c extends i {
         return !1;
     }
     _initializeIntervalIfNeeded() {
-        !this._isIntervalIgnored &&
-            void 0 === this._intervalId &&
+        this._isIntervalIgnored ||
+            void 0 !== this._intervalId ||
             ((this._intervalId = setInterval(() => {
                 this._onInterval();
             }, this._interval)),

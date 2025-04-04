@@ -1,4 +1,4 @@
-n.d(t, { $: () => _ }), n(653041), n(47120);
+n.d(t, { $: () => p }), n(653041), n(47120);
 var r = n(192379),
     i = n(392711),
     o = n.n(i),
@@ -39,10 +39,10 @@ class f {
         u(this, '_fetched', new Set()), u(this, '_pending', new Set()), u(this, '_flushHandler', new s.sW(0, () => this._flush()));
     }
 }
-let p = new f();
-function _(e, t) {
+let _ = new f();
+function p(e, t) {
     r.useEffect(() => {
-        null != e && p.request(e);
+        null != e && _.request(e);
     }, [e]);
     let n = r.useMemo(
         () =>

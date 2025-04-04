@@ -5,7 +5,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(530892),
     l = n.n(s),
-    c = n(6309);
+    c = n(265381);
 function u(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,10 +80,10 @@ function h(e, t) {
 }
 let m = i.forwardRef(function (e, t) {
         var { as: n = 'div', gap: i = 8, direction: o = 'vertical', align: s = 'stretch', justify: l = 'start', padding: u = 0, style: f, className: h, children: m } = e,
-            v = _(e, ['as', 'gap', 'direction', 'align', 'justify', 'padding', 'style', 'className', 'children']);
+            b = p(e, ['as', 'gap', 'direction', 'align', 'justify', 'padding', 'style', 'className', 'children']);
         return (0, r.jsx)(
             n,
-            p(
+            _(
                 d(
                     {
                         ref: t,
@@ -91,9 +91,9 @@ let m = i.forwardRef(function (e, t) {
                         'data-justify': l,
                         'data-direction': o,
                         className: a()(c.stack, h),
-                        style: d(p(d({}, f), { gap: g(i) }), E(u))
+                        style: d(_(d({}, f), { gap: g(i) }), E(u))
                     },
-                    v
+                    b
                 ),
                 { children: m }
             )

@@ -23,8 +23,8 @@ var r = n(200651),
     m = n(98650),
     g = n(748585),
     E = n(388032),
-    b = n(687485);
-function v(e, t, n) {
+    b = n(142210);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function v(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -114,7 +114,7 @@ function A(e) {
         },
         isSelected: (e) => {
             var n;
-            return null !== (n = null == t ? void 0 : t.has(e)) && void 0 !== n && n;
+            return null != (n = null == t ? void 0 : t.has(e)) && n;
         },
         clear: () => n(new Set()),
         serialize: i
@@ -159,7 +159,7 @@ function D(e) {
     return e.map((e) => w(e)).join(', ');
 }
 function L(e) {
-    let { options: t, placeholder: n = E.NW.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: v = g.q.FILLED, onClose: O, onOpen: T, renderOptionLabel: N = w, renderOptionValue: A = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, 'aria-label': F, 'aria-labelledby': V } = e,
+    let { options: t, placeholder: n = E.NW.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: y = g.q.FILLED, onClose: O, onOpen: T, renderOptionLabel: N = w, renderOptionValue: A = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, 'aria-label': F, 'aria-labelledby': V } = e,
         [Z, H] = i.useState(!1),
         { ref: W, width: Y, height: K } = (0, p.Z)();
     i.useLayoutEffect(() => {
@@ -182,7 +182,7 @@ function L(e) {
             (e) => {
                 if ((k(e), M)) {
                     var t;
-                    null === (t = W.current) || void 0 === t || t.focus();
+                    null == (t = W.current) || t.focus();
                 }
             },
             [k, M, W]
@@ -198,7 +198,7 @@ function L(e) {
         i.useLayoutEffect(() => {
             if (u) {
                 var e;
-                null === (e = W.current) || void 0 === e || e.focus();
+                null == (e = W.current) || e.focus();
             }
         }, [u, W]),
         (0, r.jsx)(d.y, {
@@ -241,7 +241,7 @@ function L(e) {
                 return (0, r.jsxs)(
                     c.P,
                     I(
-                        y(
+                        v(
                             {
                                 role: 'button',
                                 'aria-disabled': s,
@@ -264,7 +264,7 @@ function L(e) {
                                 [b.open]: d,
                                 [b.disabled]: s,
                                 [b.selectPositionTop]: 'top' === f,
-                                [b.lookFilled]: v === g.q.FILLED
+                                [b.lookFilled]: y === g.q.FILLED
                             }),
                             'aria-haspopup': 'listbox',
                             'aria-expanded': d,
@@ -314,7 +314,7 @@ function L(e) {
     );
 }
 function x(e) {
-    let { className: t, onSelect: n, closePopout: o, closeOnSelect: c = !0, isSelected: d, options: _, width: p, maxVisibleItems: h, renderOptionLabel: g, serialize: E, optionClassName: v, buttonHeight: O, updatePosition: T, popoutPosition: N } = e,
+    let { className: t, onSelect: n, closePopout: o, closeOnSelect: c = !0, isSelected: d, options: _, width: p, maxVisibleItems: h, renderOptionLabel: g, serialize: E, optionClassName: y, buttonHeight: O, updatePosition: T, popoutPosition: N } = e,
         [A, C] = i.useState(0),
         R = i.useRef(null),
         P = i.useId(),
@@ -329,7 +329,7 @@ function x(e) {
     (0, u.T)(D),
         i.useLayoutEffect(() => {
             var e;
-            null === (e = D.current) || void 0 === e || e.focus();
+            null == (e = D.current) || e.focus();
         }, []),
         i.useEffect(() => {
             O > 0 && T();
@@ -337,7 +337,7 @@ function x(e) {
         (0, m.Z)(T),
         i.useLayoutEffect(() => {
             var e, t;
-            let n = null === (t = R.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
+            let n = null == (t = R.current) || null == (e = t.getBoundingClientRect()) ? void 0 : e.height;
             null != n && C(n);
         }, [h]),
         i.useEffect(() => {
@@ -360,14 +360,14 @@ function x(e) {
                             value: e.value,
                             label: g(e),
                             onSelect: L,
-                            className: v,
+                            className: y,
                             isDisabled: e.disabled,
                             serialize: E
                         },
-                        null !== (n = e.key) && void 0 !== n ? n : t
+                        null != (n = e.key) ? n : t
                     );
                 }),
-            [L, d, v, _, g, E]
+            [L, d, y, _, g, E]
         ),
         k = _.length <= h ? f.xV : f.h2;
     return (0, r.jsx)(l.bG, {
@@ -381,7 +381,7 @@ function x(e) {
                         (0, r.jsx)(
                             k,
                             I(
-                                y(
+                                v(
                                     {
                                         className: a()(b.popout, t, { [b.popoutPositionTop]: 'top' === N }),
                                         style: {
@@ -390,7 +390,7 @@ function x(e) {
                                         },
                                         ref: (e) => {
                                             var t;
-                                            let r = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
+                                            let r = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null;
                                             (n.current = r), (D.current = r);
                                         }
                                     },
@@ -420,7 +420,7 @@ function M(e) {
     return (0, r.jsxs)(
         c.P,
         I(
-            y(
+            v(
                 {
                     focusProps: { enabled: !1 },
                     className: a()(b.option, t),
@@ -455,5 +455,5 @@ function k(e) {
         value: t,
         onChange: n
     });
-    return (0, r.jsx)(L, y({}, i, o));
+    return (0, r.jsx)(L, v({}, i, o));
 }

@@ -1,8 +1,8 @@
 n.d(t, {
     AI: () => f,
     EL: () => h,
-    SE: () => p,
-    ew: () => _
+    SE: () => _,
+    ew: () => p
 });
 var r = n(570140),
     i = n(314897),
@@ -69,10 +69,10 @@ function f(e) {
     let t = c({}, o.Z.getState(), e);
     (0, s.Z)(t);
 }
-function p(e) {
+function _(e) {
     r.Z.dispatch(c({ type: 'POGGERMODE_UPDATE_COMBO' }, e));
 }
-function _(e) {
+function p(e) {
     r.Z.dispatch({
         type: 'POGGERMODE_UPDATE_MESSAGE_COMBO',
         comboMessage: d(c({}, e), { displayed: !0 })
@@ -92,7 +92,7 @@ function h(e, t) {
                 displayed: !1
             }
         });
-    let l = null != s && (null == s ? void 0 : s.value) > 0 ? (null !== (n = null == s ? void 0 : s.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
+    let l = null != s && (null == s ? void 0 : s.value) > 0 ? (null != (n = null == s ? void 0 : s.multiplier) ? n : 0) + 1 : 1;
     r.Z.dispatch({
         type: 'POGGERMODE_UPDATE_COMBO',
         channelId: e,

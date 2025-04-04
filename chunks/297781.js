@@ -36,11 +36,11 @@ var r = n(200651),
     g = n(26033),
     E = n(22211),
     b = n(561308),
-    v = n(797342),
-    y = n(371991),
+    y = n(797342),
+    v = n(371991),
     O = n(206583),
     I = n(388032),
-    S = n(425507);
+    S = n(859589);
 function T(e, t, n) {
     return (
         t in e
@@ -121,7 +121,7 @@ let w = {
     [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, V]
 };
 var D = (function (e) {
-    return (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), e;
+    return (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), (e[(e.FRIENDS_POPOUT = 8)] = 'FRIENDS_POPOUT'), e;
 })({});
 let L = i.createContext({});
 function x() {
@@ -185,7 +185,7 @@ function U(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, r.jsx)(y.ZP, {
+            (0, r.jsx)(v.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
@@ -198,7 +198,7 @@ function U(e) {
 function G(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: i } = x(),
-        { state: o, party: a } = (0, v.n)(t),
+        { state: o, party: a } = (0, y.n)(t),
         s = (0, b.bT)(o, a);
     return null == s
         ? null
@@ -230,7 +230,7 @@ function B(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, r.jsx)(y.ZP, {
+            (0, r.jsx)(v.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,
@@ -313,7 +313,7 @@ function Y(e) {
     var t;
     let { entry: n } = e,
         { location: i } = x(),
-        o = null === (t = (0, b.PJ)(n, u.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+        o = null == (t = (0, b.PJ)(n, u.N.AGGREGATE_COUNT)) ? void 0 : t.count;
     if (null == o) return null;
     let a = (0, h.Hi)(i, [1, 2, 5]) ? I.NW.formatToPlainString(I.t.HtifnJ, { count: o }) : I.NW.formatToPlainString(I.t['jq/Bmp'], { count: o });
     return (0, r.jsx)(k, {
@@ -358,7 +358,7 @@ function q(e) {
                 size: 'xxs',
                 color: l
             }),
-            (0, r.jsx)(y.ZP, {
+            (0, r.jsx)(v.ZP, {
                 entry: t,
                 textColor: c,
                 hovered: n,

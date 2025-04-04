@@ -57,16 +57,16 @@ function f(e, t) {
         e
     );
 }
-let p = { lastSeenNewlyAddedEmojiIds: {} },
-    _ = p,
+let _ = { lastSeenNewlyAddedEmojiIds: {} },
+    p = _,
     h = {};
 function m() {
-    (_ = p), (h = {});
+    (p = _), (h = {});
 }
 function g(e) {
     var t;
     let { guildId: n, emojiId: r } = e,
-        i = null !== (t = h[n]) && void 0 !== t ? t : _.lastSeenNewlyAddedEmojiIds[n];
+        i = null != (t = h[n]) ? t : p.lastSeenNewlyAddedEmojiIds[n];
     null == i || 0 > l.default.compare(i.id, r)
         ? (h[n] = {
               id: r,
@@ -78,7 +78,7 @@ function g(e) {
 function E(e) {
     var t;
     let { guildId: n, emojiId: r } = e,
-        i = null !== (t = h[n]) && void 0 !== t ? t : _.lastSeenNewlyAddedEmojiIds[n];
+        i = null != (t = h[n]) ? t : p.lastSeenNewlyAddedEmojiIds[n];
     (null == i || 0 > l.default.compare(i.id, r)) &&
         (h[n] = {
             id: r,
@@ -86,21 +86,21 @@ function E(e) {
             acknowledged: !1
         });
 }
-function v() {
-    for (let e in h) _.lastSeenNewlyAddedEmojiIds[e] = h[e];
-}
 function b() {
-    (_ = p), v();
+    for (let e in h) p.lastSeenNewlyAddedEmojiIds[e] = h[e];
 }
-class y extends (r = a.ZP.PersistedStore) {
+function y() {
+    (p = _), b();
+}
+class v extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        _ = null != e ? e : p;
+        p = null != e ? e : _;
     }
     getState() {
-        return _;
+        return p;
     }
     getLastSeenEmojiByGuild(e) {
-        return _.lastSeenNewlyAddedEmojiIds[e];
+        return p.lastSeenNewlyAddedEmojiIds[e];
     }
     isNewerThanLastSeen(e, t) {
         if (null == e || null == t) return !1;
@@ -112,9 +112,9 @@ class y extends (r = a.ZP.PersistedStore) {
         }
     }
 }
-c(y, 'displayName', 'NewlyAddedEmojiStore'),
-    c(y, 'persistKey', 'NewlyAddedEmojiStore'),
-    c(y, 'migrations', [
+c(v, 'displayName', 'NewlyAddedEmojiStore'),
+    c(v, 'persistKey', 'NewlyAddedEmojiStore'),
+    c(v, 'migrations', [
         (e) => {
             let t = e.lastSeenNewlyAddedEmojiIds,
                 n = {};
@@ -129,11 +129,11 @@ c(y, 'displayName', 'NewlyAddedEmojiStore'),
             return { lastSeenNewlyAddedEmojiIds: n };
         }
     ]);
-let O = new y(s.Z, {
+let O = new v(s.Z, {
     LOGOUT: m,
     NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: g,
     NEWLY_ADDED_EMOJI_SEEN_PENDING: E,
-    NEWLY_ADDED_EMOJI_SEEN_UPDATED: v,
-    CLEAR_CACHES: b,
-    CONNECTION_CLOSED: v
+    NEWLY_ADDED_EMOJI_SEEN_UPDATED: b,
+    CLEAR_CACHES: y,
+    CONNECTION_CLOSED: b
 });

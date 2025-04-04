@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(981631),
     d = n(474936),
     f = n(388032),
-    p = n(422536);
-let _ = 1048576,
+    _ = n(755645);
+let p = 1048576,
     h = [
         {
             getPerkHeading: () => f.NW.string(f.t.tIiwur),
@@ -77,10 +77,10 @@ let _ = 1048576,
             getPerkHeading: () => f.NW.string(f.t.R1U2xM),
             getPerkPreviewLightTheme: () => n(825588),
             getPerkPreviewDarkTheme: () => n(954499),
-            getTier0Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.NONE].limits.fileSize / _ }),
-            getTier1Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_1].limits.fileSize / _ }),
-            getTier2Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_2].limits.fileSize / _ }),
-            getTier3Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_3].limits.fileSize / _ })
+            getTier0Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.NONE].limits.fileSize / p }),
+            getTier1Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_1].limits.fileSize / p }),
+            getTier2Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_2].limits.fileSize / p }),
+            getTier3Value: () => f.NW.formatToPlainString(f.t.pIn7AQ, { size: d.HO[u.Eu4.TIER_3].limits.fileSize / p })
         },
         {
             getPerkHeading: () => f.NW.string(f.t.f6vfsr),
@@ -142,7 +142,7 @@ function m(e) {
         o = i === u.Eu4.NONE ? 'text-muted' : 'header-primary',
         s = i === u.Eu4.NONE || null == i ? 'heading-xl/normal' : 'heading-xl/bold';
     return (0, r.jsxs)('th', {
-        className: a()(p.columnHeading, n),
+        className: a()(_.columnHeading, n),
         scope: 'col',
         children: [
             (0, r.jsx)(l.X6q, {
@@ -160,10 +160,10 @@ function m(e) {
     });
 }
 function g(e) {
-    let t;
-    let { className: n, textVariant: i = 'text-md/bold', value: o } = e;
+    let t,
+        { className: n, textVariant: i = 'text-md/bold', value: o } = e;
     if ('boolean' == typeof o) {
-        let e = a()(p.booleanValueIcon, { [p.booleanValueTrue]: o });
+        let e = a()(_.booleanValueIcon, { [_.booleanValueTrue]: o });
         t = o
             ? (0, r.jsx)(l.dz2, {
                   size: 'md',
@@ -182,7 +182,7 @@ function g(e) {
             children: o
         });
     return (0, r.jsx)('td', {
-        className: a()(p.tableCell, n),
+        className: a()(_.tableCell, n),
         children: t
     });
 }
@@ -198,29 +198,29 @@ function E(e) {
             return null;
     }
 }
-function v(e) {
+function b(e) {
     let { currentTier: t } = e,
         n = E(t);
     return null == n
         ? null
         : (0, r.jsx)('div', {
-              className: a()(p.recommendedTierHighlight, {
-                  [p.recommendedTierHighlightTier2]: n === u.Eu4.TIER_2,
-                  [p.recommendedTierHighlightTier3]: n === u.Eu4.TIER_3
+              className: a()(_.recommendedTierHighlight, {
+                  [_.recommendedTierHighlightTier2]: n === u.Eu4.TIER_2,
+                  [_.recommendedTierHighlightTier3]: n === u.Eu4.TIER_3
               }),
               children: (0, r.jsx)(l.Text, {
-                  className: p.recommendedTierHighlightTag,
+                  className: _.recommendedTierHighlightTag,
                   color: 'always-white',
                   variant: 'text-xs/bold',
                   children: t === u.Eu4.TIER_3 ? f.NW.string(f.t.d849Ul) : f.NW.string(f.t.dZeX19)
               })
           });
 }
-let b = function (e) {
+let y = function (e) {
     let t = (0, c.ZP)(),
         [n, o] = i.useState(null),
-        { className: d, guild: _, hideHeading: E, hideTier0: b } = e;
-    function y(e) {
+        { className: d, guild: p, hideHeading: E, hideTier0: y } = e;
+    function v(e) {
         o(e);
     }
     function O() {
@@ -231,28 +231,28 @@ let b = function (e) {
         children: [
             !E &&
                 (0, r.jsx)(l.X6q, {
-                    className: p.heading,
+                    className: _.heading,
                     variant: 'heading-xxl/extrabold',
                     children: f.NW.string(f.t['9GGb9v'])
                 }),
             (0, r.jsxs)('div', {
-                className: p.tableWrapper,
+                className: _.tableWrapper,
                 children: [
-                    null != _ && (0, r.jsx)(v, { currentTier: _.premiumTier }),
+                    null != p && (0, r.jsx)(b, { currentTier: p.premiumTier }),
                     (0, r.jsxs)('table', {
-                        className: p.table,
+                        className: _.table,
                         cellPadding: 0,
                         cellSpacing: 0,
                         children: [
                             (0, r.jsx)('thead', {
                                 children: (0, r.jsxs)('tr', {
-                                    className: p.__invalid_tableRow,
+                                    className: _.__invalid_tableRow,
                                     children: [
                                         (0, r.jsx)(m, {
-                                            className: p.tableRowHeading,
+                                            className: _.tableRowHeading,
                                             children: f.NW.string(f.t.F5MY0t)
                                         }),
-                                        !b &&
+                                        !y &&
                                             (0, r.jsx)(m, {
                                                 tier: u.Eu4.NONE,
                                                 children: f.NW.string(f.t.mx8j2t)
@@ -273,23 +273,23 @@ let b = function (e) {
                                 })
                             }),
                             (0, r.jsx)('tbody', {
-                                className: p.__invalid_tableBody,
+                                className: _.__invalid_tableBody,
                                 children: h.map((e, i) => {
                                     let o = n === i;
                                     function c() {
-                                        y(i);
+                                        v(i);
                                     }
                                     return void 0 === e.predicate
                                         ? (0, r.jsxs)(
                                               'tr',
                                               {
-                                                  className: p.__invalid_tableRow,
+                                                  className: _.__invalid_tableRow,
                                                   children: [
                                                       (0, r.jsx)('th', {
-                                                          className: a()(p.tableCell, p.tableCellWrapper),
+                                                          className: a()(_.tableCell, _.tableCellWrapper),
                                                           scope: 'row',
                                                           children: (0, r.jsx)(l.P3F, {
-                                                              className: a()(p.tableRowHeading, p.tableCell, p.tableCellInner),
+                                                              className: a()(_.tableRowHeading, _.tableCell, _.tableCellInner),
                                                               onFocus: c,
                                                               onBlur: O,
                                                               onMouseEnter: c,
@@ -301,7 +301,7 @@ let b = function (e) {
                                                                   position: 'bottom',
                                                                   renderPopout: () =>
                                                                       (0, r.jsx)('img', {
-                                                                          className: p.perkPreviewImage,
+                                                                          className: _.perkPreviewImage,
                                                                           src: (0, s.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
                                                                           alt: ''
                                                                       }),
@@ -315,7 +315,7 @@ let b = function (e) {
                                                               })
                                                           })
                                                       }),
-                                                      !b &&
+                                                      !y &&
                                                           (0, r.jsx)(g, {
                                                               textVariant: 'text-md/normal',
                                                               value: e.getTier0Value()

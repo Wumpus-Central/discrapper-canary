@@ -1,8 +1,8 @@
 n.d(t, {
     I3: () => f,
-    d9: () => _,
+    d9: () => p,
     oo: () => d,
-    yp: () => p
+    yp: () => _
 }),
     n(47120),
     n(411104);
@@ -59,7 +59,7 @@ let d = i.createContext(new u()),
             })
         );
     });
-function p(e) {
+function _(e) {
     let { event: t, handler: n } = e,
         r = i.useContext(d),
         o = i.useRef(n);
@@ -72,7 +72,7 @@ function p(e) {
             if (a) return;
             let e = function () {
                 for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                null === (e = o.current) || void 0 === e || e.call(o, ...n);
+                null == (e = o.current) || e.call(o, ...n);
             };
             return (
                 r.subscribe(t, e),
@@ -84,6 +84,6 @@ function p(e) {
         null
     );
 }
-function _(e) {
-    return p(e), null;
+function p(e) {
+    return _(e), null;
 }

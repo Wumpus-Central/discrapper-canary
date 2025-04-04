@@ -9,8 +9,8 @@ var r = n(570140),
     u = n(314897),
     d = n(569545),
     f = n(803647),
-    p = n(981631),
-    _ = n(65154);
+    _ = n(981631),
+    p = n(65154);
 function h(e, t, n) {
     return (
         t in e
@@ -29,10 +29,10 @@ class m {
         (this.applications = e.map((e) => {
             var t, n;
             return {
-                applicationId: null !== (t = e.id) && void 0 !== t ? t : null,
+                applicationId: null != (t = e.id) ? t : null,
                 processId: e.pid,
                 processPath: e.pidPath,
-                windowHandle: null !== (n = e.windowHandle) && void 0 !== n ? n : null,
+                windowHandle: null != (n = e.windowHandle) ? n : null,
                 executableName: e.exeName
             };
         })),
@@ -63,7 +63,7 @@ class m {
                     break;
                 default:
                     var t;
-                    throw Error('unknown streaming mode: '.concat(null !== (t = this.mode) && void 0 !== t ? t : '(none)'));
+                    throw Error('unknown streaming mode: '.concat(null != (t = this.mode) ? t : '(none)'));
             }
     }
     _onStreamKilled(e) {
@@ -76,7 +76,7 @@ class m {
                     break;
                 default:
                     var t;
-                    throw Error('unknown streaming mode: '.concat(null !== (t = this.mode) && void 0 !== t ? t : '(none)'));
+                    throw Error('unknown streaming mode: '.concat(null != (t = this.mode) ? t : '(none)'));
             }
     }
     _onDirectorAction(e) {
@@ -96,21 +96,21 @@ class m {
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: _.Yn.STREAM
+                        context: p.Yn.STREAM
                     });
                 } else {
                     var r;
                     i.Z.setGoLiveSource({
                         desktopSettings: {
                             sourceId: e.sourceId,
-                            sound: null === (r = e.sound) || void 0 === r || r
+                            sound: null == (r = e.sound) || r
                         },
                         qualityOptions: {
                             preset: n.preset,
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: _.Yn.STREAM
+                        context: p.Yn.STREAM
                     });
                 }
                 break;
@@ -138,7 +138,7 @@ class m {
                 break;
             default:
                 var e;
-                throw Error('unknown streaming mode: '.concat(null !== (e = this.mode) && void 0 !== e ? e : '(none)'));
+                throw Error('unknown streaming mode: '.concat(null != (e = this.mode) ? e : '(none)'));
         }
     }
     constructor() {
@@ -174,12 +174,12 @@ class m {
             }),
             r.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t, context: n } = e;
-                n === _.Yn.STREAM && this._onCapturePaused(t === p.FQ1.PAUSED);
+                n === p.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
             }),
             r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 var t;
                 let { settings: n } = e;
-                (null == n ? void 0 : n.context) === _.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(), (null == n ? void 0 : null === (t = n.desktopSettings) || void 0 === t ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound);
+                (null == n ? void 0 : n.context) === p.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(), (null == n || null == (t = n.desktopSettings) ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound);
             });
     }
 }

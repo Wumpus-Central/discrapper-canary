@@ -21,7 +21,7 @@ let a = (e) => {
         if (null == e) return '';
         if (t) {
             if ('baseVariantName' in e && null != e.baseVariantName) return e.baseVariantName;
-            if (null != e.variants && e.variants.length > 0) return e.variants[0].baseVariantName;
+            else if (null != e.variants && e.variants.length > 0) return e.variants[0].baseVariantName;
         }
         return e.name;
     };

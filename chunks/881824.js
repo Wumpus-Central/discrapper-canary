@@ -1,12 +1,12 @@
 n.d(t, {
-    $Q: () => y,
-    Ev: () => b,
+    $Q: () => v,
+    Ev: () => y,
     Gy: () => A,
     R5: () => N,
     T: () => E,
-    Us: () => I,
+    Us: () => S,
     Zl: () => T,
-    vu: () => S
+    vu: () => I
 });
 var r = n(200651);
 n(192379);
@@ -19,7 +19,7 @@ var i = n(952265),
     u = n(930180),
     d = n(981631),
     f = n(602091);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -75,54 +75,54 @@ function g(e) {
     let t = a.default.getId(),
         n = s.ZP.isModerator(t, e.id),
         r = l.Z.isLive(e.id);
-    n && !r ? E(e) : n && r && v(e);
+    n && !r ? E(e) : n && r && b(e);
 }
 function E(e, t) {
     (0, i.ZD)(
         async () => {
-            let { default: t } = await Promise.all([n.e('84335'), n.e('68241'), n.e('82758'), n.e('3908')]).then(n.bind(n, 581355));
-            return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
+            let { default: t } = await Promise.all([n.e('82758'), n.e('24231')]).then(n.bind(n, 581355));
+            return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
         },
         { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
 }
-function v(e) {
+function b(e) {
     (0, i.ZD)(async () => {
         let { default: t } = await n.e('84686').then(n.bind(n, 665111));
-        return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
+        return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
     });
 }
-function b(e, t) {
+function y(e, t) {
     (0, i.ZD)(
         async () => {
             let { default: t } = await n.e('2634').then(n.bind(n, 548841));
-            return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
+            return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
         },
         { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
 }
-function y(e) {}
+function v(e) {}
 function O(e) {
     (0, o.Kh)(e.id);
 }
-function S(e, t) {
+function I(e, t) {
     (0, i.ZD)(async () => {
         let { default: i } = await n.e('1906').then(n.bind(n, 854510));
         return (n) =>
             (0, r.jsx)(
                 i,
-                m(_({}, n), {
+                m(p({}, n), {
                     channel: e,
                     onAccept: t
                 })
             );
     });
 }
-function I(e, t) {
+function S(e, t) {
     (0, i.ZD)(
         async () => {
             let { default: t } = await n.e('85885').then(n.bind(n, 124779));
-            return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
+            return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
         },
         { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
@@ -144,7 +144,7 @@ function A(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    _(
+                    p(
                         {
                             channel: e,
                             onConfirm: t

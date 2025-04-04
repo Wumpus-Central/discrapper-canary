@@ -4,16 +4,16 @@ n(192379);
 var r = n(120356),
     o = n.n(r),
     a = n(481060),
-    s = n(942951),
-    l = n(456269),
+    l = n(942951),
+    s = n(456269),
     c = n(388032),
     u = n(794168);
 let d = (e) => {
     var t, n;
     let { message: r, channel: d, renderColon: h, hasUnreads: p } = e,
-        { user: m, author: f } = (0, l.AJ)(d),
+        { user: m, author: f } = (0, s.AJ)(d),
         g = null != (n = null != (t = null == f ? void 0 : f.nick) ? t : null == m ? void 0 : m.username) ? n : '',
-        b = (0, s.l)({
+        b = (0, l.l)({
             user: null == r ? void 0 : r.author,
             channelId: d.id,
             guildId: d.guild_id,

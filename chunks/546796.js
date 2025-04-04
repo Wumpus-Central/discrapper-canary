@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => v }), n(411104);
+n.d(t, { Z: () => b }), n(411104);
 var o = n(594174),
     a = n(195270);
 function s(e, t, n) {
@@ -74,20 +74,20 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = () => {
+let _ = () => {
     throw Error('updateModal has not been implemented.');
 };
 {
     let e = n(169480);
-    (r = e.showModal), (p = e.updateModalProps), (i = n(952265).Mr);
+    (r = e.showModal), (_ = e.updateModalProps), (i = n(952265).Mr);
 }
-let _ = 60008;
+let p = 60008;
 function h() {
     var e, t;
-    return null !== (t = null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.mfaEnabled) && void 0 !== t && t;
+    return null != (t = null == (e = o.default.getCurrentUser()) ? void 0 : e.mfaEnabled) && t;
 }
 function m(e, t) {
-    return (e.body && e.body.code === _) || (t && 429 === e.status);
+    return (e.body && e.body.code === p) || (t && 429 === e.status);
 }
 function g(e) {
     let { promiseFn: t, resolve: n, reject: o, modalProps: a = {}, hooks: { onEarlyClose: s } = {} } = e;
@@ -102,16 +102,16 @@ function g(e) {
     function f(e) {
         i(c), n(e);
     }
-    function _(e) {
+    function p(e) {
         i(c), o(e);
     }
     function h(e) {
         return (
-            p(c, h, d, u(l({}, a), { isLoading: !0 })),
+            _(c, h, d, u(l({}, a), { isLoading: !0 })),
             E({
                 promiseFn: t,
                 resolve: f,
-                reject: _,
+                reject: p,
                 code: e,
                 mfaCodeHandler: m,
                 isModalOpen: !0
@@ -120,7 +120,7 @@ function g(e) {
     }
     function m(e) {
         let { res: t } = e;
-        p(c, h, d, u(l({}, a), { error: t.body.message }));
+        _(c, h, d, u(l({}, a), { error: t.body.message }));
     }
 }
 function E(e) {
@@ -142,7 +142,7 @@ function E(e) {
         r(e);
     });
 }
-function v(e, t) {
+function b(e, t) {
     let n = null != t ? t : {},
         { checkEnabled: r = h() } = n,
         i = d(n, ['checkEnabled']);

@@ -72,8 +72,8 @@ function c(e, t, n) {
                         a(
                             {
                                 status_code: e.status,
-                                error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-                                error_message: null === (o = e.body) || void 0 === o ? void 0 : o.message
+                                error_code: null == (t = e.body) ? void 0 : t.code,
+                                error_message: null == (o = e.body) ? void 0 : o.message
                             },
                             l,
                             s

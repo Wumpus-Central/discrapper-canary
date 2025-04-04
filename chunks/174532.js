@@ -56,7 +56,7 @@ class a {
     onVoiceFilterChanged(e) {
         if ((this.voiceFilterSpeaking.forEach((e) => e.stop()), this.speaking.isRunning())) {
             var t;
-            null === (t = this._getVoiceFilterStopWatch(e)) || void 0 === t || t.start();
+            null == (t = this._getVoiceFilterStopWatch(e)) || t.start();
         }
     }
     stop() {

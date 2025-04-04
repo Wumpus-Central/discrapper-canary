@@ -36,18 +36,18 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,16 +59,16 @@ function _(e, t) {
 function h(e) {
     var t,
         d,
-        _,
+        p,
         { location: h, contextKey: m } = e,
-        g = p(e, ['location', 'contextKey']);
+        g = _(e, ['location', 'contextKey']);
     let E = (0, o.Kc)(h),
-        v = null === (d = g.items[null !== (_ = g.startingIndex) && void 0 !== _ ? _ : 0]) || void 0 === d ? void 0 : null === (t = d.sourceMetadata) || void 0 === t ? void 0 : t.message,
-        b = a.Z.getChannel(null == v ? void 0 : v.channel_id);
+        b = null == (d = g.items[null != (p = g.startingIndex) ? p : 0]) || null == (t = d.sourceMetadata) ? void 0 : t.message,
+        y = a.Z.getChannel(null == b ? void 0 : b.channel_id);
     (0, l.fS)({
-        guildId: null == b ? void 0 : b.guild_id,
-        channelId: null == b ? void 0 : b.id,
-        channelType: null == b ? void 0 : b.type,
+        guildId: null == y ? void 0 : y.guild_id,
+        channelId: null == y ? void 0 : y.id,
+        channelType: null == y ? void 0 : y.type,
         numMediaItems: g.items.length,
         source: h,
         hasMediaOptions: !g.shouldHideMediaOptions
@@ -76,13 +76,13 @@ function h(e) {
         s.default.track(c.rMx.OPEN_MODAL, {
             type: c.jXE.MEDIA_VIEWER,
             source: h,
-            guild_id: null == b ? void 0 : b.guild_id,
-            channel_id: null == b ? void 0 : b.id,
-            channel_type: null == b ? void 0 : b.type
+            guild_id: null == y ? void 0 : y.guild_id,
+            channel_id: null == y ? void 0 : y.id,
+            channel_type: null == y ? void 0 : y.type
         }),
         (0, i.ZDy)(
             async () => {
-                let { default: e } = E ? await Promise.all([n.e('95477'), n.e('79005')]).then(n.bind(n, 97594)) : await n.e('87267').then(n.bind(n, 950120));
+                let { default: e } = E ? await Promise.all([n.e('95477'), n.e('58593')]).then(n.bind(n, 97594)) : await n.e('87267').then(n.bind(n, 950120));
                 return (t) => (0, r.jsx)(e, f({}, t, g));
             },
             {

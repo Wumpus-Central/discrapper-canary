@@ -5,10 +5,10 @@ var r = n(200651),
     a = n.n(o),
     s = n(768581),
     l = n(388032),
-    c = n(730527);
+    c = n(870017);
 function u(e) {
-    let { application: t, src: n, className: o, size: u, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: p = !1 } = e,
-        _ = i.useMemo(
+    let { application: t, src: n, className: o, size: u, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
+        p = i.useMemo(
             () =>
                 null != t
                     ? s.ZP.getApplicationIconURL({
@@ -22,14 +22,14 @@ function u(e) {
                     : n,
             [t, n, u, d, f]
         );
-    return null == _
-        ? p
+    return null == p
+        ? _
             ? (0, r.jsx)('div', { className: a()(c.icon, c.placeholder, o) })
             : null
         : (0, r.jsx)('img', {
               className: a()(c.icon, o),
               alt: l.NW.string(l.t.X4IxWF),
-              src: _,
+              src: p,
               'aria-hidden': !0,
               draggable: !1
           });

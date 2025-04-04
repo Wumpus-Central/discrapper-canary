@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -12,15 +12,15 @@ var r = n(200651),
     _ = n(592125),
     p = n(594174),
     h = n(834348),
-    g = n(74538),
-    m = n(618158),
+    m = n(74538),
+    g = n(618158),
     E = n(871499),
-    v = n(981631),
-    b = n(354459),
-    y = n(474936),
+    b = n(981631),
+    y = n(354459),
+    v = n(474936),
     O = n(388032),
-    S = n(747160);
-function I(e, t, n) {
+    I = n(71922);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -100,7 +100,7 @@ function P(e) {
         className: t
     });
 }
-function D(e) {
+function w(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
@@ -109,37 +109,37 @@ function D(e) {
                 mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                 children: (0, r.jsx)(P, {})
             }),
-            (0, r.jsx)(h.Z, { className: S.badgeUpgrade })
+            (0, r.jsx)(h.Z, { className: I.badgeUpgrade })
         ]
     });
 }
-function w(e) {
+function D(e) {
     var { hideBadges: t = !1, stream: n, location: u } = e,
         h = C(e, ['hideBadges', 'stream', 'location']);
-    let { parentAnalyticsLocation: S } = (0, s.ZP)(),
-        I = (0, o.e7)([p.default], () => g.ZP.isPremium(p.default.getCurrentUser(), y.p9.TIER_1)),
+    let { parentAnalyticsLocation: I } = (0, s.ZP)(),
+        S = (0, o.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), v.p9.TIER_1)),
         N = (0, o.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         R = i.useMemo(() => (null != n ? [n] : []), [n]),
-        w = i.useCallback(() => {
-            null != N && (0, f.Z)(N.getGuildId(), N.id, v.jXE.STREAM_SETTINGS);
+        D = i.useCallback(() => {
+            null != N && (0, f.Z)(N.getGuildId(), N.id, b.jXE.STREAM_SETTINGS);
         }, [N]);
     if (null == n || null == N) return null;
     let L = P;
     return (
-        t || I || (L = D),
+        t || S || (L = w),
         (0, r.jsx)(a.yRy, {
             position: 'top',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(m.Z, {
+                return (0, r.jsx)(g.Z, {
                     children: (0, r.jsx)(d.Z, {
                         channel: N,
                         currentUser: p.default.getCurrentUser(),
                         activeStreams: R,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: w,
-                        onInteraction: (0, c.u)('ManageStreamsButton', 'StreamSettingsButton', { entrypoint: b.A5.OTHER_BUTTON })
+                        handleGoLive: D,
+                        onInteraction: (0, c.u)('ManageStreamsButton', null != I ? I : u, { entrypoint: y.A5.OTHER_BUTTON })
                     })
                 });
             },
@@ -152,7 +152,7 @@ function w(e) {
                             label: O.NW.string(O.t.tmiYpK),
                             iconComponent: L,
                             onClick: (t) => {
-                                (null != S || null != u) && (0, l.v)(null != S ? S : u, l.d.STREAM_SETTINGS), null == e || e.onClick(t);
+                                (null != I || null != u) && (0, l.v)(null != I ? I : u, l.d.STREAM_SETTINGS), null == e || e.onClick(t);
                             }
                         }),
                         h

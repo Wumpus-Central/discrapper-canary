@@ -1,11 +1,11 @@
 n.d(t, {
     Qs: () => E,
     Uf: () => g,
-    VO: () => v,
+    VO: () => b,
     Xs: () => m,
     ep: () => h,
-    t$: () => y,
-    yi: () => b
+    t$: () => v,
+    yi: () => y
 }),
     n(47120),
     n(653041);
@@ -19,10 +19,10 @@ var r = n(192379),
     u = n(477690),
     d = n(691251),
     f = n(981631);
-let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-    _ = 8,
+let _ = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+    p = 8,
     h = (e) => {
-        let { gridWrapperRef: t, containerWidth: n, showingEmptyState: i, listPaddingLeft: a = p, listScrollbarWidth: s = _ } = e,
+        let { gridWrapperRef: t, containerWidth: n, showingEmptyState: i, listPaddingLeft: a = _, listScrollbarWidth: s = p } = e,
             [l, c] = r.useState(void 0),
             u = r.useCallback(() => {
                 if (null == t.current) return null;
@@ -46,14 +46,14 @@ let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
         r.useLayoutEffect(() => {
             if ('' === i && '' !== o.current) {
                 var e;
-                null === (e = n.current) || void 0 === e || e.scrollToSectionTop(t);
+                null == (e = n.current) || e.scrollToSectionTop(t);
             }
             o.current = i;
         }, [i, t, n]),
             r.useLayoutEffect(() => {
                 if (a.current) {
                     var e;
-                    null === (e = n.current) || void 0 === e || e.scrollToSectionTop(t), (a.current = !1);
+                    null == (e = n.current) || e.scrollToSectionTop(t), (a.current = !1);
                 }
             }, [t, n]),
             r.useEffect(() => {
@@ -124,14 +124,14 @@ let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                     }, 250),
                 [i]
             ),
-            p = r.useMemo(
+            _ = r.useMemo(
                 () =>
                     o().debounce((e) => {
                         ('' !== a && c) ||
                             (window.cancelAnimationFrame(u.current),
                             (u.current = window.requestAnimationFrame(() => {
                                 var r;
-                                let i = null === (r = n.current) || void 0 === r ? void 0 : r.getSectionDescriptors();
+                                let i = null == (r = n.current) ? void 0 : r.getSectionDescriptors();
                                 if (null == i) return;
                                 let o = i.findIndex((t, n) => {
                                         let r = i[n + 1],
@@ -147,12 +147,12 @@ let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             );
         return r.useCallback(
             (e) => {
-                (i.current = !0), d(), p(e);
+                (i.current = !0), d(), _(e);
             },
-            [i, d, p]
+            [i, d, _]
         );
     },
-    v = (e) => {
+    b = (e) => {
         let { columnCounts: t, gridNavigatorId: n, itemGrid: i, itemList: o, onGridNavigatorItemSelect: l, onGridNavigatorPositionChange: c } = e,
             u = r.useRef(!1),
             d = r.useCallback(
@@ -173,7 +173,7 @@ let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 },
                 [d, o, c]
             ),
-            p = r.useCallback(
+            _ = r.useCallback(
                 (e, t, n) => {
                     switch (n.type) {
                         case a.Us.NAVIGATE_UP:
@@ -191,7 +191,7 @@ let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 },
                 [f]
             ),
-            _ = r.useCallback(
+            p = r.useCallback(
                 (e, t, n) => {
                     let r = d(e, t);
                     null != r && l(r, n);
@@ -206,12 +206,12 @@ let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             } = (0, s.Z)({
                 navId: n,
                 columnCounts: t,
-                onDispatch: p,
-                onSelect: _,
+                onDispatch: _,
+                onSelect: p,
                 autoFocusElement: !1,
                 useVirtualFocus: !0
             }),
-            { gridContainerProps: v, handleGridContainerKeyDown: b } = r.useMemo(() => {
+            { gridContainerProps: b, handleGridContainerKeyDown: y } = r.useMemo(() => {
                 let e = E();
                 return {
                     gridContainerProps: e,
@@ -229,13 +229,13 @@ let p = (0, c.Mg)(u.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 gridDispatch: h,
                 getItemProps: m,
                 getRowProps: g,
-                gridContainerProps: v,
-                handleGridContainerKeyDown: b,
+                gridContainerProps: b,
+                handleGridContainerKeyDown: y,
                 isUsingKeyboardNavigation: u
             }
         );
     };
-function b(e) {
+function y(e) {
     let { categories: t, collapsedCategories: n, gridWidth: i = 0, listPaddingRight: o = 0, itemNodeWidth: a, itemNodeMargin: s = 0 } = e;
     return r.useMemo(() => {
         let e = Math.max(1, Math.floor((i - o + s) / (a + s))),
@@ -245,7 +245,7 @@ function b(e) {
             u = [],
             d = 0,
             f = 0,
-            p = 0;
+            _ = 0;
         if (0 !== i) {
             let r = function (t, n) {
                 let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -259,17 +259,17 @@ function b(e) {
                             gridSectionIndex: f,
                             rowIndex: d,
                             columnIndex: t,
-                            visibleRowIndex: p,
+                            visibleRowIndex: _,
                             category: n
                         }));
-                    r || (p++, u.push(s), l.push(s.length)), d++;
+                    r || (_++, u.push(s), l.push(s.length)), d++;
                 }
                 f++;
             };
             for (let e of t)
                 if (e.items.length > 0) {
-                    var _;
-                    r(e.items, e.categoryInfo.type, null !== (_ = null == n ? void 0 : n.has(''.concat(e.key))) && void 0 !== _ && _);
+                    var p;
+                    r(e.items, e.categoryInfo.type, null != (p = null == n ? void 0 : n.has(''.concat(e.key))) && p);
                 }
         }
         return {
@@ -281,16 +281,16 @@ function b(e) {
         };
     }, [t, n, i, s, a, o]);
 }
-function y(e) {
+function v(e) {
     let { columnCounts: t, expressionsGrid: n, expressionsListRef: i, store: o, gridNavigatorId: a, onSelectItem: s } = e,
         {
             gridDispatch: c,
             getItemProps: u,
             getRowProps: f,
-            gridContainerProps: p,
-            handleGridContainerKeyDown: _,
+            gridContainerProps: _,
+            handleGridContainerKeyDown: p,
             isUsingKeyboardNavigation: h
-        } = v({
+        } = b({
             columnCounts: t,
             gridNavigatorId: a,
             itemGrid: n,
@@ -319,8 +319,8 @@ function y(e) {
         {
             getItemProps: u,
             getRowProps: f,
-            gridContainerProps: p,
-            handleGridContainerKeyDown: _,
+            gridContainerProps: _,
+            handleGridContainerKeyDown: p,
             isUsingKeyboardNavigation: h
         }
     );

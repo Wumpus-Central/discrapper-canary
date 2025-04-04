@@ -3,15 +3,15 @@ n.d(t, {
     l: () => f
 }),
     n(47120);
-var r = n(232713),
-    i = n(65400),
-    o = n(5907),
+var r = n(788347),
+    i = n(372793),
+    o = n(684233),
     a = n(731965),
     s = n(433517),
     l = n(590433);
 function c() {
     var e;
-    return new Set(null !== (e = s.K.get(l.hL)) && void 0 !== e ? e : []);
+    return new Set(null != (e = s.K.get(l.hL)) ? e : []);
 }
 let u = (0, o.M)((e, t) => ({
     notificationDismissedInGuilds: c(),

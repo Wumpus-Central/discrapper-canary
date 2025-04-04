@@ -53,11 +53,11 @@ function C(e) {
 }
 function O(e) {
     var t, n, s, O;
-    let { quest: w, location: S, onReceiveErrorHints: P, contentPosition: N, rowIndex: E } = e,
+    let { quest: w, location: S, onReceiveErrorHints: P, contentPosition: E, rowIndex: N } = e,
         T = (0, d.Q3)('QuestTileCta'),
         A = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        B = (0, x.g2)({ useReducedMotion: A }),
-        R = (0, u.O5)(),
+        R = (0, x.g2)({ useReducedMotion: A }),
+        B = (0, u.O5)(),
         k = (0, p._s)({ quest: w }),
         q = (0, p.z)(w),
         D = (0, p.B6)(w.config.expiresAt, {
@@ -75,8 +75,8 @@ function O(e) {
         Q = !(0, g.zi)(w),
         U = (0, p._Q)(w),
         H = (0, g.Xv)(w.config),
-        z = (0, g.q8)(w),
-        F = (0, g.Vl)(w),
+        F = (0, g.q8)(w),
+        z = (0, g.Vl)(w),
         X = (0, p.Rf)(w),
         [K, Y, G] = (0, p.me)(w, X),
         J = Q && U === p.OH.ACCEPTED,
@@ -93,26 +93,26 @@ function O(e) {
             quest: w,
             location: S,
             isCollectibleQuest: H,
-            questContentPosition: N,
-            questContentRowIndex: E,
+            questContentPosition: E,
+            questContentRowIndex: N,
             inGiftInventory: !0,
-            isVideoQuest: z,
-            inGameQuest: F
+            isVideoQuest: F,
+            inGameQuest: z
         }),
         { startingConsoleQuest: eo, startConsoleQuest: es } = (0, p.GI)({
             questId: w.id,
             beforeRequest: () => {
-                B.startAnimation(),
-                    R({
+                R.startAnimation(),
+                    B({
                         questId: w.id,
                         questContent: S,
                         questContentCTA: u.jZ.DEFIBRILLATOR,
-                        questContentPosition: N,
-                        questContentRowIndex: E
+                        questContentPosition: E,
+                        questContentRowIndex: N
                     });
             },
             afterRequest: (e) => {
-                B.stopAnimation(), P(e);
+                R.stopAnimation(), P(e);
             }
         }),
         ea = (null == (O = w.userStatus) ? void 0 : O.claimedAt) != null,
@@ -126,7 +126,7 @@ function O(e) {
               children: en
           }))
         : L
-          ? (ei = z
+          ? (ei = F
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.zxk, {
@@ -203,10 +203,10 @@ function O(e) {
                                     className: y.button,
                                     children: (0, r.jsxs)('div', {
                                         className: y.ctaInner,
-                                        children: [B.render(), v.NW.string(v.t.nPThNT)]
+                                        children: [R.render(), v.NW.string(v.t.nPThNT)]
                                     })
                                 })
-                          : z
+                          : F || (z && w.config.features.includes(j.S7.START_QUEST_CTA))
                             ? (0, r.jsx)(l.zxk, {
                                   color: l.Ttl.BRAND,
                                   onClick: null != er ? er : void 0,

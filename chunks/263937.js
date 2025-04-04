@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var r,
     i = n(442837),
     o = n(433517),
@@ -39,15 +39,15 @@ function f() {
     var e, t, n, r, i, o;
     let a = s.Z.settings;
     return {
-        gifAutoPlay: null === (t = a.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
-        animateEmoji: null === (r = a.textAndImages) || void 0 === r ? void 0 : null === (n = r.animateEmoji) || void 0 === n ? void 0 : n.value,
-        animateStickers: null === (o = a.textAndImages) || void 0 === o ? void 0 : null === (i = o.animateStickers) || void 0 === i ? void 0 : i.value
+        gifAutoPlay: null == (t = a.textAndImages) || null == (e = t.gifAutoPlay) ? void 0 : e.value,
+        animateEmoji: null == (r = a.textAndImages) || null == (n = r.animateEmoji) ? void 0 : n.value,
+        animateStickers: null == (o = a.textAndImages) || null == (i = o.animateStickers) ? void 0 : i.value
     };
 }
-function p() {
+function _() {
     return (d = f()), !1;
 }
-function _() {
+function p() {
     u = {};
 }
 function h() {
@@ -70,34 +70,34 @@ function E() {
     }
     return t;
 }
-class v extends (r = i.ZP.PersistedStore) {
+class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (u = null != e ? e : {}), this.syncWith([s.Z], p);
+        (u = null != e ? e : {}), this.syncWith([s.Z], _);
     }
     getState() {
         return u;
     }
     getAppliedOverrideReasonKey(e) {
         var t;
-        return null === (t = u[e]) || void 0 === t ? void 0 : t.reasonKey;
+        return null == (t = u[e]) ? void 0 : t.reasonKey;
     }
     getOverride(e) {
         return u[e];
     }
 }
-l(v, 'displayName', 'UserSettingsOverridesStore'),
-    l(v, 'persistKey', 'UserSettingsOverridesStore'),
-    l(v, 'migrations', [
+l(b, 'displayName', 'UserSettingsOverridesStore'),
+    l(b, 'persistKey', 'UserSettingsOverridesStore'),
+    l(b, 'migrations', [
         () => {
             var e;
-            let t = null !== (e = o.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
+            let t = null != (e = o.K.get('UserSettingsStoreOverrides')) ? e : {};
             return o.K.remove('UserSettingsStoreOverrides'), t;
         }
     ]);
-let b = new v(a.Z, {
+let y = new b(a.Z, {
     USER_SETTINGS_PROTO_UPDATE: E,
     USER_SETTINGS_OVERRIDE_APPLY: m,
     USER_SETTINGS_OVERRIDE_CLEAR: g,
-    LOGOUT: _,
+    LOGOUT: p,
     LOGIN_SUCCESS: h
 });

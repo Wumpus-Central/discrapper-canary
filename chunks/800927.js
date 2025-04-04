@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(474991), n(398202), n(301563), n(757143), n(627494);
+n.d(t, { Z: () => S }), n(474991), n(398202), n(301563), n(757143), n(627494);
 var r = n(512722),
     i = n.n(r),
     o = n(477660),
@@ -57,54 +57,54 @@ function u(e, t) {
 }
 let d = /\n{2,}$/,
     f = /(?:^|\n)( *)$/,
-    p = '(?:[*-]|\\d+\\.)',
-    _ = '(%INDENT_CAPTURE_PATTERN%)(' + p + ') +',
-    h = RegExp('^' + _.replace('%INDENT_CAPTURE_PATTERN%', ' *')),
-    m = _ + '[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%' + p + ' )[^\\n]*)*(\n|$)',
+    _ = '(?:[*-]|\\d+\\.)',
+    p = '(%INDENT_CAPTURE_PATTERN%)(' + _ + ') +',
+    h = RegExp('^' + p.replace('%INDENT_CAPTURE_PATTERN%', ' *')),
+    m = p + '[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%' + _ + ' )[^\\n]*)*(\n|$)',
     g = / *\n$/,
-    E = RegExp('^( *)(' + p + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + p + ' )|$)'),
-    v = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-    b = 10,
-    y = 1,
+    E = RegExp('^( *)(' + _ + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + _ + ' )|$)'),
+    b = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
+    y = 10,
+    v = 1,
     O = 1000000000,
-    S = (e) => e.map((e) => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)),
-    I = u(l({}, a().defaultRules.list), {
+    I = (e) => e.map((e) => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)),
+    S = u(l({}, a().defaultRules.list), {
         requiredFirstCharacters: ' *-0123456789'.split(''),
         match: (e, t) => {
-            if (!t.allowList || t._listLevel >= b + 1) return null;
+            if (!t.allowList || t._listLevel >= y + 1) return null;
             let n = null == t.prevCapture ? '' : t.prevCapture[0],
                 r = f.exec(n);
-            return null == r || v.test(r[0]) ? null : E.exec(e);
+            return null == r || b.test(r[0]) ? null : E.exec(e);
         },
         parse: (e, t, n) => {
             let r = e[2],
                 o = r.length > 1,
-                a = o ? Math.min(O, Math.max(y, +r)) : void 0,
+                a = o ? Math.min(O, Math.max(v, +r)) : void 0,
                 s = e[0].replace(d, '\n'),
                 c = h.exec(s),
                 f = null != c ? c[0].length : 0,
-                p = null != c ? c[1].length : 0,
-                _ = ' {'.concat(p, ',').concat(p + 1, '}'),
-                E = RegExp(m.replaceAll('%INDENT_CAPTURE_PATTERN%', _), 'gm'),
-                v = RegExp('^ {1,' + f + '}', 'gm'),
-                b = s.match(E);
-            i()(null != b, 'markup list items can not be parsed.');
-            let I = !1;
+                _ = null != c ? c[1].length : 0,
+                p = ' {'.concat(_, ',').concat(_ + 1, '}'),
+                E = RegExp(m.replaceAll('%INDENT_CAPTURE_PATTERN%', p), 'gm'),
+                b = RegExp('^ {1,' + f + '}', 'gm'),
+                y = s.match(E);
+            i()(null != y, 'markup list items can not be parsed.');
+            let S = !1;
             return {
                 ordered: o,
                 start: a,
-                items: b.map((e, r) => {
-                    let i;
-                    let o = e.replace(h, '').replace(v, ''),
-                        a = r === b.length - 1,
-                        s = -1 !== o.indexOf('\n\n') || (a && I);
-                    I = s;
+                items: y.map((e, r) => {
+                    let i,
+                        o = e.replace(h, '').replace(b, ''),
+                        a = r === y.length - 1,
+                        s = -1 !== o.indexOf('\n\n') || (a && S);
+                    S = s;
                     let c = n.inline,
                         d = n._list,
                         f = n._listLevel;
                     (n._list = !0), (n._listLevel = (null != f ? f : 0) + 1), s ? ((n.inline = !1), (i = o.replace(g, '\n\n'))) : ((n.inline = !0), (i = o.replace(g, '')));
-                    let p = S(t(i, u(l({}, n), { allowHeading: !1 })));
-                    return (n.inline = c), (n._list = d), (n._listLevel = f), p;
+                    let _ = I(t(i, u(l({}, n), { allowHeading: !1 })));
+                    return (n.inline = c), (n._list = d), (n._listLevel = f), _;
                 })
             };
         }

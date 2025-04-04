@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    I: () => v,
-    Z: () => Z
+    I: () => b,
+    Z: () => F
 }),
     n(47120),
     n(230036),
@@ -15,8 +15,8 @@ var i,
     u = n(882252),
     d = n(228392),
     f = n(131704),
-    p = n(592125),
-    _ = n(306680),
+    _ = n(592125),
+    p = n(306680),
     h = n(823379),
     m = n(709054),
     g = n(569471);
@@ -33,29 +33,29 @@ function E(e, t, n) {
         e
     );
 }
-let v = 25,
-    b = !1,
-    y = !0,
+let b = 25,
+    y = !1,
+    v = !0,
     O = !1,
-    S = !1,
-    I = null,
+    I = !1,
+    S = null,
     T = s.z.LATEST_ACTIVITY,
     N = [],
     A = 0;
 function C() {
-    (b = !1), (y = !0), (O = !1), (S = !1), (I = null), (T = s.z.LATEST_ACTIVITY), (r = new Set()), (A = 0), (N = []);
+    (y = !1), (v = !0), (O = !1), (I = !1), (S = null), (T = s.z.LATEST_ACTIVITY), (r = new Set()), (A = 0), (N = []);
 }
 function R(e, t) {
-    return t === s.z.LATEST_ACTIVITY ? _.ZP.lastMessageId(e.id) : e.id;
+    return t === s.z.LATEST_ACTIVITY ? p.ZP.lastMessageId(e.id) : e.id;
 }
 function P(e) {
-    (e.channelId === I && e.sortOrder === T && (0, h.OL)(e.tagFilter, r)) || C(), (I = e.channelId), (T = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (b = !0), (y = !1);
+    (e.channelId === S && e.sortOrder === T && (0, h.OL)(e.tagFilter, r)) || C(), (S = e.channelId), (T = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (y = !0), (v = !1);
 }
 function w(e) {
-    if (e.channelId !== I || e.sortOrder !== T || !(0, h.OL)(e.tagFilter, r)) return !1;
+    if (e.channelId !== S || e.sortOrder !== T || !(0, h.OL)(e.tagFilter, r)) return !1;
     let t = e.threads.filter((e) => f.AW.has(e.type)).map((e) => e.id);
     N = N.concat(t);
-    let n = p.Z.getChannel(I);
+    let n = _.Z.getChannel(S);
     null != n &&
         n.isForumLikeChannel() &&
         (0, d.Hr)({
@@ -66,25 +66,25 @@ function w(e) {
             filterTagIds: Array.from(e.tagFilter),
             sortOrder: e.sortOrder
         }),
-        x(),
+        L(),
         (O = e.hasMore),
-        (A = e.offset + v),
-        (b = !1),
-        (y = !1);
+        (A = e.offset + b),
+        (y = !1),
+        (v = !1);
 }
 function D(e) {
-    return (null == I || null == e.channelId || I === e.channelId) && x();
+    return (null == S || null == e.channelId || S === e.channelId) && L();
 }
-function x() {
-    if (null == I) return !1;
+function L() {
+    if (null == S) return !1;
     let e = !O,
-        t = p.Z.getChannel(N[N.length - 1]),
+        t = _.Z.getChannel(N[N.length - 1]),
         n = null == t ? null : R(t, T);
-    N = a()(p.Z.getAllThreadsForParent(I))
+    N = a()(_.Z.getAllThreadsForParent(S))
         .filter((e) => e.isArchivedThread())
         .filter((t) => {
             var i;
-            if (0 !== r.size && (null === (i = t.appliedTags) || void 0 === i ? void 0 : i.some((e) => r.has(e))) !== !0) return !1;
+            if (0 !== r.size && (null == (i = t.appliedTags) ? void 0 : i.some((e) => r.has(e))) !== !0) return !1;
             if (e || null == n) return !0;
             {
                 let e = null == t ? null : R(t, T);
@@ -96,12 +96,12 @@ function x() {
         .reverse()
         .value();
 }
-function L(e) {
-    if (e.channelId !== I || e.sortOrder !== T || !(0, h.OL)(e.tagFilter, r)) return !1;
-    (b = !1), (S = !0), (y = !1);
+function x(e) {
+    if (e.channelId !== S || e.sortOrder !== T || !(0, h.OL)(e.tagFilter, r)) return !1;
+    (y = !1), (I = !0), (v = !1);
 }
 function M(e) {
-    if (e.channel.id !== I) return !1;
+    if (e.channel.id !== S) return !1;
     C();
 }
 function k(e) {
@@ -114,37 +114,37 @@ function j(e) {
 }
 function U(e) {
     let { channel: t } = e;
-    return I === t.parent_id && !!(0, u.yv)(t.id) && void k(t.id);
+    return S === t.parent_id && !!(0, u.yv)(t.id) && void k(t.id);
 }
 let G = [];
 class B extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, g.Z, _.ZP);
+        this.waitFor(_.Z, g.Z, p.ZP);
     }
     get canLoadMore() {
-        return O && !b && !S;
+        return O && !y && !I;
     }
     get nextOffset() {
         return A;
     }
     get isInitialLoad() {
-        return y;
+        return v;
     }
     isLoading(e, t, n) {
-        return I === e && T === t && (0, h.OL)(r, n) ? b : (C(), !1);
+        return S === e && T === t && (0, h.OL)(r, n) ? y : (C(), !1);
     }
     getThreads(e, t, n) {
-        return I === e && T === t && (0, h.OL)(r, n) ? N : G;
+        return S === e && T === t && (0, h.OL)(r, n) ? N : G;
     }
 }
 E(B, 'displayName', 'ArchivedThreadsStore');
-let Z = new B(c.Z, {
+let F = new B(c.Z, {
     CONNECTION_OPEN: C,
     THREAD_DELETE: j,
     THREAD_UPDATE: U,
     CHANNEL_DELETE: M,
     LOAD_ARCHIVED_THREADS: P,
     LOAD_ARCHIVED_THREADS_SUCCESS: w,
-    LOAD_ARCHIVED_THREADS_FAIL: L,
+    LOAD_ARCHIVED_THREADS_FAIL: x,
     RESORT_THREADS: D
 });

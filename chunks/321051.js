@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(692547),
@@ -6,13 +6,13 @@ var r = n(200651),
     s = n(697426),
     l = n(603074),
     c = n(388032),
-    u = n(808380);
+    u = n(10123);
 let d = [54, 8, 8, 8];
 function f(e) {
     let { onSelect: t, sound: n } = e,
-        [f, p] = i.useState(!1);
-    function _(e) {
-        p(!1), null == t || t(e);
+        [f, _] = i.useState(!1);
+    function p(e) {
+        _(!1), null == t || t(e);
     }
     let h = (e) =>
         (0, r.jsxs)('div', {
@@ -41,7 +41,7 @@ function f(e) {
         shouldShow: f,
         position: 'bottom',
         align: 'left',
-        onRequestClose: () => p(!1),
+        onRequestClose: () => _(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(a.VqE, {
@@ -51,7 +51,7 @@ function f(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: _,
+                    onSelect: p,
                     analyticsSource: 'gift soundboard',
                     soundButtonOverlay: s.Pb.ADD,
                     listPadding: d,
@@ -63,7 +63,7 @@ function f(e) {
         children: () =>
             (0, r.jsx)(a.P3F, {
                 className: u.sound,
-                onClick: () => p(!0),
+                onClick: () => _(!0),
                 children:
                     null == n
                         ? (0, r.jsxs)(r.Fragment, {
@@ -99,7 +99,7 @@ function f(e) {
             })
     });
 }
-function p(e) {
+function _(e) {
     let { sound: t, onSelect: n } = e;
     return (0, r.jsx)('div', {
         className: u.container,

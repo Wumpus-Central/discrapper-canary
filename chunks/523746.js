@@ -9,7 +9,7 @@ var r,
     u = n(944486),
     d = n(914010),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -63,7 +63,7 @@ function m(e, t) {
 }
 let g = {},
     E = {};
-function v() {
+function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Z.getChannelId(),
         n = c.Z.getChannel(t);
@@ -71,7 +71,7 @@ function v() {
         var r;
         return (
             (g[t] =
-                null !== (r = g[t]) && void 0 !== r
+                null != (r = g[t])
                     ? r
                     : {
                           channelId: t,
@@ -86,22 +86,22 @@ function v() {
     }
     return !1;
 }
-function b() {
-    return v(!0);
+function y() {
+    return b(!0);
 }
-function y(e) {
+function v(e) {
     let { callStoreInternalState: t } = e;
-    (g = _({}, t.calls)), (E = _({}, t.enqueuedRings));
+    (g = p({}, t.calls)), (E = p({}, t.enqueuedRings));
 }
 function O() {
     (g = {}), (E = {});
 }
-function S() {
-    return v(!0);
+function I() {
+    return b(!0);
 }
-function I(e) {
+function S(e) {
     let { channelId: t } = e;
-    return v(!1, t);
+    return b(!1, t);
 }
 function T(e) {
     let { channel: t } = e;
@@ -135,13 +135,13 @@ function N(e) {
 function A(e) {
     var t;
     let { channelId: n, recipients: r } = e;
-    E[n] = o().union(null !== (t = E[n]) && void 0 !== t ? t : [], null != r ? r : ['all']);
+    E[n] = o().union(null != (t = E[n]) ? t : [], null != r ? r : ['all']);
 }
 function C(e) {
     let { channelId: t, messageId: n, region: r, ringing: i } = e,
         o = g[t],
         a = null != o && (o.regionUpdated || o.region !== r);
-    g[t] = m(_({}, g[t]), {
+    g[t] = m(p({}, g[t]), {
         messageId: n,
         region: r,
         ringing: i,
@@ -152,7 +152,7 @@ function R(e) {
     let { channelId: t, unavailable: n } = e,
         r = g[t];
     !0 === n && null != r
-        ? (g[t] = m(_({}, r), { unavailable: n }))
+        ? (g[t] = m(p({}, r), { unavailable: n }))
         : (g[t] = {
               channelId: t,
               ringing: [],
@@ -196,13 +196,13 @@ class w extends (r = a.ZP.Store) {
         };
     }
 }
-p(w, 'displayName', 'CallStore');
+_(w, 'displayName', 'CallStore');
 let D = new w(l.Z, {
-    CONNECTION_OPEN: b,
+    CONNECTION_OPEN: y,
     CONNECTION_CLOSED: O,
-    OVERLAY_INITIALIZE: y,
-    CONNECTION_RESUMED: S,
-    CHANNEL_SELECT: I,
+    OVERLAY_INITIALIZE: v,
+    CONNECTION_RESUMED: I,
+    CHANNEL_SELECT: S,
     CHANNEL_DELETE: T,
     CALL_CREATE: N,
     CALL_UPDATE: C,

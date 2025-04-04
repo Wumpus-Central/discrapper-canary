@@ -17,14 +17,14 @@ var i = n(120356),
     g = n(960870),
     E = n(139793),
     b = n(994746),
-    v = n(232174),
-    y = n(652853),
+    y = n(232174),
+    v = n(652853),
     O = n(979038),
     I = n(448980),
     S = n(336383),
     T = n(194811),
-    A = n(373826),
-    N = n(315324),
+    N = n(373826),
+    A = n(315324),
     C = n(262210),
     R = n(670451),
     P = n(881530),
@@ -32,7 +32,7 @@ var i = n(120356),
     D = n(981631),
     L = n(701488),
     x = n(388032),
-    M = n(203396);
+    M = n(227832);
 function k(e, t, n) {
     return (
         t in e
@@ -88,7 +88,7 @@ function G(e, t) {
 function B(e) {
     let { user: t, currentUser: n, activity: i, application: k, voiceGuild: U, voiceChannel: B, className: F, onClose: V, appContext: Z } = e,
         { analyticsLocations: H } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: W } = (0, y.z)(),
+        { profileType: W } = (0, v.z)(),
         Y = { [M.fullSize]: W === w.y0.FULL_SIZE },
         K = (0, h.Z)({
             activity: i,
@@ -147,25 +147,25 @@ function B(e) {
                               color: a.TVs.colors.TEXT_NORMAL,
                               className: M.voiceIcon
                           }),
-                          (0, r.jsx)(A.Z, {
+                          (0, r.jsx)(N.Z, {
                               variant: 'heading-sm/semibold',
                               text: B.name
                           })
                       ]
                   })
                 : (0, c.Z)(i)
-                  ? (0, r.jsx)(A.Z, {
+                  ? (0, r.jsx)(N.Z, {
                         variant: 'heading-sm/semibold',
                         text: i.name
                     })
-                  : (0, r.jsx)(A.Z, {
+                  : (0, r.jsx)(N.Z, {
                         variant: 'heading-sm/semibold',
-                        text: null !== (e = i.details) && void 0 !== e ? e : i.name
+                        text: null != (e = i.details) ? e : i.name
                     });
         },
         en = () =>
             (0, u.Z)(i) && null != U
-                ? (0, r.jsx)(A.Z, {
+                ? (0, r.jsx)(N.Z, {
                       variant: 'text-xs/normal',
                       text: x.NW.formatToPlainString(x.t['hq/Qzc'], { guildName: U.name }),
                       onClick: () => {
@@ -173,11 +173,11 @@ function B(e) {
                       }
                   })
                 : (0, c.Z)(i)
-                  ? (0, r.jsx)(A.Z, {
+                  ? (0, r.jsx)(N.Z, {
                         variant: 'text-xs/normal',
                         text: i.details
                     })
-                  : (0, r.jsx)(A.Z, {
+                  : (0, r.jsx)(N.Z, {
                         text: i.state,
                         variant: 'text-xs/normal'
                     }),
@@ -187,39 +187,39 @@ function B(e) {
                 ? null
                 : (0, c.Z)(i)
                   ? ei()
-                  : (0, r.jsx)(A.Z, {
-                        text: null === (e = i.assets) || void 0 === e ? void 0 : e.large_text,
+                  : (0, r.jsx)(N.Z, {
+                        text: null == (e = i.assets) ? void 0 : e.large_text,
                         variant: 'text-xs/normal'
                     });
         },
         ei = () => {
             var e, t, n, o;
-            return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === L.Zc
+            return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === L.Zc
                 ? (0, r.jsxs)('div', {
                       className: M.gameState,
                       children: [
-                          (0, r.jsx)(A.Z, {
+                          (0, r.jsx)(N.Z, {
                               variant: 'text-xs/normal',
                               text: i.state
                           }),
-                          (0, r.jsx)(A.Z, {
+                          (0, r.jsx)(N.Z, {
                               variant: 'text-xs/normal',
                               text: x.NW.formatToPlainString(x.t['u//9Bw'], {
                                   count: '0',
-                                  max: null !== (o = null == k ? void 0 : k.getMaxParticipants()) && void 0 !== o ? o : 0
+                                  max: null != (o = null == k ? void 0 : k.getMaxParticipants()) ? o : 0
                               })
                           })
                       ]
                   })
-                : (0, l.Z)(i) && (null === (t = i.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = i.party) || void 0 === n ? void 0 : n.size.length) >= 2
+                : (0, l.Z)(i) && (null == (t = i.party) ? void 0 : t.size) != null && (null == (n = i.party) ? void 0 : n.size.length) >= 2
                   ? (0, r.jsxs)('div', {
                         className: M.gameState,
                         children: [
-                            (0, r.jsx)(A.Z, {
+                            (0, r.jsx)(N.Z, {
                                 variant: 'text-xs/normal',
                                 text: i.state
                             }),
-                            (0, r.jsx)(A.Z, {
+                            (0, r.jsx)(N.Z, {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === i.party.size[1]
@@ -232,14 +232,14 @@ function B(e) {
                         ]
                     })
                   : null == i.party
-                    ? (0, r.jsx)(A.Z, {
+                    ? (0, r.jsx)(N.Z, {
                           variant: 'text-xs/normal',
                           text: i.state
                       })
                     : null;
         },
         eo = () => {
-            if (!(0, v.Z)(i)) return null;
+            if (!(0, y.Z)(i)) return null;
             let { start: e, end: t } = i.timestamps;
             return (0, r.jsx)(C.Z, {
                 start: e,
@@ -261,7 +261,7 @@ function B(e) {
         es = () =>
             null == U || null == B
                 ? null
-                : (0, r.jsx)(N.Z, {
+                : (0, r.jsx)(A.Z, {
                       user: t,
                       guild: U,
                       channel: B,

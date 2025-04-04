@@ -1,7 +1,7 @@
 n.d(t, {
-    WR: () => p,
+    WR: () => _,
     qE: () => f,
-    wQ: () => _
+    wQ: () => p
 });
 var r = n(200651);
 n(192379);
@@ -11,7 +11,7 @@ var i = n(481060),
     s = n(502762),
     l = n(292814),
     c = n(388032),
-    u = n(374883);
+    u = n(188394);
 function d(e) {
     return (0, r.jsx)(o.Z, { application: e }, e.id);
 }
@@ -46,7 +46,7 @@ function f(e) {
         ]
     });
 }
-function p(e) {
+function _(e) {
     let { userId: t, headingColor: n } = e,
         o = (0, l.e)({
             userId: t,
@@ -63,11 +63,11 @@ function p(e) {
         })
     });
 }
-function _(e) {
+function p(e) {
     let { userId: t, headingColor: n } = e;
     return (0, r.jsx)(s.Z.Overlay, {
         className: u.profile,
-        children: (0, r.jsx)(p, {
+        children: (0, r.jsx)(_, {
             userId: t,
             headingColor: n
         })

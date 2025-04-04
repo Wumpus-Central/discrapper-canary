@@ -1,7 +1,7 @@
 n.d(t, {
-    Fi: () => _,
+    Fi: () => p,
     JO: () => h,
-    w6: () => p
+    w6: () => _
 }),
     n(266796),
     n(47120);
@@ -63,10 +63,10 @@ function f(e, t) {
         e
     );
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (e.GUILD = 'GUILD'), (e.APPLICATION = 'APPLICATION'), e;
 })({});
-let _ = async (e) => {
+let p = async (e) => {
     let t = null;
     try {
         let n = (
@@ -121,7 +121,7 @@ class h extends i.Z {
         return (0, s.Zg)(this.name);
     }
     static async getGuildFromEmojiId(e) {
-        let t = await _(e);
+        let t = await p(e);
         return null != t && (null == t ? void 0 : t.type) === 'GUILD' ? t.guild : null;
     }
     static _mapCommon(e) {
@@ -131,7 +131,7 @@ class h extends i.Z {
             name: e.name,
             icon: e.icon,
             description: e.description,
-            features: new Set(null !== (t = e.features) && void 0 !== t ? t : new Set())
+            features: new Set(null != (t = e.features) ? t : new Set())
         };
     }
     static createFromGuildRecord(e) {

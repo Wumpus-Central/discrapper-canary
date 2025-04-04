@@ -17,7 +17,7 @@ function u(e, t) {
         o = (0, r.e7)([a.Z], () => a.Z.getNewMemberActions(e), [e]),
         c = (0, r.e7)([s.Z], () => s.Z.getCompletedActions(e));
     if (!i) return {};
-    let u = null !== (n = null == o ? void 0 : o.findIndex((e) => e.channelId === t.id)) && void 0 !== n ? n : 0,
+    let u = null != (n = null == o ? void 0 : o.findIndex((e) => e.channelId === t.id)) ? n : 0,
         d = u >= 0 && null != o ? o[u] : null,
         f = null != d && (null == c ? void 0 : c[d.channelId]) === !0;
     return {
@@ -33,5 +33,5 @@ function d(e, t) {
 function f(e) {
     var t;
     let n = (0, r.e7)([i.ZP], () => i.ZP.getSelfMember(e));
-    return (0, o.yE)(null !== (t = null == n ? void 0 : n.flags) && void 0 !== t ? t : 0, c.q.COMPLETED_HOME_ACTIONS);
+    return (0, o.yE)(null != (t = null == n ? void 0 : n.flags) ? t : 0, c.q.COMPLETED_HOME_ACTIONS);
 }

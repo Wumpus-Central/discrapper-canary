@@ -59,11 +59,11 @@ let u = !1,
         warningSeen: !1
     },
     f = (0, i.cloneDeep)(d);
-function p(e) {
+function _(e) {
     let { settings: t } = e;
     f = c({}, f, t);
 }
-function _() {
+function p() {
     u = !0;
 }
 class h extends (r = o.ZP.DeviceSettingsStore) {
@@ -103,6 +103,6 @@ class h extends (r = o.ZP.DeviceSettingsStore) {
 }
 l(h, 'displayName', 'PoggermodeSettingsStore'), l(h, 'persistKey', 'PoggermodeSettingsStore');
 let m = new h(a.Z, {
-    POGGERMODE_SETTINGS_UPDATE: p,
-    POGGERMODE_TEMPORARILY_DISABLED: _
+    POGGERMODE_SETTINGS_UPDATE: _,
+    POGGERMODE_TEMPORARILY_DISABLED: p
 });

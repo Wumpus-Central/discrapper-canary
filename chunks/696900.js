@@ -23,7 +23,7 @@ let c = () => {
 class u extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        r = null !== (t = null == e ? void 0 : e.animationType) && void 0 !== t ? t : s.q.PREMIUM;
+        r = null != (t = null == e ? void 0 : e.animationType) ? t : s.q.PREMIUM;
     }
     getState() {
         return { animationType: r };

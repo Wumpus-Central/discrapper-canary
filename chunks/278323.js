@@ -9,7 +9,7 @@ var r = n(544891),
     u = n(981631);
 let d = {
     updateActivity(e) {
-        let { applicationId: t, distributor: n, shareActivity: o, token: a = null, duration: s = 0, closed: l = !1, exePath: c = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: p = null } = e;
+        let { applicationId: t, distributor: n, shareActivity: o, token: a = null, duration: s = 0, closed: l = !1, exePath: c = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: _ = null } = e;
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'ACTIVITY_UPDATE_START',
@@ -31,7 +31,7 @@ let d = {
                         exePath: c,
                         voice_channel_id: d,
                         session_id: f,
-                        media_session_id: p
+                        media_session_id: _
                     },
                     retries: 1,
                     oldFormErrors: !0,

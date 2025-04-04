@@ -17,13 +17,13 @@ function p(e) {
             },
             [h, p.id]
         ),
-        N = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 h() && (e.id === (null == n ? void 0 : n.id) && o.Z.stopEditingIntegration(), s.Z.disableIntegration(p.id, e.id));
             },
             [h, n, p.id]
         ),
-        O = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 h() && (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
             },
@@ -49,8 +49,8 @@ function p(e) {
                         guild: p,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: j,
-                        onDisable: N,
-                        onToggleExpand: () => O(e.id)
+                        onDisable: O,
+                        onToggleExpand: () => N(e.id)
                     },
                     e.id
                 )

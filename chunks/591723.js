@@ -1,4 +1,4 @@
-n.d(t, { V: () => y });
+n.d(t, { V: () => v });
 var r = n(573654),
     i = n(40284),
     o = n(481732),
@@ -18,12 +18,12 @@ function d(e, t, n) {
     return t && u(e.prototype, t), n && u(e, n), e;
 }
 function f(e, t) {
-    return g(e) || m(e, t) || _(e, t) || p();
+    return g(e) || m(e, t) || p(e, t) || _();
 }
-function p() {
+function _() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
-function _(e, t) {
+function p(e, t) {
     if (e) {
         if ('string' == typeof e) return h(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -70,7 +70,7 @@ function E(e) {
             throw Error('Unknown Handler Role: '.concat(e));
     }
 }
-function v(e) {
+function b(e) {
     switch (e[0]) {
         case 'S':
             return a.t.SOURCE;
@@ -80,7 +80,7 @@ function v(e) {
             (0, r.k)(!1, 'Cannot parse handler ID: '.concat(e));
     }
 }
-function b(e, t) {
+function y(e, t) {
     var n = e.entries(),
         r = !1;
     do {
@@ -91,7 +91,7 @@ function b(e, t) {
     } while (!r);
     return !1;
 }
-var y = (function () {
+var v = (function () {
     function e(t) {
         c(this, e), (this.types = new Map()), (this.dragSources = new Map()), (this.dropTargets = new Map()), (this.pinnedSourceId = null), (this.pinnedSource = null), (this.store = t);
     }
@@ -116,7 +116,7 @@ var y = (function () {
             {
                 key: 'containsHandler',
                 value: function (e) {
-                    return b(this.dragSources, e) || b(this.dropTargets, e);
+                    return y(this.dragSources, e) || y(this.dropTargets, e);
                 }
             },
             {
@@ -147,13 +147,13 @@ var y = (function () {
             {
                 key: 'isSourceId',
                 value: function (e) {
-                    return v(e) === a.t.SOURCE;
+                    return b(e) === a.t.SOURCE;
                 }
             },
             {
                 key: 'isTargetId',
                 value: function (e) {
-                    return v(e) === a.t.TARGET;
+                    return b(e) === a.t.TARGET;
                 }
             },
             {

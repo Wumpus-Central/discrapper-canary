@@ -115,25 +115,25 @@ let x = i.forwardRef(function (e, t) {
                             (0, n.jsxs)('div', {
                                 className: o.channels,
                                 children: [
-                                    (0, n.jsx)(u, {
+                                    (0, n.jsx)(h, {
                                         mention: !0,
                                         name: d.NW.string(d.t.WFejRk)
                                     }),
-                                    (0, n.jsx)(u, { name: d.NW.string(d.t.jqWm9f) }),
-                                    (0, n.jsx)(u, {
+                                    (0, n.jsx)(h, { name: d.NW.string(d.t.jqWm9f) }),
+                                    (0, n.jsx)(h, {
                                         grey: 'after' === r,
                                         name: d.NW.string(d.t.p9z9Iy)
                                     }),
-                                    (0, n.jsx)(u, {
+                                    (0, n.jsx)(h, {
                                         grey: 'after' === r,
                                         name: d.NW.string(d.t['2bdWDw'])
                                     }),
-                                    (0, n.jsx)(u, { name: d.NW.string(d.t['Ci+Our']) }),
-                                    (0, n.jsx)(u, {
+                                    (0, n.jsx)(h, { name: d.NW.string(d.t['Ci+Our']) }),
+                                    (0, n.jsx)(h, {
                                         grey: 'after' === r,
                                         name: d.NW.string(d.t['/7TEdn'])
                                     }),
-                                    (0, n.jsx)(u, {
+                                    (0, n.jsx)(h, {
                                         grey: 'after' === r,
                                         name: d.NW.string(d.t['Ime/t7'])
                                     })
@@ -141,22 +141,22 @@ let x = i.forwardRef(function (e, t) {
                             })
                         ]
                     }),
-                    (0, n.jsx)(h, {
+                    (0, n.jsx)(u, {
                         hidden: x || 'after' === r,
                         className: o.tipBefore1,
                         text: d.NW.string(d.t.WrPMOD)
                     }),
-                    (0, n.jsx)(h, {
+                    (0, n.jsx)(u, {
                         hidden: x || 'after' === r,
                         className: o.tipBefore2,
                         text: d.NW.string(d.t['pApL7+'])
                     }),
-                    (0, n.jsx)(h, {
+                    (0, n.jsx)(u, {
                         hidden: x || 'before' === r,
                         className: o.tipAfter1,
                         text: d.NW.string(d.t.eZb3iY)
                     }),
-                    (0, n.jsx)(h, {
+                    (0, n.jsx)(u, {
                         hidden: x || 'before' === r,
                         className: o.tipAfter2,
                         text: d.NW.string(d.t.M3KrJS)
@@ -166,7 +166,7 @@ let x = i.forwardRef(function (e, t) {
         ]
     });
 });
-function h(e) {
+function u(e) {
     let { text: t, className: s, hidden: i } = e;
     return (0, n.jsxs)('div', {
         className: a()(s, o.tip, { [o.hidden]: i }),
@@ -181,7 +181,7 @@ function h(e) {
         ]
     });
 }
-function u(e) {
+function h(e) {
     let { grey: t, mention: s, name: i } = e;
     return (0, n.jsxs)('div', {
         className: a()(o.channel, {

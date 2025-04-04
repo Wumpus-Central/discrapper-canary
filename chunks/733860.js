@@ -1,6 +1,6 @@
 var e = r(147018),
-    u = r(339718),
-    a = r(49693),
+    a = r(339718),
+    u = r(49693),
     i = r(610148),
     o = r(708517),
     f = r(886960);
@@ -21,8 +21,8 @@ e(
     },
     {
         unshift: function (t) {
-            var n = u(this),
-                r = a(n),
+            var n = a(this),
+                r = u(n),
                 e = arguments.length;
             if (e) {
                 f(r + e);

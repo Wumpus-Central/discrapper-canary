@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(588468),
     i = n(496675),
     o = n(483360),
@@ -11,11 +11,11 @@ var r = n(588468),
 function f(e) {
     return ''.concat(l.a4).concat(e.name).concat(l.jp);
 }
-let p = {
+let _ = {
     sentinel: l.a4,
     matches(e, t, n, r, o) {
         var a, s;
-        return r && null !== (s = null === (a = o.chatInputType.autocomplete) || void 0 === a ? void 0 : a.addReactionShortcut) && void 0 !== s && s && (i.Z.can(c.Plq.ADD_REACTIONS, e) || e.isPrivate());
+        return r && null != (s = null == (a = o.chatInputType.autocomplete) ? void 0 : a.addReactionShortcut) && s && (i.Z.can(c.Plq.ADD_REACTIONS, e) || e.isPrivate());
     },
     queryResults(e, t, n, r, i) {
         let { emojis: a } = o.ZP.queryEmojiResults({

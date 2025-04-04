@@ -22,11 +22,11 @@ class o {
         var e, t, n, r;
         let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [25, 50, 75, 90, 95],
             o = {};
-        for (let t of i) o[t] = null !== (e = this.digest.percentile(t / 100)) && void 0 !== e ? e : 0;
+        for (let t of i) o[t] = null != (e = this.digest.percentile(t / 100)) ? e : 0;
         return {
-            min: null !== (t = this.digest.percentile(0)) && void 0 !== t ? t : 0,
-            max: null !== (n = this.digest.percentile(1)) && void 0 !== n ? n : 0,
-            count: null !== (r = this.digest.size()) && void 0 !== r ? r : 0,
+            min: null != (t = this.digest.percentile(0)) ? t : 0,
+            max: null != (n = this.digest.percentile(1)) ? n : 0,
+            count: null != (r = this.digest.size()) ? r : 0,
             percentiles: o,
             mean: this.totalWeight > 0 ? this.total / this.totalWeight : 0,
             samples: this.samples

@@ -10,7 +10,7 @@ var i = n(525654),
     u = n(63063),
     d = n(981631),
     f = n(388032);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -48,7 +48,7 @@ class h extends c.Z {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'handlePermission', (e) => {
+            _(this, 'handlePermission', (e) => {
                 let { kind: t, granted: n } = e,
                     i = 'Firefox' === o().name ? d.BhN.ENABLE_MIC_FIREFOX : d.BhN.ENABLE_MIC_CHROME;
                 if (!n) {
@@ -56,7 +56,7 @@ class h extends c.Z {
                     (0, a.h7j)((t) =>
                         (0, r.jsx)(
                             l.default,
-                            _(
+                            p(
                                 {
                                     title: e ? f.NW.string(f.t.OqloHx) : f.NW.string(f.t['kI+OOT']),
                                     body: e ? f.NW.string(f.t.l3P7Ky) : f.NW.string(f.t.l3jwOT),

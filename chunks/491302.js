@@ -14,7 +14,7 @@ var r = n(200651),
     g = n(405920);
 function f(e) {
     let { webhook: t, editedWebhook: n, channelOptions: f, isExpanded: h, errors: x, onToggleExpand: j } = e,
-        N = i.useMemo(() => {
+        O = i.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -24,7 +24,7 @@ function f(e) {
                       discriminator: m.fo$
                   });
         }, [t]),
-        O = i.useCallback(() => {
+        N = i.useCallback(() => {
             (0, l.h7j)((e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -161,7 +161,7 @@ function f(e) {
                                 (0, r.jsx)(l.$i$, { className: g.bottomDivider }),
                                 (0, r.jsx)(c.Z, {
                                     children: (0, r.jsx)(l.zxk, {
-                                        onClick: O,
+                                        onClick: N,
                                         size: l.zxk.Sizes.SMALL,
                                         color: l.zxk.Colors.RED,
                                         look: l.zxk.Looks.LINK,
@@ -189,7 +189,7 @@ function f(e) {
                             children: [
                                 (0, r.jsx)(p.Z, {
                                     name: t.name,
-                                    imageSrc: N,
+                                    imageSrc: O,
                                     detailsClassName: g.__invalid_description,
                                     details: v
                                 }),

@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(168232),
     f = n(976845),
     _ = n(48541),
-    p = n(677344);
+    p = n(718486);
 function h(e, t, n) {
     return (
         t in e
@@ -60,9 +60,9 @@ function E(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = new u.Z('BalanceCounter'),
-    b = (0, d.dU)(void 0) === _.C.PRODUCTION,
-    y = (e) => (null === e ? 0 : ''.concat(e.toFixed(0)).length),
+let b = new u.Z('BalanceCounter'),
+    y = (0, d.dU)(void 0) === _.C.PRODUCTION,
+    v = (e) => (null === e ? 0 : ''.concat(e.toFixed(0)).length),
     O = (e, t) => {
         let n = e > 0,
             r = t * f.eg[n ? 'EARN' : 'SPEND'],
@@ -93,10 +93,10 @@ let v = new u.Z('BalanceCounter'),
                 });
         }, [o, c]);
         let m = null != o ? o : 0,
-            g = null !== (t = p.current) && void 0 !== t ? t : m,
+            g = null != (t = p.current) ? t : m,
             { duration: E, delay: I } = O(m - g, d),
             { number: S } = (0, l.q_F)({
-                from: { number: null !== (n = p.current) && void 0 !== n ? n : m },
+                from: { number: null != (n = p.current) ? n : m },
                 number: m,
                 config: {
                     mass: 1,
@@ -106,20 +106,20 @@ let v = new u.Z('BalanceCounter'),
                 },
                 delay: I,
                 onStart: () => {
-                    a(y(g));
+                    a(v(g));
                 },
                 onRest: () => {
-                    if ((_(f + 1), u(), !b && null !== h.current && null !== p.current)) {
+                    if ((_(f + 1), u(), !y && null !== h.current && null !== p.current)) {
                         let e = Date.now();
-                        v.log('Balance Counter finished updating: ', {
+                        b.log('Balance Counter finished updating: ', {
                             time: e - h.current.lastChangedAt,
                             delta: m - p.current
                         });
                     }
-                    a(y(m)), (p.current = m);
+                    a(v(m)), (p.current = m);
                 }
             }),
-            T = y(Math.max(null != o ? o : 0, S.get()));
+            T = v(Math.max(null != o ? o : 0, S.get()));
         return (0, r.jsx)(s.animated.div, {
             style: { width: 'calc('.concat(T, 'ch)') },
             children: S.to((e) => ''.concat(e.toFixed(0)))
@@ -131,15 +131,15 @@ let v = new u.Z('BalanceCounter'),
             s = g(e, ['value', 'className']);
         let u = null === n,
             [d, f] = (0, i.useState)(null),
-            _ = (0, i.useMemo)(() => y(n), [n]),
-            h = null !== (t = (0, c.Z)(_)) && void 0 !== t ? t : 0,
+            _ = (0, i.useMemo)(() => v(n), [n]),
+            h = null != (t = (0, c.Z)(_)) ? t : 0,
             E = (0, i.useMemo)(() => I(h, _, d), [h, _, d]),
-            v = ''.concat(u ? 0 : E, 'ch');
+            b = ''.concat(u ? 0 : E, 'ch');
         return (0, r.jsx)(l.Text, {
             variant: 'text-md/semibold',
             className: a()(p.balanceCounterText, u ? void 0 : p.balanceCounterMargin, o),
             style: {
-                width: v,
+                width: b,
                 opacity: u ? '0' : 1
             },
             children: u

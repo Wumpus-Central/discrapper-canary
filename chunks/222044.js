@@ -31,7 +31,7 @@ function f(e) {
         null == d || d.addEventListener('message', n), null == d || d.postMessage({ url: e });
     });
 }
-function p(e) {
+function _(e) {
     let t = [],
         n = e.defaultReactionEmoji;
     if ((null == n ? void 0 : n.emojiId) != null) {
@@ -39,7 +39,7 @@ function p(e) {
         t.push(
             a.ZP.getEmojiURL({
                 id: n.emojiId,
-                animated: null !== (o = null === (r = i.ZP.getUsableCustomEmojiById(n.emojiId)) || void 0 === r ? void 0 : r.animated) && void 0 !== o && o,
+                animated: null != (o = null == (r = i.ZP.getUsableCustomEmojiById(n.emojiId)) ? void 0 : r.animated) && o,
                 size: c.kV.reaction
             })
         );
@@ -59,14 +59,14 @@ function p(e) {
         t
     );
 }
-class _ extends r.Z {
+class p extends r.Z {
     handleChannelPreload(e) {
         let { channelId: t } = e;
         if ((0, l.AB)(t)) return;
         let n = o.Z.getChannel(t);
         null != n &&
             n.isForumLikeChannel() &&
-            p(n).forEach((e) => {
+            _(n).forEach((e) => {
                 null != e && 0 !== e.length && f(e);
             });
     }
@@ -74,4 +74,4 @@ class _ extends r.Z {
         super(...e), u(this, 'actions', { CHANNEL_PRELOAD: this.handleChannelPreload });
     }
 }
-let h = new _();
+let h = new p();

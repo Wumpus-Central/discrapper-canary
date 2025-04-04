@@ -7,7 +7,7 @@ class o {
             var i;
             return r.d.databaseOpen(n, {
                 database: e,
-                invalidateDisabledHandles: null !== (i = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== i && i
+                invalidateDisabledHandles: null != (i = null == t ? void 0 : t.invalidateDisabledHandles) && i
             });
         });
     }
@@ -17,7 +17,7 @@ class o {
             null,
             {
                 database: e,
-                invalidateDisabledHandles: null !== (n = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== n && n
+                invalidateDisabledHandles: null != (n = null == t ? void 0 : t.invalidateDisabledHandles) && n
             },
             { synchronous: !0 }
         );

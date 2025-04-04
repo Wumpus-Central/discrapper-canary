@@ -1,15 +1,15 @@
 a.d(e, {
     $p: () => i,
-    pT: () => _
+    pT: () => o
 });
 var r = a(285883),
     n = a(394798);
-let o = RegExp('^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$');
-function _(t, e) {
+let _ = RegExp('^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$');
+function o(t, e) {
     let a = (function (t) {
             let e;
             if (!t) return;
-            let a = t.match(o);
+            let a = t.match(_);
             if (a)
                 return (
                     '1' === a[3] ? (e = !0) : '0' === a[3] && (e = !1),
@@ -20,7 +20,7 @@ function _(t, e) {
                     }
                 );
         })(t),
-        _ = (0, r.EN)(e),
+        o = (0, r.EN)(e),
         { traceId: i, parentSpanId: c, parentSampled: s } = a || {};
     return a
         ? {
@@ -28,7 +28,7 @@ function _(t, e) {
               parentSpanId: c || (0, n.DM)().substring(16),
               spanId: (0, n.DM)().substring(16),
               sampled: s,
-              dsc: _ || {}
+              dsc: o || {}
           }
         : {
               traceId: i || (0, n.DM)(),

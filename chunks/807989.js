@@ -10,8 +10,8 @@ var i = n(243814),
     u = n(941532),
     d = n(713938),
     f = n(981631),
-    p = n(388032),
-    _ = n(35114);
+    _ = n(388032),
+    p = n(261668);
 let h = (e) => {
     switch (e) {
         case s.ZC.IP_LOCATION:
@@ -25,11 +25,11 @@ let h = (e) => {
 function m(e) {
     var t;
     let n,
-        { application: o, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: b, disclosures: y } = e,
+        { application: o, scopes: m, redirectUri: E, approximateGuildCount: b, isEmbeddedFlow: y, disclosures: v } = e,
         O = new Date(c.default.extractTimestamp(o.id)),
-        S = (0, d.W3)(m),
-        I = (0, l.yE)(null !== (t = o.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
-    if (null != E && !I && !b)
+        I = (0, d.W3)(m),
+        S = (0, l.yE)(null != (t = o.flags) ? t : 0, f.udG.EMBEDDED);
+    if (null != E && !S && !y)
         try {
             let e = new URL(E);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
@@ -37,12 +37,12 @@ function m(e) {
             n = null;
         }
     return (0, r.jsxs)('div', {
-        className: _.applicationDetails,
+        className: p.applicationDetails,
         children: [
             null != n
                 ? (0, r.jsx)(g, {
                       icon: a.xPt,
-                      text: p.NW.format(p.t['5k5OKC'], { origin: n })
+                      text: _.NW.format(_.t['5k5OKC'], { origin: n })
                   })
                 : null,
             (0, r.jsx)(g, {
@@ -51,20 +51,20 @@ function m(e) {
             }),
             (0, r.jsx)(g, {
                 icon: a.T39,
-                text: p.NW.formatToPlainString(p.t['+1bjc3'], { date: O })
+                text: _.NW.formatToPlainString(_.t['+1bjc3'], { date: O })
             }),
-            m.includes(i.x.BOT) && null != v
+            m.includes(i.x.BOT) && null != b
                 ? (0, r.jsx)(g, {
                       icon: a.wGt,
-                      text: p.NW.formatToPlainString(p.t.UHGHSE, { guildCount: v })
+                      text: _.NW.formatToPlainString(_.t.UHGHSE, { guildCount: b })
                   })
                 : null,
             (0, r.jsx)(g, {
                 icon: a.b7C,
-                text: S
+                text: I
             }),
-            null != y
-                ? y.map((e) => {
+            null != v
+                ? v.map((e) => {
                       let t = (0, s.PM)(e),
                           n = h(e);
                       return null != n && null != t
@@ -81,15 +81,15 @@ function m(e) {
 function g(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
-        className: _.entry,
+        className: p.entry,
         children: [
             (0, r.jsx)(t, {
-                className: _.entryIcon,
+                className: p.entryIcon,
                 color: 'currentColor'
             }),
             (0, r.jsx)(o.x, {
                 variant: 'text-xs/normal',
-                className: _.entryInner,
+                className: p.entryInner,
                 children: n
             })
         ]

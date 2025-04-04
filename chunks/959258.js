@@ -26,7 +26,7 @@ class c {
     handleVisible(e, t) {
         var n, r;
         if (this.visibleComponents.has(e.target)) return;
-        let i = Math.abs(e.intersectionRect.bottom - Number(null === (n = e.rootBounds) || void 0 === n ? void 0 : n.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (r = e.rootBounds) || void 0 === r ? void 0 : r.top));
+        let i = Math.abs(e.intersectionRect.bottom - Number(null == (n = e.rootBounds) ? void 0 : n.bottom)) < Math.abs(e.intersectionRect.top - Number(null == (r = e.rootBounds) ? void 0 : r.top));
         i ? (this.visibleComponents = new Set([e.target, ...this.visibleComponents])) : this.visibleComponents.add(e.target);
         let o = i || this.animatingComponents.size < s;
         o ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target), t.updateState(o), o && this.visibleComponents.size > s && this.stopNodeFromAnimating();
@@ -60,7 +60,7 @@ class c {
         if (this.registeredNodes.has(e)) throw Error('ThoughtfullyAnimated.registeredNode: Unable to register an already registered node...');
         return (
             this.registeredNodes.set(e, { updateState: t }),
-            null === (n = this.observer) || void 0 === n || n.observe(e),
+            null == (n = this.observer) || n.observe(e),
             () => {
                 this.unregisterNode(e);
             }
@@ -68,11 +68,11 @@ class c {
     }
     unregisterNode(e) {
         var t;
-        this.registeredNodes.delete(e), this.animatingComponents.delete(e), this.visibleComponents.delete(e), null === (t = this.observer) || void 0 === t || t.unobserve(e), this.potentiallyAnimateNewNode();
+        this.registeredNodes.delete(e), this.animatingComponents.delete(e), this.visibleComponents.delete(e), null == (t = this.observer) || t.unobserve(e), this.potentiallyAnimateNewNode();
     }
     cleanUp() {
         var e;
-        null === (e = this.observer) || void 0 === e || e.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
+        null == (e = this.observer) || e.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
     }
     constructor(e = !1) {
         if ((a(this, 'registeredNodes', new Map()), a(this, 'visibleComponents', new Set()), a(this, 'animatingComponents', new Set()), a(this, 'observer', void 0), e)) return;

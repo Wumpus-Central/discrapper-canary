@@ -4,11 +4,11 @@ n(192379);
 var r = n(374470),
     o = n(239091);
 let a = (e) => {
-    let { facepileRef: t, goToThread: a, channel: s } = e;
+    let { facepileRef: t, goToThread: a, channel: l } = e;
     return {
         handleLeftClick: (e) => {
             var n;
-            ((0, r.k)(e.target) && (null == (n = t.current) ? void 0 : n.contains(e.target))) || a(s, e.shiftKey);
+            ((0, r.k)(e.target) && (null == (n = t.current) ? void 0 : n.contains(e.target))) || a(l, e.shiftKey);
         },
         handleRightClick: (e) =>
             (0, o.jW)(e, async () => {
@@ -42,7 +42,7 @@ let a = (e) => {
                             }
                             return e;
                         })({}, t)),
-                        (r = r = { channel: s }),
+                        (r = r = { channel: l }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {

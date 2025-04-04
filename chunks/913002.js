@@ -11,7 +11,7 @@ var r = n(200651),
     f = n(695346),
     _ = n(785717),
     p = n(388032),
-    h = n(996312);
+    h = n(318971);
 function m(e, t, n) {
     return (
         t in e
@@ -64,8 +64,8 @@ function b(e, t) {
         e
     );
 }
-let v = 300,
-    y = (e) =>
+let y = 300,
+    v = (e) =>
         (0, l.ZDy)(async () => {
             let { default: t } = await n.e('31649').then(n.bind(n, 475613));
             return (n) =>
@@ -84,11 +84,11 @@ function O(e) {
         E = i.useRef(null),
         b = i.useRef(null),
         [O, I] = (0, s.Wu)([c.Z], () => [c.Z.useReducedMotion, c.Z.keyboardModeEnabled]),
-        S = !n || O || I ? 0 : v,
+        S = !n || O || I ? 0 : y,
         T = () => {
-            g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), y(m), null == o || o();
+            g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), v(m), null == o || o();
         },
-        A = () => {
+        N = () => {
             g({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), f.Ok.updateSetting(void 0);
         };
     return (0, r.jsxs)(d.ZP, {
@@ -122,7 +122,7 @@ function O(e) {
                     ref: b,
                     className: a()(h.button, h.right),
                     'aria-label': p.NW.string(p.t.wfYTHR),
-                    onClick: A,
+                    onClick: N,
                     children: (0, r.jsx)(l.XHJ, {
                         size: 'xs',
                         colorClass: h.icon

@@ -14,18 +14,18 @@ var r = n(997945),
     u = n(760260),
     d = n(448578),
     f = n(946185),
-    p = n(480423),
-    _ = n(273593),
+    _ = n(480423),
+    p = n(273593),
     h = n(665801),
     m = n(818143),
     g = n(666475),
     E = n(591304),
-    v = n(73375),
-    b = n(328664),
-    y = n(328259),
+    b = n(73375),
+    y = n(328664),
+    v = n(328259),
     O = n(19009),
-    S = n(234912),
-    I = n(405571),
+    I = n(234912),
+    S = n(405571),
     T = n(730886),
     N = n(473974),
     A = n(563856);
@@ -48,13 +48,13 @@ function P() {
         },
         {
             id: r.Ru.MANGA,
-            iconSource: b,
+            iconSource: y,
             isPremium: !0,
             name: i.NW.string(i.t.hGBbFx)
         },
         {
             id: r.Ru.MATTE_DARK,
-            iconSource: y,
+            iconSource: v,
             isPremium: !0,
             name: i.NW.string(i.t.NkshQk)
         },
@@ -66,7 +66,7 @@ function P() {
         },
         {
             id: r.Ru.PASTEL,
-            iconSource: I,
+            iconSource: S,
             isPremium: !0,
             name: i.NW.string(i.t.mTSkLS)
         },
@@ -120,7 +120,7 @@ function P() {
         },
         {
             id: r.Ru.CIRCUIT,
-            iconSource: p,
+            iconSource: _,
             isPremium: !0,
             name: i.NW.string(i.t.dUpxKS)
         },
@@ -156,19 +156,19 @@ function P() {
         },
         {
             id: r.Ru.IN_RAINBOWS,
-            iconSource: v,
+            iconSource: b,
             isPremium: !0,
             name: i.NW.string(i.t.yxJB9P)
         },
         {
             id: r.Ru.MIDNIGHT_PRISM,
-            iconSource: S,
+            iconSource: I,
             isPremium: !0,
             name: i.NW.string(i.t.nshUZW)
         },
         {
             id: r.Ru.COLOR_WAVE,
-            iconSource: _,
+            iconSource: p,
             isPremium: !0,
             name: i.NW.string(i.t.MWRYqq)
         }

@@ -34,11 +34,11 @@ function E(e, t) {
 function b(e, t, n) {
     p(e, t), t.set(e, n);
 }
-function v(e, t, n) {
+function y(e, t, n) {
     var r = g(e, t, 'set');
     return m(e, r, n), n;
 }
-function y(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,45 +63,45 @@ class S extends r.Z {
                 writable: !0,
                 value: new Set()
             }),
-            y(this, 'actions', {
+            v(this, 'actions', {
                 GUILD_LOCAL_RING_START: (e) => this.handleGuildRingStart(e),
                 GUILD_RING_STOP: (e) => this.handleGuildRingStop(e)
             }),
-            y(this, '_handleRing', (e, t) => {
+            v(this, '_handleRing', (e, t) => {
                 let n = d.Z.getCurrentClientVoiceChannelId(t),
                     r = null != n && f.ZP.countVoiceStatesForChannel(n) >= 2;
                 null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? O.stop() : O.loop();
             }),
-            y(this, 'handleSoundpackUpdate', () => {
+            v(this, 'handleSoundpackUpdate', () => {
                 O.stop(), (O = (0, i.uk)('call_calling', o.Z.getSoundpack()));
             }),
-            y(this, 'handleRingUpdate', () => {
+            v(this, 'handleRingUpdate', () => {
                 var e, t;
                 let n = c.Z.getVoiceChannelId(),
-                    r = null !== (t = null === (e = s.Z.getChannel(n)) || void 0 === e ? void 0 : e.guild_id) && void 0 !== t ? t : null,
+                    r = null != (t = null == (e = s.Z.getChannel(n)) ? void 0 : e.guild_id) ? t : null,
                     i = a.Z.getCalls().some((e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
                 this._handleRing(i || E(this, I).size > 0, r);
             }),
-            y(this, 'handleGuildRingStart', (e) => {
+            v(this, 'handleGuildRingStart', (e) => {
                 let { ringing: t, guildId: n } = e;
                 t.forEach((e) => {
                     E(this, I).add(e);
                 }),
                     this._handleRing(E(this, I).size > 0, n);
             }),
-            y(this, 'handleGuildRingStop', (e) => {
+            v(this, 'handleGuildRingStop', (e) => {
                 let { ringing: t, guildId: n } = e;
                 t.forEach((e) => {
                     E(this, I).delete(e);
                 }),
                     this._handleRing(E(this, I).size > 0, n);
             }),
-            y(this, 'handleChannelRTCStoreChange', () => {
+            v(this, 'handleChannelRTCStoreChange', () => {
                 let e = c.Z.getVoiceChannelId(),
                     t = E(this, I).size > 0;
                 if (!t) return;
                 if (null == e && t) {
-                    v(this, I, new Set()), this._handleRing(E(this, I).size > 0, null);
+                    y(this, I, new Set()), this._handleRing(E(this, I).size > 0, null);
                     return;
                 }
                 if (null == e) return;

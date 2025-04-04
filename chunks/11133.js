@@ -24,7 +24,7 @@ function c(e) {
         };
     if ((0, a.Z)(e) && t && null != u) {
         var d;
-        let e = null === (d = u.split(';')) || void 0 === d ? void 0 : d.join(', ');
+        let e = null == (d = u.split(';')) ? void 0 : d.join(', ');
         return {
             text: l.NW.format(l.t.Vnuxub, { name: e }),
             tooltip: l.NW.formatToPlainString(l.t.Vnuxub, { name: e })

@@ -75,7 +75,7 @@ function m(e, t) {
                 overlay_game_name: null != _ ? _.name : 'Unknown Game',
                 overlay_app_id: null != _ ? _.id : null,
                 overlay_render_method: null != m ? r.gl[m] : null,
-                media_session_id: l.Z.getMediaSessionId()
+                media_session_id: l.ZP.getMediaSessionId()
             },
             t
         )),

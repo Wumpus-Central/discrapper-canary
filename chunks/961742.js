@@ -2,10 +2,10 @@ n.d(t, {
     Ad: () => u,
     Bi: () => h,
     Kk: () => i,
-    Nv: () => p,
+    Nv: () => _,
     P9: () => g,
     Vj: () => o,
-    _c: () => _,
+    _c: () => p,
     mX: () => d,
     oY: () => E,
     qo: () => a
@@ -59,10 +59,10 @@ function d() {
     return n && Number.isNaN((e = parseInt(n, 10))) && (e = 1), e || window.devicePixelRatio || 1;
 }
 let f = 16384;
-function p(e) {
+function _(e) {
     (e.width > f || e.height > f) && (e.width > f && e.height > f ? (e.width > e.height ? ((e.height *= f / e.width), (e.width = f)) : ((e.width *= f / e.height), (e.height = f))) : e.width > f ? ((e.height *= f / e.width), (e.width = f)) : ((e.width *= f / e.height), (e.height = f)));
 }
-function _(e, t = {}) {
+function p(e, t = {}) {
     return new Promise(
         e.toBlob
             ? (n) => {

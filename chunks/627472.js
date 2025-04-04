@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     o = n(803997),
     a = n.n(o),
-    s = n(489948),
+    s = n(928873),
     l = n(780900);
 function c(e, t, n) {
     return (
@@ -57,18 +57,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,14 +80,14 @@ function _(e, t) {
 function h(e, t) {
     let n = (0, l.G6)(e);
     return i.forwardRef(function (o, c) {
-        var { children: d, className: _, dir: h = 'ltr', orientation: m = 'vertical', paddingFix: g = !0, fade: E = !1, onScroll: v, style: b } = o,
-            y = p(o, ['children', 'className', 'dir', 'orientation', 'paddingFix', 'fade', 'onScroll', 'style']);
+        var { children: d, className: p, dir: h = 'ltr', orientation: m = 'vertical', paddingFix: g = !0, fade: E = !1, onScroll: b, style: y } = o,
+            v = _(o, ['children', 'className', 'dir', 'orientation', 'paddingFix', 'fade', 'onScroll', 'style']);
         let O = i.useRef(null),
-            S = (0, l.tT)({
+            I = (0, l.tT)({
                 paddingFix: g,
                 orientation: m,
                 dir: h,
-                className: _,
+                className: p,
                 scrollerRef: O,
                 specs: n
             });
@@ -99,19 +99,19 @@ function h(e, t) {
                         ref: (e) => {
                             'function' == typeof c ? c(e) : null != c && (c.current = e), (O.current = e);
                         },
-                        className: a()(_, {
+                        className: a()(p, {
                             [e]: !0,
                             [t]: E
                         }),
-                        style: (0, l.uT)(b, m),
+                        style: (0, l.uT)(y, m),
                         dir: h
                     },
-                    y
+                    v
                 ),
                 {
                     children: (0, r.jsxs)(s.Jc, {
                         containerRef: O,
-                        children: [d, S]
+                        children: [d, I]
                     })
                 }
             )

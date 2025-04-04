@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -47,7 +47,7 @@ function f(e) {
         null
     );
 }
-function p(e) {
+function _(e) {
     return (0, r.jsx)(s.Z, {
         confettiLocation: e.confettiLocation,
         children: (0, r.jsx)(f, d({}, e))

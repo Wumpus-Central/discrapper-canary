@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(768581),
     x = n(572004),
     j = n(709054),
-    N = n(51144),
-    O = n(486199),
+    O = n(51144),
+    N = n(486199),
     v = n(981631),
     y = n(388032),
     _ = n(368938);
@@ -67,7 +67,7 @@ function I(e, t) {
 let S = (e) => {
     if (null == e) return null;
     let t = new g.Z(e);
-    return N.ZP.getUserTag(t);
+    return O.ZP.getUserTag(t);
 };
 function E(e, t) {
     return null != t && /^data:/.test(t)
@@ -79,7 +79,7 @@ function E(e, t) {
           });
 }
 function P(e) {
-    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: N, errors: P, onToggleExpand: w } = e,
+    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: P, onToggleExpand: w } = e,
         [T, Z] = i.useState(!1),
         [W] = i.useState(new s.V7());
     i.useEffect(() => () => W.stop(), [W]);
@@ -266,7 +266,7 @@ function P(e) {
         (0, r.jsx)(c.Zbd, {
             editable: !0,
             id: t,
-            className: o()(_.card, N ? _.pulse : null),
+            className: o()(_.card, O ? _.pulse : null),
             children: (0, r.jsxs)(m.Z, {
                 direction: m.Z.Direction.VERTICAL,
                 children: [
@@ -277,7 +277,7 @@ function P(e) {
                         children: (0, r.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(N.Z, {
                                     name: n.name,
                                     imageSrc: k,
                                     details: R

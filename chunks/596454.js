@@ -28,7 +28,7 @@ function b(e, t, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function v(e) {
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,7 +61,7 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -87,12 +87,12 @@ function S(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(624074);
+n(477526);
 let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFocused()) : g.n;
-function A(e) {
+function N(e) {
     var t,
         n,
-        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: y, size: S = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerAnimatedElementRef: D } = e,
+        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerAnimatedElementRef: D } = e,
         L = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerAnimatedElementRef']);
     let [x, M] = i.useState(!1),
         [k, j] = i.useState(void 0),
@@ -106,16 +106,16 @@ function A(e) {
         Y = i.useMemo(() => {
             if (null != o) return o;
             if (null != f) {
-                let e = !0 === N && Z;
+                let e = !0 === A && Z;
                 return h.ZP.getEmojiURL({
                     id: f,
-                    animated: V && !0 === y && (e || x || !0 === A),
+                    animated: V && !0 === v && (e || x || !0 === N),
                     size: H
                 });
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error('Unknown Src for Emoji');
-        }, [y, Z, f, p, H, V, x, A, N, o]),
+        }, [v, Z, f, p, H, V, x, N, A, o]),
         K = i.useCallback(() => {
             null != Y &&
                 (U.current = (0, d.po)(Y, (e) => {
@@ -124,20 +124,20 @@ function A(e) {
         }, [Y]),
         z = i.useCallback(
             (e) => {
-                y && M(!0), null == f && G(p), null == C || C(e);
+                v && M(!0), null == f && G(p), null == C || C(e);
             },
-            [y, p, C, G, f]
+            [v, p, C, G, f]
         ),
         q = i.useCallback(
             (e) => {
-                y && M(!1), null == f && B(p), null == R || R(e);
+                v && M(!1), null == f && B(p), null == R || R(e);
             },
-            [y, f, p, R, B]
+            [v, f, p, R, B]
         ),
         Q = i.useMemo(() => {
             let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
-            return v(
-                O(v({}, L), {
+            return y(
+                O(y({}, L), {
                     className: a()('emoji', c, {
                         jumboable: 'jumbo' === S,
                         reactionLarge: 'reactionLarge' === S
@@ -153,7 +153,7 @@ function A(e) {
     i.useEffect(
         () => () => {
             var e;
-            return null === (e = U.current) || void 0 === e ? void 0 : e.call(U);
+            return null == (e = U.current) ? void 0 : e.call(U);
         },
         []
     );
@@ -181,20 +181,20 @@ function A(e) {
                   P
                       ? (0, r.jsx)(
                             'img',
-                            O(v({}, Q), {
+                            O(y({}, Q), {
                                 ref: X,
                                 src: Y,
-                                alt: null !== (t = null != s ? s : p) && void 0 !== t ? t : void 0,
+                                alt: null != (t = null != s ? s : p) ? t : void 0,
                                 draggable: !1
                             }),
                             k
                         )
                       : (0, r.jsx)(
                             'div',
-                            O(v({}, Q), {
+                            O(y({}, Q), {
                                 ref: X,
                                 role: 'img',
-                                'aria-label': null !== (n = null != s ? s : p) && void 0 !== n ? n : void 0,
+                                'aria-label': null != (n = null != s ? s : p) ? n : void 0,
                                 style: {
                                     backgroundImage: 'url('.concat(Y, ')'),
                                     backgroundSize: 'contain',
@@ -207,7 +207,7 @@ function A(e) {
               ]
           });
 }
-function N(e) {
+function A(e) {
     var { registerInnerRef: t } = e,
         n = I(e, ['registerInnerRef']);
     let { useThoughtfullyAnimated: o } = i.useContext(f.q),
@@ -220,13 +220,13 @@ function N(e) {
             [t, s]
         );
     return (0, r.jsx)(
-        A,
-        O(v({}, n), {
+        N,
+        O(y({}, n), {
             registerAnimatedElementRef: u,
             shouldAnimate: a && !l
         })
     );
 }
 function C(e) {
-    return null == e.emojiId && null == e.emojiName && null == e.src ? null : e.animated && void 0 === e.shouldAnimate ? (0, r.jsx)(N, v({}, e)) : (0, r.jsx)(A, v({}, e));
+    return null == e.emojiId && null == e.emojiName && null == e.src ? null : e.animated && void 0 === e.shouldAnimate ? (0, r.jsx)(A, y({}, e)) : (0, r.jsx)(N, y({}, e));
 }

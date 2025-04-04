@@ -1,11 +1,11 @@
 n.d(t, {
-    Dv: () => _,
-    G2: () => y,
-    IG: () => v,
+    Dv: () => p,
+    G2: () => v,
+    IG: () => b,
     NG: () => g,
     OV: () => m,
     fW: () => O,
-    lB: () => b,
+    lB: () => y,
     mA: () => E
 });
 var r = n(200651);
@@ -13,7 +13,7 @@ n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(377171),
-    s = n(652866);
+    s = n(763494);
 function l(e, t, n) {
     return (
         t in e
@@ -70,14 +70,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,7 +86,7 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = {
+let p = {
     ROUND: s.baseShapeRound,
     ROUND_LEFT: s.baseShapeRoundLeft,
     ROUND_RIGHT: s.baseShapeRoundRight,
@@ -109,7 +109,7 @@ function g(e) {
     return e < 1000 ? ''.concat(e) : ''.concat(Math.min(Math.floor(e / 1000), 9), 'k+');
 }
 let E = (e) => {
-        var { count: t, color: n = a.Z.STATUS_DANGER, disableColor: i = !1, shape: l = _.ROUND, className: u, style: p } = e,
+        var { count: t, color: n = a.Z.STATUS_DANGER, disableColor: i = !1, shape: l = p.ROUND, className: u, style: _ } = e,
             E = f(e, ['count', 'color', 'disableColor', 'shape', 'className', 'style']);
         return (0, r.jsx)(
             'div',
@@ -123,7 +123,7 @@ let E = (e) => {
                                 width: m(t),
                                 paddingRight: h(t)
                             },
-                            p
+                            _
                         )
                     },
                     E
@@ -132,8 +132,8 @@ let E = (e) => {
             )
         );
     },
-    v = (e) => {
-        var { text: t, className: n, color: i = a.Z.STATUS_DANGER, shape: l = _.ROUND, disableColor: u = !1, style: p } = e,
+    b = (e) => {
+        var { text: t, className: n, color: i = a.Z.STATUS_DANGER, shape: l = p.ROUND, disableColor: u = !1, style: _ } = e,
             h = f(e, ['text', 'className', 'color', 'shape', 'disableColor', 'style']);
         return (0, r.jsx)(
             'div',
@@ -141,7 +141,7 @@ let E = (e) => {
                 c(
                     {
                         className: o()(n, s.textBadge, l),
-                        style: c({ backgroundColor: u ? void 0 : i }, p)
+                        style: c({ backgroundColor: u ? void 0 : i }, _)
                     },
                     h
                 ),
@@ -149,11 +149,11 @@ let E = (e) => {
             )
         );
     },
-    b = (e) => {
+    y = (e) => {
         var { text: t, className: n } = e,
             i = f(e, ['text', 'className']);
         return (0, r.jsx)(
-            v,
+            b,
             c(
                 {
                     className: o()(s.premiumBadge, n),
@@ -163,8 +163,8 @@ let E = (e) => {
             )
         );
     },
-    y = (e) => {
-        let { icon: t, className: n, color: i = a.Z.STATUS_DANGER, shape: l = _.ROUND, disableColor: u = !1, style: d } = e;
+    v = (e) => {
+        let { icon: t, className: n, color: i = a.Z.STATUS_DANGER, shape: l = p.ROUND, disableColor: u = !1, style: d } = e;
         return (0, r.jsx)('div', {
             className: o()(n, s.iconBadge, l),
             style: c({ backgroundColor: u ? void 0 : i }, d),
@@ -175,7 +175,7 @@ let E = (e) => {
         });
     },
     O = (e) => {
-        var { className: t, color: n = a.Z.INTERACTIVE_ACTIVE, shape: i = _.ROUND, disableColor: l = !1, style: u } = e,
+        var { className: t, color: n = a.Z.INTERACTIVE_ACTIVE, shape: i = p.ROUND, disableColor: l = !1, style: u } = e,
             d = f(e, ['className', 'color', 'shape', 'disableColor', 'style']);
         return (0, r.jsx)(
             'div',

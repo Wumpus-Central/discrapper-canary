@@ -10,8 +10,8 @@ var r = n(192379),
 function d(e, t, n) {
     let d = null == t || null == n,
         f = (0, i.e7)([s.Z], () => s.Z.getChannel(t)),
-        p = (0, i.e7)([l.Z], () => null != f && l.Z.canBasicChannel(u.S7.CONNECT, f)),
-        _ = (0, i.e7)([c.Z], () => c.Z.getVoiceChannelId() === t),
+        _ = (0, i.e7)([l.Z], () => null != f && l.Z.canBasicChannel(u.S7.CONNECT, f)),
+        p = (0, i.e7)([c.Z], () => c.Z.getVoiceChannelId() === t),
         {
             shouldFetchPreview: h,
             previewUrl: m,
@@ -21,7 +21,7 @@ function d(e, t, n) {
             previewUrl: d ? null : a.Z.getPreviewURL(e, t, n),
             isLoading: !d && a.Z.getIsPreviewLoading(e, t, n)
         })),
-        E = p || _;
+        E = _ || p;
     return (r.useEffect(() => {
         h && !d && E && (0, o.n9)(e, t, n);
     }, [h, t, e, n, d, E]),

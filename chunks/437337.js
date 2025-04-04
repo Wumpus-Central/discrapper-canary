@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(84735),
     d = n(180035),
     f = n(481060),
-    p = n(540059),
-    _ = n(333930);
+    _ = n(540059),
+    p = n(333903);
 function h(e, t, n) {
     return (
         t in e
@@ -63,11 +63,11 @@ function E(e, t) {
         e
     );
 }
-let v = {
+let b = {
         mass: 1,
         tension: 250
     },
-    b = {
+    y = {
         X: {
             TOP: 'M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z',
             BOTTOM: 'M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z'
@@ -81,12 +81,12 @@ let v = {
             BOTTOM: 'M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z'
         }
     };
-function y(e, t, n, i) {
+function v(e, t, n, i) {
     let o = e.to({
             output: [t, n]
         }),
-        a = i ? [b.X.TOP, b.X.TOP, b.CHECK.TOP, b.CHECK.TOP] : [b.X.TOP, b.BAR.TOP, b.BAR.TOP, b.CHECK.TOP],
-        l = i ? [b.X.BOTTOM, b.X.BOTTOM, b.CHECK.BOTTOM, b.CHECK.BOTTOM] : [b.X.BOTTOM, b.BAR.BOTTOM, b.BAR.BOTTOM, b.CHECK.BOTTOM];
+        a = i ? [y.X.TOP, y.X.TOP, y.CHECK.TOP, y.CHECK.TOP] : [y.X.TOP, y.BAR.TOP, y.BAR.TOP, y.CHECK.TOP],
+        l = i ? [y.X.BOTTOM, y.X.BOTTOM, y.CHECK.BOTTOM, y.CHECK.BOTTOM] : [y.X.BOTTOM, y.BAR.BOTTOM, y.BAR.BOTTOM, y.CHECK.BOTTOM];
     return (0, r.jsxs)('svg', {
         viewBox: '0 0 20 20',
         fill: 'none',
@@ -109,16 +109,16 @@ function y(e, t, n, i) {
     });
 }
 let O = function (e) {
-    let { id: t, onChange: n, checked: o, disabled: h, className: g, focusProps: b, innerRef: O } = e,
-        { reducedMotion: S } = i.useContext(c.S),
-        I = i.useRef(null),
+    let { id: t, onChange: n, checked: o, disabled: h, className: g, focusProps: y, innerRef: O } = e,
+        { reducedMotion: I } = i.useContext(c.S),
+        S = i.useRef(null),
         [T, N] = i.useState(!1),
-        A = (0, p.Q3)('Switch'),
+        A = (0, _.Q3)('Switch'),
         C = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
         R = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
         { state: P, opacity: w } = (0, f.q_F)(
             {
-                config: v,
+                config: b,
                 opacity: h ? (A ? 0.5 : 0.3) : 1,
                 state: T ? (o ? 0.7 : 0.3) : +!!o
             },
@@ -127,22 +127,22 @@ let O = function (e) {
     function D(e) {
         N(!1), null == n || n(e.currentTarget.checked, e);
     }
-    function x(e) {
-        !h && !e.repeat && (' ' === e.key || 'Enter' === e.key) && N(!0);
-    }
     function L(e) {
+        h || e.repeat || ((' ' === e.key || 'Enter' === e.key) && N(!0));
+    }
+    function x(e) {
         var t;
-        !h && T && !e.repeat && (N(!1), 'Enter' === e.key && (null === (t = I.current) || void 0 === t || t.click()));
+        h || !T || e.repeat || (N(!1), 'Enter' === e.key && (null == (t = S.current) || t.click()));
     }
     return (0, r.jsx)(
         u.t,
-        E(m({}, b), {
+        E(m({}, y), {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
-                className: a()(_.container, g, {
-                    [_.checked]: o,
-                    [_.disabled]: h
+                className: a()(p.container, g, {
+                    [p.checked]: o,
+                    [p.disabled]: h
                 }),
                 onMouseDown: () => !h && N(!0),
                 onMouseUp: () => N(!1),
@@ -155,7 +155,7 @@ let O = function (e) {
                 },
                 children: [
                     (0, r.jsxs)(s.animated.svg, {
-                        className: _.slider,
+                        className: p.slider,
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
@@ -186,19 +186,19 @@ let O = function (e) {
                                 }),
                                 rx: '10'
                             }),
-                            y(P, C, R, S.enabled)
+                            v(P, C, R, I.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (I.current = e), null != O && (O.current = e);
+                            (S.current = e), null != O && (O.current = e);
                         },
-                        className: _.input,
+                        className: p.input,
                         tabIndex: h ? -1 : 0,
-                        onKeyDown: x,
-                        onKeyUp: L,
+                        onKeyDown: L,
+                        onKeyUp: x,
                         onChange: D,
                         checked: o,
                         disabled: h

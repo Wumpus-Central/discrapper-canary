@@ -45,36 +45,36 @@ let u = 50,
             b: l
         });
     },
-    p = (e, t) =>
-        0 === t.length
-            ? void 0
-            : 1 === t.length
-              ? {
-                    primary: t[0],
-                    secondary: t[0],
-                    border: t[0].setAlpha(d),
-                    label: t[0].isLight() ? e.dark : e.light
-                }
-              : {
-                    primary: t[0],
-                    secondary: t[1],
-                    border: f(t[0], t[1]).setAlpha(d),
-                    label: f(t[0], t[1]).isLight() ? e.dark : e.light
-                },
-    _ = (e, t) =>
-        0 === t.length
-            ? void 0
-            : 1 === t.length
-              ? {
-                    primary: t[0],
-                    secondary: t[0],
-                    text: t[0].isLight() ? e.dark : e.light
-                }
-              : {
-                    primary: t[0],
-                    secondary: t[1],
-                    text: f(t[0], t[1]).isLight() ? e.dark : e.light
-                },
+    _ = (e, t) => {
+        if (0 !== t.length)
+            return 1 === t.length
+                ? {
+                      primary: t[0],
+                      secondary: t[0],
+                      border: t[0].setAlpha(d),
+                      label: t[0].isLight() ? e.dark : e.light
+                  }
+                : {
+                      primary: t[0],
+                      secondary: t[1],
+                      border: f(t[0], t[1]).setAlpha(d),
+                      label: f(t[0], t[1]).isLight() ? e.dark : e.light
+                  };
+    },
+    p = (e, t) => {
+        if (0 !== t.length)
+            return 1 === t.length
+                ? {
+                      primary: t[0],
+                      secondary: t[0],
+                      text: t[0].isLight() ? e.dark : e.light
+                  }
+                : {
+                      primary: t[0],
+                      secondary: t[1],
+                      text: f(t[0], t[1]).isLight() ? e.dark : e.light
+                  };
+    },
     h = (e, t) => {
         let { h: n, s: r, l: o } = e.toHsl();
         return i()({
@@ -87,8 +87,8 @@ let u = 50,
         let n = (0, o.e7)([a.Z], () => a.Z.saturation);
         if (null == t) return {};
         let r = {
-            backgroundColors: p(e, t.backgroundColors),
-            buttonColors: _(e, t.buttonColors),
+            backgroundColors: _(e, t.backgroundColors),
+            buttonColors: p(e, t.buttonColors),
             confettiColors: t.confettiColors
         };
         return 1 === n

@@ -21,6 +21,6 @@ function i(e, t, n, i) {
     let l = n.length - 1;
     return {
         path: r.C0.child(t, l),
-        offset: null !== (a = null === (o = n[l]) || void 0 === o ? void 0 : o.length) && void 0 !== a ? a : 0
+        offset: null != (a = null == (o = n[l]) ? void 0 : o.length) ? a : 0
     };
 }

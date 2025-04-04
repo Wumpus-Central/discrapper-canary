@@ -15,7 +15,7 @@ function c(e) {
                     n = o.default.getCurrentUser();
                 if (null == n || null == t || t.userId !== n.id) return;
                 let r = i.ZP.getMember(e.id, t.userId);
-                if (null == r || r.isPending || (0, a.oP)(t)) return t.applicationStatus;
+                if (!(null != r && !r.isPending) || (0, a.oP)(t)) return t.applicationStatus;
             },
             [e]
         );

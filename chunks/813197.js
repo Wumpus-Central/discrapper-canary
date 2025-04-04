@@ -1,6 +1,6 @@
 n.d(t, {
     Fq: () => f,
-    ZP: () => _,
+    ZP: () => p,
     Zj: () => u
 }),
     n(47120);
@@ -27,7 +27,7 @@ function u() {
     return [
         {
             name: l.NW.string(l.t.Sp2NFx),
-            extensions: ['jpg', 'jpeg', 'png', 'gif']
+            extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
         }
     ];
 }
@@ -36,7 +36,7 @@ function d(e, t) {
         let n = new FileReader();
         (n.onload = (n) => {
             var r;
-            'string' == typeof (null === (r = n.target) || void 0 === r ? void 0 : r.result) && t(n.target.result, e);
+            'string' == typeof (null == (r = n.target) ? void 0 : r.result) && t(n.target.result, e);
         }),
             n.readAsDataURL(e);
     }
@@ -54,13 +54,13 @@ function f(e, t, n) {
             });
     });
 }
-class p extends (r = o.PureComponent) {
+class _ extends (r = o.PureComponent) {
     componentDidMount() {
         this._isMounted = !0;
     }
     activateUploadDialogue() {
         var e;
-        null === (e = this._ref.current) || void 0 === e || e.activateUploadDialogue();
+        null == (e = this._ref.current) || e.activateUploadDialogue();
     }
     render() {
         let { multiple: e, disabled: t, className: n, tabIndex: r, 'aria-label': o, filters: s } = this.props;
@@ -104,9 +104,9 @@ class p extends (r = o.PureComponent) {
             });
     }
 }
-c(p, 'defaultProps', {
+c(_, 'defaultProps', {
     multiple: !0,
     tabIndex: -1,
     maxFileSizeBytes: 1 / 0
 });
-let _ = p;
+let p = _;

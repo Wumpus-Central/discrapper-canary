@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     o = n(979554),
@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(436774),
     l = n(981631),
     c = n(388032),
-    u = n(90125);
+    u = n(717906);
 function d(e, t, n) {
     return (
         t in e
@@ -36,9 +36,9 @@ function f(e) {
     }
     return e;
 }
-function p(e) {
+function _(e) {
     let { product: t, onSecondaryClick: d } = e,
-        p = i.useCallback(() => {
+        _ = i.useCallback(() => {
             null != t &&
                 (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('43360').then(n.bind(n, 73415));
@@ -60,14 +60,14 @@ function p(e) {
                         );
                 });
         }, [t, d]),
-        _ = i.useMemo(() => {
+        p = i.useMemo(() => {
             switch (null == t ? void 0 : t.type) {
                 case o.Z.AVATAR_DECORATION:
-                    return c.NW.format(c.t['aFR/EB'], { onClick: p });
+                    return c.NW.format(c.t['aFR/EB'], { onClick: _ });
                 case o.Z.PROFILE_EFFECT:
-                    return c.NW.format(c.t.eWNOND, { onClick: p });
+                    return c.NW.format(c.t.eWNOND, { onClick: _ });
             }
-        }, [null == t ? void 0 : t.type, p]);
+        }, [null == t ? void 0 : t.type, _]);
     return (0, r.jsxs)('div', {
         className: u.nitroUpsellContainer,
         children: [
@@ -79,7 +79,7 @@ function p(e) {
             (0, r.jsx)(a.Text, {
                 className: u.nitroText,
                 variant: 'text-md/medium',
-                children: _
+                children: p
             })
         ]
     });

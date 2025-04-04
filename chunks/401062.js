@@ -1,8 +1,8 @@
 n.d(t, {
-    Lx: () => I,
-    kq: () => S,
+    Lx: () => S,
+    kq: () => I,
     vy: () => O,
-    yX: () => b
+    yX: () => y
 });
 var r = n(392711),
     i = n(544891),
@@ -14,17 +14,17 @@ var r = n(392711),
     u = n(100986),
     d = n(944486),
     f = n(70956),
-    p = n(176354),
-    _ = n(696900),
+    _ = n(176354),
+    p = n(696900),
     h = n(456631),
     m = n(963838),
     g = n(353368),
     E = n(981631),
-    v = n(710111),
-    b = (function (e) {
+    b = n(710111),
+    y = (function (e) {
         return (e.EMOJI_PICKER = 'emoji_picker'), (e.EFFECT_BAR = 'effect_bar'), e;
     })({});
-function y(e) {
+function v(e) {
     let t = new AbortController(),
         n = (0, r.throttle)((n) => {
             d.Z.getVoiceChannelId() !== e && t.abort();
@@ -36,8 +36,8 @@ function y(e) {
 }
 function O(e, t, n) {
     var r;
-    let { abortController: o, onRequestProgress: s } = y(e),
-        l = null !== (r = _.Z.getState().animationType) && void 0 !== r ? r : g.q.BASIC,
+    let { abortController: o, onRequestProgress: s } = v(e),
+        l = null != (r = p.Z.getState().animationType) ? r : g.q.BASIC,
         d = {
             animation_type: l,
             animation_id: (0, m.Iu)(l, m.v)
@@ -55,20 +55,20 @@ function O(e, t, n) {
         }),
         (0, u.Z)([a.Z.CHANNEL_CALL], n, t, c.jy.ENTRY);
 }
-function S(e, t, n, r) {
+function I(e, t, n, r) {
     var o, a;
-    let s = l.ZP.getCustomEmojiById(null !== (o = t.emojiId) && void 0 !== o ? o : ''),
-        { abortController: d, onRequestProgress: f } = y(e),
-        p = {
+    let s = l.ZP.getCustomEmojiById(null != (o = t.emojiId) ? o : ''),
+        { abortController: d, onRequestProgress: f } = v(e),
+        _ = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,
-            emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == s ? void 0 : s.name
+            emoji_name: null != (a = t.emojiName) ? a : null == s ? void 0 : s.name
         };
-    t.guildId !== v.X8 && (p.source_guild_id = t.guildId),
+    t.guildId !== b.X8 && (_.source_guild_id = t.guildId),
         i.tn
             .post({
                 url: E.ANM.SEND_SOUNDBOARD_SOUND(e),
-                body: p,
+                body: _,
                 signal: d.signal,
                 onRequestProgress: f,
                 rejectWithError: !0
@@ -78,7 +78,7 @@ function S(e, t, n, r) {
             }),
         (0, u.Z)(null != r ? r : [], n, t, c.jy.DEFAULT);
 }
-let I = async (e) => {
+let S = async (e) => {
         let { channel: t, emoji: n, location: r, animationType: a, animationId: s, isPremium: l } = e;
         if (null == n || h.Z.isOnCooldown) return;
         let c = l && null != a ? a : g.q.BASIC;
@@ -119,7 +119,7 @@ let I = async (e) => {
         [g.q.PREMIUM]: 'Premium'
     },
     N = (e, t, n, r) => {
-        let { unicode: i, custom: o, customExternal: a, managed: l, managedExternal: c, animated: u } = (0, p.sp)([t], e.getGuildId()),
+        let { unicode: i, custom: o, customExternal: a, managed: l, managedExternal: c, animated: u } = (0, _.sp)([t], e.getGuildId()),
             d = T[r];
         s.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_EFFECT_SENT, {
             channel_id: e.id,

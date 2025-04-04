@@ -10,8 +10,8 @@ var c = n(960048),
     u = n(591759),
     d = n(303850),
     f = n(105713),
-    p = n(981631);
-let _ = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
+    _ = n(981631);
+let p = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
     h = new d.R();
 function m(e) {
     let t = new URLSearchParams();
@@ -33,24 +33,24 @@ function E(e) {
             { default: l } = n(626135),
             { isPlatformEmbedded: u } = n(358085);
         if ('/' === e.url[0]) {
-            var d, p;
+            var d, _;
             (e.url = (0, r.K0)() + e.url), 'Authorization' in e.header || 'authorization' in e.header || e.set('Authorization', t.getToken());
             let n = l.getSuperPropertiesBase64();
             null != n && e.set('X-Super-Properties', n);
             let i = t.getFingerprint();
             if ((null != i && '' !== i && e.set('X-Fingerprint', i), u)) {
                 let t = [];
-                null != navigator && (t = d = [...navigator.languages]);
+                null != navigator && (t = ((d = [...navigator.languages]), d));
                 let n = E(t);
                 e.set('Accept-Language', n);
             }
             e.set('X-Discord-Locale', a.locale);
             let c = (0, f.Z)();
             null != c && e.set('X-Discord-Timezone', c);
-            let _ = o.getDebugOptionsHeaderValue();
-            if ((null != _ && '' !== _ && e.set('X-Debug-Options', _), o.isTracingRequests)) {
+            let p = o.getDebugOptionsHeaderValue();
+            if ((null != p && '' !== p && e.set('X-Debug-Options', p), o.isTracingRequests)) {
                 let t = s.getCurrentUser(),
-                    n = h.generate(null !== (p = null == t ? void 0 : t.id) && void 0 !== p ? p : '0');
+                    n = h.generate(null != (_ = null == t ? void 0 : t.id) ? _ : '0');
                 e.set('x-client-trace-id', n);
                 try {
                     let t = new URL(e.url).pathname;
@@ -89,9 +89,9 @@ function E(e) {
                     null != t && 'parse' in t && t.parse)
                 ) {
                     let n = '[FILTERED]';
-                    if (_.includes(e.url)) {
+                    if (p.includes(e.url)) {
                         var r, o;
-                        n = null === (o = e.xhr) || void 0 === o ? void 0 : null === (r = o.responseText) || void 0 === r ? void 0 : r.slice(0, 1000);
+                        n = null == (o = e.xhr) || null == (r = o.responseText) ? void 0 : r.slice(0, 1000);
                     }
                     c.Z.addBreadcrumb({
                         category: 'superagent',
@@ -108,7 +108,7 @@ function E(e) {
     },
     interceptResponse(e, t, r) {
         var i, l, c, u, d;
-        return 400 === e.statusCode && (null === (i = e.body) || void 0 === i ? void 0 : i.captcha_key)
+        return 400 === e.statusCode && (null == (i = e.body) ? void 0 : i.captcha_key)
             ? (Promise.all([n.e('36514').then(n.bind(n, 475271)), n.e('31177').then(n.bind(n, 353250))])
                   .then((t) => {
                       let [{ default: n }, { extractCaptchaPropsFromResponse: r }] = t;
@@ -121,8 +121,8 @@ function E(e) {
                   })
                   .catch(r),
               !0)
-            : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === p.evJ.MFA_REQUIRED && (null === (c = e.body) || void 0 === c ? void 0 : c.mfa)
-              ? (Promise.all([n.e('52030'), n.e('6604')])
+            : 401 === e.statusCode && (null == (l = e.body) ? void 0 : l.code) === _.evJ.MFA_REQUIRED && (null == (c = e.body) ? void 0 : c.mfa)
+              ? (Promise.all([n.e('52030'), n.e('36833')])
                     .then(n.bind(n, 24031))
                     .then((n) => {
                         let { openMFAModal: i } = n;
@@ -130,21 +130,21 @@ function E(e) {
                     })
                     .catch(r),
                 !0)
-              : ((0, s.b)(e.statusCode, null === (u = e.body) || void 0 === u ? void 0 : u.code)
+              : ((0, s.b)(e.statusCode, null == (u = e.body) ? void 0 : u.code)
                     ? Promise.resolve()
                           .then(n.bind(n, 895886))
                           .then((e) => {
                               let { default: t } = e;
                               t();
                           })
-                    : (0, o.b)(e.statusCode, null === (d = e.body) || void 0 === d ? void 0 : d.code)
+                    : (0, o.b)(e.statusCode, null == (d = e.body) ? void 0 : d.code)
                       ? n
                             .e('76731')
                             .then(n.bind(n, 626892))
                             .then((t) => {
                                 var n;
                                 let { default: r } = t;
-                                r(null === (n = e.body) || void 0 === n ? void 0 : n.guild_id);
+                                r(null == (n = e.body) ? void 0 : n.guild_id);
                             })
                       : (0, a.X)(e) &&
                         n
@@ -158,5 +158,5 @@ function E(e) {
     }
 }),
     (0, r.Jt)(async (e) => {
-        i.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !l.Z.isOnline() && (await l.Z.awaitOnline(), i.Hj('Network', 'Network detected online, retrying '.concat(e)));
+        i.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), l.Z.isOnline() || (await l.Z.awaitOnline(), i.Hj('Network', 'Network detected online, retrying '.concat(e)));
     });

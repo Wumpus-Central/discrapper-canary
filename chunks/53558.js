@@ -37,18 +37,18 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,7 +59,7 @@ function _(e, t) {
 }
 function h(e) {
     var { user: t, onClick: n } = e,
-        i = p(e, ['user', 'onClick']);
+        i = _(e, ['user', 'onClick']);
     return (
         (0, s.q)(t.id),
         (0, r.jsx)(
@@ -81,16 +81,16 @@ function h(e) {
 function m(e) {
     var t,
         { user: s, guildId: c } = e,
-        u = p(e, ['user', 'guildId']);
+        u = _(e, ['user', 'guildId']);
     let d = (0, i.e7)([l.Z], () => {
             var e;
-            return null === (e = l.Z.getUserProfile(s.id)) || void 0 === e ? void 0 : e.application;
+            return null == (e = l.Z.getUserProfile(s.id)) ? void 0 : e.application;
         }),
-        _ = (0, a.R)(null !== (t = null == d ? void 0 : d.id) && void 0 !== t ? t : '');
-    if (null == d || !_) return null;
+        p = (0, a.R)(null != (t = null == d ? void 0 : d.id) ? t : '');
+    if (null == d || !p) return null;
     let m = () => {
         (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('66711'), n.e('77803'), n.e('17079')]).then(n.bind(n, 7225));
+            let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('53458')]).then(n.bind(n, 7225));
             return (t) =>
                 (0, r.jsx)(
                     e,

@@ -10,14 +10,14 @@ try {
 let r = (() => {
         try {
             var e;
-            return null !== (e = n.g.performance.timing.navigationStart) && void 0 !== e ? e : n.g.performance.now();
+            return null != (e = n.g.performance.timing.navigationStart) ? e : n.g.performance.now();
         } catch (e) {}
         return Date.now();
     })(),
     i = (() => {
         try {
             var e;
-            return null !== (e = n.g.performance.timeOrigin) && void 0 !== e ? e : r;
+            return null != (e = n.g.performance.timeOrigin) ? e : r;
         } catch (e) {}
         return Date.now();
     })();

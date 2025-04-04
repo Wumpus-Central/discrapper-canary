@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(373826),
     E = n(228168),
     b = n(981631),
-    v = n(388032),
-    y = n(355054);
+    y = n(388032),
+    v = n(588015);
 function O(e) {
     let { voiceChannel: t, onAction: n, onClose: o } = e,
         { profileType: O } = (0, m.z)(),
@@ -45,20 +45,20 @@ function O(e) {
     };
     return T && S
         ? (0, r.jsxs)(l.P3F, {
-              className: y.clickable,
+              className: v.clickable,
               onClick: C,
               children: [
                   (0, r.jsx)(g.Z, {
-                      text: null != A ? A : v.NW.string(v.t.Mgpxi4),
+                      text: null != A ? A : y.NW.string(y.t.Mgpxi4),
                       variant: 'text-xs/normal',
                       color: 'text-secondary',
-                      className: y.text
+                      className: v.text
                   }),
                   (0, r.jsx)(l.vdY, {
                       color: 'currentColor',
                       size: 'xxs',
-                      className: a()(y.pencilIcon, null != A ? y.hidden : void 0),
-                      'aria-label': v.NW.string(v.t.bt75u7)
+                      className: a()(v.pencilIcon, null != A ? v.hidden : void 0),
+                      'aria-label': y.NW.string(y.t.bt75u7)
                   })
               ]
           })
@@ -67,7 +67,7 @@ function O(e) {
                 text: A,
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                className: y.text
+                className: v.text
             })
           : null;
 }

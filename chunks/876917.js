@@ -1,16 +1,16 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(802433),
     l = n(680295),
-    c = n(248104),
+    c = n(313305),
     u = n(241822);
 let d = 0.1,
     f = 250,
-    p = (e) => {
-        let { profileEffectId: t, isHovering: n, forCollectedModal: o = !1, isPurchased: p, removeSetHeight: _ = !1 } = e,
+    _ = (e) => {
+        let { profileEffectId: t, isHovering: n, forCollectedModal: o = !1, isPurchased: _, removeSetHeight: p = !1 } = e,
             h = o ? f : d,
             [m, g] = i.useState(!0);
         return (i.useEffect(() => {
@@ -28,7 +28,7 @@ let d = 0.1,
             ? (0, r.jsxs)('div', {
                   className: a()(c.previewContainer, {
                       [c.previewContainerAnimation]: o,
-                      [c.previewContainerSetHeight]: !_
+                      [c.previewContainerSetHeight]: !p
                   }),
                   children: [
                       (0, r.jsx)('img', {
@@ -39,7 +39,7 @@ let d = 0.1,
                       }),
                       !m &&
                           (0, r.jsx)('div', {
-                              className: p ? c.purchasedEffect : void 0,
+                              className: _ ? c.purchasedEffect : void 0,
                               children: (0, r.jsx)(l.Z, {
                                   profileEffectId: t,
                                   useThumbnail: !0,

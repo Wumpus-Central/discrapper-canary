@@ -1,16 +1,16 @@
 a.d(e, { m: () => E });
 var r = a(140955),
     n = a(596308),
-    o = a(622574),
-    _ = a(433691),
+    _ = a(622574),
+    o = a(433691),
     i = a(135813),
     c = a(825321);
 let s = [0.1, 0.25],
     E = (t, e = {}) => {
         (0, c.a)(
             (0, i.R)(() => {
-                let a;
-                let i = (0, n.I)('CLS', 0),
+                let a,
+                    i = (0, n.I)('CLS', 0),
                     c = 0,
                     E = [],
                     l = (t) => {
@@ -23,10 +23,10 @@ let s = [0.1, 0.25],
                         }),
                             c > i.value && ((i.value = c), (i.entries = E), a());
                     },
-                    u = (0, o.N)('layout-shift', l);
+                    u = (0, _.N)('layout-shift', l);
                 u &&
                     ((a = (0, r._)(t, i, s, e.reportAllChanges)),
-                    (0, _.u)(() => {
+                    (0, o.u)(() => {
                         l(u.takeRecords()), a(!0);
                     }),
                     setTimeout(a, 0));

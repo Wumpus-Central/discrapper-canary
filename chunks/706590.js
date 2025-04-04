@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => p,
+    Z: () => _,
     z: () => f
 }),
     n(47120);
@@ -24,7 +24,7 @@ function f(e, t, n) {
     });
     return !i().isEmpty(s);
 }
-function p() {
+function _() {
     let { canShow: e, isFavoritesPerk: t } = (0, u.z)('useIsFavoritesGuildVisible'),
         n = (0, o.e7)([c.Z, a.Z, s.Z], () => e && f(c.Z, a.Z, s.Z));
     return !!t || n;

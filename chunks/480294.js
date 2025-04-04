@@ -39,11 +39,11 @@ function f(e) {
     let { consents: t } = e;
     null != t && ((u = s({}, u, t)), (c = !0));
 }
-function p(e) {
+function _(e) {
     let { consents: t } = e;
     (u = s({}, t)), (l = !0);
 }
-function _(e) {
+function p(e) {
     let { consents: t } = e;
     (u = s({}, t)), (l = !0);
 }
@@ -73,8 +73,8 @@ class g extends (r = i.ZP.Store) {
 a(g, 'displayName', 'ConsentStore');
 let E = new g(o.Z, {
     CONNECTION_OPEN: f,
-    OVERLAY_INITIALIZE: p,
-    UPDATE_CONSENTS: _,
+    OVERLAY_INITIALIZE: _,
+    UPDATE_CONSENTS: p,
     SET_CONSENT_REQUIRED: h,
     LOGOUT: m
 });

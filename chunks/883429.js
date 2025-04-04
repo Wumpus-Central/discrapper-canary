@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(544891),
     i = n(570140),
     o = n(668781),
@@ -9,25 +9,25 @@ var r = n(544891),
     u = n(228392),
     d = n(981631),
     f = n(388032);
-async function p(e, t, n) {
+async function _(e, t, n) {
     try {
         return await e();
     } catch (e) {
         var r, i, a;
-        (null === (r = e.body) || void 0 === r ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED
+        (null == (r = e.body) ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED
             ? o.Z.show({
                   title: t,
                   body: n
               })
-            : (null === (i = e.body) || void 0 === i ? void 0 : i.code) === d.evJ.INVALID_FORM_BODY &&
-              (null === (a = e.body) || void 0 === a ? void 0 : a.errors.emoji) &&
+            : (null == (i = e.body) ? void 0 : i.code) === d.evJ.INVALID_FORM_BODY &&
+              (null == (a = e.body) ? void 0 : a.errors.emoji) &&
               o.Z.show({
                   title: f.NW.string(f.t.T8sBLC),
                   body: f.NW.string(f.t.aHt1BQ)
               });
     }
 }
-let _ = {
+let p = {
     resort(e) {
         i.Z.dispatch({
             type: 'RESORT_THREADS',
@@ -56,14 +56,14 @@ let _ = {
             },
             rejectWithError: !1
         });
-        p(() => n, f.NW.string(f.t.T8sBLC), f.NW.string(f.t.imcb5u));
+        _(() => n, f.NW.string(f.t.T8sBLC), f.NW.string(f.t.imcb5u));
     },
     deleteForumTag(e, t) {
         let n = r.tn.del({
             url: d.ANM.FORUM_TAG(e, t),
             rejectWithError: !1
         });
-        p(() => n, f.NW.string(f.t['0ZkNDQ']), f.NW.string(f.t.imcb5u));
+        _(() => n, f.NW.string(f.t['0ZkNDQ']), f.NW.string(f.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
         await a.Z.unarchiveThreadIfNecessary(e),

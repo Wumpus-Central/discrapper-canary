@@ -33,12 +33,12 @@ function f(e) {
         l.delete(e), c.delete(e);
     }),
         n.forEach((e) => {
-            let { application_id: t, name: n, summary: r, websites: i, themes: o, genres: a, platforms: l, artwork_urls: c, screenshot_urls: u, cover_image_url: d, first_release_date: f, summary_localized: p, publisher_names: _, developer_names: h } = e;
+            let { application_id: t, name: n, summary: r, websites: i, themes: o, genres: a, platforms: l, artwork_urls: c, screenshot_urls: u, cover_image_url: d, first_release_date: f, summary_localized: _, publisher_names: p, developer_names: h } = e;
             s.set(t, {
                 applicationId: t,
                 name: n,
                 summary: r,
-                summaryLocalized: p,
+                summaryLocalized: _,
                 websites: i,
                 themes: o,
                 genres: a,
@@ -47,18 +47,18 @@ function f(e) {
                 screenshots: u,
                 coverImageUrl: d,
                 firstReleaseDate: f,
-                publishers: null != _ ? _ : [],
+                publishers: null != p ? p : [],
                 developers: null != h ? h : []
             });
         });
 }
-function p(e) {
+function _(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
         l.delete(e), c.add(e);
     });
 }
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     canFetch(e) {
         return !l.has(e) && !c.has(e) && !s.has(e);
     }
@@ -73,22 +73,22 @@ class _ extends (r = i.ZP.Store) {
     }
     getLocalizedName(e) {
         var t;
-        return null === (t = s.get(e)) || void 0 === t ? void 0 : t.name;
+        return null == (t = s.get(e)) ? void 0 : t.name;
     }
     getThemes(e) {
         var t;
-        return null === (t = s.get(e)) || void 0 === t ? void 0 : t.themes;
+        return null == (t = s.get(e)) ? void 0 : t.themes;
     }
     getCoverImageUrl(e, t) {
         var n;
-        let r = null === (n = s.get(e)) || void 0 === n ? void 0 : n.coverImageUrl;
+        let r = null == (n = s.get(e)) ? void 0 : n.coverImageUrl;
         return null == r ? null : null == t ? r : ''.concat(r, '?width=').concat(t.width, '&height=').concat(t.height);
     }
 }
-a(_, 'displayName', 'DetectableGameSupplementalStore');
-let h = new _(o.Z, {
+a(p, 'displayName', 'DetectableGameSupplementalStore');
+let h = new p(o.Z, {
     LOGOUT: u,
     DETECTABLE_GAME_SUPPLEMENTAL_FETCH: d,
     DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: f,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: p
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: _
 });

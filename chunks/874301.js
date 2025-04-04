@@ -44,7 +44,7 @@
         dayOfMonthOrdinalParse: /\d{1,2}(e|a)/,
         ordinal: function (e) {
             var t = e % 10,
-                n = 1 == ~~((e % 100) / 10) ? 'e' : 1 === t ? 'a' : 2 === t ? 'a' : 'e';
+                n = 1 == ~~((e % 100) / 10) ? 'e' : 1 === t || 2 === t ? 'a' : 'e';
             return e + n;
         },
         week: {

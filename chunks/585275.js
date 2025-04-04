@@ -16,8 +16,8 @@ var i = n(512722),
     g = n(314897),
     E = n(358085),
     b = n(998502),
-    v = n(569545),
-    y = n(70722),
+    y = n(569545),
+    v = n(70722),
     O = n(981631),
     I = n(65154);
 let S = 300000,
@@ -28,7 +28,7 @@ let S = 300000,
     R = window.document.createElement('canvas'),
     P = 512,
     w = 288;
-(R.width = P), (R.height = w);
+(R.width = 512), (R.height = w);
 let D = R.getContext('2d');
 function L() {
     A.stop(), null != r && (u.Z.removeSink(r, N), (r = null));
@@ -36,8 +36,8 @@ function L() {
 let x = s().debounce((e, t, n, r) => {
     k(
         e,
-        (0, v.V9)({
-            streamType: null != t ? y.lo.GUILD : y.lo.CALL,
+        (0, y.V9)({
+            streamType: null != t ? v.lo.GUILD : v.lo.CALL,
             guildId: t,
             channelId: n,
             ownerId: r

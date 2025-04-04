@@ -12,18 +12,18 @@ var r = n(526167),
     u = n(844049),
     d = n(712386),
     f = n(602722),
-    p = n(534109),
-    _ = n(859500),
+    _ = n(534109),
+    p = n(859500),
     h = n(484542),
     m = n(881500),
     g = n(910826),
     E = n(307244),
-    v = n(669730),
-    b = n(666828),
-    y = n(131999),
+    b = n(669730),
+    y = n(666828),
+    v = n(131999),
     O = n(649272),
-    S = n(241372),
-    I = n(538387),
+    I = n(241372),
+    S = n(538387),
     T = n(213921),
     N = n(34721),
     A = n(410693),
@@ -35,14 +35,14 @@ function P() {
 }
 let w = {
     DEFAULT_AVATARS: [o, a, s, l, c, u],
-    DEFAULT_PROVISIONAL_AVATARS: [O, S, I, T, N, A],
-    DEFAULT_GROUP_DM_AVATARS: [d, f, p, _, h, m, g, E],
+    DEFAULT_PROVISIONAL_AVATARS: [O, I, S, T, N, A],
+    DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
     BOT_AVATARS: {
         clyde: C,
-        nitro: b,
-        nitro_wumpus: y
+        nitro: y,
+        nitro_wumpus: v
     },
-    DEFAULT_CHANNEL_ICON: v,
+    DEFAULT_CHANNEL_ICON: b,
     canUseWebp: function () {
         return r.og();
     }

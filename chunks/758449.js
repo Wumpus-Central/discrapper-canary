@@ -61,7 +61,7 @@ class u extends o.Z {
             c(s({}, e), {
                 maxUses: e.max_uses,
                 maxAge: e.max_age,
-                createdAt: i()(null !== (t = e.created_at) && void 0 !== t ? t : void 0),
+                createdAt: i()(null != (t = e.created_at) ? t : void 0),
                 targetType: e.target_type,
                 targetUser: e.target_user,
                 targetApplication: e.target_application
@@ -70,7 +70,7 @@ class u extends o.Z {
     }
     isExpired() {
         let e = this.maxAge;
-        return !!(e > 0 && i()(this.createdAt).add(e, 'seconds').isBefore(Date.now()));
+        return !!(e > 0 && i()(this.createdAt).add(e, 'seconds').isBefore(Date.now())) || !1;
     }
     getExpiresAt() {
         return this.maxAge > 0 ? i()(this.createdAt).add(this.maxAge, 'seconds').toDate() : 1 / 0;

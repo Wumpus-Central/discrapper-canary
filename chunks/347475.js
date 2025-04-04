@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(512722),
@@ -67,14 +67,14 @@ function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function v(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,26 +83,26 @@ function v(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function y(e) {
+function v(e) {
     var { userId: t, user: n } = e,
         o = b(e, ['userId', 'user']);
     let h = (0, s.e7)([u.default], () => u.default.getUser(t), [t]),
         g = null != n ? n : h;
     a()(null != g, 'UserProfilePopoutWrapper: user cannot be undefined');
-    let v = (0, s.e7)([u.default], () => u.default.getCurrentUser());
-    a()(null != v, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
-    let { isBlocked: y, isIgnored: O } = (0, s.cj)([c.Z], () => ({
+    let y = (0, s.e7)([u.default], () => u.default.getCurrentUser());
+    a()(null != y, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
+    let { isBlocked: v, isIgnored: O } = (0, s.cj)([c.Z], () => ({
             isBlocked: c.Z.isBlocked(g.id),
             isIgnored: c.Z.isIgnored(g.id)
         })),
-        [I, S] = i.useState(y || O || y),
+        [I, S] = i.useState(v || O || v),
         T = l.Rt.useSetting();
     return I && !(O && T)
         ? (0, r.jsx)(
               d.Z,
               E(m({}, o), {
                   user: g,
-                  currentUser: v,
+                  currentUser: y,
                   onViewBlockedProfileClick: () => S(!1)
               })
           )
@@ -111,7 +111,7 @@ function y(e) {
                 _.Z,
                 E(m({}, o), {
                     user: g,
-                    currentUser: v
+                    currentUser: y
                 })
             )
           : g.bot
@@ -119,14 +119,14 @@ function y(e) {
                   f.Z,
                   E(m({}, o), {
                       user: g,
-                      currentUser: v
+                      currentUser: y
                   })
               )
             : (0, r.jsx)(
                   p.Z,
                   E(m({}, o), {
                       user: g,
-                      currentUser: v
+                      currentUser: y
                   })
               );
 }

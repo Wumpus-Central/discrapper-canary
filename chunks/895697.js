@@ -10,26 +10,26 @@ var i = n(442837),
     u = n(621853),
     d = n(172351),
     f = n(648052),
-    p = n(483424),
-    _ = n(681837),
+    _ = n(483424),
+    p = n(681837),
     h = n(678738),
     m = n(530),
     g = n(871604),
     E = n(53558),
-    v = n(827313),
-    b = n(420654),
-    y = n(166584),
+    b = n(827313),
+    y = n(420654),
+    v = n(166584),
     O = n(915014),
-    S = n(228168),
-    I = n(388032),
-    T = n(126601),
-    N = n(913340);
+    I = n(228168),
+    S = n(388032),
+    T = n(773714),
+    N = n(200669);
 function A(e) {
     let { user: t, currentUser: n, displayProfile: A, guild: C, isHovering: R, onOpenProfile: P, channelId: w, onClose: D } = e,
-        x = c.ZP.getName(null == C ? void 0 : C.id, w, t),
-        L = (0, i.e7)([u.Z], () => {
+        L = c.ZP.getName(null == C ? void 0 : C.id, w, t),
+        x = (0, i.e7)([u.Z], () => {
             var e;
-            return null === (e = u.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
+            return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
         M = (0, i.e7)([a.Z, s.Z], () => a.Z.getChannel(s.Z.getChannelId())),
         k = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
@@ -39,20 +39,20 @@ function A(e) {
         children: [
             (0, r.jsx)(m.Z, {
                 user: t,
-                profileType: S.y0.BITE_SIZE,
+                profileType: I.y0.BITE_SIZE,
                 onOpenProfile: P,
-                nickname: x,
+                nickname: L,
                 pronouns: null == A ? void 0 : A.pronouns,
                 tags: (0, r.jsx)(f.Z, {
                     displayProfile: A,
-                    profileType: S.y0.BITE_SIZE,
+                    profileType: I.y0.BITE_SIZE,
                     onClose: D
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(_.Z, { userId: t.id }),
+                        (0, r.jsx)(p.Z, { userId: t.id }),
                         !k &&
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(b.Z, {
                                 userId: t.id,
                                 isHovering: R,
                                 onOpenProfile: P
@@ -79,13 +79,13 @@ function A(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(y.Z, {
                 user: t,
                 bio: null == A ? void 0 : A.bio,
                 hidePersonalInformation: k,
                 onClose: D
             }),
-            (0, r.jsx)(p.Z, {
+            (0, r.jsx)(_.Z, {
                 user: t,
                 currentUser: n,
                 displayProfile: A,
@@ -93,19 +93,19 @@ function A(e) {
                 onClose: D,
                 className: N.activity
             }),
-            (null == L ? void 0 : L.popularApplicationCommandIds) != null &&
+            (null == x ? void 0 : x.popularApplicationCommandIds) != null &&
                 null != M &&
                 (0, r.jsx)(d.Z, {
-                    applicationId: L.id,
-                    commandIds: L.popularApplicationCommandIds,
+                    applicationId: x.id,
+                    commandIds: x.popularApplicationCommandIds,
                     channel: M,
                     guildId: null == C ? void 0 : C.id,
                     onClick: D
                 }),
             null != C &&
                 (0, r.jsx)(h.Z, {
-                    heading: I.NW.string(I.t.LPJmLy),
-                    children: (0, r.jsx)(y.Z, {
+                    heading: S.NW.string(S.t.LPJmLy),
+                    children: (0, r.jsx)(v.Z, {
                         user: t,
                         currentUser: n,
                         guild: C

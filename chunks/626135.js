@@ -61,7 +61,7 @@ function E(e) {
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -73,18 +73,18 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -186,7 +186,7 @@ let j = {
         throttlePeriod: C,
         throttleKeys: (e) => {
             var t;
-            return [e.shortcut_name, e.location_object, ...(null !== (t = e.source_class_list) && void 0 !== t ? t : [])];
+            return [e.shortcut_name, e.location_object, ...(null != (t = e.source_class_list) ? t : [])];
         }
     },
     [p.rMx.QUICKSWITCHER_OPENED]: {
@@ -356,10 +356,10 @@ function G(e) {
           };
 }
 let B = () => h.E.NONE;
-function V(e) {
+function F(e) {
     B = e;
 }
-let F = (0, o.trackMaker)({
+let V = (0, o.trackMaker)({
     analyticEventConfigs: j,
     dispatcher: a.Z,
     TRACK_ACTION_NAME: 'TRACK'
@@ -372,17 +372,17 @@ function H(e) {
     let o = null != e ? e : {};
     if (null != o.location) {
         let { location: e } = o;
-        o = E({}, y(o, ['location']), U(e));
+        o = E({}, v(o, ['location']), U(e));
     }
     if (null != o.source) {
         let { source: e } = o;
-        o = E({}, y(o, ['source']), G(e));
+        o = E({}, v(o, ['source']), G(e));
     }
     (o.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (o.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (o.cpu_core_count = f.Z.getCPUCoreCount()), (o.accessibility_features = B()), (o.rendered_locale = m.NW.currentLocale), (o.uptime_app = Math.floor((performance.now() - x) / 1000));
     let a = f.Z.getProcessUptime();
     null != a && (o.uptime_process_renderer = Math.floor(a));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = T;
-    return (o.utm_source = null !== (t = o.utm_source) && void 0 !== t ? t : s), (o.utm_medium = null !== (n = o.utm_medium) && void 0 !== n ? n : l), (o.utm_campaign = null !== (r = o.utm_campaign) && void 0 !== r ? r : c), (o.utm_content = null !== (i = o.utm_content) && void 0 !== i ? i : u), M.forEach((e) => e(o)), o;
+    return (o.utm_source = null != (t = o.utm_source) ? t : s), (o.utm_medium = null != (n = o.utm_medium) ? n : l), (o.utm_campaign = null != (r = o.utm_campaign) ? r : c), (o.utm_content = null != (i = o.utm_content) ? i : u), M.forEach((e) => e(o)), o;
 }
 function W(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -423,7 +423,7 @@ function $(e, t) {
     let i = H(t);
     return (
         W(r, i, n.logEventProperties),
-        F(e, i, {
+        V(e, i, {
             flush: n.flush,
             fingerprint: n.fingerprint
         })
@@ -441,9 +441,9 @@ function et(e, t) {
 function en() {
     return (0, i.Z)();
 }
-let er = b(E({}, o), {
+let er = y(E({}, o), {
     getCampaignParams: o.getCampaignParams,
-    setSystemAccessibilityFeatures: V,
+    setSystemAccessibilityFeatures: F,
     expandEventProperties: H,
     track: $
 });

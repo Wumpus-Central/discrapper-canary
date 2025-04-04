@@ -7,7 +7,7 @@ var r = n(200651),
     l = n.n(s),
     c = n(84735),
     u = n(562701),
-    d = n(676793);
+    d = n(830424);
 function f(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,7 +89,7 @@ function E(e) {
         i.useCallback(() => t.current, [])
     );
 }
-function v(e) {
+function b(e) {
     let t = i.useRef(e);
     return (
         i.useEffect(() => {
@@ -107,7 +107,7 @@ function v(e) {
         }, [])
     );
 }
-function b(e) {
+function y(e) {
     let { renderSection: t, renderRow: n, renderFooter: o, renderListHeader: a, stickyListHeader: s, wrapSection: c, items: u, spacerTop: d } = e,
         f = [
             (0, r.jsx)(
@@ -119,34 +119,34 @@ function b(e) {
                 '---list-spacer-top'
             )
         ],
-        p = [],
-        _ = 0;
+        _ = [],
+        p = 0;
     if (
         (!0 === s && null != a && f.push((0, r.jsx)(i.Fragment, { children: a() }, '---sticky-header')),
         u.forEach((e) => {
             var r;
-            switch ((e.section !== _ && p.length > 0 && (f.push(null != c ? c(_, p) : p), (p = [])), (_ = null !== (r = e.section) && void 0 !== r ? r : 0), e.type)) {
+            switch ((e.section !== p && _.length > 0 && (f.push(null != c ? c(p, _) : _), (_ = [])), (p = null != (r = e.section) ? r : 0), e.type)) {
                 case 'section':
-                    null != t && p.push(t(e));
+                    null != t && _.push(t(e));
                     break;
                 case 'row':
-                    p.push(n(e));
+                    _.push(n(e));
                     break;
                 case 'footer':
-                    null != o && p.push(o(e));
+                    null != o && _.push(o(e));
                     break;
                 case 'header':
-                    null != a && !0 !== s && p.push(a());
+                    null != a && !0 !== s && _.push(a());
             }
         }),
-        p.length > 0)
+        _.length > 0)
     ) {
         var h;
-        f.push(null !== (h = null == c ? void 0 : c(_, p)) && void 0 !== h ? h : p);
+        f.push(null != (h = null == c ? void 0 : c(p, _)) ? h : _);
     }
     return l()(f);
 }
-function y(e) {
+function v(e) {
     let { renderSidebar: t, sidebarHeight: n, isSidebarVisible: r, isListVisible: i } = e;
     return null == n || null == t ? null : t(i, r);
 }
@@ -157,11 +157,11 @@ function O(e, t, n, o) {
             e.forEach((e) => {
                 var t;
                 let { target: n } = e;
-                null === (t = l.get(n)) || void 0 === t || t(e);
+                null == (t = l.get(n)) || t(e);
             });
         });
-    return i.forwardRef(function (o, _) {
-        var { className: g, onScroll: O, onResize: S = null, onContentResize: I = null, dir: T = 'ltr', sections: N, sectionHeight: A, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: x, renderFooter: L, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: Z, fade: F = !1, customTheme: V = !1, chunkSize: H, style: W, innerId: Y, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: Q, innerClassName: X, innerTag: J = 'div' } = o,
+    return i.forwardRef(function (o, p) {
+        var { className: g, onScroll: O, onResize: I = null, onContentResize: S = null, dir: T = 'ltr', sections: N, sectionHeight: A, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: F, fade: V = !1, customTheme: Z = !1, chunkSize: H, style: W, innerId: Y, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: Q, innerClassName: X, innerTag: J = 'div' } = o,
             $ = m(o, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
         let ee = i.useRef(null),
             et = i.useRef(null),
@@ -181,7 +181,7 @@ function O(e, t, n, o) {
                 isSidebarVisible: eu,
                 listComputer: ed,
                 forceUpdateOnChunkChange: ef,
-                anchor: ep
+                anchor: e_
             } = (0, u.aU)({
                 sections: N,
                 sectionHeight: A,
@@ -190,23 +190,23 @@ function O(e, t, n, o) {
                 sidebarHeight: P,
                 listHeaderHeight: w,
                 paddingTop: B,
-                paddingBottom: Z,
+                paddingBottom: F,
                 chunkSize: H,
                 getScrollerState: ea,
                 getAnchorId: G
             }),
-            e_ = (0, u.t2)(ei),
-            eh = i.useRef(S),
-            em = i.useRef(I);
+            ep = (0, u.t2)(ei),
+            eh = i.useRef(I),
+            em = i.useRef(S);
         i.useLayoutEffect(() => {
-            (eh.current = S), (em.current = I);
+            (eh.current = I), (em.current = S);
         });
         let eg = i.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                     if ((e > eo.current.dirty && (eo.current.dirty = e), 2 === e)) {
                         var t;
-                        null === (t = eh.current) || void 0 === t || t.call(eh);
+                        null == (t = eh.current) || t.call(eh);
                     }
                     ef(e);
                 },
@@ -224,29 +224,29 @@ function O(e, t, n, o) {
                 ref: et,
                 onUpdate: () => {
                     var e;
-                    return null === (e = em.current) || void 0 === e ? void 0 : e.call(em);
+                    return null == (e = em.current) ? void 0 : e.call(em);
                 },
                 key: 'content',
                 resizeObserver: f,
                 listenerMap: l
             });
-        let ev = E(ec),
-            eb = v(N);
+        let eb = E(ec),
+            ey = b(N);
         i.useImperativeHandle(
-            _,
+            p,
             () =>
-                p(
+                _(
                     {
                         getScrollerNode: () => ei.current,
                         getScrollerState: ea,
-                        getItems: ev,
-                        getSectionRowFromIndex: eb
+                        getItems: eb,
+                        getSectionRowFromIndex: ey
                     },
-                    (0, u.rH)(ei, ea, ed, e_)
+                    (0, u.rH)(ei, ea, ed, ep)
                 ),
-            [ei, ea, eb, ev, ed, e_]
+            [ei, ea, ey, eb, ed, ep]
         );
-        let ey = i.useCallback(
+        let ev = i.useCallback(
             (e) => {
                 eg(1),
                     null == ee.current ? er(!0) : clearTimeout(ee.current),
@@ -260,10 +260,10 @@ function O(e, t, n, o) {
         return (
             i.useLayoutEffect(() => {
                 2 !== eo.current.dirty && (eo.current.dirty = 2);
-            }, [ec, D, x, L, U, el, es, eo]),
+            }, [ec, D, L, x, U, el, es, eo]),
             (0, u.rS)({
                 scrollerRef: ei,
-                anchor: ep,
+                anchor: e_,
                 getScrollerState: ea,
                 listComputer: ed,
                 getAnchorId: G,
@@ -272,14 +272,14 @@ function O(e, t, n, o) {
             (0, r.jsxs)(
                 'div',
                 h(
-                    p(
+                    _(
                         {
                             ref: ei,
-                            onScroll: ey,
+                            onScroll: ev,
                             className: a()(g, {
                                 [e]: !0,
-                                [t]: F,
-                                [n]: V,
+                                [t]: V,
+                                [n]: Z,
                                 [d.scrolling]: en
                             }),
                             style: (0, u.uT)(W)
@@ -301,23 +301,23 @@ function O(e, t, n, o) {
                                         ref: et,
                                         children: (0, r.jsx)(c.J, {
                                             containerRef: et,
-                                            children: b({
+                                            children: y({
                                                 items: ec,
                                                 renderListHeader: k,
                                                 stickyListHeader: j,
                                                 renderSection: D,
-                                                renderRow: x,
-                                                renderFooter: L,
+                                                renderRow: L,
+                                                renderFooter: x,
                                                 wrapSection: U,
                                                 spacerTop: es
                                             })
                                         })
                                     }),
-                                [J, Y, K, z, q, Q, el, X, ec, k, j, D, x, L, U, es]
+                                [J, Y, K, z, q, Q, el, X, ec, k, j, D, L, x, U, es]
                             ),
                             i.useMemo(
                                 () =>
-                                    y({
+                                    v({
                                         isSidebarVisible: eu,
                                         renderSidebar: M,
                                         sidebarHeight: P,

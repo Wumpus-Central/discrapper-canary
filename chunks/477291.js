@@ -61,7 +61,7 @@ function f(e, t, n) {
     var r;
     let { rating: a, problem: l, feedback: c } = n;
     (0, o.Z)({
-        problem: null !== (r = null == l ? void 0 : l.value) && void 0 !== r ? r : null,
+        problem: null != (r = null == l ? void 0 : l.value) ? r : null,
         summary: e,
         feedback: c,
         guildId: t.guild_id,

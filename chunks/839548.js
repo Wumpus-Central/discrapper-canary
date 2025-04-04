@@ -33,7 +33,7 @@ class d extends o.Z {
     }
     getLocalVideoDisabled(e) {
         var t;
-        return null !== (t = this.disabledLocalVideos[e]) && void 0 !== t && t;
+        return null != (t = this.disabledLocalVideos[e]) && t;
     }
     setLocalVideoDisabled(e, t) {
         (this.disabledLocalVideos[e] = t), this.emit(a.S.LocalVideoDisabled, e, t);
@@ -44,7 +44,7 @@ class d extends o.Z {
     setHasActiveVideoOutputSink(e, t, n) {
         var r;
         let i = this.getHasActiveVideoOutputSink(e),
-            o = null !== (r = this.activeOutputSinks.get(e)) && void 0 !== r ? r : new Set();
+            o = null != (r = this.activeOutputSinks.get(e)) ? r : new Set();
         t ? o.add(n) : o.delete(n), this.activeOutputSinks.set(e, o);
         let s = this.getHasActiveVideoOutputSink(e);
         (this.isActiveOutputSinksEnabled = !0), i !== s && this.emit(a.S.ActiveSinksChange, e, s);
@@ -76,21 +76,21 @@ class d extends o.Z {
         -1 === r && (r = 0);
         let { quality: o, constraints: a } = this.applyQualityConstraints({}, this.videoStreamParameters[r].ssrc),
             s = i()(this.videoStreamParameters);
-        null != o && ((s[r].maxBitrate = o.bitrateMax), (s[r].minBitrate = o.bitrateMin), (s[r].targetBitrate = null !== (t = o.bitrateTarget) && void 0 !== t ? t : 0), null != o.encode && ((s[r].maxPixelCount = o.encode.pixelCount), (s[r].maxFrameRate = o.encode.framerate))), (this.videoStreamParameters = s);
+        null != o && ((s[r].maxBitrate = o.bitrateMax), (s[r].minBitrate = o.bitrateMin), (s[r].targetBitrate = null != (t = o.bitrateTarget) ? t : 0), null != o.encode && ((s[r].maxPixelCount = o.encode.pixelCount), (s[r].maxFrameRate = o.encode.framerate))), (this.videoStreamParameters = s);
         for (let e = 0; e < this.videoStreamParameters.length; e++) {
             if (e === r) continue;
             let { quality: t, constraints: i } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
-            null != t && ((this.videoStreamParameters[e].maxBitrate = t.bitrateMax), (this.videoStreamParameters[e].minBitrate = t.bitrateMin), (this.videoStreamParameters[e].targetBitrate = null !== (n = t.bitrateTarget) && void 0 !== n ? n : 0), null != t.encode && ((this.videoStreamParameters[e].maxPixelCount = t.encode.pixelCount), (this.videoStreamParameters[e].maxFrameRate = t.encode.framerate))), 100 === this.videoStreamParameters[e].quality && ((a = i), (o = t));
+            null != t && ((this.videoStreamParameters[e].maxBitrate = t.bitrateMax), (this.videoStreamParameters[e].minBitrate = t.bitrateMin), (this.videoStreamParameters[e].targetBitrate = null != (n = t.bitrateTarget) ? n : 0), null != t.encode && ((this.videoStreamParameters[e].maxPixelCount = t.encode.pixelCount), (this.videoStreamParameters[e].maxFrameRate = t.encode.framerate))), 100 === this.videoStreamParameters[e].quality && ((a = i), (o = t));
         }
         (a.streamParameters = i()(this.videoStreamParameters)),
             (a.remoteSinkWantsPixelCount = Math.max(
                 ...this.videoStreamParameters.map((e) => {
                     var t;
-                    return null !== (t = e.maxPixelCount) && void 0 !== t ? t : 0;
+                    return null != (t = e.maxPixelCount) ? t : 0;
                 })
             ));
         let l = this.pickProperties(a, e);
-        this.logger.info('updateVideoQuality: '.concat(JSON.stringify(l, void 0, 4))), this.updateVideoQualityCore(l, o);
+        this.logger.verbose('updateVideoQuality: '.concat(JSON.stringify(l))), this.updateVideoQualityCore(l, o);
     }
     applyVideoQualityMode(e) {
         if (this.context !== l.Yn.DEFAULT) return;
@@ -127,12 +127,12 @@ class d extends o.Z {
                     ssrc: e.ssrc,
                     rtxSsrc: e.rtxSsrc,
                     quality: e.quality,
-                    maxBitrate: (null !== (i = e.quality) && void 0 !== i ? i : 100) < 100 ? o.bitrateMax / 4 : o.bitrateMax,
-                    maxFrameRate: null === (t = o.capture) || void 0 === t ? void 0 : t.framerate,
+                    maxBitrate: (null != (i = e.quality) ? i : 100) < 100 ? o.bitrateMax / 4 : o.bitrateMax,
+                    maxFrameRate: null == (t = o.capture) ? void 0 : t.framerate,
                     maxResolution: {
                         type: l.uA.FIXED,
-                        width: null === (n = o.capture) || void 0 === n ? void 0 : n.width,
-                        height: null === (r = o.capture) || void 0 === r ? void 0 : r.height
+                        width: null == (n = o.capture) ? void 0 : n.width,
+                        height: null == (r = o.capture) ? void 0 : r.height
                     }
                 };
             });
@@ -141,7 +141,7 @@ class d extends o.Z {
         var t, n;
         let r = this.videoStreamParameters.some((t) => t.ssrc === e && t.quality === l.y7) || void 0 === e,
             i = this.context === l.Yn.DEFAULT || r,
-            o = this.remoteVideoSinkWants[null !== (n = null != e ? e : null === (t = this.videoStreamParameters[0]) || void 0 === t ? void 0 : t.ssrc) && void 0 !== n ? n : 0];
+            o = this.remoteVideoSinkWants[null != (n = null != e ? e : null == (t = this.videoStreamParameters[0]) ? void 0 : t.ssrc) ? n : 0];
         if (null != o && o > 0) return o;
         let a = this.remoteVideoSinkWants.any;
         return null != a && a > 0 && i ? a : 100 * !!i;

@@ -7,7 +7,7 @@ var r,
     l = n(442837),
     c = n(607070),
     u = n(451478),
-    d = n(573680);
+    d = n(555712);
 function f(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ class E extends (r = o.PureComponent) {
     componentDidUpdate(e) {
         var t, n, r;
         let { nextScene: i, pauseWhileUnfocused: o, pause: a, isWindowFocused: s, useReducedMotion: l } = this.props;
-        i !== this.currentScene && this.shouldForcePlayAfter() && !a && this.playScene(i), null != this.animation && (o && !e.isWindowFocused && s && !l && !0 !== a ? this.animation.play() : (l || (o && e.isWindowFocused && !s)) && this.animation.pause()), !e.pause && a ? null === (t = this.animation) || void 0 === t || t.pause() : !e.pause || a || l || null === (n = this.animation) || void 0 === n || n.play(), e.nextScene !== i && a && (this.playScene(i), null === (r = this.animation) || void 0 === r || r.pause());
+        i !== this.currentScene && this.shouldForcePlayAfter() && !a && this.playScene(i), null != this.animation && (o && !e.isWindowFocused && s && !l && !0 !== a ? this.animation.play() : (l || (o && e.isWindowFocused && !s)) && this.animation.pause()), !e.pause && a ? null == (t = this.animation) || t.pause() : !e.pause || a || l || null == (n = this.animation) || n.play(), e.nextScene !== i && a && (this.playScene(i), null == (r = this.animation) || r.pause());
     }
     shouldForcePlayAfter() {
         let { sceneSegments: e } = this.props;
@@ -118,7 +118,7 @@ class E extends (r = o.PureComponent) {
             o = n[this.currentScene];
         if ((null != this.animation && (e === this.currentScene || i.BEG !== o.BEG || i.END !== o.END) && this.animation.playSegments([i.BEG, i.END], !0), (this.currentScene = e), null != t && t(this.currentScene), r)) {
             var a;
-            null === (a = this.animation) || void 0 === a || a.pause();
+            null == (a = this.animation) || a.pause();
         }
     }
     render() {

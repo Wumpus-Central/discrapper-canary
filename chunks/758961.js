@@ -1,8 +1,8 @@
 t.d(n, { default: () => S }), t(47120), t(411104);
 var l = t(200651),
     a = t(192379),
-    r = t(120356),
-    i = t.n(r),
+    i = t(120356),
+    r = t.n(i),
     s = t(512722),
     o = t.n(s),
     u = t(481060),
@@ -27,11 +27,11 @@ let C = [
     }
 ];
 function S(e) {
-    var n, t, r, s;
-    let { guildId: S, sourceFile: O, existingSound: P, onClose: k, transitionState: Z, showGuildPicker: M = !1 } = e,
-        [E, I] = a.useState(null != (t = null != (n = null == O ? void 0 : O.name) ? n : null == P ? void 0 : P.name) ? t : ''),
-        [_, R] = a.useState(null != (r = null == P ? void 0 : P.volume) ? r : 1),
-        [T, D] = a.useState(null == P ? void 0 : P.emojiId),
+    var n, t, i, s;
+    let { guildId: S, sourceFile: O, existingSound: P, onClose: k, transitionState: E, showGuildPicker: Z = !1 } = e,
+        [M, I] = a.useState(null != (t = null != (n = null == O ? void 0 : O.name) ? n : null == P ? void 0 : P.name) ? t : ''),
+        [_, D] = a.useState(null != (i = null == P ? void 0 : P.volume) ? i : 1),
+        [R, T] = a.useState(null == P ? void 0 : P.emojiId),
         [W, F] = a.useState(null == P ? void 0 : P.emojiName),
         { file: z, loadAudioFromFile: A, maxVolume: L, setMaxVolume: B } = (0, b.p)(),
         [U, G] = a.useState(!1),
@@ -80,7 +80,7 @@ function S(e) {
         et = 'uploading' === J || 'encoding' === J,
         el = null != P,
         ea =
-            E.length >= 2 &&
+            M.length >= 2 &&
             (el || null != z) &&
             null != K &&
             (function (e) {
@@ -88,7 +88,7 @@ function S(e) {
                 let n = (e.endMs - e.startMs) / 1000;
                 return n > 0 && n <= x.YW;
             })(V),
-        er = a.useCallback(async (e, n) => {
+        ei = a.useCallback(async (e, n) => {
             X('encoding');
             try {
                 let t = await (0, y.kV)(e, n);
@@ -97,12 +97,12 @@ function S(e) {
                 throw (X('encoding-failed'), e);
             }
         }, []),
-        ei = a.useCallback(async () => {
+        er = a.useCallback(async () => {
             if (null == z) return;
             o()(null != K, 'Cannot submit soundboard sound with no guildId');
             let e = z;
             if (null != V) {
-                let n = await er(z, V);
+                let n = await ei(z, V);
                 if (null == n) return;
                 e = n;
             }
@@ -112,16 +112,16 @@ function S(e) {
                 await (0, y.bb)({
                     readPromise: n,
                     guildId: K,
-                    name: E,
+                    name: M,
                     volume: _,
-                    emojiId: T,
+                    emojiId: R,
                     emojiName: W
                 }),
                     X('ready');
             } catch (e) {
                 throw new c.Z(e);
             }
-        }, [z, K, E, er, V, _, T, W]),
+        }, [z, K, M, ei, V, _, R, W]),
         es = a.useCallback(async () => {
             o()(null != K, 'Cannot submit soundboard sound with no guildId'), G(!0), q(null);
             try {
@@ -129,19 +129,19 @@ function S(e) {
                     ? await (0, g.$d)({
                           guildId: K,
                           soundId: P.soundId,
-                          name: E,
+                          name: M,
                           volume: _,
-                          emojiId: T,
+                          emojiId: R,
                           emojiName: W
                       })
-                    : await ei(),
+                    : await er(),
                     k();
             } catch (e) {
                 ee(e);
             } finally {
-                X('ready'), G(!1), R(1), B(1);
+                X('ready'), G(!1), D(1), B(1);
             }
-        }, [el, k, K, P, E, _, T, W, ei, B]);
+        }, [el, k, K, P, M, _, R, W, er, B]);
     (0, d.ZP)(() => {
         A(null),
             h.default.track(j.rMx.OPEN_MODAL, {
@@ -150,19 +150,19 @@ function S(e) {
             });
     }),
         a.useEffect(() => {
-            R(Math.min(_, L));
-        }, [_, R, L]);
+            D(Math.min(_, L));
+        }, [_, D, L]);
     let eo = (0, l.jsx)(f.Z, {
         guildId: K,
-        emojiId: T,
+        emojiId: R,
         emojiName: W,
-        setEmojiId: D,
+        setEmojiId: T,
         setEmojiName: F,
         error: null == H ? void 0 : H.getFirstFieldErrorMessage('emoji'),
         isRequiredField: !1
     });
     return (0, l.jsxs)(u.Y0X, {
-        transitionState: Z,
+        transitionState: E,
         children: [
             (0, l.jsx)(u.olH, {
                 onClick: k,
@@ -186,7 +186,7 @@ function S(e) {
                             className: w.section,
                             children: H.message
                         }),
-                    M
+                    Z
                         ? (0, l.jsx)(u.xJW, {
                               required: !0,
                               className: w.section,
@@ -225,11 +225,11 @@ function S(e) {
                             (0, l.jsx)(u.xJW, {
                                 required: !0,
                                 error: null == H ? void 0 : H.getFirstFieldErrorMessage('name'),
-                                className: i()(w.section, w.halfInput),
+                                className: r()(w.section, w.halfInput),
                                 title: N.NW.string(N.t.NpJGaG),
                                 children: (0, l.jsx)(u.oil, {
                                     placeholder: N.NW.string(N.t.NpJGaG),
-                                    value: E,
+                                    value: M,
                                     onChange: I,
                                     maxLength: x.Ek
                                 })
@@ -243,7 +243,7 @@ function S(e) {
                         title: N.NW.string(N.t['3CJlb2']),
                         children: (0, l.jsx)(u.iRW, {
                             initialValue: _,
-                            onValueChange: (e) => R(e),
+                            onValueChange: (e) => D(e),
                             minValue: 0,
                             maxValue: L
                         })

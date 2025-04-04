@@ -9,8 +9,8 @@ var r = n(911969),
     u = n(594174),
     d = n(5192),
     f = n(417574),
-    p = n(877565),
-    _ = n(590921),
+    _ = n(877565),
+    p = n(590921),
     h = n(126226),
     m = n(388032);
 function g(e, t, n) {
@@ -42,7 +42,7 @@ function E(e) {
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,18 +54,18 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e) {
+function v(e) {
     let t = f.X.exec(e);
     if (null != t) {
         let n = t[1],
@@ -80,20 +80,20 @@ function y(e) {
     }
     return null;
 }
-let O = b(E({}, h.Z), {
+let O = y(E({}, h.Z), {
     sentinel: void 0,
-    focusMode: _.QZ.MANUAL,
+    focusMode: p.QZ.MANUAL,
     matches(e, t, n, r, i) {
-        if (i.commands === _.L8.DISABLED || i.commands === _.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting()) return !1;
-        let o = y(n);
+        if (i.commands === p.L8.DISABLED || i.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting()) return !1;
+        let o = v(n);
         return null != o && o.cleanedQuery.length > 0;
     },
     queryResults(e, t, n, a, l) {
         if (!c.Xk.getSetting()) return h.K;
-        let u = y(n);
+        let u = v(n);
         if (null == u) return h.K;
         let d = (0, s.hV)(e, u.cleanedQuery),
-            { commands: f, sections: p } = i.JT(
+            { commands: f, sections: _ } = i.JT(
                 {
                     channel: e,
                     type: 'channel'
@@ -103,8 +103,8 @@ let O = b(E({}, h.Z), {
                     text: d.text
                 },
                 {
-                    limit: _.AQ,
-                    placeholderCount: _.YP,
+                    limit: p.AQ,
+                    placeholderCount: p.YP,
                     scoreMethod: o.p.COMMAND_OR_APPLICATION,
                     allowFetch: l
                 }
@@ -120,9 +120,9 @@ let O = b(E({}, h.Z), {
             ? h.K
             : {
                   results: {
-                      entries: m.slice(0, _.AQ).map((e) => ({
+                      entries: m.slice(0, p.AQ).map((e) => ({
                           command: e,
-                          section: null == p ? void 0 : p.find((t) => t.id === e.applicationId)
+                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId)
                       }))
                   }
               };
@@ -138,7 +138,7 @@ let O = b(E({}, h.Z), {
             onHover: s,
             onClick: c
         } = e;
-        return (0, p.HI)({
+        return (0, _.HI)({
             query: o,
             selectedIndex: n,
             autocompletes: t,
@@ -146,7 +146,7 @@ let O = b(E({}, h.Z), {
             onClick: c,
             titleWithQuery: m.t.HFRoZW,
             titleWithoutQuery: m.NW.string(m.t['0hKkS0']),
-            Component: a.commands === _.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
+            Component: a.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
@@ -159,7 +159,7 @@ let O = b(E({}, h.Z), {
                 };
             },
             getQuery: (e) => {
-                let t = y(e);
+                let t = v(e);
                 if ('mention' !== t.type) return e;
                 let n = d.ZP.getName(null == r ? void 0 : r.id, i.id, t.user);
                 return e.replace(f.X, '@'.concat(n));
@@ -178,6 +178,6 @@ let O = b(E({}, h.Z), {
                 guild: s,
                 location: a.Vh.SUGGESTION
             });
-        return null == l ? null : b(E({}, l), { type: _.z2.COMMAND_SUGGESTION });
+        return null == l ? null : y(E({}, l), { type: p.z2.COMMAND_SUGGESTION });
     }
 });

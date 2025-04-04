@@ -1,16 +1,16 @@
 n.d(t, {
     Iu: () => g,
     PG: () => d,
-    RO: () => _,
+    RO: () => p,
     _Q: () => f,
     hr: () => h,
-    j9: () => p,
+    j9: () => _,
     ql: () => m
 });
 var r = n(97613),
     i = n.n(r),
-    o = n(877124),
-    a = n(65400),
+    o = n(781930),
+    a = n(372793),
     s = n(731965),
     l = n(957825);
 let c = Object.freeze({
@@ -51,14 +51,14 @@ let c = Object.freeze({
                 })
             );
     },
-    p = (e) => {
+    _ = (e) => {
         let t = u.getState();
         if (null == t.activeView) {
             var n;
-            d(null !== (n = t.lastActiveView) && void 0 !== n ? n : l.X1.EMOJI, e);
+            d(null != (n = t.lastActiveView) ? n : l.X1.EMOJI, e);
         } else f();
     },
-    _ = (e, t) => {
+    p = (e, t) => {
         u.getState().activeView === e ? f() : d(e, t);
     },
     h = (e) => {

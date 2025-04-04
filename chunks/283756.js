@@ -7,9 +7,9 @@ var i = n(120356),
     s = n(249458),
     l = n(138599),
     c = n(388032),
-    u = n(245477);
+    u = n(364812);
 let d = (e) => {
-    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: p, channelId: _ } = e;
+    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: _, channelId: p } = e;
     return (0, r.jsx)(s.G.Consumer, {
         children: (e) =>
             (0, r.jsxs)('div', {
@@ -28,7 +28,7 @@ let d = (e) => {
                     null != t
                         ? (0, r.jsx)(a.P3F, {
                               onClick: t,
-                              className: o()(u.iconWrapperActive),
+                              className: u.iconWrapperActive,
                               tabIndex: f ? -1 : 0,
                               'aria-label': c.NW.string(c.t.RscU7O),
                               children: (0, r.jsx)(a.o1U, {
@@ -48,8 +48,8 @@ let d = (e) => {
                                   'aria-label': c.NW.string(c.t.wuRE8P),
                                   className: null != t ? u.iconExternalMargins : u.iconExternal
                               }),
-                              messageId: p,
-                              channelId: _
+                              messageId: _,
+                              channelId: p
                           })
                         : null
                 ]

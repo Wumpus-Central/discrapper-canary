@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i,
     o = n(442837),
     a = n(570140);
@@ -38,7 +38,7 @@ let l = [],
     b = (e) => {
         r = e.shopHomeConfigOverride;
     };
-class v extends (i = o.ZP.Store) {
+class y extends (i = o.ZP.Store) {
     getLastSuccessfulFetch(e) {
         return c.get(e);
     }
@@ -56,14 +56,14 @@ class v extends (i = o.ZP.Store) {
     }
     getShopBlocks(e) {
         var t;
-        return null !== (t = p.get(e)) && void 0 !== t ? t : l;
+        return null != (t = p.get(e)) ? t : l;
     }
     getShopHomeConfigOverride() {
         return r;
     }
 }
-s(v, 'displayName', 'CollectiblesShopHomesStore');
-let y = new v(a.Z, {
+s(y, 'displayName', 'CollectiblesShopHomesStore');
+let v = new y(a.Z, {
     COLLECTIBLES_SHOP_HOME_FETCH: h,
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: m,
     COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: g,

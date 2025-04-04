@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(312089),
     i = n(910974),
     o = n(190031),
@@ -22,8 +22,8 @@ var s = n(192379),
     },
     f = (function (e) {
         function t(t, n) {
-            var r,
-                i = (r = e.call(this, t, n) || this).handleExited.bind((0, a.Z)((0, a.Z)(r)));
+            var r = e.call(this, t, n) || this,
+                i = r.handleExited.bind((0, a.Z)((0, a.Z)(r)));
             return (
                 (r.state = {
                     contextValue: { isMounting: !0 },
@@ -73,4 +73,4 @@ var s = n(192379),
         );
     })(s.Component);
 (f.propTypes = {}), (f.defaultProps = d);
-let p = f;
+let _ = f;

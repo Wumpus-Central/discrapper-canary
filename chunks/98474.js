@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     o = n(48026),
     a = n(642128),
-    s = n(748780),
-    l = n(481060),
+    l = n(748780),
+    s = n(481060),
     c = n(596454),
     u = n(745510),
     d = n(314910),
@@ -61,9 +61,9 @@ function O(e) {
     let { messageId: t, emoji: n, startPosition: O, targetPosition: y } = e,
         [T, x] = r.useState(0),
         [_, S] = r.useState(0),
-        [E, N] = r.useState(null),
-        { confettiCanvas: P } = r.useContext(u.h),
-        C = (0, o.uR)(P, E),
+        [C, E] = r.useState(null),
+        { confettiCanvas: N } = r.useContext(u.h),
+        P = (0, o.uR)(N, C),
         R = r.useMemo(
             () => [
                 {
@@ -82,19 +82,19 @@ function O(e) {
         ),
         I = y.x - (y.width / 2) * 0.5,
         w = y.y - (y.height / 2) * 0.5,
-        Z = (0, l.q_F)({
+        Z = (0, s.q_F)({
             from: { y: O.y },
             to: { y: w },
             config: {
                 duration: 450,
-                easing: s.Z.Easing.in(s.Z.Easing.exp)
+                easing: l.Z.Easing.in(l.Z.Easing.exp)
             },
             onChange: (e) => {
                 let { y: t } = e;
                 S(t);
             }
         }),
-        A = (0, l.q_F)({
+        A = (0, s.q_F)({
             from: {
                 x: O.x,
                 scale: 1,
@@ -107,7 +107,7 @@ function O(e) {
             },
             config: {
                 duration: 450,
-                easing: s.Z.Easing.in(s.Z.Easing.ease)
+                easing: l.Z.Easing.in(l.Z.Easing.ease)
             },
             onRest: () => {
                 (0, h.G)(t, n.name, n.id);
@@ -121,7 +121,7 @@ function O(e) {
         r.useEffect(() => {
             T > 0 &&
                 _ > 0 &&
-                C.createConfetti(
+                P.createConfetti(
                     j(b({}, f.We), {
                         position: {
                             type: 'static',
@@ -132,11 +132,11 @@ function O(e) {
                         }
                     })
                 );
-        }, [C, T, _]),
+        }, [P, T, _]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Ji, {
-                    ref: N,
+                    ref: E,
                     sprites: R,
                     colors: v,
                     spriteWidth: f.Ko,

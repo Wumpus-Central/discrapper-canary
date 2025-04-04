@@ -21,8 +21,8 @@ var l,
     S = n(906732),
     E = n(835473),
     T = n(447003),
-    C = n(471445),
-    b = n(259473),
+    b = n(471445),
+    C = n(259473),
     _ = n(600164),
     y = n(687516),
     O = n(648159),
@@ -39,9 +39,9 @@ var l,
     U = n(944486),
     V = n(594174),
     B = n(938475),
-    z = n(626135),
-    F = n(630388),
-    G = n(971130),
+    F = n(626135),
+    G = n(630388),
+    z = n(971130),
     H = n(264229),
     q = n(340541),
     Y = n(366980),
@@ -105,7 +105,7 @@ function eu(e, t) {
         e
     );
 }
-let { INVITE_OPTIONS_FOREVER: ec, INVITE_OPTIONS_7_DAYS: eh, INVITE_OPTIONS_UNLIMITED: eg } = G.ZP;
+let { INVITE_OPTIONS_FOREVER: ec, INVITE_OPTIONS_7_DAYS: eh, INVITE_OPTIONS_UNLIMITED: eg } = z.ZP;
 class em extends (l = s.PureComponent) {
     componentDidMount() {
         let { inviteChannel: e, code: t, guild: n, source: l, canCreateInvites: i, analyticsLocation: s, streamUserId: r, targetType: a, targetUserId: o, application: d, initialCounts: u, rows: c, showFriends: h, modalState: g, setModalState: m } = this.props,
@@ -131,7 +131,7 @@ class em extends (l = s.PureComponent) {
         }
         if (
             (h &&
-                z.default.track(et.rMx.INVITE_SUGGESTION_OPENED, {
+                F.default.track(et.rMx.INVITE_SUGGESTION_OPENED, {
                     location: l,
                     num_suggestions: c.length,
                     num_friends: u.numFriends,
@@ -144,7 +144,7 @@ class em extends (l = s.PureComponent) {
         ) {
             let e = A.Z.getStreamForUser(r, n.id),
                 t = (0, y.L2)(e, D.Z);
-            z.default.track(et.rMx.OPEN_MODAL, {
+            F.default.track(et.rMx.OPEN_MODAL, {
                 type: 'Send Stream Invite',
                 source: l,
                 location: s,
@@ -155,7 +155,7 @@ class em extends (l = s.PureComponent) {
             });
         } else
             (null == d ? void 0 : d.id) != null ||
-                z.default.track(et.rMx.OPEN_MODAL, {
+                F.default.track(et.rMx.OPEN_MODAL, {
                     type: 'Instant Invite Modal',
                     source: l,
                     location: s
@@ -163,7 +163,7 @@ class em extends (l = s.PureComponent) {
     }
     componentWillUnmount() {
         let { inviteChannel: e, modalState: t } = this.props;
-        (0, F.yE)(t.flags, g.$.IS_GUEST_INVITE) && null != e && N.ZP.clearInviteFromStore(e.id);
+        (0, G.yE)(t.flags, g.$.IS_GUEST_INVITE) && null != e && N.ZP.clearInviteFromStore(e.id);
     }
     getInviteKey() {
         let { code: e, vanityURLCode: t, guildScheduledEvent: n, modalState: l } = this.props,
@@ -204,7 +204,7 @@ class em extends (l = s.PureComponent) {
             g = null,
             m = null;
         if (((e = o ? null : null != s ? el.NW.string(el.t['6VQaqa']) : null != r ? el.NW.formatToPlainString(el.t.ZdK3dX, { applicationName: r.name }) : null != l ? el.NW.string(el.t.JKV4FB) : (null == d ? void 0 : d.isGuildStageVoice()) ? el.NW.string(el.t.zTrsHx) : el.NW.format(el.t.NvVBJS, { name: t.toString() })), null != d)) {
-            let e = (0, C.KS)(d, t);
+            let e = (0, b.KS)(d, t);
             null != e &&
                 (m = (0, i.jsxs)('div', {
                     className: ei.headerChannelContainer,
@@ -545,10 +545,10 @@ class em extends (l = s.PureComponent) {
             eo(this, 'getRowHeight', (e, t) => {
                 if (e > 0) return 0;
                 switch (this.props.rows[t].type) {
-                    case G.bm.CHANNEL:
-                    case G.bm.GROUP_DM:
-                    case G.bm.DM:
-                    case G.bm.FRIEND:
+                    case z.bm.CHANNEL:
+                    case z.bm.GROUP_DM:
+                    case z.bm.DM:
+                    case z.bm.FRIEND:
                         return $.k;
                     default:
                         return 0;
@@ -562,8 +562,8 @@ class em extends (l = s.PureComponent) {
                     r = this.props.rows[n],
                     a = ''.concat(r.type, '-').concat(r.item.id);
                 switch (r.type) {
-                    case G.bm.GROUP_DM:
-                    case G.bm.CHANNEL:
+                    case z.bm.GROUP_DM:
+                    case z.bm.CHANNEL:
                         return (0, i.jsx)(
                             $.d,
                             {
@@ -574,8 +574,8 @@ class em extends (l = s.PureComponent) {
                             },
                             a
                         );
-                    case G.bm.DM:
-                    case G.bm.FRIEND:
+                    case z.bm.DM:
+                    case z.bm.FRIEND:
                         return (0, i.jsx)(
                             $.d,
                             {
@@ -598,7 +598,7 @@ eo(em, 'defaultProps', {
 });
 let ex = s.forwardRef(function (e, t) {
     var n, l;
-    let { channel: r, guild: a, source: o, guildScheduledEvent: d, streamUserId: u, applicationId: c, transitionState: h, onClose: v, welcomeToServer: p, page: C, analyticsLocation: _ } = e,
+    let { channel: r, guild: a, source: o, guildScheduledEvent: d, streamUserId: u, applicationId: c, transitionState: h, onClose: v, welcomeToServer: p, page: b, analyticsLocation: _ } = e,
         { analyticsLocations: y } = (0, S.ZP)(j.Z.INSTANT_INVITE_MODAL),
         O = (0, m.e7)(
             [U.Z, k.Z, R.ZP],
@@ -627,7 +627,7 @@ let ex = s.forwardRef(function (e, t) {
             },
             [O, A, u, c]
         ),
-        [z, G, H, q] = (0, m.Wu)([W.Z, B.ZP], () => [W.Z.getInviteSuggestionRows(), W.Z.getTotalSuggestionsCount() >= 1, W.Z.getInitialCounts(), null != r && null != O ? B.ZP.getVoiceStatesForChannel(O) : null], [O, r]),
+        [F, z, H, q] = (0, m.Wu)([W.Z, B.ZP], () => [W.Z.getInviteSuggestionRows(), W.Z.getTotalSuggestionsCount() >= 1, W.Z.getInitialCounts(), null != r && null != O ? B.ZP.getVoiceStatesForChannel(O) : null], [O, r]),
         Y = (0, m.e7)(
             [w.ZP],
             () => {
@@ -668,7 +668,7 @@ let ex = s.forwardRef(function (e, t) {
         }).catch(et.VqG);
     }, [Q, r, a, c, A]);
     let [ei] = (0, E.Z)(null != c ? [c] : []),
-        es = (0, b.Z)({ guildId: D }),
+        es = (0, C.Z)({ guildId: D }),
         er = null != V ? V.code : void 0,
         ea = null == V ? void 0 : V.maxAge,
         eo = null == V ? void 0 : V.maxUses,
@@ -688,7 +688,7 @@ let ex = s.forwardRef(function (e, t) {
             temporary: null != eu && eu,
             networkError: void 0,
             showVanityURL: ep,
-            currentPage: null != C ? C : ee.RV.MAIN,
+            currentPage: null != b ? b : ee.RV.MAIN,
             lastPage: void 0,
             flags: eI
         }),
@@ -704,13 +704,13 @@ let ex = s.forwardRef(function (e, t) {
             },
             [ej.currentPage, eE]
         ),
-        eC = eN && !ep && !J && !ef,
-        { enabled: eb } = P.o.useExperiment(
+        eb = eN && !ep && !J && !ef,
+        { enabled: eC } = P.o.useExperiment(
             {
                 guildId: null == a ? void 0 : a.id,
                 location: 'acc417_3'
             },
-            { autoTrackExposure: eC }
+            { autoTrackExposure: eb }
         ),
         { maxAge: e_, maxUses: ey, temporary: eO, savedMaxAge: eP, flags: eZ } = ej,
         eA = s.useCallback(() => {
@@ -751,9 +751,9 @@ let ex = s.forwardRef(function (e, t) {
                 e_ !== ec.value && eP !== ec.value && eE({ savedMaxAge: ec.value });
         }, [ep, X, O, o, null == ei ? void 0 : ei.id, A, u, e_, ey, eO, eE, eP, eZ]),
         ek = (0, f.Z)(O),
-        eR = (0, f.Z)((0, F.yE)(eZ, g.$.IS_APPLICATION_BYPASS)),
+        eR = (0, f.Z)((0, G.yE)(eZ, g.$.IS_APPLICATION_BYPASS)),
         eM = null != ek && ek !== O,
-        eW = null != eR && eR !== (0, F.yE)(eZ, g.$.IS_APPLICATION_BYPASS);
+        eW = null != eR && eR !== (0, G.yE)(eZ, g.$.IS_APPLICATION_BYPASS);
     s.useEffect(() => {
         !ep && (eM || eW) && ew();
     }, [ew, eM, eW, ep]);
@@ -772,8 +772,8 @@ let ex = s.forwardRef(function (e, t) {
             targetType: A,
             targetUserId: u,
             application: ei,
-            rows: z,
-            showFriends: G,
+            rows: F,
+            showFriends: z,
             initialCounts: H,
             code: er,
             source: o,
@@ -783,8 +783,8 @@ let ex = s.forwardRef(function (e, t) {
             transitionState: h,
             onClose: v,
             canShowVanityURL: ep,
-            isGuestInviteCreationToggleEnabled: eb && eC,
-            shouldHideTemporaryInviteToggle: (eb && eC) || eD,
+            isGuestInviteCreationToggleEnabled: eC && eb,
+            shouldHideTemporaryInviteToggle: (eC && eb) || eD,
             modalState: ej,
             setModalState: eE,
             changePage: eT,

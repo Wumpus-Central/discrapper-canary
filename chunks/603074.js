@@ -9,19 +9,19 @@ var r = n(200651),
     u = n(906732),
     d = n(28546),
     f = n(675478),
-    p = n(208049),
-    _ = n(522811),
+    _ = n(208049),
+    p = n(522811),
     h = n(763296),
     m = n(526617),
-    g = n(719118);
+    g = n(268365);
 function E(e) {
-    let { guildId: t, channel: n, containerWidth: o, onClose: E, onSelect: v, analyticsSource: b, suppressPlaySound: y, shouldValidateSelectedSound: O, shouldShowUpsell: S = !0, gridNotice: I, inExpressionPicker: T, soundButtonOverlay: N, listPadding: A, renderHeader: C, defaultSoundsOnly: R } = e,
+    let { guildId: t, channel: n, containerWidth: o, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: v, shouldValidateSelectedSound: O, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: N, listPadding: A, renderHeader: C, defaultSoundsOnly: R } = e,
         P = (0, s.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
         { analyticsLocations: w } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     i.useEffect(() => {
-        p.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)('');
+        _.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)('');
     }, [T]);
-    let { refreshEnabled: D } = (0, _.Z)({ location: 'SoundboardSoundPicker' });
+    let { refreshEnabled: D } = (0, p.Z)({ location: 'SoundboardSoundPicker' });
     return (0, r.jsx)(u.Gt, {
         value: w,
         children: (0, r.jsx)(l.VqE, {
@@ -36,19 +36,19 @@ function E(e) {
                       guildId: t,
                       channel: n,
                       onClose: E,
-                      onSelect: v,
+                      onSelect: b,
                       shouldValidateSelectedSound: O,
                       containerWidth: o,
-                      suppressPlaySound: y,
-                      shouldShowUpsell: S,
-                      gridNotice: I,
+                      suppressPlaySound: v,
+                      shouldShowUpsell: I,
+                      gridNotice: S,
                       soundButtonOverlay: N,
                       listPadding: A,
                       renderHeader: C,
                       defaultSoundsOnly: R,
                       inExpressionPicker: T,
                       refreshEnabled: D,
-                      analyticsSource: b
+                      analyticsSource: y
                   })
         })
     });

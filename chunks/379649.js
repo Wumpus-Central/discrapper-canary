@@ -1,8 +1,8 @@
 n.d(t, {
-    A3: () => _,
+    A3: () => p,
     CI: () => g,
     G9: () => u,
-    J6: () => p,
+    J6: () => _,
     Z_: () => l,
     _v: () => f,
     jU: () => m,
@@ -40,7 +40,7 @@ class c {
         return this.milliseconds >= e.milliseconds;
     }
     constructor(e, t, n, r) {
-        a(this, 'milliseconds', 0), a(this, 'asMilliseconds', () => this.milliseconds), a(this, 'asSeconds', () => this.milliseconds / 1000), a(this, 'asMinutes', () => this.milliseconds / 1000 / 60), a(this, 'asHours', () => this.milliseconds / 1000 / 60 / 60), a(this, 'add', (e) => c.fromMilliseconds(this.milliseconds + e.milliseconds)), a(this, 'subtract', (e) => c.fromMilliseconds(this.milliseconds - e.milliseconds)), a(this, 'subtractOrZero', (e) => c.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0))), (this.milliseconds += r || 0), (this.milliseconds += 1000 * (n || 0)), (this.milliseconds += 60000 * (t || 0)), (this.milliseconds += 3600000 * (e || 0));
+        a(this, 'milliseconds', 0), a(this, 'asMilliseconds', () => this.milliseconds), a(this, 'asSeconds', () => this.milliseconds / 1000), a(this, 'asMinutes', () => this.milliseconds / 1000 / 60), a(this, 'asHours', () => this.milliseconds / 1000 / 60 / 60), a(this, 'add', (e) => c.fromMilliseconds(this.milliseconds + e.milliseconds)), a(this, 'subtract', (e) => c.fromMilliseconds(this.milliseconds - e.milliseconds)), a(this, 'subtractOrZero', (e) => c.fromMilliseconds(Math.max(this.milliseconds - e.milliseconds, 0))), (this.milliseconds += r || 0), (this.milliseconds += 1000 * (n || 0)), (this.milliseconds += 1000 * (t || 0) * 60), (this.milliseconds += 1000 * (e || 0) * 3600);
     }
 }
 a(c, 'fromMilliseconds', (e) => new c(0, 0, 0, e)), a(c, 'fromSeconds', (e) => new c(0, 0, e)), a(c, 'fromMinutes', (e) => new c(0, e)), a(c, 'fromHours', (e) => new c(e));
@@ -89,8 +89,8 @@ class d {
         return t.start(), t;
     }
     static async waitFor(e, t) {
-        let n;
-        let r = c.fromMilliseconds(100);
+        let n,
+            r = c.fromMilliseconds(100);
         e instanceof c ? (n = e) : ((n = e.timeout), null != e.sleep && (r = e.sleep));
         let i = d.startNew(n);
         do {
@@ -109,10 +109,10 @@ function f(e) {
         setTimeout(() => e(), t);
     });
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (e.NONE = 'NONE'), (e.SECONDS = 'SECONDS'), (e.MINUTES = 'MINUTES'), (e.HOURS = 'HOURS'), (e.DAYS = 'DAYS'), (e.WEEKS = 'WEEKS'), (e.MONTHS = 'MONTHS'), (e.YEARS = 'YEARS'), e;
 })({});
-function _(e, t) {
+function p(e, t) {
     switch (t) {
         case 'NONE':
             return 0;
@@ -193,7 +193,7 @@ function g(e, t) {
             time: 0
         };
     let n = m(e, (e) => t.includes(e)),
-        r = null != n ? _(e, n) : null;
+        r = null != n ? p(e, n) : null;
     return {
         unit: n,
         time: null != r ? Math.floor(r) : null

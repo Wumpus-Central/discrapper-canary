@@ -9,12 +9,12 @@ let o = Date.now(),
     let u = Date.now(),
         d = ((u - o) / 1000).toFixed(3),
         f = ((u - a) / 1000).toFixed(3),
-        p = 'Σ:'.concat(d, 's, Δ:').concat(f, 's');
+        _ = 'Σ:'.concat(d, 's, Δ:').concat(f, 's');
     (a = u),
         i.Hj(
             {
                 name: e,
-                timing: p
+                timing: _
             },
             n,
             ...l

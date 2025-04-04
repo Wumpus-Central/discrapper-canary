@@ -16,7 +16,7 @@ function v(e) {
     let { guildId: n, powerup: t } = e,
         i = null != (0, c.Z)(n, t),
         [v, f] = o.useState(void 0),
-        b = (0, l.Z)(t);
+        g = (0, l.Z)(t);
     return (
         (0, p.KT)(v),
         (0, r.jsxs)(d.Z, {
@@ -28,7 +28,7 @@ function v(e) {
                     children: (0, r.jsx)('img', {
                         className: _.image,
                         alt: '',
-                        src: b
+                        src: g
                     })
                 }),
                 (0, r.jsxs)('div', {

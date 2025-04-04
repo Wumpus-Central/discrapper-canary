@@ -24,5 +24,5 @@ function d(e) {
 function f(e) {
     var t;
     let n = i.Z.getGuild(e);
-    return null != n && (null !== (t = null == n ? void 0 : n.maxStageVideoChannelUsers) && void 0 !== t ? t : 0) > 0;
+    return null != n && (null != (t = null == n ? void 0 : n.maxStageVideoChannelUsers) ? t : 0) > 0;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r,
     i = n(442837),
     o = n(570140),
@@ -36,7 +36,7 @@ let c = {},
     u = {};
 function d(e, t) {
     var n;
-    let r = l({}, null !== (n = c[e]) && void 0 !== n ? n : {});
+    let r = l({}, null != (n = c[e]) ? n : {});
     null == t ||
         t.forEach((e) => {
             (u[e.channel_id] = e), (r[e.channel_id] = e);
@@ -47,14 +47,14 @@ function f(e) {
     let { guilds: t } = e;
     (c = {}), (u = {}), t.forEach((e) => d(e.id, e.stage_instances));
 }
-function p(e) {
+function _(e) {
     let { guild: t } = e;
     d(t.id, t.stage_instances);
 }
-function _(e) {
+function p(e) {
     var t;
     let { guild: n } = e,
-        r = null !== (t = c[n.id]) && void 0 !== t ? t : {};
+        r = null != (t = c[n.id]) ? t : {};
     delete c[n.id],
         Object.keys(r).forEach((e) => {
             delete u[e];
@@ -67,7 +67,7 @@ function h(e) {
 function m(e, t) {
     var n;
     if ((delete u[t], null == e)) return;
-    let r = l({}, null !== (n = c[e]) && void 0 !== n ? n : {});
+    let r = l({}, null != (n = c[e]) ? n : {});
     delete r[t], (c[e] = r);
 }
 function g(e) {
@@ -78,10 +78,10 @@ function E(e) {
     let { channel: t } = e;
     m(t.guild_id, t.id);
 }
-function v() {
+function b() {
     (u = {}), (c = {});
 }
-class b extends (r = i.ZP.Store) {
+class y extends (r = i.ZP.Store) {
     getStageInstanceByChannel(e) {
         if (null != e) return u[e];
     }
@@ -90,24 +90,24 @@ class b extends (r = i.ZP.Store) {
     }
     isPublic(e) {
         var t;
-        return (null === (t = this.getStageInstanceByChannel(e)) || void 0 === t ? void 0 : t.privacy_level) === a.j8.PUBLIC;
+        return (null == (t = this.getStageInstanceByChannel(e)) ? void 0 : t.privacy_level) === a.j8.PUBLIC;
     }
     getStageInstancesByGuild(e) {
         var t;
-        return null == e ? {} : null !== (t = c[e]) && void 0 !== t ? t : {};
+        return null == e ? {} : null != (t = c[e]) ? t : {};
     }
     getAllStageInstances() {
         return Object.values(u);
     }
 }
-s(b, 'displayName', 'StageInstanceStore');
-let y = new b(o.Z, {
+s(y, 'displayName', 'StageInstanceStore');
+let v = new y(o.Z, {
     CONNECTION_OPEN: f,
-    GUILD_CREATE: p,
-    GUILD_DELETE: _,
+    GUILD_CREATE: _,
+    GUILD_DELETE: p,
     STAGE_INSTANCE_CREATE: h,
     STAGE_INSTANCE_UPDATE: h,
     STAGE_INSTANCE_DELETE: g,
     CHANNEL_DELETE: E,
-    LOGOUT: v
+    LOGOUT: b
 });

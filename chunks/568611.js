@@ -33,15 +33,15 @@ var d = function (e, t) {
     f = function (e, t) {
         return 'string' == typeof e ? (0, a.ob)(e, null, null, t) : e;
     },
-    p = function (e) {
+    _ = function (e) {
         return e;
     },
-    _ = o.forwardRef;
+    p = o.forwardRef;
 function h(e) {
     return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
 }
-void 0 === _ && (_ = p);
-var m = _(function (e, t) {
+void 0 === p && (p = _);
+var m = p(function (e, t) {
         var n = e.innerRef,
             r = e.navigate,
             i = e.onClick,
@@ -57,9 +57,9 @@ var m = _(function (e, t) {
                     e.defaultPrevented || 0 !== e.button || (c && '_self' !== c) || h(e) || (e.preventDefault(), r());
                 }
             });
-        return p !== _ ? (u.ref = t || n) : (u.ref = n), o.createElement('a', u);
+        return _ !== p ? (u.ref = t || n) : (u.ref = n), o.createElement('a', u);
     }),
-    g = _(function (e, t) {
+    g = p(function (e, t) {
         var n = e.component,
             i = void 0 === n ? m : n,
             a = e.replace,
@@ -78,14 +78,14 @@ var m = _(function (e, t) {
                         (a ? n.replace : n.push)(t);
                     }
                 });
-            return p !== _ ? (m.ref = t || h) : (m.innerRef = h), o.createElement(i, m);
+            return _ !== p ? (m.ref = t || h) : (m.innerRef = h), o.createElement(i, m);
         });
     }),
     E = function (e) {
         return e;
     },
-    v = o.forwardRef;
-function b() {
+    b = o.forwardRef;
+function y() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t
         .filter(function (e) {
@@ -93,26 +93,26 @@ function b() {
         })
         .join(' ');
 }
-void 0 === v && (v = E),
-    v(function (e, t) {
+void 0 === b && (b = E),
+    b(function (e, t) {
         var n = e['aria-current'],
             i = void 0 === n ? 'page' : n,
             a = e.activeClassName,
             u = void 0 === a ? 'active' : a,
-            p = e.activeStyle,
-            _ = e.className,
+            _ = e.activeStyle,
+            p = e.className,
             h = e.exact,
             m = e.isActive,
-            y = e.location,
+            v = e.location,
             O = e.sensitive,
-            S = e.strict,
-            I = e.style,
+            I = e.strict,
+            S = e.style,
             T = e.to,
             N = e.innerRef,
             A = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
         return o.createElement(r.s6.Consumer, null, function (e) {
             e || (0, c.Z)(!1);
-            var n = y || e.location,
+            var n = v || e.location,
                 a = f(d(T, n), n),
                 l = a.pathname,
                 C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
@@ -121,13 +121,13 @@ void 0 === v && (v = E),
                           path: C,
                           exact: h,
                           sensitive: O,
-                          strict: S
+                          strict: I
                       })
                     : null,
                 P = !!(m ? m(R, n) : R),
-                w = P ? b(_, u) : _,
-                D = P ? (0, s.Z)({}, I, {}, p) : I,
-                x = (0, s.Z)(
+                w = P ? y(p, u) : p,
+                D = P ? (0, s.Z)({}, S, {}, _) : S,
+                L = (0, s.Z)(
                     {
                         'aria-current': (P && i) || null,
                         className: w,
@@ -136,6 +136,6 @@ void 0 === v && (v = E),
                     },
                     A
                 );
-            return E !== v ? (x.ref = t || N) : (x.innerRef = N), o.createElement(g, x);
+            return E !== b ? (L.ref = t || N) : (L.innerRef = N), o.createElement(g, L);
         });
     });

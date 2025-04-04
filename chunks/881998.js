@@ -26,10 +26,10 @@ var u = (function (e) {
 })({});
 let d = null,
     f = 'NOT_FETCHED';
-function p() {
+function _() {
     f = 'FETCHING';
 }
-function _(e) {
+function p(e) {
     (f = 'FETCHED'), (d = e.apps);
 }
 class h extends (r = i.ZP.Store) {
@@ -45,6 +45,6 @@ class h extends (r = i.ZP.Store) {
 }
 c(h, 'displayName', 'AuthorizedAppsStore');
 let m = new h(o.Z, {
-    USER_AUTHORIZED_APPS_REQUEST: p,
-    USER_AUTHORIZED_APPS_UPDATE: _
+    USER_AUTHORIZED_APPS_REQUEST: _,
+    USER_AUTHORIZED_APPS_UPDATE: p
 });

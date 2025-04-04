@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -8,8 +8,8 @@ var r = n(200651),
     c = n(254494),
     u = n(895924),
     d = n(826298),
-    f = n(592955);
-function p(e, t, n) {
+    f = n(700969);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -81,25 +81,25 @@ function E(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = [16, 8, 8, 8],
-    b = 32,
-    y = 4,
+let b = [16, 8, 8, 8],
+    y = 32,
+    v = 4,
     O = 8;
-function S(e) {
-    let { className: t, channel: n, sections: o, activeCategoryIndex: p, filteredSectionId: h, onSectionClick: E, applicationCommandListRef: S } = e,
-        I = i.useRef(null),
+function I(e) {
+    let { className: t, channel: n, sections: o, activeCategoryIndex: _, filteredSectionId: h, onSectionClick: E, applicationCommandListRef: I } = e,
+        S = i.useRef(null),
         T = i.useCallback(
             (e, t) => {
                 var n;
-                let r = 2 * y;
-                return (null === (n = o[t + 1]) || void 0 === n ? void 0 : n.type) === u.Qi.BUILT_IN && (r += O), b + r;
+                let r = 2 * v;
+                return (null == (n = o[t + 1]) ? void 0 : n.type) === u.Qi.BUILT_IN && (r += O), y + r;
             },
             [o]
         ),
         N = i.useCallback(
             (e, t) => {
                 var n;
-                return t ? ((null === (n = o[e + 1]) || void 0 === n ? void 0 : n.type) === u.Qi.BUILT_IN ? 0 : 2 * y) : 0 === e ? 0 : 2 * y;
+                return t ? ((null == (n = o[e + 1]) ? void 0 : n.type) === u.Qi.BUILT_IN ? 0 : 2 * v) : 0 === e ? 0 : 2 * v;
             },
             [o]
         ),
@@ -108,12 +108,12 @@ function S(e) {
                 let i = o[t];
                 if (null == i) return;
                 let a = (0, d.ky)(i),
-                    l = i.type === u.Qi.BUILT_IN ? y : 0,
-                    c = b - 2 * l,
-                    v = (0, r.jsx)(a, {
+                    l = i.type === u.Qi.BUILT_IN ? v : 0,
+                    c = y - 2 * l,
+                    b = (0, r.jsx)(a, {
                         channel: n,
                         section: i,
-                        isSelected: null != h ? i.id === h : p === t,
+                        isSelected: null != h ? i.id === h : _ === t,
                         padding: l,
                         width: c,
                         height: c,
@@ -134,7 +134,7 @@ function S(e) {
                                     return (0, r.jsx)(
                                         s.P3F,
                                         m(
-                                            _(
+                                            p(
                                                 {
                                                     'aria-label': i.name,
                                                     onClick: () => {
@@ -143,7 +143,7 @@ function S(e) {
                                                 },
                                                 n
                                             ),
-                                            { children: v }
+                                            { children: b }
                                         )
                                     );
                                 }
@@ -154,22 +154,22 @@ function S(e) {
                     i.id
                 );
             },
-            [p, n, E, o, h]
+            [_, n, E, o, h]
         );
     return 0 === o.length
         ? null
         : (0, r.jsx)('div', {
               className: a()(t, f.wrapper),
               children: (0, r.jsx)(c.Z, {
-                  categoryListRef: I,
-                  expressionsListRef: S,
+                  categoryListRef: S,
+                  expressionsListRef: I,
                   store: l.Xn,
                   categories: o,
                   className: f.list,
                   renderCategoryListItem: A,
                   rowCount: o.length,
                   categoryHeight: T,
-                  listPadding: v,
+                  listPadding: b,
                   getScrollOffsetForIndex: N
               })
           });

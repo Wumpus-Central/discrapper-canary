@@ -11,21 +11,21 @@ function i(e) {
 }
 function o(e) {
     let t = {};
-    if ((void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName), void 0 !== e.pendingAvatar && (t.avatar = e.pendingAvatar), void 0 !== e.pendingAvatarV2)) {
-        let { pendingAvatarV2: n } = e;
+    if ((void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName), void 0 !== e.pendingNameplate && (t.nameplate = e.pendingNameplate), void 0 !== e.pendingAvatar)) {
+        let { pendingAvatar: n } = e;
         null === n ? (t.avatar = null) : n.assetOrigin === r.q.ARCHIVED_ASSET ? (t.avatarId = n.originalAsset.id) : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
     return void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t;
 }
 function a(e) {
     let t = {};
-    if ((void 0 !== e.pendingAvatar && (t.avatar = e.pendingAvatar), void 0 !== e.pendingAvatarV2)) {
-        let { pendingAvatarV2: n } = e;
+    if (void 0 !== e.pendingAvatar) {
+        let { pendingAvatar: n } = e;
         null === n ? (t.avatar = null) : n.assetOrigin === r.q.ARCHIVED_ASSET ? (t.avatarId = n.originalAsset.id) : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
     if (void 0 !== e.pendingNickname) {
         var n;
-        t.nick = null !== (n = e.pendingNickname) && void 0 !== n ? n : '';
+        t.nick = null != (n = e.pendingNickname) ? n : '';
     }
     return void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t;
 }

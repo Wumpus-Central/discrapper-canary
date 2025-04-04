@@ -9,8 +9,8 @@ var r = n(392711),
     u = n(496675),
     d = n(9156),
     f = n(70956),
-    p = n(630388),
-    _ = n(823379),
+    _ = n(630388),
+    p = n(823379),
     h = n(789662),
     m = n(981631),
     g = n(526761);
@@ -26,9 +26,9 @@ function E(e, t, n, r, i) {
         ];
     let o = [],
         a = Object.values(s.Z.getMutableGuildChannelsForGuild(e.id)).filter((e) => u.Z.can(m.Plq.VIEW_CHANNEL, e));
-    return o.push(...v(e, a)), o.push(b(e)), o.push(y()), o.push(...S(a)), o.push(...I(a)), o.push(...A(a)), l.Z.hasConsented(m.pjP.PERSONALIZATION) ? o.push(...T(e, a, n, r, i)) : o.push(...N(e, a)), o.filter(_.lm);
+    return o.push(...b(e, a)), o.push(y(e)), o.push(v()), o.push(...I(a)), o.push(...S(a)), o.push(...A(a)), l.Z.hasConsented(m.pjP.PERSONALIZATION) ? o.push(...T(e, a, n, r, i)) : o.push(...N(e, a)), o.filter(p.lm);
 }
-function v(e, t) {
+function b(e, t) {
     if (!(d.ZP.isMuted(e.id) && !d.ZP.isTemporarilyMuted(e.id))) return [];
     let n = [
             {
@@ -55,7 +55,7 @@ function v(e, t) {
         n
     );
 }
-function b(e) {
+function y(e) {
     if (d.ZP.getMessageNotifications(e.id) === m.bL.ALL_MESSAGES)
         return {
             label: 'Setting the guild to only mentions since it is in care-a-little but was previously all-messages',
@@ -64,7 +64,7 @@ function b(e) {
             }
         };
 }
-function y() {
+function v() {
     return {
         label: 'Setting the guild to a grey dot unread',
         apply: (e, t) => {
@@ -74,9 +74,9 @@ function y() {
 }
 function O(e, t, n) {
     var r, i;
-    (e.flags = (0, p.mB)(null !== (i = null !== (r = e.flags) && void 0 !== r ? r : t.flags) && void 0 !== i ? i : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, p.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n));
+    (e.flags = (0, _.mB)(null != (i = null != (r = e.flags) ? r : t.flags) ? i : 0, g.vc.UNREADS_ALL_MESSAGES, n)), (e.flags = (0, _.mB)(e.flags, g.vc.UNREADS_ONLY_MENTIONS, !n));
 }
-function S(e) {
+function I(e) {
     let t = [],
         [n, r] = i()(e)
             .filter((e) => e.type === m.d4z.GUILD_ANNOUNCEMENT)
@@ -99,10 +99,10 @@ function S(e) {
         t
     );
 }
-function I(e) {
+function S(e) {
     let t = [],
         n = [];
-    for (let t of e) d.ZP.isChannelMuted(t.guild_id, t.id) && t.isCategory() && !a.Z.isCollapsed(t.id) && n.push(t);
+    for (let t of e) d.ZP.isChannelMuted(t.guild_id, t.id) && t.isCategory() && (a.Z.isCollapsed(t.id) || n.push(t));
     return (
         n.length > 0 &&
             t.push({
@@ -128,39 +128,39 @@ function T(e, t, n, r, o) {
             n.messages === h.XR.High ? o.frecency.yearMinOpensLargeServer : o.frecency.yearMinOpensSmallServer,
             s.reduce((e, t) => {
                 var n;
-                return e + Number(null !== (n = t.num_year_opens) && void 0 !== n ? n : 0);
+                return e + Number(null != (n = t.num_year_opens) ? n : 0);
             }, 0) * o.frecency.totalOpensPercent
         ),
         u = Math.max(
             o.frecency.monthMinOpens,
             s.reduce((e, t) => {
                 var n;
-                return e + Number(null !== (n = t.num_three_month_opens) && void 0 !== n ? n : 0);
+                return e + Number(null != (n = t.num_three_month_opens) ? n : 0);
             }, 0) * o.frecency.totalOpensPercent
         ),
         f = [],
-        p = [];
+        _ = [];
     t.forEach((e) => {
         var t, n, r, i;
-        let o = null !== (t = l[e.id]) && void 0 !== t ? t : {};
-        Number(null !== (n = o.num_year_opens) && void 0 !== n ? n : 0) > c || Number(null !== (r = o.num_month_opens) && void 0 !== r ? r : 0) > u ? f.push(e) : Number(null !== (i = o.num_three_month_opens) && void 0 !== i ? i : 0) > 2 && p.push(e);
+        let o = null != (t = l[e.id]) ? t : {};
+        Number(null != (n = o.num_year_opens) ? n : 0) > c || Number(null != (r = o.num_month_opens) ? r : 0) > u ? f.push(e) : Number(null != (i = o.num_three_month_opens) ? i : 0) > 2 && _.push(e);
     });
-    let _ = [];
+    let p = [];
     return (
         f.length > 0 &&
-            _.push({
+            p.push({
                 label: 'Setting '.concat(f.length, ' channels to white-dot since they are recent and frequently viewed'),
                 debug: f.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join(''),
                 apply: (e, t) => {
                     for (let n of f) R(e, t, n.id, !0);
                 }
             }),
-        p.length > 0 &&
-            _.push({
-                label: 'NOT setting '.concat(p.length, ' channels to white-dot because they were only viewed a little.'),
-                debug: p.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join('')
+        _.length > 0 &&
+            p.push({
+                label: 'NOT setting '.concat(_.length, ' channels to white-dot because they were only viewed a little.'),
+                debug: _.map((e) => '\n    - #'.concat(e.name, ' (').concat(JSON.stringify(l[e.id]), ')')).join('')
             }),
-        _
+        p
     );
 }
 function N(e, t) {
@@ -172,7 +172,7 @@ function N(e, t) {
             .filter((e) => e instanceof o.Sf && r.has(e.id))
             .filter((e) => {
                 var t, n;
-                let r = null !== (n = null === (t = c.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
+                let r = null != (n = null == (t = c.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) ? void 0 : t.recentUses) ? n : [];
                 return 0 !== r.length && r[r.length - 1] >= i;
             });
     return (
@@ -218,12 +218,12 @@ function A(e) {
 }
 function C(e, t, n, r) {
     var o, a, s, l;
-    let c = null !== (s = null === (o = e.channel_overrides) || void 0 === o ? void 0 : o[n]) && void 0 !== s ? s : {};
-    r(c, null !== (l = null === (a = t.channel_overrides) || void 0 === a ? void 0 : a[n]) && void 0 !== l ? l : {}), i().isEmpty(c) || (null == e.channel_overrides && (e.channel_overrides = {}), (e.channel_overrides[n] = c));
+    let c = null != (s = null == (o = e.channel_overrides) ? void 0 : o[n]) ? s : {};
+    r(c, null != (l = null == (a = t.channel_overrides) ? void 0 : a[n]) ? l : {}), i().isEmpty(c) || (null == e.channel_overrides && (e.channel_overrides = {}), (e.channel_overrides[n] = c));
 }
 function R(e, t, n, r) {
     C(e, t, n, (e, t) => {
         var n, i;
-        (e.flags = (0, p.mB)(null !== (i = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== i ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, p.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r));
+        (e.flags = (0, _.mB)(null != (i = null != (n = e.flags) ? n : t.flags) ? i : 0, g.ic.UNREADS_ALL_MESSAGES, r)), (e.flags = (0, _.mB)(e.flags, g.ic.UNREADS_ONLY_MENTIONS, !r));
     });
 }

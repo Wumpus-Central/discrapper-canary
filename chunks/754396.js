@@ -1,4 +1,4 @@
-n.d(t, { Y: () => _ });
+n.d(t, { Y: () => p });
 var r = n(961742),
     i = n(27273),
     o = n(262068);
@@ -124,7 +124,7 @@ async function f(e, t) {
     let n = (0, r.qo)(e.ownerDocument.styleSheets);
     return d(await u(n, t));
 }
-async function p(e, t) {
+async function _(e, t) {
     let n = await f(e, t);
     return (
         await Promise.all(
@@ -135,8 +135,8 @@ async function p(e, t) {
         )
     ).join('\n');
 }
-async function _(e, t) {
-    let n = null != t.fontEmbedCSS ? t.fontEmbedCSS : t.skipFonts ? null : await p(e, t);
+async function p(e, t) {
+    let n = null != t.fontEmbedCSS ? t.fontEmbedCSS : t.skipFonts ? null : await _(e, t);
     if (n) {
         let t = document.createElement('style'),
             r = document.createTextNode(n);

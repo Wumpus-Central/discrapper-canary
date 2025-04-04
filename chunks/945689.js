@@ -29,7 +29,7 @@ class s {
     }
     _get(e) {
         var t;
-        return null !== (t = this._subscriptions[e]) && void 0 !== t
+        return null != (t = this._subscriptions[e])
             ? t
             : new (i())({
                   max: a,

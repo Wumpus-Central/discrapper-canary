@@ -16,10 +16,10 @@ var r = n(200651),
     g = n(471879),
     E = n(502762),
     b = n(848780),
-    v = n(907179),
-    y = n(228168),
+    y = n(907179),
+    v = n(228168),
     O = n(388032),
-    I = n(248957),
+    I = n(357576),
     S = n(609440);
 function T(e, t, n) {
     return (
@@ -80,7 +80,7 @@ function A(e) {
                 children: (0, r.jsx)(E.Z, {
                     user: t,
                     displayProfile: M,
-                    profileType: y.y0.BITE_SIZE,
+                    profileType: v.y0.BITE_SIZE,
                     children: (0, r.jsxs)('div', {
                         className: I.container,
                         children: [
@@ -113,7 +113,7 @@ function A(e) {
                                     (0, r.jsxs)(l.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, r.jsx)(v.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 isBlocked: w,
                                                 onClick: () => {
                                                     null == R || R(),

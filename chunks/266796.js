@@ -1,14 +1,14 @@
 var r = a(147018),
     n = a(325008),
-    o = a(161581),
-    _ = a(581031),
+    _ = a(161581),
+    o = a(581031),
     i = a(740362),
     c = a(354848),
     s = a(838957),
     E = a(714050),
     l = a(4340),
     u = a(381740),
-    I = o.Symbol,
+    I = _.Symbol,
     R = I && I.prototype;
 if (n && c(I) && (!('description' in R) || void 0 !== I().description)) {
     var d = {},
@@ -19,18 +19,18 @@ if (n && c(I) && (!('description' in R) || void 0 !== I().description)) {
         };
     u(A, I), (A.prototype = R), (R.constructor = A);
     var f = 'Symbol(description detection)' === String(I('description detection')),
-        p = _(R.valueOf),
-        T = _(R.toString),
-        N = /^Symbol\((.*)\)[^)]+$/,
-        L = _(''.replace),
-        h = _(''.slice);
+        p = o(R.valueOf),
+        N = o(R.toString),
+        T = /^Symbol\((.*)\)[^)]+$/,
+        L = o(''.replace),
+        h = o(''.slice);
     l(R, 'description', {
         configurable: !0,
         get: function () {
             var t = p(this);
             if (i(d, t)) return '';
-            var e = T(t),
-                a = f ? h(e, 7, -1) : L(e, N, '$1');
+            var e = N(t),
+                a = f ? h(e, 7, -1) : L(e, T, '$1');
             return '' === a ? void 0 : a;
         }
     }),

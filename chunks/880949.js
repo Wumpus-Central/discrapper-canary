@@ -5,10 +5,10 @@ var r = n(200651),
     a = n.n(o),
     s = n(481060),
     l = n(686546),
-    c = n(171715);
+    c = n(830129);
 let u = (e) => {
-    let { className: t, guild: n, isSelected: o = !0, width: u = 32, height: d = 32, shouldAnimate: f = !0, isLocked: p = !1 } = e,
-        [_, h] = i.useState(!1),
+    let { className: t, guild: n, isSelected: o = !0, width: u = 32, height: d = 32, shouldAnimate: f = !0, isLocked: _ = !1 } = e,
+        [p, h] = i.useState(!1),
         m = n.getIconURL(32, f && o),
         g = () => h(!0),
         E = () => h(!1);
@@ -20,7 +20,7 @@ let u = (e) => {
         children: [
             (0, r.jsx)(l.ZP, {
                 className: a()(c.mask, t),
-                mask: o || _ ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+                mask: o || p ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
                 width: u,
                 height: d,
                 children:
@@ -38,7 +38,7 @@ let u = (e) => {
                               className: c.guildIcon
                           })
             }),
-            p
+            _
                 ? (0, r.jsx)('div', {
                       className: c.categoryItemLockIconContainer,
                       children: (0, r.jsx)(s.mBM, {

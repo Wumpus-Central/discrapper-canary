@@ -15,7 +15,7 @@ function a(e, t) {
     }
     window.setTimeout(() => {
         var e;
-        (null !== (e = null == r ? void 0 : r.parentElement) && void 0 !== e ? e : null) !== null && n.removeChild(r);
+        (null != (e = null == r ? void 0 : r.parentElement) ? e : null) !== null && n.removeChild(r);
     }, 1000);
 }
 function s(e, t) {
@@ -38,6 +38,6 @@ function c(e, t) {
 let u = {
     launch: (function () {
         var e, t;
-        return (null === (e = i().os) || void 0 === e ? void 0 : e.family) === 'Android' || (null === (t = i().os) || void 0 === t ? void 0 : t.family) === 'iOS' ? c : 'Gecko' === i().layout ? a : null != i().ua && -1 !== i().ua.indexOf('Valve Steam GameOverlay') ? l : s;
+        return (null == (e = i().os) ? void 0 : e.family) === 'Android' || (null == (t = i().os) ? void 0 : t.family) === 'iOS' ? c : 'Gecko' === i().layout ? a : null != i().ua && -1 !== i().ua.indexOf('Valve Steam GameOverlay') ? l : s;
     })()
 };

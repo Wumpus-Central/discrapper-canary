@@ -1,4 +1,4 @@
-n.d(t, { J: () => S }), n(47120), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { J: () => I }), n(47120), n(610138), n(216116), n(78328), n(815648);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,11 +9,11 @@ var r = n(200651),
     u = n(210887),
     d = n(585483),
     f = n(531826),
-    p = n(53289),
-    _ = n(953101),
+    _ = n(53289),
+    p = n(953101),
     h = n(701488),
     m = n(981631),
-    g = n(638920);
+    g = n(962140);
 function E(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,44 +55,44 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function O(e) {
-    let { url: t, className: n, style: o, onLoad: a, shouldRefocus: g, queryParams: E, allowPopups: b = !1, referrerPolicy: O = 'origin' } = e,
-        S = (0, f.sU)({}),
-        I = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
+    let { url: t, className: n, style: o, onLoad: a, shouldRefocus: g, queryParams: E, allowPopups: y = !1, referrerPolicy: O = 'origin' } = e,
+        I = (0, f.sU)({}),
+        S = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
         T = i.useRef(null),
-        N = (0, p.Z)(T, g, null == S ? window : S),
-        A = y(v({}, E), {
-            frame_id: I,
+        N = (0, _.Z)(T, g, null == I ? window : I),
+        A = v(b({}, E), {
+            frame_id: S,
             platform: h.S4.DESKTOP
         }),
         [C, R] = i.useState(!1),
         P = u.Z.theme,
-        w = v({}, o);
+        w = b({}, o);
     function D(e) {
         var n;
-        null == a || a(e.target), (T.current = e.target), N(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.Z.HELLO, A], null != t ? t : '');
+        null == a || a(e.target), (T.current = e.target), N(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, A], null != t ? t : '');
     }
     return (
         P === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
         i.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: I }),
+                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: S }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: I });
+                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: S });
                 }
             ),
-            [I]
+            [S]
         ),
         i.useEffect(() => {
             let e = (e) => {
@@ -113,14 +113,14 @@ function O(e) {
                   allow: 'autoplay; encrypted-media',
                   referrerPolicy: O,
                   onLoad: D,
-                  sandbox: (0, _.Z)({ allowPopups: b }),
+                  sandbox: (0, p.Z)({ allowPopups: y }),
                   className: n,
                   src: ''.concat(t, '?').concat(new URLSearchParams(A))
               })
             : null
     );
 }
-function S(e) {
+function I(e) {
     let { onLoad: t } = e,
         [n, o] = i.useState(!1),
         s = i.useCallback(
@@ -135,7 +135,7 @@ function S(e) {
             !n && (0, r.jsx)('div', { className: a()(g.fillParent, g.iframePlaceholder) }),
             (0, r.jsx)('div', {
                 className: a()(g.fillParent, n ? void 0 : g.hiddenIframeContainer),
-                children: (0, r.jsx)(O, y(v({}, e), { onLoad: s }))
+                children: (0, r.jsx)(O, v(b({}, e), { onLoad: s }))
             })
         ]
     });

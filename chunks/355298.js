@@ -26,12 +26,12 @@ function f(e) {
     let t = !1;
     return d(e) && !s.has(e.id) && (s.add(e.id), (t = !0)), !d(e) && s.has(e.id) && (s.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
 }
-function p(e) {
-    var t;
-    null != e && (u = null !== (t = (0, r.Zz)(e)) && void 0 !== t ? t : (0, r.K4)());
-}
 function _(e) {
-    'CONNECTION_OPEN' === e.type && p(e.countryCode),
+    var t;
+    null != e && (u = null != (t = (0, r.Zz)(e)) ? t : (0, r.K4)());
+}
+function p(e) {
+    'CONNECTION_OPEN' === e.type && _(e.countryCode),
         s.clear(),
         l.clear(),
         Object.values(i.Z.getMutablePrivateChannels()).forEach((e) => {
@@ -55,25 +55,25 @@ function E(e) {
     let { channel: t } = e;
     return !!s.has(t.id) && (s.delete(t.id), !0);
 }
-function v(e) {
+function b(e) {
     let { messageRequestChannelIds: t } = e;
     t.forEach((e) => s.add(e));
 }
-function b(e) {
+function y(e) {
     let { countryCode: t } = e;
-    p(t);
+    _(t);
 }
-class y extends o.Z {
+class v extends o.Z {
     initialize() {
         this.waitFor(i.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(y.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(v.LATEST_SNAPSHOT_VERSION);
         null != e && (s = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: y.LATEST_SNAPSHOT_VERSION,
+            version: v.LATEST_SNAPSHOT_VERSION,
             data: Array.from(s)
         };
     }
@@ -97,17 +97,17 @@ class y extends o.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: _,
-            CONNECTION_OPEN_SUPPLEMENTAL: _,
+            CONNECTION_OPEN: p,
+            CONNECTION_OPEN_SUPPLEMENTAL: p,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            OVERLAY_INITIALIZE: v,
+            OVERLAY_INITIALIZE: b,
             CHANNEL_CREATE: m,
             CHANNEL_UPDATES: g,
             CHANNEL_DELETE: E,
-            SET_LOCATION_METADATA: b,
+            SET_LOCATION_METADATA: y,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
         });
     }
 }
-a(y, 'displayName', 'MessageRequestStore'), a(y, 'LATEST_SNAPSHOT_VERSION', 1);
-let O = new y();
+a(v, 'displayName', 'MessageRequestStore'), a(v, 'LATEST_SNAPSHOT_VERSION', 1);
+let O = new v();

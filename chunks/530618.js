@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h }), n(47120);
 var r = n(200651),
     i = n(192379),
-    o = n(119617),
+    o = n(48026),
     a = n(675654);
 function s(e, t, n) {
     return (
@@ -57,8 +57,8 @@ function u(e, t) {
 }
 let d = 50,
     f = 10,
-    p = 100;
-function _(e, t) {
+    _ = 100;
+function p(e, t) {
     return (
         (t = null != t ? t : 1),
         u(l({}, a.We), {
@@ -105,8 +105,8 @@ let h = function (e) {
                     !g &&
                     (e = e.map((n, r) =>
                         setTimeout(() => {
-                            r === e.length - 1 && E(!0), m.createMultipleConfetti(_(t.getBoundingClientRect(), s), d);
-                        }, r * p)
+                            r === e.length - 1 && E(!0), m.createMultipleConfetti(p(t.getBoundingClientRect(), s), d);
+                        }, r * _)
                     )),
                 () => {
                     for (let t of e) clearTimeout(t);

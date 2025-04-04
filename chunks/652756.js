@@ -24,7 +24,7 @@ function s(e) {
 }
 function l(e) {
     var t;
-    return 'IMG' === e.nodeName && ((0, r.v)() || !(null !== (t = document.documentElement) && void 0 !== t && t.contains(e)));
+    return 'IMG' === e.nodeName && ((0, r.v)() || !(null != (t = document.documentElement) && t.contains(e)));
 }
 function c(e, t, n, i) {
     var o = e ? t.width : n,
@@ -44,25 +44,25 @@ function u(e, t, n, o, s) {
             x: n.x - d.x,
             y: n.y - d.y
         },
-        p = e.offsetWidth,
-        _ = e.offsetHeight,
+        _ = e.offsetWidth,
+        p = e.offsetHeight,
         h = o.anchorX,
         m = o.anchorY,
-        g = c(u, t, p, _),
+        g = c(u, t, _, p),
         E = g.dragPreviewWidth,
-        v = g.dragPreviewHeight,
-        b = function () {
-            var e = new i.I([0, 0.5, 1], [f.y, (f.y / _) * v, f.y + v - _]).interpolate(m);
-            return (0, r.G)() && u && (e += (window.devicePixelRatio - 1) * v), e;
-        },
+        b = g.dragPreviewHeight,
         y = function () {
-            return new i.I([0, 0.5, 1], [f.x, (f.x / p) * E, f.x + E - p]).interpolate(h);
+            var e = new i.I([0, 0.5, 1], [f.y, (f.y / p) * b, f.y + b - p]).interpolate(m);
+            return (0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e;
+        },
+        v = function () {
+            return new i.I([0, 0.5, 1], [f.x, (f.x / _) * E, f.x + E - _]).interpolate(h);
         },
         O = s.offsetX,
-        S = s.offsetY,
-        I = 0 === S || S;
+        I = s.offsetY,
+        S = 0 === I || I;
     return {
-        x: 0 === O || O ? O : y(),
-        y: I ? S : b()
+        x: 0 === O || O ? O : v(),
+        y: S ? I : y()
     };
 }

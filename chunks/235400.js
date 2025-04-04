@@ -16,14 +16,14 @@ var r = n(200651),
     g = n(369111),
     E = n(594174),
     b = n(626135),
-    v = n(74538),
-    y = n(864106),
+    y = n(74538),
+    v = n(864106),
     O = n(240781),
     I = n(818611),
     S = n(981631),
     T = n(474936),
     N = n(388032),
-    A = n(136168);
+    A = n(543901);
 function C(e) {
     let { user: t, categories: n, purchases: o, analyticsLocations: l, onClose: f, initialSelectedDecoration: E, initialSelectedDecorationId: b, isTryItOutFlow: S, guild: C } = e,
         {
@@ -39,13 +39,13 @@ function C(e) {
             var e, t;
             if (null != E) return E;
             let r = (0, u.iC)(o, n);
-            return null != b ? (null !== (e = r.find((e) => e.id === b)) && void 0 !== e ? e : null) : void 0 !== R ? R : null == w ? null : null !== (t = r.find((e) => (0, y.sr)(e, w))) && void 0 !== t ? t : null;
+            return null != b ? (null != (e = r.find((e) => e.id === b)) ? e : null) : void 0 !== R ? R : null == w ? null : null != (t = r.find((e) => (0, v.sr)(e, w))) ? t : null;
         }),
         { product: x, purchase: M } = (0, d.Z)(null == D ? void 0 : D.skuId),
-        k = v.ZP.canUseCollectibles(t),
+        k = y.ZP.canUseCollectibles(t),
         j = i.useRef(null),
         U = (0, _.Z)(l),
-        G = (0, y.sr)(D, void 0 === R ? w : R),
+        G = (0, v.sr)(D, void 0 === R ? w : R),
         B = (e) => {
             L(e), null != e && U(e);
         },
@@ -80,7 +80,7 @@ function C(e) {
                   : (0, r.jsx)(m.Z, {
                         subscriptionTier: T.Si.TIER_2,
                         showGradient: Z,
-                        buttonText: v.ZP.isPremium(t) ? N.NW.string(N.t.KXLX7u) : Z ? N.NW.string(N.t.pj0XBA) : N.NW.string(N.t.mr4K7O)
+                        buttonText: y.ZP.isPremium(t) ? N.NW.string(N.t.KXLX7u) : Z ? N.NW.string(N.t.pj0XBA) : N.NW.string(N.t.mr4K7O)
                     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -143,8 +143,8 @@ function R(e) {
     let { transitionState: t, analyticsLocations: n, onClose: c, onCloseModal: u, initialSelectedDecoration: d, initialSelectedDecorationId: _, isTryItOutFlow: p, guild: h } = e,
         m = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: g } = (0, l.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: v, purchases: y, isFetchingCategories: O, isFetchingPurchases: I } = (0, f.ZP)({ location: 'AvatarDecorationModal' }),
-        T = O || (I && 0 === y.size),
+        { categories: y, purchases: v, isFetchingCategories: O, isFetchingPurchases: I } = (0, f.ZP)({ location: 'AvatarDecorationModal' }),
+        T = O || (I && 0 === v.size),
         N = () => {
             u(), null == c || c();
         };
@@ -171,8 +171,8 @@ function R(e) {
                           : (0, r.jsx)(C, {
                                 user: m,
                                 guild: h,
-                                categories: v,
-                                purchases: y,
+                                categories: y,
+                                purchases: v,
                                 analyticsLocations: g,
                                 initialSelectedDecoration: d,
                                 initialSelectedDecorationId: _,

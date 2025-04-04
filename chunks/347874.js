@@ -39,7 +39,7 @@ function d(e) {
             case a.Ci.WEEKLY:
                 t.byweekday = [(0, s.FO)(t.dtstart)];
         }
-    if (((0, o.EN)(t.bymonth) && !(0, o.kJ)(t.bymonth) && (t.bymonth = [t.bymonth]), (0, o.EN)(t.byyearday) && !(0, o.kJ)(t.byyearday) && (0, o.hj)(t.byyearday) && (t.byyearday = [t.byyearday]), (0, o.EN)(t.bymonthday))) {
+    if (((0, o.EN)(t.bymonth) && !(0, o.kJ)(t.bymonth) && (t.bymonth = [t.bymonth]), (0, o.EN)(t.byyearday) && !(0, o.kJ)(t.byyearday) && (0, o.hj)(t.byyearday) && (t.byyearday = [t.byyearday]), (0, o.EN)(t.bymonthday)))
         if ((0, o.kJ)(t.bymonthday)) {
             for (var c = [], d = [], n = 0; n < t.bymonthday.length; n++) {
                 var i = t.bymonthday[n];
@@ -47,27 +47,27 @@ function d(e) {
             }
             (t.bymonthday = c), (t.bynmonthday = d);
         } else t.bymonthday < 0 ? ((t.bynmonthday = [t.bymonthday]), (t.bymonthday = [])) : ((t.bynmonthday = []), (t.bymonthday = [t.bymonthday]));
-    } else (t.bymonthday = []), (t.bynmonthday = []);
-    if (((0, o.EN)(t.byweekno) && !(0, o.kJ)(t.byweekno) && (t.byweekno = [t.byweekno]), (0, o.EN)(t.byweekday))) {
+    else (t.bymonthday = []), (t.bynmonthday = []);
+    if (((0, o.EN)(t.byweekno) && !(0, o.kJ)(t.byweekno) && (t.byweekno = [t.byweekno]), (0, o.EN)(t.byweekday)))
         if ((0, o.hj)(t.byweekday)) (t.byweekday = [t.byweekday]), (t.bynweekday = null);
         else if ((0, o.xs)(t.byweekday)) (t.byweekday = [l.O.fromStr(t.byweekday).weekday]), (t.bynweekday = null);
         else if (t.byweekday instanceof l.O) !t.byweekday.n || t.freq > a.Ci.MONTHLY ? ((t.byweekday = [t.byweekday.weekday]), (t.bynweekday = null)) : ((t.bynweekday = [[t.byweekday.weekday, t.byweekday.n]]), (t.byweekday = null));
         else {
-            for (var f = [], p = [], n = 0; n < t.byweekday.length; n++) {
-                var _ = t.byweekday[n];
-                if ((0, o.hj)(_)) {
-                    f.push(_);
+            for (var f = [], _ = [], n = 0; n < t.byweekday.length; n++) {
+                var p = t.byweekday[n];
+                if ((0, o.hj)(p)) {
+                    f.push(p);
                     continue;
                 }
-                if ((0, o.xs)(_)) {
-                    f.push(l.O.fromStr(_).weekday);
+                if ((0, o.xs)(p)) {
+                    f.push(l.O.fromStr(p).weekday);
                     continue;
                 }
-                !_.n || t.freq > a.Ci.MONTHLY ? f.push(_.weekday) : p.push([_.weekday, _.n]);
+                !p.n || t.freq > a.Ci.MONTHLY ? f.push(p.weekday) : _.push([p.weekday, p.n]);
             }
-            (t.byweekday = (0, o.Dw)(f) ? f : null), (t.bynweekday = (0, o.Dw)(p) ? p : null);
+            (t.byweekday = (0, o.Dw)(f) ? f : null), (t.bynweekday = (0, o.Dw)(_) ? _ : null);
         }
-    } else t.bynweekday = null;
+    else t.bynweekday = null;
     return (0, o.EN)(t.byhour) ? (0, o.hj)(t.byhour) && (t.byhour = [t.byhour]) : (t.byhour = t.freq < a.Ci.HOURLY ? [t.dtstart.getUTCHours()] : null), (0, o.EN)(t.byminute) ? (0, o.hj)(t.byminute) && (t.byminute = [t.byminute]) : (t.byminute = t.freq < a.Ci.MINUTELY ? [t.dtstart.getUTCMinutes()] : null), (0, o.EN)(t.bysecond) ? (0, o.hj)(t.bysecond) && (t.bysecond = [t.bysecond]) : (t.bysecond = t.freq < a.Ci.SECONDLY ? [t.dtstart.getUTCSeconds()] : null), { parsedOptions: t };
 }
 function f(e) {

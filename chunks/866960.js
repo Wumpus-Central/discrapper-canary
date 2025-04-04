@@ -22,9 +22,9 @@ let c = s.IWh.UNKNOWN,
     d = null;
 function f(e) {
     var t;
-    (c = null != e.type ? e.type : s.IWh.UNKNOWN), (u = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), _.emitChange();
+    (c = null != e.type ? e.type : s.IWh.UNKNOWN), (u = null != (t = e.effectiveSpeed) ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), p.emitChange();
 }
-class p extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {
         a.Z.getNetworkInformation().then(f), a.Z.addChangeCallback(f);
     }
@@ -38,6 +38,6 @@ class p extends (r = i.ZP.Store) {
         return d;
     }
 }
-l(p, 'displayName', 'NetworkStore');
-let _ = new p(o.Z, {}),
-    h = _;
+l(_, 'displayName', 'NetworkStore');
+let p = new _(o.Z, {}),
+    h = p;

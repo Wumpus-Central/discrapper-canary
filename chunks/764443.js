@@ -58,7 +58,7 @@ let b = [
             label: () => h.NW.formatToPlainString(h.t.GBLpQ0, { days: 3 })
         },
         {
-            duration: void 0,
+            duration: null,
             label: () => h.NW.string(h.t['46dqJS'])
         }
     ];
@@ -69,8 +69,8 @@ function _(e) {
     let { status: t, currentStatus: n, description: s } = e,
         { showTempStatusOptions: o, hasDefaultClickOption: c, hasButtonStyling: d } = l.Y.useExperiment({ location: 'AccountProfilePopout' }),
         h = o && t !== p.Skl.ONLINE,
-        [x, _] = i.useState(null),
-        E = null != x && t === n,
+        [x, _] = i.useState(void 0),
+        E = void 0 !== x && t === n,
         j = (0, r.jsx)(r.Fragment, {
             children: b.map((e) => {
                 let { duration: i, label: s } = e;
@@ -101,11 +101,11 @@ function _(e) {
                         id: ''.concat(t, '-').concat(i),
                         onClick: (e) => {
                             e.stopPropagation(),
-                                _(null != i ? i : null),
+                                _(i),
                                 (0, g.Z)({
                                     nextStatus: t,
                                     prevStatus: n,
-                                    durationMillis: i
+                                    durationMillis: null != i ? i : void 0
                                 });
                         },
                         className: f.durationButton,

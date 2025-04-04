@@ -1,7 +1,7 @@
 n.d(t, {
     KM: () => f,
-    R2: () => p,
-    TG: () => _,
+    R2: () => _,
+    TG: () => p,
     Zc: () => d
 });
 var r = n(442837),
@@ -38,7 +38,7 @@ function u(e, t) {
 function d(e, t, n, i) {
     let o = () => {
             var r;
-            return n(null === (r = s.Z.settings[e]) || void 0 === r ? void 0 : r[t]);
+            return n(null == (r = s.Z.settings[e]) ? void 0 : r[t]);
         },
         c = () => (0, r.e7)([s.Z], o);
     return {
@@ -59,7 +59,7 @@ function f(e, t, n) {
     let a = () => {
         var r;
         let i = o.Z.getState()[t];
-        return null !== (r = null == i ? void 0 : i.settings[n]) && void 0 !== r ? r : e.getSetting();
+        return null != (r = null == i ? void 0 : i.settings[n]) ? r : e.getSetting();
     };
     return {
         getSetting: a,
@@ -82,10 +82,10 @@ function f(e, t, n) {
         )
     };
 }
-function p(e, t, n, r) {
+function _(e, t, n, r) {
     let o = () => {
         var t;
-        return null !== (t = n()) && void 0 !== t ? t : e.getSetting();
+        return null != (t = n()) ? t : e.getSetting();
     };
     return {
         getSetting: o,
@@ -106,17 +106,17 @@ function p(e, t, n, r) {
         )
     };
 }
-function _(e) {
-    let { baseSetting: t, isEligible: n, useIsEligible: r, eligibleDefault: i, ineligibleDefault: o } = e;
+function p(e) {
+    let { baseSetting: t, isEligible: n, useIsEligible: r, eligibleDefault: i, ineligibleDefault: o, onUseDefault: a } = e;
     return {
         getSetting: () => {
             let e = t.getSetting();
-            return null != e ? e : n() ? i() : o;
+            return null != e ? e : (null == a || a(), n() ? i() : o);
         },
         useSetting: () => {
             let e = t.useSetting(),
                 n = r();
-            return null != e ? e : n ? i() : o;
+            return null != e ? e : (null == a || a(), n ? i() : o);
         },
         updateSetting: (e) => t.updateSetting(e)
     };

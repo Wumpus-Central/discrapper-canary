@@ -1,5 +1,5 @@
 n.d(t, {
-    U: () => _,
+    U: () => p,
     Z: () => h
 }),
     n(47120),
@@ -11,9 +11,9 @@ n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(887490),
-    s = n(532799),
-    l = n(742493),
-    c = n(415841);
+    s = n(227473),
+    l = n(112360),
+    c = n(703803);
 function u(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function p(e, t) {
         e
     );
 }
-let _ = {
+let p = {
     strong: s.bold,
     em: s.italics,
     u: s.underline,
@@ -86,8 +86,8 @@ let _ = {
     subtext: s.subtext
 };
 function h(e, t) {
-    let n;
-    let { attributes: i, children: c, leaf: u, text: f } = t,
+    let n,
+        { attributes: i, children: c, leaf: u, text: f } = t,
         h = !1,
         [m] = a.bN.node(e, a.C0.parent(a.bN.findPath(e, f)));
     switch (a.bN.isEditor(m) ? 'editor' : m.type) {
@@ -104,7 +104,7 @@ function h(e, t) {
                     if ('hljsTypes' === t) return n;
                     if (!0 === n) {
                         if ((('codeBlockLang' === t || 'codeBlockSyntax' === t) && (h = !1), t.startsWith('before_') || t.startsWith('after_'))) return [s[t]];
-                        if (t in _) return [_[t]];
+                        if (t in p) return [p[t]];
                         throw Error('Slate: Unknown decoration attribute: '.concat(t));
                     }
                 })
@@ -117,7 +117,7 @@ function h(e, t) {
         (n = o()(n, { [l.emptyText]: '' === f.text })),
         (0, r.jsx)(
             'span',
-            p(d({}, i), {
+            _(d({}, i), {
                 className: n,
                 spellCheck: h,
                 children: c

@@ -1,13 +1,13 @@
-a.d(e, { f: () => _ });
+a.d(e, { f: () => o });
 var r = a(650093),
     n = a(867921),
-    o = a(928541);
-function _(t, e = (0, r.L2)('fetch')) {
+    _ = a(928541);
+function o(t, e = (0, r.L2)('fetch')) {
     let a = 0,
         i = 0;
     return (0, n.q)(t, function (n) {
-        let _ = n.body.length;
-        (a += _), i++;
+        let o = n.body.length;
+        (a += o), i++;
         let c = {
             body: n.body,
             method: 'POST',
@@ -16,11 +16,11 @@ function _(t, e = (0, r.L2)('fetch')) {
             keepalive: a <= 60000 && i < 15,
             ...t.fetchOptions
         };
-        if (!e) return (0, r._6)('fetch'), (0, o.$2)('No fetch implementation available');
+        if (!e) return (0, r._6)('fetch'), (0, _.$2)('No fetch implementation available');
         try {
             return e(t.url, c).then(
                 (t) => (
-                    (a -= _),
+                    (a -= o),
                     i--,
                     {
                         statusCode: t.status,
@@ -32,7 +32,7 @@ function _(t, e = (0, r.L2)('fetch')) {
                 )
             );
         } catch (t) {
-            return (0, r._6)('fetch'), (a -= _), i--, (0, o.$2)(t);
+            return (0, r._6)('fetch'), (a -= o), i--, (0, _.$2)(t);
         }
     });
 }

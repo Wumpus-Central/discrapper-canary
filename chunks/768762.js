@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(200651),
     o = n(192379),
     a = n(120356),
     s = n.n(a),
     l = n(481060),
-    c = n(421813);
+    c = n(974393);
 function u(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ let d = {
         [d.DOWN]: c.down,
         [d.LEFT]: c.left
     };
-class p extends (r = o.PureComponent) {
+class _ extends (r = o.PureComponent) {
     render() {
         let { direction: e, className: t } = this.props;
         return (0, i.jsx)(l.wj7, {
@@ -41,5 +41,5 @@ class p extends (r = o.PureComponent) {
         });
     }
 }
-u(p, 'Directions', d);
-let _ = p;
+u(_, 'Directions', d);
+let p = _;

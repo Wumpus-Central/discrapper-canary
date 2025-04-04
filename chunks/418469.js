@@ -1,13 +1,13 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
     o = n(481060),
     a = n(569545),
     s = n(687516),
-    l = n(314897),
-    c = n(959457),
-    u = n(682901),
+    l = n(221241),
+    c = n(314897),
+    u = n(959457),
     d = n(388032);
 function f(e, t, n) {
     return (
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,23 +38,23 @@ function p(e) {
     }
     return e;
 }
-function _(e, t, f) {
-    var _;
-    let { enabled: h } = (0, u.Z)({ location: 'ReportProblemItem' }),
+function p(e, t, f) {
+    var p;
+    let { simplifiedSettingsEnabled: h } = (0, l.Z)({ location: 'ReportProblemItem' }),
         m = (0, s.Cf)(e),
-        g = (0, i.e7)([l.default], () => l.default.getId()),
-        E = null != e ? (0, a.V9)(e) : c.Z.getActiveStreamKey(),
-        v = null !== (_ = c.Z.getVideoStats(E)) && void 0 !== _ ? _ : {},
-        b = p(
+        g = (0, i.e7)([c.default], () => c.default.getId()),
+        E = null != e ? (0, a.V9)(e) : u.Z.getActiveStreamKey(),
+        b = null != (p = u.Z.getVideoStats(E)) ? p : {},
+        y = _(
             {
-                media_session_id: c.Z.getMediaSessionId(E),
-                rtc_connection_id: c.Z.getRtcConnectionId(E),
-                stream_region: c.Z.getRegion(E),
-                max_viewers: c.Z.getMaxViewers(E)
+                media_session_id: u.Z.getMediaSessionId(E),
+                rtc_connection_id: u.Z.getRtcConnectionId(E),
+                stream_region: u.Z.getRegion(E),
+                max_viewers: u.Z.getMaxViewers(E)
             },
-            v
+            b
         ),
-        y = () => {
+        v = () => {
             null == f || f(),
                 null != e &&
                     (0, o.ZDy)(async () => {
@@ -62,12 +62,12 @@ function _(e, t, f) {
                         return (n) =>
                             (0, r.jsx)(
                                 t,
-                                p(
+                                _(
                                     {
                                         stream: e,
                                         streamApplication: m,
                                         isStreamer: g === (null == e ? void 0 : e.ownerId),
-                                        analyticsData: b
+                                        analyticsData: y
                                     },
                                     n
                                 )
@@ -81,12 +81,12 @@ function _(e, t, f) {
                 id: 'report-stream-problem',
                 color: 'danger',
                 label: d.NW.string(d.t.sdnCxc),
-                action: y,
+                action: v,
                 icon: o.P4T
             })
           : (0, r.jsx)(o.sNh, {
                 id: 'report-stream-problem',
                 label: d.NW.string(d.t.sdnCxc),
-                action: y
+                action: v
             });
 }

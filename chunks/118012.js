@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(120356),
     o = n.n(i),
-    a = n(801554),
-    s = n(33416);
+    a = n(163490),
+    s = n(967777);
 function l(e, t, n) {
     return (
         t in e
@@ -61,14 +61,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +77,7 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = Object.freeze({
+let p = Object.freeze({
         STANDARD: a.colorStandard,
         MUTED: a.colorMuted,
         ERROR: a.colorError,
@@ -103,7 +103,7 @@ let _ = Object.freeze({
         SIZE_32: s.size32
     }),
     m = (e) => {
-        let { className: t, color: n = _.STANDARD, size: i = h.SIZE_14, tag: s = 'div', selectable: l = !1, strong: u = !1, children: p, style: m, 'aria-label': g } = e,
+        let { className: t, color: n = p.STANDARD, size: i = h.SIZE_14, tag: s = 'div', selectable: l = !1, strong: u = !1, children: _, style: m, 'aria-label': g } = e,
             E = f(e, ['className', 'color', 'size', 'tag', 'selectable', 'strong', 'children', 'style', 'aria-label']);
         return (0, r.jsx)(
             s,
@@ -119,9 +119,9 @@ let _ = Object.freeze({
                     },
                     E
                 ),
-                { children: p }
+                { children: _ }
             )
         );
     };
-(m.Colors = _), (m.Sizes = h);
+(m.Colors = p), (m.Sizes = h);
 let g = m;

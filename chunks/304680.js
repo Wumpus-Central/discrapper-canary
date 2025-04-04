@@ -2,7 +2,7 @@ n.d(t, {
     MS: () => f,
     TC: () => d,
     bA: () => s,
-    gl: () => p,
+    gl: () => _,
     xv: () => l,
     z4: () => c,
     zc: () => u
@@ -45,7 +45,7 @@ function f(e, t, n) {
         quality: n
     });
 }
-function p() {
+function _() {
     i.Z.fileManager
         .showOpenDialog({
             filters: [

@@ -22,8 +22,8 @@ var r = n(192379),
     g = n(697426),
     E = n(549771),
     b = n(710111),
-    v = n(474936);
-let y = 3;
+    y = n(474936);
+let v = 3;
 function O(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = e.map((e, t) => ({
@@ -38,7 +38,7 @@ function I(e) {
         s = {};
     for (let e of [...n, b.X8]) {
         var l;
-        for (let t of null !== (l = r.get(e)) && void 0 !== l ? l : []) null != i.find((e) => e === t.soundId) && (s[t.soundId] = t);
+        for (let t of null != (l = r.get(e)) ? l : []) null != i.find((e) => e === t.soundId) && (s[t.soundId] = t);
     }
     let c = [];
     for (let e of i) {
@@ -58,9 +58,9 @@ function S(e) {
     for (let e of n) {
         var l;
         if (e.id === r) continue;
-        let n = O(null !== (l = i.get(e.id)) && void 0 !== l ? l : []);
+        let n = O(null != (l = i.get(e.id)) ? l : []);
         if (n.length > 0) {
-            let r = void 0 !== a ? y * a : Number.MAX_VALUE;
+            let r = void 0 !== a ? v * a : Number.MAX_VALUE;
             n.length > r &&
                 (s.includes(e.id) || (n = n.slice(0, r - 1)),
                 n.push({
@@ -82,12 +82,12 @@ function S(e) {
 function T(e, t, n) {
     var r;
     let { currentGuildHasAddPermissions: i, allSounds: o, filterOutEmptyCurrentGuild: a, rowLimit: s, shownAllGuildIds: l } = n,
-        c = null !== (r = o.get(t.id)) && void 0 !== r ? r : [],
+        c = null != (r = o.get(t.id)) ? r : [],
         d = O(c),
         f = c.length < (0, u.nL)(t) && i,
         _ = 0 === d.length,
         p = (f || _) && !a,
-        h = void 0 !== s ? y * s - +!!p : Number.MAX_VALUE,
+        h = void 0 !== s ? v * s - +!!p : Number.MAX_VALUE,
         m = d.length;
     m > h && !l.includes(t.id) && (d = d.slice(0, h - 1)),
         p &&
@@ -113,7 +113,7 @@ function T(e, t, n) {
 }
 function N(e, t) {
     var n;
-    let r = null !== (n = t.get(b.X8)) && void 0 !== n ? n : b.Hy;
+    let r = null != (n = t.get(b.X8)) ? n : b.Hy;
     e.push({
         key: g.bg.DEFAULTS,
         categoryInfo: { type: g.bg.DEFAULTS },
@@ -124,8 +124,8 @@ function A(e) {
     let { filterOutEmptyCurrentGuild: t = !1, shownAllGuildIds: n = [] } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         u = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        f = d.ZP.isPremium(u, v.p9.TIER_2),
-        [b, y, O] = (0, i.Wu)([m.Z], () => [m.Z.getSounds(), m.Z.getFavorites(), m.Z.isFetching()]),
+        f = d.ZP.isPremium(u, y.p9.TIER_2),
+        [b, v, O] = (0, i.Wu)([m.Z], () => [m.Z.getSounds(), m.Z.getFavorites(), m.Z.isFetching()]),
         A = (0, E.h)(e, !1),
         C = (0, i.Wu)([s.Z], () => {
             let e = [];
@@ -173,7 +173,7 @@ function A(e) {
                   sections: i,
                   guildIds: A,
                   allSounds: b,
-                  potentialSoundIdsForSection: Array.from(y),
+                  potentialSoundIdsForSection: Array.from(v),
                   sectionType: g.bg.FAVORITES,
                   sortById: !0
               }),
@@ -221,12 +221,12 @@ function A(e) {
                   categories: i,
                   isFetching: O,
                   soundCounts: {
-                      favoriteSoundCount: y.size,
+                      favoriteSoundCount: v.size,
                       unlockedCustomSoundCount: e,
                       lockedCustomSoundCount: r
                   }
               });
-    }, [A, b, y, k, M, x, L, w, D, t, P, C, a, O, f, j.numRows, n]);
+    }, [A, b, v, k, M, x, L, w, D, t, P, C, a, O, f, j.numRows, n]);
 }
 function C(e, t, n) {
     return r.useMemo(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     o = n(570140);
@@ -45,7 +45,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 a(f, 'displayName', 'NoteStore');
-let p = new f(o.Z, {
+let _ = new f(o.Z, {
     CONNECTION_OPEN: l,
     OVERLAY_INITIALIZE: l,
     USER_NOTE_UPDATE: c,

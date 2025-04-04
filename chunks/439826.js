@@ -24,12 +24,12 @@ var r = n(200651),
     w = n(78826),
     S = n(670638),
     P = n(341907),
-    N = n(46140),
-    E = n(642145),
+    E = n(46140),
+    N = n(642145),
     T = n(981631),
     A = n(388032),
-    B = n(508936);
-function R(e) {
+    R = n(508936);
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -105,7 +105,7 @@ function q(e) {
         v = (0, d.q_F)({
             opacity: +!!j,
             height: j ? p : 0,
-            config: E.Y
+            config: N.Y
         }),
         y = 0 === x ? d.P4T : d.d3s,
         _ = (0, m.Lq)(T.Ilk.RED_345),
@@ -114,10 +114,10 @@ function q(e) {
         style: v,
         children: (0, r.jsxs)('div', {
             ref: c,
-            className: B.hints,
+            className: R.hints,
             children: [
                 (0, r.jsxs)('div', {
-                    className: B.hintsContainer,
+                    className: R.hintsContainer,
                     children: [
                         (0, r.jsx)(y, {
                             size: 'xs',
@@ -161,7 +161,7 @@ function D(e) {
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: a()(B.videoOverlay, { [B.videoOverlayVisible]: i }),
+            className: a()(R.videoOverlay, { [R.videoOverlayVisible]: i }),
             controls: !1,
             children: (0, r.jsx)('source', {
                 src: n.url,
@@ -172,14 +172,14 @@ function D(e) {
 }
 function I(e) {
     var t, n, s, i, u;
-    let { quest: m, isHovering: C, errorHints: E, warningHints: I, onCtxMenuClose: W, onCtxMenuOpen: M, onCtxMenuSelect: L } = e,
+    let { quest: m, isHovering: C, errorHints: N, warningHints: I, onCtxMenuClose: W, onCtxMenuOpen: M, onCtxMenuSelect: L } = e,
         Z = (0, j.q8)(m),
         V = o.useMemo(() => (0, y.fh)(m, y.eC.HERO), [m]),
         Q = (0, p.ZP)(),
         U = ((0, c.wj)(Q) ? T.BRd.DARK : T.BRd.LIGHT) === T.BRd.DARK,
         H = o.useContext(l.S).reducedMotion.enabled,
-        z = (0, h.tP)(m),
-        F = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
+        F = (0, h.tP)(m),
+        z = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
         X = o.useRef(C),
         K = o.useRef(null),
         Y = (0, h.B6)(m.config.expiresAt, {
@@ -188,7 +188,7 @@ function I(e) {
         }),
         G = (null == (n = m.userStatus) ? void 0 : n.enrolledAt) != null,
         J = (null == (s = m.userStatus) ? void 0 : s.completedAt) != null,
-        $ = (0, v.h)(m, N.dr.QUEST_HOME_DESKTOP),
+        $ = (0, v.h)(m, E.dr.QUEST_HOME_DESKTOP),
         ee = o.useCallback(() => {
             Z &&
                 ((0, j.zi)(m) ||
@@ -212,10 +212,10 @@ function I(e) {
     }, [C, V, H]);
     let et = o.useMemo(() => (0, _.z)(_.i.QUEST_HOME_VIDEO, m), [m]);
     return (0, r.jsxs)('div', {
-        className: B.container,
+        className: R.container,
         children: [
             (0, r.jsxs)('div', {
-                className: B.heroAssetWrapper,
+                className: R.heroAssetWrapper,
                 children: [
                     V.isAnimated
                         ? (0, r.jsx)(w.Fl, {
@@ -230,7 +230,7 @@ function I(e) {
                                           loop: !0,
                                           muted: !0,
                                           playsInline: !0,
-                                          className: B.heroAsset,
+                                          className: R.heroAsset,
                                           controls: !1,
                                           children: (0, r.jsx)('source', {
                                               src: V.url,
@@ -246,7 +246,7 @@ function I(e) {
                                   (0, r.jsx)('img', {
                                       ref: e,
                                       alt: ''.concat(m.config.messages.questName),
-                                      className: B.heroAsset,
+                                      className: R.heroAsset,
                                       src: V.url
                                   })
                           }),
@@ -262,27 +262,27 @@ function I(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: a()(B.overlay, {
-                    [B.darkThemeGradient]: U,
-                    [B.lightThemeGradient]: !U
+                className: a()(R.overlay, {
+                    [R.darkThemeGradient]: U,
+                    [R.lightThemeGradient]: !U
                 })
             }),
             (0, r.jsxs)('div', {
-                className: B.positionContentOverBackground,
+                className: R.positionContentOverBackground,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: B.contents,
+                        className: R.contents,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: B.topRow,
+                                className: R.topRow,
                                 children: [
                                     m.preview &&
                                         (0, r.jsx)('div', {
-                                            className: B.pill,
+                                            className: R.pill,
                                             children: (0, r.jsx)(d.Text, {
                                                 variant: 'eyebrow',
                                                 color: 'always-white',
-                                                className: B.eyebrowText,
+                                                className: R.eyebrowText,
                                                 children: A.NW.string(A.t.SKNnqq)
                                             })
                                         }),
@@ -292,13 +292,13 @@ function I(e) {
                                             children: (e) =>
                                                 (0, r.jsx)(
                                                     d.P3F,
-                                                    k(R({}, e), {
-                                                        className: B.utilButtonWrapper,
+                                                    k(B({}, e), {
+                                                        className: R.utilButtonWrapper,
                                                         'aria-label': A.NW.string(A.t.RscU7O),
                                                         onClick: ee,
                                                         children: (0, r.jsx)(d.o1U, {
                                                             color: 'currentColor',
-                                                            className: B.utilButtonIcon
+                                                            className: R.utilButtonIcon
                                                         })
                                                     })
                                                 )
@@ -315,13 +315,13 @@ function I(e) {
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 d.P3F,
-                                                k(R({}, e), {
-                                                    className: B.utilButtonWrapper,
+                                                k(B({}, e), {
+                                                    className: R.utilButtonWrapper,
                                                     'aria-label': A.NW.string(A.t.DEoVWV),
                                                     children: (0, r.jsx)(d.xhG, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: B.utilButtonIcon
+                                                        className: R.utilButtonIcon
                                                     })
                                                 })
                                             )
@@ -329,21 +329,21 @@ function I(e) {
                                 ]
                             }),
                             (0, r.jsx)(O.ZP, {
-                                className: B.partnerBranding,
-                                logotypeClassName: B.partnerLogotypes,
+                                className: R.partnerBranding,
+                                logotypeClassName: R.partnerLogotypes,
                                 quest: m,
                                 separatorSpacing: O.US.MEDIUM,
                                 withGameTile: !1
                             }),
                             (0, r.jsxs)('div', {
-                                className: B.bottomRow,
+                                className: R.bottomRow,
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         variant: 'text-sm/medium',
                                         color: U ? 'text-muted' : 'always-white',
                                         children: A.NW.format(A.t.buEvBw, { brandName: null != (u = null == (i = m.config.cosponsorMetadata) ? void 0 : i.name) ? u : m.config.messages.gamePublisher })
                                     }),
-                                    z || F
+                                    F || z
                                         ? null
                                         : (0, r.jsx)(d.Text, {
                                               variant: 'text-sm/medium',
@@ -356,7 +356,7 @@ function I(e) {
                     }),
                     (0, r.jsx)(q, {
                         quest: m,
-                        errorHints: E,
+                        errorHints: N,
                         warningHints: I,
                         isDarkTheme: U
                     })

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
-var l = n(913527),
-    o = n.n(l),
+var o = n(913527),
+    l = n.n(o),
     i = n(481060),
     a = n(925329),
-    s = n(388032),
-    c = n(965935);
+    c = n(388032),
+    s = n(965935);
 function u(e) {
     let { application: t, timestamp: n } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -16,32 +16,32 @@ function u(e) {
                 game: t
             }),
             (0, r.jsxs)('div', {
-                className: c.textContainer,
+                className: s.textContainer,
                 children: [
                     (0, r.jsx)(i.Text, {
-                        className: c.timestamp,
+                        className: s.timestamp,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: o()(n).format('LLLL')
+                        children: l()(n).format('LLLL')
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
-                        children: s.NW.format(s.t.J3s8JC, { applicationName: t.name })
+                        children: c.NW.format(c.t.J3s8JC, { applicationName: t.name })
                     })
                 ]
             })
         ]
     });
 }
-function d(e) {
-    let { application: t, timestamp: n, children: l } = e;
+function m(e) {
+    let { application: t, timestamp: n, children: o } = e;
     return (0, r.jsx)(i.ua7, {
         hideOnClick: !0,
         position: 'top',
-        'aria-label': s.NW.string(s.t['5nMcv7']),
-        tooltipClassName: c.gameMessageTooltip,
-        tooltipContentClassName: c.gameMessageTooltipContent,
+        'aria-label': c.NW.string(c.t['5nMcv7']),
+        tooltipClassName: s.gameMessageTooltip,
+        tooltipContentClassName: s.gameMessageTooltipContent,
         text: (0, r.jsx)(u, {
             application: t,
             timestamp: n
@@ -75,7 +75,7 @@ function d(e) {
                     }
                     return e;
                 })({ tag: 'span' }, e)),
-                (n = n = { children: l }),
+                (n = n = { children: o }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -93,21 +93,21 @@ function d(e) {
         }
     });
 }
-function m(e) {
-    let { application: t, timestamp: n, compact: l, children: o } = e;
-    return (0, r.jsxs)(d, {
+function p(e) {
+    let { application: t, timestamp: n, compact: o, children: l } = e;
+    return (0, r.jsxs)(m, {
         application: t,
         timestamp: n,
         children: [
-            l
+            o
                 ? null
                 : (0, r.jsx)(i.iWm, {
-                      className: c.gameIcon,
+                      className: s.gameIcon,
                       size: 'custom',
                       width: 14,
                       height: 14
                   }),
-            o
+            l
         ]
     });
 }

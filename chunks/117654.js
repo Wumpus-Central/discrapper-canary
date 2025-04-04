@@ -9,8 +9,8 @@ class a {
         (s = t || new r.s()), (n = e || new r.s()), (this._stack = [{ scope: s }]), (this._isolationScope = n);
     }
     withScope(t) {
-        let e;
-        let s = this._pushScope();
+        let e,
+            s = this._pushScope();
         try {
             e = t(s);
         } catch (t) {

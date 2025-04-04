@@ -133,7 +133,7 @@ class N extends (n = r.PureComponent) {
             }),
             h(this, 'renderMobileSubMenu', () => {
                 let { links: e, TrackClick: t, avoidRouter: a } = this.props,
-                    n = (0, o.f)(this.context.router);
+                    n = (0, o.fQ)(this.context.router);
                 return e.map((e) =>
                     e.external
                         ? (0, s.jsx)(

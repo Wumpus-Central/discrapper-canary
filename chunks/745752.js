@@ -1,8 +1,8 @@
 n.d(t, {
     I1: () => O,
-    eM: () => b,
-    rK: () => y,
-    rj: () => v
+    eM: () => y,
+    rK: () => v,
+    rj: () => b
 }),
     n(789020);
 var r = n(544891),
@@ -15,8 +15,8 @@ var r = n(544891),
     u = n(630388),
     d = n(45966),
     f = n(290511),
-    p = n(981631),
-    _ = n(372897);
+    _ = n(981631),
+    p = n(372897);
 function h(e, t, n) {
     return (
         t in e
@@ -69,16 +69,16 @@ function E(e, t) {
         e
     );
 }
-function v(e) {
+function b(e) {
     c.default.track(
-        p.rMx.GUILD_ONBOARDING_LOADED,
+        _.rMx.GUILD_ONBOARDING_LOADED,
         E(m({}, (0, o.hH)(e)), {
             has_new_prompts: !1,
             number_of_prompts: 0
         })
     );
 }
-function b(e) {
+function y(e) {
     return (
         i.Z.dispatch({
             type: 'GUILD_ONBOARDING_PROMPTS_FETCH_START',
@@ -86,7 +86,7 @@ function b(e) {
         }),
         r.tn
             .get({
-                url: p.ANM.GUILD_ONBOARDING(e),
+                url: _.ANM.GUILD_ONBOARDING(e),
                 rejectWithError: !1
             })
             .then(
@@ -113,17 +113,17 @@ function b(e) {
             )
     );
 }
-async function y(e) {
+async function v(e) {
     var t, n;
     let r = a.default.getId(),
-        i = (0, u.yE)(null !== (n = null === (t = s.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, _.q.COMPLETED_ONBOARDING),
+        i = (0, u.yE)(null != (n = null == (t = s.ZP.getMember(e, r)) ? void 0 : t.flags) ? n : 0, p.q.COMPLETED_ONBOARDING),
         o = l.Z.getGuild(e);
-    if (null == o || !o.hasFeature(p.oNc.GUILD_ONBOARDING)) return Promise.resolve();
+    if (null == o || !o.hasFeature(_.oNc.GUILD_ONBOARDING)) return Promise.resolve();
     let c = d.Z.shouldFetchPrompts(e),
         f = d.Z.getOnboardingPrompts(e);
-    if (!c && f.length > 0) return f.every((e) => !e.inOnboarding) ? I(e) : i || O(e), Promise.resolve();
-    let h = await b(e);
-    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (I(e), Promise.resolve()) : (i || O(e), h);
+    if (!c && f.length > 0) return f.every((e) => !e.inOnboarding) ? S(e) : i || O(e), Promise.resolve();
+    let h = await y(e);
+    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (S(e), Promise.resolve()) : (i || O(e), h);
 }
 function O(e) {
     i.Z.dispatch({
@@ -131,19 +131,19 @@ function O(e) {
         guildId: e
     });
 }
-let S = -2;
-function I(e) {
+let I = -2;
+function S(e) {
     c.default.track(
-        p.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+        _.rMx.GUILD_ONBOARDING_STEP_VIEWED,
         E(m({}, (0, o.hH)(e)), {
-            step: S,
+            step: I,
             required: !0
         })
     ),
         c.default.track(
-            p.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+            _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
             E(m({}, (0, o.hH)(e)), {
-                step: S,
+                step: I,
                 skipped: !1,
                 is_final_step: !0,
                 in_onboarding: !0

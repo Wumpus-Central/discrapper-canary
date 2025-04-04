@@ -1,6 +1,6 @@
 n.d(t, {
-    EB: () => S,
-    cl: () => y
+    EB: () => I,
+    cl: () => v
 }),
     n(47120);
 var r = n(392711),
@@ -14,7 +14,7 @@ var r = n(392711),
     d = n(660189);
 n(682474);
 var f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-let _ = 10,
+let p = 10,
     h = 5;
 class m {
     get(e) {
@@ -43,7 +43,7 @@ class m {
         return c.default.keys(this._set)[0];
     }
     constructor(e) {
-        p(this, '_set', void 0), p(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
+        _(this, '_set', void 0), _(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
     }
 }
 class g {
@@ -73,19 +73,19 @@ class g {
         0 === this.requested.get(e).size && this.requested.delete(e);
     }
     constructor() {
-        p(this, 'requested', void 0), (this.requested = new m(() => new Set()));
+        _(this, 'requested', void 0), (this.requested = new m(() => new Set()));
     }
 }
 let E = new g(),
-    v = null;
-function b(e, t) {
+    b = null;
+function y(e, t) {
     return !e && null == t;
 }
-function y(e) {
+function v(e) {
     let { loaded: t, firstMessage: n } = (0, o.cj)([d.Z], () => d.Z.getMessage(e.id)),
         r = (0, o.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
     return (
-        null != r && b(t, n) && I(r, e.id),
+        null != r && y(t, n) && S(r, e.id),
         {
             loaded: t,
             firstMessage: n
@@ -96,14 +96,14 @@ function O(e, t) {
     let n = !1;
     t.forEach((t) => {
         let { loaded: r, firstMessage: i } = d.Z.getMessage(t);
-        b(r, i) && (E.request(e.id, t), (n = !0));
+        y(r, i) && (E.request(e.id, t), (n = !0));
     }),
-        n && null == v && (v = setTimeout(T, 0));
+        n && null == b && (b = setTimeout(T, 0));
 }
-function S(e) {
-    O(e, (0, u.U)(e.id).slice(0, _));
+function I(e) {
+    O(e, (0, u.U)(e.id).slice(0, p));
 }
-function I(e, t) {
+function S(e, t) {
     if (E.hasRequested(e.id, t)) return;
     let n = (0, u.U)(e.id),
         r = n.findIndex((e) => e === t),
@@ -114,15 +114,15 @@ async function T() {
     try {
         for (; E.hasNext(); ) await N(E.next());
     } finally {
-        v = null;
+        b = null;
     }
 }
 async function N(e) {
-    let t = E.getNextBatch(e, _);
+    let t = E.getNextBatch(e, p);
     try {
         var n;
         if (0 === t.length) return;
-        let r = null === (n = l.Z.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
+        let r = null == (n = l.Z.getChannel(e)) ? void 0 : n.guild_id;
         if (null == r) return;
         let {
             body: { threads: i }

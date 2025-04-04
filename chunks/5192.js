@@ -21,7 +21,7 @@ function c(e, t, n) {
 }
 function u(e, t, n) {
     var r;
-    return null == n ? l.NW.string(l.t.sKdZ6e) : null !== (r = c(e, t, n)) && void 0 !== r ? r : s.ZP.getName(n);
+    return null == n ? l.NW.string(l.t.sKdZ6e) : null != (r = c(e, t, n)) ? r : s.ZP.getName(n);
 }
 function d(e, t, n) {
     return (0, r.e7)([o.ZP, i.Z, a.Z], () => u(e, t, n));

@@ -64,8 +64,8 @@ Object.create && ((r.prototype = Object.create(null)), new r().__proto__ || (n =
             u.fn.apply(u.context, l);
         } else {
             var f,
-                p = u.length;
-            for (c = 0; c < p; c++)
+                _ = u.length;
+            for (c = 0; c < _; c++)
                 switch ((u[c].once && this.removeListener(e, u[c].fn, void 0, !0), d)) {
                     case 1:
                         u[c].fn.call(u[c].context);

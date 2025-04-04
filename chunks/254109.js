@@ -1,11 +1,11 @@
 n.d(t, {
     VO: () => h,
-    fS: () => _,
+    fS: () => p,
     uG: () => d,
     yg: () => m
 }),
     n(977457);
-var r = n(15729),
+var r = n(230383),
     i = n(731965),
     o = n(626135),
     a = n(981631);
@@ -73,12 +73,12 @@ let f = {
         source: void 0,
         incrementableActions: Object.fromEntries(Object.values(d).map((e) => [e, 0]))
     },
-    p = (0, r.U)(() => f);
-function _(e) {
-    (0, i.j)(() => p.setState(l({}, f, e)));
+    _ = (0, r.U)(() => f);
+function p(e) {
+    (0, i.j)(() => _.setState(l({}, f, e)));
 }
 function h() {
-    let e = p.getState();
+    let e = _.getState();
     o.default.track(
         a.rMx.MEDIA_VIEWER_SESSION_COMPLETED,
         l(
@@ -93,10 +93,10 @@ function h() {
             e.incrementableActions
         )
     ),
-        (0, i.j)(() => p.setState(l({}, f)));
+        (0, i.j)(() => _.setState(l({}, f)));
 }
 function m(e) {
     (0, i.j)(() => {
-        p.setState((t) => ({ incrementableActions: u(l({}, t.incrementableActions), { [e]: t.incrementableActions[e] + 1 }) }));
+        _.setState((t) => ({ incrementableActions: u(l({}, t.incrementableActions), { [e]: t.incrementableActions[e] + 1 }) }));
     });
 }

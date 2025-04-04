@@ -1,6 +1,6 @@
 n.d(t, {
     JO: () => g,
-    ZP: () => y,
+    ZP: () => v,
     iz: () => E
 });
 var r = n(200651),
@@ -14,7 +14,7 @@ var r = n(200651),
     d = n(686546),
     f = n(540059),
     _ = n(79712),
-    p = n(414273);
+    p = n(658672);
 let h = 24,
     m = (e) => {
         let { className: t, wrapperClassName: n, children: i, onContextMenu: o, onClick: s, id: l, muted: u = !1, level: d = 1 } = e,
@@ -43,13 +43,13 @@ let h = 24,
               });
     },
     g = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: o, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: m, foreground: g, background: E, icon: b, iconSize: v = h, onClick: y, onContextMenu: O, tooltip: I = null, tooltipColor: S, tooltipPosition: T = 'bottom', tooltipDisabled: A, tooltipSpacing: N, hideOnClick: C = !0, role: R, 'aria-label': P, 'aria-hidden': w, 'aria-checked': D, 'aria-expanded': L, 'aria-haspopup': x, 'data-jump-section': M } = e,
+        let { className: n, iconClassName: i, children: o, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: m, foreground: g, background: E, icon: b, iconSize: y = h, onClick: v, onContextMenu: O, tooltip: I = null, tooltipColor: S, tooltipPosition: T = 'bottom', tooltipDisabled: N, tooltipSpacing: A, hideOnClick: C = !0, role: R, 'aria-label': P, 'aria-hidden': w, 'aria-checked': D, 'aria-expanded': L, 'aria-haspopup': x, 'data-jump-section': M } = e,
             k = (0, f.Q3)('BaseHeaderBar'),
             j = (0, r.jsx)(b, {
                 x: 0,
                 y: 0,
-                width: v,
-                height: v,
+                width: y,
+                height: y,
                 size: 'custom',
                 className: a()(i, p.icon),
                 colorClass: null != g ? g : void 0,
@@ -64,19 +64,19 @@ let h = 24,
                 color: S,
                 position: T,
                 hideOnClick: C,
-                shouldShow: !A,
-                spacing: N,
+                shouldShow: !N,
+                spacing: A,
                 children: (e) => {
                     let { onMouseEnter: f, onMouseLeave: h, onFocus: I, onBlur: S } = e;
-                    return null == y
+                    return null == v
                         ? (0, r.jsx)('div', {
                               ref: t,
                               className: a()(n, p.iconWrapper, { [p.iconDisabled]: l }),
                               children: (0, r.jsx)(b, {
                                   x: 0,
                                   y: 0,
-                                  width: v,
-                                  height: v,
+                                  width: y,
+                                  height: y,
                                   size: 'custom',
                                   className: a()(i, p.icon),
                                   colorClass: null != g ? g : void 0,
@@ -92,7 +92,7 @@ let h = 24,
                         : (0, r.jsxs)(c.P3F, {
                               innerRef: t,
                               tag: 'div',
-                              onClick: l ? void 0 : y,
+                              onClick: l ? void 0 : v,
                               onContextMenu: l ? void 0 : O,
                               onMouseEnter: f,
                               onMouseLeave: h,
@@ -100,7 +100,7 @@ let h = 24,
                               onBlur: S,
                               className: a()(n, {
                                   [p.iconWrapper]: !0,
-                                  [p.clickable]: !l && null != y,
+                                  [p.clickable]: !l && null != v,
                                   [p.selected]: s,
                                   [p.iconDisabled]: l
                               }),
@@ -110,14 +110,14 @@ let h = 24,
                               'aria-checked': D,
                               'aria-haspopup': x,
                               'aria-expanded': L,
-                              tabIndex: l || null == y ? -1 : 0,
+                              tabIndex: l || null == v ? -1 : 0,
                               'data-jump-section': M,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {
                                             mask: 'top' === _ ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            height: k ? v : void 0,
-                                            width: k ? v : void 0,
+                                            height: k ? y : void 0,
+                                            width: k ? y : void 0,
                                             children: j
                                         })
                                       : j,
@@ -147,10 +147,10 @@ function b(e) {
               className: p.caret
           });
 }
-let v = (e) => {
+let y = (e) => {
     let { className: t, innerClassName: n, children: o, childrenBottom: d, toolbar: f, onDoubleClick: _, 'aria-label': h, 'aria-labelledby': m, role: g, scrollable: E, transparent: b = !1 } = e,
-        v = i.useRef(null),
-        y = i.useContext(u.Z);
+        y = i.useRef(null),
+        v = i.useContext(u.Z);
     return (0, r.jsx)('section', {
         className: a()(t, p.container, {
             [p.themed]: !b,
@@ -160,9 +160,9 @@ let v = (e) => {
         'aria-label': h,
         'aria-labelledby': m,
         role: g,
-        ref: v,
+        ref: y,
         children: (0, r.jsxs)(c.JcV, {
-            containerRef: v,
+            containerRef: y,
             children: [
                 (0, r.jsxs)('div', {
                     className: p.upperContainer,
@@ -171,9 +171,9 @@ let v = (e) => {
                             className: a()(p.children, n, { [p.scrollable]: E }),
                             onDoubleClick: _,
                             children: [
-                                l.tq && null != y
+                                l.tq && null != v
                                     ? (0, r.jsx)(s.r, {
-                                          onClick: y,
+                                          onClick: v,
                                           className: p.hamburger
                                       })
                                     : null,
@@ -193,5 +193,5 @@ let v = (e) => {
         })
     });
 };
-(v.Icon = g), (v.Title = m), (v.Divider = E), (v.Caret = b);
-let y = v;
+(y.Icon = g), (y.Title = m), (y.Divider = E), (y.Caret = b);
+let v = y;

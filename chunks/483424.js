@@ -14,8 +14,8 @@ var i = n(442837),
 function p(e) {
     let { user: t, currentUser: n, displayProfile: p, guildId: h, className: m, onClose: g } = e,
         { live: E, stream: b } = (0, l.Z)(t.id),
-        [v] = E,
-        { voiceChannel: y } = (0, c.Z)({
+        [y] = E,
+        { voiceChannel: v } = (0, c.Z)({
             userId: t.id,
             guildId: h,
             surface: 'user-profile-featured-activity'
@@ -27,12 +27,12 @@ function p(e) {
         }),
         { voiceActivityStatusEnabled: S } = (0, o.U)({ location: 'UserProfileFeaturedActivity' });
     return I || null == b
-        ? I || null == v
-            ? S && !I && null != y
+        ? I || null == y
+            ? S && !I && null != v
                 ? (0, r.jsx)(f.Z, {
                       user: t,
                       currentUser: n,
-                      voiceChannel: y,
+                      voiceChannel: v,
                       className: m,
                       onClose: g
                   })
@@ -40,7 +40,7 @@ function p(e) {
             : (0, r.jsx)(u.Z, {
                   user: t,
                   currentUser: n,
-                  activity: v,
+                  activity: y,
                   profileGuildId: null == p ? void 0 : p.guildId,
                   className: m,
                   onClose: g

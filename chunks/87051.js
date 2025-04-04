@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120), n(789020);
+n.d(t, { Z: () => p }), n(47120), n(789020);
 var r = n(544891),
     i = n(780384),
     o = n(570140),
@@ -9,8 +9,8 @@ var r = n(544891),
     u = n(709054),
     d = n(981631),
     f = n(526761),
-    p = n(388032);
-let _ = {
+    _ = n(388032);
+let p = {
     open(e) {
         o.Z.dispatch({
             type: 'NOTIFICATION_SETTINGS_MODAL_OPEN',
@@ -71,7 +71,7 @@ let _ = {
                 channelId: t,
                 settings: n
             }),
-            i.uv.announce(p.NW.string(p.t.MlIsJy)),
+            i.uv.announce(_.NW.string(_.t.MlIsJy)),
             (0, c.jz)(e, t, n, l, r, s);
     },
     updateChannelOverrideSettingsBulk(e, t, n, r) {

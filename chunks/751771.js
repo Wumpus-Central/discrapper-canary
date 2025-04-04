@@ -15,8 +15,8 @@ var u,
     S = n(981631),
     E = n(245335);
 let T = new Set(),
-    C = [],
-    b = new Map();
+    b = [],
+    C = new Map();
 function _(e) {
     let t = new Set(),
         n = null == r || d === E.Iq.EMBEDDED_APPLICATION ? void 0 : r.id,
@@ -44,10 +44,10 @@ function _(e) {
     );
 }
 function y(e) {
-    (C = e),
-        (b = new Map()),
+    (b = e),
+        (C = new Map()),
         e.forEach((e, t) => {
-            b.set(e, { index: t });
+            C.set(e, { index: t });
         });
 }
 class O extends (u = g.ZP.Store) {
@@ -55,7 +55,7 @@ class O extends (u = g.ZP.Store) {
         this.waitFor(j.Z, v.Z);
     }
     getInviteSuggestionRows() {
-        return C;
+        return b;
     }
     getTotalSuggestionsCount() {
         return i;
@@ -64,13 +64,13 @@ class O extends (u = g.ZP.Store) {
         return l;
     }
     getSelectedInviteMetadata(e) {
-        let t = b.get(e),
+        let t = C.get(e),
             n = v.Z.getUserAffinitiesUserIds();
         return null != t
             ? {
                   rowNum: t.index,
                   isAffinitySuggestion: e.isSuggested,
-                  numTotal: C.length,
+                  numTotal: b.length,
                   numAffinityConnections: n.size,
                   isFiltered: s
               }
@@ -104,7 +104,7 @@ let P = new O(m.Z, {
             ])),
             (s = !1);
         let { rows: g, counts: m } = _('');
-        y(g), (l = m), (i = C.length);
+        y(g), (l = m), (i = b.length);
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;

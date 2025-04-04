@@ -47,8 +47,8 @@ let m = window.matchMedia('(prefers-reduced-motion: reduce)'),
     g = window.matchMedia('(prefers-contrast: more)'),
     E = window.matchMedia('(prefers-contrast: less)'),
     b = window.matchMedia('(prefers-color-scheme: dark)'),
-    v = window.matchMedia('(prefers-color-scheme: light)'),
-    y = window.matchMedia('(forced-colors: active)'),
+    y = window.matchMedia('(prefers-color-scheme: light)'),
+    v = window.matchMedia('(forced-colors: active)'),
     O = 5;
 function I() {
     let e = s.default.getCurrentUser();
@@ -59,7 +59,7 @@ function S() {
 }
 let T = {
     initBasic() {
-        m.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(m), b.addListener(this.handleSystemColorPreferencesChanged), v.addListener(this.handleSystemColorPreferencesChanged), y.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), g.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
+        m.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(m), b.addListener(this.handleSystemColorPreferencesChanged), y.addListener(this.handleSystemColorPreferencesChanged), v.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), g.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
     },
     init() {
         this.initBasic(),
@@ -76,7 +76,7 @@ let T = {
                 d.Z.keyboardNavigationExplainerModalSeen ||
                 0 !== O ||
                 (0, i.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e('6380'), n.e('36149')]).then(n.bind(n, 461964));
+                    let { default: e } = await Promise.all([n.e('6380'), n.e('91081')]).then(n.bind(n, 461964));
                     return (t) => (0, r.jsx)(e, h({}, t));
                 });
     },
@@ -87,8 +87,8 @@ let T = {
     },
     handleSystemColorPreferencesChanged() {
         let e = _.zd.NO_PREFERENCE;
-        b.matches ? (e = _.zd.DARK) : v.matches && (e = _.zd.LIGHT);
-        let t = (!c.isPlatformEmbedded || S()) && y.matches ? 'active' : 'none';
+        b.matches ? (e = _.zd.DARK) : y.matches && (e = _.zd.LIGHT);
+        let t = (!c.isPlatformEmbedded || S()) && v.matches ? 'active' : 'none';
         o.Z.wait(() => {
             a.Q_(e), u.Ej(t);
         });

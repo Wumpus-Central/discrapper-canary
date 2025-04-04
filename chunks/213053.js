@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(192379),
     i = n(120356),
     o = n.n(i),
@@ -39,7 +39,7 @@ function p(e) {
     return e;
 }
 let h = 'custom-profile-theme',
-    g = Object.freeze({
+    m = Object.freeze({
         '--profile-gradient-primary-color': 'var(--background-secondary-alt)',
         '--profile-gradient-secondary-color': 'var(--background-secondary-alt)',
         '--profile-gradient-overlay-color': 'rgba(0, 0, 0, 0)',
@@ -54,17 +54,17 @@ let h = 'custom-profile-theme',
         '--profile-role-pill-background-color': 'var(--background-secondary-alt)',
         '--profile-role-pill-border-color': 'var(--interactive-normal)'
     });
-function m(e) {
+function g(e) {
     let { theme: t, primaryColor: n, secondaryColor: i } = e,
-        [_, m] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
+        [_, g] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
         E = (0, f.fq)(t),
-        v = (0, f.wu)(t, n, m),
-        b = (0, f.lM)(t, n),
-        y = (0, f.e4)(t, i),
-        O = m ? (null == E ? void 0 : E.overlaySyncedWithUserTheme) : null == E ? void 0 : E.overlay;
+        b = (0, f.wu)(t, n, g),
+        y = (0, f.lM)(t, n),
+        v = (0, f.e4)(t, i),
+        O = g ? (null == E ? void 0 : E.overlaySyncedWithUserTheme) : null == E ? void 0 : E.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == n || null == i || null == E || null == v || null == b || null == y || null == O) return g;
+            if (null == n || null == i || null == E || null == b || null == y || null == v || null == O) return m;
             let e = (e, t) => (0, a.ho)(e, _, null, t);
             return p(
                 {
@@ -72,12 +72,12 @@ function m(e) {
                     '--profile-gradient-secondary-color': e(i),
                     '--profile-gradient-overlay-color': O,
                     '--profile-gradient-button-color': e((0, f.ZB)(n)),
-                    '--profile-avatar-border-color': e(v),
+                    '--profile-avatar-border-color': e(b),
                     '--profile-body-background-color': E.sectionBox,
                     '--profile-body-background-hover': E.profileBodyBackgroundHover,
-                    '--profile-body-divider-color': e(b, E.dividerOpacity),
-                    '--profile-body-border-color': e(b, 0.12),
-                    '--profile-message-input-border-color': e(y),
+                    '--profile-body-divider-color': e(y, E.dividerOpacity),
+                    '--profile-body-border-color': e(y, 0.12),
+                    '--profile-message-input-border-color': e(v),
                     '--profile-note-background-color': E.noteBackgroundColor,
                     '--profile-role-pill-background-color': E.rolePillBackgroundColor,
                     '--profile-role-pill-border-color': E.rolePillBorderColor
@@ -90,7 +90,7 @@ function m(e) {
                     textMixAmount: 25
                 })
             );
-        }, [n, i, E, v, b, y, O, t, _]),
+        }, [n, i, E, b, y, v, O, t, _]),
         profileThemeClassName: o()((0, l.QeD)(t), {
             [d.e3]: null != n,
             [h]: null != n

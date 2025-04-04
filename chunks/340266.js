@@ -5,7 +5,7 @@ var i = n(392711),
     o = n(481060),
     a = n(111028),
     s = n(5192),
-    l = n(827203);
+    l = n(744584);
 function c(e, t, n) {
     return (
         t in e
@@ -58,8 +58,8 @@ function f(e, t) {
         e
     );
 }
-let p = 4,
-    _ = 1,
+let _ = 4,
+    p = 1,
     h = 3,
     m = [
         [
@@ -133,14 +133,14 @@ let p = 4,
     ];
 function g(e) {
     let { users: t, channel: n } = e,
-        c = t.length > p,
-        d = t.length - p + 1,
-        g = d >= 10 ? h : _;
+        c = t.length > _,
+        d = t.length - _ + 1,
+        g = d >= 10 ? h : p;
     return (0, r.jsx)('div', {
         className: l.container,
         children: m[(0, i.clamp)(t.length - 1, 0, m.length - 1)].map((e, i) => {
-            let p = t[i];
-            return null == p
+            let _ = t[i];
+            return null == _
                 ? null
                 : (0, r.jsx)(
                       'div',
@@ -158,19 +158,19 @@ function g(e) {
                                         })
                                     })
                                   : (0, r.jsx)(o.ua7, {
-                                        text: s.ZP.getName(n.guild_id, n.id, p),
+                                        text: s.ZP.getName(n.guild_id, n.id, _),
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 'img',
                                                 f(u({}, e), {
                                                     className: l.avatar,
-                                                    src: p.getAvatarURL(n.guild_id, (0, o.pxk)(o.EFr.SIZE_80)),
+                                                    src: _.getAvatarURL(n.guild_id, (0, o.pxk)(o.EFr.SIZE_80)),
                                                     alt: ''
                                                 })
                                             )
                                     })
                       },
-                      p.id
+                      _.id
                   );
         })
     });

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => ev }), n(47120), n(653041);
+n.d(t, { Z: () => ey }), n(47120), n(653041);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(610521),
+    s = n(563555),
     l = n(512969),
     c = n(873546),
     u = n(442837),
@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(490173),
     E = n(114250),
     b = n(735246),
-    v = n(315263),
-    y = n(40851),
+    y = n(315263),
+    v = n(40851),
     O = n(607070),
     I = n(899663),
     S = n(793903),
@@ -62,7 +62,7 @@ var r = n(200651),
     ec = n(151851),
     eu = n(981631),
     ed = n(921944),
-    ef = n(541222);
+    ef = n(325162);
 function e_(e, t, n) {
     return (
         t in e
@@ -121,7 +121,7 @@ n(167666),
         .then((e) => {
             ee.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
         }),
-    (0, _.E)({ getDefaultLinkInterceptor: v.default }),
+    (0, _.E)({ getDefaultLinkInterceptor: y.default }),
     (0, en.Un)({
         createPromise: () => Promise.all([n.e('77298'), n.e('80451'), n.e('30634'), n.e('33551')]).then(n.bind(n, 849493)),
         webpackId: 849493
@@ -149,11 +149,11 @@ let eg = (0, en.Un)({
               })
             : (0, r.jsx)(ec.Z, em(ep({}, e), { focused: t }));
     }),
-    ev = function (e) {
+    ey = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
             { pathname: o } = (0, l.TH)(),
             _ = (0, ee.getPlatform)(),
-            v = c.tq || c.Em,
+            y = c.tq || c.Em,
             Q = (0, u.e7)([z.Z], () => (z.Z.darkSidebar ? eu.BRd.DARK : void 0)),
             $ = (0, j.Q3)('AppSkeleton');
         i.useEffect(() => {
@@ -163,11 +163,11 @@ let eg = (0, en.Un)({
             [el, ec, e_] = (0, u.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isCoachmark, D.Z.isPreview]),
             [ep, eh] = (0, u.Wu)([C.Z], () => [C.Z.isEditorOpen, C.Z.isUpsellPreview]),
             em = (0, u.e7)([X.Z], () => X.Z.getLayers().includes(eu.S9g.USER_SETTINGS)),
-            ev = (0, u.e7)([J.default], () => et.ZP.canUseClientThemes(J.default.getCurrentUser())),
-            ey = el && !em,
+            ey = (0, u.e7)([J.default], () => et.ZP.canUseClientThemes(J.default.getCurrentUser())),
+            ev = el && !em,
             eO = ep && !em,
             eI = [];
-        em || !ec || ev || eI.push(d.z.CLIENT_THEMES_COACHMARK);
+        em || !ec || ey || eI.push(d.z.CLIENT_THEMES_COACHMARK);
         let [eS, eT] = (0, F.US)(eI, ed.R.SIDEBAR, !0);
         eI.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
         let eN = eS === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
@@ -188,7 +188,7 @@ let eg = (0, en.Un)({
                 }));
         }, [eN, eA, eT, o]);
         let eC = i.useRef(document.body),
-            eR = ey || eA,
+            eR = ev || eA,
             eP = eO && !eA,
             ew = e_ || eh,
             { enabled: eD } = Y.Z.useExperiment(
@@ -215,7 +215,7 @@ let eg = (0, en.Un)({
                                             (0, r.jsx)(es.Co, {}),
                                             (0, r.jsx)(ea.ZP, {}),
                                             (0, r.jsx)(s.OU, {}),
-                                            (0, r.jsx)(y.Wu, {
+                                            (0, r.jsx)(v.Wu, {
                                                 appContext: eu.IlC.APP,
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(V.yP, {
@@ -227,7 +227,7 @@ let eg = (0, en.Un)({
                                                               })
                                                             : null,
                                                         (0, r.jsxs)('div', {
-                                                            className: a()(ef.appAsidePanelWrapper, v && ef.mobileAppAsidePanelWrapper),
+                                                            className: a()(ef.appAsidePanelWrapper, y && ef.mobileAppAsidePanelWrapper),
                                                             children: [
                                                                 (0, r.jsx)(k.K, {}),
                                                                 (0, r.jsx)('div', {
@@ -240,7 +240,7 @@ let eg = (0, en.Un)({
                                                                                 children: (0, r.jsxs)(x.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)('div', {
-                                                                                            className: a()(v ? ef.mobileApp : ef.app),
+                                                                                            className: a()(y ? ef.mobileApp : ef.app),
                                                                                             children: t
                                                                                         }),
                                                                                         (0, r.jsx)(P.Z, {}),
@@ -290,7 +290,7 @@ let eg = (0, en.Un)({
                                                                         isCoachmark: eA
                                                                     }),
                                                                 (0, r.jsx)(er.Z, {}),
-                                                                (0, r.jsx)(G.Z, { mobile: v })
+                                                                (0, r.jsx)(G.Z, { mobile: y })
                                                             ]
                                                         }),
                                                         !1

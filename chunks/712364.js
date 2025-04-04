@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r,
     i = n(200651),
     o = n(192379),
@@ -6,7 +6,7 @@ var r,
     s = n.n(a),
     l = n(481060),
     c = n(388032),
-    u = n(245098);
+    u = n(573855);
 function d(e, t, n) {
     return (
         t in e
@@ -23,9 +23,9 @@ function d(e, t, n) {
 class f extends (r = o.PureComponent) {
     render() {
         var e;
-        let { title: t, actionText: n, children: r, error: a, isLoading: d, maxLength: f, transitionState: p, helpMessage: _, retryPrompt: h, retrySuccessMessage: m } = this.props,
-            { code: g, errorMessage: E, retrySuccess: v } = this.state,
-            b =
+        let { title: t, actionText: n, children: r, error: a, isLoading: d, maxLength: f, transitionState: _, helpMessage: p, retryPrompt: h, retrySuccessMessage: m } = this.props,
+            { code: g, errorMessage: E, retrySuccess: b } = this.state,
+            y =
                 o.Children.count(r) > 0
                     ? (0, i.jsx)(l.Zbd, {
                           type: l.Zbd.Types.WARNING,
@@ -36,7 +36,7 @@ class f extends (r = o.PureComponent) {
                           })
                       })
                     : null,
-            y =
+            v =
                 null != h
                     ? (0, i.jsxs)(l.Text, {
                           className: s()(u.__invalid_submitText, u.spacing),
@@ -51,7 +51,7 @@ class f extends (r = o.PureComponent) {
                           ]
                       })
                     : null,
-            O = v
+            O = b
                 ? (0, i.jsx)(l.Zbd, {
                       type: l.Zbd.Types.SUCCESS,
                       className: u.card,
@@ -62,7 +62,7 @@ class f extends (r = o.PureComponent) {
                   })
                 : null;
         return (0, i.jsx)(l.Y0X, {
-            transitionState: p,
+            transitionState: _,
             children: (0, i.jsxs)('form', {
                 onSubmit: this.handleSubmit,
                 children: [
@@ -75,15 +75,15 @@ class f extends (r = o.PureComponent) {
                     }),
                     (0, i.jsxs)(l.hzk, {
                         children: [
-                            null != _
+                            null != p
                                 ? (0, i.jsx)(l.Text, {
                                       color: 'text-normal',
                                       variant: 'text-md/normal',
                                       className: u.spacing,
-                                      children: _
+                                      children: p
                                   })
                                 : null,
-                            b,
+                            y,
                             O,
                             (0, i.jsxs)(l.xJW, {
                                 title: this.getLabelText(),
@@ -92,7 +92,7 @@ class f extends (r = o.PureComponent) {
                                     (0, i.jsx)(l.oil, {
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
-                                        placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
+                                        placeholder: null != (e = this.getPlaceholder()) ? e : void 0,
                                         maxLength: null != f ? f : 10,
                                         value: g,
                                         autoComplete: 'one-time-code',
@@ -106,7 +106,7 @@ class f extends (r = o.PureComponent) {
                                               children: null != a ? a : E
                                           })
                                         : null,
-                                    y
+                                    v
                                 ]
                             })
                         ]
@@ -144,12 +144,12 @@ class f extends (r = o.PureComponent) {
             }),
             d(this, 'getLabelText', () => {
                 var e;
-                return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? c.NW.string(c.t.HZPBOT) : c.NW.string(c.t['+NQopK']);
+                return null != (e = this.props.label) ? e : this.props.disallowBackupCodes ? c.NW.string(c.t.HZPBOT) : c.NW.string(c.t['+NQopK']);
             }),
             d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? c.NW.string(c.t.tARzgo) : c.NW.string(c.t.yO4lAA))),
             d(this, 'getPlaceholder', () => {
                 var e;
-                return this.props.forceNoPlaceholder ? null : null !== (e = this.props.placeholder) && void 0 !== e ? e : this.getSupportedCodeTypes();
+                return this.props.forceNoPlaceholder ? null : null != (e = this.props.placeholder) ? e : this.getSupportedCodeTypes();
             }),
             d(this, 'errorPresent', () => (null != this.props.error && '' !== this.props.error) || (null != this.state.errorMessage && '' !== this.state.errorMessage)),
             d(this, 'handleRetry', () => {
@@ -179,4 +179,4 @@ d(f, 'defaultProps', {
     error: null,
     forceNoPlaceholder: !1
 });
-let p = f;
+let _ = f;

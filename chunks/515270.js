@@ -18,10 +18,10 @@ var r = n(147519),
     u = n(436660),
     d = n(887490),
     f = n(42530);
-let p = new Set(['line']),
-    _ = r.Z.listLanguages(),
+let _ = new Set(['line']),
+    p = r.Z.listLanguages(),
     h = new Map();
-for (let e of _) {
+for (let e of p) {
     e = e.toLowerCase();
     let t = r.Z.getLanguage(e);
     if (null == t) continue;
@@ -38,7 +38,7 @@ function E(e) {
         (e.onChange = () => {
             d.bN.richValue(e) !== n &&
                 (l.T.withMergedEntry(e, () => {
-                    d.bN.withoutNormalizing(e, () => v(e));
+                    d.bN.withoutNormalizing(e, () => b(e));
                 }),
                 (n = d.bN.richValue(e))),
                 t();
@@ -46,12 +46,12 @@ function E(e) {
         e
     );
 }
-function v(e) {
-    let t = y(e);
-    S(e, t);
+function b(e) {
+    let t = v(e);
+    I(e, t);
 }
-let b = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
-function y(e) {
+let y = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
+function v(e) {
     let t = [],
         n = null;
     for (let r of d.bN.blocks(e)) {
@@ -72,30 +72,30 @@ function O(e, t, n, r, i) {
     }
     let u = n && null != s,
         f = n && 0 === a.length,
-        p = r && 0 === a.length,
-        _ = (u ? a.slice(1) : a).length % 2 == 1,
-        m = _ && (null == c || '' === c || null != c.match(g)),
-        E = m && null != c && null !== (o = h.get(c.toLowerCase())) && void 0 !== o ? o : null;
+        _ = r && 0 === a.length,
+        p = (u ? a.slice(1) : a).length % 2 == 1,
+        m = p && (null == c || '' === c || null != c.match(g)),
+        E = m && null != c && null != (o = h.get(c.toLowerCase())) ? o : null;
     return {
         blockEntry: t,
         wasInCodeBlock: n,
         isInCodeBlock: f,
-        isStyledCodeBlockLine: p,
-        lang: _ || u ? E : i,
+        isStyledCodeBlockLine: _,
+        lang: p || u ? E : i,
         hljsTypes: null,
         closesCodeBlock: u,
-        opensCodeBlock: _,
+        opensCodeBlock: p,
         opensCodeBlockOnOwnLine: m
     };
 }
-function S(e, t) {
+function I(e, t) {
     for (let n of t) {
         let [t, r] = n.blockEntry,
-            i = I(n);
+            i = S(n);
         (null == t ? void 0 : t.codeBlockState) != i && u.Q.setNodes(e, { codeBlockState: i }, { at: r });
     }
 }
-function I(e) {
+function S(e) {
     return e.isStyledCodeBlockLine || e.wasInCodeBlock
         ? {
               lang: e.lang,
@@ -119,8 +119,8 @@ function T(e) {
                 if (null != r && r.length === t.length) {
                     let e = [];
                     for (let n = 0; n < t.length; n++) {
-                        let i;
-                        let o = r[n]
+                        let i,
+                            o = r[n]
                                 .replace(/&amp;/g, '&')
                                 .replace(/&lt;/g, '<')
                                 .replace(/&gt;/g, '>')
@@ -129,7 +129,7 @@ function T(e) {
                             a = [],
                             s = 0,
                             l = 0;
-                        for (; null != (i = b.exec(o)); ) {
+                        for (; null != (i = y.exec(o)); ) {
                             let t = i.index + i[0].length,
                                 n = i.index - l;
                             i.index > l &&
@@ -176,9 +176,9 @@ function C(e, t) {
     return A.set(n, o), o;
 }
 function R(e) {
-    let t;
-    let [n, r] = e;
-    if (!p.has(n.type)) return [];
+    let t,
+        [n, r] = e;
+    if (!_.has(n.type)) return [];
     let i = [],
         o = /\\|```/g;
     for (let e = 0; e < n.children.length; e++) {
@@ -214,7 +214,7 @@ function P(e, t) {
         let e = i[0].text;
         d.C0.equals(i[1], t.path) && (e = e.substring(0, t.offset));
         let o = e.match(/```/g);
-        n += null !== (r = null == o ? void 0 : o.length) && void 0 !== r ? r : 0;
+        n += null != (r = null == o ? void 0 : o.length) ? r : 0;
     }
     return n % 2 != 0;
 }

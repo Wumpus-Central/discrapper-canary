@@ -42,14 +42,14 @@ class s {
         let e = r.K.get(s.storageKey);
         if (null != e) {
             var t;
-            return new s(null !== (t = e.games) && void 0 !== t ? t : {});
+            return new s(null != (t = e.games) ? t : {});
         }
         let n = new s({});
         return n.save(), n;
     }
     static getGameSettings(e) {
         var t;
-        return null == e ? null : null !== (t = s.load().games[e]) && void 0 !== t ? t : null;
+        return null == e ? null : null != (t = s.load().games[e]) ? t : null;
     }
     static updateGameSettings(e, t) {
         if (null == e) return;
@@ -70,14 +70,14 @@ class s {
     }
     static isPromptingForGameDisable(e) {
         var t, n;
-        return null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.disabled) && void 0 !== n && n;
+        return null != (n = null == (t = s.getGameSettings(e)) ? void 0 : t.disabled) && n;
     }
     static setPromptingForGameDisable(e, t) {
         s.updateGameSettings(e, { disabled: t });
     }
     static getGameDisplayMode(e) {
         var t, n;
-        return null == e ? null : null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.screen) && void 0 !== n ? n : null;
+        return null == e ? null : null != (n = null == (t = s.getGameSettings(e)) ? void 0 : t.screen) ? n : null;
     }
     static setGameDisplayMode(e, t) {
         s.updateGameSettings(e, { screen: t });

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    o = n(389117),
+    o = n(164484),
     a = n(374470),
     s = n(442837),
     l = n(481060),
@@ -9,15 +9,15 @@ var r = n(200651),
     u = n(5967),
     d = n(607070),
     f = n(446108),
-    p = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    p = n(388032);
 function h(e) {
     var t;
-    if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== p.yXg.TAB || null == e.target) return;
+    if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== _.yXg.TAB || null == e.target) return;
     let { target: n } = e,
-        r = null === (t = (0, u.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+        r = null == (t = (0, u.uB)(e)) ? void 0 : t.activeElement;
     (0, a.k)(n) &&
-        c.default.track(p.rMx.KEYBOARD_SHORTCUT_USED, {
+        c.default.track(_.rMx.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: 'tab_navigation',
             source_class_list: null != r ? Array.from(r.classList) : [],
             location_object: n.tagName
@@ -44,7 +44,7 @@ function m(e) {
             [n, a, c]
         );
     return (
-        i.useEffect(() => ((0, o.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), _.NW.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', h), () => window.removeEventListener('keydown', h)), []),
+        i.useEffect(() => ((0, o.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), p.NW.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', h), () => window.removeEventListener('keydown', h)), []),
         (0, r.jsx)(l.Sfi.Provider, {
             value: u,
             children: t

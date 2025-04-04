@@ -43,8 +43,8 @@ var r = n(912370),
     g = n(358085),
     E = n(541099),
     b = n(827498),
-    v = n(981631),
-    y = n(689079),
+    y = n(981631),
+    v = n(689079),
     O = n(388032);
 function I(e, t, n) {
     return (
@@ -118,9 +118,9 @@ function C(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = { id: y.bi.BUILT_IN };
+let R = { id: v.bi.BUILT_IN };
 function P(e) {
-    return e.id !== y.bi.BUILT_IN;
+    return e.id !== v.bi.BUILT_IN;
 }
 function w(e) {
     return P(e) ? e.name : O.NW.string(O.t.UB2gGx);
@@ -130,22 +130,22 @@ function D(e) {
 }
 function L(e) {
     var t;
-    return P(e) && (0, m.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, v.udG.EMBEDDED);
+    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
 }
 function x(e) {
     var t;
-    return P(e) && (0, m.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, v.udG.PARTNER);
+    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
 function M(e) {
     var t;
-    return P(e) && (0, m.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, v.udG.PROMOTED);
+    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
 function k(e) {
     let t = j(e),
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())];
     if ((null == n ? void 0 : n.label_until) != null && Date.now() < Date.parse(null == n ? void 0 : n.label_until)) {
         var r;
-        return null !== (r = null == n ? void 0 : n.label_type) && void 0 !== r ? r : a.ww.NONE;
+        return null != (r = null == n ? void 0 : n.label_type) ? r : a.ww.NONE;
     }
     return a.ww.NONE;
 }
@@ -170,7 +170,7 @@ function U(e) {
                 if (t.inputType === c.iw.BUILT_IN_TEXT && null != i && null != r.channel) {
                     var e;
                     let t = _.ZP.parse(f, i.content);
-                    (t.tts = null !== (e = i.tts) && void 0 !== e && e), o.Z.sendMessage(r.channel.id, t);
+                    (t.tts = null != (e = i.tts) && e), o.Z.sendMessage(r.channel.id, t);
                 }
             } catch (e) {
                 throw (
@@ -215,7 +215,7 @@ function F(e) {
     return null != t && t.displays_advertisements;
 }
 function V(e) {
-    return e === b._b.TEXT;
+    return e === b._b.TEXT || e === b._b.PLAY_TAB || e === b._b.QUICK_LAUNCHER;
 }
 function Z(e) {
     return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');

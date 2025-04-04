@@ -22,7 +22,7 @@ n.d(t, {
     R_: () => eD,
     Rt: () => eG,
     SE: () => eA,
-    Sb: () => ey,
+    Sb: () => ev,
     Sh: () => eM,
     T4: () => R,
     UP: () => ea,
@@ -37,13 +37,13 @@ n.d(t, {
     _j: () => eL,
     bh: () => ee,
     bm: () => ei,
-    cC: () => y,
+    cC: () => v,
     cP: () => G,
     co: () => eu,
     d$: () => k,
     d4: () => A,
     dN: () => m,
-    eR: () => v,
+    eR: () => y,
     eo: () => x,
     ev: () => Q,
     fq: () => b,
@@ -91,7 +91,7 @@ let m = (0, u.Zc)(
         'useLegacyChatInput',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -100,7 +100,7 @@ let m = (0, u.Zc)(
         'useRichChatInput',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -109,7 +109,7 @@ let m = (0, u.Zc)(
         'expressionSuggestionsEnabled',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -118,25 +118,25 @@ let m = (0, u.Zc)(
         'includeStickersInAutocomplete',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
-        },
-        (e) => o.D5.create({ value: e })
-    ),
-    v = (0, u.Zc)(
-        'textAndImages',
-        'includeSoundmojiInAutocomplete',
-        (e) => {
-            var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
     y = (0, u.Zc)(
         'textAndImages',
+        'includeSoundmojiInAutocomplete',
+        (e) => {
+            var t;
+            return null == (t = null == e ? void 0 : e.value) || t;
+        },
+        (e) => o.D5.create({ value: e })
+    ),
+    v = (0, u.Zc)(
+        'textAndImages',
         'renderSpoilers',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : _.A2N.ON_CLICK;
+            return null != (t = null == e ? void 0 : e.value) ? t : _.A2N.ON_CLICK;
         },
         (e) => o.Gm.create({ value: e })
     ),
@@ -145,7 +145,7 @@ let m = (0, u.Zc)(
         'useThreadSidebar',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     );
@@ -154,7 +154,7 @@ let m = (0, u.Zc)(
     'showInAppNotifications',
     (e) => {
         var t;
-        return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+        return null == (t = null == e ? void 0 : e.value) || t;
     },
     (e) => o.D5.create({ value: e })
 );
@@ -169,7 +169,7 @@ let I = (0, u.Zc)(
         'quietMode',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: !!e })
     ),
@@ -203,7 +203,7 @@ let I = (0, u.Zc)(
         'viewImageDescriptions',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -212,7 +212,7 @@ let I = (0, u.Zc)(
         'showCommandSuggestions',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -221,7 +221,7 @@ let I = (0, u.Zc)(
         'alwaysPreviewVideo',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -249,7 +249,7 @@ let I = (0, u.Zc)(
         'installShortcutDesktop',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -258,7 +258,7 @@ let I = (0, u.Zc)(
         'installShortcutStartMenu',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -267,7 +267,7 @@ let I = (0, u.Zc)(
         'allowActivityPartyPrivacyFriends',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -276,7 +276,7 @@ let I = (0, u.Zc)(
         'allowActivityPartyPrivacyVoiceChannel',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -304,7 +304,7 @@ let I = (0, u.Zc)(
     'contactSyncEnabled',
     (e) => {
         var t;
-        return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+        return null != (t = null == e ? void 0 : e.value) && t;
     },
     (e) => o.D5.create({ value: e })
 );
@@ -331,7 +331,7 @@ let W = (0, u.Zc)(
     'friendDiscoveryFlags',
     (e) => {
         var t;
-        return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0;
+        return null != (t = null == e ? void 0 : e.value) ? t : 0;
     },
     (e) => o.yC.create({ value: e })
 );
@@ -352,7 +352,7 @@ let z = (0, u.TG)({
         'rtcPanelShowVoiceStates',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -361,7 +361,7 @@ let z = (0, u.TG)({
         'convertEmoticons',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -370,7 +370,7 @@ let z = (0, u.TG)({
         'messageDisplayCompact',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -385,7 +385,7 @@ let z = (0, u.TG)({
         'soundmojiVolume',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 100;
+            return null != (t = null == e ? void 0 : e.value) ? t : 100;
         },
         (e) => o.A8.create({ value: e })
     );
@@ -394,7 +394,7 @@ let z = (0, u.TG)({
     'streamNotificationsEnabled',
     (e) => {
         var t;
-        return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+        return null == (t = null == e ? void 0 : e.value) || t;
     },
     (e) => o.D5.create({ value: e })
 );
@@ -403,7 +403,7 @@ let ee = (0, u.Zc)(
     'dropsOptedOut',
     (e) => {
         var t;
-        return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+        return null != (t = null == e ? void 0 : e.value) && t;
     },
     (e) => o.D5.create({ value: e })
 );
@@ -412,7 +412,7 @@ let ee = (0, u.Zc)(
     'nativePhoneIntegrationEnabled',
     (e) => {
         var t;
-        return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+        return null == (t = null == e ? void 0 : e.value) || t;
     },
     (e) => o.D5.create({ value: e })
 );
@@ -434,7 +434,7 @@ let et = (0, u.TG)({
         'viewNsfwGuilds',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -443,7 +443,7 @@ let et = (0, u.TG)({
         'viewNsfwCommands',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     );
@@ -452,7 +452,7 @@ let et = (0, u.TG)({
     'detectPlatformAccounts',
     (e) => {
         var t;
-        return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+        return null == (t = null == e ? void 0 : e.value) || t;
     },
     (e) => o.D5.create({ value: e })
 );
@@ -461,7 +461,7 @@ let ei = (0, u.Zc)(
         'disableGamesTab',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -470,7 +470,7 @@ let ei = (0, u.Zc)(
         'enableTtsCommand',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -479,7 +479,7 @@ let ei = (0, u.Zc)(
         'explicitContentFilter',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : f.TI.NON_FRIENDS;
+            return null != (t = null == e ? void 0 : e.value) ? t : f.TI.NON_FRIENDS;
         },
         (e) => o.yC.create({ value: e })
     );
@@ -488,7 +488,7 @@ let ei = (0, u.Zc)(
     'dmSpamFilter',
     (e) => {
         var t;
-        return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : f.fQ.NON_FRIENDS;
+        return null != (t = null == e ? void 0 : e.value) ? t : f.fQ.NON_FRIENDS;
     },
     (e) => o.yC.create({ value: e })
 );
@@ -503,7 +503,7 @@ let es = (0, u.Zc)(
         'showCurrentGame',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     );
@@ -512,7 +512,7 @@ let es = (0, u.Zc)(
     'recentGamesEnabled',
     (e) => {
         var t;
-        return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+        return null == (t = null == e ? void 0 : e.value) || t;
     },
     (e) => o.D5.create({ value: e })
 );
@@ -540,7 +540,7 @@ let ec = new Set(Object.values(_.Skl)),
         'allowVoiceRecording',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -550,7 +550,7 @@ let ec = new Set(Object.values(_.Skl)),
             'inlineAttachmentMedia',
             (e) => {
                 var t;
-                return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+                return null == (t = null == e ? void 0 : e.value) || t;
             },
             (e) => o.D5.create({ value: e })
         ),
@@ -563,7 +563,7 @@ let ec = new Set(Object.values(_.Skl)),
             'inlineEmbedMedia',
             (e) => {
                 var t;
-                return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+                return null == (t = null == e ? void 0 : e.value) || t;
             },
             (e) => o.D5.create({ value: e })
         ),
@@ -576,7 +576,7 @@ let ec = new Set(Object.values(_.Skl)),
             'renderEmbeds',
             (e) => {
                 var t;
-                return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+                return null == (t = null == e ? void 0 : e.value) || t;
             },
             (e) => o.D5.create({ value: e })
         ),
@@ -589,7 +589,7 @@ let ec = new Set(Object.values(_.Skl)),
             'renderReactions',
             (e) => {
                 var t;
-                return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+                return null == (t = null == e ? void 0 : e.value) || t;
             },
             (e) => o.D5.create({ value: e })
         ),
@@ -601,7 +601,7 @@ let ec = new Set(Object.values(_.Skl)),
         'timezoneOffset',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : null;
+            return null != (t = null == e ? void 0 : e.value) ? t : null;
         },
         (e) => o.T4.create({ value: null != e ? e : 0 })
     ),
@@ -612,14 +612,14 @@ let ec = new Set(Object.values(_.Skl)),
     (e) => (null != e && eb.has(e.value) ? e.value : a.l.COZY),
     (e) => o.Gm.create({ value: e })
 );
-let ev = new Set([a.Z.ALL, a.Z.UNREADS, a.Z.NONE]);
+let ey = new Set([a.Z.ALL, a.Z.UNREADS, a.Z.NONE]);
 (0, u.Zc)(
     'appearance',
     'messagePreviews',
-    (e) => (null != e && ev.has(e.value) ? e.value : a.Z.ALL),
+    (e) => (null != e && ey.has(e.value) ? e.value : a.Z.ALL),
     (e) => o.Gm.create({ value: e })
 );
-let ey = (0, u.KM)(
+let ev = (0, u.KM)(
         (0, u.Zc)(
             'appearance',
             'developerMode',
@@ -634,7 +634,7 @@ let ey = (0, u.KM)(
         'clientThemeSettings',
         (e) => {
             var t;
-            return { backgroundGradientPresetId: null == e ? void 0 : null === (t = e.backgroundGradientPresetId) || void 0 === t ? void 0 : t.value };
+            return { backgroundGradientPresetId: null == e || null == (t = e.backgroundGradientPresetId) ? void 0 : t.value };
         },
         (e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? o.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
     ),
@@ -645,7 +645,7 @@ let ey = (0, u.KM)(
                 'gifAutoPlay',
                 (e) => {
                     var t;
-                    return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+                    return null == (t = null == e ? void 0 : e.value) || t;
                 },
                 (e) => o.D5.create({ value: e })
             ),
@@ -655,12 +655,12 @@ let ey = (0, u.KM)(
         'gifAutoPlay',
         () => {
             var e;
-            return null === (e = d.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
+            return null == (e = d.Z.getOverride('gifAutoPlay')) ? void 0 : e.value;
         },
         () =>
             (0, r.e7)([d.Z], () => {
                 var e;
-                return null === (e = d.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
+                return null == (e = d.Z.getOverride('gifAutoPlay')) ? void 0 : e.value;
             })
     ),
     eS = (0, u.R2)(
@@ -670,7 +670,7 @@ let ey = (0, u.KM)(
                 'animateEmoji',
                 (e) => {
                     var t;
-                    return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+                    return null == (t = null == e ? void 0 : e.value) || t;
                 },
                 (e) => o.D5.create({ value: e })
             ),
@@ -680,12 +680,12 @@ let ey = (0, u.KM)(
         'animateEmoji',
         () => {
             var e;
-            return null === (e = d.Z.getOverride('animateEmoji')) || void 0 === e ? void 0 : e.value;
+            return null == (e = d.Z.getOverride('animateEmoji')) ? void 0 : e.value;
         },
         () =>
             (0, r.e7)([d.Z], () => {
                 var e;
-                return null === (e = d.Z.getOverride('animateEmoji')) || void 0 === e ? void 0 : e.value;
+                return null == (e = d.Z.getOverride('animateEmoji')) ? void 0 : e.value;
             })
     ),
     eT = (0, u.R2)(
@@ -695,7 +695,7 @@ let ey = (0, u.KM)(
                 'animateStickers',
                 (e) => {
                     var t;
-                    return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : h.yr.ALWAYS_ANIMATE;
+                    return null != (t = null == e ? void 0 : e.value) ? t : h.yr.ALWAYS_ANIMATE;
                 },
                 (e) => o.yC.create({ value: e })
             ),
@@ -705,12 +705,12 @@ let ey = (0, u.KM)(
         'animateStickers',
         () => {
             var e;
-            return null === (e = d.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
+            return null == (e = d.Z.getOverride('animateStickers')) ? void 0 : e.value;
         },
         () =>
             (0, r.e7)([d.Z], () => {
                 var e;
-                return null === (e = d.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
+                return null == (e = d.Z.getOverride('animateStickers')) ? void 0 : e.value;
             })
     ),
     eN = [],
@@ -750,7 +750,7 @@ let ey = (0, u.KM)(
         'hideLegacyUsername',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -759,7 +759,7 @@ let ey = (0, u.KM)(
         'allowGameFriendDmsInDiscord',
         (e) => {
             var t;
-            return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
+            return null == (t = null == e ? void 0 : e.value) || t;
         },
         (e) => o.D5.create({ value: e })
     ),
@@ -814,7 +814,7 @@ let ey = (0, u.KM)(
     'searchResultExactCountEnabled',
     (e) => {
         var t;
-        return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+        return null != (t = null == e ? void 0 : e.value) && t;
     },
     (e) => o.D5.create({ value: e })
 ),
@@ -823,7 +823,7 @@ let ey = (0, u.KM)(
         'happeningNowCardsDisabled',
         (e) => {
             var t;
-            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+            return null != (t = null == e ? void 0 : e.value) && t;
         },
         (e) => o.D5.create({ value: e })
     );

@@ -35,11 +35,11 @@ class a {
     }
     onCaptureEnd(e, t) {
         var n;
-        (null === (n = this.application) || void 0 === n ? void 0 : n.windowHandle) === t && this._update(e);
+        (null == (n = this.application) ? void 0 : n.windowHandle) === t && this._update(e);
     }
     onCaptureLegacyEnd(e) {
         var t;
-        return (null === (t = this.application) || void 0 === t ? void 0 : t.windowHandle) != null ? this.onCaptureEnd(e, this.application.windowHandle) : this._stop();
+        return (null == (t = this.application) ? void 0 : t.windowHandle) != null ? this.onCaptureEnd(e, this.application.windowHandle) : this._stop();
     }
     _update(e) {
         let t = (0, r.s)(e, this.application);
@@ -48,7 +48,7 @@ class a {
     }
     _stream(e) {
         var t;
-        let n = (null === (t = this.application) || void 0 === t ? void 0 : t.windowHandle) !== e.windowHandle;
+        let n = (null == (t = this.application) ? void 0 : t.windowHandle) !== e.windowHandle;
         (this.active = !0),
             (this.application = Object.assign({}, e)),
             n &&

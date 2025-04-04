@@ -294,7 +294,7 @@ class k extends s.Z {
     _getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: r } = this.analyticsContext,
             { ownerId: i, guildId: o } = this._streamContext,
-            a = b.Z.getRegion(E.Z.getHostname()),
+            a = b.Z.getRegion(E.ZP.getHostname()),
             { gameName: s, gameId: l, exe: c, distributor: u } = (0, f.G8)(t);
         return {
             channel_id: this.channelId,

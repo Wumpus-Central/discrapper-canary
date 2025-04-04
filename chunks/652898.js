@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120), n(773603);
+n.d(t, { Z: () => y }), n(47120), n(773603);
 var r = n(990547),
     i = n(283693),
     o = n(44609),
@@ -71,7 +71,7 @@ function E(e) {
     return t;
 }
 let b = new Map();
-function v(e, t, n) {
+function y(e, t, n) {
     if ((c.default.track(_.rMx.INVITE_OPENED, { invite_code: e }), b.has(e))) return b.get(e);
     let a = (0, d.fU)(e),
         f = g(h({}, n), {
@@ -89,23 +89,23 @@ function v(e, t, n) {
                 properties: (e) => {
                     var r, o, c, u, d, f, p;
                     let h = e.body,
-                        m = (null === (r = e.body) || void 0 === r ? void 0 : r.code) === _.evJ.USER_BANNED;
+                        m = (null == (r = e.body) ? void 0 : r.code) === _.evJ.USER_BANNED;
                     return (0, i.iG)({
                         resolved: e.ok,
-                        guild_id: null == h ? void 0 : null === (o = h.guild) || void 0 === o ? void 0 : o.id,
-                        channel_id: null == h ? void 0 : null === (c = h.channel) || void 0 === c ? void 0 : c.id,
-                        channel_type: null == h ? void 0 : null === (u = h.channel) || void 0 === u ? void 0 : u.type,
-                        inviter_id: null == h ? void 0 : null === (d = h.inviter) || void 0 === d ? void 0 : d.id,
+                        guild_id: null == h || null == (o = h.guild) ? void 0 : o.id,
+                        channel_id: null == h || null == (c = h.channel) ? void 0 : c.id,
+                        channel_type: null == h || null == (u = h.channel) ? void 0 : u.type,
+                        inviter_id: null == h || null == (d = h.inviter) ? void 0 : d.id,
                         code: a.baseCode,
                         input_value: null == n ? void 0 : n.inputValue,
                         location: t,
                         authenticated: s.default.isAuthenticated(),
                         size_total: null == h ? void 0 : h.approximate_member_count,
                         size_online: null == h ? void 0 : h.approximate_presence_count,
-                        destination_user_id: null == h ? void 0 : null === (f = h.target_user) || void 0 === f ? void 0 : f.id,
+                        destination_user_id: null == h || null == (f = h.target_user) ? void 0 : f.id,
                         invite_type: E(h),
                         user_banned: m,
-                        user_is_member: null != l.Z.getGuild(null == h ? void 0 : null === (p = h.guild) || void 0 === p ? void 0 : p.id)
+                        user_is_member: null != l.Z.getGuild(null == h || null == (p = h.guild) ? void 0 : p.id)
                     });
                 }
             },
@@ -132,7 +132,7 @@ function v(e, t, n) {
                                 size_online: i.approximate_presence_count,
                                 destination_user_id: null != i.target_user ? i.target_user.id : null,
                                 invite_type: E(i),
-                                user_is_member: null != l.Z.getGuild(null == i ? void 0 : null === (o = i.guild) || void 0 === o ? void 0 : o.id)
+                                user_is_member: null != l.Z.getGuild(null == i || null == (o = i.guild) ? void 0 : o.id)
                             },
                             { flush: !0 }
                         );
@@ -155,8 +155,8 @@ function v(e, t, n) {
                                 location: t,
                                 authenticated: s.default.isAuthenticated(),
                                 user_banned: i,
-                                error_code: null === (o = r.body) || void 0 === o ? void 0 : o.code,
-                                error_message: null === (l = r.body) || void 0 === l ? void 0 : l.message
+                                error_code: null == (o = r.body) ? void 0 : o.code,
+                                error_message: null == (l = r.body) ? void 0 : l.message
                             },
                             { flush: !0 }
                         );

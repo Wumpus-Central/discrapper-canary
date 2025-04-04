@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -34,21 +34,21 @@ class f extends (r = i.ZP.Store) {
     getLeaderboards(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return null === (t = c.get(n)) || void 0 === t ? void 0 : t.get(e);
+        return null == (t = c.get(n)) ? void 0 : t.get(e);
     }
     get(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return l ? a.Z : null === (n = this.getLeaderboardResponse(e, t, r)) || void 0 === n ? void 0 : n.leaderboard;
+        return l ? a.Z : null == (n = this.getLeaderboardResponse(e, t, r)) ? void 0 : n.leaderboard;
     }
     getLeaderboardResponse(e, t) {
         var n, r;
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return null === (r = c.get(i)) || void 0 === r ? void 0 : null === (n = r.get(e)) || void 0 === n ? void 0 : n.get(t);
+        return null == (r = c.get(i)) || null == (n = r.get(e)) ? void 0 : n.get(t);
     }
 }
 s(f, 'displayName', 'GuildLeaderboardStore');
-let p = new f(o.Z, {
+let _ = new f(o.Z, {
     CONNECTION_OPEN: d,
     SET_GUILD_LEADERBOARD: u
 });

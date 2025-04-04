@@ -53,7 +53,7 @@ class f {
         d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(u.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (a())(this.message, t));
     }
 }
-function p(e, t) {
+function _(e, t) {
     let n = l().parserFor(t(e)),
         r = l().reactFor(l().ruleOutput(e, 'react'));
     return (e, t, i) => {
@@ -70,7 +70,7 @@ function p(e, t) {
         );
     };
 }
-function _(e) {
+function p(e) {
     let t = l().parserFor(e);
     return (e, n, r) =>
         t(e + '\n\n', {
@@ -80,7 +80,7 @@ function _(e) {
         });
 }
 function h(e) {
-    (r = p(c.j, e)), (i = _(c.j));
+    (r = _(c.j, e)), (i = p(c.j));
 }
 function m(e, t) {
     if (null == e) return '';

@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(325767),
     l = n(645652),
     c = n(388032),
-    u = n(503544);
+    u = n(129419);
 function d(e, t, n) {
     return (
         t in e
@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,12 +52,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -66,7 +66,7 @@ function _(e, t) {
 function h(e) {
     return (0, r.jsx)(
         'svg',
-        _(f({}, (0, s.Z)(f({}, e))), {
+        p(f({}, (0, s.Z)(f({}, e))), {
             width: '25',
             height: '48',
             viewBox: '0 0 25 48',

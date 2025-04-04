@@ -57,45 +57,45 @@ function d(e, t) {
     );
 }
 let f = 'OverridePremiumTypeStore',
-    p = {
+    _ = {
         premiumTypeOverride: s.F_,
         premiumTypeActual: s.F_,
         createdAtOverride: s.Zh
     };
-function _(e) {
+function p(e) {
     let { premiumType: t } = e;
-    p.premiumTypeOverride = t;
+    _.premiumTypeOverride = t;
 }
 function h(e) {
     let { createdAt: t } = e;
-    p.createdAtOverride = t;
+    _.createdAtOverride = t;
 }
 function m(e) {
     let { user: t } = e;
-    p.premiumTypeActual = (0, a.G)(t.premium_type);
+    _.premiumTypeActual = (0, a.G)(t.premium_type);
 }
 class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            (p.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (p.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (p.createdAtOverride = new Date(e.createdAtOverride)) : (p.createdAtOverride = s.Zh);
+            (_.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (_.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (_.createdAtOverride = new Date(e.createdAtOverride)) : (_.createdAtOverride = s.Zh);
             return;
         }
-        (p.premiumTypeOverride = s.F_), (p.createdAtOverride = s.Zh);
+        (_.premiumTypeOverride = s.F_), (_.createdAtOverride = s.Zh);
     }
     getPremiumTypeOverride() {
-        return p.premiumTypeOverride;
+        return _.premiumTypeOverride;
     }
     getPremiumTypeActual() {
-        return p.premiumTypeActual;
+        return _.premiumTypeActual;
     }
     getCreatedAtOverride() {
-        return p.createdAtOverride;
+        return _.createdAtOverride;
     }
     getState() {
-        return p;
+        return _;
     }
     get premiumType() {
-        return p.premiumTypeOverride;
+        return _.premiumTypeOverride;
     }
 }
 l(g, 'displayName', f),
@@ -106,7 +106,7 @@ l(g, 'displayName', f),
         }
     ]);
 let E = new g(o.Z, {
-    SET_PREMIUM_TYPE_OVERRIDE: _,
+    SET_PREMIUM_TYPE_OVERRIDE: p,
     SET_CREATED_AT_OVERRIDE: h,
     CURRENT_USER_UPDATE: m,
     CONNECTION_OPEN: m

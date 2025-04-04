@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => p,
+    Z: () => _,
     h: () => c
 });
 var r,
@@ -62,7 +62,7 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
     }
     get lastOpenTabId() {
         var e;
-        return null !== (e = u.lastOpenTabId) && void 0 !== e ? e : null;
+        return null != (e = u.lastOpenTabId) ? e : null;
     }
     get displayTools() {
         return a.Z.isDeveloper && u.displayTools;
@@ -78,4 +78,4 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 s(f, 'displayName', 'DevToolsSettingsStore'), s(f, 'persistKey', 'DevToolsSettingsStore');
-let p = new f(o.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });
+let _ = new f(o.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });

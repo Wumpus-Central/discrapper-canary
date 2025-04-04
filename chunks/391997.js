@@ -1,6 +1,6 @@
 n.d(t, {
-    p: () => p,
-    t: () => _
+    p: () => _,
+    t: () => p
 });
 var r = n(608748),
     i = n(388388),
@@ -21,7 +21,7 @@ var r = n(608748),
         return void 0 === e && (e = 0), Date.now() + e;
     },
     f = !1,
-    p = new ((function () {
+    _ = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -78,6 +78,6 @@ var r = n(608748),
             e
         );
     })())(),
-    _ = function (e) {
-        !a && e > 0 && p.start(), (a += e) || p.stop();
+    p = function (e) {
+        !a && e > 0 && _.start(), (a += e) || _.stop();
     };

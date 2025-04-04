@@ -1,11 +1,11 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(481060),
     o = n(299206),
     a = n(726521),
     s = n(389052),
     l = n(388032),
-    c = n(248717);
+    c = n(923492);
 function u(e, t, n) {
     return (
         t in e
@@ -104,7 +104,7 @@ let p = (e) => {
             })
         });
     },
-    g = (e) => {
+    m = (e) => {
         let { appRecord: t, showAppReportingOption: n, selectedGuildId: o, selectedChannelId: a } = e;
         return (0, r.jsx)(i.yRy, {
             renderPopout: (e) => {

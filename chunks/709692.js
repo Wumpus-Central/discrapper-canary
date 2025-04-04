@@ -39,13 +39,13 @@ function u(e) {
             modalKey: c,
             onCloseCallback: i
         },
-        p = r.useRef(f);
+        _ = r.useRef(f);
     return (
         r.useEffect(() => {
-            p.current = f;
+            _.current = f;
         }),
         r.useLayoutEffect(() => {
-            let { contextKey: e, modalKey: r, onCloseCallback: i } = p.current;
+            let { contextKey: e, modalKey: r, onCloseCallback: i } = _.current;
             d.current || (0, s.o)(r, t, n, i, e), (d.current = !1);
         }, [t, n]),
         null

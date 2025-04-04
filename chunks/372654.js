@@ -25,5 +25,5 @@ let o = 1060,
     },
     d = (e) => {
         var t;
-        return null == e ? c : null !== (t = u[e]) && void 0 !== t ? t : c;
+        return null == e ? c : null != (t = u[e]) ? t : c;
     };

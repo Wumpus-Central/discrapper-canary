@@ -21,13 +21,13 @@ function p(e) {
         { enabled: g } = (0, s.C)({ location: 'PresenceActivityStatus' });
     if (a && f) return null;
     let { text: E, tooltip: b } = (0, c.Z)(t, m || g),
-        v = _(t, h);
+        y = _(t, h);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !a &&
-                null != v &&
+                null != y &&
                 (0, r.jsx)(u.Z, {
-                    icon: v,
+                    icon: y,
                     tooltipText: f && !p ? b : void 0
                 }),
             !f &&

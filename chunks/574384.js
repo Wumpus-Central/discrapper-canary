@@ -6,11 +6,11 @@ var r = n(200651),
     s = n(481060),
     l = n(489863),
     c = n(388032),
-    u = n(558917);
+    u = n(340181);
 let d = 5;
 function f(e) {
     var t;
-    let { selectedGuildId: n, selectedChannelId: f, onChannelChange: p, error: _ } = e,
+    let { selectedGuildId: n, selectedChannelId: f, onChannelChange: _, error: p } = e,
         [h, m] = i.useState(null),
         g = i.useRef(!1);
     if (
@@ -25,18 +25,18 @@ function f(e) {
                     }),
                     (g.current = !0));
             }
-            m(null), null == n ? p(null) : e(n);
-        }, [p, n]),
+            m(null), null == n ? _(null) : e(n);
+        }, [_, n]),
         i.useEffect(() => {
-            g.current && (null == h ? null != f && p(null) : h.channels.some((e) => e.id === f) || p(null));
-        }, [h, p, f, n]),
+            g.current && (null == h ? null != f && _(null) : h.channels.some((e) => e.id === f) || _(null));
+        }, [h, _, f, n]),
         null == n)
     )
         return null;
     let E =
         null == h || h.guildId !== n
             ? []
-            : (null !== (t = null == h ? void 0 : h.channels) && void 0 !== t ? t : []).map((e) => ({
+            : (null != (t = null == h ? void 0 : h.channels) ? t : []).map((e) => ({
                   value: e.id,
                   label: e.name
               }));
@@ -48,17 +48,17 @@ function f(e) {
                 className: u.sectionLabel,
                 children: c.NW.string(c.t['8qKd+P'])
             }),
-            null != _ && '' !== _
+            null != p && '' !== p
                 ? (0, r.jsx)(a.x, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: _
+                      children: p
                   })
                 : null,
             (0, r.jsx)(s.VcW, {
                 wrapperClassName: u.select,
                 maxVisibleItems: d,
-                onChange: p,
+                onChange: _,
                 placeholder: c.NW.string(c.t['Re/64e']),
                 options: E,
                 value: f,

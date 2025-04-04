@@ -7,7 +7,7 @@ var a,
     u = n(695346),
     d = n(581883),
     f = n(283595);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -43,13 +43,13 @@ let h = {
     m = h,
     g = new Set(),
     E = !1;
-function v() {
+function b() {
     o = null;
 }
-function b() {
-    (r = null), (i = null), (g = new Set()), (m.applicationId = null), (m.originURL = null), v();
+function y() {
+    (r = null), (i = null), (g = new Set()), (m.applicationId = null), (m.originURL = null), b();
 }
-function y(e) {
+function v(e) {
     let { applicationId: t } = e;
     g.add(t), (o = null);
 }
@@ -57,17 +57,17 @@ function O(e) {
     let { applicationId: t, originURL: n } = e;
     (r = t), (i = n), g.delete(t), (o = null), (m.applicationId = t), (m.originURL = n);
 }
-function S(e) {
+function I(e) {
     let { applicationId: t, error: n } = e;
     g.delete(t), (o = n);
 }
-function I(e) {
+function S(e) {
     let { testModeApplicationId: t } = e;
     r = t;
 }
 class T extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        (r = (m = _({}, null != e ? e : h)).applicationId),
+        (r = (m = p({}, null != e ? e : h)).applicationId),
             (i = m.originURL),
             this.waitFor(d.Z, c.Z),
             this.syncWith([d.Z, c.Z], () => !0),
@@ -111,13 +111,13 @@ class T extends (a = s.ZP.PersistedStore) {
         });
     }
 }
-p(T, 'displayName', 'TestModeStore'), p(T, 'persistKey', 'TestModeStore');
+_(T, 'displayName', 'TestModeStore'), _(T, 'persistKey', 'TestModeStore');
 let N = new T(l.Z, {
-    DEVELOPER_TEST_MODE_AUTHORIZATION_START: y,
+    DEVELOPER_TEST_MODE_AUTHORIZATION_START: v,
     DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: O,
-    DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: S,
-    OVERLAY_INITIALIZE: I,
-    DEVELOPER_TEST_MODE_RESET_ERROR: v,
-    LOGOUT: b,
-    DEVELOPER_TEST_MODE_RESET: b
+    DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: I,
+    OVERLAY_INITIALIZE: S,
+    DEVELOPER_TEST_MODE_RESET_ERROR: b,
+    LOGOUT: y,
+    DEVELOPER_TEST_MODE_RESET: y
 });

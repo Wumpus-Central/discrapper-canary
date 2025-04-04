@@ -1,4 +1,4 @@
-n.d(t, { w: () => p });
+n.d(t, { w: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(512722),
@@ -9,16 +9,16 @@ var i = n(512722),
     c = n(844068),
     u = n(614277),
     d = n(388032),
-    f = n(704976);
-function p(e) {
+    f = n(419667);
+function _(e) {
     let { handleClose: t } = e,
-        { skusById: n, selectedSkuId: i, application: p } = (0, s.JL)();
-    o()(null != i, 'Expected selectedSkuId'), o()(null != p, 'Expected application');
-    let _ = n[i];
-    o()(null != _, 'Expected sku');
+        { skusById: n, selectedSkuId: i, application: _ } = (0, s.JL)();
+    o()(null != i, 'Expected selectedSkuId'), o()(null != _, 'Expected application');
+    let p = n[i];
+    o()(null != p, 'Expected sku');
     let h = d.NW.formatToPlainString(d.t.wK0IbG, {
-        applicationName: p.name,
-        itemName: _.name
+        applicationName: _.name,
+        itemName: p.name
     });
     return (0, r.jsxs)(u.C3, {
         children: [

@@ -5,9 +5,9 @@ var r = n(200651),
     a = n.n(o),
     s = n(38068),
     l = n(388032),
-    c = n(166275);
+    c = n(735167);
 let u = i.forwardRef(function (e, t) {
-    let { className: n, contentClassName: i, isUnread: o, children: u, id: d, role: f, 'aria-label': p } = e;
+    let { className: n, contentClassName: i, isUnread: o, children: u, id: d, role: f, 'aria-label': _ } = e;
     return (0, r.jsxs)('div', {
         className: a()(n, {
             [c.divider]: !0,
@@ -17,7 +17,7 @@ let u = i.forwardRef(function (e, t) {
         ref: t,
         id: d,
         role: f,
-        'aria-label': p,
+        'aria-label': _,
         children: [
             null != u
                 ? (0, r.jsx)('span', {

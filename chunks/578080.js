@@ -24,12 +24,12 @@ var r = n(200651),
     w = n(566078),
     S = n(340100),
     P = n(611855),
-    N = n(644646),
-    E = n(78826),
+    E = n(644646),
+    N = n(78826),
     T = n(670638),
     A = n(667105),
-    B = n(46140),
-    R = n(981631),
+    R = n(46140),
+    B = n(981631),
     k = n(701488),
     q = n(388032),
     D = n(92503);
@@ -79,7 +79,7 @@ function W(e, t) {
 function M(e) {
     let { style: t, onClick: n } = e;
     return (0, _.O)({
-        location: B.dr.QUESTS_BAR,
+        location: R.dr.QUESTS_BAR,
         autoTrackExposure: !0
     })
         ? (0, r.jsx)(u.zxk, {
@@ -95,7 +95,7 @@ function M(e) {
 }
 let L = o.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: L, collapsedHeight: Z, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: z, onCtxMenuSelect: F, quest: X, useReducedMotion: K } = e,
+    let { children: _, className: L, collapsedHeight: Z, expansionSpring: V, isExpanded: Q, isExpansionAnimationComplete: U, onCtxMenuOpen: H, onCtxMenuClose: F, onCtxMenuSelect: z, quest: X, useReducedMotion: K } = e,
         Y = (0, l.e7)([j.Z], () => j.Z.isEnrolling(X.id), [X]),
         G = (0, x.aM)(),
         J = (0, b.B6)(X.config.expiresAt),
@@ -103,14 +103,14 @@ let L = o.forwardRef(function (e, t) {
         ee = (0, b.B6)($.rewardsExpireAt),
         et = o.useMemo(() => (0, O.fh)(X, O.eC.HERO), [X]),
         en = (0, A.tP)($.application.id),
-        er = $.features.has(B.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
-        eo = $.features.has(B.S7.START_QUEST_CTA) ? q.NW.string(q.t.E80Bdn) : q.NW.string(q.t.l7E81t),
+        er = $.features.has(R.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
+        eo = $.features.has(R.S7.START_QUEST_CTA) ? q.NW.string(q.t.E80Bdn) : q.NW.string(q.t.l7E81t),
         es = o.useCallback(() => {
             (0, h.AH)(X.id, {
                 questContent: v.jn.QUEST_BAR,
                 questContentCTA: er
             }),
-                $.features.has(B.S7.START_QUEST_CTA) && (0, m.uL)(R.Z5c.ACTIVITY_DETAILS(k.In), void 0);
+                $.features.has(R.S7.START_QUEST_CTA) && (0, m.uL)(B.Z5c.ACTIVITY_DETAILS(k.In), void 0);
         }, [X, er, $.features]),
         ea = (0, A.hf)({
             quest: X,
@@ -123,7 +123,7 @@ let L = o.forwardRef(function (e, t) {
                 impressionId: G
             });
         }, [G, X]),
-        el = $.features.has(B.S7.POST_ENROLLMENT_CTA),
+        el = $.features.has(R.S7.POST_ENROLLMENT_CTA),
         ec = (0, b.Rf)(X),
         ed = (0, b.Jf)(X),
         eu = null != ed ? ed.progress > 0 : ec.progressSeconds > 0,
@@ -134,7 +134,7 @@ let L = o.forwardRef(function (e, t) {
         ex = (0, C.DD)({
             quest: X,
             taskDetails: ec,
-            location: B.dr.QUESTS_BAR,
+            location: R.dr.QUESTS_BAR,
             questContent: v.jn.QUEST_BAR,
             thirdPartyTaskDetails: null != ed ? ed : void 0
         }),
@@ -185,12 +185,12 @@ let L = o.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: D.questAcceptedContentHeading,
                                           children: [
-                                              (0, r.jsx)(N.Z, {
+                                              (0, r.jsx)(E.Z, {
                                                   className: D.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: X,
                                                   questContent: v.jn.QUEST_BAR,
-                                                  location: B.dr.QUESTS_BAR
+                                                  location: R.dr.QUESTS_BAR
                                               }),
                                               (0, r.jsxs)('div', {
                                                   children: [
@@ -215,8 +215,8 @@ let L = o.forwardRef(function (e, t) {
                                       }),
                                       (0, r.jsx)(T.r, {
                                           onOpen: H,
-                                          onClose: z,
-                                          onSelect: F,
+                                          onClose: F,
+                                          onSelect: z,
                                           questContent: v.jn.QUEST_BAR,
                                           quest: X,
                                           shouldShowDisclosure: !1,
@@ -269,8 +269,8 @@ let L = o.forwardRef(function (e, t) {
                                               (0, r.jsx)(P.Z, { color: 'always-white' }),
                                               (0, r.jsx)(T.r, {
                                                   onOpen: H,
-                                                  onClose: z,
-                                                  onSelect: F,
+                                                  onClose: F,
+                                                  onSelect: z,
                                                   questContent: v.jn.QUEST_BAR,
                                                   quest: X,
                                                   shouldShowDisclosure: !0,
@@ -294,12 +294,12 @@ let L = o.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: D.details,
                                           children: [
-                                              (0, r.jsx)(N.Z, {
+                                              (0, r.jsx)(E.Z, {
                                                   className: D.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: X,
                                                   questContent: v.jn.QUEST_BAR,
-                                                  location: B.dr.QUESTS_BAR
+                                                  location: R.dr.QUESTS_BAR
                                               }),
                                               (0, r.jsx)(u.X6q, {
                                                   className: D.title,
@@ -331,7 +331,7 @@ let L = o.forwardRef(function (e, t) {
                                   className: D.heroAssetWrapper,
                                   style: { color: X.config.colors.secondary },
                                   children: et.isAnimated
-                                      ? (0, r.jsx)(E.Fl, {
+                                      ? (0, r.jsx)(N.Fl, {
                                             id: 'QuestBarContentExpanded_heroAnimated',
                                             children: (e) => {
                                                 var t;
@@ -350,7 +350,7 @@ let L = o.forwardRef(function (e, t) {
                                                 });
                                             }
                                         })
-                                      : (0, r.jsx)(E.Fl, {
+                                      : (0, r.jsx)(N.Fl, {
                                             id: 'QuestBarContentExpanded_heroStatic',
                                             children: (e) =>
                                                 (0, r.jsx)('img', {

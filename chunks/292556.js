@@ -121,7 +121,7 @@ let u = {
             options: c(s({}, o), {
                 onClick() {
                     var e;
-                    null === (e = o.onClick) || void 0 === e || e.call(o), r.Z.dispatch({ type: 'NOTIFICATION_CLICK' });
+                    null == (e = o.onClick) || e.call(o), r.Z.dispatch({ type: 'NOTIFICATION_CLICK' });
                 }
             })
         });

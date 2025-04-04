@@ -1,5 +1,5 @@
 n.d(t, {
-    ps: () => p,
+    ps: () => _,
     y9: () => f
 });
 var r = n(200651);
@@ -64,8 +64,8 @@ function d(e, t) {
 function f(e) {
     return 'number' != typeof e ? (0, i.pxk)(e) * a.hs : e * a.hs;
 }
-let p = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: a, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: f, onClose: p } = e;
+let _ = (e) => {
+    let { analyticsLocations: t, initialSelectedDecoration: a, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: f, onClose: _ } = e;
     (0, i.ZDy)(async () => {
         (0, o.s1)().location.pathname === s.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, o.uL)(s.Z5c.APP);
         let { default: e } = await Promise.resolve().then(n.bind(n, 235400));
@@ -74,7 +74,7 @@ let p = (e) => {
                 e,
                 d(c({}, n), {
                     onCloseModal: n.onClose,
-                    onClose: p,
+                    onClose: _,
                     analyticsLocations: t,
                     initialSelectedDecoration: a,
                     initialSelectedDecorationId: l,

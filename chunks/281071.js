@@ -73,7 +73,7 @@ function c(e) {
                 }
                 if (null == o.onClick) {
                     var s;
-                    (o.href = null !== (s = (0, i.sanitizeUrl)(e.target)) && void 0 !== s ? s : void 0), (o.target = '_blank');
+                    (o.href = null != (s = (0, i.sanitizeUrl)(e.target)) ? s : void 0), (o.target = '_blank');
                 }
                 return (0, r.jsx)(
                     'a',

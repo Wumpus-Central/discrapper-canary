@@ -40,7 +40,7 @@ class o {
         for (let e = 0; e < o; e++) l.push(!1);
         let c = window.setInterval(() => {
             var e, t;
-            this.update(), null === (e = (t = this).onProcess) || void 0 === e || e.call(t, this.speaking, this.currentVolume);
+            this.update(), null == (e = (t = this).onProcess) || e.call(t, this.speaking, this.currentVolume);
         }, 20);
         (this.threshold = n), (this.analyser = a), (this.interval = c), (this.fftBins = new Float32Array(a.fftSize)), (this.source = s), (this.speakingHistory = l), (this.silenceThreshold = this.speakingHistory.length), (this.silentFrames = this.silenceThreshold);
     }

@@ -67,7 +67,7 @@ class s {
             if (!e.hasOwnProperty(r)) continue;
             let o = t[r],
                 a = e[r];
-            (!(a instanceof Date) || !(o instanceof Date) || a.getTime() !== o.getTime()) && o !== a && (null == n && (n = i({}, this)), (n[r] = e[r]));
+            (a instanceof Date && o instanceof Date && a.getTime() === o.getTime()) || (o !== a && (null == n && (n = i({}, this)), (n[r] = e[r])));
         }
         return null != n ? new this.constructor(n) : this;
     }

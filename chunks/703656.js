@@ -1,17 +1,17 @@
 let r, i, o;
 n.d(t, {
-    At: () => I,
+    At: () => S,
     DB: () => C,
     DR: () => T,
     Wf: () => A,
-    XU: () => b,
+    XU: () => y,
     dL: () => O,
     eH: () => P,
     m1: () => N,
     op: () => R,
-    s1: () => S,
-    uL: () => v,
-    uv: () => y
+    s1: () => I,
+    uL: () => b,
+    uv: () => v
 }),
     n(653041),
     n(26686),
@@ -51,8 +51,8 @@ function f(e) {
     }
     return e;
 }
-let p = new s.Z('Routing/Utils'),
-    _ = [u.E07.DEVELOPER_PORTAL];
+let _ = new s.Z('Routing/Utils'),
+    p = [u.E07.DEVELOPER_PORTAL];
 r = __OVERLAY__ ? (0, a.PP)() : (0, a.lX)();
 let h = !1,
     m = r.listen((e, t) => {
@@ -62,18 +62,18 @@ function g() {
     return !l.S.hasSubscribers(u.CkL.MODAL_CLOSE) && (n(574254).Z.close(), !0);
 }
 function E(e, t) {
-    return !!('string' == typeof e && _.some((t) => e.startsWith(t))) && (p.log(''.concat(t, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[t](e), !0);
+    return !!('string' == typeof e && p.some((t) => e.startsWith(t))) && (_.log(''.concat(t, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[t](e), !0);
 }
-function v(e, t) {
+function b(e, t) {
     if (E(e, 'assign')) return;
-    p.log('transitionTo - Transitioning to '.concat(e));
+    _.log('transitionTo - Transitioning to '.concat(e));
     let n = null == t ? void 0 : t.source;
     null == t || delete t.source;
     let a = null == t ? void 0 : t.sourceLocationStack;
     null == t || delete t.sourceLocationStack, null == t ? r.push(e) : r.push(f({ pathname: e }, t)), (i = n), (o = a);
 }
-function b(e, t, n, r) {
-    p.log(
+function y(e, t, n, r) {
+    _.log(
         'transitionToGuild - Transitioning to '.concat(
             JSON.stringify({
                 guildId: e,
@@ -82,18 +82,18 @@ function b(e, t, n, r) {
             })
         )
     ),
-        v(u.Z5c.CHANNEL(e, t, n), r);
+        b(u.Z5c.CHANNEL(e, t, n), r);
 }
-function y() {
+function v() {
     return null != i && c.H.has(i);
 }
 function O(e, t, n) {
-    E(e, 'replace') || (p.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
-}
-function S() {
-    return r;
+    E(e, 'replace') || (_.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
 function I() {
+    return r;
+}
+function S() {
     return i;
 }
 function T() {
@@ -102,14 +102,14 @@ function T() {
 function N(e) {
     if (null == e) {
         var t;
-        e = null !== (t = r.location.pathname) && void 0 !== t ? t : '';
+        e = null != (t = r.location.pathname) ? t : '';
     }
     return !e.startsWith(u.Z5c.HANDOFF);
 }
 function A(e) {
     if (null == e) {
         var t;
-        e = null !== (t = r.location.pathname) && void 0 !== t ? t : '';
+        e = null != (t = r.location.pathname) ? t : '';
     }
     if (e.startsWith(u.Z5c.LOGIN)) return u.Usc.LOGIN;
     if (e.startsWith(u.Z5c.REGISTER)) return u.Usc.REGISTER;

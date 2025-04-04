@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => E,
-    j: () => v
+    j: () => b
 });
 var r = n(200651);
 n(192379);
@@ -11,7 +11,7 @@ var i = n(120356),
     l = n(252618),
     c = n(981631),
     u = n(388032),
-    d = n(768375);
+    d = n(484618);
 function f(e, t, n) {
     return (
         t in e
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,7 +58,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -104,13 +104,13 @@ function E(e) {
         })
     );
 }
-function v(e) {
+function b(e) {
     var { children: t, footer: n, transitionState: i, modalSize: o } = e,
         s = m(e, ['children', 'footer', 'transitionState', 'modalSize']);
     return (0, r.jsxs)(
         a.Y0,
         h(
-            p(
+            _(
                 {
                     size: null != o ? o : a.Cg.DYNAMIC,
                     transitionState: i,

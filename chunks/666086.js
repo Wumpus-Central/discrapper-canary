@@ -9,15 +9,15 @@ var r = n(392711),
     u = n(650774),
     d = n(271383),
     f = n(430824),
-    p = n(375954),
-    _ = n(944486),
+    _ = n(375954),
+    p = n(944486),
     h = n(626135),
     m = n(522558),
     g = n(581025),
     E = n(795448),
-    v = n(441623),
-    b = n(474936),
-    y = n(981631);
+    b = n(441623),
+    y = n(474936),
+    v = n(981631);
 function O(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ function O(e, t, n) {
         e
     );
 }
-function S(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function S(e) {
     }
     return e;
 }
-let I = 50,
+let S = 50,
     T = 1000;
 class N extends a.Z {
     isChannelEligible(e, t) {
@@ -58,17 +58,17 @@ class N extends a.Z {
             case i.d.GUILD_TEXT:
                 let n = f.Z.getGuild(t),
                     r = u.Z.getMemberCount(t);
-                return null != r && r <= I && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, l.Z)(e) && null == e.linkedLobby;
+                return null != r && r <= S && (null == n ? void 0 : n.rulesChannelId) !== e.id && !e.isNSFW() && !(0, l.Z)(e) && null == e.linkedLobby;
             default:
                 return !1;
         }
     }
     maybeSendGiftingPromptSystemMessageDebounced(e, t, n, i) {
         (0, r.debounce)(() => {
-            let r = _.Z.getChannelId();
-            !v.Z.isGiftIntentMessageInCooldown(n) &&
+            let r = p.Z.getChannelId();
+            !b.Z.isGiftIntentMessageInCooldown(n) &&
                 e === r &&
-                p.Z.isReady(e) &&
+                _.Z.isReady(e) &&
                 (o.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,
@@ -83,12 +83,12 @@ class N extends a.Z {
             i = c.Z.getChannel(t);
         if ((n || r) && null != i && this.isChannelEligible(i, e)) {
             let t = new Set(null != e ? d.ZP.getMemberIds(e) : i.recipients),
-                o = v.Z.getFriendAnniversaries().filter((e) => t.has(e));
+                o = b.Z.getFriendAnniversaries().filter((e) => t.has(e));
             if (r && o.length > 0) {
                 let e = o[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(i.id, b.hX.FRIEND_ANNIVERSARY, e, o.length > 1 ? b.X2.VIEW_ALL : b.X2.SEND_MESSAGE);
+                this.maybeSendGiftingPromptSystemMessageDebounced(i.id, y.hX.FRIEND_ANNIVERSARY, e, o.length > 1 ? y.X2.VIEW_ALL : y.X2.SEND_MESSAGE);
             }
-            n && h.default.track(y.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, S({ friend_anniversaries_count: o.length }, (0, s.v_)(i)));
+            n && h.default.track(v.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, I({ friend_anniversaries_count: o.length }, (0, s.v_)(i)));
         }
     }
     onChannelSelect(e) {
@@ -96,7 +96,7 @@ class N extends a.Z {
         this.handleChannelSelect(t, n);
     }
     onPostConnectionOpen() {
-        let e = _.Z.getChannelId();
+        let e = p.Z.getChannelId();
         if (null != e) {
             let t = c.Z.getChannel(e);
             this.handleChannelSelect(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id);

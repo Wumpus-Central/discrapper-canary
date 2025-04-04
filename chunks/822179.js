@@ -9,7 +9,7 @@ var r,
     u = n(70956),
     d = n(926491),
     f = n(526761);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -64,7 +64,7 @@ function m(e, t) {
 let g = { pendingUsages: [] };
 u.Z.Millis.DAY;
 let E = 20,
-    v = new l.ZP({
+    b = new l.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -74,34 +74,34 @@ let E = 20,
         afterCompute: () => {},
         numFrequentlyItems: E
     }),
-    b = () => {
-        d.Z.isLoaded && v.compute();
+    y = () => {
+        d.Z.isLoaded && b.compute();
     },
-    y = (e) => {
+    v = (e) => {
         let { stickerIds: t } = e;
         null == t ||
             t.forEach((e) => {
-                v.track(e),
+                b.track(e),
                     g.pendingUsages.push({
                         key: e,
                         timestamp: Date.now()
                     });
             }),
-            b();
+            y();
     },
     O = () => {
-        b();
+        y();
     };
-function S() {
+function I() {
     var e;
-    let t = null === (e = c.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+    let t = null == (e = c.Z.frecencyWithoutFetchingLatest.stickerFrecency) ? void 0 : e.stickers;
     if (null == t) return !1;
-    v.overwriteHistory(
-        o().mapValues(t, (e) => m(_({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+    b.overwriteHistory(
+        o().mapValues(t, (e) => m(p({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
         g.pendingUsages
     );
 }
-function I(e) {
+function S(e) {
     let {
         settings: { type: t },
         wasSaved: n
@@ -111,7 +111,7 @@ function I(e) {
 }
 class T extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], O), this.syncWith([c.Z], S);
+        this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], O), this.syncWith([c.Z], I);
     }
     getState() {
         return g;
@@ -120,11 +120,11 @@ class T extends (r = a.ZP.PersistedStore) {
         return g.pendingUsages.length > 0;
     }
     get stickerFrecencyWithoutFetchingLatest() {
-        return v;
+        return b;
     }
 }
-p(T, 'displayName', 'StickersPersistedStore'), p(T, 'persistKey', 'StickersPersistedStoreV2');
+_(T, 'displayName', 'StickersPersistedStore'), _(T, 'persistKey', 'StickersPersistedStoreV2');
 let N = new T(s.Z, {
-    STICKER_TRACK_USAGE: y,
-    USER_SETTINGS_PROTO_UPDATE: I
+    STICKER_TRACK_USAGE: v,
+    USER_SETTINGS_PROTO_UPDATE: S
 });

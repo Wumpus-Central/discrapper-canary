@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -8,8 +8,8 @@ var r = n(200651),
     c = n(618541),
     u = n(975060),
     d = n(388032),
-    f = n(277558);
-class p extends i.PureComponent {
+    f = n(912296);
+class _ extends i.PureComponent {
     componentDidMount() {
         null != this.props.paypalClient && s.f6();
     }
@@ -40,7 +40,7 @@ class p extends i.PureComponent {
         });
     }
 }
-let _ = o.ZP.connectStores([c.Z, u.Z], () => ({
+let p = o.ZP.connectStores([c.Z, u.Z], () => ({
     braintreeEmail: u.Z.braintreeEmail,
     paypalClient: c.Z.getPayPalClient()
-}))(p);
+}))(_);

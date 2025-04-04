@@ -9,7 +9,7 @@ function a(e, t, n) {
     var r;
     let l = window.DiscordNative;
     i()(null != l, "Can't get desktop sources outside of native app"),
-        (t = null !== (r = null == t ? void 0 : t.filter((e) => s.includes(e))) && void 0 !== r ? r : s),
+        (t = null != (r = null == t ? void 0 : t.filter((e) => s.includes(e))) ? r : s),
         (n =
             null != n
                 ? n

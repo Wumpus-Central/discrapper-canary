@@ -10,7 +10,7 @@ var r = n(200651),
     s = n(182294),
     l = n(3682),
     c = n(419061),
-    u = n(694949);
+    u = n(312267);
 function d(e, t, n) {
     return (
         t in e
@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,12 +52,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -223,10 +223,10 @@ var g = (function (e) {
     );
 })({});
 let E = 24;
-function v(e, t) {
+function b(e, t) {
     return (e - 0.5) / (null != t ? t : c.hs) + 0.5;
 }
-function b(e) {
+function y(e) {
     let t = 80,
         n = 0,
         i = 4,
@@ -251,7 +251,7 @@ function b(e) {
         ]
     });
 }
-function y(e, t, n) {
+function v(e, t, n) {
     let i = (0, s.UC)(t),
         o = 80,
         a = 32 === i.size,
@@ -304,7 +304,7 @@ function O(e) {
         ]
     });
 }
-function S(e, t) {
+function I(e, t) {
     let n = 56,
         i = 0,
         o = 4,
@@ -332,7 +332,7 @@ function S(e, t) {
         ]
     });
 }
-function I(e, t) {
+function S(e, t) {
     let n = 24;
     return (0, r.jsxs)('mask', {
         id: e,
@@ -504,7 +504,7 @@ function D(e) {
         })
     });
 }
-function x(e) {
+function L(e) {
     let t = ''.concat(e, '-gradient');
     return (0, r.jsxs)('mask', {
         id: e,
@@ -539,7 +539,7 @@ function x(e) {
         ]
     });
 }
-function L(e) {
+function x(e) {
     return (0, r.jsx)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -579,7 +579,7 @@ function k(e, t) {
     let n = (0, s.UC)(t),
         i = n.status / 2,
         o = (i + n.stroke) / n.size / c.hs,
-        a = v((n.size - i - n.offset) / n.size);
+        a = b((n.size - i - n.offset) / n.size);
     return (0, r.jsxs)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -632,11 +632,11 @@ function j(e, t) {
 function U(e, t) {
     let n = (0, s.UC)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-        o = v((n.size - n.status - n.stroke - n.offset) / n.size),
-        a = v((n.size - n.status - i - n.offset) / n.size),
+        o = b((n.size - n.status - n.stroke - n.offset) / n.size),
+        a = b((n.size - n.status - i - n.offset) / n.size),
         l = (2.5 * n.status + 2 * n.stroke) / n.size / c.hs,
         u = (n.status + 2 * n.stroke) / n.size / c.hs,
-        d = v(u / 2 / n.size);
+        d = b(u / 2 / n.size);
     return (0, r.jsxs)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -688,8 +688,8 @@ function G(e, t) {
 }
 function B(e, t) {
     let n = (0, s.UC)(t),
-        i = v((n.size - n.status - n.stroke - n.offset) / n.size),
-        o = v((n.size - n.status * s.EW - n.stroke - n.offset) / n.size),
+        i = b((n.size - n.status - n.stroke - n.offset) / n.size),
+        o = b((n.size - n.status * s.EW - n.stroke - n.offset) / n.size),
         a = (n.status + 2 * n.stroke) / n.size / c.hs,
         l = (n.status * s.EW + 2 * n.stroke) / n.size / c.hs;
     return (0, r.jsxs)('mask', {
@@ -716,7 +716,7 @@ function B(e, t) {
         ]
     });
 }
-function Z(e) {
+function F(e) {
     let t = 8,
         n = 8 * s.EW;
     return (0, r.jsxs)('mask', {
@@ -750,7 +750,7 @@ function Z(e) {
         ]
     });
 }
-function F(e) {
+function V(e) {
     let t = 8;
     return (0, r.jsxs)('mask', {
         id: e,
@@ -772,7 +772,7 @@ function F(e) {
         ]
     });
 }
-function V(e) {
+function Z(e) {
     let t = 8;
     return (0, r.jsxs)('mask', {
         id: e,
@@ -1097,11 +1097,11 @@ function eo(e) {
     });
 }
 function ea(e) {
-    var { mask: t, width: n = E, height: i = E, rightOverhang: o = 0, bottomOverhang: s = 0, children: l, className: c, style: d, 'aria-label': p } = e,
+    var { mask: t, width: n = E, height: i = E, rightOverhang: o = 0, bottomOverhang: s = 0, children: l, className: c, style: d, 'aria-label': _ } = e,
         m = h(e, ['mask', 'width', 'height', 'rightOverhang', 'bottomOverhang', 'children', 'className', 'style', 'aria-label']);
     return (0, r.jsx)(
         'svg',
-        _(
+        p(
             f(
                 {
                     width: n + o,
@@ -1109,7 +1109,7 @@ function ea(e) {
                     className: a()(u.svg, c),
                     viewBox: '0 0 '.concat(n + o, ' ').concat(i + s),
                     style: d,
-                    'aria-label': p
+                    'aria-label': _
                 },
                 m
             ),
@@ -1144,16 +1144,16 @@ let es = ea,
                 'aria-hidden': !0,
                 children: [
                     D('svg-mask-squircle'),
-                    I('svg-mask-header-bar-badge-top', 0.25),
-                    I('svg-mask-header-bar-badge-bottom', 0.75),
+                    S('svg-mask-header-bar-badge-top', 0.25),
+                    S('svg-mask-header-bar-badge-bottom', 0.75),
                     N('svg-mask-voice-user-summary-item'),
-                    x('svg-mask-vertical-fade'),
+                    L('svg-mask-vertical-fade'),
                     T('svg-mask-panel-button'),
                     O('svg-mask-channel-call-control-button'),
-                    S('svg-mask-channel-call-control-button-badge-16', 16),
-                    S('svg-mask-channel-call-control-button-badge-22', 22),
-                    S('svg-mask-channel-call-control-button-badge-29', 29),
-                    L('svg-mask-avatar-default'),
+                    I('svg-mask-channel-call-control-button-badge-16', 16),
+                    I('svg-mask-channel-call-control-button-badge-22', 22),
+                    I('svg-mask-channel-call-control-button-badge-29', 29),
+                    x('svg-mask-avatar-default'),
                     M('svg-mask-avatar-status-round-16', s.EF.SIZE_16),
                     k('svg-mask-avatar-decoration-status-round-16', s.EF.SIZE_16),
                     G('svg-mask-avatar-status-mobile-16', s.EF.SIZE_16),
@@ -1241,17 +1241,17 @@ let es = ea,
                     R('svg-mask-diagonal-facepile-120', s.EF.SIZE_120),
                     P('svg-mask-diagonal-facepile-status-120', s.EF.SIZE_120),
                     w('svg-mask-diagonal-facepile-typing-120', s.EF.SIZE_120),
-                    Z('svg-mask-status-online-mobile'),
-                    L('svg-mask-status-online'),
-                    F('svg-mask-status-idle'),
-                    V('svg-mask-status-dnd'),
+                    F('svg-mask-status-online-mobile'),
+                    x('svg-mask-status-online'),
+                    V('svg-mask-status-idle'),
+                    Z('svg-mask-status-dnd'),
                     H('svg-mask-status-offline'),
                     W('svg-mask-status-streaming'),
                     Y('svg-mask-status-typing'),
                     K('svg-mask-status-screenshare'),
-                    b('svg-mask-avatar-voice-call-80'),
-                    y('svg-mask-avatar-call-icon', s.EF.SIZE_56, 1),
-                    y('svg-mask-avatar-call-icon-32', s.EF.SIZE_32, 0.5),
+                    y('svg-mask-avatar-voice-call-80'),
+                    v('svg-mask-avatar-call-icon', s.EF.SIZE_56, 1),
+                    v('svg-mask-avatar-call-icon-32', s.EF.SIZE_32, 0.5),
                     z('svg-mask-sticker-rounded-rect'),
                     q('svg-mask-chat-input-button-notification'),
                     Q('svg-mask-sticker-shop-notification'),

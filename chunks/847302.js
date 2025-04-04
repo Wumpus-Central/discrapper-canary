@@ -1,5 +1,5 @@
 n.d(t, {
-    Gg: () => y,
+    Gg: () => v,
     KH: () => E,
     ZP: () => g
 }),
@@ -17,13 +17,13 @@ var r = n(512722),
     u = n(925994),
     d = n(436660),
     f = n(887490);
-let p = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    _ = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
+let _ = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
+    p = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
     h = new Set(['line', 'blockQuote']),
     m = new Set(['applicationCommandOption']);
 function g(e, t, n) {
     let { isInline: r, isVoid: i, onChange: o } = e;
-    (e.isVoid = (e) => !!_.has(e.type) || i(e)), (e.isInline = (e) => !!_.has(e.type) || r(e));
+    (e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!p.has(e.type) || r(e));
     let a = null,
         s = !0;
     return (
@@ -43,25 +43,25 @@ function g(e, t, n) {
 function E(e, t, n) {
     let r = f.bN.areStylesDisabled(e);
     for (let i of f.bN.blocks(e))
-        if (h.has(i[0].type)) r ? b(e, i, !0, null) : v(e, i, t, n);
+        if (h.has(i[0].type)) r ? y(e, i, !0, null) : b(e, i, t, n);
         else {
             let [o, a] = i;
             for (let i = o.children.length - 1; i >= 0; i--) {
                 let s = o.children[i];
                 if (m.has(s.type)) {
                     let o = [s, f.C0.child(a, i)];
-                    r ? b(e, o, !0, null) : v(e, o, t, n);
+                    r ? y(e, o, !0, null) : b(e, o, t, n);
                 }
             }
         }
 }
-function v(e, t, n, r) {
-    var i;
-    let o = 'line' === t[0].type && (null === (i = t[0].codeBlockState) || void 0 === i ? void 0 : i.isInCodeBlock) === !0,
-        a = f.q.markdown(t[0], n);
-    b(e, t, o, a) && ((t = f.q.updateElement(e, t)), (a = f.q.markdown(t[0], n))), o || (y(e, t, r, a) && ((t = f.q.updateElement(e, t)), (a = f.q.markdown(t[0], n))), O(e, t, n, r, a));
-}
 function b(e, t, n, r) {
+    var i;
+    let o = 'line' === t[0].type && (null == (i = t[0].codeBlockState) ? void 0 : i.isInCodeBlock) === !0,
+        a = f.q.markdown(t[0], n);
+    y(e, t, o, a) && ((t = f.q.updateElement(e, t)), (a = f.q.markdown(t[0], n))), o || (v(e, t, r, a) && ((t = f.q.updateElement(e, t)), (a = f.q.markdown(t[0], n))), O(e, t, n, r, a));
+}
+function y(e, t, n, r) {
     let [i, o] = t,
         a = !1;
     for (let t = i.children.length - 1; t >= 0; t--) {
@@ -98,7 +98,7 @@ function b(e, t, n, r) {
                     path: f.C0.child(i, 0),
                     offset: 0
                 };
-            (n || (null != r && I(e, o, l, r))) &&
+            (n || (null != r && S(e, o, l, r))) &&
                 (d.Q.voidToText(
                     e,
                     (0, u.sg)(s, {
@@ -112,13 +112,13 @@ function b(e, t, n, r) {
     }
     return a;
 }
-function y(e, t, n, r) {
+function v(e, t, n, r) {
     let i = t[1],
         o = !1,
         a = [...r.entries].reverse();
     for (let s = 0; s < a.length; s++) {
-        let l;
-        let u = a[s],
+        let l,
+            u = a[s],
             f = a[s + 1];
         if (null != f && f.text.endsWith('\\') && u.start === f.start + f.text.length) continue;
         switch (u.attributes[0]) {
@@ -201,11 +201,11 @@ function y(e, t, n, r) {
                 continue;
         }
         if (!T(n, t[0], l)) continue;
-        let p = (0, c.t)(e, i, r.serializedChildren, u.start),
-            _ = (0, c.t)(e, i, r.serializedChildren, u.start + u.text.length);
+        let _ = (0, c.t)(e, i, r.serializedChildren, u.start),
+            p = (0, c.t)(e, i, r.serializedChildren, u.start + u.text.length);
         d.Q.textToVoid(e, l, {
-            anchor: p,
-            focus: _
+            anchor: _,
+            focus: p
         }),
             (o = !0);
     }
@@ -215,22 +215,22 @@ function O(e, t, n, r, i) {
     let [o, a] = t,
         l = !1;
     for (let c = o.children.length - 1; c >= 0; c--) {
-        let u;
-        let d = o.children[c];
+        let u,
+            d = o.children[c];
         if (!f.LC.isText(d)) continue;
-        let _ = f.C0.child(a, c),
+        let p = f.C0.child(a, c),
             h = [];
-        for (p.lastIndex = 0; null != (u = p.exec(d.text)); ) {
+        for (_.lastIndex = 0; null != (u = _.exec(d.text)); ) {
             if (0 !== u.index && null == d.text.charAt(u.index - 1).match(/(\t|\s)/)) {
-                p.lastIndex = u.index + 1;
+                _.lastIndex = u.index + 1;
                 continue;
             }
             if (
-                I(
+                S(
                     e,
                     a,
                     {
-                        path: _,
+                        path: p,
                         offset: u.index
                     },
                     i
@@ -244,13 +244,13 @@ function O(e, t, n, r, i) {
                       length: u[0].length,
                       node: o
                   })
-                : (p.lastIndex = u.index + 1);
+                : (_.lastIndex = u.index + 1);
         }
-        for (let t of h.reverse()) S(e, [d, f.C0.child(a, c)], t.index, t.length, t.node), (l = !0);
+        for (let t of h.reverse()) I(e, [d, f.C0.child(a, c)], t.index, t.length, t.node), (l = !0);
     }
     return l;
 }
-function S(e, t, n, r, o) {
+function I(e, t, n, r, o) {
     let [a, s] = t,
         l = {
             path: s,
@@ -267,7 +267,7 @@ function S(e, t, n, r, o) {
             focus: c
         });
 }
-function I(e, t, n, r) {
+function S(e, t, n, r) {
     let i = 0;
     for (let [r, o] of f.bN.nodes(e, {
         at: {

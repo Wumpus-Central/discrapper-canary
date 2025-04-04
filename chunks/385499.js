@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(481060),
     l = n(674563),
     c = n(388032),
-    u = n(901535);
+    u = n(575302);
 function d(e, t, n) {
     return (
         t in e
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,12 +49,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -62,13 +62,13 @@ function _(e, t) {
 }
 let h = (e) => {
     let t,
-        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: p, hideIcon: h = !1, useRemSizes: m = !1, children: g = [] } = e,
+        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: _, hideIcon: h = !1, useRemSizes: m = !1, children: g = [] } = e,
         E = null,
-        v = c.NW.string(c.t.g76OcH);
+        b = c.NW.string(c.t.g76OcH);
     switch (i) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            (p = !0), (v = c.NW.string(c.t['7s687u'])), (E = c.NW.string(c.t.lKQ7Wl));
+            (_ = !0), (b = c.NW.string(c.t['7s687u'])), (E = c.NW.string(c.t.lKQ7Wl));
             break;
         case l.Hb.SERVER:
             E = c.NW.string(c.t.PuJGuL);
@@ -80,40 +80,40 @@ let h = (e) => {
             E = c.NW.string(c.t.oMx98P);
             break;
         case l.Hb.AI:
-            (p = !0), (v = c.NW.string(c.t.d5YwQE)), (E = c.NW.string(c.t.pLTJZG));
+            (_ = !0), (b = c.NW.string(c.t.d5YwQE)), (E = c.NW.string(c.t.pLTJZG));
             break;
         case l.Hb.REMIX:
-            (p = !1), (E = c.NW.string(c.t.uXDG39));
+            (_ = !1), (E = c.NW.string(c.t.uXDG39));
             break;
         case l.Hb.BOT:
         default:
             E = c.NW.string(c.t['9RNkeH']);
     }
-    let b = i === l.Hb.ORIGINAL_POSTER,
-        y = i === l.Hb.REMIX,
+    let y = i === l.Hb.ORIGINAL_POSTER,
+        v = i === l.Hb.REMIX,
         O = null;
-    p &&
+    _ &&
         (O = (0, r.jsx)(a.u, {
-            text: v,
+            text: b,
             align: 'center',
             position: 'top',
             children: (e) =>
                 (0, r.jsx)(
                     s.kSu,
-                    _(f({}, e), {
+                    p(f({}, e), {
                         className: u.botTagVerified,
                         color: s.TVs.colors.WHITE
                     })
                 )
         })),
         (t = i === l.Hb.AI ? u.botTagAI : n ? u.botTagInvert : u.botTagRegular);
-    let S = (e) =>
+    let I = (e) =>
         (0, r.jsxs)(
             'span',
-            _(f({}, e), {
+            p(f({}, e), {
                 className: o()(d, t, m ? u.rem : u.px, {
-                    [u.botTagOP]: b,
-                    [u.botTagRemix]: y
+                    [u.botTagOP]: y,
+                    [u.botTagRemix]: v
                 }),
                 children: [
                     h ? null : O,
@@ -130,16 +130,16 @@ let h = (e) => {
             return (0, r.jsx)(a.u, {
                 text: c.NW.string(c.t.xb0str),
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => I(e)
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(a.u, {
                 text: c.NW.string(c.t.uN6Emp),
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => I(e)
             });
         default:
-            return S();
+            return I();
     }
 };
 h.Types = l.Hb;

@@ -14,10 +14,10 @@ var r,
     u = n(866442),
     d = n(692547),
     f = n(84735),
-    p = n(481060),
-    _ = n(540059),
+    _ = n(481060),
+    p = n(540059),
     h = n(981631),
-    m = n(950202);
+    m = n(883658);
 function g(e, t, n) {
     return (
         t in e
@@ -47,18 +47,18 @@ function E(e) {
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -67,24 +67,24 @@ function b(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var y = (function (e) {
+var v = (function (e) {
         return (e.DEFAULT = 'default'), (e.INVERTED = 'inverted'), (e.GHOST = 'ghost'), (e.ROW = 'row'), e;
-    })(y || {}),
+    })(v || {}),
     O = (function (e) {
         return (e.TOP = 'top'), (e.CENTER = 'center'), e;
     })(O || {});
-let S = {
+let I = {
         BOX: m.box,
         ROUND: m.round,
         SMALL_BOX: m.smallBox
     },
-    I = {
+    S = {
         top: m.alignTop,
         center: m.alignCenter
     };
 class T extends (r = o.PureComponent) {
     render() {
-        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: o, innerClassName: a, children: l, size: c, reverse: u, displayOnly: d, type: p, onClick: _ } = this.props,
+        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: o, innerClassName: a, children: l, size: c, reverse: u, displayOnly: d, type: _, onClick: p } = this.props,
             g =
                 null != l
                     ? (0, i.jsx)('div', {
@@ -93,11 +93,11 @@ class T extends (r = o.PureComponent) {
                           children: l
                       })
                     : null,
-            v = d ? 'span' : 'label',
-            b = this.props.disabled ? m.inputDisabled : this.props.readOnly ? m.inputReadonly : m.inputDefault;
-        return (0, i.jsxs)(v, {
-            className: s()(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, I[r], o, {
-                [m.row]: 'row' === p,
+            b = d ? 'span' : 'label',
+            y = this.props.disabled ? m.inputDisabled : this.props.readOnly ? m.inputReadonly : m.inputDefault;
+        return (0, i.jsxs)(b, {
+            className: s()(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, S[r], o, {
+                [m.row]: 'row' === _,
                 [m.checked]: n
             }),
             children: [
@@ -105,9 +105,9 @@ class T extends (r = o.PureComponent) {
                 !d &&
                     (0, i.jsx)(f.t, {
                         children: (0, i.jsx)('input', {
-                            className: s()(a, b),
+                            className: s()(a, y),
                             type: 'checkbox',
-                            onClick: _,
+                            onClick: p,
                             onChange: e || t ? h.dG4 : this.handleChange,
                             checked: n,
                             style: {
@@ -132,7 +132,7 @@ class T extends (r = o.PureComponent) {
 function N(e, t) {
     var n;
     let { value: r, type: i, color: o } = e,
-        a = null !== (n = e.style) && void 0 !== n ? n : {};
+        a = null != (n = e.style) ? n : {};
     if (!1 === r) return a;
     if (((a = E({}, a)), null == o)) {
         if (!t)
@@ -165,14 +165,14 @@ function N(e, t) {
     return a;
 }
 function A(e) {
-    let t = (0, _.Q3)('Checkbox'),
-        { indicatorClassName: n, value: r, size: a, shape: l, checkboxColor: c, type: u, color: f, disabled: p } = e,
+    let t = (0, p.Q3)('Checkbox'),
+        { indicatorClassName: n, value: r, size: a, shape: l, checkboxColor: c, type: u, color: f, disabled: _ } = e,
         h = N(e, t),
-        g = o.useMemo(() => (r ? (t ? d.Z.colors.WHITE.css : 'inverted' === u || 'row' === u ? d.Z.colors.WHITE.css : null != f ? f : d.Z.unsafe_rawColors.BRAND_500.css) : d.Z.unsafe_rawColors.TRANSPARENT.css), [r, u, f, t]);
+        g = o.useMemo(() => (r ? (t || 'inverted' === u || 'row' === u ? d.Z.colors.WHITE.css : null != f ? f : d.Z.unsafe_rawColors.BRAND_500.css) : d.Z.unsafe_rawColors.TRANSPARENT.css), [r, u, f, t]);
     return (0, i.jsx)('div', {
         className: s()(m.checkbox, l, n, {
             [m.checked]: r,
-            [m.checkboxDisabled]: p
+            [m.checkboxDisabled]: _
         }),
         style: E(
             {
@@ -192,11 +192,11 @@ function A(e) {
 }
 function C(e) {
     var { isVisualRefreshEnabled: t } = e,
-        n = v(e, ['isVisualRefreshEnabled']);
-    return t ? (0, i.jsx)(p.kSu, E({}, n)) : (0, i.jsx)(p.dz2, E({}, n));
+        n = b(e, ['isVisualRefreshEnabled']);
+    return t ? (0, i.jsx)(_.kSu, E({}, n)) : (0, i.jsx)(_.dz2, E({}, n));
 }
-g(T, 'Types', y),
-    g(T, 'Shapes', S),
+g(T, 'Types', v),
+    g(T, 'Shapes', I),
     g(T, 'Aligns', O),
     g(T, 'defaultProps', {
         size: 24,
@@ -205,7 +205,7 @@ g(T, 'Types', y),
         displayOnly: !1,
         value: !1,
         type: 'default',
-        shape: S.BOX,
+        shape: I.BOX,
         align: 'center',
         onChange: h.dG4,
         reverse: !1

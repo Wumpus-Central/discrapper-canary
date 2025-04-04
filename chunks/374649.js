@@ -1,8 +1,8 @@
 n.d(t, {
-    ED: () => I,
+    ED: () => S,
     Ox: () => T,
-    hz: () => v,
-    o5: () => S,
+    hz: () => b,
+    o5: () => I,
     pV: () => N
 }),
     n(47120),
@@ -29,7 +29,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,7 +62,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,11 +89,11 @@ function g(e, t) {
     return i;
 }
 async function E(e) {
-    let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: o = !1, currency: u, renewal: f, metadata: _ } = e,
+    let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: o = !1, currency: u, renewal: f, metadata: p } = e,
         g = {
             items: (t = (0, c.gB)(t)).map((e) => {
                 var { planId: t } = e;
-                return h(p({}, m(e, ['planId'])), { plan_id: t });
+                return h(_({}, m(e, ['planId'])), { plan_id: t });
             }),
             payment_source_id: n,
             trial_id: r,
@@ -101,7 +101,7 @@ async function E(e) {
             apply_entitlements: o,
             currency: u,
             renewal: f,
-            metadata: _
+            metadata: p
         };
     try {
         let e = await a.tn.post({
@@ -115,8 +115,8 @@ async function E(e) {
         throw new s.HF(e);
     }
 }
-async function v(e) {
-    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: o, applyEntitlements: u = !1, analyticsLocations: f, analyticsLocation: _, userDiscountOfferId: g } = e;
+async function b(e) {
+    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: o, applyEntitlements: u = !1, analyticsLocations: f, analyticsLocation: p, userDiscountOfferId: g } = e;
     null != n && (n = (0, c.gB)(n));
     let E = {
         items:
@@ -124,7 +124,7 @@ async function v(e) {
                 ? void 0
                 : n.map((e) => {
                       var { planId: t } = e;
-                      return h(p({}, m(e, ['planId'])), { plan_id: t });
+                      return h(_({}, m(e, ['planId'])), { plan_id: t });
                   }),
         payment_source_id: r,
         renewal: i,
@@ -136,7 +136,7 @@ async function v(e) {
         let e = await a.tn.patch({
             url: d.ANM.BILLING_SUBSCRIPTION_PREVIEW(t),
             query: {
-                location: _,
+                location: p,
                 location_stack: f
             },
             body: E,
@@ -148,7 +148,7 @@ async function v(e) {
         throw new s.HF(e);
     }
 }
-async function b(e) {
+async function y(e) {
     let { paymentSourceId: t, skuId: n, subscriptionPlanId: r, currency: i, loadId: a } = e;
     o()(n, 'SKU ID is missing for one time purchase gift invoice preview');
     let c = {
@@ -170,7 +170,7 @@ async function b(e) {
         throw new s.HF(e);
     }
 }
-async function y(e) {
+async function v(e) {
     let { subscriptionId: t, preventFetch: n } = e;
     if (n) return null;
     let r = await a.tn.get({
@@ -206,7 +206,7 @@ function O(e, t) {
         [i, a]
     );
 }
-function S(e) {
+function I(e) {
     let t = (0, r.useRef)(e);
     (0, r.useEffect)(() => {
         t.current = e;
@@ -214,10 +214,10 @@ function S(e) {
     let n = JSON.stringify(e);
     return O(
         e,
-        (0, r.useCallback)(() => b(t.current), [n])
+        (0, r.useCallback)(() => y(t.current), [n])
     );
 }
-function I(e) {
+function S(e) {
     if ('subscriptionId' in e && null == e.subscriptionId) {
         let { subscriptionId: t } = e;
         e = m(e, ['subscriptionId']);
@@ -229,7 +229,7 @@ function I(e) {
     let n = JSON.stringify(e),
         i = (0, r.useCallback)(() => {
             let { current: e } = t;
-            return 'subscriptionId' in e ? v(e) : 'items' in e ? E(e) : null;
+            return 'subscriptionId' in e ? b(e) : 'items' in e ? E(e) : null;
         }, [n]);
     return O(e, i);
 }
@@ -241,7 +241,7 @@ function T(e) {
     let n = JSON.stringify(e);
     return O(
         e,
-        (0, r.useCallback)(() => y(t.current), [n])
+        (0, r.useCallback)(() => v(t.current), [n])
     );
 }
 function N(e) {

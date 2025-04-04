@@ -14,9 +14,9 @@ var r = n(688619),
     h = n(897710);
 let { Themes: m } = n(15202).V,
     { SemanticColors: g, RawColors: E } = u.V,
-    { SemanticColorExperiments: v } = c.V,
-    { Shadows: b } = p.V,
-    { Spacing: y } = h.V,
+    { SemanticColorExperiments: b } = c.V,
+    { Shadows: y } = p.V,
+    { Spacing: v } = h.V,
     { Modules: O } = f.V,
     { Layout: I, Space: S } = d.VV,
     T = l()(E, (e) => i()(e)),
@@ -31,11 +31,11 @@ let { Themes: m } = n(15202).V,
                     let r = e[t.theme],
                         i = r.raw,
                         o = r.opacity;
-                    if (n in v && null != t.enabledExperiments && t.enabledExperiments.length > 0)
+                    if (n in b && null != t.enabledExperiments && t.enabledExperiments.length > 0)
                         for (let e of t.enabledExperiments) {
                             var a, s, l, c;
-                            let r = null === (s = v[n]) || void 0 === s ? void 0 : null === (a = s[e]) || void 0 === a ? void 0 : a[t.theme];
-                            null != r && ((i = null !== (l = r.raw) && void 0 !== l ? l : i), (o = null !== (c = r.opacity) && void 0 !== c ? c : o));
+                            let r = null == (s = b[n]) || null == (a = s[e]) ? void 0 : a[t.theme];
+                            null != r && ((i = null != (l = r.raw) ? l : i), (o = null != (c = r.opacity) ? c : o));
                         }
                     if (1 === o) return N.unsafe_rawColors[i].resolve(t);
                     {
@@ -52,11 +52,11 @@ let { Themes: m } = n(15202).V,
                 css: P(n),
                 resolve(e) {
                     var t;
-                    return A(r, null !== (t = null == e ? void 0 : e.saturation) && void 0 !== t ? t : 1);
+                    return A(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
                 }
             };
         }),
-        shadows: l()(b, (e, t) => ({
+        shadows: l()(y, (e, t) => ({
             css: P(t),
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
@@ -65,7 +65,7 @@ let { Themes: m } = n(15202).V,
             })
         })),
         radii: _.w,
-        spacing: l()(y, (e) => ''.concat(e, 'px')),
+        spacing: l()(v, (e) => ''.concat(e, 'px')),
         layout: l()(I, (e) => ('number' == typeof e ? ''.concat(e, 'px') : e)),
         space: l()(S, (e) => ({
             css: e.css,
@@ -99,7 +99,7 @@ function A(e, t) {
 }
 function C(e, t, n) {
     var r;
-    let i = a()(null !== (r = n.opacity) && void 0 !== r ? r : 1, 0, 1),
+    let i = a()(null != (r = n.opacity) ? r : 1, 0, 1),
         o = e;
     return 1 !== t && (o = o.set('hsl.s', o.get('hsl.s') * t)), 1 !== i && (o = o.alpha(o.alpha() * i)), o;
 }

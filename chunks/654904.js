@@ -1,8 +1,8 @@
 n.d(t, {
     $r: () => h,
     DP: () => E,
-    Ly: () => m,
-    SG: () => g
+    Ly: () => g,
+    SG: () => m
 }),
     n(757143),
     n(301563);
@@ -50,7 +50,7 @@ function p(e) {
 }
 function h(e, t, i, s) {
     (0, o.ZDy)(async () => {
-        let { default: o } = await Promise.all([n.e('91689'), n.e('55849'), n.e('77032')]).then(n.bind(n, 192277));
+        let { default: o } = await Promise.all([n.e('91689'), n.e('89289'), n.e('36016')]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
                 o,
@@ -88,19 +88,19 @@ function h(e, t, i, s) {
             );
     });
 }
-function g(e, t, n) {
+function m(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
     let { size: i = 80, canAnimate: o = !0 } = r,
         a = null === e;
     return a && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, o) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
 }
-function m(e) {
+function g(e) {
     var t;
     let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: o } = e,
         a = '' === n ? null : null != n ? n : null == o ? void 0 : o.nick,
         s = '' === r ? i.username : r;
-    return null !== (t = null != a ? a : s) && void 0 !== t ? t : l.ZP.getName(i);
+    return null != (t = null != a ? a : s) ? t : l.ZP.getName(i);
 }
 function E(e) {
     return (null != e ? (0, i.Bd)(e) : 1) > 0.25;

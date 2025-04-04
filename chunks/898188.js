@@ -9,49 +9,49 @@ var r = n(200651),
     u = n(607070),
     d = n(933557),
     f = n(471445),
-    p = n(592125),
-    _ = n(271383),
+    _ = n(592125),
+    p = n(271383),
     h = n(526120),
     m = n(734893),
     g = n(655359),
     E = n(931261),
-    v = n(216701),
-    b = n(388032),
-    y = n(935049);
+    b = n(216701),
+    y = n(388032),
+    v = n(402765);
 let O = 60;
-function S(e) {
+function I(e) {
     let { action: t } = e,
-        n = (0, l.e7)([p.Z], () => p.Z.getChannel(t.channelId)),
+        n = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channelId)),
         i = (0, d.ZP)(n, !0);
     return null == n
         ? (0, r.jsx)(c.Text, {
               variant: 'text-xxs/normal',
               color: 'header-secondary',
-              children: b.NW.format(b.t.MkzlDA, { channelName: b.NW.string(b.t.J90oLS) })
+              children: y.NW.format(y.t.MkzlDA, { channelName: y.NW.string(y.t.J90oLS) })
           })
         : (0, r.jsx)(c.Text, {
               variant: 'text-xxs/normal',
               color: 'header-secondary',
-              children: b.NW.format(b.t.MkzlDA, { channelName: i })
+              children: y.NW.format(y.t.MkzlDA, { channelName: i })
           });
 }
-function I(e) {
+function S(e) {
     var t;
     let { channelId: n, emojiId: i, emojiName: o } = e,
-        a = (0, l.e7)([p.Z], () => p.Z.getChannel(n));
+        a = (0, l.e7)([_.Z], () => _.Z.getChannel(n));
     if (null == a) return null;
-    let s = null !== (t = (0, f.KS)(a)) && void 0 !== t ? t : c.VL1;
-    return (0, r.jsx)(v.Z, {
+    let s = null != (t = (0, f.KS)(a)) ? t : c.VL1;
+    return (0, r.jsx)(b.Z, {
         emojiId: i,
         emojiName: o,
-        size: v.R.MEDIUM,
-        defaultComponent: (0, r.jsx)(s, { className: y.channelIcon })
+        size: b.R.MEDIUM,
+        defaultComponent: (0, r.jsx)(s, { className: v.channelIcon })
     });
 }
 function T(e) {
     var t, n, o, d;
-    let { guildId: f, channel: p, className: _ } = e,
-        { channelAction: E, completed: v } = (0, g.P3)(f, p),
+    let { guildId: f, channel: _, className: p } = e,
+        { channelAction: E, completed: b } = (0, g.P3)(f, _),
         T = (0, g.K_)(f, null == E ? void 0 : E.channelId),
         N = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         A = (null == E ? void 0 : E.actionType) === m.oi.VIEW,
@@ -60,7 +60,7 @@ function T(e) {
         [w] = i.useState(new s.Z.Value(0)),
         [D] = i.useState(new s.Z.Value(0));
     i.useEffect(() => {
-        v
+        b
             ? s.Z.timing(w, {
                   toValue: 0,
                   duration: N ? 1 : 350,
@@ -73,9 +73,9 @@ function T(e) {
                   easing: s.Z.Easing.quad,
                   delay: 400
               }).start();
-    }, [v, w, A, N]),
+    }, [b, w, A, N]),
         i.useEffect(() => {
-            v &&
+            b &&
                 R &&
                 s.Z.timing(D, {
                     toValue: 1,
@@ -83,14 +83,14 @@ function T(e) {
                     easing: s.Z.Easing.quad,
                     delay: 400
                 }).start();
-        }, [v, D, R, N]);
-    let x = i.useCallback(() => {
+        }, [b, D, R, N]);
+    let L = i.useCallback(() => {
         null != T && (0, h.gp)(f, T.channelId);
     }, [f, T]);
     return null == E || (A && !R)
         ? null
         : (0, r.jsx)('div', {
-              className: a()(y.container, _),
+              className: a()(v.container, p),
               children:
                   R && null != T
                       ? (0, r.jsx)(s.Z.div, {
@@ -101,38 +101,38 @@ function T(e) {
                                 })
                             },
                             children: (0, r.jsxs)(c.P3F, {
-                                className: a()(y.banner, y.clickable),
-                                onClick: x,
+                                className: a()(v.banner, v.clickable),
+                                onClick: L,
                                 children: [
-                                    (0, r.jsx)(I, {
+                                    (0, r.jsx)(S, {
                                         channelId: T.channelId,
-                                        emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
-                                        emojiName: null == T ? void 0 : null === (n = T.emoji) || void 0 === n ? void 0 : n.name
+                                        emojiId: null == (t = T.emoji) ? void 0 : t.id,
+                                        emojiName: null == T || null == (n = T.emoji) ? void 0 : n.name
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: y.text,
+                                        className: v.text,
                                         children: [
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-md/semibold',
                                                 color: 'header-primary',
-                                                children: b.NW.format(b.t['/beONz'], { step: T.title })
+                                                children: y.NW.format(y.t['/beONz'], { step: T.title })
                                             }),
-                                            (0, r.jsx)(S, { action: T })
+                                            (0, r.jsx)(I, { action: T })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
-                                        className: y.iconCircle,
+                                        className: v.iconCircle,
                                         children: (0, r.jsx)(c.ZSh, {
                                             size: 'xs',
                                             color: C.hex(),
-                                            className: y.nextIcon
+                                            className: v.nextIcon
                                         })
                                     })
                                 ]
                             })
                         })
                       : (0, r.jsxs)(s.Z.div, {
-                            className: y.banner,
+                            className: v.banner,
                             style: {
                                 marginBottom: w.interpolate({
                                     inputRange: [0, 1],
@@ -140,13 +140,13 @@ function T(e) {
                                 })
                             },
                             children: [
-                                (0, r.jsx)(I, {
+                                (0, r.jsx)(S, {
                                     channelId: E.channelId,
-                                    emojiId: null === (o = E.emoji) || void 0 === o ? void 0 : o.id,
-                                    emojiName: null == E ? void 0 : null === (d = E.emoji) || void 0 === d ? void 0 : d.name
+                                    emojiId: null == (o = E.emoji) ? void 0 : o.id,
+                                    emojiName: null == E || null == (d = E.emoji) ? void 0 : d.name
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: y.text,
+                                    className: v.text,
                                     children: [
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-md/semibold',
@@ -156,15 +156,15 @@ function T(e) {
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-xxs/normal',
                                             color: 'text-muted',
-                                            children: b.NW.string(b.t['ElGg8/'])
+                                            children: y.NW.string(y.t['ElGg8/'])
                                         })
                                     ]
                                 }),
-                                v
+                                b
                                     ? (0, r.jsx)(c.owK, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: y.completed,
+                                          className: v.completed,
                                           secondaryColor: C.hex(),
                                           width: 20,
                                           height: 20
@@ -177,9 +177,9 @@ function T(e) {
 function N(e) {
     let { guildId: t, channel: n, className: i } = e,
         o = (0, E.g)(t),
-        a = (0, l.e7)([_.ZP], () => {
+        a = (0, l.e7)([p.ZP], () => {
             var e;
-            return (null === (e = _.ZP.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0;
+            return (null == (e = p.ZP.getSelfMember(t)) ? void 0 : e.isPending) === !0;
         });
     return (0, g.PE)(t) || a || !o
         ? null

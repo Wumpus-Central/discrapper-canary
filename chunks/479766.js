@@ -97,7 +97,7 @@ class s extends (r = i.ZP.Store) {
     }
     handleEarnedOrbsCoachmarkOpen(e) {
         let { earnedOrbsQuantity: t, dedupeKey: n } = e;
-        !(void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.includes(n)) && ((this._earnedOrbsCoachmarkOpen = !0), (this._earnedOrbsCoachmarkQuantity = t), void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.push(n));
+        (void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.includes(n)) || ((this._earnedOrbsCoachmarkOpen = !0), (this._earnedOrbsCoachmarkQuantity = t), void 0 !== n && this._earnedOrbsCoachmarkDedupeKeys.push(n));
     }
     handleEarnedOrbsCoachmarkClose(e) {
         let {} = e;

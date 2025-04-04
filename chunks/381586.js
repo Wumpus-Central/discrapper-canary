@@ -7,7 +7,7 @@ function s(e) {
     let t = (0, a.i)([e]),
         n = (0, r.e7)([i.Z], () => {
             var e;
-            return null === (e = i.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
+            return null == (e = i.Z.settings.userContent) ? void 0 : e.dismissedContents;
         });
     return 0 === t.length || (null != n && (0, o.jl)(n, e));
 }

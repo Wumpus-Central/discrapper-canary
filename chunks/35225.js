@@ -8,6 +8,6 @@ var r = n(819553),
 function c(e) {
     var t;
     let n = s.Z.getChannelId(e),
-        c = null === (t = a.ZP.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
+        c = null == (t = a.ZP.getDefaultChannel(e)) ? void 0 : t.id;
     return (n !== l.oC.GUILD_ONBOARDING || r.ZP.shouldShowOnboarding(e)) && (n !== l.oC.GUILD_HOME || (0, i.s)(e)) && null != o.Z.getChannel(n) ? n : c;
 }

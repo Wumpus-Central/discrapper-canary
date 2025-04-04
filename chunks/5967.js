@@ -12,7 +12,7 @@ function a(e) {
     if ('true' === e.getAttribute('contenteditable') || i.test(e.tagName)) return !0;
     if (r.test(e.tagName)) {
         var t;
-        let n = null !== (t = e.getAttribute('type')) && void 0 !== t ? t : 'text';
+        let n = null != (t = e.getAttribute('type')) ? t : 'text';
         if (o.has(n)) return !0;
     }
     return !1;

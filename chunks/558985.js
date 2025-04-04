@@ -23,13 +23,13 @@ class d extends (r = i.Component) {
     componentDidMount() {
         if (this.props.active) {
             let e = this.getVisibilityObserver();
-            e.observe(this), (this.isVisible = e.isVisible(this)), this.props.onChange(this.isVisible);
+            e.observe(this, this.props.innerRef), (this.isVisible = e.isVisible(this)), this.props.onChange(this.isVisible);
         }
     }
     componentDidUpdate(e) {
         let t = this.getVisibilityObserver(),
             n = t.isVisible(this);
-        this.props.active && n !== this.isVisible && this.props.onChange(n), !e.active && this.props.active ? t.observe(this) : e.active && !this.props.active && t.unobserve(this), (this.isVisible = n);
+        this.props.active && n !== this.isVisible && this.props.onChange(n), !e.active && this.props.active ? t.observe(this, this.props.innerRef) : e.active && !this.props.active && t.unobserve(this), (this.isVisible = n);
     }
     componentWillUnmount() {
         this.getVisibilityObserver().unobserve(this);

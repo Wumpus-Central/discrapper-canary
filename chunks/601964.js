@@ -41,7 +41,7 @@ class c extends r.Z {
     }
     getSafetyAlertsChannelId() {
         var e;
-        return null !== (e = this.safetyAlertsChannelId) && void 0 !== e ? e : this.publicUpdatesChannelId;
+        return null != (e = this.safetyAlertsChannelId) ? e : this.publicUpdatesChannelId;
     }
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -70,7 +70,7 @@ class c extends r.Z {
     }
     toString() {
         var e;
-        return null !== (e = this.name) && void 0 !== e ? e : '';
+        return null != (e = this.name) ? e : '';
     }
     get acronym() {
         return (0, a.Zg)(this.name);
@@ -118,7 +118,7 @@ class c extends r.Z {
         var t, n, r, i;
         super(), l(this, 'id', void 0), l(this, 'name', void 0), l(this, 'description', void 0), l(this, 'ownerId', void 0), l(this, 'icon', void 0), l(this, 'splash', void 0), l(this, 'banner', void 0), l(this, 'homeHeader', void 0), l(this, 'preferredLocale', void 0), l(this, 'features', void 0), l(this, 'afkChannelId', void 0), l(this, 'afkTimeout', void 0), l(this, 'systemChannelId', void 0), l(this, 'verificationLevel', void 0), l(this, 'joinedAt', void 0), l(this, 'defaultMessageNotifications', void 0), l(this, 'mfaLevel', void 0), l(this, 'application_id', void 0), l(this, 'explicitContentFilter', void 0), l(this, 'vanityURLCode', void 0), l(this, 'premiumTier', void 0), l(this, 'premiumSubscriberCount', void 0), l(this, 'premiumProgressBarEnabled', void 0), l(this, 'systemChannelFlags', void 0), l(this, 'rulesChannelId', void 0), l(this, 'safetyAlertsChannelId', void 0), l(this, 'discoverySplash', void 0), l(this, 'publicUpdatesChannelId', void 0), l(this, 'maxStageVideoChannelUsers', void 0), l(this, 'maxVideoChannelUsers', void 0), l(this, 'maxMembers', void 0), l(this, 'nsfwLevel', void 0), l(this, 'hubType', void 0), l(this, 'latestOnboardingQuestionId', void 0), l(this, 'profile', void 0), l(this, 'premiumFeatures', void 0);
         let o = e.features instanceof Set ? e.features : new Set(Array.from(e.features || []));
-        (this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = o), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || s.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)), (this.defaultMessageNotifications = e.defaultMessageNotifications || s.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || s.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || s.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || void 0), (this.premiumTier = e.premiumTier || s.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : s.V_K.DEFAULT), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null), (this.profile = null !== (r = e.profile) && void 0 !== r ? r : null), (this.premiumFeatures = null !== (i = e.premiumFeatures) && void 0 !== i ? i : null);
+        (this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = o), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || s.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)), (this.defaultMessageNotifications = e.defaultMessageNotifications || s.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || s.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || s.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || void 0), (this.premiumTier = e.premiumTier || s.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null != (t = e.nsfwLevel) ? t : s.V_K.DEFAULT), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null != (n = e.latestOnboardingQuestionId) ? n : null), (this.profile = null != (r = e.profile) ? r : null), (this.premiumFeatures = null != (i = e.premiumFeatures) ? i : null);
     }
 }
 class u extends c {
@@ -127,7 +127,7 @@ class u extends c {
         super(e),
             l(this, 'roles', void 0),
             l(this, 'member', void 0),
-            (this.roles = null !== (t = e.roles) && void 0 !== t ? t : {}),
+            (this.roles = null != (t = e.roles) ? t : {}),
             e.member && e.member.userId && e.member.roles
                 ? (this.member = {
                       roles: e.member.roles,

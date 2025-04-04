@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(481060),
     c = n(686546),
     u = n(562558),
-    d = n(386962);
+    d = n(1376);
 function f(e, t, n) {
     return (
         t in e
@@ -136,7 +136,7 @@ function b(e) {
         )
     });
 }
-function v(e) {
+function y(e) {
     let { game: t, activityLevel: n } = e;
     return (0, r.jsxs)('div', {
         className: d.favoriteGameContainer,
@@ -154,7 +154,7 @@ function v(e) {
         ]
     });
 }
-function y(e) {
+function v(e) {
     let { profile: t } = e,
         n = t.gameActivity,
         { gamesToDisplay: o, lastGameToDisplay: s, remainingGames: c } = (0, u.Z)(t),
@@ -205,7 +205,7 @@ function y(e) {
         : 1 === o.length
           ? (0, r.jsx)('div', {
                 className: d.container,
-                children: (0, r.jsx)(v, {
+                children: (0, r.jsx)(y, {
                     game: o[0],
                     activityLevel: n[o[0].id]
                 })

@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(355314),
     u = n(310752),
     d = n(731994),
-    f = n(371100);
-function p(e, t, n) {
+    f = n(948979);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,20 +37,20 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
 function h(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: a, icons: p, fileSize: _, onClose: h } = e,
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: a, icons: _, fileSize: p, onClose: h } = e,
         m = (0, l.Dt)(),
-        g = null != p ? p : d.J6;
+        g = null != _ ? _ : d.J6;
     return i
         ? (0, r.jsx)(c.Z, {
               transitionState: a,
               onClose: h,
-              fileSize: _
+              fileSize: p
           })
         : (0, r.jsx)(s.Y0, {
               size: s.Cg.DYNAMIC,
@@ -78,5 +78,5 @@ function h(e) {
 }
 let m = 'UPLOAD_ERROR_MODAL_KEY';
 function g(e) {
-    (0, a.h7)((t) => (0, r.jsx)(h, _({}, t, e)), { modalKey: m });
+    (0, a.h7)((t) => (0, r.jsx)(h, p({}, t, e)), { modalKey: m });
 }

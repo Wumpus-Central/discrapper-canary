@@ -22,21 +22,21 @@ function l(e) {
 function c(e) {
     var t, n, r;
     let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        u = null !== (t = c.contrastRatio) && void 0 !== t ? t : s.NonText,
-        d = null !== (n = c.tolerance) && void 0 !== n ? n : o,
-        f = i()(null !== (r = c.base) && void 0 !== r ? r : e),
-        p = i()(e),
-        _ = f.luminance(),
-        h = p,
+        u = null != (t = c.contrastRatio) ? t : s.NonText,
+        d = null != (n = c.tolerance) ? n : o,
+        f = i()(null != (r = c.base) ? r : e),
+        _ = i()(e),
+        p = f.luminance(),
+        h = _,
         m = u,
         g = u + d,
-        E = i().contrast(f, p),
-        v = a;
-    for (; v-- > 0; ) {
+        E = i().contrast(f, _),
+        b = a;
+    for (; b-- > 0; ) {
         let e = E < m,
             t = E > g;
         if (!e && !t) break;
-        let n = h.luminance() > _;
+        let n = h.luminance() > p;
         (h = (t && n) || (e && !n) ? h.darken() : h.brighten()), (E = i().contrast(f, h));
     }
     return l(h);

@@ -8,21 +8,21 @@ var r = n(606862),
     u = 'undefined' == typeof globalThis ? n.g : globalThis,
     d = i(),
     f = a('String.prototype.slice'),
-    p = Object.getPrototypeOf,
-    _ =
+    _ = Object.getPrototypeOf,
+    p =
         a('Array.prototype.indexOf', !0) ||
         function (e, t) {
             for (var n = 0; n < e.length; n += 1) if (e[n] === t) return n;
             return -1;
         },
     h = { __proto__: null };
-c && s && p
+c && s && _
     ? r(d, function (e) {
           var t = new u[e]();
           if (Symbol.toStringTag in t) {
-              var n = p(t),
+              var n = _(t),
                   r = s(n, Symbol.toStringTag);
-              r || (r = s(p(n), Symbol.toStringTag)), (h['$' + e] = o(r.get));
+              r || (r = s(_(n), Symbol.toStringTag)), (h['$' + e] = o(r.get));
           }
       })
     : r(d, function (e) {
@@ -57,7 +57,7 @@ e.exports = function (e) {
     if (!e || 'object' != typeof e) return !1;
     if (!c) {
         var t = f(l(e), 8, -1);
-        return _(d, t) > -1 ? t : 'Object' === t && g(e);
+        return p(d, t) > -1 ? t : 'Object' === t && g(e);
     }
     return s ? m(e) : null;
 };

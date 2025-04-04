@@ -1,11 +1,11 @@
 n.d(t, {
     $K: () => A,
-    OQ: () => y,
-    RE: () => S,
+    OQ: () => v,
+    RE: () => I,
     Xe: () => C,
-    dv: () => I,
+    dv: () => S,
     rS: () => O,
-    t0: () => b
+    t0: () => y
 }),
     n(47120),
     n(653041);
@@ -19,15 +19,15 @@ var r = n(392711),
     u = n(633302),
     d = n(856985),
     f = n(38618),
-    p = n(675478),
-    _ = n(486472),
+    _ = n(675478),
+    p = n(486472),
     h = n(823379),
     m = n(668781),
     g = n(981631),
     E = n(526761),
-    v = n(388032);
-function b(e) {
-    p.hW.updateAsync(
+    b = n(388032);
+function y(e) {
+    _.hW.updateAsync(
         'textAndImages',
         (t) => {
             (t.diversitySurrogate = a.Gm.create()), (t.diversitySurrogate.value = e);
@@ -35,7 +35,7 @@ function b(e) {
         E.fy.FREQUENT_USER_ACTION
     );
 }
-function y(e) {
+function v(e) {
     s.Z.dispatch({
         type: 'EMOJI_FETCH',
         guildId: e
@@ -94,7 +94,7 @@ function O(e) {
             )
     );
 }
-function S(e, t) {
+function I(e, t) {
     return (
         s.Z.dispatch({
             type: 'EMOJI_DELETE',
@@ -108,7 +108,7 @@ function S(e, t) {
         })
     );
 }
-async function I(e) {
+async function S(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
         return await o.tn.patch({
@@ -125,29 +125,29 @@ async function I(e) {
     }
 }
 function T(e) {
-    if (_.Z.totalUnavailableGuilds > 0 || !f.Z.isConnected()) return e;
+    if (p.Z.totalUnavailableGuilds > 0 || !f.Z.isConnected()) return e;
     let t = e
         .map((e) => {
             var t;
-            return null !== (t = c.ZP.getCustomEmojiById(e)) && void 0 !== t ? t : u.ZP.getByName(e);
+            return null != (t = c.ZP.getCustomEmojiById(e)) ? t : u.ZP.getByName(e);
         })
         .filter(h.lm);
     return [...(0, d.Z)(t).keys()];
 }
 function N(e) {
     var t, n, r;
-    return null == e ? null : null !== (r = null !== (n = e.id) && void 0 !== n ? n : null === (t = u.ZP.convertSurrogateToBase(e.surrogates)) || void 0 === t ? void 0 : t.name) && void 0 !== r ? r : e.name;
+    return null == e ? null : null != (r = null != (n = e.id) ? n : null == (t = u.ZP.convertSurrogateToBase(e.surrogates)) ? void 0 : t.name) ? r : e.name;
 }
 function A(e) {
     let t = N(e);
     null != t &&
-        p.DZ.updateAsync(
+        _.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
                 ((e.emojis = T(e.emojis)), i().size(e.emojis) >= E.oX)
                     ? (m.Z.show({
-                          title: v.NW.string(v.t['+XYXtb']),
-                          body: v.NW.formatToPlainString(v.t.JaIyFh, { count: E.oX })
+                          title: b.NW.string(b.t['+XYXtb']),
+                          body: b.NW.formatToPlainString(b.t.JaIyFh, { count: E.oX })
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
@@ -157,7 +157,7 @@ function A(e) {
 function C(e) {
     let t = N(e);
     null != t &&
-        p.DZ.updateAsync(
+        _.DZ.updateAsync(
             'favoriteEmojis',
             (e) => {
                 if (((e.emojis = T(e.emojis)), !e.emojis.includes(t))) return !1;

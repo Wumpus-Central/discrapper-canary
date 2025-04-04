@@ -80,7 +80,7 @@ class u extends (r = o.Component) {
                     null != i
                         ? this.delayTimeout.start(i, () => {
                               var e;
-                              null === (e = this.animation) || void 0 === e || e.play();
+                              null == (e = this.animation) || e.play();
                           })
                         : this.playOrPauseAnimation(),
                     this.animation.addEventListener('complete', this.handleComplete);

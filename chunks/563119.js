@@ -10,9 +10,9 @@ var i = n(704215),
     u = n(626135),
     d = n(542238),
     f = n(927923),
-    p = n(981631),
-    _ = n(388032),
-    h = n(909413);
+    _ = n(981631),
+    p = n(388032),
+    h = n(97800);
 function m(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,15 +65,15 @@ function v(e, t) {
         e
     );
 }
-let b = 'game_console_alert_modal',
-    y = 'game_console_ptt_alert_modal',
+let y = 'game_console_alert_modal',
+    v = 'game_console_ptt_alert_modal',
     O = {
         maybeShowPTTAlert(e) {
-            if (c.Z.getMode() !== p.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
             let t = {
-                [p.ABu.XBOX]: _.NW.string(_.t.bVZ7v7),
-                [p.ABu.PLAYSTATION]: _.NW.string(_.t['6iqUsb']),
-                [p.ABu.PLAYSTATION_STAGING]: _.NW.string(_.t['6iqUsb'])
+                [_.ABu.XBOX]: p.NW.string(p.t.bVZ7v7),
+                [_.ABu.PLAYSTATION]: p.NW.string(p.t['6iqUsb']),
+                [_.ABu.PLAYSTATION_STAGING]: p.NW.string(p.t['6iqUsb'])
             }[e];
             return null == t
                 ? Promise.resolve()
@@ -84,14 +84,14 @@ let b = 'game_console_alert_modal',
                           s = (e) =>
                               (0, r.jsx)(
                                   a.default,
-                                  v(g({}, e), {
+                                  b(g({}, e), {
                                       title: t,
-                                      body: _.NW.string(_.t.bL21zs),
+                                      body: p.NW.string(p.t.bL21zs),
                                       onConfirm: n,
                                       titleClassName: h.title
                                   })
                               );
-                      (0, o.nf)(y) ? (0, o.o)(y, s) : (0, o.h7)(s, { modalKey: y });
+                      (0, o.nf)(v) ? (0, o.o)(v, s) : (0, o.h7)(s, { modalKey: v });
                   });
         },
         showSelfDismissableAlert(e) {
@@ -99,12 +99,12 @@ let b = 'game_console_alert_modal',
                 c = (0, r.jsx)(d.t, {
                     body: n,
                     errorCodeMessage: i,
-                    dismissCallback: () => (0, o.Mr)(b)
+                    dismissCallback: () => (0, o.Mr)(y)
                 });
-            function _() {
+            function p() {
                 null != l &&
                     ((0, s.Z)({ platformType: l }),
-                    u.default.track(p.rMx.ACCOUNT_LINK_STEP, {
+                    u.default.track(_.rMx.ACCOUNT_LINK_STEP, {
                         previous_step: f.Lw,
                         current_step: 'desktop oauth',
                         platform_type: l
@@ -113,12 +113,12 @@ let b = 'game_console_alert_modal',
             let h = (e) =>
                 (0, r.jsx)(
                     a.default,
-                    v(g({}, e), {
+                    b(g({}, e), {
                         title: t,
                         body: c,
-                        onConfirm: _
+                        onConfirm: p
                     })
                 );
-            (0, o.nf)(b) ? (0, o.o)(b, h) : (0, o.h7)(h, { modalKey: b });
+            (0, o.nf)(y) ? (0, o.o)(y, h) : (0, o.h7)(h, { modalKey: y });
         }
     };

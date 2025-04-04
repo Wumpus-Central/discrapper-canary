@@ -1,7 +1,7 @@
 n.d(t, { t: () => j }), n(47120), n(301563), n(474991), n(398202);
 var r = n(200651),
     i = n(192379),
-    o = n(119617),
+    o = n(48026),
     a = n(481060),
     s = n(40851),
     l = n(745510),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(549006),
     d = n(146128),
     f = n(981631),
-    p = n(675654),
-    _ = n(333219);
+    _ = n(675654),
+    p = n(776280);
 function h(e, t, n) {
     return (
         t in e
@@ -63,12 +63,12 @@ function E(e, t) {
         e
     );
 }
-let v = [],
-    b = -5,
-    y = -40,
+let b = [],
+    y = -5,
+    v = -40,
     O = -40,
-    S = -100,
-    I = 11,
+    I = -100,
+    S = 11,
     T = 125,
     N = 20,
     A = 12,
@@ -86,7 +86,7 @@ function D(e) {
     for (let t of P) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
     return null;
 }
-let x = {
+let L = {
     enter: {
         BEG: 0,
         END: 22
@@ -100,7 +100,7 @@ let x = {
         END: 200
     }
 };
-function L() {
+function x() {
     return n
         .e('77843')
         .then(n.t.bind(n, 931152, 19))
@@ -131,7 +131,7 @@ let k = i.forwardRef(function (e, t) {
             () => ({
                 fireConfetti: (e, t) => {
                     u.createMultipleConfetti(
-                        E(m({}, p.We), {
+                        E(m({}, _.We), {
                             position: {
                                 type: 'static',
                                 value: {
@@ -142,12 +142,12 @@ let k = i.forwardRef(function (e, t) {
                             velocity: {
                                 type: 'static-random',
                                 minValue: {
-                                    x: b,
+                                    x: y,
                                     y: O
                                 },
                                 maxValue: {
-                                    x: y,
-                                    y: S
+                                    x: v,
+                                    y: I
                                 }
                             },
                             size: {
@@ -168,7 +168,7 @@ let k = i.forwardRef(function (e, t) {
         ),
         (0, r.jsx)(o.Ji, {
             ref: s,
-            colors: v,
+            colors: b,
             sprites: n,
             spriteWidth: C,
             spriteHeight: C
@@ -180,11 +180,11 @@ function j(e) {
         n = i.useRef({}),
         [o, l] = i.useState(null),
         c = M(o),
-        p = i.useRef(null),
+        _ = i.useRef(null),
         [h, m] = i.useState(!1),
         g = i.useRef('jack_o_lantern'),
         E = (0, s.bp)(),
-        v = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 if (!h) {
                     let t = D(e);
@@ -193,36 +193,36 @@ function j(e) {
             },
             [h]
         ),
-        b = i.useMemo(
+        y = i.useMemo(
             () => ({
-                triggerAnimation: v,
+                triggerAnimation: b,
                 untriggerAnimation: () => {}
             }),
-            [v]
+            [b]
         ),
-        y = i.useCallback((e) => {
+        v = i.useCallback((e) => {
             l(e);
         }, []),
         O = i.useCallback((e) => {
             'exit' === e && m(!1);
         }, []),
-        S = i.useCallback((e) => {
-            p.current = e;
+        I = i.useCallback((e) => {
+            _.current = e;
         }, []);
     return (i.useEffect(() => {
         if ('confetti' === o) {
-            if (null == p.current) return;
-            let e = p.current.getBoundingClientRect(),
-                t = e.left - I,
+            if (null == _.current) return;
+            let e = _.current.getBoundingClientRect(),
+                t = e.left - S,
                 r = e.top + T,
                 i = n.current[g.current];
             null == i || i.fireConfetti(t, r);
         }
     }, [o]),
     E !== f.IlC.APP)
-        ? (0, r.jsx)(r.Fragment, { children: t })
+        ? t
         : (0, r.jsxs)(d.Rm.Provider, {
-              value: b,
+              value: y,
               children: [
                   t,
                   Object.keys(w).map((e) => {
@@ -241,15 +241,15 @@ function j(e) {
                   h
                       ? (0, r.jsx)(u.ZP, {
                             children: (0, r.jsx)('div', {
-                                className: _.animationWrapper,
+                                className: p.animationWrapper,
                                 children: (0, r.jsx)(a.kci, {
-                                    animationRef: S,
-                                    className: _.lottieAnimation,
+                                    animationRef: I,
+                                    className: p.lottieAnimation,
                                     nextScene: c,
-                                    sceneSegments: x,
-                                    onScenePlay: y,
+                                    sceneSegments: L,
+                                    onScenePlay: v,
                                     onSceneComplete: O,
-                                    importData: L,
+                                    importData: x,
                                     pauseWhileUnfocused: !1
                                 })
                             })

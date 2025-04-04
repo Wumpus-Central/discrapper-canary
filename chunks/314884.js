@@ -57,7 +57,7 @@ function u(e, t) {
 }
 let d = !1,
     f = {};
-function p(e) {
+function _(e) {
     let { guildBoostSlots: t } = e;
     (f = {}),
         t.forEach((e) => {
@@ -65,7 +65,7 @@ function p(e) {
         }),
         (d = !0);
 }
-function _(e) {
+function p(e) {
     let { guildBoostSlot: t } = e;
     f = u(l({}, f), { [t.id]: t });
 }
@@ -93,9 +93,9 @@ class g extends (r = i.ZP.Store) {
 }
 s(g, 'displayName', 'GuildBoostSlotStore');
 let E = new g(o.Z, {
-    GUILD_BOOST_SLOTS_FETCH_SUCCESS: p,
-    GUILD_BOOST_SLOT_UPDATE_SUCCESS: _,
-    GUILD_BOOST_SLOT_CREATE: _,
-    GUILD_BOOST_SLOT_UPDATE: _,
+    GUILD_BOOST_SLOTS_FETCH_SUCCESS: _,
+    GUILD_BOOST_SLOT_UPDATE_SUCCESS: p,
+    GUILD_BOOST_SLOT_CREATE: p,
+    GUILD_BOOST_SLOT_UPDATE: p,
     LOGOUT: h
 });

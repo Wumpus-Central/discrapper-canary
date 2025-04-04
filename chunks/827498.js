@@ -7,7 +7,7 @@ n.d(t, {
     ti: () => s
 });
 var r = (function (e) {
-    return (e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE'), e;
+    return (e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE'), (e.PLAY_TAB = 'PLAY_TAB'), (e.QUICK_LAUNCHER = 'QUICK_LAUNCHER'), e;
 })({});
 let i = {
         SEARCH: 'search',

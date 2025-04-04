@@ -10,8 +10,8 @@ var i = n(658722),
     u = n(481060),
     d = n(430824),
     f = n(981631),
-    p = n(388032),
-    _ = n(929792);
+    _ = n(388032),
+    p = n(72903);
 let h = function (e) {
     let { className: t, guild: n, roleStyle: i, roleFilter: a, onSelect: h, onClose: m } = e,
         g = (0, c.e7)([d.Z], () => d.Z.getRoles(n.id)),
@@ -24,8 +24,8 @@ let h = function (e) {
         className: t,
         value: new Set(),
         onChange: h,
-        placeholder: p.NW.string(p.t.XPGZXF),
-        'aria-label': p.NW.string(p.t.ljnBlp),
+        placeholder: _.NW.string(_.t.XPGZXF),
+        'aria-label': _.NW.string(_.t.ljnBlp),
         onClose: m,
         children: (e) =>
             E(e).map((e) => {
@@ -37,14 +37,14 @@ let h = function (e) {
                         children: [
                             'dot' === i
                                 ? (0, r.jsx)(u.FhE, {
-                                      className: _.popoutRoleDot,
-                                      color: null !== (t = e.colorString) && void 0 !== t ? t : (0, l.Rf)(f.p6O),
+                                      className: p.popoutRoleDot,
+                                      color: null != (t = e.colorString) ? t : (0, l.Rf)(f.p6O),
                                       background: !1,
                                       tooltip: !1
                                   })
                                 : (0, r.jsx)(u.xko, {
-                                      className: _.popoutRoleCircle,
-                                      color: null !== (n = e.colorString) && void 0 !== n ? n : (0, l.Rf)(f.p6O)
+                                      className: p.popoutRoleCircle,
+                                      color: null != (n = e.colorString) ? n : (0, l.Rf)(f.p6O)
                                   }),
                             (0, r.jsx)(u.lo1.Label, { children: e.name })
                         ]

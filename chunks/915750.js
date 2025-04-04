@@ -1,6 +1,6 @@
 n.d(t, {
     B5: () => T,
-    PI: () => y,
+    PI: () => v,
     WD: () => C,
     aM: () => R,
     ui: () => P
@@ -73,8 +73,8 @@ function E(e, t) {
     );
 }
 let b = 60,
-    v = 1,
-    y = 0.5,
+    y = 1,
+    v = 0.5,
     O = new Set();
 function I(e, t) {
     return ''.concat(e, '_').concat(t);
@@ -86,7 +86,7 @@ class S {
     getQuestContentPosition() {
         return this.questContentPosition;
     }
-    constructor({ questOrQuests: e, questContent: t, adDecisionData: n, triggeredByStatusChange: r, trackGuildAndChannelMetadata: i, questContentPosition: s, questContentRowIndex: u, minViewTimeSeconds: g = v }) {
+    constructor({ questOrQuests: e, questContent: t, adDecisionData: n, triggeredByStatusChange: r, trackGuildAndChannelMetadata: i, questContentPosition: s, questContentRowIndex: u, minViewTimeSeconds: g = y }) {
         var T = this;
         h(this, 'id', void 0),
             h(this, 'quests', void 0),
@@ -162,7 +162,7 @@ class S {
                 }),
                     (T.lastBeatTime = Date.now());
             }),
-            h(this, 'commonProperties', (e) => m(E(m({ impression_id: this.id }, this.adDecisionData), { quest_status: (0, c.uk)(e) }), (0, c.mH)(this.questContent, this.questContentPosition, this.questContentRowIndex))),
+            h(this, 'commonProperties', (e) => m(E(m({ impression_id: this.id }, (0, d.eE)(this.adDecisionData)), { quest_status: (0, c.uk)(e) }), (0, c.mH)(this.questContent, this.questContentPosition, this.questContentRowIndex))),
             h(this, 'clone', (e) => {
                 let { triggeredByStatusChange: t } = e;
                 return (
@@ -208,7 +208,7 @@ class S {
             (this.questContent = t),
             (this.questContentPosition = s),
             (this.minViewTimeSeconds = g),
-            (this.minViewportPercentage = y),
+            (this.minViewportPercentage = v),
             (this.quests = Array.isArray(e) ? e : [e]),
             (this.trackGuildAndChannelMetadata = i),
             (this.triggeredByStatusChange = r),
@@ -236,7 +236,7 @@ function C() {
 }
 function R() {
     var e;
-    return null === (e = C()) || void 0 === e ? void 0 : e.getId();
+    return null == (e = C()) ? void 0 : e.getId();
 }
 function P(e) {
     let { visible: t, visibleChanged: n, reference: o, focused: a, focusedChanged: s, impression: l } = e,

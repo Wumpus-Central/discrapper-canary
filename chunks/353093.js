@@ -4,9 +4,9 @@ n.d(t, {
     XV: () => _,
     Zp: () => g,
     f6: () => E,
-    ky: () => v,
+    ky: () => y,
     p0: () => O,
-    pY: () => y,
+    pY: () => v,
     up: () => m
 }),
     n(230036);
@@ -41,7 +41,7 @@ function m(e) {
 }
 function g(e, t) {
     var n, r;
-    return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (n = e.profile) || void 0 === n ? void 0 : n.tag) != null && (null == e ? void 0 : null === (r = e.profile) || void 0 === r ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
+    return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e || null == (n = e.profile) ? void 0 : n.tag) != null && (null == e || null == (r = e.profile) ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
 }
 let E = (e, t) => {
         if (0 === e.length) return null;
@@ -75,7 +75,7 @@ let E = (e, t) => {
         [u.NC.SIZE_32]: 32,
         [u.NC.SIZE_36]: 40
     };
-function v(e, t) {
+function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.NC.SIZE_12;
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
@@ -83,7 +83,7 @@ function v(e, t) {
     let i = b[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function y(e, t) {
+function v(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');

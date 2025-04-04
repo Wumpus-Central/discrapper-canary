@@ -8,8 +8,8 @@ var r = n(690244),
     u = i('WeakMap.prototype.set', !0),
     d = i('WeakMap.prototype.has', !0),
     f = i('Map.prototype.get', !0),
-    p = i('Map.prototype.set', !0),
-    _ = i('Map.prototype.has', !0),
+    _ = i('Map.prototype.set', !0),
+    p = i('Map.prototype.has', !0),
     h = function (e, t) {
         for (var n, r = e; null !== (n = r.next); r = n) if (n.key === t) return (r.next = n.next), (n.next = e.next), (e.next = n), n;
     },
@@ -49,7 +49,7 @@ e.exports = function () {
                 if (s && r && ('object' == typeof r || 'function' == typeof r)) {
                     if (e) return d(e, r);
                 } else if (l) {
-                    if (t) return _(t, r);
+                    if (t) return p(t, r);
                 } else if (n) return E(n, r);
                 return !1;
             },
@@ -57,7 +57,7 @@ e.exports = function () {
                 s && r && ('object' == typeof r || 'function' == typeof r)
                     ? (e || (e = new s()), u(e, r, i))
                     : l
-                      ? (t || (t = new l()), p(t, r, i))
+                      ? (t || (t = new l()), _(t, r, i))
                       : (n ||
                             (n = {
                                 key: {},

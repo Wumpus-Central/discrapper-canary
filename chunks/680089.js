@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -21,9 +21,9 @@ function d(e, t, n) {
     );
 }
 let f = {},
-    p = 0;
-function _() {
-    p += 1;
+    _ = 0;
+function p() {
+    _ += 1;
 }
 function h(e) {
     if (null == f[e]) return !1;
@@ -41,7 +41,7 @@ function g(e) {
 function E(e) {
     for (let t of (e.userGuildSettings.partial || (f = {}), e.userGuildSettings.entries)) if (null != t.channel_overrides) for (let e of t.channel_overrides) e.collapsed ? (f[e.channel_id] = !0) : delete f[e.channel_id];
 }
-function v(e) {
+function b(e) {
     let { userGuildSettings: t } = e,
         n = new Set(t.map((e) => e.guild_id).filter(a.lm));
     for (let e in f) {
@@ -50,13 +50,13 @@ function v(e) {
     }
     for (let e of t) for (let t of e.channel_overrides) t.collapsed && (f[t.channel_id] = !0);
 }
-function b(e) {
+function y(e) {
     let {
         channel: { id: t }
     } = e;
     return h(t);
 }
-function y(e) {
+function v(e) {
     let { guildId: t } = e;
     c.ZP.getChannels(t)[u.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: t } = e;
@@ -70,9 +70,9 @@ function O(e) {
         delete f[t.id];
     });
 }
-class S extends (r = i.ZP.PersistedStore) {
+class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z, l.Z), this.removeChangeListener(_), this.addChangeListener(_), (f = null != e ? e : {});
+        this.waitFor(s.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
     }
     getState() {
         return f;
@@ -84,16 +84,16 @@ class S extends (r = i.ZP.PersistedStore) {
         return f;
     }
     get version() {
-        return p;
+        return _;
     }
 }
-d(S, 'displayName', 'CategoryCollapseStore'), d(S, 'persistKey', 'collapsedCategories');
-let I = new S(o.Z, {
+d(I, 'displayName', 'CategoryCollapseStore'), d(I, 'persistKey', 'collapsedCategories');
+let S = new I(o.Z, {
     CONNECTION_OPEN: E,
-    USER_GUILD_SETTINGS_FULL_UPDATE: v,
+    USER_GUILD_SETTINGS_FULL_UPDATE: b,
     CATEGORY_COLLAPSE: m,
     CATEGORY_EXPAND: g,
-    CATEGORY_COLLAPSE_ALL: y,
+    CATEGORY_COLLAPSE_ALL: v,
     CATEGORY_EXPAND_ALL: O,
-    CHANNEL_DELETE: b
+    CHANNEL_DELETE: y
 });

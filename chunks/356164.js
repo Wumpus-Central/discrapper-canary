@@ -81,7 +81,7 @@ class h {
 function m(e) {
     var t;
     let n = p(e),
-        r = null !== (t = f.get(n)) && void 0 !== t ? t : new h({ query: e.query });
+        r = null != (t = f.get(n)) ? t : new h({ query: e.query });
     return f.set(n, r), r;
 }
 function g(e, t) {
@@ -106,7 +106,7 @@ function b(e) {
             languageCode: r
         }).handleSearchStart();
 }
-function v(e) {
+function y(e) {
     let { query: t, categoryId: n, languageCode: r, total: i, guilds: o } = e;
     m({
         query: t,
@@ -120,7 +120,7 @@ function v(e) {
             _.set(e.id, e);
         });
 }
-function y(e) {
+function v(e) {
     let { query: t, categoryId: n, languageCode: r, error: i } = e;
     m({
         query: t,
@@ -143,8 +143,8 @@ function I(e) {
     _.set(
         r,
         d(c({}, o), {
-            memberCount: null !== (t = i.memberCount) && void 0 !== t ? t : o.memberCount,
-            presenceCount: null !== (n = i.onlineCount) && void 0 !== n ? n : o.presenceCount
+            memberCount: null != (t = i.memberCount) ? t : o.memberCount,
+            presenceCount: null != (n = i.onlineCount) ? n : o.presenceCount
         })
     );
 }
@@ -176,7 +176,7 @@ class S extends (r = i.ZP.Store) {
     getErrorMessage(e) {
         return g(e, (e) => {
             var t;
-            return null === (t = e.error) || void 0 === t ? void 0 : t.getAnyErrorMessage();
+            return null == (t = e.error) ? void 0 : t.getAnyErrorMessage();
         });
     }
 }
@@ -184,8 +184,8 @@ l(S, 'displayName', 'GlobalDiscoveryServersSearchResultsStore');
 let T = new S(o.Z, {
     CONNECTION_OPEN: E,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_START: b,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: v,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: y,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: y,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: v,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: O,
     GUILD_PROFILE_FETCH_SUCCESS: I
 });

@@ -1,17 +1,17 @@
 n.d(t, {
     GA: () => m,
-    Hb: () => _,
+    Hb: () => p,
     Hi: () => E,
     LN: () => g,
     OG: () => T,
-    Qj: () => I,
+    Qj: () => S,
     Qy: () => O,
     Rg: () => h,
-    q5: () => b,
-    t0: () => S,
-    z8: () => v
+    q5: () => y,
+    t0: () => I,
+    z8: () => b
 });
-var r = n(15729),
+var r = n(230383),
     i = n(731965),
     o = n(626135),
     a = n(981631);
@@ -72,7 +72,7 @@ let d = Object.freeze({
         messageReactionConfetti: void 0
     }),
     f = (0, r.U)(() => d),
-    p = (e, t) => {
+    _ = (e, t) => {
         o.default.track(a.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
             (0, i.j)(() => {
                 f.setState((t) => {
@@ -89,7 +89,7 @@ let d = Object.freeze({
                 });
             });
     },
-    _ = (e) => {
+    p = (e) => {
         (0, i.j)(() => {
             f.setState((t) => {
                 let { messageSendConfetti: n } = t,
@@ -99,7 +99,7 @@ let d = Object.freeze({
         });
     },
     h = (e, t) => {
-        null != f.getState().messageSendConfetti[e] ? _(e) : p(e, t);
+        null != f.getState().messageSendConfetti[e] ? p(e) : _(e, t);
     },
     m = (e) => {
         let t = f.getState();
@@ -123,17 +123,17 @@ function E(e, t) {
         });
     });
 }
-function v(e) {
+function b(e) {
     return f((t) => {
         var n;
-        return null === (n = t.messageSendConfetti[e]) || void 0 === n ? void 0 : n.emoji;
+        return null == (n = t.messageSendConfetti[e]) ? void 0 : n.emoji;
     });
 }
-function b(e) {
-    var t;
-    return null === (t = f.getState().messageSendConfetti[e]) || void 0 === t ? void 0 : t.emoji;
-}
 function y(e) {
+    var t;
+    return null == (t = f.getState().messageSendConfetti[e]) ? void 0 : t.emoji;
+}
+function v(e) {
     return (0, i.j)(() => {
         f.setState(() => ({ messageReactionConfetti: e }));
     });
@@ -143,13 +143,13 @@ function O() {
         f.setState(() => ({ messageReactionConfetti: void 0 }));
     });
 }
-function S(e, t, n) {
-    n ? y(e) : E(e, t);
+function I(e, t, n) {
+    n ? v(e) : E(e, t);
 }
-function I(e, t) {
+function S(e, t) {
     return f((n) => {
         var r;
-        return t ? n.messageReactionConfetti : null === (r = n.messageSendConfetti[e]) || void 0 === r ? void 0 : r.emoji;
+        return t ? n.messageReactionConfetti : null == (r = n.messageSendConfetti[e]) ? void 0 : r.emoji;
     });
 }
 function T(e) {

@@ -48,5 +48,5 @@ function u(e) {
 }
 function d() {
     var e;
-    return !1 === (null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
+    return !1 === (null == (e = r.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
 }

@@ -58,7 +58,7 @@ function f(e, t) {
     );
 }
 function _(e) {
-    let { descriptor: t, soundButtonProps: n, rowIndex: c, columnIndex: d, isUsingKeyboardNavigation: _, suppressPlaySound: p, getItemProps: h, onSelectItem: m, onItemMouseEnter: g, buttonOverlay: E, isNitroLocked: b, shouldShowUpsell: v, refreshEnabled: y, inExpressionPicker: O } = e,
+    let { descriptor: t, soundButtonProps: n, rowIndex: c, columnIndex: d, isUsingKeyboardNavigation: _, suppressPlaySound: p, getItemProps: h, onSelectItem: m, onItemMouseEnter: g, buttonOverlay: E, isNitroLocked: b, shouldShowUpsell: y, refreshEnabled: v, inExpressionPicker: O } = e,
         I = i.Wq.useStore((e) => e.inspectedExpressionPosition),
         S = ''.concat(c, '-').concat(d),
         T = _ && I.rowIndex === c && I.columnIndex === d;
@@ -76,8 +76,8 @@ function _(e) {
                     enableSecondaryActions: !0,
                     buttonOverlay: E,
                     inNitroLockedSection: b,
-                    showLockForDisabledSound: v,
-                    refreshEnabled: y,
+                    showLockForDisabledSound: y,
+                    refreshEnabled: v,
                     isSoundmoji: !0 === O
                 })
             );
@@ -89,7 +89,7 @@ function _(e) {
                     guild: t.item.guild,
                     focused: T,
                     onSelectItem: () => m(t),
-                    refreshEnabled: y
+                    refreshEnabled: v
                 })
             );
         case o.vB.SHOW_ALL:

@@ -2,7 +2,7 @@ n.d(t, { Z: () => s }), n(474991), n(398202), n(301563);
 var r = n(477660),
     i = n.n(r),
     o = n(914216);
-let a = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop#itemSkuId=(\\d+)?'),
+let a = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?\\.com|staging\\.discord\\.co)/shop(?:\\?tab=[a-z]+)?#itemSkuId=(\\d+)'),
     s = {
         shopLink: {
             order: i().defaultRules.url.order - 0.5,

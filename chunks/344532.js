@@ -29,11 +29,11 @@ function f(e) {
     let { user: t } = e;
     c = t.id;
 }
-function p(e) {
+function _(e) {
     let { userId: t } = e;
     u(t, null);
 }
-function _(e) {
+function p(e) {
     let { isSwitchingAccount: t } = e;
     t || null == c || u(c, null);
 }
@@ -47,7 +47,7 @@ class m extends (r = i.ZP.PersistedStore) {
     }
     requiredActions(e) {
         var t;
-        return null !== (t = s[e]) && void 0 !== t ? t : null;
+        return null != (t = s[e]) ? t : null;
     }
     requiredActionsIncludes(e, t) {
         let n = this.requiredActions(e);
@@ -65,7 +65,7 @@ let g = new m(o.Z, {
     LOGIN_ATTEMPTED: d,
     CONNECTION_OPEN: f,
     CURRENT_USER_UPDATE: f,
-    LOGOUT: _,
-    PASSWORD_UPDATED: p,
+    LOGOUT: p,
+    PASSWORD_UPDATED: _,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: h
 });

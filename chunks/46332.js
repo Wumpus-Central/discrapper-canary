@@ -9,23 +9,23 @@ var r = n(373793),
     u = n(689079);
 function d(e) {
     var t, n, d;
-    let { applicationId: f, channel: p, onSuccess: _, sectionName: h, location: m, entrypoint: g, commandIntegrationTypes: E } = e;
-    if ((null != E && !E.includes(r.Y.USER_INSTALL)) || f === u.bi.BUILT_IN || o.ZP.hasUserStateApplication(f) || (null != p && o.ZP.hasContextStateApplication(f, p.id, p.guild_id))) return null == _ || _(), Promise.resolve(!0);
-    let v = null != g ? g : l.Z.lastShownEntrypoint();
+    let { applicationId: f, channel: _, onSuccess: p, sectionName: h, location: m, entrypoint: g, commandIntegrationTypes: E } = e;
+    if ((null != E && !E.includes(r.Y.USER_INSTALL)) || f === u.bi.BUILT_IN || o.ZP.hasUserStateApplication(f) || (null != _ && o.ZP.hasContextStateApplication(f, _.id, _.guild_id))) return null == p || p(), Promise.resolve(!0);
+    let b = null != g ? g : l.Z.lastShownEntrypoint();
     (0, i.yw)(c.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
         location: m,
         application_id: f,
         section_name: h,
-        source: v
+        source: b
     });
-    let b = a.Z.getApplication(f),
-        y = r.Y.USER_INSTALL,
-        O = null == b ? void 0 : null === (d = b.integrationTypesConfig) || void 0 === d ? void 0 : null === (n = d[y]) || void 0 === n ? void 0 : null === (t = n.oauth2InstallParams) || void 0 === t ? void 0 : t.scopes;
+    let y = a.Z.getApplication(f),
+        v = r.Y.USER_INSTALL,
+        O = null == y || null == (d = y.integrationTypesConfig) || null == (n = d[v]) || null == (t = n.oauth2InstallParams) ? void 0 : t.scopes;
     return new Promise((e) => {
         (0, s.openOAuth2Modal)(
             {
                 clientId: f,
-                integrationType: y,
+                integrationType: v,
                 scopes: O,
                 callback: (t) => {
                     let { location: n } = t;
@@ -34,10 +34,10 @@ function d(e) {
                             location: m,
                             application_id: f,
                             section_name: h,
-                            source: v
+                            source: b
                         }),
                         e(!0),
-                        null == _ || _());
+                        null == p || p());
                 }
             },
             () => {

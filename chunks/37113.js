@@ -2,9 +2,9 @@ n.d(t, {
     L9: () => u,
     LY: () => a,
     ND: () => f,
-    WC: () => _,
+    WC: () => p,
     aW: () => s,
-    af: () => v,
+    af: () => b,
     k0: () => E,
     km: () => g,
     no: () => d,
@@ -181,7 +181,7 @@ let d = {
             fps: 5
         }
     ];
-function p(e, t) {
+function _(e, t) {
     return {
         value: e,
         get label() {
@@ -189,9 +189,9 @@ function p(e, t) {
         }
     };
 }
-let _ = [p(720), p(1080), p(1440), p(0, () => o.NW.string(o.t.XjXqzs))],
-    h = [p(720), p(1080), p(1440)],
+let p = [_(720), _(1080), _(1440), _(0, () => o.NW.string(o.t.XjXqzs))],
+    h = [_(720), _(1080), _(1440)],
     m = (e) => (0 === e ? o.NW.string(o.t.XjXqzs) : o.NW.formatToPlainString(o.t.TEOC0N, { resolution: e })),
-    g = [p(480, () => m(480)), p(720, () => m(720)), p(1080, () => m(1080)), p(1440, () => m(1440)), p(0, () => m(0))],
-    E = [p(15), p(30), p(60)],
-    v = [p(15, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 15 })), p(30, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 30 })), p(60, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 60 }))];
+    g = [_(480, () => m(480)), _(720, () => m(720)), _(1080, () => m(1080)), _(1440, () => m(1440)), _(0, () => m(0))],
+    E = [_(15), _(30), _(60)],
+    b = [_(15, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 15 })), _(30, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 30 })), _(60, () => o.NW.formatToPlainString(o.t['bW+JCQ'], { value: 60 }))];

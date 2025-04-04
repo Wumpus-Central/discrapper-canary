@@ -20,7 +20,7 @@ let d = {
         let s = i.Z.getOptionStates(e.id),
             l = a.options.filter((e) => {
                 var t;
-                return e.displayName.startsWith(n) && !(null === (t = s[e.name]) || void 0 === t ? void 0 : t.hasValue);
+                return e.displayName.startsWith(n) && !(null == (t = s[e.name]) ? void 0 : t.hasValue);
             });
         return 0 === l.length ? c : { results: { commandOptions: l } };
     },
@@ -57,7 +57,7 @@ let d = {
                           key: 'required-options'
                       })
                     : null,
-            p =
+            _ =
                 d.length > 0
                     ? (0, a.HI)({
                           query: i,
@@ -79,7 +79,7 @@ let d = {
                       })
                     : null;
         return (0, r.jsxs)(r.Fragment, {
-            children: [f, p]
+            children: [f, _]
         });
     },
     onSelect(e) {

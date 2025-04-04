@@ -46,7 +46,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function p(e, t) {
         e
     );
 }
-let _ = new Map(),
+let p = new Map(),
     h = {},
     m = l.VD2.BOTTOM_RIGHT,
     g = {
@@ -67,47 +67,47 @@ let _ = new Map(),
 function E(e) {
     var t, n;
     let { id: o, component: a, props: s } = e;
-    if (null != _.get(o)) return;
+    if (null != p.get(o)) return;
     let c = {
         id: o,
         component: a,
-        position: null !== (t = s.position) && void 0 !== t ? t : m,
+        position: null != (t = s.position) ? t : m,
         props: s,
-        docked: null !== (n = s.docked) && void 0 !== n && n
+        docked: null != (n = s.docked) && n
     };
-    _.set(o, c), a === l.NYg.VIDEO ? null == r && (r = o) : a === l.NYg.EMBED_IFRAME && null == i && (i = o);
+    p.set(o, c), a === l.NYg.VIDEO ? null == r && (r = o) : a === l.NYg.EMBED_IFRAME && null == i && (i = o);
 }
-function v(e) {
+function b(e) {
     let { id: t } = e;
-    if (!_.has(t)) return !1;
+    if (!p.has(t)) return !1;
     {
-        _.delete(t);
-        let e = Array.from(_.keys());
+        p.delete(t);
+        let e = Array.from(p.keys());
         r === t
             ? (r = e.find((e) => {
-                  let t = _.get(e);
+                  let t = p.get(e);
                   return null != t && t.component === l.NYg.VIDEO;
               }))
             : i === t &&
               (i = e.find((e) => {
-                  let t = _.get(e);
+                  let t = p.get(e);
                   return null != t && t.component === l.NYg.EMBED_IFRAME;
               }));
     }
 }
-function b(e) {
+function y(e) {
     let { id: t, position: n } = e;
     if (null == t || (r !== t && i !== t)) return !1;
     {
         let e = new Map();
-        _.forEach((t, r) => {
-            e.set(r, p(d({}, t), { position: n }));
+        p.forEach((t, r) => {
+            e.set(r, _(d({}, t), { position: n }));
         }),
-            (_ = e),
+            (p = e),
             (m = n);
     }
 }
-function y(e) {
+function v(e) {
     let { width: t, pipType: n } = e;
     g[n] = t;
 }
@@ -115,31 +115,31 @@ function O(e) {
     let { id: t, rect: n } = e;
     h[t] = n;
 }
-function S(e) {
-    let { id: t } = e;
-    if (r !== t && i !== t) return !1;
-    {
-        let e = _.get(t);
-        if (null == e) return !1;
-        _.set(t, p(d({}, e), { hidden: !0 }));
-    }
-}
 function I(e) {
     let { id: t } = e;
     if (r !== t && i !== t) return !1;
     {
-        let e = _.get(t);
+        let e = p.get(t);
         if (null == e) return !1;
-        _.set(t, p(d({}, e), { hidden: !1 }));
+        p.set(t, _(d({}, e), { hidden: !0 }));
+    }
+}
+function S(e) {
+    let { id: t } = e;
+    if (r !== t && i !== t) return !1;
+    {
+        let e = p.get(t);
+        if (null == e) return !1;
+        p.set(t, _(d({}, e), { hidden: !1 }));
     }
 }
 function T(e) {
     let { id: t } = e,
-        n = _.get(t);
+        n = p.get(t);
     null != n && (n.component === l.NYg.VIDEO ? (r = t) : n.component === l.NYg.EMBED_IFRAME && (i = t));
 }
 function N() {
-    (r = null), (i = null), (_ = new Map());
+    (r = null), (i = null), (p = new Map());
 }
 class A extends (o = a.ZP.PersistedStore) {
     initialize(e) {
@@ -155,16 +155,16 @@ class A extends (o = a.ZP.PersistedStore) {
     }
     get pipWindow() {
         var e;
-        return null == r && null == i ? null : _.get(null !== (e = null != r ? r : i) && void 0 !== e ? e : '');
+        return null == r && null == i ? null : p.get(null != (e = null != r ? r : i) ? e : '');
     }
     get pipVideoWindow() {
-        return null == r ? null : _.get(r);
+        return null == r ? null : p.get(r);
     }
     get pipActivityWindow() {
-        return null == i ? null : _.get(i);
+        return null == i ? null : p.get(i);
     }
     get pipWindows() {
-        return _;
+        return p;
     }
     pipWidth(e) {
         return g[e];
@@ -176,7 +176,7 @@ class A extends (o = a.ZP.PersistedStore) {
         return h[e];
     }
     isOpen(e) {
-        return null != e && _.has(e);
+        return null != e && p.has(e);
     }
     getState() {
         return {
@@ -192,20 +192,20 @@ u(A, 'displayName', 'PictureInPictureStore'),
             var t, n;
             return {
                 pipWidths: {
-                    [c.cL.VIDEO]: null !== (t = e.pipWidth) && void 0 !== t ? t : c.l8[c.cL.VIDEO],
+                    [c.cL.VIDEO]: null != (t = e.pipWidth) ? t : c.l8[c.cL.VIDEO],
                     [c.cL.CAMERA_PREVIEW]: c.l8[c.cL.CAMERA_PREVIEW]
                 },
-                openPosition: null !== (n = e.openPosition) && void 0 !== n ? n : l.VD2.BOTTOM_RIGHT
+                openPosition: null != (n = e.openPosition) ? n : l.VD2.BOTTOM_RIGHT
             };
         }
     ]);
 let C = new A(s.Z, {
     PICTURE_IN_PICTURE_OPEN: E,
-    PICTURE_IN_PICTURE_CLOSE: v,
-    PICTURE_IN_PICTURE_MOVE: b,
-    PICTURE_IN_PICTURE_RESIZE: y,
-    PICTURE_IN_PICTURE_HIDE: S,
-    PICTURE_IN_PICTURE_SHOW: I,
+    PICTURE_IN_PICTURE_CLOSE: b,
+    PICTURE_IN_PICTURE_MOVE: y,
+    PICTURE_IN_PICTURE_RESIZE: v,
+    PICTURE_IN_PICTURE_HIDE: I,
+    PICTURE_IN_PICTURE_SHOW: S,
     PICTURE_IN_PICTURE_UPDATE_RECT: O,
     PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: T,
     LOGOUT: N

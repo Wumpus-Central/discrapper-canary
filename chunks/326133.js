@@ -9,18 +9,18 @@ var r = n(200651),
     u = n(595519),
     d = n(317381),
     f = n(16609),
-    p = n(588468),
-    _ = n(30465),
+    _ = n(588468),
+    p = n(30465),
     h = n(313201),
     m = n(314910),
     g = n(549006),
     E = n(430824),
-    v = n(436896),
-    b = n(590921),
-    y = n(606992),
+    b = n(436896),
+    y = n(590921),
+    v = n(606992),
     O = n(51062),
-    S = n(918559),
-    I = n(37499);
+    I = n(918559),
+    S = n(504573);
 function T(e, t, n) {
     return (
         t in e
@@ -95,31 +95,31 @@ function P(e, t) {
 }
 let w = 490,
     D = 490,
-    x = 245,
-    L = 200,
+    L = 245,
+    x = 200,
     M = 175,
     k = i.forwardRef(function (e, t) {
         var n, o, T, A, P;
         let { channel: k, type: j, editorHeight: U, onVisibilityChange: G } = e,
             B = (0, h.Dt)(),
-            Z = (0, l.e7)(
+            F = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
-                    return null !== (e = E.Z.getGuild(k.guild_id)) && void 0 !== e ? e : null;
+                    return null != (e = E.Z.getGuild(k.guild_id)) ? e : null;
                 },
                 [k.guild_id]
             ),
-            F = i.useRef(),
-            [V, H, W] = (0, O.Z)(C(N({}, e), { guild: Z }), t, F),
-            Y = (null === (n = j.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
-            K = (0, p.DJ)(V.selectedIndex);
-        (0, _.KR)(B, V.isVisible, K), v.Z.trackExposure({ location: '6e9811_1' });
-        let { usePopoutAutocomplete: z } = v.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
-            q = (0, y.Z)({
+            V = i.useRef(),
+            [Z, H, W] = (0, O.Z)(C(N({}, e), { guild: F }), t, V),
+            Y = (null == (n = j.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
+            K = (0, _.DJ)(Z.selectedIndex);
+        (0, p.KR)(B, Z.isVisible, K), b.Z.trackExposure({ location: '6e9811_1' });
+        let { usePopoutAutocomplete: z } = b.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
+            q = (0, v.Z)({
                 editorHeight: U,
                 type: j,
-                state: V,
+                state: Z,
                 isInPopoutExperiment: z
             }),
             Q = (0, l.e7)(
@@ -127,45 +127,45 @@ let w = 490,
                 () => {
                     let e = d.ZP.getSelfEmbeddedActivityForChannel(k.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, u.l5)(k) && null != e && (0, f.pY)(e.location) === k.id && t === S.Ez.PANEL;
+                    return (0, u.l5)(k) && null != e && (0, f.pY)(e.location) === k.id && t === I.Ez.PANEL;
                 },
                 [k]
             ),
             X = i.useMemo(() => ((null == q ? void 0 : q.top) == null && (null == q ? void 0 : q.left) == null && (null == q ? void 0 : q.bottom) == null && (null == q ? void 0 : q.right) == null ? '' : String(Date.now())), [null == q ? void 0 : q.top, null == q ? void 0 : q.left, null == q ? void 0 : q.bottom, null == q ? void 0 : q.right]);
         if (
             (i.useEffect(() => {
-                G(V.isVisible);
-            }, [G, V.isVisible]),
-            !V.isVisible || null == V.query || void 0 === q)
+                G(Z.isVisible);
+            }, [G, Z.isVisible]),
+            !Z.isVisible || null == Z.query || void 0 === q)
         )
             return null;
         let J =
-            null !==
-                (o = V.query.typeInfo.renderResults({
-                    results: V.query.results,
-                    selectedIndex: V.selectedIndex,
-                    channel: k,
-                    guild: Z,
-                    query: V.query.queryText,
-                    options: V.query.options,
-                    onHover: (e) => H.onResultHover(e),
-                    onClick: (e) => H.onResultClick(e)
-                })) && void 0 !== o
+            null !=
+            (o = Z.query.typeInfo.renderResults({
+                results: Z.query.results,
+                selectedIndex: Z.selectedIndex,
+                channel: k,
+                guild: F,
+                query: Z.query.queryText,
+                options: Z.query.options,
+                onHover: (e) => H.onResultHover(e),
+                onClick: (e) => H.onResultClick(e)
+            }))
                 ? o
                 : null;
         if (null == J) return null;
         let $ = {
-                [I.autocompleteAttached]: null == q,
-                [I.autocompletePopout]: null != q,
-                [I.bottom]: null == q && 'bottom' === e.position,
-                [I.autocompleteTop]: Q
+                [S.autocompleteAttached]: null == q,
+                [S.autocompletePopout]: null != q,
+                [S.bottom]: null == q && 'bottom' === e.position,
+                [S.autocompleteTop]: Q
             },
             ee = w;
-        null != q && (ee = (null === (T = j.autocomplete) || void 0 === T ? void 0 : T.small) ? L : (null === (A = V.query) || void 0 === A ? void 0 : A.type) === b.eq.EMOJIS_AND_STICKERS ? D : x), (ee = Math.min(window.innerHeight - M, ee));
-        let et = (0, r.jsx)(p.ZP, {
+        null != q && (ee = (null == (T = j.autocomplete) ? void 0 : T.small) ? x : (null == (A = Z.query) ? void 0 : A.type) === y.eq.EMOJIS_AND_STICKERS ? D : L), (ee = Math.min(window.innerHeight - M, ee));
+        let et = (0, r.jsx)(_.ZP, {
             id: B,
-            className: a()(I.autocomplete, $),
-            innerClassName: I.autocompleteInner,
+            className: a()(S.autocomplete, $),
+            innerClassName: S.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
                 navigator: W,
@@ -181,16 +181,16 @@ let w = 490,
                                         id: B,
                                         ref: (e) => {
                                             var n;
-                                            (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null), (F.current = e);
+                                            (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (V.current = e);
                                         }
                                     },
                                     n
                                 ),
                                 {
-                                    className: I.scroller,
+                                    className: S.scroller,
                                     style: { maxHeight: ee },
                                     role: 'listbox',
-                                    'aria-labelledby': (0, p.rp)(B),
+                                    'aria-labelledby': (0, _.rp)(B),
                                     children: J
                                 }
                             )
@@ -205,7 +205,7 @@ let w = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: q,
                       positionKey: X,
-                      position: null !== (P = e.position) && void 0 !== P ? P : 'top',
+                      position: null != (P = e.position) ? P : 'top',
                       align: 'left',
                       spacing: 8,
                       autoInvert: !0,

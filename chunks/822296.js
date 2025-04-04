@@ -13,22 +13,22 @@ var i = n(120356),
     _ = n(112560),
     p = n(231338),
     h = n(388032),
-    m = n(192082);
+    m = n(65558);
 let g = n(340109);
 function E(e) {
     let { stream: t, width: n, noArt: i = !1, selected: E = !1 } = e,
-        v = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
-        b = (0, u.Q3)('StreamEnded');
-    function y(e) {
+        b = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
+        y = (0, u.Q3)('StreamEnded');
+    function v(e) {
         return e < 550 ? 'small' : e < 1000 ? 'medium' : 'large';
     }
     (0, c.ZP)(() => {
-        (null == v ? void 0 : v.isGuildStageVoice()) && (0, l.aP)((0, d.V9)(t), !1);
+        (null == b ? void 0 : b.isGuildStageVoice()) && (0, l.aP)((0, d.V9)(t), !1);
     });
     let O = () => (0, l.aP)((0, d.V9)(t)),
         I = h.NW.string(h.t['4EGMWF']),
-        S = y(n);
-    return b
+        S = v(n);
+    return y
         ? (0, r.jsx)(s.f6W, {
               disableAdaptiveTheme: !0,
               theme: p.BR.MIDNIGHT,
@@ -39,7 +39,7 @@ function E(e) {
                           className: m.content,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: m.artContainer,
+                                  className: o()(m.artContainer, m[S]),
                                   children: (0, r.jsx)('div', { className: o()(m.art, m[S]) })
                               }),
                               (0, r.jsxs)('div', {
@@ -47,12 +47,12 @@ function E(e) {
                                   children: [
                                       (0, r.jsx)(s.X6q, {
                                           color: 'none',
-                                          variant: 'heading-lg/normal',
+                                          variant: 'small' === S ? 'heading-md/normal' : 'heading-lg/normal',
                                           className: m.header,
                                           children: h.NW.formatToMarkdownString(h.t.Kb4Ukp, {})
                                       }),
                                       (0, r.jsx)(s.zxk, {
-                                          size: s.zxk.Sizes.LARGE,
+                                          size: 'small' === S ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
                                           color: s.zxk.Colors.PRIMARY,
                                           onClick: (e) => {
                                               e.stopPropagation(), O();

@@ -7,7 +7,7 @@ var r,
     l = n(481060),
     c = n(540026),
     u = n(388032),
-    d = n(721275);
+    d = n(24008);
 function f(e, t, n) {
     return (
         t in e
@@ -21,8 +21,8 @@ function f(e, t, n) {
         e
     );
 }
-let p = 150;
-class _ extends (r = o.PureComponent) {
+let _ = 150;
+class p extends (r = o.PureComponent) {
     componentDidMount() {
         this.updateMediaBar();
     }
@@ -35,11 +35,11 @@ class _ extends (r = o.PureComponent) {
         null != r && (e ? r.setGrabber(0) : r.setGrabber(t / n));
     }
     render() {
-        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: o, currentWindow: a, muted: f, minValue: _, maxValue: h, value: m, onVolumeShow: g, onVolumeHide: E } = this.props,
-            { hovered: v, focused: b, dragging: y } = this.state,
+        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: o, currentWindow: a, muted: f, minValue: p, maxValue: h, value: m, onVolumeShow: g, onVolumeHide: E } = this.props,
+            { hovered: b, focused: y, dragging: v } = this.state,
             O = l.gj8;
         return (
-            f || m === _ ? (O = l.OyP) : m < h / 2 && (O = l.X2j),
+            f || m === p ? (O = l.OyP) : m < h / 2 && (O = l.X2j),
             (0, i.jsxs)('div', {
                 className: s()(n, d.container),
                 onMouseEnter: () => {
@@ -49,19 +49,19 @@ class _ extends (r = o.PureComponent) {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
                             this.setState({ hovered: !1 }), null == E || E();
-                        }, p));
+                        }, _));
                 },
                 onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, i.jsx)('div', {
-                        className: s()(d.volumeButtonSlider, r, { [d.sliderVisible]: v || b || y }),
+                        className: s()(d.volumeButtonSlider, r, { [d.sliderVisible]: b || y || v }),
                         onMouseEnter: () => {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
                         onMouseLeave: () => {
-                            clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), p));
+                            clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), _));
                         },
                         children: (0, i.jsx)(c.Z, {
                             sliderClassName: o,
@@ -129,9 +129,9 @@ class _ extends (r = o.PureComponent) {
             });
     }
 }
-f(_, 'defaultProps', {
+f(p, 'defaultProps', {
     minValue: 0,
     maxValue: 100,
     handleSize: 16
 });
-let h = _;
+let h = p;

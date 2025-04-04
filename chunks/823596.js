@@ -1,9 +1,9 @@
 n.d(t, {
-    IF: () => p,
+    IF: () => _,
     LU: () => c,
     Rt: () => h,
     hW: () => u,
-    t3: () => _
+    t3: () => p
 }),
     n(653041),
     n(47120);
@@ -65,7 +65,7 @@ let c = [12, 25, 50, 100],
     u = 7,
     d = 5,
     f = 250;
-function p() {
+function _() {
     return {
         pageSize: c[0],
         currentPage: 1,
@@ -74,16 +74,16 @@ function p() {
         elasticSearchCursor: null
     };
 }
-function _(e) {
+function p(e) {
     return Math.max(e.pageSize * d, f);
 }
 class h {
     reset() {
-        (this._paginationState = p()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
+        (this._paginationState = _()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
     }
     isMemberOnCurrentPage(e) {
         var t;
-        return (null !== (t = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== t ? t : []).includes(e);
+        return (null != (t = this._cachedPaginationChunks[this._paginationState.currentPage]) ? t : []).includes(e);
     }
     isMemberInAnyChunk(e) {
         return this._sortedMemberIds.includes(e);
@@ -113,7 +113,7 @@ class h {
         let t = !1;
         if (null != e.pageSize && e.pageSize !== this._paginationState.pageSize) {
             var n;
-            (t = !0), (e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (n = e.pageSize) && void 0 !== n ? n : this._paginationState.pageSize, e.currentPage));
+            (t = !0), (e.currentPage = this._calculateNewPageFromPageSizeChange(null != (n = e.pageSize) ? n : this._paginationState.pageSize, e.currentPage));
         }
         return (this._paginationState = a({}, this._paginationState, e)), t && this._rebuildPaginationChunksFromStoredMembers(), [!0, t];
     }
@@ -153,7 +153,7 @@ class h {
                 return null == e[r] && (e[r] = []), e[r].push(t), e;
             }),
             (this.guildId = e),
-            (this._paginationState = p()),
+            (this._paginationState = _()),
             (this._version = 0);
         let [n, r] = this._initPaginationFromRawMembers(t);
         (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);

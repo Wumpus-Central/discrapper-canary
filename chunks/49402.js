@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     o = n(803997),
     a = n.n(o),
-    s = n(489948),
+    s = n(928873),
     l = n(821541),
     c = n(780900);
 function u(e, t, n) {
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,8 +81,8 @@ function h(e, t) {
 function m(e, t, n) {
     let o = (0, c.G6)(e);
     return i.forwardRef(function (u, f) {
-        var { children: h, className: m, dir: g = 'ltr', orientation: E = 'vertical', fade: v = !1, customTheme: b = !1, paddingFix: y = !0, style: O, gap: S, experimental_useStack: I } = u,
-            T = _(u, ['children', 'className', 'dir', 'orientation', 'fade', 'customTheme', 'paddingFix', 'style', 'gap', 'experimental_useStack']);
+        var { children: h, className: m, dir: g = 'ltr', orientation: E = 'vertical', fade: b = !1, customTheme: y = !1, paddingFix: v = !0, style: O, gap: I, experimental_useStack: S } = u,
+            T = p(u, ['children', 'className', 'dir', 'orientation', 'fade', 'customTheme', 'paddingFix', 'style', 'gap', 'experimental_useStack']);
         let { scrollerRef: N, getScrollerState: A } = (0, c.Ke)(),
             C = (0, c.t2)(N, E);
         i.useImperativeHandle(
@@ -98,25 +98,25 @@ function m(e, t, n) {
             [N, A, E, C]
         );
         let R = (0, c.tT)({
-            paddingFix: y,
+            paddingFix: v,
             orientation: E,
             dir: g,
             className: m,
             scrollerRef: N,
             specs: o
         });
-        return I
+        return S
             ? (0, r.jsx)(
                   l.K,
-                  p(
+                  _(
                       d(
                           {
-                              gap: S,
+                              gap: I,
                               ref: N,
                               className: a()(m, {
                                   [e]: !0,
-                                  [t]: v,
-                                  [n]: b
+                                  [t]: b,
+                                  [n]: y
                               }),
                               style: (0, c.uT)(O, E),
                               dir: g
@@ -133,14 +133,14 @@ function m(e, t, n) {
               )
             : (0, r.jsx)(
                   'div',
-                  p(
+                  _(
                       d(
                           {
                               ref: N,
                               className: a()(m, {
                                   [e]: !0,
-                                  [t]: v,
-                                  [n]: b
+                                  [t]: b,
+                                  [n]: y
                               }),
                               style: (0, c.uT)(O, E),
                               dir: g

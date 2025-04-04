@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -10,97 +10,97 @@ var i = n(120356),
     u = n(483444),
     d = n(599250),
     f = n(926153),
-    p = n(27693),
-    _ = n(74538),
+    _ = n(27693),
+    p = n(74538),
     h = n(937615),
     m = n(104494),
     g = n(639119),
     E = n(108989),
-    v = n(474936),
-    b = n(388032),
-    y = n(236118);
+    b = n(474936),
+    y = n(388032),
+    v = n(790816);
 function O(e, t) {
-    let n = _.ZP.getDefaultPrice(e),
-        { intervalType: r } = _.ZP.getInterval(e),
+    let n = p.ZP.getDefaultPrice(e),
+        { intervalType: r } = p.ZP.getInterval(e),
         i = (0, h.T4)(n.amount, n.currency);
     if (t) return i;
     switch (r) {
-        case v.rV.MONTH:
-            return b.NW.formatToPlainString(b.t.AbOLNj, { price: i });
-        case v.rV.YEAR:
-            return b.NW.formatToPlainString(b.t.rS8FAw, { price: i });
+        case b.rV.MONTH:
+            return y.NW.formatToPlainString(y.t.AbOLNj, { price: i });
+        case b.rV.YEAR:
+            return y.NW.formatToPlainString(y.t.rS8FAw, { price: i });
     }
 }
-let S = (e) => {
+let I = (e) => {
         let { isTier0: t, discountAmount: n } = e,
             i = (0, g.N)(),
-            a = null != i && i.trial_id === v.a7,
-            l = b.NW.string(b.t.IBYG5e);
+            a = null != i && i.trial_id === b.a7,
+            l = y.NW.string(y.t.IBYG5e);
         return (
-            void 0 !== n ? (l = b.NW.formatToPlainString(b.t.iiLbvr, { percent: n })) : a && (l = b.NW.string(b.t.gtNqJS)),
+            void 0 !== n ? (l = y.NW.formatToPlainString(y.t.iiLbvr, { percent: n })) : a && (l = y.NW.string(y.t.gtNqJS)),
             (0, r.jsx)('div', {
-                className: y.trialBadgeContainer,
+                className: v.trialBadgeContainer,
                 children: (0, r.jsx)(s.Text, {
                     variant: 'text-xs/bold',
-                    className: o()(y.trialOfferText, { [y.tier0TrialOffer]: t }),
+                    className: o()(v.trialOfferText, { [v.tier0TrialOffer]: t }),
                     children: l
                 })
             })
         );
     },
-    I = function (e) {
+    S = function (e) {
         var t;
-        let n;
-        let { hideCloseButton: i = !1, hideCloseOnFullScreen: _, shouldShowPrice: h, plan: g, renderAnimation: b, onClose: I, isGift: T, upgradeToPremiumType: N, headerTheme: A = v.nL.DEFAULT, className: C, showTrialBadge: R = !1, showDiscountBadge: P = !1 } = e,
-            w = N === v.p9.TIER_2;
-        n = N === v.p9.TIER_0 ? d.Z : N === v.p9.TIER_1 ? f.Z : u.Z;
+        let n,
+            { hideCloseButton: i = !1, hideCloseOnFullScreen: p, shouldShowPrice: h, plan: g, renderAnimation: y, onClose: S, isGift: T, upgradeToPremiumType: N, headerTheme: A = b.nL.DEFAULT, className: C, showTrialBadge: R = !1, showDiscountBadge: P = !1 } = e,
+            w = N === b.p9.TIER_2;
+        n = N === b.p9.TIER_0 ? d.Z : N === b.p9.TIER_1 ? f.Z : u.Z;
         let D = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-            x = (0, m.Ng)(),
-            L = null == x ? void 0 : null === (t = x.discount) || void 0 === t ? void 0 : t.amount;
+            L = (0, m.Ng)(),
+            x = null == L || null == (t = L.discount) ? void 0 : t.amount;
         return (0, r.jsxs)('div', {
             'aria-hidden': !0,
             className: o()(
                 {
-                    [y.headerBackground]: !w,
-                    [y.tier2HeaderBackground]: w
+                    [v.headerBackground]: !w,
+                    [v.tier2HeaderBackground]: w
                 },
                 C
             ),
             children: [
-                D || A !== v.nL.WINTER
+                D || A !== b.nL.WINTER
                     ? null
                     : (0, r.jsx)(E.Z, {
-                          className: y.snow,
+                          className: v.snow,
                           wind: 5
                       }),
-                (R || P) && (0, r.jsx)(p.Z, { className: y.trialBadgeSparkles }),
-                b(),
+                (R || P) && (0, r.jsx)(_.Z, { className: v.trialBadgeSparkles }),
+                y(),
                 (0, r.jsxs)(c.Z, {
                     align: c.Z.Align.START,
                     justify: c.Z.Justify.BETWEEN,
-                    className: y.headerTop,
+                    className: v.headerTop,
                     children: [
                         (0, r.jsxs)('div', {
                             children: [
-                                (0, r.jsx)(n, { className: o()(y.headerIcon, { [y.nonTier2]: !w }) }),
+                                (0, r.jsx)(n, { className: o()(v.headerIcon, { [v.nonTier2]: !w }) }),
                                 (R || P) &&
-                                    (0, r.jsx)(S, {
-                                        isTier0: N === v.p9.TIER_0,
-                                        discountAmount: P ? L : void 0
+                                    (0, r.jsx)(I, {
+                                        isTier0: N === b.p9.TIER_0,
+                                        discountAmount: P ? x : void 0
                                     })
                             ]
                         }),
                         !i &&
                             (0, r.jsx)(s.olH, {
-                                hideOnFullscreen: _,
-                                onClick: I,
-                                className: y.closeButton
+                                hideOnFullscreen: p,
+                                onClick: S,
+                                className: v.closeButton
                             })
                     ]
                 }),
                 h && null != g
                     ? (0, r.jsx)('div', {
-                          className: y.price,
+                          className: v.price,
                           children: O(g, T)
                       })
                     : null

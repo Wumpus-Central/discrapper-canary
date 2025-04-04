@@ -68,5 +68,5 @@ function u(e) {
                 )
         })
     );
-    return (n.displayName = 'withAnalyticsContext('.concat(null !== (t = e.displayName) && void 0 !== t ? t : e.name, ')')), n;
+    return (n.displayName = 'withAnalyticsContext('.concat(null != (t = e.displayName) ? t : e.name, ')')), n;
 }

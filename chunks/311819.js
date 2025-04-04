@@ -11,10 +11,10 @@ n.d(t, {
     n(47120);
 var r = n(981631);
 function i(e) {
-    let { applicationId: t, customId: n, referrerId: i } = e,
-        o = new URL(r.Z5c.ACTIVITY_DETAILS(t), ''.concat(location.protocol, '//').concat(location.host)),
-        a = o.searchParams;
-    return null != i && a.set('referrer_id', i), null != n && a.set('custom_id', n), o.toString();
+    let { applicationId: t, customId: n, referrerId: i, linkId: o } = e,
+        a = new URL(r.Z5c.ACTIVITY_DETAILS(t), ''.concat(location.protocol, '//').concat(location.host)),
+        s = a.searchParams;
+    return null != o && s.set('link_id', o), null != i && s.set('referrer_id', i), null != n && s.set('custom_id', n), a.toString();
 }
 function o(e) {
     let { id: t, customInstallUrl: n, installParams: i, integrationTypesConfig: o } = e;

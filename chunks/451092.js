@@ -10,7 +10,7 @@ function u(e, t) {
     let u = o.Z.isBlocked(t);
     (0, i.ZDy)(
         async () => {
-            let { default: i } = await Promise.all([n.e('25176'), n.e('24028')]).then(n.bind(n, 232837));
+            let { default: i } = await Promise.all([n.e('25176'), n.e('4279')]).then(n.bind(n, 232837));
             return (n) => {
                 let { transitionState: o, onClose: a } = n;
                 return (0, r.jsx)(i, {

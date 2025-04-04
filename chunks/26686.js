@@ -8,19 +8,19 @@ var r = n(147018),
     u = n(323979),
     d = n(50754),
     f = n(109833),
-    p = n(400957),
-    _ = String,
+    _ = n(400957),
+    p = String,
     h = i('JSON', 'stringify'),
     m = s(/./.exec),
     g = s(''.charAt),
     E = s(''.charCodeAt),
-    v = s(''.replace),
-    b = s((1).toString),
-    y = /[\uD800-\uDFFF]/g,
+    b = s(''.replace),
+    y = s((1).toString),
+    v = /[\uD800-\uDFFF]/g,
     O = /^[\uD800-\uDBFF]$/,
-    S = /^[\uDC00-\uDFFF]$/,
-    I =
-        !p ||
+    I = /^[\uDC00-\uDFFF]$/,
+    S =
+        !_ ||
         l(function () {
             var e = i('Symbol')('stringify detection');
             return '[null]' !== h([e]) || '{}' !== h({ a: e }) || '{}' !== h(Object(e));
@@ -34,7 +34,7 @@ var r = n(147018),
         if (!(!c(r) && (void 0 === e || u(e))))
             return (
                 (n[1] = function (e, t) {
-                    if ((c(r) && (t = a(r, this, _(e), t)), !u(t))) return t;
+                    if ((c(r) && (t = a(r, this, p(e), t)), !u(t))) return t;
                 }),
                 o(h, null, n)
             );
@@ -42,7 +42,7 @@ var r = n(147018),
     A = function (e, t, n) {
         var r = g(n, t - 1),
             i = g(n, t + 1);
-        return (m(O, e) && !m(S, i)) || (m(S, e) && !m(O, r)) ? '\\u' + b(E(e, 0), 16) : e;
+        return (m(O, e) && !m(I, i)) || (m(I, e) && !m(O, r)) ? '\\u' + y(E(e, 0), 16) : e;
     };
 h &&
     r(
@@ -50,13 +50,13 @@ h &&
             target: 'JSON',
             stat: !0,
             arity: 3,
-            forced: I || T
+            forced: S || T
         },
         {
             stringify: function (e, t, n) {
                 var r = d(arguments),
-                    i = o(I ? N : h, null, r);
-                return T && 'string' == typeof i ? v(i, y, A) : i;
+                    i = o(S ? N : h, null, r);
+                return T && 'string' == typeof i ? b(i, v, A) : i;
             }
         }
     );

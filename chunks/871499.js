@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => N,
+    Z: () => A,
     d: () => w
 }),
     n(47120);
@@ -19,8 +19,8 @@ var r = n(200651),
     m = n(618158),
     g = n(362267),
     E = n(388032),
-    b = n(35245);
-function v(e, t, n) {
+    b = n(434580);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function v(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -92,23 +92,23 @@ function T(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
-function N(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: A = !1, buttonRef: N, grow: C, 'aria-label': R, look: P, buttonText: w, size: D } = e;
+let N = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
+function A(e) {
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: y = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': R, look: P, buttonText: w, size: D } = e;
     return (0, r.jsx)(m.Z, {
         children: (0, r.jsx)(l.ua7, {
             position: O,
             text: t,
             'aria-label': R,
             shouldShow: T,
-            forceOpen: A,
+            forceOpen: N,
             children: (e) => {
                 var { onClick: t, onContextMenu: m, onMouseEnter: O, onMouseLeave: T } = e,
-                    A = S(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
+                    N = S(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
                 return (0, r.jsxs)(
                     l.zxk,
                     I(
-                        y(
+                        v(
                             {
                                 look: null != P ? P : l.zxk.Looks.BLANK,
                                 size: null != D ? D : l.zxk.Sizes.NONE,
@@ -135,13 +135,13 @@ function N(e) {
                                 },
                                 disabled: E,
                                 innerClassName: a()(b.lineHeightReset, { [b.buttonInnerWithText]: null != w }),
-                                className: a()({ [b.active]: v }, d),
+                                className: a()({ [b.active]: y }, d),
                                 wrapperClassName: f,
-                                buttonRef: N,
+                                buttonRef: A,
                                 grow: C,
                                 'aria-label': R
                             },
-                            A
+                            N
                         ),
                         {
                             children: [
@@ -150,7 +150,7 @@ function N(e) {
                                     className: a()(_, {
                                         [b.controlIcon]: null == w,
                                         [b.themeable]: g,
-                                        [b.active]: v
+                                        [b.active]: y
                                     }),
                                     color: p
                                 }),
@@ -201,7 +201,7 @@ let C = {
     };
 function w(e) {
     var t,
-        { color: n, caretColor: o, isActive: s = !1, className: v, iconClassName: O, onPopoutClick: T, popoutOpen: w = !1, popoutDisabled: D = !1, premiumGlow: L = !1, fullRegionButton: x = !1, forceGroupedButtons: M = !1 } = e,
+        { color: n, caretColor: o, isActive: s = !1, className: y, iconClassName: O, onPopoutClick: T, popoutOpen: w = !1, popoutDisabled: D = !1, premiumGlow: L = !1, fullRegionButton: x = !1, forceGroupedButtons: M = !1 } = e,
         k = S(e, ['color', 'caretColor', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'premiumGlow', 'fullRegionButton', 'forceGroupedButtons']);
     let j = (0, g.Z)(n, s),
         U = null != o ? o : j,
@@ -215,21 +215,21 @@ function w(e) {
     let Z = (0, _.Z)({ location: 'CenterControlButton' }),
         H = M || Z,
         W = H ? [b.experimentButton, V ? P[j] : R[j], x && null == T && b.fullRegionButton, V && !x && null != T && b.attachedButton] : [C[j]],
-        Y = null !== (t = k.onContextMenu) && void 0 !== t ? t : T,
+        Y = null != (t = k.onContextMenu) ? t : T,
         K = (0, r.jsx)(
-            N,
-            I(y({}, k), {
+            A,
+            I(v({}, k), {
                 grow: !1,
                 onContextMenu: Y,
                 iconClassName: a()(O, b.centerIcon, H && b.experimentControlIcon, H && x && null == T && b.fullRegionIcon),
-                className: a()(G ? v : null, b.staticButton, b.centerButton, s && b.active, ...W)
+                className: a()(G ? y : null, b.staticButton, b.centerButton, s && b.active, ...W)
             })
         );
     return G
         ? K
         : H
           ? (0, r.jsxs)('div', {
-                className: a()(V ? b.attachedCaretButtonContainer : b.caretButtonContainer, V && w && b.popoutOpen, v, x && null != T && [b.fullRegionDropdownButton, R[j]]),
+                className: a()(V ? b.attachedCaretButtonContainer : b.caretButtonContainer, V && w && b.popoutOpen, y, x && null != T && [b.fullRegionDropdownButton, R[j]]),
                 children: [
                     K,
                     null != T
@@ -250,7 +250,7 @@ function w(e) {
                 ]
             })
           : (0, r.jsxs)('div', {
-                className: a()(v, b.contextMenuContainer),
+                className: a()(y, b.contextMenuContainer),
                 children: [
                     (0, r.jsx)(u.ZP, {
                         className: b.buttonMask,
@@ -268,7 +268,7 @@ function w(e) {
                                 autoPlay: !0,
                                 className: b.glowVideo,
                                 children: (0, r.jsx)('source', {
-                                    src: A,
+                                    src: N,
                                     type: 'video/webm'
                                 })
                             })

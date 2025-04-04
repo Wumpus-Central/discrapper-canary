@@ -31,7 +31,7 @@ function l(e) {
         tags: e.tags,
         icon: e.icon,
         unicodeEmoji: e.unicode_emoji,
-        flags: null !== (t = e.flags) && void 0 !== t ? t : 0
+        flags: null != (t = e.flags) ? t : 0
     };
 }
 function c(e, t) {
@@ -42,8 +42,8 @@ function c(e, t) {
         t
             .sort((t, n) => {
                 var r, i;
-                let o = e === t.id ? 1 / 0 : -(null !== (r = t.originalPosition) && void 0 !== r ? r : t.position),
-                    s = e === n.id ? 1 / 0 : -(null !== (i = n.originalPosition) && void 0 !== i ? i : n.position);
+                let o = e === t.id ? 1 / 0 : -(null != (r = t.originalPosition) ? r : t.position),
+                    s = e === n.id ? 1 / 0 : -(null != (i = n.originalPosition) ? i : n.position);
                 return o === s ? a.default.compare(t.id, n.id) : o < s ? -1 : +(o !== s);
             })
             .forEach((e, t) => {

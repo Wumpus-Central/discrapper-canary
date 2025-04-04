@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(47120), n(230036);
+n.d(t, { Z: () => Z }), n(47120), n(230036);
 var r = n(392711),
     i = n.n(r),
     o = n(51407),
@@ -9,13 +9,13 @@ var r = n(392711),
     u = n(258609),
     d = n(763296),
     f = n(314897),
-    p = n(131951),
-    _ = n(709054),
+    _ = n(131951),
+    p = n(709054),
     h = n(725380),
     m = n(340332),
     g = n(675478),
     E = n(65154);
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +39,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,29 +61,29 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = 300,
-    I = 2000,
+let I = 300,
+    S = 2000,
     T = (e) => 'AudioContextSettingsMigrated:'.concat(e),
     N = (e) => (e === E.Yn.STREAM ? o.h.STREAM : o.h.USER);
 function A(e, t, n) {
     return e[t].volume !== N(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e;
 }
 function C(e) {
-    let t = _.default.entries(e),
+    let t = p.default.entries(e),
         n = t.length;
-    if (n <= S) return;
+    if (n <= I) return;
     let r = t.sort((e, t) => {
             let [n, { modifiedAt: r }] = e,
                 [i, { modifiedAt: o }] = t;
             return Number(r) - Number(o);
         }),
-        i = n - S;
+        i = n - I;
     for (let t = 0; t < i; t++) {
         let [n] = r[t];
         delete e[n];
@@ -101,7 +101,7 @@ function P() {
             'audioContextSettings',
             (e) => {
                 let t = !1;
-                for (let [n, r] of Object.entries(p.Z.getState().settingsByContext)) {
+                for (let [n, r] of Object.entries(_.Z.getState().settingsByContext)) {
                     let i = (0, m.z)(n);
                     if (null == i) continue;
                     let o = e[i],
@@ -116,7 +116,7 @@ function P() {
                         };
                     for (let [e, t] of Object.entries(r.localVolumes))
                         s[e] = O(
-                            b(
+                            y(
                                 {
                                     muted: !1,
                                     modifiedAt: a
@@ -127,7 +127,7 @@ function P() {
                         );
                     let l = Object.keys(o).length;
                     for (let [e, [n, r]] of Object.entries(s).entries()) {
-                        if (S - l - (e + 1) <= 0) break;
+                        if (I - l - (e + 1) <= 0) break;
                         null == o[n] && ((t = !0), (o[n] = r));
                     }
                 }
@@ -142,22 +142,22 @@ function w(e, t, n, r) {
         a = (0, m.z)(n);
     if (null == a) return !1;
     let s = e[a];
-    return (s[t] = null !== (i = s[t]) && void 0 !== i ? i : R(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), o && A(s, t, n), C(s), !0;
+    return (s[t] = null != (i = s[t]) ? i : R(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), o && A(s, t, n), C(s), !0;
 }
 function D() {
     P();
 }
-let x = i().debounce(() => {
+let L = i().debounce(() => {
     U();
-}, I);
-function L(e, t, n) {
-    (0, h.RF)(e, t, { volume: n }), x();
+}, S);
+function x(e, t, n) {
+    (0, h.RF)(e, t, { volume: n }), L();
 }
 function M(e, t, n) {
-    (0, h.RF)(e, t, { muted: n }), x.cancel(), U();
+    (0, h.RF)(e, t, { muted: n }), L.cancel(), U();
 }
 function k(e, t, n) {
-    (0, h.RF)(e, t, { soundboardMuted: n }), x.cancel(), U();
+    (0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U();
 }
 let j = i().debounce(c.On, 500, { maxWait: 500 });
 function U() {
@@ -184,28 +184,28 @@ function G(e) {
     let i = u.Z.getRemoteSessionId();
     null != i &&
         j(i, n, t, {
-            muted: p.Z.isLocalMute(n, t),
+            muted: _.Z.isLocalMute(n, t),
             volume: r
         }),
-        L(t, n, r);
+        x(t, n, r);
 }
 function B(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && M(t, n, p.Z.isLocalMute(n, t));
+    n !== f.default.getId() && M(t, n, _.Z.isLocalMute(n, t));
 }
-function Z(e) {
+function F(e) {
     let { context: t, userId: n } = e;
     n !== f.default.getId() && k(t, n, d.Z.isLocalSoundboardMuted(n));
 }
-class F extends l.Z {
+class V extends l.Z {
     constructor(...e) {
         super(...e),
-            v(this, 'actions', {
+            b(this, 'actions', {
                 POST_CONNECTION_OPEN: D,
                 AUDIO_SET_LOCAL_VOLUME: G,
                 AUDIO_TOGGLE_LOCAL_MUTE: B,
-                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: Z
+                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: F
             });
     }
 }
-let V = new F();
+let Z = new V();

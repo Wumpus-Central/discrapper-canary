@@ -1,47 +1,47 @@
 n.d(t, { Z: () => N }), n(47120);
 var r = n(200651),
     a = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     i = n(442837),
     o = n(481060),
     c = n(496675),
     d = n(346479),
     u = n(665906),
     h = n(91159),
-    m = n(443671),
-    g = n(342449),
+    g = n(443671),
+    m = n(342449),
     f = n(488131),
     x = n(124368),
     j = n(981631),
     v = n(388032),
     Z = n(269932);
 function N(e) {
-    let { channel: t, className: n, onClose: s } = e,
+    let { channel: t, className: n, onClose: l } = e,
         N = (0, i.e7)([c.Z], () => c.Z.can(j.Plq.READ_MESSAGE_HISTORY, t)),
         b = (0, u.cD)(t),
         T = () => {
-            s(), (0, f.R6)(t, void 0, 'Thread Browser Empty State');
+            l(), (0, f.R6)(t, void 0, 'Thread Browser Empty State');
         },
         y = a.useCallback(
             (e, t) => {
-                s(), (0, f.ok)(e, !t, x.on.BROWSER);
+                l(), (0, f.ok)(e, !t, x.on.BROWSER);
             },
-            [s]
+            [l]
         ),
         P = (function (e, t) {
             let [n, r] = a.useState(''),
-                [s, l] = a.useState(!1),
+                [l, s] = a.useState(!1),
                 [i, o] = a.useState(!1),
                 [c, u] = a.useState([]),
                 h = async () => {
-                    if (null != n && '' !== n && !s) {
-                        l(!0);
+                    if (null != n && '' !== n && !l) {
+                        s(!0);
                         try {
                             let r = await d.Z.searchThreads(e, t, n);
                             o(!0), u(r);
                         } finally {
-                            l(!1);
+                            s(!1);
                         }
                     }
                 };
@@ -50,7 +50,7 @@ function N(e) {
                 setQuery: (e) => {
                     r(e), 0 === e.length && o(!1);
                 },
-                isLoading: s,
+                isLoading: l,
                 hasResults: i,
                 submit: h,
                 results: c
@@ -61,7 +61,7 @@ function N(e) {
             (0, h.A_)();
         }, []),
         (0, r.jsx)('div', {
-            className: l()(n, Z.container),
+            className: s()(n, Z.container),
             children: (0, r.jsx)(o.y5t, {
                 component: (0, r.jsxs)('div', {
                     className: Z.header,
@@ -117,14 +117,14 @@ function N(e) {
                                   size: o.zxk.Sizes.TINY,
                                   className: Z.createButton,
                                   onClick: () => {
-                                      s(), (0, f.R6)(t, void 0, 'Thread Browser Toolbar');
+                                      l(), (0, f.R6)(t, void 0, 'Thread Browser Toolbar');
                                   },
                                   children: v.NW.string(v.t.CumH4u)
                               })
                             : null,
                         (0, r.jsx)(o.P3F, {
                             className: Z.closeIcon,
-                            onClick: s,
+                            onClick: l,
                             'aria-label': v.NW.string(v.t.cpT0Cg),
                             children: (0, r.jsx)(o.Dio, {
                                 size: 'md',
@@ -134,13 +134,13 @@ function N(e) {
                     ]
                 }),
                 children: P.hasResults
-                    ? (0, r.jsx)(m.Z, {
+                    ? (0, r.jsx)(g.Z, {
                           channel: t,
                           startThread: T,
                           goToThread: y,
                           threadIds: P.results
                       })
-                    : (0, r.jsx)(g.Z, {
+                    : (0, r.jsx)(m.Z, {
                           channel: t,
                           startThread: T,
                           goToThread: y
@@ -150,12 +150,12 @@ function N(e) {
     );
 }
 function p(e) {
-    let { query: t, setQuery: n, submit: a, isLoading: s } = e;
+    let { query: t, setQuery: n, submit: a, isLoading: l } = e;
     return (0, r.jsx)(o.E1j, {
         autoFocus: !0,
         className: Z.searchBox,
         query: t,
-        isLoading: s,
+        isLoading: l,
         onChange: (e) => n(e),
         onClear: () => n(''),
         onKeyDown: (e) => 'Enter' === e.key && a(),

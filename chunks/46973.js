@@ -33,7 +33,7 @@ function c(e) {
 }
 function u() {
     var e;
-    return null !== (e = [o.AS.NATIVE, o.AS.WEBRTC].find((e) => c(e).supported())) && void 0 !== e ? e : o.AS.DUMMY;
+    return null != (e = [o.AS.NATIVE, o.AS.WEBRTC].find((e) => c(e).supported())) ? e : o.AS.DUMMY;
 }
 function d(e) {
     return new (c(e))();

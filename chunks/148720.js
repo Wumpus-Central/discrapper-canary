@@ -1,5 +1,5 @@
-n.d(t, { k: () => v });
-var r = n(115911),
+n.d(t, { k: () => b });
+var r = n(252258),
     i = n(668781),
     o = n(728345),
     a = n(835873),
@@ -9,8 +9,8 @@ var r = n(115911),
     u = n(496675),
     d = n(594174),
     f = n(979651),
-    p = n(317381),
-    _ = n(638880),
+    _ = n(317381),
+    p = n(638880),
     h = n(782769),
     m = n(527805),
     g = n(388032);
@@ -55,37 +55,37 @@ function E(e) {
             });
     }
 }
-async function v(e) {
-    let { channelId: t, applicationId: n, launchId: i, inputApplication: a, analyticsLocations: g, launchingComponentId: v, sectionName: b, inviterUserId: y } = e,
-        O = p.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == i || e.launchId === i)),
-        S = a;
-    if (null == S) {
+async function b(e) {
+    let { channelId: t, applicationId: n, launchId: i, inputApplication: a, analyticsLocations: g, launchingComponentId: b, sectionName: y, inviterUserId: v } = e,
+        O = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == i || e.launchId === i)),
+        I = a;
+    if (null == I) {
         let e = await o.ZP.fetchApplication(n);
-        S = s.ZP.createFromServer(e);
+        I = s.ZP.createFromServer(e);
     }
-    if (null == O || null == S) return;
-    let I = d.default.getCurrentUser(),
+    if (null == O || null == I) return;
+    let S = d.default.getCurrentUser(),
         T = l.Z.getChannel(t);
     async function N() {
         null != O &&
-            (await (0, _.Z)({
+            (await (0, p.Z)({
                 applicationId: O.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: g,
-                componentId: v,
-                sectionName: b,
-                inviterUserId: y,
+                componentId: b,
+                sectionName: y,
+                inviterUserId: v,
                 instanceId: O.compositeInstanceId,
-                isContextlessActivity: O.location.kind === r.X.CONTEXTLESS
+                isContextlessActivity: O.location.kind === r.E.CONTEXTLESS
             }));
     }
     E({
         embeddedActivityJoinability: (0, m.ZP)({
-            userId: null == I ? void 0 : I.id,
-            application: S,
+            userId: null == S ? void 0 : S.id,
+            application: I,
             channelId: t,
-            currentUser: I,
+            currentUser: S,
             isActivitiesEnabledForCurrentPlatform: (0, h.a)(T),
             ChannelStore: l.Z,
             VoiceStateStore: f.Z,

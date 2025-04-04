@@ -7,12 +7,12 @@ n.r(t),
         OVERLAY_MIN_RESOLUTION: () => c,
         OVERLAY_VERSION: () => s,
         UNSET_PID: () => f,
-        getPID: () => _,
+        getPID: () => p,
         getRPCAuthToken: () => m,
         log: () => g,
-        setOutOfProcessSupport: () => v,
+        setOutOfProcessSupport: () => b,
         setPID: () => h,
-        supportsOutOfProcess: () => b,
+        supportsOutOfProcess: () => y,
         validResolution: () => E
     }),
     n(610138),
@@ -36,11 +36,11 @@ let s = 2,
     u = 'overlay_default',
     d = -2,
     f = -1,
-    p = !1;
-function _() {
+    _ = !1;
+function p() {
     var e;
     if (void 0 !== r && r !== f) return r;
-    let t = parseInt(null !== (e = new URLSearchParams(window.location.search).get('pid')) && void 0 !== e ? e : '', 10);
+    let t = parseInt(null != (e = new URLSearchParams(window.location.search).get('pid')) ? e : '', 10);
     return isNaN(t) && (t = f), (r = t);
 }
 function h(e) {
@@ -52,7 +52,7 @@ function m() {
 function g(e) {
     (0, i.lW)({
         type: a.BmY.LOG_MESSAGES,
-        pid: _(),
+        pid: p(),
         token: m(),
         payload: e
     });
@@ -60,9 +60,9 @@ function g(e) {
 function E(e) {
     return !o.isPlatformEmbedded || (e.width >= c.width && e.height >= c.height);
 }
-function v(e) {
-    p = e;
+function b(e) {
+    _ = e;
 }
-function b() {
-    return p;
+function y() {
+    return _;
 }

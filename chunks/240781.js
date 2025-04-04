@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(627341);
+n.d(t, { Z: () => S }), n(627341);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -12,12 +12,12 @@ var r = n(200651),
     _ = n(95422),
     p = n(222062),
     h = n(706454),
-    g = n(158776),
-    m = n(55935),
+    m = n(158776),
+    g = n(55935),
     E = n(74538),
-    v = n(204418),
-    b = n(388032),
-    y = n(970033);
+    b = n(204418),
+    y = n(388032),
+    v = n(520271);
 let O = [
         {
             avatarSize: c.EFr.SIZE_40,
@@ -36,18 +36,18 @@ let O = [
             showStatus: !0
         }
     ],
-    S = (e) => {
+    I = (e) => {
         let { purchase: t } = e,
             n = (0, l.e7)([h.default], () => h.default.locale),
             i = (0, u.qS)(t),
-            o = null != t.expiresAt ? (0, m.TD)(Date.now(), t.expiresAt) : null,
+            o = null != t.expiresAt ? (0, g.TD)(Date.now(), t.expiresAt) : null,
             a = (0, _.a)(t),
             s = t.purchasedAt.toLocaleDateString(n, {
                 month: 'long',
                 year: 'numeric'
             });
         return (0, r.jsxs)('div', {
-            className: y.purchaseInfo,
+            className: v.purchaseInfo,
             children: [
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/semibold',
@@ -62,18 +62,18 @@ let O = [
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: b.NW.format(b.t.Io7ozs, { days: o.days.toString() })
+                        children: y.NW.format(y.t.Io7ozs, { days: o.days.toString() })
                     }),
                 (0, r.jsxs)(c.Text, {
                     variant: 'text-xxs/normal',
                     color: 'text-muted',
                     children: [
-                        i ? b.NW.format(b.t.LFVi6O, { dateAcquired: s }) : b.NW.format(b.t.gW9R4O, { date: s }),
+                        i ? y.NW.format(y.t.LFVi6O, { dateAcquired: s }) : y.NW.format(y.t.gW9R4O, { date: s }),
                         null != t.expiresAt &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)('br', {}),
-                                    b.NW.format(b.t.eZSTa2, {
+                                    y.NW.format(y.t.eZSTa2, {
                                         date: t.expiresAt.toLocaleDateString(n, {
                                             minute: 'numeric',
                                             hour: 'numeric',
@@ -90,46 +90,46 @@ let O = [
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: b.NW.string(b.t.UewH9P)
+                        children: y.NW.string(y.t.UewH9P)
                     })
             ]
         });
     },
-    I = (e) => {
+    S = (e) => {
         let { user: t, guildId: n, avatarDecorationOverride: o, className: _ } = e,
-            h = (0, l.e7)([g.Z], () => g.Z.getStatus(t.id)),
-            { product: m, purchase: I } = (0, d.Z)(null == o ? void 0 : o.skuId),
+            h = (0, l.e7)([m.Z], () => m.Z.getStatus(t.id)),
+            { product: g, purchase: S } = (0, d.Z)(null == o ? void 0 : o.skuId),
             T = E.ZP.canUseCollectibles(t),
-            N = (0, u.qS)(I),
-            A = (0, u.G1)(m),
+            N = (0, u.qS)(S),
+            A = (0, u.G1)(g),
             C = !T && N,
             R = (0, p.M)(!A || T),
-            P = (0, f.k)(m),
-            D = i.useMemo(
+            P = (0, f.k)(g),
+            w = i.useMemo(
                 () =>
                     C
-                        ? b.NW.string(b.t.zrBmQE)
+                        ? y.NW.string(y.t.zrBmQE)
                         : (0, s.EQ)([A, T, R])
-                              .with([!0, !0, !1], () => b.NW.string(b.t.L5hyz8))
-                              .with([!0, !1, !0], () => b.NW.string(b.t.q0PlFh))
-                              .with([!0, !1, !1], () => b.NW.string(b.t.ucqOV1))
-                              .otherwise(() => b.NW.string(b.t.UROtt7)),
+                              .with([!0, !0, !1], () => y.NW.string(y.t.L5hyz8))
+                              .with([!0, !1, !0], () => y.NW.string(y.t.q0PlFh))
+                              .with([!0, !1, !1], () => y.NW.string(y.t.ucqOV1))
+                              .otherwise(() => y.NW.string(y.t.UROtt7)),
                 [C, A, T, R]
             );
-        return null != m && (null == I || C)
+        return null != g && (null == S || C)
             ? (0, r.jsxs)('div', {
-                  className: a()(y.modalPreview, y.shopPreviewContainer, _),
+                  className: a()(v.modalPreview, v.shopPreviewContainer, _),
                   children: [
                       (0, r.jsx)('div', {
-                          className: y.shopPreviewBanner,
-                          children: (0, r.jsx)(v.Z, {
+                          className: v.shopPreviewBanner,
+                          children: (0, r.jsx)(b.Z, {
                               user: t,
                               guildId: n,
                               avatarDecorationOverride: o
                           })
                       }),
                       (0, r.jsxs)('div', {
-                          className: y.shopPreviewTextContainer,
+                          className: v.shopPreviewTextContainer,
                           children: [
                               (0, r.jsx)(c.Text, {
                                   variant: 'text-sm/semibold',
@@ -137,35 +137,35 @@ let O = [
                               }),
                               (0, r.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: D
+                                  children: w
                               })
                           ]
                       })
                   ]
               })
             : (0, r.jsxs)('div', {
-                  className: a()(y.modalPreview, _),
+                  className: a()(v.modalPreview, _),
                   children: [
                       (0, r.jsxs)('div', {
-                          className: y.previewSections,
+                          className: v.previewSections,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: y.decorationPreview,
-                                  children: (0, r.jsx)(v.Z, {
+                                  className: v.decorationPreview,
+                                  children: (0, r.jsx)(b.Z, {
                                       user: t,
                                       guildId: n,
                                       avatarDecorationOverride: o
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: y.smallDecorationPreviewsContainer,
+                                  className: v.smallDecorationPreviewsContainer,
                                   children: O.map((e) => {
                                       let { avatarSize: i, showStatus: a } = e;
                                       return (0, r.jsx)(
                                           'div',
                                           {
-                                              className: y.smallDecorationPreview,
-                                              children: (0, r.jsx)(v.Z, {
+                                              className: v.smallDecorationPreview,
+                                              children: (0, r.jsx)(b.Z, {
                                                   user: t,
                                                   guildId: n,
                                                   avatarSize: i,
@@ -180,7 +180,7 @@ let O = [
                               })
                           ]
                       }),
-                      null != I && (0, r.jsx)(S, { purchase: I })
+                      null != S && (0, r.jsx)(I, { purchase: S })
                   ]
               });
     };

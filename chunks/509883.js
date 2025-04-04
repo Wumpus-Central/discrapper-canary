@@ -48,7 +48,7 @@ function c(e) {
             n = e.getMonitor(),
             r = e.getRegistry();
         u(n),
-            p(n).forEach(function (o, a) {
+            _(n).forEach(function (o, a) {
                 var l = d(o, a, r, n),
                     c = {
                         type: i.rp,
@@ -69,7 +69,7 @@ function d(e, t, n, r) {
 function f(e) {
     (0, r.k)(void 0 === e || (0, o.Kn)(e), 'Drop result must either be an object or undefined.');
 }
-function p(e) {
+function _(e) {
     var t = e.getTargetIds().filter(e.canDropOnTarget, e);
     return t.reverse(), t;
 }

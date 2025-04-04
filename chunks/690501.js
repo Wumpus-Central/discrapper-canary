@@ -12,7 +12,7 @@ function f(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: f } = e,
         [_, p] = i.useState(!1),
         h = i.useCallback(() => p(!0), []),
-        g = i.useMemo(
+        m = i.useMemo(
             () =>
                 _
                     ? t.map((e) => {
@@ -22,12 +22,12 @@ function f(e) {
                     : d,
             [_, t]
         ),
-        m = (0, a.Z)(g, _),
-        E = i.useMemo(() => m.filter(s.lm), [m]),
-        v = i.useMemo(() => (t.length > 0 ? (0, c.A)(E) : void 0), [E, t.length]);
+        g = (0, a.Z)(m, _),
+        E = i.useMemo(() => g.filter(s.lm), [g]),
+        b = i.useMemo(() => (t.length > 0 ? (0, c.A)(E) : void 0), [E, t.length]);
     return {
         onMouseEnter: h,
-        ariaLabel: v,
+        ariaLabel: b,
         tooltipText: i.useMemo(() => {
             if (t.length > 0) return (0, r.jsx)(l.k, { applications: E });
             if (n) return u.NW.string(u.t['0eWeam']);

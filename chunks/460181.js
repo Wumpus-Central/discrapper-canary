@@ -1,6 +1,6 @@
 let r;
 n.d(t, {
-    GN: () => p,
+    GN: () => _,
     tu: () => f,
     uk: () => d
 });
@@ -20,14 +20,14 @@ function d(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : c.w.DEFAULT;
-    return f(null !== (n = (0, s.Z)(t)[e]) && void 0 !== n ? n : e, e, r, i);
+    return f(null != (n = (0, s.Z)(t)[e]) ? n : e, e, r, i);
 }
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : c.w.DEFAULT;
     return new r(e, t, n, i);
 }
-function p(e) {
+function _(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         r = arguments.length > 2 ? arguments[2] : void 0,
@@ -36,13 +36,13 @@ function p(e) {
     if (l.Z.disableSounds) return;
     let d = (0, s.Z)(null != i ? i : a.Z.getSoundpack());
     null == d && u.log('Unable to find sound for pack name: '.concat(i));
-    let p = f(null !== (t = d[e]) && void 0 !== t ? t : e, e, n, o);
+    let _ = f(null != (t = d[e]) ? t : e, e, n, o);
     return (
         null != r
-            ? p.playWithListener().then((e) => {
+            ? _.playWithListener().then((e) => {
                   e && r();
               })
-            : p.play(),
-        p
+            : _.play(),
+        _
     );
 }

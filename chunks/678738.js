@@ -6,9 +6,9 @@ var r = n(200651),
     s = n(442837),
     l = n(481060),
     c = n(607070),
-    u = n(899501);
+    u = n(729894);
 function d(e) {
-    let { children: t, heading: n, headingIcon: o, subheading: d, className: f, scrollIntoView: p = !1, headingColor: _ = 'header-secondary' } = e,
+    let { children: t, heading: n, headingIcon: o, subheading: d, className: f, scrollIntoView: _ = !1, headingColor: p = 'header-secondary' } = e,
         h = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         m = i.useRef(null);
     return (
@@ -21,7 +21,7 @@ function d(e) {
             return () => cancelAnimationFrame(t);
         }, [h]),
         (0, r.jsxs)('section', {
-            ref: p ? m : void 0,
+            ref: _ ? m : void 0,
             className: a()(u.section, f),
             children: [
                 null != n &&
@@ -33,7 +33,7 @@ function d(e) {
                                 children: [
                                     (0, r.jsx)(l.X6q, {
                                         variant: 'text-xs/semibold',
-                                        color: _,
+                                        color: p,
                                         children: n
                                     }),
                                     null != o &&

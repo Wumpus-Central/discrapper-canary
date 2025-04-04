@@ -47,12 +47,12 @@ function f(e) {
     let { guild: t } = e;
     l[t.id] = t.member_count;
 }
-function p(e) {
+function _(e) {
     let { guild: t } = e;
     if (null == l[t.id] && null == c[t.id]) return !1;
     delete l[t.id], delete c[t.id];
 }
-function _(e) {
+function p(e) {
     let { guildId: t, memberCount: n, onlineCount: r } = e,
         i = !1;
     return l[t] !== n && ((l[t] = n), (i = !0)), c[t] !== r && ((c[t] = r), (i = !0)), i;
@@ -84,8 +84,8 @@ let E = new g(o.Z, {
     CONNECTION_OPEN: u,
     OVERLAY_INITIALIZE: d,
     GUILD_CREATE: f,
-    GUILD_DELETE: p,
-    GUILD_MEMBER_LIST_UPDATE: _,
+    GUILD_DELETE: _,
+    GUILD_MEMBER_LIST_UPDATE: p,
     INVITE_ACCEPT_SUCCESS: h,
     INVITE_RESOLVE_SUCCESS: h,
     ONLINE_GUILD_MEMBER_COUNT_UPDATE: m

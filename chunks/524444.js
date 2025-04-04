@@ -211,10 +211,10 @@ function et(e) {
     );
 }
 function en(e) {
-    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: o, containerClassName: s, imageContainerClassName: l, disableAltTextDisplay: c = !1, reducedSizeAltTextButton: u = !1, mediaLayoutType: f, imageContainerStyle: _, mosaicStyleAlt: h } = e,
-        m = f === U.hV.MOSAIC || !0 === h,
-        g = !c && R.H1.getSetting() && null != t && '' !== t && !0 !== n,
-        E = (e) => {
+    let { alt: t, hiddenSpoilers: n, renderAdjacentContent: o, containerClassName: s, imageContainerClassName: l, disableAltTextDisplay: c = !1, reducedSizeAltTextButton: u = !1, mediaLayoutType: f, imageContainerStyle: _ } = e,
+        h = f === U.hV.MOSAIC,
+        m = !c && R.H1.getSetting() && null != t && '' !== t && !0 !== n,
+        g = (e) => {
             let { altText: t } = e;
             return (0, r.jsxs)(d.VqE, {
                 'aria-label': V.NW.string(V.t.fSiQ3N),
@@ -223,7 +223,7 @@ function en(e) {
                     e.key === B.mR.Escape &&
                         setTimeout(() => {
                             var e;
-                            return null == (e = b.current) ? void 0 : e.focus();
+                            return null == (e = E.current) ? void 0 : e.focus();
                         }, 0);
                 },
                 children: [
@@ -238,7 +238,7 @@ function en(e) {
                 ]
             });
         },
-        b = i.createRef();
+        E = i.createRef();
     return (0, r.jsxs)('div', {
         className: a()(Z.imageContent, s),
         children: [
@@ -247,13 +247,13 @@ function en(e) {
                 style: _,
                 children: [(0, r.jsx)(p.Z, W({}, e)), null != o && o()]
             }),
-            m &&
-                g &&
+            h &&
+                m &&
                 (0, r.jsx)('div', {
                     className: Z.mediaMosaicAltTextContainer,
                     children: (0, r.jsx)(d.yRy, {
                         animation: d.yRy.Animation.FADE,
-                        renderPopout: () => (0, r.jsx)(E, { altText: t }),
+                        renderPopout: () => (0, r.jsx)(g, { altText: t }),
                         children: (e) =>
                             (0, r.jsx)(d.tEY, {
                                 offset: 4,
@@ -261,7 +261,7 @@ function en(e) {
                                     'button',
                                     K(W({}, e), {
                                         type: 'button',
-                                        ref: b,
+                                        ref: E,
                                         'aria-label': V.NW.string(V.t.fSiQ3N),
                                         className: a()(Z.mediaMosaicAltText, { [Z.reducedSize]: u }),
                                         children: V.NW.string(V.t.jCV1T0)
@@ -270,8 +270,8 @@ function en(e) {
                             })
                     })
                 }),
-            !m &&
-                g &&
+            !h &&
+                m &&
                 (0, r.jsx)('span', {
                     className: Z.altText,
                     children: t

@@ -14,9 +14,9 @@ var i = n(481060),
     c = n(225715),
     u = n(750143),
     d = n(388032),
-    f = n(508793),
-    p = n(365627),
-    _ = n(753260);
+    f = n(708820),
+    _ = n(365627),
+    p = n(753260);
 let h = (e) => {
         let { step: t, onClose: n } = e,
             s = (0, o.Z)(u.X);
@@ -30,7 +30,7 @@ let h = (e) => {
                               className: f.headerImageContainer,
                               'aria-hidden': 'true',
                               children: (0, r.jsx)('img', {
-                                  src: _,
+                                  src: p,
                                   alt: '',
                                   className: f.headerImage
                               })
@@ -81,7 +81,7 @@ function g(e) {
         className: f.purchaseConfirmation,
         children: [
             (0, r.jsx)('img', {
-                src: p,
+                src: _,
                 alt: '',
                 width: 300,
                 height: 126

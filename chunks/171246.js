@@ -23,7 +23,7 @@ function l(e) {
 }
 function c(e, t) {
     var n;
-    let r = null !== (n = null == t ? void 0 : t.deleted) && void 0 !== n && n,
+    let r = null != (n = null == t ? void 0 : t.deleted) && n,
         i = null != t && l(t);
     return e.status === o.O0b.CANCELED || r || i;
 }
@@ -36,7 +36,7 @@ function u(e, t) {
             return (0, i.aS)(e.id).amount;
         }
     }
-    return null !== (r = null === (n = e.price) || void 0 === n ? void 0 : n.amount) && void 0 !== r ? r : 0;
+    return null != (r = null == (n = e.price) ? void 0 : n.amount) ? r : 0;
 }
 function d(e, t, n) {
     return e.slice().sort((e, r) => {

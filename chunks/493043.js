@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
-var i = n(456644),
+var i = n(81570),
     o = n(769140),
     a = n(382425);
 function s(e, t, n) {
@@ -56,7 +56,7 @@ function u(e, t) {
 function d(e) {
     var { location: t, profileGuildId: n, user: s, currentUser: u } = e,
         d = c(e, ['location', 'profileGuildId', 'user', 'currentUser']);
-    let { recentActivityEnabled: f } = (0, i.i)({ location: t });
+    let f = (0, i.T)({ location: t });
     return s.id !== u.id && f
         ? (0, r.jsx)(
               a.Z,

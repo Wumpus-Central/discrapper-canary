@@ -1,7 +1,7 @@
 n.d(t, {
-    BV: () => v,
+    BV: () => b,
     Rm: () => g,
-    aO: () => y
+    aO: () => v
 }),
     n(47120);
 var r = n(200651),
@@ -14,8 +14,8 @@ var r = n(200651),
     u = n(378364),
     d = n(197344),
     f = n(978636),
-    p = n(643420),
-    _ = n(131333),
+    _ = n(643420),
+    p = n(131333),
     h = n(981631);
 function m(e) {
     if (null == e || null == u.Z.emojiAnimationTriggers) return !1;
@@ -55,20 +55,20 @@ function E(e) {
         children: t
     });
 }
-function v(e) {
+function b(e) {
     let { children: t } = e,
         n = d.Z.useIsEligible(),
         o = i.useCallback((e, t) => {
             switch (t) {
                 case u.O.THROW_EMOJI:
-                    return (0, r.jsx)(_.t, { children: e });
+                    return (0, r.jsx)(p.t, { children: e });
                 case u.O.SNOW:
-                    return (0, r.jsx)(p.k, { children: e });
+                    return (0, r.jsx)(_.k, { children: e });
             }
         }, []);
-    return n && null != u.Z.emojiAnimationType ? o((0, r.jsx)(E, { children: t }), u.Z.emojiAnimationType) : (0, r.jsx)(r.Fragment, { children: t });
+    return n && null != u.Z.emojiAnimationType ? o((0, r.jsx)(E, { children: t }), u.Z.emojiAnimationType) : t;
 }
-function b(e) {
+function y(e) {
     let { emojiRef: t, channelId: n, messageId: r, emojiName: a } = e,
         s = (0, o.e7)([c.Z], () => c.Z.getMessage(n, r)),
         { triggerAnimation: l } = i.useContext(g);
@@ -81,14 +81,14 @@ function b(e) {
         null
     );
 }
-function y(e) {
+function v(e) {
     let { channelId: t, messageId: n, emojiName: i, disable: l, emojiRef: c } = e,
         u = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         f = d.Z.useIsEligible(),
-        p = (0, a.bp)();
-    return l || p === h.IlC.OVERLAY || !f || null == n || null == t || u || null == c || !m(i)
+        _ = (0, a.bp)();
+    return l || _ === h.IlC.OVERLAY || !f || null == n || null == t || u || null == c || !m(i)
         ? null
-        : (0, r.jsx)(b, {
+        : (0, r.jsx)(y, {
               emojiRef: c,
               channelId: t,
               messageId: n,

@@ -1,6 +1,6 @@
 function r(e, t, n) {
-    let r;
-    let i = [],
+    let r,
+        i = [],
         o = function () {
             for (var a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
             let c = Date.now();

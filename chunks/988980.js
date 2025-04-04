@@ -10,5 +10,5 @@ function a(e) {
 }
 function s(e) {
     var t, n;
-    return !(null != e && o.P9.includes(null != e ? e : '')) || (null === (n = i.Z.getApplication(e)) || void 0 === n ? void 0 : null === (t = n.embeddedActivityConfig) || void 0 === t ? void 0 : t.legacy_responsive_aspect_ratio);
+    return !(null != e && o.P9.includes(null != e ? e : '')) || (null == (n = i.Z.getApplication(e)) || null == (t = n.embeddedActivityConfig) ? void 0 : t.legacy_responsive_aspect_ratio);
 }

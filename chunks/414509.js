@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => m,
-    Z: () => v
+    Z: () => b
 }),
     n(47120);
 var r = n(147913),
@@ -27,8 +27,8 @@ function d(e, t, n) {
 }
 n(334431);
 let f = +s.Z.Millis.HOUR,
-    p = 3 * s.Z.Millis.DAY;
-function _(e) {
+    _ = 3 * s.Z.Millis.DAY;
+function p(e) {
     let { channelId: t } = e;
     if (null == t) return;
     let n = i.Z.getChannel(t);
@@ -52,19 +52,19 @@ function m(e) {
     return (0, l.Iu)(e) > Date.now() - f;
 }
 function g(e) {
-    return (0, l.Iu)(e) > Date.now() - p;
+    return (0, l.Iu)(e) > Date.now() - _;
 }
 class E extends r.Z {
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
-        let n = o.Z.getChannelId();
+        let n = o.ZP.getChannelId();
         e === n && null != i.Z.getChannel(e) && (m(e) || (0, u.H)(n, t));
     }
     constructor(...e) {
         super(...e),
             d(this, 'actions', {
-                CHANNEL_SELECT: _,
+                CHANNEL_SELECT: p,
                 APP_STATE_UPDATE: h
             });
     }
 }
-let v = new E();
+let b = new E();

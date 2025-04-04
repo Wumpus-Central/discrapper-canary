@@ -1,15 +1,15 @@
 n.d(t, {
-    Uc: () => _,
+    Uc: () => p,
     ac: () => E,
-    cv: () => v,
+    cv: () => b,
     d5: () => g,
-    i7: () => I,
+    i7: () => S,
     kI: () => m,
-    re: () => y,
+    re: () => v,
     tU: () => A,
-    u0: () => S,
+    u0: () => I,
     uL: () => T,
-    xU: () => b,
+    xU: () => y,
     xt: () => N
 }),
     n(411104),
@@ -38,7 +38,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function p(e) {
     }
     return e;
 }
-let _ = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
+let p = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
     h = {
         [u.yP.PRELOADED_USER_SETTINGS]: l.o8,
         [u.yP.FRECENCY_AND_FAVORITES_SETTINGS]: s.ji
@@ -66,7 +66,7 @@ function g(e, t) {
     if (null == t) return null;
     let n = (0, i.c)(t);
     try {
-        return e.fromBinary(n, _);
+        return e.fromBinary(n, p);
     } catch (e) {
         throw Error('Settings proto failed to deserialize (potentially corrupt): '.concat(e));
     }
@@ -74,23 +74,23 @@ function g(e, t) {
 function E(e) {
     return g(l.o8, e);
 }
-function v(e, t) {
-    return b(h[e], t);
-}
 function b(e, t) {
+    return y(h[e], t);
+}
+function y(e, t) {
     return (0, i.m)(e.toBinary(t));
 }
-function y(e, t, n) {
-    for (let e in ((t = p({}, t)), n)) delete t[e];
+function v(e, t, n) {
+    for (let e in ((t = _({}, t)), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
 function O(e, t, n) {
-    return null == e.guilds && (e.guilds = l.os.create()), S(e.guilds, t, n);
+    return null == e.guilds && (e.guilds = l.os.create()), I(e.guilds, t, n);
 }
-function S(e, t, n) {
+function I(e, t, n) {
     return (null == t || 'null' === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
 }
-function I(e, t, n, r) {
+function S(e, t, n, r) {
     return O(e, t, (e) => T(e, n, r));
 }
 function T(e, t, n) {
@@ -109,12 +109,12 @@ function N(e, t) {
     for (let n of t) {
         var a, s;
         if (n.version <= e.versions.clientVersion) {
-            r && (null === (a = n.cleanup) || void 0 === a || a.call(n));
+            r && (null == (a = n.cleanup) || a.call(n));
             continue;
         }
         let t = n.run(e);
         if (((e.versions.clientVersion = n.version), !1 === t)) {
-            null === (s = n.cleanup) || void 0 === s || s.call(n);
+            null == (s = n.cleanup) || s.call(n);
             continue;
         }
         (i = !0), null != n.cleanup && o.push(n.cleanup);

@@ -9,14 +9,14 @@ var r = n(200651),
     u = n(210887),
     d = n(921944),
     f = n(957825),
-    p = n(231338),
-    _ = n(388032),
-    h = n(240931),
+    _ = n(231338),
+    p = n(388032),
+    h = n(245541),
     m = n(512668),
     g = n(179998);
 function E(e) {
     let { markAsDismissed: t } = e,
-        n = (0, o.e7)([u.Z], () => u.Z.theme) === p.BR.LIGHT ? g.Z : m.Z,
+        n = (0, o.e7)([u.Z], () => u.Z.theme) === _.BR.LIGHT ? g.Z : m.Z,
         E = i.useCallback(() => {
             (0, l.RO)(f.X1.SOUNDBOARD, s.Ie.NORMAL);
         }, []);
@@ -32,7 +32,7 @@ function E(e) {
                 }),
                 (0, r.jsx)(a.zxk, {
                     className: h.close,
-                    'aria-label': _.NW.string(_.t.cpT0Cg),
+                    'aria-label': p.NW.string(p.t.cpT0Cg),
                     look: a.zxk.Looks.BLANK,
                     size: a.zxk.Sizes.NONE,
                     onClick: () => t(d.L.USER_DISMISS),
@@ -44,9 +44,9 @@ function E(e) {
                 })
             ]
         }),
-        header: _.NW.string(_.t.dDj3ER),
-        content: _.NW.string(_.t['0lZmoa']),
-        buttonCTA: _.NW.string(_.t.RzWDqa),
+        header: p.NW.string(p.t.dDj3ER),
+        content: p.NW.string(p.t['0lZmoa']),
+        buttonCTA: p.NW.string(p.t.RzWDqa),
         buttonProps: { color: a.Ttl.WHITE },
         caretPosition: c.DF.BOTTOM_RIGHT,
         onClick: E,

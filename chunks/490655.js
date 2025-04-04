@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(585483),
     x = n(63063),
     j = n(919196),
-    N = n(731072),
-    O = n(494118),
+    O = n(731072),
+    N = n(494118),
     v = n(37607),
     y = n(351644),
     _ = n(108053),
@@ -138,7 +138,7 @@ let P = i.memo(function (e) {
     switch (t) {
         case C.b4C.TWITCH:
             null != X[C.ABu.TWITCH] &&
-                (Q = (0, r.jsx)(N.Z, {
+                (Q = (0, r.jsx)(O.Z, {
                     guild: l,
                     integrations: X[C.ABu.TWITCH],
                     editedIntegration: T,
@@ -158,7 +158,7 @@ let P = i.memo(function (e) {
             break;
         case C.b4C.YOUTUBE:
             null != X[C.ABu.YOUTUBE] &&
-                (Q = (0, r.jsx)(N.Z, {
+                (Q = (0, r.jsx)(O.Z, {
                     guild: l,
                     integrations: X[C.ABu.YOUTUBE],
                     editedIntegration: T,
@@ -186,7 +186,7 @@ let P = i.memo(function (e) {
                 }));
             break;
         case C.b4C.CHANNEL_FOLLOWING:
-            Q = (0, r.jsx)(O.Z, {
+            Q = (0, r.jsx)(N.Z, {
                 followedChannelWebhooks: J,
                 editedWebhook: W,
                 selectableWebhookChannels: B,

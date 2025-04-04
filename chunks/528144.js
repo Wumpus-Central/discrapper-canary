@@ -4,8 +4,8 @@ n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(481060),
-    s = n(305254),
-    l = n(33416);
+    s = n(951878),
+    l = n(967777);
 function c(e, t, n) {
     return (
         t in e
@@ -58,7 +58,7 @@ function f(e, t) {
         e
     );
 }
-let p = Object.freeze({
+let _ = Object.freeze({
         SIZE_10: l.size10,
         SIZE_12: l.size12,
         SIZE_14: l.size14,
@@ -67,8 +67,8 @@ let p = Object.freeze({
         SIZE_24: l.size24,
         SIZE_32: l.size32
     }),
-    _ = (e) => {
-        let { id: t, muted: n = !1, className: i = s.wrapper, size: l = p.SIZE_14, selectable: c = !1, children: d, color: _, onClick: h, onContextMenu: m, style: g, title: E, uppercase: v } = e;
+    p = (e) => {
+        let { id: t, muted: n = !1, className: i = s.wrapper, size: l = _.SIZE_14, selectable: c = !1, children: d, color: p, onClick: h, onContextMenu: m, style: g, title: E, uppercase: b } = e;
         return (0, r.jsx)(a.H, {
             role: null != h ? 'button' : void 0,
             onClick: h,
@@ -79,12 +79,12 @@ let p = Object.freeze({
                 [l]: !0,
                 [s.selectable]: c,
                 [s.muted]: n,
-                [s.uppercase]: v
+                [s.uppercase]: b
             }),
             title: E,
-            style: null != _ ? f(u({}, g), { color: _ }) : g,
+            style: null != p ? f(u({}, g), { color: p }) : g,
             children: d
         });
     };
-_.Sizes = p;
-let h = _;
+p.Sizes = _;
+let h = p;

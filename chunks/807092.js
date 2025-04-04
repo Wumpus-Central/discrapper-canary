@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r,
     i = n(442837),
     o = n(570140),
@@ -57,8 +57,8 @@ function u(e, t) {
 }
 let d = {},
     f = {},
-    p = {};
-function _(e) {
+    _ = {};
+function p(e) {
     let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: o } = e;
     (d[t.id] = {
         channel: t,
@@ -66,7 +66,7 @@ function _(e) {
         shouldMention: r,
         showMentionToggle: i
     }),
-        (p[t.id] = o);
+        (_[t.id] = o);
 }
 function h(e) {
     let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
@@ -88,13 +88,13 @@ function g(e) {
 function E(e) {
     var t, n, r;
     let { id: i, channelId: o } = e;
-    if ((null === (n = d[o]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === i) delete d[o], delete p[o];
+    if ((null == (n = d[o]) || null == (t = n.message) ? void 0 : t.id) === i) delete d[o], delete _[o];
     else {
-        if ((null === (r = f[o]) || void 0 === r ? void 0 : r.messageId) !== i) return !1;
-        delete f[o], delete p[o];
+        if ((null == (r = f[o]) ? void 0 : r.messageId) !== i) return !1;
+        delete f[o], delete _[o];
     }
 }
-function v(e) {
+function b(e) {
     if (null == e) return !1;
     let t = f[e];
     if (null == t) return !1;
@@ -108,18 +108,18 @@ function v(e) {
     }),
         delete f[e];
 }
-function b(e) {
-    let { channelId: t } = e;
-    v(t);
-}
 function y(e) {
     let { channelId: t } = e;
-    v(t);
+    b(t);
+}
+function v(e) {
+    let { channelId: t } = e;
+    b(t);
 }
 function O() {
-    (d = {}), (f = {}), (p = {});
+    (d = {}), (f = {}), (_ = {});
 }
-class S extends (r = i.ZP.Store) {
+class I extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(a.Z);
     }
@@ -127,18 +127,18 @@ class S extends (r = i.ZP.Store) {
         return d[e];
     }
     getPendingReplyActionSource(e) {
-        return p[e];
+        return _[e];
     }
 }
-s(S, 'displayName', 'PendingReplyStore');
-let I = new S(o.Z, {
-    CREATE_PENDING_REPLY: _,
+s(I, 'displayName', 'PendingReplyStore');
+let S = new I(o.Z, {
+    CREATE_PENDING_REPLY: p,
     CREATE_SHALLOW_PENDING_REPLY: h,
     SET_PENDING_REPLY_SHOULD_MENTION: m,
     DELETE_PENDING_REPLY: g,
     CONNECTION_OPEN: O,
     LOGOUT: O,
     MESSAGE_DELETE: E,
-    CHANNEL_SELECT: b,
-    LOAD_MESSAGES_SUCCESS: y
+    CHANNEL_SELECT: y,
+    LOAD_MESSAGES_SUCCESS: v
 });

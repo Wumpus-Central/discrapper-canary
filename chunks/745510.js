@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(119617),
+    o = n(48026),
     a = n(399606),
     s = n(607070),
     l = n(981631);
@@ -60,8 +60,8 @@ function f(e, t) {
         e
     );
 }
-let p = 20,
-    _ = {
+let _ = 20,
+    p = {
         confettiCanvas: null,
         cannon: null,
         createConfetti: () => void 0,
@@ -71,15 +71,15 @@ let p = 20,
         addClickListener: () => l.dG4,
         removeClickListener: l.dG4
     },
-    h = i.createContext(_);
+    h = i.createContext(p);
 function m(e) {
     let { children: t, confettiCanvas: n, spriteCanvas: l, baseConfig: c, addClickListener: d, removeClickListener: m } = e,
         g = (0, o.uR)(n, l),
         E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        v = i.useMemo(
+        b = i.useMemo(
             () =>
                 E
-                    ? _
+                    ? p
                     : {
                           confettiCanvas: n,
                           cannon: g,
@@ -101,12 +101,12 @@ function m(e) {
                                   r
                               ),
                           createMultipleConfetti: function (e) {
-                              let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p,
+                              let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _,
                                   n = arguments.length > 2 ? arguments[2] : void 0;
                               return g.createMultipleConfetti(u({}, c, e), t, n);
                           },
                           createMultipleConfettiAt: function (e, t, n) {
-                              let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : p,
+                              let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _,
                                   i = arguments.length > 4 ? arguments[4] : void 0;
                               return g.createMultipleConfetti(
                                   u(
@@ -131,7 +131,7 @@ function m(e) {
             [d, c, g, n, E, m]
         );
     return (0, r.jsx)(h.Provider, {
-        value: v,
+        value: b,
         children: t
     });
 }

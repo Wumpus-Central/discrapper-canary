@@ -1,25 +1,25 @@
 n.d(t, { m: () => d }), n(47120);
 var r = n(200651),
     i = n(192379),
-    o = n(119617),
+    o = n(48026),
     a = n(442837),
     s = n(944486),
     l = n(745510),
     c = n(675654),
-    u = n(443657);
+    u = n(232141);
 function d(e) {
     let { children: t } = e,
         [n, d] = i.useState(null),
-        [f, p] = i.useState(null),
-        _ = i.useRef(new Set()),
+        [f, _] = i.useState(null),
+        p = i.useRef(new Set()),
         [h, m] = i.useState(!1),
         g = (0, a.e7)([s.Z], () => s.Z.getCurrentlySelectedChannelId()),
         E = i.useCallback((e) => {
-            _.current.delete(e), m(_.current.size > 0);
+            p.current.delete(e), m(p.current.size > 0);
         }, []),
-        v = i.useCallback((e) => (_.current.add(e), m(!0), () => E(e)), [E]),
-        b = i.useCallback((e, t) => {
-            for (let n of _.current) n(e, t);
+        b = i.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
+        y = i.useCallback((e, t) => {
+            for (let n of p.current) n(e, t);
         }, []);
     return (
         i.useEffect(() => {
@@ -31,15 +31,15 @@ function d(e) {
                     confettiCanvas: f,
                     spriteCanvas: n,
                     baseConfig: c.We,
-                    addClickListener: v,
+                    addClickListener: b,
                     removeClickListener: E,
                     children: t
                 }),
                 (0, r.jsx)(o.O_, {
-                    ref: p,
+                    ref: _,
                     className: u.canvas,
                     environment: c.rq,
-                    onClick: h ? b : void 0
+                    onClick: h ? y : void 0
                 }),
                 (0, r.jsx)(o.Ji, {
                     ref: d,

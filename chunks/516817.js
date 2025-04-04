@@ -10,14 +10,14 @@ var r = n(200651),
     d = n(168352),
     f = n(379839),
     _ = n(359135),
-    p = n(873841);
+    p = n(187182);
 function h(e) {
     let { nameplate: t, hovered: n, selected: o, content: l, placement: d } = e,
         h = (0, f.p)(l, t, n, o, d),
         g = (0, u.C)(n, o),
-        E = (0, s.e7)([c.Z], () => c.Z.getChannelId()),
-        [b, v] = i.useState(t),
-        [y, O] = i.useState(!0),
+        E = (0, s.e7)([c.ZP], () => c.ZP.getChannelId()),
+        [b, y] = i.useState(t),
+        [v, O] = i.useState(!0),
         I = null != t;
     i.useLayoutEffect(
         () => () => {
@@ -26,20 +26,20 @@ function h(e) {
         [I]
     ),
         i.useEffect(() => {
-            null != t && v(t);
+            null != t && y(t);
         }, [t]);
     let S = null != t ? t : b;
     return null == S
         ? null
         : (0, r.jsx)('div', {
               onAnimationEnd: () => {
-                  I || v(null);
+                  I || y(null);
               },
               className: a()(p.container, {
                   [p.rtcOpened]: d === _.i.ACCOUNT && null != E,
-                  [p.fadeOut]: !y && !I,
-                  [p.noFade]: y,
-                  [p.fadeIn]: !y && I
+                  [p.fadeOut]: !v && !I,
+                  [p.noFade]: v,
+                  [p.fadeIn]: !v && I
               }),
               style: { background: h.background },
               children: (0, r.jsx)(m, {

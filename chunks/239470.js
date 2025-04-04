@@ -7,14 +7,14 @@ function i(e, t, n, i) {
         u = e.getTrack(),
         d = e.getSyncingWith(),
         f = e.getActivity(),
-        p = null !== (s = null !== (a = null == u ? void 0 : u.id) && void 0 !== a ? a : null == f ? void 0 : f.sync_id) && void 0 !== s ? s : e.getLastPlayedTrackId(),
-        _ = n.id === t.getId(),
+        _ = null != (s = null != (a = null == u ? void 0 : u.id) ? a : null == f ? void 0 : f.sync_id) ? s : e.getLastPlayedTrackId(),
+        p = n.id === t.getId(),
         h = l && !c,
-        m = null != p && p === (null == i ? void 0 : i.sync_id),
-        g = (null == f ? void 0 : f.party) != null && (null == i ? void 0 : null === (o = i.party) || void 0 === o ? void 0 : o.id) === f.party.id,
+        m = null != _ && _ === (null == i ? void 0 : i.sync_id),
+        g = (null == f ? void 0 : f.party) != null && (null == i || null == (o = i.party) ? void 0 : o.id) === f.party.id,
         E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id,
-        v = _ || h || m,
-        b = _ || E || g;
+        b = p || h || m,
+        y = p || E || g;
     return {
         user: n,
         activity: i,
@@ -23,10 +23,10 @@ function i(e, t, n, i) {
         notPlayable: h,
         syncingWithParty: g,
         syncingWithUser: E,
-        isCurrentUser: _,
-        currentUserTrackId: p,
+        isCurrentUser: p,
+        currentUserTrackId: _,
         playingSameTrack: m,
-        playDisabled: v,
-        syncDisabled: b
+        playDisabled: b,
+        syncDisabled: y
     };
 }

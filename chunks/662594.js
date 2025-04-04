@@ -17,18 +17,18 @@ var r,
     u = n(570140),
     d = n(353926),
     f = n(700785),
-    p = n(199902),
-    _ = n(314897),
+    _ = n(199902),
+    p = n(314897),
     h = n(592125),
     m = n(650774),
     g = n(271383),
     E = n(430824),
-    v = n(158776),
-    b = n(885110),
-    y = n(594174),
+    b = n(158776),
+    y = n(885110),
+    v = n(594174),
     O = n(981631),
-    S = n(388032);
-function I(e, t, n) {
+    I = n(388032);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -97,11 +97,11 @@ function w(e, t, n, r) {
                 get title() {
                     switch (t) {
                         case O.Skl.ONLINE:
-                            return S.NW.string(S.t.WbGtnJ);
+                            return I.NW.string(I.t.WbGtnJ);
                         case O.Skl.OFFLINE:
-                            return S.NW.string(S.t.Vv0abG);
+                            return I.NW.string(I.t.Vv0abG);
                         default:
-                            return S.NW.string(S.t['UQMV/P']);
+                            return I.NW.string(I.t['UQMV/P']);
                     }
                 },
                 count: n,
@@ -121,12 +121,12 @@ function w(e, t, n, r) {
     }
 }
 function D(e, t, n) {
-    let r = n === _.default.getId(),
-        i = v.Z.isMobileOnline(n),
-        o = r ? b.Z.getStatus() : v.Z.getStatus(n, e),
-        a = r ? b.Z.getActivities() : v.Z.getActivities(n, e),
-        s = p.Z.getStreamForUser(n, e),
-        l = y.default.getUser(n);
+    let r = n === p.default.getId(),
+        i = b.Z.isMobileOnline(n),
+        o = r ? y.Z.getStatus() : b.Z.getStatus(n, e),
+        a = r ? y.Z.getActivities() : b.Z.getActivities(n, e),
+        s = _.Z.getStreamForUser(n, e),
+        l = v.default.getUser(n);
     return null == l
         ? null
         : A(T({ type: 'MEMBER' }, g.ZP.getMember(e, n)), {
@@ -138,11 +138,11 @@ function D(e, t, n) {
               isMobileOnline: i
           });
 }
-function x(e) {
-    let t = h.Z.getChannel(e);
-    return null == t ? C : null == t.memberListId ? L(t) : t.memberListId;
-}
 function L(e) {
+    let t = h.Z.getChannel(e);
+    return null == t ? C : null == t.memberListId ? x(t) : t.memberListId;
+}
+function x(e) {
     return f.oz(O.Plq.VIEW_CHANNEL, e)
         ? C
         : s()
@@ -169,7 +169,7 @@ class M {
         (this.groups = e.map((e) => {
             var n;
             let r = t,
-                i = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
+                i = Math.max(0, null != (n = e.count) ? n : 0);
             return (t += i + 1), w(this.guildId, e.id, i, r);
         })),
             (this.rows.length = t);
@@ -224,7 +224,7 @@ class M {
         }
     }
     constructor(e, t) {
-        I(this, 'guildId', void 0), I(this, 'listId', void 0), I(this, 'ownerId', void 0), I(this, 'rows', []), I(this, 'groups', []), I(this, 'members', {}), I(this, 'version', 0), (this.guildId = e), (this.listId = t), this.updateOwnerId();
+        S(this, 'guildId', void 0), S(this, 'listId', void 0), S(this, 'ownerId', void 0), S(this, 'rows', []), S(this, 'groups', []), S(this, 'members', {}), S(this, 'version', 0), (this.guildId = e), (this.listId = t), this.updateOwnerId();
     }
 }
 class k {
@@ -261,7 +261,7 @@ class k {
         this._guildLists = {};
     }
     constructor() {
-        I(this, '_guildLists', {});
+        S(this, '_guildLists', {});
     }
 }
 let j = new k();
@@ -296,21 +296,21 @@ function B(e) {
         e.updateOwnerId() && e.rebuildMembers();
     });
 }
-function Z(e) {
+function F(e) {
     let { guild: t } = e;
     j.delete(t.id);
 }
-function F(e) {
+function V(e) {
     let { guildId: t } = e;
     j.forEach(t, (e) => e.rebuildMembers());
 }
-function V(e) {
+function Z(e) {
     let { guildId: t, user: n } = e;
     j.forEach(t, (e) => e.rebuildMember(n.id));
 }
 let H = [];
 function W() {
-    let e = p.Z.getAllApplicationStreams(),
+    let e = _.Z.getAllApplicationStreams(),
         t = H.concat(e);
     (H = e),
         t.forEach((e) => {
@@ -318,7 +318,7 @@ function W() {
         });
 }
 function Y() {
-    let e = _.default.getId();
+    let e = p.default.getId();
     j.forEach(null, (t) => t.rebuildMember(e));
 }
 function K() {
@@ -326,10 +326,10 @@ function K() {
 }
 class z extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(y.default, E.Z, h.Z, g.ZP, v.Z, b.Z, _.default, m.Z, p.Z, d.Z), this.syncWith([b.Z], Y), this.syncWith([p.Z], W);
+        this.waitFor(v.default, E.Z, h.Z, g.ZP, b.Z, y.Z, p.default, m.Z, _.Z, d.Z), this.syncWith([y.Z], Y), this.syncWith([_.Z], W);
     }
     getProps(e, t) {
-        let n = j.get(e, x(t));
+        let n = j.get(e, L(t));
         return {
             listId: ''.concat(n.guildId, ':').concat(n.listId),
             groups: n.groups,
@@ -338,17 +338,17 @@ class z extends (r = c.ZP.Store) {
         };
     }
     getRows(e, t) {
-        return j.get(e, x(t)).rows;
+        return j.get(e, L(t)).rows;
     }
 }
-I(z, 'displayName', 'ChannelMemberStore');
+S(z, 'displayName', 'ChannelMemberStore');
 let q = new z(u.Z, {
     CONNECTION_OPEN: G,
     OVERLAY_INITIALIZE: G,
     GUILD_MEMBER_LIST_UPDATE: U,
     GUILD_UPDATE: B,
-    GUILD_DELETE: Z,
-    GUILD_ROLE_UPDATE: F,
-    GUILD_MEMBER_UPDATE: V,
+    GUILD_DELETE: F,
+    GUILD_ROLE_UPDATE: V,
+    GUILD_MEMBER_UPDATE: Z,
     CHANNEL_UPDATES: K
 });

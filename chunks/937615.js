@@ -12,7 +12,7 @@ var r = n(221513),
     s = n(388032);
 function l(e, t, n) {
     var o;
-    let a = null !== (o = null == n ? void 0 : n.localeOverride) && void 0 !== o ? o : i.default.locale;
+    let a = null != (o = null == n ? void 0 : n.localeOverride) ? o : i.default.locale;
     return (0, r.T4)(e, t, a, n);
 }
 function c(e, t, n) {

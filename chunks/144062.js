@@ -4,7 +4,7 @@ IntlMessageFormat.__addLocaleData({
         var n = String(e).split('.'),
             r = n[0],
             i = Number(n[0]) == e;
-        return t ? 'other' : 1 != e && (i || (0 != r && 1 != r)) ? 'other' : 'one';
+        return t || (1 != e && (i || (0 != r && 1 != r))) ? 'other' : 'one';
     }
 }),
     IntlMessageFormat.__addLocaleData({

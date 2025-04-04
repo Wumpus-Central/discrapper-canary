@@ -40,7 +40,7 @@ function s(e) {
     let { voiceChannelActivityNotifsEnabled: n } = a.useExperiment(
             {
                 location: 'useVoiceActivityNotificationSettingsExperiment',
-                guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.lds
+                guildId: null != (t = null == e ? void 0 : e.getGuildId()) ? t : i.lds
             },
             {
                 disable: (null == e ? void 0 : e.type) !== i.d4z.GUILD_VOICE,
@@ -59,7 +59,7 @@ function s(e) {
 function l(e) {
     var t;
     let { voiceChannelActivityNotifsEnabled: n } = a.getCurrentConfig({
-        guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.lds,
+        guildId: null != (t = null == e ? void 0 : e.getGuildId()) ? t : i.lds,
         location: 'hasVoiceChannelActivityNotifsEnabled'
     });
     return n;

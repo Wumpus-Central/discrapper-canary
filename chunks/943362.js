@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -10,9 +10,9 @@ var i = n(120356),
     u = n(124072),
     d = n(198620),
     f = n(746878),
-    p = n(981631),
-    _ = n(556196),
-    h = n(405994);
+    _ = n(981631),
+    p = n(833845),
+    h = n(606629);
 function m(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function v(e, t) {
         e
     );
 }
-function b(e) {
+function y(e) {
     return {
         react(t, i, m) {
             let E = m.noStyleAndInteraction
@@ -74,15 +74,15 @@ function b(e) {
                           let r = await (0, d.B_)(t.attachmentUrl);
                           e.shouldStopPropagation && (null == n || n.stopPropagation()), c.Z.trackLinkClicked(r), e.shouldCloseDefaultModals && (0, a.pTH)(), (0, l.Z)(r);
                       },
-                b = m.noStyleAndInteraction
-                    ? p.dG4
+                y = m.noStyleAndInteraction
+                    ? _.dG4
                     : (e) => {
                           (0, s.jW)(e, async () => {
                               let { default: e } = await n.e('98466').then(n.bind(n, 151578));
                               return (n) =>
                                   (0, r.jsx)(
                                       e,
-                                      v(g({}, n), {
+                                      b(g({}, n), {
                                           attachmentUrl: t.attachmentUrl,
                                           attachmentName: t.attachmentName
                                       })
@@ -95,12 +95,12 @@ function b(e) {
                     role: 'link',
                     href: t.attachmentUrl,
                     onClick: E,
-                    onContextMenu: b,
+                    onContextMenu: y,
                     className: 'attachmentLink',
                     children: [
                         (0, r.jsx)(a.Ujz, {
                             size: 'xs',
-                            className: o()(h.icon, _.icon),
+                            className: o()(h.icon, p.icon),
                             color: a.TVs.colors.MENTION_FOREGROUND
                         }),
                         (0, f.S)(t, i, m)

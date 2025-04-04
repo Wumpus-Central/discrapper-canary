@@ -32,31 +32,31 @@ function f() {
             bitrate: n.bitrate
         });
 }
-function p() {
+function _() {
     var e;
     let t = l.Z.getVoiceChannelId(),
         n = c.Z.mode;
     if (null == t) return;
     let i = s.Z.getChannel(t);
     if (null == i) return;
-    let o = null !== (e = i.videoQualityMode) && void 0 !== e ? e : u.Ucd.AUTO;
+    let o = null != (e = i.videoQualityMode) ? e : u.Ucd.AUTO;
     n !== o &&
         r.Z.dispatch({
             type: 'SET_CHANNEL_VIDEO_QUALITY_MODE',
             mode: o
         });
 }
-function _() {
-    f(), p();
+function p() {
+    f(), _();
 }
 function h(e) {
     let { channels: t } = e;
-    for (let e of t) l.Z.getVoiceChannelId() === e.id && _();
+    for (let e of t) l.Z.getVoiceChannelId() === e.id && p();
 }
 function m(e) {
     let { voiceStates: t } = e;
     t.forEach((e) => {
-        o.default.getSessionId() === e.sessionId && _();
+        o.default.getSessionId() === e.sessionId && p();
     });
 }
 class g extends i.Z {

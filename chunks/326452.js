@@ -9,8 +9,8 @@ var r,
     u = n(922770),
     d = n(481060),
     f = n(388032),
-    p = n(868594);
-function _(e, t, n) {
+    _ = n(559122);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -66,14 +66,14 @@ function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function v(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,15 +82,15 @@ function v(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let b = Object.freeze({
-        SMALL: p.small,
-        MEDIUM: p.medium,
-        LARGE: p.large
+let y = Object.freeze({
+        SMALL: _.small,
+        MEDIUM: _.medium,
+        LARGE: _.large
     }),
-    y = (e) => {
-        let { hasContent: t, onClear: n, className: r, isLoading: a, size: c = b.SMALL } = e;
+    v = (e) => {
+        let { hasContent: t, onClear: n, className: r, isLoading: a, size: c = y.SMALL } = e;
         return (0, i.jsx)(l.P, {
-            className: s()(r, p.iconLayout, c, { [p.pointer]: t }),
+            className: s()(r, _.iconLayout, c, { [_.pointer]: t }),
             onClick: (e) => {
                 e.stopPropagation(), null != n && n(e);
             },
@@ -100,24 +100,24 @@ let b = Object.freeze({
                 e.preventDefault(), e.stopPropagation();
             },
             children: (0, i.jsx)('div', {
-                className: p.iconContainer,
+                className: _.iconContainer,
                 children: a
                     ? (0, i.jsx)(u.$, {
                           type: u.$.Type.SPINNING_CIRCLE,
-                          className: s()(p.icon, p.visible)
+                          className: s()(_.icon, _.visible)
                       })
                     : (0, i.jsxs)(o.Fragment, {
                           children: [
                               (0, i.jsx)(d._Ve, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: s()(p.icon, { [p.visible]: !t }),
+                                  className: s()(_.icon, { [_.visible]: !t }),
                                   'aria-label': f.NW.string(f.t['5h0QOD'])
                               }),
                               (0, i.jsx)(d.Dio, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: s()(p.clear, { [p.visible]: t }),
+                                  className: s()(_.clear, { [_.visible]: t }),
                                   'aria-label': f.NW.string(f.t.VkKicX)
                               })
                           ]
@@ -125,7 +125,7 @@ let b = Object.freeze({
             })
         });
     };
-y.Sizes = b;
+v.Sizes = y;
 class O extends (r = o.PureComponent) {
     focus() {
         let { current: e } = this.inputRef;
@@ -137,7 +137,7 @@ class O extends (r = o.PureComponent) {
     }
     render() {
         let e = this.props,
-            { query: t, autoFocus: n, onClear: r, className: o, placeholder: a = f.NW.string(f.t['5h0QOD']), iconClassName: l, onKeyDown: u, onKeyUp: d, onKeyPress: _, isLoading: m, size: v, disabled: b, onChange: O, onBlur: S, onFocus: I, autoComplete: T, inputProps: N, hideSearchIcon: A, 'aria-label': C = f.NW.string(f.t['5h0QOD']) } = e,
+            { query: t, autoFocus: n, onClear: r, className: o, placeholder: a = f.NW.string(f.t['5h0QOD']), iconClassName: l, onKeyDown: u, onKeyUp: d, onKeyPress: p, isLoading: m, size: b, disabled: y, onChange: O, onBlur: I, onFocus: S, autoComplete: T, inputProps: N, hideSearchIcon: A, 'aria-label': C = f.NW.string(f.t['5h0QOD']) } = e,
             R = E(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'iconClassName', 'onKeyDown', 'onKeyUp', 'onKeyPress', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'hideSearchIcon', 'aria-label']);
         return (0, i.jsx)(c.t, {
             focusTarget: this.inputRef,
@@ -147,28 +147,28 @@ class O extends (r = o.PureComponent) {
                 g(
                     h(
                         {
-                            className: s()(o, p.container, v, { [p.disabled]: b }),
+                            className: s()(o, _.container, b, { [_.disabled]: y }),
                             ref: this.containerRef
                         },
                         R
                     ),
                     {
                         children: (0, i.jsxs)('div', {
-                            className: p.inner,
+                            className: _.inner,
                             children: [
                                 (0, i.jsx)(
                                     'input',
                                     g(h({}, N), {
-                                        onFocus: I,
-                                        onBlur: S,
-                                        className: p.input,
+                                        onFocus: S,
+                                        onBlur: I,
+                                        className: _.input,
                                         value: t,
                                         onChange: this.handleOnChange,
                                         onKeyDown: u,
                                         onKeyUp: d,
-                                        onKeyPress: _,
+                                        onKeyPress: p,
                                         placeholder: a,
-                                        disabled: b,
+                                        disabled: y,
                                         autoFocus: n,
                                         autoComplete: T,
                                         'aria-label': C,
@@ -176,8 +176,8 @@ class O extends (r = o.PureComponent) {
                                     })
                                 ),
                                 !A &&
-                                    (0, i.jsx)(y, {
-                                        size: v,
+                                    (0, i.jsx)(v, {
+                                        size: b,
                                         hasContent: t.length > 0,
                                         onClear: r,
                                         className: l,
@@ -192,17 +192,17 @@ class O extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'inputRef', o.createRef()),
-            _(this, 'containerRef', o.createRef()),
-            _(this, 'handleOnChange', (e) => {
+            p(this, 'inputRef', o.createRef()),
+            p(this, 'containerRef', o.createRef()),
+            p(this, 'handleOnChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
             });
     }
 }
-_(O, 'Sizes', b),
-    _(O, 'defaultProps', {
-        size: b.SMALL,
+p(O, 'Sizes', y),
+    p(O, 'defaultProps', {
+        size: y.SMALL,
         isLoading: !1,
         disabled: !1
     });

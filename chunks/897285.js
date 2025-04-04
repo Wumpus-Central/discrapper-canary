@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var r = n(147913),
     i = n(914010),
     o = n(924301),
@@ -21,14 +21,14 @@ let l = {},
     u = new Set(),
     d = 1800000,
     f = async (e) => {
-        if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || c.has(e) || u.has(e)))
+        if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || c.has(e)) && !u.has(e))
             try {
                 c.add(e), await a.Z.getGuildEventsForCurrentUser(e), u.add(e);
             } catch (t) {
                 c.delete(e);
             }
     };
-class p extends r.Z {
+class _ extends r.Z {
     async getGuildEventUserCounts(e, t, n) {
         let r = n.filter((n) => null == l[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > d);
         if (!(Date.now() - l[''.concat(e, '-').concat(t)] < d) || 0 !== r.length) {
@@ -60,7 +60,7 @@ class p extends r.Z {
         var t;
         let { invite: n } = e,
             r = n.guild_scheduled_event,
-            i = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
+            i = null == (t = n.guild) ? void 0 : t.id;
         null != r && null != i && f(i);
     }
     async handleChannelSelect(e) {
@@ -84,4 +84,4 @@ class p extends r.Z {
             });
     }
 }
-let _ = new p();
+let p = new _();

@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,28 +58,28 @@ function p(e, t) {
         e
     );
 }
-let _ = new Set([n(981631).ABu.CONTACTS]),
+let p = new Set([n(981631).ABu.CONTACTS]),
     h = !0,
     m = [],
     g = [],
     E = {},
-    v = new Set(),
-    b = {},
+    b = new Set(),
     y = {},
+    v = {},
     O = (e) => {
-        (m = e.filter((e) => !_.has(e.type) && s.Z.isSupported(e.type))), (g = e.filter((e) => _.has(e.type))), (h = !1);
+        (m = e.filter((e) => !p.has(e.type) && s.Z.isSupported(e.type))), (g = e.filter((e) => p.has(e.type))), (h = !1);
     };
-function S(e) {
+function I(e) {
     O(e.connectedAccounts.map((e) => new l.Z(e)));
 }
-function I(e) {
-    e.local && null != e.accounts ? O(e.accounts.map((e) => new l.Z(p(d({}, e), { integrations: e.integrations.map((e) => p(d({}, e), { guild: new c.ZP(e.guild) })) })))) : a.Z.fetch();
+function S(e) {
+    e.local && null != e.accounts ? O(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: new c.ZP(e.guild) })) })))) : a.Z.fetch();
 }
 function T(e) {
     E[e.integrationId] = e.joining;
 }
 function N(e) {
-    y[e.integrationId] = void 0 !== e.error ? e.error : '';
+    v[e.integrationId] = void 0 !== e.error ? e.error : '';
 }
 function A(e) {
     let { platformType: t, id: n, revoked: r, accessToken: i } = e,
@@ -100,7 +100,7 @@ class R extends (r = i.ZP.Store) {
         return E[e] || !1;
     }
     joinErrorMessage(e) {
-        return y[e];
+        return v[e];
     }
     isFetching() {
         return h;
@@ -118,22 +118,22 @@ class R extends (r = i.ZP.Store) {
         return g.find((t) => t.type === e);
     }
     isSuggestedAccountType(e) {
-        return b[e] || !1;
+        return y[e] || !1;
     }
     addPendingAuthorizedState(e) {
-        v.add(e);
+        b.add(e);
     }
     deletePendingAuthorizedState(e) {
-        v.delete(e);
+        b.delete(e);
     }
     hasPendingAuthorizedState(e) {
-        return v.has(e);
+        return b.has(e);
     }
 }
 u(R, 'displayName', 'ConnectedAccountsStore');
 let P = new R(o.Z, {
-    CONNECTION_OPEN: S,
-    USER_CONNECTIONS_UPDATE: I,
+    CONNECTION_OPEN: I,
+    USER_CONNECTIONS_UPDATE: S,
     USER_CONNECTIONS_INTEGRATION_JOINING: T,
     USER_CONNECTION_UPDATE: A,
     USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: N,

@@ -10,7 +10,7 @@ function u(e) {
     let { sound: t } = e,
         n = (0, i.e7)([s.Z], () => {
             var e;
-            return t.guildId === l.X8 ? c.NW.string(c.t.Rtvk9f) : null === (e = s.Z.getGuild(t.guildId)) || void 0 === e ? void 0 : e.name;
+            return t.guildId === l.X8 ? c.NW.string(c.t.Rtvk9f) : null == (e = s.Z.getGuild(t.guildId)) ? void 0 : e.name;
         });
     return (0, r.jsxs)(a.RX, {
         children: [

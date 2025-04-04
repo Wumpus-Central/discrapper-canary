@@ -1,5 +1,5 @@
 n.d(t, {
-    Pe: () => y,
+    Pe: () => v,
     S6: () => l.S6,
     lJ: () => N,
     vp: () => I
@@ -71,14 +71,14 @@ function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = b(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function v(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,15 +87,15 @@ function v(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let b = 'balance-widget-pill-overlay',
-    y = () => (0, a.nfh)(b),
-    O = () => (0, a.Mr3)(b),
+let y = 'balance-widget-pill-overlay',
+    v = () => (0, a.nfh)(y),
+    O = () => (0, a.Mr3)(y),
     I = (e) => {
         let { hideImmediately: t } = null != e ? e : { hideImmediately: !1 };
         (0, l.vp)(t), O();
     },
     S = {
-        modalKey: b,
+        modalKey: y,
         onCloseCallback: l.vp,
         onCloseRequest: async () => {
             await (0, l.vp)(), (0, a.pTH)();
@@ -108,7 +108,7 @@ function N(e) {
     let { shouldOpen: t } = (0, o.cj)([u.Z], () => ({ shouldOpen: u.Z.balanceWidgetPillIsOverlaid }));
     return (
         (0, i.useEffect)(() => {
-            let n = y();
+            let n = v();
             t && !n ? T(e) : !t && n && O();
         }, [t, e]),
         { shouldOpen: t }
@@ -133,16 +133,16 @@ function C(e) {
             await (0, l.vp)(), await i();
         },
         { hideImmediately: m } = (0, o.cj)([u.Z], () => ({ hideImmediately: u.Z.hidePillOverlayImmediately })),
-        { hasLayers: v, hasNonShopLayer: b } = (0, o.cj)([s.Z], () => {
+        { hasLayers: b, hasNonShopLayer: y } = (0, o.cj)([s.Z], () => {
             let e = s.Z.getLayers().some((e) => e !== _.S9g.COLLECTIBLES_SHOP);
             return {
                 hasLayers: s.Z.hasLayers(),
                 hasNonShopLayer: e
             };
         }),
-        y = m || (v && b);
+        v = m || (b && y);
     return (0, r.jsx)(
-        f.E,
+        f.E9,
         g(
             h(
                 {
@@ -152,7 +152,7 @@ function C(e) {
                 A
             ),
             {
-                children: y
+                children: v
                     ? null
                     : (0, r.jsx)(d.A4, {
                           onClick: async (e) => {

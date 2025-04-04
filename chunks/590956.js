@@ -18,7 +18,7 @@ var r = n(200651),
     h = n(981631),
     m = n(185923),
     g = n(474936),
-    E = n(713523);
+    E = n(989760);
 function b(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ function b(e, t, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function v(e) {
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -75,13 +75,13 @@ let I = (e) => {
         var t;
         let { node: n, tooltipPosition: o = p.b_.position, enableClick: s = !0, channelId: u, messageId: d } = e,
             f = i.useRef(null),
-            h = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0],
+            h = null == (t = n.originalMatch) ? void 0 : t[0],
             m = null != h ? h : n.name,
             [g, b] = i.useState(!1),
-            y = (e) =>
+            v = (e) =>
                 (0, r.jsx)(
                     c.Z,
-                    O(v({}, e), {
+                    O(y({}, e), {
                         emojiName: n.name,
                         size: n.jumboable ? 'jumbo' : 'default',
                         src: n.src,
@@ -95,7 +95,7 @@ let I = (e) => {
                 (0, r.jsx)(
                     l.ua7,
                     O(
-                        v(
+                        y(
                             {
                                 text: (0, p.Y)(n.name, s),
                                 'aria-label': m
@@ -115,25 +115,25 @@ let I = (e) => {
                             children: (t) =>
                                 (0, r.jsx)(
                                     l.P3F,
-                                    O(v({}, e), {
+                                    O(y({}, e), {
                                         innerRef: f,
                                         tag: 'span',
                                         onClick: (t) => {
                                             var n;
-                                            b(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                                            b(!0), null == e || null == (n = e.onClick) || n.call(e, t);
                                         },
                                         className: a()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: s,
                                             [E.emojiJumbo]: n.jumboable
                                         }),
-                                        children: y(t)
+                                        children: v(t)
                                     })
                                 )
                         }
                     )
                 );
         if (!s) return I();
-        let S = (e) => (0, r.jsx)(_.Az, O(v({}, e), { node: n }));
+        let S = (e) => (0, r.jsx)(_.Az, O(y({}, e), { node: n }));
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.TRANSLATE,
             align: 'center',
@@ -150,15 +150,15 @@ let I = (e) => {
     },
     S = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: o = p.b_.position, enableClick: u = !0, channelId: g, messageId: b } = e,
-            [y, I] = i.useState(String(Date.now())),
-            [S, A] = i.useState(!1),
-            [N, C] = i.useState(!1),
+            [v, I] = i.useState(String(Date.now())),
+            [S, N] = i.useState(!1),
+            [A, C] = i.useState(!1),
             R = i.useRef(null),
             P = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 return (0, r.jsx)(
                     c.Z,
-                    O(v({}, e), {
+                    O(y({}, e), {
                         emojiName: t.name,
                         size: t.jumboable ? 'jumbo' : 'default',
                         emojiId: t.emojiId,
@@ -174,7 +174,7 @@ let I = (e) => {
                 (0, r.jsx)(
                     l.ua7,
                     O(
-                        v(
+                        y(
                             {
                                 text: (0, p.Y)(t.name, u),
                                 'aria-label': t.name
@@ -183,9 +183,9 @@ let I = (e) => {
                         ),
                         {
                             position: o,
-                            shouldShow: !N,
+                            shouldShow: !A,
                             onTooltipShow: () => {
-                                A(!0),
+                                N(!0),
                                     u &&
                                         (T({
                                             emojiNode: t,
@@ -197,20 +197,20 @@ let I = (e) => {
                             children: (n) =>
                                 (0, r.jsx)(
                                     l.P3F,
-                                    O(v({}, e), {
+                                    O(y({}, e), {
                                         innerRef: R,
                                         onMouseEnter: () => {
                                             var t;
-                                            null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                                            null == e || null == (t = e.onMouseEnter) || t.call(e);
                                         },
                                         onClick: u
                                             ? (t) => {
                                                   var n;
-                                                  A(!1), C(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                                                  N(!1), C(!0), null == e || null == (n = e.onClick) || n.call(e, t);
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
-                                            S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
+                                            S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), N(!1));
                                         },
                                         tag: 'span',
                                         className: a()(E.emojiContainer, {
@@ -227,7 +227,7 @@ let I = (e) => {
         let L = (e) =>
             (0, r.jsx)(
                 _.vk,
-                O(v({}, e), {
+                O(y({}, e), {
                     node: t,
                     refreshPositionKey: () => I(String(Date.now())),
                     nonce: w
@@ -237,13 +237,13 @@ let I = (e) => {
             animation: l.yRy.Animation.FADE,
             align: 'center',
             onRequestClose: () => {
-                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1);
+                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), N(!1), C(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: 'right',
             renderPopout: L,
-            positionKey: y,
+            positionKey: v,
             targetElementRef: R,
             children: D
         });

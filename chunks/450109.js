@@ -50,11 +50,11 @@ class h extends (r = i.ZP.Store) {
     }
     getConnectionStatsByContext(e) {
         var t;
-        return null !== (t = d[e]) && void 0 !== t ? t : [];
+        return null != (t = d[e]) ? t : [];
     }
     getFirstConnectionStatsByContext(e) {
         var t;
-        return null === (t = d[e]) || void 0 === t ? void 0 : t[0];
+        return null == (t = d[e]) ? void 0 : t[0];
     }
     getLastConnectionStats() {
         return u;

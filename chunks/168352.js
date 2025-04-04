@@ -13,13 +13,13 @@ function c(e, t) {
         let i = (0, a.b)('collectibles/'.concat(e.src, 'img.png')),
             o = (0, a.b)('collectibles/'.concat(e.src, 'asset.webm')),
             l = (0, a.b)('collectibles/'.concat(e.src, 'static.png')),
-            u = (null !== (r = platform.name) && void 0 !== r ? r : 'unknown').toLowerCase(),
+            u = (null != (r = platform.name) ? r : 'unknown').toLowerCase(),
             d = (0, s.isLinux)() || 'safari' === u || n;
         return {
             defaultAsset: (() => {
                 if (e.preview) {
                     var r, o;
-                    return t ? (null === (o = c(e.src)) || void 0 === o ? void 0 : o.animatedUrl) : null === (r = c(e.src)) || void 0 === r ? void 0 : r.staticUrl;
+                    return t ? (null == (o = c(e.src)) ? void 0 : o.animatedUrl) : null == (r = c(e.src)) ? void 0 : r.staticUrl;
                 }
                 if (d) return !t || n ? l : i;
             })(),

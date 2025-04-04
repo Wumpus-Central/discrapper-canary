@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(218867),
     l = n(28546),
     c = n(981631),
-    u = n(678568);
+    u = n(279900);
 let d = (e) => {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: r } = e,
             o = i.useRef(c.xAR),
@@ -19,7 +19,7 @@ let d = (e) => {
                     (o.current = window.requestAnimationFrame(() => {
                         var e;
                         if (null == n.current) return;
-                        let i = t > (null !== (e = a.current) && void 0 !== e ? e : -1),
+                        let i = t > (null != (e = a.current) ? e : -1),
                             s = null != r ? r(t, i) : 0;
                         n.current.scrollRowIntoView(t, {
                             animate: !0,
@@ -33,41 +33,41 @@ let d = (e) => {
         );
     },
     f = function (e) {
-        let { categoryListRef: t, expressionsListRef: n, categories: o, store: c, children: f, className: p, listPadding: _, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: b, renderSection: y } = e,
+        let { categoryListRef: t, expressionsListRef: n, categories: o, store: c, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: b, rowCountBySection: y, renderSection: v } = e,
             O = c.useStore((e) => e.activeCategoryIndex);
         d({
             activeIndex: O,
             categoryListRef: t,
             getScrollOffsetForIndex: m
         });
-        let S = i.useCallback(
+        let I = i.useCallback(
                 (e) => {
                     let { searchQuery: t } = l.Iu.getState();
                     if ((c.setActiveCategoryIndex(e), '' !== t)) (0, l.ql)('');
                     else {
                         var r;
-                        null === (r = n.current) || void 0 === r || r.scrollToSectionTop(e);
+                        null == (r = n.current) || r.scrollToSectionTop(e);
                     }
                 },
                 [n, c]
             ),
-            I = i.useCallback((e) => v(o[e], e, () => S(e), O === e), [O, o, S, v]),
+            S = i.useCallback((e) => b(o[e], e, () => I(e), O === e), [O, o, I, b]),
             T = i.useMemo(() => ('function' == typeof g ? (e) => g(o[e], e) : g), [o, g]);
         return (0, r.jsxs)('div', {
-            className: a()(u.wrapper, p),
+            className: a()(u.wrapper, _),
             children: [
                 (0, r.jsx)(s.Z, {
-                    listPadding: _,
+                    listPadding: p,
                     onScroll: E,
                     ref: t,
-                    renderRow: I,
+                    renderRow: S,
                     rowCount: h,
                     rowHeight: T,
                     hideScrollbar: !0,
-                    rowCountBySection: b,
-                    renderSection: y
+                    rowCountBySection: y,
+                    renderSection: v
                 }),
-                null == f ? void 0 : f(S)
+                null == f ? void 0 : f(I)
             ]
         });
     };

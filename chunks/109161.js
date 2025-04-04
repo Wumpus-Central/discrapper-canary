@@ -1,13 +1,13 @@
 n.d(t, {
-    F: () => p,
-    x: () => _
+    F: () => _,
+    x: () => p
 });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(981729),
-    s = n(951574);
+    s = n(563373);
 function l(e, t, n) {
     return (
         t in e
@@ -97,7 +97,7 @@ function f(e) {
               ]
           });
 }
-function p(e) {
+function _(e) {
     let { color: t, name: n, tooltip: i = !0 } = e;
     return null == t
         ? null
@@ -115,7 +115,7 @@ function p(e) {
             })
           : (0, r.jsx)(f, c({}, e));
 }
-function _(e) {
+function p(e) {
     let { color: t, className: n } = e;
     return null == t
         ? null

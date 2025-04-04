@@ -9,8 +9,8 @@ var r,
     u = n(317381),
     d = n(581883),
     f = n(674563),
-    p = n(526761);
-function _(e, t, n) {
+    _ = n(526761);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -63,72 +63,72 @@ function g(e, t) {
     );
 }
 let E = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
-    v = { pendingUsages: [] },
-    b = new c.ZP({
+    b = { pendingUsages: [] },
+    y = new c.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: f.yP
     });
-function y(e) {
+function v(e) {
     let {
         settings: { type: t },
         wasSaved: n
     } = e;
-    if (t !== p.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    v.pendingUsages = [];
+    if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    b.pendingUsages = [];
 }
 function O(e) {
     var t;
     let { command: n } = e;
-    if (!E.includes(n.type) || (null === (t = u.ZP.getLaunchState(n.applicationId)) || void 0 === t ? void 0 : t.isLaunching)) return !1;
-    I(n.applicationId);
-}
-function S(e) {
-    let { applicationId: t } = e;
-    I(t);
+    if (!E.includes(n.type) || (null == (t = u.ZP.getLaunchState(n.applicationId)) ? void 0 : t.isLaunching)) return !1;
+    S(n.applicationId);
 }
 function I(e) {
-    v.pendingUsages.push({
+    let { applicationId: t } = e;
+    S(t);
+}
+function S(e) {
+    b.pendingUsages.push({
         key: e,
         timestamp: Date.now()
     }),
-        b.track(e),
-        b.compute();
+        y.track(e),
+        y.compute();
 }
 function T() {
     var e, t;
-    let n = null !== (t = null === (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
-    b.overwriteHistory(
+    let n = null != (t = null == (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) ? void 0 : e.applications) ? t : {};
+    y.overwriteHistory(
         o().mapValues(n, (e) => g(h({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        v.pendingUsages
+        b.pendingUsages
     );
 }
 class N extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (v = e), this.waitFor(u.ZP), this.syncWith([d.Z], T);
+        null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], T);
     }
     getState() {
-        return v;
+        return b;
     }
     hasPendingUsage() {
-        return v.pendingUsages.length > 0;
+        return b.pendingUsages.length > 0;
     }
     getApplicationFrecencyWithoutLoadingLatest() {
-        return b;
+        return y;
     }
     getScoreWithoutLoadingLatest(e) {
         var t;
-        return null !== (t = b.getScore(e)) && void 0 !== t ? t : 0;
+        return null != (t = y.getScore(e)) ? t : 0;
     }
     getTopApplicationsWithoutLoadingLatest() {
-        return b.frequently;
+        return y.frequently;
     }
 }
-_(N, 'displayName', 'ApplicationFrecencyStore'), _(N, 'persistKey', 'ApplicationFrecency');
+p(N, 'displayName', 'ApplicationFrecencyStore'), p(N, 'persistKey', 'ApplicationFrecency');
 let A = new N(s.Z, {
     APPLICATION_COMMAND_USED: O,
-    EMBEDDED_ACTIVITY_OPEN: S,
-    USER_SETTINGS_PROTO_UPDATE: y
+    EMBEDDED_ACTIVITY_OPEN: I,
+    USER_SETTINGS_PROTO_UPDATE: v
 });

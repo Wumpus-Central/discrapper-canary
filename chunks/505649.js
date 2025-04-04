@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(411104);
+n.d(t, { Z: () => I }), n(411104);
 var r,
     i = n(442837),
     o = n(570140),
@@ -9,7 +9,7 @@ var r,
     u = n(622999),
     d = n(981631),
     f = n(388032);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,19 +22,19 @@ function p(e, t, n) {
         e
     );
 }
-let _ = !1,
+let p = !1,
     h = null,
     m = null;
 function g() {
-    (_ = !1), (m = null), (h = null);
+    (p = !1), (m = null), (h = null);
 }
 function E(e) {
     let { error: t } = e,
         { code: n, paymentId: r } = t;
-    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (_ = !1), !1;
-    _ || ((_ = !0), (h = r), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && v(r));
+    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (p = !1), !1;
+    p || ((p = !0), (h = r), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && b(r));
 }
-async function v(e) {
+async function b(e) {
     if (null == e) return;
     let { error: t } = await (0, u.oe)(e);
     if (null != t) {
@@ -42,23 +42,23 @@ async function v(e) {
         (0, c.q2)(e, { extra: { authenticationError: t } });
     }
 }
-function b(e) {
-    let { error: t } = e;
-    (m = t), (_ = !1);
-}
 function y(e) {
+    let { error: t } = e;
+    (m = t), (p = !1);
+}
+function v(e) {
     let { payment: t } = e,
         n = [d.PyE.COMPLETED, d.PyE.FAILED, d.PyE.CANCELED];
-    if (!_ || t.id !== h || !n.includes(t.status)) return !1;
-    if (((_ = !1), (h = null), t.status === d.PyE.FAILED)) {
+    if (!p || t.id !== h || !n.includes(t.status)) return !1;
+    if (((p = !1), (h = null), t.status === d.PyE.FAILED)) {
         var r;
         let e = null;
-        (null === (r = t.metadata) || void 0 === r ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.NW.string(f.t.khEaRE), e));
+        (null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS && (e = l.SM.BILLING_INSUFFICIENT_FUNDS), (m = new l.ZP(f.NW.string(f.t.khEaRE), e));
     } else (m = null), o.Z.wait(a.fw), o.Z.wait(s.pB);
 }
 class O extends (r = i.ZP.Store) {
     get isAwaitingAuthentication() {
-        return _;
+        return p;
     }
     get error() {
         return m;
@@ -67,8 +67,8 @@ class O extends (r = i.ZP.Store) {
         return h;
     }
 }
-p(O, 'displayName', 'PaymentAuthenticationStore');
-let S = new O(o.Z, {
+_(O, 'displayName', 'PaymentAuthenticationStore');
+let I = new O(o.Z, {
     BILLING_SUBSCRIPTION_UPDATE_START: g,
     PAYMENT_AUTHENTICATION_CLEAR_ERROR: g,
     PREMIUM_PAYMENT_ERROR_CLEAR: g,
@@ -86,7 +86,7 @@ let S = new O(o.Z, {
     PREMIUM_PAYMENT_UPDATE_FAIL: E,
     SKU_PURCHASE_FAIL: E,
     GIFT_CODE_REDEEM_FAILURE: E,
-    PAYMENT_AUTHENTICATION_ERROR: b,
-    PAYMENT_UPDATE: y,
-    BILLING_PAYMENT_FETCH_SUCCESS: y
+    PAYMENT_AUTHENTICATION_ERROR: y,
+    PAYMENT_UPDATE: v,
+    BILLING_PAYMENT_FETCH_SUCCESS: v
 });

@@ -13,8 +13,8 @@ var r = n(200651),
     u = n(357355),
     d = n(182294),
     f = n(388032),
-    p = n(897955);
-function _(e, t, n) {
+    _ = n(556921);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,20 +38,20 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
 function m(e) {
     let { smallerText: t, className: n, textColor: o, isMarketingPageV2Enabled: c } = e,
-        _ = (0, s.e7)([u.Z], () => u.Z.affinities.slice(0, 3).reverse()),
-        h = _.map((e, t) =>
+        p = (0, s.e7)([u.Z], () => u.Z.affinities.slice(0, 3).reverse()),
+        h = p.map((e, t) =>
             (0, r.jsx)(
                 g,
                 {
                     affinity: e,
-                    applyMask: t !== _.length - 1,
+                    applyMask: t !== p.length - 1,
                     size: d.EF.SIZE_32
                 },
                 e.id
@@ -60,20 +60,20 @@ function m(e) {
         m = (e) => (null != e.globalName ? e.globalName : e.username),
         E = i.useMemo(
             () =>
-                3 === _.length
-                    ? f.NW.formatToPlainString(f.t.c7ETJC, { username: m(_[2]) })
-                    : 2 === _.length
+                3 === p.length
+                    ? f.NW.formatToPlainString(f.t.c7ETJC, { username: m(p[2]) })
+                    : 2 === p.length
                       ? f.NW.formatToPlainString(f.t.st8Rh4, {
-                            username: m(_[1]),
-                            otherUsername: m(_[0])
+                            username: m(p[1]),
+                            otherUsername: m(p[0])
                         })
-                      : 1 === _.length
-                        ? f.NW.formatToPlainString(f.t.dpjXPD, { username: m(_[0]) })
+                      : 1 === p.length
+                        ? f.NW.formatToPlainString(f.t.dpjXPD, { username: m(p[0]) })
                         : '',
-            [_]
+            [p]
         );
-    if (0 === _.length) return null;
-    function v() {
+    if (0 === p.length) return null;
+    function b() {
         return t || c
             ? (0, r.jsx)(l.Text, {
                   variant: c ? 'text-sm/normal' : 'text-lg/medium',
@@ -87,15 +87,15 @@ function m(e) {
               });
     }
     return (0, r.jsxs)('div', {
-        className: a()(p.container, n, { [p.v2Container]: c }),
+        className: a()(_.container, n, { [_.v2Container]: c }),
         children: [
             (0, r.jsx)('div', {
-                className: p.iconContainer,
+                className: _.iconContainer,
                 children: h
             }),
             (0, r.jsx)('div', {
-                className: p.textContainer,
-                children: (0, r.jsx)(v, {})
+                className: _.textContainer,
+                children: (0, r.jsx)(b, {})
             })
         ]
     });
@@ -111,7 +111,7 @@ function g(e) {
         l.qEK,
         h(
             {
-                className: a()(p.icon, { [p.mask]: n }),
+                className: a()(_.icon, { [_.mask]: n }),
                 src: o,
                 'aria-label': t.username,
                 size: i

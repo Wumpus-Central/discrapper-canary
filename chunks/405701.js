@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(913527),
@@ -9,11 +9,11 @@ var r = n(200651),
     u = n(540059),
     d = n(496675),
     f = n(300429),
-    p = n(585483),
-    _ = n(70956),
+    _ = n(585483),
+    p = n(70956),
     h = n(981631),
     m = n(388032),
-    g = n(64501);
+    g = n(873007);
 function E(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,12 +55,12 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -69,19 +69,19 @@ function y(e, t) {
 function O(e) {
     let t,
         { isEnabled: n, rateLimitPerUser: o, isBypassSlowmode: s, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: d, isRefreshEnabled: f } = e,
-        [E, b] = i.useState(!1);
+        [E, y] = i.useState(!1);
     if (
         (i.useEffect(() => {
             function e() {
-                b(!0),
+                y(!0),
                     setTimeout(() => {
-                        b(!1);
+                        y(!1);
                     }, 1000);
             }
             return (
-                p.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
+                _.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
                 () => {
-                    p.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
+                    _.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
                 }
             );
         }, []),
@@ -91,7 +91,7 @@ function O(e) {
     let O = (0, c.k)(o);
     if (!s && u > 0) {
         let e = a().duration(u);
-        if (u > _.Z.Millis.HOUR) {
+        if (u > p.Z.Millis.HOUR) {
             let n = ''.concat(e.minutes()).padStart(2, '0'),
                 r = ''.concat(e.seconds()).padStart(2, '0');
             t = ''.concat(e.hours(), ':').concat(n, ':').concat(r);
@@ -105,7 +105,7 @@ function O(e) {
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                y(v({ className: g.cooldownWrapper }, e), {
+                v(b({ className: g.cooldownWrapper }, e), {
                     children: (0, r.jsxs)(l.Text, {
                         className: g.cooldownText,
                         variant: d ? 'text-xs/medium' : 'text-sm/medium',
@@ -124,20 +124,20 @@ function O(e) {
             )
     });
 }
-function S(e) {
+function I(e) {
     let { channel: t, isThreadCreation: n = !1 } = e,
         i = (0, s.e7)([f.Z], () => f.Z.getSlowmodeCooldownGuess(t.id, n ? f.S.CreateThread : f.S.SendMessage)),
         o = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
         { rateLimitPerUser: a } = t,
         l = a > 0,
         c = (0, u.R6)('SlowmodeIndicator'),
-        p = (0, u.Q3)('SlowmodeIndicator');
+        _ = (0, u.Q3)('SlowmodeIndicator');
     return (0, r.jsx)(O, {
         isEnabled: l,
         rateLimitPerUser: a,
         isBypassSlowmode: o,
         slowmodeCooldownGuess: i,
         isRefreshChatInputEnabled: c,
-        isRefreshEnabled: p
+        isRefreshEnabled: _
     });
 }

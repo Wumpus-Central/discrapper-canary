@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(653041), n(47120);
+n.d(t, { Z: () => A }), n(653041), n(47120);
 var r,
     i = n(442837),
     o = n(759174),
@@ -39,7 +39,7 @@ let m = new o.h(h, (e) => ''.concat(e.since)),
     g = 0,
     E = 0,
     b = 0;
-function v() {
+function y() {
     let e = 0,
         t = 0,
         n = 0;
@@ -56,7 +56,7 @@ function v() {
         (E = t),
         (b = n);
 }
-function y(e) {
+function v(e) {
     m.set(d(e.id, e.applicationId), e);
 }
 function O(e, t) {
@@ -65,17 +65,17 @@ function O(e, t) {
 function I(e) {
     m.clear(),
         e.gameRelationships.forEach((e) => {
-            y(u(e));
+            v(u(e));
         }),
-        v();
+        y();
 }
 function S(e) {
-    y(e.gameRelationship), v();
+    v(e.gameRelationship), y();
 }
 function T(e) {
-    O(e.userId, e.applicationId), v();
+    O(e.userId, e.applicationId), y();
 }
-class A extends (r = i.ZP.Store) {
+class N extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -113,8 +113,8 @@ class A extends (r = i.ZP.Store) {
         return m.version;
     }
 }
-c(A, 'displayName', 'GameRelationshipStore');
-let N = new A(a.Z, {
+c(N, 'displayName', 'GameRelationshipStore');
+let A = new N(a.Z, {
     CONNECTION_OPEN: I,
     GAME_RELATIONSHIP_ADD: S,
     GAME_RELATIONSHIP_REMOVE: T

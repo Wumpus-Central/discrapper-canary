@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -8,8 +8,8 @@ var r = n(200651),
     c = n(559725),
     u = n(439041),
     d = n(388032),
-    f = n(688422);
-class p extends i.PureComponent {
+    f = n(261959);
+class _ extends i.PureComponent {
     componentDidMount() {
         null == this.props.adyenPaymentData && null != this.props.cashAppPayComponent && c.cp();
     }
@@ -17,7 +17,7 @@ class p extends i.PureComponent {
         var e, t;
         let { className: n, cashAppPayComponent: i } = this.props,
             o = this.props.adyenPaymentData,
-            l = null !== (t = null == o ? void 0 : null === (e = o.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== t ? t : '',
+            l = null != (t = null == o || null == (e = o.paymentMethod) ? void 0 : e.cashtag) ? t : '',
             c = null != o && '' !== l;
         return (0, r.jsxs)('div', {
             className: n,
@@ -51,7 +51,7 @@ class p extends i.PureComponent {
         });
     }
 }
-let _ = o.ZP.connectStores([u.Z, l.Z], () => ({
+let p = o.ZP.connectStores([u.Z, l.Z], () => ({
     cashAppPayComponent: u.Z.cashAppPayComponent,
     adyenPaymentData: l.Z.adyenPaymentData
-}))(p);
+}))(_);

@@ -27,11 +27,11 @@ class u extends r.ZP.Store {
     }
     getBasicChannel(e) {
         var t;
-        return c && l.verbose('getting basic_channel (channel: '.concat(e, ', exists: ').concat(this.channels.has(e), ')')), null !== (t = this.channels.get(e)) && void 0 !== t ? t : null;
+        return c && l.verbose('getting basic_channel (channel: '.concat(e, ', exists: ').concat(this.channels.has(e), ')')), null != (t = this.channels.get(e)) ? t : null;
     }
     getGuildBasicChannels(e) {
         var t;
-        return c && l.verbose('getting guild_basic_channels (guild: '.concat(e, ', exists: ').concat(this.guilds.has(e), ')')), null !== (t = this.guilds.get(e)) && void 0 !== t ? t : null;
+        return c && l.verbose('getting guild_basic_channels (guild: '.concat(e, ', exists: ').concat(this.guilds.has(e), ')')), null != (t = this.guilds.get(e)) ? t : null;
     }
     invalidate(e) {
         this.delete(e);
@@ -57,7 +57,7 @@ class u extends r.ZP.Store {
     }
     delete(e) {
         var t;
-        for (let n in (c && l.verbose('deleting basic_channels (guild: '.concat(e, ', exists: ').concat(this.guilds.has(e), ')')), null !== (t = this.guilds.get(e)) && void 0 !== t ? t : {})) this.channels.delete(n);
+        for (let n in (c && l.verbose('deleting basic_channels (guild: '.concat(e, ', exists: ').concat(this.guilds.has(e), ')')), null != (t = this.guilds.get(e)) ? t : {})) this.channels.delete(n);
         this.guilds.delete(e);
     }
     constructor() {

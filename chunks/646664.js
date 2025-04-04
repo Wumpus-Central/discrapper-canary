@@ -6,17 +6,17 @@ let { MAX_SAFE_COMPONENT_LENGTH: r, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = 
     u = (t.t = {}),
     d = 0,
     f = '[a-zA-Z0-9-]',
-    p = [
+    _ = [
         ['\\s', 1],
         ['\\d', o],
         [f, i]
     ],
-    _ = (e) => {
-        for (let [t, n] of p) e = e.split(`${t}*`).join(`${t}{0,${n}}`).split(`${t}+`).join(`${t}{1,${n}}`);
+    p = (e) => {
+        for (let [t, n] of _) e = e.split(`${t}*`).join(`${t}{0,${n}}`).split(`${t}+`).join(`${t}{1,${n}}`);
         return e;
     },
     h = (e, t, n) => {
-        let r = _(t),
+        let r = p(t),
             i = d++;
         a(e, i, t), (u[e] = i), (c[i] = t), (s[i] = new RegExp(t, n ? 'g' : void 0)), (l[i] = new RegExp(r, n ? 'g' : void 0));
     };

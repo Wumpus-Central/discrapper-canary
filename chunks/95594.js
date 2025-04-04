@@ -65,11 +65,11 @@ let d = Object.freeze({
     }
 });
 function f(e) {
-    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: p = 250, getScrollerState: _, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: v, paddingVertical: b, paddingHorizontal: y, dir: O } = e,
-        S = (0, o.Z)(),
-        I = (0, r.useRef)(d),
+    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: _ = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: v, dir: O } = e,
+        I = (0, o.Z)(),
+        S = (0, r.useRef)(d),
         [T] = (0, r.useState)(() => new i.ZP()),
-        N = _(),
+        N = p(),
         A = Math.min(null != h ? h : 1 / 0, N.offsetWidth),
         C = null != h ? Math.max(0, N.offsetWidth - h) : 0,
         {
@@ -78,15 +78,15 @@ function f(e) {
             chunkEnd: w,
             forceUpdateOnChunkChange: D
         } = (0, a.Z)({
-            chunkSize: p,
-            getScrollerState: _,
-            forceUpdate: S
+            chunkSize: _,
+            getScrollerState: p,
+            forceUpdate: I
         });
     return (
-        (I.current = (0, r.useMemo)(
+        (S.current = (0, r.useMemo)(
             () =>
                 R > 0
-                    ? I.current
+                    ? S.current
                     : (T.mergeProps({
                           sections: t,
                           columns: n,
@@ -97,20 +97,20 @@ function f(e) {
                           itemGutter: m,
                           removeEdgeItemGutters: g,
                           sectionGutter: E,
-                          padding: v,
-                          paddingVertical: b,
-                          paddingHorizontal: y,
+                          padding: b,
+                          paddingVertical: y,
+                          paddingHorizontal: v,
                           marginLeft: C / 2,
                           dir: O
                       }),
-                      T.computeVisibleSections(Math.max(0, P * p), w * p),
+                      T.computeVisibleSections(Math.max(0, P * _), w * _),
                       T.getState()),
-            [R, T, t, n, s, c, f, P, w, p, m, g, E, v, b, y, A, O]
+            [R, T, t, n, s, c, f, P, w, _, m, g, E, b, y, v, A, O]
         )),
-        u(l({}, I.current), {
+        u(l({}, S.current), {
             masonryComputer: T,
             forceUpdateOnChunkChange: D,
-            forceUpdate: S
+            forceUpdate: I
         })
     );
 }

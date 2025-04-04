@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(600164),
     x = n(749681),
     j = n(258971),
-    N = n(685929),
-    O = n(163400),
+    O = n(685929),
+    N = n(163400),
     v = n(553795),
     y = n(496675),
     _ = n(626135),
@@ -79,9 +79,9 @@ function U(e) {
             }),
             [U, z]
         ),
-        ea = (0, N.Y)(z),
+        ea = (0, O.Y)(z),
         es = (0, g.q)(null == z || null == (t = z.linkedLobby) ? void 0 : t.application_id),
-        ec = (0, O.F)(null == U ? void 0 : U.id),
+        ec = (0, N.F)(null == U ? void 0 : U.id),
         {
             availableTwitchIntegrations: ed,
             availableYoutubeIntegrations: eu,
@@ -127,8 +127,8 @@ function U(e) {
             [eh, U]
         ),
         ej = i.useMemo(() => (void 0 !== ex ? [ex, ...eh.filter((e) => e.integration.id !== ex.integration.id)] : eh), [eh, ex]),
-        eN = (0, u.s9z)(u.JQI),
-        [eO, ev] = i.useState(!1),
+        eO = (0, u.s9z)(u.JQI),
+        [eN, ev] = i.useState(!1),
         ey = i.useRef(0),
         e_ = () => {
             ev(!0),
@@ -140,7 +140,7 @@ function U(e) {
     i.useEffect(() => (window.addEventListener('scroll', e_, !0), () => window.removeEventListener('scroll', e_)));
     let eC = ej.map((e) => {
             var t;
-            let n = !eN && e.integration.id === (null == ex ? void 0 : ex.integration.id),
+            let n = !eO && e.integration.id === (null == ex ? void 0 : ex.integration.id),
                 { application: i, integration: l } = e,
                 o = [];
             return (
@@ -174,7 +174,7 @@ function U(e) {
                         },
                         details: o,
                         guildId: null == U ? void 0 : U.id,
-                        isScrolling: eO,
+                        isScrolling: eN,
                         canShowMigrationTooltip: n
                     },
                     'integration-'.concat(l.id)

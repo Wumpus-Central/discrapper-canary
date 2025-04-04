@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -39,52 +39,52 @@ let u = new Map(),
         userAffinities: [],
         lastFetched: 0
     }),
-    p = c({}, f);
-function _() {
-    u = new Map(p.userAffinities.filter((e) => !a.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    _ = c({}, f);
+function p() {
+    u = new Map(_.userAffinities.filter((e) => !a.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
 function h() {
     d = !0;
 }
 function m(e) {
     let { affineUsers: t } = e;
-    (p.lastFetched = Date.now()), (d = !1), (p.userAffinities = t), _();
+    (_.lastFetched = Date.now()), (d = !1), (_.userAffinities = t), p();
 }
 function g() {
     d = !1;
 }
 function E() {
-    (p = c({}, f)), (u = new Map()), (d = !1);
+    (_ = c({}, f)), (u = new Map()), (d = !1);
 }
-class v extends (r = i.ZP.PersistedStore) {
+class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(a.Z), null != e && ((p.userAffinities = e.userAffinities), (p.lastFetched = e.lastFetched), _()), this.syncWith([a.Z], _);
+        this.waitFor(a.Z), null != e && ((_.userAffinities = e.userAffinities), (_.lastFetched = e.lastFetched), p()), this.syncWith([a.Z], p);
     }
     shouldFetch() {
-        if (!d) return Date.now() - p.lastFetched > s.K;
+        if (!d) return Date.now() - _.lastFetched > s.K;
     }
     isFetching() {
         return d;
     }
     getUserAffinities() {
-        return p.userAffinities;
+        return _.userAffinities;
     }
     getUserAffinitiesMap() {
         return u;
     }
     compare(e, t) {
         var n, r, i, o;
-        return (null !== (i = null === (n = u.get(t)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== i ? i : 0) - (null !== (o = null === (r = u.get(e)) || void 0 === r ? void 0 : r.communicationProbability) && void 0 !== o ? o : 0);
+        return (null != (i = null == (n = u.get(t)) ? void 0 : n.communicationProbability) ? i : 0) - (null != (o = null == (r = u.get(e)) ? void 0 : r.communicationProbability) ? o : 0);
     }
     getUserAffinity(e) {
         return u.get(e);
     }
     getState() {
-        return p;
+        return _;
     }
 }
-l(v, 'displayName', 'UserAffinitiesV2Store'), l(v, 'persistKey', 'UserAffinitiesStoreV2');
-let b = new v(o.Z, {
+l(b, 'displayName', 'UserAffinitiesV2Store'), l(b, 'persistKey', 'UserAffinitiesStoreV2');
+let y = new b(o.Z, {
     LOAD_USER_AFFINITIES_V2: h,
     LOAD_USER_AFFINITIES_V2_SUCCESS: m,
     LOAD_USER_AFFINITIES_V2_FAILURE: g,

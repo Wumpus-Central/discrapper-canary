@@ -1,9 +1,9 @@
 l.d(t, { default: () => B }), l(47120), l(266796), l(301563);
 var n = l(200651),
     i = l(192379),
-    r = l(120356),
-    s = l.n(r),
-    a = l(772848),
+    s = l(120356),
+    a = l.n(s),
+    r = l(772848),
     o = l(36793),
     u = l(442837),
     c = l(780384),
@@ -20,15 +20,15 @@ var n = l(200651),
     b = l(63063),
     y = l(956664),
     I = l(268350),
-    O = l(373228),
-    k = l(378233),
-    w = l(419922),
-    E = l(611480),
+    E = l(373228),
+    O = l(378233),
+    k = l(419922),
+    w = l(611480),
     S = l(981631),
     C = l(388032),
-    P = l(154377),
-    Z = l(434227),
-    D = l(600126);
+    D = l(154377),
+    P = l(434227),
+    Z = l(600126);
 let z = new Set(['application/json', 'image/png', 'image/apng', 'image/gif', 'image/jpeg', 'image/jpg']),
     R = [
         {
@@ -45,25 +45,25 @@ function W(e, t) {
 let _ = (e) => {
         let { stickerPreview: t } = e;
         return (0, n.jsxs)('div', {
-            className: P.preview,
+            className: D.preview,
             children: [
                 (0, n.jsx)('div', {
-                    className: P.previewDark,
+                    className: D.previewDark,
+                    children:
+                        null != t
+                            ? t
+                            : (0, n.jsx)('img', {
+                                  src: P,
+                                  alt: C.NW.string(C.t.qOsjZm)
+                              })
+                }),
+                (0, n.jsx)('div', {
+                    className: D.previewLight,
                     children:
                         null != t
                             ? t
                             : (0, n.jsx)('img', {
                                   src: Z,
-                                  alt: C.NW.string(C.t.qOsjZm)
-                              })
-                }),
-                (0, n.jsx)('div', {
-                    className: P.previewLight,
-                    children:
-                        null != t
-                            ? t
-                            : (0, n.jsx)('img', {
-                                  src: D,
                                   alt: C.NW.string(C.t.YC5NAA)
                               })
                 })
@@ -73,28 +73,28 @@ let _ = (e) => {
     T = (e) => {
         let { sticker: t, previewData: l, onStickerError: i } = e;
         if (null != t)
-            return (0, n.jsx)(w.Z, {
+            return (0, n.jsx)(k.Z, {
                 size: 160,
                 sticker: t
             });
         if (null == l) return null;
-        let { id: r, formatType: s, content: a } = l;
+        let { id: s, formatType: a, content: r } = l;
         return (0, n.jsx)(
-            w.Z,
+            k.Z,
             {
-                assetData: a,
-                fileUri: a,
+                assetData: r,
+                fileUri: r,
                 size: 160,
                 sticker: {
-                    name: r,
+                    name: s,
                     description: '',
-                    id: r,
+                    id: s,
                     pack_id: '',
-                    format_type: s
+                    format_type: a
                 },
                 onError: i
             },
-            r
+            s
         );
     };
 async function A(e) {
@@ -105,28 +105,28 @@ async function A(e) {
     return (0, y.Bo)(n, e.name, 'image/png');
 }
 function B(e) {
-    var t, l, r, o, w, Z, D, B;
+    var t, l, s, o, k, P, Z, B;
     let { transitionState: L, onClose: U, guildId: K, sticker: M } = e,
         F = (0, u.e7)([j.Z], () => j.Z.theme),
         H = (0, u.e7)([f.ZP], () => ((null == M ? void 0 : M.tags) != null ? f.ZP.getCustomEmojiById(M.tags) : null)),
-        Y = null != (l = null == (t = v.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? E.OC : E.Ht,
+        Y = null != (l = null == (t = v.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? w.OC : w.Ht,
         [q, V] = i.useState(null),
-        [X, J] = i.useState(null != (r = null == M ? void 0 : M.name) ? r : ''),
+        [X, J] = i.useState(null != (s = null == M ? void 0 : M.name) ? s : ''),
         [G, Q] = i.useState({
             file: null,
-            filename: null != (o = (0, k._V)(M)) ? o : ''
+            filename: null != (o = (0, O._V)(M)) ? o : ''
         }),
         [$, ee] = i.useState(null == H ? void 0 : H.id),
-        [et, el] = i.useState(null != (w = null == H ? void 0 : H.name) ? w : null == M ? void 0 : M.tags),
-        [en, ei] = i.useState(null != (Z = null == M ? void 0 : M.description) ? Z : ''),
-        [er, es] = i.useState(!1),
-        [ea, eo] = i.useState(null),
+        [et, el] = i.useState(null != (k = null == H ? void 0 : H.name) ? k : null == M ? void 0 : M.tags),
+        [en, ei] = i.useState(null != (P = null == M ? void 0 : M.description) ? P : ''),
+        [es, ea] = i.useState(!1),
+        [er, eo] = i.useState(null),
         eu = (0, u.e7)([x.Z], () => x.Z.getGuild(K)),
         ec = (null == eu ? void 0 : eu.hasFeature(S.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(S.oNc.VERIFIED)),
         ed = null != M,
         em = ed || (null == G ? void 0 : G.file) != null,
         ef = 0 === en.length || (en.length >= 2 && en.length <= 100),
-        eg = !er && (null == ea ? void 0 : ea.isBlocking) !== !0 && X.length >= 2 && (null != $ || null != et || ((null == M ? void 0 : M.tags) != null && (null == M ? void 0 : M.tags) !== '')) && em && ef,
+        eg = !es && (null == er ? void 0 : er.isBlocking) !== !0 && X.length >= 2 && (null != $ || null != et || ((null == M ? void 0 : M.tags) != null && (null == M ? void 0 : M.tags) !== '')) && em && ef,
         ep = async (e) => {
             var t;
             if (null == e) return;
@@ -157,8 +157,8 @@ function B(e) {
                     });
                 return;
             }
-            let i = (0, k.Zv)(n.type);
-            if (i === O.u3.LOTTIE) {
+            let i = (0, O.Zv)(n.type);
+            if (i === E.u3.LOTTIE) {
                 if (!ec)
                     return void eo({
                         message: C.NW.format(C.t.RNNjy8, { articleURL: b.Z.getArticleURL(S.BhN.STICKERS_UPLOAD) }),
@@ -167,7 +167,7 @@ function B(e) {
                 let e = new FileReader();
                 e.addEventListener('load', () => {
                     V({
-                        id: (0, a.Z)(),
+                        id: (0, r.Z)(),
                         formatType: i,
                         content: e.result
                     }),
@@ -177,7 +177,7 @@ function B(e) {
             } else {
                 let e = await (0, y.fD)(n);
                 V({
-                    id: (0, a.Z)(),
+                    id: (0, r.Z)(),
                     formatType: i,
                     content: e
                 }),
@@ -189,19 +189,19 @@ function B(e) {
             });
         },
         ej = async (e) => {
-            var t, l, n, i, r, s;
+            var t, l, n, i, s, a;
             e.preventDefault();
-            let a = null != (l = null != (t = null != $ ? $ : et) ? t : null == M ? void 0 : M.tags) ? l : '';
+            let r = null != (l = null != (t = null != $ ? $ : et) ? t : null == M ? void 0 : M.tags) ? l : '';
             try {
-                if ((es(!0), ed))
+                if ((ea(!0), ed))
                     await (0, I.Jf)(K, null != (n = null == M ? void 0 : M.id) ? n : '', {
                         name: X,
-                        tags: a,
+                        tags: r,
                         description: en
                     });
                 else {
                     let e = new FormData();
-                    e.append('name', X), e.append('tags', a), e.append('description', en), (null == G ? void 0 : G.file) != null && e.append('file', G.file), (s = null != (r = null == (i = G.file) ? void 0 : i.type) ? r : ''), N.default.track(S.rMx.STICKER_UPLOAD_STARTED, { filetype: s }), await (0, I.lY)(K, e), W(!0);
+                    e.append('name', X), e.append('tags', r), e.append('description', en), (null == G ? void 0 : G.file) != null && e.append('file', G.file), (a = null != (s = null == (i = G.file) ? void 0 : i.type) ? s : ''), N.default.track(S.rMx.STICKER_UPLOAD_STARTED, { filetype: a }), await (0, I.lY)(K, e), W(!0);
                 }
                 U();
             } catch (e) {
@@ -211,7 +211,7 @@ function B(e) {
                 }),
                     W(!1, e.body.message);
             } finally {
-                es(!1);
+                ea(!1);
             }
         },
         ex = T({
@@ -228,51 +228,51 @@ function B(e) {
     return (0, n.jsxs)(d.Y0X, {
         transitionState: L,
         'aria-labelledby': 'STICKER_UPLOAD_MODAL',
-        className: P.modal,
+        className: D.modal,
         children: [
             (0, n.jsx)(d.olH, {
                 onClick: U,
-                className: P.modalClose
+                className: D.modalClose
             }),
             (0, n.jsxs)('form', {
                 onSubmit: ej,
-                className: P.form,
+                className: D.form,
                 children: [
                     (0, n.jsxs)(d.hzk, {
-                        className: P.modalContent,
+                        className: D.modalContent,
                         children: [
                             (0, n.jsxs)(d.xBx, {
                                 direction: m.Z.Direction.VERTICAL,
                                 separator: !1,
-                                className: P.modalHeader,
+                                className: D.modalHeader,
                                 children: [
                                     (0, n.jsx)(d.X6q, {
                                         variant: 'heading-xl/semibold',
-                                        className: P.modalHeaderTitle,
+                                        className: D.modalHeaderTitle,
                                         children: C.NW.string(C.t.yxVsBA)
                                     }),
                                     (0, n.jsx)(d.Text, {
                                         variant: 'text-md/normal',
-                                        children: C.NW.format(ev, { fileSize: (0, h.IC)(E.Ht, { useKibibytes: !0 }) })
+                                        children: C.NW.format(ev, { fileSize: (0, h.IC)(w.Ht, { useKibibytes: !0 }) })
                                     })
                                 ]
                             }),
                             (0, n.jsx)(d.hjN, {
                                 title: C.NW.string(C.t.gjdiKC),
-                                className: P.formItem,
+                                className: D.formItem,
                                 children: (0, n.jsx)(_, { stickerPreview: ex })
                             }),
                             (0, n.jsxs)(d.hjN, {
-                                className: s()(P.formItem, P.formItemRow),
+                                className: a()(D.formItem, D.formItemRow),
                                 children: [
                                     (0, n.jsx)(d.xJW, {
                                         title: ed ? C.NW.string(C.t.wp36s7) : C.NW.string(C.t.AM3mzc),
                                         required: !0,
-                                        className: P.formItemRowChild,
+                                        className: D.formItemRowChild,
                                         children: ed
                                             ? (0, n.jsx)(d.oil, {
                                                   disabled: !0,
-                                                  value: null != (D = null == G ? void 0 : G.filename) ? D : ''
+                                                  value: null != (Z = null == G ? void 0 : G.filename) ? Z : ''
                                               })
                                             : (0, n.jsx)(p.Z, {
                                                   buttonText: C.NW.string(C.t.xEnDUV),
@@ -283,7 +283,7 @@ function B(e) {
                                               })
                                     }),
                                     (0, n.jsx)(g.Z, {
-                                        className: P.formItemRowChild,
+                                        className: D.formItemRowChild,
                                         guildId: K,
                                         emojiId: $,
                                         emojiName: et,
@@ -296,7 +296,7 @@ function B(e) {
                             (0, n.jsx)(d.xJW, {
                                 title: C.NW.string(C.t['0VRh6u']),
                                 required: !0,
-                                className: P.formItem,
+                                className: D.formItem,
                                 children: (0, n.jsx)(d.oil, {
                                     value: X,
                                     onChange: J,
@@ -305,7 +305,7 @@ function B(e) {
                                 })
                             }),
                             (0, n.jsxs)('div', {
-                                className: P.formItem,
+                                className: D.formItem,
                                 children: [
                                     (0, n.jsxs)(d.vwX, {
                                         children: [
@@ -343,7 +343,7 @@ function B(e) {
                                                             {
                                                                 size: 'xs',
                                                                 color: 'currentColor',
-                                                                className: P.infoIcon
+                                                                className: D.infoIcon
                                                             },
                                                             e
                                                         )
@@ -359,17 +359,17 @@ function B(e) {
                                     })
                                 ]
                             }),
-                            null != ea &&
+                            null != er &&
                                 (0, n.jsx)(d.Text, {
-                                    className: P.formItem,
+                                    className: D.formItem,
                                     variant: 'text-sm/normal',
                                     color: 'text-danger',
-                                    children: ea.message
+                                    children: er.message
                                 })
                         ]
                     }),
                     (0, n.jsxs)(d.mzw, {
-                        className: P.modalFooter,
+                        className: D.modalFooter,
                         children: [
                             (0, n.jsx)(d.zxk, {
                                 type: 'submit',

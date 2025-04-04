@@ -31,7 +31,7 @@ var u = n(703656),
     g = n(578976),
     E = n(439170),
     b = n(981631);
-function v(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function v(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -82,7 +82,7 @@ function I(e, t) {
 }
 n(597688), n(328347), n(874703), n(52030);
 let S = (e) => {
-        s.Z.dispatch(y({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
+        s.Z.dispatch(v({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
     },
     T = (e) => {
         var { openInLayer: t = !0, tab: n } = e;
@@ -194,7 +194,7 @@ let S = (e) => {
             s.Z.dispatch({
                 type: 'COLLECTIBLES_CLAIM_SUCCESS',
                 skuId: e,
-                purchases: null === (t = n.body) || void 0 === t ? void 0 : t.map(h.Z.fromServer)
+                purchases: null == (t = n.body) ? void 0 : t.map(h.Z.fromServer)
             });
         } catch (n) {
             let t = new c.Hx(n);

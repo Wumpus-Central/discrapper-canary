@@ -79,14 +79,14 @@ let m = (0, c.isLinux)() ? d.HsE : (0, c.isMac)() ? d.REU : (0, c.isWindows)() ?
 let E = Object.freeze(a().invert(d.REU)),
     b = a().invert(d.iC$);
 (b['223'] = '`'), Object.freeze(b);
-let v = a().invert(null != m ? m : {});
-(0, c.isMac)() || (v['223'] = '`'), Object.freeze(v);
-let y = new Set([192, 220, 222, 223, 229]);
+let y = a().invert(null != m ? m : {});
+(0, c.isMac)() || (y['223'] = '`'), Object.freeze(y);
+let v = new Set([192, 220, 222, 223, 229]);
 function O(e) {
     return '+' === e ? 'plus' : e;
 }
 function I(e, t) {
-    if (!y.has(e)) return t;
+    if (!v.has(e)) return t;
     let n = (0, u.pz)().get('Backquote');
     if (t === n) return O(t);
     let r = (0, u.I7)({
@@ -116,7 +116,7 @@ function T(e) {
             t = i()(n);
             break;
         default:
-            t = v['' + n];
+            t = y['' + n];
     }
     return null != t ? t : null;
 }
@@ -250,7 +250,7 @@ function j(e) {
                 let [t, n, r] = e;
                 if (t === d.MoX.KEYBOARD_KEY || t === d.MoX.KEYBOARD_MODIFIER_KEY) {
                     var i;
-                    return null !== (i = N(null != r ? [t, n, r] : [t, n])) && void 0 !== i ? i : 'UNK'.concat(n);
+                    return null != (i = N(null != r ? [t, n, r] : [t, n])) ? i : 'UNK'.concat(n);
                 }
                 return t === d.MoX.MOUSE_BUTTON ? 'mouse'.concat(n) : t === d.MoX.GAMEPAD_BUTTON ? 'gamepad'.concat(n) : 'dev'.concat(t, ',').concat(n);
             })

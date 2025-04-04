@@ -65,7 +65,7 @@ function m(e, t) {
 function g(e, t, _) {
     if (d.isPlatformEmbedded)
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e('46746'), n.e('36371')]).then(n.bind(n, 60594));
+            let { default: t } = await Promise.all([n.e('46746'), n.e('24184')]).then(n.bind(n, 60594));
             return (n) =>
                 (0, r.jsx)(
                     t,
@@ -78,7 +78,7 @@ function g(e, t, _) {
     else {
         var h;
         let n = s.Z.getChannel(t),
-            r = (0, a.Z)(f.tI.PRESET_CUSTOM, f.LY.RESOLUTION_1080, f.ws.FPS_30, u.default.getCurrentUser(), null === (h = l.Z.getGuild(e)) || void 0 === h ? void 0 : h.premiumTier, n)
+            r = (0, a.Z)(f.tI.PRESET_CUSTOM, f.LY.RESOLUTION_1080, f.ws.FPS_30, u.default.getCurrentUser(), null == (h = l.Z.getGuild(e)) ? void 0 : h.premiumTier, n)
                 ? {
                       width: 1920,
                       height: 1080

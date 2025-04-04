@@ -20,7 +20,7 @@ class a {
             var e;
             let t = i.Z.channels();
             if (null == t) return new Set();
-            let n = (null !== (e = await t.getGuildIds()) && void 0 !== e ? e : []).filter((e) => null !== e && 'string' == typeof e);
+            let n = (null != (e = await t.getGuildIds()) ? e : []).filter((e) => null !== e && 'string' == typeof e);
             return new Set(n);
         } catch (e) {
             return o.warn("couldn't get guild ids", e), new Set();

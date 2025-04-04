@@ -1,16 +1,16 @@
 n.d(t, { Z: () => h });
 var r = n(200651),
     a = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     i = n(481060),
     o = n(487894),
     c = n(300234),
     d = n(388032),
     u = n(258033);
 function h(e) {
-    let { channel: t, threadIds: n, startThread: s, goToThread: h } = e,
-        m = a.useCallback(
+    let { channel: t, threadIds: n, startThread: l, goToThread: h } = e,
+        g = a.useCallback(
             (e) =>
                 (0, r.jsx)(
                     c.Z,
@@ -26,15 +26,15 @@ function h(e) {
         ? (0, r.jsx)(o.Z, {
               channel: t,
               header: d.NW.string(d.t.HgTQ8v),
-              startThread: s
+              startThread: l
           })
         : (0, r.jsx)(i.aVo, {
-              className: l()(u.list, u.activeThreadsList),
+              className: s()(u.list, u.activeThreadsList),
               fade: !0,
               sections: [n.length],
               sectionHeight: 0,
               rowHeight: 80,
-              renderRow: m,
+              renderRow: g,
               renderSection: () => null,
               chunkSize: 20
           });

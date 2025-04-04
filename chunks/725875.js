@@ -21,7 +21,7 @@ function g(e) {
                 })),
             [n]
         ),
-        N = i.useMemo(() => {
+        O = i.useMemo(() => {
             let e = {};
             for (let r of t)
                 if (r.channel_id in e) e[r.channel_id].webhooks.push(r);
@@ -35,7 +35,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        O = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 x() && (e === (null == f ? void 0 : f.id) ? o.Z.stopEditingWebhook() : o.Z.startEditingWebhook(e));
             },
@@ -43,7 +43,7 @@ function g(e) {
         );
     return (0, r.jsx)('div', {
         className: b.__invalid_list,
-        children: N.map((e) => {
+        children: O.map((e) => {
             let { channel: t, webhooks: n } = e;
             return (function (e) {
                 let { channel: t, webhooks: n, channelOptions: i, lastCreatedWebhookId: o, editedWebhook: g, errors: f, toggleWebhookExpand: h } = e;
@@ -106,7 +106,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: f,
                 errors: h,
-                toggleWebhookExpand: O
+                toggleWebhookExpand: N
             });
         })
     });

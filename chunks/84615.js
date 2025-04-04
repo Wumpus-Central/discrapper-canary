@@ -1,6 +1,6 @@
 n.d(t, {
     Ox: () => A,
-    QP: () => S,
+    QP: () => I,
     ob: () => R,
     q4: () => C
 }),
@@ -11,15 +11,15 @@ var r = n(200651),
     a = n.n(o),
     s = n(858863),
     l = n(5188),
-    c = n(15729),
+    c = n(230383),
     u = n(731965),
     d = n(477690),
     f = n(481060),
-    p = n(714338),
-    _ = n(624138),
+    _ = n(714338),
+    p = n(624138),
     h = n(314910),
     m = n(308569),
-    g = n(852915);
+    g = n(623876);
 function E(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,19 +61,19 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = (0, _.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
-    S = (0, c.U)((e) => ({
+let O = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
+    I = (0, c.U)((e) => ({
         fullScreenLayers: [],
         addLayer: (t) =>
             (0, u.j)(() => {
@@ -85,17 +85,17 @@ let O = (0, _.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
                 });
             })
     }));
-function I(e) {
+function S(e) {
     let { item: t } = e,
         n = i.useRef(null);
     return (
         (0, f.Tbt)(n),
         i.useEffect(
             () => (
-                p.Z.disable(),
-                t.key !== m.CV && p.Z.enableTemp(P(t.key)),
+                _.Z.disable(),
+                t.key !== m.CV && _.Z.enableTemp(P(t.key)),
                 () => {
-                    p.Z.disableTemp();
+                    _.Z.disableTemp();
                 }
             ),
             [t.key]
@@ -134,7 +134,7 @@ let T = {
 function A() {
     let { reducedMotion: e } = i.useContext(f.Sfi),
         t = e.enabled ? N : T,
-        n = S((e) => e.fullScreenLayers);
+        n = I((e) => e.fullScreenLayers);
     return (0, r.jsx)(s.Z, {
         children: n.map((e) =>
             (0, r.jsx)(
@@ -144,11 +144,11 @@ function A() {
                     timeout: O,
                     onEntered: () => {
                         (0, u.j)(() => {
-                            S.setState({ fullScreenLayers: n.map((t) => (t.key === e.key ? y(v({}, t), { transitionState: 2 }) : t)) });
+                            I.setState({ fullScreenLayers: n.map((t) => (t.key === e.key ? v(b({}, t), { transitionState: 2 }) : t)) });
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, r.jsx)(I, { item: e })
+                    children: (0, r.jsx)(S, { item: e })
                 },
                 e.key
             )
@@ -161,7 +161,7 @@ function C(e) {
         i = null != n ? n : a()();
     return (
         (0, u.j)(() => {
-            S.setState((t) => ({
+            I.setState((t) => ({
                 fullScreenLayers: [
                     ...t.fullScreenLayers,
                     {
@@ -178,7 +178,7 @@ function C(e) {
 }
 function R(e) {
     (0, u.j)(() => {
-        S.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
+        I.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });
 }
 function P(e) {

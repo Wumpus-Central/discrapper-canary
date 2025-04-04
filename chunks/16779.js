@@ -21,7 +21,7 @@ function _(e) {
     var t, n, a;
     let { activity: c } = e,
         { enabled: d } = o.c.useExperiment({ location: 'UserProfileActivityBadges' }, { autoTrackExposure: !0 }),
-        _ = null !== (a = null === (t = c.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : c.created_at;
+        _ = null != (a = null == (t = c.timestamps) ? void 0 : t.start) ? a : c.created_at;
     if (null == _ || (0, u.Z)(c)) return null;
     let p = f(c, d);
     return (0, r.jsxs)(s.m7, {
@@ -33,7 +33,7 @@ function _(e) {
             (0, r.jsx)(l.x3, {
                 entry: {
                     start: _,
-                    end: null === (n = c.timestamps) || void 0 === n ? void 0 : n.end
+                    end: null == (n = c.timestamps) ? void 0 : n.end
                 },
                 textColor: 'text-positive',
                 bold: !0
@@ -55,7 +55,7 @@ function p(e) {
 function h(e) {
     var t;
     let { activity: n } = e,
-        o = (0, c.ap)(null === (t = n.assets) || void 0 === t ? void 0 : t.large_text);
+        o = (0, c.ap)(null == (t = n.assets) ? void 0 : t.large_text);
     return null == o
         ? null
         : (0, r.jsx)(s.ej, {

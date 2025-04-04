@@ -46,10 +46,10 @@ function d(e) {
     let i = null != t ? s.default.age(t) : 0;
     return e.filter((e) => {
         var t;
-        return i > (null !== (t = c[e]) && void 0 !== t ? t : u);
+        return i > (null != (t = c[e]) ? t : u);
     });
 }
 function f(e) {
     var t;
-    return !l.Z.newUserMinAgeRequiredOverridden && (null != o.default.getId() ? s.default.age(o.default.getId()) : 0) < (null !== (t = c[e]) && void 0 !== t ? t : u);
+    return !l.Z.newUserMinAgeRequiredOverridden && (null != o.default.getId() ? s.default.age(o.default.getId()) : 0) < (null != (t = c[e]) ? t : u);
 }

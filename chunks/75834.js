@@ -44,7 +44,7 @@ function l(e, t) {
             );
         return 0 !== r ? r : c(t.rootedPath, e.rootedPath);
     });
-    let u = null !== (n = l.find((e) => null != e.application.windowHandle)) && void 0 !== n ? n : l[0];
+    let u = null != (n = l.find((e) => null != e.application.windowHandle)) ? n : l[0];
     return null == u ? null : u.application;
 }
 function c(e, t) {

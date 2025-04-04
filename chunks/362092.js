@@ -25,8 +25,8 @@ function l(e) {
     return e.toLowerCase() in o;
 }
 function c(e) {
-    let t;
-    let n = [],
+    let t,
+        n = [],
         r = /\\|```/g;
     for (; null != (t = r.exec(e)); ) {
         if ('\\' === t[0]) {

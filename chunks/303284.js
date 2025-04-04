@@ -43,8 +43,8 @@ function d() {
     return u(
         {
             channelId: null != t ? t : void 0,
-            mediaSessionId: null !== (e = a.Z.getMediaSessionId()) && void 0 !== e ? e : void 0,
-            rtcConnectionId: a.Z.getRTCConnectionId(),
+            mediaSessionId: null != (e = a.ZP.getMediaSessionId()) ? e : void 0,
+            rtcConnectionId: a.ZP.getRTCConnectionId(),
             mediaContext: r.Yn.DEFAULT
         },
         _()
@@ -57,7 +57,7 @@ function f(e) {
     return u(
         {
             channelId: n,
-            mediaSessionId: null !== (t = null == o ? void 0 : o.getMediaSessionId()) && void 0 !== t ? t : void 0,
+            mediaSessionId: null != (t = null == o ? void 0 : o.getMediaSessionId()) ? t : void 0,
             rtcConnectionId: null == o ? void 0 : o.getRTCConnectionId(),
             mediaContext: r.Yn.STREAM,
             streamKey: e
@@ -68,8 +68,8 @@ function f(e) {
 function _() {
     var e, t, n;
     return {
-        videoDeviceName: null === (e = o.Z.getVideoDevices()[o.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
-        audioInputDeviceName: null === (t = o.Z.getInputDevices()[o.Z.getInputDeviceId()]) || void 0 === t ? void 0 : t.name,
-        audioOutputDeviceName: null === (n = o.Z.getOutputDevices()[o.Z.getOutputDeviceId()]) || void 0 === n ? void 0 : n.name
+        videoDeviceName: null == (e = o.Z.getVideoDevices()[o.Z.getVideoDeviceId()]) ? void 0 : e.name,
+        audioInputDeviceName: null == (t = o.Z.getInputDevices()[o.Z.getInputDeviceId()]) ? void 0 : t.name,
+        audioOutputDeviceName: null == (n = o.Z.getOutputDevices()[o.Z.getOutputDeviceId()]) ? void 0 : n.name
     };
 }

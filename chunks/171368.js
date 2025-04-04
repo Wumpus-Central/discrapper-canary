@@ -25,7 +25,7 @@ let f = (0, i.pxk)(i.EFr.SIZE_120),
             }
     };
 async function h(e) {
-    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: _, subsection: h, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: b, appContext: v, customStatusPrompt: y = null } = e,
+    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: _, subsection: h, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: b, appContext: y, customStatusPrompt: v = null } = e,
         O = c.default.getUser(t);
     p(t),
         null == O
@@ -55,14 +55,14 @@ async function h(e) {
             messageId: null != i ? i : void 0,
             roleId: null != s ? s : void 0,
             sessionId: null != l ? l : void 0,
-            customStatusPrompt: y,
+            customStatusPrompt: v,
             section: _,
             subsection: h,
             friendToken: m,
             showGuildProfile: g,
             analyticsLocation: E,
             sourceAnalyticsLocations: b,
-            appContext: v
+            appContext: y
         });
 }
 function m() {

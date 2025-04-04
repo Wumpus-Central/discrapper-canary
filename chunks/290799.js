@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(63063),
     c = n(981631),
     u = n(388032),
-    d = n(27768);
+    d = n(388272);
 let f = [
         {
             getQuestion: () => u.NW.string(u.t.C4J8UF),
@@ -26,7 +26,7 @@ let f = [
             getAnswer: () => u.NW.string(u.t['+OURPj'])
         }
     ],
-    p = function (e) {
+    _ = function (e) {
         let { className: t } = e,
             [n, o] = i.useState(null);
         return (0, r.jsxs)('div', {

@@ -1,7 +1,7 @@
 n.d(t, {
     GV: () => E,
-    Po: () => p,
-    Sg: () => _,
+    Po: () => _,
+    Sg: () => p,
     VP: () => m,
     dh: () => g,
     g7: () => h
@@ -18,8 +18,8 @@ var r = n(512722),
     u = n(174212),
     d = n(895924),
     f = n(981631);
-function p(e) {
-    let { channelId: t, command: n, section: r, location: o, initialValues: s, triggerSection: l, queryLength: c, sectionName: u, query: f, searchResultsPosition: p, source: _, commandOrigin: h } = e;
+function _(e) {
+    let { channelId: t, command: n, section: r, location: o, initialValues: s, triggerSection: l, queryLength: c, sectionName: u, query: f, searchResultsPosition: _, source: p, commandOrigin: h } = e;
     null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'),
         a.Z.dispatch({
             type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
@@ -32,12 +32,12 @@ function p(e) {
             queryLength: c,
             sectionName: u,
             query: f,
-            searchResultsPosition: p,
-            source: _,
+            searchResultsPosition: _,
+            source: p,
             commandOrigin: h
         });
 }
-function _(e, t) {
+function p(e, t) {
     a.Z.dispatch({
         type: 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
         channelId: e,
@@ -72,36 +72,36 @@ function g(e, t, n, r) {
 function E(e, t, n) {
     var r;
     i()(null != t.autocomplete, 'Missing autocomplete context');
-    let { query: d, name: p } = t.autocomplete,
-        _ = c.default.fromTimestamp(Date.now());
-    if (null != t.channel)
-        a.Z.dispatch({
+    let { query: d, name: _ } = t.autocomplete,
+        p = c.default.fromTimestamp(Date.now());
+    null != t.channel &&
+        (a.Z.dispatch({
             type: 'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST',
-            nonce: _,
+            nonce: p,
             channelId: t.channel.id,
             query: d,
-            name: p
+            name: _
         }),
-            null == u.Z.getAutocompleteChoices(t.channel.id, p, d) &&
-                o.tn
-                    .post({
-                        url: f.ANM.INTERACTIONS,
-                        body: {
-                            type: s.B8.APPLICATION_COMMAND_AUTOCOMPLETE,
-                            application_id: e.applicationId,
-                            guild_id: null === (r = t.guild) || void 0 === r ? void 0 : r.id,
-                            channel_id: t.channel.id,
-                            session_id: l.default.getSessionId(),
-                            data: n,
-                            nonce: _
-                        },
-                        timeout: 3000,
-                        rejectWithError: !0
-                    })
-                    .catch(() => {
-                        a.Z.dispatch({
-                            type: 'INTERACTION_FAILURE',
-                            nonce: _
-                        });
+        null == u.Z.getAutocompleteChoices(t.channel.id, _, d) &&
+            o.tn
+                .post({
+                    url: f.ANM.INTERACTIONS,
+                    body: {
+                        type: s.B8.APPLICATION_COMMAND_AUTOCOMPLETE,
+                        application_id: e.applicationId,
+                        guild_id: null == (r = t.guild) ? void 0 : r.id,
+                        channel_id: t.channel.id,
+                        session_id: l.default.getSessionId(),
+                        data: n,
+                        nonce: p
+                    },
+                    timeout: 3000,
+                    rejectWithError: !0
+                })
+                .catch(() => {
+                    a.Z.dispatch({
+                        type: 'INTERACTION_FAILURE',
+                        nonce: p
                     });
+                }));
 }

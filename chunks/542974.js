@@ -19,8 +19,8 @@ class o extends r.Z {
         return new o({
             planId: e.plan_id,
             countryCode: e.country_code,
-            amount: null === (t = e.price) || void 0 === t ? void 0 : t.amount,
-            currency: null === (n = e.price) || void 0 === n ? void 0 : n.currency,
+            amount: null == (t = e.price) ? void 0 : t.amount,
+            currency: null == (n = e.price) ? void 0 : n.currency,
             paymentSourceTypes: e.payment_source_types
         });
     }

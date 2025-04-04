@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(663507),
     l = n(84735),
     c = n(562701),
-    u = n(676793);
+    u = n(830424);
 function d(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,19 +82,19 @@ function m(e, t) {
 function g(e, t, n) {
     let o = (0, c.G6)(e),
         d = new Map(),
-        p = new n((e) => {
+        _ = new n((e) => {
             e.forEach((e) => {
                 var t;
                 let { target: n } = e;
-                null === (t = d.get(n)) || void 0 === t || t(e);
+                null == (t = d.get(n)) || t(e);
             });
         });
     return (0, i.forwardRef)(function (n, m) {
         var g,
-            { onScroll: E, dir: v = 'ltr', sections: b, columns: y, getItemKey: O, getItemHeight: S, getSectionHeight: I, chunkSize: T, renderSection: N, renderItem: A, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: x, paddingHorizontal: L, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
-            Z = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
-        let F = i.useRef(null),
-            V = i.useRef(null),
+            { onScroll: E, dir: b = 'ltr', sections: y, columns: v, getItemKey: O, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: N, renderItem: A, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
+            F = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
+        let V = i.useRef(null),
+            Z = i.useRef(null),
             H = i.useRef({}),
             [W, Y] = i.useState(!1),
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, c.T4)();
@@ -103,7 +103,7 @@ function g(e, t, n) {
             className: k,
             specs: o,
             orientation: 'vertical',
-            dir: v
+            dir: b
         });
         let {
             forceUpdateOnChunkChange: Q,
@@ -114,20 +114,20 @@ function g(e, t, n) {
             forceUpdate: et,
             masonryComputer: en
         } = (0, c.QB)({
-            sections: b,
-            columns: y,
+            sections: y,
+            columns: v,
             getItemKey: O,
-            getItemHeight: S,
-            getSectionHeight: I,
+            getItemHeight: I,
+            getSectionHeight: S,
             chunkSize: T,
             itemGutter: R,
             removeEdgeItemGutters: P,
             sectionGutter: w,
             padding: D,
-            paddingVertical: x,
-            paddingHorizontal: L,
+            paddingVertical: L,
+            paddingHorizontal: x,
             getScrollerState: q,
-            dir: v,
+            dir: b,
             maxBufferWidth: U
         });
         i.useEffect(() => {
@@ -148,7 +148,7 @@ function g(e, t, n) {
             ref: K,
             key: 'container',
             onUpdate: es,
-            resizeObserver: p,
+            resizeObserver: _,
             listenerMap: d
         }),
             (0, i.useImperativeHandle)(
@@ -168,9 +168,9 @@ function g(e, t, n) {
         let el = (0, i.useCallback)(
             (e) => {
                 er(1),
-                    null == F.current ? Y(!0) : clearTimeout(F.current),
-                    (F.current = setTimeout(() => {
-                        (F.current = null), Y(!1);
+                    null == V.current ? Y(!0) : clearTimeout(V.current),
+                    (V.current = setTimeout(() => {
+                        (V.current = null), Y(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -182,7 +182,7 @@ function g(e, t, n) {
             }, [ee, z]),
             (0, r.jsxs)(
                 'div',
-                _(
+                p(
                     f(
                         {
                             ref: K,
@@ -194,19 +194,19 @@ function g(e, t, n) {
                             }),
                             style: (0, c.uT)(j)
                         },
-                        Z
+                        F
                     ),
                     {
                         children: [
-                            null !== (g = null == G ? void 0 : G(ee)) && void 0 !== g ? g : null,
+                            null != (g = null == G ? void 0 : G(ee)) ? g : null,
                             (0, i.useMemo)(
                                 () =>
                                     (0, r.jsx)(l.J, {
-                                        containerRef: V,
+                                        containerRef: Z,
                                         children: (0, r.jsx)('div', {
                                             style: { height: ee },
                                             className: u.content,
-                                            ref: V,
+                                            ref: Z,
                                             children: Object.keys($).map((e) => {
                                                 var t;
                                                 let n = (0, c.t$)(e),
@@ -217,8 +217,8 @@ function g(e, t, n) {
                                                 return null != i && null != o
                                                     ? (0, r.jsxs)(
                                                           'div',
-                                                          _(f({}, s), {
-                                                              style: f({}, i, null !== (t = null == s ? void 0 : s.style) && void 0 !== t ? t : {}),
+                                                          p(f({}, s), {
+                                                              style: f({}, i, null != (t = null == s ? void 0 : s.style) ? t : {}),
                                                               children: [
                                                                   null != N && null != a && N(n, a, e),
                                                                   o.map((e) => {

@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => p,
+    H: () => _,
     w: () => d
 });
 var r = n(192379),
@@ -37,11 +37,11 @@ function d(e, t, n) {
         }, [e]);
 }
 let f = [];
-function p(e, t) {
+function _(e, t) {
     let n = (0, i.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
         o = (0, i.e7)([s.Z], () => {
             var e;
-            return null != n && null !== (e = s.Z.getForSku(n.skuId)) && void 0 !== e ? e : f;
+            return null != n && null != (e = s.Z.getForSku(n.skuId)) ? e : f;
         }),
         c = r.useMemo(
             () =>

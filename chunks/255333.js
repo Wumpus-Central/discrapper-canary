@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => _,
-    Z: () => y
+    Z: () => v
 });
 var r,
     i = n(31775),
@@ -68,15 +68,15 @@ function p(e) {
     return 'applicationId:'.concat(t, ' guildId:').concat(n, ' page:').concat(r);
 }
 let h = new (o())({ max: f }),
-    g = {};
-function m(e) {
+    m = {};
+function g(e) {
     let { applicationId: t, guildId: n, page: r } = e,
         i = p({
             applicationId: t,
             guildId: n,
             page: r
         });
-    g = d(c({}, g), { [i]: 1 });
+    m = d(c({}, m), { [i]: 1 });
 }
 function E(e) {
     let { applicationId: t, guildId: n, similarApplications: r, loadId: i, page: o, totalPages: a } = e,
@@ -92,18 +92,18 @@ function E(e) {
         page: o,
         totalPages: a
     }),
-        (g = d(c({}, g), { [s]: 2 }));
+        (m = d(c({}, m), { [s]: 2 }));
 }
-function v(e) {
+function b(e) {
     let { applicationId: t, guildId: n, page: r } = e,
         i = p({
             applicationId: t,
             guildId: n,
             page: r
         });
-    g = d(c({}, g), { [i]: 3 });
+    m = d(c({}, m), { [i]: 3 });
 }
-class b extends (r = a.ZP.Store) {
+class y extends (r = a.ZP.Store) {
     getSimilarApplications(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null == t) return;
@@ -117,7 +117,7 @@ class b extends (r = a.ZP.Store) {
     getFetchState(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null != t)
-            return g[
+            return m[
                 p({
                     applicationId: t,
                     guildId: n,
@@ -126,9 +126,9 @@ class b extends (r = a.ZP.Store) {
             ];
     }
 }
-l(b, 'displayName', 'ApplicationDirectorySimilarApplicationsStore');
-let y = new b(s.Z, {
-    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: m,
+l(y, 'displayName', 'ApplicationDirectorySimilarApplicationsStore');
+let v = new y(s.Z, {
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: g,
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: E,
-    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: v
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: b
 });

@@ -27,14 +27,14 @@ class l extends r.Z {
     }
     destroyStreams() {
         var e;
-        this.audio.destroy(), this.video.destroy(), null === (e = this.desktop) || void 0 === e || e.destroy();
+        this.audio.destroy(), this.video.destroy(), null == (e = this.desktop) || e.destroy();
     }
     setDesktop(e) {
         this.destroyStreams(), null == e || e.addListener('desktopsourceend', this.handleDesktopSourceEnd), null == e || e.addListener('speaking', this.handleSpeaking), (this.desktop = e), this.mergeStreams();
     }
     reset() {
         var e;
-        this.audio.reset(), null === (e = this.desktop) || void 0 === e || e.reset();
+        this.audio.reset(), null == (e = this.desktop) || e.reset();
     }
     getVideoStream() {
         return null != this.desktop ? this.desktop.stream : this.video.stream;
@@ -93,7 +93,7 @@ class l extends r.Z {
             a(this, 'mergeStreams', () => {
                 var e, t, n;
                 let r = new MediaStream();
-                return null != this.desktop ? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null === (t = this.audio.stream) || void 0 === t || t.getAudioTracks().forEach((e) => r.addTrack(e)), null === (n = this.video.stream) || void 0 === n || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r;
+                return null != this.desktop ? (null == (e = this.desktop.stream) || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null == (t = this.audio.stream) || t.getAudioTracks().forEach((e) => r.addTrack(e)), null == (n = this.video.stream) || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r;
             }),
             a(this, 'handleVoiceActivity', (e) => {
                 this.emit('voiceactivity', e);

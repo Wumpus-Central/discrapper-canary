@@ -16,8 +16,8 @@ function f(e) {
         f = (0, c.dQu)(p).spring({ opacity: 0 }),
         h = (0, c.dQu)(p).spring({ opacity: 0.1 }),
         m = (0, c.dQu)(p).spring({ opacity: 0 }),
-        b = (0, c.dQu)(p).spring({ opacity: 1 }),
-        [g, E] = (0, c.q_F)(
+        g = (0, c.dQu)(p).spring({ opacity: 1 }),
+        [b, E] = (0, c.q_F)(
             () => ({
                 from: {
                     backgroundColor: f,
@@ -32,7 +32,7 @@ function f(e) {
                 e.finished && (null == o || o());
             },
             endColor: m,
-            targetBorderColor: b,
+            targetBorderColor: g,
             targetColor: h,
             animationDelay: u
         },
@@ -88,7 +88,7 @@ function f(e) {
                 });
         }, [E]),
         (0, r.jsx)(s.animated.div, {
-            style: g,
+            style: b,
             className: l()(_.settingsItemHighlight, n),
             children: t
         })

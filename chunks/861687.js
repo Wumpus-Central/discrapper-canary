@@ -378,7 +378,7 @@ class eb extends d.Z {
                     })
                 ),
                 (this._encountered_socket_failure = !0)),
-            L.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null == (l = this._connection) || l.wasRemoteDisconnected());
+            L.ZP.getRemoteDisconnectVoiceChannelId() === this.channelId && (null == (l = this._connection) || l.wasRemoteDisconnected());
         let C = 'Force Close' !== r;
         if (C) {
             let e = this._backoff.fail(this.reconnect);

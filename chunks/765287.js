@@ -13,6 +13,6 @@ function d(e, t) {
     let _ = (0, o.O_)('resolveTheme') ? u.yW : u.Q5;
     if (i.Z.syncForcedColors && 'active' === i.Z.systemForcedColors && e !== u.zd.NO_PREFERENCE) return e;
     if (s.ZP.useSystemTheme === u.KW.ON && e !== u.zd.NO_PREFERENCE) return t[e];
-    let p = null === (n = a.Z.getAppearanceSettings()) || void 0 === n ? void 0 : n.theme;
-    return null != p ? p : _[null !== (f = null === (d = l.Z.settings.appearance) || void 0 === d ? void 0 : d.theme) && void 0 !== f ? f : r.Q2.UNSET];
+    let p = null == (n = a.Z.getAppearanceSettings()) ? void 0 : n.theme;
+    return null != p ? p : _[null != (f = null == (d = l.Z.settings.appearance) ? void 0 : d.theme) ? f : r.Q2.UNSET];
 }

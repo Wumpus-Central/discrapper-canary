@@ -1,7 +1,7 @@
 n.d(t, {
     EI: () => m,
     default: () => g,
-    hz: () => v
+    hz: () => b
 });
 var r = n(512722),
     i = n.n(r),
@@ -13,18 +13,18 @@ var r = n(512722),
     u = n(819553),
     d = n(679240),
     f = n(981631),
-    p = n(176505);
-let _ = {};
+    _ = n(176505);
+let p = {};
 function h(e) {
     var t;
-    null === (t = _[e]) || void 0 === t || t.call(_), (_[e] = null);
+    null == (t = p[e]) || t.call(p), (p[e] = null);
 }
 function m(e) {
-    _[e] = null;
+    p[e] = null;
 }
 async function g(e) {
     let { guildId: t, returnChannelId: n, isPreview: r = !1 } = e;
-    (0, o.pTH)(), i()(null == _[t], 'should not double-join guilds');
+    (0, o.pTH)(), i()(null == p[t], 'should not double-join guilds');
     let l = await (0, a.V)(t);
     if (l.hasFeature(f.oNc.COMMUNITY)) {
         if (r) (0, c.I1)(t);
@@ -37,13 +37,13 @@ async function g(e) {
 }
 function E(e) {
     return new Promise((t) => {
-        (_[e] = t),
+        (p[e] = t),
             (0, d.x)(e).then(() => {
                 h(e), l.Z.finishOnboarding(e);
             }),
-            (0, s.uL)(f.Z5c.CHANNEL(e, p.oC.GUILD_ONBOARDING));
+            (0, s.uL)(f.Z5c.CHANNEL(e, _.oC.GUILD_ONBOARDING));
     });
 }
-function v(e) {
-    return null != _[e];
+function b(e) {
+    return null != p[e];
 }

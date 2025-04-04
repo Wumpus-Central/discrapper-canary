@@ -5,9 +5,9 @@ var r = n(192379),
     a = n(125988),
     s = n(287008);
 function l(e) {
-    let { user: t, guildId: n, size: l, showPending: c = !1, showTryItOut: u = !1, animateOnHover: d = !1, avatarDecorationOverride: f, avatarOverride: p } = e,
+    let { user: t, guildId: n, size: l, showPending: c = !1, showTryItOut: u = !1, animateOnHover: d = !1, avatarDecorationOverride: f, avatarOverride: _ } = e,
         {
-            avatarSrc: _,
+            avatarSrc: p,
             isAvatarAnimating: h,
             eventHandlers: m
         } = (0, s.Z)({
@@ -16,12 +16,12 @@ function l(e) {
             size: (0, i.pxk)(l),
             showPending: c,
             animateOnHover: d,
-            avatarOverride: p
+            avatarOverride: _
         }),
         {
             avatarPlaceholderSrc: g,
             avatarDecorationSrc: E,
-            eventHandlers: v
+            eventHandlers: b
         } = (0, a.Z)({
             user: t,
             guildId: null != n ? n : void 0,
@@ -34,15 +34,15 @@ function l(e) {
     return {
         avatarPlaceholderSrc: g,
         avatarDecorationSrc: E,
-        avatarSrc: _,
+        avatarSrc: p,
         isAnimating: h,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {
-                m.onMouseEnter(), v.onMouseEnter();
-            }, [m, v]),
+                m.onMouseEnter(), b.onMouseEnter();
+            }, [m, b]),
             onMouseLeave: r.useCallback(() => {
-                m.onMouseLeave(), v.onMouseLeave();
-            }, [m, v])
+                m.onMouseLeave(), b.onMouseLeave();
+            }, [m, b])
         }
     };
 }

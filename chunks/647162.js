@@ -1,6 +1,6 @@
 n.d(t, {
-    KV: () => _,
-    PY: () => p,
+    KV: () => p,
+    PY: () => _,
     Wo: () => h,
     iy: () => E,
     yp: () => m
@@ -18,10 +18,10 @@ var r = n(763472),
     u = n(616922),
     d = n(981631);
 let f = 30 * a.Z.Millis.SECOND;
-function p(e) {
+function _(e) {
     return null != e.getActiveSocketAndDevice() || l.Z.isProtocolRegistered();
 }
-function _() {
+function p() {
     let e = c.Z.getActiveSocketAndDevice();
     if (null != e) return Promise.resolve(e);
     if (!l.Z.isProtocolRegistered()) return Promise.reject(Error('protocol is not registered'));
@@ -79,7 +79,7 @@ function g(e) {
 async function E(e, t) {
     var n;
     let i = await (0, r.sd)(e, t),
-        o = (0, u.c8)(g(null !== (n = i.type) && void 0 !== n ? n : u.Hw.TRACK));
+        o = (0, u.c8)(g(null != (n = i.type) ? n : u.Hw.TRACK));
     if (null === o) throw Error('invalid type '.concat(i.type));
     return {
         context_uri: 'string' == typeof i.context_uri ? i.context_uri : void 0,

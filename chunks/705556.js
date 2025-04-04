@@ -10,8 +10,8 @@ var i = n(442837),
     u = n(785717),
     d = n(475413),
     f = n(388032),
-    p = n(144795);
-function _(e, t, n) {
+    _ = n(206435);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,35 +35,35 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
 function m(e) {
-    let { user: t, guildId: n, fullWidth: _, appContext: m, onClose: g } = e,
+    let { user: t, guildId: n, fullWidth: p, appContext: m, onClose: g } = e,
         E = (0, i.e7)([l.default], () => l.default.getId() === t.id),
-        v = (0, i.e7)([c.Z], () => (null != n ? c.Z.getGuild(n) : null)),
-        b = (0, s.Z)({ guild: v }),
-        y = (0, s.Z)({}),
+        b = (0, i.e7)([c.Z], () => (null != n ? c.Z.getGuild(n) : null)),
+        y = (0, s.Z)({ guild: b }),
+        v = (0, s.Z)({}),
         { trackUserProfileAction: O } = (0, u.KZ)();
     return E
-        ? null == v
+        ? null == b
             ? (0, r.jsx)(d.tG, {
                   action: 'EDIT_PROFILE',
                   text: f.NW.string(f.t.s5vZlZ),
                   icon: o.vdY,
                   autoFocus: !0,
-                  fullWidth: _,
+                  fullWidth: p,
                   onClick: () => {
-                      null == g || g(), y(), (0, a.i)(m);
+                      null == g || g(), v(), (0, a.i)(m);
                   }
               })
             : (0, r.jsx)(o.yRy, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (0, r.jsxs)(o.v2r, {
-                          className: p.popoutMenu,
+                          className: _.popoutMenu,
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
                           onClose: () => {
@@ -76,7 +76,7 @@ function m(e) {
                                   label: f.NW.string(f.t['PKQB/P']),
                                   subtext: f.NW.string(f.t.VYHWKC),
                                   action: () => {
-                                      O({ action: 'EDIT_GUILD_PROFILE' }), b(), (0, a.i)(m);
+                                      O({ action: 'EDIT_GUILD_PROFILE' }), y(), (0, a.i)(m);
                                   }
                               }),
                               (0, r.jsx)(o.sNh, {
@@ -84,7 +84,7 @@ function m(e) {
                                   label: f.NW.string(f.t.HmFaFB),
                                   subtext: f.NW.string(f.t['+EERMj']),
                                   action: () => {
-                                      O({ action: 'EDIT_PROFILE' }), y(), (0, a.i)(m);
+                                      O({ action: 'EDIT_PROFILE' }), v(), (0, a.i)(m);
                                   }
                               })
                           ]
@@ -98,7 +98,7 @@ function m(e) {
                                   text: f.NW.string(f.t.s5vZlZ),
                                   icon: o.vdY,
                                   autoFocus: !0,
-                                  fullWidth: _
+                                  fullWidth: p
                               },
                               e
                           )

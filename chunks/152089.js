@@ -1,7 +1,7 @@
 n.d(t, {
     FW: () => u,
     fZ: () => f,
-    py: () => p
+    py: () => _
 }),
     n(47120),
     n(411104);
@@ -14,8 +14,8 @@ var r = n(911969),
     c = n(185923);
 function u(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: a = !0, canMentionRoles: s = !0, canMentionChannels: c = !0, canMentionEveryone: u, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: p, canSendStickers: _, canSendSoundmoji: h, hideMentionDescription: m, hidePersonalInformation: g, type: E, emojiIntention: v, editorRef: b, onSendMessage: y, onSendSticker: O, setValue: S } = e,
-        I = {
+    let { activeCommandOption: n, canMentionUsers: a = !0, canMentionRoles: s = !0, canMentionChannels: c = !0, canMentionEveryone: u, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: _, canSendStickers: p, canSendSoundmoji: h, hideMentionDescription: m, hidePersonalInformation: g, type: E, emojiIntention: b, editorRef: y, onSendMessage: v, onSendSticker: O, setValue: I } = e,
+        S = {
             mentions: {
                 channel: l.nS.DENY,
                 global: l.VV.DENY,
@@ -24,32 +24,32 @@ function u(e) {
                 clyde: l.cz.DENY
             },
             commands: l.L8.DISABLED,
-            allowStickers: !0 === _,
+            allowStickers: !0 === p,
             allowSoundmoji: !0 === h,
             forNonStringCommandOption: null != n && n.type !== r.jw.STRING,
             hideMentionDescription: !0 === m,
             hidePersonalInformation: !0 === g,
             chatInputType: E,
-            emojiIntention: v,
-            sendMessage: y,
+            emojiIntention: b,
+            sendMessage: v,
             sendSticker: O,
             insertText: (e, t) => {
                 var n;
-                null === (n = b.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e);
+                null == (n = y.current) || n.insertAutocomplete(e, null != t ? t : e);
             },
             replaceText: (e, t) => {
-                S(e, null != t ? t : (0, o.JM)(e));
+                I(e, null != t ? t : (0, o.JM)(e));
             },
             getCommandOptionValues: () => {
                 var e;
-                return null === (e = b.current) || void 0 === e ? void 0 : e.getCommandOptionValues();
+                return null == (e = y.current) ? void 0 : e.getCommandOptionValues();
             }
         };
     if (null != n) {
         let e = (0, i.$z)(n);
-        e.canMentionChannels && (I.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (I.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (I.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (I.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (I.hideMentionDescription = !0);
-    } else c && (I.mentions.channel = l.nS.ALLOW_SELECTABLE), s && (I.mentions.role = l.Fw.ALLOW_MENTIONABLE), a && (I.mentions.user = l.h3.ALLOW_CHANNEL), u && (I.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (I.mentions.clyde = l.cz.ALLOW);
-    return (null === (t = E.commands) || void 0 === t ? void 0 : t.enabled) && (f ? (I.commands = p ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (I.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (I.allowedChannelTypes = n.channelTypes), I;
+        e.canMentionChannels && (S.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (S.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (S.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (S.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (S.hideMentionDescription = !0);
+    } else c && (S.mentions.channel = l.nS.ALLOW_SELECTABLE), s && (S.mentions.role = l.Fw.ALLOW_MENTIONABLE), a && (S.mentions.user = l.h3.ALLOW_CHANNEL), u && (S.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (S.mentions.clyde = l.cz.ALLOW);
+    return (null == (t = E.commands) ? void 0 : t.enabled) && (f ? (S.commands = _ ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (S.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (S.allowedChannelTypes = n.channelTypes), S;
 }
 function d(e) {
     let { type: t, channel: n, guild: r, query: i, isAtStart: o, options: a } = e,
@@ -58,14 +58,14 @@ function d(e) {
         if (!i.startsWith(l.sentinel)) return !1;
         i = i.substring(l.sentinel.length);
     }
-    return !!(null == l.matches || l.matches(n, r, i, o, a));
+    return null == l.matches || !!l.matches(n, r, i, o, a);
 }
 function f(e) {
     let { channel: t, guild: n, options: r, currentWord: i, currentWordIsAtStart: o, textValue: u, optionText: f } = e,
-        p = null;
+        _ = null;
     for (let e of s.R) {
-        var _, h, m, g, E, v;
-        let b = s.W[e];
+        var p, h, m, g, E, b;
+        let y = s.W[e];
         if (e === l.eq.GIFS || e === l.eq.CHOICES) {
             if (r.commands === l.L8.OLD_BUILT_INS) {
                 if (
@@ -78,9 +78,9 @@ function f(e) {
                         options: r
                     })
                 ) {
-                    p = {
+                    _ = {
                         type: e,
-                        typeInfo: b,
+                        typeInfo: y,
                         query: u
                     };
                     break;
@@ -97,7 +97,7 @@ function f(e) {
             )
                 return {
                     type: e,
-                    typeInfo: b,
+                    typeInfo: y,
                     query: f
                 };
         } else if (e === l.eq.STICKERS) {
@@ -113,7 +113,7 @@ function f(e) {
             )
                 return {
                     type: e,
-                    typeInfo: b,
+                    typeInfo: y,
                     query: f
                 };
         } else if (e === l.eq.COMMANDS && r.commands !== l.L8.OLD_BUILT_INS) {
@@ -127,10 +127,10 @@ function f(e) {
                     options: r
                 })
             ) {
-                p = {
+                _ = {
                     type: e,
-                    typeInfo: b,
-                    query: u.substring(null !== (h = null === (_ = b.sentinel) || void 0 === _ ? void 0 : _.length) && void 0 !== h ? h : 0)
+                    typeInfo: y,
+                    query: u.substring(null != (h = null == (p = y.sentinel) ? void 0 : p.length) ? h : 0)
                 };
                 break;
             }
@@ -145,9 +145,9 @@ function f(e) {
                     options: r
                 })
             ) {
-                p = {
+                _ = {
                     type: e,
-                    typeInfo: b,
+                    typeInfo: y,
                     query: u
                 };
                 break;
@@ -165,10 +165,10 @@ function f(e) {
                         options: r
                     }))
             ) {
-                p = {
+                _ = {
                     type: e,
-                    typeInfo: b,
-                    query: i.substring(null !== (g = null === (m = b.sentinel) || void 0 === m ? void 0 : m.length) && void 0 !== g ? g : 0)
+                    typeInfo: y,
+                    query: i.substring(null != (g = null == (m = y.sentinel) ? void 0 : m.length) ? g : 0)
                 };
                 break;
             }
@@ -183,17 +183,17 @@ function f(e) {
                 options: r
             })
         ) {
-            p = {
+            _ = {
                 type: e,
-                typeInfo: b,
-                query: i.substring(null !== (v = null === (E = b.sentinel) || void 0 === E ? void 0 : E.length) && void 0 !== v ? v : 0)
+                typeInfo: y,
+                query: i.substring(null != (b = null == (E = y.sentinel) ? void 0 : E.length) ? b : 0)
             };
             break;
         }
     }
-    return null == p ? null : ((p.query = p.query.toLocaleLowerCase()), p);
+    return null == _ ? null : ((_.query = _.query.toLocaleLowerCase()), _);
 }
-function p(e, t) {
+function _(e, t) {
     let n;
     if (null == t || null == e) return null;
     if (null != e.choices || e.autocomplete) n = l.eq.CHOICES;

@@ -30,12 +30,12 @@ class o {
             i(this, 'getFilterTagIdsAnalytics', () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : [])),
             i(this, 'getSortOrderAnalytics', (e) => {
                 var t, n;
-                return null !== (n = this.sortOrder) && void 0 !== n ? n : null === (t = r.Z.getChannel(e)) || void 0 === t ? void 0 : t.getDefaultSortOrder();
+                return null != (n = this.sortOrder) ? n : null == (t = r.Z.getChannel(e)) ? void 0 : t.getDefaultSortOrder();
             }),
             i(this, 'getLayoutAnalytics', (e) => {
                 var t;
                 let n = r.Z.getChannel(e);
-                return null !== (t = this.layout) && void 0 !== t ? t : null == n ? void 0 : n.getDefaultLayout();
+                return null != (t = this.layout) ? t : null == n ? void 0 : n.getDefaultLayout();
             });
     }
 }

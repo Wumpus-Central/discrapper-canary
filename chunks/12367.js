@@ -8,23 +8,23 @@ var r = n(566885),
     u = n(908355),
     d = n(536524),
     f = n(192291).aTypedArrayConstructor,
-    p = n(165915);
+    _ = n(165915);
 e.exports = function (e) {
     var t,
         n,
-        _,
+        p,
         h,
         m,
         g,
         E,
-        v,
-        b = o(this),
-        y = a(e),
+        b,
+        y = o(this),
+        v = a(e),
         O = arguments.length,
-        S = O > 1 ? arguments[1] : void 0,
-        I = void 0 !== S,
-        T = c(y);
-    if (T && !u(T)) for (v = (E = l(y, T)).next, y = []; !(g = i(v, E)).done; ) y.push(g.value);
-    for (I && O > 2 && (S = r(S, arguments[2])), n = s(y), h = d((_ = new (f(b))(n))), t = 0; n > t; t++) (m = I ? S(y[t], t) : y[t]), (_[t] = h ? p(m) : +m);
-    return _;
+        I = O > 1 ? arguments[1] : void 0,
+        S = void 0 !== I,
+        T = c(v);
+    if (T && !u(T)) for (b = (E = l(v, T)).next, v = []; !(g = i(b, E)).done; ) v.push(g.value);
+    for (S && O > 2 && (I = r(I, arguments[2])), n = s(v), h = d((p = new (f(y))(n))), t = 0; n > t; t++) (m = S ? I(v[t], t) : v[t]), (p[t] = h ? _(m) : +m);
+    return p;
 };

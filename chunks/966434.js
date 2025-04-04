@@ -11,7 +11,7 @@ function a(e, t, n, a) {
         onConfirm: n,
         onCancel: a,
         body: o.NW.format(o.t['5/Xorq'], {
-            currentApplicationName: null !== (s = null == e ? void 0 : e.name) && void 0 !== s ? s : o.NW.string(o.t.G99XFh),
+            currentApplicationName: null != (s = null == e ? void 0 : e.name) ? s : o.NW.string(o.t.G99XFh),
             currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name) ? o.NW.string(o.t.OGUjmp) : null == t ? void 0 : t.name
         })
     });

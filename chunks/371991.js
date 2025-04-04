@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => v,
-    tS: () => m,
+    ZP: () => b,
+    tS: () => g,
     x3: () => E
 }),
     n(47120);
@@ -17,8 +17,8 @@ var r = n(200651),
     _ = n(506071),
     p = n(719247),
     h = n(561308),
-    g = n(32515);
-function m(e) {
+    m = n(419732);
+function g(e) {
     let [t, n] = i.useState(Date.now()),
         r = (0, _.n)(),
         o = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -41,7 +41,7 @@ function m(e) {
 }
 let E = (e) => {
         let { entry: t, inline: n = !1, textColor: o, hovered: s = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
-            { now: d } = m(s),
+            { now: d } = g(s),
             f = i.useMemo(() => (0, h.T_)(t, d), [t, d]),
             _ = i.useRef(f),
             p = i.useRef(f);
@@ -53,9 +53,9 @@ let E = (e) => {
                 _.current = p.current;
             }, [t]),
             (0, r.jsx)(c.Text, {
-                className: a()(g.timestamp, {
-                    [g.inlineTimestamp]: n,
-                    [g.bold]: l
+                className: a()(m.timestamp, {
+                    [m.inlineTimestamp]: n,
+                    [m.bold]: l
                 }),
                 variant: 'text-xs/medium',
                 tabularNumbers: !0,
@@ -66,16 +66,16 @@ let E = (e) => {
             })
         );
     },
-    v = (e) => {
+    b = (e) => {
         var t, n;
         let { entry: i, textColor: o, hovered: a = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
             f = (0, h.Jg)(i),
             _ = (0, s.e7)([d.default], () => d.default.locale),
-            g = (0, s.e7)([p.Z], () => p.Z.getMatchingActivity(i)),
-            m = null !== (n = null == g ? void 0 : null === (t = g.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== n ? n : null == g ? void 0 : g.created_at;
-        return null != m
+            m = (0, s.e7)([p.Z], () => p.Z.getMatchingActivity(i)),
+            g = null != (n = null == m || null == (t = m.timestamps) ? void 0 : t.start) ? n : null == m ? void 0 : m.created_at;
+        return null != g
             ? (0, r.jsx)(E, {
-                  entry: { start: m },
+                  entry: { start: g },
                   textColor: o,
                   hovered: a,
                   bold: l,

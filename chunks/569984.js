@@ -1,7 +1,7 @@
 let r, i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b;
 n.d(t, { Z: () => eI }), n(47120);
-var v,
-    y = n(392711),
+var y,
+    v = n(392711),
     O = n(754700),
     I = n(887003),
     S = n(442837),
@@ -69,7 +69,7 @@ function k() {
 }
 function j(e, t) {
     var n, r, i, o;
-    if (null != t.userStatus) for (let a of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) !(0, y.isNil)(a) && O.T.DESKTOP.has(a.eventName) && ((null === (i = a.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? _.add(e) : (null === (o = a.heartbeat) || void 0 === o ? void 0 : o.lastBeatAt) == null && _.delete(e));
+    if (null != t.userStatus) for (let a of Object.values(null != (r = null == (n = t.userStatus) ? void 0 : n.progress) ? r : {})) !(0, v.isNil)(a) && O.T.DESKTOP.has(a.eventName) && ((null == (i = a.heartbeat) ? void 0 : i.lastBeatAt) != null ? _.add(e) : (null == (o = a.heartbeat) ? void 0 : o.lastBeatAt) == null && _.delete(e));
 }
 function U(e, t) {
     let n = (o = new Map(o)).get(e);
@@ -91,7 +91,7 @@ function B(e, t) {
 function F(e) {
     var t;
     let { entitlements: n } = e,
-        r = null === (t = n.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
+        r = null == (t = n.items[0].tenantMetadata) ? void 0 : t.questRewards.reward;
     return (null == r ? void 0 : r.tag) !== I.w.REWARD_CODE ? null : r.rewardCode;
 }
 function V(e, t) {
@@ -106,7 +106,7 @@ function V(e, t) {
             U(e, {
                 userStatus: x(D({}, i), {
                     claimedAt: t.claimedAt,
-                    claimedTier: null !== (a = null == n ? void 0 : n.tier) && void 0 !== a ? a : null
+                    claimedTier: null != (a = null == n ? void 0 : n.tier) ? a : null
                 })
             });
     }
@@ -246,10 +246,10 @@ function eE(e) {
 function eb(e) {
     var t;
     let { questId: n, taskEventName: r, progress: i } = e,
-        o = null !== (t = M.get(n)) && void 0 !== t ? t : new Map();
+        o = null != (t = M.get(n)) ? t : new Map();
     o.set(r, i), M.set(n, o);
 }
-function ev(e) {
+function ey(e) {
     let { decisionId: t, quest: n, placement: r, adIdentifiers: i } = e;
     null == n
         ? b.delete(r)
@@ -259,12 +259,12 @@ function ev(e) {
               adIdentifiers: i
           });
 }
-function ey(e) {
+function ev(e) {
     let { placement: t } = e;
     b.delete(t);
 }
 k();
-class eO extends (v = S.ZP.Store) {
+class eO extends (y = S.ZP.Store) {
     get quests() {
         return o;
     }
@@ -318,11 +318,11 @@ class eO extends (v = S.ZP.Store) {
     }
     selectedTaskPlatform(e) {
         var t;
-        return null !== (t = E.get(e)) && void 0 !== t ? t : null;
+        return null != (t = E.get(e)) ? t : null;
     }
     getOptimisticProgress(e, t) {
         var n;
-        return null === (n = M.get(e)) || void 0 === n ? void 0 : n.get(t);
+        return null == (n = M.get(e)) ? void 0 : n.get(t);
     }
 }
 w(eO, 'displayName', 'QuestsStore');
@@ -334,8 +334,8 @@ let eI = new eO(T.Z, {
     QUESTS_FETCH_CLAIMED_QUESTS_BEGIN: z,
     QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS: q,
     QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: Q,
-    QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: ev,
-    QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: ey,
+    QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: ey,
+    QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: ev,
     QUESTS_SEND_HEARTBEAT_SUCCESS: X,
     QUESTS_SEND_HEARTBEAT_FAILURE: J,
     QUESTS_ENROLL_BEGIN: et,

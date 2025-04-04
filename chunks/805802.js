@@ -35,16 +35,16 @@ function u(e, t) {
                         n.push((0, l.B)(e));
                         break;
                     case 'RDATE':
-                        var f = null !== (t = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) && void 0 !== t ? t : [],
-                            p = f[1];
-                        p && !c && (c = p), (r = r.concat(v(d, u)));
+                        var f = null != (t = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) ? t : [],
+                            _ = f[1];
+                        _ && !c && (c = _), (r = r.concat(b(d, u)));
                         break;
                     case 'EXRULE':
                         if (u.length) throw Error('unsupported EXRULE parm: '.concat(u.join(',')));
                         i.push((0, l.B)(d));
                         break;
                     case 'EXDATE':
-                        o = o.concat(v(d, u));
+                        o = o.concat(b(d, u));
                         break;
                     case 'DTSTART':
                         break;
@@ -73,39 +73,39 @@ function d(e, t) {
         d = n.tzid,
         f = !1 === t.cache;
     if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || r.length > 1 || a.length || s.length || l.length)) {
-        var _ = new o.p(f);
+        var p = new o.p(f);
         return (
-            _.dtstart(c),
-            _.tzid(d || void 0),
+            p.dtstart(c),
+            p.tzid(d || void 0),
             r.forEach(function (e) {
-                _.rrule(new i.Ci(p(e, c, d), f));
+                p.rrule(new i.Ci(_(e, c, d), f));
             }),
             a.forEach(function (e) {
-                _.rdate(e);
+                p.rdate(e);
             }),
             s.forEach(function (e) {
-                _.exrule(new i.Ci(p(e, c, d), f));
+                p.exrule(new i.Ci(_(e, c, d), f));
             }),
             l.forEach(function (e) {
-                _.exdate(e);
+                p.exdate(e);
             }),
-            t.compatible && t.dtstart && _.rdate(c),
-            _
+            t.compatible && t.dtstart && p.rdate(c),
+            p
         );
     }
     var h = r[0] || {};
-    return new i.Ci(p(h, h.dtstart || t.dtstart || c, h.tzid || t.tzid || d), f);
+    return new i.Ci(_(h, h.dtstart || t.dtstart || c, h.tzid || t.tzid || d), f);
 }
 function f(e, t) {
-    return void 0 === t && (t = {}), d(e, _(t));
+    return void 0 === t && (t = {}), d(e, p(t));
 }
-function p(e, t, n) {
+function _(e, t, n) {
     return (0, r.pi)((0, r.pi)({}, e), {
         dtstart: t,
         tzid: n
     });
 }
-function _(e) {
+function p(e) {
     var t = [],
         n = Object.keys(e),
         i = Object.keys(c);
@@ -156,7 +156,7 @@ function E(e) {
         if (!/(VALUE=DATE(-TIME)?)|(TZID=)/.test(e)) throw Error('unsupported RDATE/EXDATE parm: ' + e);
     });
 }
-function v(e, t) {
+function b(e, t) {
     return (
         E(t),
         e.split(',').map(function (e) {

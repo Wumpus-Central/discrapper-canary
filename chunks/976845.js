@@ -9,7 +9,7 @@ var r = n(200651),
     a = n(934248),
     s = n(780384),
     l = n(410030),
-    c = n(816202);
+    c = n(738134);
 function u(e, t, n) {
     return (
         t in e
@@ -91,7 +91,7 @@ let m = {
         EARN: 0.25,
         SPEND: 0.3
     },
-    v = (e) => {
+    b = (e) => {
         let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: r, play: o, internalLottieRef: a } = e,
             s = null !== a.current ? a.current.getDuration() : null,
             l = null !== s ? 1000 * s : g;
@@ -102,13 +102,13 @@ let m = {
                 r(l);
             }, [r, l]);
     },
-    b = (e) => {
+    y = (e) => {
         var { currentAnimationType: t } = e,
             n = p(e, ['currentAnimationType']);
         let i = (0, a.D)(null != t ? t : 'earn'),
             { Component: o } = i;
         return (
-            v(d({ currentAnimationType: t }, n, p(i, ['Component']))),
+            b(d({ currentAnimationType: t }, n, p(i, ['Component']))),
             (0, r.jsx)(
                 o,
                 _(d({}, m), {
@@ -119,13 +119,13 @@ let m = {
             )
         );
     },
-    y = (e) => {
+    v = (e) => {
         var { currentAnimationType: t } = e,
             n = p(e, ['currentAnimationType']);
         let i = (0, o.v)(null != t ? t : 'earn'),
             { Component: a } = i;
         return (
-            v(d({ currentAnimationType: t }, n, p(i, ['Component']))),
+            b(d({ currentAnimationType: t }, n, p(i, ['Component']))),
             (0, r.jsx)(
                 a,
                 _(d({}, m), {
@@ -138,5 +138,5 @@ let m = {
     },
     O = (e) => {
         let t = (0, l.ZP)();
-        return (0, s.ap)(t) ? (0, r.jsx)(y, d({}, e)) : (0, r.jsx)(b, d({}, e));
+        return (0, s.ap)(t) ? (0, r.jsx)(v, d({}, e)) : (0, r.jsx)(y, d({}, e));
     };

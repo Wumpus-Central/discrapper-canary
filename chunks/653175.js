@@ -62,18 +62,18 @@ function m(e, t) {
     );
 }
 let g = (e, t) => {
-        let n = u.Z.getVoiceFilterSpeakingDurationMs();
+        let n = u.ZP.getVoiceFilterSpeakingDurationMs();
         return m(
             p(
                 {
                     channel_id: e.id,
                     channel_type: e.type,
                     guild_id: e.getGuildId(),
-                    rtc_connection_id: u.Z.getRTCConnectionId(),
-                    duration: u.Z.getDuration(),
-                    media_session_id: u.Z.getMediaSessionId()
+                    rtc_connection_id: u.ZP.getRTCConnectionId(),
+                    duration: u.ZP.getDuration(),
+                    media_session_id: u.ZP.getMediaSessionId()
                 },
-                (0, i.kO)(u.Z.getGuildId(), u.Z.getChannelId(), t)
+                (0, i.kO)(u.ZP.getGuildId(), u.ZP.getChannelId(), t)
             ),
             {
                 duration_speaking_voice_filter_ids: null != n ? [...n.keys()] : null,
@@ -85,7 +85,7 @@ let g = (e, t) => {
         var e;
         let t = (0, o.P)(f.default.getCurrentUser());
         return {
-            video_device_name: null === (e = c.Z.getVideoDevices()[c.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
+            video_device_name: null == (e = c.Z.getVideoDevices()[c.Z.getVideoDeviceId()]) ? void 0 : e.name,
             video_hardware_scaling_enabled: c.Z.getHardwareEncoding(),
             video_effect_type: (0, s.TA)(t),
             video_effect_detail: (0, s.V$)(t)

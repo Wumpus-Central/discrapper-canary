@@ -1,7 +1,7 @@
 n.d(t, {
     JX: () => l,
     Rj: () => s,
-    ZP: () => _
+    ZP: () => p
 });
 var r = n(200651),
     i = n(192379),
@@ -76,7 +76,7 @@ let s = Object.freeze({
                 })
             ]
         }),
-    p = () =>
+    _ = () =>
         (0, r.jsxs)('linearGradient', {
             id: s.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             gradientTransform: 'rotate(45)',
@@ -91,7 +91,7 @@ let s = Object.freeze({
                 })
             ]
         }),
-    _ = i.memo(
+    p = i.memo(
         function () {
             return (0, r.jsxs)('svg', {
                 viewBox: '0 0 1 1',
@@ -104,7 +104,7 @@ let s = Object.freeze({
                     height: 1
                 },
                 'aria-hidden': !0,
-                children: [c(), u(), d(), f(), p()]
+                children: [c(), u(), d(), f(), _()]
             });
         },
         () => !0

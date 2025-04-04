@@ -4,7 +4,7 @@ n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(481060),
-    s = n(870649);
+    s = n(314943);
 function l(e) {
     let { className: t, copy: n, bannerImage: i, textColor: l = 'always-white', hideGiftIcon: c = !1 } = e;
     return (0, r.jsxs)('div', {

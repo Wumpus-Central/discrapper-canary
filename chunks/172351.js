@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(678738),
     d = n(981631),
     f = n(388032),
-    p = n(539469);
-function _(e, t, n) {
+    _ = n(175354);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,33 +34,33 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
 function m(e) {
-    let { applicationId: t, commandIds: n, guildId: _, channel: m, onClick: g } = e,
+    let { applicationId: t, commandIds: n, guildId: p, channel: m, onClick: g } = e,
         { trackUserProfileAction: E } = (0, c.KZ)(),
-        v = i.useMemo(
+        b = i.useMemo(
             () => ({
                 channel: m,
                 type: 'channel'
             }),
             [m]
         ),
-        { commands: b } = a.Qm(v, t, n),
-        y = i.useMemo(
+        { commands: y } = a.Qm(b, t, n),
+        v = i.useMemo(
             () =>
-                null == b
+                null == y
                     ? void 0
-                    : b.filter((e) => {
+                    : y.filter((e) => {
                           let { nsfw: t } = e;
                           return !0 !== t;
                       }),
-            [b]
+            [y]
         );
-    if (null == y || 0 === y.length) return null;
+    if (null == v || 0 === v.length) return null;
     let O = (e) => {
         null == g || g(),
             E({ action: 'PRESS_APP_COMMAND' }),
@@ -70,7 +70,7 @@ function m(e) {
                     {
                         application_id: t,
                         command_id: e,
-                        guild_id: _
+                        guild_id: p
                     },
                     (0, o.JS)(m.id)
                 )
@@ -79,8 +79,8 @@ function m(e) {
     return (0, r.jsx)(u.Z, {
         heading: f.NW.string(f.t['0hKkS0']),
         children: (0, r.jsx)('ul', {
-            className: p.list,
-            children: y.map((e) =>
+            className: _.list,
+            children: v.map((e) =>
                 (0, r.jsx)(
                     'li',
                     {
@@ -89,7 +89,7 @@ function m(e) {
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
                             onClick: O,
-                            guildId: _,
+                            guildId: p,
                             channelId: m.id,
                             applicationId: e.applicationId
                         })

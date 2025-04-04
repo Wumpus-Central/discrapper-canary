@@ -9,5 +9,5 @@ function a(e, t) {
 }
 function s(e) {
     var t;
-    return a(null === (t = r.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, e);
+    return a(null == (t = r.Z.settings.voiceAndVideo) ? void 0 : t.videoBackgroundFilterDesktop, e);
 }

@@ -1,4 +1,4 @@
-n.d(t, { f: () => b }), n(47120);
+n.d(t, { f: () => g }), n(47120);
 var r = n(192379),
     i = n(243814),
     o = n(442837),
@@ -20,9 +20,9 @@ let h = {
         limit: f.tn,
         includeFrecency: !0
     };
-function b(e) {
-    let { context: t, onlyActivityApps: n, allowCommandFetch: s, includeAuthorizedAppsAndFetch: b } = e,
-        { sectionDescriptors: g, loading: E } = a.wi({
+function g(e) {
+    let { context: t, onlyActivityApps: n, allowCommandFetch: s, includeAuthorizedAppsAndFetch: g } = e,
+        { sectionDescriptors: b, loading: E } = a.wi({
             context: t,
             filters: h,
             options: m,
@@ -40,15 +40,15 @@ function b(e) {
                     var e, t;
                     return a && null != (t = null == (e = d.Z.getApps()) ? void 0 : e.filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS))) ? t : [];
                 }),
-                b = t.filter((e) => e.id !== f.bi.FRECENCY && e.id !== f.bi.BUILT_IN),
-                g = 'channel' in n && (0, p.aZ)(n.channel, 'useAppLauncherFrecents.useFrecentApps()'),
-                E = (0, u.h)(b, m);
-            return r.useMemo(() => (s ? E.filter((e) => null != e.application && (0, _.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !g || e.id !== p.gu) : E.filter((e) => !g || e.id !== p.gu)), [s, E, g, n]);
+                g = t.filter((e) => e.id !== f.bi.FRECENCY && e.id !== f.bi.BUILT_IN),
+                b = 'channel' in n && (0, p.aZ)(n.channel, 'useAppLauncherFrecents.useFrecentApps()'),
+                E = (0, u.h)(g, m);
+            return r.useMemo(() => (s ? E.filter((e) => null != e.application && (0, _.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !b || e.id !== p.gu) : E.filter((e) => !b || e.id !== p.gu)), [s, E, b, n]);
         })({
-            sectionDescriptors: g,
+            sectionDescriptors: b,
             context: t,
             onlyActivityApps: n,
-            includeAuthorizedAppsAndFetch: b
+            includeAuthorizedAppsAndFetch: g
         })
     };
 }

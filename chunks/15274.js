@@ -1,7 +1,7 @@
 n.d(t, {
-    P3: () => p,
+    P3: () => _,
     bO: () => f,
-    lC: () => _
+    lC: () => p
 });
 var r = n(200651);
 n(192379);
@@ -64,7 +64,7 @@ function d(e, t) {
 function f(e) {
     let { eventId: t, parentGuildId: o, recurrenceId: a } = e;
     (0, i.ZD)(async () => {
-        let { default: e } = await Promise.all([n.e('18543'), n.e('85574'), n.e('22347'), n.e('39369')]).then(n.bind(n, 697849));
+        let { default: e } = await Promise.all([n.e('18543'), n.e('85574'), n.e('22347'), n.e('70657')]).then(n.bind(n, 697849));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -79,7 +79,7 @@ function f(e) {
             );
     });
 }
-async function p(e, t) {
+async function _(e, t) {
     let { guild_id: n } = e;
     await o.Z.transitionToGuildSync(n, t),
         f({
@@ -87,7 +87,7 @@ async function p(e, t) {
             event: e
         });
 }
-function _(e, t) {
+function p(e, t) {
     (0, i.ZD)(
         async () => {
             let { default: t } = await Promise.all([n.e('42743'), n.e('22569')]).then(n.bind(n, 312757));

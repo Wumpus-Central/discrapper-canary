@@ -38,11 +38,11 @@ class l {
     values(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null == e ? this.valueArray : null !== (t = this.indexes(n)[e]) && void 0 !== t ? t : s;
+        return null == e ? this.valueArray : null != (t = this.indexes(n)[e]) ? t : s;
     }
     size(e) {
         var t, n;
-        return null == e ? this.valueArray.length : null !== (n = null === (t = this.valueIndexes[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0;
+        return null == e ? this.valueArray.length : null != (n = null == (t = this.valueIndexes[e]) ? void 0 : t.length) ? n : 0;
     }
     clear() {
         this.valueMap.clear(), (this.valueArray = []), (this.valueIndexes = {}), (this.valueIndexesForGetter = {});

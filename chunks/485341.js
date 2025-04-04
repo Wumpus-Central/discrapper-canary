@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => p,
     i: () => f
 }),
     n(266796);
@@ -61,13 +61,13 @@ function d(e, t) {
     );
 }
 let f = 'quest_completed',
-    p = 'legacy_username';
-function _(e) {
+    _ = 'legacy_username';
+function p(e) {
     var t;
     let n = i.R_.useSetting(),
         l = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
         u = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation);
     if (null == e) return [];
-    let f = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
-    return null != l && l.id === e.userId && n && (f = f.filter((e) => e.id !== p)), u && (f = f.map((e) => d(c({}, e), { description: e.id === p ? s.NW.string(s.t.Br1ls7) : e.description }))), f;
+    let f = null != (t = null == e ? void 0 : e.getBadges()) ? t : [];
+    return null != l && l.id === e.userId && n && (f = f.filter((e) => e.id !== _)), u && (f = f.map((e) => d(c({}, e), { description: e.id === _ ? s.NW.string(s.t.Br1ls7) : e.description }))), f;
 }

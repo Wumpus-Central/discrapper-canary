@@ -6,6 +6,6 @@ var r = n(493773),
 function s() {
     let e = (0, i.sX)({ location: 'channel_context_menu' });
     (0, r.ZP)(() => {
-        o.Z.hasFetchedWallpapers || o.Z.isFetchingWallpapers || !e.enabled || (0, a.k)();
+        o.Z.hasFetchedWallpapers || o.Z.isFetchingWallpapers || !e.enabled || (0, a.k9)();
     });
 }

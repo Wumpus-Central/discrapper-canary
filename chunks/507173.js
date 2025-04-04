@@ -1,4 +1,4 @@
-n.d(t, { y: () => p }), n(47120), n(978209);
+n.d(t, { y: () => _ }), n(47120), n(978209);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -6,7 +6,7 @@ var i = n(120356),
     a = n(392711),
     s = n.n(a),
     l = n(692547),
-    c = n(320541);
+    c = n(580315);
 function u(e, t, n) {
     return (
         t in e
@@ -39,9 +39,9 @@ function d(e) {
 var f = (function (e) {
     return (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
 })(f || {});
-function p(e) {
+function _(e) {
     let { className: t, percents: n, size: i = 'small', foregroundColors: a = [l.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: u = 'var(--background-modifier-active)', animate: f = !0 } = e,
-        p = s()
+        _ = s()
             .zip(n, a)
             .map((e, t) => {
                 let n,
@@ -62,7 +62,7 @@ function p(e) {
     return (0, r.jsx)('div', {
         className: o()(t, c.progress, c[i]),
         style: { backgroundColor: u },
-        children: p
+        children: _
     });
 }
-p.Sizes = f;
+_.Sizes = f;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -60,21 +60,21 @@ function h(e, t) {
         e
     );
 }
-function g(e) {
-    let { user: t, location: f = 'ContextMenu', onFriendRequestSent: p, onFriendRemove: g, appContext: m } = e,
-        { id: E, username: v, bot: b } = t,
-        y = (0, o.e7)(
+function m(e) {
+    let { user: t, location: f = 'ContextMenu', onFriendRequestSent: p, onFriendRemove: m, appContext: g } = e,
+        { id: E, username: b, bot: y } = t,
+        v = (0, o.e7)(
             [u.default],
             () => {
                 var e;
-                return (null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === E;
+                return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
             },
             [E]
         ),
         O = (0, l.n)({ userId: E }),
-        [S, I] = (0, o.Wu)([c.Z], () => [c.Z.isFriend(E), c.Z.isBlocked(E)], [E]),
+        [I, S] = (0, o.Wu)([c.Z], () => [c.Z.isFriend(E), c.Z.isBlocked(E)], [E]),
         [T, N] = i.useState(!1);
-    if (b || y) return null;
+    if (y || v) return null;
     function A() {
         (0, a.ZDy)(
             async () => {
@@ -85,11 +85,11 @@ function g(e) {
                         h(
                             _(
                                 {
-                                    header: d.NW.formatToPlainString(d.t.fPLvZW, { name: v }),
+                                    header: d.NW.formatToPlainString(d.t.fPLvZW, { name: b }),
                                     confirmText: d.NW.string(d.t.cvSt1N),
                                     cancelText: d.NW.string(d.t['ETE/oK']),
                                     onConfirm: () => {
-                                        s.Z.removeFriend(E, { location: f }), N(!1), null == g || g();
+                                        s.Z.removeFriend(E, { location: f }), N(!1), null == m || m();
                                     }
                                 },
                                 t
@@ -97,16 +97,16 @@ function g(e) {
                             {
                                 children: (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
-                                    children: d.NW.format(d.t.l5FFq6, { name: v })
+                                    children: d.NW.format(d.t.l5FFq6, { name: b })
                                 })
                             }
                         )
                     );
             },
-            { contextKey: null != m ? (0, a.VnL)(m) : void 0 }
+            { contextKey: null != g ? (0, a.VnL)(g) : void 0 }
         );
     }
-    return S
+    return I
         ? (0, r.jsx)(a.sNh, {
               id: 'remove-friend',
               label: d.NW.string(d.t.cvSt1N),
@@ -124,6 +124,6 @@ function g(e) {
                       N(!0),
                       null == p || p());
               },
-              disabled: I || (T && !S)
+              disabled: S || (T && !I)
           });
 }

@@ -1,19 +1,19 @@
 n.d(t, {
-    AF: () => y,
+    AF: () => v,
     BP: () => E,
     Cf: () => T,
     Gj: () => O,
     Hk: () => d,
-    KL: () => b,
-    L3: () => S,
+    KL: () => y,
+    L3: () => I,
     MU: () => m,
     Qq: () => h,
     dc: () => u,
     gU: () => f,
     o3: () => c,
     q5: () => g,
-    t0: () => v,
-    vf: () => _
+    t0: () => b,
+    vf: () => p
 }),
     n(47120);
 var r = n(70956),
@@ -74,8 +74,8 @@ let c = 0,
     u = 13,
     d = -1,
     f = -2,
-    p = -3;
-var _ = (function (e) {
+    _ = -3;
+var p = (function (e) {
         return (e.FEATURED = 'featured'), (e.GAMING = 'gaming'), (e.MUSIC = 'music'), (e.ENTERTAINMENT = 'entertainment'), (e.TECH = 'tech'), (e.EDUCATION = 'education'), (e.HUBS = 'hubs'), e;
     })({}),
     h = (function (e) {
@@ -84,16 +84,16 @@ var _ = (function (e) {
 let m = new Set(['hubs']),
     g = [],
     E = 'q',
-    v = 'c',
-    b = 'l',
-    y = 10 * r.Z.Millis.MINUTE;
+    b = 'c',
+    y = 'l',
+    v = 10 * r.Z.Millis.MINUTE;
 var O = (function (e) {
-    return (e[(e.Clans = p)] = 'Clans'), (e[(e.Hub = f)] = 'Hub'), (e[(e.Communities = d)] = 'Communities'), (e[(e.Activity = 1)] = 'Activity'), (e[(e.Music = 2)] = 'Music'), (e[(e.Television = 3)] = 'Television'), (e[(e.Science = 5)] = 'Science'), (e[(e.Education = 6)] = 'Education'), e;
+    return (e[(e.Clans = _)] = 'Clans'), (e[(e.Hub = f)] = 'Hub'), (e[(e.Communities = d)] = 'Communities'), (e[(e.Activity = 1)] = 'Activity'), (e[(e.Music = 2)] = 'Music'), (e[(e.Television = 3)] = 'Television'), (e[(e.Science = 5)] = 'Science'), (e[(e.Education = 6)] = 'Education'), e;
 })({});
-let S = [1, 2, 3, 5, 6],
-    I = ['en-GB'];
+let I = [1, 2, 3, 5, 6],
+    S = ['en-GB'];
 function T() {
     return (0, i.Vb)()
-        .filter((e) => !I.includes(e.code))
+        .filter((e) => !S.includes(e.code))
         .map((e) => ('en-US' === e.code ? l(a({}, e), { name: i.NW.string(i.t.LQLMGB) }) : e));
 }

@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(585483),
     d = n(981631),
     f = n(388032),
-    p = n(948692);
-function _(e, t, n) {
+    _ = n(54816);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -63,26 +63,26 @@ function g(e, t) {
     );
 }
 let E = i.memo(function (e) {
-    let { width: t, height: n, src: o, url: _, format: m, className: E } = e,
-        [v, b] = i.useState(!1),
-        y = (0, c.hb)((0, l.iy)(_)),
-        O = y ? f.NW.string(f.t['5/NS7+']) : f.NW.string(f.t.nIH0v7),
-        S = y ? s.r7p : s.vxU;
+    let { width: t, height: n, src: o, url: p, format: m, className: E } = e,
+        [b, y] = i.useState(!1),
+        v = (0, c.hb)((0, l.iy)(p)),
+        O = v ? f.NW.string(f.t['5/NS7+']) : f.NW.string(f.t.nIH0v7),
+        I = v ? s.r7p : s.vxU;
     i.useEffect(() => {
-        if (!v) return;
+        if (!b) return;
         let e = setTimeout(() => {
-            b(!1);
+            y(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [v]);
-    let I = (e) => {
+    }, [b]);
+    let S = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
-            b(!0),
-            y
-                ? (0, l.PF)(_)
+            y(!0),
+            v
+                ? (0, l.PF)(p)
                 : ((0, l.uL)({
-                      url: _,
+                      url: p,
                       src: o,
                       width: t,
                       height: n,
@@ -96,16 +96,16 @@ let E = i.memo(function (e) {
             (0, r.jsx)(
                 s.P3F,
                 g(h({}, e), {
-                    className: a()(E, p.gifFavoriteButton, {
-                        [p.selected]: y,
-                        [p.showPulse]: v
+                    className: a()(E, _.gifFavoriteButton, {
+                        [_.selected]: v,
+                        [_.showPulse]: b
                     }),
                     onMouseDown: (e) => e.preventDefault(),
-                    onClick: I,
+                    onClick: S,
                     onDoubleClick: (e) => e.preventDefault(),
-                    children: (0, r.jsx)(S, {
+                    children: (0, r.jsx)(I, {
                         color: 'currentColor',
-                        className: p.icon,
+                        className: _.icon,
                         size: 'custom',
                         width: 20,
                         height: 20

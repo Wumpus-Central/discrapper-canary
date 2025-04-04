@@ -1,14 +1,14 @@
 n.d(t, {
     C5: () => f,
     DN: () => u,
-    NT: () => p,
+    NT: () => _,
     PY: () => d,
     Qs: () => l,
     Xy: () => s,
     e3: () => c,
     fF: () => o,
     iP: () => a,
-    iv: () => _
+    iv: () => p
 });
 var r = n(474936),
     i = n(231338);
@@ -35,8 +35,8 @@ var d = (function (e) {
     return (e[(e.NONE = 0)] = 'NONE'), (e[(e.IN_SUBSCRIPTION_SERVER = 1)] = 'IN_SUBSCRIPTION_SERVER'), (e[(e.SUBSCRIBED = 2)] = 'SUBSCRIBED'), e;
 })({});
 let f = 'https://'.concat(i.$R, '/creators'),
-    p = 90,
-    _ = Object.freeze({
+    _ = 90,
+    p = Object.freeze({
         PROMO_PAGE_GUIDE: 'https://discord.com/creators/say-hello-to-promo-pages-our-new-server-subscriptions-feature',
         CASE_STUDIES: 'https://discord.com/creator-portal/learn-from-creators?tab=creator-case-studies',
         SUBSCRIPTION_OFFERING_GUIDE: 'https://discord.com/creators/offering-inspiration-',

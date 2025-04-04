@@ -34,7 +34,7 @@ function p(e) {
 class h extends (r = o.ZP.Store) {
     getChannelStatus(e) {
         var t;
-        if (null != e && null != e.guild_id && e.type === i.d.GUILD_VOICE) return c.has(e.guild_id) || (c.add(e.guild_id), s.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = u[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
+        if (null != e && null != e.guild_id && e.type === i.d.GUILD_VOICE) return c.has(e.guild_id) || (c.add(e.guild_id), s.Z.getSocket().requestChannelStatuses(e.guild_id)), null == (t = u[e.guild_id]) ? void 0 : t[e.id];
     }
 }
 l(h, 'displayName', 'ChannelStatusStore');

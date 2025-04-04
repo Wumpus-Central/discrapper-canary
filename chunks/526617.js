@@ -459,7 +459,7 @@ function ef(e) {
                 n = new Audio((0, k.Z)(el));
             null != eb.current && eb.current.pause(), (eb.current = n), (n.currentTime = 0), (n.volume = (0, j.Z)(null != (e = null == t ? void 0 : t.volume) ? e : 1)), n.play();
         }, [eb]),
-        tn = (0, l.e7)([A.Z], () => A.Z.getMediaSessionId());
+        tn = (0, l.e7)([A.ZP], () => A.ZP.getMediaSessionId());
     return (
         (0, h.Z)({
             type: s.ImpressionTypes.POPOUT,

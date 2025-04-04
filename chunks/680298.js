@@ -93,7 +93,7 @@ function p(e) {
             [b]
         ),
         j = b.type === a.yU.CHAT ? l.SsZ : l.hH0,
-        N = (0, s.gw)(b.type, b.displayName);
+        O = (0, s.gw)(b.type, b.displayName);
     return (0, r.jsxs)(l.P3F, {
         onClick: h,
         className: d.item,
@@ -109,7 +109,7 @@ function p(e) {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: N
+                        children: O
                     })
                 ]
             }),

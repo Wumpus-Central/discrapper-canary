@@ -10,15 +10,15 @@ var i = n(952265),
     u = n(926491),
     d = n(373228),
     f = n(419922),
-    p = n(430824),
-    _ = n(626135),
+    _ = n(430824),
+    p = n(626135),
     h = n(483360),
     m = n(877565),
     g = n(590921),
     E = n(665692),
-    v = n(981631),
-    b = n(388032),
-    y = n(752553);
+    b = n(981631),
+    y = n(388032),
+    v = n(212206);
 function O(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ function O(e, t, n) {
         e
     );
 }
-function S(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,13 +48,13 @@ function S(e) {
     }
     return e;
 }
-let I = 8,
+let S = 8,
     T = 4,
     N = 4,
     A = 40,
     C = 6;
 function R(e, t) {
-    return (0, r.jsx)(f.ZP, {
+    return (0, r.jsx)(f.Z, {
         sticker: e,
         isInteracting: t,
         size: 40
@@ -70,7 +70,7 @@ function w(e) {
         ? ''.concat(E.Iv).concat(e.name).concat(E.Iv)
         : '<'
               .concat(n, ':')
-              .concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ':')
+              .concat(null != (t = e.originalName) ? t : e.name, ':')
               .concat(e.id, '>');
 }
 let D = {
@@ -80,7 +80,7 @@ let D = {
     queryResults(e, t, n, r, i) {
         let o = r.allowSoundmoji && (0, a.dX)({ location: 'queryResults' }),
             s = r.allowStickers || o ? 0 : A,
-            u = v.rnv + s,
+            u = b.rnv + s,
             {
                 emojis: { unlocked: d }
             } = h.ZP.queryEmojiResults({
@@ -92,7 +92,7 @@ let D = {
         if ('-' === n[0]) {
             let e = (e) => {
                 var t;
-                return null === (t = e.names) || void 0 === t ? void 0 : t.includes(n);
+                return null == (t = e.names) ? void 0 : t.includes(n);
             };
             d = d.filter(e);
         }
@@ -100,28 +100,28 @@ let D = {
         if (r.allowStickers) {
             (0, c.$p)();
             let t = h.ZP.queryStickers([n], !0, [e, (e, t) => t === l.eb.SENDABLE]),
-                r = Math.max(T, I - d.length);
+                r = Math.max(T, S - d.length);
             (f = t.slice(0, r)), '-' === n[0] && (f = t.filter((e) => e.sticker.name === n));
         }
-        let p = [];
+        let _ = [];
         o &&
-            ((p = h.ZP.querySoundmoji(n, e)
+            ((_ = h.ZP.querySoundmoji(n, e)
                 .map((e) => ({ sound: e }))
                 .slice(0, N)),
-            '-' === n[0] && (p = p.filter((e) => e.sound.name === n)));
-        let _ = d.slice(0, Math.max(C, u - f.length - p.length));
+            '-' === n[0] && (_ = _.filter((e) => e.sound.name === n)));
+        let p = d.slice(0, Math.max(C, u - f.length - _.length));
         return {
             results: {
-                emojis: _,
+                emojis: p,
                 emojisLocked: [],
                 stickers: f,
-                soundmoji: p
+                soundmoji: _
             },
             metadata: {
-                numEmojiResults: _.length,
+                numEmojiResults: p.length,
                 numLockedEmojiResults: 0,
                 numStickerResults: f.length,
-                numSoundmojiResults: p.length
+                numSoundmojiResults: _.length
             }
         };
     },
@@ -133,10 +133,10 @@ let D = {
                 onHover: d,
                 onClick: f
             } = e,
-            _ = () => {
+            p = () => {
                 (0, i.ZD)(async () => {
                     let { default: e } = await n.e('9766').then(n.bind(n, 889684));
-                    return (t) => (0, r.jsx)(e, S({}, t));
+                    return (t) => (0, r.jsx)(e, I({}, t));
                 });
             },
             h = t.length > 0 || l.length > 0,
@@ -149,14 +149,14 @@ let D = {
                     autocompletes: t,
                     onHover: d,
                     onClick: f,
-                    titleWithQuery: b.t.ksAVYm,
-                    titleWithoutQuery: b.NW.string(b.t.sMOuub),
+                    titleWithQuery: y.t.ksAVYm,
+                    titleWithoutQuery: y.NW.string(y.t.sMOuub),
                     Component: o.ZP.Emoji,
                     getProps: (e) => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
                         sentinel: E.Iv,
-                        guild: null != e.guildId ? p.Z.getGuild(e.guildId) : null
+                        guild: null != e.guildId ? _.Z.getGuild(e.guildId) : null
                     }),
                     getQuery: (e) => ''.concat(E.Iv).concat(e),
                     key: 'emoji'
@@ -167,9 +167,9 @@ let D = {
                           selectedIndex: c,
                           autocompletes: l,
                           onHover: d,
-                          onClick: _,
-                          titleWithQuery: 0 === t.length ? b.t.ksAVYm : null,
-                          titleWithoutQuery: 0 === t.length ? b.NW.string(b.t.sMOuub) : null,
+                          onClick: p,
+                          titleWithQuery: 0 === t.length ? y.t.ksAVYm : null,
+                          titleWithoutQuery: 0 === t.length ? y.NW.string(y.t.sMOuub) : null,
                           Component: o.ZP.EmojiUpsell,
                           getProps: (e) => {
                               let { emojis: t } = e;
@@ -183,15 +183,15 @@ let D = {
                           indexOffset: t.length
                       })
                     : null,
-                h && g && (0, r.jsx)(o.ZP.Divider, { className: y.divider }),
+                h && g && (0, r.jsx)(o.ZP.Divider, { className: v.divider }),
                 (0, m.HI)({
                     query: u,
                     selectedIndex: c,
                     autocompletes: a,
                     onHover: d,
                     onClick: f,
-                    titleWithQuery: b.t.uferGB,
-                    titleWithoutQuery: b.NW.string(b.t['fT+Yjo']),
+                    titleWithQuery: y.t.uferGB,
+                    titleWithoutQuery: y.NW.string(y.t['fT+Yjo']),
                     Component: o.ZP.Sticker,
                     getProps: (e) => {
                         let { comparator: t, sticker: n } = e;
@@ -205,17 +205,17 @@ let D = {
                     getQuery: (e) => e,
                     key: 'stickers',
                     indexOffset: t.length + l.length,
-                    headerClassName: h ? y.secondarySection : void 0
+                    headerClassName: h ? v.secondarySection : void 0
                 }),
-                (h || g) && s.length > 0 && (0, r.jsx)(o.ZP.Divider, { className: y.divider }),
+                (h || g) && s.length > 0 && (0, r.jsx)(o.ZP.Divider, { className: v.divider }),
                 (0, m.HI)({
                     query: u,
                     selectedIndex: c,
                     autocompletes: s,
                     onHover: d,
                     onClick: f,
-                    titleWithQuery: b.t['0cKBGB'],
-                    titleWithoutQuery: b.NW.string(b.t.EHlAMT),
+                    titleWithQuery: y.t['0cKBGB'],
+                    titleWithoutQuery: y.NW.string(y.t.EHlAMT),
                     Component: o.ZP.Soundmoji,
                     getProps: (e) => {
                         let { sound: t } = e;
@@ -227,7 +227,7 @@ let D = {
                     getQuery: (e) => e,
                     key: 'soundmoji',
                     indexOffset: t.length + l.length + a.length,
-                    headerClassName: h || g ? y.secondarySection : void 0
+                    headerClassName: h || g ? v.secondarySection : void 0
                 })
             ]
         });
@@ -276,7 +276,7 @@ let D = {
             let e = r[o];
             return (
                 a.insertText((0, s.Z)(e.sound.guildId, e.sound.soundId)),
-                _.default.track(v.rMx.SOUNDMOJI_SELECT, {
+                p.default.track(b.rMx.SOUNDMOJI_SELECT, {
                     channel_id: l.id,
                     guild_id: l.guild_id,
                     sound_guild_id: e.sound.guildId,

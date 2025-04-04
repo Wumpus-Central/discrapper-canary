@@ -1,8 +1,8 @@
 n.d(t, {
     Qi: () => E,
-    R9: () => b,
+    R9: () => y,
     l_: () => g,
-    t: () => v
+    t: () => b
 });
 var r = n(200651);
 n(192379);
@@ -12,7 +12,7 @@ var i = n(120356),
     s = n(410030),
     l = n(325767),
     c = n(474936),
-    u = n(500186);
+    u = n(655132);
 function d(e, t, n) {
     return (
         t in e
@@ -42,7 +42,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,12 +54,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -87,7 +87,7 @@ function m(e, t) {
 }
 let g = 'premium_new_tier_2_gradient',
     E = 'premium_old_tier_2_gradient';
-function v(e) {
+function b(e) {
     let { tier: t = c.p9.TIER_2 } = e,
         n = (0, s.ZP)(),
         i = (0, a.ap)(n);
@@ -102,22 +102,22 @@ function v(e) {
                                 [u.rimGlowVerticalTier2]: t === c.p9.TIER_2
                             })
                         }),
-                        (0, r.jsx)(b, { foreground: u.buttonSparkleStar1 })
+                        (0, r.jsx)(y, { foreground: u.buttonSparkleStar1 })
                     ]
                 }),
-            (0, r.jsx)(b, { foreground: u.buttonSparkleStar2 }),
-            (0, r.jsx)(b, { foreground: u.buttonSparkleStar3 }),
-            (0, r.jsx)(b, { foreground: u.buttonSparkleStar4 }),
-            (0, r.jsx)(b, { foreground: u.buttonSparkleStar5 })
+            (0, r.jsx)(y, { foreground: u.buttonSparkleStar2 }),
+            (0, r.jsx)(y, { foreground: u.buttonSparkleStar3 }),
+            (0, r.jsx)(y, { foreground: u.buttonSparkleStar4 }),
+            (0, r.jsx)(y, { foreground: u.buttonSparkleStar5 })
         ]
     });
 }
-function b(e) {
+function y(e) {
     var { width: t = 14, height: n = 13, color: i = 'white', foreground: o } = e,
         a = h(e, ['width', 'height', 'color', 'foreground']);
     return (0, r.jsxs)(
         'svg',
-        _(f({}, (0, l.Z)(f({}, a))), {
+        p(f({}, (0, l.Z)(f({}, a))), {
             preserveAspectRatio: 'none',
             width: t,
             height: n,

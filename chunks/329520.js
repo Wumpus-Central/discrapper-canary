@@ -15,7 +15,7 @@ function f(e) {
         E = (0, s.ZP)(g);
     if (p && h) return null;
     let b = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
-        v = null != b ? d.NW.format(d.t['0wJXSk'], { name: b }) : d.NW.string(d.t.eXan7O);
+        y = null != b ? d.NW.format(d.t['0wJXSk'], { name: b }) : d.NW.string(d.t.eXan7O);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !p &&
@@ -28,7 +28,7 @@ function f(e) {
                 (0, r.jsx)(u.Z, {
                     variant: f,
                     className: _,
-                    children: v
+                    children: y
                 })
         ]
     });

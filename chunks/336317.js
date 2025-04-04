@@ -12,9 +12,9 @@ let r = (function () {
             onerror: function () {
                 this.parentNode && this.parentNode.replaceChild(l(this.alt, !1), this);
             },
-            parse: v,
-            replace: b,
-            test: y
+            parse: b,
+            replace: y,
+            test: v
         },
         t = {
             '&': '&amp;',
@@ -47,21 +47,21 @@ let r = (function () {
     function f(e) {
         return O(0 > e.indexOf(i) ? e.replace(r, '') : e);
     }
-    function p(e, t) {
-        for (var r, i, o, a, s, c, u, p, _, h, m, g, E, v = d(e, []), b = v.length; b--; ) {
-            for (o = !1, a = document.createDocumentFragment(), c = (s = v[b]).nodeValue, p = 0; (u = n.exec(c)); ) {
-                if (((_ = u.index) !== p && a.appendChild(l(c.slice(p, _), !0)), (g = f((m = u[0]))), (p = _ + m.length), (E = t.callback(g, t)), g && E)) {
+    function _(e, t) {
+        for (var r, i, o, a, s, c, u, _, p, h, m, g, E, b = d(e, []), y = b.length; y--; ) {
+            for (o = !1, a = document.createDocumentFragment(), c = (s = b[y]).nodeValue, _ = 0; (u = n.exec(c)); ) {
+                if (((p = u.index) !== _ && a.appendChild(l(c.slice(_, p), !0)), (g = f((m = u[0]))), (_ = p + m.length), (E = t.callback(g, t)), g && E)) {
                     for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(m, g)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
                     (h.className = t.className), (h.alt = m), (h.src = E), (o = !0), a.appendChild(h);
                 }
                 h || a.appendChild(l(m, !1)), (h = null);
             }
-            o && (p < c.length && a.appendChild(l(c.slice(p), !0)), s.parentNode.replaceChild(a, s));
+            o && (_ < c.length && a.appendChild(l(c.slice(_), !0)), s.parentNode.replaceChild(a, s));
         }
         return e;
     }
-    function _(e, t) {
-        return b(e, function (e) {
+    function p(e, t) {
+        return y(e, function (e) {
             var n,
                 r,
                 i = e,
@@ -87,10 +87,10 @@ let r = (function () {
         var t = 'string' == typeof e ? parseInt(e, 16) : e;
         return t < 65536 ? s(t) : s(55296 + ((t -= 65536) >> 10), 56320 + (1023 & t));
     }
-    function v(t, n) {
+    function b(t, n) {
         return (
             (n && 'function' != typeof n) || (n = { callback: n }),
-            ('string' == typeof t ? _ : p)(t, {
+            ('string' == typeof t ? p : _)(t, {
                 callback: n.callback || u,
                 attributes: 'function' == typeof n.attributes ? n.attributes : m,
                 base: 'string' == typeof n.base ? n.base : e.base,
@@ -101,10 +101,10 @@ let r = (function () {
             })
         );
     }
-    function b(e, t) {
+    function y(e, t) {
         return String(e).replace(n, t);
     }
-    function y(e) {
+    function v(e) {
         n.lastIndex = 0;
         var t = n.test(e);
         return (n.lastIndex = 0), t;

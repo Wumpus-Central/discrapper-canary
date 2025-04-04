@@ -1,7 +1,7 @@
 n.d(t, {
-    FU: () => y,
+    FU: () => v,
     eH: () => O,
-    wG: () => b
+    wG: () => y
 }),
     n(66153),
     n(970173),
@@ -25,8 +25,8 @@ var r = n(512722),
     u = n(634041),
     d = n(647177),
     f = n(63985),
-    p = n(638457),
-    _ = n(678916),
+    _ = n(638457),
+    p = n(678916),
     h = n(981631);
 function m(e) {
     return new Promise((t, n) => {
@@ -34,12 +34,12 @@ function m(e) {
         (r.crossOrigin = 'anonymous'),
             (r.onload = () => {
                 let e = document.createElement('canvas');
-                (e.width = _.HE.width), (e.height = _.HE.height);
+                (e.width = p.HE.width), (e.height = p.HE.height);
                 let n = e.getContext('2d');
                 i()(null != n, 'Canvas context is missing');
                 let o = r.height / r.width,
-                    a = _.HE.height,
-                    s = _.HE.height / o,
+                    a = p.HE.height,
+                    s = p.HE.height / o,
                     l = (e.width - s) / 2,
                     c = (e.height - a) / 2;
                 n.drawImage(r, l, c, s, a);
@@ -70,15 +70,15 @@ function E(e, t, n, r, i) {
         }
     });
 }
-async function v(e, t, n) {
+async function b(e, t, n) {
     let r,
         i = !1;
     if (null == n) return E(e, t, o.zZ.NONE);
-    if (n === _.f7) return E(e, t, o.zZ.BACKGROUND_BLUR);
+    if (n === p.f7) return E(e, t, o.zZ.BACKGROUND_BLUR);
     if ('string' == typeof n || 'number' == typeof n) {
         var a;
         let e = (0, f.Z)()[n];
-        (i = null !== (a = e.isVideo) && void 0 !== a && a), (r = e.source);
+        (i = null != (a = e.isVideo) && a), (r = e.source);
     } else {
         let e = n.asset;
         (i = (0, s.xR)(e) || (0, s.ay)(e)),
@@ -86,7 +86,7 @@ async function v(e, t, n) {
                 userId: n.user_id,
                 assetId: n.id,
                 assetHash: e,
-                size: _.HE.width
+                size: p.HE.width
             }));
     }
     if (null != r)
@@ -98,14 +98,14 @@ async function v(e, t, n) {
             (0, c.Nm)();
         }
 }
-async function b(e, t) {
+async function y(e, t) {
     let { track: n = !0, location: r } = t;
-    await v(o.TO.CAMERA_BACKGROUND_LIVE, { type: o.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
+    await b(o.TO.CAMERA_BACKGROUND_LIVE, { type: o.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
 }
-async function y(e, t, n) {
+async function v(e, t, n) {
     let { track: r = !0, location: i } = n;
     (0, c.GS)(),
-        await v(
+        await b(
             o.TO.CAMERA_BACKGROUND_PREVIEW,
             {
                 type: o.W$.STREAM,
@@ -119,5 +119,5 @@ function O() {
     let e = a.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);
-    (0, p.Z)() && !u.Z.hasBeenApplied && null != t && b(t, { track: !1 }).catch(h.dG4);
+    (0, _.Z)() && !u.Z.hasBeenApplied && null != t && y(t, { track: !1 }).catch(h.dG4);
 }

@@ -1,12 +1,12 @@
 n.d(t, {
-    BH: () => A,
+    BH: () => N,
     Cs: () => R,
     G1: () => E,
     IC: () => F,
     OT: () => Z,
-    Vw: () => v,
+    Vw: () => y,
     WW: () => W,
-    XM: () => y,
+    XM: () => v,
     XS: () => j,
     Yq: () => H,
     aj: () => k,
@@ -19,7 +19,7 @@ n.d(t, {
     ne: () => X,
     qS: () => b,
     ql: () => S,
-    rN: () => N,
+    rN: () => A,
     uV: () => M,
     x0: () => z,
     x6: () => Y,
@@ -92,12 +92,12 @@ function g(e, t) {
 }
 let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     b = (e) => (null == e ? void 0 : e.purchaseType) === _.qc2.PREMIUM_PURCHASE,
-    v = (e, t, n) => {
+    y = (e, t, n) => {
         let r;
         return S(e, (r = n ? (t ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE) : t ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT));
     },
-    y = (e, t, n) => {
-        let r = v(e, t, n);
+    v = (e, t, n) => {
+        let r = y(e, t, n);
         return null == r ? '' : (0, s.T4)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency);
     },
     O = (e) => ((0, a.isAndroid)() || (0, a.isIOS)() ? (e ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE) : e ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT),
@@ -108,19 +108,19 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         return t.reduce((e, t) => {
             var r;
             let i = S(t, n);
-            return e + (null !== (r = null == i ? void 0 : i.amount) && void 0 !== r ? r : 0);
+            return e + (null != (r = null == i ? void 0 : i.amount) ? r : 0);
         }, 0);
     },
     S = (e, t) => {
         var n, r, i;
-        let o = null !== (i = e.prices[t]) && void 0 !== i ? i : null;
-        return null != o ? (null === (r = o.countryPrices) || void 0 === r ? void 0 : null === (n = r.prices) || void 0 === n ? void 0 : n[0]) : null;
+        let o = null != (i = e.prices[t]) ? i : null;
+        return null != o ? (null == (r = o.countryPrices) || null == (n = r.prices) ? void 0 : n[0]) : null;
     },
     T = {
         original: -1,
         discountPercentage: -1
     },
-    A = (e, t) => {
+    N = (e, t) => {
         let n = I(e);
         if (n <= 0) return T;
         let r = S(e, O(t));
@@ -131,9 +131,9 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
                   discountPercentage: Math.round(((n - r.amount) / n) * 100)
               };
     },
-    N = (e) => {
+    A = (e) => {
         var t;
-        return (null === (t = S(e, _.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0;
+        return (null == (t = S(e, _.tuJ.DEFAULT)) ? void 0 : t.amount) === 0;
     },
     C = (e) =>
         e.reduce(
@@ -188,7 +188,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         var n;
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
             a = (0, o.oO)(t.size * (0, o.x_)()),
-            s = null !== (n = null == t ? void 0 : t.format) && void 0 !== n ? n : 'png';
+            s = null != (n = null == t ? void 0 : t.format) ? n : 'png';
         if (null != r) return ''.concat(location.protocol, '//').concat(r, '/app-assets/').concat(_.XAJ, '/').concat(e, '.').concat(s, '?size=').concat(a);
         let l = _.ANM.APPLICATION_ASSET(_.XAJ, e, s);
         return ''.concat(location.protocol).concat(i).concat(l, '?size=').concat(a);
@@ -262,5 +262,5 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     X = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: r } = e;
-        return !n && !(f.xJ === (null == t ? void 0 : t.skuId) && r);
+        return !n && !(f.Vt.ORB_PROFILE_BADGE === (null == t ? void 0 : t.skuId) && r);
     };

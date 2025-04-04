@@ -1,4 +1,4 @@
-n.d(t, { O: () => A }), n(47120), n(627341);
+n.d(t, { O: () => N }), n(47120), n(627341);
 var r = n(200651),
     i = n(512722),
     o = n.n(i),
@@ -15,9 +15,9 @@ var r = n(200651),
     m = n(597688),
     g = n(579407),
     E = n(755419),
-    b = n(231103),
-    v = n(223223);
-function y(e, t, n) {
+    b = n(643158),
+    y = n(223223);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -74,12 +74,12 @@ let I = (e) => {
         let { profileEffect: n, fallbackLabel: i } = e,
             o = (0, p.V)(null == n ? void 0 : n.id);
         if (null == o) return i;
-        let { accessibilityLabel: a, thumbnailPreviewSrc: s, title: l } = null !== (t = null == o ? void 0 : o.config) && void 0 !== t ? t : {};
+        let { accessibilityLabel: a, thumbnailPreviewSrc: s, title: l } = null != (t = null == o ? void 0 : o.config) ? t : {};
         return (0, r.jsxs)('div', {
             className: b.profileEffectContainer,
             children: [
                 (0, r.jsx)('img', {
-                    src: v,
+                    src: y,
                     alt: a,
                     className: b.profileEffectBackground
                 }),
@@ -104,13 +104,13 @@ let I = (e) => {
                   })
               });
     },
-    A = (e) => {
+    N = (e) => {
         var t;
         let { product: n, sku: i, fallbackLabel: c } = e,
             u = null == i ? void 0 : i.id,
             d = (0, l.e7)([m.Z], () => m.Z.getProduct(null == i ? void 0 : i.id)),
             f = null != n ? n : d,
-            [_] = null !== (t = null == f ? void 0 : f.items) && void 0 !== t ? t : [];
+            [_] = null != (t = null == f ? void 0 : f.items) ? t : [];
         return void 0 !== u && u in E.KO
             ? E.KO[u].render({
                   animationState: 'on_hover',

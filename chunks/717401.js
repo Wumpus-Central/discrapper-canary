@@ -42,6 +42,6 @@ function u(e, t, n) {
 }
 function d(e) {
     var t;
-    let n = null === (t = (0, o.Z)()) || void 0 === t ? void 0 : t.eligiblePlanIds;
+    let n = null == (t = (0, o.Z)()) ? void 0 : t.eligiblePlanIds;
     return null == n ? void 0 : n.includes(null == e ? void 0 : e.id);
 }

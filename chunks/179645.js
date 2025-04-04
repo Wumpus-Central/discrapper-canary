@@ -26,7 +26,7 @@ function c(e) {
 class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        s = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null;
+        s = null != (t = null == e ? void 0 : e.type) ? t : null;
     }
     getType() {
         return s;

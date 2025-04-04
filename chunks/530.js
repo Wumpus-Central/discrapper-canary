@@ -10,19 +10,19 @@ var i = n(120356),
     u = n(979264),
     d = n(228168),
     f = n(388032),
-    _ = n(433811);
+    _ = n(438361);
 function p(e) {
-    let { user: t, profileType: n, usernameIcon: i, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: v, onOpenProfile: b, nicknameVariant: y = 'heading-lg/bold', pronounsVariant: O = 'text-sm/medium' } = e,
+    let { user: t, profileType: n, usernameIcon: i, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: b, onOpenProfile: y, nicknameVariant: v = 'heading-lg/bold', pronounsVariant: O = 'text-sm/medium' } = e,
         I = {
             [_.biteSize]: n === d.y0.BITE_SIZE,
             [_.fullSize]: n === d.y0.FULL_SIZE,
             [_.panel]: n === d.y0.PANEL
         },
         S = (e) =>
-            null == b
+            null == y
                 ? e
                 : (0, r.jsx)(a.P3F, {
-                      onClick: b,
+                      onClick: y,
                       className: _.clickableUsername,
                       children: e
                   }),
@@ -37,7 +37,7 @@ function p(e) {
                     S(
                         (0, r.jsx)(a.X6q, {
                             className: o()(_.nickname, I),
-                            variant: y,
+                            variant: v,
                             children: h
                         })
                     ),
@@ -65,7 +65,7 @@ function p(e) {
                                 user: t,
                                 usernameIcon: i,
                                 forceUsername: !0,
-                                forcePomelo: v,
+                                forcePomelo: b,
                                 className: _.userTag,
                                 usernameClass: _.userTagUsername,
                                 discriminatorClass: _.userTagDiscriminator,

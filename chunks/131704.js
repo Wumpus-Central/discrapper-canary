@@ -86,7 +86,7 @@ function b(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -98,12 +98,12 @@ function v(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -217,7 +217,7 @@ function ef(e) {
 class e_ {
     constructor(e) {
         var t, n, r;
-        E(this, 'id', void 0), E(this, 'type', void 0), E(this, 'name', void 0), E(this, 'guild_id', void 0), E(this, 'topic_', void 0), E(this, 'position_', void 0), E(this, 'permissionOverwrites_', void 0), E(this, 'bitrate_', void 0), E(this, 'rtcRegion', void 0), E(this, 'videoQualityMode', void 0), E(this, 'userLimit_', void 0), E(this, 'recipients', void 0), E(this, 'rawRecipients', void 0), E(this, 'ownerId', void 0), E(this, 'icon', void 0), E(this, 'application_id', void 0), E(this, 'nicks', void 0), E(this, 'nsfw_', void 0), E(this, 'parent_id', void 0), E(this, 'memberListId', void 0), E(this, 'rateLimitPerUser_', void 0), E(this, 'defaultThreadRateLimitPerUser', void 0), E(this, 'defaultAutoArchiveDuration', void 0), E(this, 'flags_', void 0), E(this, 'originChannelId', void 0), E(this, 'lastMessageId', void 0), E(this, 'lastPinTimestamp', void 0), E(this, 'availableTags', void 0), E(this, 'appliedTags', void 0), E(this, 'messageCount', void 0), E(this, 'memberCount', void 0), E(this, 'threadMetadata', void 0), E(this, 'memberIdsPreview', void 0), E(this, 'member', void 0), E(this, 'parentChannelThreadType', void 0), E(this, 'template', void 0), E(this, 'defaultReactionEmoji', void 0), E(this, 'isMessageRequest', void 0), E(this, 'isMessageRequestTimestamp', void 0), E(this, 'isSpam', void 0), E(this, 'totalMessageSent', void 0), E(this, 'defaultSortOrder', void 0), E(this, 'version', void 0), E(this, 'defaultForumLayout', void 0), E(this, 'iconEmoji', void 0), E(this, 'themeColor', void 0), E(this, 'safetyWarnings', void 0), E(this, 'blockedUserWarningDismissed', void 0), E(this, 'recipientFlags', void 0), E(this, 'linkedLobby', void 0), E(this, 'hdStreamingUntil', void 0), E(this, 'hdStreamingBuyerId', void 0), E(this, 'wallpaper', void 0), (this.id = e.id), (this.type = null !== (t = e.type) && void 0 !== t ? t : m.d4z.GUILD_TEXT), (this.name = null !== (n = e.name) && void 0 !== n ? n : ''), (this.guild_id = null !== (r = e.guild_id) && void 0 !== r ? r : null);
+        E(this, 'id', void 0), E(this, 'type', void 0), E(this, 'name', void 0), E(this, 'guild_id', void 0), E(this, 'topic_', void 0), E(this, 'position_', void 0), E(this, 'permissionOverwrites_', void 0), E(this, 'bitrate_', void 0), E(this, 'rtcRegion', void 0), E(this, 'videoQualityMode', void 0), E(this, 'userLimit_', void 0), E(this, 'recipients', void 0), E(this, 'rawRecipients', void 0), E(this, 'ownerId', void 0), E(this, 'icon', void 0), E(this, 'application_id', void 0), E(this, 'nicks', void 0), E(this, 'nsfw_', void 0), E(this, 'parent_id', void 0), E(this, 'memberListId', void 0), E(this, 'rateLimitPerUser_', void 0), E(this, 'defaultThreadRateLimitPerUser', void 0), E(this, 'defaultAutoArchiveDuration', void 0), E(this, 'flags_', void 0), E(this, 'originChannelId', void 0), E(this, 'lastMessageId', void 0), E(this, 'lastPinTimestamp', void 0), E(this, 'availableTags', void 0), E(this, 'appliedTags', void 0), E(this, 'messageCount', void 0), E(this, 'memberCount', void 0), E(this, 'threadMetadata', void 0), E(this, 'memberIdsPreview', void 0), E(this, 'member', void 0), E(this, 'parentChannelThreadType', void 0), E(this, 'template', void 0), E(this, 'defaultReactionEmoji', void 0), E(this, 'isMessageRequest', void 0), E(this, 'isMessageRequestTimestamp', void 0), E(this, 'isSpam', void 0), E(this, 'totalMessageSent', void 0), E(this, 'defaultSortOrder', void 0), E(this, 'version', void 0), E(this, 'defaultForumLayout', void 0), E(this, 'iconEmoji', void 0), E(this, 'themeColor', void 0), E(this, 'safetyWarnings', void 0), E(this, 'blockedUserWarningDismissed', void 0), E(this, 'recipientFlags', void 0), E(this, 'linkedLobby', void 0), E(this, 'hdStreamingUntil', void 0), E(this, 'hdStreamingBuyerId', void 0), E(this, 'wallpaper', void 0), (this.id = e.id), (this.type = null != (t = e.type) ? t : m.d4z.GUILD_TEXT), (this.name = null != (n = e.name) ? n : ''), (this.guild_id = null != (r = e.guild_id) ? r : null);
     }
 }
 function ep(e) {
@@ -228,35 +228,35 @@ let eh = Object.freeze({});
 class em extends e_ {
     get permissionOverwrites() {
         var e;
-        return null !== (e = this.permissionOverwrites_) && void 0 !== e ? e : eh;
+        return null != (e = this.permissionOverwrites_) ? e : eh;
     }
     get topic() {
         var e;
-        return null !== (e = this.topic_) && void 0 !== e ? e : '';
+        return null != (e = this.topic_) ? e : '';
     }
     get position() {
         var e;
-        return null !== (e = this.position_) && void 0 !== e ? e : 0;
+        return null != (e = this.position_) ? e : 0;
     }
     get bitrate() {
         var e;
-        return null !== (e = this.bitrate_) && void 0 !== e ? e : m.epw;
+        return null != (e = this.bitrate_) ? e : m.epw;
     }
     get userLimit() {
         var e;
-        return null !== (e = this.userLimit_) && void 0 !== e ? e : 0;
+        return null != (e = this.userLimit_) ? e : 0;
     }
     get nsfw() {
         var e;
-        return null !== (e = this.nsfw_) && void 0 !== e && e;
+        return null != (e = this.nsfw_) && e;
     }
     get rateLimitPerUser() {
         var e;
-        return null !== (e = this.rateLimitPerUser_) && void 0 !== e ? e : 0;
+        return null != (e = this.rateLimitPerUser_) ? e : 0;
     }
     get flags() {
         var e;
-        return null !== (e = this.flags_) && void 0 !== e ? e : 0;
+        return null != (e = this.flags_) ? e : 0;
     }
     toJS() {
         return b({}, this);
@@ -296,18 +296,18 @@ class em extends e_ {
     }
     isArchivedThread() {
         var e;
-        return this.isThread() && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) === !0;
+        return this.isThread() && (null == (e = this.threadMetadata) ? void 0 : e.archived) === !0;
     }
     isLockedThread() {
         var e;
-        return this.isThread() && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.locked) === !0;
+        return this.isThread() && (null == (e = this.threadMetadata) ? void 0 : e.locked) === !0;
     }
     isScheduledForDeletion() {
         return this.hasFlag(g.zZ.IS_SCHEDULED_FOR_DELETION);
     }
     isArchivedLockedThread() {
         var e, t;
-        return Z.has(this.type) && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) === !0 && (null === (t = this.threadMetadata) || void 0 === t ? void 0 : t.locked) === !0;
+        return Z.has(this.type) && (null == (e = this.threadMetadata) ? void 0 : e.archived) === !0 && (null == (t = this.threadMetadata) ? void 0 : t.locked) === !0;
     }
     isForumPost() {
         return this.type === m.d4z.PUBLIC_THREAD && null != this.parentChannelThreadType && m.TPd.GUILD_THREADS_ONLY.has(this.parentChannelThreadType);
@@ -347,7 +347,7 @@ class em extends e_ {
     }
     isActiveThread() {
         var e;
-        return this.isThread() && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) !== !0;
+        return this.isThread() && (null == (e = this.threadMetadata) ? void 0 : e.archived) !== !0;
     }
     isDirectory() {
         return this.type === m.d4z.GUILD_DIRECTORY;
@@ -378,7 +378,7 @@ class em extends e_ {
     }
     getDefaultSortOrder() {
         var e;
-        return null !== (e = this.defaultSortOrder) && void 0 !== e ? e : l.z.LATEST_ACTIVITY;
+        return null != (e = this.defaultSortOrder) ? e : l.z.LATEST_ACTIVITY;
     }
     getDefaultLayout() {
         return this.isMediaChannel() ? s.X.GRID : null == this.defaultForumLayout || this.defaultForumLayout === s.X.DEFAULT ? s.X.LIST : this.defaultForumLayout;
@@ -416,7 +416,7 @@ class eg extends em {
             defaultSortOrder: e.default_sort_order,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
             flags_: e.flags,
-            guild_id: null !== (n = null != t ? t : e.guild_id) && void 0 !== n ? n : null,
+            guild_id: null != (n = null != t ? t : e.guild_id) ? n : null,
             icon: e.icon,
             iconEmoji: el(e.icon_emoji),
             id: e.id,
@@ -438,7 +438,7 @@ class eg extends em {
             memberIdsPreview: e.member_ids_preview,
             memberListId: e.member_list_id,
             messageCount: e.message_count,
-            name: null !== (r = e.name) && void 0 !== r ? r : '',
+            name: null != (r = e.name) ? r : '',
             nicks: ea(e.nicks),
             nsfw_: e.nsfw,
             originChannelId: e.origin_channel_id,
@@ -464,7 +464,7 @@ class eg extends em {
                           archiveTimestamp: e.thread_metadata.archive_timestamp,
                           createTimestamp: e.thread_metadata.create_timestamp,
                           locked: e.thread_metadata.locked,
-                          invitable: null === (i = e.thread_metadata.invitable) || void 0 === i || i
+                          invitable: null == (i = e.thread_metadata.invitable) || i
                       }
                     : void 0,
             topic_: e.topic,
@@ -491,19 +491,19 @@ class eE extends em {
             application_id: e.application_id,
             bitrate_: e.bitrate,
             flags_: e.flags,
-            guild_id: null !== (n = null != t ? t : e.guild_id) && void 0 !== n ? n : null,
+            guild_id: null != (n = null != t ? t : e.guild_id) ? n : null,
             iconEmoji: el(e.icon_emoji),
             id: e.id,
             lastMessageId: e.last_message_id,
             lastPinTimestamp: e.last_pin_timestamp,
             memberListId: e.member_list_id,
-            name: null !== (r = e.name) && void 0 !== r ? r : '',
-            nsfw_: null !== (i = e.nsfw) && void 0 !== i && i,
+            name: null != (r = e.name) ? r : '',
+            nsfw_: null != (i = e.nsfw) && i,
             originChannelId: e.origin_channel_id,
             parent_id: e.parent_id,
             permissionOverwrites_: eo(e.permission_overwrites),
             position_: e.position,
-            rateLimitPerUser_: null !== (o = e.rate_limit_per_user) && void 0 !== o ? o : 0,
+            rateLimitPerUser_: null != (o = e.rate_limit_per_user) ? o : 0,
             rtcRegion: e.rtc_region,
             themeColor: e.theme_color,
             topic_: e.topic,
@@ -517,7 +517,7 @@ class eE extends em {
     }
     constructor(e) {
         var t;
-        super(e), (this.application_id = e.application_id), (this.bitrate_ = e.bitrate_), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.originChannelId = e.originChannelId), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null !== (t = e.permissionOverwrites_) && void 0 !== t ? t : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rtcRegion = e.rtcRegion), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.userLimit_ = e.userLimit_), (this.version = e.version), (this.videoQualityMode = e.videoQualityMode), (this.hdStreamingUntil = e.hdStreamingUntil), (this.hdStreamingBuyerId = e.hdStreamingBuyerId);
+        super(e), (this.application_id = e.application_id), (this.bitrate_ = e.bitrate_), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.originChannelId = e.originChannelId), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null != (t = e.permissionOverwrites_) ? t : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rtcRegion = e.rtcRegion), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.userLimit_ = e.userLimit_), (this.version = e.version), (this.videoQualityMode = e.videoQualityMode), (this.hdStreamingUntil = e.hdStreamingUntil), (this.hdStreamingBuyerId = e.hdStreamingBuyerId);
     }
 }
 class eb extends em {
@@ -528,18 +528,18 @@ class eb extends em {
             defaultAutoArchiveDuration: e.default_auto_archive_duration,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
             flags_: e.flags,
-            guild_id: null !== (n = null != t ? t : e.guild_id) && void 0 !== n ? n : null,
+            guild_id: null != (n = null != t ? t : e.guild_id) ? n : null,
             iconEmoji: el(e.icon_emoji),
             id: e.id,
             lastMessageId: e.last_message_id,
             lastPinTimestamp: e.last_pin_timestamp,
             memberListId: e.member_list_id,
-            name: null !== (r = e.name) && void 0 !== r ? r : '',
-            nsfw_: null !== (i = e.nsfw) && void 0 !== i && i,
+            name: null != (r = e.name) ? r : '',
+            nsfw_: null != (i = e.nsfw) && i,
             parent_id: e.parent_id,
             permissionOverwrites_: eo(e.permission_overwrites),
             position_: e.position,
-            rateLimitPerUser_: null !== (o = e.rate_limit_per_user) && void 0 !== o ? o : 0,
+            rateLimitPerUser_: null != (o = e.rate_limit_per_user) ? o : 0,
             themeColor: e.theme_color,
             topic_: e.topic,
             type: null != e.type ? e.type : m.d4z.GUILD_TEXT,
@@ -551,11 +551,11 @@ class eb extends em {
     }
     constructor(e) {
         var t;
-        super(e), (this.application_id = e.application_id), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null !== (t = e.permissionOverwrites_) && void 0 !== t ? t : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.version = e.version), (this.linkedLobby = e.linkedLobby), (this.hdStreamingBuyerId = e.hdStreamingBuyerId), (this.hdStreamingUntil = e.hdStreamingUntil);
+        super(e), (this.application_id = e.application_id), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null != (t = e.permissionOverwrites_) ? t : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.version = e.version), (this.linkedLobby = e.linkedLobby), (this.hdStreamingBuyerId = e.hdStreamingBuyerId), (this.hdStreamingUntil = e.hdStreamingUntil);
     }
 }
-class ev extends eb {}
 class ey extends eb {}
+class ev extends eb {}
 class eO extends eb {}
 class eI extends eE {}
 class eS extends eb {}
@@ -578,18 +578,18 @@ class eA extends em {
             defaultSortOrder: e.default_sort_order,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
             flags_: e.flags,
-            guild_id: null !== (n = null != t ? t : e.guild_id) && void 0 !== n ? n : null,
+            guild_id: null != (n = null != t ? t : e.guild_id) ? n : null,
             iconEmoji: el(e.icon_emoji),
             id: e.id,
             lastMessageId: e.last_message_id,
             lastPinTimestamp: e.last_pin_timestamp,
             memberListId: e.member_list_id,
-            name: null !== (r = e.name) && void 0 !== r ? r : '',
-            nsfw_: null !== (i = e.nsfw) && void 0 !== i && i,
+            name: null != (r = e.name) ? r : '',
+            nsfw_: null != (i = e.nsfw) && i,
             parent_id: e.parent_id,
             permissionOverwrites_: eo(e.permission_overwrites),
             position_: e.position,
-            rateLimitPerUser_: null !== (o = e.rate_limit_per_user) && void 0 !== o ? o : 0,
+            rateLimitPerUser_: null != (o = e.rate_limit_per_user) ? o : 0,
             template: e.template,
             themeColor: e.theme_color,
             topic_: e.topic,
@@ -600,7 +600,7 @@ class eA extends em {
     }
     constructor(e) {
         var t, n;
-        super(e), (this.availableTags = null !== (t = e.availableTags) && void 0 !== t ? t : []), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultForumLayout = e.defaultForumLayout), (this.defaultReactionEmoji = e.defaultReactionEmoji), (this.defaultSortOrder = e.defaultSortOrder), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null !== (n = e.permissionOverwrites_) && void 0 !== n ? n : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.template = e.template), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.version = e.version);
+        super(e), (this.availableTags = null != (t = e.availableTags) ? t : []), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultForumLayout = e.defaultForumLayout), (this.defaultReactionEmoji = e.defaultReactionEmoji), (this.defaultSortOrder = e.defaultSortOrder), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null != (n = e.permissionOverwrites_) ? n : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.template = e.template), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.version = e.version);
     }
 }
 class eC {
@@ -634,10 +634,10 @@ class ew extends em {
                 id: e.id,
                 isMessageRequest: e.is_message_request,
                 isMessageRequestTimestamp: e.is_message_request_timestamp,
-                isSpam: null !== (t = e.is_spam) && void 0 !== t && t,
+                isSpam: null != (t = e.is_spam) && t,
                 lastMessageId: e.last_message_id,
                 lastPinTimestamp: e.last_pin_timestamp,
-                name: null !== (n = e.name) && void 0 !== n ? n : '',
+                name: null != (n = e.name) ? n : '',
                 nicks: ea(e.nicks),
                 ownerId: e.owner_id,
                 rawRecipients: r,
@@ -664,10 +664,10 @@ class ew extends em {
             let n = this.set(
                 'recipients',
                 i()
-                    .uniq([...(null !== (r = this.recipients) && void 0 !== r ? r : []), e])
+                    .uniq([...(null != (r = this.recipients) ? r : []), e])
                     .sort(h.default.compare)
             );
-            return null == t ? n : n.set('nicks', y(b({}, n.nicks), { [e]: t }));
+            return null == t ? n : n.set('nicks', v(b({}, n.nicks), { [e]: t }));
         }
     }
     removeRecipient(e) {
@@ -675,7 +675,7 @@ class ew extends em {
     }
     constructor(e) {
         var t, n;
-        super(e), (this.application_id = e.application_id), (this.flags_ = e.flags_), (this.icon = e.icon), (this.isMessageRequest = e.isMessageRequest), (this.isMessageRequestTimestamp = e.isMessageRequestTimestamp), (this.isSpam = e.isSpam), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.nicks = e.nicks), (this.ownerId = e.ownerId), (this.rawRecipients = ew.sortRecipients(e.rawRecipients, this.id)), (this.recipients = [...(null !== (t = e.recipients) && void 0 !== t ? t : [])].sort(h.default.compare)), (this.recipientFlags = e.recipientFlags), (this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []), (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed), (this.wallpaper = e.wallpaper);
+        super(e), (this.application_id = e.application_id), (this.flags_ = e.flags_), (this.icon = e.icon), (this.isMessageRequest = e.isMessageRequest), (this.isMessageRequestTimestamp = e.isMessageRequestTimestamp), (this.isSpam = e.isSpam), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.nicks = e.nicks), (this.ownerId = e.ownerId), (this.rawRecipients = ew.sortRecipients(e.rawRecipients, this.id)), (this.recipients = [...(null != (t = e.recipients) ? t : [])].sort(h.default.compare)), (this.recipientFlags = e.recipientFlags), (this.safetyWarnings = null != (n = e.safetyWarnings) ? n : []), (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed), (this.wallpaper = e.wallpaper);
     }
 }
 class eD extends ew {}
@@ -684,10 +684,10 @@ class ex extends em {
     static fromServer(e, t) {
         var n, r, i, o, a;
         let s = {
-            appliedTags: null !== (n = e.applied_tags) && void 0 !== n ? n : [],
+            appliedTags: null != (n = e.applied_tags) ? n : [],
             bitrate_: e.bitrate,
             flags_: e.flags,
-            guild_id: null !== (r = null != t ? t : e.guild_id) && void 0 !== r ? r : null,
+            guild_id: null != (r = null != t ? t : e.guild_id) ? r : null,
             id: e.id,
             lastMessageId: e.last_message_id,
             lastPinTimestamp: e.last_pin_timestamp,
@@ -703,8 +703,8 @@ class ex extends em {
             memberCount: e.member_count,
             memberIdsPreview: e.member_ids_preview,
             messageCount: e.message_count,
-            name: null !== (i = e.name) && void 0 !== i ? i : '',
-            nsfw_: null !== (o = e.nsfw) && void 0 !== o && o,
+            name: null != (i = e.name) ? i : '',
+            nsfw_: null != (o = e.nsfw) && o,
             ownerId: e.owner_id,
             parent_id: e.parent_id,
             parentChannelThreadType: e.parentChannelThreadType,
@@ -718,7 +718,7 @@ class ex extends em {
                           archiveTimestamp: e.thread_metadata.archive_timestamp,
                           createTimestamp: e.thread_metadata.create_timestamp,
                           locked: e.thread_metadata.locked,
-                          invitable: null === (a = e.thread_metadata.invitable) || void 0 === a || a
+                          invitable: null == (a = e.thread_metadata.invitable) || a
                       }
                     : void 0,
             totalMessageSent: e.total_message_sent,
@@ -730,7 +730,7 @@ class ex extends em {
     }
     constructor(e) {
         var t;
-        super(e), (this.appliedTags = null !== (t = e.appliedTags) && void 0 !== t ? t : []), (this.bitrate_ = e.bitrate_), (this.flags_ = e.flags_), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.member = e.member), (this.memberCount = e.memberCount), (this.memberIdsPreview = e.memberIdsPreview), (this.messageCount = e.messageCount), (this.nsfw_ = e.nsfw_), (this.ownerId = e.ownerId), (this.parent_id = e.parent_id), (this.parentChannelThreadType = e.parentChannelThreadType), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rtcRegion = e.rtcRegion), (this.threadMetadata = e.threadMetadata), (this.userLimit_ = e.userLimit_), (this.videoQualityMode = e.videoQualityMode);
+        super(e), (this.appliedTags = null != (t = e.appliedTags) ? t : []), (this.bitrate_ = e.bitrate_), (this.flags_ = e.flags_), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.member = e.member), (this.memberCount = e.memberCount), (this.memberIdsPreview = e.memberIdsPreview), (this.messageCount = e.messageCount), (this.nsfw_ = e.nsfw_), (this.ownerId = e.ownerId), (this.parent_id = e.parent_id), (this.parentChannelThreadType = e.parentChannelThreadType), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rtcRegion = e.rtcRegion), (this.threadMetadata = e.threadMetadata), (this.userLimit_ = e.userLimit_), (this.videoQualityMode = e.videoQualityMode);
     }
 }
 let eM = {
@@ -751,7 +751,7 @@ let eM = {
 };
 function ek(e, t) {
     var n, r;
-    return (null !== (r = eM[null !== (n = e.type) && void 0 !== n ? n : m.d4z.GUILD_TEXT]) && void 0 !== r ? r : eg.fromServer)(e, t);
+    return (null != (r = eM[null != (n = e.type) ? n : m.d4z.GUILD_TEXT]) ? r : eg.fromServer)(e, t);
 }
 function ej(e) {
     return eB(e);
@@ -762,8 +762,8 @@ let eU = {
     [m.d4z.GUILD_TEXT]: eT,
     [m.d4z.GUILD_VOICE]: eN,
     [m.d4z.GUILD_STAGE_VOICE]: eI,
-    [m.d4z.GUILD_CATEGORY]: ey,
-    [m.d4z.GUILD_ANNOUNCEMENT]: ev,
+    [m.d4z.GUILD_CATEGORY]: ev,
+    [m.d4z.GUILD_ANNOUNCEMENT]: ey,
     [m.d4z.GUILD_STORE]: eS,
     [m.d4z.ANNOUNCEMENT_THREAD]: ex,
     [m.d4z.PUBLIC_THREAD]: ex,
@@ -774,10 +774,10 @@ let eU = {
 };
 function eG(e) {
     var t, n;
-    let r = null !== (n = eU[null !== (t = e.type) && void 0 !== t ? t : m.d4z.GUILD_TEXT]) && void 0 !== n ? n : eg;
+    let r = null != (n = eU[null != (t = e.type) ? t : m.d4z.GUILD_TEXT]) ? n : eg;
     return (0, u.gh)(e, r);
 }
 function eB(e) {
     var t, n;
-    return new (null !== (n = eU[null !== (t = e.type) && void 0 !== t ? t : m.d4z.GUILD_TEXT]) && void 0 !== n ? n : eg)(ep(e));
+    return new (null != (n = eU[null != (t = e.type) ? t : m.d4z.GUILD_TEXT]) ? n : eg)(ep(e));
 }

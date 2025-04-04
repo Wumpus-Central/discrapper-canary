@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -9,28 +9,28 @@ var i = n(120356),
     c = n(533432),
     u = n(149203),
     d = n(185923),
-    f = n(82845);
-let p = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: p, onKeyDown: _, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: b, onBurstReactionToggle: y, renderHeader: O } = e,
-        S = (0, r.jsxs)(r.Fragment, {
+    f = n(539490);
+let _ = (e) => {
+    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: b, isBurstReaction: y, onBurstReactionToggle: v, renderHeader: O } = e,
+        I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.Z, {
-                    emojiListRef: p,
+                    emojiListRef: _,
                     gridNavigatorId: u.Vr,
-                    onKeyDown: _,
+                    onKeyDown: p,
                     className: f.searchBar,
                     ref: g,
                     isFullRow: !1,
                     onFocus: h,
                     autoFocus: m,
-                    defaultSearchPlaceholder: (0, s.nV)(n, b)
+                    defaultSearchPlaceholder: (0, s.nV)(n, y)
                 }),
                 n === d.Hz.REACTION
                     ? (0, r.jsx)('div', {
                           className: f.burstToggle,
                           children: (0, r.jsx)(a.Z, {
-                              checked: b,
-                              onClick: y
+                              checked: y,
+                              onClick: v
                           })
                       })
                     : null,
@@ -40,12 +40,12 @@ let p = (e) => {
                           searchBarRef: g,
                           className: f.diversitySelector,
                           hasTabWrapper: E,
-                          selectedSurrogate: v
+                          selectedSurrogate: b
                       })
             ]
         });
     return (0, r.jsx)('div', {
         className: o()(f.header, i),
-        children: null != O ? O(S) : S
+        children: null != O ? O(I) : I
     });
 };

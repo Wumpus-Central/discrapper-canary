@@ -26,8 +26,8 @@ function f(e, t, n) {
         e
     );
 }
-let p = [],
-    _ = {},
+let _ = [],
+    p = {},
     h = [],
     m = (e) => {
         null != e &&
@@ -38,16 +38,16 @@ let p = [],
     },
     g = [],
     E = 20,
-    v = 10 * c.Z.Millis.SECOND,
-    b = () => {
+    b = 10 * c.Z.Millis.SECOND,
+    y = () => {
         let e = new Date();
         if ((g = [e, ...g].slice(0, E)).length >= E) {
             let t = g[g.length - 1],
                 n = e.getTime() - t.getTime();
-            n < v && (r = new Date(e.getTime() + v - n));
+            n < b && (r = new Date(e.getTime() + b - n));
         }
     },
-    y = (e) => {
+    v = (e) => {
         let { cooldownEndsAtMs: t } = e;
         r = new Date(Date.now() + t);
     },
@@ -55,11 +55,11 @@ let p = [],
         let e = (0, u.cX)(h);
         s.uv.announce(e, 'polite'), (h = []);
     }, 500),
-    S = (e) => {
+    I = (e) => {
         let { emoji: t, userId: n, animationType: r } = e;
         null != t &&
             null != r &&
-            ((_[n] = {
+            ((p[n] = {
                 emoji: t,
                 sentAt: Date.now(),
                 animationType: r
@@ -73,17 +73,17 @@ let p = [],
             ]),
             O());
     },
-    I = (e) => {
+    S = (e) => {
         let { emoji: t } = e;
-        null != t && (p.unshift(t), (p = (0, o.uniqBy)(p, 'name')).length > d.e5 + 1 && p.pop());
+        null != t && (_.unshift(t), (_ = (0, o.uniqBy)(_, 'name')).length > d.e5 + 1 && _.pop());
     },
     T = (e) => {
         let { userId: t } = e;
-        null != _[t] && delete _[t];
+        null != p[t] && delete p[t];
     };
 class N extends (i = a.ZP.Store) {
     get recentlyUsedEmojis() {
-        return p;
+        return _;
     }
     get isOnCooldown() {
         return null != r && new Date() < r;
@@ -92,14 +92,14 @@ class N extends (i = a.ZP.Store) {
         return r;
     }
     getEffectForUserId(e) {
-        return _[e];
+        return p[e];
     }
 }
 f(N, 'displayName', 'VoiceChannelEffectsStore');
 let A = new N(l.Z, {
     VOICE_CHANNEL_EFFECT_CLEAR: T,
-    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: I,
-    VOICE_CHANNEL_EFFECT_SEND: S,
-    VOICE_CHANNEL_EFFECT_SENT_LOCAL: b,
-    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: y
+    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: S,
+    VOICE_CHANNEL_EFFECT_SEND: I,
+    VOICE_CHANNEL_EFFECT_SENT_LOCAL: y,
+    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: v
 });

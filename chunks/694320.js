@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,11 +9,11 @@ var r = n(200651),
     u = n(906732),
     d = n(436774),
     f = n(592125),
-    p = n(944486),
-    _ = n(626135),
+    _ = n(944486),
+    p = n(626135),
     h = n(981631),
     m = n(388032),
-    g = n(144292);
+    g = n(714745);
 function E(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,21 +43,21 @@ function v(e) {
     }
     return e;
 }
-function b() {
+function y() {
     (0, l.ZDy)(async () => {
         let { default: e } = await n.e('3289').then(n.bind(n, 682609));
-        return (t) => (0, r.jsx)(e, v({ channel: null }, t));
+        return (t) => (0, r.jsx)(e, b({ channel: null }, t));
     });
 }
-function y(e) {
+function v(e) {
     let { className: t, iconOnly: n } = e,
-        o = (0, s.e7)([p.Z, f.Z], () => {
-            let e = f.Z.getChannel(p.Z.getChannelId());
+        o = (0, s.e7)([_.Z, f.Z], () => {
+            let e = f.Z.getChannel(_.Z.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? h.ZY5.DM_CHANNEL : h.ZY5.GUILD_CHANNEL;
         }),
         { analyticsLocations: E } = (0, u.ZP)(c.Z.PREMIUM_UPSELL);
     i.useEffect(() => {
-        _.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
+        p.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
             type: 'longer messages inline',
             location: {
                 location_page: o,
@@ -66,7 +66,7 @@ function y(e) {
             location_stack: E
         });
     }, [o, E]);
-    let y = () =>
+    let v = () =>
             (0, r.jsxs)('div', {
                 className: a()(g.root, t),
                 children: [
@@ -78,21 +78,21 @@ function y(e) {
                     (0, r.jsx)(l.Text, {
                         className: g.text,
                         variant: 'text-sm/normal',
-                        children: m.NW.format(m.t.BNAIBQ, { onLearnMore: b })
+                        children: m.NW.format(m.t.BNAIBQ, { onLearnMore: y })
                     })
                 ]
             }),
         O = () =>
             (0, r.jsx)(l.P3F, {
                 className: g.iconOnly,
-                onClick: () => b(),
+                onClick: () => y(),
                 children: (0, r.jsx)(l.ua7, {
                     text: m.NW.string(m.t['+eFIjY']),
                     position: 'top',
                     children: (e) =>
                         (0, r.jsx)(
                             l.SrA,
-                            v(
+                            b(
                                 {
                                     size: 'md',
                                     color: 'currentColor',
@@ -103,5 +103,5 @@ function y(e) {
                         )
                 })
             });
-    return n ? O() : y();
+    return n ? O() : v();
 }

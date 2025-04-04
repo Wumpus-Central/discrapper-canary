@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -16,16 +16,16 @@ var r = n(200651),
     g = n(314884),
     E = n(709586),
     b = n(267642),
-    v = n(74538),
-    y = n(678558),
+    y = n(74538),
+    v = n(678558),
     O = n(981631),
     I = n(474936),
     S = n(388032),
-    T = n(866231);
-let A = function (e) {
+    T = n(491503);
+let N = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: o } = e,
-        A = i.useRef(null),
-        N = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        N = i.useRef(null),
+        A = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         C = (0, s.e7)([g.Z], () => g.Z.boostSlots),
         { analyticsLocations: R } = (0, u.ZP)(),
         { fractionalState: P } = (0, d.Z)({ forceFetch: !1 }),
@@ -113,13 +113,13 @@ let A = function (e) {
                 className: T.guildBoostCtas,
                 children: [
                     (0, r.jsx)(l.$, {
-                        innerRef: A,
+                        innerRef: N,
                         onChange: o,
                         threshold: 0.9,
                         children: (0, r.jsx)('div', {
-                            ref: A,
+                            ref: N,
                             className: a()(T.guildBoostCta, T.guildBoostCtaBoostWrapper),
-                            children: (0, r.jsx)(y.Z, {
+                            children: (0, r.jsx)(v.Z, {
                                 className: T.guildBoostCtaBoost,
                                 innerClassName: a()(T.__invalid_guildBoostCtaContent, T.guildBoostCtaBoostContent),
                                 buttonShineClassName: T.guildBoostCtaBoostShine,
@@ -137,7 +137,7 @@ let A = function (e) {
                             })
                         })
                     }),
-                    v.ZP.hasFreeBoosts(N, P) || v.ZP.isPremium(N, I.p9.TIER_2)
+                    y.ZP.hasFreeBoosts(A, P) || y.ZP.isPremium(A, I.p9.TIER_2)
                         ? (0, r.jsxs)(c.zxk, {
                               className: a()(T.guildBoostCta, T.guildBoostCtaSecondary),
                               innerClassName: a()(T.__invalid_guildBoostCtaContent, T.guildBoostCtaGiftContent),

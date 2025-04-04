@@ -14,16 +14,16 @@ var n = r(325008),
     d = r(859209),
     h = r(936940),
     E = r(740362),
-    I = r(644659).enforce,
-    y = r(930990),
+    y = r(644659).enforce,
+    I = r(930990),
     R = r(641236),
     b = r(973326),
     A = r(440196),
     S = R('match'),
     $ = i.RegExp,
     m = $.prototype,
-    k = i.SyntaxError,
-    w = o(m.exec),
+    w = i.SyntaxError,
+    k = o(m.exec),
     C = o(''.charAt),
     T = o(''.replace),
     _ = o(''.indexOf),
@@ -63,10 +63,10 @@ var n = r(325008),
                         c = !0;
                         break;
                     case '(' === e:
-                        w(M, O(t, n + 1)) && ((n += 2), (u = !0)), (i += e), s++;
+                        k(M, O(t, n + 1)) && ((n += 2), (u = !0)), (i += e), s++;
                         continue;
                     case '>' === e && u:
-                        if ('' === l || E(a, l)) throw new k('Invalid capture group name');
+                        if ('' === l || E(a, l)) throw new w('Invalid capture group name');
                         (a[l] = !0), (o[o.length] = [l, s]), (u = !1), (l = '');
                         continue;
                 }
@@ -89,7 +89,7 @@ if (a('RegExp', Y)) {
                     h = [],
                     E = t;
                 if (!g && x && d && t.constructor === j) return t;
-                if (((x || l(m, t)) && ((t = t.source), d && (e = v(E))), (t = void 0 === t ? '' : p(t)), (e = void 0 === e ? '' : p(e)), (E = t), b && ('dotAll' in D) && (n = !!e && _(e, 's') > -1) && (e = T(e, /s/g, '')), (r = e), P && ('sticky' in D) && (i = !!e && _(e, 'y') > -1) && U && (e = T(e, /y/g, '')), A && ((t = (o = q(t))[0]), (h = o[1])), (a = c($(t, e), g ? this : m, j)), (n || i || h.length) && ((s = I(a)), n && ((s.dotAll = !0), (s.raw = j(B(t), r))), i && (s.sticky = !0), h.length && (s.groups = h)), t !== E))
+                if (((x || l(m, t)) && ((t = t.source), d && (e = v(E))), (t = void 0 === t ? '' : p(t)), (e = void 0 === e ? '' : p(e)), (E = t), b && ('dotAll' in D) && (n = !!e && _(e, 's') > -1) && (e = T(e, /s/g, '')), (r = e), P && ('sticky' in D) && (i = !!e && _(e, 'y') > -1) && U && (e = T(e, /y/g, '')), A && ((t = (o = q(t))[0]), (h = o[1])), (a = c($(t, e), g ? this : m, j)), (n || i || h.length) && ((s = y(a)), n && ((s.dotAll = !0), (s.raw = j(B(t), r))), i && (s.sticky = !0), h.length && (s.groups = h)), t !== E))
                     try {
                         u(a, 'source', '' === E ? '(?:)' : E);
                     } catch (t) {}
@@ -103,4 +103,4 @@ if (a('RegExp', Y)) {
         x(j, $, z[F++]);
     (m.constructor = j), (j.prototype = m), d(i, 'RegExp', j, { constructor: !0 });
 }
-y('RegExp');
+I('RegExp');

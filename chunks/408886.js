@@ -5,7 +5,7 @@ let i = () => {
     return (
         (0, r.useEffect)(() => {
             var e;
-            (null === (e = window) || void 0 === e ? void 0 : e.EyeDropper) != null && t(new window.EyeDropper());
+            (null == (e = window) ? void 0 : e.EyeDropper) != null && t(new window.EyeDropper());
         }, []),
         e
     );

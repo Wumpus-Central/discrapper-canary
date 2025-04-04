@@ -8,20 +8,20 @@ var i = n(442837),
     l = n(517100),
     c = n(594174),
     u = n(231338),
-    d = n(968253);
+    d = n(113024);
 function f() {
     var e;
     let t = (0, i.e7)([s.default], () => s.default.isIdleStatusIndicatorEnabled),
         n = (0, i.e7)([c.default], () => {
             var e, t;
-            return null !== (t = null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
+            return null != (t = null == (e = c.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
         }),
-        [f, p] = (0, i.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
-        _ = [];
+        [f, _] = (0, i.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
+        p = [];
     return (
-        f || p || _.push('ACTIVE'),
-        f && _.push('IDLE'),
-        p && _.push('AFK'),
+        f || _ || p.push('ACTIVE'),
+        f && p.push('IDLE'),
+        _ && p.push('AFK'),
         n && t
             ? (0, r.jsx)(a.ZP, {
                   children: (0, r.jsxs)('div', {
@@ -31,7 +31,7 @@ function f() {
                               className: d.status,
                               children: [
                                   (0, r.jsx)(o.qbd, {
-                                      status: _.includes('ACTIVE') ? u.Sk.ONLINE : u.Sk.IDLE,
+                                      status: p.includes('ACTIVE') ? u.Sk.ONLINE : u.Sk.IDLE,
                                       className: d.statusIndicator
                                   }),
                                   (0, r.jsx)(o.Text, {
@@ -42,7 +42,7 @@ function f() {
                                       className: d.statusText,
                                       children: (0, r.jsx)(o.Text, {
                                           variant: 'text-md/bold',
-                                          children: _.join(' + ')
+                                          children: p.join(' + ')
                                       })
                                   })
                               ]
@@ -53,7 +53,7 @@ function f() {
                                   children: [
                                       'Idle since:',
                                       ' ',
-                                      new Date(null !== (e = l.Z.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
+                                      new Date(null != (e = l.Z.getIdleSince()) ? e : 0).toLocaleDateString(void 0, {
                                           year: 'numeric',
                                           day: 'numeric',
                                           month: 'numeric',

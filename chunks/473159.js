@@ -24,14 +24,14 @@ function s(e) {
     function f() {
         (0, a.gK)(n);
     }
-    function p() {
+    function _() {
         setTimeout(() => {
             (0, a.HQ)(n);
         }, 0);
     }
-    function _() {
+    function p() {
         (0, r.CO)(e);
     }
-    for (let n of (e.addEventListener('resize', s), e.addEventListener('focus', l), e.addEventListener('blur', c), e.addEventListener('unload', d), e.addEventListener('visibilitychange', _), a.wu)) t.addEventListener(n, f, !0), t.addEventListener(n, p, !1);
+    for (let n of (e.addEventListener('resize', s), e.addEventListener('focus', l), e.addEventListener('blur', c), e.addEventListener('unload', d), e.addEventListener('visibilitychange', p), a.wu)) t.addEventListener(n, f, !0), t.addEventListener(n, _, !1);
     (0, i.uF)(t, u), (0, r.S1)(e);
 }

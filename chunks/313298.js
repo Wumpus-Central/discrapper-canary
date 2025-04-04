@@ -21,29 +21,29 @@ let c = 75000,
     u = 10,
     d = 5000,
     f = 2,
-    p = 2000,
-    _ = 10000;
+    _ = 2000,
+    p = 10000;
 function h(e) {
     var t;
-    return (null !== (t = o.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= c ? u : f;
+    return (null != (t = o.Z.getMemberCount(e)) ? t : 0) >= c ? u : f;
 }
 function m(e) {
     var t;
-    return (null !== (t = o.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= c ? d : p;
+    return (null != (t = o.Z.getMemberCount(e)) ? t : 0) >= c ? d : _;
 }
 let g = {},
     E = {},
-    v = null;
-function b() {
-    null == v &&
-        (v = setInterval(() => {
+    b = null;
+function y() {
+    null == b &&
+        (b = setInterval(() => {
             a.default.forEachKey(g, (e) => {
-                S(e) && O(e);
+                I(e) && O(e);
             });
-        }, _));
+        }, p));
 }
-async function y(e, t) {
-    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), S(e) && (await O(e));
+async function v(e, t) {
+    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), I(e) && (await O(e));
 }
 function O(e) {
     if (null == g[e]) return;
@@ -58,7 +58,7 @@ function O(e) {
             });
         });
 }
-function S(e) {
+function I(e) {
     let t = g[e];
     if (null == t) return !1;
     let n = t.size >= h(e),
@@ -68,26 +68,26 @@ function S(e) {
     let i = Date.now() - r;
     return null != r && i >= m(e);
 }
-function I(e) {
+function S(e) {
     (g[e] = new Set()), (E[e] = null);
 }
 class T extends i.Z {
     handleInitialize() {
-        null == v && b();
+        null == b && y();
     }
     handleGuildMemberUpdate(e, t) {
-        if (s.Z.isInitialized(e)) return y(e, t);
+        if (s.Z.isInitialized(e)) return v(e, t);
     }
     handleGuildMemberRemove(e, t) {
-        if (s.Z.isInitialized(e)) return y(e, t);
+        if (s.Z.isInitialized(e)) return v(e, t);
     }
     handleGuildDelete(e) {
         let t = e.guild.id;
-        s.Z.isInitialized(t) && I(t);
+        s.Z.isInitialized(t) && S(t);
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        s.Z.isInitialized(t) && I(t);
+        s.Z.isInitialized(t) && S(t);
     }
     constructor(...e) {
         super(...e),

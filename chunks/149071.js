@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var r = n(544891),
     i = n(147913),
     o = n(680089),
@@ -57,14 +57,14 @@ function f(e, t) {
         e
     );
 }
-let p = {},
-    _ = 0,
+let _ = {},
+    p = 0,
     h = 15 * s.Z.Millis.SECOND;
 function m() {
-    p = u({}, o.Z.getCollapsedCategories());
+    _ = u({}, o.Z.getCollapsedCategories());
 }
 function g() {
-    __OVERLAY__ || (clearTimeout(_), (_ = setTimeout(() => v({}), h)));
+    __OVERLAY__ || (clearTimeout(p), (p = setTimeout(() => b({}), h)));
 }
 async function E(e, t) {
     null == e || e === l.ME
@@ -73,19 +73,19 @@ async function E(e, t) {
               body: t,
               rejectWithError: !1
           })
-        : await v(null != t ? { [null != e ? e : l.ME]: t } : {});
+        : await b(null != t ? { [null != e ? e : l.ME]: t } : {});
 }
-async function v(e) {
-    clearTimeout(_);
+async function b(e) {
+    clearTimeout(p);
     let t = 0 !== Object.keys(e).length,
         n = o.Z.getCollapsedCategories(),
-        i = b();
+        i = y();
     for (let r in i) {
         let i = a.Z.getChannel(r);
         null != i && null != i.guild_id && (i.guild_id in e || (e[i.guild_id] = {}), null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}), (e[i.guild_id].channel_overrides[i.id] = f(u({}, e[i.guild_id].channel_overrides[i.id]), { collapsed: i.id in n })), (t = !0));
     }
     return t
-        ? ((p = u({}, n)),
+        ? ((_ = u({}, n)),
           delete e[l.I_8],
           (
               await r.tn.patch({
@@ -96,15 +96,15 @@ async function v(e) {
           ).body)
         : [];
 }
-function b() {
+function y() {
     let e = {},
         t = o.Z.getCollapsedCategories();
-    for (let n in t) t[n] !== p[n] && (e[n] = !0);
-    for (let n in p) t[n] !== p[n] && (e[n] = !0);
+    for (let n in t) t[n] !== _[n] && (e[n] = !0);
+    for (let n in _) t[n] !== _[n] && (e[n] = !0);
     return e;
 }
-function y() {
-    p = u({}, o.Z.getCollapsedCategories());
+function v() {
+    _ = u({}, o.Z.getCollapsedCategories());
 }
 class O extends i.Z {
     constructor(...e) {
@@ -115,10 +115,10 @@ class O extends i.Z {
                 CATEGORY_COLLAPSE_ALL: g,
                 CATEGORY_EXPAND_ALL: g,
                 POST_CONNECTION_OPEN: m,
-                USER_GUILD_SETTINGS_FULL_UPDATE: y
+                USER_GUILD_SETTINGS_FULL_UPDATE: v
             }),
             c(this, 'saveUserGuildSettings', E),
-            c(this, 'saveUserGuildSettingsBulk', v);
+            c(this, 'saveUserGuildSettingsBulk', b);
     }
 }
-let S = new O();
+let I = new O();

@@ -1,4 +1,4 @@
-n.d(t, { r: () => p });
+n.d(t, { r: () => _ });
 var r = n(595490),
     i = n.n(r),
     o = n(192379),
@@ -47,7 +47,7 @@ function d(e, t) {
 function f(e) {
     if (Array.isArray(e)) return e;
 }
-function p(e, t, n) {
+function _(e, t, n) {
     var r = s(
             (0, o.useState)(function () {
                 return t(e);

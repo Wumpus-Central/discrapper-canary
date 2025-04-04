@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(703656),
     c = n(769654),
     u = n(900849),
-    d = n(405222),
+    d = n(330705),
     f = n(993860),
     _ = n(981631),
     p = n(388032);
@@ -65,8 +65,8 @@ function E(e, t) {
 }
 function b(e) {
     let { profile: t, onClick: n, submitting: h } = e,
-        { guildId: g, validInviteKey: b, ctaType: v } = (0, f.ZP)(t),
-        [y, O] = i.useState(!1),
+        { guildId: g, validInviteKey: b, ctaType: y } = (0, f.ZP)(t),
+        [v, O] = i.useState(!1),
         I = i.useCallback(
             (e) => {
                 e.stopPropagation(), (0, c.X)(g), null == n || n();
@@ -113,11 +113,11 @@ function b(e) {
             () => ({
                 size: o.zxk.Sizes.SMALL,
                 fullWidth: !0,
-                submitting: y || h
+                submitting: v || h
             }),
-            [y, h]
+            [v, h]
         );
-    switch (v) {
+    switch (y) {
         case f.sE.IS_MEMBER:
             return (0, r.jsx)(
                 o.zxk,

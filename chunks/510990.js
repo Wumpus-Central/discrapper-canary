@@ -12,7 +12,7 @@ function s(e, t) {
     let r = (0, a.B)(e, t);
     return Promise.resolve({
         file: e.item.file,
-        name: null !== (n = r.filename) && void 0 !== n ? n : ''
+        name: null != (n = r.filename) ? n : ''
     });
 }
 async function l(e) {}

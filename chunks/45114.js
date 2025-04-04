@@ -1,12 +1,12 @@
 n.d(t, {
     CZ: () => m,
-    FT: () => v,
+    FT: () => b,
     In: () => d,
     Ju: () => E,
-    U6: () => p,
+    U6: () => _,
     iV: () => h,
     jT: () => g,
-    y5: () => _
+    y5: () => p
 }),
     n(47120),
     n(653041);
@@ -57,10 +57,10 @@ function f(e) {
     u))
         d(e, t, n);
 }
-function p(e) {
+function _(e) {
     e.isCategory() ? f(e.id, !0, !0) : e.isForumLikeChannel() ? d(e.id, !0, !0, c.default.fromTimestamp(Date.now())) : d(e.id, !0, !0);
 }
-function _(e, t) {
+function p(e, t) {
     r.Z.dispatch({
         type: 'BULK_ACK',
         channels: e,
@@ -97,9 +97,9 @@ function E(e, t, n) {
         local: !1
     });
 }
-function v(e, t) {
+function b(e, t) {
     var n;
-    null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) &&
+    null != (null == (n = l.default.getCurrentUser()) ? void 0 : n.id) &&
         r.Z.dispatch({
             type: 'USER_NON_CHANNEL_ACK',
             ackType: e,

@@ -17,11 +17,11 @@ var r = n(200651),
     b = n(264634);
 function x(e) {
     let { onOpen: t, onClose: n, className: x, 'data-jump-section': y } = e,
-        E = i.useRef(null),
-        v = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        v = i.useRef(null),
+        E = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         O = (0, o.Q3)('RecentsButton'),
         N = i.useRef(null),
-        j = (0, a.e7)([p.ZP], () => (null == v ? void 0 : v.id) != null && p.ZP.getMentionCount(v.id, g.W.NOTIFICATION_CENTER) > 0),
+        j = (0, a.e7)([p.ZP], () => (null == E ? void 0 : E.id) != null && p.ZP.getMentionCount(E.id, g.W.NOTIFICATION_CENTER) > 0),
         { enabled: C } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
         I = (0, a.e7)([s.Z], () => C && s.Z.getUnseenInviteCount() > 0),
         S = (0, l.dQu)(l.TVs.modules.chat.INPUT_ICON_SIZE);
@@ -44,7 +44,7 @@ function x(e) {
                         }),
                     (0, r.jsx)(d.U, {
                         location: 'inbox-button',
-                        targetElementRef: E,
+                        targetElementRef: v,
                         children: (0, r.jsx)(
                             u.JO,
                             ((a = (function (e) {
@@ -74,7 +74,7 @@ function x(e) {
                             })({}, n)),
                             (o = o =
                                 {
-                                    ref: E,
+                                    ref: v,
                                     className: x,
                                     onClick: e,
                                     icon: l.xx7,

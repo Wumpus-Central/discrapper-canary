@@ -15,8 +15,8 @@ var r = n(392711),
     m = n(71585),
     g = n(146282),
     E = n(206583),
-    v = n(981631);
-function b(e, t, n) {
+    b = n(981631);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function b(e, t, n) {
         e
     );
 }
-let y = 4,
+let v = 4,
     O = 2 * _.Z.Millis.MINUTE,
     I = E.YN.GLOBAL_FEED,
     S = 15 * _.Z.Millis.MINUTE,
@@ -65,8 +65,8 @@ function L(e) {
 }
 function x() {
     var e;
-    let t = null !== (e = A.get(I)) && void 0 !== e ? e : 0;
-    if ((t > 0 && t <= y) || (L(I), !D(I))) return;
+    let t = null != (e = A.get(I)) ? e : 0;
+    if ((t > 0 && t <= v) || (L(I), !D(I))) return;
     let n = g.Z.getFeed(I);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == C) return;
     let r = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
@@ -109,8 +109,8 @@ async function M(e) {
                 t === I && ((C = null), x());
         } catch (a) {
             var i;
-            let e = null !== (i = A.get(t)) && void 0 !== i ? i : 0;
-            if (e < y) {
+            let e = null != (i = A.get(t)) ? i : 0;
+            if (e < v) {
                 let i = _.Z.Millis.MINUTE * Math.pow(2, e) + P(e);
                 T.set(
                     t,
@@ -156,12 +156,12 @@ function B(e) {
         n = g.Z.getFeed(I);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
 }
-function V(e) {
+function F(e) {
     var t;
     let { connectionId: n, track: r } = e;
-    null != n && (null === (t = u.Z.getAccount(n, v.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && R(n, r);
+    null != n && (null == (t = u.Z.getAccount(n, b.ABu.SPOTIFY)) ? void 0 : t.showActivity) && R(n, r);
 }
-function F() {
+function V() {
     let { enabled: e } = p.iC.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });
     e &&
         M({
@@ -180,7 +180,7 @@ function Z() {
 class H extends a.Z {
     constructor(...e) {
         super(...e),
-            b(this, 'actions', {
+            y(this, 'actions', {
                 POST_CONNECTION_OPEN: j,
                 CONNECTION_CLOSED: U,
                 WINDOW_FOCUS: k,
@@ -188,8 +188,8 @@ class H extends a.Z {
                 CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: k,
                 CONTENT_INVENTORY_MANUAL_REFRESH: G,
                 CONTENT_INVENTORY_INBOX_STALE: B,
-                SPOTIFY_NEW_TRACK: V,
-                GAME_PROFILE_OPEN: F,
+                SPOTIFY_NEW_TRACK: F,
+                GAME_PROFILE_OPEN: V,
                 OVERLAY_READY: Z
             });
     }

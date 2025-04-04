@@ -51,7 +51,7 @@ function u() {
             fire: (r, i, o) => {
                 var a, s;
                 let c = (null == o ? void 0 : o.settings) != null ? l({}, t, o.settings) : t;
-                e(r, i, n(c), (null !== (a = null == o ? void 0 : o.count) && void 0 !== a ? a : c.confettiCount) * (null !== (s = null == o ? void 0 : o.countMultiplier) && void 0 !== s ? s : 1), { sprite: null == o ? void 0 : o.sprite });
+                e(r, i, n(c), (null != (a = null == o ? void 0 : o.count) ? a : c.confettiCount) * (null != (s = null == o ? void 0 : o.countMultiplier) ? s : 1), { sprite: null == o ? void 0 : o.sprite });
             }
         }),
         [e, n, t]

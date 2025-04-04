@@ -1,6 +1,6 @@
 n.d(t, {
-    V: () => y,
-    e: () => v
+    V: () => v,
+    e: () => b
 }),
     n(47120);
 var r,
@@ -14,8 +14,8 @@ var o = n(442837),
     u = n(271383),
     d = n(944486),
     f = n(594174),
-    p = n(388032),
-    _ = n(759624);
+    _ = n(388032),
+    p = n(951535);
 function h(e, t, n) {
     return (
         t in e
@@ -43,7 +43,7 @@ class g extends (r = o.ZP.PersistedStore) {
 }
 h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore');
 let E = new g(s.Z, {}),
-    v = (e) =>
+    b = (e) =>
         (0, o.e7)([u.ZP, f.default, E], () => {
             let t = f.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
@@ -52,20 +52,20 @@ let E = new g(s.Z, {}),
             let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
             return r ? !E.hasId(n.id) && r : (m.delete(n.id) && E.emitChange(), !1);
         }),
-    b = () => {
+    y = () => {
         let e = d.Z.getChannelId();
         if (null == e) return;
         let t = c.Z.getChannel(e);
-        null != t && t.isPrivate() && !m.has(t.getRecipientId()) && (m.add(t.getRecipientId()), E.emitChange());
+        null != t && t.isPrivate() && (m.has(t.getRecipientId()) || (m.add(t.getRecipientId()), E.emitChange()));
     },
-    y = () =>
+    v = () =>
         (0, i.jsxs)('div', {
-            className: _.bar,
+            className: p.bar,
             children: [
                 (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
-                    children: p.NW.string(p.t['2UvR1N'])
+                    children: _.NW.string(_.t['2UvR1N'])
                 }),
-                (0, i.jsx)(l.B, { onClick: b })
+                (0, i.jsx)(l.B, { onClick: y })
             ]
         });

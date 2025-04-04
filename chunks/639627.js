@@ -57,19 +57,19 @@ function d(e, t) {
     );
 }
 let f = i.forwardRef(function (e, t) {
-    let { onInteraction: l } = e,
-        u = i.useRef(null);
-    function f(t, i) {
+    let { onInteraction: l, onChange: u } = e,
+        f = i.useRef(null);
+    function _(e, t) {
         (0, a.ZD)(async () => {
-            let { default: o } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('22682')]).then(n.bind(n, 73620));
+            let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
             return (n) =>
                 (0, r.jsx)(
-                    o,
+                    i,
                     c(
                         {
-                            imgURI: t,
-                            file: i,
-                            onCrop: e.onChange
+                            imageUri: e,
+                            file: t,
+                            onCrop: u
                         },
                         n
                     )
@@ -83,7 +83,7 @@ let f = i.forwardRef(function (e, t) {
                 focus: () => null,
                 activate: () => {
                     var e;
-                    return null == l || l(o.U.IMAGE_UPLOAD), null === (e = u.current) || void 0 === e || e.activateUploadDialogue(), !1;
+                    return null == l || l(o.U.IMAGE_UPLOAD), null == (e = f.current) || e.activateUploadDialogue(), !1;
                 }
             }),
             [l]
@@ -93,8 +93,8 @@ let f = i.forwardRef(function (e, t) {
             children: (0, r.jsx)(
                 s.ZP,
                 d(c({}, e), {
-                    ref: u,
-                    onChange: f
+                    ref: f,
+                    onChange: _
                 })
             )
         })

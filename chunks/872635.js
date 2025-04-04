@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => E,
-    Z: () => v
+    Z: () => b
 }),
     n(47120);
 var r = n(200651),
@@ -13,21 +13,21 @@ var r = n(200651),
     u = n(314910),
     d = n(5967),
     f = n(53529),
-    p = n(50659),
-    _ = n(436660),
+    _ = n(50659),
+    p = n(436660),
     h = n(887490),
     m = n(447525),
-    g = n(217131);
+    g = n(763169);
 function E(e) {
     var t;
     let { editorRef: n, options: i, iconClassName: o, dividerClassName: s } = e,
-        c = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
+        c = null == (t = n.current) ? void 0 : t.getSlateEditor();
     return null == c
         ? null
         : (0, r.jsxs)('div', {
               className: g.buttons,
               children: [
-                  (0, r.jsx)(b, {
+                  (0, r.jsx)(y, {
                       slateEditor: c,
                       markdownSyntax: 'bold',
                       children: (0, r.jsx)(l.mY4, {
@@ -36,7 +36,7 @@ function E(e) {
                           className: a()(g.icon, o)
                       })
                   }),
-                  (0, r.jsx)(b, {
+                  (0, r.jsx)(y, {
                       slateEditor: c,
                       markdownSyntax: 'italics',
                       children: (0, r.jsx)(l.h32, {
@@ -45,7 +45,7 @@ function E(e) {
                           className: a()(g.icon, o)
                       })
                   }),
-                  (0, r.jsx)(b, {
+                  (0, r.jsx)(y, {
                       slateEditor: c,
                       markdownSyntax: 'strikethrough',
                       children: (0, r.jsx)(l.dwl, {
@@ -56,7 +56,7 @@ function E(e) {
                   }),
                   (0, r.jsx)('div', { className: a()(g.divider, s) }),
                   !(null == i ? void 0 : i.disableBlockQuotes) &&
-                      (0, r.jsx)(y, {
+                      (0, r.jsx)(v, {
                           slateEditor: c,
                           blockType: 'blockQuote',
                           children: (0, r.jsx)(l.PEf, {
@@ -65,7 +65,7 @@ function E(e) {
                               className: a()(g.icon, o)
                           })
                       }),
-                  (0, r.jsx)(b, {
+                  (0, r.jsx)(y, {
                       slateEditor: c,
                       markdownSyntax: 'inlineCode',
                       children: (0, r.jsx)(l.nF$, {
@@ -76,7 +76,7 @@ function E(e) {
                           className: a()(g.icon, o)
                       })
                   }),
-                  (0, r.jsx)(b, {
+                  (0, r.jsx)(y, {
                       slateEditor: c,
                       markdownSyntax: 'spoiler',
                       children: (0, r.jsx)(l.tEF, {
@@ -88,62 +88,62 @@ function E(e) {
               ]
           });
 }
-let v = i.forwardRef(function (e, t) {
+let b = i.forwardRef(function (e, t) {
     var n;
     let { editorRef: o, containerRef: a, options: l } = e,
         f = i.useRef(null),
-        [p, _] = i.useState(!1),
+        [_, p] = i.useState(!1),
         m = i.useRef(),
-        v = i.useContext(c.ZP),
-        b = i.useCallback(() => {
-            _(!1), clearTimeout(m.current);
+        b = i.useContext(c.ZP),
+        y = i.useCallback(() => {
+            p(!1), clearTimeout(m.current);
         }, []),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 var t;
-                let n = v.renderWindow;
-                (e.target instanceof n.Node && (null === (t = f.current) || void 0 === t ? void 0 : t.contains(e.target))) || b();
+                let n = b.renderWindow;
+                (e.target instanceof n.Node && (null == (t = f.current) ? void 0 : t.contains(e.target))) || y();
             },
-            [v, b]
+            [b, y]
         ),
-        S = i.useCallback(
+        I = i.useCallback(
             (e) => {
-                let t = v.renderWindow;
-                if (e.target instanceof t.Element) {
-                    if (0 !== e.button) b();
+                let t = b.renderWindow;
+                if (e.target instanceof t.Element)
+                    if (0 !== e.button) y();
                     else {
                         var n;
-                        let r = e.target instanceof t.Node && (null === (n = f.current) || void 0 === n ? void 0 : n.contains(e.target));
+                        let r = e.target instanceof t.Node && (null == (n = f.current) ? void 0 : n.contains(e.target));
                         clearTimeout(m.current),
                             (m.current = setTimeout(() => {
                                 var t;
-                                let n = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement,
+                                let n = null == (t = (0, d.uB)(e)) ? void 0 : t.activeElement,
                                     i = a.current;
-                                _(r || (null != n && null != i && i.contains(n)));
+                                p(r || (null != n && null != i && i.contains(n)));
                             }, 100));
                     }
-                } else b();
+                else y();
             },
-            [v, a, b]
+            [b, a, y]
         );
-    i.useImperativeHandle(t, () => ({ hide: b }), [b]),
+    i.useImperativeHandle(t, () => ({ hide: y }), [y]),
         i.useEffect(() => {
-            let e = v.renderWindow;
+            let e = b.renderWindow;
             return (
-                e.document.addEventListener('keydown', b),
-                e.document.addEventListener('mousedown', y),
-                e.document.addEventListener('mouseup', S),
-                e.addEventListener('focus', b),
-                e.addEventListener('blur', b),
+                e.document.addEventListener('keydown', y),
+                e.document.addEventListener('mousedown', v),
+                e.document.addEventListener('mouseup', I),
+                e.addEventListener('focus', y),
+                e.addEventListener('blur', y),
                 () => {
-                    e.document.removeEventListener('keydown', b), e.document.removeEventListener('mousedown', y), e.document.removeEventListener('mouseup', S), e.removeEventListener('focus', b), e.removeEventListener('blur', b), clearTimeout(m.current);
+                    e.document.removeEventListener('keydown', y), e.document.removeEventListener('mousedown', v), e.document.removeEventListener('mouseup', I), e.removeEventListener('focus', y), e.removeEventListener('blur', y), clearTimeout(m.current);
                 }
             );
-        }, [v, b, y, S]);
-    let { x: I, y: T } = i.useMemo(() => {
+        }, [b, y, v, I]);
+    let { x: S, y: T } = i.useMemo(() => {
             var e, t, n, r;
-            let i = null === (e = o.current) || void 0 === e ? void 0 : e.getSlateEditor();
-            if ((null == i ? void 0 : i.selection) == null || h.M8.isCollapsed(i.selection) || !p)
+            let i = null == (e = o.current) ? void 0 : e.getSlateEditor();
+            if ((null == i ? void 0 : i.selection) == null || h.M8.isCollapsed(i.selection) || !_)
                 return {
                     x: null,
                     y: null
@@ -160,31 +160,31 @@ let v = i.forwardRef(function (e, t) {
             let d = u.getBoundingClientRect(),
                 f = l.createRange();
             f.setStart(c.anchorNode, c.anchorOffset), f.setEnd(c.anchorNode, c.anchorOffset);
-            let _ = f.getBoundingClientRect(),
+            let p = f.getBoundingClientRect(),
                 m = l.createRange();
             m.setStart(c.anchorNode, c.anchorOffset), m.setEnd(c.focusNode, c.focusOffset);
             let g = m.getBoundingClientRect(),
-                E = d.x === _.x,
-                v = E ? g.x : Math.min(d.x, _.x),
-                b = E ? g.x + g.width : Math.max(d.x, _.x),
-                y = null !== (r = null === (n = a.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
+                E = d.x === p.x,
+                b = E ? g.x : Math.min(d.x, p.x),
+                y = E ? g.x + g.width : Math.max(d.x, p.x),
+                v = null != (r = null == (n = a.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.y) ? r : 0;
             return {
-                x: v + (b - v) / 2,
-                y: Math.max(y, Math.min(_.y, d.y))
+                x: b + (y - b) / 2,
+                y: Math.max(v, Math.min(p.y, d.y))
             };
-        }, [a, p, o]),
+        }, [a, _, o]),
         [N, A] = i.useState(0),
         [C, R] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
-            if (null == I || null == T || null == f.current) return;
+            if (null == S || null == T || null == f.current) return;
             let e = f.current.getBoundingClientRect();
             R(e.width / 2), A(e.height + 12);
-        }, [I, T]),
-        null == I || null == T)
+        }, [S, T]),
+        null == S || null == T)
     )
         return null;
-    let P = null === (n = o.current) || void 0 === n ? void 0 : n.getSlateEditor();
+    let P = null == (n = o.current) ? void 0 : n.getSlateEditor();
     return null == P
         ? null
         : (0, r.jsx)(u.ZP, {
@@ -194,7 +194,7 @@ let v = i.forwardRef(function (e, t) {
                   className: g.toolbar,
                   style: {
                       top: T - N,
-                      left: I - C
+                      left: S - C
                   },
                   onMouseDown: (e) => {
                       e.stopPropagation();
@@ -212,15 +212,15 @@ let v = i.forwardRef(function (e, t) {
               })
           });
 });
-function b(e) {
+function y(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         o = () => {
-            null != t && f.T.withSingleEntry(t, () => (0, p.py)(t, n));
+            null != t && f.T.withSingleEntry(t, () => (0, _.py)(t, n));
         },
         a = !1;
     if ((null == t ? void 0 : t.selection) != null) {
         let [e, r] = h.M8.edges(t.selection);
-        a = null != (0, p.U4)(t, e, r).before[n];
+        a = null != (0, _.U4)(t, e, r).before[n];
     }
     return (0, r.jsx)('button', {
         'aria-pressed': a,
@@ -229,10 +229,10 @@ function b(e) {
         children: i
     });
 }
-function y(e) {
+function v(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         o = () => {
-            null != n && f.T.withSingleEntry(n, () => (0, p.hm)(n, t));
+            null != n && f.T.withSingleEntry(n, () => (0, _.hm)(n, t));
         },
         a = null != n ? h.bN.getCurrentBlock(n) : null,
         s = null != a && h.aj.isType(a[0], t);
@@ -246,13 +246,13 @@ function y(e) {
 function O(e) {
     var t;
     let { slateEditor: n } = e,
-        [r, o] = null !== (t = h.bN.getSelectedVoid(n)) && void 0 !== t ? t : [null, null],
+        [r, o] = null != (t = h.bN.getSelectedVoid(n)) ? t : [null, null],
         a = i.useCallback(
             (e) => {
                 if ((null == n ? void 0 : n.selection) == null || null == o) return;
                 let t = n.selection;
                 f.T.withSingleEntry(n, () => {
-                    _.Q.voidToText(n, e, o), _.Q.select(n, t);
+                    p.Q.voidToText(n, e, o), p.Q.select(n, t);
                 });
             },
             [n, o]

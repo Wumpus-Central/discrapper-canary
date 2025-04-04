@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(481060),
     c = n(359135),
     u = n(516817),
-    d = n(71930);
+    d = n(241072);
 function f(e, t, n) {
     return (
         t in e
@@ -82,31 +82,31 @@ function g(e, t) {
 }
 let E = i.forwardRef(function (e, t) {
     var n,
-        { avatar: o, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: v, hovered: y, selected: O, muted: I, to: S, avatarClassName: T, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
+        { avatar: o, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: v, selected: O, muted: I, to: S, avatarClassName: T, selectedClassName: N, innerClassName: A, wrapContent: C, highlighted: R, focusProps: P } = e,
         w = m(e, ['avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
     (w.className = a()(w.className, d.container, {
         [d.selected]: O,
         [d.highlighted]: R,
         [d.active]: O,
-        [null != A ? A : '']: O,
-        [d.clickable]: !O && (null != S || null != v),
+        [null != N ? N : '']: O,
+        [d.clickable]: !O && (null != S || null != y),
         [d.wrapperPlated]: null != p
     })),
-        (w['aria-selected'] = null !== (n = w['aria-selected']) && void 0 !== n ? n : O);
+        (w['aria-selected'] = null != (n = w['aria-selected']) ? n : O);
     let D = i.useRef(null),
         L = (0, r.jsxs)('div', {
             className: a()(d.childContainer, { [d.nameplated]: null != p }),
             children: [
                 (0, r.jsx)(u.Z, {
                     nameplate: p,
-                    hovered: y,
+                    hovered: v,
                     selected: O,
-                    content: D.current,
+                    content: D,
                     placement: c.i.MEMBER_LIST
                 }),
                 (0, r.jsxs)('div', {
                     ref: D,
-                    className: a()(N, d.layout, {
+                    className: a()(A, d.layout, {
                         [d.muted]: !O && I,
                         [d.wrappedLayout]: C
                     }),
@@ -156,7 +156,7 @@ let E = i.forwardRef(function (e, t) {
                           _(
                               {
                                   to: S,
-                                  onClick: v
+                                  onClick: y
                               },
                               w
                           ),
@@ -169,13 +169,13 @@ let E = i.forwardRef(function (e, t) {
                   )
               })
           )
-        : null != v
+        : null != y
           ? (0, r.jsx)(
                 l.P3F,
                 h(
                     _(
                         {
-                            onClick: v,
+                            onClick: y,
                             focusProps: P
                         },
                         w

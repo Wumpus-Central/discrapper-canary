@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r,
     i = n(442837),
     o = n(570140),
@@ -74,7 +74,7 @@ function b(e) {
     let { enabled: t } = e;
     t === s.$Ab.BLOCKED ? f({ desktopType: s.qrD.NEVER }) : t === s.$Ab.ENABLED && f({ desktopType: s.qrD.ALL });
 }
-class v extends (r = i.ZP.DeviceSettingsStore) {
+class y extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         d = c({}, u, e);
     }
@@ -106,15 +106,15 @@ class v extends (r = i.ZP.DeviceSettingsStore) {
         return d.disableAllSounds || -1 !== d.disabledSounds.indexOf(e);
     }
 }
-l(v, 'displayName', 'NotificationSettingsStore'),
-    l(v, 'persistKey', 'notifications'),
-    l(v, 'migrations', [
+l(y, 'displayName', 'NotificationSettingsStore'),
+    l(y, 'persistKey', 'notifications'),
+    l(y, 'migrations', [
         (e) => {
             let t = c({}, e);
             return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || s.PrB.NEVER), null == t.desktopType && (t.desktopType = a.isPlatformEmbedded ? s.qrD.ALL : s.qrD.NEVER), t;
         }
     ]);
-let y = new v(o.Z, {
+let v = new y(o.Z, {
     NOTIFICATIONS_SET_DESKTOP_TYPE: f,
     NOTIFICATIONS_SET_TTS_TYPE: h,
     NOTIFICATIONS_SET_DISABLED_SOUNDS: _,

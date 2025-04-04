@@ -1,39 +1,39 @@
-n.d(t, { Z: () => c });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    o = n.n(i),
-    l = n(481060),
-    s = n(679768),
-    a = n(456411);
-function c(e) {
-    let { copy: t, showStars: n = !0, className: i } = e;
-    return (0, r.jsxs)('div', {
-        className: o()(a.badgeContainer, i),
+o.d(n, { Z: () => s });
+var a = o(200651);
+o(192379);
+var t = o(120356),
+    r = o.n(t),
+    i = o(481060),
+    c = o(679768),
+    l = o(456411);
+function s(e) {
+    let { copy: n, showStars: o = !0, className: t } = e;
+    return (0, a.jsxs)('div', {
+        className: r()(l.badgeContainer, t),
         children: [
-            n &&
-                (0, r.jsxs)(r.Fragment, {
+            o &&
+                (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, r.jsx)('span', {
-                            className: o()(a.star, a.starLeft),
-                            children: (0, r.jsx)(s.Z, {
+                        (0, a.jsx)('span', {
+                            className: r()(l.star, l.starLeft),
+                            children: (0, a.jsx)(c.Z, {
                                 width: '10',
                                 height: '10'
                             })
                         }),
-                        (0, r.jsx)('span', {
-                            className: o()(a.star, a.starRight),
-                            children: (0, r.jsx)(s.Z, {
+                        (0, a.jsx)('span', {
+                            className: r()(l.star, l.starRight),
+                            children: (0, a.jsx)(c.Z, {
                                 width: '14',
                                 height: '14'
                             })
                         })
                     ]
                 }),
-            (0, r.jsx)(l.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: 'eyebrow',
-                className: a.newBadge,
-                children: t
+                className: l.newBadge,
+                children: n
             })
         ]
     });

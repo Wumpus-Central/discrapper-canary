@@ -71,24 +71,24 @@ function u(e) {
         u = e.timeFormats,
         d = e.dateFormats,
         f = e.medium,
-        p = [],
         _ = [],
+        p = [],
         h = [];
     function m(e, t) {
         var n = Array((e.match(/M/g) || []).length + 1),
             r = Array((e.match(/E/g) || []).length + 1);
         return n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))), r.length > 2 && (t = t.replace(/([Eec])+/, r.join('$1'))), t;
     }
-    for (t in a) a.hasOwnProperty(t) && (r = c((n = m(t, a[t])))) && (p.push(r), s(r) ? h.push(n) : l(r) && _.push(n));
-    for (i = 0; i < _.length; i += 1)
+    for (t in a) a.hasOwnProperty(t) && (r = c((n = m(t, a[t])))) && (_.push(r), s(r) ? h.push(n) : l(r) && p.push(n));
+    for (i = 0; i < p.length; i += 1)
         for (o = 0; o < h.length; o += 1)
             (r = c(
                 (n = f
-                    .replace('{0}', _[i])
+                    .replace('{0}', p[i])
                     .replace('{1}', h[o])
                     .replace(/^[,\s]+|[,\s]+$/gi, ''))
-            )) && p.push(r);
-    for (t in u) u.hasOwnProperty(t) && (r = c((n = m(t, u[t])))) && p.push(r);
-    for (t in d) d.hasOwnProperty(t) && (r = c((n = m(t, d[t])))) && p.push(r);
-    return p;
+            )) && _.push(r);
+    for (t in u) u.hasOwnProperty(t) && (r = c((n = m(t, u[t])))) && _.push(r);
+    for (t in d) d.hasOwnProperty(t) && (r = c((n = m(t, d[t])))) && _.push(r);
+    return _;
 }

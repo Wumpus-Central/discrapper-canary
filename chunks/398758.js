@@ -13,8 +13,8 @@ function c(e) {
     return (0, r.e7)([a.ZP, i.Z, s.default], () => {
         var t, n, r, o;
         let c = a.ZP.isOptInEnabled(e),
-            u = null !== (r = null === (t = i.Z.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.oNc.COMMUNITY)) && void 0 !== r && r,
-            d = null !== (o = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== o && o;
+            u = null != (r = null == (t = i.Z.getGuild(e)) ? void 0 : t.hasFeature(l.oNc.COMMUNITY)) && r,
+            d = null != (o = null == (n = s.default.getCurrentUser()) ? void 0 : n.isStaff()) && o;
         return c && (u || d);
     });
 }
@@ -29,7 +29,7 @@ function d(e) {
         let n = i.Z.getGuild(e),
             r = o.Z.can(l.Plq.MANAGE_GUILD, n),
             a = o.Z.can(l.Plq.MANAGE_ROLES, n),
-            s = null !== (t = null == n ? void 0 : n.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED)) && void 0 !== t && t;
+            s = null != (t = null == n ? void 0 : n.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED)) && t;
         return null != n && r && a && !s;
     });
 }

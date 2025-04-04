@@ -1,60 +1,60 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r,
     i,
     o,
-    a = n(442837),
-    l = n(570140);
-let c = () => ({
+    l = n(442837),
+    s = n(570140);
+let a = () => ({
         isFetching: !1,
         lastFetchedAt: null,
         error: null
     }),
-    d = [],
-    s = c();
-class _ extends (o = a.ZP.Store) {
+    c = [],
+    u = a();
+class d extends (o = l.ZP.Store) {
     get isFetching() {
-        return s.isFetching;
+        return u.isFetching;
     }
     get fetchError() {
-        return s.error;
+        return u.error;
     }
     get shouldFetch() {
         var e;
-        return Date.now() - (null != (e = s.lastFetchedAt) ? e : 0) > 300000 && !s.isFetching;
+        return Date.now() - (null != (e = u.lastFetchedAt) ? e : 0) > 300000 && !u.isFetching;
     }
     getAvatars() {
-        return d;
+        return c;
     }
 }
 (i = 'RecentAvatarsStore'),
-    (r = 'displayName') in _
-        ? Object.defineProperty(_, r, {
+    (r = 'displayName') in d
+        ? Object.defineProperty(d, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (_[r] = i);
-let f = new _(l.Z, {
+        : (d[r] = i);
+let p = new d(s.Z, {
     RECENT_AVATARS_FETCH_START: function () {
-        (s.isFetching = !0), (s.error = null);
+        (u.isFetching = !0), (u.error = null);
     },
     RECENT_AVATARS_FETCH_SUCCESS: function (e) {
         let { avatars: t } = e;
-        (d = t), (s.isFetching = !1), (s.lastFetchedAt = Date.now());
+        (c = t), (u.isFetching = !1), (u.lastFetchedAt = Date.now());
     },
     RECENT_AVATARS_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (s.isFetching = !1), (s.error = t);
+        (u.isFetching = !1), (u.error = t);
     },
     RECENT_AVATARS_UPDATE: function () {
-        s.lastFetchedAt = 0;
+        u.lastFetchedAt = 0;
     },
     RECENT_AVATAR_DELETE: function (e) {
         let { avatarId: t } = e;
-        d = d.filter((e) => e.id !== t);
+        c = c.filter((e) => e.id !== t);
     },
     LOGOUT: function () {
-        (d = []), (s = c());
+        (c = []), (u = a());
     }
 });

@@ -1,7 +1,7 @@
 n.d(t, {
     IS: () => d,
-    MH: () => _,
-    UE: () => p,
+    MH: () => p,
+    UE: () => _,
     as: () => l,
     fP: () => u,
     m1: () => c,
@@ -46,7 +46,7 @@ let u = () => (0, r.Z)(),
             official_guild_id: d
         });
     },
-    p = (e) => {
+    _ = (e) => {
         let { gameName: t, applicationId: n, action: r, recipientUserId: i, similarGameId: s, viewId: l, officialGuildId: c } = e;
         o.default.track(a.rMx.GAME_PROFILE_ACTION, {
             game_name: t,
@@ -58,7 +58,7 @@ let u = () => (0, r.Z)(),
             official_guild_id: c
         });
     },
-    _ = (e) => {
+    p = (e) => {
         let { viewId: t, applicationId: n, suggestedGameName: r, suggestedGameApplicationId: i, feedback: s, submitted: l } = e;
         return o.default.track(a.rMx.GAME_PROFILE_FEEDBACK, {
             view_id: t,

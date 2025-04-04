@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => y,
+    ZP: () => v,
     kp: () => c,
     uX: () => l
 });
@@ -31,11 +31,11 @@ let u = {},
 function f() {
     (u = {}), (d = {});
 }
-function p(e) {
+function _(e) {
     let { guildId: t } = e;
     u[t] = 'started';
 }
-function _(e) {
+function p(e) {
     let { guildId: t, enabled: n } = e;
     if ('started' !== u[t]) return !1;
     n ? (u[t] = 'ready') : (u[t] = 'not_applicable');
@@ -56,12 +56,12 @@ function E(e) {
     let { guildId: t, step: n } = e;
     d[t] = n;
 }
-function v() {
+function b() {
     d = {};
 }
-class b extends (r = i.ZP.Store) {
+class y extends (r = i.ZP.Store) {
     shouldShowOnboarding(e) {
-        return !!(e !== a.ME && e !== a.I_8 && c(u[e]));
+        return e !== a.ME && e !== a.I_8 && !!c(u[e]);
     }
     getOnboardingStatus(e) {
         return u[e];
@@ -71,17 +71,17 @@ class b extends (r = i.ZP.Store) {
     }
     getCurrentOnboardingStep(e) {
         var t;
-        return null !== (t = d[e]) && void 0 !== t ? t : 'cover';
+        return null != (t = d[e]) ? t : 'cover';
     }
 }
-s(b, 'displayName', 'GuildOnboardingStore');
-let y = new b(o.Z, {
+s(y, 'displayName', 'GuildOnboardingStore');
+let v = new y(o.Z, {
     LOGOUT: f,
     GUILD_DELETE: g,
-    GUILD_ONBOARDING_START: p,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: _,
+    GUILD_ONBOARDING_START: _,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: p,
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: h,
     GUILD_ONBOARDING_COMPLETE: m,
     GUILD_ONBOARDING_SET_STEP: E,
-    CONNECTION_OPEN: v
+    CONNECTION_OPEN: b
 });

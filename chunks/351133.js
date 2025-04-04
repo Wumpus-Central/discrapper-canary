@@ -9,7 +9,7 @@ var r = n(512722),
     u = n(456007),
     d = n(581364),
     f = n(388032);
-let p = {
+let _ = {
         [o.jw.SUB_COMMAND]: () => ({ success: !1 }),
         [o.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
         [o.jw.BOOLEAN]: (e) => {
@@ -79,7 +79,7 @@ let p = {
             }
         },
         [o.jw.ROLE]: (e, t, n, r) => {
-            if ('text' !== e.type) return { success: _(e) };
+            if ('text' !== e.type) return { success: p(e) };
             {
                 if ((0, d.BH)(e.text)) return { success: !0 };
                 let t = (0, a.K)(e.text, r, n, { allowUsers: !1 });
@@ -87,11 +87,11 @@ let p = {
             }
         },
         [o.jw.MENTIONABLE]: (e, t, n, r) => {
-            if ('text' !== e.type) return { success: 'userMention' === e.type || _(e) };
+            if ('text' !== e.type) return { success: 'userMention' === e.type || p(e) };
             {
                 if ((0, d.BH)(e.text)) return { success: !0 };
                 let t = (0, a.K)(e.text, r, n);
-                return { success: null != t && ('userMention' === t.type || _(t)) };
+                return { success: null != t && ('userMention' === t.type || p(t)) };
             }
         },
         [o.jw.ATTACHMENT]: (e, t, n, r, i) => {
@@ -100,7 +100,7 @@ let p = {
             return { success: null != o && o.filename === e.text };
         }
     },
-    _ = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
+    p = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
 function h(e, t, n, r, i) {
     if ((null != t.minValue && e < t.minValue) || (null != t.maxValue && e > t.maxValue)) {
         if (null != t.maxValue && null != t.minValue)
@@ -111,12 +111,12 @@ function h(e, t, n, r, i) {
                     maximum: g(t.maxValue)
                 })
             };
-        if (null != t.minValue)
+        else if (null != t.minValue)
             return {
                 success: !1,
                 error: f.NW.formatToPlainString(r, { minimum: g(t.minValue) })
             };
-        if (null != t.maxValue)
+        else if (null != t.maxValue)
             return {
                 success: !1,
                 error: f.NW.formatToPlainString(i, { maximum: g(t.maxValue) })
@@ -131,7 +131,7 @@ function m(e, t, n) {
                 success: !1,
                 error: f.NW.formatToPlainString(n.exactRangeErrorMessage, { value: g(t.minLength) })
             };
-        if (void 0 !== t.maxLength && void 0 !== t.minLength)
+        else if (void 0 !== t.maxLength && void 0 !== t.minLength)
             return {
                 success: !1,
                 error: f.NW.formatToPlainString(n.rangeErrorMessage, {
@@ -139,7 +139,7 @@ function m(e, t, n) {
                     maximum: g(t.maxLength)
                 })
             };
-        if (void 0 !== t.minLength)
+        else if (void 0 !== t.minLength)
             return {
                 success: !1,
                 error: f.NW.formatToPlainString(n.minErrorMessage, { minimum: g(t.minLength) })
@@ -155,4 +155,4 @@ function m(e, t, n) {
 function g(e) {
     return e.toLocaleString(f.NW.currentLocale, { useGrouping: !1 });
 }
-let E = p;
+let E = _;

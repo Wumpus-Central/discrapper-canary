@@ -16,7 +16,7 @@
             y: ["'n ar", "'iens ar"],
             yy: [e + ' ars', '' + e + ' ars']
         };
-        return r ? i[n][0] : t ? i[n][0] : i[n][1];
+        return r || t ? i[n][0] : i[n][1];
     }
     return e.defineLocale('tzl', {
         months: 'Januar_Fevraglh_Març_Avrïu_Mai_Gün_Julia_Guscht_Setemvar_Listopäts_Noemvar_Zecemvar'.split('_'),

@@ -59,6 +59,6 @@ class c extends r.Z {
     }
     constructor(e) {
         var t;
-        super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'type', void 0), o(this, 'user', void 0), o(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null !== (t = e.name_localized) && void 0 !== t ? t : e.name);
+        super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'type', void 0), o(this, 'user', void 0), o(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null != (t = e.name_localized) ? t : e.name);
     }
 }

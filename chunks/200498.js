@@ -1,7 +1,7 @@
 n.d(t, {
     B: () => m,
-    Os: () => _,
-    _L: () => p,
+    Os: () => p,
+    _L: () => _,
     jU: () => g,
     nG: () => h
 });
@@ -16,17 +16,17 @@ var a = n(592125),
     u = n(146085),
     d = n(427679),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     var i, o;
     let a = null == n ? void 0 : n.permissionOverwrites[e];
     return {
         id: e,
         type: t,
-        deny: null !== (i = null == a ? void 0 : a.deny) && void 0 !== i ? i : c.Hn,
-        allow: r.Od(null !== (o = null == a ? void 0 : a.allow) && void 0 !== o ? o : c.Hn, u.yP)
+        deny: null != (i = null == a ? void 0 : a.deny) ? i : c.Hn,
+        allow: r.Od(null != (o = null == a ? void 0 : a.allow) ? o : c.Hn, u.yP)
     };
 }
-function _(e) {
+function p(e) {
     let { allow: t, deny: n } = e;
     return r.fS(t, c.Hn) && r.fS(n, c.Hn);
 }
@@ -45,5 +45,5 @@ function m(e) {
     return (0, i.e7)([a.Z, l.Z], () => null != e && l.Z.can(f.Plq.MUTE_MEMBERS, a.Z.getChannel(e)), [e]);
 }
 function g(e) {
-    return !!(null != e && e.isGuildStageVoice() && o.Z.isLurking(e.guild_id) && d.Z.isPublic(e.id)) && l.Z.can(u.gl, e);
+    return null != e && !!e.isGuildStageVoice() && !!o.Z.isLurking(e.guild_id) && !!d.Z.isPublic(e.id) && l.Z.can(u.gl, e);
 }

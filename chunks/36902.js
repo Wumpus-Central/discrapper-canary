@@ -44,7 +44,7 @@ class c {
                     i().forEach(e.rtp.outbound, (e) => {
                         if ('audio' === e.type) {
                             var t;
-                            for (let n of null !== (t = e.pttQueueLatencyMicrosSamples) && void 0 !== t ? t : []) {
+                            for (let n of null != (t = e.pttQueueLatencyMicrosSamples) ? t : []) {
                                 let e = n / l;
                                 this.pttQueueLatencyHistogram.addSample(e);
                             }

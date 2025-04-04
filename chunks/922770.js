@@ -8,7 +8,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(186325),
     l = n(388032),
-    c = n(206800);
+    c = n(228614);
 function u(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,13 +95,13 @@ function g(e) {
 }
 function E(e) {
     var { type: t = 'wanderingCubes', animated: n = !0, className: o, itemClassName: u, 'aria-label': f } = e,
-        h = _(e, ['type', 'animated', 'className', 'itemClassName', 'aria-label']);
+        h = p(e, ['type', 'animated', 'className', 'itemClassName', 'aria-label']);
     let { reducedMotion: m } = i.useContext(s.S),
         E = m.enabled ? g(t) : t;
     if (((f = null != f ? f : l.NW.string(l.t.ZTNur6)), 'spinningCircle' === E || 'spinningCircleSimple' === E))
         return (0, r.jsx)(
             'div',
-            p(
+            _(
                 d(
                     {
                         className: a()(c.spinner, c[E], o, { [c.stopAnimation]: !n }),
@@ -146,10 +146,10 @@ function E(e) {
                 }
             )
         );
-    let v = a()(c.item, u);
+    let b = a()(c.item, u);
     return (0, r.jsx)(
         'span',
-        p(
+        _(
             d(
                 {
                     className: a()(c.spinner, o, { [c.stopAnimation]: !n }),
@@ -161,7 +161,7 @@ function E(e) {
             {
                 children: (0, r.jsxs)('span', {
                     className: a()(c.inner, c[E]),
-                    children: [(0, r.jsx)('span', { className: v }), (0, r.jsx)('span', { className: v }), 'pulsingEllipsis' === E || 'lowMotion' === E ? (0, r.jsx)('span', { className: v }) : null]
+                    children: [(0, r.jsx)('span', { className: b }), (0, r.jsx)('span', { className: b }), 'pulsingEllipsis' === E || 'lowMotion' === E ? (0, r.jsx)('span', { className: b }) : null]
                 })
             }
         )

@@ -72,7 +72,7 @@ function a(e) {
 }
 function s(e) {
     let { enabled: t } = i.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-        { enabled: n } = i.useExperiment({ location: e }, { autoTrackExposure: !1 });
+        { enabled: n } = o.useExperiment({ location: e }, { autoTrackExposure: !1 });
     return t || n;
 }
 function l(e) {

@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,11 +81,11 @@ function h(e, t) {
 class m extends i.Component {
     render() {
         let e = this.props,
-            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: v = !0, volume: b, autoPlay: y, autoMute: O, responsive: S, mediaLayoutType: I, mimeType: T, renderOverlayContent: N, renderLinkComponent: A, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: x, onVolumeChange: L, onMute: M, alt: k = c.NW.string(c.t.FlNoSU) } = e,
-            j = _(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'alt']);
+            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: v, autoMute: O, responsive: I, mediaLayoutType: S, mimeType: T, renderOverlayContent: N, renderLinkComponent: A, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, alt: k = c.NW.string(c.t.FlNoSU) } = e,
+            j = p(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'alt']);
         return (0, r.jsx)(
             a.ZP,
-            p(
+            _(
                 d(
                     {
                         alt: k,
@@ -99,8 +99,8 @@ class m extends i.Component {
                     minHeight: s.ZP.minHeight,
                     shouldLink: !1,
                     shouldAnimate: !1,
-                    mediaLayoutType: I,
-                    responsive: S,
+                    mediaLayoutType: S,
+                    responsive: I,
                     children: (e) => {
                         let {
                                 src: i,
@@ -114,12 +114,12 @@ class m extends i.Component {
                             poster: i,
                             width: a,
                             height: c,
-                            responsive: S,
-                            volume: b,
-                            autoPlay: null != y && y,
+                            responsive: I,
+                            volume: y,
+                            autoPlay: null != v && v,
                             autoMute: null != O && O,
                             type: s.ZP.Types.VIDEO,
-                            mediaLayoutType: I,
+                            mediaLayoutType: S,
                             fileName: h,
                             fileSize: null == n ? void 0 : (0, o.Ng)(n),
                             fileSizeBytes: null == n ? void 0 : n,
@@ -130,12 +130,12 @@ class m extends i.Component {
                             onPlay: R,
                             onPause: P,
                             onEnded: w,
-                            onVolumeChange: L,
+                            onVolumeChange: x,
                             onMute: M,
                             onControlsShow: D,
-                            onControlsHide: x,
+                            onControlsHide: L,
                             mimeType: T,
-                            downloadable: v
+                            downloadable: b
                         });
                     }
                 }

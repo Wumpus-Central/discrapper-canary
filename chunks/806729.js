@@ -17,7 +17,7 @@ function u(e) {
                     : (0, i.sortBy)(n, (e) => {
                           var t, n;
                           let { user: r } = e;
-                          return -((null !== (n = null === (t = _.get(r.id)) || void 0 === t ? void 0 : t.communicationProbability) && void 0 !== n ? n : -1) * 1);
+                          return -((null != (n = null == (t = _.get(r.id)) ? void 0 : t.communicationProbability) ? n : -1) * 1);
                       }),
             [n, _]
         ),
@@ -27,7 +27,7 @@ function u(e) {
             return (0, i.sortBy)(u, (t) => {
                 var n;
                 let { guild: r } = t;
-                return null !== (n = e[r.id]) && void 0 !== n ? n : p.length;
+                return null != (n = e[r.id]) ? n : p.length;
             });
         }, [u, p]),
         g = (0, a.Z)(t),

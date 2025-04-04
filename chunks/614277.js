@@ -1,6 +1,6 @@
 n.d(t, {
     C3: () => E,
-    O3: () => v,
+    O3: () => b,
     ZP: () => g
 });
 var r = n(200651),
@@ -13,8 +13,8 @@ var r = n(200651),
     u = n(481060),
     d = n(563132),
     f = n(409813),
-    p = n(996773);
-function _(e, t) {
+    _ = n(249779);
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -39,39 +39,39 @@ function m(e) {
     return {
         header: t,
         isLargeModal: n,
-        stepProps: _(e, ['header', 'isLargeModal'])
+        stepProps: p(e, ['header', 'isLargeModal'])
     };
 }
 function g(e) {
-    var t, n, o, s, c, _;
+    var t, n, o, s, c, p;
     let { header: h, isLargeModal: g, stepProps: E } = m(e),
-        { step: v, stepConfigs: b, setBodyNode: y, setFooterNode: O, setModalOverlayNode: S, setReadySlideId: I } = (0, d.JL)(),
-        T = b.find((e) => e.key === v);
+        { step: b, stepConfigs: y, setBodyNode: v, setFooterNode: O, setModalOverlayNode: I, setReadySlideId: S } = (0, d.JL)(),
+        T = y.find((e) => e.key === b);
     i.useEffect(() => {
-        S(null);
-    }, [v, S]),
+        I(null);
+    }, [b, I]),
         l()(null != T, 'Unknown step for current payment flow.');
-    let N = null !== (c = null == T ? void 0 : null === (t = T.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== c && c,
-        A = null == T ? void 0 : null === (n = T.options) || void 0 === n ? void 0 : n.bodyClassName,
-        C = null == T ? void 0 : null === (o = T.options) || void 0 === o ? void 0 : o.sliderBodyClassName;
+    let N = null != (c = null == T || null == (t = T.options) ? void 0 : t.hideSlider) && c,
+        A = null == T || null == (n = T.options) ? void 0 : n.bodyClassName,
+        C = null == T || null == (o = T.options) ? void 0 : o.sliderBodyClassName;
     return (
-        void 0 !== g && g && (C = p.sliderBodyLarge),
+        void 0 !== g && g && (C = _.sliderBodyLarge),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null === (_ = null == T ? void 0 : null === (s = T.options) || void 0 === s ? void 0 : s.renderHeader) || void 0 === _ || _ ? h : null,
+                null == (p = null == T || null == (s = T.options) ? void 0 : s.renderHeader) || p ? h : null,
                 T.renderStep(E),
-                null == v || N
+                null == b || N
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
-                                  className: a()(A, p.body, { [p.reviewStep]: v === f.h8.REVIEW }),
+                                  className: a()(A, _.body, _.noRoundedCorners, { [_.reviewStep]: b === f.h8.REVIEW }),
                                   children: (0, r.jsx)(u.MyZ, {
-                                      activeSlide: v,
+                                      activeSlide: b,
                                       centered: !1,
-                                      onSlideReady: (e) => I(e),
-                                      width: v === f.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
-                                      children: b
+                                      onSlideReady: (e) => S(e),
+                                      width: b === f.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
+                                      children: y
                                           .filter((e) => null != e.key)
                                           .map((e) =>
                                               (0, r.jsx)(
@@ -79,8 +79,8 @@ function g(e) {
                                                   {
                                                       id: e.key,
                                                       children: (0, r.jsx)('form', {
-                                                          className: a()(p.sliderBody, C),
-                                                          ref: (e) => y(e),
+                                                          className: a()(_.sliderBody, C),
+                                                          ref: (e) => v(e),
                                                           onSubmit: (e) => e.preventDefault()
                                                       })
                                                   },
@@ -90,7 +90,7 @@ function g(e) {
                                   })
                               }),
                               (0, r.jsx)('div', { ref: (e) => O(e) }),
-                              (0, r.jsx)('div', { ref: (e) => S(e) })
+                              (0, r.jsx)('div', { ref: (e) => I(e) })
                           ]
                       })
             ]
@@ -102,7 +102,7 @@ function E(e) {
         { bodyNode: n } = (0, d.JL)();
     return null == n ? null : c.createPortal(t, n);
 }
-function v(e) {
+function b(e) {
     let { children: t } = e,
         { footerNode: n } = (0, d.JL)();
     return null == n ? null : c.createPortal(t, n);

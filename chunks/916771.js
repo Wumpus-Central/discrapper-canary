@@ -16,7 +16,7 @@ function h(e) {
     var t;
     let { stream: n, width: h, avError: m, selected: g = !1, noArt: E = !1 } = e,
         { avErrorUIEnabled: b } = (0, s.JN)({ location: 'StreamWarning' }),
-        v = null === (t = (0, a.hp)(null != m ? m : a.u.STREAM_FAILED_TO_START)) || void 0 === t ? void 0 : t.errorCode;
+        y = null == (t = (0, a.hp)(null != m ? m : a.u.STREAM_FAILED_TO_START)) ? void 0 : t.errorCode;
     return (0, r.jsx)(d.Z, {
         artURL: p,
         header: _.NW.string(_.t.rSlOen),
@@ -24,7 +24,7 @@ function h(e) {
         noArt: E,
         selected: g,
         description: _.NW.format(_.t.sXsgsL, { helpUrl: u.Z.getArticleURL(f.BhN.STREAM_FAILED) }),
-        errorCodeMessage: b ? _.NW.formatToPlainString(_.t['ejOT9/'], { errorCode: v }) : void 0,
+        errorCodeMessage: b ? _.NW.formatToPlainString(_.t['ejOT9/'], { errorCode: y }) : void 0,
         onCTAClick: () => {
             (0, l.w)(i.Yn.STREAM, n.ownerId), (0, o.aP)((0, c.V9)(n));
         },

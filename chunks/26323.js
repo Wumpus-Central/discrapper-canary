@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -55,7 +55,7 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     let c = null != t ? t : ''.concat(l.jXE.PREMIUM_GUILD_UPSELL_MODAL);
     null != e.targetBoostedGuildTier && (c += ' - Tier '.concat(e.targetBoostedGuildTier));
     let f = () => {
@@ -68,15 +68,15 @@ function p(e, t) {
         type: c,
         location: e.analyticsSourceLocation
     });
-    let { openInPopoutEnabled: p } = e,
-        _ = d(e, ['openInPopoutEnabled']),
-        h = o.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != p && p;
+    let { openInPopoutEnabled: _ } = e,
+        p = d(e, ['openInPopoutEnabled']),
+        h = o.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != _ && _;
     h && (0, a.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
     let m = h ? i.u1M : i.z1l;
     (0, i.ZDy)(
         async () => {
             let { default: e } = await n.e('89675').then(n.bind(n, 146747));
-            return (t) => (0, r.jsx)(e, u({}, _, t));
+            return (t) => (0, r.jsx)(e, u({}, p, t));
         },
         {
             onCloseCallback: f,

@@ -4,7 +4,7 @@ var r = n(36056),
 class o {
     constructor(e) {
         var t;
-        this.fields = null !== (t = e.fields) && void 0 !== t ? t : [];
+        this.fields = null != (t = e.fields) ? t : [];
     }
     prepare() {
         if (this.data) return;

@@ -1,9 +1,9 @@
-n.d(t, { r: () => p });
+n.d(t, { r: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(557533),
     o = n.n(i),
-    a = n(532744);
+    a = n(966160);
 function s(e, t, n) {
     return (
         t in e
@@ -76,7 +76,7 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => {
+let _ = (e) => {
     var { open: t = !1, className: n } = e,
         i = d(e, ['open', 'className']);
     return (0, r.jsxs)(

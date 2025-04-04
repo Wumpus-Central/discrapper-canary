@@ -22,7 +22,7 @@ var r = function (e) {
     o = function (e) {
         if (e instanceof Element) return !0;
         var t,
-            n = null === (t = null == e ? void 0 : e.ownerDocument) || void 0 === t ? void 0 : t.defaultView;
+            n = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
         return !!(n && e instanceof n.Element);
     },
     a = function (e) {

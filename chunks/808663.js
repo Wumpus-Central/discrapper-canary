@@ -19,7 +19,7 @@ class i {
     flush() {
         for (; this.queue.length > 0; ) {
             var e;
-            null === (e = this.queue.shift()) || void 0 === e || e();
+            null == (e = this.queue.shift()) || e();
         }
     }
     constructor() {

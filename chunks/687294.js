@@ -26,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,7 +59,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -70,12 +70,12 @@ class g extends l.Z {
     _fileSize() {
         return this.files.reduce((e, t) => {
             var n;
-            return e + (null !== (n = t.currentSize) && void 0 !== n ? n : 0);
+            return e + (null != (n = t.currentSize) ? n : 0);
         }, 0);
     }
     async compressAndCheckFileSize() {
         var e, t;
-        let n = (0, a.F)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
+        let n = (0, a.F)(null == (t = this.files[0]) || null == (e = t.item) ? void 0 : e.target);
         return this.files.length > n.getMaxAttachmentsCount()
             ? (m.log('Too many attachments for '.concat(this.id)), this._handleError({ code: c.evJ.TOO_MANY_ATTACHMENTS }), !1)
             : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
@@ -94,7 +94,7 @@ class g extends l.Z {
             n = this.files.some((e) => e.isVideo),
             r = this._fileSize();
         m.log('setUploadingTextForUI - total content: '.concat(r, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
-            (this._file = h(p({}, this._file), {
+            (this._file = h(_({}, this._file), {
                 totalPostCompressionSize: r,
                 currentSize: r,
                 name: e,
@@ -114,7 +114,7 @@ class g extends l.Z {
         return {
             loaded: this.files.reduce((e, t) => {
                 var n;
-                return e + (null !== (n = t.loaded) && void 0 !== n ? n : 0);
+                return e + (null != (n = t.loaded) ? n : 0);
             }, 0),
             total: e
         };
@@ -129,14 +129,14 @@ class g extends l.Z {
         );
     }
     cancel() {
-        m.log('Cancel called for '.concat(this.id)), !this._aborted && ((this._aborted = !0), null != this._cancel && this._cancel(), this.files.forEach((e) => e.cancel()), this._handleComplete());
+        m.log('Cancel called for '.concat(this.id)), this._aborted || ((this._aborted = !0), null != this._cancel && this._cancel(), this.files.forEach((e) => e.cancel()), this._handleComplete());
     }
     async cancelItem(e) {
         m.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.status === o.m.CANCELED) return;
         let n = this.files.indexOf(t);
-        (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]), (this._file = h(p({}, this._file), { items: this.files })), await (0, i.V)(t), t.cancel(), this.emit('cancel-upload-item', this._file), 0 === this.files.length && this.cancel();
+        (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]), (this._file = h(_({}, this._file), { items: this.files })), await (0, i.V)(t), t.cancel(), this.emit('cancel-upload-item', this._file), 0 === this.files.length && this.cancel();
     }
     failed() {
         return this.files.some((e) => e.status === o.m.ERROR);

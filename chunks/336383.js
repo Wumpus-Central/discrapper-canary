@@ -9,9 +9,9 @@ var r = n(200651),
     u = n(502762),
     d = n(652853),
     f = n(171368),
-    p = n(228168),
-    _ = n(388032),
-    h = n(481736);
+    _ = n(228168),
+    p = n(388032),
+    h = n(227832);
 function m(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,18 +64,18 @@ function v(e, t) {
         e
     );
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function y(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,50 +86,50 @@ function y(e, t) {
 }
 let O = i.forwardRef(function (e, t) {
     var { children: n, className: i, subsection: o, onAction: m, onClose: E } = e,
-        y = b(e, ['children', 'className', 'subsection', 'onAction', 'onClose']);
+        v = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose']);
     let { profileType: O } = (0, d.z)(),
-        { analyticsLocations: S } = (0, l.ZP)(),
-        { context: I } = (0, c.KZ)();
-    return O === p.y0.FULL_SIZE || (null == I ? void 0 : I.userId) == null
+        { analyticsLocations: I } = (0, l.ZP)(),
+        { context: S } = (0, c.KZ)();
+    return O === _.y0.FULL_SIZE || (null == S ? void 0 : S.userId) == null
         ? (0, r.jsx)(
               u.Z.Overlay,
-              v(
+              b(
                   g(
                       {
                           ref: t,
                           className: a()(h.card, i)
                       },
-                      y
+                      v
                   ),
                   { children: n }
               )
           )
         : (0, r.jsx)(s.P3F, {
               className: h.clickableContainer,
-              'aria-label': _.NW.string(_.t.pD1L1t),
+              'aria-label': p.NW.string(p.t.pD1L1t),
               onClick: () => {
                   null == m || m({ action: 'PRESS_CARD' }),
                       (0, f.openUserProfileModal)(
                           g(
                               {
-                                  section: p.oh.ACTIVITY,
-                                  sourceAnalyticsLocations: S,
+                                  section: _.oh.ACTIVITY,
+                                  sourceAnalyticsLocations: I,
                                   subsection: o
                               },
-                              I
+                              S
                           )
                       ),
                       null == E || E();
               },
               children: (0, r.jsx)(
                   u.Z.Overlay,
-                  v(
+                  b(
                       g(
                           {
                               ref: t,
                               className: a()(h.card, i)
                           },
-                          y
+                          v
                       ),
                       { children: n }
                   )

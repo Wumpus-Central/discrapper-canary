@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => y,
-    y: () => v
+    K: () => v,
+    y: () => y
 }),
     n(411104),
     n(47120),
@@ -12,7 +12,7 @@ var r,
     s = n(493773),
     l = n(930295),
     c = n(126306),
-    u = n(142807);
+    u = n(697375);
 function d(e, t, n) {
     return (
         t in e
@@ -107,9 +107,9 @@ function b(e) {
     }
     throw Error('Unexpected position: '.concat(e));
 }
-class v extends (r = o.Component) {
+class y extends (r = o.Component) {
     render() {
-        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: o, align: a, autoInvert: s, fixed: c, nudgeAlignIntoViewport: u, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: p, overridePositionRef: h, preload: m, disablePointerEvents: g, ignoreModalClicks: E, closeOnScroll: v, useMouseEnter: y, renderPopout: O, layerContext: I, clickTrap: S = !1 } = this.props;
+        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: o, align: a, autoInvert: s, fixed: c, nudgeAlignIntoViewport: u, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: p, overridePositionRef: h, preload: m, disablePointerEvents: g, ignoreModalClicks: E, closeOnScroll: y, useMouseEnter: v, renderPopout: O, layerContext: I, clickTrap: S = !1 } = this.props;
         return (0, i.jsx)(l.H, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
@@ -130,8 +130,8 @@ class v extends (r = o.Component) {
             positionKey: p,
             disablePointerEvents: g,
             ignoreModalClicks: E,
-            closeOnScroll: v,
-            useMouseEnter: y,
+            closeOnScroll: y,
+            useMouseEnter: v,
             layerContext: I,
             clickTrap: S,
             children: e
@@ -158,7 +158,7 @@ class v extends (r = o.Component) {
             });
     }
 }
-function y(e) {
+function v(e) {
     var { renderPopout: t } = e,
         n = h(e, ['renderPopout']);
     let r = o.useRef(null),
@@ -169,7 +169,7 @@ function y(e) {
     o.useLayoutEffect(() => {
         if (l > 0) {
             var e, t, n, i, o;
-            null === (o = r.current) || void 0 === o || null === (i = o.ref) || void 0 === i || null === (n = i.current) || void 0 === n || null === (t = n.layerRef) || void 0 === t || null === (e = t.current) || void 0 === e || e.updatePosition();
+            null == (o = r.current) || null == (i = o.ref) || null == (n = i.current) || null == (t = n.layerRef) || null == (e = t.current) || e.updatePosition();
         }
     }, [l]),
         (0, s.ZP)(() => {
@@ -189,7 +189,7 @@ function y(e) {
     }
     function g() {
         var e, t, n, o;
-        let s = null === (o = r.current) || void 0 === o ? void 0 : null === (n = o.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
+        let s = null == (o = r.current) || null == (n = o.ref) || null == (t = n.current) || null == (e = t.domElementRef) ? void 0 : e.current,
             l = Math.max(100, null == s ? 100 : s.offsetWidth - 20);
         return (0, i.jsx)('div', {
             className: u.loader,
@@ -198,23 +198,23 @@ function y(e) {
         });
     }
     let [E, b] = o.useState(() => d),
-        y = o.useRef(d);
+        v = o.useRef(d);
     return (
         o.useEffect(() => {
-            y.current = d;
+            v.current = d;
         }),
         o.useEffect(() => {
             _.current
                 ? t().then((e) => {
                       b(() => e), c((e) => e + 1);
                   })
-                : b(y.current);
+                : b(v.current);
         }, [t]),
-        (0, i.jsx)(v, p(f({ ref: r }, n), { renderPopout: E }))
+        (0, i.jsx)(y, p(f({ ref: r }, n), { renderPopout: E }))
     );
 }
-d(v, 'Animation', g),
-    d(v, 'defaultProps', {
+d(y, 'Animation', g),
+    d(y, 'defaultProps', {
         position: 'right',
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
@@ -222,4 +222,4 @@ d(v, 'Animation', g),
         animation: '2',
         positionKey: void 0
     }),
-    (y.Animation = g);
+    (v.Animation = g);

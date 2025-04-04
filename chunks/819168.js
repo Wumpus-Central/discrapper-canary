@@ -10,6 +10,6 @@ function a(e) {
 function s(e) {
     var t;
     if (null == e.threadMetadata) return 0;
-    let n = null !== (t = r.ZP.lastMessageId(e.id)) && void 0 !== t ? t : e.id;
+    let n = null != (t = r.ZP.lastMessageId(e.id)) ? t : e.id;
     return Math.max(o.default.extractTimestamp(n), null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0);
 }

@@ -13,8 +13,8 @@ function s(e, t) {
         f = 0;
     if (l) {
         (c = l.width), (u = l.height);
-        var p = (0, a.Z)();
-        (p || (!p && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
+        var _ = (0, a.Z)();
+        (_ || (!_ && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
     }
     return {
         width: c,

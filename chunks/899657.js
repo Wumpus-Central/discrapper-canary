@@ -1,4 +1,4 @@
-function t(e) {
+e.exports = function (e) {
     let t = e.regex,
         n = {
             $pattern: /[\w.\/]+/,
@@ -17,8 +17,8 @@ function t(e) {
         u = t.concat(t.optional(/\.|\.\/|\//), c, t.anyNumberOfTimes(t.concat(l, c))),
         d = t.concat('(', a, '|', s, ')(?==)'),
         f = { begin: u },
-        p = e.inherit(f, { keywords: r }),
-        _ = {
+        _ = e.inherit(f, { keywords: r }),
+        p = {
             begin: /\(/,
             end: /\)/
         },
@@ -30,7 +30,7 @@ function t(e) {
                 begin: /=/,
                 end: /=/,
                 starts: {
-                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, p, _]
+                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, _, p]
                 }
             }
         },
@@ -41,16 +41,17 @@ function t(e) {
             contains: [{ begin: /\w+/ }]
         },
         g = {
-            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, p, _],
+            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, _, p],
             returnEnd: !0
-        },
-        E = e.inherit(f, {
+        };
+    p.contains = [
+        e.inherit(f, {
             className: 'name',
             keywords: n,
             starts: e.inherit(g, { end: /\)/ })
-        });
-    _.contains = [E];
-    let v = e.inherit(f, {
+        })
+    ];
+    let E = e.inherit(f, {
             keywords: n,
             className: 'name',
             starts: e.inherit(g, { end: /\}\}/ })
@@ -84,7 +85,7 @@ function t(e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{(?!\/)/,
                 end: /\}\}\}\}/,
-                contains: [v],
+                contains: [E],
                 starts: {
                     end: /\{\{\{\{\//,
                     returnEnd: !0,
@@ -101,7 +102,7 @@ function t(e) {
                 className: 'template-tag',
                 begin: /\{\{#/,
                 end: /\}\}/,
-                contains: [v]
+                contains: [E]
             },
             {
                 className: 'template-tag',
@@ -135,5 +136,4 @@ function t(e) {
             }
         ]
     };
-}
-e.exports = t;
+};

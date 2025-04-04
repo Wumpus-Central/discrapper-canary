@@ -54,23 +54,23 @@ function u(e) {
             f.current.delay(),
             () => {
                 var e;
-                null === (e = f.current) || void 0 === e || e.cancel(), (f.current = null);
+                null == (e = f.current) || e.cancel(), (f.current = null);
             }
         ),
         [n]
     );
-    let p = i.useCallback(
+    let _ = i.useCallback(
             (e) => {
                 var t;
-                u(!1), d.current.add(e), null === (t = f.current) || void 0 === t || t.cancel();
+                u(!1), d.current.add(e), null == (t = f.current) || t.cancel();
             },
             [d, f, u]
         ),
-        _ = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 if ((d.current.delete(e), 0 === d.current.size)) {
                     var t;
-                    null === (t = f.current) || void 0 === t || t.delay();
+                    null == (t = f.current) || t.delay();
                 }
             },
             [d, f]
@@ -78,21 +78,21 @@ function u(e) {
         h = i.useCallback(() => {
             if ((u(!1), 0 === d.current.size)) {
                 var e;
-                null === (e = f.current) || void 0 === e || e.delay();
+                null == (e = f.current) || e.delay();
             }
         }, [d, f, u]),
         m = i.useCallback(() => {
             var e;
-            !(d.current.size > 0) && (null === (e = f.current) || void 0 === e || e.cancel(), u(!0));
+            d.current.size > 0 || (null == (e = f.current) || e.cancel(), u(!0));
         }, [f, u]),
         g = i.useMemo(
             () => ({
-                onAllowIdle: _,
-                onPreventIdle: p,
+                onAllowIdle: p,
+                onPreventIdle: _,
                 onActive: h,
                 onForceIdle: m
             }),
-            [_, p, h, m]
+            [p, _, h, m]
         );
     return (0, r.jsx)(c.Provider, {
         value: a,

@@ -57,8 +57,8 @@ function u(e, t) {
 }
 let d = new Map(),
     f = new Set(),
-    p = null,
-    _ = !1,
+    _ = null,
+    p = !1,
     h = !1;
 function m(e) {
     let { userId: t } = e;
@@ -72,32 +72,32 @@ function E(e) {
     let { userId: t } = e;
     f.delete(t);
 }
-function v() {
-    (p = null), (_ = !0);
+function b() {
+    (_ = null), (p = !0);
 }
-function b(e) {
+function y(e) {
     let { entry: t, userId: n } = e;
-    p = null;
+    _ = null;
     let r = d.get(n);
     if (null == r) return !1;
     let i = r.entries.filter((e) => e.id !== t.id);
-    d.set(n, u(l({}, r), { entries: i })), (_ = !1);
+    d.set(n, u(l({}, r), { entries: i })), (p = !1);
 }
-function y(e) {
+function v(e) {
     let { error: t } = e;
-    (p = t), (_ = !1);
+    (_ = t), (p = !1);
 }
 function O() {
-    (p = null), (_ = !1);
-}
-function S() {
-    (d = new Map()), (f = new Set()), (p = null), (_ = !1);
+    (_ = null), (p = !1);
 }
 function I() {
-    S(), (h = !0);
+    (d = new Map()), (f = new Set()), (_ = null), (p = !1);
+}
+function S() {
+    I(), (h = !0);
 }
 function T() {
-    S();
+    I();
 }
 class N extends (r = i.ZP.Store) {
     getMatchingOutboxEntry(e) {
@@ -112,10 +112,10 @@ class N extends (r = i.ZP.Store) {
         return f.has(e);
     }
     get deleteOutboxEntryError() {
-        return p;
+        return _;
     }
     get isDeletingEntryHistory() {
-        return _;
+        return p;
     }
     get hasInitialized() {
         return h;
@@ -123,13 +123,13 @@ class N extends (r = i.ZP.Store) {
 }
 s(N, 'displayName', 'ContentInventoryOutboxStore');
 let A = new N(o.Z, {
-    CONNECTION_OPEN: I,
+    CONNECTION_OPEN: S,
     LOGOUT: T,
     CONTENT_INVENTORY_FETCH_OUTBOX_START: m,
     CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: g,
     CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: E,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: v,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: b,
-    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: y,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: b,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: y,
+    CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: v,
     CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: O
 });

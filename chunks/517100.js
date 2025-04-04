@@ -9,8 +9,8 @@ var r,
     u = n(358085),
     d = n(314897),
     f = n(981631),
-    p = n(65154);
-function _(e, t, n) {
+    _ = n(65154);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,13 +27,13 @@ let h = Date.now(),
     m = !1,
     g = !1,
     E = !1,
-    v = !1,
-    b = !1;
-function y() {
-    return E || v || ((0, u.isAndroid)() && b);
+    b = !1,
+    y = !1;
+function v() {
+    return E || b || ((0, u.isAndroid)() && y);
 }
 function O() {
-    Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, f.OSm) || y()
+    Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, f.OSm) || v()
         ? g ||
           o.Z.dispatch({
               type: 'AFK',
@@ -45,8 +45,8 @@ function O() {
               afk: !1
           });
 }
-function S() {
-    Date.now() - h > f.OSm || y()
+function I() {
+    Date.now() - h > f.OSm || v()
         ? m ||
           o.Z.dispatch({
               type: 'IDLE',
@@ -59,15 +59,15 @@ function S() {
               idle: !1
           });
 }
-function I() {
-    S(), O();
+function S() {
+    I(), O();
 }
 function T() {
     var e;
     let t = (e) => {
-        (h = Math.max(Date.now() - e, h)), I(), setTimeout(T, 10 * c.Z.Millis.SECOND);
+        (h = Math.max(Date.now() - e, h)), S(), setTimeout(T, 10 * c.Z.Millis.SECOND);
     };
-    if ((null === s.Z || void 0 === s.Z ? void 0 : null === (e = s.Z.remotePowerMonitor) || void 0 === e ? void 0 : e.getSystemIdleTimeMs) != null) {
+    if ((null === s.Z || void 0 === s.Z || null == (e = s.Z.remotePowerMonitor) ? void 0 : e.getSystemIdleTimeMs) != null) {
         let e = s.Z.remotePowerMonitor.getSystemIdleTimeMs();
         e instanceof Promise ? e.then(t) : t(e);
     }
@@ -80,11 +80,11 @@ function A(e) {
 }
 function C(e) {
     let { userId: t, speakingFlags: n } = e;
-    return n !== p.Dg.NONE && t === d.default.getId() && P({}), !1;
+    return n !== _.Dg.NONE && t === d.default.getId() && P({}), !1;
 }
 function R(e) {
     let { state: t } = e;
-    return (b = t === f.$7l.BACKGROUND), (h = Date.now()), I(), !1;
+    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), S(), !1;
 }
 function P(e) {
     let { timestamp: t, type: n } = e,
@@ -97,7 +97,7 @@ function P(e) {
                   type: 'OVERLAY_SET_NOT_IDLE',
                   timestamp: h
               })
-            : I(),
+            : S(),
         !1)
     );
 }
@@ -111,12 +111,12 @@ __OVERLAY__ ||
               (E = !0), P({}), a.default.disconnect();
           }),
           s.Z.remotePowerMonitor.on('lock-screen', () => {
-              (v = !0), P({});
+              (b = !0), P({});
           }),
           s.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (v = !1), P({});
+              (b = !1), P({});
           }))
-        : setInterval(I, 0.25 * f.OSm));
+        : setInterval(S, 30 * c.Z.Millis.SECOND));
 class w extends (r = i.ZP.Store) {
     isIdle() {
         return m;
@@ -128,7 +128,7 @@ class w extends (r = i.ZP.Store) {
         return m ? h : null;
     }
 }
-_(w, 'displayName', 'IdleStore');
+p(w, 'displayName', 'IdleStore');
 let D = new w(o.Z, {
     IDLE: N,
     AFK: A,

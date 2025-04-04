@@ -57,10 +57,10 @@ function f(e) {
     } else u.userTenureRewardStatusByRewardId = c.userTenureRewardStatusByRewardId;
     (u.lastFetchTimeMs = Date.now()), (u.fetchState = 2);
 }
-function p() {
+function _() {
     u.userTenureRewardStatusByRewardId = c.userTenureRewardStatusByRewardId;
 }
-function _(e) {
+function p(e) {
     let { tenureRewardIds: t } = e;
     t.forEach((e) => {
         delete u.userTenureRewardStatusByRewardId[e];
@@ -87,7 +87,7 @@ a(m, 'displayName', 'TenureRewardStore'), a(m, 'persistKey', 'TenureRewardStore'
 let g = new m(o.Z, {
     USER_TENURE_REWARD_SYNC_START: d,
     USER_TENURE_REWARD_SYNC_SUCCESS: f,
-    USER_TENURE_REWARD_STATUS_RESET: p,
-    USER_TENURE_REWARD_STATUS_DELETE: _,
+    USER_TENURE_REWARD_STATUS_RESET: _,
+    USER_TENURE_REWARD_STATUS_DELETE: p,
     LOGOUT: h
 });

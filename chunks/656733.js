@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(757143), n(301563), n(47120);
+n.d(t, { Z: () => x }), n(757143), n(301563), n(47120);
 var r,
     i = n(442837),
     o = n(377108),
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-let p = {
+let _ = {
         MP4: 'mp4',
         TINYMP4: 'tinymp4',
         NANOMP4: 'nanomp4',
@@ -65,7 +65,7 @@ let p = {
         TINYWEBM: 'tinywebm',
         NANOWEBM: 'nanowebm'
     },
-    _ = {
+    p = {
         FIXED_HEIGHT_MP4: 'fixed_height.mp4',
         FIXED_HEIGHT_SMALL_MP4: 'fixed_height_small.mp4',
         FIXED_WIDTH_MP4: 'fixed_width.mp4',
@@ -73,35 +73,35 @@ let p = {
         DOWNSIZED_SMALL_MP4: 'downsized_small.mp4',
         ORIGINAL_MP4: 'original.mp4'
     },
-    h = p.MP4,
+    h = _.MP4,
     m = null,
     g = '',
     E = '',
-    v = [],
     b = [],
-    y = h,
+    y = [],
+    v = h,
     O = [],
-    S = [];
-function I(e) {
+    I = [];
+function S(e) {
     m = e.analyticsID;
 }
 function T(e) {
-    '' === (g = e.query) && ((E = ''), (v = []), (O = []));
+    '' === (g = e.query) && ((E = ''), (b = []), (O = []));
 }
 function N(e) {
     switch (e) {
-        case _.FIXED_HEIGHT_MP4:
-        case _.FIXED_HEIGHT_SMALL_MP4:
-        case _.FIXED_WIDTH_MP4:
-        case _.FIXED_WIDTH_SMALL_MP4:
-        case _.DOWNSIZED_SMALL_MP4:
-        case _.ORIGINAL_MP4:
-        case p.MP4:
-        case p.TINYMP4:
-        case p.NANOMP4:
-        case p.WEBM:
-        case p.TINYWEBM:
-        case p.NANOWEBM:
+        case p.FIXED_HEIGHT_MP4:
+        case p.FIXED_HEIGHT_SMALL_MP4:
+        case p.FIXED_WIDTH_MP4:
+        case p.FIXED_WIDTH_SMALL_MP4:
+        case p.DOWNSIZED_SMALL_MP4:
+        case p.ORIGINAL_MP4:
+        case _.MP4:
+        case _.TINYMP4:
+        case _.NANOMP4:
+        case _.WEBM:
+        case _.TINYWEBM:
+        case _.NANOWEBM:
             return !0;
         default:
             return !1;
@@ -113,7 +113,7 @@ function A(e) {
 function C(e) {
     if (null != e.query && g === E) return !1;
     null != e.query && (E = e.query),
-        (v = e.items.map((e) => {
+        (b = e.items.map((e) => {
             let { width: t, height: n, src: r, gif_src: i, url: a, id: s } = e;
             return {
                 width: t,
@@ -122,18 +122,18 @@ function C(e) {
                 gifSrc: A(i),
                 url: a,
                 id: s,
-                format: N(y) ? o.EO.VIDEO : o.EO.IMAGE
+                format: N(v) ? o.EO.VIDEO : o.EO.IMAGE
             };
         }));
 }
 function R(e) {
     let { query: t } = e;
     if (null == t) return !1;
-    (E = t), (v = []);
+    (E = t), (b = []);
 }
 function P(e) {
     let t = e.trendingCategories;
-    b = [
+    y = [
         ...(null != e.trendingGIFPreview
             ? [
                   {
@@ -159,9 +159,9 @@ function w(e) {
 }
 function D(e) {
     let { items: t } = e;
-    S = t;
+    I = t;
 }
-class x extends (r = i.ZP.Store) {
+class L extends (r = i.ZP.Store) {
     getAnalyticsID() {
         return m;
     }
@@ -172,24 +172,24 @@ class x extends (r = i.ZP.Store) {
         return E;
     }
     getResultItems() {
-        return v;
-    }
-    getTrendingCategories() {
         return b;
     }
-    getSelectedFormat() {
+    getTrendingCategories() {
         return y;
+    }
+    getSelectedFormat() {
+        return v;
     }
     getSuggestions() {
         return O;
     }
     getTrendingSearchTerms() {
-        return S;
+        return I;
     }
 }
-c(x, 'displayName', 'GIFPickerViewStore');
-let L = new x(a.Z, {
-    GIF_PICKER_INITIALIZE: I,
+c(L, 'displayName', 'GIFPickerViewStore');
+let x = new L(a.Z, {
+    GIF_PICKER_INITIALIZE: S,
     GIF_PICKER_QUERY: T,
     GIF_PICKER_QUERY_SUCCESS: C,
     GIF_PICKER_QUERY_FAILURE: R,

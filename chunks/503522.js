@@ -36,7 +36,7 @@ class u extends r.Z {
                 try {
                     var e, t;
                     if (this.enabled === this.shouldEnable) return;
-                    null === (e = (t = i.Z.window).setWindowContentProtection) || void 0 === e || e.call(t, s.$J, this.shouldEnable), (this.enabled = this.shouldEnable);
+                    null == (e = (t = i.Z.window).setWindowContentProtection) || e.call(t, s.$J, this.shouldEnable), (this.enabled = this.shouldEnable);
                 } catch (e) {
                     c.error('Error setting content protection:', e);
                 }

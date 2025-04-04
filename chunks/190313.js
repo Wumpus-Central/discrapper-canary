@@ -36,7 +36,7 @@ class l {
     }
     async get(e) {
         var t;
-        return null !== (t = (await this.getMany(e, { limit: 1 }))[0]) && void 0 !== t ? t : null;
+        return null != (t = (await this.getMany(e, { limit: 1 }))[0]) ? t : null;
     }
     getMany() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],

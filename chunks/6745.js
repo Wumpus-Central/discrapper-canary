@@ -5,7 +5,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(507274),
     l = n(838331),
-    c = n(89817);
+    c = n(891707);
 function u(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,8 +80,8 @@ function h(e, t) {
 }
 function m(e) {
     var { children: t, placeholder: n, value: o, onChange: u, onClose: f, showScrollbar: h, className: m, multiSelect: g } = e,
-        E = _(e, ['children', 'placeholder', 'value', 'onChange', 'onClose', 'showScrollbar', 'className', 'multiSelect']);
-    let v = i.useCallback(
+        E = p(e, ['children', 'placeholder', 'value', 'onChange', 'onClose', 'showScrollbar', 'className', 'multiSelect']);
+    let b = i.useCallback(
         (e) => {
             u(e), g || null == f || f();
         },
@@ -91,11 +91,11 @@ function m(e) {
         className: a()(c.container, m, { [c.scroller]: h }),
         children: (0, r.jsx)(
             l.hQ,
-            p(d({}, E), {
+            _(d({}, E), {
                 showScrollbar: h,
                 value: o,
                 multiSelect: g,
-                onChange: v,
+                onChange: b,
                 placeholder: n,
                 children: t,
                 listClassName: c.list

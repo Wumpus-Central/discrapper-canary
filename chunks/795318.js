@@ -31,16 +31,16 @@ function u(e) {
             targetUserId: d,
             tileType: f
         } = e,
-        _ = o.Z.getChannelId(),
-        p = o.Z.getGuildId(),
-        h = null === (t = i.Z.getChannel(_)) || void 0 === t ? void 0 : t.type,
-        g = r.default.getId();
+        _ = o.ZP.getChannelId(),
+        p = o.ZP.getGuildId(),
+        h = null == (t = i.Z.getChannel(_)) ? void 0 : t.type,
+        m = r.default.getId();
     a.default.track(l.rMx.CALL_MENU_ITEM_INTERACTED, {
         location: c,
         menu_name: s,
         menu_item_type: n,
         entrypoint: u,
-        targets_self: null == d ? void 0 : d === g,
+        targets_self: null == d ? void 0 : d === m,
         guild_id: p,
         channel_id: _,
         channel_type: h,

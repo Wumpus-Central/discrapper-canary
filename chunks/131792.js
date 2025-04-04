@@ -16,6 +16,6 @@ function i(e, t, n) {
 class o extends r.Z {
     constructor(e) {
         var t;
-        super(), i(this, 'id', void 0), i(this, 'widgets', void 0), i(this, 'version', void 0), (this.version = null !== (t = Number(e.version)) && void 0 !== t ? t : 0), (this.id = e.id || ''), (this.widgets = e.widgets || []);
+        super(), i(this, 'id', void 0), i(this, 'widgets', void 0), i(this, 'version', void 0), (this.version = null != (t = Number(e.version)) ? t : 0), (this.id = e.id || ''), (this.widgets = e.widgets || []);
     }
 }

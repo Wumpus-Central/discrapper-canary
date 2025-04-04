@@ -1,11 +1,11 @@
 n.d(t, {
     $w: () => E,
     Bh: () => m,
-    Gx: () => b,
-    TA: () => p,
+    Gx: () => y,
+    TA: () => _,
     V$: () => h,
     g5: () => g,
-    i7: () => v,
+    i7: () => b,
     rD: () => u,
     sd: () => d
 });
@@ -25,10 +25,10 @@ function d(e) {
 function f(e) {
     return d(e) ? l.X7.includes(e) : !!u(e) && ((0, s.xR)(e.asset) || (0, s.ay)(e.asset));
 }
-function p(e) {
+function _(e) {
     return null != e ? 'Video Background' : 'None';
 }
-function _(e) {
+function p(e) {
     switch (e) {
         case l.dp.OPTION_1:
             return 'Cybercity';
@@ -49,16 +49,16 @@ function _(e) {
     }
 }
 function h(e) {
-    return null == e ? 'None' : u(e) ? 'Custom' : 'blur' === e ? 'Blur' : 'Preset - '.concat(_(e));
+    return null == e ? 'None' : u(e) ? 'Custom' : 'blur' === e ? 'Blur' : 'Preset - '.concat(p(e));
 }
 function m(e, t, n) {
-    let s = o.Z.getGuildId(),
-        l = o.Z.getChannelId(),
+    let s = o.ZP.getGuildId(),
+        l = o.ZP.getChannelId(),
         u = i.Z.getChannel(l),
         d = (0, r.kO)(s, l, !0);
     a.default.track(c.rMx.VIDEO_EFFECT_UPDATED, {
         location: t,
-        effect_type: p(e),
+        effect_type: _(e),
         effect_detail: h(e),
         effect_state: n,
         channel_id: l,
@@ -66,8 +66,8 @@ function m(e, t, n) {
         guild_id: s,
         voice_state_count: d.voice_state_count,
         video_stream_count: d.video_stream_count,
-        media_session_id: o.Z.getMediaSessionId(),
-        rtc_connection_id: o.Z.getRTCConnectionId(),
+        media_session_id: o.ZP.getMediaSessionId(),
+        rtc_connection_id: o.ZP.getRTCConnectionId(),
         is_animated: f(e)
     });
 }
@@ -81,7 +81,7 @@ function g(e, t, n) {
 function E(e) {
     a.default.track(c.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: f(e) });
 }
-function v(e) {
+function b(e) {
     return null == e
         ? { oneofKind: void 0 }
         : u(e)
@@ -102,7 +102,7 @@ function v(e) {
                   presetOption: e
               };
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e || void 0 === e.oneofKind) return null;
     switch (e.oneofKind) {
         case 'customAsset':

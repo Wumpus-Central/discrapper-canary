@@ -55,7 +55,7 @@ function l(e) {
     return t || n;
 }
 function c(e) {
-    let { enabled: t, impressionCappingEnabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+    let { enabled: t, impressionCappingEnabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t && !0 === n;
 }
 let u = (0, r.B)({

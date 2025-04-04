@@ -11,7 +11,7 @@ var r = n(200651),
     l = n(317257),
     c = n(583478),
     u = n(976845),
-    d = n(816202);
+    d = n(738134);
 function f(e, t, n) {
     return (
         t in e
@@ -50,9 +50,9 @@ let p = () =>
     h = 'balance-widget-pill',
     m = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
     g = (0, i.forwardRef)(function (e, t) {
-        let { balance: n, balanceWidgetMode: o = l.b.DEFAULT, showNotificationBadge: f, onClick: g, onMouseDown: E, className: v } = e,
-            [b, y] = (0, i.useState)(!1),
-            O = (0, i.useMemo)(() => m(o, b), [o, b]),
+        let { balance: n, balanceWidgetMode: o = l.b.DEFAULT, showNotificationBadge: f, onClick: g, onMouseDown: E, className: b } = e,
+            [y, v] = (0, i.useState)(!1),
+            O = (0, i.useMemo)(() => m(o, y), [o, y]),
             [I, S] = (0, i.useState)(!1),
             [T, N] = (0, i.useState)(!1),
             [A, C] = (0, i.useState)(0.9 * u.D2),
@@ -92,11 +92,11 @@ let p = () =>
             className: d.clickable,
             children: (0, r.jsxs)('span', {
                 onMouseDown: E,
-                onMouseEnter: () => y(!0),
-                onMouseLeave: () => y(!1),
+                onMouseEnter: () => v(!0),
+                onMouseLeave: () => v(!1),
                 id: h,
                 ref: t,
-                className: a()(d.container, O, v, { [d.containerLoading]: P }),
+                className: a()(d.container, O, b, { [d.containerLoading]: P }),
                 children: [
                     (0, r.jsx)('div', {
                         className: a()(d.orbsLottieContainer, P ? d.orbIconloading : void 0),

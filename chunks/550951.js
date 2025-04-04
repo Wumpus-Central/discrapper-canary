@@ -11,8 +11,8 @@ function u(e, t) {
     let u = (0, l.yV)(t),
         d = (0, o.wE)(i.z.SERVER_SHOP_PHANTOM_PREVIEW),
         f = (0, r.e7)([s.Z], () => null != e && s.Z.can(c.Plq.ADMINISTRATOR, e)),
-        p = null !== (n = null == e ? void 0 : e.hasFeature(c.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && void 0 !== n && n,
-        _ = (0, a.y)(null == e ? void 0 : e.id, 'useGuildShopPreviewVisible'),
+        _ = null != (n = null == e ? void 0 : e.hasFeature(c.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && n,
+        p = (0, a.y)(null == e ? void 0 : e.id, 'useGuildShopPreviewVisible'),
         h = [c.oNc.CREATOR_MONETIZABLE, c.oNc.CREATOR_MONETIZABLE_PROVISIONAL, c.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some((t) => (null == e ? void 0 : e.hasFeature(t)) === !0);
-    return null != e && f && !p && h && u && _ && !d;
+    return null != e && f && !_ && h && u && p && !d;
 }

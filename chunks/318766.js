@@ -20,11 +20,11 @@ var r = n(200651),
     g = n(546424),
     E = n(626135),
     b = n(153066),
-    v = n(981631),
-    y = n(921944),
+    y = n(981631),
+    v = n(921944),
     O = n(185923),
     I = n(388032),
-    S = n(957899);
+    S = n(3974);
 function T(e, t, n) {
     return (
         t in e
@@ -38,7 +38,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function A(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,7 +71,7 @@ function C(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -113,10 +113,10 @@ function M(e, t) {
     };
 }
 function k(e, t) {
-    let { tabIndex: n, className: o, renderButtonContents: T, active: N, onClick: R, 'aria-controls': P, focusProps: w, shouldShowSoundmojiCoachmark: k = !1 } = e,
+    let { tabIndex: n, className: o, renderButtonContents: T, active: A, onClick: R, 'aria-controls': P, focusProps: w, shouldShowSoundmojiCoachmark: k = !1 } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
-        F = j || N,
+        F = j || A,
         V = (0, b.l)(S, 'emojiButton', F ? 'Hovered' : 'Normal'),
         Z = M(G, (0, f.Q3)('EmojiButton')),
         H = i.useCallback(() => {
@@ -131,7 +131,7 @@ function k(e, t) {
         K = (0, h.B4)(),
         [z, q] = (0, _.US)(K ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         Q = z === c.z.TRIAL_NUX_EMOJI_BUTTON,
-        X = !N && Q,
+        X = !A && Q,
         J = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
@@ -158,7 +158,7 @@ function k(e, t) {
                 children: (i) =>
                     (0, r.jsx)(
                         u.zxk,
-                        C(A({}, e), {
+                        C(N({}, e), {
                             buttonRef: t,
                             look: u.zxk.Looks.BLANK,
                             size: u.zxk.Sizes.NONE,
@@ -166,21 +166,21 @@ function k(e, t) {
                             className: a()(V, o),
                             onMouseEnter: () => {
                                 var e;
-                                H(), null === (e = i.onMouseEnter) || void 0 === e || e.call(i), E.default.track(v.rMx.EMOJI_PICKER_BUTTON_HOVERED);
+                                H(), null == (e = i.onMouseEnter) || e.call(i), E.default.track(y.rMx.EMOJI_PICKER_BUTTON_HOVERED);
                             },
                             onMouseOver: H,
                             onMouseLeave: () => {
                                 var e;
-                                W(), null === (e = i.onMouseLeave) || void 0 === e || e.call(i), Q && q(y.L.USER_DISMISS);
+                                W(), null == (e = i.onMouseLeave) || e.call(i), Q && q(v.L.USER_DISMISS);
                             },
                             onFocus: Y,
                             onClick: (e) => {
                                 var t;
-                                null == R || R(e), null === (t = i.onClick) || void 0 === t || t.call(i);
+                                null == R || R(e), null == (t = i.onClick) || t.call(i);
                             },
                             'aria-label': I.NW.string(I.t['59QgaG']),
                             'aria-controls': P,
-                            'aria-expanded': N,
+                            'aria-expanded': A,
                             'aria-haspopup': 'dialog',
                             focusProps: w,
                             onContextMenu: i.onContextMenu,
@@ -194,7 +194,7 @@ function k(e, t) {
                                               let { value: t } = e;
                                               return (0, r.jsxs)(s.animated.div, {
                                                   className: S.spriteContainer,
-                                                  style: C(A({}, Z), {
+                                                  style: C(N({}, Z), {
                                                       transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                                   }),
                                                   children: [(0, r.jsx)('div', { className: a()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: a()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]

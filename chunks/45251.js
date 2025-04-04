@@ -48,7 +48,7 @@ async function s(e) {
     } catch (n) {
         var c, u;
         o.GO.error('Failed to create scheduled message', n);
-        let e = null !== (u = null === (c = n.body) || void 0 === c ? void 0 : c.message) && void 0 !== u ? u : n.message;
+        let e = null != (u = null == (c = n.body) ? void 0 : c.message) ? u : n.message;
         throw (
             (i.Z.dispatch({
                 type: 'SCHEDULED_MESSAGES_CREATE_FAILURE',
@@ -81,7 +81,7 @@ async function l(e) {
     } catch (a) {
         var t, n;
         o.GO.error('Failed to cancel scheduled message', a);
-        let r = null !== (n = null === (t = a.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : a.message;
+        let r = null != (n = null == (t = a.body) ? void 0 : t.message) ? n : a.message;
         throw (
             (i.Z.dispatch({
                 type: 'SCHEDULED_MESSAGES_DELETE_FAILURE',

@@ -22,25 +22,25 @@ var r = n(200651),
     g = n(540059),
     E = n(957730),
     b = n(19780),
-    v = n(594174),
-    y = n(626135),
+    y = n(594174),
+    v = n(626135),
     O = n(981631),
     I = n(388032),
-    S = n(97191);
+    S = n(823150);
 let T = 'VoiceChannelStatusModal',
     N = 500;
 function A(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: o, onClose: A } = e,
         C = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
-        R = (0, s.e7)([b.Z], () => b.Z.getMediaSessionId()),
+        R = (0, s.e7)([b.ZP], () => b.ZP.getMediaSessionId()),
         [P, w] = i.useState(null != C ? C : ''),
         [D, L] = i.useState(!1),
         [x, M] = i.useState(null),
-        k = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        k = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
         j = P.length > N,
         U = (0, g.Q3)('VoiceChannelStatusModal');
     i.useEffect(() => {
-        y.default.track(O.rMx.OPEN_MODAL, {
+        v.default.track(O.rMx.OPEN_MODAL, {
             type: 'Voice Channel Topic Modal',
             guild_id: t.guild_id,
             location_stack: o
@@ -67,7 +67,7 @@ function A(e) {
                 try {
                     let e = await u.ZP.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
-                        ? (y.default.track(O.rMx.VOICE_CHANNEL_TOPIC_SET, {
+                        ? (v.default.track(O.rMx.VOICE_CHANNEL_TOPIC_SET, {
                               guild_id: t.guild_id,
                               channel_id: t.id,
                               media_session_id: R,

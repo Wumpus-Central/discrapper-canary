@@ -33,7 +33,7 @@ function s(e) {
 }
 function l(e, t, n, r, i) {
     let a;
-    return n || (t += '\n\n'), (a = e(t, s({ inline: n }, r))), (a = (0, o.ge)(a)), (a = (0, o.RA)(a)), null != i && (a = i(a, n)), a;
+    return n || (t += '\n\n'), (a = e(t, s({ inline: n }, r))), (a = (0, o.ge)(r, a)), (a = (0, o.RA)(a)), null != i && (a = i(a, n)), a;
 }
 let c = {
     reactParserFor(e) {

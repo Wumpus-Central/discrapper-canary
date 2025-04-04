@@ -34,18 +34,18 @@ function o(e, t) {
     r.useLayoutEffect(() => {
         var n;
         let r = e.current,
-            i = null == r ? void 0 : null === (n = r.ownerDocument) || void 0 === n ? void 0 : n.defaultView;
+            i = null == r || null == (n = r.ownerDocument) ? void 0 : n.defaultView;
         if (null != r && null != i) {
             let n = new i.ResizeObserver((n) => {
                 var r, i, o, a, s, l;
                 let c = n[0],
-                    u = null == c ? void 0 : null === (i = c.borderBoxSize) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.inlineSize,
-                    d = null == c ? void 0 : null === (a = c.borderBoxSize) || void 0 === a ? void 0 : null === (o = a[0]) || void 0 === o ? void 0 : o.blockSize;
+                    u = null == c || null == (i = c.borderBoxSize) || null == (r = i[0]) ? void 0 : r.inlineSize,
+                    d = null == c || null == (a = c.borderBoxSize) || null == (o = a[0]) ? void 0 : o.blockSize;
                 if (null == u || null == d) {
                     let t = e.current;
                     if (null != t) {
                         let e = window.getComputedStyle(t);
-                        null == u && (u = parseFloat(null !== (s = e.width) && void 0 !== s ? s : '0')), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
+                        null == u && (u = parseFloat(null != (s = e.width) ? s : '0')), null == d && (d = parseFloat(null != (l = e.height) ? l : '0'));
                     }
                 }
                 t({

@@ -19,7 +19,7 @@ function c(e, t, n) {
             reason: l.NW.formatToPlainString(l.t.wySUzs, {
                 requestedTargets: _.map((e) => {
                     var t;
-                    return null !== (t = a.o0[e]) && void 0 !== t ? t : 'unknown';
+                    return null != (t = a.o0[e]) ? t : 'unknown';
                 }).join(', ')
             })
         };

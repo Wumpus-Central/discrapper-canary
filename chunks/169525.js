@@ -1,5 +1,5 @@
 n.d(t, {
-    As: () => y,
+    As: () => v,
     BP: () => E,
     MC: () => I,
     dn: () => g,
@@ -53,7 +53,7 @@ let g = (e, t) => {
         }
         return n ? 'spoiler' : null;
     };
-function v(e) {
+function y(e) {
     switch (e) {
         case s.Ah.EMBED:
             return o.lJ.Embed;
@@ -63,10 +63,10 @@ function v(e) {
             return;
     }
 }
-function y(e, t, n) {
+function v(e, t, n) {
     if (null == e) return [!1, void 0];
     if (n && (0, o.Sv)(e.contentScanVersion)) return [!0, 'potential_explicit_content'];
-    let r = v(e.type);
+    let r = y(e.type);
     return null != r &&
         (0, o.KP)(
             {
@@ -85,7 +85,7 @@ function O(e) {
         i = (0, r.e7)([d.Z], () => null != t && d.Z.can(p.Plq.MANAGE_MESSAGES, t)),
         o = c.cC.useSetting(),
         s = (0, a.m)();
-    return y(n, !(0, _.Z)(o, i), s);
+    return v(n, !(0, _.Z)(o, i), s);
 }
 let I = (e) => {
     switch (e) {

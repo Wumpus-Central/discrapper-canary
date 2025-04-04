@@ -3,8 +3,8 @@ var i = n(442837),
     r = n(715903),
     o = n(71619),
     a = n(41776),
-    s = n(665906),
-    l = n(271383),
+    l = n(665906),
+    s = n(271383),
     c = n(607744),
     u = n(496675),
     d = n(432376),
@@ -14,11 +14,11 @@ function p(e) {
     let p = null == e ? void 0 : e.guild_id,
         m = (0, i.e7)([c.Z], () => null == p || c.Z.canChatInGuild(p), [p]),
         f = (0, i.e7)([a.Z], () => null != p && a.Z.isLurking(p), [p]),
-        g = (0, i.e7)([l.ZP], () => null != p && l.ZP.isCurrentUserGuest(p), [p]),
+        g = (0, i.e7)([s.ZP], () => null != p && s.ZP.isCurrentUserGuest(p), [p]),
         b = (0, i.e7)([u.Z], () => m && u.Z.can(h.Plq.ADD_REACTIONS, e), [m, e]),
         j = (0, r.ux)(p),
         [, v] = (0, o.AB)(p),
-        O = (0, s.$R)(e);
+        O = (0, l.$R)(e);
     return null == e
         ? {
               disableReactionReads: !0,

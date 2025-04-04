@@ -8,7 +8,7 @@ function s(e) {
         r.ZP.addConditionalChangeListener(() => {
             var n;
             let s = r.ZP.getSelfMember(e);
-            return !(0, i.yE)(null !== (n = null == s ? void 0 : s.flags) && void 0 !== n ? n : 0, a.q.COMPLETED_ONBOARDING) || (o.Z.finishOnboarding(e), t(), !1);
+            return !(0, i.yE)(null != (n = null == s ? void 0 : s.flags) ? n : 0, a.q.COMPLETED_ONBOARDING) || (o.Z.finishOnboarding(e), t(), !1);
         });
     });
 }

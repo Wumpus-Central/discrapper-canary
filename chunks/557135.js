@@ -10,13 +10,13 @@ var i = n(481060),
     u = n(569471),
     d = n(346479),
     f = n(314897),
-    p = n(944486),
-    _ = n(979651),
+    _ = n(944486),
+    p = n(979651),
     h = n(626135),
     m = n(366297),
     g = n(981631),
     E = n(110223);
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +40,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.getGuildId();
     if (null == n && !t) throw Error('VoiceChannel, transitionTo: Channel does not have a guildId');
@@ -53,22 +53,22 @@ function y(e) {
 }
 let O = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: s, needSubscriptionToAccess: v, locked: O = !1, routeDirectlyToChannel: S = !1, bypassChangeModal: I, bypassBlockedWarningModal: T, bypassGuildIdCheck: N = !1 } = e;
+        let { channel: t, connected: s, needSubscriptionToAccess: b, locked: O = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: S, bypassBlockedWarningModal: T, bypassGuildIdCheck: N = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, 'Join Voice')));
         let A = a.Z.getRemoteSessionId(),
-            C = _.Z.getVoiceStateForSession(f.default.getId(), A),
-            R = (null == C ? void 0 : C.channelId) === t.id || p.Z.getChannelId() === _.Z.getCurrentClientVoiceChannelId(t.guild_id),
+            C = p.Z.getVoiceStateForSession(f.default.getId(), A),
+            R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             P = c.Z.getBlockedUsersForVoiceChannel(t.id),
             w = c.Z.getIgnoredUsersForVoiceChannel(t.id);
         return ((0, l.B)(t.id) && (T = !0), T || O || s || (!(P.size > 0) && !(w.size > 0)))
-            ? !I && !O && (0, m._)(t)
+            ? !S && !O && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.ZDy)(async () => {
                           let { default: i } = await n.e('65045').then(n.bind(n, 143782));
                           return (n) =>
                               (0, r.jsx)(
                                   i,
-                                  b(
+                                  y(
                                       {
                                           channel: t,
                                           onConfirm: () =>
@@ -76,8 +76,8 @@ let O = {
                                                   this.handleVoiceConnect({
                                                       channel: t,
                                                       connected: s,
-                                                      needSubscriptionToAccess: v,
-                                                      routeDirectlyToChannel: S,
+                                                      needSubscriptionToAccess: b,
+                                                      routeDirectlyToChannel: I,
                                                       locked: O,
                                                       bypassChangeModal: !0
                                                   })
@@ -88,11 +88,11 @@ let O = {
                               );
                       });
                   })
-                : (O || s || o.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || v || S) && y(t, N), !0)
+                : (O || s || o.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && v(t, N), !0)
             : new Promise((e) => {
                   (0, i.ZDy)(
                       async () => {
-                          let { default: i } = await Promise.all([n.e('25176'), n.e('94739')]).then(n.bind(n, 404339));
+                          let { default: i } = await Promise.all([n.e('25176'), n.e('64209')]).then(n.bind(n, 404339));
                           return (n) => {
                               let { onClose: o, transitionState: a } = n;
                               return (0, r.jsx)(i, {
@@ -106,8 +106,8 @@ let O = {
                                           this.handleVoiceConnect({
                                               channel: t,
                                               connected: s,
-                                              needSubscriptionToAccess: v,
-                                              routeDirectlyToChannel: S,
+                                              needSubscriptionToAccess: b,
+                                              routeDirectlyToChannel: I,
                                               locked: O,
                                               bypassChangeModal: !0,
                                               bypassBlockedWarningModal: !0

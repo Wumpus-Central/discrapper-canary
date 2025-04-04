@@ -17,13 +17,13 @@ var r = n(200651),
     u = n(597442),
     d = n(21340),
     f = n(922770),
-    p = n(857595),
-    _ = n(607070),
+    _ = n(857595),
+    p = n(607070),
     h = n(828214),
     m = n(670596),
     g = n(788314),
-    E = n(253068);
-function v(e, t, n) {
+    E = n(906944);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,12 +47,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,22 +69,22 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e) {
+function I(e) {
     return null == e
         ? []
         : i.Children.toArray(e).flatMap((e) => {
               var t;
-              return null == e ? [] : Array.isArray(e) ? S(e) : e.type === i.Fragment ? (null !== (t = S(e.props.children)) && void 0 !== t ? t : []) : [e];
+              return null == e ? [] : Array.isArray(e) ? I(e) : e.type === i.Fragment ? (null != (t = I(e.props.children)) ? t : []) : [e];
           });
 }
-function I(e) {
-    return S(e).reduce((e, t) => {
+function S(e) {
+    return I(e).reduce((e, t) => {
         var n, r;
         if (t.type === h.Cl)
             return (
@@ -95,7 +95,7 @@ function I(e) {
                 e
             );
         if (t.type === h.kS) {
-            let n = I(t.props.children);
+            let n = S(t.props.children);
             return (
                 n.length > 0 &&
                     (e.push({
@@ -130,7 +130,7 @@ function I(e) {
                               key: t.props.id,
                               navigable: !0,
                               label: t.props.label,
-                              children: t.props.children ? I(t.props.children) : void 0,
+                              children: t.props.children ? S(t.props.children) : void 0,
                               onChildrenScroll: t.props.onChildrenScroll,
                               props: t.props,
                               childRowHeight: t.props.childRowHeight,
@@ -180,7 +180,7 @@ function I(e) {
                 ),
                 e
             );
-        throw Error('Menu API only allows Items and groups of Items as children. Received '.concat(null !== (r = null !== (n = null == t ? void 0 : t.type) && void 0 !== n ? n : t) && void 0 !== r ? r : typeof t, ' (').concat(typeof t, ') instead'));
+        throw Error('Menu API only allows Items and groups of Items as children. Received '.concat(null != (r = null != (n = null == t ? void 0 : t.type) ? n : t) ? r : typeof t, ' (').concat(typeof t, ') instead'));
     }, []);
 }
 function T(e) {
@@ -209,24 +209,24 @@ function N(e, t, n, i) {
                 o > 0 && s.length > 0 && (c.push((0, r.jsx)(g.Z0, {}, 'separator-'.concat(l))), (o = 0)), a.push([]);
                 break;
             case 'groupend':
-                a.length > 0 && e.push((0, r.jsx)(g.ZA, b({ contents: a.pop() }, s.props), 'group-'.concat(l)));
+                a.length > 0 && e.push((0, r.jsx)(g.ZA, y({ contents: a.pop() }, s.props), 'group-'.concat(l)));
                 break;
             case 'item': {
                 let { children: e, childRowHeight: a, onChildrenScroll: l, listClassName: u, subMenuClassName: d } = s,
                     f = null != e,
-                    p = [...n, s.key],
-                    _ = t.isFocused(p),
+                    _ = [...n, s.key],
+                    p = t.isFocused(_),
                     h = null != e ? { 'aria-haspopup': !0 } : {},
                     m = (0, r.jsx)(
                         g.ck,
-                        O(b({}, s.props), {
+                        O(y({}, s.props), {
                             label: s.label,
                             hasSubmenu: null != e,
-                            isFocused: _,
-                            menuItemProps: b(
+                            isFocused: p,
+                            menuItemProps: y(
                                 {},
                                 t.getItemProps({
-                                    path: p,
+                                    path: _,
                                     hasSubmenu: f
                                 }),
                                 h
@@ -240,11 +240,11 @@ function N(e, t, n, i) {
                         ? c.push(
                               (0, r.jsx)(
                                   g.P2,
-                                  O(b({}, s.props), {
+                                  O(y({}, s.props), {
                                       parentItem: m,
-                                      isFocused: _,
-                                      menuSubmenuProps: t.getSubmenuProps({ path: p }),
-                                      rows: N(e, t, p, i),
+                                      isFocused: p,
+                                      menuSubmenuProps: t.getSubmenuProps({ path: _ }),
+                                      rows: N(e, t, _, i),
                                       rowHeight: a,
                                       onScroll: l,
                                       listClassName: u
@@ -255,12 +255,12 @@ function N(e, t, n, i) {
                         : c.push(
                               (0, r.jsx)(
                                   g.LY,
-                                  O(b({}, s.props), {
+                                  O(y({}, s.props), {
                                       subMenuClassName: d,
                                       parentItem: m,
-                                      isFocused: _,
-                                      menuSubmenuProps: t.getSubmenuProps({ path: p }),
-                                      renderSubmenu: () => N(e, t, p, i)
+                                      isFocused: p,
+                                      menuSubmenuProps: t.getSubmenuProps({ path: _ }),
+                                      renderSubmenu: () => N(e, t, _, i)
                                   }),
                                   ''.concat(s.key, '-submenu')
                               )
@@ -274,7 +274,7 @@ function N(e, t, n, i) {
                 c.push(
                     (0, r.jsx)(
                         g.kq,
-                        O(b({}, s.props), {
+                        O(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
                                 path: e,
@@ -294,7 +294,7 @@ function N(e, t, n, i) {
                 c.push(
                     (0, r.jsx)(
                         g.oC,
-                        O(b({}, s.props), {
+                        O(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
                                 path: e,
@@ -312,7 +312,7 @@ function N(e, t, n, i) {
                 c.push(
                     (0, r.jsx)(
                         g.Rk,
-                        O(b({}, s.props), {
+                        O(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
                                 path: e,
@@ -330,7 +330,7 @@ function N(e, t, n, i) {
                 c.push(
                     (0, r.jsx)(
                         g.lc,
-                        O(b({}, s.props), {
+                        O(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({ path: e }),
                             onClose: i
@@ -346,7 +346,7 @@ function N(e, t, n, i) {
                 c.push(
                     (0, r.jsx)(
                         g.$I,
-                        O(b({}, s.props), {
+                        O(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({ path: e }),
                             onClose: i,
@@ -363,39 +363,39 @@ function N(e, t, n, i) {
 }
 function A(e) {
     var t;
-    let { navId: n, variant: o = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: v, onSelect: y, onInteraction: S } = e,
-        A = I(h),
+    let { navId: n, variant: o = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: b, onSelect: v, onInteraction: I } = e,
+        A = S(h),
         C = T(A),
         P = i.useRef([]);
     l()(P.current, C) || (P.current = C);
-    let w = null === (t = A.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
+    let w = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
         D = (0, c.ZP)({
             navId: n,
             items: P.current,
-            initialFocusPath: _.Z.keyboardModeEnabled && null != w ? [w] : [],
-            closeMenu: v
+            initialFocusPath: p.Z.keyboardModeEnabled && null != w ? [w] : [],
+            closeMenu: b
         });
     i.useEffect(() => {
-        D.isUsingKeyboardNavigation ? _.Z.keyboardModeEnabled || (0, p.Qj)() : _.Z.keyboardModeEnabled && (0, p.rf)();
+        D.isUsingKeyboardNavigation ? p.Z.keyboardModeEnabled || (0, _.Qj)() : p.Z.keyboardModeEnabled && (0, _.rf)();
     }, [D.isUsingKeyboardNavigation]);
-    let x = i.useRef(null);
-    (0, u.T)(x);
-    let L = s ? d.u2 : d.zJ,
+    let L = i.useRef(null);
+    (0, u.T)(L);
+    let x = s ? d.u2 : d.zJ,
         M = i.useMemo(
             () => ({
-                onSelect: y,
-                onInteraction: S
+                onSelect: v,
+                onInteraction: I
             }),
-            [y, S]
+            [v, I]
         );
     return (0, r.jsx)(m.p.Provider, {
         value: M,
         children: (0, r.jsx)(
             'div',
-            O(b({ className: a()(E.menu, E[o], f) }, D.getContainerProps()), {
-                ref: x,
+            O(y({ className: a()(E.menu, E[o], f) }, D.getContainerProps()), {
+                ref: L,
                 'aria-label': e['aria-label'],
-                children: (0, r.jsxs)(L, {
+                children: (0, r.jsxs)(x, {
                     className: E.scroller,
                     children: [
                         0 === A.length &&
@@ -405,9 +405,9 @@ function A(e) {
                                 menuItemProps: D.getItemProps({ path: ['empty'] }),
                                 isFocused: !1,
                                 onFocus: () => {},
-                                onClose: v
+                                onClose: b
                             }),
-                        A.length > 0 && N(A, D, [], v)
+                        A.length > 0 && N(A, D, [], b)
                     ]
                 })
             })
@@ -426,7 +426,7 @@ function R() {
         [n, o] = i.useState(e);
     return (
         i.useEffect(() => {
-            if (_.Z.useReducedMotion) return;
+            if (p.Z.useReducedMotion) return;
             let n = setInterval(() => {
                 o((n) => (n === e ? t : e));
             }, 700);

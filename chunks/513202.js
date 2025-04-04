@@ -1,7 +1,7 @@
 n.d(t, { Z: () => O }), n(47120);
 var r = n(200651);
 n(192379);
-var i = n(115911),
+var i = n(252258),
     o = n(481060),
     a = n(570140),
     s = n(468026),
@@ -28,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,8 +44,8 @@ function v(e) {
     }
     return e;
 }
-let b = !1;
-class y extends f.Z {
+let y = !1;
+class v extends f.Z {
     _initialize() {
         super._initialize(), l.Z.addChangeListener(this.handlePopoutWindowUpdate);
     }
@@ -58,7 +58,7 @@ class y extends f.Z {
             async () => (e) =>
                 (0, r.jsx)(
                     s.default,
-                    v(
+                    b(
                         {
                             title: g.NW.formatToPlainString(g.t.hbiAOz, { code: t }),
                             body: n
@@ -73,7 +73,7 @@ class y extends f.Z {
             async () => (t) =>
                 (0, r.jsx)(
                     s.default,
-                    v(
+                    b(
                         {
                             title: g.NW.string(g.t.PtobXV),
                             body: e
@@ -87,7 +87,7 @@ class y extends f.Z {
         (0, o.showToast)((0, o.createToast)(g.NW.string(g.t.JfA7IC), o.ToastType.SUCCESS));
     }
     leaveActivity(e) {
-        let { location: t, applicationId: n, showFeedback: r } = e;
+        let { location: t, applicationId: n, showFeedback: r, shouldClosePopout: o = !0 } = e;
         a.Z.wait(() => {
             (0, d.mW)({
                 location: t,
@@ -95,7 +95,7 @@ class y extends f.Z {
                 showFeedback: r
             });
         }),
-            (0, u.R)({ isContextless: t.kind === i.X.CONTEXTLESS }) && (0, c.xv)(m.KJ3.ACTIVITY_POPOUT);
+            (0, u.R)({ isContextless: t.kind === i.E.CONTEXTLESS }) && o && (0, c.xv)(m.KJ3.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
@@ -113,7 +113,7 @@ class y extends f.Z {
                 });
             }),
             E(this, 'handlePopoutWindowUpdate', () => {
-                let e = b,
+                let e = y,
                     t = l.Z.getWindowOpen(m.KJ3.ACTIVITY_POPOUT);
                 if (e && !t) {
                     let e = _.ZP.getCurrentEmbeddedActivity();
@@ -123,8 +123,8 @@ class y extends f.Z {
                             applicationId: e.applicationId
                         });
                 }
-                b = t;
+                y = t;
             });
     }
 }
-let O = new y();
+let O = new v();

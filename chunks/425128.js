@@ -23,7 +23,7 @@ let l = 900000,
                         rejectWithError: !1
                     })
                 ).body,
-                o = null !== (c = e.wait_ms_until_next_fetch) && void 0 !== c ? c : l;
+                o = null != (c = e.wait_ms_until_next_fetch) ? c : l;
             return null != o && (e.expires_at = Date.now() + o), e;
         } catch (e) {
             throw new o.Hx(e);

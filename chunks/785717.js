@@ -1,5 +1,5 @@
 n.d(t, {
-    KZ: () => p,
+    KZ: () => _,
     Mt: () => d,
     ZB: () => f
 });
@@ -72,11 +72,11 @@ let u = i.createContext(null),
     f = (e) => {
         var t;
         let { layout: n, userId: r, guildId: a, channelId: s, messageId: l, roleId: c, sourceSessionId: d, showGuildProfile: f = !0 } = e,
-            p = null === (t = i.useContext(u)) || void 0 === t ? void 0 : t.sessionId;
+            _ = null == (t = i.useContext(u)) ? void 0 : t.sessionId;
         return i.useMemo(
             () => ({
                 sessionId: (0, o.Z)(),
-                sourceSessionId: null != d ? d : p,
+                sourceSessionId: null != d ? d : _,
                 layout: n,
                 userId: r,
                 guildId: a,
@@ -85,10 +85,10 @@ let u = i.createContext(null),
                 roleId: c,
                 showGuildProfile: f
             }),
-            [p, n, r, a, s, l, c, d, f]
+            [_, n, r, a, s, l, c, d, f]
         );
     },
-    p = () => {
+    _ = () => {
         let e = i.useContext(u),
             { analyticsLocations: t } = (0, a.ZP)();
         return {

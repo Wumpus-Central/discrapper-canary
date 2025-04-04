@@ -1,5 +1,5 @@
 n.d(t, {
-    Ie: () => S,
+    Ie: () => I,
     OW: () => o,
     gy: () => a
 });
@@ -174,7 +174,7 @@ let s = {
         showCharacterCount: !0,
         layout: 1
     },
-    p = {
+    _ = {
         analyticsName: 'thread_creation',
         attachments: !0,
         drafts: { type: i.d.FirstThreadMessage },
@@ -193,7 +193,7 @@ let s = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 }
     },
-    _ = {
+    p = {
         analyticsName: 'create_forum_post',
         attachments: !0,
         drafts: { type: i.d.FirstThreadMessage },
@@ -274,7 +274,7 @@ let s = {
         },
         toolbarType: 2
     },
-    v = {
+    b = {
         analyticsName: 'profile_bio_input',
         drafts: { type: i.d.ChannelMessage },
         emojis: { button: !0 },
@@ -286,7 +286,7 @@ let s = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    b = {
+    y = {
         analyticsName: 'custom_gift_type',
         drafts: { type: i.d.ChannelMessage },
         emojis: {},
@@ -298,7 +298,7 @@ let s = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    y = {
+    v = {
         analyticsName: 'rules_input',
         drafts: { type: i.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -325,7 +325,7 @@ let s = {
         showCharacterCount: !0,
         toolbarType: 1
     },
-    S = {
+    I = {
         NORMAL: s,
         OVERLAY: l,
         OVERLAY_INLINE_REPLY: g,
@@ -333,13 +333,13 @@ let s = {
         EDIT: u,
         FORM: d,
         VOICE_CHANNEL_STATUS: f,
-        THREAD_CREATION: p,
+        THREAD_CREATION: _,
         USER_PROFILE: m,
         USER_PROFILE_REPLY: E,
-        PROFILE_BIO_INPUT: v,
-        CUSTOM_GIFT: b,
-        RULES_INPUT: y,
-        CREATE_FORUM_POST: _,
+        PROFILE_BIO_INPUT: b,
+        CUSTOM_GIFT: y,
+        RULES_INPUT: v,
+        CREATE_FORUM_POST: p,
         CREATE_POLL: h,
         FORUM_CHANNEL_GUIDELINES: O,
         ATOMIC_REACTOR_REPLY_INPUT: {

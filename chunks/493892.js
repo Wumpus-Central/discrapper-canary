@@ -11,7 +11,7 @@ function a(e) {
 }
 function s(e) {
     var t, n;
-    return null !== (n = null === (t = i.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(o.xW$.SPAMMER)) && void 0 !== n && n;
+    return null != (n = null == (t = i.default.getUser(e)) ? void 0 : t.hasFlag(o.xW$.SPAMMER)) && n;
 }
 function l(e) {
     return s(e.author.id) && !(0, r.nY)(e);

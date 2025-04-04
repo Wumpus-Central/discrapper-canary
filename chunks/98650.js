@@ -6,7 +6,7 @@ function o(e) {
     (0, i.ZP)(() => {
         function e() {
             var r;
-            null === (r = t.current) || void 0 === r || r.call(t), (n = requestAnimationFrame(e));
+            null == (r = t.current) || r.call(t), (n = requestAnimationFrame(e));
         }
         let n = requestAnimationFrame(e);
         return () => cancelAnimationFrame(n);

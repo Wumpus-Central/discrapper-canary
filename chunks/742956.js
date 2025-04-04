@@ -7,7 +7,7 @@ var i = n(278074),
     s = n(409813),
     l = n(474936),
     c = n(388032),
-    u = n(428407);
+    u = n(368159);
 function d(e) {
     let { step: t, onClose: n, giftingOrigin: d } = e,
         { enabled: f } = a.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),

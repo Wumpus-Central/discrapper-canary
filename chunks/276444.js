@@ -28,14 +28,14 @@ let d = 5,
     g = new Set(),
     E = new Map(),
     b = 0,
-    v = null,
-    y = [],
+    y = null,
+    v = [],
     O = !1,
     I = 0,
     S = !1,
     T = null;
 function N() {
-    (f = null), (_ = new Set()), (h = !1), (m = new Set()), (g = new Set()), (E = new Map()), (b = 0), (v = null), (y = []), (O = !1), (I = 0), (S = !1), (T = null), (p = new Map());
+    (f = null), (_ = new Set()), (h = !1), (m = new Set()), (g = new Set()), (E = new Map()), (b = 0), (y = null), (v = []), (O = !1), (I = 0), (S = !1), (T = null), (p = new Map());
 }
 let A = () => !0;
 function C(e) {
@@ -48,7 +48,7 @@ function R(e) {
 }
 function P(e) {
     let {} = e;
-    (S = !1), (T = null), (h = !1), (b += 1), (v = Date.now() + 1000 * Math.pow(2, b));
+    (S = !1), (T = null), (h = !1), (b += 1), (y = Date.now() + 1000 * Math.pow(2, b));
 }
 function w(e) {
     let { userTrialOffer: t } = e;
@@ -91,7 +91,7 @@ function B() {
 }
 function F(e) {
     let { users: t, nextIndex: n } = e;
-    (O = !1), (y = t), (I = n);
+    (O = !1), (v = t), (I = n);
 }
 function V() {
     O = !1;
@@ -101,7 +101,7 @@ class Z extends (r = o.ZP.Store) {
         this.waitFor(s.default), this.syncWith([s.default], A);
     }
     checkAndFetchReferralsRemaining() {
-        null == f && !h && b < d && (null == v || v < Date.now()) && (0, l.C$)();
+        null == f && !h && b < d && (null == y || y < Date.now()) && (0, l.C$)();
     }
     getReferralsRemaining() {
         return this.checkAndFetchReferralsRemaining(), f;
@@ -119,7 +119,7 @@ class Z extends (r = o.ZP.Store) {
         return m.has(e);
     }
     getEligibleUsers() {
-        return y;
+        return v;
     }
     getFetchingEligibleUsers() {
         return O;

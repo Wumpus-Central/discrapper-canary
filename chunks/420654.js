@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(280885),
     d = n(171368),
     f = n(981631),
-    p = n(388032),
-    _ = n(285424);
+    _ = n(388032),
+    p = n(383994);
 function h(e, t, n) {
     return (
         t in e
@@ -63,23 +63,23 @@ function E(e, t) {
         e
     );
 }
-let v = 57.75,
-    b = i.memo(function (e) {
+let b = 57.75,
+    y = i.memo(function (e) {
         let { user: t, onClose: n, bio: o, hidePersonalInformation: h, viewFullBioDisabled: g = !1 } = e,
-            { context: b } = (0, c.KZ)(),
-            { analyticsLocations: y } = (0, l.ZP)(),
-            [O, S] = i.useState(null),
-            [I, T] = i.useState(!1),
+            { context: y } = (0, c.KZ)(),
+            { analyticsLocations: v } = (0, l.ZP)(),
+            [O, I] = i.useState(null),
+            [S, T] = i.useState(!1),
             [N, A] = i.useState(!1),
             C = (e) => {
-                null != e && (S(e), T(!N && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > v && A(!0));
+                null != e && (I(e), T(!N && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > b && A(!0));
             },
             R = () => {
                 null == n || n(),
                     (0, d.openUserProfileModal)(
-                        E(m({}, b), {
+                        E(m({}, y), {
                             userId: t.id,
-                            sourceAnalyticsLocations: y,
+                            sourceAnalyticsLocations: v,
                             analyticsLocation: { section: f.jXE.BITE_SIZE_PROFILE_POPOUT }
                         })
                     );
@@ -93,7 +93,7 @@ let v = 57.75,
                   children: [
                       (0, r.jsx)('div', {
                           ref: C,
-                          className: a()(_.descriptionClamp, N && _.maxBioHeight),
+                          className: a()(p.descriptionClamp, N && p.maxBioHeight),
                           onBlur: P,
                           children: (0, r.jsx)(u.Z, {
                               userBio: o,
@@ -101,17 +101,17 @@ let v = 57.75,
                               textColor: 'header-primary'
                           })
                       }),
-                      (I || N) &&
+                      (S || N) &&
                           (0, r.jsx)(s.zxk, {
                               look: s.zxk.Looks.BLANK,
                               size: s.zxk.Sizes.NONE,
-                              className: _.viewFullBio,
-                              color: a()(_.viewFullBioColor, g && _.viewFullBioDisabled),
+                              className: p.viewFullBio,
+                              color: a()(p.viewFullBioColor, g && p.viewFullBioDisabled),
                               onClick: R,
                               children: (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',
-                                  children: p.NW.string(p.t.YDiPq6)
+                                  children: _.NW.string(_.t.YDiPq6)
                               })
                           })
                   ]

@@ -1,12 +1,12 @@
 n.d(t, {
     Hf: () => O,
-    JT: () => I,
-    Nk: () => b,
+    JT: () => S,
+    Nk: () => y,
     Qm: () => N,
-    VB: () => y,
+    VB: () => v,
     Xq: () => E,
     YZ: () => T,
-    wi: () => S
+    wi: () => I
 }),
     n(47120),
     n(653041);
@@ -20,8 +20,8 @@ var r = n(192379),
     u = n(895924),
     d = n(581364),
     f = n(689079),
-    p = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -82,14 +82,14 @@ function E(e, t, n) {
         };
     let s = l.ZP.getUserState(),
         c = l.ZP.getContextState(e),
-        u = Object.values(null !== (o = null === (r = s.result) || void 0 === r ? void 0 : r.sections) && void 0 !== o ? o : {}).concat(Object.values(null !== (a = null === (i = c.result) || void 0 === i ? void 0 : i.sections) && void 0 !== a ? a : {}));
+        u = Object.values(null != (o = null == (r = s.result) ? void 0 : r.sections) ? o : {}).concat(Object.values(null != (a = null == (i = c.result) ? void 0 : i.sections) ? a : {}));
     if (null != n) {
         let e = u.find((e) => {
             var t;
-            return (null === (t = e.descriptor.application) || void 0 === t ? void 0 : t.id) === n;
+            return (null == (t = e.descriptor.application) ? void 0 : t.id) === n;
         });
         if (null != e) {
-            let n = v(e, t);
+            let n = b(e, t);
             return {
                 application: e.descriptor.application,
                 command: n
@@ -97,7 +97,7 @@ function E(e, t, n) {
         }
     } else
         for (let e of u) {
-            let n = v(e, t);
+            let n = b(e, t);
             if (null != n)
                 return {
                     application: e.descriptor.application,
@@ -109,35 +109,35 @@ function E(e, t, n) {
         command: void 0
     };
 }
-function v(e, t) {
+function b(e, t) {
     var n, r, i;
     if (null == t) return;
     if (null != e.commands[t]) return e.commands[t];
     let o =
-        null ===
-            (n = Object.values(e.commands).find((e) => {
-                var n;
-                return (null === (n = e.rootCommand) || void 0 === n ? void 0 : n.id) === t;
-            })) || void 0 === n
+        null ==
+        (n = Object.values(e.commands).find((e) => {
+            var n;
+            return (null == (n = e.rootCommand) ? void 0 : n.id) === t;
+        }))
             ? void 0
             : n.rootCommand;
     return null != o
         ? (0, d.Z8)({
               rootCommand: o,
               command: o,
-              applicationId: null !== (i = null === (r = e.descriptor.application) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : ''
+              applicationId: null != (i = null == (r = e.descriptor.application) ? void 0 : r.id) ? i : ''
           })
         : void 0;
 }
-function b(e, t, n) {
+function y(e, t, n) {
     var r, i, o, a, s, c, u, d;
     let f = l.ZP.getUserState(),
-        p = l.ZP.getContextState(e),
-        _ = l.ZP.getApplicationState(n),
-        h = null !== (d = null !== (u = null === (i = f.result) || void 0 === i ? void 0 : null === (r = i.sections) || void 0 === r ? void 0 : r[n]) && void 0 !== u ? u : null === (a = p.result) || void 0 === a ? void 0 : null === (o = a.sections) || void 0 === o ? void 0 : o[n]) && void 0 !== d ? d : null === (c = _.result) || void 0 === c ? void 0 : null === (s = c.sections) || void 0 === s ? void 0 : s[n];
+        _ = l.ZP.getContextState(e),
+        p = l.ZP.getApplicationState(n),
+        h = null != (d = null != (u = null == (i = f.result) || null == (r = i.sections) ? void 0 : r[n]) ? u : null == (a = _.result) || null == (o = a.sections) ? void 0 : o[n]) ? d : null == (c = p.result) || null == (s = c.sections) ? void 0 : s[n];
     return null == h ? void 0 : h.descriptor;
 }
-function y(e, t, n) {
+function v(e, t, n) {
     let r = l.ZP.query(
         e,
         {
@@ -159,36 +159,36 @@ function O(e) {
         n = l.ZP.getContextState(e);
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
-function S(e) {
+function I(e) {
     let { context: t, filters: n, options: a, allowFetch: c } = e,
         u = 'channel' === t.type ? t.channel.guild_id : null,
         d = (0, i.e7)([o.Z], () => o.Z.getGuild(u), [u]),
-        { descriptors: _, commands: m, sectionedCommands: E, loading: v } = (0, l.JK)(t, d, n, g(h({}, a), { allowFetch: c })),
-        [b, y] = r.useState(null),
+        { descriptors: p, commands: m, sectionedCommands: E, loading: b } = (0, l.JK)(t, d, n, g(h({}, a), { allowFetch: c })),
+        [y, v] = r.useState(null),
         O = r.useMemo(() => {
             var e;
-            return C(null !== (e = a.placeholderCount) && void 0 !== e ? e : 0, n.commandTypes[0]);
+            return C(null != (e = a.placeholderCount) ? e : 0, n.commandTypes[0]);
         }, [n.commandTypes, a.placeholderCount]);
     return r.useMemo(() => {
         let e = {
-            loading: v,
+            loading: b,
             commands: m,
-            activeSections: _,
+            activeSections: p,
             commandsByActiveSection: E,
-            filteredSectionId: b,
+            filteredSectionId: y,
             hasMoreAfter: !1,
-            placeholders: v ? O : [],
-            sectionDescriptors: _,
+            placeholders: b ? O : [],
+            sectionDescriptors: p,
             filterSection: (e) => {
-                y(e);
+                v(e);
             },
-            scrollDown: p.dG4
+            scrollDown: _.dG4
         };
-        if (null != b) {
-            let t = E.find((e) => e.section.id === b);
+        if (null != y) {
+            let t = E.find((e) => e.section.id === y);
             (e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []);
         }
-        if (v) {
+        if (b) {
             let t = E[0];
             if (null != t)
                 e.commandsByActiveSection = [
@@ -211,12 +211,12 @@ function S(e) {
             e.commands = [...m, ...O];
         }
         return e;
-    }, [m, _, b, E, v, O]);
+    }, [b, m, p, E, y, O]);
 }
-function I(e, t, n) {
+function S(e, t, n) {
     var r;
     let { descriptors: i, commands: o, loading: a } = l.ZP.query(e, t, n),
-        c = C(a && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
+        c = C(a && null != (r = n.placeholderCount) ? r : 0, t.commandTypes[0]);
     return {
         commands: a ? [...o, ...c] : o,
         sections: a && 0 === i.length ? [s.Tm[f.bi.BUILT_IN]] : i
@@ -228,7 +228,7 @@ function T(e, t) {
     return r.useMemo(() => {
         if (null != t) {
             var e, r, o, a;
-            for (let s of Object.values(null !== (o = null === (e = n.result) || void 0 === e ? void 0 : e.sections) && void 0 !== o ? o : {}).concat(Object.values(null !== (a = null === (r = i.result) || void 0 === r ? void 0 : r.sections) && void 0 !== a ? a : {}))) {
+            for (let s of Object.values(null != (o = null == (e = n.result) ? void 0 : e.sections) ? o : {}).concat(Object.values(null != (a = null == (r = i.result) ? void 0 : r.sections) ? a : {}))) {
                 let e = s.commands[t];
                 if (null != e)
                     return {
@@ -248,8 +248,8 @@ function N(e, t, n) {
         o = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
         var e, r, s, l, c, u;
-        let f = null !== (c = null === (r = i.result) || void 0 === r ? void 0 : null === (e = r.sections) || void 0 === e ? void 0 : e[t]) && void 0 !== c ? c : null === (s = o.result) || void 0 === s ? void 0 : s.sections[t],
-            p = Object.values(null !== (u = null == f ? void 0 : f.commands) && void 0 !== u ? u : {})
+        let f = null != (c = null == (r = i.result) || null == (e = r.sections) ? void 0 : e[t]) ? c : null == (s = o.result) ? void 0 : s.sections[t],
+            _ = Object.values(null != (u = null == f ? void 0 : f.commands) ? u : {})
                 .map((e) =>
                     null == e.rootCommand
                         ? e
@@ -261,8 +261,8 @@ function N(e, t, n) {
                 )
                 .reduce((e, t) => ((e[t.id] = t), e), {});
         return {
-            application: null == f ? void 0 : null === (l = f.descriptor) || void 0 === l ? void 0 : l.application,
-            commands: n.map((e) => p[e]).filter(a.lm)
+            application: null == f || null == (l = f.descriptor) ? void 0 : l.application,
+            commands: n.map((e) => _[e]).filter(a.lm)
         };
     }, [null == i ? void 0 : i.result, null == o ? void 0 : o.result, t, n]);
 }

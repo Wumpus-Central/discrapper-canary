@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(823379),
     d = n(981631),
     f = n(388032),
-    p = n(261495);
-function _(e, t, n) {
+    _ = n(602192);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -82,28 +82,28 @@ function E(e) {
             (0, u.vE)(e);
     }
 }
-class v extends i.PureComponent {
+class b extends i.PureComponent {
     renderBadge(e, t, n) {
-        let { className: i, badgeStrokeColor: o, tooltipColor: c = s.ua7.Colors.BRAND, tooltipPosition: u, tooltipDelay: d, size: f = 16, badgeColor: _, iconClassName: m, flowerStarClassName: v } = this.props,
-            b = E(e);
+        let { className: i, badgeStrokeColor: o, tooltipColor: c = s.ua7.Colors.BRAND, tooltipPosition: u, tooltipDelay: d, size: f = 16, badgeColor: p, iconClassName: m, flowerStarClassName: b } = this.props,
+            y = E(e);
         return (0, r.jsx)(s.ua7, {
             color: c,
             position: u,
             delay: d,
-            text: b,
+            text: y,
             children: (s) => {
                 if (5 !== e && 4 !== e)
                     return (0, r.jsx)(
                         l.Z,
                         g(h({}, s), {
                             className: a()(n, i),
-                            flowerStarClassName: v,
-                            color: _,
+                            flowerStarClassName: b,
+                            color: p,
                             stroke: o,
                             size: f,
                             children: (0, r.jsx)(t, {
                                 size: 'xxs',
-                                className: a()(p.icon, m),
+                                className: a()(_.icon, m),
                                 color: 'currentColor'
                             })
                         })
@@ -119,7 +119,7 @@ class v extends i.PureComponent {
                             className: a()(n, i),
                             style: e,
                             children: (0, r.jsx)(t, {
-                                className: a()(p.icon, m),
+                                className: a()(_.icon, m),
                                 color: 'currentColor'
                             })
                         })
@@ -131,7 +131,7 @@ class v extends i.PureComponent {
     render() {
         let { guild: e } = this.props,
             t = new Set(e.features);
-        return t.has(d.oNc.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, s.Ymb, p.staff) : t.has(d.oNc.VERIFIED) && t.has(d.oNc.HUB) ? this.renderBadge(4, s.aVH, p.verifiedHub) : t.has(d.oNc.HUB) ? this.renderBadge(5, s.aVH, p.hub) : t.has(d.oNc.VERIFIED) && t.has(d.oNc.PARTNERED) ? this.renderBadge(3, s.kmB, p.verified) : t.has(d.oNc.VERIFIED) ? this.renderBadge(2, s.kmB, p.verified) : t.has(d.oNc.PARTNERED) ? this.renderBadge(0, (0, s.GSL)(c.Z), p.partnered) : null;
+        return t.has(d.oNc.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, s.Ymb, _.staff) : t.has(d.oNc.VERIFIED) && t.has(d.oNc.HUB) ? this.renderBadge(4, s.aVH, _.verifiedHub) : t.has(d.oNc.HUB) ? this.renderBadge(5, s.aVH, _.hub) : t.has(d.oNc.VERIFIED) && t.has(d.oNc.PARTNERED) ? this.renderBadge(3, s.kmB, _.verified) : t.has(d.oNc.VERIFIED) ? this.renderBadge(2, s.kmB, _.verified) : t.has(d.oNc.PARTNERED) ? this.renderBadge(0, (0, s.GSL)(c.Z), _.partnered) : null;
     }
 }
-let b = v;
+let y = b;

@@ -90,7 +90,7 @@ class m extends o.Z {
     }
     getCurrentSubscriptionPlanIdForGroup(e) {
         var t;
-        return null === (t = this.items.find((t) => e.includes(t.planId))) || void 0 === t ? void 0 : t.planId;
+        return null == (t = this.items.find((t) => e.includes(t.planId))) ? void 0 : t.planId;
     }
     get isPremium() {
         return this.type === u.NYc.PREMIUM;
@@ -143,7 +143,7 @@ class m extends o.Z {
     }
     get endedAt() {
         var e;
-        return this.status !== u.O0b.ENDED ? null : (null === (e = this.metadata) || void 0 === e ? void 0 : e.ended_at) != null ? new Date(this.metadata.ended_at) : this.currentPeriodEnd;
+        return this.status !== u.O0b.ENDED ? null : (null == (e = this.metadata) ? void 0 : e.ended_at) != null ? new Date(this.metadata.ended_at) : this.currentPeriodEnd;
     }
     get isActive() {
         return this.status === u.O0b.ACTIVE;
@@ -153,7 +153,7 @@ class m extends o.Z {
     }
     get premiumSince() {
         var e;
-        return null !== (e = this.streakStartedAt) && void 0 !== e ? e : this.createdAt;
+        return null != (e = this.streakStartedAt) ? e : this.createdAt;
     }
     get hasAnyPremiumNitro() {
         return this.items.some((e) => f.dJ.has(e.planId));

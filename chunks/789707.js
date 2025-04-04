@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     o = n(499033),
     a = n(388032),
-    s = n(531402);
+    s = n(879730);
 function l() {
     return (0, r.jsxs)('div', {
         className: s.container,

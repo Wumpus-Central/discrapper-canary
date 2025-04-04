@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         enable: () => N,
-        isNotSupported: () => I,
+        isNotSupported: () => S,
         trackToggleSelfDeaf: () => C,
         trackToggleSelfMute: () => A
     });
@@ -16,8 +16,8 @@ var i = n(481060),
     u = n(556296),
     d = n(451478),
     f = n(626135),
-    p = n(13140),
-    _ = n(554174),
+    _ = n(13140),
+    p = n(554174),
     h = n(981631),
     m = n(761274),
     g = n(388032);
@@ -34,7 +34,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,37 +62,37 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 let O = new a.Z('AudioActionCreators');
-function S() {
+function I() {
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e('74023').then(n.bind(n, 431583));
-        return (t) => (0, r.jsx)(e, v({ source: 'Unsupported Browser' }, t));
+        return (t) => (0, r.jsx)(e, b({ source: 'Unsupported Browser' }, t));
     });
 }
-function I() {
+function S() {
     return (
         !l.Z.isSupported() &&
         ((0, i.h7j)((e) =>
             (0, r.jsx)(
                 i.ConfirmModal,
-                y(
-                    v(
+                v(
+                    b(
                         {
                             header: g.NW.string(g.t.ilMTy8),
                             confirmText: g.NW.string(g.t.BK8LKy),
                             cancelText: g.NW.string(g.t['ETE/oK']),
-                            onConfirm: S,
+                            onConfirm: I,
                             confirmButtonColor: i.zxk.Colors.BRAND
                         },
                         e
@@ -117,7 +117,7 @@ function T(e) {
 }
 function N() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return I()
+    return S()
         ? Promise.resolve(!1)
         : (f.default.track(h.rMx.PERMISSIONS_REQUESTED, { type: 'audio' }),
           l.Z.getMediaEngine()
@@ -159,7 +159,7 @@ function A(e) {
         custom_keybind_assigned: null != r && r.id !== u.Ek.id,
         used_keybind: t,
         app_in_focus: d.Z.isFocused(),
-        overlay_activated: null != (0, _.Z)(),
+        overlay_activated: null != (0, p.Z)(),
         voice_channel_type: null != o ? o.type : null,
         location: n
     });
@@ -171,10 +171,10 @@ function C(e) {
         o = null != i ? s.Z.getChannel(i) : null;
     f.default.track(h.rMx.SELF_DEAFEN_TOGGLED, {
         enabled: !l.Z.isSelfDeaf(),
-        keybind_assigned: null != r ? (0, p.BB)(r.shortcut) : void 0,
+        keybind_assigned: null != r ? (0, _.BB)(r.shortcut) : void 0,
         used_keybind: t,
         app_in_focus: d.Z.isFocused(),
-        overlay_activated: null != (0, _.Z)(),
+        overlay_activated: null != (0, p.Z)(),
         voice_channel_type: null != o ? o.type : null,
         location: n
     });

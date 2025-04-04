@@ -18,12 +18,12 @@ function m(e, t) {
                 ? arguments[2]
                 : (() => {
                       var e;
-                      return null !== (r = null === (e = c.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== r ? r : 100;
+                      return null != (r = null == (e = c.kU.getSetting()) ? void 0 : e.volume) ? r : 100;
                   })(),
         m = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.w.DEFAULT,
         { audioRef: g } = i.useContext(l.Z),
-        [E, v] = i.useState(!1),
-        b = (0, o.e7)([d.Z], () => d.Z.isPlayingSound(e.soundId), [e]);
+        [E, b] = i.useState(!1),
+        y = (0, o.e7)([d.Z], () => d.Z.isPlayingSound(e.soundId), [e]);
     return {
         playSoundboardSound: i.useCallback(
             (n) => {
@@ -31,15 +31,15 @@ function m(e, t) {
             },
             [e, g, t]
         ),
-        isPlayingSound: b,
+        isPlayingSound: y,
         previewSound: i.useCallback(async () => {
             let t = (0, _.Z)(e.soundId),
                 r = new (await (0, s.Z)(t))();
             if (((r.src = t), null != g.current && g.current.pause(), u.isPlatformEmbedded && m === h.w.VOICE)) {
                 var i;
-                null === (i = r.setSinkId) || void 0 === i || i.call(r, a.voiceSinkId);
+                null == (i = r.setSinkId) || i.call(r, a.voiceSinkId);
             }
-            (g.current = r), (r.currentTime = 0), (r.volume = (0, p.Z)(e.volume, n)), r.play(), v(!0), r.addEventListener('pause', () => v(!1), { once: !0 });
+            (g.current = r), (r.currentTime = 0), (r.volume = (0, p.Z)(e.volume, n)), r.play(), b(!0), r.addEventListener('pause', () => b(!1), { once: !0 });
         }, [e, n, g, m]),
         isPreviewingSound: E
     };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(200651);
 n(192379);
 var i = n(399606),
@@ -10,15 +10,15 @@ var i = n(399606),
     u = n(880949),
     d = n(28546),
     f = n(65029),
-    p = n(430824),
-    _ = n(556296),
+    _ = n(430824),
+    p = n(556296),
     h = n(451478),
     m = n(358085),
     g = n(13140),
     E = n(763296),
-    v = n(981631),
-    b = n(388032),
-    y = n(340172);
+    b = n(981631),
+    y = n(388032),
+    v = n(127253);
 function O(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ function O(e, t, n) {
         e
     );
 }
-function S(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,27 +48,27 @@ function S(e) {
     }
     return e;
 }
-function I(e) {
+function S(e) {
     let { soundboardSound: t, closePicker: O } = e,
-        I = (0, d.Iu)((e) => e.searchQuery),
+        S = (0, d.Iu)((e) => e.searchQuery),
         T = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
-        N = (0, i.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guildId)),
+        N = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
         A = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
-        R = (0, i.e7)([_.ZP], () => _.ZP.getKeybindForAction(v.kg4.SOUNDBOARD_HOLD));
-    if (null != t && I.length > 0)
+        R = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
+    if (null != t && S.length > 0)
         return (0, r.jsx)(f.Z, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, r.jsx)(s.Z, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          className: y.emoji
+                          className: v.emoji
                       })
                     : (0, r.jsx)(a.XBm, {
                           size: 'md',
                           color: 'currentColor',
-                          className: y.emoji
+                          className: v.emoji
                       }),
             graphicSecondary:
                 null != N
@@ -85,14 +85,14 @@ function I(e) {
             O(),
                 (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
-                    return (t) => (0, r.jsx)(e, S({}, t));
+                    return (t) => (0, r.jsx)(e, I({}, t));
                 });
         },
         w = (0, c.un)(o.z.SOUNDBOARD_KEYBIND_TIP),
         D = () => (0, c.EW)(o.z.SOUNDBOARD_KEYBIND_TIP),
-        x =
+        L =
             null != R && (0, m.isWindows)() && !w
-                ? b.NW.format(b.t.udMTtr, {
+                ? y.NW.format(y.t.udMTtr, {
                       keybind: (0, g.BB)(R.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
@@ -105,26 +105,26 @@ function I(e) {
                           )
                   })
                 : null;
-    return null == x
+    return null == L
         ? null
         : (0, r.jsxs)('div', {
-              className: y.keybindHint,
+              className: v.keybindHint,
               children: [
                   (0, r.jsx)(a.P4T, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
-                      className: y.warningIcon
+                      className: v.warningIcon
                   }),
                   (0, r.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-normal',
-                      className: y.keybindHintText,
-                      children: x
+                      className: v.keybindHintText,
+                      children: L
                   }),
                   (0, r.jsx)(a.P3F, {
-                      className: y.closeButton,
+                      className: v.closeButton,
                       onClick: D,
                       children: (0, r.jsx)(a.Dio, {
                           size: 'xs',

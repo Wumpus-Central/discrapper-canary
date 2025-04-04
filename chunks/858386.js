@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(344532),
     d = n(981631),
     f = n(231338);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -81,7 +81,7 @@ class E extends a.Z {
                               };
                           return (0, r.jsx)(
                               e,
-                              m(_({}, t), {
+                              m(p({}, t), {
                                   onSuccess: i,
                                   onClose: n,
                                   requirementsUpdated: !0
@@ -98,7 +98,7 @@ class E extends a.Z {
             : t && o.Z.logout(d.Z5c.LOGIN);
     }
     constructor(...e) {
-        super(...e), p(this, 'actions', { POST_CONNECTION_OPEN: this.handleConnectionOpen });
+        super(...e), _(this, 'actions', { POST_CONNECTION_OPEN: this.handleConnectionOpen });
     }
 }
-let v = new E();
+let b = new E();

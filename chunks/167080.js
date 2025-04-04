@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,24 +79,24 @@ function h(e, t) {
     return i;
 }
 let m = (e) => {
-    var { href: t, className: n, iconClassName: u, rel: f, target: h, mimeType: m, fileName: g, focusProps: E, onClick: v } = e,
-        b = _(e, ['href', 'className', 'iconClassName', 'rel', 'target', 'mimeType', 'fileName', 'focusProps', 'onClick']);
-    let y = i.useMemo(() => o.X.getDefaultLinkInterceptor(t), [t]),
+    var { href: t, className: n, iconClassName: u, rel: f, target: h, mimeType: m, fileName: g, focusProps: E, onClick: b } = e,
+        y = p(e, ['href', 'className', 'iconClassName', 'rel', 'target', 'mimeType', 'fileName', 'focusProps', 'onClick']);
+    let v = i.useMemo(() => o.X.getDefaultLinkInterceptor(t), [t]),
         O = i.useCallback(
             (e) => {
                 s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                     attachment_type: null == m ? void 0 : m[0],
                     attachment_subtype: null == m ? void 0 : m[1]
                 }),
-                    null == v || v(),
-                    null == y || y(e);
+                    null == b || b(),
+                    null == v || v(e);
             },
-            [y, m, v]
+            [v, m, b]
         );
     return null != g
         ? (0, r.jsx)(
               a.eee,
-              p(
+              _(
                   d(
                       {
                           href: t,
@@ -107,14 +107,14 @@ let m = (e) => {
                           'aria-label': c.NW.string(c.t['1WjMbG']),
                           focusProps: E
                       },
-                      b
+                      y
                   ),
                   { children: g }
               )
           )
         : (0, r.jsx)(
               a.eee,
-              p(
+              _(
                   d(
                       {
                           href: t,
@@ -125,7 +125,7 @@ let m = (e) => {
                           'aria-label': c.NW.string(c.t['1WjMbG']),
                           focusProps: E
                       },
-                      b
+                      y
                   ),
                   {
                       children: (0, r.jsx)(a._8t, {

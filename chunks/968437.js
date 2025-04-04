@@ -30,6 +30,6 @@ function l() {
 }
 function c(e, t) {
     var n;
-    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.AX;
+    return null != (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) ? n : a.AX;
 }
 o.Z.Minutes.HOUR, o.Z.Minutes.DAY, o.Z.Minutes.DAY, o.Z.Minutes.WEEK, i()(() => l().map((e) => e.value));

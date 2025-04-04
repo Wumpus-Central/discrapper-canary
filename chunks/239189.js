@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        assign: () => _,
+        assign: () => p,
         batchedUpdates: () => f,
         colorNames: () => c,
         createStringInterpolator: () => r,
@@ -9,7 +9,7 @@ n.r(t),
         requestAnimationFrame: () => d,
         skipAnimation: () => u,
         to: () => i,
-        willAdvance: () => p
+        willAdvance: () => _
     });
 var r,
     i,
@@ -30,8 +30,8 @@ var r,
     f = function (e) {
         return e();
     },
-    p = a.ZT,
-    _ = function (e) {
+    _ = a.ZT,
+    p = function (e) {
         var t;
         return (
             (i = (t = Object.assign(
@@ -44,7 +44,7 @@ var r,
                     createStringInterpolator: r,
                     requestAnimationFrame: d,
                     batchedUpdates: f,
-                    willAdvance: p
+                    willAdvance: _
                 },
                 h(e)
             )).to),
@@ -55,7 +55,7 @@ var r,
             (r = t.createStringInterpolator),
             (d = t.requestAnimationFrame),
             (f = t.batchedUpdates),
-            (p = t.willAdvance),
+            (_ = t.willAdvance),
             t
         );
     };

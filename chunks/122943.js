@@ -9,7 +9,7 @@ var i = n(692547),
     c = n(788858),
     u = n(170187),
     d = n(388032),
-    f = n(389034);
+    f = n(843280);
 function _(e, t, n) {
     return (
         t in e
@@ -66,10 +66,10 @@ function g(e) {
     let { channel: t, textVariant: n, textClassName: _, hideText: h = !1, hideTooltip: g = !1 } = e,
         E = (0, o.vjg)(o.Skl.ONLINE),
         b = (0, s.ZP)(t),
-        v = t.isDM() || t.isGroupDM(),
-        { enabled: y } = (0, l.C)({ location: 'VoiceActivityStatus' }),
+        y = t.isDM() || t.isGroupDM(),
+        { enabled: v } = (0, l.C)({ location: 'VoiceActivityStatus' }),
         O = () =>
-            g || v
+            g || y
                 ? (0, r.jsx)(c.Z, {
                       size: 'custom',
                       color: E,
@@ -91,13 +91,13 @@ function g(e) {
                           )
                   }),
         I = () =>
-            y
+            v
                 ? (0, r.jsx)(u.Z, {
                       variant: n,
                       className: _,
                       children: b
                   })
-                : v
+                : y
                   ? (0, r.jsx)(u.Z, {
                         variant: n,
                         className: _,

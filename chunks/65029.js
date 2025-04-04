@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(819758),
     c = n(149203),
     u = n(388032),
-    d = n(143941);
+    d = n(669486);
 let f = (e) => {
         let { emojiSubCategory: t } = e;
         return (0, r.jsxs)('div', {
@@ -23,8 +23,8 @@ let f = (e) => {
             ]
         });
     },
-    p = (e) => {
-        let { className: t, graphicPrimary: n, graphicSecondary: i, titlePrimary: s, titleSecondary: l, isFavorite: p = !1, emojiSubCategory: _ = c.t0.NONE } = e;
+    _ = (e) => {
+        let { className: t, graphicPrimary: n, graphicSecondary: i, titlePrimary: s, titleSecondary: l, isFavorite: _ = !1, emojiSubCategory: p = c.t0.NONE } = e;
         return (0, r.jsxs)('div', {
             className: o()(d.inspector, t),
             children: [
@@ -40,11 +40,11 @@ let f = (e) => {
                             className: d.titlePrimary,
                             variant: 'text-md/semibold',
                             children: [
-                                p
+                                _
                                     ? (0, r.jsx)(a.r7p, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          'aria-label': p ? u.NW.formatToPlainString(u.t['+fdUkZ'], { names: s }) : void 0,
+                                          'aria-label': _ ? u.NW.formatToPlainString(u.t['+fdUkZ'], { names: s }) : void 0,
                                           width: 15,
                                           height: 15,
                                           className: d.favorite
@@ -61,14 +61,14 @@ let f = (e) => {
                             })
                     ]
                 }),
-                _ === c.t0.NONE
+                p === c.t0.NONE
                     ? null != i &&
                       (0, r.jsx)('div', {
                           className: d.graphicSecondary,
                           'aria-hidden': !0,
                           children: i
                       })
-                    : (0, r.jsx)(f, { emojiSubCategory: _ })
+                    : (0, r.jsx)(f, { emojiSubCategory: p })
             ]
         });
     };

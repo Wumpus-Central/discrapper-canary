@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r,
     i = n(200651),
     o = n(192379),
@@ -28,7 +28,7 @@ let m = {
     friction: 15,
     tension: 100
 };
-class b extends (r = o.PureComponent) {
+class g extends (r = o.PureComponent) {
     componentDidMount() {
         this.setState({ shown: !0 }), d.S.subscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
@@ -159,5 +159,5 @@ class b extends (r = o.PureComponent) {
             });
     }
 }
-h(b, 'contextType', u.Sfi);
-let g = b;
+h(g, 'contextType', u.Sfi);
+let b = g;

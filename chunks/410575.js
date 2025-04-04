@@ -40,7 +40,7 @@ class f extends (r = o.Component) {
         var t, n;
         let { section: r, page: o, object: a, objectType: l, children: c } = this.props,
             u = this.mergeLocation(e.location, this.getLocation(o, r, a, l)),
-            d = this.getContext(u, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+            d = this.getContext(u, null != (t = this._loadDate) ? t : e.loadDate, null != (n = this._loadId) ? n : e.loadId);
         return (0, i.jsx)(s.AnalyticsContext.Provider, {
             value: d,
             children: c

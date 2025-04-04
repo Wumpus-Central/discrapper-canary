@@ -15,9 +15,9 @@ var r = n(200651),
     m = n(347312),
     g = n(981631),
     E = n(388032),
-    b = n(667259);
-let v = i.lazy(() => n.e('89792').then(n.bind(n, 711635)));
-function y(e) {
+    b = n(182525);
+let y = i.lazy(() => n.e('89792').then(n.bind(n, 711635)));
+function v(e) {
     let { played: t, duration: n, currentTime: i } = e,
         o = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
@@ -32,7 +32,7 @@ function O(e, t, n) {
         let r;
         function i() {
             let o = e.current;
-            if (null != o) n(o.currentTime), t && (r = requestAnimationFrame(i));
+            null != o && (n(o.currentTime), t && (r = requestAnimationFrame(i)));
         }
         return (
             i(),
@@ -79,7 +79,7 @@ let S = i.memo(function (e) {
         }, []),
         Q = i.useCallback((e) => {
             let t = e.currentTarget.duration;
-            !isNaN(t) && x(t);
+            isNaN(t) || x(t);
         }, []),
         X = i.useCallback(() => {
             U(!1),
@@ -89,7 +89,7 @@ let S = i.memo(function (e) {
                     }, 500));
         }, []),
         J = i.useCallback(() => {
-            !G && X();
+            G || X();
         }, [X, G]),
         $ = i.useCallback(() => {
             let e = P.current;
@@ -138,50 +138,50 @@ let S = i.memo(function (e) {
     }),
         i.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: r } = es.current;
-            if (e || j) {
+            if (e || j)
                 if (j) {
                     var i, o;
-                    (eo.current = performance.now()), null == r || r(!1, t, (null !== (o = null === (i = P.current) || void 0 === i ? void 0 : i.duration) && void 0 !== o ? o : 0) * p.Z.Millis.SECOND);
+                    (eo.current = performance.now()), null == r || r(!1, t, (null != (o = null == (i = P.current) ? void 0 : i.duration) ? o : 0) * p.Z.Millis.SECOND);
                 } else {
                     let e = performance.now(),
                         r = eo.current,
                         i = null != r ? (e - r) / 1000 : 0;
                     null == n || n(t, i), (eo.current = null);
                 }
-            }
         }, [j]),
         O(P, j, D),
         I(n, j, U);
     let el = j ? l.fpf : l.o1U,
         ec = j ? E.NW.string(E.t.ZcgDJS) : E.NW.string(E.t.RscU7O);
-    'Safari' === platform.name
-        ? (t = (0, r.jsx)(i.Suspense, {
-              children: (0, r.jsx)(v, {
+    t =
+        'Safari' === platform.name
+            ? (0, r.jsx)(i.Suspense, {
+                  children: (0, r.jsx)(y, {
+                      ref: P,
+                      className: b.audioElement,
+                      src: n,
+                      preload: Z,
+                      playing: j && !G,
+                      onEnded: J,
+                      onLoadedMetadata: Q,
+                      onError: $,
+                      muted: M,
+                      volume: W
+                  })
+              })
+            : (0, r.jsx)(u.Z, {
                   ref: P,
                   className: b.audioElement,
-                  src: n,
+                  controls: !1,
                   preload: Z,
-                  playing: j && !G,
                   onEnded: J,
                   onLoadedMetadata: Q,
                   onError: $,
                   muted: M,
-                  volume: W
-              })
-          }))
-        : (t = (0, r.jsx)(u.Z, {
-              ref: P,
-              className: b.audioElement,
-              controls: !1,
-              preload: Z,
-              onEnded: J,
-              onLoadedMetadata: Q,
-              onError: $,
-              muted: M,
-              volume: W,
-              playing: j && !G,
-              children: (0, r.jsx)('source', { src: n })
-          }));
+                  volume: W,
+                  playing: j && !G,
+                  children: (0, r.jsx)('source', { src: n })
+              });
     let eu = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, r.jsxs)('div', {
         className: a()(b.container, { [b.playing]: j }),
@@ -212,7 +212,7 @@ let S = i.memo(function (e) {
                 onDragStart: en,
                 onDragEnd: er
             }),
-            (0, r.jsx)(y, {
+            (0, r.jsx)(v, {
                 played: F,
                 currentTime: w,
                 duration: L

@@ -1,7 +1,7 @@
 n.d(t, {
-    Vq: () => b,
-    c8: () => v,
-    oQ: () => y
+    Vq: () => y,
+    c8: () => b,
+    oQ: () => v
 }),
     n(266796);
 var r = n(200651);
@@ -15,9 +15,9 @@ var i = n(120356),
     u = n(600164),
     d = n(63063),
     f = n(211242),
-    p = n(981631),
-    _ = n(388032),
-    h = n(22313),
+    _ = n(981631),
+    p = n(388032),
+    h = n(747168),
     m = n(51125),
     g = n(47268);
 function E(e) {
@@ -30,13 +30,13 @@ function E(e) {
             (0, r.jsx)(l.X6q, {
                 className: h.header,
                 variant: 'heading-xl/semibold',
-                children: _.NW.string(_.t.vwMEHR)
+                children: p.NW.string(p.t.vwMEHR)
             }),
             (0, r.jsxs)(l.Text, {
                 className: h.description,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: [(0, r.jsx)('p', { children: _.NW.string(_.t.fev8MT) }), (0, r.jsx)('p', { children: _.NW.format(_.t.IHxEJS, { helpdeskArticle: d.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS) }) })]
+                children: [(0, r.jsx)('p', { children: p.NW.string(p.t.fev8MT) }), (0, r.jsx)('p', { children: p.NW.format(p.t.IHxEJS, { helpdeskArticle: d.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS) }) })]
             }),
             (0, r.jsx)('img', {
                 src: i,
@@ -46,10 +46,10 @@ function E(e) {
         ]
     });
 }
-function v() {
+function b() {
     return (0, r.jsx)(E, { className: h.settings });
 }
-function b(e) {
+function y(e) {
     let { onClose: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -65,7 +65,7 @@ function b(e) {
         ]
     });
 }
-function y(e) {
+function v(e) {
     let { className: t } = e;
     return (0, f.Q)()
         ? (0, r.jsxs)(l.Zbd, {
@@ -81,7 +81,7 @@ function y(e) {
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: 'text-sm/normal',
-                      children: _.NW.format(_.t.NYkcCg, { helpdeskArticle: d.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS) })
+                      children: p.NW.format(p.t.NYkcCg, { helpdeskArticle: d.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS) })
                   })
               ]
           })

@@ -4,7 +4,7 @@ var r = n(818083),
 let o = (0, r.B)({
     kind: 'user',
     id: '2025-01_audio_nack',
-    label: 'Audio NACK ',
+    label: 'Audio NACK',
     defaultConfig: { enabled: !1 },
     treatments: [
         {

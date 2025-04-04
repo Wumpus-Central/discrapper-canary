@@ -1,4 +1,4 @@
-n.d(t, { L: () => b }), n(653041);
+n.d(t, { L: () => y }), n(653041);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(512969),
     l = n(481060),
     c = n(624138),
-    u = n(168470);
+    u = n(284575);
 function d(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,21 +82,21 @@ function m(e, t) {
 let g = [18, 18, 16, 16, 14, 12, 10];
 function E(e) {
     var t;
-    return null !== (t = g[e.length - 1]) && void 0 !== t ? t : g[g.length - 1];
+    return null != (t = g[e.length - 1]) ? t : g[g.length - 1];
 }
-function v(e, t) {
+function b(e, t) {
     return a()({
         [u.childWrapper]: !0,
         [u.childWrapperNoHoverBg]: 'always' === e,
         [u.childWrapperHoverScale]: 'on-hover' === e && t
     });
 }
-let b = (e) => {
+let y = (e) => {
     let t, n;
-    var { backgroundStyle: o = 'always', children: d, icon: p, name: m, ariaLabel: g, className: b, style: y, to: O, onClick: S, selected: I = !1 } = e,
+    var { backgroundStyle: o = 'always', children: d, icon: _, name: m, ariaLabel: g, className: y, style: v, to: O, onClick: I, selected: S = !1 } = e,
         T = h(e, ['backgroundStyle', 'children', 'icon', 'name', 'ariaLabel', 'className', 'style', 'to', 'onClick', 'selected']);
     let N = (0, s.k6)();
-    null == p && null != m && (n = E((t = (0, c.Zg)(m))));
+    null == _ && null != m && (n = E((t = (0, c.Zg)(m))));
     let A = i.useCallback(
             (e) => {
                 if (null == O);
@@ -105,31 +105,31 @@ let b = (e) => {
                     let { pathname: e = '', state: t } = O;
                     N.push(e, t);
                 }
-                null != S && S(e);
+                null != I && I(e);
             },
-            [N, O, S]
+            [N, O, I]
         ),
         C = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, r.jsxs)(
         l.P3F,
-        _(f({}, T), {
+        p(f({}, T), {
             onClick: A,
-            className: a()(b, u.wrapper, { [u.selected]: I }),
+            className: a()(y, u.wrapper, { [u.selected]: S }),
             'aria-label': null != g && '' !== g ? g : null != m ? m : '',
-            style: _(f({}, y), { fontSize: n }),
+            style: p(f({}, v), { fontSize: n }),
             focusProps: { enabled: !1 },
             children: [
                 null != t
                     ? (0, r.jsx)('div', {
-                          className: a()(v(o, !1), u.acronym),
+                          className: a()(b(o, !1), u.acronym),
                           'aria-hidden': !0,
                           children: t
                       })
                     : null,
-                null != p
+                null != _
                     ? (0, r.jsx)('img', {
                           className: u.icon,
-                          src: p,
+                          src: _,
                           alt: ' ',
                           width: C,
                           height: C,
@@ -138,7 +138,7 @@ let b = (e) => {
                     : null,
                 null != d
                     ? (0, r.jsx)('div', {
-                          className: v(o, !0),
+                          className: b(o, !0),
                           children: d
                       })
                     : null

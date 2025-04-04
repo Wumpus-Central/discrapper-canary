@@ -1,11 +1,11 @@
 n.d(t, {
     $l: () => w,
-    G1: () => y,
+    G1: () => v,
     JR: () => N,
     U$: () => A,
     ZP: () => D,
-    e7: () => S,
-    wv: () => I,
+    e7: () => I,
+    wv: () => S,
     yK: () => O
 }),
     n(301563);
@@ -19,16 +19,16 @@ var r = n(192379),
     u = n(902840),
     d = n(38618),
     f = n(592125),
-    p = n(70956),
-    _ = n(765104),
+    _ = n(70956),
+    p = n(765104),
     h = n(981631);
 let m = 75,
     g = 50,
-    E = 30 * p.Z.Millis.SECOND,
-    v = null;
-async function b(e, t) {
+    E = 30 * _.Z.Millis.SECOND,
+    b = null;
+async function y(e, t) {
     let n, r;
-    if (!_.Z.shouldFetch(e, t)) return;
+    if (!p.Z.shouldFetch(e, t)) return;
     let i = Date.now();
     l.Z.dispatch({
         type: 'REQUEST_CHANNEL_SUMMARY',
@@ -54,10 +54,10 @@ async function b(e, t) {
         receivedAt: Date.now()
     });
 }
-async function y(e) {
+async function v(e) {
     var t, n;
     let r, i;
-    if (!_.Z.shouldFetch(e)) return;
+    if (!p.Z.shouldFetch(e)) return;
     let a = Date.now();
     l.Z.dispatch({
         type: 'REQUEST_CHANNEL_SUMMARIES',
@@ -72,7 +72,7 @@ async function y(e) {
     } catch (e) {
         r = new c.Hx(e);
     }
-    let u = (null == i ? void 0 : null === (t = i.body) || void 0 === t ? void 0 : t.summaries) instanceof Array ? i.body.summaries : null !== (n = null == i ? void 0 : i.body) && void 0 !== n ? n : [];
+    let u = (null == i || null == (t = i.body) ? void 0 : t.summaries) instanceof Array ? i.body.summaries : null != (n = null == i ? void 0 : i.body) ? n : [];
     (u = o().takeRight(u, m)),
         l.Z.dispatch({
             type: 'RECEIVE_CHANNEL_SUMMARIES',
@@ -90,11 +90,11 @@ function O(e, t) {
         summaryId: null != t ? t : null
     });
 }
-function S() {
+function I() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
-function I(e, t) {
-    null != e && null != t && b(e, t),
+function S(e, t) {
+    null != e && null != t && y(e, t),
         l.Z.dispatch({
             type: 'SET_SELECTED_SUMMARY',
             channelId: e,
@@ -125,7 +125,7 @@ function A(e, t) {
 async function C() {
     var e;
     let t, n;
-    if (!_.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
+    if (!p.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let r = Date.now();
     l.Z.dispatch({
         type: 'REQUEST_CHANNEL_AFFINITIES',
@@ -139,7 +139,7 @@ async function C() {
     } catch (e) {
         t = new c.Hx(e);
     }
-    let i = null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.channel_affinities;
+    let i = null == n || null == (e = n.body) ? void 0 : e.channel_affinities;
     l.Z.dispatch({
         type: 'RECEIVE_CHANNEL_AFFINITIES',
         affinities: i,
@@ -158,7 +158,7 @@ async function R(e) {
         0 ===
         (e = e
             .concat(
-                _.Z.defaultChannelIds({
+                p.Z.defaultChannelIds({
                     withQuickSwitcher: r,
                     withChannelAffinities: i
                 })
@@ -169,7 +169,7 @@ async function R(e) {
             })
             .filter((e) => {
                 let t = Date.now(),
-                    n = _.Z.status(e);
+                    n = p.Z.status(e);
                 if (null == n ? void 0 : n.fetching) return !1;
                 let r = null == n ? void 0 : n.lastReceivedAt;
                 return null == r || t - r > E;
@@ -232,14 +232,14 @@ async function w(e) {
 let D = {
     setSummaryFeedback: A,
     updateVisibleMessages: N,
-    setSelectedSummary: I,
+    setSelectedSummary: S,
     setGravitySelectedSummary: T,
     setHighlightedSummary: O,
-    fetchSummaries: y,
+    fetchSummaries: v,
     fetchSummariesBulk: R,
     useChannelSummaries: function (e) {
         let { channelIds: t = [] } = e;
-        return P(t), (0, a.Wu)([_.Z], () => _.Z.topSummaries(), []);
+        return P(t), (0, a.Wu)([p.Z], () => p.Z.topSummaries(), []);
     },
     deleteSummary: w
 };

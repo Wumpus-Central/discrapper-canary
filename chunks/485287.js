@@ -1,7 +1,7 @@
 n.d(t, {
-    U5: () => y,
-    ZP: () => S,
-    pp: () => b
+    U5: () => v,
+    ZP: () => I,
+    pp: () => y
 }),
     n(47120);
 var r = n(442837),
@@ -14,8 +14,8 @@ var r = n(442837),
     u = n(565799),
     d = n(431328),
     f = n(501655),
-    p = n(427679),
-    _ = n(754277);
+    _ = n(427679),
+    p = n(754277);
 function h(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ function h(e, t, n) {
 let m = (e) => e / 400,
     g = !1,
     E = (0, o.tu)('stage_waiting', 'stage_waiting', m(s.Z.getOutputVolume()));
-function v() {
+function b() {
     let e = l.Z.getVoiceChannelId();
     if (null == e) {
         E.stop(), (g = !1);
@@ -43,31 +43,31 @@ function v() {
         E.stop(), (g = !1);
         return;
     }
-    if (_.Z.shouldPlay()) {
+    if (p.Z.shouldPlay()) {
         (E.volume = m(s.Z.getOutputVolume())), E.loop(), (g = !0);
         return;
     }
-    if (p.Z.isLive(e)) {
+    if (_.Z.isLive(e)) {
         E.stop(), (g = !1);
         return;
     }
-    if (_.Z.isMuted()) {
+    if (p.Z.isMuted()) {
         E.pause(), (g = !1);
         return;
     }
     let n = null != Object.values(c.Z.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
     n || g ? n && (E.pause(), (g = !1)) : ((E.volume = m(s.Z.getOutputVolume())), E.loop(), (g = !0));
 }
-function b(e) {
+function y(e) {
     let t = (0, r.e7)([l.Z], () => l.Z.getVoiceChannelId() === e),
         n = null != (0, d.w8)(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = (0, r.e7)([p.Z], () => p.Z.getStageInstanceByChannel(e));
+        i = (0, r.e7)([_.Z], () => _.Z.getStageInstanceByChannel(e));
     return t && null == i && !n;
 }
-function y(e) {
+function v(e) {
     let t = l.Z.getVoiceChannelId() === e,
         n = null != u.Z.getMutableParticipants(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        r = p.Z.getStageInstanceByChannel(e);
+        r = _.Z.getStageInstanceByChannel(e);
     return t && null == r && !n;
 }
 class O extends i.Z {
@@ -75,7 +75,7 @@ class O extends i.Z {
         let { channelId: t } = e;
         if (null != t) {
             let e = a.Z.getChannel(t);
-            (null == e ? void 0 : e.isGuildStageVoice()) ? v() : (E.stop(), (g = !1));
+            (null == e ? void 0 : e.isGuildStageVoice()) ? b() : (E.stop(), (g = !1));
         } else E.stop(), (g = !1);
     }
     handleLogout() {
@@ -83,21 +83,21 @@ class O extends i.Z {
     }
     handlePlay(e) {
         let { play: t } = e;
-        t ? v() : (E.pause(), (g = !1));
+        t ? b() : (E.pause(), (g = !1));
     }
     handleMute(e) {
         let { muted: t } = e;
-        t ? (E.pause(), (g = !1)) : v();
+        t ? (E.pause(), (g = !1)) : b();
     }
     handleVoiceStateUpdates() {
-        v();
+        b();
     }
     handleSetOutputVolume(e) {
         let { volume: t } = e;
         E.volume = m(t);
     }
     handleToggleSelfDeaf() {
-        v();
+        b();
     }
     constructor(...e) {
         super(...e),
@@ -112,4 +112,4 @@ class O extends i.Z {
             });
     }
 }
-let S = new O();
+let I = new O();

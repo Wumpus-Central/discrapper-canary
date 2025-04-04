@@ -1,7 +1,7 @@
 n.d(t, {
     Jc: () => d,
     Lp: () => u,
-    l9: () => p,
+    l9: () => _,
     tW: () => c,
     ts: () => f
 });
@@ -12,7 +12,7 @@ var r = n(399606),
 function s(e) {
     var t;
     if (null == e) return !1;
-    let n = i.Z.getGuild(null !== (t = null == e ? void 0 : e.guild_id) && void 0 !== t ? t : ''),
+    let n = i.Z.getGuild(null != (t = null == e ? void 0 : e.guild_id) ? t : ''),
         r = null != n && n.rulesChannelId === e.id;
     return o.TPd.SUMMARIZEABLE.has(e.type) && !e.isNSFW() && !r;
 }
@@ -36,14 +36,14 @@ function f(e) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return u(e, t);
 }
-function p(e) {
+function _(e) {
     return (
         arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         (0, r.e7)(
             [i.Z],
             () => {
                 var t;
-                return d(i.Z.getGuild(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : o.lds), !1);
+                return d(i.Z.getGuild(null != (t = null == e ? void 0 : e.id) ? t : o.lds), !1);
             },
             [e]
         )

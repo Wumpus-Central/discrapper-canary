@@ -1,11 +1,11 @@
 n.d(t, {
     O_: () => d,
     Q3: () => g,
-    R6: () => _,
+    R6: () => p,
     TH: () => E,
-    i9: () => p,
+    i9: () => _,
     k9: () => c,
-    nm: () => v,
+    nm: () => b,
     o9: () => m,
     yl: () => h
 });
@@ -18,7 +18,7 @@ var r = n(442837),
 let c = 'desktop_refresh_enabled',
     u = 'true' === i.K.get(c);
 function d(e) {
-    return a.Z.hasLoadedExperiments ? p(e) : u;
+    return a.Z.hasLoadedExperiments ? _(e) : u;
 }
 let f = (0, o.B)({
     id: '2024-05_desktop_visual_refresh',
@@ -100,12 +100,12 @@ let f = (0, o.B)({
         }
     ]
 });
-function p(e) {
+function _(e) {
     let { enabled: t, disabledByDefault: n } = f.getCurrentConfig({ location: e }),
         r = s.ZP.isVisualRefreshDisabled(n);
     return !!t && !r;
 }
-function _(e) {
+function p(e) {
     let t = g(e),
         { newChatInput: n } = f.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return t && n;
@@ -126,11 +126,11 @@ function E(e) {
         n = f.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
     return !!t && n;
 }
-function v(e) {
+function b(e) {
     let { canOptOut: t } = f.getCurrentConfig({ location: e }),
         n = (0, r.e7)([l.default], () => {
             var e, t;
-            return null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : null === (e = t.isStaff) || void 0 === e ? void 0 : e.call(t);
+            return null == (t = l.default.getCurrentUser()) || null == (e = t.isStaff) ? void 0 : e.call(t);
         });
     return !!(t || n);
 }

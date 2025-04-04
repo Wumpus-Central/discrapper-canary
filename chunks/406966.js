@@ -42,7 +42,7 @@ class l {
         var n;
         let r = e.guild,
             i = e.guild.id;
-        this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null === (n = r.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t);
+        this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null == (n = r.channelUpdates) ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t);
     }
     handleGuildUpdate(e, t) {
         let n = e.guild,
@@ -86,7 +86,7 @@ class l {
     updateWith(e, t) {
         if (null != t) {
             var n, r;
-            let i = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (r = this.pending.get(e)) && void 0 !== r ? r : 0),
+            let i = Math.max(null != (n = this.committed.get(e)) ? n : 0, null != (r = this.pending.get(e)) ? r : 0),
                 o = this.computeLatestVersion(i, t);
             o > i && this.pending.set(e, o);
         }
@@ -95,7 +95,7 @@ class l {
         let n = e;
         for (let e of t) {
             var r;
-            n = Math.max(n, null !== (r = e.version) && void 0 !== r ? r : 0);
+            n = Math.max(n, null != (r = e.version) ? r : 0);
         }
         return n;
     }

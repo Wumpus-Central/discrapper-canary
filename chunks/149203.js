@@ -5,14 +5,14 @@ n.d(t, {
     Su: () => l,
     UX: () => o,
     Vr: () => i,
-    _3: () => _,
+    _3: () => p,
     c: () => s,
     cZ: () => c,
     gV: () => d,
     kV: () => h,
     t0: () => a,
     td: () => u,
-    vO: () => p
+    vO: () => _
 });
 var r = (function (e) {
     return (e.GUILD = 'GUILD'), (e.UNICODE = 'UNICODE'), (e.RECENT = 'RECENT'), (e.CUSTOM = 'CUSTOM'), (e.SEARCH_RESULTS = 'SEARCH_RESULTS'), (e.FAVORITES = 'FAVORITES'), (e.TOP_GUILD_EMOJI = 'TOP_GUILD_EMOJI'), (e.PREMIUM_UPSELL = 'PREMIUM_UPSELL'), (e.SOUNDMOJI = 'SOUNDMOJI'), e;
@@ -32,8 +32,8 @@ let c = 'emoji-picker-tab-panel',
     u = 'emoji-picker-tab',
     d = 'soundboard-picker-tab-panel',
     f = 'soundboard-picker-tab',
-    p = 'gif-picker-tab-panel',
-    _ = 'gif-picker-tab',
+    _ = 'gif-picker-tab-panel',
+    p = 'gif-picker-tab',
     h = {
         reaction: 32,
         reactionLarge: 40,

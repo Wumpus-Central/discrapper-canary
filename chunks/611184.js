@@ -20,7 +20,7 @@ function l(e) {
     var t, n;
     let { game: r } = e,
         s = i.ZP.isDetectionEnabled(r),
-        l = null !== (n = r.id) && void 0 !== n ? n : null === (t = o.Z.getGameByName(r.name)) || void 0 === t ? void 0 : t.id;
+        l = null != (n = r.id) ? n : null == (t = o.Z.getGameByName(r.name)) ? void 0 : t.id;
     null != l && (0, a.M)(l, s);
 }
 class c extends r.Z {

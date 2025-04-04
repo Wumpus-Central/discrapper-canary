@@ -20,8 +20,8 @@ function s(e, t, n) {
             experimentId: e,
             descriptor: t,
             previouslyTracked: u,
-            exposureType: null !== (s = null == n ? void 0 : n.exposureType) && void 0 !== s ? s : 'unknown',
-            excluded: null !== (l = null == n ? void 0 : n.excluded) && void 0 !== l && l,
+            exposureType: null != (s = null == n ? void 0 : n.exposureType) ? s : 'unknown',
+            excluded: null != (l = null == n ? void 0 : n.excluded) && l,
             location: null != a ? a : 'unknown'
         });
     }

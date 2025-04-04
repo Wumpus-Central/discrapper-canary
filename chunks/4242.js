@@ -28,7 +28,7 @@ function s(e) {
 n(231338);
 let l = (e) => {
     var t;
-    return null !== (t = o.N3[e]) && void 0 !== t ? t : o.jD;
+    return null != (t = o.N3[e]) ? t : o.jD;
 };
 function c(e) {
     let t = i().decode(e),

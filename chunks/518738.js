@@ -9,7 +9,7 @@ var r = n(192379),
     a = n(829883);
 function s(e, t) {
     var n;
-    let { customIconSrc: r, unicodeEmoji: i } = null !== (n = (0, a.zy)(e, t)) && void 0 !== n ? n : {};
+    let { customIconSrc: r, unicodeEmoji: i } = null != (n = (0, a.zy)(e, t)) ? n : {};
     if (null != r || null != i)
         return {
             src: r,

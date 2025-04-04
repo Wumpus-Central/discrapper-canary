@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => s,
-    Z: () => p
+    Z: () => _
 });
 var r,
     i = n(442837),
@@ -37,7 +37,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 a(f, 'displayName', 'DomainMigrationStore');
-let p = new f(o.Z, {
+let _ = new f(o.Z, {
     DOMAIN_MIGRATION_START: c,
     DOMAIN_MIGRATION_FAILURE: u,
     DOMAIN_MIGRATION_SKIP: d

@@ -19,7 +19,7 @@ class a extends r.Z {
         var t;
         return new a({
             id: e.id,
-            invoiceItems: null === (t = e.invoice_items) || void 0 === t ? void 0 : t.map(i.H),
+            invoiceItems: null == (t = e.invoice_items) ? void 0 : t.map(i.H),
             total: e.total,
             subtotal: e.subtotal,
             currency: e.currency,

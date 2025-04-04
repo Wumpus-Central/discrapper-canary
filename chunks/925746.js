@@ -1,23 +1,23 @@
 a.d(e, { L: () => i });
 var r = a(617726),
     n = a(688838),
-    o = a(151122),
-    _ = a(166394);
-let i = (0, o._I)((t) => ({
+    _ = a(151122),
+    o = a(166394);
+let i = (0, _._I)((t) => ({
         name: 'ThirdPartyErrorsFilter',
         setup(t) {
             t.on('beforeEnvelope', (t) => {
                 (0, r.gv)(t, (t, e) => {
                     if ('event' === e) {
                         let e = Array.isArray(t) ? t[1] : void 0;
-                        e && ((0, _.CC)(e), (t[1] = e));
+                        e && ((0, o.CC)(e), (t[1] = e));
                     }
                 });
             }),
                 t.on('applyFrameMetadata', (e) => {
                     if (e.type) return;
                     let a = t.getOptions().stackParser;
-                    (0, _.GY)(a, e);
+                    (0, o.GY)(a, e);
                 });
         },
         processEvent(e) {

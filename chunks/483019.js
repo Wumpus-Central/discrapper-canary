@@ -25,7 +25,7 @@ class d {
     }
     get(e) {
         var t;
-        let n = null !== (t = this._subscriptions[e]) && void 0 !== t ? t : {};
+        let n = null != (t = this._subscriptions[e]) ? t : {};
         return l.default.keys(n);
     }
     clear(e) {
@@ -33,8 +33,8 @@ class d {
     }
     subscribe(e, t) {
         var n, r;
-        let i = null !== (n = this._subscriptions[e]) && void 0 !== n ? n : {};
-        (i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1), (this._subscriptions[e] = i), 1 === i[t] && this._onChange(e, this.get(e)), this.checkForLeaks(e, t);
+        let i = null != (n = this._subscriptions[e]) ? n : {};
+        (i[t] = (null != (r = i[t]) ? r : 0) + 1), (this._subscriptions[e] = i), 1 === i[t] && this._onChange(e, this.get(e)), this.checkForLeaks(e, t);
     }
     isSubscribed(e, t) {
         return null != this._subscriptions[e] && null != this._subscriptions[e][t];
@@ -45,21 +45,21 @@ class d {
     unsubscribe(e, t) {
         var n, r;
         if (!this.isSubscribed(e, t)) return;
-        let i = null !== (n = this._unsubscriptions[e]) && void 0 !== n ? n : {};
-        (i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1), (this._unsubscriptions[e] = i), 1 === i[t] && this._unsubscribe.delay(!1);
+        let i = null != (n = this._unsubscriptions[e]) ? n : {};
+        (i[t] = (null != (r = i[t]) ? r : 0) + 1), (this._unsubscriptions[e] = i), 1 === i[t] && this._unsubscribe.delay(!1);
     }
     checkForLeaks(e, t) {
         var n, r, i, o;
-        let s = (null !== (i = null === (n = this._subscriptions[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : 0) - (null !== (o = null === (r = this._unsubscriptions[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== o ? o : 0);
+        let s = (null != (i = null == (n = this._subscriptions[e]) ? void 0 : n[t]) ? i : 0) - (null != (o = null == (r = this._unsubscriptions[e]) ? void 0 : r[t]) ? o : 0);
         s > 5 && new a.Z('GuildMemberSubscriptions').warn('GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(s, ' subscriptions)'));
     }
     flushUnsubscriptions() {
-        !i().isEmpty(this._unsubscriptions) &&
+        i().isEmpty(this._unsubscriptions) ||
             (i().forEach(this._unsubscriptions, (e, t) => {
                 let n = this._subscriptions[t];
                 i().forEach(e, (e, t) => {
                     var r;
-                    (n[t] = (null !== (r = n[t]) && void 0 !== r ? r : 0) - e), n[t] <= 0 && delete n[t];
+                    (n[t] = (null != (r = n[t]) ? r : 0) - e), n[t] <= 0 && delete n[t];
                 }),
                     i().isEmpty(n) && delete this._subscriptions[t],
                     this._onChange(t, this.get(t));

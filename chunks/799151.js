@@ -1,4 +1,4 @@
-n.d(t, { c: () => p });
+n.d(t, { c: () => _ });
 var r = n(200651),
     i = n(192379),
     o = n(642128),
@@ -8,8 +8,8 @@ var r = n(200651),
     c = n(607070),
     u = n(79320),
     d = n(388032),
-    f = n(281323);
-function p() {
+    f = n(74927);
+function _() {
     let e = [
             {
                 keybinds: ['Spacebar', 'Enter'],

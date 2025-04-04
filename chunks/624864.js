@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -79,18 +79,18 @@ function b(e) {
     let { setting: t, disabled: n } = e;
     return n ? m.notificationSettings.add(t) : m.notificationSettings.delete(t), (m.notificationSettings = new Set(m.notificationSettings)), !0;
 }
-class v extends (r = i.ZP.PersistedStore) {
+class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         let n = h();
-        (m = _(d({}, n, null != e ? e : {}), { notificationSettings: new Set(null !== (t = null == e ? void 0 : e.notificationSettings) && void 0 !== t ? t : n.notificationSettings) })), this.waitFor(a.default);
+        (m = _(d({}, n, null != e ? e : {}), { notificationSettings: new Set(null != (t = null == e ? void 0 : e.notificationSettings) ? t : n.notificationSettings) })), this.waitFor(a.default);
     }
     getState() {
         return m;
     }
     isLimitedInteractionOverrideEnabled(e) {
         var t, n;
-        return null != e && null !== (n = null === (t = m.gameSettings[e]) || void 0 === t ? void 0 : t.limitedInteractionOverride) && void 0 !== n && n;
+        return null != e && null != (n = null == (t = m.gameSettings[e]) ? void 0 : t.limitedInteractionOverride) && n;
     }
     isNotificationDisabled(e) {
         return m.notificationSettings.has(e);
@@ -99,19 +99,19 @@ class v extends (r = i.ZP.PersistedStore) {
         return m.notificationSettings;
     }
 }
-u(v, 'displayName', 'OverlaySettingsStore'),
-    u(v, 'persistKey', 'OverlaySettingsStore'),
-    u(v, 'migrations', [
+u(y, 'displayName', 'OverlaySettingsStore'),
+    u(y, 'persistKey', 'OverlaySettingsStore'),
+    u(y, 'migrations', [
         (e) => {
             var t;
             let n = a.default.getTextChatNotificationMode() === c.Ypu.DISABLED,
                 r = !1 === a.default.showInviteNotification;
             return _(d({}, e), {
-                notificationSettings: new Set([n ? l.OverlayNotificationDisabledSetting.TEXT_CHAT : void 0, r ? l.OverlayNotificationDisabledSetting.GAME_ACTIVITY : void 0, ...Array.from(null !== (t = e.notificationSettings) && void 0 !== t ? t : [])].filter(s.lm))
+                notificationSettings: new Set([n ? l.OverlayNotificationDisabledSetting.TEXT_CHAT : void 0, r ? l.OverlayNotificationDisabledSetting.GAME_ACTIVITY : void 0, ...Array.from(null != (t = e.notificationSettings) ? t : [])].filter(s.lm))
             });
         }
     ]);
-let y = new v(o.Z, {
+let v = new y(o.Z, {
     LOGOUT: p,
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: E,
     OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: b

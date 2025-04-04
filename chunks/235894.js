@@ -8,13 +8,13 @@ var r = n(358085),
 let o = (e) => {
         var t;
         if (!e.hasPotions()) return !1;
-        let n = null !== (t = e.potions) && void 0 !== t ? t : [],
+        let n = null != (t = e.potions) ? t : [],
             o = (0, r.isAndroid)();
         return n.some((e) => e.type === i.B.CONFETTI && (!o || null != e.emoji[0].id));
     },
     a = (e) => {
         var t;
-        if (e.hasPotions()) return (null !== (t = e.potions) && void 0 !== t ? t : []).find((e) => e.type === i.B.CONFETTI);
+        if (e.hasPotions()) return (null != (t = e.potions) ? t : []).find((e) => e.type === i.B.CONFETTI);
     },
     s = (e) =>
         null != e.id

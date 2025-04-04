@@ -1,9 +1,9 @@
 n.d(t, {
     Ao: () => g,
-    Jv: () => _,
+    Jv: () => p,
     M0: () => h,
     Qj: () => m,
-    VO: () => v,
+    VO: () => b,
     YO: () => E
 }),
     n(474991),
@@ -21,8 +21,8 @@ let l = Array.from(n(176505).Vg)
     u = new RegExp('^/channels/(\\d+|'.concat(s.ME, ')(?:/)(\\d+|').concat(l, ')(?:/)(\\d+)')),
     d = RegExp('^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)'),
     f = RegExp('^/guild-stages/(\\d+)(?:/)?(\\d+)?'),
-    p = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
-    _ = new RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|'.concat(s.ME, ')(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?')),
+    _ = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    p = new RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|'.concat(s.ME, ')(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?')),
     h = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)');
 function m(e) {
     if (null == e) return null;
@@ -46,7 +46,7 @@ function m(e) {
         var i;
         return {
             guildId: r[1],
-            channelId: null !== (i = r[2]) && void 0 !== i ? i : void 0
+            channelId: null != (i = r[2]) ? i : void 0
         };
     }
     let o = e.match(f);
@@ -54,7 +54,7 @@ function m(e) {
 }
 function g(e) {
     if (null == e) return null;
-    let t = e.match(p);
+    let t = e.match(_);
     return null != t && t.length > 1
         ? {
               guildId: t[1],
@@ -66,7 +66,7 @@ function g(e) {
 function E(e) {
     return !!e.isPrivate() || o.Z.can(s.Plq.VIEW_CHANNEL, e);
 }
-function v(e) {
+function b(e) {
     let { guildId: t, channelId: n } = e;
     if (null == i.Z.getGuild(t) && t !== s.ME) return !1;
     if (null == n) return !0;

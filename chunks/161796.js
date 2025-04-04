@@ -1,6 +1,6 @@
 function t(e) {
     var t;
-    return 'number' == typeof e ? (e >>> 0 === e && e >= 0 && e <= 4294967295 ? e : null) : (t = l.hex6.exec(e)) ? parseInt(t[1] + 'ff', 16) >>> 0 : p.hasOwnProperty(e) ? p[e] : (t = l.rgb.exec(e)) ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | 255) >>> 0 : (t = l.rgba.exec(e)) ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | d(t[4])) >>> 0 : (t = l.hex3.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0 : (t = l.hex8.exec(e)) ? parseInt(t[1], 16) >>> 0 : (t = l.hex4.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0 : (t = l.hsl.exec(e)) ? (255 | r(u(t[1]), f(t[2]), f(t[3]))) >>> 0 : (t = l.hsla.exec(e)) ? (r(u(t[1]), f(t[2]), f(t[3])) | d(t[4])) >>> 0 : null;
+    return 'number' == typeof e ? (e >>> 0 === e && e >= 0 && e <= 4294967295 ? e : null) : (t = l.hex6.exec(e)) ? parseInt(t[1] + 'ff', 16) >>> 0 : _.hasOwnProperty(e) ? _[e] : (t = l.rgb.exec(e)) ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | 255) >>> 0 : (t = l.rgba.exec(e)) ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | d(t[4])) >>> 0 : (t = l.hex3.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0 : (t = l.hex8.exec(e)) ? parseInt(t[1], 16) >>> 0 : (t = l.hex4.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0 : (t = l.hsl.exec(e)) ? (255 | r(u(t[1]), f(t[2]), f(t[3]))) >>> 0 : (t = l.hsla.exec(e)) ? (r(u(t[1]), f(t[2]), f(t[3])) | d(t[4])) >>> 0 : null;
 }
 function n(e, t, n) {
     return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
@@ -43,7 +43,7 @@ function f(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-var p = {
+var _ = {
     transparent: 0,
     aliceblue: 4042850303,
     antiquewhite: 4209760255,
@@ -195,12 +195,12 @@ var p = {
     yellow: 4294902015,
     yellowgreen: 2597139199
 };
-function _(e) {
+(t.rgba = function (e) {
     return {
         r: Math.round((4278190080 & e) >>> 24),
         g: Math.round((16711680 & e) >>> 16),
         b: Math.round((65280 & e) >>> 8),
         a: ((255 & e) >>> 0) / 255
     };
-}
-(t.rgba = _), (e.exports = t);
+}),
+    (e.exports = t);

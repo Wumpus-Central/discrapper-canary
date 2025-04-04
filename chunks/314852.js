@@ -122,7 +122,7 @@ function E(e) {
         n = _.get(t);
     null == n ? _.set(t, d(c({}, p), { isUpdating: !0 })) : _.set(t, d(c({}, n), { isUpdating: !0 }));
 }
-function v(e) {
+function b(e) {
     let { guildId: t, profile: n } = e,
         r = _.get(t);
     null == r
@@ -135,7 +135,7 @@ function v(e) {
               })
           );
 }
-function b(e) {
+function y(e) {
     let { guildId: t, error: n } = e,
         r = _.get(t);
     null == r
@@ -148,7 +148,7 @@ function b(e) {
               })
           );
 }
-function y(e) {
+function v(e) {
     let { guildId: t, visibility: n } = e,
         r = _.get(t),
         i = null == r ? void 0 : r.profile;
@@ -224,32 +224,32 @@ function N(e) {
     if (null == o || null == o.profile) return !1;
     let a = d(c({}, o.profile), {
         name: i.name,
-        icon: null !== (t = i.icon) && void 0 !== t ? t : null,
-        description: null !== (n = i.description) && void 0 !== n ? n : '',
-        customBanner: null !== (r = i.discovery_splash) && void 0 !== r ? r : null
+        icon: null != (t = i.icon) ? t : null,
+        description: null != (n = i.description) ? n : '',
+        customBanner: null != (r = i.discovery_splash) ? r : null
     });
     _.set(i.id, d(c({}, o), { profile: a }));
 }
 class A extends (r = i.ZP.Store) {
     getProfile(e) {
         var t, n;
-        return null == e ? null : null !== (n = null === (t = _.get(e)) || void 0 === t ? void 0 : t.profile) && void 0 !== n ? n : null;
+        return null == e ? null : null != (n = null == (t = _.get(e)) ? void 0 : t.profile) ? n : null;
     }
     getFetchStatus(e) {
         var t, n;
-        return null == e ? 'NOT_FETCHED' : null !== (n = null === (t = _.get(e)) || void 0 === t ? void 0 : t.fetchStatus) && void 0 !== n ? n : 'NOT_FETCHED';
+        return null == e ? 'NOT_FETCHED' : null != (n = null == (t = _.get(e)) ? void 0 : t.fetchStatus) ? n : 'NOT_FETCHED';
     }
     getLastSyncTimestamp(e) {
         var t, n;
-        return null == e ? null : null !== (n = null === (t = _.get(e)) || void 0 === t ? void 0 : t.lastSyncTimestamp) && void 0 !== n ? n : null;
+        return null == e ? null : null != (n = null == (t = _.get(e)) ? void 0 : t.lastSyncTimestamp) ? n : null;
     }
     getIsUpdating(e) {
         var t, n;
-        return null != e && null !== (n = null === (t = _.get(e)) || void 0 === t ? void 0 : t.isUpdating) && void 0 !== n && n;
+        return null != e && null != (n = null == (t = _.get(e)) ? void 0 : t.isUpdating) && n;
     }
     getErrorCode(e) {
         var t, n, r;
-        return null == e ? null : null !== (r = null === (n = _.get(e)) || void 0 === n ? void 0 : null === (t = n.error) || void 0 === t ? void 0 : t.code) && void 0 !== r ? r : null;
+        return null == e ? null : null != (r = null == (n = _.get(e)) || null == (t = n.error) ? void 0 : t.code) ? r : null;
     }
 }
 l(A, 'displayName', 'GuildProfileStore');
@@ -258,14 +258,14 @@ let C = new A(o.Z, {
     GUILD_PROFILE_FETCH_SUCCESS: m,
     GUILD_PROFILE_FETCH_FAILURE: g,
     GUILD_PROFILE_UPDATE: E,
-    GUILD_PROFILE_UPDATE_SUCCESS: v,
-    GUILD_PROFILE_UPDATE_FAILURE: b,
+    GUILD_PROFILE_UPDATE_SUCCESS: b,
+    GUILD_PROFILE_UPDATE_FAILURE: y,
     MEMBER_VERIFICATION_FORM_UPDATE: O,
     INVITE_RESOLVE_SUCCESS: I,
     CREATE_CHANNEL_MODAL_SUBMIT: S,
     GUILD_SETTINGS_SET_WIDGET: T,
     GUILD_UPDATE: N,
     GUILD_PROFILE_UPDATE_VISIBILITY: E,
-    GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: y,
-    GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: b
+    GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: v,
+    GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: y
 });

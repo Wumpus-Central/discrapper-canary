@@ -29,7 +29,7 @@ let l = !0,
     },
     d = (e) => {
         let { eventType: t, dismissibleContent: n } = e;
-        !l &&
+        l ||
             c.push({
                 eventType: t,
                 dismissibleContent: n
@@ -42,14 +42,14 @@ let l = !0,
             dismissibleContent: n
         });
     },
-    p = (e) => {
+    _ = (e) => {
         let { dismissibleContent: t } = e;
         d({
             eventType: 2,
             dismissibleContent: t
         });
     },
-    _ = (e) => {
+    p = (e) => {
         let { dismissibleContent: t } = e;
         d({
             eventType: 0,
@@ -65,6 +65,6 @@ a(h, 'displayName', 'DCFEventStore');
 let m = new h(o.Z, {
     LOGOUT: u,
     DCF_EVENT_LOGGED: f,
-    DCF_HANDLE_DC_DISMISSED: p,
-    DCF_HANDLE_DC_SHOWN: _
+    DCF_HANDLE_DC_DISMISSED: _,
+    DCF_HANDLE_DC_SHOWN: p
 });

@@ -30,7 +30,7 @@ function c(e) {
     var t;
     let { sync_id: n, metadata: r } = e;
     if (null == n) return;
-    let o = (0, a.c8)(null !== (t = null == r ? void 0 : r.type) && void 0 !== t ? t : a.Hw.TRACK);
+    let o = (0, a.c8)(null != (t = null == r ? void 0 : r.type) ? t : a.Hw.TRACK);
     if (null == o) return;
     let s = i.Z.isProtocolRegistered() ? a.C7.PLAYER_OPEN(o, n) : a.C7.WEB_OPEN(o, n);
     window.open(s);
@@ -40,7 +40,7 @@ function u(e, t) {
         var n;
         let { album_id: r } = t;
         return {
-            resourceType: (0, a.c8)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === a.Hw.EPISODE ? a.Hw.SHOW : a.Hw.ALBUM,
+            resourceType: (0, a.c8)(null == (n = e.metadata) ? void 0 : n.type) === a.Hw.EPISODE ? a.Hw.SHOW : a.Hw.ALBUM,
             resourceId: r
         };
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120), n(411104);
+n.d(t, { Z: () => v }), n(47120), n(411104);
 var r = n(200651),
     i = n(192379),
     o = n(734530),
@@ -9,22 +9,22 @@ var r = n(200651),
     u = n(609194),
     d = n(881052),
     f = n(128069),
-    p = n(563132),
-    _ = n(409813);
+    _ = n(563132),
+    p = n(409813);
 n(51499), n(614277);
 var h = n(122289),
     m = n(70956),
     g = n(981631),
     E = n(388032),
-    v = n(202941);
-let b = new Set([_.h8.SKU_SELECT, _.h8.AWAITING_AUTHENTICATION, _.h8.AWAITING_PURCHASE_TOKEN_AUTH, _.h8.CONFIRM]);
-function y(e) {
-    let { steps: t, currentStep: n, body: a, paymentError: y, header: O, footer: S, isGift: I = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: x = !1 } = e,
-        L = null;
-    null != y && null == (0, _.ly)(y) ? (L = y) : null != C ? (L = C) : null != P && (L = P);
-    let M = null != L ? L.message : '';
-    null != L && L instanceof d.HF && (L.code === f.SM.CARD_DECLINED && x && (M += ' '.concat(E.NW.string(E.t.iWvwQU))), L.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.NW.string(E.t.ypuSd3)), L.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.NW.string(E.t.mXMmWF)));
-    let { stripe: k } = (0, p.JL)();
+    b = n(106194);
+let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
+function v(e) {
+    let { steps: t, currentStep: n, body: a, paymentError: v, header: O, footer: I, isGift: S = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
+        x = null;
+    null != v && null == (0, p.ly)(v) ? (x = v) : null != C ? (x = C) : null != P && (x = P);
+    let M = null != x ? x.message : '';
+    null != x && x instanceof d.HF && (x.code === f.SM.CARD_DECLINED && L && (M += ' '.concat(E.NW.string(E.t.iWvwQU))), x.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.NW.string(E.t.ypuSd3)), x.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.NW.string(E.t.mXMmWF)));
+    let { stripe: k } = (0, _.JL)();
     A = A || null == k;
     let j = i.useRef(new l.V7());
     i.useEffect(() => {
@@ -41,18 +41,18 @@ function y(e) {
             }
         );
     }, [k]);
-    let U = t.includes(_.h8.PAYMENT_TYPE) ? _.h8.PAYMENT_TYPE : _.h8.ADD_PAYMENT_STEPS;
+    let U = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(o.Elements, {
         options: g.OBo,
         stripe: k,
         children: [
             O,
             (0, r.jsxs)('div', {
-                className: s()('paymentModalContent', v.content),
+                className: s()('paymentModalContent', b.content),
                 children: [
-                    I && n !== _.h8.CONFIRM
+                    S && n !== p.h8.CONFIRM
                         ? (0, r.jsx)(u.Z, {
-                              className: v.paymentNote,
+                              className: b.paymentNote,
                               iconSize: u.Z.Sizes.SMALL,
                               icon: c.OgN,
                               color: null == T ? u.Z.Colors.PRIMARY : u.Z.Colors.SECONDARY,
@@ -62,42 +62,42 @@ function y(e) {
                     N
                         ? null
                         : (0, r.jsx)('div', {
-                              className: v.breadcrumbsWrapper,
+                              className: b.breadcrumbsWrapper,
                               children: (0, r.jsx)(c.OoM, {
-                                  activeId: _.Ck.has(n) ? U : n,
+                                  activeId: p.Ck.has(n) ? U : n,
                                   breadcrumbs: t
-                                      .filter((e) => !_.Ck.has(e) && !b.has(e))
+                                      .filter((e) => !p.Ck.has(e) && !y.has(e))
                                       .map((e) => ({
                                           id: e,
-                                          label: (0, _.DJ)(e)
+                                          label: (0, p.DJ)(e)
                                       }))
                               })
                           }),
                     (0, r.jsxs)('div', {
-                        className: v.bodyWrapper,
+                        className: b.bodyWrapper,
                         children: [
-                            null == L
+                            null == x
                                 ? null
                                 : (0, r.jsx)('div', {
-                                      className: v.errorBlockWrapper,
+                                      className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
                                           ref: R,
                                           children: M
                                       })
                                   }),
                             A
-                                ? (0, r.jsx)(c.$jN, { className: v.loadingBlock })
+                                ? (0, r.jsx)(c.$jN, { className: b.loadingBlock })
                                 : (0, r.jsx)(c.qBt, {
-                                      className: v.sequencer,
-                                      staticClassName: v.sequencerStatic,
-                                      animatedNodeClassName: v.sequencerAnimatedNode,
+                                      className: b.sequencer,
+                                      staticClassName: b.sequencerStatic,
+                                      animatedNodeClassName: b.sequencerAnimatedNode,
                                       fillParent: !0,
                                       step: n,
                                       steps: t,
                                       sideMargin: 20,
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: w,
-                                          className: s()(v.scroller, D),
+                                          className: s()(b.scroller, D),
                                           children: a
                                       })
                                   })
@@ -105,7 +105,7 @@ function y(e) {
                     })
                 ]
             }),
-            S
+            I
         ]
     });
 }

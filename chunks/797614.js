@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120), n(653041);
+n.d(t, { Z: () => b }), n(47120), n(653041);
 var r = n(404097),
     i = n(544891),
     o = n(358085),
@@ -57,12 +57,12 @@ function f(e, t) {
         e
     );
 }
-let p = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
-function _() {
+let _ = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
+function p() {
     if ((0, o.isWeb)()) return 'web';
     {
         let e = (0, o.getPlatformName)();
-        return p.has(e) ? e : null;
+        return _.has(e) ? e : null;
     }
 }
 function h() {
@@ -83,7 +83,7 @@ class E {
             r.forEach((e) => {
                 i.tags.push(e);
             });
-        let o = _();
+        let o = p();
         null != o && i.tags.push('platform:'.concat(o));
         let a = h();
         return null != a && i.tags.push('release_channel:'.concat(a)), i;
@@ -107,8 +107,8 @@ class E {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1740074731431',
-                            build_number: '370217'
+                            built_at: '1743729512008',
+                            build_number: '386178'
                         }
                     },
                     retries: 1,
@@ -129,4 +129,4 @@ class E {
             }, m));
     }
 }
-let v = new E();
+let b = new E();

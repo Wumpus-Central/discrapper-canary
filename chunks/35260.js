@@ -5,7 +5,7 @@ var r = n(147913),
     a = n(981631);
 function s(e) {
     var t;
-    if ((null === (t = e.message_reference) || void 0 === t ? void 0 : t.type) !== a.Uvt.FORWARD) return;
+    if ((null == (t = e.message_reference) ? void 0 : t.type) !== a.Uvt.FORWARD) return;
     let n = e.message_reference.guild_id;
     null != n && (0, i.Q)(n);
 }

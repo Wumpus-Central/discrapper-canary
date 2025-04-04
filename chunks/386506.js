@@ -1,8 +1,8 @@
 let r;
 n.d(t, {
-    M3: () => _,
+    M3: () => p,
     aD: () => d,
-    bF: () => p,
+    bF: () => _,
     f0: () => f
 });
 var i = n(544891),
@@ -21,7 +21,7 @@ async function d(e) {
                 overrides: e,
                 version: s.Ji
             },
-            headers: { Authorization: null !== (t = o.default.getToken()) && void 0 !== t ? t : '' },
+            headers: { Authorization: null != (t = o.default.getToken()) ? t : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         });
@@ -47,7 +47,7 @@ async function f(e) {
         return e;
     }
 }
-async function p() {
+async function _() {
     let e = await i.tn.del({
         url: (0, s.pU)(l),
         oldFormErrors: !0,
@@ -55,13 +55,13 @@ async function p() {
     });
     return await r(e), e;
 }
-function _(e) {
+function p(e) {
     var t;
     return i.tn
         .post({
             url: (0, s.pU)(c),
             body: e,
-            headers: { Authorization: null !== (t = o.default.getToken()) && void 0 !== t ? t : '' },
+            headers: { Authorization: null != (t = o.default.getToken()) ? t : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         })

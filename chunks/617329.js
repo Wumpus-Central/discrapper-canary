@@ -52,7 +52,7 @@ var d = function () {
         (0, r.useEffect)(
             function () {
                 var e,
-                    t = null == a ? void 0 : null === (e = a.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
+                    t = null == a || null == (e = a.dragDropManager) ? void 0 : e.getBackend(),
                     r = {
                         backendChanged: function (e) {
                             n(e.previewEnabled());

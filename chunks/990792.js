@@ -1,8 +1,8 @@
 t.d(n, { Z: () => p }), t(47120);
 var l = t(200651),
     a = t(192379),
-    r = t(120356),
-    i = t.n(r),
+    i = t(120356),
+    r = t.n(i),
     s = t(392711),
     o = t(780384),
     u = t(481060),
@@ -13,7 +13,7 @@ var l = t(200651),
     h = t(231338),
     g = t(183519);
 let p = a.memo(function (e) {
-    let { file: n, audio: t, className: r, waveformSettings: p } = e,
+    let { file: n, audio: t, className: i, waveformSettings: p } = e,
         [b, y] = a.useState({
             width: 0,
             height: 0
@@ -91,15 +91,15 @@ let p = a.memo(function (e) {
                     a = -(e * (m.nl.waveformBarWidth - 1));
                 n.clearRect(0, 0, t, l), (n.fillStyle = C.hex);
                 for (let t = 0; t < N.length; t++) {
-                    let r = N[t] * l,
-                        i = t * e + a,
-                        s = l / 2 - r / 2;
-                    n.fillRect(i, s, e - a, r);
+                    let i = N[t] * l,
+                        r = t * e + a,
+                        s = l / 2 - i / 2;
+                    n.fillRect(r, s, e - a, i);
                 }
             }
         }, [C, b, w, N]),
         (0, l.jsxs)('div', {
-            className: i()(g.container, r),
+            className: r()(g.container, i),
             children: [
                 (0, l.jsx)('canvas', {
                     className: g.waveformCanvas,

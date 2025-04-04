@@ -1,39 +1,39 @@
 n.d(t, {
     YO: () => E,
     lG: () => g,
-    mq: () => v
+    mq: () => b
 }),
     n(47120);
 var r = n(192379),
     i = n(442837),
     o = n(570140),
     a = n(594174),
-    s = n(78839),
-    l = n(431),
-    c = n(74538),
-    u = n(775412),
+    s = n(431),
+    l = n(74538),
+    c = n(775412),
+    u = n(695349),
     d = n(163684),
     f = n(518638),
-    p = n(748770),
-    _ = n(1844),
+    _ = n(748770),
+    p = n(1844),
     h = n(474936);
 function m(e, t, n, o) {
-    let a = (0, i.Wu)([_.Z], () => _.Z.outboundPromotions),
-        s = (0, i.e7)([_.Z], () => _.Z.consumedInboundPromotionId);
+    let a = (0, i.Wu)([p.Z], () => p.Z.outboundPromotions),
+        s = (0, i.e7)([p.Z], () => p.Z.consumedInboundPromotionId);
     return r.useMemo(() => a.filter((r) => r.id !== s && !!(0, f.ZC)(r) && !n && ((!e && !t) || (0, f.Qf)(r, o))), [a, s, n, e, t, o]);
 }
 function g() {
-    let e = (0, i.e7)([_.Z], () => _.Z.lastFetchedActivePromotions),
+    let e = (0, i.e7)([p.Z], () => p.Z.lastFetchedActivePromotions),
         t = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        n = (0, u._O)(),
-        g = (0, i.e7)([l.Z], () => l.Z.hasAnyUnexpiredOffer()),
-        E = (0, i.e7)([s.ZP], () => s.ZP.inReverseTrial()),
-        [v, b] = r.useState(!1),
-        [y, O] = r.useState([]);
+        n = (0, c._O)(),
+        g = (0, i.e7)([s.Z], () => s.Z.hasAnyUnexpiredOffer()),
+        E = (0, u.W)(),
+        [b, y] = r.useState(!1),
+        [v, O] = r.useState([]);
     r.useEffect(() => {
-        null != e && o.Z.wait(() => p.ZP.markOutboundPromotionsSeen());
-    }, [e]);
-    let S = r.useCallback((e) => {
+        (null != e || E) && o.Z.wait(() => _.ZP.markOutboundPromotionsSeen());
+    }, [e, E]);
+    let I = r.useCallback((e) => {
             O((t) =>
                 t.some((t) => {
                     let { promotion: n } = t;
@@ -43,33 +43,33 @@ function g() {
                     : [...t, e]
             );
         }, []),
-        I = c.ZP.isPremiumExactly(t, h.p9.TIER_2),
+        S = l.ZP.isPremiumExactly(t, h.p9.TIER_2),
         T =
             d.g.useExperiment(
                 { location: 'useOutboundPromotions' },
                 {
                     autoTrackExposure: !1,
-                    disable: I
+                    disable: S
                 }
-            ).enabled || I;
+            ).enabled || S;
     r.useEffect(() => {
         o.Z.wait(() => {
-            T && null == e && p.ZP.fetchActiveOutboundPromotions();
+            T && (null == e || E) && _.ZP.fetchActiveOutboundPromotions();
         });
-    }, [e, T]),
+    }, [e, T, E]),
         r.useEffect(() => {
             o.Z.wait(() => {
                 (0, f.t8)()
                     .then((e) => {
-                        O(e), b(!0);
+                        O(e), y(!0);
                     })
                     .catch(() => {
-                        O([]), b(!0);
+                        O([]), y(!0);
                     });
             });
         }, []);
     let N = {};
-    for (let { code: e, promotion: t } of y) N[t.id] = e;
+    for (let { code: e, promotion: t } of v) N[t.id] = e;
     let A = m(n, g, E, N),
         C = new Set(
             A.map((e) => {
@@ -78,25 +78,25 @@ function g() {
             })
         );
     return {
-        promotionsLoaded: v && (!T || null != e),
+        promotionsLoaded: b && (!T || null != e || E),
         activeOutboundPromotions: A,
-        claimedEndedOutboundPromotions: y
+        claimedEndedOutboundPromotions: v
             .filter((e) => {
                 let { promotion: t } = e;
                 return !C.has(t.id);
             })
             .filter((e) => (0, f.ZC)(e.promotion)),
         claimedOutboundPromotionCodeMap: N,
-        addClaimedOutboundPromotionCode: S
+        addClaimedOutboundPromotionCode: I
     };
 }
 function E() {
-    let e = (0, i.e7)([_.Z], () => _.Z.lastSeenOutboundPromotionStartDate),
-        t = (0, u._O)(),
+    let e = (0, i.e7)([p.Z], () => p.Z.lastSeenOutboundPromotionStartDate),
+        t = (0, c._O)(),
         n = m(
             t,
-            (0, i.e7)([l.Z], () => l.Z.hasAnyUnexpiredOffer()),
-            (0, i.e7)([s.ZP], () => s.ZP.inReverseTrial()),
+            (0, i.e7)([s.Z], () => s.Z.hasAnyUnexpiredOffer()),
+            (0, u.W)(),
             {}
         );
     return r
@@ -112,6 +112,6 @@ function E() {
         )
         .filter((e) => (0, f.ZC)(e));
 }
-function v() {
-    return { promotion: (0, i.e7)([_.Z], () => _.Z.bogoPromotion) };
+function b() {
+    return { promotion: (0, i.e7)([p.Z], () => p.Z.bogoPromotion) };
 }

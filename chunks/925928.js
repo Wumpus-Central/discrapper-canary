@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => _,
+    ZP: () => p,
     Zk: () => f,
     d0: () => d
 });
@@ -25,15 +25,15 @@ let a = 60,
         months: o.t.SoON3d,
         years: o.t['12B3RU']
     });
-function p(e) {
+function _(e) {
     let { seconds: t, getFormatter: n } = e,
         r = n(),
         i = '';
     return t < a ? o.NW.formatToPlainString(r.minutes, { minutes: 1 }) : t < s ? o.NW.formatToPlainString(r.minutes, { minutes: Math.floor(t / a) }) : t < l ? o.NW.formatToPlainString(r.hours, { hours: Math.floor(t / s) }) : t < c ? o.NW.formatToPlainString(r.days, { days: Math.floor(t / l) }) : t < u ? o.NW.formatToPlainString(r.months, { months: Math.floor(t / c) }) : o.NW.formatToPlainString(r.years, { years: Math.floor(t / u) });
 }
-function _(e) {
+function p(e) {
     let { since: t, getFormatter: n } = e;
-    return p({
+    return _({
         seconds: i()().diff(i()(t), 's'),
         getFormatter: n
     });

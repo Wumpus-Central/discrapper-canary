@@ -14,7 +14,7 @@ function c(e) {
         gradient: i,
         disableAdaptiveTheme: c,
         children: u(
-            o()((0, s.Q)(null !== (t = null == i ? void 0 : i.theme) && void 0 !== t ? t : n), {
+            o()((0, s.Q)(null != (t = null == i ? void 0 : i.theme) ? t : n), {
                 [l.e3]: null != i,
                 'disable-adaptive-theme': c
             })

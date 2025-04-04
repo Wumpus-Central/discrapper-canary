@@ -6,8 +6,8 @@ let a = 5;
 function s(e) {
     return (t, n) => {
         var r, i, o, a;
-        let s = null !== (o = null === (r = e[t.id]) || void 0 === r ? void 0 : r.score) && void 0 !== o ? o : 0,
-            l = null !== (a = null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== a ? a : 0;
+        let s = null != (o = null == (r = e[t.id]) ? void 0 : r.score) ? o : 0,
+            l = null != (a = null == (i = e[n.id]) ? void 0 : i.score) ? a : 0;
         return s !== l ? l - s : 0;
     };
 }
@@ -27,7 +27,7 @@ function c(e) {
         gamesToDisplay: o,
         lastGameToDisplay: r.useMemo(() => {
             var e;
-            return null !== (e = i[a]) && void 0 !== e ? e : null;
+            return null != (e = i[a]) ? e : null;
         }, [i]),
         remainingGames: r.useMemo(() => i.slice(a), [i])
     };

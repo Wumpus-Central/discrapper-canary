@@ -8,9 +8,9 @@ var r = n(200651),
     c = n(520315),
     u = n(688465),
     d = n(388032),
-    f = n(582880),
-    p = n(368365),
-    _ = n(413097);
+    f = n(639746),
+    _ = n(73433),
+    p = n(413097);
 function h(e, t, n) {
     return (
         t in e
@@ -43,10 +43,10 @@ function m(e) {
 let g = 84;
 function E(e) {
     let { application: t, onSelect: n, onClose: c } = e,
-        { iconURL: p } = i.useMemo(
+        { iconURL: _ } = i.useMemo(
             () =>
                 (0, s.sl)(t, {
-                    fakeAppIconURL: _,
+                    fakeAppIconURL: p,
                     size: g
                 }),
             [t]
@@ -70,7 +70,7 @@ function E(e) {
                     }
                 ].filter((e) => {
                     var n, r;
-                    return (null === (r = t.integrationTypesConfig) || void 0 === r ? void 0 : null === (n = r[e.type]) || void 0 === n ? void 0 : n.oauth2InstallParams) != null;
+                    return (null == (r = t.integrationTypesConfig) || null == (n = r[e.type]) ? void 0 : n.oauth2InstallParams) != null;
                 }),
             [t.integrationTypesConfig]
         );
@@ -92,12 +92,12 @@ function E(e) {
                           })
                         : null,
                     (0, r.jsx)(l.Z, {
-                        src: p,
+                        src: _,
                         className: f.appIcon,
                         rendersPlaceholder: !0
                     }),
-                    (0, r.jsx)(b, { application: t }),
-                    (0, r.jsx)(v, { application: t })
+                    (0, r.jsx)(y, { application: t }),
+                    (0, r.jsx)(b, { application: t })
                 ]
             }),
             (0, r.jsx)('ul', {
@@ -150,7 +150,7 @@ function E(e) {
         ]
     });
 }
-function v(e) {
+function b(e) {
     let { application: t } = e,
         n = t.description;
     return null == n || 0 === n.length
@@ -163,7 +163,7 @@ function v(e) {
               })
           });
 }
-function b(e) {
+function y(e) {
     let { application: t } = e,
         n = t.name,
         i = (0, s.vJ)(t);
@@ -188,7 +188,7 @@ function b(e) {
         ]
     });
 }
-let y = 3;
+let v = 3;
 function O(e) {
     let { description: t } = e,
         [o, s] = i.useState(!0);
@@ -197,35 +197,35 @@ function O(e) {
             let { parseBioReact: e } = n(240991);
             return e(t);
         }, [t]),
-        { ref: u, lineHeight: _, lineCount: h } = S(),
+        { ref: u, lineHeight: p, lineCount: h } = I(),
         g = i.useMemo(() => {
-            if (null == _ || null == h) return { key: 0 };
-            let e = _ * h;
+            if (null == p || null == h) return { key: 0 };
+            let e = p * h;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, y * _),
+                minHeightOverride: Math.min(e, v * p),
                 maxHeightOverride: e
             };
-        }, [h, _]),
-        { ref: E, isTransitioning: v, onTransitionEnd: b } = (0, c.Z)(m({ isExpanded: o }, g)),
-        O = o || v;
+        }, [h, p]),
+        { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.Z)(m({ isExpanded: o }, g)),
+        O = o || b;
     return (0, r.jsxs)('div', {
         className: f.descriptionContainer,
         children: [
             (0, r.jsx)('div', {
                 ref: E,
                 className: f.overflowHidden,
-                onTransitionEnd: b,
+                onTransitionEnd: y,
                 children: (0, r.jsx)(a.Text, {
                     ref: u,
-                    className: p.markup,
+                    className: _.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: O ? void 0 : y,
+                    lineClamp: O ? void 0 : v,
                     style: { maxHeight: O ? void 0 : g.minHeightOverride },
                     children: l
                 })
             }),
-            null != h && h > y
+            null != h && h > v
                 ? (0, r.jsxs)(a.P3F, {
                       className: f.expandableDescriptionClickable,
                       onClick: () => s((e) => !e),
@@ -250,7 +250,7 @@ function O(e) {
         ]
     });
 }
-function S() {
+function I() {
     let e = i.useRef(null),
         [t, n] = i.useState(null),
         [r, o] = i.useState(null);
@@ -259,7 +259,7 @@ function S() {
             let t = e.current;
             if (null === t || 0 === t.clientHeight) return;
             let r = parseInt(getComputedStyle(t).lineHeight);
-            !isNaN(r) && (n(r), o(Math.floor(t.clientHeight / r)));
+            isNaN(r) || (n(r), o(Math.floor(t.clientHeight / r)));
         }, []),
         {
             ref: e,

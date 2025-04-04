@@ -3,7 +3,7 @@ n.d(t, {
     KC: () => m,
     QX: () => N,
     TD: () => T,
-    Xf: () => v,
+    Xf: () => y,
     Y4: () => b,
     _w: () => g,
     vc: () => E,
@@ -38,7 +38,7 @@ function g(e, t, n) {
     return Math.abs(e.valueOf() - t.valueOf()) < n;
 }
 function E(e, t) {
-    let n = y(e).locale(),
+    let n = v(e).locale(),
         r = l.hg.getSetting(),
         i = ''.concat(n, ':').concat(t, ':').concat(r),
         a = _[i];
@@ -56,23 +56,23 @@ function b(e) {
         if (n) return E(e, 'LT');
         t = 'sameDay';
     } else t = a < 2 ? 'nextDay' : 'sameElse';
-    return E(e, r.calendar(t, y(e), o));
+    return E(e, r.calendar(t, v(e), o));
 }
-function v(e) {
+function y(e) {
     let t = i().localeData(),
         n = i()(),
         r = h(O(e), n.toDate());
-    return 0 === r ? E(e, 'LT') : -1 === r ? E(e, t.calendar('lastDay', y(e), n)) : r > -7 ? E(e, 'dddd') : E(e, 'L');
+    return 0 === r ? E(e, 'LT') : -1 === r ? E(e, t.calendar('lastDay', v(e), n)) : r > -7 ? E(e, 'dddd') : E(e, 'L');
 }
-function y(e) {
+function v(e) {
     return i().isMoment(e) ? e : i()(e);
 }
 function O(e) {
     return i().isMoment(e) ? e.toDate() : e;
 }
 function I(e) {
-    let t;
-    let n = i().localeData(),
+    let t,
+        n = i().localeData(),
         r = new Date(),
         o = h(e, r);
     return 'sameElse' == (t = o < -1 ? 'sameElse' : o < 0 ? 'lastDay' : o < 1 ? 'sameDay' : o < 2 ? 'nextDay' : 'sameElse') ? E(e, 'LLL') : E(e, n.calendar(t, i()(e), i()(r)));

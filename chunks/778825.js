@@ -18,26 +18,26 @@ function E(e, t, n) {
     );
 }
 let b = g.QZA.CLOSED,
-    v = {};
-function y(e) {
-    (d = e.guild), (b = g.QZA.OPEN), (v = {}), (f = e.source), (_ = e.analyticsLocations);
+    y = {};
+function v(e) {
+    (d = e.guild), (b = g.QZA.OPEN), (y = {}), (f = e.source), (_ = e.analyticsLocations);
 }
 function O() {
-    (b = g.QZA.CLOSED), (v = {}), (f = void 0), (_ = []);
+    (b = g.QZA.CLOSED), (y = {}), (f = void 0), (_ = []);
 }
 function I() {
-    (b = g.QZA.SUBMITTING), (v = {});
+    (b = g.QZA.SUBMITTING), (y = {});
 }
 function S(e) {
-    (d = e.guild), (v = {});
+    (d = e.guild), (y = {});
 }
 function T(e) {
     var t;
     if (b !== g.QZA.SUBMITTING) return !1;
-    (b = g.QZA.OPEN), (v = null !== (t = e.errors) && void 0 !== t ? t : {});
+    (b = g.QZA.OPEN), (y = null != (t = e.errors) ? t : {});
 }
 function N(e) {
-    (b = g.QZA.OPEN), (v = e.errors);
+    (b = g.QZA.OPEN), (y = e.errors);
 }
 function A(e) {
     let { avatar: t } = e;
@@ -72,7 +72,7 @@ function x(e) {
     u = t;
 }
 function M() {
-    k(), j(), (v = {}), (b = g.QZA.OPEN);
+    k(), j(), (y = {}), (b = g.QZA.OPEN);
 }
 function k() {
     (r = void 0), (c = void 0), (i = void 0);
@@ -81,7 +81,7 @@ function j() {
     (a = void 0), (s = void 0), (l = void 0), (u = void 0), (o = void 0);
 }
 function U() {
-    v = {};
+    y = {};
 }
 function G() {
     M(), O();
@@ -91,7 +91,7 @@ class B extends (p = h.ZP.Store) {
         return b;
     }
     getErrors() {
-        return v;
+        return y;
     }
     showNotice() {
         return void 0 !== r || void 0 !== i || void 0 !== o || void 0 !== a || void 0 !== s || void 0 !== l || void 0 !== c || void 0 !== u;
@@ -150,7 +150,7 @@ class B extends (p = h.ZP.Store) {
 }
 E(B, 'displayName', 'GuildIdentitySettingsStore');
 let F = new B(m.Z, {
-    GUILD_IDENTITY_SETTINGS_INIT: y,
+    GUILD_IDENTITY_SETTINGS_INIT: v,
     GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: G,
     GUILD_IDENTITY_SETTINGS_SET_GUILD: S,
     GUILD_IDENTITY_SETTINGS_SUBMIT: I,

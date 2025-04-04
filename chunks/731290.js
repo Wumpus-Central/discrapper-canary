@@ -25,7 +25,7 @@ function u(e) {
 class d extends (r = i.ZP.Store) {
     initialize() {
         var e;
-        c = null !== (e = o.K.get(l)) && void 0 !== e ? e : c;
+        c = null != (e = o.K.get(l)) ? e : c;
     }
     didAgree(e) {
         return null != e && (c[e] || !1);

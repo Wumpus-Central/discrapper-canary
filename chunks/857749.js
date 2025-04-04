@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var r = n(200651),
     i = n(192379),
     o = n(642128),
@@ -75,7 +75,7 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     var { shouldAnimate: t = 'respect-motion-settings' } = e,
         n = d(e, ['shouldAnimate']);
     let s = i.useContext(a.Sfi).reducedMotion.enabled,

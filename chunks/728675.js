@@ -76,11 +76,11 @@ function s(e, t) {
         let { messages: n } = e;
         null == r || r(), n.forEach((e) => t(e));
     }
-    function p(e) {
+    function _(e) {
         let { messages: n } = e;
         null == r || r(), n.forEach((e) => t(e));
     }
-    function _(e) {
+    function p(e) {
         null == r || r(),
             e.messages.forEach((e) => {
                 e.forEach((e) => t(e));
@@ -96,9 +96,9 @@ function s(e, t) {
         LOAD_MESSAGES_SUCCESS: d,
         LOAD_MESSAGES_AROUND_SUCCESS: d,
         LOAD_RECENT_MENTIONS_SUCCESS: f,
-        LOAD_PINNED_MESSAGES_SUCCESS: p,
-        SEARCH_FINISH: _,
-        MOD_VIEW_SEARCH_FINISH: _,
+        LOAD_PINNED_MESSAGES_SUCCESS: _,
+        SEARCH_FINISH: p,
+        MOD_VIEW_SEARCH_FINISH: p,
         CHANNEL_SELECT: {
             callback: c,
             autoSubscribe: !1

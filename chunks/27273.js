@@ -41,8 +41,8 @@ function l(e, t, n) {
     return n && (r = e), /ttf|otf|eot|woff2?/i.test(r) && (r = r.replace(/.*\//, '')), t ? `[${t}]${r}` : r;
 }
 async function c(e, t, n) {
-    let i;
-    let c = l(e, t, n.includeQueryParams);
+    let i,
+        c = l(e, t, n.includeQueryParams);
     if (null != s[c]) return s[c];
     n.cacheBust && (e += (/\?/.test(e) ? '&' : '?') + new Date().getTime());
     try {

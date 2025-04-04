@@ -18,5 +18,5 @@ let o = (e) => e.split('_', 2).includes('a'),
     l = (e, t) => (null == e || null == t ? e === t : (0, r.isEqual)(a(e), a(t))),
     c = (e, t) => {
         var n;
-        return null != t && !s(null == e ? void 0 : e.avatarDecoration) && (null == e ? void 0 : null === (n = e.avatarDecoration) || void 0 === n ? void 0 : n.asset) != null;
+        return null != t && !s(null == e ? void 0 : e.avatarDecoration) && (null == e || null == (n = e.avatarDecoration) ? void 0 : n.asset) != null;
     };

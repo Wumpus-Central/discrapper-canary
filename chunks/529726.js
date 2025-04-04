@@ -21,8 +21,8 @@ function c(e, t, n) {
 let u = 60000,
     d = 1000,
     f = 10,
-    p = 2000,
-    _ = 500;
+    _ = 2000,
+    p = 500;
 class h extends o.Z {
     handleMessageBecameVisible(e) {
         let { messageId: t } = e;
@@ -59,7 +59,7 @@ class h extends o.Z {
         (this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
     }
     bufferViewTrack(e) {
-        this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), p));
+        this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), _));
     }
     constructor(...e) {
         super(...e),
@@ -69,7 +69,7 @@ class h extends o.Z {
                 this,
                 'recentViewTimes',
                 new (i())({
-                    max: _,
+                    max: p,
                     maxAge: u
                 })
             ),

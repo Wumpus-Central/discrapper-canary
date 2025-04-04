@@ -4,7 +4,7 @@ var r = n(147519),
     o = n.n(i),
     a = n(462176);
 r.Z.registerLanguage('ansi', a.Z);
-let s = /<[^>]*>[^>]*(html\\`)/g,
+let s = /(<script\/?\\?>)|(html\\?`)/g,
     l = new Set(['html', 'xml']),
     c = {
         highlight(e, t, n) {
@@ -31,7 +31,7 @@ function d(e, t) {
     if (l.has(t)) {
         var r;
         let t = e.replace(/\s*/g, '').match(s);
-        if ((null !== (r = null == t ? void 0 : t.length) && void 0 !== r ? r : 0) > 10) return !1;
+        if ((null != (r = null == t ? void 0 : t.length) ? r : 0) > 10) return !1;
     }
     return !0;
 }

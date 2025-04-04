@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    m: () => _
+    m: () => p
 }),
     n(47120);
 var r = n(200651),
@@ -10,17 +10,17 @@ var r = n(200651),
     s = n(481060),
     l = n(607070),
     c = n(745510),
-    u = n(386548);
+    u = n(185091);
 let d = 200,
     f = 20,
-    p = 200;
-function _(e) {
-    let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: f, tooltipProps: _ } = e,
+    _ = 200;
+function p(e) {
+    let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: f, tooltipProps: p } = e,
         [h, m] = i.useState(0),
         g = i.useRef(-1),
         E = i.useRef(!0),
-        v = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        { scaleFactor: b } = (0, s.q_F)({
+        b = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        { scaleFactor: y } = (0, s.q_F)({
             from: { scaleFactor: 1 },
             to: { scaleFactor: 1 === h ? 0.9 : 2 === h ? 1.2 : 1 },
             config: {
@@ -34,17 +34,17 @@ function _(e) {
         },
         []
     ),
-    v)
-        ? (0, r.jsx)(r.Fragment, { children: t })
+    b)
+        ? t
         : (0, r.jsx)(o.animated.div, {
               className: u.confettiTriggerWrapper,
-              style: { transform: b.to((e) => 'scale('.concat(e, ')')) },
+              style: { transform: y.to((e) => 'scale('.concat(e, ')')) },
               children: (0, r.jsx)(s.P3F, {
                   className: u.confettiTrigger,
                   onMouseDown: () => {
                       m(1),
                           f(!0),
-                          c((e) => Math.min(e + 2, p)),
+                          c((e) => Math.min(e + 2, _)),
                           window.clearTimeout(g.current),
                           (g.current = window.setTimeout(() => {
                               E.current && c(0);
@@ -55,11 +55,11 @@ function _(e) {
                   },
                   onMouseEnter: () => {
                       var e;
-                      m(2), null == _ || null === (e = _.onMouseEnter) || void 0 === e || e.call(_);
+                      m(2), null == p || null == (e = p.onMouseEnter) || e.call(p);
                   },
                   onMouseLeave: () => {
                       var e;
-                      m(0), null == _ || null === (e = _.onMouseLeave) || void 0 === e || e.call(_);
+                      m(0), null == p || null == (e = p.onMouseLeave) || e.call(p);
                   },
                   innerRef: n,
                   children: t

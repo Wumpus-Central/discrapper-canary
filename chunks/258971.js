@@ -70,7 +70,7 @@ function h() {
             path: [c.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { categoryId: f } = null !== (e = null == d ? void 0 : d.params) && void 0 !== e ? e : {};
+        { categoryId: f } = null != (e = null == d ? void 0 : d.params) ? e : {};
     if (null != d && null != f)
         return {
             type: 'category',
@@ -80,14 +80,14 @@ function h() {
             path: [c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
             exact: !0
         }),
-        { applicationId: p, section: h, skuId: g } = null !== (t = null == _ ? void 0 : _.params) && void 0 !== t ? t : {};
+        { applicationId: p, section: h, skuId: m } = null != (t = null == _ ? void 0 : _.params) ? t : {};
     if (null != _ && null != p) {
-        let e = null === (n = a.Z.getApplication(p)) || void 0 === n ? void 0 : n.name;
+        let e = null == (n = a.Z.getApplication(p)) ? void 0 : n.name;
         return {
             type: 'application',
             applicationId: p,
             applicationName: e,
-            section: null != h ? h : null != g ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT
+            section: null != h ? h : null != m ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT
         };
     }
 }

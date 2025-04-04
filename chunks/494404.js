@@ -23,8 +23,8 @@ var r = n(200651),
     b = n(703656),
     x = n(210887),
     y = n(592125),
-    E = n(375954),
-    v = n(496675),
+    v = n(375954),
+    E = n(496675),
     O = n(933429),
     N = n(451478),
     j = n(626135),
@@ -137,12 +137,12 @@ class k extends i.PureComponent {
             });
     }
 }
-let R = u.ZP.connectStores([v.Z], (e) => {
+let R = u.ZP.connectStores([E.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && v.Z.can(I.Plq.MANAGE_MESSAGES, t) };
+    return { canManageMessages: null != t && E.Z.can(I.Plq.MANAGE_MESSAGES, t) };
 })(k);
 function D(e) {
-    let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: E, className: v, listName: w } = e,
+    let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: v, className: E, listName: w } = e,
         Z = i.useRef(null),
         k = (0, f.Z)(w, Z),
         R = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
@@ -240,7 +240,7 @@ function D(e) {
     R && (H.maxHeight -= 40), L && (H.maxHeight -= 48);
     let V = null != p && a;
     return (0, r.jsx)('div', {
-        className: l()(v, T.messagesPopoutWrap),
+        className: l()(E, T.messagesPopoutWrap),
         style: H,
         onClick: A,
         onDoubleClick: A,
@@ -249,7 +249,7 @@ function D(e) {
             component: m(),
             children: [
                 (0, r.jsxs)(d.Den, {
-                    className: l()(T.messagesPopout, E),
+                    className: l()(T.messagesPopout, v),
                     onScroll: V ? M : void 0,
                     ref: Z,
                     children: [
@@ -324,9 +324,9 @@ function D(e) {
     });
 }
 function L(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: v, scrollerClassName: O, className: N, onCloseMessage: j, listName: C } = e,
-        P = (0, u.e7)([E.Z], () => {
-            let e = null != a ? E.Z.getMessages(a.id) : null;
+    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: O, className: N, onCloseMessage: j, listName: C } = e,
+        P = (0, u.e7)([v.Z], () => {
+            let e = null != a ? v.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function A(e, n) {
@@ -371,7 +371,7 @@ function L(e) {
         renderHeader: h,
         hasMore: o,
         loadMore: c,
-        getProTip: v,
+        getProTip: E,
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];

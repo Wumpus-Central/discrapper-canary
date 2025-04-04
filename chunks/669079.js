@@ -1,12 +1,12 @@
 n.d(t, {
     Bg: () => U,
     E5: () => ee,
-    Fp: () => Z,
+    Fp: () => F,
     JT: () => $,
     L2: () => z,
     MY: () => k,
-    Nz: () => V,
-    Q_: () => F,
+    Nz: () => Z,
+    Q_: () => V,
     TO: () => Y,
     Z0: () => G,
     bT: () => H,
@@ -35,8 +35,8 @@ var r = n(278074),
     u = n(626135),
     d = n(823379),
     f = n(74538),
-    p = n(226951),
-    _ = n(73346),
+    _ = n(226951),
+    p = n(73346),
     h = n(981631),
     m = n(474936),
     g = n(388032);
@@ -53,7 +53,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,12 +69,12 @@ function v(e) {
     }
     return e;
 }
-let b = ['discordapp.com/gifts', 'discord.com/gifts'],
-    y = 3,
-    O = [p.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...b.map((e) => p.Z.escape(e))].join('|'),
-    S = RegExp('(?: |^|https?://)(?:'.concat(O, ')/([a-z0-9-]+)'), 'gi'),
-    I = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => p.Z.escape(e))].join('|'),
-    T = RegExp('(?: |^|https?://)(?:'.concat(I, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
+let y = ['discordapp.com/gifts', 'discord.com/gifts'],
+    v = 3,
+    O = [_.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...y.map((e) => _.Z.escape(e))].join('|'),
+    I = RegExp('(?: |^|https?://)(?:'.concat(O, ')/([a-z0-9-]+)'), 'gi'),
+    S = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => _.Z.escape(e))].join('|'),
+    T = RegExp('(?: |^|https?://)(?:'.concat(S, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     N = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
     A = (e, t) =>
         Array(t)
@@ -86,8 +86,8 @@ let b = ['discordapp.com/gifts', 'discord.com/gifts'],
     P = A(5, 3),
     w = 'WUMP-?',
     D = [C, R, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
-    x = new RegExp('^('.concat(w, ')?(').concat(D, ')$')),
-    L = '-';
+    L = new RegExp('^('.concat(w, ')?(').concat(D, ')$')),
+    x = '-';
 var M = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e;
 })({});
@@ -112,16 +112,16 @@ function G(e) {
 function B(e) {
     return e.replace(/[^A-Za-z0-9]/g, '');
 }
-let Z = (e) => (null == e ? void 0 : e.type) === h.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.hBH.GIFT,
-    F = (e) => {
+let F = (e) => (null == e ? void 0 : e.type) === h.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.hBH.GIFT,
+    V = (e) => {
         let t;
         if (null == e) return [];
         let n = new Set();
-        for (; null != (t = S.exec(e)) && n.size < y; ) n.add(B(t[1]));
-        for (; null != (t = T.exec(e)) && n.size < y; ) n.add(B(t[t.length - 1]));
+        for (; null != (t = I.exec(e)) && n.size < v; ) n.add(B(t[1]));
+        for (; null != (t = T.exec(e)) && n.size < v; ) n.add(B(t[t.length - 1]));
         return Array.from(n);
     };
-function V() {
+function Z() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
         n = window.GLOBAL_ENV.GIFT_CODE_HOST;
@@ -132,7 +132,7 @@ async function H(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     try {
         let r = (
-            await (0, _.Kb)({
+            await (0, p.Kb)({
                 url: h.ANM.GIFT_CODE_RESOLVE(e),
                 query: {
                     with_application: t,
@@ -169,7 +169,7 @@ async function H(e) {
     }
 }
 function W(e, t) {
-    u.default.track(h.rMx.GIFT_CODE_COPIED, v({}, (0, s.Z)(t, !1, !1), e.analyticsData));
+    u.default.track(h.rMx.GIFT_CODE_COPIED, b({}, (0, s.Z)(t, !1, !1), e.analyticsData));
 }
 function Y(e, t, n, r, i, o, a) {
     return null == n && (r || i || null == e) ? (!a || o || r || i ? (r && (t.isSubscription || null != e) ? h.wZ8.SUCCESS : h.wZ8.CONFIRM) : h.wZ8.OPEN) : h.wZ8.ERROR;
@@ -266,10 +266,10 @@ function J(e, t, n) {
     return o.length === i.length ? o[0] : null;
 }
 function $(e) {
-    let t = e.trim().split('/').pop().match(x);
+    let t = e.trim().split('/').pop().match(L);
     if (null == t) return null;
     let [n, r, i] = t;
-    return null == i ? null : i.replace(RegExp(L, 'g'), '');
+    return null == i ? null : i.replace(RegExp(x, 'g'), '');
 }
 let ee = (e, t) =>
     (0, o.e7)([l.Z], () => {

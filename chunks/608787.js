@@ -2,7 +2,7 @@ n.d(t, {
     GI: () => m,
     Jt: () => f,
     Un: () => h,
-    wE: () => _
+    wE: () => p
 }),
     n(47120);
 var r = n(200651),
@@ -55,8 +55,8 @@ let s = function () {
 function f(e) {
     d = e;
 }
-let p = (e) => new Promise((t) => setTimeout(t, e));
-async function _(e) {
+let _ = (e) => new Promise((t) => setTimeout(t, e));
+async function p(e) {
     let { createPromise: t, webpackId: r } = e,
         i = c,
         o = 0;
@@ -66,13 +66,13 @@ async function _(e) {
         } catch (e) {
             if ((console.log(e), r in n.c)) throw (console.log('Module was found in webpack cache so it has loaded from the network and webpack will not retry'), e);
             if (o >= l) throw e;
-            await p(i), await d(), (i = Math.min(u, 2 * i)), o++;
+            await _(i), await d(), (i = Math.min(u, 2 * i)), o++;
         }
 }
 function h(e) {
     let { createPromise: t, webpackId: n, renderLoader: o, name: l, memo: c = !1 } = e,
         u = i.lazy(() =>
-            _({
+            p({
                 createPromise: t,
                 webpackId: n
             })
@@ -89,7 +89,7 @@ function m(e) {
         [s, l] = i.useState(null);
     return (
         i.useEffect(() => {
-            _({
+            p({
                 createPromise: t,
                 webpackId: n
             }).then((e) => {

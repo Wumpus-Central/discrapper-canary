@@ -35,11 +35,11 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { user: t, display: n, activity: c, entry: d, stream: f, voiceChannelId: p, analyticsLocations: _ } = e,
+    let { user: t, display: n, activity: c, entry: d, stream: f, voiceChannelId: _, analyticsLocations: p } = e,
         { context: h, trackUserProfileAction: m } = (0, s.KZ)(),
         { analyticsLocations: g } = (0, o.ZP)(),
-        E = null != _ ? _ : g,
-        v = (0, i.e7)([a.Z], () => a.Z.getUserOutbox(t.id));
+        E = null != p ? p : g,
+        b = (0, i.e7)([a.Z], () => a.Z.getUserOutbox(t.id));
     return (0, r.useCallback)(
         (e) => {
             let { action: t } = e;
@@ -55,14 +55,14 @@ function d(e) {
                             activity: c,
                             entry: d,
                             stream: f,
-                            outbox: v,
-                            voiceChannelId: p,
+                            outbox: b,
+                            voiceChannelId: _,
                             analyticsLocations: E
                         },
                         h
                     )
                 );
         },
-        [m, h, n, c, f, d, v, p, E]
+        [m, h, n, c, f, d, b, _, E]
     );
 }

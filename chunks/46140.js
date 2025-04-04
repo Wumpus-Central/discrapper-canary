@@ -13,7 +13,7 @@ n.d(t, {
     cd: () => f,
     dr: () => l,
     tD: () => _,
-    v6: () => v
+    v6: () => y
 }),
     n(47120);
 var r = n(758846),
@@ -49,4 +49,4 @@ var E = (function (e) {
     return (e.EXCLUDED_QUEST = 'excluded_quest'), (e.UNKNOWN_QUEST = 'unknown_quest'), e;
 })({});
 let b = '1333839522189938740',
-    v = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]);
+    y = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]);

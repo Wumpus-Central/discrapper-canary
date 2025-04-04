@@ -72,7 +72,7 @@ class b extends i.Z {
     }
     getAvatarURL(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.$k,
             i = null != e ? this.guildMemberAvatars[e] : void 0;
         return null != i && null != e
             ? s.ZP.getGuildMemberAvatarURLSimple({
@@ -194,7 +194,7 @@ class b extends i.Z {
     }
     get nameplate() {
         var e;
-        let t = null === (e = this.collectibles) || void 0 === e ? void 0 : e.nameplate;
+        let t = null == (e = this.collectibles) ? void 0 : e.nameplate;
         return null == t
             ? null
             : {
@@ -204,35 +204,35 @@ class b extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, c, u, _, p, m, g, E, b, v, y, O, I, S, T, A, N, C, R, P, w, D, L, x, M, k;
+        var t, n, i, o, a, s, l, c, u, _, p, m, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k;
         super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
-        let j = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
+        let j = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
-            (this.username = null !== (i = e.username) && void 0 !== i ? i : ''),
-            (this.discriminator = null !== (o = e.discriminator) && void 0 !== o ? o : d.fo$),
-            (this.avatar = null !== (a = e.avatar) && void 0 !== a ? a : null),
-            (this.avatarDecoration = null !== (s = e.avatar_decoration_data) && void 0 !== s ? s : e.avatarDecorationData),
-            (this.email = null !== (l = e.email) && void 0 !== l ? l : null),
-            (this.verified = null !== (c = e.verified) && void 0 !== c && c),
-            (this.bot = null !== (u = e.bot) && void 0 !== u && u),
-            (this.system = null !== (_ = e.system) && void 0 !== _ && _),
-            (this.mfaEnabled = null !== (m = null !== (p = e.mfa_enabled) && void 0 !== p ? p : e.mfaEnabled) && void 0 !== m && m),
-            (this.mobile = null !== (g = e.mobile) && void 0 !== g && g),
-            (this.desktop = null !== (E = e.desktop) && void 0 !== E && E),
+            (this.username = null != (i = e.username) ? i : ''),
+            (this.discriminator = null != (o = e.discriminator) ? o : d.fo$),
+            (this.avatar = null != (a = e.avatar) ? a : null),
+            (this.avatarDecoration = null != (s = e.avatar_decoration_data) ? s : e.avatarDecorationData),
+            (this.email = null != (l = e.email) ? l : null),
+            (this.verified = null != (c = e.verified) && c),
+            (this.bot = null != (u = e.bot) && u),
+            (this.system = null != (_ = e.system) && _),
+            (this.mfaEnabled = null != (m = null != (p = e.mfa_enabled) ? p : e.mfaEnabled) && m),
+            (this.mobile = null != (g = e.mobile) && g),
+            (this.desktop = null != (E = e.desktop) && E),
             (this.premiumType = j === d.WND ? null : j),
-            (this.flags = null !== (b = e.flags) && void 0 !== b ? b : 0),
-            (this.publicFlags = null !== (y = null !== (v = e.public_flags) && void 0 !== v ? v : e.publicFlags) && void 0 !== y ? y : 0),
-            (this.purchasedFlags = null !== (I = null !== (O = e.purchased_flags) && void 0 !== O ? O : e.purchasedFlags) && void 0 !== I ? I : 0),
-            (this.premiumUsageFlags = null !== (T = null !== (S = e.premium_usage_flags) && void 0 !== S ? S : e.premiumUsageFlags) && void 0 !== T ? T : 0),
-            (this.phone = null !== (A = e.phone) && void 0 !== A ? A : null),
-            (this.nsfwAllowed = null !== (N = e.nsfw_allowed) && void 0 !== N ? N : e.nsfwAllowed),
-            (this.ageVerificationStatus = null !== (C = e.age_verification_status) && void 0 !== C ? C : e.ageVerificationStatus),
-            (this.guildMemberAvatars = null !== (R = e.guildMemberAvatars) && void 0 !== R ? R : {}),
-            (this.hasBouncedEmail = null !== (w = null !== (P = e.has_bounced_email) && void 0 !== P ? P : e.hasBouncedEmail) && void 0 !== w && w),
-            (this.personalConnectionId = null !== (L = null !== (D = e.personal_connection_id) && void 0 !== D ? D : e.personalConnectionId) && void 0 !== L ? L : null),
-            (this.globalName = null !== (x = e.global_name) && void 0 !== x ? x : e.globalName),
+            (this.flags = null != (b = e.flags) ? b : 0),
+            (this.publicFlags = null != (v = null != (y = e.public_flags) ? y : e.publicFlags) ? v : 0),
+            (this.purchasedFlags = null != (I = null != (O = e.purchased_flags) ? O : e.purchasedFlags) ? I : 0),
+            (this.premiumUsageFlags = null != (T = null != (S = e.premium_usage_flags) ? S : e.premiumUsageFlags) ? T : 0),
+            (this.phone = null != (N = e.phone) ? N : null),
+            (this.nsfwAllowed = null != (A = e.nsfw_allowed) ? A : e.nsfwAllowed),
+            (this.ageVerificationStatus = null != (C = e.age_verification_status) ? C : e.ageVerificationStatus),
+            (this.guildMemberAvatars = null != (R = e.guildMemberAvatars) ? R : {}),
+            (this.hasBouncedEmail = null != (w = null != (P = e.has_bounced_email) ? P : e.hasBouncedEmail) && w),
+            (this.personalConnectionId = null != (L = null != (D = e.personal_connection_id) ? D : e.personalConnectionId) ? L : null),
+            (this.globalName = null != (x = e.global_name) ? x : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, f.lt)(null !== (k = null !== (M = e.primary_guild) && void 0 !== M ? M : e.primaryGuild) && void 0 !== k ? k : null)),
+            (this.primaryGuild = (0, f.lt)(null != (k = null != (M = e.primary_guild) ? M : e.primaryGuild) ? k : null)),
             (this.collectibles = e.collectibles),
             Object.defineProperties(this, {
                 hasFlag: {
@@ -262,7 +262,7 @@ class b extends i.Z {
                     value: () => this.hasFlag(d.xW$.STAFF) || this.hasFlag(d.xW$.COLLABORATOR) || this.hasFlag(d.xW$.RESTRICTED_COLLABORATOR)
                 }
             }),
-            (null === (t = this.globalName) || void 0 === t ? void 0 : t.length) === 0 && (this.globalName = null);
+            (null == (t = this.globalName) ? void 0 : t.length) === 0 && (this.globalName = null);
     }
 }
 new b({ id: '0' });

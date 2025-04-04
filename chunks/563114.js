@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120), n(757143), n(301563);
+n.d(t, { Z: () => p }), n(47120), n(757143), n(301563);
 var r = n(336317),
     i = n(768581),
     o = n(302221),
@@ -22,8 +22,8 @@ function d(e) {
     return t;
 }
 async function f(e) {
-    let t;
-    let { id: n, name: r } = e;
+    let t,
+        { id: n, name: r } = e;
     t =
         null != n
             ? i.ZP.getEmojiURL({
@@ -40,13 +40,13 @@ async function f(e) {
               return (0, o.vq)(t, n, r);
           });
 }
-function p(e) {
+function _(e) {
     let { channelId: t, messageId: n, emoji: r } = e;
 }
-let _ = {
+let p = {
     getURL: s.Z.makeMemoizer(c),
     filterUnsupportedEmojis: u,
     applyPlatformToThemedEmojiColorPalette: d,
     getEmojiColors: f,
-    triggerFullscreenAnimation: p
+    triggerFullscreenAnimation: _
 };

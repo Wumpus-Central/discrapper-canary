@@ -81,10 +81,10 @@ function g(e, t) {
     return i;
 }
 function E(e) {
-    var { guildId: t, channelId: n, messageId: f, name: p } = e,
-        g = m(e, ['guildId', 'channelId', 'messageId', 'name']);
-    let E = (0, c.h)(),
-        { unavailable: b, guild: v } = (0, o.cj)(
+    var { guildId: t, channelId: n, messageId: f, name: p, position: g = 'right' } = e,
+        E = m(e, ['guildId', 'channelId', 'messageId', 'name', 'position']);
+    let b = (0, c.h)(),
+        { unavailable: y, guild: v } = (0, o.cj)(
             [l.Z],
             () => ({
                 guild: l.Z.getGuild(t),
@@ -92,14 +92,14 @@ function E(e) {
             }),
             [t]
         ),
-        y = null != v,
-        O = i.useCallback(async () => {
-            if (!E)
+        O = null != v,
+        I = i.useCallback(async () => {
+            if (!b)
                 try {
-                    y || (await (0, s.P)(t));
+                    O || (await (0, s.P)(t));
                 } catch (e) {}
-        }, [E, y, t]);
-    return b
+        }, [b, O, t]);
+    return y
         ? (0, r.jsx)(
               a.yRy,
               h(
@@ -108,7 +108,7 @@ function E(e) {
                           position: 'right',
                           renderPopout: (e) => (0, r.jsx)(u.SK, {})
                       },
-                      g
+                      E
                   ),
                   { clickTrap: !0 }
               )
@@ -117,11 +117,11 @@ function E(e) {
               a.yRy,
               _(
                   {
-                      position: 'right',
-                      preload: O,
+                      position: g,
+                      preload: I,
                       clickTrap: !0,
                       renderPopout: (e) =>
-                          E
+                          b
                               ? (0, r.jsx)(
                                     d.Z,
                                     h(_({}, e), {
@@ -140,7 +140,7 @@ function E(e) {
                                       })
                                   )
                   },
-                  g
+                  E
               )
           );
 }

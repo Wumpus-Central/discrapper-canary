@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(518738),
     x = n(592125),
     j = n(271383),
-    N = n(430824),
-    O = n(246946),
+    O = n(430824),
+    N = n(246946),
     v = n(594174),
     y = n(51144),
     _ = n(981631),
@@ -177,7 +177,7 @@ function w(e) {
 function T(e) {
     var t;
     let { guild: l, id: a, isLocked: s, lockTooltipText: m } = e,
-        b = (0, d.e7)([N.Z], () => N.Z.getRole(l.id, a)),
+        b = (0, d.e7)([O.Z], () => O.Z.getRole(l.id, a)),
         g = (0, h.p9)({
             guildId: l.id,
             roleId: a,
@@ -237,7 +237,7 @@ function Z(e) {
             },
             [t.id, n]
         ),
-        c = (0, d.e7)([O.Z], () => O.Z.hidePersonalInformation);
+        c = (0, d.e7)([N.Z], () => N.Z.hidePersonalInformation);
     return null == a
         ? null
         : (0, r.jsxs)('div', {

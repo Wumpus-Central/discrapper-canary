@@ -9,11 +9,11 @@ var r = n(200651),
     u = n(998698),
     d = n(703558),
     f = n(117530),
-    p = n(91313),
-    _ = n(436660),
+    _ = n(91313),
+    p = n(436660),
     h = n(887490),
     m = n(388032),
-    g = n(742493);
+    g = n(112360);
 function E(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,12 +55,12 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -75,17 +75,17 @@ function O(e, t, n) {
                 c = 0;
             if (null != s && s.id === a.command.id) {
                 var d;
-                let t = p.cu(e);
-                for (let e of null !== (d = s.options) && void 0 !== d ? d : []) t.includes(e.name) ? c++ : l++;
+                let t = _.cu(e);
+                for (let e of null != (d = s.options) ? d : []) t.includes(e.name) ? c++ : l++;
             }
             let f = {};
             if (l > 0) {
                 let e;
                 (e = c > 0 ? m.NW.formatToPlainString(m.t.BP8N0N, { count: l }) : m.NW.formatToPlainString(m.t.lziVCw, { count: l })), (f['data-trailing-placeholder'] = e);
             }
-            return (0, r.jsx)('div', y(v({ className: g.applicationCommand }, i, f), { children: o }));
+            return (0, r.jsx)('div', v(b({ className: g.applicationCommand }, i, f), { children: o }));
         case 'applicationCommandOption':
-            return (0, r.jsx)(S, {
+            return (0, r.jsx)(I, {
                 attributes: i,
                 channelId: n,
                 element: a,
@@ -95,19 +95,19 @@ function O(e, t, n) {
             return null;
     }
 }
-let S = (e) => {
+let I = (e) => {
     let t,
-        { channelId: n, element: o, attributes: p, children: E } = e,
-        b = (0, s.vt)(),
+        { channelId: n, element: o, attributes: _, children: E } = e,
+        y = (0, s.vt)(),
         O = (0, s.UE)(),
-        S = (0, s._7)(),
-        { optionType: I, errored: T } = (0, l.cj)(
+        I = (0, s._7)(),
+        { optionType: S, errored: T } = (0, l.cj)(
             [u.Z],
             () => {
                 var e, t, r;
                 return {
-                    optionType: null === (e = u.Z.getOption(n, o.optionName)) || void 0 === e ? void 0 : e.type,
-                    errored: (null === (r = u.Z.getOptionState(n, o.optionName)) || void 0 === r ? void 0 : null === (t = r.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
+                    optionType: null == (e = u.Z.getOption(n, o.optionName)) ? void 0 : e.type,
+                    errored: (null == (r = u.Z.getOptionState(n, o.optionName)) || null == (t = r.lastValidationResult) ? void 0 : t.success) !== !0
                 };
             },
             [n, o.optionName]
@@ -116,15 +116,15 @@ let S = (e) => {
         A = o.children[o.children.length - 1],
         C = null != A && h.LC.isText(A) && A.text.endsWith('\n'),
         R = a()(g.inlineElement, g.optionPill, {
-            [g.selectedPill]: O && b,
-            [g.erroredPill]: (!O || !b) && T
+            [g.selectedPill]: O && y,
+            [g.erroredPill]: (!O || !y) && T
         }),
         P = i.useCallback(() => {
-            h.bN.isVoid(S, o) || _.Q.selectCommandOption(S, o.optionName, !0);
-        }, [S, o]);
+            h.bN.isVoid(I, o) || p.Q.selectCommandOption(I, o.optionName, !0);
+        }, [I, o]);
     return (
         (t =
-            I === c.jw.ATTACHMENT
+            S === c.jw.ATTACHMENT
                 ? (null == N ? void 0 : N.filename) != null
                     ? (0, r.jsxs)('span', {
                           className: a()(g.optionPillValue, g.attachmentFilename),
@@ -150,7 +150,7 @@ let S = (e) => {
                   })),
         (0, r.jsxs)(
             'span',
-            y(v({}, p), {
+            v(b({}, _), {
                 className: R,
                 children: [
                     (0, r.jsxs)('span', {

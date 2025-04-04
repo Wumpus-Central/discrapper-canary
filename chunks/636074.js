@@ -14,23 +14,23 @@ function u(e) {
         u = e.strategy,
         d = void 0 === u ? 'absolute' : u,
         f = e.modifiers,
-        p = void 0 === f ? c : f,
-        _ = e.referenceElement,
+        _ = void 0 === f ? c : f,
+        p = e.referenceElement,
         h = e.onFirstUpdate,
         m = e.innerRef,
         g = e.children,
         E = r.useContext(i.C8),
-        v = r.useState(null),
-        b = v[0],
-        y = v[1],
+        b = r.useState(null),
+        y = b[0],
+        v = b[1],
         O = r.useState(null),
-        S = O[0],
-        I = O[1];
+        I = O[0],
+        S = O[1];
     r.useEffect(
         function () {
-            (0, o.k$)(m, b);
+            (0, o.k$)(m, y);
         },
-        [m, b]
+        [m, y]
     );
     var T = r.useMemo(
             function () {
@@ -38,18 +38,18 @@ function u(e) {
                     placement: n,
                     strategy: d,
                     onFirstUpdate: h,
-                    modifiers: [].concat(p, [
+                    modifiers: [].concat(_, [
                         {
                             name: 'arrow',
-                            enabled: null != S,
-                            options: { element: S }
+                            enabled: null != I,
+                            options: { element: I }
                         }
                     ])
                 };
             },
-            [n, d, h, p, S]
+            [n, d, h, _, I]
         ),
-        N = (0, a.D)(_ || E, b, T),
+        N = (0, a.D)(p || E, y, T),
         A = N.state,
         C = N.styles,
         R = N.forceUpdate,
@@ -57,20 +57,20 @@ function u(e) {
         w = r.useMemo(
             function () {
                 return {
-                    ref: y,
+                    ref: v,
                     style: C.popper,
                     placement: A ? A.placement : n,
                     hasPopperEscaped: A && A.modifiersData.hide ? A.modifiersData.hide.hasPopperEscaped : null,
                     isReferenceHidden: A && A.modifiersData.hide ? A.modifiersData.hide.isReferenceHidden : null,
                     arrowProps: {
                         style: C.arrow,
-                        ref: I
+                        ref: S
                     },
                     forceUpdate: R || s,
                     update: P || l
                 };
             },
-            [y, I, n, A, C, P, R]
+            [v, S, n, A, C, P, R]
         );
     return (0, o.$p)(g)(w);
 }

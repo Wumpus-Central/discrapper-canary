@@ -26,20 +26,20 @@ function a(e, t, n, a, s, l) {
                 return !!c[t] || ((c[t] = !0), u.call(this, e));
             }));
     for (var f = 0; f < a.length; f++) {
-        var p = new r.M(a[f], l).rezonedDate();
-        if (!e.accept(new Date(p.getTime()))) break;
+        var _ = new r.M(a[f], l).rezonedDate();
+        if (!e.accept(new Date(_.getTime()))) break;
     }
     t.forEach(function (t) {
         (0, i.h)(e, t.options);
     });
-    var _ = e._result;
-    switch (((0, o.DY)(_), e.method)) {
+    var p = e._result;
+    switch (((0, o.DY)(p), e.method)) {
         case 'all':
         case 'between':
-            return _;
+            return p;
         case 'before':
-            return (_.length && _[_.length - 1]) || null;
+            return (p.length && p[p.length - 1]) || null;
         default:
-            return (_.length && _[0]) || null;
+            return (p.length && p[0]) || null;
     }
 }

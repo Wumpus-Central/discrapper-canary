@@ -23,7 +23,7 @@ function c(e) {
             (c
                 ? t.sort((e, t) => {
                       var r, i, o, a;
-                      return (null !== (o = null === (r = n.get(t)) || void 0 === r ? void 0 : r.vcProbability) && void 0 !== o ? o : 0) - (null !== (a = null === (i = n.get(e)) || void 0 === i ? void 0 : i.vcProbability) && void 0 !== a ? a : 0);
+                      return (null != (o = null == (r = n.get(t)) ? void 0 : r.vcProbability) ? o : 0) - (null != (a = null == (i = n.get(e)) ? void 0 : i.vcProbability) ? a : 0);
                   })
                 : t
             )

@@ -1,4 +1,4 @@
-n.d(t, { u: () => _ });
+n.d(t, { u: () => p });
 var r = n(192379),
     i = n(493773),
     o = n(367907),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,10 +37,10 @@ function p(e) {
     }
     return e;
 }
-let _ = (e) => {
-    let { emojiId: t, currentGuildId: n, popoutData: f, nonce: _, demoMode: h } = e,
+let p = (e) => {
+    let { emojiId: t, currentGuildId: n, popoutData: f, nonce: p, demoMode: h } = e,
         { current: m } = r.useRef(
-            p(
+            _(
                 {
                     guild_id: n,
                     emoji_id: t
@@ -55,10 +55,10 @@ let _ = (e) => {
                 h ||
                     l.default.track(
                         d.rMx.OPEN_POPOUT,
-                        p(
+                        _(
                             {
-                                type: null !== (e = null == f ? void 0 : f.analyticsType) && void 0 !== e ? e : 'Standard Emoji Popout',
-                                nonce: _
+                                type: null != (e = null == f ? void 0 : f.analyticsType) ? e : 'Standard Emoji Popout',
+                                nonce: p
                             },
                             m
                         )

@@ -40,14 +40,14 @@ function g(e) {
             }
             return e;
         }, [t, i, g]),
-        N = (e) => {
+        O = (e) => {
             var t;
             return e.managed && (null == (t = e.tags) ? void 0 : t.bot_id) != null;
         },
-        O = r.useMemo(() => {
+        N = r.useMemo(() => {
             let r = [];
             for (let i of x) {
-                if (N(i)) continue;
+                if (O(i)) continue;
                 let l = !o.e$(i.permissions, b.Plq.ADMINISTRATOR) && d.Z.isRoleHigher(t, n, i),
                     a = {
                         id: i.id,
@@ -62,12 +62,12 @@ function g(e) {
         _ = r.useMemo(() => {
             var t;
             let n = (t = v).startsWith('@') ? t.substr(1) : t,
-                r = v.startsWith('@') ? O.filter((t) => t.id === e) : O;
+                r = v.startsWith('@') ? N.filter((t) => t.id === e) : N;
             return {
                 members: (0, m.B)(j, f, n),
                 roles: (0, m.B)(r, h, n)
             };
-        }, [e, j, v, O]);
+        }, [e, j, v, N]);
     return {
         query: v,
         results: _,

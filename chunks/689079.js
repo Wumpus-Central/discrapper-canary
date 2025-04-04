@@ -1,14 +1,14 @@
 n.d(t, {
     Fu: () => h,
     Lu: () => a,
-    Vd: () => p,
+    Vd: () => _,
     WO: () => o,
     _n: () => f,
     ak: () => s,
     al: () => m,
     bi: () => l,
     hz: () => u,
-    lr: () => _,
+    lr: () => p,
     oQ: () => d,
     tn: () => c
 });
@@ -35,8 +35,8 @@ let c = 10,
     u = 5,
     d = '\0',
     f = 100,
-    p = 3,
-    _ = 10,
+    _ = 3,
+    p = 10,
     h = 500;
 function m(e) {
     if (null != e.choices) return i.NW.string(i.t.xi5aam);

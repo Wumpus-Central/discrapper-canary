@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(539907),
     l = n(743236),
     c = n(21340),
-    u = n(253068);
+    u = n(906944);
 function d(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,29 +80,29 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    let { subMenuClassName: t, parentItem: n, isFocused: o, menuSubmenuProps: d, renderSubmenu: p } = e,
+    let { subMenuClassName: t, parentItem: n, isFocused: o, menuSubmenuProps: d, renderSubmenu: _ } = e,
         { focusIndex: m, isUsingKeyboardNavigation: g } = d,
         E = h(d, ['focusIndex', 'isUsingKeyboardNavigation']),
-        v = i.useRef(null),
         b = i.useRef(null),
         y = i.useRef(null),
-        [O, S] = i.useState(!1);
+        v = i.useRef(null),
+        [O, I] = i.useState(!1);
     return (
         i.useLayoutEffect(() => {
-            S(!0);
+            I(!0);
         }, []),
         i.useLayoutEffect(() => {
             var e;
-            o && ((0, l.F)(v), null === (e = y.current) || void 0 === e || e.focus());
+            o && ((0, l.F)(b), null == (e = v.current) || e.focus());
         }, [o]),
         (0, r.jsxs)('div', {
-            ref: v,
+            ref: b,
             children: [
-                (0, r.jsx)('div', { ref: b }),
+                (0, r.jsx)('div', { ref: y }),
                 n,
                 o && O
                     ? (0, r.jsx)(s.j, {
-                          targetRef: b,
+                          targetRef: y,
                           autoInvert: !0,
                           nudgeAlignIntoViewport: !0,
                           fixed: !0,
@@ -114,11 +114,11 @@ function g(e) {
                                   className: u.submenuPaddingContainer,
                                   children: (0, r.jsx)(
                                       'div',
-                                      _(f({ className: a()(u.submenu, t) }, E), {
-                                          ref: y,
+                                      p(f({ className: a()(u.submenu, t) }, E), {
+                                          ref: v,
                                           children: (0, r.jsx)(c.zJ, {
                                               className: u.scroller,
-                                              children: p()
+                                              children: _()
                                           })
                                       })
                                   )

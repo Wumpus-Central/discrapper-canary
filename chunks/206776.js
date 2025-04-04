@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d =
-        null !== (r = window.requestIdleCallback) && void 0 !== r
+        null != (r = window.requestIdleCallback)
             ? r
             : (e) => {
                   let t = Date.now();
@@ -34,11 +34,11 @@ let d =
                       });
                   }, 1);
               },
-    f = null !== (i = window.cancelIdleCallback) && void 0 !== i ? i : clearTimeout;
-function p(e) {
+    f = null != (i = window.cancelIdleCallback) ? i : clearTimeout;
+function _(e) {
     return null == e ? new c.Lj(c.HO, !0) : new c.Lj(e.timeRemaining(), e.didTimeout);
 }
-class _ extends s.W {
+class p extends s.W {
     _queueIdleCallback() {
         if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
         this.telemetry.time(l.JV.TIME_TO_FIRE_IDLE_CALLBACK),
@@ -49,12 +49,12 @@ class _ extends s.W {
                         this.telemetry.track(l.ug.FIRED_DUE_TO_MAX_TIMEOUT), this.telemetry.clearTime(l.JV.TIME_TO_FIRE_IDLE_CALLBACK), this._processWorkCallback();
                         return;
                     }
-                    if ((this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK), (null !== (t = null == e ? void 0 : e.timeRemaining()) && void 0 !== t ? t : c.HO) < c.HO))
+                    if ((this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK), (null != (t = null == e ? void 0 : e.timeRemaining()) ? t : c.HO) < c.HO))
                         this.telemetry.time(l.JV.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._scheduleRequestIdleCallback(
                                 (e) => {
                                     this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                                    let t = p(e),
+                                    let t = _(e),
                                         n = null == t ? void 0 : t.timeRemaining();
                                     null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
                                 },
@@ -62,7 +62,7 @@ class _ extends s.W {
                             );
                     else {
                         this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                        let t = p(e),
+                        let t = _(e),
                             n = null == t ? void 0 : t.timeRemaining();
                         null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
                     }
@@ -95,5 +95,5 @@ class _ extends s.W {
     }
 }
 function h() {
-    return new _();
+    return new p();
 }

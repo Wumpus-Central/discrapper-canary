@@ -6,7 +6,7 @@ var r,
     s = n.n(a),
     l = n(481060),
     c = n(388032),
-    u = n(476515);
+    u = n(449101);
 function d(e, t, n) {
     return (
         t in e
@@ -36,25 +36,25 @@ function f(e) {
     }
     return e;
 }
-let p = 100,
-    _ = 'search';
+let _ = 100,
+    p = 'search';
 class h extends (r = o.Component) {
     render() {
-        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: o, className: a, onChange: d, onFocus: f, onBlur: h, onKeyPress: m, autoComplete: g, forwardedRef: E, closeIconClassName: v, searchIconClassName: b, cta: y } = this.props,
+        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: o, className: a, onChange: d, onFocus: f, onBlur: h, onKeyPress: m, autoComplete: g, forwardedRef: E, closeIconClassName: b, searchIconClassName: y, cta: v } = this.props,
             O = null != r && r.length > 0,
-            S = null != E ? E : this._textInputRef;
+            I = null != E ? E : this._textInputRef;
         return (0, i.jsx)(l.tEY, {
-            focusTarget: S,
+            focusTarget: I,
             ringTarget: this._containerRef,
             children: (0, i.jsxs)('div', {
                 className: s()(u.searchBox, a),
                 ref: this._containerRef,
                 children: [
                     (0, i.jsx)(l.oil, {
-                        inputRef: S,
+                        inputRef: I,
                         focusProps: { enabled: !1 },
-                        name: _,
-                        maxLength: p,
+                        name: p,
+                        maxLength: _,
                         className: u.searchBoxInputWrapper,
                         inputClassName: s()(u.searchBoxInput, o),
                         onChange: d,
@@ -67,12 +67,12 @@ class h extends (r = o.Component) {
                         'aria-label': t,
                         autoComplete: g ? 'on' : 'off'
                     }),
-                    null != y
+                    null != v
                         ? (0, i.jsx)(l.Text, {
                               color: 'text-muted',
                               variant: 'text-xs/normal',
                               className: u.cta,
-                              children: y
+                              children: v
                           })
                         : null,
                     O
@@ -83,13 +83,13 @@ class h extends (r = o.Component) {
                               children: (0, i.jsx)(l.k$p, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: s()(u.clearIcon, v)
+                                  className: s()(u.clearIcon, b)
                               })
                           })
                         : (0, i.jsx)(l._Ve, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s()(u.searchIcon, b),
+                              className: s()(u.searchIcon, y),
                               'aria-label': c.NW.string(c.t['5h0QOD'])
                           })
                 ]

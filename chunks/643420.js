@@ -1,7 +1,7 @@
-n.d(t, { k: () => b }), n(47120);
+n.d(t, { k: () => y }), n(47120);
 var r = n(200651),
     i = n(192379),
-    o = n(119617),
+    o = n(48026),
     a = n(40851),
     s = n(745510),
     l = n(661637),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -113,27 +113,27 @@ let h = 1000 / 60,
         }
     },
     E = ['#FFFFFF'],
-    v = [n(123353), ...(0, l.Z)(['snowflake'])];
-function b(e) {
+    b = [n(123353), ...(0, l.Z)(['snowflake'])];
+function y(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
         d = (0, a.bp)(),
-        [p, b] = i.useState(null),
-        { confettiCanvas: y } = i.useContext(s.h),
-        O = (0, o.uR)(y, p),
-        S = i.useMemo(
+        [_, y] = i.useState(null),
+        { confettiCanvas: v } = i.useContext(s.h),
+        O = (0, o.uR)(v, _),
+        I = i.useMemo(
             () => ({
                 triggerAnimation: () => l(!0),
                 untriggerAnimation: () => l(!1)
             }),
             []
         ),
-        I = i.useCallback(() => {
-            let e = null == y ? void 0 : y.getCanvas();
+        S = i.useCallback(() => {
+            let e = null == v ? void 0 : v.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
             O.createConfetti(
-                _(f({}, g), {
+                p(f({}, g), {
                     position: {
                         type: 'static-random',
                         minValue: {
@@ -147,21 +147,21 @@ function b(e) {
                     }
                 })
             );
-        }, [O, y]);
+        }, [O, v]);
     return (i.useEffect(() => {
-        let e = n ? setInterval(I, h) : null;
+        let e = n ? setInterval(S, h) : null;
         return () => clearInterval(e);
-    }, [n, I]),
+    }, [n, S]),
     d === u.IlC.OVERLAY)
-        ? (0, r.jsx)(r.Fragment, { children: t })
+        ? t
         : (0, r.jsxs)(c.Rm.Provider, {
-              value: S,
+              value: I,
               children: [
                   t,
                   (0, r.jsx)(o.Ji, {
-                      ref: b,
+                      ref: y,
                       colors: E,
-                      sprites: v,
+                      sprites: b,
                       spriteWidth: m,
                       spriteHeight: m
                   })

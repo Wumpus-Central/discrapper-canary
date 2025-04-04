@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -10,11 +10,11 @@ var i = n(442837),
     u = n(616030),
     d = n(474936),
     f = n(388032),
-    p = n(619730);
-function _(e) {
-    let { currentStep: t, className: n, purchaseState: _, premiumType: h, useWinterTheme: m = !1, onClose: g, hideCloseButton: E, showTrialBadge: v, showDiscountBadge: b, isGift: y, giftRecipient: O } = e,
-        S = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        I = m ? d.nL.WINTER : d.nL.DEFAULT,
+    _ = n(451316);
+function p(e) {
+    let { currentStep: t, className: n, purchaseState: p, premiumType: h, useWinterTheme: m = !1, onClose: g, hideCloseButton: E, showTrialBadge: b, showDiscountBadge: y, isGift: v, giftRecipient: O } = e,
+        I = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        S = m ? d.nL.WINTER : d.nL.DEFAULT,
         T = () => {
             switch (t) {
                 case s.h8.PLAN_SELECT:
@@ -27,9 +27,9 @@ function _(e) {
                     return f.NW.string(f.t['7YWj6+']);
             }
         };
-    return y && (0, l.pO)(O) && t !== s.h8.CONFIRM
+    return v && (0, l.pO)(O) && t !== s.h8.CONFIRM
         ? (0, r.jsxs)(o.xBx, {
-              className: p.modalHeaderCustomGift,
+              className: _.modalHeaderCustomGift,
               separator: !1,
               children: [
                   (0, r.jsx)(o.X6q, {
@@ -38,8 +38,8 @@ function _(e) {
                   }),
                   (0, r.jsx)(o.olH, {
                       onClick: g,
-                      className: p.closeButton,
-                      innerClassName: p.closeButtonInner
+                      className: _.closeButton,
+                      innerClassName: _.closeButtonInner
                   })
               ]
           })
@@ -53,31 +53,31 @@ function _(e) {
                   renderAnimation: () =>
                       h === d.p9.TIER_0
                           ? (0, r.jsx)(u.zC, {
-                                className: p.headerAnimation,
+                                className: _.headerAnimation,
                                 currentStep: t,
-                                purchaseState: _,
-                                pause: S
+                                purchaseState: p,
+                                pause: I
                             })
                           : h === d.p9.TIER_1
                             ? (0, r.jsx)(u.tK, {
-                                  className: p.headerAnimation,
+                                  className: _.headerAnimation,
                                   currentStep: t,
-                                  purchaseState: _,
-                                  pause: S
+                                  purchaseState: p,
+                                  pause: I
                               })
                             : (0, r.jsx)(u.Bk, {
-                                  className: p.headerAnimation,
+                                  className: _.headerAnimation,
                                   currentStep: t,
-                                  purchaseState: _,
-                                  pause: S
+                                  purchaseState: p,
+                                  pause: I
                               }),
                   plan: null,
                   isGift: !1,
-                  className: p.header,
+                  className: _.header,
                   onClose: g,
-                  headerTheme: I,
-                  showTrialBadge: v,
-                  showDiscountBadge: b
+                  headerTheme: S,
+                  showTrialBadge: b,
+                  showDiscountBadge: y
               })
           });
 }

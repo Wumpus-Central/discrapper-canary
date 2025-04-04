@@ -1,13 +1,13 @@
 n.d(t, {
     Ng: () => O,
     OC: () => A,
-    dg: () => S,
+    dg: () => I,
     dp: () => E,
-    f3: () => b,
+    f3: () => y,
     iL: () => C,
-    nA: () => I,
-    qF: () => m,
-    uV: () => y,
+    nA: () => S,
+    qF: () => g,
+    uV: () => v,
     vY: () => N
 }),
     n(301563),
@@ -26,14 +26,14 @@ var r = n(200651),
     _ = n(474936),
     p = n(388032);
 let h = 524288000,
-    g = 524288000;
-function m(e, t) {
+    m = 524288000;
+function g(e, t) {
     return e instanceof File ? e : E(e.data.buffer, e.filename, null != t ? t : 'text/plain');
 }
 function E(e, t, n) {
     return new File([e], t, { type: n });
 }
-let v = [
+let b = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -91,27 +91,27 @@ let v = [
         klass: 'audio'
     }
 ];
-function b(e) {
-    return y(e.name, e.type);
+function y(e) {
+    return v(e.name, e.type);
 }
-function y(e, t) {
+function v(e, t) {
     var n;
-    e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-    let r = s().find(v, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
+    e = null != (n = null == e ? void 0 : e.toLowerCase()) ? n : '';
+    let r = s().find(b, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != r ? r.klass : 'unknown';
 }
 function O(e) {
     return o().filesize(e);
 }
-function S(e) {
+function I(e) {
     let t = c.default.getCurrentUser(),
         n = d.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
     let r = l.Z.getGuild(e);
     return Math.max(null != r ? _.HO[r.premiumTier].limits.fileSize : f.mBz, n);
 }
-function I(e, t) {
-    let n = S(t);
+function S(e, t) {
+    let n = I(t);
     return Array.from(e).some((e) => e.size > n);
 }
 function T(e) {
@@ -124,11 +124,11 @@ function N(e) {
 }
 function A() {
     let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? g : h;
+    return null != e && e.isStaff() ? m : h;
 }
 function C(e) {
     let { guildId: t, onClick: n } = e,
-        i = (0, u.BU)(S(t) / 1024, { useKibibytes: !0 }),
+        i = (0, u.BU)(I(t) / 1024, { useKibibytes: !0 }),
         o = (0, u.BU)(_.Uq / 1024, { useKibibytes: !0 }),
         a = p.NW.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
         s = p.NW.formatToPlainString(p.t.htbuIS, { premiumMaxSize: o }),

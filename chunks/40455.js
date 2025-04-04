@@ -9,8 +9,8 @@ var r = n(592125),
     u = n(814074),
     d = n(582142),
     f = n(989263),
-    p = n(872261);
-function _(e, t, n) {
+    _ = n(872261);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,60 +27,60 @@ let h = 750,
     m = 15,
     g = 500,
     E = 25,
-    v = 25,
-    b = 1,
-    y = null,
+    b = 25,
+    y = 1,
+    v = null,
     O = new l.b(h, g),
-    S = new c.S(m),
-    I = !1;
+    I = new c.S(m),
+    S = !1;
 class T extends a.Z {
     initialize() {
         this.waitFor(r.Z), this.waitFor(o.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([o.Z], N);
     }
     loadCache() {
         let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
-        null != e && ((I = !0), T.mergeSnapshot(e));
+        null != e && ((S = !0), T.mergeSnapshot(e));
     }
     canEvictOrphans() {
-        return I;
+        return S;
     }
     saveLimit(e) {
         let t = r.Z.getBasicChannel(e);
-        return null != t && (0, d.p)(t) ? E : null != t && O.has(e) ? v : b;
+        return null != t && (0, d.p)(t) ? E : null != t && O.has(e) ? b : y;
     }
     getSaveableChannels() {
         let e = r.Z.getChannelIds(null).map((e) => ({
             guildId: null,
             channelId: e
         }));
-        return s.Z.isLowDisk ? (null != y ? [...e, y] : e) : [...e, ...O.values()];
+        return s.Z.isLowDisk ? (null != v ? [...e, v] : e) : [...e, ...O.values()];
     }
     takeSnapshot() {
         return {
             version: T.LATEST_SNAPSHOT_VERSION,
             data: {
                 channels: [...O.allValues()].filter((e) => !e.fallback),
-                penalized: [...S.keys()],
-                lastChannel: y
+                penalized: [...I.keys()],
+                lastChannel: v
             }
         };
     }
     static mergeSnapshot(e) {
         let t = O,
-            n = S;
-        for (let n of ((O = new l.b(O.primaryCapacity, O.extendedCapacity)), (S = new c.S(S.capacity)), (y = null != y ? y : e.lastChannel), [e.channels, t.values()])) for (let e of n) e.fallback || O.put(e.channelId, e);
-        for (let t of [e.penalized, n.keys()]) for (let e of t) S.put(e, null);
+            n = I;
+        for (let n of ((O = new l.b(O.primaryCapacity, O.extendedCapacity)), (I = new c.S(I.capacity)), (v = null != v ? v : e.lastChannel), [e.channels, t.values()])) for (let e of n) e.fallback || O.put(e.channelId, e);
+        for (let t of [e.penalized, n.keys()]) for (let e of t) I.put(e, null);
     }
     static recordChannel(e) {
         let t = r.Z.getBasicChannel(e);
         if (null != t && (0, f.v)(t)) {
             var n;
             let r = {
-                guildId: null !== (n = t.guild_id) && void 0 !== n ? n : null,
+                guildId: null != (n = t.guild_id) ? n : null,
                 channelId: e,
                 channelType: t.type
             };
-            (y = r), O.put(e, r), (0, u.Hr)(t) && null != S.put(e, null) && O.delete(e);
+            (v = r), O.put(e, r), (0, u.Hr)(t) && null != I.put(e, null) && O.delete(e);
         }
     }
     static deleteChannel(e) {
@@ -108,8 +108,8 @@ class T extends a.Z {
             CHANNEL_DELETE: P,
             CHANNEL_UPDATES: R,
             CONNECTION_OPEN_SUPPLEMENTAL: A,
-            GUILD_DELETE: x,
-            LOGIN_SUCCESS: L,
+            GUILD_DELETE: L,
+            LOGIN_SUCCESS: x,
             THREAD_DELETE: D,
             THREAD_UPDATE: w
         });
@@ -120,7 +120,7 @@ function N() {
     null != e && T.recordChannel(e);
 }
 function A() {
-    T.dropUnreachableChannels(), T.replaceLru((0, p.J)(O, h + g));
+    T.dropUnreachableChannels(), T.replaceLru((0, _.J)(O, h + g));
 }
 function C(e) {
     let t = e.id,
@@ -140,14 +140,14 @@ function w(e) {
 function D(e) {
     T.deleteChannel(e.channel.id);
 }
-function x(e) {
+function L(e) {
     return !e.guild.unavailable && (T.deleteGuild(e.guild.id), !0);
 }
-function L(e) {
-    O.clear(), S.clear(), (I = !1);
+function x(e) {
+    O.clear(), I.clear(), (S = !1);
 }
 function M(e) {
-    I = !0;
+    S = !0;
 }
-_(T, 'displayName', 'SaveableChannelsStore'), _(T, 'LATEST_SNAPSHOT_VERSION', 1);
+p(T, 'displayName', 'SaveableChannelsStore'), p(T, 'LATEST_SNAPSHOT_VERSION', 1);
 let k = new T();

@@ -48,14 +48,14 @@ function h(e) {
     var t;
     let { achievementId: n, unlocked: u, size: h = o.EFr.SIZE_40 } = e,
         m = (0, l.ZP)(),
-        b = (0, c.oX)(n);
-    if (null == b) return null;
-    let g = (0, o.UCu)(h),
-        { name: E, rarity: C } = b,
+        g = (0, c.oX)(n);
+    if (null == g) return null;
+    let b = (0, o.UCu)(h),
+        { name: E, rarity: C } = g,
         { color: O } = (0, c.F7)(C),
         y = (0, i.wj)(m) ? _ : f,
-        v = (g.size - g.offset - 2 * g.stroke) * 0.8,
-        N = g.size - g.stroke,
+        v = (b.size - b.offset - 2 * b.stroke) * 0.8,
+        N = b.size - b.stroke,
         S = {
             width: 0.4 * v,
             height: 0.4 * v
@@ -63,8 +63,8 @@ function h(e) {
         x = {
             width: S.width + 1,
             height: S.height + 1,
-            right: g.stroke + 1,
-            bottom: g.stroke + 1,
+            right: b.stroke + 1,
+            bottom: b.stroke + 1,
             padding: 0
         };
     return (0, r.jsxs)('div', {
@@ -72,7 +72,7 @@ function h(e) {
         style: {
             width: N,
             height: N,
-            padding: g.stroke
+            padding: b.stroke
         },
         'aria-label': ''.concat(null != (t = E()) ? t : ''),
         children: [

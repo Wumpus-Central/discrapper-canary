@@ -8,7 +8,7 @@ var r = n(200651);
 n(192379);
 var i = n(120356),
     o = n.n(i),
-    a = n(115911),
+    a = n(252258),
     s = n(442837),
     l = n(481060),
     c = n(846027),
@@ -21,9 +21,9 @@ var i = n(120356),
     m = n(788983),
     g = n(189771),
     E = n(560688),
-    v = n(618158),
-    b = n(922745),
-    y = n(871499),
+    b = n(618158),
+    y = n(922745),
+    v = n(871499),
     O = n(402113),
     I = n(800965),
     S = n(157813),
@@ -35,11 +35,11 @@ var i = n(120356),
     P = n(981631),
     w = n(231338),
     D = n(388032),
-    L = n(49039),
-    x = n(54329);
+    L = n(816083),
+    x = n(992955);
 function M(e) {
     let { onClick: t, isExpanded: n } = e;
-    return (0, r.jsx)(y.Z, {
+    return (0, r.jsx)(v.Z, {
         iconClassName: o()(L.arrowIcon, { [L.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: l.CJ0,
@@ -48,13 +48,13 @@ function M(e) {
 }
 function k(e) {
     var t, n;
-    let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: y, onMouseLeave: S, onJumpToChannel: C, idle: D, selectedParticipant: M, embeddedActivity: k } = e,
+    let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: v, onMouseLeave: S, onJumpToChannel: C, idle: D, selectedParticipant: M, embeddedActivity: k } = e,
         j = (0, u.bp)() === P.IlC.POPOUT,
         U = (0, s.e7)([N.Z], () => N.Z.isVideoEnabled()),
         G = (0, s.e7)([N.Z], () => Object.values(N.Z.getVideoDevices())[0]),
-        B = !1 === (null === (t = null == G ? void 0 : G.disabled) || void 0 === t || t),
-        V = (0, f.Z)([o])[0],
-        F = (0, g.Z)(i),
+        B = !1 === (null == (t = null == G ? void 0 : G.disabled) || t),
+        F = (0, f.Z)([o])[0],
+        V = (0, g.Z)(i),
         { parentAnalyticsLocation: Z } = (0, d.ZP)(),
         H = (e) => {
             (0, p.v)(Z, p.d.CAMERA, e), c.Z.setVideoEnabled(e);
@@ -67,17 +67,17 @@ function k(e) {
         };
     return (0, r.jsxs)('div', {
         className: x.videoControls,
-        onMouseMove: y,
+        onMouseMove: v,
         onMouseDown: l,
         onMouseLeave: S,
         children: [
             (0, r.jsx)('div', {
                 className: x.topControls,
-                children: (0, r.jsx)(b.r, {
+                children: (0, r.jsx)(y.r, {
                     idle: D,
-                    title: null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : i.name,
+                    title: null != (n = null == F ? void 0 : F.name) ? n : i.name,
                     onJumpToChannel: C,
-                    preventIdleComponent: v.Z
+                    preventIdleComponent: b.Z
                 })
             }),
             (0, r.jsxs)('div', {
@@ -93,11 +93,11 @@ function k(e) {
                                 className: L.leftPipIcon,
                                 enabled: U,
                                 cameraUnavailable: !B,
-                                hasPermission: F,
+                                hasPermission: V,
                                 onChange: H,
                                 onCameraUnavailable: W
                             }),
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(b.Z, {
                                 children: (0, r.jsx)(_.Z, {
                                     channelId: i.id,
                                     guildId: i.getGuildId(),
@@ -115,7 +115,7 @@ function k(e) {
                         basis: '50%',
                         align: h.Z.Align.CENTER,
                         children: [
-                            j || (0, A.R)({ isContextless: k.location.kind === a.X.CONTEXTLESS })
+                            j || (0, A.R)({ isContextless: k.location.kind === a.E.CONTEXTLESS })
                                 ? null
                                 : (0, r.jsx)(I.Z, {
                                       className: L.rightPipIcon,
@@ -148,11 +148,11 @@ function j(e) {
         children: [
             (0, r.jsx)('div', {
                 className: x.topControls,
-                children: (0, r.jsx)(b.r, {
+                children: (0, r.jsx)(y.r, {
                     idle: d,
-                    title: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.name,
+                    title: null != (t = null == h ? void 0 : h.name) ? t : n.name,
                     onJumpToChannel: u,
-                    preventIdleComponent: v.Z
+                    preventIdleComponent: b.Z
                 })
             }),
             (0, r.jsxs)('div', {
@@ -207,11 +207,11 @@ function G(e) {
                 s &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(b.r, {
+                            (0, r.jsx)(y.r, {
                                 idle: !s,
-                                title: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : u.name,
+                                title: null != (t = null == g ? void 0 : g.name) ? t : u.name,
                                 onJumpToChannel: d,
-                                preventIdleComponent: v.Z
+                                preventIdleComponent: b.Z
                             }),
                             (0, r.jsxs)('div', {
                                 className: L.pipHeaderButtonsRight,

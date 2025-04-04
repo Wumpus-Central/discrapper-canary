@@ -11,23 +11,23 @@ t.d(n, {
     t(47120);
 var l = t(192379),
     a = t(772848),
-    r = t(304809),
-    i = t(586826),
+    i = t(304809),
+    r = t(586826),
     s = t(943351);
 let o = new Worker(new URL('/assets/' + t.u('14315'), t.b)),
-    u = (0, r.N)();
+    u = (0, i.N)();
 async function c(e) {
     let n = await e.arrayBuffer();
     return (await u.decodeAudioData(n)).getChannelData(0);
 }
 function d(e) {
     let [n, t] = l.useState(null),
-        [a, r] = l.useState(null);
+        [a, i] = l.useState(null);
     return (
         l.useEffect(() => {
             if (null == e) return;
             let n = (0, s.hp)(e);
-            n !== a && (r(n), t(null), c(e).then(t));
+            n !== a && (i(n), t(null), c(e).then(t));
         }, [a, e]),
         n
     );
@@ -58,27 +58,27 @@ let f = (function (e) {
     return e;
 })({}, s.nl);
 function m(e, n, t) {
-    let [r, u] = l.useState(null),
+    let [i, u] = l.useState(null),
         [c, d] = l.useState(null),
         [m, h] = l.useState(1),
-        { setMaxVolume: g } = (0, i.p)(),
+        { setMaxVolume: g } = (0, r.p)(),
         p = l.useCallback(
             (e, n) => {
                 var l;
                 d(null),
                     ((l = n.offsetWidth),
                     new Promise((n) => {
-                        let r = (0, a.Z)(),
-                            i = (e) => {
+                        let i = (0, a.Z)(),
+                            r = (e) => {
                                 let {
                                     data: { waveform: t, id: l, normalizedVolumeMultipler: a }
                                 } = e;
-                                r === l && (n(t), h(a)), null == o || o.removeEventListener('message', i);
+                                i === l && (n(t), h(a)), null == o || o.removeEventListener('message', r);
                             };
-                        null == o || o.addEventListener('message', i),
+                        null == o || o.addEventListener('message', r),
                             null == o ||
                                 o.postMessage({
-                                    id: r,
+                                    id: i,
                                     options: t,
                                     config: f,
                                     width: l,
@@ -92,8 +92,8 @@ function m(e, n, t) {
         l.useEffect(() => {
             if (null == e || null == n) return;
             let l = (0, s.V3)(e, t);
-            r !== l && (u(l), p(e, n));
-        }, [e, p, n, t, r]),
+            i !== l && (u(l), p(e, n));
+        }, [e, p, n, t, i]),
         l.useEffect(() => {
             g(m);
         }, [m, g]),

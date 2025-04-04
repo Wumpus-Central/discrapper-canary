@@ -30,13 +30,13 @@ function f(e) {
             return r.X4.StreamMediaSessionId;
     }
 }
-function p(e) {
-    var t;
-    s.ZP.setCrashInformation(f(e.context), null !== (t = e.mediaSessionId) && void 0 !== t ? t : null);
-}
 function _(e) {
     var t;
-    let n = (null !== (t = e.channelId) && void 0 !== t ? t : 'unknown') + e.context;
+    s.ZP.setCrashInformation(f(e.context), null != (t = e.mediaSessionId) ? t : null);
+}
+function p(e) {
+    var t;
+    let n = (null != (t = e.channelId) ? t : 'unknown') + e.context;
     switch (e.state) {
         case l.hes.RTC_CONNECTED:
             u.add(n), s.ZP.setCrashInformation(r.X4.HasRTCConnection, 1);
@@ -62,9 +62,9 @@ class m extends o.Z {
     constructor(...e) {
         super(...e),
             c(this, 'actions', {
-                RTC_CONNECTION_STATE: _,
+                RTC_CONNECTION_STATE: p,
                 RTC_CONNECTION_VIDEO: h,
-                MEDIA_SESSION_JOINED: p
+                MEDIA_SESSION_JOINED: _
             });
     }
 }

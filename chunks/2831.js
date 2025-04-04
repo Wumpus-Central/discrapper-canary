@@ -7,7 +7,7 @@ var r = n(444675);
             a = !1,
             s = e.document,
             l = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? p() : _() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u);
+        (l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u);
     }
     function c(e) {
         'function' != typeof e && (e = Function('' + e));
@@ -55,14 +55,14 @@ var r = n(444675);
             }
         }
     }
-    function p() {
+    function _() {
         n = function (e) {
             r.nextTick(function () {
                 f(e);
             });
         };
     }
-    function _() {
+    function p() {
         if (e.postMessage && !e.importScripts) {
             var t = !0,
                 n = e.onmessage;

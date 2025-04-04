@@ -2,7 +2,7 @@ var r,
     i = n(264344),
     o = n.n(i),
     a = n(345546);
-(window.AudioContext = null !== (r = window.AudioContext) && void 0 !== r ? r : window.webkitAudioContext),
+(window.AudioContext = null != (r = window.AudioContext) ? r : window.webkitAudioContext),
     null != window.RTCPeerConnection &&
         'Chrome' === o().name &&
         52 > (0, a.n)() &&

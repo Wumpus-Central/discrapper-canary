@@ -1,7 +1,7 @@
 n.d(t, {
-    HI: () => p,
+    HI: () => _,
     gG: () => f,
-    hb: () => _
+    hb: () => p
 }),
     n(978209);
 var r = n(192379),
@@ -63,9 +63,9 @@ function u(e, t) {
 let d = {};
 function f() {
     var e, t;
-    return null !== (t = null === (e = (0, a.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : d;
+    return null != (t = null == (e = (0, a.D)().favoriteGifs) ? void 0 : e.gifs) ? t : d;
 }
-function p(e) {
+function _(e) {
     let t = f();
     return r.useMemo(
         () =>
@@ -74,7 +74,7 @@ function p(e) {
                     var r;
                     return u(l({}, t), {
                         url: n,
-                        src: null !== (r = null == e ? void 0 : e(t.src, n)) && void 0 !== r ? r : t.src
+                        src: null != (r = null == e ? void 0 : e(t.src, n)) ? r : t.src
                     });
                 })
                 .sortBy('order')
@@ -83,6 +83,6 @@ function p(e) {
         [t, e]
     );
 }
-function _(e) {
+function p(e) {
     return null != f()[e];
 }

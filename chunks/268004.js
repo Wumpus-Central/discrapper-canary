@@ -7,4 +7,4 @@ var r = n(424602),
     l = n(91641),
     c = n(895536),
     u = n(987338);
-let d = new l.E([c.NR, c.ZI, c.Ob, c.uc, c.m1, r.aq, r.xN, a.Z, o.kX, i.O, s.O], u.$P.VOICE_CALL, { location: 'voice call initiated' });
+let d = new l.E([c.NR, c.ZI, c.Ob, c.uc, c.m1, r.aq, a.Z, o.kX, i.O, s.O], u.$P.VOICE_CALL, { location: 'voice call initiated' });

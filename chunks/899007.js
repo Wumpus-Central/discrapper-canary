@@ -9,18 +9,18 @@ var r = n(200651),
     u = n(100527),
     d = n(906732),
     f = n(140701),
-    p = n(158776),
-    _ = n(74538),
+    _ = n(158776),
+    p = n(74538),
     h = n(998502),
     m = n(785717),
     g = n(369566),
     E = n(518950),
-    v = n(652853),
-    b = n(228168),
-    y = n(981631),
+    b = n(652853),
+    y = n(228168),
+    v = n(981631),
     O = n(474936),
-    S = n(715047);
-function I(e, t, n) {
+    I = n(487784);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -74,26 +74,26 @@ function A(e, t) {
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: o, channelId: h, profileType: I, animateOnHover: N, onOpenProfile: R, className: P, previewStatus: w } = e,
-        { theme: D } = (0, v.z)(),
-        { analyticsLocations: x } = (0, d.ZP)(u.Z.AVATAR),
-        { trackUserProfileAction: L } = (0, m.KZ)(),
-        M = _.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2),
+    let { user: t, displayProfile: n, guildId: o, channelId: h, profileType: S, animateOnHover: N, onOpenProfile: R, className: P, previewStatus: w } = e,
+        { theme: D } = (0, b.z)(),
+        { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
+        { trackUserProfileAction: x } = (0, m.KZ)(),
+        M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2),
         k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
         { live: j } = (0, g.Z)(t.id),
         [U] = j,
-        { status: G, isMobileOnline: B } = (0, s.cj)([p.Z], () => ({
-            status: (0, c.Z)(U) ? y.Skl.STREAMING : p.Z.getStatus(t.id),
-            isMobileOnline: p.Z.isMobileOnline(t.id)
+        { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
+            status: (0, c.Z)(U) ? v.Skl.STREAMING : _.Z.getStatus(t.id),
+            isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
-        Z = void 0 !== w ? w : G,
-        F = I === b.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        V = a()(
-            S.avatar,
+        F = void 0 !== w ? w : G,
+        V = S === y.y0.FULL_SIZE ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        Z = a()(
+            I.avatar,
             {
-                [S.biteSize]: I === b.y0.BITE_SIZE,
-                [S.fullSize]: I === b.y0.FULL_SIZE,
-                [S.panel]: I === b.y0.PANEL
+                [I.biteSize]: S === y.y0.BITE_SIZE,
+                [I.fullSize]: S === y.y0.FULL_SIZE,
+                [I.panel]: S === y.y0.PANEL
             },
             P
         ),
@@ -104,38 +104,38 @@ function R(e) {
         } = (0, E.Z)({
             user: t,
             guildId: null != n ? n.guildId : o,
-            size: F,
+            size: V,
             animateOnHover: N
         }),
         K = (0, r.jsx)(C, {
             src: W,
             avatarDecoration: H,
-            size: F,
+            size: V,
             'aria-label': t.username,
-            imageClassName: null != R ? S.overlay : void 0,
-            status: k ? y.Skl.UNKNOWN : Z,
+            imageClassName: null != R ? I.overlay : void 0,
+            status: k ? v.Skl.UNKNOWN : F,
             statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
-            statusTooltipDelay: b.vB
+            statusTooltipDelay: y.vB
         });
     return null == R
         ? (0, r.jsx)(
               'div',
               A(T({}, Y), {
-                  className: V,
+                  className: Z,
                   children: K
               })
           )
         : (0, r.jsx)(
               l.P3F,
               A(T({}, Y), {
-                  className: a()(V, S.clickable),
-                  focusProps: { ringClassName: S.focusRing },
+                  className: a()(Z, I.clickable),
+                  focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
-                      L({
+                      x({
                           action: 'PRESS_VIEW_PROFILE',
-                          analyticsLocations: x
+                          analyticsLocations: L
                       }),
                           null == R || R();
                   },

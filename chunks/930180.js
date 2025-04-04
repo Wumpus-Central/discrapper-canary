@@ -17,11 +17,11 @@ function s(e) {
 }
 function l(e) {
     var t;
-    return null !== (t = i.Z.getParticipantCount(e, o.pV.BLOCKED)) && void 0 !== t ? t : 0;
+    return null != (t = i.Z.getParticipantCount(e, o.pV.BLOCKED)) ? t : 0;
 }
 function c(e) {
     var t;
-    return null !== (t = i.Z.getParticipantCount(e, o.pV.IGNORED)) && void 0 !== t ? t : 0;
+    return null != (t = i.Z.getParticipantCount(e, o.pV.IGNORED)) ? t : 0;
 }
 function u(e) {
     return (0, r.e7)([i.Z], () => i.Z.getMutableParticipants(e, o.pV.BLOCKED), [e]);

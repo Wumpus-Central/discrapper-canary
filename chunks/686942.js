@@ -3,13 +3,13 @@ n.d(t, {
     EN: () => i,
     Sk: () => d,
     Vl: () => f,
-    Vy: () => p,
+    Vy: () => _,
     cS: () => h,
     hj: () => o,
     kJ: () => s,
     q9: () => g,
     qo: () => u,
-    qq: () => _,
+    qq: () => p,
     rx: () => c,
     w6: () => l,
     xs: () => a
@@ -49,14 +49,14 @@ var f = function (e, t, n) {
         var r = e.split(t);
         return n ? r.slice(0, n).concat([r.slice(n).join(t)]) : r;
     },
-    p = function (e, t) {
+    _ = function (e, t) {
         var n = e % t;
         return n * t < 0 ? n + t : n;
     },
-    _ = function (e, t) {
+    p = function (e, t) {
         return {
             div: Math.floor(e / t),
-            mod: p(e, t)
+            mod: _(e, t)
         };
     },
     h = function (e) {

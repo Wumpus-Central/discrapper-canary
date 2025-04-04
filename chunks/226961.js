@@ -74,10 +74,10 @@ let p = N(d.Yn.DEFAULT, u._s_.TRANSPORT, 0),
         videoEntropy: !0
     },
     b = 600;
-function v(e, t, n) {
+function y(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
 }
-function y(e, t) {
+function v(e, t) {
     return ''.concat(e, ':').concat(t);
 }
 class O {
@@ -87,12 +87,12 @@ class O {
     put(e, t, n, r) {
         if ('' === r) {
             let r = _({}, this.state);
-            return delete r[v(e, t, n)], new O(r);
+            return delete r[y(e, t, n)], new O(r);
         }
-        return new O(_({ [v(e, t, n)]: r }, this.state));
+        return new O(_({ [y(e, t, n)]: r }, this.state));
     }
     get(e, t, n) {
-        let r = this.state[v(e, t, n)];
+        let r = this.state[y(e, t, n)];
         return null != r ? r : null;
     }
     constructor(e) {
@@ -122,7 +122,7 @@ function R() {
 }
 function P(e) {
     var t;
-    h = null !== (t = e.section) && void 0 !== t ? t : p;
+    h = null != (t = e.section) ? t : p;
 }
 function w() {
     R();
@@ -132,7 +132,7 @@ function D(e) {
 }
 function L(e) {
     if (null === e.streamId) {
-        let t = y(e.userId, e.context);
+        let t = v(e.userId, e.context);
         g.set(t, d.Z.NO_OVERRIDE);
     }
 }
@@ -145,7 +145,7 @@ function M(e) {
         r = {};
     for (let [i, o] of Object.entries(e)) {
         let e = t[i];
-        if (Array.isArray(o)) {
+        if (Array.isArray(o))
             if ('object' == typeof o[0]) {
                 let t = Array.isArray(e) ? e : [],
                     a = (r[i] = []);
@@ -155,7 +155,7 @@ function M(e) {
                     a.push(M(o[e], i, n));
                 }
             } else r[i] = o;
-        } else if ('object' == typeof o && null !== o) {
+        else if ('object' == typeof o && null !== o) {
             let t = 'object' == typeof e && null !== e ? e : {};
             r[i] = M(o, t, n);
         } else if (i in E && 'number' == typeof o) {
@@ -173,8 +173,8 @@ function k(e) {
     let { connectionStats: t } = e;
     Object.values(d.Yn).forEach((e) => {
         t.filter((t) => {
-            let { connection: n } = t;
-            return n.context === e;
+            let { context: n } = t;
+            return n === e;
         }).forEach((t, n) => {
             j({
                 context: e,
@@ -228,7 +228,7 @@ function F(e) {
 }
 function V(e) {
     let { userId: t, context: n, quality: r } = e;
-    g.set(y(t, n), r);
+    g.set(v(t, n), r);
 }
 C();
 class Z extends (r = i.ZP.Store) {
@@ -241,7 +241,7 @@ class Z extends (r = i.ZP.Store) {
     }
     getInboundStats(e, t) {
         var n, r;
-        let i = null === (r = this.getAllStats(t)[0]) || void 0 === r ? void 0 : null === (n = r.rtp) || void 0 === n ? void 0 : n.inbound[e],
+        let i = null == (r = this.getAllStats(t)[0]) || null == (n = r.rtp) ? void 0 : n.inbound[e],
             o = null == i ? void 0 : i.find((e) => 'video' === e.type);
         return {
             codec: null == o ? void 0 : o.codec.name,
@@ -251,10 +251,10 @@ class Z extends (r = i.ZP.Store) {
     }
     getOutboundStats(e) {
         var t, n, r;
-        let i;
-        let o = this.getAllStats(e),
-            a = null === (t = o[0]) || void 0 === t ? void 0 : t.transport,
-            s = null === (r = o[0]) || void 0 === r ? void 0 : null === (n = r.rtp) || void 0 === n ? void 0 : n.outbound,
+        let i,
+            o = this.getAllStats(e),
+            a = null == (t = o[0]) ? void 0 : t.transport,
+            s = null == (r = o[0]) || null == (n = r.rtp) ? void 0 : n.outbound,
             l = null == s ? void 0 : s.find((e) => 'video' === e.type);
         return (
             Array.isArray(null == a ? void 0 : a.availableOutgoingBitrate) && a.availableOutgoingBitrate.length > 0 && (i = a.availableOutgoingBitrate[a.availableOutgoingBitrate.length - 1].value),
@@ -276,7 +276,7 @@ class Z extends (r = i.ZP.Store) {
         return S;
     }
     getSimulcastDebugOverride(e, t) {
-        let n = y(e, t);
+        let n = v(e, t);
         return g.has(n) ? g.get(n) : d.Z.NO_OVERRIDE;
     }
 }

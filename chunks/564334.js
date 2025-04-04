@@ -50,19 +50,19 @@ function a(e) {
             lightness: d,
             alpha: i
         };
-    let p = 0;
+    let _ = 0;
     switch (l) {
         case o:
-            p = ((a - s) / u) % 6;
+            _ = ((a - s) / u) % 6;
             break;
         case a:
-            p = (s - o) / u + 2;
+            _ = (s - o) / u + 2;
             break;
         case s:
-            p = (a - s) / u + 4;
+            _ = (a - s) / u + 4;
     }
     return {
-        hue: 60 * p,
+        hue: 60 * _,
         saturation: f,
         lightness: d,
         alpha: i
@@ -96,7 +96,7 @@ class c {
     }
     static parseColorFnString(e) {
         var t;
-        let [, n, r] = null !== (t = e.match(l)) && void 0 !== t ? t : [];
+        let [, n, r] = null != (t = e.match(l)) ? t : [];
         if (null == n || null == r) return;
         let a = r
             .split(/\s*[,/\s]\s*/)

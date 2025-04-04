@@ -11,23 +11,23 @@ function a(e, t) {
     var n, r, i, o, a, s, l, c, u;
     switch (e) {
         case 'video_player_video':
-            return null === (n = t.config.videoMetadata) || void 0 === n ? void 0 : n.assets.videoPlayerVideo;
+            return null == (n = t.config.videoMetadata) ? void 0 : n.assets.videoPlayerVideo;
         case 'video_player_video_low_res':
-            return null === (r = t.config.videoMetadata) || void 0 === r ? void 0 : r.assets.videoPlayerVideoLowRes;
+            return null == (r = t.config.videoMetadata) ? void 0 : r.assets.videoPlayerVideoLowRes;
         case 'video_player_video_hls':
-            return null === (i = t.config.videoMetadata) || void 0 === i ? void 0 : i.assets.videoPlayerVideoHls;
+            return null == (i = t.config.videoMetadata) ? void 0 : i.assets.videoPlayerVideoHls;
         case 'video_player_thumbnail':
-            return null === (o = t.config.videoMetadata) || void 0 === o ? void 0 : o.assets.videoPlayerThumbnail;
+            return null == (o = t.config.videoMetadata) ? void 0 : o.assets.videoPlayerThumbnail;
         case 'video_player_caption':
-            return null === (a = t.config.videoMetadata) || void 0 === a ? void 0 : a.assets.videoPlayerCaption;
+            return null == (a = t.config.videoMetadata) ? void 0 : a.assets.videoPlayerCaption;
         case 'video_player_transcript':
-            return null === (s = t.config.videoMetadata) || void 0 === s ? void 0 : s.assets.videoPlayerTranscript;
+            return null == (s = t.config.videoMetadata) ? void 0 : s.assets.videoPlayerTranscript;
         case 'quest_bar_preview_video':
-            return null === (l = t.config.videoMetadata) || void 0 === l ? void 0 : l.assets.questBarPreviewVideo;
+            return null == (l = t.config.videoMetadata) ? void 0 : l.assets.questBarPreviewVideo;
         case 'quest_bar_preview_thumbnail':
-            return null === (c = t.config.videoMetadata) || void 0 === c ? void 0 : c.assets.questBarPreviewThumbnail;
+            return null == (c = t.config.videoMetadata) ? void 0 : c.assets.questBarPreviewThumbnail;
         case 'quest_home_video':
-            return null === (u = t.config.videoMetadata) || void 0 === u ? void 0 : u.assets.questHomeVideo;
+            return null == (u = t.config.videoMetadata) ? void 0 : u.assets.questHomeVideo;
         default:
             return;
     }

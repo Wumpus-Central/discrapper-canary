@@ -80,12 +80,12 @@ function f(e) {
     let { children: a, className: l } = n,
         d = u(n, ['children', 'className']),
         f = i.useRef(0),
-        [p, _] = i.useState(!1);
+        [_, p] = i.useState(!1);
     function h() {
-        clearTimeout(f.current), _(!0);
+        clearTimeout(f.current), p(!0);
     }
     function m() {
-        clearTimeout(f.current), (f.current = setTimeout(() => _(!1), t));
+        clearTimeout(f.current), (f.current = setTimeout(() => p(!1), t));
     }
     return (0, r.jsx)('div', {
         className: l,
@@ -96,7 +96,7 @@ function f(e) {
             c(
                 s(
                     {
-                        forceOpen: p,
+                        forceOpen: _,
                         disableTooltipPointerEvents: !1
                     },
                     d

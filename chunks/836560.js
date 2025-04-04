@@ -61,13 +61,13 @@ function f(e, t, n) {
         i = d.bind(r);
     return (i.listener = n), (r.wrapFn = i), i;
 }
-function p(e, t, n) {
+function _(e, t, n) {
     var r = e._events;
     if (void 0 === r) return [];
     var i = r[t];
     return void 0 === i ? [] : 'function' == typeof i ? (n ? [i.listener || i] : [i]) : n ? g(i) : h(i, i.length);
 }
-function _(e) {
+function p(e) {
     var t = this._events;
     if (void 0 !== t) {
         var n = t[e];
@@ -96,13 +96,13 @@ function E(e, t) {
         function o() {
             'function' == typeof e.removeListener && e.removeListener('error', i), n([].slice.call(arguments));
         }
-        b(e, t, o, { once: !0 }), 'error' !== t && v(e, i, { once: !0 });
+        y(e, t, o, { once: !0 }), 'error' !== t && b(e, i, { once: !0 });
     });
 }
-function v(e, t, n) {
-    'function' == typeof e.on && b(e, 'error', t, n);
+function b(e, t, n) {
+    'function' == typeof e.on && y(e, 'error', t, n);
 }
-function b(e, t, n, r) {
+function y(e, t, n, r) {
     if ('function' == typeof e.on) r.once ? e.once(t, n) : e.on(t, n);
     else if ('function' == typeof e.addEventListener)
         e.addEventListener(t, function i(o) {
@@ -192,15 +192,15 @@ Object.defineProperty(a, 'defaultMaxListeners', {
         return this;
     }),
     (a.prototype.listeners = function (e) {
-        return p(this, e, !0);
+        return _(this, e, !0);
     }),
     (a.prototype.rawListeners = function (e) {
-        return p(this, e, !1);
+        return _(this, e, !1);
     }),
     (a.listenerCount = function (e, t) {
-        return 'function' == typeof e.listenerCount ? e.listenerCount(t) : _.call(e, t);
+        return 'function' == typeof e.listenerCount ? e.listenerCount(t) : p.call(e, t);
     }),
-    (a.prototype.listenerCount = _),
+    (a.prototype.listenerCount = p),
     (a.prototype.eventNames = function () {
         return this._eventsCount > 0 ? t(this._events) : [];
     });

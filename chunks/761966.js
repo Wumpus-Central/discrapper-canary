@@ -5,7 +5,7 @@ var i = n(120356),
     o = n.n(i),
     a = n(481060),
     s = n(549631),
-    l = n(704126);
+    l = n(588224);
 function c(e, t, n) {
     return (
         t in e
@@ -58,18 +58,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,7 +80,7 @@ function _(e, t) {
 }
 function h(e) {
     var { children: t, className: n, size: i = a.zxk.Sizes.MEDIUM, onlyShineOnHover: c = !1 } = e,
-        d = p(e, ['children', 'className', 'size', 'onlyShineOnHover']);
+        d = _(e, ['children', 'className', 'size', 'onlyShineOnHover']);
     return (0, r.jsx)(
         a.gtL,
         f(u({}, d), {

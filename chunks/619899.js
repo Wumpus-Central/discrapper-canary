@@ -1,6 +1,6 @@
 n.d(t, {
     N9: () => E,
-    ex: () => v,
+    ex: () => y,
     zL: () => b
 }),
     n(315314),
@@ -14,8 +14,8 @@ var r = n(192379),
     i = n(392711),
     o = n(230383),
     a = n(731965),
-    s = n(451593),
-    l = n(477146);
+    s = n(373071),
+    l = n(489495);
 function c(e, t, n) {
     return (
         t in e
@@ -166,15 +166,15 @@ let E = (0, o.U)((e) => ({
     b = (e) =>
         E((t) => {
             var n;
-            return t.previewEnabled ? (null === (n = t.assets[e]) || void 0 === n ? void 0 : n.src) : null;
+            return t.previewEnabled ? (null == (n = t.assets[e]) ? void 0 : n.src) : null;
         }),
-    v = (e) => {
+    y = (e) => {
         let { previewEnabled: t, previewProfileEffectId: n } = E(),
             o = t ? n : null,
-            a = (0, s.m)(o);
+            a = (0, s.mr)(o);
         return r.useMemo(() => {
             if (null == a || null == e) return null;
-            let { effects: t, staticFrames: n } = a.config,
+            let { effects: t, stillFrames: n } = a.config,
                 r = null != n && Object.keys(n).length > 0;
             if (0 === t.length && !r) return null;
             let o = (0, i.cloneDeep)(e);
@@ -187,7 +187,7 @@ let E = (0, o.U)((e) => ({
                 r)
             ) {
                 var s, c, u, d, f, p;
-                (o.reducedMotionSrc = null !== (d = null === (s = n[l.wT.REDUCED_MOTION]) || void 0 === s ? void 0 : s.src) && void 0 !== d ? d : ''), (o.staticFrameSrc = null !== (f = null === (c = n[l.wT.STATIC]) || void 0 === c ? void 0 : c.src) && void 0 !== f ? f : ''), (o.thumbnailPreviewSrc = null !== (p = null === (u = n[l.wT.THUMBNAIL]) || void 0 === u ? void 0 : u.src) && void 0 !== p ? p : '');
+                (o.reducedMotionSrc = null != (d = null == (s = n[l.cq.REDUCED_MOTION]) ? void 0 : s.src) ? d : ''), (o.staticFrameSrc = null != (f = null == (c = n[l.cq.STATIC]) ? void 0 : c.src) ? f : ''), (o.thumbnailPreviewSrc = null != (p = null == (u = n[l.cq.THUMBNAIL]) ? void 0 : u.src) ? p : '');
             }
             return o;
         }, [a, e]);

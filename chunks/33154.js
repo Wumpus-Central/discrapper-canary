@@ -7,8 +7,8 @@ var i,
     r = n(200651),
     o = n(192379),
     a = n(442837),
-    s = n(481060),
-    l = n(749210),
+    l = n(481060),
+    s = n(749210),
     c = n(313201),
     u = n(823379),
     d = n(41776),
@@ -40,12 +40,12 @@ let g = (e) => {
     let x = async () => {
         v(!0);
         try {
-            await l.Z.joinGuild(i.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), f();
+            await s.Z.joinGuild(i.id, { source: h.vtS.CHAT_INPUT_BLOCKER }), f();
         } catch (e) {
             v(!1);
         }
     };
-    return (0, r.jsxs)(s.VqE, {
+    return (0, r.jsxs)(l.VqE, {
         className: m.container,
         'aria-labelledby': b,
         children: [
@@ -57,12 +57,12 @@ let g = (e) => {
             (0, r.jsxs)('div', {
                 className: m.content,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         variant: 'heading-md/semibold',
                         id: b,
                         children: y
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
                         children: T
@@ -70,15 +70,15 @@ let g = (e) => {
                     (0, r.jsxs)('div', {
                         className: m.buttonContainer,
                         children: [
-                            (0, r.jsx)(s.zxk, {
+                            (0, r.jsx)(l.zxk, {
                                 buttonRef: g,
                                 onClick: x,
                                 submitting: j,
                                 children: p.NW.string(p.t['9VLmlZ'])
                             }),
-                            (0, r.jsx)(s.zxk, {
+                            (0, r.jsx)(l.zxk, {
                                 onClick: f,
-                                look: s.zxk.Looks.BLANK,
+                                look: l.zxk.Looks.BLANK,
                                 className: m.cancel,
                                 children: p.NW.string(p.t['2m+Sqq'])
                             })

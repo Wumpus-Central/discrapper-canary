@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(653041), n(47120), n(266796);
+n.d(t, { Z: () => b }), n(653041), n(47120), n(266796);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -186,7 +186,7 @@ class m extends i.PureComponent {
             });
     }
 }
-class b extends i.PureComponent {
+class g extends i.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
             this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 });
@@ -253,4 +253,4 @@ class b extends i.PureComponent {
             });
     }
 }
-let g = b;
+let b = g;

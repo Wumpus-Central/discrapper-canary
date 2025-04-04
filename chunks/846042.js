@@ -6,7 +6,7 @@ n.d(t, {
     ZL: () => c,
     ie: () => a,
     jg: () => o,
-    kT: () => p,
+    kT: () => _,
     n8: () => l
 });
 var r = n(250327),
@@ -103,6 +103,6 @@ function f(e, t) {
     }
     return r ? n : 1 - n;
 }
-function p(e) {
+function _(e) {
     return e % 400 == 0 || (e % 4 == 0 && e % 100 != 0);
 }

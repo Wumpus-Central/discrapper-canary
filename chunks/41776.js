@@ -64,14 +64,14 @@ function b(e) {
     let { guild: t } = e;
     return !!(null != t.joined_at && d.includes(t.id)) && (h(t.id), (_ = null), !0);
 }
-function v(e) {
+function y(e) {
     var t;
     let { guildId: n, joinedAt: r, user: i } = e,
-        o = i.id === (null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+        o = i.id === (null == (t = l.default.getCurrentUser()) ? void 0 : t.id),
         a = null == r;
-    return !!(o && !a && d.includes(n)) && (h(n), (_ = null), !0);
+    return !!o && !a && !!d.includes(n) && (h(n), (_ = null), !0);
 }
-function y(e) {
+function v(e) {
     let { guild: t } = e;
     return !!d.includes(t.id) && (h(t.id), (_ = null), !0);
 }
@@ -100,7 +100,7 @@ class T extends (r = i.ZP.Store) {
     isLurking(e) {
         var t;
         let n = a.ZP.isCurrentUserGuest(e),
-            r = null === (t = s.Z.getGuild(e)) || void 0 === t ? void 0 : t.isLurker();
+            r = null == (t = s.Z.getGuild(e)) ? void 0 : t.isLurker();
         return !!(!n && r);
     }
     getLurkingSource() {
@@ -117,6 +117,6 @@ let N = new T(o.Z, {
     GUILD_STOP_LURKING: O,
     GUILD_STOP_LURKING_FAILURE: I,
     GUILD_CREATE: b,
-    GUILD_DELETE: y,
-    GUILD_MEMBER_ADD: v
+    GUILD_DELETE: v,
+    GUILD_MEMBER_ADD: y
 });

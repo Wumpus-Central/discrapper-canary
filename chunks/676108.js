@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(28546),
     c = n(872635),
     u = n(185923),
-    d = n(217131);
+    d = n(763169);
 function f(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -62,8 +62,8 @@ function h(e, t) {
 }
 function m(e) {
     var t;
-    let { editorRef: n, options: f, channel: _ } = e,
-        m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
+    let { editorRef: n, options: f, channel: p } = e,
+        m = null == (t = n.current) ? void 0 : t.getSlateEditor(),
         g = i.useCallback(
             (e, t) => {
                 let r = n.current;
@@ -75,7 +75,7 @@ function m(e) {
             let { closePopout: t } = e;
             return (0, r.jsx)(s.Z, {
                 persistSearch: !0,
-                channel: _,
+                channel: p,
                 closePopout: t,
                 onSelectEmoji: (e, n) => {
                     g(e, n), n && t();
@@ -107,7 +107,7 @@ function m(e) {
                           let { isShown: n } = t;
                           return (0, r.jsx)(
                               a.Z,
-                              h(p({}, e), {
+                              h(_({}, e), {
                                   active: n,
                                   className: d.emojiButton,
                                   tabIndex: 0

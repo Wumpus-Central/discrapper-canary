@@ -1,10 +1,10 @@
-n.d(t, { E: () => p });
+n.d(t, { E: () => _ });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(692547),
-    l = n(599676);
+    l = n(150923);
 function c(e, t, n) {
     return (
         t in e
@@ -38,15 +38,15 @@ var d = (function (e) {
     return (e.XXSMALL = 'xxsmall'), (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
 })(d || {});
 let f = 'indeterminate';
-function p(e) {
+function _(e) {
     let t,
-        { className: n, percent: o, size: c = 'small', foregroundColor: d = s.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: p = 'var(--background-modifier-active)', foregroundGradientColor: _, animate: h = !0 } = e,
+        { className: n, percent: o, size: c = 'small', foregroundColor: d = s.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: _ = 'var(--background-modifier-active)', foregroundGradientColor: p, animate: h = !0 } = e,
         m = null != o ? o : 0;
     return (
-        (t = null != _ ? { background: 'linear-gradient(to right, '.concat(_[0], ', ').concat(_[1], ')') } : { backgroundColor: d }),
+        (t = null != p ? { background: 'linear-gradient(to right, '.concat(p[0], ', ').concat(p[1], ')') } : { backgroundColor: d }),
         (0, r.jsx)('div', {
             className: a()(n, l.progress, l[c]),
-            style: { backgroundColor: p },
+            style: { backgroundColor: _ },
             children:
                 m !== f && 'number' == typeof m
                     ? (0, r.jsx)('div', {
@@ -68,4 +68,4 @@ function p(e) {
         })
     );
 }
-(p.Sizes = d), (p.INDETERMINATE = f);
+(_.Sizes = d), (_.INDETERMINATE = f);

@@ -17,7 +17,7 @@ var r = n(200651),
     x = n(408942);
 function j(e) {
     let t,
-        { guild: n, channel: j, customWebhooks: N, editedWebhook: O, selectableWebhookChannels: v, refToScroller: y, errors: _, canNavigate: C } = e,
+        { guild: n, channel: j, customWebhooks: O, editedWebhook: N, selectableWebhookChannels: v, refToScroller: y, errors: _, canNavigate: C } = e,
         I = (0, d.ZP)(),
         [S, E] = i.useState(null),
         [P, w] = i.useState(null);
@@ -52,7 +52,7 @@ function j(e) {
         }
     }, [C, t, n]);
     (0, c.ZP)(() => {
-        0 === N.length && T();
+        0 === O.length && T();
     });
     let Z = null !== t;
     return (0, r.jsxs)(o.hjN, {
@@ -65,7 +65,7 @@ function j(e) {
                 })
             }),
             (0, r.jsx)(o.$i$, { className: f.headerDivider }),
-            N.length > 0
+            O.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(o.zxk, {
@@ -76,8 +76,8 @@ function j(e) {
                               children: g.NW.string(g.t['nrO/HB'])
                           }),
                           (0, r.jsx)(m.Z, {
-                              webhooks: N,
-                              editedWebhook: O,
+                              webhooks: O,
+                              editedWebhook: N,
                               selectableWebhookChannels: v,
                               lastCreatedWebhookId: null == S ? void 0 : S.id,
                               errors: _,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
     o = n(570140),
@@ -30,13 +30,13 @@ function d(e) {
 function f() {
     (l = {}), (c = {});
 }
-class p extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     getStickerPreview(e, t) {
         return (t === a.d.FirstThreadMessage ? c : l)[e];
     }
 }
-s(p, 'displayName', 'StickerMessagePreviewStore');
-let _ = new p(o.Z, {
+s(_, 'displayName', 'StickerMessagePreviewStore');
+let p = new _(o.Z, {
     ADD_STICKER_PREVIEW: u,
     CLEAR_STICKER_PREVIEW: d,
     LOGOUT: f

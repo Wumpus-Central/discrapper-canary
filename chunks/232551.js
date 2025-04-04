@@ -30,7 +30,7 @@ function d(e) {
 function f(e, t, n) {
     return e < 12 ? (n ? 'am' : 'AM') : n ? 'pm' : 'PM';
 }
-function p() {
+function _() {
     let {
         months: e,
         monthsShort: t,
@@ -58,7 +58,7 @@ function p() {
         week: c
     };
 }
-function _(e, t) {
+function p(e, t) {
     return e.replace(/L[L|T|S]{0,3}/g, (n, r) => {
         if (/^LLLL/.test(n)) return t.longDateFormat.LLLL;
         if (/^LLL/.test(n)) return t.longDateFormat.LLL + n.slice(3);
@@ -71,8 +71,8 @@ function _(e, t) {
 }
 function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = null != t ? t : p();
-    (void 0 !== t || n || !a.Z.getCurrentConfig({ location: 'makeDateFormatter' }).enableSystemFormatter) && (e = _(e, r));
+        r = null != t ? t : _();
+    (void 0 !== t || n || !a.Z.getCurrentConfig({ location: 'makeDateFormatter' }).enableSystemFormatter) && (e = p(e, r));
     let i = [],
         o = {
             month: !1,
@@ -295,7 +295,7 @@ function h(e, t) {
                 continue;
             case 'L':
                 var d, f;
-                let t = null !== (f = null === (d = /^L(?:TS?|L*(?: LTS?)?)/.exec(s)) || void 0 === d ? void 0 : d[0]) && void 0 !== f ? f : 'L';
+                let t = null != (f = null == (d = /^L(?:TS?|L*(?: LTS?)?)/.exec(s)) ? void 0 : d[0]) ? f : 'L';
                 r.longFormatters.push(c(t)), l('localeData.longFormatters['.concat(r.longFormatters.length - 1, '](d)')), u(t.length);
                 continue;
             case '[':

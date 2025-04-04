@@ -4,7 +4,7 @@ var r = n(200651),
     o = n(120356),
     a = n.n(o),
     s = n(481060),
-    l = n(995690);
+    l = n(510761);
 function c(e, t, n) {
     return (
         t in e
@@ -57,18 +57,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,8 +80,8 @@ function _(e, t) {
 let h = 500;
 function m(e) {
     let { children: t, 'aria-label': n, className: o, position: c } = e,
-        d = p(e, ['children', 'aria-label', 'className', 'position']),
-        _ = i.useRef(null),
+        d = _(e, ['children', 'aria-label', 'className', 'position']),
+        p = i.useRef(null),
         m = null != n ? n : 'string' == typeof t && t;
     return (0, r.jsx)(
         s.ua7,
@@ -94,10 +94,10 @@ function m(e) {
                 let { onMouseEnter: i, onMouseLeave: s } = n;
                 return (0, r.jsx)('div', {
                     className: a()(o, l.overflow),
-                    ref: _,
+                    ref: p,
                     'aria-hidden': e['aria-hidden'],
                     onMouseEnter: () => {
-                        let { current: e } = _;
+                        let { current: e } = p;
                         null != e && e.offsetWidth < e.scrollWidth && (null == i || i());
                     },
                     onMouseLeave: s,

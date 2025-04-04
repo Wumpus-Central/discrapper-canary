@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(481060),
     l = n(249458),
     c = n(388032),
-    u = n(343212);
+    u = n(358413);
 function d(e) {
     let { onPlay: t, className: n, inactive: o } = e,
         d = i.useRef(null),
@@ -16,7 +16,7 @@ function d(e) {
             children: (0, r.jsx)(s.o1U, {
                 size: 'xs',
                 color: 'currentColor',
-                className: a()(u.icon)
+                className: u.icon
             })
         });
     return (0, r.jsx)(l.G.Consumer, {

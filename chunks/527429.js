@@ -100,8 +100,8 @@ class s extends r.Component {
         );
     }
     calculateClosest(e, t) {
-        let n;
-        let r = this.props.getCoordsMap()[e];
+        let n,
+            r = this.props.getCoordsMap()[e];
         if (null == r) return;
         let i = Number.MAX_SAFE_INTEGER;
         for (let e = 0; e < t.length; e++) {
@@ -146,7 +146,7 @@ class s extends r.Component {
                 var i;
                 let o = e.length,
                     a = Math.max(n * o + t + r, 0) % o,
-                    s = null !== (i = this.calculateClosest(e[t][n], e[a])) && void 0 !== i ? i : n,
+                    s = null != (i = this.calculateClosest(e[t][n], e[a])) ? i : n,
                     l = 0;
                 return (
                     r < 0 && a > t && (l = -1),

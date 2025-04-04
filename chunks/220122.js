@@ -9,16 +9,16 @@ var r = n(481060),
     u = n(435064),
     d = n(779618),
     f = n(39604),
-    p = n(356659),
-    _ = n(388032);
+    _ = n(356659),
+    p = n(388032);
 let h = 'CLIPS_IN_CALL_WARNING';
 class m extends c.Z {
     showClipsToast() {
         (0, r.showToast)({
             id: h,
-            message: _.NW.string(_.t['d+41qK']),
+            message: p.NW.string(p.t['d+41qK']),
             type: r.ToastType.CLIP,
-            options: { duration: p.G$ }
+            options: { duration: _.G$ }
         });
     }
     applyNativeClipsSettings(e) {
@@ -40,7 +40,7 @@ class m extends c.Z {
     }
     handleClipsInitOnGamesChange(e) {
         let t = o.ZP.getVisibleGame();
-        null != t && (e.added.find((e) => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), p.jp) : this.fireClipsInitEvent());
+        null != t && (e.added.find((e) => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), _.jp) : this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
         if (!(0, d.Z)(s.Z)) return;

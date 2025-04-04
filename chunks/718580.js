@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => T,
-    M: () => I
+    M: () => S
 });
 var r = n(200651),
     i = n(192379),
@@ -12,8 +12,8 @@ var r = n(200651),
     u = n(393238),
     d = n(699682),
     f = n(793903),
-    p = n(906732),
-    _ = n(237617);
+    _ = n(906732),
+    p = n(237617);
 function h(e, t, n) {
     return (
         t in e
@@ -66,18 +66,18 @@ function E(e, t) {
         e
     );
 }
-function v(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,7 +86,7 @@ function b(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let y = {
+let v = {
     mass: 1,
     tension: 300,
     friction: 28,
@@ -95,7 +95,7 @@ let y = {
 function O(e, t) {
     return null == e ? null : e.index > t.index ? 'backwards' : e.index < t.index ? 'forwards' : null;
 }
-function S(e, t) {
+function I(e, t) {
     return (n) => {
         if (0 === n) return 'auto';
         let r = 'forwards' === t.current,
@@ -104,18 +104,18 @@ function S(e, t) {
         return i && r && 'left' === e && (o = !0), i && !r && 'right' === e && (o = !0), !i && r && 'right' === e && (o = !0), i || r || 'left' !== e || (o = !0), o ? ''.concat(100 * Math.abs(n), '%') : 'auto';
     };
 }
-function I(e) {
+function S(e) {
     return null;
 }
 function T(e) {
     var t,
         n,
         h,
-        { contentDisplay: g, fadeInOut: b = !1 } = e,
-        I = v(e, ['contentDisplay', 'fadeInOut']);
+        { contentDisplay: g, fadeInOut: y = !1 } = e,
+        S = b(e, ['contentDisplay', 'fadeInOut']);
     let T = {},
-        { analyticsLocations: N } = (0, p.ZP)();
-    i.Children.forEach(I.children, (e, t) => {
+        { analyticsLocations: N } = (0, _.ZP)();
+    i.Children.forEach(S.children, (e, t) => {
         T[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
@@ -123,24 +123,24 @@ function T(e) {
             index: t
         };
     });
-    let A = I.activeSlide,
-        C = (0, d.Z)(I.activeSlide),
-        R = null !== (t = I.directionOverride) && void 0 !== t ? t : O(null != C ? T[C] : null, T[A]),
+    let A = S.activeSlide,
+        C = (0, d.Z)(S.activeSlide),
+        R = null != (t = S.directionOverride) ? t : O(null != C ? T[C] : null, T[A]),
         { reducedMotion: P } = i.useContext(l.S),
         w = i.useContext(f.Z),
         D = T[A].impressionName,
-        x = E(m({}, T[A].impressionProperties), { location_stack: N });
+        L = E(m({}, T[A].impressionProperties), { location_stack: N });
     w({
         type: a.ImpressionTypes.MODAL,
         name: D,
-        properties: x,
+        properties: L,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: L, width: M = 0, height: k = 0 } = (0, u.Z)(A),
-        j = m({}, y, I.springConfig, P.enabled ? { clamp: !0 } : null),
+    let { ref: x, width: M = 0, height: k = 0 } = (0, u.Z)(A),
+        j = m({}, v, S.springConfig, P.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {
-                width: null !== (n = I.width) && void 0 !== n ? n : M,
+                width: null != (n = S.width) ? n : M,
                 height: k,
                 config: j
             },
@@ -156,29 +156,29 @@ function T(e) {
                 config: j,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === A && null != I.onSlideReady && I.onSlideReady(n);
+                    n === A && null != S.onSlideReady && S.onSlideReady(n);
                 }
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
-        B = (0, _.Z)(R),
-        { width: Z, centered: F = !0 } = I,
-        V = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
+        B = (0, p.Z)(R),
+        { width: F, centered: V = !0 } = S,
+        Z = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
         W = s.tq
             ? {}
-            : F
+            : V
               ? {
                     transform: 'translate3d(0, -50%, 0) scale(1.0, 1.0)',
                     top: '50%'
                 }
               : { transform: 'scale(1.0, 1.0)' },
-        Y = s.tq ? {} : { overflow: null !== (h = I.overflow) && void 0 !== h ? h : 'hidden' };
+        Y = s.tq ? {} : { overflow: null != (h = S.overflow) ? h : 'hidden' };
     return (0, r.jsx)(o.animated.div, {
         style: m(
             {
                 position: 'relative',
-                minWidth: V,
+                minWidth: Z,
                 minHeight: H
             },
             Y
@@ -189,24 +189,24 @@ function T(e) {
             return (0, r.jsx)(
                 o.animated.div,
                 {
-                    ref: t === A ? L : null,
+                    ref: t === A ? x : null,
                     style: m(
                         {
                             position: 'absolute',
                             display: g,
                             flexDirection: 'column',
                             backfaceVisibility: 'hidden',
-                            width: s.tq ? '100%' : Z
+                            width: s.tq ? '100%' : F
                         },
                         W,
                         P.enabled
                             ? a
                             : m(
                                   {
-                                      left: e.value.to(S('left', B)),
-                                      right: e.value.to(S('right', B))
+                                      left: e.value.to(I('left', B)),
+                                      right: e.value.to(I('right', B))
                                   },
-                                  b && a
+                                  y && a
                               )
                     ),
                     children: T[t].children

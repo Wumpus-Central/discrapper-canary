@@ -10,25 +10,25 @@ var i = n(120356),
     u = n(835473),
     d = n(318374),
     f = n(925329),
-    p = n(594174),
-    _ = n(823379),
+    _ = n(594174),
+    p = n(823379),
     h = n(388032),
-    m = n(575903);
+    m = n(352665);
 let g = function (e) {
     let { createdAt: t, participantIds: n, applicationId: i, title: a, guildId: g, className: E } = e,
-        v = (0, u.q)(i),
-        b = (0, l.Wu)([p.default], () => {
+        b = (0, u.q)(i),
+        y = (0, l.Wu)([_.default], () => {
             var e;
-            return null !== (e = n.map((e) => p.default.getUser(e)).filter(_.lm)) && void 0 !== e ? e : [];
+            return null != (e = n.map((e) => _.default.getUser(e)).filter(p.lm)) ? e : [];
         }),
-        y = null == v ? void 0 : v.name,
+        v = null == b ? void 0 : b.name,
         O = s()(t).fromNow();
     return null == t
         ? null
         : (0, r.jsxs)('div', {
               className: o()(E, m.container),
               children: [
-                  (0, r.jsx)(f.Z, { game: v }),
+                  (0, r.jsx)(f.Z, { game: b }),
                   (0, r.jsxs)('div', {
                       className: m.textSection,
                       children: [
@@ -47,7 +47,7 @@ let g = function (e) {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
                               className: m.__invalid_subtitle,
-                              children: [null != y ? ''.concat(y, ' \u2022 ') : null, O]
+                              children: [null != v ? ''.concat(v, ' \u2022 ') : null, O]
                           }),
                           (0, r.jsx)(c.Text, {
                               variant: 'text-xs/medium',
@@ -56,11 +56,11 @@ let g = function (e) {
                           })
                       ]
                   }),
-                  null != b &&
-                      b.length > 0 &&
+                  null != y &&
+                      y.length > 0 &&
                       (0, r.jsx)(d.Z, {
                           maxUsers: 4,
-                          users: b,
+                          users: y,
                           className: m.__invalid_facePile,
                           guildId: g
                       })

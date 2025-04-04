@@ -9,10 +9,10 @@ var r = n(200651),
     u = n(590921),
     d = n(665692),
     f = n(388032);
-function p(e, t, n) {
+function _(e, t, n) {
     return s.ZP.hasSameRoleAsUsername(t, e) ? ''.concat(d.ME).concat(e.tag) : ''.concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? 'never' : 'always' }));
 }
-function _(e) {
+function p(e) {
     return '<@'.concat(e.id, '>');
 }
 function h(e) {
@@ -54,21 +54,21 @@ let E = {
             n,
             {
                 results: { users: a, globals: s, roles: l },
-                selectedIndex: p,
-                channel: _,
+                selectedIndex: _,
+                channel: p,
                 query: h,
                 options: m,
                 onHover: g,
                 onClick: E
             } = e,
-            v = a.map((e, t) =>
+            b = a.map((e, t) =>
                 (0, r.jsx)(
                     o.ZP.User,
                     {
-                        guildId: _.guild_id,
+                        guildId: p.guild_id,
                         onClick: E,
                         onHover: g,
-                        selected: p === t,
+                        selected: _ === t,
                         index: t,
                         user: e.user,
                         nick: e.nick,
@@ -78,13 +78,13 @@ let E = {
                     e.user.id
                 )
             ),
-            b = s.map((e, t) =>
+            y = s.map((e, t) =>
                 (0, r.jsx)(
                     o.ZP.Generic,
                     {
                         onClick: E,
                         onHover: g,
-                        selected: p === t + a.length,
+                        selected: _ === t + a.length,
                         index: a.length + t,
                         text: e.text,
                         description: m.hideMentionDescription ? null : e.description,
@@ -93,13 +93,13 @@ let E = {
                     e.text
                 )
             ),
-            y = l.map((e, t) =>
+            v = l.map((e, t) =>
                 (0, r.jsx)(
                     o.ZP.Role,
                     {
                         onClick: E,
                         onHover: g,
-                        selected: p === t + a.length + s.length,
+                        selected: _ === t + a.length + s.length,
                         index: a.length + s.length + t,
                         role: e,
                         hideDescription: m.hideMentionDescription
@@ -119,11 +119,11 @@ let E = {
                             query: h,
                             getQuery: (e) => ''.concat(d.ME).concat(e)
                         }),
-                        v,
-                        a.length > 0 && s.length > 0 ? (0, r.jsx)(o.ZP.Divider, {}) : null,
                         b,
+                        a.length > 0 && s.length > 0 ? (0, r.jsx)(o.ZP.Divider, {}) : null,
+                        y,
                         (a.length > 0 && l.length > 0) || (s.length > 0 && l.length > 0) ? (0, r.jsx)(o.ZP.Divider, {}) : null,
-                        y
+                        v
                     ]
                 },
                 'mentions'
@@ -140,6 +140,6 @@ let E = {
             s = t[i],
             l = n[i - t.length],
             c = r[i - t.length - n.length];
-        return null != s ? o.insertText(p(s.user, a, o.hidePersonalInformation), _(s.user)) : null != l ? o.insertText(h(l)) : null != c && o.insertText(m(c), g(c)), { type: u.z2.MENTION };
+        return null != s ? o.insertText(_(s.user, a, o.hidePersonalInformation), p(s.user)) : null != l ? o.insertText(h(l)) : null != c && o.insertText(m(c), g(c)), { type: u.z2.MENTION };
     }
 };

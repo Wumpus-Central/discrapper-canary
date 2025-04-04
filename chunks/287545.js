@@ -155,7 +155,7 @@ function et(e) {
         g = (0, U.pY)(u),
         E = v.Z.getChannel(g);
     if ((a && null != E && E.isPrivate() && o && null == m && s.Z.selectParticipant(E.id, null), null == m)) return;
-    let b = O.Z.getMediaSessionId(),
+    let b = O.ZP.getMediaSessionId(),
         I = c.compositeInstanceId,
         N = null == b && (null == E ? void 0 : E.isVocal()) === !0 && (null == E ? void 0 : E.isPrivate()) === !1;
     if (null == I || N) return;

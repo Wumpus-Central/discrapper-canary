@@ -27,7 +27,7 @@ class l {
                 return;
             }
             this.framerateReductionTimeout = setTimeout(() => {
-                !this.connection.destroyed && (s.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(o.u$, ' ms.')), (this.framerateReductionTimeout = void 0), (this.sinkWants.isMuted = !0), this.updateRemoteWantsFramerate());
+                this.connection.destroyed || (s.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(o.u$, ' ms.')), (this.framerateReductionTimeout = void 0), (this.sinkWants.isMuted = !0), this.updateRemoteWantsFramerate());
             }, o.u$);
         }
     }
@@ -52,7 +52,7 @@ class l {
                 e === this.connection.userId && this.userSpeakingChange(t === o.Dg.NONE);
             }),
             (this.handleSelfMute = (e) => {
-                !this.connection.hasDesktopSource() && (this.destroyFramerateScaleFactorTimers(), (this.sinkWants.isMuted = e), this.updateRemoteWantsFramerate());
+                this.connection.hasDesktopSource() || (this.destroyFramerateScaleFactorTimers(), (this.sinkWants.isMuted = e), this.updateRemoteWantsFramerate());
             }),
             s.enableNativeLogger(!0),
             e.on(i.Sh.Speaking, this.handleSpeaking),

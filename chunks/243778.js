@@ -14,19 +14,19 @@ var i = n(399606),
     s = n(280328);
 function l(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = (0, i.e7)([o.Z], () => !!__OVERLAY__ && o.Z.isInstanceLocked()),
+        r = (0, i.e7)([o.default], () => !!__OVERLAY__ && o.default.isInstanceLocked()),
         [l, c] = (0, a.cv)(e, t, r);
     return (0, s.A)(l, c, n), [l, c];
 }
 function c(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        l = (0, i.e7)([o.Z], () => !!__OVERLAY__ && o.Z.isInstanceLocked()),
+        l = (0, i.e7)([o.default], () => !!__OVERLAY__ && o.default.isInstanceLocked()),
         [c, u] = (0, a.EM)(e, t, n, l);
     return (0, s.A)(c, u, r), [c, u];
 }
 function u(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        l = (0, i.e7)([o.Z], () => !!__OVERLAY__ && o.Z.isInstanceLocked()),
+        l = (0, i.e7)([o.default], () => !!__OVERLAY__ && o.default.isInstanceLocked()),
         [c, u] = (0, a.Tt)(e, t, n, l);
     return (0, s.A)(c, u, r), [c, u];
 }

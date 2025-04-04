@@ -10,26 +10,26 @@ let u = 10000;
 class d extends Error {}
 async function f(e) {
     let { channelId: t, timeoutMs: n = u, bypassChangeModal: f = !1 } = e,
-        p = a.Z.getChannel(t);
+        _ = a.Z.getChannel(t);
     if (
-        null == p ||
+        null == _ ||
         !(await i.Z.handleVoiceConnect({
             bypassGuildIdCheck: !0,
             bypassChangeModal: f,
-            channel: p,
+            channel: _,
             connected: c.Z.isInChannel(t),
             needSubscriptionToAccess: (0, o.$)(t, a.Z, r.Z, s.Z).needSubscriptionToAccess
         }))
     )
         return !1;
-    let _ = new Promise((e, r) => {
+    let p = new Promise((e, r) => {
         let i = setTimeout(() => {
             r(new d('Joining voice channel has timed out.'));
         }, n);
         l.Z.addConditionalChangeListener(() => l.Z.getVoiceChannelId() !== t || (clearTimeout(i), e(), !1));
     });
     try {
-        await _;
+        await p;
     } catch (e) {
         if (e instanceof d) return !1;
         throw e;

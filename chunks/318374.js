@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(239091),
     d = n(751688),
     f = n(5192),
-    p = n(51144),
-    _ = n(802747);
+    _ = n(51144),
+    p = n(223390);
 function h(e, t, n) {
     return (
         t in e
@@ -63,14 +63,14 @@ function E(e, t) {
         e
     );
 }
-function v(e) {
-    let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, avatarClassName: v, size: b = c.EFr.SIZE_24, overflowCountVariant: y = 'text-xs/medium', overflowCountColor: O = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: I = !1, disableUsernameTooltip: T = !1, disableUserPopout: N = !1, onClick: A, onFocus: C, onUserClick: R, onUserPopoutRequestClose: P } = e,
+function b(e) {
+    let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, avatarClassName: b, size: y = c.EFr.SIZE_24, overflowCountVariant: v = 'text-xs/medium', overflowCountColor: O = 'interactive-normal', overflowCountClassName: I, hideOverflowCount: S = !1, disableUsernameTooltip: T = !1, disableUserPopout: N = !1, onClick: A, onFocus: C, onUserClick: R, onUserPopoutRequestClose: P } = e,
         [w, D] = i.useState(!1);
-    function x() {
+    function L() {
         return (0, r.jsx)(c.VqE, {
-            className: _.popoutWrapper,
+            className: p.popoutWrapper,
             children: (0, r.jsx)(c.Ttm, {
-                className: _.scroller,
+                className: p.scroller,
                 children: t.map((e) =>
                     (0, r.jsx)(
                         d.Z,
@@ -88,7 +88,7 @@ function v(e) {
                                 (0, u.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('31327')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
                                         return (n) =>
                                             (0, r.jsx)(
                                                 t,
@@ -108,20 +108,20 @@ function v(e) {
             })
         });
     }
-    function L() {
+    function x() {
         let e = l()(t)
                 .take(o)
                 .map((e) => {
-                    let t = p.ZP.getName(e);
+                    let t = _.ZP.getName(e);
                     return T
                         ? (0, r.jsx)(
                               'div',
                               {
-                                  className: a()(_.avatar, v),
+                                  className: a()(p.avatar, b),
                                   children: (0, r.jsx)(c.qEK, {
                                       src: e.getAvatarURL(s, 24),
                                       'aria-label': t,
-                                      size: b
+                                      size: y
                                   })
                               },
                               e.id
@@ -130,11 +130,11 @@ function v(e) {
                               c.DY3,
                               {
                                   text: t,
-                                  className: a()(_.avatar, v),
+                                  className: a()(p.avatar, b),
                                   children: (0, r.jsx)(c.qEK, {
                                       src: e.getAvatarURL(s, 24),
                                       'aria-label': t,
-                                      size: b
+                                      size: y
                                   })
                               },
                               e.id
@@ -144,17 +144,17 @@ function v(e) {
             n = t.length - o;
         return (
             n > 0 &&
-                !I &&
+                !S &&
                 (e[e.length - 1] = (0, r.jsx)(
                     c.yRy,
                     {
-                        renderPopout: x,
+                        renderPopout: L,
                         shouldShow: w,
                         position: 'bottom',
                         onRequestClose: () => D(!1),
                         children: () =>
                             (0, r.jsx)(c.zxk, {
-                                className: a()(_.avatar, _.overflow, S),
+                                className: a()(p.avatar, p.overflow, I),
                                 onFocus: C,
                                 onClick: (e) => {
                                     null == A || A(e), D(!0);
@@ -162,7 +162,7 @@ function v(e) {
                                 look: c.zxk.Looks.BLANK,
                                 size: c.zxk.Sizes.NONE,
                                 children: (0, r.jsxs)(c.Text, {
-                                    variant: y,
+                                    variant: v,
                                     color: O,
                                     children: ['+', n + 1]
                                 })
@@ -176,7 +176,7 @@ function v(e) {
     return t.length <= 0
         ? null
         : (0, r.jsx)('div', {
-              className: a()(g, _.avatars),
-              children: L()
+              className: a()(g, p.avatars),
+              children: x()
           });
 }

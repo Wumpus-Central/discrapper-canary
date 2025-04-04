@@ -5,10 +5,10 @@ n.d(t, {
     _J: () => h,
     aP: () => _,
     e7: () => f,
-    h6: () => b,
+    h6: () => g,
     oE: () => p,
     pB: () => d,
-    y: () => g,
+    y: () => b,
     yS: () => C
 });
 var r = n(230383),
@@ -152,7 +152,7 @@ let u = (0, r.U)((e) => ({
     f = () => u.getState().inviteCode,
     h = () => u.getState().guildId,
     m = () => u.getState().touched,
-    b = () => u.getState().dmsAllowed,
-    g = () => u.getState().nickname,
+    g = () => u.getState().dmsAllowed,
+    b = () => u.getState().nickname,
     E = () => u.getState().showActivity,
     C = () => u.getState().mutedServer;

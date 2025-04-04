@@ -6,7 +6,7 @@ var i = n(120356),
     a = n(793030),
     s = n(111028),
     l = n(556638),
-    c = n(967616);
+    c = n(843280);
 function u(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,10 +81,10 @@ function h(e, t) {
 }
 function m(e) {
     var { children: t, className: n, variant: i = 'text-xs/medium' } = e,
-        u = _(e, ['children', 'className', 'variant']);
+        u = p(e, ['children', 'className', 'variant']);
     return (0, r.jsx)(
         a.xv,
-        p(
+        _(
             d(
                 {
                     variant: i,

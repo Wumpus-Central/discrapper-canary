@@ -3,8 +3,8 @@ n.d(t, {
     Ji: () => m,
     KU: () => h,
     PO: () => d,
-    R$: () => p,
-    i$: () => _,
+    R$: () => _,
+    i$: () => p,
     q9: () => f
 });
 var r = n(200651);
@@ -15,7 +15,7 @@ var i = n(120356),
     s = n(911969),
     l = n(937615),
     c = n(388032),
-    u = n(717711);
+    u = n(822988);
 function d(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('div', {
@@ -30,7 +30,7 @@ function f(e) {
         children: t
     });
 }
-function p(e) {
+function _(e) {
     let { label: t, value: n, className: i } = e;
     return (0, r.jsxs)('div', {
         className: o()(u.row, i),
@@ -46,43 +46,43 @@ function p(e) {
         ]
     });
 }
-function _(e) {
-    let { label: t, value: n, discounts: i, originalAmount: o, interval: d, currency: f, className: _, intervalCount: h, inTrialPeriod: m } = e,
+function p(e) {
+    let { label: t, value: n, discounts: i, originalAmount: o, interval: d, currency: f, className: p, intervalCount: h, inTrialPeriod: m } = e,
         g = (e) => (null != i ? i.find((t) => t.type === e) : null),
         E = g(s.eW.SUBSCRIPTION_PLAN),
-        v = g(s.eW.ENTITLEMENT),
-        b = null != E ? Math.floor((E.amount / o) * 100) : null,
-        y = (0, l.T4)(o, f);
+        b = g(s.eW.ENTITLEMENT),
+        y = null != E ? Math.floor((E.amount / o) * 100) : null,
+        v = (0, l.T4)(o, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(p, {
+            (0, r.jsx)(_, {
                 label: t,
                 value: (0, r.jsxs)(r.Fragment, {
                     children: [
                         m ? c.NW.formatToPlainString(c.t.hXcaLS, { price: (0, l.T4)(0, f) }) : n,
-                        null != b
+                        null != y
                             ? (0, r.jsxs)('div', {
                                   className: u.rowPercentDiscount,
-                                  children: ['-', b, '%']
+                                  children: ['-', y, '%']
                               })
                             : null
                     ]
                 }),
-                className: _
+                className: p
             }),
             m &&
                 (0, r.jsx)(a.Text, {
                     variant: 'text-md/medium',
                     className: u.trialEndPrice,
-                    children: c.NW.format(c.t.v9QeOD, { price: y })
+                    children: c.NW.format(c.t.v9QeOD, { price: v })
                 }),
-            null != b
+            null != y
                 ? (0, r.jsxs)('div', {
                       className: u.rowDiscountOriginalPrice,
-                      children: ['(', null != d && null != h ? (0, l.og)(y, d, h) : y, ')']
+                      children: ['(', null != d && null != h ? (0, l.og)(v, d, h) : v, ')']
                   })
                 : null,
-            null != v
+            null != b
                 ? (0, r.jsx)('div', {
                       className: u.entitlementDiscountRow,
                       children: c.NW.string(c.t.A7Hpfn)

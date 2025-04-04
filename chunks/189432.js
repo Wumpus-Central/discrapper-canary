@@ -9,8 +9,8 @@ var r = n(100527),
     u = n(545408),
     d = n(189357),
     f = n(50493),
-    p = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -63,19 +63,19 @@ function g(e, t) {
     );
 }
 function E(e, t, n) {
-    var _, m, E;
-    let v = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: f.k.INFO };
+    var p, m, E;
+    let b = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: f.k.INFO };
     if (!(0, d.Y)(e)) return Promise.resolve();
-    let b = null !== (_ = v.modViewPanel) && void 0 !== _ ? _ : f.k.INFO,
-        y = null !== (m = v.sourceLocation) && void 0 !== m ? m : r.Z.MEMBER_SAFETY_PAGE,
+    let y = null != (p = b.modViewPanel) ? p : f.k.INFO,
+        v = null != (m = b.sourceLocation) ? m : r.Z.MEMBER_SAFETY_PAGE,
         O = c.Z.getCurrentlySelectedChannelId(),
-        S = null != O ? s.Z.getChannel(O) : null;
-    if (null == S || S.getGuildId() !== e) {
+        I = null != O ? s.Z.getChannel(O) : null;
+    if (null == I || I.getGuildId() !== e) {
         let t = l.ZP.getDefaultChannel(e);
-        null == t || t.isNSFW() || (0, i.uL)(p.Z5c.CHANNEL(e, t.id));
+        null == t || t.isNSFW() || (0, i.uL)(_.Z5c.CHANNEL(e, t.id));
     }
     return (
-        (0, u.q)(e, t, b, y),
+        (0, u.q)(e, t, y, v),
         o.Z.openGuildSidebar({
             guildId: e,
             baseChannelId: n,
@@ -87,9 +87,9 @@ function E(e, t, n) {
                         userId: t,
                         guildId: e
                     },
-                    v
+                    b
                 ),
-                { modViewPanel: null !== (E = v.modViewPanel) && void 0 !== E ? E : f.k.INFO }
+                { modViewPanel: null != (E = b.modViewPanel) ? E : f.k.INFO }
             )
         })
     );

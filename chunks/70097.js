@@ -57,18 +57,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,18 +88,18 @@ function h(e) {
 }
 let m = (e) => {
         var { externalRef: t, autoPlay: n, playOnHover: o, responsive: c, mediaLayoutType: d } = e,
-            f = p(e, ['externalRef', 'autoPlay', 'playOnHover', 'responsive', 'mediaLayoutType']);
-        let _ = !(0, a.e7)([s.Z], () => s.Z.useReducedMotion) && !o && n,
+            f = _(e, ['externalRef', 'autoPlay', 'playOnHover', 'responsive', 'mediaLayoutType']);
+        let p = !(0, a.e7)([s.Z], () => s.Z.useReducedMotion) && !o && n,
             m = i.useRef(null);
         function g() {
             var e;
-            o && (null == m || null === (e = m.current) || void 0 === e || e.play());
+            o && (null == m || null == (e = m.current) || e.play());
         }
         function E() {
             var e;
-            o && (null == m || null === (e = m.current) || void 0 === e || e.pause());
+            o && (null == m || null == (e = m.current) || e.pause());
         }
-        function v() {
+        function b() {
             return d === l.hV.MOSAIC
                 ? {
                       width: '100%',
@@ -108,10 +108,10 @@ let m = (e) => {
                       objectFit: 'contain'
                   }
                 : c
-                  ? b()
+                  ? y()
                   : {};
         }
-        function b() {
+        function y() {
             return {
                 maxWidth: f.width,
                 maxHeight: f.height,
@@ -141,12 +141,12 @@ let m = (e) => {
                 u(
                     {
                         ref: m,
-                        autoPlay: _,
+                        autoPlay: p,
                         onMouseEnter: g,
                         onMouseLeave: E,
                         onFocus: g,
                         onBlur: E,
-                        style: v()
+                        style: b()
                     },
                     f
                 )

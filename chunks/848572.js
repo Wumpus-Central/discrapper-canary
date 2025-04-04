@@ -1,9 +1,9 @@
 n.d(t, {
-    GG: () => y,
+    GG: () => v,
     Rw: () => T,
     SI: () => N,
     Vq: () => E,
-    a1: () => v,
+    a1: () => y,
     y3: () => O
 });
 var r = n(913527),
@@ -76,15 +76,15 @@ let b = () => {
         let e = (0, o.e7)([l.default], () => l.default.getCurrentUser());
         return (0, f.l)(null == e ? void 0 : e.id);
     },
-    v = (e) =>
+    y = (e) =>
         (0, o.e7)([s.Z], () => {
             if (null == e) return null;
             let t = s.Z.getUserProfile(e);
             return null == t ? void 0 : t.premiumSince;
         }),
-    y = () => {
+    v = () => {
         let e = (0, o.e7)([l.default], () => l.default.getCurrentUser());
-        return v(null == e ? void 0 : e.id);
+        return y(null == e ? void 0 : e.id);
     },
     O = () => {
         let e = Object.values(_.vK),
@@ -106,7 +106,7 @@ let b = () => {
     },
     S = () => {
         let { enabled: e } = (0, d.D)(),
-            t = y(),
+            t = v(),
             n = Object.values(_.vK);
         if (!e || null == t || null == n) return null;
         let r = i()().diff(t, 'days'),

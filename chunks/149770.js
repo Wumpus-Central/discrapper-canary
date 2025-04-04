@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var r = n(570140),
     i = n(287734),
     o = n(147913),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-class p extends o.Z {
+class _ extends o.Z {
     handleGuildCreate(e) {
         let { guild: t } = e,
             n = c.Z.getChannelId(d.ME),
@@ -53,4 +53,4 @@ class p extends o.Z {
             });
     }
 }
-let _ = new p();
+let p = new _();

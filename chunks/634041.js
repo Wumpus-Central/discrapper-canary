@@ -64,12 +64,12 @@ let m = !1,
     g = null,
     E = !1,
     b = {};
-function v(e) {
+function y(e) {
     let { assets: t } = e,
         n = {};
     t.forEach((e) => (n[e.id] = e)), (b = n);
 }
-function y(e) {
+function v(e) {
     let { videoFilterAsset: t } = e;
     b = h(_({}, b), { [t.id]: t });
 }
@@ -81,7 +81,7 @@ function I(e) {
     var t;
     let n = u.default.getCurrentUser();
     if (null == n) return !1;
-    let r = null != e ? e : (0, d.Gx)(null === (t = s.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
+    let r = null != e ? e : (0, d.Gx)(null == (t = s.Z.settings.voiceAndVideo) ? void 0 : t.videoBackgroundFilterDesktop, n.id);
     return null != c.Z.getVoiceChannelId() && l.Z.isVideoEnabled() && null != r;
 }
 function S(e) {
@@ -114,8 +114,8 @@ class C extends (r = i.ZP.Store) {
 }
 f(C, 'displayName', 'VideoBackgroundStore');
 let R = new C(a.Z, {
-    VIDEO_FILTER_ASSETS_FETCH_SUCCESS: v,
-    VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: y,
+    VIDEO_FILTER_ASSETS_FETCH_SUCCESS: y,
+    VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: v,
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: O,
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: S,
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T,

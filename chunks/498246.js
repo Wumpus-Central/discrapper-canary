@@ -29,13 +29,13 @@ e.exports = function (e) {
                 return c.apply(e, o(u, arguments));
             },
             f = r(0, c.length - u.length),
-            p = [],
-            _ = 0;
-        _ < f;
-        _++
+            _ = [],
+            p = 0;
+        p < f;
+        p++
     )
-        p[_] = '$' + _;
-    if (((l = Function('binder', 'return function (' + s(p, ',') + '){ return binder.apply(this,arguments); }')(d)), c.prototype)) {
+        _[p] = '$' + p;
+    if (((l = Function('binder', 'return function (' + s(_, ',') + '){ return binder.apply(this,arguments); }')(d)), c.prototype)) {
         var h = function () {};
         (h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null);
     }

@@ -16,7 +16,7 @@ class a {
     }
     static deriveMemberUsers(e, t) {
         var n, a, s, l;
-        let c = new Set([null === (n = t.author) || void 0 === n ? void 0 : n.id, null === (a = t.interaction) || void 0 === a ? void 0 : a.user.id, ...(null !== (l = null === (s = t.mentions) || void 0 === s ? void 0 : s.map((e) => e.id)) && void 0 !== l ? l : [])]),
+        let c = new Set([null == (n = t.author) ? void 0 : n.id, null == (a = t.interaction) ? void 0 : a.user.id, ...(null != (l = null == (s = t.mentions) ? void 0 : s.map((e) => e.id)) ? l : [])]),
             u = [],
             d = [];
         for (let t of c) {

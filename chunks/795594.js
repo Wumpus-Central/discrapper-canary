@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(481060),
     E = n(384275),
     b = n(493683),
-    v = n(239091),
-    y = n(87051),
+    y = n(239091),
+    v = n(87051),
     O = n(230711),
     I = n(497321),
     S = n(468026),
@@ -61,9 +61,9 @@ var r = n(200651),
     ee = n(869743),
     et = n(981631),
     en = n(388032),
-    er = n(189610),
-    ei = n(50398),
-    eo = n(685786);
+    er = n(989604),
+    ei = n(73433),
+    eo = n(20493);
 function ea(e, t, n) {
     return (
         t in e
@@ -328,10 +328,10 @@ let ef = (e) => {
                 id: o.id,
                 label: en.NW.string(en.t['+NP/b2'])
             }),
-            y = i.useMemo(() => {
+            v = i.useMemo(() => {
                 if (null != b)
                     return (e) => {
-                        (0, v.jW)(e, async () => {
+                        (0, y.jW)(e, async () => {
                             let { default: e } = await n.e('78040').then(n.bind(n, 599382));
                             return (t) => (0, r.jsx)(e, ec(es({}, t), { items: [b] }));
                         });
@@ -397,7 +397,7 @@ let ef = (e) => {
         return (0, r.jsx)(g.Zbd, {
             className: a()(er.authedApp, eo.marginBottom8),
             outline: !0,
-            onContextMenu: y,
+            onContextMenu: v,
             children: (0, r.jsxs)(g.y5t, {
                 component: O(),
                 children: [
@@ -417,14 +417,14 @@ let ef = (e) => {
         });
     },
     eg = (e) => {
-        let { scopes: t, application: o, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: E, hasDMOptOutSettings: v } = e,
+        let { scopes: t, application: o, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: E, hasDMOptOutSettings: y } = e,
             O = o.id,
             I = i.useMemo(() => j.ZP.createFromServer(o), [o]),
             S = (0, _.e7)(
                 [X.Z],
                 () => {
                     var e, t, n, r;
-                    return null === (r = X.Z.settings.applications) || void 0 === r ? void 0 : null === (n = r.appSettings) || void 0 === n ? void 0 : null === (t = n[O]) || void 0 === t ? void 0 : null === (e = t.appDmSettings) || void 0 === e ? void 0 : e.dmDisabled;
+                    return null == (r = X.Z.settings.applications) || null == (n = r.appSettings) || null == (t = n[O]) || null == (e = t.appDmSettings) ? void 0 : e.dmDisabled;
                 },
                 [O]
             ),
@@ -621,18 +621,18 @@ let ef = (e) => {
             q = i.useCallback(async () => {
                 if ((u()(null != T, 'dm channel mute setting requires having a bot user'), null == N)) {
                     let e = await b.Z.ensurePrivateChannel(T.id);
-                    y.Z.updateChannelOverrideSettings(null, e, { muted: !1 }, Y.ZB.Unmuted);
+                    v.Z.updateChannelOverrideSettings(null, e, { muted: !1 }, Y.ZB.Unmuted);
                     return;
                 }
                 A
-                    ? y.Z.updateChannelOverrideSettings(null, N, { muted: !1 }, Y.ZB.Unmuted)
+                    ? v.Z.updateChannelOverrideSettings(null, N, { muted: !1 }, Y.ZB.Unmuted)
                     : (0, g.ZDy)(async () => {
                           let { default: e } = await n.e('8246').then(n.bind(n, 540679));
                           return (t) => (0, r.jsx)(e, es({ channelId: N }, t));
                       });
             }, [N, T, A]),
             $ = () =>
-                v
+                y
                     ? (0, r.jsxs)('div', {
                           className: er.appDetailsSection,
                           children: [
@@ -755,7 +755,7 @@ let ef = (e) => {
             b = () => {
                 h('');
             },
-            v = () =>
+            y = () =>
                 (0, r.jsx)('div', {
                     className: er.searchContainer,
                     children: (0, r.jsx)(g.E1j, {
@@ -767,7 +767,7 @@ let ef = (e) => {
                         'aria-label': en.NW.string(en.t['5prvKS'])
                     })
                 }),
-            y = (e, t) =>
+            v = (e, t) =>
                 (0, r.jsxs)(eu, {
                     className: er.__invalid_marginTop20,
                     children: [
@@ -794,14 +794,14 @@ let ef = (e) => {
                           type: g.$jN.Type.SPINNING_CIRCLE
                       })
                     : 0 === t.length
-                      ? y(en.NW.string(en.t.CpPv5u), en.NW.string(en.t['E+SM6e']))
+                      ? v(en.NW.string(en.t.CpPv5u), en.NW.string(en.t['E+SM6e']))
                       : 0 === O.length
                         ? (0, r.jsxs)(r.Fragment, {
-                              children: [v(), y(null, en.NW.string(en.t.EVWFNj))]
+                              children: [y(), v(null, en.NW.string(en.t.EVWFNj))]
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  v(),
+                                  y(),
                                   O.sort((e, t) => Number(t.id) - Number(e.id)).map((e) =>
                                       d
                                           ? (0, r.jsx)(

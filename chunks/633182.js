@@ -9,7 +9,7 @@ function c(e, t, n) {
     var c;
     let u = i.default.getUser(t),
         d = r.Z.getChannel(n),
-        f = null !== (c = o.ZP.getName(null == d ? void 0 : d.guild_id, null == d ? void 0 : d.id, u)) && void 0 !== c ? c : a.ZP.getGlobalName(u);
+        f = null != (c = o.ZP.getName(null == d ? void 0 : d.guild_id, null == d ? void 0 : d.id, u)) ? c : a.ZP.getGlobalName(u);
     switch (e) {
         case s.w.IGNORE_SUCCESS:
             return l.NW.formatToPlainString(l.t['+joqrK'], { username: f });
@@ -28,7 +28,7 @@ function c(e, t, n) {
         case s.w.TIGGER_PAWTECT_ERROR:
             return l.NW.string(l.t.c6kn6O);
         case s.w.TIGGER_PAWTECT_VERIFIED:
-            return l.NW.string(l.t.XwKo1t);
+            return l.NW.string(l.t.EnTLDg);
         case s.w.GENERIC_ERROR:
             return l.NW.string(l.t.zBpoc3);
         default:

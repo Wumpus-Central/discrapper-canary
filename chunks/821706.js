@@ -1,6 +1,6 @@
 n.d(t, {
-    PE: () => v,
-    l: () => y,
+    PE: () => y,
+    l: () => v,
     pM: () => E
 });
 var r = n(200651),
@@ -117,7 +117,7 @@ function b(e) {
               children: (e) => (0, r.jsx)('div', h(_({ ref: c }, e), { children: (0, r.jsx)(s.oY, _({}, o)) }))
           });
 }
-function v(e) {
+function y(e) {
     let { user: t, relationshipType: n, analyticsLocation: a, shouldShowTooltip: s } = e,
         l = i.useMemo(() => {
             switch (n) {
@@ -146,7 +146,7 @@ function v(e) {
         analyticsLocation: a
     });
 }
-function y(e) {
+function v(e) {
     let { user: t, gameFriends: n, hasOutgoingPendingGameFriends: i, hasIncomingPendingGameFriends: o, analyticsLocation: a, shouldShowTooltip: s } = e,
         {
             tooltipText: l,

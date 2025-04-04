@@ -37,7 +37,7 @@ class s extends r.Z {
             i.default.track(o.rMx.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, {
                 message_id: e.id,
                 channel_id: e.channel_id,
-                author_id: null === (t = e.author) || void 0 === t ? void 0 : t.id,
+                author_id: null == (t = e.author) ? void 0 : t.id,
                 authorized_application_ids: this._getAuthorizedApplicationIds(e.session_metadata)
             });
         }

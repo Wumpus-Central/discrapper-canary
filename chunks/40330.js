@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => _,
-    p: () => p
+    Z: () => p,
+    p: () => _
 });
 var r = n(200651);
 n(192379);
@@ -11,7 +11,7 @@ var i = n(120356),
     l = n(481060),
     c = n(403182),
     u = n(388032),
-    d = n(575815);
+    d = n(634690);
 let f = (e) => {
         let { filename: t } = e,
             i = (0, c.uV)(t),
@@ -23,10 +23,10 @@ let f = (e) => {
             title: i
         });
     },
-    p = (e) => {
+    _ = (e) => {
         let { filename: t, size: n, progress: i, onCancelUpload: o, onClick: a, onContextMenu: c } = e,
-            p = 100 === i,
-            _ = !p && n > 0;
+            _ = 100 === i,
+            p = !_ && n > 0;
         return (0, r.jsx)('div', {
             className: d.fileWrapper,
             children: (0, r.jsxs)('div', {
@@ -45,7 +45,7 @@ let f = (e) => {
                                         onContextMenu: c,
                                         children: t
                                     }),
-                                    _
+                                    p
                                         ? (0, r.jsx)('div', {
                                               className: d.size,
                                               children: '\u2014 '.concat(s().filesize(n))
@@ -55,7 +55,7 @@ let f = (e) => {
                             }),
                             (0, r.jsx)('div', {
                                 className: d.progressContainer,
-                                children: p
+                                children: _
                                     ? u.NW.string(u.t.jfKTen)
                                     : (0, r.jsx)(l.Exd, {
                                           className: d.progress,
@@ -64,7 +64,7 @@ let f = (e) => {
                             })
                         ]
                     }),
-                    p
+                    _
                         ? null
                         : (0, r.jsx)(l.P3F, {
                               onClick: o,
@@ -78,8 +78,8 @@ let f = (e) => {
             })
         });
     },
-    _ = (e) => {
-        let { className: t, url: n, fileName: i, fileSize: a, onClick: c, onContextMenu: u, renderAdjacentContent: p } = e;
+    p = (e) => {
+        let { className: t, url: n, fileName: i, fileSize: a, onClick: c, onContextMenu: u, renderAdjacentContent: _ } = e;
         return (0, r.jsxs)('div', {
             className: o()(d.fileWrapper, t),
             children: [
@@ -109,7 +109,7 @@ let f = (e) => {
                         })
                     ]
                 }),
-                null != p && p()
+                null != _ && _()
             ]
         });
     };

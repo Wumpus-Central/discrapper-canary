@@ -8,23 +8,23 @@ var r = n(566885),
     u = n(182867),
     d = n(981971),
     f = n(11697),
-    p = Array;
+    _ = Array;
 e.exports = function (e) {
     var t,
         n,
-        _,
+        p,
         h,
         m,
         g,
         E = o(e),
-        v = l(this),
-        b = arguments.length,
-        y = b > 1 ? arguments[1] : void 0,
-        O = void 0 !== y;
-    O && (y = r(y, b > 2 ? arguments[2] : void 0));
-    var S = f(E),
-        I = 0;
-    if (S && !(this === p && s(S))) for (m = (h = d(E, S)).next, n = v ? new this() : []; !(_ = i(m, h)).done; I++) (g = O ? a(h, y, [_.value, I], !0) : _.value), u(n, I, g);
-    else for (t = c(E), n = v ? new this(t) : p(t); t > I; I++) (g = O ? y(E[I], I) : E[I]), u(n, I, g);
-    return (n.length = I), n;
+        b = l(this),
+        y = arguments.length,
+        v = y > 1 ? arguments[1] : void 0,
+        O = void 0 !== v;
+    O && (v = r(v, y > 2 ? arguments[2] : void 0));
+    var I = f(E),
+        S = 0;
+    if (I && !(this === _ && s(I))) for (m = (h = d(E, I)).next, n = b ? new this() : []; !(p = i(m, h)).done; S++) (g = O ? a(h, v, [p.value, S], !0) : p.value), u(n, S, g);
+    else for (t = c(E), n = b ? new this(t) : _(t); t > S; S++) (g = O ? v(E[S], S) : E[S]), u(n, S, g);
+    return (n.length = S), n;
 };

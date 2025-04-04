@@ -75,7 +75,7 @@ function G() {
         q = k.dN.useSetting() && null != F ? _.ZP.parse(void 0, F).content : F,
         X = Z.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: J } = (0, f.ZP)(h.Z.PROFILE),
-        Q = (0, y.Tq)({ location: 'UserSettingsProfileCustomization' }),
+        Q = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
         $ = (0, N.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
         ee = Q && !$;
     i.useEffect(() => {

@@ -4,7 +4,7 @@ var r = n(200651),
     o = n(539907),
     a = n(743236),
     s = n(218867),
-    l = n(253068);
+    l = n(906944);
 function c(e, t, n) {
     return (
         t in e
@@ -57,18 +57,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,24 +78,24 @@ function _(e, t) {
     return i;
 }
 function h(e) {
-    let { parentItem: t, isFocused: n, menuSubmenuProps: c, rows: d, rowHeight: _, onScroll: h, listClassName: m } = e,
+    let { parentItem: t, isFocused: n, menuSubmenuProps: c, rows: d, rowHeight: p, onScroll: h, listClassName: m } = e,
         g = i.useRef(null),
         E = i.useRef(null),
-        v = i.useRef(null),
         b = i.useRef(null),
-        { isUsingKeyboardNavigation: y, focusIndex: O } = c,
-        S = p(c, ['isUsingKeyboardNavigation', 'focusIndex']);
+        y = i.useRef(null),
+        { isUsingKeyboardNavigation: v, focusIndex: O } = c,
+        I = _(c, ['isUsingKeyboardNavigation', 'focusIndex']);
     i.useLayoutEffect(() => {
         var e;
-        n && ((0, a.F)(g), null === (e = v.current) || void 0 === e || e.focus());
+        n && ((0, a.F)(g), null == (e = b.current) || e.focus());
     }, [n]),
         i.useEffect(() => {
-            if (n && O >= 0 && y) {
+            if (n && O >= 0 && v) {
                 var e;
-                null === (e = b.current) || void 0 === e || e.scrollRowIntoView(O);
+                null == (e = y.current) || e.scrollRowIntoView(O);
             }
-        }, [n, y, O]);
-    let I = i.useCallback((e) => d[e], [d]);
+        }, [n, v, O]);
+    let S = i.useCallback((e) => d[e], [d]);
     return (0, r.jsxs)('div', {
         ref: g,
         className: l.__invalid_submenuContainer,
@@ -117,16 +117,16 @@ function h(e) {
                               className: l.submenuPaddingContainer,
                               children: (0, r.jsx)(
                                   'div',
-                                  f(u({ className: l.submenu }, S), {
-                                      ref: v,
+                                  f(u({ className: l.submenu }, I), {
+                                      ref: b,
                                       children: (0, r.jsx)(s.Z, {
-                                          ref: b,
+                                          ref: y,
                                           className: m,
                                           listPadding: [6, 0, 6, 8],
                                           onScroll: h,
-                                          renderRow: I,
+                                          renderRow: S,
                                           rowCount: d.length,
-                                          rowHeight: _
+                                          rowHeight: p
                                       })
                                   })
                               )

@@ -9,15 +9,15 @@ var r = n(200651),
     u = n(914010),
     d = n(594174),
     f = n(626135),
-    p = n(424218),
-    _ = n(403182),
+    _ = n(424218),
+    p = n(403182),
     h = n(63063),
     m = n(74538),
     g = n(790527),
     E = n(474936),
-    v = n(981631),
-    b = n(388032),
-    y = n(775904);
+    b = n(981631),
+    y = n(388032),
+    v = n(290602);
 function O(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ function O(e, t, n) {
         e
     );
 }
-function S(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -69,28 +69,28 @@ function T(e, t) {
 }
 function N(e) {
     var { onClose: t } = e,
-        n = I(e, ['onClose']);
+        n = S(e, ['onClose']);
     let O = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         T = (0, o.e7)([c.Z], () => c.Z.theme),
         N = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
-        A = T === v.BRd.LIGHT ? 'light' : 'dark',
+        A = T === b.BRd.LIGHT ? 'light' : 'dark',
         C = (0, r.jsx)('img', {
-            className: y.art,
+            className: v.art,
             alt: 'File Upload Nitro Perk',
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(A, '_v2.png')
         }),
         R = i.useMemo(() => {
             let e = m.ZP.getUserMaxFileSize(O);
-            return (0, p.BU)(e / 1024, { useKibibytes: !0 });
+            return (0, _.BU)(e / 1024, { useKibibytes: !0 });
         }, [O]),
-        P = (0, _.iL)({
+        P = (0, p.iL)({
             guildId: N,
             onClick: () => {
-                window.open(h.Z.getArticleURL(v.BhN.NITRO_FAQ), '_blank');
+                window.open(h.Z.getArticleURL(b.BhN.NITRO_FAQ), '_blank');
             }
         }),
         w = (0, r.jsx)('div', {
-            className: y.body,
+            className: v.body,
             children: (0, r.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 children: P
@@ -99,28 +99,28 @@ function N(e) {
     function D() {
         (0, s.Z)(),
             t(),
-            f.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: v.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                location_object: v.qAy.NAVIGATION_LINK
+            f.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: b.jXE.FILE_UPLOAD_UPSELL_MODAL,
+                location_object: b.qAy.NAVIGATION_LINK
             }),
-            (0, l.uL)(v.Z5c.APPLICATION_STORE);
+            (0, l.uL)(b.Z5c.APPLICATION_STORE);
     }
     return (0, r.jsx)(
         g.Z,
-        S(
+        I(
             {
                 artElement: C,
-                artContainerClassName: y.artContainer,
+                artContainerClassName: v.artContainer,
                 enableArtBoxShadow: !1,
                 type: E.cd.UPLOAD_ERROR_UPSELL,
-                title: b.NW.string(b.t['9C+41t']),
+                title: y.NW.string(y.t['9C+41t']),
                 body: w,
-                context: b.NW.formatToPlainString(b.t.q5fTZm, { maxSize: R }),
+                context: y.NW.formatToPlainString(y.t.q5fTZm, { maxSize: R }),
                 glowUp: P,
-                analyticsLocation: { section: v.jXE.FILE_UPLOAD_POPOUT },
+                analyticsLocation: { section: b.jXE.FILE_UPLOAD_POPOUT },
                 onClose: t,
                 subscriptionTier: E.Si.TIER_2,
-                secondaryCTA: b.NW.string(b.t.ZnqyZ2),
+                secondaryCTA: y.NW.string(y.t.ZnqyZ2),
                 onSecondaryClick: D,
                 showEnhancedUpsell: !0
             },

@@ -8,7 +8,7 @@ function a() {
         () =>
             e.reduce((e, t) => {
                 var n, r, i;
-                return (null !== (i = (n = e)[(r = t.designGroupId)]) && void 0 !== i) || (n[r] = []), e[t.designGroupId].push(t), e;
+                return null != (i = (n = e)[(r = t.designGroupId)]) || (n[r] = []), e[t.designGroupId].push(t), e;
             }, {}),
         [e]
     );

@@ -24,7 +24,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -68,7 +68,7 @@ var m = (function (e) {
 })({});
 let g = [],
     E = !1;
-function v(e) {
+function b(e) {
     let { user: t } = e;
     (r = t.id), (E = !1);
     let n = g.slice(),
@@ -89,10 +89,10 @@ function v(e) {
         (g = n).length > d.$H &&
             g.splice(d.$H).forEach((e) => {
                 let { id: t } = e;
-                y(t);
+                v(t);
             });
 }
-function b(e) {
+function y(e) {
     (E = !!e.isSwitchingAccount),
         e.isSwitchingAccount ||
             (g = g.filter((e) => {
@@ -101,7 +101,7 @@ function b(e) {
             })),
         (r = null);
 }
-function y(e) {
+function v(e) {
     (g = g.filter((t) => {
         let { id: n } = t;
         return n !== e;
@@ -117,7 +117,7 @@ function O(e) {
         });
     null != r && ((r.avatar = t.avatar), (r.username = t.username), (r.discriminator = t.discriminator), (g = n));
 }
-function S(e, t) {
+function I(e, t) {
     let n = g.slice(),
         r = n.find((t) => {
             let { id: n } = t;
@@ -125,7 +125,7 @@ function S(e, t) {
         });
     null != r && ((r.tokenStatus = t), (g = n));
 }
-function I(e) {
+function S(e) {
     let { from: t, to: n } = e;
     g = (0, c.aB)(g, t, n);
 }
@@ -135,17 +135,17 @@ function T(e) {
 }
 function N(e) {
     let { userId: t, pushSyncToken: n } = e;
-    g = g.map((e) => (e.id === t ? h(p({}, e), { pushSyncToken: n }) : e));
+    g = g.map((e) => (e.id === t ? h(_({}, e), { pushSyncToken: n }) : e));
 }
 function A(e) {
     let { invalidPushSyncTokens: t } = e;
-    g = g.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? h(p({}, e), { pushSyncToken: null }) : e));
+    g = g.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? h(_({}, e), { pushSyncToken: null }) : e));
 }
 class C extends (o = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t;
-            (g = null !== (t = e.users) && void 0 !== t ? t : []), (i = e.canUseMultiAccountMobile);
+            (g = null != (t = e.users) ? t : []), (i = e.canUseMultiAccountMobile);
         }
     }
     getCanUseMultiAccountMobile() {
@@ -189,7 +189,7 @@ f(C, 'displayName', 'MultiAccountStore'),
             if (null != e) {
                 var t;
                 return {
-                    users: null !== (t = e.users) && void 0 !== t ? t : [],
+                    users: null != (t = e.users) ? t : [],
                     canUseMultiAccountMobile: !1
                 };
             }
@@ -200,13 +200,13 @@ f(C, 'displayName', 'MultiAccountStore'),
         }
     ]);
 let R = new C(l.Z, {
-    CONNECTION_OPEN: v,
-    LOGOUT: b,
-    MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => S(e.userId, 1),
-    MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => S(e.userId, 2),
-    MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => S(e.userId, 0),
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => y(e.userId),
-    MULTI_ACCOUNT_MOVE_ACCOUNT: I,
+    CONNECTION_OPEN: b,
+    LOGOUT: y,
+    MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => I(e.userId, 1),
+    MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => I(e.userId, 2),
+    MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => I(e.userId, 0),
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => v(e.userId),
+    MULTI_ACCOUNT_MOVE_ACCOUNT: S,
     CURRENT_USER_UPDATE: O,
     MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: T,
     MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: N,

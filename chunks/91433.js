@@ -9,15 +9,15 @@ var r = n(200651),
     u = n(925329),
     d = n(743056),
     f = n(5192),
-    p = n(785717),
-    _ = n(388032),
-    h = n(263356);
+    _ = n(785717),
+    p = n(388032),
+    h = n(185589);
 function m(e) {
-    let { user: t, guildId: n, channelId: o, applicationId: m, friendToken: g, isGameRelationship: E = !1, className: v } = e,
-        b = f.ZP.getName(n, o, t),
-        { trackUserProfileAction: y } = (0, p.KZ)(),
+    let { user: t, guildId: n, channelId: o, applicationId: m, friendToken: g, isGameRelationship: E = !1, className: b } = e,
+        y = f.ZP.getName(n, o, t),
+        { trackUserProfileAction: v } = (0, _.KZ)(),
         { newestAnalyticsLocation: O } = (0, l.ZP)(),
-        { acceptFriendRequest: S, cancelFriendRequest: I } = (0, d.u)({
+        { acceptFriendRequest: I, cancelFriendRequest: S } = (0, d.u)({
             userId: t.id,
             applicationId: m,
             isGameRelationship: E,
@@ -25,23 +25,23 @@ function m(e) {
             friendToken: g
         }),
         T = i.useCallback(() => {
-            S(), y({ action: E ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
-        }, [S, E, y]),
+            I(), v({ action: E ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
+        }, [I, E, v]),
         N = i.useCallback(() => {
-            I(), y({ action: E ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
-        }, [I, E, y]),
+            S(), v({ action: E ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
+        }, [S, E, v]),
         A = null != m,
         C = (0, c.q)(m);
     return A && null == C
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(h.container, v),
+              className: a()(h.container, b),
               children: [
                   A
                       ? (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: _.NW.format(E ? _.t.syHjLC : _.t.V15uUF, {
-                                username: b,
+                            children: p.NW.format(E ? p.t.syHjLC : p.t.V15uUF, {
+                                username: y,
                                 applicationIcon: () =>
                                     (0, r.jsx)(
                                         u.Z,
@@ -57,7 +57,7 @@ function m(e) {
                         })
                       : (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: _.NW.format(_.t.uIomX1, { username: b })
+                            children: p.NW.format(p.t.uIomX1, { username: y })
                         }),
                   (0, r.jsxs)('div', {
                       className: h.buttonContainer,
@@ -68,7 +68,7 @@ function m(e) {
                               size: s.zxk.Sizes.SMALL,
                               className: h.button,
                               onClick: T,
-                              children: _.NW.string(_.t.ZcibdX)
+                              children: p.NW.string(p.t.ZcibdX)
                           }),
                           (0, r.jsx)(s.zxk, {
                               look: s.zxk.Looks.FILLED,
@@ -76,7 +76,7 @@ function m(e) {
                               size: s.zxk.Sizes.SMALL,
                               className: h.button,
                               onClick: N,
-                              children: _.NW.string(_.t.xuio0N)
+                              children: p.NW.string(p.t.xuio0N)
                           })
                       ]
                   })

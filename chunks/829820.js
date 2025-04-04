@@ -1,6 +1,6 @@
 n.d(t, {
-    Fe: () => y,
-    Ih: () => b,
+    Fe: () => v,
+    Ih: () => y,
     Lz: () => O
 }),
     n(47120);
@@ -14,8 +14,8 @@ var r = n(192379),
     u = n(768419),
     d = n(300020),
     f = n(456190),
-    p = n(239470),
-    _ = n(894344),
+    _ = n(239470),
+    p = n(894344),
     h = n(203777),
     m = n(616922);
 let g = 30 * l.Z.Millis.SECOND;
@@ -42,14 +42,14 @@ function E(e) {
         }
     );
 }
-function v(e, t) {
-    return (0, i.cj)([u.Z, s.default], () => (0, p.Z)(u.Z, s.default, t, e), [e, t]);
+function b(e, t) {
+    return (0, i.cj)([u.Z, s.default], () => (0, _.Z)(u.Z, s.default, t, e), [e, t]);
 }
-function b(e, t, n) {
-    let i = v(e, t),
+function y(e, t, n) {
+    let i = b(e, t),
         { notPlayable: o, isCurrentUser: a, playingSameTrack: s } = i,
         { loading: l, startLoading: c, clearLoading: u } = E(i),
-        p = r.useCallback(() => {
+        _ = r.useCallback(() => {
             c(), (0, h.Z)(i, m.kG.USER_ACTIVITY_PLAY, n).catch(u);
         }, [i, n, c, u]);
     return {
@@ -57,34 +57,34 @@ function b(e, t, n) {
         tooltip: (0, f.Z)(i, m.kG.USER_ACTIVITY_PLAY),
         disabled: !l && (a || o || s),
         loading: l,
-        onClick: p,
+        onClick: _,
         spotifyData: i
     };
 }
-function y(e, t, n, i) {
+function v(e, t, n, i) {
     let o = null != i ? i : c.ZP.getName(t),
-        a = v(e, t),
-        { notPlayable: s, syncingWithUser: l, syncingWithParty: u, isCurrentUser: p } = a,
-        { loading: h, startLoading: g, clearLoading: b } = E(a),
-        y = r.useCallback(() => {
-            g(), (0, _.Z)(a, m.kG.USER_ACTIVITY_SYNC, n).catch(b);
-        }, [a, n, g, b]);
+        a = b(e, t),
+        { notPlayable: s, syncingWithUser: l, syncingWithParty: u, isCurrentUser: _ } = a,
+        { loading: h, startLoading: g, clearLoading: y } = E(a),
+        v = r.useCallback(() => {
+            g(), (0, p.Z)(a, m.kG.USER_ACTIVITY_SYNC, n).catch(y);
+        }, [a, n, g, y]);
     return {
         label: (0, d.Z)(a, m.kG.USER_ACTIVITY_SYNC),
         tooltip: (0, f.Z)(a, m.kG.USER_ACTIVITY_SYNC, o),
-        disabled: !h && (s || p || l || u),
+        disabled: !h && (s || _ || l || u),
         loading: h,
-        onClick: y,
+        onClick: v,
         spotifyData: a
     };
 }
 function O(e, t, n) {
-    let i = v(e, t),
+    let i = b(e, t),
         { notPlayable: o, syncingWithUser: a, syncingWithParty: s, isCurrentUser: l } = i,
-        { loading: c, startLoading: u, clearLoading: p } = E(i),
+        { loading: c, startLoading: u, clearLoading: _ } = E(i),
         h = r.useCallback(() => {
-            u(), (0, _.Z)(i, m.kG.EMBED_SYNC, n).catch(p);
-        }, [i, n, u, p]);
+            u(), (0, p.Z)(i, m.kG.EMBED_SYNC, n).catch(_);
+        }, [i, n, u, _]);
     return {
         label: (0, d.Z)(i, m.kG.EMBED_SYNC),
         tooltip: (0, f.Z)(i, m.kG.EMBED_SYNC),

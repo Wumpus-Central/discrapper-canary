@@ -1,6 +1,6 @@
 n.d(t, {
-    vg: () => _,
-    w7: () => p
+    vg: () => p,
+    w7: () => _
 });
 var r = n(961742),
     i = n(295415),
@@ -18,8 +18,8 @@ function u(e) {
 }
 async function d(e, t, n, a, s) {
     try {
-        let l;
-        let u = n ? (0, r.Kk)(t, n) : t,
+        let l,
+            u = n ? (0, r.Kk)(t, n) : t,
             d = (0, i.b)(t);
         if (s) {
             let e = await s(u);
@@ -40,11 +40,11 @@ function f(e, { preferredFontFormat: t }) {
           })
         : e;
 }
-function p(e) {
+function _(e) {
     return -1 !== e.search(a);
 }
-async function _(e, t, n) {
-    if (!p(e)) return e;
+async function p(e, t, n) {
+    if (!_(e)) return e;
     let r = f(e, n);
     return u(r).reduce((e, r) => e.then((e) => d(e, r, t, n)), Promise.resolve(r));
 }

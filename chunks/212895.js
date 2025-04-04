@@ -1,6 +1,6 @@
 n.d(t, {
     DE: () => g,
-    gr: () => v,
+    gr: () => b,
     i1: () => m,
     tD: () => E
 }),
@@ -16,7 +16,7 @@ var r = n(192379),
     u = n(74538),
     d = n(981631),
     f = n(474936);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -71,9 +71,9 @@ function E(e, t, n) {
     let r = c.Z.get(e);
     return o()(null != r, 'plan is undefined'), g(r, n, !1).includes(t);
 }
-function v(e, t, n, i, o) {
+function b(e, t, n, i, o) {
     let [a, s] = r.useReducer(
-            (e, t) => _({}, e, t),
+            (e, t) => p({}, e, t),
             null != n
                 ? {
                       paymentSourceId: n,
@@ -113,13 +113,13 @@ function v(e, t, n, i, o) {
                           });
             })();
         }, [n, d, t, i, u]);
-    let p = a.paymentSourceId !== n || null == t || !u || !0 !== a.loaded;
+    let _ = a.paymentSourceId !== n || null == t || !u || !0 !== a.loaded;
     return {
         hasFetchedSubscriptionPlans: u,
         priceOptions: a,
         setCurrency: (e) => {
             s({ currency: e });
         },
-        currencyLoading: p
+        currencyLoading: _
     };
 }

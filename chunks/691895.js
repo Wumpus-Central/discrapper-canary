@@ -9,14 +9,14 @@ function s(e) {
     return o.Z.logGroups
         .map((r) => {
             var o, s;
-            let { index: c, timestamp: d, logs: f, nativeLogs: p, serverTrace: _ } = r,
-                h = 0 === c ? (null !== (s = null === (o = i().find(f, (e) => e.log.indexOf('Logger loaded') >= 0)) || void 0 === o ? void 0 : o.timestamp) && void 0 !== s ? s : e) : d,
-                m = l(u(f, p, t, n), h),
+            let { index: c, timestamp: d, logs: f, nativeLogs: _, serverTrace: p } = r,
+                h = 0 === c ? (null != (s = null == (o = i().find(f, (e) => e.log.indexOf('Logger loaded') >= 0)) ? void 0 : o.timestamp) ? s : e) : d,
+                m = l(u(f, _, t, n), h),
                 g = 'Trace #'
                     .concat(c + 1, ' started ')
                     .concat((0, a.Ye)(d), '\n')
                     .concat(m);
-            return null != _ && (g += '\n Server trace for trace #'.concat(c + 1).concat(_)), g;
+            return null != p && (g += '\n Server trace for trace #'.concat(c + 1).concat(p)), g;
         })
         .join('\n\n');
 }
@@ -30,8 +30,8 @@ function l(e, t) {
                 .concat(e.prefix)
                 .concat(e.log, '\n')
         })),
-        a = null !== (n = i().max(o.map((e) => e.totalTime.length))) && void 0 !== n ? n : 0,
-        s = null !== (r = i().max(o.map((e) => e.deltaTime.length))) && void 0 !== r ? r : 0;
+        a = null != (n = i().max(o.map((e) => e.totalTime.length))) ? n : 0,
+        s = null != (r = i().max(o.map((e) => e.deltaTime.length))) ? r : 0;
     return o
         .map((e) => {
             let { totalTime: t, deltaTime: n, log: r } = e;
@@ -71,7 +71,7 @@ function u(e, t, n, r) {
             log: r,
             shouldKeep: l
         };
-        p(e, u), c && ((o += '| '), a.push(u));
+        _(e, u), c && ((o += '| '), a.push(u));
     });
     let s = !1;
     return e.filter((e) => !(s && e.log.includes('\u21AA')) && !(s = (!r && '\uD83C\uDFA8' === e.emoji) || !1 === e.shouldKeep));
@@ -83,7 +83,7 @@ function f(e) {
     let t = null == e.tag ? e.label : ''.concat(e.label, ' ').concat(e.tag);
     return t.includes('_START') && (t = 'Start ' + t.replace('_START', '')), t.includes('_END') && (t = 'Finish ' + t.replace('_END', '')), t;
 }
-function p(e, t) {
+function _(e, t) {
     let n = 0;
     for (; n < e.length; n++) {
         let { timestamp: r } = e[n];

@@ -13,7 +13,7 @@ function u(e, t) {
         playSound: r.useCallback(() => {
             var n;
             return (
-                !!u({ volume: (0, o.Z)(null !== (n = null == e ? void 0 : e.volume) && void 0 !== n ? n : 1, s.AY.getSetting()) }) &&
+                !!u({ volume: (0, o.Z)(null != (n = null == e ? void 0 : e.volume) ? n : 1, s.AY.getSetting()) }) &&
                 (l.default.track(c.rMx.SOUNDMOJI_PLAY, {
                     guild_id: null == t ? void 0 : t.guild_id,
                     channel_id: null == t ? void 0 : t.id,

@@ -14,7 +14,7 @@ var n,
 let m = _.j_.MAIN_NAVIGATION_MENU;
 class N extends (r = i.PureComponent) {
     render() {
-        let e = (0, d.f)(this.context.router),
+        let e = (0, d.fQ)(this.context.router),
             { isOpen: t, dropdownLinks: a, TrackClick: n, avoidRouter: s, id: r, 'aria-label': i } = this.props,
             o = a.map((t, a) =>
                 t.divider

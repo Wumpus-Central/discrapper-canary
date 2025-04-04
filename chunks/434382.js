@@ -9,7 +9,7 @@ var r = n(152057),
     u = n(425128),
     d = n(994752),
     f = n(276344);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,20 +22,20 @@ function p(e, t, n) {
         e
     );
 }
-let _ = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
+let p = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
     h = 3,
     m = 5,
     g = 900000,
     E = new Map(),
-    v = new Set(),
-    b = new Map();
-function y(e, t) {
+    b = new Set(),
+    y = new Map();
+function v(e, t) {
     return ''.concat(e, ':').concat(t);
 }
 function O(e, t) {
     var n;
-    let r = y(e, t);
-    if (v.has(r) || (null !== (n = b.get(r)) && void 0 !== n ? n : 0) > h) return !1;
+    let r = v(e, t);
+    if (b.has(r) || (null != (n = y.get(r)) ? n : 0) > h) return !1;
     if (l.Z.getGuildId() !== e) return;
     if (
         !(0, f.NM)({
@@ -47,35 +47,35 @@ function O(e, t) {
     )
         return !1;
     let i = s.Z.getIdleSince();
-    return !(null != i && Date.now() - i > g);
-}
-function S() {
-    for (let e in E) clearTimeout(E.get(e)), E.delete(e);
+    return !(null != i && Date.now() - i > g) && !0;
 }
 function I() {
+    for (let e in E) clearTimeout(E.get(e)), E.delete(e);
+}
+function S() {
     var e;
-    S();
+    I();
     let t = l.Z.getGuildId();
-    if (null == t || !O(t, _)) return;
-    let n = d.Z.getLeaderboardResponse(t, _),
+    if (null == t || !O(t, p)) return;
+    let n = d.Z.getLeaderboardResponse(t, p),
         r = setTimeout(
             () =>
                 T({
                     guildId: t,
-                    leaderboardId: _
+                    leaderboardId: p
                 }),
-            Math.max(0, (null !== (e = null == n ? void 0 : n.expires_at) && void 0 !== e ? e : Date.now()) - Date.now())
+            Math.max(0, (null != (e = null == n ? void 0 : n.expires_at) ? e : Date.now()) - Date.now())
         ),
-        i = y(t, _);
+        i = v(t, p);
     E.set(i, r);
 }
 async function T(e) {
     let { guildId: t, leaderboardId: n, force: r = !1 } = e;
     if (!(O(t, n) || r)) return;
-    let o = y(t, n);
-    if (!v.has(o))
+    let o = v(t, n);
+    if (!b.has(o))
         try {
-            v.add(o);
+            b.add(o);
             let e = await (0, u.pV)({
                     guildId: t,
                     leaderboardId: n,
@@ -101,13 +101,13 @@ async function T(e) {
                 leaderboardResponse: e,
                 intervalOffset: 0
             }),
+                y.delete(o),
                 b.delete(o),
-                v.delete(o),
-                I();
+                S();
         } catch (i) {
             var a;
-            let e = (null !== (a = b.get(o)) && void 0 !== a ? a : 0) + 1;
-            if ((b.set(o, e), !O(t, n))) return;
+            let e = (null != (a = y.get(o)) ? a : 0) + 1;
+            if ((y.set(o, e), !O(t, n))) return;
             let r = 1000 * Math.pow(m, e);
             E.set(
                 o,
@@ -124,10 +124,10 @@ async function T(e) {
         }
 }
 function N() {
-    I();
+    S();
 }
 function A() {
-    S(), (E = new Map()), (v = new Set()), (b = new Map()), N();
+    I(), (E = new Map()), (b = new Set()), (y = new Map()), N();
 }
 class C extends o.Z {
     fetchLeaderboard(e) {
@@ -135,7 +135,7 @@ class C extends o.Z {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'actions', {
+            _(this, 'actions', {
                 POST_CONNECTION_OPEN: A,
                 CONNECTION_CLOSED: N,
                 WINDOW_FOCUS: N,

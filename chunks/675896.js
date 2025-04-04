@@ -9,15 +9,15 @@ var r = n(524437),
 let u = c.E.NONE,
     d = window.matchMedia('(prefers-color-scheme: dark)'),
     f = window.matchMedia('(prefers-color-scheme: light)'),
-    p = window.matchMedia('(inverted-colors: inverted)'),
-    _ = window.matchMedia('(prefers-contrast: more)'),
+    _ = window.matchMedia('(inverted-colors: inverted)'),
+    p = window.matchMedia('(prefers-contrast: more)'),
     h = window.matchMedia('(forced-colors: active)');
 function m(e, t) {
     t ? (u |= e) : (u &= ~e);
 }
 let g = {
     init() {
-        l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), a.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), f.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(f), _.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(_), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), p.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(p), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
+        l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), a.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), f.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(f), p.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(p), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
     },
     getActiveFeatures: () => u,
     handlePrefersColorSchemeDarkChanged(e) {

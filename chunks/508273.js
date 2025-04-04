@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(910200),
     x = n(358595),
     y = n(981631),
-    E = n(388032),
-    v = n(583136);
+    v = n(388032),
+    E = n(583136);
 function O(e) {
     let { guild: t, invite: n } = e,
         a = i.useRef(null),
@@ -55,22 +55,22 @@ function O(e) {
     return null == w
         ? (0, r.jsx)(x.Z, {})
         : (0, r.jsxs)(s.P3F, {
-              className: l()(v.guildInviteContainer, { [v.clickable]: j && O }),
+              className: l()(E.guildInviteContainer, { [E.clickable]: j && O }),
               onClick: Z,
               style: R,
               children: [
                   (0, r.jsxs)('div', {
-                      className: v.cardHeightMeasure,
+                      className: E.cardHeightMeasure,
                       ref: a,
                       children: [
                           (0, r.jsx)(b.Z7, {
                               profile: w,
-                              className: v.banner
+                              className: E.banner
                           }),
                           (0, r.jsx)(b.N3, { profile: w }),
                           (0, r.jsx)(g.Z, { profile: w }),
                           (0, r.jsxs)('div', {
-                              className: v.mainContent,
+                              className: E.mainContent,
                               children: [
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
@@ -89,25 +89,25 @@ function O(e) {
                             color: s.zxk.Colors.TRANSPARENT,
                             size: s.zxk.Sizes.NONE,
                             onClick: k,
-                            className: v.hideDetailsButton,
-                            innerClassName: v.hideDetailsButtonInner,
+                            className: E.hideDetailsButton,
+                            innerClassName: E.hideDetailsButtonInner,
                             children: (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'interactive-normal',
-                                children: E.NW.string(E.t.xdCLeH)
+                                children: v.NW.string(v.t.xdCLeH)
                             })
                         })
                       : null,
                   (0, r.jsxs)('div', {
-                      className: l()(v.footer, { [v.floatingFooter]: j }),
+                      className: l()(E.footer, { [E.floatingFooter]: j }),
                       children: [
-                          j && O ? (0, r.jsx)('div', { className: v.gradient }) : null,
+                          j && O ? (0, r.jsx)('div', { className: E.gradient }) : null,
                           (0, r.jsxs)('div', {
-                              className: v.footerContent,
+                              className: E.footerContent,
                               children: [
-                                  (0, r.jsx)('div', { className: v.separator }),
+                                  (0, r.jsx)('div', { className: E.separator }),
                                   (0, r.jsx)('div', {
-                                      className: v.buttonContainer,
+                                      className: E.buttonContainer,
                                       children: (0, r.jsx)(f.Z, {
                                           profile: w,
                                           submitting: I,

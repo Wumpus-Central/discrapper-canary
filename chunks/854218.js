@@ -16,7 +16,7 @@ function a(e) {
         a = 0;
     if (o) {
         var l;
-        a = null !== (l = e instanceof r.ZP ? e.premiumSubscriberCount : e.premiumSubscriptionCount) && void 0 !== l ? l : 0;
+        a = null != (l = e instanceof r.ZP ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ? l : 0;
     }
     let c = e instanceof r.ZP ? e.premiumTier : i.Eu4.NONE;
     return {

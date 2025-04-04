@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -57,8 +57,8 @@ function d(e, t) {
     );
 }
 let f = {},
-    p = {};
-function _(e) {
+    _ = {};
+function p(e) {
     let { applicationId: t } = e;
     f = d(c({}, f), { [t]: 1 });
 }
@@ -70,11 +70,11 @@ function m(e) {
     let { applicationId: t, assets: n } = e;
     if (null != n) {
         var r;
-        p[t] = {
-            assets: null !== (r = o().keyBy(n, 'name')) && void 0 !== r ? r : {},
+        _[t] = {
+            assets: null != (r = o().keyBy(n, 'name')) ? r : {},
             lastUpdated: Date.now()
         };
-    } else delete p[t];
+    } else delete _[t];
 }
 function g(e) {
     let { assets: t } = e,
@@ -83,8 +83,8 @@ function g(e) {
         var r;
         let i = t[e];
         (n[e] = 2),
-            (p[e] = {
-                assets: null !== (r = o().keyBy(i, 'name')) && void 0 !== r ? r : {},
+            (_[e] = {
+                assets: null != (r = o().keyBy(i, 'name')) ? r : {},
                 lastUpdated: Date.now()
             });
     }
@@ -93,7 +93,7 @@ function g(e) {
 class E extends (r = a.ZP.Store) {
     getApplicationAssetFetchState(e) {
         var t;
-        return null !== (t = f[e]) && void 0 !== t ? t : 0;
+        return null != (t = f[e]) ? t : 0;
     }
     getFetchingIds() {
         return [
@@ -109,12 +109,12 @@ class E extends (r = a.ZP.Store) {
         ];
     }
     getApplicationAssets(e) {
-        return p[e];
+        return _[e];
     }
 }
 l(E, 'displayName', 'ApplicationAssetsStore');
-let v = new E(s.Z, {
-    APPLICATION_ASSETS_FETCH: _,
+let b = new E(s.Z, {
+    APPLICATION_ASSETS_FETCH: p,
     APPLICATION_ASSETS_FETCH_SUCCESS: h,
     APPLICATION_ASSETS_UPDATE: m,
     EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: g,

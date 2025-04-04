@@ -36,17 +36,17 @@ let s = {
             u = (0, i.Z)(t, { altBoundary: !0 }),
             d = o(c, r),
             f = o(u, s, l),
-            p = a(d),
-            _ = a(f);
+            _ = a(d),
+            p = a(f);
         (t.modifiersData[n] = {
             referenceClippingOffsets: d,
             popperEscapeOffsets: f,
-            isReferenceHidden: p,
-            hasPopperEscaped: _
+            isReferenceHidden: _,
+            hasPopperEscaped: p
         }),
             (t.attributes.popper = Object.assign({}, t.attributes.popper, {
-                'data-popper-reference-hidden': p,
-                'data-popper-escaped': _
+                'data-popper-reference-hidden': _,
+                'data-popper-escaped': p
             }));
     }
 };

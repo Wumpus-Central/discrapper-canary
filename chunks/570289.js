@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(682404),
     i = n(657006),
     o = n(665771),
@@ -24,15 +24,15 @@ function d(e, t) {
     return n + String(i) + a + (0, l.Z)(o, 2);
 }
 function f(e, t) {
-    return e % 60 == 0 ? (e > 0 ? '-' : '+') + (0, l.Z)(Math.abs(e) / 60, 2) : p(e, t);
+    return e % 60 == 0 ? (e > 0 ? '-' : '+') + (0, l.Z)(Math.abs(e) / 60, 2) : _(e, t);
 }
-function p(e, t) {
+function _(e, t) {
     var n = t || '',
         r = e > 0 ? '-' : '+',
         i = Math.abs(e);
     return r + (0, l.Z)(Math.floor(i / 60), 2) + n + (0, l.Z)(i % 60, 2);
 }
-let _ = {
+let p = {
     G: function (e, t, n) {
         var r = +(e.getUTCFullYear() > 0);
         switch (t) {
@@ -427,9 +427,9 @@ let _ = {
                 return f(i);
             case 'XXXX':
             case 'XX':
-                return p(i);
+                return _(i);
             default:
-                return p(i, ':');
+                return _(i, ':');
         }
     },
     x: function (e, t, n, r) {
@@ -439,9 +439,9 @@ let _ = {
                 return f(i);
             case 'xxxx':
             case 'xx':
-                return p(i);
+                return _(i);
             default:
-                return p(i, ':');
+                return _(i, ':');
         }
     },
     O: function (e, t, n, r) {
@@ -452,7 +452,7 @@ let _ = {
             case 'OOO':
                 return 'GMT' + d(i, ':');
             default:
-                return 'GMT' + p(i, ':');
+                return 'GMT' + _(i, ':');
         }
     },
     z: function (e, t, n, r) {
@@ -463,7 +463,7 @@ let _ = {
             case 'zzz':
                 return 'GMT' + d(i, ':');
             default:
-                return 'GMT' + p(i, ':');
+                return 'GMT' + _(i, ':');
         }
     },
     t: function (e, t, n, r) {

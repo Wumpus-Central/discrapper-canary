@@ -56,14 +56,14 @@ function u() {
                                   userSegment: e.user_segment,
                                   otherUserSegment: e.other_user_segment,
                                   isFriend: e.is_friend,
-                                  dmProbability: null !== (t = e.dm_probability) && void 0 !== t ? t : 0,
-                                  dmRank: null !== (n = e.dm_rank) && void 0 !== n ? n : 0,
-                                  vcProbability: null !== (r = e.vc_probability) && void 0 !== r ? r : 0,
-                                  vcRank: null !== (i = e.vc_rank) && void 0 !== i ? i : 0,
-                                  serverMessageProbability: null !== (o = e.server_message_probability) && void 0 !== o ? o : 0,
-                                  serverMessageRank: null !== (a = e.server_message_rank) && void 0 !== a ? a : 0,
-                                  communicationProbability: null !== (s = e.communication_probability) && void 0 !== s ? s : 0,
-                                  communicationRank: null !== (l = e.communication_rank) && void 0 !== l ? l : 0
+                                  dmProbability: null != (t = e.dm_probability) ? t : 0,
+                                  dmRank: null != (n = e.dm_rank) ? n : 0,
+                                  vcProbability: null != (r = e.vc_probability) ? r : 0,
+                                  vcRank: null != (i = e.vc_rank) ? i : 0,
+                                  serverMessageProbability: null != (o = e.server_message_probability) ? o : 0,
+                                  serverMessageRank: null != (a = e.server_message_rank) ? a : 0,
+                                  communicationProbability: null != (s = e.communication_probability) ? s : 0,
+                                  communicationRank: null != (l = e.communication_rank) ? l : 0
                               };
                           })
                       });

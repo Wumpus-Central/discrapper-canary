@@ -38,11 +38,11 @@ class a {
     hoverNode(e) {
         var t;
         let n =
-            null ===
-                (t = Array.from(this.targetNodes.entries()).find((t) => {
-                    let [n, r] = t;
-                    return e === r;
-                })) || void 0 === t
+            null ==
+            (t = Array.from(this.targetNodes.entries()).find((t) => {
+                let [n, r] = t;
+                return e === r;
+            }))
                 ? void 0
                 : t[0];
         null != n && (this.actions.hover([n], { clientOffset: o(e) }), (this.currentHoveredNode = e), this.previewer.render(this.monitor), this.announcer.announceHover(e, n), null == e || e.focus());
@@ -51,14 +51,14 @@ class a {
         var e;
         return this.focusManager.getNextFocusableElement({
             wrap: !1,
-            from: null !== (e = this.currentHoveredNode) && void 0 !== e ? e : void 0
+            from: null != (e = this.currentHoveredNode) ? e : void 0
         });
     }
     getPreviousDropTarget() {
         var e;
         return this.focusManager.getPreviousFocusableElement({
             wrap: !1,
-            from: null !== (e = this.currentHoveredNode) && void 0 !== e ? e : void 0
+            from: null != (e = this.currentHoveredNode) ? e : void 0
         });
     }
     getViableTargets(e) {

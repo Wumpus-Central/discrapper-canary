@@ -28,7 +28,7 @@ class a {
     }
     getFirstItemByType(e) {
         var t;
-        let n = (null !== (t = this.itemsByTypes.get(e)) && void 0 !== t ? t : [])[0];
+        let n = (null != (t = this.itemsByTypes.get(e)) ? t : [])[0];
         if (null != n) return n;
     }
     sortByTypes(e) {

@@ -9,20 +9,20 @@ var r = n(200651),
     u = n(271383),
     d = n(430824),
     f = n(785717),
-    p = n(221292),
-    _ = n(687158),
+    _ = n(221292),
+    p = n(687158),
     h = n(899007),
     m = n(867176),
     g = n(502762),
     E = n(952124),
-    v = n(544989),
-    b = n(4517),
-    y = n(171368),
+    b = n(544989),
+    y = n(4517),
+    v = n(171368),
     O = n(895697),
-    S = n(161572),
-    I = n(228168),
+    I = n(161572),
+    S = n(228168),
     T = n(388032),
-    N = n(913340);
+    N = n(200669);
 function A(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function C(e) {
     return e;
 }
 function R(e) {
-    let { user: t, currentUser: n, guildId: A, channelId: R, messageId: P, roleId: w, closePopout: D, setPopoutRef: x, disableUserProfileLink: L = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
+    let { user: t, currentUser: n, guildId: A, channelId: R, messageId: P, roleId: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         { analyticsLocations: k } = (0, c.ZP)([...M, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         j = (0, f.ZB)({
             layout: 'BITE_SIZE_POPOUT',
@@ -63,26 +63,26 @@ function R(e) {
             messageId: P,
             roleId: w
         }),
-        U = (0, _.ZP)(t.id, A),
+        U = (0, p.ZP)(t.id, A),
         G = (0, o.e7)([d.Z], () => (null != A ? d.Z.getGuild(A) : null)),
         B = (0, o.e7)([u.ZP], () => (null != A ? u.ZP.getMember(A, t.id) : null)),
-        Z = i.useRef(null),
-        F = (0, s.Z)(Z);
+        F = i.useRef(null),
+        V = (0, s.Z)(F);
     i.useEffect(() => {
-        null == x || x(null == Z ? void 0 : Z.current);
-    }, [Z, x]);
-    let V = (e) => {
-            null == D || D(), (0, y.openUserProfileModal)(C({ sourceAnalyticsLocations: k }, j, e));
+        null == L || L(null == F ? void 0 : F.current);
+    }, [F, L]);
+    let Z = (e) => {
+            null == D || D(), (0, v.openUserProfileModal)(C({ sourceAnalyticsLocations: k }, j, e));
         },
         H = () =>
-            L
+            x
                 ? null
                 : (0, r.jsx)(a.sNh, {
                       id: 'view-profile',
                       label: T.NW.string(T.t['+Xp3ho']),
                       action: () => {
-                          V(),
-                              (0, p.pQ)(
+                          Z(),
+                              (0, _.pQ)(
                                   C(
                                       {
                                           action: 'PRESS_VIEW_PROFILE',
@@ -99,15 +99,15 @@ function R(e) {
             value: j,
             shouldTrackViewOnMount: null == B || null != B.fullProfileLoadedTimestamp,
             children: (0, r.jsx)(a.VqE, {
-                ref: Z,
+                ref: F,
                 'aria-label': t.username,
                 children: (0, r.jsxs)(g.Z, {
                     user: t,
                     displayProfile: U,
-                    profileType: I.y0.BITE_SIZE,
+                    profileType: S.y0.BITE_SIZE,
                     children: [
-                        (0, r.jsx)(v.Z, {
-                            profileType: I.y0.BITE_SIZE,
+                        (0, r.jsx)(b.Z, {
+                            profileType: S.y0.BITE_SIZE,
                             children: (0, r.jsx)(E.Z, {
                                 user: t,
                                 guildId: A,
@@ -122,20 +122,20 @@ function R(e) {
                                     user: t,
                                     displayProfile: U,
                                     guildId: A,
-                                    profileType: I.y0.BITE_SIZE
+                                    profileType: S.y0.BITE_SIZE
                                 }),
                                 (0, r.jsx)(h.Z, {
                                     user: t,
                                     displayProfile: U,
                                     guildId: A,
                                     channelId: R,
-                                    profileType: I.y0.BITE_SIZE,
-                                    onOpenProfile: L ? void 0 : V
+                                    profileType: S.y0.BITE_SIZE,
+                                    onOpenProfile: x ? void 0 : Z
                                 }),
-                                (0, r.jsx)(b.Z, {
+                                (0, r.jsx)(y.Z, {
                                     location: 'BotUserProfilePopout',
                                     user: t,
-                                    profileType: I.y0.BITE_SIZE,
+                                    profileType: S.y0.BITE_SIZE,
                                     onCloseProfile: D
                                 })
                             ]
@@ -145,12 +145,12 @@ function R(e) {
                             currentUser: n,
                             displayProfile: U,
                             guild: G,
-                            isHovering: F,
-                            onOpenProfile: L ? void 0 : V,
+                            isHovering: V,
+                            onOpenProfile: x ? void 0 : Z,
                             channelId: R,
                             onClose: D
                         }),
-                        (0, r.jsx)(S.Z, {
+                        (0, r.jsx)(I.Z, {
                             user: t,
                             guildId: A,
                             channelId: R,

@@ -1,4 +1,4 @@
-n.d(t, { q: () => b }), n(26686), n(47120);
+n.d(t, { q: () => y }), n(26686), n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-let _ = { hashes: {} };
+let p = { hashes: {} };
 async function h() {
     if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
     await c.ZP.ensureModule('discord_media');
@@ -67,13 +67,13 @@ async function h() {
 }
 async function m() {
     try {
-        let t = (await h()).filter((e) => _.hashes[e.name] !== e.hash);
+        let t = (await h()).filter((e) => p.hashes[e.name] !== e.hash);
         for (let { name: n, hash: r, data: i } of t) {
             var e;
-            let t = p(d({}, i), { gpus: null === (e = i.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e)) });
-            s.default.track(n, t), ((_ = { hashes: d({}, _.hashes) }).hashes[n] = r);
+            let t = _(d({}, i), { gpus: null == (e = i.gpus) ? void 0 : e.map((e) => JSON.stringify(e)) });
+            s.default.track(n, t), ((p = { hashes: d({}, p.hashes) }).hashes[n] = r);
         }
-        t.length > 0 && v.emitChange();
+        t.length > 0 && b.emitChange();
     } catch (e) {}
 }
 function g() {
@@ -81,10 +81,10 @@ function g() {
 }
 class E extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (_ = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.Z);
+        (p = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.Z);
     }
     getState() {
-        return _;
+        return p;
     }
     async info() {
         try {
@@ -95,7 +95,7 @@ class E extends (r = i.ZP.PersistedStore) {
     }
 }
 u(E, 'displayName', 'SystemAnalyticsStore'), u(E, 'persistKey', 'SystemAnalyticsStore');
-let v = new E(o.Z, { START_SESSION: g });
-function b() {
-    return v.info();
+let b = new E(o.Z, { START_SESSION: g });
+function y() {
+    return b.info();
 }

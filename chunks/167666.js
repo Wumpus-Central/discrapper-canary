@@ -4,7 +4,7 @@ var r,
     a = n(120356),
     s = n.n(a),
     l = n(481060),
-    c = n(416889);
+    c = n(972849);
 function u(e, t, n) {
     return (
         t in e
@@ -46,7 +46,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,8 +112,8 @@ class g extends (r = o.PureComponent) {
     render() {
         let e = this.props,
             { className: t, children: n, tag: r, size: o, fullscreenOnMobile: a } = e,
-            l = _(e, ['className', 'children', 'tag', 'size', 'fullscreenOnMobile']);
-        return (0, i.jsx)(r, p(d({ className: s()(c.modal, t, o, { [c.fullscreenOnMobile]: a }) }, l), { children: this.renderChildren() }));
+            l = p(e, ['className', 'children', 'tag', 'size', 'fullscreenOnMobile']);
+        return (0, i.jsx)(r, _(d({ className: s()(c.modal, t, o, { [c.fullscreenOnMobile]: a }) }, l), { children: this.renderChildren() }));
     }
     constructor(e) {
         super(e),

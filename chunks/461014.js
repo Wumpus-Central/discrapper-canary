@@ -10,7 +10,7 @@ var r = n(305325),
     l = n(981631);
 let c = (e) => {
         var t, n, r, o;
-        return (0, i.K2)(e.id, 'invite') ? (null === (t = e.features) || void 0 === t ? void 0 : t.includes(l.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null === (n = e.features) || void 0 === n ? void 0 : n.includes(l.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) : (null === (r = e.features) || void 0 === r ? void 0 : r.includes(l.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !(null === (o = e.features) || void 0 === o ? void 0 : o.includes(l.oNc.PREVIEW_ENABLED));
+        return (0, i.K2)(e.id, 'invite') ? (null == (t = e.features) ? void 0 : t.includes(l.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null == (n = e.features) ? void 0 : n.includes(l.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) : (null == (r = e.features) ? void 0 : r.includes(l.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !(null == (o = e.features) ? void 0 : o.includes(l.oNc.PREVIEW_ENABLED));
     },
     u = (e) => {
         let t = a.Z.getRequest(e);

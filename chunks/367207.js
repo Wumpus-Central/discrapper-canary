@@ -14,8 +14,8 @@ var i = n(392711),
     f = n(594174),
     h = n(431),
     m = n(626135),
-    b = n(74538),
-    g = n(557457),
+    g = n(74538),
+    b = n(557457),
     E = n(970645),
     C = n(30684),
     O = n(514701),
@@ -135,14 +135,14 @@ class M extends a.Z {
             R(this, '_maybeFetchPremiumOffer', async () => {
                 let e = f.default.getCurrentUser();
                 if (null != e && e.verified) {
-                    let t = !(0, b.I5)(e) && h.Z.shouldFetchOffer();
+                    let t = !(0, g.I5)(e) && h.Z.shouldFetchOffer();
                     await (0, S.T)('PremiumManager', t);
                 }
                 l.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             R(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = f.default.getCurrentUser();
-                null != e && e.verified && !(0, b.I5)(e) && C.Z.shouldFetchCheckoutRecovery() && (await (0, E.o)());
+                null != e && e.verified && !(0, g.I5)(e) && C.Z.shouldFetchCheckoutRecovery() && (await (0, E.o)());
             }),
             R(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = x.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
@@ -186,7 +186,7 @@ class M extends a.Z {
                     let d = A.NW.formatToPlainString(A.t.AbyeZG, {
                         nickname: o.userNick,
                         resolution: (0, j.o6)(o.maxResolution.height),
-                        fps: (0, g.bp)(o.maxFrameRate)
+                        fps: (0, b.bp)(o.maxFrameRate)
                     });
                     s.Z.sendNitroSystemMessage(e, d),
                         m.default.track(L.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {

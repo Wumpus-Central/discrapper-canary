@@ -43,15 +43,15 @@ function m(e) {
 let g = +f.Z.Millis.MINUTE;
 class E extends i.Z {
     _initialize() {
-        __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(u.Z, () => this._handleSpeakingStoreChanged()).set(l.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
+        __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(u.Z, () => this._handleSpeakingStoreChanged()).set(l.ZP, () => this._handleRTCConnectionStoreChanged())), this._reset());
     }
     _reset() {
         (this._currentUserSpeaking = !1), (this._anyoneElseSpeaking = !1), null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null));
     }
     _trackStartSpeaking() {
         if (this._currentUserSpeaking) {
-            let e = l.Z.getChannelId(),
-                t = l.Z.getGuildId();
+            let e = l.ZP.getChannelId(),
+                t = l.ZP.getGuildId();
             (0, _.yw)(
                 p.rMx.START_SPEAKING,
                 m(
@@ -62,20 +62,20 @@ class E extends i.Z {
                         server: t,
                         channel_id: e,
                         guild_id: t,
-                        rtc_connection_id: l.Z.getRTCConnectionId(),
-                        media_session_id: l.Z.getMediaSessionId(),
+                        rtc_connection_id: l.ZP.getRTCConnectionId(),
+                        media_session_id: l.ZP.getMediaSessionId(),
                         voice_state_count: d.ZP.countVoiceStatesForChannel(this._voiceChannelId)
                     },
                     this.getGameMetadata(),
-                    l.Z.getPacketStats()
+                    l.ZP.getPacketStats()
                 )
             );
         }
     }
     _trackStartListening() {
         if (s.Z.isDeaf() || !this._anyoneElseSpeaking) return;
-        let e = l.Z.getChannelId(),
-            t = l.Z.getGuildId();
+        let e = l.ZP.getChannelId(),
+            t = l.ZP.getGuildId();
         (0, _.yw)(
             p.rMx.START_LISTENING,
             m(
@@ -86,8 +86,8 @@ class E extends i.Z {
                     server: t,
                     channel_id: e,
                     guild_id: t,
-                    rtc_connection_id: l.Z.getRTCConnectionId(),
-                    media_session_id: l.Z.getMediaSessionId(),
+                    rtc_connection_id: l.ZP.getRTCConnectionId(),
+                    media_session_id: l.ZP.getMediaSessionId(),
                     voice_state_count: d.ZP.countVoiceStatesForChannel(this._voiceChannelId)
                 },
                 this.getGameMetadata()
@@ -95,7 +95,7 @@ class E extends i.Z {
         );
     }
     _terminate() {
-        this._reset(), u.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
+        this._reset(), u.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.ZP.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
         let e = c.Z.findActivity((e) => e.type === p.IIU.PLAYING),
@@ -114,7 +114,7 @@ class E extends i.Z {
             h(this, '_voiceChannelId', void 0),
             h(this, '_reportInterval', void 0),
             h(this, '_handleRTCConnectionStoreChanged', () => {
-                let e = l.Z.getChannelId();
+                let e = l.ZP.getChannelId();
                 if (this._voiceChannelId !== e) {
                     if (((this._voiceChannelId = e), null == e)) return void this._reset();
                     null == this._reportInterval &&

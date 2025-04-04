@@ -8,7 +8,7 @@ function l(e, t, n, l) {
     if (e.state === a.jm8.RECONNECTING) {
         var c;
         let e = (0, i.tc)({ location: 'getScreenMessageForStream' }),
-            t = null === (c = (0, r.hp)(r.u.STREAM_RECONNECTING)) || void 0 === c ? void 0 : c.errorCode;
+            t = null == (c = (0, r.hp)(r.u.STREAM_RECONNECTING)) ? void 0 : c.errorCode;
         return {
             mainText: s.NW.string(s.t.pdFFKy),
             supportingText: s.NW.string(s.t['+PuO2N']),

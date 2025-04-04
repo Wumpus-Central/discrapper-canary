@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var i,
     o = n(442837),
     a = n(570140),
@@ -57,8 +57,8 @@ function f(e, t) {
         e
     );
 }
-let p = 14 * s.Z.Millis.DAY,
-    _ = Object.freeze([]),
+let _ = 14 * s.Z.Millis.DAY,
+    p = Object.freeze([]),
     h = {},
     m = {};
 function g(e) {
@@ -70,7 +70,7 @@ function g(e) {
             attachments: i,
             reportSubmit: !1
         },
-        a = null !== (t = m[r]) && void 0 !== t ? t : _;
+        a = null != (t = m[r]) ? t : p;
     (m[r] = [...a, o]), (h[n] = o);
 }
 function E(e) {
@@ -78,14 +78,14 @@ function E(e) {
         r = m[n];
     null != r && ((m[n] = r.map((e) => (e.messageId === t ? f(u({}, e), { reportSubmit: !0 }) : e))), (h[t] = f(u({}, h[t]), { reportSubmit: !0 })));
 }
-function v() {
-    y();
+function b() {
+    v();
 }
-function b(e) {
+function y(e) {
     let { explicitContentScanVersion: t } = e;
-    (r = t), y();
+    (r = t), v();
 }
-function y() {
+function v() {
     (h = {}), (m = {});
 }
 class O extends (i = o.ZP.Store) {
@@ -94,20 +94,20 @@ class O extends (i = o.ZP.Store) {
     }
     getChannelFpInfo(e) {
         var t;
-        return null !== (t = m[e]) && void 0 !== t ? t : _;
+        return null != (t = m[e]) ? t : p;
     }
     canSubmitFpReport(e) {
         let t = h[e];
-        return null != t && !t.reportSubmit && l.default.age(t.messageId) < p;
+        return null != t && !t.reportSubmit && l.default.age(t.messageId) < _;
     }
     get validContentScanVersion() {
         return r;
     }
 }
 c(O, 'displayName', 'FalsePositiveStore');
-let S = new O(a.Z, {
-    LOGOUT: v,
-    CONNECTION_OPEN: b,
+let I = new O(a.Z, {
+    LOGOUT: b,
+    CONNECTION_OPEN: y,
     MESSAGE_EXPLICIT_CONTENT_FP_CREATE: g,
     MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: E
 });

@@ -9,20 +9,20 @@ var r = n(200651),
     u = n(239091),
     d = n(100527),
     f = n(906732),
-    _ = n(927723),
-    p = n(645727),
+    _ = n(797610),
+    p = n(927723),
     h = n(124072),
     m = n(184301),
     g = n(347475),
     E = n(592125),
     b = n(271383),
-    v = n(430824),
-    y = n(699516),
+    y = n(430824),
+    v = n(699516),
     O = n(594174),
     I = n(5192),
     S = n(51144),
     T = n(377668);
-function A(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function N(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function N(e) {
                 })
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
@@ -84,7 +84,7 @@ function P(e) {
                 null != t &&
                     (0, u.jW)(e, async () => {
                         let { default: e } = await n.e('25073').then(n.bind(n, 80742));
-                        return (n) => (0, r.jsx)(e, R(N({}, n), { userId: t }));
+                        return (n) => (0, r.jsx)(e, R(A({}, n), { userId: t }));
                     });
             },
             [t]
@@ -97,7 +97,7 @@ function P(e) {
     });
 }
 function w(e) {
-    let { className: t, userId: i, channelId: o, parsedUserId: p, content: A, inlinePreview: C = !1, viewingChannelId: w } = e,
+    let { className: t, userId: i, channelId: o, parsedUserId: p, content: N, inlinePreview: C = !1, viewingChannelId: w } = e,
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
         L = (0, l.e7)([O.default], () => O.default.getUser(i)),
         x = (0, l.e7)([E.Z], () => E.Z.getChannel(o)),
@@ -108,11 +108,11 @@ function w(e) {
                 : (e) => {
                       null != x &&
                           (0, u.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('13351'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('25250')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('13351'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('20204')]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
-                                      R(N({}, t), {
+                                      R(A({}, t), {
                                           viewingChannelId: w,
                                           user: L,
                                           channel: x,
@@ -122,20 +122,20 @@ function w(e) {
                           });
                   },
         j = S.ZP.useName(L),
-        U = (0, l.e7)([E.Z, b.ZP, y.Z], () => I.ZP.getNickname(M, o, L)),
-        G = v.Z.getGuild(M),
+        U = (0, l.e7)([E.Z, b.ZP, v.Z], () => I.ZP.getNickname(M, o, L)),
+        G = y.Z.getGuild(M),
         B = (0, _.Ib)(G, x) && i === T.fL ? T.jM : null;
     if (null == L)
         return (0, r.jsx)(P, {
             userId: p,
             className: t,
-            children: A
+            children: N
         });
     let F = (e) =>
         (0, r.jsx)(
             h.Z,
             R(
-                N(
+                A(
                     {
                         className: t,
                         onContextMenu: k,
@@ -166,7 +166,7 @@ function w(e) {
                       a()(null != L, 'Unexpected missing user'),
                       (0, r.jsx)(
                           g.Z,
-                          N(
+                          A(
                               {
                                   userId: L.id,
                                   guildId: null != M ? M : void 0,

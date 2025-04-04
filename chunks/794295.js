@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,27 +81,27 @@ function m(e, t) {
 }
 let g = 1,
     E = i.memo(function (e) {
-        let { onClick: t, trusted: n, title: o, href: d, children: p, messageId: m, channelId: E } = e,
-            v = h(e, ['onClick', 'trusted', 'title', 'href', 'children', 'messageId', 'channelId']),
-            { analyticsLocations: b } = (0, c.ZP)(l.Z.MASKED_LINK),
-            y = i.useCallback((t) => (0, u.q)(e, t, b), [b, e]),
+        let { onClick: t, trusted: n, title: o, href: d, children: _, messageId: m, channelId: E } = e,
+            b = h(e, ['onClick', 'trusted', 'title', 'href', 'children', 'messageId', 'channelId']),
+            { analyticsLocations: y } = (0, c.ZP)(l.Z.MASKED_LINK),
+            v = i.useCallback((t) => (0, u.q)(e, t, y), [y, e]),
             O = i.useCallback(
                 (e) => {
-                    e.button === g && y(e);
+                    e.button === g && v(e);
                 },
-                [y]
+                [v]
             ),
-            S = a().sanitizeUrl(d);
+            I = a().sanitizeUrl(d);
         return (0, r.jsx)(
             s.eee,
-            _(f({}, v), {
+            p(f({}, b), {
                 title: o,
                 target: '_blank',
                 rel: 'noreferrer noopener',
-                href: S,
-                onClick: y,
+                href: I,
+                onClick: v,
                 onAuxClick: O,
-                children: null != p ? p : o
+                children: null != _ ? _ : o
             })
         );
     });

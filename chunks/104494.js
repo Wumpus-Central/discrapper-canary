@@ -1,5 +1,5 @@
 n.d(t, {
-    Ng: () => p,
+    Ng: () => _,
     Wp: () => d,
     kA: () => u
 }),
@@ -16,7 +16,7 @@ function u(e) {
 }
 function d(e, t) {
     var n;
-    return null != e && new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map((e) => c.GP[e].skuId)).has(t);
+    return null != e && new Set(null == (n = e.discount) ? void 0 : n.plan_ids.map((e) => c.GP[e].skuId)).has(t);
 }
 function f(e, t) {
     let n = (0, i.e7)([s.Z], () => s.Z.getUserDiscountOffer(e)),
@@ -38,11 +38,11 @@ function f(e, t) {
         c || (f && !t) ? null : n
     );
 }
-function p() {
+function _() {
     var e, t;
     let n = f(c.hs),
         r = f(c.RU),
         i = f(c.rB),
         o = f(c.ih);
-    return null !== (t = null !== (e = null != n ? n : r) && void 0 !== e ? e : i) && void 0 !== t ? t : o;
+    return null != (t = null != (e = null != n ? n : r) ? e : i) ? t : o;
 }

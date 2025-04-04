@@ -40,14 +40,14 @@ var s = (function () {
                 key: 'document',
                 get: function () {
                     var e;
-                    return null !== (e = this.globalContext) && void 0 !== e && e.document ? this.globalContext.document : this.window ? this.window.document : void 0;
+                    return null != (e = this.globalContext) && e.document ? this.globalContext.document : this.window ? this.window.document : void 0;
                 }
             },
             {
                 key: 'rootElement',
                 get: function () {
                     var e;
-                    return (null === (e = this.optionsArgs) || void 0 === e ? void 0 : e.rootElement) || this.window;
+                    return (null == (e = this.optionsArgs) ? void 0 : e.rootElement) || this.window;
                 }
             }
         ]),

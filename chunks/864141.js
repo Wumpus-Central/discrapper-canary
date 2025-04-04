@@ -17,8 +17,8 @@ var i = n(120356),
     g = n(430824),
     E = n(957575),
     b = n(323038),
-    v = n(960870),
-    y = n(139793),
+    y = n(960870),
+    v = n(139793),
     O = n(652853),
     I = n(336383),
     S = n(194811),
@@ -30,7 +30,7 @@ var i = n(120356),
     P = n(670451),
     w = n(228168),
     D = n(388032),
-    L = n(24981);
+    L = n(227832);
 function x(e, t, n) {
     return (
         t in e
@@ -88,14 +88,14 @@ function U(e) {
         { profileType: U } = (0, O.z)(),
         G = { [L.fullSize]: U === w.y0.FULL_SIZE },
         { analyticsLocations: B } = (0, d.ZP)(u.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
-        F = (0, v.Z)({
+        F = (0, y.Z)({
             display: 'voice',
             activity: { type: 'VOICE' },
             voiceChannelId: i.id,
             user: t,
             analyticsLocations: B
         }),
-        V = (0, y.Z)({
+        V = (0, v.Z)({
             userId: t.id,
             onAction: F
         }),

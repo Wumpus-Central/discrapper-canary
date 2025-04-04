@@ -80,7 +80,7 @@ class u {
         }
     }
     static initialize() {
-        !this.initialized &&
+        this.initialized ||
             (i.d.setCallbacks({
                 status: (e) => this.onStatus(e),
                 response: (e, t) => this.onResponse(e, t)

@@ -18,23 +18,23 @@ let a = '#ffffff',
         if (null == d) return null;
         let f = r.Z.parseString(c);
         if (null == f) return null;
-        let p = (0, i.AZ)(f.red, f.blue, f.green),
-            _ =
-                null !==
-                    (t = (0, i.k8)({
-                        colors: [(0, i.j)(f, 0.6, !0), u],
-                        ratio: 3,
-                        saturationFactor: l
-                    })) && void 0 !== t
+        let _ = (0, i.AZ)(f.red, f.blue, f.green),
+            p =
+                null !=
+                (t = (0, i.k8)({
+                    colors: [(0, i.j)(f, 0.6, !0), u],
+                    ratio: 3,
+                    saturationFactor: l
+                }))
                     ? t
                     : f,
             h =
-                null !==
-                    (n = (0, i.k8)({
-                        colors: [(0, i.j)(f, 0.6, !1), d],
-                        ratio: 5,
-                        saturationFactor: l
-                    })) && void 0 !== n
+                null !=
+                (n = (0, i.k8)({
+                    colors: [(0, i.j)(f, 0.6, !1), d],
+                    ratio: 5,
+                    saturationFactor: l
+                }))
                     ? n
                     : f,
             m = (0, i.k8)({
@@ -51,11 +51,11 @@ let a = '#ffffff',
             LIGHT: {
                 accentColor: null == m ? void 0 : m.toHexString(),
                 backgroundColor: (0, i.xj)({
-                    colorRGB: _,
+                    colorRGB: p,
                     saturationFactor: l
                 }),
                 highlightColor: null == f ? void 0 : f.toHexString(),
-                opacity: (null == p ? void 0 : p.saturation) < 0.1 ? 0.35 : 0.1
+                opacity: (null == _ ? void 0 : _.saturation) < 0.1 ? 0.35 : 0.1
             },
             DARK: {
                 accentColor: null == g ? void 0 : g.toHexString(),
@@ -64,7 +64,7 @@ let a = '#ffffff',
                     saturationFactor: l
                 }),
                 highlightColor: null == f ? void 0 : f.toHexString(),
-                opacity: (null == p ? void 0 : p.saturation) < 0.1 ? 0.5 : 0.2
+                opacity: (null == _ ? void 0 : _.saturation) < 0.1 ? 0.5 : 0.2
             }
         };
     },
@@ -91,6 +91,6 @@ let a = '#ffffff',
             backgroundColor: null == o ? void 0 : o.backgroundColor,
             accentColor: null == o ? void 0 : o.accentColor,
             highlightColor: null == o ? void 0 : o.highlightColor,
-            opacity: null !== (r = null == o ? void 0 : o.opacity) && void 0 !== r ? r : 0.15
+            opacity: null != (r = null == o ? void 0 : o.opacity) ? r : 0.15
         };
     };

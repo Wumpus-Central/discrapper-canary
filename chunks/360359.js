@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var r = n(654861),
     i = n.n(r),
     o = n(108131),
@@ -14,7 +14,7 @@ function f(e, t, n) {
         a = null != n ? i()(n) : null;
     return !((null != o && r.lesser(o)) || (null != a && r.greater(a)));
 }
-function p(e) {
+function _(e) {
     let t, n;
     for (let [r, i] of e)
         switch (r) {
@@ -29,22 +29,22 @@ function p(e) {
         max: n
     };
 }
-let _ = {
+let p = {
     [a().v3('guild_ids')]: (e) => {
         let t = [];
         for (let [n, r] of e) n === a().v3('guild_ids') && (t = r);
         return (e) => t.includes(e);
     },
     [a().v3('guild_id_range')]: (e) => {
-        let { min: t, max: n } = p(e);
+        let { min: t, max: n } = _(e);
         return (e) => f(e, t, n);
     },
     [a().v3('guild_age_range_days')]: (e) => {
-        let { min: t, max: n } = p(e);
+        let { min: t, max: n } = _(e);
         return (e) => f(Math.floor(d.default.age(e) / u.Z.Millis.DAY), t, n);
     },
     [a().v3('guild_member_count_range')]: (e) => {
-        let { min: t, max: n } = p(e);
+        let { min: t, max: n } = _(e);
         return (e) => {
             let r = l.Z.getMemberCount(e);
             return null != r && f(r, t, n);
@@ -54,7 +54,7 @@ let _ = {
         let [[, t]] = e;
         return (e) => {
             var n;
-            let r = null !== (n = c.Z.getGuild(e)) && void 0 !== n ? n : s.Z.getGuild(e);
+            let r = null != (n = c.Z.getGuild(e)) ? n : s.Z.getGuild(e);
             return null != r && t.some((e) => r.hasFeature(e));
         };
     },
@@ -62,7 +62,7 @@ let _ = {
         let [[, t]] = e;
         return (e) => {
             var n;
-            let r = null !== (n = c.Z.getGuild(e)) && void 0 !== n ? n : s.Z.getGuild(e);
+            let r = null != (n = c.Z.getGuild(e)) ? n : s.Z.getGuild(e);
             return null != r && 'number' == typeof r.hubType && t.some((e) => r.hubType === e);
         };
     },
@@ -70,7 +70,7 @@ let _ = {
         let [[, t]] = e;
         return (e) => {
             var n;
-            let r = null !== (n = c.Z.getGuild(e)) && void 0 !== n ? n : s.Z.getGuild(e);
+            let r = null != (n = c.Z.getGuild(e)) ? n : s.Z.getGuild(e);
             return null != r && t === (null != r.vanityURLCode);
         };
     },
@@ -83,7 +83,7 @@ let _ = {
                     break;
                 case a().v3('target'):
                     var r;
-                    n = null !== (r = parseInt(o)) && void 0 !== r ? r : 0;
+                    n = null != (r = parseInt(o)) ? r : 0;
             }
         return (e) => {
             let r = a().v3(''.concat(t, ':').concat(e));

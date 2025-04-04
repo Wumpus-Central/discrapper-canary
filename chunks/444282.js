@@ -9,36 +9,36 @@ var r = n(200651),
     u = n(476326),
     d = n(703558),
     f = n(117530),
-    p = n(859235),
-    _ = n(898463),
+    _ = n(859235),
+    p = n(898463),
     h = n(981631),
-    m = n(293788),
+    m = n(98030),
     g = n(451328);
 function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: o } = e,
         E = i.useRef(null),
-        [v, b] = i.useState(!1),
-        y = f.Z.getUpload(t, n.name, d.d.SlashCommand),
+        [b, y] = i.useState(!1),
+        v = f.Z.getUpload(t, n.name, d.d.SlashCommand),
         O = i.useRef(null),
-        S = (e) => {
+        I = (e) => {
             if (e.which === h.yXg.ENTER) {
                 var t;
-                e.preventDefault(), null === (t = E.current) || void 0 === t || t.activateUploadDialogue();
+                e.preventDefault(), null == (t = E.current) || t.activateUploadDialogue();
             }
         },
-        I = i.useCallback(() => {
-            b(!0);
+        S = i.useCallback(() => {
+            y(!0);
         }, []),
         T = i.useCallback(() => {
-            b(!1);
+            y(!1);
         }, []),
         N = i.useCallback(
             (e) => {
                 var r;
-                b(!1);
+                y(!1);
                 let i = {
                     id: n.name,
-                    file: null === (r = e.dataTransfer) || void 0 === r ? void 0 : r.files[0],
+                    file: null == (r = e.dataTransfer) ? void 0 : r.files[0],
                     platform: u.ow.WEB
                 };
                 l.Z.setFile({
@@ -53,15 +53,15 @@ function E(e) {
     i.useEffect(() => {
         let e = O.current;
         return (
-            null == y && (null == e || e.addEventListener('dragover', I, !1), null == e || e.addEventListener('dragleave', T, !1), null == e || e.addEventListener('drop', N, !1)),
+            null == v && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', T, !1), null == e || e.addEventListener('drop', N, !1)),
             () => {
-                null == e || e.removeEventListener('dragover', I, !1), null == e || e.removeEventListener('dragleave', T, !1), null == e || e.removeEventListener('drop', N, !1);
+                null == e || e.removeEventListener('dragover', S, !1), null == e || e.removeEventListener('dragleave', T, !1), null == e || e.removeEventListener('drop', N, !1);
             }
         );
-    }, [y, I, T, N]);
+    }, [v, S, T, N]);
     let A = (e) => {
         var r, i;
-        if (null != t && (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (r = i.files) || void 0 === r ? void 0 : r[0]) != null) {
+        if (null != t && (null == (i = e.currentTarget) || null == (r = i.files) ? void 0 : r[0]) != null) {
             let r = {
                 id: n.name,
                 file: e.currentTarget.files[0],
@@ -76,10 +76,10 @@ function E(e) {
                 (e.currentTarget.value = '');
         }
     };
-    return null != y
-        ? (0, r.jsx)(_.Z, {
+    return null != v
+        ? (0, r.jsx)(p.Z, {
               channelId: t,
-              upload: y,
+              upload: v,
               keyboardModeEnabled: o,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
@@ -93,30 +93,30 @@ function E(e) {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'text-brand',
-                          children: y.filename
+                          children: v.filename
                       })
                   ]
               }),
               canEdit: !1
           })
-        : (0, r.jsxs)(p.Z, {
+        : (0, r.jsxs)(_.Z, {
               id: n.name,
               channelId: t,
               keyboardModeEnabled: o,
-              onKeyDown: S,
-              className: a()(m.emptyOption, { [m.emptyOptionActive]: v }),
+              onKeyDown: I,
+              className: a()(m.emptyOption, { [m.emptyOptionActive]: b }),
               draftType: d.d.SlashCommand,
               ref: O,
               children: [
                   (0, r.jsx)('span', {
-                      className: a()(m.optionName, { [m.optionNameActive]: v }),
+                      className: a()(m.optionName, { [m.optionNameActive]: b }),
                       children: n.name
                   }),
                   (0, r.jsx)(s.P3F, {
                       className: m.clickContainer,
                       onClick: () => {
                           var e;
-                          return null === (e = E.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+                          return null == (e = E.current) ? void 0 : e.activateUploadDialogue();
                       },
                       children: (0, r.jsxs)('div', {
                           className: m.commandOptionContainer,

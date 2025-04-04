@@ -6,9 +6,9 @@ var i = n(120356),
     a = n(628692),
     s = n(845537),
     l = n(653309),
-    c = n(532799),
-    u = n(742493),
-    d = n(368365);
+    c = n(227473),
+    u = n(112360),
+    d = n(73433);
 function f(e, t, n) {
     return (
         t in e
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,7 +55,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -63,30 +63,30 @@ function h(e, t) {
 }
 function m(e, t, n) {
     var i, l;
-    let { attributes: u, children: f, element: _, decorations: m } = e,
-        v = E(null !== (i = null == m ? void 0 : m[0]) && void 0 !== i ? i : {});
-    switch (_.type) {
+    let { attributes: u, children: f, element: p, decorations: m } = e,
+        b = E(null != (i = null == m ? void 0 : m[0]) ? i : {});
+    switch (p.type) {
         case 'line':
-            if (null === (l = _.codeBlockState) || void 0 === l ? void 0 : l.isInCodeBlock)
+            if (null == (l = p.codeBlockState) ? void 0 : l.isInCodeBlock)
                 return (0, r.jsx)(
                     'div',
                     h(
-                        p(
+                        _(
                             {
                                 className: c.codeLine,
-                                spellCheck: null == _.codeBlockState || null == _.codeBlockState.lang
+                                spellCheck: null == p.codeBlockState || null == p.codeBlockState.lang
                             },
                             u
                         ),
                         { children: f }
                     )
                 );
-            return (0, r.jsx)('div', h(p({}, u), { children: f }));
+            return (0, r.jsx)('div', h(_({}, u), { children: f }));
         case 'blockQuote': {
             let e = o()(d.blockquoteContainer, d.slateBlockquoteContainer);
             return (0, r.jsxs)(
                 'div',
-                h(p({}, u), {
+                h(_({}, u), {
                     className: e,
                     children: [
                         (0, r.jsx)('span', {
@@ -101,22 +101,22 @@ function m(e, t, n) {
         case 'emoji':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
-                children: [(0, r.jsx)(s.dy, { emoji: _.emoji }), f]
+                className: b,
+                children: [(0, r.jsx)(s.dy, { emoji: p.emoji }), f]
             });
         case 'customEmoji':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
-                children: [(0, r.jsx)(s.wP, { emoji: _.emoji }), f]
+                className: b,
+                children: [(0, r.jsx)(s.wP, { emoji: p.emoji }), f]
             });
         case 'textMention':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
+                className: b,
                 children: [
                     (0, r.jsx)(s.Ox, {
-                        text: _.name,
+                        text: p.name,
                         channelId: n,
                         guildId: t
                     }),
@@ -126,10 +126,10 @@ function m(e, t, n) {
         case 'userMention':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
+                className: b,
                 children: [
                     (0, r.jsx)(s.cB, {
-                        id: _.userId,
+                        id: p.userId,
                         channelId: n,
                         guildId: t
                     }),
@@ -139,10 +139,10 @@ function m(e, t, n) {
         case 'roleMention':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
+                className: b,
                 children: [
                     (0, r.jsx)(s.Vq, {
-                        id: _.roleId,
+                        id: p.roleId,
                         guildId: t
                     }),
                     f
@@ -151,17 +151,17 @@ function m(e, t, n) {
         case 'channelMention':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
-                children: [(0, r.jsx)(s.Io, { id: _.channelId }), f]
+                className: b,
+                children: [(0, r.jsx)(s.Io, { id: p.channelId }), f]
             });
         case 'staticRouteLink':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
+                className: b,
                 children: [
                     (0, r.jsx)(s.NY, {
-                        id: _.id,
-                        itemId: _.itemId,
+                        id: p.id,
+                        itemId: p.itemId,
                         guildId: t
                     }),
                     f
@@ -170,17 +170,17 @@ function m(e, t, n) {
         case 'soundboard':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
-                children: [(0, r.jsx)(a.ku, { soundId: _.soundId }), f]
+                className: b,
+                children: [(0, r.jsx)(a.ku, { soundId: p.soundId }), f]
             });
         case 'commandMention':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
+                className: b,
                 children: [
                     (0, r.jsx)(s.Wf, {
-                        text: _.commandName,
-                        id: _.commandId
+                        text: p.commandName,
+                        id: p.commandId
                     }),
                     f
                 ]
@@ -188,8 +188,8 @@ function m(e, t, n) {
         case 'timestamp':
             return (0, r.jsxs)(g, {
                 attributes: u,
-                className: v,
-                children: [(0, r.jsx)(s.EK, { timestamp: _.parsed }), f]
+                className: b,
+                children: [(0, r.jsx)(s.EK, { timestamp: p.parsed }), f]
             });
         default:
             return null;
@@ -200,7 +200,7 @@ let g = (e) => {
         a = o()(u.inlineElement, u.inlineVoid, t);
     return (0, r.jsx)(
         'span',
-        h(p({}, n), {
+        h(_({}, n), {
             className: a,
             contentEditable: !1,
             children: i

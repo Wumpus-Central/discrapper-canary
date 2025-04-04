@@ -70,8 +70,8 @@ let p = function (e) {
                     right: 4
                 }
             },
-            hasThread: C,
-            isSystemMessage: j,
+            hasThread: j,
+            isSystemMessage: C,
             hasReply: P,
             authorHasGradientRole: T = !1,
             guildId: N
@@ -95,8 +95,8 @@ let p = function (e) {
             }
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'authorHasGradientRole', 'guildId']);
-    let w = (0, c.Z)(N, 'BaseMessage'),
-        S = !!o.isValidElement(_) && !!w && T,
+    let S = (0, c.Z)(N, 'BaseMessage'),
+        w = !!o.isValidElement(_) && !!S && T,
         k = (0, r.jsx)(
             s.tEY,
             d(u({}, x), {
@@ -106,14 +106,14 @@ let p = function (e) {
                         u(
                             {
                                 className: i()(t, {
-                                    [l.gradient]: S,
+                                    [l.gradient]: w,
                                     [l.wrapper]: !0,
                                     [l.contentOnly]: a,
                                     [l.compact]: n,
                                     [l.cozy]: !n,
                                     [l.zalgo]: p,
-                                    [l.hasThread]: C,
-                                    [l.isSystemMessage]: j,
+                                    [l.hasThread]: j,
+                                    [l.isSystemMessage]: C,
                                     [l.hasReply]: P
                                 }),
                                 ref: O

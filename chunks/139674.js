@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var o,
     a = n(442837),
     s = n(668757),
@@ -34,7 +34,7 @@ function b(e) {
         p.Z.saveBlockedDomains(t), l.K.set('BlockedDomainRevision', n);
     }
 }
-class v extends (o = a.ZP.Store) {
+class y extends (o = a.ZP.Store) {
     initialize() {
         (i = null), l.K.get(g) && (l.K.remove(E), l.K.remove(g));
     }
@@ -42,7 +42,7 @@ class v extends (o = a.ZP.Store) {
         if (!(0, _.isDesktop)()) return null;
         if (null == i) {
             var e;
-            i = null !== (e = l.K.get(E)) && void 0 !== e ? e : null;
+            i = null != (e = l.K.get(E)) ? e : null;
         }
         return i;
     }
@@ -68,8 +68,8 @@ class v extends (o = a.ZP.Store) {
     }
     isBlockedDomain(e) {
         let t = (0, u.U)() ? (0, s.PJ)(e) : this._isBlockedDomain(e);
-        return '' !== t ? (f.default.track(h.rMx.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: t }), t) : null;
+        return '' !== t && null !== t ? (f.default.track(h.rMx.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: t }), t) : null;
     }
 }
-m(v, 'displayName', 'BlockedDomainStore');
-let y = new v(c.Z, { BLOCKED_DOMAIN_LIST_FETCHED: b });
+m(y, 'displayName', 'BlockedDomainStore');
+let v = new y(c.Z, { BLOCKED_DOMAIN_LIST_FETCHED: b });

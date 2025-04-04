@@ -9,8 +9,8 @@ var r = n(192379),
     u = n(887490),
     d = n(515270),
     f = n(847302),
-    p = n(42530);
-let _ = (e, t, n) => ({
+    _ = n(42530);
+let p = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
         e.preventDefault(), n();
@@ -51,7 +51,7 @@ let _ = (e, t, n) => ({
             }
             if (!u.LC.isText(i)) break;
             let t = i.text[a];
-            if (p.i$.test(t)) break;
+            if (_.i$.test(t)) break;
             s = t + s;
         }
         return {
@@ -61,7 +61,7 @@ let _ = (e, t, n) => ({
     },
     getFirstText() {
         var t, n;
-        return null !== (n = null === (t = u.bN.getFirstText(e)) || void 0 === t ? void 0 : t.text) && void 0 !== n ? n : '';
+        return null != (n = null == (t = u.bN.getFirstText(e)) ? void 0 : t.text) ? n : '';
     },
     getCurrentCommandOption() {
         let t = s.HZ(e);
@@ -72,7 +72,7 @@ let _ = (e, t, n) => ({
         let r = s.HZ(e);
         if (null == r) return [];
         let i = a.Z.getActiveCommand(t.id),
-            o = null == i ? void 0 : null === (n = i.options) || void 0 === n ? void 0 : n.find((e) => e.name === r[0].optionName);
+            o = null == i || null == (n = i.options) ? void 0 : n.find((e) => e.name === r[0].optionName);
         return null == o ? [] : s.IB(e, o, r[0], t.id);
     },
     getCommandOptionValues() {
@@ -120,7 +120,7 @@ let _ = (e, t, n) => ({
         l.T.withSingleEntry(e, () => {
             var r, i;
             let o = t.animated ? 'a' : '',
-                a = null !== (i = null !== (r = t.originalName) && void 0 !== r ? r : t.name) && void 0 !== i ? i : '';
+                a = null != (i = null != (r = t.originalName) ? r : t.name) ? i : '';
             m(e, ':'.concat(t.name, ':'), null != t.id ? '<'.concat(o, ':').concat(a.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
         });
     }
@@ -128,7 +128,7 @@ let _ = (e, t, n) => ({
 function h(e, t) {
     var n;
     let r = a.Z.getActiveCommand(e.id),
-        i = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === t.optionName);
+        i = null == r || null == (n = r.options) ? void 0 : n.find((e) => e.name === t.optionName);
     return null != i && (i.type !== o.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
 }
 function m(e, t, n, r) {
@@ -138,5 +138,5 @@ function m(e, t, n, r) {
     });
 }
 function g(e, t, n, i) {
-    r.useImperativeHandle(e, () => _(t, n, i), [t, n, i]);
+    r.useImperativeHandle(e, () => p(t, n, i), [t, n, i]);
 }

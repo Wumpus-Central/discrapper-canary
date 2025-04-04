@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -64,14 +64,14 @@ function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function g(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,14 +80,14 @@ function g(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function g(e) {
     var { location: t, applicationId: n, centerButton: d = !1 } = e,
         _ = h(e, ['location', 'applicationId', 'centerButton']);
-    let { parentAnalyticsLocation: g } = (0, a.ZP)(),
-        m = (0, l.Z)({ location: 'LeaveActivityButton' }),
+    let { parentAnalyticsLocation: m } = (0, a.ZP)(),
+        g = (0, l.Z)({ location: 'LeaveActivityButton' }),
         E = d ? c.d : c.Z,
-        v = () => {
-            (0, s.v)(g, s.d.LEAVE_ACTIVITY),
+        b = () => {
+            (0, s.v)(m, s.d.LEAVE_ACTIVITY),
                 o.Z.leaveActivity({
                     location: t,
                     applicationId: n,
@@ -97,8 +97,8 @@ function m(e) {
     return (0, r.jsx)(
         E,
         p(f({}, _), {
-            fullRegionButton: m,
-            onClick: v,
+            fullRegionButton: g,
+            onClick: b,
             iconComponent: i.PBZ,
             label: u.NW.string(u.t['R/FK4O'])
         })

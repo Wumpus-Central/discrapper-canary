@@ -10,13 +10,13 @@ var i = n(278074),
     u = n(479446),
     d = n(981632),
     f = n(731896),
-    p = n(680295),
-    _ = n(998502),
+    _ = n(680295),
+    p = n(998502),
     h = n(987209),
     m = n(388032),
-    g = n(52561),
+    g = n(563967),
     E = n(241822);
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +40,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,14 +62,14 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = _.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
-function I(e) {
+let I = p.ZP.getEnableHardwareAcceleration() ? a.Xo$ : a.qEK;
+function S(e) {
     let { avatarDecoration: t } = e,
         {
             avatarDecorationSrc: n,
@@ -82,8 +82,8 @@ function I(e) {
     return (0, r.jsx)('div', {
         className: g.giftMainAnimationWrapper,
         children: (0, r.jsx)(
-            S,
-            O(b({}, i), {
+            I,
+            O(y({}, i), {
                 avatarDecoration: n,
                 src: o,
                 className: g.avatar,
@@ -96,7 +96,7 @@ function I(e) {
 function T(e) {
     var t;
     let { id: n } = e,
-        i = null === (t = (0, f.V)(n)) || void 0 === t ? void 0 : t.config;
+        i = null == (t = (0, f.V)(n)) ? void 0 : t.config;
     return (0, r.jsxs)('div', {
         className: g.profileEffectContainer,
         children: [
@@ -105,7 +105,7 @@ function T(e) {
                 alt: null == i ? void 0 : i.accessibilityLabel,
                 className: g.profileEffectBackground
             }),
-            (0, r.jsx)(p.Z, { profileEffectId: n })
+            (0, r.jsx)(_.Z, { profileEffectId: n })
         ]
     });
 }
@@ -115,7 +115,7 @@ function N(e) {
         { product: a } = (0, c.T)(null == t ? void 0 : t.id),
         s = null == a ? void 0 : a.items[0],
         l = (0, i.EQ)(s)
-            .with({ type: o.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(I, { avatarDecoration: e }))
+            .with({ type: o.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(S, { avatarDecoration: e }))
             .with({ type: o.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(T, { id: e.id }))
             .otherwise(() => null);
     return null != n && null == l

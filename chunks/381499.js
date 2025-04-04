@@ -1,10 +1,10 @@
 n.d(t, {
     A8: () => u,
-    D5: () => b,
+    D5: () => y,
     Gm: () => O,
     T4: () => m,
     r1: () => f,
-    wA: () => _,
+    wA: () => p,
     yC: () => E
 }),
     n(611060),
@@ -177,7 +177,7 @@ class d extends s.C {
     }
 }
 let f = new d();
-class p extends s.C {
+class _ extends s.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(r.wx.UINT64, e.value, 'value', !1, !0);
     }
@@ -226,7 +226,7 @@ class p extends s.C {
         ]);
     }
 }
-let _ = new p();
+let p = new _();
 class h extends s.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(5, e.value, 'value', !1, !0);
@@ -327,7 +327,7 @@ class g extends s.C {
     }
 }
 let E = new g();
-class v extends s.C {
+class b extends s.C {
     internalJsonWrite(e, t) {
         return e.value;
     }
@@ -376,8 +376,8 @@ class v extends s.C {
         ]);
     }
 }
-let b = new v();
-class y extends s.C {
+let y = new b();
+class v extends s.C {
     internalJsonWrite(e, t) {
         return e.value;
     }
@@ -426,8 +426,8 @@ class y extends s.C {
         ]);
     }
 }
-let O = new y();
-class S extends s.C {
+let O = new v();
+class I extends s.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(12, e.value, 'value', !1, !0);
     }
@@ -476,4 +476,4 @@ class S extends s.C {
         ]);
     }
 }
-new S();
+new I();

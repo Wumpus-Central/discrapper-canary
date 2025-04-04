@@ -21,8 +21,8 @@ function d() {
     return e;
 }
 function f(e) {
-    let { isRefreshEnabled: t, isRefreshChatInputEnabled: n, rootClassName: o, lang: d, theme: f, density: _, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: v, useForcedColors: y, systemForcedColors: O, useReducedMotion: I, alwaysShowLinkDecorations: S, hardwareAccelerationEnabled: T, children: A } = e,
-        N = window.CSS.supports('selector(::-webkit-scrollbar)'),
+    let { isRefreshEnabled: t, isRefreshChatInputEnabled: n, rootClassName: o, lang: d, theme: f, density: _, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: y, useForcedColors: v, systemForcedColors: O, useReducedMotion: I, alwaysShowLinkDecorations: S, hardwareAccelerationEnabled: T, children: N } = e,
+        A = window.CSS.supports('selector(::-webkit-scrollbar)'),
         C = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
         R = a()(
             (0, c.Z)(),
@@ -33,16 +33,16 @@ function f(e) {
                 'low-saturation': b <= l.AEw,
                 'keyboard-mode': E,
                 'decorate-links': S,
-                'no-webkit-scrollbar': !N,
-                'has-webkit-scrollbar': N,
+                'no-webkit-scrollbar': !A,
+                'has-webkit-scrollbar': A,
                 'mouse-mode': g,
                 'reduce-motion': I,
                 'full-motion': !I,
                 'is-mobile': s.tq,
                 'app-focused': p,
-                'desaturate-user-colors': v,
-                'disable-forced-colors': !y && 'active' === O,
-                'enable-forced-colors': y,
+                'desaturate-user-colors': y,
+                'disable-forced-colors': !v && 'active' === O,
+                'enable-forced-colors': v,
                 'visual-refresh': t,
                 'hardware-acceleration': T,
                 'visual-refresh-chat-input': n
@@ -59,6 +59,6 @@ function f(e) {
         );
     return (0, r.jsx)(u.Provider, {
         value: P,
-        children: A
+        children: N
     });
 }

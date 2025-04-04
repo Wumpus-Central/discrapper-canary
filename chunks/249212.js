@@ -14,8 +14,8 @@ function p(e) {
     var t;
     let { userId: n, width: p, avError: h, selected: m = !1, noArt: g = !1 } = e,
         { avErrorUIEnabled: E } = (0, s.JN)({ location: 'UserVideoFailed' }),
-        b = null === (t = (0, a.hp)(h)) || void 0 === t ? void 0 : t.errorCode;
-    function v() {
+        b = null == (t = (0, a.hp)(h)) ? void 0 : t.errorCode;
+    function y() {
         (0, l.w)(i.Yn.DEFAULT, n),
             o.Z.setDisableLocalVideo(n, d.ZUi.DISABLED, i.Yn.DEFAULT, !1),
             setTimeout(() => {
@@ -30,7 +30,7 @@ function p(e) {
         selected: m,
         description: f.NW.format(f.t.d486Wl, { helpUrl: c.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
         errorCodeMessage: E ? f.NW.formatToPlainString(f.t['ejOT9/'], { errorCode: b }) : void 0,
-        onCTAClick: v,
+        onCTAClick: y,
         callToAction: f.NW.string(f.t['hxmQ/f'])
     });
 }

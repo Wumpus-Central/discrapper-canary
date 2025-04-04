@@ -1,5 +1,5 @@
 n.d(t, {
-    T: () => v,
+    T: () => b,
     Z: () => N
 }),
     n(47120);
@@ -13,8 +13,8 @@ var r,
     u = n(158776),
     d = n(146282),
     f = n(26033),
-    p = n(180335),
-    _ = n(561308),
+    _ = n(180335),
+    p = n(561308),
     h = n(981631);
 function m(e, t, n) {
     return (
@@ -31,19 +31,19 @@ function m(e, t, n) {
 }
 let g = new Set([s.s.LISTENED_SESSION]),
     E = new Map();
-function v(e) {
+function b(e) {
     return ''.concat(e.author_id, ':').concat(e.id);
 }
-function b(e) {
-    return (0, _.n2)(e) ? null : (0, _.kr)(e) && e.author_type === a.i.USER ? u.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, f.m9)(e) ? (0, p.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, f.dU)(e)) && (0, p.pB)(e, t))) : void 0;
-}
 function y(e) {
+    return (0, p.n2)(e) ? null : (0, p.kr)(e) && e.author_type === a.i.USER ? u.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, f.m9)(e) ? (0, _.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, f.dU)(e)) && (0, _.pB)(e, t))) : void 0;
+}
+function v(e) {
     let t = new Set(),
         n = new Set();
     for (let r of e) {
-        let e = b(r.content);
+        let e = y(r.content);
         if (void 0 !== e) {
-            let i = v(r.content);
+            let i = b(r.content);
             n.add(i), e !== E.get(i) && (t.add(i), E.set(i, e));
         }
     }
@@ -54,19 +54,19 @@ function y(e) {
 }
 function O(e) {
     let { feed: t } = e,
-        { updatedKeys: n } = y(t.entries);
+        { updatedKeys: n } = v(t.entries);
     return n.size > 0;
 }
-function S() {
+function I() {
     E.clear();
 }
-function I() {
+function S() {
     let e = !1,
         t = Array.from(E.keys()),
         n = new Set(),
         r = new Set();
     for (let t of d.Z.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: o } = y(n.size > 0 ? t.entries.filter((e) => !n.has(v(e.content))) : t.entries);
+        let { updatedKeys: i, matchedKeys: o } = v(n.size > 0 ? t.entries.filter((e) => !n.has(b(e.content))) : t.entries);
         for (let e of i) n.add(e);
         for (let e of o) r.add(e);
         e = e || i.size > 0;
@@ -76,17 +76,17 @@ function I() {
 }
 class T extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, u.Z), this.syncWith([u.Z], I);
+        this.waitFor(d.Z, u.Z), this.syncWith([u.Z], S);
     }
     getMatchingActivity(e) {
-        return (0, _.n2)(e) ? null : E.get(v(e));
+        return (0, p.n2)(e) ? null : E.get(b(e));
     }
     constructor(...e) {
-        super(...e), m(this, 'canRenderContent', (e) => !(0, _.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
+        super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
     }
 }
 m(T, 'displayName', 'ContentInventoryActivityStore');
 let N = new T(c.Z, {
-    CONNECTION_OPEN: S,
+    CONNECTION_OPEN: I,
     CONTENT_INVENTORY_SET_FEED: O
 });

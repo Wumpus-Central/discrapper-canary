@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r,
     i = n(442837),
     o = n(570140);
@@ -48,7 +48,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 a(f, 'displayName', 'LaunchableGameStore');
-let p = new f(o.Z, {
+let _ = new f(o.Z, {
     GAME_LAUNCHABLE_UPDATE: c,
     GAME_CLOUD_SYNC_START: u,
     GAME_LAUNCH_START: u,

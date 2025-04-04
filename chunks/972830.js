@@ -7,7 +7,7 @@ function s() {
     return null != i.Z.getType();
 }
 function l() {
-    !s() && (a.forEach((e) => c(e)), (a = []));
+    s() || (a.forEach((e) => c(e)), (a = []));
 }
 function c(e) {
     setImmediate(() => e());

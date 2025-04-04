@@ -1,18 +1,18 @@
-n.d(t, { Z: () => v }), n(47120), n(26686);
+n.d(t, { Z: () => b }), n(47120), n(26686);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(232713),
+    s = n(788347),
     l = n(442837),
     c = n(481060),
     u = n(314910),
     d = n(906467),
     f = n(857192),
-    p = n(835225),
-    _ = n(117795),
+    _ = n(835225),
+    p = n(117795),
     h = n(565384),
-    m = n(370648);
+    m = n(418075);
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -33,7 +33,7 @@ function E(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function v() {
+function b() {
     let { debugTrackedData: e, impressions: t } = (0, h.Xo)(
             (e) => ({
                 debugTrackedData: e.debugTrackedData,
@@ -43,34 +43,34 @@ function v() {
         ),
         n = (0, l.e7)([f.default], () => f.default.isAnalyticsDebuggerEnabled),
         o = (0, l.e7)([d.Z], () => d.Z.isDeveloper),
-        [E, v] = i.useState(!1),
-        b = null != e ? e : {},
-        { name: y } = b,
-        O = g(b, ['name']),
-        S = null != y;
+        [E, b] = i.useState(!1),
+        y = null != e ? e : {},
+        { name: v } = y,
+        O = g(y, ['name']),
+        I = null != v;
     return o && n
         ? (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)('div', {
                   className: a()(m.container, {
                       [m.containerMinimized]: E,
-                      [m.notTracked]: !S
+                      [m.notTracked]: !I
                   }),
                   children: [
                       (0, r.jsx)(c.P3F, {
                           className: m.minimizeButton,
                           onClick: () => {
-                              v(!E);
+                              b(!E);
                           },
-                          children: E ? (0, r.jsx)(p.Z, {}) : (0, r.jsx)(_.Z, {})
+                          children: E ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(p.Z, {})
                       }),
                       (0, r.jsxs)('div', {
                           className: a()(m.content, { [m.contentMinimized]: E }),
                           children: [
                               (0, r.jsxs)(c.Text, {
-                                  className: a()(m.label, { [m.notTracked]: !S }),
+                                  className: a()(m.label, { [m.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: [
-                                      S
+                                      I
                                           ? (0, r.jsx)(c.owK, {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -81,7 +81,7 @@ function v() {
                                                 color: 'currentColor',
                                                 className: m.iconNotTracked
                                             }),
-                                      null != y ? y : '(untracked)'
+                                      null != v ? v : '(untracked)'
                                   ]
                               }),
                               (0, r.jsx)('div', {
@@ -89,7 +89,7 @@ function v() {
                                   children: JSON.stringify(O, void 0, 2)
                               }),
                               (0, r.jsx)(c.Text, {
-                                  className: a()(m.label, { [m.notTracked]: !S }),
+                                  className: a()(m.label, { [m.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),

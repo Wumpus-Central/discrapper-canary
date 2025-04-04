@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => b });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(607070),
     d = n(785717),
     f = n(510659),
-    p = n(228168),
-    _ = n(388032),
-    h = n(41264),
-    m = n(179730);
+    _ = n(228168),
+    p = n(388032),
+    h = n(158744),
+    m = n(986449);
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: a } = (0, d.KZ)();
@@ -35,7 +35,7 @@ let g = (e) => {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
-                            children: _.NW.format(_.t.QEW8Mj, {
+                            children: p.NW.format(p.t.QEW8Mj, {
                                 onClick: () => {
                                     a({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel(n);
                                 }
@@ -57,20 +57,20 @@ let g = (e) => {
                 (0, r.jsx)(l.Text, {
                     color: 'header-primary',
                     variant: 'text-sm/semibold',
-                    children: _.NW.string(_.t.tcARX1)
+                    children: p.NW.string(p.t.tcARX1)
                 })
             ]
         }),
-    v = (e) => {
+    b = (e) => {
         let { userId: t, onClose: n, className: i } = e,
             { interactionTypeSent: c, showInteractionToast: d } = (0, f.Xo)(),
-            m = c === p.P.REPLY ? _.NW.string(_.t.BPaiaW) : _.NW.string(_.t.Ry2EtL),
-            v = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-            b = (0, l.Yzy)(
+            m = c === _.P.REPLY ? p.NW.string(p.t.BPaiaW) : p.NW.string(p.t.Ry2EtL),
+            b = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+            y = (0, l.Yzy)(
                 d,
                 {
                     from: {
-                        transform: v ? 'translateY(0)' : 'translateY(16px)',
+                        transform: b ? 'translateY(0)' : 'translateY(16px)',
                         opacity: 0
                     },
                     enter: {
@@ -78,7 +78,7 @@ let g = (e) => {
                         opacity: 1
                     },
                     leave: {
-                        transform: v ? 'translateY(0)' : 'translateY(16px)',
+                        transform: b ? 'translateY(0)' : 'translateY(16px)',
                         opacity: 0
                     },
                     config: {
@@ -92,7 +92,7 @@ let g = (e) => {
                 'animate-always'
             );
         return (0, r.jsx)(r.Fragment, {
-            children: b(
+            children: y(
                 (e, s) =>
                     s &&
                     (0, r.jsx)(a.animated.div, {

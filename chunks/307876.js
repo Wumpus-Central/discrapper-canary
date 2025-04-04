@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(232567),
     i = n(147913),
     o = n(592125),
@@ -26,16 +26,16 @@ function f(e) {
     if (null == t) return;
     let n = a.Z.getChannelId(),
         r = o.Z.getDMFromUserId(l.I);
-    if (!t.hasUrgentMessages() || r === n) return p({ channelId: n });
+    if (!t.hasUrgentMessages() || r === n) return _({ channelId: n });
     d || ((d = !0), e());
 }
-function p(e) {
+function _(e) {
     let { channelId: t } = e,
         n = s.default.getCurrentUser(),
         i = t === o.Z.getDMFromUserId(l.I);
     null != n && n.hasUrgentMessages() && i && ((d = !1), r.mB(c.xW$.HAS_UNREAD_URGENT_MESSAGES, !1));
 }
-class _ extends i.Z {
+class p extends i.Z {
     constructor(e) {
         super(),
             u(this, 'handleShowUrgentMessageAlert', void 0),
@@ -44,7 +44,7 @@ class _ extends i.Z {
             (this.actions = {
                 POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
                 MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
-                CHANNEL_SELECT: p
+                CHANNEL_SELECT: _
             });
     }
 }

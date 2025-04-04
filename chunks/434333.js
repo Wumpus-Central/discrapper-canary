@@ -8,20 +8,20 @@ var r = n(200651),
     a = n.n(o),
     s = n(1561),
     l = n(481060),
-    c = n(92535);
+    c = n(220087);
 let u = {
         RED: c.backgroundRed,
         BACKGROUND_TERTIARY: c.backgroundTertiary,
         BACKGROUND_ACCENT: c.backgroundAccent
     },
     d = i.forwardRef(function (e, t) {
-        let { role: n, children: i, className: o, onDismiss: d, backgroundColor: f = u.RED, icon: p = l.P4T, iconClassName: _ } = e;
+        let { role: n, children: i, className: o, onDismiss: d, backgroundColor: f = u.RED, icon: _ = l.P4T, iconClassName: p } = e;
         return (0, r.jsxs)('div', {
             className: a()(c.error, o, f),
             ref: t,
             children: [
-                (0, r.jsx)(p, {
-                    className: a()(c.icon, _),
+                (0, r.jsx)(_, {
+                    className: a()(c.icon, p),
                     color: 'currentColor'
                 }),
                 (0, r.jsx)('div', {

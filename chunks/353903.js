@@ -10,7 +10,7 @@ var r,
     s = n.n(a),
     l = n(748780),
     c = n(692547),
-    u = n(754737);
+    u = n(194240);
 function d(e, t, n) {
     return (
         t in e
@@ -25,8 +25,8 @@ function d(e, t, n) {
     );
 }
 let f = 12,
-    p = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
-class _ extends o.PureComponent {
+    _ = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
+class p extends o.PureComponent {
     render() {
         let {
             props: { height: e },
@@ -41,7 +41,7 @@ class _ extends o.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), d(this, 'state', { backgroundColor: s().sample(p) });
+        super(...e), d(this, 'state', { backgroundColor: s().sample(_) });
     }
 }
 class h extends (r = o.Component) {
@@ -70,7 +70,7 @@ class h extends (r = o.Component) {
         return (0, i.jsxs)(l.Z.div, {
             className: u.column,
             style: this.getAnimatedStyle(),
-            children: [e.map((e, t) => (0, i.jsx)(_, { height: e }, t)), e.map((e, t) => (0, i.jsx)(_, { height: e }, 'alt'.concat(t)))]
+            children: [e.map((e, t) => (0, i.jsx)(p, { height: e }, t)), e.map((e, t) => (0, i.jsx)(p, { height: e }, 'alt'.concat(t)))]
         });
     }
     constructor(e) {

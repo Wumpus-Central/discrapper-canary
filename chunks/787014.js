@@ -38,7 +38,7 @@ function _(e) {
     });
 }
 function p(e) {
-    let { name: t, type: n, topic: r, bitrate: o, userLimit: a, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: v, defaultForumLayout: y, iconEmoji: O, themeColor: I } = e;
+    let { name: t, type: n, topic: r, bitrate: o, userLimit: a, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: v, iconEmoji: O, themeColor: I } = e;
     i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_UPDATE',
         name: t,
@@ -59,14 +59,14 @@ function p(e) {
         locked: g,
         invitable: E,
         availableTags: b,
-        defaultSortOrder: v,
-        defaultForumLayout: y,
+        defaultSortOrder: y,
+        defaultForumLayout: v,
         iconEmoji: O,
         themeColor: I
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: v, defaultReactionEmoji: y, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: N, availableTags: A, defaultSortOrder: C, defaultForumLayout: R, iconEmoji: P, themeColor: w } = t,
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: N, availableTags: A, defaultSortOrder: C, defaultForumLayout: R, iconEmoji: P, themeColor: w } = t,
         D = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
@@ -87,19 +87,19 @@ async function h(e, t) {
                     rate_limit_per_user: g,
                     default_thread_rate_limit_per_user: E,
                     default_auto_archive_duration: b,
-                    template: v,
+                    template: y,
                     rtc_region: O,
                     video_quality_mode: I,
                     auto_archive_duration: S,
                     locked: T,
                     invitable: N,
                     default_reaction_emoji:
-                        null != y
+                        null != v
                             ? {
-                                  emoji_id: null == y ? void 0 : y.emojiId,
-                                  emoji_name: null == y ? void 0 : y.emojiName
+                                  emoji_id: null == v ? void 0 : v.emojiId,
+                                  emoji_name: null == v ? void 0 : v.emojiName
                               }
-                            : null === y
+                            : null === v
                               ? null
                               : void 0,
                     available_tags:

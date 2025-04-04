@@ -121,7 +121,7 @@ let b = {
                         ? {}
                         : {
                               theme: u.Z.theme,
-                              clientThemeSettings: { backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id },
+                              clientThemeSettings: { backgroundGradientPresetId: null == (t = s.Z.gradientPreset) ? void 0 : t.id },
                               developerMode: d.Sb.getSetting()
                           }
                 }

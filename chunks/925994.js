@@ -1,6 +1,6 @@
 n.d(t, {
-    sg: () => y,
-    sk: () => v
+    sg: () => v,
+    sk: () => b
 }),
     n(47120),
     n(653041),
@@ -16,8 +16,8 @@ var r = n(512722),
     u = n(699516),
     d = n(914010),
     f = n(594174),
-    p = n(51144),
-    _ = n(887490);
+    _ = n(51144),
+    p = n(887490);
 function h(e, t, n) {
     return (
         t in e
@@ -70,10 +70,10 @@ function E(e, t) {
         e
     );
 }
-function v(e, t) {
+function b(e, t) {
     let { mode: n, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i } = null != t ? t : {},
-        [o, a] = (null == t ? void 0 : t.range) != null ? _.M8.edges(t.range) : [void 0, void 0];
-    return b(e, {
+        [o, a] = (null == t ? void 0 : t.range) != null ? p.M8.edges(t.range) : [void 0, void 0];
+    return y(e, {
         mode: n,
         start: o,
         end: a,
@@ -81,34 +81,34 @@ function v(e, t) {
         preventEmojiSurrogates: i
     });
 }
-function b(e, t) {
+function y(e, t) {
     var n, r;
     let { mode: i, start: o, end: a, separator: s, ignoreEmptyNodes: l, ignoreTrailingEmptyNodes: c, preventEmojiSurrogates: u } = null != t ? t : {},
-        d = e.length > 0 && !_.LC.isText(e[0]);
+        d = e.length > 0 && !p.LC.isText(e[0]);
     null == s && (s = d ? '\n' : '');
-    let f = null !== (n = null == o ? void 0 : o.path[0]) && void 0 !== n ? n : 0,
-        p = null !== (r = null == a ? void 0 : a.path[0]) && void 0 !== r ? r : e.length - 1;
+    let f = null != (n = null == o ? void 0 : o.path[0]) ? n : 0,
+        _ = null != (r = null == a ? void 0 : a.path[0]) ? r : e.length - 1;
     if (c)
-        for (let t = p; t >= f; t--) {
+        for (let t = _; t >= f; t--) {
             let n = e[t];
-            if (_.LC.isText(n)) {
+            if (p.LC.isText(n)) {
                 if (n.text.length > 0) {
-                    p = t;
+                    _ = t;
                     break;
                 }
-            } else if (!_.q.isEmpty(n)) {
-                p = t;
+            } else if (!p.q.isEmpty(n)) {
+                _ = t;
                 break;
             }
             if (t === f) return '';
         }
-    let h = f > 0 && _.aj.isType(e[f - 1], 'blockQuote'),
-        m = _.aj.isType(e[f], 'blockQuote'),
-        g = _.aj.isType(e[p], 'blockQuote'),
+    let h = f > 0 && p.aj.isType(e[f - 1], 'blockQuote'),
+        m = p.aj.isType(e[f], 'blockQuote'),
+        g = p.aj.isType(e[_], 'blockQuote'),
         E = [];
-    for (let t = f; t <= p; t++) {
+    for (let t = f; t <= _; t++) {
         let n = e[t];
-        if (l && _.LC.isText(n) && 0 === n.text.length) continue;
+        if (l && p.LC.isText(n) && 0 === n.text.length) continue;
         let r =
                 null != o && t === f
                     ? {
@@ -116,11 +116,11 @@ function b(e, t) {
                           offset: o.offset
                       }
                     : void 0,
-            s = y(n, {
+            s = v(n, {
                 mode: i,
                 start: r,
                 end:
-                    null != a && t === p
+                    null != a && t === _
                         ? {
                               path: a.path.slice(1),
                               offset: a.offset
@@ -133,17 +133,17 @@ function b(e, t) {
     }
     return E.join(s);
 }
-function y(e, t) {
+function v(e, t) {
     let { mode: n, start: r, allowBlockQuotePrefix: i = !1, preventEmojiSurrogates: h = !1 } = null != t ? t : {};
-    if (_.LC.isText(e)) return O(e.text, t);
+    if (p.LC.isText(e)) return O(e.text, t);
     switch (e.type) {
         case 'line':
         case 'testInline':
-            return b(e.children, t);
+            return y(e.children, t);
         case 'testInlineVoid':
             return '';
         case 'blockQuote': {
-            let n = b(e.children, t),
+            let n = y(e.children, t),
                 o = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
             if (i && (null == r || o)) return '> '.concat(n);
             return n;
@@ -193,14 +193,14 @@ function y(e, t) {
             if ('raw' === n) return t;
             let r = f.default.getUser(e.userId);
             if (null == r) return t;
-            return '@'.concat(p.ZP.getUserTag(r, { decoration: 'never' }));
+            return '@'.concat(_.ZP.getUserTag(r, { decoration: 'never' }));
         }
         case 'commandMention':
             return '</'.concat(e.commandName, ':').concat(e.commandId, '>');
         case 'timestamp':
             return (0, a.He)(e.parsed.timestamp, e.parsed.format);
         case 'applicationCommand':
-            return b(
+            return y(
                 e.children,
                 E(m({}, t), {
                     separator: ' ',
@@ -208,7 +208,7 @@ function y(e, t) {
                 })
             );
         case 'applicationCommandOption': {
-            let n = b(e.children, t);
+            let n = y(e.children, t);
             if (null == r) return ''.concat(e.optionDisplayName, ':').concat(n);
             return n;
         }
@@ -217,5 +217,5 @@ function y(e, t) {
 function O(e, t) {
     var n, r;
     let { start: o, end: a } = null != t ? t : {};
-    return i()(null == o || 0 === o.path.length, 'Invalid start provided to serializeText'), i()(null == a || 0 === a.path.length, 'Invalid end provided to serializeText'), e.substring(null !== (n = null == o ? void 0 : o.offset) && void 0 !== n ? n : 0, null !== (r = null == a ? void 0 : a.offset) && void 0 !== r ? r : e.length);
+    return i()(null == o || 0 === o.path.length, 'Invalid start provided to serializeText'), i()(null == a || 0 === a.path.length, 'Invalid end provided to serializeText'), e.substring(null != (n = null == o ? void 0 : o.offset) ? n : 0, null != (r = null == a ? void 0 : a.offset) ? r : e.length);
 }

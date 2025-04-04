@@ -62,7 +62,7 @@ var s = (function (e) {
 })({});
 let l = 1024;
 var c = (function (e) {
-    return (e.VOICE = 'VOICE'), (e.STREAM = 'STREAM'), (e.VIDEO_BACKGROUND = 'VOICE_BACKGROUND'), (e.ACTIVITY = 'ACTIVITY'), (e.IN_APP_REPORTS = 'IN_APP_REPORTS'), (e.USER_DM_MUTE = 'USER_DM_MUTE'), (e.BLOCK_USER = 'BLOCK_USER'), e;
+    return (e.VOICE = 'VOICE'), (e.STREAM = 'STREAM'), (e.VIDEO_BACKGROUND = 'VOICE_BACKGROUND'), (e.ACTIVITY = 'ACTIVITY'), (e.IN_APP_REPORTS = 'IN_APP_REPORTS'), (e.USER_DM_MUTE = 'USER_DM_MUTE'), (e.BLOCK_USER = 'BLOCK_USER'), (e.VOICE_FILTER = 'VOICE_FILTER'), e;
 })({});
-let u = ['VOICE_BACKGROUND', 'STREAM', 'ACTIVITY', 'VOICE', 'IN_APP_REPORTS', 'USER_DM_MUTE', 'BLOCK_USER'].reduce((e, t, n) => a(i({}, e), { [t]: n }), {}),
+let u = ['VOICE_BACKGROUND', 'STREAM', 'ACTIVITY', 'VOICE_FILTER', 'VOICE', 'IN_APP_REPORTS', 'USER_DM_MUTE', 'BLOCK_USER'].reduce((e, t, n) => a(i({}, e), { [t]: n }), {}),
     d = ['bad', 'neutral', 'good'];

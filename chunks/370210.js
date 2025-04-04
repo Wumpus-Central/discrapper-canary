@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => d,
-    Z: () => b
+    Z: () => y
 }),
     n(47120);
 var r,
@@ -66,11 +66,11 @@ let f = {},
     _ = {},
     p = new Set(),
     h = {};
-function g(e) {
+function m(e) {
     let { applicationId: t } = e;
     _ = u(l({}, _), { [t]: 0 });
 }
-function m(e) {
+function g(e) {
     let { application: t } = e;
     (f = u(l({}, f), { [t.id]: t })), (_ = u(l({}, _), { [t.id]: 1 }));
     let n = Date.now();
@@ -80,7 +80,7 @@ function E(e) {
     let { applicationId: t, isInvalidApplication: n } = e;
     (_ = u(l({}, _), { [t]: 2 })), n && (p.add(t), (p = new Set(p)));
 }
-class v extends (r = i.ZP.Store) {
+class b extends (r = i.ZP.Store) {
     getApplication(e) {
         if (null != e) return f[e];
     }
@@ -111,9 +111,9 @@ class v extends (r = i.ZP.Store) {
         if (null != e) return h[e];
     }
 }
-s(v, 'displayName', 'ApplicationDirectoryApplicationsStore');
-let b = new v(o.Z, {
-    APPLICATION_DIRECTORY_FETCH_APPLICATION: g,
-    APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: m,
+s(b, 'displayName', 'ApplicationDirectoryApplicationsStore');
+let y = new b(o.Z, {
+    APPLICATION_DIRECTORY_FETCH_APPLICATION: m,
+    APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: g,
     APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: E
 });

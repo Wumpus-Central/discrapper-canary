@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120), n(757143), n(301563);
+n.d(t, { Z: () => v }), n(47120), n(757143), n(301563);
 var r,
     i,
     o = n(442837),
@@ -21,9 +21,9 @@ function d(e, t, n) {
     );
 }
 let f = 'MaskedLinkStore',
-    p = new Set(),
     _ = new Set(),
-    h = null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.replace('//', '');
+    p = new Set(),
+    h = null == (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) ? void 0 : r.replace('//', '');
 function m(e) {
     let t = (0, c.F)(e);
     switch (t) {
@@ -35,39 +35,39 @@ function m(e) {
         case location.hostname:
             return !0;
         default:
-            return u.SD.includes(t) || l.Z.isDiscordHostname(t) || p.has(t);
+            return u.SD.includes(t) || l.Z.isDiscordHostname(t) || _.has(t);
     }
 }
 function g(e) {
     let t = (0, c.E)(e);
-    return _.has(t);
+    return p.has(t);
 }
 function E(e) {
     let { url: t } = e;
     if (m(t)) return !1;
-    p.add((0, c.F)(t)),
+    _.add((0, c.F)(t)),
         a.K.set(f, {
-            trustedDomains: p,
-            trustedProtocols: _
+            trustedDomains: _,
+            trustedProtocols: p
         });
 }
-function v(e) {
+function b(e) {
     let { url: t } = e;
     if (g(t)) return !1;
-    _.add((0, c.E)(t)),
+    p.add((0, c.E)(t)),
         a.K.set(f, {
-            trustedDomains: p,
-            trustedProtocols: _
+            trustedDomains: _,
+            trustedProtocols: p
         });
 }
-class b extends (i = o.ZP.Store) {
+class y extends (i = o.ZP.Store) {
     initialize() {
         var e;
-        let t = null !== (e = a.K.get(f)) && void 0 !== e ? e : {};
-        if (Array.isArray(t)) (p = new Set(null != t ? Array.from(t) : null)), (_ = new Set());
+        let t = null != (e = a.K.get(f)) ? e : {};
+        if (Array.isArray(t)) (_ = new Set(null != t ? Array.from(t) : null)), (p = new Set());
         else {
             let { trustedDomains: e, trustedProtocols: n } = t;
-            (p = new Set(null != e ? Array.from(e) : null)), (_ = new Set(null != n ? Array.from(n) : null));
+            (_ = new Set(null != e ? Array.from(e) : null)), (p = new Set(null != n ? Array.from(n) : null));
         }
     }
     isTrustedDomain(e) {
@@ -77,8 +77,8 @@ class b extends (i = o.ZP.Store) {
         return g(e);
     }
 }
-d(b, 'displayName', 'MaskedLinkStore');
-let y = new b(s.Z, {
+d(y, 'displayName', 'MaskedLinkStore');
+let v = new y(s.Z, {
     MASKED_LINK_ADD_TRUSTED_DOMAIN: E,
-    MASKED_LINK_ADD_TRUSTED_PROTOCOL: v
+    MASKED_LINK_ADD_TRUSTED_PROTOCOL: b
 });

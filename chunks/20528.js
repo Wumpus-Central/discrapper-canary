@@ -16,8 +16,8 @@ var r = n(392711),
     g = n(959457),
     E = n(594174),
     b = n(70956),
-    v = n(569545),
-    y = n(70722),
+    y = n(569545),
+    v = n(70722),
     O = n(981631);
 function I(e, t, n) {
     return (
@@ -61,7 +61,7 @@ function D(e, t) {
     if (null == n || (!n.isDM() && !n.isGuildStageVoice()) || null != d.Z.getActiveStreamForUser(t, n.getGuildId())) return !1;
     let r = d.Z.getStreamForUser(t, n.getGuildId());
     if (null == r) return !1;
-    let i = (0, v.V9)(r);
+    let i = (0, y.V9)(r);
     return i !== w && ((w = i), (0, a.rn)(r, { noFocus: !0 }), !0);
 }
 function L(e, t) {
@@ -82,12 +82,12 @@ class M extends s.Z {
         super(...e),
             I(this, 'handleStreamWatch', (e) => {
                 let { streamKey: t, allowMultiple: n } = e,
-                    { channelId: r } = (0, v.my)(t),
+                    { channelId: r } = (0, y.my)(t),
                     i = _.Z.getChannel(r);
                 x(t, null == i ? void 0 : i.isGuildStageVoice()),
                     n ||
                         d.Z.getAllActiveStreams().forEach((e) => {
-                            let n = (0, v.V9)(e);
+                            let n = (0, y.V9)(e);
                             e.ownerId !== f.default.getId() && n !== t && (0, a.g)(n, !1);
                         });
             }),
@@ -95,7 +95,7 @@ class M extends s.Z {
                 let { channelId: t, streamType: n, guildId: r } = e,
                     i = _.Z.getChannel(t);
                 x(
-                    (0, v.V9)({
+                    (0, y.V9)({
                         streamType: n,
                         guildId: r,
                         channelId: t,
@@ -109,10 +109,10 @@ class M extends s.Z {
                 var t;
                 let { streamKey: n } = e;
                 A.stop();
-                let { ownerId: r, guildId: i } = (0, v.my)(n);
-                if (null == i || null == r || r !== (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
+                let { ownerId: r, guildId: i } = (0, y.my)(n);
+                if (null == i || null == r || r !== (null == (t = E.default.getCurrentUser()) ? void 0 : t.id)) return;
                 let o = p.Z.getMemberCount(i);
-                null != o && !(o < 2) && !(o > y.tB) && u.eo.getSetting() && T(n);
+                null == o || o < 2 || o > v.tB || (u.eo.getSetting() && T(n));
             }),
             I(this, 'handleStreamUpdate', () => {
                 A.stop();
@@ -141,7 +141,7 @@ class M extends s.Z {
                     if ((this.platformHandleVoiceStateUpdate(e), t !== f.default.getId() && null != n)) {
                         if (i && D(n, t)) return;
                         let e = d.Z.getActiveStreamForUser(t, r);
-                        if (null != e && e.channelId === n && (i || e.state === O.jm8.ENDED || N.start(C, () => (0, a.aP)((0, v.V9)(e), !1)), i && e.state === O.jm8.ENDED)) {
+                        if (null != e && e.channelId === n && (i || e.state === O.jm8.ENDED || N.start(C, () => (0, a.aP)((0, y.V9)(e), !1)), i && e.state === O.jm8.ENDED)) {
                             N.stop();
                             let e = d.Z.getStreamForUser(t, r);
                             if (null == e) return;
@@ -153,12 +153,12 @@ class M extends s.Z {
             I(this, 'handleCallUpdate', (e) => {
                 let { channelId: t, region: n } = e,
                     r = d.Z.getCurrentUserActiveStream();
-                (null == r ? void 0 : r.channelId) === t && L((0, v.V9)(r), n);
+                (null == r ? void 0 : r.channelId) === t && L((0, y.V9)(r), n);
             }),
             I(this, 'handleChannelUpdates', (e) => {
                 let { channels: t } = e,
                     n = d.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && L((0, v.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && L((0, y.V9)(n), e.rtcRegion);
             }),
             I(this, 'handleMediaEngineVideoStateChanged', (e) => {
                 let { videoState: t } = e,

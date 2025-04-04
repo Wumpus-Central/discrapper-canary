@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-let _ = {};
+let p = {};
 function h(e) {
     let { changes: t } = e;
     for (let e in t) {
@@ -66,41 +66,41 @@ function h(e) {
         let r = e,
             { shouldSync: i, settings: o } = t[r];
         if (!0 === i) {
-            delete _[r];
+            delete p[r];
             continue;
         }
         if (
             (!1 === i &&
-                (_[r] = {
+                (p[r] = {
                     shouldSync: i,
                     settings: {}
                 }),
-            (null === (n = _[r]) || void 0 === n ? void 0 : n.shouldSync) === !1)
+            (null == (n = p[r]) ? void 0 : n.shouldSync) === !1)
         )
-            for (let e in o) _[r].settings[e] = o[e];
+            for (let e in o) p[r].settings[e] = o[e];
     }
 }
 function m() {
-    _ = {};
+    p = {};
 }
 class g extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        _ = null != e ? e : {};
+        p = null != e ? e : {};
     }
     getState() {
-        return _;
+        return p;
     }
     shouldSync(e) {
         var t;
-        return (null === (t = _[e]) || void 0 === t ? void 0 : t.shouldSync) !== !1;
+        return (null == (t = p[e]) ? void 0 : t.shouldSync) !== !1;
     }
     getTextSettings() {
         var e;
-        return null === (e = _.text) || void 0 === e ? void 0 : e.settings;
+        return null == (e = p.text) ? void 0 : e.settings;
     }
     getAppearanceSettings() {
         var e;
-        return null === (e = _.appearance) || void 0 === e ? void 0 : e.settings;
+        return null == (e = p.appearance) ? void 0 : e.settings;
     }
 }
 u(g, 'displayName', 'SelectivelySyncedUserSettingsStore'),
@@ -108,8 +108,8 @@ u(g, 'displayName', 'SelectivelySyncedUserSettingsStore'),
     u(g, 'migrations', [
         () => {
             var e, t;
-            let n = null !== (e = s.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
-                r = null !== (t = s.K.get('UserSettingsStore')) && void 0 !== t ? t : {};
+            let n = null != (e = s.K.get('UserSettingsSync')) ? e : {},
+                r = null != (t = s.K.get('UserSettingsStore')) ? t : {};
             s.K.remove('UserSettingsSync');
             let i = {};
             return (
@@ -128,7 +128,7 @@ u(g, 'displayName', 'SelectivelySyncedUserSettingsStore'),
         },
         (e) => {
             var t, n;
-            if ((null == e ? void 0 : null === (n = e.appearance) || void 0 === n ? void 0 : null === (t = n.settings) || void 0 === t ? void 0 : t.theme) === 'amoled') return p(d({}, e), { appearance: p(d({}, e.appearance), { settings: p(d({}, e.appearance.settings), { theme: 'midnight' }) }) });
+            if ((null == e || null == (n = e.appearance) || null == (t = n.settings) ? void 0 : t.theme) === 'amoled') return _(d({}, e), { appearance: _(d({}, e.appearance), { settings: _(d({}, e.appearance.settings), { theme: 'midnight' }) }) });
         }
     ]);
 let E = new g(l.Z, {

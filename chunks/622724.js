@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => h,
-    Z: () => _
+    Z: () => p
 });
 var r = n(200651);
 n(192379);
@@ -13,25 +13,25 @@ var i = n(442837),
     u = n(314897),
     d = n(594174),
     f = n(981631),
-    p = n(388032);
-function _(e) {
-    let { user: t, guildId: n, color: s, onAction: d, location: _ = a.Z.CONTEXT_MENU, appContext: h } = e,
-        m = (0, c.oV)(_),
+    _ = n(388032);
+function p(e) {
+    let { user: t, guildId: n, color: s, onAction: d, location: p = a.Z.CONTEXT_MENU, appContext: h } = e,
+        m = (0, c.oV)(p),
         g = (0, i.e7)([u.default], () => u.default.getId() === t.id);
     return !m || g || t.isNonUserBot()
         ? null
         : (0, r.jsx)(o.sNh, {
               id: 'report-user',
               color: s,
-              label: p.NW.string(p.t.A1MM3N),
+              label: _.NW.string(_.t.A1MM3N),
               action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d, h)
           });
 }
 function h(e) {
     let { user: t, guildId: n, color: a, onAction: c, appContext: u } = e,
-        p = (0, i.e7)([s.ZP], () => s.ZP.get('iar_testing')),
-        _ = (0, i.e7)([d.default], () => d.default.getCurrentUser());
-    return null != _ && (t.id === _.id || t.isNonUserBot() || !_.isStaff() || !p)
+        _ = (0, i.e7)([s.ZP], () => s.ZP.get('iar_testing')),
+        p = (0, i.e7)([d.default], () => d.default.getCurrentUser());
+    return null != p && (t.id === p.id || t.isNonUserBot() || !p.isStaff() || !_)
         ? null
         : (0, r.jsx)(o.sNh, {
               id: 'staff-test-report-user',

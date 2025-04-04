@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(379649),
     i = n(846519),
     o = n(361291),
@@ -60,7 +60,7 @@ function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-class p {
+class _ {
     start() {
         let { resolution: e, fps: t } = o.Z.getState();
         (this._targetResolution = e), (this._targetFPS = t), this._statInterval.start(d, this._sampleStats), (this._lastLayoutChanged = (0, r.zO)());

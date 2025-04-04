@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(129861),
     l = n(184301),
     c = n(347475),
-    u = n(607386);
+    u = n(22700);
 function d(e, t, n) {
     return (
         t in e
@@ -81,7 +81,7 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    let { user: t, guildId: n, channelId: i, nick: d, className: _, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: b, onContextMenu: v, onPopoutRequestOpen: y, onPopoutRequestClose: O } = e;
+    let { user: t, guildId: n, channelId: i, nick: d, className: _, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: b, onContextMenu: y, onPopoutRequestOpen: v, onPopoutRequestClose: O } = e;
     return (0, r.jsx)(a.yRy, {
         preload: () =>
             (0, l.Z)(t.id, t.getAvatarURL(n, (0, a.pxk)(a.EFr.SIZE_80)), {
@@ -99,7 +99,7 @@ function g(e) {
             ),
         position: 'left',
         shouldShow: !g && void 0,
-        onRequestOpen: y,
+        onRequestOpen: v,
         onRequestClose: O,
         ignoreModalClicks: E,
         clickTrap: !0,
@@ -110,7 +110,7 @@ function g(e) {
                 a.P3F,
                 p(f({}, l), {
                     className: o()(u.userListItem, _, { [u.popoutDisabled]: g }),
-                    onContextMenu: v,
+                    onContextMenu: y,
                     onClick: (e) => {
                         i(e), null == b || b(e);
                     },

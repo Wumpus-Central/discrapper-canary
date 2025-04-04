@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(685072),
@@ -61,14 +61,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,18 +77,18 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u } = e,
-        p = f(e, ['centerButton', 'onClick', 'onMouseEnter', 'onMouseLeave']);
-    let _ = t ? a.d : a.Z,
+        _ = f(e, ['centerButton', 'onClick', 'onMouseEnter', 'onMouseLeave']);
+    let p = t ? a.d : a.Z,
         h = () => {
-            o.default.disconnect(), null == n || n();
+            null == n || n(), o.default.disconnect();
         },
         m = () => s.NW.string(s.t['6vrfgo']),
         { Component: g, events: E } = (0, i.K)();
     return (0, r.jsx)(
-        _,
-        d(c({}, p), {
+        p,
+        d(c({}, _), {
             onClick: h,
             iconComponent: g,
             onMouseEnter: (e) => {

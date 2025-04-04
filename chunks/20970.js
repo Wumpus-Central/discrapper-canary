@@ -52,7 +52,7 @@ function s(e, t) {
         e
     );
 }
-let { newline: l, paragraph: c, url: u, link: d, strong: f, u: p, br: _, em: h, image: m, text: g } = r.defaultRules,
+let { newline: l, paragraph: c, url: u, link: d, strong: f, u: _, br: p, em: h, image: m, text: g } = r.defaultRules,
     E = {
         newline: l,
         paragraph: c,
@@ -64,8 +64,8 @@ let { newline: l, paragraph: c, url: u, link: d, strong: f, u: p, br: _, em: h, 
             }
         }),
         strong: f,
-        u: p,
-        br: _,
+        u: _,
+        br: p,
         em: h,
         image: m,
         hook: {

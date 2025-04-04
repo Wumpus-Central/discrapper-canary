@@ -1,7 +1,7 @@
-a.d(e, { o: () => o });
+a.d(e, { o: () => _ });
 var r = a(622916),
     n = a(255768);
-function o(t) {
+function _(t) {
     if ('boolean' == typeof t) return Number(t);
     let e = 'string' == typeof t ? parseFloat(t) : t;
     if ('number' != typeof e || isNaN(e) || e < 0 || e > 1) {

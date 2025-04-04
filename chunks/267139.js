@@ -9,9 +9,9 @@ var n = Symbol.for('react.element'),
     u = Symbol.for('react.suspense'),
     d = Symbol.for('react.memo'),
     f = Symbol.for('react.lazy'),
-    p = Symbol.iterator;
-function _(e) {
-    return null === e || 'object' != typeof e ? null : 'function' == typeof (e = (p && e[p]) || e['@@iterator']) ? e : null;
+    _ = Symbol.iterator;
+function p(e) {
+    return null === e || 'object' != typeof e ? null : 'function' == typeof (e = (_ && e[_]) || e['@@iterator']) ? e : null;
 }
 var h = {
         isMounted: function () {
@@ -26,8 +26,8 @@ var h = {
 function E(e, t, n) {
     (this.props = e), (this.context = t), (this.refs = g), (this.updater = n || h);
 }
-function v() {}
-function b(e, t, n) {
+function b() {}
+function y(e, t, n) {
     (this.props = e), (this.context = t), (this.refs = g), (this.updater = n || h);
 }
 (E.prototype.isReactComponent = {}),
@@ -38,12 +38,12 @@ function b(e, t, n) {
     (E.prototype.forceUpdate = function (e) {
         this.updater.enqueueForceUpdate(this, e, 'forceUpdate');
     }),
-    (v.prototype = E.prototype);
-var y = (b.prototype = new v());
-(y.constructor = b), m(y, E.prototype), (y.isPureReactComponent = !0);
+    (b.prototype = E.prototype);
+var v = (y.prototype = new b());
+(v.constructor = y), m(v, E.prototype), (v.isPureReactComponent = !0);
 var O = Array.isArray,
-    S = Object.prototype.hasOwnProperty,
-    I = { current: null },
+    I = Object.prototype.hasOwnProperty,
+    S = { current: null },
     T = {
         key: !0,
         ref: !0,
@@ -55,7 +55,7 @@ function N(e, t, r) {
         o = {},
         a = null,
         s = null;
-    if (null != t) for (i in (void 0 !== t.ref && (s = t.ref), void 0 !== t.key && (a = '' + t.key), t)) S.call(t, i) && !T.hasOwnProperty(i) && (o[i] = t[i]);
+    if (null != t) for (i in (void 0 !== t.ref && (s = t.ref), void 0 !== t.key && (a = '' + t.key), t)) I.call(t, i) && !T.hasOwnProperty(i) && (o[i] = t[i]);
     var l = arguments.length - 2;
     if (1 === l) o.children = r;
     else if (1 < l) {
@@ -69,7 +69,7 @@ function N(e, t, r) {
         key: a,
         ref: s,
         props: o,
-        _owner: I.current
+        _owner: S.current
     };
 }
 function A(e, t) {
@@ -137,11 +137,11 @@ function D(e, t, i, o, a) {
             var u = o + w((s = e[c]), c);
             l += D(s, t, i, u, a);
         }
-    else if ('function' == typeof (u = _(e))) for (e = u.call(e), c = 0; !(s = e.next()).done; ) (u = o + w((s = s.value), c++)), (l += D(s, t, i, u, a));
+    else if ('function' == typeof (u = p(e))) for (e = u.call(e), c = 0; !(s = e.next()).done; ) (u = o + w((s = s.value), c++)), (l += D(s, t, i, u, a));
     else if ('object' === s) throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (t = String(e)) ? 'object with keys {' + Object.keys(e).join(', ') + '}' : t) + '). If you meant to render a collection of children, use an array instead.');
     return l;
 }
-function x(e, t, n) {
+function L(e, t, n) {
     if (null == e) return e;
     var r = [],
         i = 0;
@@ -152,7 +152,7 @@ function x(e, t, n) {
         r
     );
 }
-function L(e) {
+function x(e) {
     if (-1 === e._status) {
         var t = e._result;
         (t = t()).then(
@@ -173,15 +173,15 @@ var M = { current: null },
     j = {
         ReactCurrentDispatcher: M,
         ReactCurrentBatchConfig: k,
-        ReactCurrentOwner: I
+        ReactCurrentOwner: S
     };
 function U() {
     throw Error('act(...) is not supported in production builds of React.');
 }
 (t.Children = {
-    map: x,
+    map: L,
     forEach: function (e, t, n) {
-        x(
+        L(
             e,
             function () {
                 t.apply(this, arguments);
@@ -192,7 +192,7 @@ function U() {
     count: function (e) {
         var t = 0;
         return (
-            x(e, function () {
+            L(e, function () {
                 t++;
             }),
             t
@@ -200,7 +200,7 @@ function U() {
     },
     toArray: function (e) {
         return (
-            x(e, function (e) {
+            L(e, function (e) {
                 return e;
             }) || []
         );
@@ -213,7 +213,7 @@ function U() {
     (t.Component = E),
     (t.Fragment = i),
     (t.Profiler = a),
-    (t.PureComponent = b),
+    (t.PureComponent = y),
     (t.StrictMode = o),
     (t.Suspense = u),
     (t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = j),
@@ -225,8 +225,8 @@ function U() {
             a = e.ref,
             s = e._owner;
         if (null != t) {
-            if ((void 0 !== t.ref && ((a = t.ref), (s = I.current)), void 0 !== t.key && (o = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
-            for (c in t) S.call(t, c) && !T.hasOwnProperty(c) && (i[c] = void 0 === t[c] && void 0 !== l ? l[c] : t[c]);
+            if ((void 0 !== t.ref && ((a = t.ref), (s = S.current)), void 0 !== t.key && (o = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
+            for (c in t) I.call(t, c) && !T.hasOwnProperty(c) && (i[c] = void 0 === t[c] && void 0 !== l ? l[c] : t[c]);
         }
         var c = arguments.length - 2;
         if (1 === c) i.children = r;
@@ -284,7 +284,7 @@ function U() {
                 _status: -1,
                 _result: e
             },
-            _init: L
+            _init: x
         };
     }),
     (t.memo = function (e, t) {

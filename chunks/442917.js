@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(100527),
     E = n(367907),
     b = n(358221),
-    v = n(414910),
-    y = n(221888),
+    y = n(414910),
+    v = n(221888),
     O = n(522651),
     I = n(933557),
     S = n(965048),
@@ -57,8 +57,8 @@ var r = n(200651),
     ei = n(76021),
     eo = n(981631),
     ea = n(354459),
-    es = n(12552),
-    el = n(96424);
+    es = n(420334),
+    el = n(20795);
 function ec(e, t, n) {
     return (
         t in e
@@ -158,7 +158,7 @@ class e_ extends i.PureComponent {
                     width: n,
                     avError: o
                 });
-            if ((null == t ? void 0 : t.type) === ea.fO.USER)
+            else if ((null == t ? void 0 : t.type) === ea.fO.USER)
                 return (0, r.jsx)(et.Z, {
                     userId: t.user.id,
                     width: n,
@@ -190,7 +190,7 @@ class e_ extends i.PureComponent {
         let { channel: e, participantOnScreen: t } = this.props;
         if ((null == t ? void 0 : t.type) === ea.fO.STREAM || (null == t ? void 0 : t.type) === ea.fO.USER) {
             var n;
-            let i = null !== (n = z.ZP.getNickname(e.getGuildId(), e.id, t.user)) && void 0 !== n ? n : q.ZP.getName(t.user);
+            let i = null != (n = z.ZP.getNickname(e.getGuildId(), e.id, t.user)) ? n : q.ZP.getName(t.user);
             return (0, r.jsx)(d.Text, {
                 variant: 'text-md/normal',
                 color: 'always-white',
@@ -234,7 +234,7 @@ class e_ extends i.PureComponent {
                             eu(
                                 {
                                     title: a,
-                                    backgroundKey: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
+                                    backgroundKey: null != (t = null == n ? void 0 : n.id) ? t : '',
                                     screenMessage: null == l ? this.getScreenMessage() : null,
                                     onJumpToChannel: this.handleJumpToChannel,
                                     onHide: this.handleHidePIP,
@@ -269,7 +269,7 @@ class e_ extends i.PureComponent {
                 var e;
                 let { channel: t } = this.props;
                 (0, h.Ou)();
-                let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : eo.ME;
+                let n = null != (e = t.getGuildId()) ? e : eo.ME;
                 (0, w.XU)(n, t.id), p.Z.channelListScrollTo(n, t.id);
                 let r = this.activeStreamForSelectedParticipant;
                 null != r && _.Z.selectParticipant(r.channelId, (0, T.V9)(r));
@@ -321,7 +321,7 @@ class e_ extends i.PureComponent {
                 return (
                     a()((0, ea._5)(e) || (null == e ? void 0 : e.type) === ea.fO.ACTIVITY, 'Cannot render participants for participant type '.concat(null == e ? void 0 : e.type)),
                     (0, r.jsx)(L.Z, {
-                        children: (0, r.jsx)(y.Z, {
+                        children: (0, r.jsx)(v.Z, {
                             channelId: t.id,
                             guildId: t.getGuildId(),
                             className: es.rightTrayIcon,
@@ -359,7 +359,7 @@ function ep(e) {
         i = (0, c.e7)([H.Z], () => H.Z.getSpeaker(t.id)),
         o = (0, c.e7)([b.Z], () => b.Z.getParticipant(t.id, i), [t.id, i]),
         a = (0, c.e7)([F.Z], () => l()(F.Z.getVideoDevices()).values().first()),
-        s = (0, c.e7)([W.Z], () => (null != o && o.type !== ea.fO.ACTIVITY && o.type !== ea.fO.HIDDEN_STREAM ? W.Z.getStreamId(o.user.id, t.getGuildId(), (0, v.Z)(o.type)) : null), [o, t]),
+        s = (0, c.e7)([W.Z], () => (null != o && o.type !== ea.fO.ACTIVITY && o.type !== ea.fO.HIDDEN_STREAM ? W.Z.getStreamId(o.user.id, t.getGuildId(), (0, y.Z)(o.type)) : null), [o, t]),
         d = null == a || a.disabled,
         f = !d,
         _ = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),

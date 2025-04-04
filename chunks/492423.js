@@ -62,7 +62,7 @@ let d = {
             o()(i.applicationId === t, 'Passed an unexpected [applicationId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?'),
             (0, a.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('11212'), n.e('78447'), n.e('83366'), n.e('94458'), n.e('74976'), n.e('41849')]).then(n.bind(n, 644941));
+                    let { default: e } = await Promise.all([n.e('11212'), n.e('78447'), n.e('94458'), n.e('41150'), n.e('74976'), n.e('95287')]).then(n.bind(n, 644941));
                     return (n) =>
                         (0, r.jsx)(
                             e,

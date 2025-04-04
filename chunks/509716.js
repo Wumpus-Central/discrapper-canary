@@ -7,19 +7,19 @@ var r = n(456007),
 function l(e) {
     let { option: t, content: n, guildId: l, channelId: c, allowEmptyValues: u, commandOrigin: d = i.bB.CHAT } = e,
         f = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
-        p = t.required,
-        _ = '' === f;
+        _ = t.required,
+        p = '' === f;
     if (null == n)
-        return p
+        return _
             ? {
                   success: !1,
                   error: s.NW.string(s.t.JZJQLy)
               }
             : { success: !0 };
-    if (_)
+    if (p)
         return u
             ? { success: !0 }
-            : p
+            : _
               ? {
                     success: !1,
                     error: s.NW.string(s.t.JZJQLy)

@@ -50,7 +50,7 @@ function f(e) {
         !0)
     );
 }
-function p(e) {
+function _(e) {
     let { messageId: t, channelId: n } = e,
         r = u({
             id: t,
@@ -59,7 +59,7 @@ function p(e) {
         i = c[r];
     null != i && (c[r] = (0, s.Cm)(i));
 }
-function _() {
+function p() {
     m();
 }
 function h() {
@@ -83,7 +83,7 @@ let E = new g(o.Z, {
     SEARCH_FINISH: d,
     MOD_VIEW_SEARCH_FINISH: d,
     MESSAGE_UPDATE: f,
-    LOGOUT: _,
+    LOGOUT: p,
     CONNECTION_OPEN: h,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: p
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: _
 });

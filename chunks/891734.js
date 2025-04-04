@@ -12,17 +12,17 @@ function s(e, t) {
         u = n.padding,
         d = n.flipVariations,
         f = n.allowedAutoPlacements,
-        p = void 0 === f ? i.Ct : f,
-        _ = (0, r.Z)(s),
-        h = _
+        _ = void 0 === f ? i.Ct : f,
+        p = (0, r.Z)(s),
+        h = p
             ? d
                 ? i.bw
                 : i.bw.filter(function (e) {
-                      return (0, r.Z)(e) === _;
+                      return (0, r.Z)(e) === p;
                   })
             : i.mv,
         m = h.filter(function (e) {
-            return p.indexOf(e) >= 0;
+            return _.indexOf(e) >= 0;
         });
     0 === m.length && (m = h);
     var g = m.reduce(function (t, n) {

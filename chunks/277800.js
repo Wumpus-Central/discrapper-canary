@@ -12,7 +12,7 @@ function l(e) {
         : Object.values(e.permissionOverwrites)
               .filter((e) => {
                   var n, o;
-                  return 0 === e.type && (null === (o = i.Z.getRoles(t.id)[e.id]) || void 0 === o ? void 0 : null === (n = o.tags) || void 0 === n ? void 0 : n.guild_connections) === null && !r.Db(e.deny, s);
+                  return 0 === e.type && (null == (o = i.Z.getRoles(t.id)[e.id]) || null == (n = o.tags) ? void 0 : n.guild_connections) === null && !r.Db(e.deny, s);
               })
               .map((e) => i.Z.getRoles(t.id)[e.id])
               .filter((e) => null != e);

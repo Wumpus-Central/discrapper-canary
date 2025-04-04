@@ -1,7 +1,7 @@
 var r = a(425561),
     n = a(393531),
-    o = a(208529);
-t.exports = function (t, e, a, _, i, c) {
+    _ = a(208529);
+t.exports = function (t, e, a, o, i, c) {
     var s = 1 & a,
         E = t.length,
         l = e.length;
@@ -15,22 +15,22 @@ t.exports = function (t, e, a, _, i, c) {
     for (c.set(t, e), c.set(e, t); ++R < E; ) {
         var f = t[R],
             p = e[R];
-        if (_) var T = s ? _(p, f, R, e, t, c) : _(f, p, R, t, e, c);
-        if (void 0 !== T) {
-            if (T) continue;
+        if (o) var N = s ? o(p, f, R, e, t, c) : o(f, p, R, t, e, c);
+        if (void 0 !== N) {
+            if (N) continue;
             d = !1;
             break;
         }
         if (A) {
             if (
                 !n(e, function (t, e) {
-                    if (!o(A, e) && (f === t || i(f, t, a, _, c))) return A.push(e);
+                    if (!_(A, e) && (f === t || i(f, t, a, o, c))) return A.push(e);
                 })
             ) {
                 d = !1;
                 break;
             }
-        } else if (!(f === p || i(f, p, a, _, c))) {
+        } else if (!(f === p || i(f, p, a, o, c))) {
             d = !1;
             break;
         }

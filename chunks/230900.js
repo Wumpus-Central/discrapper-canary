@@ -7,11 +7,11 @@ n.d(t, {
 var r = n(592125),
     i = n(765305);
 function o(e) {
-    let t;
-    let { entity_type: n, channel_id: o } = e;
+    let t,
+        { entity_type: n, channel_id: o } = e;
     if (n in i.nz && null != o) {
         var a;
-        t = null !== (a = r.Z.getChannel(e.channel_id)) && void 0 !== a ? a : void 0;
+        t = null != (a = r.Z.getChannel(e.channel_id)) ? a : void 0;
     }
     return t;
 }

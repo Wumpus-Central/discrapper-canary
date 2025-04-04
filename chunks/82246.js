@@ -5,13 +5,13 @@ var r = n(566885),
     s = function (e) {
         var t = 1 === e;
         return function (n, s, l) {
-            for (var c, u = o(n), d = i(u), f = r(s, l), p = a(d); p-- > 0; )
-                if (f((c = d[p]), p, u))
+            for (var c, u = o(n), d = i(u), f = r(s, l), _ = a(d); _-- > 0; )
+                if (f((c = d[_]), _, u))
                     switch (e) {
                         case 0:
                             return c;
                         case 1:
-                            return p;
+                            return _;
                     }
             return t ? -1 : void 0;
         };

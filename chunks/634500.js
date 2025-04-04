@@ -9,7 +9,7 @@ var r = n(200651),
     u = n(269647),
     d = n(981631),
     f = n(388032);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -44,7 +44,7 @@ function h() {
     function n() {
         null !== t.current && ((0, a.Mr3)(t.current), (t.current = null));
     }
-    function p() {
+    function _() {
         l.Z.clearVADWarning();
     }
     return (
@@ -54,15 +54,15 @@ function h() {
                     ? (t.current = (0, a.h7j)((e) =>
                           (0, r.jsx)(
                               c.default,
-                              _(
+                              p(
                                   {
                                       title: f.NW.string(f.t.NYklho),
                                       body: f.NW.string(f.t.EJ26Oj),
-                                      onCancel: p,
+                                      onCancel: _,
                                       cancelText: f.NW.string(f.t.UYW0d3),
                                       confirmText: f.NW.string(f.t.E3Y7ND),
                                       onConfirm: () => {
-                                          s.Z.setMode(d.pM4.PUSH_TO_TALK), p();
+                                          s.Z.setMode(d.pM4.PUSH_TO_TALK), _();
                                       }
                                   },
                                   e

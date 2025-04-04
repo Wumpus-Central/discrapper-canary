@@ -20,8 +20,8 @@ class l extends r.EventEmitter {
     log(e, t) {
         let n = new u(e),
             r = (t, r) => {
-                let i;
-                let a = {
+                let i,
+                    a = {
                         name: t,
                         time: -1
                     },
@@ -62,7 +62,7 @@ class l extends r.EventEmitter {
                     return (a += n), ''.concat(t.padEnd(o + 1, ' '), ' - ').concat(n, 'ms');
                 })
                 .join('\n');
-        return 0 === i.length || i[0][2] < 10 || a < 20 || (s.log('Using Hermes:', void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)), s.log(''.concat(null != e ? '\n\n=== '.concat(e, ' ===') : '', '\n').concat(l, '\n')), s.log('Total Time: '.concat(a, 'ms'))), i;
+        return 0 === i.length || i[0][2] < 10 || a < 20 || (s.log('Using Hermes:', void 0 !== (null == (t = n.g) ? void 0 : t.HermesInternal)), s.log(''.concat(null != e ? '\n\n=== '.concat(e, ' ===') : '', '\n').concat(l, '\n')), s.log('Total Time: '.concat(a, 'ms'))), i;
     }
     getLastActionMetrics(e) {
         var t;
@@ -83,7 +83,7 @@ class l extends r.EventEmitter {
                     return (l += n), ''.concat(t.padEnd(a + 1, ' '), ' - ').concat(n, 'ms');
                 })
                 .join('\n');
-        return 0 === o.length || l < 8 || s.log('\nUsing Hermes: '.concat(void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)), '\n\n=== '.concat(e, ' ===\n').concat(c), '\nTotal Time: '.concat(l, 'ms\n\n')), o;
+        return 0 === o.length || l < 8 || s.log('\nUsing Hermes: '.concat(void 0 !== (null == (t = n.g) ? void 0 : t.HermesInternal)), '\n\n=== '.concat(e, ' ===\n').concat(c), '\nTotal Time: '.concat(l, 'ms\n\n')), o;
     }
     constructor({ persist: e = !1 } = {}) {
         super(), a(this, 'logs', []), a(this, 'persist', void 0), (this.persist = e);

@@ -2,8 +2,8 @@ n.d(t, {
     EO: () => G,
     LY: () => k,
     Nj: () => o.Z,
-    a5: () => L,
-    c4: () => x,
+    a5: () => x,
+    c4: () => L,
     g7: () => w,
     jZ: () => A,
     mE: () => B,
@@ -27,23 +27,23 @@ var r = n(149765),
     u = n(592125),
     d = n(984933),
     f = n(496675),
-    p = n(944486),
-    _ = n(938475),
+    _ = n(944486),
+    p = n(938475),
     h = n(700785),
     m = n(709054);
 n(51144);
 var g = n(981631),
     E = n(474936),
-    v = n(388032);
-let { GUILD_VOICE: b, GUILD_CATEGORY: y, GUILD_STAGE_VOICE: O } = g.d4z;
-function S(e, t) {
-    return e === t || e === y;
+    b = n(388032);
+let { GUILD_VOICE: y, GUILD_CATEGORY: v, GUILD_STAGE_VOICE: O } = g.d4z;
+function I(e, t) {
+    return e === t || e === v;
 }
-function I(e, t, n) {
+function S(e, t, n) {
     let i = h.Hn;
     return (
-        ((0, c.r8)(t) || t === y) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
-        S(t, b) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
+        ((0, c.r8)(t) || t === v) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
+        I(t, y) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -55,8 +55,8 @@ function I(e, t, n) {
 function T(e, t, n) {
     let i = h.Hn;
     return (
-        ((0, c.r8)(t) || t === y) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
-        (S(t, b) || S(t, O)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
+        ((0, c.r8)(t) || t === v) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
+        (I(t, y) || I(t, O)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -69,7 +69,7 @@ function N(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         o = [];
     return (
-        (n.length > 0 || r) && o.push(I(e, t, i.BN.ROLE)),
+        (n.length > 0 || r) && o.push(S(e, t, i.BN.ROLE)),
         n.forEach((e) => {
             o.push(T(e, t, i.BN.ROLE));
         }),
@@ -96,15 +96,15 @@ function P(e, t, n) {
     var r, i;
     let o = e.getGuildId(),
         s = n.getGuild(o),
-        l = null !== (r = null == s ? void 0 : s.maxVideoChannelUsers) && void 0 !== r ? r : -1,
-        c = null !== (i = null == s ? void 0 : s.maxStageVideoChannelUsers) && void 0 !== i ? i : -1,
-        u = _.ZP.countVoiceStatesForChannel(e.id),
-        d = _.ZP.getVoiceStatesForChannel(e),
-        p = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
+        l = null != (r = null == s ? void 0 : s.maxVideoChannelUsers) ? r : -1,
+        c = null != (i = null == s ? void 0 : s.maxStageVideoChannelUsers) ? i : -1,
+        u = p.ZP.countVoiceStatesForChannel(e.id),
+        d = p.ZP.getVoiceStatesForChannel(e),
+        _ = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
         h = !1;
-    h = e.type === O ? null != o && (t.hasVideo(e.id) || (0, a.a)(d)) && c > 0 && u >= c : null != o && t.hasVideo(e.id) && l > 0 && u >= l + +!!p;
+    h = e.type === O ? null != o && (t.hasVideo(e.id) || (0, a.a)(d)) && c > 0 && u >= c : null != o && t.hasVideo(e.id) && l > 0 && u >= l + +!!_;
     let m = e.userLimit > 0 && u >= e.userLimit;
-    return h || (m && !p);
+    return h || (m && !_);
 }
 function w(e, t) {
     return t.isGuildStageVoice() ? g.epw : null == e ? g.eWB : Math.max(e.hasFeature(g.oNc.VIP_REGIONS) ? E.HO[g.Eu4.TIER_3].limits.bitrate : g.eWB, E.HO[e.premiumTier].limits.bitrate);
@@ -126,7 +126,7 @@ function D(e) {
         o
     );
 }
-function x(e) {
+function L(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e;
     return D({
         channels: t,
@@ -135,29 +135,29 @@ function x(e) {
         voiceStates: i
     }).map((e) => e.user);
 }
-function L(e) {
+function x(e) {
     let { type: t } = e;
     switch (t) {
         case g.d4z.DM:
-            return v.NW.string(v.t.jN2DfX);
+            return b.NW.string(b.t.jN2DfX);
         case g.d4z.GROUP_DM:
-            return v.NW.string(v.t['e5y+go']);
+            return b.NW.string(b.t['e5y+go']);
         case g.d4z.GUILD_TEXT:
-            return v.NW.string(v.t.Pnajj4);
+            return b.NW.string(b.t.Pnajj4);
         case g.d4z.GUILD_FORUM:
-            return v.NW.string(v.t.GbryDQ);
+            return b.NW.string(b.t.GbryDQ);
         case g.d4z.GUILD_MEDIA:
-            return v.NW.string(v.t.seKITE);
+            return b.NW.string(b.t.seKITE);
         case g.d4z.GUILD_VOICE:
-            return v.NW.string(v.t.BVZqJi);
+            return b.NW.string(b.t.BVZqJi);
         case g.d4z.GUILD_STAGE_VOICE:
-            return v.NW.string(v.t.EErMzM);
+            return b.NW.string(b.t.EErMzM);
         case g.d4z.GUILD_ANNOUNCEMENT:
-            return v.NW.string(v.t.l1dkSE);
+            return b.NW.string(b.t.l1dkSE);
         case g.d4z.GUILD_STORE:
-            return v.NW.string(v.t['P1/Erq']);
+            return b.NW.string(b.t['P1/Erq']);
         case g.d4z.GUILD_CATEGORY:
-            return v.NW.string(v.t.vHCZws);
+            return b.NW.string(b.t.vHCZws);
         default:
             return null;
     }
@@ -173,8 +173,8 @@ function M(e) {
     else if (c.sR.has(e.type)) return 'text';
 }
 function k(e) {
-    let t;
-    let n = u.Z.getChannel(p.Z.getLastSelectedChannelId());
+    let t,
+        n = u.Z.getChannel(_.Z.getLastSelectedChannelId());
     if (null != n && n.getGuildId() === e && n.type === g.d4z.GUILD_TEXT) t = n.id;
     else {
         let n = d.ZP.getDefaultChannel(e);
@@ -199,8 +199,8 @@ function U(e, t, n, r) {
               .concat(g.Z5c.CHANNEL_THREAD_VIEW(e, t, n, r));
 }
 function G(e, t, n, r) {
-    let i;
-    let o = e.getGuildId(),
+    let i,
+        o = e.getGuildId(),
         a = (0, s.BC)(o, t);
     return null != t && a ? U(o, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : j(o, e.id, n);
 }

@@ -17,8 +17,8 @@ var i = n(120356),
     d = n(430824),
     p = n(594174),
     _ = n(5192),
-    h = n(192918),
-    f = n(388032),
+    f = n(192918),
+    h = n(388032),
     m = n(522314);
 function g() {
     return (0, r.jsx)('div', {
@@ -78,7 +78,7 @@ function O(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: o = 3 } = e,
         a = i.author_id,
         g = (0, l.e7)([p.default], () => p.default.getUser(a)),
-        { displayParticipants: b, participant1: E, participant2: O, numOtherParticipants: y } = (0, h.Z)(i, o),
+        { displayParticipants: b, participant1: E, participant2: O, numOtherParticipants: y } = (0, f.Z)(i, o),
         v = (0, l.e7)([u.ZP], () => u.ZP.getMember(t, a)),
         N = (0, l.e7)(
             [d.Z],
@@ -121,7 +121,7 @@ function O(e) {
                   })
                 : null,
             (0, r.jsx)(s.nn4, {
-                children: f.NW.format(f.t.rH95Gh, {
+                children: h.NW.format(h.t.rH95Gh, {
                     user0: _.ZP.getName(t, n, E),
                     user1: _.ZP.getName(t, n, O),
                     countOthers: y,

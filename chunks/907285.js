@@ -12,11 +12,11 @@ function u(e) {
     let n = (0, s.Z)(),
         u = (0, i.e7)([l.Z], () => l.Z.getVideoDeviceId()),
         d =
-            null ===
-                (t = Object.values(n).find((e) => {
-                    let { id: t } = e;
-                    return t === u;
-                })) || void 0 === t
+            null ==
+            (t = Object.values(n).find((e) => {
+                let { id: t } = e;
+                return t === u;
+            }))
                 ? void 0
                 : t.name,
         f = Object.values(n).map((e) => {

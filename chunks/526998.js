@@ -15,4 +15,4 @@ let a = (0, r.B)({
             }
         ]
     }),
-    s = (e, t) => !!(null != t && (0, i.yE)(t.purchasedFlags, o.in.ON_REVERSE_TRIAL)) && a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled;
+    s = (e, t) => null != t && !!(0, i.yE)(t.purchasedFlags, o.in.ON_REVERSE_TRIAL) && a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled;

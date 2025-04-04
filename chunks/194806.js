@@ -67,7 +67,7 @@ class d {
     }
     close() {
         var e;
-        (this.lastState = a.hi.Closed), null === (e = this.raw) || void 0 === e || e.close(), (this.raw = null), o.r.removeCompletionCallback(this.databaseStateCallback);
+        (this.lastState = a.hi.Closed), null == (e = this.raw) || e.close(), (this.raw = null), o.r.removeCompletionCallback(this.databaseStateCallback);
     }
     disable(e) {
         return null == this.raw

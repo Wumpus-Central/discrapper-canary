@@ -9,8 +9,8 @@ var r,
     u = n(179658),
     d = n(70956),
     f = n(960048),
-    p = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -95,88 +95,88 @@ let m = (() => {
         isStreamInfoOverlayEnabled: !1,
         preventPopoutClose: !1
     },
-    v = h({}, E);
-function b(e) {
-    (v = h({}, E, v, e)), m.set(v.sourceMapsEnabled), l.K.set(g, v);
-}
+    b = h({}, E);
 function y(e) {
+    (b = h({}, E, b, e)), m.set(b.sourceMapsEnabled), l.K.set(g, b);
+}
+function v(e) {
     let { settings: t } = e;
-    b(t);
+    y(t);
 }
 function O(e) {
-    b(E);
+    y(E);
 }
-function S(e) {
+function I(e) {
     var t;
-    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & p.xW$.STAFF) === p.xW$.STAFF,
+    let n = ((null != (t = e.user.flags) ? t : 0) & _.xW$.STAFF) === _.xW$.STAFF,
         r = n || null != e.user.personal_connection_id;
-    n && m.set(v.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
+    n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
 }
-class I extends (r = a.ZP.Store) {
+class S extends (r = a.ZP.Store) {
     initialize() {
         let e = l.K.get(g);
-        null != e && (v = h({}, E, e));
+        null != e && (b = h({}, E, e));
     }
     get isTracingRequests() {
-        return v.trace;
+        return b.trace;
     }
     get isForcedCanary() {
-        return v.canary;
+        return b.canary;
     }
     get isLoggingGatewayEvents() {
-        return v.logGatewayEvents;
+        return b.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return v.logOverlayEvents;
+        return b.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return v.logAnalyticsEvents;
+        return b.logAnalyticsEvents;
     }
     get isAxeEnabled() {
-        return v.axeEnabled;
+        return b.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return v.cssDebuggingEnabled;
+        return b.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return v.layoutDebuggingEnabled;
+        return b.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return v.sourceMapsEnabled;
+        return b.sourceMapsEnabled;
     }
     get isAnalyticsDebuggerEnabled() {
-        return v.analyticsDebuggerEnabled;
+        return b.analyticsDebuggerEnabled;
     }
     get isBugReporterEnabled() {
-        return v.bugReporterEnabled;
+        return b.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return v.idleStatusIndicatorEnabled;
+        return b.idleStatusIndicatorEnabled;
     }
     get onlyShowPreviewAppCollections() {
-        return v.onlyShowPreviewAppCollections;
+        return b.onlyShowPreviewAppCollections;
     }
     get disableAppCollectionsCache() {
-        return v.disableAppCollectionsCache;
+        return b.disableAppCollectionsCache;
     }
     get isStreamInfoOverlayEnabled() {
-        return v.isStreamInfoOverlayEnabled;
+        return b.isStreamInfoOverlayEnabled;
     }
     get preventPopoutClose() {
-        return v.preventPopoutClose;
+        return b.preventPopoutClose;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(v).map((e) => v[e]),
-            Object.keys(v)
-                .filter((e) => v[e])
+            Object.keys(b).map((e) => b[e]),
+            Object.keys(b)
+                .filter((e) => b[e])
                 .join(',')
         );
     }
 }
-_(I, 'displayName', 'DeveloperOptionsStore');
-let T = new I(c.Z, {
+p(S, 'displayName', 'DeveloperOptionsStore');
+let T = new S(c.Z, {
     LOGOUT: O,
-    CONNECTION_OPEN: S,
-    DEVELOPER_OPTIONS_UPDATE_SETTINGS: y
+    CONNECTION_OPEN: I,
+    DEVELOPER_OPTIONS_UPDATE_SETTINGS: v
 });

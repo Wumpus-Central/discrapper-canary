@@ -33,12 +33,12 @@ let u = () => ({
         icon: i.Ka2,
         description: c.NW.string(c.t['n/HqCg'])
     }),
-    p = () => ({
+    _ = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: i.OUq,
         description: c.NW.string(c.t.AU0zcX)
     }),
-    _ = () => ({
+    p = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css,
         icon: i.lZ8,
         description: c.NW.string(c.t.zZe94u)
@@ -83,17 +83,17 @@ let u = () => ({
         icon: o.Z,
         description: c.NW.string(c.t.a7LWeH)
     }),
-    v = () => ({
+    b = () => ({
         icon: a.Z,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
         description: c.NW.string(c.t.QouJkp)
     }),
-    b = () => ({
+    y = () => ({
         icon: i.lZ8,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
         description: c.NW.string(c.t['3MpIx8'])
     }),
-    y = () => ({
+    v = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: i.EO4,
         description: c.NW.string(c.t.gAeHJS)
@@ -106,12 +106,12 @@ let u = () => ({
             description: e
         };
     },
-    S = () => ({
+    I = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
         icon: s.Z,
         description: c.NW.string(c.t.Tm40TU)
     }),
-    I = function () {
+    S = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
         return {
             color: e,
@@ -120,16 +120,16 @@ let u = () => ({
         };
     };
 function T() {
-    return [_(), f(), h(), O()];
+    return [p(), f(), h(), O()];
 }
 function N() {
-    return [_(), m(l.Eu4.TIER_2), I(), O()];
+    return [p(), m(l.Eu4.TIER_2), S(), O()];
 }
 function A() {
-    return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), S(), g(), O()];
+    return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), I(), g(), O()];
 }
 function C() {
-    return [g(), p(), m(l.Eu4.TIER_3), O()];
+    return [g(), _(), m(l.Eu4.TIER_3), O()];
 }
 function R() {
     return [u(), h(), d(), O()];
@@ -138,5 +138,5 @@ function P() {
     return [h(), O()];
 }
 function w() {
-    return [v(), b(), E(), y()];
+    return [b(), y(), E(), v()];
 }

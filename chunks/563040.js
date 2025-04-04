@@ -1,7 +1,7 @@
 n.d(t, {
     rK: () => E,
-    tR: () => b,
-    tj: () => _
+    tR: () => y,
+    tj: () => p
 }),
     n(757143),
     n(301563),
@@ -32,8 +32,8 @@ let s = /^[0]+/,
     u = /(PM|ΜΜ|शाम)/i,
     d = /\s+/,
     f = (e) => e.replace(s, '').replace(l, '').replace(c, '').replace(d, ''),
-    p = (e) => e.replace(s, '').replace(u, '').replace(d, ''),
-    _ = (e, t) => {
+    _ = (e) => e.replace(s, '').replace(u, '').replace(d, ''),
+    p = (e, t) => {
         let n = t.toUpperCase().trim();
         if (n.length > 0) {
             let t = i()(''.concat(null == e ? void 0 : e.format('YYYY-MM-DD'), ' ').concat(n), 'YYYY-MM-DD LT');
@@ -44,8 +44,8 @@ let s = /^[0]+/,
     m = 15,
     g = 'LT',
     E = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
-    v = (e, t) => e.value.unix() - t.value.unix();
-class b {
+    b = (e, t) => e.value.unix() - t.value.unix();
+class y {
     lookupByValue(e) {
         if (null == e) return;
         let t = E(h, e);
@@ -80,18 +80,18 @@ class b {
                 label: n,
                 value: t
             }),
-            this.options.sort(v),
+            this.options.sort(b),
             e
         );
     }
     _guessOptions(e) {
         let t = [];
         if (/[:\\.]/.test(e)) {
-            let n = _(h, e);
+            let n = p(h, e);
             if (null != n) {
                 t.push(n.clone());
                 let r = n.add({ hours: 12 });
-                r.isBefore(h.clone().add({ hours: 24 })) && p(r.format('LT')) === p(e) && t.push(r);
+                r.isBefore(h.clone().add({ hours: 24 })) && _(r.format('LT')) === _(e) && t.push(r);
             }
         }
         return t;
@@ -105,7 +105,7 @@ class b {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(v),
+                e.sort(b),
                 e
             );
         }

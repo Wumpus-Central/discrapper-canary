@@ -1,4 +1,4 @@
-n.d(t, { o: () => p });
+n.d(t, { o: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(692547),
@@ -76,20 +76,20 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => {
+let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, secondaryColor: p = 'transparent', secondaryColorClass: _ = '', color: h = i.Z.colors.INTERACTIVE_NORMAL, colorClass: m = '' } = e,
+        { size: s = 'md', width: c, height: f, secondaryColor: _ = 'transparent', secondaryColorClass: p = '', color: h = i.Z.colors.INTERACTIVE_NORMAL, colorClass: m = '' } = e,
         g = d(e, ['size', 'width', 'height', 'secondaryColor', 'secondaryColorClass', 'color', 'colorClass']);
     let E = (0, a.m)(s),
-        v = null !== (t = null == E ? void 0 : E.width) && void 0 !== t ? t : c,
-        b = null !== (n = null == E ? void 0 : E.height) && void 0 !== n ? n : f;
+        b = null != (t = null == E ? void 0 : E.width) ? t : c,
+        y = null != (n = null == E ? void 0 : E.height) ? n : f;
     return (0, r.jsxs)(
         'svg',
         u(l({}, (0, o.Z)(g)), {
             xmlns: 'http://www.w3.org/2000/svg',
-            width: v,
-            height: b,
+            width: b,
+            height: y,
             fill: 'none',
             viewBox: '0 0 24 24',
             children: [
@@ -97,8 +97,8 @@ let p = (e) => {
                     cx: '12',
                     cy: '12',
                     r: '10',
-                    fill: 'string' == typeof p ? p : p.css,
-                    className: _
+                    fill: 'string' == typeof _ ? _ : _.css,
+                    className: p
                 }),
                 (0, r.jsx)('path', {
                     fill: 'string' == typeof h ? h : h.css,

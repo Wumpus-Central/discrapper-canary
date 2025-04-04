@@ -6,12 +6,12 @@ var r = n(192379),
     s = n(98528);
 let l = (e) => {
     let { columnCounts: t, stickersGrid: n, stickersListRef: l, store: c, gridNavigatorId: u, setInspectedStickerPosition: d, onGridItemSelect: f } = e,
-        p = (0, o.O)(),
-        _ = r.useCallback(
+        _ = (0, o.O)(),
+        p = r.useCallback(
             (e) => {
-                f(e, p);
+                f(e, _);
             },
-            [f, p]
+            [f, _]
         ),
         h = r.useCallback(
             (e, t) => {
@@ -23,15 +23,15 @@ let l = (e) => {
             gridDispatch: m,
             getItemProps: g,
             getRowProps: E,
-            gridContainerProps: v,
-            handleGridContainerKeyDown: b,
-            isUsingKeyboardNavigation: y
+            gridContainerProps: b,
+            handleGridContainerKeyDown: y,
+            isUsingKeyboardNavigation: v
         } = (0, s.VO)({
             columnCounts: t,
             gridNavigatorId: u,
             itemGrid: n,
             itemList: l,
-            onGridNavigatorItemSelect: _,
+            onGridNavigatorItemSelect: p,
             onGridNavigatorPositionChange: h
         });
     return (
@@ -55,9 +55,9 @@ let l = (e) => {
         {
             getItemProps: g,
             getRowProps: E,
-            gridContainerProps: v,
-            handleGridContainerKeyDown: b,
-            isUsingKeyboardNavigation: y
+            gridContainerProps: b,
+            handleGridContainerKeyDown: y,
+            isUsingKeyboardNavigation: v
         }
     );
 };

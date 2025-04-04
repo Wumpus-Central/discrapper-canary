@@ -1,8 +1,8 @@
 n.d(t, {
     JE: () => m,
-    Lw: () => p,
+    Lw: () => _,
     dS: () => h,
-    rq: () => _
+    rq: () => p
 }),
     n(47120),
     n(301563);
@@ -16,16 +16,16 @@ let c = 'stage:',
     u = 1,
     d = 2,
     f = 4;
-function p(e, t) {
+function _(e, t) {
     let n = 0,
         i = r.default.getId();
     a.ZP.isSpeaker(i, e.id) && (n |= u);
     let s = o.Z.getGuild(e.getGuildId());
     null != s && (s.hasFeature(l.oNc.PARTNERED) && (n |= d), s.hasFeature(l.oNc.VERIFIED) && (n |= f));
-    let p = n.toString(16);
-    return ''.concat(c).concat(e.guild_id, ':').concat(e.id, ':').concat(p, ':').concat(t.id);
+    let _ = n.toString(16);
+    return ''.concat(c).concat(e.guild_id, ':').concat(e.id, ':').concat(_, ':').concat(t.id);
 }
-function _(e) {
+function p(e) {
     if (null == e || null == e.party) return;
     let { id: t, size: n } = e.party;
     try {
@@ -49,7 +49,7 @@ function h(e) {
     return (null == e ? void 0 : e.application_id) === s.gD;
 }
 function m(e) {
-    let t = _(e);
+    let t = p(e);
     if (null == t) return !1;
     let { channelId: n } = t;
     return null != i.Z.getChannel(n);

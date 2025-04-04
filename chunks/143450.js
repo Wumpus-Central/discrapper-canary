@@ -37,8 +37,8 @@ function c(e) {
         n = arguments.length > 2 ? arguments[2] : void 0,
         s = r.useContext(o.S).reducedMotion.enabled,
         c = e;
-    'animate-always' === t || ('respect-motion-settings' === t && !s) || (c = 'function' == typeof e ? () => l({}, e(), a.F) : l({}, e, a.F));
+    'animate-always' !== t && ('respect-motion-settings' !== t || s) && (c = 'function' == typeof e ? () => l({}, e(), a.F) : l({}, e, a.F));
     let u = 'function' == typeof c,
-        [d, f, p] = (0, i.useSpring)(c, n);
-    return u || 3 == arguments.length ? [d, f, p] : d;
+        [d, f, _] = (0, i.useSpring)(c, n);
+    return u || 3 == arguments.length ? [d, f, _] : d;
 }

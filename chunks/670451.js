@@ -4,7 +4,7 @@ var r = n(200651),
     o = n(481060),
     a = n(386019),
     s = n(388032),
-    l = n(203396);
+    l = n(227832);
 function c(e, t, n) {
     return (
         t in e
@@ -75,11 +75,11 @@ function _(e) {
                                 'aria-label': s.NW.string(s.t.UKOtz8),
                                 onClick: (t) => {
                                     var r;
-                                    t.stopPropagation(), null === (r = n.onClick) || void 0 === r || r.call(n), e.onClick(t);
+                                    t.stopPropagation(), null == (r = n.onClick) || r.call(n), e.onClick(t);
                                 },
                                 onContextMenu: (t) => {
                                     var r;
-                                    t.preventDefault(), null === (r = n.onClick) || void 0 === r || r.call(n), e.onClick(t);
+                                    t.preventDefault(), null == (r = n.onClick) || r.call(n), e.onClick(t);
                                 },
                                 className: l.contextMenu,
                                 children: (0, r.jsx)(o.xhG, {

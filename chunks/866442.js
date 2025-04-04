@@ -1,6 +1,6 @@
-a.d(e, { _i: () => o }), a(301563);
+a.d(e, { _i: () => _ }), a(301563);
 var r = a(688619),
     n = a.n(r);
-function o(t) {
+function _(t) {
     return n()(t).num();
 }

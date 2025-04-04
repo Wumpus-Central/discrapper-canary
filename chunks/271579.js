@@ -1,5 +1,5 @@
 n.d(t, {
-    WS: () => _,
+    WS: () => p,
     ZP: () => m,
     zS: () => h
 }),
@@ -41,15 +41,15 @@ let c = 'com.discord',
     u = 985746746,
     d = 'com.hammerandchisel.discord',
     f = 'https://discordapp.page.link';
-function p() {
+function _() {
     var e, t;
     let n = ['WebView', '(iPhone|iPod|iPad)(?!.*Safari/)'],
         r = RegExp('('.concat(n.join('|'), ')'), 'ig'),
-        o = (null === i() || void 0 === i() ? void 0 : null === (e = i().ua) || void 0 === e ? void 0 : e.match(r)) != null,
+        o = (null === i() || void 0 === i() || null == (e = i().ua) ? void 0 : e.match(r)) != null,
         a = (null === i() || void 0 === i() ? void 0 : i().name) === 'Safari' && !o;
-    return (null === i() || void 0 === i() ? void 0 : null === (t = i().os) || void 0 === t ? void 0 : t.family) !== 'iOS' || a;
+    return (null === i() || void 0 === i() || null == (t = i().os) ? void 0 : t.family) !== 'iOS' || a;
 }
-function _() {
+function p() {
     return (0, o.Z)();
 }
 function h(e) {
@@ -61,7 +61,7 @@ function h(e) {
         if (null == r) return null;
         let i = decodeURIComponent(r),
             o = new URL(i).searchParams,
-            a = { utmSource: null !== (t = n.get('utm_source')) && void 0 !== t ? t : void 0 };
+            a = { utmSource: null != (t = n.get('utm_source')) ? t : void 0 };
         for (let [e, t] of o.entries()) a[e] = t;
         return a;
     } catch (e) {
@@ -76,11 +76,11 @@ function m(e, t) {
         let t = o[e];
         null != t && l.searchParams.set(e, t);
     }
-    let _ = encodeURIComponent(l.toString()),
+    let p = encodeURIComponent(l.toString()),
         h = encodeURIComponent((0, a.Z)()),
-        m = +!!p(),
+        m = +!!_(),
         g = null != r ? encodeURIComponent(r) : null,
         E = null != i ? encodeURIComponent(i) : null,
-        v = ''.concat(f, '/?link=').concat(_, '&utm_source=').concat(n, '&apn=').concat(c, '&isi=').concat(u, '&ibi=').concat(d, '&sd=').concat(h, '&efr=').concat(m);
-    return null != g && (v += '&afl='.concat(g)), null != E && (v += '&ifl='.concat(E)), v;
+        b = ''.concat(f, '/?link=').concat(p, '&utm_source=').concat(n, '&apn=').concat(c, '&isi=').concat(u, '&ibi=').concat(d, '&sd=').concat(h, '&efr=').concat(m);
+    return null != g && (b += '&afl='.concat(g)), null != E && (b += '&ifl='.concat(E)), b;
 }

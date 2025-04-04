@@ -28,12 +28,12 @@ function f(e) {
     let { location: t, enabled: n } = e;
     u[t] = n;
 }
-function p(e) {
+function _(e) {
     let { location: t } = e;
     if (null == u[t]) return !1;
     delete u[t];
 }
-function _(e) {
+function p(e) {
     let { hiddenHotspots: t } = e;
     c = new Set(t);
 }
@@ -68,8 +68,8 @@ l(h, 'displayName', 'HotspotStore'),
         })
     ]);
 let m = new h(o.Z, {
-    OVERLAY_INITIALIZE: _,
+    OVERLAY_INITIALIZE: p,
     HOTSPOT_HIDE: d,
     HOTSPOT_OVERRIDE_SET: f,
-    HOTSPOT_OVERRIDE_CLEAR: p
+    HOTSPOT_OVERRIDE_CLEAR: _
 });

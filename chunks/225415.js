@@ -23,8 +23,8 @@ function d(e) {
     var t, n, i;
     let { channelId: u, message: d } = e,
         f = a.Z.getMessage(u, d.id);
-    if ((null == f ? void 0 : null === (n = f.embeds) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.type) === r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
-        let e = null === (i = f.embeds[0].fields) || void 0 === i ? void 0 : i.find((e) => e.rawName === l.g0.CONTENT_TYPE);
+    if ((null == f || null == (n = f.embeds) || null == (t = n[0]) ? void 0 : t.type) === r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
+        let e = null == (i = f.embeds[0].fields) ? void 0 : i.find((e) => e.rawName === l.g0.CONTENT_TYPE);
         (null == e ? void 0 : e.rawValue) === l.L0.ERROR ? (o.Z.showFailedToast(c.w.TIGGER_PAWTECT_ERROR), (0, s.zi)(s.o6.ERROR)) : (null == e ? void 0 : e.rawValue) === l.L0.VERIFIED_ADULT ? (o.Z.showSuccessToast(c.w.TIGGER_PAWTECT_VERIFIED), (0, s.zi)(s.o6.VERIFIED_ADULT)) : (null == e ? void 0 : e.rawValue) === l.L0.VERIFIED_TEEN && (o.Z.showSuccessToast(c.w.TIGGER_PAWTECT_VERIFIED), (0, s.zi)(s.o6.VERIFIED_TEEN));
     }
 }

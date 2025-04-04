@@ -17,8 +17,8 @@ var r,
     b = n(592745),
     x = n(952164),
     y = n(768419),
-    E = n(456432),
-    v = n(347475),
+    v = n(456432),
+    E = n(347475),
     O = n(789407),
     N = n(598077),
     j = n(757266),
@@ -177,7 +177,7 @@ class H extends (r = a.PureComponent) {
                 return null == n
                     ? null
                     : (0, i.jsx)(
-                          v.Z,
+                          E.Z,
                           B(F({}, t), {
                               userId: e.id,
                               guildId: null != r ? r : void 0,
@@ -190,7 +190,7 @@ class H extends (r = a.PureComponent) {
             U(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
                 return (0, i.jsx)(
-                    E.Z,
+                    v.Z,
                     F(
                         {
                             guildId: null != n ? n : void 0,

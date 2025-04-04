@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(709054),
     E = n(540059),
     b = n(596401),
-    v = n(921944),
-    y = n(231338);
+    y = n(921944),
+    v = n(231338);
 function O(e, t, n) {
     return (
         t in e
@@ -60,7 +60,7 @@ function T() {
         T && null != P && g.default.age(P) < m.Z.Millis.DAY && (0, f.EW)(a.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
         let e = 'desktop_refresh_theme_migration_key',
             t = 'true' === s.K.get(e);
-        R && T && !t && p.Z.theme === y.BR.DARK && null == d.Z.gradientPreset && !t && (s.K.set(e, 'true'), (0, u.ZI)({ theme: y.BR.DARKER }));
+        R && T && !t && p.Z.theme === v.BR.DARK && null == d.Z.gradientPreset && !t && (s.K.set(e, 'true'), (0, u.ZI)({ theme: v.BR.DARKER }));
     }, [R, T, P]),
         i.useLayoutEffect(() => {
             function e() {
@@ -83,7 +83,7 @@ function T() {
                 {
                     backdropStyle: l.fCB.TOP_RADIAL,
                     onCloseCallback: () => {
-                        C(v.L.USER_DISMISS);
+                        C(y.L.USER_DISMISS);
                     }
                 }
             );

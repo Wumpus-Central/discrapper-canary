@@ -20,7 +20,7 @@ function a(e) {
     return (
         n.observe(r, { characterData: !0 }),
         function () {
-            (t = -t), (r.data = t);
+            r.data = t = -t;
         }
     );
 }

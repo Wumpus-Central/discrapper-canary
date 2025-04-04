@@ -38,15 +38,15 @@ function c() {
 function u(e) {
     var t, n, r, i, o, a, s, l;
     let { billing_details: c } = e,
-        u = null !== (t = c.address) && void 0 !== t ? t : {},
+        u = null != (t = c.address) ? t : {},
         d = {
-            name: null !== (n = c.name) && void 0 !== n ? n : '',
-            line1: null !== (r = u.line1) && void 0 !== r ? r : '',
-            line2: null !== (i = u.line2) && void 0 !== i ? i : '',
-            city: null !== (o = u.city) && void 0 !== o ? o : '',
-            state: null !== (a = u.state) && void 0 !== a ? a : '',
-            country: null !== (s = u.country) && void 0 !== s ? s : '',
-            postalCode: null !== (l = u.postal_code) && void 0 !== l ? l : ''
+            name: null != (n = c.name) ? n : '',
+            line1: null != (r = u.line1) ? r : '',
+            line2: null != (i = u.line2) ? i : '',
+            city: null != (o = u.city) ? o : '',
+            state: null != (a = u.state) ? a : '',
+            country: null != (s = u.country) ? s : '',
+            postalCode: null != (l = u.postal_code) ? l : ''
         };
     return {
         token: e.id,

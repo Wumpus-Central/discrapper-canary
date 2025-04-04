@@ -9,7 +9,7 @@ var r = n(192379),
     u = n(981631);
 function d(e) {
     var t;
-    return null == e ? void 0 : null === (t = e._state) || void 0 === t ? void 0 : t.lastTestTimestamp;
+    return null == e || null == (t = e._state) ? void 0 : t.lastTestTimestamp;
 }
 function f() {
     return (

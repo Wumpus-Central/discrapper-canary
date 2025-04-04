@@ -1,13 +1,13 @@
 a.d(e, {
     K: () => i,
-    M: () => _
+    M: () => o
 });
 var r = a(622916),
     n = a(263449),
-    o = a(255768);
-function _(t, e) {
+    _ = a(255768);
+function o(t, e) {
     !0 === e.debug &&
-        (o.X
+        (_.X
             ? r.kg.enable()
             : (0, r.Cf)(() => {
                   console.warn('[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.');

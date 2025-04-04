@@ -9,14 +9,14 @@ var i = n(120356),
     c = n(876917),
     u = n(328456),
     d = n(616066),
-    f = n(986599),
-    p = n(63243),
-    _ = n(244488);
+    f = n(912397),
+    _ = n(63243),
+    p = n(244488);
 let h = (e) => {
     let { product: t, isPurchased: n, isHighlighted: i, user: h, forCollectedModal: m, profileEffectClassName: g } = e,
-        { firstProfileEffect: E, firstAvatarDecoration: v } = (0, u.R)(t),
-        b = (0, l.ZP)(),
-        y = (0, a.ap)(b);
+        { firstProfileEffect: E, firstAvatarDecoration: b } = (0, u.R)(t),
+        y = (0, l.ZP)(),
+        v = (0, a.ap)(y);
     return (0, r.jsxs)('div', {
         className: f.container,
         children: [
@@ -32,16 +32,16 @@ let h = (e) => {
                       })
                   })
                 : null,
-            null != v
+            null != b
                 ? (0, r.jsx)('div', {
                       className: f.avatarDecorationPreview,
                       children: (0, r.jsx)(d.R, {
-                          item: v,
+                          item: b,
                           user: h,
                           avatarSize: s.EFr.SIZE_120,
                           isPurchased: n,
                           isHighlighted: i,
-                          avatarPlaceholderSrc: y ? _ : p
+                          avatarPlaceholderSrc: v ? p : _
                       })
                   })
                 : null

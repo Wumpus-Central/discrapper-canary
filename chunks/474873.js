@@ -29,7 +29,7 @@ function c(e) {
 }
 class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null == e || ((l = e), Object.values(a.YC).includes(l.soundpack) || (l.soundpack = a.YC.CLASSIC));
+        null != e && ((l = e), Object.values(a.YC).includes(l.soundpack) || (l.soundpack = a.YC.CLASSIC));
     }
     getState() {
         return l;

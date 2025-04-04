@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(252618),
     h = n(587061),
     m = n(981631);
-n(3692);
+n(294346);
 let g = new Set([m.Z5c.LOGIN, m.Z5c.REGISTER]);
 function E(e) {
     let { lang: t, style: n, className: o } = (0, _.vP)(),
@@ -57,7 +57,7 @@ function b() {
         })
     );
 }
-function v(e) {
+function y(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e;
     (0, p.ZD)({ skipsSettingDefaultPageTitle: n });
     let { clientThemesClassName: o, clientThemesCSS: a } = (0, d.ZP)(),
@@ -66,4 +66,4 @@ function v(e) {
         children: [E(o), b(), l, t]
     });
 }
-let y = i.memo(v);
+let v = i.memo(y);

@@ -1,10 +1,10 @@
 n.d(t, {
     S: () => l,
-    _: () => c
+    _: () => o
 });
 var r = n(442837),
     i = n(594174),
-    o = n(74538),
+    s = n(74538),
     a = n(482207);
 function l() {
     return (0, r.cj)([a.Z], () => ({
@@ -13,7 +13,7 @@ function l() {
         error: a.Z.fetchError
     }));
 }
-function c() {
+function o() {
     let e = (0, r.e7)([i.default], () => i.default.getCurrentUser());
-    return o.ZP.canUseIncreasedRecentAvatarsLimit(e);
+    return s.ZP.canUseIncreasedRecentAvatarsLimit(e);
 }

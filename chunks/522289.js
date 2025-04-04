@@ -7,15 +7,15 @@ var i = n(120356),
     s = n.n(a),
     l = n(481060),
     c = n(565138),
-    u = n(802747);
+    u = n(223390);
 function d(e) {
-    let { className: t, maxGuilds: n, guilds: i, onFocus: a, onClick: d, size: f = c.Z.Sizes.SMALLER, hideOverflowCount: p = !1, disableGuildNameTooltip: _ = !1 } = e;
+    let { className: t, maxGuilds: n, guilds: i, onFocus: a, onClick: d, size: f = c.Z.Sizes.SMALLER, hideOverflowCount: _ = !1, disableGuildNameTooltip: p = !1 } = e;
     function h() {
         let e = s()(i)
                 .take(n)
                 .map((e) => {
                     let t = e.name;
-                    return _
+                    return p
                         ? (0, r.jsx)('div', {
                               className: u.avatar,
                               children: (0, r.jsx)(c.Z, {
@@ -43,7 +43,7 @@ function d(e) {
             t = i.length - n;
         return (
             t > 0 &&
-                !p &&
+                !_ &&
                 (e[e.length - 1] = (0, r.jsxs)(l.zxk, {
                     className: o()(u.avatar, u.overflow),
                     onFocus: a,

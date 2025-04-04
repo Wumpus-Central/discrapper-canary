@@ -8,8 +8,8 @@ var r = n(161581),
     u = n(310731),
     d = n(106295),
     f = n(361270),
-    p = l.aTypedArray,
-    _ = l.exportTypedArrayMethod,
+    _ = l.aTypedArray,
+    p = l.exportTypedArrayMethod,
     h = r.Uint16Array,
     m = h && i(h.prototype.sort),
     g =
@@ -44,15 +44,15 @@ var r = n(161581),
             )
                 if (n[e] !== r[e]) return !0;
         }),
-    v = function (e) {
+    b = function (e) {
         return function (t, n) {
             return void 0 !== e ? +e(t, n) || 0 : n != n ? -1 : t != t ? 1 : 0 === t && 0 === n ? (1 / t > 0 && 1 / n < 0 ? 1 : -1) : t > n;
         };
     };
-_(
+p(
     'sort',
     function (e) {
-        return (void 0 !== e && a(e), E) ? m(this, e) : s(p(this), v(e));
+        return (void 0 !== e && a(e), E) ? m(this, e) : s(_(this), b(e));
     },
     !E || g
 );

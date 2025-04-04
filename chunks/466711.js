@@ -9,20 +9,20 @@ var r = n(200651),
     u = n(906732),
     d = n(644916),
     f = n(243778),
-    p = n(963249),
-    _ = n(286961),
+    _ = n(963249),
+    p = n(286961),
     h = n(802408),
     m = n(819640),
     g = n(594174),
     E = n(70956),
-    v = n(709054),
-    b = n(51144),
-    y = n(443603),
+    b = n(709054),
+    y = n(51144),
+    v = n(443603),
     O = n(981631),
-    S = n(921944),
-    I = n(388032),
-    T = n(987135),
-    N = n(342203);
+    I = n(921944),
+    S = n(388032),
+    T = n(767980),
+    N = n(302195);
 function A(e, t, n) {
     return (
         t in e
@@ -76,9 +76,9 @@ function P(e, t) {
     );
 }
 function w(e) {
-    return (0, r.jsx)(y.Z, {
+    return (0, r.jsx)(v.Z, {
         innerClassName: N.button,
-        'aria-label': I.NW.string(I.t.Z1RnTk),
+        'aria-label': S.NW.string(S.t.Z1RnTk),
         isActive: !1,
         onClick: e.onClick,
         children: (0, r.jsx)('div', {
@@ -96,15 +96,15 @@ function D(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
         o = () => {
             var t;
-            i(), null === (t = e.onClick) || void 0 === t || t.call(e);
+            i(), null == (t = e.onClick) || t.call(e);
         };
     return (0, r.jsx)(
-        y.Z,
+        v.Z,
         P(
             C(
                 {
                     innerClassName: N.button,
-                    'aria-label': I.NW.string(I.t.Z1RnTk),
+                    'aria-label': S.NW.string(S.t.Z1RnTk),
                     isActive: !1,
                     onClick: o
                 },
@@ -138,29 +138,29 @@ function D(e) {
         )
     );
 }
-let x = E.Z.Millis.DAYS_30;
-function L(e) {
+let L = E.Z.Millis.DAYS_30;
+function x(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: E } = e,
-        { analyticsLocations: y } = (0, u.ZP)(c.Z.GIFT_BUTTON),
-        [I, N] = i.useState(!1),
+        { analyticsLocations: v } = (0, u.ZP)(c.Z.GIFT_BUTTON),
+        [S, N] = i.useState(!1),
         A = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
         C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        R = null != C ? v.default.age(C.id) : 0,
-        { giftBoxAnimation: P, trinketsAnimation: L } = null !== (t = null == n ? void 0 : n.chatGiftIcon) && void 0 !== t ? t : {},
-        M = (0, _.u)(),
-        k = void 0 !== M && !s && A && R >= x,
+        R = null != C ? b.default.age(C.id) : 0,
+        { giftBoxAnimation: P, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
+        M = (0, p.u)(),
+        k = void 0 !== M && !s && A && R >= L,
         [j, U] = (0, f.XR)(k ? a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         G = null != j,
-        B = I || G,
-        Z = (0, b.Ft)(E);
+        B = S || G,
+        F = (0, y.Ft)(E);
     if (s) return null;
-    let F = () => {
-            (0, p.Z)({
+    let V = () => {
+            (0, _.Z)({
                 isGift: !0,
-                giftRecipient: null == Z ? void 0 : Z,
+                giftRecipient: null == F ? void 0 : F,
                 initialPlanId: null,
-                analyticsLocations: y,
+                analyticsLocations: v,
                 analyticsObject: {
                     page: E.isPrivate() ? O.ZY5.DM_CHANNEL : O.ZY5.GUILD_CHANNEL,
                     section: O.jXE.CHANNEL_TEXT_AREA,
@@ -169,27 +169,27 @@ function L(e) {
                 }
             });
         },
-        V = () => {
-            N(!1), U(S.L.TAKE_ACTION), F();
+        Z = () => {
+            N(!1), U(I.L.TAKE_ACTION), V();
         },
         H =
             void 0 !== P
                 ? (0, r.jsx)(w, {
                       config: P,
                       hovered: B,
-                      onClick: V
+                      onClick: Z
                   })
-                : void 0 !== L
+                : void 0 !== x
                   ? (0, r.jsx)(D, {
-                        config: L,
+                        config: x,
                         hovered: B,
-                        onClick: V
+                        onClick: Z
                     })
                   : (0, r.jsx)(l.OgN, {});
     return (0, r.jsx)('div', {
         className: T.container,
         onMouseEnter: () => {
-            I || N(!0);
+            S || N(!0);
         },
         onMouseLeave: () => {
             N(!1);
@@ -198,7 +198,7 @@ function L(e) {
             void 0 !== M && G
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => N(!1),
-                      onCheckItOutClick: F,
+                      onCheckItOutClick: V,
                       markAsDismissed: U,
                       config: M,
                       children: H
@@ -206,4 +206,4 @@ function L(e) {
                 : H
     });
 }
-let M = i.memo(L);
+let M = i.memo(x);

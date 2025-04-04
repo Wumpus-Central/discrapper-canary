@@ -17,7 +17,7 @@ var i = n(442837),
     g = n(475413),
     E = n(981631),
     b = n(388032);
-function v(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -70,7 +70,7 @@ function I(e, t) {
     );
 }
 function S(e) {
-    let { user: t, activity: n, onAction: v, onClose: O } = e,
+    let { user: t, activity: n, onAction: y, onClose: O } = e,
         { newestAnalyticsLocation: S } = (0, c.ZP)(),
         T = (0, a.bp)() === E.IlC.POPOUT,
         N = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
@@ -92,7 +92,7 @@ function S(e) {
             onClick: (e) => {
                 e.stopPropagation(),
                     null == O || O(),
-                    null == v || v({ action: 'PRESS_PLAY_BUTTON' }),
+                    null == y || y({ action: 'PRESS_PLAY_BUTTON' }),
                     (null == N ? void 0 : N.isVocal())
                         ? (0, f.Z)({
                               context: {
@@ -113,14 +113,14 @@ function S(e) {
               children: (e) =>
                   (0, r.jsx)(
                       g.tG,
-                      I(y({}, e), {
+                      I(v({}, e), {
                           icon: o.YVR,
                           text: D,
                           disabled: !x,
                           submitting: P,
                           fullWidth: !0,
                           onClick: (e) => {
-                              e.stopPropagation(), null == v || v({ action: 'PRESS_JOIN_BUTTON' }), w();
+                              e.stopPropagation(), null == y || y({ action: 'PRESS_JOIN_BUTTON' }), w();
                           }
                       })
                   )
@@ -130,14 +130,14 @@ function S(e) {
               children: (e) =>
                   (0, r.jsx)(
                       g.tG,
-                      I(y({}, e), {
+                      I(v({}, e), {
                           icon: o.iWm,
                           text: D,
                           disabled: !x,
                           submitting: P,
                           fullWidth: !0,
                           onClick: (e) => {
-                              e.stopPropagation(), null == v || v({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), w();
+                              e.stopPropagation(), null == y || y({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), w();
                           }
                       })
                   )

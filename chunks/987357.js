@@ -18,7 +18,7 @@ function a(e) {
             var e;
             let { current: r } = l;
             if (null == r || 'auto' === n || !t) return;
-            let i = null === (e = r.ownerDocument) || void 0 === e ? void 0 : e.defaultView;
+            let i = null == (e = r.ownerDocument) ? void 0 : e.defaultView;
             if (null == i) return;
             (r.style.paddingTop = ''), (r.style.paddingBottom = ''), (r.style.paddingLeft = ''), (r.style.paddingRight = '');
             let o = i.getComputedStyle(r);

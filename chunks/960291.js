@@ -1,11 +1,11 @@
 n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
+var a = n(120356),
+    l = n.n(a),
     i = n(53691),
-    o = n(981631),
-    s = n(388032),
+    s = n(981631),
+    o = n(388032),
     c = n(826756);
 function u(e) {
     var { className: t } = e,
@@ -13,20 +13,20 @@ function u(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        a = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return l;
+            return a;
         })(e, ['className']);
     return (0, r.jsx)(
         i.p,
@@ -56,13 +56,13 @@ function u(e) {
             return e;
         })(
             {
-                text: s.NW.string(s.t['2ZhEh4']),
-                button: s.NW.string(s.t.pj0XBA),
+                text: o.NW.string(o.t['2ZhEh4']),
+                button: o.NW.string(o.t.pj0XBA),
                 buttonAnalyticsObject: {
-                    section: o.jXE.USER_PROFILE,
-                    object: o.qAy.RECENT_AVATARS_UPSELL
+                    section: s.jXE.USER_PROFILE,
+                    object: s.qAy.RECENT_AVATARS_UPSELL
                 },
-                className: a()(c.container, t)
+                className: l()(c.container, t)
             },
             n
         )

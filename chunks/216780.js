@@ -34,7 +34,7 @@ function f(e) {
     switch (e.type) {
         case i.ee.MEDIA_PROXY:
             var t;
-            let n = null !== (t = e.proxy_url) && void 0 !== t ? t : e.url;
+            let n = null != (t = e.proxy_url) ? t : e.url;
             return {
                 type: a.s9s.IMG,
                 width: 0,

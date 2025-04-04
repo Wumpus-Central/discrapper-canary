@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => v,
+    Z: () => C,
     f: () => O
 }),
     n(47120);
@@ -62,15 +62,15 @@ function x(e, t) {
         e
     );
 }
-var C = (((a = C || {})[(a.SMALL = 0)] = 'SMALL'), (a[(a.MEDIUM = 1)] = 'MEDIUM'), a);
-function v(e) {
-    let { tag: t, size: a = 1, disabled: o, className: C, onClick: v, onRemove: O, selected: j, ariaLabel: T } = e,
+var v = (((a = v || {})[(a.SMALL = 0)] = 'SMALL'), (a[(a.MEDIUM = 1)] = 'MEDIUM'), a);
+function C(e) {
+    let { tag: t, size: a = 1, disabled: o, className: v, onClick: C, onRemove: O, selected: j, ariaLabel: T } = e,
         { name: P, emojiId: E, emojiName: I } = t,
-        w = null != O,
-        [S, M] = r.useState(!1),
+        S = null != O,
+        [w, M] = r.useState(!1),
         A = (0, c.e7)([g.ZP], () => (null != E ? g.ZP.getUsableCustomEmojiById(E) : null)),
-        D = w || null != v,
-        N = (!w || !S) && (null != E || null != I),
+        D = S || null != C,
+        N = (!S || !w) && (null != E || null != I),
         k = 0 === a,
         z = r.useRef(null),
         L = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
@@ -94,8 +94,8 @@ function v(e) {
                           size: 'reaction'
                       })
                     : null,
-                S &&
-                    w &&
+                w &&
+                    S &&
                     (0, i.jsx)('div', {
                         className: b.closeCircle,
                         children: (0, i.jsx)(d.Dio, {
@@ -122,14 +122,14 @@ function v(e) {
                     [b.small]: k,
                     [b.selected]: j
                 },
-                C
+                v
             ),
             onClick: (e) => {
-                null == v || v(e), null == O || O(t), L || null == z.current || z.current.blur();
+                null == C || C(e), null == O || O(t), L || null == z.current || z.current.blur();
             },
             onContextMenu: (e) => Z(e),
-            onMouseEnter: () => w && M(!0),
-            onMouseLeave: () => w && M(!1)
+            onMouseEnter: () => S && M(!0),
+            onMouseLeave: () => S && M(!1)
         },
         B = (0, s.JA)('forum-tag-'.concat(t.id));
     return D
@@ -159,11 +159,11 @@ function O(e) {
         text: (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(
-                    v,
+                    C,
                     {
                         tag: e,
                         className: b.tooltipPill,
-                        size: v.Sizes.SMALL
+                        size: C.Sizes.SMALL
                     },
                     e.id
                 )
@@ -182,4 +182,4 @@ function O(e) {
             )
     });
 }
-v.Sizes = C;
+C.Sizes = v;

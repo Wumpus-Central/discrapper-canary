@@ -5,7 +5,7 @@ var r = n(200651),
     a = n(348288),
     s = ['children'];
 function l(e, t) {
-    return p(e) || f(e, t) || u(e, t) || c();
+    return _(e) || f(e, t) || u(e, t) || c();
 }
 function c() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
@@ -45,10 +45,10 @@ function f(e, t) {
         return o;
     }
 }
-function p(e) {
+function _(e) {
     if (Array.isArray(e)) return e;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -72,13 +72,13 @@ var m = 0,
     g = Symbol.for('__REACT_DND_CONTEXT_INSTANCE__'),
     E = (0, i.memo)(function (e) {
         var t = e.children,
-            n = l(v(_(e, s)), 2),
+            n = l(b(p(e, s)), 2),
             o = n[0],
             c = n[1];
         return (
             (0, i.useEffect)(function () {
                 if (c) {
-                    var e = y();
+                    var e = v();
                     return (
                         ++m,
                         function () {
@@ -90,16 +90,16 @@ var m = 0,
             (0, r.jsx)(a.L.Provider, Object.assign({ value: o }, { children: t }), void 0)
         );
     });
-function v(e) {
-    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [b(e.backend, e.context, e.options, e.debugMode), !e.context];
-}
 function b(e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y(),
+    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [y(e.backend, e.context, e.options, e.debugMode), !e.context];
+}
+function y(e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v(),
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = t;
     return i[g] || (i[g] = { dragDropManager: (0, o.i)(e, t, n, r) }), i[g];
 }
-function y() {
+function v() {
     return void 0 !== n.g ? n.g : window;
 }

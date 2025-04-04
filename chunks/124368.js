@@ -1,8 +1,8 @@
 n.d(t, {
     AX: () => o,
     M3: () => s,
-    RN: () => _,
-    SX: () => p,
+    RN: () => p,
+    SX: () => _,
     dg: () => c,
     fZ: () => h,
     iN: () => u,
@@ -44,8 +44,8 @@ function f() {
         }
     ];
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (e.LATEST_ACTIVITY = 'Last Message'), (e.CREATION_DATE = 'Creation'), e;
 })({});
-let _ = new Set([r.evJ.TOO_MANY_ATTACHMENTS, r.evJ.EXPLICIT_CONTENT, r.evJ.ENTITY_TOO_LARGE, r.evJ.EXPLICIT_CONTENT]),
+let p = new Set([r.evJ.TOO_MANY_ATTACHMENTS, r.evJ.EXPLICIT_CONTENT, r.evJ.ENTITY_TOO_LARGE, r.evJ.EXPLICIT_CONTENT]),
     h = new Set([r.evJ.AUTOMOD_MESSAGE_BLOCKED, r.evJ.AUTOMOD_TITLE_BLOCKED]);

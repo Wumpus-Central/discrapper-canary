@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -70,19 +70,19 @@ function g(e) {
 function E(e) {
     e in h && delete h[e];
 }
-function v(e) {
-    null != e.threads && e.threads.length > 0 && ((h[e.id] = {}), e.threads.filter((e) => l.AW.has(e.type)).forEach((t) => b(e.id, t))), e.hasThreadsSubscription && m.add(e.id);
+function b(e) {
+    null != e.threads && e.threads.length > 0 && ((h[e.id] = {}), e.threads.filter((e) => l.AW.has(e.type)).forEach((t) => y(e.id, t))), e.hasThreadsSubscription && m.add(e.id);
 }
-function b(e, t) {
+function y(e, t) {
     let n = h[e],
         r = t.parent_id;
     r in n || (n[r] = {}), (h[e][r][t.id] = g(t));
 }
-function y(e) {
+function v(e) {
     (h = {}),
         m.clear(),
         e.guilds.forEach((e) => {
-            v(e);
+            b(e);
         });
 }
 function O(e) {
@@ -92,14 +92,14 @@ function O(e) {
             .filter((e) => l.Ec.has(e.type))
             .groupBy('guild_id')
             .forEach((e, t) => {
-                (h[t] = {}), e.forEach((e) => b(t, e));
+                (h[t] = {}), e.forEach((e) => y(t, e));
             });
 }
-function S(e) {
-    let { guild: t } = e;
-    E(t.id), v(t);
-}
 function I(e) {
+    let { guild: t } = e;
+    E(t.id), b(t);
+}
+function S(e) {
     let { guild: t } = e;
     E(t.id);
 }
@@ -107,21 +107,21 @@ function T(e) {
     var t, n;
     let { channel: r } = e;
     if (!l.AW.has(r.type)) return !1;
-    if ((null === (t = r.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return A(r);
+    if ((null == (t = r.threadMetadata) ? void 0 : t.archived) === !0) return A(r);
     {
-        let e = null !== (n = h[r.guild_id]) && void 0 !== n ? n : {};
-        h[r.guild_id] = _(f({}, e), { [r.parent_id]: _(f({}, e[r.parent_id]), { [r.id]: g(r) }) });
+        let e = null != (n = h[r.guild_id]) ? n : {};
+        h[r.guild_id] = p(f({}, e), { [r.parent_id]: p(f({}, e[r.parent_id]), { [r.id]: g(r) }) });
     }
 }
 function N(e) {
     let { guildId: t, threads: n, channelIds: r } = e;
     for (let e in (null == r && m.add(t), (h[t] = f({}, h[t])), h[t])) h[t][e] = f({}, h[t][e]);
-    n.forEach((e) => b(t, e));
+    n.forEach((e) => y(t, e));
 }
 function A(e) {
     let { guild_id: t, parent_id: n, id: r } = e;
     if (null == t || null == n || !(t in h) || !(n in h[t]) || !(r in h[t][n])) return !1;
-    (h[t] = _(f({}, h[t]), { [n]: f({}, h[t][n]) })), delete h[t][n][r], o().isEmpty(h[t][n]) && delete h[t][n];
+    (h[t] = p(f({}, h[t]), { [n]: f({}, h[t][n]) })), delete h[t][n][r], o().isEmpty(h[t][n]) && delete h[t][n];
 }
 function C(e) {
     let { channel: t } = e;
@@ -142,11 +142,11 @@ class w extends (r = a.ZP.Store) {
     }
     getThreadsForGuild(e) {
         var t;
-        return null !== (t = h[e]) && void 0 !== t ? t : P;
+        return null != (t = h[e]) ? t : P;
     }
     getThreadsForParent(e, t) {
         var n;
-        return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : P;
+        return null != (n = this.getThreadsForGuild(e)[t]) ? n : P;
     }
     hasThreadsForChannel(e, t) {
         return !o().isEmpty(this.getThreadsForParent(e, t));
@@ -162,10 +162,10 @@ class w extends (r = a.ZP.Store) {
 }
 d(w, 'displayName', 'ActiveThreadsStore');
 let D = new w(s.Z, {
-    CONNECTION_OPEN: y,
+    CONNECTION_OPEN: v,
     OVERLAY_INITIALIZE: O,
-    GUILD_CREATE: S,
-    GUILD_DELETE: I,
+    GUILD_CREATE: I,
+    GUILD_DELETE: S,
     THREAD_CREATE: T,
     THREAD_UPDATE: T,
     THREAD_LIST_SYNC: N,

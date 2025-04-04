@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(653041), n(47120);
+n.d(t, { Z: () => S }), n(653041), n(47120);
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -10,13 +10,13 @@ var i = n(442837),
     u = n(812206),
     d = n(358221),
     f = n(199902),
-    p = n(366050),
-    _ = n(594174),
+    _ = n(366050),
+    p = n(594174),
     h = n(981631),
     m = n(354459),
     g = n(388032),
-    E = n(717268);
-function v(e, t, n) {
+    E = n(992955);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +40,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,28 +62,28 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e) {
-    let { closePopout: t, idle: n, pipWindows: o, voiceChannelId: _, onSelect: E } = e;
+function I(e) {
+    let { closePopout: t, idle: n, pipWindows: o, voiceChannelId: p, onSelect: E } = e;
     n && t();
-    let v = (0, i.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivityForChannel(_)),
-        b = (0, i.e7)([p.Z], () => p.Z.pipWindow),
-        y = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(_)),
-        O = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(_));
-    function S(e) {
-        (null == b ? void 0 : b.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
-        let t = e.participant;
-        null != t && t.type !== m.fO.ACTIVITY && s.Z.selectParticipant(_, t.id);
-    }
+    let b = (0, i.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivityForChannel(p)),
+        y = (0, i.e7)([_.Z], () => _.Z.pipWindow),
+        v = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
+        O = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(p));
     function I(e) {
-        if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != v) {
+        (null == y ? void 0 : y.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
+        let t = e.participant;
+        null != t && t.type !== m.fO.ACTIVITY && s.Z.selectParticipant(p, t.id);
+    }
+    function S(e) {
+        if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != b) {
             var t;
-            let e = null === (t = u.Z.getApplication(v.applicationId)) || void 0 === t ? void 0 : t.name;
+            let e = null == (t = u.Z.getApplication(b.applicationId)) ? void 0 : t.name;
             return null == e ? g.NW.string(g.t['8raC1N']) : g.NW.formatToPlainString(g.t['a9+V+f'], { activityName: e });
         }
         return null == e.participant || e.participant.type !== m.fO.STREAM ? g.NW.string(g.t['ng/Kws']) : g.NW.formatToPlainString(g.t.sqmFRk, { username: e.participant.userNick });
@@ -95,7 +95,7 @@ function S(e) {
             null != t &&
                 O.forEach((n) => {
                     let r = f.Z.getActiveStreamForApplicationStream(n.stream),
-                        i = n.id === (null == y ? void 0 : y.id) && (null == b ? void 0 : b.id) === t.id;
+                        i = n.id === (null == v ? void 0 : v.id) && (null == y ? void 0 : y.id) === t.id;
                     null == r ||
                         i ||
                         e.push({
@@ -110,15 +110,15 @@ function S(e) {
     function N(e) {
         var t;
         let n = e.pipWindow.id,
-            i = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
-            o = I(e),
+            i = null == (t = e.participant) ? void 0 : t.id,
+            o = S(e),
             s = ''.concat(n).concat(null != i ? i : '');
         return (0, r.jsx)(
             a.sNh,
             {
                 id: s,
                 label: o,
-                action: () => S(e)
+                action: () => I(e)
             },
             s
         );
@@ -131,12 +131,12 @@ function S(e) {
         children: T().map(N)
     });
 }
-let I = function (e) {
+let S = function (e) {
     let { voiceChannelId: t, idle: n } = e,
-        s = Array.from((0, i.e7)([p.Z], () => p.Z.pipWindows).values()).filter((e) => e.component !== h.NYg.EMBED_IFRAME),
+        s = Array.from((0, i.e7)([_.Z], () => _.Z.pipWindows).values()).filter((e) => e.component !== h.NYg.EMBED_IFRAME),
         l = (0, i.Wu)([f.Z], () => f.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
             var n;
-            return e.ownerId !== (null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t;
+            return e.ownerId !== (null == (n = p.default.getCurrentUser()) ? void 0 : n.id) && e.channelId === t;
         }),
         c = (1 === s.length && s[0].component === h.NYg.EMBED_IFRAME) || 0 === l.length,
         u = 1 === s.length && l.length <= 1;
@@ -146,8 +146,8 @@ let I = function (e) {
               position: 'bottom',
               renderPopout: (e) =>
                   (0, r.jsx)(
-                      S,
-                      b(
+                      I,
+                      y(
                           {
                               voiceChannelId: t,
                               pipWindows: s,
@@ -159,7 +159,7 @@ let I = function (e) {
               children: (e) =>
                   (0, r.jsx)(
                       a.P3F,
-                      O(b({ className: E.menuIcon }, e), {
+                      O(y({ className: E.menuIcon }, e), {
                           children: (0, r.jsx)(a.Huf, {
                               size: 'md',
                               color: o.Z.unsafe_rawColors.WHITE_500.css

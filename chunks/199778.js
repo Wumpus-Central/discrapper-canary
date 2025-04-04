@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(63063),
     h = n(981631),
     m = n(388032),
-    g = n(532594);
+    g = n(93015);
 function E(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function b(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,12 +56,12 @@ function v(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -69,9 +69,9 @@ function y(e, t) {
 }
 function O(e) {
     let { hide: t, pillClassName: n, containerClassName: i } = e,
-        { fractionalState: E, endsAt: v } = (0, c.Z)(),
+        { fractionalState: E, endsAt: y } = (0, c.Z)(),
         O = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        I = (0, l.Z)(v, l.a.LONG_TIME_LEFT);
+        I = (0, l.Z)(y, l.a.LONG_TIME_LEFT);
     if (!0 === t || !(0, d.y)('guild_boosting_fractional_premium_pill', O, E)) return null;
     let S = m.NW.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
     return (0, r.jsx)(u.Z, {
@@ -82,7 +82,7 @@ function O(e) {
         children: (e) =>
             (0, r.jsxs)(
                 'div',
-                y(b({}, e), {
+                v(b({}, e), {
                     className: o()(g.unavailableCounterPill, n),
                     children: [
                         (0, r.jsx)(s.Text, {

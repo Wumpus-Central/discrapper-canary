@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
 var i = n(293335),
-    o = n(663058);
+    o = n(422786);
 let a = (e) => {
     let { profileEffectConfig: t, onReady: n } = e,
         { pendingRef: a, setPending: s } = (0, i.Z)(t.effects, n);

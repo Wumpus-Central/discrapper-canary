@@ -9,18 +9,18 @@ var i,
     u = n(212819),
     d = n(938078),
     f = n(220444),
-    p = n(601070),
-    _ = n(210887),
+    _ = n(601070),
+    p = n(210887),
     h = n(314897),
     m = n(592125),
     g = n(703558),
     E = n(984933),
-    v = n(271383),
-    b = n(430824),
-    y = n(496675),
+    b = n(271383),
+    y = n(430824),
+    v = n(496675),
     O = n(306680),
-    S = n(944486),
-    I = n(914010),
+    I = n(944486),
+    S = n(914010),
     T = n(9156),
     N = n(483360),
     A = n(823379),
@@ -41,19 +41,19 @@ function P(e, t, n) {
 }
 let w = 'seenQSTutorial',
     D = 5,
-    x = 100,
-    L = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
+    L = 100,
+    x = [u.h8.USER, u.h8.GROUP_DM, u.h8.TEXT_CHANNEL, u.h8.GUILD, u.h8.APPLICATION, u.h8.LINK, u.h8.IN_APP_NAVIGATION],
     M = 0,
     k = !1,
     j = !1,
     U = null,
     G = [],
     B = null,
-    Z = 0,
-    F = [],
-    V = [];
+    F = 0,
+    V = [],
+    Z = [];
 function H() {
-    (j = b.Z.getGuildCount() >= 3 || a().size(m.Z.getMutablePrivateChannels()) >= 20), (F = []);
+    (j = y.Z.getGuildCount() >= 3 || a().size(m.Z.getMutablePrivateChannels()) >= 20), (V = []);
 }
 function W(e) {
     let t = [];
@@ -73,8 +73,8 @@ function Y(e) {
 }
 function K() {
     var e, t;
-    let n = null !== (e = I.Z.getGuildId()) && void 0 !== e ? e : void 0,
-        r = null !== (t = S.Z.getChannelId()) && void 0 !== t ? t : void 0;
+    let n = null != (e = S.Z.getGuildId()) ? e : void 0,
+        r = null != (t = I.Z.getChannelId()) ? t : void 0;
     switch (U) {
         case u.h8.USER: {
             let e = h.default.getId();
@@ -98,14 +98,14 @@ function K() {
         case u.h8.TEXT_CHANNEL:
             return N.ZP.queryChannels({
                 query: '',
-                guildId: I.Z.getGuildId(),
+                guildId: S.Z.getGuildId(),
                 limit: 100,
                 fuzzy: !0
             });
         case u.h8.VOICE_CHANNEL:
             return N.ZP.queryChannels({
                 query: '',
-                guildId: I.Z.getGuildId(),
+                guildId: S.Z.getGuildId(),
                 limit: 100,
                 fuzzy: !0,
                 filter: () => !0,
@@ -114,15 +114,15 @@ function K() {
     }
     let i = [],
         o = [];
-    for (let e = 1; e < V.length; e += 1) {
-        let t = Y(V[e]);
-        null != t && ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) || y.Z.can(C.Plq.VIEW_CHANNEL, t.record)) && o.push(t);
+    for (let e = 1; e < Z.length; e += 1) {
+        let t = Y(Z[e]);
+        null != t && ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) || v.Z.can(C.Plq.VIEW_CHANNEL, t.record)) && o.push(t);
     }
     o.length > 0 && i.push((0, u.o6)(R.NW.string(R.t['80lOZ2'])), ...o);
-    let s = W((e) => e === r || V.includes(e));
+    let s = W((e) => e === r || Z.includes(e));
     s.length > 0 && i.push((0, u.o6)(R.NW.string(R.t['4B63jY'])), ...s);
     let l = O.ZP.getMentionChannelIds()
-        .filter((e) => e !== r && !V.includes(e))
+        .filter((e) => e !== r && !Z.includes(e))
         .map((e) => Y(e))
         .filter(A.lm)
         .reverse();
@@ -130,11 +130,11 @@ function K() {
         let e = E.ZP.getSelectableChannelIds(n)
             .filter((e) => {
                 let t = m.Z.getChannel(e);
-                return !(null == t || e === r || V.includes(e) || T.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && T.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, f.d)(t);
+                return !(null == t || e === r || Z.includes(e) || T.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && T.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, f.d)(t);
             })
             .map((e) => Y(e))
             .filter((e) => e);
-        Object.values(p.Z.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
+        Object.values(_.Z.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
             for (let n in t) {
                 let t = Y(n);
                 null != t && e.push(t);
@@ -149,7 +149,7 @@ function K() {
 function z(e, t) {
     switch (U) {
         case u.h8.USER: {
-            let t = b.Z.getGuild(I.Z.getGuildId());
+            let t = y.Z.getGuild(S.Z.getGuildId());
             e.unshift((0, u.o6)(null != t ? R.NW.formatToPlainString(R.t.FREzQk, { name: t.name }) : R.NW.string(R.t.XFYW1t))), (G = e);
             break;
         }
@@ -168,7 +168,7 @@ function z(e, t) {
         default:
             G = e;
     }
-    if (t !== B) (B = t), (Z = Math.max(t.length, Z)), (M = (0, u.gJ)(u.a8.DOWN, -1, G));
+    if (t !== B) (B = t), (F = Math.max(t.length, F)), (M = (0, u.gJ)(u.a8.DOWN, -1, G));
     else {
         let e = G[M];
         null != e && e.type === u.h8.HEADER && (M = (0, u.gJ)(u.a8.DOWN, M, G));
@@ -178,25 +178,25 @@ function z(e, t) {
 function q(e) {
     var t;
     let { query: n, queryMode: i } = e,
-        o = null !== (t = I.Z.getGuildId()) && void 0 !== t ? t : void 0,
+        o = null != (t = S.Z.getGuildId()) ? t : void 0,
         a = new Set(['user:'.concat(h.default.getId())]);
     null != o && a.add('guild:'.concat(o)),
         (r =
             null != r
                 ? r
-                : new u.ZP(J, L, null != i ? x : D, {
+                : new u.ZP(J, x, null != i ? L : D, {
                       frecencyBoosters: !0,
                       blacklist: a
                   })),
         (B = null),
-        (Z = n.length),
+        (F = n.length),
         (U = i),
         r.search(n);
 }
 function Q(e) {
     let { channelId: t } = e;
     if (null == t) return !1;
-    (V = V.filter((e) => e !== t)).unshift(t), V.length > 4 && (V.length = 4);
+    (Z = Z.filter((e) => e !== t)).unshift(t), Z.length > 4 && (Z.length = 4);
 }
 function X(e, t) {
     if (e.length !== t.length) return !1;
@@ -208,19 +208,19 @@ function X(e, t) {
     return !0;
 }
 function J(e, t) {
-    !X((e = '' === (t = t.trim()).trim() ? K() : e), F) && ((F = e), z(e, t));
+    X((e = '' === (t = t.trim()).trim() ? K() : e), V) || ((V = e), z(e, t));
 }
 function $() {
-    (B = null), (Z = 0), (F = []), null != r && (r.destroy(), (r = null));
+    (B = null), (F = 0), (V = []), null != r && (r.destroy(), (r = null));
 }
 function ee(e) {
     var t, n;
     let { query: i, queryMode: o } = e;
     if (null == r) return !1;
-    let a = null !== (t = I.Z.getGuildId()) && void 0 !== t ? t : null;
+    let a = null != (t = S.Z.getGuildId()) ? t : null;
     if (U !== o) {
-        r.setResultTypes(null != o ? [o] : L), r.setLimit(null != o ? x : D);
-        let e = null !== (n = I.Z.getGuildId()) && void 0 !== n ? n : void 0;
+        r.setResultTypes(null != o ? [o] : x), r.setLimit(null != o ? L : D);
+        let e = null != (n = S.Z.getGuildId()) ? n : void 0;
         o === u.h8.USER && null != e
             ? r.setOptions(
                   {
@@ -253,10 +253,10 @@ function en() {
 class er extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(v.ZP, b.Z, m.Z), this.syncWith([_.Z], () => !0), (k = l.K.get(w) || !1), (V = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
+        this.waitFor(b.ZP, y.Z, m.Z), this.syncWith([p.Z], () => !0), (k = l.K.get(w) || !1), (Z = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {
-        return { channelHistory: V };
+        return { channelHistory: Z };
     }
     isOpen() {
         return null != r;
@@ -275,17 +275,17 @@ class er extends (i = s.ZP.PersistedStore) {
         return null != r ? r.queryGuilds('', 100).length : 0;
     }
     getChannelHistory() {
-        return V;
+        return Z;
     }
     getProps() {
         return {
-            theme: _.Z.theme,
+            theme: p.Z.theme,
             query: null != r ? r.query : '',
             queryMode: U,
             results: G,
             selectedIndex: M,
             seenTutorial: k,
-            maxQueryLength: Z
+            maxQueryLength: F
         };
     }
 }

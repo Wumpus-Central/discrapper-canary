@@ -56,7 +56,7 @@ let i = [
     o = [
         {
             type: r.Us.PERK,
-            skuId: '1',
+            skuId: '4',
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,
@@ -65,7 +65,7 @@ let i = [
         },
         {
             type: r.Us.PERK,
-            skuId: '2',
+            skuId: '5',
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,
@@ -74,7 +74,7 @@ let i = [
         },
         {
             type: r.Us.PERK,
-            skuId: '3',
+            skuId: '6',
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,
@@ -83,7 +83,7 @@ let i = [
         },
         {
             type: r.Us.PERK,
-            skuId: '4',
+            skuId: '7',
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,

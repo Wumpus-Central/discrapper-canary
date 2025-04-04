@@ -9,18 +9,18 @@ var r = n(200651),
     u = n(377108),
     d = n(692547),
     f = n(552075),
-    p = n(481060),
-    _ = n(68405),
+    _ = n(481060),
+    p = n(68405),
     h = n(527429),
     m = n(656733),
     g = n(251625),
     E = n(985375),
-    v = n(132748),
-    b = n(353903),
-    y = n(215016),
+    b = n(132748),
+    y = n(353903),
+    v = n(215016),
     O = n(981631),
-    S = n(388032),
-    I = n(368764);
+    I = n(388032),
+    S = n(49633);
 function T(e, t, n) {
     return (
         t in e
@@ -73,21 +73,21 @@ function C(e, t) {
         e
     );
 }
-let R = (e, t) => (0, r.jsx)(b.G0, { columns: e }, t);
+let R = (e, t) => (0, r.jsx)(y.G0, { columns: e }, t);
 function P(e) {
     var t;
     let n = l().sample(l().values(e));
     return {
         type: O.wI2.FAVORITES,
-        name: S.NW.string(S.t.y3LQCA),
-        icon: p.r7p,
+        name: I.NW.string(I.t.y3LQCA),
+        icon: _.r7p,
         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
-        format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : u.EO.IMAGE
+        format: null != (t = null == n ? void 0 : n.format) ? t : u.EO.IMAGE
     };
 }
 class w extends i.PureComponent {
     componentDidMount() {
-        0 === this.props.trendingCategories.length && (0, _.Tg)();
+        0 === this.props.trendingCategories.length && (0, p.Tg)();
     }
     getData() {
         return this.memoizedData(this.state.favoritesTile, this.props.trendingCategories, this.props.hideFavoritesTile);
@@ -96,18 +96,18 @@ class w extends i.PureComponent {
         let { name: t, type: n } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)('div', { className: n === O.wI2.FAVORITES ? I.categoryFadeBlurple : I.categoryFade }),
+                (0, r.jsx)('div', { className: n === O.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
                 (0, r.jsxs)('div', {
-                    className: I.categoryText,
+                    className: S.categoryText,
                     children: [
                         n === O.wI2.TRENDING_GIFS
                             ? (0, r.jsx)(f.I, {
-                                  className: I.categoryIcon,
+                                  className: S.categoryIcon,
                                   color: 'currentColor'
                               })
                             : null,
                         (0, r.jsx)('span', {
-                            className: I.categoryName,
+                            className: S.categoryName,
                             children: t
                         })
                     ]
@@ -121,7 +121,7 @@ class w extends i.PureComponent {
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, r.jsx)(v.Z, {
+            children: (0, r.jsx)(b.Z, {
                 desiredItemWidth: 200,
                 maxColumns: 6,
                 children: this.renderContent
@@ -175,7 +175,7 @@ class w extends i.PureComponent {
                 let { onSelectItem: a, imagePool: s, videoPool: l } = this.props,
                     { focusedId: c } = this.state;
                 return (0, r.jsx)(
-                    y.iR,
+                    v.iR,
                     {
                         format: o.format,
                         color: d.Z.unsafe_rawColors.PRIMARY_800.css,
@@ -195,15 +195,15 @@ class w extends i.PureComponent {
             T(this, 'renderContent', (e, t, n) => {
                 let { className: i, trendingCategories: o } = this.props;
                 return 0 === o.length
-                    ? (0, r.jsx)(b.u$, {
+                    ? (0, r.jsx)(y.u$, {
                           columns: e,
                           width: t,
                           renderColumn: R
                       })
-                    : (0, r.jsx)(p.GMG, {
+                    : (0, r.jsx)(_.GMG, {
                           ref: this._masonryRef,
                           fade: !0,
-                          className: a()(I.container, i),
+                          className: a()(S.container, i),
                           itemGutter: 12,
                           getItemKey: this.getItemKey,
                           columns: e,
@@ -226,7 +226,7 @@ class w extends i.PureComponent {
 function D(e) {
     let t = (0, c.e7)([m.Z], () => m.Z.getTrendingCategories()),
         n = (0, E.gG)(),
-        i = (0, y.PY)();
+        i = (0, v.PY)();
     return (0, r.jsx)(
         w,
         C(N({}, e, i), {

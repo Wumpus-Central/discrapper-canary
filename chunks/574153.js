@@ -4,10 +4,10 @@ function n(t, e) {
     var a = function () {
         var r = arguments,
             n = e ? e.apply(this, r) : r[0],
-            o = a.cache;
-        if (o.has(n)) return o.get(n);
-        var _ = t.apply(this, r);
-        return (a.cache = o.set(n, _) || o), _;
+            _ = a.cache;
+        if (_.has(n)) return _.get(n);
+        var o = t.apply(this, r);
+        return (a.cache = _.set(n, o) || _), o;
     };
     return (a.cache = new (n.Cache || r)()), a;
 }

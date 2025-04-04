@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => d,
-    Z: () => p
+    Z: () => _
 }),
     n(47120);
 var r = n(298444),
@@ -32,7 +32,7 @@ class f extends a.Z {
                 if ((0, l.isWeb)()) {
                     let e = r.x.get(d);
                     if (null != e && 'string' == typeof e && s.default.isAuthenticated()) {
-                        let { invite: t } = await o.Z.resolveInvite(e, 'Desktop Modal');
+                        let { invite: t } = await o.ZP.resolveInvite(e, 'Desktop Modal');
                         null != t &&
                             (i.Z.dispatch({
                                 type: 'INVITE_MODAL_OPEN',
@@ -46,4 +46,4 @@ class f extends a.Z {
             });
     }
 }
-let p = new f();
+let _ = new f();

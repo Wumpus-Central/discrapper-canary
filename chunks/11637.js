@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => p,
+    ZP: () => _,
     hf: () => d
 });
 var r = n(763296),
@@ -25,7 +25,7 @@ function f(e, t, n, o, l) {
     }
     if (f && null != d) return d;
 }
-function p(e, t) {
+function _(e, t) {
     var n;
     let r = e[1],
         i = e[2],
@@ -36,7 +36,7 @@ function p(e, t) {
             type: 'text',
             content: (0, l.Z)(r, i)
         };
-    let d = null !== (n = null == u ? void 0 : u.name) && void 0 !== n ? n : i;
+    let d = null != (n = null == u ? void 0 : u.name) ? n : i;
     return {
         type: 'soundboard',
         soundId: i,

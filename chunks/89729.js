@@ -3,8 +3,8 @@ var i = n(392711),
     r = n.n(i),
     o = n(995774),
     a = n(592125),
-    s = n(542578),
-    l = n(699516),
+    l = n(542578),
+    s = n(699516),
     c = n(5192),
     u = n(566006),
     d = n(388032);
@@ -12,13 +12,13 @@ function h(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.O.NORMAL,
         h = arguments.length > 3 ? arguments[3] : void 0,
-        p = s.Z.getReactions(e.getChannelId(), e.id, t, 3, i),
+        p = l.Z.getReactions(e.getChannelId(), e.id, t, 3, i),
         m = a.Z.getChannel(e.getChannelId()),
         f = null == m || m.isPrivate() ? null : m.getGuildId(),
         g = e.getReaction(t),
         b = i === u.O.BURST,
         j = r()(p)
-            .reject((e) => l.Z.isBlockedOrIgnored(e.id))
+            .reject((e) => s.Z.isBlockedOrIgnored(e.id))
             .take(3)
             .map((e) => c.ZP.getName(f, null == m ? void 0 : m.id, e))
             .value();

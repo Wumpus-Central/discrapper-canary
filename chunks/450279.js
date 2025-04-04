@@ -64,8 +64,8 @@ function c(e) {
 function u(e, t, n, i, a) {
     var u, d;
     let f = {},
-        p = {},
-        _ = [],
+        _ = {},
+        p = [],
         h = [];
     for (let t of e.values())
         switch (t.type) {
@@ -73,10 +73,10 @@ function u(e, t, n, i, a) {
                 f[t.id] = t;
                 break;
             case 'codec':
-                p[t.id] = t;
+                _[t.id] = t;
                 break;
             case 'inbound-rtp':
-                _.push(t);
+                p.push(t);
                 break;
             case 'outbound-rtp':
                 h.push(t);
@@ -85,7 +85,7 @@ function u(e, t, n, i, a) {
     if (void 0 === m) return null;
     let g = [];
     for (let e of h) {
-        let t = p[e.codecId];
+        let t = _[e.codecId];
         if (null == t) continue;
         let i = {
             type: e.kind,
@@ -95,7 +95,8 @@ function u(e, t, n, i, a) {
             sinkWantAsInt: (0, r.F)(n, e.ssrc),
             codec: l(t),
             bytesSent: e.bytesSent,
-            packetsSent: e.packetsSent
+            packetsSent: e.packetsSent,
+            bitrateTarget: e.targetBitrate
         };
         if ('audio' === e.kind) g.push(s(o({}, i), { type: 'audio' }));
         else if ('video' === e.kind && a) {
@@ -113,7 +114,6 @@ function u(e, t, n, i, a) {
                     firCount: e.firCount,
                     nackCount: e.nackCount,
                     pliCount: e.pliCount,
-                    bitrateTarget: e.targetBitrate,
                     qpSum: e.qpSum,
                     averageEncodeTime: null == e.framesEncoded || c(e.totalEncodeTime) ? void 0 : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
                     resolution: t,
@@ -125,8 +125,8 @@ function u(e, t, n, i, a) {
         }
     }
     let E = {};
-    for (let e of _) {
-        let a = p[e.codecId];
+    for (let e of p) {
+        let a = _[e.codecId];
         if (null == a) continue;
         let c = t(e.ssrc);
         if (null == c) continue;
@@ -141,7 +141,8 @@ function u(e, t, n, i, a) {
             codec: l(a),
             bytesReceived: e.bytesReceived,
             packetsReceived: e.packetsReceived,
-            packetsLost: e.packetsLost
+            packetsLost: e.packetsLost,
+            nackCount: e.nackCount
         };
         if ('audio' === e.kind) {
             let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
@@ -172,7 +173,6 @@ function u(e, t, n, i, a) {
                     frameRateDecode: e.framesPerSecond,
                     averageDecodeTime: null == e.framesDecoded || null == e.totalDecodeTime ? void 0 : ((1000 * e.totalDecodeTime) / e.framesDecoded).toFixed(1),
                     firCount: e.firCount,
-                    nackCount: e.nackCount,
                     pliCount: e.pliCount,
                     freezeCount: e.freezeCount,
                     pauseCount: e.pauseCount,
@@ -184,13 +184,13 @@ function u(e, t, n, i, a) {
             );
         }
     }
-    let v = (null !== (u = m.currentRoundTripTime) && void 0 !== u ? u : 0) * 1000;
+    let b = (null != (u = m.currentRoundTripTime) ? u : 0) * 1000;
     return {
         transport: {
-            availableOutgoingBitrate: null !== (d = m.availableOutgoingBitrate) && void 0 !== d ? d : 0,
+            availableOutgoingBitrate: null != (d = m.availableOutgoingBitrate) ? d : 0,
             bytesReceived: m.bytesReceived,
             bytesSent: m.bytesSent,
-            ping: v
+            ping: b
         },
         rtp: {
             inbound: E,

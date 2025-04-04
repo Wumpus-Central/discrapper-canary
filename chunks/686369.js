@@ -14,7 +14,7 @@ let u = 512;
 function d(e, t) {
     var n;
     let r = null == t ? void 0 : t.customBanner;
-    if (null != t && null != r && (null === (n = t.features) || void 0 === n ? void 0 : n.includes(c.oNc.DISCOVERABLE))) {
+    if (null != t && null != r && (null == (n = t.features) ? void 0 : n.includes(c.oNc.DISCOVERABLE))) {
         if (s.ff.test(r)) return 'url('.concat(r, ') center / cover');
         let e = s.ZP.getGuildDiscoverySplashURL({
             id: t.id,

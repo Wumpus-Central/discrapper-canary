@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(699516),
     d = n(594174),
     f = n(981631),
-    p = n(827468);
-let _ = [];
+    _ = n(998587);
+let p = [];
 function h(e, t) {
     let n = (0, s.Z)(e, t);
     return i.useMemo(() => {
@@ -26,7 +26,7 @@ function h(e, t) {
 function m(e) {
     let { application: t } = e;
     return (0, r.jsxs)('div', {
-        className: p.subtext,
+        className: _.subtext,
         children: [
             (0, r.jsx)(l.Z, {
                 game: t,
@@ -37,30 +37,30 @@ function m(e) {
     });
 }
 function g(e) {
-    let { menuItemId: t, user: n, label: s, gameRelationships: p, onClick: g, color: E } = e,
-        { id: v, bot: b } = n,
-        y = (0, o.e7)([d.default], () => {
+    let { menuItemId: t, user: n, label: s, gameRelationships: _, onClick: g, color: E } = e,
+        { id: b, bot: y } = n,
+        v = (0, o.e7)([d.default], () => {
             var e;
-            return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === v;
+            return (null == (e = d.default.getCurrentUser()) ? void 0 : e.id) === b;
         }),
         O = (0, c.wn)({ location: 'useAcceptGameFriendRequest' }),
-        S = y || b || !O,
-        I = S ? _ : p,
+        I = v || y || !O,
+        S = I ? p : _,
         [T, N] = i.useState(!1),
         A = i.useCallback(() => N(!0), []),
         C = i.useMemo(
             () =>
-                I.map((e) => {
+                S.map((e) => {
                     let { applicationId: t } = e;
                     return t;
                 }),
-            [I]
+            [S]
         ),
-        R = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(v), [v]),
-        P = h(C, T || 1 === I.length);
-    if (S || 0 === I.length || R === f.OGo.FRIEND) return null;
-    if (1 === I.length) {
-        let { applicationId: e } = I[0],
+        R = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(b), [b]),
+        P = h(C, T || 1 === S.length);
+    if (I || 0 === S.length || R === f.OGo.FRIEND) return null;
+    if (1 === S.length) {
+        let { applicationId: e } = S[0],
             n = P.get(e);
         return null == n
             ? null
@@ -74,7 +74,7 @@ function g(e) {
               });
     }
     let w = [];
-    return (I.forEach((e) => {
+    return (S.forEach((e) => {
         let { applicationId: t } = e,
             n = P.get(t);
         null != n &&

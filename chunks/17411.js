@@ -1,12 +1,12 @@
 a.d(e, { y: () => E });
 var r = a(263449),
     n = a(233517),
-    o = a(151122),
-    _ = a(899517),
+    _ = a(151122),
+    o = a(899517),
     i = a(694043);
-let c = _.n,
+let c = o.n,
     s = new WeakMap(),
-    E = (0, o._I)((t = {}) => {
+    E = (0, _._I)((t = {}) => {
         let e = t.types || ['crash', 'deprecation', 'intervention'];
         function a(t) {
             if (s.has((0, r.s3)()))

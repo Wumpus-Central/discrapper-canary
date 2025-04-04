@@ -6,8 +6,8 @@ a.d(e, {
 });
 var r = a(370336),
     n = a(285883),
-    o = a(559508),
-    _ = a(263449),
+    _ = a(559508),
+    o = a(263449),
     i = a(988097),
     c = a(696486);
 let s = '_frozenDsc';
@@ -17,21 +17,21 @@ function E(t, e) {
 function l(t, e) {
     let a = e.getOptions(),
         { publicKey: n } = e.getDsn() || {},
-        _ = (0, r.Jr)({
-            environment: a.environment || o.J,
+        o = (0, r.Jr)({
+            environment: a.environment || _.J,
             release: a.release,
             public_key: n,
             trace_id: t
         });
-    return e.emit('createDsc', _), _;
+    return e.emit('createDsc', o), o;
 }
 function u(t) {
-    let e = (0, _.s3)();
+    let e = (0, o.s3)();
     if (!e) return {};
     let a = l((0, c.XU)(t).trace_id || '', e),
         r = (0, c.Gx)(t),
-        o = r[s];
-    if (o) return o;
+        _ = r[s];
+    if (_) return _;
     let E = r.spanContext().traceState,
         u = E && E.get('sentry.dsc'),
         I = u && (0, n.EN)(u);

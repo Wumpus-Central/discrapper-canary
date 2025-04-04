@@ -7,8 +7,8 @@ var a,
     u = n(846519),
     d = n(570140),
     f = n(899742),
-    p = n(598077),
-    _ = n(12647),
+    _ = n(598077),
+    p = n(12647),
     h = n(358085),
     m = n(374023);
 function g(e, t, n) {
@@ -25,38 +25,38 @@ function g(e, t, n) {
     );
 }
 let E = 'BrowserHandoffStore',
-    v = !1,
-    b = new u.V7();
-function y() {
-    null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), _.Z.focus(null, !0));
+    b = !1,
+    y = new u.V7();
+function v() {
+    null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), p.Z.focus(null, !0));
 }
 function O() {
-    (i = null), b.stop(), (v = !1), c.K.set(E, v);
-}
-function S(e) {
-    (r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), y();
+    (i = null), y.stop(), (b = !1), c.K.set(E, b);
 }
 function I(e) {
+    (r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), v();
+}
+function S(e) {
     if (null != i) return !1;
-    (i = (0, s.Z)()), b.start(e.timeout, () => (0, f.lx)()), y();
+    (i = (0, s.Z)()), y.start(e.timeout, () => (0, f.lx)()), v();
 }
 function T(e) {
     let { handoffKey: t, handoffToken: n, timeout: r } = e;
     if (null == t || null == n) return !1;
-    (v = !0), b.start(r, () => (0, f.lx)());
+    (b = !0), y.start(r, () => (0, f.lx)());
 }
 function N(e) {
-    o = new p.Z(e.user);
+    o = new _.Z(e.user);
 }
 function A() {
     O();
 }
 class C extends (a = l.ZP.Store) {
     initialize() {
-        !1 !== c.K.get(E) && (v = h.isPlatformEmbedded && 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL);
+        !1 !== c.K.get(E) && (b = h.isPlatformEmbedded && 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL);
     }
     isHandoffAvailable() {
-        return !m.s.isDisallowPopupsSet() && v;
+        return !m.s.isDisallowPopupsSet() && b;
     }
     get user() {
         return o;
@@ -67,8 +67,8 @@ class C extends (a = l.ZP.Store) {
 }
 g(C, 'displayName', 'BrowserHandoffStore');
 let R = new C(d.Z, {
-    RPC_SERVER_READY: S,
-    BROWSER_HANDOFF_BEGIN: I,
+    RPC_SERVER_READY: I,
+    BROWSER_HANDOFF_BEGIN: S,
     BROWSER_HANDOFF_FROM_APP: T,
     BROWSER_HANDOFF_UNAVAILABLE: O,
     BROWSER_HANDOFF_SET_USER: N,

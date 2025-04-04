@@ -20,28 +20,28 @@ var r = n(200651),
     u = n(600164),
     d = n(311821),
     f = n(591759),
-    p = n(987209),
-    _ = n(563132),
+    _ = n(987209),
+    p = n(563132),
     h = n(409813),
     m = n(620824),
     g = n(737143),
     E = n(926841),
-    v = n(362755),
-    b = n(981631),
-    y = n(474936),
+    b = n(362755),
+    y = n(981631),
+    v = n(474936),
     O = n(388032),
-    S = n(744300);
-let I = 1000;
+    I = n(940667);
+let S = 1000;
 function T(e, t, n, r, i) {
-    let s = b.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
-        l = new URL(f.Z.makeUrl(b.Z5c.BILLING_LOGIN_HANDOFF)),
+    let s = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
+        l = new URL(f.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
         c = (0, o.Z)();
     return (
         l.searchParams.append('handoff_key', c),
         l.searchParams.append('redirect_to', s),
         a.tn
             .post({
-                url: b.ANM.HANDOFF,
+                url: y.ANM.HANDOFF,
                 body: { key: c },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -60,15 +60,15 @@ let N = (e) => {
         let t,
             n,
             { step: o, onPurchaseComplete: a, onHandoffFailure: u } = e,
-            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: A, browserCheckoutStateLoadId: C, browserCheckoutStateSkuId: R, browserCheckoutStatePlanId: P, contextMetadata: w } = (0, _.JL)(),
-            { isGift: D } = (0, p.wD)(),
-            [x, L] = i.useState(!1);
+            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: A, browserCheckoutStateLoadId: C, browserCheckoutStateSkuId: R, browserCheckoutStatePlanId: P, contextMetadata: w } = (0, p.JL)(),
+            { isGift: D } = (0, _.wD)(),
+            [L, x] = i.useState(!1);
         switch (o) {
             case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                (t = b.i$l.GOOGLE_PAY), (n = (0, E.a)());
+                (t = y.i$l.GOOGLE_PAY), (n = (0, E.a)());
                 break;
             case h.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                (t = b.i$l.APPLE_PAY), (n = (0, m.b)());
+                (t = y.i$l.APPLE_PAY), (n = (0, m.b)());
                 break;
             default:
                 n = (0, g.q1)();
@@ -78,17 +78,17 @@ let N = (e) => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        !x && (L(!0), (0, l.r5)(w.loadId), T(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : y.Xh.PREMIUM_MONTH_TIER_2, D, w.loadId, u, t));
+                        L || (x(!0), (0, l.r5)(w.loadId), T(null != (e = null == d ? void 0 : d.id) ? e : v.Xh.PREMIUM_MONTH_TIER_2, D, w.loadId, u, t));
                     },
-                    n.delay ? I : 0
+                    n.delay ? S : 0
                 );
                 return () => clearTimeout(e);
-            }, [d, D, w, u, L, x, t, n.delay]),
+            }, [d, D, w, u, x, L, t, n.delay]),
             i.useEffect(() => {
-                null !== R && (y.YQ.includes(R) && ((0, c.GZ)(R), (0, l.jg)()), N(R)), null !== P && f(P), C === w.loadId && A === v.Y.DONE && a();
+                null !== R && (v.YQ.includes(R) && ((0, c.GZ)(R), (0, l.jg)()), N(R)), null !== P && f(P), C === w.loadId && A === b.Y.DONE && a();
             }, [N, f, A, C, R, P, w, a]),
             (0, r.jsxs)('div', {
-                className: S.body,
+                className: I.body,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-xl/bold',
@@ -96,7 +96,7 @@ let N = (e) => {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        className: S.description,
+                        className: I.description,
                         children: O.NW.string(O.t.xfG7Ji)
                     })
                 ]

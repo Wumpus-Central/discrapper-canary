@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(475179),
     c = n(871499),
     u = n(388032),
-    d = n(981919);
+    d = n(321575);
 function f(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)('div', {
@@ -26,7 +26,7 @@ function f(e) {
         ]
     });
 }
-function p(e) {
+function _(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)('div', {
         className: d.iconContainer,
@@ -45,8 +45,8 @@ function p(e) {
         ]
     });
 }
-function _(e) {
-    let { channelId: t, className: n, isParticipantsOpen: o, isVertical: s = !1, hideTooltip: _ = !1 } = e;
+function p(e) {
+    let { channelId: t, className: n, isParticipantsOpen: o, isVertical: s = !1, hideTooltip: p = !1 } = e;
     function h() {
         l.Z.toggleParticipants(t, !o);
     }
@@ -54,7 +54,7 @@ function _(e) {
         (e) => {
             let { className: t } = e;
             return o
-                ? (0, r.jsx)(p, {
+                ? (0, r.jsx)(_, {
                       className: t,
                       isVertical: s
                   })
@@ -70,6 +70,6 @@ function _(e) {
         className: a()(d.participantsButton, n),
         onClick: h,
         iconComponent: m,
-        shouldShowTooltip: !_
+        shouldShowTooltip: !p
     });
 }

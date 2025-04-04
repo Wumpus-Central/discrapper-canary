@@ -1,4 +1,4 @@
-n.d(t, { x: () => v }), n(977457);
+n.d(t, { x: () => b }), n(977457);
 var r = n(200651),
     i = n(192379),
     o = n(803997),
@@ -6,8 +6,8 @@ var r = n(200651),
     s = n(696689),
     l = n.n(s),
     c = n(692547),
-    u = n(295919),
-    d = n(143175);
+    u = n(39300),
+    d = n(954292);
 function f(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,22 +81,22 @@ function g(e, t) {
     return i;
 }
 let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
-    v = i.forwardRef(function (e, t) {
+    b = i.forwardRef(function (e, t) {
         let n;
         var i,
-            { variant: o, tag: s = 'div', selectable: l = !1, className: f, lineClamp: _, color: g, tabularNumbers: v = !1, scaleFontToUserSetting: b = !1 } = e,
-            y = m(e, ['variant', 'tag', 'selectable', 'className', 'lineClamp', 'color', 'tabularNumbers', 'scaleFontToUserSetting']);
+            { variant: o, tag: s = 'div', selectable: l = !1, className: f, lineClamp: p, color: g, tabularNumbers: b = !1, scaleFontToUserSetting: y = !1 } = e,
+            v = m(e, ['variant', 'tag', 'selectable', 'className', 'lineClamp', 'color', 'tabularNumbers', 'scaleFontToUserSetting']);
         let O = s,
-            S = '',
-            I = {};
+            I = '',
+            S = {};
         if (
-            (null != _ &&
-                (1 === _
-                    ? (S = u.lineClamp1)
-                    : ((S = u.lineClamp2Plus),
-                      (I = {
-                          lineClamp: _,
-                          WebkitLineClamp: _
+            (null != p &&
+                (1 === p
+                    ? (I = u.lineClamp1)
+                    : ((I = u.lineClamp2Plus),
+                      (S = {
+                          lineClamp: p,
+                          WebkitLineClamp: p
                       }))),
             void 0 !== g)
         )
@@ -111,28 +111,28 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                     n = 'white';
                     break;
                 default:
-                    n = null === (i = c.Z.colors[E[g]]) || void 0 === i ? void 0 : i.css;
+                    n = null == (i = c.Z.colors[E[g]]) ? void 0 : i.css;
             }
-        let T = p({ color: n }, I, y.style);
+        let T = _({ color: n }, S, v.style);
         return (0, r.jsx)(
             O,
             h(
-                p(
+                _(
                     {
                         ref: t,
                         className: a()(
                             {
                                 [u.defaultColor]: void 0 === g,
                                 [u.selectable]: l,
-                                [u.tabularNumbers]: v,
-                                [d.fontScaling]: b
+                                [u.tabularNumbers]: b,
+                                [d.fontScaling]: y
                             },
-                            S,
+                            I,
                             d[o],
                             f
                         )
                     },
-                    y
+                    v
                 ),
                 {
                     style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,

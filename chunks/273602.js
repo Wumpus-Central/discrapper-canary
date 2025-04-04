@@ -17,8 +17,8 @@ var a = n(200651),
     b = n(709054),
     y = n(127654),
     x = n(979956),
-    C = n(228392),
-    v = n(404616),
+    v = n(228392),
+    C = n(404616),
     O = n(470623),
     j = n(981631),
     T = n(231338),
@@ -26,7 +26,7 @@ var a = n(200651),
     E = n(994436);
 function I(e) {
     var t;
-    let { threadId: n, attachments: I, sendMessage: w, transitionState: S, onClose: M } = e,
+    let { threadId: n, attachments: I, sendMessage: S, transitionState: w, onClose: M } = e,
         A = (0, d.Dt)(),
         D = (0, r.e7)([p.Z], () => p.Z.getChannel(n), [n]),
         N = (0, r.e7)([h.Z], () => h.Z.getGuild(null == D ? void 0 : D.getGuildId()), [D]),
@@ -40,20 +40,20 @@ function I(e) {
             null != z && null != L
                 ? {
                       src: L,
-                      width: v.TJ,
-                      height: v.Lp,
+                      width: C.TJ,
+                      height: C.Lp,
                       spoiler: I[0].spoiler,
                       alt: I[0].description
                   }
                 : null,
         [U, B] = i.useState(!1),
         W = i.useCallback(() => {
-            (0, C.xI)({ added: !1 }), w(), M();
-        }, [w, M]),
-        G = i.useCallback(() => {
+            (0, v.xI)({ added: !1 }), S(), M();
+        }, [S, M]),
+        F = i.useCallback(() => {
             null != D &&
                 null != N &&
-                ((0, C.xI)({ added: !0 }),
+                ((0, v.xI)({ added: !0 }),
                 (function (e) {
                     let { thread: t, attachments: n, setIsUploading: a, guild: i, onClose: r } = e,
                         o = new c.Z(j.ANM.MESSAGE(t.id, b.default.castChannelIdAsMessageId(t.id)), 'PATCH');
@@ -84,7 +84,7 @@ function I(e) {
     return null == k
         ? null
         : (0, a.jsxs)(o.Y0X, {
-              transitionState: S,
+              transitionState: w,
               size: o.CgR.SMALL,
               className: E.modalRoot,
               'aria-labelledby': A,
@@ -107,7 +107,7 @@ function I(e) {
                               className: E.forumPost,
                               children: (0, a.jsx)(O.oL, {
                                   channel: k,
-                                  children: (0, a.jsx)(v.ZP, {
+                                  children: (0, a.jsx)(C.ZP, {
                                       threadId: n,
                                       goToThread: T.dG,
                                       overrideMedia: R
@@ -137,7 +137,7 @@ function I(e) {
                               color: o.zxk.Colors.BRAND,
                               className: E.__invalid_button,
                               submitting: U,
-                              onClick: G,
+                              onClick: F,
                               autoFocus: !0,
                               children: P.NW.string(P.t.d611xM)
                           })

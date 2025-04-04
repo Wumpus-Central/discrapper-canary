@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -12,7 +12,7 @@ var i = n(442837),
     f = n(981631),
     _ = n(921944),
     p = n(388032),
-    h = n(705583);
+    h = n(86777);
 function m(e, t, n) {
     return (
         t in e
@@ -65,20 +65,20 @@ function b(e, t) {
         e
     );
 }
-function v() {
+function y() {
     return (0, r.jsx)(a.IGR, {
         color: l.Z.BG_BRAND,
         text: p.NW.string(p.t.y2b7CA)
     });
 }
-function y(e) {
-    let { user: t, guildId: l, channelId: m, onBlock: E, onIgnore: y, onUnignore: O, location: I = 'ContextMenu', appContext: S = f.IlC.APP } = e,
+function v(e) {
+    let { user: t, guildId: l, channelId: m, onBlock: E, onIgnore: v, onUnignore: O, location: I = 'ContextMenu', appContext: S = f.IlC.APP } = e,
         { id: T } = t,
         N = (0, i.e7)(
             [d.default],
             () => {
                 var e;
-                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === T;
+                return (null == (e = d.default.getCurrentUser()) ? void 0 : e.id) === T;
             },
             [T]
         ),
@@ -102,7 +102,7 @@ function y(e) {
                   ? p.NW.string(p.t['8wXU9P'])
                   : (0, r.jsxs)('div', {
                         className: h.label,
-                        children: [p.NW.string(p.t.ytCpKi), D ? (0, r.jsx)(v, {}) : null]
+                        children: [p.NW.string(p.t.ytCpKi), D ? (0, r.jsx)(y, {}) : null]
                     }),
               action: A
                   ? () => {
@@ -112,7 +112,7 @@ function y(e) {
                         D && w(_.L.TAKE_ACTION),
                             (0, a.ZDy)(
                                 async () => {
-                                    let { default: e } = await Promise.all([n.e('97652'), n.e('89540')]).then(n.bind(n, 240515));
+                                    let { default: e } = await Promise.all([n.e('97652'), n.e('25784')]).then(n.bind(n, 240515));
                                     return (n) =>
                                         (0, r.jsx)(
                                             e,
@@ -120,7 +120,7 @@ function y(e) {
                                                 guildId: l,
                                                 channelId: m,
                                                 user: t,
-                                                onIgnore: y,
+                                                onIgnore: v,
                                                 onBlock: E,
                                                 location: I
                                             })

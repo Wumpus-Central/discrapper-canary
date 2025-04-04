@@ -37,18 +37,18 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,7 +59,7 @@ function _(e, t) {
 }
 function h(e) {
     var { label: t, onAction: n, icon: d } = e,
-        _ = p(e, ['label', 'onAction', 'icon']);
+        p = _(e, ['label', 'onAction', 'icon']);
     let { analyticsLocations: h } = (0, a.ZP)(),
         { context: m } = (0, s.KZ)(),
         g = (0, o.Aq)(),
@@ -76,7 +76,7 @@ function h(e) {
                             appContext: E
                         },
                         m,
-                        _
+                        p
                     )
                 ),
                 g.dispatch(c.CkL.POPOUT_CLOSE);

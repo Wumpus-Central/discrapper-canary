@@ -26,7 +26,7 @@ class a {
         for (var t, n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
         if (!this.hasSubscribers(e)) {
             let [n] = r;
-            return (this._savedDispatches[e] = null !== (t = this._savedDispatches[e]) && void 0 !== t ? t : []).push(n), this;
+            return (this._savedDispatches[e] = null != (t = this._savedDispatches[e]) ? t : []).push(n), this;
         }
         return this.dispatch(e, ...r);
     }

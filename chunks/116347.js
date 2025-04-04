@@ -12,8 +12,8 @@ function s(e) {
 }
 function l() {
     var e, t, n, o;
-    let s = (null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) === !0,
-        l = null === (o = null === (n = r.Z.settings.privacy) || void 0 === n ? void 0 : null === (t = n.inappropriateConversationWarnings) || void 0 === t ? void 0 : t.value) || void 0 === o || o;
+    let s = (null == (e = i.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0,
+        l = null == (o = null == (n = r.Z.settings.privacy) || null == (t = n.inappropriateConversationWarnings) ? void 0 : t.value) || o;
     return ((0, a.Lm)() || s) && l;
 }
 function c(e) {

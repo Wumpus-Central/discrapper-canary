@@ -9,18 +9,18 @@ var r = n(200651),
     u = n(481060),
     d = n(607070),
     f = n(243778),
-    p = n(594174),
-    _ = n(74538),
+    _ = n(594174),
+    p = n(74538),
     h = n(921944),
     m = n(388032),
-    g = n(107525);
+    g = n(742840);
 let E = {
         tension: 750,
         mass: 2.5,
         friction: 70
     },
-    v = 20;
-function b(e) {
+    b = 20;
+function y(e) {
     let { tooltipText: t, headingText: n, textColor: i } = e,
         o = null != n;
     return (0, r.jsxs)('span', {
@@ -51,15 +51,15 @@ function b(e) {
         ]
     });
 }
-function y(e) {
+function v(e) {
     return e ? m.NW.string(m.t['5cRA/f']) : m.NW.string(m.t.buV4am);
 }
 function O(e) {
     let { checked: t, onClick: n, id: o = 'burst-reaction-toggle-button' } = e,
         O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        S = p.default.getCurrentUser(),
-        I = null == S || (0, _.I5)(S) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [T, N] = (0, f.US)(I),
+        I = _.default.getCurrentUser(),
+        S = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [T, N] = (0, f.US)(S),
         [A, C] = i.useState(!1),
         [R, P] = (0, u.q_F)(() => ({})),
         w = (0, s.animated)(u.Pt5);
@@ -76,18 +76,18 @@ function O(e) {
         let e = T === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (N(h.L.DISMISS), setTimeout(() => C(e), 200));
     }, [T, N]);
-    let x = A ? m.NW.string(m.t['Osi/u7']) : y(t),
-        L = A ? m.NW.string(m.t.ORK94u) : void 0;
+    let L = A ? m.NW.string(m.t['Osi/u7']) : v(t),
+        x = A ? m.NW.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(u.DY3, {
         position: 'top',
-        text: (0, r.jsx)(b, {
+        text: (0, r.jsx)(y, {
             textColor: 'always-white',
-            tooltipText: x,
-            headingText: L
+            tooltipText: L,
+            headingText: x
         }),
         color: u.ua7.Colors.BRAND,
         forceOpen: A,
-        'aria-label': x,
+        'aria-label': L,
         tooltipClassName: g.tooltip,
         children: [
             (0, r.jsx)('input', {
@@ -110,8 +110,8 @@ function O(e) {
                     (0, r.jsx)(w, {
                         style: O ? void 0 : R,
                         size: 'custom',
-                        width: v,
-                        height: v,
+                        width: b,
+                        height: b,
                         color: t ? 'white' : 'currentColor',
                         className: g.icon
                     }),

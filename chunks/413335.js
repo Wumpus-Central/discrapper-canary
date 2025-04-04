@@ -78,11 +78,11 @@ function d(e, t) {
 function f(e) {
     var t,
         n,
-        { size: a = 'sm', fill: l, width: d, height: f } = e,
-        _ = u(e, ['size', 'fill', 'width', 'height']);
+        { size: a = 'sm', color: l = '#FF73FA', width: d, height: f } = e,
+        _ = u(e, ['size', 'color', 'width', 'height']);
     let p = (0, o.m)(a),
-        h = null !== (t = null == p ? void 0 : p.width) && void 0 !== t ? t : d,
-        m = null !== (n = null == p ? void 0 : p.height) && void 0 !== n ? n : f;
+        h = null != (t = null == p ? void 0 : p.width) ? t : d,
+        m = null != (n = null == p ? void 0 : p.height) ? n : f;
     return (0, r.jsxs)(
         'svg',
         c(
@@ -91,7 +91,7 @@ function f(e) {
                     width: h,
                     height: m,
                     viewBox: '0 0 10 16',
-                    fill: null != l ? l : '#FF73FA'
+                    fill: 'string' == typeof l ? l : l.css
                 },
                 (0, i.Z)(_)
             ),

@@ -9,7 +9,7 @@ var r,
     u = n(19780),
     d = n(979651),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,26 +22,26 @@ function p(e, t, n) {
         e
     );
 }
-let _ = !0,
+let p = !0,
     h = !0;
 function m(e) {
     return null == e || !!e.suppress || null != e.requestToSpeakTimestamp;
 }
 function g() {
-    let e;
-    let t = u.Z.getChannelId();
+    let e,
+        t = u.ZP.getChannelId();
     if (null == t) e = !0;
     else {
         let n = s.Z.getChannel(t),
             r = d.Z.getVoiceState(null == n ? void 0 : n.getGuildId(), a.default.getId());
         e = l.Z.getMode() !== f.pM4.VOICE_ACTIVITY || null == n || n.isPrivate() || n.isGuildStageVoice() || c.Z.can(f.Plq.USE_VAD, n) || m(r);
     }
-    if (_ === e) return !1;
+    if (p === e) return !1;
     (h = e),
-        (_ = e),
+        (p = e),
         o.Z.dispatch({
             type: 'SET_VAD_PERMISSION',
-            hasPermission: _
+            hasPermission: p
         });
 }
 function E(e) {
@@ -51,25 +51,25 @@ function E(e) {
         return t === a.default.getId() && g();
     });
 }
-function v() {
+function b() {
     h = !0;
 }
-function b() {
-    h = _;
+function y() {
+    h = p;
 }
-class y extends (r = i.ZP.Store) {
+class v extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, l.Z, u.Z, d.Z);
+        this.waitFor(c.Z, l.Z, u.ZP, d.Z);
     }
     shouldShowWarning() {
         return !h;
     }
     canUseVoiceActivity() {
-        return _;
+        return p;
     }
 }
-p(y, 'displayName', 'PermissionVADStore');
-let O = new y(o.Z, {
+_(v, 'displayName', 'PermissionVADStore');
+let O = new v(o.Z, {
     RTC_CONNECTION_STATE: g,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: g,
     AUDIO_SET_MODE: g,
@@ -80,6 +80,6 @@ let O = new y(o.Z, {
     IMPERSONATE_UPDATE: g,
     IMPERSONATE_STOP: g,
     VOICE_STATE_UPDATES: E,
-    AUDIO_TOGGLE_SELF_MUTE: b,
-    PERMISSION_CLEAR_VAD_WARNING: v
+    AUDIO_TOGGLE_SELF_MUTE: y,
+    PERMISSION_CLEAR_VAD_WARNING: b
 });

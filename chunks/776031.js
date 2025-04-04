@@ -9,14 +9,14 @@ var r = n(200651),
     u = n(361291),
     d = n(592125),
     f = n(430824),
-    p = n(131951),
-    _ = n(944486),
+    _ = n(131951),
+    p = n(944486),
     h = n(594174),
     m = n(981631),
     g = n(37113),
     E = n(65154),
-    v = n(388032);
-function b(e, t, n) {
+    b = n(388032);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -57,7 +57,7 @@ function O(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,25 +68,25 @@ function S(e, t) {
         e
     );
 }
-function I(e, t) {
+function S(e, t) {
     (0, a.ZDy)(
         async () => {
             let { default: e } = await n.e('28479').then(n.bind(n, 78865));
-            return (n) => (0, r.jsx)(e, S(y({}, n), { analyticsSource: t }));
+            return (n) => (0, r.jsx)(e, I(v({}, n), { analyticsSource: t }));
         },
         { contextKey: e === m.IlC.POPOUT ? a.u1M : a.z1l }
     );
 }
 function T(e, t) {
-    let { preset: n, resolution: b, fps: O } = (0, o.cj)([u.Z], () => u.Z.getState()),
-        T = (0, o.e7)([p.Z], () => p.Z.getGoLiveSource()),
+    let { preset: n, resolution: y, fps: O } = (0, o.cj)([u.Z], () => u.Z.getState()),
+        T = (0, o.e7)([_.Z], () => _.Z.getGoLiveSource()),
         N = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
         A = (0, o.e7)([f.Z], () => {
             var t;
-            return null === (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
+            return null == (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
         }),
         { location: C } = (0, l.O)(),
-        R = (0, o.e7)([_.Z, d.Z], () => d.Z.getChannel(_.Z.getVoiceChannelId())),
+        R = (0, o.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
         P = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
@@ -112,9 +112,9 @@ function T(e, t) {
                             s.Z.setGoLiveSource(e);
                     }
                 } else
-                    I(
+                    S(
                         t,
-                        S(y({}, C), {
+                        I(v({}, C), {
                             object: m.qAy.RADIO_ITEM,
                             objectType: i
                         })
@@ -126,7 +126,7 @@ function T(e, t) {
     let w = n === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : O,
         D = g.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, b, t, N, A, R);
+                i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, N, A, R);
             return (0, r.jsx)(
                 a.k5B,
                 {
@@ -134,12 +134,12 @@ function T(e, t) {
                     id: 'stream-settings-fps-'.concat(t),
                     label: n,
                     checked: t === O,
-                    action: () => P(i, b, t, m.Qqv.RESOLUTION)
+                    action: () => P(i, y, t, m.Qqv.RESOLUTION)
                 },
                 'stream-settings-fps-'.concat(t)
             );
         }),
-        x = g.km.map((e) => {
+        L = g.km.map((e) => {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, N, A, R);
             return (0, r.jsx)(
@@ -148,7 +148,7 @@ function T(e, t) {
                     group: 'stream-settings-resolution',
                     id: 'stream-settings-resolution-'.concat(t),
                     label: n,
-                    checked: t === b,
+                    checked: t === y,
                     action: () => P(i, t, w, m.Qqv.RESOLUTION)
                 },
                 'stream-settings-resolution-'.concat(t)
@@ -157,12 +157,12 @@ function T(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.kSQ, {
-                label: v.NW.string(v.t.SkkeIi),
+                label: b.NW.string(b.t.SkkeIi),
                 children: D
             }),
             (0, r.jsx)(a.kSQ, {
-                label: v.NW.string(v.t.rHyPXl),
-                children: x
+                label: b.NW.string(b.t.rHyPXl),
+                children: L
             })
         ]
     });

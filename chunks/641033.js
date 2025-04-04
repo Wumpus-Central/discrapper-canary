@@ -72,5 +72,5 @@ let o = function (e, t) {
                     };
 function f(e) {
     var t;
-    return e.value * (null !== (t = e.multiplier) && void 0 !== t ? t : 1);
+    return e.value * (null != (t = e.multiplier) ? t : 1);
 }

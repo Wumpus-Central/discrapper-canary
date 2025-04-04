@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(970731),
     x = n(314897),
     j = n(430824),
-    N = n(594174),
-    O = n(626135),
+    O = n(594174),
+    N = n(626135),
     v = n(5192),
     y = n(709054),
     _ = n(360606),
@@ -76,7 +76,7 @@ function k(e) {
         h = (0, c.e7)([j.Z], () => j.Z.getGuild(l));
     o()(null != h, '');
     let x = (0, c.e7)([j.Z], () => j.Z.getRoles(l)),
-        [O, S] = i.useState(new Set()),
+        [N, S] = i.useState(new Set()),
         E = i.useMemo(() => {
             let e = (0, b.bD)(l),
                 t = s()(x)
@@ -92,8 +92,8 @@ function k(e) {
                             return (function (e, t, n) {
                                 let r = Number(e.canWrite) - Number(t.canWrite);
                                 if (0 !== r) return r;
-                                let i = N.default.getUser(e.id),
-                                    l = N.default.getUser(t.id);
+                                let i = O.default.getUser(e.id),
+                                    l = O.default.getUser(t.id);
                                 if (null != i && null != l) {
                                     let e = v.ZP.getName(n, void 0, i),
                                         t = v.ZP.getName(n, void 0, l);
@@ -138,10 +138,10 @@ function k(e) {
         );
     i.useEffect(() => {
         let e = Object.values(p)
-            .filter((e) => e.type === m.Kw.USER && !e.canRead && !O.has(e.id))
+            .filter((e) => e.type === m.Kw.USER && !e.canRead && !N.has(e.id))
             .map((e) => e.id);
         0 !== e.length && (u.Z.requestMembersById(l, e, !1), S((t) => new Set([...t, ...e])));
-    }, [l, p, O, S]);
+    }, [l, p, N, S]);
     let Z = (0, c.e7)([C.Z], () => C.Z.getApplicationId()),
         W = (0, c.e7)([_.default], () =>
             null == Z
@@ -181,17 +181,17 @@ function k(e) {
 function A(e) {
     var t, n, l;
     let o,
-        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: N, hasAccessToMutatePermissions: v } = e,
+        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: v } = e,
         y = f.id === a.id || f.id === (0, b.bD)(a.id),
         _ = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
         C = !f.canWrite || !v,
         I = x.default.getId();
     v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? w.NW.string(w.t['1VF/09']) : w.NW.string(w.t.P1GnER)) : f.type === m.Kw.ROLE && (o = w.NW.string(w.t.mcAijY))) : (o = null != s ? w.NW.string(w.t.tybdam) : w.NW.string(w.t.z2hjk5));
-    let k = N && null != j && f.id === a.id && void 0 !== _ && !f.permission;
+    let k = O && null != j && f.id === a.id && void 0 !== _ && !f.permission;
     i.useEffect(() => {
         if (k) {
             var e;
-            O.default.track(
+            N.default.track(
                 P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 W(Z({}, (0, p.hH)(a.id)), {
                     application_id: null == j || null == (e = j.application) ? void 0 : e.id,

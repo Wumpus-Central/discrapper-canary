@@ -5,7 +5,7 @@ var r = n(262068),
     a = n(295415);
 async function s(e, t, n) {
     var i;
-    let o = null === (i = t.style) || void 0 === i ? void 0 : i.getPropertyValue(e);
+    let o = null == (i = t.style) ? void 0 : i.getPropertyValue(e);
     if (o) {
         let i = await (0, r.vg)(o, null, n);
         return t.style.setProperty(e, i, t.style.getPropertyPriority(e)), !0;

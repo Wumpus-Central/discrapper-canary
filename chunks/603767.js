@@ -45,7 +45,7 @@ class o extends r.FrameLoop {
                     }
             }),
             i(this, 'startLoop', () => {
-                !(this.lastTime > 0) && ((this.lastTime = r.Globals.now()), (this.id = this._requestAnimationFrame(this.loop)));
+                this.lastTime > 0 || ((this.lastTime = r.Globals.now()), (this.id = this._requestAnimationFrame(this.loop)));
             }),
             i(this, 'advance', () => {
                 let e = r.Globals.now();

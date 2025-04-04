@@ -5,10 +5,10 @@ n.d(t, {
     T1: () => f,
     i9: () => c,
     kk: () => d,
-    lk: () => _,
+    lk: () => p,
     pQ: () => l,
     sN: () => m,
-    sO: () => p,
+    sO: () => _,
     ur: () => h
 }),
     n(653041);
@@ -35,11 +35,11 @@ function d(e) {
 function f(e) {
     return null == e ? void 0 : u(e) ? o.Hl.JOIN_RAID : o.Hl.DM_RAID;
 }
-function p(e, t) {
+function _(e, t) {
     let n = [];
     return e && n.push(o.dj.INVITES_DISABLED), t && n.push(o.dj.DMS_DISABLED), n;
 }
-function _(e, t) {
+function p(e, t) {
     let n = [];
     return e || n.push(o.dj.INVITES_DISABLED), t || n.push(o.dj.DMS_DISABLED), n;
 }
@@ -54,7 +54,7 @@ function g(e) {
 }
 function E(e, t) {
     var n;
-    let r = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
+    let r = null != (n = e.dmsDisabledUntil) ? n : e.invitesDisabledUntil;
     if (null == r) return '';
     let i = null != e.dmsDisabledUntil,
         o = null != e.invitesDisabledUntil;

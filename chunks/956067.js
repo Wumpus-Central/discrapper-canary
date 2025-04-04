@@ -78,7 +78,7 @@ class a {
             emoji: e,
             log: t,
             timestamp: n,
-            prefix: null !== (i = null === (r = this.logs[o]) || void 0 === r ? void 0 : r.prefix) && void 0 !== i ? i : ''
+            prefix: null != (i = null == (r = this.logs[o]) ? void 0 : r.prefix) ? i : ''
         });
     }
     addDetail(e, t) {

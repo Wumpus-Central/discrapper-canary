@@ -16,7 +16,7 @@ function l(e, t) {
     for (let e of n.roles) {
         var c;
         let n = null == t ? void 0 : t[e];
-        if ((null == n ? void 0 : null === (c = n.tags) || void 0 === c ? void 0 : c.subscription_listing_id) != null) return !0;
+        if ((null == n || null == (c = n.tags) ? void 0 : c.subscription_listing_id) != null) return !0;
     }
     return !1;
 }

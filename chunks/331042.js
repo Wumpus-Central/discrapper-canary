@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(906732),
     E = n(1585),
     b = n(333867),
-    v = n(286961),
-    y = n(300284),
+    y = n(286961),
+    v = n(300284),
     O = n(876917),
     I = n(642619),
     S = n(824393),
@@ -54,9 +54,9 @@ var r = n(200651),
     Q = n(215023),
     X = n(981631),
     J = n(474936),
-    $ = n(320988),
+    $ = n(694232),
     ee = n(388032),
-    et = n(279703);
+    et = n(854402);
 function en(e, t, n) {
     return (
         t in e
@@ -262,12 +262,12 @@ let ea = 880,
         return null != t ? (0, r.jsx)(el, eo(er({}, e), { displayOptions: t })) : (0, r.jsx)(es, er({}, e));
     },
     eu = (e) => {
-        let { product: t, onClose: n, confettiTarget: o, confettiCanvas: a, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: b, itemConsumed: v = !0, purchaseType: y = Q.o8.FIAT } = e,
+        let { product: t, onClose: n, confettiTarget: o, confettiCanvas: a, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: b, itemConsumed: y = !0, purchaseType: v = Q.o8.FIAT } = e,
             O = (0, D.o)('CollectiblesCollectedModal'),
             I = (0, K.W)(t, E),
             T = (0, f.e7)([N.default], () => {
                 var e, t;
-                return null !== (t = null === (e = N.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
+                return null != (t = null == (e = N.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
             }),
             A = i.useMemo(() => {
                 if (!O) return;
@@ -282,7 +282,7 @@ let ea = 880,
         function M() {
             if (I.skuId === d.a.PREMIUM_TIER_2_3_DAY) {
                 let e = ee.NW.formatToPlainString(ee.t.fYmir6, { days: 3 });
-                return v
+                return y
                     ? (0, r.jsx)(S.j, {
                           duration: e,
                           onClose: n
@@ -321,7 +321,7 @@ let ea = 880,
                         overrideDescription: p,
                         selectedVariantIndex: E,
                         shouldShowPromotionalExperience: b,
-                        purchaseType: y
+                        purchaseType: v
                     }),
                     (0, r.jsx)(_.olH, {
                         onClick: n,
@@ -357,9 +357,9 @@ let ea = 880,
             h = (0, M.k)(n),
             m = (0, M.k)(o),
             g = null != o,
-            E = (0, v.Z)(),
-            b = null == E ? void 0 : null === (t = E.giftPurchaseConfirmation) || void 0 === t ? void 0 : t.rewardCollectedText(),
-            { handleUseNow: y, isApplying: O } = (0, x.W)({
+            E = (0, y.Z)(),
+            b = null == E || null == (t = E.giftPurchaseConfirmation) ? void 0 : t.rewardCollectedText(),
+            { handleUseNow: v, isApplying: O } = (0, x.W)({
                 product: n,
                 onSuccess: a,
                 onError: a
@@ -460,7 +460,7 @@ let ea = 880,
                                 }),
                         N
                             ? (0, r.jsx)(_.zxk, {
-                                  onClick: y,
+                                  onClick: v,
                                   submitting: O,
                                   children: ee.NW.string(ee.t.MAS7uL)
                               })
@@ -504,7 +504,7 @@ let ea = 880,
     },
     e_ = (e) => {
         let { product: t, onClose: n, isPrimary: o, analyticsLocations: a, text: l } = e,
-            c = (0, y.Z)({ analyticsLocations: a }),
+            c = (0, v.Z)({ analyticsLocations: a }),
             [d] = t.items,
             f = i.useCallback(() => {
                 if ((n(), (0, p.xf)(), c(), t.type === u.Z.AVATAR_DECORATION)) {
@@ -533,19 +533,19 @@ let ea = 880,
             m = (0, P.o)(n, h),
             g = (0, K.W)(n, m),
             E = i.useRef(new o.qA()),
-            [b, v] = i.useState(null),
-            y = (0, q.UY)({
+            [b, y] = i.useState(null),
+            v = (0, q.UY)({
                 purchaseType: p,
                 skuId: g.skuId
             });
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.O_, {
-                    ref: v,
+                    ref: y,
                     className: et.confettiCanvas,
                     environment: E.current
                 }),
-                (0, r.jsx)(F.i, { options: y }),
+                (0, r.jsx)(F.i, { options: v }),
                 (0, r.jsx)(_.Y0X, {
                     hideShadow: !0,
                     transitionState: t,
@@ -558,7 +558,7 @@ let ea = 880,
                             product: g,
                             onClose: a,
                             confettiCanvas: b,
-                            hideConfetti: null != y,
+                            hideConfetti: null != v,
                             analyticsLocations: s,
                             overrideTitle: l,
                             overrideDescription: c,

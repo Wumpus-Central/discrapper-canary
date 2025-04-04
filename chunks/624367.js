@@ -18,8 +18,8 @@ var i = n(666572),
     b = n(230171),
     x = n(835473),
     y = n(749681),
-    E = n(258971),
-    v = n(914010),
+    v = n(258971),
+    E = n(914010),
     O = n(624138),
     N = n(566620),
     j = n(365415),
@@ -47,9 +47,9 @@ function R(e) {
     let { applicationId: R, customId: D, referrerId: L, embedUrl: M, linkId: W } = e,
         { analyticsLocations: U } = (0, u.ZP)(c.Z.ACTIVITY_BOOKMARK),
         [F] = (0, x.Z)([R]),
-        B = (0, l.e7)([v.Z], () => {
+        B = (0, l.e7)([E.Z], () => {
             var e;
-            return null != (e = v.Z.getGuildId()) ? e : void 0;
+            return null != (e = E.Z.getGuildId()) ? e : void 0;
         }),
         G = null == F || null == (t = F.bot) ? void 0 : t.id,
         H = null != F && (0, p.ye)(F),
@@ -225,7 +225,7 @@ function R(e) {
                                                                   tab: P.GlobalDiscoveryTab.APPS,
                                                                   applicationId: F.id,
                                                                   newSessionState: {
-                                                                      entrypoint: { name: E.xF.OAUTH2_EMBED },
+                                                                      entrypoint: { name: v.xF.OAUTH2_EMBED },
                                                                       guildId: B
                                                                   }
                                                               }));

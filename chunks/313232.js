@@ -83,7 +83,7 @@ class s {
         for (let l in (r(this, 'accumulativeMetricKey', void 0), r(this, 'samplesMetricKey', void 0), r(this, 'previous', void 0), r(this, 'multiplier', void 0), r(this, 'round', void 0), (this.accumulativeMetricKey = e), (this.samplesMetricKey = t), (this.multiplier = 1), (this.round = !1), o)) {
             var i, s;
             let e = Number(l);
-            !isNaN(e) && (n & e) != 0 && l in a && (this.multiplier *= null !== (s = null === (i = a[l]) || void 0 === i ? void 0 : i.multiplier) && void 0 !== s ? s : 1);
+            !isNaN(e) && (n & e) != 0 && l in a && (this.multiplier *= null != (s = null == (i = a[l]) ? void 0 : i.multiplier) ? s : 1);
         }
         this.round = (4 & n) != 0;
     }

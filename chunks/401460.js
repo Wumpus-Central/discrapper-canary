@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,10 +9,10 @@ var r = n(200651),
     u = n(583901),
     d = n(997945),
     f = n(630117),
-    p = n(441319),
-    _ = n(981631),
+    _ = n(441319),
+    p = n(981631),
     h = n(388032),
-    m = n(723902);
+    m = n(770580);
 function g(e, t, n) {
     return (
         t in e
@@ -42,7 +42,7 @@ function E(e) {
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,43 +54,43 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = () => [h.NW.string(h.t.EgWTY2), h.NW.string(h.t.umBn5e), h.NW.string(h.t.dG1wDw), h.NW.string(h.t.SesI4e), h.NW.string(h.t.RnMLvr)],
+let v = () => [h.NW.string(h.t.EgWTY2), h.NW.string(h.t.umBn5e), h.NW.string(h.t.dG1wDw), h.NW.string(h.t.SesI4e), h.NW.string(h.t.RnMLvr)],
     O = () => {
         var e;
-        return null !== (e = l().sample(y())) && void 0 !== e ? e : h.NW.string(h.t.EgWTY2);
+        return null != (e = l().sample(v())) ? e : h.NW.string(h.t.EgWTY2);
     };
-function S(e) {
+function I(e) {
     let { id: t, className: n, onSelect: o, isSelected: s = !1, tabIndex: l, children: f, locked: h = !1 } = e,
-        [g, v] = i.useState((0, p.aW)(t).name),
-        y = t === d.Ru.PIRATE,
-        S = (0, c.xUy)({
+        [g, b] = i.useState((0, _.aW)(t).name),
+        v = t === d.Ru.PIRATE,
+        I = (0, c.xUy)({
             label: g,
             isSelected: s
         });
     return (0, r.jsx)(c.ua7, {
         text: g,
-        onTooltipShow: () => y && v(O()),
+        onTooltipShow: () => v && b(O()),
         children: (e) =>
             (0, r.jsxs)('div', {
                 className: m.appIconSelectionContainer,
                 children: [
                     (0, r.jsx)(
                         c.P3F,
-                        b(E({}, e, S), {
-                            tabIndex: null != l ? l : S.tabIndex,
+                        y(E({}, e, I), {
+                            tabIndex: null != l ? l : I.tabIndex,
                             className: a()(m.appIconSelection, { [m.selected]: s }, n),
-                            onClick: s ? _.dG4 : () => (null == o ? void 0 : o(t)),
+                            onClick: s ? p.dG4 : () => (null == o ? void 0 : o(t)),
                             children: f
                         })
                     ),
@@ -107,9 +107,9 @@ function S(e) {
             })
     });
 }
-function I(e) {
+function S(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: o, onSelect: a, locked: s } = e;
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(I, {
         onSelect: i ? void 0 : a,
         isSelected: n,
         id: t.id,
@@ -118,7 +118,7 @@ function I(e) {
         locked: s,
         children: (0, r.jsx)(f.Z, {
             id: t.id,
-            width: p.M9
+            width: _.M9
         })
     });
 }

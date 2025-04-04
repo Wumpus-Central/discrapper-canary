@@ -15,8 +15,8 @@ let l = {
                 file_size: r.size,
                 id: a().uniqueId(),
                 is_clip: null != e.clip,
-                title: null === (t = e.clip) || void 0 === t ? void 0 : t.name,
-                application_id: null === (n = e.clip) || void 0 === n ? void 0 : n.applicationId,
+                title: null == (t = e.clip) ? void 0 : t.name,
+                application_id: null == (n = e.clip) ? void 0 : n.applicationId,
                 clip_created_at: null != e.clip ? (0, s.U)(e.clip.id) : void 0,
                 clip_participant_ids: null != e.clip ? (0, s.Z)(e.clip.users) : void 0
             }

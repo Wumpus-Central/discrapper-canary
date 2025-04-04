@@ -40,7 +40,7 @@ class _ extends o.Z {
             f(this, 'maybeFetchMostRecentSubscription', () => {
                 var e;
                 let t = a.default.getCurrentUser(),
-                    n = (0, u.xI)(null !== (e = null == t ? void 0 : t.premiumType) && void 0 !== e ? e : null, d.p9.TIER_1);
+                    n = (0, u.xI)(null != (e = null == t ? void 0 : t.premiumType) ? e : null, d.p9.TIER_1);
                 null != t && n && t.hasHadPremium() && (0, r.ou)();
             }),
             f(this, 'maybeFetchCountryCode', async () => {

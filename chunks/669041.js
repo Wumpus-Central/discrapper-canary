@@ -11,9 +11,9 @@ var r = n(200651),
     l = n(594174),
     c = n(918701),
     u = n(388032),
-    d = n(597401),
+    d = n(719969),
     f = n(800010);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,18 +37,18 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
 function h(e) {
     let { transitionState: t, onClose: n } = e,
-        p = (0, o.e7)([l.default], () => {
+        _ = (0, o.e7)([l.default], () => {
             var e;
-            return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
+            return null == (e = l.default.getCurrentUser()) ? void 0 : e.email;
         }),
-        [_, h] = i.useState({ status: 'unknown' });
+        [p, h] = i.useState({ status: 'unknown' });
     i.useEffect(() => {
         h({ status: 'loading' }),
             s.Z.verifyResend().then(
@@ -92,12 +92,12 @@ function h(e) {
                     })
                 ]
             }),
-            'loading' === _.status &&
+            'loading' === p.status &&
                 (0, r.jsx)(a.hzk, {
                     className: d.content,
                     children: (0, r.jsx)(a.$jN, {})
                 }),
-            'error' === _.status &&
+            'error' === p.status &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.hzk, {
@@ -110,7 +110,7 @@ function h(e) {
                         m()
                     ]
                 }),
-            'success' === _.status &&
+            'success' === p.status &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(a.hzk, {
@@ -118,8 +118,8 @@ function h(e) {
                             children: (0, r.jsx)(a.Text, {
                                 variant: 'text-md/normal',
                                 children: u.NW.format(u.t.qP5xYW, {
-                                    emailAddress: p,
-                                    emailAddressLink: 'mailto:'.concat(p)
+                                    emailAddress: _,
+                                    emailAddressLink: 'mailto:'.concat(_)
                                 })
                             })
                         }),
@@ -150,6 +150,6 @@ function h(e) {
 function m() {
     (0, a.ZDy)(async () => {
         let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 669041));
-        return (t) => (0, r.jsx)(e, _({}, t));
+        return (t) => (0, r.jsx)(e, p({}, t));
     });
 }

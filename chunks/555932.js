@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120), n(978209);
+n.d(t, { Z: () => v }), n(47120), n(978209);
 var r = n(200651),
     i = n(192379),
     o = n(642128),
@@ -10,19 +10,19 @@ var r = n(200651),
     d = n(436444),
     f = n(981631),
     _ = n(388032),
-    p = n(531233);
+    p = n(282412);
 let h = 200,
     m = 250,
     g = 36,
     E = 660,
     b = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3];
-function v(e) {
+function y(e) {
     let { fillFactor: t, guildBoostCount: n, premiumTier: r, isRevealed: o, useReducedMotion: a } = e,
         [l, c] = i.useState(a ? r : -1),
         [u, _] = i.useState(0 === n),
         [p, m] = i.useState(!1),
         b = i.useRef(!0);
-    function v(e) {
+    function y(e) {
         let { widthFactor: t } = e;
         for (let [e, n] of Object.entries(d.P).reverse())
             if (t >= n - g / 2 / E) {
@@ -30,7 +30,7 @@ function v(e) {
                 break;
             }
     }
-    let { widthFactor: y } = (0, s.q_F)({
+    let { widthFactor: v } = (0, s.q_F)({
         from: { widthFactor: 0 },
         to: { widthFactor: o ? t : 0 },
         config: {
@@ -38,7 +38,7 @@ function v(e) {
             friction: 7,
             clamp: !0
         },
-        onChange: v,
+        onChange: y,
         onStart: () => {
             _(!1);
         },
@@ -60,19 +60,19 @@ function v(e) {
         ),
         {
             isProgressBarAnimationComplete: u,
-            progressBarFillWidthFactor: y,
+            progressBarFillWidthFactor: v,
             setShouldFireConfetti: m,
             shouldFireConfetti: p,
             tierMarkerAnimationPosition: l
         }
     );
 }
-function y(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
         [s, h] = i.useState(!1),
         [g, E] = i.useState(0),
-        y = i.useRef(null),
+        v = i.useRef(null),
         O = s || n,
         { fillFactor: I, totalAvailableBoostsCount: S } = i.useMemo(() => (0, c.Hl)(t), [t]),
         {
@@ -81,7 +81,7 @@ function y(e) {
             setShouldFireConfetti: A,
             shouldFireConfetti: C,
             tierMarkerAnimationPosition: R
-        } = v({
+        } = y({
             fillFactor: I,
             isRevealed: O,
             useReducedMotion: n,
@@ -128,7 +128,7 @@ function y(e) {
                     (0, r.jsx)(
                         d.Z,
                         {
-                            confettiTriggerRef: y,
+                            confettiTriggerRef: v,
                             guild: t,
                             isProgressBarAnimationComplete: N,
                             setConfettiCount: E,
@@ -143,7 +143,7 @@ function y(e) {
                 ),
                 (0, r.jsx)(u.Z, {
                     confettiCount: g,
-                    confettiTriggerRef: y,
+                    confettiTriggerRef: v,
                     isFiring: C
                 })
             ]

@@ -5,7 +5,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(84735),
     l = n(780900),
-    c = n(76349);
+    c = n(789304);
 function u(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,13 +84,13 @@ function m(e, t) {
             e.forEach((e) => {
                 var t;
                 let { target: r } = e;
-                null === (t = n.get(r)) || void 0 === t || t(e);
+                null == (t = n.get(r)) || t(e);
             });
         });
     return i.forwardRef(function (t, u) {
-        var { children: f, className: h, onResize: m, contentClassName: g, onScroll: E, dir: v = 'ltr', fade: b = !1, customTheme: y = !1, style: O } = t,
-            S = _(t, ['children', 'className', 'onResize', 'contentClassName', 'onScroll', 'dir', 'fade', 'customTheme', 'style']);
-        let I = i.useRef(null),
+        var { children: f, className: h, onResize: m, contentClassName: g, onScroll: E, dir: b = 'ltr', fade: y = !1, customTheme: v = !1, style: O } = t,
+            I = p(t, ['children', 'className', 'onResize', 'contentClassName', 'onScroll', 'dir', 'fade', 'customTheme', 'style']);
+        let S = i.useRef(null),
             T = i.useRef(null),
             [N, A] = i.useState(!1),
             { scrollerRef: C, getScrollerState: R } = (0, l.Ke)(),
@@ -101,7 +101,7 @@ function m(e, t) {
                 d(
                     {
                         getScrollerNode: () => C.current,
-                        isScrolling: () => null != I.current,
+                        isScrolling: () => null != S.current,
                         getScrollerState: R
                     },
                     (0, l.Ue)(C, R, P)
@@ -110,16 +110,16 @@ function m(e, t) {
         );
         let w = i.useCallback(
             (e) => {
-                null == I.current ? A(!0) : clearTimeout(I.current),
-                    (I.current = setTimeout(() => {
-                        (I.current = null), A(!1);
+                null == S.current ? A(!0) : clearTimeout(S.current),
+                    (S.current = setTimeout(() => {
+                        (S.current = null), A(!1);
                     }, 200)),
                     null != E && E(e);
             },
             [E]
         );
         return (
-            i.useEffect(() => () => clearTimeout(I.current), []),
+            i.useEffect(() => () => clearTimeout(S.current), []),
             (0, l.zn)({
                 ref: C,
                 key: 'container',
@@ -136,22 +136,22 @@ function m(e, t) {
             }),
             (0, r.jsx)(
                 'div',
-                p(
+                _(
                     d(
                         {
                             ref: C,
                             className: a()(h, {
-                                [c.fade]: b,
-                                [c.customTheme]: y,
+                                [c.fade]: y,
+                                [c.customTheme]: v,
                                 [e]: !0,
                                 [c.managedReactiveScroller]: !0,
-                                [c.scrolling]: N && b
+                                [c.scrolling]: N && y
                             }),
                             style: O,
-                            dir: v,
+                            dir: b,
                             onScroll: w
                         },
-                        S
+                        I
                     ),
                     {
                         children: (0, r.jsx)(s.J, {

@@ -9,8 +9,8 @@ var r = n(106351),
     u = n(877565),
     d = n(590921),
     f = n(665692),
-    p = n(176505),
-    _ = n(388032);
+    _ = n(176505),
+    p = n(388032);
 function h(e) {
     switch (e.type) {
         case r.d.PUBLIC_THREAD:
@@ -26,7 +26,7 @@ function h(e) {
     }
 }
 function m(e) {
-    return p.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
+    return _.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
 }
 let g = {
     sentinel: f.zy,
@@ -69,17 +69,17 @@ let g = {
                 query: l,
                 options: c,
                 onHover: d,
-                onClick: p
+                onClick: _
             } = e,
             h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
         return (
-            h ? ((t = _.t.rMUL39), (n = _.NW.string(_.t.CYnO4u)), (l = l.substring(1))) : c.forNonStringCommandOption ? ((t = _.t.upNFT0), (n = _.NW.string(_.t.OGiMXF))) : ((t = _.t.UhnmJC), (n = _.NW.string(_.t.nIfr0d))),
+            h ? ((t = p.t.rMUL39), (n = p.NW.string(p.t.CYnO4u)), (l = l.substring(1))) : c.forNonStringCommandOption ? ((t = p.t.upNFT0), (n = p.NW.string(p.t.OGiMXF))) : ((t = p.t.UhnmJC), (n = p.NW.string(p.t.nIfr0d))),
             (0, u.HI)({
                 query: l,
                 selectedIndex: a,
                 autocompletes: r,
                 onHover: d,
-                onClick: p,
+                onClick: _,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
                 Component: o.ZP.Channel,

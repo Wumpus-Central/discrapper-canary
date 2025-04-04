@@ -1,13 +1,13 @@
 n.d(t, {
     R: () => m,
-    g: () => _
+    g: () => p
 });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(118012),
-    s = n(484245);
+    s = n(954859);
 function l(e, t, n) {
     return (
         t in e
@@ -64,14 +64,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,7 +80,7 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = {
+let p = {
         DEFAULT: 'default',
         INPUT_PLACEHOLDER: 'placeholder',
         DESCRIPTION: 'description',
@@ -96,7 +96,7 @@ let _ = {
         SELECTABLE: 'modeSelectable'
     };
 function m(e) {
-    var { type: t = _.DEFAULT, className: n, disabled: i, selectable: l, children: u, style: p } = e,
+    var { type: t = p.DEFAULT, className: n, disabled: i, selectable: l, children: u, style: _ } = e,
         m = f(e, ['type', 'className', 'disabled', 'selectable', 'children', 'style']);
     let g = h.DEFAULT;
     return (
@@ -107,7 +107,7 @@ function m(e) {
                 c(
                     {
                         className: o()(s[t], n, s[g]),
-                        style: p
+                        style: _
                     },
                     m
                 ),
@@ -116,4 +116,4 @@ function m(e) {
         )
     );
 }
-m.Types = _;
+m.Types = p;

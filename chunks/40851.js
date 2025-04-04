@@ -1,13 +1,13 @@
 n.d(t, {
     AN: () => h,
-    Aq: () => y,
+    Aq: () => v,
     GB: () => E,
     J5: () => p,
     Su: () => m,
     UI: () => u,
     Wu: () => b,
     ZP: () => O,
-    bp: () => v,
+    bp: () => y,
     g0: () => g
 }),
     n(47120);
@@ -62,16 +62,16 @@ function p(e) {
     let n = e.ownerDocument.defaultView;
     if (null == n) return;
     let r = (0, s.ZY)(n);
-    return null === (t = f.get(r)) || void 0 === t ? void 0 : t.windowDispatch;
+    return null == (t = f.get(r)) ? void 0 : t.windowDispatch;
 }
 function h(e) {
     var t;
-    return (0, o.k)(null == e ? void 0 : e.target) && null !== (t = p(e.target)) && void 0 !== t ? t : null;
+    return (0, o.k)(null == e ? void 0 : e.target) && null != (t = p(e.target)) ? t : null;
 }
 function m() {
     var e;
     let t = (0, l.GR)();
-    return null == t ? null : null !== (e = f.get(t)) && void 0 !== e ? e : null;
+    return null == t ? null : null != (e = f.get(t)) ? e : null;
 }
 function g(e) {
     return f.get(e);
@@ -88,10 +88,10 @@ function b(e) {
         children: i
     });
 }
-function v() {
+function y() {
     return i.useContext(d).appContext;
 }
-function y() {
+function v() {
     return i.useContext(d).windowDispatch;
 }
 let O = d;

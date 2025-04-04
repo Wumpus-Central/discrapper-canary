@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(50568);
+    s = n(532145);
 let l = (e) => {
     let { src: t, alt: n, size: o, 'aria-label': l, className: c } = e,
         u = i.useRef(null),

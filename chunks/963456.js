@@ -1,6 +1,6 @@
 n.d(t, {
     a: () => p,
-    j: () => g
+    j: () => m
 }),
     n(653041);
 var r = n(544891),
@@ -15,10 +15,10 @@ let c = 5000,
     f = 1001,
     _ = 1002;
 async function p(e, t) {
-    let n;
-    let s = performance.now(),
+    let n,
+        s = performance.now(),
         p = 0,
-        g = [];
+        m = [];
     switch (e.type) {
         case 'channel':
             n = l.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
@@ -32,10 +32,10 @@ async function p(e, t) {
         case 'application':
             n = l.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
     }
-    let m = async (t) =>
+    let g = async (t) =>
             p >= u
-                ? (g.push(_),
-                  v({ error: !0 }),
+                ? (m.push(_),
+                  b({ error: !0 }),
                   i.Z.dispatch({
                       type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                       target: e
@@ -53,8 +53,8 @@ async function p(e, t) {
                 .then(
                     (t) =>
                         202 === t.status
-                            ? (g.push(202), m(c))
-                            : (v({ error: !1 }),
+                            ? (m.push(202), g(c))
+                            : (b({ error: !1 }),
                               i.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS',
                                   target: e,
@@ -63,20 +63,20 @@ async function p(e, t) {
                     (n) => {
                         var r;
                         if (t.signal.aborted) {
-                            g.push(f), v({ error: !0 });
+                            m.push(f), b({ error: !0 });
                             return;
                         }
                         return 429 === n.status
-                            ? (g.push(429), m(n.body.retry_after * a.Z.Millis.SECOND))
-                            : (g.push(null !== (r = n.status) && void 0 !== r ? r : d),
-                              v({ error: !0 }),
+                            ? (m.push(429), g(n.body.retry_after * a.Z.Millis.SECOND))
+                            : (m.push(null != (r = n.status) ? r : d),
+                              b({ error: !0 }),
                               i.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                                   target: e
                               }));
                     }
                 ),
-        v = (r) => {
+        b = (r) => {
             let { error: i } = r,
                 a = performance.now() - s;
             o.default.track(l.rMx.APPLICATION_COMMAND_PERFORMANCE, {
@@ -90,7 +90,7 @@ async function p(e, t) {
                 url: n,
                 target_type: e.type,
                 target_id: h(e),
-                failure_statuses: g
+                failure_statuses: m
             });
         };
     await E();
@@ -109,7 +109,7 @@ function h(e) {
             (0, s.vE)(e);
     }
 }
-function g(e) {
+function m(e) {
     i.Z.dispatch({
         type: 'APPLICATION_COMMAND_INDEX_FETCH_REQUEST',
         target: e

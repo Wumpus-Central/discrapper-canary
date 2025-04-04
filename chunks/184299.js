@@ -1,11 +1,11 @@
 n.d(t, {
-    ZP: () => b,
+    ZP: () => y,
     iF: () => E,
     iw: () => g,
-    km: () => v
+    km: () => b
 });
-var r = n(877124),
-    i = n(65400),
+var r = n(781930),
+    i = n(372793),
     o = n(731965),
     a = n(433517);
 function s(e, t, n) {
@@ -80,7 +80,7 @@ function f(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if ('object' !== h(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
     if (void 0 !== n) {
@@ -90,8 +90,8 @@ function p(e, t) {
     }
     return ('string' === t ? String : Number)(e);
 }
-function _(e) {
-    var t = p(e, 'string');
+function p(e) {
+    var t = _(e, 'string');
     return 'symbol' === h(t) ? t : String(t);
 }
 function h(e) {
@@ -104,7 +104,7 @@ var g = (function (e) {
     E = (function (e) {
         return (e.NONE = 'NONE'), (e.FETCHING = 'FETCHING'), (e.SUCCESS = 'SUCCESS'), (e.FAILURE = 'FAILURE'), e;
     })({});
-let v = (0, i.F)()(
+let b = (0, i.F)()(
         (0, r.tJ)(
             (e, t) => ({
                 volume: m,
@@ -122,7 +122,7 @@ let v = (0, i.F)()(
                 },
                 setVideoProgress: (n, r, i) => {
                     var a, s;
-                    let c = Math.max(null !== (s = null === (a = t().videoProgress[n]) || void 0 === a ? void 0 : a.maxTimestampSec) && void 0 !== s ? s : 0, Math.floor(r));
+                    let c = Math.max(null != (s = null == (a = t().videoProgress[n]) ? void 0 : a.maxTimestampSec) ? s : 0, Math.floor(r));
                     (0, o.j)(() =>
                         e({
                             videoProgress: u(l({}, t().videoProgress), {
@@ -153,7 +153,7 @@ let v = (0, i.F)()(
                     (0, o.j)(() => {
                         let r = t().videoProgress,
                             { [n]: i } = r;
-                        e({ videoProgress: d(r, [n].map(_)) });
+                        e({ videoProgress: d(r, [n].map(p)) });
                     });
                 },
                 setTranscriptAsset: (t) => {
@@ -167,7 +167,7 @@ let v = (0, i.F)()(
                 storage: (0, r.FL)(() => ({
                     getItem: (e) => {
                         var t;
-                        return null !== (t = a.K.get(e)) && void 0 !== t ? t : null;
+                        return null != (t = a.K.get(e)) ? t : null;
                     },
                     setItem: (e, t) => a.K.set(e, t),
                     removeItem: (e) => a.K.remove(e)
@@ -181,4 +181,4 @@ let v = (0, i.F)()(
             }
         )
     ),
-    b = v;
+    y = b;

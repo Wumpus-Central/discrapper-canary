@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => O,
-    xm: () => v
+    xm: () => y
 }),
     n(266796);
 var r = n(200651);
@@ -11,8 +11,8 @@ var i = n(399606),
     s = n(413335),
     l = n(50101),
     c = n(388032),
-    u = n(730621),
-    d = n(782763),
+    u = n(680278),
+    d = n(501867),
     f = n(567949),
     _ = n(552781),
     p = n(952567),
@@ -66,7 +66,7 @@ function b(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function v(e) {
+function y(e) {
     let { heading: t, description: n, label: i, isEnabled: a } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -116,7 +116,7 @@ function v(e) {
         ]
     });
 }
-function y(e) {
+function v(e) {
     var { imgSrc: t } = e,
         n = E(e, ['imgSrc']);
     return (0, r.jsxs)('div', {
@@ -129,7 +129,7 @@ function y(e) {
             }),
             (0, r.jsx)('div', {
                 className: d.contentContainer,
-                children: (0, r.jsx)(v, g({}, n))
+                children: (0, r.jsx)(y, g({}, n))
             })
         ]
     });
@@ -137,7 +137,7 @@ function y(e) {
 let O = function (e) {
     let { guild: t } = e,
         n = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        s = (0, l.Ek)(t, 'GuildBoostingMarketingTopPerksCards');
+        s = (0, l.Ek)(t.id, 'GuildBoostingMarketingTopPerksCards');
     return (0, r.jsxs)('div', {
         className: d.wrapper,
         children: [
@@ -149,19 +149,19 @@ let O = function (e) {
             (0, r.jsxs)('div', {
                 className: d.topPerksCards,
                 children: [
-                    (0, r.jsx)(y, {
-                        description: c.NW.string(c.t.HTvLGh),
-                        heading: c.NW.string(c.t.IpRQw8),
-                        imgSrc: p,
-                        label: s ? c.NW.string(u.Z.na6fmJ) : void 0
-                    }),
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(v, {
                         description: c.NW.string(c.t.wOYbTk),
                         heading: c.NW.string(c.t.G6jZo6),
                         imgSrc: n ? _ : f,
+                        label: s ? c.NW.string(u.Z.na6fmJ) : void 0
+                    }),
+                    (0, r.jsx)(v, {
+                        description: c.NW.string(c.t.HTvLGh),
+                        heading: c.NW.string(c.t.IpRQw8),
+                        imgSrc: p,
                         label: s ? c.NW.string(u.Z.dyNT9v) : void 0
                     }),
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(v, {
                         description: c.NW.string(c.t.yCjoUF),
                         heading: c.NW.string(c.t['/bX4Ji']),
                         imgSrc: h,

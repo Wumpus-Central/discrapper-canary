@@ -15,7 +15,7 @@ function s(e, t) {
 }
 function l(e) {
     var t;
-    let n = null !== (t = e.actions) && void 0 !== t ? t : [];
+    let n = null != (t = e.actions) ? t : [];
     for (let t of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) && (n.includes('POST_CONNECTION_OPEN') || (n = [...n, 'POST_CONNECTION_OPEN']), n.includes('OVERLAY_INITIALIZE') || (n = [...n, 'OVERLAY_INITIALIZE'])), e.loadRightBeforeConnectionOpen && (n.includes('CONNECTION_OPEN') || (n = [...n, 'CONNECTION_OPEN']), n.includes('OVERLAY_INITIALIZE') || (n = [...n, 'OVERLAY_INITIALIZE'])), n)) t in i || (i[t] = []), i[t].push(e);
 }
 function c(e) {

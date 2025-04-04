@@ -1,7 +1,7 @@
 n.d(t, {
     BD: () => m,
-    DF: () => _,
-    ZP: () => b,
+    DF: () => p,
+    ZP: () => y,
     _F: () => h
 });
 var r = n(200651);
@@ -11,7 +11,7 @@ var i = n(120356),
     a = n(481060),
     s = n(493773),
     l = n(921944),
-    c = n(835273);
+    c = n(519254);
 function u(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function p(e, t) {
         e
     );
 }
-var _ = (function (e) {
+var p = (function (e) {
         return (e.TOP_CENTER = 'caretTopCenter'), (e.TOP_RIGHT = 'caretTopRight'), (e.TOP_LEFT = 'caretTopLeft'), (e.BOTTOM_CENTER = 'caretBottomCenter'), (e.BOTTOM_LEFT = 'caretBottomLeft'), (e.BOTTOM_RIGHT = 'caretBottomRight'), (e.LEFT_CENTER = 'caretLeftCenter'), (e.LEFT_TOP = 'caretLeftTop'), (e.RIGHT_CENTER = 'caretRightCenter'), (e.RIGHT_TOP = 'caretRightTop'), e;
     })({}),
     h = (function (e) {
@@ -81,42 +81,42 @@ let g = Object.freeze({
         brand: 'always-white',
         primary: 'header-primary'
     }),
-    v = Object.freeze({
+    b = Object.freeze({
         brand: 'always-white',
         primary: 'text-normal'
     });
-function b(e) {
+function y(e) {
     let {
         color: t = 'brand',
         className: n,
         header: i,
         headerClassName: u,
         content: f,
-        contentClassName: _,
+        contentClassName: p,
         buttonCTA: h,
         secondaryButtonCTA: m,
-        onClick: b,
-        onSecondaryClick: y,
+        onClick: y,
+        onSecondaryClick: v,
         buttonProps: O = {
             color: a.zxk.Colors.BRAND,
             look: a.zxk.Looks.FILLED
         },
-        secondaryButtonProps: S = { color: a.zxk.Colors.BRAND_INVERTED },
-        onComponentMount: I,
+        secondaryButtonProps: I = { color: a.zxk.Colors.BRAND_INVERTED },
+        onComponentMount: S,
         asset: T,
         markAsDismissed: N,
         caretPosition: A = 'caretTopCenter',
         buttonLayout: C = 0
     } = e;
     (0, s.ZP)(() => {
-        null == I || I();
+        null == S || S();
     });
     let R = null != m,
         P = (e) => {
-            b(e), null == N || N(l.L.PRIMARY);
+            y(e), null == N || N(l.L.PRIMARY);
         },
-        D = () => {
-            null == y || y(), null == N || N(l.L.SECONDARY);
+        w = () => {
+            null == v || v(), null == N || N(l.L.SECONDARY);
         };
     return (0, r.jsxs)('div', {
         className: o()(n, g[t], c.upsellTooltipWrapper, c[A]),
@@ -131,8 +131,8 @@ function b(e) {
                       children: i
                   }),
             (0, r.jsx)(a.Text, {
-                color: v[t],
-                className: o()(_, c.content),
+                color: b[t],
+                className: o()(p, c.content),
                 variant: 'text-sm/normal',
                 children: f
             }),
@@ -146,9 +146,9 @@ function b(e) {
                           R
                               ? (0, r.jsx)(
                                     a.zxk,
-                                    p(d({}, S), {
+                                    _(d({}, I), {
                                         fullWidth: 1 === C,
-                                        onClick: D,
+                                        onClick: w,
                                         children: m
                                     })
                                 )
@@ -157,7 +157,7 @@ function b(e) {
                               ? null
                               : (0, r.jsx)(
                                     a.zxk,
-                                    p(d({}, O), {
+                                    _(d({}, O), {
                                         fullWidth: !R || 1 === C,
                                         onClick: P,
                                         children: h
@@ -169,4 +169,4 @@ function b(e) {
         ]
     });
 }
-(b.CaretPosition = _), (b.ButtonLayout = h);
+(y.CaretPosition = p), (y.ButtonLayout = h);

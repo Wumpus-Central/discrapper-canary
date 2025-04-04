@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(481060),
-    s = n(850494);
+    s = n(742352);
 function l(e, t, n) {
     return (
         t in e
@@ -61,14 +61,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +77,7 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     let { onClick: t, icon: n, tooltip: i, className: l } = e,
         u = n({
             color: 'currentColor',
@@ -90,10 +90,10 @@ function _(e) {
         position: 'bottom',
         children: (e) => {
             var { onClick: n } = e,
-                p = f(e, ['onClick']);
+                _ = f(e, ['onClick']);
             return (0, r.jsx)(
                 a.P3F,
-                d(c({}, p), {
+                d(c({}, _), {
                     'aria-label': i,
                     onClick: (e) => {
                         null == n || n(), t(e);

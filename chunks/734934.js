@@ -1,6 +1,6 @@
 n.d(t, {
-    oW: () => _,
-    p: () => p
+    oW: () => p,
+    p: () => _
 });
 var r = n(381499),
     i = n(668781),
@@ -12,12 +12,12 @@ var r = n(381499),
     u = n(468788),
     d = n(981631),
     f = n(388032);
-function p() {
+function _() {
     let e = a.QZ.useSetting(),
         t = a.fv.useSetting();
     return e && ('0' === t || new Date(Number(t)).getTime() - new Date().getTime() > 0);
 }
-function _(e, t) {
+function p(e, t) {
     let n = a.QZ.getSetting();
     s.hW.updateAsync(
         'notifications',
@@ -40,7 +40,7 @@ function _(e, t) {
                 cancelText: f.NW.string(f.t.f3Pet7),
                 confirmText: f.NW.string(f.t.BddRzc),
                 onConfirm: () => {
-                    (0, o.Z)(d.Skl.ONLINE);
+                    (0, o.Z)({ nextStatus: d.Skl.ONLINE });
                 }
             });
 }

@@ -5,25 +5,25 @@ var r = n(200651),
     a = n(974674),
     s = n(1561),
     l = n(993365),
-    c = n(870822),
-    u = n(385499),
-    d = n(768581),
-    f = n(630388),
-    p = n(489863),
-    _ = n(981631),
+    c = n(385499),
+    u = n(768581),
+    d = n(630388),
+    f = n(489863),
+    _ = n(713938),
+    p = n(981631),
     h = n(182294),
     m = n(388032),
-    g = n(193048);
+    g = n(441533);
 function E(e) {
-    let { id: t, user: n, application: E, bot: v, accountScopes: b, showLogout: y, location: O } = e,
-        S = d.ZP.getApplicationIconURL({
+    let { id: t, user: n, application: E, bot: b, accountScopes: y, showLogout: v, location: O, scopes: I } = e,
+        S = u.ZP.getApplicationIconURL({
             id: E.id,
             icon: E.icon
         }),
-        I = d.ZP.getUserAvatarURL(n),
-        T = i.useMemo(
+        T = u.ZP.getUserAvatarURL(n),
+        N = i.useMemo(
             () =>
-                (0, c.Z)(E)
+                I.some((e) => (0, _.sg)(e))
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.x, {
@@ -45,15 +45,15 @@ function E(e) {
                                   color: 'header-primary',
                                   children: [
                                       E.name,
-                                      null != v
-                                          ? (0, r.jsx)(u.Z, {
+                                      null != b
+                                          ? (0, r.jsx)(c.Z, {
                                                 className: g.botTag,
-                                                verified: null != v.public_flags && (0, f.yE)(v.public_flags, _.xW$.VERIFIED_BOT)
+                                                verified: null != b.public_flags && (0, d.yE)(b.public_flags, p.xW$.VERIFIED_BOT)
                                             })
                                           : null
                                   ]
                               }),
-                              b.length > 0
+                              y.length > 0
                                   ? (0, r.jsx)(l.x, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
@@ -66,7 +66,7 @@ function E(e) {
                                     })
                           ]
                       }),
-            [b.length, E, v]
+            [y.length, E, b, I]
         );
     return (0, r.jsxs)('header', {
         id: t,
@@ -87,14 +87,14 @@ function E(e) {
                     }),
                     (0, r.jsx)(a.qE, {
                         className: g.avatar,
-                        src: I,
+                        src: T,
                         size: h.EF.SIZE_80,
                         'aria-label': n.username
                     })
                 ]
             }),
-            T,
-            y
+            N,
+            v
                 ? (0, r.jsx)('div', {
                       className: g.currentUser,
                       children: (0, r.jsxs)(l.x, {
@@ -124,7 +124,7 @@ function E(e) {
                               (0, r.jsx)(s.P, {
                                   tag: 'a',
                                   className: g.logoutLink,
-                                  onClick: () => (0, p.c$)(O),
+                                  onClick: () => (0, f.c$)(O),
                                   children: m.NW.string(m.t['yV/hjI'])
                               })
                           ]

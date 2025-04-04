@@ -1,7 +1,7 @@
 n.d(t, {
-    DW: () => b,
+    DW: () => y,
     Gn: () => O,
-    t3: () => y,
+    t3: () => v,
     w4: () => E
 });
 var r = n(525654),
@@ -14,8 +14,8 @@ let l = 'Ubuntu',
     u = 'Fedora',
     d = 'Red Hat',
     f = 'SuSE',
-    p = 'Linux',
-    _ = 'OS X',
+    _ = 'Linux',
+    p = 'OS X',
     h = 'win',
     m = 'osx',
     g = 'linux';
@@ -26,25 +26,25 @@ function E(e) {
         i = null != n ? '&format='.concat(n) : '';
     return ''.concat(s.fzT.DESKTOP).concat(r, '?platform=').concat(e).concat(i);
 }
-function v() {
+function b() {
     let e =
         arguments.length > 0 && void 0 !== arguments[0]
             ? arguments[0]
             : (() => {
                   var e;
-                  return null === (e = i().os) || void 0 === e ? void 0 : e.family;
+                  return null == (e = i().os) ? void 0 : e.family;
               })();
-    return null == e ? h : -1 !== e.indexOf(l) || -1 !== e.indexOf(c) || -1 !== e.indexOf(u) || -1 !== e.indexOf(d) || -1 !== e.indexOf(f) || -1 !== e.indexOf(p) ? g : -1 !== e.indexOf(_) ? m : h;
+    return null == e ? h : -1 !== e.indexOf(l) || -1 !== e.indexOf(c) || -1 !== e.indexOf(u) || -1 !== e.indexOf(d) || -1 !== e.indexOf(f) || -1 !== e.indexOf(_) ? g : -1 !== e.indexOf(p) ? m : h;
 }
-function b(e) {
+function y(e) {
     return {
         [h]: 'Windows',
         [m]: 'Mac',
         [g]: 'Linux'
-    }[v(e)];
+    }[b(e)];
 }
-function y() {
-    let e = v(),
+function v() {
+    let e = b(),
         t = e === g ? 'tar.gz' : null;
     return E(e, !1, t);
 }

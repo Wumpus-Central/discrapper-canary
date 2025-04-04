@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(481060),
     l = n(600164),
     c = n(259580),
-    u = n(415806);
+    u = n(92675);
 function d(e, t, n) {
     return (
         t in e
@@ -39,8 +39,8 @@ class f extends i.PureComponent {
             d(this, 'renderBreadcrumb', (e, t) => {
                 let { activeId: n, onBreadcrumbClick: i, breadcrumbs: o, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
                     f = e.id === n,
-                    p = () => this.handleClick(e),
-                    _ = t === o.length - 1,
+                    _ = () => this.handleClick(e),
+                    p = t === o.length - 1,
                     h =
                         null != l
                             ? l(e, f)
@@ -54,17 +54,17 @@ class f extends i.PureComponent {
                 return (0, r.jsxs)(
                     'div',
                     {
-                        className: a()(u.breadcrumbWrapper, { [u.breadcrumbFinalWrapper]: _ }),
+                        className: a()(u.breadcrumbWrapper, { [u.breadcrumbFinalWrapper]: p }),
                         children: [
                             null != i
                                 ? (0, r.jsx)(s.P3F, {
                                       tag: 'span',
-                                      onClick: p,
+                                      onClick: _,
                                       className: u.breadcrumbClickWrapper,
                                       children: h
                                   })
                                 : h,
-                            _
+                            p
                                 ? null
                                 : (0, r.jsx)(c.Z, {
                                       className: a()(u.breadcrumbArrow, d),
@@ -77,4 +77,4 @@ class f extends i.PureComponent {
             });
     }
 }
-let p = f;
+let _ = f;

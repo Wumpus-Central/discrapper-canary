@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(439959),
     g = n(125988),
     E = n(388032),
-    b = n(684441);
-function v(e, t, n) {
+    b = n(725591);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function v(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -88,17 +88,17 @@ function T(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = 3,
-    N = 80,
+let N = 3,
+    A = 80,
     C = 12,
     R = 16,
-    P = () => N,
+    P = () => A,
     w = (e) => {
         var { children: t, className: n, onSelect: i, isSelected: o = !1 } = e,
             s = S(e, ['children', 'className', 'onSelect', 'isSelected']);
         return (0, r.jsx)(
             u.P3F,
-            I(y({ className: a()(b.decorationGridItem, o ? b.selected : void 0, n) }, s), {
+            I(v({ className: a()(b.decorationGridItem, o ? b.selected : void 0, n) }, s), {
                 onClick: i,
                 children: t
             })
@@ -107,19 +107,19 @@ let A = 3,
     D = (e) => {
         var { user: t, avatarDecoration: n, innerRef: o, section: a, isSelected: s = !1 } = e,
             h = S(e, ['user', 'avatarDecoration', 'innerRef', 'section', 'isSelected']);
-        let v = (0, c.e7)([f.Z], () => {
+        let y = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(n.skuId);
                 return (0, _.G1)(e);
             }),
             O = (0, _.Yq)(n.skuId),
             T = p.ZP.canUseCollectibles(t),
-            A = a === m.$0.PREMIUM_PURCHASE && !T,
+            N = a === m.$0.PREMIUM_PURCHASE && !T,
             C = i.useRef(null),
             R = (0, d.Z)(null != o ? o : C),
             { avatarDecorationSrc: P } = (0, g.Z)({
                 user: t,
                 avatarDecorationOverride: n,
-                size: N,
+                size: A,
                 onlyAnimateOnHover: !R
             }),
             D = () =>
@@ -140,7 +140,7 @@ let A = 3,
                             })
                         })
                       : (0, r.jsx)(u.G2e, {
-                            icon: v
+                            icon: y
                                 ? () =>
                                       (0, r.jsx)(u.SrA, {
                                           size: 'custom',
@@ -159,9 +159,9 @@ let A = 3,
         return (0, r.jsxs)(
             w,
             I(
-                y(
+                v(
                     {
-                        className: A ? b.decorationGridItemChurned : void 0,
+                        className: N ? b.decorationGridItemChurned : void 0,
                         innerRef: null != o ? o : C,
                         isSelected: s
                     },
@@ -190,7 +190,7 @@ let A = 3,
                         (0, r.jsxs)(
                             w,
                             {
-                                style: y({}, f),
+                                style: v({}, f),
                                 isSelected: null === i,
                                 onSelect: () => a(null),
                                 children: [
@@ -238,7 +238,7 @@ let A = 3,
                         return (0, r.jsx)(
                             D,
                             {
-                                style: y({}, f),
+                                style: v({}, f),
                                 user: t,
                                 avatarDecoration: e,
                                 section: p,
@@ -254,14 +254,14 @@ let A = 3,
                 let { header: n } = c[e];
                 return (0, r.jsx)('div', {
                     className: b.headings,
-                    style: I(y({}, t), { position: 'absolute' }),
+                    style: I(v({}, t), { position: 'absolute' }),
                     children: (0, r.jsx)(u.vwX, { children: n })
                 });
             };
         return (0, r.jsx)(u.GMG, {
             fade: !0,
             className: b.list,
-            columns: A,
+            columns: N,
             sections: c.map((e) => {
                 let { items: t } = e;
                 return t.length;

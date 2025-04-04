@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => I }), n(411104);
+n.d(t, { Z: () => S }), n(411104);
 var o,
     a = n(442837),
     s = n(544891),
@@ -20,19 +20,19 @@ function d(e, t, n) {
     );
 }
 let f = null,
-    p = null,
-    _ = null;
+    _ = null,
+    p = null;
 function h(e) {
     let { client: t } = e;
     f = t;
 }
 function m(e) {
     let { paypalClient: t } = e;
-    p = t;
+    _ = t;
 }
 function g(e) {
     let { venmoClient: t } = e;
-    _ = t;
+    p = t;
 }
 function E(e) {
     let { paymentSourceType: t, state: n, path: i, query: o } = e;
@@ -44,15 +44,15 @@ function E(e) {
             queryItems: o
         });
 }
-function v(e) {
+function b(e) {
     let { paymentSourceType: t, state: n } = e;
     t === u.HeQ.PAYPAL && (r = n);
 }
-function b() {
-    p = null;
-}
 function y() {
     _ = null;
+}
+function v() {
+    p = null;
 }
 (0, c.isDesktop)() &&
     (window.popupBridge = {
@@ -61,7 +61,7 @@ function y() {
             return (0, s.K0)() + u.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.gg$.BRAINTREE, r);
         },
         open: (e) => {
-            (i = e), window.open(e), S.emitChange();
+            (i = e), window.open(e), I.emitChange();
         }
     });
 class O extends (o = a.ZP.Store) {
@@ -69,23 +69,23 @@ class O extends (o = a.ZP.Store) {
         return f;
     }
     getPayPalClient() {
-        return p;
+        return _;
     }
     getVenmoClient() {
-        return _;
+        return p;
     }
     getLastURL() {
         return i;
     }
 }
 d(O, 'displayName', 'BraintreeStore');
-let S = new O(l.Z, {
+let I = new O(l.Z, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: h,
         BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: m,
         BILLING_POPUP_BRIDGE_CALLBACK: E,
-        BILLING_POPUP_BRIDGE_STATE_UPDATE: v,
-        BRAINTREE_TEARDOWN_PAYPAL_CLIENT: b,
+        BILLING_POPUP_BRIDGE_STATE_UPDATE: b,
+        BRAINTREE_TEARDOWN_PAYPAL_CLIENT: y,
         BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: g,
-        BRAINTREE_TEARDOWN_VENMO_CLIENT: y
+        BRAINTREE_TEARDOWN_VENMO_CLIENT: v
     }),
-    I = S;
+    S = I;

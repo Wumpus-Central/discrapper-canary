@@ -1,7 +1,7 @@
 n.d(t, {
     CO: () => s,
-    NU: () => v,
-    X2: () => b,
+    NU: () => b,
+    X2: () => y,
     cb: () => E,
     d$: () => u,
     tw: () => l
@@ -26,11 +26,11 @@ let i = (e, t) => {
     u = (e) => i(e, c),
     d = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
     f = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
-    p = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
-    _ = ((0, r.isIOS)() || (0, r.isAndroid)(), /\.(mp4|mov)$/i),
+    _ = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
+    p = ((0, r.isIOS)() || (0, r.isAndroid)(), /\.(mp4|mov)$/i),
     h = /\.(mp4|webm|mov)$/i,
     m = /\.(mp4|webm|mov)$/i,
-    g = (0, r.isIOS)() ? _ : (0, r.isAndroid)() ? h : m,
+    g = (0, r.isIOS)() ? p : (0, r.isAndroid)() ? h : m,
     E = (e) => i(e, g),
-    v = (e) => null != e && g.test(e),
-    b = (e) => o(e, 'video');
+    b = (e) => null != e && g.test(e),
+    y = (e) => o(e, 'video');

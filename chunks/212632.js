@@ -1,6 +1,6 @@
 n.d(t, { Z: () => _ }), n(47120);
-var r = n(200651),
-    l = n(192379),
+var l = n(200651),
+    r = n(192379),
     i = n(120356),
     o = n.n(i),
     a = n(481060),
@@ -24,20 +24,20 @@ let E = 0,
                 return c.NW.string(c.t.AlY4ZW);
         }
     },
-    h = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
-function C(e) {
+    C = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
+function h(e) {
     let { position: t, onChange: n } = e,
-        [i] = l.useState(() => f()),
+        [i] = r.useState(() => f()),
         E = t === s._vf.DISABLED ? c.NW.string(c.t.R6LxVV) : c.NW.formatToPlainString(c.t.XXHDMz, { position: p(t) });
-    return (0, r.jsxs)('div', {
+    return (0, l.jsxs)('div', {
         children: [
-            (0, r.jsx)(a.tEY, {
+            (0, l.jsx)(a.tEY, {
                 within: !0,
                 offset: -2,
-                children: (0, r.jsx)('div', {
+                children: (0, l.jsx)('div', {
                     className: o()(u.wrapper, { [u.disabledSelected]: t === s._vf.DISABLED }),
-                    children: h.map((e) =>
-                        (0, r.jsxs)(
+                    children: C.map((e) =>
+                        (0, l.jsxs)(
                             'label',
                             {
                                 className: o()({
@@ -51,13 +51,13 @@ function C(e) {
                                 children: [
                                     p(e),
                                     e === s._vf.DISABLED
-                                        ? (0, r.jsx)(a.t6m, {
+                                        ? (0, l.jsx)(a.t6m, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: u.disabledIcon
                                           })
                                         : null,
-                                    (0, r.jsx)('input', {
+                                    (0, l.jsx)('input', {
                                         type: 'radio',
                                         name: i,
                                         value: e,
@@ -71,7 +71,7 @@ function C(e) {
                     )
                 })
             }),
-            (0, r.jsx)(a.R94, {
+            (0, l.jsx)(a.R94, {
                 type: a.geA.DESCRIPTION,
                 className: d.marginTop8,
                 children: E
@@ -79,5 +79,5 @@ function C(e) {
         ]
     });
 }
-C.Positions = s._vf;
-let _ = C;
+h.Positions = s._vf;
+let _ = h;

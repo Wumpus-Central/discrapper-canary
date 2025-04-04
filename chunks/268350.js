@@ -1,12 +1,12 @@
 n.d(t, {
-    $p: () => I,
-    FQ: () => S,
+    $p: () => S,
+    FQ: () => I,
     Il: () => T,
     Jf: () => R,
-    SA: () => x,
+    SA: () => L,
     Um: () => A,
     eu: () => P,
-    hW: () => L,
+    hW: () => x,
     lY: () => C,
     pk: () => N,
     qB: () => w
@@ -22,13 +22,13 @@ var r = n(392711),
     u = n(675478),
     d = n(598077),
     f = n(486472),
-    p = n(594174),
-    _ = n(73346),
+    _ = n(594174),
+    p = n(73346),
     h = n(926491),
     m = n(981631),
     g = n(526761),
     E = n(388032);
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +52,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,14 +74,14 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = async (e, t) => {
-        let { body: n } = await (0, _.Kb)({
+let I = async (e, t) => {
+        let { body: n } = await (0, p.Kb)({
             url: m.ANM.STICKER_PACK(e),
             rejectWithError: !1
         });
@@ -95,7 +95,7 @@ let S = async (e, t) => {
             n
         );
     },
-    I = async function () {
+    S = async function () {
         let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
         a.Z.wait(() => {
@@ -131,7 +131,7 @@ let S = async (e, t) => {
         a.Z.dispatch({
             type: 'GUILD_STICKERS_FETCH_SUCCESS',
             guildId: e,
-            stickers: t.map((e) => (null != e.user ? O(b({}, e), { user: new d.Z(e.user) }) : e))
+            stickers: t.map((e) => (null != e.user ? O(y({}, e), { user: new d.Z(e.user) }) : e))
         });
     },
     A = async (e) => {
@@ -150,7 +150,7 @@ let S = async (e, t) => {
             a.Z.dispatch({
                 type: 'GUILD_STICKERS_CREATE_SUCCESS',
                 guildId: e,
-                sticker: O(b({}, n.body), { user: p.default.getCurrentUser() })
+                sticker: O(y({}, n.body), { user: _.default.getCurrentUser() })
             }),
             n.body
         );
@@ -181,7 +181,7 @@ function w(e, t) {
 function D(e) {
     return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
-function x(e) {
+function L(e) {
     u.DZ.updateAsync(
         'favoriteStickers',
         (t) =>
@@ -195,7 +195,7 @@ function x(e) {
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function L(e) {
+function x(e) {
     u.DZ.updateAsync(
         'favoriteStickers',
         (t) => {

@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(739566),
     x = n(981631),
     y = n(665692),
-    E = n(388032),
-    v = n(912861);
+    v = n(388032),
+    E = n(912861);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,7 +67,7 @@ let j = {
         variant: 'text-md/normal',
         color: 'header-secondary'
     },
-    C = { className: l()('mention', v.mention) };
+    C = { className: l()('mention', E.mention) };
 function I(e) {
     return (0, r.jsx)(
         s.Text,
@@ -92,7 +92,7 @@ let S = i.memo(function (e) {
     )
         P = (0, r.jsx)(s.$jN, {
             type: s.$jN.Type.SPINNING_CIRCLE,
-            className: v.spinner
+            className: E.spinner
         });
     else {
         let e = [],
@@ -101,7 +101,7 @@ let S = i.memo(function (e) {
             e = e.concat(
                 (function e(t) {
                     var n, a, l, o, u, d, p;
-                    let v,
+                    let E,
                         { option: S, channel: T, guild: P, messageId: A, parentOptionKey: w, commandOptionSpec: Z, sourceAnalyticsLocations: k } = t,
                         R = null != w ? w + ' ' + S.name : S.name;
                     if (S.type === c.jw.SUB_COMMAND || S.type === c.jw.SUB_COMMAND_GROUP) {
@@ -137,7 +137,7 @@ let S = i.memo(function (e) {
                                     t = _.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, b.ij)(t, T);
-                                    v = (0, r.jsxs)(
+                                    E = (0, r.jsxs)(
                                         m.Z,
                                         N(O({}, C), {
                                             onClick: () =>
@@ -159,7 +159,7 @@ let S = i.memo(function (e) {
                                 let e = S.value.toString(),
                                     t = h.Z.getChannel(e);
                                 null != t &&
-                                    (v = (0, r.jsxs)(
+                                    (E = (0, r.jsxs)(
                                         m.Z,
                                         N(O({}, C), {
                                             children: [y.zy, t.name]
@@ -171,7 +171,7 @@ let S = i.memo(function (e) {
                                 let e = S.value.toString(),
                                     t = null != P ? g.Z.getRole(P.id, e) : void 0;
                                 null != t &&
-                                    (v = (0, r.jsxs)(
+                                    (E = (0, r.jsxs)(
                                         m.Z,
                                         N(O({}, C), {
                                             children: [y.ME, t.name]
@@ -183,14 +183,14 @@ let S = i.memo(function (e) {
                                 let e = S.value.toString(),
                                     t = null != P ? g.Z.getRole(P.id, e) : void 0;
                                 if (null != t)
-                                    v = (0, r.jsxs)(m.Z, {
+                                    E = (0, r.jsxs)(m.Z, {
                                         children: [y.ME, t.name]
                                     });
                                 else {
                                     let t = _.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, b.ij)(t, T);
-                                        v = (0, r.jsxs)(
+                                        E = (0, r.jsxs)(
                                             m.Z,
                                             N(O({}, C), {
                                                 onClick: () =>
@@ -207,7 +207,7 @@ let S = i.memo(function (e) {
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                v = I(E.NW.string(E.t.nONJVV));
+                                E = I(v.NW.string(v.t.nONJVV));
                                 break;
                             default: {
                                 let e = null == Z || null == (u = Z.choices) ? void 0 : u.find((e) => e.value === S.value);
@@ -215,7 +215,7 @@ let S = i.memo(function (e) {
                             }
                         }
                     return (
-                        null == v && (v = I(null == D ? void 0 : D.toString())),
+                        null == E && (E = I(null == D ? void 0 : D.toString())),
                         [
                             (0, r.jsxs)(
                                 i.Fragment,
@@ -227,7 +227,7 @@ let S = i.memo(function (e) {
                                                 children: [' ', null != (p = null == Z ? void 0 : Z.name_localized) ? p : S.name, ': ']
                                             })
                                         ),
-                                        v
+                                        E
                                     ]
                                 },
                                 R
@@ -257,7 +257,7 @@ let S = i.memo(function (e) {
         });
     }
     return (0, r.jsxs)('div', {
-        className: v.container,
+        className: E.container,
         onCopy: (e) => {
             var t, n, r;
             let i = null != (r = null == (n = window) || null == (t = n.getSelection()) ? void 0 : t.toString()) ? r : '';
@@ -265,11 +265,11 @@ let S = i.memo(function (e) {
         },
         children: [
             (0, r.jsx)('div', {
-                className: v.tooltip,
+                className: E.tooltip,
                 ref: D,
                 children: P
             }),
-            (0, r.jsx)('div', { className: v.tooltipPointer })
+            (0, r.jsx)('div', { className: E.tooltipPointer })
         ]
     });
 });

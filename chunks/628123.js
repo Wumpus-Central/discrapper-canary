@@ -9,18 +9,18 @@ var r = n(200651),
     u = n(903772),
     d = n(442837),
     f = n(481060),
-    p = n(386506),
-    _ = n(304761),
+    _ = n(386506),
+    p = n(304761),
     h = n(865427),
     m = n(406128),
     g = n(797614),
     E = n(703656),
-    v = n(626135),
-    b = n(960048),
-    y = n(998502),
+    b = n(626135),
+    y = n(960048),
+    v = n(998502),
     O = n(981631),
-    S = n(388032),
-    I = n(677588);
+    I = n(388032),
+    S = n(804683);
 function T(e, t, n) {
     return (
         t in e
@@ -38,15 +38,15 @@ function N() {
     let [e, t] = i.useState(!1);
     if (
         null ==
-        (0, d.e7)([_.C], () => {
+        (0, d.e7)([p.C], () => {
             var e;
-            return (0, h.fD)() ? (null === (e = _.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, h.fD)() ? (null == (e = p.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
         })
     )
         return null;
     let n = async () => {
         try {
-            t(!0), await (0, p.bF)(), window.location.reload(!0);
+            t(!0), await (0, _.bF)(), window.location.reload(!0);
         } catch (e) {
             t(!1);
         }
@@ -55,8 +55,8 @@ function N() {
         size: f.PhG.LARGE,
         onClick: n,
         submitting: e,
-        className: I.clearOverrideButton,
-        children: S.NW.string(S.t['/Nz9ra'])
+        className: S.clearOverrideButton,
+        children: I.NW.string(I.t['/Nz9ra'])
     });
 }
 let A = a().throttle(
@@ -83,8 +83,8 @@ class C extends i.PureComponent {
             info: t
         });
         let r = (0, u.e)(),
-            i = b.Z.captureCrash(e, { extra: t });
-        v.default.track(O.rMx.APP_CRASHED, {
+            i = y.Z.captureCrash(e, { extra: t });
+        b.default.track(O.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -94,7 +94,7 @@ class C extends i.PureComponent {
             error_level: 'fatal'
         }),
             A(r),
-            y.ZP.cleanupDisplaySleep();
+            v.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);
@@ -115,24 +115,24 @@ class C extends i.PureComponent {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
             let e = (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('p', { children: S.NW.string(S.t.tx8CkJ) }), (0, r.jsx)('p', { children: S.NW.string(S.t.CvQlAA) })]
+                    children: [(0, r.jsx)('p', { children: I.NW.string(I.t.tx8CkJ) }), (0, r.jsx)('p', { children: I.NW.string(I.t.CvQlAA) })]
                 }),
                 n = (0, r.jsxs)('div', {
-                    className: I.buttons,
+                    className: S.buttons,
                     children: [
                         (0, r.jsx)(f.zxk, {
                             size: f.PhG.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: S.NW.string(S.t['+hivLS'])
+                            children: I.NW.string(I.t['+hivLS'])
                         }),
                         (0, r.jsx)(N, {})
                     ]
                 });
             return (0, r.jsx)(m.Z, {
-                title: S.NW.string(S.t['3h+n+/']),
+                title: I.NW.string(I.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
-                className: I.errorPage
+                className: S.errorPage
             });
         }
         return e;

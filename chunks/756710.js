@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(1561),
     l = n(743236),
     c = n(939350),
-    u = n(253068);
+    u = n(906944);
 function d(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,39 +48,39 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function h(e) {
-    let { children: t, color: n = 'default', isFocused: o = !1, disabled: d = !1, keepItemStyles: p = !1, menuItemProps: h, action: m, dontCloseOnActionIfHoldingShiftKey: g, dontCloseOnAction: E, onClose: v } = e,
-        b = i.useRef(null);
+    let { children: t, color: n = 'default', isFocused: o = !1, disabled: d = !1, keepItemStyles: _ = !1, menuItemProps: h, action: m, dontCloseOnActionIfHoldingShiftKey: g, dontCloseOnAction: E, onClose: b } = e,
+        y = i.useRef(null);
     i.useEffect(() => {
-        o && (0, l.F)(b);
+        o && (0, l.F)(y);
     }, [o]);
-    let y = i.useCallback(
+    let v = i.useCallback(
             (e) => {
                 if (null == m) return !1;
-                (e.shiftKey && g) || E || v(), e.persist(), requestAnimationFrame(() => m(e));
+                (e.shiftKey && g) || E || b(), e.persist(), requestAnimationFrame(() => m(e));
             },
-            [m, v, g, E]
+            [m, b, g, E]
         ),
-        O = p ? a()(u.item, c._[n], { [u.focused]: o }) : u.customItem;
+        O = _ ? a()(u.item, c._[n], { [u.focused]: o }) : u.customItem;
     return (0, r.jsx)(
         s.P,
-        _(
+        p(
             f(
                 {
-                    innerRef: b,
+                    innerRef: y,
                     className: O,
-                    onClick: d ? void 0 : y,
+                    onClick: d ? void 0 : v,
                     'aria-disabled': d
                 },
                 h

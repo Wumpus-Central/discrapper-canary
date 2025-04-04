@@ -57,8 +57,8 @@ function d(e, t) {
     );
 }
 let f = 10000,
-    p = null,
-    _ = () => {
+    _ = null,
+    p = () => {
         let e = o.ZP.getCommunicationDisabledUserMap();
         Object.keys(e).forEach((t) => {
             let n = t,
@@ -69,20 +69,20 @@ let f = 10000,
         });
     },
     h = (e, t) => {
-        var n, i, l, u, f, p;
-        let _ = o.ZP.getMember(e, t),
+        var n, i, l, u, f, _;
+        let p = o.ZP.getMember(e, t),
             h = a.default.getUser(t);
-        if (null == _ || null == h || (0, s.b)(_)) return;
-        let m = d(c({}, _), {
+        if (null == p || null == h || (0, s.b)(p)) return;
+        let m = d(c({}, p), {
             guildId: e,
-            nick: null !== (n = _.nick) && void 0 !== n ? n : h.username,
-            avatar: null !== (i = _.avatar) && void 0 !== i ? i : void 0,
-            avatarDecoration: null != _.avatarDecoration ? c({}, _.avatarDecoration) : void 0,
-            premiumSince: null !== (l = _.premiumSince) && void 0 !== l ? l : void 0,
-            isPending: null !== (u = _.isPending) && void 0 !== u && u,
+            nick: null != (n = p.nick) ? n : h.username,
+            avatar: null != (i = p.avatar) ? i : void 0,
+            avatarDecoration: null != p.avatarDecoration ? c({}, p.avatarDecoration) : void 0,
+            premiumSince: null != (l = p.premiumSince) ? l : void 0,
+            isPending: null != (u = p.isPending) && u,
             user: d(c({}, h), {
-                email: null !== (f = h.email) && void 0 !== f ? f : void 0,
-                phone: null !== (p = h.phone) && void 0 !== p ? p : void 0
+                email: null != (f = h.email) ? f : void 0,
+                phone: null != (_ = h.phone) ? _ : void 0
             }),
             communicationDisabledUntil: null
         });
@@ -90,10 +90,10 @@ let f = 10000,
     };
 class m extends i.Z {
     _initialize() {
-        p = setInterval(() => _(), f);
+        _ = setInterval(() => p(), f);
     }
     _terminate() {
-        clearInterval(p);
+        clearInterval(_);
     }
     constructor(...e) {
         super(...e), l(this, 'clearGuildMemberTimeout', h);

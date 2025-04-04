@@ -44,13 +44,13 @@ function c(e) {
 var u = Object.defineProperty,
     d = Object.getOwnPropertyNames,
     f = Object.getOwnPropertySymbols,
-    p = Object.getOwnPropertyDescriptor,
-    _ = Object.getPrototypeOf,
+    _ = Object.getOwnPropertyDescriptor,
+    p = Object.getPrototypeOf,
     h = Object.prototype;
 function m(e, t, n) {
     if ('string' != typeof t) {
         if (h) {
-            var r = _(t);
+            var r = p(t);
             r && r !== h && m(e, r, n);
         }
         var i = d(t);
@@ -58,7 +58,7 @@ function m(e, t, n) {
         for (var a = c(e), s = c(t), l = 0; l < i.length; ++l) {
             var g = i[l];
             if (!o[g] && !(n && n[g]) && !(s && s[g]) && !(a && a[g])) {
-                var E = p(t, g);
+                var E = _(t, g);
                 try {
                     u(e, g, E);
                 } catch (e) {}

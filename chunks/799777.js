@@ -21,34 +21,34 @@ function d(e, t, n) {
     );
 }
 let f = 'GameLibraryViewStore',
-    p = 200,
-    _ = u.sHY.ASCENDING,
+    _ = 200,
+    p = u.sHY.ASCENDING,
     h = u.iEv.LAST_PLAYED,
     m = !1,
     g = a().debounce(() => {
-        (m = !1), y.emitChange();
-    }, p);
+        (m = !1), v.emitChange();
+    }, _);
 function E(e) {
     let { key: t, isKeyboardEvent: n } = e;
     n && ((m = !0), g()), (r = t);
 }
-function v(e) {
+function b(e) {
     let { direction: t, key: n } = e;
-    (_ = t),
+    (p = t),
         (h = n),
         l.K.set(f, {
-            sortDirection: _,
+            sortDirection: p,
             sortKey: h
         });
 }
-class b extends (i = s.ZP.Store) {
+class y extends (i = s.ZP.Store) {
     initialize() {
         var e;
-        let t = null !== (e = l.K.get(f)) && void 0 !== e ? e : {};
-        null != t.sortDirection && null != t.sortKey && ((_ = t.sortDirection), (h = t.sortKey));
+        let t = null != (e = l.K.get(f)) ? e : {};
+        null != t.sortDirection && null != t.sortKey && ((p = t.sortDirection), (h = t.sortKey));
     }
     get sortDirection() {
-        return _;
+        return p;
     }
     get sortKey() {
         return h;
@@ -60,9 +60,9 @@ class b extends (i = s.ZP.Store) {
         return m;
     }
 }
-d(b, 'displayName', 'GameLibraryViewStore');
-let y = new b(c.Z, {
-        LIBRARY_TABLE_SORT_UPDATE: v,
+d(y, 'displayName', 'GameLibraryViewStore');
+let v = new y(c.Z, {
+        LIBRARY_TABLE_SORT_UPDATE: b,
         LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: E
     }),
-    O = y;
+    O = v;

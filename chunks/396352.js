@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
     o = n(570140);
@@ -29,7 +29,7 @@ function f(e) {
     let { guildId: t, topEmojisMetadata: n } = e;
     (l.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (c[t] = !1);
 }
-class p extends (r = i.ZP.PersistedStore) {
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         l = null != e ? e : s;
     }
@@ -43,8 +43,8 @@ class p extends (r = i.ZP.PersistedStore) {
         return c[e];
     }
 }
-a(p, 'displayName', 'TopEmojiStore'), a(p, 'persistKey', 'TopEmojiStore');
-let _ = new p(o.Z, {
+a(_, 'displayName', 'TopEmojiStore'), a(_, 'persistKey', 'TopEmojiStore');
+let p = new _(o.Z, {
     LOGOUT: u,
     TOP_EMOJIS_FETCH: d,
     TOP_EMOJIS_FETCH_SUCCESS: f

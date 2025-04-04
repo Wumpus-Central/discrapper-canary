@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => p });
+n.r(t), n.d(t, { default: () => _ });
 var r,
     i = n(442837),
     o = n(570140),
@@ -20,7 +20,7 @@ function l(e, t, n) {
 let c = n(388032).NW.currentLocale;
 function u() {
     var e, t;
-    let n = null === (t = s.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
+    let n = null == (t = s.Z.settings.localization) || null == (e = t.locale) ? void 0 : e.value;
     return null != n && '' !== n && n !== c && ((c = n), (0, a._2)(c), !0);
 }
 function d(e) {
@@ -35,7 +35,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 l(f, 'displayName', 'LocaleStore');
-let p = new f(o.Z, {
+let _ = new f(o.Z, {
     OVERLAY_INITIALIZE: u,
     CACHE_LOADED: u,
     CONNECTION_OPEN: u,

@@ -1,5 +1,5 @@
 n.d(t, {
-    SD: () => v,
+    SD: () => b,
     Z1: () => h,
     cN: () => E,
     fD: () => f,
@@ -38,8 +38,8 @@ function f(e) {
         .concat(p);
 }
 function _(e) {
-    let t = e ? c.Ul : c.h,
-        n = c.Ul - t;
+    let t = e ? c.zW : c.PH,
+        n = c.zW - t;
     return {
         recentAvatarsLimit: t,
         numberOfLockedAvatarSlots: n
@@ -114,7 +114,7 @@ function E(e) {
             (0, a.vE)(t);
     }
 }
-function v(e) {
+function b(e) {
     let { userId: t, image: n, size: r = 80, canAnimate: i = !0 } = e;
     return null != n && 'string' != typeof n
         ? n.assetOrigin === s.q.ARCHIVED_ASSET

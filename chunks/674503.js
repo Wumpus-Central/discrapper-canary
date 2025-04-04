@@ -24,7 +24,7 @@ function u(e, t) {
 class d extends (r = i.ZP.Store) {
     hasActiveErrorOfType(e) {
         var t;
-        return (null !== (t = c.get(e)) && void 0 !== t ? t : []).length > 0;
+        return (null != (t = c.get(e)) ? t : []).length > 0;
     }
     getActiveErrors() {
         return l instanceof Map || (l = new Map()), l;
@@ -49,7 +49,7 @@ function f(e) {
     if (!(0, a.OL)(n, r))
         for (let [e, n] of ((l = t), (c = new Map()), l.entries())) {
             var i;
-            let t = null !== (i = c.get(n.type)) && void 0 !== i ? i : [];
+            let t = null != (i = c.get(n.type)) ? i : [];
             t.push(e), c.set(n.type, t);
         }
 }

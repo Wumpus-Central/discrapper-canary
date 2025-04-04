@@ -10,8 +10,8 @@ var i = n(392711),
     u = n(933557),
     d = n(699516),
     f = n(594174),
-    p = n(895924),
-    _ = n(689079),
+    _ = n(895924),
+    p = n(689079),
     h = n(981631),
     m = n(388032);
 function g(e, t, n) {
@@ -43,7 +43,7 @@ function E(e) {
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,18 +55,18 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e) {
+function v(e) {
     switch (e) {
         case h.nkL.GIF.title:
         case h.nkL.TENOR.title:
@@ -83,13 +83,13 @@ let O = [
             untranslatedName: e.command,
             displayName: e.command,
             type: c.yU.CHAT,
-            inputType: p.iw.BUILT_IN_INTEGRATION,
-            applicationId: _.bi.BUILT_IN,
+            inputType: _.iw.BUILT_IN_INTEGRATION,
+            applicationId: p.bi.BUILT_IN,
             get untranslatedDescription() {
-                return y(e.title);
+                return v(e.title);
             },
             get displayDescription() {
-                return y(e.title);
+                return v(e.title);
             },
             options:
                 e.type === h.q9n.GIF
@@ -117,8 +117,8 @@ let O = [
         untranslatedName: 'leave',
         displayName: 'leave',
         type: c.yU.CHAT,
-        inputType: p.iw.BUILT_IN,
-        applicationId: _.bi.BUILT_IN,
+        inputType: _.iw.BUILT_IN,
+        applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
             return m.NW.string(m.t['26C4oq']);
         },
@@ -148,9 +148,9 @@ let O = [
             let { channel: o } = t;
             if (null == o) return;
             let c = (0, u.F6)(o, f.default, d.Z),
-                p = m.NW.formatToPlainString(m.t.hJ5Ap6, { name: c }),
-                _ = m.NW.format(m.t.SSIVOj, { name: c }),
-                h = null !== (i = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
+                _ = m.NW.formatToPlainString(m.t.hJ5Ap6, { name: c }),
+                p = m.NW.format(m.t.SSIVOj, { name: c }),
+                h = null != (i = null == (n = e.find((e) => 'silent' === e.name)) ? void 0 : n.value) && i;
             async function g() {
                 if (null != o)
                     try {
@@ -159,14 +159,14 @@ let O = [
                         l.Z.sendBotMessage(o.id, m.NW.string(m.t.YOsuT0));
                     }
             }
-            o.isManaged() && ((p = m.NW.formatToPlainString(m.t.hVGjER, { name: c })), (_ = m.NW.format(m.t.IK1Qvr, { name: c }))),
+            o.isManaged() && ((_ = m.NW.formatToPlainString(m.t.hVGjER, { name: c })), (p = m.NW.format(m.t.IK1Qvr, { name: c }))),
                 (0, a.h7j)((e) =>
                     (0, r.jsx)(
                         a.ConfirmModal,
-                        b(
+                        y(
                             E(
                                 {
-                                    header: p,
+                                    header: _,
                                     confirmText: m.NW.string(m.t['26C4oq']),
                                     cancelText: m.NW.string(m.t['ETE/oK']),
                                     onConfirm: g
@@ -176,7 +176,7 @@ let O = [
                             {
                                 children: (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
-                                    children: _
+                                    children: p
                                 })
                             }
                         )
@@ -189,8 +189,8 @@ let O = [
         untranslatedName: 'sticker',
         displayName: 'sticker',
         type: c.yU.CHAT,
-        inputType: p.iw.BUILT_IN_INTEGRATION,
-        applicationId: _.bi.BUILT_IN,
+        inputType: _.iw.BUILT_IN_INTEGRATION,
+        applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
             return m.NW.string(m.t.GUH9IC);
         },

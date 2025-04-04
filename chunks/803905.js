@@ -12,7 +12,7 @@ n.d(t, {
     Ry: () => N,
     Uw: () => x,
     ZE: () => k,
-    _G: () => y,
+    _G: () => v,
     _O: () => T,
     _y: () => g,
     do: () => U,
@@ -21,7 +21,7 @@ n.d(t, {
     hs: () => b,
     j4: () => R,
     ks: () => W,
-    lX: () => v,
+    lX: () => y,
     m_: () => h,
     qH: () => L,
     tj: () => E,
@@ -54,7 +54,7 @@ function f(e, t) {
         return r.skuFeatures.includes(e);
     } catch (e) {
         var n;
-        u.error("Error while retrieving user's feature access: ".concat(null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)));
+        u.error("Error while retrieving user's feature access: ".concat(null != (n = e.message) ? n : JSON.stringify(e)));
     }
     return !1;
 }
@@ -69,8 +69,8 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     g = new _(r.q.SOUNDBOARD_EVERYWHERE),
     E = new _(r.q.CUSTOM_CALL_SOUNDS),
     b = new _(r.q.PREMIUM_VOICE_FILTERS),
-    v = new _(r.q.ANIMATED_AVATAR),
-    y = new _(r.q.CUSTOM_DISCRIMINATOR),
+    y = new _(r.q.ANIMATED_AVATAR),
+    v = new _(r.q.CUSTOM_DISCRIMINATOR),
     O = new _(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
     I = new _('profileBadges'),
     S = new _(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
@@ -95,8 +95,8 @@ let U = new _(r.q.INCREASED_GUILD_LIMIT),
     V = new _(r.q.CHAT_WALLPAPERS),
     Z = Object.freeze({
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, B, F, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, v, y, I, R, w, x, B, F, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, v, y, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, F, A, T, L, b, N, V])
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, v, I, R, w, x, B, F, A]),
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, v, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, F, A, T, L, b, N, V])
     }),
     H = [R, P];
 function W(e, t, n) {

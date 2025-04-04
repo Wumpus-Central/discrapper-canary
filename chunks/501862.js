@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(120356),
     o = n.n(i),
     a = n(481060),
-    s = n(186345);
+    s = n(546034);
 function l(e) {
     let { countdownText: t, className: n, showInfoIcon: i } = e,
         l = i
@@ -18,7 +18,7 @@ function l(e) {
         children: [
             (0, r.jsx)(a.Text, {
                 variant: 'text-xs/bold',
-                className: o()(s.largeCountdownPillText),
+                className: s.largeCountdownPillText,
                 children: t.toUpperCase()
             }),
             l

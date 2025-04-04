@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(612659),
     E = n(409100),
     b = n(703656),
-    v = n(727939),
-    y = n(626135),
+    y = n(727939),
+    v = n(626135),
     O = n(411149),
     I = n(988290),
     S = n(721359),
@@ -33,7 +33,7 @@ var r = n(200651),
     P = n(921944),
     w = n(474936),
     D = n(388032),
-    L = n(402509);
+    L = n(874577);
 function x(e, t, n) {
     return (
         t in e
@@ -110,7 +110,7 @@ function Z(e) {
                         (0, r.jsx)(d.olH, {
                             className: L.coachmarkCloseIcon,
                             onClick: () => {
-                                y.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'coachmark_header' }), t();
+                                v.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'coachmark_header' }), t();
                             }
                         })
                     ]
@@ -147,7 +147,7 @@ function H(e) {
                     }),
                     (0, r.jsx)(d.Text, {
                         className: L.subtitle,
-                        variant: 'text-xs/medium',
+                        variant: 'text-sm/medium',
                         children: t ? D.NW.string(D.t.MnUZLS) : D.NW.string(D.t.frNDKS)
                     })
                 ]
@@ -155,7 +155,7 @@ function H(e) {
             (0, r.jsx)(d.olH, {
                 className: L.closeContainer,
                 onClick: () => {
-                    y.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'header' }), n();
+                    v.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'header' }), n();
                 }
             })
         ]
@@ -305,7 +305,7 @@ function z(e) {
                         size: d.zxk.Sizes.MEDIUM,
                         color: d.zxk.Colors.PRIMARY,
                         onClick: () => {
-                            y.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), s();
+                            v.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), s();
                         },
                         disabled: n,
                         children: D.NW.string(D.t['ETE/oK'])
@@ -334,7 +334,7 @@ function q() {
                 className: L.nonTier2FooterText,
                 children: D.NW.format(D.t['0Tapv7'], {
                     onClickNitro: () => {
-                        y.default.track(R.rMx.CHAT_WALLPAPER_NITRO_LINK_CLICKED), (0, b.uL)(R.Z5c.NITRO_HOME);
+                        v.default.track(R.rMx.CHAT_WALLPAPER_NITRO_LINK_CLICKED), (0, b.uL)(R.Z5c.NITRO_HOME);
                     }
                 })
             }),
@@ -363,8 +363,8 @@ let Q = function (e) {
     let k = (0, u.e7)([O.Z], () => O.Z.isFetchingWallpapers),
         j = (0, u.e7)([O.Z], () => O.Z.getWallpaperById(null == m ? void 0 : m.wallpaperId));
     i.useEffect(() => {
-        null != j && D(j.isBlurred);
-    }, [j]);
+        null != j && D(j.isBlurred && E);
+    }, [j, E]);
     let U = i.useCallback(() => {
             c();
         }, [c]),
@@ -380,7 +380,7 @@ let Q = function (e) {
             null != l &&
                 null != m &&
                 void 0 !== m.wallpaperId &&
-                (y.default.track(R.rMx.CHAT_WALLPAPER_PICKER_APPLY_CLICKED, {
+                (v.default.track(R.rMx.CHAT_WALLPAPER_PICKER_APPLY_CLICKED, {
                     wallpaper_id: m.wallpaperId,
                     is_blur_enabled: b,
                     channel_id: l
@@ -392,7 +392,7 @@ let Q = function (e) {
             if ((null == j ? void 0 : j.designGroupId) != null) {
                 var t;
                 let n = M[j.designGroupId].find((t) => t.isBlurred === e);
-                h(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : null);
+                h(null != (t = null == n ? void 0 : n.id) ? t : null);
             } else D(e);
         }, [null == j ? void 0 : j.designGroupId, M, h, b]),
         Q = i.useCallback(
@@ -401,7 +401,7 @@ let Q = function (e) {
                 if (null == t) return;
                 let n = t.find((e) => e.isBlurred === b);
                 null != n &&
-                    (y.default.track(R.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
+                    (v.default.track(R.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
                         wallpaper_id: n.id,
                         is_blurred: n.isBlurred
                     }),
@@ -425,7 +425,7 @@ let Q = function (e) {
                               (0, r.jsx)(K, {
                                   isSelected: null == m || null === m.wallpaperId,
                                   onSelect: () => {
-                                      y.default.track(R.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
+                                      v.default.track(R.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
                                           wallpaper_id: null,
                                           is_blurred: !1
                                       }),
@@ -459,7 +459,7 @@ let Q = function (e) {
               })),
         (0, r.jsx)(p.Gt, {
             value: s,
-            children: (0, r.jsx)(v.Z, {
+            children: (0, r.jsx)(y.Z, {
                 className: a()(L.draggableContainer, t),
                 defaultPosition: n,
                 topOffset: 88,

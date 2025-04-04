@@ -24,12 +24,12 @@ var r = n(200651),
     w = n(566078),
     S = n(65443),
     P = n(644646),
-    N = n(78826),
-    E = n(670638),
+    E = n(78826),
+    N = n(670638),
     T = n(341907),
     A = n(693900),
-    B = n(164495),
-    R = n(759853),
+    R = n(164495),
+    B = n(759853),
     k = n(205511),
     q = n(710235),
     D = n(694802),
@@ -83,7 +83,7 @@ function H(e, t) {
         e
     );
 }
-function z(e) {
+function F(e) {
     var t;
     let { quest: n, onClick: s, reducedMotion: i } = e,
         [l, c] = o.useState(!1),
@@ -144,7 +144,7 @@ function z(e) {
         ]
     });
 }
-function F(e) {
+function z(e) {
     let { quest: t } = e;
     return (0, r.jsx)(P.Z, {
         className: a()(Q.rewardTile, Q.hiddenRewardTile),
@@ -202,7 +202,7 @@ function Y(e) {
     let O = (0, y.j)({ location: M.dr.QUESTS_BAR }),
         w = (0, j.Kr)(t.config),
         P = (0, _.mK)(t.config),
-        E = (0, _.CR)({
+        N = (0, _.CR)({
             quest: t,
             location: M.dr.QUESTS_BAR
         });
@@ -216,7 +216,7 @@ function Y(e) {
                         (0, r.jsxs)('div', {
                             className: Q.details,
                             children: [
-                                (0, r.jsx)(F, { quest: t }),
+                                (0, r.jsx)(z, { quest: t }),
                                 (0, r.jsx)(u.X6q, {
                                     className: Q.title,
                                     color: 'header-primary',
@@ -255,7 +255,7 @@ function Y(e) {
                                         onClick: l ? g : void 0,
                                         size: u.zxk.Sizes.SMALL,
                                         submitting: x,
-                                        children: E
+                                        children: N
                                     })
                                 )
                         })
@@ -283,7 +283,7 @@ function Y(e) {
                         }
                     }),
                     b.isAnimated
-                        ? (0, r.jsx)(N.Fl, {
+                        ? (0, r.jsx)(E.Fl, {
                               id: 'QuestBarV2ContentExpanded_heroAnimated',
                               children: (e) => {
                                   var t;
@@ -305,7 +305,7 @@ function Y(e) {
                                   );
                               }
                           })
-                        : (0, r.jsx)(N.Fl, {
+                        : (0, r.jsx)(E.Fl, {
                               id: 'QuestBarV2ContentExpanded_heroStatic',
                               children: (e) =>
                                   (0, r.jsx)('img', {
@@ -336,9 +336,9 @@ function G(e) {
         C = s.percentComplete > 0,
         O = (0, x.z)(n),
         [w, S, P] = (0, x.me)(n, s),
-        N = o.useRef(null),
+        E = o.useRef(null),
         Z = (0, x.B6)(n.config.expiresAt),
-        F = (0, x._s)({ quest: n }),
+        z = (0, x._s)({ quest: n }),
         X = (0, j.q8)(n),
         K = (0, x.Jf)(n),
         Y = o.useCallback(() => {
@@ -370,7 +370,7 @@ function G(e) {
                                 className: a()(Q.flex, Q.headerText),
                                 children: V.NW.format(V.t['pX+fmp'], { expirationDate: Z })
                             }),
-                            (0, r.jsx)(E.r, {
+                            (0, r.jsx)(N.r, {
                                 onOpen: g,
                                 onClose: h,
                                 onSelect: v,
@@ -395,17 +395,17 @@ function G(e) {
                         ]
                     }),
                     (0, r.jsx)('div', { className: Q.divider }),
-                    (0, r.jsx)(R.Z, {
+                    (0, r.jsx)(B.Z, {
                         expansionSpring: c,
                         overlayRef: d,
-                        progressBarRef: N,
+                        progressBarRef: E,
                         quest: n,
                         isExpanded: p
                     }),
                     (0, r.jsx)(I.Z, {
                         contentLocation: 'expanded',
                         quest: n,
-                        progressBarRef: N,
+                        progressBarRef: E,
                         isExpanded: !0,
                         percentComplete: J,
                         activeScreen: w
@@ -444,16 +444,16 @@ function G(e) {
                     (0, r.jsxs)(A.n, {
                         children: [
                             X &&
-                                (0, r.jsx)(z, {
+                                (0, r.jsx)(F, {
                                     quest: n,
                                     onClick: Y,
                                     reducedMotion: m
                                 }),
-                            (0, r.jsx)(B.yD, {
+                            (0, r.jsx)(R.yD, {
                                 quest: n,
                                 useReducedMotion: m,
                                 isExpanded: p,
-                                awaitingConsoleConnections: F,
+                                awaitingConsoleConnections: z,
                                 hasMadeProgress: C,
                                 isProgressing: O,
                                 activeScreen: w,
@@ -487,13 +487,13 @@ let J = o.forwardRef(function (e, t) {
                 w && (0, T.openVideoQuestModal)(_),
                 S && e && (0, m.uL)(Z.Z5c.ACTIVITY_DETAILS(_.config.application.id));
         }, [_, w, S]),
-        N = (null == (n = _.userStatus) ? void 0 : n.enrolledAt) != null,
-        E = d && u;
+        E = (null == (n = _.userStatus) ? void 0 : n.enrolledAt) != null,
+        N = d && u;
     return (0, r.jsxs)(i.animated.div, {
-        'aria-hidden': !E,
+        'aria-hidden': !N,
         className: a()(l, Q.contentExpanded, {
-            [Q.contentInteractable]: E,
-            [Q.contentExpandedAccepted]: N
+            [Q.contentInteractable]: N,
+            [Q.contentExpandedAccepted]: E
         }),
         style: {
             transform: (0, i.to)(
@@ -514,7 +514,7 @@ let J = o.forwardRef(function (e, t) {
             s,
             (0, r.jsx)(i.animated.div, {
                 style: { opacity: 1 },
-                children: N
+                children: E
                     ? (0, r.jsx)(G, {
                           quest: _,
                           taskDetails: O,
@@ -531,7 +531,7 @@ let J = o.forwardRef(function (e, t) {
                           quest: _,
                           taskDetails: O,
                           expansionSpring: p,
-                          isInteractable: E,
+                          isInteractable: N,
                           reducedMotion: C,
                           containerRef: t,
                           isExpanded: d,

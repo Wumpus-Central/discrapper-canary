@@ -12,5 +12,5 @@ function s(e) {
     return e || !1;
 }
 function l() {
-    return s((0, r.e7)([i.Z], () => i.Z.isSupported()));
+    return s((0, r.e7)([i.default], () => i.default.isSupported()));
 }

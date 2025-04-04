@@ -28,7 +28,7 @@ let d = () => {
             i = arguments.length > 3 ? arguments[3] : void 0;
         if (!d()) return;
         let a = null == e.id,
-            { shouldPlay: l, failureReason: c } = _(n);
+            { shouldPlay: l, failureReason: c } = p(n);
         o.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
             emoji_type: a ? s.aK.Unicode : s.aK.UserCreated,
             will_play: l,
@@ -42,7 +42,7 @@ let d = () => {
                     boundingRect: t
                 });
     },
-    p = (e, t) => {
+    _ = (e, t) => {
         let n = l.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti;
         return a.Z.confettiMode || t
             ? n
@@ -69,7 +69,7 @@ let d = () => {
                   failureReason: s.U0.NotInConfettiMode
               };
     },
-    _ = (e) => {
+    p = (e) => {
         let t = l.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti;
         return a.Z.confettiMode || e
             ? t
@@ -106,15 +106,15 @@ let d = () => {
             a = arguments.length > 3 ? arguments[3] : void 0;
         if (!d()) return;
         let l = (0, c.Eq)(e),
-            f = (null == l ? void 0 : null === (t = l.emoji) || void 0 === t ? void 0 : t[0].id) == null,
-            { shouldPlay: _, failureReason: h } = p(e, i);
+            f = (null == l || null == (t = l.emoji) ? void 0 : t[0].id) == null,
+            { shouldPlay: p, failureReason: h } = _(e, i);
         o.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
             emoji_type: f ? s.aK.Unicode : s.aK.UserCreated,
-            will_play: _,
+            will_play: p,
             failure_reason: h,
             location: a
         }),
-            _ &&
+            p &&
                 null != l &&
                 l.emoji.forEach((e) => {
                     r.Z.dispatch({

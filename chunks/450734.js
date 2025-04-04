@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -10,9 +10,9 @@ var i = n(120356),
     u = n(158776),
     d = n(998502),
     f = n(445924),
-    p = n(654904),
-    _ = n(486324),
-    h = n(552370);
+    _ = n(654904),
+    p = n(486324),
+    h = n(305566);
 function m(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,23 +65,23 @@ function v(e, t) {
         e
     );
 }
-let b = d.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK;
-function y(e) {
-    let { user: t, guild: n, displayProfile: i, canUsePremiumCustomization: d, previewAvatar: m, previewAvatarDecoration: E, previewTheme: y, previewPrimaryColor: O, className: S, disabledInputs: I, isTryItOutFlow: T, onUpsellClick: N } = e,
+let y = d.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK;
+function v(e) {
+    let { user: t, guild: n, displayProfile: i, canUsePremiumCustomization: d, previewAvatar: m, previewAvatarDecoration: E, previewTheme: v, previewPrimaryColor: O, className: I, disabledInputs: S, isTryItOutFlow: T, onUpsellClick: N } = e,
         { analyticsLocations: A } = (0, l.ZP)(),
         C = (0, a.e7)([u.Z], () => u.Z.getStatus(t.id)),
         R = null == n || (null == i ? void 0 : i.canUsePremiumProfileCustomization) || d,
-        P = (0, r.jsx)(b, {
+        P = (0, r.jsx)(y, {
             src: m,
             avatarDecoration: E,
-            imageClassName: o()(S, { [h.overlay]: !I }),
+            imageClassName: o()(I, { [h.overlay]: !S }),
             size: s.EFr.SIZE_80,
             'aria-label': t.username,
             status: C,
             statusTooltip: !1,
-            statusBackdropColor: null != O ? (0, s.QFD)(y) : void 0
+            statusBackdropColor: null != O ? (0, s.QFD)(v) : void 0
         });
-    return I
+    return S
         ? (0, r.jsx)('div', {
               className: h.avatar,
               children: P
@@ -93,7 +93,7 @@ function y(e) {
                     return (0, r.jsx)(f.Z, {
                         className: h.menu,
                         onClose: t,
-                        onChangeAvatar: () => (0, p.$r)(_.pC.AVATAR, null == n ? void 0 : n.id, T),
+                        onChangeAvatar: () => (0, _.$r)(p.pC.AVATAR, null == n ? void 0 : n.id, T),
                         onChangeAvatarDecoration: () => {
                             (0, c.ps)({
                                 guild: null == n ? void 0 : n,
@@ -106,7 +106,7 @@ function y(e) {
                 children: (e) =>
                     (0, r.jsxs)(
                         s.P3F,
-                        v(g({}, e), {
+                        b(g({}, e), {
                             className: o()(h.avatar, h.clickable),
                             children: [
                                 P,

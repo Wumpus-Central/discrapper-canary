@@ -1,4 +1,4 @@
-n.d(t, { x: () => I });
+n.d(t, { x: () => S });
 var r = n(200651),
     i = n(192379),
     o = n(512722),
@@ -9,15 +9,15 @@ var r = n(200651),
     u = n(1870),
     d = n(429368),
     f = n(624377),
-    p = n(530618),
-    _ = n(331042),
+    _ = n(530618),
+    p = n(331042),
     h = n(372654),
     m = n(987209),
     g = n(563132),
     E = n(179118),
-    v = n(614277),
-    b = n(698708);
-function y(e, t, n) {
+    b = n(614277),
+    y = n(698708);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,25 +41,25 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e) {
+function I(e) {
     let { handleClose: t, confettiCanvas: n, hideConfetti: i = !1, analyticsLocations: o } = e,
         l = (0, s.e7)([u.Z], () => u.Z.purchases),
-        { skusById: f, selectedSkuId: p, application: h } = (0, g.JL)(),
-        m = (0, s.e7)([c.Z], () => c.Z.getProduct(p)),
+        { skusById: f, selectedSkuId: _, application: h } = (0, g.JL)(),
+        m = (0, s.e7)([c.Z], () => c.Z.getProduct(_)),
         E = (0, d.o)(m, l);
-    a()(null != p, 'Expected selectedSkuId'), a()(null != h, 'Expected application');
-    let y = f[p];
-    return (a()(null != y, 'Expected sku'), null == m)
+    a()(null != _, 'Expected selectedSkuId'), a()(null != h, 'Expected application');
+    let v = f[_];
+    return (a()(null != v, 'Expected sku'), null == m)
         ? null
-        : (0, r.jsxs)(v.C3, {
+        : (0, r.jsxs)(b.C3, {
               children: [
-                  (0, r.jsx)(b.Z, {}),
-                  (0, r.jsx)(_.e, {
+                  (0, r.jsx)(y.Z, {}),
+                  (0, r.jsx)(p.e, {
                       product: m,
                       onClose: t,
                       confettiCanvas: n,
@@ -70,16 +70,16 @@ function S(e) {
               ]
           });
 }
-function I(e) {
-    let { isGift: t, giftCode: n, selectedGiftStyle: o, hasSentMessage: a, giftRecipient: u, giftMessageError: d, isSendingMessage: _ } = (0, m.wD)(),
-        v = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        b = i.useRef(null),
-        { selectedSkuId: y } = (0, g.JL)(),
-        I = (0, s.e7)([c.Z], () => c.Z.getProduct(y)),
-        { confettiColors: T } = (0, f.Z)(null == I ? void 0 : I.styles);
+function S(e) {
+    let { isGift: t, giftCode: n, selectedGiftStyle: o, hasSentMessage: a, giftRecipient: u, giftMessageError: d, isSendingMessage: p } = (0, m.wD)(),
+        b = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
+        y = i.useRef(null),
+        { selectedSkuId: v } = (0, g.JL)(),
+        S = (0, s.e7)([c.Z], () => c.Z.getProduct(v)),
+        { confettiColors: T } = (0, f.Z)(null == S ? void 0 : S.styles);
     return t
         ? (0, r.jsxs)('div', {
-              ref: b,
+              ref: y,
               children: [
                   (0, r.jsx)(E.Z, {
                       giftCode: n,
@@ -88,17 +88,17 @@ function I(e) {
                       hasSentMessage: a,
                       giftRecipient: u,
                       giftMessageError: d,
-                      isSendingMessage: _
+                      isSendingMessage: p
                   }),
                   !e.hideConfetti &&
-                      !v &&
-                      (0, r.jsx)(p.Z, {
-                          confettiTarget: b.current,
+                      !b &&
+                      (0, r.jsx)(_.Z, {
+                          confettiTarget: y.current,
                           confettiCanvas: e.confettiCanvas,
-                          sprites: (0, h.vK)(null == I ? void 0 : I.categorySkuId),
+                          sprites: (0, h.vK)(null == S ? void 0 : S.categorySkuId),
                           colors: null == T ? void 0 : T.map((e) => e.toHexString())
                       })
               ]
           })
-        : (0, r.jsx)(S, O({}, e));
+        : (0, r.jsx)(I, O({}, e));
 }

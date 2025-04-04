@@ -3,8 +3,8 @@ n.d(t, {
     MR: () => m,
     g1: () => f,
     iD: () => d,
-    ir: () => p,
-    s4: () => _,
+    ir: () => _,
+    s4: () => p,
     sm: () => h
 }),
     n(757143),
@@ -27,26 +27,26 @@ function d(e, t, n, r) {
         (s = r ? (e ? c.t.i9DXqK : c.t['Z/l+qq']) : e ? c.t.CLuzw8 : c.t.PirBBA),
         c.NW.formatToPlainString(s, {
             reactions: t,
-            emojiName: null !== (a = null === (o = u(n)) || void 0 === o ? void 0 : null === (i = o.replace(/[:_]/g, ' ')) || void 0 === i ? void 0 : i.trim()) && void 0 !== a ? a : ''
+            emojiName: null != (a = null == (o = u(n)) || null == (i = o.replace(/[:_]/g, ' ')) ? void 0 : i.trim()) ? a : ''
         })
     );
 }
 function f(e) {
     var t, n, r;
     return {
-        id: null !== (t = e.id) && void 0 !== t ? t : null,
-        name: null !== (r = null !== (n = null != e.id ? e.name : e.optionallyDiverseSequence) && void 0 !== n ? n : e.name) && void 0 !== r ? r : '',
+        id: null != (t = e.id) ? t : null,
+        name: null != (r = null != (n = null != e.id ? e.name : e.optionallyDiverseSequence) ? n : e.name) ? r : '',
         animated: !!e.animated
     };
 }
-function p(e, t) {
+function _(e, t) {
     if (null != t.id) {
         let n = null != e.id ? ''.concat(e.id) : e.id;
         return ''.concat(t.id) === n;
     }
     return null == e.id && t.name === e.name;
 }
-function _(e) {
+function p(e) {
     return e.isThread() ? s.jXE.THREAD_TEXT_AREA : e.isForumPost() ? s.jXE.FORUM_CHANNEL_TEXT_AREA : e.isGuildVocal() ? s.jXE.TEXT_IN_VOICE : s.jXE.CHANNEL_TEXT_AREA;
 }
 function h(e) {

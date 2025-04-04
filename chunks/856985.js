@@ -8,7 +8,7 @@ let i = (e) => {
             t.set(i.id, i);
             continue;
         }
-        let e = null !== (n = r.ZP.convertSurrogateToBase(i.surrogates)) && void 0 !== n ? n : i;
+        let e = null != (n = r.ZP.convertSurrogateToBase(i.surrogates)) ? n : i;
         t.set(e.name, e);
     }
     return t;

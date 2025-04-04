@@ -11,7 +11,7 @@ function i(e, t) {
         if (r.originalUri === e.uri) return !0;
         if (null != i) {
             var n;
-            if (null === (n = r.originalUri) || void 0 === n ? void 0 : n.includes(i)) return !0;
+            if (null == (n = r.originalUri) ? void 0 : n.includes(i)) return !0;
         }
     }
     return !1;

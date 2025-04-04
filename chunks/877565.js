@@ -73,16 +73,16 @@ function d(e) {
     );
 }
 function f(e) {
-    let { query: t, selectedIndex: n, autocompletes: o, onHover: a, onClick: s, titleWithQuery: c, titleWithoutQuery: f, Component: p, getProps: _, getQuery: h, key: m, indexOffset: g = 0, headerClassName: E, headerTrailingContent: v, footer: b } = e;
-    if (null == b && (null == o || 0 === o.length)) return null;
-    let y =
+    let { query: t, selectedIndex: n, autocompletes: o, onHover: a, onClick: s, titleWithQuery: c, titleWithoutQuery: f, Component: _, getProps: p, getQuery: h, key: m, indexOffset: g = 0, headerClassName: E, headerTrailingContent: b, footer: y } = e;
+    if (null == y && (null == o || 0 === o.length)) return null;
+    let v =
         null == o
             ? void 0
             : o.map((e, t) => {
                   let r = t + g,
-                      o = _(e, r);
+                      o = p(e, r);
                   return (0, i.createElement)(
-                      p,
+                      _,
                       u(
                           l(
                               {
@@ -108,11 +108,11 @@ function f(e) {
                           query: t,
                           getQuery: h,
                           headerClassName: E,
-                          headerTrailingContent: v
+                          headerTrailingContent: b
                       })
                     : null,
-                y,
-                b
+                v,
+                y
             ]
         },
         m

@@ -1,8 +1,8 @@
 n.d(t, {
-    Mg: () => p,
+    Mg: () => _,
     eD: () => u,
     g8: () => f,
-    qQ: () => _
+    qQ: () => p
 }),
     n(47120),
     n(86693),
@@ -169,7 +169,7 @@ class f {
             (this.version = 0);
     }
 }
-function p(e, t) {
+function _(e, t) {
     return {
         type: 'guild',
         id: e,
@@ -178,15 +178,15 @@ function p(e, t) {
         unavailable: !1
     };
 }
-function _(e, t, n) {
+function p(e, t, n) {
     var r, i, o;
     return {
         type: 'folder',
         id: e.folderId,
         parentId: t,
-        name: null !== (r = e.folderName) && void 0 !== r ? r : void 0,
-        color: null !== (i = e.folderColor) && void 0 !== i ? i : void 0,
-        expanded: null != n ? n : null !== (o = e.expanded) && void 0 !== o && o,
+        name: null != (r = e.folderName) ? r : void 0,
+        color: null != (i = e.folderColor) ? i : void 0,
+        expanded: null != n ? n : null != (o = e.expanded) && o,
         children: []
     };
 }

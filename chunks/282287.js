@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     phoneVerificationModal: 'phoneVerificationModal_db41ea',
     animationContainer: 'animationContainer_db41ea',
     title: 'title_db41ea',

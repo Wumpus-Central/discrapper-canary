@@ -1,21 +1,21 @@
 n.d(t, {
     $I: () => d,
-    Fc: () => b,
+    Fc: () => y,
     Ku: () => c,
-    VF: () => y,
+    VF: () => v,
     WX: () => f,
-    X_: () => S,
+    X_: () => I,
     _U: () => m,
     fL: () => E,
     gG: () => s,
-    gv: () => I,
-    j8: () => _,
+    gv: () => S,
+    j8: () => p,
     nz: () => h,
     p: () => o,
     p1: () => u,
     pg: () => g,
-    rC: () => v,
-    sy: () => p,
+    rC: () => b,
+    sy: () => _,
     wm: () => a,
     zV: () => O,
     zw: () => l
@@ -35,10 +35,10 @@ let d = new Set([3, 4]);
 var f = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.STAGE_INSTANCE = 1)] = 'STAGE_INSTANCE'), (e[(e.VOICE = 2)] = 'VOICE'), (e[(e.EXTERNAL = 3)] = 'EXTERNAL'), (e[(e.PRIME_TIME = 4)] = 'PRIME_TIME'), e;
     })({}),
-    p = (function (e) {
+    _ = (function (e) {
         return (e[(e.EVENT_START = 1)] = 'EVENT_START'), e;
     })({}),
-    _ = (function (e) {
+    p = (function (e) {
         return (e[(e.PUBLIC = 1)] = 'PUBLIC'), (e[(e.GUILD_ONLY = 2)] = 'GUILD_ONLY'), e;
     })({});
 let h = {
@@ -50,13 +50,13 @@ let h = {
 var E = (function (e) {
     return (e[(e.EVENT_INFO = 0)] = 'EVENT_INFO'), (e[(e.RSVP_LIST = 1)] = 'RSVP_LIST'), e;
 })({});
-let v = 100,
-    b = 2 * r.Z.Millis.DAY,
-    y = 12 * r.Z.Millis.HOUR,
+let b = 100,
+    y = 2 * r.Z.Millis.DAY,
+    v = 12 * r.Z.Millis.HOUR,
     O = 4;
-var S = (function (e) {
+var I = (function (e) {
         return (e.NEW_EVENT = 'Upcoming Event Notice'), (e.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), e;
     })({}),
-    I = (function (e) {
+    S = (function (e) {
         return (e[(e.UNINTERESTED = 0)] = 'UNINTERESTED'), (e[(e.INTERESTED = 1)] = 'INTERESTED'), e;
     })({});

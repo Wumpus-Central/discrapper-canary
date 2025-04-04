@@ -1,10 +1,10 @@
-n.d(t, { a: () => _ });
+n.d(t, { a: () => p });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     o = n.n(i),
     a = n(481060),
-    s = n(764725);
+    s = n(182701);
 function l(e, t, n) {
     return (
         t in e
@@ -61,14 +61,14 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +77,7 @@ function p(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     let { children: t, onClick: n, className: i, tooltip: l } = e;
     return (0, r.jsx)(a.ua7, {
         text: l,

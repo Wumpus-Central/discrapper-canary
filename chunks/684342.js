@@ -1,6 +1,6 @@
 n.d(t, {
     p: () => f,
-    t: () => p
+    t: () => _
 });
 var r = n(468343),
     i = n(559972),
@@ -29,7 +29,7 @@ var r = n(468343),
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                !d &&
+                d ||
                     ((d = !0),
                     (0, o.p)(function () {
                         var n = !1;
@@ -73,6 +73,6 @@ var r = n(468343),
             e
         );
     })())(),
-    p = function (e) {
+    _ = function (e) {
         !a && e > 0 && f.start(), (a += e) || f.stop();
     };

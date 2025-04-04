@@ -37,14 +37,14 @@ function d(e) {
 function f(e) {
     return (null == e ? void 0 : e.content_type) === r.s.WATCHED_MEDIA;
 }
-function p(e) {
+function _(e) {
     return !!s(e) && e.extra.platform === i.z.XBOX;
 }
-function _(e) {
+function p(e) {
     return !!s(e) && e.extra.platform === i.z.PLAYSTATION;
 }
 function h(e) {
-    return p(e) || _(e);
+    return _(e) || p(e);
 }
 function m(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;

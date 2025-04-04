@@ -7,8 +7,8 @@ var i = n(512722),
     r = n.n(i),
     o = n(230383),
     a = n(313361),
-    s = n(683860),
-    l = n(731965),
+    l = n(683860),
+    s = n(731965),
     c = n(442837),
     u = n(592125),
     d = n(559241);
@@ -44,7 +44,7 @@ function p(e) {
 let m = new Set(),
     f = {
         layoutType: a.X.LIST,
-        sortOrder: s.z.CREATION_DATE,
+        sortOrder: l.z.CREATION_DATE,
         tagFilter: m,
         scrollPosition: 0
     };
@@ -67,7 +67,7 @@ class g {
                 let n = this.get(),
                     i = this.getChannelState(e),
                     r = p({}, n.channelStates);
-                (r[e] = p({}, i, t)), (0, l.j)(() => this.set({ channelStates: r }));
+                (r[e] = p({}, i, t)), (0, s.j)(() => this.set({ channelStates: r }));
             }),
             (this.getChannelState = (e) => {
                 if (null == e) return f;

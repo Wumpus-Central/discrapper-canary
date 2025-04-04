@@ -63,18 +63,18 @@ function f(e) {
         chance: r
     });
 }
-function p(e) {
+function _(e) {
     let { feedbackType: t } = e;
     delete d[t];
 }
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     initialize() {}
     getFeedbackConfig(e) {
         return d[e];
     }
 }
-s(_, 'displayName', 'FeedbackOverrideStore'), s(_, 'persistKey', 'feedbackOverrides');
-let h = new _(o.Z, {
+s(p, 'displayName', 'FeedbackOverrideStore'), s(p, 'persistKey', 'feedbackOverrides');
+let h = new p(o.Z, {
     FEEDBACK_OVERRIDE_SET: f,
-    FEEDBACK_OVERRIDE_CLEAR: p
+    FEEDBACK_OVERRIDE_CLEAR: _
 });

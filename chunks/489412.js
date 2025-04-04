@@ -1,21 +1,21 @@
-var r = a(936940),
-    n = a(161581).RegExp,
-    _ = r(function () {
-        var t = n('a', 'y');
+var n = r(936940),
+    i = r(161581).RegExp,
+    o = n(function () {
+        var t = i('a', 'y');
         return (t.lastIndex = 2), null !== t.exec('abcd');
     }),
-    o =
-        _ ||
-        r(function () {
-            return !n('a', 'y').sticky;
+    a =
+        o ||
+        n(function () {
+            return !i('a', 'y').sticky;
         });
 t.exports = {
     BROKEN_CARET:
-        _ ||
-        r(function () {
-            var t = n('^r', 'gy');
+        o ||
+        n(function () {
+            var t = i('^r', 'gy');
             return (t.lastIndex = 2), null !== t.exec('str');
         }),
-    MISSED_STICKY: o,
-    UNSUPPORTED_Y: _
+    MISSED_STICKY: a,
+    UNSUPPORTED_Y: o
 };

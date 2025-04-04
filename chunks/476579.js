@@ -8,37 +8,37 @@ var r = n(161581),
     u = n(90338),
     d = n(936940),
     f = n(603528),
-    p = n(959318),
-    _ = n(552028),
+    _ = n(959318),
+    p = n(552028),
     h = n(646328),
     m = n(339399),
     g = n(144748),
     E = n(276321),
-    v = n(537443).f,
-    b = n(692994),
-    y = n(175440),
+    b = n(537443).f,
+    y = n(692994),
+    v = n(175440),
     O = n(865312),
-    S = n(644659),
-    I = s.PROPER,
+    I = n(644659),
+    S = s.PROPER,
     T = s.CONFIGURABLE,
     N = 'ArrayBuffer',
     A = 'DataView',
     C = 'prototype',
     R = 'Wrong length',
     P = 'Wrong index',
-    w = S.getterFor(N),
-    D = S.getterFor(A),
-    x = S.set,
-    L = r[N],
-    M = L,
+    w = I.getterFor(N),
+    D = I.getterFor(A),
+    L = I.set,
+    x = r[N],
+    M = x,
     k = M && M[C],
     j = r[A],
     U = j && j[C],
     G = Object.prototype,
     B = r.Array,
-    Z = r.RangeError,
-    F = i(b),
-    V = i([].reverse),
+    F = r.RangeError,
+    V = i(y),
+    Z = i([].reverse),
     H = m.pack,
     W = m.unpack,
     Y = function (e) {
@@ -71,39 +71,39 @@ var r = n(161581),
         var i = D(e),
             o = h(n),
             a = !!r;
-        if (o + t > i.byteLength) throw Z(P);
+        if (o + t > i.byteLength) throw F(P);
         var s = i.bytes,
             l = o + i.byteOffset,
-            c = y(s, l, l + t);
-        return a ? c : V(c);
+            c = v(s, l, l + t);
+        return a ? c : Z(c);
     },
     ee = function (e, t, n, r, i, o) {
         var a = D(e),
             s = h(n),
             l = r(+i),
             c = !!o;
-        if (s + t > a.byteLength) throw Z(P);
+        if (s + t > a.byteLength) throw F(P);
         for (var u = a.bytes, d = s + a.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (a) {
-    var et = I && L.name !== N;
+    var et = S && x.name !== N;
     if (
         !d(function () {
-            L(1);
+            x(1);
         }) ||
         !d(function () {
-            new L(-1);
+            new x(-1);
         }) ||
         d(function () {
-            return new L(), new L(1.5), new L(NaN), 1 !== L.length || (et && !T);
+            return new x(), new x(1.5), new x(NaN), 1 !== x.length || (et && !T);
         })
     ) {
         (M = function (e) {
-            return f(this, k), new L(h(e));
+            return f(this, k), new x(h(e));
         })[C] = k;
-        for (var en, er = v(L), ei = 0; er.length > ei; ) (en = er[ei++]) in M || l(M, en, L[en]);
+        for (var en, er = b(x), ei = 0; er.length > ei; ) (en = er[ei++]) in M || l(M, en, x[en]);
         k.constructor = M;
-    } else et && T && l(L, 'name', N);
+    } else et && T && l(x, 'name', N);
     E && g(U) !== G && E(U, G);
     var eo = new j(new M(2)),
         ea = i(U.setInt8);
@@ -126,9 +126,9 @@ if (a) {
     (k = (M = function (e) {
         f(this, k);
         var t = h(e);
-        x(this, {
+        L(this, {
             type: N,
-            bytes: F(B(t), 0),
+            bytes: V(B(t), 0),
             byteLength: t
         }),
             o || ((this.byteLength = t), (this.detached = !1));
@@ -137,10 +137,10 @@ if (a) {
             f(this, U), f(e, k);
             var r = w(e),
                 i = r.byteLength,
-                a = p(t);
-            if (a < 0 || a > i) throw Z('Wrong offset');
-            if (((n = void 0 === n ? i - a : _(n)), a + n > i)) throw Z(R);
-            x(this, {
+                a = _(t);
+            if (a < 0 || a > i) throw F('Wrong offset');
+            if (((n = void 0 === n ? i - a : p(n)), a + n > i)) throw F(R);
+            L(this, {
                 type: A,
                 buffer: e,
                 byteLength: n,

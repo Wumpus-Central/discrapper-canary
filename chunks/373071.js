@@ -63,7 +63,7 @@ function f(e, t) {
     );
 }
 let _ = '__DEBUG_PROFILE_EFFECTS_STORE',
-    p = { profileEffects: null !== (r = s.K.get(_)) && void 0 !== r ? r : {} },
+    p = { profileEffects: null != (r = s.K.get(_)) ? r : {} },
     h = (e) => {
         s.K.set(_, e.profileEffects);
     },

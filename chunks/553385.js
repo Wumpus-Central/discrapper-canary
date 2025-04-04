@@ -1,7 +1,7 @@
 n.d(t, {
     N7: () => f,
-    XP: () => _,
-    j8: () => p,
+    XP: () => p,
+    j8: () => _,
     z$: () => h
 });
 var r = n(544891),
@@ -20,7 +20,7 @@ function f(e) {
         rejectWithError: !0
     });
 }
-function p(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
     r.tn.post({
         url: d.ANM.FORCE_SEND_PROMPT(e),
@@ -28,7 +28,7 @@ function p(e) {
         rejectWithError: !0
     });
 }
-async function _(e, t, n) {
+async function p(e, t, n) {
     await r.tn.post({
         url: d.ANM.SEND_GAMING_STATS(t),
         body: {

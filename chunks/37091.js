@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => y });
 var r,
     i = n(442837),
     o = n(570140);
@@ -57,8 +57,8 @@ function c(e, t) {
 let u = { enabled: !1 },
     d = {},
     f = {},
-    p = !1;
-function _(e) {
+    _ = !1;
+function p(e) {
     let { userId: t, channelId: n, emoji: r } = e;
     d[n] = c(s({}, d[n]), { [t]: r });
 }
@@ -70,12 +70,12 @@ function h(e) {
 }
 function m(e) {
     let { enabled: t } = e;
-    p = t;
+    _ = t;
 }
 function g(e) {
     var t;
     let { completingEmoji: n, completingUserId: r, waitingUserId: i, channelId: o } = e,
-        a = null !== (t = d[o]) && void 0 !== t ? t : {},
+        a = null != (t = d[o]) ? t : {},
         l = a[i];
     if ((delete a[i], null == l)) return !1;
     f[o] = c(s({}, f[o]), {
@@ -86,32 +86,32 @@ function g(e) {
 function E(e) {
     var t;
     let { firstUserId: n, secondUserId: r, channelId: i } = e,
-        o = null !== (t = f[i]) && void 0 !== t ? t : {};
+        o = null != (t = f[i]) ? t : {};
     delete o[n], delete o[r];
 }
-class v extends (r = i.ZP.DeviceSettingsStore) {
+class b extends (r = i.ZP.DeviceSettingsStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
-        p = e.enabled;
+        _ = e.enabled;
     }
     getWaitingHighFive(e, t) {
         var n;
-        return null === (n = d[e]) || void 0 === n ? void 0 : n[t];
+        return null == (n = d[e]) ? void 0 : n[t];
     }
     getCompletedHighFive(e, t) {
         var n;
-        return null === (n = f[e]) || void 0 === n ? void 0 : n[t];
+        return null == (n = f[e]) ? void 0 : n[t];
     }
     getEnabled() {
-        return p;
+        return _;
     }
     getUserAgnosticState() {
-        return { enabled: p };
+        return { enabled: _ };
     }
 }
-a(v, 'persistKey', 'HighFiveStore');
-let b = new v(o.Z, {
-    HIGH_FIVE_QUEUE: _,
+a(b, 'persistKey', 'HighFiveStore');
+let y = new b(o.Z, {
+    HIGH_FIVE_QUEUE: p,
     HIGH_FIVE_REMOVE: h,
     HIGH_FIVE_SET_ENABLED: m,
     HIGH_FIVE_COMPLETE: g,

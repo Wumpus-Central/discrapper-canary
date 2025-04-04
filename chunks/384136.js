@@ -64,7 +64,7 @@ class c extends r.EventEmitter {
             },
             video: l(a({}, e), { frameRate: 30 })
         };
-        if ((null === (n = navigator.mediaDevices) || void 0 === n ? void 0 : n.getDisplayMedia) != null) return new c(await navigator.mediaDevices.getDisplayMedia(r));
+        if ((null == (n = navigator.mediaDevices) ? void 0 : n.getDisplayMedia) != null) return new c(await navigator.mediaDevices.getDisplayMedia(r));
         throw Error('UNKNOWN');
     }
     destroy() {

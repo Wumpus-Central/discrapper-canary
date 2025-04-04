@@ -36,15 +36,15 @@ function d(e) {
     return e;
 }
 let f = {};
-function p(e) {
+function _(e) {
     f = o().omitBy(f, (t) => t.guildId === e);
 }
-function _(e) {
+function p(e) {
     f = o().omitBy(f, (t) => t.parentId === e);
 }
 function h(e) {
     var t;
-    null === (t = e.threads) || void 0 === t || t.forEach(g);
+    null == (t = e.threads) || t.forEach(g);
 }
 function m(e) {
     if (!(e.id in f)) {
@@ -52,8 +52,8 @@ function m(e) {
         f[e.id] = {
             guildId: e.guild_id,
             parentId: e.parent_id,
-            memberCount: null !== (t = e.memberCount) && void 0 !== t ? t : 0,
-            memberIdsPreview: null !== (n = e.memberIdsPreview) && void 0 !== n ? n : []
+            memberCount: null != (t = e.memberCount) ? t : 0,
+            memberIdsPreview: null != (n = e.memberIdsPreview) ? n : []
         };
     }
     return f[e.id];
@@ -66,33 +66,33 @@ function g(e) {
 function E(e) {
     (f = {}), e.guilds.forEach(h);
 }
-function v(e) {
+function b(e) {
     let { threadMembers: t } = e;
     f = d({}, t);
 }
-function b(e) {
+function y(e) {
     let { guild: t } = e;
     h(t);
 }
-function y(e) {
+function v(e) {
     let { guild: t } = e;
-    p(t.id);
+    _(t.id);
 }
 function O(e) {
     let { channel: t } = e;
     return g(t);
 }
-function S(e) {
+function I(e) {
     let { threads: t } = e;
     t.forEach(g);
 }
-function I(e) {
+function S(e) {
     let { threads: t } = e;
     t.forEach(R);
 }
 function T(e) {
     let { channel: t } = e;
-    _(t.id);
+    p(t.id);
 }
 function N(e) {
     let { channel: t } = e;
@@ -131,11 +131,11 @@ class w extends (r = a.ZP.Store) {
     }
     getMemberCount(e) {
         var t, n;
-        return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.memberCount) && void 0 !== n ? n : null;
+        return null != (n = null == (t = f[e]) ? void 0 : t.memberCount) ? n : null;
     }
     getMemberIdsPreview(e) {
         var t, n;
-        return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.memberIdsPreview) && void 0 !== n ? n : null;
+        return null != (n = null == (t = f[e]) ? void 0 : t.memberIdsPreview) ? n : null;
     }
     getInitialOverlayState() {
         return f;
@@ -144,18 +144,18 @@ class w extends (r = a.ZP.Store) {
 u(w, 'displayName', 'ThreadMembersStore');
 let D = new w(s.Z, {
     CONNECTION_OPEN: E,
-    OVERLAY_INITIALIZE: v,
-    GUILD_CREATE: b,
-    GUILD_DELETE: y,
+    OVERLAY_INITIALIZE: b,
+    GUILD_CREATE: y,
+    GUILD_DELETE: v,
     CHANNEL_DELETE: T,
     THREAD_CREATE: O,
     THREAD_UPDATE: O,
-    THREAD_LIST_SYNC: S,
+    THREAD_LIST_SYNC: I,
     THREAD_MEMBERS_UPDATE: P,
     SEARCH_FINISH: C,
     MOD_VIEW_SEARCH_FINISH: C,
-    LOAD_THREADS_SUCCESS: I,
-    LOAD_ARCHIVED_THREADS_SUCCESS: I,
+    LOAD_THREADS_SUCCESS: S,
+    LOAD_ARCHIVED_THREADS_SUCCESS: S,
     THREAD_DELETE: N,
     LOAD_MESSAGES_SUCCESS: A
 });

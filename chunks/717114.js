@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(131951),
     d = n(19780),
     f = n(63063),
-    p = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    p = n(388032);
 function h(e, t, n) {
     return (
         t in e
@@ -42,11 +42,11 @@ function m(e) {
 }
 let g = () => {
     let [e, t] = (0, o.Wu)([c.ZP], () => [c.ZP.canShowAdminWarning, c.ZP.getVisibleGame()], []),
-        n = (0, o.e7)([d.Z], () => d.Z.isConnected(), []),
-        h = (0, o.e7)([u.Z], () => u.Z.getMode() === p.pM4.PUSH_TO_TALK, []),
+        n = (0, o.e7)([d.ZP], () => d.ZP.isConnected(), []),
+        h = (0, o.e7)([u.Z], () => u.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
         g = null != t && t.elevated && n && h && e,
         E = i.useRef(null);
-    function v() {
+    function b() {
         null !== E.current && ((0, a.Mr3)(E.current), (E.current = null));
     }
     return (
@@ -58,20 +58,20 @@ let g = () => {
                               l.default,
                               m(
                                   {
-                                      title: _.NW.string(_.t.eotlXF),
-                                      body: _.NW.formatToPlainString(_.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
-                                      secondaryConfirmText: _.NW.string(_.t['5E9SBw']),
+                                      title: p.NW.string(p.t.eotlXF),
+                                      body: p.NW.formatToPlainString(p.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
+                                      secondaryConfirmText: p.NW.string(p.t['5E9SBw']),
                                       onConfirmSecondary: () => s.Z.clearPTTAdminWarning(),
-                                      onConfirm: () => window.open(f.Z.getArticleURL(p.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
-                                      confirmText: _.NW.string(_.t.psXQHB)
+                                      onConfirm: () => window.open(f.Z.getArticleURL(_.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
+                                      confirmText: p.NW.string(p.t.psXQHB)
                                   },
                                   e
                               )
                           )
                       ))
-                    : v(),
+                    : b(),
                 () => {
-                    v();
+                    b();
                 }
             ),
             [t, g]

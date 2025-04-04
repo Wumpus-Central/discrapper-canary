@@ -15,14 +15,14 @@ var r = n(512722),
     c = n(699516),
     u = n(594174),
     d = n(51144);
-function f(e) {
-    let t = _(e);
-    return i()(null != t, 'Result cannot be null because the message is not null'), t;
+function f(e, t) {
+    let n = _(e);
+    return i()(null != n, 'Result cannot be null because the message is not null'), null != t ? t : n;
 }
 function _(e) {
     var t;
     let n = (0, o.e7)([a.Z], () => (null == e ? null : a.Z.getChannel(e.channel_id))),
-        r = null == e ? void 0 : null === (t = e.author) || void 0 === t ? void 0 : t.id,
+        r = null == e || null == (t = e.author) ? void 0 : t.id,
         i = null == n ? void 0 : n.guild_id,
         f = (0, o.e7)([s.ZP], () => (null == i || null == r ? null : s.ZP.getMember(i, r))),
         _ = (0, o.e7)([u.default], () => u.default.getUser(r), [r]),
@@ -127,15 +127,15 @@ function E(e) {
                   colorStrings: void 0
               }
             : {
-                  nick: null !== (n = u.nick) && void 0 !== n ? n : p,
-                  colorString: null !== (r = u.colorString) && void 0 !== r ? r : void 0,
-                  colorStrings: null !== (i = u.colorStrings) && void 0 !== i ? i : void 0,
-                  colorRoleName: null != u.colorRoleId && null != l ? (null == c ? void 0 : null === (t = c[u.colorRoleId]) || void 0 === t ? void 0 : t.name) : void 0,
+                  nick: null != (n = u.nick) ? n : p,
+                  colorString: null != (r = u.colorString) ? r : void 0,
+                  colorStrings: null != (i = u.colorStrings) ? i : void 0,
+                  colorRoleName: null != u.colorRoleId && null != l ? (null == c || null == (t = c[u.colorRoleId]) ? void 0 : t.name) : void 0,
                   colorRoleId: u.colorRoleId,
                   iconRoleId: u.iconRoleId,
                   guildMemberAvatar: u.avatar,
                   guildMemberAvatarDecoration: u.avatarDecoration,
-                  primaryGuild: null !== (o = a.primaryGuild) && void 0 !== o ? o : void 0,
+                  primaryGuild: null != (o = a.primaryGuild) ? o : void 0,
                   guildId: l.id
               };
 }

@@ -9,22 +9,22 @@ var r = n(200651),
     u = n(481060),
     d = n(100527),
     f = n(906732),
-    p = n(605236),
-    _ = n(243778),
+    _ = n(605236),
+    p = n(243778),
     h = n(963249),
     m = n(599659),
     g = n(282925),
     E = n(819640),
-    v = n(594174),
-    b = n(70956),
-    y = n(709054),
+    b = n(594174),
+    y = n(70956),
+    v = n(709054),
     O = n(51144),
-    S = n(443603),
-    I = n(981631),
+    I = n(443603),
+    S = n(981631),
     T = n(921944),
     N = n(388032),
-    A = n(222328),
-    C = n(342203);
+    A = n(870751),
+    C = n(302195);
 function R(e, t, n) {
     return (
         t in e
@@ -77,8 +77,8 @@ function D(e, t) {
         e
     );
 }
-let x = b.Z.Millis.DAYS_30;
-function L(e) {
+let L = y.Z.Millis.DAYS_30;
+function x(e) {
     let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: o } = e,
         s = !o || i;
     return (0, r.jsxs)('div', {
@@ -112,30 +112,30 @@ function M(e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: o } = (0, f.ZP)(d.Z.GIFT_BUTTON),
         [a, u] = i.useState(!1),
-        b = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
-        R = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        w = null != R ? y.default.age(R.id) : 0,
-        M = !t && b && w >= x,
+        y = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
+        R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+        w = null != R ? v.default.age(R.id) : 0,
+        M = !t && y && w >= L,
         { enabled: k } = m.O.useExperiment({ location: 'gift-button' }),
         j = [];
     k && M && j.push(l.z.NITROWEEN_COACHMARKS);
-    let [U, G] = (0, _.US)(j),
+    let [U, G] = (0, p.US)(j),
         B = null != U,
-        Z = (0, O.Ft)(n),
-        { Component: F, events: V, play: H } = (0, c.$)();
+        F = (0, O.Ft)(n),
+        { Component: V, events: Z, play: H } = (0, c.$)();
     if (t) return null;
     let W = () => {
         (0, h.Z)({
             isGift: !0,
-            giftRecipient: null == Z ? void 0 : Z,
+            giftRecipient: null == F ? void 0 : F,
             giftMessage: N.NW.string(N.t['rX/m/f']),
             initialPlanId: null,
             analyticsLocations: o,
             analyticsObject: {
-                page: n.isPrivate() ? I.ZY5.DM_CHANNEL : I.ZY5.GUILD_CHANNEL,
-                section: I.jXE.CHANNEL_TEXT_AREA,
-                object: I.qAy.NITROWEEN_BUTTON_ICON,
-                objectType: I.Qqv.GIFT
+                page: n.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
+                section: S.jXE.CHANNEL_TEXT_AREA,
+                object: S.qAy.NITROWEEN_BUTTON_ICON,
+                objectType: S.Qqv.GIFT
             }
         });
     };
@@ -155,7 +155,7 @@ function M(e) {
                     markAsDismissed: G
                 }),
             (0, r.jsx)(
-                S.Z,
+                I.Z,
                 D(
                     P(
                         {
@@ -163,14 +163,14 @@ function M(e) {
                             'aria-label': N.NW.string(N.t.Z1RnTk),
                             isActive: !1,
                             onClick: () => {
-                                H(), u(!1), (0, p.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: T.L.TAKE_ACTION }), W();
+                                H(), u(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: T.L.TAKE_ACTION }), W();
                             }
                         },
-                        V
+                        Z
                     ),
                     {
-                        children: (0, r.jsx)(L, {
-                            animatedIconComponent: F,
+                        children: (0, r.jsx)(x, {
+                            animatedIconComponent: V,
                             hovered: a,
                             isCoachmarkDismissed: !B
                         })

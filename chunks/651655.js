@@ -42,7 +42,7 @@ class s {
                     }
                 } else {
                     var o;
-                    let n = null !== (o = t.retryAfter) && void 0 !== o ? o : this.defaultRetryAfter;
+                    let n = null != (o = t.retryAfter) ? o : this.defaultRetryAfter;
                     this.logger.info('Rate limited. Delaying draining of queue for '.concat(n, ' ms. LogId:').concat(r, ' QueueLength: ').concat(this.queue.length)),
                         (this.timeout = setTimeout(() => {
                             this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary();

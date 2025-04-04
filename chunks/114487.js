@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => _,
-    b: () => p
+    Z: () => p,
+    b: () => _
 });
 var r = n(200651),
     i = n(192379),
@@ -11,9 +11,9 @@ var r = n(200651),
     c = n(451478),
     u = n(768581),
     d = n(624138),
-    f = n(354935);
-function p(e) {
-    let { guildId: t, guildName: n, guildIcon: i, iconSize: o, className: p, animate: _ } = e,
+    f = n(215398);
+function _(e) {
+    let { guildId: t, guildName: n, guildIcon: i, iconSize: o, className: _, animate: p } = e,
         h = (0, s.e7)([c.Z], () => c.Z.isFocused()),
         m = (0, u.pU)(i)
             ? i
@@ -21,7 +21,7 @@ function p(e) {
                   id: t,
                   icon: i,
                   size: o,
-                  canAnimate: _ && h
+                  canAnimate: p && h
               });
     if (null == m) {
         let e = (0, d.Zg)(n);
@@ -29,7 +29,7 @@ function p(e) {
             mask: l.ZP.Masks.CLAN_ICON,
             width: o,
             height: o,
-            className: p,
+            className: _,
             children: (0, r.jsx)('div', {
                 className: a()(f.guildIconImage, f.acronym),
                 children: e
@@ -40,7 +40,7 @@ function p(e) {
         mask: l.ZP.Masks.CLAN_ICON,
         width: o,
         height: o,
-        className: p,
+        className: _,
         children: (0, r.jsx)('img', {
             src: m,
             alt: n,
@@ -48,9 +48,9 @@ function p(e) {
         })
     });
 }
-let _ = i.memo(function (e) {
+let p = i.memo(function (e) {
     let { guild: t, iconSize: n, className: i, animate: o } = e;
-    return (0, r.jsx)(p, {
+    return (0, r.jsx)(_, {
         guildName: t.name,
         guildId: t.id,
         guildIcon: t.icon,

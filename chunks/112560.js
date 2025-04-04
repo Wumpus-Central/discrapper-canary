@@ -9,7 +9,7 @@ var i = n(120356),
     o = n.n(i),
     a = n(481060),
     s = n(600164),
-    l = n(739072);
+    l = n(993135);
 function c(e) {
     return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }
@@ -44,7 +44,7 @@ function u(e) {
                       children: u
                   })
                 : null,
-            null != c
+            null != c && (null == u || 'small' !== d)
                 ? (0, r.jsx)(a.Text, {
                       color: 'none',
                       className: l.description,

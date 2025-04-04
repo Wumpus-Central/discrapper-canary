@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(403182),
     c = n(587446),
     u = n(504983),
-    d = n(403822);
+    d = n(396032);
 function f(e) {
     return e.replace(/[0-9.,]+ ?kb/g, (e) => {
         let t = 1024 * parseInt(e, 10);
@@ -32,13 +32,13 @@ function _(e) {
     });
 }
 let p = i.forwardRef(function (e, t) {
-    let { title: n, titleIcon: i, titleId: o, description: l, children: f, className: p, errors: h, disabled: m = !1, hideDivider: g = !1, showBorder: E = !1, borderType: b, hasBackground: v = !1, forcedDivider: y = !1, showPremiumIcon: O = !1 } = e;
+    let { title: n, titleIcon: i, titleId: o, description: l, children: f, className: p, errors: h, disabled: m = !1, hideDivider: g = !1, showBorder: E = !1, borderType: b, hasBackground: y = !1, forcedDivider: v = !1, showPremiumIcon: O = !1 } = e;
     return (0, r.jsx)('div', {
         className: a()(d.customizationSection, p, {
             [d.disabled]: m,
             [d.hideDivider]: g,
             [d.showBorder]: E,
-            [d.withDivider]: y
+            [d.withDivider]: v
         }),
         ref: t,
         children: (0, r.jsxs)(u.Z, {
@@ -46,7 +46,7 @@ let p = i.forwardRef(function (e, t) {
             backgroundClassName: d.customizationSectionBackground,
             isShown: E,
             type: b,
-            hasBackground: v,
+            hasBackground: y,
             children: [
                 (0, r.jsxs)(s.vwX, {
                     className: d.title,

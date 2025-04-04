@@ -36,7 +36,7 @@ function c(e) {
 }
 let u = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
     d = (e) => {
-        let { user: t, guildId: n, avatarDecorationOverride: a, status: l, avatarSize: d = i.EFr.SIZE_120, 'aria-hidden': f = !1, className: p, animateOnHover: _ = !1, questPreviewRewardAssetUrl: h = null } = e,
+        let { user: t, guildId: n, avatarDecorationOverride: a, status: l, avatarSize: d = i.EFr.SIZE_120, 'aria-hidden': f = !1, className: _, animateOnHover: p = !1, questPreviewRewardAssetUrl: h = null } = e,
             {
                 avatarDecorationSrc: m,
                 avatarSrc: g,
@@ -47,7 +47,7 @@ let u = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
                 size: d,
                 showPending: !0,
                 avatarDecorationOverride: a,
-                animateOnHover: _
+                animateOnHover: p
             });
         return (0, r.jsx)(
             u,
@@ -59,7 +59,7 @@ let u = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
                     status: l,
                     'aria-label': f ? void 0 : s.NW.string(s.t.lqaIxM),
                     'aria-hidden': f,
-                    className: p
+                    className: _
                 },
                 E
             )

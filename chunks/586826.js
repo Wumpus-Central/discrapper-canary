@@ -1,15 +1,15 @@
 t.d(n, { p: () => o });
 var l = t(788347),
     a = t(372793),
-    r = t(731965),
-    i = t(174727);
+    i = t(731965),
+    r = t(174727);
 let s = (0, a.F)((e) => ({
     audio: null,
     file: null,
     loading: !1,
     loadAudioFromFile: async (n) => {
         if (
-            ((0, r.j)(() =>
+            ((0, i.j)(() =>
                 e({
                     file: n,
                     audio: null,
@@ -19,9 +19,9 @@ let s = (0, a.F)((e) => ({
             null == n)
         )
             return;
-        let t = await (0, i.lj)(n);
+        let t = await (0, r.lj)(n);
         null != t &&
-            (0, r.j)(() =>
+            (0, i.j)(() =>
                 e({
                     audio: t,
                     loading: !1
@@ -30,7 +30,7 @@ let s = (0, a.F)((e) => ({
     },
     maxVolume: 1,
     setMaxVolume: (n) => {
-        (0, r.j)(() => e({ maxVolume: n }));
+        (0, i.j)(() => e({ maxVolume: n }));
     }
 }));
 function o() {

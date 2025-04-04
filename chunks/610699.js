@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(100527),
     x = n(906732),
     y = n(321231),
-    E = n(758199),
-    v = n(943762),
+    v = n(758199),
+    E = n(943762),
     O = n(914498),
     N = n(880251),
     j = n(208444),
@@ -188,8 +188,8 @@ function Q(e) {
     var t, n, a;
     let o,
         u,
-        { invite: E, getAcceptInviteContext: v } = e,
-        { approximate_member_count: O, approximate_presence_count: N, target_type: j, target_application: I } = E;
+        { invite: v, getAcceptInviteContext: E } = e,
+        { approximate_member_count: O, approximate_presence_count: N, target_type: j, target_application: I } = v;
     s()(j === F.Iq.EMBEDDED_APPLICATION && null != I, 'invalid application invite');
     let S = i.useRef(null),
         [L, M] = i.useState(!1),
@@ -203,13 +203,13 @@ function Q(e) {
                             var t;
                             D.default.track(U.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
                                 application_id: I.id,
-                                invite_inviter_id: null == (t = E.inviter) ? void 0 : t.id
+                                invite_inviter_id: null == (t = v.inviter) ? void 0 : t.id
                             });
                         }
                         return !0;
                     });
             },
-            [null == (t = E.inviter) ? void 0 : t.id, I.id]
+            [null == (t = v.inviter) ? void 0 : t.id, I.id]
         ),
         en = (0, m.O)(et),
         er = (0, P.Z)(S, en);
@@ -229,20 +229,20 @@ function Q(e) {
             }
         );
     }, [S, M, $]);
-    let ei = (0, c.e7)([Z.Z], () => (null != E.guild ? Z.Z.getGuild(E.guild.id) : null), [E]),
+    let ei = (0, c.e7)([Z.Z], () => (null != v.guild ? Z.Z.getGuild(v.guild.id) : null), [v]),
         ea = (0, C.Z)([I.id])[0],
         el = (0, c.e7)([f.ZP], () => {
             var e;
-            return (null == E ? void 0 : E.channel) != null && (null == (e = f.ZP.getSelfEmbeddedActivityForChannel(E.channel.id)) ? void 0 : e.applicationId) === I.id;
+            return (null == v ? void 0 : v.channel) != null && (null == (e = f.ZP.getSelfEmbeddedActivityForChannel(v.channel.id)) ? void 0 : e.applicationId) === I.id;
         }),
         eo = (0, c.e7)([f.ZP], () => {
             var e;
-            return ((null == (e = E.channel) ? void 0 : e.id) != null ? f.ZP.getEmbeddedActivitiesForChannel(E.channel.id) : []).some((e) => {
+            return ((null == (e = v.channel) ? void 0 : e.id) != null ? f.ZP.getEmbeddedActivitiesForChannel(v.channel.id) : []).some((e) => {
                 let { applicationId: t } = e;
                 return I.id === t;
             });
         }),
-        es = w.Z.getChannel(null == (n = E.channel) ? void 0 : n.id),
+        es = w.Z.getChannel(null == (n = v.channel) ? void 0 : n.id),
         ec = (0, c.e7)([k.Z], () => null != es && k.Z.can(U.Plq.USE_EMBEDDED_ACTIVITIES, es), [es]),
         { analyticsLocations: eu } = (0, x.ZP)(b.Z.INVITE_EMBED),
         ed = (0, h.Z)({
@@ -262,28 +262,28 @@ function Q(e) {
         ),
         em = (0, c.Wu)([R.default], () => ep.map((e) => R.default.getUser(e)).filter((e) => null != e), [ep]),
         ef = i.useCallback(() => {
-            (0, p.r$)(E, 'accept', eu),
+            (0, p.r$)(v, 'accept', eu),
                 p.ZP.acceptInviteAndTransitionToInviteChannel({
-                    inviteKey: E.code,
-                    context: v('Invite Button Embed'),
+                    inviteKey: v.code,
+                    context: E('Invite Button Embed'),
                     analyticsLocations: eu
                 });
-        }, [E, eu, v]),
-        eh = E.state === U.r2o.ACCEPTING,
+        }, [v, eu, E]),
+        eh = v.state === U.r2o.ACCEPTING,
         eg = null != ei;
     if (null == ei) {
-        if (null == E.guild) return (0, r.jsx)(W.Z, {});
-        ei = new A.ZP(E.guild);
+        if (null == v.guild) return (0, r.jsx)(W.Z, {});
+        ei = new A.ZP(v.guild);
     }
     let e_ = (eg && !ec) || (eg && el);
     eg && el && (o = B.NW.string(B.t.wJNK8P)), ec || (o = B.NW.string(B.t.hHGrW1)), (u = el ? B.NW.string(B.t.KC26NT) : eo || !eg ? B.NW.string(B.t.VJlc0d) : B.NW.string(B.t.I0v0Qk));
     let { enabled: eb } = y.G.useExperiment({ location: 'EmbeddedApplicationInvite' });
-    return null == E.code || '' === E.code
+    return null == v.code || '' === v.code
         ? null
         : eb && null != ea
           ? (0, r.jsx)(J, {
                 app: ea,
-                invite: E,
+                invite: v,
                 activityUsers: em,
                 isMember: eg,
                 channel: es,
@@ -464,7 +464,7 @@ function J(e) {
             return null != C && e.push(C), e;
         }, [h, d, m, l, p, f, C]);
     return (0, r.jsx)(
-        E.W,
+        v.W,
         V(
             H(
                 {
@@ -488,7 +488,7 @@ function J(e) {
                         }),
                         l
                             ? S > 0 &&
-                              (0, r.jsx)(v.K, {
+                              (0, r.jsx)(E.K, {
                                   activityUsers: a,
                                   guildId: s.id,
                                   activityText: B.NW.string(B.t.BMTj29)

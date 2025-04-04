@@ -1,6 +1,6 @@
 n.d(t, {
-    IX: () => v,
-    Rt: () => b,
+    IX: () => b,
+    Rt: () => y,
     UM: () => g,
     ZP: () => E
 }),
@@ -13,7 +13,7 @@ n.d(t, {
 var r = n(442837),
     i = n(544891),
     o = n(570140),
-    a = n(264043),
+    a = n(370210),
     s = n(973616),
     l = n(630388),
     c = n(812206),
@@ -47,7 +47,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,12 +59,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -154,7 +154,7 @@ let E = {
             let a = (
                 await i.tn.get({
                     url: u.ANM.GUILD_APPLICATIONS(e),
-                    query: _(f({}, r), { include_team: n }),
+                    query: p(f({}, r), { include_team: n }),
                     rejectWithError: !1
                 })
             ).body;
@@ -190,7 +190,7 @@ let E = {
                 let t = (e) => {
                     var t, n;
                     let r = c.Z.getApplication(e),
-                        i = (0, l.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED) && ((null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null || (null == r ? void 0 : r.bot) == null);
+                        i = (0, l.yE)(null != (n = null == r ? void 0 : r.flags) ? n : 0, u.udG.EMBEDDED) && ((null == r || null == (t = r.embeddedActivityConfig) ? void 0 : t.supported_platforms) == null || (null == r ? void 0 : r.bot) == null);
                     return !(null != r && !i) && !c.Z.isFetchingApplication(e) && !c.Z.didFetchingApplicationFail(e) && e.length > 0;
                 };
                 n = e.filter(t);
@@ -226,14 +226,14 @@ let E = {
         },
         fetchApplication: g
     },
-    v = (0, r.Kb)(c.Z, {
-        queryId: (e) => (null != e ? ['applications', e] : null),
+    b = (0, r.Kb)(c.Z, {
+        queryId: (e) => u.McO.APPLICATIONS(e),
         get: (e) => (null != e ? c.Z.getApplication(e) : null),
         load: (e, t) => (null != t ? g(t, !1, e).then(u.dG4) : Promise.resolve()),
         useStateHook: r.e7
     });
-function b(e) {
-    let { data: t, isLoading: n, error: i } = v(e);
+function y(e) {
+    let { data: t, isLoading: n, error: i } = b(e);
     return {
         app: (0, r.e7)(
             [a.Z],

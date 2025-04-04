@@ -2,23 +2,23 @@ n.d(t, {
     GE: () => N,
     GL: () => h,
     Jd: () => R,
-    Jg: () => y,
-    Nq: () => S,
-    Ol: () => v,
-    PJ: () => m,
+    Jg: () => v,
+    Nq: () => I,
+    Ol: () => b,
+    PJ: () => g,
     T_: () => _,
-    V5: () => I,
+    V5: () => S,
     ap: () => A,
     bT: () => C,
     dw: () => T,
     ig: () => L,
     kr: () => E,
-    n2: () => b,
-    q_: () => D,
+    n2: () => y,
+    q_: () => w,
     vU: () => P,
     yA: () => O,
-    yh: () => g,
-    zo: () => w
+    yh: () => m,
+    zo: () => D
 }),
     n(301563);
 var r = n(164369),
@@ -91,42 +91,42 @@ let d = (e) => {
         let d = Math.round(s / l.Z.Seconds.DAYS_30);
         return r.monthsAgo(d);
     },
-    g = function (e, t) {
+    m = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         return E(e) ? _(e, n) : h(e, t, n, r);
     };
-function m(e, t) {
+function g(e, t) {
     return e.traits.find((e) => e.type === t);
 }
 function E(e) {
     var t, n;
-    return null !== (n = null === (t = m(e, a.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
-}
-function v(e) {
-    var t, n;
-    return null !== (n = null === (t = m(e, a.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
+    return null != (n = null == (t = g(e, a.N.IS_LIVE)) ? void 0 : t.is_live) && n;
 }
 function b(e) {
-    return null != e.expires_at && new Date(e.expires_at) < new Date();
+    var t, n;
+    return null != (n = null == (t = g(e, a.N.FIRST_TIME)) ? void 0 : t.first_time) && n;
 }
 function y(e) {
-    return E(e) && !b(e);
+    return null != e.expires_at && new Date(e.expires_at) < new Date();
+}
+function v(e) {
+    return E(e) && !y(e);
 }
 function O(e) {
     var t;
-    return null === (t = m(e, a.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
-}
-function S(e) {
-    var t;
-    return null === (t = m(e, a.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
+    return null == (t = g(e, a.N.DURATION_SECONDS)) ? void 0 : t.duration_seconds;
 }
 function I(e) {
     var t;
-    return null === (t = m(e, a.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+    return null == (t = g(e, a.N.AGGREGATE_RANGE)) ? void 0 : t.range;
+}
+function S(e) {
+    var t;
+    return null == (t = g(e, a.N.MARATHON)) ? void 0 : t.marathon;
 }
 function T(e) {
-    let t = m(e, a.N.RESURRECTED);
+    let t = g(e, a.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
 function N(e) {
@@ -156,9 +156,9 @@ function A(e) {
 }
 function C(e, t) {
     var n, r, i, o;
-    let a;
-    let s = null !== (i = null == t ? void 0 : null === (n = t.size) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : void 0,
-        l = null !== (o = null == t ? void 0 : null === (r = t.size) || void 0 === r ? void 0 : r[1]) && void 0 !== o ? o : void 0;
+    let a,
+        s = null != (i = null == t || null == (n = t.size) ? void 0 : n[0]) ? i : void 0,
+        l = null != (o = null == t || null == (r = t.size) ? void 0 : r[1]) ? o : void 0;
     return (
         null != s && null != l && s > 0 && l > 0
             ? (a = u.NW.formatToPlainString(u.t.wmUSi4, {
@@ -174,15 +174,15 @@ function R(e) {
 }
 function P(e) {
     var t;
-    return null === (t = m(e, a.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
+    return null == (t = g(e, a.N.STREAK_DAYS)) ? void 0 : t.streak_count_days;
 }
-function D(e) {
+function w(e) {
     let t = P(e);
     if (null == t || t < 3) return !1;
     let n = c.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.Z.Millis.HOUR);
 }
-function w(e) {
+function D(e) {
     let t = O(e);
     if (null == t)
         return {
@@ -202,5 +202,5 @@ function w(e) {
 }
 function L(e) {
     var t;
-    return null === (t = m(e, a.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
+    return null == (t = g(e, a.N.TRENDING_CONTENT)) ? void 0 : t.trending;
 }

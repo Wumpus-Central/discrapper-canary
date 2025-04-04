@@ -58,12 +58,12 @@ function d(e, t, n, r) {
 let f = i.memo(function (e) {
     var { user: t, size: n = o.EFr.SIZE_32, animate: s = !1, 'aria-hidden': u = !1 } = e,
         f = c(e, ['user', 'size', 'animate', 'aria-hidden']);
-    let p = i.useContext(a.Z);
+    let _ = i.useContext(a.Z);
     return (0, r.jsx)(
         o.qEK,
         l(
             {
-                src: d(t, (0, o.pxk)(n), s, p),
+                src: d(t, (0, o.pxk)(n), s, _),
                 size: n,
                 'aria-label': u ? void 0 : t.username,
                 'aria-hidden': u

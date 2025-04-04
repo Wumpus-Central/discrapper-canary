@@ -9,7 +9,7 @@ var r = n(442837),
 function u(e) {
     let t = (0, r.e7)([a.Z], () => {
             var t;
-            return null === (t = a.Z.getChannel(e)) || void 0 === t ? void 0 : t.wallpaper;
+            return null == (t = a.Z.getChannel(e)) ? void 0 : t.wallpaper;
         }),
         { previewWallpaperId: n, activePickerChannelId: u } = (0, l.B)(),
         d = (0, c.P)(null == t ? void 0 : t.setterId),

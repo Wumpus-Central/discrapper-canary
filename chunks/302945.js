@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(422034),
     c = n(182294),
     u = n(388032),
-    d = n(580247);
+    d = n(798984);
 function f(e) {
     let { affinities: t, className: n } = e,
         o = (e) => (null != e.globalName ? e.globalName : e.username),
@@ -22,7 +22,7 @@ function f(e) {
             [t]
         );
     if (t.length <= 1) return null;
-    let p = t.map((e, n) =>
+    let _ = t.map((e, n) =>
         (0, r.jsx)(
             l.O,
             {
@@ -38,7 +38,7 @@ function f(e) {
         children: [
             (0, r.jsx)('div', {
                 className: d.iconContainer,
-                children: p
+                children: _
             }),
             (0, r.jsx)('div', {
                 className: d.textContainer,

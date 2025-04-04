@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
     o = n(921944),
     a = n(388032),
-    s = n(531641),
+    s = n(784168),
     l = n(905287);
 function c(e, t, n) {
     return (
@@ -58,7 +58,7 @@ function f(e, t) {
         e
     );
 }
-function p(e) {
+function _(e) {
     let { onDismissClick: t, onCheckItOutClick: n } = e;
     return (0, r.jsxs)('div', {
         className: s.container,
@@ -102,7 +102,7 @@ function p(e) {
         ]
     });
 }
-function _(e) {
+function p(e) {
     let { onComplete: t, onCheckItOutClick: n, markAsDismissed: a } = e;
     return (0, r.jsx)(i.yRy, {
         spacing: 0,
@@ -111,7 +111,7 @@ function _(e) {
         align: 'center',
         renderPopout: (e) =>
             (0, r.jsx)(
-                p,
+                _,
                 f(u({}, e), {
                     onDismissClick: () => {
                         t(), a(o.L.USER_DISMISS);

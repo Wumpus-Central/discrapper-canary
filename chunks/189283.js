@@ -1,11 +1,11 @@
-n.d(t, { s: () => _ });
+n.d(t, { s: () => h });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(1561),
     l = n(993365),
-    c = n(4342);
+    c = n(964423);
 function u(e) {
     switch (e) {
         case 'tab':
@@ -33,25 +33,26 @@ function f(e) {
             return c.pillItemSelected;
     }
 }
+function _(e) {
+    return 'pill' === e ? c.pillItemText : void 0;
+}
 function p(e) {
-    let { option: t, selected: n, onClick: o, look: u, className: p, selectedClassName: _ } = e,
-        h = { [f(u)]: n };
-    null != _ && (h[_] = n);
-    let m = i.useCallback((e) => o(t, e), [o, t]);
+    let { option: t, selected: n, onClick: o, look: u, className: p } = e,
+        h = i.useCallback((e) => o(t, e), [o, t]);
     return (0, r.jsx)(s.P, {
-        className: a()(d(u), p, h),
-        onClick: m,
+        className: a()(d(u), p, { [f(u)]: n }),
+        onClick: h,
         children: (0, r.jsxs)(l.x, {
-            className: c.controlText,
+            className: a()(c.controlText, _(u)),
             variant: 'text-sm/medium',
             color: 'none',
             children: [null != t.icon ? (0, r.jsx)(t.icon, { className: c.icon }) : null, t.name]
         })
     });
 }
-function _(e) {
-    let { options: t, value: n, onChange: o, look: s = 'tab', className: l, optionClassName: c, selectedOptionClassName: d } = e,
-        f = i.useCallback(
+function h(e) {
+    let { options: t, value: n, onChange: o, look: s = 'tab', className: l, optionClassName: c } = e,
+        d = i.useCallback(
             (e) => {
                 var t;
                 let i = n === e.value;
@@ -62,16 +63,15 @@ function _(e) {
                         option: e,
                         look: s,
                         onClick: o,
-                        className: c,
-                        selectedClassName: d
+                        className: c
                     },
-                    null !== (t = e.key) && void 0 !== t ? t : String(e.value)
+                    null != (t = e.key) ? t : String(e.value)
                 );
             },
-            [n, s, o, c, d]
+            [n, s, o, c]
         );
     return (0, r.jsx)('div', {
         className: a()(u(s), l),
-        children: t.map(f)
+        children: t.map(d)
     });
 }

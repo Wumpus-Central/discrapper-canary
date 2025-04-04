@@ -1,12 +1,12 @@
 n.d(t, {
     AE: () => c,
-    JS: () => _,
+    JS: () => p,
     Qu: () => h,
     Ws: () => g,
     bk: () => m,
     ee: () => f,
     ou: () => d,
-    zi: () => p
+    zi: () => _
 }),
     n(47120);
 var r = n(192379),
@@ -32,15 +32,15 @@ function u(e) {
 function d(e, t, r) {
     var a, c, d;
     let f = null != r ? o.Z.getDetectableGame(r) : null,
-        { default: p } = n(371651),
-        _ = null !== (a = null == p ? void 0 : p.getMostRecentOverlayRenderMethod()) && void 0 !== a ? a : void 0,
-        h = null != _ ? i.gl[_] : void 0;
+        { default: _ } = n(371651),
+        p = null != (a = null == _ ? void 0 : _.getMostRecentOverlayRenderMethod()) ? a : void 0,
+        h = null != p ? i.gl[p] : void 0;
     s.default.track(l.rMx.OVERLAY_TOGGLED, {
         enabled: e,
         setting_type: u(t),
         client_setting_type: t,
-        application_id: null !== (c = null == f ? void 0 : f.id) && void 0 !== c ? c : void 0,
-        application_name: null !== (d = null == f ? void 0 : f.name) && void 0 !== d ? d : void 0,
+        application_id: null != (c = null == f ? void 0 : f.id) ? c : void 0,
+        application_name: null != (d = null == f ? void 0 : f.name) ? d : void 0,
         most_recent_overlay_render_method: h
     });
 }
@@ -63,20 +63,20 @@ function f(e, t) {
         n
     );
 }
-function p(e, t) {
+function _(e, t) {
     var n, r, i;
     let { locked: o, shownUserIds: c, liveUserIds: u, contentInventoryIds: d } = t;
-    ((null !== (n = null == c ? void 0 : c.length) && void 0 !== n ? n : 0) !== 0 || (null !== (r = null == u ? void 0 : u.length) && void 0 !== r ? r : 0) !== 0 || (null !== (i = null == d ? void 0 : d.length) && void 0 !== i ? i : 0) !== 0) &&
+    ((null != (n = null == c ? void 0 : c.length) ? n : 0) !== 0 || (null != (r = null == u ? void 0 : u.length) ? r : 0) !== 0 || (null != (i = null == d ? void 0 : d.length) ? i : 0) !== 0) &&
         s.default.track(l.rMx.WIDGET_CONTENT_SHOWN, {
             overlay_locked: o,
             widget_type: e,
             shown_user_ids: c,
             live_user_ids: u,
             content_inventory_ids: d,
-            media_session_id: a.Z.getMediaSessionId()
+            media_session_id: a.ZP.getMediaSessionId()
         });
 }
-function _(e, t) {
+function p(e, t) {
     let { pinned: n, opacity: r } = t;
     s.default.track(l.rMx.WIDGET_SETTING_UPDATED, {
         widget_type: e,
@@ -97,6 +97,6 @@ function g(e, t) {
         interaction_type: n,
         interaction_value: r,
         target_user_id: i,
-        media_session_id: a.Z.getMediaSessionId()
+        media_session_id: a.ZP.getMediaSessionId()
     });
 }

@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function p(e, t) {
         e
     );
 }
-let _ = (e) => {
+let p = (e) => {
         let [t, n] = i.useState(!1),
             r = null != e ? e : t,
             o = r !== (0, s.Z)(r);
@@ -78,8 +78,8 @@ let _ = (e) => {
     };
 function m(e) {
     let { focused: t, focusedChanged: n } = h(),
-        { visible: o, visibleChanged: a, reference: s } = _(e.overrideVisibility),
-        l = p(d({}, e), {
+        { visible: o, visibleChanged: a, reference: s } = p(e.overrideVisibility),
+        l = _(d({}, e), {
             focused: t,
             focusedChanged: n,
             visible: o,

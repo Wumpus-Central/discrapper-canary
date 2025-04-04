@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(670596),
     l = n(743236),
     c = n(939350),
-    u = n(253068);
+    u = n(906944);
 function d(e, t, n) {
     return (
         t in e
@@ -60,21 +60,21 @@ function p(e, t) {
     );
 }
 function h(e) {
-    let { color: t = 'default', label: n, control: o, disabled: d, isFocused: _, showDefaultFocus: h = !1, menuItemProps: g, onClose: m } = e,
+    let { color: t = 'default', label: n, control: o, disabled: d, isFocused: _, showDefaultFocus: h = !1, menuItemProps: m, onClose: g } = e,
         { onInteraction: E } = i.useContext(s.p),
-        v = i.useRef(null),
-        b = i.useRef(null);
+        b = i.useRef(null),
+        y = i.useRef(null);
     i.useLayoutEffect(() => {
         var e, t, n;
-        _ ? ((0, l.F)(v), null === (e = b.current) || void 0 === e || e.focus()) : null === (n = b.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
+        _ ? ((0, l.F)(b), null == (e = y.current) || e.focus()) : null == (n = y.current) || null == (t = n.blur) || t.call(n);
     }, [_]);
-    let y = i.useCallback(() => {
+    let v = i.useCallback(() => {
             var e, t;
-            (null === (t = b.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && m();
-        }, [m]),
+            (null == (t = y.current) || null == (e = t.activate) ? void 0 : e.call(t)) && g();
+        }, [g]),
         O = o(
             {
-                onClose: m,
+                onClose: g,
                 disabled: d,
                 isFocused: _,
                 onInteraction: i.useCallback(
@@ -84,14 +84,14 @@ function h(e) {
                     [E]
                 )
             },
-            b
+            y
         );
     return (0, r.jsxs)(
         'div',
         p(
             f(
                 {
-                    onClick: y,
+                    onClick: v,
                     className: a()(u.item, c._[t], {
                         [u.disabled]: d,
                         [u.focused]: h && _,
@@ -99,7 +99,7 @@ function h(e) {
                     }),
                     'aria-disabled': d
                 },
-                g
+                m
             ),
             {
                 children: [

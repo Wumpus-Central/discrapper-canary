@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => I }), n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -57,8 +57,8 @@ function f(e, t) {
         e
     );
 }
-let p = 'daily_cap',
-    _ = 3,
+let _ = 'daily_cap',
+    p = 3,
     h = {
         numberOfDCsShownToday: 0,
         dailyCapPeriodStart: null,
@@ -82,35 +82,35 @@ function E(e) {
     let { value: t } = e;
     h.newUserMinAgeRequiredOverridden = t;
 }
-function v(e) {
+function b(e) {
     let { dismissibleContent: t } = e,
         n = new Date();
-    if ((h.renderedAtTimestamps.set(t, n.getTime()), !(s.O.has(t) || h.dailyCapOverridden || h.dismissibleContentSeenDuringSession.has(t)))) {
+    if ((h.renderedAtTimestamps.set(t, n.getTime()), !s.O.has(t) && !h.dailyCapOverridden) && !h.dismissibleContentSeenDuringSession.has(t)) {
         if ((h.dismissibleContentSeenDuringSession.add(t), null == h.dailyCapPeriodStart)) {
             let e = new Date();
             e.setHours(0, 0, 0, 0), (h.dailyCapPeriodStart = e.getTime());
         }
         (h.numberOfDCsShownToday += 1),
-            h.numberOfDCsShownToday > _ &&
+            h.numberOfDCsShownToday > p &&
                 a.default.track(l.rMx.DCF_CAP_EXCEEDED, {
-                    cap_type: p,
+                    cap_type: _,
                     dismissible_content: t,
                     shown_dcs: h.numberOfDCsShownToday
                 });
     }
 }
-function b(e) {
+function y(e) {
     let { dismissibleContent: t } = e;
     (h.lastDCDismissed = t), h.renderedAtTimestamps.delete(t);
 }
-function y() {
+function v() {
     (h.dailyCapPeriodStart = null), (h.numberOfDCsShownToday = 0), (h.dismissibleContentSeenDuringSession = new Set()), (h.lastDCDismissed = null);
 }
 class O extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r;
-            (h.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0), (h.dailyCapPeriodStart = e.dailyCapPeriodStart), (h.dailyCapOverridden = null !== (n = e.dailyCapOverridden) && void 0 !== n && n), (h.newUserMinAgeRequiredOverridden = null !== (r = e.newUserMinAgeRequiredOverridden) && void 0 !== r && r);
+            (h.numberOfDCsShownToday = null != (t = e.numberOfDCsShownToday) ? t : 0), (h.dailyCapPeriodStart = e.dailyCapPeriodStart), (h.dailyCapOverridden = null != (n = e.dailyCapOverridden) && n), (h.newUserMinAgeRequiredOverridden = null != (r = e.newUserMinAgeRequiredOverridden) && r);
         }
         (h.dismissibleContentSeenDuringSession = new Set()), (h.lastDCDismissed = null);
     }
@@ -132,15 +132,15 @@ class O extends (r = i.ZP.PersistedStore) {
     hasUserHitDCCap(e) {
         if ((null != e && (s.O.has(e) || h.dailyCapOverridden)) || (null != e && h.dismissibleContentSeenDuringSession.has(e))) return !1;
         let t = new Date();
-        return t.setHours(0, 0, 0, 0), null != h.dailyCapPeriodStart && h.dailyCapPeriodStart < t.getTime() && ((h.numberOfDCsShownToday = 0), (h.dailyCapPeriodStart = null)), h.numberOfDCsShownToday >= _;
+        return t.setHours(0, 0, 0, 0), null != h.dailyCapPeriodStart && h.dailyCapPeriodStart < t.getTime() && ((h.numberOfDCsShownToday = 0), (h.dailyCapPeriodStart = null)), h.numberOfDCsShownToday >= p;
     }
 }
 c(O, 'displayName', 'DismissibleContentFrameworkStore'), c(O, 'persistKey', 'DismissibleContentFrameworkStore'), c(O, 'migrations', [(e) => u({}, e)]);
-let S = new O(o.Z, {
+let I = new O(o.Z, {
     LOGOUT: m,
     DCF_DAILY_CAP_OVERRIDE: g,
     DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: E,
-    DCF_HANDLE_DC_SHOWN: v,
-    DCF_HANDLE_DC_DISMISSED: b,
-    DCF_RESET: y
+    DCF_HANDLE_DC_SHOWN: b,
+    DCF_HANDLE_DC_DISMISSED: y,
+    DCF_RESET: v
 });

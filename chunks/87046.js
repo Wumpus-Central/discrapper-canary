@@ -5,5 +5,5 @@ var n = r(926515),
     c = RegExp.prototype;
 t.exports = function (t) {
     var e = t.flags;
-    return void 0 === e && !('flags' in c) && !i(t, 'flags') && o(c, t) ? n(a, t) : e;
+    return !(void 0 === e && !('flags' in c) && !i(t, 'flags') && o(c, t)) ? e : n(a, t);
 };

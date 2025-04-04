@@ -1,32 +1,32 @@
-l.d(n, { Z: () => o });
-var t = l(200651);
-l(192379);
-var i = l(100527),
-    a = l(906732),
-    s = l(26033),
-    r = l(194811),
-    c = l(382405),
-    d = l(670451);
-function o(e) {
-    let { user: n, entry: l, className: o, onClose: u, hideContextMenu: x = !1, appContext: m } = e,
-        { analyticsLocations: h } = (0, a.ZP)(i.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
-    return (0, s.Rh)(l)
-        ? (0, t.jsx)(a.Gt, {
-              value: h,
-              children: (0, t.jsx)(c.Z, {
-                  entry: l,
+t.d(n, { Z: () => d });
+var s = t(200651);
+t(192379);
+var a = t(100527),
+    i = t(906732),
+    l = t(26033),
+    r = t(194811),
+    c = t(382405),
+    o = t(670451);
+function d(e) {
+    let { user: n, entry: t, className: d, onClose: x, hideContextMenu: m = !1, appContext: u } = e,
+        { analyticsLocations: E } = (0, i.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
+    return (0, l.Rh)(t)
+        ? (0, s.jsx)(i.Gt, {
+              value: E,
+              children: (0, s.jsx)(c.Z, {
+                  entry: t,
                   user: n,
-                  className: o,
-                  onClose: u,
-                  header: (0, t.jsx)(r.Z, {
-                      contextMenu: x
+                  className: d,
+                  onClose: x,
+                  header: (0, s.jsx)(r.Z, {
+                      contextMenu: m
                           ? null
-                          : (0, t.jsx)(d.Z, {
+                          : (0, s.jsx)(o.Z, {
                                 display: 'recent',
-                                entry: l,
+                                entry: t,
                                 user: n,
-                                onClose: u,
-                                appContext: m
+                                onClose: x,
+                                appContext: u
                             })
                   })
               })

@@ -102,11 +102,11 @@
     function f(e, t) {
         for (var n = t; n; ) {
             if (n == e) return !0;
-            n = p(n);
+            n = _(n);
         }
         return !1;
     }
-    function p(e) {
+    function _(e) {
         var t = e.parentNode;
         return t && 11 == t.nodeType && t.host ? t.host : t;
     }
@@ -205,12 +205,12 @@
         }),
         (i.prototype._computeTargetAndRootIntersection = function (n, r) {
             if ('none' != e.getComputedStyle(n).display) {
-                for (var i = u(n), o = i, a = p(n), s = !1; !s; ) {
+                for (var i = u(n), o = i, a = _(n), s = !1; !s; ) {
                     var l = null,
                         d = 1 == a.nodeType ? e.getComputedStyle(a) : {};
                     if ('none' == d.display) return;
                     if ((a == this.root || a == t ? ((s = !0), (l = r)) : a != t.body && a != t.documentElement && 'visible' != d.overflow && (l = u(a)), l && !(o = c(l, o)))) break;
-                    a = p(a);
+                    a = _(a);
                 }
                 return o;
             }

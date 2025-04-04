@@ -1,10 +1,10 @@
 n.d(t, {
-    Iq: () => p,
+    Iq: () => _,
     UR: () => h,
-    Ww: () => _,
+    Ww: () => p,
     c$: () => m,
     g: () => f,
-    i2: () => v,
+    i2: () => b,
     tR: () => E,
     tV: () => g
 }),
@@ -22,9 +22,9 @@ function d() {
     let r = s.Z.getChannelId(),
         i = a.Z.getBasicChannel(r);
     return {
-        guild_id: null !== (e = null == i ? void 0 : i.guild_id) && void 0 !== e ? e : c,
-        channel_id: null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : u,
-        channel_type: null !== (n = null == i ? void 0 : i.type) && void 0 !== n ? n : l.d4z.UNKNOWN
+        guild_id: null != (e = null == i ? void 0 : i.guild_id) ? e : c,
+        channel_id: null != (t = null == i ? void 0 : i.id) ? t : u,
+        channel_type: null != (n = null == i ? void 0 : i.type) ? n : l.d4z.UNKNOWN
     };
 }
 function f(e) {
@@ -35,8 +35,8 @@ function f(e) {
         rejectWithError: !1
     });
 }
-async function p(e) {
-    let { authorize: t, clientId: n, scopes: r, responseType: o, redirectUri: a, codeChallenge: s, codeChallengeMethod: c, state: u, permissions: f, guildId: p, channelId: _, integrationType: h, nonce: m } = e;
+async function _(e) {
+    let { authorize: t, clientId: n, scopes: r, responseType: o, redirectUri: a, codeChallenge: s, codeChallengeMethod: c, state: u, permissions: f, guildId: _, channelId: p, integrationType: h, nonce: m } = e;
     return (
         await i.tn.post({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -51,9 +51,9 @@ async function p(e) {
                 nonce: m
             },
             body: {
-                guild_id: p,
-                webhook_channel_id: null != p && null != _ ? _ : void 0,
-                channel_id: null == p && null != _ ? _ : void 0,
+                guild_id: _,
+                webhook_channel_id: null != _ && null != p ? p : void 0,
+                channel_id: null == _ && null != p ? p : void 0,
                 permissions: f,
                 authorize: t,
                 integration_type: h,
@@ -64,7 +64,7 @@ async function p(e) {
         })
     ).body;
 }
-async function _(e) {
+async function p(e) {
     let { clientId: t, scopes: n, responseType: r, redirectUri: o, codeChallenge: a, codeChallengeMethod: s, state: c, integrationType: u, nonce: d, signal: f } = e;
     return (
         await i.tn.get({
@@ -116,7 +116,7 @@ async function E(e, t) {
         rejectWithError: !1
     });
 }
-async function v(e, t, n) {
+async function b(e, t, n) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_FINISH,
         body: {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -8,43 +8,43 @@ var r = n(200651),
     c = n(213053),
     u = n(652853),
     d = n(228168),
-    f = n(292481);
-let p = Object.assign(
+    f = n(750883);
+let _ = Object.assign(
     i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, profileType: o, className: p, pendingThemeColors: _, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,
+        let { user: n, displayProfile: i, profileType: o, className: _, pendingThemeColors: p, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,
             {
                 theme: E,
-                primaryColor: v,
-                secondaryColor: b
+                primaryColor: b,
+                secondaryColor: y
             } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
-                pendingThemeColors: _,
+                pendingThemeColors: p,
                 isPreview: g
             }),
-            { profileThemeStyle: y, profileThemeClassName: O } = (0, c.Z)({
+            { profileThemeStyle: v, profileThemeClassName: O } = (0, c.Z)({
                 theme: null != h ? h : E,
-                primaryColor: v,
-                secondaryColor: b
+                primaryColor: b,
+                secondaryColor: y
             }),
-            S = {
+            I = {
                 [f.biteSize]: o === d.y0.BITE_SIZE,
                 [f.fullSize]: o === d.y0.FULL_SIZE,
                 [f.panel]: o === d.y0.PANEL
             };
         return (0, r.jsx)('div', {
-            className: a()(f.outer, O, S, p),
-            style: y,
+            className: a()(f.outer, O, I, _),
+            style: v,
             ref: t,
             children: (0, r.jsx)('div', {
-                className: a()(f.inner, S),
+                className: a()(f.inner, I),
                 children: (0, r.jsx)(s.ze6, {
                     theme: null != h ? h : E,
                     children: (0, r.jsx)(u.X, {
                         profileType: o,
                         theme: null != h ? h : E,
-                        primaryColor: v,
-                        secondaryColor: b,
+                        primaryColor: b,
+                        secondaryColor: y,
                         children: m
                     })
                 })

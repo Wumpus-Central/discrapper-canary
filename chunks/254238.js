@@ -1,11 +1,11 @@
 n.d(t, {
     LO: () => C,
     On: () => T,
-    Vv: () => S,
-    _: () => I,
+    Vv: () => I,
+    _: () => S,
     bp: () => R,
     ef: () => O,
-    s6: () => y,
+    s6: () => v,
     sh: () => D
 }),
     n(653041),
@@ -20,8 +20,8 @@ var r = n(434179),
     u = n(797258),
     d = n(626135),
     f = n(960048),
-    p = n(607214),
-    _ = n(258609),
+    _ = n(607214),
+    p = n(258609),
     h = n(893387),
     m = n(981631),
     g = n(388032);
@@ -38,7 +38,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,15 +54,15 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n, r;
     d.default.track(m.rMx.REMOTE_COMMAND_SENT, {
         command_type: e,
-        remote_platform: null === (r = u.Z.getSessionById(t)) || void 0 === r ? void 0 : null === (n = r.clientInfo) || void 0 === n ? void 0 : n.os
+        remote_platform: null == (r = u.Z.getSessionById(t)) || null == (n = r.clientInfo) ? void 0 : n.os
     });
 }
-async function y() {
-    let e = _.Z.getAwaitingRemoteSessionInfo(),
+async function v() {
+    let e = p.Z.getAwaitingRemoteSessionInfo(),
         t = null == e ? void 0 : e.nonce;
     a.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
     let n = [];
@@ -82,7 +82,7 @@ function O(e) {
         sessionId: e
     });
 }
-function S(e, t) {
+function I(e, t) {
     let { selfMute: n, selfDeaf: r } = t;
     a.Z.dispatch({
         type: 'REMOTE_COMMAND',
@@ -93,16 +93,16 @@ function S(e, t) {
             self_deaf: r
         }
     }),
-        b('VOICE_STATE_UPDATE', e);
+        y('VOICE_STATE_UPDATE', e);
 }
-function I(e) {
+function S(e) {
     a.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
         payload: { type: 'DISCONNECT' }
     }),
-        b('DISCONNECT', e),
-        y();
+        y('DISCONNECT', e),
+        v();
 }
 function T(e, t, n, r) {
     let i = (0, l.z)(n);
@@ -110,7 +110,7 @@ function T(e, t, n, r) {
         (a.Z.dispatch({
             type: 'REMOTE_COMMAND',
             sessionId: e,
-            payload: v(
+            payload: b(
                 {
                     type: 'AUDIO_SETTINGS_UPDATE',
                     context: i,
@@ -119,12 +119,12 @@ function T(e, t, n, r) {
                 r
             )
         }),
-        b('AUDIO_SETTINGS_UPDATE', e));
+        y('AUDIO_SETTINGS_UPDATE', e));
 }
 async function N() {
     let e;
     try {
-        let t = null != c.Z.getRTCConnectionId() ? i.o.TRANSFER_EXISTING_CALL : i.o.CREATE_NEW_CALL;
+        let t = null != c.ZP.getRTCConnectionId() ? i.o.TRANSFER_EXISTING_CALL : i.o.CREATE_NEW_CALL;
         e = (
             await o.tn.post({
                 url: m.ANM.CONNECT_REQUEST_CREATE,
@@ -253,7 +253,7 @@ async function w(e, t, n) {
     });
 }
 async function D(e, t, n) {
-    await p.Z.maybeShowPTTAlert(e), await y();
+    await _.Z.maybeShowPTTAlert(e), await v();
     let r = await N();
     await P(e, t, n, r), (0, h.Z)(n.id, e);
 }

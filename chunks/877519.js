@@ -52,11 +52,11 @@ class m extends r.Z {
                     ));
             }),
             u(this, 'handleRunningGamesChange', () => {
-                !(this.instantiatedAt + h > Date.now() || a.Z.lastFetchedCurrentQuests + h > Date.now()) && this._fetch();
+                this.instantiatedAt + h > Date.now() || a.Z.lastFetchedCurrentQuests + h > Date.now() || this._fetch();
             }),
             u(this, 'handleUserSettingsProtoUpdate', (e) => {
                 let { partial: t, settings: n, wasSaved: r } = e;
-                !(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= p) && ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch());
+                !('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= p || ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch());
             }),
             u(this, 'handleLogout', () => {
                 window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0);

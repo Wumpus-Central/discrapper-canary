@@ -23,7 +23,7 @@ var s = n(477660),
     u = n(823379),
     d = n(172244),
     f = n(571989);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -88,12 +88,12 @@ function E(e) {
         };
     return g.set(t, o), o;
 }
-let v = ['http:', 'https:', 'discord:'],
-    b = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
-    y = [...b, d.b.EMOJI, d.b.CUSTOM_EMOJI],
+let b = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
+    y = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
+    v = [...y, d.b.EMOJI, d.b.CUSTOM_EMOJI],
     O = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
-    S = [d.b.TEXT],
-    I = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
+    I = [d.b.TEXT],
+    S = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
 function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (Array.isArray(e) || (e = [e]), e)) {
@@ -148,8 +148,8 @@ function A(e) {
     try {
         var t;
         let n = new URL(e),
-            r = null !== (t = n.protocol) && void 0 !== t ? t : '';
-        if (!v.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
+            r = null != (t = n.protocol) ? t : '';
+        if (!b.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
         let i = (0, f.MO)(n);
         (n.username = ''), (n.password = '');
@@ -162,7 +162,7 @@ function A(e) {
         return null;
     }
 }
-let C = m(_({}, l().defaultRules.link), {
+let C = m(p({}, l().defaultRules.link), {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
         let [r, o, a, s] = e,
@@ -171,35 +171,35 @@ let C = m(_({}, l().defaultRules.link), {
                 content: r
             }),
             f = E(a),
-            p = E(o),
+            _ = E(o),
             h = E(null != s ? s : ''),
             g = f.whitespaceSanitized,
-            v = p.fullySanitized,
+            b = _.fullySanitized,
             C = h.fullySanitized,
-            R = v.trim();
+            R = b.trim();
         if (0 === g.trim().length || 0 === R.length) return u();
         let P = A(l().unescapeUrl(a)),
             w = null == P,
             D = (0, c.ZP)(o).length > 0 || (0, c.ZP)(s).length > 0;
         if (w || D) return u();
-        let x = m(_({}, n), {
+        let L = m(p({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             }),
-            L = n.allowEmojiLinks ? y : b,
-            M = [...L, ...O],
-            k = [...S, ...I],
-            j = T(t(v, x), M, [d.b.EMOJI]),
-            U = T(t(C, x), k);
+            x = n.allowEmojiLinks ? v : y,
+            M = [...x, ...O],
+            k = [...I, ...S],
+            j = T(t(b, L), M, [d.b.EMOJI]),
+            U = T(t(C, L), k);
         if (null == j || null == U || 0 === N(j).trim().length) return u();
-        let G = i().pick(t.rules, L),
-            B = l().parserFor(G)(p.whitespaceSanitized, x),
-            Z = h.whitespaceSanitized,
-            { target: F } = P;
+        let G = i().pick(t.rules, x),
+            B = l().parserFor(G)(_.whitespaceSanitized, L),
+            F = h.whitespaceSanitized,
+            { target: V } = P;
         return {
             content: B,
-            target: F,
-            title: Z
+            target: V,
+            title: F
         };
     }
 });

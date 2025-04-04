@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var r,
     i = n(442837),
     o = n(570140),
@@ -58,12 +58,12 @@ function u(e, t) {
 let d = {};
 function f(e) {
     let t = a.Z.getChannel(e);
-    return !!(null != t && t.isForumLikeChannel());
+    return null != t && !!t.isForumLikeChannel();
 }
-function p(e) {
+function _(e) {
     var t;
     let n =
-        null !== (t = d[e]) && void 0 !== t
+        null != (t = d[e])
             ? t
             : {
                   query: null,
@@ -72,10 +72,10 @@ function p(e) {
               };
     return (d[e] = n), n;
 }
-function _(e) {
+function p(e) {
     let { channelId: t, query: n } = e;
     if (!f(t)) return !1;
-    let r = p(t);
+    let r = _(t);
     d[t] = u(l({}, r), {
         query: n,
         results: null
@@ -84,13 +84,13 @@ function _(e) {
 function h(e) {
     let { channelId: t } = e;
     if (!f(t)) return !1;
-    let n = p(t);
+    let n = _(t);
     d[t] = u(l({}, n), { loading: !0 });
 }
 function m(e) {
     let { channelId: t, threadIds: n } = e;
     if (!f(t)) return !1;
-    let r = p(t);
+    let r = _(t);
     d[t] = u(l({}, r), {
         loading: !1,
         results: n
@@ -99,7 +99,7 @@ function m(e) {
 function g(e) {
     let { channelId: t } = e;
     if (!f(t)) return !1;
-    let n = p(t);
+    let n = _(t);
     d[t] = u(l({}, n), {
         loading: !1,
         results: []
@@ -109,20 +109,20 @@ function E(e) {
     let { channelId: t } = e;
     return !!f(t) && delete d[t];
 }
-function v(e) {
+function b(e) {
     var t;
     let { channel: n } = e,
         r = n.parent_id;
     if (null == r) return !1;
     let i = d[r];
     if (null == i) return !1;
-    d[r] = u(l({}, i), { results: null === (t = i.results) || void 0 === t ? void 0 : t.filter((e) => n.id !== e) });
+    d[r] = u(l({}, i), { results: null == (t = i.results) ? void 0 : t.filter((e) => n.id !== e) });
 }
-function b(e) {
+function y(e) {
     let { channel: t } = e;
     return delete d[t.id];
 }
-function y() {
+function v() {
     d = {};
 }
 class O extends (r = i.ZP.Store) {
@@ -133,7 +133,7 @@ class O extends (r = i.ZP.Store) {
     getSearchLoading(e) {
         var t;
         let n = d[e];
-        return null !== (t = null == n ? void 0 : n.loading) && void 0 !== t && t;
+        return null != (t = null == n ? void 0 : n.loading) && t;
     }
     getSearchResults(e) {
         let t = d[e];
@@ -145,11 +145,11 @@ class O extends (r = i.ZP.Store) {
     }
 }
 s(O, 'displayName', 'ForumSearchStore');
-let S = new O(o.Z, {
-    CONNECTION_OPEN: y,
-    THREAD_DELETE: v,
-    CHANNEL_DELETE: b,
-    FORUM_SEARCH_QUERY_UPDATED: _,
+let I = new O(o.Z, {
+    CONNECTION_OPEN: v,
+    THREAD_DELETE: b,
+    CHANNEL_DELETE: y,
+    FORUM_SEARCH_QUERY_UPDATED: p,
     FORUM_SEARCH_START: h,
     FORUM_SEARCH_SUCCESS: m,
     FORUM_SEARCH_FAILURE: g,

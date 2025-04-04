@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => _,
+    G: () => p,
     W: () => m
 });
 var r = n(442837),
@@ -12,8 +12,8 @@ var r = n(442837),
     u = n(937579),
     d = n(474936),
     f = n(981631);
-let p = 259200000;
-async function _(e) {
+let _ = 259200000;
+async function p(e) {
     let t = a.default.getCurrentUser(),
         n = (0, c.I5)(t);
     null == t ||
@@ -24,7 +24,7 @@ async function _(e) {
             excludeEnded: !1
         }));
     let r = l.Z.getReverseTrialEntitlement(!0);
-    return !!(!n && null != r && null != r.endsAt && r.endsAt.getTime() < Date.now()) && !(r.endsAt.getTime() < Date.now() - p) && r.sourceType === f.kNB.REVERSE_TRIAL && (null == e && (await (0, u.T)()), null != s.Z.getUserTrialOffer(d.Rt));
+    return (!(!(!n && null != r && null != r.endsAt && r.endsAt.getTime() < Date.now()) || r.endsAt.getTime() < Date.now() - _) && r.sourceType === f.kNB.REVERSE_TRIAL && (null == e && (await (0, u.T)()), null != s.Z.getUserTrialOffer(d.Rt))) || !1;
 }
 function h() {
     let e = (0, r.e7)([a.default], () => a.default.getCurrentUser()),

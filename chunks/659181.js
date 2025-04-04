@@ -28,9 +28,9 @@ class d extends o.Z {
             type: e.type,
             applicationId: e.application_id,
             application: null != e.application ? s.ZP.createFromServer(e.application) : null,
-            eligiblePaymentGateways: null !== (t = e.eligible_payment_gateways) && void 0 !== t ? t : null,
+            eligiblePaymentGateways: null != (t = e.eligible_payment_gateways) ? t : null,
             productLine: e.product_line,
-            name: null !== (n = e.name) && void 0 !== n ? n : '',
+            name: null != (n = e.name) ? n : '',
             releaseDate: null != e.release_date ? i()(e.release_date) : null,
             preorderReleaseAt: null != e.preorder_release_at ? i()(e.preorder_release_at) : null,
             preorderApproximateReleaseDate: e.preorder_approximate_release_date,
@@ -55,16 +55,16 @@ class d extends o.Z {
                           premium: u.premium
                       }
                     : null,
-            premium: null !== (r = e.premium) && void 0 !== r && r,
+            premium: null != (r = e.premium) && r,
             showAgeGate: e.show_age_gate || !1,
             restricted: e.restricted || !1,
-            slug: null !== (o = e.slug) && void 0 !== o ? o : '',
+            slug: null != (o = e.slug) ? o : '',
             exclusive: e.exclusive || !1,
-            locales: null !== (a = e.locales) && void 0 !== a ? a : ['en-US'],
+            locales: null != (a = e.locales) ? a : ['en-US'],
             flags: e.flags,
             externalPurchaseUrl: e.external_purchase_url,
-            deleted: null !== (l = e.deleted) && void 0 !== l && l,
-            bundledSkuIds: null !== (c = e.bundled_sku_ids) && void 0 !== c ? c : []
+            deleted: null != (l = e.deleted) && l,
+            bundledSkuIds: null != (c = e.bundled_sku_ids) ? c : []
         });
     }
     get supportedOperatingSystems() {
@@ -85,7 +85,7 @@ class d extends o.Z {
         if (null == n) return null;
         if (null != e) {
             var r;
-            let t = null === (r = n.premium) || void 0 === r ? void 0 : r[e];
+            let t = null == (r = n.premium) ? void 0 : r[e];
             if (null != t)
                 return {
                     amount: t.amount,

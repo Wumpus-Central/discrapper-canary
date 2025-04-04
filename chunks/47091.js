@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -62,7 +62,7 @@ function _(e, t) {
 function h(e) {
     let { user: t } = e,
         d = (0, a.ML)(t.id),
-        p = l.ZP.useName(t),
+        _ = l.ZP.useName(t),
         h = i.useCallback(
             (e) => {
                 let { id: i, name: a } = e;
@@ -71,10 +71,10 @@ function h(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            _(
+                            p(
                                 f(
                                     {
-                                        header: u.NW.formatToPlainString(u.t['GOFk9/'], { name: p }),
+                                        header: u.NW.formatToPlainString(u.t['GOFk9/'], { name: _ }),
                                         confirmText: u.NW.string(u.t['cY+Ooa']),
                                         cancelText: u.NW.string(u.t['ETE/oK']),
                                         onConfirm: () =>
@@ -90,7 +90,7 @@ function h(e) {
                                     children: (0, r.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         children: u.NW.format(u.t.dsU5bm, {
-                                            name: p,
+                                            name: _,
                                             gameName: a
                                         })
                                     })
@@ -99,7 +99,7 @@ function h(e) {
                         );
                 });
             },
-            [p, t]
+            [_, t]
         );
     return (0, c.Z)({
         user: t,

@@ -16,12 +16,12 @@ var r = n(200651),
     g = n(74538),
     E = n(987209),
     b = n(563132),
-    v = n(632580),
-    y = n(919778),
+    y = n(632580),
+    v = n(919778),
     O = n(435020),
     I = n(612853),
     S = n(981631),
-    T = n(218586);
+    T = n(843856);
 function N(e) {
     let { premiumSubscription: t, setPurchaseState: n, onBack: o, onNext: N, legalTermsNodeRef: A, flashLegalTerms: C, invoiceError: R, planError: P, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: M, analyticsLocation: k, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: F, isTrial: V = !1 } = e,
         { selectedPlan: Z, priceOptions: H, setHasAcceptedTerms: W, setPurchaseError: Y, purchaseType: K, paymentSourceId: z, paymentSources: q, selectedSkuId: Q, skusById: X, skuPricePreviewsById: J, referralCode: $, contextMetadata: ee, invoicePreview: et, inReverseTrial: en } = (0, b.JL)(),
@@ -31,32 +31,32 @@ function N(e) {
         ef = {};
     (ef.gift_style = ei), (ef.reward_sku_ids = eu && (null == ec ? void 0 : ec.skuId) != null ? [null == ec ? void 0 : ec.skuId] : []), ed === m.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (a()(null != el, 'Gift recipient must be set at purchase review step for these gift options.'), (ef.recipient_id = el.id), (ef.custom_message = eo), (ef.emoji_id = null == ea ? void 0 : ea.id), (ef.emoji_name = (null == ea ? void 0 : ea.id) == null ? (null == ea ? void 0 : ea.surrogates) : void 0), (ef.sound_id = null == es ? void 0 : es.soundId));
     let e_ = null == Z ? void 0 : Z.id,
-        ep = (0, y.sE)(x, H.paymentSourceId, e_),
+        ep = (0, v.sE)(x, H.paymentSourceId, e_),
         { analyticsLocations: eh } = (0, l.ZP)(),
         em = (0, O.m)(q, z),
         [eg, eE] = i.useState(ep),
-        [eb, ev] = i.useState(!1),
-        { hasEntitlements: ey } = (0, _.H)(e_, er),
+        [eb, ey] = i.useState(!1),
+        { hasEntitlements: ev } = (0, _.H)(e_, er),
         eO = (0, g.Ap)(H.paymentSourceId),
-        eI = ey || ep,
+        eI = ev || ep,
         eS = (0, d.U)(),
         eT = null,
         eN = null;
     if (K === S.GZQ.ONE_TIME) {
         var eA;
-        a()(null != Q, 'SKU must be selected for one-time purchases'), (eT = null !== (eA = X[Q]) && void 0 !== eA ? eA : null), a()(null != eT, 'SKU must exist and be fetched.');
+        a()(null != Q, 'SKU must be selected for one-time purchases'), (eT = null != (eA = X[Q]) ? eA : null), a()(null != eT, 'SKU must exist and be fetched.');
         let e = J[Q],
             t = null != z ? z : h.c;
         eN = null != e ? e[t] : null;
     }
     let eC = async () => {
-            await (0, v.H)({
+            await (0, y.H)({
                 setPurchaseState: n,
                 setHasAcceptedTerms: W,
                 setIsSubmitting: eE,
                 setPurchaseError: Y,
                 hasRedirectURL: eb,
-                setHasRedirectURL: ev,
+                setHasRedirectURL: ey,
                 isGift: er,
                 baseAnalyticsData: D,
                 analyticsLocation: k,

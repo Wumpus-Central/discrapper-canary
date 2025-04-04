@@ -11,7 +11,7 @@ function s(e) {
                 i = !1;
             if ((null == r ? void 0 : r.participants) != null) {
                 var s;
-                i = (null == r ? void 0 : null === (s = r.participants) || void 0 === s ? void 0 : s.find((e) => (0, a.J)(e))) != null;
+                i = (null == r || null == (s = r.participants) ? void 0 : s.find((e) => (0, a.J)(e))) != null;
             } else (null == r ? void 0 : r.userIds) != null && (i = r.userIds.has(t));
             return {
                 userActivity: n,

@@ -8,8 +8,8 @@ var r = n(581031),
     u = [],
     d = s('Reflect', 'construct'),
     f = /^\s*(?:class|function)\b/,
-    p = r(f.exec),
-    _ = !f.exec(c),
+    _ = r(f.exec),
+    p = !f.exec(c),
     h = function (e) {
         if (!o(e)) return !1;
         try {
@@ -27,7 +27,7 @@ var r = n(581031),
                 return !1;
         }
         try {
-            return _ || !!p(f, l(e));
+            return p || !!_(f, l(e));
         } catch (e) {
             return !0;
         }

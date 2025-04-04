@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     o = n(570140);
@@ -40,7 +40,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 a(f, 'displayName', 'DispatchApplicationLaunchSetupStore');
-let p = new f(o.Z, {
+let _ = new f(o.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: d,
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: c,
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: u

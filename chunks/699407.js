@@ -1,6 +1,6 @@
 let r, i;
 n.d(t, {
-    X: () => v,
+    X: () => b,
     l: () => I
 }),
     n(177593),
@@ -68,16 +68,16 @@ function _(e, t) {
 let p = 1500,
     h = 10000,
     m = 1500,
-    g = null !== (o = window.requestIdleCallback) && void 0 !== o ? o : (e) => setImmediate(() => e()),
+    g = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() => e()),
     E = new c.R(),
-    v = {
+    b = {
         handleConnectionOpen: () => {},
         handleConnectionClosed: () => {},
         handleFingerprint: () => {},
         handleTrack: () => {}
     },
-    b = [],
-    y = null,
+    y = [],
+    v = null,
     O = () => Promise.resolve({ sessionId: void 0 }),
     I = (e) => {
         var t;
@@ -88,25 +88,25 @@ let p = 1500,
             return null != t ? (0, a.s)(t) : null;
         }
         function A() {
-            return 0 !== b.length && (null != i ? null != r : null != c());
+            return 0 !== y.length && (null != i ? null != r : null != c());
         }
         function C(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == y && A() && (y = t ? setTimeout(R, 0) : g(R, { timeout: m }));
+            null == v && A() && (v = t ? setTimeout(R, 0) : g(R, { timeout: m }));
         }
         function R() {
-            if (((y = null), !A())) return;
-            let e = b.slice();
-            (b = []),
+            if (((v = null), !A())) return;
+            let e = y.slice();
+            (y = []),
                 P(e).then(
                     () => {
                         e.forEach((e) => {
                             var t;
-                            null === (t = e.resolve) || void 0 === t || t.call(e);
+                            null == (t = e.resolve) || t.call(e);
                         });
                     },
                     (t) => {
-                        b.unshift(...e);
+                        y.unshift(...e);
                         let { message: n } = t.body || t;
                         console.warn('[AnalyticsTrackingStore] Track:', n);
                     }
@@ -126,17 +126,17 @@ let p = 1500,
             });
         }
         (m = null != S ? S : p),
-            (v.handleConnectionOpen = function (e) {
+            (b.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
                 return null != t && (r = t), null != n.id && (i = n.id), C({ shouldFlushOnNextTick: !1 }), !1;
             }),
-            (v.handleConnectionClosed = function () {
+            (b.handleConnectionClosed = function () {
                 return R(), (r = null), (i = null), !1;
             }),
-            (v.handleFingerprint = function () {
+            (b.handleFingerprint = function () {
                 return R(), !1;
             }),
-            (v.handleTrack = function (e) {
+            (b.handleTrack = function (e) {
                 let { event: t, properties: n, flush: r, fingerprint: i, resolve: o } = e;
                 return (
                     f().then((e) => {
@@ -154,7 +154,7 @@ let p = 1500,
                                 resolve: o
                             },
                             l = N(s);
-                        null != l && (s.properties.client_uuid = E.generate(l)), b.push(s), b.length > h && (b = b.slice(-h)), r ? C({ shouldFlushOnNextTick: !0 }) : C({ shouldFlushOnNextTick: !1 });
+                        null != l && (s.properties.client_uuid = E.generate(l)), y.push(s), y.length > h && (y = y.slice(-h)), r ? C({ shouldFlushOnNextTick: !0 }) : C({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );

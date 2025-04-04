@@ -9,7 +9,7 @@ var r = n(147913),
     u = n(885110),
     d = n(649739),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     return e.filter((e) => e.type === f.IIU.PLAYING && e.application_id).map((e) => e.application_id);
 }
 async function h(e) {
@@ -34,7 +34,7 @@ async function m(e) {
     if (null == t || !(0, d.Ku)('running_games_change', !1)) return;
     let n = u.Z.getActivities();
     if (0 === n.length) return;
-    let r = _([...n]);
+    let r = p([...n]);
     await h([...r]);
     let o = a.Z.getApplication(r[0]);
     null != o &&
@@ -55,7 +55,7 @@ class g extends r.Z {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'actions', {
+            _(this, 'actions', {
                 RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect
             });

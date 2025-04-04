@@ -45,7 +45,7 @@ async function p(e, t, n) {
             wallpaper_id: t,
             channel_id: e.id
         });
-        let n = (0, u.mB)(null !== (d = e.recipientFlags) && void 0 !== d ? d : 0, r.V.DISMISSED_CURRENT_CHAT_WALLPAPER, i);
+        let n = (0, u.mB)(null != (d = e.recipientFlags) ? d : 0, r.V.DISMISSED_CURRENT_CHAT_WALLPAPER, i);
         await l.Z.updatePrivateChannelRecipientFlags(e.id, n);
     } catch (t) {
         let e = new a.Hx(t);

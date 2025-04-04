@@ -7,7 +7,7 @@ let r = {},
     i = null;
 function o(e) {
     var t;
-    let n = null !== (t = r[e]) && void 0 !== t ? t : 0;
+    let n = null != (t = r[e]) ? t : 0;
     0 === n && (null == i || i(e, !0)), (r[e] = n + 1);
 }
 function a(e) {

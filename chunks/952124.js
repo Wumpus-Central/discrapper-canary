@@ -16,7 +16,7 @@ var r = n(200651),
     g = n(621853),
     E = n(475413),
     b = n(388032);
-function v(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function v(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,17 +40,17 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
 function O(e) {
-    let { user: t, guildId: n, viewProfileItem: v, onCloseProfile: O } = e,
+    let { user: t, guildId: n, viewProfileItem: y, onCloseProfile: O } = e,
         I = i.useRef(null),
         { trackUserProfileAction: S } = (0, m.KZ)(),
-        { analyticsLocations: T, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        N = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
+        { analyticsLocations: T, newestAnalyticsLocation: N } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        A = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
         C = (0, o.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
         R = null == C ? void 0 : C.application,
         P = (0, f.Z)({
@@ -68,7 +68,7 @@ function O(e) {
         w = (0, _.Z)({
             user: t,
             guildId: n,
-            location: A,
+            location: N,
             color: 'danger',
             onBlock: () =>
                 S({
@@ -84,7 +84,7 @@ function O(e) {
         D = (0, p.Z)({
             user: t,
             guildId: n,
-            location: A,
+            location: N,
             onIgnore: () =>
                 S({
                     action: 'IGNORE',
@@ -99,7 +99,7 @@ function O(e) {
         L = (0, h.Z)({
             user: t,
             guildId: n,
-            location: A,
+            location: N,
             color: 'danger',
             onAction: () =>
                 S({
@@ -117,8 +117,8 @@ function O(e) {
                 })
         }),
         M = [
-            [v],
-            N ? [P] : [],
+            [y],
+            A ? [P] : [],
             [D, w, L],
             [
                 (0, u.Z)({
@@ -150,7 +150,7 @@ function O(e) {
               children: (e) =>
                   (0, r.jsx)(
                       E.oY,
-                      y(
+                      v(
                           {
                               ref: I,
                               action: 'PRESS_OPTIONS',

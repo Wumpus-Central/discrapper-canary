@@ -20,11 +20,11 @@ t.d(n, {
     t(518263);
 var l = t(512722),
     a = t.n(l),
-    r = t(304809),
-    i = t(70956),
+    i = t(304809),
+    r = t(70956),
     s = t(208049),
     o = t(419202);
-let u = new AudioContext({ sampleRate: Math.min((0, r.N)().sampleRate, 48000) });
+let u = new AudioContext({ sampleRate: Math.min((0, i.N)().sampleRate, 48000) });
 async function c(e) {
     let n = await e.arrayBuffer();
     if (!(n instanceof ArrayBuffer)) throw Error('Unexpected file type');
@@ -46,14 +46,14 @@ async function d(e) {
     return t;
 }
 async function f(e) {
-    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: r, emojiName: i } = e;
+    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: i, emojiName: r } = e;
     return (0, s.Dx)({
         guildId: t,
         name: l,
         sound: await n,
         volume: a,
-        emojiId: r,
-        emojiName: i
+        emojiId: i,
+        emojiName: r
     });
 }
 async function m(e) {
@@ -85,14 +85,14 @@ async function m(e) {
             timestamp: 1000 * e.duration * 1000,
             data: t
         }),
-        r = new AudioEncoder({
+        i = new AudioEncoder({
             output: function (t) {
                 a()(null != t.duration, 'Chunk duration must not be null');
                 let l = (t.duration / 1000000) * e.sampleRate,
-                    r = new Uint8Array(t.byteLength);
-                t.copyTo(r),
+                    i = new Uint8Array(t.byteLength);
+                t.copyTo(i),
                     n.push({
-                        buffer: r,
+                        buffer: i,
                         numSamples: l
                     });
             },
@@ -101,13 +101,13 @@ async function m(e) {
             }
         });
     return (
-        r.configure({
+        i.configure({
             codec: 'opus',
             sampleRate: e.sampleRate,
             numberOfChannels: e.numberOfChannels
         }),
-        r.encode(l),
-        await r.flush(),
+        i.encode(l),
+        await i.flush(),
         new Blob(
             [
                 (0, o.Z)(n, {
@@ -124,14 +124,14 @@ async function m(e) {
 async function h(e, n) {
     let t = (function (e, n) {
         let { startMs: t, endMs: l } = n,
-            { sampleRate: a, numberOfChannels: r, duration: s } = e,
-            o = s * i.Z.Millis.SECOND,
+            { sampleRate: a, numberOfChannels: i, duration: s } = e,
+            o = s * r.Z.Millis.SECOND,
             c = Math.min(l, o);
         if (0 === t && c === o) return e;
         let d = Math.floor((t / o) * e.length),
             f = Math.floor((c / o) * e.length),
-            m = u.createBuffer(r, f - d, a);
-        for (let n = 0; n < r; n++) {
+            m = u.createBuffer(i, f - d, a);
+        for (let n = 0; n < i; n++) {
             let t = m.getChannelData(n),
                 l = e.getChannelData(n),
                 a = 0;

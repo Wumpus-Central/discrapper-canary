@@ -7,7 +7,7 @@ var r = n(392711),
 function l() {
     let { enabled: e, cameraUnavailable: t } = (0, o.cj)([a.Z], () => {
         var e, t;
-        let n = null === (t = null === (e = i()(a.Z.getVideoDevices()).values().first()) || void 0 === e ? void 0 : e.disabled) || void 0 === t || t;
+        let n = null == (t = null == (e = i()(a.Z.getVideoDevices()).values().first()) ? void 0 : e.disabled) || t;
         return {
             enabled: a.Z.isVideoEnabled(),
             cameraUnavailable: n || !a.Z.supports(s.AN.VIDEO)

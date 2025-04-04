@@ -6,10 +6,10 @@ var i = n(120356),
     a = n(481060),
     s = n(596454),
     l = n(889989),
-    c = n(501481);
+    c = n(97629);
 function u(e) {
     let t,
-        { applicationId: n, storeListingBenefits: i, skuBenefits: a, className: s } = e;
+        { applicationId: n, storeListingBenefits: i, skuBenefits: o, className: a } = e;
     return (
         null != i
             ? (t = i.map((e) =>
@@ -18,23 +18,23 @@ function u(e) {
                       {
                           applicationId: n,
                           benefit: e,
-                          className: o()(c.__invalid_benefit, s)
+                          className: a
                       },
                       e.id
                   )
               ))
-            : null != a &&
-              (t = a.map((e, t) =>
+            : null != o &&
+              (t = o.map((e, t) =>
                   (0, r.jsx)(
                       d,
                       {
                           benefit: e,
-                          className: o()(c.__invalid_benefit, s)
+                          className: a
                       },
                       t
                   )
               )),
-        (0, r.jsx)(r.Fragment, { children: t })
+        t
     );
 }
 function d(e) {

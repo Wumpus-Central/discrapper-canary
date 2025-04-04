@@ -21,33 +21,33 @@ function c(e, t, n) {
 let u = new Map(),
     d = new Set(),
     f = new Set(),
-    p = new Set(),
-    _ = new Map(),
+    _ = new Set(),
+    p = new Map(),
     h = new Map(),
     m = null,
     g = !1,
     E = (e) => {
         d.add(e.skuId);
     },
-    v = (e) => {
+    b = (e) => {
         u.set(e.skuId, e.price), d.delete(e.skuId);
     },
-    b = (e) => {
-        d.delete(e.skuId), p.add(e.skuId);
-    },
     y = (e) => {
-        p.delete(e.skuId);
+        d.delete(e.skuId), _.add(e.skuId);
+    },
+    v = (e) => {
+        _.delete(e.skuId);
     },
     O = (e) => {
         if (1 !== e.entitlements.length) return;
         let t = e.entitlements[0];
-        l.Rm.has(t.sku_id) && _.set(e.skuId, s.Z.createFromServer(t));
-    },
-    S = (e) => {
-        f.delete(e.skuId), _.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
+        l.Rm.has(t.sku_id) && p.set(e.skuId, s.Z.createFromServer(t));
     },
     I = (e) => {
-        p.add(e.skuId), f.delete(e.skuId);
+        f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
+    },
+    S = (e) => {
+        _.add(e.skuId), f.delete(e.skuId);
     },
     T = (e) => {
         f.add(e.skuId);
@@ -56,7 +56,7 @@ let u = new Map(),
         m = e.previousGoLiveSettings;
     },
     A = (e) => {
-        _.delete(e.skuId);
+        p.delete(e.skuId);
     },
     C = (e) => {
         let { emoji: t, boundingRect: n } = e;
@@ -83,16 +83,16 @@ class P extends (i = o.ZP.Store) {
         return d.has(e);
     }
     getErrored(e) {
-        return p.has(e);
+        return _.has(e);
     }
     getEntitlement(e) {
-        return _.get(e);
+        return p.get(e);
     }
     fetchPotionCount(e) {
         return h.get(e);
     }
     isEntitlementFetched(e) {
-        return _.has(e);
+        return p.has(e);
     }
     isEntitlementFetching(e) {
         return f.has(e);
@@ -104,12 +104,12 @@ class P extends (i = o.ZP.Store) {
 c(P, 'displayName', 'ConsumablesStore');
 let w = new P(a.Z, {
     CONSUMABLES_PRICE_FETCH_STARTED: E,
-    CONSUMABLES_PRICE_FETCH_SUCCEEDED: v,
-    CONSUMABLES_PRICE_FETCH_FAILED: b,
-    CONSUMABLES_CLEAR_ERROR: y,
-    CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: S,
+    CONSUMABLES_PRICE_FETCH_SUCCEEDED: b,
+    CONSUMABLES_PRICE_FETCH_FAILED: y,
+    CONSUMABLES_CLEAR_ERROR: v,
+    CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: I,
     SKU_PURCHASE_SUCCESS: O,
-    CONSUMABLES_ENTITLEMENT_FETCH_FAILED: I,
+    CONSUMABLES_ENTITLEMENT_FETCH_FAILED: S,
     CONSUMABLES_ENTITLEMENT_FETCH_STARTED: T,
     SET_PREVIOUS_GO_LIVE_SETTINGS: N,
     CLEAR_CONSUMED_ENTITLEMENT: A,

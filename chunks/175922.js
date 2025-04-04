@@ -12,17 +12,17 @@ function s(e, t, n) {
     var u = ((0, r.kK)(e) ? (0, o.Z)(e) : window).visualViewport,
         d = !(0, a.Z)() && n,
         f = (s.left + (d && u ? u.offsetLeft : 0)) / l,
-        p = (s.top + (d && u ? u.offsetTop : 0)) / c,
-        _ = s.width / l,
+        _ = (s.top + (d && u ? u.offsetTop : 0)) / c,
+        p = s.width / l,
         h = s.height / c;
     return {
-        width: _,
+        width: p,
         height: h,
-        top: p,
-        right: f + _,
-        bottom: p + h,
+        top: _,
+        right: f + p,
+        bottom: _ + h,
         left: f,
         x: f,
-        y: p
+        y: _
     };
 }

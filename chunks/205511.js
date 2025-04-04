@@ -52,7 +52,7 @@ function S(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: P, renderBody: N } = o.useMemo(() => {
+        { header: P, renderBody: E } = o.useMemo(() => {
             let e = y.length > 0,
                 n = t.config.messages.gameTitle;
             return {
@@ -126,7 +126,7 @@ function S(e) {
             }),
             (0, r.jsxs)('div', {
                 className: a()({ [O.opacity_50]: _ }),
-                children: [N(), 0 === y.length ? null : (0, r.jsx)(w, { children: l })]
+                children: [E(), 0 === y.length ? null : (0, r.jsx)(w, { children: l })]
             })
         ]
     });

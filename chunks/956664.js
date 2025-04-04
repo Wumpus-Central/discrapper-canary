@@ -1,7 +1,7 @@
 n.d(t, {
     Bo: () => A,
     Dc: () => h,
-    OF: () => S,
+    OF: () => I,
     QB: () => N,
     Tj: () => c,
     XN: () => O,
@@ -11,7 +11,7 @@ n.d(t, {
     kD: () => C,
     rn: () => m,
     rv: () => E,
-    vV: () => _,
+    vV: () => p,
     zp: () => d
 }),
     n(653041),
@@ -64,13 +64,13 @@ function d(e, t) {
     });
 }
 let f = 2,
-    p = 1.6;
-function _(e, t, n, r) {
+    _ = 1.6;
+function p(e, t, n, r) {
     let i = Math.max(f, null != e && 0 !== e && null != t && 0 !== t ? e / n : 0),
         o = f;
-    null != n && n * i > window.innerWidth * p && (o = (window.innerWidth * p) / n);
+    null != n && n * i > window.innerWidth * _ && (o = (window.innerWidth * _) / n);
     let a = f;
-    return null != r && r * i > window.innerHeight * p && (a = (window.innerHeight * p) / r), (i = Math.min(i, o, a));
+    return null != r && r * i > window.innerHeight * _ && (a = (window.innerHeight * _) / r), (i = Math.min(i, o, a));
 }
 function h(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
@@ -90,26 +90,26 @@ function g(e) {
 function E(e) {
     return null == e || '' === e ? 'none' : 'url('.concat(e, ')');
 }
-function v(e, t, n) {
+function b(e, t, n) {
     let r = [];
     for (let i = 0, o, a, s, l, c; i < t; i += n) (a = e[(o = 4 * i) + 0]), (s = e[o + 1]), (l = e[o + 2]), (void 0 === (c = e[o + 3]) || c >= 125) && !(a > 250 && s > 250 && l > 250) && r.push([a, s, l]);
     return r;
 }
-let b = [[0, 0, 0]],
-    y = 128;
+let y = [[0, 0, 0]],
+    v = 128;
 function O(e, t, n) {
     let r = document.createElement('canvas'),
         i = r.getContext('2d');
-    if (null == i) return b;
-    let o = (r.width = 0 === e.width ? y : e.width),
-        a = (r.height = 0 === e.height ? y : e.height);
+    if (null == i) return y;
+    let o = (r.width = 0 === e.width ? v : e.width),
+        a = (r.height = 0 === e.height ? v : e.height);
     i.drawImage(e, 0, 0, o, a);
-    let s = v(i.getImageData(0, 0, o, a).data, o * a, n),
+    let s = b(i.getImageData(0, 0, o, a).data, o * a, n),
         c = l()(s, t);
-    return 'boolean' == typeof c ? b : c.palette();
+    return 'boolean' == typeof c ? y : c.palette();
 }
-let S = (e) => ('number' == typeof e ? null : I(e)),
-    I = a().memoize(
+let I = (e) => ('number' == typeof e ? null : S(e)),
+    S = a().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();
@@ -151,7 +151,7 @@ function C(e) {
 }
 async function R(e) {
     var t;
-    if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
+    if ('image/png' !== (null == (t = e.type) ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
     let n = await e.text(),
         r = n.indexOf('IDAT');
     return !!(r > 0) && -1 !== n.substring(0, r).indexOf('acTL');

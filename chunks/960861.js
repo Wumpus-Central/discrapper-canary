@@ -20,9 +20,9 @@ var i,
     m = n(74299),
     g = n(692417),
     E = n(783443),
-    v = n(299570),
-    b = n(65154),
-    y = n(388032);
+    b = n(299570),
+    y = n(65154),
+    v = n(388032);
 function O(e, t, n) {
     return (
         t in e
@@ -45,7 +45,7 @@ let S = !1,
     A = !1,
     C = {};
 function R() {
-    return f.Z.supports(b.AN.NATIVE_SCREENSHARE_PICKER);
+    return f.Z.supports(y.AN.NATIVE_SCREENSHARE_PICKER);
 }
 function P() {
     return f.Z.getUseSystemScreensharePicker();
@@ -54,7 +54,7 @@ function w() {
     let e = P() && (N > 0 || (S && 0 === T));
     if (e !== A) {
         var t, n;
-        (A = e), null === (n = f.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, A);
+        (A = e), null == (n = f.Z.getMediaEngine()) || null == (t = n.setNativeDesktopVideoSourcePickerActive) || t.call(n, A);
     }
 }
 function D() {
@@ -96,7 +96,7 @@ function j() {
     return {
         sourceId: 'prepicked:0',
         nativePickerStyleUsed: C.lastPresentedPickerStyle,
-        sourceName: null !== (e = M()) && void 0 !== e ? e : y.NW.string(y.t['KKcy9/'])
+        sourceName: null != (e = M()) ? e : v.NW.string(v.t['KKcy9/'])
     };
 }
 class U extends (i = a.ZP.Store) {
@@ -110,7 +110,7 @@ class U extends (i = a.ZP.Store) {
         return P();
     }
     releasePickerStream() {
-        (0, v.t)();
+        (0, b.t)();
     }
     getPickerState() {
         return C;
@@ -138,14 +138,14 @@ function G(e) {
 function B() {
     C = { lastPickerAction: 2 };
 }
-function V(e) {
+function F(e) {
     let { error: t } = e;
     C = {
         lastPickerAction: 3,
         lastPickerError: t
     };
 }
-function F(e) {
+function V(e) {
     let { style: t } = e;
     C = {
         lastPickerAction: 0,
@@ -159,7 +159,7 @@ O(U, 'displayName', 'NativeScreenSharePickerStore');
 let H = new U(s.Z, {
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: G,
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: B,
-    NATIVE_SCREEN_SHARE_PICKER_ERROR: V,
-    NATIVE_SCREEN_SHARE_PICKER_PRESENT: F,
+    NATIVE_SCREEN_SHARE_PICKER_ERROR: F,
+    NATIVE_SCREEN_SHARE_PICKER_PRESENT: V,
     NATIVE_SCREEN_SHARE_PICKER_RELEASE: Z
 });

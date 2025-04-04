@@ -5,10 +5,10 @@ let r = n(13556),
     { compareIdentifiers: c } = n(434016);
 class u {
     constructor(e, t) {
-        if (((t = l(t)), e instanceof u)) {
+        if (((t = l(t)), e instanceof u))
             if (!!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease) return e;
-            e = e.version;
-        } else if ('string' != typeof e) throw TypeError(`Invalid version. Must be a string. Got type "${typeof e}".`);
+            else e = e.version;
+        else if ('string' != typeof e) throw TypeError(`Invalid version. Must be a string. Got type "${typeof e}".`);
         if (e.length > i) throw TypeError(`version is longer than ${i} characters`);
         r('SemVer', e, t), (this.options = t), (this.loose = !!t.loose), (this.includePrerelease = !!t.includePrerelease);
         let n = e.trim().match(t.loose ? a[s.LOOSE] : a[s.FULL]);

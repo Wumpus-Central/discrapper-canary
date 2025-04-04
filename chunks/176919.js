@@ -1,5 +1,5 @@
 n.d(t, {
-    D6: () => _,
+    D6: () => p,
     bp: () => f,
     wr: () => d
 });
@@ -21,12 +21,12 @@ function f(e, t, n, i) {
         null != e && (1 === t && e !== l.h8.AWAITING_AUTHENTICATION ? n(l.h8.AWAITING_AUTHENTICATION) : e === l.h8.AWAITING_AUTHENTICATION && (2 === t ? n(l.h8.REVIEW) : 3 === t && (o ? (null != a ? a() : n(l.h8.REVIEW)) : (i(c.A.COMPLETED), n(l.h8.CONFIRM)))));
     }, [e, t, n, i, o, a]);
 }
-let p = 5000;
-function _(e) {
+let _ = 5000;
+function p(e) {
     let t = (0, i.e7)([u.Z], () => u.Z.awaitingPaymentId),
         n = (0, i.e7)([s.Z], () => s.Z.isConnected()),
         l = r.useRef(new o.Xp());
     r.useEffect(() => {
-        n || null == t || 1 !== e ? l.current.stop() : l.current.start(p, () => (0, a.O1)(t));
+        n || null == t || 1 !== e ? l.current.stop() : l.current.start(_, () => (0, a.O1)(t));
     }, [t, e, n]);
 }

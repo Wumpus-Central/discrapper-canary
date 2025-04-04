@@ -13,11 +13,11 @@ var r = n(200651),
     u = n(39127),
     d = n(594174),
     f = n(353368),
-    p = n(480723);
-let _ = 50;
+    _ = n(297928);
+let p = 50;
 function h(e) {
     var t;
-    let n = null == e ? void 0 : null === (t = e.parentElement) || void 0 === t ? void 0 : t.getBoundingClientRect();
+    let n = null == e || null == (t = e.parentElement) ? void 0 : t.getBoundingClientRect();
     return null == n
         ? {
               width: 0,
@@ -32,15 +32,15 @@ let m = i.forwardRef(function (e, t) {
     let { sound: n, containerDimensions: h } = e,
         m = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
         g = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        [E, v] = i.useState([]),
-        b = E.length < _,
-        y = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
+        [E, b] = i.useState([]),
+        y = E.length < p,
+        v = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
         O = i.useCallback(() => {
-            if (!g && b && y && null != m) {
+            if (!g && y && v && null != m) {
                 var e;
                 let t = (0, c._r)({
                         id: n.emojiId,
-                        name: null !== (e = n.emojiName) && void 0 !== e ? e : '',
+                        name: null != (e = n.emojiName) ? e : '',
                         animated: !1
                     }),
                     r = null != n.emojiId,
@@ -54,21 +54,21 @@ let m = i.forwardRef(function (e, t) {
                         url: t,
                         userId: m.id
                     };
-                v((e) => [...e, l]);
+                b((e) => [...e, l]);
             }
-        }, [g, b, y, m, n]);
+        }, [g, y, v, m, n]);
     i.useImperativeHandle(t, () => ({ addAnimation: O }));
-    let S = i.useCallback((e) => {
-        v((t) => {
+    let I = i.useCallback((e) => {
+        b((t) => {
             let n = [...t],
                 r = n.findIndex((t) => t.id === e);
             return n.splice(r, 1), n;
         });
     }, []);
-    return g || !y
+    return g || !v
         ? null
         : (0, r.jsx)('div', {
-              className: p.effects,
+              className: _.effects,
               style: {
                   width: h.width,
                   height: h.height
@@ -79,7 +79,7 @@ let m = i.forwardRef(function (e, t) {
                       {
                           containerDimensions: h,
                           effect: e,
-                          onComplete: S
+                          onComplete: I
                       },
                       e.id
                   )

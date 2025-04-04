@@ -90,7 +90,7 @@ function f(e, t, n) {
                       x: 0,
                       y: 0
                   },
-        { width: f, height: p } = t;
+        { width: f, height: _ } = t;
     return [
         a(
             c(
@@ -105,7 +105,7 @@ function f(e, t, n) {
                         n.width,
                         n.height,
                         'number' == typeof f ? f : 0,
-                        'number' == typeof p ? p : 0
+                        'number' == typeof _ ? _ : 0
                     )
                 )
             ),
@@ -114,7 +114,7 @@ function f(e, t, n) {
         s(t, n)
     ];
 }
-function p(e, t, n) {
+function _(e, t, n) {
     let { top: r, right: i } = e,
         { x: o, y: d } =
             arguments.length > 3 && void 0 !== arguments[3]
@@ -123,7 +123,7 @@ function p(e, t, n) {
                       x: 0,
                       y: 0
                   },
-        { width: f, height: p } = t;
+        { width: f, height: _ } = t;
     return [
         a(
             c(
@@ -138,7 +138,7 @@ function p(e, t, n) {
                         n.width,
                         n.height,
                         'number' == typeof f ? f : 0,
-                        'number' == typeof p ? p : 0
+                        'number' == typeof _ ? _ : 0
                     )
                 )
             ),
@@ -147,7 +147,7 @@ function p(e, t, n) {
         s(t, n)
     ];
 }
-function _(e, t) {
+function p(e, t) {
     let n = {
         top: void 0,
         bottom: void 0,
@@ -157,7 +157,7 @@ function _(e, t) {
     return null != t.top && (n.top = e.top), null != t.bottom && (n.bottom = e.bottom), null != t.left && (n.left = e.left), null != t.right && (n.right = e.right), n;
 }
 n.d(t, {
-    BL: () => _,
+    BL: () => p,
     KR: () => i,
     Ox: () => s,
     PY: () => l,
@@ -165,7 +165,7 @@ n.d(t, {
     jL: () => a,
     o4: () => f,
     ou: () => u,
-    uq: () => p,
+    uq: () => _,
     vS: () => d,
     w_: () => o
 }),

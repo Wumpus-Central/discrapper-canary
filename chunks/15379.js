@@ -21,10 +21,10 @@ function s(e, t) {
                 case a.oC.GUILD_BOOSTS:
                     return;
             }
-            let u = null !== (l = null === (s = r.Z.getChannel(c)) || void 0 === s ? void 0 : s.type) && void 0 !== l ? l : o.d4z.UNKNOWN;
+            let u = null != (l = null == (s = r.Z.getChannel(c)) ? void 0 : s.type) ? l : o.d4z.UNKNOWN;
             return {
                 timestamp: new Date(),
-                rtc_state: i.Z.getState(),
+                rtc_state: i.ZP.getState(),
                 channelId: c,
                 channelType: u
             };
@@ -32,7 +32,7 @@ function s(e, t) {
             let d = (n = t).guildId;
             return {
                 timestamp: new Date(),
-                rtc_state: i.Z.getState(),
+                rtc_state: i.ZP.getState(),
                 guildId: d
             };
         case o.rMx.FRIENDS_LIST_VIEWED_CLICKSTREAM:
@@ -40,7 +40,7 @@ function s(e, t) {
                 (n = t),
                 {
                     timestamp: new Date(),
-                    rtc_state: i.Z.getState(),
+                    rtc_state: i.ZP.getState(),
                     tab_opened: n.tab_opened,
                     num_friends: n.num_friends,
                     now_playing_visible: n.now_playing_visible,

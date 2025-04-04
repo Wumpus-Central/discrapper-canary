@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(570140),
     i = n(147913),
     o = n(70956),
@@ -33,12 +33,12 @@ function d() {
     if (!t) return;
     null != c && clearTimeout(c);
     let n = s.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
-    if ((null == n ? void 0 : null === (e = n.saveData) || void 0 === e ? void 0 : e.dueAt) == null) {
+    if ((null == n || null == (e = n.saveData) ? void 0 : e.dueAt) == null) {
         c = null;
         return;
     }
     let r = Date.now() + o.Z.Millis.WEEK;
-    !(n.saveData.dueAt.getTime() > r) && (c = setTimeout(() => u(n), n.saveData.dueAt.getTime() - Date.now()));
+    n.saveData.dueAt.getTime() > r || (c = setTimeout(() => u(n), n.saveData.dueAt.getTime() - Date.now()));
 }
 class f extends i.Z {
     constructor(...e) {
@@ -53,4 +53,4 @@ class f extends i.Z {
             });
     }
 }
-let p = new f();
+let _ = new f();

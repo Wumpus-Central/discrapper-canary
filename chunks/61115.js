@@ -13,13 +13,13 @@ var r = n(200651),
     u = n(600164),
     d = n(626135),
     f = n(617136),
-    p = n(113434),
-    _ = n(569984),
+    _ = n(113434),
+    p = n(569984),
     h = n(981631),
     m = n(388032),
-    g = n(18451),
+    g = n(61942),
     E = n(677486);
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +43,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,29 +65,29 @@ function O(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = 2500,
-    I = 467;
+let I = 2500,
+    S = 467;
 function T(e) {
     let { questId: t, survey: n, transitionState: o, onClose: a, onSubmit: f } = e,
-        _ = (0, p.B4)(t),
-        [v, y] = i.useState(0),
+        p = (0, _.B4)(t),
+        [b, v] = i.useState(0),
         [T, A] = (0, l.q_F)(() => ({
             from: { width: '0%' },
-            config: { duration: S }
+            config: { duration: I }
         })),
         R = (e) => {
             f(),
-                y(1),
-                null != _ &&
+                v(1),
+                null != p &&
                     d.default.track(
                         h.rMx.QUEST_SURVEY_SUBMITTED,
-                        O(b({}, C(_, n)), {
+                        O(y({}, C(p, n)), {
                             choice: e.text,
                             choice_id: e.key
                         })
@@ -98,16 +98,16 @@ function T(e) {
         };
     return (
         (0, c.ZP)(() => {
-            null != _ && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, C(_, n));
+            null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, C(p, n));
         }),
-        null == _ && a(),
+        null == p && a(),
         (0, r.jsx)(l.Y0X, {
             transitionState: o,
             size: l.CgR.DYNAMIC,
             className: g.modalRoot,
             children: (0, r.jsxs)(l.MyZ, {
-                activeSlide: v,
-                width: I,
+                activeSlide: b,
+                width: S,
                 onSlideReady: P,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
@@ -219,7 +219,7 @@ function A(e) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    O(b({}, n, e), {
+                    O(y({}, n, e), {
                         onSubmit: () => {
                             t = !0;
                         }
@@ -228,8 +228,8 @@ function A(e) {
         },
         {
             onCloseCallback: () => {
-                let n = _.Z.getQuest(e.questId);
-                null != n && d.default.track(h.rMx.QUEST_SURVEY_DISMISSED, O(b({}, C(n, e.survey)), { submitted: t }));
+                let n = p.Z.getQuest(e.questId);
+                null != n && d.default.track(h.rMx.QUEST_SURVEY_DISMISSED, O(y({}, C(n, e.survey)), { submitted: t }));
             }
         }
     );

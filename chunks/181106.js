@@ -36,16 +36,16 @@ function c(e) {
 let u = {},
     d = {},
     f = 120000;
-function p(e) {
+function _(e) {
     let { applicationId: t, activityType: n } = e,
         r = u[t];
     if (null == r || r[n] !== s.OcF.FAILED) return !1;
     delete r[n];
 }
-function _(e, t, n) {
+function p(e, t, n) {
     var r;
     let { applicationId: i } = n,
-        l = null !== (r = u[i]) && void 0 !== r ? r : {};
+        l = null != (r = u[i]) ? r : {};
     if (((l[t] = e), (u[i] = l), !__OVERLAY__ && e === s.OcF.FAILED)) {
         null != d[i] && d[i].stop();
         let e = new o.V7();
@@ -64,7 +64,7 @@ function h(e) {
     u = c({}, t);
 }
 function m(e) {
-    return _(s.OcF.COMPLETE, s.mFx.JOIN, e);
+    return p(s.OcF.COMPLETE, s.mFx.JOIN, e);
 }
 class g extends (r = i.ZP.Store) {
     getState(e, t) {
@@ -78,9 +78,9 @@ class g extends (r = i.ZP.Store) {
 l(g, 'displayName', 'ActivityLauncherStore');
 let E = new g(a.Z, {
     OVERLAY_INITIALIZE: h,
-    ACTIVITY_JOIN_LOADING: (e) => _(s.OcF.LOADING, s.mFx.JOIN, e),
-    ACTIVITY_JOIN_FAILED: (e) => _(s.OcF.FAILED, s.mFx.JOIN, e),
+    ACTIVITY_JOIN_LOADING: (e) => p(s.OcF.LOADING, s.mFx.JOIN, e),
+    ACTIVITY_JOIN_FAILED: (e) => p(s.OcF.FAILED, s.mFx.JOIN, e),
     ACTIVITY_JOIN: m,
     EMBEDDED_ACTIVITY_CLOSE: m,
-    ACTIVITY_LAUNCH_FAIL: p
+    ACTIVITY_LAUNCH_FAIL: _
 });

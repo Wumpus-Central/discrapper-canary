@@ -87,8 +87,8 @@ let h = i.createContext({ inDialog: void 0 }),
             g = _(e, ['children', 'impressionType', 'impression', 'disableTrack', 'returnRef']),
             E = i.useRef(null),
             b = i.useRef(null),
-            [v, y] = i.useState(!1),
-            O = v ? b : E;
+            [y, v] = i.useState(!1),
+            O = y ? b : E;
         (0, o.T)(O, { returnRef: m }),
             i.useContext(l.Z)(
                 {
@@ -101,9 +101,9 @@ let h = i.createContext({ inDialog: void 0 }),
             i.useImperativeHandle(t, () => E.current);
         let I = i.useCallback(
             (e) => {
-                v !== e && y(e);
+                y !== e && v(e);
             },
-            [v]
+            [y]
         );
         return (0, r.jsx)(h.Provider, {
             value: {

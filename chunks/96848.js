@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(47120), n(757143), n(301563);
+n.d(t, { Z: () => _ }), n(47120), n(757143), n(301563);
 var r = n(200651),
     i = n(192379),
     o = n(481060),
@@ -6,16 +6,16 @@ var r = n(200651),
     s = n(981631),
     l = n(185923),
     c = n(388032),
-    u = n(701039);
+    u = n(853464);
 let d = {
         section: s.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'gift_effect_emoji_picker'
     },
     f = l.Hz.GIFT;
-function p(e) {
+function _(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [s, l] = i.useState(!1),
-        p = (e) =>
+        _ = (e) =>
             (0, r.jsxs)('div', {
                 className: u.customGiftContent,
                 children: [
@@ -35,7 +35,7 @@ function p(e) {
                     e
                 ]
             }),
-        _ = (e) => {
+        p = (e) => {
             null != t && (t(e), l(!1));
         };
     return (0, r.jsx)(o.yRy, {
@@ -50,10 +50,10 @@ function p(e) {
                 children: (0, r.jsx)(a.Z, {
                     analyticsOverride: d,
                     closePopout: t,
-                    onSelectEmoji: _,
+                    onSelectEmoji: p,
                     wrapper: 'div',
                     pickerIntention: f,
-                    renderHeader: p,
+                    renderHeader: _,
                     headerClassName: u.emojiHeader,
                     className: u.emojiList,
                     listHeaderClassName: u.emojiList,

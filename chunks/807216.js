@@ -42,7 +42,7 @@ function u(e, t) {
         })(e, t);
 }
 function d(e) {
-    var t = _();
+    var t = p();
     return function () {
         var n,
             r = h(e);
@@ -50,13 +50,13 @@ function d(e) {
     };
 }
 function f(e, t) {
-    return t && ('object' === o(t) || 'function' == typeof t) ? t : p(e);
+    return t && ('object' === o(t) || 'function' == typeof t) ? t : _(e);
 }
-function p(e) {
+function _(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function _() {
+function p() {
     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
@@ -92,7 +92,7 @@ var g = (function (e) {
         var e;
         a(this, n);
         for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
-        return m(p((e = t.call.apply(t, [this].concat(i)))), 'priority', 80), m(p(e), 'incompatibleTokens', ['a', 'B', 'H', 'k', 't', 'T']), e;
+        return m(_((e = t.call.apply(t, [this].concat(i)))), 'priority', 80), m(_(e), 'incompatibleTokens', ['a', 'B', 'H', 'k', 't', 'T']), e;
     }
     return (
         l(n, [

@@ -8,31 +8,31 @@ var r = n(192379),
     c = n(442552);
 function u(e) {
     let { user: t, guildId: n, size: u, showPending: d = !1, animateOnHover: f = !1, avatarOverride: _ } = e,
-        { onMouseEnter: p, onMouseLeave: h, shouldAnimate: g } = (0, c.Z)(f),
-        { pendingAvatarV2: m } = (0, l.Z)({}),
+        { onMouseEnter: p, onMouseLeave: h, shouldAnimate: m } = (0, c.Z)(f),
+        { pendingAvatar: g } = (0, l.Z)({}),
         E =
             d && null != t
                 ? (0, a.SD)({
                       userId: t.id,
-                      image: m,
-                      canAnimate: g,
+                      image: g,
+                      canAnimate: m,
                       size: u
                   })
                 : void 0,
-        v = void 0 !== _ ? _ : E,
-        b = (0, i.e7)([s.ZP], () => (null != n && null != t ? s.ZP.getMember(n, t.id) : null));
+        b = void 0 !== _ ? _ : E,
+        y = (0, i.e7)([s.ZP], () => (null != n && null != t ? s.ZP.getMember(n, t.id) : null));
     return {
         avatarSrc: r.useMemo(
             () =>
                 null != t
-                    ? (0, o.SG)(v, b, t, {
-                          canAnimate: g,
+                    ? (0, o.SG)(b, y, t, {
+                          canAnimate: m,
                           size: u
                       })
                     : void 0,
-            [v, b, t, g, u]
+            [b, y, t, m, u]
         ),
-        isAvatarAnimating: g,
+        isAvatarAnimating: m,
         eventHandlers: {
             onMouseEnter: p,
             onMouseLeave: h

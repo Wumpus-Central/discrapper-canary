@@ -43,11 +43,11 @@ function f(e) {
         l[t] = e;
     }
 }
-function p(e) {
+function _(e) {
     let { scrollTop: t } = e;
     u.scrollTop = t;
 }
-function _(e) {
+function p(e) {
     let { channelId: t } = e;
     h(t) && delete l[t];
 }
@@ -75,7 +75,7 @@ class g extends (r = i.ZP.Store) {
     }
     getGuildDimensions(e) {
         var t;
-        return null !== (t = c[e]) && void 0 !== t ? t : d(e);
+        return null != (t = c[e]) ? t : d(e);
     }
     getGuildListDimensions() {
         return u;
@@ -88,6 +88,6 @@ s(g, 'displayName', 'DimensionStore');
 let E = new g(a.Z, {
     UPDATE_CHANNEL_DIMENSIONS: f,
     UPDATE_CHANNEL_LIST_DIMENSIONS: m,
-    UPDATE_GUILD_LIST_DIMENSIONS: p,
-    CALL_CREATE: _
+    UPDATE_GUILD_LIST_DIMENSIONS: _,
+    CALL_CREATE: p
 });

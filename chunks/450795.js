@@ -16,5 +16,5 @@ var r = n(990547),
     TRACKING_URL: s.ANM.TRACK,
     waitFor: [a.default],
     getFingerprint: a.default.getFingerprint,
-    getSessionId: () => (0, o.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid }))
+    getSessionId: () => (0, o.G)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid }))
 });

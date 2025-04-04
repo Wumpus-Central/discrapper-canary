@@ -36,11 +36,11 @@ function f(e) {
     let { channelId: t } = e;
     s.add(t);
 }
-function p(e) {
+function _(e) {
     let { channel: t } = e;
     return u(t);
 }
-function _(e) {
+function p(e) {
     let { channels: t } = e;
     for (let e of t) u(e);
 }
@@ -83,8 +83,8 @@ class m extends i.Z {
             CONNECTION_OPEN: d,
             CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: p,
-            CHANNEL_UPDATES: _,
+            CHANNEL_CREATE: _,
+            CHANNEL_UPDATES: p,
             CHANNEL_DELETE: h,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
         });

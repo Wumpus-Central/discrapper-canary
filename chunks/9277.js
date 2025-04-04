@@ -3,20 +3,20 @@ var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(232713),
+    s = n(788347),
     l = n(442837),
     c = n(114101),
     u = n(481060),
     d = n(540059),
     f = n(28546),
-    p = n(581883),
-    _ = n(459273),
+    _ = n(581883),
+    p = n(459273),
     h = n(443603),
     m = n(981631),
     g = n(957825),
     E = n(388032),
-    v = n(342203);
-function b(e, t, n) {
+    b = n(302195);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -57,7 +57,7 @@ function O(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,12 +68,12 @@ function S(e, t) {
         e
     );
 }
-function I(e, t) {
+function S(e, t) {
     let { disabled: n, type: o } = e,
-        [b, O] = i.useState(!1),
-        I = (0, l.e7)([p.Z], () => {
+        [y, O] = i.useState(!1),
+        S = (0, l.e7)([_.Z], () => {
             var e, t;
-            return b && Object.values(null !== (t = null === (e = p.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
+            return y && Object.values(null != (t = null == (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs) ? t : {}).length <= 2;
         }),
         [T, N, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         C = i.useRef(0),
@@ -84,47 +84,47 @@ function I(e, t) {
                     O(!1), (C.current = 0);
                 }, 2000));
         }, []);
-    (0, _.yp)({
+    (0, p.yp)({
         event: m.CkL.FAVORITE_GIF,
         handler: R
     });
     let P = i.useCallback(() => {
             (0, f.RO)(g.X1.GIF, o);
         }, [o]),
-        { Component: w, events: D, play: x } = (0, c.V)(),
-        L = (0, d.Q3)('ChannelGIFPickerButton');
+        { Component: w, events: D, play: L } = (0, c.V)(),
+        x = (0, d.Q3)('ChannelGIFPickerButton');
     if (n) return null;
     let M = T === g.X1.GIF && N === o;
     return (0, r.jsx)(u.ua7, {
-        text: I ? E.NW.string(E.t.mE2e8P) : null,
+        text: S ? E.NW.string(E.t.mE2e8P) : null,
         forceOpen: !0,
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                S(
-                    y(
+                I(
+                    v(
                         {
                             ref: t,
-                            className: a()(g.CT, v.buttonContainer)
+                            className: a()(g.CT, b.buttonContainer)
                         },
                         e
                     ),
                     {
                         children: (0, r.jsx)(h.Z, {
-                            innerClassName: v.button,
+                            innerClassName: b.button,
                             onMouseEnter: D.onMouseEnter,
                             onMouseLeave: D.onMouseLeave,
                             onClick: () => {
-                                P(), x();
+                                P(), L();
                             },
                             isActive: M,
-                            pulse: b,
+                            pulse: y,
                             'aria-label': E.NW.string(E.t.PtVpk5),
                             'aria-expanded': M,
                             'aria-haspopup': 'dialog',
                             'aria-controls': A,
                             children: (0, r.jsx)(w, {
-                                size: L ? 'refresh_sm' : void 0,
+                                size: x ? 'refresh_sm' : void 0,
                                 color: 'currentColor'
                             })
                         })
@@ -133,4 +133,4 @@ function I(e, t) {
             )
     });
 }
-let T = i.memo(i.forwardRef(I));
+let T = i.memo(i.forwardRef(S));

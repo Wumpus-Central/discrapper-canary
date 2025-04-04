@@ -103,7 +103,7 @@ function b(e) {
     let t = h(e.windowId);
     return t.visible !== e.visible && (p.set(e.windowId, f(u({}, t), { visible: e.visible })), !0);
 }
-function v(e) {
+function y(e) {
     let t = h(e.windowId);
     return (
         (t.windowSize.width !== e.width || t.windowSize.height !== e.height) &&
@@ -119,7 +119,7 @@ function v(e) {
         !0)
     );
 }
-function y(e) {
+function v(e) {
     return p.delete(e.windowId), _ === e.windowId && (_ = null), !0;
 }
 class O extends (r = a.ZP.Store) {
@@ -157,8 +157,8 @@ let I = new O(s.Z, {
     WINDOW_INIT: m,
     WINDOW_FULLSCREEN_CHANGE: g,
     WINDOW_FOCUS: E,
-    WINDOW_RESIZED: v,
-    WINDOW_UNLOAD: y,
+    WINDOW_RESIZED: y,
+    WINDOW_UNLOAD: v,
     WINDOW_VISIBILITY_CHANGE: b
 });
 Promise.resolve()

@@ -2,7 +2,7 @@ n.d(t, {
     I: () => h,
     O: () => o
 });
-var r = n(259630),
+var r = n(139232),
     i = n(647005);
 function o(e) {
     if (0 === e.length) throw Error('Number skeleton cannot be empty');
@@ -73,7 +73,7 @@ function f(e) {
             return { signDisplay: 'never' };
     }
 }
-function p(e) {
+function _(e) {
     var t;
     if (('E' === e[0] && 'E' === e[1] ? ((t = { notation: 'engineering' }), (e = e.slice(2))) : 'E' === e[0] && ((t = { notation: 'scientific' }), (e = e.slice(1))), t)) {
         var n = e.slice(0, 2);
@@ -82,7 +82,7 @@ function p(e) {
     }
     return t;
 }
-function _(e) {
+function p(e) {
     var t = {},
         n = f(e);
     return n || t;
@@ -125,7 +125,7 @@ function h(e) {
                 t = (0, r.pi)(
                     (0, r.pi)((0, r.pi)({}, t), { notation: 'scientific' }),
                     o.options.reduce(function (e, t) {
-                        return (0, r.pi)((0, r.pi)({}, e), _(t));
+                        return (0, r.pi)((0, r.pi)({}, e), p(t));
                     }, {})
                 );
                 continue;
@@ -133,7 +133,7 @@ function h(e) {
                 t = (0, r.pi)(
                     (0, r.pi)((0, r.pi)({}, t), { notation: 'engineering' }),
                     o.options.reduce(function (e, t) {
-                        return (0, r.pi)((0, r.pi)({}, e), _(t));
+                        return (0, r.pi)((0, r.pi)({}, e), p(t));
                     }, {})
                 );
                 continue;
@@ -205,7 +205,7 @@ function h(e) {
         }
         var m = f(o.stem);
         m && (t = (0, r.pi)((0, r.pi)({}, t), m));
-        var g = p(o.stem);
+        var g = _(o.stem);
         g && (t = (0, r.pi)((0, r.pi)({}, t), g));
     }
     return t;

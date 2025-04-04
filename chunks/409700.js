@@ -15,15 +15,15 @@ var r = n(200651),
     u = n(914010),
     d = n(594174),
     f = n(36703),
-    p = n(74538),
-    _ = n(125900),
+    _ = n(74538),
+    p = n(125900),
     h = n(824690),
     m = n(240479),
     g = n(710111),
     E = n(388032),
-    v = n(595530),
-    b = n(879580);
-function y(e, t, n) {
+    b = n(367753),
+    y = n(419718);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,12 +47,12 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function S(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -78,7 +78,7 @@ function I(e, t) {
 function T() {
     let { volume: e, onVolumeChange: t } = (0, h.Z)();
     return (0, r.jsxs)(c.P3F, {
-        className: v.sliderContainer,
+        className: b.sliderContainer,
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, r.jsx)(c.Text, {
@@ -87,7 +87,7 @@ function T() {
             }),
             (0, r.jsx)(c.iRW, {
                 onValueChange: t,
-                className: v.slider,
+                className: b.slider,
                 initialValue: (0, f.P)(e),
                 maxValue: 100
             })
@@ -96,37 +96,37 @@ function T() {
 }
 function N(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, _.V2)({ location: 'SoundmojiBanner' }),
-        o = (0, l.e7)([d.default], () => p.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
+        i = (0, p.V2)({ location: 'SoundmojiBanner' }),
+        o = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
         a = (0, l.e7)([u.Z], () => u.Z.getGuildId());
     return n || o || t.guildId === g.X8 || t.guildId === a || !i
         ? (0, r.jsx)(c.IGR, {
               text: 'BETA',
               color: s.Z.BG_BRAND,
-              className: v.betaBadge
+              className: b.betaBadge
           })
         : (0, r.jsxs)('div', {
-              className: v.infoNitroContainer,
+              className: b.infoNitroContainer,
               children: [
-                  (0, r.jsx)('div', { className: v.infoNitroBackground }),
+                  (0, r.jsx)('div', { className: b.infoNitroBackground }),
                   (0, r.jsxs)('div', {
-                      className: v.infoNitroTextContainer,
+                      className: b.infoNitroTextContainer,
                       children: [
                           (0, r.jsx)(c.SrA, {
                               size: 'xxs',
                               color: 'white',
-                              className: v.infoNitroIcon
+                              className: b.infoNitroIcon
                           }),
                           (0, r.jsx)(c.Text, {
                               variant: 'text-xs/medium',
                               color: 'always-white',
-                              className: v.infoNitroText,
+                              className: b.infoNitroText,
                               children: E.NW.string(E.t['BMw+7O'])
                           }),
                           (0, r.jsx)(c.IGR, {
                               text: 'BETA',
                               color: s.Z.BG_BRAND,
-                              className: v.infoNitroBadge
+                              className: b.infoNitroBadge
                           })
                       ]
                   })
@@ -136,18 +136,18 @@ function N(e) {
 function A(e) {
     let { sound: t } = e;
     return (0, r.jsxs)('div', {
-        className: a()(v.infoContainer, v.infoTooltip),
+        className: a()(b.infoContainer, b.infoTooltip),
         children: [
             (0, r.jsx)(N, { sound: t }),
             (0, r.jsxs)('div', {
-                className: v.infoSoundContainer,
+                className: b.infoSoundContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: v.infoSoundInnerContainer,
+                        className: b.infoSoundInnerContainer,
                         children: [
                             (0, r.jsx)(c.KY1, {
                                 size: 'sm',
-                                className: v.infoSoundIcon
+                                className: b.infoSoundIcon
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -157,7 +157,7 @@ function A(e) {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: v.infoSoundInnerContainer,
+                        className: b.infoSoundInnerContainer,
                         children: (0, r.jsx)(c.Text, {
                             variant: 'text-sm/normal',
                             children: E.NW.string(E.t.D6eYmZ)
@@ -171,7 +171,7 @@ function A(e) {
 function C(e) {
     let { renderPopout: t, position: n, tooltipText: o, children: s, setTooltipShowing: l, clickableClassName: u } = e,
         [d, f] = i.useState(!1),
-        [p, _] = i.useState(String(Date.now())),
+        [_, p] = i.useState(String(Date.now())),
         h = i.useCallback(
             (e) => {
                 e.stopPropagation(), f(!d);
@@ -179,12 +179,12 @@ function C(e) {
             [d]
         ),
         m = i.useCallback(() => {
-            _(String(Date.now()));
+            p(String(Date.now()));
         }, []),
         g = i.useRef(null);
     i.useEffect(() => {
         var e, t;
-        d ? null === (e = g.current) || void 0 === e || e.focus() : null === (t = g.current) || void 0 === t || t.blur(), null == l || l(d);
+        d ? null == (e = g.current) || e.focus() : null == (t = g.current) || t.blur(), null == l || l(d);
     }, [d, l]);
     let E = !d;
     return (0, r.jsx)(c.yRy, {
@@ -192,7 +192,7 @@ function C(e) {
             (0, r.jsx)(c.P3F, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(I(O({}, e), { refreshPosition: m }))
+                children: t(S(O({}, e), { refreshPosition: m }))
             }),
         align: 'center',
         nudgeAlignIntoViewport: !0,
@@ -200,7 +200,7 @@ function C(e) {
         shouldShow: d,
         onRequestClose: () => f(!1),
         animationPosition: 'bottom',
-        positionKey: p,
+        positionKey: _,
         closeOnScroll: !0,
         children: (e) =>
             (0, r.jsx)(c.ua7, {
@@ -216,10 +216,10 @@ function C(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         c.P3F,
-                        I(O({ innerRef: g }, t, e), {
+                        S(O({ innerRef: g }, t, e), {
                             'aria-label': o,
                             onClick: h,
-                            className: a()(b.secondaryButtonRefresh, u),
+                            className: a()(y.secondaryButtonRefresh, u),
                             children: s
                         })
                     )
@@ -238,7 +238,7 @@ function R(e) {
                 children: (0, r.jsx)(c.gj8, {
                     size: 'md',
                     color: 'currentColor',
-                    className: b.secondaryIcon
+                    className: y.secondaryIcon
                 })
             }),
             (0, r.jsx)(C, {
@@ -259,7 +259,7 @@ function R(e) {
                 children: (0, r.jsx)(c.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: b.secondaryIcon
+                    className: y.secondaryIcon
                 })
             })
         ]

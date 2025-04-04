@@ -38,7 +38,7 @@ class a extends r.Z {
             left: a,
             bottom: s,
             right: l
-        } = null !== (t = e.anchor) && void 0 !== t
+        } = null != (t = e.anchor)
             ? t
             : {
                   top: 0,
@@ -61,7 +61,7 @@ class a extends r.Z {
             )),
             (this.pinned = !!e.pinned),
             (this.zIndex = e.zIndex || 0),
-            (this.opacity = null !== (n = e.opacity) && void 0 !== n ? n : 1),
+            (this.opacity = null != (n = e.opacity) ? n : 1),
             (this.meta = o({}, e.meta));
     }
 }

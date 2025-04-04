@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(563132),
     E = n(45572),
     b = n(919778),
-    v = n(614223),
-    y = n(435020),
+    y = n(614223),
+    v = n(435020),
     O = n(246946),
     I = n(351402),
     S = n(509545),
@@ -40,7 +40,7 @@ var r = n(200651),
     F = n(981631),
     V = n(231338),
     Z = n(388032),
-    H = n(787616);
+    H = n(236691);
 function W(e, t, n) {
     let r = null,
         i = null,
@@ -69,10 +69,10 @@ function Y(e) {
     let Y,
         K,
         { selectedPlanId: z, paymentSources: q, priceOptions: Q, currencies: X, onCurrencyChange: J, onPaymentSourceChange: $, handlePaymentSourceAdd: ee, setHasAcceptedTerms: et, legalTermsNodeRef: en, hasLegalTermsFlash: er, trialId: ei, trialFooterMessageOverride: eo, reviewWarningMessage: ea, metadata: es, purchaseState: el, hideSubscriptionDetails: ec, referralTrialOfferId: eu, isTrial: ed = !1, isDiscount: ef = !1, handleClose: e_ } = e,
-        { isEmbeddedIAP: ep, activeSubscription: eh, selectedSkuId: em, defaultPlanId: eg, isPremium: eE, startedPaymentFlowWithPaymentSourcesRef: eb, setInvoicePreview: ev, contextMetadata: ey, inReverseTrial: eO, setPurchaseError: eI } = (0, g.JL)(),
+        { isEmbeddedIAP: ep, activeSubscription: eh, selectedSkuId: em, defaultPlanId: eg, isPremium: eE, startedPaymentFlowWithPaymentSourcesRef: eb, setInvoicePreview: ey, contextMetadata: ev, inReverseTrial: eO, setPurchaseError: eI } = (0, g.JL)(),
         { isGift: eS, giftRecipient: eT, selectedGiftStyle: eN } = (0, m.wD)(),
         eA = (0, P.Ng)(),
-        eC = null == eA ? void 0 : null === (t = eA.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => B.GP[e].skuId === em),
+        eC = null == eA || null == (t = eA.discount) ? void 0 : t.plan_ids.some((e) => B.GP[e].skuId === em),
         eR = !eS && null != eA && null != em && eC,
         eP = (0, l.e7)([S.Z], () => S.Z.get(z));
     a()(null != eP, 'Missing plan');
@@ -123,23 +123,23 @@ function Y(e) {
             subscriptionPlanId: z,
             currency: Q.currency,
             preventFetch: !eS || eD,
-            loadId: ey.loadId
+            loadId: ev.loadId
         });
     i.useEffect(() => {
-        ev(eG);
-    }, [ev, eG]);
+        ey(eG);
+    }, [ey, eG]);
     let eF = eS && (0, T.pO)(eT),
-        eV = null !== (o = null !== (n = null != ex ? ex : ek) && void 0 !== n ? n : eU) && void 0 !== o ? o : eB;
+        eV = null != (o = null != (n = null != ex ? ex : ek) ? n : eU) ? o : eB;
     i.useEffect(() => {
         eI(eV);
     }, [eV, eI]);
     let eZ = (0, l.e7)([O.Z], () => O.Z.enabled),
         eH = Q.paymentSourceId,
-        eW = (0, y.$)(q, eH),
+        eW = (0, v.$)(q, eH),
         { hasEntitlements: eY, entitlements: eK } = (0, U.H)(eP.id, eS),
         ez = (0, N.Ap)(Q.paymentSourceId),
         eq = (0, b.sE)(ei, eH, z),
-        eQ = (0, v.Kp)({
+        eQ = (0, y.Kp)({
             isTrial: ed,
             isGift: eS,
             selectedSkuId: em,
@@ -163,7 +163,7 @@ function Y(e) {
                 }),
             [em, eh, eg, eE]
         ),
-        e2 = (0, v.$g)(eQ, eL, eP),
+        e2 = (0, y.$g)(eQ, eL, eP),
         e3 = i.useMemo(() => (ed && null != eL ? eL : eO && null != eM ? eM : void 0), [eO, ed, eL, eM]);
     if (null != eV);
     else if (eS && null != eG)
@@ -383,7 +383,7 @@ function Y(e) {
                               checkboxClassname: e5,
                               checkboxLabelClassname: e7,
                               finePrint:
-                                  null !== (F = !eO && eo) && void 0 !== F
+                                  null != (F = !eO && eo)
                                       ? F
                                       : (0, r.jsx)(f.Z, {
                                             hide: ed || ef,

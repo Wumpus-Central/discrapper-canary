@@ -12,5 +12,5 @@ var i,
     u = (function (e) {
         return (e[(e.Early = 0)] = 'Early'), (e[(e.Database = 1)] = 'Database'), (e[(e.Default = 2)] = 'Default'), e;
     })({});
-r = new a.Z({ persist: null !== (i = s.K.get(c.E)) && void 0 !== i && i });
+r = new a.Z({ persist: null != (i = s.K.get(c.E)) && i });
 let d = new o.Up(2, r, { addBreadcrumb: l.Z });

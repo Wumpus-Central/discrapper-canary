@@ -10,7 +10,7 @@ class s {
     prepare() {
         var e;
         if (!this.fieldNoToField) {
-            let t = null !== (e = this.info.fields) && void 0 !== e ? e : [];
+            let t = null != (e = this.info.fields) ? e : [];
             this.fieldNoToField = new Map(t.map((e) => [e.no, e]));
         }
     }
@@ -51,8 +51,8 @@ class s {
                     } else l[u] = s.T().internalBinaryRead(e, e.uint32(), n, l[u]);
                     break;
                 case 'map':
-                    let [p, _] = this.mapEntry(s, e, n);
-                    l[u][p] = _;
+                    let [_, p] = this.mapEntry(s, e, n);
+                    l[u][_] = p;
             }
         }
     }

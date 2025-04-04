@@ -2,8 +2,8 @@ n.d(t, {
     F7: () => O,
     WA: () => g,
     s2: () => E,
-    wo: () => y,
-    yp: () => S
+    wo: () => v,
+    yp: () => I
 });
 var r = n(200651);
 n(192379);
@@ -16,7 +16,7 @@ var i = n(853872),
     u = n(710094),
     d = n(865921),
     f = n(388032);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -70,14 +70,14 @@ function m(e, t) {
 }
 let g = {
         key: null,
-        renderStep: (e) => (0, r.jsx)(d.v, _({}, e))
+        renderStep: (e) => (0, r.jsx)(d.v, p({}, e))
     },
     E = {
         key: o.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
             (0, r.jsx)(
                 a.J,
-                m(_({}, e), {
+                m(p({}, e), {
                     breadcrumbSteps: [o.h8.ADD_PAYMENT_STEPS, o.h8.REVIEW, o.h8.CONFIRM],
                     onReturn: () => {
                         0 === Object.keys(i.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(o.h8.REVIEW, { trackedFromStep: o.h8.ADD_PAYMENT_STEPS });
@@ -86,22 +86,22 @@ let g = {
             ),
         options: { renderHeader: !0 }
     },
-    v = {
+    b = {
         key: o.h8.AWAITING_PURCHASE_TOKEN_AUTH,
         renderStep: () => (0, r.jsx)(l.Z, {})
     },
-    b = {
+    y = {
         key: o.h8.AWAITING_AUTHENTICATION,
         renderStep: () => (0, r.jsx)(s.Z, {}),
         options: { renderHeader: !0 }
     },
-    y = {
+    v = {
         key: o.h8.REVIEW,
-        renderStep: (e) => (0, r.jsx)(u.l, _({}, e)),
+        renderStep: (e) => (0, r.jsx)(u.l, p({}, e)),
         options: { useBreadcrumbLabel: () => f.NW.string(f.t.QBnNHh) }
     },
     O = {
         key: o.h8.CONFIRM,
-        renderStep: (e) => (0, r.jsx)(c.w, _({}, e))
+        renderStep: (e) => (0, r.jsx)(c.w, p({}, e))
     },
-    S = [v, b];
+    I = [b, y];

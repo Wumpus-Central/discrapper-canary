@@ -1,6 +1,6 @@
 n.d(t, {
-    eC: () => _,
-    gX: () => p,
+    eC: () => p,
+    gX: () => _,
     uP: () => f
 });
 var r = n(192379),
@@ -20,7 +20,7 @@ let d = (e) => {
         return {
             restrictions: (0, i.Wu)([s.Z], () => {
                 var e;
-                return null !== (e = s.Z.getMonetizationRestrictions(null != n ? n : u.lds)) && void 0 !== e ? e : [];
+                return null != (e = s.Z.getMonetizationRestrictions(null != n ? n : u.lds)) ? e : [];
             }),
             restrictionsLoading: (0, i.e7)([s.Z], () => s.Z.getMonetizationRestrictionsFetchState(null != n ? n : u.lds) === s.M.FETCHING)
         };
@@ -30,15 +30,15 @@ let d = (e) => {
         let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
             { restrictions: r, restrictionsLoading: o } = d(n);
         return {
-            shouldHideGuildPurchaseEntryPoints: !((null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) || (o ? null === (t = null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, c.uq)(r)),
+            shouldHideGuildPurchaseEntryPoints: !((null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) || (o ? null == (t = null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t : (0, c.uq)(r)),
             restrictionsLoading: o
         };
     },
-    p = (e) => {
+    _ = (e) => {
         var t;
         let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
             { restrictions: r, restrictionsLoading: o } = d(n),
-            a = o ? null === (t = null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, c.Q6)(r),
+            a = o ? null == (t = null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t : (0, c.Q6)(r),
             s = !!(null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
         return {
             shouldRestrictUpdatingCreatorMonetizationSettings: a || s,
@@ -46,7 +46,7 @@ let d = (e) => {
             restrictionsLoading: o
         };
     },
-    _ = (e) => {
+    p = (e) => {
         let { restrictions: t, restrictionsLoading: n } = d((0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]));
         return {
             isMonetizationReapplicationDisabled: (0, c.m8)(t),

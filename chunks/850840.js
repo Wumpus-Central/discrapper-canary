@@ -62,12 +62,12 @@ let d = {
 function f() {
     r.hasAcceptedStoreTerms = !0;
 }
-function p(e) {
+function _(e) {
     let { eulaId: t } = e;
     if (r.hasAcceptedEulaIds.includes(t)) return !1;
     r.hasAcceptedEulaIds.push(t);
 }
-class _ extends (i = o.ZP.PersistedStore) {
+class p extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         r = null != e ? e : d;
     }
@@ -81,8 +81,8 @@ class _ extends (i = o.ZP.PersistedStore) {
         return r.hasAcceptedEulaIds.includes(e);
     }
 }
-s(_, 'displayName', 'ApplicationStoreUserSettingsStore'), s(_, 'persistKey', 'ApplicationStoreUserSettingsStore'), s(_, 'migrations', [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
-let h = new _(a.Z, {
+s(p, 'displayName', 'ApplicationStoreUserSettingsStore'), s(p, 'persistKey', 'ApplicationStoreUserSettingsStore'), s(p, 'migrations', [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
+let h = new p(a.Z, {
     APPLICATION_STORE_ACCEPT_STORE_TERMS: f,
-    APPLICATION_STORE_ACCEPT_EULA: p
+    APPLICATION_STORE_ACCEPT_EULA: _
 });
