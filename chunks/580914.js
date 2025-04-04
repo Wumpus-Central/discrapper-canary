@@ -90,14 +90,19 @@ let I = {
                                         autoPlay: !0,
                                         loop: !0
                                     }),
-                              (0, r.jsx)('div', {
-                                  className: o()(w.bannerShadow, w.left, { [w.darker]: null == M ? void 0 : M.darker }),
-                                  style: (null == M ? void 0 : M.gradientLeft) != null ? { background: null == M ? void 0 : M.gradientLeft } : void 0
-                              }),
-                              (0, r.jsx)('div', {
-                                  className: o()(w.bannerShadow, w.right, { [w.darker]: null == M ? void 0 : M.darker }),
-                                  style: (null == M ? void 0 : M.gradientRight) != null ? { background: null == M ? void 0 : M.gradientRight } : void 0
-                              })
+                              (null == F ? void 0 : F.hideSideShadow) !== !0 &&
+                                  (0, r.jsxs)(r.Fragment, {
+                                      children: [
+                                          (0, r.jsx)('div', {
+                                              className: o()(w.bannerShadow, w.left, { [w.darker]: null == M ? void 0 : M.darker }),
+                                              style: (null == M ? void 0 : M.gradientLeft) != null ? { background: null == M ? void 0 : M.gradientLeft } : void 0
+                                          }),
+                                          (0, r.jsx)('div', {
+                                              className: o()(w.bannerShadow, w.right, { [w.darker]: null == M ? void 0 : M.darker }),
+                                              style: (null == M ? void 0 : M.gradientRight) != null ? { background: null == M ? void 0 : M.gradientRight } : void 0
+                                          })
+                                      ]
+                                  })
                           ]
                       }),
                       (0, r.jsxs)('div', {
@@ -129,8 +134,8 @@ let I = {
                                                             null != Z.title &&
                                                                 (0, r.jsx)(c.X6q, {
                                                                     variant: 'heading-xxl/bold',
-                                                                    color: 'always-white',
                                                                     className: w.title,
+                                                                    color: 'header-primary',
                                                                     children: Z.title
                                                                 }),
                                                             (0, r.jsx)(c.Text, {
