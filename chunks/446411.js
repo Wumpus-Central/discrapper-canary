@@ -4,8 +4,8 @@ t.d(l, {
 }),
     t(47120),
     t(653041),
-    t(301563),
-    t(266796);
+    t(266796),
+    t(301563);
 var n,
     r = t(200651),
     i = t(192379),
@@ -21,8 +21,8 @@ var n,
     g = t(947849),
     b = t(768494),
     f = t(624195),
-    v = t(44824),
-    y = t(124347),
+    y = t(44824),
+    v = t(124347),
     x = t(283756),
     w = t(169525),
     I = t(94396),
@@ -34,8 +34,8 @@ var n,
     S = t(585483),
     P = t(55935),
     T = t(408433),
-    M = t(956664),
-    A = t(468846),
+    A = t(956664),
+    M = t(468846),
     H = t(401419),
     k = t(249458),
     L = t(981631),
@@ -94,8 +94,8 @@ function G(e, l) {
 }
 function U(e) {
     var l, t;
-    let { className: n, iframeWrapperClassName: s, maxWidth: o, maxHeight: u, thumbnail: d, video: c, provider: h, allowFullScreen: m = !0, responsive: p = !1, renderImageComponent: g, renderVideoComponent: b, renderLinkComponent: f, playable: v = !0, autoPlay: y = !1, autoMute: w, volume: I, onPlay: j, onPause: O, onEnded: E, onControlsHide: C, onControlsShow: P, onVolumeChange: T, onMute: H, href: k, placeholder: R, placeholderVersion: B, sourceMetadata: _ } = e,
-        [W, D] = i.useState(y),
+    let { className: n, iframeWrapperClassName: s, maxWidth: o, maxHeight: u, thumbnail: d, video: c, provider: h, allowFullScreen: m = !0, responsive: p = !1, renderImageComponent: g, renderVideoComponent: b, renderLinkComponent: f, playable: y = !0, autoPlay: v = !1, autoMute: w, volume: I, onPlay: j, onPause: O, onEnded: E, onControlsHide: C, onControlsShow: P, onVolumeChange: T, onMute: H, href: k, placeholder: R, placeholderVersion: B, sourceMetadata: _ } = e,
+        [W, D] = i.useState(v),
         F = null != c && null == c.proxyURL,
         Z = i.useCallback(() => D(!1), [D]),
         G = (e) => {
@@ -109,7 +109,7 @@ function U(e) {
     );
     let { width: U, height: z } = d;
     null != c && ((U = c.width), (z = c.height));
-    let Y = (0, M.Tj)({
+    let Y = (0, A.Tj)({
         width: U,
         height: z,
         maxWidth: o,
@@ -128,12 +128,12 @@ function U(e) {
                 width: U,
                 height: z,
                 responsive: p,
-                autoPlay: y,
+                autoPlay: v,
                 onEnded: E,
                 naturalWidth: c.width,
                 naturalHeight: c.height,
                 onVolumeChange: T,
-                playable: v,
+                playable: y,
                 autoMute: w,
                 volume: I,
                 onPlay: j,
@@ -181,7 +181,7 @@ function U(e) {
             children: (0, r.jsx)('div', {
                 className: a()(V.embedVideo, s),
                 style: i,
-                children: (0, r.jsx)(A.ZP, {
+                children: (0, r.jsx)(M.ZP, {
                     provider: h,
                     src: c.url,
                     style: e,
@@ -213,7 +213,7 @@ function U(e) {
                 imageClassName: V.embedVideoImageComponentInner,
                 placeholder: R,
                 placeholderVersion: B,
-                onClick: v && null != c ? G : null,
+                onClick: y && null != c ? G : null,
                 sourceMetadata: _,
                 analyticsSource: 'EmbedVideo'
             }),
@@ -221,7 +221,7 @@ function U(e) {
                 className: V.embedVideoActions,
                 children: (0, r.jsx)('div', {
                     className: V.centerContent,
-                    children: v
+                    children: y
                         ? (0, r.jsx)(x.Z, {
                               onPlay: null != c ? G : null,
                               externalURL: k,
@@ -236,8 +236,8 @@ function U(e) {
     });
 }
 function z(e) {
-    let { className: l, href: t, autoPlay: n, maxWidth: i, maxHeight: s, thumbnail: o, video: u, renderImageComponent: d, responsive: c, alt: h, disableAltTextDisplay: m = !1, playable: p = !0, hiddenSpoilers: g, placeholder: b, placeholderVersion: f, sourceMetadata: y } = e;
-    return (0, r.jsx)(v.Z, {
+    let { className: l, href: t, autoPlay: n, maxWidth: i, maxHeight: s, thumbnail: o, video: u, renderImageComponent: d, responsive: c, alt: h, disableAltTextDisplay: m = !1, playable: p = !0, hiddenSpoilers: g, placeholder: b, placeholderVersion: f, sourceMetadata: v } = e;
+    return (0, r.jsx)(y.Z, {
         className: a()(V.embedVideo, l),
         original: t,
         poster: (0, N.q)(o),
@@ -257,7 +257,7 @@ function z(e) {
         disableAltTextDisplay: m,
         placeholder: b,
         placeholderVersion: f,
-        sourceMetadata: y
+        sourceMetadata: v
     });
 }
 class Y extends (n = i.PureComponent) {
@@ -508,7 +508,7 @@ class Y extends (n = i.PureComponent) {
         var e, l, t, n, i;
         let { hiddenSpoiler: s = !1, isVisible: o = !0, image: u, isGalleryImage: d = !1, alt: c = B.NW.string(B.t.X4IxWF), allImages: h = null } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             { renderImageComponent: m, className: p, autoPlayGif: f } = this.props,
-            { maxMediaWidth: v, maxMediaHeight: x, sourceMetadata: w } = this.state;
+            { maxMediaWidth: y, maxMediaHeight: x, sourceMetadata: w } = this.state;
         if (null == u) return null;
         let j = (0, N.q)(u),
             { srcToOnClickOverride: O, srcToHandlePreloadImage: E } =
@@ -527,7 +527,7 @@ class Y extends (n = i.PureComponent) {
                           {},
                           'Embed'
                       ),
-            C = y.ZP.isAnimated({
+            C = v.ZP.isAnimated({
                 src: (0, N.q)(u),
                 original: u.url,
                 animated: !1,
@@ -542,25 +542,26 @@ class Y extends (n = i.PureComponent) {
                 imageContainerClassName: d ? V.galleryImageContainer : void 0,
                 imageClassName: d ? V.embedGalleryImageElement : void 0,
                 src: (0, N.q)(u),
-                alt: c,
+                alt: null == u.description || '' === u.description ? c : u.description,
                 responsive: !0,
                 limitResponsiveWidth: !d,
                 width: u.width,
                 height: u.height,
-                maxWidth: v,
+                maxWidth: y,
                 maxHeight: x,
                 original: u.url,
                 shouldLink: o,
-                disableAltTextDisplay: !0,
+                disableAltTextDisplay: null == u.description || '' === u.description,
                 hiddenSpoilers: s,
                 placeholder: u.placeholder,
                 placeholderVersion: u.placeholderVersion,
-                srcIsAnimated: u.srcIsAnimated
+                srcIsAnimated: u.srcIsAnimated,
+                mosaicStyleAlt: !0
             },
             P = null != (n = null == (e = u.url.split('.').pop()) ? void 0 : e.split('?')[0]) ? n : '';
         'jpg' === P && (P = 'jpeg');
-        let T = null != u && !y.uo.test(null == u ? void 0 : u.url) && !(u.srcIsAnimated && y.YG.test(null == u ? void 0 : u.url)) && !(u.srcIsAnimated && y.FH.test(null == u ? void 0 : u.url)),
-            M = !0 !== this.props.isSearchResult && o && (null == (l = this.props.message) ? void 0 : l.channel_id) != null && (null == (t = this.props.message) ? void 0 : t.channel_id) !== void 0 && T && !(null != (i = u) && (i.width <= R.OF || i.height <= R.OF)) && null != P;
+        let T = null != u && !v.uo.test(null == u ? void 0 : u.url) && !(u.srcIsAnimated && v.YG.test(null == u ? void 0 : u.url)) && !(u.srcIsAnimated && v.FH.test(null == u ? void 0 : u.url)),
+            A = !0 !== this.props.isSearchResult && o && (null == (l = this.props.message) ? void 0 : l.channel_id) != null && (null == (t = this.props.message) ? void 0 : t.channel_id) !== void 0 && T && !(null != (i = u) && (i.width <= R.OF || i.height <= R.OF)) && null != P;
         return (0, r.jsx)(g.h.Consumer, {
             children: (e) =>
                 (0, r.jsx)(
@@ -574,11 +575,11 @@ class Y extends (n = i.PureComponent) {
                                     renderAccessory: C ? e : null,
                                     handlePreloadImage: E[j],
                                     onClick: O[j],
-                                    onMouseEnter: () => this.handleImageHover(!0, u, M),
-                                    onMouseLeave: () => this.handleImageHover(!1, u, M),
+                                    onMouseEnter: () => this.handleImageHover(!0, u, A),
+                                    onMouseLeave: () => this.handleImageHover(!1, u, A),
                                     renderAdjacentContent: () => {
                                         var e, l;
-                                        return !0 === this.props.showImageRecs && M
+                                        return !0 === this.props.showImageRecs && A
                                             ? this.renderImageHoverButtons({
                                                   mimeType: ['image', P],
                                                   downloadURL: null != (l = u.proxyURL) ? l : u.url,
@@ -773,7 +774,7 @@ class Y extends (n = i.PureComponent) {
             { maxMediaWidth: s, maxMediaHeight: a } = this.state,
             o = null != l ? l : n;
         if (null == o) return;
-        let { width: u } = (0, M.Tj)({
+        let { width: u } = (0, A.Tj)({
             width: o.width,
             height: o.height,
             maxWidth: s,
@@ -783,7 +784,7 @@ class Y extends (n = i.PureComponent) {
         if (r === L.hBH.RICH && void 0 !== t) return 520;
         if (r === L.hBH.GIFV) {
             var d, c, h, m;
-            let { width: e } = (0, M.Tj)({
+            let { width: e } = (0, A.Tj)({
                 width: null != (c = null != (d = null == n ? void 0 : n.width) ? d : null == i ? void 0 : i.width) ? c : 0,
                 height: null != (m = null != (h = null == n ? void 0 : n.height) ? h : null == i ? void 0 : i.height) ? m : 0,
                 maxWidth: s,
@@ -837,7 +838,7 @@ class Y extends (n = i.PureComponent) {
             if (void 0 !== e) {
                 var o;
                 let { minWidth: l, minHeight: t } = null != (o = this.getMinSize()) ? o : {},
-                    { width: n } = (0, M.Tj)({
+                    { width: n } = (0, A.Tj)({
                         width: e.width,
                         height: e.height,
                         maxWidth: i,

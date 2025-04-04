@@ -11,8 +11,8 @@ n.d(t, {
     n(474991),
     n(398202),
     n(301563),
-    n(789020),
     n(266796),
+    n(789020),
     n(315314),
     n(309749),
     n(610138),
@@ -47,7 +47,7 @@ function y(e, t, n) {
     return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
 }
 function v(e) {
-    let { url: t, proxy_url: n, width: r, height: i, placeholder: o, placeholder_version: a, flags: s } = e;
+    let { url: t, proxy_url: n, width: r, height: i, placeholder: o, placeholder_version: a, description: s, flags: c } = e;
     return {
         url: t,
         proxyURL: n,
@@ -55,8 +55,9 @@ function v(e) {
         height: i,
         placeholder: o,
         placeholderVersion: a,
-        srcIsAnimated: (0, l.yE)(null != s ? s : 0, u.FoC.IS_ANIMATED),
-        flags: null != s ? s : 0
+        description: s,
+        srcIsAnimated: (0, l.yE)(null != c ? c : 0, u.FoC.IS_ANIMATED),
+        flags: null != c ? c : 0
     };
 }
 function O(e, t, n) {
