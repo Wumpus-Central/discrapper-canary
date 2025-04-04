@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => Q,
-    jQ: () => V
+    ZP: () => q,
+    jQ: () => F
 }),
     n(47120);
 var r = n(200651),
@@ -88,12 +88,11 @@ function j(e, t) {
 }
 let U = 88,
     G = 'remove-wallpaper',
-    B = 0.5,
-    F = 'blur';
-var V = (function (e) {
+    B = 0.5;
+var F = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e;
 })({});
-function Z(e) {
+function V(e) {
     let { handleClose: t } = e;
     return (
         (0, h.Z)({
@@ -134,7 +133,7 @@ function Z(e) {
         })
     );
 }
-function H(e) {
+function Z(e) {
     let { isPremiumTier2Subscriber: t, handleClose: n } = e;
     return (0, r.jsxs)('div', {
         className: L.headerContainer,
@@ -161,7 +160,7 @@ function H(e) {
         ]
     });
 }
-let W = i.forwardRef((e) => {
+let H = i.forwardRef((e) => {
     let { isSelected: t, onSelect: n, selectionId: o, tooltipText: s, label: u, className: f, children: _ } = e,
         p = (0, d.xUy)({
             label: u,
@@ -234,10 +233,10 @@ let W = i.forwardRef((e) => {
         })
     );
 });
-function Y(e) {
+function W(e) {
     let { isSelected: t, onSelect: n, chatWallpaperMetadata: i } = e,
         { label: o, default: a, designGroupId: s } = i;
-    return (0, r.jsx)(W, {
+    return (0, r.jsx)(H, {
         isSelected: t,
         onSelect: n,
         selectionId: s,
@@ -254,9 +253,9 @@ function Y(e) {
         })
     });
 }
-function K(e) {
+function Y(e) {
     let { isSelected: t, onSelect: n } = e;
-    return (0, r.jsx)(W, {
+    return (0, r.jsx)(H, {
         isSelected: t,
         onSelect: n,
         selectionId: G,
@@ -269,31 +268,22 @@ function K(e) {
         })
     });
 }
-function z(e) {
-    let { canApply: t, isUpdating: n, isBlurEnabled: o, onToggleBlur: a, onClose: s, onApply: l } = e,
-        c = i.useMemo(
-            () => [
-                {
-                    name: D.NW.string(D.t['3nPvdH']),
-                    value: F,
-                    radioBarClassName: L.blurToggle
-                }
-            ],
-            []
-        );
+function K(e) {
+    let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: o, onClose: a, onApply: s } = e;
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
         align: 'center',
         className: L.footerContainerStack,
-        padding: 12,
+        padding: 16,
         children: [
-            (0, r.jsx)(d.FXm, {
-                onChange: a,
-                options: c,
-                value: o ? F : void 0,
-                size: d.FXm.Sizes.NONE,
-                withTransparentBackground: !0
+            (0, r.jsx)(d.XZJ, {
+                type: d.XZJ.Types.INVERTED,
+                value: i,
+                onChange: (e, t) => {
+                    v.default.track(R.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), o(t);
+                },
+                children: D.NW.string(D.t['3nPvdH'])
             }),
             (0, r.jsxs)(d.Kqy, {
                 direction: 'horizontal',
@@ -305,13 +295,13 @@ function z(e) {
                         size: d.zxk.Sizes.MEDIUM,
                         color: d.zxk.Colors.PRIMARY,
                         onClick: () => {
-                            v.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), s();
+                            v.default.track(R.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), a();
                         },
                         disabled: n,
                         children: D.NW.string(D.t['ETE/oK'])
                     }),
                     (0, r.jsx)(d.zxk, {
-                        onClick: l,
+                        onClick: s,
                         disabled: !t,
                         submitting: n,
                         children: D.NW.string(D.t['1Qm829'])
@@ -321,7 +311,7 @@ function z(e) {
         ]
     });
 }
-function q() {
+function z() {
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
@@ -349,8 +339,8 @@ function q() {
         ]
     });
 }
-W.displayName = 'BaseChatWallpaperSelection';
-let Q = function (e) {
+H.displayName = 'BaseChatWallpaperSelection';
+let q = function (e) {
     let { className: t, position: n = R.VD2.TOP_RIGHT, config: o } = e,
         { analyticsLocations: s } = (0, p.ZP)(_.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: l, closePicker: c, setPreviewWallpaperId: h } = (0, N.B)(),
@@ -376,7 +366,7 @@ let Q = function (e) {
     (0, f.ZP)(() => () => {
         F(P.L.INDIRECT_ACTION);
     });
-    let V = i.useCallback(() => {
+    let H = i.useCallback(() => {
             null != l &&
                 null != m &&
                 void 0 !== m.wallpaperId &&
@@ -387,14 +377,16 @@ let Q = function (e) {
                 }),
                 B(l, m.wallpaperId));
         }, [l, m, B, b]),
-        W = i.useCallback(() => {
-            let e = !b;
-            if ((null == j ? void 0 : j.designGroupId) != null) {
-                var t;
-                let n = M[j.designGroupId].find((t) => t.isBlurred === e);
-                h(null != (t = null == n ? void 0 : n.id) ? t : null);
-            } else D(e);
-        }, [null == j ? void 0 : j.designGroupId, M, h, b]),
+        q = i.useCallback(
+            (e) => {
+                if ((null == j ? void 0 : j.designGroupId) != null) {
+                    var t;
+                    let n = M[j.designGroupId].find((t) => t.isBlurred === e);
+                    h(null != (t = null == n ? void 0 : n.id) ? t : null);
+                } else D(e);
+            },
+            [null == j ? void 0 : j.designGroupId, M, h]
+        ),
         Q = i.useCallback(
             (e) => {
                 let t = M[e];
@@ -422,7 +414,7 @@ let Q = function (e) {
                       (0, r.jsxs)(d.Ttm, {
                           className: L.wallpapersContainer,
                           children: [
-                              (0, r.jsx)(K, {
+                              (0, r.jsx)(Y, {
                                   isSelected: null == m || null === m.wallpaperId,
                                   onSelect: () => {
                                       v.default.track(R.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
@@ -434,7 +426,7 @@ let Q = function (e) {
                               }),
                               x.map((e) =>
                                   (0, r.jsx)(
-                                      Y,
+                                      W,
                                       {
                                           isSelected: (null == j ? void 0 : j.designGroupId) === e.designGroupId,
                                           onSelect: Q,
@@ -446,15 +438,15 @@ let Q = function (e) {
                           ]
                       }),
                       E
-                          ? (0, r.jsx)(z, {
+                          ? (0, r.jsx)(K, {
                                 canApply: (null == m ? void 0 : m.wallpaperId) !== void 0,
                                 isUpdating: G,
                                 isBlurEnabled: b,
-                                onToggleBlur: W,
+                                onBlurEnabledChange: q,
                                 onClose: F,
-                                onApply: V
+                                onApply: H
                             })
-                          : (0, r.jsx)(q, {})
+                          : (0, r.jsx)(z, {})
                   ]
               })),
         (0, r.jsx)(p.Gt, {
@@ -467,11 +459,11 @@ let Q = function (e) {
                     className: L.container,
                     children: [
                         (null == o ? void 0 : o.pickerType) === 1
-                            ? (0, r.jsx)(Z, {
+                            ? (0, r.jsx)(V, {
                                   handleClose: F,
                                   isPremiumTier2Subscriber: E
                               })
-                            : (0, r.jsx)(H, {
+                            : (0, r.jsx)(Z, {
                                   handleClose: F,
                                   isPremiumTier2Subscriber: E
                               }),
