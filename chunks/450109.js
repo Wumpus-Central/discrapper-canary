@@ -1,9 +1,8 @@
-n.d(t, { Z: () => m }), n(653041), n(47120);
+n.d(t, { Z: () => _ }), n(539854), n(388685);
 var r,
     i = n(442837),
-    o = n(46973),
-    a = n(570140);
-function s(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,55 +15,39 @@ function s(e, t, n) {
         e
     );
 }
-let l = 30,
-    c = [],
-    u = [],
-    d = {
-        [o.Yn.DEFAULT]: [],
-        [o.Yn.STREAM]: []
-    },
-    f = {
-        [o.Yn.DEFAULT]: [],
-        [o.Yn.STREAM]: []
-    };
-function _(e) {
-    let { connectionStats: t } = e;
-    (u = c), (c = t);
-    let n = {
-        [o.Yn.DEFAULT]: [],
-        [o.Yn.STREAM]: []
-    };
+let s = 30,
+    l = {};
+function c(e) {
+    let { connectionStats: t } = e,
+        n = {};
     for (let e of t) {
-        let { stats: t, context: r } = e;
-        n[r].push(e), f[r].push(t), f[r].length > l && f[r].shift();
+        let { mediaEngineConnectionId: t } = e;
+        0 !== t.length && ((n[t] = e), t in l || (l[t] = []), l[t].push(e), l[t].length > s && l[t].shift());
     }
-    d = n;
 }
-function p(e) {
-    let { context: t } = e;
-    f[t] = [];
+function u(e) {
+    let { mediaEngineConnectionId: t } = e;
+    null != t && delete l[t];
 }
-class h extends (r = i.ZP.Store) {
-    getConnectionStats() {
-        return c;
+function d(e, t) {
+    if (null == e) return null;
+    let n = l[e];
+    return null == n || n.length <= t ? null : n[n.length - t - 1];
+}
+class f extends (r = i.ZP.Store) {
+    getConnectionStats(e) {
+        return d(e, 0);
     }
-    getConnectionStatsByContext(e) {
-        var t;
-        return null != (t = d[e]) ? t : [];
-    }
-    getFirstConnectionStatsByContext(e) {
-        var t;
-        return null == (t = d[e]) ? void 0 : t[0];
-    }
-    getLastConnectionStats() {
-        return u;
+    getLastConnectionStats(e) {
+        return d(e, 1);
     }
     getStatsHistory(e) {
-        return f[e];
+        var t;
+        return null == e ? [] : null != (t = l[e]) ? t : [];
     }
 }
-s(h, 'displayName', 'MediaEngineStatsStore');
-let m = new h(a.Z, {
-    MEDIA_ENGINE_CONNECTION_STATS: _,
-    MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET: p
+a(f, 'displayName', 'MediaEngineStatsStore');
+let _ = new f(o.Z, {
+    MEDIA_ENGINE_CONNECTION_STATS: c,
+    MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET: u
 });

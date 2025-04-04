@@ -1,4 +1,4 @@
-a.d(e, { rMx: () => N }), a(47120), a(743606);
+a.d(e, { rMx: () => N }), a(388685), a(743606);
 var r,
     n = a(512722),
     _ = a.n(n),
@@ -475,6 +475,7 @@ let A = Object.freeze({
         STORE_LISTINGS_SKU: (t) => '/store/skus/'.concat(t, '/listings'),
         APPLICATION_SKUS: (t) => '/applications/'.concat(t, '/skus'),
         APPLICATION_MANAGED_ACTIVITY_LINK: (t, e) => '/applications/'.concat(t, '/managed-links/').concat(e),
+        APPLICATION_QUICK_ACTIVITY_LINK: (t, e) => '/applications/'.concat(t, '/quick-links/').concat(e),
         STORE_EULA: (t) => '/store/eulas/'.concat(t),
         ENTITLEMENTS_FOR_APPLICATION: (t) => '/users/@me/applications/'.concat(t, '/entitlements'),
         ENTITLEMENTS_FOR_USER: '/users/@me/entitlements',

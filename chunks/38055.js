@@ -1,7 +1,7 @@
-n.d(t, { b: () => L }), n(47120);
+n.d(t, { b: () => L }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    o = n(255914),
+    o = n(674466),
     a = n(798681),
     s = n(581567),
     l = n(569545),
@@ -22,13 +22,13 @@ var r = n(392711),
     I = n(65154);
 function S(e) {
     var t;
-    let n = c.Z.getConnectionStats().find((t) => t.context === e);
+    let n = c.Z.getConnectionStats(e);
     return null == n ? null : null != (t = n.stats.rtp.outbound.find((e) => 'video' === e.type)) ? t : null;
 }
 function T(e, t) {
     var n;
     if (null == t) return null;
-    let r = c.Z.getConnectionStats().find((t) => t.context === e);
+    let r = c.Z.getConnectionStats(e);
     if (null == r) return null;
     let i = r.stats.rtp.inbound[t];
     return null == i ? null : null != (n = i.find((e) => 'video' === e.type)) ? n : null;
@@ -38,25 +38,27 @@ function N(e, t, n) {
 }
 function A(e) {
     var t, n;
-    return null != (n = null == (t = c.Z.getFirstConnectionStatsByContext(e)) ? void 0 : t.stats.transport.outboundBitrateEstimate) ? n : null;
+    return null != (n = null == (t = c.Z.getConnectionStats(e)) ? void 0 : t.stats.transport.outboundBitrateEstimate) ? n : null;
 }
 function C(e) {
     var t, n;
-    return null != (n = null == (t = c.Z.getFirstConnectionStatsByContext(e)) ? void 0 : t.stats.transport.inboundBitrateEstimate) ? n : null;
+    return null != (n = null == (t = c.Z.getConnectionStats(e)) ? void 0 : t.stats.transport.inboundBitrateEstimate) ? n : null;
 }
-function R() {
-    if (0 === c.Z.getConnectionStats().length || 0 === c.Z.getLastConnectionStats().length) return null;
-    let e = {};
-    for (let s of ['videohookFrames', 'hybridDxgiFrames', 'hybridGdiFrames', 'hybridVideohookFrames', 'hybridGraphicsCaptureFrames', 'hybridGdiBitBltFrames', 'hybridGdiPrintWindowFrames', 'quartzFrames', 'screenCaptureKitFrames']) {
-        var t, n, r, i, o, a;
-        let l = null != (o = null == (n = c.Z.getLastConnectionStats().find((e) => e.context === I.Yn.STREAM)) || null == (t = n.stats.screenshare) ? void 0 : t[s]) ? o : 0,
-            u = null != (a = null == (i = c.Z.getFirstConnectionStatsByContext(I.Yn.STREAM)) || null == (r = i.stats.screenshare) ? void 0 : r[s]) ? a : 0;
-        e[s] = u - l;
+function R(e) {
+    let t = c.Z.getConnectionStats(e),
+        n = c.Z.getLastConnectionStats(e);
+    if (null == t || null == n) return null;
+    let r = {};
+    for (let e of ['videohookFrames', 'hybridDxgiFrames', 'hybridGdiFrames', 'hybridVideohookFrames', 'hybridGraphicsCaptureFrames', 'hybridGdiBitBltFrames', 'hybridGdiPrintWindowFrames', 'quartzFrames', 'screenCaptureKitFrames']) {
+        var i, o, a, s;
+        let l = null != (a = null == (i = n.stats.screenshare) ? void 0 : i[e]) ? a : 0,
+            c = null != (s = null == (o = t.stats.screenshare) ? void 0 : o[e]) ? s : 0;
+        r[e] = c - l;
     }
-    let s = -1,
-        l = null;
-    for (let [t, n] of Object.entries(e)) n > s && ((s = n), (l = t));
-    return s > 0 ? l : null;
+    let l = -1,
+        u = null;
+    for (let [e, t] of Object.entries(r)) t > l && ((l = t), (u = e));
+    return l > 0 ? u : null;
 }
 function P(e) {
     var t;
@@ -72,101 +74,102 @@ function D(e, t, n) {
     return e ? (null != (i = null == (r = S(t)) ? void 0 : r.frameRateEncode) ? i : null) : null != (a = null == (o = T(t, n)) ? void 0 : o.frameRateDecode) ? a : null;
 }
 function L(e, t) {
-    var n, r, c, h;
-    let m,
-        L = (0, v.hp)(e),
-        x = w(t),
-        M = d.Z.getChannel(x),
-        k = 'streamKey' in t ? t.streamKey : void 0,
-        j = 'mediaContext' in t ? t.mediaContext : void 0,
-        U = 'underlyingError' in t ? t.underlyingError : void 0,
-        G = 'errorMessage' in t ? t.errorMessage : void 0,
-        B = 'mediaSessionId' in t ? t.mediaSessionId : void 0,
+    var n, r, c, h, m;
+    let L,
+        x = (0, v.hp)(e),
+        M = w(t),
+        k = d.Z.getChannel(M),
+        j = 'streamKey' in t ? t.streamKey : void 0,
+        U = 'mediaContext' in t ? t.mediaContext : void 0,
+        G = 'underlyingError' in t ? t.underlyingError : void 0,
+        B = 'errorMessage' in t ? t.errorMessage : void 0,
+        V = 'mediaSessionId' in t ? t.mediaSessionId : void 0,
         F = 'rtcConnectionId' in t ? t.rtcConnectionId : void 0,
-        V = 'videoCodec' in t ? t.videoCodec : void 0,
-        Z = 'videoEncoder' in t ? t.videoEncoder : void 0,
-        H = 'videoDecoder' in t ? t.videoDecoder : void 0,
-        W = 'audioCaptureSampleRateMismatchPercent' in t ? t.audioCaptureSampleRateMismatchPercent : void 0,
-        Y = 'audioInputDeviceName' in t ? t.audioInputDeviceName : void 0,
-        K = 'audioOutputDeviceName' in t ? t.audioOutputDeviceName : void 0,
-        z = 'videoDeviceName' in t ? t.videoDeviceName : void 0,
-        q = 'userId' in t ? t.userId : void 0,
-        Q = null != k ? (0, l.my)(k) : null,
-        X = P(t),
-        J = null != k ? X : _.ZP.getRTCConnection(),
-        $ = null != k ? (null == X || null == (n = X.analyticsContext) ? void 0 : n.streamApplication) : null,
-        { resolution: ee, fps: et } = u.Z.getState(),
-        { gameName: en, gameId: er, exe: ei, distributor: eo } = (0, s.G8)($),
-        ea = L.isErrorOutbound,
-        es = null != j ? j : I.Yn.DEFAULT,
-        el = null != Q ? Q.ownerId : q,
-        ec = null != Q ? (null == J ? void 0 : J.getVoiceParticipantType()) : ea ? 'sender' : 'receiver';
-    (m = null != k && null != Q ? (ea ? (null == J || null == (r = J.getOutboundStats()) ? void 0 : r.find((e) => e.quality === I.y7)) : null == J ? void 0 : J.getInboundStats(Q.ownerId)) : ea ? (null != (h = i().maxBy(null != (c = null == J ? void 0 : J.getOutboundStats()) ? c : [], (e) => e.num_frames)) ? h : null) : null != el ? (null == J ? void 0 : J.getInboundStats(el)) : null),
+        Z = 'videoCodec' in t ? t.videoCodec : void 0,
+        H = 'videoEncoder' in t ? t.videoEncoder : void 0,
+        W = 'videoDecoder' in t ? t.videoDecoder : void 0,
+        Y = 'audioCaptureSampleRateMismatchPercent' in t ? t.audioCaptureSampleRateMismatchPercent : void 0,
+        K = 'audioInputDeviceName' in t ? t.audioInputDeviceName : void 0,
+        z = 'audioOutputDeviceName' in t ? t.audioOutputDeviceName : void 0,
+        q = 'videoDeviceName' in t ? t.videoDeviceName : void 0,
+        Q = 'userId' in t ? t.userId : void 0,
+        X = null != j ? (0, l.my)(j) : null,
+        J = P(t),
+        $ = null != j ? J : _.ZP.getRTCConnection(),
+        ee = null != j ? (null == J || null == (n = J.analyticsContext) ? void 0 : n.streamApplication) : null,
+        { resolution: et, fps: en } = u.Z.getState(),
+        { gameName: er, gameId: ei, exe: eo, distributor: ea } = (0, s.G8)(ee),
+        es = x.isErrorOutbound,
+        el = null != U ? U : I.Yn.DEFAULT,
+        ec = null != X ? X.ownerId : Q,
+        eu = null != X ? (null == $ ? void 0 : $.getVoiceParticipantType()) : es ? 'sender' : 'receiver',
+        ed = null != (r = null == $ ? void 0 : $.getMediaEngineConnectionId()) ? r : null;
+    (L = null != j && null != X ? (es ? (null == $ || null == (c = $.getOutboundStats()) ? void 0 : c.find((e) => e.quality === I.y7)) : null == $ ? void 0 : $.getInboundStats(X.ownerId)) : es ? (null != (m = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames)) ? m : null) : null != ec ? (null == $ ? void 0 : $.getInboundStats(ec)) : null),
         (0, g.q)().then((t) => {
-            var n, r, i, s, l, c, u, d, h, g, v, P, w, k, q, $, eu, ed, ef, e_, ep, eh, em, eg, eE, eb, ey, ev, eO, eI, eS, eT, eN, eA, eC, eR, eP, ew, eD, eL, ex, eM, ek, ej, eU, eG, eB, eF, eV;
-            let eZ = {
+            var n, r, i, s, l, c, u, d, h, m, g, v, P, w, j, Q, ee, ef, e_, ep, eh, em, eg, eE, eb, ey, ev, eO, eI, eS, eT, eN, eA, eC, eR, eP, ew, eD, eL, ex, eM, ek, ej, eU, eG, eB, eV, eF, eZ;
+            let eH = {
                 error_name: e.valueOf(),
-                error_code: L.errorCode,
-                error_severity: L.severity,
-                error_category: L.category,
-                underlying_error: null != U ? U : null,
-                error_message: null != G ? G : null,
-                guild_id: null != (k = null == M ? void 0 : M.guild_id) ? k : null,
-                channel_id: null != x ? x : null,
-                channel_type: null != (q = null == M ? void 0 : M.type) ? q : null,
+                error_code: x.errorCode,
+                error_severity: x.severity,
+                error_category: x.category,
+                underlying_error: null != G ? G : null,
+                error_message: null != B ? B : null,
+                guild_id: null != (w = null == k ? void 0 : k.guild_id) ? w : null,
+                channel_id: null != M ? M : null,
+                channel_type: null != (j = null == k ? void 0 : k.type) ? j : null,
                 rtc_connection_id: null != F ? F : null,
-                media_session_id: null != ($ = null != B ? B : _.ZP.getMediaSessionId()) ? $ : null,
-                parent_media_session_id: null != (eu = null == X ? void 0 : X.parentMediaSessionId) ? eu : null,
-                context: null != j ? j : null,
-                voice_backend_version: null != (ed = null == (n = _.ZP.getRTCConnection()) ? void 0 : n.getVoiceVersion()) ? ed : null,
-                rtc_worker_backend_version: null != (ef = null == (r = _.ZP.getRTCConnection()) ? void 0 : r.getRtcWorkerVersion()) ? ef : null,
-                guild_region: null != (e_ = p.Z.getRegion(_.ZP.getHostname())) ? e_ : null,
-                hostname: null != (ep = _.ZP.getHostname()) ? ep : null,
-                duration: null != (eh = null == J ? void 0 : J.getDurationSeconds()) ? eh : null,
-                participant_type: null != ec ? ec : null,
-                num_frames: null != (em = null == m ? void 0 : m.num_frames) ? em : 0,
-                num_packets: null != (eg = null == m ? void 0 : m.num_packets) ? eg : 0,
-                num_bytes: null != (eE = null == m ? void 0 : m.num_bytes) ? eE : 0,
-                num_packets_lost: null != (eb = null == (i = N(ea, es, el)) ? void 0 : i.packetsLost) ? eb : 0,
-                video_codec: null != (ey = null != V ? V : (0, o.bU)(null == (s = N(ea, es, el)) ? void 0 : s.codec.name)) ? ey : null,
-                video_encoder: null != (ev = null != Z ? Z : (0, o.lG)(null == (l = S(es)) ? void 0 : l.encoderImplementationName)) ? ev : null,
-                video_decoder: null != (eO = null != H ? H : (0, o.z_)(null == (c = T(es, el)) ? void 0 : c.decoderImplementationName)) ? eO : null,
-                audio_capture_sample_rate_mismatch_percent: null != W ? W : null,
+                media_session_id: null != (Q = null != V ? V : _.ZP.getMediaSessionId()) ? Q : null,
+                parent_media_session_id: null != (ee = null == J ? void 0 : J.parentMediaSessionId) ? ee : null,
+                context: null != U ? U : null,
+                voice_backend_version: null != (ef = null == (n = _.ZP.getRTCConnection()) ? void 0 : n.getVoiceVersion()) ? ef : null,
+                rtc_worker_backend_version: null != (e_ = null == (r = _.ZP.getRTCConnection()) ? void 0 : r.getRtcWorkerVersion()) ? e_ : null,
+                guild_region: null != (ep = p.Z.getRegion(_.ZP.getHostname())) ? ep : null,
+                hostname: null != (eh = _.ZP.getHostname()) ? eh : null,
+                duration: null != (em = null == $ ? void 0 : $.getDurationSeconds()) ? em : null,
+                participant_type: null != eu ? eu : null,
+                num_frames: null != (eg = null == L ? void 0 : L.num_frames) ? eg : 0,
+                num_packets: null != (eE = null == L ? void 0 : L.num_packets) ? eE : 0,
+                num_bytes: null != (eb = null == L ? void 0 : L.num_bytes) ? eb : 0,
+                num_packets_lost: null != (ey = null == (i = N(es, ed, ec)) ? void 0 : i.packetsLost) ? ey : 0,
+                video_codec: null != (ev = null != Z ? Z : (0, o.bU)(null == (s = N(es, ed, ec)) ? void 0 : s.codec.name)) ? ev : null,
+                video_encoder: null != (eO = null != H ? H : (0, o.lG)(null == (l = S(ed)) ? void 0 : l.encoderImplementationName)) ? eO : null,
+                video_decoder: null != (eI = null != W ? W : (0, o.z_)(null == (c = T(ed, ec)) ? void 0 : c.decoderImplementationName)) ? eI : null,
+                audio_capture_sample_rate_mismatch_percent: null != Y ? Y : null,
                 incoming_video_stopped_for_occlusion: !a.w.isIncomingVideoEnabled(),
-                bitrate: null != (eI = null == (u = N(ea, es, el)) ? void 0 : u.bitrate) ? eI : null,
-                target_bitrate: ea && null != (eS = null == (d = S(es)) ? void 0 : d.bitrateTarget) ? eS : null,
-                fps: null != (eT = D(ea, es, el)) ? eT : null,
-                target_fps: es === I.Yn.STREAM && ea ? et : null,
-                sender_user_id: null != (eN = null == Q ? void 0 : Q.ownerId) ? eN : null,
-                stream_region: null != (eA = null == X ? void 0 : X.getRegion()) ? eA : null,
-                stream_source_type: ea && null != (eC = null == X || null == (h = X.analyticsContext) ? void 0 : h.streamSourceType) ? eC : null,
-                num_stream_viewers: null != (eR = null == X || null == (g = X.analyticsContext) ? void 0 : g.numViewers) ? eR : null,
-                video_input_resolution_height: ea && null != ee ? ee : null,
-                video_input_frame_rate: ea && null != et ? et : null,
-                screenshare_capture_method: R(),
-                share_application_name: null != en ? en : null,
-                share_application_id: null != er ? er : null,
-                share_application_executable: null != ei ? ei : null,
-                share_application_distributor: null != eo ? eo : null,
-                cpu_brand: null != (eP = null == t ? void 0 : t.cpu_brand) ? eP : null,
-                cpu_vendor: null != (ew = null == t ? void 0 : t.cpu_vendor) ? ew : null,
-                cpu_memory: null != (eD = null == t ? void 0 : t.cpu_memory) ? eD : null,
-                gpu_brand: null != (eL = null == t ? void 0 : t.gpu_brand) ? eL : null,
-                gpu_count: null != (ex = null == t ? void 0 : t.gpu_count) ? ex : null,
-                gpu_memory: null != (eM = null == t ? void 0 : t.gpu_memory) ? eM : null,
-                gpu_device_vendor_id: null != (ek = null == t ? void 0 : t.gpu_device_vendor_id) ? ek : null,
-                gpu_device_device_id: null != (ej = null == t ? void 0 : t.gpu_device_device_id) ? ej : null,
-                gpu_device_sub_sys_id: null != (eU = null == t ? void 0 : t.gpu_device_sub_sys_id) ? eU : null,
-                gpu_device_revision: null != (eG = null == t ? void 0 : t.gpu_device_revision) ? eG : null,
-                gpu_driver_version: null != (eB = null == t ? void 0 : t.gpu_driver_version) ? eB : null,
+                bitrate: null != (eS = null == (u = N(es, ed, ec)) ? void 0 : u.bitrate) ? eS : null,
+                target_bitrate: es && null != (eT = null == (d = S(ed)) ? void 0 : d.bitrateTarget) ? eT : null,
+                fps: null != (eN = D(es, el, ec)) ? eN : null,
+                target_fps: el === I.Yn.STREAM && es ? en : null,
+                sender_user_id: null != (eA = null == X ? void 0 : X.ownerId) ? eA : null,
+                stream_region: null != (eC = null == J ? void 0 : J.getRegion()) ? eC : null,
+                stream_source_type: es && null != (eR = null == J || null == (h = J.analyticsContext) ? void 0 : h.streamSourceType) ? eR : null,
+                num_stream_viewers: null != (eP = null == J || null == (m = J.analyticsContext) ? void 0 : m.numViewers) ? eP : null,
+                video_input_resolution_height: es && null != et ? et : null,
+                video_input_frame_rate: es && null != en ? en : null,
+                screenshare_capture_method: R(ed),
+                share_application_name: null != er ? er : null,
+                share_application_id: null != ei ? ei : null,
+                share_application_executable: null != eo ? eo : null,
+                share_application_distributor: null != ea ? ea : null,
+                cpu_brand: null != (ew = null == t ? void 0 : t.cpu_brand) ? ew : null,
+                cpu_vendor: null != (eD = null == t ? void 0 : t.cpu_vendor) ? eD : null,
+                cpu_memory: null != (eL = null == t ? void 0 : t.cpu_memory) ? eL : null,
+                gpu_brand: null != (ex = null == t ? void 0 : t.gpu_brand) ? ex : null,
+                gpu_count: null != (eM = null == t ? void 0 : t.gpu_count) ? eM : null,
+                gpu_memory: null != (ek = null == t ? void 0 : t.gpu_memory) ? ek : null,
+                gpu_device_vendor_id: null != (ej = null == t ? void 0 : t.gpu_device_vendor_id) ? ej : null,
+                gpu_device_device_id: null != (eU = null == t ? void 0 : t.gpu_device_device_id) ? eU : null,
+                gpu_device_sub_sys_id: null != (eG = null == t ? void 0 : t.gpu_device_sub_sys_id) ? eG : null,
+                gpu_device_revision: null != (eB = null == t ? void 0 : t.gpu_device_revision) ? eB : null,
+                gpu_driver_version: null != (eV = null == t ? void 0 : t.gpu_driver_version) ? eV : null,
                 cpu_usage: null != (eF = y.Z.getCurrentCPUUsagePercent()) ? eF : null,
-                memory_usage: null != (eV = y.Z.getCurrentMemoryUsageKB()) ? eV : null,
-                outbound_bitrate_estimate: A(es),
-                inbound_bitrate_estimate: C(es),
+                memory_usage: null != (eZ = y.Z.getCurrentMemoryUsageKB()) ? eZ : null,
+                outbound_bitrate_estimate: A(ed),
+                inbound_bitrate_estimate: C(ed),
                 hardware_enabled: f.Z.getHardwareEncoding(),
-                audio_input_device_name: null != Y ? Y : null == (v = f.Z.getInputDevices()[f.Z.getInputDeviceId()]) ? void 0 : v.name,
-                audio_output_device_name: null != K ? K : null == (P = f.Z.getOutputDevices()[f.Z.getOutputDeviceId()]) ? void 0 : P.name,
-                video_device_name: null != z ? z : null == (w = f.Z.getVideoDevices()[f.Z.getVideoDeviceId()]) ? void 0 : w.name,
+                audio_input_device_name: null != K ? K : null == (g = f.Z.getInputDevices()[f.Z.getInputDeviceId()]) ? void 0 : g.name,
+                audio_output_device_name: null != z ? z : null == (v = f.Z.getOutputDevices()[f.Z.getOutputDeviceId()]) ? void 0 : v.name,
+                video_device_name: null != q ? q : null == (P = f.Z.getVideoDevices()[f.Z.getVideoDeviceId()]) ? void 0 : P.name,
                 audio_subsystem: f.Z.getMediaEngine().getAudioSubsystem(),
                 automatic_audio_subsystem: f.Z.getSettings().automaticAudioSubsystem,
                 audio_layer: f.Z.getMediaEngine().getAudioLayer(),
@@ -184,6 +187,6 @@ function L(e, t) {
                 audio_output_device_count: Object.keys(f.Z.getOutputDevices()).length,
                 app_hardware_acceleration_enabled: b.Z.getAppHardwareAccelerationEnabled()
             };
-            E.default.track(O.rMx.AV_ERROR_REPORTED, eZ);
+            E.default.track(O.rMx.AV_ERROR_REPORTED, eH);
         });
 }

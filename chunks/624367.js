@@ -1,37 +1,36 @@
-n.d(t, { Z: () => R }), n(47120), n(266796), n(566702);
+n.d(t, { Z: () => k }), n(388685), n(953529), n(781311);
 var r = n(200651);
 n(192379);
-var i = n(666572),
-    a = n(373793),
-    l = n(399606),
-    o = n(477690),
-    s = n(481060),
-    c = n(100527),
-    u = n(906732),
-    d = n(915346),
-    p = n(783097),
-    m = n(176412),
-    f = n(213459),
-    h = n(581364),
-    g = n(321231),
-    _ = n(506895),
-    b = n(230171),
-    x = n(835473),
-    y = n(749681),
-    v = n(258971),
-    E = n(914010),
-    O = n(624138),
-    N = n(566620),
-    j = n(365415),
-    C = n(574952),
-    I = n(147865),
-    S = n(778569),
-    T = n(50523),
-    P = n(49898),
-    A = n(388032),
-    w = n(536231);
-function Z() {
-    return (Z =
+var i = n(373793),
+    a = n(399606),
+    l = n(477690),
+    o = n(481060),
+    s = n(100527),
+    c = n(906732),
+    u = n(915346),
+    d = n(783097),
+    p = n(176412),
+    m = n(213459),
+    f = n(581364),
+    h = n(321231),
+    g = n(506895),
+    _ = n(230171),
+    b = n(835473),
+    x = n(749681),
+    y = n(258971),
+    v = n(914010),
+    E = n(624138),
+    O = n(566620),
+    N = n(365415),
+    j = n(574952),
+    C = n(147865),
+    I = n(778569),
+    S = n(50523),
+    T = n(49898),
+    P = n(388032),
+    A = n(536231);
+function w() {
+    return (w =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -41,84 +40,83 @@ function Z() {
             return e;
         }).apply(this, arguments);
 }
-let k = (0, O.Mg)(o.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function R(e) {
-    var t, n, o, O;
-    let { applicationId: R, customId: D, referrerId: L, embedUrl: M, linkId: W } = e,
-        { analyticsLocations: U } = (0, u.ZP)(c.Z.ACTIVITY_BOOKMARK),
-        [F] = (0, x.Z)([R]),
-        B = (0, l.e7)([E.Z], () => {
+let Z = (0, E.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function k(e) {
+    var t, n, l, E;
+    let { applicationId: k, customId: R, referrerId: D, embedUrl: L, linkId: M } = e,
+        { analyticsLocations: W } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
+        [U] = (0, b.Z)([k]),
+        F = (0, a.e7)([v.Z], () => {
             var e;
-            return null != (e = E.Z.getGuildId()) ? e : void 0;
+            return null != (e = v.Z.getGuildId()) ? e : void 0;
         }),
-        G = null == F || null == (t = F.bot) ? void 0 : t.id,
-        H = null != F && (0, p.ye)(F),
-        { currentChannelId: V, instanceId: z, isCurrentlyInInstance: K, canLaunchInChannel: Y } = (0, _.c)(R),
-        X = (0, C.Z)(),
-        q = (0, I.ZP)(null != (o = null == F ? void 0 : F.maxParticipants) ? o : 0),
-        Q = (0, S.Z)({
-            applicationId: R,
-            size: k,
+        B = null == U || null == (t = U.bot) ? void 0 : t.id,
+        G = null != U && (0, d.ye)(U),
+        { currentChannelId: H, instanceId: V, isCurrentlyInInstance: z, canLaunchInChannel: K } = (0, g.c)(k),
+        Y = (0, j.Z)(),
+        X = (0, C.ZP)(null != (l = null == U ? void 0 : U.maxParticipants) ? l : 0),
+        q = (0, I.Z)({
+            applicationId: k,
+            size: Z,
             names: ['embedded_cover']
         }),
-        J = null != (O = null == F ? void 0 : F.id) ? O : '0',
-        $ = (0, h.TK)(J, (0, f.PL)(!0, !1)),
-        ee = (0, h.TK)(J, (0, f.LD)(B, !1)),
-        et = async () => {
-            if ((null == F ? void 0 : F.id) != null)
-                if (Y)
-                    (0, N.G6)({
-                        channelId: null != V ? V : void 0,
-                        applicationId: F.id,
-                        isStart: null == z,
-                        instanceId: null != z ? z : void 0,
-                        embeddedActivitiesManager: X,
-                        customId: D,
-                        referrerId: L,
-                        analyticsLocations: U
+        Q = null != (E = null == U ? void 0 : U.id) ? E : '0',
+        J = (0, f.TK)(Q, (0, m.PL)(!0, !1)),
+        $ = (0, f.TK)(Q, (0, m.LD)(F, !1)),
+        ee = async () => {
+            if ((null == U ? void 0 : U.id) != null)
+                if (K)
+                    (0, O.G6)({
+                        channelId: null != H ? H : void 0,
+                        applicationId: U.id,
+                        isStart: null == V,
+                        instanceId: null != V ? V : void 0,
+                        embeddedActivitiesManager: Y,
+                        customId: R,
+                        referrerId: D,
+                        analyticsLocations: W
                     });
                 else {
-                    if (null == G) return;
+                    if (null == B) return;
                     try {
-                        await (0, d.W)({
-                            appId: F.id,
-                            botId: G,
-                            analyticsLocations: U,
-                            customId: D,
-                            referrerId: L
+                        await (0, u.W)({
+                            appId: U.id,
+                            botId: B,
+                            analyticsLocations: W,
+                            customId: R,
+                            referrerId: D
                         });
                     } catch (e) {}
                 }
         },
-        { enabled: en } = g.G.useExperiment({ location: 'ActivityBookmarkEmbed' }),
-        er = (0, i._)(W),
-        { data: ei, error: ea } = (0, j.h)(null == F ? void 0 : F.id, er);
-    if (null == F || !1 === H) return null;
-    if (en)
-        return null != W && null == ea && null != ei
-            ? (0, r.jsx)(T.b, {
-                  application: F,
-                  customId: D,
-                  customLink: ei,
-                  embedUrl: M,
-                  referrerId: L
+        { enabled: et } = h.G.useExperiment({ location: 'ActivityBookmarkEmbed' }),
+        { data: en, error: er } = (0, N.h)(null == U ? void 0 : U.id, M);
+    if (null == U || !1 === G) return null;
+    if (et)
+        return null != M && null == er && null != en
+            ? (0, r.jsx)(S.b, {
+                  application: U,
+                  customId: R,
+                  customLink: en,
+                  embedUrl: L,
+                  referrerId: D
               })
-            : (0, r.jsx)(u.Gt, {
-                  value: U,
-                  children: (0, r.jsx)(b.O, {
-                      app: F,
-                      embedUrl: M,
-                      linkType: b.U.ACTIVITY,
-                      activityCustomId: D,
-                      activityReferrerId: L
+            : (0, r.jsx)(c.Gt, {
+                  value: W,
+                  children: (0, r.jsx)(_.O, {
+                      app: U,
+                      embedUrl: L,
+                      linkType: _.U.ACTIVITY,
+                      activityCustomId: R,
+                      activityReferrerId: D
                   })
               });
-    let el = Y ? (null == z ? A.NW.string(A.t.cnBQPD) : A.NW.string(A.t.VJlc0d)) : A.NW.string(A.t.JeK1Wl),
-        eo = K ? A.NW.string(A.t.wJNK8P) : void 0,
-        es = (e) => {
+    let ei = K ? (null == V ? P.NW.string(P.t.cnBQPD) : P.NW.string(P.t.VJlc0d)) : P.NW.string(P.t.JeK1Wl),
+        ea = z ? P.NW.string(P.t.wJNK8P) : void 0,
+        el = (e) => {
             var t, n;
             return (0, r.jsx)(
-                s.zxk,
+                o.zxk,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -145,14 +143,14 @@ function R(e) {
                     return e;
                 })(
                     {
-                        onClick: et,
-                        className: w.button,
-                        color: s.Ttl.GREEN,
-                        disabled: null != eo
+                        onClick: ee,
+                        className: A.button,
+                        color: o.Ttl.GREEN,
+                        disabled: null != ea
                     },
                     e
                 )),
-                (n = n = { children: el }),
+                (n = n = { children: ei }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -168,80 +166,80 @@ function R(e) {
                 t)
             );
         };
-    return (0, r.jsx)(u.Gt, {
-        value: U,
+    return (0, r.jsx)(c.Gt, {
+        value: W,
         children: (0, r.jsxs)('div', {
-            className: w.container,
+            className: A.container,
             children: [
                 (0, r.jsx)('div', {
-                    className: w.imgContainer,
+                    className: A.imgContainer,
                     children: (0, r.jsx)('img', {
-                        className: w.img,
-                        alt: F.name,
-                        src: Q.url
+                        className: A.img,
+                        alt: U.name,
+                        src: q.url
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: w.content,
+                    className: A.content,
                     children: [
-                        (0, r.jsx)(s.X6q, {
-                            className: w.heading,
+                        (0, r.jsx)(o.X6q, {
+                            className: A.heading,
                             variant: 'heading-xl/semibold',
-                            children: F.name
+                            children: U.name
                         }),
-                        (0, r.jsx)(s.X6q, {
-                            className: w.description,
+                        (0, r.jsx)(o.X6q, {
+                            className: A.description,
                             variant: 'heading-sm/medium',
-                            children: null == (n = F.description) ? void 0 : n.trim()
+                            children: null == (n = U.description) ? void 0 : n.trim()
                         }),
                         (0, r.jsxs)('div', {
-                            className: w.cta,
+                            className: A.cta,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: w.maxParticipants,
+                                    className: A.maxParticipants,
                                     children: [
-                                        (0, r.jsx)(s.BFJ, {
+                                        (0, r.jsx)(o.BFJ, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: w.peopleIcon
+                                            className: A.peopleIcon
                                         }),
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(o.Text, {
                                             variant: 'text-xs/semibold',
-                                            children: q
+                                            children: X
                                         })
                                     ]
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: w.buttonWrapper,
+                                    className: A.buttonWrapper,
                                     children: [
-                                        null != F &&
-                                            (0, r.jsx)(s.zxk, {
+                                        null != U &&
+                                            (0, r.jsx)(o.zxk, {
                                                 onClick: () => {
                                                     var e;
-                                                    null != F &&
-                                                        (a.Y.USER_INSTALL in (null != (e = F.integrationTypesConfig) ? e : {}) || $ || ee
-                                                            ? (0, m.X)(F.id)
-                                                            : (0, y.transitionToGlobalDiscovery)({
-                                                                  tab: P.GlobalDiscoveryTab.APPS,
-                                                                  applicationId: F.id,
+                                                    null != U &&
+                                                        (i.Y.USER_INSTALL in (null != (e = U.integrationTypesConfig) ? e : {}) || J || $
+                                                            ? (0, p.X)(U.id)
+                                                            : (0, x.transitionToGlobalDiscovery)({
+                                                                  tab: T.GlobalDiscoveryTab.APPS,
+                                                                  applicationId: U.id,
                                                                   newSessionState: {
-                                                                      entrypoint: { name: v.xF.OAUTH2_EMBED },
-                                                                      guildId: B
+                                                                      entrypoint: { name: y.xF.OAUTH2_EMBED },
+                                                                      guildId: F
                                                                   }
                                                               }));
                                                 },
-                                                className: w.button,
-                                                color: s.Ttl.PRIMARY,
-                                                children: A.NW.string(A.t.fbcCzc)
+                                                className: A.button,
+                                                color: o.Ttl.PRIMARY,
+                                                children: P.NW.string(P.t.fbcCzc)
                                             }),
-                                        null != eo
+                                        null != ea
                                             ? (0, r.jsx)(
-                                                  s.ua7,
+                                                  o.ua7,
                                                   {
-                                                      text: eo,
+                                                      text: ea,
                                                       children: (e) =>
-                                                          es(
-                                                              Z(
+                                                          el(
+                                                              w(
                                                                   {},
                                                                   (function (e) {
                                                                       if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -250,9 +248,9 @@ function R(e) {
                                                               )
                                                           )
                                                   },
-                                                  el
+                                                  ei
                                               )
-                                            : es()
+                                            : el()
                                     ]
                                 })
                             ]
