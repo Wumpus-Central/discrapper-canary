@@ -1,30 +1,29 @@
-n.d(t, { R: () => u }), n(47120);
+n.d(t, { R: () => c }), n(388685);
 var r = n(442837),
     i = n(704215),
     o = n(243778),
     a = n(944486),
-    s = n(54480),
-    l = n(611725),
-    c = n(364203);
-function u(e) {
+    s = n(839606),
+    l = n(54480);
+function c(e) {
     let { isSettingsOpen: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: u, setLastShownChatWallpaperPickerType: d, lastShownChatWallpaperPickerType: f } = (0, l.B)(),
-        _ = (0, r.e7)([a.Z], () => a.Z.getCurrentlySelectedChannelId()),
-        { canAccessPicker: p } = (0, s.m)({
+        { activePickerChannelId: n, openPickerForChannel: c, setLastShownChatWallpaperPickerType: u, lastShownChatWallpaperPickerType: d } = (0, s.B)(),
+        f = (0, r.e7)([a.Z], () => a.Z.getCurrentlySelectedChannelId()),
+        { canAccessPicker: _ } = (0, l.m)({
             location: 'useChatWallpaperPickerConfig',
-            selectedChannelId: _
+            selectedChannelId: f
         }),
-        h = p && !t,
-        [m, g] = (0, o.US)(h ? [i.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []);
-    if (!p) return;
-    let E = m === i.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
-    if ((E && null != _ && null == n && f !== c.jQ.COACHMARK && u(_), n === _)) {
-        let e = E ? c.jQ.COACHMARK : c.jQ.DEFAULT;
+        p = _ && !t,
+        [h, m] = (0, o.US)(p ? [i.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []);
+    if (!_) return;
+    let g = h === i.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
+    if ((g && null != f && null == n && d !== s.j.COACHMARK && c(f), n === f)) {
+        let e = g ? s.j.COACHMARK : s.j.DEFAULT;
         return (
-            f !== e && d(e),
+            d !== e && u(e),
             {
                 pickerType: e,
-                markDismissed: E ? g : void 0
+                markDismissed: g ? m : void 0
             }
         );
     }

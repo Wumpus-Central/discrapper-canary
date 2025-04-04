@@ -1,8 +1,4 @@
-n.d(t, {
-    ZP: () => q,
-    jQ: () => F
-}),
-    n(47120);
+n.d(t, { Z: () => z }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -22,11 +18,11 @@ var r = n(200651),
     b = n(703656),
     y = n(727939),
     v = n(626135),
-    O = n(411149),
-    I = n(988290),
-    S = n(721359),
-    T = n(640963),
-    N = n(611725),
+    O = n(839606),
+    I = n(411149),
+    S = n(988290),
+    T = n(721359),
+    N = n(640963),
     A = n(628309),
     C = n(680783),
     R = n(981631),
@@ -89,9 +85,6 @@ function j(e, t) {
 let U = 88,
     G = 'remove-wallpaper',
     B = 0.5;
-var F = (function (e) {
-    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e;
-})({});
 function V(e) {
     let { handleClose: t } = e;
     return (
@@ -133,7 +126,7 @@ function V(e) {
         })
     );
 }
-function Z(e) {
+function F(e) {
     let { isPremiumTier2Subscriber: t, handleClose: n } = e;
     return (0, r.jsxs)('div', {
         className: L.headerContainer,
@@ -160,7 +153,7 @@ function Z(e) {
         ]
     });
 }
-let H = i.forwardRef((e) => {
+let Z = i.forwardRef((e) => {
     let { isSelected: t, onSelect: n, selectionId: o, tooltipText: s, label: u, className: f, children: _ } = e,
         p = (0, d.xUy)({
             label: u,
@@ -233,10 +226,10 @@ let H = i.forwardRef((e) => {
         })
     );
 });
-function W(e) {
+function H(e) {
     let { isSelected: t, onSelect: n, chatWallpaperMetadata: i } = e,
         { label: o, default: a, designGroupId: s } = i;
-    return (0, r.jsx)(H, {
+    return (0, r.jsx)(Z, {
         isSelected: t,
         onSelect: n,
         selectionId: s,
@@ -253,9 +246,9 @@ function W(e) {
         })
     });
 }
-function Y(e) {
+function W(e) {
     let { isSelected: t, onSelect: n } = e;
-    return (0, r.jsx)(H, {
+    return (0, r.jsx)(Z, {
         isSelected: t,
         onSelect: n,
         selectionId: G,
@@ -268,7 +261,7 @@ function Y(e) {
         })
     });
 }
-function K(e) {
+function Y(e) {
     let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: o, onClose: a, onApply: s } = e;
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
@@ -311,7 +304,7 @@ function K(e) {
         ]
     });
 }
-function z() {
+function K() {
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
@@ -339,34 +332,34 @@ function z() {
         ]
     });
 }
-H.displayName = 'BaseChatWallpaperSelection';
-let q = function (e) {
+Z.displayName = 'BaseChatWallpaperSelection';
+let z = function (e) {
     let { className: t, position: n = R.VD2.TOP_RIGHT, config: o } = e,
         { analyticsLocations: s } = (0, p.ZP)(_.Z.CHAT_WALLPAPER_PICKER),
-        { activePickerChannelId: l, closePicker: c, setPreviewWallpaperId: h } = (0, N.B)(),
+        { activePickerChannelId: l, closePicker: c, setPreviewWallpaperId: h } = (0, O.B)(),
         m = (0, C.Z)(l),
         E = (0, g.m)(w.p9.TIER_2),
         [b, D] = i.useState(!1),
-        x = (0, I.e)(),
+        x = (0, S.e)(),
         M = (0, A.u)();
-    (0, S.W)();
-    let k = (0, u.e7)([O.Z], () => O.Z.isFetchingWallpapers),
-        j = (0, u.e7)([O.Z], () => O.Z.getWallpaperById(null == m ? void 0 : m.wallpaperId));
+    (0, T.W)();
+    let k = (0, u.e7)([I.Z], () => I.Z.isFetchingWallpapers),
+        j = (0, u.e7)([I.Z], () => I.Z.getWallpaperById(null == m ? void 0 : m.wallpaperId));
     i.useEffect(() => {
         null != j && D(j.isBlurred && E);
     }, [j, E]);
     let U = i.useCallback(() => {
             c();
         }, [c]),
-        { isUpdating: G, updateChatWallpaper: B } = (0, T.x)(U),
-        F = function () {
+        { isUpdating: G, updateChatWallpaper: B } = (0, N.x)(U),
+        Z = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : P.L.USER_DISMISS;
             (null == o ? void 0 : o.markDismissed) != null && o.markDismissed(e), c();
         };
     (0, f.ZP)(() => () => {
-        F(P.L.INDIRECT_ACTION);
+        Z(P.L.INDIRECT_ACTION);
     });
-    let H = i.useCallback(() => {
+    let z = i.useCallback(() => {
             null != l &&
                 null != m &&
                 void 0 !== m.wallpaperId &&
@@ -401,7 +394,7 @@ let q = function (e) {
             },
             [b, M, h]
         );
-    if (0 === x.length || (null == l && (null == o ? void 0 : o.pickerType) !== 1)) return null;
+    if (0 === x.length || (null == l && (null == o ? void 0 : o.pickerType) !== O.j.COACHMARK)) return null;
     let X = null;
     return (
         (X = k
@@ -414,7 +407,7 @@ let q = function (e) {
                       (0, r.jsxs)(d.Ttm, {
                           className: L.wallpapersContainer,
                           children: [
-                              (0, r.jsx)(Y, {
+                              (0, r.jsx)(W, {
                                   isSelected: null == m || null === m.wallpaperId,
                                   onSelect: () => {
                                       v.default.track(R.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
@@ -426,7 +419,7 @@ let q = function (e) {
                               }),
                               x.map((e) =>
                                   (0, r.jsx)(
-                                      W,
+                                      H,
                                       {
                                           isSelected: (null == j ? void 0 : j.designGroupId) === e.designGroupId,
                                           onSelect: Q,
@@ -438,15 +431,15 @@ let q = function (e) {
                           ]
                       }),
                       E
-                          ? (0, r.jsx)(K, {
+                          ? (0, r.jsx)(Y, {
                                 canApply: (null == m ? void 0 : m.wallpaperId) !== void 0,
                                 isUpdating: G,
                                 isBlurEnabled: b,
                                 onBlurEnabledChange: q,
-                                onClose: F,
-                                onApply: H
+                                onClose: Z,
+                                onApply: z
                             })
-                          : (0, r.jsx)(z, {})
+                          : (0, r.jsx)(K, {})
                   ]
               })),
         (0, r.jsx)(p.Gt, {
@@ -458,13 +451,13 @@ let q = function (e) {
                 children: (0, r.jsxs)('div', {
                     className: L.container,
                     children: [
-                        (null == o ? void 0 : o.pickerType) === 1
+                        (null == o ? void 0 : o.pickerType) === O.j.COACHMARK
                             ? (0, r.jsx)(V, {
-                                  handleClose: F,
+                                  handleClose: Z,
                                   isPremiumTier2Subscriber: E
                               })
-                            : (0, r.jsx)(Z, {
-                                  handleClose: F,
+                            : (0, r.jsx)(F, {
+                                  handleClose: Z,
                                   isPremiumTier2Subscriber: E
                               }),
                         (0, r.jsx)('div', { className: L.divider }),
