@@ -126,47 +126,50 @@ function E(e, t) {
             h = p.getState(f),
             E = h.error,
             b = !0 === h.isLoading,
-            v = (0, r.useRef)(u);
+            y = (0, r.useRef)(u);
         (0, r.useEffect)(() => {
-            v.current = u;
+            y.current = u;
         }, [u]);
-        let y = (0, r.useCallback)(() => {
-            if (null == f || !0 === b) return;
-            let e = !1;
-            c === i.Wu ? _.length > 0 && (e = !0) : null != _ && (e = !0);
-            let t = p.doesDataNeedValidation(f),
-                r = null != E;
-            if ((e || r) && !t) return;
-            p.loadingStart(f);
-            let o = new AbortController();
-            return (
-                a(o.signal, ...v.current)
-                    .then((e) => (p.loadingDone(f, !0), e))
-                    .catch((e) => {
-                        if ((p.loadingDone(f), o.signal.aborted)) return;
-                        let t = g(e);
-                        (h.fetchFailCounter >= s || !(t instanceof m) || (!(t.status >= 500) && 429 !== t.status)) && p.setError(f, t);
-                    }),
-                () => {
-                    n && o.abort();
-                }
-            );
-        }, [_, h.fetchFailCounter, E, f, b]);
+        let v = (0, r.useCallback)(() => {
+                if (null == f || b) return !1;
+                let e = !1;
+                c === i.Wu ? _.length > 0 && (e = !0) : null != _ && (e = !0);
+                let t = p.doesDataNeedValidation(f),
+                    n = null != E;
+                return t || (!e && !n);
+            }, [_, E, f, b]),
+            O = (0, r.useCallback)(() => {
+                if (null == f || !v()) return;
+                p.loadingStart(f);
+                let e = new AbortController();
+                return (
+                    a(e.signal, ...y.current)
+                        .then((e) => (p.loadingDone(f, !0), e))
+                        .catch((t) => {
+                            if ((p.loadingDone(f), e.signal.aborted)) return;
+                            let n = g(t);
+                            (!(h.fetchFailCounter >= s) && n instanceof m && (n.status >= 500 || 429 === n.status)) || p.setError(f, n);
+                        }),
+                    () => {
+                        n && e.abort();
+                    }
+                );
+            }, [h.fetchFailCounter, f, v]);
         return (
             (0, r.useEffect)(
                 () => (
-                    y(),
-                    p.subscribe(f, y),
+                    O(),
+                    p.subscribe(f, O),
                     () => {
                         p.subscribe(f, void 0);
                     }
                 ),
-                [f, y]
+                [f, O]
             ),
             {
                 data: _,
                 error: E,
-                isLoading: b
+                isLoading: b || v()
             }
         );
     };
