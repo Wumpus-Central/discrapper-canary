@@ -1,4 +1,5 @@
 n.d(t, {
+    $R: () => b,
     AG: () => g,
     PJ: () => h,
     eW: () => p,
@@ -54,4 +55,8 @@ function g() {
 function E(e, t) {
     if (null === o) throw Error('libdiscore not initialized');
     return o.rustMultiply(e, t);
+}
+function b() {
+    if (null === o) throw Error('libdiscore not initialized');
+    o.crash();
 }
