@@ -1883,21 +1883,10 @@ class rt extends (s = h.ZP.Store) {
             t
         );
     }
-    getSupportedSecureFramesProtocolVersion(e) {
-        var t;
-        let n = ej.getSupportedSecureFramesProtocolVersion(),
-            r = U.m.getCurrentConfig({ location: 'MediaEngineStore' }),
-            i =
-                null != e
-                    ? U.N.getCurrentConfig({
-                          guildId: e,
-                          location: 'MediaEngineStore'
-                      })
-                    : null,
-            o = r.canSupportDaveProtocol || (null == i ? void 0 : i.canSupportDaveProtocol),
-            a = Math.max(r.protocolVersionFloor, null != (t = null == i ? void 0 : i.protocolVersionFloor) ? t : 0),
-            s = n > 5 && 114 === n;
-        return o && (n >= a || s) ? n : 0;
+    getSupportedSecureFramesProtocolVersion() {
+        let e = ej.getSupportedSecureFramesProtocolVersion(),
+            t = U.m.getCurrentConfig({ location: 'MediaEngineStore' });
+        return 114 === e && (e = 1), t.canSupportDaveProtocol && e >= t.protocolVersionFloor ? e : 0;
     }
     hasClipsSource() {
         return null != a;
