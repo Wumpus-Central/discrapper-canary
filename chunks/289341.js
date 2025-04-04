@@ -26,14 +26,16 @@ function g(e) {
                 null != N &&
                 (async () => {
                     try {
-                        let e = new URL(location.href),
-                            t = await a.Z.openPrivateChannel(O),
-                            { customId: n, referrerId: r } = await (0, h.u)(_, e.searchParams.get('link_id'), e.searchParams.get('custom_id'), e.searchParams.get('referrer_id'));
+                        var e;
+                        let t = new URL(location.href),
+                            n = await a.Z.openPrivateChannel(O),
+                            r = null != (e = t.searchParams.get('referrer_id')) ? e : void 0,
+                            { customId: i } = await (0, h.u)(_, t.searchParams.get('link_id'), t.searchParams.get('custom_id'));
                         await (0, p.Z)({
                             targetApplicationId: _,
-                            channelId: t,
+                            channelId: n,
                             analyticsLocations: b,
-                            customId: n,
+                            customId: i,
                             referrerId: r
                         });
                     } catch (e) {}

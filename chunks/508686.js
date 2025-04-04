@@ -15,29 +15,14 @@ async function a(e, t) {
     }
     return null;
 }
-async function s(e, t, n, r) {
-    let i = null != n ? n : void 0,
-        o = null != r ? r : void 0;
-    if (null == t || (null != o && null != i))
-        return {
-            customId: i,
-            referrerId: o
-        };
+async function s(e, t, n) {
+    let r = null != n ? n : void 0;
+    if (null == t || null != r) return { customId: r };
     try {
         let n = await a(e, t);
-        if (null == n)
-            return {
-                customId: i,
-                referrerId: o
-            };
-        return {
-            customId: null != i ? i : n.custom_id,
-            referrerId: null != o ? o : n.referrer_id
-        };
+        if (null == n) return { customId: r };
+        return { customId: null != r ? r : n.custom_id };
     } catch (e) {
-        return {
-            customId: i,
-            referrerId: o
-        };
+        return { customId: r };
     }
 }

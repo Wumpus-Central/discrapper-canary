@@ -42,10 +42,9 @@ function E(e) {
         D = (0, x.Z)(),
         L = Z === y.jy.CAN_LAUNCH,
         M = null != O ? O : N.custom_id,
-        W = null != C ? C : N.referrer_id,
-        U = [];
+        W = [];
     L &&
-        U.push({
+        W.push({
             label: null != N.primary_cta ? N.primary_cta : null == k ? v.NW.string(v.t.cnBQPD) : v.NW.string(v.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
@@ -56,14 +55,14 @@ function E(e) {
                     instanceId: k,
                     embeddedActivitiesManager: D,
                     customId: M,
-                    referrerId: W,
+                    referrerId: C,
                     analyticsLocations: A
                 });
             },
             disabledReason: null != k && (null == R ? void 0 : R.compositeInstanceId) === k ? v.NW.string(v.t.wJNK8P) : void 0
         }),
         P &&
-            U.push({
+            W.push({
                 label: L || null == N.primary_cta ? v.NW.string(v.t.JeK1Wl) : N.primary_cta,
                 trackingArea: p.j_.PLAY,
                 onClick() {
@@ -72,15 +71,15 @@ function E(e) {
                         botId: I,
                         analyticsLocations: A,
                         customId: M,
-                        referrerId: W
+                        referrerId: C
                     });
                 }
             });
-    let F = (0, m.z)(E);
+    let U = (0, m.z)(E);
     return (
-        null != U && null != F && U.push(F),
+        null != W && null != U && W.push(U),
         (0, r.jsx)(d.W, {
-            actions: U,
+            actions: W,
             embedUrl: j,
             header: E.name,
             iconSrc: g.ZP.getApplicationIconURL({
@@ -94,7 +93,7 @@ function E(e) {
             trackingConfig: {
                 id: E.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,
-                referrerId: W,
+                referrerId: C,
                 activityCustomId: M
             }
         })

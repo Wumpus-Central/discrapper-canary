@@ -235,20 +235,21 @@ let w = {
                     if (null != n)
                         return (
                             (async function (e, t) {
-                                var r;
-                                let i = h.ZP.getCurrentEmbeddedActivity();
-                                if ((null == i ? void 0 : i.applicationId) === e) return;
-                                let l = await b.ZP.fetchApplication(n.applicationId),
-                                    a = null == l || null == (r = l.bot) ? void 0 : r.id;
-                                if (null == a) return;
-                                let o = await c.Z.openPrivateChannel(a),
-                                    s = new URL(t),
-                                    { customId: u, referrerId: d } = await (0, g.u)(e, s.searchParams.get('link_id'), s.searchParams.get('custom_id'), s.searchParams.get('referrer_id'));
+                                var r, i;
+                                let l = h.ZP.getCurrentEmbeddedActivity();
+                                if ((null == l ? void 0 : l.applicationId) === e) return;
+                                let a = await b.ZP.fetchApplication(n.applicationId),
+                                    o = null == a || null == (r = a.bot) ? void 0 : r.id;
+                                if (null == o) return;
+                                let s = await c.Z.openPrivateChannel(o),
+                                    u = new URL(t),
+                                    d = null != (i = u.searchParams.get('referrer_id')) ? i : void 0,
+                                    { customId: p } = await (0, g.u)(e, u.searchParams.get('link_id'), u.searchParams.get('custom_id'));
                                 await (0, f.Z)({
                                     targetApplicationId: e,
-                                    channelId: o,
+                                    channelId: s,
                                     analyticsLocations: [m.Z.DEEPLINK],
-                                    customId: u,
+                                    customId: p,
                                     referrerId: d
                                 });
                             })(n.applicationId, n.url),

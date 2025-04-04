@@ -109,27 +109,29 @@ function B(e) {
         };
     if (null != C && C.type === g.g.ACTIVITY_BOOKMARK)
         return (e) => {
+            var t, n;
             null == e || e.preventDefault();
-            let { code: t, url: n } = C,
-                r = h.Z.getApplication(t),
-                i = new URL(n),
-                o = (0, f.Z)(),
-                { currentChannelId: l, instanceId: _, isCurrentlyInInstance: p, canLaunchInChannel: g } = (0, m.v)(t);
-            if (g)
+            let { code: r, url: i } = C,
+                o = h.Z.getApplication(r),
+                l = new URL(i),
+                _ = null != (t = l.searchParams.get('referrer_id')) ? t : void 0,
+                p = (0, f.Z)(),
+                { currentChannelId: g, instanceId: E, isCurrentlyInInstance: b, canLaunchInChannel: y } = (0, m.v)(r);
+            if (y)
                 return (
-                    !p &&
-                    null != l &&
-                    ((0, d.u)(t, i.searchParams.get('link_id'), i.searchParams.get('custom_id'), i.searchParams.get('referrer_id'))
+                    !b &&
+                    null != g &&
+                    ((0, d.u)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'))
                         .then(async (e) => {
-                            let { customId: n, referrerId: r } = e;
+                            let { customId: t } = e;
                             await (0, c.G6)({
-                                channelId: l,
-                                applicationId: t,
-                                isStart: null == _,
-                                instanceId: null != _ ? _ : void 0,
-                                embeddedActivitiesManager: o,
-                                customId: n,
-                                referrerId: r,
+                                channelId: g,
+                                applicationId: r,
+                                isStart: null == E,
+                                instanceId: null != E ? E : void 0,
+                                embeddedActivitiesManager: p,
+                                customId: t,
+                                referrerId: _,
                                 analyticsLocations: s
                             });
                         })
@@ -137,19 +139,18 @@ function B(e) {
                     !0)
                 );
             {
-                var E;
-                let e = null == r || null == (E = r.bot) ? void 0 : E.id;
+                let e = null == o || null == (n = o.bot) ? void 0 : n.id;
                 return (
                     null != e &&
                     (a.Z.openPrivateChannel(e)
                         .then(async (e) => {
-                            let { customId: n, referrerId: r } = await (0, d.u)(t, i.searchParams.get('link_id'), i.searchParams.get('custom_id'), i.searchParams.get('referrer_id'));
+                            let { customId: t } = await (0, d.u)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'));
                             (0, u.Z)({
-                                targetApplicationId: t,
+                                targetApplicationId: r,
                                 channelId: e,
                                 analyticsLocations: s,
-                                customId: n,
-                                referrerId: r
+                                customId: t,
+                                referrerId: _
                             });
                         })
                         .catch(() => {}),
