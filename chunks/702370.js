@@ -254,7 +254,7 @@ let ey = {
         let { skuId: t } = e;
         return t === m.a.PREMIUM_TIER_2_3_DAY
             ? (0, r.jsx)(h.Text, {
-                  variant: 'text-xxs/normal',
+                  variant: 'text-sm/normal',
                   className: eE.learnMoreLink,
                   children: ek.NW.format(ek.t.Q1scdH, { helpdeskArticle: D.Z.getArticleURL(eN.BhN.FRACTIONAL_PREMIUM_ABOUT) })
               })

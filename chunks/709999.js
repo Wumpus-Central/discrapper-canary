@@ -624,7 +624,7 @@ let eh = (e) => {
                                                     className: ed.detailsWrapper,
                                                     children: [
                                                         (0, l.jsx)('div', {
-                                                            className: eq ? ed.innerBlur : void 0,
+                                                            className: ed.innerBlur,
                                                             children: ez
                                                                 ? (0, l.jsx)(x.X6q, {
                                                                       variant: 'heading-md/semibold',
