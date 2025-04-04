@@ -1,56 +1,53 @@
 n.d(t, {
-    AG: () => h,
-    PJ: () => _,
-    eW: () => f,
-    pf: () => p,
-    rs: () => m,
-    u2: () => d
+    AG: () => m,
+    PJ: () => p,
+    eW: () => _,
+    pf: () => h,
+    rs: () => g,
+    u2: () => f
 }),
     n(411104);
-var r = n(259443);
-let i = null,
-    o = new r.Yd('libdiscore');
-function a(e) {
-    o.error(e);
-}
+var r = n(608787),
+    i = n(259443);
+let o = null,
+    a = new i.Yd('libdiscore');
 function s(e) {
-    o.warn(e);
+    a.error(e);
 }
 function l(e) {
-    o.info(e);
+    a.warn(e);
 }
 function c(e) {
-    o.verbose(e);
+    a.info(e);
 }
 function u(e) {
-    o.trace(e);
+    a.verbose(e);
 }
-function d() {
-    return null !== i;
+function d(e) {
+    a.trace(e);
 }
 function f() {
-    if (null !== i) throw Error('libdiscore already initialized');
-    return n
-        .e('63614')
-        .then(n.bind(n, 718493))
-        .then(async (e) => {
-            e.installLogCallback(a, s, l, c, u), await e.initLibdiscore(), (i = e);
-        })
-        .catch((e) => {
-            throw e;
-        });
+    return null !== o;
 }
-function _(e) {
+async function _() {
+    if (null !== o) throw Error('libdiscore already initialized');
+    (o = await (0, r.wE)({
+        createPromise: () => n.e('18639').then(n.bind(n, 718493)),
+        webpackId: 718493
+    })).installLogCallback(s, l, c, u, d),
+        await o.initLibdiscore();
+}
+function p(e) {
     var t;
-    return null === i ? null : null !== (t = i.BlockedDomainsStore.isBlockedDomain(e)) && void 0 !== t ? t : null;
+    return null === o ? null : null != (t = o.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
 }
-function p() {
-    null !== i && i.BlockedDomainsStore.startFetchingBlockedDomains();
+function h(e) {
+    null !== o && o.BlockedDomainsStore.startFetchingBlockedDomains(e);
 }
-function h() {
+function m() {
     return 'libdiscore logs are part of the main app logs';
 }
-function m(e, t) {
-    if (null === i) throw Error('libdiscore not initialized');
-    return i.rustMultiply(e, t);
+function g(e, t) {
+    if (null === o) throw Error('libdiscore not initialized');
+    return o.rustMultiply(e, t);
 }
