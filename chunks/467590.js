@@ -1,53 +1,57 @@
 n.d(t, {
-    AG: () => m,
-    PJ: () => p,
-    eW: () => _,
-    pf: () => h,
-    rs: () => g,
-    u2: () => f
+    AG: () => g,
+    PJ: () => h,
+    eW: () => p,
+    pf: () => m,
+    rs: () => E,
+    u2: () => _
 }),
     n(411104);
 var r = n(608787),
     i = n(259443);
 let o = null,
-    a = new i.Yd('libdiscore');
-function s(e) {
-    a.error(e);
-}
+    a = null,
+    s = new i.Yd('libdiscore');
 function l(e) {
-    a.warn(e);
+    s.error(e);
 }
 function c(e) {
-    a.info(e);
+    s.warn(e);
 }
 function u(e) {
-    a.verbose(e);
+    s.info(e);
 }
 function d(e) {
-    a.trace(e);
+    s.verbose(e);
 }
-function f() {
+function f(e) {
+    s.trace(e);
+}
+function _() {
     return null !== o;
 }
-async function _() {
-    if (null !== o) throw Error('libdiscore already initialized');
-    (o = await (0, r.wE)({
-        createPromise: () => n.e('18639').then(n.bind(n, 718493)),
-        webpackId: 718493
-    })).installLogCallback(s, l, c, u, d),
-        await o.initLibdiscore();
+function p() {
+    if (null == a)
+        return (a = (async () => {
+            let e = await (0, r.wE)({
+                createPromise: () => n.e('18639').then(n.bind(n, 718493)),
+                webpackId: 718493
+            });
+            e.installLogCallback(l, c, u, d, f), await e.initLibdiscore(), (o = e);
+        })());
+    throw Error('initLibdiscore called multiple times');
 }
-function p(e) {
+function h(e) {
     var t;
     return null === o ? null : null != (t = o.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
 }
-function h(e) {
+function m(e) {
     null !== o && o.BlockedDomainsStore.startFetchingBlockedDomains(e);
 }
-function m() {
+function g() {
     return 'libdiscore logs are part of the main app logs';
 }
-function g(e, t) {
+function E(e, t) {
     if (null === o) throw Error('libdiscore not initialized');
     return o.rustMultiply(e, t);
 }
