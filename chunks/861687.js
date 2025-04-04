@@ -362,8 +362,8 @@ class eb extends d.Z {
             }),
             this.setState(er.hes.AUTHENTICATING);
     }
-    async _handleDisconnect(e, t, n, r) {
-        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, I, S, T, N;
+    _handleDisconnect(e, t, n, r) {
+        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, I, S, T;
         this.logger.info('Disconnected from RTC server, clean: '.concat(t, ', code: ').concat(n, ', reason: ').concat(r, ', state: ').concat(this.state)),
             t ||
                 !this._connecting ||
@@ -379,8 +379,8 @@ class eb extends d.Z {
                 ),
                 (this._encountered_socket_failure = !0)),
             L.ZP.getRemoteDisconnectVoiceChannelId() === this.channelId && (null == (l = this._connection) || l.wasRemoteDisconnected());
-        let C = 'Force Close' !== r;
-        if (C) {
+        let N = 'Force Close' !== r;
+        if (N) {
             let e = this._backoff.fail(this.reconnect);
             this.logger.warn('Disconnect was not clean! reason='.concat(r, '. Reconnecting in ').concat((e / 1000).toFixed(2), ' seconds.'));
         }
@@ -467,7 +467,7 @@ class eb extends d.Z {
                             hostname: this.hostname,
                             port: this.port,
                             protocol: this.protocol,
-                            reconnect: C,
+                            reconnect: N,
                             reason: r,
                             duration: this.getDuration()
                         }),
@@ -517,15 +517,20 @@ class eb extends d.Z {
                         participant_type: this.getVoiceParticipantType(),
                         audio_capture_sample_rate_mismatch_percent: a
                     }
-                ),
-                l = await (null == (N = this._systemResources) ? void 0 : N.getBatteryLevelStats());
-            j.default.track(er.rMx.VOICE_DISCONNECT, el(ea({}, s), { battery_usage: null == l ? void 0 : l.batteryUsageRounded }));
+                );
+            (async () => {
+                var e, t;
+                return null != (t = await (null == (e = this._systemResources) ? void 0 : e.getBatteryLevelStats())) ? t : { batteryUsageRounded: null };
+            })().then((e) => {
+                let { batteryUsageRounded: t } = e;
+                j.default.track(er.rMx.VOICE_DISCONNECT, el(ea({}, s), { battery_usage: t }));
+            });
         }
         if (((this._pingTimeouts = []), (this._pings = []), (this._connectCompletedTime = 0), (this._pingBadCount = 0), (this._inputDetected = !1), (this._mediaSessionId = null), null == (i = this._voiceQuality) || i.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._noiseCancellationError = 0), null == (o = this._voiceDuration) || o.stop(), (this._voiceDuration = null), null == (a = this._videoQuality) || a.stop(), (this._videoQuality = null), (this._videoHealthManager = null), null == (s = this._localMediaSinkWantsManager) || s.reset(), (this._secureFramesState = null), (this._userIds = new Set([this.userId])), this._secureFramesRosterMap.clear(), null != this._connection)) {
             let e = this._connection;
             (this._connection = null), e.destroy();
         }
-        this.setState(er.hes.DISCONNECTED, { willReconnect: C });
+        this.setState(er.hes.DISCONNECTED, { willReconnect: N });
     }
     _handleResuming(e) {
         var t, n;

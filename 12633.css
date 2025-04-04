@@ -49641,10 +49641,6 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     justify-content: center
 }
 
-.blurToggle_f86e69 {
-    padding: 12px 10px !important
-}
-
 [data-popout-root],
 html {
     --brand-05a: hsla(var(--brand-500-hsl)/0.05);
