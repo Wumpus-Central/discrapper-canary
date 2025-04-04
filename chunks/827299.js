@@ -34,6 +34,10 @@ function u(e, t, n) {
 var d = new WeakMap(),
     f = new WeakMap();
 class _ {
+    abort(e) {
+        let { controller: t } = l(this.search(e), f);
+        null != t && t.abort();
+    }
     doesDataNeedValidation(e) {
         return !0 === l(this.search(e), f).isStale;
     }
@@ -49,9 +53,9 @@ class _ {
             n = this.search(e);
         (l(n, f).isLoading = !1), t ? ((l(n, f).fetchFailCounter = 0), (l(n, f).isStale = !1)) : (l(n, f).fetchFailCounter += 1);
     }
-    loadingStart(e) {
-        let t = this.search(e);
-        (l(t, f).isLoading = !0), (l(t, f).error = void 0);
+    loadingStart(e, t) {
+        let n = this.search(e);
+        (l(n, f).isLoading = !0), null != t && (l(n, f).controller = t), (l(n, f).error = void 0);
     }
     search(e) {
         if (null == e) return new _();
@@ -140,20 +144,15 @@ function E(e, t) {
             }, [_, E, f, b]),
             O = (0, r.useCallback)(() => {
                 if (null == f || !v()) return;
-                p.loadingStart(f);
                 let e = new AbortController();
-                return (
+                p.loadingStart(f, n ? e : void 0),
                     a(e.signal, ...y.current)
                         .then((e) => (p.loadingDone(f, !0), e))
                         .catch((t) => {
                             if ((p.loadingDone(f), e.signal.aborted)) return;
                             let n = g(t);
                             (!(h.fetchFailCounter >= s) && n instanceof m && (n.status >= 500 || 429 === n.status)) || p.setError(f, n);
-                        }),
-                    () => {
-                        n && e.abort();
-                    }
-                );
+                        });
             }, [h.fetchFailCounter, f, v]);
         return (
             (0, r.useEffect)(
@@ -161,7 +160,7 @@ function E(e, t) {
                     O(),
                     p.subscribe(f, O),
                     () => {
-                        p.subscribe(f, void 0);
+                        p.abort(f), p.subscribe(f, void 0);
                     }
                 ),
                 [f, O]
