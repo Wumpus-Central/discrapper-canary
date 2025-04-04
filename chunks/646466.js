@@ -64,7 +64,7 @@ let p = () => {
               );
     },
     f = () => {
-        let e = (0, s.sg)(),
+        let e = (0, s.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, d.N9)(),
             i = a.useMemo(
                 () =>

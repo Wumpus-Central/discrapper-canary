@@ -30,12 +30,12 @@ function m(e) {
     if (!(0, d.L)(m) || null == p) return null;
     let f = p.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
     null != f && (p = p.substr(f[1].length + 1));
-    let v = p.split('/'),
-        y = null != v[1] ? v[1].toLowerCase() : null;
-    null != g && (y = 'song');
+    let y = p.split('/'),
+        v = null != y[1] ? y[1].toLowerCase() : null;
+    null != g && (v = 'song');
     let x = 450;
     return (
-        'song' === y ? (x = 175) : 'music-video' === y && (x = 371),
+        'song' === v ? (x = 175) : 'music-video' === v && (x = 371),
         (p = p.substr(1)),
         (0, n.jsx)('iframe', {
             className: i()(h.embedAppleMusic, l),
