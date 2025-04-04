@@ -129,14 +129,34 @@ function y(e, t) {
                                   P(!0).then(() => {
                                       (0, o.ZDy)(async () => {
                                           let { default: e } = await n.e('13965').then(n.bind(n, 666083));
-                                          return (n) => (0, r.jsx)(e, g({ powerup: t }, n));
+                                          return (n) =>
+                                              (0, r.jsx)(
+                                                  e,
+                                                  g(
+                                                      {
+                                                          guildId: C.id,
+                                                          powerup: t
+                                                      },
+                                                      n
+                                                  )
+                                              );
                                       });
                                   })
                           })
                         : P(!0).then(() => {
                               (0, o.ZDy)(async () => {
                                   let { default: e } = await n.e('13965').then(n.bind(n, 666083));
-                                  return (n) => (0, r.jsx)(e, g({ powerup: t }, n));
+                                  return (n) =>
+                                      (0, r.jsx)(
+                                          e,
+                                          g(
+                                              {
+                                                  guildId: C.id,
+                                                  powerup: t
+                                              },
+                                              n
+                                          )
+                                      );
                               });
                           });
             },

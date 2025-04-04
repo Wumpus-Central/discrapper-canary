@@ -1,40 +1,41 @@
 n.d(t, { default: () => y }), n(47120), n(266796);
 var r = n(200651),
     o = n(192379),
-    c = n(48026),
+    s = n(48026),
     a = n(442837),
-    s = n(481060),
-    i = n(607070),
-    l = n(530618),
+    i = n(481060),
+    l = n(607070),
+    c = n(530618),
     u = n(372654),
-    f = n(156732),
-    p = n(535396),
+    d = n(156732),
+    p = n(262212),
+    f = n(535396),
     b = n(680278),
-    d = n(388032),
-    m = n(548197),
-    j = n(942570);
-function O(e) {
+    m = n(388032),
+    j = n(548197),
+    O = n(942570);
+function g(e) {
     let { powerup: t } = e,
-        n = (0, f.Z)(t);
+        n = (0, d.Z)(t);
     switch (t.type) {
-        case p.Us.LEVEL:
+        case f.Us.LEVEL:
             return (0, r.jsx)('img', {
                 alt: '',
-                src: j
+                src: O
             });
-        case p.Us.PERK:
+        case f.Us.PERK:
             return (0, r.jsx)('img', {
                 alt: '',
                 src: n,
-                className: m.exampleImage
+                className: j.exampleImage
             });
     }
 }
 function y(e) {
     var t,
         n,
-        { powerup: f } = e,
-        p = (function (e, t) {
+        { guildId: d, powerup: O } = e,
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -43,29 +44,30 @@ function y(e) {
                     var n,
                         r,
                         o = {},
-                        c = Object.keys(e);
-                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        s = Object.keys(e);
+                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < c.length; r++) (n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
-        })(e, ['powerup']);
-    let j = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
-        y = o.useRef(null),
-        g = o.useRef(new c.qA()),
-        [x, h] = o.useState(null);
+        })(e, ['guildId', 'powerup']);
+    let x = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        v = o.useRef(null),
+        _ = o.useRef(new s.qA()),
+        [h, w] = o.useState(null),
+        C = f.uc.has(O.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(c.O_, {
-                ref: h,
-                className: m.confettiCanvas,
-                environment: g.current
+            (0, r.jsx)(s.O_, {
+                ref: w,
+                className: j.confettiCanvas,
+                environment: _.current
             }),
             (0, r.jsxs)(
-                s.Y0X,
+                i.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,52 +94,59 @@ function y(e) {
                     return e;
                 })(
                     {
-                        className: m.modal,
-                        size: s.CgR.DYNAMIC
+                        className: j.modal,
+                        size: i.CgR.DYNAMIC
                     },
-                    p
+                    y
                 )),
                 (n = n =
                     {
                         children: [
-                            (0, r.jsx)(s.hzk, {
-                                className: m.modalContentContainer,
+                            (0, r.jsx)(i.hzk, {
+                                className: j.modalContentContainer,
                                 scrollbarType: 'none',
                                 children: (0, r.jsxs)('div', {
-                                    className: m.container,
-                                    ref: y,
+                                    className: j.container,
+                                    ref: v,
                                     children: [
-                                        (0, r.jsx)(O, { powerup: f }),
+                                        (0, r.jsx)(g, { powerup: O }),
                                         (0, r.jsxs)('div', {
-                                            className: m.contentContainer,
+                                            className: j.contentContainer,
                                             children: [
-                                                (0, r.jsx)(s.X6q, {
+                                                (0, r.jsx)(i.X6q, {
                                                     variant: 'heading-xl/extrabold',
-                                                    children: d.NW.formatToPlainString(b.Z.lFuOFB, { perkName: f.title })
+                                                    children: m.NW.formatToPlainString(b.Z.lFuOFB, { perkName: O.title })
                                                 }),
-                                                (0, r.jsx)(s.Text, {
-                                                    className: m.description,
+                                                (0, r.jsx)(i.Text, {
+                                                    className: j.description,
                                                     variant: 'text-sm/normal',
-                                                    children: d.NW.formatToPlainString(b.Z.y3wHoq, { perkName: f.title })
+                                                    children: m.NW.formatToPlainString(b.Z.y3wHoq, { perkName: O.title })
                                                 }),
-                                                (0, r.jsx)(s.zxk, {
-                                                    className: m.button,
-                                                    onClick: p.onClose,
-                                                    children: d.NW.string(b.Z['g5Ds6+'])
-                                                })
+                                                C
+                                                    ? (0, r.jsx)(p.ms, {
+                                                          className: j.button,
+                                                          guildId: d,
+                                                          powerup: O,
+                                                          onClick: y.onClose
+                                                      })
+                                                    : (0, r.jsx)(i.zxk, {
+                                                          className: j.button,
+                                                          onClick: y.onClose,
+                                                          children: m.NW.string(m.t.cpT0Cg)
+                                                      })
                                             ]
                                         })
                                     ]
                                 })
                             }),
-                            (0, r.jsx)(s.olH, {
-                                className: m.close,
-                                onClick: p.onClose
+                            (0, r.jsx)(i.olH, {
+                                className: j.close,
+                                onClick: y.onClose
                             }),
-                            !j &&
-                                (0, r.jsx)(l.Z, {
-                                    confettiTarget: y.current,
-                                    confettiCanvas: x,
+                            !x &&
+                                (0, r.jsx)(c.Z, {
+                                    confettiTarget: v.current,
+                                    confettiCanvas: h,
                                     sprites: (0, u.vK)()
                                 })
                         ]

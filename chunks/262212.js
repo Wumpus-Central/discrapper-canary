@@ -1,6 +1,7 @@
 n.d(t, {
     Nn: () => y,
-    ZP: () => x
+    ZP: () => x,
+    ms: () => v
 });
 var r = n(200651),
     o = n(192379),
@@ -105,9 +106,9 @@ function I(e) {
     });
 }
 function v(e) {
-    var { guildId: t, powerup: n } = e,
-        o = g(e, ['guildId', 'powerup']);
-    let s = (0, d.Z)(t, n);
+    var { guildId: t, powerup: n, onClick: o } = e,
+        s = g(e, ['guildId', 'powerup', 'onClick']);
+    let a = (0, d.Z)(t, n);
     return (0, r.jsx)(
         c.zxk,
         _(
@@ -117,9 +118,11 @@ function v(e) {
                     innerClassName: O.buttonInner,
                     wrapperClassName: O.buttonWrapper,
                     grow: !0,
-                    onClick: s
+                    onClick: (e) => {
+                        null == o || o(e), null == a || a(e);
+                    }
                 },
-                o
+                s
             ),
             { children: m.NW.string(b.Z['g5Ds6+']) }
         )
