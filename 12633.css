@@ -48678,16 +48678,19 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     animation: incoming-call-pulse_f910d0 var(--custom-call-avatar-incoming-duration) infinite ease-out
 }
 
-.status_f910d0 {
-    background-clip: padding-box;
-    border-radius: 50%;
-    padding: 4px;
-    width: 16px;
-    height: 16px;
+.statusContainer_f910d0 {
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: var(--red-400)
+    background-color: var(--red-400);
+    border-radius: 50%;
+    padding: 4px
+}
+
+.status_f910d0,
+.statusContainer_f910d0 {
+    width: 16px;
+    height: 16px
 }
 
 .voiceAvatar_f910d0 {

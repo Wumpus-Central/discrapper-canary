@@ -354,7 +354,20 @@ function X(e) {
             }
         );
     }, [e0, tV]);
-    let tB = l.useCallback((e) => tC(e, eL), [eL, tC]),
+    let tB = l.useCallback(
+            (e) => {
+                var t;
+                tr.info(
+                    '[QV] | logVideoError: errorType: '
+                        .concat(e, ', videoProgress: ')
+                        .concat(null == (t = eJ.current) ? void 0 : t.currentTime, ', videoAssetId: ')
+                        .concat(ta, ', connectionSpeed: ')
+                        .concat(eL)
+                ),
+                    tC(e, eL);
+            },
+            [eL, tC, eJ, ta, tr]
+        ),
         tF = (e) => {
             tr.info('[QV] | handleCanPlay: playerState: '.concat(eh)), null != eJ.current && eh === R.rq.PLAYING && (tr.info('[QV] | handleCanPlay: did NOT early return'), eP && (tr.info('[QV] | handleCanPlay: loadingFirstChunk: '.concat(eP)), eT(!1)), ek && (tr.info('[QV] | handleCanPlay: waitingForChunk: '.concat(ek)), tE(eL, null != eG.current ? Date.now() - eG.current : null), ew(!1)), tr.info('[QV] | handleCanPlay: updating player state to playing'), tx(R.rq.PLAYING));
         };
