@@ -8,7 +8,7 @@ var i = n(481060),
     l = n(754688),
     c = n(336197),
     u = n(124072),
-    d = n(692629),
+    d = n(891984),
     f = n(131704),
     _ = n(592125),
     p = n(430824),
@@ -77,10 +77,17 @@ async function O(e, t, n) {
         }),
         null != e)
     ) {
-        let n = p.Z.getGuild(e);
-        if ((null == n ? void 0 : n.joinedAt) == null)
+        let r = p.Z.getGuild(e);
+        if ((null == r ? void 0 : r.joinedAt) == null)
             try {
-                await h.Ub(e, {}, { channelId: t });
+                await h.Ub(
+                    e,
+                    {},
+                    {
+                        channelId: t,
+                        messageId: n
+                    }
+                );
                 return;
             } catch (e) {}
     }
