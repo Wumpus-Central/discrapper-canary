@@ -4,47 +4,47 @@ function r(e) {
 }
 _.d(n, {
     A$: () => Q,
-    AM: () => G,
-    B: () => Z,
+    AM: () => E,
+    B: () => X,
     B8: () => k,
     BQ: () => et,
     C2: () => ed,
     Cn: () => H,
     D7: () => eo,
     F8: () => Y,
-    G6: () => eU,
+    G6: () => eI,
     H0: () => D,
     Hh: () => em,
-    IU: () => eM,
-    KD: () => E,
+    IU: () => eO,
+    KD: () => U,
     KE: () => eg,
-    M2: () => eK,
-    Mc: () => I,
+    Mc: () => K,
     OU: () => ex,
     On: () => eb,
-    Or: () => eX,
-    R7: () => eT,
-    RA: () => eI,
+    Or: () => eJ,
+    R7: () => eB,
     Rb: () => eD,
-    Rs: () => eR,
+    Rs: () => ev,
     S: () => z,
-    Tc: () => eB,
+    TU: () => eG,
+    Tc: () => ej,
     UE: () => eu,
-    V3: () => eF,
-    Vr: () => P,
+    V3: () => eA,
+    Vr: () => Z,
     Wl: () => eV,
     Wt: () => ek,
     XP: () => eN,
+    Xm: () => eK,
     YA: () => ew,
-    Yc: () => ej,
-    Z5: () => eA,
-    Zk: () => F,
+    Yc: () => eM,
+    Z5: () => eF,
+    Zk: () => A,
     a9: () => en,
     aQ: () => ef,
     am: () => ey,
     d$: () => W,
-    dE: () => eE,
-    dJ: () => B,
+    dE: () => eU,
+    dJ: () => j,
     dN: () => N,
     eD: () => er,
     eW: () => x,
@@ -52,39 +52,39 @@ _.d(n, {
     ex: () => ec,
     fY: () => eQ,
     fw: () => eS,
-    h4: () => eJ,
+    h4: () => eP,
     ht: () => ee,
     iF: () => L,
-    iR: () => J,
-    jG: () => eL,
+    iR: () => P,
     jm: () => es,
     jx: () => V,
-    k7: () => X,
+    k7: () => J,
     kK: () => eW,
     kn: () => S,
     kr: () => e_,
     mO: () => eC,
-    nG: () => U,
-    nM: () => A,
+    nG: () => I,
+    nM: () => F,
     o$: () => e$,
-    oH: () => eZ,
+    oH: () => eX,
     oT: () => r,
-    of: () => eG,
+    of: () => eE,
     p0: () => ez,
     pC: () => C,
-    pj: () => eO,
+    pj: () => eT,
     qb: () => $,
-    qt: () => eP,
+    qt: () => eZ,
     r3: () => ea,
     rs: () => y,
     sB: () => eq,
+    te: () => eL,
     up: () => ep,
-    w7: () => ev,
+    w7: () => eR,
     xQ: () => eY,
     xb: () => eH,
     yR: () => q,
     z3: () => ei,
-    z9: () => K,
+    z9: () => G,
     zF: () => eh
 }),
     _(518263),
@@ -222,28 +222,28 @@ function x() {
 function k(e, n, _, r, c) {
     t.installLogCallback(e, n, _, r, c);
 }
-function R(e, n) {
+function v(e, n) {
     t._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0d9f524a369b50d3(e, n);
 }
-function v(e, n) {
+function R(e, n) {
     t._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h83f15003f1e5040a(e, n);
 }
-function O(e, n, _) {
+function T(e, n, _) {
     t.closure464_externref_shim(e, n, _);
 }
-let M = ['omit', 'same-origin', 'include'],
-    T = ['same-origin', 'no-cors', 'cors', 'navigate'],
-    j =
+let O = ['omit', 'same-origin', 'include'],
+    B = ['same-origin', 'no-cors', 'cors', 'navigate'],
+    M =
         'undefined' == typeof FinalizationRegistry
             ? {
                   register: () => {},
                   unregister: () => {}
               }
             : new FinalizationRegistry((e) => t.__wbg_blockeddomainsstore_free(e >>> 0, 1));
-class B {
+class j {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), j.unregister(this), e;
+        return (this.__wbg_ptr = 0), M.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -256,14 +256,16 @@ class B {
             c = t.blockeddomainsstore_isBlockedDomain(_, r);
         return 0 !== c[0] && ((n = o(c[0], c[1]).slice()), t.__wbindgen_free(c[0], +c[1], 1)), n;
     }
-    static startFetchingBlockedDomains() {
-        t.blockeddomainsstore_startFetchingBlockedDomains();
+    static startFetchingBlockedDomains(e) {
+        let n = g(e, t.__wbindgen_malloc, t.__wbindgen_realloc),
+            _ = d;
+        t.blockeddomainsstore_startFetchingBlockedDomains(n, _);
     }
 }
-function A(e, n) {
+function F(e, n) {
     e.abort(n);
 }
-function F(e) {
+function A(e) {
     e.abort();
 }
 function C() {
@@ -284,12 +286,12 @@ function q() {
         return e.caches;
     }, arguments);
 }
-function E() {
+function U() {
     return f(function (e, n) {
         return e.call(n);
     }, arguments);
 }
-function G() {
+function E() {
     return f(function (e, n, _) {
         return e.call(n, _);
     }, arguments);
@@ -303,13 +305,13 @@ function H(e) {
 function S(e) {
     return e.done;
 }
-function U(e, n) {
+function I(e, n) {
     return e.fetch(n);
 }
-function I(e) {
+function K(e) {
     return fetch(e);
 }
-function K() {
+function G() {
     return f(function (e, n) {
         return Reflect.get(e, n);
     }, arguments);
@@ -352,18 +354,18 @@ function V(e) {
 function N() {
     return Symbol.iterator;
 }
-function Z(e) {
+function X(e) {
     return e.length;
 }
-function P(e, n) {
+function Z(e, n) {
     return e.match(n);
 }
-function J() {
+function P() {
     return f(function () {
         return new Headers();
     }, arguments);
 }
-function X(e, n) {
+function J(e, n) {
     try {
         var _ = {
             a: e,
@@ -464,34 +466,34 @@ function ex(e, n) {
     e.body = n;
 }
 function ek(e, n) {
-    e.credentials = M[n];
-}
-function eR(e, n) {
-    e.headers = n;
+    e.credentials = O[n];
 }
 function ev(e, n) {
     e.headers = n;
 }
-function eO(e, n, _) {
+function eR(e, n) {
+    e.headers = n;
+}
+function eT(e, n, _) {
     e.method = o(n, _);
 }
-function eM(e, n) {
-    e.mode = T[n];
+function eO(e, n) {
+    e.mode = B[n];
 }
-function eT(e, n) {
+function eB(e, n) {
     e.signal = n;
 }
-function ej(e, n) {
+function eM(e, n) {
     e.status = n;
 }
-function eB(e) {
+function ej(e) {
     return e.signal;
 }
-function eA() {
+function eF() {
     let e = 'undefined' == typeof global ? null : global;
     return b(e) ? 0 : u(e);
 }
-function eF() {
+function eA() {
     let e = 'undefined' == typeof globalThis ? null : globalThis;
     return b(e) ? 0 : u(e);
 }
@@ -511,10 +513,10 @@ function eq() {
         return JSON.stringify(e);
     }, arguments);
 }
-function eE(e, n) {
+function eU(e, n) {
     return e.then(n);
 }
-function eG(e, n, _) {
+function eE(e, n, _) {
     return e.then(n, _);
 }
 function ez(e, n) {
@@ -528,18 +530,18 @@ function eH(e) {
 function eS(e, n) {
     console.warn(o(e, n));
 }
-function eU(e) {
+function eI(e) {
     let n = e.original;
     return 1 == n.cnt-- && ((n.a = 0), !0);
 }
-function eI(e, n, _) {
-    return m(e, n, 465, O);
-}
 function eK(e, n, _) {
-    return m(e, n, 301, R);
+    return m(e, n, 465, T);
+}
+function eG(e, n, _) {
+    return m(e, n, 301, v);
 }
 function eL(e, n, _) {
-    return m(e, n, 308, v);
+    return m(e, n, 308, R);
 }
 function eQ(e, n) {
     let _ = g(
@@ -593,18 +595,18 @@ function eV(e) {
 function eN(e) {
     return void 0 === e;
 }
-function eZ() {
+function eX() {
     return t.memory;
 }
-function eP(e, n) {
+function eZ(e, n) {
     let _ = 'string' == typeof n ? n : void 0;
     var r = b(_) ? 0 : g(_, t.__wbindgen_malloc, t.__wbindgen_realloc),
         c = d;
     h().setInt32(e + 4, c, !0), h().setInt32(e + 0, r, !0);
 }
-function eJ(e, n) {
+function eP(e, n) {
     return o(e, n);
 }
-function eX(e, n) {
+function eJ(e, n) {
     throw Error(o(e, n));
 }

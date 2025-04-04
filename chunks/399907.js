@@ -22,7 +22,11 @@ function u(e, t, n) {
 let d = 4 * s.Z.Millis.HOUR;
 class f extends o.Z {
     _initialize() {
-        if ((0, a.U)()) return void (0, i.pf)();
+        if ((0, a.U)()) {
+            let e = 'https:'.concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/bad-hash-delta');
+            (0, i.pf)(e);
+            return;
+        }
         setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => c.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, l.q)(), 10 * s.Z.Millis.SECOND), (this.intervalID = setInterval(l.q, d));
     }
     _terminate() {
