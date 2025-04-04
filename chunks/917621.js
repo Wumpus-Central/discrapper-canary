@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120), n(653041);
+n.d(t, { Z: () => S }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -6,7 +6,7 @@ var r = n(200651),
     o = n(481060),
     s = n(600164),
     c = n(424678),
-    u = n(184301),
+    u = n(670188),
     d = n(237583),
     p = n(598077),
     m = n(63063),
@@ -67,8 +67,8 @@ function j(e, t) {
     );
 }
 function C(e) {
-    let { member: t, className: n, guildId: a, renderUserPopout: s } = e,
-        c = i.useRef(null);
+    let { member: t, className: n, guildId: a, channelId: s, messageId: c, analyticsLocations: d } = e,
+        p = i.useRef(null);
     return t.unknownUser
         ? (0, r.jsx)('div', {
               className: E.partyMember,
@@ -79,11 +79,14 @@ function C(e) {
                   'aria-label': t.user.username
               })
           })
-        : (0, r.jsx)(o.yRy, {
-              targetElementRef: c,
+        : (0, r.jsx)(u.Z, {
+              targetElementRef: p,
               position: 'left',
-              renderPopout: (e) => s(t.user, e),
-              preload: () => (0, u.Z)(t.user.id, t.user.getAvatarURL(a, (0, o.pxk)(o.EFr.SIZE_80)), { guildId: a }),
+              user: t.user,
+              guildId: a,
+              channelId: s,
+              messageId: c,
+              newAnalyticsLocations: d,
               children: (e) => {
                   var i;
                   return (0, r.jsx)(o.ua7, {
@@ -94,7 +97,7 @@ function C(e) {
                               j(
                                   N(
                                       {
-                                          innerRef: c,
+                                          innerRef: p,
                                           className: E.partyMemberKnown
                                       },
                                       i,
@@ -460,15 +463,17 @@ class I extends i.PureComponent {
                 null != e && null != n && (null == t || t(e, n.author.id));
             }),
             O(this, 'renderUser', (e, t, n) => {
-                let { renderUserPopout: i, guildId: a } = this.props;
+                let { guildId: i, channelId: a, message: o, analyticsLocations: s } = this.props;
                 return null != e
                     ? (0, r.jsx)(
                           C,
                           {
                               member: e,
-                              renderUserPopout: i,
                               className: t,
-                              guildId: a
+                              guildId: i,
+                              channelId: a,
+                              messageId: null == o ? void 0 : o.id,
+                              analyticsLocations: s
                           },
                           n
                       )

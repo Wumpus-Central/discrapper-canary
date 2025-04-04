@@ -1,9 +1,9 @@
 n.d(t, {
-    XX: () => W,
-    ZP: () => H,
-    ul: () => U
+    XX: () => D,
+    ZP: () => B,
+    ul: () => W
 }),
-    n(47120);
+    n(388685);
 var r,
     i = n(200651),
     l = n(192379),
@@ -24,20 +24,19 @@ var r,
     y = n(102172),
     x = n(525925),
     v = n(701362),
-    j = n(184301),
-    O = n(347475),
-    E = n(597998),
-    N = n(314897),
-    I = n(430824),
-    P = n(496675),
-    S = n(594174),
-    Z = n(979651),
-    T = n(981631),
-    A = n(927923),
-    w = n(70722),
-    R = n(388032),
-    k = n(587382);
-function M(e, t, n) {
+    j = n(670188),
+    O = n(597998),
+    E = n(314897),
+    N = n(430824),
+    I = n(496675),
+    P = n(594174),
+    S = n(979651),
+    Z = n(981631),
+    T = n(927923),
+    A = n(70722),
+    w = n(388032),
+    R = n(587382);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +49,7 @@ function M(e, t, n) {
         e
     );
 }
-function L(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,12 +60,12 @@ function L(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -84,10 +83,10 @@ function D(e, t) {
         e
     );
 }
-function W(e) {
+function D(e) {
     let { numUsers: t } = e;
     return (0, i.jsx)('div', {
-        className: k.moreContainer,
+        className: R.moreContainer,
         children: (0, i.jsxs)(c.Text, {
             color: 'text-muted',
             variant: 'text-sm/medium',
@@ -95,18 +94,18 @@ function W(e) {
         })
     });
 }
-function U(e) {
+function W(e) {
     let { numAudience: t, collapsed: n } = e,
-        r = n ? t : R.NW.formatToPlainString(R.t['+v2pNz'], { count: t });
+        r = n ? t : w.NW.formatToPlainString(w.t['+v2pNz'], { count: t });
     return (0, i.jsxs)('div', {
-        className: a()(k.audienceContainer, { [k.audienceContainerCollapsed]: n }),
+        className: a()(R.audienceContainer, { [R.audienceContainerCollapsed]: n }),
         children: [
             (0, i.jsx)('div', {
-                className: k.audienceIconContainer,
+                className: R.audienceIconContainer,
                 children: (0, i.jsx)(c.VWR, {
                     size: 'md',
                     color: 'currentColor',
-                    className: k.audienceIcon
+                    className: R.audienceIcon
                 })
             }),
             (0, i.jsx)(c.Text, {
@@ -117,30 +116,27 @@ function U(e) {
         ]
     });
 }
-class B extends (r = l.PureComponent) {
+class U extends (r = l.PureComponent) {
     get canWatchStream() {
         let { channel: e, isStreaming: t } = this.props;
-        return t && (0, y.p9)(e, Z.Z, I.Z, P.Z, b.Z)[0];
+        return t && (0, y.p9)(e, S.Z, N.Z, I.Z, b.Z)[0];
     }
     render() {
         var e;
         let { userPopoutOpen: t } = this.state,
             { connectUserDragSource: n, canDrag: r, isSelfOnOtherClient: l, user: o, channel: a } = this.props,
             s = (0, i.jsx)('div', {
-                className: k.draggable,
+                className: R.draggable,
                 'data-dnd-name': a.name,
                 onMouseEnter: l ? void 0 : this.handleMouseEnter,
                 onMouseLeave: l ? void 0 : this.handleHidePreview,
-                children: (0, i.jsx)(c.yRy, {
-                    clickTrap: (null == o ? void 0 : o.id) === (null == (e = S.default.getCurrentUser()) ? void 0 : e.id),
+                children: (0, i.jsx)(j.Z, {
+                    clickTrap: (null == o ? void 0 : o.id) === (null == (e = P.default.getCurrentUser()) ? void 0 : e.id),
                     targetElementRef: this.domElementRef,
-                    preload: () =>
-                        (0, j.Z)(o.id, o.getAvatarURL(a.guild_id, 80), {
-                            guildId: a.guild_id,
-                            channelId: a.id
-                        }),
-                    position: 'right',
-                    renderPopout: this.renderUserPopout,
+                    user: o,
+                    guildId: a.guild_id,
+                    channelId: a.id,
+                    newAnalyticsLocations: [m.Z.VOICE_USER],
                     shouldShow: t,
                     onRequestClose: this.handleCloseUserPopout,
                     children: (e) => this.renderUser(e)
@@ -150,45 +146,45 @@ class B extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            M(this, 'domElementRef', l.createRef()),
-            M(this, 'state', { userPopoutOpen: !1 }),
-            M(this, 'handleClickUser', () => {
+            k(this, 'domElementRef', l.createRef()),
+            k(this, 'state', { userPopoutOpen: !1 }),
+            k(this, 'handleClickUser', () => {
                 this.setState({ userPopoutOpen: !this.state.userPopoutOpen });
             }),
-            M(this, 'handleCloseUserPopout', () => {
+            k(this, 'handleCloseUserPopout', () => {
                 this.setState({ userPopoutOpen: !1 });
             }),
-            M(this, 'handleHidePreview', () => {
+            k(this, 'handleHidePreview', () => {
                 let { hidePreview: e, isStreaming: t, user: n } = this.props;
                 t && (null == e || e(n.id));
             }),
-            M(this, 'handleMouseEnter', () => {
+            k(this, 'handleMouseEnter', () => {
                 let { user: e, showPreview: t, isStreaming: n } = this.props;
                 n && !this.state.userPopoutOpen && (null == t || t(e.id));
             }),
-            M(this, 'handleWatchStream', () => {
+            k(this, 'handleWatchStream', () => {
                 let { user: e, channel: t, isWatching: n, hidePreview: r } = this.props;
                 if (!this.canWatchStream) return;
                 let i = {
-                    streamType: w.lo.GUILD,
+                    streamType: A.lo.GUILD,
                     ownerId: e.id,
                     channelId: t.id,
                     guildId: t.guild_id
                 };
-                N.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(i), u.Z.selectParticipant(i.channelId, (0, C.V9)(i))) : (0, h.iV)(i), null == r || r(e.id);
+                E.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(i), u.Z.selectParticipant(i.channelId, (0, C.V9)(i))) : (0, h.iV)(i), null == r || r(e.id);
             }),
-            M(this, 'handleJoinVoice', () => {
+            k(this, 'handleJoinVoice', () => {
                 let { user: e, channel: t, hidePreview: n } = this.props;
-                P.Z.can(s.$e(T.Plq.CONNECT, T.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
+                I.Z.can(s.$e(Z.Plq.CONNECT, Z.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
             }),
-            M(this, 'handleUserContextMenu', (e) => {
+            k(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: r } = this.props;
                 (0, d.jW)(e, async () => {
                     let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, i.jsx)(
                             e,
-                            D(L({}, n), {
+                            L(M({}, n), {
                                 user: r,
                                 guildId: t.guild_id,
                                 channel: t,
@@ -199,23 +195,7 @@ class B extends (r = l.PureComponent) {
                         );
                 });
             }),
-            M(this, 'renderUserPopout', (e) => {
-                let { channel: t, user: n } = this.props,
-                    r = t.getGuildId();
-                return (0, i.jsx)(
-                    O.Z,
-                    L(
-                        {
-                            userId: n.id,
-                            guildId: null != r ? r : void 0,
-                            channelId: t.id,
-                            newAnalyticsLocations: [m.Z.VOICE_USER]
-                        },
-                        e
-                    )
-                );
-            }),
-            M(this, 'renderStreamPopout', () => {
+            k(this, 'renderStreamPopout', () => {
                 let { user: e, channel: t, previewIsOpen: n, location: r } = this.props;
                 return (0, i.jsx)(v.Z, {
                     user: e,
@@ -225,11 +205,11 @@ class B extends (r = l.PureComponent) {
                     location: r
                 });
             }),
-            M(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: r, shouldShowPreview: l, mute: o, localMute: s, localVideoDisabled: u, speaking: d, disconnected: p, user: h, deaf: f, priority: m, collapsed: g, isStreaming: b, isGuest: C, nick: y, video: x, serverMute: v, serverDeaf: j, tabIndex: O, embeddedApplication: N, channel: I, ringing: P, isSelf: S, application: Z } = this.props,
-                    { userPopoutOpen: T } = this.state,
-                    w = A.al.has(null != n ? n : ''),
-                    M = {
+            k(this, 'renderUser', (e) => {
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: r, shouldShowPreview: l, mute: o, localMute: s, localVideoDisabled: u, speaking: d, disconnected: p, user: h, deaf: f, priority: m, collapsed: g, isStreaming: b, isGuest: C, nick: y, video: x, serverMute: v, serverDeaf: j, tabIndex: E, embeddedApplication: N, channel: I, ringing: P, isSelf: S, application: Z } = this.props,
+                    { userPopoutOpen: A } = this.state,
+                    k = T.al.has(null != n ? n : ''),
+                    D = {
                         user: h,
                         speaking: d,
                         disconnected: p,
@@ -247,14 +227,14 @@ class B extends (r = l.PureComponent) {
                         overlap: g,
                         serverMute: v,
                         serverDeaf: j,
-                        tabIndex: O,
+                        tabIndex: E,
                         otherClientSessionType: n,
                         voicePlatform: r,
                         embeddedApplication: N,
-                        avatarContainerClass: a()({ [k.userAvatar]: !0 }),
-                        disabled: t && !w,
-                        selected: T,
-                        onClick: w ? void 0 : this.handleClickUser,
+                        avatarContainerClass: a()({ [R.userAvatar]: !0 }),
+                        disabled: t && !k,
+                        selected: A,
+                        onClick: k ? void 0 : this.handleClickUser,
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
                         guildId: I.guild_id,
@@ -265,7 +245,7 @@ class B extends (r = l.PureComponent) {
                 if (t) {
                     var W;
                     return (0, i.jsx)(c.ua7, {
-                        text: null != (W = (0, _.Z)(n)) ? W : R.NW.string(R.t.IyYqqa),
+                        text: null != (W = (0, _.Z)(n)) ? W : w.NW.string(w.t.IyYqqa),
                         children: (e) => {
                             var { onClick: t, onContextMenu: n } = e,
                                 r = (function (e, t) {
@@ -287,7 +267,7 @@ class B extends (r = l.PureComponent) {
                                     }
                                     return i;
                                 })(e, ['onClick', 'onContextMenu']);
-                            return (0, i.jsx)(E.ZP, L({ ref: this.domElementRef }, M, r));
+                            return (0, i.jsx)(O.ZP, M({ ref: this.domElementRef }, D, r));
                         }
                     });
                 }
@@ -295,13 +275,13 @@ class B extends (r = l.PureComponent) {
                     targetElementRef: this.domElementRef,
                     position: 'right',
                     renderPopout: this.renderStreamPopout,
-                    shouldShow: l && !T,
+                    shouldShow: l && !A,
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,
                     children: () =>
                         (0, i.jsx)(
-                            E.ZP,
-                            D(L({}, M), {
+                            O.ZP,
+                            L(M({}, D), {
                                 ref: this.domElementRef,
                                 onMouseDown: e.onMouseDown,
                                 onKeyDown: e.onKeyDown
@@ -311,5 +291,5 @@ class B extends (r = l.PureComponent) {
             });
     }
 }
-M(B, 'defaultProps', { isSelfOnOtherClient: !1 });
-let H = (0, f.$)(B);
+k(U, 'defaultProps', { isSelfOnOtherClient: !1 });
+let B = (0, f.$)(U);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -9,12 +9,11 @@ var r = n(200651),
     u = n(40851),
     d = n(906732),
     p = n(795318),
-    h = n(184301),
-    f = n(347475),
-    m = n(237583),
-    g = n(768581),
-    b = n(529853);
-function _(e) {
+    h = n(670188),
+    f = n(237583),
+    m = n(768581),
+    g = n(529853);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +38,7 @@ function _(e) {
     }
     return e;
 }
-function C(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,14 +56,14 @@ function C(e, t) {
         e
     );
 }
-function y(e) {
-    let { channel: t, speaker: l, className: m } = e,
-        { newestAnalyticsLocation: y } = (0, d.ZP)(),
-        x = (0, u.bp)(),
-        { reducedMotion: v } = i.useContext(a.Sfi),
-        j = (0, c.Z)({ userId: l.id }),
-        O = null != l.member ? (0, g.CA)(l.member) : null,
-        E = (e) => {
+function C(e) {
+    let { channel: t, speaker: l, className: f } = e,
+        { newestAnalyticsLocation: C } = (0, d.ZP)(),
+        y = (0, u.bp)(),
+        { reducedMotion: x } = i.useContext(a.Sfi),
+        v = (0, c.Z)({ userId: l.id }),
+        j = null != l.member ? (0, m.CA)(l.member) : null,
+        O = (e) => {
             (0, s.jW)(
                 e,
                 async () => {
@@ -72,37 +71,24 @@ function y(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            C(_({}, n), {
+                            _(b({}, n), {
                                 user: l.user,
                                 guildId: t.guild_id,
                                 channel: t,
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', y)
+                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', C)
                             })
                         );
                 },
-                { context: x }
+                { context: y }
             );
         };
-    return (0, r.jsx)(a.yRy, {
-        preload: () =>
-            (0, h.Z)(l.user, {
-                guildId: t.guild_id,
-                channelId: t.id
-            }),
-        renderPopout: (e) =>
-            (0, r.jsx)(
-                f.Z,
-                C(_({}, e), {
-                    guildId: t.guild_id,
-                    channelId: t.id,
-                    userId: l.id
-                })
-            ),
-        position: 'right',
-        spacing: 8,
+    return (0, r.jsx)(h.Z, {
+        user: l.user,
+        guildId: t.guild_id,
+        channelId: t.id,
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(a.ua7, {
@@ -111,33 +97,33 @@ function y(e) {
                 children: (n) =>
                     (0, r.jsx)(
                         a.P3F,
-                        C(_({}, n, e), {
+                        _(b({}, n, e), {
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },
-                            onContextMenu: E,
+                            onContextMenu: O,
                             children: (0, r.jsx)(a.qEK, {
-                                src: null != O ? O : l.user.getAvatarURL(t.guild_id, 24),
+                                src: null != j ? j : l.user.getAvatarURL(t.guild_id, 24),
                                 size: a.EFr.SIZE_24,
-                                className: o()(b.avatar, m),
+                                className: o()(g.avatar, f),
                                 'aria-label': l.userNick,
-                                isSpeaking: j && !v.enabled
+                                isSpeaking: v && !x.enabled
                             })
                         })
                     )
             })
     });
 }
-function x(e) {
+function y(e) {
     let { speakers: t, channel: n } = e;
-    return (0, r.jsx)(m.Z, {
-        className: b.summary,
+    return (0, r.jsx)(f.Z, {
+        className: g.summary,
         guildId: n.guild_id,
         users: t,
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                y,
+                C,
                 {
                     channel: n,
                     speaker: e,
@@ -149,7 +135,7 @@ function x(e) {
             (0, r.jsx)(
                 'div',
                 {
-                    className: o()(b.speakers, t),
+                    className: o()(g.speakers, t),
                     children: e
                 },
                 n

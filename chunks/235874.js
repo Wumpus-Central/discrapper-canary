@@ -2,9 +2,9 @@ n.d(t, {
     K: () => v,
     y: () => y
 }),
-    n(411104),
-    n(47120),
-    n(26686);
+    n(415506),
+    n(388685),
+    n(49124);
 var r,
     i = n(200651),
     o = n(192379),
@@ -109,30 +109,30 @@ function b(e) {
 }
 class y extends (r = o.Component) {
     render() {
-        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: o, align: a, autoInvert: s, fixed: c, nudgeAlignIntoViewport: u, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: p, overridePositionRef: h, preload: m, disablePointerEvents: g, ignoreModalClicks: E, closeOnScroll: y, useMouseEnter: v, renderPopout: O, layerContext: I, clickTrap: S = !1 } = this.props;
+        let { children: e, shouldShow: t, onRequestOpen: n, onRequestClose: r, align: o, fixed: a, useRawTargetDimensions: s, onShiftClick: c, positionKey: u, overridePositionRef: d, preload: f, disablePointerEvents: _, ignoreModalClicks: p, closeOnScroll: h, useMouseEnter: m, renderPopout: g, layerContext: E, position: y = 'right', autoInvert: v = !0, nudgeAlignIntoViewport: O = !0, spacing: I = 8, clickTrap: S = !1 } = this.props;
         return (0, i.jsx)(l.H, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
-            overridePositionRef: h,
-            preload: m,
-            position: n,
-            align: null != a ? a : b(n),
-            autoInvert: s,
-            fixed: c,
-            nudgeAlignIntoViewport: u,
-            useRawTargetDimensions: d,
+            overridePositionRef: d,
+            preload: f,
+            position: y,
+            align: null != o ? o : b(y),
+            autoInvert: v,
+            fixed: a,
+            nudgeAlignIntoViewport: O,
+            useRawTargetDimensions: s,
             renderPopout: this.renderPopout,
-            spacing: f,
-            shouldShow: null != O && t,
-            onRequestOpen: r,
-            onRequestClose: o,
-            onShiftClick: _,
-            positionKey: p,
-            disablePointerEvents: g,
-            ignoreModalClicks: E,
-            closeOnScroll: y,
-            useMouseEnter: v,
-            layerContext: I,
+            spacing: I,
+            shouldShow: null != g && t,
+            onRequestOpen: n,
+            onRequestClose: r,
+            onShiftClick: c,
+            positionKey: u,
+            disablePointerEvents: _,
+            ignoreModalClicks: p,
+            closeOnScroll: h,
+            useMouseEnter: m,
+            layerContext: E,
             clickTrap: S,
             children: e
         });
@@ -141,7 +141,7 @@ class y extends (r = o.Component) {
         super(...e),
             d(this, 'ref', o.createRef()),
             d(this, 'renderPopout', (e) => {
-                let { renderPopout: t, animation: n, animationPosition: r } = this.props;
+                let { renderPopout: t, animation: n = '2', animationPosition: r } = this.props;
                 switch ((null != r && null != e.position && (e.position = r), n)) {
                     case '2':
                     case '3':
@@ -213,13 +213,4 @@ function v(e) {
         (0, i.jsx)(y, p(f({ ref: r }, n), { renderPopout: E }))
     );
 }
-d(y, 'Animation', g),
-    d(y, 'defaultProps', {
-        position: 'right',
-        autoInvert: !0,
-        nudgeAlignIntoViewport: !0,
-        spacing: 8,
-        animation: '2',
-        positionKey: void 0
-    }),
-    (v.Animation = g);
+d(y, 'Animation', g), (v.Animation = g);

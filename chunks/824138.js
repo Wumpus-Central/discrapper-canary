@@ -1,24 +1,21 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(512722),
-    s = n.n(o),
-    c = n(481060),
-    u = n(100527),
-    d = n(600164),
-    p = n(184301),
-    h = n(347475),
-    f = n(237583),
-    g = n(63063),
-    m = n(870569),
-    b = n(345243),
-    _ = n(115530),
-    E = n(981631),
-    O = n(388032),
-    N = n(457755);
-function y(e, t, n) {
+    o = n(481060),
+    s = n(100527),
+    c = n(600164),
+    u = n(670188),
+    d = n(237583),
+    p = n(63063),
+    h = n(870569),
+    f = n(345243),
+    g = n(115530),
+    m = n(981631),
+    b = n(388032),
+    _ = n(457755);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +28,7 @@ function y(e, t, n) {
         e
     );
 }
-function I(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +39,12 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,58 +62,58 @@ function v(e, t) {
         e
     );
 }
-let C = {
+let y = {
     HOST: 5,
     LISTENER: 4
 };
-class S extends i.PureComponent {
+class I extends i.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
     }
     renderTitle() {
         return (0, r.jsxs)('div', {
-            children: [(0, r.jsx)(_.Z, { children: this.isHost() ? O.NW.formatToPlainString(O.t['6UJ7mp'], { count: this.props.party.length }) : O.NW.string(O.t.RZufbG) }), (0, r.jsx)(b.Z, { children: O.NW.string(O.t['0ZHLIi']) })]
+            children: [(0, r.jsx)(g.Z, { children: this.isHost() ? b.NW.formatToPlainString(b.t['6UJ7mp'], { count: this.props.party.length }) : b.NW.string(b.t.RZufbG) }), (0, r.jsx)(f.Z, { children: b.NW.string(b.t['0ZHLIi']) })]
         });
     }
     renderStopListeningButton() {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, r.jsx)(m.Z, {
-                  tooltipText: O.NW.string(O.t.LeZSp6),
+            : (0, r.jsx)(h.Z, {
+                  tooltipText: b.NW.string(b.t.LeZSp6),
                   onClick: e,
-                  icon: c.Dio
+                  icon: o.Dio
               });
     }
     renderHelpIcon() {
         return this.isHost()
-            ? (0, r.jsx)(m.Z, {
-                  tooltipText: O.NW.string(O.t.U7N2Hh),
+            ? (0, r.jsx)(h.Z, {
+                  tooltipText: b.NW.string(b.t.U7N2Hh),
                   onClick: () => {
-                      window.open(g.Z.getArticleURL(E.BhN.SPOTIFY_CONNECTION), '_blank');
+                      window.open(p.Z.getArticleURL(m.BhN.SPOTIFY_CONNECTION), '_blank');
                   },
-                  icon: c.d3s
+                  icon: o.d3s
               })
             : null;
     }
     render() {
         return (0, r.jsxs)('div', {
-            className: N.listeningAlong,
+            className: _.listeningAlong,
             children: [
                 this.renderTitle(),
-                (0, r.jsx)(d.Z, {
-                    justify: d.Z.Justify.END,
-                    className: N.party,
-                    children: (0, r.jsx)(f.Z, {
+                (0, r.jsx)(c.Z, {
+                    justify: c.Z.Justify.END,
+                    className: _.party,
+                    children: (0, r.jsx)(d.Z, {
                         users: this.props.party,
-                        max: this.isHost() ? C.HOST : C.LISTENER,
+                        max: this.isHost() ? y.HOST : y.LISTENER,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: N.icons,
+                    className: _.icons,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()]
                 })
             ]
@@ -124,45 +121,36 @@ class S extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, 'renderPartyMember', (e, t) => {
+            E(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
-                let { host: l, onUserContextMenu: o } = this.props;
+                let { host: l, onUserContextMenu: c } = this.props;
                 return (
-                    (n = (null == l ? void 0 : l.id) === e.id ? O.NW.string(O.t.N9bqDw) : O.NW.string(O.t.Z2Y4c3)),
+                    (n = (null == l ? void 0 : l.id) === e.id ? b.NW.string(b.t.N9bqDw) : b.NW.string(b.t.Z2Y4c3)),
                     (0, r.jsx)(
-                        c.yRy,
+                        u.Z,
                         {
-                            preload: () => (0, p.Z)(e.id, e.getAvatarURL(void 0, 80)),
-                            renderPopout: (t) => (
-                                s()(null != e, ''),
-                                (0, r.jsx)(
-                                    h.Z,
-                                    v(I({}, t), {
-                                        userId: e.id,
-                                        newAnalyticsLocations: [u.Z.AVATAR]
-                                    })
-                                )
-                            ),
+                            user: e,
+                            newAnalyticsLocations: [s.Z.AVATAR],
                             position: 'top',
                             align: 'center',
                             clickTrap: !0,
                             children: (l) =>
-                                (0, r.jsx)(c.ua7, {
+                                (0, r.jsx)(o.ua7, {
                                     text: n,
                                     children: (n) => {
                                         let { onMouseEnter: r, onMouseLeave: s } = n;
                                         return (0, i.createElement)(
-                                            c.qEK,
-                                            v(I({}, l), {
+                                            o.qEK,
+                                            N(O({}, l), {
                                                 key: e.id,
                                                 src: e.getAvatarURL(void 0, 24),
-                                                size: c.EFr.SIZE_24,
-                                                className: a()(N.avatar, t),
+                                                size: o.EFr.SIZE_24,
+                                                className: a()(_.avatar, t),
                                                 'aria-label': e.username,
                                                 onMouseEnter: r,
                                                 onMouseLeave: s,
-                                                onContextMenu: (t) => void (null != e && (null == o || o(t, e)))
+                                                onContextMenu: (t) => void (null != e && (null == c || c(t, e)))
                                             })
                                         );
                                     }
@@ -172,16 +160,16 @@ class S extends i.PureComponent {
                     )
                 );
             }),
-            y(this, 'renderPartyMemberOverflow', (e, t, n) => {
+            E(this, 'renderPartyMemberOverflow', (e, t, n) => {
                 let { renderOverflowPopout: i } = this.props;
                 return (0, r.jsx)(
-                    c.yRy,
+                    o.yRy,
                     {
                         renderPopout: i,
                         children: (n) =>
-                            (0, r.jsx)(c.ua7, {
-                                text: O.NW.string(O.t.Zf4NPT),
-                                children: (i) => (0, r.jsx)('div', v(I({ className: a()(N.overflow, t) }, i, n), { children: e }))
+                            (0, r.jsx)(o.ua7, {
+                                text: b.NW.string(b.t.Zf4NPT),
+                                children: (i) => (0, r.jsx)('div', N(O({ className: a()(_.overflow, t) }, i, n), { children: e }))
                             })
                     },
                     n
@@ -189,4 +177,4 @@ class S extends i.PureComponent {
             });
     }
 }
-let T = S;
+let v = I;
