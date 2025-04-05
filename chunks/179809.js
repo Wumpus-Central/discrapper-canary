@@ -1,10 +1,10 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
     a = n(999153),
-    s = n(642128),
+    s = n(200100),
     c = n(91192),
     u = n(477690),
     d = n(481060),
@@ -91,7 +91,11 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         selected: l,
                         disableWrapper: !0,
                         children: (0, r.jsx)('div', {
-                            ref: T ? J : void 0,
+                            ref: T
+                                ? (e) => {
+                                      J(e);
+                                  }
+                                : void 0,
                             className: o()(C.folderIcon, { [S.wobble]: !K && Y && !s }),
                             'data-dnd-name': ee,
                             children: K

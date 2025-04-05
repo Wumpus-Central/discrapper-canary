@@ -3,7 +3,7 @@ n.d(t, {
     ZP: () => O,
     Zu: () => j
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -142,7 +142,9 @@ function x(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, r.jsx)('div', {
-        ref: n,
+        ref: (e) => {
+            n(e);
+        },
         children: t
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(566702), n(595690), n(47120);
+n.d(t, { Z: () => A }), n(781311), n(539338), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -199,7 +199,9 @@ function W(e) {
         K = (0, b.e)(g, d);
     if (B)
         return (0, r.jsx)('div', {
-            ref: F,
+            ref: (e) => {
+                F(e);
+            },
             className: a()(P.roleRow, P.roleRowDragging)
         });
     function q() {
