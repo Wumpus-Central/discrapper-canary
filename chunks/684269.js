@@ -1,19 +1,17 @@
-n.d(t, { Z: () => i }), n(230036);
+n.d(t, { Z: () => o });
 var r = n(695346),
-    l = n(875425);
-let a = Object.values(l.FO)
-    .filter((e) => 'number' == typeof e)
-    .sort((e, t) => e - t);
-function i() {
+    a = n(875425);
+let i = [a.FO.MINUTES_30, a.FO.HOURS_1, a.FO.HOURS_4];
+function o() {
     var e;
     let t = r.Ok.getSetting();
-    if (null == t || '' === t.expiresAtMs) return l.FO.TODAY;
+    if (null == t || '' === t.expiresAtMs) return a.FO.TODAY;
     let n = Number(t.expiresAtMs);
-    if (isNaN(n)) return l.FO.TODAY;
-    if (0 === n) return l.FO.DONT_CLEAR;
-    let i = new Date(),
-        o = new Date(n);
-    if (i.getFullYear() !== o.getFullYear() || i.getMonth() !== o.getMonth() || i.getDate() !== o.getDate()) return l.FO.TODAY;
+    if (isNaN(n)) return a.FO.TODAY;
+    if (0 === n) return a.FO.DONT_CLEAR;
+    let o = new Date(),
+        l = new Date(n);
+    if (o.getFullYear() !== l.getFullYear() || o.getMonth() !== l.getMonth() || o.getDate() !== l.getDate()) return a.FO.TODAY;
     let s = Number(n) - Date.now();
-    return null != (e = a.find((e) => s <= e)) ? e : l.FO.TODAY;
+    return null != (e = i.find((e) => s <= e)) ? e : a.FO.TODAY;
 }

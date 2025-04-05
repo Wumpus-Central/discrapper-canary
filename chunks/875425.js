@@ -1,9 +1,8 @@
 n.d(t, {
     Df: () => c,
     FO: () => l,
-    HO: () => f,
-    Q9: () => d,
-    pS: () => _,
+    HO: () => d,
+    pS: () => f,
     s0: () => s,
     wS: () => u
 });
@@ -37,54 +36,11 @@ let s = 128,
             label: () => (0, i.u5)(o.Sk.INVISIBLE)
         }
     ],
-    u = [
-        {
-            value: l.TODAY,
-            label: () => a.NW.string(a.t.GQmLra)
-        },
-        {
-            value: l.HOURS_4,
-            label: () => a.NW.formatToPlainString(a.t.Rea2gY, { hours: 4 })
-        },
-        {
-            value: l.HOURS_1,
-            label: () => a.NW.formatToPlainString(a.t.Rea2gY, { hours: 1 })
-        },
-        {
-            value: l.MINUTES_30,
-            label: () => a.NW.formatToPlainString(a.t.TS3eJS, { minutes: 30 })
-        },
-        {
-            value: l.DONT_CLEAR,
-            label: () => a.NW.string(a.t.bRn8cn)
-        }
-    ],
-    d = [
-        {
-            value: l.TODAY,
-            label: () => a.NW.string(a.t.TOEOaW)
-        },
-        {
-            value: l.HOURS_4,
-            label: () => a.NW.formatToPlainString(a.t.Yizuvb, { hours: 4 })
-        },
-        {
-            value: l.HOURS_1,
-            label: () => a.NW.formatToPlainString(a.t.Yizuvb, { hours: 1 })
-        },
-        {
-            value: l.MINUTES_30,
-            label: () => a.NW.formatToPlainString(a.t['/XUoq6'], { minutes: 30 })
-        },
-        {
-            value: l.DONT_CLEAR,
-            label: () => a.NW.string(a.t.bRn8cn)
-        }
-    ];
-var f = (function (e) {
+    u = [l.TODAY, l.HOURS_4, l.HOURS_1, l.MINUTES_30, l.DONT_CLEAR];
+var d = (function (e) {
     return (e.PLAYING = 'PLAYING'), (e.LISTENING_TO = 'LISTENING_TO'), (e.WATCHING = 'WATCHING'), (e.CURRENT_OBSESSION = 'CURRENT_OBSESSION'), (e.SHOWER_THOUGHT = 'SHOWER_THOUGHT'), (e.TODAY_I_LEARNED = 'TODAY_I_LEARNED'), (e.HOT_TAKE = 'HOT_TAKE'), (e.DAD_JOKE = 'DAD_JOKE'), (e.EMOJI_DAY = 'EMOJI_DAY'), (e.USELESS_TALENT = 'USELESS_TALENT'), (e.VIDEO_GAME_ITEM = 'VIDEO_GAME_ITEM'), (e.READING = 'READING'), (e.SONG_STUCK = 'SONG_STUCK'), (e.MOST_USED_EMOJI = 'MOST_USED_EMOJI'), (e.BEST_FOOD = 'BEST_FOOD'), (e.FICTIONAL_WORLD = 'FICTIONAL_WORLD'), (e.USERNAME_ORIGIN = 'USERNAME_ORIGIN'), (e.THEME_SONG = 'THEME_SONG'), (e.FAVORITE_COLLECTIBLE = 'FAVORITE_COLLECTIBLE'), (e.GAME_MECHANIC = 'GAME_MECHANIC'), (e.NPC_COMPANION = 'NPC_COMPANION'), (e.FOOD_CRAVING = 'FOOD_CRAVING'), (e.MYTHICAL_PET = 'MYTHICAL_PET'), (e.LATEST_HOBBY = 'LATEST_HOBBY'), (e.FAVORITE_ANIME = 'FAVORITE_ANIME'), (e.RANKED_UP = 'RANKED_UP'), (e.CHARACTER_CLASS = 'CHARACTER_CLASS'), (e.HIGH_SCORE = 'HIGH_SCORE'), (e.FINISHED_PLAYING = 'FINISHED_PLAYING'), (e.FINISHED_READING = 'FINISHED_READING'), (e.CANT_WAIT = 'CANT_WAIT'), (e.ADD_STATUS = 'ADD_STATUS'), (e.WHATS_ON_YOUR_MIND = 'WHATS_ON_YOUR_MIND'), e;
 })({});
-let _ = [
+let f = [
     {
         value: 'PLAYING',
         label: () => a.NW.string(a.t.r5TNm5)
