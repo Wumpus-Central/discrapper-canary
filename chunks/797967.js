@@ -1,9 +1,9 @@
-r.r(t), r.d(t, { default: () => j }), r(47120);
+r.r(t), r.d(t, { default: () => j }), r(388685);
 var o = r(200651),
     n = r(192379),
     l = r(120356),
-    s = r.n(l),
-    i = r(866442),
+    i = r.n(l),
+    s = r(866442),
     a = r(481060),
     c = r(981631),
     u = r(388032),
@@ -53,23 +53,45 @@ function h(e, t) {
     );
 }
 let f = (e) => {
-        let { position: t, color: r, disabled: n } = e;
-        return (0, o.jsx)('div', {
-            className: s()('left' === t ? p.colorPickerDropperLeft : p.colorPickerDropperRight, { [p.disabled]: n }),
-            children: (0, o.jsx)('div', {
-                className: p.colorPickerDropperInner,
-                style: { background: (0, i.Rf)(r) },
-                children: (0, o.jsx)(a.ilE, {
-                    size: 'custom',
-                    colorClass: p.colorPickerDropperGradient,
-                    width: 14,
-                    height: 14
+        var { position: t, color: r, disabled: n } = e,
+            l = (function (e, t) {
+                if (null == e) return {};
+                var r,
+                    o,
+                    n = (function (e, t) {
+                        if (null == e) return {};
+                        var r,
+                            o,
+                            n = {},
+                            l = Object.keys(e);
+                        for (o = 0; o < l.length; o++) (r = l[o]), t.indexOf(r) >= 0 || (n[r] = e[r]);
+                        return n;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (o = 0; o < l.length; o++) (r = l[o]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (n[r] = e[r]);
+                }
+                return n;
+            })(e, ['position', 'color', 'disabled']);
+        return (0, o.jsx)(
+            'div',
+            h(b({}, l), {
+                className: i()('left' === t ? p.colorPickerDropperLeft : p.colorPickerDropperRight, { [p.disabled]: n }),
+                children: (0, o.jsx)('div', {
+                    className: p.colorPickerDropperInner,
+                    style: { background: (0, s.Rf)(r) },
+                    children: (0, o.jsx)(a.ilE, {
+                        size: 'custom',
+                        colorClass: p.colorPickerDropperGradient,
+                        width: 14,
+                        height: 14
+                    })
                 })
             })
-        });
+        );
     },
     g = (e) => {
-        let { isStart: t, buttonRef: r, color: n, showPopout: l, position: s, onRequestClose: i, onShowPopout: c, onColorChange: g, disabled: j } = e;
+        let { isStart: t, buttonRef: r, color: n, showPopout: l, position: i, onRequestClose: s, onShowPopout: c, onColorChange: g, disabled: j } = e;
         return (0, o.jsx)(a.tEY, {
             children: (0, o.jsx)(a.yRy, {
                 targetElementRef: r,
@@ -78,96 +100,99 @@ let f = (e) => {
                         onChange: (e) => g(e, t),
                         value: n
                     }),
-                position: s,
+                position: i,
                 shouldShow: l,
-                onRequestClose: i,
+                onRequestClose: s,
                 children: (e) =>
-                    (0, o.jsx)(a.ua7, {
-                        text: u.NW.string(t ? d.Z.apbXbG : d.Z.JaVq1d),
-                        position: 'bottom',
-                        children: (l) =>
-                            (0, o.jsx)('div', {
-                                ref: r,
-                                children: (0, o.jsx)(
-                                    a.P3F,
-                                    h(b({}, l, e), {
-                                        className: p.colorSelectorPopoutContainer,
-                                        onClick: c,
-                                        'data-position': t ? 'left' : 'right',
-                                        'aria-label': u.NW.string(t ? d.Z.apbXbG : d.Z.JaVq1d),
-                                        children: (0, o.jsx)(f, {
-                                            position: t ? 'left' : 'right',
-                                            color: null != n ? n : 0,
-                                            disabled: j
-                                        })
-                                    })
-                                )
+                    (0, o.jsx)('div', {
+                        ref: r,
+                        children: (0, o.jsx)(
+                            a.P3F,
+                            h(b({}, e), {
+                                className: p.colorSelectorPopoutContainer,
+                                onClick: c,
+                                'data-position': t ? 'left' : 'right',
+                                'aria-label': u.NW.string(t ? d.Z.apbXbG : d.Z.JaVq1d),
+                                children: (0, o.jsx)(a.ua7, {
+                                    text: u.NW.string(t ? d.Z.apbXbG : d.Z.JaVq1d),
+                                    position: 'bottom',
+                                    children: (e) =>
+                                        (0, o.jsx)(
+                                            f,
+                                            h(b({}, e), {
+                                                position: t ? 'left' : 'right',
+                                                color: null != n ? n : 0,
+                                                disabled: j
+                                            })
+                                        )
+                                })
                             })
+                        )
                     })
             })
         });
     };
 function j(e) {
-    let { defaultColor: t, colors: r, value: l, onChange: s, disabled: d = !1, customPickerPosition: j = 'bottom', isGradient: C = !1 } = e,
-        P = n.useCallback((e) => 0 !== e && e !== t && !r.some((t) => t === e), [r, t]),
-        x = n.useRef(null),
-        k = n.useRef(null),
-        w = n.useRef(null),
-        [m, y] = n.useState(() => (P(l) ? l : null)),
-        [O, S] = n.useState({
-            start: P(l) ? l : void 0,
+    let { defaultColor: t, colors: r, value: l, onChange: i, disabled: d = !1, customPickerPosition: j = 'bottom', isGradient: P = !1 } = e,
+        x = n.useCallback((e) => 0 !== e && e !== t && !r.some((t) => t === e), [r, t]),
+        C = n.useRef(null),
+        O = n.useRef(null),
+        y = n.useRef(null),
+        [k, w] = n.useState(() => (x(l) ? l : null)),
+        [m, v] = n.useState({
+            start: x(l) ? l : void 0,
             end: c.p6O
         }),
-        [v, R] = n.useState({
+        [S, R] = n.useState({
             showStart: !1,
             showEnd: !1
         });
     n.useEffect(() => {
-        y(P(l) ? l : null),
-            S({
-                start: P(l) ? l : void 0,
+        w(x(l) ? l : null),
+            v({
+                start: x(l) ? l : void 0,
                 end: c.p6O
             });
-    }, [l, P]);
+    }, [l, x]);
     let _ = n.useCallback(
             (e) => {
-                null == s || s(e), y(null);
+                null == i || i(e), w(null);
             },
-            [s, y]
+            [i, w]
         ),
         D = n.useCallback(
             (e) => {
-                null == s || s(e), y(e);
+                null == i || i(e), w(e);
             },
-            [s, y]
+            [i, w]
         ),
         E = n.useCallback(
             (e, t) => {
-                t ? S(h(b({}, O), { start: e })) : S(h(b({}, O), { end: e }));
+                t ? v(h(b({}, m), { start: e })) : v(h(b({}, m), { end: e }));
             },
-            [O]
+            [m]
         ),
         N = n.useCallback((e, t) => {
             R((r) => h(b({}, r), { [e]: t }));
         }, []),
         B = n.useCallback(() => {
             var e, t, r, n, l;
-            let s = { background: 'linear-gradient(90deg, '.concat((0, i.Rf)(null != (e = O.start) ? e : 0), ' 0%, ').concat((0, i.Rf)(O.end), ' 100%)') },
+            let i = { background: 'linear-gradient(90deg, '.concat((0, s.Rf)(null != (e = m.start) ? e : 0), ' 0%, ').concat((0, s.Rf)(m.end), ' 100%)') },
                 a = (0, o.jsxs)('div', {
                     className: p.gradientButtonContainer,
                     children: [
                         (0, o.jsx)('div', {
                             className: p.gradientSwatch,
-                            style: s
+                            style: i
                         }),
                         (0, o.jsx)(f, {
                             position: 'left',
-                            color: null != (t = O.start) ? t : 0,
+                            color: null != (t = m.start) ? t : 0,
                             disabled: d
                         }),
                         (0, o.jsx)(f, {
                             position: 'right',
-                            color: null != (r = O.end) ? r : 0,
+                            color: null != (r = m.end) ? r : 0,
                             disabled: d
                         })
                     ]
@@ -179,13 +204,13 @@ function j(e) {
                       children: [
                           (0, o.jsx)('div', {
                               className: p.gradientSwatch,
-                              style: s
+                              style: i
                           }),
                           (0, o.jsx)(g, {
                               isStart: !0,
-                              buttonRef: k,
-                              color: null != (n = O.start) ? n : 0,
-                              showPopout: v.showStart,
+                              buttonRef: O,
+                              color: null != (n = m.start) ? n : 0,
+                              showPopout: S.showStart,
                               position: j,
                               onRequestClose: () => N('showStart', !1),
                               onShowPopout: () => N('showStart', !0),
@@ -194,9 +219,9 @@ function j(e) {
                           }),
                           (0, o.jsx)(g, {
                               isStart: !1,
-                              buttonRef: w,
-                              color: null != (l = O.end) ? l : 0,
-                              showPopout: v.showEnd,
+                              buttonRef: y,
+                              color: null != (l = m.end) ? l : 0,
+                              showPopout: S.showEnd,
                               position: j,
                               onRequestClose: () => N('showEnd', !1),
                               onShowPopout: () => N('showEnd', !0),
@@ -205,14 +230,14 @@ function j(e) {
                           })
                       ]
                   });
-        }, [j, d, O, v, E, N]),
+        }, [j, d, m, S, E, N]),
         G = n.useCallback(
             () =>
                 (0, o.jsx)(a.Z$W, {
                     onChange: D,
-                    value: m
+                    value: k
                 }),
-            [D, m]
+            [D, k]
         ),
         W = n.useCallback(
             (e) => {
@@ -220,15 +245,15 @@ function j(e) {
                 return d
                     ? t
                     : (0, o.jsx)(a.yRy, {
-                          targetElementRef: x,
+                          targetElementRef: C,
                           renderPopout: G,
                           position: j,
                           children: (e) =>
                               (0, o.jsx)(a.ua7, {
-                                  targetElementRef: x,
+                                  targetElementRef: C,
                                   text: u.NW.string(u.t['FHBa//']),
                                   position: 'bottom',
-                                  children: (r) => (0, o.jsx)('div', h(b({ ref: x }, r, e), { children: t }))
+                                  children: (r) => (0, o.jsx)('div', h(b({ ref: C }, r, e), { children: t }))
                               })
                       });
             },
@@ -253,8 +278,8 @@ function j(e) {
             renderDefaultButton: Z,
             renderCustomButton: W,
             renderGradientCustomButton: B,
-            isGradient: C,
-            customColor: m,
+            isGradient: P,
+            customColor: k,
             onChange: _
         })
     );
