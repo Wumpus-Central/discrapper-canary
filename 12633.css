@@ -40464,6 +40464,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     padding: var(--spacing-12)
 }
 
+.hoverable__76c22 {
+    display: inline
+}
+
 .roleDot__57082 {
     margin-right: 2px;
     margin-left: -2px
