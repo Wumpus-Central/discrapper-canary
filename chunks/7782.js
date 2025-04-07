@@ -24,7 +24,7 @@ var r = n(200651),
     E = n(228168),
     N = n(388032),
     I = n(882875);
-let P = (e) => {
+let S = (e) => {
         let { userId: t, channelId: n } = e,
             l = (0, o.e7)([g.Z], () => g.Z.getMutualGuilds(t), [t]),
             s = i.useMemo(
@@ -101,7 +101,7 @@ let P = (e) => {
                   ]
               });
     },
-    S = (e) => {
+    P = (e) => {
         var t;
         let { relationshipType: n, userId: i, showingBanner: l } = e,
             o = null == (t = y.default.getUser(i)) ? void 0 : t.bot,
@@ -273,7 +273,7 @@ let P = (e) => {
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(S, {
+                          (0, r.jsx)(P, {
                               relationshipType: c,
                               userId: t,
                               showingBanner: i
@@ -291,7 +291,7 @@ let P = (e) => {
             children: [
                 (0, r.jsx)('div', {
                     className: I.inline,
-                    children: (0, r.jsx)(P, {
+                    children: (0, r.jsx)(S, {
                         userId: t,
                         channelId: n.id
                     })

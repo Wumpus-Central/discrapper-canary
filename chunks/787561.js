@@ -1,5 +1,5 @@
 n.d(t, {
-    X: () => Z,
+    X: () => D,
     Z: () => k
 }),
     n(953529),
@@ -76,7 +76,7 @@ function w(e, t) {
     );
 }
 let R = 'dismissedCommunityFeaturesUpsell',
-    Z = () => {
+    D = () => {
         let e,
             {
                 guild: t,
@@ -111,7 +111,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             })
         );
     },
-    D = (e) => {
+    Z = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: s } = e,
             [a, u] = i.useState(!0 === c.K.get(R)),
             g = (0, l.e7)([b.Z], () => {
@@ -343,7 +343,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             tag: d.RB0.H1,
             children: [
                 u
-                    ? (0, r.jsx)(D, {
+                    ? (0, r.jsx)(Z, {
                           discoveryEnabled: e.features.has(I.oNc.DISCOVERABLE),
                           onboardingEnabled: e.features.has(I.oNc.GUILD_ONBOARDING),
                           guild: e

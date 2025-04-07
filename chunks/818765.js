@@ -8,18 +8,18 @@ var r = n(570140),
     c = n(944486),
     u = n(111583),
     d = n(351780),
-    p = n(843693),
-    _ = n(981631);
-let f = (0, o.uk)('poggermode_applause', l.Z.getSoundpack()),
-    h = !1,
+    _ = n(843693),
+    p = n(981631);
+let h = (0, o.uk)('poggermode_applause', l.Z.getSoundpack()),
+    f = !1,
     m = !1,
     g = [],
     b = null,
     E = () => {
-        h || (f.loop(), (h = !0));
+        f || (h.loop(), (f = !0));
     },
     C = () => {
-        f.stop(), (h = !1);
+        h.stop(), (f = !1);
     },
     O = () => {
         let e = d.Z.isEnabled(),
@@ -42,14 +42,14 @@ let f = (0, o.uk)('poggermode_applause', l.Z.getSoundpack()),
     };
 class S extends i.Z {
     _initialize() {
-        p.ZP.addChangeListener(this.startAudio), r.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.subscribe('TYPING_STOP', this.stopAudio), r.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.subscribe('CHANNEL_SELECT', this.stopAudio), r.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
+        _.ZP.addChangeListener(this.startAudio), r.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.subscribe('TYPING_STOP', this.stopAudio), r.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.subscribe('CHANNEL_SELECT', this.stopAudio), r.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
     }
     _terminate() {
-        p.ZP.removeChangeListener(this.startAudio), r.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.unsubscribe('TYPING_STOP', this.stopAudio), r.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), r.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(b);
+        _.ZP.removeChangeListener(this.startAudio), r.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.unsubscribe('TYPING_STOP', this.stopAudio), r.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), r.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(b);
     }
     setVolume(e) {
         let { state: t } = e;
-        t === _.hes.RTC_CONNECTED ? (f.volume = 0.1) : (f.volume = 1);
+        t === p.hes.RTC_CONNECTED ? (h.volume = 0.1) : (h.volume = 1);
     }
     handleTypingStop(e) {
         let { userId: t } = e;
@@ -65,7 +65,7 @@ class S extends i.Z {
         if (null == t) return;
         let n = s.default.getId(),
             r = u.Z.isTyping(t, n),
-            i = p.ZP.getUserCombo(n, t),
+            i = _.ZP.getUserCombo(n, t),
             o = null != (e = null == i ? void 0 : i.multiplier) ? e : 1;
         r && o >= 7 ? E() : C();
     }

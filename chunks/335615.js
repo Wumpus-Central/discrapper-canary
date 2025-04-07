@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(611064),
     N = n(677432),
     I = n(178762),
-    P = n(868671),
-    S = n(82295),
+    S = n(868671),
+    P = n(82295),
     Z = n(91218),
     T = n(313201),
     A = n(540059),
@@ -266,7 +266,7 @@ let ea = i.memo((e) => {
                   className: J.membersGroup,
                   children: (0, r.jsx)('div', { className: J.memberGroupsPlaceholder })
               })
-            : (0, r.jsxs)(S.Z, {
+            : (0, r.jsxs)(P.Z, {
                   className: J.membersGroup,
                   children: [
                       (0, r.jsx)(m.nn4, {
@@ -479,7 +479,7 @@ class eu extends i.Component {
                 }, 50)
             ),
             $(this, 'getContentFeedGroup', () => {
-                let e = this.props.groups[P.T];
+                let e = this.props.groups[S.T];
                 if ((0, E.R)(e)) return e;
             }),
             $(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
@@ -490,7 +490,7 @@ class eu extends i.Component {
                     let { rows: n } = this.props,
                         r = e.index;
                     return function (e, i) {
-                        if (e === P.T) {
+                        if (e === S.T) {
                             let e = n[r + 1 + i];
                             return (0, I.iZ)(e);
                         }
@@ -525,7 +525,7 @@ class eu extends i.Component {
                 let t = null == (e = this._list) ? void 0 : e.getItems(),
                     { rowsVisible: n } = this.getDimensions();
                 if (void 0 === n || 0 === n || null == t) return;
-                this.hasContentFeed() && (t = t.filter((e) => e.section !== P.T));
+                this.hasContentFeed() && (t = t.filter((e) => e.section !== S.T));
                 let r = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
@@ -552,7 +552,7 @@ function ed(e) {
             groups: p,
             version: f,
             updateMaxRowSeen: g
-        } = (0, P.H)({
+        } = (0, S.H)({
             memberStoreProps: s,
             channelId: t.id,
             guildId: t.guild_id

@@ -29,7 +29,7 @@ function _(e) {
         [I, E] = p.PK(n),
         [S, T] = p.d9(n, 1024),
         { imageCTA: P, imageAriaLabel: w, setFilename: R } = (0, h.Z)(_),
-        Z = i.useMemo(() => {
+        D = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -42,7 +42,7 @@ function _(e) {
                 ? e
                 : [];
         }, [t]);
-    function D(e, t) {
+    function Z(e, t) {
         null != t && R(t.name), T(e);
     }
     let A = (0, m.mY)(),
@@ -79,7 +79,7 @@ function _(e) {
                             titleId: W,
                             disabled: A,
                             children: (0, r.jsx)(a.q4e, {
-                                options: Z,
+                                options: D,
                                 className: j.formInput,
                                 isDisabled: A || null == t,
                                 placeholder: x.NW.string(x.t['88XZDg']),
@@ -125,7 +125,7 @@ function _(e) {
                                 children: x.NW.string(x.t['0iUofH'])
                             }),
                             (0, r.jsx)(o.Z, {
-                                onChange: D,
+                                onChange: Z,
                                 buttonCTA: P,
                                 'aria-label': w,
                                 disabled: A,
@@ -142,7 +142,7 @@ function _(e) {
                         hideSize: !0,
                         className: N.iconUploader,
                         imageClassName: N.tierSymbolUploaderInner,
-                        onChange: D,
+                        onChange: Z,
                         'aria-label': w,
                         disabled: A
                     })

@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(819640),
     N = n(375954),
     I = n(496675),
-    P = n(885110),
-    S = n(585483),
+    S = n(885110),
+    P = n(585483),
     Z = n(358085),
     T = n(127654),
     A = n(316595),
@@ -84,7 +84,7 @@ let H = i.memo(function (e) {
     let { className: H, channel: F, draftType: G, editorTextContent: V, setValue: z, canOnlyUseTextCommands: Y } = e,
         q = (0, p.bp)(),
         K = i.useRef(null),
-        X = (0, a.e7)([P.Z], () => P.Z.getActivities()),
+        X = (0, a.e7)([S.Z], () => S.Z.getActivities()),
         Q = (0, a.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
         J = (0, a.e7)([m.Z], () => m.Z.getLastClipsSession()),
         $ = (0, a.Wu)([m.Z], () => m.Z.getNewClipIds()),
@@ -107,7 +107,7 @@ let H = i.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                S.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                P.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
         },
         eh = (0, a.e7)([N.Z], () => N.Z.hasCurrentUserSentMessageSinceAppStart());
     function ef() {
@@ -126,9 +126,9 @@ let H = i.memo(function (e) {
             return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            S.S.subscribe(k.CkL.UPLOAD_FILE, e),
+            P.S.subscribe(k.CkL.UPLOAD_FILE, e),
             () => {
-                S.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
+                P.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
             }
         );
     });

@@ -51,11 +51,11 @@ function N(e) {
 function I(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: l } = e,
         I = (0, b.ZP)(t.id),
-        P = (0, u.ZP)(),
-        S = (0, s.e7)([h.Z], () => h.Z.isBlocked(t.id)),
-        { analyticsLocations: Z } = (0, p.ZP)(S ? d.Z.BLOCKED_PROFILE_PANEL : d.Z.IGNORED_PROFILE_PANEL),
+        S = (0, u.ZP)(),
+        P = (0, s.e7)([h.Z], () => h.Z.isBlocked(t.id)),
+        { analyticsLocations: Z } = (0, p.ZP)(P ? d.Z.BLOCKED_PROFILE_PANEL : d.Z.IGNORED_PROFILE_PANEL),
         T = (0, m.ZB)({
-            layout: S ? 'BLOCKED_PROFILE_PANEL' : 'IGNORED_PROFILE_PANEL',
+            layout: P ? 'BLOCKED_PROFILE_PANEL' : 'IGNORED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
         }),
@@ -69,7 +69,7 @@ function I(e) {
                 user: t,
                 displayProfile: I,
                 profileType: v.y0.PANEL,
-                themeOverride: P,
+                themeOverride: S,
                 children: (0, r.jsx)(a.u2, {
                     children: (0, r.jsxs)('div', {
                         className: O.container,
@@ -93,7 +93,7 @@ function I(e) {
                                             }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: j.NW.format(S ? j.t['8F+WNz'] : j.t['/cZp5u'], { username: f.ZP.getName(n.guild_id, n.id, t) })
+                                                children: j.NW.format(P ? j.t['8F+WNz'] : j.t['/cZp5u'], { username: f.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),
@@ -101,13 +101,13 @@ function I(e) {
                                         align: 'center',
                                         children: [
                                             (0, r.jsx)(x.Z, {
-                                                isBlocked: S,
+                                                isBlocked: P,
                                                 onClick: () => {
                                                     null == l || l(),
                                                         (0, g.pQ)(
                                                             N(
                                                                 {
-                                                                    action: S ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                                    action: P ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                     analyticsLocations: Z
                                                                 },
                                                                 T

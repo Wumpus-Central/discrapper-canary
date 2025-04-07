@@ -36,14 +36,14 @@ function h(e) {
               requestCooldownDuration: E,
               creatorRevenuePolicyUrl: l.Z.getArticleURL(g.BhN.CREATOR_POLICY)
           }));
-    let Z = n && b && !1 === f,
-        D = n && !1 === h,
+    let D = n && b && !1 === f,
+        Z = n && !1 === h,
         A = (0, m.f)(),
         k = I && w && b ? p.NW.format(p.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
-            Z && O();
-        }, [O, Z]),
+            D && O();
+        }, [O, D]),
         {
             resubmittingEnableRequest: j,
             resubmissionError: x,
@@ -59,8 +59,8 @@ function h(e) {
             hasPreviousApplicationRejection: I,
             requestRejectedNoticeText: t,
             reapplyNoticeText: k,
-            showAcceptTermsFlow: D,
-            wasRejectedInV1: D && (S || I),
+            showAcceptTermsFlow: Z,
+            wasRejectedInV1: Z && (S || I),
             requirementsFinePrintText: R,
             acceptTermsCheckboxText: A
         }

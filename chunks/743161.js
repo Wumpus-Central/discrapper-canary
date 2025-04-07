@@ -3,8 +3,8 @@ var r = n(200651),
     l = n(192379),
     o = n(442837),
     i = n(481060),
-    c = n(541099),
-    a = n(827498),
+    a = n(541099),
+    c = n(827498),
     u = n(421591),
     s = n(496977),
     p = n(314734),
@@ -14,7 +14,7 @@ let O = l.memo(function (e) {
     var t,
         n,
         { context: O } = e,
-        b = (function (e, t) {
+        m = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -33,9 +33,9 @@ let O = l.memo(function (e) {
             }
             return l;
         })(e, ['context']);
-    let m = (0, o.e7)([c.Z], () => c.Z.shouldShowModal());
+    let b = (0, o.e7)([a.Z], () => a.Z.shouldShowModal());
     l.useEffect(() => {
-        m || (0, i.Fvk)(p.e9);
+        b || (0, i.Fvk)(p.e9);
     });
     let y = (0, s.Z)();
     return (0, r.jsx)('span', {
@@ -72,13 +72,13 @@ let O = l.memo(function (e) {
                     'aria-label': f.NW.string(f.t.shUONj),
                     size: i.CgR.DYNAMIC
                 },
-                b
+                m
             )),
             (n = n =
                 {
                     children: (0, r.jsx)(u.Z, {
                         context: O,
-                        entrypoint: a._b.VOICE,
+                        entrypoint: c._b.VOICE,
                         initHistory: y
                     })
                 }),

@@ -28,17 +28,17 @@ function O(e) {
         P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : O) ? n : _.lds,
         w = null != I,
         [R] = (0, g.RD)(P),
-        { rulesByTriggerType: Z } = (0, g.pH)(P),
-        D = {
+        { rulesByTriggerType: D } = (0, g.pH)(P),
+        Z = {
             [p.vh.MEMBERS]: v.NW.string(v.t.sx4E5u),
             [p.vh.CONTENT]: v.NW.string(v.t.fphZb2)
         },
         A = i.useMemo(
             () =>
-                Object.values(null != Z ? Z : {})
+                Object.values(null != D ? D : {})
                     .flat()
                     .filter(d.lm),
-            [Z]
+            [D]
         ),
         k = {
             isInEditMode: w,
@@ -89,7 +89,7 @@ function O(e) {
                         {
                             guildId: P,
                             triggerType: e,
-                            rules: null != (t = Z[e]) ? t : [],
+                            rules: null != (t = D[e]) ? t : [],
                             initWithEdit: T === _.KsC.AUTOMOD_MENTION_SPAM && e === N.fX.MENTION_SPAM
                         },
                         e
@@ -157,14 +157,14 @@ function O(e) {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);
                       let s =
-                          null != D[t]
+                          null != Z[t]
                               ? (0, r.jsx)(l.hjN, {
                                     tag: 'h3',
                                     className: C.categoryHeader,
                                     children: (0, r.jsx)(l.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
-                                        children: D[t]
+                                        children: Z[t]
                                     })
                                 })
                               : null;

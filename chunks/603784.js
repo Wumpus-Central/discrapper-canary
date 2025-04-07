@@ -89,7 +89,7 @@ class T extends i.PureComponent {
 }
 let P = i.forwardRef((e, t) => {
     let n,
-        { log: i, className: s, expanded: o, guildId: h, guild: N, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: Z, onUserContextMenu: D, theme: A } = e,
+        { log: i, className: s, expanded: o, guildId: h, guild: N, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: D, onUserContextMenu: Z, theme: A } = e,
         k = (function () {
             let { changes: e } = i;
             return (i.actionType !== O.vB8.DELETE || i.action === O.rsA.MEMBER_BAN_ADD || i.action === O.rsA.MEMBER_KICK || i.action === O.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, C.xO)(i, e));
@@ -197,7 +197,7 @@ let P = i.forwardRef((e, t) => {
                                                                               T,
                                                                               {
                                                                                   user: i.user,
-                                                                                  onContextMenu: D
+                                                                                  onContextMenu: Z
                                                                               },
                                                                               t
                                                                           );
@@ -214,14 +214,14 @@ let P = i.forwardRef((e, t) => {
                                                                                 T,
                                                                                 {
                                                                                     user: i.target,
-                                                                                    onContextMenu: Z
+                                                                                    onContextMenu: D
                                                                                 },
                                                                                 t
                                                                             )
                                                                           : (0, r.jsx)(
                                                                                 'span',
                                                                                 {
-                                                                                    onContextMenu: Z,
+                                                                                    onContextMenu: D,
                                                                                     children: e
                                                                                 },
                                                                                 t

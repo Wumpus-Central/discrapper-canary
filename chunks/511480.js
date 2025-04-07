@@ -35,8 +35,8 @@ var r = n(200651),
     P = n(354051),
     w = n(347604),
     R = n(203377),
-    Z = n(929834),
-    D = n(981631),
+    D = n(929834),
+    Z = n(981631),
     A = n(388032),
     k = n(131027);
 function W(e, t, n) {
@@ -129,7 +129,7 @@ class U extends i.PureComponent {
     renderDiscoverableSection() {
         let { guild: e, isGuildAdmin: t } = this.props;
         if (null == e) return;
-        let n = e.hasFeature(D.oNc.DISCOVERABLE);
+        let n = e.hasFeature(Z.oNc.DISCOVERABLE);
         return (0, r.jsxs)(a.hjN, {
             className: k.twoColumnFormSection,
             children: [
@@ -423,7 +423,7 @@ class U extends i.PureComponent {
                 let { guild: e } = this.props;
                 if (null == e) return;
                 let t = new Set(e.features);
-                e.hasFeature(D.oNc.DISCOVERABLE) ? t.delete(D.oNc.DISCOVERABLE) : t.add(D.oNc.DISCOVERABLE), N.Z.updateGuild({ features: t });
+                e.hasFeature(Z.oNc.DISCOVERABLE) ? t.delete(Z.oNc.DISCOVERABLE) : t.add(Z.oNc.DISCOVERABLE), N.Z.updateGuild({ features: t });
             }),
             W(this, 'handleEnableDiscovery', async () => {
                 let e = await (0, a.ZDy)(
@@ -473,8 +473,8 @@ class U extends i.PureComponent {
 }
 let B = s.ZP.connectStores([_.Z, h.Z, y.ZP, p.ZP, b.default, f.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: r } = _.Z.getProps(),
-        i = h.Z.can(D.Plq.MANAGE_GUILD, e),
-        s = h.Z.can(D.Plq.ADMINISTRATOR, e),
+        i = h.Z.can(Z.Plq.MANAGE_GUILD, e),
+        s = h.Z.can(Z.Plq.ADMINISTRATOR, e),
         a = null != e ? y.ZP.getDiscoveryChecklist(e.id) : null,
         l = null != e ? p.ZP.getChannels(e.id) : null,
         o = [];
@@ -482,7 +482,7 @@ let B = s.ZP.connectStores([_.Z, h.Z, y.ZP, p.ZP, b.default, f.Z], () => {
         null != l &&
             l[p.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === D.d4z.GUILD_TEXT &&
+                t.type === Z.d4z.GUILD_TEXT &&
                     o.push({
                         value: t.id,
                         label: (0, c.F6)(t, b.default, f.Z, !0)
@@ -497,7 +497,7 @@ let B = s.ZP.connectStores([_.Z, h.Z, y.ZP, p.ZP, b.default, f.Z], () => {
             canManageGuild: i,
             isGuildAdmin: s,
             guildMetadata: r,
-            localeOptions: (0, Z.jb)()
+            localeOptions: (0, D.jb)()
         }
     );
 })(U);

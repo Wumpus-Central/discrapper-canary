@@ -6,10 +6,10 @@ var l,
     c = n(913527),
     u = n.n(c),
     d = n(442837),
-    p = n(759174),
-    _ = n(570140),
-    f = n(333023),
-    h = n(355298),
+    _ = n(759174),
+    p = n(570140),
+    h = n(333023),
+    f = n(355298),
     m = n(333984),
     g = n(131704),
     b = n(592125),
@@ -18,7 +18,7 @@ var l,
     O = n(9156),
     y = n(594174),
     v = n(709054);
-let N = new p.h(
+let N = new _.h(
     (e) => {
         let { isRequest: t, isFavorite: n } = e;
         return t ? [] : [n ? 'FAVORITE' : 'DEFAULT'];
@@ -47,7 +47,7 @@ function S(e) {
         channelId: e.id,
         lastMessageId: t,
         isFavorite: !1,
-        isRequest: h.Z.isMessageRequest(e.id) || m.Z.isSpam(e.id)
+        isRequest: f.Z.isMessageRequest(e.id) || m.Z.isSpam(e.id)
     };
 }
 function x() {
@@ -85,7 +85,7 @@ let T =
     });
 class L extends (l = d.ZP.Store) {
     initialize() {
-        this.waitFor(b.Z, E.Z, y.default, h.Z, O.ZP), this.syncWith([O.ZP, h.Z], x);
+        this.waitFor(b.Z, E.Z, y.default, f.Z, O.ZP), this.syncWith([O.ZP, f.Z], x);
     }
     getPrivateChannelIds() {
         return T();
@@ -113,7 +113,7 @@ class L extends (l = d.ZP.Store) {
               writable: !0
           })
         : (L[s] = a);
-let P = new L(_.Z, {
+let P = new L(p.Z, {
     CONNECTION_OPEN: x,
     CONNECTION_OPEN_SUPPLEMENTAL: x,
     OVERLAY_INITIALIZE: x,
@@ -127,7 +127,7 @@ let P = new L(_.Z, {
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (!(0, g.hv)(t.type) || t.id === f.V) return !1;
+        if (!(0, g.hv)(t.type) || t.id === h.V) return !1;
         N.set(t.id, S(t));
     },
     CHANNEL_DELETE: function (e) {

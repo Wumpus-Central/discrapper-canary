@@ -68,7 +68,7 @@ let O = i.memo(function (e) {
             E = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
             N = i.useRef(!1),
             I = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
-            P = i.useCallback(() => {
+            S = i.useCallback(() => {
                 (null == I ? void 0 : I.isBlockedEdit) ? (0, p.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
             }, [u, I]);
         return (
@@ -105,7 +105,7 @@ let O = i.memo(function (e) {
                         notice: null != (n = null == I ? void 0 : I.errorMessage) ? n : y.NW.string(y.t.zQ69pq),
                         message: u,
                         compact: a,
-                        onDismiss: P
+                        onDismiss: S
                     })
                 ]
             })

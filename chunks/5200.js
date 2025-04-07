@@ -38,10 +38,10 @@ function y(e) {
             commandOrigin: x
         }),
         [N, I] = l.useState(!1),
-        P = l.useCallback(() => {
+        S = l.useCallback(() => {
             I(!0);
         }, [I]),
-        S = l.useCallback(() => {
+        P = l.useCallback(() => {
             I(!1);
         }, [I]),
         Z = l.useMemo(
@@ -91,10 +91,10 @@ function y(e) {
         color: 'transparent',
         look: c.zxk.Looks.BLANK,
         size: c.zxk.Sizes.NONE,
-        onFocus: P,
-        onBlur: S,
-        onMouseEnter: P,
-        onMouseLeave: S,
+        onFocus: S,
+        onBlur: P,
+        onMouseEnter: S,
+        onMouseLeave: P,
         innerClassName: g.activityItemButtonInnerClass,
         children: (0, i.jsx)(c.AMe, {
             config: _,

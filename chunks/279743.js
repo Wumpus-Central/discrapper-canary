@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -8,32 +8,32 @@ var r = n(200651),
     c = n(481060),
     u = n(442837),
     d = n(607070),
-    p = n(663389),
-    _ = n(834166);
-function f(e) {
+    _ = n(663389),
+    p = n(834166);
+function h(e) {
     let { children: t, className: n, onFlashEnd: o, animationDelay: u = 500 } = e,
-        p = c.TVs.colors.TEXT_LINK,
-        f = (0, c.dQu)(p).spring({ opacity: 0 }),
-        h = (0, c.dQu)(p).spring({ opacity: 0.1 }),
-        m = (0, c.dQu)(p).spring({ opacity: 0 }),
-        g = (0, c.dQu)(p).spring({ opacity: 1 }),
+        _ = c.TVs.colors.TEXT_LINK,
+        h = (0, c.dQu)(_).spring({ opacity: 0 }),
+        f = (0, c.dQu)(_).spring({ opacity: 0.1 }),
+        m = (0, c.dQu)(_).spring({ opacity: 0 }),
+        g = (0, c.dQu)(_).spring({ opacity: 1 }),
         [b, E] = (0, c.q_F)(
             () => ({
                 from: {
-                    backgroundColor: f,
-                    borderColor: f
+                    backgroundColor: h,
+                    borderColor: h
                 }
             }),
             'animate-never'
         ),
         C = {
-            startColor: f,
+            startColor: h,
             handleRest: (e) => {
                 e.finished && (null == o || o());
             },
             endColor: m,
             targetBorderColor: g,
-            targetColor: h,
+            targetColor: f,
             animationDelay: u
         },
         O = i.useRef(C);
@@ -89,20 +89,20 @@ function f(e) {
         }, [E]),
         (0, r.jsx)(s.animated.div, {
             style: b,
-            className: l()(_.settingsItemHighlight, n),
+            className: l()(p.settingsItemHighlight, n),
             children: t
         })
     );
 }
-function h(e) {
+function f(e) {
     let { children: t, scrollPosition: n, animationDelay: o } = e,
-        l = (0, u.e7)([p.Z], () => p.Z.getScrollPosition() === n),
+        l = (0, u.e7)([_.Z], () => _.Z.getScrollPosition() === n),
         [s, a] = i.useState(!1);
     return (i.useEffect(() => {
         l && a(!0);
     }, [l]),
     s)
-        ? (0, r.jsx)(f, {
+        ? (0, r.jsx)(h, {
               animationDelay: o,
               onFlashEnd: () => a(!1),
               children: t

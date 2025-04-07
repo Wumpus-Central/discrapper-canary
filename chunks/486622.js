@@ -20,11 +20,11 @@ function b(e) {
         [x, v] = r.useState(!1),
         [j, O] = r.useState(!1),
         [E, N] = r.useState(!1),
-        [I, P] = r.useState(!1),
-        S = C || x || j,
+        [I, S] = r.useState(!1),
+        P = C || x || j,
         Z = r.useCallback(
             async (e) => {
-                if (!S) {
+                if (!P) {
                     y(!0);
                     try {
                         await (0, p.e4)(e), N(!0), null == n || n();
@@ -36,14 +36,14 @@ function b(e) {
                     }
                 }
             },
-            [S, n, b]
+            [P, n, b]
         ),
         T = r.useCallback(
             async (e) => {
-                if (!S) {
+                if (!P) {
                     v(!0);
                     try {
-                        await (0, p.gN)(e), P(!0), null == i || i();
+                        await (0, p.gN)(e), S(!0), null == i || i();
                     } catch (t) {
                         let e = new o.Hx(t);
                         null == b || b(e);
@@ -52,16 +52,16 @@ function b(e) {
                     }
                 }
             },
-            [S, i, b]
+            [P, i, b]
         ),
         A = r.useCallback(
             async (e) => {
-                if (S) return;
+                if (P) return;
                 v(!0);
                 let t = l()(e, m.t$);
                 try {
                     for (let e of t) await (0, p.r_)(e);
-                    P(!0), null == i || i();
+                    S(!0), null == i || i();
                 } catch (t) {
                     let e = new o.Hx(t);
                     null == b || b(e);
@@ -69,11 +69,11 @@ function b(e) {
                     v(!1);
                 }
             },
-            [S, i, b]
+            [P, i, b]
         ),
         w = r.useCallback(
             async (e) => {
-                if (S) return;
+                if (P) return;
                 if (null != t && null == s.Z.getMutualGuilds(t.id)) {
                     O(!0);
                     try {
@@ -112,7 +112,7 @@ function b(e) {
                     }
                 });
             },
-            [Z, S, t]
+            [Z, P, t]
         ),
         R = r.useCallback(
             (e, t, n) => {

@@ -1,7 +1,7 @@
 n.d(t, {
-    Ho: () => _,
-    ZP: () => h,
-    y9: () => f
+    Ho: () => p,
+    ZP: () => f,
+    y9: () => h
 });
 var r = n(200651),
     i = n(192379),
@@ -12,14 +12,14 @@ var r = n(200651),
     c = n(561308),
     u = n(297781),
     d = n(443487),
-    p = n(522314);
-let _ = [u.An],
-    f = [o._.WEEK],
-    h = i.memo((e) => {
+    _ = n(522314);
+let p = [u.An],
+    h = [o._.WEEK],
+    f = i.memo((e) => {
         let { entry: t, channel: n, selected: i } = e,
             { largeImage: o } = (0, s.rv)({ entry: t }),
-            h = (0, c.Nq)(t);
-        return null != h && (0, l.Hi)(h, f)
+            f = (0, c.Nq)(t);
+        return null != f && (0, l.Hi)(f, h)
             ? (0, r.jsxs)(d.Zb, {
                   selected: i,
                   children: [
@@ -33,14 +33,14 @@ let _ = [u.An],
                               (0, r.jsx)(d.ll, { children: t.extra.artist.name }),
                               (0, r.jsx)(u.Gk, {
                                   location: u.Gt.CARD,
-                                  children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
+                                  children: p.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                               })
                           ]
                       }),
                       (0, r.jsx)(a.f, {
                           src: null == o ? void 0 : o.src,
                           size: 48,
-                          className: p.thumbnail
+                          className: _.thumbnail
                       })
                   ]
               })

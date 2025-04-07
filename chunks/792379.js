@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(530),
     N = n(679332),
     I = n(544989),
-    P = n(171368),
-    S = n(228168),
+    S = n(171368),
+    P = n(228168),
     Z = n(388032),
     T = n(204340),
     A = n(969627);
@@ -68,7 +68,7 @@ function R(e) {
         W = i.useRef(null),
         U = (0, a.Z)(W),
         B = (e) => {
-            (0, P.openUserProfileModal)(w({ sourceAnalyticsLocations: L }, D, e));
+            (0, S.openUserProfileModal)(w({ sourceAnalyticsLocations: L }, D, e));
         };
     return (0, r.jsx)(u.Gt, {
         value: L,
@@ -78,13 +78,13 @@ function R(e) {
                 ref: W,
                 user: t,
                 displayProfile: k,
-                profileType: S.y0.PANEL,
+                profileType: P.y0.PANEL,
                 themeOverride: M,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
                             (0, r.jsx)(I.Z, {
-                                profileType: S.y0.PANEL,
+                                profileType: P.y0.PANEL,
                                 children: (0, r.jsx)(N.Z, { user: t })
                             }),
                             (0, r.jsxs)('header', {
@@ -93,14 +93,14 @@ function R(e) {
                                     (0, r.jsx)(y.Z, {
                                         user: t,
                                         displayProfile: k,
-                                        profileType: S.y0.PANEL,
+                                        profileType: P.y0.PANEL,
                                         animateOnHover: !U
                                     }),
                                     (0, r.jsx)(_.Z, {
                                         user: t,
                                         displayProfile: k,
                                         channelId: n.id,
-                                        profileType: S.y0.PANEL,
+                                        profileType: P.y0.PANEL,
                                         onOpenProfile: R ? void 0 : B
                                     }),
                                     t.isClyde() && (0, r.jsx)(p.Z, { className: T.headerTag })
@@ -111,13 +111,13 @@ function R(e) {
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         user: t,
-                                        profileType: S.y0.PANEL,
+                                        profileType: P.y0.PANEL,
                                         nickname: f.ZP.getName(null, n.id, t),
                                         pronouns: null == k ? void 0 : k.pronouns,
                                         onOpenProfile: R ? void 0 : B,
                                         tags: (0, r.jsx)(C.Z, {
                                             displayProfile: k,
-                                            profileType: S.y0.PANEL
+                                            profileType: P.y0.PANEL
                                         })
                                     }),
                                     (0, r.jsxs)(O.Z.Overlay, {

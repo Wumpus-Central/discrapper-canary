@@ -29,7 +29,7 @@ function v(e) {
             guildId: j
         } = e,
         [O, E] = r.useState(!1),
-        { requestId: N, entries: I, impressionCappedEntryIds: P, hasLeaderboardEntry: S } = (0, m.Z)(v),
+        { requestId: N, entries: I, impressionCappedEntryIds: S, hasLeaderboardEntry: P } = (0, m.Z)(v),
         Z = (0, i.e7)([p.Z], () => p.Z.hidden),
         T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
         A = (0, i.e7)([a.Z], () => a.Z.getChannel(v)),
@@ -39,7 +39,7 @@ function v(e) {
         [M, L, D, W] = r.useMemo(() => {
             let e;
             if (null == I || 0 === I.length || null == N || !k) return [t, n, x];
-            let r = O ? I.length : S ? 4 : 3,
+            let r = O ? I.length : P ? 4 : 3,
                 i = I.slice(0, r);
             e = Z
                 ? [{ type: o.so.HIDDEN_CONTENT_INVENTORY }]
@@ -73,11 +73,11 @@ function v(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, I, O, t, j, N, n, x, Z, k, S]),
+        }, [v, I, O, t, j, N, n, x, Z, k, P]),
         U = r.useRef(0),
         B = r.useRef(I),
         H = r.useRef(),
-        F = r.useRef({ impressionCappedEntryIds: P }),
+        F = r.useRef({ impressionCappedEntryIds: S }),
         G = r.useCallback(
             (e) => {
                 var t;
@@ -92,8 +92,8 @@ function v(e) {
             B.current = I;
         }, [I]),
         r.useEffect(() => {
-            F.current = { impressionCappedEntryIds: P };
-        }, [P]),
+            F.current = { impressionCappedEntryIds: S };
+        }, [S]),
         r.useEffect(
             () => (
                 (U.current = 0),

@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(388032),
     N = n(413384),
     I = n(359165),
-    P = n(334732);
-function S(e) {
+    S = n(334732);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -137,7 +137,7 @@ function A(e) {
                             })(e, ['onClick']);
                         return (0, r.jsx)(
                             c.P3F,
-                            Z(S({}, n), {
+                            Z(P({}, n), {
                                 className: N.clickableTile,
                                 onClick: () => {
                                     null == t || t(), p();
@@ -192,7 +192,7 @@ function w(e) {
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        Z(S({}, n), {
+                        Z(P({}, n), {
                             guild: l,
                             channel: t,
                             source: O.t4x.ACTIVITY_ENTRY_POINT_TILE
@@ -222,7 +222,7 @@ function w(e) {
                     children: [
                         s > 400 && !p
                             ? (0, r.jsx)('img', {
-                                  src: P,
+                                  src: S,
                                   className: N.art,
                                   alt: E.NW.string(E.t['3Y9xdH'])
                               })
@@ -294,7 +294,7 @@ function R(e) {
             }
         }).slice(0, 3),
         { analyticsLocations: I } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
-        S = i.useMemo(
+        P = i.useMemo(
             () => ({
                 channel: t,
                 type: 'channel'
@@ -309,7 +309,7 @@ function R(e) {
                 s > 480 && !f
                     ? (0, r.jsx)('img', {
                           className: N.art,
-                          src: P,
+                          src: S,
                           alt: E.NW.string(E.t['3Y9xdH'])
                       })
                     : null,
@@ -326,7 +326,7 @@ function R(e) {
                         (0, r.jsx)(
                             h.Y,
                             {
-                                context: S,
+                                context: P,
                                 activityItem: e,
                                 aspectRatio: h.Y.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: N.activitySuggestion,

@@ -84,14 +84,14 @@ function E(e) {
         I = (0, h._k)(f),
         { editStateIds: E, addNewEditStateId: S, addNewEditStateFromTemplate: T, removeEditStateId: P } = x.B7(f, t, { includeSoftDeleted: !0 }),
         [w, R] = i.useState({}),
-        Z = i.useMemo(() => {
+        D = i.useMemo(() => {
             let e = E.map((e) => {
                 var t;
                 return null != (t = w[e]) ? t : e;
             });
             return (0, l.uniq)(e);
         }, [E, w]),
-        D = (e, t) => {
+        Z = (e, t) => {
             R((n) => O(C({}, n), { [e]: t }));
         },
         A = (0, p.ss)(t),
@@ -121,8 +121,8 @@ function E(e) {
                       )
                     : S();
         }, [t, T, S, s, k, A]),
-        L = x.Lo(Z),
-        M = i.useCallback(() => Z.forEach(x.GM), [Z]),
+        L = x.Lo(D),
+        M = i.useCallback(() => D.forEach(x.GM), [D]),
         G = (0, b.mY)(),
         U = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
@@ -140,7 +140,7 @@ function E(e) {
                 (0, r.jsxs)('div', {
                     className: v.groupListings,
                     children: [
-                        Z.map((e) =>
+                        D.map((e) =>
                             (0, r.jsx)(
                                 j.Z,
                                 {
@@ -150,7 +150,7 @@ function E(e) {
                                     priceTiers: s,
                                     groupListingId: f,
                                     onDeleteEditState: () => P(e),
-                                    onBeforeDispatchNewListing: (t) => D(t.id, e),
+                                    onBeforeDispatchNewListing: (t) => Z(t.id, e),
                                     onAfterDispatchNewListing: () => P(e)
                                 },
                                 e

@@ -23,22 +23,22 @@ let x = function (e) {
         E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
         N = (0, l.e7)([p.Z], () => null != x && p.Z.can(C.Plq.ATTACH_FILES, x), [x]),
         I = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(x.id)),
-        P = x.getGuildId(),
-        S = v === s.d.FirstThreadMessage,
+        S = x.getGuildId(),
+        P = v === s.d.FirstThreadMessage,
         Z = (0, l.e7)([f.default], () => {
             var e;
             return !0 == !(null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
-        T = (0, l.e7)([c.Z], () => c.Z.didAgree(P)) && !Z,
-        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != P && (!x.isNSFW() || T) && N && u.Z.canChatInGuild(P))), [N, T, x, P, E]),
-        w = S ? (C.TPd.GUILD_THREADS_ONLY.has(x.type) ? y.NW.string(y.t.RBBLhI) : y.NW.string(y.t.gUx4en)) : j ? y.NW.format(y.t.dYP2FR, { destination: (0, a.F6)(x, f.default, h.Z, !0) }) : y.NW.string(y.t.h76ulJ);
+        T = (0, l.e7)([c.Z], () => c.Z.didAgree(S)) && !Z,
+        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != S && (!x.isNSFW() || T) && N && u.Z.canChatInGuild(S))), [N, T, x, S, E]),
+        w = P ? (C.TPd.GUILD_THREADS_ONLY.has(x.type) ? y.NW.string(y.t.RBBLhI) : y.NW.string(y.t.gUx4en)) : j ? y.NW.format(y.t.dYP2FR, { destination: (0, a.F6)(x, f.default, h.Z, !0) }) : y.NW.string(y.t.h76ulJ);
     return I || !A
         ? null
         : (0, r.jsx)(b.Z, {
               className: t,
               style: n,
               title: w,
-              description: S ? y.NW.string(y.t.lpgkzs) : y.NW.string(y.t.usQh4O),
+              description: P ? y.NW.string(y.t.lpgkzs) : y.NW.string(y.t.usQh4O),
               icons: _.J6,
               onDrop: (e) => {
                   if (I) return !1;
@@ -53,7 +53,7 @@ let x = function (e) {
               onDragClear: () => O(!0),
               onDragOver: (e) => {
                   if (I) return !1;
-                  S || e.shiftKey !== j || O(!e.shiftKey);
+                  P || e.shiftKey !== j || O(!e.shiftKey);
               }
           });
 };

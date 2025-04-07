@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(272510),
     N = n(4517),
     I = n(171368),
-    P = n(348540),
-    S = n(179142),
+    S = n(348540),
+    P = n(179142),
     Z = n(228168),
     T = n(388032),
     A = n(204340);
@@ -137,7 +137,7 @@ function R(e) {
                                         t.isClyde() && (0, r.jsx)(p.Z, { className: A.headerTag })
                                     ]
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(S.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: M,
@@ -145,7 +145,7 @@ function R(e) {
                                     isHovering: null == H.interactionType && B,
                                     onOpenProfile: k ? void 0 : G
                                 }),
-                                (0, r.jsx)(S.Z, { user: t })
+                                (0, r.jsx)(P.Z, { user: t })
                             ]
                         }),
                         !k &&

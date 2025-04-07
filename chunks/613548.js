@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(954551),
     N = n(221241),
     I = n(44136),
-    P = n(651183),
-    S = n(618158),
+    S = n(651183),
+    P = n(618158),
     Z = n(390322),
     T = n(616286),
     A = n(961048),
@@ -158,7 +158,7 @@ function $(e) {
         ep = !el && ed && (n.isGuildVoice() || n.isGroupDM()),
         { enabled: eh, inInbox: ef } = O.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         em = (0, b.Q3)('ChannelCallHeaderToolbar'),
-        { preventIdle: eg, allowIdle: eb } = (0, S.Y)('popup'),
+        { preventIdle: eg, allowIdle: eb } = (0, P.Y)('popup'),
         e_ = [];
     if (ea && !ed && !ee) {
         let e = (null == er ? void 0 : er.type) === z.fO.STREAM ? (0, _.my)(er.id) : void 0,
@@ -204,7 +204,7 @@ function $(e) {
         (null == er ? void 0 : er.type) === z.fO.STREAM &&
             (e_.push(
                 (0, r.jsx)(
-                    P.Z,
+                    S.Z,
                     {
                         className: K.button,
                         participant: er

@@ -56,7 +56,7 @@ function R(e) {
     }
     return e;
 }
-function Z(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function Z(e, t) {
         e
     );
 }
-function D(e) {
+function Z(e) {
     var t;
     let { transitionState: n, guild: s, user: a, ban: l, hideDiscriminator: c, onClose: m } = e,
         [g, b] = i.useState(!1),
@@ -89,7 +89,7 @@ function D(e) {
                     m(),
                     _.default.track(
                         S.rMx.GUILD_BAN_REMOVED,
-                        Z(R({}, (0, p.hH)(s.id)), {
+                        D(R({}, (0, p.hH)(s.id)), {
                             target_user_id: a.id,
                             reason: l.reason,
                             location: v
@@ -206,8 +206,8 @@ class A extends i.PureComponent {
                 let { guild: e, user: t, hideDiscriminator: n, ban: i } = this.props;
                 (0, o.h7j)((s) =>
                     (0, r.jsx)(
-                        D,
-                        Z(R({}, s), {
+                        Z,
+                        D(R({}, s), {
                             guild: e,
                             user: t,
                             ban: i,
@@ -219,7 +219,7 @@ class A extends i.PureComponent {
             w(this, 'handleContextMenu', (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('23835').then(n.bind(n, 768079));
-                    return (t) => (0, r.jsx)(e, Z(R({}, t), { user: this.props.user }));
+                    return (t) => (0, r.jsx)(e, D(R({}, t), { user: this.props.user }));
                 });
             });
     }
@@ -387,15 +387,15 @@ function L() {
             [I]
         ),
         w = i.useMemo(() => E(b, u, j), [b, E, u, j]),
-        D = null != b,
-        A = w.length % 1000 == 0 && w.length > 0 && D,
+        Z = null != b,
+        A = w.length % 1000 == 0 && w.length > 0 && Z,
         L = 0 === w.length,
         [M, G] = i.useState({
             currentPage: 1,
             pageSize: 100
         });
     i.useEffect(() => {
-        f && 1 !== M.currentPage && G((e) => Z(R({}, e), { currentPage: 1 }));
+        f && 1 !== M.currentPage && G((e) => D(R({}, e), { currentPage: 1 }));
     }, [f, M.currentPage]);
     let U = i.useCallback(
             (e) => {
@@ -407,7 +407,7 @@ function L() {
         F = i.useCallback(
             (e) => {
                 var t, n, r;
-                null == (t = O.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && A && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || A) && G((t) => Z(R({}, t), { currentPage: e }));
+                null == (t = O.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && A && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || A) && G((t) => D(R({}, t), { currentPage: e }));
             },
             [M.pageSize, w, A, B, U, p]
         ),

@@ -25,8 +25,8 @@ var i = n(120356),
     E = n(809244),
     N = n(618158),
     I = n(358221),
-    P = n(362721),
-    S = n(887012),
+    S = n(362721),
+    P = n(887012),
     Z = n(613548),
     T = n(221888),
     A = n(339340),
@@ -119,7 +119,7 @@ function H(e) {
 function F(e) {
     let t,
         { focusedApplication: n, focusedParticipant: i, channel: l } = e,
-        o = (0, S.Z)(l, !0),
+        o = (0, P.Z)(l, !0),
         s = (0, g.qY)(l.id),
         c = null != s ? (0, b.DK)(s) : null,
         d = null != s;
@@ -190,9 +190,9 @@ function G(e) {
         [E] = (0, d.Z)((null == g ? void 0 : g.type) === w.fO.ACTIVITY ? [g.applicationId] : []),
         N = M.NW.string(M.t.BVZqJi);
     t.isDM() ? (N = M.NW.string(M.t.jN2DfX)) : t.isGroupDM() && (N = M.NW.string(M.t['e5y+go']));
-    let S = (0, o.e7)([p.Z], () => p.Z.getChannelStatus(t)),
-        T = t.isGuildVoice() && c && null != S && S.length > 0,
-        B = (0, P.ZP)(t),
+    let P = (0, o.e7)([p.Z], () => p.Z.getChannelStatus(t)),
+        T = t.isGuildVoice() && c && null != P && P.length > 0,
+        B = (0, S.ZP)(t),
         H = T
             ? (0, r.jsx)(a.ua7, {
                   text: M.NW.string(M.t.Mgpxi4),
@@ -209,7 +209,7 @@ function G(e) {
                                   (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       className: l()(L.channelStatus, D.markup, { [L.hoverable]: B }),
-                                      children: v.Z.parseVoiceChannelStatus(S, !0, { channelId: t.id })
+                                      children: v.Z.parseVoiceChannelStatus(P, !0, { channelId: t.id })
                                   }),
                                   B &&
                                       (0, r.jsx)(a.vdY, {

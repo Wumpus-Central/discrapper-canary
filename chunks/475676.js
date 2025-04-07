@@ -8,10 +8,10 @@ var r = n(200651),
     c = n(443487),
     u = n(314897),
     d = n(594174),
-    p = n(626135),
-    _ = n(5192),
-    f = n(873128),
-    h = n(246627),
+    _ = n(626135),
+    p = n(5192),
+    h = n(873128),
+    f = n(246627),
     m = n(709737),
     g = n(69589),
     b = n(531501),
@@ -48,32 +48,32 @@ function N(e) {
     let N,
         { selected: x, channel: I, entry: T } = e,
         L = I.guild_id,
-        P = (0, f.Z)({
+        P = (0, h.Z)({
             guildId: L,
             leaderboardId: T.extra.leaderboard_id,
             intervalOffset: 0
         }),
-        { rankChanges: j } = (0, h.Z)({
+        { rankChanges: A } = (0, f.Z)({
             guildId: L,
             leaderboardId: T.extra.leaderboard_id,
             intervalStart: null != (C = null == P ? void 0 : P.interval_start) ? C : ''
         }),
-        A = (0, o.e7)([u.default], () => u.default.getId()),
+        j = (0, o.e7)([u.default], () => u.default.getId()),
         [R, w] = i.useMemo(() => {
-            let e = j.find((e) => e.userId === A),
-                t = j[0],
+            let e = A.find((e) => e.userId === j),
+                t = A[0],
                 n = null != e ? e : t,
                 r = null == P ? void 0 : P.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, r];
-        }, [P, j, A]),
+        }, [P, A, j]),
         k = (0, o.e7)([d.default], () => d.default.getUser(null == R ? void 0 : R.userId)),
-        M = _.ZP.getName(L, void 0, k);
+        M = p.ZP.getName(L, void 0, k);
     !(function (e) {
         let { leaderboard: t, guildId: n } = e,
             r = null == t ? void 0 : t.leaderboard_id;
         i.useEffect(() => {
             null != r &&
-                p.default.track(E.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
+                _.default.track(E.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
                     leaderboard_id: r,
                     guild_id: n
                 });
@@ -94,7 +94,7 @@ function N(e) {
         { currentRank: V } = R;
     return (
         (N =
-            R.userId === A
+            R.userId === j
                 ? O.NW.formatToPlainString(O.t['eU+JxM'], { rank: V })
                 : O.NW.formatToPlainString(O.t['8BLSQ0'], {
                       rank: V,

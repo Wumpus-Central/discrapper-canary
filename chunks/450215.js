@@ -25,8 +25,8 @@ function O(e) {
     let { guildId: s, initialEditStateId: l, allSubscriptionListings: O, priceTiers: y, onDeleteEditState: I, groupListingId: E, onBeforeDispatchNewListing: S, onAfterDispatchNewListing: T } = e,
         [P, w] = i.useState(l),
         R = (0, c.e7)([h.Z], () => h.Z.getSubscriptionListing(P)),
-        Z = null == R,
-        [D, A] = i.useState(Z),
+        D = null == R,
+        [Z, A] = i.useState(D),
         k = null == R ? void 0 : R.subscription_plans[0],
         W = null != (t = null == R ? void 0 : R.published) && t,
         L = null != (n = null == R ? void 0 : R.archived) && n,
@@ -47,7 +47,7 @@ function O(e) {
         className: C.container,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(C.header, { [C.headerExpanded]: D }),
+                className: a()(C.header, { [C.headerExpanded]: Z }),
                 children: [
                     (0, r.jsx)('div', {
                         className: C.headerImageContainer,
@@ -103,14 +103,14 @@ function O(e) {
                             })
                         ]
                     }),
-                    D
+                    Z
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(d.zxk, {
                                       look: d.zxk.Looks.BLANK,
                                       className: C.cancel,
                                       onClick: () => {
-                                          x.GM(P), Z ? null == I || I() : A(!1);
+                                          x.GM(P), D ? null == I || I() : A(!1);
                                       },
                                       children: v.NW.string(v.t['ETE/oK'])
                                   }),
@@ -143,7 +143,7 @@ function O(e) {
                           })
                 ]
             }),
-            D &&
+            Z &&
                 (0, r.jsx)(b.I, {
                     editStateId: P,
                     guildId: s,

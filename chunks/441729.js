@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     o = n(570140);
@@ -73,7 +73,7 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 l(d, 'displayName', 'TTSStore'), l(d, 'persistKey', 'TTSStore'), l(d, 'migrations', []);
-let p = new d(
+let _ = new d(
     o.Z,
     __OVERLAY__
         ? {}

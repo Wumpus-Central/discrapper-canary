@@ -16,11 +16,11 @@ var i = n(200651),
 function C(e) {
     let { showImage: t = !0, padding: n = !1 } = e,
         C = (0, o.ZP)(),
-        _ = (0, l.ap)(C) ? b : h,
-        x = r.useCallback(() => {
+        x = (0, l.ap)(C) ? b : h,
+        _ = r.useCallback(() => {
             (0, c.Z)(s.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: v } = (0, d.Z)({
+        { trackSectionImpressionRef: y } = (0, d.Z)({
             sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
@@ -28,13 +28,13 @@ function C(e) {
     return (0, i.jsx)('div', {
         className: n ? f.containerPadding : void 0,
         children: (0, i.jsxs)('div', {
-            ref: (e) => (v.current = e),
+            ref: (e) => (y.current = e),
             className: f.container,
             children: [
                 t &&
                     (0, i.jsx)('img', {
                         className: f.image,
-                        src: _,
+                        src: x,
                         alt: '',
                         'aria-hidden': !0
                     }),
@@ -59,7 +59,7 @@ function C(e) {
                         sectionTitle: m.NW.string(m.t['kw8/ER']),
                         sectionBody: m.NW.string(m.t.GZoV1N)
                     }),
-                    onClick: x,
+                    onClick: _,
                     children: m.NW.string(m.t.Ye51oa)
                 })
             ]

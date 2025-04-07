@@ -1,9 +1,9 @@
 n.d(t, {
-    JS: () => h,
-    Qv: () => Z,
-    ZP: () => w,
-    fD: () => _,
-    w1: () => A
+    JS: () => g,
+    Qv: () => A,
+    ZP: () => Z,
+    fD: () => h,
+    w1: () => w
 }),
     n(997841),
     n(704826),
@@ -16,90 +16,90 @@ var i,
     a = n(630388),
     u = n(358085),
     d = n(317381),
-    p = n(638880),
-    s = n(122613),
+    s = n(638880),
+    p = n(122613),
     f = n(619915),
     v = n(16609),
-    b = n(761122),
-    y = n(361213),
-    O = n(716600),
-    E = n(952561),
+    E = n(761122),
+    b = n(361213),
+    y = n(716600),
+    O = n(952561),
     m = n(778569),
-    P = n(701488),
-    g = n(981631),
-    h = (((i = {})[(i.START = 0)] = 'START'), (i[(i.JOIN = 1)] = 'JOIN'), (i[(i.LEAVE = 2)] = 'LEAVE'), i);
-function w(e) {
-    let { activityItem: t, context: n, locationObject: i, onActivityItemSelected: r, embeddedActivitiesManager: o, assetNames: c = ['embedded_cover'], backgroundResolution: a = 250, launchingComponentId: d, commandOrigin: p, source: s } = e,
-        { application: v, activity: O } = t,
-        E = O.client_platform_config[(0, b.Z)((0, u.getOS)())],
-        P = null != E.label_until && Date.now() < Date.parse(E.label_until),
-        g = (0, m.Z)({
+    _ = n(701488),
+    P = n(981631),
+    g = (((i = {})[(i.START = 0)] = 'START'), (i[(i.JOIN = 1)] = 'JOIN'), (i[(i.LEAVE = 2)] = 'LEAVE'), i);
+function Z(e) {
+    let { activityItem: t, context: n, locationObject: i, onActivityItemSelected: r, embeddedActivitiesManager: o, assetNames: c = ['embedded_cover'], backgroundResolution: a = 250, launchingComponentId: d, commandOrigin: s, source: p } = e,
+        { application: v, activity: y } = t,
+        O = y.client_platform_config[(0, E.Z)((0, u.getOS)())],
+        _ = null != O.label_until && Date.now() < Date.parse(O.label_until),
+        P = (0, m.Z)({
             applicationId: v.id,
             size: a,
             names: c
         }),
-        h = null != O.activity_preview_video_asset_id ? (0, y.Z)(v.id, O.activity_preview_video_asset_id) : null,
-        w = (0, f.ZP)('channel' === n.type ? n.channel : void 0).find((e) => {
+        g = null != y.activity_preview_video_asset_id ? (0, b.Z)(v.id, y.activity_preview_video_asset_id) : null,
+        Z = (0, f.ZP)('channel' === n.type ? n.channel : void 0).find((e) => {
             let { embeddedActivity: t } = e;
             return v.id === t.applicationId;
         }),
-        I = Z({
+        I = A({
             context: n,
             applicationId: v.id
         }),
-        j = A({
+        j = w({
             applicationId: t.application.id,
             context: n,
             locationObject: i,
             embeddedActivitiesManager: o,
             onActivityItemSelectedProp: r,
             launchingComponentId: d,
-            commandOrigin: p,
-            source: s
+            commandOrigin: s,
+            source: p
         }),
-        S = _(v, t.activity);
+        S = h(v, t.activity);
     return {
-        imageBackground: g,
-        videoUrl: h,
-        joinableEmbeddedApp: w,
+        imageBackground: P,
+        videoUrl: g,
+        joinableEmbeddedApp: Z,
         activityAction: I,
         onActivityItemSelected: j,
-        labelType: P ? E.label_type : l.ww.NONE,
+        labelType: _ ? O.label_type : l.ww.NONE,
         staffReleasePhase: S
     };
 }
-function _(e, t) {
+function h(e, t) {
     var n;
     let i = null != (n = e.flags) ? n : 0;
-    if (!((0, a.yE)(i, g.udG.EMBEDDED_RELEASED) || (0, a.yE)(i, g.udG.EMBEDDED_FIRST_PARTY))) return;
-    let r = t.client_platform_config[(0, b.Z)((0, u.getOS)())].release_phase;
-    return P.eB.includes(r) ? r.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
+    if (!((0, a.yE)(i, P.udG.EMBEDDED_RELEASED) || (0, a.yE)(i, P.udG.EMBEDDED_FIRST_PARTY))) return;
+    let r = t.client_platform_config[(0, E.Z)((0, u.getOS)())].release_phase;
+    return _.eB.includes(r) ? r.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function Z(e) {
+function A(e) {
     let { context: t, applicationId: n, fetchesApplication: i = !0 } = e,
         r = 0,
         l = 'channel' === t.type ? t.channel : void 0,
-        o = (0, O.Z)(),
-        a = (0, E.Z)({ fetchesApplication: i }),
+        o = (0, y.Z)(),
+        a = (0, O.Z)({ fetchesApplication: i }),
         u = (0, c.q)(n, i),
         d = (0, f.ZP)(l).find((e) => {
             let { embeddedActivity: t } = e;
             return null != u && u.id === t.applicationId;
         });
     if (null == u) return r;
-    let p = (0, v.pY)(null == o ? void 0 : o.location);
-    return null != l && p === l.id && (null == a ? void 0 : a.id) === u.id ? (r = 2) : null != d && (r = 1), r;
+    let s = (0, v.pY)(null == o ? void 0 : o.location);
+    return null != l && s === l.id && (null == a ? void 0 : a.id) === u.id ? (r = 2) : null != d && (r = 1), r;
 }
-function A(e) {
-    let { applicationId: t, botUserIdForAppDM: n, context: i, locationObject: l, embeddedActivitiesManager: c, onActivityItemSelectedProp: a, launchingComponentId: u, commandOrigin: f, sectionName: v, source: b, fetchesApplication: y = !0, customId: E, referrerId: m, onConfirmActivityLaunchChecksAlertOpen: P } = e,
-        g = Z({
+function w(e) {
+    let { applicationId: t, botUserIdForAppDM: n, context: i, locationObject: l, embeddedActivitiesManager: c, onActivityItemSelectedProp: a, launchingComponentId: u, commandOrigin: f, sectionName: v, source: E, fetchesApplication: b = !0, customId: O, referrerId: m, onConfirmActivityLaunchChecksAlertOpen: _ } = e,
+        P = A({
             context: i,
             applicationId: t,
-            fetchesApplication: y
+            fetchesApplication: b
         }),
-        { analyticsLocations: h } = (0, o.ZP)(),
-        w = (0, O.Z)();
-    switch (g) {
+        { analyticsLocations: g } = (0, o.ZP)(),
+        Z = (0, y.Z)();
+    switch (P) {
         case 0:
             return async () => {
                 let e = 'channel' === i.type ? i.channel.id : void 0;
@@ -109,32 +109,32 @@ function A(e) {
                     } catch (e) {
                         return;
                     }
-                await (0, s.Z)({
+                await (0, p.Z)({
                     targetApplicationId: t,
                     locationObject: l,
                     channelId: e,
-                    analyticsLocations: h,
+                    analyticsLocations: g,
                     componentId: u,
                     commandOrigin: f,
                     sectionName: v,
-                    source: b,
-                    customId: E,
+                    source: E,
+                    customId: O,
                     referrerId: m,
-                    onConfirmActivityLaunchChecksAlertOpen: P
+                    onConfirmActivityLaunchChecksAlertOpen: _
                 }).then((e) => e && (null == a ? void 0 : a({ applicationId: t })));
             };
         case 1:
             return async () => {
                 d.ZP.isLaunchingActivity() ||
-                    (await (0, p.Z)({
+                    (await (0, s.Z)({
                         applicationId: t,
                         activityChannelId: 'channel' === i.type ? i.channel.id : void 0,
                         locationObject: l,
-                        analyticsLocations: h,
+                        analyticsLocations: g,
                         componentId: u,
                         sectionName: v,
-                        source: b,
-                        customId: E,
+                        source: E,
+                        customId: O,
                         referrerId: m,
                         instanceId: void 0,
                         isContextlessActivity: !1
@@ -143,9 +143,9 @@ function A(e) {
         case 2:
             return () => {
                 d.ZP.isLaunchingActivity() ||
-                    (null != w &&
+                    (null != Z &&
                         c.leaveActivity({
-                            location: w.location,
+                            location: Z.location,
                             applicationId: t
                         }),
                     null == a || a({ applicationId: t }));

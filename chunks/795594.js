@@ -424,7 +424,7 @@ let ef = (e) => {
                 [X.Z],
                 () => {
                     var e, t, n, r;
-                    return null == (r = X.Z.settings.applications) || null == (n = r.appSettings) || null == (t = n[O]) || null == (e = t.appDmSettings) ? void 0 : e.dmDisabled;
+                    return null == (r = X.Z.settings.applications) || null == (n = r.appSettings) || null == (t = n[O]) || null == (e = t.appDmSettings) ? void 0 : e.allowMobilePush;
                 },
                 [O]
             ),
@@ -613,7 +613,7 @@ let ef = (e) => {
                 Q.hW.updateAsync(
                     'applications',
                     (t) => {
-                        O in t.appSettings ? (null == t.appSettings[O].appDmSettings ? (t.appSettings[O].appDmSettings = h.c$.create({ dmDisabled: !e })) : (t.appSettings[O].appDmSettings.dmDisabled = !e)) : (t.appSettings[O] = h.dp.create({ appDmSettings: h.c$.create({ dmDisabled: !e }) }));
+                        O in t.appSettings ? (null == t.appSettings[O].appDmSettings ? (t.appSettings[O].appDmSettings = h.c$.create({ allowMobilePush: !e })) : (t.appSettings[O].appDmSettings.allowMobilePush = !e)) : (t.appSettings[O] = h.dp.create({ appDmSettings: h.c$.create({ allowMobilePush: !e }) }));
                     },
                     Q.fy.INFREQUENT_USER_ACTION
                 );

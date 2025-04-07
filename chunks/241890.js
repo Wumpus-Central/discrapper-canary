@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var o = n(200651);
 n(192379);
 var l = n(481060),
@@ -10,7 +10,7 @@ let u = null;
 function d(e) {
     null != r && e ? r() : null != i && i(), (r = null), (i = null);
 }
-let p = {
+let _ = {
     init() {
         s.Z.subscribe('PREMIUM_REQUIRED_MODAL_OPEN', (e) => {
             let t;

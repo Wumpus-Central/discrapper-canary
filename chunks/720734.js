@@ -382,7 +382,7 @@ class e5 extends i.PureComponent {
         if (null == t) return null;
         if (i === c.z.GUILD_TAG_AVAILABLE_COACHMARK) {
             var a;
-            return (0, r.jsx)(q.Z, {
+            return (0, r.jsx)(q.ZP, {
                 guildId: null != (a = this.props.selectedGuildId) ? a : null,
                 onDismiss: s,
                 children: () => this.renderAvatarWithPopout({ focusSectionProps: e })

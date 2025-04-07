@@ -37,7 +37,7 @@ function v(e) {
                 }),
                 E();
         },
-        P = () => {
+        S = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -118,7 +118,7 @@ function v(e) {
                       text: x.NW.string(x.t.tC1pvL),
                       color: o.zxk.Colors.BRAND,
                       onclick: () => {
-                          P(),
+                          S(),
                               (0, f.qc)({
                                   channelId: t,
                                   warningId: v,

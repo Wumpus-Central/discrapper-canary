@@ -78,17 +78,17 @@ function f(e) {
             mainContainerRef: j
         }),
         {
-            state: { value: R, tags: Z, selections: D, isSelecting: A }
+            state: { value: R, tags: D, selections: Z, isSelecting: A }
         } = _,
-        k = (0, o.Z)(Z),
+        k = (0, o.Z)(D),
         [W, L] = i.useState(!1),
         M = i.useCallback(() => {
             var e;
             L(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
-        k !== Z && s(Z);
-    }, [s, k, Z]),
+        k !== D && s(D);
+    }, [s, k, D]),
         i.useEffect(() => {
             W || c(R);
         }, [c, R, W]);
@@ -103,7 +103,7 @@ function f(e) {
             (e) => (t) => {
                 if (t) {
                     var n;
-                    let t = D.includes(Z[e]);
+                    let t = Z.includes(D[e]);
                     null == (n = x.current) || n.focus(),
                         t
                             ? T(e)
@@ -118,7 +118,7 @@ function f(e) {
                               }));
                 } else T(e, !0), L(!0);
             },
-            [S, T, D, Z]
+            [S, T, Z, D]
         );
     return (0, r.jsxs)('div', {
         className: a()(g.mainContainer, f),
@@ -130,7 +130,7 @@ function f(e) {
                 ref: N,
                 onClick: M,
                 children: [
-                    Z.map((e, t) =>
+                    D.map((e, t) =>
                         (0, r.jsx)(
                             d.Z,
                             {
@@ -139,10 +139,10 @@ function f(e) {
                                 onBlur: G,
                                 onFocus: U(t),
                                 onRemove: () => I(t),
-                                isSelected: D.includes(e),
+                                isSelected: Z.includes(e),
                                 isSelecting: A,
                                 error: u[e],
-                                forceShowErrorTooltip: !W && t === Z.length - 1
+                                forceShowErrorTooltip: !W && t === D.length - 1
                             },
                             t
                         )
@@ -154,7 +154,7 @@ function f(e) {
                         onKeyDownCapture: O,
                         onPaste: v,
                         onBlur: w,
-                        placeholder: 0 === Z.length ? p : void 0,
+                        placeholder: 0 === D.length ? p : void 0,
                         value: R
                     })
                 ]
@@ -164,7 +164,7 @@ function f(e) {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     className: g.maxTags,
-                    children: [null != (t = null == Z ? void 0 : Z.length) ? t : 0, '/', b]
+                    children: [null != (t = null == D ? void 0 : D.length) ? t : 0, '/', b]
                 })
         ]
     });

@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(700785),
     N = n(51144),
     I = n(396769),
-    P = n(967128),
-    S = n(318374),
+    S = n(967128),
+    P = n(318374),
     Z = n(981631),
     T = n(388032),
     A = n(279078);
@@ -90,15 +90,15 @@ function w(e) {
         ),
         W = j.Z.can(Z.Plq.MANAGE_CHANNELS, t) || j.Z.can(Z.Plq.MANAGE_ROLES, t),
         U = i.useCallback(() => l(!1), []);
-    return (0, r.jsxs)(P.ZP, {
+    return (0, r.jsxs)(S.ZP, {
         channelId: t.id,
         children: [
-            (0, r.jsx)(P.Kq, {
+            (0, r.jsx)(S.Kq, {
                 locked: !0,
                 channelType: t.type
             }),
-            (0, r.jsx)(P.Ot, { children: T.NW.format(T.t.I3R7Vl, { channelName: a }) }),
-            (0, r.jsx)(P.jz, {
+            (0, r.jsx)(S.Ot, { children: T.NW.format(T.t.I3R7Vl, { channelName: a }) }),
+            (0, r.jsx)(S.jz, {
                 children: T.NW.format(T.t.QuwqjI, {
                     channelName: a,
                     topicHook: () => x.Z.parseTopic(t.topic, !0, { channelId: t.id })
@@ -134,7 +134,7 @@ function w(e) {
                 children: [
                     (function () {
                         if (1 !== D.length || L.length > 0)
-                            return (0, r.jsx)(S.Z, {
+                            return (0, r.jsx)(P.Z, {
                                 guildId: t.guild_id,
                                 className: A.avatars,
                                 maxUsers: 5,

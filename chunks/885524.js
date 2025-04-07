@@ -8,25 +8,25 @@ var r = n(192379),
 let c = 20 * s.Z.Millis.SECOND;
 function u(e) {
     let { streamId: t, userId: n, videoSpinnerContext: s, streamKey: u, paused: d = !1 } = e,
-        p = r.useRef(new o.V7()),
-        _ = s === l.m.SELF_STREAM || s === l.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
+        _ = r.useRef(new o.V7()),
+        p = s === l.m.SELF_STREAM || s === l.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
     return (
         r.useEffect(() => {
             if (d || null == t) return;
-            let e = p.current;
+            let e = _.current;
             return (
                 e.start(c, () => {
-                    (0, a.K)(t, n, _, u);
+                    (0, a.K)(t, n, p, u);
                 }),
                 () => {
                     e.stop();
                 }
             );
-        }, [d, t, _, u, n]),
+        }, [d, t, p, u, n]),
         {
             onReady: r.useCallback(() => {
-                p.current.stop(), (0, a.w)(_, n);
-            }, [n, _])
+                _.current.stop(), (0, a.w)(p, n);
+            }, [n, p])
         }
     );
 }

@@ -33,17 +33,17 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             { loading: u, updateSubscriptionsSettings: N } = (0, C.QV)(),
             [v, P] = i.useState(s.hasFeature(O.oNc.CREATOR_STORE_PAGE)),
             [w, R] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : T),
-            [Z, D] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
-            A = null == Z || null != Z.match(S),
+            [D, Z] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
+            A = null == D || null != D.match(S),
             [k, W] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             L = i.useRef(null == c ? void 0 : c.store_page_slug).current,
-            M = v !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || Z !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            M = v !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             G = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
                 v !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = v),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = w),
-                    Z !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = Z),
+                    D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
                     k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
                     !d().isEmpty(e) &&
                         (await N(s.id, e),
@@ -78,7 +78,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             ));
             },
             U = O.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
-            B = null != Z && Z === (null == c ? void 0 : c.store_page_trailer_url),
+            B = null != D && D === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: F } = (0, j.gX)(s.id),
             z = F || !A;
         return (0, r.jsxs)('div', {
@@ -165,8 +165,8 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             children: y.NW.string(y.t['amd99/'])
                         }),
                         (0, r.jsx)(p.oil, {
-                            value: null != Z ? Z : void 0,
-                            onChange: (e) => D('' === e ? null : e),
+                            value: null != D ? D : void 0,
+                            onChange: (e) => Z('' === e ? null : e),
                             error: A ? null : y.NW.string(y.t['1kL79f']),
                             placeholder: y.NW.string(y.t['+I4gdX']),
                             className: I.trailerInputWrapper,
@@ -244,7 +244,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    P(s.hasFeature(O.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), D(null == c ? void 0 : c.store_page_trailer_url), W(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
+                                    P(s.hasFeature(O.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), Z(null == c ? void 0 : c.store_page_trailer_url), W(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
                                 },
                                 onSave: G,
                                 disabled: z

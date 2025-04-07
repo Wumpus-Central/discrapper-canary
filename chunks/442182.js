@@ -193,7 +193,7 @@ function R(e) {
         })
     );
 }
-function Z(e) {
+function D(e) {
     let { handleAddClick: t, locked: n } = e;
     return (0, r.jsx)('div', {
         className: S.contentWidth,
@@ -227,7 +227,7 @@ function Z(e) {
         })
     });
 }
-function D(e) {
+function Z(e) {
     let { guildId: t, roleId: n, query: s, headerHeight: a, locked: l, onScroll: c, roleMembers: d, handleAddClick: u } = e,
         { analyticsLocations: p } = (0, g.ZP)(m.Z.MEMBER_LIST),
         h = i.useMemo(() => s.trim().toLowerCase(), [s]);
@@ -247,7 +247,7 @@ function D(e) {
                 let { row: i } = e;
                 if (0 === b.length)
                     return (0, r.jsx)(
-                        Z,
+                        D,
                         {
                             handleAddClick: u,
                             locked: l
@@ -357,7 +357,7 @@ function k(e) {
                     })
                 })
             }),
-            (0, r.jsx)(D, {
+            (0, r.jsx)(Z, {
                 headerHeight: g + 8,
                 query: u,
                 guildId: t.id,

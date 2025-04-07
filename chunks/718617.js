@@ -31,8 +31,8 @@ function y(e) {
         E = null != (t = null == O ? void 0 : O.details.modViewPanel) ? t : b.k.INFO,
         N = (0, c.Z)(n),
         I = null == E ? null : E === b.k.INFO ? 'backwards' : 'forwards',
-        P = (0, d.Z)(I),
-        { reducedMotion: S } = i.useContext(a.S),
+        S = (0, d.Z)(I),
+        { reducedMotion: P } = i.useContext(a.S),
         Z = i.useCallback(
             (e) => {
                 null != O && (0, h.r)(y, n, O.baseChannelId, { modViewPanel: e });
@@ -106,11 +106,11 @@ function y(e) {
                             width: '100%',
                             height: '100%'
                         },
-                        S.enabled
+                        P.enabled
                             ? { opacity: null == (o = e.value) ? void 0 : o.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null == (a = e.value) ? void 0 : a.to(C('left', P)),
-                                  right: null == (s = e.value) ? void 0 : s.to(C('right', P))
+                                  left: null == (a = e.value) ? void 0 : a.to(C('left', S)),
+                                  right: null == (s = e.value) ? void 0 : s.to(C('right', S))
                               }
                     ),
                     children: (function (e) {

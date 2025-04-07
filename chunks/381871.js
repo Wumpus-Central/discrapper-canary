@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(535879),
     N = n(310892),
     I = n(12168),
-    P = n(353368),
-    S = n(981631),
+    S = n(353368),
+    P = n(981631),
     Z = n(354459),
     T = n(185923),
     A = n(474936),
@@ -34,7 +34,7 @@ var r = n(200651),
     k = n(934680);
 let M = T.Hz.CHAT,
     L = {
-        section: S.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
+        section: P.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
     D = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(C.lm);
@@ -78,28 +78,28 @@ function W(e) {
             (0, N.h)({
                 analytics: {
                     type: A.cd.EMOJI_PICKER_EMOJI_CLICKED,
-                    object: S.qAy.BUTTON_CTA,
-                    section: S.jXE.VOICE_CHANNEL_EFFECTS_BAR
+                    object: P.qAy.BUTTON_CTA,
+                    section: P.jXE.VOICE_CHANNEL_EFFECTS_BAR
                 }
             });
         },
         K = (e) => {
             (H.current = e),
                 e &&
-                    p.ZP.trackWithMetadata(S.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
+                    p.ZP.trackWithMetadata(P.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
                         channel_id: X,
                         guild_id: Q
                     });
         },
         { id: X, guild_id: Q } = n;
     i.useEffect(() => {
-        p.ZP.trackWithMetadata(S.rMx.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
+        p.ZP.trackWithMetadata(P.rMx.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
             channel_id: X,
             guild_id: Q
         });
     }, [X, Q]);
     let J = T ? [a.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
-        $ = B === P.q.PREMIUM;
+        $ = B === S.q.PREMIUM;
     return (0, r.jsx)(h.ZP, {
         contentTypes: J,
         children: (e) => {
@@ -117,7 +117,7 @@ function W(e) {
                             header: R.NW.string(R.t['6gGHnZ']),
                             content: R.NW.string(R.t.S2RGUF),
                             onClick: () => {
-                                u.Z.open(S.oAB.ACCESSIBILITY, null, { scrollPosition: w.rP.REDUCED_MOTION }), m();
+                                u.Z.open(P.oAB.ACCESSIBILITY, null, { scrollPosition: w.rP.REDUCED_MOTION }), m();
                             },
                             markAsDismissed: i,
                             buttonCTA: R.NW.string(R.t.fgVzkJ),
@@ -142,7 +142,7 @@ function W(e) {
                                 onChange: () => {
                                     if (U)
                                         return (
-                                            p.ZP.trackWithMetadata(S.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
+                                            p.ZP.trackWithMetadata(P.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
                                                 channel_id: X,
                                                 guild_id: Q,
                                                 enabled: !$
@@ -154,8 +154,8 @@ function W(e) {
                                     (0, N.h)({
                                         analytics: {
                                             type: H.current ? A.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : A.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
-                                            object: S.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,
-                                            section: H.current ? S.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : S.jXE.VOICE_CHANNEL_EFFECTS_BAR
+                                            object: P.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,
+                                            section: H.current ? P.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : P.jXE.VOICE_CHANNEL_EFFECTS_BAR
                                         }
                                     })
                             })

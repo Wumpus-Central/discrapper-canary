@@ -58,12 +58,12 @@ let C = [
     N = 0;
 function I() {
     if (null == O || !Z(O)) return !1;
-    let e = S(O);
+    let e = P(O);
     if (e.lastActionTime > Date.now() - d.Z.Millis.DAY && e.viewDuration > y) return !1;
     let t = Date.now();
     (e.lastActionTime = t), (e.viewDuration += t - E), (E = t);
 }
-function P() {
+function S() {
     return (
         0 !== N && (clearInterval(N), (N = 0)),
         u.ZP.useNewNotifications &&
@@ -73,7 +73,7 @@ function P() {
         !1
     );
 }
-function S(e) {
+function P(e) {
     return (
         e in v.channels ||
             (v.channels[e] = {
@@ -98,7 +98,7 @@ function T(e, t) {
 }
 class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (v.channels = e.channels), this.syncWith([u.ZP], P), this.waitFor(u.ZP, c.Z, a.Z);
+        null != e && (v.channels = e.channels), this.syncWith([u.ZP], S), this.waitFor(u.ZP, c.Z, a.Z);
     }
     getState() {
         return v;
@@ -134,7 +134,7 @@ let w = new A(l.Z, {
             return (O = c.Z.getChannelId()), (E = Date.now()), e;
         },
         CONNECTION_OPEN: function () {
-            (O = c.Z.getChannelId()), (E = Date.now()), P();
+            (O = c.Z.getChannelId()), (E = Date.now()), S();
             let e = Date.now() - x;
             h.default.forEach(v.channels, (t, n) => {
                 let { lastActionTime: r } = t;
@@ -144,7 +144,7 @@ let w = new A(l.Z, {
         MESSAGE_CREATE: function (e) {
             var t;
             if (e.optimistic || e.isPushNotification || (null == (t = e.message.author) ? void 0 : t.id) !== o.default.getId() || !Z(e.channelId)) return !1;
-            let n = S(e.channelId);
+            let n = P(e.channelId);
             (n.lastActionTime = Date.now()), n.numSends++;
         }
     }),

@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(626135),
     N = n(456100),
     I = n(566620),
-    P = n(127255),
-    S = n(5200),
+    S = n(127255),
+    P = n(5200),
     Z = n(558317),
     T = n(403404),
     A = n(981631),
@@ -128,7 +128,7 @@ let D = i.forwardRef(function (e, t) {
         U =
             ((n = a.getGuildId()),
             (l = a),
-            (0, P.Z)({
+            (0, S.Z)({
                 guildId: n,
                 context: {
                     channel: l,
@@ -230,7 +230,7 @@ let D = i.forwardRef(function (e, t) {
                                 children: [
                                     U.map((e) =>
                                         (0, r.jsx)(
-                                            S.Y,
+                                            P.Y,
                                             {
                                                 context: {
                                                     channel: a,
@@ -240,7 +240,7 @@ let D = i.forwardRef(function (e, t) {
                                                 onClick: () => {
                                                     c(), _();
                                                 },
-                                                aspectRatio: S.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                aspectRatio: P.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: R.activitySuggestion,
                                                 commandOrigin: C.bB.MINI_SHELF
                                             },

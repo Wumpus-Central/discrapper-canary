@@ -25,8 +25,8 @@ var i = n(120356),
     E = n(51144),
     N = n(308083),
     I = n(388032),
-    P = n(157092);
-function S(e) {
+    S = n(157092);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,13 +74,13 @@ function T(e) {
         l = t.id,
         s = (0, o.e7)([x.Z, y.Z, g.default], () => (l === g.default.getId() ? x.Z.getStatus() : y.Z.getStatus(l, n)), [l, n]);
     return (0, r.jsxs)('div', {
-        className: P.topRow,
+        className: S.topRow,
         children: [
             (0, r.jsxs)('div', {
-                className: P.memberNameContainer,
+                className: S.memberNameContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: P.memberAvatar,
+                        className: S.memberAvatar,
                         children: (0, r.jsx)(a.qEK, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
@@ -89,10 +89,10 @@ function T(e) {
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: P.memberNameAndTagContainer,
+                        className: S.memberNameAndTagContainer,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: P.memberNameTextContainer,
+                                className: S.memberNameTextContainer,
                                 children: [
                                     (0, r.jsx)(a.Text, {
                                         variant: 'text-lg/medium',
@@ -107,8 +107,8 @@ function T(e) {
                                         contextGuildId: n,
                                         badgeSize: N.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: P.memberClanTag,
-                                        containerClassName: P.memberClanTagContainer
+                                        className: S.memberClanTag,
+                                        containerClassName: S.memberClanTagContainer
                                     })
                                 ]
                             }),
@@ -125,7 +125,7 @@ function T(e) {
                 variant: 'text-md/medium',
                 color: 'text-normal',
                 children: (0, r.jsx)(a.P3F, {
-                    className: P.closeAction,
+                    className: S.closeAction,
                     onClick: i,
                     children: (0, r.jsx)(a.Dio, {
                         size: 'md',
@@ -162,13 +162,13 @@ function A(e) {
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
-                Z(S({}, c, e), {
+                Z(P({}, c, e), {
                     tag: t,
                     'aria-label': n,
-                    className: l()(P.bottomRowAction, { [P.bottomRowActionDisabled]: i }),
+                    className: l()(S.bottomRowAction, { [S.bottomRowActionDisabled]: i }),
                     onClick: i ? void 0 : s,
                     children: (0, r.jsx)('div', {
-                        className: P.innerBottomRowAction,
+                        className: S.innerBottomRowAction,
                         children: o
                     })
                 })
@@ -200,7 +200,7 @@ function w(e) {
         }),
         w = (0, o.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id));
     return (0, r.jsxs)('div', {
-        className: P.bottomRow,
+        className: S.bottomRow,
         children: [
             (0, r.jsx)(A, {
                 disabled: w,
@@ -224,7 +224,7 @@ function w(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                Z(S({}, n), {
+                                Z(P({}, n), {
                                     location: N,
                                     guildId: l,
                                     user: t
@@ -248,7 +248,7 @@ function w(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                Z(S({}, n), {
+                                Z(P({}, n), {
                                     location: N,
                                     guildId: l,
                                     user: t
@@ -309,7 +309,7 @@ function R(e) {
     return null == l || null == a
         ? null
         : (0, r.jsxs)('div', {
-              className: P.container,
+              className: S.container,
               children: [
                   (0, r.jsx)(T, {
                       user: l,

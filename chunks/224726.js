@@ -45,14 +45,14 @@ let E = function () {
     i.useEffect(() => {
         null != n && E();
     }, [n, E]);
-    let Z = i.useCallback(() => {
+    let D = i.useCallback(() => {
         E(!0);
     }, [E]);
     return (i.useEffect(() => {
         l.Z.getDetectableGames();
     }, []),
     S === d.a.FETCHED && null == T)
-        ? (0, r.jsx)(_.g, { forceFetchGuildProfile: Z })
+        ? (0, r.jsx)(_.g, { forceFetchGuildProfile: D })
         : S === d.a.NOT_FETCHED || S === d.a.FETCHING
           ? (0, r.jsx)('main', {
                 className: I.spinner,

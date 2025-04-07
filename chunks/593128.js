@@ -70,7 +70,7 @@ function R(e, t) {
         e
     );
 }
-let Z = (e) => [
+let D = (e) => [
         {
             section: m.ID.HEADER,
             label: T.NW.string(T.t['7r0U+/'])
@@ -129,10 +129,10 @@ let Z = (e) => [
         {
             section: m.ID.CUSTOM,
             label: T.NW.string(T.t.vc5h39),
-            element: D
+            element: Z
         }
     ],
-    D = (e) => {
+    Z = (e) => {
         let { guildId: t, onClose: s, dirty: a } = e,
             [l, c] = i.useState(!1),
             d = async () => {
@@ -215,7 +215,7 @@ let Z = (e) => [
     },
     k = (e) => {
         let { guildId: t, onClose: n } = e,
-            [S, D] = i.useState(I.Wy.GAMES),
+            [S, Z] = i.useState(I.Wy.GAMES),
             {
                 initialSettings: k,
                 settings: W,
@@ -235,7 +235,7 @@ let Z = (e) => [
             }),
             U = i.useCallback(
                 (e) => {
-                    G ? g.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : D(e);
+                    G ? g.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : Z(e);
                 },
                 [G]
             ),
@@ -276,7 +276,7 @@ let Z = (e) => [
             },
             X = i.useMemo(() => null != L && Object.values(L).some((e) => null != e), [L]);
         if (null == W) return null;
-        let Q = Z(L);
+        let Q = D(L);
         return (0, r.jsxs)(s.animated.div, {
             style: B,
             className: P.modal,

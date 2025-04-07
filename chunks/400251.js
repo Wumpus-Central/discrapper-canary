@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => T,
-    m: () => S
+    m: () => P
 }),
     n(388685),
     n(953529);
@@ -70,7 +70,7 @@ function I(e, t) {
         e
     );
 }
-function P(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,7 +89,7 @@ function P(e, t) {
     }
     return i;
 }
-let S = (e) => {
+let P = (e) => {
     let { onClick: t } = e;
     return (0, r.jsxs)(s.P3F, {
         onClick: t,
@@ -123,7 +123,7 @@ function Z(e) {
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
-                                  l = P(e, ['onClick']);
+                                  l = S(e, ['onClick']);
                               return (0, r.jsx)(
                                   p.zx,
                                   I(N({}, l), {
@@ -153,13 +153,13 @@ function Z(e) {
                     hideEditButton: !0,
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = P(e, ['onClick']);
+                            n = S(e, ['onClick']);
                         return (0, r.jsx)(s.ua7, {
                             text: j.NW.string(j.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
-                                    l = P(e, ['onClick']);
+                                    l = S(e, ['onClick']);
                                 return (0, r.jsx)(
                                     p.zx,
                                     I(N({}, n, l), {
@@ -201,7 +201,7 @@ let T = (e) => {
             splash: l.splash,
             size: 300 * (0, m.x_)()
         }),
-        P =
+        S =
             null !=
             (t = C.ZP.getGuildIconURL({
                 id: l.guildId,
@@ -210,9 +210,9 @@ let T = (e) => {
             }))
                 ? t
                 : void 0,
-        S = j.NW.string(j.t.VJlc0d);
+        P = j.NW.string(j.t.VJlc0d);
     return (
-        y && (S = j.NW.string(j.t.cqWE2d)),
+        y && (P = j.NW.string(j.t.cqWE2d)),
         (0, r.jsxs)('div', {
             className: O.card,
             onContextMenu: (e) => {
@@ -245,7 +245,7 @@ let T = (e) => {
                                     className: O.iconMask,
                                     children: (0, r.jsx)(h.Z, {
                                         className: O.icon,
-                                        iconSrc: P,
+                                        iconSrc: S,
                                         guild: new b.ZP(l),
                                         size: h.Z.Sizes.MEDIUM,
                                         active: !0
@@ -314,7 +314,7 @@ let T = (e) => {
                             className: O.joinButton,
                             color: y ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
                             onClick: x,
-                            children: S
+                            children: P
                         })
                     ]
                 }),

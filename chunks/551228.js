@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => h,
-    pi: () => f,
-    te: () => _
+    ZP: () => f,
+    pi: () => h,
+    te: () => p
 }),
     n(388685);
 var r = n(200651),
@@ -13,28 +13,28 @@ var r = n(200651),
     c = n(442550),
     u = n(297781),
     d = n(443487),
-    p = n(522314);
-let _ = [u.XF];
-function f(e) {
+    _ = n(522314);
+let p = [u.XF];
+function h(e) {
     var t, n, r, i;
     let s = (0, o.e7)([a.Z], () => a.Z.getMatchingActivity(e)),
         c = (0, o.e7)([l.default], () => l.default.getUser(e.author_id));
     if (null == s || null == c) return {};
     let u = e.extra.entries[0],
         d = null != (r = null != (n = s.state) ? n : null == (t = u.media.artists[0]) ? void 0 : t.name) ? r : u.media.title,
-        p = null != (i = s.details) ? i : u.media.title;
+        _ = null != (i = s.details) ? i : u.media.title;
     return {
         activity: s,
         artist: d,
         currentEntry: u,
-        title: p,
+        title: _,
         user: c
     };
 }
-let h = i.memo(function (e) {
+let f = i.memo(function (e) {
     let { entry: t, channel: n, selected: i, hovered: o } = e,
-        { activity: l, artist: a } = f(t),
-        { largeImage: h } = (0, s.rv)({ entry: t });
+        { activity: l, artist: a } = h(t),
+        { largeImage: f } = (0, s.rv)({ entry: t });
     return null == l
         ? (0, r.jsx)(d.cA, {})
         : (0, r.jsxs)(d.Zb, {
@@ -50,7 +50,7 @@ let h = i.memo(function (e) {
                           (0, r.jsx)(d.ll, { children: a }),
                           (0, r.jsx)(u.Gk, {
                               location: u.Gt.CARD,
-                              children: _.map((e, n) =>
+                              children: p.map((e, n) =>
                                   (0, r.jsx)(
                                       e,
                                       {
@@ -64,9 +64,9 @@ let h = i.memo(function (e) {
                       ]
                   }),
                   (0, r.jsx)(c.f, {
-                      src: null == h ? void 0 : h.src,
+                      src: null == f ? void 0 : f.src,
                       size: 48,
-                      className: p.thumbnail
+                      className: _.thumbnail
                   })
               ]
           });

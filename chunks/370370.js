@@ -12,7 +12,7 @@ var r = n(200651),
 let u = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ],
     d = i.memo((e) => {
         let { entry: t, channel: n, selected: i, hovered: d } = e,
-            { largeImage: p } = (0, o.rv)({
+            { largeImage: _ } = (0, o.rv)({
                 entry: t,
                 showCoverImage: !1
             });
@@ -43,8 +43,8 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ],
                     ]
                 }),
                 (0, r.jsx)(l.f, {
-                    alt: null == p ? void 0 : p.alt,
-                    src: null == p ? void 0 : p.src,
+                    alt: null == _ ? void 0 : _.alt,
+                    src: null == _ ? void 0 : _.src,
                     size: 48,
                     className: c.thumbnail
                 })

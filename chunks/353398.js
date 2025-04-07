@@ -165,8 +165,8 @@ function P() {
     let o = null != t && null == t.getFirstFieldErrorMessage('name') && null == t.getFirstFieldErrorMessage('description');
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(Z, {}),
-            (0, i.jsx)(D, {
+            (0, i.jsx)(D, {}),
+            (0, i.jsx)(Z, {
                 guild: e,
                 guildTemplate: l
             }),
@@ -294,7 +294,7 @@ function R(e) {
         })
     });
 }
-function Z() {
+function D() {
     let e = (0, d.e7)([E], () => E.name),
         t = (0, d.e7)([E], () => E.description),
         n = (0, d.e7)([E], () => E.error);
@@ -325,7 +325,7 @@ function Z() {
         ]
     });
 }
-function D(e) {
+function Z(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
         ? (0, i.jsx)(A, { guild: t })

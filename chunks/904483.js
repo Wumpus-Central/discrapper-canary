@@ -4,8 +4,8 @@ n(192379);
 var r = n(442837),
     s = n(481060),
     l = n(496675),
-    a = n(981631),
-    o = n(647086),
+    o = n(981631),
+    a = n(647086),
     c = n(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -51,10 +51,10 @@ function d(e, t) {
     );
 }
 function g(e) {
-    let t = (0, r.e7)([l.Z], () => l.Z.can(a.Plq.MANAGE_CHANNELS, e));
+    let t = (0, r.e7)([l.Z], () => l.Z.can(o.Plq.MANAGE_CHANNELS, e));
     return __OVERLAY__
         ? null
-        : e.id === o._
+        : e.id === a._
           ? (0, i.jsx)(s.sNh, {
                 id: 'create-category',
                 label: c.NW.string(c.t['ISN+ND']),
@@ -78,7 +78,7 @@ function g(e) {
                                       (0, i.jsx)(
                                           t,
                                           d(u({}, n), {
-                                              channelType: a.d4z.GUILD_TEXT,
+                                              channelType: o.d4z.GUILD_TEXT,
                                               guildId: e.id
                                           })
                                       );
@@ -98,7 +98,7 @@ function g(e) {
                                       (0, i.jsx)(
                                           t,
                                           d(u({}, n), {
-                                              channelType: a.d4z.GUILD_CATEGORY,
+                                              channelType: o.d4z.GUILD_CATEGORY,
                                               guildId: e.id
                                           })
                                       );

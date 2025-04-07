@@ -12,9 +12,9 @@ var i = n(200651),
     m = n(388032),
     f = n(655420);
 function h(e) {
-    let { context: t, entrypoint: n, title: l, look: h, items: b, sectionName: C, sectionOverallPosition: _ } = e,
-        x = (0, u.s)('AppLauncherApplicationListViewScreen'),
-        v = r.useMemo(() => (n === s._b.TEXT ? d.kA : d.qR), [n]);
+    let { context: t, entrypoint: n, title: l, look: h, items: b, sectionName: C, sectionOverallPosition: x } = e,
+        _ = (0, u.s)('AppLauncherApplicationListViewScreen'),
+        y = r.useMemo(() => (n === s._b.TEXT ? d.kA : d.qR), [n]);
     return (0, i.jsxs)('section', {
         className: f.container,
         'aria-label': m.NW.formatToPlainString(m.t.iobNIC, { sectionTitle: l }),
@@ -39,7 +39,7 @@ function h(e) {
                     children: b.map((e, n) => {
                         let { application: r, installOnDemand: l, showsPromoted: a } = e;
                         return (0, i.jsx)(
-                            v,
+                            y,
                             {
                                 context: t,
                                 application: r,
@@ -48,8 +48,8 @@ function h(e) {
                                 resultsPosition: n,
                                 location: c.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
                                 installOnDemand: l,
-                                isOneClickCTA: x,
-                                sectionOverallPosition: _,
+                                isOneClickCTA: _,
+                                sectionOverallPosition: x,
                                 showsPromoted: a
                             },
                             r.id

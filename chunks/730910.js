@@ -29,8 +29,8 @@ var r = n(200651),
     P = n(966301),
     w = n(976269),
     R = n(981631),
-    Z = n(388032),
-    D = n(179556);
+    D = n(388032),
+    Z = n(179556);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -176,37 +176,37 @@ function L(e) {
         et = null;
     U && (x === I.PG.SAFETY_CHECK ? (et = (0, r.jsx)(S.j7, {})) : x === I.PG.DEFAULT_CHANNELS ? (et = (0, r.jsx)(S.Io, {})) : x === I.PG.CUSTOMIZATION_QUESTIONS ? (et = (0, r.jsx)(S.cZ, {})) : x === I.PG.HOME_SETTINGS && (et = (0, r.jsx)(S.g6, {})));
     let en = (0, r.jsx)(m.zxk, {
-            className: a()(D.button, { [D.hidden]: U }),
+            className: a()(Z.button, { [Z.hidden]: U }),
             color: m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.OUTLINED,
             size: m.zxk.Sizes.SMALL,
             onClick: ee,
             disabled: U || G,
             children: (0, r.jsxs)('span', {
-                className: D.button,
+                className: Z.button,
                 children: [
                     (0, r.jsx)(h.Z, {
-                        className: D.arrow,
+                        className: Z.arrow,
                         direction: h.Z.Directions.LEFT
                     }),
-                    Z.NW.string(Z.t['13/7kZ'])
+                    D.NW.string(D.t['13/7kZ'])
                 ]
             })
         }),
         er = (0, r.jsx)(m.zxk, {
-            className: D.button,
+            className: Z.button,
             color: M ? m.zxk.Colors.BRAND : m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.FILLED,
             size: m.zxk.Sizes.SMALL,
             onClick: $,
             disabled: U || G,
             children: (0, r.jsxs)(l.animated.span, {
-                className: D.button,
+                className: Z.button,
                 style: { color: q },
                 children: [
-                    M ? Z.NW.string(Z.t.PDTjLC) : Z.NW.string(Z.t['5WxrcX']),
+                    M ? D.NW.string(D.t.PDTjLC) : D.NW.string(D.t['5WxrcX']),
                     (0, r.jsx)(h.Z, {
-                        className: D.arrow,
+                        className: Z.arrow,
                         direction: h.Z.Directions.RIGHT
                     })
                 ]
@@ -215,26 +215,26 @@ function L(e) {
     return (0, r.jsx)(d.W, {
         component: 'div',
         children: (0, r.jsx)(m.oXn, {
-            className: D.noticeRegion,
+            className: Z.noticeRegion,
             children: (0, r.jsx)(l.animated.div, {
-                className: D.container,
+                className: Z.container,
                 style: { backgroundColor: X },
                 children: (0, r.jsxs)('div', {
-                    className: D.flexContainer,
+                    className: Z.flexContainer,
                     ref: F,
                     children: [
                         U
                             ? (0, r.jsxs)('div', {
-                                  className: D.educationUpsellRoot,
+                                  className: Z.educationUpsellRoot,
                                   children: [
                                       (0, r.jsx)('img', {
-                                          className: D.wumpus,
+                                          className: Z.wumpus,
                                           src: n(33631),
                                           alt: 'wumpus'
                                       }),
                                       (0, r.jsxs)('div', {
-                                          className: D.educationUpsell,
-                                          children: [et, (0, r.jsx)('div', { className: D.educationUpsellArrow })]
+                                          className: Z.educationUpsell,
+                                          children: [et, (0, r.jsx)('div', { className: Z.educationUpsellArrow })]
                                       })
                                   ]
                               })
@@ -242,17 +242,17 @@ function L(e) {
                         (0, r.jsx)(m.JcV, {
                             containerRef: F,
                             children: (0, r.jsxs)('div', {
-                                className: D.actions,
+                                className: Z.actions,
                                 children: [
                                     en,
                                     (0, r.jsxs)('div', {
-                                        className: D.next,
+                                        className: Z.next,
                                         children: [
                                             G
                                                 ? (0, r.jsx)(m.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'status-warning',
-                                                      children: Z.NW.string(Z.t.DhYsPD)
+                                                      children: D.NW.string(D.t.DhYsPD)
                                                   })
                                                 : null,
                                             Q ? null : er

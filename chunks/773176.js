@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(41776),
     N = n(980463),
     I = n(328908),
-    P = n(992970),
-    S = n(135793),
+    S = n(992970),
+    P = n(135793),
     Z = n(576645),
     T = n(84040),
     A = n(222677),
@@ -219,8 +219,8 @@ function em(e) {
                 O = (0, D.NE)(t, n),
                 N = (0, D.Ek)(n),
                 I = (0, c.e7)([E.Z], () => null != t.guild_id && E.Z.isLurking(t.guild_id), [t]),
-                P = (0, c.e7)([H.ZP], () => null != t.guild_id && H.ZP.isCurrentUserGuest(t.guild_id), [t]),
-                S = s.id === d,
+                S = (0, c.e7)([H.ZP], () => null != t.guild_id && H.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                P = s.id === d,
                 Z = (C || n.canDeleteOwnMessage(d)) && p && !el.V$x.UNDELETABLE.has(n.type);
             n.type === el.uaV.AUTO_MODERATION_ACTION && (Z = Z && C);
             let T = (0, X.a4)(n),
@@ -232,10 +232,10 @@ function em(e) {
                     renderReactions: g,
                     canAddNewReactions: v,
                     isLurking: I,
-                    isGuest: P,
+                    isGuest: S,
                     isActiveChannelOrUnarchivableThread: p
                 }),
-                B = t.type === el.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(el.oNc.NEWS) && (S || C) && (0, f.Z)(n),
+                B = t.type === el.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(el.oNc.NEWS) && (P || C) && (0, f.Z)(n),
                 z = t.getGuildId(),
                 q = null != z && (n.type === el.uaV.USER_JOIN || n.type === el.uaV.GUILD_INVITE_REMINDER) && V.Z.canWithPartialContext(el.Plq.MANAGE_GUILD, { guildId: z }),
                 { canForwardMessages: K } = (0, y.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
@@ -294,13 +294,13 @@ function em(e) {
         eI = i.useCallback(() => {
             eE(!1);
         }, []),
-        eP = i.useCallback(
+        eS = i.useCallback(
             (e, t) => {
                 ev(eo.L.TAKE_ACTION), (0, et.ts)(e, t);
             },
             [ev]
         ),
-        { canShowReactionsOnMessageHover: eS } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: eP } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     b.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     let eZ = (0, T.Z)(t, n),
         eT = (0, Z.Nt)(),
@@ -414,7 +414,7 @@ function em(e) {
             _ && !ed
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          eS && !R
+                          eP && !R
                               ? (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(ef, {
@@ -440,13 +440,13 @@ function em(e) {
                                         label: es.NW.string(es.t.icaJW1),
                                         icon: d.l22,
                                         onClick: () => {
-                                            z.default.track(el.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: P.MG.MessageExpandingButtons }),
-                                                (0, S.s)({
+                                            z.default.track(el.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: S.MG.MessageExpandingButtons }),
+                                                (0, P.s)({
                                                     channelId: t.id,
                                                     message: n,
                                                     onRedeem: ew,
                                                     onClose: I.Qy,
-                                                    source: P.YD.MessageExpandingButtons
+                                                    source: S.YD.MessageExpandingButtons
                                                 });
                                         }
                                     },
@@ -484,7 +484,7 @@ function em(e) {
                       {
                           label: es.NW.string(es.t.I3ltXF),
                           icon: v.Z,
-                          onClick: () => eP(t, n),
+                          onClick: () => eS(t, n),
                           onTooltipShow: eN,
                           onTooltipHide: eI,
                           showNewBadge: !eO && ej

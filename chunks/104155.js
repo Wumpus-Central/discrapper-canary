@@ -1,94 +1,94 @@
-t.d(n, {
-    I: () => b,
+n.d(t, {
+    I: () => j,
     Z: () => N
 }),
-    t(388685),
-    t(35282);
-var r = t(200651),
-    l = t(192379),
-    a = t(442837),
-    i = t(481060),
-    o = t(325708),
-    s = t(213557),
-    c = t(433355),
-    d = t(324067),
-    u = t(984933),
-    m = t(430824),
-    h = t(496675),
-    p = t(626135),
-    f = t(216306),
-    g = t(775028),
-    x = t(981631),
-    _ = t(176505),
-    C = t(388032),
-    j = t(335204);
-function b(e) {
-    let { channelId: n } = e;
+    n(388685),
+    n(35282);
+var r = n(200651),
+    l = n(192379),
+    a = n(442837),
+    i = n(481060),
+    o = n(325708),
+    s = n(213557),
+    c = n(433355),
+    d = n(324067),
+    u = n(984933),
+    m = n(430824),
+    h = n(496675),
+    p = n(626135),
+    f = n(216306),
+    g = n(775028),
+    x = n(981631),
+    _ = n(176505),
+    C = n(388032),
+    b = n(335204);
+function j(e) {
+    let { channelId: t } = e;
     return (0, r.jsx)(o.Z, {
         sidebarType: o.y.ThreadSidebar,
         maxWidth: 600,
         children: (0, r.jsx)(s.Z, {
-            channelId: n,
+            channelId: t,
             baseChannelId: _.oC.CHANNEL_BROWSER
         })
     });
 }
 function N(e) {
-    let { guildId: n } = e,
+    let { guildId: t } = e,
         [o, s] = l.useState(''),
-        b = (0, a.e7)([m.Z], () => m.Z.getGuild(n)),
-        N = (0, a.e7)([u.ZP], () => u.ZP.getChannels(n)),
-        v = (0, a.e7)([d.Z], () => d.Z.getCategories(n)),
-        y = (0, f.Fo)(n, v, N, o),
-        O = (0, a.e7)([h.Z], () => h.Z.canWithPartialContext(x.Plq.MANAGE_CHANNELS, { guildId: n })),
+        j = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
+        N = (0, a.e7)([u.ZP], () => u.ZP.getChannels(t)),
+        v = (0, a.e7)([d.Z], () => d.Z.getCategories(t)),
+        y = (0, f.Fo)(t, v, N, o),
+        O = (0, a.e7)([h.Z], () => h.Z.canWithPartialContext(x.Plq.MANAGE_CHANNELS, { guildId: t })),
         I = (0, a.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(_.oC.CHANNEL_BROWSER)),
         Z = l.useCallback(() => s(''), [s]),
         w = l.useCallback(() => {
             (0, i.ZDy)(async () => {
-                let { default: e } = await Promise.all([t.e('45094'), t.e('45822')]).then(t.bind(t, 218613));
-                return (t) => {
+                let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                return (n) => {
                     var l, a;
                     return (0, r.jsx)(
                         e,
                         ((l = (function (e) {
-                            for (var n = 1; n < arguments.length; n++) {
-                                var t = null != arguments[n] ? arguments[n] : {},
-                                    r = Object.keys(t);
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
                                 'function' == typeof Object.getOwnPropertySymbols &&
                                     (r = r.concat(
-                                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         })
                                     )),
-                                    r.forEach(function (n) {
+                                    r.forEach(function (t) {
                                         var r;
-                                        (r = t[n]),
-                                            n in e
-                                                ? Object.defineProperty(e, n, {
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
                                                       value: r,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[n] = r);
+                                                : (e[t] = r);
                                     });
                             }
                             return e;
-                        })({}, t)),
+                        })({}, n)),
                         (a = a =
                             {
                                 channelType: null,
-                                guildId: n
+                                guildId: t
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
-                            : (function (e, n) {
-                                  var t = Object.keys(e);
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
                                       var r = Object.getOwnPropertySymbols(e);
-                                      t.push.apply(t, r);
+                                      n.push.apply(n, r);
                                   }
-                                  return t;
+                                  return n;
                               })(Object(a)).forEach(function (e) {
                                   Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
@@ -96,17 +96,17 @@ function N(e) {
                     );
                 };
             });
-        }, [n]);
-    return null == b
+        }, [t]);
+    return null == j
         ? null
         : (0, r.jsxs)('div', {
-              className: j.pageBody,
+              className: b.pageBody,
               children: [
                   (0, r.jsxs)('div', {
-                      className: j.header,
+                      className: b.header,
                       children: [
                           (0, r.jsx)(i.E1j, {
-                              className: j.search,
+                              className: b.search,
                               size: i.E1j.Sizes.MEDIUM,
                               query: o,
                               onChange: (e) => {
@@ -117,14 +117,14 @@ function N(e) {
                           }),
                           O
                               ? (0, r.jsxs)(i.zxk, {
-                                    className: j.createButton,
-                                    innerClassName: j.createButtonInner,
+                                    className: b.createButton,
+                                    innerClassName: b.createButtonInner,
                                     onClick: w,
                                     children: [
                                         (0, r.jsx)(i.qJs, {
                                             size: 'sm',
                                             color: 'currentColor',
-                                            className: j.createIcon
+                                            className: b.createIcon
                                         }),
                                         C.NW.string(C.t.CumH4u)
                                     ]
@@ -133,10 +133,10 @@ function N(e) {
                       ]
                   }),
                   (0, r.jsx)(g.Z, {
-                      className: j.browser,
+                      className: b.browser,
                       channels: N,
                       categories: y,
-                      guild: b,
+                      guild: j,
                       hasSidebar: I
                   })
               ]

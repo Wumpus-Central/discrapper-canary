@@ -8,23 +8,23 @@ var r = n(192379),
     c = n(812236),
     u = n(148958),
     d = n(881998),
-    p = n(424602);
+    _ = n(424602);
 n(445392);
-var _ = n(783097),
-    f = n(689079);
-let h = {
+var p = n(783097),
+    h = n(689079);
+let f = {
         commandTypes: [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT]
     },
     m = {
         placeholderCount: 0,
-        limit: f.tn,
+        limit: h.tn,
         includeFrecency: !0
     };
 function g(e) {
     let { context: t, onlyActivityApps: n, allowCommandFetch: s, includeAuthorizedAppsAndFetch: g } = e,
         { sectionDescriptors: b, loading: E } = a.wi({
             context: t,
-            filters: h,
+            filters: f,
             options: m,
             allowFetch: s
         });
@@ -32,18 +32,18 @@ function g(e) {
         loading: E,
         frecentApps: (function (e) {
             let { sectionDescriptors: t, context: n, onlyActivityApps: s, includeAuthorizedAppsAndFetch: a } = e,
-                h = (0, o.e7)([d.Z], () => d.Z.getFetchState());
+                f = (0, o.e7)([d.Z], () => d.Z.getFetchState());
             r.useEffect(() => {
-                a && h === d.M.NOT_FETCHED && l.Z.fetch();
-            }, [a, h]);
+                a && f === d.M.NOT_FETCHED && l.Z.fetch();
+            }, [a, f]);
             let m = (0, o.Wu)([d.Z], () => {
                     var e, t;
                     return a && null != (t = null == (e = d.Z.getApps()) ? void 0 : e.filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS))) ? t : [];
                 }),
-                g = t.filter((e) => e.id !== f.bi.FRECENCY && e.id !== f.bi.BUILT_IN),
-                b = 'channel' in n && (0, p.aZ)(n.channel, 'useAppLauncherFrecents.useFrecentApps()'),
+                g = t.filter((e) => e.id !== h.bi.FRECENCY && e.id !== h.bi.BUILT_IN),
+                b = 'channel' in n && (0, _.aZ)(n.channel, 'useAppLauncherFrecents.useFrecentApps()'),
                 E = (0, u.h)(g, m);
-            return r.useMemo(() => (s ? E.filter((e) => null != e.application && (0, _.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !b || e.id !== p.gu) : E.filter((e) => !b || e.id !== p.gu)), [s, E, b, n]);
+            return r.useMemo(() => (s ? E.filter((e) => null != e.application && (0, p.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !b || e.id !== _.gu) : E.filter((e) => !b || e.id !== _.gu)), [s, E, b, n]);
         })({
             sectionDescriptors: b,
             context: t,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -76,8 +76,8 @@ function R(e) {
         y = (0, v.T)(d, p, g),
         E = (0, f.pM)(d.id, g.id),
         R = null == y && !E,
-        Z = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
-        [, D] = (0, l.c)({
+        D = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
+        [, Z] = (0, l.c)({
             type: w,
             item: () => (
                 N(g.id),
@@ -104,7 +104,7 @@ function R(e) {
         }),
         W = null != (i = g.colorString) ? i : (0, c.Rf)(I.p6O);
     return (
-        (s = Z
+        (s = D
             ? (0, r.jsx)(b.Z, {
                   size: 12,
                   color: g.colorString,
@@ -142,7 +142,7 @@ function R(e) {
             'aria-label': g.name,
             clickableRef: (e) => {
                 var t;
-                return D(k(null != (t = null == e ? void 0 : e.ref) ? t : null));
+                return Z(k(null != (t = null == e ? void 0 : e.ref) ? t : null));
             },
             children: [
                 s,
@@ -162,14 +162,14 @@ function R(e) {
         })
     );
 }
-function Z(e) {
+function D(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: s, setSelectedSection: l } = e,
         o = (0, d.e7)([_.Z], () => _.Z.roles),
         c = (0, d.e7)([j.Z], () => j.Z.getHighestRole(t)),
         m = (0, d.e7)([h.Z], () => h.Z.roleStyle),
         [f, b] = i.useState(o.length),
         { scrolledToTop: v, handleScroll: I } = (0, O.V)(),
-        { handleDragStart: w, handleDragReset: Z, handleDragComplete: D } = (0, C.Z)(o),
+        { handleDragStart: w, handleDragReset: D, handleDragComplete: Z } = (0, C.Z)(o),
         A = i.useRef(null),
         k = i.useCallback(
             (e) => {
@@ -252,8 +252,8 @@ function Z(e) {
                                     onClick: () => s(e.id),
                                     currentPosition: i,
                                     onDragStart: w,
-                                    onDragReset: Z,
-                                    onDragComplete: D,
+                                    onDragReset: D,
+                                    onDragComplete: Z,
                                     roleStyle: m
                                 },
                                 e.id

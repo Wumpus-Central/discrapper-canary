@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(127379),
     N = n(981631),
     I = n(921944),
-    P = n(388032),
-    S = n(393740);
+    S = n(388032),
+    P = n(393740);
 function Z(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: Z, setWhichPopoutIsOpen: T } = e,
         A = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
@@ -100,7 +100,7 @@ function Z(e) {
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(a.ua7, {
-                                    text: P.NW.string(P.t.P8vmUl),
+                                    text: S.NW.string(S.t.P8vmUl),
                                     color: a.FGA.BRAND,
                                     forceOpen: !0,
                                     shouldShow: s,
@@ -140,7 +140,7 @@ function Z(e) {
                                                         'aria-label': R,
                                                         label: z ? void 0 : R,
                                                         isActivityActive: V,
-                                                        className: U ? '' : S.controlButton,
+                                                        className: U ? '' : P.controlButton,
                                                         onClick: () => {
                                                             Q(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(I.L.TAKE_ACTION);
                                                         },

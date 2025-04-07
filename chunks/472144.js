@@ -15,16 +15,16 @@ let f = o.forwardRef((e, t) => {
         m = s / 2 - f / 2,
         h = 2 * Math.PI * m,
         y = h - o * h,
-        S = {
+        O = {
             strokeDasharray: ''.concat(h, ' ').concat(h),
             strokeDashoffset: y
         },
-        O = {
+        S = {
             strokeDasharray: ''.concat(h, ' ').concat(h),
             strokeDashoffset: -o * h
         },
-        C = { boxShadow: '0 0 30px 0px '.concat(b.glow) },
-        { progressTextAnimation: v } = (0, c.q_F)({
+        v = { boxShadow: '0 0 30px 0px '.concat(b.glow) },
+        { progressTextAnimation: C } = (0, c.q_F)({
             progressTextAnimation: +(null != x && 1 !== o),
             config: u.Y
         });
@@ -34,11 +34,11 @@ let f = o.forwardRef((e, t) => {
         children: [
             (0, r.jsxs)('div', {
                 className: d.inner,
-                style: C,
+                style: v,
                 children: [
                     j,
                     (0, r.jsxs)(i.animated.div, {
-                        style: { opacity: v },
+                        style: { opacity: C },
                         className: l()(d.coverContent, d.progressTextWrapper),
                         children: [
                             (0, r.jsx)('div', { className: l()(d.coverContent, d.progressTextOverlay) }),
@@ -98,7 +98,7 @@ let f = o.forwardRef((e, t) => {
                         cx: k,
                         cy: k,
                         stroke: 'url(#linear)',
-                        style: O
+                        style: S
                     }),
                     (0, r.jsx)('circle', {
                         className: d.progress,
@@ -108,7 +108,7 @@ let f = o.forwardRef((e, t) => {
                         cx: k,
                         cy: k,
                         stroke: b.foreground,
-                        style: S
+                        style: O
                     })
                 ]
             })

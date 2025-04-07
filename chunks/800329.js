@@ -87,12 +87,12 @@ function p(e) {
         ),
         N = E + 1,
         I = N * j + (N - 1) * 8 <= b,
-        P = Math.floor(j / c) + 8,
-        S = Math.max(0, x - P * O) / 2;
+        S = Math.floor(j / c) + 8,
+        P = Math.max(0, x - S * O) / 2;
     return (0, r.jsx)(a.Z, {
         fade: !0,
         className: n,
-        listPadding: [h + S, 0, f + S - 8, 8],
+        listPadding: [h + P, 0, f + P - 8, 8],
         renderRow: function (e) {
             var t;
             let n = e * E;
@@ -129,7 +129,7 @@ function p(e) {
         },
         rowCount: O,
         rowCountBySection: [O],
-        rowHeight: P,
+        rowHeight: S,
         onResize: g
     });
 }

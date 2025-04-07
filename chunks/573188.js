@@ -1,10 +1,10 @@
 n.d(t, { X: () => l });
-var r = n(818083),
-    i = n(987338);
-let l = (0, r.B)({
+var i = n(818083),
+    r = n(987338);
+let l = (0, i.B)({
     kind: 'user',
     id: '2025-04_app_launcher_friends_who_play',
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.CONNECTION_OPEN,
     label: 'App Launcher Friends Who Play',
     defaultConfig: { enabled: !1 },
     treatments: [

@@ -4,7 +4,7 @@ n(192379);
 var i = n(481060),
     o = n(215023);
 let l = (e) => {
-    let { product: t, analyticsLocations: l, overrideTitle: s, overrideDescription: a, shouldShowPromotionalExperience: c, onCloseCallback: u, itemConsumed: d, purchaseType: p = o.o8.FIAT } = e;
+    let { product: t, analyticsLocations: l, overrideTitle: s, overrideDescription: a, shouldShowPromotionalExperience: c, onCloseCallback: u, itemConsumed: d, purchaseType: _ = o.o8.FIAT } = e;
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 331042));
@@ -43,7 +43,7 @@ let l = (e) => {
                             overrideDescription: a,
                             shouldShowPromotionalExperience: c,
                             itemConsumed: d,
-                            purchaseType: p
+                            purchaseType: _
                         },
                         n
                     )

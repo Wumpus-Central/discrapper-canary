@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(430824),
     N = n(496675),
     I = n(699516),
-    P = n(768119),
-    S = n(944486),
+    S = n(768119),
+    P = n(944486),
     Z = n(594174),
     T = n(101695),
     A = n(683101),
@@ -104,12 +104,12 @@ function D(e) {
                 else {
                     let t = O.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: P.Z.getAnalyticsId(l) }), (0, y.uL)(w.Z5c.CHANNEL(n, e.channel_id, e.id));
+                    u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: S.Z.getAnalyticsId(l) }), (0, y.uL)(w.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
             [l]
         ),
-        S = i.useMemo(() => {
+        P = i.useMemo(() => {
             let e;
             if (null == m) return [];
             let t = 0;
@@ -133,7 +133,7 @@ function D(e) {
             }, []);
         }, [m, j]),
         Z = i.useRef([]),
-        A = S.reduce((e, t) => e + 1 + t.results.length, 0),
+        A = P.reduce((e, t) => e + 1 + t.results.length, 0),
         D = i.useCallback(
             (e, t) => {
                 if (!h.Z.keyboardModeEnabled) return;
@@ -159,10 +159,10 @@ function D(e) {
             setFocus: D,
             onSelect: W
         }),
-        H = P.Z.getQuery(l),
-        F = P.Z.getSearchType(l) === w.aib.FAVORITES,
+        H = S.Z.getQuery(l),
+        F = S.Z.getSearchType(l) === w.aib.FAVORITES,
         G = (0, p.nC)(null != (t = null == H ? void 0 : H.content) ? t : ''),
-        V = S.map((e) => {
+        V = P.map((e) => {
             let { channel: t, results: n, startIndex: i } = e;
             return (0, r.jsx)(
                 U,
@@ -260,11 +260,11 @@ function W(e) {
 }
 function U(e) {
     var t, n, l;
-    let { channel: o, results: a, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: h, searchId: y, renderEmbeds: j, offset: P, jumpToMessage: T, listNavigator: R, favoriteSearch: D } = e,
+    let { channel: o, results: a, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: h, searchId: y, renderEmbeds: j, offset: S, jumpToMessage: T, listNavigator: R, favoriteSearch: D } = e,
         U = v.cC.useSetting(),
         B = (0, b.p)(),
         H = i.useCallback((e) => {
-            if (e === S.Z.getChannelId()) return;
+            if (e === P.Z.getChannelId()) return;
             let t = O.Z.getChannel(e);
             null != t && N.Z.can(w.Plq.VIEW_CHANNEL, t) && (0, x.Kh)(t.id);
         }, []),
@@ -338,7 +338,7 @@ function U(e) {
                             scrollTo: h,
                             searchId: y,
                             renderEmbeds: j,
-                            searchOffset: P,
+                            searchOffset: S,
                             pageResultsLength: a.length,
                             result: e,
                             index: n,

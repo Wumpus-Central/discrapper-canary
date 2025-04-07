@@ -26,8 +26,8 @@ let O = (e) => {
         {
             currentCategoryId: N,
             directoryEntries: I,
-            categoryCounts: P,
-            allEntriesCount: S,
+            categoryCounts: S,
+            allEntriesCount: P,
             isLoading: Z
         } = (0, l.cj)([m.Z], () => {
             let e = m.Z.getCurrentCategoryId(O.id),
@@ -198,8 +198,8 @@ let O = (e) => {
                       h.Su(O.id, e);
                   },
                   directoryEntries: T,
-                  categoryCounts: P,
-                  allEntriesCount: S,
+                  categoryCounts: S,
+                  allEntriesCount: P,
                   isLoading: Z
               });
 };

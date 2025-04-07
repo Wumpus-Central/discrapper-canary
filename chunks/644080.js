@@ -1,27 +1,27 @@
-l.d(n, { Z: () => y });
-var t = l(200651),
-    r = l(192379),
-    a = l(120356),
-    i = l.n(a),
-    s = l(442837),
-    c = l(692547),
-    o = l(481060),
-    d = l(410030),
-    u = l(565138),
-    m = l(523751),
-    h = l(637853),
-    g = l(434404),
-    f = l(159300),
-    x = l(496675),
-    p = l(709586),
-    b = l(768581),
-    j = l(981631),
-    C = l(388032),
-    _ = l(18314),
-    v = l(63190),
-    I = l(102219);
+t.d(n, { Z: () => y });
+var r = t(200651),
+    l = t(192379),
+    a = t(120356),
+    i = t.n(a),
+    s = t(442837),
+    o = t(692547),
+    c = t(481060),
+    d = t(410030),
+    u = t(565138),
+    m = t(523751),
+    h = t(637853),
+    f = t(434404),
+    g = t(159300),
+    p = t(496675),
+    x = t(709586),
+    b = t(768581),
+    j = t(981631),
+    C = t(388032),
+    v = t(18314),
+    _ = t(63190),
+    I = t(102219);
 let Z = (e) => {
-    let n = r.useMemo(
+    let n = l.useMemo(
         () =>
             null == e
                 ? null
@@ -39,32 +39,32 @@ let Z = (e) => {
 };
 function N(e) {
     let { guild: n } = e,
-        l = () => {
-            g.Z.open(n.id, j.pNK.ONBOARDING, void 0, j.KsC.SERVER_GUIDE);
+        t = () => {
+            f.Z.open(n.id, j.pNK.ONBOARDING, void 0, j.KsC.SERVER_GUIDE);
         };
     return n.hasFeature(j.oNc.BANNER)
-        ? (0, t.jsxs)(o.zxk, {
-              className: _.editButton,
-              innerClassName: _.editButtonInner,
+        ? (0, r.jsxs)(c.zxk, {
+              className: v.editButton,
+              innerClassName: v.editButtonInner,
               type: 'button',
-              size: o.zxk.Sizes.MEDIUM,
-              color: o.zxk.Colors.BRAND,
-              onClick: l,
+              size: c.zxk.Sizes.MEDIUM,
+              color: c.zxk.Colors.BRAND,
+              onClick: t,
               children: [
-                  (0, t.jsx)(o.FmF, {
+                  (0, r.jsx)(c.FmF, {
                       size: 'xs',
-                      color: c.Z.unsafe_rawColors.WHITE_500.css
+                      color: o.Z.unsafe_rawColors.WHITE_500.css
                   }),
                   C.NW.string(C.t.b0y3DA)
               ]
           })
-        : (0, t.jsxs)(o.gtL, {
-              color: o.zxk.Colors.GREEN,
-              className: _.editButton,
-              innerClassName: _.editButtonInner,
-              onClick: l,
+        : (0, r.jsxs)(c.gtL, {
+              color: c.zxk.Colors.GREEN,
+              className: v.editButton,
+              innerClassName: v.editButtonInner,
+              onClick: t,
               children: [
-                  (0, t.jsx)(p.Z, {
+                  (0, r.jsx)(x.Z, {
                       height: 16,
                       width: 16
                   }),
@@ -72,106 +72,106 @@ function N(e) {
               ]
           });
 }
-let y = r.memo(function (e) {
-    let { guild: n, titleClassName: r } = e,
-        { homeHeaderImage: a, isHomeHeaderImageSet: c } = Z(n),
-        g = (0, h.b$)(n.id),
-        p = (0, s.e7)([x.Z], () => (0, f.b)(x.Z, n)),
+let y = l.memo(function (e) {
+    let { guild: n, titleClassName: l } = e,
+        { homeHeaderImage: a, isHomeHeaderImageSet: o } = Z(n),
+        f = (0, h.b$)(n.id),
+        x = (0, s.e7)([p.Z], () => (0, g.b)(p.Z, n)),
         b = (0, d.ZP)();
-    return (0, t.jsxs)('div', {
-        className: _.header,
+    return (0, r.jsxs)('div', {
+        className: v.header,
         children: [
-            (0, t.jsxs)('div', {
-                className: _.headerArtWrapper,
+            (0, r.jsxs)('div', {
+                className: v.headerArtWrapper,
                 children: [
-                    (0, t.jsx)('div', {
-                        className: i()(_.headerArt, { [_.headerArtPlaceholder]: !c }),
-                        style: { backgroundImage: 'url('.concat(c ? a : 'dark' === b ? v : I, ')') }
+                    (0, r.jsx)('div', {
+                        className: i()(v.headerArt, { [v.headerArtPlaceholder]: !o }),
+                        style: { backgroundImage: 'url('.concat(o ? a : 'dark' === b ? _ : I, ')') }
                     }),
-                    g && (0, t.jsx)(N, { guild: n })
+                    f && (0, r.jsx)(N, { guild: n })
                 ]
             }),
-            (0, t.jsx)('div', {
-                className: _.titleWrapper,
-                children: (0, t.jsxs)('div', {
-                    className: r,
+            (0, r.jsx)('div', {
+                className: v.titleWrapper,
+                children: (0, r.jsxs)('div', {
+                    className: l,
                     children: [
-                        (0, t.jsx)(u.Z, {
-                            className: _.headerIcon,
+                        (0, r.jsx)(u.Z, {
+                            className: v.headerIcon,
                             guild: n,
                             size: u.Z.Sizes.XLARGE,
                             active: !0
                         }),
-                        (0, t.jsx)(o.y5t, {
-                            children: (0, t.jsxs)('div', {
-                                className: _.headerName,
+                        (0, r.jsx)(c.y5t, {
+                            children: (0, r.jsxs)('div', {
+                                className: v.headerName,
                                 children: [
-                                    (0, t.jsx)(o.X6q, {
-                                        className: _.headerName,
+                                    (0, r.jsx)(c.X6q, {
+                                        className: v.headerName,
                                         variant: 'heading-xxl/bold',
                                         children: n.name
                                     }),
-                                    (0, t.jsx)(m.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         size: 24,
                                         guild: n,
                                         tooltipPosition: 'bottom',
-                                        tooltipColor: o.ua7.Colors.PRIMARY
+                                        tooltipColor: c.ua7.Colors.PRIMARY
                                     }),
-                                    p &&
-                                        (0, t.jsx)(o.zxk, {
-                                            className: _.inviteButton,
-                                            size: o.zxk.Sizes.MEDIUM,
-                                            color: o.zxk.Colors.PRIMARY,
+                                    x &&
+                                        (0, r.jsx)(c.zxk, {
+                                            className: v.inviteButton,
+                                            size: c.zxk.Sizes.MEDIUM,
+                                            color: c.zxk.Colors.PRIMARY,
                                             onClick: () =>
-                                                (0, o.ZDy)(async () => {
-                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('17439')]).then(l.bind(l, 560114));
-                                                    return (l) => {
-                                                        var r, a;
-                                                        return (0, t.jsx)(
+                                                (0, c.ZDy)(async () => {
+                                                    let { default: e } = await Promise.all([t.e('7654'), t.e('17439')]).then(t.bind(t, 560114));
+                                                    return (t) => {
+                                                        var l, a;
+                                                        return (0, r.jsx)(
                                                             e,
-                                                            ((r = (function (e) {
+                                                            ((l = (function (e) {
                                                                 for (var n = 1; n < arguments.length; n++) {
-                                                                    var l = null != arguments[n] ? arguments[n] : {},
-                                                                        t = Object.keys(l);
+                                                                    var t = null != arguments[n] ? arguments[n] : {},
+                                                                        r = Object.keys(t);
                                                                     'function' == typeof Object.getOwnPropertySymbols &&
-                                                                        (t = t.concat(
-                                                                            Object.getOwnPropertySymbols(l).filter(function (e) {
-                                                                                return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                                                                        (r = r.concat(
+                                                                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                                                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                                                             })
                                                                         )),
-                                                                        t.forEach(function (n) {
-                                                                            var t;
-                                                                            (t = l[n]),
+                                                                        r.forEach(function (n) {
+                                                                            var r;
+                                                                            (r = t[n]),
                                                                                 n in e
                                                                                     ? Object.defineProperty(e, n, {
-                                                                                          value: t,
+                                                                                          value: r,
                                                                                           enumerable: !0,
                                                                                           configurable: !0,
                                                                                           writable: !0
                                                                                       })
-                                                                                    : (e[n] = t);
+                                                                                    : (e[n] = r);
                                                                         });
                                                                 }
                                                                 return e;
-                                                            })({}, l)),
+                                                            })({}, t)),
                                                             (a = a =
                                                                 {
                                                                     guild: n,
                                                                     source: j.t4x.GUILD_HOME
                                                                 }),
                                                             Object.getOwnPropertyDescriptors
-                                                                ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                                                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                                                 : (function (e, n) {
-                                                                      var l = Object.keys(e);
+                                                                      var t = Object.keys(e);
                                                                       if (Object.getOwnPropertySymbols) {
-                                                                          var t = Object.getOwnPropertySymbols(e);
-                                                                          l.push.apply(l, t);
+                                                                          var r = Object.getOwnPropertySymbols(e);
+                                                                          t.push.apply(t, r);
                                                                       }
-                                                                      return l;
+                                                                      return t;
                                                                   })(Object(a)).forEach(function (e) {
-                                                                      Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                                                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                                                   }),
-                                                            r)
+                                                            l)
                                                         );
                                                     };
                                                 }),

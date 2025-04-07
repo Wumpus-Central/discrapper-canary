@@ -3,8 +3,8 @@ var i = n(63568),
     r = n(163400),
     s = n(995532),
     l = n(496675),
-    a = n(600553),
-    o = n(896007),
+    o = n(600553),
+    a = n(896007),
     c = n(981631);
 let u = {
     HEADER: 'HEADER',
@@ -15,11 +15,11 @@ function d(e) {
     let d = l.Z.getGuildPermissionProps(e),
         g = (0, r.p)(e.id).length > 0,
         b = (0, i.K2)(e.id, 'getGuildSettingsSections'),
-        p = (0, a.i1)({
+        p = (0, o.i1)({
             guildId: e.id,
             location: 'getGuildSettingsSections'
         });
-    return o.ZP.generateSections(
+    return a.ZP.generateSections(
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

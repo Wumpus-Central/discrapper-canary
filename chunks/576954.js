@@ -119,7 +119,7 @@ function x(e) {
                                         buttonText: C.NW.string(C.t['5QYPOz']),
                                         buttonColor: a.zxk.Colors.RED,
                                         onButtonPress: () => {
-                                            l(), P(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, I);
+                                            l(), S(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, I);
                                         }
                                     },
                                     'block-button'
@@ -130,7 +130,7 @@ function x(e) {
                 };
             });
         },
-        P = (e, i, l) => {
+        S = (e, i, l) => {
             (0, a.ZDy)(async () => {
                 let { default: o } = await Promise.all([n.e('97652'), n.e('3078')]).then(n.bind(n, 744373));
                 return (n) => {
@@ -223,7 +223,7 @@ function x(e) {
                       {
                           text: C.NW.string(C.t.ie0QdH),
                           color: a.zxk.Colors.RED,
-                          onclick: () => P(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL)
+                          onclick: () => S(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]

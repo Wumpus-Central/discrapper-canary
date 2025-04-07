@@ -3773,7 +3773,7 @@ class e$ extends a.C {
 let e0 = new e$();
 class e1 extends a.C {
     create(e) {
-        let t = { dmDisabled: !1 };
+        let t = { allowMobilePush: !1 };
         return (
             globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
@@ -3788,7 +3788,7 @@ class e1 extends a.C {
             a = e.pos + t;
         for (; e.pos < a; ) {
             let [t, i] = e.tag();
-            if (1 === t) o.dmDisabled = e.bool();
+            if (2 === t) o.allowMobilePush = e.bool();
             else {
                 let a = n.readUnknownField;
                 if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
@@ -3799,15 +3799,15 @@ class e1 extends a.C {
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        !1 !== e.dmDisabled && t.tag(1, r.TD.Varint).bool(e.dmDisabled);
+        !1 !== e.allowMobilePush && t.tag(2, r.TD.Varint).bool(e.allowMobilePush);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
     constructor() {
         super('discord_protos.discord_users.v1.ApplicationDMSettings', [
             {
-                no: 1,
-                name: 'dm_disabled',
+                no: 2,
+                name: 'allow_mobile_push',
                 kind: 'scalar',
                 T: 8
             }

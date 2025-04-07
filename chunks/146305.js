@@ -29,8 +29,8 @@ var r = n(200651),
     P = n(594174),
     w = n(585483),
     R = n(823379),
-    Z = n(434404),
-    D = n(360606),
+    D = n(434404),
+    Z = n(360606),
     A = n(946724),
     k = n(999382),
     W = n(44550),
@@ -126,10 +126,10 @@ function ew(e, t) {
 let eR = {
     getSectionDefinition: function (e, t) {
         var eR;
-        let eZ = (0, j.p)(t.guild.id, 'guild_settings'),
-            eD = !1 === t.guild.hasFeature(eO.oNc.CREATOR_MONETIZABLE) && !1 === t.guild.hasFeature(eO.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        let eD = (0, j.p)(t.guild.id, 'guild_settings'),
+            eZ = !1 === t.guild.hasFeature(eO.oNc.CREATOR_MONETIZABLE) && !1 === t.guild.hasFeature(eO.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
             eA =
-                eZ && eD
+                eD && eZ
                     ? {
                           label: (0, r.jsx)('div', {
                               className: eT.roleSubLabel,
@@ -316,7 +316,7 @@ let eR = {
                     ariaLabel: eS.NW.string(eS.t.CIsNZ2),
                     element: J.Z,
                     notice: {
-                        stores: [D.default, k.Z],
+                        stores: [Z.default, k.Z],
                         element: J.j
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks || t.canUnlinkChannels
@@ -575,7 +575,7 @@ let eR = {
                                 cancelText: eS.NW.string(eS.t['ETE/oK']),
                                 onConfirm: () => {
                                     w.S.subscribeOnce(eO.CkL.LAYER_POP_COMPLETE, () => {
-                                        Z.Z.deleteGuild(t.guild.id, i);
+                                        D.Z.deleteGuild(t.guild.id, i);
                                     }),
                                         (0, l.xf)();
                                 }

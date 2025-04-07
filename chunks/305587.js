@@ -1,4 +1,4 @@
-n.d(t, { Xs: () => a });
+n.d(t, { Xs: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_dm_mute_feedback',
@@ -12,7 +12,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
+function i(e) {
     let { enabled: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }

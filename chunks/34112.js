@@ -53,7 +53,7 @@ function R(e) {
     }
     return e;
 }
-function Z(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function Z(e, t) {
         e
     );
 }
-let D = 'DRAGGABLE_ROLE';
+let Z = 'DRAGGABLE_ROLE';
 function A(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: s, otherRoles: a, setSelectedSection: l, renderHeader: o, headerHeight: c, query: u } = e,
         m = (0, d.e7)([C.Z], () => C.Z.getRoleMemberCount(n.id), [n.id]),
@@ -148,7 +148,7 @@ function W(e) {
         [M, G] = i.useState(!1),
         U = i.useMemo(
             () => ({
-                type: D,
+                type: Z,
                 item: () => (
                     _(d.id),
                     {
@@ -169,7 +169,7 @@ function W(e) {
         [{ isDragging: B }, F] = (0, l.c)(U),
         z = i.useMemo(
             () => ({
-                accept: D,
+                accept: Z,
                 canDrop: () => !W,
                 collect: (e) => {
                     let t = e.getItem();
@@ -187,7 +187,7 @@ function W(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            Z(R({}, t), {
+                            D(R({}, t), {
                                 role: d,
                                 guild: g
                             })
@@ -277,7 +277,7 @@ function W(e) {
                 children: (e) =>
                     (0, r.jsxs)(
                         u.P3F,
-                        Z(R({}, e), {
+                        D(R({}, e), {
                             className: a()(P.memberCountContainer, w.memberSpacing),
                             onClick: X,
                             children: [
@@ -350,7 +350,7 @@ function L(e) {
     return null != m
         ? (0, r.jsx)(
               h.Z,
-              Z(R({}, m), {
+              D(R({}, m), {
                   className: o,
                   enableTooltip: l
               })

@@ -29,8 +29,8 @@ var r = n(200651),
     P = n(275302),
     w = n(877248),
     R = n(179517),
-    Z = n(79829);
-let D = (0, g.Un)({
+    D = n(79829);
+let Z = (0, g.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 797967)),
         webpackId: 797967
     }),
@@ -69,7 +69,7 @@ function W(e) {
                 children: T.NW.string(T.t['9UCxlZ'])
             }),
             (0, r.jsx)(
-                D,
+                Z,
                 {
                     defaultColor: S.p6O,
                     colors: S.pmI,
@@ -169,7 +169,7 @@ function L(e) {
             name: c.name
         },
         v = {
-            src: Z,
+            src: D,
             name: c.name
         },
         C = (0, h.oC)(m, c),

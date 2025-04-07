@@ -20,7 +20,7 @@ function f(e) {
         x = i.useCallback(
             async (e) => {
                 if (null == f) return;
-                let r = (0, c.Ow)(t, e);
+                let r = (0, c.Ow)(t, e, { include_nsfw: !0 });
                 await (0, s.r)(n, t, f.baseChannelId, {
                     modViewPanel: d.k.MESSAGE_HISTORY,
                     additionalSearchQuery: r

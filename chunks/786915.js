@@ -42,7 +42,7 @@ function C(e) {
     return e;
 }
 function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: x, appContext: v, analyticsLocation: j, guildScheduledEvent: O, shouldPrioritizeGroupPlusIcon: E = !1, embeddedActivity: N, iconClassName: I, look: P, size: S, buttonText: Z } = e,
+    var { applicationId: t, stream: i, channel: y, exitFullScreen: x, appContext: v, analyticsLocation: j, guildScheduledEvent: O, shouldPrioritizeGroupPlusIcon: E = !1, embeddedActivity: N, iconClassName: I, look: S, size: P, buttonText: Z } = e,
         T = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -75,8 +75,8 @@ function y(e) {
               iconComponent: null == t || E ? s.ejJ : s.gQj,
               label: null != t ? _.NW.string(_.t['OzOM/v']) : _.NW.string(_.t['6F9ivr']),
               iconClassName: I,
-              look: P,
-              size: S,
+              look: S,
+              size: P,
               buttonText: Z
           })
         : null != k && null != y && m.Z.can(b.Plq.CREATE_INSTANT_INVITE, y)
@@ -144,8 +144,8 @@ function y(e) {
                         iconComponent: null == t || E ? s.ejJ : s.gQj,
                         label: null != t ? _.NW.string(_.t['OzOM/v']) : _.NW.string(_.t['6F9ivr']),
                         iconClassName: I,
-                        look: P,
-                        size: S,
+                        look: S,
+                        size: P,
                         buttonText: Z
                     },
                     T

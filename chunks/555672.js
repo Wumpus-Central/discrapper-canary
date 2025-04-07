@@ -1,7 +1,7 @@
 n.d(t, {
-    Hs: () => p,
-    ZP: () => h,
-    qy: () => f
+    Hs: () => _,
+    ZP: () => f,
+    qy: () => h
 });
 var r = n(200651),
     i = n(192379),
@@ -12,19 +12,19 @@ var r = n(200651),
     c = n(297781),
     u = n(443487),
     d = n(522314);
-let p = [c.E6],
-    _ = [o._.WEEK];
-function f(e) {
-    return null != e && _.includes(e);
+let _ = [c.E6],
+    p = [o._.WEEK];
+function h(e) {
+    return null != e && p.includes(e);
 }
-let h = i.memo((e) => {
+let f = i.memo((e) => {
     let { entry: t, channel: n, selected: i } = e,
         { largeImage: o } = (0, l.rv)({
             entry: t,
             showCoverImage: !1
         }),
-        _ = (0, a.Nq)(t);
-    return null != _ && f(_)
+        p = (0, a.Nq)(t);
+    return null != p && h(p)
         ? (0, r.jsxs)(u.Zb, {
               selected: i,
               children: [
@@ -38,7 +38,7 @@ let h = i.memo((e) => {
                           (0, r.jsx)(u.ll, { children: t.extra.game_name }),
                           (0, r.jsx)(c.Gk, {
                               location: c.Gt.CARD,
-                              children: p.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
+                              children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                           })
                       ]
                   }),

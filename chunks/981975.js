@@ -82,8 +82,8 @@ function P(e) {
 function w(e) {
     let { guild: t, role: n, locked: s, setSelectedSection: l, integrations: o } = e,
         { headerHeight: g, headerRef: w } = (0, x.Z)(0),
-        { scrolledToTop: R, handleScroll: Z } = (0, N.V)(),
-        D = (0, c.e7)(
+        { scrolledToTop: R, handleScroll: D } = (0, N.V)(),
+        Z = (0, c.e7)(
             [h.Z],
             () => {
                 var e;
@@ -289,7 +289,7 @@ function w(e) {
     return (0, r.jsx)(d.yWw, {
         className: y.scroller,
         style: { scrollPaddingTop: g },
-        onScroll: Z,
+        onScroll: D,
         children: (0, r.jsxs)('div', {
             className: I.contentWidth,
             children: [
@@ -303,7 +303,7 @@ function w(e) {
                         setSelectedSection: l
                     })
                 }),
-                (null != D ? D : 0) > 0
+                (null != Z ? Z : 0) > 0
                     ? (0, r.jsxs)('div', {
                           className: y.warningContainer,
                           children: [

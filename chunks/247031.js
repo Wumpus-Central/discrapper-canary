@@ -56,7 +56,7 @@ function R(e) {
     }
     return e;
 }
-function Z(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function Z(e, t) {
         e
     );
 }
-function D(e) {
+function Z(e) {
     let { transitionState: t, guild: n, user: s, ban: a, hideDiscriminator: l, onClose: o } = e,
         [d, m] = i.useState(!1),
         [h, f] = i.useState(null);
@@ -192,8 +192,8 @@ class A extends i.PureComponent {
                 let { guild: e, user: t, hideDiscriminator: n, ban: i } = this.props;
                 (0, c.h7j)((s) =>
                     (0, r.jsx)(
-                        D,
-                        Z(R({}, s), {
+                        Z,
+                        D(R({}, s), {
                             guild: e,
                             user: t,
                             ban: i,
@@ -205,7 +205,7 @@ class A extends i.PureComponent {
             w(this, 'handleContextMenu', (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('23835').then(n.bind(n, 768079));
-                    return (t) => (0, r.jsx)(e, Z(R({}, t), { user: this.props.user }));
+                    return (t) => (0, r.jsx)(e, D(R({}, t), { user: this.props.user }));
                 });
             });
     }

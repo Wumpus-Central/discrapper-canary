@@ -72,8 +72,8 @@ function N(e) {
         S = null == O,
         T = null != (t = null == C ? void 0 : C.archived) && t,
         { deleteSubscriptionListing: P, submitting: w } = (0, d.r4)(),
-        { archiveSubscriptionListing: R, submitting: Z } = (0, d._1)(),
-        D = () => {
+        { archiveSubscriptionListing: R, submitting: D } = (0, d._1)(),
+        Z = () => {
             let e = async () => {
                 (S || (a()(null != v, 'group listing doesnt exist'), a()(null != O, 'subscription listing doesnt exist'), await P(_, v, O))) && (null == s || s());
             };
@@ -130,7 +130,7 @@ function N(e) {
                                         j(x({}, e), {
                                             wrapperClassName: b.deleteListingButton,
                                             color: o.zxk.Colors.RED,
-                                            onClick: D,
+                                            onClick: Z,
                                             submitting: w,
                                             disabled: !A || !E,
                                             children: h.NW.string(h.t.GMtG6u)
@@ -183,7 +183,7 @@ function N(e) {
                                                 );
                                         });
                                 },
-                                submitting: Z,
+                                submitting: D,
                                 disabled: !A,
                                 children: h.NW.string(h.t.RL0wjo)
                             })

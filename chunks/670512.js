@@ -8,10 +8,10 @@ var r,
     c = n(846519),
     u = n(481060),
     d = n(585483),
-    p = n(981631),
-    _ = n(388032),
-    f = n(762447);
-function h(e, t, n) {
+    _ = n(981631),
+    p = n(388032),
+    h = n(762447);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,10 +30,10 @@ let m = {
 };
 class g extends (r = o.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d.S.subscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), d.S.subscribe(_.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d.S.unsubscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), d.S.unsubscribe(_.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -55,7 +55,7 @@ class g extends (r = o.PureComponent) {
                                 })
                             )),
                             r.forEach(function (t) {
-                                h(e, t, n[t]);
+                                f(e, t, n[t]);
                             });
                     }
                     return e;
@@ -64,31 +64,31 @@ class g extends (r = o.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)('div', {
-            className: s()(f.arrowGroup, e),
+            className: s()(h.arrowGroup, e),
             children: [
                 (0, i.jsx)(a.Z.div, {
-                    className: s()(f.arrowContainer, f.horizontal),
+                    className: s()(h.arrowContainer, h.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(403756),
-                        className: f.arrowIcon
+                        className: h.arrowIcon
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(f.arrowContainer, f.diag1),
+                    className: s()(h.arrowContainer, h.diag1),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(536404),
-                        className: f.arrowIcon
+                        className: h.arrowIcon
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(f.arrowContainer, f.diag2),
+                    className: s()(h.arrowContainer, h.diag2),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(569347),
-                        className: f.arrowIcon
+                        className: h.arrowIcon
                     })
                 })
             ]
@@ -96,15 +96,15 @@ class g extends (r = o.PureComponent) {
     }
     renderContent() {
         return (0, i.jsxs)('div', {
-            className: f.tutorialMessages,
+            className: h.tutorialMessages,
             children: [
                 (0, i.jsx)('div', {
-                    className: f.searchMessage,
-                    children: _.NW.string(_.t.Mp0IGB)
+                    className: h.searchMessage,
+                    children: p.NW.string(p.t.Mp0IGB)
                 }),
                 (0, i.jsx)('div', {
-                    className: f.selectMessage,
-                    children: _.NW.string(_.t['3CbpwM'])
+                    className: h.selectMessage,
+                    children: p.NW.string(p.t['3CbpwM'])
                 })
             ]
         });
@@ -114,11 +114,11 @@ class g extends (r = o.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)('div', {
             ref: this.rootRef,
-            className: s()(f.tutorial, {
-                [f.shown]: t,
-                [f.hasQuery]: e
+            className: s()(h.tutorial, {
+                [h.shown]: t,
+                [h.hasQuery]: e
             }),
-            children: [this.renderContent(), this.renderArrowGroup(f.__invalid_left), this.renderArrowGroup(f.right)]
+            children: [this.renderContent(), this.renderArrowGroup(h.__invalid_left), this.renderArrowGroup(h.right)]
         });
     }
     getStyle() {
@@ -140,13 +140,13 @@ class g extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'state', {
+            f(this, 'state', {
                 shown: !1,
                 translateY: new a.Z.Value(0)
             }),
-            h(this, 'rootRef', o.createRef()),
-            h(this, 'focusTimeout', new c.V7()),
-            h(this, 'handleResultFocus', (e) => {
+            f(this, 'rootRef', o.createRef()),
+            f(this, 'focusTimeout', new c.V7()),
+            f(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
@@ -159,5 +159,5 @@ class g extends (r = o.PureComponent) {
             });
     }
 }
-h(g, 'contextType', u.Sfi);
+f(g, 'contextType', u.Sfi);
 let b = g;

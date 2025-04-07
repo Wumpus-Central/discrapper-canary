@@ -63,19 +63,19 @@ let C = (e) => {
         !(0, m.p7)('Message Confetti Peak') || !(0, b.Uw)(t))
     )
         return null;
-    let P = (0, b.Eq)(t);
-    if (null == P) return null;
+    let S = (0, b.Eq)(t);
+    if (null == S) return null;
     if (l)
         return (0, r.jsx)('span', {
             className: _.hidden,
             'aria-hidden': 'true'
         });
-    let S = P.emoji[0],
+    let P = S.emoji[0],
         Z =
-            null == S.id
-                ? p.ZP.getURL(S.name)
+            null == P.id
+                ? p.ZP.getURL(P.name)
                 : d.ZP.getEmojiURL({
-                      id: S.id,
+                      id: P.id,
                       animated: !1,
                       size: 32,
                       forcePNG: !0

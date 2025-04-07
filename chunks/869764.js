@@ -174,7 +174,7 @@ function P(e) {
                       null != p &&
                       (0, l.jsx)(o.P3F, {
                           className: G.clickableAction,
-                          onClick: () => (0, u.CK)(n, null == E ? void 0 : E.joinRequestId),
+                          onClick: () => (0, u.C)(n, null == E ? void 0 : E.joinRequestId),
                           children: (0, l.jsxs)('div', {
                               className: G.action,
                               children: [

@@ -168,13 +168,13 @@ function f(e) {
             },
             []
         );
-    let Z = i.useCallback(
+    let D = i.useCallback(
             (e) => {
                 n(e.target.value);
             },
             [n]
         ),
-        D = i.useCallback(
+        Z = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if ((t.trim().length <= 0 && p(), null != N.current && null != O.current && null != _.current)) {
@@ -188,9 +188,9 @@ function f(e) {
         A = i.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
-                u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), D(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), D(!0));
+                u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), Z(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), Z(!0));
             },
-            [D, t]
+            [Z, t]
         ),
         k = i.useCallback(
             (e) => {
@@ -219,7 +219,7 @@ function f(e) {
             children: [
                 (0, r.jsxs)(o.P3F, {
                     tag: 'div',
-                    onBlur: () => D(!1),
+                    onBlur: () => Z(!1),
                     onClick: k,
                     ignoreKeyPress: !0,
                     onMouseEnter: () => P(!0),
@@ -236,7 +236,7 @@ function f(e) {
                                 [m.isSelecting]: b
                             }),
                             ref: N,
-                            onChange: Z,
+                            onChange: D,
                             onKeyDownCapture: A,
                             value: t,
                             style: { width: R > 0 ? R : 'calc('.concat(t.length, 'ch + 10px)') }

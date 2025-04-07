@@ -48,18 +48,18 @@ function d(e) {
                 }),
                 (t = N));
             let I = _[_.length - 1],
-                P = null,
-                S = (0, s.DQ)(e);
-            C = C || S;
+                S = null,
+                P = (0, s.DQ)(e);
+            C = C || P;
             let Z = (function (e, t, n) {
                 if (r.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
                 else if (t.ignored) return u.ys_.MESSAGE_GROUP_IGNORED;
                 else if ((0, s.P1)(e) && n) return u.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
-            })(p, e, S && m);
+            })(p, e, P && m);
             (null !== Z &&
-                ([P, I] =
+                ([S, I] =
                     ((E = v = I),
                     null == v || v.type !== Z
                         ? ((O = {
@@ -73,8 +73,8 @@ function d(e) {
             f === e.id && null != y)
                 ? (null != I && I.type === u.ys_.DIVIDER
                       ? (I.unreadId = e.id)
-                      : null !== P
-                        ? ((j = P),
+                      : null !== S
+                        ? ((j = S),
                           e.isFirstMessageInForumPost(p) ||
                               j.content.push({
                                   type: u.ys_.DIVIDER,
@@ -122,7 +122,7 @@ function d(e) {
                         contentKey: b.startId,
                         isSummaryDivider: !0
                     }),
-                null !== P ? (P.content.push(w), w.jumpTarget && (P.hasJumpTarget = !0)) : _.push(w),
+                null !== S ? (S.content.push(w), w.jumpTarget && (S.hasJumpTarget = !0)) : _.push(w),
                 e.isFirstMessageInForumPost(p) && _.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
                 null != b &&
                     e.id === b.endId &&

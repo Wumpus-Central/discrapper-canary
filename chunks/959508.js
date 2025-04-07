@@ -24,9 +24,9 @@ function C(e) {
     let { guild: n, prompt: s, disableAutofocus: d, promptIndex: x, dragIndex: C, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
         { dropdownsAllowed: w } = (0, m.Ug)(n.id),
         R = (0, l.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
-        Z = w ? j.qm : j.M$,
+        D = w ? j.qm : j.M$,
         {
-            drag: D,
+            drag: Z,
             dragSourcePosition: A,
             drop: k,
             setIsDraggable: W
@@ -73,7 +73,7 @@ function C(e) {
                       [_.dropIndicatorAfter]: null != A && x > A,
                       [_.containerFocused]: U
                   }),
-                  ref: (e) => D(k(e)),
+                  ref: (e) => Z(k(e)),
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
@@ -130,7 +130,7 @@ function C(e) {
                       [_.dropIndicatorAfter]: null != A && x > A,
                       [_.containerFocused]: U
                   }),
-                  ref: (e) => D(k(e)),
+                  ref: (e) => Z(k(e)),
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
@@ -169,11 +169,11 @@ function C(e) {
                           children: H
                               ? N.NW.formatToPlainString(N.t.AbvhZG, {
                                     count: s.options.length,
-                                    total: Z
+                                    total: D
                                 })
                               : N.NW.formatToPlainString(N.t.b7VxYW, {
                                     count: s.options.length,
-                                    total: Z
+                                    total: D
                                 })
                       }),
                       (0, r.jsx)(y, {

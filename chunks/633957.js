@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(311819),
     x = n(758199),
     y = n(943762),
-    E = n(914498),
-    v = n(208444),
+    v = n(914498),
+    E = n(208444),
     O = n(429551),
     N = n(973616),
     j = n(314897),
@@ -145,7 +145,7 @@ let U = i.memo(function (e) {
                       });
         },
         el = en.disabled ? L.NW.string(L.t.JBnc7O) : L.NW.string(L.t.cX9uLS),
-        eo = (0, v.z)($, () => {
+        eo = (0, E.z)($, () => {
             T.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: A.id,
                 channel_id: Z,
@@ -167,7 +167,7 @@ let U = i.memo(function (e) {
         ef = [
             {
                 label: et ? L.NW.string(L.t.cnBQPD) : L.NW.string(L.t.VJlc0d),
-                trackingArea: E.j_.PLAY,
+                trackingArea: v.j_.PLAY,
                 onClick: ea,
                 disabledReason: O,
                 submitting: ei
@@ -214,7 +214,7 @@ let U = i.memo(function (e) {
             actions: ef,
             trackingConfig: {
                 id: A.id,
-                linkType: E.Un.ACTIVITY_INSTANCE
+                linkType: v.Un.ACTIVITY_INSTANCE
             }
         })
     );

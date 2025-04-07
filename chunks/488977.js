@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(997841);
+n.d(t, { Z: () => w }), n(997841);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -14,10 +14,10 @@ var i = n(200651),
     h = n(726721),
     b = n(726521),
     C = n(973616),
-    _ = n(914010),
-    x = n(594174),
-    v = n(626135),
-    y = n(572004),
+    x = n(914010),
+    _ = n(594174),
+    y = n(626135),
+    v = n(572004),
     N = n(630388),
     g = n(135431),
     j = n(541099),
@@ -70,19 +70,19 @@ function L(e, t) {
         e
     );
 }
-function R(e) {
+function w(e) {
     var t;
-    let { application: l, context: R, className: w, sectionName: k } = e,
+    let { application: l, context: w, className: R, sectionName: k } = e,
         Z = r.useRef(null),
         M = (0, o.e7)([j.Z], () => j.Z.entrypoint()),
         D = (0, P.L1)(l),
         W = (0, m.E)(D),
         U = (0, d.R)(l.id),
         B = (0, o.e7)(
-            [_.Z],
+            [x.Z],
             () => {
                 var e;
-                return null != (e = _.Z.getGuildId()) ? e : void 0;
+                return null != (e = x.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
@@ -92,7 +92,7 @@ function R(e) {
             section_name: k,
             source: j.Z.lastShownEntrypoint()
         },
-        V = x.default.getCurrentUser(),
+        V = _.default.getCurrentUser(),
         F = h.Z.useExperiment({ location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
         z = (0, f.Z)({
             id: l.id,
@@ -100,7 +100,7 @@ function R(e) {
         }),
         G = (0, E.P)({ application: l }),
         q = (0, N.yE)(null != (t = l.flags) ? t : 0, I.udG.EMBEDDED),
-        X = 'channel' === R.type ? R.channel : void 0;
+        X = 'channel' === w.type ? w.channel : void 0;
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
@@ -112,14 +112,14 @@ function R(e) {
                               referrerId: null == V ? void 0 : V.id
                           })
                         : (0, p.J)(T({ id: l.id }, D));
-                    (0, y.JG)(e),
-                        v.default.track(I.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                    (0, v.JG)(e),
+                        y.default.track(I.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
                         }),
                         (0, c.showToast)((0, c.createToast)(O.NW.string(O.t['L/PwZW']), c.ToastType.SUCCESS));
                 },
-                className: a()(S.clickable, w),
+                className: a()(S.clickable, R),
                 'aria-label': O.NW.string(O.t.WqhZsr),
                 children: (0, i.jsx)(c.xPt, {
                     size: 'sm',
@@ -204,7 +204,7 @@ function R(e) {
                         c.P3F,
                         L(T({ innerRef: Z }, e), {
                             onClick: e.onClick,
-                            className: a()(S.clickable, w),
+                            className: a()(S.clickable, R),
                             'aria-label': O.NW.string(O.t.UKOtz8),
                             children: (0, i.jsx)(c.xhG, {
                                 size: 'sm',

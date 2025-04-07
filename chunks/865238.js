@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -48,9 +48,9 @@ function I(e) {
     }
     return e;
 }
-let P = (e) => 1 - Math.pow(1 - e, 3);
-function S(e) {
-    let { channel: t, buyer: l, onClose: a, dismissibleContent: S } = e,
+let S = (e) => 1 - Math.pow(1 - e, 3);
+function P(e) {
+    let { channel: t, buyer: l, onClose: a, dismissibleContent: P } = e,
         Z = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
         T = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         A = null != Z.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
@@ -74,7 +74,7 @@ function S(e) {
             },
             config: {
                 duration: 250,
-                easing: P,
+                easing: S,
                 immediate: !k
             }
         }),
@@ -88,7 +88,7 @@ function S(e) {
         F = t.hdStreamingUntil;
     if (null == F || null == l || null == T) return null;
     let G = s()(F).diff(s()(), 'hours'),
-        V = S
+        V = P
             ? O.NW.format(O.t['6LrV9f'], {
                   username: B,
                   num: G,
