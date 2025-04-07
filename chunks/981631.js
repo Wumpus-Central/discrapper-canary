@@ -1252,6 +1252,7 @@ var N =
     (r.VOICE_QUALITY_PERIODIC_STATS = 'voice_quality_periodic_stats'),
     (r.AUDIO_DEVICE_MODULE_ERROR = 'audio_device_module_error'),
     (r.SDP_ERROR = 'sdp_error'),
+    (r.VOICE_QUEUE_METRICS = 'voice_queue_metrics'),
     (r.CHANNEL_SIDEBAR_VIEWED = 'channel_sidebar_viewed'),
     (r.CHANNEL_SIDEBAR_RESIZED = 'channel_sidebar_resized'),
     (r.MEMBER_LIST_VIEWED = 'member_list_viewed'),
