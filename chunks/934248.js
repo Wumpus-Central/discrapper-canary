@@ -92,7 +92,10 @@ let u = {
         return {
             events: {},
             play: l,
-            internalLottieRef: t,
+            getDuration: i.useCallback(() => {
+                var e;
+                return null == (e = t.current) ? void 0 : e.getDuration();
+            }, []),
             Component: d
         };
     };

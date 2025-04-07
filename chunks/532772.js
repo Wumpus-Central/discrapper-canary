@@ -73,16 +73,11 @@ let u = {
             }, []),
             a = i.useCallback(() => {
                 null != e.current && e.current.play('hover');
-            }, []);
-        return {
-            events: {
-                onMouseEnter: a,
-                onMouseLeave: i.useCallback(() => {
-                    null != e.current && e.current.stopIfPlaying('hover');
-                }, [])
-            },
-            play: t,
-            Component: i.useCallback(
+            }, []),
+            l = i.useCallback(() => {
+                null != e.current && e.current.stopIfPlaying('hover');
+            }, []),
+            d = i.useCallback(
                 (t) =>
                     (0, r.jsx)(
                         o.L,
@@ -93,6 +88,17 @@ let u = {
                         })
                     ),
                 []
-            )
+            );
+        return {
+            events: {
+                onMouseEnter: a,
+                onMouseLeave: l
+            },
+            play: t,
+            getDuration: i.useCallback(() => {
+                var t;
+                return null == (t = e.current) ? void 0 : t.getDuration();
+            }, []),
+            Component: d
         };
     };

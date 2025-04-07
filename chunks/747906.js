@@ -53,19 +53,13 @@ let o = {
                 if (null == t.current) return;
                 let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
                 t.current.play(n);
-            }, [e]);
-        return {
-            events: {
-                onClick: s,
-                onMouseEnter: c,
-                onMouseLeave: i.useCallback(() => {
-                    if (null == t.current) return;
-                    let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
-                    t.current.stopIfPlaying(n);
-                }, [e])
-            },
-            play: s,
-            Component: i.useCallback((e) => {
+            }, [e]),
+            d = i.useCallback(() => {
+                if (null == t.current) return;
+                let n = 'mute' === e ? 'hover_unmuted' : 'hover_muted';
+                t.current.stopIfPlaying(n);
+            }, [e]),
+            u = i.useCallback((e) => {
                 var i, s;
                 return (0, r.jsx)(
                     a.L,
@@ -115,6 +109,18 @@ let o = {
                           }),
                     i)
                 );
-            }, [])
+            }, []);
+        return {
+            events: {
+                onClick: s,
+                onMouseEnter: c,
+                onMouseLeave: d
+            },
+            play: s,
+            getDuration: i.useCallback(() => {
+                var e;
+                return null == (e = t.current) ? void 0 : e.getDuration();
+            }, []),
+            Component: u
         };
     };
