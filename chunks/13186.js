@@ -1,33 +1,40 @@
-n.d(t, { Z: () => a });
-var r = n(200651),
-    i = n(192379),
-    l = n(481060),
-    o = n(341402);
-let a = i.forwardRef(function (e, t) {
-    let { body: n, header: i, contentClassName: a, artClassName: s, buttonText: c, onClose: u, className: d, art: p, pointerClassName: h } = e;
-    return (0, r.jsx)('div', {
-        className: d,
+n.d(t, {
+    U: () => u,
+    Z: () => d
+});
+var r,
+    i = n(200651),
+    l = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    c = n(341402),
+    u = (((r = {}).TOP = 'top'), (r.BOTTOM = 'bottom'), r);
+let d = l.forwardRef(function (e, t) {
+    let { body: n, header: r, artClassName: l, buttonText: o, onClose: u, art: d, align: p } = e;
+    return (0, i.jsx)('div', {
+        className: c.tooltip,
         ref: t,
-        children: (0, r.jsxs)('div', {
-            className: a,
+        children: (0, i.jsxs)('div', {
+            className: c.content,
             children: [
-                (0, r.jsx)('div', {
-                    className: s,
-                    children: p
+                (0, i.jsx)('div', {
+                    className: l,
+                    children: d
                 }),
-                (0, r.jsxs)('div', {
-                    className: o.body,
+                (0, i.jsxs)('div', {
+                    className: c.body,
                     children: [
-                        (0, r.jsx)(l.X6q, {
-                            className: o.header,
+                        (0, i.jsx)(s.X6q, {
+                            className: c.header,
                             variant: 'heading-md/bold',
                             color: 'always-white',
-                            children: i
+                            children: r
                         }),
                         null == n
                             ? null
                             : 'string' == typeof n
-                              ? (0, r.jsx)(l.Text, {
+                              ? (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'always-white',
                                     children: n
@@ -35,18 +42,18 @@ let a = i.forwardRef(function (e, t) {
                               : n
                     ]
                 }),
-                (0, r.jsx)('div', {
-                    className: o.buttonContainer,
-                    children: (0, r.jsx)(l.zxk, {
-                        className: o.button,
+                (0, i.jsx)('div', {
+                    className: c.buttonContainer,
+                    children: (0, i.jsx)(s.zxk, {
+                        className: c.button,
                         onClick: (e) => {
                             null == u || u(e);
                         },
-                        color: l.zxk.Colors.BRAND,
-                        children: c
+                        color: s.zxk.Colors.BRAND,
+                        children: o
                     })
                 }),
-                (0, r.jsx)('div', { className: h })
+                (0, i.jsx)('div', { className: a()(c.pointer, { [c.pointerBottom]: 'bottom' === p }) })
             ]
         })
     });
