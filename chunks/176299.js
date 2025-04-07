@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eQ }), n(301563), n(47120);
+n.d(t, { Z: () => eQ }), n(35282), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(540059),
     Z = n(724383),
     x = n(135864),
-    L = n(372900),
-    w = n(63568),
+    w = n(372900),
+    L = n(63568),
     R = n(6039),
     D = n(637853),
     k = n(326145),
@@ -166,7 +166,7 @@ let ev = (0, u.Un)({
         name: 'GuildPowerupsPage',
         renderLoader: eC
     }),
-    eL = (e) => {
+    ew = (e) => {
         let { match: t } = e,
             n = (0, E.l)(),
             i = (0, p.e7)([ee.Z, er.Z], () => {
@@ -190,7 +190,7 @@ let ev = (0, u.Un)({
                     }
             }),
             h = (0, P.C4)(l, 'channel_renderer'),
-            f = (0, w.jS)(l, 'ChannelRenderer');
+            f = (0, L.jS)(l, 'ChannelRenderer');
         if (null != l && null != a && (0, eb.AB)(a))
             switch (a) {
                 case eb.oC.ROLE_SUBSCRIPTIONS:
@@ -250,7 +250,7 @@ let ev = (0, u.Un)({
         }
         return (0, r.jsx)(v.Z, {});
     },
-    ew = i.memo(function () {
+    eL = i.memo(function () {
         let { guildId: e, channelId: t } = (0, Q.Z)(),
             n = (0, p.e7)([er.Z], () => (null != t ? t : er.Z.getChannelId(e)));
         return window.location.pathname.startsWith(em.Z5c.GLOBAL_DISCOVERY) || window.location.pathname.startsWith(em.Z5c.GUILD_DISCOVERY) || (0, q.OG)()
@@ -266,7 +266,7 @@ let ev = (0, u.Un)({
                 )
               : (0, r.jsx)(ep.Z, {});
     }),
-    eR = (e) => (0, r.jsx)(eL, ey({}, e)),
+    eR = (e) => (0, r.jsx)(ew, ey({}, e)),
     eD = (e) => {
         let { location: t } = e;
         return (0, r.jsx)(g.Z, {
@@ -469,7 +469,7 @@ function eq(e) {
                     !o &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(Z, eI(ey({}, x), { children: (0, r.jsx)(ew, {}) })),
+                                (0, r.jsx)(Z, eI(ey({}, x), { children: (0, r.jsx)(eL, {}) })),
                                 O
                                     ? (0, r.jsx)(f.P3F, {
                                           onClick: j,
@@ -547,7 +547,7 @@ function eQ() {
                     className: eN.guilds,
                     themeOverride: n
                 }),
-            (0, r.jsx)(L.Z.Provider, {
+            (0, r.jsx)(w.Z.Provider, {
                 value: (null == f ? void 0 : f.params.guildId) === em.ME || null == f ? void 0 : f.params.guildId,
                 children: (0, r.jsxs)('div', {
                     className: eN.base,

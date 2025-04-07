@@ -8,4 +8,4 @@ function r(e) {
     let o = document.execCommand('copy');
     return t.removeChild(i), o;
 }
-n.d(t, { J: () => r }), n(411104);
+n.d(t, { J: () => r }), n(415506);

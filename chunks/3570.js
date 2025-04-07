@@ -4,22 +4,22 @@ n.d(t, {
 });
 var r = n(536285),
     i = n(703656),
-    o = n(314897),
+    l = n(314897),
     a = n(358085),
-    l = n(981631);
+    o = n(981631);
 let s = a.isPlatformEmbedded
-        ? l.dG4
+        ? o.dG4
         : (e, t) => {
               if (!(0, i.DB)())
-                  return r.default.request(l.Etm.DEEP_LINK, {
+                  return r.default.request(o.Etm.DEEP_LINK, {
                       type: e,
                       params: t
                   });
           },
     c = a.isPlatformEmbedded
-        ? l.dG4
+        ? o.dG4
         : (e, t) => {
-              if (!o.default.isAuthenticated()) {
+              if (!l.default.isAuthenticated()) {
                   var n, r;
                   return s(
                       e,
@@ -48,7 +48,7 @@ let s = a.isPlatformEmbedded
                           }
                           return e;
                       })({}, t || {})),
-                      (r = r = { fingerprint: o.default.getFingerprint() }),
+                      (r = r = { fingerprint: l.default.getFingerprint() }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                           : (function (e, t) {

@@ -62,12 +62,12 @@ t.exports = {
         d && ((S = n({}, S, { nextSibling: w.key })), (w = n({}, w, { prevSibling: S.key })));
         var x = [new g(S), new g(w)],
             k = i.createFromArray(x),
-            E = s.replaceWithFragment(_, m, k),
-            C = E.merge({
+            C = s.replaceWithFragment(_, m, k),
+            E = C.merge({
                 selectionBefore: u,
-                selectionAfter: E.getSelectionAfter().set('hasFocus', !0)
+                selectionAfter: C.getSelectionAfter().set('hasFocus', !0)
             });
-        return c.push(t, C, 'insert-fragment');
+        return c.push(t, E, 'insert-fragment');
     },
     moveAtomicBlock: function (t, e, r, n) {
         var i,

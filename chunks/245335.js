@@ -4,7 +4,7 @@ n.d(t, {
     wx: () => r,
     xf: () => i
 }),
-    n(47120);
+    n(388685);
 var r = (function (e) {
     return (e[(e.GUILD = 0)] = 'GUILD'), (e[(e.GROUP_DM = 1)] = 'GROUP_DM'), (e[(e.FRIEND = 2)] = 'FRIEND'), e;
 })({});

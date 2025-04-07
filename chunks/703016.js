@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(757143), n(301563), n(733860);
+n.d(t, { Z: () => F }), n(704826), n(35282), n(290780);
 var r = n(913527),
     i = n.n(r),
     l = n(570140),
@@ -29,12 +29,12 @@ var r = n(913527),
 let A = [],
     Z = null,
     x = null,
-    L = null,
-    w = /\|\|([\s\S]+?)\|\|/g;
+    w = null,
+    L = /\|\|([\s\S]+?)\|\|/g;
 function R(e, t, n, r) {
     let l = b.Z.getGuild(n),
         a = e
-            .replace(w, j.NW.string(j.t['F+x38P']))
+            .replace(L, j.NW.string(j.t['F+x38P']))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var r;
                 let i = I.default.getUser(t);
@@ -70,11 +70,11 @@ function R(e, t, n, r) {
 function D() {
     if (!o.Zh) return !1;
     let e = d.default.locale;
-    if (null == L) {
+    if (null == w) {
         var t;
-        L = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
+        w = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
     }
-    let n = L.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
+    let n = w.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
     x = n.length > 0 ? n[0] : null;
 }
 async function k(e, t, n, r, i) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(610138), n(216116), n(78328), n(815648), n(47120), n(301563), n(757143);
+n.d(t, { Z: () => x }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -51,8 +51,8 @@ let x = function (e) {
             p.Y(T.Z5c.FRIENDS), (0, N.e)('friends');
         }, []);
     let x = (0, c.e7)([y.Z], () => y.Z.theme),
-        L = (0, v.If)(),
-        { section: w, rows: R } = (0, c.cj)([I.ZP], () => I.ZP.getState()),
+        w = (0, v.If)(),
+        { section: L, rows: R } = (0, c.cj)([I.ZP], () => I.ZP.getState()),
         D = (0, c.e7)([b.Z], () => b.Z.getSuggestionCount()),
         k = i.useMemo(() => R.getRelationshipCounts(), [R]);
     i.useEffect(() => {
@@ -82,14 +82,14 @@ let x = function (e) {
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
                         j.NW.string(j.t.p6IHGB),
-                        L > 0 &&
+                        w > 0 &&
                             (0, r.jsx)(u.mAB, {
-                                count: L,
+                                count: w,
                                 className: A.badge
                             })
                     ]
                 }),
-                ariaLabel: j.NW.formatToPlainString(j.t.OAC0Z2, { count: L.toString() }),
+                ariaLabel: j.NW.formatToPlainString(j.t.OAC0Z2, { count: w.toString() }),
                 className: A.item
             },
             {
@@ -141,7 +141,7 @@ let x = function (e) {
                             (0, r.jsx)(_.Z.Divider, {}),
                             (0, r.jsx)(u.njP, {
                                 'aria-label': j.NW.string(j.t.TdEu5e),
-                                selectedItem: w,
+                                selectedItem: L,
                                 type: 'top-pill',
                                 onItemSelect: M,
                                 className: A.tabBar,
@@ -165,10 +165,10 @@ let x = function (e) {
                 className: A.tabBody,
                 children: [
                     (0, r.jsx)(u.njP.Panel, {
-                        id: w,
+                        id: L,
                         className: A.peopleColumn,
                         'aria-labelledby': G,
-                        children: w === T.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: G })
+                        children: L === T.pJs.ADD_FRIEND ? (0, r.jsx)(C.Z, {}) : (0, r.jsx)(S.Z, { titleId: G })
                     }),
                     (0, r.jsx)('div', {
                         className: A.nowPlayingColumn,

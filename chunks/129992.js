@@ -70,7 +70,7 @@ t.exports = function (t, e) {
             text: m.getText().slice(0, g) + _.getText().slice(v),
             characterList: o
         }),
-        E =
+        C =
             b && 0 === g && 0 === v && _.getParentKey() === d && null == _.getPrevSiblingKey()
                 ? a([[d, null]])
                 : h
@@ -88,13 +88,13 @@ t.exports = function (t, e) {
                       .map(function (t, e) {
                           return e === d ? k : null;
                       }),
-        C = h.merge(E).filter(function (t) {
+        E = h.merge(C).filter(function (t) {
             return !!t;
         });
     return (
         b &&
             m !== _ &&
-            (C = (r = C).withMutations(function (t) {
+            (E = (r = E).withMutations(function (t) {
                 if (
                     (u(m.getKey(), t, function (e) {
                         return e.merge({
@@ -186,7 +186,7 @@ t.exports = function (t, e) {
                 }
             })),
         t.merge({
-            blockMap: C,
+            blockMap: E,
             selectionBefore: e,
             selectionAfter: e.merge({
                 anchorKey: d,

@@ -1,8 +1,8 @@
 n.r(t),
     n.d(t, {
         loadVideoQuestModal: () => Z,
-        maybeShowSurveyForQuest: () => V,
-        navigateToQuestHome: () => F,
+        maybeShowSurveyForQuest: () => F,
+        navigateToQuestHome: () => V,
         openAppWithQuest: () => Y,
         openDisclosureModal: () => B,
         openQuestInGameRewardModal: () => U,
@@ -180,7 +180,7 @@ function B(e, t) {
                 );
         });
 }
-function F() {
+function V() {
     let { fromContent: e, questId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, N.Z.getState().setUtmCurrentContext)({
         utmSourceCurrent: M,
@@ -191,7 +191,7 @@ function F() {
     let n = null != t ? '#'.concat(t) : '';
     l.Z.setState({ selectedTab: R.GlobalDiscoveryTab.QUESTS }), (0, u.uL)(C.Z5c.QUEST_HOME + n);
 }
-function V(e) {
+function F(e) {
     let t = (0, I.T)({ quest: e }),
         n = { location: A.dr.QUESTS_BAR };
     if (!(0, O.j)(n)) return;
@@ -203,7 +203,7 @@ function V(e) {
         });
 }
 function Z() {
-    return Promise.all([n.e('29976'), n.e('27458'), n.e('32249'), n.e('60333')]).then(n.bind(n, 536687));
+    return Promise.all([n.e('66816'), n.e('27458'), n.e('32249'), n.e('60333')]).then(n.bind(n, 536687));
 }
 function H(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],

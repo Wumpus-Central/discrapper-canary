@@ -1,4 +1,4 @@
-r.d(t, { Z: () => h }), r(266796), r(47120);
+r.d(t, { Z: () => h }), r(953529), r(388685);
 var n = r(200651),
     l = r(192379),
     i = r(120356),
@@ -167,15 +167,15 @@ function h(e) {
         I = S === d.gH.LOADING,
         [k, Z] = l.useState(!1),
         [T, D] = l.useState(() => new Set(r.filter((e) => e.default).map((e) => e.value))),
-        [L, _] = l.useState(T),
-        R = l.useMemo(() => r.some((e) => null != e.emoji), [r]);
+        [L, R] = l.useState(T),
+        _ = l.useMemo(() => r.some((e) => null != e.emoji), [r]);
     l.useEffect(() => {
         if ((null == x ? void 0 : x.type) === s.re.STRING_SELECT) {
             let e = new Set(x.values);
-            D(e), _(e);
+            D(e), R(e);
         } else {
             let e = new Set(P);
-            D(e), _(e);
+            D(e), R(e);
         }
     }, [i, P, x]);
     let A = l.useCallback(() => {
@@ -184,8 +184,8 @@ function h(e) {
                 type: s.re.STRING_SELECT,
                 values: Array.from(T)
             }) &&
-            _(T);
-    }, [T, L, _, w]);
+            R(T);
+    }, [T, L, R, w]);
     l.useEffect(() => {
         !k && ((T.size === L.size && Array.from(L).every((e) => T.has(e))) || A());
     }, [k, T, L, A]);
@@ -219,7 +219,7 @@ function h(e) {
                                         m,
                                         y(O({}, e), {
                                             isDisabled: N && !T.has(e.value) && T.size === c,
-                                            isOffset: R
+                                            isOffset: _
                                         })
                                     ),
                                 renderOptionValue: (e) => (N ? (0, n.jsx)(g, { options: e }) : (0, n.jsx)(j, O({}, e[0])))

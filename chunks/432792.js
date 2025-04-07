@@ -1,269 +1,269 @@
 n.d(t, {
-    M: () => N,
-    VK: () => k,
-    WS: () => I,
-    t4: () => y,
-    tE: () => P
+    M: () => A,
+    VK: () => b,
+    WS: () => L,
+    t4: () => N,
+    tE: () => y
 }),
-    n(47120),
-    n(266796);
-var r = n(200651),
-    o = n(192379),
-    a = n(120356),
-    i = n.n(a),
-    s = n(442837),
-    c = n(704215),
-    l = n(481060),
+    n(388685),
+    n(953529);
+var l = n(200651),
+    r = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    a = n(442837),
+    s = n(704215),
+    c = n(481060),
     u = n(350810),
     d = n(607070),
-    b = n(70097),
-    m = n(605236),
-    f = n(930153),
-    p = n(822857),
+    E = n(70097),
+    f = n(605236),
+    p = n(930153),
+    C = n(822857),
     h = n(622562),
-    g = n(937860),
-    _ = n(921944),
-    O = n(973792),
-    j = n(447489),
-    v = n(484885);
-function x() {
-    return (x =
+    _ = n(937860),
+    g = n(921944),
+    S = n(973792),
+    O = n(447489),
+    T = n(484885);
+function I() {
+    return (I =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                for (var l in n) Object.prototype.hasOwnProperty.call(n, l) && (e[l] = n[l]);
             }
             return e;
         }).apply(this, arguments);
 }
-let y = () => (0, f.Lk)(document.body.style.getPropertyValue('--custom-app-panels-height'), 56) + 8,
-    C = {
-        discover: c.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
-        shop: c.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK
+let N = () => (0, p.Lk)(document.body.style.getPropertyValue('--custom-app-panels-height'), 56) + 8,
+    m = {
+        discover: s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,
+        shop: s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK
     },
-    N = (e) => {
-        let { onboardingCoachmarkType: t, prevCoachmarksDismissed: n = !0, onShowCoachmarkHandler: r } = e,
-            a = (0, m.wE)(c.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
-            { enabled: i } = (0, p.W)({ location: 'virtual_currency_onboarding_coachmark' }),
-            s = (0, m.wE)(C[t]),
-            l = i && a && n && !s,
-            u = o.useCallback(() => {
-                s ||
-                    (0, m.EW)(C[t], {
+    A = (e) => {
+        let { onboardingCoachmarkType: t, prevCoachmarksDismissed: n = !0, onShowCoachmarkHandler: l } = e,
+            i = (0, f.wE)(s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
+            { enabled: o } = (0, C.W)({ location: 'virtual_currency_onboarding_coachmark' }),
+            a = (0, f.wE)(m[t]),
+            c = o && i && n && !a,
+            u = r.useCallback(() => {
+                a ||
+                    (0, f.EW)(m[t], {
                         forceTrack: !0,
-                        dismissAction: _.L.USER_DISMISS
+                        dismissAction: g.L.USER_DISMISS
                     });
-            }, [s, t]),
-            [d, b] = o.useState(!1);
+            }, [a, t]),
+            [d, E] = r.useState(!1);
         return (
-            o.useEffect(() => {
-                l ? d || (void 0 !== r && r(), b(!0)) : d && b(!1);
-            }, [l, r, d]),
+            r.useEffect(() => {
+                c ? d || (void 0 !== l && l(), E(!0)) : d && E(!1);
+            }, [c, l, d]),
             {
                 shouldShow: d,
                 closeCoachmarkIfOpen: u
             }
         );
     },
-    k = (e) => {
-        let { invertTail: t, leftOffset: n, rightOffset: o, tailSpineClassName: a, tailTargetInnerClassName: s } = e;
-        return (0, r.jsxs)('div', {
-            className: i()(O.tail, t ? O.tailPositionInverted : O.tailPositionNormal),
+    b = (e) => {
+        let { invertTail: t, leftOffset: n, rightOffset: r, tailSpineClassName: i, tailTargetInnerClassName: a } = e;
+        return (0, l.jsxs)('div', {
+            className: o()(S.tail, t ? S.tailPositionInverted : S.tailPositionNormal),
             style: {
                 left: n,
-                right: o
+                right: r
             },
             children: [
-                (0, r.jsx)('div', { className: i()(O.tailSpine, a) }),
-                (0, r.jsx)('div', {
-                    className: i()(O.tailTargetOuter, t ? O.tailTargetPositionInverted : O.tailTargetPositionNormal),
-                    children: (0, r.jsx)('svg', {
+                (0, l.jsx)('div', { className: o()(S.tailSpine, i) }),
+                (0, l.jsx)('div', {
+                    className: o()(S.tailTargetOuter, t ? S.tailTargetPositionInverted : S.tailTargetPositionNormal),
+                    children: (0, l.jsx)('svg', {
                         xmlns: 'http://www.w3.org/2000/svg',
                         width: '8',
                         height: '8',
                         viewBox: '0 0 8 8',
                         fill: 'none',
-                        children: (0, r.jsx)('circle', {
+                        children: (0, l.jsx)('circle', {
                             cx: '50%',
                             cy: '50%',
                             r: '3',
-                            className: i()(O.tailTargetInner, s)
+                            className: o()(S.tailTargetInner, a)
                         })
                     })
                 })
             ]
         });
     },
-    w = (e) => {
+    P = (e) => {
         let { customIconSrcs: t } = e,
-            n = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-            o = void 0 !== t ? t.animated : v.Z,
-            a = void 0 !== t ? t.static : j.Z;
-        return n || null == o
-            ? (0, r.jsx)('img', {
-                  src: a,
-                  className: O.orbAsset,
+            n = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+            r = void 0 !== t ? t.animated : T.Z,
+            i = void 0 !== t ? t.static : O.Z;
+        return n || null == r
+            ? (0, l.jsx)('img', {
+                  src: i,
+                  className: S.orbAsset,
                   alt: 'Orb'
               })
-            : (0, r.jsxs)(b.Z, {
+            : (0, l.jsxs)(E.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: O.orbAsset,
+                  className: S.orbAsset,
                   children: [
-                      (0, r.jsx)('source', {
-                          src: v.Z,
+                      (0, l.jsx)('source', {
+                          src: T.Z,
                           type: 'video/webm'
                       }),
-                      (0, r.jsx)('img', {
-                          src: j.Z,
-                          className: O.orbAsset,
+                      (0, l.jsx)('img', {
+                          src: O.Z,
+                          className: S.orbAsset,
                           alt: 'Orb'
                       })
                   ]
               });
     },
-    T = (e) => {
-        let { titleText: t, descriptionText: n, onClose: o, onCtaClick: a, ctaText: i, iconComponent: s, tailLeftOffset: c = 22, renderTail: u, invertCoachmark: d = !1, coachmarkRef: b } = e;
-        return (0, r.jsxs)('div', {
-            className: O.container,
-            ref: b,
+    v = (e) => {
+        let { titleText: t, descriptionText: n, onClose: r, onCtaClick: i, ctaText: o, iconComponent: a, tailLeftOffset: s = 22, renderTail: u, invertCoachmark: d = !1, coachmarkRef: E } = e;
+        return (0, l.jsxs)('div', {
+            className: S.container,
+            ref: E,
             children: [
-                (0, r.jsx)(g.s, { onClick: o }),
-                s,
-                (0, r.jsxs)('div', {
-                    className: O.content,
+                (0, l.jsx)(_.s, { onClick: r }),
+                a,
+                (0, l.jsxs)('div', {
+                    className: S.content,
                     children: [
-                        (0, r.jsx)(l.X6q, {
-                            className: O.title,
+                        (0, l.jsx)(c.X6q, {
+                            className: S.title,
                             variant: 'heading-md/bold',
                             children: t
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, l.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            className: O.description,
+                            className: S.description,
                             children: n
                         })
                     ]
                 }),
-                void 0 !== i &&
-                    (0, r.jsx)(l.zxk, {
-                        className: O.ctaButton,
-                        color: l.zxk.Colors.BRAND,
-                        look: l.zxk.Looks.FILLED,
-                        onClick: a,
+                void 0 !== o &&
+                    (0, l.jsx)(c.zxk, {
+                        className: S.ctaButton,
+                        color: c.zxk.Colors.BRAND,
+                        look: c.zxk.Looks.FILLED,
+                        onClick: i,
                         fullWidth: !0,
-                        children: i
+                        children: o
                     }),
                 u &&
-                    (0, r.jsx)(k, {
-                        leftOffset: c,
+                    (0, l.jsx)(b, {
+                        leftOffset: s,
                         invertTail: d
                     })
             ]
         });
     },
-    P = (e) => {
-        var t = x(
+    y = (e) => {
+        var t = I(
             {},
             (function (e) {
                 if (null == e) throw TypeError('Cannot destructure ' + e);
                 return e;
             })(e)
         );
-        return (0, r.jsx)(
-            T,
+        return (0, l.jsx)(
+            v,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        l = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (l = l.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        l.forEach(function (t) {
+                            var l;
+                            (l = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: l,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = l);
                         });
                 }
                 return e;
-            })({ iconComponent: (0, r.jsx)(w, { customIconSrcs: t.customIconSrcs }) }, t)
+            })({ iconComponent: (0, l.jsx)(P, { customIconSrcs: t.customIconSrcs }) }, t)
         );
     };
-function I(e) {
-    let { calculateVisibility: t, children: n, popoutElement: a, positionControlRef: i, targetElementRef: s, defaultCoachmarkPosition: c, disableAutoInvert: d, onGetTargetElementDimensions: b, spacing: m } = e,
-        [f, p] = o.useState('bottom' === c),
-        [g, _] = o.useState(!0),
-        [O, j] = o.useState(String(Date.now())),
-        v = (0, u.Z)(),
-        x = o.useCallback(
+function L(e) {
+    let { calculateVisibility: t, children: n, popoutElement: i, positionControlRef: o, targetElementRef: a, defaultCoachmarkPosition: s, disableAutoInvert: d, onGetTargetElementDimensions: E, spacing: f } = e,
+        [p, C] = r.useState('bottom' === s),
+        [_, g] = r.useState(!0),
+        [S, O] = r.useState(String(Date.now())),
+        T = (0, u.Z)(),
+        I = r.useCallback(
             (e) => {
                 let n = t(e);
-                n !== g && _(n);
+                n !== _ && g(n);
             },
-            [g, t]
+            [_, t]
         ),
-        y = s.current,
-        C = o.useCallback(() => {
-            null != i && null != i.current && i.current.updateElementPosition();
-        }, [i]);
-    o.useEffect(
+        N = a.current,
+        m = r.useCallback(() => {
+            null != o && null != o.current && o.current.updateElementPosition();
+        }, [o]);
+    r.useEffect(
         () => (
-            null != y && y.ownerDocument.addEventListener('scroll', C, !0),
+            null != N && N.ownerDocument.addEventListener('scroll', m, !0),
             () => {
-                null != y && y.ownerDocument.removeEventListener('scroll', C, !0);
+                null != N && N.ownerDocument.removeEventListener('scroll', m, !0);
             }
         ),
-        [y, C]
+        [N, m]
     );
-    let N = o.useCallback(
+    let A = r.useCallback(
         (e) => {
-            let { height: t, width: n, elementBoundingRect: r, hasElementPositionChanged: o } = e;
+            let { height: t, width: n, elementBoundingRect: l, hasElementPositionChanged: r } = e;
             if (
-                (null != b &&
-                    b({
+                (null != E &&
+                    E({
                         height: t,
                         width: n
                     }),
-                null != r)
+                null != l)
             ) {
-                if ((x(r), o && j(String(Date.now())), d)) return;
-                let e = r.top < window.innerHeight / 2;
-                if (e === f) return;
-                p(e), j(String(Date.now()));
+                if ((I(l), r && O(String(Date.now())), d)) return;
+                let e = l.top < window.innerHeight / 2;
+                if (e === p) return;
+                C(e), O(String(Date.now()));
             }
         },
-        [f, x, b, d]
+        [p, I, E, d]
     );
     (0, h.fu)({
-        onGetElementDimensionsAndBoundingRect: N,
-        positionControlRef: i,
+        onGetElementDimensionsAndBoundingRect: A,
+        positionControlRef: o,
         shouldPollPositionOnMount: !0,
-        targetElementRef: s
+        targetElementRef: a
     });
-    let k = o.Children.map(a, (e) => o.cloneElement(e, { invertCoachmark: f })),
-        w = o.useMemo(() => (d ? (null != c ? c : 'bottom') : f ? 'bottom' : 'top'), [d, c, f]),
-        T = g && !v;
-    return (0, r.jsx)(l.yRy, {
+    let b = r.Children.map(i, (e) => r.cloneElement(e, { invertCoachmark: p })),
+        P = r.useMemo(() => (d ? (null != s ? s : 'bottom') : p ? 'bottom' : 'top'), [d, s, p]),
+        v = _ && !T;
+    return (0, l.jsx)(c.yRy, {
         autoInvert: !1,
-        renderPopout: () => k,
-        position: w,
+        renderPopout: () => b,
+        position: P,
         align: 'left',
-        shouldShow: T,
-        spacing: m,
-        positionKey: O,
-        animation: l.yRy.Animation.TRANSLATE,
-        targetElementRef: s,
+        shouldShow: v,
+        spacing: f,
+        positionKey: S,
+        animation: c.yRy.Animation.TRANSLATE,
+        targetElementRef: a,
         children: () => n
     });
 }

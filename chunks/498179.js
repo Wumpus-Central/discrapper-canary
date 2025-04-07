@@ -52,7 +52,7 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = a.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: x, source: y, hover: v, innerClassName: E } = e,
+    let { application: t, fullWidth: n = !1, size: m = a.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: x, source: y, hover: E, innerClassName: v } = e,
         O = {
             fullWidth: n,
             size: m,
@@ -61,13 +61,13 @@ function m(e) {
             tooltipPosition: _,
             onClick: b,
             className: x,
-            hover: v,
-            innerClassName: E
+            hover: E,
+            innerClassName: v
         },
         N = (0, i.e7)([l.Z], () => l.Z.getActiveLibraryApplication(t.id)),
         j = null != N ? N.sku.id : null,
         C = null != j ? j : t.primarySkuId,
-        I = (0, i.e7)([o.Z], () => null != C && !o.Z.didFetchingSkuFail(C));
+        S = (0, i.e7)([o.Z], () => null != C && !o.Z.didFetchingSkuFail(C));
     return null != N && (0, s.Je)(N)
         ? (0, r.jsx)(
               u.Z,
@@ -76,7 +76,7 @@ function m(e) {
                   source: y
               })
           )
-        : I
+        : S
           ? (0, r.jsx)('div', { children: 'deprecated!' })
           : (0, r.jsx)(
                 c.Z,

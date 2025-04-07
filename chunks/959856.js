@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(773603), n(411104), n(47120), n(600040);
+n.d(t, { Z: () => A }), n(457542), n(415506), n(388685), n(600040);
 var r = n(512722),
     i = n.n(r),
     o = n(264344),
@@ -43,7 +43,7 @@ class A extends l.Z {
         this.interacted || (document.createElement('audio').play(), (this.interacted = !0)), this.eachConnection((e) => e.interact());
     }
     static supported() {
-        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (N.info('WebRTC is not supported on', a().name, a().version), !1));
+        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(266370), !0) : (N.info('WebRTC is not supported on', a().name, a().version), !1));
     }
     supported() {
         return !0;

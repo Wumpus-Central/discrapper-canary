@@ -1,4 +1,4 @@
-r.d(t, { default: () => x }), r(47120);
+r.d(t, { default: () => x }), r(388685);
 var n = r(200651),
     i = r(192379),
     o = r(442837),
@@ -19,8 +19,8 @@ function x(e) {
     let { transitionState: t, analyticsLocations: r, onClose: c } = e,
         d = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         { analyticsLocations: v } = (0, s.ZP)(r, a.Z.EDIT_NAMEPLATE_MODAL),
-        { available: f, purchased: h, isFetchingCategories: x, isFetchingPurchases: _ } = (0, u.yV)('NameplateModal'),
-        O = x || (_ && 0 === h.length);
+        { available: f, purchased: h, isFetchingCategories: x, isFetchingPurchases: y } = (0, u.yV)('NameplateModal'),
+        O = x || (y && 0 === h.length);
     return (
         (0, i.useEffect)(() => {
             b.default.track(m.rMx.OPEN_MODAL, {
@@ -40,7 +40,7 @@ function x(e) {
                                 className: g.spinner,
                                 type: l.$jN.Type.SPINNING_CIRCLE
                             })
-                          : (0, n.jsx)(y, {
+                          : (0, n.jsx)(_, {
                                 user: d,
                                 onClose: c,
                                 available: f,
@@ -51,7 +51,7 @@ function x(e) {
               })
     );
 }
-function y(e) {
+function _(e) {
     let { user: t, available: r, purchased: o, analyticsLocations: s, onClose: u } = e,
         p = o.find((e) => {
             var r, n;
@@ -59,7 +59,7 @@ function y(e) {
         }),
         { pendingNameplate: b } = (0, d._A)(),
         [m, x] = (0, i.useState)(() => (void 0 !== b ? b : null != p ? p : null)),
-        [y, _] = (0, i.useState)(null != m),
+        [_, y] = (0, i.useState)(null != m),
         O = (0, i.useCallback)(
             (e) => {
                 u(),
@@ -94,7 +94,7 @@ function y(e) {
                     (0, n.jsx)(f.Z, {
                         selected: m,
                         onSelect: (e, t) => {
-                            x(e), _(null != t && t);
+                            x(e), y(null != t && t);
                         },
                         onOpenShop: O,
                         available: r,
@@ -103,13 +103,13 @@ function y(e) {
                     (0, n.jsx)(v.Z, {
                         user: t,
                         selectedNameplate: m,
-                        purchased: y
+                        purchased: _
                     })
                 ]
             }),
             (0, n.jsxs)(l.mzw, {
                 children: [
-                    y || null == m
+                    _ || null == m
                         ? (0, n.jsx)(l.zxk, {
                               disabled: void 0 === m,
                               onClick: () => {

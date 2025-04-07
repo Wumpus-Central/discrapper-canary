@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(266796);
+n.d(t, { Z: () => y }), n(953529);
 var r = n(200651),
     s = n(120356),
     o = n.n(s),
@@ -11,7 +11,7 @@ var r = n(200651),
     f = n(477839),
     p = n(388032),
     m = n(458430),
-    g = n(733);
+    g = n(225893);
 function b(e) {
     let { name: t, description: n, pointsDescription: s, points: o, cost: u, iconSrc: f, currentPoints: b, onPurchase: y } = e,
         h = 'string' == typeof t ? t : p.NW.format(t, { numPurchasing: 0 }),

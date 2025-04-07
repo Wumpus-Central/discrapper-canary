@@ -1,5 +1,5 @@
-n.d(t, { nZ: () => l });
-let a = (0, n(818083).B)({
+n.d(t, { nZ: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-10_block_user_feedback',
     label: 'Block User Feedback Experiment',
@@ -12,7 +12,7 @@ let a = (0, n(818083).B)({
         }
     ]
 });
-function l(e) {
-    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function i(e) {
+    let { enabled: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }

@@ -2,9 +2,9 @@ n.d(t, {
     S: () => v,
     d: () => y
 }),
-    n(47120),
-    n(230036),
-    n(653041);
+    n(388685),
+    n(642613),
+    n(539854);
 var r = n(392711),
     i = n.n(r),
     o = n(47770),
@@ -14,7 +14,7 @@ var r = n(392711),
     c = n(709054),
     u = n(909766),
     d = n(140828),
-    f = n(255914);
+    f = n(674466);
 function _(e, t, n) {
     return (
         t in e
@@ -421,7 +421,7 @@ class v extends o.Z {
                 },
                 h
             ),
-            { bytes: b, framesDropped: y, framesCodecError: v, framesCodec: O, framesNetwork: I, packets: S, packetsLost: T, nackCount: N, pliCount: A, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: F, qualityDecodeErrors: V, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: W, qualitySizeMismatches: Y } = e.aggregatedProperties;
+            { bytes: b, framesDropped: y, framesCodecError: v, framesCodec: O, framesNetwork: I, packets: S, packetsLost: T, nackCount: N, pliCount: A, qpSum: C, pauseCount: R, freezeCount: P, totalPausesDuration: w, totalFreezesDuration: D, totalFramesDuration: L, keyframes: x, passthroughCount: M, cryptorSuccessCount: k, cryptorFailureCount: j, cryptorDuration: U, cryptorAttempts: G, cryptorMissingKeyCount: B, cryptorInvalidNonceCount: V, qualityDecodeErrors: F, qualityDecoderReboots: Z, qualityScoreErrors: H, qualityFrameDrops: W, qualitySizeMismatches: Y } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((E.sender_freeze_count = P), (E.sender_total_freezes_duration = D), (E.sender_total_frames_duration = L)) : ((E.receiver_freeze_count = P), (E.receiver_total_freezes_duration = D), (E.receiver_total_frames_duration = L), (E.receiver_pause_count = R), (E.receiver_total_pauses_duration = w)),
             m(p({}, E), {
@@ -444,8 +444,8 @@ class v extends o.Z {
                 cryptor_duration: U,
                 cryptor_attempts: G,
                 cryptor_missing_key_count: B,
-                cryptor_invalid_nonce_count: F,
-                encoder_quality_decode_errors: V,
+                cryptor_invalid_nonce_count: V,
+                encoder_quality_decode_errors: F,
                 encoder_quality_decoder_reboots: Z,
                 encoder_quality_score_errors: H,
                 encoder_quality_frame_drops: W,

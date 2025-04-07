@@ -1,33 +1,33 @@
-o.d(t, { e: () => i });
-var r = o(200651);
-o(192379);
-var n = o(314897),
-    a = o(449934),
-    s = o(857458),
-    l = o(981631);
-function i(e, t) {
-    var o, i;
+n.d(t, { e: () => s });
+var r = n(200651);
+n(192379);
+var i = n(314897),
+    l = n(449934),
+    a = n(857458),
+    o = n(981631);
+function s(e, t) {
+    var n, s;
     let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { passProps: !0 };
-    function d(o) {
-        return !(0, a.$8)() && n.default.getLoginStatus() !== l.u34.LOGGING_IN && n.default.allowLogoutRedirect()
+    function u(n) {
+        return !(0, l.$8)() && i.default.getLoginStatus() !== o.u34.LOGGING_IN && i.default.allowLogoutRedirect()
             ? null != t
-                ? (0, r.jsx)(t, { renderRedirect: (0, r.jsx)(s.Z, {}) })
-                : (0, r.jsx)(s.Z, {})
+                ? (0, r.jsx)(t, { renderRedirect: (0, r.jsx)(a.Z, {}) })
+                : (0, r.jsx)(a.Z, {})
             : (0, r.jsx)(
                   e,
                   (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
-                          var o = null != arguments[t] ? arguments[t] : {},
-                              r = Object.keys(o);
+                          var n = null != arguments[t] ? arguments[t] : {},
+                              r = Object.keys(n);
                           'function' == typeof Object.getOwnPropertySymbols &&
                               (r = r.concat(
-                                  Object.getOwnPropertySymbols(o).filter(function (e) {
-                                      return Object.getOwnPropertyDescriptor(o, e).enumerable;
+                                  Object.getOwnPropertySymbols(n).filter(function (e) {
+                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                   })
                               )),
                               r.forEach(function (t) {
                                   var r;
-                                  (r = o[t]),
+                                  (r = n[t]),
                                       t in e
                                           ? Object.defineProperty(e, t, {
                                                 value: r,
@@ -39,8 +39,8 @@ function i(e, t) {
                               });
                       }
                       return e;
-                  })({}, c.passProps ? o : null)
+                  })({}, c.passProps ? n : null)
               );
     }
-    return (d.displayName = 'Authenticated('.concat(null != (i = null != (o = e.displayName) ? o : e.name) ? i : '<Unknown>', ')')), d;
+    return (u.displayName = 'Authenticated('.concat(null != (s = null != (n = e.displayName) ? n : e.name) ? s : '<Unknown>', ')')), u;
 }

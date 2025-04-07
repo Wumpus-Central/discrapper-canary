@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     modal: 'modal__24654',
     footer: 'footer__24654',
     footerButtons: 'footerButtons__24654',

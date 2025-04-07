@@ -11,9 +11,9 @@ function n(t) {
         let d = t.users[0],
             s = null == d || null == (e = d.statistics[c.E.LOL_MOST_PLAYED_CHAMPION_ID]) ? void 0 : e.value;
         try {
-            return null != s ? a(624119)('./champion_'.concat(s, '.jpg')).default : a(721191).Z;
+            return null != s ? a(624119)('./champion_'.concat(s, '.jpg')).default : a(610067).Z;
         } catch (t) {
-            return a(721191).Z;
+            return a(610067).Z;
         }
     }
     return null != t.settings.splash_asset_id ? (0, d.xF)(t.settings.application_id, t.settings.splash_asset_id) : null;

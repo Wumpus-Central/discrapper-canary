@@ -5,8 +5,8 @@ n.d(t, {
     n_: () => er,
     vk: () => et
 }),
-    n(47120),
-    n(266796);
+    n(388685),
+    n(953529);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -45,8 +45,8 @@ var r = n(200651),
     U = n(74538),
     G = n(886132),
     B = n(524444),
-    F = n(981631),
-    V = n(176505),
+    V = n(981631),
+    F = n(176505),
     Z = n(474936),
     H = n(388032),
     W = n(239594);
@@ -105,8 +105,8 @@ function q(e, t) {
 let Q = 32,
     X = 12,
     J = () => ({
-        page: null != (0, l.e7)([L.Z], () => L.Z.getGuildId()) ? F.ZY5.GUILD_CHANNEL : F.ZY5.DM_CHANNEL,
-        section: F.jXE.EMOJI_UPSELL_POPOUT
+        page: null != (0, l.e7)([L.Z], () => L.Z.getGuildId()) ? V.ZY5.GUILD_CHANNEL : V.ZY5.DM_CHANNEL,
+        section: V.jXE.EMOJI_UPSELL_POPOUT
     }),
     $ = (e) => {
         let { node: t } = e;
@@ -160,7 +160,7 @@ let Q = 32,
             }),
             f = (n = null == n || n) || t.isDiscoverable(),
             _ = () => {
-                t.isDiscoverable() ? (0, j.Ub)(o, {}) : n && (0, w.uL)(F.Z5c.CHANNEL(o, D.Z.getChannelId(o)));
+                t.isDiscoverable() ? (0, j.Ub)(o, {}) : n && (0, w.uL)(V.Z5c.CHANNEL(o, D.Z.getChannelId(o)));
             },
             p = () =>
                 null != d && f
@@ -355,7 +355,7 @@ let Q = 32,
                 shouldHideRoleSubscriptionCTA: eo,
                 onOpenPremiumSettings: () => {
                     C(),
-                        M.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
+                        M.default.track(V.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: $.page,
                             location_section: $.section
                         }),
@@ -384,7 +384,7 @@ let Q = 32,
                         } catch (e) {}
                     },
                     t = () => {
-                        C(), (null == S ? void 0 : S.id) != null && d.Z.transitionToGuildSync(S.id, { sourceLocationStack: [_.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, V.oC.ROLE_SUBSCRIPTIONS);
+                        C(), (null == S ? void 0 : S.id) != null && d.Z.transitionToGuildSync(S.id, { sourceLocationStack: [_.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, F.oC.ROLE_SUBSCRIPTIONS);
                     },
                     n = !Q && X,
                     i = () =>
@@ -456,7 +456,7 @@ let Q = 32,
                 var e, t;
                 let n = null != I && !Q && X && (null != (t = null == I || null == (e = I.emojis) ? void 0 : e.length) ? t : 0) > 1,
                     i = () => {
-                        n && (null == w || w(), eh || k || M.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), em(!eh));
+                        n && (null == w || w(), eh || k || M.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), em(!eh));
                     },
                     o = () => {
                         let e = H.NW.string(H.t.pnsAS0);

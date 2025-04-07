@@ -1,26 +1,26 @@
-r.d(t, { B: () => o });
-var n = r(913527),
-    a = r.n(n),
-    c = r(388032);
-let o = [
+n.d(t, { B: () => a });
+var r = n(913527),
+    i = n.n(r),
+    l = n(388032);
+let a = [
     {
-        getDueAt: () => a()().add(30, 'minutes').toDate(),
-        getLabel: () => c.NW.string(c.t['OV8l/P'])
+        getDueAt: () => i()().add(30, 'minutes').toDate(),
+        getLabel: () => l.NW.string(l.t['OV8l/P'])
     },
     {
-        getDueAt: () => a()().add(1, 'hour').toDate(),
-        getLabel: () => c.NW.string(c.t['zf0R+/'])
+        getDueAt: () => i()().add(1, 'hour').toDate(),
+        getLabel: () => l.NW.string(l.t['zf0R+/'])
     },
     {
-        getDueAt: () => a()().add(4, 'hour').toDate(),
-        getLabel: () => c.NW.string(c.t['5gztZG'])
+        getDueAt: () => i()().add(4, 'hour').toDate(),
+        getLabel: () => l.NW.string(l.t['5gztZG'])
     },
     {
-        getDueAt: () => a()().add(1, 'day').startOf('day').add(9, 'hours').toDate(),
-        getLabel: () => c.NW.string(c.t['7MKr2N'])
+        getDueAt: () => i()().add(1, 'day').startOf('day').add(9, 'hours').toDate(),
+        getLabel: () => l.NW.string(l.t['7MKr2N'])
     },
     {
-        getDueAt: () => a()().day(8).startOf('day').add(9, 'hours').toDate(),
-        getLabel: () => c.NW.string(c.t['q+Ls09'])
+        getDueAt: () => i()().day(8).startOf('day').add(9, 'hours').toDate(),
+        getLabel: () => l.NW.string(l.t['q+Ls09'])
     }
 ];

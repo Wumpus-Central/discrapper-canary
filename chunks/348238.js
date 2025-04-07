@@ -4,7 +4,7 @@ n.d(t, {
     JC: () => Z,
     NU: () => L,
     Nk: () => w,
-    R9: () => R,
+    R9: () => k,
     RN: () => U,
     Wl: () => A,
     XO: () => P,
@@ -16,8 +16,8 @@ n.d(t, {
     tn: () => G,
     wq: () => W
 }),
-    n(789020),
-    n(47120);
+    n(997841),
+    n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(668781),
@@ -36,14 +36,14 @@ var r = n(200651),
     b = n(594174),
     x = n(585483),
     y = n(5967),
-    v = n(630388),
-    E = n(358085),
+    E = n(630388),
+    v = n(358085),
     O = n(51144),
     N = n(91047),
     j = n(50284),
     C = n(981631),
-    I = n(388032);
-function S(e, t, n) {
+    S = n(388032);
+function I(e, t, n) {
     return i.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
@@ -66,22 +66,22 @@ function T(e, t, n) {
     );
 }
 function P(e, t, n, r) {
-    let i = S('usernameProfile', n, r);
+    let i = I('usernameProfile', n, r);
     return T(e.author.id, t.id, i);
 }
 function A(e, t, n, r) {
-    let i = S('referencedUsernameProfile', n, r);
+    let i = I('referencedUsernameProfile', n, r);
     return T(null == e ? void 0 : e.author.id, t.id, i);
 }
 function w(e, t, n, r) {
-    let i = S('interactionUsernameProfile', n, r);
+    let i = I('interactionUsernameProfile', n, r);
     return T(null == e ? void 0 : e.user.id, t.id, i);
 }
 function Z(e, t, n, r) {
-    let i = S('referencedUsernameProfile', n, r);
+    let i = I('referencedUsernameProfile', n, r);
     return T(e, t.id, i);
 }
-function k(e) {
+function R(e) {
     return i.useCallback(
         (t) => {
             t.preventDefault(), t.stopPropagation(), e();
@@ -89,24 +89,24 @@ function k(e) {
         [e]
     );
 }
-function R(e, t) {
-    return k(S('avatarProfile', e, t));
+function k(e, t) {
+    return R(I('avatarProfile', e, t));
 }
 function D(e, t) {
-    return k(S('referencedAvatarProfile', e, t));
+    return R(I('referencedAvatarProfile', e, t));
 }
 function L(e, t) {
-    return k(S('interactionAvatarProfile', e, t));
+    return R(I('interactionAvatarProfile', e, t));
 }
 function M(e, t, a, o) {
     let { id: s } = t,
         { id: u, flags: d } = e,
-        p = (0, v.yE)(d, C.iLy.EPHEMERAL),
+        p = (0, E.yE)(d, C.iLy.EPHEMERAL),
         m = (0, c.bp)();
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!E.isPlatformEmbedded) {
+            if (!v.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -264,20 +264,20 @@ function G(e) {
             )),
         [b, y] = i.useState(l);
     g.current = b || g.current;
-    let v = i.useCallback(
+    let E = i.useCallback(
             (e) => {
                 s && (0, f.T6)(), b || (x.S.dispatchKeyed(C.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), y(!0));
             },
             [b, h, s, _]
         ),
-        E = i.useCallback(() => {
+        v = i.useCallback(() => {
             x.S.dispatchKeyed(C.LPv.ANIMATE_CHAT_AVATAR, h, !1), y(!1);
         }, [h]);
     return {
         hasHovered: g.current,
         isHovered: b,
-        handleMouseEnter: v,
-        handleMouseLeave: E
+        handleMouseEnter: E,
+        handleMouseLeave: v
     };
 }
 function H(e, t) {
@@ -311,15 +311,15 @@ function V(e, t) {
         null != t &&
             (n
                 ? a.Z.show({
-                      title: I.NW.string(I.t['j7eA/v']),
-                      body: I.NW.formatToPlainString(I.t.dTNNgo, { name: t.author.username }),
-                      confirmText: I.NW.string(I.t.BddRzc)
+                      title: S.NW.string(S.t['j7eA/v']),
+                      body: S.NW.formatToPlainString(S.t.dTNNgo, { name: t.author.username }),
+                      confirmText: S.NW.string(S.t.BddRzc)
                   })
                 : r
                   ? a.Z.show({
-                        title: I.NW.string(I.t.XyWoKS),
-                        body: I.NW.formatToPlainString(I.t['8t8doK'], { name: t.author.username }),
-                        confirmText: I.NW.string(I.t.BddRzc)
+                        title: S.NW.string(S.t.XyWoKS),
+                        body: S.NW.formatToPlainString(S.t['8t8doK'], { name: t.author.username }),
+                        confirmText: S.NW.string(S.t.BddRzc)
                     })
                   : o.Z.jumpToMessage({
                         channelId: t.channel_id,
@@ -330,7 +330,7 @@ function V(e, t) {
     }, [n, r, e.id, t]);
 }
 function z(e, t) {
-    let n = S('interactionData', e, t);
+    let n = I('interactionData', e, t);
     return i.useCallback(
         (e) => {
             e.preventDefault(), e.stopPropagation(), n();

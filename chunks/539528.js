@@ -6,10 +6,10 @@ n.d(t, {
     ob: () => p,
     q_: () => L
 });
-var r = n(910974),
+var r = n(44837),
     i = n(634450),
     o = n(115953),
-    a = n(568895);
+    a = n(431803);
 function s(e) {
     return '/' === e.charAt(0) ? e : '/' + e;
 }
@@ -185,7 +185,7 @@ function N(e) {
         var r = U.indexOf(e.key);
         -1 === r && (r = 0);
         var i = n - r;
-        i && ((x = !0), V(i));
+        i && ((x = !0), F(i));
     }
     var j = C(T()),
         U = [j.key];
@@ -227,7 +227,7 @@ function N(e) {
             }
         });
     }
-    function F(e, r) {
+    function V(e, r) {
         var i = 'REPLACE',
             o = p(e, r, R(), Q.location);
         P.confirmTransitionTo(o, i, h, function (e) {
@@ -260,14 +260,14 @@ function N(e) {
             }
         });
     }
-    function V(e) {
+    function F(e) {
         t.go(e);
     }
     function Z() {
-        V(-1);
+        F(-1);
     }
     function H() {
-        V(1);
+        F(1);
     }
     var W = 0;
     function Y(e) {
@@ -299,8 +299,8 @@ function N(e) {
         location: j,
         createHref: G,
         push: B,
-        replace: F,
-        go: V,
+        replace: V,
+        go: F,
         goBack: Z,
         goForward: H,
         block: z,
@@ -407,12 +407,12 @@ function L(e) {
     j !== U && D(U);
     var G = O(),
         B = [_(G)];
-    function F(e) {
+    function V(e) {
         var t = document.querySelector('base'),
             n = '';
         return t && t.getAttribute('href') && (n = R(window.location.href)), n + '#' + b(f + _(e));
     }
-    function V(e, t) {
+    function F(e, t) {
         var n = 'PUSH',
             r = p(e, void 0, void 0, J.location);
         I.confirmTransitionTo(r, n, o, function (e) {
@@ -489,8 +489,8 @@ function L(e) {
         length: t.length,
         action: 'POP',
         location: G,
-        createHref: F,
-        push: V,
+        createHref: V,
+        push: F,
         replace: Z,
         go: H,
         goBack: W,

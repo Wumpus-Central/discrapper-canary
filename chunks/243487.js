@@ -2,8 +2,8 @@ n.d(t, {
     ZP: () => Y,
     kI: () => z
 }),
-    n(47120),
-    n(653041);
+    n(388685),
+    n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -24,9 +24,9 @@ var r = n(200651),
     h = n(592125),
     j = n(944486),
     P = n(606304),
-    x = n(594174),
-    S = n(979651),
-    w = n(938475),
+    S = n(594174),
+    w = n(979651),
+    x = n(938475),
     I = n(237997),
     E = n(823379),
     Z = n(136015),
@@ -93,12 +93,12 @@ function F(e) {
     let { hiddenVoiceStates: i, voiceStateMap: l, size: c, locked: u, flipped: p } = e,
         f = (0, A.e5)(c),
         g = (0, a.Wu)(
-            [x.default, h.Z],
+            [S.default, h.Z],
             () =>
                 i
                     .map((e) => {
                         var t;
-                        let n = x.default.getUser(e);
+                        let n = S.default.getUser(e);
                         if (null == n) return;
                         let r = h.Z.getChannel(null == (t = l.get(e)) ? void 0 : t.voiceState.channelId);
                         return n.getAvatarURL(null == r ? void 0 : r.getGuildId(), f, !1);
@@ -140,9 +140,9 @@ let z = i.memo(function (e) {
                 })(o),
             [o]
         ),
-        [P, x] = o,
-        S = x.length > 0 && null != n && null != l && (!d || p),
-        w = (0, a.Wu)(
+        [P, S] = o,
+        w = S.length > 0 && null != n && null != l && (!d || p),
+        x = (0, a.Wu)(
             [y.Z],
             () =>
                 Array.from(j)
@@ -152,19 +152,19 @@ let z = i.memo(function (e) {
             [f, j]
         );
     i.useEffect(() => {
-        S &&
+        w &&
             (0, V.zi)(M.Odu.VOICE_V3, {
                 locked: I.default.isInstanceLocked(),
                 shownUserIds: Array.from(j),
-                liveUserIds: w,
+                liveUserIds: x,
                 contentInventoryIds: []
             });
-    }, [j, w, S]);
-    let Z = h !== _.Og ? x.slice(0, h) : x,
-        C = h !== _.Og ? x.slice(h) : [],
+    }, [j, x, w]);
+    let Z = h !== _.Og ? S.slice(0, h) : S,
+        C = h !== _.Og ? S.slice(h) : [],
         N = P.get(C[0]),
         D = u === M.OYC.ALWAYS && h !== _.Og;
-    return S
+    return w
         ? (0, r.jsxs)('div', {
               className: L.voiceUserContainer,
               children: [
@@ -236,10 +236,10 @@ function Y(e) {
         s = (function (e, t) {
             let n = (0, a.e7)([j.Z, h.Z], () => h.Z.getChannel(j.Z.getVoiceChannelId())),
                 [r] = (0, a.e7)(
-                    [w.ZP, O.Z, j.Z, h.Z],
+                    [x.ZP, O.Z, j.Z, h.Z],
                     () => {
                         let e = h.Z.getChannel(j.Z.getVoiceChannelId());
-                        return null == e ? [[], -1] : e.isGuildStageVoice() ? [O.Z.getMutableParticipants(e.id, m.pV.SPEAKER), O.Z.getParticipantsVersion(e.id)] : [w.ZP.getVoiceStatesForChannel(e), w.ZP.getVoiceStateVersion(e.getGuildId())];
+                        return null == e ? [[], -1] : e.isGuildStageVoice() ? [O.Z.getMutableParticipants(e.id, m.pV.SPEAKER), O.Z.getParticipantsVersion(e.id)] : [x.ZP.getVoiceStatesForChannel(e), x.ZP.getVoiceStateVersion(e.getGuildId())];
                     },
                     [],
                     Z.Q
@@ -250,7 +250,7 @@ function Y(e) {
             return [
                 o,
                 (0, a.Wu)(
-                    [S.Z, j.Z, P.Z, g.Z],
+                    [w.Z, j.Z, P.Z, g.Z],
                     () => {
                         let n = Array.from(
                             l.map((e) => {
@@ -269,7 +269,7 @@ function Y(e) {
                                         checkIsMuted: !0,
                                         context: e
                                     },
-                                    [S.Z, j.Z, P.Z, g.Z]
+                                    [w.Z, j.Z, P.Z, g.Z]
                                 ),
                                 i = t === s;
                             (n || i) &&
@@ -298,15 +298,15 @@ function Y(e) {
             ];
         })(W.Yn.DEFAULT, e.maxDisplayedVoiceStates),
         d = (0, a.e7)([y.Z], () => y.Z.getStreamerActiveStreamMetadata()),
-        x = (0, D.II)(),
-        E = (0, u.q)(null == x ? void 0 : x.id),
+        S = (0, D.II)(),
+        E = (0, u.q)(null == S ? void 0 : S.id),
         C = (0, a.cj)([y.Z, I.default], () => {
             let e = y.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: I.default.getDisplayUserMode(),
                 displayNameMode: I.default.getDisplayNameMode(),
                 avatarSizeMode: I.default.getAvatarSizeMode(),
-                streamApplication: (null == d ? void 0 : d.pid) === (0, N.getPID)() ? (0, f.Z)(x) : null,
+                streamApplication: (null == d ? void 0 : d.pid) === (0, N.getPID)() ? (0, f.Z)(S) : null,
                 stream: e
             };
         });

@@ -17,20 +17,20 @@ var r = n(200651),
     b = n(66420),
     x = n(981631),
     y = n(474936),
-    v = n(388032),
-    E = n(510064);
+    E = n(388032),
+    v = n(510064);
 function O(e) {
     var t, n, O, N;
     let j,
         C,
-        I,
-        { message: S, channel: T, compact: P } = e,
-        A = null == (t = S.chatWallpaperInfo) ? void 0 : t.wallpaperId,
+        S,
+        { message: I, channel: T, compact: P } = e,
+        A = null == (t = I.chatWallpaperInfo) ? void 0 : t.wallpaperId,
         w = (0, m.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
-        Z = (0, s.ZP)(S),
-        k = (0, l.wjy)((0, o.ZP)()),
+        Z = (0, s.ZP)(I),
+        R = (0, l.wjy)((0, o.ZP)()),
         {
-            chatWallpaper: R,
+            chatWallpaper: k,
             isUpdatingChatWallpaperFlag: D,
             lastSetMessageId: L
         } = (0, a.cj)([f.Z], () => ({
@@ -39,53 +39,53 @@ function O(e) {
             lastSetMessageId: f.Z.getLastSetWallpaperMessageIdForChannel(T.id)
         })),
         M = (0, _.Z)(T.id),
-        W = L === S.id,
+        W = L === I.id,
         U = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        F = (null == U ? void 0 : U.id) === S.author.id,
+        F = (null == U ? void 0 : U.id) === I.author.id,
         B = (0, c.m)(y.p9.TIER_2),
         G = h.t(T);
     return (i.useEffect(() => {
-        null == R && f.Z.shouldFetchWallpapers && g.k9();
-    }, [R]),
+        null == k && f.Z.shouldFetchWallpapers && g.k9();
+    }, [k]),
     null == A)
         ? null
-        : ((j = k
+        : ((j = R
               ? F
-                  ? v.NW.format(v.t.z847Tk, { wallpaper_name: null != (n = null == R ? void 0 : R.label) ? n : v.NW.string(v.t['UQMV/P']) })
-                  : v.NW.format(v.t['+lKndX'], {
+                  ? E.NW.format(E.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : E.NW.string(E.t['UQMV/P']) })
+                  : E.NW.format(E.t['+lKndX'], {
                         username: null == Z ? void 0 : Z.nick,
-                        wallpaper_name: null != (O = null == R ? void 0 : R.label) ? O : v.NW.string(v.t['UQMV/P'])
+                        wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : E.NW.string(E.t['UQMV/P'])
                     })
-              : v.NW.format(v.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) })),
+              : E.NW.format(E.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) })),
           w
               ? G && W
-                  ? (C = v.NW.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (N = null == R ? void 0 : R.label) ? N : v.NW.string(v.t['UQMV/P']) }))
+                  ? (C = E.NW.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (N = null == k ? void 0 : k.label) ? N : E.NW.string(E.t['UQMV/P']) }))
                   : F ||
                     B ||
                     !W ||
-                    (C = v.NW.format(v.t.JwUhHh, {
+                    (C = E.NW.format(E.t.JwUhHh, {
                         onClickNitro: () => {
                             (0, u.uL)(x.Z5c.NITRO_HOME);
                         }
                     }))
-              : (C = v.NW.string(v.t['6JSOu7'])),
+              : (C = E.NW.string(E.t['6JSOu7'])),
           (null == M ? void 0 : M.isViewable) &&
               W &&
               !F &&
-              (I = (0, r.jsx)(l.zxk, {
-                  className: E.action,
+              (S = (0, r.jsx)(l.zxk, {
+                  className: v.action,
                   onClick: () => {
                       g.X(T, A, { shouldClear: !G });
                   },
                   submitting: D,
-                  children: v.NW.string(G ? v.t.o6850d : v.t['/ubFp6'])
+                  children: E.NW.string(G ? E.t.o6850d : E.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {
               channel: T,
               content: j,
               subtitle: C,
-              action: I,
+              action: S,
               compact: P,
-              message: S
+              message: I
           }));
 }

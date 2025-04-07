@@ -5,28 +5,28 @@ n.r(t),
         default: () => e$,
         getOverlayURL: () => eO
     }),
-    n(47120),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817),
-    n(610885),
-    n(126298),
-    n(866573),
-    n(642549),
-    n(787622),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(177593),
-    n(411104);
+    n(388685),
+    n(410992),
+    n(227481),
+    n(730884),
+    n(20464),
+    n(341884),
+    n(364341),
+    n(629680),
+    n(505025),
+    n(918970),
+    n(121784),
+    n(644351),
+    n(146733),
+    n(853839),
+    n(570086),
+    n(479048),
+    n(65234),
+    n(111804),
+    n(490233),
+    n(97749),
+    n(358797),
+    n(415506);
 var i,
     o = n(807864),
     a = n(442837),
@@ -91,7 +91,7 @@ function B(e) {
     }
     return e;
 }
-function F(e, t) {
+function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -103,12 +103,12 @@ function F(e, t) {
     }
     return n;
 }
-function V(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -165,7 +165,7 @@ class et {
                     (this.isDispatching
                         ? this.waitingActionsToFlush.add(e)
                         : ('USER_SETTINGS_PROTO_UPDATE' === e.type &&
-                              (e = V(B({}, e), {
+                              (e = F(B({}, e), {
                                   settings: {
                                       type: e.settings.type,
                                       proto: (0, N.cv)(e.settings.type, e.settings.proto)
@@ -228,7 +228,7 @@ let ed = 'none',
             let r = el((0, M.getPID)());
             ec(
                 (0, M.getPID)(),
-                V(B({}, r), {
+                F(B({}, r), {
                     error_description: n,
                     success: !1
                 })
@@ -493,7 +493,7 @@ function eC(e) {
                         (0, M.setPID)(i),
                         f.Z.overlayReady(i);
                     let a = el(i);
-                    ec(i, V(B({}, a), { total_mount_time_ms: null != a.mounting_started_at ? new Date().getTime() - a.mounting_started_at : void 0 }));
+                    ec(i, F(B({}, a), { total_mount_time_ms: null != a.mounting_started_at ? new Date().getTime() - a.mounting_started_at : void 0 }));
                 });
             break;
         case j.BmY.DISPATCH:
@@ -546,7 +546,7 @@ function eM(e) {
     let { port: t } = e;
     $ = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', 'e99500f0543efae5cd1a2950233c00e3aa1e2269'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', '487f33832b4309bf1a18e56bdddf6ee870585292'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function ek(e) {
     let { channelId: t, ring: n } = e;
@@ -575,10 +575,10 @@ function eG() {
 function eB() {
     (Q = !1), (X = null), ey(void 0), ea.verbose('OverlayBridgeStore: handleConnectionClosed');
 }
-function eF() {
+function eV() {
     return !0;
 }
-function eV(e) {
+function eF(e) {
     let { legacyEnabled: t } = e;
     return eI(t), !1;
 }
@@ -709,10 +709,10 @@ let eJ = new eX(
                   LOGOUT: eQ,
                   CONNECTION_OPEN: eG,
                   CONNECTION_CLOSED: eB,
-                  EXPERIMENT_OVERRIDE_BUCKET: eF,
+                  EXPERIMENT_OVERRIDE_BUCKET: eV,
                   RUNNING_GAME_TOGGLE_OVERLAY: eY,
                   RUNNING_GAMES_CHANGE: eW,
-                  OVERLAY_SET_ENABLED: eV,
+                  OVERLAY_SET_ENABLED: eF,
                   OVERLAY_FOCUSED: ej,
                   OVERLAY_SET_INPUT_LOCKED: eD,
                   OVERLAY_ACTIVATE_REGION: eL,

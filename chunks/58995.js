@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120), n(653041);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -121,13 +121,13 @@ function M(e) {
     k && M && j.push(l.z.NITROWEEN_COACHMARKS);
     let [U, G] = (0, p.US)(j),
         B = null != U,
-        F = (0, O.Ft)(n),
-        { Component: V, events: Z, play: H } = (0, c.$)();
+        V = (0, O.Ft)(n),
+        { Component: F, events: Z, play: H } = (0, c.$)();
     if (t) return null;
     let W = () => {
         (0, h.Z)({
             isGift: !0,
-            giftRecipient: null == F ? void 0 : F,
+            giftRecipient: null == V ? void 0 : V,
             giftMessage: N.NW.string(N.t['rX/m/f']),
             initialPlanId: null,
             analyticsLocations: o,
@@ -170,7 +170,7 @@ function M(e) {
                     ),
                     {
                         children: (0, r.jsx)(x, {
-                            animatedIconComponent: V,
+                            animatedIconComponent: F,
                             hovered: a,
                             isCoachmarkDismissed: !B
                         })

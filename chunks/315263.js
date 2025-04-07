@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => B }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120), n(301563);
+n.r(t), n.d(t, { default: () => B }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(873546),
     i = n(636977),
     o = n(570140),
@@ -7,7 +7,7 @@ var r = n(873546),
     l = n(230711),
     c = n(566620),
     u = n(122613),
-    d = n(508686),
+    d = n(649256),
     f = n(574952),
     _ = n(367907),
     p = n(421474),
@@ -121,7 +121,7 @@ function B(e) {
                 return (
                     !b &&
                     null != g &&
-                    ((0, d.u)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'))
+                    ((0, d.ur)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'))
                         .then(async (e) => {
                             let { customId: t } = e;
                             await (0, c.G6)({
@@ -144,7 +144,7 @@ function B(e) {
                     null != e &&
                     (a.Z.openPrivateChannel(e)
                         .then(async (e) => {
-                            let { customId: t } = await (0, d.u)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'));
+                            let { customId: t } = await (0, d.ur)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'));
                             (0, u.Z)({
                                 targetApplicationId: r,
                                 channelId: e,
@@ -187,7 +187,7 @@ function B(e) {
                 }),
             !0
         );
-    let { host: w, hostname: j, pathname: B, search: F, hash: V } = null != (t = L.Z.toURLSafe(e)) ? t : {},
+    let { host: w, hostname: j, pathname: B, search: V, hash: F } = null != (t = L.Z.toURLSafe(e)) ? t : {},
         Z = L.Z.isDiscordHostname(null != j ? j : null) || L.Z.isDiscordLocalhost(null != w ? w : null, null != j ? j : null);
     if (Z && ((null == B ? void 0 : B.startsWith('/application-directory')) || (null == B ? void 0 : B.startsWith('/discovery/applications')))) {
         let e = B.split('/'),
@@ -199,7 +199,7 @@ function B(e) {
             let r, a, s;
             if ((null == t || t.preventDefault(), i)) {
                 var l, c, u;
-                let e = new URLSearchParams(F);
+                let e = new URLSearchParams(V);
                 (r = null != (l = e.get('q')) ? l : void 0), (a = null != (c = e.get('category_id')) ? c : void 0), (s = null != (u = e.get('page')) ? u : void 0);
             } else o && (a = e[4]);
             return (
@@ -225,7 +225,7 @@ function B(e) {
             navigationReplace: !1,
             openChannel: !0
         };
-        return null != F && (e.search = F), null != V && (e.hash = V), (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0);
+        return null != V && (e.search = V), null != F && (e.hash = F), (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0);
     }
     if (null != B && Z) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),

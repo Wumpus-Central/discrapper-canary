@@ -1,7 +1,7 @@
-var r = n(583584),
+var r = n(461648),
     i = n(429675),
     o = n(815329),
-    a = n(49662);
+    a = n(566817);
 e.exports = function (e, t, n) {
     if (!e || ('object' != typeof e && 'function' != typeof e)) throw new o('`obj` must be an object or a function`');
     if ('string' != typeof t && 'symbol' != typeof t) throw new o('`property` must be a string or a symbol`');

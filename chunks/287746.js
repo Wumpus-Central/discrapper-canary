@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e5 }), n(47120), n(301563), n(566702), n(789020);
+n.d(t, { Z: () => e5 }), n(388685), n(35282), n(781311), n(997841);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -553,7 +553,7 @@ class e6 extends i.PureComponent {
             );
     }
 }
-class e9 extends i.PureComponent {
+class e8 extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { channel: n } = e,
             { currentChannelId: r } = t;
@@ -885,7 +885,7 @@ let e5 = i.memo(function (e) {
         W = (0, d.e7)([eS.Z], () => eS.Z.getVoiceChannelId()),
         U = (0, d.e7)([ej.Z], () => ej.Z.getChannel(W)),
         B = (0, d.e7)([eT.default], () => (t.type !== eK.d4z.DM ? null : eT.default.getUser(t.getRecipientId())));
-    return (0, r.jsx)(e9, {
+    return (0, r.jsx)(e8, {
         channel: t,
         isEditing: null != (0, d.e7)([eE.Z], () => eE.Z.getEditingMessageId(t.id)),
         hasModalOpen: (0, p.s9z)(p.JQI),

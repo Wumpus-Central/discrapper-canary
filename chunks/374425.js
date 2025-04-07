@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(47120);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(477690),
@@ -58,8 +58,8 @@ function y(e, t) {
         e
     );
 }
-let v = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    E = (e) => {
+let E = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    v = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                 type: _.cd.STICKER_IN_MESSAGE_HOVER,
@@ -115,7 +115,7 @@ let v = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             text: (0, u.Y)(j),
                             'aria-label': !1,
                             onTooltipShow: () => {
-                                E(O);
+                                v(O);
                             },
                             children: (e) =>
                                 (0, r.jsx)(
@@ -129,7 +129,7 @@ let v = (0, d.Mg)(a.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: a,
-                                            size: v,
+                                            size: E,
                                             sticker: null != O ? O : t
                                         })
                                     })

@@ -1,8 +1,8 @@
 n.d(t, {
-    ZP: () => F,
+    ZP: () => V,
     dz: () => j
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -210,7 +210,7 @@ function B(e) {
         ]
     });
 }
-function F(e) {
+function V(e) {
     let { headingText: t, context: i, children: o, onClose: s, type: c, subscriptionTier: u, analyticsLocationObject: b, trialOffer: y, discountOffer: T } = e,
         N = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         A = (0, h.ZP)(),

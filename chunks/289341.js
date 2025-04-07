@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(301563), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { Z: () => g }), n(35282), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(192379),
     i = n(442837),
     l = n(668781),
@@ -9,7 +9,7 @@ var r = n(192379),
     u = n(703656),
     d = n(594174),
     p = n(122613),
-    h = n(508686),
+    h = n(649256),
     f = n(388032);
 function g(e) {
     var t, n;
@@ -30,7 +30,7 @@ function g(e) {
                         let t = new URL(location.href),
                             n = await a.Z.openPrivateChannel(O),
                             r = null != (e = t.searchParams.get('referrer_id')) ? e : void 0,
-                            { customId: i } = await (0, h.u)(_, t.searchParams.get('link_id'), t.searchParams.get('custom_id'));
+                            { customId: i } = await (0, h.ur)(_, t.searchParams.get('link_id'), t.searchParams.get('custom_id'));
                         await (0, p.Z)({
                             targetApplicationId: _,
                             channelId: n,

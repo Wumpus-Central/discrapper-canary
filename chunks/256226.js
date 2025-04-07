@@ -119,33 +119,33 @@ let N = i.forwardRef(function (e, t) {
             [C.id]
         ),
         B = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        F = null != (y = C.colorString) ? y : B,
-        V = null != (O = (0, l.wK)(F, 0.6)) ? O : void 0,
+        V = null != (y = C.colorString) ? y : B,
+        F = null != (O = (0, l.wK)(V, 0.6)) ? O : void 0,
         Z = u.Z.unsafe_rawColors.WHITE_500.css,
-        H = (0, l._i)(F);
+        H = (0, l._i)(V);
     null != H && 0.3 > (0, l.Bd)(H) && (Z = u.Z.unsafe_rawColors.PRIMARY_630.css),
         (T = U
             ? (0, r.jsx)(p.Z, {
                   className: b.roleFlowerStar,
                   iconClassName: N ? b.roleVerifiedIcon : void 0,
-                  color: F,
+                  color: V,
                   size: 14
               })
             : 'dot' === j
               ? (0, r.jsx)(d.FhE, {
                     className: b.roleDot,
-                    color: F,
+                    color: V,
                     background: !1,
                     tooltip: !1
                 })
               : (0, r.jsx)(d.xko, {
-                    color: F,
+                    color: V,
                     className: b.roleCircle
                 }));
     let W = i.useMemo(() => {
             var t;
-            return v({ borderColor: w ? void 0 : V }, null != (t = e.style) ? t : {});
-        }, [V, w, e.style]),
+            return v({ borderColor: w ? void 0 : F }, null != (t = e.style) ? t : {});
+        }, [F, w, e.style]),
         Y = () =>
             N
                 ? (0, r.jsx)(d.DY3, {

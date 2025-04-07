@@ -1,62 +1,62 @@
-n.d(t, { Z: () => d });
-var r = n(200651);
+n.d(t, { Z: () => p });
+var a = n(200651);
 n(192379);
-var o = n(120356),
-    l = n.n(o),
+var r = n(120356),
+    l = n.n(r),
     i = n(481060),
-    a = n(55935),
-    c = n(543388),
-    s = n(223021),
+    s = n(55935),
+    o = n(543388),
+    c = n(223021),
     u = n(388032),
-    m = n(848697);
-function p(e) {
+    d = n(848697);
+function m(e) {
     var t, n;
-    let { tooltipProps: o, timeFormatted: l, children: i, compact: a, timestamp: c, id: s } = e;
-    return (0, r.jsx)(
+    let { tooltipProps: r, timeFormatted: l, children: i, compact: s, timestamp: o, id: c } = e;
+    return (0, a.jsx)(
         'time',
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                    a = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
+                    (a = a.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    a.forEach(function (t) {
+                        var a;
+                        (a = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: a,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
+                                : (e[t] = a);
                     });
             }
             return e;
-        })({}, o)),
+        })({}, r)),
         (n = n =
             {
-                id: s,
-                dateTime: c.toISOString(),
+                id: c,
+                dateTime: o.toISOString(),
                 children:
                     null != i
                         ? i
-                        : (0, r.jsxs)(r.Fragment, {
+                        : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, r.jsx)('i', {
-                                      className: m.separator,
+                                  (0, a.jsx)('i', {
+                                      className: d.separator,
                                       'aria-hidden': !0,
-                                      children: a ? '[' : ' \u2014 '
+                                      children: s ? '[' : ' \u2014 '
                                   }),
                                   l,
-                                  a &&
-                                      (0, r.jsxs)('i', {
-                                          className: m.separator,
+                                  s &&
+                                      (0, a.jsxs)('i', {
+                                          className: d.separator,
                                           'aria-hidden': !0,
                                           children: [']', ' ']
                                       })
@@ -68,8 +68,8 @@ function p(e) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
                   return n;
               })(Object(n)).forEach(function (e) {
@@ -78,47 +78,47 @@ function p(e) {
         t)
     );
 }
-let d = function (e) {
-    let { children: t, className: n, compact: o = !1, timestamp: d, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: y = !1, isInline: g = !0, id: O, isEdited: v = !1, application: j, tooltipPosition: h } = e,
-        x = new Date(d),
-        P = (0, a.Hg)(x),
-        S = null != f ? (0, a.vc)(x, f) : o ? (0, a.vc)(x, 'LT') : (0, a.Y4)(x, !0),
-        N = o ? (0, s.Z)(S) : null,
-        R = v ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: P }) : P;
-    return (0, r.jsx)('span', {
-        className: l()(n, N, {
-            [m.timestamp]: !0,
-            [m.timestampVisibleOnHover]: b,
-            [m.timestampInline]: g,
-            [m.alt]: y
+let p = function (e) {
+    let { children: t, className: n, compact: r = !1, timestamp: p, timestampFormat: h, isVisibleOnlyOnHover: g = !1, cozyAlt: _ = !1, isInline: f = !0, id: b, isEdited: y = !1, application: E, tooltipPosition: I } = e,
+        S = new Date(p),
+        C = (0, s.Hg)(S),
+        O = null != h ? (0, s.vc)(S, h) : r ? (0, s.vc)(S, 'LT') : (0, s.Y4)(S, !0),
+        v = r ? (0, c.Z)(O) : null,
+        x = y ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: C }) : C;
+    return (0, a.jsx)('span', {
+        className: l()(n, v, {
+            [d.timestamp]: !0,
+            [d.timestampVisibleOnHover]: g,
+            [d.timestampInline]: f,
+            [d.alt]: _
         }),
         children:
-            null == j
-                ? (0, r.jsx)(i.ua7, {
-                      text: (0, a.vc)(x, 'LLLL'),
-                      'aria-label': R,
-                      tooltipClassName: m.timestampTooltip,
-                      position: h,
+            null == E
+                ? (0, a.jsx)(i.ua7, {
+                      text: (0, s.vc)(S, 'LLLL'),
+                      'aria-label': x,
+                      tooltipClassName: d.timestampTooltip,
+                      position: I,
                       delay: 750,
                       children: (e) =>
-                          (0, r.jsx)(p, {
+                          (0, a.jsx)(m, {
                               tooltipProps: e,
-                              timeFormatted: S,
-                              timestamp: x,
-                              id: O,
-                              compact: o,
+                              timeFormatted: O,
+                              timestamp: S,
+                              id: b,
+                              compact: r,
                               children: t
                           })
                   })
-                : (0, r.jsx)(c.Z, {
-                      application: j,
-                      timestamp: x,
-                      compact: o,
-                      children: (0, r.jsx)(p, {
-                          timeFormatted: S,
-                          timestamp: x,
-                          id: O,
-                          compact: o,
+                : (0, a.jsx)(o.Z, {
+                      application: E,
+                      timestamp: S,
+                      compact: r,
+                      children: (0, a.jsx)(m, {
+                          timeFormatted: O,
+                          timestamp: S,
+                          id: b,
+                          compact: r,
                           children: t
                       })
                   })

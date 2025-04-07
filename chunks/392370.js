@@ -1,12 +1,12 @@
 n.d(t, {
-    Q2: () => O,
+    Q2: () => I,
     pe: () => A
 }),
-    n(47120),
-    n(653041),
-    n(301563),
-    n(86693),
-    n(536091);
+    n(388685),
+    n(539854),
+    n(35282),
+    n(472816),
+    n(794429);
 var i = n(192379),
     r = n(392711),
     l = n.n(r),
@@ -27,7 +27,7 @@ var i = n(192379),
     v = n(827498),
     y = n(783097),
     N = n(689079),
-    g = n(665692);
+    g = n(761652);
 function j(e, t) {
     let n = h.Z.getScoreWithoutLoadingLatest(e.id);
     return h.Z.getScoreWithoutLoadingLatest(t.id) - n;
@@ -117,11 +117,11 @@ function A(e) {
             includeEmbeddedApps: h,
             includeNonEmbeddedApps: c
         }),
-        O = (0, u.Z)({
+        I = (0, u.Z)({
             guildId: 'channel' === t.type ? t.channel.guild_id : null,
             context: t
         }),
-        I = i.useMemo(() => {
+        O = i.useMemo(() => {
             var e, i, l, a, c, u;
             if (!o) return [];
             return (0, _.N)(b, {
@@ -204,10 +204,10 @@ function A(e) {
             });
         }, [o, b, r, t, n]),
         S = i.useMemo(() => {
-            if (0 === I.length) return [];
+            if (0 === O.length) return [];
             let e = new Map(A.map((e) => [e.id, e]));
             return l().compact(
-                I.map((t) => {
+                O.map((t) => {
                     var n;
                     let i = e.get(t.applicationId);
                     if (null == i) return null;
@@ -219,7 +219,7 @@ function A(e) {
                     };
                 })
             );
-        }, [A, I, C]),
+        }, [A, O, C]),
         T = i.useMemo(() => {
             var e, i, r, l, o;
             let u = [];
@@ -232,7 +232,7 @@ function A(e) {
                 );
                 u.push(...A),
                     u.push(
-                        ...O.filter((t) => {
+                        ...I.filter((t) => {
                             let {
                                 application: { id: n }
                             } = t;
@@ -288,7 +288,7 @@ function A(e) {
                 ],
                 sortComparers: [j, P]
             });
-        }, [c, h, a, t, n, A, O]),
+        }, [c, h, a, t, n, A, I]),
         L = S.length > 0,
         R = T.length > 0;
     return {
@@ -300,7 +300,7 @@ function A(e) {
         loading: v && o
     };
 }
-function O(e) {
+function I(e) {
     let { context: t, query: n, fetches: r = !0, pageLimit: l = 1 / 0, entrypoint: s } = e;
     n.startsWith(''.concat(g.GI)) && (n = n.substring(1));
     let u = s === v._b.VOICE,

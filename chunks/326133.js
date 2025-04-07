@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -102,7 +102,7 @@ let w = 490,
         var n, o, T, A, P;
         let { channel: k, type: j, editorHeight: U, onVisibilityChange: G } = e,
             B = (0, h.Dt)(),
-            F = (0, l.e7)(
+            V = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
@@ -110,8 +110,8 @@ let w = 490,
                 },
                 [k.guild_id]
             ),
-            V = i.useRef(),
-            [Z, H, W] = (0, O.Z)(C(N({}, e), { guild: F }), t, V),
+            F = i.useRef(),
+            [Z, H, W] = (0, O.Z)(C(N({}, e), { guild: V }), t, F),
             Y = (null == (n = j.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             K = (0, _.DJ)(Z.selectedIndex);
         (0, p.KR)(B, Z.isVisible, K), b.Z.trackExposure({ location: '6e9811_1' });
@@ -145,7 +145,7 @@ let w = 490,
                 results: Z.query.results,
                 selectedIndex: Z.selectedIndex,
                 channel: k,
-                guild: F,
+                guild: V,
                 query: Z.query.queryText,
                 options: Z.query.options,
                 onHover: (e) => H.onResultHover(e),
@@ -181,7 +181,7 @@ let w = 490,
                                         id: B,
                                         ref: (e) => {
                                             var n;
-                                            (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (V.current = e);
+                                            (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (F.current = e);
                                         }
                                     },
                                     n

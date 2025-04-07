@@ -29,7 +29,7 @@ n.d(t, {
     Rs: () => es,
     Sf: () => tg,
     U3: () => X,
-    V$: () => e8,
+    V$: () => e7,
     VB: () => t_,
     Vl: () => ez,
     WP: () => J,
@@ -37,7 +37,7 @@ n.d(t, {
     Xv: () => eE,
     ZZ: () => Z,
     Zp: () => tf,
-    _D: () => V,
+    _D: () => F,
     _j: () => tt,
     _p: () => ts,
     b7: () => eY,
@@ -45,8 +45,8 @@ n.d(t, {
     eE: () => tb,
     f$: () => ta,
     f2: () => eM,
-    fY: () => e5,
-    gI: () => e7,
+    fY: () => e6,
+    gI: () => e8,
     hQ: () => et,
     iQ: () => K,
     il: () => eW,
@@ -70,14 +70,14 @@ n.d(t, {
     zK: () => eD,
     zi: () => Y
 }),
-    n(47120),
-    n(627341),
-    n(266796),
-    n(411104),
-    n(230036),
-    n(571269),
-    n(298267),
-    n(653041);
+    n(388685),
+    n(314940),
+    n(953529),
+    n(415506),
+    n(642613),
+    n(784620),
+    n(973216),
+    n(539854);
 var r = n(991998),
     i = n(392711),
     o = n(278074),
@@ -175,15 +175,15 @@ function G(e) {
     }
 }
 let B = (e) => e.application_id === w.Ev || e.platform === P.M7m.XBOX,
-    F = (e) => e.platform === P.M7m.PS4 || e.platform === P.M7m.PS5;
-function V(e, t) {
+    V = (e) => e.platform === P.M7m.PS4 || e.platform === P.M7m.PS5;
+function F(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
         r = A.r.build(t.config).application.name.toLowerCase();
-    return B(e) || F(e) ? n === r : null != e.application_id && H(e.application_id, t);
+    return B(e) || V(e) ? n === r : null != e.application_id && H(e.application_id, t);
 }
 function Z(e, t) {
-    for (let [n, r] of e) if (V(t, r) && !Y(r)) return r;
+    for (let [n, r] of e) if (F(t, r) && !Y(r)) return r;
 }
 function H(e, t) {
     return null != A.r.build(t.config).application.ids.find((t) => t === e);
@@ -545,14 +545,14 @@ let eM = (e, t) => {
         return l + eU(e, t);
     },
     eB = 0.99,
-    eF = (e, t) => {
+    eV = (e, t) => {
         var n;
         let r = t.target;
         if ((null == (n = e.userStatus) ? void 0 : n.completedAt) != null) return r;
         let o = Math.min(r * eB, eG(e, t));
         return Math.max((0, i.floor)(o, 2), 0);
     },
-    eV = (e) => {
+    eF = (e) => {
         var t, n;
         let { quest: r, taskType: i, includeTaskTypes: o = a.T.ALL } = e,
             s = r.config.taskConfig;
@@ -561,7 +561,7 @@ let eM = (e, t) => {
             c = null != (n = s.tasks[l]) ? n : s.tasks[a.X.STREAM_ON_DESKTOP];
         if (null == c) throw Error('No task with type '.concat(i, ' found for quest ').concat(r.id, '!'));
         let d = c.target,
-            f = eF(r, c);
+            f = eV(r, c);
         return {
             progressSeconds: f,
             targetSeconds: d,
@@ -584,13 +584,13 @@ let eM = (e, t) => {
             .filter(b.lm)) {
             let t = eZ(e.eventName);
             if (null != t && (null == i ? void 0 : i.has(t)))
-                return eV({
+                return eF({
                     quest: r,
                     taskType: t,
                     includeTaskTypes: i
                 });
         }
-        return eV({
+        return eF({
             quest: r,
             includeTaskTypes: i
         });
@@ -610,21 +610,21 @@ let eM = (e, t) => {
                     includeTaskTypes: null != t ? t : e3(e) ? a.T.CONSOLE : a.T.ALL
                 })
               : e0(e)
-                ? eV({
+                ? eF({
                       quest: e,
                       taskType: a.X.WATCH_VIDEO
                   })
                 : eP(e)
-                  ? eV({
+                  ? eF({
                         quest: e,
                         taskType: a.X.PLAY_ON_DESKTOP
                     })
                   : eR(e)
-                    ? eV({
+                    ? eF({
                           quest: e,
                           taskType: a.X.PLAY_ACTIVITY
                       })
-                    : eV({
+                    : eF({
                           quest: e,
                           taskType: a.X.STREAM_ON_DESKTOP
                       });
@@ -680,10 +680,10 @@ function e3(e) {
 function e4(e) {
     return !!e0(e) && (0, n(952265).nf)(tc(e.id));
 }
-function e6() {
+function e5() {
     f.Z.open(P.oAB.CONNECTIONS);
 }
-function e5(e, t) {
+function e6(e, t) {
     let { platformType: n, quest: r } = e;
     (0, O._3)({
         questId: r.id,
@@ -696,7 +696,7 @@ function e5(e, t) {
             location: t.ctaContent
         });
 }
-function e7(e, t) {
+function e8(e, t) {
     let { quest: n } = e;
     (0, O._3)({
         questId: n.id,
@@ -714,7 +714,7 @@ function e7(e, t) {
         includedPlatformTypes: new Set(r)
     });
 }
-function e8(e, t) {
+function e7(e, t) {
     let { quest: n } = e;
     (0, O._3)({
         questId: n.id,
@@ -723,7 +723,7 @@ function e8(e, t) {
         questContentCTA: t.ctaContent,
         impressionId: t.impressionId
     }),
-        e6();
+        e5();
 }
 function e9() {
     return window.location.pathname.startsWith(P.Z5c.QUEST_HOME);

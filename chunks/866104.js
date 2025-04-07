@@ -1,10 +1,10 @@
 n.d(t, {
-    C: () => S,
-    Z: () => I
+    C: () => I,
+    Z: () => S
 }),
-    n(47120),
-    n(266796),
-    n(566702);
+    n(388685),
+    n(953529),
+    n(781311);
 var r = n(200651),
     i = n(192379),
     a = n(512722),
@@ -23,8 +23,8 @@ var r = n(200651),
     b = n(51144),
     x = n(506071),
     y = n(696014),
-    v = n(847033),
-    E = n(544978),
+    E = n(847033),
+    v = n(544978),
     O = n(893182),
     N = n(388032),
     j = n(414521);
@@ -50,7 +50,7 @@ function C(e) {
         ]
     });
 }
-function I(e) {
+function S(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = f.QK.useSetting(),
         a = (0, x.n)() && i,
@@ -82,7 +82,7 @@ function I(e) {
                   })
     });
 }
-function S(e) {
+function I(e) {
     var t, n;
     let { guild: a, subscriptionsSettings: d } = e,
         m = a.id,
@@ -100,16 +100,16 @@ function S(e) {
             },
             [m]
         ),
-        { isTruncated: x, ExpandableTextContainer: S } = (0, y.s)(),
+        { isTruncated: x, ExpandableTextContainer: I } = (0, y.s)(),
         T = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: Z, isPhantomPreview: k } = (0, v.m)(),
-        R = Z === E.y.GUILD_PRODUCTS_PREVIEW ? N.NW.string(N.t['LvXy/P']) : N.NW.string(N.t.XyqKh4),
+        { selectedTab: Z, isPhantomPreview: R } = (0, E.m)(),
+        k = Z === v.y.GUILD_PRODUCTS_PREVIEW ? N.NW.string(N.t['LvXy/P']) : N.NW.string(N.t.XyqKh4),
         D = T
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(S, {
+                      (0, r.jsx)(I, {
                           lineClamp: w || 2 === P ? 2 : 3,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
@@ -126,7 +126,7 @@ function S(e) {
             : (0, r.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-normal',
-                  children: k ? R : N.NW.string(N.t['NY/FIS'])
+                  children: R ? k : N.NW.string(N.t['NY/FIS'])
               });
     return (0, r.jsxs)('div', {
         className: j.container,
@@ -138,7 +138,7 @@ function S(e) {
                         children: (0, r.jsx)(p.Z, {
                             guild: a,
                             size: p.Z.Sizes.LARGER,
-                            iconSrc: null == a.icon || k ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                            iconSrc: null == a.icon || R ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
                     (0, r.jsx)(s.LZC, {
@@ -155,7 +155,7 @@ function S(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: k ? N.NW.string(N.t.rtgp7u) : N.NW.formatToPlainString(N.t.NZeik5, { guildName: a.name })
+                                    children: R ? N.NW.string(N.t.rtgp7u) : N.NW.formatToPlainString(N.t.NZeik5, { guildName: a.name })
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 8 }),
@@ -182,9 +182,9 @@ function S(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(I, {
+            (0, r.jsx)(S, {
                 coverImageAsset: null == d ? void 0 : d.cover_image_asset,
-                isPreview: k
+                isPreview: R
             })
         ]
     });

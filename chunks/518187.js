@@ -1,60 +1,60 @@
-n(35282);
-var r = n(580983),
-    i = n(556585),
-    o = n(16721),
-    a = n(621523),
-    s = n(751736),
-    l = n(436207),
-    c = s('species'),
-    u = RegExp.prototype;
-e.exports = function (e, t, n, d) {
-    var f = s(e),
-        _ = !a(function () {
-            var t = {};
+r(35282);
+var n = r(580983),
+    i = r(556585),
+    o = r(16721),
+    a = r(621523),
+    c = r(751736),
+    u = r(436207),
+    s = c('species'),
+    l = RegExp.prototype;
+t.exports = function (t, e, r, f) {
+    var p = c(t),
+        v = !a(function () {
+            var e = {};
             return (
-                (t[f] = function () {
+                (e[p] = function () {
                     return 7;
                 }),
-                7 !== ''[e](t)
+                7 !== ''[t](e)
             );
         }),
-        p =
-            _ &&
+        g =
+            v &&
             !a(function () {
-                var t = !1,
-                    n = /a/;
+                var e = !1,
+                    r = /a/;
                 return (
-                    'split' === e &&
-                        (((n = {}).constructor = {}),
-                        (n.constructor[c] = function () {
-                            return n;
+                    'split' === t &&
+                        (((r = {}).constructor = {}),
+                        (r.constructor[s] = function () {
+                            return r;
                         }),
-                        (n.flags = ''),
-                        (n[f] = /./[f])),
-                    (n.exec = function () {
-                        return (t = !0), null;
+                        (r.flags = ''),
+                        (r[p] = /./[p])),
+                    (r.exec = function () {
+                        return (e = !0), null;
                     }),
-                    n[f](''),
-                    !t
+                    r[p](''),
+                    !e
                 );
             });
-    if (!_ || !p || n) {
-        var h = /./[f],
-            m = t(f, ''[e], function (e, t, n, i, a) {
-                var s = t.exec;
-                return s === o || s === u.exec
-                    ? _ && !a
+    if (!v || !g || r) {
+        var d = /./[p],
+            x = e(p, ''[t], function (t, e, r, i, a) {
+                var c = e.exec;
+                return c === o || c === l.exec
+                    ? v && !a
                         ? {
                               done: !0,
-                              value: r(h, t, n, i)
+                              value: n(d, e, r, i)
                           }
                         : {
                               done: !0,
-                              value: r(e, n, t, i)
+                              value: n(t, r, e, i)
                           }
                     : { done: !1 };
             });
-        i(String.prototype, e, m[0]), i(u, f, m[1]);
+        i(String.prototype, t, x[0]), i(l, p, x[1]);
     }
-    d && l(u[f], 'sham', !0);
+    f && u(l[p], 'sham', !0);
 };

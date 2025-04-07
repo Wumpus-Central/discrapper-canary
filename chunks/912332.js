@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(822869);
-function a(e) {
+    a = n(822869);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function a(e) {
     }
     return e;
 }
-function l(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,19 +53,19 @@ function l(e, t) {
 }
 let s = 'forward-modal';
 function c(e) {
-    let { message: t, source: c, initialSelectedDestinations: u = [], forwardOptions: d, onRequestSent: f } = e;
-    (0, o.Lb)(t.channel_id, t.id, c),
+    let { message: t, source: c, initialSelectedDestinations: u = [], forwardOptions: d, onRequestSent: p } = e;
+    (0, a.Lb)(t.channel_id, t.id, c),
         (0, i.ZDy)(
             async () => {
                 let { ForwardModal: e } = await Promise.all([n.e('25292'), n.e('6380'), n.e('16967')]).then(n.bind(n, 930864));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        l(a({}, n), {
+                        o(l({}, n), {
                             message: t,
                             initialSelectedDestinations: u,
                             forwardOptions: d,
-                            onRequestSent: f
+                            onRequestSent: p
                         })
                     );
             },
@@ -76,15 +76,15 @@ function u() {
     (0, i.Mr3)(s);
 }
 function d(e) {
-    let { message: t, failedDestinations: o, forwardOptions: s } = e;
+    let { message: t, failedDestinations: a, forwardOptions: s } = e;
     (0, i.ZDy)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e('86590').then(n.bind(n, 384331));
         return (n) =>
             (0, r.jsx)(
                 e,
-                l(a({}, n), {
+                o(l({}, n), {
                     message: t,
-                    failedDestinations: o,
+                    failedDestinations: a,
                     forwardOptions: s
                 })
             );

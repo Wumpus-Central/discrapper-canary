@@ -2,16 +2,16 @@ n.d(t, {
     ZP: () => C,
     yw: () => A
 }),
-    n(47120),
-    n(315314),
-    n(309749),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(411104),
-    n(301563),
-    n(566702);
+    n(388685),
+    n(190126),
+    n(368063),
+    n(65234),
+    n(111804),
+    n(490233),
+    n(97749),
+    n(415506),
+    n(35282),
+    n(781311);
 var r = n(392711),
     i = n.n(r),
     o = n(31775),
@@ -194,12 +194,12 @@ let C = m(p({}, l().defaultRules.link), {
         if (null == j || null == U || 0 === N(j).trim().length) return u();
         let G = i().pick(t.rules, x),
             B = l().parserFor(G)(_.whitespaceSanitized, L),
-            F = h.whitespaceSanitized,
-            { target: V } = P;
+            V = h.whitespaceSanitized,
+            { target: F } = P;
         return {
             content: B,
-            target: V,
-            title: F
+            target: F,
+            title: V
         };
     }
 });

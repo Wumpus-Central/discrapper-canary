@@ -1,5 +1,5 @@
 let r;
-n.d(t, { ZP: () => H }), n(411104), n(47120), n(653041);
+n.d(t, { ZP: () => H }), n(415506), n(388685), n(539854);
 var i = n(348327),
     o = n.n(i),
     a = n(512722),
@@ -195,7 +195,7 @@ function U(e, t) {
 }
 let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
     B = (0, f.oH)((e, t) => e.getRoots().map(N)),
-    F = (0, f.oH)((e, t) => {
+    V = (0, f.oH)((e, t) => {
         let n = [];
         function r(e) {
             switch (e.type) {
@@ -207,7 +207,7 @@ let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
         }
         return r(e.root), n;
     }),
-    V = (0, f.oH)((e, t) => e.root.children.map(N));
+    F = (0, f.oH)((e, t) => e.root.children.map(N));
 class Z extends E.Z {
     initialize() {
         this.waitFor(g.Z, b.ZP, d.Z, h.Z, u.Z, p.Z, l.Z);
@@ -225,10 +225,10 @@ class Z extends E.Z {
         return G(S, S.version);
     }
     getFlattenedGuildFolderList() {
-        return F(S, S.version);
+        return V(S, S.version);
     }
     getCompatibleGuildFolders() {
-        return V(S, S.version);
+        return F(S, S.version);
     }
     getFastListGuildFolders() {
         return S.getRoots();

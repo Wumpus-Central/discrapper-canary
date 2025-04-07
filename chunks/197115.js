@@ -116,7 +116,7 @@ function D(e) {
     );
 }
 let L = function (e) {
-    var { isGift: t, subscriptionTier: i, onClick: N, size: C, className: w, isTrialCTA: L, buttonText: x, buttonTextClassName: M, subscribeButtonText: k, iconClassName: j, postSuccessGuild: U, onSubscribeModalClose: G, premiumModalAnalyticsLocation: B, showIcon: F = !0, disableShine: V, applicationId: Z, giftMessage: H, overrideDisabledButtonText: W, shinyButtonClassName: Y, showGradient: K = !1, confirmationFooter: z, paymentModalBanner: q } = e,
+    var { isGift: t, subscriptionTier: i, onClick: N, size: C, className: w, isTrialCTA: L, buttonText: x, buttonTextClassName: M, subscribeButtonText: k, iconClassName: j, postSuccessGuild: U, onSubscribeModalClose: G, premiumModalAnalyticsLocation: B, showIcon: V = !0, disableShine: F, applicationId: Z, giftMessage: H, overrideDisabledButtonText: W, shinyButtonClassName: Y, showGradient: K = !1, confirmationFooter: z, paymentModalBanner: q } = e,
         Q = P(e, ['isGift', 'subscriptionTier', 'onClick', 'size', 'className', 'isTrialCTA', 'buttonText', 'buttonTextClassName', 'subscribeButtonText', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'overrideDisabledButtonText', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
     let X = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
         J = (0, a.e7)([g.Z], () => g.Z.isFocused()),
@@ -191,7 +191,7 @@ let L = function (e) {
                 ),
                 {
                     children: [
-                        F &&
+                        V &&
                             (0, r.jsx)(s.SrA, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -271,14 +271,14 @@ let L = function (e) {
                             },
                             w
                         ),
-                        pauseAnimation: !J || V
+                        pauseAnimation: !J || F
                     },
                     Q,
                     e
                 ),
                 {
                     children: [
-                        F &&
+                        V &&
                             (0, r.jsx)(s.SrA, {
                                 size: 'md',
                                 color: 'currentColor',

@@ -1,96 +1,96 @@
-l.d(n, { Z: () => v });
-var r = l(200651),
-    t = l(192379),
-    a = l(442837),
-    i = l(481060),
-    o = l(884902),
-    s = l(271383),
-    c = l(430824),
-    u = l(594174),
-    d = l(5192),
-    m = l(645896),
-    f = l(979264),
-    h = l(308083),
-    g = l(388032),
-    x = l(443924);
-let v = t.memo(function (e) {
-    var n, l, t, v, j, p;
-    let { guildId: b, isTagAdopted: N, onChangeUseTag: P } = e,
-        y = (0, m.Cc)(b),
-        C = (0, a.e7)([c.Z], () => c.Z.getGuild(b)),
-        w = null != (v = null == y || null == (n = y.badge) ? void 0 : n.imageHash) ? v : null == C || null == (l = C.profile) ? void 0 : l.badge,
-        _ = null != (j = null == y ? void 0 : y.tag) ? j : null == C || null == (t = C.profile) ? void 0 : t.tag,
-        S = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        k = (0, a.e7)([s.ZP], () => (null != S ? s.ZP.getMember(b, S.id) : null)),
-        O = (0, o.E)(b, null == k ? void 0 : k.colorStrings);
-    return null == C || null == S || null == k || null == w
+r.d(t, { Z: () => x });
+var n = r(200651),
+    l = r(192379),
+    i = r(442837),
+    a = r(481060),
+    s = r(884902),
+    o = r(271383),
+    c = r(430824),
+    u = r(594174),
+    d = r(5192),
+    f = r(645896),
+    m = r(979264),
+    p = r(308083),
+    h = r(388032),
+    g = r(443924);
+let x = l.memo(function (e) {
+    var t, r, l, x, j, b;
+    let { guildId: y, isTagAdopted: v, onChangeUseTag: O } = e,
+        C = (0, f.Cc)(y),
+        w = (0, i.e7)([c.Z], () => c.Z.getGuild(y)),
+        N = null != (x = null == C || null == (t = C.badge) ? void 0 : t.imageHash) ? x : null == w || null == (r = w.profile) ? void 0 : r.badge,
+        P = null != (j = null == C ? void 0 : C.tag) ? j : null == w || null == (l = w.profile) ? void 0 : l.tag,
+        S = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        Z = (0, i.e7)([o.ZP], () => (null != S ? o.ZP.getMember(y, S.id) : null)),
+        T = (0, s.E)(y, null == Z ? void 0 : Z.colorStrings);
+    return null == w || null == S || null == Z || null == N
         ? null
-        : (0, r.jsxs)('div', {
-              className: x.previewSection,
+        : (0, n.jsxs)('div', {
+              className: g.previewSection,
               children: [
-                  (0, r.jsxs)('div', {
-                      className: x.chatPreview,
+                  (0, n.jsxs)('div', {
+                      className: g.chatPreview,
                       children: [
-                          (0, r.jsx)(i.qEK, {
-                              src: S.getAvatarURL(b, 40),
-                              size: i.EFr.SIZE_40,
+                          (0, n.jsx)(a.qEK, {
+                              src: S.getAvatarURL(y, 40),
+                              size: a.EFr.SIZE_40,
                               'aria-hidden': !0
                           }),
-                          (0, r.jsxs)('div', {
-                              className: x.previewText,
+                          (0, n.jsxs)('div', {
+                              className: g.previewText,
                               children: [
-                                  (0, r.jsxs)('div', {
-                                      className: x.userName,
+                                  (0, n.jsxs)('div', {
+                                      className: g.userName,
                                       children: [
-                                          (0, r.jsx)(i.PUh, {
-                                              className: x.userName,
-                                              name: d.ZP.getName(b, null, S),
-                                              color: null != (p = k.colorString) ? p : void 0,
-                                              roleGradient: O
+                                          (0, n.jsx)(a.PUh, {
+                                              className: g.userName,
+                                              name: d.ZP.getName(y, null, S),
+                                              color: null != (b = Z.colorString) ? b : void 0,
+                                              roleGradient: T
                                           }),
-                                          N &&
-                                              (0, r.jsx)(f.aG, {
-                                                  guildId: b,
-                                                  clanBadge: w,
-                                                  clanTag: _,
-                                                  badgeSize: h.NC.SIZE_12,
+                                          v &&
+                                              (0, n.jsx)(m.aG, {
+                                                  guildId: y,
+                                                  clanBadge: N,
+                                                  clanTag: P,
+                                                  badgeSize: p.NC.SIZE_12,
                                                   textVariant: 'text-xs/semibold'
                                               })
                                       ]
                                   }),
-                                  (0, r.jsx)('div', {
-                                      className: x.fakeMessage,
+                                  (0, n.jsx)('div', {
+                                      className: g.fakeMessage,
                                       style: { width: '80%' }
                                   }),
-                                  (0, r.jsx)('div', {
-                                      className: x.fakeMessage,
+                                  (0, n.jsx)('div', {
+                                      className: g.fakeMessage,
                                       style: { width: '50%' }
                                   })
                               ]
                           })
                       ]
                   }),
-                  (0, r.jsx)('div', { className: x.divider }),
-                  (0, r.jsxs)('div', {
-                      className: x.settingSection,
+                  (0, n.jsx)('div', { className: g.divider }),
+                  (0, n.jsxs)('div', {
+                      className: g.settingSection,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, n.jsxs)('div', {
                               children: [
-                                  (0, r.jsx)(i.Text, {
+                                  (0, n.jsx)(a.Text, {
                                       variant: 'text-md/normal',
                                       color: 'header-primary',
-                                      children: g.NW.string(g.t.nwNzVV)
+                                      children: h.NW.string(h.t.nwNzVV)
                                   }),
-                                  (0, r.jsx)(i.Text, {
+                                  (0, n.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: g.NW.string(g.t.Dpl68P)
+                                      children: h.NW.string(h.t.Dpl68P)
                                   })
                               ]
                           }),
-                          (0, r.jsx)(i.rsf, {
-                              onChange: P,
-                              checked: N
+                          (0, n.jsx)(a.rsf, {
+                              onChange: O,
+                              checked: v
                           })
                       ]
                   })

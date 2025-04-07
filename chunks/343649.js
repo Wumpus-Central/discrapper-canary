@@ -2,8 +2,8 @@ n.d(t, {
     P: () => er,
     default: () => ea
 }),
-    n(47120),
-    n(26686);
+    n(388685),
+    n(49124);
 var r,
     l = n(200651),
     i = n(192379),
@@ -248,8 +248,8 @@ function ec(e) {
         });
     let [e0, e8] = i.useState(ei),
         [e3, e1] = i.useState(L.A.WAITING),
-        [e2, e7] = i.useState(!0),
-        e4 = () => {
+        [e2, e4] = i.useState(!0),
+        e7 = () => {
             r(e3 === L.A.COMPLETED);
         },
         e6 = null != em && em.isPurchasedExternally;
@@ -258,8 +258,8 @@ function ec(e) {
     }, [eX, e$, e6, eT, em, eN, e0]),
         (0, C.bp)(eX, eT, e$, e1),
         (0, M.dZ)(eX, e3, e1);
-    let e9 = i.useRef(null),
-        [e5, te] = (0, S.Z)(!1, 500),
+    let e5 = i.useRef(null),
+        [e9, te] = (0, S.Z)(!1, 500),
         [tt, tn] = i.useState(null),
         [tr, tl] = i.useState([]),
         [ti, ts] = i.useState(!1),
@@ -296,7 +296,7 @@ function ec(e) {
             );
         }
     });
-    if (eh) t = (0, l.jsx)(g.Vq, { onClose: e4 });
+    if (eh) t = (0, l.jsx)(g.Vq, { onClose: e7 });
     else if (e_ && ey && eG && null != tt && '' !== tt)
         if (null == em ? void 0 : em.isPausedOrPausePending)
             t = (0, l.jsx)(E.hzk, {
@@ -325,7 +325,7 @@ function ec(e) {
                 premiumSubscriptionPlan: ef,
                 analyticsLocation: m,
                 analyticsSourceLocation: er,
-                onClose: e4,
+                onClose: e7,
                 onBack: () => e$(M.h8.PLAN_SELECT),
                 onSkip: () => e$(null != eN || eZ ? M.h8.REVIEW : M.h8.ADD_PAYMENT_STEPS),
                 onSubscriptionConfirmation: ed,
@@ -349,7 +349,7 @@ function ec(e) {
                             premiumSubscriptionPlan: ef,
                             numGuildBoosts: ev,
                             setNumGuildBoosts: ew,
-                            setForceDisableSubmitButton: e7,
+                            setForceDisableSubmitButton: e4,
                             premiumSubscription: em,
                             existingAvailableSlots: eg,
                             onClickPremiumSubscriptionLink: () => {
@@ -357,7 +357,7 @@ function ec(e) {
                                     window.location.href = 'discord://app/settings/nitro';
                                     return;
                                 }
-                                e4(), null != s && s(), (0, T.z)();
+                                e7(), null != s && s(), (0, T.z)();
                             },
                             guildId: ec,
                             priceOptions: o
@@ -377,7 +377,7 @@ function ec(e) {
                         (r = (0, l.jsx)(E.zxk, {
                             look: E.zxk.Looks.LINK,
                             color: (0, d.ap)(eI) ? E.zxk.Colors.PRIMARY : E.zxk.Colors.WHITE,
-                            onClick: e4,
+                            onClick: e7,
                             children: Q.NW.string(Q.t.oEAioK)
                         })),
                         (i = (0, l.jsx)(E.zxk, {
@@ -409,8 +409,8 @@ function ec(e) {
                                 e$(M.h8.ADD_PAYMENT_STEPS), ej(null);
                             },
                             onPurchaseTermsChange: eW,
-                            legalTermsNodeRef: e9,
-                            hasLegalTermsFlash: e5
+                            legalTermsNodeRef: e5,
+                            hasLegalTermsFlash: e9
                         })),
                         (n = M.h8.PLAN_SELECT),
                         (i = eU
@@ -452,7 +452,7 @@ function ec(e) {
                                               let n = await (0, P.Mg)(em, t, eH);
                                               if (n.redirectConfirmation) return void ts(null != n.redirectURL);
                                           }
-                                          0 === eP && e$(M.h8.CONFIRM), e1(L.A.COMPLETED), null != ec && (await eo(ec, 0 !== eP)), 0 !== eP && e4(), null == ea || ea();
+                                          0 === eP && e$(M.h8.CONFIRM), e1(L.A.COMPLETED), null != ec && (await eo(ec, 0 !== eP)), 0 !== eP && e7(), null == ea || ea();
                                       } catch (t) {
                                           e1(L.A.FAIL),
                                               eM(t),
@@ -479,7 +479,7 @@ function ec(e) {
                                           en(et({}, e), {
                                               color: E.zxk.Colors.GREEN,
                                               onClick: () => {
-                                                  null != e9.current && (e9.current.scrollIntoView({ behavior: 'smooth' }), te(!0));
+                                                  null != e5.current && (e5.current.scrollIntoView({ behavior: 'smooth' }), te(!0));
                                               },
                                               type: 'submit',
                                               children: Q.NW.string(Q.t.eUEeCg)
@@ -493,7 +493,7 @@ function ec(e) {
                     e = (0, l.jsx)(X.R7, {
                         guild: c,
                         guildBoostQuantity: ev + eg.length,
-                        onClose: e4,
+                        onClose: e7,
                         withAnimation: !1,
                         paymentSourceType: u
                     });
@@ -550,7 +550,7 @@ function ec(e) {
         eh ||
             eX === M.h8.PREMIUM_UPSELL ||
             (ta = (0, l.jsx)(V.Z, {
-                onClose: e4,
+                onClose: e7,
                 currentStep: eX,
                 purchaseState: e3
             })),

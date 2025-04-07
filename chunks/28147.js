@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120);
+n.d(t, { Z: () => k }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(392711),
@@ -24,8 +24,8 @@ var i = n(200651),
     P = n(106771),
     E = n(79984),
     A = n(314734),
-    O = n(981631),
-    I = n(388032),
+    I = n(981631),
+    O = n(388032),
     S = n(946908);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -125,7 +125,7 @@ function Z(e) {
           ? (0, i.jsx)(g.A, {
                 type: C.LG.SEARCH_EMPTY,
                 searchQuery: n,
-                textContent: l === C._b.TEXT ? I.NW.string(I.t.LSNOYW) : I.NW.string(I.t.Clu7Qk)
+                textContent: l === C._b.TEXT ? O.NW.string(O.t.LSNOYW) : O.NW.string(O.t.Clu7Qk)
             })
           : (0, i.jsxs)('div', {
                 children: [
@@ -170,7 +170,7 @@ function M(e) {
     r.useEffect(() => {
         !N &&
             x &&
-            (0, s.yw)(O.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, s.yw)(I.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: C.L3.SEARCH,
                 source: b.Z.entrypoint(),
                 num: a.length
@@ -182,7 +182,7 @@ function M(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(j.Z, {
-                title: I.NW.string(I.t['0hKkS0']),
+                title: O.NW.string(O.t['0hKkS0']),
                 buttonType: Z,
                 onClickViewButton: m ? g : void 0
             }),
@@ -220,7 +220,7 @@ function M(e) {
                                             searchResultsPosition: t,
                                             source: e
                                         }),
-                                        f.S.dispatch(O.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
+                                        f.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
                             }
                         },
                         n.id
@@ -269,7 +269,7 @@ function W(e) {
     return a
         ? (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(j.Z, { title: I.NW.string(I.t.PHjkRE) }),
+                  (0, i.jsx)(j.Z, { title: O.NW.string(O.t.PHjkRE) }),
                   (0, i.jsxs)('div', {
                       className: S.sectionContentContainer,
                       children: [
@@ -296,7 +296,7 @@ function W(e) {
           })
         : (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(j.Z, { title: I.NW.string(I.t.shUONj) }),
+                  (0, i.jsx)(j.Z, { title: O.NW.string(O.t.shUONj) }),
                   (0, i.jsxs)('div', {
                       className: S.sectionActivitiesContentContainer,
                       children: [
@@ -335,12 +335,12 @@ function U(e) {
 function B() {
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(j.Z, { title: I.NW.string(I.t['0hKkS0']) }),
+            (0, i.jsx)(j.Z, { title: O.NW.string(O.t['0hKkS0']) }),
             (0, i.jsx)('div', {
                 className: S.sectionContentContainer,
                 children: L.map((e) => (0, i.jsx)(E.Z, {}, e))
             }),
-            (0, i.jsx)(j.Z, { title: I.NW.string(I.t.PHjkRE) }),
+            (0, i.jsx)(j.Z, { title: O.NW.string(O.t.PHjkRE) }),
             (0, i.jsx)('div', {
                 className: S.sectionContentContainer,
                 children: R.map((e) => (0, i.jsx)(E.Z, {}, e))

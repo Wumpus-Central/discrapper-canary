@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(866573), n(642549), n(787622), n(47120);
+n.d(t, { Z: () => G }), n(853839), n(570086), n(479048), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -123,17 +123,17 @@ function G(e) {
         N = i.useRef(null),
         C = window.devicePixelRatio,
         { lastBackgroundFillColor: R, backgroundFillColor: w, lastActiveFillColor: D, activeFillColor: k, lastInactiveFillColor: G, inactiveFillColor: B } = j(l, d),
-        F = {
+        V = {
             currentTime: o,
             duration: s,
             played: l
         },
-        V = i.useRef(F);
+        F = i.useRef(V);
     i.useEffect(() => {
-        V.current = F;
+        F.current = V;
     }),
         i.useEffect(() => {
-            let { currentTime: e, duration: t, played: n } = V.current,
+            let { currentTime: e, duration: t, played: n } = F.current,
                 r = L({
                     showAll: !n,
                     currentTime: e,

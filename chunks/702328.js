@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eb }), n(47120);
+n.d(t, { Z: () => eb }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -173,7 +173,7 @@ let ep = (e) => {
             i.useEffect(() => {
                 eB(!0);
             }, []);
-        let e6 = (0, r.jsx)('div', {
+        let e3 = (0, r.jsx)('div', {
                 className: a()({
                     [ea.premiumTierCardsContainerSettings]: !L,
                     [ea.premiumTierCardsContainerFullscreen]: L
@@ -230,7 +230,7 @@ let ep = (e) => {
                     })
                 })
             }),
-            e3 = (0, r.jsxs)('div', {
+            e6 = (0, r.jsxs)('div', {
                 className: a()(ea.container, {
                     [ea.settingsContainer]: !L,
                     [ea.containerBackground]: eI && eO
@@ -321,7 +321,7 @@ let ep = (e) => {
                         className: ea.promoBannerContainer,
                         children: [(0, r.jsx)(R.Z, { isFullScreen: L }), L && eH && (0, r.jsx)(D.Z, { localizedPricingPromo: eF })]
                     }),
-                    !eI && e6,
+                    !eI && e3,
                     V === en.EZ.UserSettings &&
                         null != e0 &&
                         (0, r.jsx)(k.C, {
@@ -337,7 +337,7 @@ let ep = (e) => {
                         isReducedMotion: eE
                     }),
                     !eI && (0, r.jsx)(ep, { isFullscreen: L }),
-                    eI && e6,
+                    eI && e3,
                     (0, r.jsxs)('div', {
                         className: ea.planComparisonTableContainer,
                         children: [
@@ -416,7 +416,7 @@ let ep = (e) => {
                       (0, r.jsx)(d.yWw, {
                           className: ea.scroller,
                           ref: H,
-                          children: e3
+                          children: e6
                       }),
                       (0, r.jsx)(ee.Z, {
                           previousComponent: $.MQ.MARKETING,
@@ -426,5 +426,5 @@ let ep = (e) => {
                       })
                   ]
               })
-            : e3;
+            : e6;
     };

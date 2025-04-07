@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V });
+n.d(t, { Z: () => F });
 var r,
     i = n(442837),
     o = n(570140),
@@ -88,7 +88,7 @@ function G(e) {
 function B() {
     (T = !1), (S = null);
 }
-class F extends (r = i.ZP.Store) {
+class V extends (r = i.ZP.Store) {
     get stripePaymentMethod() {
         return d;
     }
@@ -138,8 +138,8 @@ class F extends (r = i.ZP.Store) {
         return I;
     }
 }
-s(F, 'displayName', 'NewPaymentSourceStore');
-let V = new F(o.Z, {
+s(V, 'displayName', 'NewPaymentSourceStore');
+let F = new V(o.Z, {
     NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: R,
     NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: x,
     NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: M,

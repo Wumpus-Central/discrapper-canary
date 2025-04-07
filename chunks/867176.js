@@ -2,7 +2,7 @@ n.d(t, {
     Z: () => R,
     b: () => C
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -111,9 +111,9 @@ function C(e) {
             canAnimate: D || !j ? x : k
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        F = n.getAvatarURL(b, (0, u.pxk)(S)),
-        V = (0, s._i)((0, d.ZP)(F, B, !1)),
-        Z = (0, f.Z)(null != (t = null != w ? w : null == o ? void 0 : o.primaryColor) ? t : V).hex,
+        V = n.getAvatarURL(b, (0, u.pxk)(S)),
+        F = (0, s._i)((0, d.ZP)(V, B, !1)),
+        Z = (0, f.Z)(null != (t = null != w ? w : null == o ? void 0 : o.primaryColor) ? t : F).hex,
         H = A(S),
         W = H + T - P,
         Y = R - N - P;

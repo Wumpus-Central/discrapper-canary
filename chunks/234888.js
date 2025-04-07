@@ -1,6 +1,6 @@
-a.d(t, {
-    A: () => c,
+r.d(t, {
+    A: () => a,
     i: () => n
 });
 let n = 30000,
-    c = 'Captcha';
+    a = 'Captcha';

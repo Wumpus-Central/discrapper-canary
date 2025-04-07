@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(525654),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(129293),
     d = n(388905),
     p = n(108427),
-    g = n(981631),
-    h = n(388032),
+    h = n(981631),
+    g = n(388032),
     f = n(20493);
 function m(e) {
     return n.g.location.assign(e);
@@ -22,8 +22,8 @@ function _(e) {
         return 'Android' === a().os.family || 'iOS' === a().os.family
             ? null
             : (0, r.jsx)(d.zx, {
-                  onClick: () => o(g.Z5c.LOGIN),
-                  children: h.NW.string(h.t.dKhVQE)
+                  onClick: () => o(h.Z5c.LOGIN),
+                  children: g.NW.string(g.t.dKhVQE)
               });
     }
     return ((0, c.ZP)(() => {
@@ -48,11 +48,11 @@ function _(e) {
                   }),
                   (0, r.jsx)(d.Dx, {
                       className: f.marginBottom8,
-                      children: h.NW.string(h.t['f/54a2'])
+                      children: g.NW.string(g.t['f/54a2'])
                   }),
                   (0, r.jsx)(d.DK, {
                       className: f.marginBottom40,
-                      children: h.NW.string(h.t.i3ehMj)
+                      children: g.NW.string(g.t.i3ehMj)
                   }),
                   b()
               ]
@@ -67,17 +67,17 @@ function _(e) {
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: f.marginBottom8,
-                        children: h.NW.string(h.t.iG0SlJ)
+                        children: g.NW.string(g.t.iG0SlJ)
                     }),
                     (0, r.jsx)(d.DK, {
                         className: f.marginBottom40,
-                        children: h.NW.string(h.t['Elv+qq'])
+                        children: g.NW.string(g.t['Elv+qq'])
                     }),
                     b()
                 ]
             })
           : (0, r.jsxs)(d.ZP, {
-                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: h.NW.string(h.t['9exy+f']) })]
+                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: g.NW.string(g.t['9exy+f']) })]
             });
 }
 l.ZP.initialize();

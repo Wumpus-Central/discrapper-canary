@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120), n(411104), n(773603);
+n.d(t, { Z: () => b }), n(388685), n(415506), n(457542);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(388905),
     d = n(585483),
     p = n(573261),
-    g = n(720196),
-    h = n(981631),
+    h = n(720196),
+    g = n(981631),
     f = n(388032),
     m = n(578605),
     _ = n(20493);
@@ -63,7 +63,7 @@ function b(e) {
                             onClick: () => {
                                 if (!N) {
                                     if (0 === O.length) {
-                                        I(f.NW.string(f.t.R98xDw)), d.S.dispatch(h.CkL.WAVE_EMPHASIZE);
+                                        I(f.NW.string(f.t.R98xDw)), d.S.dispatch(g.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
@@ -72,7 +72,7 @@ function b(e) {
                                         t(''),
                                         v(!0),
                                         p.Z.post({
-                                            url: h.ANM.ACCOUNT_REVERT,
+                                            url: g.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: x,
                                                 password: O
@@ -84,10 +84,10 @@ function b(e) {
                                                 let {
                                                     body: { email: n }
                                                 } = e;
-                                                C(''), t(n), o(g.n.SUCCESS);
+                                                C(''), t(n), o(h.n.SUCCESS);
                                             })
                                             .catch((e) => {
-                                                if (e instanceof Error) S(f.NW.formatToPlainString(f.t.aTVNen, { statusPageURL: h.yXt.STATUS }));
+                                                if (e instanceof Error) S(f.NW.formatToPlainString(f.t.aTVNen, { statusPageURL: g.yXt.STATUS }));
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
@@ -95,19 +95,19 @@ function b(e) {
                                                         : S(
                                                               (function (e) {
                                                                   switch (e) {
-                                                                      case h.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
+                                                                      case g.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
                                                                           return f.NW.string(f.t['11zzGR']);
-                                                                      case h.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
+                                                                      case g.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
                                                                           return f.NW.string(f.t['6qmgaG']);
-                                                                      case h.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
+                                                                      case g.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
                                                                           return f.NW.string(f.t.bChnKi);
                                                                       default:
-                                                                          return f.NW.format(f.t.aTVNen, { statusPageURL: h.yXt.STATUS });
+                                                                          return f.NW.format(f.t.aTVNen, { statusPageURL: g.yXt.STATUS });
                                                                   }
                                                               })(t.code).toString()
                                                           );
                                                 }
-                                                d.S.dispatch(h.CkL.WAVE_EMPHASIZE);
+                                                d.S.dispatch(g.CkL.WAVE_EMPHASIZE);
                                             })
                                             .finally(() => {
                                                 v(!1);
@@ -126,7 +126,7 @@ function b(e) {
                     children: (0, r.jsx)(u.zx, {
                         color: u.zx.Colors.PRIMARY,
                         onClick: () => {
-                            C(''), o(g.n.START);
+                            C(''), o(h.n.START);
                         },
                         children: f.NW.string(f.t.rzxnQ0)
                     })

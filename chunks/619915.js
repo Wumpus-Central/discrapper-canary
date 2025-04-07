@@ -1,26 +1,26 @@
 n.d(t, {
-    QN: () => p,
-    ZP: () => s,
+    QN: () => s,
+    ZP: () => p,
     gb: () => f,
     uF: () => v
 }),
-    n(47120),
-    n(653041);
+    n(388685),
+    n(539854);
 var i = n(192379),
     r = n(442837),
-    o = n(835473),
-    l = n(158776),
+    l = n(835473),
+    o = n(158776),
     c = n(594174),
     a = n(823379),
     u = n(317381),
     d = n(16609);
-function s(e, t) {
+function p(e, t) {
     return f(
         (0, r.Wu)([u.ZP], () => (null != e && null != e.id && '' !== e.id ? u.ZP.getEmbeddedActivitiesForChannel(e.id) : u.i6)),
         t
     );
 }
-function p(e) {
+function s(e) {
     let t = f((0, r.e7)([u.ZP], () => (null != e ? u.ZP.getEmbeddedActivitiesForGuild(e) : u.i6)));
     return i.useMemo(() => {
         let e = new Map();
@@ -38,7 +38,7 @@ function p(e) {
 }
 function f(e, t) {
     let n = e.map((e) => e.applicationId),
-        l = (0, o.Z)(n),
+        o = (0, l.Z)(n),
         u = new Set([]);
     for (let t of e) for (let e of t.userIds) u.add(e);
     let d = (0, r.Wu)(
@@ -58,14 +58,14 @@ function f(e, t) {
             }),
             e
                 .map((e, i) => {
-                    let r = l[i],
-                        o = [];
-                    if (null != o)
+                    let r = o[i],
+                        l = [];
+                    if (null != l)
                         for (let i of e.userIds) {
                             let e = n.get(i);
                             if (null != e && null != t) {
                                 let n = t(e);
-                                null != n && o.push(n);
+                                null != n && l.push(n);
                             }
                         }
                     return null == r
@@ -73,22 +73,22 @@ function f(e, t) {
                         : {
                               embeddedActivity: e,
                               application: r,
-                              userParticipantAvatarUrls: o
+                              userParticipantAvatarUrls: l
                           };
                 })
                 .filter(a.lm)
         );
-    }, [e, l, d, t]);
+    }, [e, o, d, t]);
 }
 function v(e) {
     return (0, r.e7)(
-        [l.Z],
+        [o.Z],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
                     var n, i, r;
-                    let o = l.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
+                    let l = o.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
                         var n;
                         return t.application_id === (null == e || null == (n = e.application) ? void 0 : n.id);
                     });
@@ -119,7 +119,7 @@ function v(e) {
                             }
                             return e;
                         })({}, e)),
-                        (r = r = { presenceActivity: o }),
+                        (r = r = { presenceActivity: l }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {

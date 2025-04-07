@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ep }), n(47120);
+n.d(t, { Z: () => ep }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(512722),
@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(7188),
     G = n(199902),
     B = n(314897),
-    F = n(131951),
-    V = n(699516),
+    V = n(131951),
+    F = n(699516),
     Z = n(594174),
     H = n(248402),
     W = n(33039),
@@ -203,7 +203,7 @@ class e_ extends i.PureComponent {
     }
     render() {
         let { channel: e, streamId: t, participantOnScreen: n, isVideoEnabled: i, width: o } = this.props,
-            a = (0, I.F6)(e, Z.default, V.Z),
+            a = (0, I.F6)(e, Z.default, F.Z),
             s = (null == n ? void 0 : n.id) === B.default.getId() && i,
             l = this.renderStreamState(),
             c = this.activeStreamForSelectedParticipant,
@@ -216,7 +216,7 @@ class e_ extends i.PureComponent {
                       (u = (0, r.jsx)(Q.Z, {
                           paused: this.streamerPaused,
                           streamId: t,
-                          component: F.Z.getVideoComponent(),
+                          component: V.Z.getVideoComponent(),
                           mirror: s,
                           children: (0, r.jsx)(R.Z, {
                               size: d.EFr.SIZE_80,
@@ -358,12 +358,12 @@ function ep(e) {
     let { channel: t, width: n } = e,
         i = (0, c.e7)([H.Z], () => H.Z.getSpeaker(t.id)),
         o = (0, c.e7)([b.Z], () => b.Z.getParticipant(t.id, i), [t.id, i]),
-        a = (0, c.e7)([F.Z], () => l()(F.Z.getVideoDevices()).values().first()),
+        a = (0, c.e7)([V.Z], () => l()(V.Z.getVideoDevices()).values().first()),
         s = (0, c.e7)([W.Z], () => (null != o && o.type !== ea.fO.ACTIVITY && o.type !== ea.fO.HIDDEN_STREAM ? W.Z.getStreamId(o.user.id, t.getGuildId(), (0, y.Z)(o.type)) : null), [o, t]),
         d = null == a || a.disabled,
         f = !d,
-        _ = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),
-        p = (0, c.e7)([F.Z], () => (0, N.Z)(F.Z)),
+        _ = (0, c.e7)([V.Z], () => !d && V.Z.isVideoEnabled(), [d]),
+        p = (0, c.e7)([V.Z], () => (0, N.Z)(V.Z)),
         h = (0, c.e7)([B.default], () => B.default.getId()),
         m = (0, c.e7)([G.Z], () => G.Z.getCurrentUserActiveStream()),
         g = (0, S.Z)((null == o ? void 0 : o.type) === ea.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, null != o && 'user' in o ? o.user.id : ''),

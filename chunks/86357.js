@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(411104);
+n.d(t, { Z: () => O }), n(415506);
 var r,
     i,
     a,
@@ -67,14 +67,14 @@ let h = (e) => {
             children: [(0, l.jsx)(_, { sku: t }), (0, l.jsx)(b, { sku: t }), (0, l.jsx)(x, { sku: t })]
         });
     },
-    v = (e) => {
+    E = (e) => {
         let { className: t } = e;
         return (0, l.jsx)('div', {
             className: t,
             children: p.NW.string(p.t.QQsaCQ)
         });
     };
-class E extends (r = o.PureComponent) {
+class v extends (r = o.PureComponent) {
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;
@@ -89,7 +89,7 @@ class E extends (r = o.PureComponent) {
         let { className: n, sku: r } = this.props;
         switch (e) {
             case 5:
-                return (0, l.jsx)(v, { className: c()(t, n) });
+                return (0, l.jsx)(E, { className: c()(t, n) });
             case 1:
                 return (0, l.jsx)(h, { className: c()(t, n) });
             case 3:
@@ -113,7 +113,7 @@ class E extends (r = o.PureComponent) {
         let { className: t, sku: n } = this.props;
         switch (e) {
             case 5:
-                return (0, l.jsx)(v, { className: t });
+                return (0, l.jsx)(E, { className: t });
             case 3:
                 return (0, l.jsx)(g, {
                     sku: n,
@@ -136,7 +136,7 @@ class E extends (r = o.PureComponent) {
             { className: n, sku: r } = this.props;
         switch (e) {
             case 5:
-                t = (0, l.jsx)(v, {});
+                t = (0, l.jsx)(E, {});
                 break;
             case 2:
                 t = (0, l.jsxs)(o.Fragment, {
@@ -176,12 +176,12 @@ class E extends (r = o.PureComponent) {
         }
     }
 }
-(a = 'Types') in E
-    ? Object.defineProperty(E, a, {
+(a = 'Types') in v
+    ? Object.defineProperty(v, a, {
           value: f,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (E[a] = f);
-let O = E;
+    : (v[a] = f);
+let O = v;

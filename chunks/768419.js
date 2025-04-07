@@ -1,5 +1,5 @@
 let r, i, o;
-n.d(t, { Z: () => eB }), n(47120), n(26686), n(301563), n(653041), n(757143), n(789020);
+n.d(t, { Z: () => eB }), n(388685), n(49124), n(35282), n(539854), n(704826), n(997841);
 var a,
     s = n(392711),
     l = n.n(s),
@@ -83,8 +83,8 @@ let k = h.Z.get(w.ABu.SPOTIFY),
     U = 'hm://pusher/v1/connections/',
     G = 30 * A.Z.Millis.SECOND,
     B = 30 * A.Z.Millis.SECOND,
-    F = 100,
-    V = 5 * A.Z.Millis.MINUTE,
+    V = 100,
+    F = 5 * A.Z.Millis.MINUTE,
     Z = 5 * A.Z.Millis.SECOND,
     H = 1.5 * A.Z.Millis.SECOND,
     W = 'Computer',
@@ -426,7 +426,7 @@ function eR() {
         t = ef(e);
     if (null == t)
         return (
-            et.start(V, () => {
+            et.start(F, () => {
                 null != i && i.userId === e && (0, m.Z)();
             }),
             !1
@@ -452,7 +452,7 @@ function ew(e) {
                 checkSoundSharing: !0,
                 checkSoundboardSounds: !1
             });
-        t && n && null != r ? ($.start(B, eP, !1), ee.stop()) : ee.start(F, () => $.stop(), !1);
+        t && n && null != r ? ($.start(B, eP, !1), ee.stop()) : ee.start(V, () => $.stop(), !1);
     }
     return !1;
 }

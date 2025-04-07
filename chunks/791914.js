@@ -17,13 +17,13 @@ var i = n(399606),
     _ = n(388032),
     b = n(413813);
 function x(e) {
-    let { tab: t, setTab: n, children: x, badgeState: y, closePopout: v } = e,
-        { showReminders: E } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+    let { tab: t, setTab: n, children: x, badgeState: y, closePopout: E } = e,
+        { showReminders: v } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: O, inInbox: N } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         j = (0, f.Us)({ location: 'RecentsHeader' }),
         { enabled: C } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        I = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        S = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount()),
+        S = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        I = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount()),
         { showForYouTab: T } = h.V.useExperiment({ location: 'RecentsHeader' });
     return (0, r.jsxs)(o.h4, {
         className: b.header,
@@ -44,7 +44,7 @@ function x(e) {
                     }),
                     (0, r.jsxs)('div', {
                         className: b.controls,
-                        children: [x, (0, r.jsx)(g.Z, { closePopout: v })]
+                        children: [x, (0, r.jsx)(g.Z, { closePopout: E })]
                     })
                 ]
             }),
@@ -91,7 +91,7 @@ function x(e) {
                                   className: b.tab,
                                   children: [
                                       _.NW.string(_.t.apq3cX),
-                                      I > 0
+                                      S > 0
                                           ? (0, r.jsx)(l.fWl, {
                                                 color: s.Z.STATUS_DANGER,
                                                 className: b.iconBadge
@@ -105,15 +105,15 @@ function x(e) {
                                   'aria-label': _.NW.string(_.t['2pAkDA']),
                                   id: a.X.BOOKMARKS,
                                   className: b.tab,
-                                  children: 0 === S ? _.NW.string(_.t['2pAkDA']) : _.NW.formatToPlainString(_.t.I4fryM, { count: S })
+                                  children: 0 === I ? _.NW.string(_.t['2pAkDA']) : _.NW.formatToPlainString(_.t.I4fryM, { count: I })
                               })
                             : null,
-                        E && !O
+                        v && !O
                             ? (0, r.jsx)(l.njP.Item, {
                                   'aria-label': 'todos',
                                   id: a.X.TODOS,
                                   className: b.tab,
-                                  children: 0 === S ? _.NW.string(_.t.aUXxzc) : _.NW.formatToPlainString(_.t['5en8yc'], { count: S })
+                                  children: 0 === I ? _.NW.string(_.t.aUXxzc) : _.NW.formatToPlainString(_.t['5en8yc'], { count: I })
                               })
                             : null,
                         j

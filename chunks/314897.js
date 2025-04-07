@@ -1,5 +1,5 @@
 let r;
-n.r(t), n.d(t, { default: () => eR }), n(177593), n(653041), n(411104);
+n.r(t), n.d(t, { default: () => eR }), n(358797), n(539854), n(415506);
 var i,
     o = n(213919),
     a = n(756647),
@@ -49,8 +49,8 @@ let A = new m.Z('AuthenticationStore'),
     U = !1,
     G = [],
     B = '',
-    F = !1,
-    V = null,
+    V = !1,
+    F = null,
     Z = !1,
     H = !1,
     W = null,
@@ -124,29 +124,29 @@ function et(e) {
 }
 function en(e) {
     let { isMultiAccount: t } = e;
-    (j = S.u34.NONE), (B = ''), (F = !1), (V = null), (r = null), t || (ee(), Q(!1));
+    (j = S.u34.NONE), (B = ''), (V = !1), (F = null), (r = null), t || (ee(), Q(!1));
 }
 function er() {
     j = S.u34.NONE;
 }
 function ei(e) {
     let { token: t } = e;
-    (j = S.u34.NONE), $(t), J(), (B = ''), (F = !1), (V = null), (K = !1);
+    (j = S.u34.NONE), $(t), J(), (B = ''), (V = !1), (F = null), (K = !1);
 }
 function eo(e) {
     let { error: t } = e;
-    (B = ''), (F = !1), (V = null), (j = null != (0, _.p)(t).date_of_birth ? S.u34.LOGIN_AGE_GATE : S.u34.NONE);
+    (B = ''), (V = !1), (F = null), (j = null != (0, _.p)(t).date_of_birth ? S.u34.LOGIN_AGE_GATE : S.u34.NONE);
 }
 function ea() {
     K = !0;
 }
 function es(e) {
     let { error: t } = e;
-    (B = ''), (F = !1), (V = null), (K = !1), (j = null != (0, _.F)(t).date_of_birth ? S.u34.LOGIN_AGE_GATE : S.u34.NONE);
+    (B = ''), (V = !1), (F = null), (K = !1), (j = null != (0, _.F)(t).date_of_birth ? S.u34.LOGIN_AGE_GATE : S.u34.NONE);
 }
 function el(e) {
     let { ticket: t, sms: n, webauthn: r, backup: i, totp: o } = e;
-    null != t && ((B = t), (F = n), (V = null != r ? r : null), (H = i), (Z = o)), (j = S.u34.MFA_STEP);
+    null != t && ((B = t), (V = n), (F = null != r ? r : null), (H = i), (Z = o)), (j = S.u34.MFA_STEP);
 }
 function ec() {
     j = S.u34.LOGGING_IN_MFA;
@@ -237,8 +237,8 @@ function eO(e) {
         (w = null),
         (j = (null == e ? void 0 : e.isSwitchingAccount) ? S.u34.LOGGING_IN : S.u34.NONE),
         (B = ''),
-        (V = null),
-        (F = !1),
+        (F = null),
+        (V = !1),
         (K = !1),
         (z = !1);
 }
@@ -296,10 +296,10 @@ class eC extends (i = s.ZP.Store) {
     getMFAMethods() {
         let e = [];
         return (
-            null != V &&
+            null != F &&
                 e.push({
                     type: 'webauthn',
-                    challenge: V
+                    challenge: F
                 }),
             Z &&
                 e.push({
@@ -307,7 +307,7 @@ class eC extends (i = s.ZP.Store) {
                     backup_codes_allowed: H
                 }),
             H && e.push({ type: 'backup' }),
-            F && e.push({ type: 'sms' }),
+            V && e.push({ type: 'sms' }),
             e
         );
     }

@@ -1,4 +1,4 @@
-n(47120);
+n(388685);
 var r,
     i,
     l,
@@ -78,7 +78,7 @@ function x() {
     for (let e of Object.keys(S)) j(S[e]);
     P = !1;
 }
-class L extends (i = o.ZP.Store) {
+class w extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], Z);
     }
@@ -87,15 +87,15 @@ class L extends (i = o.ZP.Store) {
     }
 }
 (a = 'ActivityTrackingStore'),
-    (l = 'displayName') in L
-        ? Object.defineProperty(L, l, {
+    (l = 'displayName') in w
+        ? Object.defineProperty(w, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (L[l] = a),
-    new L(u.Z, {
+        : (w[l] = a),
+    new w(u.Z, {
         RUNNING_GAMES_CHANGE: () => Z(),
         CONNECTION_OPEN: function () {
             if (P) return !1;

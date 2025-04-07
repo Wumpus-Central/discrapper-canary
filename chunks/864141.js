@@ -88,16 +88,16 @@ function U(e) {
         { profileType: U } = (0, O.z)(),
         G = { [L.fullSize]: U === w.y0.FULL_SIZE },
         { analyticsLocations: B } = (0, d.ZP)(u.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
-        F = (0, y.Z)({
+        V = (0, y.Z)({
             display: 'voice',
             activity: { type: 'VOICE' },
             voiceChannelId: i.id,
             user: t,
             analyticsLocations: B
         }),
-        V = (0, v.Z)({
+        F = (0, v.Z)({
             userId: t.id,
-            onAction: F
+            onAction: V
         }),
         Z = (0, s.e7)([g.Z], () => g.Z.getGuild(i.guild_id)),
         H = (0, b.Z)(i),
@@ -116,10 +116,10 @@ function U(e) {
         },
         X = () => {
             let e = (e) => {
-                    e.stopPropagation(), null == F || F({ action: 'OPEN_VOICE_CHANNEL' }), i.isGuildStageVoice() ? (0, h.Cq)(i) : (c.default.selectVoiceChannel(i.id), (0, _.Kh)(i.id)), null == k || k();
+                    e.stopPropagation(), null == V || V({ action: 'OPEN_VOICE_CHANNEL' }), i.isGuildStageVoice() ? (0, h.Cq)(i) : (c.default.selectVoiceChannel(i.id), (0, _.Kh)(i.id)), null == k || k();
                 },
                 t = (e) => {
-                    e.stopPropagation(), F({ action: 'OPEN_VOICE_GUILD' }), (0, p.X)(i.guild_id), null == k || k();
+                    e.stopPropagation(), V({ action: 'OPEN_VOICE_GUILD' }), (0, p.X)(i.guild_id), null == k || k();
                 };
             return (0, r.jsxs)('div', {
                 className: L.details,
@@ -156,7 +156,7 @@ function U(e) {
                         i.isGuildVoice() &&
                         (0, r.jsx)(C.Z, {
                             voiceChannel: i,
-                            onAction: F,
+                            onAction: V,
                             onClose: k
                         })
                 ]
@@ -167,16 +167,16 @@ function U(e) {
                 className: o()(L.actions, G),
                 children: (0, r.jsx)(R.Z, {
                     channel: i,
-                    onAction: F,
+                    onAction: V,
                     onClose: k
                 })
             });
     return (0, r.jsx)(d.Gt, {
         value: B,
         children: (0, r.jsxs)(I.Z, {
-            ref: V,
+            ref: F,
             className: o()(L.card, x),
-            onAction: F,
+            onAction: V,
             onClose: k,
             children: [
                 (0, r.jsx)(S.Z, {

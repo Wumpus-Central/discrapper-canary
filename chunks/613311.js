@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ep }), n(411104), n(266796), n(653041), n(733860), n(47120), n(789020);
+n.d(t, { Z: () => ep }), n(415506), n(953529), n(539854), n(290780), n(388685), n(997841);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(430824),
     Z = n(496675),
     x = n(525395),
-    L = n(558314),
-    w = n(580130),
+    w = n(558314),
+    L = n(580130),
     R = n(55563),
     D = n(551428),
     k = n(695103),
@@ -598,7 +598,7 @@ class ed extends i.PureComponent {
 }
 let ep = (0, b.Z)(
     (0, _.Z)(
-        o.ZP.connectStores([L.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, w.Z], (e) => {
+        o.ZP.connectStores([w.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, L.Z], (e) => {
             let t,
                 n,
                 r,
@@ -615,8 +615,8 @@ let ep = (0, b.Z)(
             return {
                 skuId: t,
                 application: null != l ? O.Z.getApplication(l) : null,
-                isFetchingEntitlements: null != l && w.Z.applicationIdsFetching.has(l),
-                didFetchEntitlements: null != l && w.Z.applicationIdsFetched.has(l),
+                isFetchingEntitlements: null != l && L.Z.applicationIdsFetching.has(l),
+                didFetchEntitlements: null != l && L.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: o && null != l && x.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: M.Z.isFocused(),
@@ -627,7 +627,7 @@ let ep = (0, b.Z)(
                     isTestMode: c
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: L.Z.didMatureAgree,
+                matureAgree: w.Z.didMatureAgree,
                 theme: j.Z.theme,
                 locale: P.default.locale,
                 guild: null != s ? A.Z.getGuild(s.getGuildId()) : null

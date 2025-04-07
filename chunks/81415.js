@@ -3,12 +3,12 @@ e.d(n, {
     rU: () => h
 });
 var r = e(332009);
-e(190031);
+e(282253);
 var i = e(192379),
     o = e(539528);
 e(476400);
-var a = e(910974),
-    c = e(312089),
+var a = e(44837),
+    c = e(791819),
     s = e(431803);
 i.Component, i.Component;
 var u = function (t, n) {
@@ -78,29 +78,29 @@ var y = d(function (t, n) {
         C = t.exact,
         R = t.isActive,
         g = t.location,
-        E = t.sensitive,
-        Z = t.strict,
-        x = t.style,
+        x = t.sensitive,
+        E = t.strict,
+        Z = t.style,
         _ = t.to,
         k = t.innerRef,
-        w = (0, c.Z)(t, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
+        N = (0, c.Z)(t, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
     return i.createElement(r.s6.Consumer, null, function (t) {
         t || (0, s.Z)(!1);
         var e = g || t.location,
             c = l(u(_, e), e),
             p = c.pathname,
-            N = p && p.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
-            L = N
+            w = p && p.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
+            L = w
                 ? (0, r.LX)(e.pathname, {
-                      path: N,
+                      path: w,
                       exact: C,
-                      sensitive: E,
-                      strict: Z
+                      sensitive: x,
+                      strict: E
                   })
                 : null,
             M = !!(R ? R(L, e) : L),
             A = 'function' == typeof y ? y(M) : y,
-            b = 'function' == typeof x ? x(M) : x;
+            b = 'function' == typeof Z ? Z(M) : Z;
         M &&
             ((A = (function () {
                 for (var t = arguments.length, n = Array(t), e = 0; e < t; e++) n[e] = arguments[e];
@@ -118,7 +118,7 @@ var y = d(function (t, n) {
                 style: b,
                 to: c
             },
-            w
+            N
         );
         return m !== d ? (K.ref = n || k) : (K.innerRef = k), i.createElement(h, K);
     });

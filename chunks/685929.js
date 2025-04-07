@@ -1,14 +1,14 @@
-t.d(n, {
-    C: () => i,
-    Y: () => o
+n.d(t, {
+    C: () => o,
+    Y: () => a
 });
-var r = t(442837),
-    l = t(496675),
-    c = t(981631);
-function i(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.Z;
-    return null != e && null != e.linkedLobby && n.can(c.Plq.MANAGE_CHANNELS, e) && n.can(c.Plq.VIEW_CHANNEL, e) && n.can(c.Plq.SEND_MESSAGES, e);
-}
+var r = n(442837),
+    i = n(496675),
+    l = n(981631);
 function o(e) {
-    return (0, r.e7)([l.Z], () => i(e, l.Z));
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z;
+    return null != e && null != e.linkedLobby && t.can(l.Plq.MANAGE_CHANNELS, e) && t.can(l.Plq.VIEW_CHANNEL, e) && t.can(l.Plq.SEND_MESSAGES, e);
+}
+function a(e) {
+    return (0, r.e7)([i.Z], () => o(e, i.Z));
 }

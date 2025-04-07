@@ -1,6 +1,6 @@
-var a = t(381811);
-t(306872)(r, '__esModule', { value: !0 }), (r.default = void 0);
-var o = a(t(477546)),
+var a = t(705723);
+t(864733)(r, '__esModule', { value: !0 }), (r.default = void 0);
+var o = a(t(485749)),
     n = a(t(342755)),
     l = a(t(682775)),
     i = a(t(931922)),
@@ -18,8 +18,8 @@ var o = a(t(477546)),
     q = a(t(814170)),
     x = a(t(322144)),
     P = a(t(918429)),
-    y = a(t(886098)),
-    R = a(t(566605)),
+    R = a(t(886098)),
+    y = a(t(566605)),
     g = a(t(228612)),
     w = a(t(134644)),
     _ = a(t(142933)),
@@ -58,8 +58,8 @@ r.default = new o.default([
     ['doc-dedication', q.default],
     ['doc-endnote', x.default],
     ['doc-endnotes', P.default],
-    ['doc-epigraph', y.default],
-    ['doc-epilogue', R.default],
+    ['doc-epigraph', R.default],
+    ['doc-epilogue', y.default],
     ['doc-errata', g.default],
     ['doc-example', w.default],
     ['doc-footnote', _.default],

@@ -1,5 +1,5 @@
 let r, i;
-n.r(t), n.d(t, { default: () => X }), n(653041), n(47120);
+n.r(t), n.d(t, { default: () => X }), n(539854), n(388685);
 var o,
     a = n(392711),
     s = n.n(a),
@@ -161,13 +161,13 @@ function B(e) {
     if (null == b || b !== t) return !1;
     (b = null), (T = {}), (N = !1);
 }
-function F(e) {
+function V(e) {
     let { integrationId: t } = e,
         n = K(t);
     if (null == n) return !1;
     (y = n), (b = null), (v = null), (T = {}), (N = !1);
 }
-function V() {
+function F() {
     (y = null), (T = {}), (N = !1);
 }
 function Z(e) {
@@ -270,8 +270,8 @@ let Q = new q(
                   INTEGRATION_SETTINGS_SET_SECTION: R,
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: G,
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: B,
-                  INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: F,
-                  INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: V,
+                  INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: V,
+                  INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: F,
                   INTEGRATION_SETTINGS_UPDATE_INTEGRATION: L,
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: x,
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: Z,

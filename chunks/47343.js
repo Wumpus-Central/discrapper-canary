@@ -1,62 +1,62 @@
-t.d(n, { R: () => h }), t(47120);
-var i = t(200651),
-    l = t(192379),
-    a = t(120356),
-    r = t.n(a),
-    s = t(481060),
-    o = t(590965),
-    c = t(695346),
-    u = t(51331),
-    d = t(259580),
-    m = t(626135),
-    _ = t(44609),
-    p = t(731971),
-    N = t(981631),
-    x = t(388032),
-    g = t(190981);
-let h = () => {
+n.d(t, { R: () => b }), n(388685);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    l = n(481060),
+    s = n(590965),
+    c = n(695346),
+    u = n(51331),
+    d = n(259580),
+    p = n(626135),
+    h = n(44609),
+    g = n(731971),
+    f = n(981631),
+    m = n(388032),
+    _ = n(190981);
+let b = () => {
     var e;
-    let [n, t] = l.useState(!1),
-        a = c.G6.useSetting(),
-        { nickname: h, dmsAllowed: E, showActivity: I, mutedServer: f, setNickname: v, setDmsAllowed: j, setShowActivity: S, setMutedServer: C, guildId: A, inviteCode: T } = (0, p.XW)(),
-        L = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
-        P = (0, _.m4)({ location: 'InviteSettingsControls' });
-    return (0, i.jsxs)('div', {
-        className: r()(g.editProfileContainer, { [g.opened]: n }),
+    let [t, n] = i.useState(!1),
+        o = c.G6.useSetting(),
+        { nickname: b, dmsAllowed: x, showActivity: N, mutedServer: v, setNickname: E, setDmsAllowed: I, setShowActivity: j, setMutedServer: S, guildId: O, inviteCode: C } = (0, g.XW)(),
+        y = null == (e = s.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
+        T = (0, h.m4)({ location: 'InviteSettingsControls' });
+    return (0, r.jsxs)('div', {
+        className: a()(_.editProfileContainer, { [_.opened]: t }),
         children: [
-            (0, i.jsxs)(s.P3F, {
-                className: g.header,
+            (0, r.jsxs)(l.P3F, {
+                className: _.header,
                 onClick: () => {
-                    n ||
-                        m.default.track(N.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: A,
-                            invite_code: T
+                    t ||
+                        p.default.track(f.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                            guild_id: O,
+                            invite_code: C
                         }),
-                        t(!n);
+                        n(!t);
                 },
                 children: [
-                    (0, i.jsx)('div', {
-                        className: g.headerIconWrapper,
-                        children: (0, i.jsx)(s.ewm, { size: 'md' })
+                    (0, r.jsx)('div', {
+                        className: _.headerIconWrapper,
+                        children: (0, r.jsx)(l.ewm, { size: 'md' })
                     }),
-                    (0, i.jsxs)('div', {
-                        className: g.title,
+                    (0, r.jsxs)('div', {
+                        className: _.title,
                         children: [
-                            (0, i.jsx)(s.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: x.NW.string(x.t.A5wHQ0)
+                                children: m.NW.string(m.t.A5wHQ0)
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: x.NW.string(x.t.UKCSER)
+                                children: m.NW.string(m.t.UKCSER)
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', {
-                        className: r()(g.caret, { [g.opened]: n }),
-                        children: (0, i.jsx)(d.Z, {
+                    (0, r.jsx)('div', {
+                        className: a()(_.caret, { [_.opened]: t }),
+                        children: (0, r.jsx)(d.Z, {
                             width: 18,
                             height: 18,
                             direction: d.Z.Directions.DOWN
@@ -64,42 +64,42 @@ let h = () => {
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: r()(g.customizationSection, { [g.opened]: n }, L ? null : g.condensed),
+            (0, r.jsxs)('div', {
+                className: a()(_.customizationSection, { [_.opened]: t }, y ? null : _.condensed),
                 children: [
-                    L &&
-                        (0, i.jsxs)('div', {
-                            className: g.serverNickname,
+                    y &&
+                        (0, r.jsxs)('div', {
+                            className: _.serverNickname,
                             children: [
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
-                                    children: x.NW.string(x.t.me1lRk)
+                                    children: m.NW.string(m.t.me1lRk)
                                 }),
-                                (0, i.jsx)(s.oil, {
-                                    placeholder: x.NW.string(x.t['09Q8ys']),
-                                    maxLength: N.l$U,
-                                    value: h,
-                                    onChange: v
+                                (0, r.jsx)(l.oil, {
+                                    placeholder: m.NW.string(m.t['09Q8ys']),
+                                    maxLength: f.l$U,
+                                    value: b,
+                                    onChange: E
                                 })
                             ]
                         }),
-                    (0, i.jsx)(u.Z, {
-                        title: x.NW.string(x.t['/2ed39']),
-                        value: E,
-                        onChange: j
+                    (0, r.jsx)(u.Z, {
+                        title: m.NW.string(m.t['/2ed39']),
+                        value: x,
+                        onChange: I
                     }),
-                    a &&
-                        (0, i.jsx)(u.Z, {
-                            title: x.NW.string(x.t.bN4m1N),
-                            value: I,
-                            onChange: S
+                    o &&
+                        (0, r.jsx)(u.Z, {
+                            title: m.NW.string(m.t.bN4m1N),
+                            value: N,
+                            onChange: j
                         }),
-                    P &&
-                        (0, i.jsx)(u.Z, {
-                            title: x.NW.string(x.t['0nZCqK']),
-                            value: f,
-                            onChange: C
+                    T &&
+                        (0, r.jsx)(u.Z, {
+                            title: m.NW.string(m.t['0nZCqK']),
+                            value: v,
+                            onChange: S
                         })
                 ]
             })

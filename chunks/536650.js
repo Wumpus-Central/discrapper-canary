@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(392711),
@@ -30,7 +30,7 @@ function C(e) {
         P = r.useRef(null),
         E = (0, o.dQu)(o.TVs.colors.BG_BASE_PRIMARY).hex(),
         A = (0, s.ZP)('number' == typeof _ ? '' : _, null != E ? E : ''),
-        O = r.useMemo(() => {
+        I = r.useMemo(() => {
             var e, t;
             let n = (0, l.compact)([u.Z.parseHexString(A), u.Z.parseHexString(y ? '#000000' : '#ffffff')]);
             return null !=
@@ -46,7 +46,7 @@ function C(e) {
                 ? t
                 : A;
         }, [A, y]),
-        I = b(N),
+        O = b(N),
         S = b(g),
         T = r.useCallback(() => {
             var e, t, n, i;
@@ -54,7 +54,7 @@ function C(e) {
                 a = N.current,
                 o = j.current,
                 c = null == P ? void 0 : P.current,
-                s = parseInt(null != (e = null == I ? void 0 : I.height) ? e : ''),
+                s = parseInt(null != (e = null == O ? void 0 : O.height) ? e : ''),
                 u = parseInt(null != (t = null == S ? void 0 : S.height) ? t : '');
             if (null != r && null != a && null != o && !isNaN(s) && !isNaN(u)) {
                 let e = null != (n = r.scrollTop) ? n : 0,
@@ -67,12 +67,12 @@ function C(e) {
                     (a.style.backgroundColor = 'color-mix(in oklab,'
                         .concat(A, ' ')
                         .concat((1 - f) * 100, '%, ')
-                        .concat(O, ')')),
+                        .concat(I, ')')),
                     (o.style.opacity = ''.concat(0 + +f)),
                     (o.style.transform = 'translateY('.concat((i = s / 4) + (0 - i) * f, 'px)')),
                     null != c && (c.style.opacity = ''.concat(1 + -1 * f));
             }
-        }, [O, A, null == S ? void 0 : S.height, y, x, null == I ? void 0 : I.height]);
+        }, [I, A, null == S ? void 0 : S.height, y, x, null == O ? void 0 : O.height]);
     return (
         r.useEffect(() => {
             T();

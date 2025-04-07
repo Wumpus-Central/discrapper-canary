@@ -86,11 +86,11 @@ function y(e) {
         },
         B = null != y ? y : G;
     i()(I, 'Step should be set here');
-    let F = (0, o.Z)(() => Date.now(), [I]),
-        V = null != v && null == L.current ? v : d.h8.PAYMENT_TYPE;
+    let V = (0, o.Z)(() => Date.now(), [I]),
+        F = null != v && null == L.current ? v : d.h8.PAYMENT_TYPE;
     return (0, s.vP)({
         paymentModalArgs: k,
-        initialStep: V,
+        initialStep: F,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
         breadcrumpSteps: r,
@@ -108,7 +108,7 @@ function y(e) {
                 b(g({}, t), {
                     from_step: n,
                     to_step: r,
-                    step_duration_ms: i - F,
+                    step_duration_ms: i - V,
                     flow_duration_ms: i - O.startTime
                 })
             );

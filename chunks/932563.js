@@ -1,11 +1,11 @@
-r.d(t, {
-    c: () => s,
+n.d(t, {
+    c: () => a,
     z: () => o
 });
-var n = r(442837),
-    l = r(479766);
-function s() {
-    return (0, n.e7)([l.Z], () => l.Z.balance);
+var r = n(442837),
+    l = n(479766);
+function a() {
+    return (0, r.e7)([l.Z], () => l.Z.balance);
 }
 function o() {
     return l.Z.getCurrentBalance();

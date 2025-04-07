@@ -1,121 +1,121 @@
-n.d(e, { Z: () => P }), n(757143), n(301563);
+n.d(t, { Z: () => j }), n(704826), n(35282);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    l = n(481060),
-    a = n(80932),
-    c = n(2052),
-    u = n(543241),
-    s = n(339085),
-    b = n(633302),
-    d = n(691251),
-    p = n(268350),
-    g = n(217590),
-    f = n(453070),
-    O = n(926491),
-    y = n(378233),
-    j = n(981631),
-    S = n(388032);
-function v(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
+    l = n(442837),
+    a = n(481060),
+    o = n(80932),
+    s = n(2052),
+    c = n(543241),
+    u = n(339085),
+    d = n(633302),
+    f = n(691251),
+    g = n(268350),
+    m = n(217590),
+    b = n(453070),
+    p = n(926491),
+    h = n(378233),
+    y = n(981631),
+    N = n(388032);
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (e) {
+            r.forEach(function (t) {
                 var r;
-                (r = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
+                        : (e[t] = r);
             });
     }
-    return t;
+    return e;
 }
-function E(t, e) {
+function E(e, t) {
     return (
-        (e = null != e ? e : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(t);
+                      var r = Object.getOwnPropertySymbols(e);
                       n.push.apply(n, r);
                   }
                   return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        t
+        e
     );
 }
-function N(t) {
-    return b.ZP.getByName(t.replace(/(^:|:$)/g, ''));
+function v(e) {
+    return d.ZP.getByName(e.replace(/(^:|:$)/g, ''));
 }
-function P(t) {
-    let { type: e, id: n, name: P, isInExpressionPicker: h = !1 } = t,
-        { location: m } = (0, c.O)(),
-        I = i.useMemo(() => E(v({}, m), { section: h ? j.jXE.EXPRESSION_PICKER : j.jXE.CONTEXT_MENU }), [m, h]),
-        w = (0, f.Go)(),
-        C = (0, o.e7)([O.Z], () => (e === d.S.STICKER && null != n ? O.Z.getStickerById(n) : null)),
-        k = null != C && w.includes(C.id),
-        x = (0, o.e7)([s.ZP], () => {
-            if (e === d.S.EMOJI) {
-                if (null != n) return s.ZP.getDisambiguatedEmojiContext().getById(n);
-                else if (null != P) {
-                    var t;
-                    return null != (t = N(P)) ? t : N(b.ZP.convertSurrogateToName(P));
+function j(e) {
+    let { type: t, id: n, name: j, isInExpressionPicker: S = !1 } = e,
+        { location: P } = (0, s.O)(),
+        Z = i.useMemo(() => E(O({}, P), { section: S ? y.jXE.EXPRESSION_PICKER : y.jXE.CONTEXT_MENU }), [P, S]),
+        I = (0, b.Go)(),
+        x = (0, l.e7)([p.Z], () => (t === f.S.STICKER && null != n ? p.Z.getStickerById(n) : null)),
+        _ = null != x && I.includes(x.id),
+        T = (0, l.e7)([u.ZP], () => {
+            if (t === f.S.EMOJI) {
+                if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
+                else if (null != j) {
+                    var e;
+                    return null != (e = v(j)) ? e : v(d.ZP.convertSurrogateToName(j));
                 }
             }
         }),
-        A = (0, u.C1)(null, x);
-    return null != C && e === d.S.STICKER
-        ? (0, y.J8)(C) && !(0, y.V9)(C)
+        M = (0, c.C1)(null, T);
+    return null != x && t === f.S.STICKER
+        ? (0, h.J8)(x) && !(0, h.V9)(x)
             ? null
-            : k
-              ? (0, r.jsx)(l.sNh, {
+            : _
+              ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, p.hW)(C.id),
-                    label: S.NW.string(S.t.XhzKyM)
+                    action: () => (0, g.hW)(x.id),
+                    label: N.NW.string(N.t.XhzKyM)
                 })
-              : (0, r.jsx)(l.sNh, {
+              : (0, r.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
-                        (0, g.cQ)({
-                            sticker: C,
-                            location: E(v({}, I), { object: j.qAy.STICKER })
+                        (0, m.cQ)({
+                            sticker: x,
+                            location: E(O({}, Z), { object: y.qAy.STICKER })
                         }),
-                            (0, p.SA)(null == C ? void 0 : C.id);
+                            (0, g.SA)(null == x ? void 0 : x.id);
                     },
-                    label: S.NW.string(S.t.kWmiPT)
+                    label: N.NW.string(N.t.kWmiPT)
                 })
-        : null != x && e === d.S.EMOJI
-          ? A
-              ? (0, r.jsx)(l.sNh, {
+        : null != T && t === f.S.EMOJI
+          ? M
+              ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, a.Xe)(x),
-                    label: S.NW.string(S.t.Ay49KC)
+                    action: () => (0, o.Xe)(T),
+                    label: N.NW.string(N.t.Ay49KC)
                 })
-              : (0, r.jsx)(l.sNh, {
+              : (0, r.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
-                        (0, u.J1)({
-                            emoji: x,
-                            location: E(v({}, I), { object: j.qAy.EMOJI })
+                        (0, c.J1)({
+                            emoji: T,
+                            location: E(O({}, Z), { object: y.qAy.EMOJI })
                         }),
-                            (0, a.$K)(x);
+                            (0, o.$K)(T);
                     },
-                    label: S.NW.string(S.t['nNsr6+'])
+                    label: N.NW.string(N.t['nNsr6+'])
                 })
           : void 0;
 }

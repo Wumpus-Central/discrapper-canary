@@ -5,7 +5,7 @@ n.d(t, {
     uz: () => l,
     ye: () => r
 }),
-    n(47120);
+    n(388685);
 let r = new Set(['Enter', 'Tab']),
     i = new Set(['z', 'y']),
     s = 5000,

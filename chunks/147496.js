@@ -1,51 +1,51 @@
-t.r(n), t.d(n, { ItemDetailsModal: () => v }), t(266796), t(566702);
-var r = t(200651);
-t(192379);
-var l = t(752843),
-    a = t(442837),
-    o = t(481060),
-    s = t(55563),
-    i = t(551428),
-    c = t(73346),
-    d = t(591759),
-    u = t(110742),
-    x = t(886253),
-    m = t(680005),
-    _ = t(938337),
-    h = t(981631),
-    p = t(388032);
-function v(e) {
-    var n, t, v, j;
-    let { onClose: f, transitionState: N, skuId: g, appId: k, onHeaderTitleClick: b } = e,
-        S = (0, a.e7)([i.Z], () => i.Z.getForSKU(g), [g]),
-        I = (0, a.e7)([s.Z], () => s.Z.get(g), [g]),
-        O = (0, u.M)(g);
-    if (null == I) return null;
-    let y = null != (t = I.name) ? t : '',
-        R = null != (v = null == S || null == (n = S.description) ? void 0 : n.trim()) ? v : void 0,
-        T = (null == S ? void 0 : S.headerBackground) != null && null != (j = d.Z.toURLSafe((0, c._W)(k, S.headerBackground, 256))) ? j : void 0,
-        C = I.type === h.epS.DURABLE && O,
-        B = I.type === h.epS.DURABLE ? (C ? p.NW.string(p.t.bm82mp) : p.NW.string(p.t['6gprwc'])) : void 0,
-        { price: E } = I;
-    return null == E
+r.r(t), r.d(t, { ItemDetailsModal: () => m }), r(953529), r(781311);
+var n = r(200651);
+r(192379);
+var l = r(752843),
+    i = r(442837),
+    o = r(481060),
+    a = r(55563),
+    c = r(551428),
+    s = r(73346),
+    u = r(591759),
+    p = r(110742),
+    d = r(886253),
+    f = r(680005),
+    b = r(938337),
+    O = r(981631),
+    y = r(388032);
+function m(e) {
+    var t, r, m, j;
+    let { onClose: g, transitionState: h, skuId: v, appId: P, onHeaderTitleClick: x } = e,
+        w = (0, i.e7)([c.Z], () => c.Z.getForSKU(v), [v]),
+        S = (0, i.e7)([a.Z], () => a.Z.get(v), [v]),
+        C = (0, p.M)(v);
+    if (null == S) return null;
+    let E = null != (r = S.name) ? r : '',
+        N = null != (m = null == w || null == (t = w.description) ? void 0 : t.trim()) ? m : void 0,
+        I = (null == w ? void 0 : w.headerBackground) != null && null != (j = u.Z.toURLSafe((0, s._W)(P, w.headerBackground, 256))) ? j : void 0,
+        k = S.type === O.epS.DURABLE && C,
+        Z = S.type === O.epS.DURABLE ? (k ? y.NW.string(y.t.bm82mp) : y.NW.string(y.t['6gprwc'])) : void 0,
+        { price: T } = S;
+    return null == T
         ? null
-        : (0, r.jsx)(x.A, {
-              appId: k,
-              skuId: I.id,
-              transitionState: N,
-              onHeaderTitleClick: null != b ? b : f,
-              onClose: f,
-              footer: (0, r.jsx)(m.YG, {
-                  appId: k,
-                  sku: I
+        : (0, n.jsx)(d.A, {
+              appId: P,
+              skuId: S.id,
+              transitionState: h,
+              onHeaderTitleClick: null != x ? x : g,
+              onClose: g,
+              footer: (0, n.jsx)(f.YG, {
+                  appId: P,
+                  sku: S
               }),
-              children: (0, r.jsx)(_.i, {
-                  appId: k,
-                  skuId: I.id,
-                  title: y,
-                  description: R,
-                  imgSrc: T,
-                  tag: null != B ? (0, r.jsx)(l.V, { text: B }) : void 0,
+              children: (0, n.jsx)(b.i, {
+                  appId: P,
+                  skuId: S.id,
+                  title: E,
+                  description: N,
+                  imgSrc: I,
+                  tag: null != Z ? (0, n.jsx)(l.V, { text: Z }) : void 0,
                   FallbackIcon: o.Prq
               })
           });

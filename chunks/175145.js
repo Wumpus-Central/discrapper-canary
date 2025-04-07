@@ -1,131 +1,131 @@
-n.d(t, { default: () => y7 });
+n.d(t, { default: () => y6 });
 var r,
     o,
-    a = n(976913),
-    i = n(392357),
+    a = n(460288),
+    i = n(770422),
     s = n.n(i),
-    c = n(454786),
+    c = n(46018),
     l = n.n(c),
-    u = n(38017),
+    u = n(152234),
     d = n.n(u),
-    p = n(757761),
+    p = n(171283),
     h = n.n(p),
-    f = n(288887),
+    f = n(991896),
     m = n.n(f),
-    y = n(254152),
+    y = n(945730),
     v = n.n(y),
-    g = n(306872),
+    g = n(864733),
     b = n.n(g),
-    _ = n(824523),
-    k = n(97175),
-    C = n(755515),
-    Z = n(367453),
-    w = n(134738),
-    S = n(341450),
+    _ = n(825655),
+    k = n(977141),
+    C = n(149156),
+    Z = n(46888),
+    w = n(134014),
+    S = n(139726),
     N = n.n(S),
-    x = n(515894),
+    x = n(228772),
     P = n.n(x),
-    A = n(444505),
+    A = n(365556),
     R = n.n(A),
-    F = n(188771),
+    F = n(682657),
     O = n.n(F),
-    E = n(299049),
+    E = n(698275),
     I = n.n(E),
-    M = n(660614),
-    T = n.n(M),
-    B = n(718653),
-    D = n.n(B),
-    L = n(217765),
+    M = n(939504),
+    B = n.n(M),
+    T = n(78198),
+    D = n.n(T),
+    L = n(737965),
     V = n.n(L),
-    j = n(116906),
+    j = n(267315),
     U = n.n(j),
-    q = n(903389),
-    H = n(869437),
-    K = n(446240),
+    q = n(858182),
+    H = n(957408),
+    K = n(979618),
     z = n.n(K),
-    W = n(806094),
+    W = n(361539),
     Y = n.n(W),
-    G = n(895472),
+    G = n(138995),
     $ = n.n(G),
-    Q = n(518594),
+    Q = n(475788),
     J = n.n(Q),
-    X = n(650112),
+    X = n(280170),
     ee = n.n(X),
-    et = n(14014),
+    et = n(554242),
     en = n.n(et),
-    er = n(934634),
-    eo = n(664060),
-    ea = n(774900),
-    ei = n(179022),
-    es = n(195802),
+    er = n(255511),
+    eo = n(671637),
+    ea = n(533359),
+    ei = n(759082),
+    es = n(941528),
     ec = n(530733),
-    el = n(83317),
+    el = n(197436),
     eu = n.n(el),
     ed = n(120356),
     ep = n.n(ed),
-    eh = n(336648),
-    ef = n(692564),
+    eh = n(498806),
+    ef = n(622480),
     em = n.n(ef),
-    ey = n(765541),
-    ev = n(670020),
+    ey = n(642908),
+    ev = n(603345),
     eg = n.n(ev),
-    eb = n(267835),
+    eb = n(745063),
     e_ = n.n(eb),
-    ek = n(244071),
+    ek = n(72004),
     eC = n.n(ek),
-    eZ = n(750713),
+    eZ = n(443998),
     ew = n.n(eZ),
-    eS = n(762561),
+    eS = n(457495),
     eN = n.n(eS),
-    ex = n(911924),
+    ex = n(378008),
     eP = n.n(ex),
-    eA = n(263493),
+    eA = n(740211),
     eR = n.n(eA),
-    eF = n(926513),
+    eF = n(30550),
     eO = n.n(eF),
-    eE = n(719824),
+    eE = n(106557),
     eI = n.n(eE),
-    eM = n(727292),
-    eT = n.n(eM),
-    eB = n(735874),
-    eD = n.n(eB),
-    eL = n(536976),
+    eM = n(964753),
+    eB = n.n(eM),
+    eT = n(798286),
+    eD = n.n(eT),
+    eL = n(815946),
     eV = n.n(eL),
-    ej = n(997859),
+    ej = n(744096),
     eU = n.n(ej),
-    eq = n(628293),
+    eq = n(575438),
     eH = n.n(eq),
-    eK = n(516607),
+    eK = n(844144),
     ez = n.n(eK),
-    eW = n(436209),
+    eW = n(366791),
     eY = n.n(eW),
-    eG = n(270922),
+    eG = n(220357),
     e$ = n.n(eG),
-    eQ = n(761701),
+    eQ = n(564141),
     eJ = n.n(eQ),
-    eX = n(557506),
+    eX = n(882219),
     e0 = n.n(eX),
-    e1 = n(571055),
+    e1 = n(269043),
     e2 = n.n(e1),
-    e8 = n(159454),
+    e5 = n(351378),
+    e9 = n.n(e5),
+    e8 = n(215585),
     e4 = n.n(e8),
-    e6 = n(50072),
-    e5 = n.n(e6),
-    e3 = n(250470),
-    e7 = n.n(e3),
-    e9 = n(727509),
-    te = n.n(e9),
-    tt = n(597609),
+    e3 = n(401981),
+    e6 = n.n(e3),
+    e7 = n(194537),
+    te = n.n(e7),
+    tt = n(58918),
     tn = n.n(tt),
-    tr = n(220128),
+    tr = n(413352),
     to = n.n(tr),
-    ta = n(753886),
+    ta = n(970292),
     ti = n.n(ta),
-    ts = n(569975),
+    ts = n(660453),
     tc = n.n(ts),
-    tl = n(241050),
+    tl = n(507692),
     tu = n.n(tl),
-    td = n(405774),
+    td = n(131619),
     tp = n.n(td),
     th = {
         payButton: 'Pay',
@@ -861,7 +861,7 @@ function tM(e, t) {
     }
     return n;
 }
-function tT(e) {
+function tB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -878,10 +878,10 @@ function tT(e) {
     }
     return e;
 }
-var tB = (function () {
+var tT = (function () {
     function e(t) {
         var n;
-        (0, C.Z)(this, e), (0, w.Z)(this, '_id', I()((n = ''.concat(this.constructor.type, '-'))).call(n, tI())), (0, w.Z)(this, 'props', void 0), (0, w.Z)(this, 'state', void 0), (0, w.Z)(this, '_node', void 0), (0, w.Z)(this, '_component', void 0), (0, w.Z)(this, 'eventEmitter', new tE()), (0, w.Z)(this, '_parentInstance', void 0), (0, w.Z)(this, 'resources', void 0), (this.props = this.formatProps(tT(tT({}, this.constructor.defaultProps), {}, { setStatusAutomatically: !0 }, t))), (this._parentInstance = this.props._parentInstance), (this._node = null), (this.state = {}), (this.resources = this.props.modules ? this.props.modules.resources : void 0);
+        (0, C.Z)(this, e), (0, w.Z)(this, '_id', I()((n = ''.concat(this.constructor.type, '-'))).call(n, tI())), (0, w.Z)(this, 'props', void 0), (0, w.Z)(this, 'state', void 0), (0, w.Z)(this, '_node', void 0), (0, w.Z)(this, '_component', void 0), (0, w.Z)(this, 'eventEmitter', new tE()), (0, w.Z)(this, '_parentInstance', void 0), (0, w.Z)(this, 'resources', void 0), (this.props = this.formatProps(tB(tB({}, this.constructor.defaultProps), {}, { setStatusAutomatically: !0 }, t))), (this._parentInstance = this.props._parentInstance), (this._node = null), (this.state = {}), (this.resources = this.props.modules ? this.props.modules.resources : void 0);
     }
     return (
         (0, Z.Z)(e, [
@@ -900,7 +900,7 @@ var tB = (function () {
             {
                 key: 'setState',
                 value: function (e) {
-                    this.state = tT(tT({}, this.state), e);
+                    this.state = tB(tB({}, this.state), e);
                 }
             },
             {
@@ -912,10 +912,10 @@ var tB = (function () {
                         r = this.formatData();
                     return (
                         r.paymentMethod && t && (r.paymentMethod.checkoutAttemptId = t),
-                        tT(
-                            tT(
-                                tT(
-                                    tT({}, e && { riskData: { clientData: e } }),
+                        tB(
+                            tB(
+                                tB(
+                                    tB({}, e && { riskData: { clientData: e } }),
                                     n && {
                                         order: {
                                             orderData: n.orderData,
@@ -964,7 +964,7 @@ var tB = (function () {
             {
                 key: 'update',
                 value: function (e) {
-                    return (this.props = this.formatProps(tT(tT({}, this.props), e))), (this.state = {}), this.unmount().mount(this._node);
+                    return (this.props = this.formatProps(tB(tB({}, this.props), e))), (this.state = {}), this.unmount().mount(this._node);
                 }
             },
             {
@@ -991,7 +991,7 @@ var tB = (function () {
         e
     );
 })();
-(0, w.Z)(tB, 'defaultProps', {});
+(0, w.Z)(tT, 'defaultProps', {});
 var tD,
     tL,
     tV,
@@ -1090,27 +1090,27 @@ function t2(e, t) {
     var n = tJ(tL++, 4);
     !ec.YM.__s && nt(n.__H, t) && ((n.__ = e), (n.i = t), tV.__h.push(n));
 }
-function t8(e) {
+function t5(e) {
     return (
         (tH = 5),
-        t4(function () {
+        t9(function () {
             return { current: e };
         }, [])
     );
 }
-function t4(e, t) {
+function t9(e, t) {
     var n = tJ(tL++, 7);
     return nt(n.__H, t) ? ((n.__V = e()), (n.i = t), (n.__h = e), n.__V) : n.__;
 }
-function t6(e, t) {
+function t8(e, t) {
     return (
         (tH = 8),
-        t4(function () {
+        t9(function () {
             return e;
         }, t)
     );
 }
-function t5(e) {
+function t4(e) {
     var t = tV.context[e.__c],
         n = tJ(tL++, 9);
     return (n.c = e), t ? (null == n.__ && ((n.__ = !0), t.sub(tV)), t.props.value) : e.__;
@@ -1119,7 +1119,7 @@ function t3() {
     for (var e; (e = tK.shift()); )
         if (e.__P && e.__H)
             try {
-                e.__H.__h.forEach(t9), e.__H.__h.forEach(ne), (e.__H.__h = []);
+                e.__H.__h.forEach(t7), e.__H.__h.forEach(ne), (e.__H.__h = []);
             } catch (t) {
                 (e.__H.__h = []), ec.YM.__e(t, e.__v);
             }
@@ -1137,7 +1137,7 @@ function t3() {
                   t.__.forEach(function (e) {
                       e.__N && (e.__ = e.__N), (e.__V = tz), (e.__N = e.i = void 0);
                   }))
-                : (t.__h.forEach(t9), t.__h.forEach(ne), (t.__h = []))),
+                : (t.__h.forEach(t7), t.__h.forEach(ne), (t.__h = []))),
             (tj = tV);
     }),
     (ec.YM.diffed = function (e) {
@@ -1152,10 +1152,10 @@ function t3() {
                         function (e) {
                             var t,
                                 n = function () {
-                                    clearTimeout(r), t7 && cancelAnimationFrame(t), setTimeout(e);
+                                    clearTimeout(r), t6 && cancelAnimationFrame(t), setTimeout(e);
                                 },
                                 r = setTimeout(n, 100);
-                            t7 && (t = requestAnimationFrame(n));
+                            t6 && (t = requestAnimationFrame(n));
                         }
                     )(t3)),
             t.__H.__.forEach(function (e) {
@@ -1166,7 +1166,7 @@ function t3() {
     (ec.YM.__c = function (e, t) {
         t.some(function (e) {
             try {
-                e.__h.forEach(t9),
+                e.__h.forEach(t7),
                     (e.__h = e.__h.filter(function (e) {
                         return !e.__ || ne(e);
                     }));
@@ -1188,7 +1188,7 @@ function t3() {
             n.__H &&
             (n.__H.__.forEach(function (e) {
                 try {
-                    t9(e);
+                    t7(e);
                 } catch (e) {
                     t = e;
                 }
@@ -1196,8 +1196,8 @@ function t3() {
             (n.__H = void 0),
             t && ec.YM.__e(t, n.__v));
     });
-var t7 = 'function' == typeof requestAnimationFrame;
-function t9(e) {
+var t6 = 'function' == typeof requestAnimationFrame;
+function t7(e) {
     var t = tV,
         n = e.__c;
     'function' == typeof n && ((e.__c = void 0), n()), (tV = t);
@@ -1313,7 +1313,7 @@ var ns = (function () {
         resources: new ns()
     });
 function nl() {
-    return t5(nc);
+    return t4(nc);
 }
 var nu = (function (e) {
     (0, ea.Z)(r, ec.wA);
@@ -1550,7 +1550,7 @@ function n_(e) {
     ERROR: 'ERROR'
 });
 var nk = (function (e) {
-        (0, ea.Z)(r, tB);
+        (0, ea.Z)(r, tT);
         var t,
             n =
                 ((t = (function () {
@@ -1670,13 +1670,13 @@ var nk = (function (e) {
                                   )
                                 : this._parentInstance.session
                                   ? (this.props.beforeSubmit
-                                        ? new (T())(function (t, n) {
+                                        ? new (B())(function (t, n) {
                                               return e.props.beforeSubmit(e.data, e.elementRef, {
                                                   resolve: t,
                                                   reject: n
                                               });
                                           })
-                                        : T().resolve(this.data)
+                                        : B().resolve(this.data)
                                     )
                                         .then(function (t) {
                                             return e.submitPayment(t);
@@ -1929,7 +1929,7 @@ var nk = (function (e) {
 var nZ = function (e, t, n) {
         var r;
         return {
-            promise: new (T())(function (o, a) {
+            promise: new (B())(function (o, a) {
                 (r = eu()(function () {
                     a(n);
                 }, e)),
@@ -2022,7 +2022,7 @@ var nZ = function (e, t, n) {
                     key: 'getDfpPromise',
                     value: function () {
                         var e = this;
-                        return new (T())(function (t, n) {
+                        return new (B())(function (t, n) {
                             (e.processMessageHandler = nx(e.postMessageDomain, t, 0, nw)), window.addEventListener('message', e.processMessageHandler);
                         });
                     }
@@ -2204,7 +2204,7 @@ function nE(e) {
     return e;
 }
 var nI = (function (e) {
-    (0, ea.Z)(r, tB);
+    (0, ea.Z)(r, tT);
     var t,
         n =
             ((t = (function () {
@@ -2323,9 +2323,9 @@ function nM(e) {
         (0, ec.h)('div', { className: 'adyen-checkout__fieldset__fields' }, n)
     );
 }
-function nT() {
+function nB() {
     var e = nl().resources;
-    return t6(function (t) {
+    return t8(function (t) {
         return null == e ? void 0 : e.getImage(t);
     }, []);
 }
@@ -2338,14 +2338,14 @@ function nT() {
             node: 'body'
         }
     });
-var nB = function (e) {
+var nT = function (e) {
         var t,
             n = e.type,
             r = e.className,
             o = e.alt,
             a = e.height,
             i = e.width,
-            s = null == (t = nT()({ imageFolder: 'components/' })) ? void 0 : t(n);
+            s = null == (t = nB()({ imageFolder: 'components/' })) ? void 0 : t(n);
         return (0, ec.h)('img', {
             className: ep()('adyen-checkout__icon', void 0 === r ? '' : r),
             alt: void 0 === o ? '' : o,
@@ -2374,13 +2374,13 @@ var nX,
     n0,
     n1 = ['bcmc'],
     n2 = 'required',
-    n8 = 'optional',
-    n4 = 'hidden',
-    n6 = 'data-cse',
-    n5 = 'data-info',
+    n5 = 'optional',
+    n9 = 'hidden',
+    n8 = 'data-cse',
+    n4 = 'data-info',
     n3 = 'data-uid',
-    n7 = ['accel', 'pulse', 'star', 'nyce'],
-    n9 = {
+    n6 = ['accel', 'pulse', 'star', 'nyce'],
+    n7 = {
         visa: 'VISA',
         mc: 'MasterCard',
         amex: 'American Express',
@@ -2469,7 +2469,7 @@ var r_ = function (e) {
         w = e.errorVisibleToScreenReader,
         S = e.renderAlternativeToLabel,
         N = null == w || w,
-        x = t8(rv('adyen-checkout-'.concat(h))),
+        x = t5(rv('adyen-checkout-'.concat(h))),
         P = tX(!1),
         A = (0, q.Z)(P, 2),
         R = A[0],
@@ -2477,21 +2477,21 @@ var r_ = function (e) {
         O = tX(!1),
         E = (0, q.Z)(O, 2),
         M = E[0],
-        T = E[1];
-    null != C && F(!!C), null != k && T(!!k);
-    var B = t6(
+        B = E[1];
+    null != C && F(!!C), null != k && B(!!k);
+    var T = t8(
             function (e) {
                 F(!0), null == y || y(e);
             },
             [y]
         ),
-        D = t6(
+        D = t8(
             function (e) {
                 F(!1), null == f || f(e), null == m || m(e);
             },
             [f, m]
         ),
-        L = t6(
+        L = t8(
             function () {
                 return (0, ec.h)(
                     ec.HY,
@@ -2515,7 +2515,7 @@ var r_ = function (e) {
             },
             [d, i]
         ),
-        V = t6(
+        V = t8(
             function () {
                 var e, n, r;
                 return (0, ec.h)(
@@ -2541,7 +2541,7 @@ var r_ = function (e) {
                                 rb(
                                     {
                                         isValid: u,
-                                        onFocusHandler: B,
+                                        onFocusHandler: T,
                                         onBlurHandler: D,
                                         isInvalid: !!i
                                     },
@@ -2558,7 +2558,7 @@ var r_ = function (e) {
                             (0, ec.h)(
                                 'span',
                                 { className: 'adyen-checkout-input__inline-validation adyen-checkout-input__inline-validation--valid' },
-                                (0, ec.h)(nB, {
+                                (0, ec.h)(nT, {
                                     type: 'checkmark',
                                     alt: null == Z ? void 0 : Z.get('field.valid')
                                 })
@@ -2567,7 +2567,7 @@ var r_ = function (e) {
                             (0, ec.h)(
                                 'span',
                                 { className: 'adyen-checkout-input__inline-validation adyen-checkout-input__inline-validation--invalid' },
-                                (0, ec.h)(nB, {
+                                (0, ec.h)(nT, {
                                     type: 'field_error',
                                     alt: null == Z ? void 0 : Z.get('error.title')
                                 })
@@ -2576,9 +2576,9 @@ var r_ = function (e) {
                     _ && (0, ec.h)('span', (0, er.Z)({ className: 'adyen-checkout__error-text' }, N && { id: I()((r = ''.concat(x.current))).call(r, re) }, { 'aria-hidden': N ? null : 'true' }), i && 'string' == typeof i && i.length ? i : null)
                 );
             },
-            [t, i, l, u, B, D]
+            [t, i, l, u, T, D]
         ),
-        j = t6(function (e) {
+        j = t8(function (e) {
             var t = e.onFocusField,
                 n = e.focused,
                 r = e.filled,
@@ -2883,7 +2883,7 @@ function rM(e, t) {
     }
     return n;
 }
-function rT(e) {
+function rB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -2900,7 +2900,7 @@ function rT(e) {
     }
     return e;
 }
-var rB = function (e, t) {
+var rT = function (e, t) {
         var n, r;
         return Y()(
             (n = P()((r = l()(e))).call(r, function (e) {
@@ -2919,7 +2919,7 @@ var rB = function (e, t) {
             t,
             function (e, t) {
                 var a, i, s;
-                return rT(rT({}, e), {}, (0, w.Z)({}, t, null != (a = null != (i = null != (s = e[t]) ? s : null == o ? void 0 : o[t]) ? i : null == r ? void 0 : r[t]) ? a : n));
+                return rB(rB({}, e), {}, (0, w.Z)({}, t, null != (a = null != (i = null != (s = e[t]) ? s : null == o ? void 0 : o[t]) ? i : null == r ? void 0 : r[t]) ? a : n));
             },
             e
         );
@@ -2966,10 +2966,10 @@ function rL(e) {
                     i = n.data,
                     s = n.fieldProblems;
                 return {
-                    valid: rT(rT({}, e.valid), {}, (0, w.Z)({}, t, r)),
-                    errors: rT(rT({}, e.errors), {}, (0, w.Z)({}, t, o)),
-                    data: rT(rT({}, e.data), {}, (0, w.Z)({}, t, i)),
-                    fieldProblems: rT(rT({}, e.fieldProblems), {}, (0, w.Z)({}, t, s))
+                    valid: rB(rB({}, e.valid), {}, (0, w.Z)({}, t, r)),
+                    errors: rB(rB({}, e.errors), {}, (0, w.Z)({}, t, o)),
+                    data: rB(rB({}, e.data), {}, (0, w.Z)({}, t, i)),
+                    fieldProblems: rB(rB({}, e.fieldProblems), {}, (0, w.Z)({}, t, s))
                 };
             },
             {
@@ -2998,7 +2998,7 @@ function rV(e) {
         c = void 0 === s ? {} : s,
         l = e.schema,
         u = void 0 === l ? [] : l,
-        d = t4(
+        d = t9(
             function () {
                 return new rI(n);
             },
@@ -3037,11 +3037,11 @@ function rV(e) {
                     d = l || e.schema;
                 switch (n) {
                     case 'setData':
-                        return rT(rT({}, e), {}, { data: rT(rT({}, e.data), {}, (0, w.Z)({}, r, o)) });
+                        return rB(rB({}, e), {}, { data: rB(rB({}, e.data), {}, (0, w.Z)({}, r, o)) });
                     case 'setValid':
-                        return rT(rT({}, e), {}, { valid: rT(rT({}, e.valid), {}, (0, w.Z)({}, r, o)) });
+                        return rB(rB({}, e), {}, { valid: rB(rB({}, e.valid), {}, (0, w.Z)({}, r, o)) });
                     case 'setErrors':
-                        return rT(rT({}, e), {}, { errors: rT(rT({}, e.errors), {}, (0, w.Z)({}, r, o)) });
+                        return rB(rB({}, e), {}, { errors: rB(rB({}, e.errors), {}, (0, w.Z)({}, r, o)) });
                     case 'setFieldProblems':
                         return null !=
                             (b =
@@ -3051,12 +3051,12 @@ function rV(e) {
                                           _,
                                           function (t, n) {
                                               var r, o;
-                                              return rT(
-                                                  rT({}, t),
+                                              return rB(
+                                                  rB({}, t),
                                                   {},
                                                   {
-                                                      fieldProblems: rT(rT({}, e.fieldProblems), {}, (0, w.Z)({}, n, null != (r = null == u ? void 0 : u[n]) ? r : null)),
-                                                      valid: rT(rT({}, e.valid), {}, (0, w.Z)({}, n, (null == (o = e.valid) ? void 0 : o[n]) && !u[n]))
+                                                      fieldProblems: rB(rB({}, e.fieldProblems), {}, (0, w.Z)({}, n, null != (r = null == u ? void 0 : u[n]) ? r : null)),
+                                                      valid: rB(rB({}, e.valid), {}, (0, w.Z)({}, n, (null == (o = e.valid) ? void 0 : o[n]) && !u[n]))
                                                   }
                                               );
                                           },
@@ -3077,16 +3077,16 @@ function rV(e) {
                             m = f[0],
                             y = f[1],
                             v = e.data[r],
-                            g = rT({}, e.fieldProblems);
+                            g = rB({}, e.fieldProblems);
                         return (
                             v !== m && (g[r] = null),
-                            rT(
-                                rT({}, e),
+                            rB(
+                                rB({}, e),
                                 {},
                                 {
-                                    data: rT(rT({}, e.data), {}, (0, w.Z)({}, r, m)),
-                                    errors: rT(rT({}, e.errors), {}, (0, w.Z)({}, r, y.hasError() ? y.getError() : null)),
-                                    valid: rT(rT({}, e.valid), {}, (0, w.Z)({}, r, (y.isValid && !g[r]) || !1)),
+                                    data: rB(rB({}, e.data), {}, (0, w.Z)({}, r, m)),
+                                    errors: rB(rB({}, e.errors), {}, (0, w.Z)({}, r, y.hasError() ? y.getError() : null)),
+                                    valid: rB(rB({}, e.valid), {}, (0, w.Z)({}, r, (y.isValid && !g[r]) || !1)),
                                     fieldProblems: g
                                 }
                             )
@@ -3095,14 +3095,14 @@ function rV(e) {
                         var b,
                             _,
                             k,
-                            C = rT(
-                                rT({}, e),
+                            C = rB(
+                                rB({}, e),
                                 {},
                                 {
-                                    data: rT(rT({}, e.data), c.data),
-                                    errors: rT(rT({}, e.errors), c.errors),
-                                    valid: rT(rT({}, e.valid), c.valid),
-                                    fieldProblems: rT(rT({}, e.fieldProblems), c.fieldProblems)
+                                    data: rB(rB({}, e.data), c.data),
+                                    errors: rB(rB({}, e.errors), c.errors),
+                                    valid: rB(rB({}, e.valid), c.valid),
+                                    fieldProblems: rB(rB({}, e.fieldProblems), c.fieldProblems)
                                 }
                             );
                         return (
@@ -3131,26 +3131,26 @@ function rV(e) {
                                 return !O()((n = e.schema)).call(n, t);
                             }),
                             E = {
-                                data: rB(e.data, F),
-                                errors: rB(e.errors, F),
-                                valid: rB(e.valid, F)
+                                data: rT(e.data, F),
+                                errors: rT(e.errors, F),
+                                valid: rT(e.valid, F)
                             },
-                            I = rD(rB(e.data, R), F, null, A.data, null == (S = e.local) ? void 0 : S.data),
-                            M = rD(rB(e.valid, R), F, !1, A.valid, null == (N = e.local) ? void 0 : N.valid),
-                            T = rD(rB(e.errors, R), F, null, A.errors, null == (x = e.local) ? void 0 : x.errors);
-                        return rT(
-                            rT({}, e),
+                            I = rD(rT(e.data, R), F, null, A.data, null == (S = e.local) ? void 0 : S.data),
+                            M = rD(rT(e.valid, R), F, !1, A.valid, null == (N = e.local) ? void 0 : N.valid),
+                            B = rD(rT(e.errors, R), F, null, A.errors, null == (x = e.local) ? void 0 : x.errors);
+                        return rB(
+                            rB({}, e),
                             {},
                             {
                                 schema: i,
                                 data: I,
                                 valid: M,
-                                errors: T,
+                                errors: B,
                                 local: E
                             }
                         );
                     case 'validateForm':
-                        var B = Y()(d).call(
+                        var T = Y()(d).call(
                             d,
                             function (t, n) {
                                 var r = p(
@@ -3163,8 +3163,8 @@ function rV(e) {
                                     ),
                                     o = (0, q.Z)(r, 2)[1];
                                 return {
-                                    valid: rT(rT({}, t.valid), {}, (0, w.Z)({}, n, (o.isValid && !e.fieldProblems[n]) || !1)),
-                                    errors: rT(rT({}, t.errors), {}, (0, w.Z)({}, n, o.hasError(!0) ? o.getError(!0) : null))
+                                    valid: rB(rB({}, t.valid), {}, (0, w.Z)({}, n, (o.isValid && !e.fieldProblems[n]) || !1)),
+                                    errors: rB(rB({}, t.errors), {}, (0, w.Z)({}, n, o.hasError(!0) ? o.getError(!0) : null))
                                 };
                             },
                             {
@@ -3172,12 +3172,12 @@ function rV(e) {
                                 errors: e.errors
                             }
                         );
-                        return rT(
-                            rT({}, e),
+                        return rB(
+                            rB({}, e),
                             {},
                             {
-                                valid: B.valid,
-                                errors: B.errors
+                                valid: T.valid,
+                                errors: T.errors
                             }
                         );
                     default:
@@ -3195,7 +3195,7 @@ function rV(e) {
         f = (0, q.Z)(h, 2),
         m = f[0],
         y = f[1],
-        v = t4(
+        v = t9(
             function () {
                 var e;
                 return Y()((e = m.schema)).call(
@@ -3208,34 +3208,34 @@ function rV(e) {
             },
             [m.schema, m.valid]
         ),
-        g = t6(function () {
+        g = t8(function () {
             y({
                 type: 'validateForm',
                 selectedSchema: arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null
             });
         }, []),
-        b = t6(function (e, t) {
+        b = t8(function (e, t) {
             return y({
                 type: 'setErrors',
                 key: e,
                 value: t
             });
         }, []),
-        _ = t6(function (e, t) {
+        _ = t8(function (e, t) {
             return y({
                 type: 'setValid',
                 key: e,
                 value: t
             });
         }, []),
-        k = t6(function (e, t) {
+        k = t8(function (e, t) {
             return y({
                 type: 'setData',
                 key: e,
                 value: t
             });
         }, []),
-        C = t6(
+        C = t8(
             function (e) {
                 return y({
                     type: 'setSchema',
@@ -3245,13 +3245,13 @@ function rV(e) {
             },
             [m.schema]
         ),
-        Z = t6(function (e) {
+        Z = t8(function (e) {
             return y({
                 type: 'mergeForm',
                 formValue: e
             });
         }, []),
-        S = t6(
+        S = t8(
             function (e) {
                 return y({
                     type: 'setFieldProblems',
@@ -3311,7 +3311,7 @@ function rq(e) {
         d = r.uniqueId,
         p = r.disabled,
         h = r.className,
-        f = t8(null);
+        f = t5(null);
     t1(
         function () {
             null == n || n(f.current);
@@ -3319,32 +3319,32 @@ function rq(e) {
         [f.current, n]
     ),
         Object.prototype.hasOwnProperty.call(r, 'onChange') && console.error('Error: Form fields that rely on InputBase may not have an onChange property');
-    var m = t6(
+    var m = t8(
             function (e) {
                 r.onInput(e);
             },
             [r.onInput]
         ),
-        y = t6(
+        y = t8(
             function (e) {
                 null != r && r.onKeyPress && r.onKeyPress(e);
             },
             [null == r ? void 0 : r.onKeyPress]
         ),
-        v = t6(
+        v = t8(
             function (e) {
                 null != r && r.onKeyUp && r.onKeyUp(e);
             },
             [null == r ? void 0 : r.onKeyUp]
         ),
-        g = t6(
+        g = t8(
             function (e) {
                 var t, n, o;
                 null == r || null == (t = r.onBlurHandler) || t.call(r, e), r.trimOnBlur && (e.target.value = eP()((o = e.target.value)).call(o)), null == r || null == (n = r.onBlur) || n.call(r, e);
             },
             [r.onBlur, r.onBlurHandler]
         ),
-        b = t6(
+        b = t8(
             function (e) {
                 var t;
                 null == r || null == (t = r.onFocusHandler) || t.call(r, e);
@@ -3448,7 +3448,7 @@ function rY(e) {
         h = c.valid,
         f = c.errors,
         m = c.isValid,
-        y = t8({});
+        y = t5({});
     l()(y.current).length || null == (t = e.setComponentRef) || t.call(e, y.current),
         (y.current.showValidation = function () {
             d();
@@ -3661,7 +3661,7 @@ function r2(e, t) {
     }
     return n;
 }
-function r8(e) {
+function r5(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -3678,16 +3678,16 @@ function r8(e) {
     }
     return e;
 }
-var r4 = function (e) {
+var r9 = function (e) {
     var t = e.firstName,
         n = e.lastName,
         r = e.gender,
         o = e.dateOfBirth,
         a = e.shopperEmail,
         i = e.telephoneNumber;
-    return r8(r8(r8(r8({}, (t || n) && { shopperName: r8(r8(r8({}, t && { firstName: t }), n && { lastName: n }), r && { gender: r }) }), o && { dateOfBirth: r0(o) }), a && { shopperEmail: a }), i && { telephoneNumber: i });
+    return r5(r5(r5(r5({}, (t || n) && { shopperName: r5(r5(r5({}, t && { firstName: t }), n && { lastName: n }), r && { gender: r }) }), o && { dateOfBirth: r0(o) }), a && { shopperEmail: a }), i && { telephoneNumber: i });
 };
-function r6(e) {
+function r8(e) {
     var t = e.items,
         n = e.name,
         r = e.onChange,
@@ -3729,8 +3729,8 @@ function r6(e) {
         })
     );
 }
-function r5(e) {
-    var t = t4(rJ, []);
+function r4(e) {
+    var t = t9(rJ, []);
     return (0, ec.h)(
         rq,
         (0, er.Z)(
@@ -3757,10 +3757,10 @@ function r3(e) {
         })
     );
 }
-function r7(e) {
+function r6(e) {
     return (0, ec.h)(rq, (0, er.Z)({}, e, { type: 'tel' }));
 }
-function r9(e, t) {
+function r7(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -3778,18 +3778,18 @@ function oe(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = r9(Object(o), !0))).call(n, function (t) {
+            ? N()((n = r7(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = r9(Object(o)))).call(r, function (t) {
+              : N()((r = r7(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-r6.defaultProps = {
+r8.defaultProps = {
     onChange: function () {},
     items: []
 };
@@ -3806,9 +3806,9 @@ function oi(e) {
         a = e.requiredFields,
         i = e.visibility,
         s = nl().i18n,
-        c = t8({});
+        c = t5({});
     l()(c.current).length || null == (t = e.setComponentRef) || t.call(e, c.current);
-    var u = t4(rJ, []),
+    var u = t9(rJ, []),
         d = rV({
             schema: a,
             rules: oe(oe({}, r1), e.validationRules),
@@ -3838,7 +3838,7 @@ function oi(e) {
     return (
         t1(
             function () {
-                var t = r4(f);
+                var t = r9(f);
                 e.onChange({
                     data: t,
                     valid: m,
@@ -3912,7 +3912,7 @@ function oi(e) {
                                     name: 'gender',
                                     useLabelElement: !1
                                 },
-                                (0, ec.h)(r6, {
+                                (0, ec.h)(r8, {
                                     name: b('gender'),
                                     value: f.gender,
                                     items: [
@@ -3942,7 +3942,7 @@ function oi(e) {
                                     name: 'dateOfBirth',
                                     i18n: s
                                 },
-                                (0, ec.h)(r5, {
+                                (0, ec.h)(r4, {
                                     name: b('dateOfBirth'),
                                     value: f.dateOfBirth,
                                     classNameModifiers: ['dateOfBirth'],
@@ -3984,7 +3984,7 @@ function oi(e) {
                                     name: 'telephoneNumber',
                                     i18n: s
                                 },
-                                (0, ec.h)(r7, {
+                                (0, ec.h)(r6, {
                                     name: b('telephoneNumber'),
                                     value: f.telephoneNumber,
                                     classNameModifiers: ['telephoneNumber'],
@@ -4421,7 +4421,7 @@ var os = ['street', 'houseNumberOrName', 'postalCode', 'city', 'stateOrProvince'
     },
     oP = (void 0 !== eI() && eI()) || ('undefined' != typeof self && self) || (void 0 !== oP && oP),
     oA = 'URLSearchParams' in oP,
-    oR = 'Symbol' in oP && 'iterator' in eT(),
+    oR = 'Symbol' in oP && 'iterator' in eB(),
     oF =
         'FileReader' in oP &&
         'Blob' in oP &&
@@ -4441,11 +4441,11 @@ if (oE)
             function (e) {
                 return e && z()(oI).call(oI, Object.prototype.toString.call(e)) > -1;
             };
-function oT(e) {
+function oB(e) {
     if (('string' != typeof e && (e = String(e)), /[^a-z0-9\-#$%&'*+.^_`|~!]/i.test(e) || '' === e)) throw TypeError('Invalid character in header field name: "' + e + '"');
     return e.toLowerCase();
 }
-function oB(e) {
+function oT(e) {
     return 'string' != typeof e && (e = String(e)), e;
 }
 function oD(e) {
@@ -4495,11 +4495,11 @@ function oL(e) {
     }
 }
 function oV(e) {
-    if (e.bodyUsed) return T().reject(TypeError('Already read'));
+    if (e.bodyUsed) return B().reject(TypeError('Already read'));
     e.bodyUsed = !0;
 }
 function oj(e) {
-    return new (T())(function (t, n) {
+    return new (B())(function (t, n) {
         (e.onload = function () {
             t(e.result);
         }),
@@ -4529,15 +4529,15 @@ function oH() {
             ((this.blob = function () {
                 var e = oV(this);
                 if (e) return e;
-                if (this._bodyBlob) return T().resolve(this._bodyBlob);
-                if (this._bodyArrayBuffer) return T().resolve(new Blob([this._bodyArrayBuffer]));
+                if (this._bodyBlob) return B().resolve(this._bodyBlob);
+                if (this._bodyArrayBuffer) return B().resolve(new Blob([this._bodyArrayBuffer]));
                 if (this._bodyFormData) throw Error('could not read FormData body as blob');
-                return T().resolve(new Blob([this._bodyText]));
+                return B().resolve(new Blob([this._bodyText]));
             }),
             (this.arrayBuffer = function () {
                 if (this._bodyArrayBuffer) {
                     var e;
-                    return oV(this) || (ArrayBuffer.isView(this._bodyArrayBuffer) ? T().resolve(em()((e = this._bodyArrayBuffer.buffer)).call(e, this._bodyArrayBuffer.byteOffset, this._bodyArrayBuffer.byteOffset + this._bodyArrayBuffer.byteLength)) : T().resolve(this._bodyArrayBuffer));
+                    return oV(this) || (ArrayBuffer.isView(this._bodyArrayBuffer) ? B().resolve(em()((e = this._bodyArrayBuffer.buffer)).call(e, this._bodyArrayBuffer.byteOffset, this._bodyArrayBuffer.byteOffset + this._bodyArrayBuffer.byteLength)) : B().resolve(this._bodyArrayBuffer));
                 }
                 return this.blob().then(oU);
             })),
@@ -4549,14 +4549,14 @@ function oH() {
             if (r) return r;
             if (this._bodyBlob) return (e = this._bodyBlob), (n = oj((t = new FileReader()))), t.readAsText(e), n;
             if (this._bodyArrayBuffer)
-                return T().resolve(
+                return B().resolve(
                     (function (e) {
                         for (var t = new Uint8Array(e), n = Array(t.length), r = 0; r < t.length; r++) n[r] = String.fromCharCode(t[r]);
                         return n.join('');
                     })(this._bodyArrayBuffer)
                 );
             if (this._bodyFormData) throw Error('could not read FormData body as text');
-            return T().resolve(this._bodyText);
+            return B().resolve(this._bodyText);
         }),
         oO &&
             (this.formData = function () {
@@ -4569,21 +4569,21 @@ function oH() {
     );
 }
 (oL.prototype.append = function (e, t) {
-    (e = oT(e)), (t = oB(t));
+    (e = oB(e)), (t = oT(t));
     var n = J()(this)[e];
     J()(this)[e] = n ? n + ', ' + t : t;
 }),
     (oL.prototype.delete = function (e) {
-        delete J()(this)[oT(e)];
+        delete J()(this)[oB(e)];
     }),
     (oL.prototype.get = function (e) {
-        return (e = oT(e)), this.has(e) ? J()(this)[e] : null;
+        return (e = oB(e)), this.has(e) ? J()(this)[e] : null;
     }),
     (oL.prototype.has = function (e) {
-        return J()(this).hasOwnProperty(oT(e));
+        return J()(this).hasOwnProperty(oB(e));
     }),
     (oL.prototype.set = function (e, t) {
-        J()(this)[oT(e)] = oB(t);
+        J()(this)[oB(e)] = oT(t);
     }),
     (oL.prototype.forEach = function (e, t) {
         for (var n in J()(this)) J()(this).hasOwnProperty(n) && e.call(t, J()(this)[n], n, this);
@@ -4691,7 +4691,7 @@ try {
         (o$.prototype.constructor = o$);
 }
 function oQ(e, t) {
-    return new (T())(function (n, r) {
+    return new (B())(function (n, r) {
         var o = new oz(e, t);
         if (o.signal && o.signal.aborted) return r(new o$('Aborted', 'AbortError'));
         var a,
@@ -4769,7 +4769,7 @@ function oQ(e, t) {
                       c.setRequestHeader(t, e);
                   })
                 : N()((s = eV()(t.headers))).call(s, function (e) {
-                      c.setRequestHeader(e, oB(t.headers[e]));
+                      c.setRequestHeader(e, oT(t.headers[e]));
                   }),
             o.signal &&
                 (o.signal.addEventListener('abort', l),
@@ -4812,7 +4812,7 @@ function o2(e) {
     }
     return e;
 }
-function o8(e, t) {
+function o5(e, t) {
     var n,
         r,
         o = e.headers,
@@ -4863,9 +4863,9 @@ function o8(e, t) {
                                         t.next = 8;
                                         break;
                                     }
-                                    return o4(r.message, c), t.abrupt('return');
+                                    return o9(r.message, c), t.abrupt('return');
                                 case 8:
-                                    return o4(e.errorMessage || 'Service at '.concat(f, ' is not available'), c), t.abrupt('return');
+                                    return o9(e.errorMessage || 'Service at '.concat(f, ' is not available'), c), t.abrupt('return');
                                 case 11:
                                 case 'end':
                                     return t.stop();
@@ -4880,10 +4880,10 @@ function o8(e, t) {
         .catch(function (t) {
             var n;
             if (t instanceof nv) throw t;
-            o4(e.errorMessage || I()((n = 'Call to '.concat(f, ' failed. Error= '))).call(n, t), c);
+            o9(e.errorMessage || I()((n = 'Call to '.concat(f, ' failed. Error= '))).call(n, t), c);
         });
 }
-function o4(e, t) {
+function o9(e, t) {
     switch (t) {
         case 'silent':
             break;
@@ -4896,12 +4896,12 @@ function o4(e, t) {
             throw new nv('NETWORK_ERROR', e);
     }
 }
-function o6(e, t) {
-    return o8(o2(o2({}, e), {}, { method: 'POST' }), t);
+function o8(e, t) {
+    return o5(o2(o2({}, e), {}, { method: 'POST' }), t);
 }
-function o5(e, t, n) {
+function o4(e, t, n) {
     var r;
-    return o8(
+    return o5(
         o2(
             o2(
                 {},
@@ -4927,7 +4927,7 @@ var o3 = {
     'adyen-checkout__dropdown__list--active': 'Select-module_adyen-checkout__dropdown__list--active__Gegw2',
     'adyen-checkout__dropdown__element': 'Select-module_adyen-checkout__dropdown__element__ORU4-'
 };
-function o7(e) {
+function o6(e) {
     var t,
         n = e.backgroundUrl,
         r = void 0 === n ? '' : n,
@@ -4943,7 +4943,7 @@ function o7(e) {
         h = (0, q.Z)(p, 2),
         f = h[0],
         m = h[1],
-        y = t8(null),
+        y = t5(null),
         v = function () {
             m(!0);
         },
@@ -4978,11 +4978,11 @@ function o7(e) {
               )
     );
 }
-var o9 = ['filterable', 'toggleButtonRef'];
+var o7 = ['filterable', 'toggleButtonRef'];
 function ae(e) {
     var t = e.filterable,
         n = e.toggleButtonRef,
-        r = (0, k.Z)(e, o9);
+        r = (0, k.Z)(e, o7);
     return t
         ? (0, ec.h)('div', (0, er.Z)({}, r, { ref: n }))
         : (0, ec.h)(
@@ -5032,7 +5032,7 @@ function at(e) {
                   null,
                   !s &&
                       o.icon &&
-                      (0, ec.h)(o7, {
+                      (0, ec.h)(o6, {
                           className: 'adyen-checkout__dropdown__button__icon',
                           src: o.icon,
                           alt: o.name
@@ -5062,7 +5062,7 @@ function at(e) {
                   ec.HY,
                   null,
                   o.icon &&
-                      (0, ec.h)(o7, {
+                      (0, ec.h)(o6, {
                           className: 'adyen-checkout__dropdown__button__icon',
                           src: o.icon,
                           alt: o.name
@@ -5099,7 +5099,7 @@ var an = ['item', 'active', 'selected'],
                 id: 'listItem-'.concat(t.id)
             },
             t.icon &&
-                (0, ec.h)(o7, {
+                (0, ec.h)(o6, {
                     className: 'adyen-checkout__dropdown__element__icon',
                     alt: t.name,
                     src: t.icon
@@ -5107,7 +5107,7 @@ var an = ['item', 'active', 'selected'],
             (0, ec.h)('span', { className: 'adyen-checkout__dropdown__element__text' }, t.name),
             t.secondaryText && (0, ec.h)('span', { className: 'adyen-checkout__dropdown__element__secondary-text' }, t.secondaryText),
             r &&
-                (0, ec.h)(nB, {
+                (0, ec.h)(nT, {
                     type: 'checkmark',
                     height: 14,
                     width: 14
@@ -5184,19 +5184,19 @@ function ac(e) {
         _ = e.disabled,
         k = e.disableTextFilter,
         C = e.clearOnSelect,
-        Z = t8(null),
-        w = t8(null),
-        S = t8(null),
-        N = t8(null),
+        Z = t5(null),
+        w = t5(null),
+        S = t5(null),
+        N = t5(null),
         x = tX(null),
         A = (0, q.Z)(x, 2),
         R = A[0],
         F = A[1],
         E = tX(!1),
         M = (0, q.Z)(E, 2),
-        T = M[0],
-        B = M[1],
-        L = t4(function () {
+        B = M[0],
+        T = M[1],
+        L = t9(function () {
             return 'select-'.concat(tI());
         }, []),
         V =
@@ -5221,10 +5221,10 @@ function ac(e) {
             e && as(document.getElementById('listItem-'.concat(e.id)));
         },
         ee = function () {
-            B(!1);
+            T(!1);
         },
         et = function () {
-            B(!0);
+            T(!0);
         },
         en = function (e) {
             var t = e.currentTarget.getAttribute('data-value');
@@ -5294,15 +5294,15 @@ function ac(e) {
     return (
         t1(
             function () {
-                T ? z(null) : F(null);
+                B ? z(null) : F(null);
             },
-            [T]
+            [B]
         ),
         t1(
             function () {
-                T && l && Z.current && Z.current.focus();
+                B && l && Z.current && Z.current.focus();
             },
-            [T]
+            [B]
         ),
         t1(
             function () {
@@ -5345,7 +5345,7 @@ function ac(e) {
                 isValid: v,
                 onButtonKeyDown: function (e) {
                     var t;
-                    e.key === ai.enter && l && T && R ? er(e) : e.key === ai.escape ? ee() : !O()((t = [ai.arrowUp, ai.arrowDown, ai.enter])).call(t, e.key) && (e.key !== ai.space || (l && T)) ? ((e.shiftKey && e.key === ai.tab) || e.key === ai.tab) && ee() : (e.preventDefault(), T ? eo(e) : et());
+                    e.key === ai.enter && l && B && R ? er(e) : e.key === ai.escape ? ee() : !O()((t = [ai.arrowUp, ai.arrowDown, ai.enter])).call(t, e.key) && (e.key !== ai.space || (l && B)) ? ((e.shiftKey && e.key === ai.tab) || e.key === ai.tab) && ee() : (e.preventDefault(), B ? eo(e) : et());
                 },
                 onFocus: et,
                 onInput: function (e) {
@@ -5355,10 +5355,10 @@ function ac(e) {
                 placeholder: g,
                 readonly: void 0 !== u && u,
                 selectListId: L,
-                showList: T,
+                showList: B,
                 toggleButtonRef: S,
                 toggleList: function (e) {
-                    e.preventDefault(), T ? (z(V.name), ee()) : (z(null), et());
+                    e.preventDefault(), B ? (z(V.name), ee()) : (z(null), et());
                 },
                 disabled: _,
                 ariaDescribedBy: b ? I()((n = ''.concat(b))).call(n, re) : null
@@ -5373,7 +5373,7 @@ function ac(e) {
                 selected: V,
                 selectListId: L,
                 selectListRef: N,
-                showList: T
+                showList: B
             })
         )
     );
@@ -5402,7 +5402,7 @@ function al(e) {
         t2(
             function () {
                 if (!a || !i.countryHasDataset(a)) return f([]), void g(!0);
-                o5('states/'.concat(a), u, l.locale)
+                o4('states/'.concat(a), u, l.locale)
                     .then(function (e) {
                         f(e && e.length ? e : []), g(!0);
                     })
@@ -5460,7 +5460,7 @@ function au(e) {
         k = b[1];
     return (
         t2(function () {
-            o5('countries', l, c.locale)
+            o4('countries', l, c.locale)
                 .then(function (e) {
                     var t = n.length
                         ? P()(e).call(e, function (e) {
@@ -5708,14 +5708,14 @@ function ay(e) {
         b = g[0],
         _ = g[1],
         k = nl().i18n,
-        C = t6(
+        C = t8(
             ((t = (0, a.Z)(
                 s().mark(function e(t) {
                     return s().wrap(function (e) {
                         for (;;)
                             switch ((e.prev = e.next)) {
                                 case 0:
-                                    new (T())(function (e, r) {
+                                    new (B())(function (e, r) {
                                         n(t, {
                                             resolve: e,
                                             reject: r
@@ -5754,7 +5754,7 @@ function ay(e) {
         },
         [i]
     );
-    var Z = t4(function () {
+    var Z = t9(function () {
         return am(C);
     }, []);
     return (0, ec.h)(
@@ -5845,9 +5845,9 @@ function ab(e) {
         s = e.visibility,
         c = e.iOSFocusedField,
         u = void 0 === c ? null : c,
-        d = t8({});
+        d = t5({});
     l()(d.current).length || null == (n = e.setComponentRef) || n.call(e, d.current);
-    var p = t4(
+    var p = t9(
             function () {
                 return new af(e.specifications);
             },
@@ -5879,12 +5879,12 @@ function ab(e) {
         F = R.data,
         E = R.errors,
         M = R.valid,
-        T = R.isValid,
-        B = R.handleChangeFor,
+        B = R.isValid,
+        T = R.handleChangeFor,
         D = R.triggerValidation,
         L = R.setData;
     d.current.showValidation = function () {
-        D(), S(!x || A || T ? '' : r.get('address.errors.incomplete'));
+        D(), S(!x || A || B ? '' : r.get('address.errors.incomplete'));
     };
     var V = P()(h).call(h, function (e) {
         return !u || e === u;
@@ -5896,9 +5896,9 @@ function ab(e) {
                     t = ag(ag({}, F), {}, { stateOrProvince: e });
                 N()(i).call(i, function (e) {
                     var n;
-                    B(e, 'input')(null != (n = t[e]) ? n : '');
+                    T(e, 'input')(null != (n = t[e]) ? n : '');
                 }),
-                    t.postalCode && B('postalCode', 'blur')(F.postalCode);
+                    t.postalCode && T('postalCode', 'blur')(F.postalCode);
             },
             [F.country]
         ),
@@ -5906,7 +5906,7 @@ function ab(e) {
             var e = O()(i).call(i, 'stateOrProvince'),
                 t = F.country && p.countryHasDataset(F.country),
                 n = F.stateOrProvince || (e && t ? '' : 'N/A');
-            B('stateOrProvince', 'input')(n);
+            T('stateOrProvince', 'input')(n);
         }, []),
         t1(
             function () {
@@ -5927,10 +5927,10 @@ function ab(e) {
                     data: n,
                     valid: M,
                     errors: E,
-                    isValid: T
+                    isValid: B
                 });
             },
-            [F, M, E, T]
+            [F, M, E, B]
         ),
         'hidden' === s)
     )
@@ -5952,9 +5952,9 @@ function ab(e) {
                       errors: E,
                       valid: M,
                       fieldName: t,
-                      onInput: B(t, 'input'),
-                      onBlur: B(t, 'blur'),
-                      onDropdownChange: B(t, 'blur'),
+                      onInput: T(t, 'input'),
+                      onBlur: T(t, 'blur'),
+                      onDropdownChange: T(t, 'blur'),
                       specifications: p,
                       maxLength: rC(oC, t, F.country, !0),
                       trimOnBlur: !0,
@@ -6633,14 +6633,14 @@ var aM = function (e) {
             (((r = aF(0, em()(o).call(o, 0, 2))).test && r.test(em()(o).call(o, 4))) || !1)
         );
     },
-    aT = function (e) {
+    aB = function (e) {
         var t,
             n = aR(e);
         if (e.length < 2) return new aI('no-validate', 'TOO_SHORT');
         var r = !(!(t = aE(n)) || !aP[t]) && aP[t];
         return r ? (n.length > r.length ? new aI('invalid', 'TOO_LONG') : n.length === r.length ? (aM(e) ? new aI('valid', 'VALID') : new aI('invalid', 'INVALID_IBAN')) : new aI('no-validate', 'UNKNOWN')) : new aI('invalid', 'INVALID_COUNTRY');
     },
-    aB = function (e) {
+    aT = function (e) {
         return !rZ(e) || null;
     };
 function aD(e, t) {
@@ -6731,7 +6731,7 @@ var aV = {
                             return { data: aL(aL({}, t.data), {}, { ownerName: e }) };
                         },
                         function () {
-                            var e = aB(i.state.data.ownerName);
+                            var e = aT(i.state.data.ownerName);
                             i.setError('holder', null == e || e ? null : aV, i.onChange);
                         }
                     );
@@ -6739,7 +6739,7 @@ var aV = {
                 (0, w.Z)((0, eo.Z)(i), 'handleIbanInput', function (e) {
                     var t = aR(e.target.value),
                         n = aA(t),
-                        r = aT(n).status,
+                        r = aB(n).status,
                         o = aE(t),
                         a = (function (e, t, n) {
                             if (0 === e || !t.length) return 0;
@@ -6774,7 +6774,7 @@ var aV = {
                 (0, w.Z)((0, eo.Z)(i), 'handleIbanBlur', function (e) {
                     var t = e.target.value;
                     if (t.length > 0) {
-                        var n = aT(t).status;
+                        var n = aB(t).status;
                         i.setError('iban', 'valid' !== n ? aj : null, i.onChange);
                     } else i.setError('iban', null, i.onChange);
                 }),
@@ -6796,8 +6796,8 @@ var aV = {
                 i.state.data.ibanNumber = aA(s);
             }
             if (i.state.data.ibanNumber || i.state.data.ownerName) {
-                var c = i.props.holderName ? aB(i.state.data.ownerName) : '',
-                    l = (i.state.data.ibanNumber ? 'valid' === aT(i.state.data.ibanNumber).status : '') && c,
+                var c = i.props.holderName ? aT(i.state.data.ownerName) : '',
+                    l = (i.state.data.ibanNumber ? 'valid' === aB(i.state.data.ibanNumber).status : '') && c,
                     u = {
                         data: i.state.data,
                         isValid: l
@@ -6817,8 +6817,8 @@ var aV = {
                 {
                     key: 'onChange',
                     value: function () {
-                        var e = !this.props.holderName || aB(this.state.data.ownerName),
-                            t = 'valid' === aT(this.state.data.ibanNumber).status && e,
+                        var e = !this.props.holderName || aT(this.state.data.ownerName),
+                            t = 'valid' === aB(this.state.data.ibanNumber).status && e,
                             n = {
                                 data: this.state.data,
                                 isValid: t,
@@ -6830,8 +6830,8 @@ var aV = {
                 {
                     key: 'showValidation',
                     value: function () {
-                        var e = aT(this.state.data.ibanNumber).status,
-                            t = aB(this.state.data.ownerName);
+                        var e = aB(this.state.data.ibanNumber).status,
+                            t = aT(this.state.data.ownerName);
                         this.setError('iban', 'valid' !== e ? aj : null), this.setError('holder', t ? null : aV, this.onChange);
                     }
                 },
@@ -7110,7 +7110,7 @@ var aH = function (e) {
         }
     };
 function a0(e) {
-    var t = t8();
+    var t = t5();
     return (
         t1(
             function () {
@@ -7140,8 +7140,8 @@ var a2 = function () {
         var e = nl().i18n;
         return (0, ec.h)('p', { className: 'adyen-checkout-form-instruction' }, e.get('form.instruction'));
     },
-    a8 = ['companyDetails', 'personalDetails', 'bankAccount', 'billingAddress', 'deliveryAddress'];
-function a4(e, t) {
+    a5 = ['companyDetails', 'personalDetails', 'bankAccount', 'billingAddress', 'deliveryAddress'];
+function a9(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -7153,24 +7153,24 @@ function a4(e, t) {
     }
     return n;
 }
-function a6(e) {
+function a8(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = a4(Object(o), !0))).call(n, function (t) {
+            ? N()((n = a9(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = a4(Object(o)))).call(r, function (t) {
+              : N()((r = a9(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-var a5 = {
+var a4 = {
     isValid: !1,
     errorMessage: 'consent.checkbox.invalid',
     error: 'consent.checkbox.invalid'
@@ -7181,23 +7181,23 @@ function a3(e) {
         r = e.countryCode,
         o = e.visibility,
         a = nl().i18n,
-        i = t8({});
+        i = t5({});
     l()(i.current).length || null == (n = e.setComponentRef) || n.call(e, i.current);
-    var s = t8(!1),
-        c = t5(aW),
+    var s = t5(!1),
+        c = t4(aW),
         u = c.setSRMessagesFromObjects,
         d = c.setSRMessagesFromStrings,
         p = c.clearSRPanel,
         h = c.shouldMoveFocusSR,
         f = null == u ? void 0 : u({ fieldTypeMappingFn: ax }),
-        m = t4(function () {
+        m = t9(function () {
             return new af();
         }, []),
         y = tX(aN(o, e.data)),
         v = (0, q.Z)(y, 2),
         g = v[0],
         b = v[1],
-        C = t8(
+        C = t5(
             Y()(aS).call(
                 aS,
                 function (e, t) {
@@ -7218,14 +7218,14 @@ function a3(e) {
                 return !g[e];
             }),
         x = 'editable' === o.deliveryAddress && 'hidden' !== o.billingAddress,
-        A = tX(a6(a6({}, e.data), Z && { consentCheckbox: !1 })),
+        A = tX(a8(a8({}, e.data), Z && { consentCheckbox: !1 })),
         R = (0, q.Z)(A, 2),
         F = R[0],
         E = R[1],
         M = tX({}),
-        T = (0, q.Z)(M, 2),
-        B = T[0],
-        D = T[1],
+        B = (0, q.Z)(M, 2),
+        T = B[0],
+        D = B[1],
         L = tX({}),
         V = (0, q.Z)(L, 2),
         j = V[0],
@@ -7243,7 +7243,7 @@ function a3(e) {
             N()(aS).call(aS, function (e) {
                 C[e].current && C[e].current.showValidation();
             }),
-            D(a6({}, Z && { consentCheckbox: F.consentCheckbox ? null : a5 }));
+            D(a8({}, Z && { consentCheckbox: F.consentCheckbox ? null : a4 }));
     }),
         (i.current.setStatus = G);
     var et = a0(X);
@@ -7275,13 +7275,13 @@ function a3(e) {
                     {}
                 ),
                 S = 'deliveryAddress:',
-                N = B.companyDetails,
-                x = B.personalDetails,
-                A = B.bankAccount,
-                R = B.billingAddress,
-                E = B.deliveryAddress,
-                M = (0, k.Z)(B, a8),
-                T = E
+                N = T.companyDetails,
+                x = T.personalDetails,
+                A = T.bankAccount,
+                R = T.billingAddress,
+                E = T.deliveryAddress,
+                M = (0, k.Z)(T, a5),
+                B = E
                     ? Y()((v = e0()(E))).call(
                           v,
                           function (e, t) {
@@ -7294,7 +7294,7 @@ function a3(e) {
                           {}
                       )
                     : null,
-                D = a6(a6(a6(a6(a6(a6({}, 'object' === (0, _.Z)(N) && N), 'object' === (0, _.Z)(x) && x), 'object' === (0, _.Z)(A) && A), 'object' === (0, _.Z)(R) && R), 'object' === (0, _.Z)(T) && T), M),
+                D = a8(a8(a8(a8(a8(a8({}, 'object' === (0, _.Z)(N) && N), 'object' === (0, _.Z)(x) && x), 'object' === (0, _.Z)(A) && A), 'object' === (0, _.Z)(R) && R), 'object' === (0, _.Z)(B) && B), M),
                 L = null != (o = e.personalDetailsRequiredFields) ? o : oa,
                 V = P()(oa).call(oa, function (e) {
                     return null == L ? void 0 : O()(L).call(L, e);
@@ -7330,7 +7330,7 @@ function a3(e) {
             }
             e.onChange({
                 data: w,
-                errors: B,
+                errors: T,
                 valid: j,
                 isValid: b && C
             });
@@ -7340,13 +7340,13 @@ function a3(e) {
     var en = function (e) {
         return function (t) {
             E(function (n) {
-                return a6(a6({}, n), {}, (0, w.Z)({}, e, t.data));
+                return a8(a8({}, n), {}, (0, w.Z)({}, e, t.data));
             }),
                 U(function (n) {
-                    return a6(a6({}, n), {}, (0, w.Z)({}, e, t.isValid));
+                    return a8(a8({}, n), {}, (0, w.Z)({}, e, t.isValid));
                 }),
                 D(function (n) {
-                    return a6(a6({}, n), {}, (0, w.Z)({}, e, t.errors));
+                    return a8(a8({}, n), {}, (0, w.Z)({}, e, t.errors));
                 });
         };
     };
@@ -7406,7 +7406,7 @@ function a3(e) {
                     name: 'separateDeliveryAddress',
                     onChange: function () {
                         b(function (e) {
-                            return a6(a6({}, e), {}, { deliveryAddress: !g.deliveryAddress });
+                            return a8(a8({}, e), {}, { deliveryAddress: !g.deliveryAddress });
                         });
                     }
                 })
@@ -7424,18 +7424,18 @@ function a3(e) {
         Z &&
             (0, ec.h)(aw, {
                 data: F,
-                errorMessage: !!B.consentCheckbox,
+                errorMessage: !!T.consentCheckbox,
                 label: e.consentCheckboxLabel,
                 onChange: function (e) {
                     var t = e.target.checked;
                     E(function (e) {
-                        return a6(a6({}, e), {}, { consentCheckbox: t });
+                        return a8(a8({}, e), {}, { consentCheckbox: t });
                     }),
                         U(function (e) {
-                            return a6(a6({}, e), {}, { consentCheckbox: t });
+                            return a8(a8({}, e), {}, { consentCheckbox: t });
                         }),
                         D(function (e) {
-                            return a6(a6({}, e), {}, { consentCheckbox: !t });
+                            return a8(a8({}, e), {}, { consentCheckbox: !t });
                         });
                 },
                 i18n: a
@@ -7448,7 +7448,7 @@ function a3(e) {
             })
     );
 }
-var a7 = (function (e) {
+var a6 = (function (e) {
         (0, ea.Z)(r, ec.wA);
         var t,
             n =
@@ -7514,7 +7514,7 @@ var a7 = (function (e) {
             r
         );
     })(),
-    a9 = Object.prototype.toString;
+    a7 = Object.prototype.toString;
 function ie(e) {
     return 'object' === (0, _.Z)(e) && null !== e && '[object Array]' === Object.prototype.toString.call(e);
 }
@@ -7681,7 +7681,7 @@ var il = (function (e) {
                 key: 'render',
                 value: function () {
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -7971,7 +7971,7 @@ function iw(e) {
 }
 function iS(e, t, n) {
     var r;
-    return o6(
+    return o8(
         {
             loadingContext: e,
             path: I()((r = ''.concat('v1/AmazonPayUtility/getCheckoutDetails', '?clientKey='))).call(r, t)
@@ -8090,7 +8090,7 @@ function iP(e) {
             }
         ),
         P = function () {
-            new (T())(e.onClick).then(v.initCheckout).catch(function (t) {
+            new (B())(e.onClick).then(v.initCheckout).catch(function (t) {
                 e.onError && e.onError(t, v.componentRef);
             });
         };
@@ -8106,7 +8106,7 @@ function iP(e) {
         t1(function () {
             var t,
                 n = e.clientKey;
-            o6(
+            o8(
                 {
                     loadingContext: g,
                     path: I()((t = ''.concat('v1/AmazonPayUtility/signString', '?clientKey='))).call(t, n)
@@ -8175,7 +8175,7 @@ function iR(e) {
                 recurringMetadata: d,
                 region: u
             }),
-            o6(
+            o8(
                 {
                     loadingContext: o,
                     path: I()((r = ''.concat('v1/AmazonPayUtility/updateCheckoutSession', '?clientKey='))).call(r, s)
@@ -8206,7 +8206,7 @@ function iF(e) {
             type: 'button',
             className: 'adyen-checkout__button  adyen-checkout__button--ghost adyen-checkout__amazonpay__button--signOut',
             onClick: function () {
-                new (T())(e.onSignOut)
+                new (B())(e.onSignOut)
                     .then(function () {
                         e.amazonRef.Pay.signout();
                     })
@@ -8230,7 +8230,7 @@ var iO = (0, Z.Z)(function e(t) {
         (0, w.Z)(this, 'script', void 0),
         (0, w.Z)(this, 'load', function () {
             if (!n.isScriptLoadCalled)
-                return new (T())(function (e, t) {
+                return new (B())(function (e, t) {
                     var r = function () {
                             n.script.setAttribute('data-script-loaded', 'true'), e();
                         },
@@ -8242,7 +8242,7 @@ var iO = (0, Z.Z)(function e(t) {
                     if (((n.script = a.querySelector('script[src="'.concat(n.src, '"]'))), n.script && n.script.getAttribute('data-script-loaded'))) e();
                     else {
                         if (n.script) return n.script.addEventListener('load', r), void n.script.addEventListener('error', o);
-                        (n.script = document.createElement('script')), e5()(n.script, n.attributes), e5()(n.script.dataset, n.dataAttributes), (n.script.src = n.src), (n.script.async = !0), n.script.addEventListener('load', r), n.script.addEventListener('error', o), a.appendChild(n.script);
+                        (n.script = document.createElement('script')), e4()(n.script, n.attributes), e4()(n.script.dataset, n.dataAttributes), (n.script.src = n.src), (n.script.async = !0), n.script.addEventListener('load', r), n.script.addEventListener('error', o), a.appendChild(n.script);
                     }
                 });
         }),
@@ -8261,8 +8261,8 @@ function iE(e) {
         o = (0, q.Z)(r, 2),
         a = o[0],
         i = o[1],
-        s = t8(null),
-        c = t8(null),
+        s = t5(null),
+        c = t5(null),
         l = function () {
             i('ready');
         };
@@ -8357,7 +8357,7 @@ function iM(e, t) {
     }
     return n;
 }
-function iT(e) {
+function iB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -8374,7 +8374,7 @@ function iT(e) {
     }
     return e;
 }
-var iB = (function (e) {
+var iT = (function (e) {
     (0, ea.Z)(r, nk);
     var t,
         n =
@@ -8404,8 +8404,8 @@ var iB = (function (e) {
             {
                 key: 'formatProps',
                 value: function (e) {
-                    return iT(
-                        iT({}, e),
+                    return iB(
+                        iB({}, e),
                         {},
                         {
                             checkoutMode: e.isDropin ? 'ProcessOrder' : e.checkoutMode,
@@ -8421,7 +8421,7 @@ var iB = (function (e) {
                 value: function () {
                     var e = this.props.amazonCheckoutSessionId;
                     return {
-                        paymentMethod: iT({ type: r.type }, e && { checkoutSessionId: e }),
+                        paymentMethod: iB({ type: r.type }, e && { checkoutSessionId: e }),
                         browserInfo: this.browserInfo
                     };
                 }
@@ -8506,7 +8506,7 @@ var iB = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -8530,7 +8530,7 @@ var iB = (function (e) {
         r
     );
 })();
-(0, w.Z)(iB, 'type', 'amazonpay'), (0, w.Z)(iB, 'defaultProps', iI);
+(0, w.Z)(iT, 'type', 'amazonpay'), (0, w.Z)(iT, 'defaultProps', iI);
 var iD = {
         'apple-pay': 'ApplePayButton-module_apple-pay__gYjuP',
         'apple-pay-button': 'ApplePayButton-module_apple-pay-button__l5g-d',
@@ -8673,7 +8673,7 @@ var iU = (function () {
                     key: 'onvalidatemerchant',
                     value: function (e, t) {
                         var n = this;
-                        return new (T())(function (n, r) {
+                        return new (B())(function (n, r) {
                             return t(n, r, e.validationURL);
                         })
                             .then(function (e) {
@@ -8688,7 +8688,7 @@ var iU = (function () {
                     key: 'onpaymentauthorized',
                     value: function (e, t) {
                         var n = this;
-                        return new (T())(function (n, r) {
+                        return new (B())(function (n, r) {
                             return t(n, r, e);
                         })
                             .then(function (e) {
@@ -8705,7 +8705,7 @@ var iU = (function () {
                     key: 'onpaymentmethodselected',
                     value: function (e, t) {
                         var n = this;
-                        return new (T())(function (n, r) {
+                        return new (B())(function (n, r) {
                             return t(n, r, e);
                         })
                             .then(function (e) {
@@ -8720,7 +8720,7 @@ var iU = (function () {
                     key: 'onshippingcontactselected',
                     value: function (e, t) {
                         var n = this;
-                        return new (T())(function (n, r) {
+                        return new (B())(function (n, r) {
                             return t(n, r, e);
                         })
                             .then(function (e) {
@@ -8735,7 +8735,7 @@ var iU = (function () {
                     key: 'onshippingmethodselected',
                     value: function (e, t) {
                         var n = this;
-                        return new (T())(function (n, r) {
+                        return new (B())(function (n, r) {
                             return t(n, r, e);
                         })
                             .then(function (e) {
@@ -8939,7 +8939,7 @@ var iW = (function (e) {
                                 null != a && null != (i = a.payment) && null != (i = i.token) && i.paymentData && t.setState({ applePayToken: btoa(V()(a.payment.token.paymentData)) }), (0, ey.Z)((0, es.Z)(o.prototype), 'submit', t).call(t), e(n, r, a);
                             }
                         });
-                    return new (T())(function (e, n) {
+                    return new (B())(function (e, n) {
                         return t.props.onClick(e, n);
                     })
                         .then(function () {
@@ -8981,7 +8981,7 @@ var iW = (function (e) {
                                                     }),
                                                     (e.prev = 6),
                                                     (e.next = 9),
-                                                    o6(h, f)
+                                                    o8(h, f)
                                                 );
                                             case 9:
                                                 (m = e.sent), (y = nF.decode(m.data)) || n('Could not decode Apple Pay session'), t(JSON.parse(y)), (e.next = 19);
@@ -9012,14 +9012,14 @@ var iW = (function (e) {
             {
                 key: 'isAvailable',
                 value: function () {
-                    if ('https:' !== document.location.protocol) return T().reject(new nv('IMPLEMENTATION_ERROR', 'Trying to start an Apple Pay session from an insecure document'));
-                    if (!this.props.onValidateMerchant && !this.props.clientKey) return T().reject(new nv('IMPLEMENTATION_ERROR', 'clientKey was not provided'));
+                    if ('https:' !== document.location.protocol) return B().reject(new nv('IMPLEMENTATION_ERROR', 'Trying to start an Apple Pay session from an insecure document'));
+                    if (!this.props.onValidateMerchant && !this.props.clientKey) return B().reject(new nv('IMPLEMENTATION_ERROR', 'clientKey was not provided'));
                     try {
-                        if (window.ApplePaySession && ApplePaySession.canMakePayments() && ApplePaySession.supportsVersion(this.props.version)) return T().resolve(!0);
+                        if (window.ApplePaySession && ApplePaySession.canMakePayments() && ApplePaySession.supportsVersion(this.props.version)) return B().resolve(!0);
                     } catch (e) {
                         console.warn(e);
                     }
-                    return T().reject(new nv('ERROR', 'Apple Pay is not available on this device'));
+                    return B().reject(new nv('ERROR', 'Apple Pay is not available on this device'));
                 }
             },
             {
@@ -9231,7 +9231,7 @@ function i2(e) {
             value: n
         },
         !!r &&
-            (0, ec.h)(o7, {
+            (0, ec.h)(o6, {
                 className: 'adyen-checkout__issuer-button-img',
                 alt: t,
                 src: r
@@ -9240,13 +9240,13 @@ function i2(e) {
     );
 }
 (0, w.Z)(i1, 'type', 'atome');
-var i8 = function (e) {
+var i5 = function (e) {
     var t = e.items,
         n = void 0 === t ? [] : t,
         r = e.selectedIssuerId,
         o = e.onChange,
         a = nl().i18n,
-        i = t6(
+        i = t8(
             function (e) {
                 var t = e.currentTarget.value;
                 b()(e.target, 'value', { value: t }), o(e);
@@ -9271,29 +9271,29 @@ var i8 = function (e) {
         })
     );
 };
-function i4(e) {
+function i9(e) {
     var t,
         n = e.label,
         r = e.classNames,
         o = nl().i18n;
     return (0, ec.h)('div', { className: ep().apply(void 0, I()((t = ['adyen-checkout__content-separator'])).call(t, (0, H.Z)(void 0 === r ? [] : r))) }, o.get(void 0 === n ? 'qrCodeOrApp' : n));
 }
-var i6 = function (e) {
+var i8 = function (e) {
     var t,
         n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
-        t = new (e7())(e);
+        t = new (e6())(e);
     } catch (e) {
         return !1;
     }
     return (n && 'http:' === t.protocol) || 'https:' === t.protocol;
 };
-function i5(e) {
+function i4(e) {
     var t = e.message,
         n = e.urls,
         r = 'string' == typeof t,
         o = eg()(n).call(n, function (e) {
-            return 'string' == typeof e && i6(e);
+            return 'string' == typeof e && i8(e);
         });
     return r && o
         ? (0, ec.h)(
@@ -9320,7 +9320,7 @@ function i5(e) {
         : null;
 }
 var i3 = ['items', 'placeholder', 'issuer', 'highlightedIds'];
-function i7(e, t) {
+function i6(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -9332,7 +9332,7 @@ function i7(e, t) {
     }
     return n;
 }
-var i9 = function (e, t) {
+var i7 = function (e, t) {
         var n,
             r,
             o = e.issuer,
@@ -9386,14 +9386,14 @@ function sr(e) {
         A = (0, q.Z)(P, 2),
         R = A[0],
         F = A[1],
-        E = t5(aW),
+        E = t4(aW),
         M = E.setSRMessagesFromObjects,
-        T = E.shouldMoveFocusSR,
-        B = null == M ? void 0 : M({});
+        B = E.shouldMoveFocusSR,
+        T = null == M ? void 0 : M({});
     this.setStatus = function (e) {
         x(e);
     };
-    var D = t6(
+    var D = t8(
         function (e) {
             return function (t) {
                 F(e), d('issuer')(t);
@@ -9410,13 +9410,13 @@ function sr(e) {
                 isValid: _
             });
             var e =
-                null == B
+                null == T
                     ? void 0
-                    : B({
+                    : T({
                           errors: g,
                           isValidating: !0
                       });
-            (null == e ? void 0 : e.action) === rf && T && aX('.adyen-checkout__issuer-list', e.fieldToFocus);
+            (null == e ? void 0 : e.action) === rf && B && aX('.adyen-checkout__issuer-list', e.fieldToFocus);
         },
         [f, y, g, _]
     ),
@@ -9435,12 +9435,12 @@ function sr(e) {
                                     r,
                                     o = null != arguments[t] ? arguments[t] : {};
                                 t % 2
-                                    ? N()((n = i7(Object(o), !0))).call(n, function (t) {
+                                    ? N()((n = i6(Object(o), !0))).call(n, function (t) {
                                           (0, w.Z)(e, t, o[t]);
                                       })
                                     : m()
                                       ? v()(e, m()(o))
-                                      : N()((r = i7(Object(o)))).call(r, function (t) {
+                                      : N()((r = i6(Object(o)))).call(r, function (t) {
                                             b()(e, t, h()(o, t));
                                         });
                             }
@@ -9459,12 +9459,12 @@ function sr(e) {
             (0, ec.h)(
                 ec.HY,
                 null,
-                (0, ec.h)(i8, {
+                (0, ec.h)(i5, {
                     selectedIssuerId: R === sn.ButtonGroup ? f.issuer : null,
                     items: L,
                     onChange: D(sn.ButtonGroup)
                 }),
-                (0, ec.h)(i4, null)
+                (0, ec.h)(i9, null)
             ),
         (0, ec.h)(
             r_,
@@ -9486,7 +9486,7 @@ function sr(e) {
             (0, ec.h)(
                 'div',
                 { className: 'adyen-checkout__issuer-list__termsAndConditions' },
-                (0, ec.h)(i5, {
+                (0, ec.h)(i4, {
                     message: l.get(c.termsAndConditions.translationKey),
                     urls: c.termsAndConditions.urls
                 })
@@ -9494,7 +9494,7 @@ function sr(e) {
         c.showPayButton &&
             c.payButton({
                 status: S,
-                label: i9(
+                label: i7(
                     {
                         issuer: f.issuer,
                         items: I()((n = [])).call(n, (0, H.Z)(r), (0, H.Z)(L))
@@ -9740,7 +9740,7 @@ var sp = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -10044,13 +10044,13 @@ function sI(e) {
     this.validateForm(), ng(e, 'brand') && this.processBrand(e);
 }
 var sM,
-    sT = function (e, t, n) {
+    sB = function (e, t, n) {
         if (t) {
             var r = V()(e);
             t.postMessage(r, n);
         }
     };
-function sB(e, t) {
+function sT(e, t) {
     var n;
     return (null == (n = e.securedFields[t]) ? void 0 : n.iframeContentWindow) || null;
 }
@@ -10114,7 +10114,7 @@ function sD(e) {
     for (
         r === nV &&
             ng(this.state.securedFields, nj) &&
-            sT(
+            sB(
                 {
                     txVariant: this.state.type,
                     code: e.code,
@@ -10122,7 +10122,7 @@ function sD(e) {
                     fieldType: nj,
                     numKey: this.state.securedFields[nj].numKey
                 },
-                sB(this.state, nj),
+                sT(this.state, nj),
                 this.config.loadingContext
             ),
             r === nD && ir(e.endDigits) && (a[0].endDigits = e.endDigits),
@@ -10751,7 +10751,7 @@ var s0 = (function (e) {
                         maskSecurityCode: this.sfConfig.maskSecurityCode,
                         disableIOSArrowKeys: this.sfConfig.disableIOSArrowKeys
                     };
-                    window._b$dl && console.log('### SecuredField:::: onIframeLoaded:: created configObj=', e), sT(e, this.iframeContentWindow, this.loadingContext), this.onIframeLoadedCallback();
+                    window._b$dl && console.log('### SecuredField:::: onIframeLoaded:: created configObj=', e), sB(e, this.iframeContentWindow, this.loadingContext), this.onIframeLoadedCallback();
                 }
             },
             {
@@ -10812,18 +10812,18 @@ var s0 = (function (e) {
                 value: function () {
                     if (this.fieldType === nL || this.fieldType === nV || this.fieldType === nj)
                         switch (this.expiryDatePolicy) {
-                            case n4:
+                            case n9:
                                 return !0;
-                            case n8:
+                            case n5:
                                 return !this.hasError;
                             default:
                                 return !1;
                         }
                     if (this.fieldType === nU)
                         switch (this.cvcPolicy) {
-                            case n4:
+                            case n9:
                                 return !0;
-                            case n8:
+                            case n5:
                                 return !this.hasError;
                         }
                     return !1;
@@ -10906,18 +10906,18 @@ var s0 = (function (e) {
                 get: function () {
                     if (this.fieldType === nU)
                         switch (this.cvcPolicy) {
-                            case n4:
+                            case n9:
                                 return !0;
-                            case n8:
+                            case n5:
                                 return !this.hasError;
                             default:
                                 return this._isValid;
                         }
                     if (this.fieldType === nL || this.fieldType === nV || this.fieldType === nj)
                         switch (this.expiryDatePolicy) {
-                            case n4:
+                            case n9:
                                 return !0;
-                            case n8:
+                            case n5:
                                 return !this.hasError;
                         }
                     return this._isValid;
@@ -10994,15 +10994,15 @@ var s0 = (function (e) {
     );
 })();
 function s1() {
-    this.encryptedAttrName = n6;
+    this.encryptedAttrName = n8;
     var e = aY(this.props.rootNode, '['.concat(this.encryptedAttrName, ']'));
     return this.config.isCreditCardType ? ((this.isSingleBrandedCard = !1), (this.securityCode = ''), this.createCardSecuredFields(e, n2, n2)) : this.createNonCardSecuredFields(e), e.length;
 }
 function s2(e) {
-    return s8.apply(this, arguments);
+    return s5.apply(this, arguments);
 }
-function s8() {
-    return (s8 = (0, a.Z)(
+function s5() {
+    return (s5 = (0, a.Z)(
         s().mark(function e(t) {
             var n, r;
             return s().wrap(
@@ -11037,11 +11037,11 @@ function s8() {
         })
     )).apply(this, arguments);
 }
-function s4(e, t, n) {
-    return s6.apply(this, arguments);
+function s9(e, t, n) {
+    return s8.apply(this, arguments);
 }
-function s6() {
-    return (s6 = (0, a.Z)(
+function s8() {
+    return (s8 = (0, a.Z)(
         s().mark(function e(t, n, r) {
             var o,
                 a,
@@ -11098,15 +11098,15 @@ function s6() {
         })
     )).apply(this, arguments);
 }
-function s5(e, t, n) {
+function s4(e, t, n) {
     var r = this;
-    return new (T())(function (o, a) {
+    return new (B())(function (o, a) {
         var i = a$(e, r.encryptedAttrName);
         i === nj && (r.state.hasSeparateDateFields = !0);
         var s = new s0(
             {
                 fieldType: i,
-                extraFieldData: a$(e, n5),
+                extraFieldData: a$(e, n4),
                 uid: a$(e, n3),
                 cvcPolicy: t,
                 holderEl: e,
@@ -11190,7 +11190,7 @@ var s3 = {
         __IS_FIREFOX: 'undefined' != typeof navigator && /(firefox)/i.test(navigator.userAgent),
         __IS_SAFARI: 'undefined' != typeof navigator && /(safari)/i.test(navigator.userAgent) && !/(chrome)/i.test(navigator.userAgent)
     },
-    s7 = function (e) {
+    s6 = function (e) {
         var t = e.target;
         if (t instanceof HTMLInputElement || (HTMLTextAreaElement && t instanceof HTMLTextAreaElement)) {
             var n = t.value,
@@ -11219,7 +11219,7 @@ var s3 = {
                 fieldClick: !0
             });
     },
-    s9 = function (e) {
+    s7 = function (e) {
         this.hasGenuineTouchEvents = !0;
         var t = e.target;
         if (t instanceof HTMLInputElement || t instanceof HTMLSpanElement) {
@@ -11387,7 +11387,7 @@ function cs(e) {
 }
 function cc(e) {
     ng(this.state.securedFields, nD) &&
-        sT(
+        sB(
             cs(
                 cs({ txVariant: this.state.type }, e),
                 {},
@@ -11396,7 +11396,7 @@ function cc(e) {
                     numKey: this.state.securedFields[nD].numKey
                 }
             ),
-            sB(this.state, nD),
+            sT(this.state, nD),
             this.config.loadingContext
         );
 }
@@ -11404,7 +11404,7 @@ function cl(e) {
     var t = this,
         n = ng(this.state.securedFields, nV) && ng(this.state.securedFields, nj) ? [nV, nj] : [nL];
     N()(n).call(n, function (n) {
-        sT(
+        sB(
             cs(
                 cs({ txVariant: t.state.type }, e),
                 {},
@@ -11413,7 +11413,7 @@ function cl(e) {
                     numKey: t.state.securedFields[n].numKey
                 }
             ),
-            sB(t.state, n),
+            sT(t.state, n),
             t.config.loadingContext
         );
     });
@@ -11425,7 +11425,7 @@ function cu(e, t) {
     if (!e || !l()(e).length) return o ? (this.sendBrandToCardSF({ brand: 'reset' }), this.sendExpiryDatePolicyToSF({ expiryDatePolicy: n2 })) : t && this.processBrand(cs(cs({}, t), {}, { fieldType: nD })), void ('card' === this.state.type && ng(this.state.securedFields, nL) && (this.state.securedFields[nL].expiryDatePolicy = n2));
     var a = e.supportedBrands[0],
         i = a.brand,
-        s = null != (n = a.expiryDatePolicy) ? n : !0 === a.showExpiryDate ? n2 : n4,
+        s = null != (n = a.expiryDatePolicy) ? n : !0 === a.showExpiryDate ? n2 : n9,
         c = {
             brand: i,
             cvcPolicy: a.cvcPolicy,
@@ -11450,14 +11450,14 @@ function cd(e, t, n) {
     var r = e.csfState,
         o = e.csfConfig;
     ng(r.securedFields, t) &&
-        sT(
+        sB(
             {
                 txVariant: r.type,
                 fieldType: t,
                 focus: !0,
                 numKey: r.securedFields[t].numKey
             },
-            sB(r, t),
+            sT(r, t),
             o.loadingContext
         );
 }
@@ -11476,7 +11476,7 @@ function cp(e, t) {
             N()(o).call(o, function (e) {
                 a[e] = t[e];
             }),
-                sT(a, sB(n, e), r.loadingContext);
+                sB(a, sT(n, e), r.loadingContext);
         });
     }
 }
@@ -11508,7 +11508,7 @@ function ch(e, t) {
         c &&
             s &&
             ((n.brand = i), ng(n.securedFields, nU)) &&
-            sT(
+            sB(
                 {
                     txVariant: n.type,
                     brand: i.brand,
@@ -11516,7 +11516,7 @@ function ch(e, t) {
                     cvcPolicy: t.cvcPolicy,
                     numKey: n.securedFields[nU].numKey
                 },
-                sB(n, nU),
+                sT(n, nU),
                 r.loadingContext
             );
         var u = c ? sz(['brand', 'cvcPolicy', 'cvcText', 'expiryDatePolicy', 'showSocialSecurityNumber']).from(t) : null;
@@ -11572,37 +11572,37 @@ function cm(e, t) {
             d = I()((i = ''.concat(c, '/'))).call(i, u);
         return (
             ng(n.securedFields, nL)
-                ? sT(
+                ? sB(
                       {
                           txVariant: n.type,
                           fieldType: nL,
                           autoComplete: d,
                           numKey: n.securedFields[nL].numKey
                       },
-                      sB(n, nL),
+                      sT(n, nL),
                       r.loadingContext
                   )
                 : (ng(n.securedFields, nV) &&
-                      sT(
+                      sB(
                           {
                               txVariant: n.type,
                               fieldType: nV,
                               autoComplete: c,
                               numKey: n.securedFields[nV].numKey
                           },
-                          sB(n, nV),
+                          sT(n, nV),
                           r.loadingContext
                       ),
                   ng(n.securedFields, nj) &&
                       eu()(function () {
-                          sT(
+                          sB(
                               {
                                   txVariant: n.type,
                                   fieldType: nj,
                                   autoComplete: u,
                                   numKey: n.securedFields[nj].numKey
                               },
-                              sB(n, nj),
+                              sT(n, nj),
                               r.loadingContext
                           );
                       }, 0)),
@@ -11778,7 +11778,7 @@ var cZ = function () {
                     csfProps: t.props,
                     csfCallbacks: t.callbacks
                 };
-            return (t.configHandler = sA), (t.callbacksHandler = sF), (t.validateForm = ia(c_, o)), (t.isConfigured = ia(cb, o, t.validateForm)), (t.handleIframeConfigFeedback = ia(cg, o, t.isConfigured)), (t.processBrand = ia(ch, o)), (t.handleValidation = sI), (t.handleEncryption = sD), (t.createSecuredFields = s1), (t.createNonCardSecuredFields = s2), (t.createCardSecuredFields = s4), (t.setupSecuredField = s5), (t.postMessageToAllIframes = ia(cp, o)), (t.setFocusOnFrame = ia(cd, o)), (t.handleFocus = ia(cv, o)), (t.handleIOSTouchEvents = ce), (t.touchendListener = R()(s7).call(s7, (0, eo.Z)(t))), (t.destroyTouchendListener = ct), (t.touchstartListener = R()(s9).call(s9, (0, eo.Z)(t))), (t.destroyTouchstartListener = cn), (t.handleSFShiftTab = ca), (t.handleShiftTab = co), (t.destroySecuredFields = cC), (t.processAutoComplete = ia(cm, o)), (t.handleBinValue = ia(ck, o)), (t.handleBrandFromBinLookup = cu), (t.sendBrandToCardSF = cc), (t.sendExpiryDatePolicyToSF = cl), t.init(), t;
+            return (t.configHandler = sA), (t.callbacksHandler = sF), (t.validateForm = ia(c_, o)), (t.isConfigured = ia(cb, o, t.validateForm)), (t.handleIframeConfigFeedback = ia(cg, o, t.isConfigured)), (t.processBrand = ia(ch, o)), (t.handleValidation = sI), (t.handleEncryption = sD), (t.createSecuredFields = s1), (t.createNonCardSecuredFields = s2), (t.createCardSecuredFields = s9), (t.setupSecuredField = s4), (t.postMessageToAllIframes = ia(cp, o)), (t.setFocusOnFrame = ia(cd, o)), (t.handleFocus = ia(cv, o)), (t.handleIOSTouchEvents = ce), (t.touchendListener = R()(s6).call(s6, (0, eo.Z)(t))), (t.destroyTouchendListener = ct), (t.touchstartListener = R()(s7).call(s7, (0, eo.Z)(t))), (t.destroyTouchstartListener = cn), (t.handleSFShiftTab = ca), (t.handleShiftTab = co), (t.destroySecuredFields = cC), (t.processAutoComplete = ia(cm, o)), (t.handleBinValue = ia(ck, o)), (t.handleBrandFromBinLookup = cu), (t.sendBrandToCardSF = cc), (t.sendExpiryDatePolicyToSF = cl), t.init(), t;
         }
         return (
             (0, Z.Z)(r, [
@@ -11806,7 +11806,7 @@ var cZ = function () {
                                     ? ng(e.state.securedFields, t) &&
                                       ((e.state.securedFields[t].hasError = !0),
                                       '' === e.state.securedFields[t].errorType && (e.state.securedFields[t].errorType = 'isValidated'),
-                                      sT(
+                                      sB(
                                           {
                                               txVariant: e.state.type,
                                               fieldType: t,
@@ -11814,7 +11814,7 @@ var cZ = function () {
                                               code: n,
                                               numKey: e.state.securedFields[t].numKey
                                           },
-                                          sB(e.state, t),
+                                          sT(e.state, t),
                                           e.config.loadingContext
                                       ))
                                     : cZ('You cannot set validated on any secured field');
@@ -11824,7 +11824,7 @@ var cZ = function () {
                                     ? ng(e.state.securedFields, t) &&
                                       ((e.state.securedFields[t].hasError = !!n),
                                       (e.state.securedFields[t].errorType = n),
-                                      sT(
+                                      sB(
                                           {
                                               txVariant: e.state.type,
                                               fieldType: t,
@@ -11832,7 +11832,7 @@ var cZ = function () {
                                               code: n,
                                               numKey: e.state.securedFields[t].numKey
                                           },
-                                          sB(e.state, t),
+                                          sT(e.state, t),
                                           e.config.loadingContext
                                       ))
                                     : cZ('You cannot set hasUnsupportedCard on any secured field');
@@ -11912,7 +11912,7 @@ var cN = function (e) {
         if (!ng(t, 'rootNode')) return sN('ERROR: SecuredFields configuration object is missing a "rootNode" property');
         if (
             (function (e) {
-                return !ir(e) || !(!('number' == typeof e || (io(e) && '[object Number]' === a9.call(e))) || (0 !== e && !e4()(e))) || !((!ie(e) && !('string' == typeof e || (io(e) && '[object String]' === a9.call(e)))) || 0 !== e.length) || !(!io(e) || 0 !== l()(e).length);
+                return !ir(e) || !(!('number' == typeof e || (io(e) && '[object Number]' === a7.call(e))) || (0 !== e && !e9()(e))) || !((!ie(e) && !('string' == typeof e || (io(e) && '[object String]' === a7.call(e)))) || 0 !== e.length) || !(!io(e) || 0 !== l()(e).length);
             })(t.clientKey)
         )
             return sP('WARNING: AdyenCheckout configuration object is missing a "clientKey" property.');
@@ -11953,7 +11953,7 @@ function cA(e) {
     return e;
 }
 function cR(e, t, n, r) {
-    return ((t !== n8 && t !== n4) || 0 !== n[e]) && r[e];
+    return ((t !== n5 && t !== n9) || 0 !== n[e]) && r[e];
 }
 var cF = function (e) {
         (this.numCharsInField[e.fieldType] = e.numChars), this.props.onFocus(e);
@@ -12012,7 +12012,7 @@ var cF = function (e) {
                 'ready' !== t.state.status && (t.setState({ status: 'csfConfigFailure' }), t.props.onError(new nv('ERROR', 'secured fields have failed to configure')));
             }, this.csfConfigFailTimeoutMS));
     },
-    cT = function (e) {
+    cB = function (e) {
         var t = this;
         clearTimeout(this.csfConfigFailTimeout),
             (this.csfConfigFailTimeout = null),
@@ -12020,7 +12020,7 @@ var cF = function (e) {
                 t.props.onConfigSuccess(e);
             });
     },
-    cB = function (e) {
+    cT = function (e) {
         var t = this;
         this.setState(
             function (n) {
@@ -12173,10 +12173,10 @@ var cq = (function (e) {
             (l.csfConfigFailTimeoutMS = 15000),
             (l.numCharsInField = {}),
             (l.handleOnLoad = R()(cM).call(cM, (0, eo.Z)(l))),
-            (l.handleOnConfigSuccess = R()(cT).call(cT, (0, eo.Z)(l))),
+            (l.handleOnConfigSuccess = R()(cB).call(cB, (0, eo.Z)(l))),
             (l.handleOnFieldValid = R()(cI).call(cI, (0, eo.Z)(l))),
             (l.handleOnAllValid = R()(cO).call(cO, (0, eo.Z)(l))),
-            (l.handleOnBrand = R()(cB).call(cB, (0, eo.Z)(l))),
+            (l.handleOnBrand = R()(cT).call(cT, (0, eo.Z)(l))),
             (l.handleFocus = R()(cF).call(cF, (0, eo.Z)(l))),
             (l.handleOnError = R()(cD).call(cD, (0, eo.Z)(l))),
             (l.handleOnNoDataRequired = R()(cL).call(cL, (0, eo.Z)(l))),
@@ -12387,8 +12387,8 @@ var cq = (function (e) {
                                     )).isFieldOfType),
                                     (c = i.fieldIsValid),
                                     (l = n === nU ? 'cvcPolicy' : 'expiryDatePolicy'),
-                                    (u = n4),
-                                    (d = (o[l] === n8 || o[l] === u) && c && s ? null : n) && !O()(e).call(e, d) && e.push(d),
+                                    (u = n9),
+                                    (d = (o[l] === n5 || o[l] === u) && c && s ? null : n) && !O()(e).call(e, d) && e.push(d),
                                     e
                                 );
                             },
@@ -12668,7 +12668,7 @@ function c1(e, t, n) {
                         Y()(f).call(
                             f,
                             function (e, t) {
-                                return e || O()(n7).call(n7, t.brand);
+                                return e || O()(n6).call(n6, t.brand);
                             },
                             !1
                         )),
@@ -12733,17 +12733,17 @@ function c1(e, t, n) {
     };
 }
 var c2 = 'holderName',
-    c8 = 'socialSecurityNumber',
-    c4 = [nD, nL, nU],
-    c6 = [c2, nD, nL, nU],
-    c5 = [nD, nL, nU, c2],
+    c5 = 'socialSecurityNumber',
+    c9 = [nD, nL, nU],
+    c8 = [c2, nD, nL, nU],
+    c4 = [nD, nL, nU, c2],
     c3 = ['taxNumber', nq],
-    c7 = I()(c4).call(c4, c3),
-    c9 = I()(c6).call(c6, c3),
-    le = I()(c5).call(c5, c3),
-    lt = I()(c4).call(c4, [c8]),
-    ln = I()(c6).call(c6, [c8]),
-    lr = I()(c5).call(c5, [c8]),
+    c6 = I()(c9).call(c9, c3),
+    c7 = I()(c8).call(c8, c3),
+    le = I()(c4).call(c4, c3),
+    lt = I()(c9).call(c9, [c5]),
+    ln = I()(c8).call(c8, [c5]),
+    lr = I()(c4).call(c4, [c5]),
     lo = function (e, t) {
         return t({
             type: 'card' === e ? 'nocard' : e || 'nocard',
@@ -12767,7 +12767,7 @@ var c2 = 'holderName',
     };
 function li(e) {
     var t;
-    return null != (t = n9[e]) ? t : e;
+    return null != (t = n7[e]) ? t : e;
 }
 var ls = function (e) {
     var t,
@@ -12891,7 +12891,7 @@ var ll = {
 };
 function lu(e) {
     var t,
-        n = ((0, w.Z)((t = {}), n6, e.encryptedFieldType), (0, w.Z)(t, n5, e['data-info']), (0, w.Z)(t, n3, e.uniqueId), (0, w.Z)(t, 'className', e.className), t);
+        n = ((0, w.Z)((t = {}), n8, e.encryptedFieldType), (0, w.Z)(t, n4, e['data-info']), (0, w.Z)(t, n3, e.uniqueId), (0, w.Z)(t, 'className', e.className), t);
     return (0, ec.h)('span', n, e.children);
 }
 var ld = function (e, t) {
@@ -12914,7 +12914,7 @@ function lp(e) {
         f = e.cvcPolicy,
         m = void 0 === f ? n2 : f,
         y = nl().i18n,
-        v = ep()(void 0 === c ? '' : c, ((0, w.Z)((t = { 'adyen-checkout__field__cvc': !0 }), ll['adyen-checkout__card__cvc__input--hidden'], m === n4), (0, w.Z)(t, 'adyen-checkout__field__cvc--optional', m === n8), t)),
+        v = ep()(void 0 === c ? '' : c, ((0, w.Z)((t = { 'adyen-checkout__field__cvc': !0 }), ll['adyen-checkout__card__cvc__input--hidden'], m === n9), (0, w.Z)(t, 'adyen-checkout__field__cvc--optional', m === n5), t)),
         g = ep()(
             (0, w.Z)(
                 {
@@ -12929,7 +12929,7 @@ function lp(e) {
                 !0
             )
         ),
-        b = m !== n8 ? r : y.get('creditCard.cvcField.title.optional');
+        b = m !== n5 ? r : y.get('creditCard.cvcField.title.optional');
     return (0, ec.h)(
         r_,
         {
@@ -13144,7 +13144,7 @@ function ly(e) {
                                     classNameModifiers: ['revolving-plan'],
                                     label: ''
                                 },
-                                (0, ec.h)(r6, {
+                                (0, ec.h)(r8, {
                                     items: [
                                         {
                                             id: 'onetime',
@@ -13249,7 +13249,7 @@ var lv = function (e) {
                 type: s ? 'amount' : 'months'
             }),
         f &&
-            (0, ec.h)(i5, {
+            (0, ec.h)(i4, {
                 message: f.message.replace('%{linkText}', '%#'.concat(f.linkText, '%#')),
                 urls: [f.link]
             })
@@ -13260,7 +13260,7 @@ function lg(e) {
         n,
         r = e.brand,
         o = e.brandsConfiguration,
-        a = nT(),
+        a = nB(),
         i = null != (t = null == (n = (void 0 === o ? {} : o)[r]) ? void 0 : n.icon) ? t : lo('card' === r ? 'nocard' : r, a);
     return (0, ec.h)('img', {
         className: ''.concat(ll['card-input__icon'], ' adyen-checkout__card__cardNumber__brandIcon'),
@@ -13280,7 +13280,7 @@ var lb = function (e) {
         i = e.dataValue,
         s = e.notSelected,
         c = e.brandsConfiguration,
-        l = nT(),
+        l = nB(),
         u = null != (t = null == (n = (void 0 === c ? {} : c)[o]) ? void 0 : n.icon) ? t : lo('card' === o ? 'nocard' : o, l);
     return (0, ec.h)('img', {
         className: I()((r = ''.concat(ll['card-input__icon'], ' '))).call(r, s ? 'adyen-checkout__card__cardNumber__brandIcon--not-selected' : '', ' adyen-checkout__card__cardNumber__brandIcon'),
@@ -13385,9 +13385,9 @@ function lk(e) {
         p = e.expiryDatePolicy,
         h = void 0 === p ? n2 : p,
         f = nl().i18n,
-        m = nT(),
-        y = ep()(void 0 === s ? '' : s, ((0, w.Z)((t = { 'adyen-checkout__field__exp-date': !0 }), ll['adyen-checkout__card__exp-date__input--hidden'], h === n4), (0, w.Z)(t, 'adyen-checkout__field__exp-date--optional', h === n8), t)),
-        v = h !== n8 ? r : I()((n = ''.concat(r, ' '))).call(n, f.get('field.title.optional'));
+        m = nB(),
+        y = ep()(void 0 === s ? '' : s, ((0, w.Z)((t = { 'adyen-checkout__field__exp-date': !0 }), ll['adyen-checkout__card__exp-date__input--hidden'], h === n9), (0, w.Z)(t, 'adyen-checkout__field__exp-date--optional', h === n5), t)),
+        v = h !== n5 ? r : I()((n = ''.concat(r, ' '))).call(n, f.get('field.title.optional'));
     return (0, ec.h)(
         r_,
         {
@@ -13443,7 +13443,7 @@ var lC = function (e) {
                           key: t,
                           className: 'adyen-checkout__card__brands__brand-wrapper'
                       },
-                      (0, ec.h)(o7, {
+                      (0, ec.h)(o6, {
                           src: n,
                           alt: li(t)
                       })
@@ -13476,7 +13476,7 @@ function lZ(e) {
             null == n
                 ? void 0
                 : P()(n).call(n, function (e) {
-                      return !(null != n7 && O()(n7).call(n7, e.name));
+                      return !(null != n6 && O()(n6).call(n6, e.name));
                   });
     return (0, ec.h)(
         'div',
@@ -13502,7 +13502,7 @@ function lZ(e) {
             }),
         (0, ec.h)(
             'div',
-            { className: ep()('adyen-checkout__card__exp-cvc adyen-checkout__field-wrapper', (0, w.Z)({}, ll['adyen-checkout__card__exp-cvc__exp-date__input--hidden'], d === n4)) },
+            { className: ep()('adyen-checkout__card__exp-cvc adyen-checkout__field-wrapper', (0, w.Z)({}, ll['adyen-checkout__card__exp-cvc__exp-date__input--hidden'], d === n9)) },
             (0, ec.h)(lk, {
                 error: v(s, nL),
                 focused: c === nL,
@@ -13531,7 +13531,7 @@ function lZ(e) {
 function lw(e) {
     var t,
         n = nl().i18n,
-        r = t4(
+        r = t9(
             function () {
                 var t;
                 return (null == (t = e.value) ? void 0 : t.length) > 6 ? n.get('creditCard.taxNumber.labelAlt') : n.get('creditCard.taxNumber.label');
@@ -13552,7 +13552,7 @@ function lw(e) {
                 dir: 'ltr',
                 name: 'kcpTaxNumberOrDOB'
             },
-            (0, ec.h)(r7, {
+            (0, ec.h)(r6, {
                 name: 'kcpTaxNumberOrDOB',
                 className: 'adyen-checkout__card__kcp-taxNumber__input '.concat(ll['adyen-checkout__input']),
                 placeholder: n.get('creditCard.taxNumber.placeholder'),
@@ -13728,8 +13728,8 @@ var lA = function (e) {
         E = e.billingAddressValidationRules,
         I = e.brandsConfiguration,
         M = e.enableStoreDetails,
-        T = e.hasCVC,
-        B = e.hasHolderName,
+        B = e.hasCVC,
+        T = e.hasHolderName,
         D = e.holderNameRequired,
         L = e.installmentOptions,
         V = e.placeholders,
@@ -13751,7 +13751,7 @@ var lA = function (e) {
     return (0, ec.h)(
         ls,
         { status: a.status },
-        B && j && z,
+        T && j && z,
         (0, ec.h)(lZ, {
             showBrandIcon: U,
             showBrandsUnderCardNumber: q,
@@ -13760,7 +13760,7 @@ var lA = function (e) {
             brandsConfiguration: I,
             focusedElement: c,
             onFocusField: i,
-            hasCVC: T,
+            hasCVC: B,
             cvcPolicy: s,
             expiryDatePolicy: y,
             errors: a.errors,
@@ -13769,7 +13769,7 @@ var lA = function (e) {
             dualBrandingChangeHandler: g.handleDualBrandSelection,
             dualBrandingSelected: b
         }),
-        B && !j && z,
+        T && !j && z,
         _ &&
             (0, ec.h)(lw, {
                 onFocusField: i,
@@ -13823,7 +13823,7 @@ var lA = function (e) {
                 onAddressLookup: P
             }),
         K &&
-            (0, ec.h)(i5, {
+            (0, ec.h)(i4, {
                 message: K.message.replace('%{linkText}', '%#'.concat(K.linkText, '%#')),
                 urls: [K.link]
             })
@@ -13881,24 +13881,24 @@ var lM = function (e) {
         o,
         a,
         i,
-        s = t8(null),
-        c = t8(!1),
-        u = nT(),
-        d = t5(aW),
+        s = t5(null),
+        c = t5(!1),
+        u = nB(),
+        d = t4(aW),
         p = d.setSRMessagesFromObjects,
         h = d.setSRMessagesFromStrings,
         f = d.clearSRPanel,
         m = d.shouldMoveFocusSR,
         y = null == p ? void 0 : p({ fieldTypeMappingFn: la }),
-        v = t8(null),
+        v = t5(null),
         g = function (e) {
             v.current = e;
         },
-        b = t8({});
+        b = t5({});
     l()(b.current).length || e.setComponentRef(b.current);
-    var _ = t8(0),
-        C = t8(!1),
-        Z = t4(
+    var _ = t5(0),
+        C = t5(!1),
+        Z = t9(
             function () {
                 return new af(e.specifications);
             },
@@ -13913,8 +13913,8 @@ var lM = function (e) {
         F = (0, q.Z)(R, 2),
         E = F[0],
         M = F[1],
-        B = tX(lI({}, e.holderNameRequired && { holderName: !1 })),
-        D = (0, q.Z)(B, 2),
+        T = tX(lI({}, e.holderNameRequired && { holderName: !1 })),
+        D = (0, q.Z)(T, 2),
         L = D[0],
         V = D[1],
         j = tX(lI({}, e.hasHolderName && { holderName: null != (o = e.data.holderName) ? o : '' })),
@@ -13955,11 +13955,11 @@ var lM = function (e) {
         eF = eA[1],
         eO = e.billingAddressMode !== cH.none && e.billingAddressRequired,
         eE = e.billingAddressMode == cH.partial ? om : null,
-        eI = t8(eE && (null == (a = e.data) || null == (a = a.billingAddress) ? void 0 : a.country)),
+        eI = t5(eE && (null == (a = e.data) || null == (a = a.billingAddress) ? void 0 : a.country)),
         eM = tX(!1),
-        eB = (0, q.Z)(eM, 2),
-        eD = eB[0],
-        eL = eB[1],
+        eT = (0, q.Z)(eM, 2),
+        eD = eT[0],
+        eL = eT[1],
         eV = tX(eO ? e.data.billingAddress : null),
         ej = (0, q.Z)(eV, 2),
         eU = ej[0],
@@ -13974,27 +13974,27 @@ var lM = function (e) {
         eX = e$[1],
         e1 = tX({ value: null }),
         e2 = (0, q.Z)(e1, 2),
-        e8 = e2[0],
-        e4 = e2[1],
-        e6 = tX(null),
-        e5 = (0, q.Z)(e6, 2),
-        e3 = e5[0],
-        e7 = e5[1],
-        e9 = rV({
+        e5 = e2[0],
+        e9 = e2[1],
+        e8 = tX(null),
+        e4 = (0, q.Z)(e8, 2),
+        e3 = e4[0],
+        e6 = e4[1],
+        e7 = rV({
             schema: [],
             defaultData: e.data,
             formatters: c$,
             rules: cQ
         }),
-        te = e9.handleChangeFor,
-        tt = e9.triggerValidation,
-        tr = e9.data,
-        ta = e9.valid,
-        ti = e9.errors,
-        ts = e9.setSchema,
-        tc = e9.setData,
-        tl = e9.setValid,
-        tu = e9.setErrors,
+        te = e7.handleChangeFor,
+        tt = e7.triggerValidation,
+        tr = e7.data,
+        ta = e7.valid,
+        ti = e7.errors,
+        ts = e7.setSchema,
+        tc = e7.setData,
+        tl = e7.setValid,
+        tu = e7.setErrors,
         td = !!l()(e.installmentOptions).length && 'debit' !== e.fundingSource,
         tp = null == (i = e.showInstallmentAmounts) || i,
         th = 'kr' === (null != ek ? ek : e.countryCode),
@@ -14015,9 +14015,9 @@ var lM = function (e) {
                     a = void 0 === o ? null : o,
                     i = e.billingAddressRequiredFields,
                     s = void 0 === i ? null : i,
-                    c = c4,
+                    c = c9,
                     l = t.hasHolderName && t.holderNameRequired;
-                if ((l && (c = t.positionHolderNameOnTop ? c6 : c5), n && ((c = c7), l && (c = t.positionHolderNameOnTop ? c9 : le)), r && ((c = lt), l && (c = t.positionHolderNameOnTop ? ln : lr)), a)) {
+                if ((l && (c = t.positionHolderNameOnTop ? c8 : c4), n && ((c = c6), l && (c = t.positionHolderNameOnTop ? c7 : le)), r && ((c = lt), l && (c = t.positionHolderNameOnTop ? ln : lr)), a)) {
                     var u,
                         d = P()((u = eJ()(a).call(a, 2))).call(u, function (e) {
                             return 'number' != typeof e;
@@ -14027,8 +14027,8 @@ var lM = function (e) {
                         (p = P()(d).call(d, function (e) {
                             return O()(s).call(s, e);
                         })),
-                        (c = I()(c4).call(c4, p)),
-                        l && (c = t.positionHolderNameOnTop ? I()(c6).call(c6, p) : I()(c5).call(c5, p));
+                        (c = I()(c9).call(c9, p)),
+                        l && (c = t.positionHolderNameOnTop ? I()(c8).call(c8, p) : I()(c4).call(c4, p));
                 }
                 return c;
             })(
@@ -14045,8 +14045,8 @@ var lM = function (e) {
                 )
             );
         },
-        tg = t6(function (e) {
-            e7('webInternalElement' !== e.fieldType ? e.fieldType : e.name);
+        tg = t8(function (e) {
+            e6('webInternalElement' !== e.fieldType ? e.fieldType : e.name);
         }, []),
         tb = function (e) {
             tc('billingAddress', e.data), tl('billingAddress', e.isValid), tu('billingAddress', e.errors);
@@ -14056,7 +14056,7 @@ var lM = function (e) {
             function () {
                 C.current ||
                     ((C.current = !0),
-                    T()
+                    B()
                         .resolve()
                         .then(function () {
                             var e,
@@ -14064,7 +14064,7 @@ var lM = function (e) {
                                     return e === nD;
                                 }),
                                 n = (function (e, t) {
-                                    var n = (void 0 !== eT() && to()(e)) || e['@@iterator'];
+                                    var n = (void 0 !== eB() && to()(e)) || e['@@iterator'];
                                     if (!n) {
                                         if (
                                             ew()(e) ||
@@ -14142,7 +14142,7 @@ var lM = function (e) {
                             C.current = !1;
                         }));
             }),
-        tk = t4(
+        tk = t9(
             function () {
                 return c1(
                     e,
@@ -14284,10 +14284,10 @@ var lM = function (e) {
                 selectedBrandValue: eR,
                 storePaymentMethod: eD,
                 socialSecurityNumber: eQ,
-                installments: e8
+                installments: e5
             });
         },
-        [K, L, E, eR, eD, e8]
+        [K, L, E, eR, eD, e5]
     );
     var tZ = e.storedPaymentMethodId ? lv : lA;
     return (0, ec.h)(
@@ -14402,7 +14402,7 @@ var lM = function (e) {
                                         cvcPolicy: ev,
                                         hasInstallments: td,
                                         showAmountsInInstallments: tp,
-                                        handleInstallments: e4,
+                                        handleInstallments: e9,
                                         brandsIcons: e.brandsIcons,
                                         formData: tr,
                                         formErrors: ti,
@@ -14438,7 +14438,7 @@ var lM = function (e) {
             })
     );
 };
-function lT(e, t) {
+function lB(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -14451,13 +14451,13 @@ function lT(e, t) {
     return n;
 }
 lM.defaultProps = cK;
-var lB = function (e) {
+var lT = function (e) {
         var t = null;
         return function (n) {
             !1 !== e.props.doBinLookup &&
                 (n.encryptedBin && e.props.clientKey
                     ? ((t = n.uuid),
-                      o6(
+                      o8(
                           {
                               loadingContext: e.props.loadingContext,
                               path: 'v3/bin/binLookup?token='.concat(e.props.clientKey)
@@ -14494,12 +14494,12 @@ var lB = function (e) {
                                                           r,
                                                           o = null != arguments[t] ? arguments[t] : {};
                                                       t % 2
-                                                          ? N()((n = lT(Object(o), !0))).call(n, function (t) {
+                                                          ? N()((n = lB(Object(o), !0))).call(n, function (t) {
                                                                 (0, w.Z)(e, t, o[t]);
                                                             })
                                                           : m()
                                                             ? v()(e, m()(o))
-                                                            : N()((r = lT(Object(o)))).call(r, function (t) {
+                                                            : N()((r = lB(Object(o)))).call(r, function (t) {
                                                                   b()(e, t, h()(o, t));
                                                               });
                                                   }
@@ -15273,7 +15273,7 @@ var lz = {
                                                 case 2:
                                                     return e.abrupt(
                                                         'return',
-                                                        new (T())(function (e, r) {
+                                                        new (B())(function (e, r) {
                                                             var o,
                                                                 a = J()((o = n.schemes)).call(o, function (e) {
                                                                     return lQ(e, t, n.customSdkConfiguration);
@@ -15281,7 +15281,7 @@ var lz = {
                                                                 i = J()(a).call(a, function (e) {
                                                                     return e.loadSdkScript();
                                                                 });
-                                                            T()
+                                                            B()
                                                                 .allSettled(i)
                                                                 .then(function (t) {
                                                                     eg()(t).call(t, lG) && r(new nv('ERROR', 'ClickToPay -> SrcSdkLoader # Unable to load network schemes: '.concat(n.schemes.toString()))),
@@ -15367,13 +15367,13 @@ function l2(e, t) {
         );
     return I()((n = [])).call(n, (0, H.Z)(e), (0, H.Z)(a));
 }
-function l8(e, t) {
+function l5(e, t) {
     return new Date(t.dateOfCardLastUsed).getTime() - new Date(e.dateOfCardLastUsed).getTime();
 }
-function l4(e, t) {
+function l9(e, t) {
     return t.isExpired ? e.expiredCards.push(t) : e.availableCards.push(t), e;
 }
-var l6 = (function (e) {
+var l8 = (function (e) {
     (0, ea.Z)(r, e);
     var t,
         n =
@@ -15401,7 +15401,7 @@ var l6 = (function (e) {
     }
     return (0, Z.Z)(r);
 })((0, eh.Z)(Error));
-function l5(e, t) {
+function l4(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -15419,30 +15419,30 @@ function l3(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = l5(Object(o), !0))).call(n, function (t) {
+            ? N()((n = l4(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = l5(Object(o)))).call(r, function (t) {
+              : N()((r = l4(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-var l7 = (((ph = {}).Idle = 'Idle'), (ph.Loading = 'Loading'), (ph.ShopperIdentified = 'ShopperIdentified'), (ph.OneTimePassword = 'OneTimePassword'), (ph.Ready = 'Ready'), (ph.Login = 'Login'), (ph.NotAvailable = 'NotAvailable'), ph);
-function l9(e, t, n) {
-    var r = new (T())(function (e, r) {
+var l6 = (((ph = {}).Idle = 'Idle'), (ph.Loading = 'Loading'), (ph.ShopperIdentified = 'ShopperIdentified'), (ph.OneTimePassword = 'OneTimePassword'), (ph.Ready = 'Ready'), (ph.Login = 'Login'), (ph.NotAvailable = 'NotAvailable'), ph);
+function l7(e, t, n) {
+    var r = new (B())(function (e, r) {
         return eu()(function () {
             return r(n);
         }, t);
     });
-    return T().race([e(), r]);
+    return B().race([e(), r]);
 }
 var ue = (function () {
     var e, t, n, r, o, i, c, l, u;
     function d(e, t, n, r, o) {
-        (0, C.Z)(this, d), (0, w.Z)(this, 'sdkLoader', void 0), (0, w.Z)(this, 'schemesConfig', void 0), (0, w.Z)(this, 'shopperIdentity', void 0), (0, w.Z)(this, 'environment', void 0), (0, w.Z)(this, 'onTimeout', void 0), (0, w.Z)(this, 'srciTransactionId', tI()), (0, w.Z)(this, 'sdks', void 0), (0, w.Z)(this, 'validationSchemeSdk', null), (0, w.Z)(this, 'stateSubscriber', void 0), (0, w.Z)(this, 'state', l7.Idle), (0, w.Z)(this, 'shopperCards', null), (0, w.Z)(this, 'identityValidationData', null), (this.sdkLoader = t), (this.schemesConfig = e), (this.shopperIdentity = r), (this.environment = n), (this.onTimeout = o);
+        (0, C.Z)(this, d), (0, w.Z)(this, 'sdkLoader', void 0), (0, w.Z)(this, 'schemesConfig', void 0), (0, w.Z)(this, 'shopperIdentity', void 0), (0, w.Z)(this, 'environment', void 0), (0, w.Z)(this, 'onTimeout', void 0), (0, w.Z)(this, 'srciTransactionId', tI()), (0, w.Z)(this, 'sdks', void 0), (0, w.Z)(this, 'validationSchemeSdk', null), (0, w.Z)(this, 'stateSubscriber', void 0), (0, w.Z)(this, 'state', l6.Idle), (0, w.Z)(this, 'shopperCards', null), (0, w.Z)(this, 'identityValidationData', null), (this.sdkLoader = t), (this.schemesConfig = e), (this.shopperIdentity = r), (this.environment = n), (this.onTimeout = o);
     }
     return (
         (0, Z.Z)(d, [
@@ -15450,7 +15450,7 @@ var ue = (function () {
                 key: 'shopperAccountFound',
                 get: function () {
                     var e;
-                    return O()((e = [l7.Ready, l7.ShopperIdentified])).call(e, this.state);
+                    return O()((e = [l6.Ready, l6.ShopperIdentified])).call(e, this.state);
                 }
             },
             {
@@ -15470,7 +15470,7 @@ var ue = (function () {
                                     for (;;)
                                         switch ((e.prev = e.next)) {
                                             case 0:
-                                                return this.setState(l7.Loading), (e.prev = 1), (e.next = 4), this.sdkLoader.load(this.environment);
+                                                return this.setState(l6.Loading), (e.prev = 1), (e.next = 4), this.sdkLoader.load(this.environment);
                                             case 4:
                                                 return (this.sdks = e.sent), (e.next = 7), this.initiateSdks();
                                             case 7:
@@ -15482,13 +15482,13 @@ var ue = (function () {
                                                 }
                                                 return (e.next = 17), this.getShopperProfile(a);
                                             case 17:
-                                                return this.setState(l7.Ready), e.abrupt('return');
+                                                return this.setState(l6.Ready), e.abrupt('return');
                                             case 19:
                                                 if (this.shopperIdentity) {
                                                     e.next = 22;
                                                     break;
                                                 }
-                                                return this.setState(l7.NotAvailable), e.abrupt('return');
+                                                return this.setState(l6.NotAvailable), e.abrupt('return');
                                             case 22:
                                                 return (e.next = 24), this.verifyIfShopperIsEnrolled(this.shopperIdentity);
                                             case 24:
@@ -15496,12 +15496,12 @@ var ue = (function () {
                                                     e.next = 29;
                                                     break;
                                                 }
-                                                return this.setState(l7.ShopperIdentified), e.abrupt('return');
+                                                return this.setState(l6.ShopperIdentified), e.abrupt('return');
                                             case 29:
-                                                this.setState(l7.NotAvailable), (e.next = 37);
+                                                this.setState(l6.NotAvailable), (e.next = 37);
                                                 break;
                                             case 32:
-                                                (e.prev = 32), (e.t0 = e.catch(1)), e.t0 instanceof lD && console.warn('Error at ClickToPayService # init: '.concat(e.t0.toString())), e.t0 instanceof l6 ? (console.warn(e.t0.toString()), null == (i = this.onTimeout) || i.call(this, e.t0)) : console.warn(e.t0), this.setState(l7.NotAvailable);
+                                                (e.prev = 32), (e.t0 = e.catch(1)), e.t0 instanceof lD && console.warn('Error at ClickToPayService # init: '.concat(e.t0.toString())), e.t0 instanceof l8 ? (console.warn(e.t0.toString()), null == (i = this.onTimeout) || i.call(this, e.t0)) : console.warn(e.t0), this.setState(l6.NotAvailable);
                                             case 37:
                                             case 'end':
                                                 return e.stop();
@@ -15547,7 +15547,7 @@ var ue = (function () {
                                                         maskedShopperContact: t.replace(/\*/g, '\u2022'),
                                                         selectedNetwork: lX[this.validationSchemeSdk.schemeName]
                                                     }),
-                                                    this.setState(l7.OneTimePassword);
+                                                    this.setState(l6.OneTimePassword);
                                             case 8:
                                             case 'end':
                                                 return e.stop();
@@ -15583,7 +15583,7 @@ var ue = (function () {
                                             case 4:
                                                 return (n = e.sent), (e.next = 7), this.getShopperProfile([n.idToken]);
                                             case 7:
-                                                this.setState(l7.Ready), (this.validationSchemeSdk = null);
+                                                this.setState(l6.Ready), (this.validationSchemeSdk = null);
                                             case 9:
                                             case 'end':
                                                 return e.stop();
@@ -15701,7 +15701,7 @@ var ue = (function () {
                                                         return e.unbindAppInstance();
                                                     })),
                                                     (e.next = 6),
-                                                    T().all(n)
+                                                    B().all(n)
                                                 );
                                             case 6:
                                                 e.next = 11;
@@ -15709,7 +15709,7 @@ var ue = (function () {
                                             case 8:
                                                 (e.prev = 8), (e.t0 = e.catch(2)), e.t0 instanceof lD ? console.warn('Error at ClickToPayService # logout: '.concat(e.t0.toString())) : console.warn(e.t0);
                                             case 11:
-                                                (this.shopperCards = null), (this.identityValidationData = null), (this.validationSchemeSdk = null), this.setState(l7.Login);
+                                                (this.shopperCards = null), (this.identityValidationData = null), (this.validationSchemeSdk = null), this.setState(l6.Login);
                                             case 15:
                                             case 'end':
                                                 return e.stop();
@@ -15740,10 +15740,10 @@ var ue = (function () {
                                                 (n = t.shopperEmail),
                                                 e.abrupt(
                                                     'return',
-                                                    new (T())(function (e, t) {
+                                                    new (B())(function (e, t) {
                                                         var o,
                                                             a = J()((o = r.sdks)).call(o, function (o) {
-                                                                var a = l9(
+                                                                var a = l7(
                                                                     function () {
                                                                         return o.identityLookup({
                                                                             identityValue: n,
@@ -15751,7 +15751,7 @@ var ue = (function () {
                                                                         });
                                                                     },
                                                                     5000,
-                                                                    new l6("ClickToPayService - Timeout during identityLookup() of the scheme '".concat(o.schemeName, "'"))
+                                                                    new l8("ClickToPayService - Timeout during identityLookup() of the scheme '".concat(o.schemeName, "'"))
                                                                 );
                                                                 return (
                                                                     a
@@ -15764,7 +15764,7 @@ var ue = (function () {
                                                                     a
                                                                 );
                                                             });
-                                                        T()
+                                                        B()
                                                             .allSettled(a)
                                                             .then(function () {
                                                                 e({ isEnrolled: !1 });
@@ -15808,12 +15808,12 @@ var ue = (function () {
                                         case 0:
                                             return e.abrupt(
                                                 'return',
-                                                new (T())(function (e, r) {
+                                                new (B())(function (e, r) {
                                                     var o,
                                                         a = J()((o = n.sdks)).call(o, function (e) {
                                                             return e.getSrcProfile(t);
                                                         });
-                                                    T()
+                                                    B()
                                                         .allSettled(a)
                                                         .then(function (t) {
                                                             eg()(t).call(t, lG) && r(t[0].reason);
@@ -15830,12 +15830,12 @@ var ue = (function () {
                                                                 ).call(o, function (e) {
                                                                     return !!e;
                                                                 });
-                                                            (c = (s = Y()((a = Y()(u).call(u, l2, []))).call(a, l4, {
+                                                            (c = (s = Y()((a = Y()(u).call(u, l2, []))).call(a, l9, {
                                                                 availableCards: [],
                                                                 expiredCards: []
                                                             })).availableCards),
                                                                 (l = s.expiredCards),
-                                                                (n.shopperCards = I()((i = [])).call(i, (0, H.Z)(e2()(c).call(c, l8)), (0, H.Z)(e2()(l).call(l, l8)))),
+                                                                (n.shopperCards = I()((i = [])).call(i, (0, H.Z)(e2()(c).call(c, l5)), (0, H.Z)(e2()(l).call(l, l5)))),
                                                                 e();
                                                         });
                                                 })
@@ -15863,15 +15863,15 @@ var ue = (function () {
                                         case 0:
                                             return e.abrupt(
                                                 'return',
-                                                new (T())(function (e, n) {
+                                                new (B())(function (e, n) {
                                                     var r,
                                                         o = J()((r = t.sdks)).call(r, function (t) {
-                                                            var r = l9(
+                                                            var r = l7(
                                                                 function () {
                                                                     return t.isRecognized();
                                                                 },
                                                                 5000,
-                                                                new l6("ClickToPayService - Timeout during isRecognized() of the scheme '".concat(t.schemeName, "'"))
+                                                                new l8("ClickToPayService - Timeout during isRecognized() of the scheme '".concat(t.schemeName, "'"))
                                                             );
                                                             return (
                                                                 r
@@ -15884,7 +15884,7 @@ var ue = (function () {
                                                                 r
                                                             );
                                                         });
-                                                    T()
+                                                    B()
                                                         .allSettled(o)
                                                         .then(function () {
                                                             return e({ recognized: !1 });
@@ -15918,16 +15918,16 @@ var ue = (function () {
                                                 return (
                                                     (n = J()((t = this.sdks)).call(t, function (e) {
                                                         var t = r.schemesConfig[e.schemeName];
-                                                        return l9(
+                                                        return l7(
                                                             function () {
                                                                 return e.init(t, r.srciTransactionId);
                                                             },
                                                             5000,
-                                                            new l6("ClickToPayService - Timeout during init() of the scheme '".concat(e.schemeName, "'"))
+                                                            new l8("ClickToPayService - Timeout during init() of the scheme '".concat(e.schemeName, "'"))
                                                         );
                                                     })),
                                                     (e.next = 3),
-                                                    T().all(n)
+                                                    B().all(n)
                                                 );
                                             case 3:
                                             case 'end':
@@ -16056,7 +16056,7 @@ var uo = function (e, t) {
             y = e.onError,
             v = tX(l),
             g = (0, q.Z)(v, 1)[0],
-            b = tX((null == l ? void 0 : l.state) || l7.NotAvailable),
+            b = tX((null == l ? void 0 : l.state) || l6.NotAvailable),
             _ = (0, q.Z)(b, 2),
             k = _[0],
             C = _[1],
@@ -16068,8 +16068,8 @@ var uo = function (e, t) {
             P = (0, q.Z)(x, 2),
             A = P[0],
             R = P[1],
-            F = t8({}),
-            O = t8(!1);
+            F = t5({}),
+            O = t5(!1);
         t1(function () {
             h(F.current), (F.current.setStatus = R);
         }, []),
@@ -16082,14 +16082,14 @@ var uo = function (e, t) {
                 },
                 [g]
             );
-        var E = t6(
+        var E = t8(
                 function () {
                     var e;
                     O.current || (null == (e = d.onReady) || e.call(d), (O.current = !0));
                 },
                 [d.onReady]
             ),
-            I = t6(
+            I = t8(
                 ((t = (0, a.Z)(
                     s().mark(function e(t) {
                         return s().wrap(function (e) {
@@ -16109,7 +16109,7 @@ var uo = function (e, t) {
                 }),
                 [g]
             ),
-            M = t6(
+            M = t8(
                 (0, a.Z)(
                     s().mark(function e() {
                         var t;
@@ -16129,7 +16129,7 @@ var uo = function (e, t) {
                 ),
                 [g]
             ),
-            T = t6(
+            B = t8(
                 ((n = (0, a.Z)(
                     s().mark(function e(t) {
                         return s().wrap(function (e) {
@@ -16151,7 +16151,7 @@ var uo = function (e, t) {
                 }),
                 [g]
             ),
-            B = t6(
+            T = t8(
                 ((r = (0, a.Z)(
                     s().mark(function e(t) {
                         return s().wrap(function (e) {
@@ -16173,7 +16173,7 @@ var uo = function (e, t) {
                 }),
                 [g]
             ),
-            D = t6(
+            D = t8(
                 (0, a.Z)(
                     s().mark(function e() {
                         return s().wrap(function (e) {
@@ -16204,12 +16204,12 @@ var uo = function (e, t) {
                     isCtpPrimaryPaymentMethod: S,
                     setIsCtpPrimaryPaymentMethod: N,
                     ctpState: k,
-                    verifyIfShopperIsEnrolled: B,
+                    verifyIfShopperIsEnrolled: T,
                     cards: null == g ? void 0 : g.shopperCards,
                     schemes: null == g ? void 0 : g.schemes,
                     otpMaskedContact: null == g || null == (o = g.identityValidationData) ? void 0 : o.maskedShopperContact,
                     otpNetwork: null == g || null == (i = g.identityValidationData) ? void 0 : i.selectedNetwork,
-                    checkout: T,
+                    checkout: B,
                     logoutShopper: D,
                     startIdentityValidation: M,
                     finishIdentityValidation: I,
@@ -16220,7 +16220,7 @@ var uo = function (e, t) {
         );
     };
 function uc() {
-    return t5(ui);
+    return t4(ui);
 }
 var ul = {
         otp: {
@@ -16283,7 +16283,7 @@ var ul = {
                 },
                 [h]
             );
-        var v = t6(
+        var v = t8(
             ((t = (0, a.Z)(
                 s().mark(function e(t) {
                     return s().wrap(
@@ -16318,7 +16318,7 @@ var ul = {
                   'div',
                   { className: 'adyen-checkout-ctp__otp-resend-code--confirmation' },
                   m.get('ctp.otp.codeResent'),
-                  (0, ec.h)(nB, {
+                  (0, ec.h)(nT, {
                       type: 'checkmark',
                       height: 14,
                       width: 14
@@ -16355,7 +16355,7 @@ var ul = {
             p = s.errors,
             h = s.isValid,
             f = s.setData,
-            m = t8({ validateInput: null }),
+            m = t5({ validateInput: null }),
             y = tX(null),
             v = (0, q.Z)(y, 2),
             g = v[0],
@@ -16364,7 +16364,7 @@ var ul = {
             k = (0, q.Z)(_, 2),
             C = k[0],
             Z = k[1],
-            w = t6(
+            w = t8(
                 function () {
                     Z(!0), u();
                 },
@@ -16388,26 +16388,26 @@ var ul = {
                 },
                 [w, e.onSetInputHandlers]
             );
-        var S = t6(
+        var S = t8(
                 function () {
                     f('otp', ''), i(null), n || g.focus(), e.onResendCode();
                 },
                 [e.onResendCode, g, n]
             ),
-            N = t6(
+            N = t8(
                 function (e) {
                     var n = t.get('ctp.errors.'.concat(e));
                     n && i(n);
                 },
                 [t]
             ),
-            x = t6(
+            x = t8(
                 function (t) {
                     'Enter' === t.key && e.onPressEnter();
                 },
                 [e.onPressEnter]
             ),
-            P = t6(function (e) {
+            P = t8(function (e) {
                 'Enter' === e.key && e.preventDefault();
             }, []);
         return (
@@ -16455,7 +16455,7 @@ var ul = {
     up = function (e) {
         var t = e.classNameModifiers,
             n = void 0 === t ? [] : t,
-            r = nT(),
+            r = nB(),
             o = uc().schemes,
             a = r()('ctp'),
             i = r({ imageFolder: 'components/' })('pipe');
@@ -16469,18 +16469,18 @@ var ul = {
                     })
                 )
             },
-            (0, ec.h)(o7, {
+            (0, ec.h)(o6, {
                 className: 'adyen_checkout-ctp__brand-logo',
                 src: a,
                 alt: 'Logo of Click to Pay'
             }),
-            (0, ec.h)(o7, {
+            (0, ec.h)(o6, {
                 className: 'adyen_checkout-ctp__brand-pipe',
                 src: i,
                 alt: ''
             }),
             J()(o).call(o, function (e) {
-                return (0, ec.h)(o7, {
+                return (0, ec.h)(o6, {
                     key: e,
                     className: ep()('adyen_checkout-ctp__brand-scheme', 'adyen_checkout-ctp__brand-scheme-'.concat(e)),
                     src: r()(e),
@@ -16541,13 +16541,13 @@ var ul = {
                 },
                 [n, r, a]
             );
-        var y = t6(
+        var y = t8(
                 function () {
                     f.focus(), m();
                 },
                 [m, f]
             ),
-            v = t6(
+            v = t8(
                 function (e) {
                     p && e.target instanceof HTMLElement && !u.contains(e.target) && y();
                 },
@@ -16589,7 +16589,7 @@ var ul = {
             l = e.focusFirst,
             u = e.focusAfterClose,
             d = (0, k.Z)(e, uf),
-            p = t8(),
+            p = t5(),
             h = uh({
                 modalElement: p.current,
                 isOpen: o,
@@ -16638,9 +16638,9 @@ var ug = function (e) {
         var t = e.isOpen,
             n = e.onClose,
             r = e.focusAfterClose,
-            o = t8(),
+            o = t5(),
             a = nl().i18n,
-            i = nT(),
+            i = nB(),
             s = uv(),
             c = uv();
         return (0, ec.h)(
@@ -16659,7 +16659,7 @@ var ug = function (e) {
                 return (0, ec.h)(
                     ec.HY,
                     null,
-                    (0, ec.h)(o7, {
+                    (0, ec.h)(o6, {
                         className: 'adyen-checkout__ctp-modal-header-image',
                         src: i({ imageFolder: 'components/' })('ctp_landscape'),
                         alt: ''
@@ -16709,13 +16709,13 @@ var ug = function (e) {
             t = (0, q.Z)(e, 2),
             n = t[0],
             r = t[1],
-            o = t8(),
+            o = t5(),
             a = nl().i18n,
-            i = nT()({ imageFolder: 'components/' })('info'),
-            s = t6(function () {
+            i = nB()({ imageFolder: 'components/' })('info'),
+            s = t8(function () {
                 r(!1);
             }, []),
-            c = t6(function () {
+            c = t8(function () {
                 r(!0);
             }, []);
         return (0, ec.h)(
@@ -16730,7 +16730,7 @@ var ug = function (e) {
                     'aria-label': a.get('ctp.aria.infoModalButton'),
                     type: 'button'
                 },
-                (0, ec.h)(o7, {
+                (0, ec.h)(o6, {
                     height: '15',
                     src: i,
                     ariaHidden: !0
@@ -16751,10 +16751,10 @@ var ug = function (e) {
             o = t.status,
             a = t.cards,
             i = nl().i18n;
-        if (!1 === O()((e = [l7.Ready, l7.OneTimePassword])).call(e, n)) return null;
-        var s = t4(
+        if (!1 === O()((e = [l6.Ready, l6.OneTimePassword])).call(e, n)) return null;
+        var s = t9(
             function () {
-                return n === l7.Ready && a.length > 1 ? i.get('ctp.logout.notYourCards') : n === l7.Ready && 1 === a.length ? i.get('ctp.logout.notYourCard') : n === l7.Ready && 0 === a.length ? i.get('ctp.logout.notYourProfile') : i.get('ctp.logout.notYou');
+                return n === l6.Ready && a.length > 1 ? i.get('ctp.logout.notYourCards') : n === l6.Ready && 1 === a.length ? i.get('ctp.logout.notYourCard') : n === l6.Ready && 0 === a.length ? i.get('ctp.logout.notYourProfile') : i.get('ctp.logout.notYou');
             },
             [i, n]
         );
@@ -16815,18 +16815,18 @@ var uC = function (e) {
             F = (0, q.Z)(R, 2),
             O = F[0],
             E = F[1],
-            I = t6(function (e) {
+            I = t8(function (e) {
                 A(e);
             }, []),
-            M = t6(function (e) {
+            M = t8(function (e) {
                 var t = e.data,
                     n = e.isValid;
                 h(t.otp), v(n);
             }, []),
-            T = t6(function () {
+            B = t8(function () {
                 S(null);
             }, []),
-            B = t6(
+            T = t8(
                 (0, a.Z)(
                     s().mark(function e() {
                         return s().wrap(
@@ -16871,15 +16871,15 @@ var uC = function (e) {
                 onSetInputHandlers: I,
                 disabled: _,
                 errorMessage: w && n.get('ctp.errors.'.concat(w)),
-                onPressEnter: B,
-                onResendCode: T,
+                onPressEnter: T,
+                onResendCode: B,
                 isValidatingOtp: _
             }),
             (0, ec.h)(nu, {
                 disabled: O,
                 label: n.get('continue'),
                 variant: l ? 'primary' : 'secondary',
-                onClick: B,
+                onClick: T,
                 status: _ && 'loading'
             })
         );
@@ -16888,7 +16888,7 @@ var uC = function (e) {
         var t = e.card,
             n = e.errorMessage,
             r = nl().i18n,
-            o = nT(),
+            o = nB(),
             a = t.artUri || o()(t.scheme);
         return (0, ec.h)(
             ec.HY,
@@ -16896,7 +16896,7 @@ var uC = function (e) {
             (0, ec.h)(
                 'div',
                 { className: 'adyen-checkout-ctp__card-list-single-card' },
-                (0, ec.h)(o7, {
+                (0, ec.h)(o6, {
                     src: a,
                     height: 24,
                     className: 'adyen-checkout-ctp__card-image'
@@ -16917,7 +16917,7 @@ var uC = function (e) {
             r = e.errorMessage,
             o = e.onChangeCard,
             a = nl().i18n,
-            i = nT(),
+            i = nB(),
             s = uc().status,
             c = rV({
                 schema: uS,
@@ -16925,7 +16925,7 @@ var uC = function (e) {
             }),
             l = c.handleChangeFor,
             u = c.data,
-            d = t4(
+            d = t9(
                 function () {
                     return J()(n).call(n, function (e) {
                         var t;
@@ -16978,7 +16978,7 @@ function ux(e, t) {
 var uP = function (e) {
         var t = e.onDisplayCardComponent,
             n = nl().i18n,
-            r = nT(),
+            r = nB(),
             o = uc(),
             i = o.amount,
             c = o.cards,
@@ -17013,7 +17013,7 @@ var uP = function (e) {
             },
             [t, Z, c]
         );
-        var P = t6(
+        var P = t8(
                 (0, a.Z)(
                     s().mark(function e() {
                         var t, n;
@@ -17047,7 +17047,7 @@ var uP = function (e) {
                 ),
                 [l, v]
             ),
-            A = t6(function (e) {
+            A = t8(function (e) {
                 g(e);
             }, []),
             R = N && 'loading' === d && (null == v ? void 0 : v.isDcfPopupEmbedded);
@@ -17102,11 +17102,11 @@ var uP = function (e) {
     },
     uA = function () {
         var e = nl().i18n,
-            t = nT();
+            t = nB();
         return (0, ec.h)(
             ec.HY,
             null,
-            (0, ec.h)(o7, {
+            (0, ec.h)(o6, {
                 className: 'adyen-checkout-ctp__loading-image',
                 src: t({
                     extension: 'gif',
@@ -17146,12 +17146,12 @@ var uP = function (e) {
             i = n.valid,
             s = n.errors,
             c = n.isValid,
-            l = t8({ validateInput: null }),
+            l = t5({ validateInput: null }),
             u = tX(!1),
             d = (0, q.Z)(u, 2),
             p = d[0],
             h = d[1],
-            f = t6(
+            f = t8(
                 function () {
                     h(!0), a();
                 },
@@ -17169,13 +17169,13 @@ var uP = function (e) {
                 },
                 [f, e.onSetInputHandlers]
             );
-        var m = t6(
+        var m = t8(
                 function (t) {
                     'Enter' === t.key && e.onPressEnter();
                 },
                 [e.onPressEnter]
             ),
-            y = t6(function (e) {
+            y = t8(function (e) {
                 'Enter' === e.key && e.preventDefault();
             }, []);
         return (
@@ -17239,16 +17239,16 @@ var uP = function (e) {
             S = (0, q.Z)(w, 2),
             N = S[0],
             x = S[1],
-            P = t6(function (e) {
+            P = t8(function (e) {
                 x(e);
             }, []),
-            A = t6(function (e) {
+            A = t8(function (e) {
                 var t,
                     n = e.data,
                     o = e.isValid;
                 d(n.shopperLogin), m(o), (null == n || null == (t = n.shopperLogin) ? void 0 : t.length) > 0 && r(!0);
             }, []),
-            R = t6(
+            R = t8(
                 (0, a.Z)(
                     s().mark(function e() {
                         return s().wrap(
@@ -17278,7 +17278,7 @@ var uP = function (e) {
                                             e.next = 25;
                                             break;
                                         case 19:
-                                            (e.prev = 19), (e.t0 = e.catch(5)), e.t0 instanceof lD && console.warn('CtP - Login error: '.concat(e.t0.toString())), e.t0 instanceof l6 && console.warn(e.t0.toString()), b(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), Z(!1);
+                                            (e.prev = 19), (e.t0 = e.catch(5)), e.t0 instanceof lD && console.warn('CtP - Login error: '.concat(e.t0.toString())), e.t0 instanceof l8 && console.warn(e.t0.toString()), b(null === e.t0 || void 0 === e.t0 ? void 0 : e.t0.reason), Z(!1);
                                         case 25:
                                         case 'end':
                                             return e.stop();
@@ -17326,7 +17326,7 @@ var uP = function (e) {
             t1(
                 function () {
                     var e;
-                    O()((e = [l7.OneTimePassword, l7.Login, l7.Ready])).call(e, o) && i();
+                    O()((e = [l6.OneTimePassword, l6.Login, l6.Ready])).call(e, o) && i();
                 },
                 [o, i]
             ),
@@ -17358,14 +17358,14 @@ var uP = function (e) {
                             })
                         )).apply(this, arguments);
                     }
-                    o === l7.ShopperIdentified &&
+                    o === l6.ShopperIdentified &&
                         (function () {
                             e.apply(this, arguments);
                         })();
                 },
                 [o]
             ),
-            o === l7.NotAvailable ? null : (0, ec.h)(uk, null, O()((t = [l7.Loading, l7.ShopperIdentified])).call(t, o) && (0, ec.h)(uA, null), o === l7.OneTimePassword && (0, ec.h)(uC, { onDisplayCardComponent: n }), o === l7.Ready && (0, ec.h)(uP, { onDisplayCardComponent: n }), o === l7.Login && (0, ec.h)(uO, null))
+            o === l6.NotAvailable ? null : (0, ec.h)(uk, null, O()((t = [l6.Loading, l6.ShopperIdentified])).call(t, o) && (0, ec.h)(uA, null), o === l6.OneTimePassword && (0, ec.h)(uC, { onDisplayCardComponent: n }), o === l6.Ready && (0, ec.h)(uP, { onDisplayCardComponent: n }), o === l6.Login && (0, ec.h)(uO, null))
         );
     },
     uI = function (e) {
@@ -17384,24 +17384,24 @@ var uP = function (e) {
         t1(
             function () {
                 if (p) {
-                    if (c === l7.ShopperIdentified || c === l7.Ready) return i(!1), void u(!0);
-                    c === l7.NotAvailable && (i(!0), u(!1));
+                    if (c === l6.ShopperIdentified || c === l6.Ready) return i(!1), void u(!0);
+                    c === l6.NotAvailable && (i(!0), u(!1));
                 }
             },
             [c, p]
         );
-        var h = t6(function () {
+        var h = t8(function () {
             i(!0), u(!1);
         }, []);
-        return c === l7.NotAvailable
+        return c === l6.NotAvailable
             ? t()
-            : c === l7.Loading || c === l7.ShopperIdentified
+            : c === l6.Loading || c === l6.ShopperIdentified
               ? (0, ec.h)(uE, null)
               : (0, ec.h)(
                     ec.HY,
                     null,
                     (0, ec.h)(uE, { onDisplayCardComponent: h }),
-                    (0, ec.h)(i4, {
+                    (0, ec.h)(i9, {
                         classNames: ['adyen-checkout-ctp__separator'],
                         label: n.get('ctp.separatorText')
                     }),
@@ -17416,7 +17416,7 @@ var uP = function (e) {
                 );
     },
     uM = ['amount', 'configuration', 'clickToPayService', 'setClickToPayRef', 'onSetStatus', 'onSubmit', 'onError', 'isStandaloneComponent'],
-    uT = function (e) {
+    uB = function (e) {
         var t = e.amount,
             n = e.configuration,
             r = e.clickToPayService,
@@ -17441,7 +17441,7 @@ var uP = function (e) {
             (0, ec.h)(uI, null, l.children)
         );
     };
-function uB(e, t) {
+function uT(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -17459,12 +17459,12 @@ function uD(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = uB(Object(o), !0))).call(n, function (t) {
+            ? N()((n = uT(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = uB(Object(o)))).call(r, function (t) {
+              : N()((r = uT(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
@@ -17514,7 +17514,7 @@ var uL = (function (e) {
                 }),
                     t.submit();
             }),
-            (0, w.Z)((0, eo.Z)(t), 'onBinValue', lB((0, eo.Z)(t))),
+            (0, w.Z)((0, eo.Z)(t), 'onBinValue', lT((0, eo.Z)(t))),
             e._disableClickToPay || ((t.clickToPayService = ur(t.props.configuration, t.props.clickToPayConfiguration, t.props.environment)), null == (o = t.clickToPayService) || o.initialize()),
             t
         );
@@ -17694,7 +17694,7 @@ var uL = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -17704,7 +17704,7 @@ var uL = (function (e) {
                             ii,
                             { srPanel: this.props.modules.srPanel },
                             (0, ec.h)(
-                                uT,
+                                uB,
                                 {
                                     amount: this.props.amount,
                                     configuration: this.props.clickToPayConfiguration,
@@ -17771,18 +17771,18 @@ function uq(e) {
         o = e.onChangeStoreDetails,
         i = e.onAuthorize,
         c = e.onError,
-        l = t8(null),
+        l = t5(null),
         u = tX('loading'),
         d = (0, q.Z)(u, 2),
         p = d[0],
         h = d[1],
-        f = t8([]),
+        f = t5([]),
         m = tX(!1),
         y = (0, q.Z)(m, 2),
         v = y[0],
         g = y[1];
     this.setStatus = h;
-    var b = t6(
+    var b = t8(
         (0, a.Z)(
             s().mark(function e() {
                 return s().wrap(
@@ -18240,7 +18240,7 @@ var u$ = (function (e) {
                 if (e.storedPaymentMethodId) (0, ey.Z)(((a = (0, eo.Z)(s)), (0, es.Z)(r.prototype)), 'submit', a).call(a);
                 else {
                     var n = !1;
-                    new (T())(function (e, n) {
+                    new (B())(function (e, n) {
                         return t({
                             resolve: e,
                             reject: n
@@ -18359,7 +18359,7 @@ var u$ = (function (e) {
                     var e,
                         t = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             resources: this.resources,
@@ -18551,19 +18551,19 @@ var uX = (function (e) {
                                                     e.next = 2;
                                                     break;
                                                 }
-                                                return e.abrupt('return', T().reject());
+                                                return e.abrupt('return', B().reject());
                                             case 2:
                                                 if (!this.clickToPayService.shopperAccountFound) {
                                                     e.next = 4;
                                                     break;
                                                 }
-                                                return e.abrupt('return', T().resolve());
+                                                return e.abrupt('return', B().resolve());
                                             case 4:
                                                 return e.abrupt(
                                                     'return',
-                                                    new (T())(function (e, n) {
+                                                    new (B())(function (e, n) {
                                                         t.clickToPayService.subscribeOnStateChange(function (r) {
-                                                            t.clickToPayService.shopperAccountFound && e(), (r !== l7.NotAvailable && r !== l7.Login && r !== l7.Idle) || n();
+                                                            t.clickToPayService.shopperAccountFound && e(), (r !== l6.NotAvailable && r !== l6.Login && r !== l6.Idle) || n();
                                                         });
                                                     })
                                                 );
@@ -18585,7 +18585,7 @@ var uX = (function (e) {
                 key: 'render',
                 value: function () {
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -18692,7 +18692,7 @@ var u2 = (function (e) {
                         {},
                         {
                             type: 'bcmc',
-                            cvcPolicy: n4
+                            cvcPolicy: n9
                         }
                     );
                 }
@@ -18701,7 +18701,7 @@ var u2 = (function (e) {
         r
     );
 })();
-function u8(e) {
+function u5(e) {
     var t = e.description,
         n = void 0 === t ? '' : t,
         r = e.name,
@@ -18715,7 +18715,7 @@ function u8(e) {
     return (0, ec.h)(
         'div',
         { className: 'adyen-checkout__campaign-container' },
-        (0, ec.h)(o7, {
+        (0, ec.h)(o6, {
             className: 'adyen-checkout__campaign-background-image',
             style: { backgroundImage: u },
             backgroundUrl: l
@@ -18734,12 +18734,12 @@ function u8(e) {
         )
     );
 }
-function u4(e) {
+function u9(e) {
     var t = e.url;
     return (0, ec.h)(
         'div',
         { className: 'adyen-checkout__campaign' },
-        !t && (0, ec.h)(u8, e),
+        !t && (0, ec.h)(u5, e),
         t &&
             (0, ec.h)(
                 'a',
@@ -18749,7 +18749,7 @@ function u4(e) {
                     target: '_blank',
                     rel: 'noopener noreferrer'
                 },
-                (0, ec.h)(u8, e)
+                (0, ec.h)(u5, e)
             )
     );
 }
@@ -18765,7 +18765,7 @@ function u4(e) {
             }
         )
     );
-var u6 = function (e) {
+var u8 = function (e) {
     var t = e.options,
         n = void 0 === t ? [] : t,
         r = e.name,
@@ -18802,7 +18802,7 @@ var u6 = function (e) {
         })
     );
 };
-function u5(e, t) {
+function u4(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -18820,18 +18820,18 @@ function u3(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = u5(Object(o), !0))).call(n, function (t) {
+            ? N()((n = u4(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = u5(Object(o)))).call(r, function (t) {
+              : N()((r = u4(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-function u7(e) {
+function u6(e) {
     var t,
         n = e.amounts,
         r = e.onCancel,
@@ -18839,7 +18839,7 @@ function u7(e) {
         a = e.showCancelButton,
         i = e.disclaimerMessage,
         s = nl().i18n,
-        c = nT(),
+        c = nB(),
         l = n.currency,
         u = tX('ready'),
         d = (0, q.Z)(u, 2),
@@ -18859,7 +18859,7 @@ function u7(e) {
     this.setStatus = function (e) {
         h(e);
     };
-    var C = t6(
+    var C = t8(
         function (e, t) {
             return s.amount(e, t);
         },
@@ -18879,7 +18879,7 @@ function u7(e) {
             ? (0, ec.h)(
                   'div',
                   { className: 'adyen-checkout__adyen-giving' },
-                  (0, ec.h)(o7, {
+                  (0, ec.h)(o6, {
                       className: 'adyen-checkout__status__icon adyen-checkout__status__icon--error',
                       src: c({ imageFolder: 'components/' })('error'),
                       alt: s.get('error.message.unknown')
@@ -18890,7 +18890,7 @@ function u7(e) {
               ? (0, ec.h)(
                     'div',
                     { className: 'adyen-checkout__adyen-giving' },
-                    (0, ec.h)(o7, {
+                    (0, ec.h)(o6, {
                         className: 'adyen-checkout__status__icon adyen-checkout__status__icon--success',
                         src: c({ imageFolder: 'components/' })('heart'),
                         alt: s.get('thanksForYourSupport')
@@ -18900,14 +18900,14 @@ function u7(e) {
               : (0, ec.h)(
                     'div',
                     { className: 'adyen-checkout__adyen-giving' },
-                    (0, ec.h)(u4, e),
+                    (0, ec.h)(u9, e),
                     (0, ec.h)(
                         'div',
                         { className: 'adyen-checkout__adyen-giving-actions' },
                         (0, ec.h)(
                             'div',
                             { className: 'adyen-checkout__amounts' },
-                            (0, ec.h)(u6, {
+                            (0, ec.h)(u8, {
                                 options: J()((t = $()(n))).call(t, function (e) {
                                     return {
                                         value: e,
@@ -18928,7 +18928,7 @@ function u7(e) {
                             })
                         ),
                         i &&
-                            (0, ec.h)(i5, {
+                            (0, ec.h)(i4, {
                                 message: i.message.replace('%{linkText}', '%#'.concat(i.linkText, '%#')),
                                 urls: [i.link]
                             }),
@@ -18959,7 +18959,7 @@ function u7(e) {
                 )
     );
 }
-function u9(e, t) {
+function u7(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -18977,18 +18977,18 @@ function de(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = u9(Object(o), !0))).call(n, function (t) {
+            ? N()((n = u7(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = u9(Object(o)))).call(r, function (t) {
+              : N()((r = u7(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-u7.defaultProps = {
+u6.defaultProps = {
     onCancel: function () {},
     onChange: function () {},
     onDonate: function () {},
@@ -19067,14 +19067,14 @@ var dt = (function (e) {
                 key: 'render',
                 value: function () {
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
                             resources: this.resources
                         },
                         (0, ec.h)(
-                            u7,
+                            u6,
                             (0, er.Z)({}, this.props, {
                                 ref: this.handleRef,
                                 onChange: this.setState,
@@ -19142,7 +19142,7 @@ var da = (function (e) {
                 key: 'componentDidMount',
                 value: function () {
                     var e = this;
-                    new (T())(function (t, n) {
+                    new (B())(function (t, n) {
                         return e.props.beforeRedirect(
                             t,
                             n,
@@ -19311,7 +19311,7 @@ var dc = (function (e) {
                         ? (0, ec.h)(da, this.props)
                         : this.props.showButton
                           ? (0, ec.h)(
-                                a7,
+                                a6,
                                 {
                                     i18n: this.props.i18n,
                                     loadingContext: this.props.loadingContext,
@@ -19421,7 +19421,7 @@ var dd = (function (e) {
                     var e = this;
                     return this.props.showPayButton
                         ? (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -19624,7 +19624,7 @@ var dv = ['en', 'ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'es', 'et', 'fi', 'fr'
                                       })
                                   );
                               })
-                            : T().reject(Error('Google Pay is not available'));
+                            : B().reject(Error('Google Pay is not available'));
                     }
                 },
                 {
@@ -19804,7 +19804,7 @@ var dC = (function (e) {
             (0, w.Z)((0, eo.Z)(o), 'submit', function () {
                 var e = o.props.onAuthorized,
                     n = void 0 === e ? function () {} : e;
-                return new (T())(function (e, t) {
+                return new (B())(function (e, t) {
                     return o.props.onClick(e, t);
                 })
                     .then(function () {
@@ -20036,13 +20036,13 @@ function dN(e) {
         i = e.showPayButton,
         s = e.payButton,
         c = (0, k.Z)(e, dS),
-        u = t8(null),
+        u = t5(null),
         d = nl().i18n,
         p = tX('ready'),
         h = (0, q.Z)(p, 2),
         f = h[0],
         m = h[1],
-        y = t8({});
+        y = t5({});
     l()(y.current).length || null == (t = c.setComponentRef) || t.call(c, y.current),
         (y.current.showValidation = function () {
             var e;
@@ -20091,7 +20091,7 @@ function dA(e) {
         o = e.className,
         a = (0, k.Z)(e, dP),
         i = nl().i18n,
-        s = nT();
+        s = nB();
     return (0, ec.h)(
         'div',
         { className: ep()('adyen-checkout__voucher-result', 'adyen-checkout__voucher-result--'.concat(a.paymentMethodType), void 0 === o ? '' : o) },
@@ -20227,7 +20227,7 @@ var dR = function (e) {
         i = e.instructionsUrl,
         s = e.collectionInstitutionNumber,
         c = nl().i18n,
-        l = nT();
+        l = nB();
     return (0, ec.h)(dA, {
         paymentMethodType: o,
         reference: t,
@@ -20331,7 +20331,7 @@ var dE = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -20382,7 +20382,7 @@ function dM(e, t) {
     }
     return n;
 }
-function dT(e) {
+function dB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -20399,7 +20399,7 @@ function dT(e) {
     }
     return e;
 }
-var dB = (function (e) {
+var dT = (function (e) {
     (0, ea.Z)(r, il);
     var t,
         n =
@@ -20429,7 +20429,7 @@ var dB = (function (e) {
             {
                 key: 'formatProps',
                 value: function (e) {
-                    return dT(dT({}, (0, ey.Z)((0, es.Z)(r.prototype), 'formatProps', this).call(this, e)), {}, { allowedCountries: e.countryCode ? [e.countryCode] : dI });
+                    return dB(dB({}, (0, ey.Z)((0, es.Z)(r.prototype), 'formatProps', this).call(this, e)), {}, { allowedCountries: e.countryCode ? [e.countryCode] : dI });
                 }
             }
         ]),
@@ -20465,7 +20465,7 @@ function dL(e) {
     }
     return e;
 }
-(0, w.Z)(dB, 'type', 'facilypay_3x');
+(0, w.Z)(dT, 'type', 'facilypay_3x');
 var dV = (function (e) {
     (0, ea.Z)(r, il);
     var t,
@@ -20808,8 +20808,8 @@ var d1 = function (e) {
             }
         );
     },
-    d8 = ['onInit', 'onApprove', 'onClick', 'onCancel', 'onError', 'onShippingChange', 'onSubmit', 'isProcessingPayment', 'paypalRef', 'style'];
-function d4(e, t) {
+    d5 = ['onInit', 'onApprove', 'onClick', 'onCancel', 'onError', 'onShippingChange', 'onSubmit', 'isProcessingPayment', 'paypalRef', 'style'];
+function d9(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -20821,24 +20821,24 @@ function d4(e, t) {
     }
     return n;
 }
-function d6(e) {
+function d8(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = d4(Object(o), !0))).call(n, function (t) {
+            ? N()((n = d9(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = d4(Object(o)))).call(r, function (t) {
+              : N()((r = d9(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-function d5(e) {
+function d4(e) {
     var t,
         n = e.onInit,
         r = e.onApprove,
@@ -20850,16 +20850,16 @@ function d5(e) {
         l = e.isProcessingPayment,
         u = e.paypalRef,
         d = e.style,
-        p = (0, k.Z)(e, d8),
+        p = (0, k.Z)(e, d5),
         h = nl().i18n,
         f = 'tokenize' === (null == (t = p.configuration) ? void 0 : t.intent),
-        m = t8(null),
-        y = t8(null),
-        v = t8(null),
-        g = t8(null),
+        m = t5(null),
+        y = t5(null),
+        v = t5(null),
+        g = t5(null),
         b = function (e, t) {
-            var l = d6(
-                    d6(d6(d6({}, f && { createBillingAgreement: c }), !f && { createOrder: c }), !f && 'venmo' !== e && { onShippingChange: s }),
+            var l = d8(
+                    d8(d8(d8({}, f && { createBillingAgreement: c }), !f && { createOrder: c }), !f && 'venmo' !== e && { onShippingChange: s }),
                     {},
                     {
                         fundingSource: e,
@@ -20921,7 +20921,7 @@ function d5(e) {
     );
 }
 var d3 = ['onApprove', 'onCancel', 'onChange', 'onError', 'onSubmit'];
-function d7(e, t) {
+function d6(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -20933,18 +20933,18 @@ function d7(e, t) {
     }
     return n;
 }
-function d9(e) {
+function d7(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = d7(Object(o), !0))).call(n, function (t) {
+            ? N()((n = d6(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = d7(Object(o)))).call(r, function (t) {
+              : N()((r = d6(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
@@ -20962,7 +20962,7 @@ function pe(e) {
         u = c[0],
         d = c[1];
     this.setStatus = d;
-    var p = t6(
+    var p = t8(
             function (e, n) {
                 d('processing'), t(e, n);
             },
@@ -20989,8 +20989,8 @@ function pe(e) {
                     )),
                     I()((t = ''.concat('https://www.paypal.com/sdk/js', '?'))).call(t, r)),
                     'body',
-                    d9({}, i.cspNonce && { nonce: i.cspNonce }),
-                    d9({}, i.cspNonce && { cspNonce: i.cspNonce })
+                    d7({}, i.cspNonce && { nonce: i.cspNonce }),
+                    d7({}, i.cspNonce && { cspNonce: i.cspNonce })
                 );
             return (
                 o.load().then(h),
@@ -21005,7 +21005,7 @@ function pe(e) {
             'pending' === u
                 ? (0, ec.h)('div', { className: 'adyen-checkout__paypal__status adyen-checkout__paypal__status--pending' }, (0, ec.h)(tq, null))
                 : (0, ec.h)(
-                      d5,
+                      d4,
                       (0, er.Z)({}, i, {
                           onCancel: n,
                           onChange: r,
@@ -21168,7 +21168,7 @@ var ps = (function (e) {
                                     v = pr(pr(pr(pr(pr(pr(pr({}, u.firstName && { shopperName: u }), d && { shopperEmail: d }), f && { dateOfBirth: f }), h && { telephoneNumber: h }), p && { countryCode: p }), m && { billingAddress: m }), y && { shippingAddress: y });
                                 return l()(v).length > 0 ? v : null;
                             })(e);
-                            return new (T())(function (r, o) {
+                            return new (B())(function (r, o) {
                                 return n(t, e, {
                                     resolve: r,
                                     reject: o
@@ -21249,7 +21249,7 @@ var ps = (function (e) {
                     var e = this;
                     return (
                         (0, ey.Z)((0, es.Z)(r.prototype), 'submit', this).call(this),
-                        new (T())(function (t, n) {
+                        new (B())(function (t, n) {
                             (e.resolve = t), (e.reject = n);
                         })
                     );
@@ -21261,7 +21261,7 @@ var ps = (function (e) {
                     var e = this;
                     return this.props.showPayButton
                         ? (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -21718,7 +21718,7 @@ var p_ = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -21780,7 +21780,7 @@ function pC(e) {
 }
 function pZ(e) {
     var t = this,
-        n = t8(null),
+        n = t5(null),
         r = tX({}),
         o = (0, q.Z)(r, 2),
         a = o[0],
@@ -21809,7 +21809,7 @@ function pZ(e) {
         P = (0, q.Z)(x, 2),
         A = P[0],
         R = P[1],
-        F = t4(
+        F = t9(
             function () {
                 return c1(
                     e,
@@ -21985,7 +21985,7 @@ var px = (function (e) {
         var e, t;
         (0, C.Z)(this, r);
         for (var o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-        return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'onBinValue', lB((0, eo.Z)(t))), t;
+        return (t = n.call.apply(n, I()((e = [this])).call(e, a))), (0, w.Z)((0, eo.Z)(t), 'onBinValue', lT((0, eo.Z)(t))), t;
     }
     return (
         (0, Z.Z)(r, [
@@ -22081,7 +22081,7 @@ var px = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -22203,7 +22203,7 @@ var pA = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -22336,17 +22336,17 @@ var pR = (function (e) {
             throw Error('Could not decode token');
         }
     },
-    pT = function (e) {
+    pB = function (e) {
         if (!e || !l()(e).length) throw Error('No (populated) data object to encode');
         return nF.encode(V()(e));
     },
-    pB = function (e) {
+    pT = function (e) {
         var t = 1 === e.length ? '0'.concat(e) : e;
         return Object.prototype.hasOwnProperty.call(pI, t) ? t : '02';
     },
     pD = function (e, t, n) {
         var r;
-        return { data: ((r = {}), (0, w.Z)(r, e, pT({ threeDSCompInd: t.threeDSCompInd })), (0, w.Z)(r, 'paymentData', n), r) };
+        return { data: ((r = {}), (0, w.Z)(r, e, pB({ threeDSCompInd: t.threeDSCompInd })), (0, w.Z)(r, 'paymentData', n), r) };
     },
     pL = function (e, t) {
         return {
@@ -22405,7 +22405,7 @@ var pR = (function (e) {
                     key: 'get3DS2ChallengePromise',
                     value: function () {
                         var e = this;
-                        return new (T())(function (t, n) {
+                        return new (B())(function (t, n) {
                             (e.processMessageHandler = nx(e.props.postMessageDomain, t, 0, 'challengeResult')), window.addEventListener('message', e.processMessageHandler);
                         });
                     }
@@ -22521,9 +22521,9 @@ var pR = (function (e) {
                                 messageVersion: u,
                                 threeDSServerTransID: p,
                                 messageType: 'CReq',
-                                challengeWindowSize: pB(i)
+                                challengeWindowSize: pT(i)
                             },
-                            iframeSizeArr: pI[pB(i)],
+                            iframeSizeArr: pI[pT(i)],
                             postMessageDomain: h
                         }),
                     m = f.cReqData,
@@ -22558,7 +22558,7 @@ var pR = (function (e) {
                                     ? function (e, t, n) {
                                           return {
                                               data: {
-                                                  details: { 'threeds2.challengeResult': pT({ transStatus: t }) },
+                                                  details: { 'threeds2.challengeResult': pB({ transStatus: t }) },
                                                   paymentData: n
                                               }
                                           };
@@ -22569,7 +22569,7 @@ var pR = (function (e) {
                                                   details: (0, w.Z)(
                                                       {},
                                                       e,
-                                                      pT({
+                                                      pB({
                                                           transStatus: t,
                                                           authorisationToken: n
                                                       })
@@ -22598,7 +22598,7 @@ var pR = (function (e) {
                         var n = this,
                             r = e.onActionHandled,
                             o = t.challengeData,
-                            a = nT();
+                            a = nB();
                         return 'retrievingChallengeToken' === this.state.status
                             ? (0, ec.h)(
                                   pH,
@@ -22626,7 +22626,7 @@ var pR = (function (e) {
                               ? (0, ec.h)(
                                     'div',
                                     { className: 'adyen-checkout__threeds2-challenge-error' },
-                                    (0, ec.h)(o7, {
+                                    (0, ec.h)(o6, {
                                         className: 'adyen-checkout__status__icon adyen-checkout__status__icon--error',
                                         src: a({ imageFolder: 'components/' })('error'),
                                         alt: ''
@@ -22751,7 +22751,7 @@ var pW = 'threeDSMethodIframe',
                     key: 'get3DS2MethodPromise',
                     value: function () {
                         var e = this;
-                        return new (T())(function (t, n) {
+                        return new (B())(function (t, n) {
                             (e.processMessageHandler = nx(e.props.postMessageDomain, t, 0, 'fingerPrintResult')), window.addEventListener('message', e.processMessageHandler);
                         });
                     }
@@ -22896,7 +22896,7 @@ var pG = (function (e) {
                                 ? function (e, t, n) {
                                       return {
                                           data: {
-                                              details: { 'threeds2.fingerprint': pT(t) },
+                                              details: { 'threeds2.fingerprint': pB(t) },
                                               paymentData: n
                                           }
                                       };
@@ -22953,7 +22953,7 @@ function p$(e, t) {
 function pQ(e) {
     var t = this,
         n = e.data;
-    o6(
+    o8(
         {
             path: 'v1/submitThreeDS2Fingerprint?token='.concat(this.props.clientKey),
             loadingContext: this.props.loadingContext,
@@ -23182,8 +23182,8 @@ var pX = function (e) {
     })(),
     p2 = function (e) {
         var t = nl().i18n,
-            n = t5(aW).srPanel,
-            r = t8(null);
+            n = t4(aW).srPanel,
+            r = t5(null);
         t1(function () {
             return (
                 (r.current = new p1({
@@ -23207,20 +23207,20 @@ var pX = function (e) {
                 [e]
             );
     },
-    p8 = function (e) {
+    p5 = function (e) {
         var t = new Date().getTime();
         return {
             startTime: new Date(t),
             endTime: new Date(t + 60000 * e)
         };
     };
-function p4(e) {
+function p9(e) {
     var t = e.minutesFromNow,
         n = e.onTick,
         r = void 0 === n ? function () {} : n,
         o = e.onCompleted,
         a = void 0 === o ? function () {} : o,
-        i = t8(p8(t)).current,
+        i = t5(p5(t)).current,
         s = i.startTime,
         c = i.endTime,
         l = tX({
@@ -23264,9 +23264,9 @@ function p4(e) {
         )
     );
 }
-function p6(e, t, n) {
+function p8(e, t, n) {
     if (!e || !t) throw Error('Could not check the payment status');
-    return o6(
+    return o8(
         {
             loadingContext: n,
             path: 'services/PaymentInitiation/v1/status?clientKey='.concat(t)
@@ -23274,7 +23274,7 @@ function p6(e, t, n) {
         { paymentData: e }
     );
 }
-function p5(e, t) {
+function p4(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -23292,18 +23292,18 @@ function p3(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = p5(Object(o), !0))).call(n, function (t) {
+            ? N()((n = p4(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = p5(Object(o)))).call(r, function (t) {
+              : N()((r = p4(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-var p7 = function (e) {
+var p6 = function (e) {
         switch (e.resultCode.toLowerCase()) {
             case 'refused':
             case 'error':
@@ -23330,8 +23330,8 @@ var p7 = function (e) {
                 };
         }
     },
-    p9 = function (e) {
-        if (!e.type && e.resultCode) return p7(e);
+    p7 = function (e) {
+        if (!e.type && e.resultCode) return p6(e);
         if (!e.type)
             return {
                 type: 'error',
@@ -23344,7 +23344,7 @@ var p7 = function (e) {
                     props: e
                 };
             case 'complete':
-                return p7(e);
+                return p6(e);
             default:
                 return {
                     type: 'error',
@@ -23353,7 +23353,7 @@ var p7 = function (e) {
         }
     },
     he = function (e) {
-        var t = t5(aW).srPanel;
+        var t = t4(aW).srPanel;
         t1(function () {
             return (
                 t.setAriaProps({ 'aria-relevant': 'additions text' }),
@@ -23445,8 +23445,8 @@ var p7 = function (e) {
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'checkStatus', function () {
                     var e = t.props;
-                    return p6(e.paymentData, e.clientKey, e.loadingContext)
-                        .then(p9)
+                    return p8(e.paymentData, e.clientKey, e.loadingContext)
+                        .then(p7)
                         .catch(function (e) {
                             return {
                                 type: 'network-error',
@@ -23520,7 +23520,7 @@ var p7 = function (e) {
                             v = nl(),
                             g = v.i18n,
                             b = v.loadingContext,
-                            _ = nT(),
+                            _ = nB(),
                             k = this.props.qrCodeData ? I()((n = I()((r = ''.concat(b))).call(r, 'barcode.shtml?barcodeType=qrCode&fileType=png&data='))).call(n, this.props.qrCodeData) : this.props.qrCodeImage,
                             C = function (e, t) {
                                 var n = g.get(t);
@@ -23555,7 +23555,7 @@ var p7 = function (e) {
                         var Z,
                             w = g.get('wechatpay.timetopay').split('%@'),
                             S =
-                                ((Z = t8(null)),
+                                ((Z = t5(null)),
                                 t1(function () {
                                     var e;
                                     null == (e = Z.current) || e.focus();
@@ -23611,7 +23611,7 @@ var p7 = function (e) {
                                 { className: 'adyen-checkout__qr-loader__countdown' },
                                 w[0],
                                 '\xA0',
-                                (0, ec.h)(p4, {
+                                (0, ec.h)(p9, {
                                     minutesFromNow: d,
                                     onTick: this.onTick,
                                     onCompleted: this.onTimeUp
@@ -23639,7 +23639,7 @@ var p7 = function (e) {
                                 (0, ec.h)(
                                     'div',
                                     { className: 'adyen-checkout__qr-loader__app-link' },
-                                    (0, ec.h)(i4, null),
+                                    (0, ec.h)(i9, null),
                                     (0, ec.h)(nu, {
                                         classNameModifiers: ['qr-loader'],
                                         onClick: function () {
@@ -23739,7 +23739,7 @@ var hr = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -23781,7 +23781,7 @@ var hr = (function (e) {
                         ? this.renderQRCode()
                         : this.props.showPayButton
                           ? (0, ec.h)(
-                                a7,
+                                a6,
                                 {
                                     i18n: this.props.i18n,
                                     loadingContext: this.props.loadingContext,
@@ -24144,7 +24144,7 @@ function hm(e) {
     var t,
         n,
         r = nl().i18n,
-        o = nT(),
+        o = nB(),
         a = function () {
             var t = ['dragonpay_ebanking', 'dragonpay_otc_banking', 'dragonpay_otc_non_banking'];
             return z()(t).call(t, e.type) > -1;
@@ -24248,7 +24248,7 @@ function hy(e) {
         c = e.issuer,
         l = e.paymentMethodType,
         u = nl().i18n,
-        d = nT(),
+        d = nB(),
         p = 'dragonpay_otc_philippines' !== l ? sa({}, l, d)(c.toLowerCase()) : null;
     return (0, ec.h)(dA, {
         reference: t,
@@ -24378,7 +24378,7 @@ var hb = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -24423,13 +24423,13 @@ var hb = (function (e) {
 })();
 function h_(e) {
     var t,
-        n = t8(null),
+        n = t5(null),
         r = nl().i18n,
         o = tX('ready'),
         a = (0, q.Z)(o, 2),
         i = a[0],
         s = a[1],
-        c = t8({});
+        c = t5({});
     return (
         l()(c.current).length || null == (t = e.setComponentRef) || t.call(e, c.current),
         (c.current.showValidation = function () {
@@ -24468,7 +24468,7 @@ var hk = function (e) {
         i = e.totalAmount,
         s = e.paymentMethodType,
         c = nl().i18n,
-        l = nT();
+        l = nB();
     return (0, ec.h)(dA, {
         paymentMethodType: s,
         reference: t,
@@ -24572,7 +24572,7 @@ var hw = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -24780,7 +24780,7 @@ function hR(e) {
 }
 function hF(e) {
     var t = nl().i18n,
-        n = t8(null),
+        n = t5(null),
         r = rV({
             schema: ['firstName', 'lastName', 'socialSecurityNumber', 'billingAddress', 'shopperEmail'],
             defaultData: e.data,
@@ -24813,7 +24813,7 @@ function hF(e) {
         k = (0, q.Z)(_, 2),
         C = k[0],
         Z = k[1],
-        w = t8({});
+        w = t5({});
     l()(w.current).length || null == (b = e.setComponentRef) || b.call(e, w.current),
         (w.current.showValidation = function () {
             a(), e.billingAddressRequired && n.current.showValidation();
@@ -24888,7 +24888,7 @@ var hO = function (e) {
         n = nl(),
         r = n.i18n,
         o = n.loadingContext,
-        a = nT(),
+        a = nB(),
         i = e.reference,
         s = e.expiresAt,
         c = e.totalAmount,
@@ -25014,7 +25014,7 @@ var hM = (function (e) {
                 key: 'render',
                 value: function () {
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -25047,13 +25047,13 @@ var hM = (function (e) {
     );
 })();
 (0, w.Z)(hM, 'type', 'boletobancario');
-var hT = function (e) {
+var hB = function (e) {
     var t,
         n,
         r = nl(),
         o = r.i18n,
         a = r.loadingContext,
-        i = nT(),
+        i = nB(),
         s = e.alternativeReference,
         c = e.reference,
         l = e.expiresAt,
@@ -25107,7 +25107,7 @@ var hT = function (e) {
         voucherDetails: m
     });
 };
-function hB(e, t) {
+function hT(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -25125,12 +25125,12 @@ function hD(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = hB(Object(o), !0))).call(n, function (t) {
+            ? N()((n = hT(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = hB(Object(o)))).call(r, function (t) {
+              : N()((r = hT(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
@@ -25189,14 +25189,14 @@ var hL = (function (e) {
                 value: function () {
                     var e;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
                             resources: this.resources
                         },
                         this.props.reference
-                            ? (0, ec.h)(hT, (0, er.Z)({ ref: this.handleRef }, this.props))
+                            ? (0, ec.h)(hB, (0, er.Z)({ ref: this.handleRef }, this.props))
                             : this.props.showPayButton &&
                                   this.payButton(
                                       hD(
@@ -25224,7 +25224,7 @@ var hL = (function (e) {
 var hV = function (e) {
     var t,
         n = nl().i18n,
-        r = nT(),
+        r = nB(),
         o = e.entity,
         a = e.reference,
         i = e.expiresAt,
@@ -25366,7 +25366,7 @@ var hq = (function (e) {
                     var e = this;
                     return this.props.reference
                         ? (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -25376,7 +25376,7 @@ var hq = (function (e) {
                           )
                         : this.props.showPayButton
                           ? (0, ec.h)(
-                                a7,
+                                a6,
                                 {
                                     i18n: this.props.i18n,
                                     loadingContext: this.props.loadingContext,
@@ -25503,7 +25503,7 @@ function hY(e) {
         'div',
         { className: ep()('adyen-checkout__alert-message', 'adyen-checkout__alert-message--'.concat(void 0 === r ? 'error' : r), void 0 === n ? [] : n) },
         o &&
-            (0, ec.h)(nB, {
+            (0, ec.h)(nT, {
                 className: 'adyen-checkout__alert-message__icon',
                 type: o
             }),
@@ -25829,7 +25829,7 @@ var h2 = (function (e) {
             (t = n.call.apply(n, I()((e = [this])).call(e, a))),
             (0, w.Z)((0, eo.Z)(t), 'handleBalanceCheck', function (e) {
                 return t.props.onBalanceCheck
-                    ? new (T())(function (n, r) {
+                    ? new (B())(function (n, r) {
                           t.props.onBalanceCheck(n, r, e);
                       })
                     : t.props.session
@@ -25838,7 +25838,7 @@ var h2 = (function (e) {
             }),
             (0, w.Z)((0, eo.Z)(t), 'onOrderRequest', function (e) {
                 return t.props.onOrderRequest
-                    ? new (T())(function (n, r) {
+                    ? new (B())(function (n, r) {
                           t.props.onOrderRequest(n, r, e);
                       })
                     : t.props.session
@@ -25948,7 +25948,7 @@ var h2 = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -25979,7 +25979,7 @@ var h2 = (function (e) {
     );
 })();
 (0, w.Z)(h2, 'type', 'giftcard'), (0, w.Z)(h2, 'defaultProps', { brandsConfiguration: {} });
-var h8 = (function (e) {
+var h5 = (function (e) {
     (0, ea.Z)(r, dc);
     var t,
         n =
@@ -26006,7 +26006,79 @@ var h8 = (function (e) {
     }
     return (0, Z.Z)(r);
 })();
-function h4(e, t) {
+function h9(e, t) {
+    var n = l()(e);
+    if (d()) {
+        var r = d()(e);
+        t &&
+            (r = P()(r).call(r, function (t) {
+                return h()(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h8(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n,
+            r,
+            o = null != arguments[t] ? arguments[t] : {};
+        t % 2
+            ? N()((n = h9(Object(o), !0))).call(n, function (t) {
+                  (0, w.Z)(e, t, o[t]);
+              })
+            : m()
+              ? v()(e, m()(o))
+              : N()((r = h9(Object(o)))).call(r, function (t) {
+                    b()(e, t, h()(o, t));
+                });
+    }
+    return e;
+}
+(0, w.Z)(h5, 'type', 'vipps'),
+    (0, w.Z)(h5, 'defaultProps', {
+        type: h5.type,
+        showPayButton: !0,
+        name: 'Vipps'
+    });
+var h4 = (function (e) {
+    (0, ea.Z)(r, sp);
+    var t,
+        n =
+            ((t = (function () {
+                if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
+                if ('function' == typeof Proxy) return !0;
+                try {
+                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
+                } catch (e) {
+                    return !1;
+                }
+            })()),
+            function () {
+                var e,
+                    n = (0, es.Z)(r);
+                if (t) {
+                    var o = (0, es.Z)(this).constructor;
+                    e = en()(n, arguments, o);
+                } else e = n.apply(this, arguments);
+                return (0, ei.Z)(this, e);
+            });
+    function r() {
+        return (0, C.Z)(this, r), n.apply(this, arguments);
+    }
+    return (
+        (0, Z.Z)(r, [
+            {
+                key: 'formatProps',
+                value: function (e) {
+                    return h8(h8({}, (0, ey.Z)((0, es.Z)(r.prototype), 'formatProps', this).call(this, e)), {}, { showImage: !1 });
+                }
+            }
+        ]),
+        r
+    );
+})();
+function h3(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -26024,24 +26096,19 @@ function h6(e) {
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = h4(Object(o), !0))).call(n, function (t) {
+            ? N()((n = h3(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = h4(Object(o)))).call(r, function (t) {
+              : N()((r = h3(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
     return e;
 }
-(0, w.Z)(h8, 'type', 'vipps'),
-    (0, w.Z)(h8, 'defaultProps', {
-        type: h8.type,
-        showPayButton: !0,
-        name: 'Vipps'
-    });
-var h5 = (function (e) {
+(0, w.Z)(h4, 'type', 'payu_IN_cashcard');
+var h7 = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
         n =
@@ -26078,74 +26145,7 @@ var h5 = (function (e) {
         r
     );
 })();
-function h3(e, t) {
-    var n = l()(e);
-    if (d()) {
-        var r = d()(e);
-        t &&
-            (r = P()(r).call(r, function (t) {
-                return h()(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function h7(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n,
-            r,
-            o = null != arguments[t] ? arguments[t] : {};
-        t % 2
-            ? N()((n = h3(Object(o), !0))).call(n, function (t) {
-                  (0, w.Z)(e, t, o[t]);
-              })
-            : m()
-              ? v()(e, m()(o))
-              : N()((r = h3(Object(o)))).call(r, function (t) {
-                    b()(e, t, h()(o, t));
-                });
-    }
-    return e;
-}
-(0, w.Z)(h5, 'type', 'payu_IN_cashcard');
-var h9 = (function (e) {
-    (0, ea.Z)(r, sp);
-    var t,
-        n =
-            ((t = (function () {
-                if ('undefined' == typeof Reflect || !en() || en().sham) return !1;
-                if ('function' == typeof Proxy) return !0;
-                try {
-                    return Boolean.prototype.valueOf.call(en()(Boolean, [], function () {})), !0;
-                } catch (e) {
-                    return !1;
-                }
-            })()),
-            function () {
-                var e,
-                    n = (0, es.Z)(r);
-                if (t) {
-                    var o = (0, es.Z)(this).constructor;
-                    e = en()(n, arguments, o);
-                } else e = n.apply(this, arguments);
-                return (0, ei.Z)(this, e);
-            });
-    function r() {
-        return (0, C.Z)(this, r), n.apply(this, arguments);
-    }
-    return (
-        (0, Z.Z)(r, [
-            {
-                key: 'formatProps',
-                value: function (e) {
-                    return h7(h7({}, (0, ey.Z)((0, es.Z)(r.prototype), 'formatProps', this).call(this, e)), {}, { showImage: !1 });
-                }
-            }
-        ]),
-        r
-    );
-})();
-(0, w.Z)(h9, 'type', 'payu_IN_nb');
+(0, w.Z)(h7, 'type', 'payu_IN_nb');
 var fe = ['AT', 'CH', 'DE', 'NL'];
 function ft(e, t) {
     var n = l()(e);
@@ -26314,7 +26314,7 @@ var fi = function (e) {
                     'adyen-checkout__payment-method__image__wrapper--disabled': !!(void 0 !== o && o)
                 })
             },
-            (0, ec.h)(o7, {
+            (0, ec.h)(o6, {
                 className: 'adyen-checkout__payment-method__image '.concat(fs['adyen-checkout__payment-method__image']),
                 src: t,
                 alt: n
@@ -26589,7 +26589,7 @@ var fi = function (e) {
                                     (0, ec.h)(fp, {
                                         activeBrand: u,
                                         brands: o.brands,
-                                        excludedUIBrands: n7,
+                                        excludedUIBrands: n6,
                                         isPaymentMethodSelected: a,
                                         isCompactView: o.props.showBrandsUnderCardNumber
                                     })
@@ -26634,7 +26634,7 @@ var fm = function (e) {
         o = e.onOrderCancel,
         a = e.brandLogoConfiguration,
         i = nl().i18n,
-        s = nT();
+        s = nB();
     return (0, ec.h)(
         'div',
         null,
@@ -26698,7 +26698,7 @@ function fy(e) {
                 return (0, ec.h)('li', { key: e.type }, e.render());
             })
         ),
-        (0, ec.h)(i4, { label: n.get('orPayWith') })
+        (0, ec.h)(i9, { label: n.get('orPayWith') })
     );
 }
 function fv(e, t) {
@@ -26861,14 +26861,14 @@ var fb = (function (e) {
 var f_ = function (e) {
         var t = e.message,
             n = nl().i18n,
-            r = nT(),
+            r = nB(),
             o = n.get(t || 'creditCard.success');
         return (
             he(o),
             (0, ec.h)(
                 'div',
                 { className: 'adyen-checkout__status adyen-checkout__status--success' },
-                (0, ec.h)(o7, {
+                (0, ec.h)(o6, {
                     height: '88',
                     className: 'adyen-checkout__status__icon',
                     src: r({
@@ -26884,14 +26884,14 @@ var f_ = function (e) {
     fk = function (e) {
         var t = e.message,
             n = nl().i18n,
-            r = nT(),
+            r = nB(),
             o = n.get(t || 'error.message.unknown');
         return (
             he(o),
             (0, ec.h)(
                 'div',
                 { className: 'adyen-checkout__status adyen-checkout__status--error' },
-                (0, ec.h)(o7, {
+                (0, ec.h)(o6, {
                     className: 'adyen-checkout__status__icon',
                     src: r({
                         extension: 'gif',
@@ -26989,7 +26989,7 @@ var fw = (function (e) {
                                   clientKey: o,
                                   loadingContext: a
                               }),
-                              o6(
+                              o8(
                                   {
                                       path: 'v1/order/status?clientKey='.concat(e.clientKey),
                                       loadingContext: e.loadingContext
@@ -26997,7 +26997,7 @@ var fw = (function (e) {
                                   { orderData: r.orderData }
                               ))
                             : null;
-                    T()
+                    B()
                         .all([c, l, u, d])
                         .then(function (e) {
                             var n,
@@ -27047,7 +27047,7 @@ var fw = (function (e) {
                 }),
                 (0, w.Z)((0, eo.Z)(t), 'handleDisableStoredPaymentMethod', function (e) {
                     t.setState({ isDisabling: !0 }),
-                        new (T())(function (n, r) {
+                        new (B())(function (n, r) {
                             return t.props.onDisableStoredPaymentMethod(e.props.storedPaymentMethodId, n, r);
                         })
                             .then(function () {
@@ -27168,12 +27168,12 @@ var fw = (function (e) {
     },
     fP = function (e) {
         if (e.isAvailable) {
-            var t = new (T())(function (e, t) {
+            var t = new (B())(function (e, t) {
                 return eu()(t, 5000);
             });
-            return T().race([e.isAvailable(), t]);
+            return B().race([e.isAvailable(), t]);
         }
-        return T().resolve(!!e);
+        return B().resolve(!!e);
     },
     fA = function () {
         var e,
@@ -27194,7 +27194,7 @@ var fw = (function (e) {
                     return e;
                 });
             });
-        return T()
+        return B()
             .all(s)
             .then(function (e) {
                 return P()(i).call(i, function (t, n) {
@@ -27289,8 +27289,8 @@ function fM(e) {
     }
     return e;
 }
-var fT = ['paywithgoogle', 'googlepay', 'applepay'],
-    fB = (function (e) {
+var fB = ['paywithgoogle', 'googlepay', 'applepay'],
+    fT = (function (e) {
         (0, ea.Z)(r, nk);
         var t,
             n =
@@ -27380,7 +27380,7 @@ var fT = ['paywithgoogle', 'googlepay', 'applepay'],
                         var t,
                             n,
                             o = P()((t = tn()(new (tp())(e.instantPaymentTypes)))).call(t, function (e) {
-                                return O()(fT).call(fT, e);
+                                return O()(fB).call(fB, e);
                             }),
                             a = Y()(o).call(
                                 o,
@@ -27487,7 +27487,7 @@ var fT = ['paywithgoogle', 'googlepay', 'applepay'],
                     value: function () {
                         var e = this;
                         return (0, ec.h)(
-                            a7,
+                            a6,
                             {
                                 i18n: this.props.i18n,
                                 loadingContext: this.props.loadingContext,
@@ -27515,8 +27515,8 @@ var fT = ['paywithgoogle', 'googlepay', 'applepay'],
             r
         );
     })();
-(0, w.Z)(fB, 'type', 'dropin'),
-    (0, w.Z)(fB, 'defaultProps', {
+(0, w.Z)(fT, 'type', 'dropin'),
+    (0, w.Z)(fT, 'defaultProps', {
         isDropin: !0,
         onReady: function () {},
         onComplete: function () {},
@@ -27694,28 +27694,28 @@ function fK(e) {
             var n = t.target.value;
             v(fq(fq({}, y), {}, { holderName: n })), c(fq(fq({}, s), {}, { holderName: !!e.holderNameRequired && !fH(n) })), h(fq(fq({}, p), {}, { holderName: !e.holderNameRequired || fH(n, e.holderNameRequired) }));
         },
-        T = t8(null),
-        B = t8(null),
+        B = t5(null),
+        T = t5(null),
         D = function (e) {
-            B.current = e;
+            T.current = e;
         },
         L = tX('ready'),
         V = (0, q.Z)(L, 2),
         j = V[0],
         U = V[1],
-        H = t8({});
+        H = t5({});
     return (
         l()(H.current).length || null == (t = e.setComponentRef) || t.call(e, H.current),
         (H.current.showValidation = function () {
-            T.current.showValidation(), e.holderNameRequired && !p.holderName && c(fq(fq({}, s), {}, { holderName: !0 })), B.current && B.current.showValidation();
+            B.current.showValidation(), e.holderNameRequired && !p.holderName && c(fq(fq({}, s), {}, { holderName: !0 })), T.current && T.current.showValidation();
         }),
         (H.current.setStatus = U),
         t1(function () {
             return (
-                (n.setFocusOn = T.current.setFocusOn),
-                (n.updateStyles = T.current.updateStyles),
+                (n.setFocusOn = B.current.setFocusOn),
+                (n.updateStyles = B.current.updateStyles),
                 function () {
-                    T.current.destroy();
+                    B.current.destroy();
                 }
             );
         }, []),
@@ -27738,7 +27738,7 @@ function fK(e) {
             e.showFormInstruction && (0, ec.h)(a2, null),
             (0, ec.h)(
                 cq,
-                (0, er.Z)({ ref: T }, fz(e), {
+                (0, er.Z)({ ref: B }, fz(e), {
                     styles: fq(fq({}, fj), e.styles),
                     onChange: function (t) {
                         var n = t.autoCompleteName ? t.autoCompleteName : y.holderName;
@@ -27967,7 +27967,7 @@ var fG = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -28113,7 +28113,7 @@ function f2(e) {
             var e = document.querySelector('.adyen-checkout-phone-input--new [uniqueid]');
             return e ? e.getAttribute('uniqueid') : null;
         },
-        _ = t6(
+        _ = t8(
             function (t) {
                 if (m[t]) {
                     var n = 'phoneNumber' === t ? 'phoneNumberErrorKey' : 'phonePrefixErrorKey',
@@ -28124,7 +28124,7 @@ function f2(e) {
             },
             [m]
         ),
-        k = t4(function () {
+        k = t9(function () {
             return rv('adyen-checkout-phonePrefix');
         }, []),
         C = (m.phoneNumber || m.phonePrefix) && !0;
@@ -28227,7 +28227,7 @@ function f2(e) {
         )
     );
 }
-function f8(e) {
+function f5(e) {
     var t,
         n,
         r,
@@ -28244,7 +28244,7 @@ function f8(e) {
         f = nl(),
         m = f.i18n,
         y = f.loadingContext,
-        v = t8(null),
+        v = t5(null),
         g = e.allowedCountries,
         b = tX('ready'),
         _ = (0, q.Z)(b, 2),
@@ -28266,7 +28266,7 @@ function f8(e) {
             (d = (u = (0, q.Z)(l, 2))[0]),
             (p = u[1]),
             t2(function () {
-                o5('phonenumbers', r)
+                o4('phonenumbers', r)
                     .then(function (e) {
                         var t = n.length
                             ? P()(e).call(e, function (e) {
@@ -28337,13 +28337,13 @@ function f8(e) {
     );
 }
 (f2.defaultProps = { phoneLabel: 'telephoneNumber' }),
-    (f8.defaultProps = {
+    (f5.defaultProps = {
         onChange: function () {},
         phoneNumberKey: 'mobileNumber',
         phoneNumberErrorKey: 'mobileNumber.invalid'
     });
-var f4 = ['message'];
-function f6(e, t) {
+var f9 = ['message'];
+function f8(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -28355,18 +28355,18 @@ function f6(e, t) {
     }
     return n;
 }
-function f5(e) {
+function f4(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = f6(Object(o), !0))).call(n, function (t) {
+            ? N()((n = f8(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = f6(Object(o)))).call(r, function (t) {
+              : N()((r = f8(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
@@ -28378,7 +28378,7 @@ function f3(e) {
         r = nl(),
         o = r.i18n,
         a = r.loadingContext,
-        i = nT(),
+        i = nB(),
         s = tX(!1),
         c = (0, q.Z)(s, 2),
         l = c[0],
@@ -28407,10 +28407,10 @@ function f3(e) {
         E = (0, q.Z)(O, 2),
         I = E[0],
         M = E[1],
-        T = tX(!1),
-        B = (0, q.Z)(T, 2),
-        D = B[0],
-        L = B[1],
+        B = tX(!1),
+        T = (0, q.Z)(B, 2),
+        D = T[0],
+        L = T[1],
         V = tX(null),
         j = (0, q.Z)(V, 2),
         U = j[0],
@@ -28424,14 +28424,14 @@ function f3(e) {
                     actionDescription: 'polling-started'
                 }),
                 Z(!0)),
-                p6(t, r, a)
-                    .then(p9)
+                p8(t, r, a)
+                    .then(p7)
                     .catch(function (e) {
                         var t = e.message,
-                            n = (0, k.Z)(e, f4);
+                            n = (0, k.Z)(e, f9);
                         return {
                             type: 'network-error',
-                            props: f5(f5({}, t && { message: o.get(t) }), n)
+                            props: f4(f4({}, t && { message: o.get(t) }), n)
                         };
                     })
                     .then(function (t) {
@@ -28570,7 +28570,7 @@ function f3(e) {
                     { className: 'adyen-checkout__await__countdown' },
                     W[0],
                     '\xA0',
-                    (0, ec.h)(p4, {
+                    (0, ec.h)(p9, {
                         minutesFromNow: e.countdownTime,
                         onTick: function (e) {
                             F(e.percentage);
@@ -28587,7 +28587,7 @@ function f3(e) {
             (0, ec.h)(
                 'div',
                 { className: 'adyen-checkout__await__app-link' },
-                (0, ec.h)(i4, null),
+                (0, ec.h)(i9, null),
                 (0, ec.h)(nu, {
                     classNameModifiers: ['await'],
                     onClick: function () {
@@ -28599,7 +28599,7 @@ function f3(e) {
             )
     );
 }
-function f7(e, t) {
+function f6(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -28611,18 +28611,18 @@ function f7(e, t) {
     }
     return n;
 }
-function f9(e) {
+function f7(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = f7(Object(o), !0))).call(n, function (t) {
+            ? N()((n = f6(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = f7(Object(o)))).call(r, function (t) {
+              : N()((r = f6(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
@@ -28674,8 +28674,8 @@ var me = (function (e) {
                         n = void 0 === t ? {} : t,
                         r = e.placeholders,
                         o = void 0 === r ? {} : r;
-                    return f9(
-                        f9({}, e),
+                    return f7(
+                        f7({}, e),
                         {},
                         {
                             data: {
@@ -28691,7 +28691,7 @@ var me = (function (e) {
                 key: 'formatData',
                 value: function () {
                     var e;
-                    return { paymentMethod: f9({ type: r.type }, (null == (e = this.state.data) ? void 0 : e.phoneNumber) && { telephoneNumber: this.state.data.phonePrefix + this.state.data.phoneNumber }) };
+                    return { paymentMethod: f7({ type: r.type }, (null == (e = this.state.data) ? void 0 : e.phoneNumber) && { telephoneNumber: this.state.data.phonePrefix + this.state.data.phoneNumber }) };
                 }
             },
             {
@@ -28712,7 +28712,7 @@ var me = (function (e) {
                     var e = this;
                     return this.props.paymentData
                         ? (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -28743,14 +28743,14 @@ var me = (function (e) {
                               )
                           )
                         : (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
                                   resources: this.resources
                               },
                               (0, ec.h)(
-                                  f8,
+                                  f5,
                                   (0, er.Z)(
                                       {
                                           ref: function (t) {
@@ -28779,7 +28779,7 @@ var mt = function (e) {
 function mn(e) {
     var t = this,
         n = nl().i18n,
-        r = nT(),
+        r = nB(),
         o = rV({
             schema: ['blikCode'],
             rules: {
@@ -28933,7 +28933,7 @@ var ma = (function (e) {
                     var e = this;
                     return this.props.paymentData
                         ? (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -28964,7 +28964,7 @@ var ma = (function (e) {
                               )
                           )
                         : (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -29008,7 +29008,7 @@ function mi(e) {
         n = e.totalAmount,
         r = e.paymentMethodType,
         o = nl().i18n,
-        a = nT();
+        a = nB();
     return (0, ec.h)(dA, {
         paymentMethodType: r,
         introduction: o.get('bankTransfer.instructions'),
@@ -29175,7 +29175,7 @@ var ml = (function (e) {
                 value: function () {
                     return this.props.reference
                         ? (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -29184,7 +29184,7 @@ var ml = (function (e) {
                               (0, ec.h)(mi, (0, er.Z)({ ref: this.handleRef }, this.props))
                           )
                         : (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -29484,7 +29484,7 @@ var mb = (function (e) {
                     return this.props.paymentData
                         ? this.renderQRCode()
                         : (0, ec.h)(
-                              a7,
+                              a6,
                               {
                                   i18n: this.props.i18n,
                                   loadingContext: this.props.loadingContext,
@@ -29584,7 +29584,7 @@ function mN(e) {
         r,
         o = this,
         a = nl().i18n,
-        i = nT(),
+        i = nB(),
         s = rV({
             schema: ['holderName', 'bankAccountNumber', 'bankLocationId', 'shopperEmail', 'amountConsentCheckbox', 'accountConsentCheckbox'],
             defaultData: e.data,
@@ -29798,7 +29798,7 @@ mN.defaultProps = {
 };
 var mx = function (e) {
     var t = nl().i18n,
-        n = nT(),
+        n = nB(),
         r = e.url,
         o = e.paymentMethodType;
     return (0, ec.h)(dA, {
@@ -29901,7 +29901,7 @@ var mR = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -29983,7 +29983,7 @@ var mF = (function (e) {
                     key: 'render',
                     value: function () {
                         return (0, ec.h)(
-                            a7,
+                            a6,
                             {
                                 i18n: this.props.i18n,
                                 loadingContext: this.props.loadingContext,
@@ -30040,7 +30040,7 @@ var mF = (function (e) {
                     key: 'render',
                     value: function () {
                         return (0, ec.h)(
-                            a7,
+                            a6,
                             {
                                 i18n: this.props.i18n,
                                 loadingContext: this.props.loadingContext,
@@ -30062,7 +30062,7 @@ function mI(e) {
     e.paymentMethodType;
     var n = e.payButton,
         r = (0, k.Z)(e, mE),
-        o = t8(null),
+        o = t5(null),
         a = tX('ready'),
         i = (0, q.Z)(a, 2),
         s = i[0],
@@ -30143,7 +30143,7 @@ function mM(e, t) {
     }
     return n;
 }
-function mT(e) {
+function mB(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
@@ -30160,7 +30160,7 @@ function mT(e) {
     }
     return e;
 }
-function mB(e) {
+function mT(e) {
     var t,
         n = tX({
             sdkData: e.sdkData,
@@ -30189,8 +30189,8 @@ function mB(e) {
               })
             : e.showPayButton
               ? e.payButton(
-                    mT(
-                        mT({}, e),
+                    mB(
+                        mB({}, e),
                         {},
                         {
                             status: c,
@@ -30311,14 +30311,14 @@ var mL = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
                             resources: this.resources
                         },
                         (0, ec.h)(
-                            mB,
+                            mT,
                             (0, er.Z)({}, this.props, {
                                 ref: function (t) {
                                     e.componentRef = t;
@@ -30784,7 +30784,7 @@ var m2 = (function (e) {
     );
 })();
 (0, w.Z)(m2, 'type', 'ratepay_directdebit');
-var m8 = {
+var m5 = {
         virtualPaymentAddress: {
             validate: function (e) {
                 return !!e && e.length > 0;
@@ -30800,11 +30800,11 @@ var m8 = {
             modes: ['blur']
         }
     },
-    m4 = function (e) {
+    m9 = function (e) {
         var t = rV({
                 schema: ['virtualPaymentAddress'],
                 defaultData: e.data,
-                rules: m8
+                rules: m5
             }),
             n = t.handleChangeFor,
             r = t.triggerValidation,
@@ -30812,8 +30812,8 @@ var m8 = {
             a = t.valid,
             i = t.errors,
             s = t.isValid,
-            c = t8({ validateInput: null }),
-            l = t6(
+            c = t5({ validateInput: null }),
+            l = t8(
                 function () {
                     r();
                 },
@@ -30857,7 +30857,7 @@ var m8 = {
             )
         );
     };
-function m6(e) {
+function m8(e) {
     var t,
         n = e.classNameModifiers,
         r = e.selectedValue,
@@ -30906,25 +30906,25 @@ function m6(e) {
           )
         : null;
 }
-var m5 = (((r = {}).Vpa = 'vpa'), (r.QrCode = 'qrCode'), r),
+var m4 = (((r = {}).Vpa = 'vpa'), (r.QrCode = 'qrCode'), r),
     m3 = {
         ButtonId: {
-            VPA: 'upi-button-'.concat(m5.Vpa),
-            QR: 'upi-button-'.concat(m5.QrCode)
+            VPA: 'upi-button-'.concat(m4.Vpa),
+            QR: 'upi-button-'.concat(m4.QrCode)
         },
         AreaId: {
-            VPA: 'upi-area-'.concat(m5.Vpa),
-            QR: 'upi-area-'.concat(m5.QrCode)
+            VPA: 'upi-area-'.concat(m4.Vpa),
+            QR: 'upi-area-'.concat(m4.QrCode)
         }
     };
-function m7(e) {
+function m6(e) {
     var t = e.defaultMode,
         n = e.onChange,
         r = e.onUpdateMode,
         o = e.payButton,
         a = e.showPayButton,
         i = nl().i18n,
-        s = nT(),
+        s = nB(),
         c = tX(null),
         l = (0, q.Z)(c, 2),
         u = l[0],
@@ -30943,10 +30943,10 @@ function m7(e) {
         (this.showValidation = function () {
             u.validateInput();
         });
-    var _ = t6(function (e) {
+    var _ = t8(function (e) {
             d(e);
         }, []),
-        k = t6(
+        k = t8(
             function (e) {
                 b(e), r(e);
             },
@@ -30956,7 +30956,7 @@ function m7(e) {
         ec.HY,
         null,
         (0, ec.h)('p', { className: 'adyen-checkout_upi-mode-selection-text' }, i.get('upi.modeSelection')),
-        (0, ec.h)(m6, {
+        (0, ec.h)(m8, {
             onChange: k,
             selectedValue: g,
             disabled: 'loading' === f,
@@ -30964,25 +30964,25 @@ function m7(e) {
             options: [
                 {
                     label: uw() ? 'VPA' : 'Virtual Payment Address',
-                    value: m5.Vpa,
+                    value: m4.Vpa,
                     htmlProps: {
                         id: m3.ButtonId.VPA,
-                        'aria-expanded': g === m5.Vpa,
+                        'aria-expanded': g === m4.Vpa,
                         'aria-controls': m3.AreaId.VPA
                     }
                 },
                 {
                     label: 'QR Code',
-                    value: m5.QrCode,
+                    value: m4.QrCode,
                     htmlProps: {
                         id: m3.ButtonId.QR,
-                        'aria-expanded': g === m5.QrCode,
+                        'aria-expanded': g === m4.QrCode,
                         'aria-controls': m3.AreaId.QR
                     }
                 }
             ]
         }),
-        g === m5.Vpa
+        g === m4.Vpa
             ? (0, ec.h)(
                   'div',
                   {
@@ -30990,7 +30990,7 @@ function m7(e) {
                       'aria-labelledby': m3.ButtonId.VPA,
                       role: 'region'
                   },
-                  (0, ec.h)(m4, {
+                  (0, ec.h)(m9, {
                       disabled: 'loading' === f,
                       onChange: n,
                       onSetInputHandlers: _
@@ -31017,7 +31017,7 @@ function m7(e) {
               )
     );
 }
-function m9(e, t) {
+function m7(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -31060,7 +31060,7 @@ var ye = (((o = ye || {}).UpiCollect = 'upi_collect'), (o.UpiQr = 'upi_qr'), o),
                 (t = n.call.apply(n, I()((e = [this])).call(e, a))),
                 (0, w.Z)((0, eo.Z)(t), 'useQrCodeVariant', void 0),
                 (0, w.Z)((0, eo.Z)(t), 'onUpdateMode', function (e) {
-                    e === m5.QrCode
+                    e === m4.QrCode
                         ? ((t.useQrCodeVariant = !0),
                           t.setState({
                               data: {},
@@ -31092,12 +31092,12 @@ var ye = (((o = ye || {}).UpiCollect = 'upi_collect'), (o.UpiQr = 'upi_qr'), o),
                                         r,
                                         o = null != arguments[t] ? arguments[t] : {};
                                     t % 2
-                                        ? N()((n = m9(Object(o), !0))).call(n, function (t) {
+                                        ? N()((n = m7(Object(o), !0))).call(n, function (t) {
                                               (0, w.Z)(e, t, o[t]);
                                           })
                                         : m()
                                           ? v()(e, m()(o))
-                                          : N()((r = m9(Object(o)))).call(r, function (t) {
+                                          : N()((r = m7(Object(o)))).call(r, function (t) {
                                                 b()(e, t, h()(o, t));
                                             });
                                 }
@@ -31150,7 +31150,7 @@ var ye = (((o = ye || {}).UpiCollect = 'upi_collect'), (o.UpiQr = 'upi_qr'), o),
                                     onActionHandled: this.props.onActionHandled
                                 });
                             default:
-                                return (0, ec.h)(m7, {
+                                return (0, ec.h)(m6, {
                                     ref: function (e) {
                                         t.componentRef = e;
                                     },
@@ -31168,7 +31168,7 @@ var ye = (((o = ye || {}).UpiCollect = 'upi_collect'), (o.UpiQr = 'upi_qr'), o),
                     value: function () {
                         var e = this.props.type;
                         return (0, ec.h)(
-                            a7,
+                            a6,
                             {
                                 i18n: this.props.i18n,
                                 loadingContext: this.props.loadingContext,
@@ -31211,7 +31211,7 @@ function yr(e) {
     }
     return e;
 }
-(0, w.Z)(yt, 'type', 'upi'), (0, w.Z)(yt, 'defaultProps', { defaultMode: m5.Vpa });
+(0, w.Z)(yt, 'type', 'upi'), (0, w.Z)(yt, 'defaultProps', { defaultMode: m4.Vpa });
 var yo = (function (e) {
     (0, ea.Z)(r, sp);
     var t,
@@ -31671,7 +31671,7 @@ var yg = (function (e) {
                 value: function () {
                     var e = this;
                     return (0, ec.h)(
-                        a7,
+                        a6,
                         {
                             i18n: this.props.i18n,
                             loadingContext: this.props.loadingContext,
@@ -31731,7 +31731,7 @@ var yk = {
         address: mF,
         bankTransfer_IBAN: ml,
         donation: dt,
-        dropin: fB,
+        dropin: fT,
         personal_details: mO,
         amex: uL,
         bcmc: u2,
@@ -31756,14 +31756,14 @@ var yk = {
         afterpay_default: im,
         afterpay_b2b: ig,
         atome: i1,
-        facilypay_3x: dB,
+        facilypay_3x: dT,
         facilypay_4x: dV,
         facilypay_6x: dq,
         facilypay_10x: dz,
         facilypay_12x: dG,
         ratepay: fr,
         ratepay_directdebit: m2,
-        amazonpay: iB,
+        amazonpay: iT,
         applepay: iW,
         cashapp: u$,
         clicktopay: uX,
@@ -31807,8 +31807,8 @@ var yk = {
         onlineBanking_PL: mX,
         onlineBanking_SK: yu,
         paybybank: yh,
-        payu_IN_cashcard: h5,
-        payu_IN_nb: h9,
+        payu_IN_cashcard: h4,
+        payu_IN_nb: h7,
         wallet_IN: yo,
         dragonpay_ebanking: hb,
         dragonpay_otc_banking: hb,
@@ -31822,7 +31822,7 @@ var yk = {
         multibanco: hq,
         redirect: dc,
         twint: mV,
-        vipps: h8,
+        vipps: h5,
         trustly: yg,
         klarna: mL,
         klarna_account: mL,
@@ -32005,7 +32005,7 @@ var yM = function (e) {
             );
         };
     },
-    yT = {
+    yB = {
         redirect: function (e, t) {
             return yC('redirect', yI(yI(yI({}, t), e), {}, { statusType: 'redirect' }));
         },
@@ -32093,7 +32093,7 @@ var yM = function (e) {
         bankTransfer: yM('custom'),
         sdk: yM('custom')
     };
-function yB(e, t) {
+function yT(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -32214,7 +32214,7 @@ var yL = (function () {
             };
         return function () {
             if (t) return t;
-            if (!r) return T().reject();
+            if (!r) return B().reject();
             var e = new yV('checkout-attempt-id', 'sessionStorage'),
                 n = e.get();
             return !(function (e) {
@@ -32222,7 +32222,7 @@ var yL = (function () {
                 var t = e_()() - 900000;
                 return e.timestamp > t;
             })(n)
-                ? (t = o6(a, { experiments: o })
+                ? (t = o8(a, { experiments: o })
                       .then(function (t) {
                           if (t.id)
                               return (
@@ -32234,7 +32234,7 @@ var yL = (function () {
                               );
                       })
                       .catch(function () {}))
-                : T().resolve(n.id);
+                : B().resolve(n.id);
         };
     },
     yU = (function () {
@@ -32256,7 +32256,7 @@ var yL = (function () {
                             n = J()((t = this.events)).call(t, function (t) {
                                 return t(e);
                             });
-                        return (this.events = []), T().all(n);
+                        return (this.events = []), B().all(n);
                     }
                 }
             ]),
@@ -32323,12 +32323,12 @@ var yK = (function () {
                                     r,
                                     o = null != arguments[t] ? arguments[t] : {};
                                 t % 2
-                                    ? N()((n = yB(Object(o), !0))).call(n, function (t) {
+                                    ? N()((n = yT(Object(o), !0))).call(n, function (t) {
                                           (0, w.Z)(e, t, o[t]);
                                       })
                                     : m()
                                       ? v()(e, m()(o))
-                                      : N()((r = yB(Object(o)))).call(r, function (t) {
+                                      : N()((r = yT(Object(o)))).call(r, function (t) {
                                             b()(e, t, h()(o, t));
                                         });
                             }
@@ -32360,7 +32360,7 @@ var yK = (function () {
                 function (e) {
                     var t, n;
                     return r.clientKey
-                        ? o6(
+                        ? o8(
                               {
                                   errorLevel: 'silent',
                                   loadingContext: r.loadingContext,
@@ -32399,7 +32399,7 @@ var yK = (function () {
                                   e
                               )
                           )
-                        : T().reject();
+                        : B().reject();
                 })),
             (this.collectId = yj({
                 loadingContext: o,
@@ -32614,7 +32614,7 @@ var yX = (function () {
                               }
                             : {}
                     )),
-                    o6(
+                    o8(
                         {
                             loadingContext: this.loadingContext,
                             path: r,
@@ -32673,7 +32673,7 @@ var yX = (function () {
                         }
                         return e;
                     })({ sessionData: this.data }, e)),
-                    o6(
+                    o8(
                         {
                             loadingContext: this.loadingContext,
                             path: r,
@@ -32711,7 +32711,7 @@ var yX = (function () {
                         }
                         return e;
                     })({ sessionData: this.data }, e)),
-                    o6(
+                    o8(
                         {
                             loadingContext: this.loadingContext,
                             path: r,
@@ -32749,7 +32749,7 @@ var yX = (function () {
                         }
                         return e;
                     })({ sessionData: this.data }, e)),
-                    o6(
+                    o8(
                         {
                             loadingContext: this.loadingContext,
                             path: r,
@@ -32771,7 +32771,7 @@ var yX = (function () {
                         o = this;
                     return ((n = I()((e = I()((t = ''.concat('v1', '/sessions/'))).call(t, this.id, '/orders?clientKey='))).call(e, this.clientKey)),
                     (r = { sessionData: this.data }),
-                    o6(
+                    o8(
                         {
                             loadingContext: this.loadingContext,
                             path: n,
@@ -32798,7 +32798,7 @@ var yX = (function () {
                         sessionData: this.data,
                         order: t
                     }),
-                    o6(
+                    o8(
                         {
                             loadingContext: this.loadingContext,
                             path: o,
@@ -32838,7 +32838,7 @@ var yX = (function () {
 })();
 function y0(e) {
     var t = e.setComponentRef,
-        n = t8({});
+        n = t5({});
     l()(n.current).length || null == t || t(n.current);
     var r = tX(null),
         o = (0, q.Z)(r, 2),
@@ -32898,8 +32898,8 @@ function y2(e) {
     }
     return e;
 }
-var y8 = (function (e) {
-    (0, ea.Z)(r, tB);
+var y5 = (function (e) {
+    (0, ea.Z)(r, tT);
     var t,
         n =
             ((t = (function () {
@@ -33001,8 +33001,8 @@ var y8 = (function (e) {
         r
     );
 })();
-(0, w.Z)(y8, 'type', 'srPanel'),
-    (0, w.Z)(y8, 'defaultProps', {
+(0, w.Z)(y5, 'type', 'srPanel'),
+    (0, w.Z)(y5, 'defaultProps', {
         enabled: !0,
         node: 'body',
         showPanel: !1,
@@ -33013,8 +33013,8 @@ var y8 = (function (e) {
             'aria-atomic': 'true'
         }
     });
-var y4 = ['amount', 'shopperLocale', 'paymentMethods'];
-function y6(e, t) {
+var y9 = ['amount', 'shopperLocale', 'paymentMethods'];
+function y8(e, t) {
     var n = l()(e);
     if (d()) {
         var r = d()(e);
@@ -33026,18 +33026,18 @@ function y6(e, t) {
     }
     return n;
 }
-function y5(e) {
+function y4(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n,
             r,
             o = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? N()((n = y6(Object(o), !0))).call(n, function (t) {
+            ? N()((n = y8(Object(o), !0))).call(n, function (t) {
                   (0, w.Z)(e, t, o[t]);
               })
             : m()
               ? v()(e, m()(o))
-              : N()((r = y6(Object(o)))).call(r, function (t) {
+              : N()((r = y8(Object(o)))).call(r, function (t) {
                     b()(e, t, h()(o, t));
                 });
     }
@@ -33086,7 +33086,7 @@ var y3 = (function () {
                 );
             }),
             (0, w.Z)(this, 'setOptions', function (e) {
-                ng(null == e ? void 0 : e.paymentMethodsConfiguration, 'scheme') && console.warn('WARNING: You cannot define a property "scheme" on the paymentMethodsConfiguration object - it should be defined as "card" otherwise it will be ignored'), ng(e, 'installmentOptions') && console.warn("WARNING: you are setting installmentOptions directly in the top level configuration object. They should be set via the 'paymentMethodsConfiguration' object or directly on the 'card' component."), (c.options = y5(y5({}, c.options), e));
+                ng(null == e ? void 0 : e.paymentMethodsConfiguration, 'scheme') && console.warn('WARNING: You cannot define a property "scheme" on the paymentMethodsConfiguration object - it should be defined as "card" otherwise it will be ignored'), ng(e, 'installmentOptions') && console.warn("WARNING: you are setting installmentOptions directly in the top level configuration object. They should be set via the 'paymentMethodsConfiguration' object or directly on the 'card' component."), (c.options = y4(y4({}, c.options), e));
             }),
             (this.create = R()((n = this.create)).call(n, this)),
             (this.createFromAction = R()((r = this.createFromAction)).call(r, this)),
@@ -33141,11 +33141,11 @@ var y3 = (function () {
                                   var n = t.amount,
                                       r = t.shopperLocale,
                                       o = t.paymentMethods,
-                                      a = (0, k.Z)(t, y4);
+                                      a = (0, k.Z)(t, y9);
                                   return (
                                       e.setOptions(
-                                          y5(
-                                              y5({}, a),
+                                          y4(
+                                              y4({}, a),
                                               {},
                                               {
                                                   amount: e.options.order ? e.options.order.remainingAmount : n,
@@ -33161,7 +33161,7 @@ var y3 = (function () {
                               .catch(function (t) {
                                   return e.options.onError && e.options.onError(t), e;
                               }))
-                        : (this.createCoreModules(), this.createPaymentMethodsList(), T().resolve(this));
+                        : (this.createCoreModules(), this.createPaymentMethodsList(), B().resolve(this));
                 }
             },
             {
@@ -33201,10 +33201,10 @@ var y3 = (function () {
                         var n = yZ(e.type, this.options.paymentMethodsConfiguration);
                         return (function (e) {
                             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                                n = yT[e.type];
+                                n = yB[e.type];
                             if (n && 'function' == typeof n) return n(e, t);
                             throw Error('Invalid Action');
-                        })(e, y5(y5(y5({}, yz(this.options)), n), this.getPropsForComponent(t)));
+                        })(e, y4(y4(y4({}, yz(this.options)), n), this.getPropsForComponent(t)));
                     }
                     return this.handleCreateError();
                 }
@@ -33212,8 +33212,8 @@ var y3 = (function () {
             {
                 key: 'getPropsForComponent',
                 value: function (e) {
-                    return y5(
-                        y5(
+                    return y4(
+                        y4(
                             {
                                 paymentMethods: this.paymentMethodsResponse.paymentMethods,
                                 storedPaymentMethods: this.paymentMethodsResponse.storedPaymentMethods
@@ -33242,14 +33242,14 @@ var y3 = (function () {
                             r = 'dropin' !== t.type && !t.isDropin,
                             o = r && !t.supportedShopperInteractions ? D()((n = this.paymentMethodsResponse)).call(n, t.type) : {},
                             a = r ? yZ(t.type, this.options.paymentMethodsConfiguration, !!t.storedPaymentMethodId) : {},
-                            i = new e(y5(y5(y5(y5({}, yz(this.options)), o), a), t));
+                            i = new e(y4(y4(y4(y4({}, yz(this.options)), o), a), t));
                         return t.isDropin || this.components.push(i), i;
                     }
-                    if ('string' == typeof e && yk[e]) return 'dropin' === e && ng(t, 'paymentMethodsConfiguration') && console.warn("WARNING: You are setting a 'paymentMethodsConfiguration' object in the Dropin configuration options. This object will be ignored."), this.handleCreate(yk[e], y5({ type: e }, t));
-                    if ('string' == typeof e && this.paymentMethodsResponse.has(e)) return this.handleCreate(yk.redirect, y5({ type: e }, t));
+                    if ('string' == typeof e && yk[e]) return 'dropin' === e && ng(t, 'paymentMethodsConfiguration') && console.warn("WARNING: You are setting a 'paymentMethodsConfiguration' object in the Dropin configuration options. This object will be ignored."), this.handleCreate(yk[e], y4({ type: e }, t));
+                    if ('string' == typeof e && this.paymentMethodsResponse.has(e)) return this.handleCreate(yk.redirect, y4({ type: e }, t));
                     if ('object' === (0, _.Z)(e) && 'string' == typeof e.type) {
                         var s = yZ(e.type, this.options.paymentMethodsConfiguration, !!e.storedPaymentMethodId);
-                        return this.handleCreate(e.type, y5(y5(y5({}, e), t), s));
+                        return this.handleCreate(e.type, y4(y4(y4({}, e), t), s));
                     }
                     return this.handleCreateError(e);
                 }
@@ -33273,7 +33273,7 @@ var y3 = (function () {
                 value: function () {
                     this.modules ||
                         (this.modules = U()({
-                            risk: new nI(y5(y5({}, this.options), {}, { loadingContext: this.loadingContext })),
+                            risk: new nI(y4(y4({}, this.options), {}, { loadingContext: this.loadingContext })),
                             analytics: new yK({
                                 loadingContext: this.loadingContext,
                                 clientKey: this.options.clientKey,
@@ -33283,7 +33283,7 @@ var y3 = (function () {
                             }),
                             resources: new ns(this.cdnContext),
                             i18n: new tF(this.options.locale, this.options.translations),
-                            srPanel: new y8(this.options.srConfig)
+                            srPanel: new y5(this.options.srConfig)
                         }));
                 }
             }
@@ -33291,11 +33291,11 @@ var y3 = (function () {
         e
     );
 })();
-function y7(e) {
-    return y9.apply(this, arguments);
+function y6(e) {
+    return y7.apply(this, arguments);
 }
-function y9() {
-    return (y9 = (0, a.Z)(
+function y7() {
+    return (y7 = (0, a.Z)(
         s().mark(function e(t) {
             var n;
             return s().wrap(function (e) {

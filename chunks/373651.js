@@ -7,8 +7,8 @@ var o = n(481060),
     c = n(108843),
     l = n(947440),
     d = n(100527),
-    u = n(299206),
-    _ = n(916069),
+    _ = n(299206),
+    u = n(916069),
     s = n(895563),
     p = n(212205),
     b = n(478035),
@@ -25,8 +25,8 @@ var o = n(481060),
     S = n(218035),
     Z = n(775666),
     j = n(593589),
-    I = n(442754),
-    k = n(981631),
+    k = n(442754),
+    I = n(981631),
     w = n(388032);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -58,14 +58,14 @@ function T(e) {
         a = (0, O.Z)(t),
         c = (0, x.Z)(t),
         d = (0, s.l)(t),
-        _ = (0, s.P)(t),
+        u = (0, s.P)(t),
         h = (0, p.Z)(t),
         g = (0, b.Z)(t),
         C = (0, f.Z)(t),
         y = (0, P.ZP)(t),
         j = (0, S.Z)(t),
-        I = (0, v.Z)(t),
-        k = (0, u.Z)({
+        k = (0, v.Z)(t),
+        I = (0, _.Z)({
             id: t.id,
             label: w.NW.string(w.t.gFHI3t)
         }),
@@ -85,11 +85,11 @@ function T(e) {
             (0, i.jsxs)(o.kSQ, {
                 children: [y, L ? T : j]
             }),
-            (0, i.jsx)(o.kSQ, { children: I }),
+            (0, i.jsx)(o.kSQ, { children: k }),
             (0, i.jsx)(o.kSQ, { children: E }),
-            (0, i.jsx)(o.kSQ, { children: _ }),
+            (0, i.jsx)(o.kSQ, { children: u }),
             (0, i.jsx)(o.kSQ, { children: c }),
-            (0, i.jsx)(o.kSQ, { children: k })
+            (0, i.jsx)(o.kSQ, { children: I })
         ]
     });
 }
@@ -97,16 +97,16 @@ function L(e) {
     let { channel: t, guild: n, onSelect: a } = e,
         c = (0, O.Z)(t),
         d = (0, x.Z)(t),
-        _ = (0, s.l)(t),
+        u = (0, s.l)(t),
         p = (0, s.P)(t),
-        b = (0, I.Z)(t),
+        b = (0, k.Z)(t),
         f = (0, P.ZP)(t),
-        k = (0, v.Z)(t),
+        I = (0, v.Z)(t),
         E = (0, y.Z)(t, n),
         T = (0, h.Z)(t, n),
         L = (0, g.Z)(t, n),
         N = (0, C.Z)(t),
-        A = (0, u.Z)({
+        A = (0, _.Z)({
             id: t.id,
             label: w.NW.string(w.t.gFHI3t)
         }),
@@ -124,7 +124,7 @@ function L(e) {
             (0, i.jsxs)(
                 o.kSQ,
                 {
-                    children: [c, _]
+                    children: [c, u]
                 },
                 'mark-as-read-or-favorite'
             ),
@@ -145,7 +145,7 @@ function L(e) {
             (0, i.jsxs)(
                 o.kSQ,
                 {
-                    children: [k, T, L, N]
+                    children: [I, T, L, N]
                 },
                 'admin-actions'
             ),
@@ -158,9 +158,9 @@ function L(e) {
 let N = (0, c.Z)(
     (0, a.Z)(
         function (e) {
-            return (0, _.Z)() ? (0, i.jsx)(T, E({}, e)) : (0, i.jsx)(L, E({}, e));
+            return (0, u.Z)() ? (0, i.jsx)(T, E({}, e)) : (0, i.jsx)(L, E({}, e));
         },
-        { object: k.qAy.CONTEXT_MENU }
+        { object: I.qAy.CONTEXT_MENU }
     ),
     [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU]
 );

@@ -1,9 +1,9 @@
 n.d(t, {
     PH: () => R,
-    ZP: () => V,
+    ZP: () => F,
     sQ: () => A
 }),
-    n(47120);
+    n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -276,7 +276,7 @@ function B() {
         });
     });
 }
-class F extends (r = a.ZP.Store) {
+class V extends (r = a.ZP.Store) {
     initialize() {
         B(), this.waitFor(u.default, _.default, f.ZP, p.Z), this.syncWith([_.default], k);
     }
@@ -304,8 +304,8 @@ class F extends (r = a.ZP.Store) {
         return S(null != e ? e : g.ME).getVersion();
     }
 }
-E(F, 'displayName', 'SortedVoiceStateStore');
-let V = new F(l.Z, {
+E(V, 'displayName', 'SortedVoiceStateStore');
+let F = new V(l.Z, {
     CONNECTION_OPEN: w,
     OVERLAY_INITIALIZE: D,
     VOICE_CHANNEL_SELECT: M,

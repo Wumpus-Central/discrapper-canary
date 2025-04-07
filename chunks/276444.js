@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(47120);
+n.d(t, { Z: () => H }), n(388685);
 var r,
     i = n(275726),
     o = n(442837),
@@ -89,11 +89,11 @@ function G(e) {
 function B() {
     O = !0;
 }
-function F(e) {
+function V(e) {
     let { users: t, nextIndex: n } = e;
     (O = !1), (v = t), (I = n);
 }
-function V() {
+function F() {
     O = !1;
 }
 class Z extends (r = o.ZP.Store) {
@@ -151,8 +151,8 @@ let H = new Z(a.Z, {
     BILLING_REFERRAL_RESOLVE_SUCCESS: x,
     BILLING_REFERRAL_RESOLVE_FAIL: M,
     REFERRALS_FETCH_ELIGIBLE_USER_START: B,
-    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: F,
-    REFERRALS_FETCH_ELIGIBLE_USER_FAIL: V,
+    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: V,
+    REFERRALS_FETCH_ELIGIBLE_USER_FAIL: F,
     LOAD_MESSAGES_SUCCESS: j,
     MESSAGE_CREATE: k,
     LOAD_MESSAGES_AROUND_SUCCESS: j,

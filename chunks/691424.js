@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(47120);
+n.d(t, { Z: () => Y }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -85,7 +85,7 @@ function B(e, t) {
         e
     );
 }
-function F(e) {
+function V(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
@@ -106,7 +106,7 @@ function F(e) {
         }
     };
 }
-function V(e) {
+function F(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
@@ -382,8 +382,8 @@ function Y(e) {
     return B(U({}, W), {
         link: (0, w.Z)(e),
         devLink: (0, P.Z)(e),
-        emoji: F(e),
-        customEmoji: V(e),
+        emoji: V(e),
+        customEmoji: F(e),
         channelMention: (0, C.Z)(e),
         commandMention: (0, R.ZP)(e),
         attachmentLink: (0, A.Z)(e),

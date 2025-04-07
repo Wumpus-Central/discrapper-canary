@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(47120);
+n.d(t, { Z: () => W }), n(388685);
 var r = n(392711),
     i = n(126313),
     o = n(570140),
@@ -156,12 +156,12 @@ function B(e) {
         n = g.Z.getFeed(I);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
 }
-function F(e) {
+function V(e) {
     var t;
     let { connectionId: n, track: r } = e;
     null != n && (null == (t = u.Z.getAccount(n, b.ABu.SPOTIFY)) ? void 0 : t.showActivity) && R(n, r);
 }
-function V() {
+function F() {
     let { enabled: e } = p.iC.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });
     e &&
         M({
@@ -188,8 +188,8 @@ class H extends a.Z {
                 CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: k,
                 CONTENT_INVENTORY_MANUAL_REFRESH: G,
                 CONTENT_INVENTORY_INBOX_STALE: B,
-                SPOTIFY_NEW_TRACK: F,
-                GAME_PROFILE_OPEN: V,
+                SPOTIFY_NEW_TRACK: V,
+                GAME_PROFILE_OPEN: F,
                 OVERLAY_READY: Z
             });
     }

@@ -6,7 +6,7 @@ n.d(t, {
     ZJ: () => A,
     q: () => N
 }),
-    n(789020);
+    n(997841);
 var r = n(913527),
     i = n.n(r),
     o = n(442837),
@@ -120,8 +120,8 @@ function A(e, t) {
         E = _(h),
         y = p.Z.isMuted(e.id),
         I = (0, f.sK)(p.Z.getMuteConfig(e.id)),
-        { can_send_message: S } = i,
-        T = v(b({}, O(i, ['can_send_message'])), {
+        { can_send_message: S, parent_channel_type: T } = i,
+        N = v(b({}, O(i, ['can_send_message', 'parent_channel_type'])), {
             channel_id: e.id,
             guild_id: o,
             parent_id: a,
@@ -136,7 +136,7 @@ function A(e, t) {
             old_thread_muted_until: I,
             new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I
         });
-    u.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, T);
+    u.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, N);
 }
 let C = (e) => {
     var t, n;

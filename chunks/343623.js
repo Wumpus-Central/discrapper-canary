@@ -82,7 +82,7 @@ var c = r(105500),
         });
         return t.concat(i.reverse());
     },
-    E = function (t, e) {
+    C = function (t, e) {
         var r,
             a = t.blocks.find(function (t) {
                 return Array.isArray(t.children) && t.children.length > 0;
@@ -139,7 +139,7 @@ var c = r(105500),
                   })
               ));
     },
-    C = function (t) {
+    E = function (t) {
         var e = t.entityMap,
             r = {};
         return (
@@ -155,8 +155,8 @@ var c = r(105500),
     };
 t.exports = function (t) {
     Array.isArray(t.blocks) || y(!1);
-    var e = C(t),
-        r = E(t, e),
+    var e = E(t),
+        r = C(t, e),
         n = r.isEmpty() ? new c() : c.createEmpty(r.first().getKey());
     return new a({
         blockMap: r,

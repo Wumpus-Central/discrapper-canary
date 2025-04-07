@@ -89,10 +89,10 @@ function B(e) {
     let { countryCode: t } = e;
     i = t;
 }
-function F() {
+function V() {
     (i = null), (y = !0);
 }
-function V(e) {
+function F(e) {
     let { localizedPricingPromo: t } = e;
     a = u.U.createFromServer(t);
 }
@@ -184,8 +184,8 @@ let Y = new W(c.Z, {
     BILLING_SUBSCRIPTION_CANCEL_SUCCESS: U,
     BILLING_IP_COUNTRY_CODE_FETCH_START: G,
     BILLING_SET_IP_COUNTRY_CODE: B,
-    BILLING_IP_COUNTRY_CODE_FAILURE: F,
-    BILLING_SET_LOCALIZED_PRICING_PROMO: V,
+    BILLING_IP_COUNTRY_CODE_FAILURE: V,
+    BILLING_SET_LOCALIZED_PRICING_PROMO: F,
     BILLING_LOCALIZED_PRICING_PROMO_FAILURE: Z,
     LOGOUT: O,
     CONNECTION_OPEN: H

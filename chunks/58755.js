@@ -1,4 +1,4 @@
-n.d(t, { P: () => g }), n(47120), n(301563), n(26686);
+n.d(t, { P: () => g }), n(388685), n(35282), n(49124);
 var r = n(200651),
     a = n(192379),
     l = n(394900),
@@ -138,8 +138,8 @@ function g(e) {
 function v(e) {
     let { scale: t, setState: n, onClose: a } = e,
         { name: c, base: p, darkness: b, lightness: _, showColumnarPalettePreview: g, colorSpace: v, easingStrength: j = 1, useP3ColorSpace: C, steps: T = 26 } = t,
-        S = (0, x.XM)(t),
-        N = (0, x.W6)(S, c);
+        N = (0, x.XM)(t),
+        S = (0, x.W6)(N, c);
     return (0, r.jsxs)(d.hjN, {
         className: h.paletteSettings,
         children: [
@@ -157,7 +157,7 @@ function v(e) {
                     }),
                     (0, r.jsx)(d.P3F, {
                         onClick: function () {
-                            let e = Object.entries(S).reduce((e, t) => {
+                            let e = Object.entries(N).reduce((e, t) => {
                                 let [n, r] = t;
                                 return (
                                     (e[n] = {
@@ -305,11 +305,11 @@ function v(e) {
                         children: (0, r.jsx)('div', {
                             className: h.paletteOverrides,
                             'data-columnar': g,
-                            children: Object.entries(S).map((e, n) => {
+                            children: Object.entries(N).map((e, n) => {
                                 let [a, c] = e,
                                     u = (0, x.HI)(c),
                                     m = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',
-                                    h = N[a];
+                                    h = S[a];
                                 return (0, r.jsxs)(
                                     'div',
                                     {

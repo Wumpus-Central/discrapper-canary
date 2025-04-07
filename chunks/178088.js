@@ -1,7 +1,7 @@
-n.d(t, { k: () => S }), n(47120);
+n.d(t, { k: () => I }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(274312),
+    a = n(849057),
     l = n(442837),
     o = n(524437),
     s = n(481060),
@@ -17,18 +17,18 @@ var r = n(200651),
     b = n(932232),
     x = n(400445),
     y = n(153209),
-    v = n(956961),
-    E = n(903672),
+    E = n(956961),
+    v = n(903672),
     O = n(711165),
     N = n(946443),
     j = n(264233),
     C = n(981631),
-    I = n(388032);
-function S(e) {
-    let { onOpen: t, onClose: n, children: S, badgeState: T, popoutPosition: P, popoutAlign: A } = e,
+    S = n(388032);
+function I(e) {
+    let { onOpen: t, onClose: n, children: I, badgeState: T, popoutPosition: P, popoutAlign: A } = e,
         { analyticsLocations: w } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
-        [Z, k] = i.useState(!1),
-        [R, D] = (function () {
+        [Z, R] = i.useState(!1),
+        [k, D] = (function () {
             let { showForYouTab: e } = b.V.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
                 t = (0, l.e7)([g.Z], () => {
                     var e, t;
@@ -64,12 +64,12 @@ function S(e) {
                 showTutorial: !t && e === o.X.UNREADS,
                 setSeenTutorial: n
             };
-        })(R),
+        })(k),
         W = i.useCallback(() => {
-            k(!1), Z && (null == n || n());
+            R(!1), Z && (null == n || n());
         }, [n, Z]),
         U = i.useCallback(() => {
-            k(!Z), Z ? null == n || n() : null == t || t();
+            R(!Z), Z ? null == n || n() : null == t || t();
         }, [n, t, Z]);
     i.useEffect(() => (_.S.subscribe(C.CkL.TOGGLE_INBOX, U), () => void _.S.unsubscribe(C.CkL.TOGGLE_INBOX, U)), [U]);
     let { showReminders: F } = f.Z.useExperiment({ location: 'RecentsPopout' }),
@@ -77,7 +77,7 @@ function S(e) {
         H = (0, l.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && B && G,
         { enabled: V } = d.Z.useExperiment({ location: 'RecentsPopout' });
     i.useEffect(() => {
-        (((!F || (B && G)) && R === o.X.TODOS) || (R === o.X.BOOKMARKS && !(B || G))) && D(o.X.MENTIONS);
+        (((!F || (B && G)) && k === o.X.TODOS) || (k === o.X.BOOKMARKS && !(B || G))) && D(o.X.MENTIONS);
     });
     let z = i.useCallback(
         (e) => {
@@ -96,40 +96,40 @@ function S(e) {
             onRequestClose: W,
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
-                    'aria-label': I.NW.string(I.t.GSmTKC),
+                    'aria-label': S.NW.string(S.t.GSmTKC),
                     children:
-                        R === o.X.FOR_YOU
+                        k === o.X.FOR_YOU
                             ? (0, r.jsx)(y.Z, {
                                   setTab: D,
                                   badgeState: T,
                                   closePopout: W
                               })
-                            : R === o.X.MENTIONS
-                              ? (0, r.jsx)(E.Z, {
+                            : k === o.X.MENTIONS
+                              ? (0, r.jsx)(v.Z, {
                                     setTab: D,
                                     onJump: z,
                                     badgeState: T,
                                     closePopout: W
                                 })
-                              : V && R === o.X.GAME_INVITES
+                              : V && k === o.X.GAME_INVITES
                                 ? (0, r.jsx)(j.Z, {
                                       setTab: D,
                                       badgeState: T,
                                       closePopout: W
                                   })
-                                : F && R === o.X.TODOS
-                                  ? (0, r.jsx)(v.Z, {
+                                : F && k === o.X.TODOS
+                                  ? (0, r.jsx)(E.Z, {
                                         setTab: D,
                                         onJump: z,
                                         closePopout: W
                                     })
-                                  : B && G && R === o.X.BOOKMARKS
+                                  : B && G && k === o.X.BOOKMARKS
                                     ? (0, r.jsx)(x.Z, {
                                           setTab: D,
                                           badgeState: T,
                                           closePopout: W
                                       })
-                                    : R === o.X.SCHEDULED
+                                    : k === o.X.SCHEDULED
                                       ? (0, r.jsx)(O._, {
                                             setTab: D,
                                             closePopout: W
@@ -155,7 +155,7 @@ function S(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return S(U, n, e, H);
+                return I(U, n, e, H);
             }
         })
     });

@@ -4,8 +4,8 @@ n.d(t, {
     hC: () => H,
     jd: () => G
 }),
-    n(653041),
-    n(47120);
+    n(539854),
+    n(388685);
 var r,
     i,
     a = n(192379),
@@ -24,21 +24,21 @@ var r,
     b = n(601070),
     x = n(344185),
     y = n(569471),
-    v = n(723170),
-    E = n(675478),
+    E = n(723170),
+    v = n(675478),
     O = n(581883),
     N = n(131704),
     j = n(592125),
     C = n(984933),
-    I = n(731290),
-    S = n(430824),
+    S = n(731290),
+    I = n(430824),
     T = n(375954),
     P = n(496675),
     A = n(306680),
     w = n(771845),
     Z = n(9156),
-    k = n(70956),
-    R = n(823379),
+    R = n(70956),
+    k = n(823379),
     D = n(709054),
     L = n(981631),
     M = n(124368);
@@ -124,7 +124,7 @@ class V extends l.EventEmitter {
                 hasLoadedAnything: t
             });
         }
-        (0, R.vE)(e);
+        (0, k.vE)(e);
     }
     clearScrollToChannelIndex() {
         this.setState({ scrollToChannelIndex: null });
@@ -268,13 +268,13 @@ class V extends l.EventEmitter {
                     o = r[l],
                     s = !o.collapsed;
                 (i[t] = s),
-                    (0, E.BU)(
+                    (0, v.BU)(
                         n,
                         t,
                         (e) => {
                             e.collapsedInInbox = s;
                         },
-                        E.fy.FREQUENT_USER_ACTION
+                        v.fy.FREQUENT_USER_ACTION
                     ),
                     this.setState({
                         scrollToChannelIndex: l,
@@ -356,7 +356,7 @@ function K() {
         })(e),
         n = u()
             .uniq(t.map((e) => e.guildId))
-            .filter(R.lm);
+            .filter(k.lm);
     return (
         d.Z.dispatch({
             type: 'INBOX_OPEN',
@@ -380,7 +380,7 @@ function Y(e, t, n, r) {
     if (!i.isPrivate() && !P.Z.can(L.Plq.READ_MESSAGE_HISTORY, i)) return;
     let a = A.ZP.ackMessageId(r);
     if (null == a) {
-        let e = S.Z.getGuild(i.guild_id);
+        let e = I.Z.getGuild(i.guild_id);
         if (null == e || null == e.joinedAt) return;
         a = D.default.fromTimestamp(e.joinedAt.getTime());
     }
@@ -413,7 +413,7 @@ function Y(e, t, n, r) {
                 if (Date.now() - e > X) return 6;
             }
             if (r.isThread()) {
-                let e = (0, v.J)(r);
+                let e = (0, E.J)(r);
                 return e === M.iN.ALL_MESSAGES ? 4 : e === M.iN.NO_MESSAGES ? 7 : 5;
             }
             {
@@ -424,7 +424,7 @@ function Y(e, t, n, r) {
         })(n, r, o),
         order: 0
     };
-    i.isNSFW() && !I.Z.didAgree(i.guild_id)
+    i.isNSFW() && !S.Z.didAgree(i.guild_id)
         ? t.push(F(U({}, u), { type: 'nsfw' }))
         : i.isForumLikeChannel()
           ? t.push(F(U({}, u), { type: 'forum' }))
@@ -435,8 +435,8 @@ function Y(e, t, n, r) {
                 })
             );
 }
-let X = 2 * k.Z.Millis.DAY,
-    q = 10 * k.Z.Millis.DAY;
+let X = 2 * R.Z.Millis.DAY,
+    q = 10 * R.Z.Millis.DAY;
 function Q(e) {
     let [t, n] = a.useState(() => new V(K(), e)),
         [r, i] = a.useState(!1),
@@ -456,7 +456,7 @@ function Q(e) {
             if (null == o || o.channels.length > 0 || r) return;
             let t = Date.now(),
                 a = K();
-            0 === a.channels.length || t - l.current < 10 * k.Z.Millis.SECOND ? i(!0) : ((l.current = Date.now()), n(new V(a, e)));
+            0 === a.channels.length || t - l.current < 10 * R.Z.Millis.SECOND ? i(!0) : ((l.current = Date.now()), n(new V(a, e)));
         }, [o, r, e]);
     let c = a.useRef(t);
     return (

@@ -85,9 +85,9 @@ async function O(e) {
         k = c.Z.getStatus(b),
         j = c.Z.isMobileOnline(b),
         { party: U, assets: G, application_id: B } = null != M ? M : {},
-        F = null != B ? l.Z.getApplication(B) : null,
-        V = j ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
-        Z = k === p.Skl.ONLINE ? V : k;
+        V = null != B ? l.Z.getApplication(B) : null,
+        F = j ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
+        Z = k === p.Skl.ONLINE ? F : k;
     (y = await (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('94989'), n.e('41150'), n.e('82412'), n.e('2960'), n.e('78604')]).then(n.bind(n, 533835));
@@ -126,7 +126,7 @@ async function O(e) {
                     other_user_id: b,
                     application_id: null != (o = null == M ? void 0 : M.application_id) ? o : null,
                     application_name: null == M ? void 0 : M.name,
-                    sku_id: null != (a = null == F ? void 0 : F.primarySkuId) ? a : null,
+                    sku_id: null != (a = null == V ? void 0 : V.primarySkuId) ? a : null,
                     is_friend: u.Z.isFriend(b),
                     has_images: !!(null != (m = null == G ? void 0 : G.large_image) ? m : null == G ? void 0 : G.small_image),
                     party_max: null == U || null == (t = U.size) ? void 0 : t[1],

@@ -8,5 +8,5 @@ var r = n(200651),
 function c() {
     let e = (0, i.e7)([s.Z], () => s.Z.getLayers().includes(l.S9g.USER_SETTINGS)),
         t = (0, a.R)({ isSettingsOpen: e });
-    return e ? null : null != t ? (0, r.jsx)(o.ZP, { config: t }) : null;
+    return e ? null : null != t ? (0, r.jsx)(o.Z, { config: t }) : null;
 }

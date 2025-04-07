@@ -2,7 +2,7 @@ n.d(t, {
     K: () => F,
     P: () => B
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -21,21 +21,21 @@ var r = n(200651),
     b = n(213609),
     x = n(294218),
     y = n(373662),
-    v = n(695346),
-    E = n(496675),
+    E = n(695346),
+    v = n(496675),
     O = n(626135),
     N = n(585483),
     j = n(70956),
     C = n(324701),
-    I = n(575016),
-    S = n(768943),
+    S = n(575016),
+    I = n(768943),
     T = n(686478),
     P = n(664559),
     A = n(767893),
     w = n(206697),
     Z = n(74551),
-    k = n(981631),
-    R = n(388032),
+    R = n(981631),
+    k = n(388032),
     D = n(585693);
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -89,13 +89,13 @@ let W = {
 function U(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(f.VqE, {
-        'aria-label': R.NW.string(R.t['2pAkDA']),
+        'aria-label': k.NW.string(k.t['2pAkDA']),
         children: (0, r.jsxs)('div', {
             className: D.popoutContainer,
             children: [
                 (0, r.jsx)(g.h4, {
                     icon: f.plf,
-                    title: R.NW.string(R.t['2pAkDA'])
+                    title: k.NW.string(k.t['2pAkDA'])
                 }),
                 (0, r.jsx)(F, { closePopout: t })
             ]
@@ -111,7 +111,7 @@ function F(e) {
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
-                overdue_count: S.Z.getOverdueMessageReminderCount()
+                overdue_count: I.Z.getOverdueMessageReminderCount()
             }
         },
         {},
@@ -133,8 +133,8 @@ function B(e) {
         d = i.useCallback(() => {
             c(!s), s ? null == n || n() : null == t || t();
         }, [n, t, s]);
-    i.useEffect(() => (N.S.subscribe(k.CkL.TOGGLE_FOR_LATER, d), () => void N.S.unsubscribe(k.CkL.TOGGLE_FOR_LATER, d)), [d]);
-    let p = (0, m.e7)([S.Z], () => S.Z.hasOverdueReminder(), []);
+    i.useEffect(() => (N.S.subscribe(R.CkL.TOGGLE_FOR_LATER, d), () => void N.S.unsubscribe(R.CkL.TOGGLE_FOR_LATER, d)), [d]);
+    let p = (0, m.e7)([I.Z], () => I.Z.hasOverdueReminder(), []);
     return (0, r.jsx)(f.yRy, {
         animation: f.yRy.Animation.NONE,
         position: l,
@@ -223,13 +223,13 @@ function G(e) {
 }
 function H(e) {
     let { savedMessage: t, closePopout: n, throttledNow: a } = e,
-        o = (0, I.gr)(t),
+        o = (0, S.gr)(t),
         s = i.useCallback(
             async (e) => {
                 var r;
-                await (0, I.fC)(t, o),
+                await (0, S.fC)(t, o),
                     e.shiftKey || n(),
-                    O.default.track(k.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    O.default.track(R.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (r = t.message) ? void 0 : r.author.id,
@@ -239,7 +239,7 @@ function H(e) {
             },
             [n, t, o]
         ),
-        c = (0, m.e7)([E.Z], () => !!((null == o ? void 0 : o.type) === k.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || E.Z.can(k.Plq.VIEW_CHANNEL, o));
+        c = (0, m.e7)([v.Z], () => !!((null == o ? void 0 : o.type) === R.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || v.Z.can(R.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && c
         ? (0, r.jsxs)('div', {
               className: D.messageContainer,
@@ -247,7 +247,7 @@ function H(e) {
                   (0, r.jsx)(f.P3F, {
                       className: D.clickableMessageBackground,
                       onClick: s,
-                      'aria-label': R.NW.string(R.t['+TSRGB'])
+                      'aria-label': k.NW.string(k.t['+TSRGB'])
                   }),
                   null != t.saveData.dueAt
                       ? (0, r.jsx)(Z.Z, {
@@ -262,7 +262,7 @@ function H(e) {
                           message: t.message,
                           channel: o,
                           className: D.message,
-                          compact: v.jU.getSetting(),
+                          compact: E.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: W,
                           trackAnnouncementViews: !0
@@ -291,14 +291,14 @@ function H(e) {
                   (0, r.jsx)(f.X6q, {
                       variant: 'text-md/semibold',
                       color: 'header-secondary',
-                      children: null != t.saveData.dueAt ? R.NW.string(R.t['wuQm+v']) : R.NW.string(R.t.o572FR)
+                      children: null != t.saveData.dueAt ? k.NW.string(k.t['wuQm+v']) : k.NW.string(k.t.o572FR)
                   }),
                   (0, r.jsx)(y.ZP, {
                       className: D.hoverBar,
                       children: (0, r.jsx)(
                           y.sF,
                           {
-                              label: R.NW.string(R.t.SvXS1d),
+                              label: k.NW.string(k.t.SvXS1d),
                               icon: f.XHJ,
                               dangerous: !0,
                               onClick: () => (0, C.x)(t.saveData)
@@ -311,7 +311,7 @@ function H(e) {
 }
 function V(e) {
     let { savedMessageKey: t, closePopout: n, throttledNow: i } = e,
-        a = (0, m.e7)([S.Z], () => S.Z.getSavedMessage(t.channelId, t.messageId));
+        a = (0, m.e7)([I.Z], () => I.Z.getSavedMessage(t.channelId, t.messageId));
     return null == a
         ? null
         : (0, r.jsx)(H, {
@@ -328,7 +328,7 @@ function z(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: R.NW.string(R.t.yjGtdH),
+                          label: k.NW.string(k.t.yjGtdH),
                           icon: f.dz2,
                           onClick: () =>
                               (0, C.z)({
@@ -342,7 +342,7 @@ function z(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: R.NW.string(R.t.vrbqs7),
+                          label: k.NW.string(k.t.vrbqs7),
                           icon: f.vdY,
                           onClick: (e) =>
                               (0, h.jW)(e, async () => {
@@ -351,7 +351,7 @@ function z(e) {
                                       (0, r.jsx)(
                                           e,
                                           M(L({}, n), {
-                                              label: R.NW.string(R.t.roMu1N),
+                                              label: k.NW.string(k.t.roMu1N),
                                               message: t.message
                                           })
                                       );
@@ -363,7 +363,7 @@ function z(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: R.NW.string(R.t['+TSRGB']),
+                          label: k.NW.string(k.t['+TSRGB']),
                           icon: f.d4D,
                           onClick: (e) => i(e)
                       },
@@ -372,7 +372,7 @@ function z(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: R.NW.string(R.t.SvXS1d),
+                          label: k.NW.string(k.t.SvXS1d),
                           icon: f.plf,
                           onClick: () => (0, C.x)(t.saveData)
                       },
@@ -385,7 +385,7 @@ function z(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: R.NW.string(R.t.mJ3P0N),
+                          label: k.NW.string(k.t.mJ3P0N),
                           icon: f.T39,
                           onClick: (e) =>
                               (0, h.jW)(e, async () => {
@@ -394,7 +394,7 @@ function z(e) {
                                       (0, r.jsx)(
                                           e,
                                           M(L({}, n), {
-                                              label: R.NW.string(R.t.mJ3P0N),
+                                              label: k.NW.string(k.t.mJ3P0N),
                                               message: t.message
                                           })
                                       );
@@ -405,7 +405,7 @@ function z(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: R.NW.string(R.t['+TSRGB']),
+                          label: k.NW.string(k.t['+TSRGB']),
                           icon: f.d4D,
                           onClick: (e) => i(e)
                       },
@@ -414,7 +414,7 @@ function z(e) {
                   (0, r.jsx)(
                       y.sF,
                       {
-                          label: R.NW.string(R.t.SvXS1d),
+                          label: k.NW.string(k.t.SvXS1d),
                           icon: f.plf,
                           onClick: () => (0, C.x)(t.saveData)
                       },

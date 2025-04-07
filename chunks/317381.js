@@ -3,10 +3,10 @@ n.d(t, {
     ZP: () => eD,
     i6: () => L
 }),
-    n(47120),
-    n(789020),
-    n(653041),
-    n(51350);
+    n(388685),
+    n(997841),
+    n(539854),
+    n(825670);
 var i,
     o = n(252258),
     a = n(442837),
@@ -97,11 +97,11 @@ let D = {
     U = new Map(),
     G = new Map(),
     B = new Map(),
-    F = 'contextless-faux-channel-id';
-function V(e, t) {
+    V = 'contextless-faux-channel-id';
+function F(e, t) {
     var n, r;
     let i = e;
-    return (i = (0, m.yE)(null != (r = null == (n = u.Z.getApplication(t)) ? void 0 : n.flags) ? r : 0, A.udG.CONTEXTLESS_ACTIVITY) && (0, b.sq)() ? F : i), ''.concat(t, ':').concat(i);
+    return (i = (0, m.yE)(null != (r = null == (n = u.Z.getApplication(t)) ? void 0 : n.flags) ? r : 0, A.udG.CONTEXTLESS_ACTIVITY) && (0, b.sq)() ? V : i), ''.concat(t, ':').concat(i);
 }
 let Z = new Map(),
     H = new Map(),
@@ -134,7 +134,7 @@ function en(e) {
         A = null == (t = p.find((e) => e.userId === T)) ? void 0 : t.sessionId,
         C = p.some((e) => (0, v.J)(e)),
         P = k.get(u),
-        w = Z.get(V(null != m ? m : null, u)),
+        w = Z.get(F(null != m ? m : null, u)),
         D = null == w ? void 0 : w.launchParams,
         x = {
             applicationId: u,
@@ -170,8 +170,8 @@ function en(e) {
               channelId: null != m ? m : null,
               applicationId: u
           }));
-    let F = b.filter((e) => e.applicationId !== u);
-    S.length > 0 && F.push(x), B.set(c.id, F);
+    let V = b.filter((e) => e.applicationId !== u);
+    S.length > 0 && V.push(x), B.set(c.id, V);
     let H = (0, O.wq)(c);
     if (null != H) {
         let e = (null != (a = G.get(H)) ? a : []).filter((e) => e.location.id !== c.id);
@@ -370,7 +370,7 @@ let eE = () => {
 };
 function eb(e) {
     let { applicationId: t, componentId: n, commandOrigin: r, launchParams: i, channelId: o, inviterUserId: a } = e;
-    Z.set(V(o, t), {
+    Z.set(F(o, t), {
         isLaunching: !0,
         componentId: n,
         inviterUserId: a,
@@ -391,7 +391,7 @@ function ev(e) {
 }
 function eO(e) {
     let { applicationId: t, channelId: n } = e;
-    Z.delete(V(n, t));
+    Z.delete(F(n, t));
 }
 function eI(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: r, gridLockState: i } = e;
@@ -539,7 +539,7 @@ class eP extends (i = a.ZP.PersistedStore) {
         return D.everLaunchedActivities.has(e);
     }
     getLaunchState(e, t) {
-        if (null != e) return Z.get(V(null != t ? t : null, e));
+        if (null != e) return Z.get(F(null != t ? t : null, e));
     }
     getLaunchStates() {
         return Z;

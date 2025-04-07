@@ -2,7 +2,7 @@ n.d(t, {
     default: () => N,
     k: () => O
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(311570),
@@ -21,8 +21,8 @@ var r = n(200651),
     b = n(981631),
     x = n(388032),
     y = n(668275),
-    v = n(99713);
-function E(e) {
+    E = n(99713);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ let O = (e, t) => {
         (0, o.ZDy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 447564));
-                return (n) => (0, r.jsx)(t, E({ channel: e }, n));
+                return (n) => (0, r.jsx)(t, v({ channel: e }, n));
             },
             { modalKey: j }
         );
@@ -71,15 +71,15 @@ function C(e) {
         n = (0, m.T$)(t),
         [l, u] = (0, i.useState)(!1),
         { price: h, fetchingPrice: g, error: _ } = (0, m.R2)(f.FX),
-        { entitlement: x, fetchedEntitlement: y, error: v } = (0, m.t6)(f.FX),
-        E = _ || v,
+        { entitlement: x, fetchedEntitlement: y, error: E } = (0, m.t6)(f.FX),
+        v = _ || E,
         { analyticsLocations: O } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
         N = null != x && !x.consumed;
     (0, i.useEffect)(
         () => () => {
-            E && (0, p.SN)(f.FX);
+            v && (0, p.SN)(f.FX);
         },
-        [x, t, l, E]
+        [x, t, l, v]
     );
     let j = (0, i.useCallback)(() => {
             (0, p.Zu)(t.id), (0, o.pTH)();
@@ -92,9 +92,9 @@ function C(e) {
                 variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
             });
         }, [O, j]),
-        S = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == x ? void 0 : x.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!N) : 3), [t.isHDStreamSplashed, n, null == x ? void 0 : x.type, N]),
-        T = (0, i.useMemo)(() => S(), [S]);
-    return (0, r.jsx)(I, {
+        I = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == x ? void 0 : x.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!N) : 3), [t.isHDStreamSplashed, n, null == x ? void 0 : x.type, N]),
+        T = (0, i.useMemo)(() => I(), [I]);
+    return (0, r.jsx)(S, {
         channel: t,
         buttonState: T,
         price: h,
@@ -104,7 +104,7 @@ function C(e) {
         loading: g || !y
     });
 }
-let I = (e) => {
+let S = (e) => {
         let { channel: t, buttonState: n, price: i, onActionClick: a, loading: l } = e;
         return l
             ? (0, r.jsx)(Z, {})
@@ -114,7 +114,7 @@ let I = (e) => {
                     children: [
                         (0, r.jsxs)('div', {
                             className: y.modal,
-                            children: [(0, r.jsx)(S, {}), (0, r.jsx)(T, { channel: t })]
+                            children: [(0, r.jsx)(I, {}), (0, r.jsx)(T, { channel: t })]
                         }),
                         (0, r.jsx)(P, {
                             buttonState: n,
@@ -124,7 +124,7 @@ let I = (e) => {
                     ]
                 });
     },
-    S = () =>
+    I = () =>
         (0, r.jsx)('img', {
             className: y.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
@@ -212,7 +212,7 @@ let I = (e) => {
                     var t, n;
                     return (0, r.jsx)(
                         o.zxk,
-                        ((t = E({}, e)),
+                        ((t = v({}, e)),
                         (n = n =
                             {
                                 disabled: !0,
@@ -261,7 +261,7 @@ let I = (e) => {
                 className: y.error,
                 children: [
                     (0, r.jsx)(o.Eep, {
-                        src: v,
+                        src: E,
                         width: 178,
                         height: 190
                     }),

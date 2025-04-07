@@ -2,8 +2,8 @@ n.d(t, {
     Z: () => L,
     u: () => M
 }),
-    n(47120),
-    n(266796);
+    n(388685),
+    n(953529);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -29,8 +29,8 @@ var i = n(200651),
     P = n(29380),
     E = n(783685),
     A = n(981631),
-    O = n(388032),
-    I = n(449549),
+    I = n(388032),
+    O = n(449549),
     S = n(73433);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,15 +75,15 @@ function L(e) {
         (0, i.jsxs)('div', {
             className: a()(
                 {
-                    [I.experimentLayout]: b.enabled,
-                    [I.altLayout]: b.altLayout
+                    [O.experimentLayout]: b.enabled,
+                    [O.altLayout]: b.altLayout
                 },
-                I.container
+                O.container
             ),
             children: [
                 b.enabled
                     ? (0, i.jsxs)('div', {
-                          className: I.experimentTitleContainer,
+                          className: O.experimentTitleContainer,
                           children: [(0, i.jsx)(w, { application: n }), (0, i.jsx)(R, { application: n })]
                       })
                     : null,
@@ -91,11 +91,11 @@ function L(e) {
                     children: [
                         h
                             ? (0, i.jsxs)('div', {
-                                  className: I.videoContainer,
+                                  className: O.videoContainer,
                                   children: [
                                       x
                                           ? (0, i.jsx)(C.Z, {
-                                                className: a()(I.videoCover, I.video),
+                                                className: a()(O.videoCover, O.video),
                                                 loop: !0,
                                                 muted: !0,
                                                 autoPlay: !0,
@@ -104,25 +104,25 @@ function L(e) {
                                             })
                                           : null,
                                       (0, i.jsx)('img', {
-                                          className: I.videoCover,
+                                          className: O.videoCover,
                                           src: c,
-                                          'aria-label': O.NW.string(O.t.X4IxWF)
+                                          'aria-label': I.NW.string(I.t.X4IxWF)
                                       })
                                   ]
                               })
                             : null,
                         (0, i.jsxs)('div', {
-                            className: h ? I.overviewContainerWithVideo : I.overviewContainerNoVideo,
+                            className: h ? O.overviewContainerWithVideo : O.overviewContainerNoVideo,
                             children: [
                                 b.enabled ? null : (0, i.jsx)(w, { application: n }),
                                 (0, i.jsx)(k, { application: n }),
                                 m.length > 0 ? (0, i.jsx)(D, { description: m }) : null,
                                 f
                                     ? (0, i.jsx)('div', {
-                                          className: I.developerShelfControlsContainer,
+                                          className: O.developerShelfControlsContainer,
                                           children: (0, i.jsx)(p.W, {
                                               hideSearch: !0,
-                                              className: I.developerShelfControls
+                                              className: O.developerShelfControls
                                           })
                                       })
                                     : null,
@@ -150,11 +150,11 @@ function R(e) {
         r = (0, N.Hu)(t);
     return n || r
         ? (0, i.jsxs)('div', {
-              className: I.monetizationDisclosureContainerStyle,
+              className: O.monetizationDisclosureContainerStyle,
               children: [
                   n
                       ? (0, i.jsxs)('div', {
-                            className: I.monetizationDisclosureStyle,
+                            className: O.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(s.EOn, {
                                     size: 'sm',
@@ -163,14 +163,14 @@ function R(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: O.NW.string(O.t['8z5B2d'])
+                                    children: I.NW.string(I.t['8z5B2d'])
                                 })
                             ]
                         })
                       : null,
                   r
                       ? (0, i.jsxs)('div', {
-                            className: I.monetizationDisclosureStyle,
+                            className: O.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(s.uMN, {
                                     size: 'sm',
@@ -179,7 +179,7 @@ function R(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: O.NW.string(O.t['5khEk5'])
+                                    children: I.NW.string(I.t['5khEk5'])
                                 })
                             ]
                         })
@@ -194,7 +194,7 @@ function w(e) {
         r = (0, N.BQ)(n) ? n.name : null != (t = (0, N.$d)(n)) ? t : '',
         l = (0, N.vJ)(n);
     return (0, i.jsxs)('div', {
-        className: I.titleContainer,
+        className: O.titleContainer,
         children: [
             (0, i.jsx)(s.X6q, {
                 variant: 'heading-xl/extrabold',
@@ -203,11 +203,11 @@ function w(e) {
             }),
             l
                 ? (0, i.jsx)('div', {
-                      className: I.partnerLabelContainer,
+                      className: O.partnerLabelContainer,
                       children: (0, i.jsx)(s.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: O.NW.string(O.t.LO4f0N)
+                          children: I.NW.string(I.t.LO4f0N)
                       })
                   })
                 : null
@@ -222,14 +222,14 @@ function k(e) {
         }, [t]);
     return (0, N.ye)(t)
         ? (0, i.jsxs)('div', {
-              className: I.tagsContainer,
+              className: O.tagsContainer,
               children: [
                   (0, i.jsx)(Z, { application: t }),
                   n.map((e, t) =>
                       (0, i.jsx)(
                           'div',
                           {
-                              className: I.tagContainer,
+                              className: O.tagContainer,
                               children: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
@@ -249,7 +249,7 @@ function Z(e) {
     if (!(0, N.ye)(n)) return null;
     let r = null != (t = (0, N.BQ)(n) ? (n instanceof x.ZP ? n.maxParticipants : n.max_participants) : 0) ? t : 0;
     return (0, i.jsxs)('div', {
-        className: I.tagContainer,
+        className: O.tagContainer,
         children: [
             (0, i.jsx)(s.BFJ, {
                 size: 'xs',
@@ -299,14 +299,14 @@ function M(e) {
         ? (0, i.jsxs)('div', {
               className: a()(
                   {
-                      [I.experimentLayout]: L.enabled,
-                      [I.altLayout]: L.altLayout
+                      [O.experimentLayout]: L.enabled,
+                      [O.altLayout]: L.altLayout
                   },
-                  I.entrypointContainer
+                  O.entrypointContainer
               ),
               children: [
                   (0, i.jsx)('div', {
-                      className: I.entryPointContainerFlexChild,
+                      className: O.entryPointContainerFlexChild,
                       children: (0, i.jsx)(P.Z, {
                           context: n,
                           application: l,
@@ -319,20 +319,20 @@ function M(e) {
                   x && null != _
                       ? L.altLayout
                           ? (0, i.jsx)('div', {
-                                className: I.altLayout,
+                                className: O.altLayout,
                                 children: (0, i.jsx)('div', {
-                                    className: I.entryPointContainerFlexChild,
+                                    className: O.entryPointContainerFlexChild,
                                     children: (0, i.jsx)(s.XZJ, {
-                                        className: I.entryPointCheckbox,
+                                        className: O.entryPointCheckbox,
                                         value: j,
                                         onChange: () => S(!j),
                                         children: (0, i.jsxs)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            className: I.entryPointCheckboxLabel,
+                                            className: O.entryPointCheckboxLabel,
                                             children: [
-                                                O.NW.string(O.t['e+CzPj']),
+                                                I.NW.string(I.t['e+CzPj']),
                                                 (0, i.jsx)(s.ua7, {
-                                                    text: O.NW.string(O.t.QOZI8f),
+                                                    text: I.NW.string(I.t.QOZI8f),
                                                     children: (e) => {
                                                         var t, n;
                                                         return (0, i.jsx)(
@@ -361,7 +361,7 @@ function M(e) {
                                 })
                             })
                           : (0, i.jsx)('div', {
-                                className: I.entryPointContainerFlexChild,
+                                className: O.entryPointContainerFlexChild,
                                 children: (0, i.jsx)(E.Z, {
                                     botUserId: _,
                                     applicationId: l.id,
@@ -374,9 +374,9 @@ function M(e) {
           })
         : d && !u && (0, N.ye)(l)
           ? (0, i.jsx)(s.Wn, {
-                className: I.primaryEntryPointWarningMessage,
+                className: O.primaryEntryPointWarningMessage,
                 messageType: s.QYI.WARNING,
-                children: O.NW.format(O.t['s/3hjI'], {})
+                children: I.NW.format(I.t['s/3hjI'], {})
             })
           : null;
 }
@@ -420,11 +420,11 @@ function D(e) {
         { ref: m, isTransitioning: f, onTransitionEnd: h } = (0, j.Z)(T({ isExpanded: l }, p)),
         b = l || f;
     return (0, i.jsxs)('div', {
-        className: I.descriptionContainer,
+        className: O.descriptionContainer,
         children: [
             (0, i.jsx)('div', {
                 ref: m,
-                className: I.overflowHidden,
+                className: O.overflowHidden,
                 onTransitionEnd: h,
                 children: (0, i.jsx)(s.Text, {
                     ref: c,
@@ -437,13 +437,13 @@ function D(e) {
             }),
             null != d && d > 1 && !n.enabled
                 ? (0, i.jsxs)(s.P3F, {
-                      className: I.expandableDescriptionClickable,
+                      className: O.expandableDescriptionClickable,
                       onClick: () => a((e) => !e),
                       children: [
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: b ? O.NW.string(O.t.u4YJ8v) : O.NW.string(O.t['N/tajI'])
+                              children: b ? I.NW.string(I.t.u4YJ8v) : I.NW.string(I.t['N/tajI'])
                           }),
                           b
                               ? (0, i.jsx)(s.u04, {

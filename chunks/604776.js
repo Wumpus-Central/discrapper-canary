@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -108,14 +108,14 @@ let g = (e) => {
             value: o.a.PREMIUM_TIER_2_3_DAY
         }
     ];
-function S() {
+function N() {
     let [e, t] = a.useState(!1),
         [n, l] = a.useState(!1),
         [s, d] = a.useState(o.a.PREMIUM_TIER_2_1_HOUR),
         [m, p] = a.useState([]),
-        [S, N] = a.useState([]),
-        [O, k] = a.useState([]),
-        E = async (e) => {
+        [N, S] = a.useState([]),
+        [O, E] = a.useState([]),
+        k = async (e) => {
             await j(e), await I();
         },
         w = async (e) => {
@@ -140,7 +140,7 @@ function S() {
             I();
         }, []),
         a.useEffect(() => {
-            N(Z(m)), k(R(m));
+            S(Z(m)), E(R(m));
         }, [m]),
         (0, r.jsx)(c.zJl, {
             className: f.panel,
@@ -206,7 +206,7 @@ function S() {
                             }),
                             (0, r.jsx)(c.zxk, {
                                 size: c.zxk.Sizes.MEDIUM,
-                                onClick: () => E(s),
+                                onClick: () => k(s),
                                 children: 'Grant Fractional Nitro'
                             })
                         ]
@@ -259,7 +259,7 @@ function S() {
                                     })
                                 ]
                             }),
-                            S.length > 0 &&
+                            N.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     children: [
                                         (0, r.jsx)(c.Text, {
@@ -268,7 +268,7 @@ function S() {
                                             children: 'Active premium'
                                         }),
                                         (0, r.jsx)('div', {
-                                            children: S.map((e) =>
+                                            children: N.map((e) =>
                                                 (0, r.jsx)(
                                                     g,
                                                     {

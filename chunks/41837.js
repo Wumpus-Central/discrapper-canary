@@ -1,9 +1,9 @@
 n.d(t, {
-    M: () => l,
-    o: () => s
+    M: () => r,
+    o: () => l
 });
-var r = n(212819);
-let l = Array.from([r.h8.USER, r.h8.TEXT_CHANNEL, r.h8.VOICE_CHANNEL, r.h8.GROUP_DM]);
-function s(e) {
-    return l.includes(e.type);
+var a = n(212819);
+let r = Array.from([a.h8.USER, a.h8.TEXT_CHANNEL, a.h8.VOICE_CHANNEL, a.h8.GROUP_DM]);
+function l(e) {
+    return r.includes(e.type);
 }

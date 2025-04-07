@@ -1,8 +1,8 @@
 n.d(t, {
-    X: () => h,
+    X: () => g,
     Z: () => f
 }),
-    n(266796);
+    n(953529);
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -14,7 +14,7 @@ var i = n(481060),
     u = n(230224),
     d = n(388032),
     p = n(807048);
-function g(e) {
+function h(e) {
     var t;
     let { guildScheduledEvent: n, channel: o, onAcceptInvite: a, isSubmitting: c } = e;
     return (0, r.jsxs)('div', {
@@ -47,7 +47,7 @@ function g(e) {
         ]
     });
 }
-function h(e) {
+function g(e) {
     var t;
     let { invite: n } = e,
         l = null != n.guild ? new c.ZP(n.guild) : null;
@@ -111,7 +111,7 @@ function f(e) {
     let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: o } = e,
         { guild_scheduled_event: a } = t;
     return null != a
-        ? (0, r.jsx)(g, {
+        ? (0, r.jsx)(h, {
               guildScheduledEvent: a,
               channel: n,
               isSubmitting: i,

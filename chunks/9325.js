@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(266796);
+n.d(t, { Z: () => N }), n(953529);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -9,15 +9,15 @@ var r = n(200651),
     u = n(306453),
     d = n(108427),
     p = n(314897),
-    g = n(626135),
-    h = n(587444),
+    h = n(626135),
+    g = n(587444),
     f = n(981631),
     m = n(260539),
     _ = n(388032),
     b = n(20493);
 function x(e, t, n) {
     e.preventDefault(),
-        g.default.track(f.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        h.default.track(f.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -49,7 +49,7 @@ function N(e) {
                     })
                 ]
             })
-          : (0, r.jsx)(h.Z, {
+          : (0, r.jsx)(g.Z, {
                 text: _.NW.string(_.t['e/rZ2t']),
                 buttonCta: _.NW.string(_.t.HAvYn5),
                 onClick: (e) => x(e, t, n)

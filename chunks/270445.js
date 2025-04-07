@@ -4,7 +4,7 @@ n.d(t, {
     F3: () => ey,
     UE: () => tk,
     _7: () => eL,
-    mH: () => tV,
+    mH: () => tF,
     vt: () => eW
 });
 var r = n(653603),
@@ -79,8 +79,8 @@ var y = new WeakMap(),
     U = new WeakMap(),
     G = new WeakMap(),
     B = new WeakMap(),
-    F = Symbol('placeholder'),
-    V = Symbol('mark-placeholder'),
+    V = Symbol('placeholder'),
+    F = Symbol('mark-placeholder'),
     Z = globalThis.Text,
     H = (e) => (e && e.ownerDocument && e.ownerDocument.defaultView) || null,
     W = (e) => K(e) && 8 === e.nodeType,
@@ -463,7 +463,7 @@ var y = new WeakMap(),
     eS = (e, t) => {
         var n = g(e, ev),
             r = g(t, eO);
-        return e[F] === t[F] && eI(n, r);
+        return e[V] === t[V] && eI(n, r);
     },
     eT = (e, t) => {
         if (e.length !== t.length) return !1;
@@ -489,7 +489,7 @@ var y = new WeakMap(),
             o = eL(),
             a = ey.findPath(o, i),
             s = d.y$.parent(a),
-            l = !0 === n[V];
+            l = !0 === n[F];
         return o.isVoid(r)
             ? c.createElement(ew, { length: d.NB.string(r).length })
             : '' !== n.text || r.children[r.children.length - 1] !== i || o.isInline(r) || '' !== d.ML.string(o, s)
@@ -587,7 +587,7 @@ var y = new WeakMap(),
             parent: i,
             text: r
         });
-        if (t[F]) {
+        if (t[V]) {
             var p = {
                 children: t.placeholder,
                 attributes: {
@@ -615,7 +615,7 @@ var y = new WeakMap(),
             text: r
         });
     },
-    eM = c.memo(ex, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && d.xv.equals(t.leaf, e.leaf) && t.leaf[F] === e.leaf[F]),
+    eM = c.memo(ex, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && d.xv.equals(t.leaf, e.leaf) && t.leaf[V] === e.leaf[V]),
     ek = (e) => {
         var { attributes: t, children: n } = e;
         return c.createElement('span', Object.assign({}, t), n);
@@ -653,7 +653,7 @@ var y = new WeakMap(),
     },
     eU = c.memo(ej, (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && eN(t.decorations, e.decorations)),
     eG = (e) => {
-        var { decorations: t, element: n, renderElement: r = (e) => c.createElement(eF, Object.assign({}, e)), renderPlaceholder: o, renderLeaf: a, selection: s } = e,
+        var { decorations: t, element: n, renderElement: r = (e) => c.createElement(eV, Object.assign({}, e)), renderPlaceholder: o, renderLeaf: a, selection: s } = e,
             l = eL(),
             u = ez(),
             f = l.isInline(n),
@@ -716,13 +716,13 @@ var y = new WeakMap(),
         });
     },
     eB = c.memo(eG, (e, t) => e.element === t.element && e.renderElement === t.renderElement && e.renderLeaf === t.renderLeaf && e.renderPlaceholder === t.renderPlaceholder && eT(e.decorations, t.decorations) && (e.selection === t.selection || (!!e.selection && !!t.selection && d.e6.equals(e.selection, t.selection)))),
-    eF = (e) => {
+    eV = (e) => {
         var { attributes: t, children: n, element: r } = e,
             i = eL().isInline(r) ? 'span' : 'div';
         return c.createElement(i, Object.assign({}, t, { style: { position: 'relative' } }), n);
     },
-    eV = (0, c.createContext)(() => []),
-    eZ = () => (0, c.useContext)(eV),
+    eF = (0, c.createContext)(() => []),
+    eZ = () => (0, c.useContext)(eF),
     eH = (0, c.createContext)(!1),
     eW = () => (0, c.useContext)(eH),
     eY = (e) => {
@@ -888,7 +888,7 @@ var y = new WeakMap(),
         characterData: !0,
         characterDataOldValue: !0
     };
-class e6 extends c.Component {
+class e5 extends c.Component {
     constructor() {
         super(...arguments), (this.context = null), (this.manager = null), (this.mutationObserver = null);
     }
@@ -923,14 +923,14 @@ class e6 extends c.Component {
         return this.props.children;
     }
 }
-e6.contextType = eD;
-var e5 = el
-    ? e6
+e5.contextType = eD;
+var e6 = el
+    ? e5
     : (e) => {
           var { children: t } = e;
           return c.createElement(c.Fragment, null, t);
       };
-function e7(e, t) {
+function e8(e, t) {
     var { path: n, diff: r } = t;
     if (!d.ML.hasPath(e, n)) return !1;
     var i = d.NB.get(e, n);
@@ -941,7 +941,7 @@ function e7(e, t) {
     var a = d.NB.get(e, o);
     return d.xv.isText(a) && a.text.startsWith(r.text);
 }
-function e8(e) {
+function e7(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return n.reduce((e, t) => e.slice(0, t.start) + t.text + e.slice(t.end), e);
 }
@@ -969,7 +969,7 @@ function tt(e, t) {
 function tn(e, t, n) {
     var r = Math.min(t.start, n.start),
         i = Math.max(0, Math.min(t.start + t.text.length, n.end) - n.start),
-        o = e8(e, t, n),
+        o = e7(e, t, n),
         a = Math.max(n.start + n.text.length, t.start + t.text.length + (t.start + t.text.length > n.start ? n.text.length : 0) - i),
         s = o.slice(r, a);
     return tt(e, {
@@ -1263,7 +1263,7 @@ function th(e) {
                                   return t !== l.id;
                               })
                     ),
-                    e7(t, l) || ((o = !1), U.delete(t), k.delete(t), (i = 'action'), G.delete(t), n.cancel(), r.cancel(), null == e || e.unref());
+                    e8(t, l) || ((o = !1), U.delete(t), k.delete(t), (i = 'action'), G.delete(t), n.cancel(), r.cancel(), null == e || e.unref());
             }
             var g = null == e ? void 0 : e.unref();
             if ((!g || G.get(t) || (t.selection && d.e6.equals(g, t.selection)) || d.YR.select(t, g), b())) return void f();
@@ -1375,7 +1375,7 @@ function th(e) {
                         I = j.get(t),
                         S = null == I ? void 0 : I.find((e) => d.y$.equals(e.path, y)),
                         T = S ? [S.diff, v] : [v];
-                    if ((0 === e8(b.text, ...T).length && (l = !1), d.e6.isExpanded(r))) {
+                    if ((0 === e7(b.text, ...T).length && (l = !1), d.e6.isExpanded(r))) {
                         if (l && d.y$.equals(r.anchor.path, r.focus.path)) {
                             var A = {
                                 path: r.anchor.path,
@@ -1898,7 +1898,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eY(e)),
         if (f && 1 === C.children.length && 1 === Array.from(d.NB.texts(C)).length && '' === d.NB.string(C) && !L) {
             var en = d.ML.start(C, []);
             et.push({
-                [F]: !0,
+                [V]: !0,
                 placeholder: f,
                 anchor: en,
                 focus: en
@@ -1914,7 +1914,7 @@ var tC = (e) => c.createElement(c.Fragment, null, eY(e)),
                 var ed = Object.fromEntries(Object.keys(es).map((e) => [e, null]));
                 et.push(
                     tA(
-                        tA(tA({ [V]: !0 }, ed), er),
+                        tA(tA({ [F]: !0 }, ed), er),
                         {},
                         {
                             anchor: ei,
@@ -1940,10 +1940,10 @@ var tC = (e) => c.createElement(c.Fragment, null, eY(e)),
             eK.Provider,
             { value: _ },
             c.createElement(
-                eV.Provider,
+                eF.Provider,
                 { value: s },
                 c.createElement(
-                    e5,
+                    e6,
                     {
                         node: j,
                         receivedUserInput: Z
@@ -2382,10 +2382,10 @@ function tB(e) {
         onChange: r
     };
 }
-var tF = ['editor', 'children', 'onChange', 'value'],
-    tV = (e) => {
+var tV = ['editor', 'children', 'onChange', 'value'],
+    tF = (e) => {
         var { editor: t, children: n, onChange: r, value: i } = e,
-            o = g(e, tF),
+            o = g(e, tV),
             a = (0, c.useRef)(!1),
             [s, l] = c.useState(() => {
                 if (!d.NB.isNodeList(i)) throw Error('[Slate] value is invalid! Expected a list of elements but got: '.concat(d.o4.stringify(i)));

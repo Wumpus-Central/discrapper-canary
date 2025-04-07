@@ -4,9 +4,9 @@ n.d(t, {
     ZP: () => H,
     fZ: () => A
 }),
-    n(47120),
-    n(301563),
-    n(653041);
+    n(388685),
+    n(35282),
+    n(539854);
 var r,
     i = n(442837),
     o = n(46973),
@@ -222,11 +222,11 @@ function G(e) {
 function B(e) {
     I = I.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
-function F(e) {
+function V(e) {
     let { value: t } = e;
     S = t;
 }
-function V(e) {
+function F(e) {
     let { userId: t, context: n, quality: r } = e;
     g.set(v(t, n), r);
 }
@@ -288,8 +288,8 @@ let H = new Z(a.Z, {
     RTC_DEBUG_MODAL_OPEN_REPLAY: U,
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: B,
-    RTC_DEBUG_SET_RECORDING_FLAG: F,
-    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: V,
+    RTC_DEBUG_SET_RECORDING_FLAG: V,
+    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
     VOICE_CHANNEL_SELECT: D,
     RTC_CONNECTION_VIDEO: L,
     MEDIA_ENGINE_CONNECTION_STATS: k

@@ -1,4 +1,4 @@
-n.d(t, { Q: () => j }), n(47120), n(411104), n(301563), n(757143), n(653041), n(26686);
+n.d(t, { Q: () => j }), n(388685), n(415506), n(35282), n(704826), n(539854), n(49124);
 var r = n(512722),
     i = n.n(r),
     o = n(31775),
@@ -349,7 +349,7 @@ function G(e, t, n, r, o) {
         case 'paragraph':
         case 'text':
         case 'emoticon':
-            return F(e, t, a || '', r, o);
+            return V(e, t, a || '', r, o);
         case 'emoji':
         case 'customEmoji': {
             let i = t.substring(r);
@@ -427,7 +427,7 @@ function G(e, t, n, r, o) {
                     attributes: [s],
                     data: n
                 });
-            return F(e, t, l[0], r, o);
+            return V(e, t, l[0], r, o);
         case 'em':
         case 'autolink':
         case 'mailto':
@@ -445,7 +445,7 @@ function G(e, t, n, r, o) {
         case 'subtext': {
             r = H(t, r);
             let { before: n, after: i } = B(t, s, r, l);
-            return (r = V(e, t, n, r, 'syntaxBefore')), o.push(s), (r = F(e, t, null != a ? a : '', r, o)), o.pop(), (r = V(e, t, i, r, 'syntaxAfter')), H(t, r);
+            return (r = F(e, t, n, r, 'syntaxBefore')), o.push(s), (r = V(e, t, null != a ? a : '', r, o)), o.pop(), (r = F(e, t, i, r, 'syntaxAfter')), H(t, r);
         }
         default:
             throw Error('Slate: Unknown rule type: '.concat(s));
@@ -471,7 +471,7 @@ function B(e, t, n, r) {
     if ('inlineStyle' === i.type) return i;
     throw Error('Slate: rule must be an inlineStyle');
 }
-function F(e, t, n, r, i) {
+function V(e, t, n, r, i) {
     return (
         'string' == typeof n
             ? (r = Z({
@@ -489,7 +489,7 @@ function F(e, t, n, r, i) {
         H(t, r)
     );
 }
-function V(e, t, n, r, o) {
+function F(e, t, n, r, o) {
     if (n.length > 0) {
         let a = t.indexOf(n, r),
             s = t.substring(r, a + n.length);
@@ -539,7 +539,7 @@ function H(e, t) {
 }
 function W(e, t, n, r) {
     for (; n < r; )
-        if (O.has(t[n])) (n = V(e, t, t[n], n, 'syntaxBefore')), (n = H(t, n));
+        if (O.has(t[n])) (n = F(e, t, t[n], n, 'syntaxBefore')), (n = H(t, n));
         else break;
     return n;
 }

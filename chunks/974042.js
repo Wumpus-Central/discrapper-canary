@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => V }), n(653041), n(47120);
+n.d(t, { ZP: () => V }), n(539854), n(388685);
 var r,
     i = n(392711),
     l = n.n(i),
@@ -253,25 +253,25 @@ class A {
 }
 let Z = !0,
     x = !1,
-    L = N.pJs.ONLINE,
-    w = new A(),
+    w = N.pJs.ONLINE,
+    L = new A(),
     R = !0,
     D = !1;
 function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    Z && (e || (L !== N.pJs.ONLINE && L !== N.pJs.ADD_FRIEND)) && !x && ((Z = !1), (x = !0), s.Z.fetchRelationships());
+    Z && (e || (w !== N.pJs.ONLINE && w !== N.pJs.ADD_FRIEND)) && !x && ((Z = !1), (x = !0), s.Z.fetchRelationships());
 }
 function M() {
-    if (((Z = !0), R ? (x = !1) : k(), (w = w.reset()), D)) return;
-    let e = w.getRelationshipCounts();
-    L = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
+    if (((Z = !0), R ? (x = !1) : k(), (L = L.reset()), D)) return;
+    let e = L.getRelationshipCounts();
+    w = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
 }
 function U() {
-    w = R ? new A() : w.reset();
+    L = R ? new A() : L.reset();
 }
 function G(e) {
     return function () {
-        return !R && !!w.update(e) && ((w = w.clone()), !0);
+        return !R && !!L.update(e) && ((L = L.clone()), !0);
     };
 }
 class W extends (r = a.ZP.Store) {
@@ -281,8 +281,8 @@ class W extends (r = a.ZP.Store) {
     getState() {
         return {
             fetching: x,
-            section: L,
-            rows: w
+            section: w,
+            rows: L
         };
     }
 }
@@ -292,7 +292,7 @@ let V = new W(o.Z, {
         M();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (L = e.section), k();
+        (w = e.section), k();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -305,6 +305,6 @@ let V = new W(o.Z, {
         (Z = !0), (x = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (L = e.section), (D = !0);
+        (w = e.section), (D = !0);
     }
 });

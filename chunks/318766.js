@@ -2,12 +2,12 @@ n.d(t, {
     Z: () => j,
     u: () => L
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(642128),
+    s = n(200100),
     l = n(442837),
     c = n(704215),
     u = n(481060),
@@ -116,14 +116,14 @@ function k(e, t) {
     let { tabIndex: n, className: o, renderButtonContents: T, active: A, onClick: R, 'aria-controls': P, focusProps: w, shouldShowSoundmojiCoachmark: k = !1 } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
-        F = j || A,
-        V = (0, b.l)(S, 'emojiButton', F ? 'Hovered' : 'Normal'),
+        V = j || A,
+        F = (0, b.l)(S, 'emojiButton', V ? 'Hovered' : 'Normal'),
         Z = M(G, (0, f.Q3)('EmojiButton')),
         H = i.useCallback(() => {
-            if (F) return;
+            if (V) return;
             let e = Math.floor(Math.random() * D);
             U(!0), B(e), (0, p.x)(O.qR.EmojiButtonMouseEntered);
-        }, [F, U, B]),
+        }, [V, U, B]),
         W = i.useCallback(() => {
             U(!1);
         }, [U]),
@@ -163,7 +163,7 @@ function k(e, t) {
                             look: u.zxk.Looks.BLANK,
                             size: u.zxk.Sizes.NONE,
                             tabIndex: n,
-                            className: a()(V, o),
+                            className: a()(F, o),
                             onMouseEnter: () => {
                                 var e;
                                 H(), null == (e = i.onMouseEnter) || e.call(i), E.default.track(y.rMx.EMOJI_PICKER_BUTTON_HOVERED);
@@ -189,7 +189,7 @@ function k(e, t) {
                                     ? T()
                                     : (0, r.jsx)(u.AMe, {
                                           config: L,
-                                          to: { value: +!!F },
+                                          to: { value: +!!V },
                                           children: (e) => {
                                               let { value: t } = e;
                                               return (0, r.jsxs)(s.animated.div, {
@@ -197,7 +197,7 @@ function k(e, t) {
                                                   style: C(N({}, Z), {
                                                       transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                                   }),
-                                                  children: [(0, r.jsx)('div', { className: a()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: a()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
+                                                  children: [(0, r.jsx)('div', { className: a()(S.sprite, S.spriteColored, V ? S.active : S.inactive) }), (0, r.jsx)('div', { className: a()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, V ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
                                               });
                                           }
                                       })

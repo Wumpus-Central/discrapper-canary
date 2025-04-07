@@ -1,38 +1,38 @@
-n.d(t, { Z: () => c }), n(566702);
+n.d(t, { Z: () => c }), n(781311);
 var r = n(913527),
-    l = n.n(r),
-    a = n(695346),
-    i = n(626135),
-    o = n(337953),
+    a = n.n(r),
+    i = n(695346),
+    o = n(626135),
+    l = n(337953),
     s = n(875425),
     u = n(981631);
 function c(e) {
-    let { text: t, emojiInfo: n, clearAfter: r, analyticsContext: c, createdAtMs: d, prompt: p } = e,
-        m = t.trim();
-    if (!(m.length > 0) && null == n) return a.Ok.updateSetting(void 0);
+    let { text: t, emojiInfo: n, clearAfter: r, analyticsContext: c, createdAtMs: d, prompt: m } = e,
+        f = t.trim();
+    if (!(f.length > 0) && null == n) return i.Ok.updateSetting(void 0);
     {
-        let e = a.Ok.updateSetting({
-            text: m.length > 0 ? m : '',
+        let e = i.Ok.updateSetting({
+            text: f.length > 0 ? f : '',
             expiresAtMs:
                 null != r && r !== s.FO.DONT_CLEAR
                     ? String(
-                          l()()
-                              .add((0, o.Z)(r), 'ms')
+                          a()()
+                              .add((0, l.Z)(r), 'ms')
                               .toDate()
                               .getTime()
                       )
                     : '0',
             emojiId: null != n && null != n.id ? n.id : '0',
             emojiName: null != n ? n.name : '',
-            createdAtMs: String(null != d ? d : l()().toDate().getTime())
+            createdAtMs: String(null != d ? d : a()().toDate().getTime())
         });
         return (
-            i.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
+            o.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
                 location: null != c ? c.location : null,
                 emoji_type: null == n ? null : null != n.id ? 'custom' : 'unicode',
-                text_len: m.length,
+                text_len: f.length,
                 clear_after: null != r ? ''.concat(r) : null,
-                prompt_type: null == p ? void 0 : p.value
+                prompt_type: null == m ? void 0 : m.value
             }),
             e
         );

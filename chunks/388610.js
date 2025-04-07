@@ -1,5 +1,5 @@
 let r, i, o, a, s, l;
-n.d(t, { Z: () => et }), n(789020), n(47120);
+n.d(t, { Z: () => et }), n(997841), n(388685);
 var c,
     u = n(392711),
     d = n.n(u),
@@ -138,7 +138,7 @@ function G() {
 function B() {
     (o = a), (A = O.QZA.OPEN);
 }
-function F(e) {
+function V(e) {
     var t;
     (A = O.QZA.OPEN),
         (C = Object.keys(null != (t = e.errors) ? t : {}).reduce((t, n) => {
@@ -146,7 +146,7 @@ function F(e) {
             return (0, u.isArray)(r) ? (t[n] = r.join('\n')) : (t[n] = r), t;
         }, {}));
 }
-let V = d().debounce(() => {
+let F = d().debounce(() => {
     if (null == a || null == o) return !1;
     let e = a.toJS(),
         t = o.toJS();
@@ -155,7 +155,7 @@ let V = d().debounce(() => {
 function Z(e) {
     let { name: t, channelType: n, topic: r, bitrate: i, userLimit: o, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, autoArchiveDuration: d, locked: f, invitable: _, defaultAutoArchiveDuration: p, template: h, defaultReactionEmoji: m, rtcRegion: g, videoQualityMode: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: v, iconEmoji: O, themeColor: I } = e;
     if (null == a) return !1;
-    null != t && (a = a.set('name', t)), null != r && (a = a.set('topic', r)), null != i && (a = a.set('bitrate', i)), null != o && (a = a.set('userLimit', o)), null != s && (a = a.set('nsfw', s)), null != l && (a = a.set('flags', l)), null != c && (a = a.set('rateLimitPerUser', c)), null != u && (a = a.set('defaultThreadRateLimitPerUser', u)), null != d && (a = a.set('threadMetadata', N(S({}, a.threadMetadata), { autoArchiveDuration: d }))), null != f && (a = a.set('threadMetadata', N(S({}, a.threadMetadata), { locked: f }))), null != _ && (a = a.set('threadMetadata', N(S({}, a.threadMetadata), { invitable: _ }))), null != p && (a = a.set('defaultAutoArchiveDuration', p)), null != h && (a = a.set('template', h)), null != n && (a = a.set('type', n)), void 0 !== g && (a = a.set('rtcRegion', g)), null != E && (a = a.set('videoQualityMode', E)), void 0 !== m && (a = a.set('defaultReactionEmoji', m)), null != b && (a = a.set('availableTags', b)), null != y && (a = a.set('defaultSortOrder', y)), null != v && (a = a.set('defaultForumLayout', v)), void 0 !== O && (a = a.set('iconEmoji', O)), null != I && (a = a.set('themeColor', I)), V();
+    null != t && (a = a.set('name', t)), null != r && (a = a.set('topic', r)), null != i && (a = a.set('bitrate', i)), null != o && (a = a.set('userLimit', o)), null != s && (a = a.set('nsfw', s)), null != l && (a = a.set('flags', l)), null != c && (a = a.set('rateLimitPerUser', c)), null != u && (a = a.set('defaultThreadRateLimitPerUser', u)), null != d && (a = a.set('threadMetadata', N(S({}, a.threadMetadata), { autoArchiveDuration: d }))), null != f && (a = a.set('threadMetadata', N(S({}, a.threadMetadata), { locked: f }))), null != _ && (a = a.set('threadMetadata', N(S({}, a.threadMetadata), { invitable: _ }))), null != p && (a = a.set('defaultAutoArchiveDuration', p)), null != h && (a = a.set('template', h)), null != n && (a = a.set('type', n)), void 0 !== g && (a = a.set('rtcRegion', g)), null != E && (a = a.set('videoQualityMode', E)), void 0 !== m && (a = a.set('defaultReactionEmoji', m)), null != b && (a = a.set('availableTags', b)), null != y && (a = a.set('defaultSortOrder', y)), null != v && (a = a.set('defaultForumLayout', v)), void 0 !== O && (a = a.set('iconEmoji', O)), null != I && (a = a.set('themeColor', I)), F();
 }
 function H(e) {
     return new b.Z({
@@ -260,7 +260,7 @@ let ee = new $(m.Z, {
         CHANNEL_SETTINGS_OPEN: M,
         CHANNEL_SETTINGS_SUBMIT: G,
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: B,
-        CHANNEL_SETTINGS_SUBMIT_FAILURE: F,
+        CHANNEL_SETTINGS_SUBMIT_FAILURE: V,
         CHANNEL_SETTINGS_CLOSE: U,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: Q,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: Q,

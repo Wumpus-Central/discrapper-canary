@@ -1,46 +1,46 @@
-t.d(n, { Z: () => u });
-var i = t(200651),
-    l = t(192379),
-    r = t(481060),
-    a = t(725436),
-    d = t(11868),
-    o = t(217804),
-    s = t(765305),
-    c = t(244231);
-function u(e) {
-    let { guildScheduledEvent: n, channel: t, onClose: u } = e,
-        _ = n.entity_type === s.WX.EXTERNAL,
-        g = l.useCallback((e) => (0, d.Qt)(n, u)(e), [n, u]),
-        p = (0, o.u)(n, t);
-    if (null == p) return null;
-    let { IconComponent: m, locationName: I } = p,
-        f = (0, i.jsxs)(i.Fragment, {
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    a = n(725436),
+    l = n(11868),
+    s = n(217804),
+    c = n(765305),
+    u = n(244231);
+function d(e) {
+    let { guildScheduledEvent: t, channel: n, onClose: d } = e,
+        p = t.entity_type === c.WX.EXTERNAL,
+        h = i.useCallback((e) => (0, l.Qt)(t, d)(e), [t, d]),
+        g = (0, s.u)(t, n);
+    if (null == g) return null;
+    let { IconComponent: f, locationName: m } = g,
+        _ = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != m &&
-                    (0, i.jsx)(m, {
+                null != f &&
+                    (0, r.jsx)(f, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
                         height: 20,
-                        className: c.channelIcon
+                        className: u.channelIcon
                     }),
-                (0, i.jsx)(r.Text, {
+                (0, r.jsx)(o.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    className: c.locationText,
-                    children: (0, a.m)(I, !0)
+                    className: u.locationText,
+                    children: (0, a.m)(m, !0)
                 })
             ]
         });
-    return (0, i.jsx)('div', {
-        className: c.row,
+    return (0, r.jsx)('div', {
+        className: u.row,
         children:
-            null != g
-                ? (0, i.jsx)(r.P3F, {
-                      className: _ ? c.externalLocation : c.channelLocation,
-                      onClick: g,
-                      children: f
+            null != h
+                ? (0, r.jsx)(o.P3F, {
+                      className: p ? u.externalLocation : u.channelLocation,
+                      onClick: h,
+                      children: _
                   })
-                : f
+                : _
     });
 }

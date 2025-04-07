@@ -1,9 +1,9 @@
-n.d(t, { Z: () => k }), n(47120), n(266796);
+n.d(t, { Z: () => k }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(642128),
+    s = n(200100),
     l = n(793030),
     c = n(442837),
     u = n(481060),
@@ -122,14 +122,14 @@ function x(e) {
             transform: x ? 'translateY(0)' : 'translateY(20px)',
             config: j
         }),
-        F = (0, u.q_F)({
+        V = (0, u.q_F)({
             opacity: +!!x,
             config: j
         }),
-        V = i.useCallback((e) => {
+        F = i.useCallback((e) => {
             e && S(!0);
         }, []),
-        Z = (0, d.O)(V),
+        Z = (0, d.O)(F),
         H = (0, y.Z)(n);
     return (0, r.jsxs)('div', {
         className: a()(R.topPerksCard, R.animatedTopPerksCard, C.powerupCard, { [R.animate]: b }),
@@ -151,7 +151,7 @@ function x(e) {
                     }),
                     (0, r.jsx)(s.animated.div, {
                         className: R.imageGradientOverlay,
-                        style: F
+                        style: V
                     })
                 ]
             }),

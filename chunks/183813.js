@@ -44,7 +44,7 @@ function S(e) {
         M = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
     s()(null != l, 'Expected plan to selected'), s()(null != S, 'Expected selectedSkuId'), s()(null != y, 'Step should be set');
     let P = null == I ? void 0 : I.map((e) => T(e)),
-        v =
+        O =
             null != b && null != N
                 ? (0, r.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: b.assetId },
@@ -53,7 +53,7 @@ function S(e) {
                       avatarSize: a.EFr.SIZE_152
                   })
                 : null,
-        O = (0, r.jsx)(m.O3, {
+        Z = (0, r.jsx)(m.O3, {
             children: (0, r.jsx)(a.mzw, {
                 className: g.modalFooter,
                 children: (0, r.jsx)(u.y, {
@@ -74,7 +74,7 @@ function S(e) {
                 })
             })
         }),
-        Z = (0, r.jsx)(a.X6q, {
+        v = (0, r.jsx)(a.X6q, {
             variant: 'heading-lg/bold',
             color: 'header-primary',
             children: L.NW.string(L.t['Rp0+ZG'])
@@ -88,7 +88,7 @@ function S(e) {
                           direction: 'horizontal',
                           justify: 'space-between',
                           align: 'center',
-                          children: [Z, (0, r.jsx)(a.olH, { onClick: n })]
+                          children: [v, (0, r.jsx)(a.olH, { onClick: n })]
                       })
                   }),
                   (0, r.jsx)(a.hzk, {
@@ -97,7 +97,7 @@ function S(e) {
                           align: 'center',
                           padding: { top: 24 },
                           children: [
-                              v,
+                              O,
                               (0, r.jsx)(a.Kqy, {
                                   gap: 8,
                                   padding: { top: 12 },
@@ -106,7 +106,7 @@ function S(e) {
                           ]
                       })
                   }),
-                  O
+                  Z
               ]
           })
         : (0, r.jsxs)('div', {
@@ -117,7 +117,7 @@ function S(e) {
                       children: [
                           (0, r.jsx)('div', {
                               className: g.header,
-                              children: Z
+                              children: v
                           }),
                           P
                       ]
@@ -128,9 +128,9 @@ function S(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: g.bodyColumnRight,
-                      children: v
+                      children: O
                   }),
-                  O
+                  Z
               ]
           });
 }

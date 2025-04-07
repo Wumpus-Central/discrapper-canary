@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     recurrences: 'recurrences__4fb8c',
     heading: 'heading__4fb8c',
     scroller: 'scroller__4fb8c',

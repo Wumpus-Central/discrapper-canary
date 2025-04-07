@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(392711),
@@ -17,7 +17,7 @@ function _(e) {
     let { setTab: t, badgeState: a, closePopout: _ } = e,
         x = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
         y = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [v, E] = i.useMemo(
+        [E, v] = i.useMemo(
             () =>
                 l().partition(x, (e) => {
                     var t;
@@ -122,12 +122,12 @@ function _(e) {
                       children: (0, r.jsxs)('div', {
                           className: g.invitesContainer,
                           children: [
-                              v.length > 0 &&
+                              E.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(b, { title: h.NW.string(h.t.yflAJS) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: v.map((e) =>
+                                              children: E.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {
@@ -140,12 +140,12 @@ function _(e) {
                                           })
                                       ]
                                   }),
-                              E.length > 0 &&
+                              v.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(b, { title: h.NW.string(h.t.f0Ia4e) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: E.map((e) =>
+                                              children: v.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {

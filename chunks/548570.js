@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120), n(653041), n(26686), n(177593);
+n.d(t, { Z: () => $ }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854), n(49124), n(358797);
 var r = n(512722),
     i = n.n(r),
     o = n(457854),
@@ -85,7 +85,7 @@ function U(e, t) {
 }
 let G = new m.Z('GatewaySocket'),
     B = new C.Z();
-function F(e) {
+function V(e) {
     let t,
         { gatewayURL: n, newCallback: r, onOpen: i, onMessage: o, onError: a, onClose: s } = e;
     G.enableNativeLogger(!0);
@@ -103,7 +103,7 @@ function F(e) {
         }
     null == t && ((t = (0, L.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, f), null != d && d.forEach(o), (t.onopen = () => i(u, f)), (t.onmessage = o), (t.onclose = s), (t.onerror = a);
 }
-function V() {}
+function F() {}
 let Z = 4,
     H = 1001,
     W = 'Stream end encountered',
@@ -168,7 +168,7 @@ class $ extends w.Z {
         i.searchParams.append('encoding', t),
             i.searchParams.append('v', r.toString()),
             null != e && i.searchParams.append('compress', e),
-            F({
+            V({
                 gatewayURL: i.toString(),
                 newCallback: (e) => {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
@@ -360,7 +360,7 @@ class $ extends w.Z {
     _cleanup(e) {
         c.ZP.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
         let t = this.webSocket;
-        (this.webSocket = null), null != t && ((t.onopen = V), (t.onmessage = V), (t.onerror = V), (t.onclose = V), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, A.I)(B));
+        (this.webSocket = null), null != t && ((t.onopen = F), (t.onmessage = F), (t.onerror = F), (t.onclose = F), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, A.I)(B));
     }
     _doResume() {
         var e;

@@ -1,4 +1,4 @@
-n.d(t, { i: () => e1 }), n(653041), n(47120);
+n.d(t, { i: () => e1 }), n(539854), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(990547),
@@ -114,7 +114,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
     },
     e0 = eZ.Z,
     e1 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: v, impressionSource: A, numOfPendingFamilyRequests: R, isOverlaySupported: U, isClipsBetaTagShowing: V = !1, shouldMergeGameSettings: e1, isKeywordFilteringEnabled: e2, isStaff: e6, isInappropriateConversationWarningEnabled: e3, isInapproprateConversationsDefaultOn: e4, paymentsBlocked: e8, isEligibleForQuests: e7, showGiftNitro: e9, isStricterMessageRequestsEnabled: e5, hasLibraryApplication: te, hasTOTPEnabled: tt, developerMode: tn, isAdultUser: tr, hasSecureFramesVerifiedUserIds: ti, hypeSquadRemoved: ts, hasIgnoredUsers: ta, hasBlockedUsers: tl, isAllowGameFriendDMsVisible: to, useRefreshedVoiceAndVideo: tc, isEligibleForSensitiveContentDefaults: td } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: v, impressionSource: A, numOfPendingFamilyRequests: R, isOverlaySupported: U, isClipsBetaTagShowing: V = !1, shouldMergeGameSettings: e1, isKeywordFilteringEnabled: e2, isStaff: e3, isInappropriateConversationWarningEnabled: e6, isInapproprateConversationsDefaultOn: e8, paymentsBlocked: e4, isEligibleForQuests: e9, showGiftNitro: e5, isStricterMessageRequestsEnabled: e7, hasLibraryApplication: te, hasTOTPEnabled: tt, developerMode: tn, isAdultUser: tr, hasSecureFramesVerifiedUserIds: ti, hypeSquadRemoved: ts, hasIgnoredUsers: ta, hasBlockedUsers: tl, isAllowGameFriendDMsVisible: to, useRefreshedVoiceAndVideo: tc, isEligibleForSensitiveContentDefaults: td } = e;
         return Object.freeze({
             [eG.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -391,7 +391,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eY.NW.string(eY.t['3o2ojo'])],
                 parent: eG.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                predicate: () => !e5
+                predicate: () => !e7
             },
             [eG.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2]: {
                 section: eF.oAB.CONTENT_AND_SOCIAL,
@@ -438,7 +438,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eY.NW.string(eY.t.qFsx5u)],
                 parent: eG.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => e3 && !tr && !e4
+                predicate: () => e6 && !tr && !e8
             },
             [eG.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
                 section: eF.oAB.DATA_AND_PRIVACY,
@@ -583,31 +583,31 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.INVENTORY,
                 searchableTitles: [eY.NW.string(eY.t.Ve9Ge3)],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => !e8 && e9
+                predicate: () => !e4 && e5
             },
             [eG.s6.GIFT_CODE_REDEMPTION]: {
                 section: eF.oAB.INVENTORY,
                 searchableTitles: [eY.NW.string(eY.t['il+VCg'])],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => !e8
+                predicate: () => !e4
             },
             [eG.s6.GIFT_INVENTORY_QUESTS]: {
                 section: eF.oAB.INVENTORY,
                 searchableTitles: [eY.NW.string(eY.t.JALI2N)],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => e7
+                predicate: () => e9
             },
             [eG.s6.GIFT_INVENTORY_LIST]: {
                 section: eF.oAB.INVENTORY,
                 searchableTitles: [eY.NW.string(eY.t['9KeUbW'])],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => !e8
+                predicate: () => !e4
             },
             [eG.s6.GIFT_BLOCKED_PAYMENTS]: {
                 section: eF.oAB.INVENTORY,
                 searchableTitles: [eY.NW.string(eY.t.vwMEHR)],
                 parent: eG.s6.GIFT_INVENTORY,
-                predicate: () => e8
+                predicate: () => e4
             },
             [eG.s6.BILLING]: {
                 section: eF.oAB.BILLING,
@@ -1059,7 +1059,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.VOICE,
                 searchableTitles: [eY.NW.string(eY.t.U4FgFB)],
                 parent: eG.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => ('canary' === Q.ZP.releaseChannel || 'development' === Q.ZP.releaseChannel) && e6 && z.Z.supports(ez.AN.CONNECTION_REPLAY)
+                predicate: () => ('canary' === Q.ZP.releaseChannel || 'development' === Q.ZP.releaseChannel) && e3 && z.Z.supports(ez.AN.CONNECTION_REPLAY)
             },
             [eG.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
                 section: eF.oAB.VOICE,
@@ -1597,7 +1597,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Idle Status Indicator'],
                 parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && F.Z.isDeveloper
+                predicate: () => e3 && F.Z.isDeveloper
             },
             [eG.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
                 section: eF.oAB.DEVELOPER_OPTIONS,
@@ -1609,31 +1609,31 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['CSS Debugging'],
                 parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && F.Z.isDeveloper
+                predicate: () => e3 && F.Z.isDeveloper
             },
             [eG.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING]: {
                 section: eF.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Layout Debugging'],
                 parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && F.Z.isDeveloper
+                predicate: () => e3 && F.Z.isDeveloper
             },
             [eG.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS]: {
                 section: eF.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Layout Debugging'],
                 parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && F.Z.isDeveloper && H.default.layoutDebuggingEnabled
+                predicate: () => e3 && F.Z.isDeveloper && H.default.layoutDebuggingEnabled
             },
             [eG.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
                 section: eF.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Preview Unpublished Collections'],
                 parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && F.Z.isDeveloper
+                predicate: () => e3 && F.Z.isDeveloper
             },
             [eG.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE]: {
                 section: eF.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Disable App Collections Cache'],
                 parent: eG.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && F.Z.isDeveloper
+                predicate: () => e3 && F.Z.isDeveloper
             },
             [eG.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
                 section: eF.oAB.DEVELOPER_OPTIONS,
@@ -1798,7 +1798,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: ['Intl Testing', 'i18n'],
                 label: 'Intl Testing',
                 element: y.Z,
-                predicate: () => e6 || F.Z.isDeveloper
+                predicate: () => e3 || F.Z.isDeveloper
             },
             [eG.s6.PROFILE_EFFECTS_PREVIEW_TOOL]: {
                 section: eF.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,

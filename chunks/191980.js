@@ -1,11 +1,11 @@
 n.d(t, {
     $: () => i,
-    C: () => c
+    C: () => s
 });
-var l = n(570140);
+var r = n(570140);
 function i() {
-    l.Z.dispatch({ type: 'SHOW_KEYBOARD_SHORTCUTS' });
+    r.Z.dispatch({ type: 'SHOW_KEYBOARD_SHORTCUTS' });
 }
-function c() {
-    l.Z.dispatch({ type: 'HIDE_KEYBOARD_SHORTCUTS' });
+function s() {
+    r.Z.dispatch({ type: 'HIDE_KEYBOARD_SHORTCUTS' });
 }

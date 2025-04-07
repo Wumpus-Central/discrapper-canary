@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ }), n(47120), n(230036), n(978209);
+n.d(t, { Z: () => $ }), n(388685), n(642613), n(583741);
 var r,
     i = n(658722),
     o = n.n(i),
@@ -53,7 +53,7 @@ function G(e, t) {
 function B(e, t) {
     return null != e && c()(e.createdAt).isAfter(M) && 0 === t;
 }
-let F = {
+let V = {
         [D.iEv.NAME]: G,
         [D.iEv.PLATFORM]: (e, t, n) => {
             let r = e.libraryApplication.getDistributor(),
@@ -63,11 +63,11 @@ let F = {
         [D.iEv.LAST_PLAYED]: (e, t) => (e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1),
         [D.iEv.ACTIONS]: null
     },
-    V = (0, T.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
+    F = (0, T.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
     Z = (0, T.oH)((e) => e.filter((e) => null != e.libraryApplication && O.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
     H = (0, T.oH)((e, t) => e.filter((e) => o()(t.toLowerCase(), e.application.name.toLowerCase()))),
     W = (0, T.oH)((e, t, n, r) => {
-        let i = F[t];
+        let i = V[t];
         if (null == i) return e;
         let o = [...e].sort(i);
         return n === D.sHY.DESCENDING ? o.reverse() : o;
@@ -180,7 +180,7 @@ class J extends (r = u.ZP.Store) {
         return Z(k);
     }
     get libraryApplicationViewItems() {
-        return V(k);
+        return F(k);
     }
     get filteredLibraryApplicationViewItems() {
         return H(this.libraryApplicationViewItems, j);

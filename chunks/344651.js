@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Y }), n(653041), n(47120), n(789020), n(411104);
+n.d(t, { Z: () => Y }), n(539854), n(388685), n(997841), n(415506);
 var r = n(392711),
     i = n.n(r);
 n(724522);
@@ -154,7 +154,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
-    F = new P.Z(
+    V = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -168,7 +168,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
-    V = new P.Z(
+    F = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -256,7 +256,7 @@ function Q(e) {
 }
 function X(e) {
     let { guildId: t, user: n, status: r, activities: i, hiddenActivities: o, clientStatus: a } = e;
-    V.add({
+    F.add({
         guildId: t,
         user: n,
         status: r,
@@ -788,7 +788,7 @@ W(
     }),
     H(['GUILD_MEMBERS_CHUNK'], (e) => {
         o.ZP.Emitter.batched(() => {
-            F.add({
+            V.add({
                 guildId: e.guild_id,
                 members: e.members,
                 notFound: e.not_found

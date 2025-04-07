@@ -28,9 +28,9 @@ t.exports = function (t, e) {
             w = y.getBlockTree(_).getIn([b, 'leaves', S]),
             x = w.start,
             k = w.end,
-            E = y.getCurrentContent(),
-            C = E.getBlockForKey(_),
-            D = C.getText().slice(x, k);
+            C = y.getCurrentContent(),
+            E = C.getBlockForKey(_),
+            D = E.getText().slice(x, k);
         if ((g.endsWith('\n\n') && (g = g.slice(0, -1)), g === D)) {
             var O = e.nativeEvent.inputType;
             if (O) {
@@ -49,17 +49,17 @@ t.exports = function (t, e) {
                 focusOffset: k,
                 isBackward: !1
             }),
-            R = C.getEntityAt(x),
-            F = u(R) ? E.getEntity(R) : null,
+            R = E.getEntityAt(x),
+            F = u(R) ? C.getEntity(R) : null,
             N = 'MUTABLE' === (null != F ? F.getMutability() : null),
-            P = n.replaceText(E, L, g, C.getInlineStyleAt(x), N ? C.getEntityAt(x) : null);
+            P = n.replaceText(C, L, g, E.getInlineStyleAt(x), N ? E.getEntityAt(x) : null);
         if (f) (A = (M = x + Math.min((K = r.anchorOffset), (T = r.focusOffset))) + Math.abs(K - T)), (K = M), (T = A);
         else {
             var z = g.length - D.length;
             (M = B.getStartOffset()), (A = B.getEndOffset()), (K = p ? A + z : M), (T = A + z);
         }
         var j = P.merge({
-            selectionBefore: E.getSelectionAfter(),
+            selectionBefore: C.getSelectionAfter(),
             selectionAfter: B.merge({
                 anchorOffset: K,
                 focusOffset: T

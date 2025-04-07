@@ -1,8 +1,8 @@
 n.d(t, {
-    Z: () => S,
+    Z: () => I,
     h: () => P
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -21,16 +21,16 @@ var r = n(200651),
     b = n(585483),
     x = n(358085),
     y = n(143316),
-    v = n(240126),
-    E = n(791914),
+    E = n(240126),
+    v = n(791914),
     O = n(147522),
     N = n(809780),
     j = n(981631),
     C = n(388032),
-    I = n(128406);
-function S(e) {
-    var t, n, a, o, S, P, A;
-    let { setTab: w, onJump: Z, showTutorial: k, setSeenTutorial: R, closePopout: D, badgeState: L } = e,
+    S = n(128406);
+function I(e) {
+    var t, n, a, o, I, P, A;
+    let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: L } = e,
         M = i.useRef(null),
         [W, U] = (0, N.ZP)(M),
         { loadState: F, channels: B } = W,
@@ -52,11 +52,11 @@ function S(e) {
             (o.offsetTop < s || o.offsetTop > s + c) && i.scrollTo({ to: o.offsetTop });
         }),
         (o = W),
-        (S = U),
+        (I = U),
         i.useEffect(() => {
             let e = () => {
                 let e = o.channels.find((e) => !e.collapsed);
-                null != e && S.markChannelRead(e);
+                null != e && I.markChannelRead(e);
             };
             return (
                 b.S.subscribe(j.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
@@ -64,7 +64,7 @@ function S(e) {
                     b.S.unsubscribe(j.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [S, o.channels]),
+        }, [I, o.channels]),
         (P = U),
         i.useEffect(() => {
             let e = (e) => {
@@ -94,15 +94,15 @@ function S(e) {
         K = (0, h.Z)('unreads', M);
     if (0 === B.length) {
         return (0, r.jsxs)('div', {
-            className: l()(I.container, { [I.widerInbox]: z }),
+            className: l()(S.container, { [S.widerInbox]: z }),
             children: [
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(v.Z, {
                     tab: d.X.UNREADS,
                     setTab: w,
                     badgeState: L,
                     closePopout: D
                 }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(E.Z, {
                     Icon: p.xx7,
                     header: C.NW.string(C.t['6XMM+P']),
                     tip: (null == (A = s().os) ? void 0 : A.family) === 'OS X' ? C.NW.string(C.t.w9uDOT) : C.NW.string(C.t.BiUJCw)
@@ -111,10 +111,10 @@ function S(e) {
         });
     }
     return (0, r.jsxs)('div', {
-        className: l()(I.container, 'group-spacing-'.concat(V), { [I.widerInbox]: z }),
+        className: l()(S.container, 'group-spacing-'.concat(V), { [S.widerInbox]: z }),
         'aria-label': C.NW.string(C.t.sRUdBw),
         children: [
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
                 setTab: w,
                 badgeState: L,
@@ -188,8 +188,8 @@ function S(e) {
                             (n = n =
                                 {
                                     onScroll: F === N.jd.Done ? void 0 : G,
-                                    className: I.scroller,
-                                    children: [k ? (0, r.jsx)(T, { setSeenTutorial: R }) : null, (0, O.Z)(B, U, Z), F === N.jd.Done ? null : (0, r.jsx)(p.$jN, { className: I.spinner })]
+                                    className: S.scroller,
+                                    children: [R ? (0, r.jsx)(T, { setSeenTutorial: k }) : null, (0, O.Z)(B, U, Z), F === N.jd.Done ? null : (0, r.jsx)(p.$jN, { className: S.spinner })]
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -214,10 +214,10 @@ function S(e) {
 function T(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)('div', {
-        className: I.tutorial,
+        className: S.tutorial,
         children: [
             (0, r.jsx)('div', {
-                className: I.tutorialIcon,
+                className: S.tutorialIcon,
                 children: (0, r.jsx)(p.xx7, {
                     size: 'md',
                     color: 'currentColor'
@@ -226,7 +226,7 @@ function T(e) {
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(p.X6q, {
-                        className: I.__invalid_tutorialHeader,
+                        className: S.__invalid_tutorialHeader,
                         variant: 'heading-md/semibold',
                         children: C.NW.string(C.t.vZPktL)
                     }),
@@ -236,7 +236,7 @@ function T(e) {
                         children: C.NW.string(C.t.vWkIIC)
                     }),
                     (0, r.jsx)(p.zxk, {
-                        className: I.tutorialButton,
+                        className: S.tutorialButton,
                         onClick: t,
                         size: p.zxk.Sizes.SMALL,
                         children: C.NW.string(C.t['+IrDzM'])
@@ -249,15 +249,15 @@ function T(e) {
 function P(e) {
     let { setTab: t, badgeState: n, closePopout: i } = e;
     return (0, r.jsxs)('div', {
-        className: I.container,
+        className: S.container,
         children: [
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: i
             }),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(E.Z, {
                 Icon: p.xx7,
                 disableStars: !0,
                 header: C.NW.string(C.t['KG/ynZ']),

@@ -2,7 +2,7 @@ n.d(t, {
     cp: () => g,
     eI: () => _
 }),
-    n(411104);
+    n(415506);
 var r = n(544891),
     i = n(570140),
     o = n(355467),
@@ -24,7 +24,7 @@ async function _() {
         let { enabledPaymentTypes: e } = a.ZP.getCurrentConfig({ location: '40c266_2' }, { autoTrackExposure: !1 });
         if (!e.includes(u.HeQ.CASH_APP)) return;
         let t = await f(),
-            { default: r } = await Promise.all([n.e('77298'), n.e('23357')]).then(n.bind(n, 175145)),
+            { default: r } = await Promise.all([n.e('50448'), n.e('23357')]).then(n.bind(n, 175145)),
             o = await r({
                 environment: u.Ai1.ADYEN.KEY.startsWith('live_') ? 'live' : 'test',
                 clientKey: u.Ai1.ADYEN.KEY,

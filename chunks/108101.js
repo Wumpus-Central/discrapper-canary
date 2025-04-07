@@ -36,8 +36,8 @@ var r = n(687249),
     U = '[object Set]',
     G = '[object String]',
     B = '[object Symbol]',
-    F = '[object WeakMap]',
-    V = '[object ArrayBuffer]',
+    V = '[object WeakMap]',
+    F = '[object ArrayBuffer]',
     Z = '[object DataView]',
     H = '[object Float32Array]',
     W = '[object Float64Array]',
@@ -71,8 +71,8 @@ function ee(e, t, n, C, R, P) {
         }
     }
     P || (P = new r());
-    var F = P.get(e);
-    if (F) return F;
+    var V = P.get(e);
+    if (V) return V;
     P.set(e, w),
         O(e)
             ? e.forEach(function (r) {
@@ -82,8 +82,8 @@ function ee(e, t, n, C, R, P) {
               e.forEach(function (r, i) {
                   w.set(i, ee(r, t, n, i, e, P));
               });
-    var V = j ? (M ? _ : f) : M ? keysIn : I,
-        Z = U ? void 0 : V(e);
+    var F = j ? (M ? _ : f) : M ? keysIn : I,
+        Z = U ? void 0 : F(e);
     return (
         i(Z || e, function (r, i) {
             Z && (r = e[(i = r)]), o(w, i, ee(r, t, n, i, e, P));
@@ -91,4 +91,4 @@ function ee(e, t, n, C, R, P) {
         w
     );
 }
-($[A] = $[C] = $[V] = $[Z] = $[R] = $[P] = $[H] = $[W] = $[Y] = $[K] = $[z] = $[x] = $[M] = $[k] = $[j] = $[U] = $[G] = $[B] = $[q] = $[Q] = $[X] = $[J] = !0), ($[w] = $[D] = $[F] = !1), (e.exports = ee);
+($[A] = $[C] = $[F] = $[Z] = $[R] = $[P] = $[H] = $[W] = $[Y] = $[K] = $[z] = $[x] = $[M] = $[k] = $[j] = $[U] = $[G] = $[B] = $[q] = $[Q] = $[X] = $[J] = !0), ($[w] = $[D] = $[V] = !1), (e.exports = ee);

@@ -1,13 +1,13 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
-var o = n(120356),
-    a = n.n(o),
-    i = n(965860);
-let c = (e) => {
-    let { aspectRatio: t, style: n, className: o, children: c } = e;
+var i = n(120356),
+    l = n.n(i),
+    a = n(965860);
+let o = (e) => {
+    let { aspectRatio: t, style: n, className: i, children: o } = e;
     return (0, r.jsx)('div', {
-        className: a()(i.outer, o),
+        className: l()(a.outer, i),
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -34,8 +34,8 @@ let c = (e) => {
             return e;
         })({ paddingTop: ''.concat((1 / t) * 100, '%') }, n),
         children: (0, r.jsx)('div', {
-            className: i.inner,
-            children: c
+            className: a.inner,
+            children: o
         })
     });
 };

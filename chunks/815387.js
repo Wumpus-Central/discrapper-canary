@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eR }), n(411104);
+n.d(t, { Z: () => ek }), n(415506);
 var r = n(200651),
     i = n(192379),
     a = n(442837),
@@ -17,21 +17,21 @@ var r = n(200651),
     b = n(825829),
     x = n(623624),
     y = n(533694),
-    v = n(345114),
-    E = n(924301),
+    E = n(345114),
+    v = n(924301),
     O = n(225890),
     N = n(434404),
     j = n(507435),
     C = n(504733),
-    I = n(563959),
-    S = n(703656),
+    S = n(563959),
+    I = n(703656),
     T = n(471253),
     P = n(565799),
     A = n(590415),
     w = n(911560),
     Z = n(488131),
-    k = n(814820),
-    R = n(314897),
+    R = n(814820),
+    k = n(314897),
     D = n(523746),
     L = n(592125),
     M = n(430824),
@@ -71,14 +71,14 @@ var r = n(200651),
     eb = n(701181),
     ex = n(29338),
     ey = n(461135),
-    ev = n(296571),
-    eE = n(587737),
+    eE = n(296571),
+    ev = n(587737),
     eO = n(482239),
     eN = n(328749),
     ej = n(4305),
     eC = n(910548),
-    eI = n(981631),
-    eS = n(70722),
+    eS = n(981631),
+    eI = n(70722),
     eT = n(388032),
     eP = n(40450);
 function eA(e) {
@@ -117,8 +117,8 @@ function ew(e) {
                 (0, x.f)({
                     guildId: u.id,
                     location: {
-                        section: eI.jXE.CHANNEL_TEXT_AREA,
-                        object: eI.qAy.BOOST_ANNOUNCEMENT_UPSELL
+                        section: eS.jXE.CHANNEL_TEXT_AREA,
+                        object: eS.qAy.BOOST_ANNOUNCEMENT_UPSELL
                     }
                 });
         }, [u]),
@@ -151,12 +151,12 @@ function eZ(e) {
         usernameHook: a
     });
 }
-let ek = Object.freeze({
-        [eI.uaV.DEFAULT]: void 0,
-        [eI.uaV.REPLY]: void 0,
-        [eI.uaV.CHAT_INPUT_COMMAND]: void 0,
-        [eI.uaV.CONTEXT_MENU_COMMAND]: void 0,
-        [eI.uaV.RECIPIENT_ADD]: function (e) {
+let eR = Object.freeze({
+        [eS.uaV.DEFAULT]: void 0,
+        [eS.uaV.REPLY]: void 0,
+        [eS.uaV.CHAT_INPUT_COMMAND]: void 0,
+        [eS.uaV.CONTEXT_MENU_COMMAND]: void 0,
+        [eS.uaV.RECIPIENT_ADD]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 { author: l } = t,
                 o = t.getChannelId(),
@@ -175,7 +175,7 @@ let ek = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, r.jsx)(eE.Z, {
+                ? (0, r.jsx)(ev.Z, {
                       message: t,
                       channel: n,
                       compact: i,
@@ -191,7 +191,7 @@ let ek = Object.freeze({
                       otherUsernameHook: d
                   });
         },
-        [eI.uaV.RECIPIENT_REMOVE]: function (e) {
+        [eS.uaV.RECIPIENT_REMOVE]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 { author: l } = t,
                 o = t.getChannelId(),
@@ -232,13 +232,13 @@ let ek = Object.freeze({
                         usernameHook: c
                     });
         },
-        [eI.uaV.CALL]: function (e) {
+        [eS.uaV.CALL]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 { id: o, author: s } = t,
-                u = R.default.getId(),
+                u = k.default.getId(),
                 d = t.getChannelId(),
                 p = (0, a.e7)([D.Z], () => D.Z.isCallActive(d, o), [d, o]),
-                m = (0, a.e7)([G.Z], () => G.Z.getVoiceState(eI.ME, u)),
+                m = (0, a.e7)([G.Z], () => G.Z.getVoiceState(eS.ME, u)),
                 f = !p && null != t.call && !t.call.participants.includes(u),
                 h = p && (null == m || m.channelId !== d),
                 g = i.useCallback(() => c.default.selectVoiceChannel(d), [d]),
@@ -257,7 +257,7 @@ let ek = Object.freeze({
                 onClickJoinCall: g
             });
         },
-        [eI.uaV.CHANNEL_NAME_CHANGE]: function (e) {
+        [eS.uaV.CHANNEL_NAME_CHANGE]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 { author: a } = t,
                 l = t.getChannelId(),
@@ -274,7 +274,7 @@ let ek = Object.freeze({
                 isForumPost: i.isForumPost()
             });
         },
-        [eI.uaV.CHANNEL_ICON_CHANGE]: function (e) {
+        [eS.uaV.CHANNEL_ICON_CHANGE]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 { author: a } = t,
                 l = t.getChannelId(),
@@ -290,16 +290,16 @@ let ek = Object.freeze({
                 usernameHook: o
             });
         },
-        [eI.uaV.CHANNEL_PINNED_MESSAGE]: function (e) {
+        [eS.uaV.CHANNEL_PINNED_MESSAGE]: function (e) {
             let { message: t, compact: n, channel: a } = e,
                 { author: l } = t,
                 o = t.getChannelId(),
                 s = i.useCallback(() => {
                     if (F.Z.getChannelId() !== o) {
                         let e = L.Z.getChannel(o);
-                        null != e && (0, S.XU)(e.guild_id, e.id);
+                        null != e && (0, I.XU)(e.guild_id, e.id);
                     }
-                    setTimeout(() => H.S.dispatch(eI.CkL.TOGGLE_CHANNEL_PINS), 0);
+                    setTimeout(() => H.S.dispatch(eS.CkL.TOGGLE_CHANNEL_PINS), 0);
                 }, [o]),
                 c = (0, $.l)({
                     user: l,
@@ -314,7 +314,7 @@ let ek = Object.freeze({
                 onClickPins: __OVERLAY__ ? null : s
             });
         },
-        [eI.uaV.USER_JOIN]: function (e) {
+        [eS.uaV.USER_JOIN]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 { author: a } = t,
                 l = t.getChannelId(),
@@ -332,18 +332,18 @@ let ek = Object.freeze({
                         compact: n,
                         usernameHook: o
                     }),
-                    (0, r.jsx)(k.f, {
+                    (0, r.jsx)(R.f, {
                         channel: i,
                         message: t
                     })
                 ]
             });
         },
-        [eI.uaV.GUILD_BOOST]: ew,
-        [eI.uaV.GUILD_BOOST_TIER_1]: ew,
-        [eI.uaV.GUILD_BOOST_TIER_2]: ew,
-        [eI.uaV.GUILD_BOOST_TIER_3]: ew,
-        [eI.uaV.CHANNEL_FOLLOW_ADD]: function (e) {
+        [eS.uaV.GUILD_BOOST]: ew,
+        [eS.uaV.GUILD_BOOST_TIER_1]: ew,
+        [eS.uaV.GUILD_BOOST_TIER_2]: ew,
+        [eS.uaV.GUILD_BOOST_TIER_3]: ew,
+        [eS.uaV.CHANNEL_FOLLOW_ADD]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 { author: a } = t,
                 l = t.getChannelId(),
@@ -359,7 +359,7 @@ let ek = Object.freeze({
                 usernameHook: o
             });
         },
-        [eI.uaV.GUILD_STREAM]: function (e) {
+        [eS.uaV.GUILD_STREAM]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 {
                     author: o,
@@ -367,7 +367,7 @@ let ek = Object.freeze({
                     messageReference: c
                 } = t,
                 d = t.getChannelId(),
-                p = (0, a.e7)([U.Z], () => U.Z.findActivity(s, (e) => e.type === eI.IIU.PLAYING), [s]),
+                p = (0, a.e7)([U.Z], () => U.Z.findActivity(s, (e) => e.type === eS.IIU.PLAYING), [s]),
                 m = (0, a.e7)([L.Z], () => (null != c ? L.Z.getChannel(c.channel_id) : null), [c]),
                 f = null == c ? void 0 : c.guild_id,
                 h = (0, $.l)({
@@ -380,7 +380,7 @@ let ek = Object.freeze({
                     null != m &&
                         null != f &&
                         (0, u.iV)({
-                            streamType: eS.lo.GUILD,
+                            streamType: eI.lo.GUILD,
                             ownerId: s,
                             channelId: m.id,
                             guildId: f
@@ -397,7 +397,7 @@ let ek = Object.freeze({
                   })
                 : null;
         },
-        [eI.uaV.GUILD_DISCOVERY_DISQUALIFIED]: function (e) {
+        [eS.uaV.GUILD_DISCOVERY_DISQUALIFIED]: function (e) {
             let { message: t, compact: n } = e,
                 i = t.getChannelId(),
                 l = (0, a.e7)([L.Z], () => L.Z.getChannel(i), [i]),
@@ -406,14 +406,14 @@ let ek = Object.freeze({
                 message: t,
                 compact: n,
                 onClick: () => {
-                    null != o && N.Z.open(o, eI.pNK.DISCOVERY);
+                    null != o && N.Z.open(o, eS.pNK.DISCOVERY);
                 }
             });
         },
-        [eI.uaV.GUILD_DISCOVERY_REQUALIFIED]: es.xe,
-        [eI.uaV.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: es.HL,
-        [eI.uaV.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: es.Yc,
-        [eI.uaV.THREAD_CREATED]: function (e) {
+        [eS.uaV.GUILD_DISCOVERY_REQUALIFIED]: es.xe,
+        [eS.uaV.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: es.HL,
+        [eS.uaV.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: es.Yc,
+        [eS.uaV.THREAD_CREATED]: function (e) {
             let { message: t, channel: a, compact: s } = e,
                 c = (0, $.l)({
                     user: t.author,
@@ -471,7 +471,7 @@ let ek = Object.freeze({
                     },
                     [t]
                 );
-            return (0, r.jsx)(ev.Z, {
+            return (0, r.jsx)(eE.Z, {
                 message: t,
                 compact: s,
                 usernameHook: c,
@@ -480,8 +480,8 @@ let ek = Object.freeze({
                 onContextMenuThread: p
             });
         },
-        [eI.uaV.THREAD_STARTER_MESSAGE]: eN.Z,
-        [eI.uaV.GUILD_INVITE_REMINDER]: function (e) {
+        [eS.uaV.THREAD_STARTER_MESSAGE]: eN.Z,
+        [eS.uaV.GUILD_INVITE_REMINDER]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 l = (0, a.e7)([B.default], () => B.default.getCurrentUser()),
                 o = (0, a.e7)([M.Z], () => {
@@ -495,7 +495,7 @@ let ek = Object.freeze({
                 channel: n
             });
         },
-        [eI.uaV.AUTO_MODERATION_ACTION]: function (e) {
+        [eS.uaV.AUTO_MODERATION_ACTION]: function (e) {
             let { message: t, compact: n, channel: i } = e;
             return (0, b.nY)(t)
                 ? (0, r.jsx)(ee.Z, {
@@ -505,9 +505,9 @@ let ek = Object.freeze({
                   })
                 : null;
         },
-        [eI.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eZ,
-        [eI.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eZ,
-        [eI.uaV.GUILD_INCIDENT_REPORT_RAID]: function (e) {
+        [eS.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eZ,
+        [eS.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eZ,
+        [eS.uaV.GUILD_INCIDENT_REPORT_RAID]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 a = (0, $.l)({
                     user: t.author,
@@ -522,7 +522,7 @@ let ek = Object.freeze({
                 usernameHook: a
             });
         },
-        [eI.uaV.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function (e) {
+        [eS.uaV.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function (e) {
             let { message: t, compact: n, channel: i } = e,
                 a = (0, $.l)({
                     user: t.author,
@@ -537,8 +537,8 @@ let ek = Object.freeze({
                 usernameHook: a
             });
         },
-        [eI.uaV.ROLE_SUBSCRIPTION_PURCHASE]: v.Z,
-        [eI.uaV.PURCHASE_NOTIFICATION]: function (e) {
+        [eS.uaV.ROLE_SUBSCRIPTION_PURCHASE]: E.Z,
+        [eS.uaV.PURCHASE_NOTIFICATION]: function (e) {
             var t;
             let { message: n, channel: i, compact: a } = e;
             return (null == (t = n.purchaseNotification) ? void 0 : t.type) === d.Eh.GUILD_PRODUCT
@@ -549,8 +549,8 @@ let ek = Object.freeze({
                   })
                 : null;
         },
-        [eI.uaV.INTERACTION_PREMIUM_UPSELL]: void 0,
-        [eI.uaV.STAGE_START]: function (e) {
+        [eS.uaV.INTERACTION_PREMIUM_UPSELL]: void 0,
+        [eS.uaV.STAGE_START]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 l = (0, $.l)({
                     user: t.author,
@@ -558,7 +558,7 @@ let ek = Object.freeze({
                     guildId: n.guild_id,
                     messageId: t.id
                 }),
-                o = (0, a.e7)([E.ZP], () => E.ZP.getActiveEventByChannel(n.id), [n.id]);
+                o = (0, a.e7)([v.ZP], () => v.ZP.getActiveEventByChannel(n.id), [n.id]);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(ex.Z, {
@@ -570,7 +570,7 @@ let ek = Object.freeze({
                 ]
             });
         },
-        [eI.uaV.STAGE_END]: function (e) {
+        [eS.uaV.STAGE_END]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 a = (0, $.l)({
                     user: t.author,
@@ -584,7 +584,7 @@ let ek = Object.freeze({
                 usernameHook: a
             });
         },
-        [eI.uaV.STAGE_SPEAKER]: function (e) {
+        [eS.uaV.STAGE_SPEAKER]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 a = (0, $.l)({
                     user: t.author,
@@ -598,7 +598,7 @@ let ek = Object.freeze({
                 usernameHook: a
             });
         },
-        [eI.uaV.STAGE_RAISE_HAND]: function (e) {
+        [eS.uaV.STAGE_RAISE_HAND]: function (e) {
             var t, n;
             let { message: i, channel: o, compact: c } = e,
                 u = (0, $.l)({
@@ -607,7 +607,7 @@ let ek = Object.freeze({
                     guildId: o.guild_id,
                     messageId: i.id
                 }),
-                d = (0, a.e7)([W.Z], () => W.Z.can(eI.Plq.MUTE_MEMBERS, o)),
+                d = (0, a.e7)([W.Z], () => W.Z.can(eS.Plq.MUTE_MEMBERS, o)),
                 p = (0, a.e7)([P.Z], () => P.Z.getParticipant(o.id, i.author.id)),
                 m = new Date(K.default.extractTimestamp(i.id)).toISOString() === new Date(null != (n = null == p || null == (t = p.voiceState) ? void 0 : t.requestToSpeakTimestamp) ? n : 0).toISOString(),
                 f = d && (null == p ? void 0 : p.rtsState) === A.xO.REQUESTED_TO_SPEAK && m;
@@ -641,7 +641,7 @@ let ek = Object.freeze({
                 ]
             });
         },
-        [eI.uaV.STAGE_TOPIC]: function (e) {
+        [eS.uaV.STAGE_TOPIC]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 a = (0, $.l)({
                     user: t.author,
@@ -655,11 +655,11 @@ let ek = Object.freeze({
                 usernameHook: a
             });
         },
-        [eI.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: C.Z,
-        [eI.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: I.P,
-        [eI.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: I.e,
-        [eI.uaV.PREMIUM_REFERRAL]: void 0,
-        [eI.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: function (e) {
+        [eS.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: C.Z,
+        [eS.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: S.P,
+        [eS.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: S.e,
+        [eS.uaV.PREMIUM_REFERRAL]: void 0,
+        [eS.uaV.GUILD_DEADCHAT_REVIVE_PROMPT]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(m.Z, {
                 message: t,
@@ -667,8 +667,8 @@ let ek = Object.freeze({
                 compact: i
             });
         },
-        [eI.uaV.CUSTOM_GIFT]: void 0,
-        [eI.uaV.GUILD_GAMING_STATS_PROMPT]: function (e) {
+        [eS.uaV.CUSTOM_GIFT]: void 0,
+        [eS.uaV.GUILD_GAMING_STATS_PROMPT]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(p.Z, {
                 message: t,
@@ -676,17 +676,17 @@ let ek = Object.freeze({
                 compact: i
             });
         },
-        [eI.uaV.VOICE_HANGOUT_INVITE]: void 0,
-        [eI.uaV.POLL_RESULT]: j.Z,
-        [eI.uaV.CHANGELOG]: void 0,
-        [eI.uaV.NITRO_NOTIFICATION]: function (e) {
+        [eS.uaV.VOICE_HANGOUT_INVITE]: void 0,
+        [eS.uaV.POLL_RESULT]: j.Z,
+        [eS.uaV.CHANGELOG]: void 0,
+        [eS.uaV.NITRO_NOTIFICATION]: function (e) {
             let { message: t, channel: n } = e;
             return (0, r.jsx)(J.Z, {
                 message: t,
                 channel: n
             });
         },
-        [eI.uaV.CHANNEL_LINKED_TO_LOBBY]: function (e) {
+        [eS.uaV.CHANNEL_LINKED_TO_LOBBY]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(ei.Z, {
                 message: t,
@@ -694,7 +694,7 @@ let ek = Object.freeze({
                 compact: i
             });
         },
-        [eI.uaV.GIFTING_PROMPT]: function (e) {
+        [eS.uaV.GIFTING_PROMPT]: function (e) {
             let { message: t, channel: n } = e,
                 i = t.giftingPrompt,
                 l = (0, a.e7)([B.default], () => B.default.getUser(null == i ? void 0 : i.recipientUserId));
@@ -707,7 +707,7 @@ let ek = Object.freeze({
                       giftIntentSecondaryAction: i.giftIntentSecondaryAction
                   });
         },
-        [eI.uaV.IN_GAME_MESSAGE_NUX]: function (e) {
+        [eS.uaV.IN_GAME_MESSAGE_NUX]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(ep.Z, {
                 message: t,
@@ -716,10 +716,10 @@ let ek = Object.freeze({
                 compact: i
             });
         },
-        [eI.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: g.Cn,
-        [eI.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: g.Ue,
-        [eI.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: g.R6,
-        [eI.uaV.HD_STREAMING_UPGRADED]: function (e) {
+        [eS.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: g.Cn,
+        [eS.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: g.Ue,
+        [eS.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: g.R6,
+        [eS.uaV.HD_STREAMING_UPGRADED]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(q.Z, {
                 message: t,
@@ -727,7 +727,7 @@ let ek = Object.freeze({
                 compact: i
             });
         },
-        [eI.uaV.CHAT_WALLPAPER_SET]: function (e) {
+        [eS.uaV.CHAT_WALLPAPER_SET]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(h.Z, {
                 message: t,
@@ -735,7 +735,7 @@ let ek = Object.freeze({
                 compact: i
             });
         },
-        [eI.uaV.CHAT_WALLPAPER_REMOVED]: function (e) {
+        [eS.uaV.CHAT_WALLPAPER_REMOVED]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(f.Z, {
                 message: t,
@@ -744,10 +744,10 @@ let ek = Object.freeze({
             });
         }
     }),
-    eR = i.memo(function (e) {
+    ek = i.memo(function (e) {
         let { message: t, channel: n, compact: i, disableInteraction: a } = e,
             { type: l } = t,
-            o = ek[l];
+            o = eR[l];
         if (null == o) {
             var s;
             return (s = Error('unknown message type '.concat(t.type))), z.Z.captureException(s), new _.Z('SystemMessage').error('', s), null;

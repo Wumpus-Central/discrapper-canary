@@ -2,11 +2,11 @@ n.d(t, {
     J: () => eE,
     Z: () => eb
 }),
-    n(653041),
-    n(47120),
-    n(266796),
-    n(566702),
-    n(230036);
+    n(539854),
+    n(388685),
+    n(953529),
+    n(781311),
+    n(642613);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -15,7 +15,7 @@ var r = n(200651),
     l = n.n(s),
     c = n(512722),
     u = n.n(c),
-    d = n(230383),
+    d = n(290486),
     f = n(243814),
     _ = n(442837),
     p = n(921072),
@@ -45,8 +45,8 @@ var r = n(200651),
     U = n(881998),
     G = n(592125),
     B = n(944486),
-    F = n(246946),
-    V = n(9156),
+    V = n(246946),
+    F = n(9156),
     Z = n(768581),
     H = n(585483),
     W = n(49012),
@@ -430,7 +430,7 @@ let ef = (e) => {
             ),
             T = o.bot,
             N = (0, _.e7)([G.Z], () => G.Z.getDMFromUserId(null == T ? void 0 : T.id)),
-            A = (0, _.e7)([V.ZP], () => (null == N ? null : V.ZP.isChannelMuted(null, N))),
+            A = (0, _.e7)([F.ZP], () => (null == N ? null : F.ZP.isChannelMuted(null, N))),
             [C, P] = i.useState(!1),
             [D, x] = i.useState(!1),
             U = L.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
@@ -509,7 +509,7 @@ let ef = (e) => {
                         }
                     });
             },
-            F = i.useMemo(() => {
+            V = i.useMemo(() => {
                 if (null != o.description && '' !== o.description)
                     return (0, r.jsx)(g.Text, {
                         className: ei.markup,
@@ -528,7 +528,7 @@ let ef = (e) => {
                           collapsibleContent: (0, r.jsxs)('div', {
                               className: er.appDetailsContent,
                               children: [
-                                  e && F,
+                                  e && V,
                                   t &&
                                       (0, r.jsx)(eh, {
                                           application: o,
@@ -719,7 +719,7 @@ let ef = (e) => {
     },
     eE = (0, d.U)(() => ({ searchQuery: '' })),
     eb = () => {
-        let e = (0, _.e7)([F.Z], () => F.Z.hidePersonalInformation),
+        let e = (0, _.e7)([V.Z], () => V.Z.hidePersonalInformation),
             t = (0, _.e7)([U.Z], () => U.Z.getApps()),
             o = (0, _.e7)([z.default], () => z.default.locale),
             a = (0, _.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),

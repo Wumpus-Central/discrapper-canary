@@ -4,7 +4,7 @@ n.d(t, {
     lx: () => W,
     ml: () => H
 }),
-    n(411104);
+    n(415506);
 var o,
     a = n(442837),
     s = n(570140),
@@ -177,13 +177,13 @@ function N(e, t) {
 function A() {
     if (null == r) return !1;
     (I = r.getDuration()),
-        r.destroy(),
-        (r = null),
-        (O = null),
         s.Z.dispatch({
             type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
-            context: m.Yn.DEFAULT
-        });
+            mediaEngineConnectionId: r.getMediaEngineConnectionId()
+        }),
+        r.destroy(),
+        (r = null),
+        (O = null);
 }
 function C(e) {
     return (i = e.sessionId), (y = null), (v = null), A(), !1;
@@ -243,10 +243,10 @@ function G(e) {
 function B() {
     return !0;
 }
-function F(e) {
+function V(e) {
     return e.connection === r;
 }
-function V(e) {
+function F(e) {
     let { userId: t, context: n, quality: i } = e;
     null == r || r.setSimulcastDebugOverride(t, n, i);
 }
@@ -373,7 +373,7 @@ class Y extends (o = a.ZP.Store) {
     getStatsHistory(e, t) {
         if (null == t || null == e) return null;
         let n = t === _.default.getId();
-        return d.Z.getStatsHistory(m.Yn.DEFAULT).map((e) => (n ? H(e.rtp.outbound) : W(e.rtp.inbound[t])));
+        return d.Z.getStatsHistory(null == r ? void 0 : r.getMediaEngineConnectionId()).map((e) => (n ? H(e.stats.rtp.outbound) : W(e.stats.rtp.inbound[t])));
     }
 }
 g(Y, 'displayName', 'RTCConnectionStore');
@@ -387,7 +387,7 @@ let K = new Y(
               RTC_CONNECTION_STATE: G,
               RTC_CONNECTION_PING: B,
               RTC_CONNECTION_LOSS_RATE: B,
-              RTC_CONNECTION_UPDATE_ID: F,
+              RTC_CONNECTION_UPDATE_ID: V,
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: B,
               RTC_CONNECTION_CLIENT_CONNECT: B,
               RTC_CONNECTION_CLIENT_DISCONNECT: B,
@@ -403,7 +403,7 @@ let K = new Y(
               THREAD_DELETE: k,
               CALL_DELETE: M,
               APP_STATE_UPDATE: U,
-              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: V
+              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F
           }
 );
 Promise.resolve()

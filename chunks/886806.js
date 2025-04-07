@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(129293),
     d = n(388905),
     p = n(17894),
-    g = n(108427),
-    h = n(626135),
+    h = n(108427),
+    g = n(626135),
     f = n(981631),
     m = n(388032),
     _ = n(726401),
@@ -23,7 +23,7 @@ function N(e) {
         [l, N] = i.useState('submitting'),
         v = i.useRef(void 0);
     (0, c.ZP)(() => {
-        (0, g.e)('verify_email');
+        (0, h.e)('verify_email');
         let e = (0, u.Z)(t);
         if (null == e) return void N('failed');
         (async () => {
@@ -39,7 +39,7 @@ function N(e) {
             o(f.Z5c.LOGIN);
         }, [o]),
         I = i.useCallback(() => {
-            h.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, p.Z)('verify_email');
+            g.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, p.Z)('verify_email');
         }, []);
     return 'failed' === l
         ? (0, r.jsxs)(d.ZP, {

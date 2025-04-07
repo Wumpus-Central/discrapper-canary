@@ -84,7 +84,7 @@ function x(e) {
 function M(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { customGiftMessage: s = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: w, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: M, setValidatingGiftRecipient: j } = (0, O.wD)(),
-        { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: F, skuPricePreviewsById: V } = (0, I.JL)(),
+        { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: V, skuPricePreviewsById: F } = (0, I.JL)(),
         Z = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: W } = _.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
         Y = H && M === A.Wt.DM_CHANNEL,
@@ -99,11 +99,11 @@ function M(e) {
             y.default.track(N.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e);
         },
         Q = (e) => {
-            let t = V[e],
+            let t = F[e],
                 n = null;
             if (null != t) {
                 var i;
-                n = null != F && null != (i = t[F]) ? i : t[b.c];
+                n = null != V && null != (i = t[V]) ? i : t[b.c];
             }
             if (null == n) return;
             let o = (0, v.T4)(n.amount, n.currency);

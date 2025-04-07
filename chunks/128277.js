@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(301563);
+n.d(t, { Z: () => D }), n(35282);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -131,7 +131,7 @@ function D(e) {
                         )
                     });
         },
-        F = () => {
+        V = () => {
             let { timestamps: e } = o;
             if (null == e) return null;
             let { start: t, end: n } = e;
@@ -142,7 +142,7 @@ function D(e) {
                       end: n
                   });
         },
-        V = () =>
+        F = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
@@ -206,14 +206,14 @@ function D(e) {
                                         activity: o,
                                         className: A.badges
                                     }),
-                                    F()
+                                    V()
                                 ]
                             }),
-                            D === N.y0.FULL_SIZE && V()
+                            D === N.y0.FULL_SIZE && F()
                         ]
                     })
                 }),
-                D !== N.y0.FULL_SIZE && V()
+                D !== N.y0.FULL_SIZE && F()
             ]
         })
     });

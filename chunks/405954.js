@@ -1,11 +1,11 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(704215),
     o = n(481060),
     a = n(436952),
-    s = n(54480),
-    c = n(611725),
+    s = n(839606),
+    c = n(54480),
     u = n(605236),
     d = n(243778),
     p = n(626135),
@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(388032);
 let b = function (e) {
     let { channel: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: b, closePicker: _ } = (0, c.B)(),
-        { canAccessPicker: C, entryPoint: y } = (0, s.m)({
+        { activePickerChannelId: n, openPickerForChannel: b, closePicker: _ } = (0, s.B)(),
+        { canAccessPicker: C, entryPoint: y } = (0, c.m)({
             location: 'channel_header_toolbar',
             selectedChannelId: t.id
         }),

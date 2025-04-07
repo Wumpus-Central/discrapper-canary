@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(47120);
+n.d(t, { Z: () => U }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -24,8 +24,8 @@ var i = n(200651),
     P = n(783097),
     E = n(46332),
     A = n(176412),
-    O = n(870205),
-    I = n(981631),
+    I = n(870205),
+    O = n(981631),
     S = n(689079),
     T = n(388032),
     L = n(85884),
@@ -53,7 +53,7 @@ function Z(e) {
                         source: e,
                         commandOrigin: b.bB.APPLICATION_LAUNCHER
                     }),
-                    _.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
+                    _.S.dispatch(O.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
         }, [l, a, c, s]),
         p = (null != (n = null == (t = a.options) ? void 0 : t.length) ? n : 0) > 0,
         f = r.useMemo(() => (0, A.ae)(a.displayDescription, void 0), [a.displayDescription]),
@@ -299,7 +299,7 @@ function U(e) {
                       sectionName: a,
                       children:
                           x &&
-                          (0, i.jsx)(O.Z, {
+                          (0, i.jsx)(I.Z, {
                               sortOrder: b,
                               onSortOptionClick: C
                           })

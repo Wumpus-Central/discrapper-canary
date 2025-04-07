@@ -3,9 +3,9 @@ n.d(t, {
     ZP: () => ei,
     rp: () => B
 }),
-    n(411104),
-    n(266796),
-    n(47120);
+    n(415506),
+    n(953529),
+    n(388685);
 var r,
     i = n(200651),
     o = n(192379),
@@ -114,8 +114,8 @@ function G(e) {
 function B(e) {
     return 'autocomplete-'.concat(e, '-title');
 }
-let F = o.createContext(null);
-class V extends o.PureComponent {
+let V = o.createContext(null);
+class F extends o.PureComponent {
     isSelectable() {
         return this.selectable;
     }
@@ -175,7 +175,7 @@ class V extends o.PureComponent {
             (this.state = { hovered: !1 });
     }
 }
-class Z extends V {
+class Z extends F {
     renderContent() {
         let { text: e, description: t } = this.props;
         return (0, i.jsxs)(C.RX, {
@@ -202,7 +202,7 @@ function H(e) {
 }
 function W(e) {
     let { title: t, className: n, children: r } = e,
-        a = o.useContext(F);
+        a = o.useContext(V);
     return (0, i.jsx)('div', {
         className: D.base,
         children: (0, i.jsxs)(d.X6q, {
@@ -213,7 +213,7 @@ function W(e) {
         })
     });
 }
-class Y extends V {
+class Y extends F {
     renderContent() {
         let { className: e } = this.props;
         return (0, i.jsx)('div', { className: s()(e, D.divider) });
@@ -222,7 +222,7 @@ class Y extends V {
         super(...e), L(this, 'layoutClass', D.dividerContainer), L(this, 'selectable', !1);
     }
 }
-class K extends V {
+class K extends F {
     renderContent() {
         var e;
         let { user: t, nick: n, status: r, hidePersonalInformation: o, guildId: a } = this.props,
@@ -256,7 +256,7 @@ class K extends V {
         });
     }
 }
-class z extends V {
+class z extends F {
     renderContent() {
         let { role: e, hideDescription: t } = this.props,
             { colorString: n } = e,
@@ -285,7 +285,7 @@ class z extends V {
         });
     }
 }
-class q extends V {
+class q extends F {
     renderContent() {
         let { channel: e, category: t } = this.props,
             n = e.type === R.d4z.GUILD_CATEGORY ? d.ROc : (0, g.KS)(e);
@@ -294,7 +294,7 @@ class q extends V {
         });
     }
 }
-class Q extends V {
+class Q extends F {
     renderContent() {
         let { command: e } = this.props;
         return (0, i.jsxs)(C.RX, {
@@ -313,7 +313,7 @@ class Q extends V {
         });
     }
 }
-class X extends V {
+class X extends F {
     isSelectable() {
         return this.props.command.inputType !== _.iw.PLACEHOLDER;
     }
@@ -333,7 +333,7 @@ class X extends V {
               });
     }
 }
-class J extends V {
+class J extends F {
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
             r = O.Yk.getSetting(),
@@ -372,7 +372,7 @@ class J extends V {
         super(...e), L(this, 'layoutClass', s()(D.autocompleteRowVertical, D.autocompleteRowVerticalSmall));
     }
 }
-class $ extends V {
+class $ extends F {
     renderContent() {
         var e, t;
         let n,
@@ -395,7 +395,7 @@ class $ extends V {
         super(...e), L(this, 'layoutClass', s()(D.autocompleteRowVertical, D.autocompleteRowVerticalSmall));
     }
 }
-class ee extends V {
+class ee extends F {
     renderContent() {
         let { width: e, height: t, src: n } = this.props;
         return (0, i.jsx)('img', {
@@ -409,12 +409,12 @@ class ee extends V {
         super(...e), L(this, 'layoutClass', D.autocompleteRowHorizontal);
     }
 }
-class et extends V {
+class et extends F {
     renderContent() {
         return (0, i.jsx)(E.Z, { emojis: this.props.emojis });
     }
 }
-class en extends V {
+class en extends F {
     renderContent() {
         return (0, i.jsx)(b.Z, x({}, this.props));
     }
@@ -425,7 +425,7 @@ class er extends (r = o.PureComponent) {
             { children: t, className: n, innerClassName: r, id: a } = e,
             l = j(e, ['children', 'className', 'innerClassName', 'id']);
         return o.Children.count(t) > 0
-            ? (0, i.jsx)(F.Provider, {
+            ? (0, i.jsx)(V.Provider, {
                   value: { id: null != a ? a : '' },
                   children: (0, i.jsx)('div', {
                       className: s()(D.autocomplete, n),

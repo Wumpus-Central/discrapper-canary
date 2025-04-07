@@ -1,12 +1,12 @@
-_.r(I), _.d(I, { default: () => E });
-var a = _(200651);
-_(192379);
-var t = _(512969),
-    O = _(8991),
-    R = _(981631);
-function E() {
-    return (0, a.jsx)(t.AW, {
-        path: R.Z5c.APPLICATION_DIRECTORY,
-        component: O.E
+n.r(t), n.d(t, { default: () => o });
+var r = n(200651);
+n(192379);
+var i = n(512969),
+    l = n(8991),
+    a = n(981631);
+function o() {
+    return (0, r.jsx)(i.AW, {
+        path: a.Z5c.APPLICATION_DIRECTORY,
+        component: l.E
     });
 }

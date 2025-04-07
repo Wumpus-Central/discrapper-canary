@@ -66,12 +66,12 @@ let p = {
         if (L) {
             if (m) {
                 var B,
-                    F = 'y' === w ? r.we : r.t$,
-                    V = 'y' === w ? r.I : r.F2,
+                    V = 'y' === w ? r.we : r.t$,
+                    F = 'y' === w ? r.I : r.F2,
                     Z = 'y' === w ? 'height' : 'width',
                     H = L[w],
-                    W = H + A[F],
-                    Y = H - A[V],
+                    W = H + A[V],
+                    Y = H - A[F],
                     K = S ? -M[Z] / 2 : 0,
                     z = R === r.BL ? x[Z] : M[Z],
                     q = R === r.BL ? -M[Z] : -x[Z],
@@ -84,8 +84,8 @@ let p = {
                                   height: 0
                               },
                     J = t.modifiersData['arrow#persistent'] ? t.modifiersData['arrow#persistent'].padding : (0, f.Z)(),
-                    $ = J[F],
-                    ee = J[V],
+                    $ = J[V],
+                    ee = J[F],
                     et = (0, s.u)(0, x[Z], X[Z]),
                     en = P ? x[Z] / 2 - K - et - $ - j.mainAxis : z - et - $ - j.mainAxis,
                     er = P ? -x[Z] / 2 + K + et + ee + j.mainAxis : q + et + ee + j.mainAxis,

@@ -1,80 +1,80 @@
-n.d(t, { Z: () => u });
-var o = n(200651),
-    r = n(192379),
-    i = n(442837),
-    c = n(481060),
-    a = n(693546),
-    l = n(937111),
-    d = n(388032),
-    s = n(916199);
-let u = (e) => {
-    let { headerId: t, reapplyText: n, onReapply: u, confirmText: b, onWithdrawApplication: _, rejectionReason: f = null, guild: m = null } = e,
-        p = (0, i.e7)([l.Z], () => {
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(693546),
+    s = n(937111),
+    c = n(388032),
+    u = n(916199);
+let d = (e) => {
+    let { headerId: t, reapplyText: n, onReapply: d, confirmText: p, onWithdrawApplication: h, rejectionReason: f = null, guild: g = null } = e,
+        m = (0, l.e7)([s.Z], () => {
             var e;
-            return l.Z.getCooldown(null != (e = null == m ? void 0 : m.id) ? e : '0');
+            return s.Z.getCooldown(null != (e = null == g ? void 0 : g.id) ? e : '0');
         });
-    r.useEffect(() => {
-        null == p && null != m && a.Z.fetchJoinRequestCooldown(m.id);
-    }, [p, m]);
-    let g = (null != p ? p : 0) > 0,
-        I = g && null != p ? Math.ceil((1000 * p - Date.now()) / 86400000) : 0;
-    return (0, o.jsxs)('div', {
-        className: s.confirmation,
+    i.useEffect(() => {
+        null == m && null != g && o.Z.fetchJoinRequestCooldown(g.id);
+    }, [m, g]);
+    let b = (null != m ? m : 0) > 0,
+        _ = b && null != m ? Math.ceil((1000 * m - Date.now()) / 86400000) : 0;
+    return (0, r.jsxs)('div', {
+        className: u.confirmation,
         children: [
-            (0, o.jsx)('div', {
-                className: s.iconWrapper,
-                children: (0, o.jsx)(c.P$X, {
+            (0, r.jsx)('div', {
+                className: u.iconWrapper,
+                children: (0, r.jsx)(a.P$X, {
                     size: 'md',
-                    color: c.TVs.colors.INTERACTIVE_ACTIVE
+                    color: a.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, o.jsxs)('div', {
-                className: s.statusTextContainer,
+            (0, r.jsxs)('div', {
+                className: u.statusTextContainer,
                 children: [
-                    (0, o.jsx)(c.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         id: t,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        children: (null == m ? void 0 : m.name) != null ? d.NW.formatToPlainString(d.t['P+/gzM'], { guildName: m.name }) : d.NW.string(d.t.gBPcuL)
+                        children: (null == g ? void 0 : g.name) != null ? c.NW.formatToPlainString(c.t['P+/gzM'], { guildName: g.name }) : c.NW.string(c.t.gBPcuL)
                     }),
                     null != f && '' !== f
-                        ? (0, o.jsxs)(c.Text, {
+                        ? (0, r.jsxs)(a.Text, {
                               variant: 'text-md/medium',
                               color: 'header-secondary',
                               children: [
-                                  (0, o.jsx)('span', {
-                                      className: s.rejectionReasonLabel,
-                                      children: d.NW.string(d.t.cf1psb)
+                                  (0, r.jsx)('span', {
+                                      className: u.rejectionReasonLabel,
+                                      children: c.NW.string(c.t.cf1psb)
                                   }),
-                                  (0, o.jsx)('span', { children: f })
+                                  (0, r.jsx)('span', { children: f })
                               ]
                           })
                         : null
                 ]
             }),
-            (0, o.jsxs)('div', {
-                className: s.confirmationButtonRow,
+            (0, r.jsxs)('div', {
+                className: u.confirmationButtonRow,
                 children: [
-                    (0, o.jsx)(c.DY3, {
-                        className: s.confirmationButton,
-                        text: g ? d.NW.formatToPlainString(d.t.A0f0Pz, { days: I }) : null,
-                        'aria-label': g ? d.NW.formatToPlainString(d.t.A0f0Pz, { days: I }) : void 0,
-                        children: (0, o.jsx)(c.zxk, {
-                            className: s.confirmationTooltipContents,
-                            onClick: u,
-                            color: c.zxk.Colors.PRIMARY,
-                            size: c.zxk.Sizes.LARGE,
-                            submitting: null == p,
-                            disabled: g,
+                    (0, r.jsx)(a.DY3, {
+                        className: u.confirmationButton,
+                        text: b ? c.NW.formatToPlainString(c.t.A0f0Pz, { days: _ }) : null,
+                        'aria-label': b ? c.NW.formatToPlainString(c.t.A0f0Pz, { days: _ }) : void 0,
+                        children: (0, r.jsx)(a.zxk, {
+                            className: u.confirmationTooltipContents,
+                            onClick: d,
+                            color: a.zxk.Colors.PRIMARY,
+                            size: a.zxk.Sizes.LARGE,
+                            submitting: null == m,
+                            disabled: b,
                             children: n
                         })
                     }),
-                    (0, o.jsx)(c.zxk, {
-                        onClick: _,
-                        size: c.zxk.Sizes.LARGE,
-                        color: c.zxk.Colors.RED,
-                        className: s.confirmationButton,
-                        children: b
+                    (0, r.jsx)(a.zxk, {
+                        onClick: h,
+                        size: a.zxk.Sizes.LARGE,
+                        color: a.zxk.Colors.RED,
+                        className: u.confirmationButton,
+                        children: p
                     })
                 ]
             })

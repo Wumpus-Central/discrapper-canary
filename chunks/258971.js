@@ -6,11 +6,11 @@ n.d(t, {
     xF: () => f,
     z8: () => _
 }),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
+    n(65234),
+    n(111804),
+    n(490233),
+    n(97749),
+    n(388685);
 var r = n(512969),
     i = n(972959),
     o = n(703656),
@@ -23,7 +23,7 @@ var r = n(512969),
     })({});
 let d = (0, i.H)(() => ({}));
 var f = (function (e) {
-    return (e.EXTERNAL = 'External'), (e.KEYBOARD_SHORTCUT = 'Keyboard Shortcut'), (e.APPLICATION_DIRECTORY_URL = 'Application Directory URL'), (e.APPLICATION_DIRECTORY_PROFILE_EMBED = 'Application Directory Profile Embed'), (e.APPLICATION_DIRECTORY_UPSELL_MODAL = 'Application Directory Upsell Modal'), (e.GUILD_HEADER_POPOUT = 'Guild Header Popout'), (e.GUILD_SETTINGS = 'Guild Settings'), (e.GUILD_INTEGRATION_SETTINGS = 'Guild Integration Settings'), (e.GUILD_CONTEXT_MENU = 'Guild Context Menu'), (e.OAUTH2_EMBED = 'OAuth2 Embed'), (e.GLOBAL_DISCOVERY_BUTTON = 'Global Discovery Button'), (e.GLOBAL_DISCOVERY_SIDEBAR = 'Global Discovery Sidebar'), e;
+    return (e.EXTERNAL = 'External'), (e.KEYBOARD_SHORTCUT = 'Keyboard Shortcut'), (e.APPLICATION_DIRECTORY_URL = 'Application Directory URL'), (e.APPLICATION_MESSAGE_EMBED = 'Application Message Embed'), (e.APPLICATION_DIRECTORY_UPSELL_MODAL = 'Application Directory Upsell Modal'), (e.GUILD_HEADER_POPOUT = 'Guild Header Popout'), (e.GUILD_SETTINGS = 'Guild Settings'), (e.GUILD_INTEGRATION_SETTINGS = 'Guild Integration Settings'), (e.GUILD_CONTEXT_MENU = 'Guild Context Menu'), (e.OAUTH2_EMBED = 'OAuth2 Embed'), (e.GLOBAL_DISCOVERY_BUTTON = 'Global Discovery Button'), (e.GLOBAL_DISCOVERY_SIDEBAR = 'Global Discovery Sidebar'), e;
 })({});
 let _ = (0, i.H)(() => ({
     sessionId: null,

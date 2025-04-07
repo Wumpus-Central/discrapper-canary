@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(266796), n(47120);
+n.d(t, { Z: () => A }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -17,14 +17,14 @@ var r = n(200651),
     b = n(55935),
     x = n(63063),
     y = n(74538),
-    v = n(276444),
-    E = n(93237),
+    E = n(276444),
+    v = n(93237),
     O = n(786397),
     N = n(474936),
     j = n(981631),
     C = n(388032),
-    I = n(271818);
-function S(e, t, n) {
+    S = n(271818);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
@@ -89,7 +89,7 @@ class P extends i.Component {
         return (
             (c.disabled = u),
             (0, r.jsxs)('div', {
-                className: I.buttonContainer,
+                className: S.buttonContainer,
                 children: [
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(
@@ -125,7 +125,7 @@ class P extends i.Component {
                         )
                     }),
                     (0, r.jsx)('div', {
-                        className: I.metadata,
+                        className: S.metadata,
                         children: p
                     })
                 ]
@@ -137,35 +137,35 @@ class P extends i.Component {
         if (void 0 !== r.redeemed_at && !n && null !== i) return C.NW.formatToPlainString(C.t.nP0ivb, { date: (0, b.vc)(s()(i), 'LL') });
         if (e || void 0 === r.expires_at) return null;
         let a = new Date('2025-03-27T10:00:00.000-07:00');
-        return t ? C.NW.formatToPlainString(C.t.PuSHfX, { date: (0, b.vc)(s()(a), 'LL') }) : (0, E.F)(a.valueOf());
+        return t ? C.NW.formatToPlainString(C.t.PuSHfX, { date: (0, b.vc)(s()(a), 'LL') }) : (0, v.F)(a.valueOf());
     }
     renderMedia() {
-        return (0, r.jsx)('div', { className: I.referral });
+        return (0, r.jsx)('div', { className: S.referral });
     }
     render() {
         let { trialOffer: e, currentUser: t, recipientHasNitro: n } = this.props,
             i = (0, O.B)(e),
             a = t.id === e.referrer_id;
         return (0, r.jsxs)('div', {
-            className: l()(I.tile, I.container),
+            className: l()(S.tile, S.container),
             children: [
                 (0, r.jsx)('div', {
-                    className: I.media,
+                    className: S.media,
                     children: this.renderMedia()
                 }),
                 (0, r.jsxs)('div', {
-                    className: I.description,
+                    className: S.description,
                     children: [
                         (0, r.jsx)(d.H, {
-                            className: I.title,
+                            className: S.title,
                             children: this.renderTitle(n, i, a)
                         }),
                         (0, r.jsx)('div', {
-                            className: I.tagline,
+                            className: S.tagline,
                             children: this.renderBody(n, i, a)
                         }),
                         (0, r.jsx)('div', {
-                            className: I.actions,
+                            className: S.actions,
                             children: this.renderActions(n, i, a)
                         })
                     ]
@@ -175,7 +175,7 @@ class P extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'handleStartTrial', (e, t) => {
+            I(this, 'handleStartTrial', (e, t) => {
                 (0, h.Z)({
                     initialPlanId: null,
                     subscriptionTier: N.Si.TIER_2,
@@ -188,10 +188,10 @@ class P extends i.Component {
 function A(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: i, isResolving: a } = (0, u.cj)(
-            [v.Z],
+            [E.Z],
             () => ({
-                trialOffer: n ? v.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && v.Z.isResolving(t)
+                trialOffer: n ? E.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && E.Z.isResolving(t)
             }),
             [n, t]
         ),
@@ -219,7 +219,7 @@ function A(e) {
                 )
             )
           : (0, r.jsx)('div', {
-                className: I.invalidWrapper,
-                children: (0, r.jsx)('div', { className: I.invalid })
+                className: S.invalidWrapper,
+                children: (0, r.jsx)('div', { className: S.invalid })
             });
 }

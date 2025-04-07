@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120), n(733860);
+n.d(t, { Z: () => p }), n(388685), n(290780);
 var i,
     r = n(442837),
     l = n(570140),
@@ -20,7 +20,7 @@ function c(e, t, n) {
 }
 let u = [],
     d = new Set();
-class p extends (i = r.ZP.PersistedStore) {
+class g extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var t;
         this.waitFor(s.ZP, a.Z, o.Z), (d = new Set([...(u = null != (t = null == e ? void 0 : e.channelHistory) ? t : [])]));
@@ -32,8 +32,8 @@ class p extends (i = r.ZP.PersistedStore) {
         return u;
     }
 }
-c(p, 'displayName', 'RecentVoiceChannelStore'), c(p, 'persistKey', 'RecentVoiceChannelStore');
-let g = new p(l.Z, {
+c(g, 'displayName', 'RecentVoiceChannelStore'), c(g, 'persistKey', 'RecentVoiceChannelStore');
+let p = new g(l.Z, {
     POST_CONNECTION_OPEN: function () {
         d = new Set([...u]);
     },

@@ -1,4 +1,4 @@
-n.d(t, { e: () => d }), n(47120), n(301563);
+n.d(t, { e: () => d }), n(388685), n(35282);
 var r = n(772848),
     i = n(579806),
     a = n(626135),
@@ -18,13 +18,13 @@ function s(e, t, n) {
     );
 }
 let c = new (class {
-    trackEvent(e, t) {
-        let n = Date.now();
+    trackEvent(e) {
+        let t = Date.now();
         requestIdleCallback(() => {
-            var r, o;
+            var n, r;
             a.default.track(
-                e,
-                ((r = (function (e) {
+                l.rMx.APP_UI_VIEWED,
+                ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -73,14 +73,14 @@ let c = new (class {
                         );
                     })()
                 )),
-                (o = o =
+                (r = r =
                     {
                         load_id: this.loadId,
-                        screen_name: t,
-                        duration_ms_since_app_opened: n - window.GLOBAL_ENV.HTML_TIMESTAMP
+                        screen_name: e,
+                        duration_ms_since_app_opened: t - window.GLOBAL_ENV.HTML_TIMESTAMP
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -88,16 +88,16 @@ let c = new (class {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(r)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
-                r)
+                n)
             );
         });
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
-            this.trackEvent(l.rMx.APP_UI_VIEWED, e);
+            this.trackEvent(e);
             try {
                 o.ZP.appViewed();
             } catch (e) {}

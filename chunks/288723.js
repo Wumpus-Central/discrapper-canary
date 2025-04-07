@@ -74,19 +74,19 @@ let d = {
                     }),
                     B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
                 C[U] > R[U] && (B = (0, r.Z)(B));
-                var F = (0, r.Z)(B),
-                    V = [];
+                var V = (0, r.Z)(B),
+                    F = [];
                 if (
-                    (f && V.push(G[M] <= 0),
-                    p && V.push(G[B] <= 0, G[F] <= 0),
-                    V.every(function (e) {
+                    (f && F.push(G[M] <= 0),
+                    p && F.push(G[B] <= 0, G[V] <= 0),
+                    F.every(function (e) {
                         return e;
                     }))
                 ) {
                     (D = x), (w = !1);
                     break;
                 }
-                P.set(x, V);
+                P.set(x, F);
             }
             if (w)
                 for (

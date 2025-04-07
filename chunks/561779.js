@@ -1,4 +1,4 @@
-n.d(t, { i: () => T }), n(230036), n(411104), n(47120);
+n.d(t, { i: () => T }), n(642613), n(415506), n(388685);
 var r,
     i = n(200651),
     o = n(192379),
@@ -6,7 +6,7 @@ var r,
     s = n.n(a),
     l = n(392711),
     c = n.n(l),
-    u = n(642128),
+    u = n(200100),
     d = n(374470),
     f = n(143450),
     _ = n(84735),
@@ -137,9 +137,9 @@ class T extends (r = o.PureComponent) {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: o, markerPositions: a, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
             { disabled: m, stickToMarkers: E, className: y, children: O, barStyles: I, fillStyles: S, mini: T, hideBubble: A, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
-            F = 0;
-        E ? null != a && (null != c ? (F = a[c]) : null != l && (F = a[l])) : (F = this.scaleValue(t));
-        let V = ''.concat(F, '%'),
+            V = 0;
+        E ? null != a && (null != c ? (V = a[c]) : null != l && (V = a[l])) : (V = this.scaleValue(t));
+        let F = ''.concat(V, '%'),
             Z =
                 null != a && null != o
                     ? a.map((e, t) => {
@@ -172,7 +172,7 @@ class T extends (r = o.PureComponent) {
                           );
                       })
                     : null,
-            H = null != P ? P(t) : ''.concat(F.toFixed(0), '%'),
+            H = null != P ? P(t) : ''.concat(V.toFixed(0), '%'),
             W = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
         return (0, i.jsx)(N, {
             active: n,
@@ -222,7 +222,7 @@ class T extends (r = o.PureComponent) {
                                 style: I,
                                 children: (0, i.jsx)('div', {
                                     className: g.barFill,
-                                    style: v(b({}, S), { width: V })
+                                    style: v(b({}, S), { width: F })
                                 })
                             }),
                             O,
@@ -238,7 +238,7 @@ class T extends (r = o.PureComponent) {
                                             'div',
                                             v(b({}, e), {
                                                 className: s()(g.grabber, x),
-                                                style: v(b({}, M), { left: V }),
+                                                style: v(b({}, M), { left: F }),
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef
                                             })

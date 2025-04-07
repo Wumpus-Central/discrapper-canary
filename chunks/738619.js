@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(653041), n(47120);
+n.d(t, { Z: () => H }), n(539854), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -103,7 +103,7 @@ function G(e, t) {
     return i;
 }
 let B = [];
-class F extends i.PureComponent {
+class V extends i.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
             this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
@@ -155,7 +155,7 @@ class F extends i.PureComponent {
             });
     }
 }
-function V(e) {
+function F(e) {
     let { channel: t, guild: n } = e,
         i = [];
     return (0, r.jsx)(g.ZP, {
@@ -185,12 +185,12 @@ function Z(e) {
         A = (0, m.R6)('TypingUsers');
     if (0 === T.length && !S && !g)
         return i && null != n
-            ? (0, r.jsx)(F, {
+            ? (0, r.jsx)(V, {
                   activity: n,
                   isFocused: o,
                   isRefreshChatInputEnabled: A
               })
-            : (0, r.jsx)(V, {
+            : (0, r.jsx)(F, {
                   channel: u,
                   guild: v
               });

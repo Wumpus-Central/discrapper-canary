@@ -2,9 +2,9 @@ n.d(t, {
     O: () => ec,
     Z: () => ef
 }),
-    n(47120),
-    n(86693),
-    n(536091);
+    n(388685),
+    n(472816),
+    n(794429);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -43,8 +43,8 @@ var r = n(200651),
     U = n(421673),
     G = n(663215),
     B = n(835648),
-    F = n(650743),
-    V = n(495332),
+    V = n(650743),
+    F = n(495332),
     Z = n(343747),
     H = n(981631),
     W = n(474936),
@@ -233,9 +233,9 @@ function ef(e) {
         { categories: ex, allSounds: eM, soundCounts: ek } = (0, G.ZP)(o, { shownAllGuildIds: eL }, eh),
         [ej, eU] = i.useState([]),
         [eG, eB] = i.useState(!1),
-        eF = (0, G.FS)(ex, ej, eP).filter((e) => e.items.length > 0),
-        eV = eF.some((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
-        eZ = !eA && Q && eV,
+        eV = (0, G.FS)(ex, ej, eP).filter((e) => e.items.length > 0),
+        eF = eV.some((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+        eZ = !eA && Q && eF,
         eH = N.T4.useSetting(),
         eW = i.useMemo(() => new Set(eH), [eH]),
         eY = null == o,
@@ -281,9 +281,9 @@ function ef(e) {
         ),
         eX = i.useCallback(
             (e, n, i, s, l) => {
-                let c = eF[i.sectionIndex],
+                let c = eV[i.sectionIndex],
                     u = Q && ec(c.categoryInfo, eA, t) && eZ,
-                    d = i.sectionIndex === eF.length - 1 && i.rowIndex === i.totalRowCount - 1;
+                    d = i.sectionIndex === eV.length - 1 && i.rowIndex === i.totalRowCount - 1;
                 return (0, r.jsx)(
                     'ul',
                     X(q({}, n), {
@@ -293,7 +293,7 @@ function ef(e) {
                         }),
                         children: e.map((e, t) =>
                             (0, r.jsx)(
-                                V.Z,
+                                F.Z,
                                 {
                                     descriptor: e,
                                     soundButtonProps: {
@@ -322,26 +322,26 @@ function ef(e) {
                     'row-'.concat(n['aria-rowindex'])
                 );
             },
-            [eF, Q, eA, t, z, eQ, o, eY, eK, eR, ey, ef, eZ, eg, em]
+            [eV, Q, eA, t, z, eQ, o, eY, eK, eR, ey, ef, eZ, eg, em]
         ),
         eJ = i.useCallback(
             (e, t) => {
                 if (e <= 0 || !Q) return !1;
-                let n = eF[e],
-                    r = eF[e - 1],
+                let n = eV[e],
+                    r = eV[e - 1],
                     i = ec(n.categoryInfo, eA, t),
                     o = ec(r.categoryInfo, eA, t);
                 return i && !o;
             },
-            [eF, Q, eA]
+            [eV, Q, eA]
         ),
         e$ = i.useCallback((e) => (0 === e ? ei : eJ(e, t) ? er : en), [t, eJ]),
         e0 = i.useCallback(
             (e) => {
-                let t = e === eF.length - 1;
+                let t = e === eV.length - 1;
                 return eZ && t ? es : 0;
             },
-            [eF, eZ]
+            [eV, eZ]
         ),
         e1 = i.useCallback(
             (e, n) => {
@@ -365,10 +365,10 @@ function ef(e) {
         ),
         e2 = i.useCallback(
             (e, t) => {
-                let n = t === eF.length - 1;
+                let n = t === eV.length - 1;
                 return eZ && n ? (0, r.jsx)('div', { className: K.sectionFooter }) : null;
             },
-            [eF, eZ]
+            [eV, eZ]
         ),
         e3 = i.useCallback((e) => eU((0, U.cK)(e, Array.from(eM.values()).flat(), eN, o, ey)), [o, eN, eM, ey]),
         e4 = i.useCallback(
@@ -380,7 +380,7 @@ function ef(e) {
             },
             [ey]
         ),
-        e6 = i.useCallback(
+        e5 = i.useCallback(
             () =>
                 em
                     ? (0, r.jsx)(v.Hh, {
@@ -407,7 +407,7 @@ function ef(e) {
                       }),
             [em, e4]
         ),
-        e5 = i.useCallback(
+        e6 = i.useCallback(
             (e) =>
                 (0, r.jsx)(B.Z, {
                     soundboardListRef: e,
@@ -419,15 +419,15 @@ function ef(e) {
                 }),
             [ex, eZ, e_, t, em]
         ),
-        e7 = () => {
+        e8 = () => {
             let e = L.Z.getSoundById(el);
             null != e && eT(e);
         },
-        e8 = i.useCallback(() => {
+        e7 = i.useCallback(() => {
             let e = (0, D.Px)(W.p9.TIER_2);
             return Y.NW.format(Y.t['tw/SSk'], {
                 nitroTierName: e,
-                onClick: e7
+                onClick: e8
             });
         }, []),
         e9 = i.useCallback(
@@ -435,19 +435,19 @@ function ef(e) {
                 eZ
                     ? (0, r.jsx)(O.p, {
                           showUpsell: eG,
-                          text: e8(),
+                          text: e7(),
                           button: Y.NW.string(Y.t.pj0XBA),
                           buttonAnalyticsObject: { section: H.jXE.SOUND_PICKER_FLOATING_UPSELL }
                       })
                     : null,
-            [e8, eG, eZ]
+            [e7, eG, eZ]
         ),
         te = i.useCallback(
             (e) => {
                 var t;
                 return (null == e ? void 0 : e.item.type) !== x.vB.SOUND
                     ? null
-                    : (0, r.jsx)(F.Z, {
+                    : (0, r.jsx)(V.Z, {
                           closePicker: g,
                           soundboardSound: null != (t = null == e ? void 0 : e.item.sound) ? t : null
                       });
@@ -501,7 +501,7 @@ function ef(e) {
                       })
                     : void 0,
                 (0, r.jsx)(y.Z, {
-                    categories: eF,
+                    categories: eV,
                     collapsedCategories: eW,
                     containerWidth: d,
                     store: E.Wq,
@@ -512,8 +512,8 @@ function ef(e) {
                     renderRow: eX,
                     renderSectionHeader: e1,
                     renderSectionFooter: e2,
-                    renderCategoryList: e5,
-                    renderHeaderAccessories: e6,
+                    renderCategoryList: e6,
+                    renderHeaderAccessories: e5,
                     rowHeight: eg ? et : ee,
                     sectionHeaderHeight: e$,
                     sectionFooterHeight: e0,

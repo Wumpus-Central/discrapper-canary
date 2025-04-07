@@ -1,49 +1,49 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    a = n(481060),
-    l = n(289823),
-    s = n(594174);
-let c = function (e) {
-    var { recipients: t, size: n, status: c, isTyping: o, className: u } = e,
+var i = n(442837),
+    l = n(481060),
+    o = n(289823),
+    a = n(594174);
+let u = function (e) {
+    var { recipients: t, size: n, status: u, isTyping: s, className: c } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
-                r = (function (e, t) {
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        i,
-                        r = {},
-                        a = Object.keys(e);
-                    for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < a.length; i++) (n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ['recipients', 'size', 'status', 'isTyping', 'className']);
-    let f = a.ny6[n],
-        p = (0, r.Wu)(
-            [s.default],
+    let p = l.ny6[n],
+        f = (0, i.Wu)(
+            [a.default],
             () =>
                 t.slice(0, 2).map((e) => {
-                    let t = s.default.getUser(e);
-                    if (null != t) return t.getAvatarURL(void 0, f.size, !1);
+                    let t = a.default.getUser(e);
+                    if (null != t) return t.getAvatarURL(void 0, p.size, !1);
                 }),
-            [t, f.size]
+            [t, p.size]
         );
-    return (0, i.jsx)(l.Z, {
+    return (0, r.jsx)(o.Z, {
         'aria-label': d['aria-label'],
         'aria-hidden': d['aria-hidden'],
-        backSrc: p[0],
-        frontSrc: p[1],
+        backSrc: f[0],
+        frontSrc: f[1],
         size: n,
-        status: c,
-        isTyping: null != o && o,
-        className: u
+        status: u,
+        isTyping: null != s && s,
+        className: c
     });
 };

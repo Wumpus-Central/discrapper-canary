@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(47120);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(481060),
@@ -70,17 +70,17 @@ function P(e) {
     i.useEffect(() => {
         null == D || D(null == G ? void 0 : G.current);
     }, [G, D]);
-    let F = () => {
+    let V = () => {
             null == L || L(), (0, S.openUserProfileModal)(R({ sourceAnalyticsLocations: j }, U));
         },
-        V = !x && (0, c.Z)(t.id),
+        F = !x && (0, c.Z)(t.id),
         Z = () =>
-            V
+            F
                 ? (0, r.jsx)(o.sNh, {
                       id: 'view-profile',
                       label: N.NW.string(N.t['+Xp3ho']),
                       action: () => {
-                          F(),
+                          V(),
                               (0, p.pQ)(
                                   R(
                                       {
@@ -128,7 +128,7 @@ function P(e) {
                                         guildId: n,
                                         channelId: C,
                                         profileType: T.y0.BITE_SIZE,
-                                        onOpenProfile: V ? F : void 0
+                                        onOpenProfile: F ? V : void 0
                                     }),
                                     t.isClyde() && (0, r.jsx)(u.Z, { className: A.headerTag })
                                 ]
@@ -141,7 +141,7 @@ function P(e) {
                                         user: t,
                                         profileType: T.y0.BITE_SIZE,
                                         nickname: f.ZP.getName(n, C, t),
-                                        onOpenProfile: V ? F : void 0,
+                                        onOpenProfile: F ? V : void 0,
                                         tags: (0, r.jsx)(g.Z, {
                                             displayProfile: k,
                                             profileType: T.y0.BITE_SIZE,

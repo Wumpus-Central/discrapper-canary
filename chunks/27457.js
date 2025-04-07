@@ -2,7 +2,7 @@ n.d(t, {
     BP: () => eg,
     ZP: () => eb
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -200,9 +200,9 @@ let ed = [en.fO.ACTIVITY, en.fO.PRESENCE_EMBEDDED_ACTIVITY],
             e1 = (0, I.lL)('CallTile', !0, eG, e4),
             e6 = (0, s.e7)([A.Z], () => (H.type === en.fO.USER && null != eW ? A.Z.getEffectForUserId(eW) : null)),
             e3 = (0, s.e7)([V.Z], () => V.Z.getVoicePlatformForChannel(eb.id, null != eW ? eW : et.lds)),
-            { simplifiedSettingsEnabled: e9 } = (0, F.Z)({ location: 'CallTile' }),
-            { showGameIcon: e8 } = E.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
-            e2 = (0, s.e7)([D.Z], () => (e8 && null != eW ? D.Z.findActivity(eW, (e) => null != e.application_id && e.type === et.IIU.PLAYING) : null), [e8, eW]),
+            { simplifiedSettingsEnabled: e8 } = (0, F.Z)({ location: 'CallTile' }),
+            { showGameIcon: e9 } = E.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
+            e2 = (0, s.e7)([D.Z], () => (e9 && null != eW ? D.Z.findActivity(eW, (e) => null != e.application_id && e.type === et.IIU.PLAYING) : null), [e9, eW]),
             e7 = (0, s.e7)([M.Z], () => ((null == e2 ? void 0 : e2.application_id) != null ? M.Z.getDetectableGame(e2.application_id) : null)),
             e5 = (0, s.e7)([_.Z], () => (null != e7 && (null == e2 ? void 0 : e2.application_id) != null ? _.Z.getApplication(null == e2 ? void 0 : e2.application_id) : void 0)),
             te = (0, L.wV)({
@@ -323,7 +323,7 @@ let ed = [en.fO.ACTIVITY, en.fO.PRESENCE_EMBEDDED_ACTIVITY],
         }
         let t_ = i.useRef(null),
             tf = H.type === en.fO.STREAM ? c.pzj : c.Odl,
-            th = e9 ? eh : em;
+            th = e8 ? eh : em;
         return (0, r.jsx)(d.Z, {
             section: et.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsxs)('div', {
@@ -361,7 +361,7 @@ let ed = [en.fO.ACTIVITY, en.fO.PRESENCE_EMBEDDED_ACTIVITY],
                                     'aria-label': tp,
                                     className: es.tileChild,
                                     onDoubleClick: ta,
-                                    onContextMenu: (e) => tc(e, e9 && H.type === en.fO.STREAM),
+                                    onContextMenu: (e) => tc(e, e8 && H.type === en.fO.STREAM),
                                     onClick: ts,
                                     onMouseDown: eu,
                                     onKeyDown: ep,

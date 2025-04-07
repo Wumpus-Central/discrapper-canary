@@ -1,4 +1,4 @@
-t(13667), t(390547), t(47120), t(230036), t(301563), t(566702), t(474991), t(398202), t(653041);
+t(361932), t(187205), t(388685), t(642613), t(35282), t(781311), t(413496), t(433524), t(539854);
 var n = t(658722),
     a = t.n(n),
     o = t(624138),
@@ -15,11 +15,11 @@ function f(e) {
 }
 self.addEventListener('message', (e) => {
     let {
-            data: { id: r, searchTerm: t, searchStrings: n, searchType: s, sortType: c, jaroWinklerSearchThreshold: h }
+            data: { id: r, searchTerm: t, searchStrings: n, searchType: c, sortType: s, jaroWinklerSearchThreshold: h }
         } = e,
         p = [];
     for (let e of u(t))
-        switch (s) {
+        switch (c) {
             case i.S.REGEX:
                 p.push(
                     ...(function (e, r) {
@@ -61,9 +61,9 @@ self.addEventListener('message', (e) => {
                     })(e, n)
                 );
         }
-    let m = [...new Set(p)];
-    c === i.E.JARO_WINKLER &&
-        (m = (function (e, r, t) {
+    let d = [...new Set(p)];
+    s === i.E.JARO_WINKLER &&
+        (d = (function (e, r, t) {
             let n = u(e);
             return t
                 .map((e) => {
@@ -75,10 +75,10 @@ self.addEventListener('message', (e) => {
                 })
                 .sort((e, r) => r.rank - e.rank)
                 .map((e) => e.index);
-        })(t, n, m));
-    let d = {
+        })(t, n, d));
+    let m = {
         id: r,
-        foundItemIndexes: m
+        foundItemIndexes: d
     };
-    self.postMessage(d);
+    self.postMessage(m);
 });

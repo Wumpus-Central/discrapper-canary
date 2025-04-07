@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r,
     i,
     o,
@@ -9,7 +9,7 @@ var r,
     u = n(723359);
 let d = null,
     p = 'underage';
-class g extends (o = l.ZP.Store) {
+class h extends (o = l.ZP.Store) {
     isUnderageAnonymous() {
         if (c.isPlatformEmbedded && 1) {
             if (null != d && d + u.k0 > Date.now()) return !0;
@@ -18,15 +18,15 @@ class g extends (o = l.ZP.Store) {
     }
 }
 (i = 'AgeGateStore'),
-    (r = 'displayName') in g
-        ? Object.defineProperty(g, r, {
+    (r = 'displayName') in h
+        ? Object.defineProperty(h, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (g[r] = i);
-let h = new g(s.Z, {
+        : (h[r] = i);
+let g = new h(s.Z, {
     AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
         (d = Date.now()), (document.cookie = ''.concat(p, '=1;path=/'));
     },

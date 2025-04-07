@@ -1,4 +1,4 @@
-n.d(t, { B: () => i }), n(47120);
+n.d(t, { B: () => i }), n(388685);
 var r = n(866442);
 function i(e) {
     let { backgroundColor: t, colors: n } = e,

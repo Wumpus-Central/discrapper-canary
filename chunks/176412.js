@@ -1,32 +1,32 @@
 n.d(t, {
-    Bm: () => T,
-    P7: () => N,
+    Bm: () => N,
+    P7: () => T,
     X: () => D,
     ae: () => S
 });
 var i,
     r,
-    o = n(192379),
-    l = n(392711),
-    c = n.n(l),
+    l = n(192379),
+    o = n(392711),
+    c = n.n(o),
     a = n(442837),
     u = n(25209),
     d = n(481060),
-    s = n(2052),
-    p = n(542094),
+    p = n(2052),
+    s = n(542094),
     f = n(513202),
     v = n(367907),
     b = n(213459),
     y = n(895924),
-    m = n(691424),
+    O = n(691424),
     E = n(428595),
-    O = n(364458),
-    g = n(585483),
-    P = n(499254),
+    m = n(364458),
+    P = n(585483),
+    g = n(499254),
     h = n(541099),
-    Z = n(827498),
-    w = n(346683),
-    _ = n(981631),
+    w = n(827498),
+    _ = n(346683),
+    Z = n(981631),
     A = n(388032);
 let I =
         ((i = (function (e) {
@@ -69,10 +69,10 @@ let I =
               }),
         i),
     j = c().pick(
-        (0, O.Z)([
+        (0, m.Z)([
             E.Z.RULES,
             { commandMention: I },
-            (0, m.Z)({
+            (0, O.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
             })
@@ -80,63 +80,63 @@ let I =
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
     S = u.w4(j);
-function N(e) {
-    let { context: t, application: n, location: i, sectionName: r, commandName: l, autoDismissOnClick: c = !0, launchingComponentId: u, submitting: m = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: O, playSolo: g = !1 } = e,
-        I = (0, s.O)(),
-        j = (0, p.Qv)({
+function T(e) {
+    let { context: t, application: n, location: i, sectionName: r, commandName: o, autoDismissOnClick: c = !0, launchingComponentId: u, submitting: O = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: m, playSolo: P = !1 } = e,
+        I = (0, p.O)(),
+        j = (0, s.Qv)({
             context: t,
             applicationId: n.id,
             fetchesApplication: E
         }),
-        S = (0, w.Q)(j),
-        N = (0, a.e7)([h.Z], () => h.Z.entrypoint()),
-        T = o.useMemo(() => {
+        S = (0, _.Q)(j),
+        T = (0, a.e7)([h.Z], () => h.Z.entrypoint()),
+        N = l.useMemo(() => {
             var e, i, r;
-            if ('channel' !== t.type || g) return null != (r = null == (e = n.bot) ? void 0 : e.id) ? r : null == (i = (0, b.If)(t, n.id).descriptor) ? void 0 : i.botId;
-        }, [t, n.id, n.bot, g]),
-        D = (0, p.w1)({
+            if ('channel' !== t.type || P) return null != (r = null == (e = n.bot) ? void 0 : e.id) ? r : null == (i = (0, b.If)(t, n.id).descriptor) ? void 0 : i.botId;
+        }, [t, n.id, n.bot, P]),
+        D = (0, s.w1)({
             applicationId: n.id,
-            botUserIdForAppDM: T,
+            botUserIdForAppDM: N,
             embeddedActivitiesManager: f.Z,
             context: t,
             locationObject: I.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                c && P.yT(Z.ti.ACTIVITY),
-                    (0, v.yw)(_.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                c && g.yT(w.ti.ACTIVITY),
+                    (0, v.yw)(Z.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
                         section_name: r,
                         action: S,
-                        source: N
+                        source: T
                     });
             },
             launchingComponentId: u,
             commandOrigin: y.bB.APPLICATION_LAUNCHER,
             sectionName: r,
-            source: N,
+            source: T,
             fetchesApplication: E,
-            onConfirmActivityLaunchChecksAlertOpen: O
+            onConfirmActivityLaunchChecksAlertOpen: m
         }),
-        C = d.Ttl.BRAND,
-        L = null != l ? l : A.NW.string(A.t.zKX8Nj);
+        L = d.Ttl.BRAND,
+        C = null != o ? o : A.NW.string(A.t.zKX8Nj);
     return (
-        S === p.JS.JOIN ? ((C = d.Ttl.GREEN), (L = A.NW.string(A.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((C = d.Ttl.RED), (L = A.NW.string(A.t['Hi1/aW']))),
+        S === s.JS.JOIN ? ((L = d.Ttl.GREEN), (C = A.NW.string(A.t.d9PsMj))) : S !== s.JS.LEAVE || O || ((L = d.Ttl.RED), (C = A.NW.string(A.t['Hi1/aW']))),
         {
             onActivityItemSelected: D,
             activityAction: S,
-            buttonColor: C,
-            buttonText: L
+            buttonColor: L,
+            buttonText: C
         }
     );
 }
-function T(e, t) {
+function N(e, t) {
     let n = h.Z.entrypoint(),
-        i = o.useMemo(
+        i = l.useMemo(
             () =>
-                (0, l.debounce)(
+                (0, o.debounce)(
                     (e, t) => {
-                        (0, v.yw)(_.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, v.yw)(Z.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: t
                         });
@@ -149,10 +149,10 @@ function T(e, t) {
                 ),
             []
         );
-    o.useEffect(() => {
+    l.useEffect(() => {
         null != e && i(e, n);
     }, [e, t, n, i]);
 }
 function D(e) {
-    g.S.dispatchToLastSubscribed(_.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+    P.S.dispatchToLastSubscribed(Z.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

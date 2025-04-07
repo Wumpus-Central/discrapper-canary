@@ -19,8 +19,8 @@ function b(e) {
         x = (0, m.Z)(u.Z),
         { showClipsHeaderEntrypoint: y } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
-            hasClips: v,
-            hasNewClips: E,
+            hasClips: E,
+            hasNewClips: v,
             lastClipsSession: O,
             remindersEnabled: N,
             hasAnyClipAnimations: j
@@ -32,8 +32,8 @@ function b(e) {
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations()
         })),
         C = null != O && O.newClipIds.length > 0,
-        I = (0, f.n)((e) => e.clipsButtonRef),
-        S = (0, f.n)((e) => e.setClipsButtonRef),
+        S = (0, f.n)((e) => e.clipsButtonRef),
+        I = (0, f.n)((e) => e.setClipsButtonRef),
         T = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: P, allowIdle: A } = (0, s.Y)('animation');
     function w() {
@@ -73,26 +73,26 @@ function b(e) {
             { modalKey: g.Qr }
         );
     }
-    return (i.useEffect(() => (j ? P() : A(), () => A()), [j, P, A]), y && x && v)
+    return (i.useEffect(() => (j ? P() : A(), () => A()), [j, P, A]), y && x && E)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != I &&
+                  null != S &&
                       t &&
                       N &&
                       C &&
                       !(0, l.$sL)() &&
                       !T &&
                       (0, r.jsx)(h.Z, {
-                          clipIconRef: I,
+                          clipIconRef: S,
                           lastClipsSession: O,
                           onOpenClipsGallery: w
                       }),
                   (0, r.jsx)('div', {
-                      ref: S,
+                      ref: I,
                       children: (0, r.jsx)(o.JO, {
                           className: b,
                           icon: l.AlX,
-                          showBadge: E,
+                          showBadge: v,
                           tooltip: _.NW.string(_.t.MXaLEB),
                           onClick: w
                       })

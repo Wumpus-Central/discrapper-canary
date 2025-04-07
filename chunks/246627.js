@@ -1,45 +1,45 @@
-r.d(t, { Z: () => i }), r(47120), r(653041);
-var n = r(192379),
-    a = r(442837),
-    o = r(235587);
-function i(e) {
-    let { guildId: t, leaderboardId: r, intervalStart: i } = e,
-        l = (0, a.Wu)(
-            [o.Z],
+n.d(t, { Z: () => o }), n(388685), n(539854);
+var r = n(192379),
+    i = n(442837),
+    l = n(235587);
+function o(e) {
+    let { guildId: t, leaderboardId: n, intervalStart: o } = e,
+        a = (0, i.Wu)(
+            [l.Z],
             () => {
-                var e, n;
-                return null != (n = null == (e = o.Z.getPrevLeaderboardRanks(t, r, i)) ? void 0 : e.ranks) ? n : [];
+                var e, r;
+                return null != (r = null == (e = l.Z.getPrevLeaderboardRanks(t, n, o)) ? void 0 : e.ranks) ? r : [];
             },
-            [t, i, r]
+            [t, o, n]
         ),
-        s = (0, a.Wu)(
-            [o.Z],
+        s = (0, i.Wu)(
+            [l.Z],
             () => {
-                var e, n;
-                return null != (n = null == (e = o.Z.getCurrentLeaderboardRanks(t, r, i)) ? void 0 : e.ranks) ? n : [];
+                var e, r;
+                return null != (r = null == (e = l.Z.getCurrentLeaderboardRanks(t, n, o)) ? void 0 : e.ranks) ? r : [];
             },
-            [t, i, r]
+            [t, o, n]
         );
     return {
-        rankChanges: n.useMemo(() => {
+        rankChanges: r.useMemo(() => {
             let e = new Map();
-            l.forEach((t, r) => {
-                e.set(t, r + 1);
+            a.forEach((t, n) => {
+                e.set(t, n + 1);
             });
             let t = [];
             return (
-                s.forEach((r, n) => {
-                    let a = n + 1,
-                        o = e.get(r);
-                    o !== a &&
+                s.forEach((n, r) => {
+                    let i = r + 1,
+                        l = e.get(n);
+                    l !== i &&
                         t.push({
-                            userId: r,
-                            currentRank: a,
-                            previousRank: o
+                            userId: n,
+                            currentRank: i,
+                            previousRank: l
                         });
                 }),
                 t
             );
-        }, [l, s])
+        }, [a, s])
     };
 }

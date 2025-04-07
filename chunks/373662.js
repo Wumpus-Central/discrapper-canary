@@ -58,8 +58,8 @@ function f(e, t) {
     return i;
 }
 let h = i.forwardRef(function (e, t) {
-    var { label: n, ariaLabel: i, tooltipText: a, tooltipColor: h, icon: g, iconProps: _, onClick: b, onTooltipShow: x, onTooltipHide: y, disabled: v, dangerous: E, separator: O, sparkle: N, showNewBadge: j, buttonClassName: C, children: I } = e,
-        S = f(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
+    var { label: n, ariaLabel: i, tooltipText: a, tooltipColor: h, icon: g, iconProps: _, onClick: b, onTooltipShow: x, onTooltipHide: y, disabled: E, dangerous: v, separator: O, sparkle: N, showNewBadge: j, buttonClassName: C, children: S } = e,
+        I = f(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
     let { canShowReactionsOnMessageHover: T } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         u.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
@@ -88,10 +88,10 @@ let h = i.forwardRef(function (e, t) {
                                         null == x || x(), b(e);
                                     },
                                     'aria-label': null != i ? i : n,
-                                    disabled: v,
-                                    dangerous: E
+                                    disabled: E,
+                                    dangerous: v
                                 },
-                                S
+                                I
                             )),
                             (u = u =
                                 {
@@ -108,10 +108,10 @@ let h = i.forwardRef(function (e, t) {
                                                   )
                                               )
                                             : null,
-                                        null != I
+                                        null != S
                                             ? (0, r.jsx)('div', {
                                                   className: l()(p.icon, p.buttonContent),
-                                                  children: I
+                                                  children: S
                                               })
                                             : null,
                                         N && (0, r.jsx)(o.K1N, {}),

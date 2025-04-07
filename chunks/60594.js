@@ -1,11 +1,11 @@
-n.d(t, { default: () => eh }), n(47120), n(653041), n(301563);
+n.d(t, { default: () => eh }), n(388685), n(539854), n(35282);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
     s = n.n(i),
     o = n(512722),
     a = n.n(o),
-    c = n(642128),
+    c = n(200100),
     d = n(209739),
     u = n.n(d),
     f = n(252258),
@@ -173,8 +173,8 @@ function em(e) {
         [e$, e1] = l.useState(e_),
         [e0, e2] = l.useState(ej),
         [e5, e3] = l.useState(ev),
-        [e4, e7] = l.useState(null != (o = R.I0.getSetting()) && o),
-        [e8, e6] = l.useState(null != em ? em : null),
+        [e4, e8] = l.useState(null != (o = R.I0.getSetting()) && o),
+        [e7, e6] = l.useState(null != em ? em : null),
         e9 = null != (d = null == eS ? void 0 : eS.id) ? d : eH,
         [te, tt] = l.useState(eA ? '' : void 0),
         tn = (0, I.Q3)('GoLiveModal');
@@ -403,9 +403,9 @@ function em(e) {
                             onChangeAudioDevice: (e) => eK(e),
                             onChangeGuild: () => eB(0),
                             onChangeSound: (e) => e3(e),
-                            onChangePreviewDisabled: (e) => e7(e),
+                            onChangePreviewDisabled: (e) => e8(e),
                             onClose: ex,
-                            selectedGuildId: e8,
+                            selectedGuildId: e7,
                             targetGuildPremiumTier: eE,
                             selectGuild: H
                         })

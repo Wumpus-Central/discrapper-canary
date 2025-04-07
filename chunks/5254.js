@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(47120);
+n.d(t, { Z: () => O }), n(388685);
 var i,
     r = n(392711),
     l = n.n(r),
@@ -8,7 +8,7 @@ var i,
     c = n(594174),
     u = n(388380),
     d = n(72937);
-function p(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,11 +21,11 @@ function p(e, t, n) {
         e
     );
 }
-let g = {},
+let p = {},
     f = 0,
     N = !1,
     h = !1;
-function y(e) {
+function m(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
@@ -36,7 +36,7 @@ function y(e) {
         contactNames: n
     };
 }
-class m extends (i = o.ZP.Store) {
+class y extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(c.default);
     }
@@ -44,24 +44,24 @@ class m extends (i = o.ZP.Store) {
         return f;
     }
     getSuggestions() {
-        return Object.entries(g).map((e) => {
+        return Object.entries(p).map((e) => {
             let [t, n] = e;
             return n;
         });
     }
     getSuggestion(e) {
-        return g[e];
+        return p[e];
     }
 }
-p(m, 'displayName', 'FriendSuggestionStore');
-let O = new m(s.Z, {
+g(y, 'displayName', 'FriendSuggestionStore');
+let O = new y(s.Z, {
     CONNECTION_OPEN: function (e) {
-        (g = {}), (f = e.friendSuggestionCount) > 0 ? ((h = !0), !N && h && ((N = !0), (h = !1), u.Z.fetch())) : (0, d.Z)();
+        (p = {}), (f = e.friendSuggestionCount) > 0 ? ((h = !0), !N && h && ((N = !0), (h = !1), u.Z.fetch())) : (0, d.Z)();
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
         var t, n;
-        let i = y(e.suggestion);
-        if (null != g[i.key]) return !1;
+        let i = m(e.suggestion);
+        if (null != p[i.key]) return !1;
         f++,
             (t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -74,11 +74,11 @@ let O = new m(s.Z, {
                             })
                         )),
                         i.forEach(function (t) {
-                            p(e, t, n[t]);
+                            g(e, t, n[t]);
                         });
                 }
                 return e;
-            })({}, g)),
+            })({}, p)),
             (n = n = { [i.key]: i }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -92,23 +92,23 @@ let O = new m(s.Z, {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            (g = t);
+            (p = t);
     },
     FRIEND_SUGGESTION_DELETE: function (e) {
-        (f = Math.max(0, --f)), delete g[e.suggestedUserId];
+        (f = Math.max(0, --f)), delete p[e.suggestedUserId];
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
         (N = !1),
             (t = e.suggestions),
-            (g = l()
+            (p = l()
                 .chain(t)
-                .map((e) => y(e))
+                .map((e) => m(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (f = l().keys(g).length);
+            (f = l().keys(p).length);
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        (N = !1), (g = {});
+        (N = !1), (p = {});
     }
 });

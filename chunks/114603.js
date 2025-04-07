@@ -47,8 +47,8 @@ var o,
     w = r(680566),
     x = r(638146),
     k = g('draft_tree_data_support'),
-    E = RegExp('\r', 'g'),
-    C = RegExp('\n', 'g'),
+    C = RegExp('\r', 'g'),
+    E = RegExp('\n', 'g'),
     D = RegExp('^\n', 'g'),
     O = RegExp('&nbsp;', 'g'),
     K = RegExp('&#13;?', 'g'),
@@ -226,7 +226,7 @@ var o,
             }),
             (e._addTextNode = function (t, e) {
                 var r = t.textContent;
-                '' === r.trim() && 'pre' !== this.wrapper && (r = ' '), 'pre' !== this.wrapper && (r = (r = r.replace(D, '')).replace(C, ' ')), this._appendText(r, e);
+                '' === r.trim() && 'pre' !== this.wrapper && (r = ' '), 'pre' !== this.wrapper && (r = (r = r.replace(D, '')).replace(E, ' ')), this._appendText(r, e);
             }),
             (e._addBreakNode = function (t, e) {
                 S(t) && this._appendText('\n', e);
@@ -311,7 +311,7 @@ var o,
 t.exports = function (t) {
     var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
-        n = e((t = t.trim().replace(E, '').replace(O, ' ').replace(K, '').replace(T, '')));
+        n = e((t = t.trim().replace(C, '').replace(O, ' ').replace(K, '').replace(T, '')));
     return n
         ? new j(F(r), function (t, e) {
               return 'li' === t ? ('ol' === e ? 'ordered-list-item' : 'unordered-list-item') : null;

@@ -71,7 +71,7 @@ var d = {
         appidExclude: u(o),
         credProps: u(o)
     },
-    g = {
+    h = {
         appid: u(o),
         appidExclude: u(o),
         credProps: u(o)
@@ -104,8 +104,8 @@ c({
             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
         })
     }),
-    s(g, (e) => e.getClientExtensionResults());
-var h = {
+    s(h, (e) => e.getClientExtensionResults());
+var g = {
         mediation: u(o),
         publicKey: c({
             challenge: c(a),
@@ -128,10 +128,10 @@ var h = {
             signature: c(a),
             userHandle: c(a)
         }),
-        clientExtensionResults: s(g, (e) => e.getClientExtensionResults())
+        clientExtensionResults: s(h, (e) => e.getClientExtensionResults())
     };
 function m(e) {
-    return l(r, h, e);
+    return l(r, g, e);
 }
 async function _(e) {
     let t = await navigator.credentials.get(e);

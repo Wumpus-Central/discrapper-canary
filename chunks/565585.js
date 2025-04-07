@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     card: 'card__88264',
     lurking: 'lurking__88264',
     padding: 'padding__88264',

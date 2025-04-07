@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120), n(411104);
+n.d(t, { Z: () => C }), n(388685), n(415506);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -98,9 +98,9 @@ function N(e) {
         [k, j] = i.useState(void 0),
         U = i.useRef(),
         { triggerAnimation: G, untriggerAnimation: B } = i.useContext(u.Rm),
-        F = _.Yk.useSetting(),
-        V = T(),
-        Z = null == w ? F : w,
+        V = _.Yk.useSetting(),
+        F = T(),
+        Z = null == w ? V : w,
         H = E.kV[S],
         W = i.useRef(null),
         Y = i.useMemo(() => {
@@ -109,13 +109,13 @@ function N(e) {
                 let e = !0 === A && Z;
                 return h.ZP.getEmojiURL({
                     id: f,
-                    animated: V && !0 === v && (e || x || !0 === N),
+                    animated: F && !0 === v && (e || x || !0 === N),
                     size: H
                 });
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error('Unknown Src for Emoji');
-        }, [v, Z, f, p, H, V, x, N, A, o]),
+        }, [v, Z, f, p, H, F, x, N, A, o]),
         K = i.useCallback(() => {
             null != Y &&
                 (U.current = (0, d.po)(Y, (e) => {
@@ -175,7 +175,7 @@ function N(e) {
                       channelId: g,
                       messageId: b,
                       emojiName: p,
-                      disable: !1 === Z || !1 === F,
+                      disable: !1 === Z || !1 === V,
                       emojiRef: J
                   }),
                   P

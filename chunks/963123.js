@@ -1,11 +1,11 @@
-n.d(t, { Z: () => X }), n(47120), n(653041);
+n.d(t, { Z: () => X }), n(388685), n(539854);
 var r = n(200651),
     l = n(192379),
     o = n(120356),
     i = n.n(o),
-    a = n(941208),
-    s = n(642128),
-    c = n(788347),
+    a = n(10106),
+    s = n(200100),
+    c = n(359959),
     u = n(670081),
     d = n(442837),
     m = n(780384),
@@ -168,9 +168,9 @@ function X(e) {
         e1 = l.useRef(!0),
         e2 = (null == (t = er.userStatus) ? void 0 : t.completedAt) != null,
         e6 = (0, _.km)((e) => e.transcript),
-        [e4, e7] = l.useState(null),
-        [e8, e9] = l.useState(!1),
-        [e3, e5] = l.useState(!1),
+        [e8, e4] = l.useState(null),
+        [e3, e9] = l.useState(!1),
+        [e7, e5] = l.useState(!1),
         [te, tt] = l.useState(null),
         tn = e2 ? (null != (b = null == (n = eJ.current) ? void 0 : n.duration) ? b : 0) : Math.max(ez.maxTimestampSec, ey.progressSeconds),
         tr = l.useMemo(
@@ -246,8 +246,8 @@ function X(e) {
         { forceSendCurrentSegment: t_ } = (0, P.Z)({
             getCurrentVideoTime: ty,
             isPlaying: eh === R.rq.PLAYING,
-            isMetadataLoaded: e8,
-            isInitialSeekComplete: e3,
+            isMetadataLoaded: e3,
+            isInitialSeekComplete: e7,
             onAnalytics: tO,
             emitIntervalMs: 4000,
             minSegmentDurationMs: 2000
@@ -257,7 +257,7 @@ function X(e) {
                 if ((tr.info('[QV] | updatePlayerState | playerState: '.concat(e)), eS(e), null != eJ.current))
                     switch (e) {
                         case R.rq.PLAYING:
-                            eJ.current.paused && tp(e4), e7(null), eJ.current.play();
+                            eJ.current.paused && tp(e8), e4(null), eJ.current.play();
                             break;
                         case R.rq.PAUSED:
                             eJ.current.paused || t_(), eJ.current.pause(), (eW.current = !1);
@@ -266,11 +266,11 @@ function X(e) {
                             t_(), eu(!1);
                     }
             },
-            [tp, e4, t_, eu, tr]
+            [tp, e8, t_, eu, tr]
         );
     l.useEffect(() => {
-        tf(e4);
-    }, [e4, tf]),
+        tf(e8);
+    }, [e8, tf]),
         l.useEffect(() => {
             eg && tv(ev, eh);
         }, [ev, eg, eh, tv]);
@@ -282,7 +282,7 @@ function X(e) {
         [e2, er, tr, tm]
     );
     l.useEffect(() => {
-        (ea !== p.Dvm.HIDDEN && ea !== p.Dvm.EXITING && ea !== p.Dvm.EXITED && (null == ea || !eE || eb || e2) && (!eg || ev || e2)) || null == eJ.current || eh !== R.rq.PLAYING || (tr.info('[QV] | Pausing video | playerState: '.concat(eh, ', parentTransitionState: ').concat(ea, ', visible: ').concat(eb, ', focused: ').concat(ev, ', isQuestCompleted: ').concat(e2)), tx(R.rq.PAUSED), e2 || e7(j.yE.LOST_FOCUS));
+        (ea !== p.Dvm.HIDDEN && ea !== p.Dvm.EXITING && ea !== p.Dvm.EXITED && (null == ea || !eE || eb || e2) && (!eg || ev || e2)) || null == eJ.current || eh !== R.rq.PLAYING || (tr.info('[QV] | Pausing video | playerState: '.concat(eh, ', parentTransitionState: ').concat(ea, ', visible: ').concat(eb, ', focused: ').concat(ev, ', isQuestCompleted: ').concat(e2)), tx(R.rq.PAUSED), e2 || e4(j.yE.LOST_FOCUS));
     }, [ea, ev, eg, eb, eE, eh, e2, tx, tN, tr]);
     let tD = () => ej(!0),
         tP = () => ej(!1),
@@ -323,7 +323,7 @@ function X(e) {
                         tI(0), tx(R.rq.PLAYING);
                         break;
                     case R.rq.PLAYING:
-                        tx(R.rq.PAUSED), e7(j.yE.PAUSE_BUTTON);
+                        tx(R.rq.PAUSED), e4(j.yE.PAUSE_BUTTON);
                         break;
                     default:
                         tx(R.rq.PLAYING);
@@ -557,7 +557,7 @@ function X(e) {
                         type: p.$jN.Type.WANDERING_CUBES,
                         className: W.loadingSpinner
                     }),
-                eh === R.rq.PAUSED && e4 === j.yE.LOST_FOCUS && (0, r.jsx)(z, {}),
+                eh === R.rq.PAUSED && e8 === j.yE.LOST_FOCUS && (0, r.jsx)(z, {}),
                 ec &&
                     eh !== R.rq.ENDED &&
                     (0, r.jsxs)(r.Fragment, {

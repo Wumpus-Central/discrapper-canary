@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(642128),
+    o = n(200100),
     s = n(990547),
     c = n(873546),
     u = n(481060),
@@ -30,8 +30,8 @@ let T = {
 function P(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: P } = e,
         { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: L } = (0, f.Z)(200, 300),
-        { enableEmojiCTA: w } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
+        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: w } = (0, f.Z)(200, 300),
+        { enableEmojiCTA: L } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, p.h)({
@@ -74,7 +74,7 @@ function P(e) {
         k = () => (n === y.hX.FRIEND_ANNIVERSARY ? v.NW.formatToPlainString(v.t['L2s/Nz'], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) }) : (0, b.Ou)(n)),
         M = () => (n === y.hX.FRIEND_ANNIVERSARY ? v.NW.string(v.t['4LohBA']) : (0, b.Ou)(n)),
         U = () =>
-            w
+            L
                 ? (0, r.jsx)(u.P3F, {
                       'aria-label': M(),
                       onClick: D,
@@ -83,7 +83,7 @@ function P(e) {
                           [S.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: R,
-                      onMouseLeave: L,
+                      onMouseLeave: w,
                       children: (0, r.jsx)(o.animated.div, {
                           className: C.spriteContainer,
                           children: (0, r.jsx)('div', { className: C.sprite })
@@ -92,7 +92,7 @@ function P(e) {
                 : (0, r.jsx)(u.zxk, {
                       onClick: D,
                       onMouseEnter: R,
-                      onMouseLeave: L,
+                      onMouseLeave: w,
                       children: (0, r.jsxs)('div', {
                           className: C.pillContentContainer,
                           children: [
@@ -128,7 +128,7 @@ function P(e) {
                 premiumGiftIntentCardType: N.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: x,
-                onMouseLeave: L,
+                onMouseLeave: w,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: I.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,

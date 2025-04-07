@@ -67,8 +67,8 @@ let P = (e) => {
                     allNamesString: null == B ? void 0 : B.name
                 };
         }
-        let F = (0, o.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
-            V = (0, o.e7)([E.Z], () => E.Z.isFocused()),
+        let V = (0, o.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
+            F = (0, o.e7)([E.Z], () => E.Z.isFocused()),
             Z = (0, o.e7)([l.Z], () => l.Z.useReducedMotion, []),
             H = m.Yk.useSetting(),
             W = (0, v.C1)(M, R(t) ? t : null),
@@ -143,11 +143,11 @@ let P = (e) => {
                   });
         }
         let X =
-            null != F
+            null != V
                 ? (0, r.jsx)(I.Z, {
                       className: A.__invalid_guildIcon,
-                      guild: F,
-                      shouldAnimate: !Z && V
+                      guild: V,
+                      shouldAnimate: !Z && F
                   })
                 : null;
         D = U && 'CREATE_EMOJI' === t.type ? N.NW.string(N.t.XCmLfH) : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (Y.has(t.guildId) ? N.NW.string(N.t['/K2RDA']) : N.NW.string(N.t.NZI2Zm)) : t.allNamesString;
@@ -159,7 +159,7 @@ let P = (e) => {
                       channel: j,
                       guildId: M,
                       intention: k,
-                      guild: F
+                      guild: V
                   });
         return (0, r.jsx)(p.Z, {
             className: L,

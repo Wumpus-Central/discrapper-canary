@@ -3,9 +3,9 @@ n.d(t, {
     Zb: () => T,
     sH: () => S
 }),
-    n(230036),
-    n(653041),
-    n(47120);
+    n(642613),
+    n(539854),
+    n(388685);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -82,7 +82,7 @@ function G(e) {
 function B(e) {
     return (0, _.r8)(e) ? S : (0, _.bw)(e) ? T : e;
 }
-function F() {
+function V() {
     let e = {},
         t = d.Z.getFavoriteChannels();
     for (let n in t) {
@@ -97,8 +97,8 @@ function F() {
     }
     return e;
 }
-function V(e) {
-    if (e === O.I_8) return F();
+function F(e) {
+    if (e === O.I_8) return V();
     let t = {},
         n = m.Z.getMutableGuildChannelsForGuild(e);
     for (let e in n)
@@ -110,7 +110,7 @@ function V(e) {
 }
 function Z(e) {
     let { id: t } = e,
-        n = V(t);
+        n = F(t);
     return (
         o().forEach(n, (n) => {
             let r = n.channel;

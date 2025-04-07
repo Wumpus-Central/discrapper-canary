@@ -1,11 +1,11 @@
-n.r(t), n.d(t, { default: () => eg }), n(301563), n(47120), n(566702);
+n.r(t), n.d(t, { default: () => eg }), n(35282), n(388685), n(781311);
 var r = n(200651),
     a = n(192379),
     i = n(120356),
     l = n.n(i),
     s = n(196434),
     o = n.n(s),
-    c = n(788347),
+    c = n(359959),
     d = n(91192),
     u = n(924826),
     m = n(536895),
@@ -693,20 +693,20 @@ function e_(e) {
             r.scrollHeight - a < (er ? Math.max(200, (0, en.KW)(ew)) : 200) && C();
         }, [eg, er, t.guild_id, t.id, ew, C]),
         e1 = (0, g.e7)([j.Z], () => j.Z.keyboardModeEnabled),
-        e6 = (0, ei.ZP)({
+        e9 = (0, ei.ZP)({
             id: 'forum-grid-view',
             isEnabled: er && e1,
             setFocus: e0
         }),
-        e9 = (0, el.Z)({
+        e6 = (0, el.Z)({
             listRef: ee,
             padding: 96,
             isEnabled: !er && e1,
             channel: t
         }),
-        e4 = e6.containerProps,
-        { ref: e8 } = e4,
-        e2 = eh(e4, ['ref']),
+        e8 = e9.containerProps,
+        { ref: e4 } = e8,
+        e2 = eh(e8, ['ref']),
         e5 = k.ZP.getSidebarState(t.id),
         e7 = null != e5 && (0, k.D5)(e5),
         te = (0, g.e7)([k.ZP], () => k.ZP.getSection(t.id)) === es.ULH.MEMBERS;
@@ -735,14 +735,14 @@ function e_(e) {
                             : null,
                         er
                             ? (0, r.jsx)(ei.KT, {
-                                  navigator: e6,
+                                  navigator: e9,
                                   children: (0, r.jsx)(
                                       p.GMG,
                                       eu(
                                           {
                                               ref: (e) => {
                                                   var t;
-                                                  (e8.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null), eX(e);
+                                                  (e4.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null), eX(e);
                                               },
                                               itemGutter: 16,
                                               padding: 24,
@@ -765,7 +765,7 @@ function e_(e) {
                                   )
                               })
                             : (0, r.jsx)(d.bG, {
-                                  navigator: e9,
+                                  navigator: e6,
                                   children: (0, r.jsx)(d.SJ, {
                                       children: (t) => {
                                           var { ref: n } = t,

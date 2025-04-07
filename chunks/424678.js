@@ -1,27 +1,27 @@
-r.d(t, { Z: () => s }), r(47120), r(301563);
-var n = r(200651),
-    a = r(192379),
-    o = r(481060);
-function i(e, t, r) {
+n.d(t, { Z: () => s }), n(388685), n(35282);
+var r = n(200651),
+    i = n(192379),
+    a = n(481060);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-class l extends a.PureComponent {
+class o extends i.PureComponent {
     render() {
-        let { text: e, lastItem: t, className: r } = this.props;
-        return (0, n.jsxs)('span', {
+        let { text: e, lastItem: t, className: n } = this.props;
+        return (0, r.jsxs)('span', {
             children: [
-                (0, n.jsx)(o.eee, {
-                    className: r,
+                (0, r.jsx)(a.eee, {
+                    className: n,
                     onClick: this.handleClick,
                     children: e
                 }),
@@ -31,34 +31,34 @@ class l extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            i(this, 'handleClick', () => {
+            l(this, 'handleClick', () => {
                 let { onClick: e, index: t } = this.props;
                 null == e || e(t);
             });
     }
 }
-class s extends a.PureComponent {
+class s extends i.PureComponent {
     render() {
         let e = this.props.artists.split(';');
         if (!this.props.canOpen) return e.join(', ');
         let t = e.length - 1;
-        return e.map((e, r) =>
-            (0, n.jsx)(
-                l,
+        return e.map((e, n) =>
+            (0, r.jsx)(
+                o,
                 {
                     text: e,
-                    index: r,
-                    lastItem: r === t,
+                    index: n,
+                    lastItem: n === t,
                     onClick: this.handleOpenSpotifyArtist,
                     className: this.props.linkClassName
                 },
-                'spotify-artist-'.concat(r)
+                'spotify-artist-'.concat(n)
             )
         );
     }
     constructor(...e) {
         super(...e),
-            i(this, 'handleOpenSpotifyArtist', (e) => {
+            l(this, 'handleOpenSpotifyArtist', (e) => {
                 let { onOpenSpotifyArtist: t } = this.props;
                 null == t || t(e);
             });

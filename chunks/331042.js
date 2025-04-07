@@ -2,14 +2,14 @@ n.d(t, {
     default: () => ep,
     e: () => eu
 }),
-    n(47120),
-    n(627341);
+    n(388685),
+    n(314940);
 var r = n(200651),
     i = n(192379),
     o = n(48026),
     a = n(512722),
     s = n.n(a),
-    l = n(642128),
+    l = n(200100),
     c = n(278074),
     u = n(979554),
     d = n(314794),
@@ -42,8 +42,8 @@ var r = n(200651),
     U = n(530618),
     G = n(141011),
     B = n(372654),
-    F = n(197831),
-    V = n(508925),
+    V = n(197831),
+    F = n(508925),
     Z = n(755419),
     H = n(616066),
     W = n(216541),
@@ -188,7 +188,7 @@ let ea = 880,
             .with(u.Z.EXTERNAL_SKU, () =>
                 (0, r.jsx)('div', {
                     className: et.avatarDecoration,
-                    children: (0, r.jsx)(V.b, { product: t })
+                    children: (0, r.jsx)(F.b, { product: t })
                 })
             )
             .otherwise(() => null);
@@ -545,7 +545,7 @@ let ea = 880,
                     className: et.confettiCanvas,
                     environment: E.current
                 }),
-                (0, r.jsx)(F.i, { options: v }),
+                (0, r.jsx)(V.i, { options: v }),
                 (0, r.jsx)(_.Y0X, {
                     hideShadow: !0,
                     transitionState: t,

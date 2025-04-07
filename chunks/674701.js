@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => k,
-    Z: () => R
+    U: () => R,
+    Z: () => k
 });
 var r,
     i = n(200651),
@@ -20,23 +20,23 @@ var r,
     b = n(28546),
     x = n(963249),
     y = n(703656),
-    v = n(594174),
-    E = n(626135),
+    E = n(594174),
+    v = n(626135),
     O = n(51144),
     N = n(479446),
     j = n(795448),
     C = n(441623),
-    I = n(317271),
-    S = n(474936),
+    S = n(317271),
+    I = n(474936),
     T = n(981631),
     P = n(182294),
     A = n(957825),
     w = n(388032),
     Z = n(587862),
-    k = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
-function R(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: l, onMouseLeave: k, popoutPosition: R, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
-        U = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+    R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
+function k(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: l, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
+        U = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: F } = (0, h.ZP)(),
         B = (0, c.e7)([C.Z], () => C.Z.getFriendAnniversaryYears(r.id));
     a.useEffect(() => {
@@ -50,7 +50,7 @@ function R(e) {
             }
         });
     }, [t, n]);
-    let G = () => (t === S.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: B }) : (0, N.Ou)(t)),
+    let G = () => (t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: B }) : (0, N.Ou)(t)),
         H = 'coachmark' === n,
         V = H ? Z.innerContentCoachmark : Z.innerContent,
         z = H ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
@@ -67,7 +67,7 @@ function R(e) {
             [Z.contentCoachmark]: H
         }),
         onMouseEnter: l,
-        onMouseLeave: k,
+        onMouseLeave: R,
         children: (0, i.jsxs)('div', {
             className: o()(V, { [Z.innerGlow]: M }),
             children: [
@@ -99,12 +99,12 @@ function R(e) {
                                     variant: 'text-md/medium',
                                     color: H ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
-                                    children: t === S.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, N.Ou)(t)
+                                    children: t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, N.Ou)(t)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     className: Y,
                                     variant: 'text-sm/normal',
-                                    children: t === S.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.S3fdq6, { numberOfYears: B }) : (0, N.Ou)(t)
+                                    children: t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.S3fdq6, { numberOfYears: B }) : (0, N.Ou)(t)
                                 })
                             ]
                         })
@@ -118,13 +118,13 @@ function R(e) {
                                 className: o()(Z.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
-                                        E.default.track(T.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        v.default.track(T.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
                                             cta_type: W
                                         }),
-                                        W === S.X2.VIEW_ALL
+                                        W === I.X2.VIEW_ALL
                                             ? ((0, y.uL)(T.Z5c.FRIENDS), m.Z.setSection(T.pJs.ALL))
-                                            : W === S.X2.SEND_MESSAGE &&
+                                            : W === I.X2.SEND_MESSAGE &&
                                               ((0, j.PV)(r.id),
                                               p.Z.openPrivateChannel(r.id).then(() => {
                                                   setTimeout(() => {
@@ -145,9 +145,9 @@ function R(e) {
                                         className: o()(Z.buttonText, $),
                                         children: (() => {
                                             switch (W) {
-                                                case S.X2.VIEW_ALL:
+                                                case I.X2.VIEW_ALL:
                                                     return w.NW.string(w.t.WkxniI);
-                                                case S.X2.SEND_MESSAGE:
+                                                case I.X2.SEND_MESSAGE:
                                                     return w.NW.string(w.t.I61IsL);
                                                 default:
                                                     return;
@@ -160,7 +160,7 @@ function R(e) {
                             className: Z.button,
                             onClick: (e) => {
                                 e.stopPropagation();
-                                let i = (0, I.F)(t);
+                                let i = (0, S.F)(t);
                                 (0, x.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
@@ -197,11 +197,11 @@ function R(e) {
                         })
                     ]
                 }),
-                null != R &&
+                null != k &&
                     (0, i.jsx)('div', {
                         className: o()(Z.connector, {
-                            [Z.leftPopoutConnector]: 'left' === R,
-                            [Z.rightPopoutConnector]: 'right' === R
+                            [Z.leftPopoutConnector]: 'left' === k,
+                            [Z.rightPopoutConnector]: 'right' === k
                         })
                     })
             ]

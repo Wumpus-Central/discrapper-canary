@@ -61,9 +61,9 @@ function a(e, t) {
     return r;
 }
 'undefined' != typeof window ? (r = window) : 'undefined' == typeof self ? (console.warn('Using browser-only version of superagent in non-browser environment'), (r = void 0)) : (r = self);
-let s = n(606419),
+let s = n(206339),
     l = n(164390),
-    c = n(339768),
+    c = n(699901),
     u = n(615252),
     d = n(517024),
     f = d.isObject,

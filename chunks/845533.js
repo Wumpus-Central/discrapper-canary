@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     container: 'container__000a3',
     header: 'header__000a3',
     headerBackground: 'headerBackground__000a3',

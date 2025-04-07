@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(47120), n(230036);
+n.d(t, { Z: () => Z }), n(388685), n(642613);
 var r = n(392711),
     i = n.n(r),
     o = n(51407),
@@ -193,19 +193,19 @@ function B(e) {
     let { context: t, userId: n } = e;
     n !== f.default.getId() && M(t, n, _.Z.isLocalMute(n, t));
 }
-function F(e) {
+function V(e) {
     let { context: t, userId: n } = e;
     n !== f.default.getId() && k(t, n, d.Z.isLocalSoundboardMuted(n));
 }
-class V extends l.Z {
+class F extends l.Z {
     constructor(...e) {
         super(...e),
             b(this, 'actions', {
                 POST_CONNECTION_OPEN: D,
                 AUDIO_SET_LOCAL_VOLUME: G,
                 AUDIO_TOGGLE_LOCAL_MUTE: B,
-                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: F
+                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: V
             });
     }
 }
-let Z = new V();
+let Z = new F();

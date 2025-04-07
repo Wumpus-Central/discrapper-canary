@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => eR }), n(47120);
+n.r(t), n.d(t, { default: () => eR }), n(388685);
 var r,
     i = n(442837),
     o = n(379649),
@@ -105,11 +105,11 @@ let R = new u.Z('OverlayRenderStore'),
 function B() {
     return w;
 }
-function F() {
+function V() {
     return D;
 }
-function V() {
-    return F() || B();
+function F() {
+    return V() || B();
 }
 function Z(e) {
     var t;
@@ -206,7 +206,7 @@ function J(e, t) {
                 overlayMethod: l.gl.OutOfProcessLimitedInteraction
             };
     }
-    if (!V())
+    if (!F())
         return {
             source: _.d.DEFAULT,
             enabledOOP: !1,
@@ -241,7 +241,7 @@ function J(e, t) {
             t = e.enabledLegacy && B();
         return N(S({}, e), { overlayMethod: t ? e.overlayMethod : l.gl.Disabled });
     }
-    if (!F() && B()) {
+    if (!V() && B()) {
         let e = (0, y.qT)(i);
         return N(S({}, e), { overlayMethod: e.enabledLegacy ? e.overlayMethod : l.gl.Disabled });
     }
@@ -260,7 +260,7 @@ function J(e, t) {
         case c.Jx.WINDOWED:
         case c.Jx.MAXIMIZED:
         case c.Jx.BORDERLESS_FULLSCREEN: {
-            let e = o.enabledOOP && F(),
+            let e = o.enabledOOP && V(),
                 t = o.enabledLegacy && B(),
                 n = s ? l.gl.OutOfProcessLimitedInteraction : l.gl.OutOfProcess;
             return N(S({}, o), {
@@ -297,7 +297,7 @@ async function $(e) {
         R.verbose('Skipping track for pid '.concat(e, ' - already tracked. Determining overlay method.')), await el(new Set([e]));
         return;
     }
-    if (!V()) return void R.verbose('Skipping track for pid '.concat(e, ' - overlay is disabled'));
+    if (!F()) return void R.verbose('Skipping track for pid '.concat(e, ' - overlay is disabled'));
     if (null == (await X(e))) return void R.error('Failed to track game '.concat(e));
     z(e, 'state', l.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION), eC.emitChange(), R.verbose('Determining initial overlay method for pid '.concat(e));
     let t = await en(e);
@@ -406,8 +406,8 @@ async function eo(e) {
     if ((n.overlayMethod === i.overlayMethod && n.oopEnabled === i.enabledOOP && n.legacyEnabled === i.enabledLegacy && i.overlayMethod !== l.gl.Disabled) || ((x === m.UNSET_PID || null === x) && n.state === l.mM.OVERLAY_RENDERING)) return t;
     let o = P === l.R5.OUT_OF_PROCESS_V2 || P === l.R5.OUT_OF_PROCESS_V3 || P === l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
         a = P === l.R5.IN_PROCESS_V2,
-        s = (0, y.PD)(n, r, F()),
-        c = (0, y.DH)(n, r, F());
+        s = (0, y.PD)(n, r, V()),
+        c = (0, y.DH)(n, r, V());
     switch (
         (R.verbose('Overlay method different for pid '.concat(e), {
             oldOverlayMethod: n.overlayMethod,
@@ -419,7 +419,7 @@ async function eo(e) {
             isForcedInProcess: a,
             isForcedOutOfProcess: o,
             legacyEnabled: B(),
-            overlayEnabled: F()
+            overlayEnabled: V()
         }),
         i.overlayMethod)
     ) {
@@ -504,7 +504,7 @@ function ep(e) {
     for (let t of e.removed) ee(t.pid);
 }
 function eh(e) {
-    if ((__OVERLAY__ && R.error('Running handleGameToggleOverlay While in Overlay Context!'), R.verbose('handleGameToggleOverlay', { action: e }), !V())) {
+    if ((__OVERLAY__ && R.error('Running handleGameToggleOverlay While in Overlay Context!'), R.verbose('handleGameToggleOverlay', { action: e }), !F())) {
         if ((R.verbose('handleGameToggleOverlay: overlay not enabled'), 'pid' in e.game)) {
             let t = e.game.pid,
                 n = Z(t);
@@ -520,7 +520,7 @@ function eh(e) {
         (null == e ? void 0 : e.legacyEnabled) !== n && z(t, 'legacyEnabled', n), (null == e ? void 0 : e.oopEnabled) !== r && z(t, 'oopEnabled', null != r && r);
     }
     let i = n && B(),
-        o = null != r && r && F();
+        o = null != r && r && V();
     return (
         i || o
             ? (R.verbose('handleGameToggleOverlay: game enabled changed', {
@@ -617,12 +617,12 @@ class eA extends (r = i.ZP.Store) {
     }
     getGlobalEnabledStatus() {
         return {
-            oopEnabled: F(),
+            oopEnabled: V(),
             legacyEnabled: B()
         };
     }
     getAnyGlobalEnabledOverlay() {
-        return F() || B();
+        return V() || B();
     }
     getPerGameEnabledStatus(e) {
         if (null == e)

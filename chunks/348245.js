@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => q }), n(47120);
+n.d(t, { Z: () => q }), n(388685);
 var i = n(512969),
     o = n(259443),
     a = n(433517),
@@ -209,7 +209,7 @@ function B() {
     let n = g.ZP.getSidebarState(e);
     (null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL && G(t, e);
 }
-function F(e) {
+function V(e) {
     let { guildId: t, channelId: n, context: r } = e;
     r === T.e3s &&
         (P({
@@ -218,7 +218,7 @@ function F(e) {
         }),
         G(t, n));
 }
-function V(e) {
+function F(e) {
     let { channel: t, messageId: n } = e,
         r = t.guild_id;
     null != r &&
@@ -296,10 +296,10 @@ class z extends d.Z {
                 OVERLAY_INITIALIZE: x,
                 CHANNEL_SELECT: k,
                 VOICE_CHANNEL_SELECT: j,
-                THREAD_CREATE: V,
+                THREAD_CREATE: F,
                 THREAD_LIST_SYNC: () => M(),
-                CHANNEL_CREATE: V,
-                CHANNEL_PRELOAD: F,
+                CHANNEL_CREATE: F,
+                CHANNEL_PRELOAD: V,
                 GUILD_CREATE: () => M(),
                 MESSAGE_END_EDIT: Z,
                 LOAD_MESSAGES_SUCCESS: W,

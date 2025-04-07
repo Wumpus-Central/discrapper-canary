@@ -3,13 +3,13 @@ n.d(t, {
     By: () => j,
     Lu: () => U,
     e9: () => W,
-    hG: () => F,
+    hG: () => V,
     nd: () => H,
     yT: () => Y
 }),
-    n(411104),
-    n(230036),
-    n(47120);
+    n(415506),
+    n(642613),
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -320,18 +320,18 @@ function B(e) {
         return t !== S.Xh.NONE_MONTH && t !== S.Xh.NONE_YEAR;
     });
 }
-function F(e) {
-    let { proratedInvoice: t, renewalInvoice: n } = e,
-        { intervalType: i, intervalCount: o } = (0, g.dn)(t),
-        { intervalType: a, intervalCount: s } = (0, g.dn)(n);
-    return i !== a || o !== s || t.subscriptionPeriodEnd.getTime() === n.subscriptionPeriodStart.getTime()
-        ? null
-        : (0, r.jsx)('div', {
-              className: A.subscriptionPeriodResetNotice,
-              children: N.NW.format(N.t.JWWD4O, { renewalDate: t.subscriptionPeriodEnd })
-          });
-}
 function V(e) {
+    let { proratedInvoice: t, renewalInvoice: n, overrideRenewalDate: i } = e,
+        { intervalType: o, intervalCount: a } = (0, g.dn)(t),
+        { intervalType: s, intervalCount: l } = (0, g.dn)(n);
+    if (o !== s || a !== l || t.subscriptionPeriodEnd.getTime() === n.subscriptionPeriodStart.getTime()) return null;
+    let c = null != i ? i : t.subscriptionPeriodEnd;
+    return (0, r.jsx)('div', {
+        className: A.subscriptionPeriodResetNotice,
+        children: N.NW.format(N.t.JWWD4O, { renewalDate: c })
+    });
+}
+function F(e) {
     let { isUpdate: t, currentInvoice: n, newInvoice: i, inTrialPeriod: o } = e,
         s = null != n ? (0, y.j)(n.invoiceItems) : null,
         l = null != n ? (0, g.dn)(n) : null,
@@ -458,7 +458,7 @@ function H(e) {
                             ]
                         }),
                         v
-                            ? (0, r.jsx)(V, {
+                            ? (0, r.jsx)(F, {
                                   isUpdate: s,
                                   currentInvoice: y,
                                   newInvoice: o,

@@ -90,7 +90,7 @@ var c = {
     './champion_38.jpg': '124094',
     './champion_39.jpg': '175893',
     './champion_4.jpg': '700562',
-    './champion_40.jpg': '26172',
+    './champion_40.jpg': '908355',
     './champion_41.jpg': '269177',
     './champion_412.jpg': '963322',
     './champion_42.jpg': '575768',

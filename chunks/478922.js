@@ -1,4 +1,4 @@
-n.d(t, { z: () => g }), n(47120);
+n.d(t, { z: () => g }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -92,8 +92,8 @@ function g(e, t, n) {
     return (0, i.forwardRef)(function (n, m) {
         var g,
             { onScroll: E, dir: b = 'ltr', sections: y, columns: v, getItemKey: O, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: N, renderItem: A, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
-            F = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
-        let V = i.useRef(null),
+            V = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
+        let F = i.useRef(null),
             Z = i.useRef(null),
             H = i.useRef({}),
             [W, Y] = i.useState(!1),
@@ -168,9 +168,9 @@ function g(e, t, n) {
         let el = (0, i.useCallback)(
             (e) => {
                 er(1),
-                    null == V.current ? Y(!0) : clearTimeout(V.current),
-                    (V.current = setTimeout(() => {
-                        (V.current = null), Y(!1);
+                    null == F.current ? Y(!0) : clearTimeout(F.current),
+                    (F.current = setTimeout(() => {
+                        (F.current = null), Y(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -194,7 +194,7 @@ function g(e, t, n) {
                             }),
                             style: (0, c.uT)(j)
                         },
-                        F
+                        V
                     ),
                     {
                         children: [

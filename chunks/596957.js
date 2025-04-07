@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(411104), n(47120), n(653041);
+n.d(t, { Z: () => k }), n(415506), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -70,8 +70,8 @@ function x(e, t) {
         e
     );
 }
-let L = [];
-function w() {
+let w = [];
+function L() {
     c.Z.setSection(P.pJs.ADD_FRIEND);
 }
 function R() {
@@ -82,7 +82,7 @@ function R() {
 }
 function D(e) {
     let { section: t, showSpamCta: n } = e,
-        l = i.useMemo(() => (n ? R : t !== P.pJs.PENDING ? w : void 0), [n, t]);
+        l = i.useMemo(() => (n ? R : t !== P.pJs.PENDING ? L : void 0), [n, t]);
     return (0, r.jsx)('div', {
         className: A.emptyStateContainer,
         children: (0, r.jsx)(
@@ -99,7 +99,7 @@ let k = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(p.Z.FRIENDS_LIST),
         { rows: l, section: c } = (0, o.cj)([_.ZP], () => _.ZP.getState()),
-        w = (0, o.e7)([E.Z], () => E.Z.isFocused()),
+        L = (0, o.e7)([E.Z], () => E.Z.isFocused()),
         { relationshipCount: k, hasBlockedOrIgnored: M } = (0, o.cj)([b.Z], () => ({
             relationshipCount: b.Z.getRelationshipCount(),
             hasBlockedOrIgnored: b.Z.getBlockedOrIgnoredIDs().length > 0
@@ -134,16 +134,16 @@ let k = function (e) {
                     })(e, ['key']);
                 switch (c) {
                     case P.pJs.PENDING:
-                        return (0, r.jsx)(y.Z, x(Z({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(y.Z, x(Z({}, n), { isFocused: L }), t);
                     case P.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(S.Z, x(Z({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(S.Z, x(Z({}, n), { isFocused: L }), t);
                     case P.pJs.ONLINE:
                     case P.pJs.ALL:
                     default:
-                        return (0, r.jsx)(O.Z, x(Z({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(O.Z, x(Z({}, n), { isFocused: L }), t);
                 }
             },
-            [w, c]
+            [L, c]
         ),
         B = i.useCallback(
             (e) => {
@@ -158,7 +158,7 @@ let k = function (e) {
         z = i.useMemo(() => l.filter(c, G[c]), [l, G, c]),
         Y = U && c === P.pJs.PENDING,
         K = i.useMemo(() => {
-            if (!Y) return L;
+            if (!Y) return w;
             let e = [];
             return (
                 z.forEach((t) => {

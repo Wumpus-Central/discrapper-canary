@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => V }), n(47120);
+n.d(t, { Z: () => F }), n(388685);
 var o,
     a = n(392711),
     s = n.n(a),
@@ -139,7 +139,7 @@ function B(e) {
     let { channelId: t } = e;
     T(t);
 }
-class F extends (o = l.ZP.Store) {
+class V extends (o = l.ZP.Store) {
     getAllVoiceStates() {
         return m;
     }
@@ -211,8 +211,8 @@ class F extends (o = l.ZP.Store) {
         return p;
     }
 }
-_(F, 'displayName', 'VoiceStateStore');
-let V = new F(c.Z, {
+_(V, 'displayName', 'VoiceStateStore');
+let F = new V(c.Z, {
     CONNECTION_OPEN: M,
     CONNECTION_OPEN_SUPPLEMENTAL: k,
     OVERLAY_INITIALIZE: j,

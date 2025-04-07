@@ -2,11 +2,11 @@ var r = n(538315),
     i = 'function' == typeof Symbol && 'symbol' == typeof Symbol('foo'),
     o = Object.prototype.toString,
     a = Array.prototype.concat,
-    s = n(445086),
+    s = n(834889),
     l = function (e) {
         return 'function' == typeof e && '[object Function]' === o.call(e);
     },
-    c = n(768175)(),
+    c = n(134533)(),
     u = function (e, t, n, r) {
         if (t in e) {
             if (!0 === r) {

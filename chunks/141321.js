@@ -17,14 +17,14 @@ var r = n(200651),
     b = n(264634);
 function x(e) {
     let { onOpen: t, onClose: n, className: x, 'data-jump-section': y } = e,
-        v = i.useRef(null),
-        E = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        E = i.useRef(null),
+        v = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         O = (0, o.Q3)('RecentsButton'),
         N = i.useRef(null),
-        j = (0, a.e7)([p.ZP], () => (null == E ? void 0 : E.id) != null && p.ZP.getMentionCount(E.id, g.W.NOTIFICATION_CENTER) > 0),
+        j = (0, a.e7)([p.ZP], () => (null == v ? void 0 : v.id) != null && p.ZP.getMentionCount(v.id, g.W.NOTIFICATION_CENTER) > 0),
         { enabled: C } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        I = (0, a.e7)([s.Z], () => C && s.Z.getUnseenInviteCount() > 0),
-        S = (0, l.dQu)(l.TVs.modules.chat.INPUT_ICON_SIZE);
+        S = (0, a.e7)([s.Z], () => C && s.Z.getUnseenInviteCount() > 0),
+        I = (0, l.dQu)(l.TVs.modules.chat.INPUT_ICON_SIZE);
     return (0, r.jsx)(f.k, {
         onOpen: t,
         onClose: n,
@@ -44,7 +44,7 @@ function x(e) {
                         }),
                     (0, r.jsx)(d.U, {
                         location: 'inbox-button',
-                        targetElementRef: v,
+                        targetElementRef: E,
                         children: (0, r.jsx)(
                             u.JO,
                             ((a = (function (e) {
@@ -74,15 +74,15 @@ function x(e) {
                             })({}, n)),
                             (o = o =
                                 {
-                                    ref: v,
+                                    ref: E,
                                     className: x,
                                     onClick: e,
                                     icon: l.xx7,
-                                    iconSize: O ? S : void 0,
+                                    iconSize: O ? I : void 0,
                                     'aria-label': _.NW.string(_.t.GSmTKC),
                                     tooltip: t ? null : _.NW.string(_.t.GSmTKC),
                                     selected: t,
-                                    showBadge: j || I || i,
+                                    showBadge: j || S || i,
                                     'data-jump-section': y
                                 }),
                             Object.getOwnPropertyDescriptors

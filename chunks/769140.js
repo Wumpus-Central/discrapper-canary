@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(47120);
+n.d(t, { Z: () => z }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(788858),
     G = n(384298),
     B = n(670451),
-    F = n(228168),
-    V = n(981631),
+    V = n(228168),
+    F = n(981631),
     Z = n(388032),
     H = n(227832),
     W = n(162509),
@@ -48,8 +48,8 @@ function z(e) {
     let { user: t, currentUser: n, stream: o, className: z, onClose: q } = e,
         { profileType: Q, theme: X } = (0, L.z)(),
         J = {
-            [W.fullSize]: Q === F.y0.FULL_SIZE,
-            [H.fullSize]: Q === F.y0.FULL_SIZE
+            [W.fullSize]: Q === V.y0.FULL_SIZE,
+            [H.fullSize]: Q === V.y0.FULL_SIZE
         },
         { enabled: $, analyticsEligible: ee } = (0, m.R4)('user-profile-stream-activity-card-web'),
         et = (0, s.e7)([T.Z], () => T.Z.getGuild(null == o ? void 0 : o.guildId)),
@@ -77,12 +77,12 @@ function z(e) {
         }),
         { previewUrl: el, isLoading: ec } = (0, b.Z)(null == o ? void 0 : o.guildId, null == o ? void 0 : o.channelId, null == o ? void 0 : o.ownerId),
         [eu, ed] = (0, y.wq)(en),
-        ef = (0, s.e7)([N.Z], () => null != en && N.Z.canBasicChannel(V.S7T.CONNECT, en)),
+        ef = (0, s.e7)([N.Z], () => null != en && N.Z.canBasicChannel(F.S7T.CONNECT, en)),
         e_ = (0, s.e7)([C.Z], () => C.Z.getRelationshipType(t.id));
     i.useEffect(() => {
         if (ee) {
             var e;
-            P.default.track(V.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+            P.default.track(F.rMx.USER_VOICE_ACTIVITY_VIEWED, {
                 activity_user_id: t.id,
                 discoverable: null == (e = o.discoverable) || e,
                 surface: 'user-profile-stream-activity-card',
@@ -100,7 +100,7 @@ function z(e) {
                     e.stopPropagation(), ea({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(o.channelId), (0, u.iV)(o), null == q || q();
                 },
                 n = (e) => {
-                    (e.keyCode === V.yXg.SPACE || e.keyCode === V.yXg.ENTER) && t(e);
+                    (e.keyCode === F.yXg.SPACE || e.keyCode === F.yXg.ENTER) && t(e);
                 };
             return null == eh && ec
                 ? (0, r.jsx)('div', {
@@ -115,9 +115,9 @@ function z(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: X === V.BRd.LIGHT ? K : Y
+                                src: X === F.BRd.LIGHT ? K : Y
                             }),
-                            Q !== F.y0.FULL_SIZE &&
+                            Q !== V.y0.FULL_SIZE &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
@@ -144,7 +144,7 @@ function z(e) {
                                 src: eh,
                                 className: W.image
                             }),
-                            Q !== F.y0.FULL_SIZE &&
+                            Q !== V.y0.FULL_SIZE &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
@@ -164,7 +164,7 @@ function z(e) {
                     });
         },
         eg = () => {
-            if (Q !== F.y0.FULL_SIZE) return null;
+            if (Q !== V.y0.FULL_SIZE) return null;
             let e = (e) => {
                     e.stopPropagation(), null == ea || ea({ action: 'OPEN_VOICE_CHANNEL' }), en.isGuildStageVoice() ? (0, I.Cq)(en) : (c.default.selectVoiceChannel(en.id), (0, v.Kh)(en.id)), null == q || q();
                 },
@@ -219,7 +219,7 @@ function z(e) {
             });
         },
         eE = () =>
-            Q === F.y0.FULL_SIZE
+            Q === V.y0.FULL_SIZE
                 ? null
                 : (0, r.jsx)(j.Z, {
                       user: t,
@@ -261,12 +261,12 @@ function z(e) {
                     children: [
                         (0, r.jsxs)('div', {
                             className: a()(H.content, J),
-                            children: [em(), eg(), Q === F.y0.FULL_SIZE && eb()]
+                            children: [em(), eg(), Q === V.y0.FULL_SIZE && eb()]
                         }),
                         eE()
                     ]
                 }),
-                Q !== F.y0.FULL_SIZE && eb()
+                Q !== V.y0.FULL_SIZE && eb()
             ]
         })
     });

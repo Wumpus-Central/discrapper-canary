@@ -4,13 +4,13 @@ n.d(t, {
     NK: () => Z,
     OP: () => S,
     Sw: () => W,
-    ZP: () => V,
+    ZP: () => F,
     ge: () => H,
     hU: () => U,
     nY: () => I,
     nj: () => Y
 }),
-    n(47120);
+    n(388685);
 var r = n(192379),
     i = n(462382),
     o = n(259346),
@@ -294,7 +294,7 @@ function B(e) {
         suspiciousMentionActivityUntil: null != u ? new Date(u) : void 0
     };
 }
-function F(e) {
+function V(e) {
     let t = A(e, s.G.CHANNEL_ID),
         n = A(e, s.G.ALERT_ACTIONS_EXECUTION),
         r = (0, h.t)(n);
@@ -317,14 +317,14 @@ function F(e) {
         alertActionsExecution: null != r ? r : void 0
     };
 }
-function V(e) {
-    let t = r.useMemo(() => F(e), [e]),
+function F(e) {
+    let t = r.useMemo(() => V(e), [e]),
         n = (0, f.e7)([_.Z], () => _.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
     return O(y({}, t), { embedChannel: n });
 }
 function Z(e) {
     if (null == e) return null;
-    let { alertActionsExecution: t } = F(e);
+    let { alertActionsExecution: t } = V(e);
     return null != t ? t : null;
 }
 function H(e) {

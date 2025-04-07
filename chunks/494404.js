@@ -3,8 +3,8 @@ n.d(t, {
     h4: () => w,
     nH: () => Z
 }),
-    n(47120),
-    n(653041);
+    n(388685),
+    n(539854);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -23,14 +23,14 @@ var r = n(200651),
     b = n(703656),
     x = n(210887),
     y = n(592125),
-    v = n(375954),
-    E = n(496675),
+    E = n(375954),
+    v = n(496675),
     O = n(933429),
     N = n(451478),
     j = n(626135),
     C = n(585483),
-    I = n(981631),
-    S = n(388032),
+    S = n(981631),
+    I = n(388032),
     T = n(555565);
 function P(e, t, n) {
     return (
@@ -86,7 +86,7 @@ let w = (e) => {
             ]
         });
     };
-class k extends i.PureComponent {
+class R extends i.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, r.jsxs)(d.P3F, {
@@ -95,7 +95,7 @@ class k extends i.PureComponent {
             children: [
                 (0, r.jsx)('div', {
                     className: l()(T.__invalid_text, { hidden: e }),
-                    children: S.NW.string(S.t.k5WiPT)
+                    children: I.NW.string(I.t.k5WiPT)
                 }),
                 (0, r.jsx)(d.$jN, {
                     type: d.$jN.Type.PULSING_ELLIPSIS,
@@ -137,19 +137,19 @@ class k extends i.PureComponent {
             });
     }
 }
-let R = u.ZP.connectStores([E.Z], (e) => {
+let k = u.ZP.connectStores([v.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && E.Z.can(I.Plq.MANAGE_MESSAGES, t) };
-})(k);
+    return { canManageMessages: null != t && v.Z.can(S.Plq.MANAGE_MESSAGES, t) };
+})(R);
 function D(e) {
-    let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: v, className: E, listName: w } = e,
+    let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: E, className: v, listName: w } = e,
         Z = i.useRef(null),
-        k = (0, f.Z)(w, Z),
-        R = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
+        R = (0, f.Z)(w, Z),
+        k = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
         D = (0, u.e7)([N.Z], () => N.Z.windowSize()),
         L = (0, g.Q3)('ItemsPopout');
     i.useEffect(() => {
-        j.default.track(I.rMx.OPEN_POPOUT, { type: t });
+        j.default.track(S.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         i.useEffect(() => {
             function e() {
@@ -161,10 +161,10 @@ function D(e) {
                 null == (e = Z.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
-                C.S.subscribe(I.CkL.SCROLL_PAGE_DOWN, t),
-                C.S.subscribe(I.CkL.SCROLL_PAGE_UP, e),
+                C.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, t),
+                C.S.subscribe(S.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    C.S.unsubscribe(I.CkL.SCROLL_PAGE_DOWN, t), C.S.unsubscribe(I.CkL.SCROLL_PAGE_UP, e);
+                    C.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, t), C.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, e);
                 }
             );
         }, []);
@@ -214,7 +214,7 @@ function D(e) {
                         color: d.zxk.Colors.PRIMARY,
                         size: d.zxk.Sizes.MAX,
                         onClick: p,
-                        children: S.NW.string(S.t.XBlaiI)
+                        children: I.NW.string(I.t.XBlaiI)
                     })
                 })
               : (0, r.jsx)('div', {
@@ -237,10 +237,10 @@ function D(e) {
                   })
                 : null,
         H = { maxHeight: D.height - 43 - 25 };
-    R && (H.maxHeight -= 40), L && (H.maxHeight -= 48);
+    k && (H.maxHeight -= 40), L && (H.maxHeight -= 48);
     let V = null != p && a;
     return (0, r.jsx)('div', {
-        className: l()(E, T.messagesPopoutWrap),
+        className: l()(v, T.messagesPopoutWrap),
         style: H,
         onClick: A,
         onDoubleClick: A,
@@ -249,12 +249,12 @@ function D(e) {
             component: m(),
             children: [
                 (0, r.jsxs)(d.Den, {
-                    className: l()(T.messagesPopout, v),
+                    className: l()(T.messagesPopout, E),
                     onScroll: V ? M : void 0,
                     ref: Z,
                     children: [
                         (0, r.jsx)(c.bG, {
-                            navigator: k,
+                            navigator: R,
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var t,
@@ -324,28 +324,28 @@ function D(e) {
     });
 }
 function L(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: O, className: N, onCloseMessage: j, listName: C } = e,
-        P = (0, u.e7)([v.Z], () => {
-            let e = null != a ? v.Z.getMessages(a.id) : null;
+    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: v, scrollerClassName: O, className: N, onCloseMessage: j, listName: C } = e,
+        P = (0, u.e7)([E.Z], () => {
+            let e = null != a ? E.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function A(e, n) {
         let { id: r, blocked: i, ignored: a, author: l, channel_id: o } = e;
         if (i)
             p.Z.show({
-                title: S.NW.string(S.t['j7eA/v']),
-                body: S.NW.formatToPlainString(S.t.dTNNgo, { name: l.username }),
-                confirmText: S.NW.string(S.t.BddRzc)
+                title: I.NW.string(I.t['j7eA/v']),
+                body: I.NW.formatToPlainString(I.t.dTNNgo, { name: l.username }),
+                confirmText: I.NW.string(I.t.BddRzc)
             });
         else if (a)
             p.Z.show({
-                title: S.NW.string(S.t.XyWoKS),
-                body: S.NW.formatToPlainString(S.t['8t8doK'], { name: l.username }),
-                confirmText: S.NW.string(S.t.BddRzc)
+                title: I.NW.string(I.t.XyWoKS),
+                body: I.NW.formatToPlainString(I.t['8t8doK'], { name: l.username }),
+                confirmText: I.NW.string(I.t.BddRzc)
             });
         else if (!P) {
             let e = y.Z.getChannel(o);
-            null != e && (m.Z.trackJump(o, r, t), (0, b.uL)(I.Z5c.CHANNEL(e.getGuildId(), o, r))), null == d || d(n);
+            null != e && (m.Z.trackJump(o, r, t), (0, b.uL)(S.Z5c.CHANNEL(e.getGuildId(), o, r))), null == d || d(n);
         }
     }
     i.useEffect(() => {
@@ -371,7 +371,7 @@ function L(e) {
         renderHeader: h,
         hasMore: o,
         loadMore: c,
-        getProTip: E,
+        getProTip: v,
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
@@ -390,7 +390,7 @@ function L(e) {
                                       message: t,
                                       channel: n
                                   }),
-                                  (0, r.jsx)(R, {
+                                  (0, r.jsx)(k, {
                                       channel: a,
                                       message: t,
                                       jumping: P,

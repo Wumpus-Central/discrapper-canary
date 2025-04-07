@@ -1,60 +1,60 @@
-r.d(t, { Z: () => g });
-var n = r(392711),
-    A = r.n(n),
-    a = r(723454),
-    o = r(428595),
-    l = r(454585);
-function i(e) {
+n.d(t, { Z: () => m });
+var r = n(392711),
+    i = n.n(r),
+    a = n(723454),
+    l = n(428595),
+    o = n(454585);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function s(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = A().omit(o.Z.RULES, ['codeBlock', 'heading']),
-    d = s(i({}, a.Z), {
-        parse: function (e, t, r) {
-            var n;
-            let A = a.Z.parse(e, t, r),
-                o = Math.min(6, (null != (n = r.initialHeaderLevel) ? n : 3) + A.level);
-            return s(i({}, A), { level: o });
+let u = i().omit(l.Z.RULES, ['codeBlock', 'heading']),
+    d = c(s({}, a.Z), {
+        parse: function (e, t, n) {
+            var r;
+            let i = a.Z.parse(e, t, n),
+                l = Math.min(6, (null != (r = n.initialHeaderLevel) ? r : 3) + i.level);
+            return c(s({}, i), { level: l });
         }
     }),
-    u = l.Z.combineAndInjectMentionRule(c, [l.Z.createReactRules(l.Z.defaultReactRuleOptions), { header: d }]),
-    g = l.Z.reactParserFor(u);
+    p = o.Z.combineAndInjectMentionRule(u, [o.Z.createReactRules(o.Z.defaultReactRuleOptions), { header: d }]),
+    m = o.Z.reactParserFor(p);

@@ -2,7 +2,7 @@ n.d(t, {
     KB: () => O,
     wD: () => y
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -35,7 +35,7 @@ function O(e) {
         k = (0, d.iE)(),
         [j, U] = i.useState(),
         [G, B] = i.useState(t && (0, _.MY)(S) === _.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == f ? m.NW.string(m.t.ZkOo1d) : f),
-        [F, V] = i.useState(void 0),
+        [V, F] = i.useState(void 0),
         [Z, H] = i.useState(void 0),
         W = (0, _.E5)(I, t),
         [Y, K] = i.useState(!1),
@@ -70,8 +70,8 @@ function O(e) {
             setGiftRecipientError: A,
             validatingGiftRecipient: C,
             setValidatingGiftRecipient: R,
-            soundEffect: F,
-            setSoundEffect: V,
+            soundEffect: V,
+            setSoundEffect: F,
             emojiConfetti: Z,
             setEmojiConfetti: H,
             customGiftMessage: G,

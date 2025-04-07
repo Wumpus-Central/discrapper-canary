@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(47120), n(653041);
+n.d(t, { Z: () => u }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -54,8 +54,8 @@ let u = i.memo(
                 },
                 [b]
             ),
-            F = i.useRef([]),
             V = i.useRef([]),
+            F = i.useRef([]),
             {
                 totalHeight: Z,
                 rowDescriptors: H,
@@ -100,7 +100,7 @@ let u = i.memo(
                     sectionDescriptors: o
                 };
             }, [j, G, U, B, u, m, g, k]);
-        (F.current = W), (V.current = H);
+        (V.current = W), (F.current = H);
         let Y = i.useCallback(() => {
             var e;
             let t = null == (e = L.current) ? void 0 : e.getScrollerNode();
@@ -151,7 +151,7 @@ let u = i.memo(
                 scrollRowIntoView: function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
-                        i = V.current[e];
+                        i = F.current[e];
                     null != i &&
                         window.requestAnimationFrame(() => {
                             var t, o;
@@ -183,7 +183,7 @@ let u = i.memo(
                 scrollToSectionTop: function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
-                        i = F.current[e];
+                        i = V.current[e];
                     null != i &&
                         window.requestAnimationFrame(() => {
                             var t;
@@ -198,8 +198,8 @@ let u = i.memo(
                     height: w,
                     totalHeight: Z
                 }),
-                getSectionDescriptors: () => F.current,
-                getRowDescriptors: () => V.current,
+                getSectionDescriptors: () => V.current,
+                getRowDescriptors: () => F.current,
                 getScrollerNode: () => {
                     var e;
                     return null == (e = L.current) ? void 0 : e.getScrollerNode();

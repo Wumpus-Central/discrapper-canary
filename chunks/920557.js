@@ -1,10 +1,10 @@
-n.d(t, { K: () => C }), n(47120), n(627341);
+n.d(t, { K: () => C }), n(388685), n(314940);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
     l = n.n(a),
-    o = n(867824),
-    s = n(642128),
+    o = n(1709),
+    s = n(200100),
     c = n(278074),
     u = n(748780),
     d = n(481060),
@@ -17,7 +17,7 @@ var r = n(200651),
     b = n(294608),
     x = n(388032),
     y = n(709893);
-function v(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,23 +42,23 @@ function v(e) {
     }
     return e;
 }
-function E(e) {
+function v(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: l } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
         [g, _] = i.useState(''),
-        [x, E] = i.useState(!1),
+        [x, v] = i.useState(!1),
         O = '' !== g && x,
         N = i.useCallback(() => {
             _((0, h.e1)(u, c, l));
         }, [u, c, l]),
         j = i.useCallback(() => {
-            N(), E(!0);
+            N(), v(!0);
         }, [N]),
         C = i.useCallback(() => {
-            E(!1);
+            v(!1);
         }, []),
-        I = i.useCallback(() => {
+        S = i.useCallback(() => {
             (0, f.n)({
                 channelId: c,
                 messageId: u,
@@ -74,7 +74,7 @@ function E(e) {
                 }
             );
     }, [x, N]);
-    let S = (0, r.jsx)(d.Text, {
+    let I = (0, r.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
         className: y.voteCount,
@@ -100,19 +100,19 @@ function E(e) {
                                   var t, n;
                                   return (0, r.jsx)(
                                       d.zxk,
-                                      ((t = v({}, e)),
+                                      ((t = E({}, e)),
                                       (n = n =
                                           {
                                               onMouseEnter: j,
                                               onMouseLeave: C,
                                               onFocus: j,
                                               onBlur: C,
-                                              onClick: I,
+                                              onClick: S,
                                               className: y.voteCountButton,
                                               'aria-describedby': O ? s : void 0,
                                               look: d.zxk.Looks.BLANK,
                                               size: d.zxk.Sizes.NONE,
-                                              children: S
+                                              children: I
                                           }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -137,7 +137,7 @@ function E(e) {
                               })
                       ]
                   })
-                : S,
+                : I,
             (0, r.jsxs)(d.Text, {
                 variant: 'text-md/bold',
                 color: 'none',
@@ -233,7 +233,7 @@ function j(e) {
             }),
             t.didSelfVote && (0, r.jsx)(o.T, { children: x.NW.string(x.t['8DAM+/']) }),
             a &&
-                (0, r.jsx)(E, {
+                (0, r.jsx)(v, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: s,
@@ -273,7 +273,7 @@ function C(e) {
         })(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
     return (0, r.jsx)(
         _.$e,
-        v(
+        E(
             {
                 className: y.answersContainer,
                 answerClassName: y.answer,

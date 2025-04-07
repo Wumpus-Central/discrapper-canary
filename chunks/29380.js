@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => v }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -25,13 +25,13 @@ function v(e) {
         E = r.useCallback(() => {
             d.Z.shouldShowModal() && P();
         }, [P]),
-        { submitting: A, wasSubmitting: O } = (0, h.Z)({
+        { submitting: A, wasSubmitting: I } = (0, h.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: j,
             onSubmissionComplete: P
         }),
-        [I, S] = r.useState(!1),
+        [O, S] = r.useState(!1),
         T = (0, a.Qv)({
             applicationId: n.id,
             context: t
@@ -50,7 +50,7 @@ function v(e) {
             commandName: R,
             autoDismissOnClick: T === a.JS.LEAVE,
             launchingComponentId: j,
-            submitting: null != O ? O : A,
+            submitting: null != I ? I : A,
             onConfirmActivityLaunchChecksAlertOpen: E,
             playSolo: !!L.altLayout && g
         }),
@@ -120,7 +120,7 @@ function v(e) {
                         size: N,
                         color: k,
                         disabled: M,
-                        submitting: I,
+                        submitting: O,
                         onClick: () => {
                             S(!0),
                                 w(),

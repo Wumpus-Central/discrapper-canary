@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(977457), n(47120);
+n.d(t, { Z: () => I }), n(467055), n(388685);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -16,9 +16,9 @@ var r = n(200651),
     _ = n(594174),
     b = n(739566),
     x = n(981631),
-    y = n(665692),
-    v = n(388032),
-    E = n(912861);
+    y = n(761652),
+    E = n(388032),
+    v = n(912861);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,8 +67,8 @@ let j = {
         variant: 'text-md/normal',
         color: 'header-secondary'
     },
-    C = { className: l()('mention', E.mention) };
-function I(e) {
+    C = { className: l()('mention', v.mention) };
+function S(e) {
     return (0, r.jsx)(
         s.Text,
         N(O({}, j), {
@@ -77,12 +77,12 @@ function I(e) {
         })
     );
 }
-let S = i.memo(function (e) {
-    var t, n, a, l, S, T;
+let I = i.memo(function (e) {
+    var t, n, a, l, I, T;
     let P,
         { channel: A, messageId: w, interactionData: Z } = e,
-        { analyticsLocations: k } = (0, u.ZP)(),
-        { onCopy: R, copyRef: D } = (0, d.Z)(A, null == Z || null == (t = Z.application_command) ? void 0 : t.id),
+        { analyticsLocations: R } = (0, u.ZP)(),
+        { onCopy: k, copyRef: D } = (0, d.Z)(A, null == Z || null == (t = Z.application_command) ? void 0 : t.id),
         L = (0, o.e7)([g.Z], () => g.Z.getGuild(A.guild_id), [A.guild_id]);
     if (
         (i.useEffect(() => {
@@ -92,52 +92,52 @@ let S = i.memo(function (e) {
     )
         P = (0, r.jsx)(s.$jN, {
             type: s.$jN.Type.SPINNING_CIRCLE,
-            className: E.spinner
+            className: v.spinner
         });
     else {
         let e = [],
             t = Object.fromEntries((null != (l = null == (n = Z.application_command) ? void 0 : n.options) ? l : []).map((e) => [e.name, e]));
-        for (let n of null != (S = Z.options) ? S : [])
+        for (let n of null != (I = Z.options) ? I : [])
             e = e.concat(
                 (function e(t) {
                     var n, a, l, o, u, d, p;
-                    let E,
-                        { option: S, channel: T, guild: P, messageId: A, parentOptionKey: w, commandOptionSpec: Z, sourceAnalyticsLocations: k } = t,
-                        R = null != w ? w + ' ' + S.name : S.name;
-                    if (S.type === c.jw.SUB_COMMAND || S.type === c.jw.SUB_COMMAND_GROUP) {
+                    let v,
+                        { option: I, channel: T, guild: P, messageId: A, parentOptionKey: w, commandOptionSpec: Z, sourceAnalyticsLocations: R } = t,
+                        k = null != w ? w + ' ' + I.name : I.name;
+                    if (I.type === c.jw.SUB_COMMAND || I.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, r.jsxs)(
                                     i.Fragment,
                                     {
-                                        children: [' ', (0, r.jsx)(s.Text, N(O({}, j), { children: null != (a = null == Z ? void 0 : Z.name_localized) ? a : S.name }))]
+                                        children: [' ', (0, r.jsx)(s.Text, N(O({}, j), { children: null != (a = null == Z ? void 0 : Z.name_localized) ? a : I.name }))]
                                     },
-                                    R
+                                    k
                                 )
                             ],
                             c = Object.fromEntries(null == (n = null != (l = null == Z ? void 0 : Z.options) ? l : []) ? void 0 : n.map((e) => [e.name, e]));
-                        for (let n of null != (o = S.options) ? o : [])
+                        for (let n of null != (o = I.options) ? o : [])
                             t = t.concat(
                                 e({
                                     option: n,
                                     channel: T,
                                     guild: P,
                                     messageId: A,
-                                    parentOptionKey: R,
+                                    parentOptionKey: k,
                                     commandOptionSpec: c[n.name],
-                                    sourceAnalyticsLocations: k
+                                    sourceAnalyticsLocations: R
                                 })
                             );
                         return t;
                     }
-                    let D = S.value;
-                    if (null != S.value)
-                        switch (S.type) {
+                    let D = I.value;
+                    if (null != I.value)
+                        switch (I.type) {
                             case c.jw.USER: {
-                                let e = S.value.toString(),
+                                let e = I.value.toString(),
                                     t = _.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, b.ij)(t, T);
-                                    E = (0, r.jsxs)(
+                                    v = (0, r.jsxs)(
                                         m.Z,
                                         N(O({}, C), {
                                             onClick: () =>
@@ -146,7 +146,7 @@ let S = i.memo(function (e) {
                                                     guildId: T.guild_id,
                                                     channelId: T.id,
                                                     messageId: A,
-                                                    sourceAnalyticsLocations: k,
+                                                    sourceAnalyticsLocations: R,
                                                     analyticsLocation: { section: x.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                                 }),
                                             children: [y.ME, e.nick]
@@ -156,10 +156,10 @@ let S = i.memo(function (e) {
                                 break;
                             }
                             case c.jw.CHANNEL: {
-                                let e = S.value.toString(),
+                                let e = I.value.toString(),
                                     t = h.Z.getChannel(e);
                                 null != t &&
-                                    (E = (0, r.jsxs)(
+                                    (v = (0, r.jsxs)(
                                         m.Z,
                                         N(O({}, C), {
                                             children: [y.zy, t.name]
@@ -168,10 +168,10 @@ let S = i.memo(function (e) {
                                 break;
                             }
                             case c.jw.ROLE: {
-                                let e = S.value.toString(),
+                                let e = I.value.toString(),
                                     t = null != P ? g.Z.getRole(P.id, e) : void 0;
                                 null != t &&
-                                    (E = (0, r.jsxs)(
+                                    (v = (0, r.jsxs)(
                                         m.Z,
                                         N(O({}, C), {
                                             children: [y.ME, t.name]
@@ -180,17 +180,17 @@ let S = i.memo(function (e) {
                                 break;
                             }
                             case c.jw.MENTIONABLE: {
-                                let e = S.value.toString(),
+                                let e = I.value.toString(),
                                     t = null != P ? g.Z.getRole(P.id, e) : void 0;
                                 if (null != t)
-                                    E = (0, r.jsxs)(m.Z, {
+                                    v = (0, r.jsxs)(m.Z, {
                                         children: [y.ME, t.name]
                                     });
                                 else {
                                     let t = _.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, b.ij)(t, T);
-                                        E = (0, r.jsxs)(
+                                        v = (0, r.jsxs)(
                                             m.Z,
                                             N(O({}, C), {
                                                 onClick: () =>
@@ -207,15 +207,15 @@ let S = i.memo(function (e) {
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                E = I(v.NW.string(v.t.nONJVV));
+                                v = S(E.NW.string(E.t.nONJVV));
                                 break;
                             default: {
-                                let e = null == Z || null == (u = Z.choices) ? void 0 : u.find((e) => e.value === S.value);
+                                let e = null == Z || null == (u = Z.choices) ? void 0 : u.find((e) => e.value === I.value);
                                 null != e && (D = null != (d = e.name_localized) ? d : e.name);
                             }
                         }
                     return (
-                        null == E && (E = I(null == D ? void 0 : D.toString())),
+                        null == v && (v = S(null == D ? void 0 : D.toString())),
                         [
                             (0, r.jsxs)(
                                 i.Fragment,
@@ -224,13 +224,13 @@ let S = i.memo(function (e) {
                                         (0, r.jsxs)(
                                             s.Text,
                                             N(O({}, j), {
-                                                children: [' ', null != (p = null == Z ? void 0 : Z.name_localized) ? p : S.name, ': ']
+                                                children: [' ', null != (p = null == Z ? void 0 : Z.name_localized) ? p : I.name, ': ']
                                             })
                                         ),
-                                        E
+                                        v
                                     ]
                                 },
-                                R
+                                k
                             )
                         ]
                     );
@@ -241,7 +241,7 @@ let S = i.memo(function (e) {
                     messageId: w,
                     parentOptionKey: null,
                     commandOptionSpec: t[n.name],
-                    sourceAnalyticsLocations: k
+                    sourceAnalyticsLocations: R
                 })
             );
         P = (0, r.jsxs)(r.Fragment, {
@@ -257,19 +257,19 @@ let S = i.memo(function (e) {
         });
     }
     return (0, r.jsxs)('div', {
-        className: E.container,
+        className: v.container,
         onCopy: (e) => {
             var t, n, r;
             let i = null != (r = null == (n = window) || null == (t = n.getSelection()) ? void 0 : t.toString()) ? r : '';
-            i.startsWith('/') && i.endsWith('\n') && R(e, Z);
+            i.startsWith('/') && i.endsWith('\n') && k(e, Z);
         },
         children: [
             (0, r.jsx)('div', {
-                className: E.tooltip,
+                className: v.tooltip,
                 ref: D,
                 children: P
             }),
-            (0, r.jsx)('div', { className: E.tooltipPointer })
+            (0, r.jsx)('div', { className: v.tooltipPointer })
         ]
     });
 });

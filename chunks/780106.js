@@ -1,11 +1,11 @@
 n.d(t, {
-    O: () => i,
-    h: () => o
+    O: () => o,
+    h: () => a
 });
 var r = n(593472),
-    a = n(70956),
+    i = n(70956),
     l = n(981631);
-let i = {
+let o = {
         None: void 0,
         Terraria: {
             id: '356943499456937984',
@@ -24,8 +24,8 @@ let i = {
             windowHandle: '13229',
             fullscreenType: r.Jx.BORDERLESS_FULLSCREEN,
             isLauncher: !1,
-            start: Date.now() - a.Z.Millis.HOUR,
+            start: Date.now() - i.Z.Millis.HOUR,
             distributor: l.GQo.STEAM
         }
     },
-    o = Object.keys(i);
+    a = Object.keys(o);

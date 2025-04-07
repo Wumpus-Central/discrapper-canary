@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     header: 'header__7c901',
     subtitle: 'subtitle__7c901',
     closeButton: 'closeButton__7c901',

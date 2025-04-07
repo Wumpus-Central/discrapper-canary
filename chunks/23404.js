@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(47120);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -86,14 +86,14 @@ function x(e) {
         ]
     });
 }
-function L(e) {
+function w(e) {
     var t, n, l, c;
     let { nodeRef: _, quest: E } = e,
         O = (0, u.O5)(),
         P = (0, o.e7)([h.Z], () => h.Z.isEnrolling(E.id), [E]),
-        [L, w] = i.useState(!1),
-        R = i.useCallback(() => w(!0), []),
-        D = i.useCallback(() => w(!1), []),
+        [w, L] = i.useState(!1),
+        R = i.useCallback(() => L(!0), []),
+        D = i.useCallback(() => L(!1), []),
         k = i.useCallback((e) => {
             e.stopPropagation();
         }, []),
@@ -223,7 +223,7 @@ function L(e) {
                   B &&
                       !H &&
                       (0, r.jsx)(C.Z, {
-                          autoplay: L,
+                          autoplay: w,
                           className: A.rewardTileWithInstructions,
                           quest: E,
                           questContent: f.jn.ACTIVITY_PANEL,
@@ -279,10 +279,10 @@ function L(e) {
               ]
           });
 }
-let w = function (e) {
+let L = function (e) {
     return (0, r.jsx)(O.A, {
         questOrQuests: e.quest,
         questContent: f.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(L, Z({ nodeRef: t }, e))
+        children: (t) => (0, r.jsx)(w, Z({ nodeRef: t }, e))
     });
 };

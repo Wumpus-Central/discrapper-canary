@@ -1,10 +1,10 @@
 n.d(t, {
     SK: () => G,
-    ZP: () => V,
+    ZP: () => F,
     sK: () => B
 }),
-    n(266796),
-    n(47120);
+    n(953529),
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -151,7 +151,7 @@ function B(e) {
         U = v,
         G = (0, s.e7)([m.default], () => m.default.getId()),
         B = (0, s.e7)([g.ZP], () => g.ZP.isMember(U, G), [U, G]),
-        [F, V] = i.useState(!1),
+        [V, F] = i.useState(!1),
         Z = (e) => {
             if ((e.stopPropagation(), B)) (0, h.XU)(U, c, d);
             else {
@@ -162,7 +162,7 @@ function B(e) {
                 };
                 (0, b.Ub)(U, e);
             }
-            V(!0);
+            F(!0);
         },
         H = E.ZP.getGuildDiscoverySplashURL({
             id: v,
@@ -338,7 +338,7 @@ function B(e) {
                             color: u.zxk.Colors.BRAND,
                             size: u.zxk.Sizes.SMALL,
                             onClick: Z,
-                            submitting: F,
+                            submitting: V,
                             autoFocus: !0,
                             children: T.NW.string(T.t['K+WeR0'])
                         })
@@ -348,7 +348,7 @@ function B(e) {
         })
     );
 }
-function F(e) {
+function V(e) {
     let { guildId: t, channelId: n, messageId: o } = e,
         {
             loading: a,
@@ -380,12 +380,12 @@ function F(e) {
                 messageId: o
             });
 }
-function V(e) {
+function F(e) {
     return (0, O.h)()
         ? (0, r.jsx)(I.Z, {
               setPopoutRef: e.setPopoutRef,
               guildId: e.guildId,
               name: e.name
           })
-        : (0, r.jsx)(F, P({}, e));
+        : (0, r.jsx)(V, P({}, e));
 }

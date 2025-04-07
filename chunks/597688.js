@@ -1,5 +1,5 @@
 let r, i, o;
-n.d(t, { Z: () => Z }), n(47120);
+n.d(t, { Z: () => Z }), n(388685);
 var a,
     s = n(392711),
     l = n(442837),
@@ -96,14 +96,14 @@ let m = new Map(),
     B = () => {
         (v = m), (O = g), (T = y), (i = void 0), (A = !1), (C = new Set()), (r = void 0), (o = void 0), (w = {});
     },
-    F = () => {
+    V = () => {
         if (!u.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
         e !== N && (i = void 0), (N = e);
     };
-class V extends (a = l.ZP.Store) {
+class F extends (a = l.ZP.Store) {
     initialize() {
-        this.syncWith([f.default], B), this.syncWith([u.Z], F);
+        this.syncWith([f.default], B), this.syncWith([u.Z], V);
     }
     get isFetchingCategories() {
         return A;
@@ -155,8 +155,8 @@ class V extends (a = l.ZP.Store) {
         return this.getCategory(null == t ? void 0 : t.categorySkuId);
     }
 }
-h(V, 'displayName', 'CollectiblesCategoryStore');
-let Z = new V(c.Z, {
+h(F, 'displayName', 'CollectiblesCategoryStore');
+let Z = new F(c.Z, {
     COLLECTIBLES_CATEGORIES_FETCH: M,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: j,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: k,

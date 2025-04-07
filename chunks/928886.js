@@ -34,8 +34,8 @@ function S(e) {
         U = (0, d.N)(o),
         G = !w && null != U && null != T && y.nG[U.trial_id].skus.includes(T),
         B = (0, u.Ng)(),
-        F = null == B || null == (t = B.discount) ? void 0 : t.plan_ids.some((e) => y.GP[e].skuId === T),
-        V = !w && null != B && null != T && F,
+        V = null == B || null == (t = B.discount) ? void 0 : t.plan_ids.some((e) => y.GP[e].skuId === T),
+        F = !w && null != B && null != T && V,
         { enabled: Z } = c.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
         H = (0, c.rK)(),
         W = Z && H;
@@ -73,12 +73,12 @@ function S(e) {
                           premiumType: y.y7[T],
                           onClose: S,
                           showTrialBadge: G,
-                          showDiscountBadge: V,
+                          showDiscountBadge: F,
                           isGift: w,
                           giftRecipient: L,
                           useWinterTheme: W
                       }))),
             e
         );
-    }, [D, S, C, n, A, T, N, G, V, x, j, M, R, w, L, W]);
+    }, [D, S, C, n, A, T, N, G, F, x, j, M, R, w, L, W]);
 }

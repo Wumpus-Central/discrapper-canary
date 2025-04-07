@@ -2,15 +2,15 @@ n.d(t, {
     Z: () => c,
     t: () => l
 });
-var i = n(442837),
+var r = n(442837),
     o = n(430824),
-    r = n(938475),
+    i = n(938475),
     a = n(981631);
 function c(e) {
-    return (0, i.cj)(
-        [r.ZP, o.Z],
+    return (0, r.cj)(
+        [i.ZP, o.Z],
         () => {
-            let t = r.ZP.countVoiceStatesForChannel(e.id),
+            let t = i.ZP.countVoiceStatesForChannel(e.id),
                 n = o.Z.getGuild(e.getGuildId());
             return null == n
                 ? {
@@ -31,7 +31,7 @@ function c(e) {
     );
 }
 function l(e) {
-    let t = r.ZP.countVoiceStatesForChannel(e.id),
+    let t = i.ZP.countVoiceStatesForChannel(e.id),
         n = o.Z.getGuild(e.getGuildId());
     return null == n
         ? {

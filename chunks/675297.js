@@ -1,4 +1,4 @@
-n.d(t, { H: () => x }), n(266796);
+n.d(t, { H: () => x }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(399606),
@@ -17,19 +17,19 @@ var i = n(399606),
     _ = n(226060),
     b = n(981631);
 function x(e) {
-    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: y = !0, hideRoleTag: v = !1, lineClamp: E = 1, cardWidth: O, cardHeight: N, thumbnailHeight: j, descriptionTextVariant: C = 'text-sm/normal', showOpaqueBackground: I = !1 } = e,
-        S = (0, i.e7)([s.Z], () => s.Z.getGuild(n), [n]),
+    let { guildProductListing: t, guildId: n, location: x, shouldShowFullDescriptionButton: y = !0, hideRoleTag: E = !1, lineClamp: v = 1, cardWidth: O, cardHeight: N, thumbnailHeight: j, descriptionTextVariant: C = 'text-sm/normal', showOpaqueBackground: S = !1 } = e,
+        I = (0, i.e7)([s.Z], () => s.Z.getGuild(n), [n]),
         T = (0, i.e7)([s.Z], () => {
             var e;
             return s.Z.getRole(n, null != (e = null == t ? void 0 : t.role_id) ? e : b.lds);
         }),
         P = (0, a.U)(t, 600),
         A = (0, f.C)(t),
-        w = (0, u.SO)(S),
+        w = (0, u.SO)(I),
         { shouldHideGuildPurchaseEntryPoints: Z } = (0, o.uP)(n),
-        k = (0, f.k)(t);
-    if (null == S || Z) return null;
-    let R = () =>
+        R = (0, f.k)(t);
+    if (null == I || Z) return null;
+    let k = () =>
             (0, g.e)({
                 guildId: n,
                 guildProductListingId: t.id,
@@ -46,7 +46,7 @@ function x(e) {
             showReportProduct: !0,
             onEditProduct: w
                 ? () => {
-                      p.h(S.id, t.id);
+                      p.h(I.id, t.id);
                   }
                 : () => {},
             onUnpublishProduct: () => {},
@@ -65,7 +65,7 @@ function x(e) {
             imageUrl: P,
             name: t.name,
             description: t.description,
-            formattedPrice: k,
+            formattedPrice: R,
             role: T,
             ctaComponent: (0, r.jsx)(_.Z, {
                 guildId: n,
@@ -74,12 +74,12 @@ function x(e) {
             }),
             productType: A,
             shouldShowFullDescriptionButton: y,
-            onShowFullDescription: R,
-            onTapCard: R,
+            onShowFullDescription: k,
+            onTapCard: k,
             actionMenu: D,
-            showOpaqueBackground: I,
-            hideRoleTag: v,
-            lineClamp: E,
+            showOpaqueBackground: S,
+            hideRoleTag: E,
+            lineClamp: v,
             cardWidth: O,
             cardHeight: N,
             thumbnailHeight: j,

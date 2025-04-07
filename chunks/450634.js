@@ -1,22 +1,22 @@
-n.d(t, { default: () => p });
+n.d(t, { default: () => x });
 var a = n(200651),
     i = n(192379),
     l = n(481060),
-    r = n(332664),
-    o = n(142497),
+    o = n(332664),
+    s = n(142497),
     c = n(626135),
-    s = n(672655),
-    u = n(768015),
-    d = n(701488),
-    m = n(981631),
-    b = n(190378),
-    _ = n(388032);
-let f = [d.K8.OTHER, d.K8.ADS, d.K8.NOT_FUN];
-function p(e) {
+    r = n(672655),
+    d = n(768015),
+    u = n(701488),
+    _ = n(981631),
+    m = n(190378),
+    p = n(388032);
+let b = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
+function x(e) {
     var t;
-    let { channel: p, embeddedActivityLocation: x, activityApplication: h, onClose: v, transitionState: N, analyticsData: g } = e;
+    let { channel: x, embeddedActivityLocation: f, activityApplication: h, onClose: v, transitionState: N, analyticsData: g } = e;
     i.useEffect(() => {
-        c.default.track(m.rMx.OPEN_MODAL, {
+        c.default.track(_.rMx.OPEN_MODAL, {
             type: 'Activity Feedback Modal',
             application_id: h.id,
             application_name: h.name,
@@ -25,40 +25,40 @@ function p(e) {
         });
     }, [h]);
     let j = (null == (t = h.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
-    return (0, a.jsx)(r.Z, {
+    return (0, a.jsx)(o.Z, {
         modalType: 'activity',
-        header: _.NW.formatToPlainString(_.t.QXYwoK, { applicationName: h.name }),
-        body: _.NW.string(_.t['9hk2KC']),
-        problemTitle: _.NW.string(_.t.g1q5fn),
-        problems: (0, s.Z)(!0, j),
-        freeformNeededProblems: f,
+        header: p.NW.formatToPlainString(p.t.QXYwoK, { applicationName: h.name }),
+        body: p.NW.string(p.t['9hk2KC']),
+        problemTitle: p.NW.string(p.t.g1q5fn),
+        problems: (0, r.Z)(!0, j),
+        freeformNeededProblems: b,
         onSubmit: function (e) {
             var t;
-            let { rating: i, problem: r, dontShowAgain: s, feedback: d } = e;
-            s &&
+            let { rating: i, problem: o, dontShowAgain: r, feedback: u } = e;
+            r &&
                 (function (e) {
                     let { applicationId: t, rating: n } = e;
-                    c.default.track(m.rMx.ACTIVITY_REPORT_DONT_SHOW, {
+                    c.default.track(_.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                         application_id: t,
                         rating: n
                     }),
-                        (0, o.Kw)(b.v.POST_ACTIVITY_FEEDBACK);
+                        (0, s.Kw)(m.v.POST_ACTIVITY_FEEDBACK);
                 })({
                     rating: i,
                     applicationId: h.id
                 }),
                 null != i &&
-                    ((0, u.Z)({
-                        problem: null != (t = null == r ? void 0 : r.value) ? t : null,
-                        channel: p,
-                        embeddedActivityLocation: x,
-                        feedback: d,
+                    ((0, d.Z)({
+                        problem: null != (t = null == o ? void 0 : o.value) ? t : null,
+                        channel: x,
+                        embeddedActivityLocation: f,
+                        feedback: u,
                         activityApplication: h,
                         analyticsData: g,
                         location: 'Activity End',
                         rating: i
                     }),
-                    null != r &&
+                    null != o &&
                         (0, l.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
@@ -88,12 +88,12 @@ function p(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: _.NW.string(_.t['zuHR+/']) }, t)
+                                    })({ body: p.NW.string(p.t['zuHR+/']) }, t)
                                 );
                         }));
         },
         onClose: v,
         transitionState: N,
-        otherKey: d.K8.OTHER
+        otherKey: u.K8.OTHER
     });
 }

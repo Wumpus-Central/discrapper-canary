@@ -1,16 +1,16 @@
 n.d(t, {
-    Z: () => V,
+    Z: () => F,
     d: () => H
 }),
-    n(566702),
-    n(653041),
-    n(411104),
-    n(47120),
-    n(13667),
-    n(390547),
-    n(627494),
-    n(757143),
-    n(301563);
+    n(781311),
+    n(539854),
+    n(415506),
+    n(388685),
+    n(361932),
+    n(187205),
+    n(804061),
+    n(704826),
+    n(35282);
 var r = n(512722),
     i = n.n(r),
     o = n(570140),
@@ -87,7 +87,7 @@ function B(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -98,11 +98,11 @@ function F(e, t) {
         e
     );
 }
-async function V(e) {
+async function F(e) {
     var t, n, r, a, l, u, d, p, h, m, g, E, b, O, S, T, N;
-    let { command: A, optionValues: w, context: k, commandTargetId: j, maxSizeCallback: U, commandOrigin: G = L.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: F = K, source: V, clientSupportsContextlessActivityLaunch: H } = e;
+    let { command: A, optionValues: w, context: k, commandTargetId: j, maxSizeCallback: U, commandOrigin: G = L.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: V = K, source: F, clientSupportsContextlessActivityLaunch: H } = e;
     if (null == k.channel) return;
-    let Y = null != (r = D.Z.getSource(k.channel.id)) ? r : V,
+    let Y = null != (r = D.Z.getSource(k.channel.id)) ? r : F,
         q = null != (a = D.Z.getCommandOrigin(k.channel.id)) ? a : G;
     null == k.autocomplete &&
         o.Z.dispatch({
@@ -273,7 +273,7 @@ async function V(e) {
                   analytics_location: z(q),
                   sectionName: B,
                   source: Y,
-                  interactionLifecycleOptions: await F(A, k, $)
+                  interactionLifecycleOptions: await V(A, k, $)
               }));
 }
 let Z = (e) => {
@@ -377,7 +377,7 @@ async function K(e, t, n) {
         try {
             await l.PR(i.botId);
         } catch (e) {}
-    let u = F(
+    let u = V(
         G(
             {},
             (0, E.ZP)({

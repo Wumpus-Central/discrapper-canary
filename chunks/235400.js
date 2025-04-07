@@ -1,4 +1,4 @@
-n.d(t, { default: () => R }), n(47120);
+n.d(t, { default: () => R }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -49,10 +49,10 @@ function C(e) {
         B = (e) => {
             L(e), null != e && U(e);
         },
-        F = () => {
+        V = () => {
             P(D), f();
         },
-        V = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 f(),
                     (0, c.mK)({
@@ -67,14 +67,14 @@ function C(e) {
         H = () =>
             (null != M && (!(0, u.qS)(M) || k)) || null === D
                 ? (0, r.jsx)(a.zxk, {
-                      onClick: F,
+                      onClick: V,
                       disabled: G,
                       children: N.NW.string(N.t.d6sv6u)
                   })
                 : null == M && (k || !(0, u.G1)(x))
                   ? (0, r.jsx)(a.zxk, {
                         className: A.modalFooterShopButton,
-                        onClick: () => V(null == x ? void 0 : x.skuId),
+                        onClick: () => F(null == x ? void 0 : x.skuId),
                         children: N.NW.string(N.t.fYfGgI)
                     })
                   : (0, r.jsx)(m.Z, {
@@ -108,7 +108,7 @@ function C(e) {
                         pendingAvatarDecoration: D,
                         selectedAvatarDecorationRef: j,
                         onSelect: B,
-                        onOpenShop: V
+                        onOpenShop: F
                     }),
                     (0, r.jsx)(O.Z, {
                         className: A.modalPreview,

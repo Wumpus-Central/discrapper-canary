@@ -1,13 +1,13 @@
 n.d(t, { Z: () => p });
 var r,
     i,
-    o,
+    l,
     a = n(442837),
-    l = n(570140),
+    o = n(570140),
     s = n(981631);
 let c = null,
     u = {};
-class d extends (o = a.ZP.Store) {
+class d extends (l = a.ZP.Store) {
     getState(e) {
         return u[e];
     }
@@ -24,7 +24,7 @@ class d extends (o = a.ZP.Store) {
               writable: !0
           })
         : (d[r] = i);
-let p = new d(l.Z, {
+let p = new d(o.Z, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
         (u[t] = s.kEZ.OPENING), null === c && (c = s.kEZ.OPENING);

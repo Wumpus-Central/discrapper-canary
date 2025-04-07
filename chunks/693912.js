@@ -1,77 +1,77 @@
-n.d(e, {
-    B2: () => o,
-    DS: () => u,
+n.d(t, {
+    B2: () => c,
+    DS: () => o,
     hj: () => s,
-    nh: () => i
+    nh: () => l
 });
-var r = n(63063),
-    a = n(981631),
-    l = n(388032);
-function u(t) {
-    let { application: e, username: n, usernameHook: u = a.dG4, applicationNameHook: i = a.dG4 } = t;
-    return null != e
-        ? l.NW.format(l.t.J8SaGx, {
+var a = n(63063),
+    r = n(981631),
+    i = n(388032);
+function o(e) {
+    let { application: t, username: n, usernameHook: o = r.dG4, applicationNameHook: l = r.dG4 } = e;
+    return null != t
+        ? i.NW.format(i.t.J8SaGx, {
               username: n,
-              otherUsername: e.name,
-              usernameHook: u,
-              otherUsernameHook: i,
-              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              otherUsername: t.name,
+              usernameHook: o,
+              otherUsernameHook: l,
+              helpCenterLink: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
-        : l.NW.format(l.t['+6V2sb'], {
+        : i.NW.format(i.t['+6V2sb'], {
               username: n,
-              usernameHook: u,
-              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              usernameHook: o,
+              helpCenterLink: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
-function i(t) {
-    let { application: e, username: n, usernameHook: u = a.dG4, applicationNameHook: i = a.dG4 } = t;
-    return null != e
-        ? l.NW.format(l.t.eGCDam, {
+function l(e) {
+    let { application: t, username: n, usernameHook: o = r.dG4, applicationNameHook: l = r.dG4 } = e;
+    return null != t
+        ? i.NW.format(i.t.eGCDam, {
               username: n,
-              otherUsername: e.name,
-              usernameHook: u,
-              otherUsernameHook: i,
-              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              otherUsername: t.name,
+              usernameHook: o,
+              otherUsernameHook: l,
+              helpCenterLink: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
-        : l.NW.format(l.t.sAX6rq, {
+        : i.NW.format(i.t.sAX6rq, {
               username: n,
-              usernameHook: u,
-              helpCenterLink: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              usernameHook: o,
+              helpCenterLink: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
-function o(t) {
-    let { application: e, username: n, usernameOnClick: u, applicationNameOnClick: i, medium: o } = t;
-    return null != e
-        ? l.NW.formatToParts(l.t['8r+Z+P'], {
+function c(e) {
+    let { application: t, username: n, usernameOnClick: o, applicationNameOnClick: l, medium: c } = e;
+    return null != t
+        ? i.NW.formatToParts(i.t['8r+Z+P'], {
               username: n,
-              otherUsername: e.name,
-              usernameOnClick: u,
-              otherUsernameOnClick: i,
-              medium: o,
-              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              otherUsername: t.name,
+              usernameOnClick: o,
+              otherUsernameOnClick: l,
+              medium: c,
+              helpCenterLink: { url: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           })
-        : l.NW.formatToParts(l.t.ojysqa, {
+        : i.NW.formatToParts(i.t.ojysqa, {
               username: n,
-              usernameOnClick: u,
-              medium: o,
-              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              usernameOnClick: o,
+              medium: c,
+              helpCenterLink: { url: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           });
 }
-function s(t) {
-    let { application: e, username: n, usernameOnClick: u, applicationNameOnClick: i, medium: o } = t;
-    return null != e
-        ? l.NW.formatToParts(l.t.zmc0mp, {
+function s(e) {
+    let { application: t, username: n, usernameOnClick: o, applicationNameOnClick: l, medium: c } = e;
+    return null != t
+        ? i.NW.formatToParts(i.t.zmc0mp, {
               username: n,
-              otherUsername: e.name,
-              usernameOnClick: u,
-              otherUsernameOnClick: i,
-              medium: o,
-              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              otherUsername: t.name,
+              usernameOnClick: o,
+              otherUsernameOnClick: l,
+              medium: c,
+              helpCenterLink: { url: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           })
-        : l.NW.formatToParts(l.t['x2CN/f'], {
+        : i.NW.formatToParts(i.t['x2CN/f'], {
               username: n,
-              usernameOnClick: u,
-              medium: o,
-              helpCenterLink: { url: r.Z.getArticleURL(a.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              usernameOnClick: o,
+              medium: c,
+              helpCenterLink: { url: a.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           });
 }

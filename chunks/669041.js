@@ -2,7 +2,7 @@ n.d(t, {
     B: () => m,
     QuestsRewardModalUnverified: () => h
 }),
-    n(47120);
+    n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(442837),

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => eo }), n(653041), n(47120), n(978209), n(733860), n(301563), n(566702);
+n.d(t, { Z: () => eo }), n(539854), n(388685), n(583741), n(290780), n(35282), n(781311);
 var i,
     o = n(392711),
     a = n.n(o),
@@ -49,11 +49,11 @@ let w = 'seenQSTutorial',
     U = null,
     G = [],
     B = null,
-    F = 0,
-    V = [],
+    V = 0,
+    F = [],
     Z = [];
 function H() {
-    (j = y.Z.getGuildCount() >= 3 || a().size(m.Z.getMutablePrivateChannels()) >= 20), (V = []);
+    (j = y.Z.getGuildCount() >= 3 || a().size(m.Z.getMutablePrivateChannels()) >= 20), (F = []);
 }
 function W(e) {
     let t = [];
@@ -168,7 +168,7 @@ function z(e, t) {
         default:
             G = e;
     }
-    if (t !== B) (B = t), (F = Math.max(t.length, F)), (M = (0, u.gJ)(u.a8.DOWN, -1, G));
+    if (t !== B) (B = t), (V = Math.max(t.length, V)), (M = (0, u.gJ)(u.a8.DOWN, -1, G));
     else {
         let e = G[M];
         null != e && e.type === u.h8.HEADER && (M = (0, u.gJ)(u.a8.DOWN, M, G));
@@ -189,7 +189,7 @@ function q(e) {
                       blacklist: a
                   })),
         (B = null),
-        (F = n.length),
+        (V = n.length),
         (U = i),
         r.search(n);
 }
@@ -208,10 +208,10 @@ function X(e, t) {
     return !0;
 }
 function J(e, t) {
-    X((e = '' === (t = t.trim()).trim() ? K() : e), V) || ((V = e), z(e, t));
+    X((e = '' === (t = t.trim()).trim() ? K() : e), F) || ((F = e), z(e, t));
 }
 function $() {
-    (B = null), (F = 0), (V = []), null != r && (r.destroy(), (r = null));
+    (B = null), (V = 0), (F = []), null != r && (r.destroy(), (r = null));
 }
 function ee(e) {
     var t, n;
@@ -285,7 +285,7 @@ class er extends (i = s.ZP.PersistedStore) {
             results: G,
             selectedIndex: M,
             seenTutorial: k,
-            maxQueryLength: F
+            maxQueryLength: V
         };
     }
 }

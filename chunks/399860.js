@@ -3,8 +3,8 @@ n.d(t, {
     rE: () => o,
     tk: () => a
 }),
-    n(977457),
-    n(47120);
+    n(467055),
+    n(388685);
 var r = n(911969);
 function i(e, t) {
     return e === r.yU.CHAT ? '/' + t : t;

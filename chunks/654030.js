@@ -17,21 +17,21 @@ var r,
     b = n(592745),
     x = n(952164),
     y = n(768419),
-    v = n(456432),
-    E = n(789407),
+    E = n(456432),
+    v = n(789407),
     O = n(598077),
     N = n(757266),
     j = n(831506),
     C = n(271383),
-    I = n(283595),
-    S = n(293273),
+    S = n(283595),
+    I = n(293273),
     T = n(885110),
     P = n(594174),
     A = n(181106),
     w = n(417363),
     Z = n(768581),
-    k = n(358085),
-    R = n(804739),
+    R = n(358085),
+    k = n(804739),
     D = n(410575),
     L = n(981631),
     M = n(701488);
@@ -72,7 +72,7 @@ class B extends (r = a.PureComponent) {
             let t = (0, p.Z)(e, n.id);
             if (null != t) return t;
         }
-        return null == n || n instanceof E.ZP
+        return null == n || n instanceof v.ZP
             ? null
             : Z.ZP.getApplicationIconURL({
                   id: n.id,
@@ -91,7 +91,7 @@ class B extends (r = a.PureComponent) {
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
-        return null != t && null != t.primarySkuId && !e && k.isPlatformEmbedded;
+        return null != t && null != t.primarySkuId && !e && R.isPlatformEmbedded;
     }
     render() {
         return (0, i.jsx)(D.Z, {
@@ -156,7 +156,7 @@ class B extends (r = a.PureComponent) {
             W(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
                 return (0, i.jsx)(
-                    v.Z,
+                    E.Z,
                     U(
                         {
                             guildId: null != n ? n : void 0,
@@ -214,7 +214,7 @@ class B extends (r = a.PureComponent) {
                     isGameLaunchable: _,
                     isLoading: s || this.state.sending,
                     activityActionType: u,
-                    isInBrowser: !k.isPlatformEmbedded,
+                    isInBrowser: !R.isPlatformEmbedded,
                     isSyncable: h,
                     isSender: c,
                     channelId: p,
@@ -236,12 +236,12 @@ class B extends (r = a.PureComponent) {
     }
 }
 W(B, 'defaultProps', { isPreview: !1 });
-let G = l.ZP.connectStores([y.Z, j.Z, S.Z, T.Z, N.Z, A.Z, I.Z, b.Z, w.Z, P.default, C.ZP], (e) => {
+let G = l.ZP.connectStores([y.Z, j.Z, I.Z, T.Z, N.Z, A.Z, S.Z, b.Z, w.Z, P.default, C.ZP], (e) => {
     var t;
     let { activity: n, analyticsLocations: r, application: i, partyId: a, userId: l, guildId: o } = e,
         { id: s } = null != i ? i : {},
         c = null != n && null != n.party && n.party.id === a ? j.Z.getParty(n.party.id) : null,
-        u = null != s ? (null != (t = S.Z.getApplicationActivity(s)) ? t : T.Z.getApplicationActivity(s, !0)) : S.Z.findActivity((e) => e.type === L.IIU.LISTENING),
+        u = null != s ? (null != (t = I.Z.getApplicationActivity(s)) ? t : T.Z.getApplicationActivity(s, !0)) : I.Z.findActivity((e) => e.type === L.IIU.LISTENING),
         d = !1;
     null != s && (d = A.Z.getState(s, L.mFx.JOIN) === L.OcF.LOADING);
     let p = Array.from(null != c ? c : []).map((e) => {
@@ -270,8 +270,8 @@ let G = l.ZP.connectStores([y.Z, j.Z, S.Z, T.Z, N.Z, A.Z, I.Z, b.Z, w.Z, P.defau
         isSyncable: m && !h,
         isLaunchable:
             null != s &&
-            (0, R.t)({
-                LibraryApplicationStore: I.Z,
+            (0, k.t)({
+                LibraryApplicationStore: S.Z,
                 LaunchableGameStore: b.Z,
                 DispatchApplicationStore: w.Z,
                 ConnectedAppsStore: N.Z,

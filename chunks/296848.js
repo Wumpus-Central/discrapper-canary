@@ -5,8 +5,8 @@ n.d(t, {
     oE: () => g,
     yb: () => p
 }),
-    n(47120),
-    n(653041),
+    n(388685),
+    n(539854),
     n(192379);
 var r = n(512722),
     i = n.n(r),
@@ -30,7 +30,7 @@ function p(e) {
 }
 function h(e, t, n) {
     let r = e.getCurrentSubscriptionPlanIdForGroup(n);
-    return (e.type === d.NYc.PREMIUM && null == r) || (!e.isPausedAllowsUpdatesButNotResume && (i()(null != r, 'Current subscription has no plan in group'), i()(r !== f.Xh.PREMIUM_YEAR_TIER_1 || t !== f.Xh.PREMIUM_MONTH_TIER_2, 'Unexpected plan switch'), n.indexOf(r) < n.indexOf(t)));
+    return (e.type === d.NYc.PREMIUM && null == r) || (i()(null != r, 'Current subscription has no plan in group'), i()(r !== f.Xh.PREMIUM_YEAR_TIER_1 || t !== f.Xh.PREMIUM_MONTH_TIER_2, 'Unexpected plan switch'), n.indexOf(r) < n.indexOf(t));
 }
 function m(e, t, n) {
     return !h(e, t, n);

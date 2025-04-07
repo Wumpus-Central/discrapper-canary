@@ -1,9 +1,9 @@
 n.d(t, {
-    JL: () => F,
+    JL: () => V,
     PaymentContextProvider: () => Z
 }),
-    n(47120),
-    n(789020);
+    n(388685),
+    n(997841);
 var r = n(200651),
     i = n(192379),
     o = n(734530),
@@ -89,10 +89,10 @@ function G(e, t) {
         e
     );
 }
-let [B, F, V] = (0, E.Z)();
+let [B, V, F] = (0, E.Z)();
 function Z(e) {
     var t, n, E;
-    let { loadId: k, activeSubscription: U, stepConfigs: F, breadcrumbs: V = [], skuIDs: Z, isGift: H = !1, children: W, defaultPlanId: Y, purchaseType: K = x.GZQ.SUBSCRIPTION, applicationId: z, referralCode: q, repeatPurchase: Q = !1 } = e,
+    let { loadId: k, activeSubscription: U, stepConfigs: V, breadcrumbs: F = [], skuIDs: Z, isGift: H = !1, children: W, defaultPlanId: Y, purchaseType: K = x.GZQ.SUBSCRIPTION, applicationId: z, referralCode: q, repeatPurchase: Q = !1 } = e,
         X = (0, D.Z)(),
         J = (0, _.Q)(),
         $ = (0, S.Z)(),
@@ -128,8 +128,8 @@ function Z(e) {
             breadcrumbsData: eg,
             previousStepRef: eE
         } = (0, w.Z)({
-            stepConfigs: F,
-            breadcrumbs: V
+            stepConfigs: V,
+            breadcrumbs: F
         }),
         [eb, ey] = (0, C.Z)(ep),
         { paymentError: ev, paymentAuthenticationState: eO } = (0, N.Z)(),
@@ -148,7 +148,7 @@ function Z(e) {
         [eL, ex] = (0, s.Wu)([h.Z], () => [h.Z.purchaseTokenAuthState, h.Z.purchaseTokenHash]),
         [eM, ek, ej, eU] = (0, s.Wu)([L.Z], () => [L.Z.browserCheckoutState, L.Z.loadId, L.Z.skuId, L.Z.planId]),
         [eG, eB] = i.useState(null),
-        [eF, eV] = i.useState(null),
+        [eV, eF] = i.useState(null),
         [eZ, eH] = i.useState(null),
         [eW, eY] = i.useState(null),
         [eK, ez] = i.useState(null),
@@ -170,9 +170,9 @@ function Z(e) {
             currentPaymentSourceId: en,
             isGift: H
         }),
-        e6 = null != eA ? e4[eA] : null,
-        [e5, e7] = i.useState(e6),
-        e8 = i.useMemo(() => {
+        e5 = null != eA ? e4[eA] : null,
+        [e6, e8] = i.useState(e5),
+        e7 = i.useMemo(() => {
             if (null == eA) return null;
             let e = e3[eA];
             return null == e ? null : e[null != en ? en : m.c];
@@ -227,7 +227,7 @@ function Z(e) {
                 step: ep,
                 setStep: eh,
                 steps: em,
-                stepConfigs: F,
+                stepConfigs: V,
                 breadcrumbs: eg,
                 previousStepRef: eE,
                 purchaseState: eb,
@@ -236,8 +236,8 @@ function Z(e) {
                 paymentError: ev,
                 purchaseError: eI,
                 setPurchaseError: eT,
-                purchasePreviewError: e5,
-                setPurchasePreviewError: e7,
+                purchasePreviewError: e6,
+                setPurchasePreviewError: e8,
                 purchaseErrorBlockRef: eS,
                 purchaseTokenAuthState: eL,
                 purchaseTokenHash: ex,
@@ -247,8 +247,8 @@ function Z(e) {
                 browserCheckoutStatePlanId: eU,
                 bodyNode: eG,
                 setBodyNode: eB,
-                footerNode: eF,
-                setFooterNode: eV,
+                footerNode: eV,
+                setFooterNode: eF,
                 modalOverlayNode: eZ,
                 setModalOverlayNode: eH,
                 selectedSkuId: eA,
@@ -268,7 +268,7 @@ function Z(e) {
                 hasFetchedSkus: e2,
                 skusById: e1,
                 skuPricePreviewsById: e3,
-                selectedSkuPricePreview: e8,
+                selectedSkuPricePreview: e7,
                 application: e9,
                 purchaseType: K,
                 isEmbeddedIAP: tn,

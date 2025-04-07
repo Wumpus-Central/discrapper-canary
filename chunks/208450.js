@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(301563), n(757143);
+n.d(t, { Z: () => L }), n(35282), n(704826);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -17,14 +17,14 @@ var r = n(200651),
     b = n(367907),
     x = n(313201),
     y = n(592125),
-    v = n(984933),
-    E = n(768119),
+    E = n(984933),
+    v = n(768119),
     O = n(944486),
     N = n(585483),
     j = n(72006),
     C = n(405656),
-    I = n(181389),
-    S = n(854709),
+    S = n(181389),
+    I = n(854709),
     T = n(778177),
     P = n(981631),
     A = n(388032),
@@ -43,8 +43,8 @@ function Z(e, t, n) {
     );
 }
 n(852037);
-let k = (0, x.hQ)(),
-    R = c()(p.yC, 500);
+let R = (0, x.hQ)(),
+    k = c()(p.yC, 500);
 class D extends i.PureComponent {
     componentDidMount() {
         var e, t;
@@ -54,7 +54,7 @@ class D extends i.PureComponent {
         let { editorState: t, searchId: n } = this.props;
         if (t !== e.editorState) {
             let e = C.kG(j.Sq(t)),
-                r = I.g9(e, t);
+                r = S.g9(e, t);
             p.u$(n, e, r), null != this._editorRef && j.iE(this._editorRef.editor);
         }
     }
@@ -98,7 +98,7 @@ class D extends i.PureComponent {
             onChange: this.setEditorState,
             role: 'combobox',
             ariaExpanded: e,
-            ariaControls: e ? k : void 0,
+            ariaControls: e ? R : void 0,
             ariaLabel: A.NW.string(A.t['5h0QOD']),
             ariaAutocomplete: 'list'
         });
@@ -169,12 +169,12 @@ class D extends i.PureComponent {
             }),
             Z(this, 'handleSelectedIndexChanged', (e) => {
                 var t, n;
-                null == (n = this._editorRef) || null == (t = n.editor) || t.setAttribute('aria-activedescendant', null != e ? ''.concat(k, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
+                null == (n = this._editorRef) || null == (t = n.editor) || t.setAttribute('aria-activedescendant', null != e ? ''.concat(R, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
             }),
             Z(this, 'renderPopout', () =>
                 (0, r.jsx)(T.ZP, {
                     ref: this._searchPopoutRef,
-                    navId: k,
+                    navId: R,
                     onSelectedIndexChanged: this.handleSelectedIndexChanged
                 })
             ),
@@ -190,7 +190,7 @@ class D extends i.PureComponent {
                         n = C.$G(e);
                     for (let t = 0; t < e.length; t++) C.Fr(e[t], e[t + 1]) || (r = r.substring(0, e[t].start) + r.substring(e[t].end));
                     if (0 === e.length || 0 === Object.keys(n).length) return !1;
-                    R(t, n, r, !!i), d.uvj.announce(A.NW.string(A.t.pKCxWF)), this.onBlur();
+                    k(t, n, r, !!i), d.uvj.announce(A.NW.string(A.t.pKCxWF)), this.onBlur();
                 }
                 return !0;
             }),
@@ -206,7 +206,7 @@ class D extends i.PureComponent {
                 let n = O.Z.getChannelId(),
                     r = y.Z.getChannel(n);
                 if (((null == r ? void 0 : r.isThread()) && (r = y.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
-                let i = v.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
+                let i = E.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
                     a = null != i ? i.name : r.name;
                 Promise.resolve().then(() => {
                     let { _editorRef: e } = this;
@@ -241,7 +241,7 @@ class D extends i.PureComponent {
                 let { shiftKey: t } = e;
                 e.preventDefault();
                 let { current: n } = this._searchPopoutRef;
-                return (null != n && n.selectOption()) || ((0, S.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), !0;
+                return (null != n && n.selectOption()) || ((0, I.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), !0;
             }),
             Z(this, 'handleBeforeInput', (e) => {
                 let { editorState: t } = this.props,
@@ -314,19 +314,19 @@ class D extends i.PureComponent {
             C.WU();
     }
 }
-let L = u.ZP.connectStores([_.Z, E.Z], () => {
+let L = u.ZP.connectStores([_.Z, v.Z], () => {
     var e;
-    let t = E.Z.getCurrentSearchId(),
-        n = E.Z.getSearchType(),
-        r = null != t && E.Z.isSearching(t),
-        i = null != t && null != (e = E.Z.getEditorState(t)) ? e : j.nR(I.Jl(h.ZP)),
+    let t = v.Z.getCurrentSearchId(),
+        n = v.Z.getSearchType(),
+        r = null != t && v.Z.isSearching(t),
+        i = null != t && null != (e = v.Z.getEditorState(t)) ? e : j.nR(S.Jl(h.ZP)),
         a = _.Z.keyboardModeEnabled;
     return {
         searchId: t,
         searchType: n,
         isSearching: r,
         editorState: i,
-        hasResults: E.Z.hasResults(t),
+        hasResults: v.Z.hasResults(t),
         keyboardModeEnabled: a
     };
 })(D);

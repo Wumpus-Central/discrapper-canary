@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(653041), n(566702), n(757143), n(301563), n(733860);
+n.d(t, { Z: () => w }), n(539854), n(781311), n(704826), n(35282), n(290780);
 var r,
     i,
     a,
@@ -17,17 +17,17 @@ var r,
     b = n(981631),
     x = n(388032);
 let y = {},
-    v = {};
-function E(e) {
+    E = {};
+function v(e) {
     let { searchId: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: l } = e,
-        o = v[t];
+        o = E[t];
     return (
         null == o &&
             ((o = {
                 results: [],
                 context: c.Z.getSearchContext(O.bind(null, t))
             }),
-            (v[t] = o)),
+            (E[t] = o)),
         {
             query: null != n ? n : '',
             mode:
@@ -46,7 +46,7 @@ function E(e) {
 }
 function O(e, t) {
     let { results: n } = t,
-        r = v[e],
+        r = E[e],
         i = y[e];
     if (null == r || null == i) return;
     let { type: a, filter: l } = i.mode;
@@ -74,7 +74,7 @@ function O(e, t) {
     let { query: s, mode: c, tokens: u, cursorScope: d } = i,
         { autocompletes: p } = i;
     (p = C(e, c)),
-        (y[e] = E({
+        (y[e] = v({
             searchId: e,
             query: s,
             mode: c,
@@ -93,7 +93,7 @@ function N(e, t, n) {
         d = null != (i = null == t || null == (r = t.getFullMatch()) ? void 0 : r.trim()) ? i : '',
         p = e === b.dCx.FILTER_FROM || e === b.dCx.FILTER_MENTIONS;
     if (c === b.aib.GUILD && p) {
-        let e = v[n];
+        let e = E[n];
         null == e
             ? (l = null)
             : ((null == t || 0 === d.length) &&
@@ -205,14 +205,14 @@ function C(e, t) {
         n
     );
 }
-function I() {
+function S() {
     (0, p.WU)();
 }
-function S(e) {
+function I(e) {
     let t = y[e];
     if (null == t) return;
     let { query: n, mode: r, tokens: i, cursorScope: a, autocompletes: l } = t;
-    y[e] = E({
+    y[e] = v({
         searchId: e,
         query: n,
         mode: r,
@@ -225,7 +225,7 @@ function T() {
     let e = h.Z.getCurrentSearchId();
     if (null == e || null == y[e]) return;
     let { query: t, mode: n, tokens: r, cursorScope: i } = y[e];
-    y[e] = E({
+    y[e] = v({
         searchId: e,
         query: t,
         mode: n,
@@ -240,7 +240,7 @@ class P extends (r = l.ZP.Store) {
     }
     getState(e) {
         var t;
-        return null != (t = y[e]) ? t : E({ searchId: e });
+        return null != (t = y[e]) ? t : v({ searchId: e });
     }
 }
 (a = 'SearchAutocompleteStore'),
@@ -260,7 +260,7 @@ let A = new P(o.Z, {
                 l = (0, p.cl)(i),
                 o = (0, p.qc)(a, i),
                 s = null != (t = y[r]) ? t : {},
-                c = v[r],
+                c = E[r],
                 u = !0;
             if (l === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (u = !1);
             else if (o.type === b.Sap.EMPTY || (o.type === b.Sap.FILTER && o.filter !== b.dCx.FILTER_FROM && o.filter !== b.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = C(r, o));
@@ -269,7 +269,7 @@ let A = new P(o.Z, {
                 null != e && e.getFullMatch().trim().length > 0 ? (d.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = C(r, o)));
             }
             return (
-                (y[r] = E({
+                (y[r] = v({
                     searchId: r,
                     query: l,
                     mode: o,
@@ -282,19 +282,19 @@ let A = new P(o.Z, {
         },
         SEARCH_EDITOR_STATE_CLEAR: function (e) {
             let { searchId: t } = e,
-                n = v[t];
-            null != n && (n.context.destroy(), (n.results = []), delete v[t]), delete y[t];
+                n = E[t];
+            null != n && (n.context.destroy(), (n.results = []), delete E[t]), delete y[t];
         },
-        CHANNEL_CREATE: I,
-        CHANNEL_DELETE: I,
+        CHANNEL_CREATE: S,
+        CHANNEL_DELETE: S,
         STREAMER_MODE_UPDATE: T,
         SEARCH_SCREEN_OPEN: T,
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null != t ? S(t) : Object.keys(y).forEach(S);
+            null != t ? I(t) : Object.keys(y).forEach(I);
         },
         LOGOUT: function () {
-            Object.keys(y).forEach(S);
+            Object.keys(y).forEach(I);
         }
     }),
     w = A;

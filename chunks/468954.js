@@ -61,8 +61,8 @@ function _(e, t) {
 function p(e) {
     let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: v, renderSectionHeader: O, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: N, renderHeaderAccessories: A, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
         B = i.useRef(null),
-        F = i.useRef(null),
         V = i.useRef(null),
+        F = i.useRef(null),
         Z = 0 === t.length,
         H = (0, o.Iu)((e) => e.searchQuery),
         W = f.useStore((e) => e.inspectedExpressionPosition),
@@ -93,7 +93,7 @@ function p(e) {
             isUsingKeyboardNavigation: en
         } = (0, a.t$)({
             columnCounts: Q,
-            expressionsListRef: F,
+            expressionsListRef: V,
             expressionsGrid: K,
             onSelectItem: p,
             store: f,
@@ -133,16 +133,16 @@ function p(e) {
         i.useEffect(() => f.resetStoreState, [f.resetStoreState]),
         i.useLayoutEffect(() => {
             var e;
-            null == (e = V.current) || e.focus();
+            null == (e = F.current) || e.focus();
         }, []);
     let el = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.Z, {
-                ref: V,
+                ref: F,
                 store: f,
                 hasSendableExpressions: !0,
                 onKeyDown: et,
-                expressionsListRef: F,
+                expressionsListRef: V,
                 gridNavigatorId: M,
                 defaultSearchPlaceholder: g,
                 emptySearchPlaceholder: E
@@ -162,7 +162,7 @@ function p(e) {
                 ? b(c.emptyState)
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          N(F),
+                          N(V),
                           null != k &&
                               (0, r.jsx)('div', {
                                   className: c.gridNoticeWrapper,
@@ -184,7 +184,7 @@ function p(e) {
                                           null != Y
                                               ? (0, r.jsx)(s.Z, {
                                                     categories: t,
-                                                    ref: F,
+                                                    ref: V,
                                                     store: f,
                                                     hasSearchResults: m,
                                                     listPadding: x,

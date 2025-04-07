@@ -125,7 +125,7 @@ e.exports = function (e) {
             className: 'string',
             variants: [U(), U('#'), U('##'), U('###'), G(), G('#'), G('##'), G('###')]
         },
-        F = [
+        V = [
             e.BACKSLASH_ESCAPE,
             {
                 begin: /\[/,
@@ -134,10 +134,10 @@ e.exports = function (e) {
                 contains: [e.BACKSLASH_ESCAPE]
             }
         ],
-        V = {
+        F = {
             begin: /\/[^\s](?=[^/\n]*\/)/,
             end: /\//,
-            contains: F
+            contains: V
         },
         Z = (e) => {
             let t = r(e, /\//),
@@ -146,7 +146,7 @@ e.exports = function (e) {
                 begin: t,
                 end: n,
                 contains: [
-                    ...F,
+                    ...V,
                     {
                         scope: 'comment',
                         begin: `#(?!.*${n})`,
@@ -157,7 +157,7 @@ e.exports = function (e) {
         },
         H = {
             scope: 'regexp',
-            variants: [Z('###'), Z('##'), Z('#'), V]
+            variants: [Z('###'), Z('##'), Z('#'), F]
         },
         W = { match: r(/`/, y, /`/) },
         Y = [

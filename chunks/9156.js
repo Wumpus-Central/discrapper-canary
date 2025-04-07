@@ -3,8 +3,8 @@ n.d(t, {
     ZP: () => em,
     wL: () => Q
 }),
-    n(47120),
-    n(789020);
+    n(388685),
+    n(997841);
 var r,
     i = n(392711),
     o = n.n(i),
@@ -107,8 +107,8 @@ let N = {},
     U = new Set(),
     G = new Set(),
     B = {},
-    F = {};
-function V(e, t) {
+    V = {};
+function F(e, t) {
     var n;
     let r = N[e],
         i = null != (n = null == r ? void 0 : r.channel_overrides) ? n : {},
@@ -159,12 +159,12 @@ function H(e) {
         let t = r[e];
         _.yE(t.flags, v.ic.OPT_IN_ENABLED) ? n.add(e) : n.delete(e);
     }
-    Object.keys(r).length > 0 ? (F[e] = n) : delete F[e];
+    Object.keys(r).length > 0 ? (V[e] = n) : delete V[e];
 }
 function W(e, t) {
     var n;
     let r = N[e];
-    V(e, I({ channel_overrides: null != (n = null == r ? void 0 : r.channel_overrides) ? n : {} }, t));
+    F(e, I({ channel_overrides: null != (n = null == r ? void 0 : r.channel_overrides) ? n : {} }, t));
 }
 function Y(e, t, n) {
     let r = q(e, t, n);
@@ -186,7 +186,7 @@ function z(e, t) {
     var n;
     let r = N[e],
         i = null != (n = null == r ? void 0 : r.channel_overrides) ? n : {};
-    V(e, { channel_overrides: null == r ? t : I({}, i, t) });
+    F(e, { channel_overrides: null == r ? t : I({}, i, t) });
 }
 function q(e, t, n) {
     var r;
@@ -237,7 +237,7 @@ function ee(e) {
     let t = new Set();
     for (let n in (e.userGuildSettings.entries.forEach((e) => {
         let n = e;
-        'channel_overrides' in n || (n.channel_overrides = {}), V(e.guild_id, n), null != e.guild_id && t.add(e.guild_id);
+        'channel_overrides' in n || (n.channel_overrides = {}), F(e.guild_id, n), null != e.guild_id && t.add(e.guild_id);
     }),
     N))
         t.has(n) || Z(n, N[n]);
@@ -265,7 +265,7 @@ function er(e) {
 function ei(e) {
     let { userGuildSettings: t } = e;
     t.forEach((e) => {
-        V(e.guild_id, I({ channel_overrides: {} }, e));
+        F(e.guild_id, I({ channel_overrides: {} }, e));
     });
 }
 function eo(e) {
@@ -283,7 +283,7 @@ function es(e) {
 function el(e) {
     let { guildId: t } = e;
     if (null == t) return !1;
-    delete B[t], delete F[t];
+    delete B[t], delete V[t];
 }
 function ec(e) {
     let { guildId: t, updates: n } = e;
@@ -468,7 +468,7 @@ class eh extends (r = a.ZP.PersistedStore) {
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (null == e) return !1;
         if (c.Z.isFullServerPreview(e)) return c.Z.isChannelOptedIn(e, t);
-        if (i && null != F[e]) return F[e].has(t);
+        if (i && null != V[e]) return V[e].has(t);
         let o = null != (r = null == (n = this.getChannelOverrides(e)[t]) ? void 0 : n.flags) ? r : 0;
         return _.yE(o, v.ic.OPT_IN_ENABLED);
     }
@@ -477,7 +477,7 @@ class eh extends (r = a.ZP.PersistedStore) {
         return c.Z.isFullServerPreview(e) ? (null != (t = c.Z.getViewingChannels(e)) ? t : G) : null != (n = k[e]) ? n : G;
     }
     getOptedInChannelsWithPendingUpdates(e) {
-        return F[e];
+        return V[e];
     }
     getPendingChannelUpdates(e) {
         return B[e];

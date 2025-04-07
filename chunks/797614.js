@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120), n(653041);
+n.d(t, { Z: () => b }), n(388685), n(539854);
 var r = n(404097),
     i = n(544891),
     o = n(358085),
@@ -107,8 +107,8 @@ class E {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1743797797188',
-                            build_number: '386488'
+                            built_at: '1744049388783',
+                            build_number: '386824'
                         }
                     },
                     retries: 1,

@@ -1,14 +1,14 @@
 n.d(t, {
     W: () => O,
-    u: () => E
+    u: () => v
 }),
-    n(315314),
-    n(309749),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
+    n(190126),
+    n(368063),
+    n(65234),
+    n(111804),
+    n(490233),
+    n(97749),
+    n(388685);
 var r,
     i = n(200651),
     a = n(192379),
@@ -37,7 +37,7 @@ function y() {
             return e;
         }).apply(this, arguments);
 }
-function v(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,10 +62,10 @@ function v(e) {
     }
     return e;
 }
-var E = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     var t, n, r, l;
-    let { title: E, header: O, info: N, staticBannerSrc: j, videoBannerSrc: C, bannerAspectRatio: I = 0, iconSrc: S, embedUrl: T, actions: P = [], trackingConfig: A } = e;
+    let { title: v, header: O, info: N, staticBannerSrc: j, videoBannerSrc: C, bannerAspectRatio: S = 0, iconSrc: I, embedUrl: T, actions: P = [], trackingConfig: A } = e;
     A = {
         id: null != (n = null == (t = A) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
@@ -74,9 +74,9 @@ function O(e) {
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
     };
-    let { primaryColor: w, secondaryColor: Z } = (0, p.Z)(null != S ? S : j),
-        k = 'linear-gradient(45deg, '.concat(w, ', ').concat(Z, ')'),
-        R = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+    let { primaryColor: w, secondaryColor: Z } = (0, p.Z)(null != I ? I : j),
+        R = 'linear-gradient(45deg, '.concat(w, ', ').concat(Z, ')'),
+        k = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         D = a.useRef(!1),
         L = (0, u.O)(
             (e) => {
@@ -104,9 +104,9 @@ function O(e) {
                   })
                 : null,
         W = null != j,
-        U = null != C && !1 === R,
+        U = null != C && !1 === k,
         F = W || U,
-        B = 0 === I ? x.bannerAspectRatioBot : x.bannerAspectRatioActivity,
+        B = 0 === S ? x.bannerAspectRatioBot : x.bannerAspectRatioActivity,
         G = a.useRef(null),
         H = a.useCallback(() => {
             let e = G.current;
@@ -145,7 +145,7 @@ function O(e) {
                 }),
             (0, i.jsxs)('div', {
                 className: x.contentContainer,
-                style: { background: k },
+                style: { background: R },
                 children: [
                     null != O &&
                         (0, i.jsxs)('div', {
@@ -162,10 +162,10 @@ function O(e) {
                     (0, i.jsxs)('div', {
                         className: x.contentWrapper,
                         children: [
-                            null != S &&
+                            null != I &&
                                 (0, i.jsx)('div', {
                                     className: x.img,
-                                    style: { backgroundImage: 'url('.concat(S, ')') }
+                                    style: { backgroundImage: 'url('.concat(I, ')') }
                                 }),
                             (0, i.jsxs)('div', {
                                 className: x.content,
@@ -174,7 +174,7 @@ function O(e) {
                                         variant: 'text-md/semibold',
                                         color: 'none',
                                         lineClamp: 1,
-                                        children: E
+                                        children: v
                                     }),
                                     N
                                 ]
@@ -212,12 +212,12 @@ function O(e) {
                                                           return e;
                                                       })(e)
                                                   );
-                                                  return (0, i.jsx)(c.zxk, v({}, d, t));
+                                                  return (0, i.jsx)(c.zxk, E({}, d, t));
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(c.zxk, v({}, d), n);
+                                    : (0, i.jsx)(c.zxk, E({}, d), n);
                             })
                         })
                 ]

@@ -1,12 +1,12 @@
-r.d(t, { Z: () => d }), r(653041), r(789020);
+r.d(t, { Z: () => d }), r(539854), r(997841);
 var n = r(544891),
-    a = r(881052),
-    o = r(687294),
-    i = r(476326),
+    A = r(881052),
+    a = r(687294),
+    o = r(476326),
     l = r(45251),
-    s = r(861990),
-    c = r(388032);
-function u(e) {
+    i = r(861990),
+    s = r(388032);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -31,14 +31,14 @@ function u(e) {
     }
     return e;
 }
-class d extends o.Z {
+class d extends a.Z {
     async uploadFiles(e, t) {
         let { addFilesTo: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        super.upload({ name: c.NW.string(c.t.jfKTen) }, t, e);
+        super.upload({ name: s.NW.string(s.t.jfKTen) }, t, e);
         let n = new AbortController();
         try {
             if (((this.files = e), this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))) return;
-            this.setUploadingTextForUI(), await (0, o.$)(this.files, !0, this._recomputeProgress.bind(this));
+            this.setUploadingTextForUI(), await (0, a.$)(this.files, !0, this._recomputeProgress.bind(this));
         } catch (e) {
             this._handleException(e);
         }
@@ -50,20 +50,20 @@ class d extends o.Z {
         }
     }
     async _createMessage(e, t, r) {
-        var o, c, d, p;
-        let f,
-            m = [];
+        var a, s, d, u;
+        let g,
+            f = [];
         if (
             ((this.files.forEach((e, t) => {
-                let r = (0, s.B)(e, t);
-                e.item.platform === i.ow.WEB && m.push(u({}, r));
+                let r = (0, i.B)(e, t);
+                e.item.platform === o.ow.WEB && f.push(c({}, r));
             }),
             null != r && null != t)
-                ? (f = this._addAttachmentsToPayload(t, r, m))
-                : ((d = u({}, t)),
-                  (p = p = { attachments: m }),
+                ? (g = this._addAttachmentsToPayload(t, r, f))
+                : ((d = c({}, t)),
+                  (u = u = { attachments: f }),
                   Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(p))
+                      ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(u))
                       : (function (e, t) {
                             var r = Object.keys(e);
                             if (Object.getOwnPropertySymbols) {
@@ -71,51 +71,51 @@ class d extends o.Z {
                                 r.push.apply(r, n);
                             }
                             return r;
-                        })(Object(p)).forEach(function (e) {
-                            Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(p, e));
+                        })(Object(u)).forEach(function (e) {
+                            Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(u, e));
                         }),
-                  (f = d)),
-            null != f.scheduled_timestamp)
+                  (g = d)),
+            null != g.scheduled_timestamp)
         ) {
             try {
                 let e = await (0, l.PV)({
-                    channelId: f.channel_id,
-                    scheduledTimestamp: f.scheduled_timestamp,
+                    channelId: g.channel_id,
+                    scheduledTimestamp: g.scheduled_timestamp,
                     messageSendData: {
-                        channelId: f.channel_id,
-                        content: f.content,
-                        flags: f.flags,
-                        nonce: f.nonce,
-                        message_reference: f.message_reference,
-                        allowed_mentions: f.allowed_mentions,
+                        channelId: g.channel_id,
+                        content: g.content,
+                        flags: g.flags,
+                        nonce: g.nonce,
+                        message_reference: g.message_reference,
+                        allowed_mentions: g.allowed_mentions,
                         tts: !1
                     },
-                    attachments: m
+                    attachments: f
                 });
                 return this._handleComplete(e.body), e.body;
             } catch (e) {
-                if (this._raiseEndpointErrors) throw new a.Hx(e);
+                if (this._raiseEndpointErrors) throw new A.Hx(e);
                 this._handleError({
-                    code: null == e || null == (o = e.body) ? void 0 : o.code,
+                    code: null == e || null == (a = e.body) ? void 0 : a.code,
                     body: null == e ? void 0 : e.body
                 });
             }
             return;
         }
-        let g = {
+        let p = {
                 url: this._url,
-                body: f,
+                body: g,
                 signal: e,
                 rejectWithError: !1
             },
-            b = 'POST' === this._method ? n.tn.post : n.tn.patch;
+            h = 'POST' === this._method ? n.tn.post : n.tn.patch;
         try {
-            let e = await b(g);
+            let e = await h(p);
             return this._handleComplete(e.body), e.body;
         } catch (e) {
-            if (this._raiseEndpointErrors) throw new a.Hx(e);
+            if (this._raiseEndpointErrors) throw new A.Hx(e);
             this._handleError({
-                code: null == e || null == (c = e.body) ? void 0 : c.code,
+                code: null == e || null == (s = e.body) ? void 0 : s.code,
                 body: null == e ? void 0 : e.body
             });
         }

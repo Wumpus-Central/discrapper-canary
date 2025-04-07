@@ -1,10 +1,10 @@
-var r = a(98405),
-    n = a(16721);
-r(
+var n = r(98405),
+    i = r(16721);
+n(
     {
         target: 'RegExp',
         proto: !0,
-        forced: /./.exec !== n
+        forced: /./.exec !== i
     },
-    { exec: n }
+    { exec: i }
 );

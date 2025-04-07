@@ -35,8 +35,8 @@ function R(e) {
         U = (0, s.vh)(t.id),
         G = (0, a.wn)({ location: 'UserProfilePopoutBody' }),
         B = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        F = t.id === n.id,
-        V = (0, f.I5)(n);
+        V = t.id === n.id,
+        F = (0, f.I5)(n);
     return (0, r.jsxs)(o.Ttm, {
         fade: !0,
         className: C.body,
@@ -98,7 +98,7 @@ function R(e) {
                 user: t,
                 source: E.t.POPOUT
             }),
-            !F &&
+            !V &&
                 (0, r.jsx)(T.Z, {
                     user: t,
                     onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
@@ -114,9 +114,9 @@ function R(e) {
                       hidePersonalInformation: B,
                       onClose: x
                   }),
-            F &&
+            V &&
                 (0, r.jsx)(p.Z, {
-                    isPremiumUser: V,
+                    isPremiumUser: F,
                     onInteraction: x,
                     className: C.upsell
                 }),

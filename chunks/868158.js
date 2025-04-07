@@ -5,9 +5,9 @@ n.d(t, {
     J2: () => G,
     r$: () => P
 }),
-    n(653041),
-    n(47120),
-    n(411104);
+    n(539854),
+    n(388685),
+    n(415506);
 var r = n(512722),
     i = n.n(r),
     o = n(392711),
@@ -270,7 +270,7 @@ function U(e) {
             deletes: null != (a = e.partial_updates.deleted_channel_ids) ? a : []
         },
         channelTimestampUpdates: e.channel_updates,
-        emojis: null == _.emojis ? null : F(_.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
+        emojis: null == _.emojis ? null : V(_.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
         emojiUpdates: {
             writes: null != (s = e.partial_updates.emojis) ? s : [],
             deletes: null != (l = e.partial_updates.deleted_emoji_ids) ? l : []
@@ -284,7 +284,7 @@ function U(e) {
         properties: null != (c = e.properties) ? c : null,
         roles: b.EO(e.id, _.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
         stage_instances: e.stage_instances,
-        stickers: null == _.stickers ? null : F(_.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
+        stickers: null == _.stickers ? null : V(_.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
         stickerUpdates: {
             writes: null != (u = e.partial_updates.stickers) ? u : [],
             deletes: null != (d = e.partial_updates.deleted_sticker_ids) ? d : []
@@ -331,7 +331,7 @@ function G(e, t) {
         },
         channelTimestampUpdates: e.channel_updates,
         activity_instances: e.activity_instances,
-        emojis: null == t.emojis ? null : F(t.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
+        emojis: null == t.emojis ? null : V(t.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
         emojiUpdates: {
             writes: null != (l = e.partial_updates.emojis) ? l : [],
             deletes: null != (c = e.partial_updates.deleted_emoji_ids) ? c : []
@@ -346,7 +346,7 @@ function G(e, t) {
         properties: null != (u = e.properties) ? u : t.properties,
         roles: b.EO(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
         stage_instances: e.stage_instances,
-        stickers: null == t.stickers ? null : F(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
+        stickers: null == t.stickers ? null : V(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
         stickerUpdates: {
             writes: null != (d = e.partial_updates.stickers) ? d : [],
             deletes: null != (f = e.partial_updates.deleted_sticker_ids) ? f : []
@@ -364,7 +364,7 @@ function B(e) {
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;
 }
-function F(e, t, n) {
+function V(e, t, n) {
     t = null != t ? t : [];
     let r = new Set((null != n ? n : []).concat(t.map((e) => e.id)));
     return e.filter((e) => !r.has(e.id)).concat(t);

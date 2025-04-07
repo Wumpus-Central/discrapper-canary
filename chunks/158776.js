@@ -2,12 +2,12 @@ n.d(t, {
     Z: () => Q,
     f: () => R
 }),
-    n(47120),
-    n(13667),
-    n(390547),
-    n(978209),
-    n(230036),
-    n(653041);
+    n(388685),
+    n(361932),
+    n(187205),
+    n(583741),
+    n(642613),
+    n(539854);
 var r,
     i = n(348327),
     o = n.n(i),
@@ -233,7 +233,7 @@ function B(e) {
                 });
         });
 }
-function F(e) {
+function V(e) {
     let { guild: t } = e;
     t.presences.forEach((e) => {
         let { user: n, status: r, clientStatus: i, activities: o, hiddenActivities: a } = e;
@@ -247,7 +247,7 @@ function F(e) {
         });
     });
 }
-function V(e) {
+function F(e) {
     let { guild: t } = e;
     k(t.id);
 }
@@ -395,8 +395,8 @@ let Q = new q(c.Z, {
     CONNECTION_OPEN: j,
     CONNECTION_OPEN_SUPPLEMENTAL: U,
     OVERLAY_INITIALIZE: G,
-    GUILD_CREATE: F,
-    GUILD_DELETE: V,
+    GUILD_CREATE: V,
+    GUILD_DELETE: F,
     GUILD_MEMBER_REMOVE: Z,
     PRESENCE_UPDATES: H,
     PRESENCES_REPLACE: B,

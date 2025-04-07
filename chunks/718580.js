@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    o = n(642128),
+    o = n(200100),
     a = n(990547),
     s = n(873546),
     l = n(186325),
@@ -162,12 +162,12 @@ function T(e) {
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
         B = (0, p.Z)(R),
-        { width: F, centered: V = !0 } = S,
+        { width: V, centered: F = !0 } = S,
         Z = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
         W = s.tq
             ? {}
-            : V
+            : F
               ? {
                     transform: 'translate3d(0, -50%, 0) scale(1.0, 1.0)',
                     top: '50%'
@@ -196,7 +196,7 @@ function T(e) {
                             display: g,
                             flexDirection: 'column',
                             backfaceVisibility: 'hidden',
-                            width: s.tq ? '100%' : F
+                            width: s.tq ? '100%' : V
                         },
                         W,
                         P.enabled

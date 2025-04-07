@@ -1,8 +1,8 @@
-n.d(i, {
-    _k: () => r,
-    jW: () => o
+n.d(t, {
+    _k: () => l,
+    jW: () => i
 });
-let t = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-03_invites_refresh',
     label: 'Invites Refresh',
@@ -15,13 +15,13 @@ let t = (0, n(818083).B)({
         }
     ]
 });
-function o(e) {
-    let { location: i } = e,
-        { enabled: n } = t.getCurrentConfig({ location: i });
+function i(e) {
+    let { location: t } = e,
+        { enabled: n } = r.getCurrentConfig({ location: t });
     return n;
 }
-function r(e) {
-    let { location: i } = e,
-        { enabled: n } = t.useExperiment({ location: i });
+function l(e) {
+    let { location: t } = e,
+        { enabled: n } = r.useExperiment({ location: t });
     return { enabled: n };
 }

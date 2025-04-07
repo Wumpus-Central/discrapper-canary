@@ -8,17 +8,17 @@ var r = n(200651),
     s = n(377171),
     u = n(626135),
     d = n(436952),
-    f = n(54480),
-    O = n(611725),
+    f = n(839606),
+    O = n(54480),
     b = n(981631),
     p = n(388032),
     h = n(837229);
 function N(e) {
-    let { openPickerForChannel: t } = (0, O.B)(),
+    let { openPickerForChannel: t } = (0, f.B)(),
         n = (0, i.useCallback)(() => {
             o.default.selectPrivateChannel(e.id), t(e.id), u.default.track(b.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id });
         }, [e.id, t]),
-        { canAccessPicker: N, entryPoint: y } = (0, f.m)({
+        { canAccessPicker: N, entryPoint: y } = (0, O.m)({
             location: 'useChannelWallpaperItem',
             selectedChannelId: e.id
         }),

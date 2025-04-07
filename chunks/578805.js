@@ -1,18 +1,18 @@
 var r = n(444675),
-    i = n(607974),
-    o = n(64750);
-if (n(322499)() || n(882171)()) {
+    i = n(670575),
+    o = n(165593);
+if (n(738146)() || n(247131)()) {
     var a = Symbol.iterator;
     e.exports = function (e) {
         return null != e && void 0 !== e[a] ? e[a]() : i(e) ? Array.prototype[a].call(e) : void 0;
     };
 } else {
     var s = n(189612),
-        l = n(163494),
-        c = n(690244),
+        l = n(934660),
+        c = n(745872),
         u = c('%Map%', !0),
         d = c('%Set%', !0),
-        f = n(192853),
+        f = n(887937),
         _ = f('Array.prototype.push'),
         p = f('String.prototype.charCodeAt'),
         h = f('String.prototype.slice'),
@@ -60,8 +60,8 @@ if (n(322499)() || n(882171)()) {
             if (t && void 0 !== e['_es6-shim iterator_']) return e['_es6-shim iterator_']();
         };
     if (u || d) {
-        var b = n(403006),
-            y = n(72859),
+        var b = n(913306),
+            y = n(282702),
             v = f('Map.prototype.forEach', !0),
             O = f('Set.prototype.forEach', !0);
         if (void 0 === r || !r.versions || !r.versions.node)

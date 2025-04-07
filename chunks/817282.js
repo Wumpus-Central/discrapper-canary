@@ -1,9 +1,9 @@
-var r = n(580983),
-    i = n(77025),
-    o = n(568033),
-    a = n(503463),
-    s = RegExp.prototype;
-e.exports = function (e) {
-    var t = e.flags;
-    return !(void 0 === t && !('flags' in s) && !i(e, 'flags') && o(s, e)) ? t : r(a, e);
+var n = r(580983),
+    i = r(77025),
+    o = r(568033),
+    a = r(503463),
+    c = RegExp.prototype;
+t.exports = function (t) {
+    var e = t.flags;
+    return !(void 0 === e && !('flags' in c) && !i(t, 'flags') && o(c, t)) ? e : n(a, t);
 };

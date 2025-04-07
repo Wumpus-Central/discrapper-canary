@@ -1,9 +1,9 @@
-n.d(t, { Z: () => eo }), n(47120);
+n.d(t, { Z: () => eo }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(954955),
     a = n.n(o),
-    s = n(788347),
+    s = n(359959),
     l = n(442837),
     c = n(477690),
     u = n(481060),
@@ -64,7 +64,7 @@ function B(e) {
     }
     return e;
 }
-function F(e, t) {
+function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function F(e, t) {
     }
     return n;
 }
-function V(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -104,7 +104,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     er = i.forwardRef(function (e, t) {
         var o;
         let { containerWidth: a, channel: c, onSelectSticker: O, closePopout: G } = e,
-            { location: F } = (0, d.O)(),
+            { location: V } = (0, d.O)(),
             { analyticsLocations: z } = (0, _.ZP)(f.Z.STICKER_PICKER),
             q = (null == (o = (0, E.N)()) ? void 0 : o.subscription_trial) != null,
             Q = i.useRef(null),
@@ -161,7 +161,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         case C.al.CREATE_STICKER:
                             v.default.track(j.rMx.OPEN_MODAL, {
                                 type: j.jXE.CREATE_STICKER_MODAL,
-                                location: F
+                                location: V
                             }),
                                 (0, u.ZDy)(async () => {
                                     let { default: t } = await Promise.all([n.e('93626'), n.e('61547')]).then(n.bind(n, 136735));
@@ -172,7 +172,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             null != e.sticker && (0, S.kl)(e.sticker, e_, c) && ev(e);
                     }
                 },
-                [F, e_, c, ev]
+                [V, e_, c, ev]
             ),
             {
                 getItemProps: eR,
@@ -245,7 +245,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                           children: [
                               (0, r.jsx)(
                                   'div',
-                                  V(
+                                  F(
                                       B(
                                           {
                                               ref: Q,
@@ -294,7 +294,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             id: k.nZ,
             'aria-labelledby': k.ED,
             role: 'tabpanel',
-            children: e.isLoading ? (0, r.jsx)(u.$jN, { className: U.loadingIndicator }) : (0, r.jsx)(er, V(B({}, e), { ref: t }))
+            children: e.isLoading ? (0, r.jsx)(u.$jN, { className: U.loadingIndicator }) : (0, r.jsx)(er, F(B({}, e), { ref: t }))
         })
     ),
     eo = i.forwardRef(ei);

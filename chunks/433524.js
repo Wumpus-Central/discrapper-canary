@@ -1,18 +1,18 @@
-var r = n(507604),
-    i = n(923646),
-    o = n(796138),
-    a = n(573078),
-    s = n(199838).get,
-    l = RegExp.prototype,
-    c = TypeError;
-r &&
+var n = r(507604),
+    i = r(923646),
+    o = r(796138),
+    a = r(573078),
+    c = r(199838).get,
+    u = RegExp.prototype,
+    s = TypeError;
+n &&
     i &&
-    a(l, 'dotAll', {
+    a(u, 'dotAll', {
         configurable: !0,
         get: function () {
-            if (this !== l) {
-                if ('RegExp' === o(this)) return !!s(this).dotAll;
-                throw new c('Incompatible receiver, RegExp required');
+            if (this !== u) {
+                if ('RegExp' === o(this)) return !!c(this).dotAll;
+                throw new s('Incompatible receiver, RegExp required');
             }
         }
     });

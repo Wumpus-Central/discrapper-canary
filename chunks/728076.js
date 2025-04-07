@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(566702);
+n.d(t, { Z: () => b }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(781311);
 var r = n(192379),
     a = n(263568),
     o = n(935369),
@@ -59,8 +59,8 @@ function b(e, t, n) {
         [x, w] = r.useState(a.C.DEFAULT),
         [v, _] = r.useState(!1),
         [P, C] = r.useState(d.lc.ONE_DAY),
-        [N, A] = r.useState({}),
-        [E, k] = r.useState(!1),
+        [N, E] = r.useState({}),
+        [A, k] = r.useState(!1),
         I = h.filter((e) => (0, u.cS)(e, x)),
         S = h.filter((e) => (0, u.uY)(e, x)),
         D = j.length > 0 && I.length >= d.gY && 0 === S.length,
@@ -68,7 +68,7 @@ function b(e, t, n) {
         L = h.length < d.fw,
         B = h.length > d.gY,
         Z = r.useCallback((e) => {
-            A((e) => {
+            E((e) => {
                 let t = m({}, e);
                 return delete t.question, t;
             }),
@@ -76,7 +76,7 @@ function b(e, t, n) {
         }, []),
         U = r.useCallback((e) => {
             let { text: t, index: n, localCreationAnswerId: r } = e;
-            A((e) => {
+            E((e) => {
                 let t = m({}, e);
                 return delete t['answer-'.concat(r)], t;
             }),
@@ -171,7 +171,7 @@ function b(e, t, n) {
                 h.forEach((n) => {
                     (0, u.uY)(n, x) && ((e = !1), (t['answer-'.concat(n.localCreationAnswerId)] = f.NW.string(f.t['8Qqkc3'])));
                 }),
-                A(t),
+                E(t),
                 k(!e),
                 e
             );
@@ -216,7 +216,7 @@ function b(e, t, n) {
         handleSubmitPoll: Q,
         submitting: T,
         createPollError: W,
-        shouldFocusOnInvalidField: E,
+        shouldFocusOnInvalidField: A,
         setShouldFocusOnInvalidField: k
     };
 }

@@ -14,7 +14,7 @@ var r = n(200651),
     g = n(626135),
     m = n(26373),
     b = n(486622),
-    _ = n(922409),
+    _ = n(488634),
     E = n(727813),
     O = n(355350),
     N = n(307947),
@@ -41,7 +41,7 @@ function T() {
     (0, d.ZP)(() => {
         g.default.track(v.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
-    let L = i.useCallback(
+    let w = i.useCallback(
             (e) => {
                 var n, i;
                 let { row: o } = e,
@@ -65,7 +65,7 @@ function T() {
             },
             [t, l, j]
         ),
-        w = i.useCallback(
+        L = i.useCallback(
             () =>
                 (0, r.jsxs)(
                     h.Z,
@@ -166,8 +166,8 @@ function T() {
                                   paddingBottom: 24,
                                   sectionHeight: I.oi,
                                   rowHeight: I.WN,
-                                  renderSection: w,
-                                  renderRow: L,
+                                  renderSection: L,
+                                  renderRow: w,
                                   sections: [t.length],
                                   chunkSize: 30,
                                   fade: !0

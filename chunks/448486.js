@@ -1,18 +1,18 @@
-n.d(t, { _: () => u });
-var r = n(192379),
-    l = n(442837),
-    s = n(594174),
-    a = n(823379),
-    i = n(51144),
+n.d(t, { _: () => c });
+var a = n(192379),
+    r = n(442837),
+    l = n(594174),
+    i = n(823379),
+    s = n(51144),
     o = n(388032);
-function u(e) {
-    let t = (0, l.Wu)([s.default], () =>
+function c(e) {
+    let t = (0, r.Wu)([l.default], () =>
         e.recipients
-            .map((e) => s.default.getUser(e))
-            .filter(a.lm)
-            .map((e) => i.ZP.getName(e))
+            .map((e) => l.default.getUser(e))
+            .filter(i.lm)
+            .map((e) => s.ZP.getName(e))
     );
-    return r.useMemo(() => {
+    return a.useMemo(() => {
         if ('' === e.name) return null;
         if (0 === t.length) return null;
         if (1 === t.length) return o.NW.formatToPlainString(o.t['J+Wpsr'], { first: t[0] });

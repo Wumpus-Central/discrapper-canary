@@ -2,13 +2,13 @@ n.d(t, { Z: () => m });
 var r = n(200651),
     s = n(120356),
     o = n.n(s),
-    a = n(642128),
+    a = n(200100),
     i = n(481060),
     c = n(763283),
     l = n(622802),
     u = n(388032),
     d = n(122846),
-    f = n(733);
+    f = n(225893);
 function p(e) {
     let { id: t, points: n, onFinished: s } = e,
         o = (0, i.q_F)({
