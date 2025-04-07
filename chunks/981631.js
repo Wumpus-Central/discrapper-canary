@@ -556,6 +556,7 @@ let A = Object.freeze({
         SEND_UNAUTHENTICATED_REPORT_PINCODE: (t) => '/reporting/unauthenticated/'.concat(t, '/code'),
         VERIFY_UNAUTHENTICATED_REPORT: (t) => '/reporting/unauthenticated/'.concat(t, '/verify'),
         DSA_EXPERIMENT_UNAUTHENTICATED: '/reporting/unauthenticated/experiment',
+        DSA_CAPABILITIES: '/reporting/unauthenticated/capabilities',
         SUBMIT_REPORT_SECOND_LOOK: '/reporting/review',
         STAGE_INSTANCES: '/stage-instances',
         STAGE_INSTANCES_EXTRA: '/stage-instances/extra',
