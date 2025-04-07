@@ -112,9 +112,12 @@ function T(e) {
         case d.CgE.WINDOWS:
             t = b['' + n];
             break;
-        case d.CgE.BROWSER:
-            t = C(i()(n));
+        case d.CgE.BROWSER: {
+            let e = i()(n);
+            if (null == e) return null;
+            t = C(e);
             break;
+        }
         default:
             t = y['' + n];
     }
@@ -142,8 +145,9 @@ function C(e) {
 function R(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY,
-        o = r === d.MoX.KEYBOARD_KEY || r === d.MoX.KEYBOARD_MODIFIER_KEY;
+        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
+    if (null == e) return null;
+    let o = r === d.MoX.KEYBOARD_KEY || r === d.MoX.KEYBOARD_MODIFIER_KEY;
     switch (!0) {
         case o && n === d.CgE.LINUX:
             t = d.HsE[e];
