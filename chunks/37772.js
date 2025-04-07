@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(709054),
     x = n(594173),
     y = n(786761),
-    v = n(493892),
-    E = n(901461),
+    E = n(493892),
+    v = n(901461),
     O = n(739566),
     N = n(443877),
     j = n(492593),
@@ -122,7 +122,7 @@ let F = i.memo(function e(t) {
                   hasThread: !1
               })
           )
-        : (_.Z.isBlockedForMessage(R) ? (a = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(R) ? (a = D.t.VFWjc3) : (0, v.DQ)(R) && K && (a = D.t.xfkfTE), void 0 !== a)
+        : (_.Z.isBlockedForMessage(R) ? (a = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(R) ? (a = D.t.VFWjc3) : (0, E.DQ)(R) && K && (a = D.t.xfkfTE), void 0 !== a)
           ? (0, r.jsx)(B, {
                 className: F,
                 compact: L,
@@ -174,7 +174,7 @@ let F = i.memo(function e(t) {
                 onClick: H,
                 hasThread: !1 !== z && null != ec && R.hasFlag(k.iLy.HAS_THREAD),
                 hasReply: R.type === k.uaV.REPLY,
-                isSystemMessage: (0, E.Z)(R),
+                isSystemMessage: (0, v.Z)(R),
                 messageRef: ep,
                 guildId: eo,
                 authorHasGradientRole: es

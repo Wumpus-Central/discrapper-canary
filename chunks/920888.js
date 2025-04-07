@@ -61,11 +61,11 @@ function y(e, t) {
         e
     );
 }
-let v = (e, t) => (null == e && null == t) || e === t,
-    E = (e, t) => e.findIndex((e) => v(e.emoji.id, null == t ? void 0 : t.id) && v(e.emoji.name, null == t ? void 0 : t.name)),
+let E = (e, t) => (null == e && null == t) || e === t,
+    v = (e, t) => e.findIndex((e) => E(e.emoji.id, null == t ? void 0 : t.id) && E(e.emoji.name, null == t ? void 0 : t.name)),
     O = (e, t) => {
         if (null == t) return e;
-        let n = E(e, t);
+        let n = v(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
 class N extends i.PureComponent {
@@ -81,16 +81,16 @@ class N extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: a, isPendingMember: b, isForumToolbar: x, channel: y, className: v, forceAddReactions: E, reactionClassName: O, useChatFontScaling: N, forceHideReactionCreates: j, remainingReactions: C, combinedReactions: S, visibleReactionsCount: I } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: a, isPendingMember: b, isForumToolbar: x, channel: y, className: E, forceAddReactions: v, reactionClassName: O, useChatFontScaling: N, forceHideReactionCreates: j, remainingReactions: C, combinedReactions: S, visibleReactionsCount: I } = this.props,
             { disableTransitionAppear: T } = this.state,
             P = N ? _ : g,
             A = I > 0;
-        if (!A && !E) return null;
+        if (!A && !v) return null;
         let { canShowImprovedReactionButton: w } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            Z = E || A;
+            Z = v || A;
         return (0, r.jsxs)(o.W, {
             component: 'div',
-            className: l()(P.reactions, v, { [P.largeReactions]: w }),
+            className: l()(P.reactions, E, { [P.largeReactions]: w }),
             transitionAppear: !T,
             role: 'group',
             transitionLeave: !1,

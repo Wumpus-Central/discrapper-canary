@@ -18,10 +18,10 @@ var r = n(200651),
 function x(e) {
     let { message: t, channel: a, compact: x } = e,
         y = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [v, E] = i.useState(null);
+        [E, v] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            y.length > 0 && E(y[Math.floor(Math.random() * y.length)]);
+            y.length > 0 && v(y[Math.floor(Math.random() * y.length)]);
         }, 500);
         return () => clearInterval(e);
     }, [y]),
@@ -82,10 +82,10 @@ function x(e) {
                                           (0, h.O)(t.id, a);
                                   },
                                   children:
-                                      null != v
+                                      null != E
                                           ? (0, r.jsx)(p.Z, {
                                                 size: 32,
-                                                sticker: v
+                                                sticker: E
                                             })
                                           : (0, r.jsx)(s.EO4, {
                                                 size: 'md',

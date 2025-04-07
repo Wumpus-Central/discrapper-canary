@@ -16,11 +16,11 @@ var r = n(192379),
     _ = n(49898),
     b = n(388032);
 function x(e, t) {
-    let { isDiscoverable: n, customInstallUrl: x, installParams: y, integrationTypesConfig: v } = e,
-        E = (0, f.E)({
+    let { isDiscoverable: n, customInstallUrl: x, installParams: y, integrationTypesConfig: E } = e,
+        v = (0, f.E)({
             customInstallUrl: x,
             installParams: y,
-            integrationTypesConfig: v
+            integrationTypesConfig: E
         }),
         O = (0, i.e7)([p.Z], () => {
             var e;
@@ -51,7 +51,7 @@ function x(e, t) {
                           });
                       }
                   }
-                : E
+                : v
                   ? {
                         label: b.NW.string(b.t.NgXl3N),
                         trackingArea: h.j_.ADD_APP,
@@ -61,13 +61,13 @@ function x(e, t) {
                                     applicationId: e.id,
                                     customInstallUrl: x,
                                     installParams: y,
-                                    integrationTypesConfig: v,
+                                    integrationTypesConfig: E,
                                     guildId: O,
                                     source: 'app_message_embed'
                                 });
                         }
                     }
                   : void 0,
-        [e.id, j, C, x, y, v, E, t, O]
+        [e.id, j, C, x, y, E, v, t, O]
     );
 }

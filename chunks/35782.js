@@ -145,8 +145,8 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_MESSAGE_HOVER: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [r.LIGHT]: {
                         raw: 'OPACITY_12',
@@ -205,8 +205,8 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_MODIFIER_HOVER: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [r.LIGHT]: {
                         raw: 'OPACITY_12',
@@ -225,20 +225,20 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_MODIFIER_SELECTED: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
                     },
                     [r.LIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
-                    },
-                    [r.MIDNIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
-                    },
-                    [r.DARKER]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'OPACITY_24',
+                        opacity: 0.23921568627450981
+                    },
+                    [r.DARKER]: {
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
                     }
                 }
             },
@@ -405,28 +405,28 @@ let { Themes: r } = n(15202).V,
             BG_MOD_STRONG: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'OPACITY_24',
-                        opacity: 0.23921568627450981
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
                     },
                     [r.LIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
-                    },
-                    [r.MIDNIGHT]: {
-                        raw: 'OPACITY_28',
-                        opacity: 0.2784313725490196
-                    },
-                    [r.DARKER]: {
                         raw: 'OPACITY_24',
                         opacity: 0.23921568627450981
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'OPACITY_24',
+                        opacity: 0.23921568627450981
+                    },
+                    [r.DARKER]: {
+                        raw: 'OPACITY_20',
+                        opacity: 0.2
                     }
                 }
             },
             BG_MOD_SUBTLE: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [r.LIGHT]: {
                         raw: 'OPACITY_12',
@@ -1225,8 +1225,8 @@ let { Themes: r } = n(15202).V,
             CARD_SECONDARY_BG: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [r.LIGHT]: {
                         raw: 'OPACITY_12',
@@ -1313,7 +1313,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_7',
+                        raw: 'NEUTRAL_8',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1373,7 +1373,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_14',
+                        raw: 'NEUTRAL_15',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1385,7 +1385,7 @@ let { Themes: r } = n(15202).V,
             ICON_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_15',
+                        raw: 'NEUTRAL_16',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -1397,7 +1397,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_22',
+                        raw: 'NEUTRAL_23',
                         opacity: 1
                     }
                 }
@@ -1645,7 +1645,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_7',
+                        raw: 'NEUTRAL_8',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1665,7 +1665,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_7',
+                        raw: 'NEUTRAL_8',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1677,7 +1677,7 @@ let { Themes: r } = n(15202).V,
             INTERACTIVE_NORMAL: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_15',
+                        raw: 'NEUTRAL_16',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -1689,7 +1689,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_22',
+                        raw: 'NEUTRAL_23',
                         opacity: 1
                     }
                 }
@@ -1729,7 +1729,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'BLURPLE_19',
+                        raw: 'BLURPLE_18',
                         opacity: 1
                     }
                 }
@@ -1757,7 +1757,7 @@ let { Themes: r } = n(15202).V,
             MESSAGE_REACTED_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLURPLE_3',
+                        raw: 'BLURPLE_2',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -2085,7 +2085,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_7',
+                        raw: 'NEUTRAL_8',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -2097,7 +2097,7 @@ let { Themes: r } = n(15202).V,
             TEXT_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_15',
+                        raw: 'NEUTRAL_16',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -2109,7 +2109,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_22',
+                        raw: 'NEUTRAL_23',
                         opacity: 1
                     }
                 }

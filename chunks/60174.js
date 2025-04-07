@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(630388),
     x = n(74538),
     y = n(833803),
-    v = n(566006),
-    E = n(981631),
+    E = n(566006),
+    v = n(981631),
     O = n(185923),
     N = n(474936),
     j = n(388032),
@@ -57,9 +57,9 @@ class P extends i.Component {
     render() {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: a, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === E.yb.SENDING,
-            m = e === v.O.BURST;
-        if (c || (0, b.yE)(t.flags, E.iLy.EPHEMERAL)) return null;
+            c = t.state === v.yb.SENDING,
+            m = e === E.O.BURST;
+        if (c || (0, b.yE)(t.flags, v.iLy.EPHEMERAL)) return null;
         let f = _.default.getCurrentUser(),
             h = (0, x.I5)(f),
             g = m ? j.NW.string(j.t.Kfcszs) : j.NW.string(j.t.lfIHs7);
@@ -141,14 +141,14 @@ class P extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = _.default.getCurrentUser();
-                t !== v.O.BURST ||
+                t !== E.O.BURST ||
                     (0, x.I5)(r) ||
                     (0, m.m)({
                         analytics: {
                             type: N.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? E.ZY5.GUILD_CHANNEL : E.ZY5.DM_CHANNEL,
+                            page: null != n.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(n),
-                            object: E.qAy.INLINE_REACTION_PICKER_UPSELL
+                            object: v.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle();
@@ -158,11 +158,11 @@ class P extends i.Component {
                     { type: n, channel: i, message: a } = this.props,
                     l = T(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === v.O.BURST && {
+                        n === E.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != i.getGuildId() ? E.ZY5.GUILD_CHANNEL : E.ZY5.DM_CHANNEL,
+                            page: null != i.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(i),
-                            object: E.qAy.REACTION_RAIL
+                            object: v.qAy.REACTION_RAIL
                         }
                     ),
                     o = (0, r.jsx)(g.$, {

@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(66420),
     x = n(981631),
     y = n(474936),
-    v = n(388032),
-    E = n(510064);
+    E = n(388032),
+    v = n(510064);
 function O(e) {
     var t, n, O, N;
     let j,
@@ -51,34 +51,34 @@ function O(e) {
         ? null
         : ((j = R
               ? F
-                  ? v.NW.format(v.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.NW.string(v.t['UQMV/P']) })
-                  : v.NW.format(v.t['+lKndX'], {
+                  ? E.NW.format(E.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : E.NW.string(E.t['UQMV/P']) })
+                  : E.NW.format(E.t['+lKndX'], {
                         username: null == Z ? void 0 : Z.nick,
-                        wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : v.NW.string(v.t['UQMV/P'])
+                        wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : E.NW.string(E.t['UQMV/P'])
                     })
-              : v.NW.format(v.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) })),
+              : E.NW.format(E.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) })),
           w
               ? G && W
-                  ? (C = v.NW.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (N = null == k ? void 0 : k.label) ? N : v.NW.string(v.t['UQMV/P']) }))
+                  ? (C = E.NW.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (N = null == k ? void 0 : k.label) ? N : E.NW.string(E.t['UQMV/P']) }))
                   : F ||
                     B ||
                     !W ||
-                    (C = v.NW.format(v.t.JwUhHh, {
+                    (C = E.NW.format(E.t.JwUhHh, {
                         onClickNitro: () => {
                             (0, u.uL)(x.Z5c.NITRO_HOME);
                         }
                     }))
-              : (C = v.NW.string(v.t['6JSOu7'])),
+              : (C = E.NW.string(E.t['6JSOu7'])),
           (null == M ? void 0 : M.isViewable) &&
               W &&
               !F &&
               (S = (0, r.jsx)(l.zxk, {
-                  className: E.action,
+                  className: v.action,
                   onClick: () => {
                       g.X(T, A, { shouldClear: !G });
                   },
                   submitting: D,
-                  children: v.NW.string(G ? v.t.o6850d : v.t['/ubFp6'])
+                  children: E.NW.string(G ? E.t.o6850d : E.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {
               channel: T,

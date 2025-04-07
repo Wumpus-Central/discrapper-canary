@@ -49,13 +49,13 @@ class _ {
             b = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
             x = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
             y = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.Z,
-            v = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
-            { snapshotIndex: E, parentMessage: O, messageSnapshot: N } = this,
+            E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
+            { snapshotIndex: v, parentMessage: O, messageSnapshot: N } = this,
             { useOldIcon: j } = (0, m.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
             { showForwardBreadcrumb: C } = p.u.getCurrentConfig({ location: 'MessageForward' });
         if (!C)
             return {
-                snapshotIndex: E,
+                snapshotIndex: v,
                 useOldIcon: j
             };
         let S = (0, d.Xf)(N.message.timestamp),
@@ -66,23 +66,23 @@ class _ {
                 let e = y.getGuild(I.guild_id);
                 return null == e
                     ? {
-                          snapshotIndex: E,
+                          snapshotIndex: v,
                           useOldIcon: j
                       }
                     : {
-                          snapshotIndex: E,
+                          snapshotIndex: v,
                           footerInfo: g(e, S),
                           useOldIcon: j
                       };
             }
             if (!x.can(e.accessPermissions, e))
                 return {
-                    snapshotIndex: E,
+                    snapshotIndex: v,
                     useOldIcon: j
                 };
             let t = (0, r.F6)(e, _, b, !0);
             return {
-                snapshotIndex: E,
+                snapshotIndex: v,
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: S,
@@ -97,17 +97,17 @@ class _ {
         let T = null == (t = O.messageReference) ? void 0 : t.guild_id;
         if (null == T)
             return {
-                snapshotIndex: E,
+                snapshotIndex: v,
                 useOldIcon: j
             };
-        let P = null != (u = y.getGuild(T)) ? u : v.getGuild(T);
+        let P = null != (u = y.getGuild(T)) ? u : E.getGuild(T);
         return null == P
             ? {
-                  snapshotIndex: E,
+                  snapshotIndex: v,
                   useOldIcon: j
               }
             : {
-                  snapshotIndex: E,
+                  snapshotIndex: v,
                   footerInfo: g(P, S),
                   useOldIcon: j
               };
