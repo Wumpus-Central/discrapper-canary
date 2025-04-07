@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(47120), n(789020);
+n.d(t, { Z: () => O }), n(388685), n(997841);
 var r = n(200651),
     i = n(192379),
     l = n(512722),
@@ -23,7 +23,7 @@ var r = n(200651),
 function O(e) {
     var t, n;
     let { backButtonEligible: l, prevStep: O, handleStepChange: S, trialFooterMessageOverride: P, reviewWarningMessage: k, planGroup: W, openInvoiceId: _, analyticsData: E, analyticsLocation: T, handleClose: w } = e,
-        { activeSubscription: Z, application: I, setUpdatedSubscription: A, contextMetadata: D, currencies: L, paymentSources: R, priceOptions: B, purchaseError: F, purchaseTokenAuthState: M, selectedPlan: H, selectedSku: z, setCurrency: K, setPaymentSourceId: G, setPurchaseState: Y, setPurchaseError: V, purchaseState: q, subscriptionMetadataRequest: Q, setHasAcceptedTerms: J } = (0, p.JL)();
+        { activeSubscription: Z, application: I, setUpdatedSubscription: A, contextMetadata: D, currencies: L, paymentSources: R, priceOptions: B, purchaseError: F, purchaseTokenAuthState: M, selectedPlan: H, selectedSku: z, setCurrency: G, setPaymentSourceId: K, setPurchaseState: Y, setPurchaseError: V, purchaseState: q, subscriptionMetadataRequest: Q, setHasAcceptedTerms: J } = (0, p.JL)();
     a()(null != H, 'Expected plan to be selected');
     let X = i.useRef(null),
         [U, $] = (0, c.Z)(!1, 500),
@@ -92,11 +92,12 @@ function O(e) {
                           null == Z
                               ? (0, r.jsx)(u.Z, {
                                     selectedPlanId: H.id,
+                                    planGroup: W,
                                     paymentSources: R,
-                                    onPaymentSourceChange: (e) => G(null != e ? e.id : null),
+                                    onPaymentSourceChange: (e) => K(null != e ? e.id : null),
                                     priceOptions: B,
                                     currencies: L,
-                                    onCurrencyChange: (e) => K(e),
+                                    onCurrencyChange: (e) => G(e),
                                     handlePaymentSourceAdd: () => S(b.h8.ADD_PAYMENT_STEPS),
                                     setHasAcceptedTerms: J,
                                     legalTermsNodeRef: ea,
@@ -112,7 +113,7 @@ function O(e) {
                                     premiumSubscription: Z,
                                     paymentSources: R,
                                     priceOptions: B,
-                                    onPaymentSourceChange: (e) => G(null != e ? e.id : null),
+                                    onPaymentSourceChange: (e) => K(null != e ? e.id : null),
                                     onPaymentSourceAdd: () => {
                                         S(b.h8.ADD_PAYMENT_STEPS);
                                     },
@@ -125,7 +126,7 @@ function O(e) {
                                     },
                                     planGroup: W,
                                     currencies: L,
-                                    onCurrencyChange: (e) => K(e),
+                                    onCurrencyChange: (e) => G(e),
                                     hasOpenInvoice: null != _,
                                     purchaseState: q,
                                     handleClose: w
