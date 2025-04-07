@@ -1,29 +1,26 @@
-n.d(t, { Z: () => x }), n(953529);
+n.d(t, { Z: () => h }), n(953529);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(239091),
-    o = n(723163),
-    c = n(973616),
-    s = n(573188),
-    u = n(783097),
-    d = n(176412),
-    p = n(570949),
-    m = n(753972),
-    f = n(635753),
-    h = n(532309),
-    b = n(654715),
-    C = n(413097);
-function x(e) {
+    o = n(973616),
+    c = n(783097),
+    s = n(176412),
+    u = n(570949),
+    d = n(753972),
+    p = n(532309),
+    m = n(654715),
+    f = n(413097);
+function h(e) {
     var t;
-    let { command: n, application: x, onClick: _, query: y, searchResultsPosition: v, onClickAppCardFriends: N } = e,
-        g = r.useCallback(
+    let { command: n, application: h, onClick: b, query: C, searchResultsPosition: _ } = e,
+        x = r.useCallback(
             (e) => {
-                if ((0, u.BQ)(x)) {
-                    let t = x instanceof c.ZP ? x : c.ZP.createFromServer(x);
+                if ((0, c.BQ)(h)) {
+                    let t = h instanceof o.ZP ? h : o.ZP.createFromServer(h);
                     (0, a.vq)(e, (e) =>
                         (0, i.jsx)(
-                            p.Z,
+                            u.Z,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -53,69 +50,60 @@ function x(e) {
                     );
                 }
             },
-            [x]
+            [h]
         ),
-        { iconURL: j, name: P, description: E } = r.useMemo(() => (0, u.sl)(x, { fakeAppIconURL: C }), [x]),
-        A = r.useMemo(() => {
+        { iconURL: v, name: y, description: N } = r.useMemo(() => (0, c.sl)(h, { fakeAppIconURL: f }), [h]),
+        g = r.useMemo(() => {
             var e;
-            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : E;
-            return null == t ? null : (0, d.ae)(t, void 0);
-        }, [E, null == n ? void 0 : n.displayDescription]),
-        { trackSearchResultsItemImpressionRef: I } = (0, h.Z)({
-            applicationId: x.id,
+            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : N;
+            return null == t ? null : (0, s.ae)(t, void 0);
+        }, [N, null == n ? void 0 : n.displayDescription]),
+        { trackSearchResultsItemImpressionRef: j } = (0, p.Z)({
+            applicationId: h.id,
             commandId: null == n ? void 0 : n.id,
-            query: y,
-            searchResultsPosition: v
-        }),
-        { enabled: O } = s.X.useExperiment({ location: 'AppLauncherSearchCard' }, { autoTrackExposure: !0 }),
-        { friends: S } = (0, o.Z)(x),
-        T = O && (0, u.ye)(x) && S.length > 0;
+            query: C,
+            searchResultsPosition: _
+        });
     return (0, i.jsx)(l.P3F, {
-        className: b.clickable,
-        innerRef: (e) => (I.current = e),
-        onClick: _,
-        onContextMenu: g,
+        className: m.clickable,
+        innerRef: (e) => (j.current = e),
+        onClick: b,
+        onContextMenu: x,
         children: (0, i.jsxs)(l.Rny, {
-            className: b.focusBlock,
+            className: m.focusBlock,
             children: [
-                (0, i.jsx)(m.Z, {
-                    src: j,
-                    className: b.icon,
+                (0, i.jsx)(d.Z, {
+                    src: v,
+                    className: m.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0
                 }),
                 (0, i.jsxs)('div', {
-                    className: b.cmdDetails,
+                    className: m.cmdDetails,
                     children: [
                         (0, i.jsx)(l.X6q, {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
-                            children: null != (t = null == n ? void 0 : n.displayName) ? t : P
+                            children: null != (t = null == n ? void 0 : n.displayName) ? t : y
                         }),
-                        T
-                            ? (0, i.jsx)(f.Z, {
-                                  friends: S,
-                                  onClick: N,
-                                  shortText: !0
-                              })
-                            : (0, i.jsx)(l.Text, {
-                                  variant: 'text-sm/normal',
-                                  color: 'text-secondary',
-                                  lineClamp: 1,
-                                  children: A
-                              })
+                        (0, i.jsx)(l.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'text-secondary',
+                            lineClamp: 1,
+                            children: g
+                        })
                     ]
                 }),
                 null != n
                     ? (0, i.jsx)(l.Text, {
-                          className: b.cmdAppName,
+                          className: m.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',
-                          children: P
+                          children: y
                       })
                     : null,
-                (0, i.jsx)('div', { className: b.underline })
+                (0, i.jsx)('div', { className: m.underline })
             ]
         })
     });
