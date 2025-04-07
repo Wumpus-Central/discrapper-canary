@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(47120), n(653041);
+n.d(t, { Z: () => U }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     a = n(252258),
@@ -11,332 +11,211 @@ var r = n(200651),
     p = n(638880),
     m = n(122613),
     f = n(527805),
-    h = n(884338),
-    g = n(100527),
-    _ = n(906732),
-    b = n(895924),
-    x = n(311819),
-    y = n(321231),
-    v = n(758199),
-    E = n(943762),
-    O = n(914498),
-    N = n(208444),
-    j = n(429551),
-    C = n(973616),
-    I = n(314897),
-    S = n(592125),
-    T = n(158776),
-    P = n(594174),
-    A = n(626135),
-    w = n(768581),
-    Z = n(70956),
-    k = n(823379),
-    R = n(506071),
-    D = n(226378),
-    L = n(981631),
-    M = n(701488),
-    W = n(388032),
-    U = n(484608);
-let F = i.memo((e) => {
+    h = n(100527),
+    g = n(906732),
+    _ = n(895924),
+    b = n(311819),
+    x = n(758199),
+    y = n(943762),
+    E = n(914498),
+    v = n(208444),
+    O = n(429551),
+    N = n(973616),
+    j = n(314897),
+    C = n(592125),
+    S = n(158776),
+    I = n(594174),
+    T = n(626135),
+    P = n(768581),
+    A = n(70956),
+    w = n(823379),
+    Z = n(506071),
+    R = n(226378),
+    k = n(981631),
+    D = n(701488),
+    L = n(388032),
+    M = n(484608);
+let W = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
-        a = (0, R.n)(),
+        a = (0, Z.n)(),
         s = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         c = !1 === a || s;
     return (
         i.useEffect(() => {
             let e = new o.Xp();
             return (
-                e.start(c ? 15 * Z.Z.Millis.SECOND : Z.Z.Millis.SECOND, () => {
-                    r((new Date().getTime() - t) / Z.Z.Millis.SECOND);
+                e.start(c ? 15 * A.Z.Millis.SECOND : A.Z.Millis.SECOND, () => {
+                    r((new Date().getTime() - t) / A.Z.Millis.SECOND);
                 }),
                 () => e.stop()
             );
         }, [c, t]),
-        (0, j.m)(n)
+        (0, O.m)(n)
     );
 });
-F.displayName = 'ActivityRuntimeCounter';
-let B = i.memo(function (e) {
+W.displayName = 'ActivityRuntimeCounter';
+let U = i.memo(function (e) {
     var t, n, o, u;
-    let { application: j, channelId: Z, guildId: R } = e,
-        { analyticsLocations: B } = (0, _.ZP)(g.Z.ACTIVITY_INSTANCE_EMBED),
-        G = (0, c.O)(),
-        H = (0, l.e7)([S.Z], () => S.Z.getChannel(Z), [Z]),
-        V = (null == H || null == (t = H.isThread) ? void 0 : t.call(H)) ? (null == H ? void 0 : H.parent_id) : Z,
-        z = (0, l.e7)([I.default], () => I.default.getId()),
+    let O,
+        { application: A, channelId: Z, guildId: U } = e,
+        { analyticsLocations: F } = (0, g.ZP)(h.Z.ACTIVITY_INSTANCE_EMBED),
+        B = (0, c.O)(),
+        G = (0, l.e7)([C.Z], () => C.Z.getChannel(Z), [Z]),
+        H = (null == G || null == (t = G.isThread) ? void 0 : t.call(G)) ? (null == G ? void 0 : G.parent_id) : Z,
+        V = (0, l.e7)([j.default], () => j.default.getId()),
         {
-            embeddedActivity: K,
-            currentEmbeddedActivity: Y,
-            activityLaunchState: X
+            embeddedActivity: z,
+            currentEmbeddedActivity: K,
+            activityLaunchState: Y
         } = (0, l.cj)(
             [d.ZP],
             () => ({
-                embeddedActivity: d.ZP.getEmbeddedActivitiesForChannel(null != V ? V : '').find((e) => e.applicationId === j.id),
+                embeddedActivity: d.ZP.getEmbeddedActivitiesForChannel(null != H ? H : '').find((e) => e.applicationId === A.id),
                 currentEmbeddedActivity: d.ZP.getCurrentEmbeddedActivity(),
-                activityLaunchState: d.ZP.getLaunchState(j.id, null != V ? V : void 0)
+                activityLaunchState: d.ZP.getLaunchState(A.id, null != H ? H : void 0)
             }),
-            [V, j.id]
+            [H, A.id]
         ),
-        q = null == K ? void 0 : K.userIds,
-        Q = (0, l.Wu)(
-            [P.default],
+        X = null == z ? void 0 : z.userIds,
+        q = (0, l.Wu)(
+            [I.default],
             () =>
-                Array.from(null != q ? q : [])
-                    .map((e) => P.default.getUser(e))
-                    .filter(k.lm),
-            [q]
+                Array.from(null != X ? X : [])
+                    .map((e) => I.default.getUser(e))
+                    .filter(w.lm),
+            [X]
         ),
-        J = (0, l.e7)(
-            [T.Z],
+        Q = (0, l.e7)(
+            [S.Z],
             () => {
-                if (null == q) return null;
-                for (let e of q) {
-                    let t = T.Z.findActivity(e, (e) => e.application_id === j.id);
+                if (null == X) return null;
+                for (let e of X) {
+                    let t = S.Z.findActivity(e, (e) => e.application_id === A.id);
                     if (null != t) return t;
                 }
                 return null;
             },
-            [j.id, q]
+            [A.id, X]
         ),
-        $ = null == J ? void 0 : J.details,
-        ee = i.useMemo(() => {
-            let e = new C.ZP(j);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = M.wT), e;
-        }, [j]),
-        et = (0, f.s5)({
-            userId: z,
+        J = null == Q ? void 0 : Q.details,
+        $ = i.useMemo(() => {
+            let e = new N.ZP(A);
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = D.wT), e;
+        }, [A]),
+        ee = (0, f.s5)({
+            userId: V,
             channelId: Z,
-            application: ee
+            application: $
         }),
-        en = null == K,
-        er = (0, D.NL)({
-            embeddedActivity: K,
-            joinability: et,
-            currentEmbeddedActivity: Y,
-            channel: H
+        et = null == z,
+        en = (0, R.NL)({
+            embeddedActivity: z,
+            joinability: ee,
+            currentEmbeddedActivity: K,
+            channel: G
         }),
-        ei = i.useId(),
-        ea = null != X && X.isLaunching && X.componentId === ei,
-        el = async () => {
-            A.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
-                application_id: j.id,
+        er = i.useId(),
+        ei = null != Y && Y.isLaunching && Y.componentId === er,
+        ea = async () => {
+            T.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+                application_id: A.id,
                 channel_id: Z,
-                channel_type: null == H ? void 0 : H.type,
-                is_activity_start: en,
+                channel_type: null == G ? void 0 : G.type,
+                is_activity_start: et,
                 cta: 'Play'
             }),
-                en
+                et
                     ? await (0, m.Z)({
-                          targetApplicationId: j.id,
+                          targetApplicationId: A.id,
                           channelId: Z,
-                          locationObject: G.location,
-                          analyticsLocations: B,
-                          componentId: ei,
-                          commandOrigin: b.bB.ACTIVITY_INSTANCE_EMBED
+                          locationObject: B.location,
+                          analyticsLocations: F,
+                          componentId: er,
+                          commandOrigin: _.bB.ACTIVITY_INSTANCE_EMBED
                       })
                     : await (0, p.Z)({
-                          applicationId: K.applicationId,
+                          applicationId: z.applicationId,
                           activityChannelId: Z,
-                          locationObject: G.location,
-                          analyticsLocations: B,
-                          componentId: ei,
-                          instanceId: null == K ? void 0 : K.compositeInstanceId,
-                          isContextlessActivity: (null == K ? void 0 : K.location.kind) === a.E.CONTEXTLESS
+                          locationObject: B.location,
+                          analyticsLocations: F,
+                          componentId: er,
+                          instanceId: null == z ? void 0 : z.compositeInstanceId,
+                          isContextlessActivity: (null == z ? void 0 : z.location.kind) === a.E.CONTEXTLESS
                       });
         },
-        eo = er.disabled ? W.NW.string(W.t.JBnc7O) : W.NW.string(W.t.cX9uLS),
-        { enabled: es } = y.G.useExperiment({ location: 'EmbeddedActivityInstanceEmbed' }),
-        ec = (0, N.z)(ee, () => {
-            A.default.track(L.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
-                application_id: j.id,
+        el = en.disabled ? L.NW.string(L.t.JBnc7O) : L.NW.string(L.t.cX9uLS),
+        eo = (0, v.z)($, () => {
+            T.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+                application_id: A.id,
                 channel_id: Z,
-                channel_type: null == H ? void 0 : H.type,
+                channel_type: null == G ? void 0 : G.type,
                 cta: 'View'
             });
+        }),
+        es = P.ZP.getApplicationIconURL({
+            id: A.id,
+            icon: A.icon,
+            bot: A.bot
         });
-    if (es) {
-        let e,
-            t = w.ZP.getApplicationIconURL({
-                id: j.id,
-                icon: j.icon,
-                bot: j.bot
-            });
-        er.disabled && (e = null != (o = er.tooltip) ? o : er.text);
-        let i = P.default.getCurrentUser(),
-            a = Q.length,
-            l = null != (u = null == J || null == (n = J.timestamps) ? void 0 : n.start) ? u : null == J ? void 0 : J.created_at,
-            c = en ? eo : null != $ ? $ : W.NW.string(W.t.oQn0h4),
-            d = (0, E.r)(J),
-            p = [
-                {
-                    label: en ? W.NW.string(W.t.cnBQPD) : W.NW.string(W.t.VJlc0d),
-                    trackingArea: O.j_.PLAY,
-                    onClick: el,
-                    disabledReason: e,
-                    submitting: ea
-                }
-            ];
-        return (
-            null != ec && p.push(ec),
-            (0, r.jsx)(v.W, {
-                header: j.name,
-                title: c,
-                iconSrc: t,
-                embedUrl: (0, x.H)({
-                    applicationId: j.id,
-                    referrerId: null == i ? void 0 : i.id
-                }),
-                info: (0, r.jsxs)('div', {
-                    className: U.infoWrapper,
-                    children: [
-                        null != $ &&
-                            (0, r.jsx)(s.Text, {
-                                variant: 'text-xs/medium',
-                                color: 'none',
-                                children:
-                                    null != l &&
-                                    (0, r.jsxs)('div', {
-                                        className: U.activityTimer,
-                                        children: [
-                                            (0, r.jsx)(d.Icon, {
-                                                size: 'xxs',
-                                                color: 'currentColor'
-                                            }),
-                                            (0, r.jsx)(F, { start: l })
-                                        ]
-                                    })
-                            }),
-                        a > 0 &&
-                            (0, r.jsx)(E.K, {
-                                activityUsers: Q,
-                                guildId: R,
-                                activityText: d.text
-                            })
-                    ]
-                }),
-                actions: p,
-                trackingConfig: {
-                    id: j.id,
-                    linkType: O.Un.ACTIVITY_INSTANCE
-                }
-            })
-        );
-    }
-    return (0, r.jsx)('div', {
-        className: U.container,
-        children: (0, r.jsxs)('div', {
-            className: U.contentContainer,
-            children: [
-                (0, r.jsx)('div', {
-                    className: U.headerContainer,
-                    children: en
-                        ? (0, r.jsx)('div', {
-                              children: (0, r.jsx)(s.Text, {
-                                  variant: 'text-md/medium',
-                                  children: eo
-                              })
-                          })
-                        : (0, r.jsx)(s.Text, {
-                              variant: 'text-md/medium',
-                              lineClamp: 1,
-                              color: 'text-normal',
-                              children: null != $ ? $ : W.NW.string(W.t.oQn0h4)
-                          })
-                }),
-                (0, r.jsxs)('div', {
-                    className: U.footerContainer,
-                    children: [
-                        (0, r.jsx)(s.ua7, {
-                            text: er.tooltip,
-                            tooltipContentClassName: U.tooltipContent,
-                            children: (e) => {
-                                var t,
-                                    n,
-                                    { onClick: r } = e,
-                                    a = (function (e, t) {
-                                        if (null == e) return {};
-                                        var n,
-                                            r,
-                                            i = (function (e, t) {
-                                                if (null == e) return {};
-                                                var n,
-                                                    r,
-                                                    i = {},
-                                                    a = Object.keys(e);
-                                                for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                                return i;
-                                            })(e, t);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var a = Object.getOwnPropertySymbols(e);
-                                            for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                                        }
-                                        return i;
-                                    })(e, ['onClick']);
-                                return (0, i.createElement)(
-                                    s.zxk,
-                                    ((t = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, a)),
-                                    (n = n =
-                                        {
-                                            key: ''.concat(er.isJoinAction),
-                                            onClick: () => {
-                                                el(), null == r || r();
-                                            },
-                                            color: er.isJoinAction ? s.Ttl.GREEN : s.Ttl.PRIMARY,
-                                            submitting: ea,
-                                            disabled: er.disabled
+    en.disabled && (O = null != (o = en.tooltip) ? o : en.text);
+    let ec = I.default.getCurrentUser(),
+        eu = q.length,
+        ed = null != (u = null == Q || null == (n = Q.timestamps) ? void 0 : n.start) ? u : null == Q ? void 0 : Q.created_at,
+        ep = et ? el : null != J ? J : L.NW.string(L.t.oQn0h4),
+        em = (0, y.r)(Q),
+        ef = [
+            {
+                label: et ? L.NW.string(L.t.cnBQPD) : L.NW.string(L.t.VJlc0d),
+                trackingArea: E.j_.PLAY,
+                onClick: ea,
+                disabledReason: O,
+                submitting: ei
+            }
+        ];
+    return (
+        null != eo && ef.push(eo),
+        (0, r.jsx)(x.W, {
+            header: A.name,
+            title: ep,
+            iconSrc: es,
+            embedUrl: (0, b.H)({
+                applicationId: A.id,
+                referrerId: null == ec ? void 0 : ec.id
+            }),
+            info: (0, r.jsxs)('div', {
+                className: M.infoWrapper,
+                children: [
+                    null != J &&
+                        (0, r.jsx)(s.Text, {
+                            variant: 'text-xs/medium',
+                            color: 'none',
+                            children:
+                                null != ed &&
+                                (0, r.jsxs)('div', {
+                                    className: M.activityTimer,
+                                    children: [
+                                        (0, r.jsx)(em.Icon, {
+                                            size: 'xxs',
+                                            color: 'currentColor'
                                         }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(n)).forEach(function (e) {
-                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                          }),
-                                    t),
-                                    er.text
-                                );
-                            }
+                                        (0, r.jsx)(W, { start: ed })
+                                    ]
+                                })
                         }),
-                        !en &&
-                            (0, r.jsx)(h.Z, {
-                                guildId: R,
-                                users: Q,
-                                max: 4,
-                                size: h.u.SIZE_32
-                            })
-                    ]
-                })
-            ]
+                    eu > 0 &&
+                        (0, r.jsx)(y.K, {
+                            activityUsers: q,
+                            guildId: U,
+                            activityText: em.text
+                        })
+                ]
+            }),
+            actions: ef,
+            trackingConfig: {
+                id: A.id,
+                linkType: E.Un.ACTIVITY_INSTANCE
+            }
         })
-    });
+    );
 });
