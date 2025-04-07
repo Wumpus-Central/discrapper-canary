@@ -1,85 +1,75 @@
-n.d(t, { Z: () => p }), n(388685), n(953529);
+n.d(t, { Z: () => m }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
     a = n(931240),
     l = n(550271),
-    o = n(314852),
-    c = n(65361),
-    d = n(300284),
-    u = n(526761),
-    m = n(388032),
-    g = n(729495);
-let p = i.memo(function (e) {
-    let { fetchGuildProfile: t, fetchStatus: n, guildProfile: p } = (0, c.u)(e.guildId),
-        h = (0, d.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
+    o = n(300284),
+    c = n(526761),
+    d = n(388032),
+    u = n(729495);
+let m = i.memo(function (e) {
+    let { guildId: t, guildProfile: n, title: m, description: g, onClose: p } = e,
+        h = (0, o.Z)({ scrollPosition: c.Y_.GUILD_TAG }),
         [f, b] = i.useState(!1);
-    if (
-        (i.useEffect(() => {
-            n === o.a.NOT_FETCHED && t();
-        }, [t, n]),
-        null === p)
-    )
-        return null;
+    if (null === n) return null;
     async function N() {
-        var t;
-        b(!0), await (0, a.nE)(e.guildId, !0), b(!1), null == (t = e.onClose) || t.call(e);
+        b(!0), await (0, a.nE)(t, !0), b(!1), null == p || p();
     }
     return (0, r.jsxs)('div', {
-        className: g.container,
+        className: u.container,
         children: [
             (0, r.jsx)(s.olH, {
-                className: g.closeButton,
-                onClick: e.onClose
+                className: u.closeButton,
+                onClick: p
             }),
             (0, r.jsx)('div', {
-                className: g.tagContainer,
+                className: u.tagContainer,
                 children: (0, r.jsxs)('div', {
-                    className: g.tag,
+                    className: u.tag,
                     children: [
-                        null !== p.badge &&
-                            null !== p.badgeColorPrimary &&
-                            null !== p.badgeColorSecondary &&
+                        null !== n.badge &&
+                            null !== n.badgeColorPrimary &&
+                            null !== n.badgeColorSecondary &&
                             (0, r.jsx)(l.A, {
-                                className: g.badge,
-                                badge: p.badge,
+                                className: u.badge,
+                                badge: n.badge,
                                 width: 40,
                                 height: 40,
-                                primaryTintColor: p.badgeColorPrimary,
-                                secondaryTintColor: p.badgeColorSecondary
+                                primaryTintColor: n.badgeColorPrimary,
+                                secondaryTintColor: n.badgeColorSecondary
                             }),
                         (0, r.jsx)(s.Text, {
                             tag: 'span',
                             variant: 'heading-xxl/semibold',
-                            children: p.tag
+                            children: n.tag
                         })
                     ]
                 })
             }),
             (0, r.jsx)(s.X6q, {
                 variant: 'heading-md/semibold',
-                className: g.title,
-                children: e.title
+                className: u.title,
+                children: m
             }),
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/medium',
-                className: g.description,
-                children: e.description
+                className: u.description,
+                children: g
             }),
             (0, r.jsx)(s.zxk, {
-                className: g.adoptButton,
+                className: u.adoptButton,
                 submitting: f,
                 onClick: N,
-                children: m.NW.string(m.t.jwEaiY)
+                children: d.NW.string(d.t.jwEaiY)
             }),
             (0, r.jsx)(s.zxk, {
                 color: s.zxk.Colors.PRIMARY,
-                className: g.editButton,
+                className: u.editButton,
                 onClick: function () {
-                    var t;
-                    null == (t = e.onClose) || t.call(e), h();
+                    null == p || p(), h();
                 },
-                children: m.NW.string(m.t.s5vZlZ)
+                children: d.NW.string(d.t.s5vZlZ)
             })
         ]
     });
