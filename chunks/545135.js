@@ -1,37 +1,36 @@
-n.d(t, { default: () => C });
+n.d(t, { default: () => w });
 var i = n(200651);
 n(192379);
 var r = n(512722),
     s = n.n(r),
     l = n(442837),
-    a = n(481060),
-    o = n(239091),
+    o = n(481060),
+    a = n(239091),
     c = n(100527),
     u = n(906732),
     d = n(299206),
     g = n(894059),
     b = n(423589),
     p = n(837949),
-    f = n(122074),
-    S = n(314897),
-    N = n(984933),
-    O = n(594174),
-    E = n(241851),
-    h = n(94953),
-    y = n(976192),
-    j = n(904483),
-    _ = n(429824),
-    P = n(919815),
-    v = n(858822),
-    A = n(993356),
+    S = n(122074),
+    f = n(314897),
+    O = n(984933),
+    N = n(594174),
+    h = n(241851),
+    E = n(976192),
+    y = n(904483),
+    j = n(429824),
+    _ = n(919815),
+    P = n(858822),
+    v = n(993356),
     m = n(58338),
     x = n(930538),
-    L = n(422525),
-    I = n(522762),
-    Z = n(466330),
-    M = n(981631),
-    T = n(388032);
-function D(e) {
+    A = n(422525),
+    L = n(522762),
+    I = n(466330),
+    Z = n(981631),
+    D = n(388032);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -56,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function G(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,149 +73,139 @@ function G(e, t) {
         e
     );
 }
-function w(e) {
+function G(e) {
     let { guild: t, onSelect: r, hideSettings: c } = e,
         u = t.id,
-        w = N.ZP.getDefaultChannel(u),
-        C = (0, l.e7)(
-            [O.default],
+        G = O.ZP.getDefaultChannel(u),
+        w = (0, l.e7)(
+            [N.default],
             () => {
-                let e = O.default.getCurrentUser();
+                let e = N.default.getCurrentUser();
                 return s()(null != e, 'GuildContextMenu: user cannot be undefined'), t.isOwner(e);
             },
             [t]
         ),
-        U = (0, Z.Z)({
+        k = (0, I.Z)({
             guild: t,
-            source: M.t4x.GUILD_CONTEXT_MENU,
-            channel: w
+            source: Z.t4x.GUILD_CONTEXT_MENU,
+            channel: G
         }),
-        k = (0, I.Z)(u),
+        U = (0, L.Z)(u),
+        C = (0, P.Z)(t),
         R = (0, v.Z)(t),
         W = (0, A.Z)(t),
-        B = (0, L.Z)(t),
-        Y = (0, y.Z)({
+        B = (0, E.Z)({
             guildId: t.id,
-            userId: S.default.getId(),
+            userId: f.default.getId(),
             analyticsLocation: {
-                page: M.ZY5.GUILD_CHANNEL,
-                section: M.jXE.CHAT_USERNAME,
-                object: M.qAy.CONTEXT_MENU_ITEM
+                page: Z.ZY5.GUILD_CHANNEL,
+                section: Z.jXE.CHAT_USERNAME,
+                object: Z.qAy.CONTEXT_MENU_ITEM
             }
         }),
-        Q = (0, h.Z)({
-            guildId: t.id,
-            userId: S.default.getId(),
-            analyticsLocation: {
-                page: M.ZY5.GUILD_CHANNEL,
-                section: M.jXE.CHAT_USERNAME,
-                object: M.qAy.CONTEXT_MENU_ITEM
-            }
-        }),
-        F = (0, j.Z)(t),
-        H = (0, g.Z)(t.id),
-        V = (0, d.Z)({
+        Y = (0, y.Z)(t),
+        Q = (0, g.Z)(t.id),
+        F = (0, d.Z)({
             id: t.id,
-            label: T.NW.string(T.t['94lLDw'])
+            label: D.NW.string(D.t['94lLDw'])
         }),
-        q = (0, P.Z)(t, { section: M.jXE.GUILD_LIST }),
-        K = (0, p.Z)(t.id),
-        X = (0, m.Z)(t.id),
-        z = (0, f.ng)(t.id, !1),
-        J = (0, _.Z)(t),
-        $ = (0, b.Mn)('GuildContextMenu'),
-        ee = (0, x.p)(t);
-    function et() {
-        (0, a.h7j)((e) => (0, i.jsx)(E.g, G(D({}, e), { guild: t })));
+        H = (0, _.Z)(t, { section: Z.jXE.GUILD_LIST }),
+        V = (0, p.Z)(t.id),
+        q = (0, m.Z)(t.id),
+        K = (0, S.ng)(t.id, !1),
+        X = (0, j.Z)(t),
+        z = (0, b.Mn)('GuildContextMenu'),
+        J = (0, x.p)(t);
+    function $() {
+        (0, o.h7j)((e) => (0, i.jsx)(h.g, T(M({}, e), { guild: t })));
     }
-    return t.hasFeature(M.oNc.HUB)
-        ? (0, i.jsxs)(a.v2r, {
+    return t.hasFeature(Z.oNc.HUB)
+        ? (0, i.jsxs)(o.v2r, {
               navId: 'guild-context',
-              onClose: o.Zy,
-              'aria-label': T.NW.string(T.t.HpQykZ),
+              onClose: a.Zy,
+              'aria-label': D.NW.string(D.t.HpQykZ),
               onSelect: r,
               children: [
-                  (0, i.jsxs)(a.kSQ, {
+                  (0, i.jsxs)(o.kSQ, {
                       children: [
-                          U,
-                          (0, i.jsx)(a.sNh, {
+                          k,
+                          (0, i.jsx)(o.sNh, {
                               id: 'privacy',
-                              label: T.NW.string(T.t.IlFwwc),
+                              label: D.NW.string(D.t.IlFwwc),
                               action: () =>
-                                  (0, a.ZDy)(async () => {
-                                      let { default: e } = await Promise.all([n.e('94342'), n.e('86029'), n.e('16172'), n.e('84605'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('87038'), n.e('85574'), n.e('84927'), n.e('17938'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('3940'), n.e('25183'), n.e('27458'), n.e('41851'), n.e('69606'), n.e('88712'), n.e('30419'), n.e('18824'), n.e('89730'), n.e('32'), n.e('19948'), n.e('38299'), n.e('82501')]).then(n.bind(n, 241420));
-                                      return (n) => (0, i.jsx)(e, G(D({}, n), { guild: t }));
+                                  (0, o.ZDy)(async () => {
+                                      let { default: e } = await Promise.all([n.e('94342'), n.e('86029'), n.e('16172'), n.e('84605'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('23491'), n.e('76540'), n.e('85574'), n.e('84927'), n.e('17938'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('3940'), n.e('25183'), n.e('27458'), n.e('41851'), n.e('69606'), n.e('88712'), n.e('30419'), n.e('18824'), n.e('89730'), n.e('32'), n.e('19948'), n.e('38299'), n.e('82501')]).then(n.bind(n, 241420));
+                                      return (n) => (0, i.jsx)(e, T(M({}, n), { guild: t }));
                                   })
                           }),
-                          Y
+                          B
                       ]
                   }),
-                  C
+                  w
                       ? null
-                      : (0, i.jsx)(a.kSQ, {
-                            children: (0, i.jsx)(a.sNh, {
+                      : (0, i.jsx)(o.kSQ, {
+                            children: (0, i.jsx)(o.sNh, {
                                 id: 'leave-guild',
-                                label: T.NW.string(T.t.Dv8gFR),
-                                action: et,
+                                label: D.NW.string(D.t.Dv8gFR),
+                                action: $,
                                 color: 'danger'
                             })
                         }),
-                  (0, i.jsx)(a.kSQ, { children: V })
+                  (0, i.jsx)(o.kSQ, { children: F })
               ]
           })
-        : (0, i.jsxs)(a.v2r, {
+        : (0, i.jsxs)(o.v2r, {
               navId: 'guild-context',
-              onClose: o.Zy,
-              'aria-label': T.NW.string(T.t.HpQykZ),
+              onClose: a.Zy,
+              'aria-label': D.NW.string(D.t.HpQykZ),
               onSelect: r,
               children: [
-                  (0, i.jsx)(a.kSQ, { children: q }),
-                  (0, i.jsx)(a.kSQ, { children: U }),
-                  (0, i.jsxs)(a.kSQ, {
-                      children: [R, $ || __OVERLAY__ ? null : W, $ && !__OVERLAY__ ? X : null, z, k, K]
+                  (0, i.jsx)(o.kSQ, { children: H }),
+                  (0, i.jsx)(o.kSQ, { children: k }),
+                  (0, i.jsxs)(o.kSQ, {
+                      children: [C, z || __OVERLAY__ ? null : R, z && !__OVERLAY__ ? q : null, K, U, V]
                   }),
-                  (0, i.jsxs)(a.kSQ, {
+                  (0, i.jsxs)(o.kSQ, {
                       children: [
-                          c ? null : B,
+                          c ? null : W,
                           __OVERLAY__
                               ? null
-                              : (0, i.jsx)(a.sNh, {
+                              : (0, i.jsx)(o.sNh, {
                                     id: 'privacy',
-                                    label: T.NW.string(T.t.BayiAg),
+                                    label: D.NW.string(D.t.BayiAg),
                                     action: () =>
-                                        (0, a.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e('94342'), n.e('86029'), n.e('16172'), n.e('84605'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('87038'), n.e('85574'), n.e('84927'), n.e('17938'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('3940'), n.e('25183'), n.e('27458'), n.e('41851'), n.e('69606'), n.e('88712'), n.e('30419'), n.e('18824'), n.e('89730'), n.e('32'), n.e('19948'), n.e('38299'), n.e('82501')]).then(n.bind(n, 241420));
-                                            return (n) => (0, i.jsx)(e, G(D({}, n), { guild: t }));
+                                        (0, o.ZDy)(async () => {
+                                            let { default: e } = await Promise.all([n.e('94342'), n.e('86029'), n.e('16172'), n.e('84605'), n.e('22878'), n.e('13351'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('28467'), n.e('86282'), n.e('18895'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('23491'), n.e('76540'), n.e('85574'), n.e('84927'), n.e('17938'), n.e('93602'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('3940'), n.e('25183'), n.e('27458'), n.e('41851'), n.e('69606'), n.e('88712'), n.e('30419'), n.e('18824'), n.e('89730'), n.e('32'), n.e('19948'), n.e('38299'), n.e('82501')]).then(n.bind(n, 241420));
+                                            return (n) => (0, i.jsx)(e, T(M({}, n), { guild: t }));
                                         })
                                 }),
-                          Y,
-                          Q
+                          B
                       ]
                   }),
-                  (0, i.jsxs)(a.kSQ, {
-                      children: [F, H]
+                  (0, i.jsxs)(o.kSQ, {
+                      children: [Y, Q]
                   }),
-                  (0, i.jsxs)(a.kSQ, {
+                  (0, i.jsxs)(o.kSQ, {
                       children: [
-                          J,
-                          !C &&
-                              (0, i.jsx)(a.sNh, {
+                          X,
+                          !w &&
+                              (0, i.jsx)(o.sNh, {
                                   id: 'leave-guild',
-                                  label: T.NW.string(T.t.J2TBi4),
-                                  action: et,
+                                  label: D.NW.string(D.t.J2TBi4),
+                                  action: $,
                                   color: 'danger'
                               })
                       ]
                   }),
-                  (0, i.jsx)(a.kSQ, { children: ee }),
-                  (0, i.jsx)(a.kSQ, { children: V })
+                  (0, i.jsx)(o.kSQ, { children: J }),
+                  (0, i.jsx)(o.kSQ, { children: F })
               ]
           });
 }
-function C(e) {
+function w(e) {
     let { analyticsLocations: t } = (0, u.ZP)(c.Z.CONTEXT_MENU);
     return (0, i.jsx)(u.Gt, {
         value: t,
-        children: (0, i.jsx)(w, D({}, e))
+        children: (0, i.jsx)(G, M({}, e))
     });
 }

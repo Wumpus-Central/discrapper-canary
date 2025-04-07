@@ -2,13 +2,11 @@ n.d(t, {
     Af: () => u,
     GO: () => c,
     Gh: () => h,
-    Pq: () => p,
-    Q2: () => _,
+    Pq: () => _,
+    Q2: () => p,
     Qh: () => d,
     Vr: () => s,
-    _v: () => m,
-    hx: () => a,
-    r: () => f
+    hx: () => a
 }),
     n(704215),
     n(605236);
@@ -68,22 +66,15 @@ function d(e) {
             return e;
     }
 }
-function p(e) {
+function _(e) {
     i.default.track(l.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
-function _(e) {
+function p(e) {
     let { guildId: t, source: n, tab: r } = e;
     i.default.track(l.rMx.CLAN_APPLICATION_NAVIGATION, {
         guild_id: t,
         source: n,
         tab: r
-    });
-}
-function f(e) {
-    let { guildId: t, position: n } = e;
-    i.default.track(l.rMx.GUILD_APPLICATION_INTENDS_TO_JOIN, {
-        guild_id: t,
-        position: n
     });
 }
 function h(e) {
@@ -92,13 +83,6 @@ function h(e) {
         guild_id: n,
         feature: t,
         position: r
-    });
-}
-function m(e) {
-    let { guildId: t, position: n } = e;
-    i.default.track(l.rMx.GUILD_APPLICATION_ABANDONED, {
-        guild_id: t,
-        position: n
     });
 }
 n(921944);
