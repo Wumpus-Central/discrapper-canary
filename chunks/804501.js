@@ -1,13 +1,14 @@
-n.d(t, { x: () => o });
+n.d(t, { x: () => c });
 var r = n(675478),
-    i = n(915486),
-    s = n(428967),
-    a = n(605236),
-    l = n(644916);
-function o(e, t) {
-    if (-1 !== s.k.indexOf(e)) {
-        let t = (0, l.t)(e),
-            { isDismissed: n, lastDismissedVersion: i } = (0, a.H4)(e);
+    i = n(709054),
+    s = n(915486),
+    a = n(428967),
+    l = n(605236),
+    o = n(644916);
+function c(e, t) {
+    if (-1 !== a.kg.indexOf(e)) {
+        let t = (0, o.t)(e),
+            { isDismissed: n, lastDismissedVersion: i } = (0, l.H4)(e);
         return {
             isDismissed: n,
             handleToggleDismissState: function () {
@@ -19,8 +20,23 @@ function o(e, t) {
             }
         };
     }
-    if (-1 !== s.N.indexOf(e)) {
-        let { isDismissed: t, lastDismissedAtMs: n } = (0, a.Fo)(e);
+    if (-1 !== a.Z9.indexOf(e)) {
+        var n = i.default.fromTimestamp(Date.now());
+        let { isDismissed: t, lastDismissedSnowflakeId: s } = (0, l.$J)(e, n);
+        return {
+            isDismissed: t,
+            handleToggleDismissState: function () {
+                t ? (0, r.Z1)(e) : (0, r.po)(e, n);
+            },
+            recurringDismissibleContentInfo: {
+                lastDismissedVersion: void 0,
+                lastDismissedAtMs: void 0,
+                lastDismissedSnowflakeId: null != s ? s : void 0
+            }
+        };
+    }
+    if (-1 !== a.NK.indexOf(e)) {
+        let { isDismissed: t, lastDismissedAtMs: n } = (0, l.Fo)(e);
         return {
             isDismissed: t,
             handleToggleDismissState: function () {
@@ -32,12 +48,14 @@ function o(e, t) {
             }
         };
     }
-    let n = (0, i.jl)(t, e);
-    return {
-        isDismissed: n,
-        handleToggleDismissState: function () {
-            n ? (0, r.w9)(e) : (0, r.nm)(e);
-        },
-        recurringDismissibleContentInfo: null
-    };
+    {
+        let n = (0, s.jl)(t, e);
+        return {
+            isDismissed: n,
+            handleToggleDismissState: function () {
+                n ? (0, r.w9)(e) : (0, r.nm)(e);
+            },
+            recurringDismissibleContentInfo: null
+        };
+    }
 }
