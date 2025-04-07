@@ -1,166 +1,129 @@
-l.d(n, { default: () => j }), l(388685);
-var o = l(200651),
-    r = l(192379),
-    t = l(442837),
-    i = l(481060),
-    a = l(493683),
-    c = l(43267),
-    s = l(933557),
-    u = l(313201),
-    d = l(592125),
-    p = l(486324),
-    h = l(388032),
-    m = l(285580);
+t.d(n, { default: () => f }), t(388685);
+var l = t(200651),
+    r = t(192379),
+    o = t(442837),
+    i = t(481060),
+    a = t(493683),
+    s = t(43267),
+    c = t(933557),
+    u = t(313201),
+    d = t(592125),
+    h = t(140106),
+    p = t(388032),
+    m = t(285580);
 function x(e) {
-    let { channel: n, previewIcon: r, onIconChange: t } = e,
-        a = (null == n ? void 0 : n.icon) != null,
-        s = null != r ? r : a ? (0, c.x)(n, 120) : null;
-    return (0, o.jsxs)('div', {
+    let { channel: n, previewIcon: t, onIconChange: r, onIconRemove: o } = e,
+        a = void 0 !== t ? t : null != n.icon ? (0, s.x)(n, 120) : null;
+    return (0, l.jsxs)('div', {
         className: m.iconSection,
         children: [
-            (0, o.jsxs)(i.P3F, {
+            (0, l.jsxs)(i.P3F, {
                 className: m.iconContainer,
-                onClick: () => {
-                    (0, i.ZDy)(async () => {
-                        let { default: e } = await Promise.all([l.e('91689'), l.e('89289'), l.e('36016')]).then(l.bind(l, 28130));
-                        return (n) =>
-                            (0, o.jsx)(
-                                e,
-                                (function (e) {
-                                    for (var n = 1; n < arguments.length; n++) {
-                                        var l = null != arguments[n] ? arguments[n] : {},
-                                            o = Object.keys(l);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
-                                            (o = o.concat(
-                                                Object.getOwnPropertySymbols(l).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
-                                                })
-                                            )),
-                                            o.forEach(function (n) {
-                                                var o;
-                                                (o = l[n]),
-                                                    n in e
-                                                        ? Object.defineProperty(e, n, {
-                                                              value: o,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0
-                                                          })
-                                                        : (e[n] = o);
-                                            });
-                                    }
-                                    return e;
-                                })(
-                                    {
-                                        maxFileSizeBytes: 8388608,
-                                        onComplete: (e) => {
-                                            t(e.imageUri);
-                                        },
-                                        uploadType: p.pC.AVATAR,
-                                        showUpsellHeader: !1,
-                                        modalTitle: h.NW.string(h.t['6yrpFR'])
-                                    },
-                                    n
-                                )
-                            );
-                    });
-                },
+                onClick: () => (0, h.ND)(r),
                 children: [
-                    null != s
-                        ? (0, o.jsx)('img', {
-                              src: s,
+                    null != a
+                        ? (0, l.jsx)('img', {
+                              src: a,
                               alt: 'Group Icon',
                               className: m.iconImage
                           })
-                        : (0, o.jsx)('div', {
+                        : (0, l.jsx)('div', {
                               className: m.iconPlaceholder,
-                              children: (0, o.jsx)(i.BFJ, {
+                              children: (0, l.jsx)(i.BFJ, {
                                   size: 'custom',
                                   width: 64,
                                   height: 64,
                                   color: 'currentColor'
                               })
                           }),
-                    (0, o.jsx)('div', {
+                    (0, l.jsx)('div', {
                         className: m.pencilIconWrapper,
-                        children: (0, o.jsx)(i.vdY, {
+                        children: (0, l.jsx)(i.vdY, {
                             color: 'currentColor',
                             size: 'md'
                         })
                     })
                 ]
             }),
-            (0, o.jsx)(i.Text, {
-                variant: 'text-xs/medium',
-                color: 'header-muted',
-                children: 'Minimum image size is 128x128.'
-            })
+            null != a
+                ? (0, l.jsx)(i.P3F, {
+                      onClick: o,
+                      'aria-label': p.NW.string(p.t['uY+Nk5']),
+                      style: { cursor: 'pointer' },
+                      children: (0, l.jsx)(i.Text, {
+                          variant: 'text-sm/medium',
+                          color: 'text-danger',
+                          children: p.NW.string(p.t['uY+Nk5'])
+                      })
+                  })
+                : null
         ]
     });
 }
-let j = function (e) {
+let f = function (e) {
     var n;
-    let { channelId: l, onClose: c, transitionState: p } = e,
-        j = (0, u.Dt)(),
-        g = (0, t.e7)([d.Z], () => d.Z.getChannel(l)),
-        b = (null != (n = null == g ? void 0 : g.name) ? n : '').length > 0,
-        C = (0, s.ZP)(g),
-        f = (0, s.cO)(g),
-        [_, v] = r.useState(b && null != C ? C : ''),
-        [y, k] = r.useState(null);
+    let { channelId: t, onClose: s, transitionState: f } = e,
+        v = (0, u.Dt)(),
+        g = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
+        j = (null != (n = null == g ? void 0 : g.name) ? n : '').length > 0,
+        b = (0, c.ZP)(g),
+        N = (0, c.cO)(g),
+        [y, _] = r.useState(j && null != b ? b : ''),
+        [C, W] = r.useState(void 0);
     return null == g
         ? null
-        : (0, o.jsx)('form', {
+        : (0, l.jsx)('form', {
               onSubmit: (e) => {
-                  e.preventDefault(), _ !== g.name && a.Z.setName(l, _), null != y && a.Z.setIcon(l, y), c();
+                  e.preventDefault(), y !== g.name && a.Z.setName(t, y), void 0 !== C && a.Z.setIcon(t, C).catch(h.es), s();
               },
-              children: (0, o.jsxs)(i.Y0X, {
-                  transitionState: p,
-                  'aria-labelledby': j,
+              children: (0, l.jsxs)(i.Y0X, {
+                  transitionState: f,
+                  'aria-labelledby': v,
                   children: [
-                      (0, o.jsxs)(i.xBx, {
+                      (0, l.jsxs)(i.xBx, {
                           separator: !0,
                           className: m.header,
                           children: [
-                              (0, o.jsx)(i.X6q, {
-                                  id: j,
+                              (0, l.jsx)(i.X6q, {
+                                  id: v,
                                   variant: 'heading-lg/semibold',
                                   color: 'header-primary',
-                                  children: h.NW.string(h.t['5Q9+/P'])
+                                  children: p.NW.string(p.t['5Q9+/P'])
                               }),
-                              (0, o.jsx)(i.olH, {
-                                  onClick: c,
+                              (0, l.jsx)(i.olH, {
+                                  onClick: s,
                                   className: m.closeButtonWrapper
                               })
                           ]
                       }),
-                      (0, o.jsxs)(i.hzk, {
+                      (0, l.jsxs)(i.hzk, {
                           className: m.modalContent,
                           children: [
-                              (0, o.jsx)(x, {
+                              (0, l.jsx)(x, {
                                   channel: g,
-                                  previewIcon: y,
-                                  onIconChange: k
+                                  previewIcon: C,
+                                  onIconChange: (e) => W(e.imageUri),
+                                  onIconRemove: () => W(null)
                               }),
-                              (0, o.jsx)(i.oil, {
-                                  placeholder: null != f ? f : '',
-                                  value: _,
-                                  onChange: v,
+                              (0, l.jsx)(i.oil, {
+                                  placeholder: null != N ? N : '',
+                                  value: y,
+                                  onChange: _,
                                   autoFocus: !0
                               })
                           ]
                       }),
-                      (0, o.jsxs)(i.mzw, {
+                      (0, l.jsxs)(i.mzw, {
                           children: [
-                              (0, o.jsx)(i.zxk, {
+                              (0, l.jsx)(i.zxk, {
                                   type: 'submit',
-                                  children: h.NW.string(h.t.R3BPHx)
+                                  children: p.NW.string(p.t.R3BPHx)
                               }),
-                              (0, o.jsx)(i.zxk, {
-                                  onClick: c,
+                              (0, l.jsx)(i.zxk, {
+                                  onClick: s,
                                   look: i.zxk.Looks.LINK,
                                   color: i.zxk.Colors.PRIMARY,
-                                  children: h.NW.string(h.t['ETE/oK'])
+                                  children: p.NW.string(p.t['ETE/oK'])
                               })
                           ]
                       })
