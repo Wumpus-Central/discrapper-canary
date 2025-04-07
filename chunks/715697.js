@@ -1,4 +1,4 @@
-t.d(l, { Z: () => m }), t(301563);
+t.d(l, { Z: () => m }), t(35282);
 var n = t(200651);
 t(192379);
 var r = t(120356),
@@ -11,35 +11,33 @@ var r = t(120356),
     c = t(902692),
     h = t(94488);
 function m(e) {
+    var l, t;
     let {
-            className: l,
-            embed: { url: t }
+            className: r,
+            embed: { url: m }
         } = e,
-        r = (0, a.e7)([u.Z], () => (0, o.wj)(u.Z.theme));
-    if (null == t) return null;
-    let m = null,
-        p = null,
-        g = null;
+        p = (0, a.e7)([u.Z], () => (0, o.wj)(u.Z.theme));
+    if (null == m) return null;
+    let g = null,
+        b = null,
+        f = null;
     try {
-        var b;
-        let e = s.parse(t, !0);
-        (m = e.host), (p = e.pathname), (g = null != (b = e.query.i) ? b : null), Array.isArray(g) && (g = g[0]);
+        let e = s.parse(m, !0);
+        (g = e.host), (b = e.pathname), (f = null != (t = e.query.i) ? t : null), Array.isArray(f) && (f = f[0]);
     } catch (e) {
         return null;
     }
-    if (!(0, d.L)(m) || null == p) return null;
-    let f = p.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
-    null != f && (p = p.substr(f[1].length + 1));
-    let y = p.split('/'),
-        v = null != y[1] ? y[1].toLowerCase() : null;
-    null != g && (v = 'song');
+    if (!(0, d.L)(g) || null == b) return null;
+    let v = /^\/([a-z]{2}(?:-[a-z]{2})?)\//.test(b) ? 2 : 1,
+        y = null == (l = b.split('/')[v]) ? void 0 : l.toLowerCase();
+    null != f && (y = 'song');
     let x = 450;
     return (
-        'song' === v ? (x = 175) : 'music-video' === v && (x = 371),
-        (p = p.substr(1)),
+        'song' === y ? (x = 175) : 'music-video' === y && (x = 371),
+        (b = b.substr(1)),
         (0, n.jsx)('iframe', {
-            className: i()(h.embedAppleMusic, l),
-            src: c.P.EMBED(p, r ? 'dark' : 'light', g),
+            className: i()(h.embedAppleMusic, r),
+            src: c.P.EMBED(b, p ? 'dark' : 'light', f),
             style: {
                 maxWidth: 660,
                 minWidth: 300,

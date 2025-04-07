@@ -1,92 +1,131 @@
-n.d(t, { Z: () => h }), n(47120), n(653041);
-var r = n(200651),
-    a = n(192379),
-    l = n(120356),
-    i = n.n(l),
-    o = n(481060),
-    s = n(424625),
-    c = n(823379),
-    d = n(246992),
-    u = n(616257);
-let m = a.forwardRef(function (e, t) {
-    let { id: n, selected: a, onClick: l, children: s } = e;
-    return (0, r.jsx)(o.P3F, {
-        className: i()(u.tabItem, { [u.selected]: a }),
-        'data-tab-id': n,
-        innerRef: t,
-        onClick: l,
-        children: s
+n.d(t, {
+    ZP: () => _,
+    v0: () => h
+}),
+    n(388685),
+    n(539854),
+    n(642613);
+var r,
+    a = n(200651),
+    l = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    s = n(93582),
+    c = n(481060),
+    d = n(424625),
+    u = n(823379),
+    m = n(246992),
+    x = n(616257),
+    h = (((r = {}).NONE = ''), (r.EXPERIMENTS = 'Experiments'), (r.EVENTS = 'Events'), (r.PREMIUM = 'Premium'), (r.BILLING = 'Billing'), (r.USERS = 'Users'), (r.GUILDS = 'Guilds'), (r.UI = 'UI'), (r.GAMES = 'Games'), (r.AUDIO_VIDEO = 'Audio / Video'), (r.DEVELOPMENT = 'Development'), r);
+let p = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
+    b = l.forwardRef(function (e, t) {
+        let { id: n, selected: r, onClick: l, children: i } = e;
+        return (0, a.jsx)(c.P3F, {
+            className: o()(x.tabItem, { [x.selected]: r }),
+            'data-tab-id': n,
+            innerRef: t,
+            onClick: l,
+            children: i
+        });
     });
-});
-function x(e) {
-    let { tabs: t, selectedTabId: n, onSelectTab: l } = e,
-        i = a.useRef(null),
-        x = a.useRef(0),
-        h = a.useRef(new Map()),
-        [p, b] = a.useState([]),
-        f = a.useCallback(() => {
+function f(e) {
+    let { tabs: t, selectedTabId: n, onSelectTab: r } = e,
+        i = l.useRef(null),
+        o = l.useRef(0),
+        h = l.useRef(new Map()),
+        [f, _] = l.useState([]),
+        g = l.useCallback(() => {
             var e, r, a, l;
             if (null == i.current) return;
-            let o = [],
-                s = i.current.getBoundingClientRect().width;
-            if (s !== x.current) {
-                for (let i of ((x.current = s), (s -= null != (r = null == (e = h.current.get(n)) ? void 0 : e.width) ? r : 0), t)) i.id !== n && (s -= null != (l = null == (a = h.current.get(i.id)) ? void 0 : a.width) ? l : 0) < 0 && o.push(i.id);
-                b(o);
+            let s = [],
+                c = i.current.getBoundingClientRect().width;
+            if (c !== o.current) {
+                for (let i of ((o.current = c), (c -= null != (r = null == (e = h.current.get(n)) ? void 0 : e.width) ? r : 0), t)) i.id !== n && (c -= null != (l = null == (a = h.current.get(i.id)) ? void 0 : a.width) ? l : 0) < 0 && s.push(i.id);
+                _(s);
             }
         }, [t, n]),
-        _ = a.useRef(null);
-    a.useEffect(
+        v = l.useRef(null);
+    l.useEffect(
         () => (
-            (_.current = new ResizeObserver(() => f())),
-            null != i.current && _.current.observe(i.current),
+            (v.current = new ResizeObserver(() => g())),
+            null != i.current && v.current.observe(i.current),
             () => {
                 var e;
-                null == (e = _.current) || e.disconnect();
+                null == (e = v.current) || e.disconnect();
             }
         ),
-        [f]
+        [g]
     );
-    let g = a.useCallback(
+    let j = l.useCallback(
         (e) => {
-            let { closePopout: a } = e;
-            return (0, r.jsx)(o.v2r, {
+            var n, l, i;
+            let { closePopout: o } = e,
+                d = t.filter((e) => null == e.group),
+                u = {};
+            for (let e of t) null != e.group && (null != u[(n = e.group)] || (u[n] = []), u[e.group].push(e));
+            for (let e of p)
+                null == (i = u[e]) ||
+                    i.sort((e, t) => {
+                        var n, r;
+                        return (null != (n = (0, s.q)(e.name)) ? n : '').localeCompare(null != (r = (0, s.q)(t.name)) ? r : '');
+                    });
+            return (0, a.jsxs)(c.v2r, {
                 navId: 'devtools-overflow',
                 variant: 'fixed',
-                onClose: a,
+                onClose: o,
                 'aria-label': 'Overflowed DevTools Tabs',
-                onSelect: a,
-                children: t
-                    .map((e) => {
-                        let { id: t, name: a } = e;
-                        return p.includes(t) && n !== t
-                            ? (0, r.jsx)(
-                                  o.sNh,
-                                  {
-                                      id: t,
-                                      label: a,
-                                      action: () => l(t)
-                                  },
-                                  t
-                              )
-                            : null;
-                    })
-                    .filter(c.lm)
+                onSelect: o,
+                children: [
+                    d.map((e) => {
+                        let { id: t, name: n } = e;
+                        return (0, a.jsx)(
+                            c.sNh,
+                            {
+                                id: t,
+                                label: n,
+                                action: () => r(t)
+                            },
+                            t
+                        );
+                    }),
+                    p.map((e) =>
+                        (0, a.jsx)(
+                            c.kSQ,
+                            {
+                                label: e,
+                                children: u[e].map((e) => {
+                                    let { id: t, name: n } = e;
+                                    return (0, a.jsx)(
+                                        c.sNh,
+                                        {
+                                            id: t,
+                                            label: n,
+                                            action: () => r(t)
+                                        },
+                                        t
+                                    );
+                                })
+                            },
+                            e
+                        )
+                    )
+                ]
             });
         },
-        [t, p, l, n]
+        [t, r]
     );
-    return (0, r.jsxs)('div', {
-        className: u.tabBarContainer,
+    return (0, a.jsxs)('div', {
+        className: x.tabBarContainer,
         children: [
-            (0, r.jsx)('div', {
-                className: u.tabBar,
+            (0, a.jsx)('div', {
+                className: x.tabBar,
                 ref: i,
                 children: t
                     .map((e) => {
-                        let { id: t, name: a } = e;
-                        if (!p.includes(t))
-                            return (0, r.jsx)(
-                                m,
+                        let { id: t, name: l } = e;
+                        if (!f.includes(t))
+                            return (0, a.jsx)(
+                                b,
                                 {
                                     id: t,
                                     selected: n === t,
@@ -98,28 +137,28 @@ function x(e) {
                                             width: null != (a = null == e ? void 0 : e.getBoundingClientRect().width) ? a : l
                                         });
                                     },
-                                    onClick: n !== t ? () => l(t) : void 0,
-                                    children: a
+                                    onClick: n !== t ? () => r(t) : void 0,
+                                    children: l
                                 },
                                 t
                             );
                     })
-                    .filter(c.lm)
+                    .filter(u.lm)
             }),
-            (0, r.jsx)('div', {
-                className: u.menu,
+            (0, a.jsx)('div', {
+                className: x.menu,
                 children:
-                    p.length > 0 &&
-                    (0, r.jsx)(o.yRy, {
-                        layerContext: d.O$,
-                        renderPopout: g,
+                    f.length > 0 &&
+                    (0, a.jsx)(c.yRy, {
+                        layerContext: m.O$,
+                        renderPopout: j,
                         position: 'bottom',
                         align: 'right',
                         spacing: 0,
                         children: (e) => {
                             var t, n;
-                            return (0, r.jsx)(
-                                o.zxk,
+                            return (0, a.jsx)(
+                                c.zxk,
                                 ((t = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -147,11 +186,11 @@ function x(e) {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        className: u.overflowChevron,
-                                        size: o.zxk.Sizes.ICON,
-                                        look: o.zxk.Looks.BLANK,
-                                        children: (0, r.jsx)(s.Z, {
-                                            className: u.__invalid_overflowIcon,
+                                        className: x.overflowChevron,
+                                        size: c.zxk.Sizes.ICON,
+                                        look: c.zxk.Looks.BLANK,
+                                        children: (0, a.jsx)(d.Z, {
+                                            className: x.__invalid_overflowIcon,
                                             width: 16,
                                             height: 16
                                         })
@@ -176,14 +215,14 @@ function x(e) {
         ]
     });
 }
-function h(e, t) {
-    var n, l, i;
+function _(e, t) {
+    var n, r, i;
     let { tabs: o, initialSelectedTabId: s, onChangeTab: c } = e,
-        [d, u] = a.useState(null != s ? s : null == (n = o[0]) ? void 0 : n.id);
+        [d, u] = l.useState(null != s ? s : null == (n = o[0]) ? void 0 : n.id);
     return {
-        TabBar: a.useCallback(
+        TabBar: l.useCallback(
             () =>
-                (0, r.jsx)(x, {
+                (0, a.jsx)(f, {
                     tabs: o,
                     selectedTabId: d,
                     onSelectTab: (e) => {
@@ -192,7 +231,7 @@ function h(e, t) {
                 }),
             [d, u, c, ...t]
         ),
-        renderSelectedTab: null != (i = null == (l = o.find((e) => e.id === d)) ? void 0 : l.render) ? i : () => null,
+        renderSelectedTab: null != (i = null == (r = o.find((e) => e.id === d)) ? void 0 : r.render) ? i : () => null,
         selectedTabId: d
     };
 }

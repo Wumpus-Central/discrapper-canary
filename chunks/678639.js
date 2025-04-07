@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(47120), n(230036);
+n.d(t, { Z: () => j }), n(388685), n(642613);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -49,6 +49,7 @@ let _ = [
         {
             id: 'local',
             name: 'Local Variables',
+            group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return null == t.__getLocalVars
@@ -65,6 +66,7 @@ let _ = [
         {
             id: 'instance',
             name: 'Store Instance',
+            group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return (0, r.jsx)(f, {
@@ -76,7 +78,7 @@ let _ = [
     ];
 function v(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: a, renderSelectedTab: l } = (0, x.Z)({ tabs: g }, []);
+        { TabBar: a, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
     return (0, r.jsxs)(u.Z, {
         className: p.subPanel,
         minHeight: 100,

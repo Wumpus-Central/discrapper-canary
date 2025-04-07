@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(301563), n(47120), n(26686), n(566702);
+n.d(t, { Z: () => Z }), n(35282), n(388685), n(49124), n(781311);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -21,8 +21,8 @@ var r = n(200651),
     y = n(621060),
     C = n(981631),
     T = n(248520),
-    S = n(616257);
-function N(e) {
+    N = n(616257);
+function S(e) {
     return parseFloat(e.toFixed(3));
 }
 let O = [
@@ -39,11 +39,11 @@ let O = [
         cellClassName: T.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return ''.concat(N(t.time), ' ms');
+            return ''.concat(S(t.time), ' ms');
         }
     }
 ];
-function k(e) {
+function E(e) {
     let { actionLog: t } = e,
         n = a.useMemo(
             () =>
@@ -60,10 +60,11 @@ function k(e) {
         })
     });
 }
-let E = [
+let k = [
     {
         id: 'action',
         name: 'Action',
+        group: y.v0.NONE,
         render(e) {
             var t;
             let { actionLog: n } = e,
@@ -83,7 +84,7 @@ let E = [
                             }),
                             (0, r.jsxs)(g.Z9, {
                                 name: 'Total Time',
-                                children: [N(n.totalTime), ' ms']
+                                children: [S(n.totalTime), ' ms']
                             })
                         ]
                     }),
@@ -98,9 +99,10 @@ let E = [
     {
         id: 'traces',
         name: 'Store Handlers',
+        group: y.v0.NONE,
         render(e) {
             let { actionLog: t } = e;
-            return (0, r.jsx)(k, { actionLog: t });
+            return (0, r.jsx)(E, { actionLog: t });
         }
     }
 ];
@@ -110,22 +112,23 @@ function w(e) {
             () =>
                 t.error
                     ? [
-                          ...E,
+                          ...k,
                           {
                               id: 'error',
                               name: (0, r.jsxs)(r.Fragment, {
                                   children: [(0, r.jsx)(p.Z, { className: T.errorIcon }), 'Error']
                               }),
+                              group: y.v0.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: i()(T.errorToolbar, S.toolbar),
+                                              className: i()(T.errorToolbar, N.toolbar),
                                               children: (0, r.jsx)('div', {
-                                                  className: S.toolbarGroup,
+                                                  className: N.toolbarGroup,
                                                   children: (0, r.jsx)(d.zxk, {
-                                                      className: S.toolbarButton,
+                                                      className: N.toolbarButton,
                                                       size: d.zxk.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: 'Log to Console'
@@ -141,10 +144,10 @@ function w(e) {
                               }
                           }
                       ]
-                    : E,
+                    : k,
             [t]
         ),
-        { TabBar: o, renderSelectedTab: s } = (0, y.Z)({ tabs: l }, [l]);
+        { TabBar: o, renderSelectedTab: s } = (0, y.ZP)({ tabs: l }, [l]);
     return (0, r.jsxs)(v.Z, {
         className: T.subPanel,
         minHeight: 100,
@@ -152,15 +155,15 @@ function w(e) {
         children: [
             (0, r.jsx)(o, {}),
             (0, r.jsxs)(m.ZP, {
-                className: i()(S.headerBar, T.subPanelHeaderBar),
+                className: i()(N.headerBar, T.subPanelHeaderBar),
                 children: [
                     (0, r.jsx)(m.ZP.Icon, {
                         icon: d.xVZ,
                         tooltip: t.name
                     }),
                     (0, r.jsx)(m.ZP.Title, {
-                        wrapperClassName: i()(S.headerTitle, S.dispatcherHeader),
-                        className: S.headerTitleText,
+                        wrapperClassName: i()(N.headerTitle, N.dispatcherHeader),
+                        className: N.headerTitleText,
                         children: t.name
                     }),
                     (0, r.jsx)(m.ZP.Icon, {
@@ -207,7 +210,7 @@ let P = [
             cellClassName: T.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
-                return ''.concat(N(t.totalTime), ' ms');
+                return ''.concat(S(t.totalTime), ' ms');
             }
         }
     ],
@@ -265,10 +268,10 @@ function Z() {
             [s]
         ),
         C = t.trim().length > 0,
-        N = a.useMemo(() => (C ? x : b ? c : s), [s, x, C, b, c]);
+        S = a.useMemo(() => (C ? x : b ? c : s), [s, x, C, b, c]);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(S.panel, T.panel),
+        className: i()(N.panel, T.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: T.toolbar,
@@ -292,7 +295,7 @@ function Z() {
             }),
             (0, r.jsx)(j.Z, {
                 columns: P,
-                data: N,
+                data: S,
                 selectedRowKey: null == _ ? void 0 : _.id.toString(),
                 onClickRow: (e) => g(e.actionLog)
             }),

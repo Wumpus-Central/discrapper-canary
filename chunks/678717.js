@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => ea }), n(653041), n(47120);
+n.r(t), n.d(t, { default: () => ea }), n(539854), n(388685);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -22,11 +22,11 @@ var g = n(392750),
     y = n(806240),
     C = n(789654),
     T = n(719672),
-    S = n(691867),
-    N = n(916790),
+    N = n(691867),
+    S = n(916790),
     O = n(645973),
-    k = n(903502),
-    E = n(604776),
+    E = n(903502),
+    k = n(604776),
     w = n(912072),
     P = n(272193),
     I = n(685560),
@@ -72,22 +72,26 @@ function et() {
                 {
                     id: 'analytics',
                     name: 'Analytics',
+                    group: J.v0.EXPERIMENTS,
                     render: () => (0, r.jsx)(v.Z, {})
                 },
                 {
                     id: 'triggers',
                     name: 'Triggers',
+                    group: J.v0.EXPERIMENTS,
                     render: () => (0, r.jsx)(Y.Z, {})
                 },
                 {
                     id: 'stores',
                     name: 'Stores',
+                    group: J.v0.EVENTS,
                     render: () => (0, r.jsx)(H.Z, {})
                 },
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, r.jsx)(N.Z, {})
+                    group: J.v0.EVENTS,
+                    render: () => (0, r.jsx)(S.Z, {})
                 }
             ];
             return (
@@ -95,143 +99,171 @@ function et() {
                     (e.push({
                         id: 'shop',
                         name: 'Shop',
+                        group: J.v0.BILLING,
                         render: () => (0, r.jsx)(U.C, {})
                     }),
                     e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
+                        group: J.v0.NONE,
                         render: () => (0, r.jsx)(G.Z, {})
                     }),
                     e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
+                        group: J.v0.DEVELOPMENT,
                         render: () => (0, r.jsx)(O.Z, {})
                     }),
                     e.push({
                         id: 'clans',
                         name: 'Clans',
+                        group: J.v0.GUILDS,
                         render: () => (0, r.jsx)(y.Z, {})
                     }),
                     e.push({
                         id: 'performance',
                         name: 'Performance',
+                        group: J.v0.DEVELOPMENT,
                         render: () => (0, r.jsx)(z.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
                         name: 'Feedback',
-                        render: () => (0, r.jsx)(k.Z, {})
+                        group: J.v0.USERS,
+                        render: () => (0, r.jsx)(E.Z, {})
                     }),
                     e.push({
                         id: 'overlay',
                         name: 'Overlay v3',
+                        group: J.v0.GAMES,
                         render: () => (0, r.jsx)(A.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
                         name: 'Slayer SDK',
+                        group: J.v0.GAMES,
                         render: () => (0, r.jsx)(W.Z, {})
                     })),
                 e.push({
                     id: 'intl',
                     name: 'Intl',
+                    group: J.v0.UI,
                     render: () => (0, r.jsx)(Z.Z, {})
                 }),
                 e.push({
                     id: 'colors',
                     name: 'Colors',
+                    group: J.v0.UI,
                     render: () => (0, r.jsx)(C.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, r.jsx)(S.Z, {})
+                    group: J.v0.UI,
+                    render: () => (0, r.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
+                    group: J.v0.DEVELOPMENT,
                     render: () => (0, r.jsx)(w.Z, { devSettingsCategory: _.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
+                    group: J.v0.USERS,
                     render: () => (0, r.jsx)(L.Z, {})
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
+                    group: J.v0.EXPERIMENTS,
                     render: () => (0, r.jsx)(w.Z, { devSettingsCategory: _.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
+                    group: J.v0.USERS,
                     render: () => (0, r.jsx)(M.Z, {})
                 }),
                 e.push({
                     id: 'modals',
                     name: 'Modals',
+                    group: J.v0.UI,
                     render: () => (0, r.jsx)(D.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
                     name: 'Affinity',
+                    group: J.v0.USERS,
                     render: () => (0, r.jsx)(g.Z, {})
                 }),
                 h.Z.isDeveloper &&
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
+                        group: J.v0.USERS,
                         render: () => (0, r.jsx)(m.Z, {})
                     }),
                 e.push({
                     id: 'dcf',
                     name: 'DCF',
+                    group: J.v0.EXPERIMENTS,
                     render: () => (0, r.jsx)(T.Z, {})
                 }),
                 e.push({
                     id: 'potions',
                     name: 'Potions',
+                    group: J.v0.PREMIUM,
                     render: () => (0, r.jsx)(F.Z, {})
                 }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
+                        group: J.v0.PREMIUM,
                         render: () => (0, r.jsx)(X.Z, {})
                     }),
                     e.push({
                         id: 'payments',
                         name: 'Payments',
+                        group: J.v0.BILLING,
                         render: () => (0, r.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
+                        group: J.v0.PREMIUM,
                         render: () => (0, r.jsx)(V.Z, {})
                     }),
                     e.push({
                         id: 'billing',
                         name: 'Billing',
+                        group: J.v0.BILLING,
                         render: () => (0, r.jsx)(j.Z, {})
                     }),
                     e.push({
                         id: 'fractional_nitro',
                         name: 'Fractional Nitro',
-                        render: () => (0, r.jsx)(E.Z, {})
+                        group: J.v0.PREMIUM,
+                        render: () => (0, r.jsx)(k.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
+                    group: J.v0.PREMIUM,
                     render: () => (0, r.jsx)(P.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
                     name: 'Voice Filters',
+                    group: J.v0.AUDIO_VIDEO,
                     render: () => (0, r.jsx)(K.Z, {})
                 }),
                 e.push({
                     id: 'skill_trees',
                     name: 'Skill Trees',
+                    group: J.v0.GUILDS,
                     render: () => (0, r.jsx)(I.Z, {})
                 }),
                 e
@@ -241,7 +273,7 @@ function et() {
             TabBar: n,
             renderSelectedTab: l,
             selectedTabId: i
-        } = (0, J.Z)(
+        } = (0, J.ZP)(
             {
                 tabs: t,
                 initialSelectedTabId: null != (e = f.Z.lastOpenTabId) ? e : void 0,

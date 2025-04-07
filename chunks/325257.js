@@ -1,10 +1,10 @@
-n.d(t, { Z: () => M }), n(47120);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
     a = n(999153),
-    s = n(642128),
+    s = n(200100),
     c = n(91192),
     u = n(399606),
     d = n(846519),
@@ -202,7 +202,11 @@ let M = i.memo(function (e) {
         ew = eu
             ? (0, r.jsx)(P.OG, { children: (0, r.jsx)(N.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
-                  ref: $ ? ed : void 0,
+                  ref: $
+                      ? (e) => {
+                            ed(e);
+                        }
+                      : void 0,
                   'data-dnd-name': F.toString(),
                   style: { scale: null == er ? 1 : er },
                   'data-drop-hovering': ey,

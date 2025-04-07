@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(47120), n(230036);
+n.d(t, { Z: () => O }), n(388685), n(642613);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -21,7 +21,7 @@ var r = n(200651),
     y = n(388032),
     C = n(459100),
     T = n(616257);
-let S = [
+let N = [
         {
             key: 'id',
             cellClassName: C.eventColumn,
@@ -47,10 +47,11 @@ let S = [
             }
         }
     ],
-    N = [
+    S = [
         {
             id: 'details',
             name: 'Details',
+            group: j.v0.NONE,
             render: (e) => {
                 let {
                         loggedTrigger: { experimentId: t, descriptor: n, exposureType: a, excluded: l, timestamp: o, location: s, previouslyTracked: c }
@@ -126,9 +127,9 @@ function O() {
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = a.useState(void 0),
         h = o.find((e) => e.key === c),
-        { TabBar: p, renderSelectedTab: _ } = (0, j.Z)({ tabs: N }, []),
+        { TabBar: p, renderSelectedTab: _ } = (0, j.ZP)({ tabs: S }, []),
         O = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
-        k = a.useCallback((e) => {
+        E = a.useCallback((e) => {
             x.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -146,7 +147,7 @@ function O() {
                         className: C.triggersEnable,
                         children: (0, r.jsx)(m.rsf, {
                             checked: O,
-                            onChange: k,
+                            onChange: E,
                             className: C.__invalid_toolbarSwitch
                         })
                     }),
@@ -174,7 +175,7 @@ function O() {
                 ]
             }),
             (0, r.jsx)(v.Z, {
-                columns: S,
+                columns: N,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)
