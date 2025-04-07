@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(481060),
     d = n(570140),
     p = n(893776),
-    h = n(314897),
-    g = n(626135),
+    g = n(314897),
+    h = n(626135),
     f = n(70956),
     m = n(970648),
     _ = n(981631),
@@ -25,7 +25,7 @@ let N = 'mweb_handoff_nonce',
         c.K.remove(N), c.K.remove(v);
     },
     O = () => {
-        let e = (0, l.e7)([h.default], () => h.default.getFingerprint()),
+        let e = (0, l.e7)([g.default], () => g.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, o.parse)(window.location.search),
             f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
             O = null != f ? f : null !== e ? e : void 0;
@@ -41,7 +41,7 @@ let N = 'mweb_handoff_nonce',
             T = i.useCallback(
                 (e) => {
                     y(e),
-                        g.default.track(
+                        h.default.track(
                             _.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
                                 reason: e,
@@ -78,7 +78,7 @@ let N = 'mweb_handoff_nonce',
                         })
                         .then((e) => p.Z.loginToken(e.body.token, !1))
                         .then(() => {
-                            g.default.track(_.rMx.LOGIN_SUCCESSFUL, {
+                            h.default.track(_.rMx.LOGIN_SUCCESSFUL, {
                                 source: _.uRl.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
                                 fingerprint: (0, a.K)(O)
@@ -136,7 +136,7 @@ let N = 'mweb_handoff_nonce',
                                   r.set('key', e),
                                   r.set('fingerprint', O),
                                   (t.search = r.toString()),
-                                  g.default.track(
+                                  h.default.track(
                                       _.rMx.DEEP_LINK_CLICKED,
                                       {
                                           fingerprint: (0, a.K)(O),

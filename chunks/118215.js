@@ -1,64 +1,64 @@
-t.d(i, { ZP: () => c });
-var n,
+n.d(t, { ZP: () => d });
+var i,
     r,
     l,
-    u = t(442837),
-    o = t(570140);
-let a = {},
-    s = !1;
-class E extends (l = u.ZP.Store) {
+    a = n(442837),
+    s = n(570140);
+let o = {},
+    c = !1;
+class u extends (l = a.ZP.Store) {
     isLoading() {
-        return s;
+        return c;
     }
     passesChecklist(e) {
-        var i;
-        return !s && (null == (i = a[e]) ? void 0 : i.sufficient);
+        var t;
+        return !c && (null == (t = o[e]) ? void 0 : t.sufficient);
     }
     isPendingSuccess(e) {
-        let i = a[e];
-        return null != i && !s && i.healthScorePending && i.safeEnvironment && 0 === Object.keys(i.nsfwProperties).length && i.size && i.protected;
+        let t = o[e];
+        return null != t && !c && t.healthScorePending && t.safeEnvironment && 0 === Object.keys(t.nsfwProperties).length && t.size && t.protected;
     }
     getDiscoveryChecklist(e) {
-        return a[e];
+        return o[e];
     }
 }
 (r = 'DiscoverGuildChecklistStore'),
-    (n = 'displayName') in E
-        ? Object.defineProperty(E, n, {
+    (i = 'displayName') in u
+        ? Object.defineProperty(u, i, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (E[n] = r);
-let c = new E(o.Z, {
+        : (u[i] = r);
+let d = new u(s.Z, {
     DISCOVER_CHECKLIST_FETCH_START: function (e) {
-        s = !0;
+        c = !0;
     },
     DISCOVER_CHECKLIST_FETCH_FAILURE: function (e) {
-        s = !1;
+        c = !1;
     },
     DISCOVER_CHECKLIST_FETCH_SUCCESS: function (e) {
-        var i;
-        let { checklist: t, guildId: n } = e;
-        (s = !1),
-            (a[n] = {
-                guildId: t.guild_id,
-                safeEnvironment: t.safe_environment,
-                healthy: t.healthy,
-                healthScorePending: t.health_score_pending,
-                nsfwProperties: t.nsfw_properties,
-                size: t.size,
-                protected: t.protected,
-                sufficient: t.sufficient,
-                sufficientWithoutGracePeriod: t.sufficient_without_grace_period,
-                gracePeriodEndDate: null != t.grace_period_end_date ? new Date(t.grace_period_end_date) : null,
-                retentionHealthy: t.retention_healthy,
-                engagementHealthy: t.engagement_healthy,
-                minimumGuildSize: null != t.minimum_size ? t.minimum_size : 1000,
-                healthScore: t.health_score,
-                minimumGuildAge: null != (i = t.minimum_age) ? i : 0,
-                age: t.age
+        var t;
+        let { checklist: n, guildId: i } = e;
+        (c = !1),
+            (o[i] = {
+                guildId: n.guild_id,
+                safeEnvironment: n.safe_environment,
+                healthy: n.healthy,
+                healthScorePending: n.health_score_pending,
+                nsfwProperties: n.nsfw_properties,
+                size: n.size,
+                protected: n.protected,
+                sufficient: n.sufficient,
+                sufficientWithoutGracePeriod: n.sufficient_without_grace_period,
+                gracePeriodEndDate: null != n.grace_period_end_date ? new Date(n.grace_period_end_date) : null,
+                retentionHealthy: n.retention_healthy,
+                engagementHealthy: n.engagement_healthy,
+                minimumGuildSize: null != n.minimum_size ? n.minimum_size : 1000,
+                healthScore: n.health_score,
+                minimumGuildAge: null != (t = n.minimum_age) ? t : 0,
+                age: n.age
             });
     }
 });

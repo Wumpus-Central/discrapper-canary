@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(258356),
     d = n(981631),
     p = n(388032),
-    h = n(15282);
-function g(e) {
+    g = n(15282);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -88,20 +88,20 @@ function _(e) {
               onAcceptInvite: n
           })
         : (0, r.jsxs)('div', {
-              className: h.container,
+              className: g.container,
               children: [
                   (0, r.jsx)(c.GB, {
                       application: N,
                       guild: b,
                       user: E || (0, c.X7)(t) ? v : null
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, f(g({}, j), { showBigUserIcon: E })),
-                  (0, r.jsx)(c.UM, f(g({}, j), { showBigUserIcon: E })),
-                  (0, r.jsx)(c.V6, g({}, j)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, f(h({}, j), { showBigUserIcon: E })),
+                  (0, r.jsx)(c.UM, f(h({}, j), { showBigUserIcon: E })),
+                  (0, r.jsx)(c.V6, h({}, j)),
                   (0, r.jsx)(i.zxk, {
                       onClick: n,
                       submitting: I,
-                      className: h.acceptButton,
+                      className: g.acceptButton,
                       children: p.NW.string(p.t.ohMvm5)
                   })
               ]

@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(893776),
     d = n(533307),
     p = n(447543),
-    h = n(126399),
-    g = n(521379),
+    g = n(126399),
+    h = n(521379),
     f = n(765717),
     m = n(267394),
     _ = n(761305),
@@ -108,8 +108,8 @@ let eo = (0, L.Z)(V.Z),
     eu = (0, L.Z)(j.Z),
     ed = (0, L.Z)(q.Z),
     ep = (0, L.Z)(k.Z),
-    eh = (0, L.Z)(W.Z),
-    eg = (0, L.Z)(Q.Z),
+    eg = (0, L.Z)(W.Z),
+    eh = (0, L.Z)(Q.Z),
     ef = (0, L.Z)(b.Z),
     em = (0, L.Z)(J.Z),
     e_ = (0, L.Z)(M.Z),
@@ -119,7 +119,7 @@ let eo = (0, L.Z)(V.Z),
     ev = (0, L.Z)(K.Z),
     eE = (0, L.Z)(X.Z),
     eI = (0, L.Z)(Y.Z),
-    ej = (0, L.Z)(g.Z);
+    ej = (0, L.Z)(h.Z);
 class eS extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
@@ -160,14 +160,14 @@ class eS extends i.PureComponent {
             (t || ee.a) && this.resolveInvite(),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
-            h.Z.initialize();
+            g.Z.initialize();
     }
     componentDidUpdate(e) {
         var t, n;
         e.hasLoadedExperiments || !this.props.hasLoadedExperiments || ee.a || this.resolveInvite(), (null == (t = e.invite) ? void 0 : t.state) !== (null == (n = this.props.invite) ? void 0 : n.state) && this.maybeFetchApplicationSplash();
     }
     componentWillUnmount() {
-        h.Z.terminate();
+        g.Z.terminate();
     }
     maybeFetchApplicationSplash() {
         let { invite: e } = this.props;
@@ -296,7 +296,7 @@ class eS extends i.PureComponent {
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.VERIFY,
-                    render: (e) => (0, r.jsx)(eg, er({}, e))
+                    render: (e) => (0, r.jsx)(eh, er({}, e))
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.VERIFY_HUB_EMAIL,
@@ -328,7 +328,7 @@ class eS extends i.PureComponent {
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.AUTHORIZE_PAYMENT,
-                    render: (e) => (0, r.jsx)(eh, er({}, e))
+                    render: (e) => (0, r.jsx)(eg, er({}, e))
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.RESET,

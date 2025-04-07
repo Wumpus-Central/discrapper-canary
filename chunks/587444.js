@@ -13,19 +13,19 @@ var i = n(120356),
     u = n(981631),
     d = n(388032),
     p = n(359487),
-    h = n(893354),
-    g = n(20493);
+    g = n(893354),
+    h = n(20493);
 function f(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Ee, { src: n(689411) }),
             (0, r.jsx)(s.Dx, {
-                className: o()(g.marginTop20, g.marginBottom8, h.flexCenter),
+                className: o()(h.marginTop20, h.marginBottom8, g.flexCenter),
                 children: d.NW.string(d.t.eL5z0t)
             }),
             (0, r.jsx)(s.DK, {
-                className: g.marginBottom40,
+                className: h.marginBottom40,
                 children: d.NW.string(d.t['poAv6+'])
             }),
             (0, r.jsxs)(l.Zbd, {

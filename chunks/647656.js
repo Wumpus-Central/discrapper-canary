@@ -6,12 +6,12 @@ var r = n(392711),
     o = n(774226),
     s = n(317381),
     c = n(898036),
-    u = n(212517),
-    d = n(812206),
-    p = n(626135),
-    h = n(81063),
-    f = n(70956),
-    g = n(996106),
+    u = n(812206),
+    d = n(626135),
+    p = n(81063),
+    h = n(70956),
+    f = n(996106),
+    g = n(914946),
     m = n(452426),
     b = n(186901),
     _ = n(981631);
@@ -99,8 +99,8 @@ let O = ['349134787773988865'],
                         args: { pid: C, activity: S },
                         isSocketConnected: T
                     } = e;
-                if (![b.He.IPC, b.He.WEBSOCKET, b.He.POST_MESSAGE].includes(v.transport)) throw new g.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'command not available from "'.concat(v.transport, '" transport'));
-                if (null == C && b.He.IPC === v.transport) throw new g.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'nonzero pid required');
+                if (![b.He.IPC, b.He.WEBSOCKET, b.He.POST_MESSAGE].includes(v.transport)) throw new f.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'command not available from "'.concat(v.transport, '" transport'));
+                if (null == C && b.He.IPC === v.transport) throw new f.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'nonzero pid required');
                 if (null == S)
                     return (
                         a.Z.dispatch({
@@ -116,7 +116,7 @@ let O = ['349134787773988865'],
                 let j = v.application.id;
                 S.application_id = j;
                 let A = v.transport === b.He.POST_MESSAGE,
-                    Z = d.Z.getApplication(null != j ? j : void 0),
+                    Z = u.Z.getApplication(null != j ? j : void 0),
                     x = 0;
                 if (null != Z && (0, o.Kb)(Z) && A) {
                     let e = s.ZP.getCurrentEmbeddedActivity();
@@ -138,22 +138,22 @@ let O = ['349134787773988865'],
                             ));
                     }
                 }
-                let w = (0, u.S5)(S, A);
+                let w = (0, g.S5)(S, A);
                 w > 0 && (S.flags = w | x), delete S.instance, null == (t = S.party) || delete t.privacy;
                 let { assets: L, party: R, secrets: D, timestamps: k, buttons: M, type: U } = S;
                 if ((null == U && (S.type = _.IIU.PLAYING), null != D)) {
                     let e = i()
                         .values(D)
                         .filter((e) => !!e);
-                    if (null != R && i().intersection(e, [R.id]).length > 0 && !O.includes(v.application.id)) throw new g.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
-                    if (i().uniq(e).length < e.length) throw new g.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
-                    if (null != M) throw new g.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
+                    if (null != R && i().intersection(e, [R.id]).length > 0 && !O.includes(v.application.id)) throw new f.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
+                    if (i().uniq(e).length < e.length) throw new f.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
+                    if (null != M) throw new f.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
                 }
-                if ((null != M && ((P.button_urls = M.map((e) => e.url)), (S.buttons = M.map((e) => e.label))), (S.metadata = P), null != k)) for (let e of Object.keys(k)) Date.now().toString().length - k[e].toString().length > 2 && (k[e] = Math.floor(k[e] * f.Z.Millis.SECOND));
+                if ((null != M && ((P.button_urls = M.map((e) => e.url)), (S.buttons = M.map((e) => e.label))), (S.metadata = P), null != k)) for (let e of Object.keys(k)) Date.now().toString().length - k[e].toString().length > 2 && (k[e] = Math.floor(k[e] * h.Z.Millis.SECOND));
                 if (null == L) I = Promise.resolve([]);
                 else {
                     if (null == v.application || null == v.application.id) throw Error();
-                    I = (0, h.hR)(v.application.id, [L.large_image, L.small_image]);
+                    I = (0, p.hR)(v.application.id, [L.large_image, L.small_image]);
                 }
                 return I.then((e) => {
                     var t, n;
@@ -173,7 +173,7 @@ let O = ['349134787773988865'],
                             details: null != (t = S.details) ? t : '',
                             state: null != (n = S.state) ? n : ''
                         };
-                    return null != l && ((s.has_match_secret = !!l.match), (s.has_join_secret = !!l.join)), null != L && (s.has_images = !!(L.large_image || L.small_image)), null != o && ((s.party_max = null != o.size && o.size[1] > 0 ? o.size[1] : void 0), (s.party_id = o.id)), p.default.track(_.rMx.ACTIVITY_UPDATED, s), S;
+                    return null != l && ((s.has_match_secret = !!l.match), (s.has_join_secret = !!l.join)), null != L && (s.has_images = !!(L.large_image || L.small_image)), null != o && ((s.party_max = null != o.size && o.size[1] > 0 ? o.size[1] : void 0), (s.party_id = o.id)), d.default.track(_.rMx.ACTIVITY_UPDATED, s), S;
                 });
             }
         }

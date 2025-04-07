@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(393238),
     d = n(388905),
     p = n(108427),
-    h = n(314897),
-    g = n(701190),
+    g = n(314897),
+    h = n(701190),
     f = n(626135),
     m = n(768581),
     _ = n(823379),
@@ -128,9 +128,9 @@ function P(e) {
             return i;
         })(e, ['children', 'cardChildren', 'startAnimHeightPx', 'innerStyle']),
         [d, p] = i.useState(y(c)),
-        { ref: h, height: g } = (0, u.Z)(),
+        { ref: g, height: h } = (0, u.Z)(),
         f = (0, l.q_F)({
-            height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(a, 'px'),
+            height: null != h && 0 !== h ? ''.concat(h, 'px') : ''.concat(a, 'px'),
             config: o.config.stiff
         });
     return (
@@ -146,7 +146,7 @@ function P(e) {
                     className: j.inviteChildContainer,
                     style: f,
                     children: (0, r.jsx)('section', {
-                        ref: h,
+                        ref: g,
                         className: null == s ? void 0 : s(d),
                         children: t(d)
                     })
@@ -227,7 +227,7 @@ function R(e) {
 }
 function w(e) {
     let { inviteKey: t, transitionTo: n } = e,
-        o = (0, a.e7)([g.Z], () => g.Z.getInvite(t));
+        o = (0, a.e7)([h.Z], () => h.Z.getInvite(t));
     return (
         i.useEffect(() => {
             (0, p.e)('invite_mobile');
@@ -257,8 +257,8 @@ function w(e) {
                             inviter_id: null == n || null == (o = n.inviter) ? void 0 : o.id
                         });
                     let a = null != n && n.state !== E.r2o.EXPIRED && n.state !== E.r2o.BANNED ? t : void 0,
-                        l = h.default.getFingerprint(),
-                        c = null != l ? l : h.default.getId(),
+                        l = g.default.getFingerprint(),
+                        c = null != l ? l : g.default.getId(),
                         u = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
                     s.ZP.openApp(a, void 0, c, void 0, u);
                 })(e, t, o);

@@ -1,61 +1,61 @@
-n.d(i, { Z: () => p });
-var t = n(200651);
-n(192379);
-var o = n(442837),
-    r = n(481060),
-    a = n(906732),
-    l = n(48217),
-    c = n(26323),
-    s = n(430824),
-    d = n(914010),
-    u = n(709586),
-    g = n(981631),
-    f = n(30513),
-    _ = n(388032),
-    b = n(273233);
-function p(e) {
-    let { analyticsSection: i, analyticsPage: n, isGIF: p, banner: N } = e,
-        m = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
-        h = (0, o.e7)([s.Z], () => s.Z.getGuild(m)),
+i.d(t, { Z: () => f });
+var n = i(200651);
+i(192379);
+var o = i(442837),
+    r = i(481060),
+    a = i(906732),
+    l = i(48217),
+    s = i(26323),
+    c = i(430824),
+    d = i(914010),
+    u = i(709586),
+    _ = i(981631),
+    g = i(30513),
+    h = i(388032),
+    b = i(273233);
+function f(e) {
+    let { analyticsSection: t, analyticsPage: i, isGIF: f, banner: m } = e,
+        p = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
+        N = (0, o.e7)([c.Z], () => c.Z.getGuild(p)),
         { analyticsLocations: T } = (0, a.ZP)();
-    return null == h || h.hasFeature(g.oNc.ANIMATED_BANNER) || (!p && h.hasFeature(g.oNc.BANNER))
+    return null == N || N.hasFeature(_.oNc.ANIMATED_BANNER) || (!f && N.hasFeature(_.oNc.BANNER))
         ? null
-        : (0, t.jsxs)('div', {
+        : (0, n.jsxs)('div', {
               className: b.container,
               children: [
-                  (0, t.jsx)(u.Z, { className: b.guildBoostingIcon }),
-                  (0, t.jsx)(r.Text, {
+                  (0, n.jsx)(u.Z, { className: b.guildBoostingIcon }),
+                  (0, n.jsx)(r.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: _.NW.string(_.t['56M7xc'])
+                      children: h.NW.string(h.t['56M7xc'])
                   }),
-                  (0, t.jsx)(r.zxk, {
+                  (0, n.jsx)(r.zxk, {
                       look: r.zxk.Looks.LINK,
                       color: r.zxk.Colors.LINK,
                       className: b.subscribeButton,
                       onClick: () => {
-                          if (null == h) return;
+                          if (null == N) return;
                           let e = {
-                              section: i,
-                              page: n,
-                              object: g.qAy.UPSELL_HEADER
+                              section: t,
+                              page: i,
+                              object: _.qAy.UPSELL_HEADER
                           };
-                          null != N
+                          null != m
                               ? (0, l.c)({
                                     analyticsLocations: T,
                                     analyticsLocation: e,
-                                    guild: h,
-                                    isGIF: p,
-                                    banner: N
+                                    guild: N,
+                                    isGIF: f,
+                                    banner: m
                                 })
-                              : (0, c.Z)({
+                              : (0, s.Z)({
                                     analyticsLocations: T,
                                     analyticsSourceLocation: e,
-                                    guild: h,
-                                    perks: p ? (0, f.zC)() : (0, f.XO)()
+                                    guild: N,
+                                    perks: f ? (0, g.zC)() : (0, g.XO)()
                                 });
                       },
-                      children: _.NW.string(_.t.WUHdZW)
+                      children: h.NW.string(h.t.WUHdZW)
                   })
               ]
           });

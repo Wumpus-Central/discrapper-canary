@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(493773),
     d = n(743142),
     p = n(893607),
-    h = n(703656),
-    g = n(314897),
+    g = n(703656),
+    h = n(314897),
     f = n(781428),
     m = n(981631),
     _ = n(176505);
@@ -25,17 +25,17 @@ function b(e) {
                         return (null == n || null == (t = n.params) ? void 0 : t.channelId) === _.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
-                    h.dL(t);
+                    g.dL(t);
                 else {
                     var n;
-                    (null != (n = e.transitionTo) ? n : h.uL)(t);
+                    (null != (n = e.transitionTo) ? n : g.uL)(t);
                 }
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: x, loginStatus: N } = (0, l.cj)([g.default], () => ({
-            isAuthenticated: g.default.isAuthenticated(),
-            loginStatus: g.default.getLoginStatus()
+        { isAuthenticated: x, loginStatus: N } = (0, l.cj)([h.default], () => ({
+            isAuthenticated: h.default.isAuthenticated(),
+            loginStatus: h.default.getLoginStatus()
         })),
         { location: v, redirectTo: E } = e,
         [I, j] = i.useState(x);

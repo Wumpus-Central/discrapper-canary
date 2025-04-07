@@ -19,8 +19,8 @@ var r = n(200651),
     u = n(925329),
     d = n(372769),
     p = n(768581),
-    h = n(51144),
-    g = n(245335),
+    g = n(51144),
+    h = n(245335),
     f = n(981631),
     m = n(888592),
     _ = n(388032),
@@ -34,7 +34,7 @@ let x = 100,
         };
         return 0 === r.memberCount && 0 === r.memberCount ? null : r;
     },
-    v = (e) => e.target_type === g.Iq.STREAM && null != e.target_user,
+    v = (e) => e.target_type === h.Iq.STREAM && null != e.target_user,
     E = (e) => {
         var t;
         return (null == (t = e.channel) ? void 0 : t.type) === f.d4z.GROUP_DM;
@@ -95,7 +95,7 @@ function P(e) {
     if (E(t)) {
         var c, u;
         a = (null == (c = t.channel) ? void 0 : c.name) != null && (null == (u = t.inviter) ? void 0 : u.username) != null ? _.NW.format(_.t.Lu4h19, { username: t.inviter.username }) : _.NW.string(_.t.OsdY8P);
-    } else v(t) && null != t.target_user ? (a = _.NW.formatToPlainString(_.t.x2L32d, { username: t.target_user.username })) : S(t) ? (a = _.NW.string(_.t['FDsl+P'])) : C(t) && null != t.inviter && (a = _.NW.format(_.t.spU2mJ, { username: h.ZP.getFormattedName(t.inviter) }));
+    } else v(t) && null != t.target_user ? (a = _.NW.formatToPlainString(_.t.x2L32d, { username: t.target_user.username })) : S(t) ? (a = _.NW.string(_.t['FDsl+P'])) : C(t) && null != t.inviter && (a = _.NW.format(_.t.spU2mJ, { username: g.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)('div', {
         className: b.inviteJoinContainer,
         children: [
@@ -118,9 +118,9 @@ function A(e) {
     let t,
         n,
         i,
-        { user: o, guild: a, channel: u, application: p, showBigUserIcon: g } = e;
+        { user: o, guild: a, channel: u, application: p, showBigUserIcon: h } = e;
     if (null != a)
-        g &&
+        h &&
             null == p &&
             (t = (0, r.jsx)(s.Vj, {
                 guild: a,
@@ -156,7 +156,7 @@ function A(e) {
                 })));
     else if (null != u) {
         if (null == o) throw Error('no inviter in group DM invite');
-        let e = h.ZP.getFormattedName(o);
+        let e = g.ZP.getFormattedName(o);
         null != u.name && '' !== u.name
             ? ((n = u.name),
               null != u.icon &&
@@ -166,7 +166,7 @@ function A(e) {
                   })))
             : (n = e);
     } else if (null != o) {
-        let e = h.ZP.getFormattedName(o);
+        let e = g.ZP.getFormattedName(o);
         (n = _.NW.formatToPlainString(_.t['4aF92d'], { username: e })),
             (i = (0, r.jsx)(s.DK, {
                 className: b.directInviteSubTitle,

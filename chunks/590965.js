@@ -9,8 +9,8 @@ var i,
     u = n(601964),
     d = n(592125),
     p = n(430824),
-    h = n(701190),
-    g = n(496675),
+    g = n(701190),
+    h = n(496675),
     f = n(594174),
     m = n(998502),
     _ = n(981631),
@@ -53,7 +53,7 @@ function S() {
 }
 class O extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, h.Z, f.default);
+        this.waitFor(p.Z, g.Z, f.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? _.IlC.OVERLAY : _.IlC.APP;
@@ -90,7 +90,7 @@ let C = new O(a.Z, {
                         let { channel: t } = e;
                         if (null != t) {
                             let e = d.Z.getChannel(t.id);
-                            if (g.Z.can(_.Plq.VIEW_CHANNEL, e)) return t.id;
+                            if (h.Z.can(_.Plq.VIEW_CHANNEL, e)) return t.id;
                         }
                         return null;
                     })(t);
@@ -107,8 +107,8 @@ let C = new O(a.Z, {
             return !1;
         (v = e.context), (I = !1);
         let n = (function (e) {
-            let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: o, target_user: a, target_application: l, stage_instance: s, type: c, channel: d, guild: p, is_nickname_changeable: h } = e,
-                g = {
+            let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: o, target_user: a, target_application: l, stage_instance: s, type: c, channel: d, guild: p, is_nickname_changeable: g } = e,
+                h = {
                     code: r,
                     state: i,
                     approximate_member_count: t,
@@ -118,9 +118,9 @@ let C = new O(a.Z, {
                     target_application: l,
                     stage_instance: s,
                     type: c,
-                    is_nickname_changeable: h
+                    is_nickname_changeable: g
                 };
-            return null != d && (g.channel = N({}, d)), null != p && (g.guild = new u.ZP(p)), null != e.inviter && (g.inviter = N({}, e.inviter)), g;
+            return null != d && (h.channel = N({}, d)), null != p && (h.guild = new u.ZP(p)), null != e.inviter && (h.inviter = N({}, e.inviter)), h;
         })(t);
         j.push([n, e.resolve]);
     },
