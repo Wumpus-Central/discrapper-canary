@@ -351,7 +351,10 @@ let z = function (e) {
     let U = i.useCallback(() => {
             c();
         }, [c]),
-        { isUpdating: G, updateChatWallpaper: B } = (0, N.x)(U),
+        { isUpdating: G, updateChatWallpaper: B } = (0, N.x)({
+            channelId: l,
+            onUpdateComplete: U
+        }),
         Z = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : P.L.USER_DISMISS;
             (null == o ? void 0 : o.markDismissed) != null && o.markDismissed(e), c();
