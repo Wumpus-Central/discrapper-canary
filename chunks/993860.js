@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => p,
-    sE: () => _
+    ZP: () => h,
+    sE: () => p
 }),
     n(997841);
 var r = n(192379),
@@ -10,42 +10,51 @@ var r = n(192379),
     s = n(314897),
     l = n(271383),
     c = n(701190),
-    u = n(630388),
-    d = n(330705),
-    f = n(981631),
-    _ = (function (e) {
-        return (e[(e.IS_MEMBER = 0)] = 'IS_MEMBER'), (e[(e.HAS_APPLICATION = 1)] = 'HAS_APPLICATION'), (e[(e.APPLY_TO_JOIN = 2)] = 'APPLY_TO_JOIN'), (e[(e.LURK_DISCOVERABLE = 3)] = 'LURK_DISCOVERABLE'), (e[(e.JOIN_VIA_INVITE = 4)] = 'JOIN_VIA_INVITE'), e;
+    u = n(594174),
+    d = n(630388),
+    f = n(330705),
+    _ = n(981631),
+    p = (function (e) {
+        return (e[(e.IS_MEMBER = 0)] = 'IS_MEMBER'), (e[(e.ADOPT_TAG = 1)] = 'ADOPT_TAG'), (e[(e.HAS_APPLICATION = 2)] = 'HAS_APPLICATION'), (e[(e.APPLY_TO_JOIN = 3)] = 'APPLY_TO_JOIN'), (e[(e.LURK_DISCOVERABLE = 4)] = 'LURK_DISCOVERABLE'), (e[(e.JOIN_VIA_INVITE = 5)] = 'JOIN_VIA_INVITE'), e;
     })({});
-function p(e) {
+function h(e) {
     let { id: t, features: n } = e,
-        _ = (0, o.e7)([s.default], () => s.default.getId()),
-        p = (0, o.e7)(
+        p = (0, o.e7)([s.default], () => s.default.getId()),
+        h = (0, o.e7)([u.default], () => u.default.getUser(p), [p]),
+        m = (0, o.e7)(
             [l.ZP],
             () => {
                 var e;
-                return (null == (e = null != t ? l.ZP.getMember(t, _) : null) ? void 0 : e.joinedAt) != null;
+                return (null == (e = null != t ? l.ZP.getMember(t, p) : null) ? void 0 : e.joinedAt) != null;
             },
-            [t, _]
+            [t, p]
         ),
-        { validInviteKey: h, isBypassInvite: m } = (0, o.cj)([c.Z], () => {
+        { validInviteKey: g, isBypassInvite: E } = (0, o.cj)([c.Z], () => {
             var e;
             let n = c.Z.getInviteKeyForGuildId(t),
                 r = null != n ? c.Z.getInvite(n) : null;
-            return null == r || r.state === f.r2o.BANNED || r.state === f.r2o.EXPIRED
+            return null == r || r.state === _.r2o.BANNED || r.state === _.r2o.EXPIRED
                 ? {
                       validInviteKey: null,
                       isBypassInvite: !1
                   }
                 : {
                       validInviteKey: n,
-                      isBypassInvite: (0, u.yE)(null != (e = r.flags) ? e : 0, i.$.IS_APPLICATION_BYPASS)
+                      isBypassInvite: (0, d.yE)(null != (e = r.flags) ? e : 0, i.$.IS_APPLICATION_BYPASS)
                   };
         }),
-        g = (0, a.Z)(),
-        E = r.useMemo(() => (p ? 0 : g.includes(t) ? 1 : (null == n ? void 0 : n.includes(f.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null == n ? void 0 : n.includes(f.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && (null != h || e.visibility === d.k.PUBLIC_WITH_RECRUITMENT) && !m ? 2 : null != h ? 4 : (null == n ? void 0 : n.includes(f.oNc.DISCOVERABLE)) ? 3 : null), [n, t, m, p, g, e.visibility, h]);
+        b = (0, a.Z)(),
+        y = r.useMemo(() => {
+            if (m) {
+                let n = null == h ? void 0 : h.primaryGuild,
+                    r = (null == n ? void 0 : n.identityGuildId) === t && (null == n ? void 0 : n.identityEnabled) === !0;
+                return +(null != e.tag && !r);
+            }
+            return b.includes(t) ? 2 : (null == n ? void 0 : n.includes(_.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null == n ? void 0 : n.includes(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && (null != g || e.visibility === f.k.PUBLIC_WITH_RECRUITMENT) && !E ? 3 : null != g ? 5 : (null == n ? void 0 : n.includes(_.oNc.DISCOVERABLE)) ? 4 : null;
+        }, [n, t, E, m, b, e.visibility, e.tag, g, null == h ? void 0 : h.primaryGuild]);
     return {
         guildId: t,
-        ctaType: E,
-        validInviteKey: h
+        ctaType: y,
+        validInviteKey: g
     };
 }

@@ -1,17 +1,19 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(481060),
     a = n(447543),
     s = n(66511),
-    l = n(703656),
-    c = n(769654),
-    u = n(900849),
-    d = n(330705),
-    f = n(993860),
-    _ = n(981631),
-    p = n(388032);
-function h(e, t, n) {
+    l = n(300284),
+    c = n(703656),
+    u = n(769654),
+    d = n(900849),
+    f = n(330705),
+    _ = n(993860),
+    p = n(981631),
+    h = n(526761),
+    m = n(388032);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +26,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +37,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,110 +54,122 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e) {
-    let { profile: t, onClick: n, submitting: h } = e,
-        { guildId: g, validInviteKey: b, ctaType: y } = (0, f.ZP)(t),
-        [v, O] = i.useState(!1),
-        I = i.useCallback(
+function v(e) {
+    let { profile: t, onClick: n, submitting: g, onClose: b } = e,
+        { guildId: v, validInviteKey: O, ctaType: I } = (0, _.ZP)(t),
+        [S, T] = i.useState(!1),
+        N = (0, l.Z)({ scrollPosition: h.Y_.GUILD_TAG }),
+        A = i.useCallback(
             (e) => {
-                e.stopPropagation(), (0, c.X)(g), null == n || n();
+                e.stopPropagation(), (0, u.X)(v), null == n || n();
             },
-            [g, n]
+            [v, n]
         ),
-        S = i.useCallback(
+        C = i.useCallback(() => {
+            null == b || b(), N(), null == n || n();
+        }, [N, n, b]),
+        R = i.useCallback(
             (e) => {
-                e.stopPropagation(), (0, l.uL)(_.Z5c.GUILD_MEMBER_VERIFICATION(g)), null == n || n();
+                e.stopPropagation(), (0, c.uL)(p.Z5c.GUILD_MEMBER_VERIFICATION(v)), null == n || n();
             },
-            [g, n]
+            [v, n]
         ),
-        T = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    null != b &&
+                    null != O &&
                         (a.ZP.acceptInvite({
-                            inviteKey: b,
+                            inviteKey: O,
                             context: { location: 'guild_profile' }
                         }),
                         null == n || n());
             },
-            [n, b]
+            [n, O]
         ),
-        N = i.useCallback(
+        w = i.useCallback(
             (e) => {
-                e.stopPropagation(), t.visibility !== d.k.PUBLIC_WITH_RECRUITMENT && null != b ? T(e) : s.Z.openMemberVerificationModal(g, void 0, b), null == n || n();
+                e.stopPropagation(), t.visibility !== f.k.PUBLIC_WITH_RECRUITMENT && null != O ? P(e) : s.Z.openMemberVerificationModal(v, void 0, O), null == n || n();
             },
-            [g, T, n, t.visibility, b]
+            [v, P, n, t.visibility, O]
         ),
-        A = i.useCallback(
+        D = i.useCallback(
             async (e) => {
-                e.stopPropagation(), O(!0);
+                e.stopPropagation(), T(!0);
                 try {
-                    await (0, u.Ub)(g, { object: _.qAy.GUILD_PROFILE }), null == n || n();
+                    await (0, d.Ub)(v, { object: p.qAy.GUILD_PROFILE }), null == n || n();
                 } catch (e) {
                 } finally {
-                    O(!1);
+                    T(!1);
                 }
             },
-            [g, n]
+            [v, n]
         ),
-        C = i.useMemo(
+        L = i.useMemo(
             () => ({
                 size: o.zxk.Sizes.SMALL,
                 fullWidth: !0,
-                submitting: v || h
+                submitting: S || g
             }),
-            [v, h]
+            [S, g]
         );
-    switch (y) {
-        case f.sE.IS_MEMBER:
+    switch (I) {
+        case _.sE.IS_MEMBER:
             return (0, r.jsx)(
                 o.zxk,
-                E(m({}, C), {
-                    onClick: I,
-                    children: p.NW.string(p.t.KLOhbG)
-                })
-            );
-        case f.sE.HAS_APPLICATION:
-            return (0, r.jsx)(
-                o.zxk,
-                E(m({}, C), {
-                    onClick: S,
-                    children: p.NW.string(p.t['4yfIDg'])
-                })
-            );
-        case f.sE.APPLY_TO_JOIN:
-            return (0, r.jsx)(
-                o.zxk,
-                E(m({}, C), {
-                    onClick: N,
-                    children: p.NW.string(p.t['7XdMW1'])
-                })
-            );
-        case f.sE.LURK_DISCOVERABLE:
-            return (0, r.jsx)(
-                o.zxk,
-                E(m({}, C), {
+                y(E({}, L), {
                     onClick: A,
-                    children: p.NW.string(p.t.eb9gDA)
+                    children: m.NW.string(m.t.KLOhbG)
                 })
             );
-        case f.sE.JOIN_VIA_INVITE:
+        case _.sE.ADOPT_TAG:
             return (0, r.jsx)(
                 o.zxk,
-                E(m({}, C), {
-                    onClick: T,
-                    children: p.NW.string(p.t.eb9gDA)
+                y(E({}, L), {
+                    onClick: C,
+                    children: m.NW.string(m.t.cQDYRk)
+                })
+            );
+        case _.sE.HAS_APPLICATION:
+            return (0, r.jsx)(
+                o.zxk,
+                y(E({}, L), {
+                    onClick: R,
+                    children: m.NW.string(m.t['4yfIDg'])
+                })
+            );
+        case _.sE.APPLY_TO_JOIN:
+            return (0, r.jsx)(
+                o.zxk,
+                y(E({}, L), {
+                    onClick: w,
+                    children: m.NW.string(m.t['7XdMW1'])
+                })
+            );
+        case _.sE.LURK_DISCOVERABLE:
+            return (0, r.jsx)(
+                o.zxk,
+                y(E({}, L), {
+                    onClick: D,
+                    children: m.NW.string(m.t.eb9gDA)
+                })
+            );
+        case _.sE.JOIN_VIA_INVITE:
+            return (0, r.jsx)(
+                o.zxk,
+                y(E({}, L), {
+                    onClick: P,
+                    children: m.NW.string(m.t.eb9gDA)
                 })
             );
         default:

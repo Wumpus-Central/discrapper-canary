@@ -125,6 +125,7 @@ function E(e) {
                               ? (0, r.jsx)(
                                     d.Z,
                                     h(_({}, e), {
+                                        onClose: e.closePopout,
                                         guildId: t,
                                         name: p
                                     })

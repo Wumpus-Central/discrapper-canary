@@ -16,31 +16,31 @@ var r = n(200651),
     g = n(595732);
 let E = 50001;
 function b(e) {
-    let { guildId: t, name: n, setPopoutRef: o } = e,
-        { analyticsLocations: b } = (0, u.ZP)(c.Z.GUILD_PROFILE),
-        { guildProfile: y, fetchGuildProfile: v, fetchStatus: O } = (0, _.u)(t),
-        I = (0, s.e7)([f.Z], () => f.Z.getErrorCode(t)),
-        S = i.useRef(null),
-        T = i.useCallback(() => {
-            v(!0);
-        }, [v]);
+    let { guildId: t, name: n, setPopoutRef: o, onClose: b } = e,
+        { analyticsLocations: y } = (0, u.ZP)(c.Z.GUILD_PROFILE),
+        { guildProfile: v, fetchGuildProfile: O, fetchStatus: I } = (0, _.u)(t),
+        S = (0, s.e7)([f.Z], () => f.Z.getErrorCode(t)),
+        T = i.useRef(null),
+        N = i.useCallback(() => {
+            O(!0);
+        }, [O]);
     i.useEffect(() => {
-        v();
-    }, [v]),
+        O();
+    }, [O]),
         i.useEffect(() => {
-            (0, d.vb)(t, b);
-        }, [t, b]),
+            (0, d.vb)(t, y);
+        }, [t, y]),
         i.useEffect(() => {
-            null == o || o(null == S ? void 0 : S.current);
-        }, [S, o]);
-    let N = i.useMemo(
+            null == o || o(null == T ? void 0 : T.current);
+        }, [T, o]);
+    let A = i.useMemo(
         () =>
-            O === f.a.NOT_FETCHED || O === f.a.FETCHING
+            I === f.a.NOT_FETCHED || I === f.a.FETCHING
                 ? (0, r.jsx)('div', {
                       className: a()(g.container, g.spinnerContainer),
                       children: (0, r.jsx)(l.$jN, {})
                   })
-                : null == y && I === E
+                : null == v && S === E
                   ? (0, r.jsx)('div', {
                         className: g.container,
                         children: (0, r.jsx)(m.Z, {
@@ -48,23 +48,26 @@ function b(e) {
                             name: n
                         })
                     })
-                  : null == y
+                  : null == v
                     ? (0, r.jsx)('div', {
                           className: g.container,
                           children: (0, r.jsx)(p.Z, {
                               name: n,
-                              onRetry: T
+                              onRetry: N
                           })
                       })
                     : (0, r.jsx)('div', {
                           className: g.container,
-                          children: (0, r.jsx)(h.ZP, { profile: y })
+                          children: (0, r.jsx)(h.ZP, {
+                              profile: v,
+                              onClose: b
+                          })
                       }),
-        [O, y, I, t, n, T]
+        [I, v, S, t, n, N, b]
     );
     return (0, r.jsx)(l.VqE, {
-        ref: S,
-        'aria-label': null == y ? void 0 : y.name,
-        children: N
+        ref: T,
+        'aria-label': null == v ? void 0 : v.name,
+        children: A
     });
 }
