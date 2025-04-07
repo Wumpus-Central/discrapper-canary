@@ -1,13 +1,15 @@
-n.d(t, { Z: () => b });
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    o = n(481060),
-    a = n(594174),
-    s = n(184301),
-    l = n(347475),
-    c = n(231338);
-function u(e, t, n) {
+n.d(t, { Z: () => O }), n(388685);
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(493773),
+    l = n(594174),
+    c = n(184301),
+    u = n(347475),
+    d = n(228168),
+    f = n(231338);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +22,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +33,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,29 +50,29 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function h(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,57 +81,114 @@ function h(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = (0, o.pxk)(o.EFr.SIZE_80),
-    g = {
-        onMouseDown: c.dG,
-        onClick: c.dG,
-        onKeyDown: c.dG,
+let b = (0, a.pxk)(a.EFr.SIZE_80),
+    y = {
+        onMouseDown: f.dG,
+        onClick: f.dG,
+        onKeyDown: f.dG,
         'aria-controls': void 0,
         'aria-expanded': !1
     },
-    E = {
+    v = {
         isShown: !1,
         position: void 0
     };
-function b(e) {
-    var { userId: t, user: n, guildId: c, channelId: u, avatarUrl: f, preload: h, shouldPreload: b = !0, renderPopout: y, onClosePopout: v, children: O } = e,
-        I = p(e, ['userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'shouldPreload', 'renderPopout', 'onClosePopout', 'children']);
-    let S = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        T = (0, i.e7)([a.default], () => (null != n ? n : a.default.getUser(t)));
-    if (null == T || null == S) return O(g, E);
-    let N = () =>
-            null != h
-                ? h()
-                : (0, s.Z)(T.id, null != f ? f : T.getAvatarURL(c, m), {
-                      guildId: c,
-                      channelId: u
+function O(e) {
+    var { children: t, userId: n, user: f, guildId: _, channelId: h, avatarUrl: E, preload: O, renderPopout: I, onRequestClose: S, onClosePopout: T, shouldShow: N, shouldPreload: A = !0, shouldShowOnHover: C = !1 } = e,
+        R = g(e, ['children', 'userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'renderPopout', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload', 'shouldShowOnHover']);
+    let P = (0, o.e7)([l.default], () => l.default.getCurrentUser()),
+        w = (0, o.e7)([l.default], () => (null != f ? f : l.default.getUser(n))),
+        [D, L] = i.useState(!1),
+        [x, M] = i.useState(!1),
+        k = i.useRef(!1),
+        j = i.useRef(void 0),
+        U = i.useRef(void 0),
+        G = i.useRef(void 0);
+    if (
+        ((0, s.zq)(() => {
+            clearTimeout(j.current), clearTimeout(U.current), clearTimeout(G.current);
+        }),
+        null == w || null == P)
+    )
+        return t(y, v);
+    let B = () =>
+            null != O
+                ? O()
+                : (0, c.Z)(w.id, null != E ? E : w.getAvatarURL(_, b), {
+                      guildId: _,
+                      channelId: h
                   }),
-        A = (e) =>
-            null != y
-                ? y(e)
-                : (0, r.jsx)(
-                      l.Z,
-                      _(d({}, I, e), {
-                          userId: T.id,
-                          user: T,
-                          guildId: c,
-                          channelId: u,
-                          closePopout: () => {
-                              e.closePopout(), null == v || v();
-                          }
-                      })
-                  );
-    return (0, r.jsx)(
-        o.yRy,
-        _(
-            d(
-                {
-                    preload: b ? N : void 0,
-                    renderPopout: A
-                },
-                I
-            ),
-            { children: O }
-        )
-    );
+        V = (e) =>
+            x
+                ? (0, r.jsx)(a.xxz, {})
+                : null != I
+                  ? I(e)
+                  : (0, r.jsx)(
+                        u.Z,
+                        m(p({}, R, e), {
+                            userId: w.id,
+                            user: w,
+                            guildId: _,
+                            channelId: h,
+                            closePopout: () => {
+                                e.closePopout(), null == T || T();
+                            }
+                        })
+                    );
+    return C
+        ? (0, r.jsx)('div', {
+              onMouseEnter: () => {
+                  (k.current = !0),
+                      A &&
+                          (j.current = setTimeout(async () => {
+                              if (k.current)
+                                  try {
+                                      M(!0), await B();
+                                  } finally {
+                                      M(!1);
+                                  }
+                          }, d.a6)),
+                      (U.current = setTimeout(() => {
+                          !(0, a.$sL)() && k.current && L(!0);
+                      }, d.JX));
+              },
+              onMouseLeave: () => {
+                  (k.current = !1),
+                      (G.current = setTimeout(() => {
+                          k.current || L(!1);
+                      }, d.Ig));
+              },
+              children: (0, r.jsx)(
+                  a.yRy,
+                  m(
+                      p(
+                          {
+                              shouldShow: !0 === N || D,
+                              preload: !A || x || D ? void 0 : B,
+                              renderPopout: V,
+                              onRequestClose: () => {
+                                  L(!1), null == S || S();
+                              }
+                          },
+                          R
+                      ),
+                      { children: t }
+                  )
+              )
+          })
+        : (0, r.jsx)(
+              a.yRy,
+              m(
+                  p(
+                      {
+                          shouldShow: N,
+                          preload: A ? B : void 0,
+                          renderPopout: V,
+                          onRequestClose: S
+                      },
+                      R
+                  ),
+                  { children: t }
+              )
+          );
 }
