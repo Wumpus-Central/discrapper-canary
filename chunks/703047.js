@@ -1,31 +1,36 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r,
-    i,
-    a,
-    l = n(442837),
+    i = n(442837),
     o = n(570140),
-    s = n(731725);
-let c = {};
-class u extends (a = l.ZP.Store) {
+    a = n(731725);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = {};
+function c(e) {
+    let { applicationId: t, link: n } = e;
+    null == l[t] ? (l[t] = { [n.link_id]: new a.Z(n) }) : (l[t][n.link_id] = new a.Z(n));
+}
+function u() {
+    l = {};
+}
+class d extends (r = i.ZP.Store) {
     getOne(e, t) {
-        if (null != c[e]) return c[e][t];
+        if (null != l[e]) return l[e][t];
     }
 }
-(i = 'CustomActivityLinksStore'),
-    (r = 'displayName') in u
-        ? Object.defineProperty(u, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (u[r] = i);
-let d = new u(o.Z, {
-    CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function (e) {
-        let { applicationId: t, link: n } = e;
-        null == c[t] ? (c[t] = { [n.link_id]: new s.Z(n) }) : (c[t][n.link_id] = new s.Z(n));
-    },
-    LOGOUT: function () {
-        c = {};
-    }
+s(d, 'displayName', 'CustomActivityLinksStore');
+let f = new d(o.Z, {
+    CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: c,
+    LOGOUT: u
 });
