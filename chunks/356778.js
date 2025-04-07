@@ -188,7 +188,8 @@ function O(e, t, n) {
                     links: x(e, 'links', g),
                     media: x(e, 'media', g)
                 },
-                track_exact_total_hits: !0
+                track_exact_total_hits: !0,
+                include_nsfw: !0
             }),
             [e, g]
         ),
