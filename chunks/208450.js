@@ -70,13 +70,13 @@ class D extends i.PureComponent {
         null != e && p.qt(e);
     }
     handlePastedFiles() {
-        return !0;
+        return 'handled';
     }
     handleDroppedFiles() {
-        return !0;
+        return 'handled';
     }
     handleDrop() {
-        return !0;
+        return 'handled';
     }
     renderInput(e) {
         let { editorState: t } = this.props;
@@ -100,7 +100,7 @@ class D extends i.PureComponent {
             ariaExpanded: e,
             ariaControls: e ? R : void 0,
             ariaLabel: A.NW.string(A.t['5h0QOD']),
-            ariaAutocomplete: 'list'
+            ariaAutoComplete: 'list'
         });
     }
     render() {
@@ -241,12 +241,12 @@ class D extends i.PureComponent {
                 let { shiftKey: t } = e;
                 e.preventDefault();
                 let { current: n } = this._searchPopoutRef;
-                return (null != n && n.selectOption()) || ((0, I.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), !0;
+                return (null != n && n.selectOption()) || ((0, I.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), 'handled';
             }),
             Z(this, 'handleBeforeInput', (e) => {
                 let { editorState: t } = this.props,
                     { focused: n } = this.state;
-                return j.Sq(t).length >= 512 || ((t = j.x0(e, t)), (t = j.Hl(t, 512)), (t = this.tokenize(t)), this.setEditorState(t), n || this.setState({ focused: !0 }), !0);
+                return j.Sq(t).length >= 512 || ((t = j.x0(e, t)), (t = j.Hl(t, 512)), (t = this.tokenize(t)), this.setEditorState(t), n || this.setState({ focused: !0 })), 'handled';
             }),
             Z(this, 'handleKeyCommand', (e) => {
                 let { editorState: t } = this.props,
@@ -257,22 +257,23 @@ class D extends i.PureComponent {
                     case 'backspace-to-start-of-line':
                     case 'delete':
                     case 'delete-word':
-                        return (t = j.yd(e, t)), (t = this.tokenize(t)), this.setEditorState(t), n || this.setState({ focused: !0 }), !0;
+                        return (t = j.yd(e, t)), (t = this.tokenize(t)), this.setEditorState(t), n || this.setState({ focused: !0 }), 'handled';
                     case 'transpose-characters':
                     case 'move-selection-to-start-of-block':
                     case 'move-selection-to-end-of-block':
-                        return (t = j.Zn(e, t)), (t = this.tokenize(t)), this.setEditorState(t), !0;
+                        return (t = j.Zn(e, t)), (t = this.tokenize(t)), this.setEditorState(t), 'handled';
                     case 'split-block':
                     case 'underline':
                     case 'bold':
                     case 'italic':
-                        return !0;
+                        return 'handled';
                 }
+                return 'not-handled';
             }),
             Z(this, 'handlePastedText', (e) => {
                 let { editorState: t } = this.props,
                     { focused: n } = this.state;
-                return (e = null != e ? e.replace(/\n/g, '') : ''), (t = j.x0(e, t)), (t = j.Hl(t, 512)), (t = this.tokenize(t)), n || this.setState({ focused: !0 }), this.setEditorState(t), !0;
+                return (e = null != e ? e.replace(/\n/g, '') : ''), (t = j.x0(e, t)), (t = j.Hl(t, 512)), (t = this.tokenize(t)), n || this.setState({ focused: !0 }), this.setEditorState(t), 'handled';
             }),
             Z(this, 'setEditorState', (e) => {
                 let { searchId: t } = this.props;
