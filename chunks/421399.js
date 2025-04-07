@@ -125,66 +125,69 @@ function C(e) {
         eo = null != f ? f : n.author,
         ea =
             null != D && null != Z
-                ? (0, l.jsx)(v.Z, {
-                      targetElementRef: M,
-                      user: eo,
-                      renderPopout: D,
-                      shouldShow: Z,
-                      shouldShowOnHover: K && Q,
-                      shouldPreload: K,
-                      position: c.tq ? 'window_center' : 'right',
-                      avatarUrl:
-                          null != r.guildMemberAvatar && null != B
-                              ? (0, x.JM)({
-                                    guildId: B,
-                                    userId: eo.id,
-                                    avatar: r.guildMemberAvatar,
-                                    size: 80
-                                })
-                              : void 0,
-                      onRequestClose: _,
-                      clickTrap: Z,
-                      children: (e) => {
-                          var { onClick: t } = e,
-                              r = (function (e, t) {
-                                  if (null == e) return {};
-                                  var r,
-                                      n,
-                                      l = (function (e, t) {
-                                          if (null == e) return {};
-                                          var r,
-                                              n,
-                                              l = {},
-                                              i = Object.keys(e);
-                                          for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
-                                          return l;
-                                      })(e, t);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
-                                  }
-                                  return l;
-                              })(e, ['onClick']);
-                          return (0, l.jsxs)(l.Fragment, {
-                              children: [
-                                  (0, l.jsx)(
-                                      u.P3F,
-                                      R(
-                                          w(
-                                              {
-                                                  tag: 'span',
-                                                  innerRef: M
-                                              },
-                                              r,
-                                              el
-                                          ),
-                                          { className: a()(el.className, N.clickable, k) }
-                                      )
-                                  ),
-                                  ei
-                              ]
-                          });
-                      }
+                ? (0, l.jsx)('div', {
+                      className: N.hoverable,
+                      children: (0, l.jsx)(v.Z, {
+                          targetElementRef: M,
+                          user: eo,
+                          renderPopout: D,
+                          shouldShow: Z,
+                          shouldShowOnHover: K && Q,
+                          shouldPreload: K,
+                          position: c.tq ? 'window_center' : 'right',
+                          avatarUrl:
+                              null != r.guildMemberAvatar && null != B
+                                  ? (0, x.JM)({
+                                        guildId: B,
+                                        userId: eo.id,
+                                        avatar: r.guildMemberAvatar,
+                                        size: 80
+                                    })
+                                  : void 0,
+                          onRequestClose: _,
+                          clickTrap: Z,
+                          children: (e) => {
+                              var { onClick: t } = e,
+                                  r = (function (e, t) {
+                                      if (null == e) return {};
+                                      var r,
+                                          n,
+                                          l = (function (e, t) {
+                                              if (null == e) return {};
+                                              var r,
+                                                  n,
+                                                  l = {},
+                                                  i = Object.keys(e);
+                                              for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                                              return l;
+                                          })(e, t);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var i = Object.getOwnPropertySymbols(e);
+                                          for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                                      }
+                                      return l;
+                                  })(e, ['onClick']);
+                              return (0, l.jsxs)(l.Fragment, {
+                                  children: [
+                                      (0, l.jsx)(
+                                          u.P3F,
+                                          R(
+                                              w(
+                                                  {
+                                                      tag: 'span',
+                                                      innerRef: M
+                                                  },
+                                                  r,
+                                                  el
+                                              ),
+                                              { className: a()(el.className, N.clickable, k) }
+                                          )
+                                      ),
+                                      ei
+                                  ]
+                              });
+                          }
+                      })
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [(0, l.jsx)(u.P3F, R(w({}, el), { className: a()(el.className, k) })), ei]
