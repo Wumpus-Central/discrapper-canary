@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(482853);
+n.d(t, { Z: () => _ }), n(388685), n(482853);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -17,8 +17,8 @@ let C = {
         width: f.Gy,
         height: f.lv
     },
-    _ = { height: f.lv },
-    x = r.memo(
+    x = { height: f.lv },
+    _ = r.memo(
         r.forwardRef(function (e, t) {
             let { context: n, entrypoint: l, initHistory: u } = e,
                 { analyticsLocations: d } = (0, c.ZP)(a.Z.APP_LAUNCHER);
@@ -47,9 +47,9 @@ let C = {
                         className: b.contentWrapper,
                         children: (0, i.jsx)(c.Gt, {
                             value: d,
-                            children: (0, i.jsx)(v, {
+                            children: (0, i.jsx)(y, {
                                 initHistory: u,
-                                children: (0, i.jsx)(y, {
+                                children: (0, i.jsx)(v, {
                                     context: n,
                                     entrypoint: l
                                 })
@@ -60,7 +60,7 @@ let C = {
             );
         })
     );
-function v(e) {
+function y(e) {
     let { initHistory: t, children: n } = e,
         [l, a] = r.useState(null != t ? t : [{ type: u.gc.HOME }]),
         [o, c] = r.useState({}),
@@ -138,7 +138,7 @@ function v(e) {
         children: n
     });
 }
-function y(e) {
+function v(e) {
     let { context: t, entrypoint: n } = e,
         [a, o] = r.useState(''),
         { setScroller: c, isCloseToBottom: s } = (function (e) {
@@ -168,26 +168,26 @@ function y(e) {
                 }
             );
         })(a),
-        { currentView: h, getMostRecentHistoryItemByType: C, setSlideReady: x } = (0, u.hH)();
+        { currentView: h, getMostRecentHistoryItemByType: C, setSlideReady: _ } = (0, u.hH)();
     r.useEffect(() => {
-        x(!1);
-    }, [null == h ? void 0 : h.type, x]);
-    let v = r.useCallback(() => {
-        x(!0);
-    }, [x]);
+        _(!1);
+    }, [null == h ? void 0 : h.type, _]);
+    let y = r.useCallback(() => {
+        _(!0);
+    }, [_]);
     if (null == h) return null;
-    let y = C(u.gc.LIST),
+    let v = C(u.gc.LIST),
         N = C(u.gc.APPLICATION);
     return (0, i.jsxs)(l.MyZ, {
         activeSlide: h.type,
         width: f.Gy,
-        onSlideReady: v,
+        onSlideReady: y,
         children: [
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.HOME,
                 children: (0, i.jsx)('div', {
                     className: b.slideContent,
-                    style: _,
+                    style: x,
                     children: (0, i.jsx)(p.Z, {
                         isScrollCloseToBottom: s,
                         setScroller: c,
@@ -202,17 +202,17 @@ function y(e) {
                 id: u.gc.LIST,
                 children: (0, i.jsx)('div', {
                     className: b.slideContent,
-                    style: _,
+                    style: x,
                     children:
-                        null != y &&
+                        null != v &&
                         (0, i.jsx)(m.Z, {
                             context: t,
                             entrypoint: n,
-                            title: y.title,
-                            look: y.look,
-                            items: y.items,
-                            sectionName: y.sectionName,
-                            sectionOverallPosition: y.sectionOverallPosition
+                            title: v.title,
+                            look: v.look,
+                            items: v.items,
+                            sectionName: v.sectionName,
+                            sectionOverallPosition: v.sectionOverallPosition
                         })
                 })
             }),
@@ -220,13 +220,14 @@ function y(e) {
                 id: u.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
                     className: b.slideContent,
-                    style: _,
+                    style: x,
                     children:
                         null != N &&
                         (0, i.jsx)(d.Z, {
                             context: t,
                             application: N.application,
-                            sectionName: N.sectionName
+                            sectionName: N.sectionName,
+                            showFriendsTab: !!N.showFriendsTab
                         })
                 })
             })
