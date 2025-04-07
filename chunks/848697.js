@@ -36,7 +36,6 @@ e.exports = {
     repliedTextContent: 'repliedTextContent_c19a55',
     clickable: 'clickable_c19a55',
     repliedMessageClickableSpineHovered: 'repliedMessageClickableSpineHovered_c19a55',
-    hoverable: 'hoverable_c19a55',
     threadMessageAccessoryContent: 'threadMessageAccessoryContent_c19a55',
     repliedTextPlaceholder: 'repliedTextPlaceholder_c19a55',
     threadMessageAccessoryPlaceholder: 'threadMessageAccessoryPlaceholder_c19a55',
