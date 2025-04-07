@@ -87,7 +87,6 @@ async function h(e, t, n, a, l) {
                 description: n.description,
                 permissions: n.permissions,
                 color: n.color,
-                colors: n.colors,
                 hoist: n.hoist,
                 mentionable: n.mentionable,
                 icon: n.icon,
