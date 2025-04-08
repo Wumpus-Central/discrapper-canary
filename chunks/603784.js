@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(51144),
     _ = n(426563),
     v = n(909746),
-    O = n(501801),
-    y = n(981631),
-    C = n(388032),
+    y = n(501801),
+    C = n(981631),
+    O = n(388032),
     I = n(677234);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -92,7 +92,7 @@ let P = i.forwardRef((e, t) => {
         { log: i, className: s, expanded: o, guildId: h, guild: N, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: D, onUserContextMenu: Z, theme: A } = e,
         k = (function () {
             let { changes: e } = i;
-            return (i.actionType !== y.vB8.DELETE || i.action === y.rsA.MEMBER_BAN_ADD || i.action === y.rsA.MEMBER_KICK || i.action === y.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, O.xO)(i, e));
+            return (i.actionType !== C.vB8.DELETE || i.action === C.rsA.MEMBER_BAN_ADD || i.action === C.rsA.MEMBER_KICK || i.action === C.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, y.xO)(i, e));
         })(),
         W = I.headerDefault;
     o ? (W = I.headerExpanded) : k && (W = I.headerClickable);
@@ -110,7 +110,7 @@ let P = i.forwardRef((e, t) => {
                   variant: 'text-sm/normal',
                   children: [L, '\u2014', M]
               });
-    let G = k ? R : y.dG4;
+    let G = k ? R : C.dG4;
     return (0, r.jsx)(l.mh, {
         id: i.id,
         children: (e) =>
@@ -131,7 +131,7 @@ let P = i.forwardRef((e, t) => {
                             ),
                             {
                                 children: [
-                                    (0, r.jsx)(O.mp, {
+                                    (0, r.jsx)(y.mp, {
                                         action: i.action,
                                         actionType: i.actionType,
                                         targetType: i.targetType
@@ -156,7 +156,7 @@ let P = i.forwardRef((e, t) => {
                                                                 t.stopPropagation(), e.onClick(t);
                                                             },
                                                             className: I.avatar,
-                                                            src: i.action === y.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === y.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === y.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === y.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, _.j)() : null == (t = i.user) ? void 0 : t.getAvatarURL(h, 40),
+                                                            src: i.action === C.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === C.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === C.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === C.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, _.j)() : null == (t = i.user) ? void 0 : t.getAvatarURL(h, 40),
                                                             'aria-hidden': !0,
                                                             size: d.EFr.SIZE_40
                                                         })
@@ -188,7 +188,7 @@ let P = i.forwardRef((e, t) => {
                                                     return null != s
                                                         ? (0, r.jsx)('div', {
                                                               className: I.overflowEllipsis,
-                                                              children: C.NW.format(s, {
+                                                              children: O.NW.format(s, {
                                                                   user: e,
                                                                   target: t.toString(),
                                                                   userHook: (e, t) => {
@@ -204,12 +204,12 @@ let P = i.forwardRef((e, t) => {
                                                                       if (null != i.options.integration_type) {
                                                                           var n;
                                                                           let e = u.Z.get(i.options.integration_type);
-                                                                          return null != (n = null == e ? void 0 : e.name) ? n : C.NW.string(C.t['n+olu7']);
+                                                                          return null != (n = null == e ? void 0 : e.name) ? n : O.NW.string(O.t['n+olu7']);
                                                                       }
-                                                                      return C.NW.string(C.t['30mdIy']);
+                                                                      return O.NW.string(O.t['30mdIy']);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      i.targetType === y.KFR.USER && i.target instanceof f.Z
+                                                                      i.targetType === C.KFR.USER && i.target instanceof f.Z
                                                                           ? (0, r.jsx)(
                                                                                 T,
                                                                                 {
@@ -260,7 +260,7 @@ let P = i.forwardRef((e, t) => {
                     ),
                     o ? (0, r.jsx)('div', { className: I.divider }) : null,
                     o && null != N
-                        ? (0, r.jsx)(O.tP, {
+                        ? (0, r.jsx)(y.tP, {
                               log: i,
                               guild: N,
                               onContentClick: w

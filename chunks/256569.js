@@ -63,9 +63,9 @@ function f(e) {
         _ = (0, m.V)(n),
         {
             handlePasteEvent: v,
-            handleInputChange: O,
-            handleKeyDown: y,
-            handleContainerKeyUp: C,
+            handleInputChange: y,
+            handleKeyDown: C,
+            handleContainerKeyUp: O,
             handleRemoveTag: I,
             handleTagChangeEvent: E,
             handleSelectTag: S,
@@ -124,7 +124,7 @@ function f(e) {
         className: a()(g.mainContainer, f),
         ref: j,
         tabIndex: 0,
-        onKeyUp: C,
+        onKeyUp: O,
         children: [
             (0, r.jsxs)(h, {
                 ref: N,
@@ -150,8 +150,8 @@ function f(e) {
                     (0, r.jsx)('input', {
                         className: a()(g.mainTextInput, { [g.isEditingOtherNodes]: W }),
                         ref: x,
-                        onChange: O,
-                        onKeyDownCapture: y,
+                        onChange: y,
+                        onKeyDownCapture: C,
                         onPaste: v,
                         onBlur: w,
                         placeholder: 0 === D.length ? p : void 0,

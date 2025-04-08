@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(420966),
     _ = n(203377),
     v = n(981631),
-    O = n(856651),
-    y = n(388032),
-    C = n(419353),
+    y = n(856651),
+    C = n(388032),
+    O = n(419353),
     I = n(877248);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -55,26 +55,26 @@ function T(e, t) {
 function P(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, r.jsxs)('div', {
-        className: C.headerNoConfigContainer,
+        className: O.headerNoConfigContainer,
         children: [
             (0, r.jsx)(d.X6q, {
-                className: C.headerHeading,
+                className: O.headerHeading,
                 variant: 'eyebrow',
-                children: y.NW.string(y.t.nMir29)
+                children: C.NW.string(C.t.nMir29)
             }),
             (0, r.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: y.NW.format(y.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: C.NW.format(C.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, r.jsx)(d.zxk, {
                 disabled: n,
-                className: C.addVerificationButton,
+                className: O.addVerificationButton,
                 size: d.zxk.Sizes.MEDIUM,
                 look: d.zxk.Looks.FILLED,
                 color: d.zxk.Colors.BRAND,
                 onClick: t,
-                children: y.NW.string(y.t['OSvW5+'])
+                children: C.NW.string(C.t['OSvW5+'])
             })
         ]
     });
@@ -116,7 +116,7 @@ function w(e) {
             onComplete: (e) => M(e),
             excludedPlatformTypes: L,
             integrations: o,
-            onCompleteApplication: (e) => M(O.Kt, e)
+            onCompleteApplication: (e) => M(y.Kt, e)
         });
     }
     let U = null;
@@ -130,20 +130,20 @@ function w(e) {
         let e = null;
         W.length < 10 &&
             (e = (0, r.jsx)(d.zxk, {
-                className: a()(C.addVerificationButton, C.addVerificationButtonAppend),
+                className: a()(O.addVerificationButton, O.addVerificationButtonAppend),
                 size: d.zxk.Sizes.LARGE,
                 look: d.zxk.Looks.BLANK,
                 color: d.zxk.Colors.LINK,
                 onClick: G,
                 disabled: s,
                 children: (0, r.jsxs)('div', {
-                    className: C.addVerificationButtonAppendTextContainer,
+                    className: O.addVerificationButtonAppendTextContainer,
                     children: [
                         (0, r.jsx)(d.oFk, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                        y.NW.string(y.t['OSvW5+'])
+                        C.NW.string(C.t['OSvW5+'])
                     ]
                 })
             })),
@@ -153,45 +153,45 @@ function w(e) {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)('div', {
-                                className: C.headerTitleContainer,
+                                className: O.headerTitleContainer,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: C.headerTitleTextContainer,
+                                        className: O.headerTitleTextContainer,
                                         children: (0, r.jsx)(d.X6q, {
                                             variant: 'eyebrow',
-                                            children: y.NW.string(y.t.nMir29)
+                                            children: C.NW.string(C.t.nMir29)
                                         })
                                     }),
                                     (0, r.jsx)(d.zxk, {
-                                        className: C.headerTitleButton,
+                                        className: O.headerTitleButton,
                                         size: d.zxk.Sizes.TINY,
                                         look: d.zxk.Looks.LINK,
                                         color: d.zxk.Colors.LINK,
                                         onClick: B,
                                         disabled: s,
-                                        children: y.NW.string(y.t.ntW1cX)
+                                        children: C.NW.string(C.t.ntW1cX)
                                     })
                                 ]
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: y.NW.format(y.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: C.NW.format(C.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
                     (function (e, t, n, i, s) {
                         let a = T(i, m.O1.OR);
                         return (0, r.jsx)(d.xJW, {
-                            className: C.operatorContainer,
-                            title: y.NW.string(y.t.Xs7PHR),
+                            className: O.operatorContainer,
+                            title: C.NW.string(C.t.Xs7PHR),
                             children: (0, r.jsx)(d.FXm, {
                                 options: [
                                     {
-                                        name: y.NW.string(y.t['W3iY5+']),
+                                        name: C.NW.string(C.t['W3iY5+']),
                                         value: m.O1.OR
                                     },
                                     {
-                                        name: y.NW.string(y.t.gHXS9P),
+                                        name: C.NW.string(C.t.gHXS9P),
                                         value: m.O1.AND
                                     }
                                 ],
@@ -267,7 +267,7 @@ function w(e) {
                             });
                         }
                         return (0, r.jsx)('div', {
-                            className: C.configurationsContainer,
+                            className: O.configurationsContainer,
                             children: Array.from(l.values()).map((e) =>
                                 (0, r.jsx)(
                                     j.Z,
@@ -287,7 +287,7 @@ function w(e) {
             }));
     }
     return (0, r.jsx)(d.yWw, {
-        className: C.scroller,
+        className: O.scroller,
         style: { scrollPaddingTop: g },
         onScroll: D,
         children: (0, r.jsxs)('div', {
@@ -305,19 +305,19 @@ function w(e) {
                 }),
                 (null != Z ? Z : 0) > 0
                     ? (0, r.jsxs)('div', {
-                          className: C.warningContainer,
+                          className: O.warningContainer,
                           children: [
                               (0, r.jsx)(d.P4T, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: C.warningIcon
+                                  className: O.warningIcon
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-normal',
-                                  children: y.NW.string(y.t['2aFeeX'])
+                                  children: C.NW.string(C.t['2aFeeX'])
                               })
                           ]
                       })

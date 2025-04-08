@@ -289,7 +289,7 @@ function c(e, t) {
             },
             [i, d.length, u, o]
         ),
-        O = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 var t, n, r, s;
                 let a = e.metaKey || e.ctrlKey;
@@ -297,7 +297,7 @@ function c(e, t) {
             },
             [m, g, i]
         ),
-        y = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 var t;
                 let n = o.trim().length > 0,
@@ -328,7 +328,7 @@ function c(e, t) {
             },
             [s, i, u, c.length, o]
         ),
-        C = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 e.relatedTarget !== e.currentTarget && _(e, !1, !1);
             },
@@ -340,23 +340,23 @@ function c(e, t) {
         handleKeyDown: r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                'Meta' !== e.key && (l.ye.has(e.key) ? _(e) : 'Backspace' === e.key ? v(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? y(e) : l.Bd.has(e.key) && t && O(e));
+                'Meta' !== e.key && (l.ye.has(e.key) ? _(e) : 'Backspace' === e.key ? v(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? C(e) : l.Bd.has(e.key) && t && y(e));
             },
-            [_, v, j, y, O]
+            [_, v, j, C, y]
         ),
         handleContainerKeyUp: r.useCallback(
             (e) => {
                 if (document.activeElement !== s.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? v(e) : 'a' === e.key && t ? y(e) : 'Escape' === e.key ? j(e) : l.Bd.has(e.key) && t ? O(e) : 'Meta' !== e.key && j(e);
+                'Backspace' === e.key ? v(e) : 'a' === e.key && t ? C(e) : 'Escape' === e.key ? j(e) : l.Bd.has(e.key) && t ? y(e) : 'Meta' !== e.key && j(e);
             },
-            [O, v, y, j, s]
+            [y, v, C, j, s]
         ),
         handleRemoveTag: h,
         handleTagChangeEvent: f,
         handleSelectTag: b,
         handleUnselectTag: x,
         handleResetTagSelections: j,
-        handleInputBlurEvent: C
+        handleInputBlurEvent: O
     };
 }

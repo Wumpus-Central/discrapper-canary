@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -50,14 +50,14 @@ function _(e) {
 let v = (e) => {
     var t, n;
     let { guildId: l, application: o } = e,
-        { loading: m, team: g, currentPeriod: v, allPeriods: O, metrics: y } = (0, d.Z)(l, o),
-        C = (0, u.u)(l),
+        { loading: m, team: g, currentPeriod: v, allPeriods: y, metrics: C } = (0, d.Z)(l, o),
+        O = (0, u.u)(l),
         I = (0, c.mY)();
     return m
         ? (0, r.jsx)(i.$jN, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  C &&
+                  O &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [(0, r.jsx)(s.Z, { children: x.NW.format(x.t['2raBCQ'], { insightsURL: b.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(l) }) }), (0, r.jsx)(i.LZC, { size: 32 })]
                       }),
@@ -71,9 +71,9 @@ let v = (e) => {
                               children: [
                                   (0, r.jsx)(p.Z, {
                                       label: x.NW.string(x.t.iY1jW1),
-                                      value: (0, a.T4)(null != (t = y.revenue) ? t : 0, b.pKx.USD),
+                                      value: (0, a.T4)(null != (t = C.revenue) ? t : 0, b.pKx.USD),
                                       additionalContent: (0, r.jsx)(p.H, {
-                                          value: y.revenuePctChange,
+                                          value: C.revenuePctChange,
                                           isPercent: !0
                                       })
                                   }),
@@ -81,7 +81,7 @@ let v = (e) => {
                                       label: x.NW.string(x.t.cXyw29),
                                       value: (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              null != (n = y.subscribers) ? n : '-',
+                                              null != (n = C.subscribers) ? n : '-',
                                               ' ',
                                               (0, r.jsx)(i.tBG, {
                                                   size: 'md',
@@ -91,7 +91,7 @@ let v = (e) => {
                                               })
                                           ]
                                       }),
-                                      additionalContent: (0, r.jsx)(p.H, { value: y.subscriberChange })
+                                      additionalContent: (0, r.jsx)(p.H, { value: C.subscriberChange })
                                   })
                               ]
                           }),
@@ -105,7 +105,7 @@ let v = (e) => {
                       title: x.NW.string(x.t['+5Rmho']),
                       className: j.formSection,
                       children: (0, r.jsx)(N, {
-                          payoutsByPeriod: O,
+                          payoutsByPeriod: y,
                           team: g
                       })
                   }),
@@ -123,13 +123,13 @@ let v = (e) => {
                       className: j.formSection,
                       children: (0, r.jsx)(f.Z, {
                           guildId: l,
-                          allPeriods: O
+                          allPeriods: y
                       })
                   })
               ]
           });
 };
-function O(e) {
+function y(e) {
     return (0, r.jsx)(l.l, {
         guildId: e.guildId,
         children: (0, r.jsx)(

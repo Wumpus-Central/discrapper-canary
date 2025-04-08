@@ -10,13 +10,13 @@ var l,
     d = n(16609),
     E = n(430198),
     f = n(924301),
-    p = n(601070),
-    C = n(569471),
+    C = n(601070),
+    p = n(569471),
     h = n(581883),
     _ = n(314897),
     g = n(680089),
-    S = n(592125),
-    O = n(58468),
+    O = n(592125),
+    S = n(58468),
     T = n(77498),
     I = n(496675),
     N = n(306680),
@@ -62,7 +62,7 @@ function G(e) {
     let { id: t } = e;
     return Z.nonPositionalChannelIdUpdate(t);
 }
-function H() {
+function k() {
     let e = m.Z.getChannelId(),
         t = m.Z.getVoiceChannelId(),
         n = L !== e || R !== t;
@@ -78,9 +78,9 @@ function H() {
         !0)
     );
 }
-function k(e) {
+function H(e) {
     let { id: t } = e,
-        n = S.Z.getChannel(t);
+        n = O.Z.getChannel(t);
     return null == n ? Z.clearGuildId(t) : Z.clearGuildId(n.guild_id);
 }
 function V(e) {
@@ -90,13 +90,13 @@ function V(e) {
 function F() {
     return Z.updateSubtitles();
 }
-function W(e) {
+function B(e) {
     let { guildScheduledEvent: t } = e;
     return Z.updateSubtitles(t.guild_id);
 }
-class B extends (l = s.ZP.Store) {
+class W extends (l = s.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, _.default, g.Z, S.Z, O.Z, u.ZP, T.Z, E.Z, f.ZP, C.Z, I.Z, N.ZP, m.Z, A.ZP, h.Z);
+        this.waitFor(C.Z, _.default, g.Z, O.Z, S.Z, u.ZP, T.Z, E.Z, f.ZP, p.Z, I.Z, N.ZP, m.Z, A.ZP, h.Z);
     }
     getGuild(e, t) {
         var n, l;
@@ -120,15 +120,15 @@ class B extends (l = s.ZP.Store) {
     }
 }
 (i = 'ChannelListStore'),
-    (r = 'displayName') in B
-        ? Object.defineProperty(B, r, {
+    (r = 'displayName') in W
+        ? Object.defineProperty(W, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (B[r] = i);
-let K = new B(c.Z, {
+        : (W[r] = i);
+let K = new W(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
     APPLICATION_FETCH: F,
@@ -143,7 +143,7 @@ let K = new B(c.Z, {
             a()(t)
                 .map((e) => {
                     var t;
-                    return null == (t = S.Z.getChannel(e.channelId)) ? void 0 : t.guild_id;
+                    return null == (t = O.Z.getChannel(e.channelId)) ? void 0 : t.guild_id;
                 })
                 .filter(b.lm)
                 .uniq()
@@ -156,21 +156,21 @@ let K = new B(c.Z, {
     BULK_CLEAR_RECENTS: x,
     CACHE_LOADED_LAZY: D,
     CATEGORY_COLLAPSE_ALL: x,
-    CATEGORY_COLLAPSE: k,
+    CATEGORY_COLLAPSE: H,
     CATEGORY_EXPAND_ALL: x,
-    CATEGORY_EXPAND: k,
+    CATEGORY_EXPAND: H,
     CHANNEL_ACK: w,
     CHANNEL_COLLAPSE: function (e) {
         var t;
         let { channelId: n } = e;
-        return Z.clearGuildId(null == (t = S.Z.getChannel(n)) ? void 0 : t.guild_id);
+        return Z.clearGuildId(null == (t = O.Z.getChannel(n)) ? void 0 : t.guild_id);
     },
     CHANNEL_CREATE: U,
     CHANNEL_DELETE: U,
     CHANNEL_LOCAL_ACK: w,
     CHANNEL_MUTE_EXPIRED: x,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: w,
-    CHANNEL_SELECT: H,
+    CHANNEL_SELECT: k,
     CHANNEL_STATUSES: function (e) {
         return Z.clearGuildId(e.guildId);
     },
@@ -227,9 +227,9 @@ let K = new B(c.Z, {
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: x,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: x,
     GUILD_ROLE_UPDATE: x,
-    GUILD_SCHEDULED_EVENT_CREATE: W,
-    GUILD_SCHEDULED_EVENT_DELETE: W,
-    GUILD_SCHEDULED_EVENT_UPDATE: W,
+    GUILD_SCHEDULED_EVENT_CREATE: B,
+    GUILD_SCHEDULED_EVENT_DELETE: B,
+    GUILD_SCHEDULED_EVENT_UPDATE: B,
     GUILD_TOGGLE_COLLAPSE_MUTED: x,
     GUILD_UPDATE: j,
     IMPERSONATE_STOP: x,
@@ -298,13 +298,13 @@ let K = new B(c.Z, {
     },
     VOICE_CATEGORY_COLLAPSE: V,
     VOICE_CATEGORY_EXPAND: V,
-    VOICE_CHANNEL_SELECT: H,
+    VOICE_CHANNEL_SELECT: k,
     VOICE_CHANNEL_STATUS_UPDATE: function (e) {
         return Z.nonPositionalChannelIdUpdate(e.id);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
-            n = H(),
+            n = k(),
             l = new Set();
         for (let { channelId: e, oldChannelId: r } of t) null == r || l.has(r) || (Z.nonPositionalChannelIdUpdate(r) && (n = !0), l.add(r)), null == e || l.has(e) || (Z.nonPositionalChannelIdUpdate(e) && (n = !0), l.add(e));
         return n;

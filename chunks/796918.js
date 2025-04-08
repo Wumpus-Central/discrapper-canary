@@ -18,10 +18,10 @@ let x = (e) => {
     let { guildId: t, handleUpdate: n, progress: s, error: x } = e,
         { interests: j } = s,
         [N, _] = i.useState(''),
-        [v, O] = i.useState(0),
-        y = (0, c.e7)([d.default], () => d.default.getId()),
-        C = i.useMemo(() => (0, l.chunk)((0, u.XV)(p.i6, y), 9), [y]),
-        I = [...C[v], ...C[(v + 1) % C.length]],
+        [v, y] = i.useState(0),
+        C = (0, c.e7)([d.default], () => d.default.getId()),
+        O = i.useMemo(() => (0, l.chunk)((0, u.XV)(p.i6, C), 9), [C]),
+        I = [...O[v], ...O[(v + 1) % O.length]],
         E = i.useMemo(() => Array.from(j), [j]),
         S = i.useMemo(() => E.filter((e) => !p.WZ.has(e) && !p.gh.has(e)), [E]),
         T = (e) => {
@@ -49,8 +49,8 @@ let x = (e) => {
             [P]
         ),
         R = i.useCallback(() => {
-            O((e) => (e + 1) % C.length);
-        }, [O, C]);
+            y((e) => (e + 1) % O.length);
+        }, [y, O]);
     return (0, r.jsxs)('div', {
         className: b.slideContent,
         children: [

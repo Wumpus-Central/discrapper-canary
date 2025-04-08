@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-let O = (e) => {
+let y = (e) => {
     let { dateUtc: t } = e;
     return (0, s.jsx)(u.Text, {
         variant: 'text-md/medium',
@@ -51,7 +51,7 @@ let O = (e) => {
         children: d()(t).utc().format('MMMM YYYY')
     });
 };
-function y(e) {
+function C(e) {
     let { item: t } = e,
         { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: a } = (0, f.j0)(t),
         l = null != a ? d()(a).add(15, 'days').toISOString() : void 0,
@@ -128,7 +128,7 @@ function y(e) {
     }
     return null;
 }
-let C = (0, b.i$)({
+let O = (0, b.i$)({
         key: 'AMOUNT ',
         cellClassName: _.amountColumn,
         renderHeader() {
@@ -159,7 +159,7 @@ let C = (0, b.i$)({
                 key: 'PERIOD',
                 cellClassName: _.periodColumn,
                 renderHeader: () => (0, s.jsx)(b.qN, { children: N.NW.string(N.t.fThnXV) }),
-                renderContent: (e) => (0, s.jsx)(O, { dateUtc: e.periodStartingAt }),
+                renderContent: (e) => (0, s.jsx)(y, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
                     o()(null != t, 'CellProps should always be provided');
                     let { ListingIdLabel: n } = t;
@@ -167,11 +167,11 @@ let C = (0, b.i$)({
                 }
             }),
             (0, x.Fd)(
-                ((r = v({}, C)),
+                ((r = v({}, O)),
                 (i = i =
                     {
-                        renderContent: C.render,
-                        renderExpandedContent: (e, t) => C.render(e, t)
+                        renderContent: O.render,
+                        renderExpandedContent: (e, t) => O.render(e, t)
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -213,7 +213,7 @@ let C = (0, b.i$)({
                 renderContent: (e) =>
                     (0, s.jsx)(b.bL, {
                         className: _.statusCell,
-                        children: (0, s.jsx)(y, { item: e })
+                        children: (0, s.jsx)(C, { item: e })
                     })
             })
         ],

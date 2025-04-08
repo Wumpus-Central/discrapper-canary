@@ -61,21 +61,21 @@ function N(e) {
     var t;
     let { onDeleteEditState: s } = e,
         { editStateId: N, guildId: _, groupListingId: v } = (0, m.N)(),
-        O = (0, l.e7)([u.Z], () => u.Z.getSubscriptionListing(N)),
-        y = null == O ? void 0 : O.id,
-        C = (0, g.Z)(_),
+        y = (0, l.e7)([u.Z], () => u.Z.getSubscriptionListing(N)),
+        C = null == y ? void 0 : y.id,
+        O = (0, g.Z)(_),
         I = i.useMemo(() => {
             var e;
-            return null != C && null != O && (null != (e = C[O.role_id]) ? e : 0);
-        }, [C, O]),
+            return null != O && null != y && (null != (e = O[y.role_id]) ? e : 0);
+        }, [O, y]),
         E = 0 === I,
-        S = null == y,
-        T = null != (t = null == O ? void 0 : O.archived) && t,
+        S = null == C,
+        T = null != (t = null == y ? void 0 : y.archived) && t,
         { deleteSubscriptionListing: P, submitting: w } = (0, d.r4)(),
         { archiveSubscriptionListing: R, submitting: D } = (0, d._1)(),
         Z = () => {
             let e = async () => {
-                (S || (a()(null != v, 'group listing doesnt exist'), a()(null != y, 'subscription listing doesnt exist'), await P(_, v, y))) && (null == s || s());
+                (S || (a()(null != v, 'group listing doesnt exist'), a()(null != C, 'subscription listing doesnt exist'), await P(_, v, C))) && (null == s || s());
             };
             (0, o.ZDy)(async () => {
                 let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
@@ -106,7 +106,7 @@ function N(e) {
             });
         },
         { allowSelfRemoveMonetization: A } = (0, c.gX)(_);
-    return null == O
+    return null == y
         ? null
         : (0, r.jsx)(p.Z, {
               title: h.NW.string(h.t['7Si8Ul']),
@@ -154,7 +154,7 @@ function N(e) {
                                 color: o.zxk.Colors.RED,
                                 onClick: () => {
                                     a()(null != v, 'group listing doesnt exist'),
-                                        a()(null != y, 'subscription listing doesnt exist'),
+                                        a()(null != C, 'subscription listing doesnt exist'),
                                         (0, o.ZDy)(async () => {
                                             let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                                             return (t) =>
@@ -167,7 +167,7 @@ function N(e) {
                                                                 confirmText: h.NW.string(h.t.RL0wjo),
                                                                 cancelText: h.NW.string(h.t['ETE/oK']),
                                                                 onConfirm: () => {
-                                                                    R(_, v, y);
+                                                                    R(_, v, C);
                                                                 },
                                                                 confirmButtonColor: o.zxk.Colors.RED
                                                             },

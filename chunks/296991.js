@@ -19,8 +19,8 @@ var r = n(200651),
     N = n(592286),
     _ = n(981631),
     v = n(388032),
-    O = n(350612);
-function y(e) {
+    y = n(350612);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,8 +65,8 @@ function C(e, t) {
 }
 let I = 'RULE';
 function E(e) {
-    let { rule: t, rulesChannel: n, index: s, onChange: l, onKeyDown: o, onClear: u, onRuleReorder: f, isDropHovered: b, focused: x, onFocus: j, previewEnabled: _, isDragEnabled: y } = e,
-        C = i.useRef(null),
+    let { rule: t, rulesChannel: n, index: s, onChange: l, onKeyDown: o, onClear: u, onRuleReorder: f, isDropHovered: b, focused: x, onFocus: j, previewEnabled: _, isDragEnabled: C } = e,
+        O = i.useRef(null),
         E = i.useRef(null),
         [{ textValue: S, richValue: T }, P] = i.useState((0, p.eK)(t.value)),
         [, w, R] = (0, c.c)({
@@ -84,7 +84,7 @@ function E(e) {
             hover: (e, t) => {
                 var n;
                 let { index: r } = e,
-                    i = null == (n = C.current) ? void 0 : n.getBoundingClientRect(),
+                    i = null == (n = O.current) ? void 0 : n.getBoundingClientRect(),
                     a = t.getClientOffset();
                 if (null == i || null == a) return;
                 let l = (i.bottom - i.top) / 2,
@@ -99,7 +99,7 @@ function E(e) {
         (i.useLayoutEffect(
             () => (
                 w(E),
-                R(D(C)),
+                R(D(O)),
                 () => {
                     w(null), D(null);
                 }
@@ -114,16 +114,16 @@ function E(e) {
         return null;
     let Z = '' !== t.value ? t.value : t.id;
     return (0, r.jsx)('div', {
-        ref: C,
-        className: a()(O.draggableInputContainer, { [O.dragging]: b }),
+        ref: O,
+        className: a()(y.draggableInputContainer, { [y.dragging]: b }),
         'data-dnd-name': Z,
         children: (0, r.jsxs)('div', {
-            className: O.inputWrapper,
+            className: y.inputWrapper,
             children: [
                 (0, r.jsx)(m.P3F, {
                     onMouseDown: () => j(s),
                     children: (0, r.jsx)(h.Z, {
-                        innerClassName: O.rulesTextAreaInput,
+                        innerClassName: y.rulesTextAreaInput,
                         type: g.Ie.RULES_INPUT,
                         textValue: S,
                         richValue: T,
@@ -152,26 +152,26 @@ function E(e) {
                     })
                 }),
                 (0, r.jsx)(m.zxk, {
-                    className: O.clearButton,
+                    className: y.clearButton,
                     onClick: u,
                     look: m.zxk.Looks.BLANK,
                     size: m.zxk.Sizes.NONE,
                     children: (0, r.jsx)(m.k$p, {
                         size: 'md',
                         color: 'currentColor',
-                        className: O.clearIcon
+                        className: y.clearIcon
                     })
                 }),
                 (0, r.jsx)('div', {
                     ref: E,
-                    className: O.dragContainer,
+                    className: y.dragContainer,
                     'data-dnd-name': Z,
                     children:
-                        y &&
+                        C &&
                         (0, r.jsx)(m.Vni, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: O.dragIcon
+                            className: y.dragIcon
                         })
                 })
             ]
@@ -191,7 +191,7 @@ function S(e) {
                 if (t.length !== N.X2)
                     if (null != e && '' === t[t.length - 1].value) {
                         let r = [...t];
-                        (r[t.length - 1] = C(y({}, r[t.length - 1]), { value: e })), n(r), I(r.length - 1);
+                        (r[t.length - 1] = O(C({}, r[t.length - 1]), { value: e })), n(r), I(r.length - 1);
                     } else
                         n([
                             ...t,
@@ -209,7 +209,7 @@ function S(e) {
         }, [S]),
         P = (e, r) => {
             let i = [...t];
-            (i[r] = C(y({}, i[r]), { value: e })), n(i);
+            (i[r] = O(C({}, i[r]), { value: e })), n(i);
         },
         w = (e) => {
             let r = [...t.slice(0, e), ...t.slice(e + 1)];
@@ -269,7 +269,7 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: O.rulesContainer,
+                className: y.rulesContainer,
                 children: t.map((e, n) =>
                     (0, r.jsx)(
                         E,
@@ -298,12 +298,12 @@ function S(e) {
             (0, r.jsx)(m.X6q, {
                 variant: 'text-xs/bold',
                 color: 'text-muted',
-                className: O.exampleRulesTitle,
+                className: y.exampleRulesTitle,
                 children: v.NW.string(v.t.XHWj8f)
             }),
             (0, r.jsx)(j.j, {
                 pills: Z,
-                pillClassName: O.pill
+                pillClassName: y.pill
             })
         ]
     });

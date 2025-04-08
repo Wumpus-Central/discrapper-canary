@@ -60,7 +60,7 @@ function v(e, t) {
         e
     );
 }
-function O(e) {
+function y(e) {
     let { guild: t, channel: i } = e,
         s = (0, f.Mf)(i.id);
     return 'null' === i.id
@@ -124,10 +124,10 @@ function O(e) {
               ]
           });
 }
-let y = i.memo(function () {
+let C = i.memo(function () {
         return (0, r.jsx)('div', { className: N.separator });
     }),
-    C = i.memo(function (e) {
+    O = i.memo(function (e) {
         let { index: t } = e;
         return (0, r.jsx)(
             o.Text,
@@ -140,7 +140,7 @@ let y = i.memo(function () {
         );
     }),
     I = i.memo(function (e) {
-        let { channel: t, category: i, guild: s, isFirstChannel: p, isLastChannel: O, tooltipDirection: I = 'right' } = e,
+        let { channel: t, category: i, guild: s, isFirstChannel: p, isLastChannel: y, tooltipDirection: I = 'right' } = e,
             E = (0, f.Mf)(t.id, i.id),
             S = (0, f.t4)(t.id, i.id),
             T = (0, f.EH)(t.id, i.id),
@@ -206,7 +206,7 @@ let y = i.memo(function () {
                                     {
                                         className: a()(N.channelRow, {
                                             [N.firstChannel]: p,
-                                            [N.lastChannel]: O,
+                                            [N.lastChannel]: y,
                                             [N.disabled]: S
                                         })
                                     },
@@ -238,7 +238,7 @@ let y = i.memo(function () {
                                                     w
                                                         ? (0, r.jsxs)(r.Fragment, {
                                                               children: [
-                                                                  (0, r.jsx)(C, { index: 0 }),
+                                                                  (0, r.jsx)(O, { index: 0 }),
                                                                   (0, r.jsx)(o.Text, {
                                                                       variant: 'text-xs/medium',
                                                                       className: N.channelSubtitle,
@@ -287,7 +287,7 @@ let y = i.memo(function () {
                             )
                         )
                 }),
-                !O && (0, r.jsx)(y, {})
+                !y && (0, r.jsx)(C, {})
             ]
         });
     });
@@ -297,7 +297,7 @@ function E(e) {
             (e) => {
                 let i = t._categories[e];
                 return (0, r.jsx)(
-                    O,
+                    y,
                     {
                         channel: i.channel,
                         guild: n

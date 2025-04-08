@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => O });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -20,7 +20,7 @@ var i = n(442837),
     N = n(981631),
     _ = n(388032),
     v = n(276);
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,7 +63,7 @@ function y(e, t) {
         e
     );
 }
-function C(e) {
+function O(e) {
     let { guildId: t, completed: n } = e,
         s = (0, i.e7)([o.Z], () => o.Z.getEnabled(t)),
         { location: c } = (0, a.O)();
@@ -74,7 +74,7 @@ function C(e) {
                 ? (await (0, f.$y)(t, !1),
                   m.default.track(
                       N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                      y(O({}, (0, l.hH)(t)), {
+                      C(y({}, (0, l.hH)(t)), {
                           action_taken: b.W$[b.W$.TOGGLE_DISABLED],
                           location: c
                       })
@@ -84,14 +84,14 @@ function C(e) {
                   n
                       ? m.default.track(
                             N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, l.hH)(t)), {
+                            C(y({}, (0, l.hH)(t)), {
                                 action_taken: b.W$[b.W$.TOGGLE_ENABLED],
                                 location: c
                             })
                         )
                       : m.default.track(
                             N.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                            y(O({}, (0, l.hH)(t)), {
+                            C(y({}, (0, l.hH)(t)), {
                                 step: b.PG[b.PG.REVIEW],
                                 back: !1,
                                 skip: !1,
@@ -102,7 +102,7 @@ function C(e) {
         h = () => {
             m.default.track(
                 N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                y(O({}, (0, l.hH)(t)), {
+                C(y({}, (0, l.hH)(t)), {
                     action_taken: b.W$[b.W$.PREVIEW],
                     location: c
                 })
@@ -116,7 +116,7 @@ function C(e) {
                     onEdit: () => {
                         m.default.track(
                             N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, l.hH)(t)), {
+                            C(y({}, (0, l.hH)(t)), {
                                 action_taken: b.W$[b.W$.EDIT_DEFAULT_CHANNELS],
                                 location: c
                             })
@@ -131,7 +131,7 @@ function C(e) {
                     onEdit: () => {
                         m.default.track(
                             N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, l.hH)(t)), {
+                            C(y({}, (0, l.hH)(t)), {
                                 action_taken: b.W$[b.W$.EDIT_CUSTOMIZATION_QUESTIONS],
                                 location: c
                             })
@@ -146,7 +146,7 @@ function C(e) {
                     onEdit: () => {
                         m.default.track(
                             N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
-                            y(O({}, (0, l.hH)(t)), {
+                            C(y({}, (0, l.hH)(t)), {
                                 action_taken: b.W$[b.W$.EDIT_HOME_SETTINGS],
                                 location: c
                             })

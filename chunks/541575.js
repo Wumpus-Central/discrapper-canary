@@ -61,9 +61,9 @@ function j(e, t) {
 let N = function (e) {
     let { guild: t, disabled: N, role: _ } = e,
         v = (0, a.ZP)(),
-        O = (0, u.oC)(t.id, _),
-        { analyticsLocations: y } = (0, o.ZP)(),
-        C = () => {
+        y = (0, u.oC)(t.id, _),
+        { analyticsLocations: C } = (0, o.ZP)(),
+        O = () => {
             (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('22942').then(n.bind(n, 660727));
                 return (n) =>
@@ -83,10 +83,10 @@ let N = function (e) {
                 ((0, l.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: j(x({}, e), { section: p.jXE.CUSTOM_ROLE_ICONS_TOOLTIP }),
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: y
+                    location_stack: C
                 }),
                 (0, m.Z)({
-                    analyticsLocations: y,
+                    analyticsLocations: C,
                     analyticsSourceLocation: {
                         page: p.ZY5.GUILD_SETTINGS,
                         section: p.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
@@ -125,10 +125,10 @@ let N = function (e) {
                     (0, r.jsx)('div', {
                         className: b.previewContainer,
                         children:
-                            null != O
+                            null != y
                                 ? (0, r.jsx)(
                                       c.Z,
-                                      j(x({}, O), {
+                                      j(x({}, y), {
                                           className: b.roleIconPreview,
                                           enableTooltip: !1
                                       })
@@ -145,11 +145,11 @@ let N = function (e) {
                         className: b.button,
                         color: (0, i.ap)(v) ? s.zxk.Colors.PRIMARY : s.zxk.Colors.WHITE,
                         look: s.zxk.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(p.oNc.ROLE_ICONS) ? C() : E({ object: p.qAy.UPLOAD_IMAGE })),
+                        onClick: () => (t.hasFeature(p.oNc.ROLE_ICONS) ? O() : E({ object: p.qAy.UPLOAD_IMAGE })),
                         disabled: N,
                         children: f.NW.string(f.t.mD1oGB)
                     }),
-                    null != O
+                    null != y
                         ? (0, r.jsx)(s.zxk, {
                               className: b.button,
                               color: (0, i.ap)(v) ? s.zxk.Colors.PRIMARY : s.zxk.Colors.TRANSPARENT,

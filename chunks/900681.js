@@ -106,7 +106,7 @@ function v(e) {
         ]
     });
 }
-function O(e) {
+function y(e) {
     let { description: t, expanded: n } = e;
     return null == t
         ? null
@@ -130,7 +130,7 @@ function O(e) {
                 })
             });
 }
-function y(e) {
+function C(e) {
     let { traits: t, traitsToHighlight: n, onInteraction: s } = e,
         o = i.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
         c = i.useCallback(
@@ -164,7 +164,7 @@ function y(e) {
         itemGapPx: 4
     });
 }
-function C(e) {
+function O(e) {
     let { hasPendingJoinRequest: t, atMaxMemberCapacity: n, isGuildMember: i } = e;
     return t
         ? (0, r.jsxs)('div', {
@@ -265,7 +265,7 @@ function I(e) {
                 style: J,
                 children: [
                     $,
-                    (0, r.jsx)(C, {
+                    (0, r.jsx)(O, {
                         hasPendingJoinRequest: D,
                         atMaxMemberCapacity: Z,
                         isGuildMember: h
@@ -364,11 +364,11 @@ function I(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(O, {
+                    (0, r.jsx)(y, {
                         description: n.description,
                         expanded: u
                     }),
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(C, {
                         traits: ee,
                         traitsToHighlight: I,
                         onInteraction: et('traits')

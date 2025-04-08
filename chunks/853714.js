@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(246946),
     _ = n(594174),
     v = n(823379),
-    O = n(51144),
-    y = n(987707),
-    C = n(999382),
+    y = n(51144),
+    C = n(987707),
+    O = n(999382),
     I = n(909746),
     E = n(501801),
     S = n(603784),
@@ -415,7 +415,7 @@ class G extends i.PureComponent {
                                     children: [
                                         (0, r.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
-                                            children: O.ZP.getUserTag(t, { mode: 'username' })
+                                            children: y.ZP.getUserTag(t, { mode: 'username' })
                                         }),
                                         !t.isPomelo() &&
                                             (0, r.jsxs)(d.Text, {
@@ -591,23 +591,23 @@ class G extends i.PureComponent {
             });
     }
 }
-let U = c.ZP.connectStores([y.Z, C.Z, j.Z, h.Z, N.Z, _.default], () => {
-    let e = C.Z.getGuildId(),
+let U = c.ZP.connectStores([C.Z, O.Z, j.Z, h.Z, N.Z, _.default], () => {
+    let e = O.Z.getGuildId(),
         t = j.Z.getGuild(e),
-        n = y.Z.logs;
+        n = C.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: y.Z.userIds.map((e) => _.default.getUser(e)).filter(v.lm),
-        isInitialLoading: y.Z.isInitialLoading,
-        isLoading: y.Z.isLoading,
-        isLoadingNextPage: y.Z.isLoadingNextPage,
-        showLoadMore: y.Z.groupedFetchCount > 2,
-        hasError: y.Z.hasError,
-        hasOlderLogs: y.Z.hasOlderLogs,
+        moderators: C.Z.userIds.map((e) => _.default.getUser(e)).filter(v.lm),
+        isInitialLoading: C.Z.isInitialLoading,
+        isLoading: C.Z.isLoading,
+        isLoadingNextPage: C.Z.isLoadingNextPage,
+        showLoadMore: C.Z.groupedFetchCount > 2,
+        hasError: C.Z.hasError,
+        hasOlderLogs: C.Z.hasOlderLogs,
         logs: null != n && null != t ? I._$(n, t) : [],
-        actionFilter: y.Z.actionFilter,
-        userIdFilter: y.Z.userIdFilter,
+        actionFilter: C.Z.actionFilter,
+        userIdFilter: C.Z.userIdFilter,
         theme: h.Z.theme,
         hide: N.Z.enabled
     };

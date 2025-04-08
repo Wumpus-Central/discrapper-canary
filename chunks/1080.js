@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(594174),
     _ = n(626135),
     v = n(136015),
-    O = n(51144),
-    y = n(434404),
-    C = n(999382),
+    y = n(51144),
+    C = n(434404),
+    O = n(999382),
     I = n(84613),
     E = n(740903),
     S = n(981631),
@@ -81,7 +81,7 @@ function Z(e) {
         [x, j] = i.useState(null),
         { analyticsLocations: N } = (0, h.ZP)(),
         v = null != (t = null == N ? void 0 : N[0]) ? t : null;
-    async function y() {
+    async function C() {
         if (null != s) {
             j(null), b(!0);
             try {
@@ -111,7 +111,7 @@ function Z(e) {
                     (0, r.jsx)(f.Z, {
                         size: f.Z.Sizes.SIZE_24,
                         className: P.userUsername,
-                        children: O.ZP.getUserTag(a, {
+                        children: y.ZP.getUserTag(a, {
                             mode: 'username',
                             identifiable: c ? 'never' : 'always'
                         })
@@ -156,7 +156,7 @@ function Z(e) {
                         children: T.NW.string(T.t.i4jeWV)
                     }),
                     (0, r.jsx)(o.zxk, {
-                        onClick: y,
+                        onClick: C,
                         look: o.zxk.Looks.LINK,
                         color: o.zxk.Colors.RED,
                         submitting: g,
@@ -279,17 +279,17 @@ function W(e) {
         [s, a] = i.useState(null != n ? n : ''),
         [l, c] = i.useState(!1),
         u = i.useCallback(() => {
-            y.Z.setSection(S.pNK.SAFETY), (0, I.K)(E.u.DM_AND_SPAM_PROTECTION);
+            C.Z.setSection(S.pNK.SAFETY), (0, I.K)(E.u.DM_AND_SPAM_PROTECTION);
         }, []),
         m = i.useCallback((e) => {
-            a(e), 0 === e.trim().length && y.Z.setSearchQuery(e);
+            a(e), 0 === e.trim().length && C.Z.setSearchQuery(e);
         }, []),
         g = i.useCallback(() => {
-            a(''), y.Z.setSearchQuery('');
+            a(''), C.Z.setSearchQuery('');
         }, []),
         p = i.useCallback(async () => {
             if (0 === s.trim().length) {
-                y.Z.setSearchQuery(s), c(!1);
+                C.Z.setSearchQuery(s), c(!1);
                 return;
             }
             if (!l)
@@ -297,7 +297,7 @@ function W(e) {
                     c(!0);
                     let [e, n] = (0, x.C)(s),
                         r = e[0];
-                    y.Z.setSearchQuery(s), await d.Z.searchGuildBans(t, r, n), c(!1);
+                    C.Z.setSearchQuery(s), await d.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
                     c(!1);
                 }
@@ -354,15 +354,15 @@ function W(e) {
 }
 function L() {
     var e, t;
-    let { guild: c, searchQuery: u } = (0, l.e7)([C.Z], () => C.Z.getProps(), [], s.isEqual),
+    let { guild: c, searchQuery: u } = (0, l.e7)([O.Z], () => O.Z.getProps(), [], s.isEqual),
         p = null != u && u.trim().length > 0,
         h = (0, m.Z)(p),
         f = p !== h,
-        [b] = (0, l.e7)([C.Z], () => C.Z.getBans(), [], v.Q),
+        [b] = (0, l.e7)([O.Z], () => O.Z.getBans(), [], v.Q),
         j = null != (e = null == b ? void 0 : b.size) ? e : 0,
         _ = (0, g.ZP)(),
-        O = null != (t = null == c ? void 0 : c.id) ? t : S.lds,
-        y = i.useRef(null),
+        y = null != (t = null == c ? void 0 : c.id) ? t : S.lds,
+        C = i.useRef(null),
         I = i.useCallback(
             (e) =>
                 null == e || 0 === e.length
@@ -399,15 +399,15 @@ function L() {
     }, [f, M.currentPage]);
     let U = i.useCallback(
             (e) => {
-                d.Z.fetchGuildBansBatch(O, 1000, e);
+                d.Z.fetchGuildBansBatch(y, 1000, e);
             },
-            [O]
+            [y]
         ),
         B = i.useMemo(() => a().chunk(w, M.pageSize), [M.pageSize, w]),
         F = i.useCallback(
             (e) => {
                 var t, n, r;
-                null == (t = y.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && A && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || A) && G((t) => D(R({}, t), { currentPage: e }));
+                null == (t = C.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && A && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || A) && G((t) => D(R({}, t), { currentPage: e }));
             },
             [M.pageSize, w, A, B, U, p]
         ),
@@ -425,7 +425,7 @@ function L() {
               className: P.container,
               children: [
                   (0, r.jsx)(W, {
-                      guildId: O,
+                      guildId: y,
                       storedSearchQuery: u
                   }),
                   (0, r.jsxs)('div', {
@@ -436,7 +436,7 @@ function L() {
                                   guild: c,
                                   bans: b,
                                   sortedBans: H,
-                                  ref: y
+                                  ref: C
                               }),
                           !A &&
                               L &&

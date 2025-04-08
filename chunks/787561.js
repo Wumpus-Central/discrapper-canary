@@ -25,9 +25,9 @@ var r = n(200651),
     N = n(699516),
     _ = n(594174),
     v = n(434404),
-    O = n(999382),
-    y = n(54842),
-    C = n(929834),
+    y = n(999382),
+    C = n(54842),
+    O = n(929834),
     I = n(981631),
     E = n(388032),
     S = n(90386),
@@ -82,10 +82,10 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 guild: t,
                 submitting: n,
                 errors: i
-            } = (0, l.cj)([O.Z], () => ({
-                submitting: O.Z.isSubmitting(),
-                guild: O.Z.getGuild(),
-                errors: O.Z.getErrors()
+            } = (0, l.cj)([y.Z], () => ({
+                submitting: y.Z.isSubmitting(),
+                guild: y.Z.getGuild(),
+                errors: y.Z.getErrors()
             })),
             s = Object.keys(i),
             a = s.length > 0 ? s[0] : null;
@@ -231,13 +231,13 @@ let R = 'dismissedCommunityFeaturesUpsell',
               });
     },
     A = () => {
-        let e = (0, l.e7)([O.Z], () => O.Z.getGuild()),
+        let e = (0, l.e7)([y.Z], () => y.Z.getGuild()),
             { canManageGuild: t, isGuildAdmin: n } = (0, l.cj)([j.Z], () => ({
                 canManageGuild: j.Z.can(I.Plq.MANAGE_GUILD, e),
                 isGuildAdmin: j.Z.can(I.Plq.ADMINISTRATOR, e)
             })),
             s = (0, l.e7)([f.ZP], () => (null != e ? f.ZP.getChannels(e.id) : null)),
-            o = i.useMemo(C.jb, []),
+            o = i.useMemo(O.jb, []),
             u = !0 !== c.K.get(R);
         if (null == e) return null;
         let m = [];
@@ -269,7 +269,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             x = (e) => {
                 v.Z.updateGuild({ description: e });
             },
-            y = () => {
+            C = () => {
                 let t = (0, p.K2)(e.id, 'GuildSettingsCommunity');
                 e.features.has(I.oNc.DISCOVERABLE) && e.features.has(I.oNc.PARTNERED)
                     ? (0, d.h7j)((e) =>
@@ -525,7 +525,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                                         P(
                                             {
                                                 size: d.zxk.Sizes.SMALL,
-                                                onClick: y,
+                                                onClick: C,
                                                 color: d.zxk.Colors.RED,
                                                 disabled: !n
                                             },
@@ -541,6 +541,6 @@ let R = 'dismissedCommunityFeaturesUpsell',
         });
     },
     k = () => {
-        let e = (0, l.e7)([O.Z], () => O.Z.getGuild());
-        return null == e ? null : e.features.has(I.oNc.COMMUNITY) ? (0, r.jsx)(A, {}) : (0, r.jsx)(y.Z, { guild: e });
+        let e = (0, l.e7)([y.Z], () => y.Z.getGuild());
+        return null == e ? null : e.features.has(I.oNc.COMMUNITY) ? (0, r.jsx)(A, {}) : (0, r.jsx)(C.Z, { guild: e });
     };

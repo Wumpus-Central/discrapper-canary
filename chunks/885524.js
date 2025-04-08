@@ -12,7 +12,7 @@ function u(e) {
         p = s === l.m.SELF_STREAM || s === l.m.REMOTE_STREAM ? i.Yn.STREAM : i.Yn.DEFAULT;
     return (
         r.useEffect(() => {
-            if (d || null == t) return;
+            if (d) return;
             let e = _.current;
             return (
                 e.start(c, () => {

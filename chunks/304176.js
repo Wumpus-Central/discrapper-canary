@@ -81,8 +81,8 @@ let T = (e) => {
     });
     let N = (0, o.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
         I = (0, p.Z)(N),
-        S = I ? x.NW.formatToPlainString(x.t.t0928f, { name: T }) : x.NW.formatToPlainString(x.t.UDDkGx, { name: T }),
-        w = P(C({}, t), {
+        w = I ? x.NW.formatToPlainString(x.t.t0928f, { name: T }) : x.NW.formatToPlainString(x.t.UDDkGx, { name: T }),
+        S = P(C({}, t), {
             src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
         }),
@@ -108,7 +108,7 @@ let T = (e) => {
                                 className: j.roleIconContainer,
                                 children: (0, r.jsx)(
                                     l.Z,
-                                    P(C({}, w), {
+                                    P(C({}, S), {
                                         enableTooltip: !1,
                                         className: j.__invalid_roleIcon,
                                         enableHeight: !1
@@ -125,7 +125,7 @@ let T = (e) => {
                                     }),
                                     (0, r.jsx)(a.Text, {
                                         variant: 'text-sm/normal',
-                                        children: S
+                                        children: w
                                     })
                                 ]
                             })

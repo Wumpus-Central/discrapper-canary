@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(388032),
     _ = n(434840);
 let v = { optionErrors: [] };
-function O(e) {
+function y(e) {
     var t;
-    let { guild: n, prompt: s, disableAutofocus: d, promptIndex: x, dragIndex: O, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
+    let { guild: n, prompt: s, disableAutofocus: d, promptIndex: x, dragIndex: y, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
         { dropdownsAllowed: w } = (0, m.Ug)(n.id),
         R = (0, l.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
         D = w ? j.qm : j.M$,
@@ -32,7 +32,7 @@ function O(e) {
             setIsDraggable: W
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
-            index: O,
+            index: y,
             optionId: s.id,
             onDragStart: T,
             onDragComplete: S,
@@ -158,7 +158,7 @@ function O(e) {
                           maxLength: j.iU,
                           error: L.title
                       }),
-                      (0, r.jsx)(y, {
+                      (0, r.jsx)(C, {
                           prompt: s,
                           guild: n
                       }),
@@ -176,7 +176,7 @@ function O(e) {
                                     total: D
                                 })
                       }),
-                      (0, r.jsx)(C, {
+                      (0, r.jsx)(O, {
                           guild: n,
                           prompt: s,
                           promptIndex: x,
@@ -245,7 +245,7 @@ function O(e) {
               })
           });
 }
-function y(e) {
+function C(e) {
     let { prompt: t, guild: n } = e,
         [s, a] = i.useState(!1);
     if (
@@ -280,7 +280,7 @@ function y(e) {
         ]
     });
 }
-function C(e) {
+function O(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: s, errors: a } = e,
         { dropdownsAllowed: l } = (0, m.Ug)(t.id),
         o = l ? j.qm : j.M$,

@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(626135),
     _ = n(267642),
     v = n(63063),
-    O = n(999382),
-    y = n(981631),
-    C = n(388032),
+    y = n(999382),
+    C = n(981631),
+    O = n(388032),
     I = n(351325);
 function E(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
@@ -29,11 +29,11 @@ function E(e) {
     return n <= 0
         ? null
         : 0 === i && 0 === s
-          ? C.NW.format(C.t.kF0HER, {
+          ? O.NW.format(O.t.kF0HER, {
                 tierName: r,
                 numPremiumSubscriptions: n
             })
-          : C.NW.format(C.t.neDJho, {
+          : O.NW.format(O.t.neDJho, {
                 days: i,
                 hours: s,
                 tierName: r,
@@ -51,7 +51,7 @@ function S(e) {
         children: [
             (0, r.jsx)('div', {
                 className: I.guildBoostingGracePeriodTitle,
-                children: C.NW.format(C.t.LG7vvr, {})
+                children: O.NW.format(O.t.LG7vvr, {})
             }),
             (0, r.jsx)(E, {
                 endsAt: i,
@@ -82,7 +82,7 @@ function P() {
             (0, o.tZ)(), (0, d.Y2)();
         });
     }, []);
-    let e = (0, s.e7)([O.Z], () => O.Z.getGuild()),
+    let e = (0, s.e7)([y.Z], () => y.Z.getGuild()),
         t = (0, s.e7)([j.Z], () => (null != e ? j.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, m.V)();
     return (0, r.jsxs)(r.Fragment, {
@@ -91,7 +91,7 @@ function P() {
                 children: [
                     (0, r.jsx)(a.vwX, {
                         tag: a.RB0.H1,
-                        children: C.NW.string(C.t.nLovSU)
+                        children: O.NW.string(O.t.nLovSU)
                     }),
                     null != t && null != e
                         ? (0, r.jsx)(S, {
@@ -102,7 +102,7 @@ function P() {
                     (0, r.jsx)(a.R94, {
                         type: a.R94.Types.DESCRIPTION,
                         className: I.titleBlurb,
-                        children: C.NW.format(C.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(y.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: O.NW.format(O.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(C.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
@@ -114,7 +114,7 @@ function P() {
                     }
                 }),
             (0, r.jsx)(b.Z, {
-                tiers: (0, _.cP)(null != e && e.hasFeature(y.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= y.B9o),
+                tiers: (0, _.cP)(null != e && e.hasFeature(C.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= C.B9o),
                 renderTier: T
             }),
             (0, r.jsx)('div', { className: I.divider }),
@@ -122,11 +122,11 @@ function P() {
             n
                 ? (0, r.jsx)(g.Z, {
                       onOpenPremiumClick: () =>
-                          void N.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void N.default.track(C.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: y.ZY5.GUILD_SETTINGS,
-                                  section: y.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: y.qAy.BUTTON_CTA
+                                  page: C.ZY5.GUILD_SETTINGS,
+                                  section: C.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: C.qAy.BUTTON_CTA
                               }
                           })
                   })

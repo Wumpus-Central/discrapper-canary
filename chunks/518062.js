@@ -18,7 +18,7 @@ function d(e) {
             errorScene: c.fe.Scenes.ERROR,
             successScene: c.fe.Scenes.SUCCESS
         }),
-        p = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
+        C = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, l.jsxs)(i.xBx, {
         align: a.Z.Align.START,
         className: u.header,
@@ -29,7 +29,7 @@ function d(e) {
                 nextScene: E,
                 onScenePlay: (e) => f(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: p
+                pause: C
             }),
             (0, l.jsx)('div', { className: u.headerTitle }),
             (0, l.jsx)(i.olH, {

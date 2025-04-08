@@ -19,7 +19,7 @@ var r = n(200651),
     N = n(981631),
     _ = n(388032),
     v = n(199824);
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function y(e, t) {
         e
     );
 }
-let C = 'guild-role-subscription-tier-template-selector',
+let O = 'guild-role-subscription-tier-template-selector',
     I = (e) => {
         let [t, n] = i.useState(!0),
             [r, s] = i.useState();
@@ -92,7 +92,7 @@ function E(e) {
             return (0, l.uniq)(e);
         }, [E, w]),
         Z = (e, t) => {
-            R((n) => y(O({}, n), { [e]: t }));
+            R((n) => C(y({}, n), { [e]: t }));
         },
         A = (0, p.ss)(t),
         k = (0, p.Gp)(),
@@ -109,7 +109,7 @@ function E(e) {
                               return (n) =>
                                   (0, r.jsx)(
                                       e,
-                                      y(O({}, n), {
+                                      C(y({}, n), {
                                           guildId: t,
                                           addNewEditStateFromTemplate: T,
                                           addNewEditStateFromScratch: S,
@@ -117,7 +117,7 @@ function E(e) {
                                       })
                                   );
                           },
-                          { modalKey: C }
+                          { modalKey: O }
                       )
                     : S();
         }, [t, T, S, s, k, A]),
@@ -130,7 +130,7 @@ function E(e) {
             () => (
                 U === N.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && W(),
                 () => {
-                    (0, d.Mr3)(C);
+                    (0, d.Mr3)(O);
                 }
             ),
             [U, W]

@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(983135),
     _ = n(8426),
     v = n(969632),
-    O = n(570961),
-    y = n(208665),
-    C = n(359191),
+    y = n(570961),
+    C = n(208665),
+    O = n(359191),
     I = n(84658),
     E = n(142961),
     S = n(232764),
@@ -81,20 +81,20 @@ function W() {
 function L(e) {
     let { guild: t } = e,
         s = t.id,
-        x = (0, o.e7)([C.Z], () => C.Z.getCurrentPage()),
+        x = (0, o.e7)([O.Z], () => O.Z.getCurrentPage()),
         W = (0, E.Z)(s),
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: M,
             hasErrors: G
-        } = (0, o.cj)([C.Z], () => ({
-            hasChanges: C.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: C.Z.hasErrors()
+        } = (0, o.cj)([O.Z], () => ({
+            hasChanges: O.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: O.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: O.Z.hasErrors()
         })),
-        U = (0, o.e7)([C.Z], () => {
+        U = (0, o.e7)([O.Z], () => {
             let e = (0, I.lg)(x);
-            return null != e && !C.Z.isEducationUpsellDismissed(e);
+            return null != e && !O.Z.isEducationUpsellDismissed(e);
         }),
         B = (0, g.ZP)(),
         F = i.useRef(null),
@@ -136,11 +136,11 @@ function L(e) {
     }
     let Q = x === I.xh[I.xh.length - 1],
         J = async () => {
-            let e = y.Z.advancedMode;
+            let e = C.Z.advancedMode;
             if (L)
                 try {
-                    if (x === I.PG.DEFAULT_CHANNELS) await (0, j.DO)(t).then(() => (e ? (0, O.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
-                    else if (x === I.PG.CUSTOMIZATION_QUESTIONS) await (0, O.rS)(t, { ignoreDefaultPrompt: !0 });
+                    if (x === I.PG.DEFAULT_CHANNELS) await (0, j.DO)(t).then(() => (e ? (0, y.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    else if (x === I.PG.CUSTOMIZATION_QUESTIONS) await (0, y.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (x === I.PG.HOME_SETTINGS) {
                         let e = v.Z.getSettings();
                         await (0, _.oo)(t.id, e);

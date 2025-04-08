@@ -142,7 +142,7 @@ function _(e) {
                                 children: l.title
                             }),
                             c
-                                ? (0, s.jsx)(O, {
+                                ? (0, s.jsx)(y, {
                                       transform: null == e ? void 0 : e.unlockedTranslateY.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
                                       headerButton: u,
                                       subscriptionsRequired: m,
@@ -164,7 +164,7 @@ function v(e) {
         j = h.oCV[i.tier],
         N = a && n >= j,
         v = i.tier !== h.Eu4.NONE && i.tier !== h.Eu4.TIER_1,
-        O = (e, t) => {
+        y = (e, t) => {
             var n;
             let { Icon: r, className: i } = (0, m.t)(e.icon, t);
             return (0, s.jsxs)(
@@ -240,7 +240,7 @@ function v(e) {
                                       null != i.perks &&
                                           (0, s.jsx)('div', {
                                               className: b.perks,
-                                              children: i.perks.map((e) => O(e, N))
+                                              children: i.perks.map((e) => y(e, N))
                                           })
                                   ]
                               })
@@ -250,11 +250,11 @@ function v(e) {
         i.tier
     );
 }
-let O = (e) => {
+let y = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: r, subscriptionsRequired: i } = e;
-        return null !== r ? r : n ? (0, s.jsx)(y, { transform: t }) : (0, s.jsx)(C, { subscriptionsRequired: i });
+        return null !== r ? r : n ? (0, s.jsx)(C, { transform: t }) : (0, s.jsx)(O, { subscriptionsRequired: i });
     },
-    y = (e) => {
+    C = (e) => {
         let { transform: t } = e;
         return (0, s.jsx)(c.animated.div, {
             style: { transform: t },
@@ -262,7 +262,7 @@ let O = (e) => {
             children: f.NW.string(f.t.dNGM0t)
         });
     },
-    C = (e) => {
+    O = (e) => {
         let { subscriptionsRequired: t } = e;
         return (0, s.jsxs)(s.Fragment, {
             children: [

@@ -25,9 +25,9 @@ var r = n(200651),
     N = n(434404),
     _ = n(999382),
     v = n(718157),
-    O = n(450474),
-    y = n(209054),
-    C = n(118215),
+    y = n(450474),
+    C = n(209054),
+    O = n(118215),
     I = n(166184),
     E = n(96788),
     S = n(936735),
@@ -117,7 +117,7 @@ class U extends i.PureComponent {
     async componentDidMount() {
         let { guild: e } = this.props;
         if (null != e) {
-            (0, y.k)(e.id).then(() => {
+            (0, C.k)(e.id).then(() => {
                 (0, E.V)(e.id);
             }),
                 (0, d.le)(),
@@ -344,7 +344,7 @@ class U extends i.PureComponent {
                                 className: k.formTitle,
                                 children: A.NW.string(A.t.oOPlPD)
                             }),
-                            (0, r.jsx)(O.Z, {
+                            (0, r.jsx)(y.Z, {
                                 guild: i,
                                 guildMetadata: t
                             })
@@ -471,11 +471,11 @@ class U extends i.PureComponent {
             });
     }
 }
-let B = s.ZP.connectStores([_.Z, h.Z, C.ZP, p.ZP, b.default, f.Z], () => {
+let B = s.ZP.connectStores([_.Z, h.Z, O.ZP, p.ZP, b.default, f.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: r } = _.Z.getProps(),
         i = h.Z.can(Z.Plq.MANAGE_GUILD, e),
         s = h.Z.can(Z.Plq.ADMINISTRATOR, e),
-        a = null != e ? C.ZP.getDiscoveryChecklist(e.id) : null,
+        a = null != e ? O.ZP.getDiscoveryChecklist(e.id) : null,
         l = null != e ? p.ZP.getChannels(e.id) : null,
         o = [];
     return (

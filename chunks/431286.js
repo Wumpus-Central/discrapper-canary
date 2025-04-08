@@ -37,13 +37,13 @@ function _() {
                                 transitionState: i,
                                 onClose: n,
                                 ctaOnClick: () => {
-                                    O(b.L.USER_DISMISS_ALL),
+                                    O(b.L.TAKE_ACTION),
                                         (0, u.EW)(o.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
-                                            dismissAction: b.L.USER_DISMISS_ALL,
+                                            dismissAction: b.L.INDIRECT_ACTION,
                                             groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING
                                         }),
                                         (0, u.EW)(o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
-                                            dismissAction: b.L.USER_DISMISS_ALL,
+                                            dismissAction: b.L.INDIRECT_ACTION,
                                             groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING
                                         }),
                                         (0, p.navigateToQuestHome)({ questId: y.V6 }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -152,8 +152,8 @@ function v(e) {
         onBlur: h
     });
 }
-let O = [0, 1, 2, 3, 4];
-function y(e) {
+let y = [0, 1, 2, 3, 4];
+function C(e) {
     let { profile: t, canManageGuild: n } = e,
         s = i.useMemo(() => t.traits, [t]),
         a = i.useCallback(
@@ -178,7 +178,7 @@ function y(e) {
             }),
             (0, r.jsx)('div', {
                 className: b.grid,
-                children: O.map((e) => {
+                children: y.map((e) => {
                     var i;
                     return (0, r.jsx)(
                         v,

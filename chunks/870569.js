@@ -7,7 +7,7 @@ var l = n(200651),
     s = n(686546),
     c = n(168301);
 let u = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: i, onClick: u, disabled: d, icon: E, iconForeground: f, innerClassName: p, className: C, redGlow: h, tooltipClassName: _, onMouseEnter: g, onMouseLeave: S, 'aria-label': O, 'aria-checked': T, role: I, tooltipColor: N, tooltipForceOpen: m, tooltipContentClassName: A, plated: b } = e,
+    let { tooltipText: n, children: r, onContextMenu: i, onClick: u, disabled: d, icon: E, iconForeground: f, innerClassName: C, className: p, redGlow: h, tooltipClassName: _, onMouseEnter: g, onMouseLeave: O, 'aria-label': S, 'aria-checked': T, role: I, tooltipColor: N, tooltipForceOpen: m, tooltipContentClassName: A, plated: b } = e,
         P =
             'function' == typeof E
                 ? (0, l.jsx)(E, {
@@ -21,14 +21,14 @@ let u = r.forwardRef(function (e, t) {
     return (0, l.jsx)(a.ua7, {
         tooltipClassName: _,
         text: n,
-        'aria-label': O,
+        'aria-label': S,
         color: N,
         tooltipContentClassName: A,
         forceOpen: m,
         children: (e) => {
             var n,
                 E,
-                { onClick: f, onMouseEnter: _, onMouseLeave: O } = e,
+                { onClick: f, onMouseEnter: _, onMouseLeave: S } = e,
                 N = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -81,9 +81,9 @@ let u = r.forwardRef(function (e, t) {
                         look: a.zxk.Looks.BLANK,
                         size: a.zxk.Sizes.NONE,
                         disabled: d,
-                        innerClassName: p,
-                        wrapperClassName: o()(c.button, C),
-                        className: o()(c.button, C, {
+                        innerClassName: C,
+                        wrapperClassName: o()(c.button, p),
+                        className: o()(c.button, p, {
                             [c.redGlow]: h,
                             [c.disabled]: d,
                             [c.enabled]: !d,
@@ -97,7 +97,7 @@ let u = r.forwardRef(function (e, t) {
                             null == _ || _(), null == g || g();
                         },
                         onMouseLeave: () => {
-                            null == O || O(), null == S || S();
+                            null == S || S(), null == O || O();
                         },
                         onContextMenu: i,
                         role: I,

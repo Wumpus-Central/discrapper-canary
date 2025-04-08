@@ -1,6 +1,6 @@
 n.d(t, { default: () => U }), n(388685), n(539854);
-var a = n(200651),
-    i = n(192379),
+var i = n(200651),
+    a = n(192379),
     o = n(149765),
     s = n(442837),
     r = n(704215),
@@ -14,82 +14,82 @@ var a = n(200651),
     N = n(768581),
     m = n(700785),
     E = n(645041),
-    h = n(981631),
-    I = n(921944),
+    I = n(981631),
+    h = n(921944),
     S = n(135899),
     O = n(388032),
-    x = n(800830);
-function T(e) {
+    T = n(800830);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            a = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            a.forEach(function (t) {
-                var a;
-                (a = n[t]),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: a,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = a);
+                        : (e[t] = i);
             });
     }
     return e;
 }
 function g(e) {
-    let { guild: t, headerText: i, headerSubtext: o, step: s } = e,
+    let { guild: t, headerText: a, headerSubtext: o, step: s } = e,
         r = N.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 120
         });
-    return (0, a.jsxs)(c.xBx, {
-        className: x.header,
+    return (0, i.jsxs)(c.xBx, {
+        className: T.header,
         children: [
-            (0, a.jsxs)('div', {
-                className: x.headerIconContainer,
+            (0, i.jsxs)('div', {
+                className: T.headerIconContainer,
                 children: [
                     null != r
-                        ? (0, a.jsx)(c.qEK, {
+                        ? (0, i.jsx)(c.qEK, {
                               src: r,
                               'aria-label': t.name,
                               size: c.EFr.SIZE_120,
-                              className: x.__invalid_guildIcon
+                              className: T.__invalid_guildIcon
                           })
-                        : (0, a.jsx)('div', {
-                              className: x.acronym,
+                        : (0, i.jsx)('div', {
+                              className: T.acronym,
                               children: t.acronym
                           }),
                     2 === s
-                        ? (0, a.jsx)(c.owK, {
+                        ? (0, i.jsx)(c.owK, {
                               size: 'md',
-                              className: x.greenPing,
+                              className: T.greenPing,
                               color: l.Z.unsafe_rawColors.GREEN_360.css,
                               secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css
                           })
-                        : (0, a.jsx)(d.Ee, {
+                        : (0, i.jsx)(d.Ee, {
                               src: n(173326),
-                              className: x.redPing
+                              className: T.redPing
                           })
                 ]
             }),
-            (0, a.jsxs)('div', {
-                className: x.headerText,
+            (0, i.jsxs)('div', {
+                className: T.headerText,
                 children: [
-                    (0, a.jsx)(c.X6q, {
+                    (0, i.jsx)(c.X6q, {
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
-                        children: i
+                        children: a
                     }),
-                    (0, a.jsx)(c.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: 'text-md/normal',
                         color: 'header-primary',
                         children: o
@@ -103,49 +103,49 @@ function b(e) {
     let { guild: t } = e,
         n = (0, s.e7)([f.Z], () => f.Z.getRole(t.id, t.getEveryoneRoleId()));
     if (null == n) return null;
-    let { name: i, color: o } = n;
-    return (0, a.jsxs)('span', {
-        className: x.roleRow,
+    let { name: a, color: o } = n;
+    return (0, i.jsxs)('span', {
+        className: T.roleRow,
         children: [
-            (0, a.jsx)(c.FhE, {
-                className: x.roleDot,
+            (0, i.jsx)(c.FhE, {
+                className: T.roleDot,
                 color: o.toString(),
                 background: !1,
                 tooltip: !1
             }),
-            (0, a.jsx)(c.Text, {
-                className: x.roleName,
+            (0, i.jsx)(c.Text, {
+                className: T.roleName,
                 variant: 'text-sm/medium',
                 color: 'interactive-active',
-                children: i
+                children: a
             })
         ]
     });
 }
-let y = (e) => (e.toString() === h.Plq.MENTION_EVERYONE.toString() ? O.NW.string(O.t.yCpsQ0) : (0, p.wt)(e));
+let y = (e) => (e.toString() === I.Plq.MENTION_EVERYONE.toString() ? O.NW.string(O.t.yCpsQ0) : (0, p.wt)(e));
 function C(e) {
     let { permissions: t, step: n } = e;
     return 2 === n
         ? null
-        : (0, a.jsxs)('div', {
-              className: x.tableContainer,
+        : (0, i.jsxs)('div', {
+              className: T.tableContainer,
               children: [
-                  (0, a.jsx)(c.Text, {
-                      className: x.tableHeader,
+                  (0, i.jsx)(c.Text, {
+                      className: T.tableHeader,
                       variant: 'text-xs/semibold',
                       color: 'text-muted',
                       children: 0 === n ? O.NW.string(O.t['0WZKIy']) : O.NW.string(O.t.xU8RDg)
                   }),
-                  (0, a.jsx)('div', {
-                      className: x.permissionsTable,
+                  (0, i.jsx)('div', {
+                      className: T.permissionsTable,
                       children: t.map((e, t) =>
-                          (0, a.jsxs)(
+                          (0, i.jsxs)(
                               'div',
                               {
-                                  className: x.permissionRow,
+                                  className: T.permissionRow,
                                   children: [
-                                      (0, a.jsx)('div', { className: 0 === n ? x.bulletPositive : x.bulletWarning }),
-                                      (0, a.jsx)(c.Text, {
+                                      (0, i.jsx)('div', { className: 0 === n ? T.bulletPositive : T.bulletWarning }),
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
                                           children: y(e)
@@ -159,30 +159,30 @@ function C(e) {
               ]
           });
 }
-function j(e) {
+function R(e) {
     let { permissions: t, step: n } = e;
     return 0 === t.length && 2 !== n
         ? null
         : (2 === n && (t = S.$X),
-          (0, a.jsxs)('div', {
-              className: x.tableContainer,
+          (0, i.jsxs)('div', {
+              className: T.tableContainer,
               children: [
-                  (0, a.jsx)(c.Text, {
-                      className: x.tableHeader,
+                  (0, i.jsx)(c.Text, {
+                      className: T.tableHeader,
                       variant: 'text-xs/semibold',
                       color: 'text-muted',
                       children: 2 === n ? O.NW.string(O.t.FgMS6u) : O.NW.string(O.t.Yo5qlp)
                   }),
-                  (0, a.jsx)('div', {
-                      className: x.permissionsTable,
+                  (0, i.jsx)('div', {
+                      className: T.permissionsTable,
                       children: t.map((e, t) =>
-                          (0, a.jsxs)(
+                          (0, i.jsxs)(
                               'div',
                               {
-                                  className: x.permissionRow,
+                                  className: T.permissionRow,
                                   children: [
-                                      (0, a.jsx)('div', { className: x.bullet }),
-                                      (0, a.jsx)(c.Text, {
+                                      (0, i.jsx)('div', { className: T.bullet }),
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-muted',
                                           children: y(e)
@@ -196,58 +196,58 @@ function j(e) {
               ]
           }));
 }
-function R(e) {
+function j(e) {
     let { permissions: t, step: n } = e,
-        { enabledPermissions: i, disabledPermissions: o } = t;
-    return 0 === i.length && 2 !== n
+        { enabledPermissions: a, disabledPermissions: o } = t;
+    return 0 === a.length && 2 !== n
         ? null
-        : (0, a.jsxs)('div', {
-              className: x.table,
+        : (0, i.jsxs)('div', {
+              className: T.table,
               children: [
                   2 !== n
-                      ? (0, a.jsx)(C, {
-                            permissions: i,
+                      ? (0, i.jsx)(C, {
+                            permissions: a,
                             step: n
                         })
                       : null,
-                  (0, a.jsx)(j, {
+                  (0, i.jsx)(R, {
                       permissions: o,
                       step: n
                   })
               ]
           });
 }
-function v(e) {
-    let { guild: t, permissions: n, step: i, canEveryoneModerate: o, isDefaultNotificationsAllMessages: s } = e;
-    return (0, a.jsx)(c.hzk, {
-        children: (0, a.jsxs)('div', {
-            className: x.updatedForm,
+function L(e) {
+    let { guild: t, permissions: n, step: a, canEveryoneModerate: o, isDefaultNotificationsAllMessages: s } = e;
+    return (0, i.jsx)(c.hzk, {
+        children: (0, i.jsxs)('div', {
+            className: T.updatedForm,
             children: [
                 s
-                    ? (0, a.jsxs)('div', {
-                          className: x.checklistRow,
+                    ? (0, i.jsxs)('div', {
+                          className: T.checklistRow,
                           children: [
-                              (0, a.jsx)(c.owK, {
+                              (0, i.jsx)(c.owK, {
                                   size: 'md',
-                                  className: x.checklistIcon,
+                                  className: T.checklistIcon,
                                   color: l.Z.unsafe_rawColors.GREEN_360.css,
                                   secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css
                               }),
-                              (0, a.jsx)(c.Text, {
+                              (0, i.jsx)(c.Text, {
                                   variant: 'text-md/normal',
                                   children: O.NW.format(O.t.K8Eg4O, {
                                       infoHook: () =>
-                                          (0, a.jsx)(c.ua7, {
+                                          (0, i.jsx)(c.ua7, {
                                               text: O.NW.string(O.t['3h2WyM']),
                                               'aria-label': O.NW.string(O.t['3h2WyM']),
                                               children: (e) =>
-                                                  (0, a.jsx)(
+                                                  (0, i.jsx)(
                                                       c.d3s,
-                                                      T(
+                                                      x(
                                                           {
                                                               size: 'xs',
                                                               color: 'currentColor',
-                                                              className: x.icon
+                                                              className: T.icon
                                                           },
                                                           e
                                                       )
@@ -259,47 +259,47 @@ function v(e) {
                       })
                     : null,
                 o
-                    ? (0, a.jsxs)('div', {
-                          className: x.checklistRow,
+                    ? (0, i.jsxs)('div', {
+                          className: T.checklistRow,
                           children: [
-                              (0, a.jsx)(c.owK, {
+                              (0, i.jsx)(c.owK, {
                                   size: 'md',
-                                  className: x.checklistIcon,
+                                  className: T.checklistIcon,
                                   color: l.Z.unsafe_rawColors.GREEN_360.css,
                                   secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css
                               }),
-                              (0, a.jsx)(c.Text, {
+                              (0, i.jsx)(c.Text, {
                                   variant: 'text-md/normal',
                                   children: O.NW.string(O.t.LfeFFh)
                               }),
-                              (0, a.jsx)(b, { guild: t })
+                              (0, i.jsx)(b, { guild: t })
                           ]
                       })
                     : null,
-                (0, a.jsx)(R, {
+                (0, i.jsx)(j, {
                     permissions: n,
-                    step: i
+                    step: a
                 })
             ]
         })
     });
 }
-function L(e) {
-    let { onConfirm: t, onDismiss: n, canEveryoneModerate: i, step: o } = e;
-    return (0, a.jsxs)(c.mzw, {
-        className: x.footer,
+function v(e) {
+    let { onConfirm: t, onDismiss: n, canEveryoneModerate: a, step: o } = e;
+    return (0, i.jsxs)(c.mzw, {
+        className: T.footer,
         children: [
-            (0, a.jsx)(c.zxk, {
+            (0, i.jsx)(c.zxk, {
                 onClick: t,
                 submitting: 1 === o,
-                children: 0 === o ? (i ? O.NW.string(O.t.R7GC7e) : O.NW.string(O.t.iOSdAQ)) : O.NW.string(O.t.mVuDq6)
+                children: 0 === o ? (a ? O.NW.string(O.t.R7GC7e) : O.NW.string(O.t.iOSdAQ)) : O.NW.string(O.t.mVuDq6)
             }),
             0 === o
-                ? (0, a.jsx)(c.zxk, {
+                ? (0, i.jsx)(c.zxk, {
                       look: c.zxk.Looks.LINK,
                       onClick: n,
                       color: c.zxk.Colors.PRIMARY,
-                      children: (0, a.jsx)(c.Text, {
+                      children: (0, i.jsx)(c.Text, {
                           variant: 'text-sm/semibold',
                           color: 'header-primary',
                           children: O.NW.string(O.t.gWQZvr)
@@ -311,13 +311,13 @@ function L(e) {
 }
 function U(e) {
     let { guild: t, canEveryoneModerate: n, isDefaultNotificationsAllMessages: s, transitionState: l, onClose: d } = e,
-        [p, N] = i.useState(0),
-        b = i.useMemo(() => {
+        [p, N] = a.useState(0),
+        b = a.useMemo(() => {
             let e = [],
                 n = [];
             return (
-                S.$X.map((a) => {
-                    m.oz(a, t) ? e.push(a) : n.push(a);
+                S.$X.map((i) => {
+                    m.oz(i, t) ? e.push(i) : n.push(i);
                 }),
                 {
                     enabledPermissions: e,
@@ -328,19 +328,19 @@ function U(e) {
     if (null == t) return null;
     let y = () => {
             var e, n;
-            let a = f.Z.getRole(t.id, t.getEveryoneRoleId());
-            if (null == a) return;
-            let i = o.Od(a.permissions, S.mu);
+            let i = f.Z.getRole(t.id, t.getEveryoneRoleId());
+            if (null == i) return;
+            let a = o.Od(i.permissions, S.mu);
             (0, _.Gf)(t.id, [
-                ((e = T({}, a)),
-                (n = n = { permissions: i }),
+                ((e = x({}, i)),
+                (n = n = { permissions: a }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var a = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, a);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
                           return n;
                       })(Object(n)).forEach(function (t) {
@@ -350,36 +350,36 @@ function U(e) {
             ]);
         },
         C = () => {
-            u.Z.updateGuild({ defaultMessageNotifications: h.bL.ONLY_MENTIONS }), u.Z.saveGuild(t.id, { defaultMessageNotifications: h.bL.ONLY_MENTIONS });
+            u.Z.updateGuild({ defaultMessageNotifications: I.bL.ONLY_MENTIONS }), u.Z.saveGuild(t.id, { defaultMessageNotifications: I.bL.ONLY_MENTIONS });
         },
-        j = () => {
+        R = () => {
             n && y(), s && C();
         };
-    return (0, a.jsxs)(c.Y0X, {
+    return (0, i.jsxs)(c.Y0X, {
         transitionState: l,
         size: c.CgR.SMALL,
-        className: x.modal,
+        className: T.modal,
         children: [
-            (0, a.jsx)(g, {
+            (0, i.jsx)(g, {
                 guild: t,
                 headerText: n ? O.NW.string(O.t['7/ux19']) : O.NW.string(O.t['sRcn4+']),
                 headerSubtext: n ? O.NW.string(O.t.aliKPz) : O.NW.string(O.t.F4KDOD),
                 step: p
             }),
-            (0, a.jsx)(v, {
+            (0, i.jsx)(L, {
                 guild: t,
                 permissions: b,
                 step: p,
                 canEveryoneModerate: n,
                 isDefaultNotificationsAllMessages: s
             }),
-            (0, a.jsx)(L, {
+            (0, i.jsx)(v, {
                 onConfirm: () => {
-                    var e, a;
-                    n || (j(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, I.L.PRIMARY)), 0 === p ? (N(1), setTimeout(() => N(2), 3000)) : 2 === p && (j(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (a = null == t ? void 0 : t.id) ? a : '', !0, I.L.PRIMARY));
+                    var e, i;
+                    n || (R(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (e = null == t ? void 0 : t.id) ? e : '', !0, h.L.PRIMARY)), 0 === p ? (N(1), setTimeout(() => N(2), 3000)) : 2 === p && (R(), d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (i = null == t ? void 0 : t.id) ? i : '', !0, h.L.PRIMARY));
                 },
                 onDismiss: () => {
-                    d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, I.L.DISMISS);
+                    d(), (0, E.Qd)(r.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, h.L.DISMISS);
                 },
                 step: p,
                 canEveryoneModerate: n

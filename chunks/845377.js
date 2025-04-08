@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function O(e, t) {
         e
     );
 }
-let y = (e) => {
+let C = (e) => {
     let { name: t, failingName: n, description: i, checked: s, pending: a, pendingDescription: l, failingDescription: o } = e,
         c = t,
         d = null,
@@ -117,7 +117,7 @@ let y = (e) => {
         })
     );
 };
-function C(e, t) {
+function O(e, t) {
     return o()(
         null == e
             ? void 0
@@ -145,7 +145,7 @@ let I = (e) => {
                 var e, n, r;
                 if (null == T) return [];
                 let i = null != (n = (null != (e = p.ZP.getChannels(t.id)) ? e : {})[p.sH]) ? n : [],
-                    s = null != (r = null == i ? void 0 : i.map((e) => e.channel).reduce((e, t) => O(v({}, e), { [t.id]: t }), {})) ? r : {};
+                    s = null != (r = null == i ? void 0 : i.map((e) => e.channel).reduce((e, t) => y(v({}, e), { [t.id]: t }), {})) ? r : {};
                 return null == T
                     ? []
                     : Object.entries(T).map((e) => {
@@ -154,7 +154,7 @@ let I = (e) => {
                       });
             },
             [t.id, T],
-            C
+            O
         );
     if (I || null == m)
         return (0, r.jsxs)('div', {
@@ -238,7 +238,7 @@ let I = (e) => {
                                 onClick: () =>
                                     (0, g.ZDy)(async () => {
                                         let { default: e } = await n.e('23401').then(n.bind(n, 666599));
-                                        return (t) => (0, r.jsx)(e, O(v({}, t), { guildChecklist: m }));
+                                        return (t) => (0, r.jsx)(e, y(v({}, t), { guildChecklist: m }));
                                     }),
                                 children: N.NW.string(N.t.qyiTHx)
                             })
@@ -372,7 +372,7 @@ let I = (e) => {
                 (0, r.jsxs)(
                     i.Fragment,
                     {
-                        children: [(0, r.jsx)(y, v({}, e)), t < R.length - 1 ? (0, r.jsx)('hr', { className: _.separator }) : null]
+                        children: [(0, r.jsx)(C, v({}, e)), t < R.length - 1 ? (0, r.jsx)('hr', { className: _.separator }) : null]
                     },
                     ''.concat(e.name)
                 )

@@ -60,34 +60,34 @@ function f(e) {
         [x, j] = i.useState(!1),
         { editingRule: N, createNewEditingRule: _ } = (0, d.V)(),
         { getDefaultRuleName: v } = c.I6[n],
-        O = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
-        [y, C] = i.useState(O ? N : b),
+        y = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
+        [C, O] = i.useState(y ? N : b),
         I = (0, l.q_F)({
-            opacity: +!O,
-            pointerEvents: O ? 'none' : 'all',
+            opacity: +!y,
+            pointerEvents: y ? 'none' : 'all',
             config: h(p({}, s.config.stiff), { clamp: !0 })
         }),
         E = (0, l.q_F)({
-            opacity: +!!O,
-            pointerEvents: O ? 'all' : 'none',
+            opacity: +!!y,
+            pointerEvents: y ? 'all' : 'none',
             config: h(p({}, s.config.stiff), { clamp: !0 }),
             onStart: () => {
-                C(O ? N : b);
+                O(y ? N : b);
             },
             onRest: () => {
-                C(O ? N : b), j(O);
+                O(y ? N : b), j(y);
             }
         });
-    return null == N || O
+    return null == N || y
         ? (0, r.jsxs)('div', {
               className: g.mainRuleContainer,
-              style: { height: O ? 'auto' : '60px' },
+              style: { height: y ? 'auto' : '60px' },
               children: [
                   (0, r.jsx)(s.animated.div, {
                       className: g.animatedRuleCardContainer,
                       style: E,
                       children: (0, r.jsx)(u.Z, {
-                          rule: y,
+                          rule: C,
                           persistEdit: x
                       })
                   }),

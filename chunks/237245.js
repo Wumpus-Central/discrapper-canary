@@ -19,8 +19,8 @@ var r = n(200651),
     N = n(386885),
     _ = n(981631),
     v = n(128449),
-    O = n(388032);
-function y(e) {
+    y = n(388032);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function I(e) {
                 try {
                     await h.Z.saveGuild(T, e, { throwErr: !0 });
                 } catch (e) {
-                    throw ('object' == typeof e && 'message' in e ? D(e.message) : D(O.NW.formatToPlainString(O.t.aTVNen, { statusPageURL: _.yXt.STATUS })), e);
+                    throw ('object' == typeof e && 'message' in e ? D(e.message) : D(y.NW.formatToPlainString(y.t.aTVNen, { statusPageURL: _.yXt.STATUS })), e);
                 }
             },
             [T]
@@ -108,7 +108,7 @@ function I(e) {
                         ? [
                               {
                                   field_type: u.QJ.TERMS,
-                                  label: O.NW.string(O.t['9suSIC']),
+                                  label: y.NW.string(y.t['9suSIC']),
                                   values: t,
                                   required: !0
                               }
@@ -155,7 +155,7 @@ function I(e) {
                                 preferredLocale: I.preferredLocale
                             });
                         try {
-                            await (0, c.Vv)(y({ guildId: I.id }, E));
+                            await (0, c.Vv)(C({ guildId: I.id }, E));
                         } catch (e) {
                             throw (D(new o.Hx(e).getAnyErrorMessage()), e);
                         }
@@ -172,7 +172,7 @@ function I(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     t,
-                                    C(y({}, n), {
+                                    O(C({}, n), {
                                         guildId: T,
                                         onConfirm: e
                                     })
@@ -187,7 +187,7 @@ function I(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     t,
-                                    C(y({}, n), {
+                                    O(C({}, n), {
                                         guildId: T,
                                         submittedGuildJoinRequestsCount: A,
                                         onConfirm: e
@@ -198,16 +198,16 @@ function I(e) {
                 };
             if (s.joinType === j.A.INVITE || s.joinType === j.A.DISCOVERABLE) {
                 let { requireTerms: e, termRules: t = [] } = s;
-                if (t.map((e) => e.value.trim()).filter((e) => '' !== e).length < 1 && e) return void D(O.NW.string(O.t.TCHkcX));
+                if (t.map((e) => e.value.trim()).filter((e) => '' !== e).length < 1 && e) return void D(y.NW.string(y.t.TCHkcX));
             }
-            if (s.joinType === j.A.APPLY && !(null == (e = s.pendingVerificationFields) ? void 0 : e.some((e) => (0, m._C)(e)))) return void D(O.NW.string(O.t.HGVrIy));
+            if (s.joinType === j.A.APPLY && !(null == (e = s.pendingVerificationFields) ? void 0 : e.some((e) => (0, m._C)(e)))) return void D(y.NW.string(y.t.HGVrIy));
             i(() => t(U));
         }, [Z, U, s, T, A]),
         F = s.joinType === j.A.DISCOVERABLE && s.settingsView === N.U.ELIGIBLE_DISABLED,
         z = null != I.description && E.primaryCategoryId !== v.o3 && E.keywords.length > 0;
     return (0, r.jsx)(l.Z, {
-        message: F ? O.NW.string(O.t.V2G2Ym) : void 0,
-        onSaveText: F ? O.NW.string(O.t['qjtt/v']) : void 0,
+        message: F ? y.NW.string(y.t.V2G2Ym) : void 0,
+        onSaveText: F ? y.NW.string(y.t['qjtt/v']) : void 0,
         submitting: P,
         errorMessage: R,
         onReset: k,
@@ -238,7 +238,7 @@ function E() {
         ? null
         : e.joinType === j.A.DISCOVERABLE && e.settingsView === N.U.INELIGIBLE
           ? (0, r.jsx)(l.Z, {
-                message: O.NW.string(O.t.TEXwRk),
+                message: y.NW.string(y.t.TEXwRk),
                 onReset: () => h.Z.init(n.id, _.pNK.ACCESS)
             })
           : (0, r.jsx)(I, {

@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(51144),
     _ = n(434404),
     v = n(372454),
-    O = n(999382),
-    y = n(84613),
-    C = n(740903),
+    y = n(999382),
+    C = n(84613),
+    O = n(740903),
     I = n(1080),
     E = n(981631),
     S = n(388032),
@@ -231,7 +231,7 @@ class k extends i.PureComponent {
         });
     }
     handleModerationClick() {
-        _.Z.setSection(E.pNK.SAFETY), (0, y.K)(C.u.DM_AND_SPAM_PROTECTION);
+        _.Z.setSection(E.pNK.SAFETY), (0, C.K)(O.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
         _.Z.setSearchQuery(e);
@@ -357,8 +357,8 @@ class k extends i.PureComponent {
             });
     }
 }
-let W = o.ZP.connectStores([O.Z, h.Z, f.Z], () => {
-    let { bans: e, guild: t, searchQuery: n } = O.Z.getProps();
+let W = o.ZP.connectStores([y.Z, h.Z, f.Z], () => {
+    let { bans: e, guild: t, searchQuery: n } = y.Z.getProps();
     return {
         searchQuery: null != n ? n : '',
         bans: e,
@@ -369,7 +369,7 @@ let W = o.ZP.connectStores([O.Z, h.Z, f.Z], () => {
 })(k);
 function L() {
     var e;
-    let { guild: t } = (0, o.e7)([O.Z], () => O.Z.getProps(), [], l.isEqual),
+    let { guild: t } = (0, o.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
         { enabled: n } = v.T.useExperiment(
             {
                 guildId: null != (e = null == t ? void 0 : t.id) ? e : E.lds,

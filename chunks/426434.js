@@ -32,7 +32,7 @@ function h(e) {
         }, 1000);
     if (!f) return null;
     _ || (t = x ? g.NW.format(g.t.nFwNyc, { settingsHook: () => l.Z.open(m.oAB.ACCOUNT) }) : g.NW.string(g.t['9Ghu4+']));
-    let O = n.hasFeature(m.oNc.DISCOVERABLE);
+    let y = n.hasFeature(m.oNc.DISCOVERABLE);
     return (0, r.jsxs)('div', {
         className: p.simpleItemWrapper,
         children: [
@@ -51,9 +51,9 @@ function h(e) {
                     })
                 ]
             }),
-            !_ || (N && O)
+            !_ || (N && y)
                 ? (0, r.jsx)(a.ua7, {
-                      text: O ? g.NW.string(g.t['KG1V/P']) : x ? g.NW.string(g.t.NmsheX) : g.NW.string(g.t.LieBtb),
+                      text: y ? g.NW.string(g.t['KG1V/P']) : x ? g.NW.string(g.t.NmsheX) : g.NW.string(g.t.LieBtb),
                       children: (e) =>
                           (0, r.jsx)(u.Z, {
                               checked: N,

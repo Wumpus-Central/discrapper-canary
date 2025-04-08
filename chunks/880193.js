@@ -24,8 +24,8 @@ function _(e) {
             var e;
             return null == (e = u.Z.getSubscriptionListing(n)) ? void 0 : e.image_asset;
         }),
-        [v, O] = p._T(n),
-        [y, C] = p.mR(n),
+        [v, y] = p._T(n),
+        [C, O] = p.mR(n),
         [I, E] = p.PK(n),
         [S, T] = p.d9(n, 1024),
         { imageCTA: P, imageAriaLabel: w, setFilename: R } = (0, h.Z)(_),
@@ -66,7 +66,7 @@ function _(e) {
                                 placeholder: x.NW.string(x.t['So2/xM']),
                                 value: v,
                                 inputClassName: j.formInput,
-                                onChange: O,
+                                onChange: y,
                                 'aria-labelledby': k,
                                 disabled: A
                             })
@@ -83,8 +83,8 @@ function _(e) {
                                 className: j.formInput,
                                 isDisabled: A || null == t,
                                 placeholder: x.NW.string(x.t['88XZDg']),
-                                value: y,
-                                onChange: C,
+                                value: C,
+                                onChange: O,
                                 maxVisibleItems: 5,
                                 look: a.qQH.CUSTOM,
                                 'aria-labelledby': W

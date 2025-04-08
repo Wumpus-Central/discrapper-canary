@@ -19,7 +19,7 @@ var r = n(200651),
     N = n(948695);
 function _(e) {
     var t, n;
-    let { allSubscriptionListings: s, priceTiers: _, loading: v, error: O, handlePublishTier: y, onDeleteEditState: C } = e,
+    let { allSubscriptionListings: s, priceTiers: _, loading: v, error: y, handlePublishTier: C, onDeleteEditState: O } = e,
         { editStateId: I } = (0, u.N)(),
         E = (0, l.e7)([c.Z], () => c.Z.getSubscriptionListing(I)),
         S = (0, d.mY)(),
@@ -38,7 +38,7 @@ function _(e) {
     return (0, r.jsxs)('div', {
         className: N.body,
         children: [
-            null != O && (0, r.jsx)(m.Z, { children: O.getAnyErrorMessage() }),
+            null != y && (0, r.jsx)(m.Z, { children: y.getAnyErrorMessage() }),
             !w &&
                 !S &&
                 !R &&
@@ -97,7 +97,7 @@ function _(e) {
                                             color: o.zxk.Colors.CUSTOM,
                                             wrapperClassName: j.autoWidth,
                                             className: a()(N.publishButton, j.autoWidth),
-                                            onClick: y,
+                                            onClick: C,
                                             submitting: v,
                                             children: x.NW.string(x.t.Lj6R5u)
                                         }),
@@ -123,7 +123,7 @@ function _(e) {
             (0, r.jsx)(h.Z, { allSubscriptionListings: s }),
             (0, r.jsx)(f.Z, {}),
             (0, r.jsx)(b.Z, {}),
-            (0, r.jsx)(g.Z, { onDeleteEditState: C })
+            (0, r.jsx)(g.Z, { onDeleteEditState: O })
         ]
     });
 }

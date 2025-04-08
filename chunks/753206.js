@@ -1,38 +1,36 @@
-r.d(t, { Z: () => u });
+r.d(t, { Z: () => Z });
 var n = r(200651),
     h = r(192379),
     v = r(120356),
     i = r.n(v),
     l = r(628238),
     o = r(367814),
-    a = r(739566),
-    s = r(492593),
-    c = r(25015),
-    f = r(963550),
-    p = r(845080),
-    Z = r(30804);
-let u = h.memo(function (e) {
+    a = r(492593),
+    s = r(25015),
+    c = r(963550),
+    f = r(845080),
+    p = r(30804);
+let Z = h.memo(function (e) {
     var t, r, h, v;
-    let { message: u, channel: M, compact: d, className: b, isGroupStart: H, hideSimpleEmbedContent: y = !0, disableInteraction: V } = e,
-        j = (0, a.ZP)(u),
-        O = null != (t = u.getGuildId()) ? t : void 0,
+    let { message: Z, channel: u, compact: M, className: d, isGroupStart: b, hideSimpleEmbedContent: H = !0, disableInteraction: y, preview: V, author: j } = e,
+        O = null != (t = Z.getGuildId()) ? t : void 0,
         g = (0, o.Z)(j),
-        m = (0, l.A)((null != (r = u.editedTimestamp) ? r : u.timestamp).valueOf()),
-        { content: x } = (0, c.Z)(u, {
-            hideSimpleEmbedContent: y,
+        m = (0, l.A)((null != (r = Z.editedTimestamp) ? r : Z.timestamp).valueOf()),
+        { content: x } = (0, s.Z)(Z, {
+            hideSimpleEmbedContent: H,
             allowList: m,
             allowHeading: m,
             allowLinks: !0,
             previewLinkTarget: !0
         });
-    return (0, n.jsx)(s.Z, {
-        compact: d,
-        className: i()(b, {
-            [Z.message]: !0,
-            [Z.cozyMessage]: !d,
-            [Z.groupStart]: H
+    return (0, n.jsx)(a.Z, {
+        compact: M,
+        className: i()(d, {
+            [p.message]: !0,
+            [p.cozyMessage]: !M,
+            [p.groupStart]: b
         }),
-        childrenHeader: (0, p.Z)(
+        childrenHeader: (0, f.Z)(
             ((h = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},
@@ -60,8 +58,9 @@ let u = h.memo(function (e) {
             })({}, e)),
             (v = v =
                 {
-                    channel: M,
-                    guildId: void 0
+                    channel: u,
+                    guildId: void 0,
+                    preview: V
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(h, Object.getOwnPropertyDescriptors(v))
@@ -77,9 +76,10 @@ let u = h.memo(function (e) {
                   }),
             h)
         ),
-        childrenMessageContent: (0, f.Z)(e, x),
-        disableInteraction: V,
+        childrenMessageContent: (0, c.Z)(e, x),
+        disableInteraction: y,
         authorHasGradientRole: g,
-        guildId: O
+        guildId: O,
+        preview: V
     });
 });

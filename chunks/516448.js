@@ -20,8 +20,8 @@ function N(e) {
     let { allSubscriptionListings: t } = e,
         { editStateId: n, guildId: N } = (0, o.N)(),
         [_, v] = c.UE(n),
-        [O, y] = c.R7(n),
-        C = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        [y, C] = c.R7(n),
+        O = i.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
         { isFullServerGating: I } = (0, d.Z)(N),
         E = (0, a.Dt)(),
         S = (0, l.mY)();
@@ -41,10 +41,10 @@ function N(e) {
                     }),
                     (0, r.jsx)(m.Z, {
                         channelBenefits: _,
-                        intangibleBenefits: O,
-                        subscriptionListings: C,
+                        intangibleBenefits: y,
+                        subscriptionListings: O,
                         onImport: function (e, t) {
-                            v((t) => t.concat(e)), y((e) => e.concat(t));
+                            v((t) => t.concat(e)), C((e) => e.concat(t));
                         }
                     }),
                     (0, r.jsx)(s.LZC, { size: 8 }),

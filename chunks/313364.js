@@ -19,16 +19,16 @@ var r = n(200651),
     N = n(598948),
     _ = n(428936),
     v = n(41586),
-    O = n(918192),
-    y = n(981631),
-    C = n(388032),
+    y = n(918192),
+    C = n(981631),
+    O = n(388032),
     I = n(881786),
     E = n(319586);
 function S(e) {
     let { guildId: t } = e,
         n = (0, l.e7)([g.Z], () => g.Z.getGuild(t)),
         { analyticsLocations: s } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
-        S = !1 == !!(null == n ? void 0 : n.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        S = !1 == !!(null == n ? void 0 : n.hasFeature(C.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         T = (0, l.e7)([p.Z], () => p.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         P = i.useCallback(
             (e) => {
@@ -37,7 +37,7 @@ function S(e) {
                         userId: e.userId,
                         guildId: e.guildId,
                         sourceAnalyticsLocations: s,
-                        analyticsLocation: { section: y.jXE.GUILD_SETTINGS_MEMBERS }
+                        analyticsLocation: { section: C.jXE.GUILD_SETTINGS_MEMBERS }
                     });
             },
             [s]
@@ -70,7 +70,7 @@ function S(e) {
                                         className: I.header,
                                         children: (0, r.jsx)(o.vwX, {
                                             tag: o.RB0.H1,
-                                            children: C.NW.string(C.t['S40K6+'])
+                                            children: O.NW.string(O.t['S40K6+'])
                                         })
                                     },
                                     'header'
@@ -106,11 +106,11 @@ function S(e) {
                                                           children: (0, r.jsxs)('div', {
                                                               className: I.noResultsContainer,
                                                               children: [
-                                                                  (0, r.jsx)('div', { children: (0, r.jsx)(O.Z, {}) }),
+                                                                  (0, r.jsx)('div', { children: (0, r.jsx)(y.Z, {}) }),
                                                                   (0, r.jsx)(o.Text, {
                                                                       variant: 'text-md/normal',
                                                                       color: 'text-muted',
-                                                                      children: C.NW.format(C.t.Bf6yxM, {
+                                                                      children: O.NW.format(O.t.Bf6yxM, {
                                                                           onClick: (e) => {
                                                                               null != n && (e.preventDefault(), u.Z.close(), (0, h._X)(n.id));
                                                                           }

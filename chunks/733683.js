@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => y,
+    Z: () => C,
     x: () => x
 }),
     n(388685);
@@ -41,7 +41,7 @@ let x = -1,
         tension: 800,
         friction: 20
     };
-class O extends (r = s.Component) {
+class y extends (r = s.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
         return e[e.length - 1].y + N / 2;
@@ -308,5 +308,5 @@ class O extends (r = s.Component) {
             });
     }
 }
-b(O, 'defaultProps', { initialAnimationDelay: 0 });
-let y = O;
+b(y, 'defaultProps', { initialAnimationDelay: 0 });
+let C = y;

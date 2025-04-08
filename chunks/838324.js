@@ -20,9 +20,9 @@ function p(e) {
         N = p ? j.length : b.length,
         _ = p ? x.length : f.length,
         v = N < u.md,
-        O = _ >= u.X,
-        y = j.length - b.length,
-        C = (0, r.jsx)(a.owK, {
+        y = _ >= u.X,
+        C = j.length - b.length,
+        O = (0, r.jsx)(a.owK, {
             size: 'sm',
             color: s.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: s.Z.unsafe_rawColors.WHITE_100.css,
@@ -35,7 +35,7 @@ function p(e) {
             secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css
         }),
         E = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, N) / u.md) * 100],
-        S = !v && O ? [s.Z.colors.TEXT_POSITIVE.css, s.Z.colors.TEXT_POSITIVE.css] : [s.Z.colors.TEXT_BRAND.css, s.Z.colors.TEXT_MUTED.css];
+        S = !v && y ? [s.Z.colors.TEXT_POSITIVE.css, s.Z.colors.TEXT_POSITIVE.css] : [s.Z.colors.TEXT_BRAND.css, s.Z.colors.TEXT_MUTED.css];
     return (0, r.jsxs)('div', {
         className: g.container,
         children: [
@@ -62,7 +62,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: g.requiredItem,
                 children: [
-                    v ? I : C,
+                    v ? I : O,
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -73,7 +73,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: g.requiredItem,
                 children: [
-                    O ? C : I,
+                    y ? O : I,
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -113,7 +113,7 @@ function p(e) {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: m.NW.format(m.t['8Geut7'], {
-                                        count: y,
+                                        count: C,
                                         prejoinHook: (e) =>
                                             (0, r.jsx)(a.eee, {
                                                 onClick: n,
