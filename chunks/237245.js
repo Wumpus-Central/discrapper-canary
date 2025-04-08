@@ -20,7 +20,7 @@ var r = n(200651),
     _ = n(981631),
     v = n(128449),
     y = n(388032);
-function C(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function C(e) {
     }
     return e;
 }
-function O(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -155,7 +155,7 @@ function I(e) {
                                 preferredLocale: I.preferredLocale
                             });
                         try {
-                            await (0, c.Vv)(C({ guildId: I.id }, E));
+                            await (0, c.Vv)(O({ guildId: I.id }, E));
                         } catch (e) {
                             throw (D(new o.Hx(e).getAnyErrorMessage()), e);
                         }
@@ -172,7 +172,7 @@ function I(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     t,
-                                    O(C({}, n), {
+                                    C(O({}, n), {
                                         guildId: T,
                                         onConfirm: e
                                     })
@@ -187,7 +187,7 @@ function I(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     t,
-                                    O(C({}, n), {
+                                    C(O({}, n), {
                                         guildId: T,
                                         submittedGuildJoinRequestsCount: A,
                                         onConfirm: e

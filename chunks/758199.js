@@ -1,5 +1,5 @@
 n.d(t, {
-    W: () => N,
+    W: () => O,
     u: () => E
 }),
     n(190126),
@@ -63,9 +63,9 @@ function v(e) {
     return e;
 }
 var E = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
-function N(e) {
+function O(e) {
     var t, n, r, l;
-    let { title: E, header: N, info: O, staticBannerSrc: j, videoBannerSrc: C, bannerAspectRatio: S = 0, iconSrc: I, embedUrl: T, actions: P = [], trackingConfig: A } = e;
+    let { title: E, header: O, info: N, staticBannerSrc: j, videoBannerSrc: C, bannerAspectRatio: S = 0, iconSrc: I, embedUrl: T, actions: P = [], trackingConfig: A } = e;
     A = {
         id: null != (n = null == (t = A) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
@@ -147,14 +147,14 @@ function N(e) {
                 className: x.contentContainer,
                 style: { background: k },
                 children: [
-                    null != N &&
+                    null != O &&
                         (0, i.jsxs)('div', {
                             className: x.header,
                             children: [
                                 (0, i.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'none',
-                                    children: N
+                                    children: O
                                 }),
                                 M
                             ]
@@ -176,10 +176,10 @@ function N(e) {
                                         lineClamp: 1,
                                         children: E
                                     }),
-                                    O
+                                    N
                                 ]
                             }),
-                            null == N && M
+                            null == O && M
                         ]
                     }),
                     P.length > 0 &&

@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(850864),
     v = n(729995),
     y = n(966301),
-    C = n(707076),
-    O = n(213956),
+    O = n(707076),
+    C = n(213956),
     I = n(388032),
     E = n(184344);
 function S() {
@@ -50,10 +50,10 @@ function T(e) {
                       completed: !0,
                       guildId: n
                   })
-                : (0, r.jsx)(C.Z, {});
+                : (0, r.jsx)(O.Z, {});
             break;
         case x.PG.SAFETY_CHECK:
-            t = (0, r.jsx)(O.Z, {});
+            t = (0, r.jsx)(C.Z, {});
             break;
         case x.PG.DEFAULT_CHANNELS:
             t = (0, r.jsx)(N.Z, { saveOnClose: !f });

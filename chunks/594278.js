@@ -16,7 +16,7 @@ let g = function (e) {
         [x, j] = i.useState(0),
         [N, _] = i.useState(!1),
         [v, y] = i.useState(!1),
-        C = i.useCallback(
+        O = i.useCallback(
             (e, t) => {
                 j((n) => {
                     let r = n + t;
@@ -25,16 +25,16 @@ let g = function (e) {
             },
             [j]
         ),
-        O = i.useCallback(() => {
-            v || C(t, 1);
-        }, [C, t, v]),
+        C = i.useCallback(() => {
+            v || O(t, 1);
+        }, [O, t, v]),
         I = i.useCallback(() => {
-            v || C(t, -1);
-        }, [C, t, v]);
+            v || O(t, -1);
+        }, [O, t, v]);
     return (
         i.useEffect(() => {
-            null != g && (N ? N && h.stop() : h.start(g, O));
-        }, [N, h, g, O]),
+            null != g && (N ? N && h.stop() : h.start(g, C));
+        }, [N, h, g, C]),
         (0, r.jsxs)('div', {
             className: m.root,
             onMouseEnter: () => _(!0),
@@ -62,7 +62,7 @@ let g = function (e) {
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: a()(m.carouselCaret, s),
-                    onClick: O,
+                    onClick: C,
                     onMouseEnter: () => b(d.n.LEFT),
                     ignoreKeyPress: v,
                     children: (0, r.jsx)(c.Z, {

@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(294294),
     v = n(310800),
     y = n(833695),
-    C = n(981631),
-    O = n(176505),
+    O = n(981631),
+    C = n(176505),
     I = n(388032),
     E = n(560131);
 function S(e) {
@@ -43,9 +43,9 @@ function S(e) {
             type: h.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
-            returnToSection: C.pNK.GUILD_PRODUCTS
+            returnToSection: O.pNK.GUILD_PRODUCTS
         }),
-            (0, f.uL)(C.Z5c.CHANNEL(T.id, O.oC.GUILD_SHOP));
+            (0, f.uL)(O.Z5c.CHANNEL(T.id, C.oC.GUILD_SHOP));
     }, [T]);
     if (!S || R) return (0, r.jsx)(l.$jN, {});
     if (null == T) return null;
@@ -58,8 +58,8 @@ function S(e) {
                 (0, r.jsx)(l.R94, {
                     type: l.R94.Types.DESCRIPTION,
                     children: I.NW.format(I.t.xiYuDg, {
-                        monetizationPolicyLink: j.Z.getArticleURL(C.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: j.Z.getCreatorSupportArticleURL(C.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: j.Z.getArticleURL(O.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: j.Z.getCreatorSupportArticleURL(O.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]

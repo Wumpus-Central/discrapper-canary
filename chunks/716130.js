@@ -137,8 +137,8 @@ function v(e) {
         d = (0, l.e7)([m.Z], () => m.Z.getGuild(t)),
         v = (0, l.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         y = v.filter((e) => e.inOnboarding),
-        C = v.filter((e) => !0 !== e.inOnboarding),
-        O = [
+        O = v.filter((e) => !0 !== e.inOnboarding),
+        C = [
             ...y.map((e) => ({
                 id: e.id,
                 data: e
@@ -147,7 +147,7 @@ function v(e) {
                 id: 'separator',
                 data: (0, f.ae)()
             },
-            ...C.map((e) => ({
+            ...O.map((e) => ({
                 id: e.id,
                 data: e
             }))
@@ -156,7 +156,7 @@ function v(e) {
             handleDragStart: I,
             handleDragReset: E,
             handleDragComplete: S
-        } = (0, u.Z)(O, (e) => {
+        } = (0, u.Z)(C, (e) => {
             let t = e.findIndex((e) => 'separator' === e.id),
                 n = e.slice(0, t).map((e) => N(j({}, e.data), { inOnboarding: !0 })),
                 r = e.slice(t + 1).map((e) =>
@@ -225,7 +225,7 @@ function v(e) {
                       ? null
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
-                                C.map((e, t) =>
+                                O.map((e, t) =>
                                     (0, r.jsx)(
                                         h.Z,
                                         {

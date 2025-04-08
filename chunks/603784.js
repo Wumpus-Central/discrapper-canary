@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(426563),
     v = n(909746),
     y = n(501801),
-    C = n(981631),
-    O = n(388032),
+    O = n(981631),
+    C = n(388032),
     I = n(677234);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -92,7 +92,7 @@ let P = i.forwardRef((e, t) => {
         { log: i, className: s, expanded: o, guildId: h, guild: N, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: D, onUserContextMenu: Z, theme: A } = e,
         k = (function () {
             let { changes: e } = i;
-            return (i.actionType !== C.vB8.DELETE || i.action === C.rsA.MEMBER_BAN_ADD || i.action === C.rsA.MEMBER_KICK || i.action === C.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, y.xO)(i, e));
+            return (i.actionType !== O.vB8.DELETE || i.action === O.rsA.MEMBER_BAN_ADD || i.action === O.rsA.MEMBER_KICK || i.action === O.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, y.xO)(i, e));
         })(),
         W = I.headerDefault;
     o ? (W = I.headerExpanded) : k && (W = I.headerClickable);
@@ -110,7 +110,7 @@ let P = i.forwardRef((e, t) => {
                   variant: 'text-sm/normal',
                   children: [L, '\u2014', M]
               });
-    let G = k ? R : C.dG4;
+    let G = k ? R : O.dG4;
     return (0, r.jsx)(l.mh, {
         id: i.id,
         children: (e) =>
@@ -156,7 +156,7 @@ let P = i.forwardRef((e, t) => {
                                                                 t.stopPropagation(), e.onClick(t);
                                                             },
                                                             className: I.avatar,
-                                                            src: i.action === C.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === C.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === C.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === C.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, _.j)() : null == (t = i.user) ? void 0 : t.getAvatarURL(h, 40),
+                                                            src: i.action === O.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === O.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === O.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === O.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, _.j)() : null == (t = i.user) ? void 0 : t.getAvatarURL(h, 40),
                                                             'aria-hidden': !0,
                                                             size: d.EFr.SIZE_40
                                                         })
@@ -188,7 +188,7 @@ let P = i.forwardRef((e, t) => {
                                                     return null != s
                                                         ? (0, r.jsx)('div', {
                                                               className: I.overflowEllipsis,
-                                                              children: O.NW.format(s, {
+                                                              children: C.NW.format(s, {
                                                                   user: e,
                                                                   target: t.toString(),
                                                                   userHook: (e, t) => {
@@ -204,12 +204,12 @@ let P = i.forwardRef((e, t) => {
                                                                       if (null != i.options.integration_type) {
                                                                           var n;
                                                                           let e = u.Z.get(i.options.integration_type);
-                                                                          return null != (n = null == e ? void 0 : e.name) ? n : O.NW.string(O.t['n+olu7']);
+                                                                          return null != (n = null == e ? void 0 : e.name) ? n : C.NW.string(C.t['n+olu7']);
                                                                       }
-                                                                      return O.NW.string(O.t['30mdIy']);
+                                                                      return C.NW.string(C.t['30mdIy']);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      i.targetType === C.KFR.USER && i.target instanceof f.Z
+                                                                      i.targetType === O.KFR.USER && i.target instanceof f.Z
                                                                           ? (0, r.jsx)(
                                                                                 T,
                                                                                 {

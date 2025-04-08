@@ -44,7 +44,7 @@ function C(e) {
     }
     return e;
 }
-function q(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function q(e, t) {
         e
     );
 }
-let x = new u.Z('ProductAttachmentManager');
+let q = new u.Z('ProductAttachmentManager');
 class j {
     addAttachment(e, t) {
         let r = this.target.getMaxAttachmentsCount();
@@ -84,10 +84,10 @@ class j {
                           })
                       )
                     : a.uv.announce(b.NW.formatToPlainString(b.t.mBkf6e, { reason: l })),
-                    t((e) => q(C({}, e), { [n.id]: o }));
+                    t((e) => x(C({}, e), { [n.id]: o }));
             }),
             n.on('progress', (e, r) => {
-                t((t) => q(C({}, t), { [n.id]: e / r }));
+                t((t) => x(C({}, t), { [n.id]: e / r }));
             }),
             (this.uploads = [...this.uploads, n]);
     }
@@ -135,7 +135,7 @@ class j {
                 }),
             c = await this.createCloudUploader().uploadFiles(
                 l,
-                q(C({}, a), {
+                x(C({}, a), {
                     price_tier: r,
                     create_new_role: n,
                     image_name: A,
@@ -145,7 +145,7 @@ class j {
                 { addFilesTo: 'attachments' }
             );
         return (
-            x.log('Created/updated product:', c),
+            q.log('Created/updated product:', c),
             null != c &&
                 (this.isEdit
                     ? await o.Z.dispatch({
@@ -213,8 +213,8 @@ function N(e, t) {
         f(d.generateInitialProgresses());
     }, [d]);
     let [h, b] = n.useState(),
-        [v, q] = n.useState(),
-        x = n.useCallback(
+        [v, x] = n.useState(),
+        q = n.useCallback(
             (e) => {
                 d.deleteAttachment(e) && p({});
             },
@@ -229,7 +229,7 @@ function N(e, t) {
         O = n.useCallback(
             async (e) => {
                 try {
-                    b(e), q(void 0);
+                    b(e), x(void 0);
                     let t = await d.saveProductWithAttachments(e);
                     return (
                         null != t &&
@@ -241,7 +241,7 @@ function N(e, t) {
                         t
                     );
                 } catch (e) {
-                    q(
+                    x(
                         e instanceof l.Hx
                             ? e
                             : new l.Hx({
@@ -269,7 +269,7 @@ function N(e, t) {
     return {
         addAttachment: N,
         cancelUnusedUploads: U,
-        deleteAttachment: x,
+        deleteAttachment: q,
         fileUploadProgresses: u,
         uploads: P,
         saveProductWithAttachments: O,

@@ -1,102 +1,102 @@
 n.d(t, {
-    I: () => O,
-    S: () => y
+    I: () => E,
+    S: () => S
 }),
     n(997841);
-var r = n(200651),
-    l = n(192379),
-    a = n(120356),
-    i = n.n(a),
-    s = n(533800),
+var l = n(200651),
+    i = n(192379),
+    s = n(120356),
+    r = n.n(s),
+    a = n(533800),
     o = n(442837),
-    c = n(481060),
+    d = n(481060),
     u = n(484614),
-    d = n(914010),
-    m = n(246946),
-    x = n(626135),
-    g = n(630388),
-    h = n(971130),
+    c = n(914010),
+    h = n(246946),
+    g = n(626135),
+    m = n(630388),
+    x = n(971130),
     v = n(530436),
-    f = n(245335),
-    p = n(981631),
-    j = n(388032),
-    N = n(821022),
-    b = n(20493);
-let y = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))((e) => {
-        let { value: t, autoFocus: n, hideValue: l, onCopy: a, disabled: i } = e;
-        return (0, r.jsx)(u.Z, {
-            value: l ? j.NW.string(j.t['6HzNgY']) : t,
-            buttonColor: c.zxk.Colors.BRAND,
-            onCopy: a,
+    p = n(245335),
+    N = n(981631),
+    I = n(388032),
+    f = n(821022),
+    j = n(20493);
+let S = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: i, onCopy: s, disabled: r } = e;
+        return (0, l.jsx)(u.Z, {
+            value: i ? I.NW.string(I.t['6HzNgY']) : t,
+            buttonColor: d.zxk.Colors.BRAND,
+            onCopy: s,
             autoFocus: n,
-            disabled: i
+            disabled: r
         });
     }),
-    O = (e) => {
-        let { guild: t, noInvitesAvailable: n, showFriends: a, onClose: o, modalState: u, isApplicationBypassToggleEnabled: m, setInviteFlags: O, copyValue: E, changePage: C, inviteChannel: I, source: S, code: T, guildScheduledEvent: P, disabled: W, application: w } = e,
-            { maxAge: Z, maxUses: k, networkError: _, showVanityURL: D, flags: R } = u,
-            A = l.useCallback(() => {
-                x.default.track(p.rMx.COPY_INSTANT_INVITE, {
-                    server: d.Z.getGuildId(),
-                    channel: null == I ? void 0 : I.id,
-                    channel_type: null == I ? void 0 : I.type,
-                    location: S,
-                    code: T,
-                    guild_scheduled_event_id: null == P ? void 0 : P.id,
-                    application_id: null == w ? void 0 : w.id
+    E = (e) => {
+        let { guild: t, noInvitesAvailable: n, showFriends: s, onClose: o, modalState: u, isApplicationBypassToggleEnabled: h, setInviteFlags: E, copyValue: T, changePage: b, inviteChannel: C, source: _, code: y, guildScheduledEvent: O, disabled: P, application: Z } = e,
+            { maxAge: A, maxUses: w, networkError: k, showVanityURL: R, flags: M } = u,
+            W = i.useCallback(() => {
+                g.default.track(N.rMx.COPY_INSTANT_INVITE, {
+                    server: c.Z.getGuildId(),
+                    channel: null == C ? void 0 : C.id,
+                    channel_type: null == C ? void 0 : C.type,
+                    location: _,
+                    code: y,
+                    guild_scheduled_event_id: null == O ? void 0 : O.id,
+                    application_id: null == Z ? void 0 : Z.id
                 });
-            }, [null == w ? void 0 : w.id, I, S, T, P]);
-        return (0, r.jsxs)(r.Fragment, {
+            }, [null == Z ? void 0 : Z.id, C, _, y, O]);
+        return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsx)(y, {
-                    value: E,
-                    autoFocus: a,
-                    onCopy: A,
-                    disabled: W
+                (0, l.jsx)(S, {
+                    value: T,
+                    autoFocus: s,
+                    onCopy: W,
+                    disabled: P
                 }),
-                m &&
-                    (0, r.jsxs)(r.Fragment, {
+                h &&
+                    (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: N.divider }),
-                            (0, r.jsx)(c.j7V, {
-                                className: N.toggle,
-                                value: (0, g.yE)(R, s.$.IS_APPLICATION_BYPASS),
-                                onChange: (e) => O((0, g.mB)(R, s.$.IS_APPLICATION_BYPASS, e)),
-                                disabled: W,
+                            (0, l.jsx)('div', { className: f.divider }),
+                            (0, l.jsx)(d.j7V, {
+                                className: f.toggle,
+                                value: (0, m.yE)(M, a.$.IS_APPLICATION_BYPASS),
+                                onChange: (e) => E((0, m.mB)(M, a.$.IS_APPLICATION_BYPASS, e)),
+                                disabled: P,
                                 hideBorder: !0,
-                                children: (0, r.jsxs)('div', {
-                                    className: N.formText,
+                                children: (0, l.jsxs)('div', {
+                                    className: f.formText,
                                     children: [
-                                        (0, r.jsx)(c.Text, {
+                                        (0, l.jsx)(d.Text, {
                                             variant: 'text-md/semibold',
-                                            children: j.NW.string(j.t['1i1bUl'])
+                                            children: I.NW.string(I.t['1i1bUl'])
                                         }),
-                                        (0, r.jsx)(c.ua7, {
-                                            text: j.NW.string(j.t['jvd/LC']),
+                                        (0, l.jsx)(d.ua7, {
+                                            text: I.NW.string(I.t['jvd/LC']),
                                             children: (e) =>
-                                                (0, r.jsx)(
-                                                    c.d3s,
+                                                (0, l.jsx)(
+                                                    d.d3s,
                                                     (function (e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
-                                                                r = Object.keys(n);
+                                                                l = Object.keys(n);
                                                             'function' == typeof Object.getOwnPropertySymbols &&
-                                                                (r = r.concat(
+                                                                (l = l.concat(
                                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                                     })
                                                                 )),
-                                                                r.forEach(function (t) {
-                                                                    var r;
-                                                                    (r = n[t]),
+                                                                l.forEach(function (t) {
+                                                                    var l;
+                                                                    (l = n[t]),
                                                                         t in e
                                                                             ? Object.defineProperty(e, t, {
-                                                                                  value: r,
+                                                                                  value: l,
                                                                                   enumerable: !0,
                                                                                   configurable: !0,
                                                                                   writable: !0
                                                                               })
-                                                                            : (e[t] = r);
+                                                                            : (e[t] = l);
                                                                 });
                                                         }
                                                         return e;
@@ -114,33 +114,33 @@ let y = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))
                             })
                         ]
                     }),
-                n || D
+                n || R
                     ? null
-                    : (0, r.jsxs)(c.Text, {
+                    : (0, l.jsxs)(d.Text, {
                           variant: 'text-xs/normal',
-                          className: i()(b.marginTop8, N.footerText),
+                          className: r()(j.marginTop8, f.footerText),
                           children: [
-                              (0, h.Vg)(Z, k),
+                              (0, x.Vg)(A, w),
                               ' ',
-                              a
-                                  ? (0, r.jsx)(c.eee, {
-                                        onClick: () => C(f.RV.SETTINGS),
-                                        children: j.NW.string(j.t.VNe8Pz)
+                              s
+                                  ? (0, l.jsx)(d.eee, {
+                                        onClick: () => b(p.RV.SETTINGS),
+                                        children: I.NW.string(I.t.VNe8Pz)
                                     })
                                   : null
                           ]
                       }),
-                !n && a && D
-                    ? (0, r.jsxs)(c.Text, {
+                !n && s && R
+                    ? (0, l.jsxs)(d.Text, {
                           variant: 'text-xs/normal',
-                          className: i()(b.marginTop8, N.footerText),
-                          children: [j.NW.string(j.t['0M2U9/']), ' ']
+                          className: r()(j.marginTop8, f.footerText),
+                          children: [I.NW.string(I.t['0M2U9/']), ' ']
                       })
                     : null,
-                null != _
-                    ? (0, r.jsx)(v.W, {
+                null != k
+                    ? (0, l.jsx)(v.W, {
                           guild: t,
-                          error: _,
+                          error: k,
                           onClose: o
                       })
                     : null

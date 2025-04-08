@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(533694),
     v = n(345114),
     E = n(924301),
-    N = n(225890),
-    O = n(434404),
+    O = n(225890),
+    N = n(434404),
     j = n(507435),
     C = n(504733),
     S = n(563959),
@@ -73,8 +73,8 @@ var r = n(200651),
     ey = n(461135),
     ev = n(296571),
     eE = n(587737),
-    eN = n(482239),
-    eO = n(328749),
+    eO = n(482239),
+    eN = n(328749),
     ej = n(4305),
     eC = n(910548),
     eS = n(981631),
@@ -209,7 +209,7 @@ let ek = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, r.jsx)(eN.Z, {
+                ? (0, r.jsx)(eO.Z, {
                       message: t,
                       channel: n,
                       compact: i,
@@ -406,7 +406,7 @@ let ek = Object.freeze({
                 message: t,
                 compact: n,
                 onClick: () => {
-                    null != o && O.Z.open(o, eS.pNK.DISCOVERY);
+                    null != o && N.Z.open(o, eS.pNK.DISCOVERY);
                 }
             });
         },
@@ -480,7 +480,7 @@ let ek = Object.freeze({
                 onContextMenuThread: p
             });
         },
-        [eS.uaV.THREAD_STARTER_MESSAGE]: eO.Z,
+        [eS.uaV.THREAD_STARTER_MESSAGE]: eN.Z,
         [eS.uaV.GUILD_INVITE_REMINDER]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 l = (0, a.e7)([B.default], () => B.default.getCurrentUser()),
@@ -566,7 +566,7 @@ let ek = Object.freeze({
                         compact: i,
                         usernameHook: l
                     }),
-                    null != o && o.name === t.content ? (0, r.jsx)(N.Z, { code: ''.concat(n.guild_id, '-').concat(o.id) }) : null
+                    null != o && o.name === t.content ? (0, r.jsx)(O.Z, { code: ''.concat(n.guild_id, '-').concat(o.id) }) : null
                 ]
             });
         },

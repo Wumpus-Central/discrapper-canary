@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(38267),
     v = n(884902),
     E = n(670188),
-    N = n(695346),
-    O = n(271383),
+    O = n(695346),
+    N = n(271383),
     j = n(594174),
     C = n(768581),
     S = n(900849),
@@ -81,20 +81,20 @@ function M(e) {
         F = (0, P.J)(M, W),
         { setPopout: B } = (0, y.Z)(W.id, w.d$),
         G = (0, x.qo)(W, U, B, !0),
-        H = N.QK.useSetting(),
+        H = O.QK.useSetting(),
         V = (0, I.n)(),
         [z, K] = i.useState(!1),
         [Y, X] = i.useState((null == F ? void 0 : F.coverImage) == null),
         q = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         Q = (0, c.e7)(
-            [O.ZP, j.default],
+            [N.ZP, j.default],
             () => {
                 var e;
-                return O.ZP.isMember(null == F ? void 0 : F.guildId, null == (e = j.default.getCurrentUser()) ? void 0 : e.id);
+                return N.ZP.isMember(null == F ? void 0 : F.guildId, null == (e = j.default.getCurrentUser()) ? void 0 : e.id);
             },
             [F]
         ),
-        J = (0, c.e7)([O.ZP], () => ((null == F ? void 0 : F.authorId) != null ? O.ZP.getMember(F.guildId, F.authorId) : null)),
+        J = (0, c.e7)([N.ZP], () => ((null == F ? void 0 : F.authorId) != null ? N.ZP.getMember(F.guildId, F.authorId) : null)),
         $ = (0, f.Z)((null == J ? void 0 : J.avatarDecoration) != null ? (null == J ? void 0 : J.avatarDecoration) : null == F || null == (t = F.user) ? void 0 : t.avatarDecoration),
         [ee, et, en] = i.useMemo(() => {
             var e;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(539854);
+n.d(t, { Z: () => N }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     a = n(658722),
@@ -19,40 +19,40 @@ var r = n(200651),
     y = n(981631),
     v = n(388032),
     E = n(318135);
-function N(e) {
+function O(e) {
     var t;
     return (0, r.jsx)('span', {
         style: { color: null != (t = e.colorString) ? t : 'currentColor' },
         children: e.name
     });
 }
-function O(e) {
+function N(e) {
     let { guildId: t } = e,
         n = (0, u.e7)([f.default], () => f.default.getCurrentUser()),
         a = (0, u.e7)([m.Z], () => m.Z.getGuild(t)),
         o = (0, u.e7)([m.Z], () => m.Z.getRoles(t)),
-        { impersonateType: O, viewingRoles: j } = (0, u.cj)([b.Z], () => ({
+        { impersonateType: N, viewingRoles: j } = (0, u.cj)([b.Z], () => ({
             impersonateType: b.Z.getImpersonateType(t),
             viewingRoles: b.Z.getViewingRoles(t)
         })),
-        C = O === x.z.SERVER_SHOP,
+        C = N === x.z.SERVER_SHOP,
         S = (0, u.e7)([p.ZP], () => (null != n ? p.ZP.getTrueMember(t, n.id) : null)),
         [I, T] = (0, d.A7R)(null == j ? [] : g.default.keys(j)),
         P = i.useRef(a);
     i.useEffect(() => {
         let e = {},
             t = P.current;
-        if (null != t && null != O) {
+        if (null != t && null != N) {
             for (let t of I) {
                 let n = o[t];
                 null != n && (e[t] = n);
             }
             (0, _.Zm)(t.id, {
-                type: O,
+                type: N,
                 roles: e
             });
         }
-    }, [I, O, o]);
+    }, [I, N, o]);
     let A =
             null != a && null != n && null != S
                 ? s()(o)
@@ -102,7 +102,7 @@ function O(e) {
                                               d.lo1,
                                               {
                                                   value: n.id,
-                                                  children: [(0, r.jsx)(d.lo1.Label, { children: N(n) }), (0, r.jsx)(d.lo1.Checkbox, {})]
+                                                  children: [(0, r.jsx)(d.lo1.Label, { children: O(n) }), (0, r.jsx)(d.lo1.Checkbox, {})]
                                               },
                                               n.id
                                           )
@@ -120,7 +120,7 @@ function O(e) {
                                       {
                                           value: n.id,
                                           disabled: !0,
-                                          children: [(0, r.jsx)(d.lo1.Label, { children: N(n) }), (0, r.jsx)(d.lo1.Checkbox, { checked: !0 })]
+                                          children: [(0, r.jsx)(d.lo1.Label, { children: O(n) }), (0, r.jsx)(d.lo1.Checkbox, { checked: !0 })]
                                       },
                                       n.id
                                   )

@@ -165,7 +165,7 @@ let j = function (e) {
             },
             [t]
         ),
-        { handleDragStart: v, handleDragReset: y, handleDragComplete: C } = (0, l.Z)(N, _);
+        { handleDragStart: v, handleDragReset: y, handleDragComplete: O } = (0, l.Z)(N, _);
     return (0, r.jsxs)('div', {
         className: g.section,
         children: [
@@ -180,7 +180,7 @@ let j = function (e) {
                         onDelete: j,
                         onDragStart: v,
                         onDragReset: y,
-                        onDragComplete: C
+                        onDragComplete: O
                     },
                     e.channelId
                 )

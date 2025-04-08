@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r,
     i,
     s,
@@ -66,7 +66,7 @@ class y extends (r = a.ZP.Store) {
               writable: !0
           })
         : (y[i] = s);
-let C = new y(l.Z, {
+let O = new y(l.Z, {
     GUILD_SETTINGS_INIT: v,
     GUILD_SETTINGS_SET_SECTION: v,
     GUILD_SETTINGS_ONBOARDING_STEP: function (e) {

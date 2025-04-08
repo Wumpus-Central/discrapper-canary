@@ -106,10 +106,10 @@ function v(e) {
           });
 }
 let y = (e, t) => () => t(_(N({}, e), { enabled: !e.enabled })),
-    C = (e) => {
+    O = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    O = (e) => {
+    C = (e) => {
         var { className: t, children: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -136,9 +136,9 @@ let y = (e, t) => () => t(_(N({}, e), { enabled: !e.enabled })),
                 N(
                     {
                         className: t,
-                        onClick: C,
-                        onMouseDown: C,
-                        onMouseUp: C
+                        onClick: O,
+                        onMouseDown: O,
+                        onMouseUp: O
                     },
                     i
                 ),
@@ -151,7 +151,7 @@ function I(e) {
     let { rule: n, onChangeRule: i, onContextMenu: s } = e,
         l = y(n, i),
         o = (e) => {
-            C(e), s(e);
+            O(e), s(e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -162,7 +162,7 @@ function I(e) {
                     onChangeRule: i
                 })
             }),
-            (0, r.jsxs)(O, {
+            (0, r.jsxs)(C, {
                 className: j.actionContainer,
                 children: [
                     (0, r.jsx)(a.rsf, {
@@ -211,7 +211,7 @@ function S(e) {
             }
         }, 300),
         I = (e) => {
-            C(e), l(e);
+            O(e), l(e);
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: T, descriptionText: P, icon: w } = o,
@@ -257,7 +257,7 @@ function S(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)(O, {
+            (0, r.jsxs)(C, {
                 className: j.actionContainer,
                 children: [
                     (0, r.jsx)(a.rsf, {
@@ -324,7 +324,7 @@ function T(e) {
                     (0, r.jsx)(v, { triggerType: t })
                 ]
             }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(C, {
                 className: j.actionContainer,
                 children: (0, r.jsx)(a.zxk, {
                     size: a.zxk.Sizes.SMALL,

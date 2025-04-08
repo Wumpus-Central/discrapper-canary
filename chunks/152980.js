@@ -1,4 +1,4 @@
-r.d(t, { s: () => q }), r(388685);
+r.d(t, { s: () => x }), r(388685);
 var n = r(200651),
     A = r(192379),
     a = r(120356),
@@ -71,23 +71,23 @@ function C(e) {
         })
     });
 }
-function q(e) {
+function x(e) {
     let { onFileAdded: t } = e,
         { uploads: r, canAttachFiles: a, canAttachArchives: o, addAttachment: c, deleteAttachment: d, fileUploadProgresses: f } = (0, g.P)(),
-        q = A.useRef(!1);
-    function x(e) {
+        x = A.useRef(!1);
+    function q(e) {
         try {
             for (let t of e)
                 c({
                     platform: s.ow.WEB,
                     file: t
                 });
-            q.current = !0;
+            x.current = !0;
         } catch (e) {}
     }
     return (
         A.useEffect(() => {
-            q.current && (t(), (q.current = !1));
+            x.current && (t(), (x.current = !1));
         }, [t]),
         (0, n.jsxs)('div', {
             className: b.container,
@@ -97,7 +97,7 @@ function q(e) {
                     title: m.NW.string(m.t['5eTk2t']),
                     description: m.NW.string(m.t.Ecxoxs),
                     icons: p.J6,
-                    onDrop: x
+                    onDrop: q
                 }),
                 (0, n.jsxs)(u.Z, {
                     className: b.addFileButtonLook,
@@ -108,7 +108,7 @@ function q(e) {
                     'aria-describedby': v,
                     multiple: !0,
                     onChange: function (e) {
-                        null != e.currentTarget.files && x(e.currentTarget.files);
+                        null != e.currentTarget.files && q(e.currentTarget.files);
                     },
                     children: [
                         (0, n.jsx)(l.dZu, {

@@ -46,7 +46,7 @@ function E(e) {
     }
     return e;
 }
-function N(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,9 +64,9 @@ function N(e, t) {
         e
     );
 }
-class O extends (r = a.PureComponent) {
+class N extends (r = a.PureComponent) {
     get analyticsLocation() {
-        return N(E({}, this.props.analyticsContext.location), { object: b.qAy.BUTTON_CTA });
+        return O(E({}, this.props.analyticsContext.location), { object: b.qAy.BUTTON_CTA });
     }
     renderDropdown() {
         let { dispatchState: e } = this.props;
@@ -142,7 +142,7 @@ class O extends (r = a.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                N(E({}, n), {
+                                O(E({}, n), {
                                     libraryApplication: t,
                                     onPlay: this.handleClick
                                 })
@@ -170,8 +170,8 @@ function j(e) {
         o = (0, s.e7)([p.ZP], () => new Set(p.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
         c = (0, s.e7)([h.Z], () => (null != n ? h.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
-        O,
-        N(E({}, e), {
+        N,
+        O(E({}, e), {
             analyticsContext: r,
             isLaunchable: a,
             isLaunching: l,
@@ -180,7 +180,7 @@ function j(e) {
         })
     );
 }
-v(O, 'defaultProps', {
+v(N, 'defaultProps', {
     fullWidth: !1,
     size: c.zxk.Sizes.LARGE,
     tooltipPosition: 'top',

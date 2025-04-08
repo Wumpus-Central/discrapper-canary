@@ -313,7 +313,7 @@ class j extends (r = o.Component) {
     constructor(...e) {
         super(...e),
             b(this, 'showTimeout', new f.V7()),
-            b(this, 'domElementRef', o.createRef()),
+            b(this, 'domElementRef', { current: null }),
             b(this, 'hasDomElement', !1),
             b(this, 'siblingDomRef', o.createRef()),
             b(this, 'state', { shouldShowTooltip: !1 }),

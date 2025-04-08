@@ -74,8 +74,8 @@ let b = {
     y = {},
     v = null,
     E = 86400000;
-var N = (((i = N || {}).IS_OWNER = 'is_owner'), (i.IS_ADMIN = 'is_admin'), (i.IS_COMMUNITY = 'is_community'), (i.GUILD_SIZE = 'guild_size'), (i.IS_HUB = 'is_hub'), (i.IS_VIEWING = 'is_viewing'), (i.GUILD_PERMISSIONS = 'guild_permissions'), (i.GUILD_SIZE_ALL = 'guild_size_all'), i);
-let O = new Set(Object.values(N));
+var O = (((i = O || {}).IS_OWNER = 'is_owner'), (i.IS_ADMIN = 'is_admin'), (i.IS_COMMUNITY = 'is_community'), (i.GUILD_SIZE = 'guild_size'), (i.IS_HUB = 'is_hub'), (i.IS_VIEWING = 'is_viewing'), (i.GUILD_PERMISSIONS = 'guild_permissions'), (i.GUILD_SIZE_ALL = 'guild_size_all'), i);
+let N = new Set(Object.values(O));
 function j(e) {
     var t;
     return (
@@ -84,7 +84,7 @@ function j(e) {
         (function (e) {
             let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
             if (0 === t.length) return !0;
-            for (let e of t) if (!O.has(e)) return !1;
+            for (let e of t) if (!N.has(e)) return !1;
             let i = t.includes('guild_size_all'),
                 l = !0;
             for (let o of Object.values(u.Z.getGuilds())) {

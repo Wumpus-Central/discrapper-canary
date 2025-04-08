@@ -31,10 +31,10 @@ function m(e) {
             }
         },
         y = d.NW.string(d.t['ETE/oK']),
-        C = !p && j ? d.NW.formatToPlainString(d.t.nula39, { ruleName: null == h ? void 0 : h.name }) : void 0;
+        O = !p && j ? d.NW.formatToPlainString(d.t.nula39, { ruleName: null == h ? void 0 : h.name }) : void 0;
     return (
         null != f &&
-            (C = (0, r.jsx)(s.Text, {
+            (O = (0, r.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
                 className: u.message,
@@ -52,7 +52,7 @@ function m(e) {
                         onSave: v,
                         onReset: m,
                         onResetText: y,
-                        message: C
+                        message: O
                     })
                 })
         })

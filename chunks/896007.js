@@ -19,7 +19,7 @@ let { getSectionDefinition: m } = c.Z,
     };
 function p(e) {
     var t, n;
-    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageWebhooks: b, canUnlinkChannels: x, canManageBans: j, canAccessMembersPage: N, canViewGuildAnalytics: _, isOwner: v, isOwnerWithRequiredMfaLevel: y, canAccessClanSettings: C, isGuildSettingsFoundationEnabled: O, isGuildAdmin: I, canManageGuildExpressions: E } = e,
+    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageWebhooks: b, canUnlinkChannels: x, canManageBans: j, canAccessMembersPage: N, canViewGuildAnalytics: _, isOwner: v, isOwnerWithRequiredMfaLevel: y, canAccessClanSettings: O, isGuildSettingsFoundationEnabled: C, isGuildAdmin: I, canManageGuildExpressions: E } = e,
         S = () =>
             (0, l.X$)({
                 guild: c,
@@ -71,7 +71,7 @@ function p(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t);
-    if (O) {
+    if (C) {
         let e = [];
         e.push(m(d.pNK.PROFILE, T)),
             e.push(m(d.pNK.TAG, T)),
@@ -165,7 +165,7 @@ function p(e) {
         {
             section: g.HEADER,
             label: u.NW.string(u.t['1g9A/f']),
-            predicate: () => !C && (p || _)
+            predicate: () => !O && (p || _)
         },
         m(d.pNK.CLAN, T),
         m(d.pNK.COMMUNITY, T),

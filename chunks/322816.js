@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(203377),
     v = n(981631),
     y = n(388032),
-    C = n(96878),
-    O = n(877248);
+    O = n(96878),
+    C = n(877248);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,7 +88,7 @@ function S(e) {
         ),
         p = !l.fS(d, g);
     return (0, r.jsx)('div', {
-        className: C.clearButtonWrapper,
+        className: O.clearButtonWrapper,
         children: (0, r.jsx)(c.ua7, {
             text: p ? y.NW.string(y.t['IQ/6Sk']) : null,
             position: 'top',
@@ -96,7 +96,7 @@ function S(e) {
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: i } = e;
                 return (0, r.jsx)(c.zxk, {
-                    className: C.clearButton,
+                    className: O.clearButton,
                     size: c.zxk.Sizes.TINY,
                     look: c.zxk.Looks.LINK,
                     color: c.zxk.Colors.LINK,
@@ -114,9 +114,9 @@ function T(e) {
     let { guild: t, role: n, specs: i, locked: s } = e;
     if (0 === i.length)
         return (0, r.jsxs)('div', {
-            className: C.noResultsContainer,
+            className: O.noResultsContainer,
             children: [
-                (0, r.jsx)(b.Z, { className: C.noResults }),
+                (0, r.jsx)(b.Z, { className: O.noResults }),
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/normal',
                     children: y.NW.string(y.t.DEBGqK)
@@ -127,7 +127,7 @@ function T(e) {
         return u.Z.can(e, t) ? !u.Z.can(e, t, null, { [n.id]: E(I({}, n), { permissions: l.Od(n.permissions, e) }) }) && y.NW.string(y.t['K+D+GB']) : y.NW.string(y.t.nOtPMD);
     }
     return (0, r.jsxs)('div', {
-        className: C.permissionsWrapper,
+        className: O.permissionsWrapper,
         children: [
             (0, r.jsx)(S, {
                 guild: t,
@@ -138,7 +138,7 @@ function T(e) {
                 (0, r.jsx)(
                     d.Z,
                     {
-                        className: C.permissionsForm,
+                        className: O.permissionsForm,
                         spec: e,
                         permissions: n.permissions,
                         locked: s,
@@ -176,14 +176,14 @@ function P(e) {
             P.current || '' === d.trimStart() || (g.default.track(v.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (P.current = !0));
         }, [d]),
         (0, r.jsx)(c.yWw, {
-            className: C.scroller,
+            className: O.scroller,
             style: { scrollPaddingTop: h },
             onScroll: S,
             children: (0, r.jsxs)('div', {
-                className: O.contentWidth,
+                className: C.contentWidth,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: a()(O.header, O.stickyHeader, { [O.stickyHeaderElevated]: !b }),
+                        className: a()(C.header, C.stickyHeader, { [C.stickyHeaderElevated]: !b }),
                         ref: f,
                         children: [
                             (0, r.jsx)(j.Z, {
@@ -193,11 +193,11 @@ function P(e) {
                                 setSelectedSection: l
                             }),
                             (0, r.jsx)('div', {
-                                className: C.noticeContainer,
+                                className: O.noticeContainer,
                                 children: (0, r.jsx)(N.Z, { role: n })
                             }),
                             (0, r.jsx)('div', {
-                                className: C.searchContainer,
+                                className: O.searchContainer,
                                 children: (0, r.jsx)(c.E1j, {
                                     size: c.E1j.Sizes.MEDIUM,
                                     query: d,

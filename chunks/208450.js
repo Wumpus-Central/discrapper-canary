@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(592125),
     v = n(984933),
     E = n(768119),
-    N = n(944486),
-    O = n(585483),
+    O = n(944486),
+    N = n(585483),
     j = n(72006),
     C = n(405656),
     S = n(181389),
@@ -48,7 +48,7 @@ let k = (0, x.hQ)(),
 class D extends i.PureComponent {
     componentDidMount() {
         var e, t;
-        O.S.subscribe(P.CkL.PERFORM_SEARCH, this.search), O.S.subscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), O.S.subscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch), null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute('aria-haspopup', 'listbox');
+        N.S.subscribe(P.CkL.PERFORM_SEARCH, this.search), N.S.subscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), N.S.subscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch), null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute('aria-haspopup', 'listbox');
     }
     componentDidUpdate(e) {
         let { editorState: t, searchId: n } = this.props;
@@ -59,7 +59,7 @@ class D extends i.PureComponent {
         }
     }
     componentWillUnmount() {
-        O.S.unsubscribe(P.CkL.PERFORM_SEARCH, this.search), O.S.unsubscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), O.S.unsubscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch);
+        N.S.unsubscribe(P.CkL.PERFORM_SEARCH, this.search), N.S.unsubscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), N.S.unsubscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
         let t = C.kG(j.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
@@ -203,7 +203,7 @@ class D extends i.PureComponent {
             Z(this, 'handleFocusSearch', (e) => {
                 let { prefillCurrentChannel: t } = e;
                 if (!t) return void this.focusEditor();
-                let n = N.Z.getChannelId(),
+                let n = O.Z.getChannelId(),
                     r = y.Z.getChannel(n);
                 if (((null == r ? void 0 : r.isThread()) && (r = y.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
                 let i = v.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(392711),
@@ -20,13 +20,13 @@ var r = n(200651),
     _ = n(716455);
 let v = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     y = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'],
-    C = (e) => {
+    O = (e) => {
         let { guild: t, onEnableDiscovery: n, isGuildAdmin: s } = e,
-            [C, O] = (0, l.Z)(() => [a().sample(v), a().sample(y)], []);
+            [O, C] = (0, l.Z)(() => [a().sample(v), a().sample(y)], []);
         i.useEffect(() => {
-            (0, u.z)([C, O]);
-        }, [C, O]);
-        let [I, E] = (0, o.Wu)([g.Z], () => [g.Z.getGuild(C), g.Z.getGuild(O)], [C, O]),
+            (0, u.z)([O, C]);
+        }, [O, C]);
+        let [I, E] = (0, o.Wu)([g.Z], () => [g.Z.getGuild(O), g.Z.getGuild(C)], [O, C]),
             { canEnableDiscovery: S, isPendingSuccess: T } = (0, o.cj)(
                 [m.ZP],
                 () => ({

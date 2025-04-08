@@ -20,7 +20,7 @@ var r = n(200651),
     _ = n(981631),
     v = n(388032),
     y = n(350612);
-function C(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function C(e) {
     }
     return e;
 }
-function O(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,8 +65,8 @@ function O(e, t) {
 }
 let I = 'RULE';
 function E(e) {
-    let { rule: t, rulesChannel: n, index: s, onChange: l, onKeyDown: o, onClear: u, onRuleReorder: f, isDropHovered: b, focused: x, onFocus: j, previewEnabled: _, isDragEnabled: C } = e,
-        O = i.useRef(null),
+    let { rule: t, rulesChannel: n, index: s, onChange: l, onKeyDown: o, onClear: u, onRuleReorder: f, isDropHovered: b, focused: x, onFocus: j, previewEnabled: _, isDragEnabled: O } = e,
+        C = i.useRef(null),
         E = i.useRef(null),
         [{ textValue: S, richValue: T }, P] = i.useState((0, p.eK)(t.value)),
         [, w, R] = (0, c.c)({
@@ -84,7 +84,7 @@ function E(e) {
             hover: (e, t) => {
                 var n;
                 let { index: r } = e,
-                    i = null == (n = O.current) ? void 0 : n.getBoundingClientRect(),
+                    i = null == (n = C.current) ? void 0 : n.getBoundingClientRect(),
                     a = t.getClientOffset();
                 if (null == i || null == a) return;
                 let l = (i.bottom - i.top) / 2,
@@ -99,7 +99,7 @@ function E(e) {
         (i.useLayoutEffect(
             () => (
                 w(E),
-                R(D(O)),
+                R(D(C)),
                 () => {
                     w(null), D(null);
                 }
@@ -114,7 +114,7 @@ function E(e) {
         return null;
     let Z = '' !== t.value ? t.value : t.id;
     return (0, r.jsx)('div', {
-        ref: O,
+        ref: C,
         className: a()(y.draggableInputContainer, { [y.dragging]: b }),
         'data-dnd-name': Z,
         children: (0, r.jsxs)('div', {
@@ -167,7 +167,7 @@ function E(e) {
                     className: y.dragContainer,
                     'data-dnd-name': Z,
                     children:
-                        C &&
+                        O &&
                         (0, r.jsx)(m.Vni, {
                             size: 'xs',
                             color: 'currentColor',
@@ -191,7 +191,7 @@ function S(e) {
                 if (t.length !== N.X2)
                     if (null != e && '' === t[t.length - 1].value) {
                         let r = [...t];
-                        (r[t.length - 1] = O(C({}, r[t.length - 1]), { value: e })), n(r), I(r.length - 1);
+                        (r[t.length - 1] = C(O({}, r[t.length - 1]), { value: e })), n(r), I(r.length - 1);
                     } else
                         n([
                             ...t,
@@ -209,7 +209,7 @@ function S(e) {
         }, [S]),
         P = (e, r) => {
             let i = [...t];
-            (i[r] = O(C({}, i[r]), { value: e })), n(i);
+            (i[r] = C(O({}, i[r]), { value: e })), n(i);
         },
         w = (e) => {
             let r = [...t.slice(0, e), ...t.slice(e + 1)];

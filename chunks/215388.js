@@ -1,4 +1,4 @@
-r.d(t, { Z: () => q }), r(388685);
+r.d(t, { Z: () => x }), r(388685);
 var n = r(200651),
     A = r(192379),
     a = r(120356),
@@ -35,9 +35,9 @@ function C(e) {
         children: [null != (t = null == a ? void 0 : a.length) ? t : 0, ' ', null != A && '/ '.concat(A)]
     });
 }
-function q(e) {
+function x(e) {
     var t;
-    let { 'aria-labelledby': r, className: a, id: l, autoFocus: d, maxLength: g, onChange: h, onSubmit: q, showCharacterCount: x = !1, placeholder: j, required: N, value: O, enableThemedBackground: U = !1, parentModalKey: P } = e,
+    let { 'aria-labelledby': r, className: a, id: l, autoFocus: d, maxLength: g, onChange: h, onSubmit: x, showCharacterCount: q = !1, placeholder: j, required: N, value: O, enableThemedBackground: U = !1, parentModalKey: P } = e,
         y = (0, i.Gc0)(),
         [V, W] = A.useState(() => (0, s.JM)(O)),
         I = A.useRef(!0 === d),
@@ -83,12 +83,12 @@ function q(e) {
             I.current = !0;
         },
         focused: I.current,
-        onSubmit: null != q ? q : v,
+        onSubmit: null != x ? x : v,
         disableThemedBackground: !U,
         parentModalKey: P,
         emojiPickerCloseOnModalOuterClick: !0,
         children: [
-            !0 === x &&
+            !0 === q &&
                 (0, n.jsx)(C, {
                     hasError: null != y.error || (null != g && O.length > g),
                     text: O,

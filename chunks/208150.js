@@ -73,7 +73,7 @@ let v = {
             ]
         });
     },
-    C = () =>
+    O = () =>
         (0, r.jsxs)(s.hjN, {
             title: N.NW.string(N.t['9N2OWF']),
             children: [
@@ -87,7 +87,7 @@ let v = {
                 })
             ]
         }),
-    O = (e) => {
+    C = (e) => {
         let t,
             n,
             i,
@@ -141,11 +141,11 @@ let v = {
                     o
                         ? (0, r.jsxs)('div', {
                               children: [
-                                  (0, r.jsx)(O, {
+                                  (0, r.jsx)(C, {
                                       guild: e,
                                       guildStickers: t
                                   }),
-                                  (0, r.jsx)(C, {})
+                                  (0, r.jsx)(O, {})
                               ]
                           })
                         : (0, r.jsx)(y, { guild: e }),

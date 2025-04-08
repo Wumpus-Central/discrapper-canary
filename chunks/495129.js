@@ -1,4 +1,4 @@
-n.d(t, { H: () => N }), n(35282);
+n.d(t, { H: () => O }), n(35282);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -20,8 +20,8 @@ var i = n(120356),
     y = n(981631),
     v = n(388032),
     E = n(653072);
-function N(e) {
-    var t, n, i, N, O, j, C, S, I, T;
+function O(e) {
+    var t, n, i, O, N, j, C, S, I, T;
     let { message: P, channel: A } = e,
         w =
             null == (i = P.embeds[0]) ||
@@ -35,14 +35,14 @@ function N(e) {
                 : t.rawValue,
         Z =
             null == (j = P.embeds[0]) ||
-            null == (O = j.fields) ||
+            null == (N = j.fields) ||
             null ==
-                (N = O.find((e) => {
+                (O = N.find((e) => {
                     let { rawName: t } = e;
                     return 'channel_id' === t;
                 }))
                 ? void 0
-                : N.rawValue,
+                : O.rawValue,
         k = (0, l.e7)([g.Z], () => g.Z.getGuild(w)),
         R = (0, l.e7)([h.Z], () => h.Z.getChannel(Z)),
         D = (0, l.e7)([_.default], () => _.default.getCurrentUser()),

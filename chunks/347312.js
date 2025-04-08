@@ -116,7 +116,7 @@ function G(e) {
     let { className: t, waveform: n, currentTime: o, duration: s, played: l, playing: d, onDrag: f, onDragStart: p, onDragEnd: m } = e,
         { ref: g, width: E } = (0, c.Z)(),
         b = i.useMemo(() => P(s), [s]),
-        y = i.useRef(),
+        y = i.useRef(void 0),
         v = M(n, E),
         O = i.useRef(l),
         S = i.useRef(d),

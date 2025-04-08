@@ -19,8 +19,8 @@ function x(e) {
     let { onOpen: t, onClose: n, className: x, 'data-jump-section': y } = e,
         v = i.useRef(null),
         E = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
-        N = (0, o.Q3)('RecentsButton'),
-        O = i.useRef(null),
+        O = (0, o.Q3)('RecentsButton'),
+        N = i.useRef(null),
         j = (0, a.e7)([p.ZP], () => (null == E ? void 0 : E.id) != null && p.ZP.getMentionCount(E.id, g.W.NOTIFICATION_CENTER) > 0),
         { enabled: C } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
         S = (0, a.e7)([s.Z], () => C && s.Z.getUnseenInviteCount() > 0),
@@ -34,12 +34,12 @@ function x(e) {
         children: (e, t, n, i) => {
             var a, o;
             return (0, r.jsxs)('div', {
-                ref: O,
+                ref: N,
                 className: b.recentsIcon,
                 children: [
                     C &&
                         (0, r.jsx)(h.Z, {
-                            inboxIconRef: O,
+                            inboxIconRef: N,
                             recentsPopoutShown: t
                         }),
                     (0, r.jsx)(d.U, {
@@ -78,7 +78,7 @@ function x(e) {
                                     className: x,
                                     onClick: e,
                                     icon: l.xx7,
-                                    iconSize: N ? I : void 0,
+                                    iconSize: O ? I : void 0,
                                     'aria-label': _.NW.string(_.t.GSmTKC),
                                     tooltip: t ? null : _.NW.string(_.t.GSmTKC),
                                     selected: t,

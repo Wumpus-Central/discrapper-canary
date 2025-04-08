@@ -61,7 +61,7 @@ function f(e) {
         { editingRule: N, createNewEditingRule: _ } = (0, d.V)(),
         { getDefaultRuleName: v } = c.I6[n],
         y = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
-        [C, O] = i.useState(y ? N : b),
+        [O, C] = i.useState(y ? N : b),
         I = (0, l.q_F)({
             opacity: +!y,
             pointerEvents: y ? 'none' : 'all',
@@ -72,10 +72,10 @@ function f(e) {
             pointerEvents: y ? 'all' : 'none',
             config: h(p({}, s.config.stiff), { clamp: !0 }),
             onStart: () => {
-                O(y ? N : b);
+                C(y ? N : b);
             },
             onRest: () => {
-                O(y ? N : b), j(y);
+                C(y ? N : b), j(y);
             }
         });
     return null == N || y
@@ -87,7 +87,7 @@ function f(e) {
                       className: g.animatedRuleCardContainer,
                       style: E,
                       children: (0, r.jsx)(u.Z, {
-                          rule: C,
+                          rule: O,
                           persistEdit: x
                       })
                   }),

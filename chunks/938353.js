@@ -35,8 +35,8 @@ var r,
     y = n(162297),
     v = n(222709),
     E = n(446411),
-    N = n(960904),
-    O = n(161314),
+    O = n(960904),
+    N = n(161314),
     j = n(247206),
     C = n(25610),
     S = n(761538),
@@ -89,8 +89,8 @@ var r,
     ey = n(169525),
     ev = n(786761),
     eE = n(161010),
-    eN = n(255269),
-    eO = n(461157),
+    eO = n(255269),
+    eN = n(461157),
     ej = n(901461),
     eC = n(432376),
     eS = n(384203),
@@ -265,7 +265,7 @@ class e1 extends (r = a.Component) {
             ? null
             : e.codedLinks.map((t) => {
                   let { type: n, code: r, url: a } = t;
-                  if (n === N.g.INVITE)
+                  if (n === O.g.INVITE)
                       return this.shouldRenderInvite(r)
                           ? (0, i.jsx)(
                                 eA.Z,
@@ -277,9 +277,9 @@ class e1 extends (r = a.Component) {
                                 r
                             )
                           : null;
-                  if (n === N.g.TEMPLATE) return (0, i.jsx)(D.Z, { code: r }, r);
-                  if (n === N.g.EVENT) return (0, i.jsx)(R.Z, { code: r }, r);
-                  if (n === N.g.CHANNEL_LINK)
+                  if (n === O.g.TEMPLATE) return (0, i.jsx)(D.Z, { code: r }, r);
+                  if (n === O.g.EVENT) return (0, i.jsx)(R.Z, { code: r }, r);
+                  if (n === O.g.CHANNEL_LINK)
                       return (0, i.jsx)(
                           eS.Z,
                           {
@@ -288,7 +288,7 @@ class e1 extends (r = a.Component) {
                           },
                           r
                       );
-                  if (n === N.g.APP_DIRECTORY_PROFILE)
+                  if (n === O.g.APP_DIRECTORY_PROFILE)
                       return (0, i.jsx)(
                           A.Z,
                           {
@@ -298,7 +298,7 @@ class e1 extends (r = a.Component) {
                           },
                           r
                       );
-                  else if (n === N.g.ACTIVITY_BOOKMARK) {
+                  else if (n === O.g.ACTIVITY_BOOKMARK) {
                       var l, o, s;
                       let t = new URL(a),
                           n = null != (l = t.searchParams.get('referrer_id')) ? l : e.author.id,
@@ -316,10 +316,10 @@ class e1 extends (r = a.Component) {
                           },
                           r
                       );
-                  } else if (n === N.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
-                  else if (n === N.g.SERVER_SHOP) return (0, i.jsx)(O.Z, { guildId: r }, r);
-                  else if (n === N.g.QUESTS_EMBED) return (0, i.jsx)($.Z, { questId: r }, r);
-                  else if (n === N.g.APP_DIRECTORY_STOREFRONT)
+                  } else if (n === O.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
+                  else if (n === O.g.SERVER_SHOP) return (0, i.jsx)(N.Z, { guildId: r }, r);
+                  else if (n === O.g.QUESTS_EMBED) return (0, i.jsx)($.Z, { questId: r }, r);
+                  else if (n === O.g.APP_DIRECTORY_STOREFRONT)
                       return (0, i.jsx)(
                           x.P,
                           {
@@ -328,7 +328,7 @@ class e1 extends (r = a.Component) {
                           },
                           r
                       );
-                  else if (n === N.g.APP_DIRECTORY_STOREFRONT_SKU) {
+                  else if (n === O.g.APP_DIRECTORY_STOREFRONT_SKU) {
                       let t = (0, b.Q)(r);
                       return null == t
                           ? null
@@ -341,7 +341,7 @@ class e1 extends (r = a.Component) {
                                 },
                                 r
                             );
-                  } else if (n === N.g.APP_OAUTH2_LINK)
+                  } else if (n === O.g.APP_OAUTH2_LINK)
                       return (0, i.jsx)(
                           y.Z,
                           {
@@ -350,7 +350,7 @@ class e1 extends (r = a.Component) {
                           },
                           r
                       );
-                  else if (n === N.g.COLLECTIBLES_SHOP) return null;
+                  else if (n === O.g.COLLECTIBLES_SHOP) return null;
                   else throw Error('Unknown coded link type: '.concat(n));
               });
     }
@@ -728,8 +728,8 @@ class e1 extends (r = a.Component) {
             y = this.renderThreadAccessories(t),
             v = this.renderComponentAccessories(t),
             E = this.renderThreadRoleMentionWarning(t),
-            N = this.renderEmbeddedApplicationInstanceEmbed(t),
-            O = this.renderInteractionPremiumUpsell(t),
+            O = this.renderEmbeddedApplicationInstanceEmbed(t),
+            N = this.renderInteractionPremiumUpsell(t),
             j = this.renderMediaPostEmbeds(t),
             C = this.renderSafetyPolicyNotice(t),
             S = this.renderSafetySystemNotification(t),
@@ -737,12 +737,12 @@ class e1 extends (r = a.Component) {
             T = this.renderMediaObscureNotice(t),
             P = this.renderPoll(t, r),
             A = this.renderForwardedMessage(t);
-        return null == s && null == d && null == f && null == h && null == g && null == c && null == u && null == _ && null == b && null == x && null == y && null == v && null == N && null == E && null == j && null == C && null != O && null == P && null == I && null == A
+        return null == s && null == d && null == f && null == h && null == g && null == c && null == u && null == _ && null == b && null == x && null == y && null == v && null == O && null == E && null == j && null == C && null != N && null == P && null == I && null == A
             ? null
             : (0, i.jsxs)('div', {
                   id: (0, eZ.bX)(t),
                   className: o()(e, eV.container),
-                  children: [A, E, P, s, c, u, j, d, p, f, T, h, x, v, N, O, m, g, _, b, a && this.renderSuppressConfirmModal(), l && this.renderRemoveAttachmentConfirmModal(), y, C, S, I]
+                  children: [A, E, P, s, c, u, j, d, p, f, T, h, x, v, O, N, m, g, _, b, a && this.renderSuppressConfirmModal(), l && this.renderRemoveAttachmentConfirmModal(), y, C, S, I]
               });
     }
     constructor(...e) {
@@ -851,8 +851,8 @@ function e3(e) {
         y = (0, w.ux)(n.guild_id),
         [, v] = (0, Z.AB)(n.guild_id),
         E = (0, ei.$R)(n),
-        N = (o === r.author.id || x) && r.author.id !== eB.LAt && !1 !== a && !(0, eg.yE)(r.flags, eB.iLy.EPHEMERAL) && E && 1 === (0, eO.Z)(r),
-        O = o === r.author.id && E && !l,
+        O = (o === r.author.id || x) && r.author.id !== eB.LAt && !1 !== a && !(0, eg.yE)(r.flags, eB.iLy.EPHEMERAL) && E && 1 === (0, eN.Z)(r),
+        N = o === r.author.id && E && !l,
         j = r.author.id === o,
         S = r.isFirstMessageInForumPost(n),
         I = (0, eC.Z)({
@@ -870,7 +870,7 @@ function e3(e) {
         P = (0, z.Z)(null == n ? void 0 : n.id),
         A = (0, X.Z)(r),
         k = (0, C.V)(n.id, r.author.id),
-        R = (0, eN._)(n),
+        R = (0, eO._)(n),
         D = (0, ex.ro)(r.id, r.channel_id);
     return (0, i.jsx)(
         e1,
@@ -879,8 +879,8 @@ function e3(e) {
                 eX(
                     eY(
                         {
-                            canSuppressEmbeds: N,
-                            canDeleteAttachments: O
+                            canSuppressEmbeds: O,
+                            canDeleteAttachments: N
                         },
                         I
                     ),

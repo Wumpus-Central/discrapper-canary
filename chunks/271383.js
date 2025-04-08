@@ -20,7 +20,7 @@ var r,
     _ = n(69882),
     p = n(134049),
     h = n(160404),
-    m = n(393031),
+    m = n(956226),
     g = n(630388),
     E = n(823379),
     b = n(709054),
@@ -143,7 +143,7 @@ function K(e, t) {
     }
     if (null != i) {
         var c, u;
-        null == i.colorString && i.color > 0 && (i.colorString = (0, a.Rf)(i.color)), (n = null != (c = i.colorString) ? c : void 0), null == i.colorStrings && null != i.colors && (i.colorStrings = (0, m.Z)(i.colors)), (r = null != (u = i.colorStrings) ? u : void 0);
+        null == i.colorString && i.color > 0 && (i.colorString = (0, a.Rf)(i.color)), (n = null != (c = i.colorString) ? c : void 0), null == i.colorStrings && null != i.colors && (i.colorStrings = (0, m.D)(i.colors)), (r = null != (u = i.colorStrings) ? u : void 0);
     }
     return {
         colorString: n,

@@ -26,8 +26,8 @@ var r = n(200651),
     y = n(551428),
     v = n(626135),
     E = n(572004),
-    N = n(601911),
-    O = n(504211),
+    O = n(601911),
+    N = n(504211),
     j = n(970321),
     C = n(680005),
     S = n(981631),
@@ -71,7 +71,7 @@ function Z(e) {
             () => {
                 var e;
                 let n = p.Z.getApplication(t),
-                    r = null != n ? (0, N.y)(n, 45) : void 0,
+                    r = null != n ? (0, O.y)(n, 45) : void 0,
                     i = null == (e = g.Z.getBasicChannel(a.channel_id)) ? void 0 : e.guild_id;
                 return [n, p.Z.isFetchingApplication(t), p.Z.didFetchingApplicationFail(t), b.Z.getStoreLayout(t), b.Z.getFetchStatus(t), i, r];
             },
@@ -115,7 +115,7 @@ function Z(e) {
         description: A,
         link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, I.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: () => {
-            (0, O.X)(t, O.B.STORE_EMBED);
+            (0, N.X)(t, N.B.STORE_EMBED);
         },
         iconSrc: y,
         onIconClick: () => {
@@ -169,7 +169,7 @@ function k(e) {
             },
             [u]
         ),
-        E = i.useMemo(() => (null != x ? (0, N.y)(x, 45) : void 0), [x]),
+        E = i.useMemo(() => (null != x ? (0, O.y)(x, 45) : void 0), [x]),
         Z = (0, j.R)(null != (a = null == x ? void 0 : x.id) ? a : ''),
         { openModal: k, subscriptionPurchaseButtonState: D } = (0, h.Z)({
             skuId: c,
@@ -261,7 +261,7 @@ function k(e) {
         description: F,
         link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(x.id, I.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: () => {
-            (0, O.X)(x.id, O.B.SKU_EMBED, c);
+            (0, N.X)(x.id, N.B.SKU_EMBED, c);
         },
         iconSrc: E,
         onIconClick: () => {

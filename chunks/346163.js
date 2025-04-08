@@ -21,12 +21,12 @@ function h(e) {
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
         { error: x, loading: j, createEnableRequest: N, submittedRequest: _ } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: v, error: y, refresh: C, eligibility: O } = (0, d.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: I, requestCooldownDuration: E } = (0, u.Z)(O),
+        { loading: v, error: y, refresh: O, eligibility: C } = (0, d.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: I, requestCooldownDuration: E } = (0, u.Z)(C),
         S = (null == e ? void 0 : e.hasFeature(g.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(g.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: T } = (0, s.eC)(null == e ? void 0 : e.id),
-        P = _ || (null == O ? void 0 : O.isApplicationPending) === !0,
-        w = (null == O ? void 0 : O.canApply) === !0,
+        P = _ || (null == C ? void 0 : C.isApplicationPending) === !0,
+        w = (null == C ? void 0 : C.canApply) === !0,
         R = p.NW.format(p.t.aJUdOj, { faqUrl: l.Z.getArticleURL(g.BhN.CREATOR_FAQ) });
     I && T
         ? (t = !0 === h ? p.NW.format(p.t['0o1Q+v'], { communityGuidelineUrl: g.EYA.GUIDELINES }) : p.NW.format(p.t.b6h59v, { communityGuidelineUrl: g.EYA.GUIDELINES }))
@@ -42,8 +42,8 @@ function h(e) {
         k = I && w && b ? p.NW.format(p.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
-            D && C();
-        }, [C, D]),
+            D && O();
+        }, [O, D]),
         {
             resubmittingEnableRequest: j,
             resubmissionError: x,
@@ -52,8 +52,8 @@ function h(e) {
             resubmittedRequest: _,
             eligibilityLoading: v,
             eligibilityError: y,
-            refreshEligibility: C,
-            eligibility: O,
+            refreshEligibility: O,
+            eligibility: C,
             eligibleForMonetization: w,
             isApplicationPending: P,
             hasPreviousApplicationRejection: I,

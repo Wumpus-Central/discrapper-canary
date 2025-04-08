@@ -27,8 +27,8 @@ var r,
     _ = n(260539),
     v = n(388032),
     y = n(651412),
-    C = n(20493);
-function O(e, t, n) {
+    O = n(20493);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,10 +54,10 @@ class I extends (r = d.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'name', ''),
-            O(this, 'description', ''),
-            O(this, 'error', null),
-            O(this, 'reset', () => {
+            C(this, 'name', ''),
+            C(this, 'description', ''),
+            C(this, 'error', null),
+            C(this, 'reset', () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -65,21 +65,21 @@ class I extends (r = d.ZP.Store) {
                 } else (this.name = ''), (this.description = '');
                 this.emitChange();
             }),
-            O(this, 'setName', (e) => {
+            C(this, 'setName', (e) => {
                 (this.name = e), this.emitChange();
             }),
-            O(this, 'setDescription', (e) => {
+            C(this, 'setDescription', (e) => {
                 (this.description = e), this.emitChange();
             }),
-            O(this, 'setError', (e) => {
+            C(this, 'setError', (e) => {
                 (this.error = e), this.emitChange();
             }),
-            O(this, 'save', async () => {
+            C(this, 'save', async () => {
                 await b.Z.updateGuildTemplate(N.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
             });
     }
 }
-O(I, 'displayName', 'GuildSettingsTemplateMetadataStore_');
+C(I, 'displayName', 'GuildSettingsTemplateMetadataStore_');
 let E = new I(g.Z);
 function S() {
     let [e, t] = s.useState(!1),
@@ -94,7 +94,7 @@ function S() {
 }
 function T() {
     return (0, i.jsx)(m.hjN, {
-        className: C.marginBottom4,
+        className: O.marginBottom4,
         children: (0, i.jsxs)(m.y5t, {
             component: (0, i.jsx)(m.vwX, {
                 tag: m.RB0.H1,
@@ -102,7 +102,7 @@ function T() {
             }),
             children: [
                 (0, i.jsx)(m.R94, {
-                    className: C.marginBottom20,
+                    className: O.marginBottom20,
                     type: m.geA.DESCRIPTION,
                     children: v.NW.format(v.t.c0m8bG, {})
                 }),
@@ -161,7 +161,7 @@ function P() {
                   variant: 'text-sm/normal',
                   children: t.message
               })
-            : (0, i.jsx)(m.$jN, { className: C.marginTop40 });
+            : (0, i.jsx)(m.$jN, { className: O.marginTop40 });
     let o = null != t && null == t.getFirstFieldErrorMessage('name') && null == t.getFirstFieldErrorMessage('description');
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -172,7 +172,7 @@ function P() {
             }),
             o
                 ? (0, i.jsx)(m.Text, {
-                      className: C.marginTop8,
+                      className: O.marginTop8,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
                       children: t.getAnyErrorMessage()
@@ -301,7 +301,7 @@ function D() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.xJW, {
-                className: C.marginBottom20,
+                className: O.marginBottom20,
                 title: v.NW.string(v.t.z1a9R0),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('name'),
                 children: (0, i.jsx)(m.oil, {
@@ -312,7 +312,7 @@ function D() {
                 })
             }),
             (0, i.jsx)(m.xJW, {
-                className: C.marginBottom20,
+                className: O.marginBottom20,
                 title: v.NW.string(v.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('description'),
                 children: (0, i.jsx)(m.Kx8, {
@@ -342,12 +342,12 @@ function Z(e) {
                   n.isDirty &&
                       (0, i.jsx)(m.Text, {
                           color: 'text-warning',
-                          className: C.marginTop8,
+                          className: O.marginTop8,
                           variant: 'text-sm/normal',
                           children: v.NW.string(v.t.aWsjtL)
                       }),
                   (0, i.jsxs)('div', {
-                      className: l()(C.marginTop20, y.buttonContainer),
+                      className: l()(O.marginTop20, y.buttonContainer),
                       children: [
                           n.isDirty &&
                               (0, i.jsx)(k, {
@@ -467,7 +467,7 @@ function L(e) {
                                         })
                                     )),
                                     r.forEach(function (t) {
-                                        O(e, t, n[t]);
+                                        C(e, t, n[t]);
                                     });
                             }
                             return e;

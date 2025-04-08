@@ -20,7 +20,7 @@ let m = i.memo(function (e) {
         y = i.useCallback(() => {
             h(t.guildId, t.triggerType);
         }, [t.guildId, t.triggerType, h]),
-        C = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 b || f(e, !0);
             },
@@ -29,7 +29,7 @@ let m = i.memo(function (e) {
     i.useEffect(() => {
         m && f(t, !0);
     }, [m, t, f]);
-    let O = i.useCallback(() => {
+    let C = i.useCallback(() => {
         j
             ? g || f(null)
             : g
@@ -45,18 +45,18 @@ let m = i.memo(function (e) {
             triggerType: t.triggerType,
             isEditMode: j,
             isDefaultRule: N,
-            onChangeRule: C,
+            onChangeRule: O,
             onSetupRule: y
         }),
         isStuck: j && g,
         isExpanded: j,
-        onExpand: O,
+        onExpand: C,
         children:
             j &&
             (0, r.jsx)(c.Z, {
                 rule: _,
                 isLoading: b,
-                onChangeRule: C
+                onChangeRule: O
             })
     });
 });

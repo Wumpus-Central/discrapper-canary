@@ -5,7 +5,7 @@ var r = n(192379),
 function a() {
     let [e, t] = r.useState(!1),
         [n, a] = r.useState(),
-        l = r.useRef();
+        l = r.useRef(null);
     return {
         createGuildApplication: async (e, n, r, o) => {
             a(void 0);

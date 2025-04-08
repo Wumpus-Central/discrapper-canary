@@ -19,8 +19,8 @@ var r,
     y = n(768419),
     v = n(456432),
     E = n(789407),
-    N = n(598077),
-    O = n(757266),
+    O = n(598077),
+    N = n(757266),
     j = n(831506),
     C = n(271383),
     S = n(283595),
@@ -236,7 +236,7 @@ class B extends (r = a.PureComponent) {
     }
 }
 W(B, 'defaultProps', { isPreview: !1 });
-let G = l.ZP.connectStores([y.Z, j.Z, I.Z, T.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.default, C.ZP], (e) => {
+let G = l.ZP.connectStores([y.Z, j.Z, I.Z, T.Z, N.Z, A.Z, S.Z, b.Z, w.Z, P.default, C.ZP], (e) => {
     var t;
     let { activity: n, analyticsLocations: r, application: i, partyId: a, userId: l, guildId: o } = e,
         { id: s } = null != i ? i : {},
@@ -250,7 +250,7 @@ let G = l.ZP.connectStores([y.Z, j.Z, I.Z, T.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.defau
                 r = P.default.getUser(e),
                 i = null == r;
             return (
-                null == r && (r = new N.Z({ discriminator: '0005' })),
+                null == r && (r = new O.Z({ discriminator: '0005' })),
                 {
                     user: r,
                     unknownUser: i,
@@ -264,7 +264,7 @@ let G = l.ZP.connectStores([y.Z, j.Z, I.Z, T.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.defau
     return {
         analyticsLocations: r,
         partyMembers: p,
-        connectedApplication: null != s ? O.Z.getApplication(s) : null,
+        connectedApplication: null != s ? N.Z.getApplication(s) : null,
         myPartyId: null != u && null != u.party ? u.party.id : null,
         isLaunching: d,
         isSyncable: m && !h,
@@ -274,7 +274,7 @@ let G = l.ZP.connectStores([y.Z, j.Z, I.Z, T.Z, O.Z, A.Z, S.Z, b.Z, w.Z, P.defau
                 LibraryApplicationStore: S.Z,
                 LaunchableGameStore: b.Z,
                 DispatchApplicationStore: w.Z,
-                ConnectedAppsStore: O.Z,
+                ConnectedAppsStore: N.Z,
                 applicationId: s
             })
     };

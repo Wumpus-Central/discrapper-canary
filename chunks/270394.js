@@ -29,8 +29,8 @@ var r = n(200651),
     w = n(757539),
     T = n(981631),
     Z = n(388032),
-    W = n(541056),
-    k = n(588866),
+    k = n(541056),
+    W = n(588866),
     A = n(20493);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -94,25 +94,25 @@ function B(e) {
     return (
         n.maxUses > 0 && (s = ''.concat(n.uses, '/').concat(n.maxUses)),
         (0, r.jsxs)(v.Z, {
-            className: o()(W.inviteSettingsInviteRow, k.card, { [W.inviteDisabledRow]: l }),
+            className: o()(k.inviteSettingsInviteRow, W.card, { [k.inviteDisabledRow]: l }),
             children: [
                 (0, r.jsxs)(v.Z, {
                     grow: L.INVITER,
                     basis: 0,
                     align: v.Z.Align.CENTER,
-                    className: W.text,
+                    className: k.text,
                     children: [
                         null != n.inviter &&
                             (0, r.jsx)(x.Z, {
                                 user: n.inviter,
                                 size: m.EFr.SIZE_24,
-                                className: W.avatar
+                                className: k.avatar
                             }),
                         (0, r.jsxs)('div', {
                             children: [
                                 null != n.inviter &&
                                     (0, r.jsx)(f.Z, {
-                                        discriminatorClass: W.discriminator,
+                                        discriminatorClass: k.discriminator,
                                         user: n.inviter
                                     }),
                                 i &&
@@ -130,20 +130,20 @@ function B(e) {
                     shrink: 1,
                     basis: 0,
                     align: v.Z.Align.CENTER,
-                    className: W.text,
+                    className: k.text,
                     children: (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsx)(m.Text, {
-                                className: W.inviteCode,
+                                className: k.inviteCode,
                                 variant: 'text-sm/normal',
                                 children: a ? '...' : n.code
                             }),
                             !a && (0, E.yE)(null != (t = n.flags) ? t : 0, u.$.IS_APPLICATION_BYPASS)
                                 ? (0, r.jsxs)('div', {
-                                      className: W.bypass,
+                                      className: k.bypass,
                                       children: [
                                           (0, r.jsx)(m.Text, {
-                                              className: W.text,
+                                              className: k.text,
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
                                               children: Z.NW.string(Z.t['1i1bUl'])
@@ -161,7 +161,7 @@ function B(e) {
                                                               },
                                                               e
                                                           ),
-                                                          { className: W.infoIcon }
+                                                          { className: k.infoIcon }
                                                       )
                                                   )
                                           })
@@ -175,9 +175,9 @@ function B(e) {
                     grow: L.USES,
                     basis: 0,
                     align: v.Z.Align.CENTER,
-                    className: W.text,
+                    className: k.text,
                     children: (0, r.jsx)(m.Text, {
-                        className: W.uses,
+                        className: k.uses,
                         variant: 'text-sm/normal',
                         children: s
                     })
@@ -186,15 +186,15 @@ function B(e) {
                     grow: L.EXPIRES,
                     basis: 0,
                     align: v.Z.Align.CENTER,
-                    className: o()(W.text, W.countdownColumn),
+                    className: o()(k.text, k.countdownColumn),
                     children: (0, r.jsx)(m.Text, {
-                        className: W.countdown,
+                        className: k.countdown,
                         variant: 'text-sm/normal',
                         children: (0, r.jsx)(N.Z, { deadline: n.getExpiresAt() })
                     })
                 }),
                 (0, r.jsx)(g.Z, {
-                    className: W.revokeInvite,
+                    className: k.revokeInvite,
                     onClick: () => {
                         b.ZP.revokeInvite(n);
                     }
@@ -235,7 +235,7 @@ function U(e) {
             );
         },
         [S, E] = i.useState(62),
-        k = () => {
+        W = () => {
             let e = { source: y.Zu.GUILD_SETTINGS };
             (0, m.ZDy)(
                 async () => (t) =>
@@ -306,14 +306,14 @@ function U(e) {
                 return (0, r.jsx)(m.X6q, {
                     variant: 'heading-lg/semibold',
                     color: 'header-primary',
-                    className: W.header,
+                    className: k.header,
                     children: Z.NW.string(Z.t['9F90iY'])
                 });
             if (t === M.ACTIONS_V1)
                 return (0, r.jsxs)(
                     m.hjN,
                     {
-                        className: W.actions,
+                        className: k.actions,
                         children: [
                             (0, r.jsx)(m.R94, {
                                 className: A.marginBottom20,
@@ -321,18 +321,18 @@ function U(e) {
                                 children: !0 === a ? Z.NW.format(Z.t['97VdNj'], { onCreateInvite: I }) : Z.NW.string(Z.t.WDw38P)
                             }),
                             (0, r.jsxs)('div', {
-                                className: W.inviteDisabledContainer,
+                                className: k.inviteDisabledContainer,
                                 children: [
                                     (0, r.jsx)(m.zxk, {
                                         size: m.zxk.Sizes.SMALL,
                                         color: O ? m.zxk.Colors.BRAND : m.zxk.Colors.RED,
                                         disabled: !x,
-                                        onClick: k,
+                                        onClick: W,
                                         children: O ? Z.NW.string(Z.t['/dbw3N']) : Z.NW.string(Z.t.Uwsjn5)
                                     }),
                                     O &&
                                         (0, r.jsxs)('div', {
-                                            className: W.inviteDisabledTip,
+                                            className: k.inviteDisabledTip,
                                             children: [
                                                 (0, r.jsx)(m.P4T, {
                                                     size: 'custom',
@@ -348,7 +348,7 @@ function U(e) {
                                         })
                                 ]
                             }),
-                            (0, r.jsx)(m.$i$, { className: W.headerDivider })
+                            (0, r.jsx)(m.$i$, { className: k.headerDivider })
                         ]
                     },
                     'header'
@@ -357,7 +357,7 @@ function U(e) {
                 return (0, r.jsx)(w.Y, {
                     hasInvites: N.length > 0,
                     setHeight: E,
-                    onShowDisableInvites: k,
+                    onShowDisableInvites: W,
                     onShowInviteModal: I,
                     hasInviteDisabledPermission: x,
                     invitesDisabled: O,

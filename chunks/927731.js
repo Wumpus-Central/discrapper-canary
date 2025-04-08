@@ -44,7 +44,7 @@ function y(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function C(e, t) {
         e
     );
 }
-let O = 'guild-role-subscription-tier-template-selector',
+let C = 'guild-role-subscription-tier-template-selector',
     I = (e) => {
         let [t, n] = i.useState(!0),
             [r, s] = i.useState();
@@ -92,7 +92,7 @@ function E(e) {
             return (0, l.uniq)(e);
         }, [E, w]),
         Z = (e, t) => {
-            R((n) => C(y({}, n), { [e]: t }));
+            R((n) => O(y({}, n), { [e]: t }));
         },
         A = (0, p.ss)(t),
         k = (0, p.Gp)(),
@@ -109,7 +109,7 @@ function E(e) {
                               return (n) =>
                                   (0, r.jsx)(
                                       e,
-                                      C(y({}, n), {
+                                      O(y({}, n), {
                                           guildId: t,
                                           addNewEditStateFromTemplate: T,
                                           addNewEditStateFromScratch: S,
@@ -117,7 +117,7 @@ function E(e) {
                                       })
                                   );
                           },
-                          { modalKey: O }
+                          { modalKey: C }
                       )
                     : S();
         }, [t, T, S, s, k, A]),
@@ -130,7 +130,7 @@ function E(e) {
             () => (
                 U === N.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && W(),
                 () => {
-                    (0, d.Mr3)(O);
+                    (0, d.Mr3)(C);
                 }
             ),
             [U, W]

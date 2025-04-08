@@ -282,7 +282,7 @@ let P = [m.FK.MESSAGE_1, m.FK.MESSAGE_2, m.FK.MESSAGE_3];
 function C(e) {
     var t;
     let { isPaused: n } = e,
-        o = (0, s.useRef)(),
+        o = (0, s.useRef)(null),
         a = (0, s.useRef)(-1),
         [u, f] = (0, s.useState)(0),
         [g, b] = (0, s.useState)(null),

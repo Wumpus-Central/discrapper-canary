@@ -8,8 +8,8 @@ function a(e) {
         [d, f] = r.useState(null),
         _ = r.useCallback(() => {}, []),
         p = u ? _ : f,
-        h = r.useRef(),
-        m = r.useRef(),
+        h = r.useRef(null),
+        m = r.useRef(null),
         g = r.useRef(t),
         E = r.useRef(a);
     E.current = a;
@@ -23,7 +23,7 @@ function a(e) {
         S = r.useCallback(() => I(!1), []);
     return (
         r.useLayoutEffect(() => {
-            void 0 !== t && ((h.current = void 0), (m.current = void 0), I(!1));
+            void 0 !== t && ((h.current = null), (m.current = null), I(!1));
         }, [t]),
         r.useLayoutEffect(() => {
             var e, r, i;

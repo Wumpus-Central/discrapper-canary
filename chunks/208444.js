@@ -22,11 +22,11 @@ function x(e, t) {
             installParams: y,
             integrationTypesConfig: v
         }),
-        N = (0, i.e7)([p.Z], () => {
+        O = (0, i.e7)([p.Z], () => {
             var e;
             return null != (e = p.Z.getGuildId()) ? e : void 0;
         }),
-        O = (0, i.e7)(
+        N = (0, i.e7)(
             [c.Z, u.Z, d.Z],
             () => {
                 let e = c.Z.getChannel(d.Z.getChannelId());
@@ -34,7 +34,7 @@ function x(e, t) {
             },
             []
         ),
-        j = (0, a.PZ)(e, N) && O,
+        j = (0, a.PZ)(e, O) && N,
         C = n || j;
     return r.useMemo(
         () =>
@@ -62,12 +62,12 @@ function x(e, t) {
                                     customInstallUrl: x,
                                     installParams: y,
                                     integrationTypesConfig: v,
-                                    guildId: N,
+                                    guildId: O,
                                     source: 'app_message_embed'
                                 });
                         }
                     }
                   : void 0,
-        [e.id, j, C, x, y, v, E, t, N]
+        [e.id, j, C, x, y, v, E, t, O]
     );
 }

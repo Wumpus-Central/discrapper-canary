@@ -252,9 +252,9 @@ function v(e) {
 }
 let y = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: r, subscriptionsRequired: i } = e;
-        return null !== r ? r : n ? (0, s.jsx)(C, { transform: t }) : (0, s.jsx)(O, { subscriptionsRequired: i });
+        return null !== r ? r : n ? (0, s.jsx)(O, { transform: t }) : (0, s.jsx)(C, { subscriptionsRequired: i });
     },
-    C = (e) => {
+    O = (e) => {
         let { transform: t } = e;
         return (0, s.jsx)(c.animated.div, {
             style: { transform: t },
@@ -262,7 +262,7 @@ let y = (e) => {
             children: f.NW.string(f.t.dNGM0t)
         });
     },
-    O = (e) => {
+    C = (e) => {
         let { subscriptionsRequired: t } = e;
         return (0, s.jsxs)(s.Fragment, {
             children: [

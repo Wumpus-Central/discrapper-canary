@@ -93,7 +93,7 @@ let b = i.forwardRef(function (e, t) {
     let { editorRef: o, containerRef: a, options: l } = e,
         f = i.useRef(null),
         [_, p] = i.useState(!1),
-        m = i.useRef(),
+        m = i.useRef(null),
         b = i.useContext(c.ZP),
         y = i.useCallback(() => {
             p(!1), clearTimeout(m.current);

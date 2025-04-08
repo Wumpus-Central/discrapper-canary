@@ -23,14 +23,14 @@ function x() {
         { options: _ } = (0, p.Z)(null != (e = null == N ? void 0 : N.active_trial) ? e : null),
         v = (0, g.Z)(),
         y = null != n,
-        C = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 let t = _.find((e) => e.isDefault);
                 a()(null != t, 'Missing default trial duartion option'), s(e ? t.value : null);
             },
             [s, _]
         ),
-        O = (0, d.mY)(),
+        C = (0, d.mY)(),
         I = (0, o.Dt)(),
         E = (0, o.Dt)();
     return (0, r.jsxs)(h.Z, {
@@ -38,21 +38,21 @@ function x() {
         description: f.NW.string(f.t.urVijY),
         children: [
             (0, r.jsx)(l.j7V, {
-                onChange: (e, t) => C(e),
+                onChange: (e, t) => O(e),
                 value: y,
-                disabled: O,
+                disabled: C,
                 hideBorder: !0,
                 children: f.NW.string(f.t['+hTmdX'])
             }),
             (0, r.jsxs)(l.hjN, {
                 title: f.NW.string(f.t.m1KuWV),
                 titleId: I,
-                disabled: !y || O,
+                disabled: !y || C,
                 children: [
                     (0, r.jsx)(l.R94, {
                         type: l.R94.Types.DESCRIPTION,
                         className: b.formDescription,
-                        disabled: !y || O,
+                        disabled: !y || C,
                         children: f.NW.string(f.t.NB9NLC)
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),
@@ -64,7 +64,7 @@ function x() {
                         value: n,
                         onChange: s,
                         maxVisibleItems: 5,
-                        isDisabled: !y || O,
+                        isDisabled: !y || C,
                         look: l.qQH.CUSTOM
                     })
                 ]
@@ -73,12 +73,12 @@ function x() {
             (0, r.jsxs)(l.hjN, {
                 title: f.NW.string(f.t['/JD9oa']),
                 titleId: E,
-                disabled: !y || O,
+                disabled: !y || C,
                 children: [
                     (0, r.jsx)(l.R94, {
                         type: l.R94.Types.DESCRIPTION,
                         className: b.formDescription,
-                        disabled: !y || O,
+                        disabled: !y || C,
                         children: f.NW.string(f.t.Cg5eBg)
                     }),
                     (0, r.jsx)(l.q4e, {
@@ -88,7 +88,7 @@ function x() {
                         value: x,
                         onChange: j,
                         maxVisibleItems: 5,
-                        isDisabled: !y || O,
+                        isDisabled: !y || C,
                         look: l.qQH.CUSTOM
                     })
                 ]

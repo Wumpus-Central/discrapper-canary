@@ -21,8 +21,8 @@ function b(e) {
         {
             hasClips: v,
             hasNewClips: E,
-            lastClipsSession: N,
-            remindersEnabled: O,
+            lastClipsSession: O,
+            remindersEnabled: N,
             hasAnyClipAnimations: j
         } = (0, a.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
@@ -31,7 +31,7 @@ function b(e) {
             remindersEnabled: p.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations()
         })),
-        C = null != N && N.newClipIds.length > 0,
+        C = null != O && O.newClipIds.length > 0,
         S = (0, f.n)((e) => e.clipsButtonRef),
         I = (0, f.n)((e) => e.setClipsButtonRef),
         T = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
@@ -78,13 +78,13 @@ function b(e) {
               children: [
                   null != S &&
                       t &&
-                      O &&
+                      N &&
                       C &&
                       !(0, l.$sL)() &&
                       !T &&
                       (0, r.jsx)(h.Z, {
                           clipIconRef: S,
-                          lastClipsSession: N,
+                          lastClipsSession: O,
                           onOpenClipsGallery: w
                       }),
                   (0, r.jsx)('div', {

@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(981631),
     v = n(190378),
     y = n(388032),
-    C = n(24304);
-function O(e) {
+    O = n(24304);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ let I = function (e, t, n) {
         return t || e === _.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, r.jsx)(c.kzN, {
                   icon: c.d3s,
-                  className: C.notEnoughMembersError,
+                  className: O.notEnoughMembersError,
                   backgroundColor: c.mTc.BACKGROUND_ACCENT,
                   children: y.NW.string(y.t['FsgE/P'])
               })
@@ -79,7 +79,7 @@ let I = function (e, t, n) {
         let [e, t] = i.useState(!1),
             n = (0, l.e7)([N.Z], () => N.Z.getGuildId());
         return (0, r.jsx)(c.zxk, {
-            className: C.developerPortalCta,
+            className: O.developerPortalCta,
             onClick: () => {
                 t(!0),
                     (function (e) {
@@ -130,13 +130,13 @@ let I = function (e, t, n) {
         let P =
             null != a
                 ? (0, r.jsx)('div', {
-                      className: C.__invalid_guildAnalyticsOverviewWrapper,
+                      className: O.__invalid_guildAnalyticsOverviewWrapper,
                       children: (0, r.jsxs)('div', {
-                          className: C.overviewData,
+                          className: O.overviewData,
                           children: [
                               (0, r.jsx)(
                                   u.Z,
-                                  O(
+                                  C(
                                       {
                                           title: y.NW.string(y.t.i0Nora),
                                           tooltipText: y.NW.string(y.t.KiRbLC)
@@ -146,7 +146,7 @@ let I = function (e, t, n) {
                               ),
                               (0, r.jsx)(
                                   u.Z,
-                                  O(
+                                  C(
                                       {
                                           title: y.NW.string(y.t.DDAHdX),
                                           tooltipText: y.NW.string(y.t.HxWUkZ)
@@ -154,10 +154,10 @@ let I = function (e, t, n) {
                                       I(a.communicators, a.communicatorsChange, s)
                                   )
                               ),
-                              (0, r.jsx)(u.Z, O({ title: y.NW.string(y.t.hYeOqK) }, I(a.newMembers, a.newMembersChange, s))),
+                              (0, r.jsx)(u.Z, C({ title: y.NW.string(y.t.hYeOqK) }, I(a.newMembers, a.newMembersChange, s))),
                               (0, r.jsx)(
                                   u.Z,
-                                  O(
+                                  C(
                                       {
                                           title: y.NW.string(y.t.jj7OPz),
                                           tooltipText: y.NW.string(y.t.MQCsl5)
@@ -179,11 +179,11 @@ let I = function (e, t, n) {
                 }),
                 E(o, T),
                 (0, r.jsxs)('div', {
-                    className: C.developerPortalCtaWrapper,
+                    className: O.developerPortalCtaWrapper,
                     children: [
-                        (0, r.jsx)('div', { className: C.placeholderImage }),
+                        (0, r.jsx)('div', { className: O.placeholderImage }),
                         (0, r.jsx)(c.Text, {
-                            className: C.developerPortalCtaText,
+                            className: O.developerPortalCtaText,
                             variant: 'text-sm/normal',
                             children: y.NW.string(y.t.A5vsws)
                         }),
@@ -192,7 +192,7 @@ let I = function (e, t, n) {
                 }),
                 b
                     ? (0, r.jsx)('div', {
-                          className: C.streamerMode,
+                          className: O.streamerMode,
                           children: (0, r.jsx)(d.Z, {})
                       })
                     : P

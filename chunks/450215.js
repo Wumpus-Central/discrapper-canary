@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -20,9 +20,9 @@ var r = n(200651),
     _ = n(981631),
     v = n(388032),
     y = n(301849);
-function C(e) {
+function O(e) {
     var t, n;
-    let { guildId: s, initialEditStateId: l, allSubscriptionListings: C, priceTiers: O, onDeleteEditState: I, groupListingId: E, onBeforeDispatchNewListing: S, onAfterDispatchNewListing: T } = e,
+    let { guildId: s, initialEditStateId: l, allSubscriptionListings: O, priceTiers: C, onDeleteEditState: I, groupListingId: E, onBeforeDispatchNewListing: S, onAfterDispatchNewListing: T } = e,
         [P, w] = i.useState(l),
         R = (0, c.e7)([h.Z], () => h.Z.getSubscriptionListing(P)),
         D = null == R,
@@ -149,8 +149,8 @@ function C(e) {
                     guildId: s,
                     groupListingId: E,
                     children: (0, r.jsx)(N.Z, {
-                        allSubscriptionListings: C,
-                        priceTiers: O,
+                        allSubscriptionListings: O,
+                        priceTiers: C,
                         loading: et,
                         error: null != X ? X : $,
                         handlePublishTier: () => {

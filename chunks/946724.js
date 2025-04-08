@@ -8,7 +8,7 @@ var a,
     u = n(442837),
     m = n(570140),
     g = n(561654),
-    p = n(393031),
+    p = n(956226),
     h = n(430824),
     f = n(990492),
     b = n(823379),
@@ -30,8 +30,8 @@ function _(e, t, n) {
 }
 let v = new Set(),
     y = N.QZA.CLOSED,
-    C = !1,
     O = !1,
+    C = !1,
     I = [],
     E = [],
     S = !1,
@@ -70,8 +70,8 @@ function D(e) {
 function Z() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     (r = j.Z.getProps().guild),
-        (C = !1),
         (O = !1),
+        (C = !1),
         (s = void 0),
         v.clear(),
         (y = N.QZA.OPEN),
@@ -97,7 +97,7 @@ function Z() {
 }
 let A = o().debounce(() => {
     let e = !1;
-    O && ((O = R().length > 0) || (e = !0)),
+    C && ((C = R().length > 0) || (e = !0)),
         [...v].forEach((t) => {
             var n;
             o().isEqual(
@@ -109,7 +109,7 @@ let A = o().debounce(() => {
                 }))
             ) && (v.delete(t), (e = !0));
         }),
-        0 === v.size && (C = !1),
+        0 === v.size && (O = !1),
         S && o().isEqual(P, w) && ((e = !0), (S = !1)),
         e && G.emitChange();
 }, 500);
@@ -132,7 +132,7 @@ function k(e, t) {
         }
         return e;
     })({}, e, t);
-    (I[n] = r), (I = [...I]), (C = !0), v.add(r.id), A();
+    (I[n] = r), (I = [...I]), (O = !0), v.add(r.id), A();
 }
 function W(e) {
     return I.find((t) => {
@@ -165,8 +165,8 @@ function L(e) {
                 ? v.delete(e)
                 : (n[r] = t);
         }),
-        0 === v.size && (C = !1),
-        (O = !1),
+        0 === v.size && (O = !1),
+        (C = !1),
         (I = [...n]);
 }
 class M extends (a = u.ZP.Store) {
@@ -174,13 +174,13 @@ class M extends (a = u.ZP.Store) {
         this.waitFor(j.Z, g.Z, h.Z);
     }
     hasChanges() {
-        return C || O || S;
+        return O || C || S;
     }
     get errorMessage() {
         return s;
     }
     get hasSortChanges() {
-        return O;
+        return C;
     }
     get hasRoleConfigurationChanges() {
         return S;
@@ -228,7 +228,7 @@ let G = new M(
                   GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                       let { roles: t } = e;
                       if (null != I && t.length !== I.length) return !1;
-                      (I = t.map((e) => W(e)).filter(b.lm)), (O = !0), A();
+                      (I = t.map((e) => W(e)).filter(b.lm)), (C = !0), A();
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                       let { id: t, flag: n, allow: r } = e,
@@ -283,7 +283,7 @@ let G = new M(
                       let { id: t, colors: n } = e,
                           r = W(t);
                       if (null == r) return !1;
-                      let i = (0, p.Z)(n);
+                      let i = (0, p.D)(n);
                       return k(r, {
                           color: n.primary_color,
                           colors: n,
@@ -335,7 +335,7 @@ let G = new M(
                       (S = !0), T.add(r.id), w.set(r.id, n), A();
                   },
                   GUILD_SETTINGS_CLOSE: function () {
-                      (r = null), (E = I = []), P.clear(), v.clear(), w.clear(), (T = new Set()), (C = !1), (O = !1), (S = !1), (y = N.QZA.CLOSED);
+                      (r = null), (E = I = []), P.clear(), v.clear(), w.clear(), (T = new Set()), (O = !1), (C = !1), (S = !1), (y = N.QZA.CLOSED);
                   },
                   GUILD_ROLE_CREATE: L,
                   GUILD_ROLE_UPDATE: L,

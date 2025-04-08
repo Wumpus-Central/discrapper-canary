@@ -19,7 +19,7 @@ var r = n(200651),
     y = n(616922),
     v = n(388032),
     E = n(638128);
-function N(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function N(e, t, n) {
         e
     );
 }
-function O(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
@@ -95,7 +95,7 @@ function C(e) {
                           (0, r.jsx)(
                               o.P3F,
                               j(
-                                  O(
+                                  N(
                                       {
                                           innerRef: p,
                                           className: E.partyMemberKnown
@@ -262,7 +262,7 @@ class S extends i.PureComponent {
             ? p
             : !this.isDeadInvite() && this.isActionType(x.mFx.LISTEN) && null != a && null != s && null != l && (0, y.Ps)(a)
               ? c(
-                    j(O({}, d), {
+                    j(N({}, d), {
                         activity: l,
                         user: s.author
                     })
@@ -270,7 +270,7 @@ class S extends i.PureComponent {
               : (0, r.jsx)(
                     o.zxk,
                     j(
-                        O(
+                        N(
                             {},
                             d,
                             t || !e || this.isDeadInvite() || this.isEmbeddedActivityApplication()
@@ -434,35 +434,35 @@ class S extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            N(this, 'handleJoin', () => {
+            O(this, 'handleJoin', () => {
                 let { onJoin: e } = this.props;
                 null == e || e();
             }),
-            N(this, 'handleInvite', () => {
+            O(this, 'handleInvite', () => {
                 let { onInvite: e } = this.props;
                 null == e || e();
             }),
-            N(this, 'handleSync', () => {
+            O(this, 'handleSync', () => {
                 let { onSync: e } = this.props;
                 null == e || e();
             }),
-            N(this, 'handleDownloadApp', () => {
+            O(this, 'handleDownloadApp', () => {
                 let { onDownloadApp: e } = this.props;
                 null == e || e();
             }),
-            N(this, 'handleOpenSpotifyTrack', () => {
+            O(this, 'handleOpenSpotifyTrack', () => {
                 let { activity: e, onOpenSpotifyTrack: t } = this.props;
                 null != e && (null == t || t(e));
             }),
-            N(this, 'handleOpenSpotifyArtist', (e) => {
+            O(this, 'handleOpenSpotifyArtist', (e) => {
                 let { activity: t, onOpenSpotifyArtist: n, message: r } = this.props;
                 null != t && null != r && (null == n || n(t, r.author.id, e));
             }),
-            N(this, 'handleOpenSpotifyAlbum', () => {
+            O(this, 'handleOpenSpotifyAlbum', () => {
                 let { activity: e, onOpenSpotifyAlbum: t, message: n } = this.props;
                 null != e && null != n && (null == t || t(e, n.author.id));
             }),
-            N(this, 'renderUser', (e, t, n) => {
+            O(this, 'renderUser', (e, t, n) => {
                 let { guildId: i, channelId: a, message: o, analyticsLocations: s } = this.props;
                 return null != e
                     ? (0, r.jsx)(

@@ -14,7 +14,7 @@ function o(e) {
         }, [u, d, c]),
         {
             submitting: u,
-            wasSubmitting: d
+            wasSubmitting: null != d ? d : null
         }
     );
 }

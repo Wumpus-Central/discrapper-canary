@@ -64,7 +64,7 @@ function b(e) {
             },
             [j, m]
         ),
-        C = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 N(e);
             },
@@ -77,7 +77,7 @@ function b(e) {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
                 initialValue: _,
                 onChangeTags: y,
-                onChangeNewTagValue: C,
+                onChangeNewTagValue: O,
                 tagErrors: v,
                 maxTags: u.VW
             }),

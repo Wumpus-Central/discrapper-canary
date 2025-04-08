@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(8426),
     v = n(969632),
     y = n(570961),
-    C = n(208665),
-    O = n(359191),
+    O = n(208665),
+    C = n(359191),
     I = n(84658),
     E = n(142961),
     S = n(232764),
@@ -81,20 +81,20 @@ function W() {
 function L(e) {
     let { guild: t } = e,
         s = t.id,
-        x = (0, o.e7)([O.Z], () => O.Z.getCurrentPage()),
+        x = (0, o.e7)([C.Z], () => C.Z.getCurrentPage()),
         W = (0, E.Z)(s),
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: M,
             hasErrors: G
-        } = (0, o.cj)([O.Z], () => ({
-            hasChanges: O.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: O.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: O.Z.hasErrors()
+        } = (0, o.cj)([C.Z], () => ({
+            hasChanges: C.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: C.Z.hasErrors()
         })),
-        U = (0, o.e7)([O.Z], () => {
+        U = (0, o.e7)([C.Z], () => {
             let e = (0, I.lg)(x);
-            return null != e && !O.Z.isEducationUpsellDismissed(e);
+            return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
         B = (0, g.ZP)(),
         F = i.useRef(null),
@@ -136,7 +136,7 @@ function L(e) {
     }
     let Q = x === I.xh[I.xh.length - 1],
         J = async () => {
-            let e = C.Z.advancedMode;
+            let e = O.Z.advancedMode;
             if (L)
                 try {
                     if (x === I.PG.DEFAULT_CHANNELS) await (0, j.DO)(t).then(() => (e ? (0, y.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));

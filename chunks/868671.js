@@ -76,7 +76,7 @@ function v(e) {
         }, [v, I, O, t, j, N, n, x, Z, k, S]),
         U = r.useRef(0),
         B = r.useRef(I),
-        H = r.useRef(),
+        H = r.useRef(void 0),
         F = r.useRef({ impressionCappedEntryIds: P }),
         G = r.useCallback(
             (e) => {

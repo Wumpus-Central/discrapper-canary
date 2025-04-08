@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(626135),
     v = n(480608),
     y = n(243730),
-    C = n(130341),
-    O = n(970129),
+    O = n(130341),
+    C = n(970129),
     I = n(712181),
     E = n(203377),
     S = n(981631),
@@ -84,9 +84,9 @@ function A(e) {
     i.useEffect(() => {
         f.current || '' === u.trimStart() || (_.default.track(S.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (f.current = !0));
     }, [u]);
-    let b = i.useMemo(() => a.filter((e) => (0, C.uo)(e, h)), [a, h]),
+    let b = i.useMemo(() => a.filter((e) => (0, O.uo)(e, h)), [a, h]),
         x = i.useMemo(() => [...a, s], [a, s]),
-        { draggingId: j, handleDragStart: O, handleDragReset: E, handleDragComplete: T } = (0, I.Z)(x),
+        { draggingId: j, handleDragStart: C, handleDragReset: E, handleDragComplete: T } = (0, I.Z)(x),
         P = i.useCallback(
             (e) => {
                 var i;
@@ -101,7 +101,7 @@ function A(e) {
                         highestRole: p,
                         currentPosition: s,
                         memberCount: null != (i = null == m ? void 0 : m[o.id]) ? i : 0,
-                        onDragStart: O,
+                        onDragStart: C,
                         onDragReset: E,
                         onDragComplete: T,
                         disableHover: null != j,
@@ -112,7 +112,7 @@ function A(e) {
                     o.id
                 );
             },
-            [b, n, p, m, O, E, T, j, a, t, l]
+            [b, n, p, m, C, E, T, j, a, t, l]
         );
     return (0, r.jsx)(g.Xi, {
         sections: [Math.max(b.length, 1)],
@@ -142,8 +142,8 @@ function k() {
 }
 function W(e) {
     var t, s, c;
-    let { role: d, guild: g, highestRole: h, currentPosition: x, memberCount: N, onDragStart: _, onDragReset: v, onDragComplete: y, disableHover: C, disableDrag: I, setEditRoleId: S, setSelectedSection: A } = e,
-        k = (0, O.T)(g, h, d),
+    let { role: d, guild: g, highestRole: h, currentPosition: x, memberCount: N, onDragStart: _, onDragReset: v, onDragComplete: y, disableHover: O, disableDrag: I, setEditRoleId: S, setSelectedSection: A } = e,
+        k = (0, C.T)(g, h, d),
         W = null != k,
         [M, G] = i.useState(!1),
         U = i.useMemo(
@@ -212,7 +212,7 @@ function W(e) {
     }
     return (0, r.jsxs)(u.P3F, {
         className: a()(P.roleRow, {
-            [P.roleRowDisableHover]: C,
+            [P.roleRowDisableHover]: O,
             [P.containerDragBefore]: null != H && x < H,
             [P.containerDragAfter]: null != H && x > H
         }),
@@ -251,7 +251,7 @@ function W(e) {
                               defaultIconClassName: P.shield
                           }),
                     null != k
-                        ? (0, r.jsx)(O.Z, {
+                        ? (0, r.jsx)(C.Z, {
                               className: P.lock,
                               tooltipText: k
                           })

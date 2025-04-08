@@ -7,7 +7,7 @@ var i = n(200651),
     l = n(100527),
     c = n(906732),
     u = n(181918),
-    d = n(956226),
+    d = n(7543),
     h = n(823415),
     p = n(670188),
     m = n(592125),
@@ -54,7 +54,7 @@ function b(e) {
     return o.useCallback(
         (e) => (o, r) => {
             let s = null == e ? void 0 : e.colorStrings,
-                l = T && null != s && null != s.primaryColor && null != s.secondaryColor ? (0, d.$)(s.primaryColor, s.secondaryColor, s.tertiaryColor, x) : void 0,
+                l = T && null != s && null != s.primaryColor && null != s.secondaryColor ? (0, d.Z)(s.primaryColor, s.secondaryColor, s.tertiaryColor, x) : void 0,
                 u = (t) => {
                     var n, r;
                     return (0, i.jsx)(

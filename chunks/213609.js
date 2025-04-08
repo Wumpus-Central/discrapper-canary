@@ -112,8 +112,8 @@ function I(e) {
                       trackOnInitialLoad: !1
                   },
         n = arguments.length > 2 ? arguments[2] : void 0,
-        i = r.useRef(),
-        a = r.useRef(),
+        i = r.useRef(void 0),
+        a = r.useRef(void 0),
         l = () => {
             let r = !o()(i.current, e);
             r && (i.current = e);

@@ -61,7 +61,7 @@ function y(e, t) {
         e
     );
 }
-let C = (e) => {
+let O = (e) => {
     let { name: t, failingName: n, description: i, checked: s, pending: a, pendingDescription: l, failingDescription: o } = e,
         c = t,
         d = null,
@@ -117,7 +117,7 @@ let C = (e) => {
         })
     );
 };
-function O(e, t) {
+function C(e, t) {
     return o()(
         null == e
             ? void 0
@@ -154,7 +154,7 @@ let I = (e) => {
                       });
             },
             [t.id, T],
-            O
+            C
         );
     if (I || null == m)
         return (0, r.jsxs)('div', {
@@ -372,7 +372,7 @@ let I = (e) => {
                 (0, r.jsxs)(
                     i.Fragment,
                     {
-                        children: [(0, r.jsx)(C, v({}, e)), t < R.length - 1 ? (0, r.jsx)('hr', { className: _.separator }) : null]
+                        children: [(0, r.jsx)(O, v({}, e)), t < R.length - 1 ? (0, r.jsx)('hr', { className: _.separator }) : null]
                     },
                     ''.concat(e.name)
                 )

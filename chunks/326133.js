@@ -110,7 +110,7 @@ let w = 490,
                 },
                 [k.guild_id]
             ),
-            F = i.useRef(),
+            F = i.useRef(null),
             [Z, H, W] = (0, O.Z)(C(N({}, e), { guild: V }), t, F),
             Y = (null == (n = j.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             K = (0, _.DJ)(Z.selectedIndex);

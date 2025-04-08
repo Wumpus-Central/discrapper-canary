@@ -51,7 +51,7 @@ function E(e) {
           })
         : null;
 }
-function N(e) {
+function O(e) {
     let t;
     var { type: n } = e,
         i = (function (e, t) {
@@ -138,7 +138,7 @@ function N(e) {
         children: t
     });
 }
-function O(e) {
+function N(e) {
     let { className: t, data: n, onClickPollLink: a } = e,
         o = i.useMemo(
             () =>
@@ -168,7 +168,7 @@ function O(e) {
                 victorEmoji: n.victorEmoji
             }),
             (0, r.jsx)(
-                N,
+                O,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -224,16 +224,16 @@ function j(e) {
             guildId: a.guild_id,
             messageId: n.id
         }),
-        N = n.messageReference,
+        O = n.messageReference,
         j = i.useCallback(() => {
-            null != N &&
+            null != O &&
                 c.Z.jumpToMessage({
-                    channelId: N.channel_id,
-                    messageId: N.message_id,
+                    channelId: O.channel_id,
+                    messageId: O.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, N]);
+        }, [n.id, O]);
     return null == p
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -249,7 +249,7 @@ function j(e) {
                           titleOnClick: j
                       })
                   }),
-                  (0, r.jsx)(O, {
+                  (0, r.jsx)(N, {
                       className: y.embed,
                       data: p,
                       onClickPollLink: u ? void 0 : j

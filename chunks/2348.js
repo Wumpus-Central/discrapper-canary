@@ -124,10 +124,10 @@ function y(e) {
               ]
           });
 }
-let C = i.memo(function () {
+let O = i.memo(function () {
         return (0, r.jsx)('div', { className: N.separator });
     }),
-    O = i.memo(function (e) {
+    C = i.memo(function (e) {
         let { index: t } = e;
         return (0, r.jsx)(
             o.Text,
@@ -238,7 +238,7 @@ let C = i.memo(function () {
                                                     w
                                                         ? (0, r.jsxs)(r.Fragment, {
                                                               children: [
-                                                                  (0, r.jsx)(O, { index: 0 }),
+                                                                  (0, r.jsx)(C, { index: 0 }),
                                                                   (0, r.jsx)(o.Text, {
                                                                       variant: 'text-xs/medium',
                                                                       className: N.channelSubtitle,
@@ -287,7 +287,7 @@ let C = i.memo(function () {
                             )
                         )
                 }),
-                !y && (0, r.jsx)(C, {})
+                !y && (0, r.jsx)(O, {})
             ]
         });
     });

@@ -1,6 +1,6 @@
 n.d(t, {
     DI: () => I,
-    x3: () => O
+    x3: () => C
 }),
     n(388685),
     n(953529);
@@ -110,9 +110,9 @@ function y(e) {
                       },
             [n, d]
         ),
-        C = '';
+        O = '';
     return (
-        null != d ? (C = ':'.concat(d.name, ':')) : null != n.name && (C = h.ZP.convertSurrogateToName(n.name)),
+        null != d ? (O = ':'.concat(d.name, ':')) : null != n.name && (O = h.ZP.convertSurrogateToName(n.name)),
         (0, r.jsx)(o.yRy, {
             animation: o.yRy.Animation.NONE,
             position: 'top',
@@ -132,7 +132,7 @@ function y(e) {
                             (0, r.jsx)(o.oil, {
                                 inputClassName: N.emojiText,
                                 placeholder: j.NW.string(j.t.qJPLNT),
-                                value: C,
+                                value: O,
                                 'aria-labelledby': s,
                                 readOnly: !0
                             })
@@ -143,26 +143,26 @@ function y(e) {
         })
     );
 }
-function C(e) {
+function O(e) {
     var t;
     let { guildId: n, initialData: s, benefitTypeInput: a, descriptionPlaceholder: l, canSubmit: c, onSave: m, onDelete: g, transitionState: p, onClose: h } = e,
         f = (0, u.Dt)(),
         b = (0, u.Dt)(),
         x = (0, u.Dt)(),
         [_, v] = i.useState(null != (t = null == s ? void 0 : s.description) ? t : ''),
-        [C, O] = i.useState(() => ({
+        [O, C] = i.useState(() => ({
             id: null == s ? void 0 : s.emoji_id,
             name: null == s ? void 0 : s.emoji_name
         })),
-        I = c && '' !== _ && (null != C.id || null != C.name);
+        I = c && '' !== _ && (null != O.id || null != O.name);
     return (0, r.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(),
                 I &&
                     (m({
                         description: _,
-                        emojiId: C.id,
-                        emojiName: C.name
+                        emojiId: O.id,
+                        emojiName: O.name
                     }),
                     h());
         },
@@ -206,8 +206,8 @@ function C(e) {
                             titleId: x,
                             children: (0, r.jsx)(y, {
                                 guildId: n,
-                                emojiData: C,
-                                onSelectEmoji: O,
+                                emojiData: O,
+                                onSelectEmoji: C,
                                 'aria-labelledby': x
                             })
                         })
@@ -253,7 +253,7 @@ function C(e) {
         })
     });
 }
-function O(e) {
+function C(e) {
     let { guildId: t, omitChannelIds: n, initialData: s, onSave: l, onDelete: c, transitionState: d, onClose: m } = e,
         [g, p] = i.useState(null == s ? void 0 : s.ref_id),
         h = (0, u.Dt)(),
@@ -280,7 +280,7 @@ function O(e) {
                 })
             ]
         });
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(O, {
         guildId: t,
         initialData: s,
         benefitTypeInput: f,
@@ -312,7 +312,7 @@ function I(e) {
                 'aria-labelledby': h
             })
         });
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(O, {
         guildId: m,
         initialData: n,
         benefitTypeInput: f,

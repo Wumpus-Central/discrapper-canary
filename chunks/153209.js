@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(981631),
     v = n(388032),
     E = n(929968),
-    N = n(413813);
-function O(e) {
+    O = n(413813);
+function N(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
         tooltip: v.NW.string(v.t['8k+6QU']),
@@ -29,13 +29,13 @@ function O(e) {
             size: 'xs',
             color: 'currentColor'
         }),
-        className: N.controlButton,
+        className: O.controlButton,
         onClick: t
     });
 }
 function j(e) {
     let { setTab: t, badgeState: n, closePopout: a } = e,
-        { initialized: c, items: v, loading: N, loadMore: j } = (0, m.y6)(),
+        { initialized: c, items: v, loading: O, loadMore: j } = (0, m.y6)(),
         C = (0, o.e7)([u.Z], () => u.Z.localItems),
         S = (0, h.Us)({ location: 'ForYou' }),
         I = i.useMemo(() => [...[...v, ...C].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [v, C]),
@@ -58,7 +58,7 @@ function j(e) {
                 badgeState: n,
                 closePopout: a,
                 children: A
-                    ? (0, r.jsx)(O, {
+                    ? (0, r.jsx)(N, {
                           onClick: () => {
                               null != T && (g.d$.updateSetting(T.id), _.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
                           }
@@ -68,7 +68,7 @@ function j(e) {
             (0, r.jsx)(f.Z, {
                 initialized: c,
                 items: I,
-                loading: N,
+                loading: O,
                 loadMore: j
             })
         ]

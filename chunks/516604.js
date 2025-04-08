@@ -16,8 +16,8 @@ let o = (e) => {
             [p, r]
         ),
         [y, w] = n.useState(!1),
-        v = n.useRef(),
-        x = n.useRef(),
+        v = n.useRef(null),
+        x = n.useRef(null),
         E = n.useRef(s.Z.lastConfetti);
     return (
         n.useEffect(() => {

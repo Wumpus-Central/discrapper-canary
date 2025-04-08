@@ -108,8 +108,8 @@ function C(e) {
     let { guild: n, applicationIntegration: a, selectableWebhookChannels: c, editedWebhook: C, errors: I, canNavigate: S } = e,
         { application: E, integration: P, webhooks: w } = a,
         [T, Z] = (0, l.Wu)([p.Z], () => [p.Z.can(O.Plq.MANAGE_ROLES, n), null == E.bot || p.Z.canManageUser(O.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
-        W = (0, l.e7)([p.Z], () => p.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
-        k = i.useCallback(() => {
+        k = (0, l.e7)([p.Z], () => p.Z.can(O.Plq.MANAGE_WEBHOOKS, n), [n]),
+        W = i.useCallback(() => {
             S() &&
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
@@ -220,7 +220,7 @@ function C(e) {
                               children: (0, r.jsx)(o.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: W ? N.NW.string(N.t.ahPd2d) : N.NW.string(N.t.axqYMj)
+                                  children: k ? N.NW.string(N.t.ahPd2d) : N.NW.string(N.t.axqYMj)
                               })
                           })
                 ]
@@ -244,7 +244,7 @@ function C(e) {
                             color: o.zxk.Colors.RED,
                             look: o.zxk.Looks.FILLED,
                             disabled: !Z,
-                            onClick: k,
+                            onClick: W,
                             children: N.NW.string(N.t.ebGf4u)
                         })
                     })

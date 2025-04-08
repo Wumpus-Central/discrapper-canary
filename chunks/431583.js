@@ -19,7 +19,7 @@ var r = n(200651),
     y = n(981631),
     v = n(388032),
     E = n(246404);
-let N = [
+let O = [
         {
             getOs: () => v.NW.string(v.t.NK5ySE),
             icon: E.apple,
@@ -48,7 +48,7 @@ let N = [
             platformKey: 2
         }
     ],
-    O = [
+    N = [
         {
             getOs: () => v.NW.string(v.t.wCVyNT),
             icon: E.ios,
@@ -212,7 +212,7 @@ function S(e) {
                                         }),
                                         (0, r.jsx)('ul', {
                                             className: E.platforms,
-                                            children: N.map((e) =>
+                                            children: O.map((e) =>
                                                 (0, r.jsx)(
                                                     C,
                                                     {
@@ -239,7 +239,7 @@ function S(e) {
                                         }),
                                     (0, r.jsx)('ul', {
                                         className: E.platforms,
-                                        children: O.map((e) =>
+                                        children: N.map((e) =>
                                             (0, r.jsx)(
                                                 C,
                                                 {

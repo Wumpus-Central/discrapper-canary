@@ -98,7 +98,7 @@ let I = [];
 function S() {
     let e = O(),
         t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : I)),
-        n = i.useRef();
+        n = i.useRef(void 0);
     i.useLayoutEffect(() => {
         n.current = t[t.length - 1];
     }, [t]);

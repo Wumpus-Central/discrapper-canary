@@ -43,16 +43,16 @@ function _(e) {
         })),
         v = null == n ? void 0 : n.id,
         y = (0, l.e7)([c.Z], () => c.Z.get(v)),
-        { fetchGuildProfile: C } = (0, d.u)(v),
-        O = (null == _ ? void 0 : _.visibility) == null || !s.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
+        { fetchGuildProfile: O } = (0, d.u)(v),
+        C = (null == _ ? void 0 : _.visibility) == null || !s.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
         I = (null == _ ? void 0 : _.visibility) === s.k.PUBLIC_WITH_RECRUITMENT,
         E = (0, g.Dj)({
             guildId: v,
             location: 'recruitment'
         });
     i.useEffect(() => {
-        null != v && C();
-    }, [v, C]);
+        null != v && O();
+    }, [v, O]);
     let S = i.useMemo(() => (null == n || null == _ ? N : _), [n, _]),
         T = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null && (I ? m.Z.updateGuildProfile(n.id, { visibility: s.k.PUBLIC }) : m.Z.updateGuildProfile(n.id, { visibility: s.k.PUBLIC_WITH_RECRUITMENT }));
@@ -101,7 +101,7 @@ function _(e) {
                                               onChange: T,
                                               value: I,
                                               hideBorder: !0,
-                                              disabled: O,
+                                              disabled: C,
                                               children: x.NW.string(x.t['N/0239'])
                                           }),
                                           (0, r.jsx)(a.xv, {
@@ -109,7 +109,7 @@ function _(e) {
                                               color: 'text-secondary',
                                               children: x.NW.string(x.t['3TSZYG'])
                                           }),
-                                          O &&
+                                          C &&
                                               (0, r.jsx)(a.xv, {
                                                   variant: 'text-xs/normal',
                                                   color: 'text-muted',

@@ -25,8 +25,8 @@ var r = n(200651),
     y = n(592125),
     v = n(375954),
     E = n(496675),
-    N = n(933429),
-    O = n(451478),
+    O = n(933429),
+    N = n(451478),
     j = n(626135),
     C = n(585483),
     S = n(981631),
@@ -145,8 +145,8 @@ function D(e) {
     let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: v, className: E, listName: w } = e,
         Z = i.useRef(null),
         k = (0, f.Z)(w, Z),
-        R = (0, u.e7)([N.ZP], () => N.ZP.hasNotice()),
-        D = (0, u.e7)([O.Z], () => O.Z.windowSize()),
+        R = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
+        D = (0, u.e7)([N.Z], () => N.Z.windowSize()),
         L = (0, g.Q3)('ItemsPopout');
     i.useEffect(() => {
         j.default.track(S.rMx.OPEN_POPOUT, { type: t });
@@ -324,7 +324,7 @@ function D(e) {
     });
 }
 function L(e) {
-    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: N, className: O, onCloseMessage: j, listName: C } = e,
+    let { analyticsName: t, onFetch: n, channel: a, messages: l, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: O, className: N, onCloseMessage: j, listName: C } = e,
         P = (0, u.e7)([v.Z], () => {
             let e = null != a ? v.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -362,8 +362,8 @@ function L(e) {
         [l, a]
     );
     return (0, r.jsx)(D, {
-        className: O,
-        scrollerClassName: N,
+        className: N,
+        scrollerClassName: O,
         items: w,
         loading: s,
         analyticsName: t,

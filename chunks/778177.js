@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(933557),
     v = n(471445),
     E = n(592125),
-    N = n(271383),
-    O = n(699516),
+    O = n(271383),
+    N = n(699516),
     j = n(250758),
     C = n(944486),
     S = n(914010),
@@ -111,8 +111,8 @@ let B = p()('2015-05-15').local(),
         if (null == o) return (0, r.jsx)('strong', { children: s });
         let c = T.default.getUser(o.id),
             u = E.Z.getChannel(e),
-            d = (null == u ? void 0 : u.isPrivate()) ? O.Z.getNickname(o.id) : null,
-            p = null != (a = null != (i = N.ZP.getNick(e, o.id)) ? i : d) ? a : Z.ZP.getName(o),
+            d = (null == u ? void 0 : u.isPrivate()) ? N.Z.getNickname(o.id) : null,
+            p = null != (a = null != (i = O.ZP.getNick(e, o.id)) ? i : d) ? a : Z.ZP.getName(o),
             m = null != (l = null == c ? void 0 : c.getAvatarURL(e, 20)) ? l : o.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
         return [
             (0, r.jsx)(
@@ -151,11 +151,11 @@ let B = p()('2015-05-15').local(),
             className: L.resultChannel,
             children: [
                 null != o ? (0, r.jsx)(o, { className: L.searchResultChannelIcon }) : null,
-                (0, r.jsx)('strong', { children: (0, y.F6)(i, T.default, O.Z) }),
+                (0, r.jsx)('strong', { children: (0, y.F6)(i, T.default, N.Z) }),
                 null != l
                     ? (0, r.jsx)('span', {
                           className: L.searchResultChannelCategory,
-                          children: (0, y.F6)(l, T.default, O.Z)
+                          children: (0, y.F6)(l, T.default, N.Z)
                       })
                     : null
             ]

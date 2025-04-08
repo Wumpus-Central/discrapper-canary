@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(944486),
     v = n(455199),
     E = n(655354),
-    N = n(999671),
-    O = n(324081),
+    O = n(999671),
+    N = n(324081),
     j = n(240126),
     C = n(791914),
     S = n(981631),
@@ -46,7 +46,7 @@ function w(e) {
             messages: _,
             hasMore: x,
             loading: E,
-            guildFilter: O,
+            guildFilter: N,
             roleFilter: j,
             everyoneFilter: P
         } = (0, o.cj)([v.Z], () => ({
@@ -58,13 +58,13 @@ function w(e) {
             everyoneFilter: v.Z.everyoneFilter
         })),
         w = (0, g.Us)({ location: 'RecentMentions' }),
-        k = (0, m.Z)(O),
+        k = (0, m.Z)(N),
         D = (0, m.Z)(j),
         L = (0, m.Z)(P);
     i.useEffect(() => {
         if (!v.Z.hasLoadedEver) return void A(h, !0);
-        ((null != k && O !== k) || (null != D && j !== D) || (null != L && P !== L)) && A(h, !0);
-    }, [k, O, D, j, L, P, h, !0]),
+        ((null != k && N !== k) || (null != D && j !== D) || (null != L && P !== L)) && A(h, !0);
+    }, [k, N, D, j, L, P, h, !0]),
         (0, p.ZP)(() => {
             (null == _ ? void 0 : _.some(f.k5)) && (u.Z.clearMentions(), A(h, !0));
         }),
@@ -81,7 +81,7 @@ function w(e) {
                 setTab: t,
                 badgeState: a,
                 closePopout: c,
-                children: (0, r.jsx)(N.Z, {})
+                children: (0, r.jsx)(O.Z, {})
             }),
         [!0, t, a, c]
     );
@@ -132,7 +132,7 @@ function k(e) {
     return (0, r.jsxs)('div', {
         className: T.container,
         children: [
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(N.Z, {
                 channel: a,
                 gotoChannel: n,
                 children:

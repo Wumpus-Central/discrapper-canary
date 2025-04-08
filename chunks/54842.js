@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(518513),
     v = n(168179),
     y = n(348986),
-    C = n(930065),
-    O = n(345669);
+    O = n(930065),
+    C = n(345669);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -129,7 +129,7 @@ let S = () => [
             position: [-230, -100]
         },
         {
-            iconSrc: C,
+            iconSrc: O,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
@@ -148,7 +148,7 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: O,
+            iconSrc: C,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
@@ -220,14 +220,14 @@ let S = () => [
             [N, _] = i.useState(),
             v = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
             y = null == N ? void 0 : N.offsetWidth,
-            C = null == N ? void 0 : N.offsetHeight;
+            O = null == N ? void 0 : N.offsetHeight;
         i.useEffect(() => {
-            null != y && s(y / 2), null != C && o(C / 2);
-        }, [y, C, s, o]),
+            null != y && s(y / 2), null != O && o(O / 2);
+        }, [y, O, s, o]),
             i.useEffect(() => {
                 (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
-        let O = () => {
+        let C = () => {
             u.Z.open();
         };
         return (0, r.jsxs)('div', {
@@ -278,7 +278,7 @@ let S = () => [
                             E(
                                 I(
                                     {
-                                        onClick: O,
+                                        onClick: C,
                                         className: b.button,
                                         disabled: !v
                                     },

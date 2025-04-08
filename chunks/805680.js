@@ -201,7 +201,7 @@ function Q(e) {
     let { positionTargetRef: l, hideGifFavorites: h, includeCreateEmojiButton: R, onSelectGIF: V, onSelectEmoji: F, onSelectSticker: Z, onSelectSound: H, channel: W, type: Y, position: Q, align: X, positionLayerClassName: J, closeOnModalOuterClick: $ = !1, parentModalKey: ee } = e,
         et = i.useRef(null),
         en = i.useRef(!1),
-        er = i.useRef(),
+        er = i.useRef(null),
         ei = i.useRef(null),
         { drawerWidth: eo, handleDrawerResizeHandleMouseDown: ea } = q({
             positionContainerRef: et,

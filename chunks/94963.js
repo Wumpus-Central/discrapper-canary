@@ -20,7 +20,7 @@ var r = n(200651),
     _ = n(388032),
     v = n(249818),
     y = n(130116);
-function C(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function C(e) {
     }
     return e;
 }
-function O(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -182,7 +182,7 @@ let I = [
         }, [n, S, U.primary, U.secondary]);
         let F = i.useMemo(() => {
             var e, t, n;
-            return O(C({}, s), {
+            return C(O({}, s), {
                 id: l,
                 name: null != (e = null == D ? void 0 : D.name) ? e : '',
                 icon: null == D ? void 0 : D.icon,
@@ -259,7 +259,7 @@ let I = [
                                                         children: (e) =>
                                                             (0, r.jsx)(
                                                                 m.P3F,
-                                                                O(C({}, e), {
+                                                                C(O({}, e), {
                                                                     onClick: () => {
                                                                         L((e) => !e);
                                                                     },

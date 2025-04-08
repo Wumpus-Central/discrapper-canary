@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(833592),
     v = n(497089),
     E = n(178480),
-    N = n(418316),
-    O = n(382865),
+    O = n(418316),
+    N = n(382865),
     j = n(526146),
     C = n(400565),
     S = n(148789),
@@ -172,7 +172,7 @@ let M = i.memo(function (e) {
                   applicationId: a.applicationId
               }));
         let g = null != a.local_id,
-            O = (0, N.Z)({
+            N = (0, O.Z)({
                 item: a,
                 renderApplication: (e) => (0, r.jsx)(L, { applicationId: e })
             });
@@ -182,7 +182,7 @@ let M = i.memo(function (e) {
                 (0, r.jsxs)(l.kL8, {
                     className: A.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': O,
+                    'aria-label': N,
                     onClick: f,
                     children: [
                         p ? null : (0, r.jsx)('div', { className: A.unread }),
@@ -194,7 +194,7 @@ let M = i.memo(function (e) {
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-md/normal',
                                     color: p ? 'text-muted' : 'text-normal',
-                                    children: 'string' != typeof O ? O : d.Z.parse(O)
+                                    children: 'string' != typeof N ? N : d.Z.parse(N)
                                 }),
                                 (null == (t = a.message) ? void 0 : t.content) != null ? (0, r.jsx)(k, { item: a }) : null,
                                 null != a.callout ? (0, r.jsx)(R, { item: a }) : null,
@@ -216,7 +216,7 @@ let M = i.memo(function (e) {
         let { items: t } = e,
             n = f.d$.useSetting();
         return (
-            (0, O.c)(t),
+            (0, N.c)(t),
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(

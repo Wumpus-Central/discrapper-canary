@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(509798),
     v = n(75733),
     y = n(474024),
-    C = n(981631),
-    O = n(388032),
+    O = n(981631),
+    C = n(388032),
     I = n(83951);
 let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
@@ -29,7 +29,7 @@ let E = function () {
         n = null == t ? void 0 : t.id,
         { fetchGuildProfile: E, fetchStatus: S } = (0, u.u)(null == t ? void 0 : t.id),
         T = (0, s.e7)([h.Z], () => h.Z.getGuildProfile(), []),
-        P = (0, s.e7)([g.Z], () => g.Z.can(C.Plq.MANAGE_GUILD, t)),
+        P = (0, s.e7)([g.Z], () => g.Z.can(O.Plq.MANAGE_GUILD, t)),
         w = i.useCallback(
             (e) => {
                 null != n && (p.Z.updateGuild({ icon: e }), p.Z.updateGuildProfile(n, { icon: e }));
@@ -73,13 +73,13 @@ let E = function () {
                                           (0, r.jsx)(a.X6q, {
                                               variant: 'heading-lg/semibold',
                                               color: 'header-primary',
-                                              children: O.NW.string(O.t.txdaxc)
+                                              children: C.NW.string(C.t.txdaxc)
                                           }),
                                           (0, r.jsx)(a.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'header-secondary',
                                               className: I.description,
-                                              children: O.NW.string(O.t['5PGZWV'])
+                                              children: C.NW.string(C.t['5PGZWV'])
                                           })
                                       ]
                                   }),

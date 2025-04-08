@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(215124),
     v = n(326578),
     y = n(981631),
-    C = n(674563),
-    O = n(829857),
+    O = n(674563),
+    C = n(829857),
     I = n(388032),
     E = n(738309);
 function S(e) {
@@ -52,7 +52,7 @@ function T(e) {
             [n]
         ),
         f = async () => {
-            (await d(t, l, C.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
+            (await d(t, l, O.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (g(t.id),
                 (0, j.B)({
                     Icon: v.Z,
@@ -99,15 +99,15 @@ let P = (e) => {
         b = (0, o.Ob)(t),
         x = (0, s.e7)([h.Z], () => h.Z.isFocused()),
         { teams: j, loading: v } = (0, g.Z)({ refreshOnDepChange: x }),
-        C = i.useMemo(
+        O = i.useMemo(
             () =>
                 j.filter((e) => {
                     var t;
-                    return e.payout_account_status !== O.C.BLOCKED && (0, m.Z)(null != (t = null == n ? void 0 : n.id) ? t : y.lds, e);
+                    return e.payout_account_status !== C.C.BLOCKED && (0, m.Z)(null != (t = null == n ? void 0 : n.id) ? t : y.lds, e);
                 }),
             [j, n]
         ),
-        P = C.length > 0,
+        P = O.length > 0,
         w = i.useCallback(async () => {
             f.default.track(y.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: b,
@@ -150,7 +150,7 @@ let P = (e) => {
                           P
                               ? (0, r.jsx)(T, {
                                     guild: t,
-                                    eligibleTeams: C,
+                                    eligibleTeams: O,
                                     isGuildOwner: c
                                 })
                               : (0, r.jsx)(S, {

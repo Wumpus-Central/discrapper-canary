@@ -67,7 +67,7 @@ function E(e, t) {
     );
 }
 function P(e) {
-    let { applicationId: t, commandId: l, guildId: x, inModal: j, editedTargetPermissions: P, originalApplicationPermissions: Z, originalCommandPermissions: W, selectedPermissionCount: k } = e,
+    let { applicationId: t, commandId: l, guildId: x, inModal: j, editedTargetPermissions: P, originalApplicationPermissions: Z, originalCommandPermissions: k, selectedPermissionCount: W } = e,
         A = (0, s.e7)([h.Z], () => (null == l ? null : h.Z.getCommand(l)), [l]),
         D = (null == A ? void 0 : A.defaultMemberPermissions) != null,
         R = (0, s.e7)(
@@ -83,12 +83,12 @@ function P(e) {
                         guild: e,
                         selfMember: t,
                         applicationLevelPermissions: Z,
-                        commandLevelPermissions: W,
+                        commandLevelPermissions: k,
                         defaultMemberPermissions: null == A ? void 0 : A.defaultMemberPermissions
                     })
                 );
             },
-            [x, A, Z, W]
+            [x, A, Z, k]
         ),
         L = null != l ? l : t,
         [M, B] = i.useMemo(() => {
@@ -180,13 +180,13 @@ function P(e) {
                                 overwrittenKeys: e,
                                 search: w,
                                 searchPlaceholderText: C.NW.string(C.t['TLQo/v']),
-                                selectedPermissionCount: k
+                                selectedPermissionCount: W
                             },
                             n
                         )
                     );
             });
-        }, [H, M, x, k]),
+        }, [H, M, x, W]),
         F = i.useCallback(() => {
             let e = Object.keys(B);
             return (0, c.ZDy)(async () => {
@@ -203,13 +203,13 @@ function P(e) {
                                 overwrittenKeys: e,
                                 search: T,
                                 searchPlaceholderText: C.NW.string(C.t.wAfO5e),
-                                selectedPermissionCount: k
+                                selectedPermissionCount: W
                             },
                             n
                         )
                     );
             });
-        }, [H, x, B, k]),
+        }, [H, x, B, W]),
         V = i.useCallback(
             () =>
                 (0, c.ZDy)(async () => {
@@ -219,7 +219,7 @@ function P(e) {
                 }),
             [A]
         ),
-        K = k - _._n,
+        K = W - _._n,
         q = K >= 0,
         Y = [
             {

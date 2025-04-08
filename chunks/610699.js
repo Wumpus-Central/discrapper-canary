@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(835473),
     v = n(471445),
     E = n(111028),
-    N = n(601964),
-    O = n(592125),
+    O = n(601964),
+    N = n(592125),
     j = n(430824),
     C = n(496675),
     S = n(594174),
@@ -146,7 +146,7 @@ function L(e) {
                 return _.id === t;
             });
         }),
-        k = O.Z.getChannel(null == (n = l.channel) ? void 0 : n.id),
+        k = N.Z.getChannel(null == (n = l.channel) ? void 0 : n.id),
         R = (0, c.e7)([C.Z], () => null != k && C.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
         { analyticsLocations: D } = (0, f.ZP)(m.Z.INVITE_EMBED),
         L = (0, c.Wu)(
@@ -172,7 +172,7 @@ function L(e) {
         B = null != x;
     if (null == x) {
         if (null == l.guild) return (0, r.jsx)(P.Z, {});
-        x = new N.ZP(l.guild);
+        x = new O.ZP(l.guild);
     }
     let G = (B && !R) || (B && E);
     return (B && E && (a = Z.NW.string(Z.t.wJNK8P)), R || (a = Z.NW.string(Z.t.hHGrW1)), null == l.code || '' === l.code || null == v)
@@ -199,8 +199,8 @@ function L(e) {
 }
 function M(e) {
     var t, n;
-    let { app: a, invite: l, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: v, handleAcceptInvite: E, onView: N } = e,
-        O = new URL(l.code, 'https://discord.gg').toString(),
+    let { app: a, invite: l, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: v, handleAcceptInvite: E, onView: O } = e,
+        N = new URL(l.code, 'https://discord.gg').toString(),
         { bot: j, icon: C } = a,
         S = T.ZP.getApplicationIconURL({
             id: a.id,
@@ -253,7 +253,7 @@ function M(e) {
                 header: a.name,
                 title: Z.NW.string(Z.t['7vb6n5']),
                 iconSrc: S,
-                embedUrl: O
+                embedUrl: N
             },
             P
         )),
@@ -286,7 +286,7 @@ function M(e) {
                 trackingConfig: {
                     id: a.id,
                     linkType: _.Un.ACTIVITY_INVITE,
-                    onView: N
+                    onView: O
                 }
             }),
         Object.getOwnPropertyDescriptors

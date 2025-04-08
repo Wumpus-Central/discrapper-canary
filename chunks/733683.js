@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => C,
+    Z: () => O,
     x: () => x
 }),
     n(388685);
@@ -309,4 +309,4 @@ class y extends (r = s.Component) {
     }
 }
 b(y, 'defaultProps', { initialAnimationDelay: 0 });
-let C = y;
+let O = y;

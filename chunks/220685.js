@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(626135),
     v = n(730647),
     y = n(584825),
-    C = n(981631),
-    O = n(388032),
+    O = n(981631),
+    C = n(388032),
     I = n(111558);
 let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
     S = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
@@ -31,17 +31,17 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         let { guild: s, canEnable: l } = e,
             c = (0, y.YB)(s.id),
             { loading: u, updateSubscriptionsSettings: N } = (0, y.QV)(),
-            [v, P] = i.useState(s.hasFeature(C.oNc.CREATOR_STORE_PAGE)),
+            [v, P] = i.useState(s.hasFeature(O.oNc.CREATOR_STORE_PAGE)),
             [w, R] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : T),
             [D, Z] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
             A = null == D || null != D.match(S),
             [k, W] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             L = i.useRef(null == c ? void 0 : c.store_page_slug).current,
-            M = v !== s.hasFeature(C.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            M = v !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             G = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
-                v !== s.hasFeature(C.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = v),
+                v !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = v),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = w),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
                     k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
@@ -49,7 +49,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         (await N(s.id, e),
                         'store_page_enabled' in e &&
                             _.default.track(
-                                C.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED,
+                                O.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,7 +77,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 })({ enabled: v }, (0, x.hH)(s.id))
                             ));
             },
-            U = C.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
+            U = O.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
             B = null != D && D === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: F } = (0, j.gX)(s.id),
             z = F || !A;
@@ -85,27 +85,27 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             children: [
                 (0, r.jsx)(p.vwX, {
                     tag: 'h1',
-                    children: O.NW.string(O.t.N6Tg9P)
+                    children: C.NW.string(C.t.N6Tg9P)
                 }),
                 (0, r.jsx)(p.R94, {
                     type: p.R94.Types.DESCRIPTION,
-                    children: O.NW.string(O.t['uU/69/'])
+                    children: C.NW.string(C.t['uU/69/'])
                 }),
                 (0, r.jsx)(p.j7V, {
                     className: I.enableSwitch,
                     value: v,
                     disabled: F || (!v && !l),
-                    tooltipNote: v || l ? void 0 : O.NW.string(O.t.mIgfEh),
+                    tooltipNote: v || l ? void 0 : C.NW.string(C.t.mIgfEh),
                     hideBorder: !0,
                     onChange: (e) => P(e),
                     children: (0, r.jsx)(p.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: O.NW.string(O.t.lwvl1t)
+                        children: C.NW.string(C.t.lwvl1t)
                     })
                 }),
                 (0, r.jsxs)(p.xJW, {
-                    title: O.NW.string(O.t.N46WOj),
+                    title: C.NW.string(C.t.N46WOj),
                     disabled: F,
                     children: [
                         (0, r.jsx)(h.Z, {
@@ -116,18 +116,18 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             onClick: () => (0, b.Z)(U),
                             className: I.openPageButton,
                             disabled: F,
-                            children: O.NW.string(O.t.CaOYqa)
+                            children: C.NW.string(C.t.CaOYqa)
                         })
                     ]
                 }),
                 (0, r.jsx)(p.$i$, { className: I.divider }),
                 (0, r.jsxs)(p.xJW, {
-                    title: O.NW.string(O.t.W39uIC),
+                    title: C.NW.string(C.t.W39uIC),
                     disabled: F,
                     children: [
                         (0, r.jsx)(p.R94, {
                             disabled: F,
-                            children: O.NW.string(O.t.B6XtEx)
+                            children: C.NW.string(C.t.B6XtEx)
                         }),
                         (0, r.jsxs)('div', {
                             className: I.accentColorContainer,
@@ -138,7 +138,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                     style: { backgroundColor: '#'.concat(w.toString(16).padStart(6, '0')) },
                                     className: I.buttonPreview,
                                     disabled: F,
-                                    children: O.NW.string(O.t.l6iM39)
+                                    children: C.NW.string(C.t.l6iM39)
                                 }),
                                 (0, r.jsx)(p.zH8, {
                                     colors: E,
@@ -157,18 +157,18 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 }),
                 (0, r.jsx)(p.$i$, { className: I.divider }),
                 (0, r.jsxs)(p.xJW, {
-                    title: O.NW.string(O.t.k2yRvb),
+                    title: C.NW.string(C.t.k2yRvb),
                     disabled: F,
                     children: [
                         (0, r.jsx)(p.R94, {
                             disabled: F,
-                            children: O.NW.string(O.t['amd99/'])
+                            children: C.NW.string(C.t['amd99/'])
                         }),
                         (0, r.jsx)(p.oil, {
                             value: null != D ? D : void 0,
                             onChange: (e) => Z('' === e ? null : e),
-                            error: A ? null : O.NW.string(O.t['1kL79f']),
-                            placeholder: O.NW.string(O.t['+I4gdX']),
+                            error: A ? null : C.NW.string(C.t['1kL79f']),
+                            placeholder: C.NW.string(C.t['+I4gdX']),
                             className: I.trailerInputWrapper,
                             inputClassName: a()(I.trailerInput, {
                                 [I.error]: !A,
@@ -189,12 +189,12 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 }),
                 (0, r.jsx)(p.$i$, { className: I.divider }),
                 (0, r.jsxs)(p.xJW, {
-                    title: O.NW.string(O.t.AU2HU1),
+                    title: C.NW.string(C.t.AU2HU1),
                     disabled: F,
                     children: [
                         (0, r.jsx)(p.R94, {
                             disabled: F,
-                            children: O.NW.string(O.t.iWBt3d)
+                            children: C.NW.string(C.t.iWBt3d)
                         }),
                         (0, r.jsx)(p.j7V, {
                             className: I.premiumMemberCountSwitchContainer,
@@ -220,12 +220,12 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                             (0, r.jsx)(p.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: O.NW.string(O.t.hJsAPj)
+                                                children: C.NW.string(C.t.hJsAPj)
                                             }),
                                             (0, r.jsx)(p.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'header-secondary',
-                                                children: O.NW.string(O.t.hn65ER)
+                                                children: C.NW.string(C.t.hn65ER)
                                             })
                                         ]
                                     })
@@ -244,7 +244,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    P(s.hasFeature(C.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), Z(null == c ? void 0 : c.store_page_trailer_url), W(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
+                                    P(s.hasFeature(O.oNc.CREATOR_STORE_PAGE)), R(null != (e = null == c ? void 0 : c.store_page_primary_color) ? e : T), Z(null == c ? void 0 : c.store_page_trailer_url), W(null != (t = null == c ? void 0 : c.store_page_show_subscriber_count) && t);
                                 },
                                 onSave: G,
                                 disabled: z

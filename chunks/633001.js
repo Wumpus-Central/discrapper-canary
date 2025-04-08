@@ -380,7 +380,7 @@ function z() {
         });
     }, [G]);
     let [J, q] = a.useState({}),
-        $ = a.useRef();
+        $ = a.useRef(null);
     a.useEffect(
         () => (
             ($.current = setInterval(async () => {

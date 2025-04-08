@@ -23,8 +23,8 @@ function v(e) {
         { guildProfile: c, fetchGuildProfile: g, fetchStatus: v } = (0, m.u)(t),
         y = v !== u.a.FETCHED,
         {
-            fetchedEmbed: C,
-            embedEnabled: O,
+            fetchedEmbed: O,
+            embedEnabled: C,
             embedChannelId: I
         } = (0, l.cj)([f.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
@@ -38,14 +38,14 @@ function v(e) {
         S = i.useMemo(() => (0, x.a)(t), [t]),
         [T, P] = i.useState(!1),
         w = null != c && s.Y.VISIBLE.has(c.visibility),
-        R = !y && !w && !O,
+        R = !y && !w && !C,
         D = (0, h.Dj)({
             guildId: t,
             location: 'widget settings'
         });
     i.useEffect(() => {
-        C || (0, p.R)(t);
-    }, [C, t]),
+        O || (0, p.R)(t);
+    }, [O, t]),
         i.useEffect(() => {
             g();
         }, [t, g]);
@@ -55,12 +55,12 @@ function v(e) {
         },
         [I, t]
     );
-    return C
+    return O
         ? (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(o.j7V, {
                       disabled: T,
-                      value: O,
+                      value: C,
                       hideBorder: !0,
                       onChange: Z,
                       children: N.NW.string(N.t.NR6hub)
@@ -73,14 +73,14 @@ function v(e) {
                             children: D ? N.NW.string(N.t.zCGuJy) : N.NW.string(N.t.yInR2t)
                         })
                       : null,
-                  O
+                  C
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', { className: _.divider }),
                                 (0, r.jsx)(o.vwX, { children: N.NW.string(N.t.LUo0Q0) }),
                                 (0, r.jsx)(j.m, {
                                     guildId: t,
-                                    widgetEnabled: O,
+                                    widgetEnabled: C,
                                     widgetChannelId: I,
                                     enableLocalUpdate: !0
                                 }),

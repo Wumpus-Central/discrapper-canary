@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(372769),
     v = n(690221),
     y = n(524329),
-    C = n(575258),
-    O = n(514698),
+    O = n(575258),
+    C = n(514698),
     I = n(592125),
     E = n(4912),
     S = n(626135),
@@ -81,7 +81,7 @@ let L = 'WELCOME_CHANNEL',
         let s,
             { guildId: l, welcomeChannel: o, onEdit: h, onChannelReorder: f, isDropHovered: N, index: _ } = e,
             [v, y] = i.useState(!1),
-            C = i.useRef(null),
+            O = i.useRef(null),
             S = (0, u.e7)([I.Z], () => I.Z.getChannel(o.channel_id)),
             P = (0, u.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             w = null != S && T.Uu(R.Plq.VIEW_CHANNEL, S),
@@ -109,7 +109,7 @@ let L = 'WELCOME_CHANNEL',
         return (
             i.useLayoutEffect(
                 () => (
-                    U(B(C)),
+                    U(B(O)),
                     () => {
                         U(null), B(null);
                     }
@@ -135,7 +135,7 @@ let L = 'WELCOME_CHANNEL',
                   })),
             (0, r.jsxs)('div', {
                 className: a()(A.welcomeChannel, { [A.dragging]: N }),
-                ref: C,
+                ref: O,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
                     (0, g.jW)(e, async () => {
@@ -202,7 +202,7 @@ let L = 'WELCOME_CHANNEL',
                         children: Z.NW.string(Z.t.bt75u7)
                     }),
                     v &&
-                        (0, r.jsx)(O.Z, {
+                        (0, r.jsx)(C.Z, {
                             onConfirm: () => h(),
                             onCancel: () => y(!1),
                             channelId: o.channel_id
@@ -213,14 +213,14 @@ let L = 'WELCOME_CHANNEL',
     },
     G = (e) => {
         let { guild: t, showCreateModal: s } = e,
-            { welcomeSettings: a, originalWelcomeSettings: l } = (0, u.e7)([C.Z], () => C.Z.getSettingsProps()),
+            { welcomeSettings: a, originalWelcomeSettings: l } = (0, u.e7)([O.Z], () => O.Z.getSettingsProps()),
             c = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
             [d, g] = i.useState(null),
             [p, b] = i.useState(!1),
             [x, j] = i.useState(!1),
-            { description: O, channels: I, enabled: T } = a,
+            { description: C, channels: I, enabled: T } = a,
             L = () => {
-                null != t && O !== l.description && ((0, y.Es)(t.id, { description: null == O ? void 0 : O.trim() }), b(!0));
+                null != t && C !== l.description && ((0, y.Es)(t.id, { description: null == C ? void 0 : C.trim() }), b(!0));
             },
             G = (e) => {
                 null != t && (o()(e, l.channels) || ((0, y.Es)(t.id, { channels: e }), b(!0)));
@@ -281,13 +281,13 @@ let L = 'WELCOME_CHANNEL',
                                 guild_id: null == t ? void 0 : t.id,
                                 options: e,
                                 options_channel_ids: n,
-                                guild_description: O,
+                                guild_description: C,
                                 has_custom_emojis: r,
                                 is_enabled: T
                             });
                     }
                 },
-                [p, I, O, T, t, H]
+                [p, I, C, T, t, H]
             ),
             i.useEffect(() => () => (0, y.sm)(), []);
         let V = i.useCallback(() => {
@@ -397,7 +397,7 @@ let L = 'WELCOME_CHANNEL',
                                               onKeyDown: (e) => {
                                                   e.keyCode === R.yXg.ENTER && e.preventDefault();
                                               },
-                                              value: O,
+                                              value: C,
                                               maxLength: 140,
                                               disabled: !0
                                           })

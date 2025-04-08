@@ -85,7 +85,7 @@ class O extends (r = l.PureComponent) {
             n,
             r,
             l,
-            { image: o, hint: s, name: c, makeURL: f, disabled: O, onChange: N, showIcon: v, showIconDisabled: y, className: _, imageClassName: C, iconClassName: I, iconWrapperClassName: S, icon: E, hideSize: P, imageStyle: w, showRemoveButton: T, maxFileSizeBytes: Z, onFileSizeError: W, onOpenImageSelectModal: k, 'aria-label': A } = this.props;
+            { image: o, hint: s, name: c, makeURL: f, disabled: O, onChange: N, showIcon: v, showIconDisabled: y, className: _, imageClassName: C, iconClassName: I, iconWrapperClassName: S, icon: E, hideSize: P, imageStyle: w, showRemoveButton: T, maxFileSizeBytes: Z, onFileSizeError: k, onOpenImageSelectModal: W, 'aria-label': A } = this.props;
         if (
             (null != (t = null != o && /^data:/.test(o) ? o : f(o))
                 ? (n = 'url("'.concat(t, '")'))
@@ -141,11 +141,11 @@ class O extends (r = l.PureComponent) {
                                         'aria-hidden': !0,
                                         children: r
                                     }),
-                                    null != k
+                                    null != W
                                         ? (0, i.jsx)(d.P3F, {
                                               className: g.imageUploaderFileInput,
                                               'aria-label': D,
-                                              onClick: k
+                                              onClick: W
                                           })
                                         : (0, i.jsx)(p.ZP, {
                                               ref: this.inputRef,
@@ -154,7 +154,7 @@ class O extends (r = l.PureComponent) {
                                               'aria-label': D,
                                               tabIndex: 0,
                                               maxFileSizeBytes: Z,
-                                              onFileSizeError: W
+                                              onFileSizeError: k
                                           })
                                 ]
                             }),

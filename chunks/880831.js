@@ -128,7 +128,7 @@ function T(e) {
                 [a, s] = i.useState([]),
                 [u, p] = i.useState(!1),
                 h = i.useRef(null),
-                f = i.useRef(),
+                f = i.useRef(void 0),
                 m = i.useCallback(() => {
                     s([]), p(!0);
                 }, []);

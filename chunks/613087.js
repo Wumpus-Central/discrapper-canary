@@ -71,7 +71,7 @@ let u = o.createContext({
             { recalculateAnimationPositions: m, registerComponent: f, unregisterComponent: g, expansionSpring: x, mountPoints: h } = o.useContext(u),
             b = o.useRef(null),
             j = o.useRef(null),
-            v = o.useRef();
+            v = o.useRef(void 0);
         o.useEffect(() => {
             m();
         }, [m]),

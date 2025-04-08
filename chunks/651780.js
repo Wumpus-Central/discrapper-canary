@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(267642),
     v = n(63063),
     y = n(999382),
-    C = n(981631),
-    O = n(388032),
+    O = n(981631),
+    C = n(388032),
     I = n(351325);
 function E(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
@@ -29,11 +29,11 @@ function E(e) {
     return n <= 0
         ? null
         : 0 === i && 0 === s
-          ? O.NW.format(O.t.kF0HER, {
+          ? C.NW.format(C.t.kF0HER, {
                 tierName: r,
                 numPremiumSubscriptions: n
             })
-          : O.NW.format(O.t.neDJho, {
+          : C.NW.format(C.t.neDJho, {
                 days: i,
                 hours: s,
                 tierName: r,
@@ -51,7 +51,7 @@ function S(e) {
         children: [
             (0, r.jsx)('div', {
                 className: I.guildBoostingGracePeriodTitle,
-                children: O.NW.format(O.t.LG7vvr, {})
+                children: C.NW.format(C.t.LG7vvr, {})
             }),
             (0, r.jsx)(E, {
                 endsAt: i,
@@ -91,7 +91,7 @@ function P() {
                 children: [
                     (0, r.jsx)(a.vwX, {
                         tag: a.RB0.H1,
-                        children: O.NW.string(O.t.nLovSU)
+                        children: C.NW.string(C.t.nLovSU)
                     }),
                     null != t && null != e
                         ? (0, r.jsx)(S, {
@@ -102,7 +102,7 @@ function P() {
                     (0, r.jsx)(a.R94, {
                         type: a.R94.Types.DESCRIPTION,
                         className: I.titleBlurb,
-                        children: O.NW.format(O.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(C.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: C.NW.format(C.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(O.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
@@ -114,7 +114,7 @@ function P() {
                     }
                 }),
             (0, r.jsx)(b.Z, {
-                tiers: (0, _.cP)(null != e && e.hasFeature(C.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= C.B9o),
+                tiers: (0, _.cP)(null != e && e.hasFeature(O.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= O.B9o),
                 renderTier: T
             }),
             (0, r.jsx)('div', { className: I.divider }),
@@ -122,11 +122,11 @@ function P() {
             n
                 ? (0, r.jsx)(g.Z, {
                       onOpenPremiumClick: () =>
-                          void N.default.track(C.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void N.default.track(O.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: C.ZY5.GUILD_SETTINGS,
-                                  section: C.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: C.qAy.BUTTON_CTA
+                                  page: O.ZY5.GUILD_SETTINGS,
+                                  section: O.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: O.qAy.BUTTON_CTA
                               }
                           })
                   })

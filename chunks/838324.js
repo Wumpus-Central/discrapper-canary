@@ -21,8 +21,8 @@ function p(e) {
         _ = p ? x.length : f.length,
         v = N < u.md,
         y = _ >= u.X,
-        C = j.length - b.length,
-        O = (0, r.jsx)(a.owK, {
+        O = j.length - b.length,
+        C = (0, r.jsx)(a.owK, {
             size: 'sm',
             color: s.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: s.Z.unsafe_rawColors.WHITE_100.css,
@@ -62,7 +62,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: g.requiredItem,
                 children: [
-                    v ? I : O,
+                    v ? I : C,
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -73,7 +73,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: g.requiredItem,
                 children: [
-                    y ? O : I,
+                    y ? C : I,
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -113,7 +113,7 @@ function p(e) {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: m.NW.format(m.t['8Geut7'], {
-                                        count: C,
+                                        count: O,
                                         prejoinHook: (e) =>
                                             (0, r.jsx)(a.eee, {
                                                 onClick: n,

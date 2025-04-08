@@ -270,9 +270,9 @@ let Z = i.memo(function (e) {
         G = !k && D,
         B = (0, f.xR)(Z) && L && !y,
         [U, W] = i.useState(!1),
-        V = i.useRef(),
+        V = i.useRef(!1),
         F = i.useRef(null),
-        H = i.useRef(),
+        H = i.useRef(void 0),
         z = h.QK.getSetting();
     i.useEffect(() => {
         if (B && t && !V.current && z)

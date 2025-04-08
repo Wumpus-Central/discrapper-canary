@@ -48,13 +48,13 @@ function E(e) {
         { channelId: c, messageId: u } = (0, b.pE)(),
         [g, _] = i.useState(''),
         [x, E] = i.useState(!1),
-        N = '' !== g && x,
-        O = i.useCallback(() => {
+        O = '' !== g && x,
+        N = i.useCallback(() => {
             _((0, h.e1)(u, c, l));
         }, [u, c, l]),
         j = i.useCallback(() => {
-            O(), E(!0);
-        }, [O]),
+            N(), E(!0);
+        }, [N]),
         C = i.useCallback(() => {
             E(!1);
         }, []),
@@ -68,12 +68,12 @@ function E(e) {
     i.useEffect(() => {
         if (x)
             return (
-                m.Z.addReactChangeListener(O),
+                m.Z.addReactChangeListener(N),
                 () => {
-                    m.Z.removeReactChangeListener(O);
+                    m.Z.removeReactChangeListener(N);
                 }
             );
-    }, [x, O]);
+    }, [x, N]);
     let I = (0, r.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
@@ -94,7 +94,7 @@ function E(e) {
                                   scaleFontToUserSetting: !0,
                                   children: g
                               }),
-                              forceOpen: N,
+                              forceOpen: O,
                               'aria-label': !1,
                               children: (e) => {
                                   var t, n;
@@ -109,7 +109,7 @@ function E(e) {
                                               onBlur: C,
                                               onClick: S,
                                               className: y.voteCountButton,
-                                              'aria-describedby': N ? s : void 0,
+                                              'aria-describedby': O ? s : void 0,
                                               look: d.zxk.Looks.BLANK,
                                               size: d.zxk.Sizes.NONE,
                                               children: I
@@ -130,7 +130,7 @@ function E(e) {
                                   );
                               }
                           }),
-                          N &&
+                          O &&
                               (0, r.jsx)(o.T, {
                                   id: s,
                                   children: g
@@ -147,7 +147,7 @@ function E(e) {
         ]
     });
 }
-function N(e) {
+function O(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
@@ -166,7 +166,7 @@ function N(e) {
         'aria-hidden': !0
     });
 }
-function O(e) {
+function N(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: l, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -214,7 +214,7 @@ function j(e) {
         }),
         children: [
             a
-                ? (0, r.jsx)(N, {
+                ? (0, r.jsx)(O, {
                       percentage: t.votesPercentage,
                       shouldAnimate: m
                   })
@@ -239,7 +239,7 @@ function j(e) {
                     canShowVoterDetails: s,
                     answerId: t.answerId
                 }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(N, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,

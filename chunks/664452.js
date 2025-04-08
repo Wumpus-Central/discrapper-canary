@@ -69,14 +69,14 @@ function v(e) {
         w = (0, p.BT)(_),
         T = (0, m.SG)(P) || C,
         Z = (0, m.sN)(P),
-        [W, k] = i.useState(T),
+        [k, W] = i.useState(T),
         [A, D] = i.useState(Z),
         [R, L] = i.useState(!1),
-        M = W !== T || A !== Z || R,
+        M = k !== T || A !== Z || R,
         B = C && !w;
     if (null == _) return v(), null;
     function U() {
-        k((e) => !e);
+        W((e) => !e);
     }
     return (0, r.jsxs)(a.Y0X, {
         transitionState: n,
@@ -141,7 +141,7 @@ function v(e) {
                                                 children: (0, r.jsx)(a.rsf, {
                                                     className: j.toggle,
                                                     onChange: U,
-                                                    checked: W,
+                                                    checked: k,
                                                     disabled: B
                                                 })
                                             })
@@ -183,15 +183,15 @@ function v(e) {
                 children: [
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
-                            (T || Z) && !W && !A ? ((0, u.n)(_.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, N(O({}, e), { guildId: t }))))) : (0, u.n)(_.id, W, A, S);
+                            (T || Z) && !k && !A ? ((0, u.n)(_.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, N(O({}, e), { guildId: t }))))) : (0, u.n)(_.id, k, A, S);
                             let { source: e, alertType: n, messageId: i } = y;
                             d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                 guild_id: t,
                                 source: e,
                                 raid_alert_id: i,
                                 raid_alert_type: n,
-                                intervention_type_enabled: (0, m.sO)(W, A),
-                                intervention_type_disabled: (0, m.lk)(W, A),
+                                intervention_type_enabled: (0, m.sO)(k, A),
+                                intervention_type_disabled: (0, m.lk)(k, A),
                                 duration: 60 * S
                             }),
                                 v();

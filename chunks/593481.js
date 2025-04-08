@@ -235,9 +235,9 @@ class v extends (i = s.PureComponent) {
             } = this,
             i = null != e ? a.P3F : 'div';
         return (0, r.jsxs)(i, {
-            onMouseOver: n ? null : this.handleMouseEnter,
-            onFocus: n ? null : this.handleMouseEnter,
-            onClick: e,
+            onMouseOver: n ? void 0 : this.handleMouseEnter,
+            onFocus: n ? void 0 : this.handleMouseEnter,
+            onClick: null != e ? e : void 0,
             className: l()(d.container, {
                 [d.themePrimary]: !0,
                 [d.clickable]: null != e && !t

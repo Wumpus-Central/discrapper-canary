@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -97,7 +97,7 @@ class E extends (r = l.ZP.Store) {
     }
 }
 p(E, 'displayName', 'GamePartyStore');
-let N = new E(o.Z, {
+let O = new E(o.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             r = !1;

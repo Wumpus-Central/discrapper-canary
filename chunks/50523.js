@@ -20,7 +20,7 @@ var i = n(442837),
     y = n(388032);
 function v(e) {
     var t, n;
-    let { application: v, customId: E, customLink: N, embedUrl: O, referrerId: j } = e,
+    let { application: v, customId: E, customLink: O, embedUrl: N, referrerId: j } = e,
         C = null == v || null == (t = v.bot) ? void 0 : t.id,
         S = (0, c.ms)({
             context: { type: 'contextless' },
@@ -40,11 +40,11 @@ function v(e) {
         k = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         R = (0, b.Z)(),
         D = w === x.jy.CAN_LAUNCH,
-        L = null != E ? E : N.customId,
+        L = null != E ? E : O.customId,
         M = [];
     D &&
         M.push({
-            label: null != N.primaryCta ? N.primaryCta : null == Z ? y.NW.string(y.t.cnBQPD) : y.NW.string(y.t.VJlc0d),
+            label: null != O.primaryCta ? O.primaryCta : null == Z ? y.NW.string(y.t.cnBQPD) : y.NW.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
                 (0, g.G6)({
@@ -62,7 +62,7 @@ function v(e) {
         }),
         T &&
             M.push({
-                label: D || null == N.primaryCta ? y.NW.string(y.t.JeK1Wl) : N.primaryCta,
+                label: D || null == O.primaryCta ? y.NW.string(y.t.JeK1Wl) : O.primaryCta,
                 trackingArea: p.j_.PLAY,
                 onClick() {
                     (0, o.W)({
@@ -79,16 +79,16 @@ function v(e) {
         null != M && null != W && M.push(W),
         (0, r.jsx)(d.W, {
             actions: M,
-            embedUrl: O,
+            embedUrl: N,
             header: v.name,
             iconSrc: h.ZP.getApplicationIconURL({
                 id: v.id,
                 icon: v.icon,
                 bot: v.bot
             }),
-            info: (0, r.jsx)('div', { children: N.description }),
-            staticBannerSrc: N.getAssetURL(),
-            title: N.title,
+            info: (0, r.jsx)('div', { children: O.description }),
+            staticBannerSrc: O.getAssetURL(),
+            title: O.title,
             trackingConfig: {
                 id: v.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,

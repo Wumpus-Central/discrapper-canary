@@ -27,8 +27,8 @@ var r = n(200651),
     y = n(699516),
     v = n(914010),
     E = n(594174),
-    N = n(768581),
-    O = n(433534),
+    O = n(768581),
+    N = n(433534),
     j = n(506895),
     C = n(758199),
     S = n(943762),
@@ -43,12 +43,12 @@ function k(e) {
         { name: _, bot: b } = (t = (0, T.O)(t)),
         y = null == b ? void 0 : b.id,
         v = (0, f.ye)(t),
-        E = N.ZP.getApplicationIconURL({
+        E = O.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b
         }),
-        { staticBannerSrc: O, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
+        { staticBannerSrc: N, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
         k = (0, o.e7)([x.default], () => (null != s ? s : x.default.getId()), [s]),
         { analyticsLocations: L } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: W, isCurrentlyInInstance: U, canLaunchInChannel: F } = (0, j.c)(t.id),
@@ -104,7 +104,7 @@ function k(e) {
         Y = v ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(R, { app: t });
     return (0, r.jsx)(C.W, {
         title: _,
-        staticBannerSrc: O,
+        staticBannerSrc: N,
         videoBannerSrc: S,
         bannerAspectRatio: Z,
         iconSrc: E,
@@ -124,7 +124,7 @@ function R(e) {
     var t, n, l;
     let { app: c } = e,
         u =
-            (0, O.E)({
+            (0, N.E)({
                 customInstallUrl: c.customInstallUrl,
                 installParams: c.installParams,
                 integrationTypesConfig: c.integrationTypesConfig

@@ -50,14 +50,14 @@ function _(e) {
 let v = (e) => {
     var t, n;
     let { guildId: l, application: o } = e,
-        { loading: m, team: g, currentPeriod: v, allPeriods: y, metrics: C } = (0, d.Z)(l, o),
-        O = (0, u.u)(l),
+        { loading: m, team: g, currentPeriod: v, allPeriods: y, metrics: O } = (0, d.Z)(l, o),
+        C = (0, u.u)(l),
         I = (0, c.mY)();
     return m
         ? (0, r.jsx)(i.$jN, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  O &&
+                  C &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [(0, r.jsx)(s.Z, { children: x.NW.format(x.t['2raBCQ'], { insightsURL: b.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(l) }) }), (0, r.jsx)(i.LZC, { size: 32 })]
                       }),
@@ -71,9 +71,9 @@ let v = (e) => {
                               children: [
                                   (0, r.jsx)(p.Z, {
                                       label: x.NW.string(x.t.iY1jW1),
-                                      value: (0, a.T4)(null != (t = C.revenue) ? t : 0, b.pKx.USD),
+                                      value: (0, a.T4)(null != (t = O.revenue) ? t : 0, b.pKx.USD),
                                       additionalContent: (0, r.jsx)(p.H, {
-                                          value: C.revenuePctChange,
+                                          value: O.revenuePctChange,
                                           isPercent: !0
                                       })
                                   }),
@@ -81,7 +81,7 @@ let v = (e) => {
                                       label: x.NW.string(x.t.cXyw29),
                                       value: (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              null != (n = C.subscribers) ? n : '-',
+                                              null != (n = O.subscribers) ? n : '-',
                                               ' ',
                                               (0, r.jsx)(i.tBG, {
                                                   size: 'md',
@@ -91,7 +91,7 @@ let v = (e) => {
                                               })
                                           ]
                                       }),
-                                      additionalContent: (0, r.jsx)(p.H, { value: C.subscriberChange })
+                                      additionalContent: (0, r.jsx)(p.H, { value: O.subscriberChange })
                                   })
                               ]
                           }),

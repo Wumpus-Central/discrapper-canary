@@ -25,7 +25,7 @@ function E(e) {
         null == o &&
             ((o = {
                 results: [],
-                context: c.Z.getSearchContext(N.bind(null, t))
+                context: c.Z.getSearchContext(O.bind(null, t))
             }),
             (v[t] = o)),
         {
@@ -44,7 +44,7 @@ function E(e) {
         }
     );
 }
-function N(e, t) {
+function O(e, t) {
     let { results: n } = t,
         r = v[e],
         i = y[e];
@@ -84,7 +84,7 @@ function N(e, t) {
         })),
         A.emitChange();
 }
-function O(e, t, n) {
+function N(e, t, n) {
     var r, i, a;
     let l,
         o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
@@ -150,7 +150,7 @@ function C(e, t) {
     let n = [];
     return (
         t.type === b.Sap.FILTER
-            ? n.push(O(t.filter, t.token, e, 10))
+            ? n.push(N(t.filter, t.token, e, 10))
             : t.type === b.Sap.FILTER_ALL
               ? (n = (function (e, t) {
                     let n = (null != e ? e.getFullMatch() : '').trim(),
@@ -164,7 +164,7 @@ function C(e, t) {
                                 return g.Z.hidePersonalInformation || (n.push(b.dCx.FILTER_FROM), n.push(b.dCx.FILTER_MENTIONS)), t === b.aib.GUILD && n.push(b.dCx.FILTER_IN), n;
                             })(t).forEach((n) => {
                                 if (null == n) return;
-                                let i = O(n, e, t, 3);
+                                let i = N(n, e, t, 3);
                                 null != i && r.push(i);
                             }),
                             r.push(

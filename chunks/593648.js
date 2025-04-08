@@ -119,7 +119,7 @@ function Y(e) {
 }
 function K(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: s } = e,
-        l = i.useRef(),
+        l = i.useRef(null),
         o = (0, E.p)(),
         c = i.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), null != l.current && l.current.stop(), (l.current = (0, y.GN)(e));
