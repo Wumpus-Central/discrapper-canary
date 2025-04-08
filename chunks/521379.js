@@ -1,12 +1,13 @@
-n.d(t, { Z: () => d }), n(35282), n(704826);
+n.d(t, { Z: () => p }), n(35282);
 var r,
     i = n(200651),
     o = n(192379),
     a = n(442837),
     l = n(388905),
-    s = n(108427),
-    c = n(559786);
-function u(e, t, n) {
+    s = n(703656),
+    c = n(108427),
+    u = n(559786);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,16 +21,16 @@ function u(e, t, n) {
     );
 }
 a.ZP.initialize();
-class d extends (r = o.PureComponent) {
+class p extends (r = o.PureComponent) {
     componentDidMount() {
-        (0, s.e)('account_revert');
+        (0, c.e)('account_revert');
     }
     render() {
         let { token: e } = this.props.match.params;
         return (0, i.jsx)(l.ZP, {
             style: { padding: 0 },
             children: (0, i.jsx)(
-                c.Z,
+                u.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,7 +42,7 @@ class d extends (r = o.PureComponent) {
                                 })
                             )),
                             r.forEach(function (t) {
-                                u(e, t, n[t]);
+                                d(e, t, n[t]);
                             });
                     }
                     return e;
@@ -56,7 +57,7 @@ class d extends (r = o.PureComponent) {
         });
     }
 }
-u(d, 'defaultProps', {
-    transitionTo: (e) => n.g.location.assign(e),
-    replaceWith: (e) => n.g.location.replace(e)
+d(p, 'defaultProps', {
+    transitionTo: s.uL,
+    replaceWith: s.dL
 });
