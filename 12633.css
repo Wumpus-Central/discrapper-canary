@@ -10040,27 +10040,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     margin: auto
 }
 
-.modal_b0827a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent !important;
-    box-shadow: none !important
-}
-
-.image_b0827a,
-.modal_b0827a {
-    border-radius: 0
-}
-
-@media (max-width: 485px) {
-    .modal_b0827a {
-        display: relative;
-        overflow: visible;
-        overflow: initial
-    }
-}
-
 .fileWrapper__0ccae {
     position: relative;
     width: 432px;
