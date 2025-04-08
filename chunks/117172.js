@@ -7,9 +7,7 @@ e.exports = {
     contentContainer: 'contentContainer__98cbd',
     headerContainer: 'headerContainer__98cbd',
     description: 'description__98cbd',
-    imageContainer: 'imageContainer__98cbd',
     image: 'image__98cbd',
-    gradientRoleColorsImage: 'gradientRoleColorsImage__98cbd',
     bundle: 'bundle__98cbd',
     inline: 'inline__98cbd',
     inlineBoost: 'inlineBoost__98cbd'
