@@ -79,11 +79,11 @@ let U = [
     }
 ];
 function B(e) {
-    let { role: t, guildId: n, selectedStyle: i, onStyleSelect: s } = e,
-        l = z(D.NW.string(D.t.Mi9KbW)),
-        o = (0, g.ZP)(),
-        d = (0, b.oC)(n, t),
-        p = {
+    let { role: t, guildId: n, selectedStyle: i, onStyleSelect: s, disabled: l } = e,
+        o = z(D.NW.string(D.t.Mi9KbW)),
+        d = (0, g.ZP)(),
+        p = (0, b.oC)(n, t),
+        h = {
             dark: {
                 src: k,
                 name: t.name
@@ -98,11 +98,14 @@ function B(e) {
         children: (0, r.jsx)('div', {
             className: Z.roleStyleContainer,
             children: U.map((e) => {
-                let { id: n, colors: g, labelString: h } = e;
+                let { id: n, colors: g, labelString: f } = e;
                 return (0, r.jsxs)(
                     'button',
                     {
-                        className: a()(Z.roleStylePreviewContainer, { [Z.selected]: i === n }),
+                        className: a()(Z.roleStylePreviewContainer, {
+                            [Z.selected]: i === n,
+                            [Z.disabled]: l
+                        }),
                         onClick: () =>
                             (function (e) {
                                 let n;
@@ -138,7 +141,7 @@ function B(e) {
                                     className: Z.roleStyleMessageContainer,
                                     children: (0, r.jsx)(N.Z, {
                                         author: {
-                                            nick: l.author.username,
+                                            nick: o.author.username,
                                             colorStrings: {
                                                 primaryColor: null != g.primary_color ? (0, c.Rf)(g.primary_color) : void 0,
                                                 secondaryColor: null != g.secondary_color ? (0, c.Rf)(g.secondary_color) : void 0,
@@ -146,9 +149,9 @@ function B(e) {
                                             },
                                             colorString: null != g.primary_color ? (0, c.Rf)(g.primary_color) : void 0
                                         },
-                                        message: l,
+                                        message: o,
                                         preview: !0,
-                                        roleIcon: null != d ? d : (0, u.ap)(o) ? p.light : p.dark,
+                                        roleIcon: null != p ? p : (0, u.ap)(d) ? h.light : h.dark,
                                         isGroupStart: !0,
                                         disableInteraction: !0
                                     })
@@ -156,7 +159,7 @@ function B(e) {
                             }),
                             (0, r.jsx)('div', {
                                 className: Z.roleStyleLabel,
-                                children: D.NW.string(h)
+                                children: D.NW.string(f)
                             })
                         ]
                     },
@@ -381,7 +384,8 @@ function Y(e) {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,
-                        onStyleSelect: g
+                        onStyleSelect: g,
+                        disabled: f
                     }),
                 (0, r.jsx)(F, {
                     role: n,

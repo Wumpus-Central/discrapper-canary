@@ -10,5 +10,6 @@ e.exports = {
     roleStyleMessageContainer: 'roleStyleMessageContainer__981c8',
     roleStylePreviewContainer: 'roleStylePreviewContainer__981c8',
     selected: 'selected__981c8',
-    roleStyleLabel: 'roleStyleLabel__981c8'
+    roleStyleLabel: 'roleStyleLabel__981c8',
+    disabled: 'disabled__981c8'
 };
