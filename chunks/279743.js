@@ -8,15 +8,15 @@ var r = n(200651),
     c = n(481060),
     u = n(442837),
     d = n(607070),
-    _ = n(663389),
-    p = n(834166);
+    p = n(663389),
+    _ = n(834166);
 function h(e) {
     let { children: t, className: n, onFlashEnd: o, animationDelay: u = 500 } = e,
-        _ = c.TVs.colors.TEXT_LINK,
-        h = (0, c.dQu)(_).spring({ opacity: 0 }),
-        f = (0, c.dQu)(_).spring({ opacity: 0.1 }),
-        m = (0, c.dQu)(_).spring({ opacity: 0 }),
-        g = (0, c.dQu)(_).spring({ opacity: 1 }),
+        p = c.TVs.colors.TEXT_LINK,
+        h = (0, c.dQu)(p).spring({ opacity: 0 }),
+        f = (0, c.dQu)(p).spring({ opacity: 0.1 }),
+        m = (0, c.dQu)(p).spring({ opacity: 0 }),
+        g = (0, c.dQu)(p).spring({ opacity: 1 }),
         [b, E] = (0, c.q_F)(
             () => ({
                 from: {
@@ -89,14 +89,14 @@ function h(e) {
         }, [E]),
         (0, r.jsx)(s.animated.div, {
             style: b,
-            className: l()(p.settingsItemHighlight, n),
+            className: l()(_.settingsItemHighlight, n),
             children: t
         })
     );
 }
 function f(e) {
     let { children: t, scrollPosition: n, animationDelay: o } = e,
-        l = (0, u.e7)([_.Z], () => _.Z.getScrollPosition() === n),
+        l = (0, u.e7)([p.Z], () => p.Z.getScrollPosition() === n),
         [s, a] = i.useState(!1);
     return (i.useEffect(() => {
         l && a(!0);

@@ -1,5 +1,5 @@
 n.d(t, {
-    Ho: () => p,
+    Ho: () => _,
     ZP: () => f,
     y9: () => h
 });
@@ -12,8 +12,8 @@ var r = n(200651),
     c = n(561308),
     u = n(297781),
     d = n(443487),
-    _ = n(522314);
-let p = [u.An],
+    p = n(522314);
+let _ = [u.An],
     h = [o._.WEEK],
     f = i.memo((e) => {
         let { entry: t, channel: n, selected: i } = e,
@@ -33,14 +33,14 @@ let p = [u.An],
                               (0, r.jsx)(d.ll, { children: t.extra.artist.name }),
                               (0, r.jsx)(u.Gk, {
                                   location: u.Gt.CARD,
-                                  children: p.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
+                                  children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                               })
                           ]
                       }),
                       (0, r.jsx)(a.f, {
                           src: null == o ? void 0 : o.src,
                           size: 48,
-                          className: _.thumbnail
+                          className: p.thumbnail
                       })
                   ]
               })

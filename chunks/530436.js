@@ -1,38 +1,38 @@
-n.d(t, { W: () => c });
-var l = n(200651),
-    i = n(192379),
-    s = n(481060),
-    r = n(434404),
-    a = n(496675),
+n.d(t, { W: () => d });
+var r = n(200651),
+    l = n(192379),
+    a = n(481060),
+    i = n(434404),
+    s = n(496675),
     o = n(981631),
-    d = n(388032),
+    c = n(388032),
     u = n(821022);
-function c(e) {
-    let { guild: t, error: n, onClose: c } = e,
-        h = t.id,
-        g = i.useCallback(() => {
-            c(), r.Z.open(h, o.pNK.INSTANT_INVITES);
-        }, [h, c]),
-        m = i.useCallback(
+function d(e) {
+    let { guild: t, error: n, onClose: d } = e,
+        m = t.id,
+        x = l.useCallback(() => {
+            d(), i.Z.open(m, o.pNK.INSTANT_INVITES);
+        }, [m, d]),
+        g = l.useCallback(
             (e) =>
-                (0, l.jsx)(s.P3F, {
+                (0, r.jsx)(a.P3F, {
                     className: u.errorLink,
-                    onClick: g,
-                    children: (0, l.jsx)(s.Text, {
+                    onClick: x,
+                    children: (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
                         children: e
                     })
                 }),
-            [g]
+            [x]
         ),
-        x = i.useCallback(
+        h = l.useCallback(
             (e) =>
-                (0, l.jsx)(s.eee, {
+                (0, r.jsx)(a.eee, {
                     href: o.EYA.INVITES_HELP,
                     target: '_blank',
-                    children: (0, l.jsx)(s.Text, {
+                    children: (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
@@ -44,13 +44,13 @@ function c(e) {
         v =
             n.code !== o.evJ.TOO_MANY_INVITES
                 ? n.getAnyErrorMessage()
-                : a.Z.can(o.Plq.MANAGE_GUILD, t)
-                  ? d.NW.format(d.t['H/RUY2'], {
-                        inviteListHook: m,
-                        inviteHelpHook: x
+                : s.Z.can(o.Plq.MANAGE_GUILD, t)
+                  ? c.NW.format(c.t['H/RUY2'], {
+                        inviteListHook: g,
+                        inviteHelpHook: h
                     })
-                  : d.NW.string(d.t['/FxH6O']);
-    return (0, l.jsx)(s.Text, {
+                  : c.NW.string(c.t['/FxH6O']);
+    return (0, r.jsx)(a.Text, {
         className: u.errorMessage,
         variant: 'text-xs/normal',
         color: 'text-danger',

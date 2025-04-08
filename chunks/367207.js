@@ -9,8 +9,8 @@ var i = n(392711),
     c = n(100527),
     u = n(358221),
     d = n(963249),
-    _ = n(93127),
-    p = n(430824),
+    p = n(93127),
+    _ = n(430824),
     h = n(594174),
     f = n(431),
     m = n(626135),
@@ -28,8 +28,8 @@ var i = n(392711),
     T = n(474936),
     L = n(981631),
     P = n(354459),
-    A = n(37113),
-    j = n(388032);
+    j = n(37113),
+    A = n(388032);
 function R(e, t, n) {
     return (
         t in e
@@ -146,7 +146,7 @@ class M extends a.Z {
             }),
             R(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = x.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
-                e && (0, _.W)();
+                e && (0, p.W)();
             }),
             R(this, '_trackCustomNotificationSoundsExposure', () => {
                 I.Y.trackExposure({ location: 'PremiumManager' });
@@ -180,12 +180,12 @@ class M extends a.Z {
                     let o = u.Z.getSelectedParticipant(e),
                         l = (0, N.o)(o, n),
                         { sendNitroMessage: a } = (0, y.TD)(l),
-                        c = null != (i = null == (r = p.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : L.Eu4.NONE;
+                        c = null != (i = null == (r = _.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : L.Eu4.NONE;
                     if (v.Z.cooldownIsActive() || !a || c >= L.Eu4.TIER_2 || (null == o ? void 0 : o.type) !== P.fO.STREAM || (null == o ? void 0 : o.id) === (null == n ? void 0 : n.id) || null == o.maxResolution || null == o.maxFrameRate) return;
                     O.I();
-                    let d = j.NW.formatToPlainString(j.t.AbyeZG, {
+                    let d = A.NW.formatToPlainString(A.t.AbyeZG, {
                         nickname: o.userNick,
-                        resolution: (0, A.o6)(o.maxResolution.height),
+                        resolution: (0, j.o6)(o.maxResolution.height),
                         fps: (0, b.bp)(o.maxFrameRate)
                     });
                     s.Z.sendNitroSystemMessage(e, d),

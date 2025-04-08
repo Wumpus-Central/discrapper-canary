@@ -2,8 +2,8 @@ n.d(t, {
     Af: () => u,
     GO: () => c,
     Gh: () => h,
-    Pq: () => _,
-    Q2: () => p,
+    Pq: () => p,
+    Q2: () => _,
     Qh: () => d,
     Vr: () => s,
     hx: () => a
@@ -66,10 +66,10 @@ function d(e) {
             return e;
     }
 }
-function _(e) {
+function p(e) {
     i.default.track(l.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
-function p(e) {
+function _(e) {
     let { guildId: t, source: n, tab: r } = e;
     i.default.track(l.rMx.CLAN_APPLICATION_NAVIGATION, {
         guild_id: t,

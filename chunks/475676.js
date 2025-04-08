@@ -8,8 +8,8 @@ var r = n(200651),
     c = n(443487),
     u = n(314897),
     d = n(594174),
-    _ = n(626135),
-    p = n(5192),
+    p = n(626135),
+    _ = n(5192),
     h = n(873128),
     f = n(246627),
     m = n(709737),
@@ -53,27 +53,27 @@ function N(e) {
             leaderboardId: T.extra.leaderboard_id,
             intervalOffset: 0
         }),
-        { rankChanges: A } = (0, f.Z)({
+        { rankChanges: j } = (0, f.Z)({
             guildId: L,
             leaderboardId: T.extra.leaderboard_id,
             intervalStart: null != (C = null == P ? void 0 : P.interval_start) ? C : ''
         }),
-        j = (0, o.e7)([u.default], () => u.default.getId()),
+        A = (0, o.e7)([u.default], () => u.default.getId()),
         [R, w] = i.useMemo(() => {
-            let e = A.find((e) => e.userId === j),
-                t = A[0],
+            let e = j.find((e) => e.userId === A),
+                t = j[0],
                 n = null != e ? e : t,
                 r = null == P ? void 0 : P.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, r];
-        }, [P, A, j]),
+        }, [P, j, A]),
         k = (0, o.e7)([d.default], () => d.default.getUser(null == R ? void 0 : R.userId)),
-        M = p.ZP.getName(L, void 0, k);
+        M = _.ZP.getName(L, void 0, k);
     !(function (e) {
         let { leaderboard: t, guildId: n } = e,
             r = null == t ? void 0 : t.leaderboard_id;
         i.useEffect(() => {
             null != r &&
-                _.default.track(E.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
+                p.default.track(E.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
                     leaderboard_id: r,
                     guild_id: n
                 });
@@ -94,7 +94,7 @@ function N(e) {
         { currentRank: V } = R;
     return (
         (N =
-            R.userId === j
+            R.userId === A
                 ? O.NW.formatToPlainString(O.t['eU+JxM'], { rank: V })
                 : O.NW.formatToPlainString(O.t['8BLSQ0'], {
                       rank: V,

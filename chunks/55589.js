@@ -6,8 +6,8 @@ var l,
     c = n(913527),
     u = n.n(c),
     d = n(442837),
-    _ = n(759174),
-    p = n(570140),
+    p = n(759174),
+    _ = n(570140),
     h = n(333023),
     f = n(355298),
     m = n(333984),
@@ -18,7 +18,7 @@ var l,
     O = n(9156),
     y = n(594174),
     v = n(709054);
-let N = new _.h(
+let N = new p.h(
     (e) => {
         let { isRequest: t, isFavorite: n } = e;
         return t ? [] : [n ? 'FAVORITE' : 'DEFAULT'];
@@ -113,7 +113,7 @@ class L extends (l = d.ZP.Store) {
               writable: !0
           })
         : (L[s] = a);
-let P = new L(p.Z, {
+let P = new L(_.Z, {
     CONNECTION_OPEN: x,
     CONNECTION_OPEN_SUPPLEMENTAL: x,
     OVERLAY_INITIALIZE: x,

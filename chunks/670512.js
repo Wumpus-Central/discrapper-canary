@@ -8,8 +8,8 @@ var r,
     c = n(846519),
     u = n(481060),
     d = n(585483),
-    _ = n(981631),
-    p = n(388032),
+    p = n(981631),
+    _ = n(388032),
     h = n(762447);
 function f(e, t, n) {
     return (
@@ -30,10 +30,10 @@ let m = {
 };
 class g extends (r = o.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d.S.subscribe(_.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), d.S.subscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d.S.unsubscribe(_.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), d.S.unsubscribe(p.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -100,11 +100,11 @@ class g extends (r = o.PureComponent) {
             children: [
                 (0, i.jsx)('div', {
                     className: h.searchMessage,
-                    children: p.NW.string(p.t.Mp0IGB)
+                    children: _.NW.string(_.t.Mp0IGB)
                 }),
                 (0, i.jsx)('div', {
                     className: h.selectMessage,
-                    children: p.NW.string(p.t['3CbpwM'])
+                    children: _.NW.string(_.t['3CbpwM'])
                 })
             ]
         });

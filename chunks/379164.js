@@ -8,8 +8,8 @@ var r = n(570140),
     c = n(695346),
     u = n(626135),
     d = n(782605),
-    _ = n(621600),
-    p = n(88658),
+    p = n(621600),
+    _ = n(88658),
     h = n(981631);
 let f = {
     acceptInvite(e) {
@@ -29,24 +29,24 @@ let f = {
                 if ((0, s.gY)({ location: 'acceptInvite' }) && null != e.guild) {
                     if (u) {
                         if (c.h2.getSetting().includes(e.guild.id)) {
-                            let t = new Set((0, p.YK)());
+                            let t = new Set((0, _.YK)());
                             t.delete(e.guild.id), c.h2.updateSetting(Array.from(t));
                         }
                     } else {
                         var t;
-                        let n = new Set((0, p.YK)());
+                        let n = new Set((0, _.YK)());
                         n.add(null == (t = e.guild) ? void 0 : t.id), c.h2.updateSetting(Array.from(n));
                     }
                     if (h) {
                         if (c.SE.getSetting().includes(e.guild.id)) {
-                            let t = new Set((0, p._o)());
+                            let t = new Set((0, _._o)());
                             t.delete(e.guild.id), c.SE.updateSetting(Array.from(t));
                         }
                     } else {
-                        let t = new Set((0, p._o)());
+                        let t = new Set((0, _._o)());
                         t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
-                    null != n && n.length > 0 && (0, l.iq)(e.guild.id, { nick: n }), (0, s.m4)({ location: 'acceptInvite' }) && o.Z.updateGuildNotificationSettings(e.guild.id, { muted: f }, _.ZB.Muted);
+                    null != n && n.length > 0 && (0, l.iq)(e.guild.id, { nick: n }), (0, s.m4)({ location: 'acceptInvite' }) && o.Z.updateGuildNotificationSettings(e.guild.id, { muted: f }, p.ZB.Muted);
                 }
                 this.close();
             },

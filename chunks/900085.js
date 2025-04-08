@@ -8,8 +8,8 @@ var r,
     c = n(442837),
     u = n(481060),
     d = n(239091),
-    _ = n(134616),
-    p = n(714338),
+    p = n(134616),
+    _ = n(714338),
     h = n(212819),
     f = n(815372),
     m = n(14429),
@@ -27,8 +27,8 @@ var r,
     T = n(63063),
     L = n(51596),
     P = n(823385),
-    A = n(415795),
-    j = n(670512),
+    j = n(415795),
+    A = n(670512),
     R = n(558631),
     w = n(981631),
     k = n(388032),
@@ -102,7 +102,7 @@ class G extends (r = o.Component) {
     render() {
         let e = y.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
-            A.$W,
+            j.$W,
             U(D({}, this.props), {
                 children: (0, i.jsx)('div', {
                     className: M.miscContainer,
@@ -130,16 +130,16 @@ let W = c.ZP.connectStores([v.ZP, C.Z], (e) => {
     F = c.ZP.connectStores([O.default], (e) => {
         let { guild: t } = e;
         return { unread: O.default.hasUnread(t.id) };
-    })(A.ic),
+    })(j.ic),
     z = c.ZP.connectStores([v.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: v.ZP.getMentionCount(t.id) };
-    })(A.PZ),
+    })(j.PZ),
     Y = c.ZP.connectStores([C.Z, v.ZP], (e) => {
         let { user: t } = e,
             n = C.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? v.ZP.getMentionCount(n) : 0 };
-    })(A.n5);
+    })(j.n5);
 function K(e, t, n) {
     return (0, i.jsx)(
         u.ua7,
@@ -159,10 +159,10 @@ function K(e, t, n) {
 }
 class X extends o.PureComponent {
     componentDidMount() {
-        p.Z.disable(), p.Z.enableTemp(_.u);
+        _.Z.disable(), _.Z.enableTemp(p.u);
     }
     componentWillUnmount() {
-        p.Z.disableTemp(), p.Z.enable();
+        _.Z.disableTemp(), _.Z.enable();
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: r } = this.state,
@@ -255,7 +255,7 @@ class X extends o.PureComponent {
     renderTutorial() {
         let { query: e } = this.state,
             { seenTutorial: t, results: n } = this.props;
-        return t ? null : (0, i.jsx)(j.Z, { hasQuery: e.length > 0 && n.length > 0 });
+        return t ? null : (0, i.jsx)(A.Z, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
         return (0, i.jsx)(u.Y0X, {
@@ -453,7 +453,7 @@ class X extends o.PureComponent {
                     { showScores: o } = m.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case h.h8.HEADER:
-                        return (0, i.jsx)(A.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
+                        return (0, i.jsx)(j.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
                     case h.h8.TEXT_CHANNEL:
                         return (0, i.jsx)(
                             W,
@@ -532,7 +532,7 @@ class X extends o.PureComponent {
                         );
                     case h.h8.APPLICATION:
                         return (0, i.jsx)(
-                            A.Mx,
+                            j.Mx,
                             {
                                 id: this.getRowId(t),
                                 focused: r >= 0 && t === r,
@@ -545,7 +545,7 @@ class X extends o.PureComponent {
                         );
                     case h.h8.LINK:
                         return (0, i.jsx)(
-                            A.rU,
+                            j.rU,
                             {
                                 focused: r >= 0 && t === r,
                                 onClick: () => this.selectResult(n),
@@ -560,7 +560,7 @@ class X extends o.PureComponent {
                         );
                     case h.h8.IN_APP_NAVIGATION:
                         return (0, i.jsx)(
-                            A.s8,
+                            j.s8,
                             {
                                 focused: r >= 0 && t === r,
                                 onClick: () => this.selectResult(n),

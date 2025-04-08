@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i,
     o,
@@ -35,7 +35,7 @@ class d extends (o = l.ZP.Store) {
               writable: !0
           })
         : (d[r] = i);
-let _ = new d(s.Z, {
+let p = new d(s.Z, {
     RECENT_AVATARS_FETCH_START: function () {
         (u.isFetching = !0), (u.error = null);
     },

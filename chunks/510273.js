@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(953529);
+n.d(t, { Z: () => _ }), n(953529);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(818765),
     u = n(674680),
     d = n(127058);
-let _ = (e) => {
+let p = (e) => {
     let { color: t } = e;
     return (0, r.jsxs)('svg', {
         width: '48',
@@ -64,9 +64,9 @@ let _ = (e) => {
         ]
     });
 };
-function p(e) {
+function _(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: o, description: p, rarity: h, hideDescriptionUntilUnlock: f, onAction: m } = t,
+        { name: o, description: _, rarity: h, hideDescriptionUntilUnlock: f, onAction: m } = t,
         { color: g } = (0, a.F7)(h);
     i.useEffect(() => {
         let e = setTimeout(() => {
@@ -103,13 +103,13 @@ function p(e) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: f && !n ? '?????' : p()
+                        children: f && !n ? '?????' : _()
                     })
                 ]
             }),
             (0, r.jsx)('div', {
                 className: d.flair,
-                children: (0, r.jsx)(_, { color: g })
+                children: (0, r.jsx)(p, { color: g })
             })
         ]
     });

@@ -62,7 +62,7 @@ function u(e, t) {
             [e, t]
         ),
         d = r.useMemo(() => (null == t ? void 0 : t.filter((t) => !e.some((e) => e.id === t.application.id))), [e, t]),
-        _ = r.useMemo(() => {
+        p = r.useMemo(() => {
             var e;
             null == d ||
                 d.forEach((e) => {
@@ -96,6 +96,6 @@ function u(e, t) {
                 (null == o || l > o) && ((i = e), (o = l));
             });
         let l = null != (r = null == i || null == (e = i.application) ? void 0 : e.id) ? r : '';
-        return [..._.filter((e) => e.id === l), ..._.filter((e) => e.id !== l)];
-    }, [_, u, n, t]);
+        return [...p.filter((e) => e.id === l), ...p.filter((e) => e.id !== l)];
+    }, [p, u, n, t]);
 }

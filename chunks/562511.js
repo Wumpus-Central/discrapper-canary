@@ -11,8 +11,8 @@ var r = n(192379),
     c = n(271383),
     u = n(430824),
     d = n(594174),
-    _ = n(731722),
-    p = n(864133),
+    p = n(731722),
+    _ = n(864133),
     h = n(981631);
 function f(e) {
     let { fetchGuildProfile: t, fetchStatus: n, guildProfile: f } = (0, a.u)(e),
@@ -25,7 +25,7 @@ function f(e) {
                         var t;
                         if (null === e) return !1;
                         let n = u.Z.getGuild(e);
-                        if (void 0 === n || !(0, _.u)(n) || null == n.profile) return !1;
+                        if (void 0 === n || !(0, p.u)(n) || null == n.profile) return !1;
                         let r = d.default.getCurrentUser();
                         if (void 0 === r || (null == (t = r.primaryGuild) ? void 0 : t.identityGuildId) === n.id) return !1;
                         let i = c.ZP.getMember(e, r.id);
@@ -36,7 +36,7 @@ function f(e) {
             );
         })(e),
         g = (function (e, t) {
-            let n = (0, i.e7)([p.Z], () => (null === e ? null : p.Z.getGuildLastSeenInfo(e))),
+            let n = (0, i.e7)([_.Z], () => (null === e ? null : _.Z.getGuildLastSeenInfo(e))),
                 r = (0, i.e7)([d.default], () => {
                     var e;
                     return null == (e = d.default.getCurrentUser()) ? void 0 : e.primaryGuild;

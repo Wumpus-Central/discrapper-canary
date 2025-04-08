@@ -49,25 +49,25 @@ function N(e) {
     }, [R]),
     null == A)
         ? null
-        : ((j = k
-              ? F
-                  ? v.NW.format(v.t.z847Tk, { wallpaper_name: null != (n = null == R ? void 0 : R.label) ? n : v.NW.string(v.t['UQMV/P']) })
-                  : v.NW.format(v.t['+lKndX'], {
-                        username: null == Z ? void 0 : Z.nick,
-                        wallpaper_name: null != (N = null == R ? void 0 : R.label) ? N : v.NW.string(v.t['UQMV/P'])
-                    })
-              : v.NW.format(v.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) })),
+        : ((j = F
+              ? v.NW.format(v.t.z847Tk, { wallpaper_name: null != (n = null == R ? void 0 : R.label) ? n : v.NW.string(v.t['UQMV/P']) })
+              : v.NW.format(v.t['+lKndX'], {
+                    username: null == Z ? void 0 : Z.nick,
+                    wallpaper_name: null != (N = null == R ? void 0 : R.label) ? N : v.NW.string(v.t['UQMV/P'])
+                })),
           w
-              ? G && W
-                  ? (C = v.NW.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (O = null == R ? void 0 : R.label) ? O : v.NW.string(v.t['UQMV/P']) }))
-                  : F ||
-                    B ||
-                    !W ||
-                    (C = v.NW.format(v.t.JwUhHh, {
-                        onClickNitro: () => {
-                            (0, u.uL)(x.Z5c.NITRO_HOME);
-                        }
-                    }))
+              ? k
+                  ? G && W
+                      ? (C = v.NW.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (O = null == R ? void 0 : R.label) ? O : v.NW.string(v.t['UQMV/P']) }))
+                      : F ||
+                        B ||
+                        !W ||
+                        (C = v.NW.format(v.t.JwUhHh, {
+                            onClickNitro: () => {
+                                (0, u.uL)(x.Z5c.NITRO_HOME);
+                            }
+                        }))
+                  : (C = v.NW.format(v.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) }))
               : (C = v.NW.string(v.t['6JSOu7'])),
           (null == M ? void 0 : M.isViewable) &&
               W &&
