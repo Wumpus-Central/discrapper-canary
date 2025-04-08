@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(442837),
     i = n(570140);
 function o(e, t, n) {
@@ -57,14 +57,16 @@ let c = 86400000,
     u = 3600000,
     d = new Map(),
     f = {},
-    _ = {};
-function p(e) {
+    _ = {},
+    p = {},
+    h = {};
+function m(e) {
     return Array.from(e.values()).reduce((e, t) => {
         var n, r, i;
         return e + (null != (i = null == (r = t.sku) || null == (n = r.powerup_metadata) ? void 0 : n.boost_price) ? i : 0);
     }, 0);
 }
-function h(e) {
+function g(e) {
     return (
         d.has(e) ||
             d.set(e, {
@@ -76,9 +78,9 @@ function h(e) {
         d.get(e)
     );
 }
-function m(e) {
+function E(e) {
     let { guildId: t, powerups: n, catalog: r } = e,
-        i = h(t),
+        i = g(t),
         o = new Map(d);
     o.set(
         t,
@@ -88,12 +90,13 @@ function m(e) {
         })
     ),
         (d = o),
-        (f[t] = Date.now());
+        (f[t] = Date.now()),
+        (p[t] = !0);
 }
-function g(e) {
+function b(e) {
     let { guildId: t, unlocked: n } = e,
-        r = h(t),
-        i = p(n),
+        r = g(t),
+        i = m(n),
         o = new Map(d);
     o.set(
         t,
@@ -103,28 +106,29 @@ function g(e) {
         })
     ),
         (d = o),
-        (_[t] = Date.now());
+        (_[t] = Date.now()),
+        (h[t] = !0);
 }
-function E(e, t) {
+function y(e, t) {
     let { guildId: n, entitlements: r } = e,
-        i = h(n);
+        i = g(n);
     r.forEach((e) => {
         t ? i.unlocked.set(e.sku_id, e) : i.unlocked.delete(e.sku_id);
     });
-    let o = p(i.unlocked),
+    let o = m(i.unlocked),
         s = new Map(d);
     s.set(n, l(a({}, i), { appliedBoosts: o })), (d = s);
 }
-function b(e) {
-    E(e, !0);
+function v(e) {
+    y(e, !0);
 }
-function y(e) {
-    E(e, !1);
+function O(e) {
+    y(e, !1);
 }
-function v() {
+function I() {
     (d = new Map()), (f = {}), (_ = {});
 }
-class O extends r.ZP.Store {
+class S extends r.ZP.Store {
     getStateForGuild(e) {
         return null != e ? d.get(e) : void 0;
     }
@@ -136,11 +140,17 @@ class O extends r.ZP.Store {
         let t = _[e];
         return null == t || t + u < Date.now();
     }
+    hasFetchedPowerupCatalog(e) {
+        return null != e && !0 === p[e];
+    }
+    hasFetchedUnlockedPowerups(e) {
+        return null != e && !0 === h[e];
+    }
 }
-let I = new O(i.Z, {
-    LOGOUT: v,
-    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: m,
-    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: g,
-    GUILD_POWERUP_ENTITLEMENTS_CREATE: b,
-    GUILD_POWERUP_ENTITLEMENTS_DELETE: y
+let T = new S(i.Z, {
+    LOGOUT: I,
+    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: E,
+    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: b,
+    GUILD_POWERUP_ENTITLEMENTS_CREATE: v,
+    GUILD_POWERUP_ENTITLEMENTS_DELETE: O
 });
