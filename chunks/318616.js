@@ -1,25 +1,25 @@
 n.d(t, { c: () => i });
-var a = n(442837),
+var l = n(442837),
     r = n(496675),
-    l = n(408433);
+    a = n(408433);
 function i(e) {
     var t, n, i;
     let { message: s, channel: o, forwardOptions: c } = e,
         u = null == c ? void 0 : c.onlyAttachmentIds,
         d = null == c ? void 0 : c.onlyEmbedIndices,
-        m = null != (i = null == (t = s.messageSnapshots[0]) ? void 0 : t.message) ? i : s,
-        p = m.attachments;
-    null != u ? (p = m.attachments.filter((e) => u.includes(e.id))) : null != d && (p = []);
-    let h = [];
+        f = null != (i = null == (t = s.messageSnapshots[0]) ? void 0 : t.message) ? i : s,
+        h = f.attachments;
+    null != u ? (h = f.attachments.filter((e) => u.includes(e.id))) : null != d && (h = []);
+    let _ = [];
     return (
-        (0, a.e7)([r.Z], () => null != o && !(0, l.eC)(o, r.Z) && (0, l.En)(s)) || ((h = m.embeds), null != d ? (h = m.embeds.filter((e, t) => d.includes(t))) : null != u && (h = [])),
-        (null != d || ('' === m.content && h.length > 0)) && (m = m.set('content', h.map((e) => e.url).join('\n'))),
-        '' === m.content && (null == (n = m.embeds[0]) ? void 0 : n.rawDescription) != null && (m = m.set('content', m.embeds[0].rawDescription)),
+        (0, l.e7)([r.Z], () => null != o && !(0, a.eC)(o, r.Z) && (0, a.En)(s)) || ((_ = f.embeds), null != d ? (_ = f.embeds.filter((e, t) => d.includes(t))) : null != u && (_ = [])),
+        (null != d || ('' === f.content && _.length > 0)) && (f = f.set('content', _.map((e) => e.url).join('\n'))),
+        '' === f.content && (null == (n = f.embeds[0]) ? void 0 : n.rawDescription) != null && (f = f.set('content', f.embeds[0].rawDescription)),
         {
-            attachments: p,
-            embeds: h,
-            hasContent: '' !== m.content && null == u,
-            contentMessage: m
+            attachments: h,
+            embeds: _,
+            hasContent: '' !== f.content && null == u,
+            contentMessage: f
         }
     );
 }

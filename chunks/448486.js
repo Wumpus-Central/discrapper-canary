@@ -1,18 +1,18 @@
 n.d(t, { _: () => c });
-var a = n(192379),
+var l = n(192379),
     r = n(442837),
-    l = n(594174),
+    a = n(594174),
     i = n(823379),
     s = n(51144),
     o = n(388032);
 function c(e) {
-    let t = (0, r.Wu)([l.default], () =>
+    let t = (0, r.Wu)([a.default], () =>
         e.recipients
-            .map((e) => l.default.getUser(e))
+            .map((e) => a.default.getUser(e))
             .filter(i.lm)
             .map((e) => s.ZP.getName(e))
     );
-    return a.useMemo(() => {
+    return l.useMemo(() => {
         if ('' === e.name) return null;
         if (0 === t.length) return null;
         if (1 === t.length) return o.NW.formatToPlainString(o.t['J+Wpsr'], { first: t[0] });

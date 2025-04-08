@@ -60,7 +60,7 @@ var r,
     V = n(124347),
     z = n(976853),
     K = n(346013),
-    Y = n(94396),
+    Y = n(207982),
     X = n(977683),
     q = n(128435),
     Q = n(98278),
@@ -426,7 +426,7 @@ class e1 extends (r = a.Component) {
                     });
                 })
                 .filter((e) => 'INVALID' !== e.type),
-            { srcToOnClickOverride: m, srcToHandlePreloadImage: f } = (0, Y.J)(
+            { srcToOnClickOverride: m, srcToHandlePreloadImage: f } = (0, Y.G)(
                 p,
                 {
                     shouldRedactExplicitContent: o,
@@ -479,7 +479,7 @@ class e1 extends (r = a.Component) {
                     proxyURL: i.proxy_url,
                     url: i.url
                 });
-            return c in m && (h && ((s.onClick = m[c]), (s.handlePreloadImage = f[c])), 'IMAGE' === s.item.type && (s.onViewItem = m[c])), s;
+            return c in m && h && ((s.onClick = m[c]), (s.handlePreloadImage = f[c])), s;
         });
         return (0, i.jsx)(eM.Z, { items: b });
     }

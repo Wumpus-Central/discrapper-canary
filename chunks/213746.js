@@ -12,8 +12,8 @@ var r = n(200651),
     m = n(171246),
     h = n(55563),
     g = n(881294),
-    f = n(133743),
-    _ = n(979007),
+    _ = n(133743),
+    f = n(979007),
     b = n(981631),
     x = n(388032),
     v = n(789362);
@@ -46,7 +46,7 @@ function j(e) {
     let { application: t } = e;
     return (0, r.jsxs)('div', {
         className: v.storeContainer,
-        children: [(0, r.jsx)(y, { application: t }), (0, r.jsx)(I, { application: t })]
+        children: [(0, r.jsx)(y, { application: t }), (0, r.jsx)(N, { application: t })]
     });
 }
 function y(e) {
@@ -73,7 +73,7 @@ function y(e) {
                                         appId: t.id,
                                         listing: e,
                                         subscriptionType: n,
-                                        onDetails: () => (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
+                                        onDetails: () => (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
                                     },
                                     e.id
                                 );
@@ -98,7 +98,7 @@ function y(e) {
                                     {
                                         skuId: e.skuId,
                                         appId: t.id,
-                                        onDetails: () => (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
+                                        onDetails: () => (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
                                     },
                                     e.id
                                 )
@@ -109,12 +109,12 @@ function y(e) {
             (0, r.jsx)(c.Z, {
                 path: b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, r.jsx)(O, C({}, e))
+                render: (e) => (0, r.jsx)(I, C({}, e))
             })
         ]
     });
 }
-function O(e) {
+function I(e) {
     let {
             match: {
                 params: { applicationId: t, skuId: i }
@@ -123,7 +123,7 @@ function O(e) {
         s = (0, l.e7)([h.Z], () => h.Z.get(i), [i]),
         c = (0, l.e7)([h.Z], () => (null != i ? h.Z.getParentSKU(i) : void 0), [i]),
         d = a.useId(),
-        u = a.useCallback(() => (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, _.GlobalDiscoveryAppsSections.STORE)), [t]);
+        u = a.useCallback(() => (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE)), [t]);
     return (
         a.useLayoutEffect(() => {
             var e;
@@ -148,7 +148,7 @@ function O(e) {
                         {
                             modalKey: d,
                             onCloseCallback: () => {
-                                N() || (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, _.GlobalDiscoveryAppsSections.STORE));
+                                O() || (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE));
                             }
                         }
                     );
@@ -176,7 +176,7 @@ function O(e) {
                             {
                                 modalKey: d,
                                 onCloseCallback: () => {
-                                    N() || (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, _.GlobalDiscoveryAppsSections.STORE));
+                                    O() || (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )
@@ -192,7 +192,7 @@ function O(e) {
         null
     );
 }
-function I(e) {
+function N(e) {
     let { application: t } = e,
         n = (0, g.nu)(),
         a = t.terms_of_service_url,
@@ -223,6 +223,6 @@ function I(e) {
         })
     });
 }
-function N() {
+function O() {
     return window.location.pathname.startsWith('/login');
 }

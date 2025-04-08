@@ -13,8 +13,8 @@ var a = n(120356),
     m = n(768581),
     h = n(981631),
     g = n(388032),
-    f = n(754726),
-    _ = n(129512),
+    _ = n(754726),
+    f = n(129512),
     b = n(330065);
 function x(e) {
     let { guild: t, className: n, onClick: a } = e,
@@ -34,7 +34,7 @@ function x(e) {
                 : (function (e) {
                       switch (e) {
                           case h.BRd.DARK:
-                              return _;
+                              return f;
                           case h.BRd.LIGHT:
                               return b;
                       }
@@ -45,28 +45,28 @@ function x(e) {
             size: 50
         });
     return (0, r.jsxs)(l.P3F, {
-        className: i()(f.card, n),
+        className: i()(_.card, n),
         onClick: a,
         'aria-label': g.NW.string(g.t.RB4L29),
         children: [
             (0, r.jsxs)('div', {
-                className: f.cardHeader,
+                className: _.cardHeader,
                 children: [
                     (0, r.jsx)('img', {
                         src: j,
                         alt: '',
-                        className: f.splashImage
+                        className: _.splashImage
                     }),
                     (0, r.jsx)('div', {
-                        className: f.guildIcon,
+                        className: _.guildIcon,
                         children: (0, r.jsx)(s.ZP, {
                             mask: s.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, r.jsx)('div', {
-                                className: f.iconMask,
+                                className: _.iconMask,
                                 children: (0, r.jsx)(c.Z, {
-                                    className: f.__invalid_icon,
+                                    className: _.__invalid_icon,
                                     iconSrc: y,
                                     guild: v,
                                     size: c.Z.Sizes.LARGE
@@ -77,38 +77,38 @@ function x(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: f.cardDetails,
+                className: _.cardDetails,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: f.guildNameWrapper,
+                        className: _.guildNameWrapper,
                         children: [
                             (0, r.jsx)(d.Z, {
-                                className: f.guildBadge,
+                                className: _.guildBadge,
                                 guild: t,
                                 tooltipColor: l.ua7.Colors.PRIMARY
                             }),
                             (0, r.jsx)(l.X6q, {
                                 variant: 'heading-md/semibold',
-                                className: f.guildName,
+                                className: _.guildName,
                                 children: t.name
                             })
                         ]
                     }),
                     (0, r.jsx)(l.Text, {
-                        className: f.guildDescription,
+                        className: _.guildDescription,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         lineClamp: 2,
                         children: t.description
                     }),
                     (0, r.jsx)('div', {
-                        className: f.memberInfo,
+                        className: _.memberInfo,
                         children: (0, r.jsxs)('div', {
-                            className: f.memberCountWrapper,
+                            className: _.memberCountWrapper,
                             children: [
                                 (0, r.jsx)(l.tBG, {
                                     color: 'currentColor',
-                                    className: f.memberCountIcon,
+                                    className: _.memberCountIcon,
                                     size: 'xs'
                                 }),
                                 (0, r.jsx)(l.Text, {

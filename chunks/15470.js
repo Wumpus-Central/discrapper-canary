@@ -30,7 +30,7 @@ function g(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,8 +65,8 @@ function _(e, t) {
     );
 }
 let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    x = _(f({}, u.Z.rules), {
-        heading: _(f({}, u.Z.rules.heading), {
+    x = f(_({}, u.Z.rules), {
+        heading: f(_({}, u.Z.rules.heading), {
             react(e, t, n) {
                 let a = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
                 return (0, r.jsx)(

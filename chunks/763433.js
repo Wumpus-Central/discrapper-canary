@@ -1,6 +1,6 @@
 n.d(t, {
-    a: () => _,
-    r: () => f
+    a: () => f,
+    r: () => _
 });
 var r,
     a = n(200651),
@@ -15,9 +15,9 @@ var r,
     m = n(594174),
     h = n(744695),
     g = n(296026),
-    f = (((r = {}).DEFAULT = 'DEFAULT'), (r.SEARCH = 'SEARCH'), r);
-function _(e) {
-    let { selectedTabId: t, handleTransition: n, tabs: r, state: l = 'DEFAULT', onAvailableWidthChange: f, icon: _, children: b } = e,
+    _ = (((r = {}).DEFAULT = 'DEFAULT'), (r.SEARCH = 'SEARCH'), r);
+function f(e) {
+    let { selectedTabId: t, handleTransition: n, tabs: r, state: l = 'DEFAULT', onAvailableWidthChange: _, icon: f, children: b } = e,
         x = (0, d.ZP)(),
         v = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         C = (null == v ? void 0 : v.isStaff()) || (null == v ? void 0 : v.isStaffPersonal()),
@@ -33,7 +33,7 @@ function _(e) {
                     'DEFAULT' === l &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(_, {
+                                (0, a.jsx)(f, {
                                     color: 'currentColor',
                                     size: 'md'
                                 }),
@@ -41,7 +41,7 @@ function _(e) {
                                     tabs: r,
                                     selectedTab: t,
                                     onTabSelect: n,
-                                    onAvailableWidthChange: f
+                                    onAvailableWidthChange: _
                                 })
                             ]
                         }),

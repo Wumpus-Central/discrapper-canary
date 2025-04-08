@@ -12,8 +12,8 @@ var r = n(200651),
     m = n(768581),
     h = n(829409),
     g = n(619980);
-let f = 16 / 9,
-    _ = 325 / 72;
+let _ = 16 / 9,
+    f = 325 / 72;
 function b(e) {
     let { application: t, isHovered: n, botBannerUrl: i, botBannerUrlAnimated: o, iconURL: s } = e,
         m = (0, d.Z)({
@@ -25,7 +25,7 @@ function b(e) {
             let e = (0, u.yJ)(t);
             return null != e && null != e.activity_preview_video_asset_id ? (0, c.Z)(t.id, e.activity_preview_video_asset_id) : null;
         }, [t]),
-        { imageUrl: f, imageUrlAnimated: _ } = a.useMemo(
+        { imageUrl: _, imageUrlAnimated: f } = a.useMemo(
             () =>
                 'fetched' === m.state && null != m.url
                     ? { imageUrl: m.url }
@@ -35,7 +35,7 @@ function b(e) {
                       },
             [m.state, m.url, i, o]
         ),
-        b = null != f,
+        b = null != _,
         j = null != h;
     return 'loading' === m.state
         ? null
@@ -45,7 +45,7 @@ function b(e) {
                     b
                         ? (0, r.jsx)(x, {
                               isHovered: n,
-                              url: f,
+                              url: _,
                               animatedUrl: void 0
                           })
                         : (0, r.jsx)(p.Z, {
@@ -63,8 +63,8 @@ function b(e) {
           : b
             ? (0, r.jsx)(x, {
                   isHovered: n,
-                  url: f,
-                  animatedUrl: _
+                  url: _,
+                  animatedUrl: f
               })
             : (0, r.jsx)(C, { iconURL: s });
 }
@@ -139,7 +139,7 @@ let j = function (e) {
         h = a.useCallback(() => d(!1), []),
         v = (0, u.ye)(t),
         j = t.bot,
-        { botBannerUrl: y, botBannerUrlAnimated: O } = a.useMemo(
+        { botBannerUrl: y, botBannerUrlAnimated: I } = a.useMemo(
             () =>
                 (null == j ? void 0 : j.id) == null || (null == j ? void 0 : j.banner) == null
                     ? {}
@@ -163,7 +163,7 @@ let j = function (e) {
         );
     return (0, r.jsx)('div', {
         className: g.bannerContainer,
-        style: { aspectRatio: 'card' === n ? f : _ },
+        style: { aspectRatio: 'card' === n ? _ : f },
         onMouseEnter: p,
         onFocus: p,
         onMouseLeave: h,
@@ -174,13 +174,13 @@ let j = function (e) {
                       application: t,
                       isHovered: c,
                       botBannerUrl: null == y ? void 0 : y,
-                      botBannerUrlAnimated: null == O ? void 0 : O
+                      botBannerUrlAnimated: null == I ? void 0 : I
                   })
                 : null != y
                   ? (0, r.jsx)(x, {
                         isHovered: c,
                         url: y,
-                        animatedUrl: O
+                        animatedUrl: I
                     })
                   : (0, r.jsx)(C, { iconURL: i })
     });

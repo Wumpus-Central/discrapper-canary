@@ -42,12 +42,12 @@ function P(e) {
         ),
         D = (0, d.PL)(!0, !0),
         W = (0, d.LD)(null == A ? void 0 : A.guild_id, !0),
-        U = r.useMemo(() => (0, d.If)(n, O.id), [D, W, n, O.id]),
-        B = !U.isGuildInstalled && !U.isUserInstalled;
+        B = r.useMemo(() => (0, d.If)(n, O.id), [D, W, n, O.id]),
+        U = !B.isGuildInstalled && !B.isUserInstalled;
     return (
         r.useEffect(() => {
-            B && d.ZP.queryInstallOnDemandApp(O.id, null == A ? void 0 : A.id);
-        }, [O.id, null == A ? void 0 : A.id, B]),
+            U && d.ZP.queryInstallOnDemandApp(O.id, null == A ? void 0 : A.id);
+        }, [O.id, null == A ? void 0 : A.id, U]),
         (0, i.jsxs)(o.u2D, {
             className: g.container,
             fade: !0,
@@ -81,7 +81,7 @@ function P(e) {
                           context: n,
                           application: O,
                           sectionName: u,
-                          installOnDemand: B,
+                          installOnDemand: U,
                           setHasCommands: k
                       })
                     : null,

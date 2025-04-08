@@ -12,17 +12,17 @@ var r = n(200651),
     m = n(906732),
     h = n(279332),
     g = n(915346),
-    f = n(783097),
-    _ = n(433534),
+    _ = n(783097),
+    f = n(433534),
     b = n(299206),
     x = n(276022),
     v = n(703656),
     C = n(706454),
     j = n(594174),
     y = n(626135),
-    O = n(572004),
-    I = n(135431),
-    N = n(881294),
+    I = n(572004),
+    N = n(135431),
+    O = n(881294),
     P = n(258971),
     S = n(98449),
     E = n(981631),
@@ -30,7 +30,7 @@ var r = n(200651),
     A = n(284944);
 let L = 'start_application_install',
     R = 'launch_activity';
-function w(e) {
+function Z(e) {
     let { renderDropdown: t, size: n } = e;
     return (0, r.jsx)(c.yRy, {
         renderPopout: (e) => {
@@ -103,14 +103,14 @@ function w(e) {
         }
     });
 }
-function Z(e) {
+function k(e) {
     let { application: t, variant: n, size: i, color: s } = e,
         { onClickInstallApplication: d, canInstall: u } = (function (e) {
-            let t = (0, N.nu)(),
+            let t = (0, O.nu)(),
                 n = a.useCallback(() => {
                     var t;
                     let n = null != (t = P.z8.getField('guildId')) ? t : void 0;
-                    (0, I.L)({
+                    (0, N.L)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,
@@ -130,8 +130,8 @@ function Z(e) {
                 }, [t, n]),
                 {
                     onClickInstallApplication: a.useCallback(() => {
-                        if (((0, N.zZ)(E.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (o.tq || o.Em) && null == e.custom_install_url)) {
-                            let t = (0, I.E)({
+                        if (((0, O.zZ)(E.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (o.tq || o.Em) && null == e.custom_install_url)) {
+                            let t = (0, N.E)({
                                 applicationId: e.id,
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
@@ -149,12 +149,12 @@ function Z(e) {
                                 source: 'product_page',
                                 device_platform: o.tq ? 'mobile_web' : 'desktop_web'
                             }),
-                                (0, N.rf)({ [L]: 'true' });
+                                (0, O.rf)({ [L]: 'true' });
                         }
                     }, [e, n, t]),
                     canInstall: a.useMemo(
                         () =>
-                            (0, _.E)({
+                            (0, f.E)({
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
                                 integrationTypesConfig: e.integration_types_config
@@ -187,7 +187,7 @@ function Z(e) {
               children: 'small' === n ? T.NW.string(T.t.qRZ35u) : T.NW.string(T.t.NgXl3N)
           });
 }
-function k(e) {
+function w(e) {
     let { variant: t, size: n, onClick: a, isSubmitting: i } = e;
     return 'icon' === t
         ? (0, r.jsx)(c.zxk, {
@@ -215,10 +215,10 @@ function k(e) {
 let D = a.forwardRef(function (e, t) {
     let { application: n, size: i } = e,
         o = h.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
-        _ = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
+        f = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         { analyticsLocations: y } = (0, m.ZP)(),
-        I = a.useCallback(() => {
-            (0, N.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, O.JG)(_(n.id)), (0, c.showToast)((0, c.createToast)(T.NW.string(T.t['L/PwZW']), c.ToastType.SUCCESS));
+        N = a.useCallback(() => {
+            (0, O.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, I.JG)(f(n.id)), (0, c.showToast)((0, c.createToast)(T.NW.string(T.t['L/PwZW']), c.ToastType.SUCCESS));
         }, [n.id]),
         P = (0, s.e7)([C.default], () => C.default.locale),
         L = a.useCallback(() => {
@@ -238,10 +238,10 @@ let D = a.forwardRef(function (e, t) {
         M = (0, x.Z)({
             application: n,
             onItemClick: () => {
-                (0, N.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
+                (0, O.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
             }
         }),
-        z = a.useCallback(
+        G = a.useCallback(
             (e, t) =>
                 (0, r.jsxs)(c.v2r, {
                     navId: 'application-directory-profile',
@@ -255,7 +255,7 @@ let D = a.forwardRef(function (e, t) {
                                   children: (0, r.jsx)(c.sNh, {
                                       id: 'copy',
                                       label: T.NW.string(T.t.z4sP5O),
-                                      action: I,
+                                      action: N,
                                       icon: c.xPt
                                   })
                               })
@@ -271,18 +271,18 @@ let D = a.forwardRef(function (e, t) {
                         null != D ? (0, r.jsx)(c.kSQ, { children: D }) : null
                     ]
                 }),
-            [D, L, I, o, M]
+            [D, L, N, o, M]
         ),
-        { onClickLaunchActivity: G, isSubmitting: B } = (function (e, t) {
+        { onClickLaunchActivity: z, isSubmitting: B } = (function (e, t) {
             var n;
             let r = e.id,
                 i = null == e || null == (n = e.bot) ? void 0 : n.id,
-                l = null != i && (0, f.BQ)(e) && (0, f.ye)(e),
+                l = null != i && (0, _.BQ)(e) && (0, _.ye)(e),
                 [o, c] = a.useState(!1),
-                d = (0, N.nu)(),
+                d = (0, O.nu)(),
                 m = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
                 h = (0, s.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
-                _ = a.useCallback(
+                f = a.useCallback(
                     async (t, n, r) => {
                         if (null != h && h.applicationId === e.id) {
                             let e = h.location;
@@ -307,21 +307,21 @@ let D = a.forwardRef(function (e, t) {
                 if (d && l && n && null != i && null != m) {
                     e.searchParams.delete(R);
                     let n = e.pathname + e.search;
-                    (0, v.dL)(n), _(i, r, t);
+                    (0, v.dL)(n), f(i, r, t);
                 }
-            }, [d, l, i, r, t, m, _]);
+            }, [d, l, i, r, t, m, f]);
             let b = a.useCallback(async () => {
                 if (null != i) {
-                    if (((0, N.zZ)(E.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) return void (0, N.rf)({ [R]: 'true' });
-                    await _(i, r, t);
+                    if (((0, O.zZ)(E.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) return void (0, O.rf)({ [R]: 'true' });
+                    await f(i, r, t);
                 }
-            }, [i, r, t, d, _]);
+            }, [i, r, t, d, f]);
             return {
                 onClickLaunchActivity: l ? b : void 0,
                 isSubmitting: o
             };
         })(n, y),
-        W = null != G,
+        W = null != z,
         U = W ? c.zxk.Colors.PRIMARY : c.zxk.Colors.BRAND;
     return (0, r.jsxs)('div', {
         ref: t,
@@ -330,19 +330,19 @@ let D = a.forwardRef(function (e, t) {
                 className: l()(A.actionContainer, A.wide),
                 children: [
                     W &&
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(w, {
                             variant: 'normal',
                             size: i,
-                            onClick: G,
+                            onClick: z,
                             isSubmitting: B
                         }),
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(k, {
                         application: n,
                         variant: 'normal',
                         size: i,
                         color: U
                     }),
-                    O.wS
+                    I.wS
                         ? (0, r.jsx)(c.zxk, {
                               look: c.zxk.Looks.FILLED,
                               size: c.zxk.Sizes.ICON,
@@ -350,15 +350,15 @@ let D = a.forwardRef(function (e, t) {
                               className: l()(A.iconButton, { [A.small]: 'sm' === i }),
                               innerClassName: A.innerIconButton,
                               'aria-label': T.NW.string(T.t.z4sP5O),
-                              onClick: I,
+                              onClick: N,
                               children: (0, r.jsx)(c.xPt, {
                                   size: 'xs',
                                   color: 'currentColor'
                               })
                           })
                         : null,
-                    (0, r.jsx)(w, {
-                        renderDropdown: (e) => z(!1, e),
+                    (0, r.jsx)(Z, {
+                        renderDropdown: (e) => G(!1, e),
                         size: i
                     })
                 ]
@@ -367,20 +367,20 @@ let D = a.forwardRef(function (e, t) {
                 className: l()(A.actionContainer, A.small),
                 children: [
                     W &&
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(w, {
                             variant: 'normal',
                             size: i,
-                            onClick: G,
+                            onClick: z,
                             isSubmitting: B
                         }),
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(k, {
                         application: n,
                         variant: 'small',
                         size: i,
                         color: U
                     }),
-                    (0, r.jsx)(w, {
-                        renderDropdown: (e) => z(O.wS, e),
+                    (0, r.jsx)(Z, {
+                        renderDropdown: (e) => G(I.wS, e),
                         size: i
                     })
                 ]
@@ -389,20 +389,20 @@ let D = a.forwardRef(function (e, t) {
                 className: l()(A.actionContainer, A.tiny),
                 children: [
                     W &&
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(w, {
                             variant: 'icon',
                             size: i,
-                            onClick: G,
+                            onClick: z,
                             isSubmitting: B
                         }),
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(k, {
                         application: n,
                         variant: 'icon',
                         size: i,
                         color: U
                     }),
-                    (0, r.jsx)(w, {
-                        renderDropdown: (e) => z(O.wS, e),
+                    (0, r.jsx)(Z, {
+                        renderDropdown: (e) => G(I.wS, e),
                         size: i
                     })
                 ]

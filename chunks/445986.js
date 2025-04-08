@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => f,
+    Q: () => _,
     Z: () => x
 }),
     n(35282),
@@ -80,10 +80,10 @@ function g(e, t) {
     }
     return a;
 }
-function f(e) {
+function _(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
-let _ = (e) => {
+let f = (e) => {
     var { index: t, items: n } = e,
         a = g(e, ['index', 'items']);
     let i = n[t],
@@ -94,7 +94,7 @@ let _ = (e) => {
             let { width: t, height: n, src: r } = e;
             e === i && (l = s.length),
                 s.push({
-                    src: f(r),
+                    src: _(r),
                     width: t,
                     height: n
                 });
@@ -133,7 +133,7 @@ class b extends a.Component {
                                 ),
                                 {
                                     children: (0, r.jsx)(
-                                        _,
+                                        f,
                                         h(m({}, e), {
                                             index: t,
                                             items: this.props.items

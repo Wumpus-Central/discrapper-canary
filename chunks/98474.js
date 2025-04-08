@@ -1,10 +1,10 @@
 n.d(t, { Z: () => O }), n(388685);
 var i = n(200651),
-    r = n(192379),
-    o = n(48026),
+    o = n(192379),
+    r = n(48026),
     a = n(200100),
-    l = n(748780),
-    s = n(481060),
+    s = n(748780),
+    l = n(481060),
     c = n(596454),
     u = n(745510),
     d = n(314910),
@@ -59,12 +59,12 @@ function j(e, t) {
 let v = [];
 function O(e) {
     let { messageId: t, emoji: n, startPosition: O, targetPosition: y } = e,
-        [T, x] = r.useState(0),
-        [_, S] = r.useState(0),
-        [C, E] = r.useState(null),
-        { confettiCanvas: N } = r.useContext(u.h),
-        P = (0, o.uR)(N, C),
-        R = r.useMemo(
+        [T, x] = o.useState(0),
+        [S, _] = o.useState(0),
+        [C, E] = o.useState(null),
+        { confettiCanvas: N } = o.useContext(u.h),
+        P = (0, r.uR)(N, C),
+        R = o.useMemo(
             () => [
                 {
                     src:
@@ -82,19 +82,19 @@ function O(e) {
         ),
         I = y.x - (y.width / 2) * 0.5,
         w = y.y - (y.height / 2) * 0.5,
-        Z = (0, s.q_F)({
+        Z = (0, l.q_F)({
             from: { y: O.y },
             to: { y: w },
             config: {
                 duration: 450,
-                easing: l.Z.Easing.in(l.Z.Easing.exp)
+                easing: s.Z.Easing.in(s.Z.Easing.exp)
             },
             onChange: (e) => {
                 let { y: t } = e;
-                S(t);
+                _(t);
             }
         }),
-        A = (0, s.q_F)({
+        A = (0, l.q_F)({
             from: {
                 x: O.x,
                 scale: 1,
@@ -107,7 +107,7 @@ function O(e) {
             },
             config: {
                 duration: 450,
-                easing: l.Z.Easing.in(l.Z.Easing.ease)
+                easing: s.Z.Easing.in(s.Z.Easing.ease)
             },
             onRest: () => {
                 (0, h.G)(t, n.name, n.id);
@@ -118,24 +118,24 @@ function O(e) {
             }
         });
     return (
-        r.useEffect(() => {
+        o.useEffect(() => {
             T > 0 &&
-                _ > 0 &&
+                S > 0 &&
                 P.createConfetti(
                     j(b({}, f.We), {
                         position: {
                             type: 'static',
                             value: {
                                 x: T,
-                                y: _
+                                y: S
                             }
                         }
                     })
                 );
-        }, [P, T, _]),
+        }, [P, T, S]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(o.Ji, {
+                (0, i.jsx)(r.Ji, {
                     ref: E,
                     sprites: R,
                     colors: v,

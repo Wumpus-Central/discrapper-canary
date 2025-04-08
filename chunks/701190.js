@@ -90,7 +90,7 @@ function g(e) {
 function E(e) {
     return h(e.invite.code, (t) => {
         var n, r;
-        (t.state = s.r2o.RESOLVED), (t.guild = e.invite.guild), (t.channel = e.invite.channel), (t.inviter = e.invite.inviter), (t.approximate_member_count = null != (n = e.invite.approximate_member_count) ? n : null), (t.approximate_presence_count = null != (r = e.invite.approximate_presence_count) ? r : null), (t.target_type = e.invite.target_type), (t.target_user = e.invite.target_user), (t.target_application = e.invite.target_application), (t.stage_instance = e.invite.stage_instance), (t.guild_scheduled_event = e.invite.guild_scheduled_event), (t.type = e.invite.type), (t.is_nickname_changeable = e.invite.is_nickname_changeable);
+        (t.state = s.r2o.RESOLVED), (t.guild = e.invite.guild), (t.channel = e.invite.channel), (t.inviter = e.invite.inviter), (t.approximate_member_count = null != (n = e.invite.approximate_member_count) ? n : null), (t.approximate_presence_count = null != (r = e.invite.approximate_presence_count) ? r : null), (t.target_type = e.invite.target_type), (t.target_user = e.invite.target_user), (t.target_application = e.invite.target_application), (t.stage_instance = e.invite.stage_instance), (t.guild_scheduled_event = e.invite.guild_scheduled_event), (t.type = e.invite.type), (t.is_nickname_changeable = e.invite.is_nickname_changeable), (t.profile = e.invite.profile);
     });
 }
 function b(e) {

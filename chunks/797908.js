@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(275459);
 let m = function (e) {
     var t, n, m;
-    let { application: h, onSelectApplication: g, showCategory: f = !1 } = e,
-        _ = a.useRef(null),
+    let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,
+        f = a.useRef(null),
         b = null == (t = h.categories) ? void 0 : t[0],
         [x, v] = a.useState(!1),
         C = a.useCallback((e) => {
@@ -22,7 +22,7 @@ let m = function (e) {
         y = a.useCallback(() => {
             g(h.id);
         }, [g, h.id]),
-        O = a.useMemo(
+        I = a.useMemo(
             () =>
                 x
                     ? c.ZP.getApplicationIconURL({
@@ -33,13 +33,13 @@ let m = function (e) {
                     : void 0,
             [x, h]
         ),
-        I = f && null != b;
+        N = _ && null != b;
     return (0, r.jsx)(i.$, {
-        innerRef: _,
+        innerRef: f,
         onChange: C,
         active: !x,
         children: (0, r.jsx)('div', {
-            ref: _,
+            ref: f,
             className: p.container,
             children: (0, r.jsxs)(s.Z, {
                 className: p.card,
@@ -60,7 +60,7 @@ let m = function (e) {
                                     ? (0, r.jsx)(d.Z, {
                                           application: h,
                                           bannerType: 'card',
-                                          iconURL: O
+                                          iconURL: I
                                       })
                                     : null
                             }),
@@ -69,7 +69,7 @@ let m = function (e) {
                                 style: { height: 28 },
                                 children: x
                                     ? (0, r.jsx)('img', {
-                                          src: O,
+                                          src: I,
                                           alt: '',
                                           className: p.avatar,
                                           height: 48,
@@ -98,11 +98,11 @@ let m = function (e) {
                                     })
                                 })
                             }),
-                            I || j
+                            N || j
                                 ? (0, r.jsxs)('div', {
                                       className: p.infoContainer,
                                       children: [
-                                          I
+                                          N
                                               ? (0, r.jsx)(l.Text, {
                                                     className: p.appCategory,
                                                     variant: 'text-xs/medium',
@@ -110,7 +110,7 @@ let m = function (e) {
                                                     children: b.name
                                                 })
                                               : null,
-                                          I && j
+                                          N && j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -131,7 +131,7 @@ let m = function (e) {
                                 className: p.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: I || j ? 2 : 3,
+                                lineClamp: N || j ? 2 : 3,
                                 children: null != (m = null == (n = h.directory_entry) ? void 0 : n.short_description) ? m : h.description
                             })
                         ]

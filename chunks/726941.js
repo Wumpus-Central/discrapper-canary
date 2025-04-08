@@ -13,18 +13,18 @@ var r = n(200651),
     h = n(34871);
 let g = function (e) {
     var t;
-    let { tabId: n, onSelectApplication: g, onScroll: f } = e,
-        _ = a.useRef(null),
+    let { tabId: n, onSelectApplication: g, onScroll: _ } = e,
+        f = a.useRef(null),
         b = a.useCallback(() => {
             var e;
-            null == (e = _.current) || e.scrollTo({ to: 0 });
+            null == (e = f.current) || e.scrollTo({ to: 0 });
         }, []),
         x = (0, i.e7)([u.Z], () => u.Z.getCategories()),
         v = a.useMemo(() => x.find((e) => e.id === n), [x, n]),
         C = a.useMemo(() => (null != v ? (0, d.v)(v) : ''), [v]);
     return (0, r.jsxs)(c.Z, {
-        onScroll: f,
-        ref: _,
+        onScroll: _,
+        ref: f,
         children: [
             (0, r.jsx)(o.Z, {
                 title: null != (t = null == v ? void 0 : v.name) ? t : '',

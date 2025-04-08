@@ -12,17 +12,17 @@ var r = n(200651),
     m = n(881294),
     h = n(523311),
     g = n(292191),
-    f = n(258971),
-    _ = n(133743),
+    _ = n(258971),
+    f = n(133743),
     b = n(680474),
     x = n(571737),
     v = n(796150),
     C = n(946542),
     j = n(213746),
     y = n(979007),
-    O = n(981631),
-    I = n(388032),
-    N = n(714002);
+    I = n(981631),
+    N = n(388032),
+    O = n(714002);
 let P = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: P, initialTab: S, onButtonsVisibilityChange: E } = e,
         T = a.useRef(null),
@@ -39,23 +39,23 @@ let P = function (e) {
         }, [t]),
         a.useEffect(() => () => E(!0), [E]);
     let R = null == A ? void 0 : A.storefront_available,
-        [w, Z] = a.useState(null != S ? S : y.GlobalDiscoveryAppsSections.ABOUT),
-        k = a.useCallback(
+        [Z, k] = a.useState(null != S ? S : y.GlobalDiscoveryAppsSections.ABOUT),
+        w = a.useCallback(
             (e) => {
                 var t;
-                null == (t = T.current) || t.scrollTo({ to: 0 }), Z(y.GlobalDiscoveryAppsSections.ABOUT), n(e);
+                null == (t = T.current) || t.scrollTo({ to: 0 }), k(y.GlobalDiscoveryAppsSections.ABOUT), n(e);
             },
             [n]
         );
     a.useEffect(() => {
         (null == A ? void 0 : A.storefront_available) && null != t && (0, l.Z)(t);
     }, [null == A ? void 0 : A.storefront_available, t]);
-    let D = (0, f.Uc)(),
+    let D = (0, _.Uc)(),
         M = (0, i.e7)([p.Z], () => p.Z.getFetchState({ applicationId: null == A ? void 0 : A.id })),
-        z = (0, i.e7)([p.Z], () => p.Z.getSimilarApplications({ applicationId: null == A ? void 0 : A.id })),
-        G = a.useMemo(() => (null == z ? void 0 : z.applications.slice(0, 3)), [z]),
+        G = (0, i.e7)([p.Z], () => p.Z.getSimilarApplications({ applicationId: null == A ? void 0 : A.id })),
+        z = a.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
         B = {
-            displayedSimilarApplications: G,
+            displayedSimilarApplications: z,
             previousView: D
         },
         W = a.useRef(B);
@@ -66,8 +66,8 @@ let P = function (e) {
             let { displayedSimilarApplications: e, previousView: t } = W.current;
             (null == A ? void 0 : A.id) != null &&
                 M !== p.M.FETCHING &&
-                (0, m.zZ)(O.rMx.APP_DIRECTORY_PAGE_VIEWED, {
-                    current_page: f.m_.APPLICATION,
+                (0, m.zZ)(I.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+                    current_page: _.m_.APPLICATION,
                     previous_page: null == t ? void 0 : t.type,
                     application_id: A.id,
                     referrer: document.referrer,
@@ -78,36 +78,36 @@ let P = function (e) {
             () => [
                 {
                     id: y.GlobalDiscoveryAppsSections.ABOUT,
-                    label: I.NW.string(I.t.DkyHMD)
+                    label: N.NW.string(N.t.DkyHMD)
                 },
                 {
                     id: y.GlobalDiscoveryAppsSections.STORE,
-                    label: I.NW.string(I.t.jgEXGB)
+                    label: N.NW.string(N.t.jgEXGB)
                 }
             ],
             []
         ),
         F = a.useMemo(() => {
             if (null == A) return null;
-            switch (w) {
+            switch (Z) {
                 case y.GlobalDiscoveryAppsSections.ABOUT:
                     return (0, r.jsx)(b.Z, { application: A });
                 case y.GlobalDiscoveryAppsSections.STORE:
                     return (0, r.jsx)(j.Z, { application: A });
             }
-        }, [w, A]),
+        }, [Z, A]),
         V = a.useCallback(
             (e) => {
-                (0, m.zZ)(O.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
+                (0, m.zZ)(I.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                     application_id: t,
                     tab_name: e
                 }),
-                    Z(e),
-                    e === y.GlobalDiscoveryAppsSections.ABOUT ? (0, _.Gp)(O.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, _.Gp)(O.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                    k(e),
+                    e === y.GlobalDiscoveryAppsSections.ABOUT ? (0, f.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, f.Gp)(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
             },
             [t]
         ),
-        H = w === y.GlobalDiscoveryAppsSections.ABOUT;
+        H = Z === y.GlobalDiscoveryAppsSections.ABOUT;
     return (0, r.jsx)(c.Z, {
         onScroll: P,
         ref: T,
@@ -116,48 +116,48 @@ let P = function (e) {
                 null == A
                     ? null == L || L === u.M.FETCHING
                         ? (0, r.jsx)('div', {
-                              className: N.centerContainer,
+                              className: O.centerContainer,
                               children: (0, r.jsx)(h.Z, { loading: !0 })
                           })
                         : (0, r.jsx)('div', {
-                              className: N.centerContainer,
-                              children: (0, r.jsx)(g.Z, { className: N.error })
+                              className: O.centerContainer,
+                              children: (0, r.jsx)(g.Z, { className: O.error })
                           })
                     : (0, r.jsxs)('div', {
-                          className: N.detailContainer,
+                          className: O.detailContainer,
                           children: [
                               (0, r.jsx)(x.Z, {
                                   application: A,
                                   onButtonsVisibilityChange: E
                               }),
                               (0, r.jsxs)('div', {
-                                  className: N.contentContainer,
+                                  className: O.contentContainer,
                                   children: [
                                       (0, r.jsxs)('div', {
-                                          className: N.contentTabsContainer,
+                                          className: O.contentTabsContainer,
                                           children: [
                                               R &&
                                                   (0, r.jsx)('div', {
-                                                      className: N.contentTabs,
+                                                      className: O.contentTabs,
                                                       children: (0, r.jsx)(s.Z, {
                                                           tabs: U,
                                                           onTabSelect: V,
-                                                          selectedTab: w
+                                                          selectedTab: Z
                                                       })
                                                   }),
                                               F,
                                               (0, r.jsx)(C.Z, {
                                                   applicationId: t,
                                                   fetchState: M,
-                                                  similarApplications: G,
-                                                  onSelectApplication: k,
-                                                  similarLoadId: null == z ? void 0 : z.loadId
+                                                  similarApplications: z,
+                                                  onSelectApplication: w,
+                                                  similarLoadId: null == G ? void 0 : G.loadId
                                               })
                                           ]
                                       }),
                                       H &&
                                           (0, r.jsx)(v.Z, {
-                                              className: N.sidebar,
+                                              className: O.sidebar,
                                               application: A,
                                               view: 'side'
                                           })

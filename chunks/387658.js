@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -238,7 +238,7 @@ function W(e) {
               ]
           });
 }
-function U(e) {
+function B(e) {
     var t;
     let { context: n, application: l, sectionName: a, installOnDemand: o, setHasCommands: c } = e,
         {

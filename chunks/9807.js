@@ -12,8 +12,8 @@ var r,
     m = n(124347),
     h = n(80966),
     g = n(524444),
-    f = n(843445),
-    _ = n(981631),
+    _ = n(843445),
+    f = n(981631),
     b = n(388032),
     x = n(365664);
 function v(e, t, n) {
@@ -82,7 +82,7 @@ function y(e, t) {
     }
     return a;
 }
-let O = (e) => {
+let I = (e) => {
         var { className: t } = e,
             n = y(e, ['className']);
         return (0, a.jsx)(
@@ -94,12 +94,12 @@ let O = (e) => {
             })
         );
     },
-    I = (e) => {
+    N = (e) => {
         var { containerClassName: t, className: n } = e,
             r = y(e, ['containerClassName', 'className']);
         return (0, a.jsx)(m.ZP, j(C({}, r), { className: o()(n, t) }));
     },
-    N = {
+    O = {
         width: 1280,
         height: 720
     },
@@ -112,7 +112,7 @@ let O = (e) => {
             n,
             r,
             { item: i, onPlay: l, volume: o, onVolumeChange: s, onMute: p, isMuted: m, autoPlay: h } = e;
-        if (i.type === _.s9s.YOUTUBE_VIDEO) (t = C({ url: (0, _.n8r)(i.youtubeVideoId) }, N)), (n = C({ url: ''.concat((0, _.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = u.pn.YOUTUBE);
+        if (i.type === f.s9s.YOUTUBE_VIDEO) (t = C({ url: (0, f.n8r)(i.youtubeVideoId) }, O)), (n = C({ url: ''.concat((0, f.ivE)(i.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1') }, P)), (r = u.pn.YOUTUBE);
         else {
             let e = null != i.width ? i.width : 0,
                 r = null != i.height ? i.height : 0;
@@ -138,7 +138,7 @@ let O = (e) => {
                 video: n,
                 provider: r,
                 maxHeight: c.r.SMALL.height,
-                maxWidth: f.b.SMALL,
+                maxWidth: _.b.SMALL,
                 onPlay: l,
                 playable: !0,
                 volume: o,
@@ -146,8 +146,8 @@ let O = (e) => {
                 autoMute: m,
                 onMute: p,
                 autoPlay: h,
-                renderImageComponent: I,
-                renderVideoComponent: O,
+                renderImageComponent: N,
+                renderVideoComponent: I,
                 renderLinkComponent: g.iT
             })
         });
@@ -155,7 +155,7 @@ let O = (e) => {
 class E extends (r = i.PureComponent) {
     componentDidMount() {
         let { items: e } = this.props;
-        e.length > 0 && e[0].type === _.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
+        e.length > 0 && e[0].type === f.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
     }
     handleCurrentItemClick(e, t) {
         let { onCurrentItemClick: n } = this.props;
@@ -204,7 +204,7 @@ class E extends (r = i.PureComponent) {
                 });
             }),
             v(this, 'handleChangeItem', (e) => {
-                this.setState({ isVideoPlaying: !1 }), e.type === _.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
+                this.setState({ isVideoPlaying: !1 }), e.type === f.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
             }),
             v(this, 'handleIntentionalChange', (e, t, n, r) => {
                 this.setState({ hasInteracted: !0 });
@@ -230,8 +230,8 @@ class E extends (r = i.PureComponent) {
                     { isMuted: r, volume: i } = this.state,
                     { videoAutoPlay: l } = this.props;
                 switch (e.type) {
-                    case _.s9s.YOUTUBE_VIDEO:
-                    case _.s9s.VIDEO:
+                    case f.s9s.YOUTUBE_VIDEO:
+                    case f.s9s.VIDEO:
                         n = (0, a.jsx)(S, {
                             item: e,
                             onPlay: this.handlePlay,
@@ -242,7 +242,7 @@ class E extends (r = i.PureComponent) {
                             autoPlay: l
                         });
                         break;
-                    case _.s9s.IMG:
+                    case f.s9s.IMG:
                         if ('errored' === this.state.status.get(e.src)) {
                             let e = (0, a.jsx)(s.X6q, {
                                 variant: 'heading-xl/semibold',

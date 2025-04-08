@@ -36,7 +36,7 @@ function g(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function f(e) {
     var { id: t, label: n, selected: a, handleTransition: i } = e,
         o = (function (e, t) {
             if (null == e) return {};
@@ -77,7 +77,7 @@ function _(e) {
         })(e, ['id', 'label', 'selected', 'handleTransition']);
     return (0, r.jsx)(
         c.Z.Title,
-        f(g({}, o), {
+        _(g({}, o), {
             onClick: () => i(t),
             wrapperClassName: h.tabWrapper,
             className: l()(h.tab, { [h.selected]: a }),
@@ -103,7 +103,7 @@ function b(e) {
             let { isShown: n } = t;
             return (0, r.jsxs)(
                 c.Z.Title,
-                f(g({}, e), {
+                _(g({}, e), {
                     wrapperClassName: h.tabWrapper,
                     className: l()(h.tab, h.more, { [h.selected]: i }),
                     id: p.GlobalDiscoverySharedTabId.MORE,
@@ -120,7 +120,7 @@ function x(e) {
         m = a.useRef(u),
         {
             lastVisibleIndex: g,
-            onItemLayout: f,
+            onItemLayout: _,
             overflowItemsRef: x,
             itemWidthsRef: v
         } = (0, o.zP)({
@@ -132,7 +132,7 @@ function x(e) {
         C = a.useMemo(() => i.slice(0, g + 1), [g, i]),
         j = a.useMemo(() => i.slice(g + 1), [g, i]),
         y = a.useRef(null),
-        O = a.useCallback(() => {
+        I = a.useCallback(() => {
             var e;
             let t = null == (e = y.current) ? void 0 : e.getBoundingClientRect();
             if (null == t || m.current === t.width) return;
@@ -142,11 +142,11 @@ function x(e) {
             null == c || c(r);
         }, [v, c]);
     a.useEffect(() => {
-        let e = (0, d.pP)(O);
+        let e = (0, d.pP)(I);
         return (0, d.YP)(e, document.body), () => (0, d.UC)(e, document.body);
-    }, [O]);
-    let I = 0 !== u,
-        N = j.some((e) => e.id === n);
+    }, [I]);
+    let N = 0 !== u,
+        O = j.some((e) => e.id === n);
     return (0, r.jsxs)('div', {
         className: l()(h.container, t),
         ref: y,
@@ -159,9 +159,9 @@ function x(e) {
                             o.AJ,
                             {
                                 index: t,
-                                onItemLayout: f,
+                                onItemLayout: _,
                                 children: (0, r.jsx)(
-                                    _,
+                                    f,
                                     {
                                         id: e.id,
                                         label: e.label,
@@ -180,18 +180,18 @@ function x(e) {
                             tabs: j,
                             onTabSelect: s,
                             selectedTab: n,
-                            selected: N
+                            selected: O
                         })
                     })
                 ]
             }),
-            I &&
+            N &&
                 (0, r.jsxs)('div', {
                     className: h.tabs,
                     children: [
                         C.map((e) =>
                             (0, r.jsx)(
-                                _,
+                                f,
                                 {
                                     id: e.id,
                                     label: e.label,
@@ -206,7 +206,7 @@ function x(e) {
                                   tabs: j,
                                   onTabSelect: s,
                                   selectedTab: n,
-                                  selected: N
+                                  selected: O
                               })
                             : null
                     ]

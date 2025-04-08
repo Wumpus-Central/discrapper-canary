@@ -45,8 +45,8 @@ var i,
     M = n(753972),
     D = n(635753),
     W = n(981631),
-    U = n(217702),
-    B = n(388032),
+    B = n(217702),
+    U = n(388032),
     H = n(860901),
     V = n(413097),
     F = n(969728);
@@ -180,7 +180,7 @@ function Q(e) {
               className: y,
               onClick: n,
               onContextMenu: b,
-              'aria-label': B.NW.formatToPlainString(B.t['zLhr9/'], {
+              'aria-label': U.NW.formatToPlainString(U.t['zLhr9/'], {
                   applicationName: C,
                   applicationDescription: x
               }),
@@ -233,8 +233,8 @@ function K(e) {
         k = (0, c.e7)([f.Z, A.Z], () => f.Z.inDevModeForApplication(t.id) || A.Z.inTestModeForApplication(t.id), [t.id]),
         Z = (0, L.WA)(t),
         { enabled: W } = S.X.useExperiment({ location: 'AppLauncherAppCard' }, { autoTrackExposure: !0 }),
-        { friends: U } = (0, b.Z)(t),
-        F = W && (0, L.ye)(t) && U.length > 0;
+        { friends: B } = (0, b.Z)(t),
+        F = W && (0, L.ye)(t) && B.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T
@@ -268,7 +268,7 @@ function K(e) {
                                                 children: (0, r.jsx)(s.X6q, {
                                                     variant: 'text-xxs/medium',
                                                     color: 'header-primary',
-                                                    children: B.NW.string(B.t['/eVltr'])
+                                                    children: U.NW.string(U.t['/eVltr'])
                                                 })
                                             }),
                                         k && (0, r.jsx)($, {}),
@@ -310,7 +310,7 @@ function K(e) {
                                               children: (0, r.jsx)(s.Text, {
                                                   variant: 'text-xxs/semibold',
                                                   color: 'text-muted',
-                                                  children: B.NW.string(B.t['/eVltr'])
+                                                  children: U.NW.string(U.t['/eVltr'])
                                               })
                                           })
                                         : null,
@@ -319,7 +319,7 @@ function K(e) {
                             }),
                             F
                                 ? (0, r.jsx)(D.Z, {
-                                      friends: U,
+                                      friends: B,
                                       onClick: C,
                                       shortText: !0
                                   })
@@ -339,7 +339,7 @@ function K(e) {
 }
 function $() {
     return (0, r.jsx)(s.ua7, {
-        text: B.NW.string(B.t.CfTySU),
+        text: U.NW.string(U.t.CfTySU),
         children: (e) => (0, r.jsx)('div', q(G({ className: H.devShelfBadge }, e), { children: (0, r.jsx)(I.Z, { className: H.devShelfIcon }) }))
     });
 }
@@ -421,7 +421,7 @@ function en(e) {
                           onAnimationEnd: () => (n ? null : u(!1)),
                           children: (0, r.jsx)(j.Z, {
                               src: c,
-                              mediaLayoutType: U.hV.MOSAIC,
+                              mediaLayoutType: B.hV.MOSAIC,
                               loop: !0,
                               autoPlay: !0,
                               muted: !0
@@ -610,7 +610,7 @@ function eo(e) {
                           color: y,
                           disabled: m,
                           onClick: C,
-                          'aria-label': B.NW.formatToPlainString(B.t['XjP/R0'], {
+                          'aria-label': U.NW.formatToPlainString(U.t['XjP/R0'], {
                               buttonText: v,
                               applicationName: n.name
                           }),

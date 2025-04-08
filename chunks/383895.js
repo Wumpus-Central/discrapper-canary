@@ -14,8 +14,8 @@ var n = r(200651),
     g = r(5192),
     b = r(810568),
     _ = r(388032),
-    h = r(865136),
-    O = r(263930);
+    O = r(865136),
+    h = r(263930);
 let y = (e) => {
     let { entry: t, viewId: r, officialGuildId: o, onClose: y } = e,
         v = a.useRef(null),
@@ -97,7 +97,7 @@ let y = (e) => {
                       })({ innerRef: v }, e)),
                       (a = a =
                           {
-                              className: h.profileEntryCard,
+                              className: O.profileEntryCard,
                               children: (0, n.jsx)(s.tEY, {
                                   offset: {
                                       top: 4,
@@ -108,14 +108,14 @@ let y = (e) => {
                                   children: (0, n.jsxs)(n.Fragment, {
                                       children: [
                                           (0, n.jsx)('img', {
-                                              className: h.avatar,
+                                              className: O.avatar,
                                               src: E,
                                               alt: _.NW.formatToPlainString(_.t.IzVXxc, { userName: P })
                                           }),
                                           (0, n.jsx)('div', {
-                                              className: h.playerInfo,
+                                              className: O.playerInfo,
                                               children: (0, n.jsxs)('div', {
-                                                  className: i()(O.column, O.gapXs),
+                                                  className: i()(h.column, h.gapXs),
                                                   children: [
                                                       (0, n.jsx)(s.Text, {
                                                           variant: 'text-md/medium',
@@ -131,7 +131,7 @@ let y = (e) => {
                                               })
                                           }),
                                           (0, n.jsx)('div', {
-                                              className: h.reactions,
+                                              className: O.reactions,
                                               children: (0, n.jsx)(s.n$P, { size: 'sm' })
                                           })
                                       ]

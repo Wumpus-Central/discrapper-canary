@@ -16,8 +16,8 @@ var r,
     m = n(768581),
     h = n(624138),
     g = n(388032),
-    f = n(581330);
-function _(e) {
+    _ = n(581330);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,16 +62,16 @@ function b(e, t) {
 }
 var x = (((r = {})[(r.SMALL = (0, h.Mg)(c.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (r[(r.LARGE = (0, h.Mg)(c.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE'), r);
 let v = {
-        [x.SMALL]: f.moreGuildsSmall,
-        [x.LARGE]: f.moreGuildsLarge
+        [x.SMALL]: _.moreGuildsSmall,
+        [x.LARGE]: _.moreGuildsLarge
     },
     C = {
-        [x.SMALL]: f.iconSmall,
-        [x.LARGE]: f.iconLarge
+        [x.SMALL]: _.iconSmall,
+        [x.LARGE]: _.iconLarge
     };
 function j(e) {
     var t, n, r;
-    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: O, guildIconSize: I = x.LARGE, guildsClassName: N } = e,
+    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: N = x.LARGE, guildsClassName: O } = e,
         P = (0, s.e7)([p.default], () => p.default.locale),
         S = new Intl.ListFormat(P),
         E = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
@@ -92,8 +92,8 @@ function j(e) {
                 }
             );
         }, [c, h]),
-        w = R.length,
-        Z = (function (e, t, n, r, a) {
+        Z = R.length,
+        k = (function (e, t, n, r, a) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return g.NW.formatToPlainString(g.t.pnzE1t, { mutualGuildCount: t });
             let i = t > 0 ? g.t.YR8PSE : g.t.GQjq6e,
@@ -106,24 +106,24 @@ function j(e) {
                 mutualGuildCount: t,
                 nonMutualGuildCount: l.format(n)
             });
-        })(E, T, A, P, O);
-    return 0 === L.length && null == Z
+        })(E, T, A, P, I);
+    return 0 === L.length && null == k
         ? null
         : (0, a.jsxs)('div', {
-              className: o()(j, f.wrapper),
+              className: o()(j, _.wrapper),
               children: [
                   (0, a.jsx)('div', {
-                      className: o()(f.icons, N),
+                      className: o()(_.icons, O),
                       children:
                           L.length > 0
                               ? (0, a.jsxs)(a.Fragment, {
                                     children: [
                                         L.map((e, t) => {
-                                            let n = t === L.length - 1 && 0 === w,
+                                            let n = t === L.length - 1 && 0 === Z,
                                                 r = m.ZP.getGuildIconURL({
                                                     id: e.id,
                                                     icon: e.icon,
-                                                    size: I,
+                                                    size: N,
                                                     canAnimate: !1
                                                 }),
                                                 l = (0, a.jsx)(d.ua7, {
@@ -132,8 +132,8 @@ function j(e) {
                                                     children: (e) =>
                                                         (0, a.jsx)(
                                                             'img',
-                                                            b(_({}, e), {
-                                                                className: o()(f.icon, C[I]),
+                                                            b(f({}, e), {
+                                                                className: o()(_.icon, C[N]),
                                                                 src: r,
                                                                 alt: ''
                                                             })
@@ -144,25 +144,25 @@ function j(e) {
                                                 : (0, a.jsx)(
                                                       u.ZP,
                                                       {
-                                                          className: f.iconMask,
-                                                          height: I,
-                                                          width: I,
+                                                          className: _.iconMask,
+                                                          height: N,
+                                                          width: N,
                                                           mask: u.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                                                           children: l
                                                       },
                                                       e.id
                                                   );
                                         }),
-                                        w > 0
+                                        Z > 0
                                             ? (0, a.jsx)(d.ua7, {
                                                   text: g.NW.formatToPlainString(g.t.m6oRrK, { appNames: S.format(R.map((e) => e.name)) }),
                                                   position: 'top',
                                                   children: (e) =>
                                                       (0, a.jsxs)(
                                                           'div',
-                                                          b(_({}, e), {
-                                                              className: o()(f.moreGuilds, v[I]),
-                                                              children: ['+', w]
+                                                          b(f({}, e), {
+                                                              className: o()(_.moreGuilds, v[N]),
+                                                              children: ['+', Z]
                                                           })
                                                       )
                                               })
@@ -172,16 +172,16 @@ function j(e) {
                               : (0, a.jsx)(d.QTo, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    width: I,
-                                    height: I,
-                                    className: f.defaultIcon
+                                    width: N,
+                                    height: N,
+                                    className: _.defaultIcon
                                 })
                   }),
-                  null != Z
+                  null != k
                       ? (0, a.jsx)(d.Text, {
                             variant: y,
                             color: 'header-secondary',
-                            children: Z
+                            children: k
                         })
                       : null
               ]

@@ -77,8 +77,8 @@ function w(e) {
         M = (0, o.e7)([j.Z], () => j.Z.entrypoint()),
         D = (0, P.L1)(l),
         W = (0, m.E)(D),
-        U = (0, d.R)(l.id),
-        B = (0, o.e7)(
+        B = (0, d.R)(l.id),
+        U = (0, o.e7)(
             [x.Z],
             () => {
                 var e;
@@ -139,7 +139,7 @@ function w(e) {
                         children: [
                             (0, i.jsxs)(c.kSQ, {
                                 children: [
-                                    U &&
+                                    B &&
                                         (0, i.jsx)(c.sNh, {
                                             id: 'open-storefront',
                                             label: O.NW.string(O.t.kRvlKC),
@@ -151,7 +151,7 @@ function w(e) {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
                                                             appId: l.id,
-                                                            guildId: B
+                                                            guildId: U
                                                         });
                                                 });
                                             }

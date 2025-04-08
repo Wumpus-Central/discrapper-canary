@@ -1,62 +1,62 @@
-n.d(t, { Z: () => p });
-var a = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    i = n(481060),
-    s = n(55935),
-    o = n(543388),
-    c = n(223021),
-    u = n(388032),
-    d = n(848697);
+r.d(t, { Z: () => d });
+var n = r(200651);
+r(192379);
+var l = r(120356),
+    i = r.n(l),
+    o = r(481060),
+    a = r(55935),
+    c = r(543388),
+    s = r(223021),
+    u = r(388032),
+    p = r(848697);
 function m(e) {
-    var t, n;
-    let { tooltipProps: r, timeFormatted: l, children: i, compact: s, timestamp: o, id: c } = e;
-    return (0, a.jsx)(
+    var t, r;
+    let { tooltipProps: l, timeFormatted: i, children: o, compact: a, timestamp: c, id: s } = e;
+    return (0, n.jsx)(
         'time',
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    a = Object.keys(n);
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (a = a.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         })
                     )),
-                    a.forEach(function (t) {
-                        var a;
-                        (a = n[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: a,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = a);
+                                : (e[t] = n);
                     });
             }
             return e;
-        })({}, r)),
-        (n = n =
+        })({}, l)),
+        (r = r =
             {
-                id: c,
-                dateTime: o.toISOString(),
+                id: s,
+                dateTime: c.toISOString(),
                 children:
-                    null != i
-                        ? i
-                        : (0, a.jsxs)(a.Fragment, {
+                    null != o
+                        ? o
+                        : (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, a.jsx)('i', {
-                                      className: d.separator,
+                                  (0, n.jsx)('i', {
+                                      className: p.separator,
                                       'aria-hidden': !0,
-                                      children: s ? '[' : ' \u2014 '
+                                      children: a ? '[' : ' \u2014 '
                                   }),
-                                  l,
-                                  s &&
-                                      (0, a.jsxs)('i', {
-                                          className: d.separator,
+                                  i,
+                                  a &&
+                                      (0, n.jsxs)('i', {
+                                          className: p.separator,
                                           'aria-hidden': !0,
                                           children: [']', ' ']
                                       })
@@ -64,61 +64,61 @@ function m(e) {
                           })
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
         t)
     );
 }
-let p = function (e) {
-    let { children: t, className: n, compact: r = !1, timestamp: p, timestampFormat: h, isVisibleOnlyOnHover: g = !1, cozyAlt: _ = !1, isInline: f = !0, id: b, isEdited: y = !1, application: E, tooltipPosition: I } = e,
-        S = new Date(p),
-        O = (0, s.Hg)(S),
-        C = null != h ? (0, s.vc)(S, h) : r ? (0, s.vc)(S, 'LT') : (0, s.Y4)(S, !0),
-        v = r ? (0, c.Z)(C) : null,
-        x = y ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: O }) : O;
-    return (0, a.jsx)('span', {
-        className: l()(n, v, {
-            [d.timestamp]: !0,
-            [d.timestampVisibleOnHover]: g,
-            [d.timestampInline]: f,
-            [d.alt]: _
+let d = function (e) {
+    let { children: t, className: r, compact: l = !1, timestamp: d, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: y = !1, isInline: g = !0, id: O, isEdited: j = !1, application: h, tooltipPosition: v } = e,
+        x = new Date(d),
+        P = (0, a.Hg)(x),
+        S = null != f ? (0, a.vc)(x, f) : l ? (0, a.vc)(x, 'LT') : (0, a.Y4)(x, !0),
+        N = l ? (0, s.Z)(S) : null,
+        w = j ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: P }) : P;
+    return (0, n.jsx)('span', {
+        className: i()(r, N, {
+            [p.timestamp]: !0,
+            [p.timestampVisibleOnHover]: b,
+            [p.timestampInline]: g,
+            [p.alt]: y
         }),
         children:
-            null == E
-                ? (0, a.jsx)(i.ua7, {
-                      text: (0, s.vc)(S, 'LLLL'),
-                      'aria-label': x,
-                      tooltipClassName: d.timestampTooltip,
-                      position: I,
+            null == h
+                ? (0, n.jsx)(o.ua7, {
+                      text: (0, a.vc)(x, 'LLLL'),
+                      'aria-label': w,
+                      tooltipClassName: p.timestampTooltip,
+                      position: v,
                       delay: 750,
                       children: (e) =>
-                          (0, a.jsx)(m, {
+                          (0, n.jsx)(m, {
                               tooltipProps: e,
-                              timeFormatted: C,
-                              timestamp: S,
-                              id: b,
-                              compact: r,
+                              timeFormatted: S,
+                              timestamp: x,
+                              id: O,
+                              compact: l,
                               children: t
                           })
                   })
-                : (0, a.jsx)(o.Z, {
-                      application: E,
-                      timestamp: S,
-                      compact: r,
-                      children: (0, a.jsx)(m, {
-                          timeFormatted: C,
-                          timestamp: S,
-                          id: b,
-                          compact: r,
+                : (0, n.jsx)(c.Z, {
+                      application: h,
+                      timestamp: x,
+                      compact: l,
+                      children: (0, n.jsx)(m, {
+                          timeFormatted: S,
+                          timestamp: x,
+                          id: O,
+                          compact: l,
                           children: t
                       })
                   })

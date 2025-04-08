@@ -120,7 +120,7 @@ function Z(e) {
         P = j.length > 0,
         E = p && !P && !N;
     return d
-        ? (0, i.jsx)(B, {})
+        ? (0, i.jsx)(U, {})
         : E
           ? (0, i.jsx)(g.A, {
                 type: C.LG.SEARCH_EMPTY,
@@ -276,7 +276,7 @@ function W(e) {
                           n.map((e, n) => {
                               let { application: r, installOnDemand: a } = e;
                               return (0, i.jsx)(
-                                  U,
+                                  B,
                                   {
                                       context: t,
                                       application: r,
@@ -323,7 +323,7 @@ function W(e) {
               ]
           });
 }
-function U(e) {
+function B(e) {
     let { onClickAppCard: t, onClickAppCardFriends: n } = (0, _.cG)(e);
     return (0, i.jsx)(P.Z, {
         application: e.application,
@@ -333,7 +333,7 @@ function U(e) {
         onClickAppCardFriends: n
     });
 }
-function B() {
+function U() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(j.Z, { title: O.NW.string(O.t['0hKkS0']) }),

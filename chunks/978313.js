@@ -16,14 +16,14 @@ var n = r(200651),
 function _(e) {
     let { detectedGame: t, trackAction: r } = e,
         [o, _] = a.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [h, O] = a.useState(!0),
+        [O, h] = a.useState(!0),
         [y, v] = a.useState(!1),
         j = a.useRef(null),
         { width: x, height: P } = (0, d.Z)();
     return (a.useEffect(() => {
         let e = j.current;
-        null != e && v(e.scrollHeight - e.clientHeight > 1 || !h);
-    }, [j, x, P, h]),
+        null != e && v(e.scrollHeight - e.clientHeight > 1 || !O);
+    }, [j, x, P, O]),
     null == t.summary)
         ? null
         : (0, n.jsxs)('div', {
@@ -46,7 +46,7 @@ function _(e) {
                       }),
                   (0, n.jsx)(s.xv, {
                       ref: j,
-                      lineClamp: h ? 8 : void 0,
+                      lineClamp: O ? 8 : void 0,
                       variant: 'text-sm/normal',
                       children: o ? t.summaryLocalized : t.summary
                   }),
@@ -54,11 +54,11 @@ function _(e) {
                       (0, n.jsx)(u.P3F, {
                           className: g.clickable,
                           onClick: () => {
-                              r(h ? p.as.ShowMore : p.as.ShowLess), O(!h);
+                              r(O ? p.as.ShowMore : p.as.ShowLess), h(!O);
                           },
                           children: (0, n.jsx)(s.xv, {
                               variant: 'text-sm/semibold',
-                              children: h ? m.NW.string(m.t.lBeKY2) : m.NW.string(m.t['6MwJo6'])
+                              children: O ? m.NW.string(m.t.lBeKY2) : m.NW.string(m.t['6MwJo6'])
                           })
                       }),
                   (0, n.jsx)(f.Z, {

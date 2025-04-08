@@ -15,7 +15,7 @@ var o = n(481060),
     u = n(994186);
 function d(e) {
     let { title: t, onClose: n, transitionState: d } = e,
-        { components: p, applicationIconURL: f, applicationName: I, submissionState: m, error: S, validators: C, onSubmit: T } = (0, c.X9)(e, n);
+        { components: p, applicationIconURL: I, applicationName: f, submissionState: m, error: S, validators: C, onSubmit: T } = (0, c.X9)(e, n);
     return (0, i.jsx)('form', {
         onSubmit: (e) => {
             e.preventDefault(), T();
@@ -27,9 +27,9 @@ function d(e) {
                     separator: !1,
                     children: [
                         (0, i.jsx)(o.qEK, {
-                            src: f,
+                            src: I,
                             size: o.EFr.SIZE_24,
-                            'aria-label': I,
+                            'aria-label': f,
                             className: u.applicationIcon
                         }),
                         (0, i.jsx)(r.Z, {
@@ -55,7 +55,7 @@ function d(e) {
                         (0, i.jsx)(o.Wn, {
                             messageType: o.QYI.WARNING,
                             className: u.submissionWarning,
-                            children: _.NW.format(_.t['dSTy//'], { applicationName: I })
+                            children: _.NW.format(_.t['dSTy//'], { applicationName: f })
                         }),
                         (0, i.jsx)(o.hjN, {
                             children: (0, i.jsx)(a.Il, {

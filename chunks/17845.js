@@ -20,7 +20,7 @@ function p(e) {
     let { title: t, description: n, button: i, className: p, children: m } = e,
         h = (0, c.ZP)(),
         g = (0, o.wj)(h),
-        f = a.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, r.jsx)(u, { title: e }, t)) : (0, r.jsx)(u, { title: t })), [t]);
+        _ = a.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, r.jsx)(u, { title: e }, t)) : (0, r.jsx)(u, { title: t })), [t]);
     return (0, r.jsxs)('div', {
         className: l()(d.container, p),
         children: [
@@ -29,7 +29,7 @@ function p(e) {
                 children: (0, r.jsxs)('div', {
                     className: d.textContainer,
                     children: [
-                        f,
+                        _,
                         null != n &&
                             (0, r.jsx)(s.Text, {
                                 className: d.description,
