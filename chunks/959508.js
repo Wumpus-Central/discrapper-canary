@@ -73,7 +73,9 @@ function y(e) {
                       [_.dropIndicatorAfter]: null != A && x > A,
                       [_.containerFocused]: U
                   }),
-                  ref: (e) => Z(k(e)),
+                  ref: (e) => {
+                      Z(k(e));
+                  },
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
@@ -130,7 +132,9 @@ function y(e) {
                       [_.dropIndicatorAfter]: null != A && x > A,
                       [_.containerFocused]: U
                   }),
-                  ref: (e) => Z(k(e)),
+                  ref: (e) => {
+                      Z(k(e));
+                  },
                   children: [
                       (0, r.jsx)('div', {
                           className: _.dragContainer,
@@ -158,7 +162,7 @@ function y(e) {
                           maxLength: j.iU,
                           error: L.title
                       }),
-                      (0, r.jsx)(C, {
+                      (0, r.jsx)(O, {
                           prompt: s,
                           guild: n
                       }),
@@ -176,7 +180,7 @@ function y(e) {
                                     total: D
                                 })
                       }),
-                      (0, r.jsx)(O, {
+                      (0, r.jsx)(C, {
                           guild: n,
                           prompt: s,
                           promptIndex: x,
@@ -245,7 +249,7 @@ function y(e) {
               })
           });
 }
-function C(e) {
+function O(e) {
     let { prompt: t, guild: n } = e,
         [s, a] = i.useState(!1);
     if (
@@ -280,7 +284,7 @@ function C(e) {
         ]
     });
 }
-function O(e) {
+function C(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: s, errors: a } = e,
         { dropdownsAllowed: l } = (0, m.Ug)(t.id),
         o = l ? j.qm : j.M$,

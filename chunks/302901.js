@@ -71,10 +71,16 @@ class m extends i.Component {
 }
 let g = (e) => {
     let { layerContext: t, className: n } = e,
-        [, o] = i.useContext(t);
+        [, o] = i.useContext(t),
+        s = i.useCallback(
+            (e) => {
+                o(e);
+            },
+            [o]
+        );
     return (0, r.jsx)('div', {
         className: a()(h, n),
-        ref: o
+        ref: s
     });
 };
 function E(e) {

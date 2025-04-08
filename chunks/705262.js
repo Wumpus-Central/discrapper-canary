@@ -1,7 +1,7 @@
 n.d(t, {
-    Yk: () => Z,
-    ZP: () => J,
-    yH: () => B
+    Yk: () => W,
+    ZP: () => ee,
+    yH: () => F
 }),
     n(314940),
     n(953529),
@@ -91,15 +91,35 @@ function G(e, t) {
         e
     );
 }
-var B = (function (e) {
+function B(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = V(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function V(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+var F = (function (e) {
     return (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e;
 })({});
-let V = Object.freeze({
+let Z = Object.freeze({
         EDITOR: D.fy.SLOW_USER_ACTION,
         SETTINGS: D.fy.INFREQUENT_USER_ACTION
     }),
-    F = i.createContext({}),
-    Z = (e) => {
+    H = i.createContext({}),
+    W = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
         S.default.track(R.rMx.CLIENT_THEME_UPDATED, {
             feature_name: P.QP.CLIENT_THEME,
@@ -108,7 +128,7 @@ let V = Object.freeze({
             location_stack: r
         });
     },
-    H = (e) => {
+    Y = (e) => {
         let { type: t, isPreview: n, isCoachmark: i } = e,
             o = (0, m.Q3)('GradientSelectorsTitle'),
             { enabled: a } = b.Z.useExperiment(
@@ -156,7 +176,7 @@ let V = Object.freeze({
             ]
         });
     },
-    W = (e) => {
+    K = (e) => {
         var t, n;
         let { type: i, isPreview: o, isCoachmark: a } = e,
             l = (null == (n = (0, E.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === P.Si.TIER_2,
@@ -221,10 +241,10 @@ let V = Object.freeze({
                   children: d
               });
     },
-    Y = (e) => {
+    z = (e) => {
         var t, n;
         let { renderCTAButtons: o, isCoachmark: a } = e,
-            { type: s } = i.useContext(F),
+            { type: s } = i.useContext(H),
             [c] = (0, l.Wu)([N.Z], () => [N.Z.isPreview]),
             u = (null == (n = (0, E.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === P.Si.TIER_2;
         return 'EDITOR' === s && c && u
@@ -239,12 +259,12 @@ let V = Object.freeze({
                       (0, r.jsxs)('div', {
                           className: M.headings,
                           children: [
-                              (0, r.jsx)(H, {
+                              (0, r.jsx)(Y, {
                                   type: s,
                                   isPreview: c,
                                   isCoachmark: a
                               }),
-                              (0, r.jsx)(W, {
+                              (0, r.jsx)(K, {
                                   type: s,
                                   isPreview: c,
                                   isCoachmark: a
@@ -255,9 +275,9 @@ let V = Object.freeze({
                   ]
               });
     },
-    K = (e) => {
+    q = (e) => {
         let { disabled: t } = e,
-            { type: o, delay: a } = i.useContext(F),
+            { type: o, delay: a } = i.useContext(H),
             { analyticsLocations: s } = (0, p.ZP)(_.Z.CLIENT_THEMES_THEME_SELECTOR),
             [h, m] = (0, l.Wu)([N.Z], () => {
                 var e;
@@ -273,7 +293,7 @@ let V = Object.freeze({
             S = (e, t) => {
                 if (
                     ((0, T.zO)(e.id),
-                    Z({
+                    W({
                         isPersisted: !h,
                         analyticsLocations: s,
                         themeName: c.Us[e.id]
@@ -366,30 +386,30 @@ let V = Object.freeze({
             ]
         });
     },
-    z = (e) => {
+    Q = (e) => {
         let { className: t, renderCTAButtons: n, disabled: i = !1, isCoachmark: o } = e;
         return (0, r.jsxs)('section', {
             className: t,
             children: [
-                (0, r.jsx)(Y, {
+                (0, r.jsx)(z, {
                     renderCTAButtons: n,
                     isCoachmark: o
                 }),
                 (0, r.jsx)('div', {
                     className: M.presets,
-                    children: (0, r.jsx)(K, { disabled: i })
+                    children: (0, r.jsx)(q, { disabled: i })
                 })
             ]
         });
     },
-    q = (e) => {
+    X = (e) => {
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
-            { delay: o } = i.useContext(F),
+            { delay: o } = i.useContext(H),
             { analyticsLocations: a } = (0, p.ZP)(_.Z.CLIENT_THEMES_THEME_SELECTOR),
             [s, c, u] = (0, l.Wu)([O.Z, I.ZP, N.Z], () => [O.Z.theme, null == N.Z.gradientPreset, I.ZP.useSystemTheme === w.KW.ON]),
             f = (e) => {
                 (0, T.xs)(),
-                    Z({
+                    W({
                         isPersisted: !0,
                         analyticsLocations: a,
                         themeName: 'default '.concat(e)
@@ -441,13 +461,13 @@ let V = Object.freeze({
             ]
         });
     },
-    Q = (e) => {
+    J = (e) => {
         let { isEditor: t, className: n, renderCTAButtons: i, isCoachmark: o } = e;
         return (0, r.jsxs)('section', {
             className: n,
             children: [
                 !t &&
-                    (0, r.jsx)(Y, {
+                    (0, r.jsx)(z, {
                         renderCTAButtons: i,
                         isCoachmark: o
                     }),
@@ -460,43 +480,45 @@ let V = Object.freeze({
                     }),
                 (0, r.jsxs)('div', {
                     className: a()(M.presets, { [M.presetsJustify]: t }),
-                    children: [(0, r.jsx)(q, { systemSelectorFirst: !0 }), (0, r.jsx)(K, { disabled: !1 })]
+                    children: [(0, r.jsx)(X, { systemSelectorFirst: !0 }), (0, r.jsx)(q, { disabled: !1 })]
                 })
             ]
         });
     },
-    X = (e) => {
+    $ = (e) => {
         let { type: t, children: n } = e,
             o = (0, h.Dt)(),
             a = (0, u.arW)({
                 orientation: 'horizontal',
                 labelledBy: o
             }),
-            s = i.useMemo(
+            { ref: s } = a,
+            l = B(a, ['ref']),
+            c = i.useMemo(
                 () => ({
                     type: t,
-                    delay: V[t]
+                    delay: Z[t]
                 }),
                 [t]
             );
-        return (0, r.jsx)(F.Provider, {
-            value: s,
+        return (0, r.jsx)(H.Provider, {
+            value: c,
             children: (0, r.jsx)(
                 'div',
-                G(j({}, a), {
+                G(j({ ref: s }, l), {
                     className: M.__invalid_container,
                     children: n
                 })
             )
         });
     };
-(X.Basic = (e) => {
+($.Basic = (e) => {
     let { className: t, hideSystemSelector: n } = e;
     return (0, r.jsx)('section', {
         className: a()(M.presets, t),
-        children: (0, r.jsx)(q, { hideSystemSelector: n })
+        children: (0, r.jsx)(X, { hideSystemSelector: n })
     });
 }),
-    (X.Gradient = z),
-    (X.BasicAndGradient = Q);
-let J = X;
+    ($.Gradient = Q),
+    ($.BasicAndGradient = J);
+let ee = $;

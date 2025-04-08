@@ -239,7 +239,9 @@ function D(e) {
     });
     return (0, i.jsx)('div', {
         className: S.searchOpenAppDetailAppCard,
-        ref: (e) => (r.current = e),
+        ref: (e) => {
+            r.current = e;
+        },
         children: (0, i.jsx)(
             _.kA,
             ((t = T({}, e)),

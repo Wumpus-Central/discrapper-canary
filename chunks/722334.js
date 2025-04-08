@@ -68,7 +68,9 @@ function b(e) {
     return (
         (0, s.Zk)(p.V_.EXCLUDED_QUEST, t),
         (0, r.jsxs)('div', {
-            ref: (e) => (n.current = e),
+            ref: (e) => {
+                n.current = e;
+            },
             className: a()(h.container, {
                 [h.wide]: 'lg' === i,
                 [h.tall]: 'lg' !== i

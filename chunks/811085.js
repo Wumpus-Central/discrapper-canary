@@ -132,7 +132,9 @@ function j() {
                                     'div',
                                     {
                                         className: g.statusOption,
-                                        ref: (e) => (N.current[parseInt(n)] = e),
+                                        ref: (e) => {
+                                            N.current[parseInt(n)] = e;
+                                        },
                                         children: [
                                             r
                                                 ? (0, a.jsx)(T, {

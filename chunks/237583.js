@@ -54,7 +54,9 @@ class f extends (n = o.PureComponent) {
         let { className: e } = this.props;
         return (0, a.jsxs)('div', {
             className: l()(e, u.container),
-            ref: (e) => (this._ref = e),
+            ref: (e) => {
+                this._ref = e;
+            },
             children: [this.renderIcon(), this.renderUsers()]
         });
     }

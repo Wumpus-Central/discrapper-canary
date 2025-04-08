@@ -161,10 +161,11 @@ function eI(e, t, o, a) {
                     commandOptionValues: d,
                     isGif: f
                 }).then((e) => {
-                    let { shouldClear: n, shouldRefocus: r } = e,
-                        i = eO(n, t),
-                        s = null != o.current;
-                    i && (ev(a) ? h.Z.saveDraft(a, '', t.drafts.type) : s && o.current.clearValue()), s && (l(!1), (0, R._Q)(), r && o.current.focus());
+                    var n, r;
+                    let { shouldClear: i, shouldRefocus: s } = e,
+                        c = eO(i, t),
+                        u = null != o.current;
+                    c && (ev(a) ? h.Z.saveDraft(a, '', t.drafts.type) : u && (null == (r = o.current) || r.clearValue())), u && (l(!1), (0, R._Q)(), s && (null == (n = o.current) || n.focus()));
                 });
             },
             [o, e, s, t, a]

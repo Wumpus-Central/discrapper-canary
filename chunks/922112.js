@@ -57,11 +57,11 @@ function b(e, t) {
 }
 let x = function (e) {
     let { guildId: t, resourceChannel: s, index: x, onDragComplete: j, onDragStart: N, onDragReset: _ } = e,
-        { title: v, channelId: y, description: C } = s,
-        O = d.Z.getChannel(y),
+        { title: v, channelId: y, description: O } = s,
+        C = d.Z.getChannel(y),
         I = null;
-    (null != O && (0, c.k3)(O)) || (I = p.NW.string(p.t.kTdL8f));
-    let E = null == C || 0 === C.length,
+    (null != C && (0, c.k3)(C)) || (I = p.NW.string(p.t.kTdL8f));
+    let E = null == O || 0 === O.length,
         S = u.ZP.getResourceChannelIconURL({
             channelId: s.channelId,
             icon: s.icon
@@ -114,7 +114,7 @@ let x = function (e) {
                 }),
             [t, s, D, Z]
         );
-    return null == O
+    return null == C
         ? null
         : (0, r.jsxs)('div', {
               className: h.resourceChannelContainer,
@@ -125,7 +125,9 @@ let x = function (e) {
                           [h.dropIndicatorAfter]: null != P && x > P,
                           [h.resourceChannelError]: null != I
                       }),
-                      ref: (e) => T(w(e)),
+                      ref: (e) => {
+                          T(w(e));
+                      },
                       children: [
                           (0, r.jsx)('div', {
                               className: h.dragContainer,
@@ -164,7 +166,7 @@ let x = function (e) {
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
                                           lineClamp: 1,
-                                          children: C
+                                          children: O
                                       })
                               ]
                           }),

@@ -359,7 +359,9 @@ function eo(e) {
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)('div', {
-                      ref: (e) => (c.current = e),
+                      ref: (e) => {
+                          c.current = e;
+                      },
                       children: (0, i.jsx)(z.Z, { title: J.NW.string(J.t.shUONj) })
                   }),
                   (0, i.jsx)('div', {
@@ -411,7 +413,9 @@ function ec(e) {
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)('div', {
-                      ref: (e) => (u.current = e),
+                      ref: (e) => {
+                          u.current = e;
+                      },
                       children: (0, i.jsx)(z.Z, {
                           title: J.NW.string(J.t.KfkuGR),
                           buttonType: z.Z.buttonTypes.VIEW_MORE,
@@ -630,7 +634,9 @@ function eu(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)('div', {
-                ref: (e) => (y.current = e),
+                ref: (e) => {
+                    y.current = e;
+                },
                 children: (0, i.jsx)(z.Z, {
                     title: l.title,
                     buttonType: z.Z.buttonTypes.VIEW_MORE,

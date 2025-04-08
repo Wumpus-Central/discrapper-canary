@@ -333,7 +333,9 @@ function U(e) {
                     return (0, r.jsx)(
                         A.Z,
                         {
-                            ref: (e) => (d.current[n] = e),
+                            ref: (e) => {
+                                d.current[n] = e;
+                            },
                             totalResults: p,
                             scrollTo: h,
                             searchId: y,

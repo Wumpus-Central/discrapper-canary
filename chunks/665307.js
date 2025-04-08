@@ -254,7 +254,9 @@ let w = (0, C.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 [j.rowWrapper]: !d && !p,
                 [j.rowWrapperDim]: !d && !t.isLaunchable
             }),
-            ref: (e) => c(e, t.key),
+            ref: (e) => {
+                c(e, t.key);
+            },
             onMouseEnter: () => l(t),
             onMouseLeave: a,
             onContextMenu: (e) => s(e, t),

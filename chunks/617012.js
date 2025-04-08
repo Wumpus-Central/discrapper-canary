@@ -56,7 +56,27 @@ function m(e) {
             orientation: 'horizontal',
             isDisabled: t
         }),
-        m = i.useCallback(
+        { ref: m } = s,
+        g = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(s, ['ref']),
+        f = i.useCallback(
             (e) => {
                 t || e === n || l(e);
             },
@@ -64,19 +84,28 @@ function m(e) {
         );
     return (0, r.jsx)(
         'div',
-        u(d({ className: o()(c.group, { [c.disabled]: t }) }, s), {
-            children: p.map((e) =>
-                (0, r.jsx)(
-                    b,
-                    {
-                        isSelected: n === e,
-                        itemValue: e,
-                        onClick: () => m(e)
-                    },
-                    e.toString()
+        u(
+            d(
+                {
+                    className: o()(c.group, { [c.disabled]: t }),
+                    ref: m
+                },
+                g
+            ),
+            {
+                children: p.map((e) =>
+                    (0, r.jsx)(
+                        b,
+                        {
+                            isSelected: n === e,
+                            itemValue: e,
+                            onClick: () => f(e)
+                        },
+                        e.toString()
+                    )
                 )
-            )
-        })
+            }
+        )
     );
 }
 function b(e) {

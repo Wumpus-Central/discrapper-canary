@@ -61,24 +61,53 @@ function b(e) {
             orientation: 'horizontal',
             isDisabled: l,
             labelledBy: r
-        });
+        }),
+        { ref: p } = s,
+        b = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(s, ['ref']);
     return (0, i.jsx)(
         'div',
-        u(d({ className: o()(c.group, { [c.disabled]: l }) }, s), {
-            children: m.map((e) =>
-                (0, i.jsx)(
-                    g,
-                    {
-                        type: e,
-                        isSelected: t === e,
-                        onSelect: (e) => {
-                            t === e || l || n(e);
-                        }
-                    },
-                    e
+        u(
+            d(
+                {
+                    className: o()(c.group, { [c.disabled]: l }),
+                    ref: p
+                },
+                b
+            ),
+            {
+                children: m.map((e) =>
+                    (0, i.jsx)(
+                        g,
+                        {
+                            type: e,
+                            isSelected: t === e,
+                            onSelect: (e) => {
+                                t === e || l || n(e);
+                            }
+                        },
+                        e
+                    )
                 )
-            )
-        })
+            }
+        )
     );
 }
 function g(e) {

@@ -31,7 +31,9 @@ function h(e) {
     return (
         (0, a.Zk)(d.V_.UNKNOWN_QUEST, t),
         (0, r.jsxs)('div', {
-            ref: (e) => (n.current = e),
+            ref: (e) => {
+                n.current = e;
+            },
             className: o()(p.container, {
                 [p.wide]: 'lg' === s,
                 [p.tall]: 'lg' !== s
