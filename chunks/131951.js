@@ -1,5 +1,5 @@
 let r, i, o, a;
-n.d(t, { Z: () => rn }), n(388685), n(953529), n(457542), n(539854), n(337869);
+n.d(t, { Z: () => rr }), n(388685), n(953529), n(457542), n(539854), n(642613), n(49124), n(337869);
 var s,
     l = n(512722),
     c = n.n(l),
@@ -661,6 +661,10 @@ function tC() {
                     };
                 })
             });
+        }),
+        ej.on(m.aB.VoiceQueueMetrics, (e) => {
+            let t = rn(e);
+            null !== t && z.default.track(ed.rMx.VOICE_QUEUE_METRICS, t);
         }),
         ej.setOnVideoContainerResized((e, t, n) => {
             b.Z.wait(() =>
@@ -1899,8 +1903,30 @@ class rt extends (s = h.ZP.Store) {
         return t_;
     }
 }
+function rn(e) {
+    if (null == e.taskMetrics || 0 === e.taskMetrics.length || 1 === e.taskMetrics.length) return null;
+    let t = {
+        metrics_period_ms: e.periodMs,
+        total_tasks: 0,
+        total_exec_time_ns: 0
+    };
+    (t.total_tasks = e.taskMetrics.reduce((e, t) => e + t.count, 0)), (t.total_exec_time_ns = e.taskMetrics.reduce((e, t) => e + t.totalExecTimeNs, 0));
+    let n = [...e.taskMetrics].sort((e, t) => t.longestExecTimeNs - e.longestExecTimeNs),
+        r = [...e.taskMetrics].sort((e, t) => t.longestQueueTimeNs - e.longestQueueTimeNs);
+    for (let e = 0; e < 3; e++)
+        if (e < n.length) {
+            let r = n[e];
+            (t['slow_task_'.concat(e, '_name')] = r.name), (t['slow_task_'.concat(e, '_longest_exec_time_ns')] = r.longestExecTimeNs);
+        }
+    for (let e = 0; e < 3; e++)
+        if (e < r.length) {
+            let n = r[e];
+            (t['delayed_task_'.concat(e, '_name')] = n.name), (t['delayed_task_'.concat(e, '_longest_queue_time_ns')] = n.longestQueueTimeNs);
+        }
+    return (t.full_task_report = JSON.stringify(n)), t;
+}
 eg(rt, 'displayName', 'MediaEngineStore');
-let rn = (r = new rt(b.Z, {
+let rr = (r = new rt(b.Z, {
     VOICE_CHANNEL_SELECT: nZ,
     VOICE_STATE_UPDATES: tX,
     CONNECTION_OPEN: tK,

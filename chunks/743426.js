@@ -676,6 +676,25 @@ class O extends a.Z {
             null != g.setActiveSinksChangeCallback && g.setActiveSinksChangeCallback(this.handleActiveSinksChange),
             null == (c = g.setLoopbackPlaybackGainMultiplier) || c.call(g, h.Jk),
             null == (p = g.setVoiceFiltersFailedCallback) || p.call(g, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
-            (0, l.Z)(this);
+            (0, l.Z)(this),
+            I(this);
     }
+}
+function I(e) {
+    let t = 900000,
+        n = !1;
+    e.on(s.aB.Destroy, () => (n = !0));
+    let r = async () => {
+        if (n) return;
+        let i = (0, d.zS)(),
+            o = await new Promise((e) => {
+                var t;
+                null == (t = i.pollQueueMetrics) ||
+                    t.call(i, (t) => {
+                        e(t);
+                    });
+            });
+        (o.periodMs = t), e.emit(s.aB.VoiceQueueMetrics, o), setTimeout(r, t);
+    };
+    setTimeout(r, t);
 }
