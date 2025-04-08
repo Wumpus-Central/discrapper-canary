@@ -151,7 +151,8 @@ let m = (e) => {
                 onboardingCoachmarkType: 'shop',
                 prevCoachmarksDismissed: p,
                 onShowCoachmarkHandler: s
-            });
+            }),
+            g = i.useCallback(() => f('CTA_CLICK'), [f]);
         return n
             ? {
                   shouldShow: h,
@@ -159,7 +160,7 @@ let m = (e) => {
                   onHandleScroll: a,
                   positionControlRef: r,
                   onClose: f,
-                  onCtaClick: f
+                  onCtaClick: g
               }
             : {
                   shouldShow: !1,
