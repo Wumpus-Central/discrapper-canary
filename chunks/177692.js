@@ -9,8 +9,9 @@ function c() {
     o.default.track(s.rMx.LIBDISCORE_LOADED, { success: !0 });
 }
 function u(e) {
-    let t = '';
-    return (t = e instanceof Error ? e.message : null != e ? String(e) : 'Unknown error').length > 1000 && (t = t.substring(0, 997) + '...'), t;
+    let t = '',
+        n = null;
+    return (e instanceof Error ? ((t = e.message), (n = e.name)) : (t = null != e ? String(e) : 'Unknown error'), t.length > 1000 && (t = t.substring(0, 997) + '...'), null != n) ? ''.concat(n, ': ').concat(t) : t;
 }
 function d(e) {
     l.error('Failed to execute smoke test:', e), e instanceof Error && a.Z.captureException(e);
