@@ -315,7 +315,8 @@ function D(e) {
               className: a()(
                   {
                       [O.experimentLayout]: L.enabled,
-                      [O.altLayout]: L.altLayout
+                      [O.altLayout]: L.altLayout,
+                      [O.noShowTryItOutButton]: !_
                   },
                   O.entrypointContainer
               ),

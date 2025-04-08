@@ -20,6 +20,7 @@ e.exports = {
     experimentTitleContainer: 'experimentTitleContainer__95856',
     entryPointCheckbox: 'entryPointCheckbox__95856',
     entryPointCheckboxLabel: 'entryPointCheckboxLabel__95856',
+    noShowTryItOutButton: 'noShowTryItOutButton__95856',
     entryPointContainerFlexChild: 'entryPointContainerFlexChild__95856',
     expandableDescriptionClickable: 'expandableDescriptionClickable__95856',
     overflowHidden: 'overflowHidden__95856',
