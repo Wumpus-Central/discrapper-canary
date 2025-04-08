@@ -3,6 +3,7 @@ e.exports = {
     compact: 'compact_c19a55',
     cozy: 'cozy_c19a55',
     contentOnly: 'contentOnly_c19a55',
+    preview: 'preview_c19a55',
     repliedMessage: 'repliedMessage_c19a55',
     executedCommand: 'executedCommand_c19a55',
     threadMessageAccessory: 'threadMessageAccessory_c19a55',
