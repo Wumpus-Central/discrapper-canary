@@ -1,17 +1,18 @@
-n.d(t, { l: () => g });
+n.d(t, { l: () => b }), n(388685);
 var i = n(200651),
-    r = n(192379),
-    o = n(442837),
+    o = n(192379),
+    r = n(442837),
     a = n(481060),
-    l = n(607070),
-    s = n(100527),
+    s = n(607070),
+    l = n(100527),
     c = n(906732),
     u = n(181918),
     d = n(956226),
-    h = n(670188),
-    p = n(592125),
-    m = n(91047);
-function f(e) {
+    h = n(823415),
+    p = n(670188),
+    m = n(592125),
+    f = n(91047);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -36,38 +37,40 @@ function f(e) {
     }
     return e;
 }
-function g(e) {
-    let { user: t, channelId: n, guildId: g, messageId: b, stopPropagation: j = !1, ariaLabel: v } = e,
-        { analyticsLocations: O } = (0, c.ZP)(s.Z.USERNAME),
-        y = (0, u.$V)(g, 'useUsernameHook'),
-        T = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        x = r.useCallback(
+function b(e) {
+    let { user: t, channelId: n, guildId: b, messageId: j, stopPropagation: v = !1, ariaLabel: O } = e,
+        { analyticsLocations: y } = (0, c.ZP)(l.Z.USERNAME),
+        T = (0, u.$V)(b, 'useUsernameHook'),
+        x = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
+        [S, _] = o.useState(!1),
+        C = (0, h.ic)({ location: 'useUsernameHook' }),
+        E = o.useCallback(
             (e) => {
-                let i = p.Z.getChannel(n);
-                null != i && null != t && (0, m.Pv)(e, t, i);
+                let i = m.Z.getChannel(n);
+                null != i && null != t && (0, f.Pv)(e, t, i);
             },
             [t, n]
         );
-    return r.useCallback(
-        (e) => (r, o) => {
-            let l = null == e ? void 0 : e.colorStrings,
-                s = y && null != l && null != l.primaryColor && null != l.secondaryColor ? (0, d.$)(l.primaryColor, l.secondaryColor, l.tertiaryColor, T) : void 0,
+    return o.useCallback(
+        (e) => (o, r) => {
+            let s = null == e ? void 0 : e.colorStrings,
+                l = T && null != s && null != s.primaryColor && null != s.secondaryColor ? (0, d.$)(s.primaryColor, s.secondaryColor, s.tertiaryColor, x) : void 0,
                 u = (t) => {
-                    var n, o;
+                    var n, r;
                     return (0, i.jsx)(
                         a.rz2,
-                        ((n = f({}, null != t ? t : {})),
-                        (o = o =
+                        ((n = g({}, null != t ? t : {})),
+                        (r = r =
                             {
-                                onContextMenu: x,
-                                name: r,
+                                onContextMenu: E,
+                                name: o,
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
-                                roleGradient: s,
-                                'aria-label': v
+                                roleGradient: l,
+                                'aria-label': O
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -75,57 +78,61 @@ function g(e) {
                                       n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(r)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                               }),
                         n)
                     );
                 },
-                p = (e) => (t) => {
-                    j && null != t && t.stopPropagation(), e(t);
+                h = (e) => (t) => {
+                    v && null != t && t.stopPropagation(), e(t);
                 };
             return (0, i.jsx)(
                 c.Gt,
                 {
-                    value: O,
+                    value: y,
                     children:
                         null != t
-                            ? (0, i.jsx)(h.Z, {
+                            ? (0, i.jsx)(p.Z, {
                                   user: t,
-                                  guildId: g,
+                                  guildId: b,
                                   channelId: n,
-                                  messageId: b,
+                                  messageId: j,
+                                  shouldShowOnHover: C,
                                   roleId: null == e ? void 0 : e.colorRoleId,
-                                  clickTrap: !0,
+                                  clickTrap: S,
+                                  shouldShow: S,
+                                  onRequestOpen: () => _(!0),
+                                  onRequestClose: () => _(!1),
                                   children: (e) => {
                                       var { onClick: t } = e,
                                           n = (function (e, t) {
                                               if (null == e) return {};
                                               var n,
                                                   i,
-                                                  r = (function (e, t) {
+                                                  o = (function (e, t) {
                                                       if (null == e) return {};
                                                       var n,
                                                           i,
-                                                          r = {},
-                                                          o = Object.keys(e);
-                                                      for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                                                      return r;
+                                                          o = {},
+                                                          r = Object.keys(e);
+                                                      for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                                                      return o;
                                                   })(e, t);
                                               if (Object.getOwnPropertySymbols) {
-                                                  var o = Object.getOwnPropertySymbols(e);
-                                                  for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
                                               }
-                                              return r;
+                                              return o;
                                           })(e, ['onClick']);
-                                      return u(f({ onClick: p(t) }, n));
+                                      return u(g({ onClick: h(t) }, n));
                                   }
                               })
                             : u(void 0)
                 },
-                o
+                r
             );
         },
-        [O, t, n, g, b, x, j, v, y, T]
+        [y, t, n, b, j, E, v, O, T, x, C, S]
     );
 }
