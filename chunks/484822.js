@@ -6,6 +6,7 @@ e.exports = {
     fullSize: 'fullSize_ab8609',
     panel: 'panel_ab8609',
     referenceContainer: 'referenceContainer_ab8609',
+    withLabel: 'withLabel_ab8609',
     outer: 'outer_ab8609',
     inner: 'inner_ab8609',
     content: 'content_ab8609',
@@ -17,5 +18,7 @@ e.exports = {
     addStatusPrompt: 'addStatusPrompt_ab8609',
     italicPrompt: 'italicPrompt_ab8609',
     addStatusIcon: 'addStatusIcon_ab8609',
-    addStatusIconColor: 'addStatusIconColor_ab8609'
+    addStatusIconColor: 'addStatusIconColor_ab8609',
+    labelContent: 'labelContent_ab8609',
+    labelText: 'labelText_ab8609'
 };

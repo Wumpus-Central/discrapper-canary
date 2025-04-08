@@ -38184,6 +38184,13 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     pointer-events: none
 }
 
+.referenceContainer_ab8609.withLabel_ab8609,
+.referenceContainer_ab8609.withLabel_ab8609.biteSize_ab8609,
+.referenceContainer_ab8609.withLabel_ab8609.fullSize_ab8609,
+.referenceContainer_ab8609.withLabel_ab8609.panel_ab8609 {
+    margin-top: -24px
+}
+
 .referenceContainer_ab8609.biteSize_ab8609 {
     margin-top: -10px;
     margin-left: 109px;
@@ -38345,6 +38352,17 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 
 .outer_ab8609:hover .addStatusIconColor_ab8609 {
     fill: var(--text-normal)
+}
+
+.labelContent_ab8609 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 2px
+}
+
+.labelText_ab8609 {
+    line-height: 12px
 }
 
 .section_bf424d {
