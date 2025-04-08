@@ -60,25 +60,25 @@ let O = Math.round((p.mT - 8) / 3),
     I = Math.round((p.Jj - 4) / 2),
     x = Math.round((2 * (p.mT - 4)) / 3),
     b = x / 2;
-function v(e) {
+function w(e) {
     let { visualMediaItems: t, footer: n } = e;
     null != n && a()(1 === t.length, 'footer only gets applied to single items');
     let o = t.length;
     if (1 === o)
-        return (0, r.jsx)(C, {
+        return (0, r.jsx)(v, {
             itemsForLayout: t,
             isSingleImage: !0,
             footer: n
         });
-    if (2 === o) return (0, r.jsx)(w, { itemsForLayout: t });
+    if (2 === o) return (0, r.jsx)(C, { itemsForLayout: t });
     if (3 === o) return (0, r.jsx)(P, { itemsForLayout: t });
     if (4 === o) return (0, r.jsx)(E, { itemsForLayout: t });
     let i = o % 3;
     return (0, r.jsxs)(r.Fragment, {
-        children: [1 === i && (0, r.jsx)(C, { itemsForLayout: t.slice(0, i) }), 2 === i && (0, r.jsx)(w, { itemsForLayout: t.slice(0, i) }), 0 === i ? (0, r.jsx)(N, { itemsForLayout: t }) : (0, r.jsx)(N, { itemsForLayout: t.slice(i) })]
+        children: [1 === i && (0, r.jsx)(v, { itemsForLayout: t.slice(0, i) }), 2 === i && (0, r.jsx)(C, { itemsForLayout: t.slice(0, i) }), 0 === i ? (0, r.jsx)(N, { itemsForLayout: t }) : (0, r.jsx)(N, { itemsForLayout: t.slice(i) })]
     });
 }
-function C(e) {
+function v(e) {
     let { itemsForLayout: t, isSingleImage: n, footer: o } = e,
         i = t[0];
     return (0, r.jsx)('div', {
@@ -95,7 +95,7 @@ function C(e) {
         })
     });
 }
-function w(e) {
+function C(e) {
     let { itemsForLayout: t } = e;
     return (0, r.jsx)('div', {
         className: f.oneByTwoGrid,
@@ -207,11 +207,11 @@ function A(e) {
 }
 let S = function (e) {
     var t;
-    let { items: n, inlineForwardButton: i, isInAppComponentsV2: s = !1 } = e,
+    let { items: n, isInAppComponentsV2: i = !1 } = e,
         {
-            groupableVisualMediaItems: a,
-            nonGroupableVisualMediaItems: u,
-            nonVisualMediaItems: d
+            groupableVisualMediaItems: s,
+            nonGroupableVisualMediaItems: a,
+            nonVisualMediaItems: u
         } = ((t = n),
         o.useMemo(() => {
             let [e, n] = c().partition(t, (e) => (0, m.R_)(e.item.type)),
@@ -224,24 +224,13 @@ let S = function (e) {
         }, [t]));
     return (0, r.jsxs)(r.Fragment, {
         children: [
+            s.length > 0 &&
+                (0, r.jsx)('div', {
+                    className: l()(f.visualMediaItemContainer, { [f.isInAppComponentsV2]: i }),
+                    children: (0, r.jsx)(w, { visualMediaItems: s })
+                }),
             a.length > 0 &&
-                (null != i
-                    ? (0, r.jsxs)('div', {
-                          className: l()(f.mosaicContainer, { [f.single]: 1 === a.length }),
-                          children: [
-                              (0, r.jsx)('div', {
-                                  className: l()(f.visualMediaItemContainer, { [f.isInAppComponentsV2]: s }),
-                                  children: (0, r.jsx)(v, { visualMediaItems: a })
-                              }),
-                              i
-                          ]
-                      })
-                    : (0, r.jsx)('div', {
-                          className: l()(f.visualMediaItemContainer, { [f.isInAppComponentsV2]: s }),
-                          children: (0, r.jsx)(v, { visualMediaItems: a })
-                      })),
-            u.length > 0 &&
-                u.map((e) => {
+                a.map((e) => {
                     let t = e.renderMosaicItemFooter({
                         item: e.item,
                         message: e.message
@@ -249,8 +238,8 @@ let S = function (e) {
                     return (0, r.jsx)(
                         'div',
                         {
-                            className: l()(f.visualMediaItemContainer, { [f.isInAppComponentsV2]: s }),
-                            children: (0, r.jsx)(v, {
+                            className: l()(f.visualMediaItemContainer, { [f.isInAppComponentsV2]: i }),
+                            children: (0, r.jsx)(w, {
                                 visualMediaItems: [e],
                                 footer: t
                             })
@@ -258,10 +247,10 @@ let S = function (e) {
                         e.item.uniqueId
                     );
                 }),
-            d.length > 0 &&
+            u.length > 0 &&
                 (0, r.jsx)('div', {
                     className: f.nonVisualMediaItemContainer,
-                    children: d.map((e) =>
+                    children: u.map((e) =>
                         (0, r.jsx)(
                             'div',
                             {

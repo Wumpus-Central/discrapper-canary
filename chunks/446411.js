@@ -1,6 +1,6 @@
 t.d(l, {
-    BC: () => U,
-    ZP: () => Y
+    BC: () => G,
+    ZP: () => z
 }),
     t(388685),
     t(539854),
@@ -43,9 +43,8 @@ var n,
     B = t(388032),
     V = t(94488),
     _ = t(166011),
-    W = t(73433),
-    D = t(813102);
-function F(e, l, t) {
+    W = t(73433);
+function D(e, l, t) {
     return (
         l in e
             ? Object.defineProperty(e, l, {
@@ -58,7 +57,7 @@ function F(e, l, t) {
         e
     );
 }
-function Z(e) {
+function F(e) {
     for (var l = 1; l < arguments.length; l++) {
         var t = null != arguments[l] ? arguments[l] : {},
             n = Object.keys(t);
@@ -69,12 +68,12 @@ function Z(e) {
                 })
             )),
             n.forEach(function (l) {
-                F(e, l, t[l]);
+                D(e, l, t[l]);
             });
     }
     return e;
 }
-function G(e, l) {
+function Z(e, l) {
     return (
         (l = null != l ? l : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +91,7 @@ function G(e, l) {
         e
     );
 }
-function U(e) {
+function G(e) {
     var l, t;
     let { className: n, iframeWrapperClassName: s, maxWidth: o, maxHeight: u, thumbnail: d, video: c, provider: h, allowFullScreen: m = !0, responsive: p = !1, renderImageComponent: g, renderVideoComponent: b, renderLinkComponent: f, playable: v = !0, autoPlay: y = !1, autoMute: w, volume: I, onPlay: j, onPause: O, onEnded: E, onControlsHide: C, onControlsShow: P, onVolumeChange: T, onMute: H, href: k, placeholder: R, placeholderVersion: B, sourceMetadata: _ } = e,
         [W, D] = i.useState(y),
@@ -235,7 +234,7 @@ function U(e) {
         ]
     });
 }
-function z(e) {
+function U(e) {
     let { className: l, href: t, autoPlay: n, maxWidth: i, maxHeight: s, thumbnail: o, video: u, renderImageComponent: d, responsive: c, alt: h, disableAltTextDisplay: m = !1, playable: p = !0, hiddenSpoilers: g, placeholder: b, placeholderVersion: f, sourceMetadata: y } = e;
     return (0, r.jsx)(v.Z, {
         className: a()(V.embedVideo, l),
@@ -260,7 +259,7 @@ function z(e) {
         sourceMetadata: y
     });
 }
-class Y extends (n = i.PureComponent) {
+class z extends (n = i.PureComponent) {
     renderProvider() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             {
@@ -522,7 +521,7 @@ class Y extends (n = i.PureComponent) {
                       }
                     : (0, I.J)(
                           h.map((e) =>
-                              G(Z({}, (0, b.Hv)(e, w, 'IMAGE')), {
+                              Z(F({}, (0, b.Hv)(e, w, 'IMAGE')), {
                                   original: e.url,
                                   srcIsAnimated: e.srcIsAnimated
                               })
@@ -573,7 +572,7 @@ class Y extends (n = i.PureComponent) {
                         children: (l) => {
                             let { disableAnimations: t } = l;
                             return m(
-                                G(Z({}, S), {
+                                Z(F({}, S), {
                                     autoPlay: f && !t && !s,
                                     renderAccessory: C ? e : null,
                                     handlePreloadImage: E[j],
@@ -621,7 +620,7 @@ class Y extends (n = i.PureComponent) {
                   : (0, r.jsx)(k.G.Consumer, {
                         children: (e) => {
                             let { disableAnimations: a } = e;
-                            return (0, r.jsx)(z, {
+                            return (0, r.jsx)(U, {
                                 className: V.embedMedia,
                                 href: n,
                                 thumbnail: i,
@@ -640,7 +639,7 @@ class Y extends (n = i.PureComponent) {
                             });
                         }
                     })
-              : (0, r.jsx)(U, {
+              : (0, r.jsx)(G, {
                     className: V.embedMedia,
                     href: n,
                     allowFullScreen: c,
@@ -909,10 +908,10 @@ class Y extends (n = i.PureComponent) {
         var l;
         super(...e),
             (l = this),
-            F(
+            D(
                 this,
                 'state',
-                Z(
+                F(
                     {
                         isVisible: null == this.props.obscureReason,
                         videoControlsShown: !1,
@@ -929,13 +928,13 @@ class Y extends (n = i.PureComponent) {
                     (0, T.vP)(this.props.embed)
                 )
             ),
-            F(this, 'onReveal', () => {
+            D(this, 'onReveal', () => {
                 this.setState({ isVisible: !0 });
             }),
-            F(this, 'onToggleObscurity', () => {
+            D(this, 'onToggleObscurity', () => {
                 this.setState({ isVisible: !this.state.isVisible });
             }),
-            F(this, 'renderInlineMediaEmbed', function () {
+            D(this, 'renderInlineMediaEmbed', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     { obscureReason: t, className: n } = l.props,
                     i = l.getMaxWidth(!0);
@@ -945,19 +944,18 @@ class Y extends (n = i.PureComponent) {
                         [V.spoilerAttachment]: t === w.wk.SPOILER,
                         [V.hiddenExplicitAttachment]: null != t && [w.wk.EXPLICIT_CONTENT, w.wk.POTENTIAL_EXPLICIT_CONTENT].includes(t),
                         [V.isHidden]: e,
-                        [V.justifyAuto]: l.usesJustifiedAutoStyle(),
-                        [D.embedFlexGrow]: null != i
+                        [V.justifyAuto]: l.usesJustifiedAutoStyle()
                     }),
                     style: { maxWidth: i },
                     children: l.renderMedia(e)
                 });
             }),
-            F(this, 'renderEmbedContent', function () {
+            D(this, 'renderEmbedContent', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     { className: t, onSuppressEmbed: n, obscureReason: i } = l.props,
                     { provider: s, author: o, title: u, description: d, fields: c, thumbnail: h, media: m, footer: p } = l.renderAll();
                 return (0, r.jsx)('article', {
-                    className: a()(t, D.embedFlexGrow, V.embedFull, W.markup, {
+                    className: a()(t, V.embedFull, W.markup, {
                         [V.isHidden]: e,
                         [V.spoilerEmbed]: i === w.wk.SPOILER,
                         [V.hiddenExplicitEmbed]: null != i && [w.wk.EXPLICIT_CONTENT, w.wk.POTENTIAL_EXPLICIT_CONTENT].includes(i),
@@ -982,7 +980,7 @@ class Y extends (n = i.PureComponent) {
             });
     }
 }
-F(Y, 'defaultProps', {
+D(z, 'defaultProps', {
     hideMedia: !1,
     allowFullScreen: !0,
     maxThumbnailWidth: 80,

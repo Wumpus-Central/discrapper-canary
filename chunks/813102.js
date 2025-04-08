@@ -9,7 +9,5 @@ e.exports = {
     threadRoleMentionFailure: 'threadRoleMentionFailure_b7e1cb',
     nitroFileSizeUpsell: 'nitroFileSizeUpsell_b7e1cb',
     nitroBadgeSvg: 'nitroBadgeSvg_b7e1cb',
-    ctaButtonContainer: 'ctaButtonContainer_b7e1cb',
-    embedContainer: 'embedContainer_b7e1cb',
-    embedFlexGrow: 'embedFlexGrow_b7e1cb'
+    ctaButtonContainer: 'ctaButtonContainer_b7e1cb'
 };

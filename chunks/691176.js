@@ -4,7 +4,6 @@ e.exports = {
     titleLine: 'titleLine__62280',
     title: 'title__62280',
     closeButton: 'closeButton__62280',
-    footer: 'footer__62280',
     footerWithMessage: 'footerWithMessage__62280',
     footerWarningWrapper: 'footerWarningWrapper__62280',
     footerButtons: 'footerButtons__62280',
@@ -25,6 +24,5 @@ e.exports = {
     actions: 'actions__62280',
     sendWithMessage: 'sendWithMessage__62280',
     messageInput: 'messageInput__62280',
-    forwardPreviewWrapper: 'forwardPreviewWrapper__62280',
-    forwardPreviewWrapperInset: 'forwardPreviewWrapperInset__62280'
+    forwardPreviewWrapper: 'forwardPreviewWrapper__62280'
 };

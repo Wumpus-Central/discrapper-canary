@@ -14,7 +14,6 @@ e.exports = {
     jump: 'jump__5126c',
     buttons: 'buttons__5126c',
     buttonsInner: 'buttonsInner__5126c',
-    hideIfMessageNotFocused: 'hideIfMessageNotFocused__5126c',
     cozyMessage: 'cozyMessage__5126c',
     groupStart: 'groupStart__5126c',
     systemMessage: 'systemMessage__5126c',

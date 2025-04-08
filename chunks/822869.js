@@ -1,11 +1,10 @@
 n.d(t, {
-    Ad: () => h,
+    Ad: () => m,
     Lb: () => c,
-    ZF: () => m,
+    ZF: () => f,
     gP: () => d,
-    mh: () => f,
-    sF: () => u,
-    xp: () => p
+    mh: () => g,
+    sF: () => u
 });
 var r = n(192379),
     i = n(392711),
@@ -30,7 +29,7 @@ function u(e) {
     });
 }
 function d(e) {
-    let { channelId: t, messageId: n, hasError: r, hasContextMessage: i, numDestinations: c, numDestinationChanges: u, numQueryChanges: d, anyDestinationHasSlowmode: p, source: m } = e;
+    let { channelId: t, messageId: n, hasError: r, hasContextMessage: i, numDestinations: c, numDestinationChanges: u, numQueryChanges: d, anyDestinationHasSlowmode: f, source: g } = e;
     if (
         (o.default.track(s.rMx.FORWARD_MESSAGE_SENT, {
             channel_id: t,
@@ -40,9 +39,9 @@ function d(e) {
             num_destinations: c,
             num_destination_changes: u,
             num_query_changes: d,
-            any_destination_has_slowmode: p
+            any_destination_has_slowmode: f
         }),
-        'message-shortcut' === m)
+        'message-shortcut' === g)
     ) {
         let e = l.Z.getChannel(t);
         o.default.track(
@@ -82,13 +81,7 @@ function d(e) {
         );
     }
 }
-function p(e, t) {
-    o.default.track(s.rMx.FORWARD_COPY_LINK, {
-        channel_id: e,
-        message_id: t
-    });
-}
-function m() {
+function f() {
     return r.useMemo(
         () =>
             (0, i.once)((e, t, n) => {
@@ -101,7 +94,7 @@ function m() {
         []
     );
 }
-function f() {
+function g() {
     return r.useMemo(
         () =>
             (0, i.once)((e, t) => {
@@ -113,7 +106,7 @@ function f() {
         []
     );
 }
-function h() {
+function m() {
     return r.useMemo(
         () =>
             (0, i.once)((e, t) => {

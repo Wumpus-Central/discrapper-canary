@@ -1,4 +1,4 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => h });
 var r = n(933557),
     i = n(356264),
     a = n(592125),
@@ -7,12 +7,10 @@ var r = n(933557),
     s = n(699516),
     c = n(594174),
     u = n(768581),
-    d = n(55935),
-    p = n(631184),
-    m = n(346610);
+    d = n(55935);
 n(978003);
-var f = n(388032);
-function h(e, t, n) {
+var p = n(388032);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e, t) {
+function f(e, t) {
     return {
         originLabel: e.name,
         originIconUrl: u.ZP.getGuildIconURL({
@@ -35,84 +33,60 @@ function g(e, t) {
             canAnimate: !1
         }),
         timestampLabel: t,
-        accessibilityLabel: f.NW.formatToPlainString(f.t['+l04BA'], {
+        accessibilityLabel: p.NW.formatToPlainString(p.t['+l04BA'], {
             origin: e.name,
             timestamp: t
         })
     };
 }
-class _ {
+class h {
     getForwardInfo() {
         var e, t, n, u;
-        let h = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
-            _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
-            b = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
-            x = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
-            y = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.Z,
-            E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
-            { snapshotIndex: v, parentMessage: O, messageSnapshot: N } = this,
-            { useOldIcon: j } = (0, m.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
-            { showForwardBreadcrumb: C } = p.u.getCurrentConfig({ location: 'MessageForward' });
-        if (!C)
-            return {
-                snapshotIndex: v,
-                useOldIcon: j
-            };
-        let S = (0, d.Xf)(N.message.timestamp),
-            I = h.getChannel(this.parentMessage.channel_id);
-        if (null != I && I.guild_id === (null == (e = O.messageReference) ? void 0 : e.guild_id)) {
-            let e = h.getChannel(null == (n = O.messageReference) ? void 0 : n.channel_id);
+        let m = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
+            h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+            g = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
+            _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
+            b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.Z,
+            x = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
+            { snapshotIndex: y, parentMessage: v, messageSnapshot: E } = this,
+            N = (0, d.Xf)(E.message.timestamp),
+            O = m.getChannel(this.parentMessage.channel_id);
+        if (null != O && O.guild_id === (null == (e = v.messageReference) ? void 0 : e.guild_id)) {
+            let e = m.getChannel(null == (n = v.messageReference) ? void 0 : n.channel_id);
             if (null == e) {
-                let e = y.getGuild(I.guild_id);
+                let e = b.getGuild(O.guild_id);
                 return null == e
-                    ? {
-                          snapshotIndex: v,
-                          useOldIcon: j
-                      }
+                    ? { snapshotIndex: y }
                     : {
-                          snapshotIndex: v,
-                          footerInfo: g(e, S),
-                          useOldIcon: j
+                          snapshotIndex: y,
+                          footerInfo: f(e, N)
                       };
             }
-            if (!x.can(e.accessPermissions, e))
-                return {
-                    snapshotIndex: v,
-                    useOldIcon: j
-                };
-            let t = (0, r.F6)(e, _, b, !0);
+            if (!_.can(e.accessPermissions, e)) return { snapshotIndex: y };
+            let t = (0, r.F6)(e, h, g, !0);
             return {
-                snapshotIndex: v,
+                snapshotIndex: y,
                 footerInfo: {
                     originLabel: t,
-                    timestampLabel: S,
-                    accessibilityLabel: f.NW.formatToPlainString(f.t['+l04BA'], {
+                    timestampLabel: N,
+                    accessibilityLabel: p.NW.formatToPlainString(p.t['+l04BA'], {
                         origin: t,
-                        timestamp: S
+                        timestamp: N
                     })
-                },
-                useOldIcon: j
+                }
             };
         }
-        let T = null == (t = O.messageReference) ? void 0 : t.guild_id;
-        if (null == T)
-            return {
-                snapshotIndex: v,
-                useOldIcon: j
-            };
-        let P = null != (u = y.getGuild(T)) ? u : E.getGuild(T);
-        return null == P
-            ? {
-                  snapshotIndex: v,
-                  useOldIcon: j
-              }
+        let j = null == (t = v.messageReference) ? void 0 : t.guild_id;
+        if (null == j) return { snapshotIndex: y };
+        let C = null != (u = b.getGuild(j)) ? u : x.getGuild(j);
+        return null == C
+            ? { snapshotIndex: y }
             : {
-                  snapshotIndex: v,
-                  footerInfo: g(P, S),
-                  useOldIcon: j
+                  snapshotIndex: y,
+                  footerInfo: f(C, N)
               };
     }
     constructor(e, t, n) {
-        h(this, 'parentMessage', void 0), h(this, 'messageSnapshot', void 0), h(this, 'snapshotIndex', void 0), (this.parentMessage = e), (this.messageSnapshot = t), (this.snapshotIndex = n);
+        m(this, 'parentMessage', void 0), m(this, 'messageSnapshot', void 0), m(this, 'snapshotIndex', void 0), (this.parentMessage = e), (this.messageSnapshot = t), (this.snapshotIndex = n);
     }
 }

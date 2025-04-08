@@ -1,22 +1,19 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(346610),
     a = n(868643),
-    o = n(245216),
-    s = n(996861),
-    c = n(388032);
-function u(e, t) {
-    let n = (0, a.a)(e),
-        { canForwardMessages: u } = (0, l.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
-    return n && u
+    l = n(245216),
+    o = n(996861),
+    s = n(388032);
+function c(e, t) {
+    return (0, a.a)(e)
         ? (0, r.jsx)(i.sNh, {
               id: 'forward',
-              label: c.NW.string(c.t.I3ltXF),
-              icon: o.Z,
+              label: s.NW.string(s.t.I3ltXF),
+              icon: l.Z,
               action: () => {
-                  (0, s.ts)(t, e);
+                  (0, o.ts)(t, e);
               }
           })
         : null;
