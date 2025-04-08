@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -65,10 +65,10 @@ function E(e, t) {
 }
 let N = 16 / 9,
     I = 8 + C.cF;
-function S(e) {
+function P(e) {
     var t;
     let n,
-        { onSelectParticipant: l, onContextMenuParticipant: S, onFullscreenParticipant: P, participants: Z, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: W, height: U, layout: B, idle: H } = e,
+        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: S, participants: Z, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: W, height: U, layout: B, idle: H } = e,
         F = null != A,
         G = h.Z.getVideoComponent(),
         V = p.default.getId(),
@@ -188,8 +188,8 @@ function S(e) {
                                                           width: W,
                                                           participant: t,
                                                           onClick: l,
-                                                          onDoubleClick: P,
-                                                          onContextMenu: S,
+                                                          onDoubleClick: S,
+                                                          onContextMenu: P,
                                                           onVideoResize: ey,
                                                           inCall: w,
                                                           inPopout: F
@@ -224,8 +224,8 @@ function S(e) {
                         children: (0, r.jsx)(C.ZP, {
                             channel: R,
                             onClick: l,
-                            onContextMenu: S,
-                            onDoubleClick: P,
+                            onContextMenu: P,
+                            onDoubleClick: S,
                             participants: ev,
                             participantTileWidth: ej,
                             selectedParticipantId: k.id,
@@ -238,7 +238,7 @@ function S(e) {
             }),
             ex.length > 0
                 ? (0, r.jsx)(b.Z, {
-                      onContextMenuParticipant: S,
+                      onContextMenuParticipant: P,
                       width: W,
                       height: U,
                       channel: R,

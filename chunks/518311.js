@@ -33,8 +33,8 @@ var r,
     E = n(367907),
     N = n(43267),
     I = n(933557),
-    S = n(600164),
-    P = n(313201),
+    P = n(600164),
+    S = n(313201),
     Z = n(366980),
     T = n(703656),
     A = n(93127),
@@ -127,14 +127,14 @@ function el(e, t) {
     }
     return i;
 }
-let eo = (0, P.hQ)(),
-    ea = (0, P.hQ)();
+let eo = (0, S.hQ)(),
+    ea = (0, S.hQ)();
 function es(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsxs)(S.Z, {
-        align: S.Z.Align.CENTER,
-        justify: S.Z.Justify.CENTER,
-        direction: S.Z.Direction.VERTICAL,
+    return (0, i.jsxs)(P.Z, {
+        align: P.Z.Align.CENTER,
+        justify: P.Z.Justify.CENTER,
+        direction: P.Z.Direction.VERTICAL,
         className: a()(ee.errorState, t),
         children: [(0, i.jsx)('div', { className: a()(ee.errorStateIcon, et.marginBottom20) }), n]
     });
@@ -329,7 +329,7 @@ class ed extends (r = l.PureComponent) {
                 let t = H.default.getUser(e);
                 null != t && a.push(q.ZP.getName(t));
             }),
-            (0, i.jsxs)(S.Z, {
+            (0, i.jsxs)(P.Z, {
                 className: ee.searchBar,
                 children: [
                     (0, i.jsx)(j.ZP, {
@@ -364,8 +364,8 @@ class ed extends (r = l.PureComponent) {
         let e = null != this.scrollerRef.current && this.state.separator,
             t = this.isNotFriends() ? $.NW.string($.t.Xjlbvr) : $.NW.string($.t.CdNhGR);
         return (0, i.jsxs)(f.xBx, {
-            direction: S.Z.Direction.VERTICAL,
-            align: S.Z.Align.STRETCH,
+            direction: P.Z.Direction.VERTICAL,
+            align: P.Z.Align.STRETCH,
             className: ee.header,
             separator: e,
             children: [

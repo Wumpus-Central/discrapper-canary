@@ -29,8 +29,8 @@ var r = n(200651),
     E = n(358085),
     N = n(709054),
     I = n(967128),
-    S = n(981631),
-    P = n(231873),
+    P = n(981631),
+    S = n(231873),
     Z = n(388032),
     T = n(646863),
     A = n(881454),
@@ -123,7 +123,7 @@ function W(e) {
 function U(e) {
     let { channel: t } = e,
         l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
-        p = null != l && N.default.extractTimestamp(l.id) < Date.now() - S._8R,
+        p = null != l && N.default.extractTimestamp(l.id) < Date.now() - P._8R,
         v = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
         { canInvite: U, canManageGuild: B, canMessage: H } = (0, m.TE)(t, l),
         F = (0, s.e7)([x.default], () => {
@@ -139,9 +139,9 @@ function U(e) {
             handleAddApplication: Q
         } = (function (e) {
             let t = i.useCallback(() => {
-                    h.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: P.Ft.CHANNEL_WELCOME,
-                        action: P.j7.INVITE
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: S.Ft.CHANNEL_WELCOME,
+                        action: S.j7.INVITE
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
@@ -151,48 +151,48 @@ function U(e) {
                                         t,
                                         D(L({}, n), {
                                             guild: e,
-                                            source: S.t4x.CHANNEL_WELCOME,
-                                            analyticsLocation: { section: S.jXE.CHANNEL_WELCOME_CTA }
+                                            source: P.t4x.CHANNEL_WELCOME,
+                                            analyticsLocation: { section: P.jXE.CHANNEL_WELCOME_CTA }
                                         })
                                     );
                             });
                 }, [e]),
                 l = i.useCallback(() => {
-                    h.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: P.Ft.CHANNEL_WELCOME,
-                        action: P.j7.SEND_MESSAGE
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: S.Ft.CHANNEL_WELCOME,
+                        action: S.j7.SEND_MESSAGE
                     }),
-                        j.S.dispatch(S.CkL.TEXTAREA_FOCUS, {
+                        j.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
-                            channelId: S.lds
+                            channelId: P.lds
                         });
                 }, []),
                 o = i.useCallback(() => {
-                    h.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: P.Ft.CHANNEL_WELCOME,
-                        action: P.j7.PERSONALIZE_SERVER
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: S.Ft.CHANNEL_WELCOME,
+                        action: S.j7.PERSONALIZE_SERVER
                     }),
-                        null != e && g.Z.open(e.id, (0, _.r)(e.id), { section: S.jXE.CHANNEL_WELCOME_CTA });
+                        null != e && g.Z.open(e.id, (0, _.r)(e.id), { section: P.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]);
             return {
                 handleInvite: t,
                 handleMessage: l,
                 handlePersonalize: o,
                 handleDownload: i.useCallback(() => {
-                    h.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
-                        setup_type: P.Ft.CHANNEL_WELCOME,
-                        action: P.j7.DOWNLOAD
+                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        setup_type: S.Ft.CHANNEL_WELCOME,
+                        action: S.j7.DOWNLOAD
                     }),
                         (0, u.ZDy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
-                            return (t) => (0, r.jsx)(e, L({ source: S.jXE.CHANNEL_WELCOME_CTA }, t));
+                            return (t) => (0, r.jsx)(e, L({ source: P.jXE.CHANNEL_WELCOME_CTA }, t));
                         });
                 }, []),
                 handleAddApplication: i.useCallback(() => {
                     null != e &&
-                        (h.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
-                            setup_type: P.Ft.CHANNEL_WELCOME,
-                            action: P.j7.ADD_APP
+                        (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                            setup_type: S.Ft.CHANNEL_WELCOME,
+                            action: S.j7.ADD_APP
                         }),
                         (0, u.ZDy)(async () => {
                             let { default: t } = await n.e('77046').then(n.bind(n, 272509));
@@ -268,7 +268,7 @@ function U(e) {
             (async () => {
                 try {
                     var e;
-                    let t = await (0, b.i)(null != (e = null == l ? void 0 : l.id) ? e : S.lds);
+                    let t = await (0, b.i)(null != (e = null == l ? void 0 : l.id) ? e : P.lds);
                     en(t.map((e) => e.id));
                 } catch (e) {}
             })();
@@ -364,7 +364,7 @@ function U(e) {
         ));
     let eo = v ? Z.NW.string(Z.t['1ach9P']) : Z.NW.string(Z.t['ezm+/v']);
     p && (eo = Z.NW.string(Z.t['gwyU/P']));
-    let ea = ''.concat(O.Z.getArticleURL(S.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let ea = ''.concat(O.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, r.jsx)(I.ZP, {
         channelId: t.id,
         children: (0, r.jsx)('div', {

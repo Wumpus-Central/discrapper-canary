@@ -59,16 +59,16 @@ function d(e) {
                         })
                 );
             r.useEffect(() => () => I.clean(), [I]);
-            let S = r.useCallback(
+            let P = r.useCallback(
                     (e, t) => {
                         O.current && h(e, t);
                     },
                     [h]
                 ),
-                [P, Z] = r.useState(!0);
+                [S, Z] = r.useState(!0);
             r.useEffect(() => {
-                if (P && !_) return void Z(!1);
-                S(y(t, d), d);
+                if (S && !_) return void Z(!1);
+                P(y(t, d), d);
             }, [d]);
             let T = r.useCallback(
                     function () {
@@ -79,9 +79,9 @@ function d(e) {
                                 type: i.G.SET_FOCUSED_INDEX,
                                 index: n
                             }),
-                            e && S(y(t, n), n);
+                            e && P(y(t, n), n);
                     },
-                    [y, d, f, m, t, S]
+                    [y, d, f, m, t, P]
                 ),
                 A = r.useCallback(
                     (e) => {
@@ -125,17 +125,17 @@ function d(e) {
                     E || N(!0);
                 }, [E]),
                 R = r.useCallback(() => {
-                    E || (g ? S(y(t, d), d) : T(!0));
-                }, [y, t, S, g, E, d, T]),
+                    E || (g ? P(y(t, d), d) : T(!0));
+                }, [y, t, P, g, E, d, T]),
                 k = r.useCallback(
                     (e) => {
                         e.currentTarget.contains(e.relatedTarget) ||
                             requestAnimationFrame(() => {
-                                if (null == c(s(y, t, d))) return void S(t);
+                                if (null == c(s(y, t, d))) return void P(t);
                                 N(!1);
                             });
                     },
-                    [y, t, d, S]
+                    [y, t, d, P]
                 ),
                 M = r.useRef(null);
             r.useLayoutEffect(() => {

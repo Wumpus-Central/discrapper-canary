@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(110924),
     N = n(40851),
     I = n(636449),
-    S = n(115130),
-    P = n(317381),
+    P = n(115130),
+    S = n(317381),
     Z = n(596040),
     T = n(349619),
     A = n(100527),
@@ -78,8 +78,8 @@ var r = n(200651),
     eE = n(998502),
     eN = n(228488),
     eI = n(358221),
-    eS = n(414910),
-    eP = n(887012),
+    eP = n(414910),
+    eS = n(887012),
     eZ = n(909820),
     eT = n(493010),
     eA = n(742603),
@@ -687,7 +687,7 @@ class eX extends i.PureComponent {
                     children: [
                         null != i && i.type !== eB.fO.ACTIVITY && i.user.id !== n
                             ? (0, r.jsx)(ec.Z, {
-                                  context: (0, eS.Z)(i.type),
+                                  context: (0, eP.Z)(i.type),
                                   userId: i.user.id,
                                   currentWindow: this.inPopout ? (null != e ? e : void 0) : window,
                                   sliderClassName: eG.volumeSlider,
@@ -842,12 +842,12 @@ let eQ = function (e) {
         }, []),
         el = null != (t = null == z ? void 0 : z.id) ? t : null,
         eo = (0, Z.Z)(el, n.id),
-        ea = (0, d.e7)([S.Z], () => S.Z.getFetchState(), []),
+        ea = (0, d.e7)([P.Z], () => P.Z.getFetchState(), []),
         es = (0, E.Z)(ea);
     i.useEffect(() => {
-        ea === S.O.ERROR && es !== S.O.ERROR && (0, m.showToast)((0, m.createToast)(eF.NW.string(eF.t.AlJyIy), m.ToastType.FAILURE));
+        ea === P.O.ERROR && es !== P.O.ERROR && (0, m.showToast)((0, m.createToast)(eF.NW.string(eF.t.AlJyIy), m.ToastType.FAILURE));
     }, [ea, es]);
-    let ec = (0, d.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let ec = (0, d.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     i.useEffect(() => {
         let e = !1,
             t = null;
@@ -861,14 +861,14 @@ let eQ = function (e) {
         );
     }, [_, I]);
     let eu = (0, B.S)(),
-        eC = (0, eP.Z)(n, !0),
+        eC = (0, eS.Z)(n, !0),
         { hasParticipantsPanel: ey } = (0, ek.Z)({ location: 'ChannelCall' }),
         { simplifiedSettingsEnabled: ex } = (0, X.Z)({ location: 'ChannelCall' }),
         ev = (0, D.bn)(p.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ej } = (0, R.ZP)(A.Z.CHANNEL_CALL),
-        eO = P.ZP.getEmbeddedActivitiesForChannel(n.id),
+        eO = S.ZP.getEmbeddedActivitiesForChannel(n.id),
         { theme: eN } = (0, m.TCT)(),
-        eS = (0, L.Q3)('ChannelCall');
+        eP = (0, L.Q3)('ChannelCall');
     return (0, r.jsx)(R.Gt, {
         value: ej,
         children: (0, r.jsx)(j.Z, {
@@ -921,7 +921,7 @@ let eQ = function (e) {
                             awaitingRemoteSessionInfo: en,
                             currentChannelActivities: eO,
                             theme: eN,
-                            isRefreshEnabled: eS
+                            isRefreshEnabled: eP
                         }),
                         !n.isPrivate() && (0, r.jsx)(eL.YR, {}),
                         (0, r.jsx)(eZ.H_, {})

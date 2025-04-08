@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(304388),
     N = n(981631),
     I = n(127379),
-    S = n(388032);
-function P(e) {
+    P = n(388032);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -86,7 +86,7 @@ function T(e) {
         q = (0, b.Z)({ location: 'ActionBarSoundboardButton' }),
         { coloredIconsEnabled: K, squareButtonsEnabled: X } = (0, g.Z)({ location: 'ActionBarSoundboardButton' });
     function Q() {
-        return W ? S.NW.string(S.t['Ox4/zc']) : U ? S.NW.string(S.t['+YBKYG']) : B ? S.NW.string(S.t.X1lQlp) : void 0;
+        return W ? P.NW.string(P.t['Ox4/zc']) : U ? P.NW.string(P.t['+YBKYG']) : B ? P.NW.string(P.t.X1lQlp) : void 0;
     }
     function J(e) {
         null != D &&
@@ -96,7 +96,7 @@ function T(e) {
                     (0, r.jsx)(
                         e,
                         Z(
-                            P(
+                            S(
                                 {
                                     guildId: D,
                                     sourceAnalyticsLocations: z
@@ -148,7 +148,7 @@ function T(e) {
                     ? (0, r.jsx)(
                           y.d,
                           Z(
-                              P(
+                              S(
                                   {
                                       themeable: T,
                                       label: Q(),
@@ -176,7 +176,7 @@ function T(e) {
                     : (0, r.jsx)(
                           y.Z,
                           Z(
-                              P(
+                              S(
                                   {
                                       themeable: T,
                                       label: Q(),

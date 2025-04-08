@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(450355);
 function E(e) {
     var t, n;
-    let { userId: l, guildId: E, location: N, className: I, onNavigate: S } = e,
-        P = i.useRef(null),
+    let { userId: l, guildId: E, location: N, className: I, onNavigate: P } = e,
+        S = i.useRef(null),
         Z = (0, s.e7)([g.ZP], () => g.ZP.getGuildSidebarState(E), [E]),
         T = i.useRef(0),
         [A, w] = i.useState(null != (t = null == Z ? void 0 : Z.details.additionalSearchQuery) ? t : {}),
@@ -38,7 +38,7 @@ function E(e) {
         let e = null == Z ? void 0 : Z.details.scrollOffset;
         if (null != e) {
             var t;
-            null == (t = P.current) ||
+            null == (t = S.current) ||
                 t.scrollTo({
                     to: e,
                     animate: !1
@@ -178,11 +178,11 @@ function E(e) {
                   (0, r.jsx)(x.Z, {
                       guildId: E,
                       userId: l,
-                      onNavigate: S
+                      onNavigate: P
                   }),
                   (0, r.jsx)(c.Den, {
                       className: O.innerContainer,
-                      ref: P,
+                      ref: S,
                       onScroll: D,
                       children: (0, r.jsx)(m.Z, {
                           searchResults: B,

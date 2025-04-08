@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(765104),
     N = n(122707),
     I = n(779836),
-    S = n(23750),
-    P = n(496675),
+    P = n(23750),
+    S = n(496675),
     Z = n(306680),
     T = n(944486),
     A = n(594174),
@@ -84,7 +84,7 @@ let en = i.memo(function (e) {
         compact: o,
         isGroupStart: l,
         channel: n,
-        message: new S.ZP({
+        message: new P.ZP({
             id: t.id,
             key: 'pending-upload-'.concat(t.id),
             type: Q.uaV.DEFAULT,
@@ -145,8 +145,8 @@ function er(e) {
         eN = (0, _.Z)(f.id);
     (0, q.Z)();
     let eI = null,
-        eS = [],
-        eP = eo.map((e, t) => {
+        eP = [],
+        eS = eo.map((e, t) => {
             if (e.type === Q.ys_.DIVIDER) {
                 var n, i;
                 let l = null != e.unreadId;
@@ -199,7 +199,7 @@ function er(e) {
                 );
             }
             if (null != eu && eu > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
-            let l = P.Z.can(Q.Plq.CREATE_INSTANT_INVITE, f);
+            let l = S.Z.can(Q.Plq.CREATE_INSTANT_INVITE, f);
             if ((0, L.Z)(e.content, l)) return;
             e.type === Q.ys_.MESSAGE && null == eI && (eI = e);
             let o = e.groupId === (null == eI ? void 0 : eI.groupId) ? eI.content.id : e.groupId,
@@ -219,7 +219,7 @@ function er(e) {
                 e.content.id
             );
         });
-    eS.push(...eP);
+    eP.push(...eS);
     let eZ = eo[eo.length - 1];
     if (
         (null != ef &&
@@ -229,12 +229,12 @@ function er(e) {
                     (0, D.J)(
                         f,
                         eZ,
-                        new S.ZP({
+                        new P.ZP({
                             type: Q.uaV.DEFAULT,
                             author: ef
                         })
                     );
-                eS.push(
+                eP.push(
                     (0, r.jsx)(
                         en,
                         {
@@ -251,7 +251,7 @@ function er(e) {
         B.hasMoreBefore && null == eu)
     ) {
         B.length > 0 &&
-            eS.unshift(
+            eP.unshift(
                 (0, r.jsx)(
                     'div',
                     {
@@ -264,11 +264,11 @@ function er(e) {
                 )
             );
         let { useReducedMotion: e } = u.Z;
-        ((e && em()) || !e) && eS.unshift((0, r.jsx)(z.ZP, ee({ compact: el }, ec), 'has-more'));
+        ((e && em()) || !e) && eP.unshift((0, r.jsx)(z.ZP, ee({ compact: el }, ec), 'has-more'));
     }
     if (
         ((B.hasMoreBefore && null == eu) ||
-            eS.unshift(
+            eP.unshift(
                 (0, r.jsx)(
                     m.Z,
                     {
@@ -278,8 +278,8 @@ function er(e) {
                     'empty-message'
                 )
             ),
-        B.hasMoreAfter && eS.push((0, r.jsx)(z.ZP, ee({ compact: el }, ec), 'has-more-after')),
-        !ed && eg && em() && eS.push((0, r.jsx)(Y.Z, { channel: f })),
+        B.hasMoreAfter && eP.push((0, r.jsx)(z.ZP, ee({ compact: el }, ec), 'has-more-after')),
+        !ed && eg && em() && eP.push((0, r.jsx)(Y.Z, { channel: f })),
         er > 0 && ei && em())
     ) {
         let e,
@@ -448,7 +448,7 @@ function er(e) {
                     });
     }
     return {
-        channelStreamMarkup: eS,
+        channelStreamMarkup: eP,
         newMessagesBar: i,
         jumpToPresentBar: s,
         forumPostActionBar: eE,

@@ -156,7 +156,7 @@ function j(e) {
                                 className: x.warningContainer,
                                 children: [
                                     (0, n.jsx)(c.Text, {
-                                        color: 'status-warning',
+                                        color: 'text-danger',
                                         variant: 'eyebrow',
                                         children: f.NW.string(p.Z.OVt5CA)
                                     }),
@@ -169,7 +169,7 @@ function j(e) {
                             null != _ &&
                                 (0, n.jsx)(c.Text, {
                                     className: x.errorText,
-                                    color: 'status-danger',
+                                    color: 'text-danger',
                                     variant: 'text-sm/semibold',
                                     children: _
                                 })

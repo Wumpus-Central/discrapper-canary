@@ -51,7 +51,7 @@ function I(e) {
     }
     return e;
 }
-function S(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,7 +69,7 @@ function S(e, t) {
         e
     );
 }
-let P = i.memo(function (e) {
+let S = i.memo(function (e) {
         let { guildId: t, channelId: n, user: i, isPremium: l, isBlocked: o, isIgnored: a } = e;
         return (0, r.jsxs)('div', {
             className: N.textContainer,
@@ -127,7 +127,7 @@ let P = i.memo(function (e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(P, {
+                (0, r.jsx)(S, {
                     guildId: i,
                     channelId: l.id,
                     user: s,
@@ -145,7 +145,7 @@ let P = i.memo(function (e) {
             v = l.getGuildId(),
             j = y.default.getId(),
             { newestAnalyticsLocation: O } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
-            P = (0, f.bp)(),
+            S = (0, f.bp)(),
             T = (0, u.e7)(
                 [x.ZP],
                 () => {
@@ -173,7 +173,7 @@ let P = i.memo(function (e) {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    S(I({}, t), {
+                                    P(I({}, t), {
                                         user: a,
                                         guildId: v,
                                         channel: l,
@@ -187,10 +187,10 @@ let P = i.memo(function (e) {
                                     })
                                 );
                         },
-                        { context: P }
+                        { context: S }
                     );
             },
-            [a, j, P, v, l, O]
+            [a, j, S, v, l, O]
         );
         return (0, r.jsx)(C.Z, {
             user: a,
@@ -200,7 +200,7 @@ let P = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
-                    S(
+                    P(
                         I(
                             {
                                 className: o()(N.tileContainer, {

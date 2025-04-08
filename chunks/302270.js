@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(141321),
     N = n(221241),
     I = n(618158),
-    S = n(390322),
-    P = n(616286),
+    P = n(390322),
+    S = n(616286),
     Z = n(961048),
     T = n(975146),
     A = n(430824),
@@ -118,7 +118,7 @@ function X(e) {
                         animation: c.yRy.Animation.NONE,
                         align: 'right',
                         renderPopout: (e) =>
-                            (0, r.jsx)(S.Z, {
+                            (0, r.jsx)(P.Z, {
                                 children: (0, r.jsx)(
                                     B.ZP,
                                     K(q({}, e), {
@@ -183,7 +183,7 @@ function X(e) {
             !O &&
                 (0, r.jsx)('div', {
                     className: o()(Y.button, { [Y.sidebarOpen]: F || s }),
-                    children: (0, r.jsx)(P.T, {
+                    children: (0, r.jsx)(S.T, {
                         channelId: n.id,
                         showRequestToSpeakSidebar: s,
                         toggleRequestToSpeakSidebar: l,
@@ -206,7 +206,7 @@ function Q(e) {
         E = (0, H.Z)(l),
         N = (0, a.e7)([w.Z], () => w.Z.can(D.yP, l)),
         I = (0, x.Q3)('StageChannelCallHeader'),
-        S = () => {
+        P = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(l.id, !0),
                 R.default.track(F.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: l.guild_id,
@@ -215,15 +215,15 @@ function Q(e) {
                     action: V.T7.DISMISS
                 });
         },
-        P = {
+        S = {
             canModerate: N,
             audienceCount: g,
             channel: l,
             speakerCount: m
         },
-        Z = i.useRef(P);
+        Z = i.useRef(S);
     i.useEffect(() => {
-        Z.current = P;
+        Z.current = S;
     }),
         i.useEffect(() => {
             let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = Z.current;
@@ -322,7 +322,7 @@ function Q(e) {
                                         children: [
                                             (0, r.jsx)(c.zxk, {
                                                 className: Y.notNowButton,
-                                                onClick: S,
+                                                onClick: P,
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
                                                 children: z.NW.string(z.t.L5eIZ2)
@@ -348,7 +348,7 @@ function Q(e) {
                                     })
                                   : (0, r.jsx)(c.zxk, {
                                         className: Y.notNowButton,
-                                        onClick: S,
+                                        onClick: P,
                                         look: c.zxk.Looks.BLANK,
                                         size: c.zxk.Sizes.SMALL,
                                         children: z.NW.string(z.t.WAI6xs)

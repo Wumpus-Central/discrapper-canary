@@ -42,11 +42,11 @@ function v(e) {
             },
             [t, n]
         ),
-        S = (0, l.e7)([f.Z], () => f.Z.getVoiceChannelId() === t.id, [t.id]);
+        P = (0, l.e7)([f.Z], () => f.Z.getVoiceChannelId() === t.id, [t.id]);
     i.useEffect(() => {
         E.current = I;
     });
-    let P = i.useRef(N),
+    let S = i.useRef(N),
         { currentDocument: Z, rootNode: T } = i.useMemo(() => {
             let e = null != p && O ? p.document : document,
                 t = v.document.getElementById('app-mount');
@@ -57,7 +57,7 @@ function v(e) {
             };
         }, [p, O, v]),
         A = o && !O,
-        w = I === C.WtW.VIDEO && S && !A,
+        w = I === C.WtW.VIDEO && P && !A,
         R = i.useCallback(
             (e, r) => {
                 r !== e && (a.Z.updateLayout(t.id, r, n), r === C.AEg.FULL_SCREEN && t.isPrivate() && g.S.dispatch(C.CkL.TEXTAREA_BLUR));
@@ -68,16 +68,16 @@ function v(e) {
             (e) => {
                 null != T &&
                     e === C.AEg.FULL_SCREEN &&
-                    (R(e, P.current),
+                    (R(e, S.current),
                     (0, _.Pr)((e) => {
-                        P.current = e;
+                        S.current = e;
                     }, Z));
             },
             [Z, R, T]
         ),
         M = i.useCallback(
             (e) => () => {
-                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== C.AEg.FULL_SCREEN), e !== C.AEg.FULL_SCREEN ? ((P.current = e), R(e, C.AEg.FULL_SCREEN), (0, _.Dj)(T)) : k(e));
+                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== C.AEg.FULL_SCREEN), e !== C.AEg.FULL_SCREEN ? ((S.current = e), R(e, C.AEg.FULL_SCREEN), (0, _.Dj)(T)) : k(e));
             },
             [R, k, T, j]
         );
@@ -140,8 +140,8 @@ function v(e) {
         null != T && E.current === C.WtW.VIDEO && I === C.WtW.VOICE && (0, _.Pr)(T, Z);
     }, [Z, I, E, T]),
     i.useEffect(() => {
-        !S && O && x();
-    }, [S, O]),
+        !P && O && x();
+    }, [P, O]),
     w)
         ? (0, r.jsx)(h.Z, {
               themeable: !1,

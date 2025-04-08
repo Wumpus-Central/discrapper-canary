@@ -16,9 +16,9 @@ var r = n(200651),
 function b(e) {
     let { checked: t, labelText: n, tooltipText: l, canToggle: b, iconAltText: _, onChange: C, tooltipColor: y, className: x, id: v = 'fancybutton-toggle', collapseWhenChecked: j = !0, onClick: O, disabled: E } = e,
         N = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
-        [I, S] = i.useState(!1),
-        P = (0, d.ZP)(),
-        Z = (0, s.wj)(P) || t ? g : m,
+        [I, P] = i.useState(!1),
+        S = (0, d.ZP)(),
+        Z = (0, s.wj)(S) || t ? g : m,
         { width: T = 0, ref: A } = (0, u.Z)(),
         { width: w = 0, ref: R } = (0, u.Z)();
     return (0, r.jsxs)(c.DY3, {
@@ -38,7 +38,7 @@ function b(e) {
                 onChange: function () {
                     if (b) {
                         let e = !t;
-                        S(!0), null == C || C(e);
+                        P(!0), null == C || C(e);
                     }
                     'function' == typeof O && O();
                 },

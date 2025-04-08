@@ -92,9 +92,9 @@ let m = {
         SPEND: 0.3
     },
     b = (e) => {
-        let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: r, play: o, internalLottieRef: a } = e,
-            s = null !== a.current ? a.current.getDuration() : null,
-            l = null !== s ? 1000 * s : g;
+        let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: r, play: o, getDuration: a } = e,
+            s = a(),
+            l = null != s ? 1000 * s : g;
         (0, i.useEffect)(() => {
             null !== t && t !== n.current && ((n.current = t), o());
         }, [t, o, n]),

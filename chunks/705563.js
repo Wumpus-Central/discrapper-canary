@@ -35,7 +35,7 @@ function _(e) {
         }),
         O = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
         E = null != j && (null != O ? O : 0) >= j,
-        { approveRequest: N, rejectRequest: I, submitting: S } = (0, f.s)(null == y ? void 0 : y.guildId, null == y ? void 0 : y.userId, null == y ? void 0 : y.joinRequestId);
+        { approveRequest: N, rejectRequest: I, submitting: P } = (0, f.s)(null == y ? void 0 : y.guildId, null == y ? void 0 : y.userId, null == y ? void 0 : y.joinRequestId);
     return null != y && y.applicationStatus === h.wB.SUBMITTED && x
         ? (0, r.jsxs)('div', {
               className: b.buttons,
@@ -75,7 +75,7 @@ function _(e) {
                               (n = n =
                                   {
                                       color: l.zxk.Colors.GREEN,
-                                      submitting: S,
+                                      submitting: P,
                                       onClick: N,
                                       size: l.PhG.SMALL,
                                       disabled: E,
@@ -101,7 +101,7 @@ function _(e) {
                       color: l.zxk.Colors.RED,
                       onClick: I,
                       size: l.PhG.SMALL,
-                      disabled: S || y.applicationStatus !== h.wB.SUBMITTED,
+                      disabled: P || y.applicationStatus !== h.wB.SUBMITTED,
                       children: g.NW.string(g.t.hDtbs7)
                   }),
                   n &&

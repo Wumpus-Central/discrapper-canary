@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(592125),
     N = n(934415),
     I = n(456269),
-    S = n(109590),
-    P = n(228392),
+    P = n(109590),
+    S = n(228392),
     Z = n(981631),
     T = n(388032),
     A = n(184844),
@@ -80,7 +80,7 @@ function M(e) {
         [B, H] = i.useState(!n),
         [F, G] = (0, f.Z)(!1, 2000),
         V = (0, s.e7)([E.Z], () => E.Z.getChannel(t), [t]),
-        { firstMessage: z } = (0, S.cl)(V),
+        { firstMessage: z } = (0, P.cl)(V),
         Y = (0, s.e7)([j.Z], () => j.Z.hasJoined(t)),
         { disableReactionUpdates: q, disableReactionCreates: K, isLurking: X, isGuest: Q, isPendingMember: J } = (0, _.Z)(V),
         $ = (0, s.e7)([E.Z], () => E.Z.getChannel(M)),
@@ -121,7 +121,7 @@ function M(e) {
             Y ? O.Z.leaveThread(V, 'Forum Toolbar') : O.Z.joinThread(V, 'Forum Toolbar');
         },
         ea = () => {
-            (0, P.B)({
+            (0, S.B)({
                 postId: V.id,
                 location: { section: Z.jXE.CHANNEL_HEADER }
             }),

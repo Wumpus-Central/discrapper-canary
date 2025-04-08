@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(124368),
     N = n(981631),
     I = n(388032),
-    S = n(591837);
-function P(e) {
+    P = n(591837);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -90,7 +90,7 @@ function T(e) {
             if (null == A || L.current) return;
             L.current = !0;
             let e = (0, p.K)(y.Z.getChannel(A.id), !0);
-            (0, d.yw)(N.rMx.CHANNEL_OPENED, Z(P({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(N.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id });
+            (0, d.yw)(N.rMx.CHANNEL_OPENED, Z(S({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(N.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id });
         }, [A, T]),
         null == A || null == w)
     )
@@ -116,7 +116,7 @@ function T(e) {
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
                             let { default: e } = await n.e('40157').then(n.bind(n, 422200));
-                            return (t) => (0, r.jsx)(e, Z(P({}, t), { channel: A }));
+                            return (t) => (0, r.jsx)(e, Z(S({}, t), { channel: A }));
                         });
                     },
                     handleClick: function () {
@@ -125,7 +125,7 @@ function T(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: S.chat,
+                className: P.chat,
                 children: (0, r.jsx)(
                     m.Z,
                     {

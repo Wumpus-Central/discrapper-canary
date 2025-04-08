@@ -24,17 +24,17 @@ let j = !1,
     E = 0,
     N = [],
     I = !1,
-    S = new Set(),
-    P = null;
+    P = new Set(),
+    S = null;
 function Z() {
-    (O = ''), (E = 0), (N = []), (S = new Set()), (j = !1), (P = null);
+    (O = ''), (E = 0), (N = []), (P = new Set()), (j = !1), (S = null);
 }
 function T(e) {
     (O = e), (E = 0), A();
 }
 function A() {
     if (!j) return !1;
-    let e = b.Z.getChannel(P);
+    let e = b.Z.getChannel(S);
     if (0 === O.trim().length) {
         var t;
         let n;
@@ -127,7 +127,7 @@ function M() {
 }
 function L(e) {
     if (e.key !== v.vTt) return !1;
-    (j = !0), w(), (r = M()), (P = null), T('');
+    (j = !0), w(), (r = M()), (S = null), T('');
 }
 function D(e) {
     if (e.key !== v.vTt) return !1;
@@ -147,7 +147,7 @@ class U extends (i = c.ZP.Store) {
         return I;
     }
     getSelectedUsers() {
-        return S;
+        return P;
     }
     getQuery() {
         return O;
@@ -156,7 +156,7 @@ class U extends (i = c.ZP.Store) {
         return {
             query: O,
             selectedRow: E,
-            selectedUsers: S,
+            selectedUsers: P,
             results: N,
             hasFriends: I
         };
@@ -179,29 +179,29 @@ let B = new U(u.Z, {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
             let r = j;
-            return Z(), (j = r), (P = n), A();
+            return Z(), (j = r), (S = n), A();
         },
         MODAL_PUSH: L,
         SHOW_ACTION_SHEET: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (j = !0), w(), (r = M()), (P = e.channelId), T('');
+            (j = !0), w(), (r = M()), (S = e.channelId), T('');
         },
         MODAL_POP: D,
         HIDE_ACTION_SHEET: D,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: W,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (P = e.channelId), T(e.query);
+            (S = e.channelId), T(e.query);
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
             E = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
-            S.add(t), (S = new Set(S));
+            P.add(t), (P = new Set(P));
         },
         PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function (e) {
             let { userId: t } = e;
-            S.delete(t), (S = new Set(S));
+            P.delete(t), (P = new Set(P));
         }
     }),
     H = B;

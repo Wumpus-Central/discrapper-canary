@@ -28,8 +28,8 @@ var r = n(200651),
     E = n(906467),
     N = n(323873),
     I = n(709054),
-    S = n(786761),
-    P = n(534091),
+    P = n(786761),
+    S = n(534091),
     Z = n(901461),
     T = n(739566),
     A = n(233715),
@@ -126,7 +126,7 @@ function et(e, t) {
     return i;
 }
 function en(e, t, n) {
-    return e.getElementById((0, P.p)(t, n));
+    return e.getElementById((0, S.p)(t, n));
 }
 function er(e) {
     var t, n;
@@ -204,7 +204,7 @@ function ei(e) {
         E = a.type === K.uaV.REPLY ? a.messageReference : void 0,
         N = (0, c.JA)(null != (t = e.id) ? t : ''),
         { onFocus: I } = N,
-        P = et(N, ['onFocus']),
+        S = et(N, ['onFocus']),
         { isFocused: A, handleFocus: W, handleBlur: B } = (0, k.bb)(I),
         { popouts: H, selected: V, setPopout: J } = (0, L.Z)(a.id, q.d$),
         en = j.RS.useSetting(),
@@ -256,14 +256,14 @@ function ei(e) {
             }),
             (0, r.jsx)(
                 w.Z,
-                ee($({}, P), {
+                ee($({}, S), {
                     id: l,
                     compact: b,
                     className: o()(_, {
                         [Q.message]: !0,
                         [Q.cozyMessage]: !b,
                         [Q.mentioned]: a.mentioned,
-                        [Q.ephemeral]: (0, S.Pv)(a),
+                        [Q.ephemeral]: (0, P.Pv)(a),
                         [Q.systemMessage]: (0, Z.Z)(a),
                         [Q.groupStart]: a.id === y || a.type === K.uaV.REPLY,
                         [Q.selected]: eu
@@ -322,7 +322,7 @@ let el = i.memo(function (e) {
         {
             id: a,
             message: v,
-            message: { id: P },
+            message: { id: S },
             channel: J,
             channel: { id: en },
             compact: er = !1,
@@ -354,8 +354,8 @@ let el = i.memo(function (e) {
             defaultValue: eb,
             popouts: eg
         }),
-        { isFocused: eE, hasFocused: eN, handleFocus: eI, handleBlur: eS } = (0, k.bb)(eu),
-        eP = i.useCallback(
+        { isFocused: eE, hasFocused: eN, handleFocus: eI, handleBlur: eP } = (0, k.bb)(eu),
+        eS = i.useCallback(
             (e) => {
                 eI(e), ex(e);
             },
@@ -363,11 +363,11 @@ let el = i.memo(function (e) {
         ),
         eZ = i.useCallback(
             (e) => {
-                eS(e), ev();
+                eP(e), ev();
             },
-            [eS, ev]
+            [eP, ev]
         ),
-        eT = (0, u.e7)([N.Z], () => N.Z.isEditing(en, P), [en, P]),
+        eT = (0, u.e7)([N.Z], () => N.Z.isEditing(en, S), [en, S]),
         eA = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         ew = eb || eT || (eA && eE),
         eR = ew || eO,
@@ -385,7 +385,7 @@ let el = i.memo(function (e) {
             allowDevLinks: eD,
             previewLinkTarget: !0
         }),
-        eB = (0, M.Z)(P, en, eA),
+        eB = (0, M.Z)(S, en, eA),
         eH = (0, T.ZP)(v),
         eF = (0, u.e7)([y.Z], () => y.Z.getPendingReply(en)),
         eG = (function (e) {
@@ -403,7 +403,7 @@ let el = i.memo(function (e) {
         }),
         ez = (0, R.iG)(v, eo),
         eY = (0, R.Gx)(v),
-        eq = (0, u.e7)([h.Z], () => h.Z.getMessage(P), [P]),
+        eq = (0, u.e7)([h.Z], () => h.Z.getMessage(S), [S]),
         eK = (0, W.Z)({
             message: v,
             channel: J
@@ -436,7 +436,7 @@ let el = i.memo(function (e) {
                             'aria-roledescription': X.NW.string(X.t.BAB0yM),
                             'aria-labelledby': ez,
                             'aria-describedby': eY,
-                            onFocus: eP,
+                            onFocus: eS,
                             onBlur: eZ,
                             onContextMenu: eC,
                             onKeyDown: eB,
@@ -447,7 +447,7 @@ let el = i.memo(function (e) {
                                 [Q.message]: !0,
                                 [Q.cozyMessage]: !er,
                                 [Q.mentioned]: v.mentioned,
-                                [Q.ephemeral]: (0, S.Pv)(v),
+                                [Q.ephemeral]: (0, P.Pv)(v),
                                 [Q.nitroMessage]: v.type === K.uaV.NITRO_NOTIFICATION || v.type === K.uaV.CHAT_WALLPAPER_SET || v.type === K.uaV.CHAT_WALLPAPER_REMOVED,
                                 [Q.systemMessage]: (0, Z.Z)(v),
                                 [Q.groupStart]: !ea && (e$ || v.type === K.uaV.REPLY),

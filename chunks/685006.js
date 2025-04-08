@@ -58,7 +58,7 @@ function I(e) {
         [O]
     ),
     O)
-        ? (0, r.jsx)(S, {
+        ? (0, r.jsx)(P, {
               context: t,
               application: a,
               primaryEntryPointCommand: s,
@@ -68,7 +68,7 @@ function I(e) {
           })
         : null;
 }
-function S(e) {
+function P(e) {
     let { context: t, application: n, primaryEntryPointCommand: i, onOpenButtonPress: l, entryPointCommandButtonRef: a, type: s } = e,
         u = (0, y.Z)({ type: s }),
         {

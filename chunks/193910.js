@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(981631),
     N = n(921944),
     I = n(489887),
-    S = n(388032),
-    P = n(725776);
+    P = n(388032),
+    S = n(725776);
 let Z = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
 function T() {
     let e = (0, o.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
@@ -45,7 +45,7 @@ function T() {
                 let { visibleContent: t } = e;
                 return t === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, r.jsx)(s.IGR, {
-                          text: S.NW.string(S.t.y2b7CA),
+                          text: P.NW.string(P.t.y2b7CA),
                           color: l.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
@@ -152,25 +152,25 @@ function A(e) {
             onSelect: _,
             navId: 'channel-attach',
             onClose: m,
-            'aria-label': S.NW.string(S.t.Xm41aW),
-            className: P.menu,
+            'aria-label': P.NW.string(P.t.Xm41aW),
+            className: S.menu,
             children: o.map(function (e) {
                 var n;
                 let i = (0, r.jsxs)('div', {
-                    className: P.optionLabel,
+                    className: S.optionLabel,
                     children: [
                         (0, r.jsx)(e.icon, {
-                            className: P.optionIcon,
+                            className: S.optionIcon,
                             color: 'currentColor'
                         }),
                         (0, r.jsx)('div', {
-                            className: P.optionName,
+                            className: S.optionName,
                             children: e.display
                         }),
                         null != e.badgeVal &&
                             e.badgeVal > 0 &&
                             (0, r.jsx)(s.mAB, {
-                                className: P.badge,
+                                className: S.badge,
                                 color: null != (n = e.badgeColor) ? n : l.Z.STATUS_DANGER,
                                 count: e.badgeVal
                             })

@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(61356),
     N = n(981631),
     I = n(314734),
-    S = n(921944),
-    P = n(388032),
+    P = n(921944),
+    S = n(388032),
     Z = n(560163),
     T = n(795361);
 let A = i.forwardRef(function (e, t) {
@@ -45,7 +45,7 @@ let A = i.forwardRef(function (e, t) {
         [j]
     );
     let T = i.useCallback(() => {
-        (0, p.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), _ ? h.yT(m.ti.DISMISSED) : ((0, x.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h.__(m._b.TEXT, g)), O();
+        (0, p.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), _ ? h.yT(m.ti.DISMISSED) : ((0, x.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: P.L.TAKE_ACTION }), h.__(m._b.TEXT, g)), O();
     }, [_, g, O]);
     return (0, r.jsx)('div', {
         className: o()(Z.buttonContainer, I.t4),
@@ -83,7 +83,7 @@ let A = i.forwardRef(function (e, t) {
                     tabIndex: 0,
                     className: o()(Z.button, { [Z.buttonActive]: _ }),
                     onClick: T,
-                    'aria-label': P.NW.string(P.t.erHFxM),
+                    'aria-label': S.NW.string(S.t.erHFxM),
                     focusProps: {
                         offset: {
                             top: 4,
@@ -144,7 +144,7 @@ function w(e) {
                   children: [
                       (0, r.jsx)('img', {
                           className: o()(Z.buttonContainer, Z.button, Z.channelAppLauncherButtonPopoutIcon),
-                          alt: P.NW.string(P.t.X4IxWF),
+                          alt: S.NW.string(S.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
                           draggable: !1
@@ -153,7 +153,7 @@ function w(e) {
                           className: Z.channelAppLauncherButtonPopoutIconShimmerContainer,
                           children: (0, r.jsx)('img', {
                               className: Z.channelAppLauncherButtonPopoutIconShimmer,
-                              alt: P.NW.string(P.t.X4IxWF),
+                              alt: S.NW.string(S.t.X4IxWF),
                               src: T,
                               'aria-hidden': !0,
                               draggable: !1
@@ -164,7 +164,7 @@ function w(e) {
             : null;
     return d
         ? (0, r.jsx)(u.ua7, {
-              text: P.NW.string(P.t.JDj6Xl),
+              text: S.NW.string(S.t.JDj6Xl),
               shouldShow: s,
               forceOpen: s,
               children: () =>

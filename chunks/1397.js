@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(41776),
     N = n(657352),
     I = n(33154),
-    S = n(144114),
-    P = n(703656),
+    P = n(144114),
+    S = n(703656),
     Z = n(210887),
     T = n(606956),
     A = n(271383),
@@ -236,7 +236,7 @@ class z extends i.PureComponent {
                 (0, s.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('76540'), n.e('84575')]).then(n.bind(n, 607018));
-                        return (t) => (0, r.jsx)(e, G({ reason: S.L.GUILD_PHONE_REQUIRED }, t));
+                        return (t) => (0, r.jsx)(e, G({ reason: P.L.GUILD_PHONE_REQUIRED }, t));
                     },
                     { modalKey: U.M }
                 );
@@ -275,7 +275,7 @@ class z extends i.PureComponent {
                 }
             }),
             F(this, 'handleGoBack', () => {
-                this.setState({ submitting: !0 }), (0, P.s1)().goBack();
+                this.setState({ submitting: !0 }), (0, S.s1)().goBack();
             }),
             F(this, 'handleFollowAnnouncement', () => {
                 let { channel: e } = this.props;
@@ -348,8 +348,8 @@ function Y(e) {
         }),
         N = !!(0, x.Dc)(c),
         I = (j || u.notClaimed) && N,
-        S = (0, a.e7)([O.Z], () => O.Z.shouldShowPopout(s)),
-        P = (0, a.e7)([k.Z], () => k.Z.can(W.Plq.SEND_MESSAGES, l)),
+        P = (0, a.e7)([O.Z], () => O.Z.shouldShowPopout(s)),
+        S = (0, a.e7)([k.Z], () => k.Z.can(W.Plq.SEND_MESSAGES, l)),
         D = (0, a.e7)([v.Z], () => v.Z.getRequest(s)),
         [U, B] = (0, f.L_)(s),
         H = (0, f.Cc)(s),
@@ -365,10 +365,10 @@ function Y(e) {
         guild: c,
         isLurking: g,
         isFollowable: d,
-        shouldShowLurkerModeSuccessPopout: S,
+        shouldShowLurkerModeSuccessPopout: P,
         showLurkerModeUpsellPopout: g && null != c && L.Uu(W.Plq.SEND_MESSAGES, l),
         theme: Z.Z.theme,
-        canSendMessages: P,
+        canSendMessages: S,
         channelFollowingUsersSeen: null != h ? h.usersSeenEver : null,
         hasVerificationGate: N,
         showMemberVerificationModal: I,

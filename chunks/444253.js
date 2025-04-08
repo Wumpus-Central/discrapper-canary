@@ -23,8 +23,8 @@ function b(e) {
         E = (0, d.Z)(),
         N = (0, u.Z)(t),
         I = (0, f.Z)(t),
-        S = (0, p.Z)(j, t),
-        P = (0, a.Z)({
+        P = (0, p.Z)(j, t),
+        S = (0, a.Z)({
             id: null == j ? void 0 : j.id,
             label: g.NW.string(g.t['+NP/b2'])
         });
@@ -34,6 +34,6 @@ function b(e) {
         'aria-label': g.NW.string(g.t.pkYeAw),
         onSelect: C,
         onInteraction: y,
-        children: [O, E, N, I, (0, h.Z)(v, b, _), S, (0, r.jsx)(l.kSQ, { children: P })]
+        children: [O, E, N, I, (0, h.Z)(v, b, _), P, (0, r.jsx)(l.kSQ, { children: S })]
     });
 }

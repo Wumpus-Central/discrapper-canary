@@ -25,8 +25,8 @@ var i = n(442837),
     E = n(827313),
     N = n(228168),
     I = n(981631),
-    S = n(388032),
-    P = n(969627);
+    P = n(388032),
+    S = n(969627);
 function Z(e) {
     let { user: t, currentUser: n, displayProfile: Z, channel: T, isHovering: A, onOpenProfile: w } = e,
         { relationshipType: R, originApplicationId: k } = (0, i.cj)([c.Z], () => ({
@@ -45,7 +45,7 @@ function Z(e) {
             return null == (e = p.Z.getUserProfile(t.id)) ? void 0 : e.application;
         });
     return (0, r.jsxs)('div', {
-        className: P.body,
+        className: S.body,
         children: [
             (0, r.jsx)(O.Z, {
                 user: t,
@@ -105,16 +105,16 @@ function Z(e) {
                 user: t,
                 currentUser: n,
                 displayProfile: Z,
-                className: P.activity
+                className: S.activity
             }),
             (0, r.jsxs)(j.Z.Overlay, {
-                className: P.overlay,
+                className: S.overlay,
                 children: [
                     !W &&
                         (null == Z ? void 0 : Z.bio) != null &&
                         (null == Z ? void 0 : Z.bio) !== '' &&
                         (0, r.jsx)(v.Z, {
-                            heading: S.NW.string(S.t['61W33d']),
+                            heading: P.NW.string(P.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(m.Z, {
                                 userBio: Z.bio,
@@ -131,12 +131,12 @@ function Z(e) {
                         }),
                     L.length > 0 &&
                         (0, r.jsx)(v.Z, {
-                            heading: S.NW.string(S.t['Uv/eT0']),
+                            heading: P.NW.string(P.t['Uv/eT0']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(_.Z, { applicationIds: L })
                         }),
                     (0, r.jsx)(v.Z, {
-                        heading: t.bot ? S.NW.string(S.t['A//N4u']) : S.NW.string(S.t.a6XYDw),
+                        heading: t.bot ? P.NW.string(P.t['A//N4u']) : P.NW.string(P.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, r.jsx)(y.Z, { userId: t.id })
                     })

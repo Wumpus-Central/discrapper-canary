@@ -82,11 +82,11 @@ function I(e) {
         u = t.guild_id,
         { canCreateGuildEvent: p } = (0, g.XJ)(t),
         I = (0, x.Z)(t.id),
-        { usersInSummary: S } = (0, y.Z)(t.id),
-        P = (0, c._q$)('StartStageChannelCallView'),
+        { usersInSummary: P } = (0, y.Z)(t.id),
+        S = (0, c._q$)('StartStageChannelCallView'),
         Z = i.useRef(null);
     return (0, r.jsxs)('div', {
-        className: o()(O.container, { [O.withRive]: P }),
+        className: o()(O.container, { [O.withRive]: S }),
         ref: Z,
         children: [
             s && (0, r.jsx)(b.Z, { eventTargetRef: Z }),
@@ -136,7 +136,7 @@ function I(e) {
                               guildId: u
                           })
                         : null,
-                    (l || S.length > 0) && !s && (0, r.jsx)('hr', { className: O.separator }),
+                    (l || P.length > 0) && !s && (0, r.jsx)('hr', { className: O.separator }),
                     l
                         ? (0, r.jsx)(E, {
                               className: o()({ [O.eventPrompt]: s }),

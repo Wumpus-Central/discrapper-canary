@@ -1,82 +1,82 @@
-n.d(t, { Z: () => p }), n(388685);
-var s,
-    r = n(200651),
-    i = n(192379),
-    a = n(392711),
-    o = n.n(a),
-    l = n(55935),
-    c = n(388032);
-function d(e, t, n) {
+i.d(E, { Z: () => _ }), i(388685);
+var r,
+    n = i(200651),
+    l = i(192379),
+    e = i(392711),
+    S = i.n(e),
+    s = i(55935),
+    N = i(388032);
+function o(t, E, i) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        E in t
+            ? Object.defineProperty(t, E, {
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
-        e
+            : (t[E] = i),
+        t
     );
 }
-let u = () => [c.NW.string(c.t['6m/6nJ']), c.NW.string(c.t.n7dksL), c.NW.string(c.t['1LyF1t']), c.NW.string(c.t.QJyuxc)];
-class h extends (s = i.PureComponent) {
+let A = () => [N.NW.string(N.t['6m/6nJ']), N.NW.string(N.t.n7dksL), N.NW.string(N.t['1LyF1t']), N.NW.string(N.t.QJyuxc)];
+class P extends (r = l.PureComponent) {
     componentDidMount() {
-        let { intervalDuration: e, onInterval: t } = this.props;
+        let { intervalDuration: t, onInterval: E } = this.props;
         this._interval = setInterval(() => {
-            this.forceUpdate(), null == t || t();
-        }, e);
+            this.forceUpdate(), null == E || E();
+        }, t);
     }
     componentWillUnmount() {
         null != this._interval && clearInterval(this._interval);
     }
-    defaultRender(e) {
-        let { showDays: t, showUnits: n, className: s } = this.props,
-            i = [e.days, e.hours, e.minutes, e.seconds],
-            a = u();
-        if (0 === e.days) i.shift();
-        else if (!t) {
-            let e = i.shift();
-            i[0] += 24 * e;
+    defaultRender(t) {
+        let { showDays: E, showUnits: i, className: r } = this.props,
+            l = [t.days, t.hours, t.minutes, t.seconds],
+            e = A();
+        if (0 === t.days) l.shift();
+        else if (!E) {
+            let t = l.shift();
+            l[0] += 24 * t;
         }
-        let l = o()(i)
-            .map((e) => (e < 10 ? '0'.concat(e) : e))
-            .map((e, t) => [
-                t > 0 && !n ? ':' : ' ',
-                (0, r.jsxs)(
+        let s = S()(l)
+            .map((t) => (t < 10 ? '0'.concat(t) : t))
+            .map((t, E) => [
+                E > 0 && !i ? ':' : ' ',
+                (0, n.jsxs)(
                     'span',
                     {
-                        children: [e, n ? a[i.length - t - 1] : null]
+                        children: [t, i ? e[l.length - E - 1] : null]
                     },
-                    t
+                    E
                 )
             ])
             .flatten()
             .value();
-        return (0, r.jsx)('span', {
-            className: s,
-            children: l
+        return (0, n.jsx)('span', {
+            className: r,
+            children: s
         });
     }
     render() {
-        let { deadline: e, children: t, className: n, stopAtOneSec: s } = this.props;
-        if (e === 1 / 0)
-            return (0, r.jsx)('span', {
-                className: n,
-                'aria-label': c.NW.string(c.t.PqEzn5),
+        let { deadline: t, children: E, className: i, stopAtOneSec: r } = this.props;
+        if (t === 1 / 0)
+            return (0, n.jsx)('span', {
+                className: i,
+                'aria-label': N.NW.string(N.t.PqEzn5),
                 children: '\u221E'
             });
-        let i = (0, l.TD)(Date.now(), e, s);
-        return null != t ? t(i, this.defaultRender.bind(this, i)) : this.defaultRender(i);
+        let l = (0, s.TD)(Date.now(), t, r);
+        return null != E ? E(l, this.defaultRender.bind(this, l)) : this.defaultRender(l);
     }
-    constructor(...e) {
-        super(...e), d(this, '_interval', void 0);
+    constructor(...t) {
+        super(...t), o(this, '_interval', void 0);
     }
 }
-d(h, 'defaultProps', {
+o(P, 'defaultProps', {
     showDays: !0,
     showUnits: !1,
     stopAtOneSec: !1,
     intervalDuration: 1000
 });
-let p = h;
+let _ = P;

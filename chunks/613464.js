@@ -23,24 +23,24 @@ var r = n(200651),
     O = n(50767);
 function E(e) {
     let { userId: t, guildId: n, onClose: l, className: E, infoPanelClassName: N, style: I } = e,
-        S = (0, x.m)(n),
-        P = (0, a.e7)([y.default], () => y.default.getUser(t), [t]),
+        P = (0, x.m)(n),
+        S = (0, a.e7)([y.default], () => y.default.getUser(t), [t]),
         Z = (0, a.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
-        [T, A] = i.useState(null == P || null == Z),
+        [T, A] = i.useState(null == S || null == Z),
         w = (0, u.Z)(Z),
         R = i.useRef(null),
         { analyticsLocations: k } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
         M = (0, g.ZP)(t, n),
         L = (0, d.ZP)();
     return (i.useEffect(() => {
-        S || l();
-    }, [S, l]),
+        P || l();
+    }, [P, l]),
     i.useEffect(() => {
         null == w || null != Z || T || l();
     }, [T, Z, l, w]),
     i.useEffect(() => {
-        null != P && null != Z && A(!1);
-    }, [P, Z]),
+        null != S && null != Z && A(!1);
+    }, [S, Z]),
     i.useEffect(() => {
         let e = null == Z;
         return (
@@ -64,8 +64,8 @@ function E(e) {
             await Promise.all(e), A(!1);
         })();
     }, [n, t]),
-    S)
-        ? T || null == P || null == Z
+    P)
+        ? T || null == S || null == Z
             ? (0, r.jsx)('div', {
                   className: o()(O.sidebarContainer, O.loadingContainer, E),
                   style: I,
@@ -80,7 +80,7 @@ function E(e) {
                       className: o()(O.sidebarContainer, E),
                       style: I,
                       children: (0, r.jsx)(_.Z, {
-                          user: P,
+                          user: S,
                           displayProfile: M,
                           profileType: null,
                           themeOverride: L,

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var r = n(200651),
     a = n(192379),
     i = n(481060),
     o = n(493683),
     l = n(699516),
-    c = n(594174),
-    d = n(933557),
+    s = n(594174),
+    c = n(933557),
     u = n(388032);
-function f(e, t) {
-    let f = a.useCallback(() => {
-        let a = (0, d.F6)(e, c.default, l.Z),
-            f = u.NW.formatToPlainString(u.t.hJ5Ap6, { name: a }),
-            s = u.NW.format(u.t.SSIVOj, { name: a });
-        e.isManaged() && ((f = u.NW.formatToPlainString(u.t.hVGjER, { name: a })), (s = u.NW.format(u.t.IK1Qvr, { name: a })));
+function d(e, t) {
+    let d = a.useCallback(() => {
+        let a = (0, c.F6)(e, s.default, l.Z),
+            d = u.NW.formatToPlainString(u.t.hJ5Ap6, { name: a }),
+            f = u.NW.format(u.t.SSIVOj, { name: a });
+        e.isManaged() && ((d = u.NW.formatToPlainString(u.t.hVGjER, { name: a })), (f = u.NW.format(u.t.IK1Qvr, { name: a })));
         let p = function (n) {
             let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             o.Z.closePrivateChannel(e.id, t, r);
@@ -48,8 +48,8 @@ function f(e, t) {
                         return e;
                     })(
                         {
-                            header: f,
-                            body: s,
+                            header: d,
+                            body: f,
                             onSubmit: p
                         },
                         t
@@ -60,7 +60,7 @@ function f(e, t) {
     return (0, r.jsx)(i.sNh, {
         id: 'leave-channel',
         label: u.NW.string(u.t['26C4oq']),
-        action: f,
+        action: d,
         color: 'danger'
     });
 }

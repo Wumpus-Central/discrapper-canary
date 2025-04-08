@@ -72,9 +72,9 @@ function O(e) {
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
         { disabled: N } = O,
         I = i.useRef(null),
-        S = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
-            isShowing: P,
+            isShowing: S,
             unreadCount: Z,
             mentionCount: T
         } = (function (e) {
@@ -98,8 +98,8 @@ function O(e) {
             );
         })(n),
         A = i.useCallback(() => {
-            (0, p.v)(E, p.d.CHAT, !S), null == h || h(), !S && m && (null == _ || _()), c.Z.updateChatOpen(n, !S);
-        }, [n, S, h, m, _, E]),
+            (0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P);
+        }, [n, P, h, m, _, E]),
         w = i.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -138,7 +138,7 @@ function O(e) {
                 }
             );
         }, [k]);
-    let D = [(t = f && N ? x.NW.string(x.t.DPgc5u) : S ? x.NW.string(x.t.nthdxM) : x.NW.string(x.t['5KxXrK']))];
+    let D = [(t = f && N ? x.NW.string(x.t.DPgc5u) : P ? x.NW.string(x.t.nthdxM) : x.NW.string(x.t['5KxXrK']))];
     return (
         T > 0 && D.push(x.NW.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
         Z > 0 && D.push(x.NW.string(x.t.x5zAGR)),
@@ -176,7 +176,7 @@ function O(e) {
                     'aria-label': D.join(', '),
                     iconComponent: w,
                     tooltipPosition: 'bottom',
-                    wrapperClassName: o()(l, null != a && { [a]: P }),
+                    wrapperClassName: o()(l, null != a && { [a]: S }),
                     forceTooltipOpen: k
                 },
                 O
