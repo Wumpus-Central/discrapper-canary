@@ -267,14 +267,7 @@ let ev = (0, u.Un)({
               : (0, r.jsx)(ep.Z, {});
     }),
     eR = (e) => (0, r.jsx)(ew, ey({}, e)),
-    eD = (e) => {
-        let { location: t } = e;
-        return (0, r.jsx)(g.Z, {
-            deepLinkType: eO.jE.FEATURES,
-            path: t.pathname,
-            children: (0, r.jsx)(Z.Z, {})
-        });
-    },
+    eD = () => (0, r.jsx)(Z.Z, {}),
     ek = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(R.Z, { guildId: t.params.guildId }) : null;
@@ -289,37 +282,23 @@ let ev = (0, u.Un)({
             : null;
     },
     eU = () => (0, r.jsx)(ef.Z, {}),
-    eG = () =>
-        (0, r.jsx)(g.Z, {
-            deepLinkType: eO.jE.STORE_HOME,
-            path: em.Z5c.APPLICATION_STORE,
-            children: (0, r.jsx)(eg.Z, {})
-        }),
+    eG = () => (0, r.jsx)(eg.Z, {}),
     eW = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             let { tab: n } = (0, o.parse)(t.location.search);
             return Object.values(e_.AW).includes(n)
-                ? (0, r.jsx)(g.Z, {
-                      deepLinkType: eO.jE.SHOP,
-                      path: t.location.pathname,
-                      search: t.location.search,
-                      children: (0, r.jsx)(
-                          S.Z,
-                          ey(
-                              {
-                                  isFullScreen: e,
-                                  tab: n
-                              },
-                              t
-                          )
+                ? (0, r.jsx)(
+                      S.Z,
+                      ey(
+                          {
+                              isFullScreen: e,
+                              tab: n
+                          },
+                          t
                       )
-                  })
-                : (0, r.jsx)(g.Z, {
-                      deepLinkType: eO.jE.SHOP,
-                      path: t.location.pathname,
-                      children: (0, r.jsx)(S.Z, ey({ isFullScreen: e }, t))
-                  });
+                  )
+                : (0, r.jsx)(S.Z, ey({ isFullScreen: e }, t));
         };
     },
     eV = (e) => (0, r.jsx)(N.Z, ey({}, e)),
