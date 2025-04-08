@@ -1,76 +1,62 @@
 n.d(t, {
-    $R: () => y,
-    AG: () => E,
-    PJ: () => m,
-    eW: () => h,
-    pf: () => g,
-    rs: () => b,
-    u2: () => f
+    $R: () => b,
+    AG: () => g,
+    PJ: () => h,
+    eW: () => p,
+    pf: () => m,
+    rs: () => E,
+    u2: () => _
 }),
     n(415506);
-var r = n(259443);
-let i = null,
-    o = null,
-    a = new r.Yd('libdiscore');
-function s(e) {
-    a.error(e);
-}
+var r = n(608787),
+    i = n(259443);
+let o = null,
+    a = null,
+    s = new i.Yd('libdiscore');
 function l(e) {
-    a.warn(e);
+    s.error(e);
 }
 function c(e) {
-    a.info(e);
+    s.warn(e);
 }
 function u(e) {
-    a.verbose(e);
+    s.info(e);
 }
 function d(e) {
-    a.trace(e);
+    s.verbose(e);
 }
-function f() {
-    return null !== i;
+function f(e) {
+    s.trace(e);
 }
-function _(e) {
-    return new Promise((t) => setTimeout(t, e));
+function _() {
+    return null !== o;
 }
-async function p() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
-        r = null,
-        i = e;
-    for (;;)
-        try {
-            await Promise.resolve().then(n.bind(n, 842321));
-            return;
-        } catch (e) {
-            if (((r = e), delete n.c[842321], 0 == --i)) throw r;
-            a.warn('Failed to import libdiscore-wasm, retrying... ('.concat(i, ' attempts left), ').concat(r.name, ': ').concat(r.message)), await _(t);
-        }
-}
-function h() {
-    if (null == o)
-        return (o = (async () => {
-            await p();
-            let e = await n.e('63614').then(n.bind(n, 718493));
-            e.installLogCallback(s, l, c, u, d), await e.initLibdiscore(), (i = e);
+function p() {
+    if (null == a)
+        return (a = (async () => {
+            let e = await (0, r.wE)({
+                createPromise: () => n.e('18639').then(n.bind(n, 718493)),
+                webpackId: 718493
+            });
+            e.installLogCallback(l, c, u, d, f), await e.initLibdiscore(), (o = e);
         })());
     throw Error('initLibdiscore called multiple times');
 }
-function m(e) {
+function h(e) {
     var t;
-    return null === i ? null : null != (t = i.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
+    return null === o ? null : null != (t = o.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
 }
-function g(e) {
-    null !== i && i.BlockedDomainsStore.startFetchingBlockedDomains(e);
+function m(e) {
+    null !== o && o.BlockedDomainsStore.startFetchingBlockedDomains(e);
 }
-function E() {
+function g() {
     return 'libdiscore logs are part of the main app logs';
 }
-function b(e, t) {
-    if (null === i) throw Error('libdiscore not initialized');
-    return i.rustMultiply(e, t);
+function E(e, t) {
+    if (null === o) throw Error('libdiscore not initialized');
+    return o.rustMultiply(e, t);
 }
-function y() {
-    if (null === i) throw Error('libdiscore not initialized');
-    i.crash();
+function b() {
+    if (null === o) throw Error('libdiscore not initialized');
+    o.crash();
 }
