@@ -77,7 +77,8 @@ let c = new (class {
                     {
                         load_id: this.loadId,
                         screen_name: e,
-                        duration_ms_since_app_opened: t - window.GLOBAL_ENV.HTML_TIMESTAMP
+                        duration_ms_since_app_opened: t - window.GLOBAL_ENV.HTML_TIMESTAMP,
+                        app_hardware_acceleration_enabled: o.ZP.getEnableHardwareAcceleration()
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
