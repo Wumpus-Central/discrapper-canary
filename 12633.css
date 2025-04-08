@@ -55968,7 +55968,7 @@ html.disable-forced-colors * {
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --chat-background-default: color-mix(in oklab, var(--neutral-64) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --chat-text-muted: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --checkbox-background-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-background-default: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -56244,7 +56244,7 @@ html.disable-forced-colors * {
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-36-hsl)/0.3607843137254902) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.3607843137254902) var(--theme-base-color-amount, 0%));
         --chat-background-default: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --chat-text-muted: color-mix(in oklab, var(--neutral-39) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-39) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-30) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-59) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-tertiary: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56513,7 +56513,7 @@ html.disable-forced-colors * {
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-32-hsl)/0.3215686274509804) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--theme-base-color-amount, 0%));
         --chat-background-default: color-mix(in oklab, var(--neutral-91) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --chat-text-muted: color-mix(in oklab, var(--neutral-37) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-37) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --checkbox-border-default: color-mix(in oklab, var(--neutral-43) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --icon-tertiary: color-mix(in oklab, var(--neutral-33) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56816,7 +56816,7 @@ html.disable-forced-colors * {
         --border-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
         --chat-background-default: color-mix(in oklab, var(--neutral-80) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --chat-text-muted: color-mix(in oklab, var(--neutral-34) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --chat-text-muted: color-mix(in oklab, var(--neutral-34) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --checkbox-background-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --checkbox-background-default: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --checkbox-border-checked: color-mix(in oklab, var(--blurple-50) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));

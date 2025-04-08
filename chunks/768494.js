@@ -136,8 +136,11 @@ function E(e, t) {
         }
     });
 }
-function b(e) {
-    return d(c({}, e), { type: m(e) });
+function b(e, t) {
+    return d(c({}, e), {
+        type: m(e),
+        sourceMetadata: { message: t }
+    });
 }
 function y(e, t, n) {
     return {
