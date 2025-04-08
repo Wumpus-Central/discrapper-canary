@@ -84,8 +84,8 @@ function b(e) {
                         n)
                     );
                 },
-                h = (e) => (t) => {
-                    v && null != t && t.stopPropagation(), e(t);
+                h = (e) => {
+                    v && (null == e || e.stopPropagation()), _(!S);
                 };
             return (0, i.jsx)(
                 c.Gt,
@@ -102,30 +102,33 @@ function b(e) {
                                   roleId: null == e ? void 0 : e.colorRoleId,
                                   clickTrap: S,
                                   shouldShow: S,
-                                  onRequestOpen: () => _(!0),
                                   onRequestClose: () => _(!1),
                                   children: (e) => {
-                                      var { onClick: t } = e,
-                                          n = (function (e, t) {
-                                              if (null == e) return {};
-                                              var n,
-                                                  i,
-                                                  o = (function (e, t) {
-                                                      if (null == e) return {};
-                                                      var n,
-                                                          i,
-                                                          o = {},
-                                                          r = Object.keys(e);
-                                                      for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                                                      return o;
-                                                  })(e, t);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
-                                              }
-                                              return o;
-                                          })(e, ['onClick']);
-                                      return u(g({ onClick: h(t) }, n));
+                                      var { onClick: t } = e;
+                                      return u(
+                                          g(
+                                              { onClick: h },
+                                              (function (e, t) {
+                                                  if (null == e) return {};
+                                                  var n,
+                                                      i,
+                                                      o = (function (e, t) {
+                                                          if (null == e) return {};
+                                                          var n,
+                                                              i,
+                                                              o = {},
+                                                              r = Object.keys(e);
+                                                          for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                                                          return o;
+                                                      })(e, t);
+                                                  if (Object.getOwnPropertySymbols) {
+                                                      var r = Object.getOwnPropertySymbols(e);
+                                                      for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                                                  }
+                                                  return o;
+                                              })(e, ['onClick'])
+                                          )
+                                      );
                                   }
                               })
                             : u(void 0)
