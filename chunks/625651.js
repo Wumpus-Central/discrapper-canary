@@ -10,14 +10,14 @@ var n = r(200651),
     d = r(17622),
     m = r(279604),
     b = r(535396),
-    f = r(680278),
-    p = r(388032),
+    p = r(680278),
+    f = r(388032),
     g = r(340114);
 function k(e) {
     var t,
         r,
-        { guildId: k, powerup: x } = e,
-        _ = (function (e, t) {
+        { guildId: k, powerup: j } = e,
+        x = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -36,50 +36,51 @@ function k(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let { onDeactivate: j, error: I, isLoading: O } = (0, m.ZP)(k, x),
-        { onClose: h } = _,
-        N = o.useCallback(
+    let { onDeactivate: _, error: I, isLoading: O } = (0, m.ZP)(k, j),
+        { onClose: h } = x,
+        v = o.useCallback(
             (e) => {
-                j(e).then(() => {
+                _(e).then(() => {
                     null == h || h();
                 });
             },
-            [h, j]
+            [h, _]
         ),
-        v = (function (e, t) {
+        N = (function (e, t) {
             let r = (0, a.e7)([i.Z], () => i.Z.getMemberCount(e)),
                 n = (0, s.Z)(e),
                 c = (0, a.e7)(
                     [l.Z],
-                    () => {
-                        if (t.skuId !== b.If || null == n) return 0;
-                        Object.values(l.Z.getRoles(e))
-                            .filter((e) => {
-                                var t;
-                                return (null == (t = e.colorStrings) ? void 0 : t.secondaryColor) != null;
-                            })
-                            .reduce((e, t) => {
-                                var r;
-                                return e + (null != (r = n[t.id]) ? r : 0);
-                            }, 0);
-                    },
+                    () =>
+                        t.skuId !== b.If || null == n
+                            ? 0
+                            : Object.values(l.Z.getRoles(e))
+                                  .filter((e) => {
+                                      var t;
+                                      return (null == (t = e.colorStrings) ? void 0 : t.secondaryColor) != null;
+                                  })
+                                  .reduce((e, t) => {
+                                      var r;
+                                      return e + (null != (r = n[t.id]) ? r : 0);
+                                  }, 0),
                     [e, t.skuId, n]
-                ),
-                u = o.useMemo(() => {
-                    if (t.type === b.Us.LEVEL) return r;
-                    switch (t.skuId) {
-                        case b.If:
-                            return c;
-                        case b.IN:
-                        default:
-                            return r;
-                    }
-                }, [t, c, r]);
-            return p.NW.formatToPlainString(f.Z['4jSvr6'], {
-                perk: t.title,
-                memberCount: u
-            });
-        })(k, x);
+                );
+            return o.useMemo(
+                () =>
+                    t.skuId === b.If
+                        ? c > 0
+                            ? f.NW.formatToPlainString(p.Z['4jSvr6'], {
+                                  perk: t.title,
+                                  memberCount: c
+                              })
+                            : f.NW.formatToPlainString(p.Z.cavtEh, { perk: t.title })
+                        : f.NW.formatToPlainString(p.Z['4jSvr6'], {
+                              perk: t.title,
+                              memberCount: r
+                          }),
+                [t, c, r]
+            );
+        })(k, j);
     return (0, n.jsxs)(
         c.Y0X,
         ((t = (function (e) {
@@ -111,7 +112,7 @@ function k(e) {
                 className: g.modal,
                 size: c.CgR.SMALL
             },
-            _
+            x
         )),
         (r = r =
             {
@@ -128,25 +129,25 @@ function k(e) {
                                         children: [
                                             (0, n.jsx)(c.X6q, {
                                                 variant: 'heading-md/semibold',
-                                                children: p.NW.formatToPlainString(f.Z.iEBw1N, { perk: x.title })
+                                                children: f.NW.formatToPlainString(p.Z.iEBw1N, { perk: j.title })
                                             }),
                                             (0, n.jsx)(c.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: p.NW.formatToPlainString(f.Z['7o0K+/'], { perk: x.title })
+                                                children: f.NW.formatToPlainString(p.Z['7o0K+/'], { perk: j.title })
                                             })
                                         ]
                                     }),
-                                    (0, n.jsx)(c.olH, { onClick: _.onClose })
+                                    (0, n.jsx)(c.olH, { onClick: x.onClose })
                                 ]
                             }),
                             (() => {
-                                switch (x.type) {
+                                switch (j.type) {
                                     case b.Us.LEVEL:
-                                        return (0, n.jsx)(d.Z, { powerup: x });
+                                        return (0, n.jsx)(d.Z, { powerup: j });
                                     case b.Us.PERK:
                                         return (0, n.jsx)(u.m, {
                                             className: g.image,
-                                            powerup: x
+                                            powerup: j
                                         });
                                 }
                             })(),
@@ -156,11 +157,11 @@ function k(e) {
                                     (0, n.jsx)(c.Text, {
                                         color: 'text-danger',
                                         variant: 'eyebrow',
-                                        children: p.NW.string(f.Z.OVt5CA)
+                                        children: f.NW.string(p.Z.OVt5CA)
                                     }),
                                     (0, n.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
-                                        children: v
+                                        children: N
                                     })
                                 ]
                             }),
@@ -180,14 +181,14 @@ function k(e) {
                                 submitting: O,
                                 color: c.Ttl.RED,
                                 className: g.button,
-                                onClick: N,
-                                children: p.NW.string(f.Z.PYPdl5)
+                                onClick: v,
+                                children: f.NW.string(p.Z.PYPdl5)
                             }),
                             (0, n.jsx)(c.zxk, {
                                 color: c.Ttl.PRIMARY,
                                 className: g.button,
-                                onClick: _.onClose,
-                                children: p.NW.string(p.t['ETE/oK'])
+                                onClick: x.onClose,
+                                children: f.NW.string(f.t['ETE/oK'])
                             })
                         ]
                     })

@@ -20242,6 +20242,7 @@
   "TZsu1d": "Disable Perk",
   "5HQUzM": "Get {boostCount, plural, =1 { Boost} other { Boosts} } back.",
   "ol/ao6": "Expires !!{dateString}!!",
+  "cavtEh": "If you choose to disable this perk, !!{perk}!! will be removed from all members.",
   "4jSvr6": "If you choose to disable this perk, !!{perk}!! will be removed from {memberCount, plural, =1 { member} other { members} }.",
   "OVt5CA": "Warning",
   "iAaAiI": "This server needs {boostCount, plural, =1 { more Boost} other { more Boosts} } to keep these perks: !!{perksString}!!",
