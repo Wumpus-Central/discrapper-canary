@@ -5,24 +5,19 @@ var r = n(200651),
     a = n.n(s),
     l = n(442837),
     o = n(481060),
-    c = n(492435),
-    d = n(353926),
-    u = n(430824),
-    m = n(499533),
-    g = n(878209),
-    p = n(987338),
-    h = n(516370);
-function f(e, t) {
-    return e.map((e, n) => ({
-        label: 'object' == typeof t ? t[n] : m.Z.getExperimentBucketName(e),
-        value: e
-    }));
-}
+    c = n(887580),
+    d = n(389494),
+    u = n(353926),
+    m = n(430824),
+    g = n(572004),
+    p = n(878209),
+    h = n(987338),
+    f = n(516370);
 function b() {
-    let e = (0, l.cj)([d.Z], () => d.Z.getAllExperimentOverrideDescriptors()),
-        t = (0, l.cj)([d.Z], () => d.Z.getRegisteredExperiments()),
+    let e = (0, l.cj)([u.Z], () => u.Z.getAllExperimentOverrideDescriptors()),
+        t = (0, l.cj)([u.Z], () => u.Z.getRegisteredExperiments()),
         [n, s] = i.useState(''),
-        a = (0, g.Ro)((0, g.Tc)((0, g.Cg)(t), e), n);
+        a = (0, p.Ro)((0, p.Tc)((0, p.Cg)(t), e), n);
     return (0, r.jsxs)(o.hjN, {
         tag: o.RB0.H1,
         title: 'Experiments',
@@ -35,19 +30,20 @@ function b() {
             }),
             a.length > 0
                 ? a.map((t) => {
-                      let n = t.experiment.type === p.xY.GUILD ? x : N;
+                      let n = t.experiment.type === h.xY.GUILD ? x : N;
                       return (0, r.jsx)(
                           n,
                           {
                               experiment: t.experiment,
                               experimentId: t.id,
-                              overrideDescriptor: e[t.id]
+                              overrideDescriptor: e[t.id],
+                              defaultOpen: null != e[t.id]
                           },
                           t.id
                       );
                   })
                 : (0, r.jsx)('div', {
-                      className: h.emptyState,
+                      className: f.emptyState,
                       children: (0, r.jsx)(o.X6q, {
                           variant: 'heading-md/semibold',
                           children: 'No Experiments Found'
@@ -58,17 +54,17 @@ function b() {
 }
 function N(e) {
     var t;
-    let { experiment: n, experimentId: s, overrideDescriptor: u } = e,
-        [m, g] = i.useState(null != u),
-        [b, N] = i.useState(!1),
-        x = i.useCallback(() => {
-            g((e) => !e);
+    let { experiment: n, experimentId: s, overrideDescriptor: m, defaultOpen: p } = e,
+        [b, N] = i.useState(p),
+        [x, _] = i.useState(!1),
+        E = i.useCallback(() => {
+            N((e) => !e);
         }, []),
-        _ = (0, l.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(s)),
-        E = (0, l.e7)([d.Z], () => d.Z.getLoadedUserExperiment(s)),
-        j = (0, l.Wu)([d.Z], () =>
+        j = (0, l.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
+        O = (0, l.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
+        C = (0, l.Wu)([u.Z], () =>
             a()
-                .sortBy(d.Z.getRecentExposures(p.xY.USER, s), (e) => {
+                .sortBy(u.Z.getRecentExposures(h.xY.USER, s), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -77,15 +73,42 @@ function N(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        O = (0, r.jsx)(o.P3F, {
-            onClick: x,
+        S = i.useCallback(
+            (e) => {
+                (0, g.JG)((0, c.sZ)(s)) &&
+                    ((0, o.showToast)({
+                        id: 'experiment-link-copied',
+                        message: 'Copied experiment link',
+                        type: o.ToastType.SUCCESS
+                    }),
+                    e.preventDefault(),
+                    e.stopPropagation());
+            },
+            [s]
+        ),
+        v = (0, r.jsx)(o.kL8, {
+            'aria-label': 'Toggle visibility',
+            onClick: E,
             children: (0, r.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
-                className: h.title,
+                className: f.title,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
-                            (0, r.jsx)('span', { children: n.title }),
+                            (0, r.jsxs)(o.Kqy, {
+                                direction: 'horizontal',
+                                align: 'center',
+                                gap: 4,
+                                children: [
+                                    n.title,
+                                    ' ',
+                                    g.wS &&
+                                        (0, r.jsx)(o.P3F, {
+                                            onClick: S,
+                                            children: (0, r.jsx)(o.xPt, { size: 'xs' })
+                                        })
+                                ]
+                            }),
                             (0, r.jsx)(o.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
@@ -94,35 +117,32 @@ function N(e) {
                         ]
                     }),
                     (0, r.jsx)('span', {
-                        className: h.experimentDate,
+                        className: f.experimentDate,
                         children: 'User'
                     })
                 ]
             })
         });
-    return m
+    return b
         ? (0, r.jsxs)('div', {
-              className: h.group,
+              className: f.group,
               children: [
                   (0, r.jsxs)(o.hjN, {
                       children: [
-                          O,
+                          v,
                           (0, r.jsxs)('div', {
                               children: [
                                   (0, r.jsx)(o.xJW, {
                                       title: 'Bucket Override',
-                                      children: (0, r.jsx)(o.q4e, {
-                                          value: null != u ? u.bucket : null,
-                                          clearable: null != u,
-                                          options: f(n.buckets, n.description),
-                                          onChange: (e) => {
-                                              (0, c.rX)(s, e);
-                                          }
+                                      children: (0, r.jsx)(d.y, {
+                                          experiment: n,
+                                          experimentId: s,
+                                          overrideDescriptor: m
                                       })
                                   }),
                                   'string' == typeof n.description
                                       ? (0, r.jsx)('div', {
-                                            className: h.description,
+                                            className: f.description,
                                             children: (0, r.jsx)(o.R94, {
                                                 type: o.geA.DESCRIPTION,
                                                 children: n.description
@@ -132,13 +152,13 @@ function N(e) {
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: h.description,
+                              className: f.description,
                               children: [
                                   (0, r.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null != (t = null == _ ? void 0 : _.bucket) ? t : p.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null != (t = null == j ? void 0 : j.bucket) ? t : h.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == E
+                                  null == O
                                       ? (0, r.jsx)(o.R94, {
                                             type: o.geA.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -146,69 +166,69 @@ function N(e) {
                                       : null
                               ]
                           }),
-                          b
+                          x
                               ? (0, r.jsxs)('div', {
                                     children: [
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
-                                            className: h.debugTitle,
+                                            className: f.debugTitle,
                                             children: 'Server Descriptor'
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
-                                            className: h.pre,
-                                            children: null == E ? 'None' : JSON.stringify(E, void 0, 2)
+                                            className: f.pre,
+                                            children: null == O ? 'None' : JSON.stringify(O, void 0, 2)
                                         }),
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
-                                            className: h.debugTitle,
+                                            className: f.debugTitle,
                                             children: 'Override Descriptor'
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
-                                            className: h.pre,
-                                            children: null == u ? 'None' : JSON.stringify(u, void 0, 2)
+                                            className: f.pre,
+                                            children: null == m ? 'None' : JSON.stringify(m, void 0, 2)
                                         }),
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
-                                            className: h.debugTitle,
+                                            className: f.debugTitle,
                                             children: 'Recent Exposures'
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
-                                            className: h.pre,
-                                            children: 0 === j.length ? 'None' : j.join('\n')
+                                            className: f.pre,
+                                            children: 0 === C.length ? 'None' : C.join('\n')
                                         })
                                     ]
                                 })
                               : (0, r.jsx)(o.zxk, {
-                                    className: h.debugButton,
+                                    className: f.debugButton,
                                     size: o.zxk.Sizes.SMALL,
                                     look: o.zxk.Looks.BLANK,
-                                    onClick: () => N(!0),
+                                    onClick: () => _(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]
                   }),
-                  (0, r.jsx)(o.$i$, { className: h.divider })
+                  (0, r.jsx)(o.$i$, { className: f.divider })
               ]
           })
         : (0, r.jsx)('div', {
-              className: h.group,
-              children: (0, r.jsx)(o.hjN, { children: O })
+              className: f.group,
+              children: (0, r.jsx)(o.hjN, { children: v })
           });
 }
 function x(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: s } = e,
-        [m, g] = i.useState(null != s),
-        [b, N] = i.useState(!1),
-        x = i.useCallback(() => {
+        [c, g] = i.useState(null != s),
+        [p, b] = i.useState(!1),
+        N = i.useCallback(() => {
             g((e) => !e);
         }, []),
-        _ = (0, l.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
-        E = (0, l.Wu)([d.Z], () =>
+        x = (0, l.e7)([u.Z], () => u.Z.getLoadedGuildExperiment(n)),
+        _ = (0, l.Wu)([u.Z], () =>
             a()
-                .sortBy(d.Z.getRecentExposures(p.xY.GUILD, n), (e) => {
+                .sortBy(u.Z.getRecentExposures(h.xY.GUILD, n), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -217,14 +237,14 @@ function x(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [j, O] = (0, l.Wu)([u.Z, d.Z], () => {
-            let e = a().sortBy(a().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
+        [E, j] = (0, l.Wu)([m.Z, u.Z], () => {
+            let e = a().sortBy(a().values(m.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 r = [];
             for (let s of e) {
                 var i;
-                let e = d.Z.getGuildExperimentDescriptor(n, s.id),
-                    a = null != (i = null == e ? void 0 : e.bucket) ? i : p.NZ.NOT_ELIGIBLE;
+                let e = u.Z.getGuildExperimentDescriptor(n, s.id),
+                    a = null != (i = null == e ? void 0 : e.bucket) ? i : h.NZ.NOT_ELIGIBLE;
                 a in t || (t[a] = 0), t[a]++, r.push(''.concat(s.name, ': ').concat(a));
             }
             let s = a()(t)
@@ -235,11 +255,11 @@ function x(e) {
                 .join(', ');
             return [r.join('\n'), s];
         }),
-        C = (0, r.jsx)(o.P3F, {
-            onClick: x,
+        O = (0, r.jsx)(o.P3F, {
+            onClick: N,
             children: (0, r.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
-                className: h.title,
+                className: f.title,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
@@ -252,35 +272,32 @@ function x(e) {
                         ]
                     }),
                     (0, r.jsx)('span', {
-                        className: h.experimentDate,
+                        className: f.experimentDate,
                         children: 'Guild'
                     })
                 ]
             })
         });
-    return m
+    return c
         ? (0, r.jsxs)('div', {
-              className: h.group,
+              className: f.group,
               children: [
                   (0, r.jsxs)(o.hjN, {
                       children: [
-                          C,
+                          O,
                           (0, r.jsxs)('div', {
                               children: [
                                   (0, r.jsx)(o.xJW, {
                                       title: 'Bucket Override',
-                                      children: (0, r.jsx)(o.q4e, {
-                                          value: null != s ? s.bucket : null,
-                                          clearable: null != s,
-                                          options: f(t.buckets, t.description),
-                                          onChange: (e) => {
-                                              (0, c.rX)(n, e);
-                                          }
+                                      children: (0, r.jsx)(d.y, {
+                                          experiment: t,
+                                          experimentId: n,
+                                          overrideDescriptor: s
                                       })
                                   }),
                                   'string' == typeof t.description
                                       ? (0, r.jsx)('div', {
-                                            className: h.description,
+                                            className: f.description,
                                             children: (0, r.jsx)(o.R94, {
                                                 type: o.geA.DESCRIPTION,
                                                 children: t.description
@@ -290,13 +307,13 @@ function x(e) {
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: h.description,
+                              className: f.description,
                               children: [
                                   (0, r.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current Assignments: ', O]
+                                      children: ['Current Assignments: ', j]
                                   }),
-                                  null == _
+                                  null == x
                                       ? (0, r.jsx)(o.R94, {
                                             type: o.geA.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -304,65 +321,65 @@ function x(e) {
                                       : null
                               ]
                           }),
-                          b
+                          p
                               ? (0, r.jsxs)('div', {
                                     children: [
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
-                                            className: h.debugTitle,
+                                            className: f.debugTitle,
                                             children: 'Guild Assignments'
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
-                                            className: h.pre,
-                                            children: j
+                                            className: f.pre,
+                                            children: E
                                         }),
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
-                                            className: h.debugTitle,
+                                            className: f.debugTitle,
                                             children: 'Server Descriptor'
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
-                                            className: h.pre,
-                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
+                                            className: f.pre,
+                                            children: null == x ? 'None' : JSON.stringify(x, void 0, 2)
                                         }),
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
-                                            className: h.debugTitle,
+                                            className: f.debugTitle,
                                             children: 'Override Descriptor'
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
-                                            className: h.pre,
+                                            className: f.pre,
                                             children: null == s ? 'None' : JSON.stringify(s, void 0, 2)
                                         }),
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
-                                            className: h.debugTitle,
+                                            className: f.debugTitle,
                                             children: 'Recent Exposures'
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
-                                            className: h.pre,
-                                            children: 0 === E.length ? 'None' : E.join('\n')
+                                            className: f.pre,
+                                            children: 0 === _.length ? 'None' : _.join('\n')
                                         })
                                     ]
                                 })
                               : (0, r.jsx)(o.zxk, {
-                                    className: h.debugButton,
+                                    className: f.debugButton,
                                     size: o.zxk.Sizes.SMALL,
                                     look: o.zxk.Looks.BLANK,
-                                    onClick: () => N(!0),
+                                    onClick: () => b(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]
                   }),
-                  (0, r.jsx)(o.$i$, { className: h.divider })
+                  (0, r.jsx)(o.$i$, { className: f.divider })
               ]
           })
         : (0, r.jsx)('div', {
-              className: h.group,
-              children: (0, r.jsx)(o.hjN, { children: C })
+              className: f.group,
+              children: (0, r.jsx)(o.hjN, { children: O })
           });
 }
