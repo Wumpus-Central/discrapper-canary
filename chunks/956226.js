@@ -1,20 +1,19 @@
-n.d(t, { $: () => s });
-var r = n(120356),
-    i = n.n(r),
-    o = n(981631),
-    a = n(762564);
-function s(e, t, n, r) {
-    var s, l;
-    let c = {
-        '--custom-gradient-color-1': null != e ? e : o.p6O,
-        '--custom-gradient-color-2': null != (s = null != t ? t : e) ? s : o.p6O,
-        '--custom-gradient-color-3': null != (l = null != n ? n : e) ? l : o.p6O
-    };
+n.d(t, {
+    D: () => i,
+    f: () => o
+});
+var r = n(866442);
+function i(e) {
     return {
-        text: {
-            gradientClassName: a.gradientText,
-            gradientStyle: c
-        },
-        gradient: { gradientClassName: i()(null != n ? a.threeColorGradient : a.twoColorGradient, { [a.gradient]: !r }) }
+        primaryColor: 0 === e.primary_color || null == e.primary_color ? void 0 : (0, r.Rf)(e.primary_color),
+        secondaryColor: 0 === e.secondary_color || null == e.secondary_color ? void 0 : (0, r.Rf)(e.secondary_color),
+        tertiaryColor: 0 === e.tertiary_color || null == e.tertiary_color ? void 0 : (0, r.Rf)(e.tertiary_color)
+    };
+}
+function o(e) {
+    return {
+        primaryColor: 0 === e.primaryColor || null == e.primaryColor ? void 0 : (0, r.Rf)(e.primaryColor),
+        secondaryColor: 0 === e.secondaryColor || null == e.secondaryColor ? void 0 : (0, r.Rf)(e.secondaryColor),
+        tertiaryColor: 0 === e.tertiaryColor || null == e.tertiaryColor ? void 0 : (0, r.Rf)(e.tertiaryColor)
     };
 }

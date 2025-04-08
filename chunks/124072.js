@@ -1,13 +1,14 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(866442),
     l = n(481060),
-    c = n(779699),
-    u = n(477524);
-function d(e, t, n) {
+    c = n(142375),
+    u = n(779699),
+    d = n(477524);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +32,12 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,29 +49,29 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,48 +80,55 @@ function m(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let g = (e) => {
-    var { children: t, className: n, color: o, iconType: d, onMouseEnter: _, onMouseLeave: m } = e,
-        g = h(e, ['children', 'className', 'color', 'iconType', 'onMouseEnter', 'onMouseLeave']);
-    let [E, b] = i.useState(!1),
-        y = i.useCallback(
+let E = (e) => {
+    var { children: t, className: n, color: o, roleColors: f, iconType: p, onMouseEnter: g, onMouseLeave: E } = e,
+        b = m(e, ['children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
+    let [y, v] = i.useState(!1),
+        { text: O, gradient: I } = (0, c.N)(null == f ? void 0 : f.primaryColor, null == f ? void 0 : f.secondaryColor, null == f ? void 0 : f.tertiaryColor),
+        S = i.useCallback(
             (e) => {
-                b(!0), null == _ || _(e);
+                v(!0), null == g || g(e);
             },
-            [b, _]
+            [v, g]
         ),
-        v = i.useCallback(
+        T = i.useCallback(
             (e) => {
-                b(!1), null == m || m(e);
+                v(!1), null == E || E(e);
             },
-            [b, m]
+            [v, E]
         ),
-        O = {};
+        N = {};
     return (
         null != o &&
-            (O = {
+            (N = {
                 color: (0, s.Rf)(o),
-                backgroundColor: E ? (0, s.br)(o, 0.3) : (0, s.br)(o, 0.1)
+                backgroundColor: y ? (0, s.br)(o, 0.3) : (0, s.br)(o, 0.1)
             }),
         (0, r.jsx)(
             l.P3F,
-            p(f({}, g), {
+            h(_({}, b), {
                 tag: 'span',
                 className: a()(n, {
-                    [u.wrapper]: !0,
-                    interactive: g.onClick
+                    [d.wrapper]: !0,
+                    interactive: b.onClick
                 }),
-                onMouseEnter: y,
-                onMouseLeave: v,
-                style: O,
-                tabIndex: null != g.onClick ? 0 : -1,
+                onMouseEnter: S,
+                onMouseLeave: T,
+                style: N,
+                tabIndex: null != b.onClick ? 0 : -1,
                 children:
-                    null != d
-                        ? (0, r.jsx)(c.Z, {
-                              iconType: d,
+                    null != p
+                        ? (0, r.jsx)(u.Z, {
+                              iconType: p,
                               children: t
                           })
-                        : t
+                        : null != f
+                          ? (0, r.jsx)('span', {
+                                style: _({}, O.gradientStyle),
+                                className: I.gradientClassName,
+                                children: t
+                            })
+                          : t
             })
         )
     );
