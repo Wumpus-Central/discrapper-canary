@@ -1,4 +1,4 @@
-n.d(t, { b: () => L }), n(388685);
+n.d(t, { b: () => D }), n(388685);
 var r = n(392711),
     i = n.n(r),
     o = n(674466),
@@ -61,23 +61,19 @@ function R(e) {
     return l > 0 ? u : null;
 }
 function P(e) {
-    var t;
-    return 'streamKey' in e && null != e.streamKey && null != (t = m.Z.getRTCConnection(e.streamKey)) ? t : null;
-}
-function w(e) {
     var t, n;
     let r = h.Z.getVoiceChannelId();
     return null != (n = null != (t = 'channelId' in e ? e.channelId : void 0) ? t : r) ? n : null;
 }
-function D(e, t, n) {
+function w(e, t, n) {
     var r, i, o, a;
     return e ? (null != (i = null == (r = S(t)) ? void 0 : r.frameRateEncode) ? i : null) : null != (a = null == (o = T(t, n)) ? void 0 : o.frameRateDecode) ? a : null;
 }
-function L(e, t) {
-    var n, r, c, h, m;
+function D(e, t) {
+    var n, r, c, h, D;
     let L,
         x = (0, v.hp)(e),
-        M = w(t),
+        M = P(t),
         k = d.Z.getChannel(M),
         j = 'streamKey' in t ? t.streamKey : void 0,
         U = 'mediaContext' in t ? t.mediaContext : void 0,
@@ -94,7 +90,7 @@ function L(e, t) {
         q = 'videoDeviceName' in t ? t.videoDeviceName : void 0,
         Q = 'userId' in t ? t.userId : void 0,
         X = null != j ? (0, l.my)(j) : null,
-        J = P(t),
+        J = null != j ? m.Z.getRTCConnection(j) : null,
         $ = null != j ? J : _.ZP.getRTCConnection(),
         ee = null != j ? (null == J || null == (n = J.analyticsContext) ? void 0 : n.streamApplication) : null,
         { resolution: et, fps: en } = u.Z.getState(),
@@ -102,11 +98,11 @@ function L(e, t) {
         es = x.isErrorOutbound,
         el = null != U ? U : I.Yn.DEFAULT,
         ec = null != X ? X.ownerId : Q,
-        eu = null != X ? (null == $ ? void 0 : $.getVoiceParticipantType()) : es ? 'sender' : 'receiver',
+        eu = null != J ? (null == J ? void 0 : J.getVoiceParticipantType()) : es ? 'sender' : 'receiver',
         ed = null != (r = null == $ ? void 0 : $.getMediaEngineConnectionId()) ? r : null;
-    (L = null != j && null != X ? (es ? (null == $ || null == (c = $.getOutboundStats()) ? void 0 : c.find((e) => e.quality === I.y7)) : null == $ ? void 0 : $.getInboundStats(X.ownerId)) : es ? (null != (m = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames)) ? m : null) : null != ec ? (null == $ ? void 0 : $.getInboundStats(ec)) : null),
+    (L = null != j && null != X ? (es ? (null == $ || null == (c = $.getOutboundStats()) ? void 0 : c.find((e) => e.quality === I.y7)) : null == $ ? void 0 : $.getInboundStats(X.ownerId)) : es ? (null != (D = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames)) ? D : null) : null != ec ? (null == $ ? void 0 : $.getInboundStats(ec)) : null),
         (0, g.q)().then((t) => {
-            var n, r, i, s, l, c, u, d, h, m, g, v, P, w, j, Q, ee, ef, e_, ep, eh, em, eg, eE, eb, ey, ev, eO, eI, eS, eT, eN, eA, eC, eR, eP, ew, eD, eL, ex, eM, ek, ej, eU, eG, eB, eV, eF, eZ;
+            var n, r, i, s, l, c, u, d, h, m, g, v, P, D, j, Q, ee, ef, e_, ep, eh, em, eg, eE, eb, ey, ev, eO, eI, eS, eT, eN, eA, eC, eR, eP, ew, eD, eL, ex, eM, ek, ej, eU, eG, eB, eV, eF, eZ;
             let eH = {
                 error_name: e.valueOf(),
                 error_code: x.errorCode,
@@ -114,7 +110,7 @@ function L(e, t) {
                 error_category: x.category,
                 underlying_error: null != G ? G : null,
                 error_message: null != B ? B : null,
-                guild_id: null != (w = null == k ? void 0 : k.guild_id) ? w : null,
+                guild_id: null != (D = null == k ? void 0 : k.guild_id) ? D : null,
                 channel_id: null != M ? M : null,
                 channel_type: null != (j = null == k ? void 0 : k.type) ? j : null,
                 rtc_connection_id: null != F ? F : null,
@@ -138,7 +134,7 @@ function L(e, t) {
                 incoming_video_stopped_for_occlusion: !a.w.isIncomingVideoEnabled(),
                 bitrate: null != (eS = null == (u = N(es, ed, ec)) ? void 0 : u.bitrate) ? eS : null,
                 target_bitrate: es && null != (eT = null == (d = S(ed)) ? void 0 : d.bitrateTarget) ? eT : null,
-                fps: null != (eN = D(es, el, ec)) ? eN : null,
+                fps: null != (eN = w(es, el, ec)) ? eN : null,
                 target_fps: el === I.Yn.STREAM && es ? en : null,
                 sender_user_id: null != (eA = null == X ? void 0 : X.ownerId) ? eA : null,
                 stream_region: null != (eC = null == J ? void 0 : J.getRegion()) ? eC : null,
