@@ -205,7 +205,13 @@ class P {
                         });
                         break;
                     case v.mFx.JOIN_REQUEST:
-                        this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, { user: (0, I.Z)(a) });
+                        this.rpcServer.dispatchToSubscriptions(v.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, {
+                            user: (0, I.Z)(a),
+                            activity: s,
+                            type: l.type,
+                            channel_id: n,
+                            message_id: r.id
+                        });
                 }
             }),
             T(this, 'handleOAuth2TokenRevoke', (e) => {
