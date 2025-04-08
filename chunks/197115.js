@@ -128,7 +128,7 @@ let L = function (e) {
         ei = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeOverride()),
         eo = (e) => {
             var o;
-            if ((e.preventDefault(), null == X)) return void (0, _.uL)(I.Z5c.LOGIN);
+            if ((e.preventDefault(), null == X)) return void (0, _.uL)(I.Z5c.LOGIN, { source: 'premium_subscribe_button' });
             if ((null == N || N(e), (null == $ ? void 0 : $.status) === I.O0b.ACCOUNT_HOLD)) {
                 (0, d.A3)(), l.Z.open(I.oAB.PREMIUM), null == G || G(!1);
                 return;

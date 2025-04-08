@@ -10,8 +10,8 @@ var o = n(120356),
 let u = (e) => {
     var t,
         n,
-        { width: r = 24, height: o = 24, color: c = 'currentColor', direction: u, foreground: d, className: p, title: g } = e,
-        h = (function (e, t) {
+        { width: r = 24, height: o = 24, color: c = 'currentColor', direction: u, foreground: d, className: p, title: h } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -56,7 +56,7 @@ let u = (e) => {
                     });
             }
             return e;
-        })({}, (0, l.Z)(h))),
+        })({}, (0, l.Z)(g))),
         (n = n =
             {
                 width: r,
@@ -84,7 +84,7 @@ let u = (e) => {
                 ),
                 viewBox: '0 0 24 24',
                 children: [
-                    null != g ? (0, i.jsx)('title', { children: g }) : null,
+                    null != h ? (0, i.jsx)('title', { children: h }) : null,
                     (0, i.jsx)('polygon', {
                         className: d,
                         fill: c,

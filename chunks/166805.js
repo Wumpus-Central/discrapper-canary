@@ -1,4 +1,4 @@
-n.d(t, { P: () => C }), n(388685), n(953529);
+n.d(t, { P: () => O }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(580685),
@@ -21,10 +21,10 @@ var r = n(200651),
 function v(e) {
     let { guildId: t } = e,
         { guildProfile: c, fetchGuildProfile: g, fetchStatus: v } = (0, m.u)(t),
-        C = v !== u.a.FETCHED,
+        O = v !== u.a.FETCHED,
         {
-            fetchedEmbed: O,
-            embedEnabled: y,
+            fetchedEmbed: y,
+            embedEnabled: C,
             embedChannelId: I
         } = (0, l.cj)([f.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
@@ -38,14 +38,14 @@ function v(e) {
         S = i.useMemo(() => (0, x.a)(t), [t]),
         [T, P] = i.useState(!1),
         w = null != c && s.Y.VISIBLE.has(c.visibility),
-        R = !C && !w && !y,
+        R = !O && !w && !C,
         D = (0, h.Dj)({
             guildId: t,
             location: 'widget settings'
         });
     i.useEffect(() => {
-        O || (0, p.R)(t);
-    }, [O, t]),
+        y || (0, p.R)(t);
+    }, [y, t]),
         i.useEffect(() => {
             g();
         }, [t, g]);
@@ -55,12 +55,12 @@ function v(e) {
         },
         [I, t]
     );
-    return O
+    return y
         ? (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(o.j7V, {
                       disabled: T,
-                      value: y,
+                      value: C,
                       hideBorder: !0,
                       onChange: Z,
                       children: N.NW.string(N.t.NR6hub)
@@ -73,14 +73,14 @@ function v(e) {
                             children: D ? N.NW.string(N.t.zCGuJy) : N.NW.string(N.t.yInR2t)
                         })
                       : null,
-                  y
+                  C
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', { className: _.divider }),
                                 (0, r.jsx)(o.vwX, { children: N.NW.string(N.t.LUo0Q0) }),
                                 (0, r.jsx)(j.m, {
                                     guildId: t,
-                                    widgetEnabled: y,
+                                    widgetEnabled: C,
                                     widgetChannelId: I,
                                     enableLocalUpdate: !0
                                 }),
@@ -135,7 +135,7 @@ function v(e) {
           })
         : (0, r.jsx)(o.$jN, {});
 }
-function C(e) {
+function O(e) {
     let { guildId: t } = e,
         n = (0, l.e7)([g.Z], () => g.Z.enabled);
     return (0, r.jsxs)(o.hjN, {

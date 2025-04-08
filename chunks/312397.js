@@ -24,9 +24,9 @@ var r = n(200651),
     N = n(600164),
     _ = n(699553),
     v = n(65361),
-    C = n(536442),
-    O = n(142497),
-    y = n(345861),
+    O = n(536442),
+    y = n(142497),
+    C = n(345861),
     I = n(208567),
     E = n(496675),
     S = n(594174),
@@ -197,7 +197,7 @@ class $ extends i.PureComponent {
                                     className: Y.marginBottom8,
                                     children: V.NW.string(V.t['R/9yQE'])
                                 }),
-                                (0, r.jsx)(y.Z, {
+                                (0, r.jsx)(C.Z, {
                                     look: g.iLD.OUTLINED,
                                     color: g.Ttl.PRIMARY,
                                     disabled: !n,
@@ -610,7 +610,7 @@ function ee() {
         l = (0, f.ZP)(),
         { analyticsLocations: c } = (0, x.ZP)(b.Z.OVERVIEW);
     i.useEffect(() => {
-        (0, O.Kw)(C.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
+        (0, y.Kw)(O.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
     let { canManageGuild: u, isGuildAdmin: m } = (0, d.cj)([E.Z], () => ({
             canManageGuild: E.Z.can(z.Plq.MANAGE_GUILD, e),

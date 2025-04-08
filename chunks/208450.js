@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(367907),
     x = n(313201),
     y = n(592125),
-    E = n(984933),
-    v = n(768119),
-    O = n(944486),
-    N = n(585483),
+    v = n(984933),
+    E = n(768119),
+    N = n(944486),
+    O = n(585483),
     j = n(72006),
     C = n(405656),
     S = n(181389),
@@ -43,12 +43,12 @@ function Z(e, t, n) {
     );
 }
 n(852037);
-let R = (0, x.hQ)(),
-    k = c()(p.yC, 500);
+let k = (0, x.hQ)(),
+    R = c()(p.yC, 500);
 class D extends i.PureComponent {
     componentDidMount() {
         var e, t;
-        N.S.subscribe(P.CkL.PERFORM_SEARCH, this.search), N.S.subscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), N.S.subscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch), null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute('aria-haspopup', 'listbox');
+        O.S.subscribe(P.CkL.PERFORM_SEARCH, this.search), O.S.subscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), O.S.subscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch), null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute('aria-haspopup', 'listbox');
     }
     componentDidUpdate(e) {
         let { editorState: t, searchId: n } = this.props;
@@ -59,7 +59,7 @@ class D extends i.PureComponent {
         }
     }
     componentWillUnmount() {
-        N.S.unsubscribe(P.CkL.PERFORM_SEARCH, this.search), N.S.unsubscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), N.S.unsubscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch);
+        O.S.unsubscribe(P.CkL.PERFORM_SEARCH, this.search), O.S.unsubscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), O.S.unsubscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
         let t = C.kG(j.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
@@ -98,7 +98,7 @@ class D extends i.PureComponent {
             onChange: this.setEditorState,
             role: 'combobox',
             ariaExpanded: e,
-            ariaControls: e ? R : void 0,
+            ariaControls: e ? k : void 0,
             ariaLabel: A.NW.string(A.t['5h0QOD']),
             ariaAutoComplete: 'list'
         });
@@ -169,12 +169,12 @@ class D extends i.PureComponent {
             }),
             Z(this, 'handleSelectedIndexChanged', (e) => {
                 var t, n;
-                null == (n = this._editorRef) || null == (t = n.editor) || t.setAttribute('aria-activedescendant', null != e ? ''.concat(R, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
+                null == (n = this._editorRef) || null == (t = n.editor) || t.setAttribute('aria-activedescendant', null != e ? ''.concat(k, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
             }),
             Z(this, 'renderPopout', () =>
                 (0, r.jsx)(T.ZP, {
                     ref: this._searchPopoutRef,
-                    navId: R,
+                    navId: k,
                     onSelectedIndexChanged: this.handleSelectedIndexChanged
                 })
             ),
@@ -190,7 +190,7 @@ class D extends i.PureComponent {
                         n = C.$G(e);
                     for (let t = 0; t < e.length; t++) C.Fr(e[t], e[t + 1]) || (r = r.substring(0, e[t].start) + r.substring(e[t].end));
                     if (0 === e.length || 0 === Object.keys(n).length) return !1;
-                    k(t, n, r, !!i), d.uvj.announce(A.NW.string(A.t.pKCxWF)), this.onBlur();
+                    R(t, n, r, !!i), d.uvj.announce(A.NW.string(A.t.pKCxWF)), this.onBlur();
                 }
                 return !0;
             }),
@@ -203,10 +203,10 @@ class D extends i.PureComponent {
             Z(this, 'handleFocusSearch', (e) => {
                 let { prefillCurrentChannel: t } = e;
                 if (!t) return void this.focusEditor();
-                let n = O.Z.getChannelId(),
+                let n = N.Z.getChannelId(),
                     r = y.Z.getChannel(n);
                 if (((null == r ? void 0 : r.isThread()) && (r = y.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
-                let i = E.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
+                let i = v.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
                     a = null != i ? i.name : r.name;
                 Promise.resolve().then(() => {
                     let { _editorRef: e } = this;
@@ -315,19 +315,19 @@ class D extends i.PureComponent {
             C.WU();
     }
 }
-let L = u.ZP.connectStores([_.Z, v.Z], () => {
+let L = u.ZP.connectStores([_.Z, E.Z], () => {
     var e;
-    let t = v.Z.getCurrentSearchId(),
-        n = v.Z.getSearchType(),
-        r = null != t && v.Z.isSearching(t),
-        i = null != t && null != (e = v.Z.getEditorState(t)) ? e : j.nR(S.Jl(h.ZP)),
+    let t = E.Z.getCurrentSearchId(),
+        n = E.Z.getSearchType(),
+        r = null != t && E.Z.isSearching(t),
+        i = null != t && null != (e = E.Z.getEditorState(t)) ? e : j.nR(S.Jl(h.ZP)),
         a = _.Z.keyboardModeEnabled;
     return {
         searchId: t,
         searchType: n,
         isSearching: r,
         editorState: i,
-        hasResults: v.Z.hasResults(t),
+        hasResults: E.Z.hasResults(t),
         keyboardModeEnabled: a
     };
 })(D);

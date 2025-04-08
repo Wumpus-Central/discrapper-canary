@@ -147,13 +147,13 @@ function f(e) {
     let { value: t, onChange: n, onBlur: s, onFocus: g, onRemove: p, isSelected: f, isSelecting: b, error: x, forceShowErrorTooltip: j } = e,
         N = i.useRef(null),
         _ = i.useRef(null),
-        [v, C] = i.useState(!1),
-        { ref: O, width: y = 0 } = (0, c.Z)(v),
+        [v, O] = i.useState(!1),
+        { ref: y, width: C = 0 } = (0, c.Z)(v),
         { ref: I, width: E = 0 } = (0, c.Z)(v),
         S = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         [T, P] = i.useState(j),
         w = i.useRef(null),
-        R = y > E ? y : E;
+        R = C > E ? C : E;
     i.useEffect(() => {
         j
             ? (P(!0),
@@ -177,13 +177,13 @@ function f(e) {
         Z = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && p(), null != N.current && null != O.current && null != _.current)) {
+                if ((t.trim().length <= 0 && p(), null != N.current && null != y.current && null != _.current)) {
                     var n;
-                    N.current.scrollTo(0, 0), N.current.setSelectionRange(0, 0), (N.current.scrollLeft = 0), (O.current.scrollLeft = 0), (null == (n = _.current) ? void 0 : n.ref) != null && (_.current.ref.scrollLeft = 0);
+                    N.current.scrollTo(0, 0), N.current.setSelectionRange(0, 0), (N.current.scrollLeft = 0), (y.current.scrollLeft = 0), (null == (n = _.current) ? void 0 : n.ref) != null && (_.current.ref.scrollLeft = 0);
                 }
-                C(!1), s(e);
+                O(!1), s(e);
             },
-            [t, O, s, p]
+            [t, y, s, p]
         ),
         A = i.useCallback(
             (e) => {
@@ -195,7 +195,7 @@ function f(e) {
         k = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                g(t), t ? e.preventDefault() : C(!0), e.stopPropagation();
+                g(t), t ? e.preventDefault() : O(!0), e.stopPropagation();
             },
             [g]
         ),
@@ -242,7 +242,7 @@ function f(e) {
                             style: { width: R > 0 ? R : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),
                         (0, r.jsx)(h, {
-                            ref: O,
+                            ref: y,
                             value: t,
                             isEditing: v,
                             isSelected: f,

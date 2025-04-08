@@ -8,7 +8,7 @@ var i = n(481060),
     s = n(981631),
     c = n(388032),
     u = n(963650);
-let d = () => (0, a.uL)(s.Z5c.LOGIN),
+let d = () => (0, a.uL)(s.Z5c.LOGIN, { source: 'age_gate_underage' }),
     p = (e) => {
         let { authBoxClassName: t, underageMessage: a } = e;
         return (0, r.jsxs)(o.ZP, {

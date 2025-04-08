@@ -96,8 +96,8 @@ async function h(e) {
     });
     return t;
 }
-function m(e) {
-    o.Z.logout((0, r.Ui)(e.pathname + e.search, !1));
+function m(e, t) {
+    o.Z.logout(t, (0, r.Ui)(e.pathname + e.search, !1));
 }
 async function g(e) {
     return await i.tn.post({

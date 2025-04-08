@@ -19,15 +19,15 @@ var r = n(200651),
     N = n(557359),
     _ = n(386885),
     v = n(203377),
-    C = n(929834),
-    O = n(388032),
-    y = n(356941);
+    O = n(929834),
+    y = n(388032),
+    C = n(356941);
 function I() {
     return (0, r.jsx)(l.Text, {
         tag: 'span',
         variant: 'text-xs/bold',
         color: 'text-danger',
-        className: y.required,
+        className: C.required,
         children: '*'
     });
 }
@@ -48,23 +48,23 @@ function E(e) {
             onlineCount: m.Z.getOnlineCount(n.id)
         }));
     return (0, r.jsxs)('div', {
-        className: y.twoColumns,
+        className: C.twoColumns,
         children: [
             (0, r.jsxs)('div', {
-                className: y.sectionContainer,
+                className: C.sectionContainer,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsx)(l.X6q, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: y.header,
-                                children: O.NW.string(O.t.LYju5O)
+                                className: C.header,
+                                children: y.NW.string(y.t.LYju5O)
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-secondary',
-                                children: O.NW.string(O.t['53LhIy'])
+                                children: y.NW.string(y.t['53LhIy'])
                             })
                         ]
                     }),
@@ -73,22 +73,22 @@ function E(e) {
                             (0, r.jsx)(l.X6q, {
                                 variant: 'text-xs/bold',
                                 color: 'text-muted',
-                                className: y.subHeader,
-                                children: O.NW.string(O.t.JaecVF)
+                                className: C.subHeader,
+                                children: y.NW.string(y.t.JaecVF)
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-secondary',
-                                children: O.NW.string(O.t.VJMq8f)
+                                children: y.NW.string(y.t.VJMq8f)
                             }),
                             (0, r.jsxs)('div', {
-                                className: y.buttonList,
+                                className: C.buttonList,
                                 children: [
                                     (0, r.jsx)(u.Z, {
                                         size: l.zxk.Sizes.SMALL,
                                         color: l.zxk.Colors.PRIMARY,
-                                        className: y.editableSection,
-                                        buttonCTA: O.NW.string(O.t['3UB9aW']),
+                                        className: C.editableSection,
+                                        buttonCTA: y.NW.string(y.t['3UB9aW']),
                                         onChange: c
                                     }),
                                     null != n.discoverySplash
@@ -96,9 +96,9 @@ function E(e) {
                                               size: l.zxk.Sizes.SMALL,
                                               color: l.zxk.Colors.RED,
                                               look: l.zxk.Looks.LINK,
-                                              className: y.editableSection,
+                                              className: C.editableSection,
                                               onClick: d,
-                                              children: O.NW.string(O.t.N86XcH)
+                                              children: y.NW.string(y.t.N86XcH)
                                           })
                                         : null
                                 ]
@@ -110,18 +110,18 @@ function E(e) {
                             (0, r.jsxs)(l.X6q, {
                                 variant: 'text-xs/bold',
                                 color: 'text-muted',
-                                className: y.subHeader,
-                                children: [O.NW.string(O.t['1Ts7QE']), o ? (0, r.jsx)(I, {}) : null]
+                                className: C.subHeader,
+                                children: [y.NW.string(y.t['1Ts7QE']), o ? (0, r.jsx)(I, {}) : null]
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-secondary',
-                                children: O.NW.string(O.t['6Y9q8f'])
+                                children: y.NW.string(y.t['6Y9q8f'])
                             }),
                             (0, r.jsx)(l.Kx8, {
-                                className: y.editableSection,
+                                className: C.editableSection,
                                 value: null != (t = n.description) ? t : '',
-                                placeholder: O.NW.string(O.t.Nvfows),
+                                placeholder: y.NW.string(y.t.Nvfows),
                                 onChange: p,
                                 maxLength: s.Us
                             })
@@ -130,7 +130,7 @@ function E(e) {
                 ]
             }),
             (0, r.jsx)(b.Z, {
-                className: y.preview,
+                className: C.preview,
                 guild: n,
                 memberCount: h,
                 presenceCount: f
@@ -141,20 +141,20 @@ function E(e) {
 function S(e) {
     let { guild: t, guildMetadata: n, requirePrimaryCategory: i, error: s } = e;
     return (0, r.jsxs)('div', {
-        className: y.sectionContainer,
+        className: C.sectionContainer,
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        className: y.header,
-                        children: O.NW.string(O.t['5b4VCQ'])
+                        className: C.header,
+                        children: y.NW.string(y.t['5b4VCQ'])
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        children: O.NW.string(O.t.MMEJFB)
+                        children: y.NW.string(y.t.MMEJFB)
                     })
                 ]
             }),
@@ -163,16 +163,16 @@ function S(e) {
                     (0, r.jsxs)(l.X6q, {
                         variant: 'text-xs/bold',
                         color: 'text-muted',
-                        className: y.subHeader,
-                        children: [O.NW.string(O.t.Rv9An5), i ? (0, r.jsx)(I, {}) : null]
+                        className: C.subHeader,
+                        children: [y.NW.string(y.t.Rv9An5), i ? (0, r.jsx)(I, {}) : null]
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        children: O.NW.string(O.t.CE5Gyc)
+                        children: y.NW.string(y.t.CE5Gyc)
                     }),
                     (0, r.jsx)('div', {
-                        className: y.editableSection,
+                        className: C.editableSection,
                         children: (0, r.jsx)(h.E, {
                             guildId: t.id,
                             guildMetadata: n
@@ -185,16 +185,16 @@ function S(e) {
                     (0, r.jsx)(l.X6q, {
                         variant: 'text-xs/bold',
                         color: 'text-muted',
-                        className: y.subHeader,
-                        children: O.NW.string(O.t.oOPlPD)
+                        className: C.subHeader,
+                        children: y.NW.string(y.t.oOPlPD)
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        children: O.NW.string(O.t['4jnzlZ'])
+                        children: y.NW.string(y.t['4jnzlZ'])
                     }),
                     (0, r.jsx)('div', {
-                        className: y.editableSection,
+                        className: C.editableSection,
                         children: (0, r.jsx)(f.Z, {
                             guild: t,
                             guildMetadata: n
@@ -204,7 +204,7 @@ function S(e) {
                         ? (0, r.jsx)(l.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
-                              className: y.error,
+                              className: C.error,
                               children: s
                           })
                         : null
@@ -240,43 +240,43 @@ function T(e) {
                             text: e,
                             onClick: () => p(e),
                             disabled: t,
-                            tooltipText: t ? O.NW.string(O.t.Xx7XeH) : void 0
+                            tooltipText: t ? y.NW.string(y.t.Xx7XeH) : void 0
                         };
                     }),
             [n.keywords, n.primaryCategoryId, p]
         ),
         f = null != a ? a : u;
     return (0, r.jsxs)('div', {
-        className: y.sectionContainer,
+        className: C.sectionContainer,
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)(l.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        className: y.header,
-                        children: [O.NW.string(O.t['0PJZXl']), s ? (0, r.jsx)(I, {}) : null]
+                        className: C.header,
+                        children: [y.NW.string(y.t['0PJZXl']), s ? (0, r.jsx)(I, {}) : null]
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        children: O.NW.string(O.t.ztiTDA)
+                        children: y.NW.string(y.t.ztiTDA)
                     }),
                     (0, r.jsx)(o.Z, {
-                        className: y.editableSection,
+                        className: C.editableSection,
                         tags: n.keywords,
                         onRemoveTag: g,
                         onAddTag: p,
                         onAddTagError: m,
                         maxTags: v.G7,
                         maxTaxLength: v._0,
-                        placeholder: n.keywords.length < 1 ? O.NW.string(O.t.EL4Lho) : void 0
+                        placeholder: n.keywords.length < 1 ? y.NW.string(y.t.EL4Lho) : void 0
                     }),
                     null != f
                         ? (0, r.jsx)(l.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
-                              className: y.error,
+                              className: C.error,
                               children: f
                           })
                         : null
@@ -288,11 +288,11 @@ function T(e) {
                           (0, r.jsx)(l.X6q, {
                               variant: 'text-xs/bold',
                               color: 'text-muted',
-                              className: y.subHeader,
-                              children: O.NW.string(O.t.sF28Oj)
+                              className: C.subHeader,
+                              children: y.NW.string(y.t.sF28Oj)
                           }),
                           (0, r.jsx)('div', {
-                              className: y.editableSection,
+                              className: C.editableSection,
                               children: (0, r.jsx)(d.j, { pills: h })
                           })
                       ]
@@ -309,27 +309,27 @@ function P(e) {
             (0, c.J9)(a, !s);
         }, [a, s]);
     return (0, r.jsxs)('div', {
-        className: y.twoColumns,
+        className: C.twoColumns,
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        className: y.header,
-                        children: O.NW.string(O.t.DhJ8ur)
+                        className: C.header,
+                        children: y.NW.string(y.t.DhJ8ur)
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        children: O.NW.string(O.t['/RSSlZ'])
+                        children: y.NW.string(y.t['/RSSlZ'])
                     }),
                     (0, r.jsx)(l.zxk, {
-                        className: y.editableSection,
+                        className: C.editableSection,
                         size: l.zxk.Sizes.SMALL,
                         color: s ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN,
                         onClick: o,
-                        children: s ? O.NW.string(O.t.XnrNLi) : O.NW.string(O.t.bHbZLC)
+                        children: s ? y.NW.string(y.t.XnrNLi) : y.NW.string(y.t.bHbZLC)
                     })
                 ]
             }),
@@ -344,30 +344,30 @@ function P(e) {
 }
 function w(e) {
     let { preferredLocale: t } = e,
-        n = i.useMemo(() => (0, C.jb)(), []),
+        n = i.useMemo(() => (0, O.jb)(), []),
         s = i.useCallback((e) => {
             g.Z.updateGuild({ preferredLocale: e });
         }, []);
     return (0, r.jsxs)('div', {
-        className: y.twoColumns,
+        className: C.twoColumns,
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(l.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        className: y.header,
-                        children: O.NW.string(O.t.pO60f3)
+                        className: C.header,
+                        children: y.NW.string(y.t.pO60f3)
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        children: O.NW.string(O.t['SF/GRk'])
+                        children: y.NW.string(y.t['SF/GRk'])
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: y.localeSelect,
+                className: C.localeSelect,
                 children: (0, r.jsx)(l.q4e, {
                     value: t,
                     options: n,
@@ -378,7 +378,7 @@ function w(e) {
     });
 }
 function R() {
-    return (0, r.jsx)('div', { className: y.divider });
+    return (0, r.jsx)('div', { className: C.divider });
 }
 function D(e) {
     let { requireTerms: t, rules: n, settingsView: i } = e,
@@ -397,7 +397,7 @@ function D(e) {
     if (null == o) return null;
     let c = i === _.U.ELIGIBLE_DISABLED;
     return (0, r.jsxs)('div', {
-        className: y.settings,
+        className: C.settings,
         children: [
             (0, r.jsx)(E, {
                 guild: o,

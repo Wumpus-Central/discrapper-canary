@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(275296),
     _ = n(203377),
     v = n(981631),
-    C = n(388032),
-    O = n(96878),
-    y = n(877248);
+    O = n(388032),
+    y = n(96878),
+    C = n(877248);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,15 +88,15 @@ function S(e) {
         ),
         p = !l.fS(d, g);
     return (0, r.jsx)('div', {
-        className: O.clearButtonWrapper,
+        className: y.clearButtonWrapper,
         children: (0, r.jsx)(c.ua7, {
-            text: p ? C.NW.string(C.t['IQ/6Sk']) : null,
+            text: p ? O.NW.string(O.t['IQ/6Sk']) : null,
             position: 'top',
             color: c.ua7.Colors.RED,
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: i } = e;
                 return (0, r.jsx)(c.zxk, {
-                    className: O.clearButton,
+                    className: y.clearButton,
                     size: c.zxk.Sizes.TINY,
                     look: c.zxk.Looks.LINK,
                     color: c.zxk.Colors.LINK,
@@ -104,7 +104,7 @@ function S(e) {
                     onMouseEnter: t,
                     onMouseLeave: i,
                     disabled: l.fS(n.permissions, h.Hn) || p || s,
-                    children: C.NW.string(C.t['UYq7+P'])
+                    children: O.NW.string(O.t['UYq7+P'])
                 });
             }
         })
@@ -114,20 +114,20 @@ function T(e) {
     let { guild: t, role: n, specs: i, locked: s } = e;
     if (0 === i.length)
         return (0, r.jsxs)('div', {
-            className: O.noResultsContainer,
+            className: y.noResultsContainer,
             children: [
-                (0, r.jsx)(b.Z, { className: O.noResults }),
+                (0, r.jsx)(b.Z, { className: y.noResults }),
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/normal',
-                    children: C.NW.string(C.t.DEBGqK)
+                    children: O.NW.string(O.t.DEBGqK)
                 })
             ]
         });
     function a(e) {
-        return u.Z.can(e, t) ? !u.Z.can(e, t, null, { [n.id]: E(I({}, n), { permissions: l.Od(n.permissions, e) }) }) && C.NW.string(C.t['K+D+GB']) : C.NW.string(C.t.nOtPMD);
+        return u.Z.can(e, t) ? !u.Z.can(e, t, null, { [n.id]: E(I({}, n), { permissions: l.Od(n.permissions, e) }) }) && O.NW.string(O.t['K+D+GB']) : O.NW.string(O.t.nOtPMD);
     }
     return (0, r.jsxs)('div', {
-        className: O.permissionsWrapper,
+        className: y.permissionsWrapper,
         children: [
             (0, r.jsx)(S, {
                 guild: t,
@@ -138,7 +138,7 @@ function T(e) {
                 (0, r.jsx)(
                     d.Z,
                     {
-                        className: O.permissionsForm,
+                        className: y.permissionsForm,
                         spec: e,
                         permissions: n.permissions,
                         locked: s,
@@ -176,14 +176,14 @@ function P(e) {
             P.current || '' === d.trimStart() || (g.default.track(v.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (P.current = !0));
         }, [d]),
         (0, r.jsx)(c.yWw, {
-            className: O.scroller,
+            className: y.scroller,
             style: { scrollPaddingTop: h },
             onScroll: S,
             children: (0, r.jsxs)('div', {
-                className: y.contentWidth,
+                className: C.contentWidth,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: a()(y.header, y.stickyHeader, { [y.stickyHeaderElevated]: !b }),
+                        className: a()(C.header, C.stickyHeader, { [C.stickyHeaderElevated]: !b }),
                         ref: f,
                         children: [
                             (0, r.jsx)(j.Z, {
@@ -193,18 +193,18 @@ function P(e) {
                                 setSelectedSection: l
                             }),
                             (0, r.jsx)('div', {
-                                className: O.noticeContainer,
+                                className: y.noticeContainer,
                                 children: (0, r.jsx)(N.Z, { role: n })
                             }),
                             (0, r.jsx)('div', {
-                                className: O.searchContainer,
+                                className: y.searchContainer,
                                 children: (0, r.jsx)(c.E1j, {
                                     size: c.E1j.Sizes.MEDIUM,
                                     query: d,
                                     onChange: u,
                                     onClear: () => u(''),
-                                    placeholder: C.NW.string(C.t.OLJAk5),
-                                    'aria-label': C.NW.string(C.t.OLJAk5)
+                                    placeholder: O.NW.string(O.t.OLJAk5),
+                                    'aria-label': O.NW.string(O.t.OLJAk5)
                                 })
                             })
                         ]

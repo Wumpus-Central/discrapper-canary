@@ -105,11 +105,11 @@ function v(e) {
               children: s
           });
 }
-let C = (e, t) => () => t(_(N({}, e), { enabled: !e.enabled })),
-    O = (e) => {
+let O = (e, t) => () => t(_(N({}, e), { enabled: !e.enabled })),
+    y = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    y = (e) => {
+    C = (e) => {
         var { className: t, children: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -136,9 +136,9 @@ let C = (e, t) => () => t(_(N({}, e), { enabled: !e.enabled })),
                 N(
                     {
                         className: t,
-                        onClick: O,
-                        onMouseDown: O,
-                        onMouseUp: O
+                        onClick: y,
+                        onMouseDown: y,
+                        onMouseUp: y
                     },
                     i
                 ),
@@ -149,9 +149,9 @@ let C = (e, t) => () => t(_(N({}, e), { enabled: !e.enabled })),
 function I(e) {
     var t;
     let { rule: n, onChangeRule: i, onContextMenu: s } = e,
-        l = C(n, i),
+        l = O(n, i),
         o = (e) => {
-            O(e), s(e);
+            y(e), s(e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -162,7 +162,7 @@ function I(e) {
                     onChangeRule: i
                 })
             }),
-            (0, r.jsxs)(y, {
+            (0, r.jsxs)(C, {
                 className: j.actionContainer,
                 children: [
                     (0, r.jsx)(a.rsf, {
@@ -202,7 +202,7 @@ function S(e) {
         { isLoading: c, saveRule: m } = (0, g.w)(),
         { updateRule: h } = (0, u.pH)(t.guildId),
         [f, b] = i.useState(t.enabled),
-        C = (0, s.throttle)(async (e, n) => {
+        O = (0, s.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
                 let e = _(N({}, t), { enabled: !f });
                 b(!f);
@@ -211,7 +211,7 @@ function S(e) {
             }
         }, 300),
         I = (e) => {
-            O(e), l(e);
+            y(e), l(e);
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: T, descriptionText: P, icon: w } = o,
@@ -257,12 +257,12 @@ function S(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)(y, {
+            (0, r.jsxs)(C, {
                 className: j.actionContainer,
                 children: [
                     (0, r.jsx)(a.rsf, {
                         className: j.toggle,
-                        onChange: C,
+                        onChange: O,
                         checked: null != f && f
                     }),
                     !n &&
@@ -324,7 +324,7 @@ function T(e) {
                     (0, r.jsx)(v, { triggerType: t })
                 ]
             }),
-            (0, r.jsx)(y, {
+            (0, r.jsx)(C, {
                 className: j.actionContainer,
                 children: (0, r.jsx)(a.zxk, {
                     size: a.zxk.Sizes.SMALL,

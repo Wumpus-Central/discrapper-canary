@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => I,
-    _: () => y
+    _: () => C
 }),
     n(388685);
 var r = n(200651),
@@ -23,11 +23,11 @@ var r = n(200651),
     N = n(163249),
     _ = n(150689),
     v = n(203377),
-    C = n(981631);
-function O(e) {
+    O = n(981631);
+function y(e) {
     p.Z.selectRole(e);
 }
-let y = () => {
+let C = () => {
     let { guild: e } = (0, l.cj)([b.Z], () => b.Z.getProps()),
         t = (0, l.e7)([f.Z], () => f.Z.formState),
         n = (0, l.e7)([f.Z], () => f.Z.errorMessage);
@@ -42,7 +42,7 @@ let y = () => {
                 s = null;
             f.Z.hasRoleConfigurationChanges && ((s = f.Z.editedRoleIdsForConfigurations), (i = f.Z.getEditedRoleConnectionConfigurationsMap())), (0, h.Gf)(t, n, r, s, i);
         },
-        submitting: t === C.QZA.SUBMITTING,
+        submitting: t === O.QZA.SUBMITTING,
         onReset: h.S1
     });
 };
@@ -61,28 +61,28 @@ function I(e) {
     a()(null != c, 'Guild must have an everyone role');
     let g = i.useMemo(() => s.filter((e) => !(0, u.pM)(n.id, e.id)), [s, n]),
         p = (0, l.e7)([b.Z], () => b.Z.getSelectedRoleId()),
-        [h, C] = i.useState(g.length > 0);
+        [h, O] = i.useState(g.length > 0);
     i.useEffect(() => {
-        C(h || g.length > 0);
+        O(h || g.length > 0);
     }, [h, g.length]),
         (0, d.ZP)(() => {
             let e = m.Z.getMemberCount(n.id);
             null != e && e <= x.cm && o.Z.requestMembers(n.id, '', 0, !1);
         });
-    let [y, I] = i.useState(v.ZI.DISPLAY);
+    let [C, I] = i.useState(v.ZI.DISPLAY);
     return (i.useEffect(() => {
         null == p && I(v.ZI.DISPLAY);
     }, [p]),
     null != p)
         ? (0, r.jsx)(j.Z, {
               editRoleId: p,
-              setEditRoleId: O,
-              selectedSection: y,
+              setEditRoleId: y,
+              selectedSection: C,
               setSelectedSection: I
           })
         : h
           ? (0, r.jsx)(_.Z, {
-                setEditRoleId: O,
+                setEditRoleId: y,
                 guild: n,
                 everyoneRole: c,
                 otherRoles: g,
@@ -92,6 +92,6 @@ function I(e) {
           : (0, r.jsx)(N.Z, {
                 guild: n,
                 everyoneRole: c,
-                setEditRoleId: O
+                setEditRoleId: y
             });
 }

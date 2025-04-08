@@ -40,8 +40,8 @@ function f(e) {
             [E, y, t]
         ),
         S = f.length,
-        C = null,
         O = null,
+        C = null,
         v = null;
     if (S > 0 || b.length > 0) {
         var x, A, N, T;
@@ -49,16 +49,16 @@ function f(e) {
             t = null != (N = e.IMAGE) ? N : 0,
             n = null != (T = e.VIDEO) ? T : 0;
         t > 0 && n > 0
-            ? ((C = g.NW.formatToPlainString(g.t.Lr0Toq, {
+            ? ((O = g.NW.formatToPlainString(g.t.Lr0Toq, {
                   image_count: t,
                   video_count: n
               })),
-              (O = o.Ka2))
+              (C = o.Ka2))
             : n > 0
-              ? ((C = g.NW.formatToPlainString(g.t.SJ6pPT, { count: n })), (O = o.g8d))
+              ? ((O = g.NW.formatToPlainString(g.t.SJ6pPT, { count: n })), (C = o.g8d))
               : t > 0
-                ? ((C = g.NW.formatToPlainString(g.t.h4pFfX, { count: t })), (O = 1 === t ? o.XBm : o.Ka2))
-                : ((C = g.NW.formatToPlainString(g.t['89ihS0'], { count: S })), (O = o.Ujz)),
+                ? ((O = g.NW.formatToPlainString(g.t.h4pFfX, { count: t })), (C = 1 === t ? o.XBm : o.Ka2))
+                : ((O = g.NW.formatToPlainString(g.t['89ihS0'], { count: S })), (C = o.Ujz)),
             n > 0 && S === n
                 ? (v = (0, a.jsxs)('div', {
                       className: i()(_.attachmentPreview, _.attachmentPreviewVideo),
@@ -132,17 +132,17 @@ function f(e) {
                             (0, a.jsxs)('div', {
                                 className: _.attachmentRow,
                                 children: [
-                                    null != O &&
-                                        (0, a.jsx)(O, {
+                                    null != C &&
+                                        (0, a.jsx)(C, {
                                             size: 'custom',
                                             width: y ? 18 : 20,
                                             color: o.TVs.colors.TEXT_LOW_CONTRAST
                                         }),
-                                    null != C &&
+                                    null != O &&
                                         (0, a.jsx)(o.Text, {
                                             variant: y ? 'text-sm/medium' : 'text-md/medium',
                                             color: 'text-low-contrast',
-                                            children: C
+                                            children: O
                                         })
                                 ]
                             })

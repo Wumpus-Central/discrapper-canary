@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(472816), n(794429), n(953529);
+n.d(t, { Z: () => y }), n(388685), n(472816), n(794429), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -19,13 +19,13 @@ var r = n(200651),
     N = n(273504),
     _ = n(981631),
     v = n(388032),
-    C = n(885655);
-function O(e) {
+    O = n(885655);
+function y(e) {
     var t, n;
-    let { guildId: O, setPreventNavigation: y = () => {} } = e,
+    let { guildId: y, setPreventNavigation: C = () => {} } = e,
         { editingRule: I, setEditingRule: E } = (0, f.V)(),
         { guild: S, subsection: T } = (0, s.cj)([o.Z], () => o.Z.getProps()),
-        P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : O) ? n : _.lds,
+        P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : y) ? n : _.lds,
         w = null != I,
         [R] = (0, g.RD)(P),
         { rulesByTriggerType: D } = (0, g.pH)(P),
@@ -77,8 +77,8 @@ function O(e) {
             return L(null != (e = null == I ? void 0 : I.id) ? e : null, null != (t = null == I ? void 0 : I.triggerType) ? t : null);
         }, [L, I]);
     i.useEffect(() => {
-        y(w, (0, j.af)(M));
-    }, [y, w, M]);
+        C(w, (0, j.af)(M));
+    }, [C, w, M]);
     let G = (0, p.Z6)(P),
         U = (e) =>
             (0, r.jsx)(r.Fragment, {
@@ -101,12 +101,12 @@ function O(e) {
         tag: 'h1',
         children: [
             (0, r.jsxs)('div', {
-                className: C.descriptionContainer,
+                className: O.descriptionContainer,
                 children: [
                     (0, r.jsxs)(l.hjN, {
                         tag: 'h3',
-                        className: C.description,
-                        titleClassName: C.descriptionHeader,
+                        className: O.description,
+                        titleClassName: O.descriptionHeader,
                         children: [
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-md/medium',
@@ -115,13 +115,13 @@ function O(e) {
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                className: C.helpUrl,
+                                className: O.helpUrl,
                                 children: v.NW.format(v.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: C.descriptionAvatarContainer,
+                        className: O.descriptionAvatarContainer,
                         children: [
                             (0, r.jsx)(l.qEK, {
                                 src: (0, m.j)(),
@@ -130,22 +130,22 @@ function O(e) {
                             }),
                             (0, r.jsx)(l.IGR, {
                                 text: (0, r.jsxs)('div', {
-                                    className: C.automodBadgeText,
+                                    className: O.automodBadgeText,
                                     children: [
                                         (0, r.jsx)(l.sV5, {
                                             size: 'xxs',
                                             color: 'currentColor',
-                                            className: C.checkmarkIcon
+                                            className: O.checkmarkIcon
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-xs/bold',
-                                            className: C.automodText,
+                                            className: O.automodText,
                                             children: v.NW.string(v.t.hG1StL)
                                         })
                                     ]
                                 }),
                                 color: a.Z.unsafe_rawColors.BRAND_500.css,
-                                className: C.textBadge
+                                className: O.textBadge
                             })
                         ]
                     })
@@ -160,7 +160,7 @@ function O(e) {
                           null != Z[t]
                               ? (0, r.jsx)(l.hjN, {
                                     tag: 'h3',
-                                    className: C.categoryHeader,
+                                    className: O.categoryHeader,
                                     children: (0, r.jsx)(l.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
@@ -171,7 +171,7 @@ function O(e) {
                       return (0, r.jsxs)(
                           'div',
                           {
-                              className: C.categoryContainer,
+                              className: O.categoryContainer,
                               children: [s, U(n)]
                           },
                           t
@@ -181,13 +181,13 @@ function O(e) {
                 (0, r.jsx)(c.k0, {
                     guild: S,
                     withDivider: !1,
-                    className: C.explicitContentFilterSection
+                    className: O.explicitContentFilterSection
                 }),
             (0, r.jsx)(b.Z, {
                 guildId: P,
                 existingRules: A
             }),
-            w && (0, r.jsx)('div', { className: C.endSpacer })
+            w && (0, r.jsx)('div', { className: O.endSpacer })
         ]
     });
 }

@@ -15,8 +15,8 @@ let g = function (e) {
         [f, b] = i.useState(d.n.LEFT),
         [x, j] = i.useState(0),
         [N, _] = i.useState(!1),
-        [v, C] = i.useState(!1),
-        O = i.useCallback(
+        [v, O] = i.useState(!1),
+        y = i.useCallback(
             (e, t) => {
                 j((n) => {
                     let r = n + t;
@@ -25,16 +25,16 @@ let g = function (e) {
             },
             [j]
         ),
-        y = i.useCallback(() => {
-            v || O(t, 1);
-        }, [O, t, v]),
+        C = i.useCallback(() => {
+            v || y(t, 1);
+        }, [y, t, v]),
         I = i.useCallback(() => {
-            v || O(t, -1);
-        }, [O, t, v]);
+            v || y(t, -1);
+        }, [y, t, v]);
     return (
         i.useEffect(() => {
-            null != g && (N ? N && h.stop() : h.start(g, y));
-        }, [N, h, g, y]),
+            null != g && (N ? N && h.stop() : h.start(g, C));
+        }, [N, h, g, C]),
         (0, r.jsxs)('div', {
             className: m.root,
             onMouseEnter: () => _(!0),
@@ -55,14 +55,14 @@ let g = function (e) {
                 (0, r.jsx)(d.Z, {
                     step: x,
                     direction: f,
-                    onAnimationStart: () => C(!0),
-                    onAnimationEnd: () => C(!1),
+                    onAnimationStart: () => O(!0),
+                    onAnimationEnd: () => O(!1),
                     className: a()(m.carousel, n),
                     children: p(t[x])
                 }),
                 (0, r.jsx)(o.P3F, {
                     className: a()(m.carouselCaret, s),
-                    onClick: y,
+                    onClick: C,
                     onMouseEnter: () => b(d.n.LEFT),
                     ignoreKeyPress: v,
                     children: (0, r.jsx)(c.Z, {

@@ -1,7 +1,7 @@
 n.d(t, {
     Mn: () => m,
     OD: () => f,
-    W9: () => g
+    W9: () => h
 }),
     n(388685),
     n(997841);
@@ -15,7 +15,7 @@ var r = n(442837),
     u = n(969943),
     d = n(526761),
     p = n(388032);
-function g() {
+function h() {
     return [
         {
             label: p.NW.string(p.t['8ot6go']),
@@ -43,13 +43,13 @@ function g() {
         }
     ];
 }
-let h = {
+let g = {
     ignoreMute: !1,
     ignoreUnreadSetting: !0,
     ignoreNotificationSetting: !1
 };
 function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g;
     return l.default.keys(e).filter((n) => {
         var r, o;
         let l = e[n].message_notifications !== c.bL.NULL,

@@ -15,8 +15,8 @@ var a = n(200651),
     m = n(94628),
     b = n(659154),
     v = n(581690),
-    C = n(902928),
-    _ = n(521937),
+    _ = n(902928),
+    C = n(521937),
     g = n(981631),
     N = n(350730);
 let y = n(575703);
@@ -78,7 +78,7 @@ function j() {
             (e = (0, a.jsx)(v.c, { code: n.code })), (I = !1);
             break;
         case 'user-code-input':
-            e = (0, a.jsx)(_.v, {
+            e = (0, a.jsx)(C.v, {
                 usePrefilledCode: n.usePrefilledCode || !1,
                 onUserCodeAccepted: E
             });
@@ -93,7 +93,7 @@ function j() {
                 (I = !1);
             break;
         case 'success':
-            e = (0, a.jsx)(C.u, {
+            e = (0, a.jsx)(_.u, {
                 onComplete: () => (0, p.uL)(g.Z5c.ME),
                 data: n.userCodeData
             });

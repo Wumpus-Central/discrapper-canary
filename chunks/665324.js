@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(747071),
     _ = n(286654),
     v = n(171368),
-    C = n(430824),
-    O = n(594174),
-    y = n(15385),
+    O = n(430824),
+    y = n(594174),
+    C = n(15385),
     I = n(768581),
     E = n(267642),
     S = n(358085),
@@ -97,7 +97,7 @@ function G(e) {
 }
 function U(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
-        s = C.Z.getGuild(i),
+        s = O.Z.getGuild(i),
         a = null != s ? (0, E.nL)(s) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
@@ -123,7 +123,7 @@ function U(e) {
                                   });
                               },
                               tabIndex: -1,
-                              children: (0, r.jsx)(y.Z, k({}, e))
+                              children: (0, r.jsx)(C.Z, k({}, e))
                           })
                   }),
                   Z.NW.format(Z.t.HHCdvb, {
@@ -233,7 +233,7 @@ function z(e) {
         a)
     )
         return (0, r.jsx)(u.$jN, {});
-    let C = L
+    let O = L
         ? (0, r.jsx)(u.zxk, {
               onClick: function () {
                   (0, u.ZDy)(async () => {
@@ -257,7 +257,7 @@ function z(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: A.buttons,
-                        children: !_ && C
+                        children: !_ && O
                     })
                 ]
             }),
@@ -277,7 +277,7 @@ function z(e) {
                               noteClassName: A.emptyText,
                               children: Z.NW.string(Z.t.I6P1p6)
                           }),
-                          C
+                          O
                       ]
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -327,9 +327,9 @@ function z(e) {
 function H(e) {
     let { sound: t, isPlaying: s, onPlaySound: l, guild: o } = e,
         { soundId: d, name: p, user: h, userId: x, emojiId: j, emojiName: N } = t,
-        C = (0, c.e7)([O.default], () => (null != h ? h : O.default.getUser(x)), [x, h]),
-        { canManageGuildExpression: y } = (0, f.XJ)(o),
-        E = i.useMemo(() => y(t), [t, y]),
+        O = (0, c.e7)([y.default], () => (null != h ? h : y.default.getUser(x)), [x, h]),
+        { canManageGuildExpression: C } = (0, f.XJ)(o),
+        E = i.useMemo(() => C(t), [t, C]),
         S = null != j || null != N,
         [P, w] = i.useState(!1),
         D = (0, _.z)(t, o.id);
@@ -344,20 +344,20 @@ function H(e) {
         }
     }
     i.useEffect(() => {
-        null == C && e();
+        null == O && e();
         async function e() {
             await (0, m.PR)(x);
         }
-    }, [C, x]);
+    }, [O, x]);
     let M = i.useCallback(() => {
-            null != C &&
+            null != O &&
                 (0, v.openUserProfileModal)({
-                    userId: C.id,
+                    userId: O.id,
                     guildId: o.id,
                     analyticsLocation: { section: R.jXE.GUILD_SETTINGS_SOUNDBOARD }
                 });
-        }, [C, o.id]),
-        G = T.ZP.useUserTag(C);
+        }, [O, o.id]),
+        G = T.ZP.useUserTag(O);
     return (0, r.jsxs)('div', {
         className: a()(A.row, { [A.active]: s }),
         children: [
@@ -392,7 +392,7 @@ function H(e) {
                     ]
                 })
             }),
-            null != C &&
+            null != O &&
                 (0, r.jsxs)(u.P3F, {
                     className: A.uploader,
                     onClick: M,
@@ -401,7 +401,7 @@ function H(e) {
                             'aria-label': G,
                             size: u.EFr.SIZE_24,
                             className: A.uploaderAvatar,
-                            src: (0, I.ov)(C, !1, 24)
+                            src: (0, I.ov)(O, !1, 24)
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/normal',

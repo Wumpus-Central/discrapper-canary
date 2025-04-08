@@ -50,7 +50,7 @@ function p(e, t) {
         e
     );
 }
-function g(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -69,7 +69,7 @@ function g(e, t) {
     }
     return i;
 }
-function h(e) {
+function g(e) {
     var t = (function (e, t) {
         if ('object' !== f(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
@@ -92,7 +92,7 @@ function b(e) {
     let t = a.K.get(''.concat(_, '-').concat(e));
     if (null == t) return null;
     let { version: n } = t,
-        r = g(t, ['version']);
+        r = h(t, ['version']);
     return 1 !== n ? null : r;
 }
 new l.Z('UserFlowAnalytics');
@@ -113,7 +113,7 @@ let x = (0, r.U)()(
 function N(e, t) {
     let n = x.getState().flows,
         { [e]: r } = n,
-        i = g(n, [e].map(h)),
+        i = h(n, [e].map(g)),
         a = null != r ? r : b(e);
     ((null == a ? void 0 : a.currentStep) == null || a.currentStep !== t) &&
         (0, o.j)(() => {
@@ -141,7 +141,7 @@ function v(e, t) {
     }
     let a = x.getState().flows,
         { [r]: l } = a,
-        s = g(a, [r].map(h)),
+        s = h(a, [r].map(g)),
         u = null != l ? l : b(r);
     null != u &&
         null != u.currentStep &&

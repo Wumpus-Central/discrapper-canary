@@ -1,6 +1,6 @@
 n.d(t, {
-    a: () => m,
-    h: () => p
+    a: () => g,
+    h: () => f
 }),
     n(997841);
 var r = n(192379),
@@ -14,13 +14,13 @@ let u = c.iLy.CROSSPOSTED | c.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | c.iLy
 function d(e) {
     return e.state !== c.yb.SEND_FAILED && !!c.V$x.FORWARDABLE.has(e.type) && null == e.poll && null == e.activity && null == e.call && null == e.activityInstance && 0 === (0, s.Ge)(e.flags, u) && !0;
 }
-function p(e) {
+function f(e) {
     var t;
     if (!d(e)) return !1;
     let n = null == (t = l.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
     return !(null != n && a.Z.isChannelOrThreadParentGated(n, e.channel_id));
 }
-function m(e) {
+function g(e) {
     let t = (0, i.e7)([o.Z, a.Z, l.Z], () => {
         var t, n;
         if (null == e) return !0;

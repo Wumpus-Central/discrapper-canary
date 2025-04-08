@@ -1,8 +1,8 @@
-n.d(t, { Z: () => Z }), n(997841), n(388685);
+n.d(t, { Z: () => _ }), n(997841), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(481060),
     s = n(332148),
     c = n(904245),
@@ -12,12 +12,12 @@ var r = n(200651),
     g = n(726521),
     m = n(294218),
     b = n(699516),
-    p = n(594174),
-    h = n(630388),
-    y = n(970257),
-    N = n(981631),
-    O = n(388032),
-    E = n(739788);
+    h = n(594174),
+    p = n(630388),
+    O = n(970257),
+    y = n(981631),
+    E = n(388032),
+    N = n(739788);
 function v(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ class P extends i.PureComponent {
             t,
             { report: n } = this.state,
             i = this.props,
-            { channel: l, message: a, showContextMenuHint: s } = i,
+            { channel: a, message: l, showContextMenuHint: s } = i,
             c = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -81,41 +81,41 @@ class P extends i.PureComponent {
                         var n,
                             r,
                             i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                            a = Object.keys(e);
+                        for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var a = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
             })(i, ['channel', 'message', 'showContextMenuHint']),
-            u = l.type === N.d4z.GUILD_ANNOUNCEMENT && (0, h.yE)(a.flags, N.iLy.CROSSPOSTED);
+            u = a.type === y.d4z.GUILD_ANNOUNCEMENT && (0, p.yE)(l.flags, y.iLy.CROSSPOSTED);
         return (
             s &&
                 (e = (0, r.jsx)(d.Z, {
-                    className: E.spacingTop,
-                    children: O.NW.format(O.t.IxY7Ex, {})
+                    className: N.spacingTop,
+                    children: E.NW.format(E.t.IxY7Ex, {})
                 })),
-            (0, y.vc)(a) &&
+            (0, O.vc)(l) &&
                 (t = (0, r.jsx)(o.j7V, {
                     value: n,
                     onChange: this.handleToggleReport,
                     hideBorder: !0,
-                    className: E.spacingTop,
-                    children: O.NW.string(O.t.x0jzo6)
+                    className: N.spacingTop,
+                    children: E.NW.string(E.t.x0jzo6)
                 })),
             (0, r.jsx)(f.Z.Provider, {
-                value: l.guild_id,
+                value: a.guild_id,
                 children: (0, r.jsxs)(
                     o.ConfirmModal,
                     S(
                         j(
                             {
-                                header: u ? O.NW.string(O.t.aIz1oa) : O.NW.string(O.t.MWMcg4),
-                                confirmText: O.NW.string(O.t.oyYWHB),
-                                cancelText: O.NW.string(O.t['ETE/oK']),
+                                header: u ? E.NW.string(E.t.aIz1oa) : E.NW.string(E.t.MWMcg4),
+                                confirmText: E.NW.string(E.t.oyYWHB),
+                                cancelText: E.NW.string(E.t['ETE/oK']),
                                 onConfirm: this.handleDelete
                             },
                             c
@@ -124,14 +124,14 @@ class P extends i.PureComponent {
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
-                                    className: E.spacing,
-                                    children: u ? O.NW.string(O.t['2kHABQ']) : O.NW.string(O.t.AMvpS0)
+                                    className: N.spacing,
+                                    children: u ? E.NW.string(E.t['2kHABQ']) : E.NW.string(E.t.AMvpS0)
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: E.message,
+                                    className: N.message,
                                     children: (0, r.jsx)(m.Z, {
-                                        channel: l,
-                                        message: a,
+                                        channel: a,
+                                        message: l,
                                         disableInteraction: !0
                                     })
                                 }),
@@ -157,13 +157,13 @@ class P extends i.PureComponent {
             });
     }
 }
-let Z = {
+let _ = {
     confirmPin: function (e, t) {
         (0, o.h7j)((n) => {
             let i,
-                l = (0, u.F6)(e, p.default, b.Z);
+                a = (0, u.F6)(e, h.default, b.Z);
             return (
-                (i = e.isPrivate() ? O.NW.string(O.t.hMRngI) : O.NW.formatToPlainString(O.t['3IRluL'], { channelName: l })),
+                (i = e.isPrivate() ? E.NW.string(E.t.hMRngI) : E.NW.formatToPlainString(E.t['3IRluL'], { channelName: a })),
                 (0, r.jsx)(f.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsxs)(
@@ -171,9 +171,9 @@ let Z = {
                         S(
                             j(
                                 {
-                                    header: O.NW.string(O.t.bKMaZW),
-                                    confirmText: O.NW.string(O.t.rOQ5BQ),
-                                    cancelText: O.NW.string(O.t['ETE/oK']),
+                                    header: E.NW.string(E.t.bKMaZW),
+                                    confirmText: E.NW.string(E.t.rOQ5BQ),
+                                    cancelText: E.NW.string(E.t['ETE/oK']),
                                     confirmButtonColor: o.zxk.Colors.BRAND,
                                     onConfirm: () => s.Z.pinMessage(e, t.id)
                                 },
@@ -183,11 +183,11 @@ let Z = {
                                 children: [
                                     (0, r.jsx)(o.Text, {
                                         variant: 'text-md/normal',
-                                        className: E.spacing,
+                                        className: N.spacing,
                                         children: i
                                     }),
                                     (0, r.jsx)('div', {
-                                        className: E.message,
+                                        className: N.message,
                                         children: (0, r.jsx)(m.Z, {
                                             channel: e,
                                             message: t,
@@ -212,9 +212,9 @@ let Z = {
                     S(
                         j(
                             {
-                                header: O.NW.string(O.t.CFF2vL),
-                                confirmText: O.NW.string(O.t.lAU5jI),
-                                cancelText: O.NW.string(O.t['ETE/oK']),
+                                header: E.NW.string(E.t.CFF2vL),
+                                confirmText: E.NW.string(E.t.lAU5jI),
+                                cancelText: E.NW.string(E.t['ETE/oK']),
                                 onConfirm: () => s.Z.unpinMessage(e, t.id)
                             },
                             n
@@ -223,18 +223,18 @@ let Z = {
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
-                                    className: E.spacing,
-                                    children: O.NW.string(O.t.NjEPp6)
+                                    className: N.spacing,
+                                    children: E.NW.string(E.t.NjEPp6)
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: a()(E.message, E.spacing),
+                                    className: l()(N.message, N.spacing),
                                     children: (0, r.jsx)(m.Z, {
                                         channel: e,
                                         message: t,
                                         disableInteraction: !0
                                     })
                                 }),
-                                (0, r.jsx)(d.Z, { children: O.NW.format(O.t.oCVB3d, {}) })
+                                (0, r.jsx)(d.Z, { children: E.NW.format(E.t.oCVB3d, {}) })
                             ]
                         }
                     )
@@ -265,9 +265,9 @@ let Z = {
                 S(
                     j(
                         {
-                            header: O.NW.string(O.t.aIz1oa),
-                            confirmText: O.NW.string(O.t['cY+Ooa']),
-                            cancelText: O.NW.string(O.t['ETE/oK']),
+                            header: E.NW.string(E.t.aIz1oa),
+                            confirmText: E.NW.string(E.t['cY+Ooa']),
+                            cancelText: E.NW.string(E.t['ETE/oK']),
                             confirmButtonColor: o.zxk.Colors.BRAND,
                             onConfirm: () => c.Z.editMessage(e, t, { content: n })
                         },
@@ -276,8 +276,8 @@ let Z = {
                     {
                         children: (0, r.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            className: E.spacing,
-                            children: O.NW.string(O.t.grBcMz)
+                            className: N.spacing,
+                            children: E.NW.string(E.t.grBcMz)
                         })
                     }
                 )

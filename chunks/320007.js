@@ -19,10 +19,10 @@ function b(e) {
         x = (0, m.Z)(u.Z),
         { showClipsHeaderEntrypoint: y } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
-            hasClips: E,
-            hasNewClips: v,
-            lastClipsSession: O,
-            remindersEnabled: N,
+            hasClips: v,
+            hasNewClips: E,
+            lastClipsSession: N,
+            remindersEnabled: O,
             hasAnyClipAnimations: j
         } = (0, a.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
@@ -31,7 +31,7 @@ function b(e) {
             remindersEnabled: p.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations()
         })),
-        C = null != O && O.newClipIds.length > 0,
+        C = null != N && N.newClipIds.length > 0,
         S = (0, f.n)((e) => e.clipsButtonRef),
         I = (0, f.n)((e) => e.setClipsButtonRef),
         T = (0, a.e7)([c.Z], () => c.Z.hasLayers()),
@@ -73,18 +73,18 @@ function b(e) {
             { modalKey: g.Qr }
         );
     }
-    return (i.useEffect(() => (j ? P() : A(), () => A()), [j, P, A]), y && x && E)
+    return (i.useEffect(() => (j ? P() : A(), () => A()), [j, P, A]), y && x && v)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != S &&
                       t &&
-                      N &&
+                      O &&
                       C &&
                       !(0, l.$sL)() &&
                       !T &&
                       (0, r.jsx)(h.Z, {
                           clipIconRef: S,
-                          lastClipsSession: O,
+                          lastClipsSession: N,
                           onOpenClipsGallery: w
                       }),
                   (0, r.jsx)('div', {
@@ -92,7 +92,7 @@ function b(e) {
                       children: (0, r.jsx)(o.JO, {
                           className: b,
                           icon: l.AlX,
-                          showBadge: v,
+                          showBadge: E,
                           tooltip: _.NW.string(_.t.MXaLEB),
                           onClick: w
                       })

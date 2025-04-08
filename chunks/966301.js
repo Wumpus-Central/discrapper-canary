@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => C,
-    Zm: () => y
+    ZP: () => O,
+    Zm: () => C
 }),
     n(388685);
 var r = n(200651),
@@ -137,17 +137,17 @@ function v(e) {
         ]
     });
 }
-function C(e) {
+function O(e) {
     let { saveOnClose: t } = e,
         n = (0, s.e7)([u.Z], () => u.Z.getGuild());
     return null == n
         ? null
-        : (0, r.jsx)(O, {
+        : (0, r.jsx)(y, {
               guild: n,
               saveOnClose: t
           });
 }
-function O(e) {
+function y(e) {
     let { guild: t, saveOnClose: n } = e,
         l = (0, s.e7)([c.Z], () => c.Z.isLoading()),
         o = (0, s.e7)([h.Z], () => h.Z.editedOnboardingPrompts),
@@ -170,7 +170,7 @@ function O(e) {
         null == t)
     )
         return null;
-    let C = async () => {
+    let O = async () => {
         try {
             await (0, p.rS)(t), await (0, g.di)(t.id);
         } catch (e) {}
@@ -201,7 +201,7 @@ function O(e) {
                     }),
                     (0, r.jsx)('div', { className: _.dot }),
                     (0, r.jsx)(a.eee, {
-                        onClick: C,
+                        onClick: O,
                         children: (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
@@ -228,7 +228,7 @@ function O(e) {
         ]
     });
 }
-function y() {
+function C() {
     let e = (0, s.e7)([u.Z], () => u.Z.getGuild()),
         t = (0, s.e7)([h.Z], () => h.Z.submitting);
     return null == e

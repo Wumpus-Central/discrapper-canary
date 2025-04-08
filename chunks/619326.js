@@ -83,11 +83,11 @@ function j(e) {
             orientation: 'horizontal',
             isDisabled: s
         }),
-        C = (0, o.xUy)({
+        O = (0, o.xUy)({
             isSelected: j,
             label: g.NW.formatToPlainString(g.t.ZC69mJ, { colorHex: (0, l.Rf)(m.p6O) })
         }),
-        O = (0, o.xUy)({
+        y = (0, o.xUy)({
             isSelected: !j,
             label: g.NW.formatToPlainString(g.t['3kiLZW'], { colorHex: (0, l.Rf)(t) })
         });
@@ -117,7 +117,7 @@ function j(e) {
                                               },
                                         'aria-disabled': s
                                     },
-                                    C
+                                    O
                                 ),
                                 {
                                     children: [
@@ -149,7 +149,7 @@ function j(e) {
                                             onClick: s ? void 0 : u,
                                             'aria-disabled': s
                                         },
-                                        O
+                                        y
                                     ),
                                     {
                                         children: [

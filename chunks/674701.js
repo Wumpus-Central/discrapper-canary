@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => R,
-    Z: () => k
+    U: () => k,
+    Z: () => R
 });
 var r,
     i = n(200651),
@@ -20,10 +20,10 @@ var r,
     b = n(28546),
     x = n(963249),
     y = n(703656),
-    E = n(594174),
-    v = n(626135),
-    O = n(51144),
-    N = n(479446),
+    v = n(594174),
+    E = n(626135),
+    N = n(51144),
+    O = n(479446),
     j = n(795448),
     C = n(441623),
     S = n(317271),
@@ -33,10 +33,10 @@ var r,
     A = n(957825),
     w = n(388032),
     Z = n(587862),
-    R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
-function k(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: l, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
-        U = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
+    k = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
+function R(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: l, onMouseLeave: k, popoutPosition: R, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
+        U = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: F } = (0, h.ZP)(),
         B = (0, c.e7)([C.Z], () => C.Z.getFriendAnniversaryYears(r.id));
     a.useEffect(() => {
@@ -50,7 +50,7 @@ function k(e) {
             }
         });
     }, [t, n]);
-    let G = () => (t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: B }) : (0, N.Ou)(t)),
+    let G = () => (t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: B }) : (0, O.Ou)(t)),
         H = 'coachmark' === n,
         V = H ? Z.innerContentCoachmark : Z.innerContent,
         z = H ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
@@ -67,7 +67,7 @@ function k(e) {
             [Z.contentCoachmark]: H
         }),
         onMouseEnter: l,
-        onMouseLeave: R,
+        onMouseLeave: k,
         children: (0, i.jsxs)('div', {
             className: o()(V, { [Z.innerGlow]: M }),
             children: [
@@ -99,12 +99,12 @@ function k(e) {
                                     variant: 'text-md/medium',
                                     color: H ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
-                                    children: t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, N.Ou)(t)
+                                    children: t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.BWJvAA, { friendUserName: N.ZP.getName(r) }) : (0, O.Ou)(t)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     className: Y,
                                     variant: 'text-sm/normal',
-                                    children: t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.S3fdq6, { numberOfYears: B }) : (0, N.Ou)(t)
+                                    children: t === I.hX.FRIEND_ANNIVERSARY ? w.NW.formatToPlainString(w.t.S3fdq6, { numberOfYears: B }) : (0, O.Ou)(t)
                                 })
                             ]
                         })
@@ -118,7 +118,7 @@ function k(e) {
                                 className: o()(Z.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
-                                        v.default.track(T.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        E.default.track(T.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
                                             cta_type: W
                                         }),
@@ -197,11 +197,11 @@ function k(e) {
                         })
                     ]
                 }),
-                null != k &&
+                null != R &&
                     (0, i.jsx)('div', {
                         className: o()(Z.connector, {
-                            [Z.leftPopoutConnector]: 'left' === k,
-                            [Z.rightPopoutConnector]: 'right' === k
+                            [Z.leftPopoutConnector]: 'left' === R,
+                            [Z.rightPopoutConnector]: 'right' === R
                         })
                     })
             ]

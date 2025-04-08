@@ -281,7 +281,7 @@ function ek(e) {
     {
         let e = C.Z.getGuild(s.id);
         if (null == e) return !1;
-        (l = I.Z.getProfile(s.id)), r !== M.pNK.PROFILE && (c = l);
+        (l = I.Z.getProfile(s.id)), r !== M.pNK.PROFILE && r !== M.pNK.TAG && (c = l);
         let t = (a = e),
             n = s.toJS();
         Z.forEach((e) => {

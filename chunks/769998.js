@@ -20,13 +20,13 @@ function p(e) {
         _ = null != N ? (0, u.L9)(N) : null,
         v = (0, i.e7)([l.Z, a.Z], () => l.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(h)), [h]);
     if (null == j) return null;
-    let { headerText: C, descriptionText: O, icon: y } = j;
+    let { headerText: O, descriptionText: y, icon: C } = j;
     return (0, r.jsxs)('div', {
         className: g.actionContainer,
         children: [
             (0, r.jsx)('div', {
                 className: g.actionIconContainer,
-                children: (0, r.jsx)(y, {
+                children: (0, r.jsx)(C, {
                     size: 'md',
                     color: 'currentColor',
                     className: g.actionIcon
@@ -37,12 +37,12 @@ function p(e) {
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-sm/semibold',
-                        children: C
+                        children: O
                     }),
                     (0, r.jsx)(s.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: O
+                        children: y
                     }),
                     f &&
                         (0, r.jsxs)(s.Text, {

@@ -12,8 +12,8 @@ var r = n(913527),
     u = n(626135),
     d = n(573261),
     p = n(959776),
-    g = n(981631),
-    h = n(723359);
+    h = n(981631),
+    g = n(723359);
 function f(e) {
     var t,
         n,
@@ -88,16 +88,16 @@ function f(e) {
 function m(e) {
     let { email: t, phoneToken: n, username: r, globalName: f, consent: m, password: _, guildTemplateCode: b, birthday: x, invite: N = null, giftCodeSKUId: v = null, promoEmailConsent: E = null, usedUsernameSuggestion: I = null } = e;
     if ((a.Z.dispatch({ type: 'REGISTER' }), null != x)) {
-        (0, p.Z)(x, g.jXE.REGISTER),
-            u.default.track(g.rMx.AGE_GATE_ACTION, {
-                source: h.L0.REGISTER,
-                action: h.Al.AGE_GATE_SUBMITTED
+        (0, p.Z)(x, h.jXE.REGISTER),
+            u.default.track(h.rMx.AGE_GATE_ACTION, {
+                source: g.L0.REGISTER,
+                action: g.Al.AGE_GATE_SUBMITTED
             });
         let e = i()().diff(x, 'years');
-        e < 13 || u.default.track(g.rMx.USER_AGE_SUBMITTED, { age_bucket: e >= 13 && e <= 17 ? '13-17' : e >= 18 && e <= 22 ? '18-22' : '23+' });
+        e < 13 || u.default.track(h.rMx.USER_AGE_SUBMITTED, { age_bucket: e >= 13 && e <= 17 ? '13-17' : e >= 18 && e <= 22 ? '18-22' : '23+' });
     }
     return d.Z.post({
-        url: g.ANM.REGISTER,
+        url: h.ANM.REGISTER,
         body: {
             fingerprint: c.default.getFingerprint(),
             email: t,
@@ -129,16 +129,16 @@ function m(e) {
                 type: 'REGISTER_SUCCESS',
                 token: e.body.token
             }),
-                u.default.track(g.rMx.AGE_GATE_ACTION, {
-                    source: h.L0.REGISTER,
-                    action: h.Al.AGE_GATE_SUCCESS
+                u.default.track(h.rMx.AGE_GATE_ACTION, {
+                    source: g.L0.REGISTER,
+                    action: g.Al.AGE_GATE_SUCCESS
                 });
         },
         (e) => {
             let t = new l.Z(e);
             throw (
-                (null != t.getFieldErrors('date_of_birth') && s.wE(h.L0.REGISTER),
-                u.default.track(g.rMx.REGISTER_SUBMIT_ERRORED, {
+                (null != t.getFieldErrors('date_of_birth') && s.wE(g.L0.REGISTER),
+                u.default.track(h.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage('email'),
                     phone_error_reason: t.getFirstFieldErrorMessage('phone'),

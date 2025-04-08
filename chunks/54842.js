@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(37069),
     _ = n(518513),
     v = n(168179),
-    C = n(348986),
-    O = n(930065),
-    y = n(345669);
+    O = n(348986),
+    y = n(930065),
+    C = n(345669);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -124,12 +124,12 @@ let S = () => [
     ],
     T = [
         {
-            iconSrc: C,
+            iconSrc: O,
             name: 'Pokemon GO Paris',
             position: [-230, -100]
         },
         {
-            iconSrc: O,
+            iconSrc: y,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
@@ -148,7 +148,7 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: y,
+            iconSrc: C,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
@@ -219,15 +219,15 @@ let S = () => [
             [a, o] = i.useState(0),
             [N, _] = i.useState(),
             v = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
-            C = null == N ? void 0 : N.offsetWidth,
-            O = null == N ? void 0 : N.offsetHeight;
+            O = null == N ? void 0 : N.offsetWidth,
+            y = null == N ? void 0 : N.offsetHeight;
         i.useEffect(() => {
-            null != C && s(C / 2), null != O && o(O / 2);
-        }, [C, O, s, o]),
+            null != O && s(O / 2), null != y && o(y / 2);
+        }, [O, y, s, o]),
             i.useEffect(() => {
                 (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
-        let y = () => {
+        let C = () => {
             u.Z.open();
         };
         return (0, r.jsxs)('div', {
@@ -278,7 +278,7 @@ let S = () => [
                             E(
                                 I(
                                     {
-                                        onClick: y,
+                                        onClick: C,
                                         className: b.button,
                                         disabled: !v
                                     },

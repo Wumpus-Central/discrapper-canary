@@ -28,7 +28,7 @@ class u extends r.Z {
     }
     handleEntitlementUpdate(e) {
         let { guildId: t } = e;
-        (0, a.Fm)(t);
+        (0, l.gV)(t, 'GuildPowerupsManager') && (0, a.Fm)(t);
     }
     constructor(...e) {
         super(...e),

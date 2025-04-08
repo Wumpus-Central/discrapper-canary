@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(605782),
     d = n(133853),
     p = n(568154),
-    g = n(353926),
-    h = n(703656),
+    h = n(353926),
+    g = n(703656),
     f = n(981631),
     m = n(963865);
 let _ = n(575703),
@@ -27,7 +27,7 @@ function E(e) {
             var e;
             let [t, n] = o.useState(!1),
                 [i, a] = o.useState(!0),
-                s = (0, l.e7)([g.Z], () => g.Z.hasLoadedExperiments);
+                s = (0, l.e7)([h.Z], () => h.Z.hasLoadedExperiments);
             return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && s ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
         })()
     ) {
@@ -60,14 +60,14 @@ class I extends o.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (N(e)) (0, h.uL)(e, t);
+        if (N(e)) (0, g.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        N(e) ? (0, h.dL)(e) : (window.location = e);
+        N(e) ? (0, g.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -75,8 +75,8 @@ class I extends o.Component {
                 component: o.Fragment,
                 children: o.Children.map(this.props.children, (e) =>
                     o.cloneElement(e, {
-                        transitionTo: h.uL,
-                        replaceWith: h.dL
+                        transitionTo: g.uL,
+                        replaceWith: g.dL
                     })
                 )
             });

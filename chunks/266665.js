@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(671533),
     _ = n(946724),
     v = n(970129),
-    C = n(712181),
-    O = n(420966),
-    y = n(203377),
+    O = n(712181),
+    y = n(420966),
+    C = n(203377),
     I = n(981631),
     E = n(388032),
     S = n(563836);
@@ -72,10 +72,10 @@ let w = 'DRAGGABLE_ROLE';
 function R(e) {
     var t, i;
     let s,
-        { guild: d, role: g, highestRole: p, selectedItem: h, onClick: x, currentPosition: j, onDragStart: N, onDragReset: _, onDragComplete: C, roleStyle: O } = e,
-        y = (0, v.T)(d, p, g),
+        { guild: d, role: g, highestRole: p, selectedItem: h, onClick: x, currentPosition: j, onDragStart: N, onDragReset: _, onDragComplete: O, roleStyle: y } = e,
+        C = (0, v.T)(d, p, g),
         E = (0, f.pM)(d.id, g.id),
-        R = null == y && !E,
+        R = null == C && !E,
         D = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
         [, Z] = (0, l.c)({
             type: w,
@@ -90,7 +90,7 @@ function R(e) {
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) return void _();
-                C(n.roleId);
+                O(n.roleId);
             }
         }),
         [{ dragSourcePosition: A }, k] = (0, o.L)({
@@ -110,7 +110,7 @@ function R(e) {
                   color: g.colorString,
                   className: S.verifiedRoleIcon
               })
-            : 'dot' === O
+            : 'dot' === y
               ? (0, r.jsx)(u.FhE, {
                     color: W,
                     background: !1,
@@ -146,10 +146,10 @@ function R(e) {
             },
             children: [
                 s,
-                null != y
+                null != C
                     ? (0, r.jsx)(v.Z, {
                           className: S.lock,
-                          tooltipText: y
+                          tooltipText: C
                       })
                     : null,
                 (0, r.jsx)(u.Text, {
@@ -168,8 +168,8 @@ function D(e) {
         c = (0, d.e7)([j.Z], () => j.Z.getHighestRole(t)),
         m = (0, d.e7)([h.Z], () => h.Z.roleStyle),
         [f, b] = i.useState(o.length),
-        { scrolledToTop: v, handleScroll: I } = (0, O.V)(),
-        { handleDragStart: w, handleDragReset: D, handleDragComplete: Z } = (0, C.Z)(o),
+        { scrolledToTop: v, handleScroll: I } = (0, y.V)(),
+        { handleDragStart: w, handleDragReset: D, handleDragComplete: Z } = (0, O.Z)(o),
         A = i.useRef(null),
         k = i.useCallback(
             (e) => {
@@ -186,7 +186,7 @@ function D(e) {
             o.length > f && k(n), o.length !== f && b(o.length);
         }, [o.length, f, b, k, n]);
     let W = () => {
-        g.Z.createRole(t.id), l(y.ZI.DISPLAY);
+        g.Z.createRole(t.id), l(C.ZI.DISPLAY);
     };
     return (0, r.jsx)(x.ZP.Sidebar, {
         className: S.sidebar,

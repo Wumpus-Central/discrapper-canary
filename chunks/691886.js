@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(539854), n(388685);
+n.d(t, { Z: () => y }), n(539854), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -72,16 +72,16 @@ function v(e) {
         subtitle: o
     });
 }
-function C(e) {
+function O(e) {
     let { value: t } = e;
     return null != t ? (0, r.jsx)(v, { channelId: t }) : (0, r.jsx)(_, {});
 }
-function O(e) {
+function y(e) {
     let { guildId: t, value: s, initialChannelId: a, omitChannelIds: d, 'aria-labelledby': x, onChange: N } = e,
         _ = b.NW.string(b.t.d7YJMD),
         v = (0, l.e7)([m.Z], () => m.Z.getCategories(t), [t]),
-        O = (0, h.m7)(null != s ? s : f.lds),
-        y = i.useMemo(() => {
+        y = (0, h.m7)(null != s ? s : f.lds),
+        C = i.useMemo(() => {
             let e = [
                     {
                         value: null,
@@ -101,17 +101,17 @@ function O(e) {
             return (
                 null == s ||
                     t ||
-                    null == O ||
+                    null == y ||
                     e.push({
                         value: s,
-                        label: O.name
+                        label: y.name
                     }),
                 e
             );
-        }, [_, s, O, v, d, a]);
+        }, [_, s, y, v, d, a]);
     return (0, r.jsx)(o.PhF, {
         placeholder: b.NW.string(b.t.r2pts7),
-        options: y,
+        options: C,
         select: function (e) {
             null == e
                 ? (0, o.ZDy)(async () => {
@@ -170,10 +170,10 @@ function O(e) {
         },
         isSelected: (e) => null != s && j(e) === j(s),
         serialize: j,
-        renderOptionLabel: C,
+        renderOptionLabel: O,
         renderOptionValue: (e) => {
             let [t] = e;
-            return C(t);
+            return O(t);
         },
         'aria-labelledby': x
     });

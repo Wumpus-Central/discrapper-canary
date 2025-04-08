@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(493773),
     d = n(743142),
     p = n(893607),
-    g = n(703656),
-    h = n(314897),
+    h = n(703656),
+    g = n(314897),
     f = n(781428),
     m = n(981631),
     _ = n(176505);
@@ -25,17 +25,17 @@ function b(e) {
                         return (null == n || null == (t = n.params) ? void 0 : t.channelId) === _.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
-                    g.dL(t);
+                    h.dL(t);
                 else {
                     var n;
-                    (null != (n = e.transitionTo) ? n : g.uL)(t);
+                    (null != (n = e.transitionTo) ? n : h.uL)(t);
                 }
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: x, loginStatus: N } = (0, l.cj)([h.default], () => ({
-            isAuthenticated: h.default.isAuthenticated(),
-            loginStatus: h.default.getLoginStatus()
+        { isAuthenticated: x, loginStatus: N } = (0, l.cj)([g.default], () => ({
+            isAuthenticated: g.default.isAuthenticated(),
+            loginStatus: g.default.getLoginStatus()
         })),
         { location: v, redirectTo: E } = e,
         [I, j] = i.useState(x);
@@ -54,7 +54,7 @@ function b(e) {
             if (null != e && null != t) {
                 let n = null != E ? (0, d.L)(E) : void 0;
                 I
-                    ? s.Z.logout(null).finally(() => {
+                    ? s.Z.logout('handoff', null).finally(() => {
                           S({
                               handoffKey: e,
                               handoffToken: t,

@@ -1,41 +1,41 @@
-n.d(t, { Z: () => c }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
-var r,
+r.d(t, { Z: () => c }), r(388685), r(410992), r(227481), r(730884), r(20464), r(341884), r(364341), r(629680), r(505025), r(918970), r(121784), r(644351), r(146733);
+var n,
     l,
     i,
-    a = n(442837),
-    o = n(570140);
-let s = new Map();
-class u extends (r = a.ZP.Store) {
+    u = r(442837),
+    s = r(570140);
+let a = new Map();
+class o extends (n = u.ZP.Store) {
     getUsers() {
-        return s;
+        return a;
     }
     isKeyVerified(e, t) {
-        let n = s.get(e);
-        if (null == t || null == n || n.length !== t.length) return !1;
-        for (let e = 0; e < t.length; e++) if (t[e] !== n[e]) return !1;
+        let r = a.get(e);
+        if (null == t || null == r || r.length !== t.length) return !1;
+        for (let e = 0; e < t.length; e++) if (t[e] !== r[e]) return !1;
         return !0;
     }
 }
 (i = 'TransientKeyStore'),
-    (l = 'displayName') in u
-        ? Object.defineProperty(u, l, {
+    (l = 'displayName') in o
+        ? Object.defineProperty(o, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[l] = i);
-let c = new u(o.Z, {
+        : (o[l] = i);
+let c = new o(s.Z, {
     CONNECTION_OPEN: function () {
-        s.clear();
+        a.clear();
     },
     SECURE_FRAMES_TRANSIENT_KEY_CREATE: function (e) {
-        let { userId: t, key: n } = e,
-            r = new Uint8Array(n);
-        s.set(t, r);
+        let { userId: t, key: r } = e,
+            n = new Uint8Array(r);
+        a.set(t, n);
     },
     SECURE_FRAMES_TRANSIENT_KEY_DELETE: function (e) {
         let { userId: t } = e;
-        return s.delete(t);
+        return a.delete(t);
     }
 });

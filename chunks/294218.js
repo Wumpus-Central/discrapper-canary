@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(739566),
     x = n(492593),
     y = n(453687),
-    E = n(25015),
-    v = n(689674),
-    O = n(438075),
-    N = n(963550),
+    v = n(25015),
+    E = n(689674),
+    N = n(438075),
+    O = n(963550),
     j = n(845080),
     C = n(295790),
     S = n(145807),
@@ -72,7 +72,7 @@ function w(e, t) {
 }
 let Z = i.memo(function (e) {
     var t, n, i;
-    let { message: a, compact: Z = !1, className: R, onContextMenu: k, onClick: D, hideSimpleEmbedContent: L = !0, channel: M, isGroupStart: W, animateAvatar: U, subscribeToComponentDispatch: F, renderThreadAccessory: B, trackAnnouncementViews: G = !1 } = e,
+    let { message: a, compact: Z = !1, className: k, onContextMenu: R, onClick: D, hideSimpleEmbedContent: L = !0, channel: M, isGroupStart: W, animateAvatar: U, subscribeToComponentDispatch: F, renderThreadAccessory: B, trackAnnouncementViews: G = !1 } = e,
         H = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -95,7 +95,7 @@ let Z = i.memo(function (e) {
         V = a.type === T.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
         z = a.isFirstMessageInForumPost(M),
         K = (0, u.A)((null != (n = a.editedTimestamp) ? n : a.timestamp).valueOf()),
-        { content: Y, hasSpoilerEmbeds: X } = (0, E.Z)(a, {
+        { content: Y, hasSpoilerEmbeds: X } = (0, v.Z)(a, {
             hideSimpleEmbedContent: L,
             allowList: z || K,
             allowHeading: z || K,
@@ -114,7 +114,7 @@ let Z = i.memo(function (e) {
             roleId: $.iconRoleId
         }),
         ei = (0, s.e7)([f.Z], () => f.Z.can(T.Plq.CREATE_INSTANT_INVITE, M)),
-        ea = (0, v.Z)({
+        ea = (0, E.Z)({
             message: a,
             channel: M,
             enabled: G
@@ -127,7 +127,7 @@ let Z = i.memo(function (e) {
         A(
             {
                 compact: Z,
-                className: l()(R, {
+                className: l()(k, {
                     [P.ephemeral]: (0, g.Pv)(a),
                     [P.disableInteraction]: V
                 }),
@@ -141,10 +141,10 @@ let Z = i.memo(function (e) {
                         roleIcon: er
                     })
                 ),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, O.Q)(e, X),
-                childrenMessageContent: (0, N.Z)(e, Y),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, N.Q)(e, X),
+                childrenMessageContent: (0, O.Z)(e, Y),
                 childrenSystemMessage: (0, C.Z)(w(A({}, e), { disableInteraction: V })),
-                onContextMenu: k,
+                onContextMenu: R,
                 onClick: D,
                 hasThread: B && null != en && a.hasFlag(T.iLy.HAS_THREAD),
                 hasReply: a.type === T.uaV.REPLY,

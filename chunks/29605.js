@@ -25,9 +25,9 @@ var r = n(200651),
     N = n(200876),
     _ = n(730089),
     v = n(372444),
-    C = n(889564),
-    O = n(372129),
-    y = n(357156),
+    O = n(889564),
+    y = n(372129),
+    C = n(357156),
     I = n(210887),
     E = n(626135),
     S = n(768581),
@@ -247,7 +247,7 @@ let U = d().throttle(h.OQ, 1000),
     H = (e) => {
         let { emojis: t, guild: n, onEdit: s, editingDisabled: a = !1 } = e,
             l = i.useMemo(() => [...t].reverse(), [t]),
-            { canManageGuildExpression: o } = (0, y.Gw)(n);
+            { canManageGuildExpression: o } = (0, C.Gw)(n);
         return 0 === t.length
             ? (0, r.jsx)(g.R94, {
                   type: g.geA.DESCRIPTION,
@@ -321,7 +321,7 @@ let U = d().throttle(h.OQ, 1000),
             [t, s] = i.useState('');
         o()(null != e, 'ConnectedGuildSettingsEmoji must be rendered within a guild context');
         let a = (0, m.e7)([I.Z], () => I.Z.theme),
-            { canCreateExpressions: l } = (0, y.XJ)(e),
+            { canCreateExpressions: l } = (0, C.XJ)(e),
             { revision: c, emojis: p } = (0, m.cj)([D.Z], () => ({
                 revision: D.Z.getEmojiRevision(e.id),
                 emojis: D.Z.getEmojis(e.id)
@@ -340,7 +340,7 @@ let U = d().throttle(h.OQ, 1000),
                 null != h && h < c && U(e.id);
             }, [c, h, e.id]);
         let [w, M] = i.useMemo(() => {
-                let t = null == p ? void 0 : p.filter((t) => !(0, C.Kt)(t, e.id)),
+                let t = null == p ? void 0 : p.filter((t) => !(0, O.Kt)(t, e.id)),
                     [n, r] = d().partition(t, (e) => !e.animated);
                 return [n, r];
             }, [p, e.id]),
@@ -361,7 +361,7 @@ let U = d().throttle(h.OQ, 1000),
                         guild_id: e.id,
                         upload_id: t
                     }),
-                    await (0, O._)(n, H),
+                    await (0, y._)(n, H),
                     b(!0);
             },
             K = () => {
@@ -459,7 +459,7 @@ let U = d().throttle(h.OQ, 1000),
                                     children: [
                                         W.NW.string(W.t.DU0dy8),
                                         z > 0
-                                            ? (0, r.jsx)(O.Z, {
+                                            ? (0, r.jsx)(y.Z, {
                                                   disabled: v || 0 === z || !l,
                                                   tabIndex: 0,
                                                   onChange: H,

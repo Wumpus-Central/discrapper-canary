@@ -1,16 +1,16 @@
-r.d(t, { default: () => h }), r(388685);
+r.d(t, { default: () => g }), r(388685);
 var n = r(200651),
     o = r(192379),
     i = r(481060),
-    a = r(661111),
-    s = r(766411),
+    s = r(661111),
+    a = r(766411),
     l = r(626135),
     c = r(388080),
     d = r(981631),
     u = r(596401),
     p = r(388032),
     m = r(104313);
-function b(e, t, r) {
+function _(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function b(e, t, r) {
         e
     );
 }
-function _(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -34,12 +34,12 @@ function _(e) {
                 })
             )),
             n.forEach(function (t) {
-                b(e, t, r[t]);
+                _(e, t, r[t]);
             });
     }
     return e;
 }
-class g extends o.PureComponent {
+class h extends o.PureComponent {
     componentDidMount() {
         (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0);
     }
@@ -50,7 +50,7 @@ class g extends o.PureComponent {
         var e, t;
         return (0, n.jsx)(
             c.Z,
-            ((e = _({}, this.props)),
+            ((e = b({}, this.props)),
             (t = t =
                 {
                     onClose: this.close,
@@ -76,38 +76,38 @@ class g extends o.PureComponent {
         var t;
         super(...e),
             (t = this),
-            b(this, 'maxScrolledPercentage', 0),
-            b(this, 'mountedAt', 0),
-            b(this, 'close', () => {
+            _(this, 'maxScrolledPercentage', 0),
+            _(this, 'mountedAt', 0),
+            _(this, 'close', () => {
                 (0, i.Mr3)(u.Xd);
             }),
-            b(this, 'handleScroll', (e) => {
+            _(this, 'handleScroll', (e) => {
                 let { offsetHeight: t, scrollHeight: r, scrollTop: n } = e.getScrollerState();
                 this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, n / (r - t)), 1);
             }),
-            b(this, 'track', function (e) {
+            _(this, 'track', function (e) {
                 let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: o } = t.props,
-                    { date: i, revision: a } = o,
-                    s = _({ change_log_id: ''.concat(i, ':').concat(a) }, r);
+                    { date: i, revision: s } = o,
+                    a = b({ change_log_id: ''.concat(i, ':').concat(s) }, r);
                 n ||
-                    (s = _(
+                    (a = b(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                             max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10)
                         },
-                        s
+                        a
                     )),
-                    l.default.track(e, s);
+                    l.default.track(e, a);
             });
     }
 }
-function h(e) {
-    let { changelog: t, loaded: r, clientTooOld: l } = (0, s.E)();
+function g(e) {
+    let { changelog: t, loaded: r, clientTooOld: l } = (0, a.E)();
     if (
         (o.useEffect(() => {
-            if (r && null != t) return () => a.Z.markChangelogAsSeen(t.id, t.date);
+            if (r && null != t) return () => s.Z.markChangelogAsSeen(t.id, t.date);
         }, [r, t]),
         l)
     )
@@ -143,6 +143,6 @@ function h(e) {
             });
     return (0, n.jsx)(i.Y0X, {
         transitionState: e.transitionState,
-        children: (0, n.jsx)(g, { changeLog: t })
+        children: (0, n.jsx)(h, { changeLog: t })
     });
 }

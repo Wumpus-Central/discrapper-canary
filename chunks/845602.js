@@ -4,8 +4,8 @@ var r = t(200651),
     a = t(755641),
     i = t(742409),
     s = t(369509),
-    l = t(116175),
-    c = t(388032),
+    c = t(116175),
+    l = t(388032),
     u = t(817239),
     d = t(606217);
 function p(e) {
@@ -19,15 +19,15 @@ function p(e) {
                     avatar: o.Z,
                     username: 'Roka',
                     usernameStyle: { color: 'var(--brand-400)' },
-                    message: c.NW.string(u.Z.bpghV1),
+                    message: l.NW.string(u.Z.bpghV1),
                     decorations: (0, r.jsx)(s.S, {
                         guildId: n,
                         tag: 'GGEZ',
-                        badge: l.ZD.HEART
+                        badge: c.ZD.HEART
                     })
                 })
             }),
-            (0, r.jsx)(a.g, { selectedBadge: l.ZD.HEART })
+            (0, r.jsx)(a.g, { selectedBadge: c.ZD.HEART })
         ]
     });
 }

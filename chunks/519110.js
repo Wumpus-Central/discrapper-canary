@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(704826), n(35282);
 var r = n(200651),
     i = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(80932),
     s = n(2052),
     c = n(543241),
@@ -12,11 +12,11 @@ var r = n(200651),
     g = n(268350),
     m = n(217590),
     b = n(453070),
-    p = n(926491),
-    h = n(378233),
-    y = n(981631),
-    N = n(388032);
-function O(e) {
+    h = n(926491),
+    p = n(378233),
+    O = n(981631),
+    y = n(388032);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,11 +65,11 @@ function v(e) {
 function j(e) {
     let { type: t, id: n, name: j, isInExpressionPicker: S = !1 } = e,
         { location: P } = (0, s.O)(),
-        Z = i.useMemo(() => E(O({}, P), { section: S ? y.jXE.EXPRESSION_PICKER : y.jXE.CONTEXT_MENU }), [P, S]),
-        I = (0, b.Go)(),
-        x = (0, l.e7)([p.Z], () => (t === f.S.STICKER && null != n ? p.Z.getStickerById(n) : null)),
-        _ = null != x && I.includes(x.id),
-        T = (0, l.e7)([u.ZP], () => {
+        _ = i.useMemo(() => N(E({}, P), { section: S ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [P, S]),
+        Z = (0, b.Go)(),
+        I = (0, a.e7)([h.Z], () => (t === f.S.STICKER && null != n ? h.Z.getStickerById(n) : null)),
+        x = null != I && Z.includes(I.id),
+        T = (0, a.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
                 else if (null != j) {
@@ -78,44 +78,44 @@ function j(e) {
                 }
             }
         }),
-        M = (0, c.C1)(null, T);
-    return null != x && t === f.S.STICKER
-        ? (0, h.J8)(x) && !(0, h.V9)(x)
+        A = (0, c.C1)(null, T);
+    return null != I && t === f.S.STICKER
+        ? (0, p.J8)(I) && !(0, p.V9)(I)
             ? null
-            : _
-              ? (0, r.jsx)(a.sNh, {
+            : x
+              ? (0, r.jsx)(l.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, g.hW)(x.id),
-                    label: N.NW.string(N.t.XhzKyM)
+                    action: () => (0, g.hW)(I.id),
+                    label: y.NW.string(y.t.XhzKyM)
                 })
-              : (0, r.jsx)(a.sNh, {
+              : (0, r.jsx)(l.sNh, {
                     id: 'favorite',
                     action: () => {
                         (0, m.cQ)({
-                            sticker: x,
-                            location: E(O({}, Z), { object: y.qAy.STICKER })
+                            sticker: I,
+                            location: N(E({}, _), { object: O.qAy.STICKER })
                         }),
-                            (0, g.SA)(null == x ? void 0 : x.id);
+                            (0, g.SA)(null == I ? void 0 : I.id);
                     },
-                    label: N.NW.string(N.t.kWmiPT)
+                    label: y.NW.string(y.t.kWmiPT)
                 })
         : null != T && t === f.S.EMOJI
-          ? M
-              ? (0, r.jsx)(a.sNh, {
+          ? A
+              ? (0, r.jsx)(l.sNh, {
                     id: 'unfavorite',
                     action: () => (0, o.Xe)(T),
-                    label: N.NW.string(N.t.Ay49KC)
+                    label: y.NW.string(y.t.Ay49KC)
                 })
-              : (0, r.jsx)(a.sNh, {
+              : (0, r.jsx)(l.sNh, {
                     id: 'favorite',
                     action: () => {
                         (0, c.J1)({
                             emoji: T,
-                            location: E(O({}, Z), { object: y.qAy.EMOJI })
+                            location: N(E({}, _), { object: O.qAy.EMOJI })
                         }),
                             (0, o.$K)(T);
                     },
-                    label: N.NW.string(N.t['nNsr6+'])
+                    label: y.NW.string(y.t['nNsr6+'])
                 })
           : void 0;
 }

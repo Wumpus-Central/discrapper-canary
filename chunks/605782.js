@@ -69,28 +69,28 @@ class u extends i.Component {
     render() {
         let e = this.props,
             { children: t, location: n, history: u, staticContext: d, match: p } = e,
-            g = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
-            h = null,
+            h = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
+            g = null,
             f = null;
         return (
             i.Children.forEach(t, (e) => {
-                if (null == h && i.isValidElement(e)) {
+                if (null == g && i.isValidElement(e)) {
                     let t = e.props,
                         { component: r, render: a } = t,
                         p = c(t, ['component', 'render']),
-                        g = p.path || p.from;
-                    null != (h = null != g ? (0, o.LX)(n.pathname, s(l({}, p), { path: g })) : null) &&
+                        h = p.path || p.from;
+                    null != (g = null != h ? (0, o.LX)(n.pathname, s(l({}, p), { path: h })) : null) &&
                         ((p = s(l({}, p), {
-                            key: g,
+                            key: h,
                             location: n,
-                            match: h,
+                            match: g,
                             history: u,
                             staticContext: d
                         })),
                         null != r ? (f = i.createElement(r, p)) : null != a && (f = a(p)));
                 }
             }),
-            (0, r.jsx)(a.W, s(l({}, g), { children: f }))
+            (0, r.jsx)(a.W, s(l({}, h), { children: f }))
         );
     }
 }

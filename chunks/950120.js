@@ -12,12 +12,12 @@ var r = n(200651),
     p = n(288229),
     _ = n(981631),
     h = n(388032),
-    O = n(854600);
-function b(e) {
+    b = n(854600);
+function O(e) {
     let { onClose: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)('div', {
-        className: O.mobileCloseWrapper,
+        className: b.mobileCloseWrapper,
         ref: n,
         children: (0, r.jsx)(s.JcV, {
             containerRef: n,
@@ -53,7 +53,7 @@ function m(e) {
             }
             return i;
         })(e, ['onClose', 'items', 'startingIndex', 'fit', 'shouldRedactExplicitContent', 'shouldHideMediaOptions', 'shouldAnimateCarousel', 'className', 'transitionState']);
-    let x = l.tq && null != o;
+    let L = l.tq && null != o;
     return (
         i.useEffect(() => {
             if (null != o)
@@ -103,7 +103,7 @@ function m(e) {
             })(
                 {
                     hideShadow: !0,
-                    className: a()(O.carouselModal, S),
+                    className: a()(b.carouselModal, S),
                     transitionState: v
                 },
                 P
@@ -114,7 +114,7 @@ function m(e) {
                     'aria-label': h.NW.string(h.t.AMTX3t),
                     onClick: o,
                     children: [
-                        x ? (0, r.jsx)(b, { onClose: o }) : null,
+                        L ? (0, r.jsx)(O, { onClose: o }) : null,
                         (0, r.jsx)(p.Z, {
                             items: c,
                             startIndex: m,

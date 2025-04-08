@@ -98,7 +98,7 @@ function g(e) {
                                 look: l.zxk.Looks.LINK,
                                 size: l.zxk.Sizes.NONE,
                                 onClick: () => {
-                                    s.Z.logout(), f();
+                                    s.Z.logout('claim_account_modal'), f();
                                 },
                                 children: p.NW.string(p.t['2jxGen'])
                             })

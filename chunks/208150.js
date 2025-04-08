@@ -24,7 +24,7 @@ let v = {
         section: x.jXE.GUILD_SETTINGS_STICKERS,
         object: x.qAy.BOOSTING_BANNER
     },
-    C = (e) => {
+    O = (e) => {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, l.ZP)(),
             i = (0, u.Z)(t.id).available,
@@ -73,7 +73,7 @@ let v = {
             ]
         });
     },
-    O = () =>
+    y = () =>
         (0, r.jsxs)(s.hjN, {
             title: N.NW.string(N.t['9N2OWF']),
             children: [
@@ -87,7 +87,7 @@ let v = {
                 })
             ]
         }),
-    y = (e) => {
+    C = (e) => {
         let t,
             n,
             i,
@@ -141,14 +141,14 @@ let v = {
                     o
                         ? (0, r.jsxs)('div', {
                               children: [
-                                  (0, r.jsx)(y, {
+                                  (0, r.jsx)(C, {
                                       guild: e,
                                       guildStickers: t
                                   }),
-                                  (0, r.jsx)(O, {})
+                                  (0, r.jsx)(y, {})
                               ]
                           })
-                        : (0, r.jsx)(C, { guild: e }),
+                        : (0, r.jsx)(O, { guild: e }),
                     (0, r.jsx)(s.$i$, { className: _.divider }),
                     (0, r.jsx)(g.Z, { guild: e })
                 ]

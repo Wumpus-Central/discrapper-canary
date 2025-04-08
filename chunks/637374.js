@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(479446),
     x = n(930114),
     y = n(981632),
-    E = n(108989),
-    v = n(703656),
-    O = n(314897),
-    N = n(82142),
+    v = n(108989),
+    E = n(703656),
+    N = n(314897),
+    O = n(82142),
     j = n(283595),
     C = n(594174),
     S = n(509545),
@@ -30,8 +30,8 @@ var r = n(200651),
     A = n(669079),
     w = n(74538),
     Z = n(296848),
-    R = n(51144),
-    k = n(626799),
+    k = n(51144),
+    R = n(626799),
     D = n(981631),
     L = n(474936),
     M = n(388032),
@@ -200,7 +200,7 @@ class V extends i.Component {
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
-        return this.isCustomGiftMessage() && !n ? M.NW.formatToPlainString(M.t.t1SOIS, { recipientDisplayName: R.ZP.getName(t) }) : null == r ? null : e.isSubscription ? (n ? M.NW.string(M.t['2PJ1ND']) : M.NW.string(M.t.hrnGnp)) : n ? M.NW.string(M.t.QLEMlZ) : M.NW.string(M.t.W4DBc3);
+        return this.isCustomGiftMessage() && !n ? M.NW.formatToPlainString(M.t.t1SOIS, { recipientDisplayName: k.ZP.getName(t) }) : null == r ? null : e.isSubscription ? (n ? M.NW.string(M.t['2PJ1ND']) : M.NW.string(M.t.hrnGnp)) : n ? M.NW.string(M.t.QLEMlZ) : M.NW.string(M.t.W4DBc3);
     }
     renderBody(e) {
         let { libraryApplication: t, isSelfGift: n, sku: r, gifter: i, subscriptionPlan: a, currentUser: l } = this.props;
@@ -227,12 +227,12 @@ class V extends i.Component {
             return null != i
                 ? e.isSubscription
                     ? M.NW.format(M.t.l3VxgI, {
-                          username: R.ZP.getUserTag(i),
+                          username: k.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: o
                       })
                     : M.NW.format(M.t['9cYrw8'], {
-                          username: R.ZP.getUserTag(i),
+                          username: k.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: o
                       })
@@ -250,7 +250,7 @@ class V extends i.Component {
             if (null != i) {
                 let e = a.interval === L.rV.MONTH ? M.t['/RDIEB'] : M.t['3CX6Eh'];
                 return M.NW.format(e, {
-                    username: R.ZP.getUserTag(i),
+                    username: k.ZP.getUserTag(i),
                     skuName: o,
                     intervalCount: a.intervalCount
                 });
@@ -261,7 +261,7 @@ class V extends i.Component {
                 intervalCount: a.intervalCount
             });
         }
-        return null != i ? M.NW.format(M.t['3HsdQ0'], { username: R.ZP.getUserTag(i) }) : M.NW.string(M.t.Jdnjjo);
+        return null != i ? M.NW.format(M.t['3HsdQ0'], { username: k.ZP.getUserTag(i) }) : M.NW.string(M.t.Jdnjjo);
     }
     renderPromotionActions() {
         return (0, r.jsx)(u.zxk, {
@@ -274,7 +274,7 @@ class V extends i.Component {
         let { giftCode: e, width: t } = this.props;
         return null == e
             ? null
-            : (0, r.jsx)(k.$, {
+            : (0, r.jsx)(R.$, {
                   skuId: e.skuId,
                   onEmbedClick: this.handleEmbedClick,
                   analyticsSection: D.jXE.GIFT_CODE_EMBED,
@@ -288,7 +288,7 @@ class V extends i.Component {
     render() {
         let { giftCode: e, resolved: t, width: n, isSelfGift: i } = this.props;
         if (null != e && null != e.promotion)
-            return (0, r.jsx)(k.$, {
+            return (0, r.jsx)(R.$, {
                 skuId: e.skuId,
                 onEmbedClick: this.handleClaimPromotion,
                 analyticsSection: D.jXE.GIFT_CODE_EMBED,
@@ -315,7 +315,7 @@ class V extends i.Component {
         super(...e),
             U(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                e.preventDefault(), null != t && t.isHidden() ? (0, v.uL)(D.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, v.uL)(D.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
+                e.preventDefault(), null != t && t.isHidden() ? (0, E.uL)(D.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, E.uL)(D.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
             U(this, 'handleVerificationClick', (e) => {
                 e.stopPropagation(), e.preventDefault(), d.Z.open(D.oAB.ACCOUNT);
@@ -365,7 +365,7 @@ class V extends i.Component {
                     children: [
                         !t &&
                             L.eZ.includes(e.giftStyle) &&
-                            (0, r.jsx)(E.Z, {
+                            (0, r.jsx)(v.Z, {
                                 className: W.snow,
                                 wind: 5
                             }),
@@ -382,9 +382,9 @@ class V extends i.Component {
     }
 }
 let z = (0, f.Z)((0, m.Z)(V)),
-    K = c.ZP.connectStores([N.Z, I.Z, C.default, j.Z, S.Z, O.default, h.Z], (e) => {
+    K = c.ZP.connectStores([O.Z, I.Z, C.default, j.Z, S.Z, N.default, h.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
-            i = N.Z.get(t),
+            i = O.Z.get(t),
             a = null != i ? I.Z.get(i.skuId) : null,
             l = null != i && null != i.userId ? C.default.getUser(i.userId) : null,
             o = h.Z.useReducedMotion;
@@ -394,8 +394,8 @@ let z = (0, f.Z)((0, m.Z)(V)),
             gifter: l,
             currentUser: r,
             subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, Z.oE)(i.subscriptionPlanId) : null,
-            isSelfGift: null != i ? O.default.getId() === i.userId : O.default.getId() === n.id,
-            resolved: N.Z.getIsResolved(t),
+            isSelfGift: null != i ? N.default.getId() === i.userId : N.default.getId() === n.id,
+            resolved: O.Z.getIsResolved(t),
             libraryApplication: null != a && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, a, j.Z) : null,
             useReducedMotion: o
         };

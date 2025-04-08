@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(271383),
     _ = n(430824),
     v = n(594174),
-    C = n(267642),
-    O = n(624138),
-    y = n(981631),
+    O = n(267642),
+    y = n(624138),
+    C = n(981631),
     I = n(388032),
     E = n(824302);
 function S(e, t, n) {
@@ -71,7 +71,7 @@ function P(e, t) {
         e
     );
 }
-let w = (0, O.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let w = (0, y.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class R extends i.Component {
     componentDidMount() {
         this.measure();
@@ -96,8 +96,8 @@ class R extends i.Component {
             a = e.map((e) => {
                 var n;
                 return {
-                    numRequired: y.oCV[e.tier],
-                    name: (0, C.nW)(e.tier),
+                    numRequired: C.oCV[e.tier],
+                    name: (0, O.nW)(e.tier),
                     y: null != (n = t[e.tier]) ? n : 0,
                     key: e.tier
                 };
@@ -168,7 +168,7 @@ class R extends i.Component {
                                             tiers: s,
                                             tierIndex: i,
                                             onSetRef: this.setTierRef,
-                                            isAnimatedTo: y.oCV[this.state.animatedTier] >= y.oCV[r.tier],
+                                            isAnimatedTo: C.oCV[this.state.animatedTier] >= C.oCV[r.tier],
                                             subscriptionCount: n,
                                             guildId: e
                                         })
@@ -185,7 +185,7 @@ class R extends i.Component {
             S(this, 'defaultTierRef', i.createRef()),
             S(this, 'state', {
                 tierPositions: null,
-                animatedTier: y.Eu4.NONE
+                animatedTier: C.Eu4.NONE
             }),
             S(this, 'measure', () => {
                 let { uniqueSubscriberCount: e } = this.props,

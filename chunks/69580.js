@@ -314,14 +314,14 @@ function eg(e) {
                 tn(!t), te(e);
             } catch (n) {
                 let { status: e, body: t } = n;
-                if (401 === e) return void (0, F.c$)(eD);
+                if (401 === e) return void (0, F.c$)(eD, 'oauth2_error_failed_disclosures');
                 eG(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
             } finally {
                 e7.current = !1;
             }
         };
         if (null == eR) {
-            if (!k.default.isAuthenticated()) return void (0, F.c$)(eD);
+            if (!k.default.isAuthenticated()) return void (0, F.c$)(eD, 'oauth2_error_not_authenticated');
             e();
         }
     }, [D, eD, eR, te, eG, tn, ej]);
@@ -393,7 +393,7 @@ function eg(e) {
         ),
         ti = i.useRef(!1),
         to = i.useCallback(async () => {
-            if (!k.default.isAuthenticated()) return void (0, F.c$)(eD);
+            if (!k.default.isAuthenticated()) return void (0, F.c$)(eD, 'oauth2_error_not_authenticated');
             if (!e7.current && !ti.current) {
                 ti.current = !0;
                 try {
@@ -414,7 +414,7 @@ function eg(e) {
                     eM((0, Z.d)(e)), e_ === Y.s.NONE && e.authorized && !tt && tr(!0), (0, S.yw)(ei.rMx.OAUTH2_AUTHORIZE_VIEWED, { application_id: e.application.id });
                 } catch (n) {
                     let { status: e, body: t } = n;
-                    if (401 === e) return void (0, F.c$)(eD);
+                    if (401 === e) return void (0, F.c$)(eD, 'oauth2_error_unauthorized');
                     eG(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
                 } finally {
                     ti.current = !1;

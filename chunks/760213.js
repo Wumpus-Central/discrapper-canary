@@ -117,7 +117,7 @@ function E(e) {
                                                 id: 'remove-account',
                                                 label: O.NW.string(O.t.lSLMaW),
                                                 action: () => {
-                                                    u.Z.logout(null, r.id).finally(() => {
+                                                    u.Z.logout('multi_accounts_list', null, r.id).finally(() => {
                                                         N.Zd(r.id);
                                                     });
                                                     let e = {};

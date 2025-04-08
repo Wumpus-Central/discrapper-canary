@@ -65,9 +65,9 @@ function j(e, t) {
 }
 function N(e) {
     var t, i, a, c;
-    let { guild: u, prompt: N, singleColumn: _, promptIndex: v, option: C, hasError: O, onDragStart: y, onDragComplete: I, onDragReset: E } = e,
+    let { guild: u, prompt: N, singleColumn: _, promptIndex: v, option: O, hasError: y, onDragStart: C, onDragComplete: I, onDragReset: E } = e,
         S = null,
-        T = l().findIndex(N.options, (e) => e.id === C.id),
+        T = l().findIndex(N.options, (e) => e.id === O.id),
         {
             drag: P,
             dragSourcePosition: w,
@@ -76,17 +76,17 @@ function N(e) {
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(N.id),
             index: T,
-            optionId: C.id,
-            onDragStart: y,
+            optionId: O.id,
+            onDragStart: C,
             onDragComplete: I,
             onDragReset: E
         }),
-        { customEmoji: Z, unicodeEmoji: A } = (0, m.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (i = C.emoji) ? void 0 : i.name);
+        { customEmoji: Z, unicodeEmoji: A } = (0, m.Z)(null == (t = O.emoji) ? void 0 : t.id, null == (i = O.emoji) ? void 0 : i.name);
     return (
-        (0, h.Oq)(C.emoji) || null != Z || null != A || (S = f.NW.string(f.t['61wfmp'])),
+        (0, h.Oq)(O.emoji) || null != Z || null != A || (S = f.NW.string(f.t['61wfmp'])),
         (0, r.jsxs)(o.P3F, {
             className: s()(b.optionCard, {
-                [b.hasError]: O || null != S,
+                [b.hasError]: y || null != S,
                 [b.dropIndicatorBefore]: null != w && T < w,
                 [b.dropIndicatorAfter]: null != w && T > w,
                 [b.singleColumn]: _
@@ -100,13 +100,13 @@ function N(e) {
                             j(x({}, t), {
                                 guild: u,
                                 prompt: N,
-                                option: C,
+                                option: O,
                                 index: v,
                                 onSave: (e) => {
-                                    (0, p.Kk)(u, N.id, { options: N.options.map((t) => (t.id === C.id ? e : t)) });
+                                    (0, p.Kk)(u, N.id, { options: N.options.map((t) => (t.id === O.id ? e : t)) });
                                 },
                                 onDelete: () => {
-                                    (0, p.Kk)(u, N.id, { options: N.options.filter((e) => e.id !== C.id) });
+                                    (0, p.Kk)(u, N.id, { options: N.options.filter((e) => e.id !== O.id) });
                                 }
                             })
                         );
@@ -129,8 +129,8 @@ function N(e) {
                         (0, r.jsx)('div', {
                             className: b.emoji,
                             children: (0, r.jsx)(g.Z, {
-                                emojiId: null == (a = C.emoji) ? void 0 : a.id,
-                                emojiName: null == (c = C.emoji) ? void 0 : c.name,
+                                emojiId: null == (a = O.emoji) ? void 0 : a.id,
+                                emojiName: null == (c = O.emoji) ? void 0 : c.name,
                                 defaultComponent: null
                             })
                         }),
@@ -141,14 +141,14 @@ function N(e) {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     lineClamp: 1,
-                                    children: C.title
+                                    children: O.title
                                 }),
-                                '' !== C.description &&
+                                '' !== O.description &&
                                     (0, r.jsx)(o.Text, {
                                         className: b.description,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        children: C.description
+                                        children: O.description
                                     })
                             ]
                         })

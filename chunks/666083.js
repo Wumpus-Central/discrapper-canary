@@ -2,10 +2,10 @@ n.d(t, { default: () => j }), n(388685), n(953529);
 var r = n(200651),
     o = n(192379),
     s = n(48026),
-    a = n(442837),
-    i = n(481060),
-    c = n(607070),
-    l = n(530618),
+    i = n(442837),
+    a = n(481060),
+    l = n(607070),
+    c = n(530618),
     u = n(372654),
     d = n(262212),
     p = n(795338),
@@ -36,7 +36,7 @@ function j(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let v = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+    let v = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
         x = o.useRef(null),
         _ = o.useRef(new s.qA()),
         [C, h] = o.useState(null),
@@ -49,7 +49,7 @@ function j(e) {
                 environment: _.current
             }),
             (0, r.jsxs)(
-                i.Y0X,
+                a.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,14 +77,14 @@ function j(e) {
                 })(
                     {
                         className: g.modal,
-                        size: i.CgR.DYNAMIC
+                        size: a.CgR.DYNAMIC
                     },
                     y
                 )),
                 (n = n =
                     {
                         children: [
-                            (0, r.jsx)(i.hzk, {
+                            (0, r.jsx)(a.hzk, {
                                 className: g.modalContentContainer,
                                 scrollbarType: 'none',
                                 children: (0, r.jsxs)('div', {
@@ -98,11 +98,11 @@ function j(e) {
                                         (0, r.jsxs)('div', {
                                             className: g.contentContainer,
                                             children: [
-                                                (0, r.jsx)(i.X6q, {
+                                                (0, r.jsx)(a.X6q, {
                                                     variant: 'heading-xl/extrabold',
                                                     children: m.NW.formatToPlainString(b.Z.lFuOFB, { perkName: O.title })
                                                 }),
-                                                (0, r.jsx)(i.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     className: g.description,
                                                     variant: 'text-sm/normal',
                                                     children: m.NW.formatToPlainString(b.Z.y3wHoq, { perkName: O.title })
@@ -114,7 +114,7 @@ function j(e) {
                                                           powerup: O,
                                                           onClick: y.onClose
                                                       })
-                                                    : (0, r.jsx)(i.zxk, {
+                                                    : (0, r.jsx)(a.zxk, {
                                                           className: g.button,
                                                           onClick: y.onClose,
                                                           children: m.NW.string(m.t.cpT0Cg)
@@ -124,12 +124,12 @@ function j(e) {
                                     ]
                                 })
                             }),
-                            (0, r.jsx)(i.olH, {
+                            (0, r.jsx)(a.olH, {
                                 className: g.close,
                                 onClick: y.onClose
                             }),
                             !v &&
-                                (0, r.jsx)(l.Z, {
+                                (0, r.jsx)(c.Z, {
                                     confettiTarget: x.current,
                                     confettiCanvas: C,
                                     sprites: (0, u.vK)()

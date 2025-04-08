@@ -38,7 +38,7 @@ function p(e) {
     }
     return e;
 }
-let h = 'custom-profile-theme',
+let h = 'custom-user-profile-theme',
     m = Object.freeze({
         '--profile-gradient-primary-color': 'var(--background-secondary-alt)',
         '--profile-gradient-secondary-color': 'var(--background-secondary-alt)',

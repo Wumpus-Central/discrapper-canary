@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h }), n(35282), n(539854), n(388685);
+n.d(t, { Z: () => p }), n(35282), n(539854), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(378409),
-    a = n(976853),
+    a = n(378409),
+    l = n(976853),
     o = n(902676),
     s = n(626135),
     c = n(49012),
@@ -37,16 +37,16 @@ function b(e) {
     }
     return e;
 }
-let p = /^(tel|sms|mailto):([^?;]+)/;
-function h(e, t, n, h) {
-    let y = (0, a.Z)(null == n ? void 0 : n.getChannelId());
-    if (!u.isPlatformEmbedded || null == e || '' === e || y || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
-    let N = (0, o.F)(e),
-        O = (e) => {
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, b({ hostname: N }, (0, f.v)())), d.ZP.copy(e), (0, i.showToast)((0, i.createToast)(m.NW.string(m.t['L/PwZW']), i.ToastType.SUCCESS));
+let h = /^(tel|sms|mailto):([^?;]+)/;
+function p(e, t, n, p) {
+    let O = (0, l.Z)(null == n ? void 0 : n.getChannelId());
+    if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || !(0, a.Jj)(e)) return null;
+    let y = (0, o.F)(e),
+        E = (e) => {
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, b({ hostname: y }, (0, f.v)())), d.ZP.copy(e), (0, i.showToast)((0, i.createToast)(m.NW.string(m.t['L/PwZW']), i.ToastType.SUCCESS));
         },
-        E = (n) => {
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, b({ hostname: N }, (0, f.v)())),
+        N = (n) => {
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, b({ hostname: y }, (0, f.v)())),
                 (0, c.q)(
                     {
                         href: e,
@@ -57,7 +57,7 @@ function h(e, t, n, h) {
                 );
         },
         v = [],
-        j = e.match(p);
+        j = e.match(h);
     if (null != j) {
         let e = m.NW.string('mailto' === j[1] ? m.t.ZYLVKi : m.t['3zozoa']);
         v.push(
@@ -67,7 +67,7 @@ function h(e, t, n, h) {
                     id: 'copy-native-contact',
                     label: e,
                     action: () => {
-                        O(j[2]);
+                        E(j[2]);
                     }
                 },
                 'copy-native-contact'
@@ -81,7 +81,7 @@ function h(e, t, n, h) {
                 id: 'copy-native-link',
                 label: m.NW.string(m.t.WqhZsr),
                 action: () => {
-                    O(e);
+                    E(e);
                 }
             },
             'copy-native-link'
@@ -92,7 +92,7 @@ function h(e, t, n, h) {
             {
                 id: 'open-native-link',
                 label: m.NW.string(m.t.wuRE8P),
-                action: (e) => E(e)
+                action: (e) => N(e)
             },
             'open-native-link'
         )

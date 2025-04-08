@@ -5,18 +5,18 @@ n.d(t, {
     n(539854);
 var r = n(200651),
     i = n(192379),
-    l = n(481060),
-    a = n(239091),
+    a = n(481060),
+    l = n(239091),
     o = n(324701),
     s = n(550727),
     c = n(388032);
 function u(e) {
     let { createReminder: t } = e,
-        a = i.useCallback(() => {
-            (0, l.ZDy)(async () => {
+        l = i.useCallback(() => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('43866').then(n.bind(n, 423639));
                 return (n) => {
-                    var i, l;
+                    var i, a;
                     return (0, r.jsx)(
                         e,
                         ((i = (function (e) {
@@ -44,9 +44,9 @@ function u(e) {
                             }
                             return e;
                         })({}, n)),
-                        (l = l = { createReminder: t }),
+                        (a = a = { createReminder: t }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -54,8 +54,8 @@ function u(e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
                         i)
                     );
@@ -66,7 +66,7 @@ function u(e) {
         let e = s.B.map((e) => {
             let { getDueAt: n, getLabel: i } = e;
             return (0, r.jsx)(
-                l.sNh,
+                a.sNh,
                 {
                     id: 'create-reminder-'.concat(i()),
                     label: i(),
@@ -78,18 +78,18 @@ function u(e) {
         return (
             e.push(
                 (0, r.jsx)(
-                    l.sNh,
+                    a.sNh,
                     {
                         id: 'create-reminder-custom',
                         label: c.NW.string(c.t.OLA8Zm),
-                        action: a
+                        action: l
                     },
                     'custom'
                 )
             ),
             e
         );
-    }, [t, a]);
+    }, [t, l]);
 }
 function d(e) {
     let { message: t, label: n } = e,
@@ -101,12 +101,12 @@ function d(e) {
                     dueAt: e
                 })
         });
-    return (0, r.jsx)(l.v2r, {
+    return (0, r.jsx)(a.v2r, {
         navId: 'message-reminder-create',
-        onClose: a.Zy,
+        onClose: l.Zy,
         'aria-label': c.NW.string(c.t.mJ3P0N),
         onSelect: () => null,
-        children: (0, r.jsx)(l.kSQ, {
+        children: (0, r.jsx)(a.kSQ, {
             label: n,
             children: i
         })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(35282);
+n.d(t, { Z: () => y }), n(35282);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -80,7 +80,7 @@ function v(e) {
             )
     });
 }
-function C(e) {
+function O(e) {
     let { isDiscoverable: t, profile: n, onCustomBannerChange: s, canManageGuild: l } = e,
         o = null != n.customBanner,
         d = i.useMemo(() => {
@@ -134,13 +134,13 @@ function C(e) {
         })
     });
 }
-function O(e) {
+function y(e) {
     var t;
     let { profile: n, onCustomBannerChange: s, canManageGuild: o } = e,
         u = (0, l.e7)([m.Z], () => m.Z.getGuild(n.id)),
         g = null != (t = null == u ? void 0 : u.hasFeature(f.oNc.DISCOVERABLE)) && t,
         p = n.id,
-        O = i.useCallback(
+        y = i.useCallback(
             (e) => () => {
                 h.Z.updateGuildProfile(p, {
                     brandColorPrimary: e,
@@ -149,7 +149,7 @@ function O(e) {
             },
             [p]
         ),
-        y = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
+        C = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
     return (0, r.jsx)(c.hjN, {
         title: x.NW.string(x.t.BSVog4),
         children: (0, r.jsxs)('div', {
@@ -158,7 +158,7 @@ function O(e) {
                 (0, r.jsx)(v, {
                     profile: n,
                     canManageGuild: o,
-                    handleClick: O(null),
+                    handleClick: y(null),
                     hasCustomBanner: g && null != n.customBanner
                 }),
                 b.cb.map((e) => {
@@ -174,17 +174,17 @@ function O(e) {
                                         'aria-disabled': !o,
                                         tabIndex: o ? 0 : -1,
                                         'aria-label': t,
-                                        onClick: o ? O(n) : void 0,
+                                        onClick: o ? y(n) : void 0,
                                         style: { background: (0, d.d)(n) },
                                         className: a()(j.itemContainer, { [j.disabled]: !o }),
-                                        children: (0, r.jsx)('div', { className: a()({ [j.itemSelected]: y(n) }) })
+                                        children: (0, r.jsx)('div', { className: a()({ [j.itemSelected]: C(n) }) })
                                     })
                                 )
                         },
                         t
                     );
                 }),
-                (0, r.jsx)(C, {
+                (0, r.jsx)(O, {
                     canManageGuild: o,
                     isDiscoverable: g,
                     profile: n,

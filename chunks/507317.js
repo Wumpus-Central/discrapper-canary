@@ -93,7 +93,7 @@ let N = function (e) {
             },
             [t]
         ),
-        C = (0, r.jsx)(c.Z, {
+        O = (0, r.jsx)(c.Z, {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
@@ -147,7 +147,7 @@ let N = function (e) {
                                   })
                               ]
                           }),
-                          (0, r.jsx)('div', { children: C })
+                          (0, r.jsx)('div', { children: O })
                       ]
                   })
               ]
@@ -205,7 +205,7 @@ let N = function (e) {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
                                   onClick: v,
-                                  children: C
+                                  children: O
                               })
                           })
                       ]

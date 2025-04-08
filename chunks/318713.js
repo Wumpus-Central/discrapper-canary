@@ -81,10 +81,10 @@ function m(e) {
 let p = function (e) {
     let { children: t, className: n, compact: r = !1, timestamp: p, timestampFormat: h, isVisibleOnlyOnHover: g = !1, cozyAlt: _ = !1, isInline: f = !0, id: b, isEdited: y = !1, application: E, tooltipPosition: I } = e,
         S = new Date(p),
-        C = (0, s.Hg)(S),
-        O = null != h ? (0, s.vc)(S, h) : r ? (0, s.vc)(S, 'LT') : (0, s.Y4)(S, !0),
-        v = r ? (0, c.Z)(O) : null,
-        x = y ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: C }) : C;
+        O = (0, s.Hg)(S),
+        C = null != h ? (0, s.vc)(S, h) : r ? (0, s.vc)(S, 'LT') : (0, s.Y4)(S, !0),
+        v = r ? (0, c.Z)(C) : null,
+        x = y ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: O }) : O;
     return (0, a.jsx)('span', {
         className: l()(n, v, {
             [d.timestamp]: !0,
@@ -103,7 +103,7 @@ let p = function (e) {
                       children: (e) =>
                           (0, a.jsx)(m, {
                               tooltipProps: e,
-                              timeFormatted: O,
+                              timeFormatted: C,
                               timestamp: S,
                               id: b,
                               compact: r,
@@ -115,7 +115,7 @@ let p = function (e) {
                       timestamp: S,
                       compact: r,
                       children: (0, a.jsx)(m, {
-                          timeFormatted: O,
+                          timeFormatted: C,
                           timestamp: S,
                           id: b,
                           compact: r,

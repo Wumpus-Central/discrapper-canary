@@ -31,7 +31,7 @@ let u = (e) => {
             return i;
         })(e, ['className', 'tags', 'value', 'onRemoveTag', 'onAddTag', 'onAddTagError', 'maxTaxLength', 'maxTags', 'disabled', 'placeholder']);
     let [_, v] = i.useState(null != m ? m : ''),
-        C = u.map((e, t) =>
+        O = u.map((e, t) =>
             (0, r.jsxs)(
                 'span',
                 {
@@ -53,7 +53,7 @@ let u = (e) => {
                 t
             )
         ),
-        O = i.useCallback(() => {
+        y = i.useCallback(() => {
             let e = _.trim();
             if (0 !== e.length) {
                 if (null != b && u.length >= b) {
@@ -63,7 +63,7 @@ let u = (e) => {
                 p(e), v('');
             }
         }, [_, b, p, h, u.length]),
-        y = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
@@ -72,15 +72,15 @@ let u = (e) => {
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
                     case o.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), O();
+                        e.preventDefault(), e.stopPropagation(), y();
                 }
             },
-            [O, _.length, g, u.length]
+            [y, _.length, g, u.length]
         );
     return (0, r.jsxs)('div', {
         className: a()(s, d.inputWrapper, { [d.disabled]: x }),
         children: [
-            C,
+            O,
             (0, r.jsx)(
                 l.oil,
                 ((t = (function (e) {
@@ -117,11 +117,11 @@ let u = (e) => {
                 (n = n =
                     {
                         value: _,
-                        onKeyDown: y,
+                        onKeyDown: C,
                         onChange: v,
                         maxLength: f,
                         disabled: x,
-                        onBlur: O,
+                        onBlur: y,
                         placeholder: j
                     }),
                 Object.getOwnPropertyDescriptors

@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(130341),
     _ = n(95242),
     v = n(420966),
-    C = n(566476),
-    O = n(203377),
-    y = n(981631),
+    O = n(566476),
+    y = n(203377),
+    C = n(981631),
     I = n(388032),
     E = n(905972),
     S = n(877248);
@@ -159,7 +159,7 @@ function R(e) {
                             className: E.memberRow,
                             onContextMenu: f,
                             children: [
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(O.Z, {
                                     className: E.memberDetails,
                                     avatarURL: t.avatarURL,
                                     name: t.name,
@@ -299,14 +299,14 @@ function k(e) {
         { headerHeight: g, headerRef: p } = (0, _.Z)(0),
         { scrolledToTop: h, handleScroll: x } = (0, v.V)(),
         j = s.managed || c,
-        C = (0, N.e)(t.id, s.id),
+        O = (0, N.e)(t.id, s.id),
         w =
             (0, l.e7)([b.Z], () => {
                 var e, n;
                 return null != (n = null == (e = b.Z.getRoleMemberCount(t.id)) ? void 0 : e[s.id]) ? n : 0;
-            }) > C.length,
+            }) > O.length,
         R = () => {
-            f.default.track(y.rMx.OPEN_MODAL, {
+            f.default.track(C.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
                 location_page: 'Role Settings',
                 location_section: 'Members'
@@ -337,7 +337,7 @@ function k(e) {
                             (0, r.jsx)(v.Z, {
                                 guild: t,
                                 role: s,
-                                selectedSection: O.ZI.MEMBERS,
+                                selectedSection: y.ZI.MEMBERS,
                                 setSelectedSection: d
                             }),
                             (0, r.jsx)(A, {
@@ -364,7 +364,7 @@ function k(e) {
                 roleId: s.id,
                 locked: j,
                 onScroll: x,
-                roleMembers: C,
+                roleMembers: O,
                 handleAddClick: R
             })
         ]

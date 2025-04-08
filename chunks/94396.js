@@ -1,26 +1,26 @@
-r.d(t, { J: () => c }), r(388685), r(192379);
+r.d(t, { J: () => l }), r(388685), r(192379);
 var n = r(374470),
-    l = r(730606),
+    o = r(730606),
     i = r(312097),
-    o = r(52824),
+    s = r(52824),
     a = r(854600);
-function c(e, t, r) {
-    let c = {},
-        s = {};
-    for (let [u, p] of e.entries()) {
-        let d = (0, o.q)({
-            proxyURL: p.proxyUrl,
-            url: p.url
+function l(e, t, r) {
+    let l = {},
+        c = {};
+    for (let [d, u] of e.entries()) {
+        let p = (0, s.q)({
+            proxyURL: u.proxyUrl,
+            url: u.url
         });
-        (c[d] = (l) =>
+        (l[p] = (o) =>
             (function (e, t, r) {
-                var l, o;
-                let c = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                    s = arguments.length > 4 ? arguments[4] : void 0;
+                var o, s;
+                let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                    c = arguments.length > 4 ? arguments[4] : void 0;
                 e.preventDefault(),
                     (0, n.k)(e.currentTarget) && e.currentTarget.blur(),
                     (0, i.K)(
-                        ((l = (function (e) {
+                        ((o = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
@@ -44,16 +44,16 @@ function c(e, t, r) {
                                     });
                             }
                             return e;
-                        })({}, c)),
-                        (o = o =
+                        })({}, l)),
+                        (s = s =
                             {
                                 className: a.forcedTransparency,
                                 items: t,
                                 startingIndex: r,
-                                location: null != s ? s : 'zoomedMediaModalHelper'
+                                location: null != c ? c : 'zoomedMediaModalHelper'
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(s))
                             : (function (e, t) {
                                   var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -61,16 +61,16 @@ function c(e, t, r) {
                                       r.push.apply(r, n);
                                   }
                                   return r;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(s)).forEach(function (e) {
+                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(s, e));
                               }),
-                        l)
+                        o)
                     );
-            })(l, e, u, t, r)),
-            (s[d] = () => (0, l.WG)(p, e.length > 1));
+            })(o, e, d, t, r)),
+            (c[p] = () => (0, o.WG)(u, e.length > 1));
     }
     return {
-        srcToOnClickOverride: c,
-        srcToHandlePreloadImage: s
+        srcToOnClickOverride: l,
+        srcToHandlePreloadImage: c
     };
 }

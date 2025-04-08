@@ -58,13 +58,13 @@ function b(e) {
                 }, {}),
             [x, m]
         ),
-        C = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 j(e, m);
             },
             [j, m]
         ),
-        O = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 N(e);
             },
@@ -76,8 +76,8 @@ function b(e) {
             (0, r.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
                 initialValue: _,
-                onChangeTags: C,
-                onChangeNewTagValue: O,
+                onChangeTags: O,
+                onChangeNewTagValue: y,
                 tagErrors: v,
                 maxTags: u.VW
             }),

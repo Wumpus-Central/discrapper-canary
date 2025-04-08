@@ -2,22 +2,22 @@ n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(247206),
-    a = n(388032);
+    a = n(247206),
+    l = n(388032);
 function o(e, t) {
     return null != t &&
-        (0, l.KP)(
+        (0, a.KP)(
             {
-                type: l.lJ.GenericMedia,
+                type: a.lJ.GenericMedia,
                 media: t
             },
-            (0, l.HH)(e)
+            (0, a.HH)(e)
         )
         ? (0, r.jsx)(
               i.sNh,
               {
                   id: 'report-image-false-positive',
-                  label: a.NW.string(a.t.ZH7P2t),
+                  label: l.NW.string(l.t.ZH7P2t),
                   action: () => {
                       (0, i.ZDy)(async () => {
                           let { default: i } = await n(788679);

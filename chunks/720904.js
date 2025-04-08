@@ -2,8 +2,8 @@ n.d(t, { Z: () => S }), n(781311);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    l = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    l = n(442837),
     o = n(481060),
     s = n(543241),
     c = n(222677),
@@ -13,11 +13,11 @@ var i = n(120356),
     g = n(496675),
     m = n(768581),
     b = n(176354),
-    p = n(981631),
-    h = n(185923),
-    y = n(388032),
-    N = n(933070);
-function O(e) {
+    h = n(981631),
+    p = n(185923),
+    O = n(388032),
+    y = n(933070);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,12 +64,12 @@ let v = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function j(e) {
     var t;
     let { emoji: n, isFocused: i } = e,
-        { animated: a, src: s, surrogates: c } = n;
+        { animated: l, src: s, surrogates: c } = n;
     return (
         null == s && null != n.id
             ? (s = m.ZP.getEmojiURL({
                   id: n.id,
-                  animated: !!a,
+                  animated: !!l,
                   size: 20
               }))
             : null == s && (s = b.ZP.getURL(c)),
@@ -83,20 +83,20 @@ function j(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         'div',
-                        E(
-                            O(
+                        N(
+                            E(
                                 {
-                                    'aria-label': y.NW.formatToPlainString(y.t['/iYSo6'], { emojiName: n.name }),
-                                    className: l()(N.button, { [N.focused]: i })
+                                    'aria-label': O.NW.formatToPlainString(O.t['/iYSo6'], { emojiName: n.name }),
+                                    className: a()(y.button, { [y.focused]: i })
                                 },
                                 e
                             ),
                             {
                                 children:
                                     null == s || '' === s.trim()
-                                        ? (0, r.jsx)('span', E(O({ className: l()('emoji', 'emoji-text', N.icon) }, e), { children: c }))
+                                        ? (0, r.jsx)('span', N(E({ className: a()('emoji', 'emoji-text', y.icon) }, e), { children: c }))
                                         : (0, r.jsx)('img', {
-                                              className: N.icon,
+                                              className: y.icon,
                                               src: s,
                                               alt: ''
                                           })
@@ -116,20 +116,20 @@ function S(e, t) {
             !b.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: h.Hz.REACTION
+                intention: p.Hz.REACTION
             })
         );
     });
     n.length > 4 && (n.length = 4);
     let i = f.nc.useSetting(),
-        l = (0, d.$R)(t),
-        m = (0, a.e7)([g.Z], () => i && l && (t.isPrivate() || g.Z.can(p.Plq.ADD_REACTIONS, t)), [t, l, i]),
-        y = (n) => {
+        a = (0, d.$R)(t),
+        m = (0, l.e7)([g.Z], () => i && a && (t.isPrivate() || g.Z.can(h.Plq.ADD_REACTIONS, t)), [t, a, i]),
+        O = (n) => {
             (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
         };
     return m && n.length > 0
         ? (0, r.jsx)(o.kSQ, {
-              className: N.wrapper,
+              className: y.wrapper,
               children: n.map((e, t) => {
                   var n;
                   return (0, r.jsx)(
@@ -143,7 +143,7 @@ function S(e, t) {
                                   isFocused: n
                               });
                           },
-                          action: () => y(e),
+                          action: () => O(e),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
                       t

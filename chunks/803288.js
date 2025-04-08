@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => _,
-    Z: () => C
+    Z: () => O
 }),
     n(953529);
 var r = n(200651),
@@ -66,7 +66,7 @@ class v extends i.PureComponent {
                 });
     }
 }
-function C() {
+function O() {
     var e, t;
     let n = (0, s.e7)([g.Z], () => g.Z.getGuild()),
         i = (0, s.cj)([h.Z], () => ({

@@ -39,7 +39,7 @@ function h(e) {
         [y, E] = a.useState(p('')),
         I = a.useCallback((e) => E(p(e)), [E]),
         { queryMode: S } = y,
-        [C, O] = a.useState(null != n ? n : []),
+        [O, C] = a.useState(null != n ? n : []),
         v = a.useRef(n);
     a.useEffect(() => {
         v.current = n;
@@ -51,7 +51,7 @@ function h(e) {
                 query: t,
                 resultTypes: n
             }),
-                O(null != (e = v.current) ? e : []);
+                C(null != (e = v.current) ? e : []);
         }, [_, y]),
         (0, s.D)();
     let x = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
@@ -67,12 +67,12 @@ function h(e) {
                     targetDestination: t,
                     frequentChannels: x,
                     selectedDestinations: n,
-                    pinnedDestinations: C,
+                    pinnedDestinations: O,
                     originDestination: i,
                     includeMissingDMs: m,
                     isConnected: A
                 }),
-            [b, N, S, t, x, n, C, i, m, A]
+            [b, N, S, t, x, n, O, i, m, A]
         ),
         updateSearchText: I
     };

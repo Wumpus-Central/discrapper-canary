@@ -1,6 +1,6 @@
 n.d(t, {
     DI: () => I,
-    x3: () => y
+    x3: () => C
 }),
     n(388685),
     n(953529);
@@ -65,7 +65,7 @@ function v(e, t) {
         e
     );
 }
-function C(e) {
+function O(e) {
     let { guildId: t, emojiData: n, 'aria-labelledby': s, onSelectEmoji: a } = e,
         d = (0, l.e7)([p.ZP], () => (null != n.id ? p.ZP.getCustomEmojiById(n.id) : void 0)),
         u = (0, l.e7)([f.ZP], () => f.ZP.getDefaultChannel(t)),
@@ -96,7 +96,7 @@ function C(e) {
             },
             [a, u]
         ),
-        C = i.useMemo(
+        O = i.useMemo(
             () =>
                 null == d && null == n.name
                     ? null
@@ -110,9 +110,9 @@ function C(e) {
                       },
             [n, d]
         ),
-        O = '';
+        y = '';
     return (
-        null != d ? (O = ':'.concat(d.name, ':')) : null != n.name && (O = h.ZP.convertSurrogateToName(n.name)),
+        null != d ? (y = ':'.concat(d.name, ':')) : null != n.name && (y = h.ZP.convertSurrogateToName(n.name)),
         (0, r.jsx)(o.yRy, {
             animation: o.yRy.Animation.NONE,
             position: 'top',
@@ -127,12 +127,12 @@ function C(e) {
                                 className: N.emojiButton,
                                 active: n,
                                 tabIndex: 0,
-                                renderButtonContents: C
+                                renderButtonContents: O
                             }),
                             (0, r.jsx)(o.oil, {
                                 inputClassName: N.emojiText,
                                 placeholder: j.NW.string(j.t.qJPLNT),
-                                value: O,
+                                value: y,
                                 'aria-labelledby': s,
                                 readOnly: !0
                             })
@@ -143,26 +143,26 @@ function C(e) {
         })
     );
 }
-function O(e) {
+function y(e) {
     var t;
     let { guildId: n, initialData: s, benefitTypeInput: a, descriptionPlaceholder: l, canSubmit: c, onSave: m, onDelete: g, transitionState: p, onClose: h } = e,
         f = (0, u.Dt)(),
         b = (0, u.Dt)(),
         x = (0, u.Dt)(),
         [_, v] = i.useState(null != (t = null == s ? void 0 : s.description) ? t : ''),
-        [O, y] = i.useState(() => ({
+        [y, C] = i.useState(() => ({
             id: null == s ? void 0 : s.emoji_id,
             name: null == s ? void 0 : s.emoji_name
         })),
-        I = c && '' !== _ && (null != O.id || null != O.name);
+        I = c && '' !== _ && (null != y.id || null != y.name);
     return (0, r.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(),
                 I &&
                     (m({
                         description: _,
-                        emojiId: O.id,
-                        emojiName: O.name
+                        emojiId: y.id,
+                        emojiName: y.name
                     }),
                     h());
         },
@@ -204,10 +204,10 @@ function O(e) {
                         (0, r.jsx)(o.hjN, {
                             title: j.NW.string(j.t.sMOuub),
                             titleId: x,
-                            children: (0, r.jsx)(C, {
+                            children: (0, r.jsx)(O, {
                                 guildId: n,
-                                emojiData: O,
-                                onSelectEmoji: y,
+                                emojiData: y,
+                                onSelectEmoji: C,
                                 'aria-labelledby': x
                             })
                         })
@@ -253,7 +253,7 @@ function O(e) {
         })
     });
 }
-function y(e) {
+function C(e) {
     let { guildId: t, omitChannelIds: n, initialData: s, onSave: l, onDelete: c, transitionState: d, onClose: m } = e,
         [g, p] = i.useState(null == s ? void 0 : s.ref_id),
         h = (0, u.Dt)(),
@@ -280,7 +280,7 @@ function y(e) {
                 })
             ]
         });
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(y, {
         guildId: t,
         initialData: s,
         benefitTypeInput: f,
@@ -312,7 +312,7 @@ function I(e) {
                 'aria-labelledby': h
             })
         });
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(y, {
         guildId: m,
         initialData: n,
         benefitTypeInput: f,

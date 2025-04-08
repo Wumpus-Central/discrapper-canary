@@ -19,9 +19,9 @@ var r = n(200651),
     N = n(903773),
     _ = n(215124),
     v = n(326578),
-    C = n(981631),
-    O = n(674563),
-    y = n(829857),
+    O = n(981631),
+    y = n(674563),
+    C = n(829857),
     I = n(388032),
     E = n(738309);
 function S(e) {
@@ -52,7 +52,7 @@ function T(e) {
             [n]
         ),
         f = async () => {
-            (await d(t, l, O.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
+            (await d(t, l, y.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (g(t.id),
                 (0, j.B)({
                     Icon: v.Z,
@@ -99,23 +99,23 @@ let P = (e) => {
         b = (0, o.Ob)(t),
         x = (0, s.e7)([h.Z], () => h.Z.isFocused()),
         { teams: j, loading: v } = (0, g.Z)({ refreshOnDepChange: x }),
-        O = i.useMemo(
+        y = i.useMemo(
             () =>
                 j.filter((e) => {
                     var t;
-                    return e.payout_account_status !== y.C.BLOCKED && (0, m.Z)(null != (t = null == n ? void 0 : n.id) ? t : C.lds, e);
+                    return e.payout_account_status !== C.C.BLOCKED && (0, m.Z)(null != (t = null == n ? void 0 : n.id) ? t : O.lds, e);
                 }),
             [j, n]
         ),
-        P = O.length > 0,
+        P = y.length > 0,
         w = i.useCallback(async () => {
-            f.default.track(C.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+            f.default.track(O.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: b,
                 has_eligible_team: P,
                 guild_id: t.id,
                 is_owner: c
             });
-            let e = await (0, d.$)(C.E07.DEVELOPER_PORTAL_TEAMS);
+            let e = await (0, d.$)(O.E07.DEVELOPER_PORTAL_TEAMS);
             (0, l.Z)(e);
         }, [t, c, b, P]),
         R = i.useCallback(
@@ -150,7 +150,7 @@ let P = (e) => {
                           P
                               ? (0, r.jsx)(T, {
                                     guild: t,
-                                    eligibleTeams: O,
+                                    eligibleTeams: y,
                                     isGuildOwner: c
                                 })
                               : (0, r.jsx)(S, {

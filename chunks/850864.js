@@ -19,12 +19,12 @@ var r = n(200651),
     N = n(773100),
     _ = n(91716),
     v = n(470264),
-    C = n(710043),
-    O = n(847950);
-function y(e) {
+    O = n(710043),
+    y = n(847950);
+function C(e) {
     let { guild: t, saveOnClose: n } = e,
         [c, d] = i.useState('new'),
-        y = i.useMemo(
+        C = i.useMemo(
             () => [
                 {
                     value: 'new',
@@ -45,7 +45,7 @@ function y(e) {
         },
         [n, t.id]
     );
-    let E = i.useMemo(() => ((0, a.ap)(I) ? ('existing' === c ? v : O) : 'existing' === c ? _ : C), [c, I]);
+    let E = i.useMemo(() => ((0, a.ap)(I) ? ('existing' === c ? v : y) : 'existing' === c ? _ : O), [c, I]);
     return (0, r.jsxs)('div', {
         className: N.page,
         children: [
@@ -158,7 +158,7 @@ function y(e) {
                         alt: j.NW.string(j.t.ST4UOz)
                     }),
                     (0, r.jsx)(l.sY7, {
-                        options: y,
+                        options: C,
                         value: c,
                         onChange: (e) => d(e.value),
                         look: 'pill'
@@ -176,7 +176,7 @@ function I(e) {
         });
     return null == n
         ? null
-        : (0, r.jsx)(y, {
+        : (0, r.jsx)(C, {
               guild: n,
               saveOnClose: t
           });

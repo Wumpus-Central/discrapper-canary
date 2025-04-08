@@ -30,7 +30,7 @@ function v() {
         null == n)
     )
         return null;
-    let C = (0, x.Q)(n);
+    let O = (0, x.Q)(n);
     switch (v) {
         case h.u.OVERVIEW:
             e = (0, r.jsx)(f.Z, { guild: n });
@@ -38,13 +38,13 @@ function v() {
         case h.u.CAPTCHA_AND_RAID_PROTECTION:
             e = (0, r.jsx)(b.Z, {
                 title: N.NW.string(N.t['53eF5u']),
-                settings: C[h.u.CAPTCHA_AND_RAID_PROTECTION]
+                settings: O[h.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case h.u.DM_AND_SPAM_PROTECTION:
             e = (0, r.jsx)(b.Z, {
                 title: N.NW.string(N.t.O0SfFx),
-                settings: C[h.u.DM_AND_SPAM_PROTECTION]
+                settings: O[h.u.DM_AND_SPAM_PROTECTION]
             });
             break;
         case h.u.AUTOMOD:
@@ -53,7 +53,7 @@ function v() {
         case h.u.PERMISSIONS:
             e = (0, r.jsx)(b.Z, {
                 title: N.NW.string(N.t.BXoNiY),
-                settings: C[h.u.PERMISSIONS]
+                settings: O[h.u.PERMISSIONS]
             });
     }
     return (0, r.jsxs)(r.Fragment, {

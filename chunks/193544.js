@@ -15,8 +15,8 @@ function h(e) {
     var t, n, s;
     let { changeTitle: h, value: f, options: b, className: x, onChange: j } = e,
         [N, _] = i.useState(f),
-        [v, C] = i.useState(!1),
-        [O, y] = i.useState(!1),
+        [v, O] = i.useState(!1),
+        [y, C] = i.useState(!1),
         I = i.useRef(null);
     i.useEffect(() => {
         _(f);
@@ -31,11 +31,11 @@ function h(e) {
         S = (e) => {
             e.disabled ||
                 e.value === N ||
-                (y(!0),
+                (C(!0),
                 null == j || j(e),
                 _(e.value),
                 (I.current = setTimeout(() => {
-                    y(!1), C(!1);
+                    C(!1), O(!1);
                 }, 1000)));
         };
     return (0, r.jsx)(u.Z, {
@@ -48,7 +48,7 @@ function h(e) {
             color: l.zxk.Colors.LINK,
             children: g.NW.string(g.t.GEgsAw)
         }),
-        loading: O,
+        loading: y,
         className: x,
         children: b.map((e, t) =>
             (0, r.jsx)(

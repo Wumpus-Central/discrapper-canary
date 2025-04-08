@@ -1,5 +1,5 @@
 n.d(t, {
-    $6: () => g,
+    $6: () => h,
     YK: () => s,
     _o: () => u,
     bL: () => p,
@@ -43,6 +43,6 @@ function p(e) {
               mutualGuilds: (e & a.SOq.MUTUAL_GUILDS) === a.SOq.MUTUAL_GUILDS
           };
 }
-function g(e, t) {
+function h(e, t) {
     return !!(!t.verified || t.isStaff()) || (null != e && l > Date.now() - new Date(e.created_at).getTime());
 }

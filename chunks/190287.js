@@ -15,7 +15,7 @@ let h = (e) => {
         var t;
         let { reason: n = '', emoji_name: d, onSetReason: g, onSelectEmoji: h, onClearPressed: f, reasonMinLength: b, reasonMaxLength: x, placeholder: j, position: N } = e,
             [_, v] = i.useState(!1),
-            C = (0, s.e7)([u.Z], () => u.Z.isGuildMetadataLoaded());
+            O = (0, s.e7)([u.Z], () => u.Z.isGuildMetadataLoaded());
         return (0, r.jsxs)('div', {
             className: p.reasonContainer,
             children: [
@@ -73,7 +73,7 @@ let h = (e) => {
                                 },
                                 defaultDirty: (null == n ? void 0 : n.length) > 0
                             },
-                            'text-input-'.concat(N, '-').concat(C)
+                            'text-input-'.concat(N, '-').concat(O)
                         ),
                         (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != d
                             ? (0, r.jsx)(a.zxk, {

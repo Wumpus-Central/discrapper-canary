@@ -103,7 +103,7 @@ let g = (e) => {
             v = async (e) => {
                 null == f || f(!0), await m(e, t), N(!0), null == f || f(!1);
             },
-            C = async (e) => {
+            O = async (e) => {
                 var t, i, a;
                 if ((e.stopPropagation(), e.preventDefault(), (null == (t = e.currentTarget) ? void 0 : t.files) == null || (null == (a = e.currentTarget) || null == (i = a.files) ? void 0 : i.length) === 0)) return;
                 let l = e.currentTarget.files;
@@ -113,7 +113,7 @@ let g = (e) => {
                 });
             };
         return (0, r.jsx)(a.Z, {
-            onChange: C,
+            onChange: O,
             filters: null != h ? h : (0, l.Zj)(),
             multiple: o,
             disabled: c,

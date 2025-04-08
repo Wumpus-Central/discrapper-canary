@@ -15,13 +15,13 @@ function m(e) {
         b = (0, o.c)(t),
         x = (0, s.EQ)(t),
         y = (0, i.e7)([p.Z], () => p.Z.getGuild(t.guild_id)),
-        E = (0, c.Z)(y),
-        v = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
+        v = (0, c.Z)(y),
+        E = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
     return (0, r.jsxs)(a.v2r, {
         navId: f,
         onClose: n,
         'aria-label': h,
         onSelect: m,
-        children: [(0, r.jsx)(a.kSQ, { children: (0, l.ZP)(t, g) }), _ ? (0, r.jsx)(a.kSQ, { children: E }) : null, v ? x : (0, r.jsx)(a.kSQ, { children: b })]
+        children: [(0, r.jsx)(a.kSQ, { children: (0, l.ZP)(t, g) }), _ ? (0, r.jsx)(a.kSQ, { children: v }) : null, E ? x : (0, r.jsx)(a.kSQ, { children: b })]
     });
 }

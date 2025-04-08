@@ -19,9 +19,9 @@ function x(e) {
         }),
         m = (0, s.TH)(),
         b = r.useCallback(() => {
-            (0, d.c$)(m);
+            (0, d.c$)(m, 'user_code_input_unauthorized');
         }, [m]),
-        { manualSubmit: v, error: C, submitting: _ } = (0, u.c)(o, t, b);
+        { manualSubmit: v, error: _, submitting: C } = (0, u.c)(o, t, b);
     return (0, a.jsxs)('div', {
         className: h.content,
         children: [
@@ -43,12 +43,12 @@ function x(e) {
                         placeholder: p.NW.formatToPlainString(p.t['0tbz6+'], { number: f.A.USER_CODE_LENGTH }),
                         maxLength: f.A.USER_CODE_LENGTH,
                         className: h.textInputContainer,
-                        inputClassName: l()(h.textInput, { [h.textInputError]: null != C }),
+                        inputClassName: l()(h.textInput, { [h.textInputError]: null != _ }),
                         autoComplete: 'off',
                         autoFocus: !0,
                         value: o,
                         onChange: x,
-                        error: C
+                        error: _
                     })
                 ]
             }),
@@ -56,7 +56,7 @@ function x(e) {
                 fullWidth: !0,
                 color: c.zxk.Colors.BRAND,
                 onClick: v,
-                submitting: _,
+                submitting: C,
                 disabled: o.length !== f.A.USER_CODE_LENGTH,
                 children: (0, a.jsx)(c.Text, {
                     variant: 'text-md/medium',

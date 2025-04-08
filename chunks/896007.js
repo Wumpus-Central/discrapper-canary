@@ -19,7 +19,7 @@ let { getSectionDefinition: m } = c.Z,
     };
 function p(e) {
     var t, n;
-    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageWebhooks: b, canUnlinkChannels: x, canManageBans: j, canAccessMembersPage: N, canViewGuildAnalytics: _, isOwner: v, isOwnerWithRequiredMfaLevel: C, canAccessClanSettings: O, isGuildSettingsFoundationEnabled: y, isGuildAdmin: I, canManageGuildExpressions: E } = e,
+    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageWebhooks: b, canUnlinkChannels: x, canManageBans: j, canAccessMembersPage: N, canViewGuildAnalytics: _, isOwner: v, isOwnerWithRequiredMfaLevel: O, canAccessClanSettings: y, isGuildSettingsFoundationEnabled: C, isGuildAdmin: I, canManageGuildExpressions: E } = e,
         S = () =>
             (0, l.X$)({
                 guild: c,
@@ -71,7 +71,7 @@ function p(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t);
-    if (y) {
+    if (C) {
         let e = [];
         e.push(m(d.pNK.PROFILE, T)),
             e.push(m(d.pNK.TAG, T)),
@@ -165,7 +165,7 @@ function p(e) {
         {
             section: g.HEADER,
             label: u.NW.string(u.t['1g9A/f']),
-            predicate: () => !O && (p || _)
+            predicate: () => !y && (p || _)
         },
         m(d.pNK.CLAN, T),
         m(d.pNK.COMMUNITY, T),
@@ -197,7 +197,7 @@ function p(e) {
         m(d.pNK.INSTANT_INVITES, T),
         {
             section: g.DIVIDER,
-            predicate: () => C
+            predicate: () => O
         },
         m(d.pNK.DELETE, T)
     ].filter(o.lm);

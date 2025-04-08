@@ -17,7 +17,7 @@ var r = n(200651),
     b = n(489887),
     x = n(388032),
     y = n(271629);
-function E() {
+function v() {
     return (0, r.jsx)('svg', {
         width: '24',
         height: '24',
@@ -32,10 +32,10 @@ function E() {
         })
     });
 }
-function v(e) {
+function E(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(E, {});
+    if (n) t = (0, r.jsx)(v, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(u.Z, {
@@ -51,7 +51,7 @@ function v(e) {
           })
         : null;
 }
-function O(e) {
+function N(e) {
     let t;
     var { type: n } = e,
         i = (function (e, t) {
@@ -138,7 +138,7 @@ function O(e) {
         children: t
     });
 }
-function N(e) {
+function O(e) {
     let { className: t, data: n, onClickPollLink: a } = e,
         o = i.useMemo(
             () =>
@@ -163,12 +163,12 @@ function N(e) {
     return (0, r.jsxs)('div', {
         className: l()(y.container, { [y.containerWithImage]: c }, t),
         children: [
-            (0, r.jsx)(v, {
+            (0, r.jsx)(E, {
                 hasNoVotes: 'NO_VOTES' === o.type,
                 victorEmoji: n.victorEmoji
             }),
             (0, r.jsx)(
-                O,
+                N,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -217,23 +217,23 @@ function j(e) {
         d = n.embeds[0],
         p = i.useMemo(() => (0, g.Z)(d), [d]),
         _ = (0, o.aF)(null != (t = null == p ? void 0 : p.questionText) ? t : '', b.Dv),
-        E = (0, m.ZP)(n),
-        v = (0, f.l)({
+        v = (0, m.ZP)(n),
+        E = (0, f.l)({
             user: n.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: n.id
         }),
-        O = n.messageReference,
+        N = n.messageReference,
         j = i.useCallback(() => {
-            null != O &&
+            null != N &&
                 c.Z.jumpToMessage({
-                    channelId: O.channel_id,
-                    messageId: O.message_id,
+                    channelId: N.channel_id,
+                    messageId: N.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, O]);
+        }, [n.id, N]);
     return null == p
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -243,13 +243,13 @@ function j(e) {
                       timestamp: n.timestamp,
                       compact: l,
                       children: x.NW.format(x.t['VJcK4+'], {
-                          username: E.nick,
-                          usernameHook: v(E),
+                          username: v.nick,
+                          usernameHook: E(v),
                           title: _,
                           titleOnClick: j
                       })
                   }),
-                  (0, r.jsx)(N, {
+                  (0, r.jsx)(O, {
                       className: y.embed,
                       data: p,
                       onClickPollLink: u ? void 0 : j

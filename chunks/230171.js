@@ -1,5 +1,5 @@
 n.d(t, {
-    O: () => R,
+    O: () => k,
     U: () => I.Un
 }),
     n(539854),
@@ -25,10 +25,10 @@ var r = n(200651),
     b = n(706454),
     x = n(314897),
     y = n(699516),
-    E = n(914010),
-    v = n(594174),
-    O = n(768581),
-    N = n(433534),
+    v = n(914010),
+    E = n(594174),
+    N = n(768581),
+    O = n(433534),
     j = n(506895),
     C = n(758199),
     S = n(943762),
@@ -38,18 +38,18 @@ var r = n(200651),
     A = n(208444),
     w = n(388032),
     Z = n(758364);
-function R(e) {
+function k(e) {
     let { app: t, embedUrl: n, linkType: a, activityCustomId: l, activityReferrerId: s, onView: g } = e,
         { name: _, bot: b } = (t = (0, T.O)(t)),
         y = null == b ? void 0 : b.id,
-        E = (0, f.ye)(t),
-        v = O.ZP.getApplicationIconURL({
+        v = (0, f.ye)(t),
+        E = N.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: b
         }),
-        { staticBannerSrc: N, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
-        R = (0, o.e7)([x.default], () => (null != s ? s : x.default.getId()), [s]),
+        { staticBannerSrc: O, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
+        k = (0, o.e7)([x.default], () => (null != s ? s : x.default.getId()), [s]),
         { analyticsLocations: L } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: W, isCurrentlyInInstance: U, canLaunchInChannel: F } = (0, j.c)(t.id),
         B = (0, u.Z)(),
@@ -58,8 +58,8 @@ function R(e) {
             applicationId: t.id,
             botUserId: null == b ? void 0 : b.id
         }),
-        H = null != y && E && G,
-        V = F && E && G,
+        H = null != y && v && G,
+        V = F && v && G,
         z = (0, A.z)(t),
         K = i.useMemo(() => {
             let e = [];
@@ -76,7 +76,7 @@ function R(e) {
                                 instanceId: null != W ? W : void 0,
                                 embeddedActivitiesManager: B,
                                 customId: l,
-                                referrerId: R,
+                                referrerId: k,
                                 analyticsLocations: L
                             });
                         },
@@ -93,38 +93,38 @@ function R(e) {
                                 botId: y,
                                 analyticsLocations: L,
                                 customId: l,
-                                referrerId: R
+                                referrerId: k
                             });
                         }
                     }),
                 null != z && e.push(z),
                 e
             );
-        }, [V, H, z, W, U, M, t.id, B, l, R, L, y]),
-        Y = E ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(k, { app: t });
+        }, [V, H, z, W, U, M, t.id, B, l, k, L, y]),
+        Y = v ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(R, { app: t });
     return (0, r.jsx)(C.W, {
         title: _,
-        staticBannerSrc: N,
+        staticBannerSrc: O,
         videoBannerSrc: S,
         bannerAspectRatio: Z,
-        iconSrc: v,
+        iconSrc: E,
         embedUrl: n,
         info: Y,
         actions: K,
         trackingConfig: {
             id: t.id,
             linkType: a,
-            referrerId: R,
+            referrerId: k,
             activityCustomId: l,
             onView: g
         }
     });
 }
-function k(e) {
+function R(e) {
     var t, n, l;
     let { app: c } = e,
         u =
-            (0, N.E)({
+            (0, O.E)({
                 customInstallUrl: c.customInstallUrl,
                 installParams: c.installParams,
                 integrationTypesConfig: c.integrationTypesConfig
@@ -173,21 +173,21 @@ function D(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: a } = t,
         c = (0, o.e7)(
-            [E.Z],
+            [v.Z],
             () => {
                 var e;
-                return null != (e = E.Z.getGuildId()) ? e : void 0;
+                return null != (e = v.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
         u = (0, _.Ns)(t.id),
         d = (0, o.Wu)(
-            [v.default, y.Z],
+            [E.default, y.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
-                    let r = v.default.getUser(n.author_id),
+                    let r = E.default.getUser(n.author_id),
                         i = y.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }

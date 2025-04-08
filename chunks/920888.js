@@ -61,14 +61,14 @@ function y(e, t) {
         e
     );
 }
-let E = (e, t) => (null == e && null == t) || e === t,
-    v = (e, t) => e.findIndex((e) => E(e.emoji.id, null == t ? void 0 : t.id) && E(e.emoji.name, null == t ? void 0 : t.name)),
-    O = (e, t) => {
+let v = (e, t) => (null == e && null == t) || e === t,
+    E = (e, t) => e.findIndex((e) => v(e.emoji.id, null == t ? void 0 : t.id) && v(e.emoji.name, null == t ? void 0 : t.name)),
+    N = (e, t) => {
         if (null == t) return e;
-        let n = v(e, t);
+        let n = E(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class N extends i.PureComponent {
+class O extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -81,16 +81,16 @@ class N extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: a, isPendingMember: b, isForumToolbar: x, channel: y, className: E, forceAddReactions: v, reactionClassName: O, useChatFontScaling: N, forceHideReactionCreates: j, remainingReactions: C, combinedReactions: S, visibleReactionsCount: I } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: a, isPendingMember: b, isForumToolbar: x, channel: y, className: v, forceAddReactions: E, reactionClassName: N, useChatFontScaling: O, forceHideReactionCreates: j, remainingReactions: C, combinedReactions: S, visibleReactionsCount: I } = this.props,
             { disableTransitionAppear: T } = this.state,
-            P = N ? _ : g,
+            P = O ? _ : g,
             A = I > 0;
-        if (!A && !v) return null;
+        if (!A && !E) return null;
         let { canShowImprovedReactionButton: w } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            Z = v || A;
+            Z = E || A;
         return (0, r.jsxs)(o.W, {
             component: 'div',
-            className: l()(P.reactions, E, { [P.largeReactions]: w }),
+            className: l()(P.reactions, v, { [P.largeReactions]: w }),
             transitionAppear: !T,
             role: 'group',
             transitionLeave: !1,
@@ -106,8 +106,8 @@ class N extends i.PureComponent {
                     isGuest: a,
                     isPendingMember: b,
                     isForumToolbar: x,
-                    useChatFontScaling: N,
-                    className: O,
+                    useChatFontScaling: O,
+                    className: N,
                     emojiSize: w ? 'reactionLarge' : 'reaction'
                 }),
                 C > 0 &&
@@ -115,7 +115,7 @@ class N extends i.PureComponent {
                         onClick: (t) => {
                             t.stopPropagation(), (0, f.op)(y, e);
                         },
-                        className: l()(P.reaction, O, P.remainingReactions),
+                        className: l()(P.reaction, N, P.remainingReactions),
                         'aria-label': h.NW.string(h.t.lfIHs7),
                         children: (0, r.jsxs)(s.Text, {
                             className: P.reactionInner,
@@ -130,7 +130,7 @@ class N extends i.PureComponent {
                         type: u.O.NORMAL,
                         message: e,
                         channel: y,
-                        useChatFontScaling: N,
+                        useChatFontScaling: O,
                         isHovered: this.state.isHovered,
                         className: l()({ [P.forceShow]: Z })
                     })
@@ -154,7 +154,7 @@ let j = (e) => {
             visibleReactionsCount: s
         } = i.useMemo(() => {
             let e = [],
-                r = O(t.reactions, a),
+                r = N(t.reactions, a),
                 i = null != n && n < r.length ? r.slice(0, n) : r,
                 l = r.length - i.length,
                 o = r.length;
@@ -170,7 +170,7 @@ let j = (e) => {
             );
         }, [a, n, t.reactions]);
     return (0, r.jsx)(
-        N,
+        O,
         y(x({}, e), {
             visibleReactionsCount: s,
             combinedReactions: l,

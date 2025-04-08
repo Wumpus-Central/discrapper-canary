@@ -1,17 +1,17 @@
-n.d(t, { Z: () => l }), n(997841);
+n.d(t, { Z: () => a }), n(997841);
 var r = n(904245),
     i = n(667204);
-function l(e, t, n) {
-    let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function a(e, t, n) {
+    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if ((r.Z.deleteMessage(e.id, t.id, !0), t.isCommandType())) {
-        null != t.interactionData && null != l.applicationId && (0, i.d)(t, e, l);
+        null != t.interactionData && null != a.applicationId && (0, i.d)(t, e, a);
         return;
     }
-    let { content: a, tts: o, messageReference: s, flags: c, nonce: u } = t;
+    let { content: l, tts: o, messageReference: s, flags: c, nonce: u } = t;
     r.Z.sendMessage(
         e.id,
         {
-            content: a,
+            content: l,
             tts: o,
             invalidEmojis: [],
             validNonShortcutEmojis: []
@@ -47,7 +47,7 @@ function l(e, t, n) {
                 flags: c,
                 messageReference: null != s ? s : void 0
             },
-            l
+            a
         )
     );
 }

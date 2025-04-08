@@ -124,7 +124,7 @@ function E(e) {
                               (0, r.jsx)(s.P, {
                                   tag: 'a',
                                   className: g.logoutLink,
-                                  onClick: () => (0, f.c$)(O),
+                                  onClick: () => (0, f.c$)(O, 'oauth2_logout'),
                                   children: m.NW.string(m.t['yV/hjI'])
                               })
                           ]

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
     a = n(442837),
@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(66420),
     x = n(981631),
     y = n(474936),
-    E = n(388032),
-    v = n(510064);
-function O(e) {
-    var t, n, O, N;
+    v = n(388032),
+    E = n(510064);
+function N(e) {
+    var t, n, N, O;
     let j,
         C,
         S,
@@ -28,9 +28,9 @@ function O(e) {
         A = null == (t = I.chatWallpaperInfo) ? void 0 : t.wallpaperId,
         w = (0, m.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
         Z = (0, s.ZP)(I),
-        R = (0, l.wjy)((0, o.ZP)()),
+        k = (0, l.wjy)((0, o.ZP)()),
         {
-            chatWallpaper: k,
+            chatWallpaper: R,
             isUpdatingChatWallpaperFlag: D,
             lastSetMessageId: L
         } = (0, a.cj)([f.Z], () => ({
@@ -45,40 +45,40 @@ function O(e) {
         B = (0, c.m)(y.p9.TIER_2),
         G = h.t(T);
     return (i.useEffect(() => {
-        null == k && f.Z.shouldFetchWallpapers && g.k9();
-    }, [k]),
+        null == R && f.Z.shouldFetchWallpapers && g.k9();
+    }, [R]),
     null == A)
         ? null
-        : ((j = R
+        : ((j = k
               ? F
-                  ? E.NW.format(E.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : E.NW.string(E.t['UQMV/P']) })
-                  : E.NW.format(E.t['+lKndX'], {
+                  ? v.NW.format(v.t.z847Tk, { wallpaper_name: null != (n = null == R ? void 0 : R.label) ? n : v.NW.string(v.t['UQMV/P']) })
+                  : v.NW.format(v.t['+lKndX'], {
                         username: null == Z ? void 0 : Z.nick,
-                        wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : E.NW.string(E.t['UQMV/P'])
+                        wallpaper_name: null != (N = null == R ? void 0 : R.label) ? N : v.NW.string(v.t['UQMV/P'])
                     })
-              : E.NW.format(E.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) })),
+              : v.NW.format(v.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) })),
           w
               ? G && W
-                  ? (C = E.NW.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (N = null == k ? void 0 : k.label) ? N : E.NW.string(E.t['UQMV/P']) }))
+                  ? (C = v.NW.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (O = null == R ? void 0 : R.label) ? O : v.NW.string(v.t['UQMV/P']) }))
                   : F ||
                     B ||
                     !W ||
-                    (C = E.NW.format(E.t.JwUhHh, {
+                    (C = v.NW.format(v.t.JwUhHh, {
                         onClickNitro: () => {
                             (0, u.uL)(x.Z5c.NITRO_HOME);
                         }
                     }))
-              : (C = E.NW.string(E.t['6JSOu7'])),
+              : (C = v.NW.string(v.t['6JSOu7'])),
           (null == M ? void 0 : M.isViewable) &&
               W &&
               !F &&
               (S = (0, r.jsx)(l.zxk, {
-                  className: v.action,
+                  className: E.action,
                   onClick: () => {
                       g.X(T, A, { shouldClear: !G });
                   },
                   submitting: D,
-                  children: E.NW.string(G ? E.t.o6850d : E.t['/ubFp6'])
+                  children: v.NW.string(G ? v.t.o6850d : v.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {
               channel: T,

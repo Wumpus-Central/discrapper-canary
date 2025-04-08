@@ -174,4 +174,4 @@ let f = [
         label: () => a.NW.string(a.t['xod36+'])
     }
 ];
-r.w.LISTEN, r.w.WATCH, r.w.PLAY, r.w.THINK, r.w.LOVE, () => a.NW.string(a.t.ISyHmZ);
+r.w.LISTEN, r.w.WATCH, r.w.PLAY, r.w.THINK, r.w.LOVE;

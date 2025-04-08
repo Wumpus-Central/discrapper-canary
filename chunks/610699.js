@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(880251),
     x = n(208444),
     y = n(835473),
-    E = n(471445),
-    v = n(111028),
-    O = n(601964),
-    N = n(592125),
+    v = n(471445),
+    E = n(111028),
+    N = n(601964),
+    O = n(592125),
     j = n(430824),
     C = n(496675),
     S = n(594174),
@@ -30,8 +30,8 @@ var r = n(200651),
     A = n(981631),
     w = n(245335),
     Z = n(388032),
-    R = n(582909);
-function k(e) {
+    k = n(582909);
+function R(e) {
     let { members: t, membersOnline: n, textColor: i } = e,
         a = [];
     return (
@@ -41,12 +41,12 @@ function k(e) {
                 (0, r.jsxs)(
                     'div',
                     {
-                        className: R.statusWrapper,
+                        className: k.statusWrapper,
                         children: [
-                            (0, r.jsx)('i', { className: R.statusOnline }),
+                            (0, r.jsx)('i', { className: k.statusOnline }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: R.count,
+                                className: k.count,
                                 color: i,
                                 children: Z.NW.format(Z.t['LC+S+v'], { membersOnline: n })
                             })
@@ -60,12 +60,12 @@ function k(e) {
                 (0, r.jsxs)(
                     'div',
                     {
-                        className: R.statusWrapper,
+                        className: k.statusWrapper,
                         children: [
-                            (0, r.jsx)('i', { className: R.statusOffline }),
+                            (0, r.jsx)('i', { className: k.statusOffline }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: R.count,
+                                className: k.count,
                                 color: i,
                                 children: Z.NW.format(Z.t.zRl6XV, { count: t })
                             })
@@ -75,7 +75,7 @@ function k(e) {
                 )
             ),
         (0, r.jsx)('div', {
-            className: R.statusCounts,
+            className: k.statusCounts,
             children: a
         })
     );
@@ -83,18 +83,18 @@ function k(e) {
 function D(e) {
     let { channel: t, guild: n, hasEnded: i, textColor: a } = e;
     if (null != t && null != n) {
-        let e = (0, E.KS)(t, n);
+        let e = (0, v.KS)(t, n);
         return (0, r.jsxs)('div', {
-            className: l()(R.channel, { [R.ended]: i }),
+            className: l()(k.channel, { [k.ended]: i }),
             children: [
                 null != e
                     ? (0, r.jsx)(e, {
-                          className: R.channelIcon,
+                          className: k.channelIcon,
                           size: 'xs',
                           color: 'currentColor'
                       })
                     : null,
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(E.Z, {
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         color: a,
@@ -109,8 +109,8 @@ function D(e) {
     }
     return null != n
         ? (0, r.jsx)('div', {
-              className: l()(R.channel, { [R.ended]: i }),
-              children: (0, r.jsx)(v.Z, {
+              className: l()(k.channel, { [k.ended]: i }),
+              children: (0, r.jsx)(E.Z, {
                   children: (0, r.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       color: a,
@@ -134,8 +134,8 @@ function L(e) {
             });
         }, [null == (t = l.inviter) ? void 0 : t.id, _.id]),
         x = (0, c.e7)([j.Z], () => (null != l.guild ? j.Z.getGuild(l.guild.id) : null), [l]),
-        E = (0, y.Z)([_.id])[0],
-        v = (0, c.e7)([p.ZP], () => {
+        v = (0, y.Z)([_.id])[0],
+        E = (0, c.e7)([p.ZP], () => {
             var e;
             return (null == l ? void 0 : l.channel) != null && (null == (e = p.ZP.getSelfEmbeddedActivityForChannel(l.channel.id)) ? void 0 : e.applicationId) === _.id;
         }),
@@ -146,18 +146,18 @@ function L(e) {
                 return _.id === t;
             });
         }),
-        R = N.Z.getChannel(null == (n = l.channel) ? void 0 : n.id),
-        k = (0, c.e7)([C.Z], () => null != R && C.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, R), [R]),
+        k = O.Z.getChannel(null == (n = l.channel) ? void 0 : n.id),
+        R = (0, c.e7)([C.Z], () => null != k && C.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
         { analyticsLocations: D } = (0, f.ZP)(m.Z.INVITE_EMBED),
         L = (0, c.Wu)(
             [p.ZP],
             () =>
-                null != R
-                    ? p.ZP.getEmbeddedActivitiesForChannel(R.id)
+                null != k
+                    ? p.ZP.getEmbeddedActivitiesForChannel(k.id)
                           .filter((e) => e.applicationId === _.id)
                           .flatMap((e) => Array.from(e.userIds))
                     : [],
-            [R, _.id]
+            [k, _.id]
         ),
         W = (0, c.Wu)([S.default], () => L.map((e) => S.default.getUser(e)).filter((e) => null != e), [L]),
         U = i.useCallback(() => {
@@ -172,19 +172,19 @@ function L(e) {
         B = null != x;
     if (null == x) {
         if (null == l.guild) return (0, r.jsx)(P.Z, {});
-        x = new O.ZP(l.guild);
+        x = new N.ZP(l.guild);
     }
-    let G = (B && !k) || (B && v);
-    return (B && v && (a = Z.NW.string(Z.t.wJNK8P)), k || (a = Z.NW.string(Z.t.hHGrW1)), null == l.code || '' === l.code || null == E)
+    let G = (B && !R) || (B && E);
+    return (B && E && (a = Z.NW.string(Z.t.wJNK8P)), R || (a = Z.NW.string(Z.t.hHGrW1)), null == l.code || '' === l.code || null == v)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: D,
               children: (0, r.jsx)(M, {
-                  app: E,
+                  app: v,
                   invite: l,
                   activityUsers: W,
                   isMember: B,
-                  channel: R,
+                  channel: k,
                   guild: x,
                   members: u,
                   membersOnline: h,
@@ -199,8 +199,8 @@ function L(e) {
 }
 function M(e) {
     var t, n;
-    let { app: a, invite: l, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: E, handleAcceptInvite: v, onView: O } = e,
-        N = new URL(l.code, 'https://discord.gg').toString(),
+    let { app: a, invite: l, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: v, handleAcceptInvite: E, onView: N } = e,
+        O = new URL(l.code, 'https://discord.gg').toString(),
         { bot: j, icon: C } = a,
         S = T.ZP.getApplicationIconURL({
             id: a.id,
@@ -216,12 +216,12 @@ function M(e) {
                     label: s ? (m ? Z.NW.string(Z.t.VJlc0d) : Z.NW.string(Z.t.RscU7O)) : Z.NW.string(Z.t['2BP08P']),
                     trackingArea: s ? _.j_.PLAY : _.j_.JOIN_SERVER,
                     submitting: f,
-                    disabledReason: y && null != E ? E : void 0,
-                    onClick: v
+                    disabledReason: y && null != v ? v : void 0,
+                    onClick: E
                 }
             ];
             return null != I && e.push(I), e;
-        }, [v, m, y, s, f, E, I]);
+        }, [E, m, y, s, f, v, I]);
     return (0, r.jsx)(
         h.W,
         ((t = (function (e) {
@@ -253,14 +253,14 @@ function M(e) {
                 header: a.name,
                 title: Z.NW.string(Z.t['7vb6n5']),
                 iconSrc: S,
-                embedUrl: N
+                embedUrl: O
             },
             P
         )),
         (n = n =
             {
                 info: (0, r.jsxs)('div', {
-                    className: R.infoWrapper,
+                    className: k.infoWrapper,
                     children: [
                         (0, r.jsx)(D, {
                             channel: c,
@@ -275,7 +275,7 @@ function M(e) {
                                   guildId: u.id,
                                   activityText: Z.NW.string(Z.t.BMTj29)
                               })
-                            : (0, r.jsx)(k, {
+                            : (0, r.jsx)(R, {
                                   members: d,
                                   membersOnline: p,
                                   textColor: 'none'
@@ -286,7 +286,7 @@ function M(e) {
                 trackingConfig: {
                     id: a.id,
                     linkType: _.Un.ACTIVITY_INVITE,
-                    onView: O
+                    onView: N
                 }
             }),
         Object.getOwnPropertyDescriptors

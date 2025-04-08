@@ -2,20 +2,20 @@ n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(79390),
-    a = n(388032);
+    a = n(79390),
+    l = n(388032);
 function o(e) {
-    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, l.eQ)(e))
+    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, a.eQ)(e))
         ? null
         : (0, r.jsx)(i.sNh, {
               id: 'reactions',
-              label: a.NW.string(a.t.wikODg),
+              label: l.NW.string(l.t.wikODg),
               icon: i.EO4,
               action: () =>
                   (0, i.ZDy)(async () => {
                       let { default: t } = await Promise.resolve().then(n.bind(n, 785388));
                       return (n) => {
-                          var i, l;
+                          var i, a;
                           return (0, r.jsx)(
                               t,
                               ((i = (function (e) {
@@ -43,9 +43,9 @@ function o(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (l = l = { message: e }),
+                              (a = a = { message: e }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -53,8 +53,8 @@ function o(e) {
                                             n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                    })(Object(a)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                     }),
                               i)
                           );

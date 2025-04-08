@@ -34,7 +34,7 @@ function W(e) {
                 try {
                     e = await (0, N.k)();
                 } catch (e) {
-                    C.Z.verifySSOToken(null);
+                    C.Z.verifySSOToken('accept_guild_template', null);
                 }
             null != e && a(H.NW.formatToPlainString(u.defaultName, { username: e.username }));
         })();

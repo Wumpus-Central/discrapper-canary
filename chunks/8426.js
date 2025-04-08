@@ -1,6 +1,6 @@
 n.d(t, {
     Hr: () => x,
-    Hz: () => C,
+    Hz: () => O,
     To: () => E,
     XG: () => v,
     _N: () => h,
@@ -8,8 +8,8 @@ n.d(t, {
     bj: () => P,
     el: () => b,
     hS: () => j,
-    lq: () => O,
-    mM: () => y,
+    lq: () => y,
+    mM: () => C,
     oo: () => I,
     q6: () => T,
     r2: () => _,
@@ -104,19 +104,19 @@ function v(e, t) {
         resourceChannel: t
     });
 }
-function C(e) {
+function O(e) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL',
         resourceChannelId: e
     });
 }
-function O(e) {
+function y(e) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e
     });
 }
-async function y(e, t, n) {
+async function C(e, t, n) {
     try {
         let r = await s.tn.put({
                 url: g.ANM.RESOURCE_CHANNEL(e, t),

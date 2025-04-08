@@ -1,8 +1,8 @@
 n.d(t, { default: () => N }), n(388685), n(290780);
 var s = n(200651),
     i = n(192379),
-    o = n(481060),
-    r = n(493683),
+    r = n(481060),
+    o = n(493683),
     _ = n(785232),
     a = n(592125),
     c = n(626135),
@@ -10,47 +10,47 @@ var s = n(200651),
     l = n(343544),
     u = n(14251),
     g = n(110223),
-    h = n(981631),
-    m = n(388032),
+    m = n(981631),
+    h = n(388032),
     f = n(193728);
 let p = (e) => {
         let { numOfBlockedUsers: t, numOfIgnoredUsers: n } = e,
             i = t > 0,
-            o = n > 0;
-        return i && o
+            r = n > 0;
+        return i && r
             ? (0, s.jsxs)(s.Fragment, {
-                  children: [m.NW.string(m.t.xbRNIy), (0, s.jsx)('br', {}), m.NW.string(m.t['Bp2/np'])]
+                  children: [h.NW.string(h.t.xbRNIy), (0, s.jsx)('br', {}), h.NW.string(h.t['Bp2/np'])]
               })
             : i
               ? (0, s.jsxs)(s.Fragment, {
-                    children: [m.NW.format(m.t.iKtixc, { n: t }), (0, s.jsx)('br', {}), m.NW.string(m.t.SN1hrq)]
+                    children: [h.NW.format(h.t.iKtixc, { n: t }), (0, s.jsx)('br', {}), h.NW.string(h.t.SN1hrq)]
                 })
-              : o
+              : r
                 ? (0, s.jsxs)(s.Fragment, {
-                      children: [m.NW.format(m.t['6IRwub'], { n: n }), (0, s.jsx)('br', {}), m.NW.string(m.t['6AKLRk'])]
+                      children: [h.NW.format(h.t['6IRwub'], { n: n }), (0, s.jsx)('br', {}), h.NW.string(h.t['6AKLRk'])]
                   })
                 : null;
     },
     x = (e) => {
         let { channelId: t, blockedUserIds: n, ignoredUserIds: i } = e,
-            r = a.Z.getChannel(t),
+            o = a.Z.getChannel(t),
             c = n.length > 0,
             d = i.length > 0,
             l = [
                 {
                     icon: (0, s.jsx)('div', {
                         className: f.icon,
-                        children: (0, s.jsx)(o.owK, {})
+                        children: (0, s.jsx)(r.owK, {})
                     }),
-                    text: m.NW.string(m.t['RIMw5+']),
+                    text: h.NW.string(h.t['RIMw5+']),
                     className: f.row
                 },
                 {
                     icon: (0, s.jsx)('div', {
                         className: f.icon,
-                        children: (0, s.jsx)(o.d3s, {})
+                        children: (0, s.jsx)(r.d3s, {})
                     }),
-                    text: m.NW.string(m.t.bejNWF),
+                    text: h.NW.string(h.t.bejNWF),
                     className: f.row
                 }
             ];
@@ -62,73 +62,73 @@ let p = (e) => {
                     className: f.icon,
                     children: (0, s.jsx)(_.Z, {
                         recipients: a,
-                        size: o.EFr.SIZE_32
+                        size: r.EFr.SIZE_32
                     })
                 }),
-                text: (0, u.a)(a, e.length, null == r ? void 0 : r.guild_id, t),
+                text: (0, u.a)(a, e.length, null == o ? void 0 : o.guild_id, t),
                 className: f.row
             });
         } else {
             let e = c ? [...n].slice(0, 2) : [...i].slice(0, 2),
-                o = c ? n.length : i.length;
+                r = c ? n.length : i.length;
             l.unshift({
                 icon: (0, s.jsx)('div', {
                     className: f.icon,
-                    children: (0, u.r)(e, null == r ? void 0 : r.guild_id)
+                    children: (0, u.r)(e, null == o ? void 0 : o.guild_id)
                 }),
-                text: (0, u.a)(e, o, null == r ? void 0 : r.guild_id, t),
+                text: (0, u.a)(e, r, null == o ? void 0 : o.guild_id, t),
                 className: f.row
             });
         }
         return l;
     };
 function N(e) {
-    let { channelId: t, blockedUserIds: n, ignoredUserIds: o = [], transitionState: _, onClose: a } = e;
+    let { channelId: t, blockedUserIds: n, ignoredUserIds: r = [], transitionState: _, onClose: a } = e;
     return (
         i.useEffect(() => {
-            c.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+            c.default.track(m.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
                 channel_id: t,
                 warning_medium: g.WR.MODAL,
                 blocked_user_ids: n,
-                ignored_user_ids: o
+                ignored_user_ids: r
             });
-        }, [t, n, o]),
+        }, [t, n, r]),
         (0, s.jsx)(l.Z, {
-            headerText: m.NW.string(m.t['mwJJ+f']),
+            headerText: h.NW.string(h.t['mwJJ+f']),
             descriptionText: (0, s.jsx)(p, {
                 numOfBlockedUsers: n.length,
-                numOfIgnoredUsers: o.length
+                numOfIgnoredUsers: r.length
             }),
             infoRows: x({
                 channelId: t,
                 blockedUserIds: n,
-                ignoredUserIds: o
+                ignoredUserIds: r
             }),
             onDismissAndStay: () => {
                 a(),
                     (0, d.O)(t),
-                    c.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    c.default.track(m.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: g.q.CLICK_TO_STAY,
                         channel_id: t,
                         warning_medium: g.WR.MODAL,
                         blocked_user_ids: n,
-                        ignored_user_ids: o
+                        ignored_user_ids: r
                     });
             },
             onDismissAndLeave: () => {
                 a(),
                     (0, d.O)(t),
-                    r.Z.closePrivateChannel(t, !0, !0),
-                    c.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    o.Z.closePrivateChannel(t, !0, !0),
+                    c.default.track(m.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                         action: g.q.CLICK_TO_LEAVE,
                         channel_id: t,
                         warning_medium: g.WR.MODAL,
                         blocked_user_ids: n,
-                        ignored_user_ids: o
+                        ignored_user_ids: r
                     });
             },
-            leaveButtonText: m.NW.string(m.t.I4q1kJ),
-            stayButtonText: m.NW.string(m.t.DRJhmZ),
+            leaveButtonText: h.NW.string(h.t.I4q1kJ),
+            stayButtonText: h.NW.string(h.t.DRJhmZ),
             transitionState: _,
             onClose: a
         })

@@ -18,17 +18,17 @@ var r = n(200651),
     x = n(273254);
 function y(e) {
     let t,
-        { invite: n, author: a, currentUserId: y, onTransitionToInviteChannel: E, onAcceptInstantInvite: v } = e,
-        O = y === a.id,
-        N = n.state === _.r2o.ACCEPTING,
+        { invite: n, author: a, currentUserId: y, onTransitionToInviteChannel: v, onAcceptInstantInvite: E } = e,
+        N = y === a.id,
+        O = n.state === _.r2o.ACCEPTING,
         j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
     l()(null == j || j.isPrivate(), 'must be a private channel');
     let { analyticsLocations: C } = (0, u.ZP)(c.Z.INVITE_EMBED),
         S = null != j,
         I = i.useCallback(() => {
             let e = 'noop';
-            S ? (E(), (e = 'transition')) : (v(), (e = 'accept')), (0, s.r$)(n, e, C);
-        }, [n, C, S, E, v]);
+            S ? (v(), (e = 'transition')) : (E(), (e = 'accept')), (0, s.r$)(n, e, C);
+        }, [n, C, S, v, E]);
     if (null == j) {
         if (null == n.channel) return (0, r.jsx)(g.Z, {});
         (j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
@@ -54,7 +54,7 @@ function y(e) {
     S && ((P = b.NW.string(b.t.cEnaW1)), (A = d.Z.Button.Colors.PRIMARY));
     let w = b.NW.string(b.t['3p3/BA']);
     return (
-        O && (w = b.NW.string(b.t.qmtuXF)),
+        N && (w = b.NW.string(b.t.qmtuXF)),
         (0, r.jsxs)(d.Z, {
             children: [
                 (0, r.jsx)(d.Z.Header, { text: w }),
@@ -76,7 +76,7 @@ function y(e) {
                         }),
                         (0, r.jsx)(d.Z.Button, {
                             onClick: I,
-                            submitting: N,
+                            submitting: O,
                             isDisabled: S,
                             color: A,
                             children: P

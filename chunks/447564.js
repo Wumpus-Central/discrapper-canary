@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => N,
-    k: () => O
+    default: () => O,
+    k: () => N
 }),
     n(388685);
 var r = n(200651),
@@ -21,8 +21,8 @@ var r = n(200651),
     b = n(981631),
     x = n(388032),
     y = n(668275),
-    E = n(99713);
-function v(e) {
+    v = n(99713);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,17 +47,17 @@ function v(e) {
     }
     return e;
 }
-let O = (e, t) => {
+let N = (e, t) => {
     (0, m.mx)(t),
         (0, o.ZDy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 447564));
-                return (n) => (0, r.jsx)(t, v({ channel: e }, n));
+                return (n) => (0, r.jsx)(t, E({ channel: e }, n));
             },
             { modalKey: j }
         );
 };
-function N(e) {
+function O(e) {
     let { transitionState: t, channel: n } = e;
     return (0, r.jsx)(o.Y0X, {
         size: o.CgR.DYNAMIC,
@@ -71,15 +71,15 @@ function C(e) {
         n = (0, m.T$)(t),
         [l, u] = (0, i.useState)(!1),
         { price: h, fetchingPrice: g, error: _ } = (0, m.R2)(f.FX),
-        { entitlement: x, fetchedEntitlement: y, error: E } = (0, m.t6)(f.FX),
-        v = _ || E,
-        { analyticsLocations: O } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
-        N = null != x && !x.consumed;
+        { entitlement: x, fetchedEntitlement: y, error: v } = (0, m.t6)(f.FX),
+        E = _ || v,
+        { analyticsLocations: N } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
+        O = null != x && !x.consumed;
     (0, i.useEffect)(
         () => () => {
-            v && (0, p.SN)(f.FX);
+            E && (0, p.SN)(f.FX);
         },
-        [x, t, l, v]
+        [x, t, l, E]
     );
     let j = (0, i.useCallback)(() => {
             (0, p.Zu)(t.id), (0, o.pTH)();
@@ -87,19 +87,19 @@ function C(e) {
         C = (0, i.useCallback)(() => {
             (0, d.Z)({
                 skuId: f.FX,
-                analyticsLocations: O,
+                analyticsLocations: N,
                 onComplete: j,
                 variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
             });
-        }, [O, j]),
-        I = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == x ? void 0 : x.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!N) : 3), [t.isHDStreamSplashed, n, null == x ? void 0 : x.type, N]),
+        }, [N, j]),
+        I = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == x ? void 0 : x.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!O) : 3), [t.isHDStreamSplashed, n, null == x ? void 0 : x.type, O]),
         T = (0, i.useMemo)(() => I(), [I]);
     return (0, r.jsx)(S, {
         channel: t,
         buttonState: T,
         price: h,
         onActionClick: () => {
-            u(!0), (N ? j : C)();
+            u(!0), (O ? j : C)();
         },
         loading: g || !y
     });
@@ -212,7 +212,7 @@ let S = (e) => {
                     var t, n;
                     return (0, r.jsx)(
                         o.zxk,
-                        ((t = v({}, e)),
+                        ((t = E({}, e)),
                         (n = n =
                             {
                                 disabled: !0,
@@ -261,7 +261,7 @@ let S = (e) => {
                 className: y.error,
                 children: [
                     (0, r.jsx)(o.Eep, {
-                        src: E,
+                        src: v,
                         width: 178,
                         height: 190
                     }),

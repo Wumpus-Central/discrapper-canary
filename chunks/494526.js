@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(893776),
     d = n(99690),
     p = n(937154),
-    g = n(448986),
-    h = n(388905),
+    h = n(448986),
+    g = n(388905),
     f = n(198993),
     m = n(710845),
     _ = n(314897),
@@ -87,11 +87,11 @@ function Z(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(P, { text: 1 === t.step ? 'https://discord.com/ra/'.concat(t.fingerprint) : '' }),
-                    (0, r.jsx)(h.Dx, {
+                    (0, r.jsx)(g.Dx, {
                         className: C.marginBottom8,
                         children: S.NW.string(S.t.UPiHaG)
                     }),
-                    null != i ? (0, r.jsx)(A, { children: i }) : (0, r.jsx)(h.DK, { children: S.NW.format(S.t['Qq+A6u'], {}) }),
+                    null != i ? (0, r.jsx)(A, { children: i }) : (0, r.jsx)(g.DK, { children: S.NW.format(S.t['Qq+A6u'], {}) }),
                     (0, r.jsx)(c.zxk, {
                         size: c.PhG.LARGE,
                         look: c.iLD.LINK,
@@ -127,11 +127,11 @@ function Z(e) {
                         isMobile: !0,
                         status: j.Sk.ONLINE
                     }),
-                    (0, r.jsx)(h.Dx, {
+                    (0, r.jsx)(g.Dx, {
                         className: C.marginBottom8,
                         children: S.NW.string(S.t.apGCUV)
                     }),
-                    (0, r.jsx)(h.DK, { children: S.NW.format(S.t.Cbl5JC, { username: ''.concat(v.ZP.getUserTag(e)) }) }),
+                    (0, r.jsx)(g.DK, { children: S.NW.format(S.t.Cbl5JC, { username: ''.concat(v.ZP.getUserTag(e)) }) }),
                     (0, r.jsx)(c.zxk, {
                         look: c.zxk.Looks.BLANK,
                         color: c.zxk.Colors.LINK,
@@ -154,7 +154,7 @@ function R(e) {
         {
             state: u,
             rsaKeyPair: d,
-            cancel: h,
+            cancel: g,
             handleFailure: f
         } = (function (e) {
             let [t, n] = i.useState(0),
@@ -162,13 +162,13 @@ function R(e) {
                 [l, s] = i.useState({ step: 0 }),
                 [c, u] = i.useState(null),
                 d = (0, p.Z)(),
-                h = i.useMemo(() => new a.Z(1500, 30000), []),
-                f = (0, g.Z)(() => {
+                g = i.useMemo(() => new a.Z(1500, 30000), []),
+                f = (0, h.Z)(() => {
                     s({ step: 0 }), d ? n((e) => e + 1) : (T.info('document is not visible, will defer reconnection when document becomes visible.'), o(!0));
                 }),
                 m = i.useCallback(() => {
-                    T.error('Could not complete QR code login, trying to restart with a new QR code.'), s({ step: 0 }), h.pending || h.fail(f);
-                }, [f, h]);
+                    T.error('Could not complete QR code login, trying to restart with a new QR code.'), s({ step: 0 }), g.pending || g.fail(f);
+                }, [f, g]);
             return (
                 i.useEffect(() => {
                     d && r && 0 === l.step && (T.info('reconnecting, now that document is visible'), o(!1), n((e) => e + 1));
@@ -185,7 +185,7 @@ function R(e) {
                         c = null,
                         d = null,
                         p = !0;
-                    function g() {
+                    function h() {
                         if (null != a) return a;
                         throw Error('No key pair set');
                     }
@@ -199,7 +199,7 @@ function R(e) {
                             switch (r.op) {
                                 case 'nonce_proof': {
                                     let e = r.encrypted_nonce,
-                                        t = await (0, N.qd)(g(), e);
+                                        t = await (0, N.qd)(h(), e);
                                     o('computed nonce proof'),
                                         i.send(
                                             JSON.stringify({
@@ -210,8 +210,8 @@ function R(e) {
                                     return;
                                 }
                                 case 'pending_remote_init': {
-                                    h.succeed(), b.S.dispatch(I.CkL.WAVE_EMPHASIZE);
-                                    let e = await (0, N.Pk)(g());
+                                    g.succeed(), b.S.dispatch(I.CkL.WAVE_EMPHASIZE);
+                                    let e = await (0, N.Pk)(h());
                                     if (e !== r.fingerprint) throw Error('bad fingerprint '.concat(e, ' !== ').concat(r.fingerprint));
                                     o('handshake complete awaiting remote auth.'),
                                         s({
@@ -234,7 +234,7 @@ function R(e) {
                                     let e = r.encrypted_user_payload;
                                     s({
                                         step: 3,
-                                        user: await (0, N.Rq)(g(), e)
+                                        user: await (0, N.Rq)(h(), e)
                                     });
                                     return;
                                 }
@@ -243,14 +243,14 @@ function R(e) {
                                     let e = r.encrypted_user_payload;
                                     s({
                                         step: 2,
-                                        user: await (0, N.Rq)(g(), e)
+                                        user: await (0, N.Rq)(h(), e)
                                     });
                                     return;
                                 }
                                 case 'finish': {
                                     b.S.dispatch(I.CkL.WAVE_EMPHASIZE), o('remote auth handshake finished.');
                                     let t = r.encrypted_token;
-                                    s({ step: 5 }), e(await (0, N.FW)(g(), t));
+                                    s({ step: 5 }), e(await (0, N.FW)(h(), t));
                                     return;
                                 }
                                 case 'cancel':
@@ -290,10 +290,10 @@ function R(e) {
                             o('disconnected, error: '.concat(JSON.stringify(e))), m();
                         }),
                         () => {
-                            o('cleaning up'), (i.onopen = () => null), (i.onmessage = () => null), (i.onclose = () => null), (i.onerror = () => null), i.close(1000), h.cancel(), null != d && clearTimeout(d), null != c && clearInterval(c);
+                            o('cleaning up'), (i.onopen = () => null), (i.onmessage = () => null), (i.onclose = () => null), (i.onerror = () => null), i.close(1000), g.cancel(), null != d && clearTimeout(d), null != c && clearInterval(c);
                         }
                     );
-                }, [f, e, t, h, m]),
+                }, [f, e, t, g, m]),
                 {
                     state: l,
                     rsaKeyPair: c,
@@ -351,7 +351,7 @@ function R(e) {
                         className: O.qrLoginInner,
                         children: (0, r.jsx)(Z, {
                             state: u,
-                            cancel: h,
+                            cancel: g,
                             conditionalMediationAbortController: n,
                             isPasswordlessActive: o
                         })
