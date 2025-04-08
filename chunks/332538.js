@@ -1,95 +1,188 @@
-n.d(t, { Z: () => m }), n(388685), n(642613);
+n.d(t, { ZP: () => v }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(392711),
-    o = n.n(l),
-    a = n(399606),
-    s = n(481060),
-    c = n(377171),
-    u = n(430824),
-    d = n(608949),
-    p = n(905128),
-    h = n(639777),
-    f = n(19394),
-    g = n(535396);
-function m(e) {
-    let t = (0, a.e7)([u.Z], () => {
-            var t, n;
-            return null != (n = null == (t = u.Z.getGuild(e)) ? void 0 : t.premiumSubscriberCount) ? n : 0;
-        }),
-        n = (0, h.Z)(e),
-        l = (0, a.e7)([d.Z], () => d.Z.getNotificationStateForGuild(e), [e]),
-        m = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(e)),
-        { trailing: b, showUnread: y } = i.useMemo(() => {
-            var e, n, i;
-            if (null == m)
-                return {
-                    trailing: void 0,
-                    showUnread: !1
-                };
-            let { unlocked: o } = m,
-                a = (0, f.h)(o),
-                u = null != (n = null == l ? void 0 : l.lastSeenWarningNotification) ? n : Date.now(),
-                d = new Date(null == (e = a[a.length - 1]) ? void 0 : e.ends_at).getTime(),
-                p = null != (i = null == l ? void 0 : l.lastBoostCount) ? i : 0;
-            return a.length > 0 && u < d
-                ? {
-                      trailing: (0, r.jsx)(s.P4T, {
-                          color: s.TVs.colors.STATUS_WARNING,
-                          size: 'sm'
-                      }),
-                      showUnread: !0
-                  }
-                : t !== p && t - p > 0
-                  ? {
-                        trailing: (0, r.jsx)(s.mAB, {
-                            count: t - p,
-                            color: c.Z.BACKGROUND_ACCENT
-                        }),
-                        showUnread: !0
-                    }
-                  : {
+    l = n(399606),
+    o = n(704215),
+    a = n(481060),
+    s = n(377171),
+    c = n(706140),
+    u = n(645041),
+    d = n(430824),
+    p = n(823379),
+    h = n(267642),
+    f = n(608949),
+    g = n(905128),
+    m = n(326660),
+    b = n(317169),
+    _ = n(19394),
+    y = n(535396);
+function v(e) {
+    let t = (0, l.e7)([f.Z], () => f.Z.getNotificationStateForGuild(e), [e]),
+        n = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(e)),
+        { trailing: v, showUnread: O } = (function (e, t, n) {
+            let o = (0, l.e7)([d.Z], () => {
+                var t, n;
+                return null != (n = null == (t = d.Z.getGuild(e)) ? void 0 : t.premiumSubscriberCount) ? n : 0;
+            });
+            return i.useMemo(() => {
+                var e, i, l;
+                if (null == t)
+                    return {
                         trailing: void 0,
                         showUnread: !1
                     };
-        }, [t, null == l ? void 0 : l.lastBoostCount, null == l ? void 0 : l.lastSeenWarningNotification, m]),
-        _ = i.useMemo(() => {
-            var e, n, r, i, a, s;
-            if (null == m) return;
-            let { catalog: c, powerups: u, unlocked: d, appliedBoosts: p } = m,
-                h = t - (null != p ? p : 0),
-                f = new Set(null != (n = null == (e = c.get(g.Us.PERK)) ? void 0 : e.map((e) => e.skuId)) ? n : []).difference(new Set(null != (r = null == l ? void 0 : l.seenPerkSkuIds) ? r : []));
-            if (f.size > 0)
-                return {
-                    type: g.Us.PERK,
-                    powerup: u.get(o().sample(Array.from(f))),
-                    availableBoostCount: h
-                };
-            if (null == l) return;
-            let b = new Set(
-                null !=
-                (a = Array.from(null != (i = d.values()) ? i : [])
-                    .map((e) => {
-                        var t;
-                        return null == m || null == (t = m.powerups) ? void 0 : t.get(e.sku_id);
-                    })
-                    .filter((e) => (null == e ? void 0 : e.type) === g.Us.LEVEL)
-                    .map((e) => e.skuId))
-                    ? a
-                    : []
-            ).difference(new Set(null != (s = null == l ? void 0 : l.seenLevelSkuIds) ? s : []));
-            if (b.size > 0) {
-                let e = Array.from(b).sort();
-                return {
-                    type: g.Us.LEVEL,
-                    powerup: u.get(e[e.length - 1])
-                };
-            }
-        }, [m, l, t]);
-    if (n && null !== m && (null != b || y || null != _))
+                let { unlocked: c } = t,
+                    u = (0, _.h)(c),
+                    d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
+                    p = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
+                    h = null != (l = null == n ? void 0 : n.lastBoostCount) ? l : 0;
+                return u.length > 0 && d < p
+                    ? {
+                          trailing: (0, r.jsx)(a.P4T, {
+                              color: a.TVs.colors.STATUS_WARNING,
+                              size: 'sm'
+                          }),
+                          showUnread: !0
+                      }
+                    : o !== h && o - h > 0
+                      ? {
+                            trailing: (0, r.jsx)(a.mAB, {
+                                count: o - h,
+                                color: s.Z.BACKGROUND_ACCENT
+                            }),
+                            showUnread: !0
+                        }
+                      : {
+                            trailing: void 0,
+                            showUnread: !1
+                        };
+            }, [o, null == n ? void 0 : n.lastBoostCount, null == n ? void 0 : n.lastSeenWarningNotification, t]);
+        })(e, n, t),
+        j = (function (e, t) {
+            let [n, r] = (0, c.cv)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
+                { available: l } = (0, b.Z)(e),
+                a = i.useMemo(() => {
+                    if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
+                    let r = (function (e, t) {
+                        let n = h.Oe.find((e) => {
+                            let n = y.Cp[e],
+                                r = null != n ? t.unlocked.get(n) : void 0;
+                            return null != r && r.user_id !== y.Fq;
+                        });
+                        if (null == n) return;
+                        let r = y.Q1[n];
+                        if (null == r || (0, u.OY)(r, e)) return;
+                        let i = y.Cp[n],
+                            l = null != i ? t.powerups.get(i) : void 0;
+                        if (null != l)
+                            return {
+                                type: m.J.LEVEL_REACHED,
+                                powerup: l,
+                                markAsDismissed: (t) => {
+                                    (0, u.Qd)(r, e, !0, t);
+                                }
+                            };
+                    })(e, t);
+                    if (null != r) return r;
+                    let i = (function (e, t, n) {
+                        let r = Array.from(y.KW.values())
+                            .map((e) => {
+                                if (null == t.unlocked.get(e)) return t.powerups.get(e);
+                            })
+                            .filter(p.lm);
+                        if (0 !== r.length) {
+                            if (1 === r.length && n >= r[0].cost && !(0, u.OY)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
+                                return {
+                                    type: m.J.PERKS_PURCHASABLE,
+                                    powerups: r,
+                                    markAsDismissed: (t) => {
+                                        (0, u.Qd)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e, !0, t);
+                                    }
+                                };
+                            if (r.length > 1) {
+                                let t = null != r.find((e) => n >= e.cost),
+                                    i = n >= r.reduce((e, t) => e + t.cost, 0),
+                                    l = t && !(0, u.OY)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e) ? o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK : i && !(0, u.OY)(o.C.GUILD_POWERUP_BOTH_SKU_PURCHASE_COACHMARK, e) ? o.C.GUILD_POWERUP_BOTH_SKU_PURCHASE_COACHMARK : void 0;
+                                if (null == l) return;
+                                return {
+                                    type: m.J.PERKS_PURCHASABLE,
+                                    powerups: r,
+                                    markAsDismissed: (t) => {
+                                        (0, u.Qd)(l, e, !0, t);
+                                    }
+                                };
+                            }
+                        }
+                    })(e, t, l);
+                    if (null != i) return i;
+                }, [e, t, n, l]),
+                [s, d] = (0, c.Tt)(null != a ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: m.d });
+            return i.useMemo(() => {
+                if (null != t) {
+                    if (n === o.z.GUILD_POWERUP_PERKS_COACHMARK)
+                        return {
+                            type: m.J.PERKS_AVAILABLE,
+                            powerups: Array.from(y.KW.values())
+                                .map((e) => t.powerups.get(e))
+                                .filter(p.lm),
+                            markAsDismissed: r
+                        };
+                    if (s === o.z.GUILD_POWERUP_NOTIFICATION && null != a) {
+                        var e, i;
+                        return (
+                            (e = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            var r;
+                                            (r = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: r,
+                                                          enumerable: !0,
+                                                          configurable: !0,
+                                                          writable: !0
+                                                      })
+                                                    : (e[t] = r);
+                                        });
+                                }
+                                return e;
+                            })({}, a)),
+                            (i = i =
+                                {
+                                    markAsDismissed: (e) => {
+                                        d(e, !0), a.markAsDismissed(e);
+                                    }
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(i)).forEach(function (t) {
+                                      Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
+                                  }),
+                            e
+                        );
+                    }
+                }
+            }, [t, n, r, a, s, d]);
+        })(e, n);
+    if (null !== n && (null != v || O || null != j))
         return {
-            trailing: b,
-            showUnread: y,
-            popout: _
+            trailing: v,
+            showUnread: O,
+            popout: j
         };
 }

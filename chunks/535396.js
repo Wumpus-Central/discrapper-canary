@@ -1,73 +1,94 @@
 n.d(t, {
-    H2: () => d,
-    IN: () => c,
-    If: () => u,
-    NO: () => l,
-    Us: () => s,
-    d5: () => _,
-    uc: () => f
+    Cp: () => p,
+    Fq: () => _,
+    H2: () => E,
+    IN: () => m,
+    If: () => g,
+    KW: () => b,
+    NO: () => c,
+    Q1: () => h,
+    Us: () => l,
+    d5: () => v,
+    uc: () => y
 }),
     n(388685);
-var r = n(267642),
-    i = n(474936),
-    o = n(981631),
-    a = n(388032),
-    s = (function (e) {
+var r = n(704215),
+    i = n(267642),
+    o = n(474936),
+    a = n(981631),
+    s = n(388032),
+    l = (function (e) {
         return (e.PERK = 'perk'), (e.LEVEL = 'level'), e;
     })({});
-let l = '1340102344645283891';
-o.Eu4.TIER_1, o.Eu4.TIER_2, o.Eu4.TIER_3;
-let c = '1351706802684952639',
-    u = '1354906318279807056',
-    d = 'guild_powerup_modal',
-    f = new Set([c, u]),
-    _ = () => ({
-        [o.oNc.VIDEO_BITRATE_ENHANCED]: {
-            perkIcon: r.Ro.STREAM,
-            description: a.NW.string(a.t.y4ft4O)
+let c = '1340102344645283891',
+    u = '1341586379779604621',
+    d = '1341586379779604622',
+    f = '1341586379779604623',
+    _ = '525479941211684874',
+    p = {
+        [a.Eu4.TIER_1]: u,
+        [a.Eu4.TIER_2]: d,
+        [a.Eu4.TIER_3]: f,
+        [a.Eu4.NONE]: void 0
+    },
+    h = {
+        [a.Eu4.TIER_1]: r.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
+        [a.Eu4.TIER_2]: r.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
+        [a.Eu4.TIER_3]: r.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
+        [a.Eu4.NONE]: void 0
+    },
+    m = '1351706802684952639',
+    g = '1354906318279807056',
+    E = 'guild_powerup_modal',
+    b = new Set([m, g]),
+    y = new Set([m, g]),
+    v = () => ({
+        [a.oNc.VIDEO_BITRATE_ENHANCED]: {
+            perkIcon: i.Ro.STREAM,
+            description: s.NW.string(s.t.y4ft4O)
         },
-        [o.oNc.AUDIO_BITRATE_128_KBPS]: {
-            perkIcon: r.Ro.AUDIO,
-            description: a.NW.formatToPlainString(a.t.zoT1ZG, { bitrate: i.HO[o.Eu4.TIER_1].limits.bitrate / 1000 })
+        [a.oNc.AUDIO_BITRATE_128_KBPS]: {
+            perkIcon: i.Ro.AUDIO,
+            description: s.NW.formatToPlainString(s.t.zoT1ZG, { bitrate: o.HO[a.Eu4.TIER_1].limits.bitrate / 1000 })
         },
-        [o.oNc.INVITE_SPLASH]: {
-            perkIcon: r.Ro.CUSTOMIZATION,
-            description: a.NW.string(a.t.Qwlpoq)
+        [a.oNc.INVITE_SPLASH]: {
+            perkIcon: i.Ro.CUSTOMIZATION,
+            description: s.NW.string(s.t.Qwlpoq)
         },
-        [o.oNc.ANIMATED_ICON]: {
-            perkIcon: r.Ro.ANIMATED,
-            description: a.NW.string(a.t.PbAyub)
+        [a.oNc.ANIMATED_ICON]: {
+            perkIcon: i.Ro.ANIMATED,
+            description: s.NW.string(s.t.PbAyub)
         },
-        [o.oNc.AUDIO_BITRATE_256_KBPS]: {
-            perkIcon: r.Ro.AUDIO,
-            description: a.NW.formatToPlainString(a.t.zoT1ZG, { bitrate: i.HO[o.Eu4.TIER_2].limits.bitrate / 1000 })
+        [a.oNc.AUDIO_BITRATE_256_KBPS]: {
+            perkIcon: i.Ro.AUDIO,
+            description: s.NW.formatToPlainString(s.t.zoT1ZG, { bitrate: o.HO[a.Eu4.TIER_2].limits.bitrate / 1000 })
         },
-        [o.oNc.ROLE_ICONS]: {
-            perkIcon: r.Ro.CUSTOM_ROLE_ICON,
-            description: a.NW.string(a.t['6PV6QU'])
+        [a.oNc.ROLE_ICONS]: {
+            perkIcon: i.Ro.CUSTOM_ROLE_ICON,
+            description: s.NW.string(s.t['6PV6QU'])
         },
-        [o.oNc.MAX_FILE_SIZE_50_MB]: {
-            perkIcon: r.Ro.UPLOAD,
-            description: a.NW.formatToPlainString(a.t['aFRl5+'], { uploadSizeLimit: a.NW.string(a.t.yMOW8P) })
+        [a.oNc.MAX_FILE_SIZE_50_MB]: {
+            perkIcon: i.Ro.UPLOAD,
+            description: s.NW.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.NW.string(s.t.yMOW8P) })
         },
-        [o.oNc.BANNER]: {
-            perkIcon: r.Ro.CUSTOMIZATION,
-            description: a.NW.string(a.t['1a5rjo'])
+        [a.oNc.BANNER]: {
+            perkIcon: i.Ro.CUSTOMIZATION,
+            description: s.NW.string(s.t['1a5rjo'])
         },
-        [o.oNc.ANIMATED_BANNER]: {
-            perkIcon: r.Ro.ANIMATED,
-            description: a.NW.string(a.t['1+Vmh4'])
+        [a.oNc.ANIMATED_BANNER]: {
+            perkIcon: i.Ro.ANIMATED,
+            description: s.NW.string(s.t['1+Vmh4'])
         },
-        [o.oNc.AUDIO_BITRATE_384_KBPS]: {
-            perkIcon: r.Ro.AUDIO,
-            description: a.NW.formatToPlainString(a.t.zoT1ZG, { bitrate: i.HO[o.Eu4.TIER_3].limits.bitrate / 1000 })
+        [a.oNc.AUDIO_BITRATE_384_KBPS]: {
+            perkIcon: i.Ro.AUDIO,
+            description: s.NW.formatToPlainString(s.t.zoT1ZG, { bitrate: o.HO[a.Eu4.TIER_3].limits.bitrate / 1000 })
         },
-        [o.oNc.VANITY_URL]: {
-            perkIcon: r.Ro.VANITY,
-            description: a.NW.string(a.t.adNGjY)
+        [a.oNc.VANITY_URL]: {
+            perkIcon: i.Ro.VANITY,
+            description: s.NW.string(s.t.adNGjY)
         },
-        [o.oNc.MAX_FILE_SIZE_100_MB]: {
-            perkIcon: r.Ro.UPLOAD,
-            description: a.NW.formatToPlainString(a.t['aFRl5+'], { uploadSizeLimit: a.NW.string(a.t.yMOW8P) })
+        [a.oNc.MAX_FILE_SIZE_100_MB]: {
+            perkIcon: i.Ro.UPLOAD,
+            description: s.NW.formatToPlainString(s.t['aFRl5+'], { uploadSizeLimit: s.NW.string(s.t.yMOW8P) })
         }
     });

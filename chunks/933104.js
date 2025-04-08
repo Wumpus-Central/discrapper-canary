@@ -1,59 +1,95 @@
 n.d(t, {
-    $: () => h,
-    j: () => f
+    $h: () => _,
+    jG: () => b,
+    yI: () => y
 });
 var r = n(200651),
     i = n(793030),
-    l = n(970731),
-    o = n(713081),
-    a = n(441536),
-    s = n(279604),
-    c = n(680278),
-    u = n(388032),
-    d = n(423151),
-    p = n(942570);
-function h(e) {
-    let { guildId: t, powerup: n, availableBoostCount: i } = e,
-        { onActivate: l, isLoading: a } = (0, s.ZP)(t, n);
-    return (0, r.jsx)(g, {
-        asset: (0, r.jsx)('img', {
-            className: d.image,
-            src: p,
-            alt: ''
+    l = n(442837),
+    o = n(481060),
+    a = n(970731),
+    s = n(430824),
+    c = n(639777),
+    u = n(441536),
+    d = n(279604),
+    p = n(921944),
+    h = n(680278),
+    f = n(388032),
+    g = n(423151),
+    m = n(942570);
+function b(e) {
+    let { guildId: t, powerup: n, markAsDismissed: i } = e;
+    return (0, r.jsx)(O, {
+        asset: (0, r.jsx)(v, {
+            src: m,
+            markAsDismissed: i
         }),
-        header: u.NW.string(c.Z['k+prUF']),
-        content:
-            i >= n.cost
-                ? u.NW.formatToPlainString(c.Z.h8CFJi, {
-                      boostCount: i,
-                      perkName: n.title
-                  })
-                : u.NW.formatToPlainString(c.Z['+DlJ7+'], { perkName: n.title }),
-        buttonCTA: u.NW.string(c.Z.gSxlHR),
-        buttonProps: { submitting: a },
-        secondaryButtonCTA: u.NW.string(c.Z.ivpkNT),
-        onSecondaryClick: () => (0, o.jd)(t),
-        onClick: l
+        header: f.NW.formatToPlainString(h.Z['Zg/m9P'], { perkName: n.title }),
+        content: f.NW.formatToPlainString(h.Z['1EGXSE'], { perkName: n.title }),
+        buttonCTA: f.NW.string(f.t.RzWDqa),
+        onClick: () => (0, u.Z)(t, n.skuId),
+        markAsDismissed: i
     });
 }
-function f(e) {
-    let { guildId: t, powerup: n } = e;
-    return (0, r.jsx)(g, {
-        asset: (0, r.jsx)('img', {
-            className: d.image,
-            src: p,
-            alt: ''
+function _(e) {
+    let { guildId: t, powerups: n, markAsDismissed: i } = e;
+    if (((0, c.Z)(t), 0 === n.length)) return;
+    let l = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title);
+    return (0, r.jsx)(O, {
+        asset: (0, r.jsx)(v, {
+            src: m,
+            markAsDismissed: i
         }),
-        header: u.NW.formatToPlainString(c.Z['Zg/m9P'], { perkName: n.title }),
-        content: u.NW.formatToPlainString(c.Z['1EGXSE'], { perkName: n.title }),
-        buttonCTA: u.NW.string(u.t.RzWDqa),
-        onClick: () => (0, a.Z)(t, n.skuId)
+        header: f.NW.string(h.Z.xyE2AQ),
+        content: f.NW.formatToPlainString(h.Z.IJP4YG, { perks: l }),
+        buttonCTA: f.NW.string(f.t.RzWDqa),
+        onClick: () => (0, u.Z)(t),
+        markAsDismissed: i
     });
 }
-function g(e) {
+function y(e) {
+    let { guildId: t, powerups: n, markAsDismissed: i } = e,
+        o = (0, l.e7)([s.Z], () => {
+            var e;
+            return null == (e = s.Z.getGuild(t)) ? void 0 : e.name;
+        }),
+        { onActivate: a } = (0, d.ZP)(t, n[0]);
+    if (0 === n.length) return;
+    let c = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
+        p = 1 === n.length;
+    return (0, r.jsx)(O, {
+        asset: (0, r.jsx)(v, {
+            src: m,
+            markAsDismissed: i
+        }),
+        header: f.NW.formatToPlainString(h.Z.LmpChI, { guildName: o }),
+        content: n.length > 1 ? f.NW.formatToPlainString(h.Z.wcQOqK, { perks: c }) : f.NW.formatToPlainString(h.Z.ZF8NT0, { perk: c }),
+        buttonCTA: p ? f.NW.string(h.Z.gSxlHR) : f.NW.string(f.t.RzWDqa),
+        onClick: (e) => (p ? a(e) : (0, u.Z)(t)),
+        markAsDismissed: i
+    });
+}
+function v(e) {
+    let { src: t, markAsDismissed: n } = e;
+    return (0, r.jsxs)('div', {
+        className: g.imageContainer,
+        children: [
+            (0, r.jsx)('img', {
+                className: g.image,
+                src: t,
+                alt: ''
+            }),
+            (0, r.jsx)(o.olH, {
+                className: g.close,
+                onClick: () => n(p.L.USER_DISMISS)
+            })
+        ]
+    });
+}
+function O(e) {
     var t,
         n,
-        { header: o, content: a } = e,
+        { header: l, content: o } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -74,7 +110,7 @@ function g(e) {
             return i;
         })(e, ['header', 'content']);
     return (0, r.jsx)(
-        l.ZP,
+        a.ZP,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -104,17 +140,17 @@ function g(e) {
             {
                 header: (0, r.jsx)(i.xv, {
                     variant: 'text-md/semibold',
-                    children: o
+                    children: l
                 }),
                 content: (0, r.jsx)(i.xv, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
-                    children: a
+                    children: o
                 }),
-                className: d.container,
-                headerClassName: d.header,
-                contentClassName: d.header,
-                caretPosition: l.DF.LEFT_TOP
+                className: g.container,
+                headerClassName: g.header,
+                contentClassName: g.header,
+                caretPosition: a.DF.LEFT_TOP
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
