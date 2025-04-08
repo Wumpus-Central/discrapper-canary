@@ -11,6 +11,5 @@ e.exports = {
     gradientLeft: 'gradientLeft_a1cc72 gradient_a1cc72',
     gradientRight: 'gradientRight_a1cc72 gradient_a1cc72',
     arrowClickable: 'arrowClickable_a1cc72',
-    arrow: 'arrow_a1cc72',
-    mediaModal: 'mediaModal_a1cc72'
+    arrow: 'arrow_a1cc72'
 };

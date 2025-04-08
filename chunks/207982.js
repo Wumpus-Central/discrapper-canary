@@ -1,26 +1,25 @@
-r.d(t, { J: () => l }), r(388685), r(192379);
+r.d(t, { G: () => a }), r(388685), r(192379);
 var n = r(374470),
-    o = r(730606),
+    l = r(730606),
     i = r(312097),
-    s = r(52824),
-    a = r(854600);
-function l(e, t, r) {
-    let l = {},
+    o = r(52824);
+function a(e, t, r) {
+    let a = {},
         c = {};
-    for (let [d, u] of e.entries()) {
-        let p = (0, s.q)({
+    for (let [s, u] of e.entries()) {
+        let p = (0, o.q)({
             proxyURL: u.proxyUrl,
             url: u.url
         });
-        (l[p] = (o) =>
+        (a[p] = (l) =>
             (function (e, t, r) {
-                var o, s;
-                let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                var l, o;
+                let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
                     c = arguments.length > 4 ? arguments[4] : void 0;
                 e.preventDefault(),
                     (0, n.k)(e.currentTarget) && e.currentTarget.blur(),
                     (0, i.K)(
-                        ((o = (function (e) {
+                        ((l = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
@@ -44,16 +43,15 @@ function l(e, t, r) {
                                     });
                             }
                             return e;
-                        })({}, l)),
-                        (s = s =
+                        })({}, a)),
+                        (o = o =
                             {
-                                className: a.forcedTransparency,
                                 items: t,
                                 startingIndex: r,
                                 location: null != c ? c : 'zoomedMediaModalHelper'
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(s))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                             : (function (e, t) {
                                   var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -61,16 +59,16 @@ function l(e, t, r) {
                                       r.push.apply(r, n);
                                   }
                                   return r;
-                              })(Object(s)).forEach(function (e) {
-                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(s, e));
+                              })(Object(o)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
-                        o)
+                        l)
                     );
-            })(o, e, d, t, r)),
-            (c[p] = () => (0, o.WG)(u, e.length > 1));
+            })(l, e, s, t, r)),
+            (c[p] = () => (0, l.WG)(u, e.length > 1));
     }
     return {
-        srcToOnClickOverride: l,
+        srcToOnClickOverride: a,
         srcToHandlePreloadImage: c
     };
 }
