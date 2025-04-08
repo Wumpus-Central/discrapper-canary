@@ -76,7 +76,9 @@ function f(e) {
         badge: e.badge,
         badgeColorPrimary: e.badge_color_primary,
         badgeColorSecondary: e.badge_color_secondary,
-        badgeHash: e.badge_hash
+        badgeHash: e.badge_hash,
+        premiumSubscriberCount: e.premium_subscription_count,
+        premiumTier: e.premium_tier
     };
 }
 function _(e) {
@@ -149,6 +151,8 @@ function h(e) {
                 badge: null,
                 badgeHash: null,
                 badgeColorPrimary: null,
-                badgeColorSecondary: null
+                badgeColorSecondary: null,
+                premiumSubscriberCount: l.premium_subscription_count,
+                premiumTier: l.premium_tier
             };
 }
