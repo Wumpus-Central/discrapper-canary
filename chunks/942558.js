@@ -11,6 +11,7 @@ e.exports = {
     onlineCount: 'onlineCount__6be55',
     dot: 'dot__6be55',
     settingsButton: 'settingsButton__6be55',
+    settingsOpen: 'settingsOpen__6be55',
     advancedOptions: 'advancedOptions__6be55',
     advancedOption: 'advancedOption__6be55',
     advancedOptionInner: 'advancedOptionInner__6be55',
