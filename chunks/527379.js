@@ -1,33 +1,32 @@
 n.d(t, {
-    Dr: () => _,
-    YO: () => f,
-    _X: () => O,
-    _o: () => E,
-    nb: () => g,
-    zO: () => p
+    Dr: () => E,
+    YO: () => p,
+    _X: () => _,
+    _o: () => f,
+    nb: () => O,
+    zO: () => d
 });
 var r = n(570140),
-    i = n(63568),
-    l = n(434404),
-    o = n(703656),
-    a = n(430824),
-    u = n(241559),
-    s = n(327999),
-    c = n(981631),
-    d = n(176505);
-async function p(e) {
+    i = n(434404),
+    l = n(703656),
+    o = n(430824),
+    a = n(241559),
+    u = n(327999),
+    s = n(981631),
+    c = n(176505);
+async function d(e) {
     await r.Z.dispatch({
         type: 'INITIALIZE_MEMBER_SAFETY_STORE',
         guildId: e
     });
 }
-function f(e) {
+function p(e) {
     r.Z.dispatch({
         type: 'MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH',
         guildId: e
     });
 }
-function E(e, t) {
+function f(e, t) {
     var { continuationToken: n } = t,
         i = (function (e, t) {
             if (null == e) return {};
@@ -54,20 +53,20 @@ function E(e, t) {
         pagination: i
     });
 }
-async function _(e, t) {
+async function E(e, t) {
     await r.Z.dispatch({
         type: 'MEMBER_SAFETY_SEARCH_STATE_UPDATE',
         guildId: e,
         searchState: t
     });
 }
-function O(e) {
-    let t = (0, u.lv)(e),
-        n = a.Z.getGuild(e);
-    return !!t && null != n && (((0, i.K2)(e, 'Guild Sidebar') && n.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || n.hasFeature(c.oNc.COMMUNITY) || n.hasFeature(c.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? (0, o.uL)(c.Z5c.CHANNEL(e, d.oC.MEMBER_SAFETY)) : l.Z.open(n.id, c.pNK.MEMBERS), !0);
+function _(e) {
+    let t = (0, a.lv)(e),
+        n = o.Z.getGuild(e);
+    return !!t && null != n && (n.hasFeature(s.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || n.hasFeature(s.oNc.COMMUNITY) || n.hasFeature(s.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? (0, l.uL)(s.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)) : i.Z.open(n.id, s.pNK.MEMBERS), !0);
 }
-async function g(e, t) {
-    let n = await (0, s._2)(e, t);
+async function O(e, t) {
+    let n = await (0, u._2)(e, t);
     return 0 === n.length
         ? []
         : (await r.Z.dispatch({
