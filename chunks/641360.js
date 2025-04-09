@@ -1,11 +1,11 @@
 n.d(t, {
     I3: () => a,
-    p1: () => i
+    p1: () => l
 });
 let r = (0, n(818083).B)({
-    kind: 'user',
-    id: '2025-03_gdm_bedazzle',
-    label: 'GDM Bedazzle',
+    kind: 'guild',
+    id: '2025-04_gdm_bedazzling',
+    label: 'GDM Bedazzling',
     defaultConfig: {
         enabled: !1,
         unifiedEditing: !1
@@ -29,11 +29,19 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { enabled: t, unifiedEditing: n } = r.useExperiment({ location: e });
-    return !t || !n;
+function i(e, t, n) {
+    return r.useExperiment(
+        {
+            location: e,
+            guildId: t
+        },
+        n
+    );
 }
-function a(e) {
-    let { enabled: t } = r.useExperiment({ location: e });
-    return t;
+function a(e, t, n) {
+    return i(e, t, n).enabled;
+}
+function l(e, t) {
+    let { enabled: n, unifiedEditing: r } = i(e, t);
+    return !n || !r;
 }
