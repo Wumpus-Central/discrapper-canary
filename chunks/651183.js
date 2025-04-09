@@ -10,22 +10,37 @@ var l = n(785141),
 function c(e) {
     let { participant: t, className: n } = e,
         c = (0, a.Z)(t),
-        d = null == c ? void 0 : c.message,
-        { avErrorUIEnabled: f } = (0, i.JN)({ location: 'StreamWarning' }),
-        m = f
+        { avErrorUIEnabled: d } = (0, i.JN)({ location: 'StreamWarning' });
+    if (null == c) return null;
+    let f = (function (e) {
+            switch (e) {
+                case l.u.STREAM_SEND_LOW_FPS:
+                case l.u.STREAM_SEND_HIGH_PACKET_LOSS:
+                    return u.NW.string(u.t['1f1LHh']);
+                case l.u.STREAM_BAD_NETWORK_QUALITY:
+                    return u.NW.string(u.t.Ic588P);
+                case l.u.STREAM_SOUNDSHARE_FAILED:
+                    return u.NW.string(u.t['9lcycn']);
+                case l.u.STREAM_VIEW_HIGH_PACKET_LOSS:
+                case l.u.STREAM_VIEW_LOW_FPS:
+                    return u.NW.string(u.t.BcOif3);
+                default:
+                    return;
+            }
+        })(c),
+        m = d
             ? (function (e) {
                   var t;
-                  let n = null == e ? void 0 : e.avError;
-                  if (null == n) return null;
-                  let r = null == (t = (0, l.hp)(n)) ? void 0 : t.errorCode,
-                      i = u.NW.formatToPlainString(u.t['ejOT9/'], { errorCode: r });
-                  return s.Z.isDeveloper ? ''.concat(i, ' (').concat(n, ')') : i;
+                  if (null == e) return null;
+                  let n = null == (t = (0, l.hp)(e)) ? void 0 : t.errorCode,
+                      r = u.NW.formatToPlainString(u.t['ejOT9/'], { errorCode: n });
+                  return s.Z.isDeveloper ? ''.concat(r, ' (').concat(e, ')') : r;
               })(c)
             : null;
-    return null != d
+    return null != f
         ? (0, r.jsx)(o.Z, {
               className: n,
-              errorMessage: d,
+              errorMessage: f,
               errorDetailMessage: m
           })
         : null;

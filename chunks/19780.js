@@ -86,7 +86,8 @@ function N(e, t) {
                     userId: n,
                     streamId: r,
                     rtcServerId: i,
-                    context: m.Yn.DEFAULT
+                    context: m.Yn.DEFAULT,
+                    mediaEngineConnectionId: o.getMediaEngineConnectionId()
                 })
             );
         }),

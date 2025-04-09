@@ -421,6 +421,7 @@ class k extends s.Z {
                         userId: i,
                         streamId: e,
                         rtcServerId: t,
+                        mediaEngineConnectionId: this.getMediaEngineConnectionId(),
                         context: A.Yn.STREAM
                     })
                 );
