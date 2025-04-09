@@ -2402,6 +2402,7 @@ var N =
     (r.CHAT_WALLPAPER_USER_SIDE_CLEAR_TOGGLED = 'chat_wallpaper_user_side_clear_toggled'),
     (r.CHAT_WALLPAPER_NITRO_LINK_CLICKED = 'chat_wallpaper_nitro_link_clicked'),
     (r.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED = 'chat_wallpaper_wallpaper_option_selected'),
+    (r.CHAT_WALLPAPER_DOWNLOADED = 'chat_wallpaper_downloaded'),
     (r.RING_TO_GUILD_VC_BANNER_SHOWN = 'impression_ring_to_guild_vc_banner_shown'),
     (r.RING_TO_GUILD_VC_MENU_ITEM_SHOWN = 'impression_ring_to_guild_vc_menu_item_shown'),
     (r.RING_CALL_DECLINED = 'ring_call_declined'),
