@@ -1,39 +1,66 @@
-r.d(t, {
-    C: () => u,
-    d: () => i
+n.d(t, {
+    C: () => p,
+    d: () => g
 });
-var n = r(200651),
-    l = r(192379),
-    s = r(43747);
-let o = (0, l.createContext)({
+var r = n(200651),
+    i = n(192379),
+    s = n(772848),
+    a = n(442837),
+    l = n(583434),
+    o = n(956472),
+    c = n(594174),
+    d = n(74538),
+    u = n(43747);
+let m = (0, i.createContext)({
         skuId: '123',
+        loadId: (0, s.Z)(),
+        analyticsLocations: [],
         isRedeeming: !1,
         orbRedemptionError: null,
+        orbProductContext: null,
         onRedeemVirtualCurrency: () => {}
     }),
-    i = (e) => {
-        let { skuId: t, onCheckoutSuccess: r, children: i } = e,
-            { redeemVirtualCurrency: u, isSubmitting: c, error: a } = (0, s.f)(),
-            d = (0, l.useCallback)(
+    g = (e) => {
+        let { skuId: t, loadId: n, analyticsLocations: s, onCheckoutSuccess: g, children: p } = e,
+            h = (0, a.e7)([c.default], () => d.ZP.canUseCollectibles(c.default.getCurrentUser())),
+            { product: f } = (0, l.T)(t),
+            b = (0, i.useMemo)(() => {
+                if (null == f) return null;
+                let e = (0, o.T4)({
+                        product: f,
+                        isPremiumUser: h
+                    }),
+                    t = null !== e ? e.amount : null;
+                return {
+                    orbPrice: e,
+                    orbPriceAmount: t,
+                    product: f
+                };
+            }, [f, h]),
+            { redeemVirtualCurrency: N, isSubmitting: x, error: _ } = (0, u.f)(),
+            E = (0, i.useCallback)(
                 (e) => {
-                    u(t, (n) => {
-                        r({
+                    N(t, (n) => {
+                        g({
                             entitlements: n,
                             skuId: t
                         }),
                             e();
                     });
                 },
-                [t, u, r]
+                [t, N, g]
             );
-        return (0, n.jsx)(o.Provider, {
+        return (0, r.jsx)(m.Provider, {
             value: {
                 skuId: t,
-                onRedeemVirtualCurrency: d,
-                isRedeeming: c,
-                orbRedemptionError: a
+                loadId: n,
+                analyticsLocations: null != s ? s : [],
+                orbProductContext: b,
+                onRedeemVirtualCurrency: E,
+                isRedeeming: x,
+                orbRedemptionError: _
             },
-            children: i
+            children: p
         });
     },
-    u = () => (0, l.useContext)(o);
+    p = () => (0, i.useContext)(m);
