@@ -1,11 +1,12 @@
 n.d(t, {
-    EO: () => b,
+    $5: () => g,
+    EO: () => y,
     Qs: () => m,
-    cL: () => E,
+    cL: () => b,
     di: () => p,
     rk: () => f,
     sp: () => _,
-    tK: () => g,
+    tK: () => E,
     wD: () => d
 }),
     n(953529),
@@ -105,8 +106,8 @@ function f(e, t) {
 }
 function _(e, t) {
     var n, r, i, o, a, s, c, u, d, f, _, p, h;
-    let m = null != (n = e.properties) ? n : g(t),
-        E = {
+    let m = null != (n = e.properties) ? n : E(t),
+        g = {
             id: e.id,
             name: null != (r = m.name) ? r : '',
             description: m.description,
@@ -141,7 +142,7 @@ function _(e, t) {
             latestOnboardingQuestionId: m.latest_onboarding_question_id,
             profile: m.profile
         };
-    return t.merge(E);
+    return t.merge(g);
 }
 function p(e, t) {
     let n = {
@@ -212,6 +213,18 @@ function m(e) {
     return new a.ZP(t);
 }
 function g(e) {
+    let t = {
+        id: e.id,
+        name: e.name,
+        description: e.description,
+        icon: e.icon,
+        premiumSubscriberCount: e.premiumSubscriberCount,
+        premiumTier: e.premiumTier,
+        features: e.features
+    };
+    return new a.ZP(t);
+}
+function E(e) {
     return {
         id: e.id,
         name: e.name,
@@ -249,12 +262,12 @@ function g(e) {
         profile: e.profile
     };
 }
-function E(e) {
+function b(e) {
     var t;
     for (let n in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null != (t = e.features) ? t : [])), e.roles)) (0, s.cf)(e.roles[n]);
     return (0, o.gh)(e, a.ZP);
 }
-function b(e, t, n, r) {
+function y(e, t, n, r) {
     let i = (null != r && r.length > 0) || (null != n && n.length > 0);
     if ((i && (t = u({}, t)), null != r)) for (let e of r) delete t[e];
     if (null != n && n.length > 0) for (let e of n) t[e.id] = (0, s.CL)(e);
