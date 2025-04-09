@@ -1,7 +1,7 @@
 n.d(t, {
-    JO: () => g,
-    ZP: () => v,
-    iz: () => E
+    JO: () => b,
+    ZP: () => I,
+    iz: () => y
 });
 var r = n(200651),
     i = n(192379),
@@ -15,8 +15,37 @@ var r = n(200651),
     f = n(540059),
     _ = n(79712),
     p = n(658672);
-let h = 24,
-    m = (e) => {
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let g = 24,
+    E = (e) => {
         let { className: t, wrapperClassName: n, children: i, onContextMenu: o, onClick: s, id: l, muted: u = !1, level: d = 1 } = e,
             _ = (0, f.Q3)('BaseHeaderBar'),
             h = (0, r.jsx)(c.y5t, {
@@ -42,85 +71,96 @@ let h = 24,
                   children: h
               });
     },
-    g = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: o, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: m, foreground: g, background: E, icon: b, iconSize: y = h, onClick: v, onContextMenu: O, tooltip: I = null, tooltipColor: S, tooltipPosition: T = 'bottom', tooltipDisabled: N, tooltipSpacing: A, hideOnClick: C = !0, role: R, 'aria-label': P, 'aria-hidden': w, 'aria-checked': D, 'aria-expanded': L, 'aria-haspopup': x, 'data-jump-section': M } = e,
-            k = (0, f.Q3)('BaseHeaderBar'),
-            j = (0, r.jsx)(b, {
-                x: 0,
-                y: 0,
-                width: y,
-                height: y,
-                size: 'custom',
-                className: a()(i, p.icon),
-                colorClass: null != g ? g : void 0,
-                secondaryColorClass: null != E ? E : void 0,
-                color: null != m ? m : 'currentColor'
-            }),
-            U = P;
+    b = i.forwardRef(function (e, t) {
+        let { className: n, iconClassName: i, children: o, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: h, foreground: E, background: b, icon: y, iconSize: v = g, onClick: O, onContextMenu: I, tooltip: S = null, tooltipColor: T, tooltipPosition: N = 'bottom', tooltipDisabled: A, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
+            j = (0, f.Q3)('BaseHeaderBar'),
+            U = null != b ? { secondaryColorClass: b } : {},
+            G = (0, r.jsx)(
+                y,
+                m(
+                    {
+                        x: 0,
+                        y: 0,
+                        width: v,
+                        height: v,
+                        size: 'custom',
+                        className: a()(i, p.icon),
+                        colorClass: null != E ? E : void 0,
+                        color: null != h ? h : 'currentColor'
+                    },
+                    U
+                )
+            ),
+            B = w;
         return (
-            null == U && 'string' == typeof I && (U = I),
+            null == B && 'string' == typeof S && (B = S),
             (0, r.jsx)(c.ua7, {
-                text: I,
-                color: S,
-                position: T,
-                hideOnClick: C,
-                shouldShow: !N,
-                spacing: A,
+                text: S,
+                color: T,
+                position: N,
+                hideOnClick: R,
+                shouldShow: !A,
+                spacing: C,
                 children: (e) => {
-                    let { onMouseEnter: f, onMouseLeave: h, onFocus: I, onBlur: S } = e;
-                    return null == v
+                    let { onMouseEnter: f, onMouseLeave: g, onFocus: b, onBlur: S } = e;
+                    return null == O
                         ? (0, r.jsx)('div', {
                               ref: t,
                               className: a()(n, p.iconWrapper, { [p.iconDisabled]: l }),
-                              children: (0, r.jsx)(b, {
-                                  x: 0,
-                                  y: 0,
-                                  width: y,
-                                  height: y,
-                                  size: 'custom',
-                                  className: a()(i, p.icon),
-                                  colorClass: null != g ? g : void 0,
-                                  secondaryColorClass: null != E ? E : void 0,
-                                  color: null != m ? m : 'currentColor',
-                                  'aria-hidden': w,
-                                  onMouseEnter: f,
-                                  onMouseLeave: h,
-                                  onFocus: I,
-                                  onBlur: S
-                              })
+                              children: (0, r.jsx)(
+                                  y,
+                                  m(
+                                      {
+                                          x: 0,
+                                          y: 0,
+                                          width: v,
+                                          height: v,
+                                          size: 'custom',
+                                          className: a()(i, p.icon),
+                                          colorClass: null != E ? E : void 0,
+                                          color: null != h ? h : 'currentColor',
+                                          'aria-hidden': D,
+                                          onMouseEnter: f,
+                                          onMouseLeave: g,
+                                          onFocus: b,
+                                          onBlur: S
+                                      },
+                                      U
+                                  )
+                              )
                           })
                         : (0, r.jsxs)(c.P3F, {
                               innerRef: t,
                               tag: 'div',
-                              onClick: l ? void 0 : v,
-                              onContextMenu: l ? void 0 : O,
+                              onClick: l ? void 0 : O,
+                              onContextMenu: l ? void 0 : I,
                               onMouseEnter: f,
-                              onMouseLeave: h,
-                              onFocus: I,
+                              onMouseLeave: g,
+                              onFocus: b,
                               onBlur: S,
                               className: a()(n, {
                                   [p.iconWrapper]: !0,
-                                  [p.clickable]: !l && null != v,
+                                  [p.clickable]: !l && null != O,
                                   [p.selected]: s,
                                   [p.iconDisabled]: l
                               }),
-                              role: R,
-                              'aria-label': U,
-                              'aria-hidden': w,
-                              'aria-checked': D,
-                              'aria-haspopup': x,
-                              'aria-expanded': L,
-                              tabIndex: l || null == v ? -1 : 0,
-                              'data-jump-section': M,
+                              role: P,
+                              'aria-label': B,
+                              'aria-hidden': D,
+                              'aria-checked': L,
+                              'aria-haspopup': M,
+                              'aria-expanded': x,
+                              tabIndex: l || null == O ? -1 : 0,
+                              'data-jump-section': k,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {
                                             mask: 'top' === _ ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            height: k ? y : void 0,
-                                            width: k ? y : void 0,
-                                            children: j
+                                            height: j ? v : void 0,
+                                            width: j ? v : void 0,
+                                            children: G
                                         })
-                                      : j,
+                                      : G,
                                   u ? (0, r.jsx)('span', { className: a()(p.iconBadge, 'top' === _ ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
                                   o
                               ]
@@ -129,11 +169,11 @@ let h = 24,
             })
         );
     }),
-    E = (e) => {
+    y = (e) => {
         let { className: t } = e;
         return (0, f.Q3)('BaseHeaderBar.Divider') ? (0, r.jsx)(_.Z, { className: a()(p.dot, t) }) : (0, r.jsx)('div', { className: a()(p.divider, t) });
     };
-function b(e) {
+function v(e) {
     let { direction: t = 'right' } = e;
     return 'right' === t
         ? (0, r.jsx)(c.Fbu, {
@@ -147,7 +187,7 @@ function b(e) {
               className: p.caret
           });
 }
-let y = (e) => {
+let O = (e) => {
     let { className: t, innerClassName: n, children: o, childrenBottom: d, toolbar: f, onDoubleClick: _, 'aria-label': h, 'aria-labelledby': m, role: g, scrollable: E, transparent: b = !1 } = e,
         y = i.useRef(null),
         v = i.useContext(u.Z);
@@ -193,5 +233,5 @@ let y = (e) => {
         })
     });
 };
-(y.Icon = g), (y.Title = m), (y.Divider = E), (y.Caret = b);
-let v = y;
+(O.Icon = b), (O.Title = E), (O.Divider = y), (O.Caret = v);
+let I = O;

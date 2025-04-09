@@ -505,9 +505,14 @@ function eK() {
         _ = (0, A.Q3)('AppView'),
         E = (0, A.TH)('AppView'),
         N = _ ? 'div' : i.Fragment,
-        v = _ ? { className: eO.page } : {},
-        S = (0, T.useAppSidebarState)((e) => !e.isOpen),
-        P = (0, p.e7)([I.Z], () => I.Z.isFullscreenInContext());
+        v = (0, T.useAppSidebarState)((e) => !e.isOpen),
+        S = (0, p.e7)([I.Z], () => I.Z.isFullscreenInContext()),
+        P = _
+            ? {
+                  className: eO.page,
+                  'data-collapsed': !!E && v
+              }
+            : {};
     return (0, r.jsxs)('div', {
         className: eO.container,
         children: [
@@ -522,9 +527,9 @@ function eK() {
                 value: (null == f ? void 0 : f.params.guildId) === eg.ME || null == f ? void 0 : f.params.guildId,
                 children: (0, r.jsxs)('div', {
                     className: eO.base,
-                    'data-fullscreen': P,
+                    'data-fullscreen': S,
                     children: [
-                        _ && !P && (0, r.jsx)(eI, {}),
+                        _ && !S && (0, r.jsx)(eI, {}),
                         d.tq ? null : (0, r.jsx)(eu.Z, {}),
                         (0, r.jsxs)('div', {
                             className: eO.content,
@@ -540,8 +545,7 @@ function eK() {
                                 }),
                                 (0, r.jsx)(
                                     N,
-                                    ey(eN({}, v), {
-                                        'data-collapsed': !!E && S,
+                                    ey(eN({}, P), {
                                         children: (0, r.jsx)(O.Z.Provider, {
                                             value: b,
                                             children: (0, r.jsxs)(s.rs, {

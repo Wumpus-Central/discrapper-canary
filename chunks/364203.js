@@ -153,7 +153,7 @@ function F(e) {
         ]
     });
 }
-let Z = i.forwardRef((e) => {
+function Z(e) {
     let { isSelected: t, onSelect: n, selectionId: o, tooltipText: s, label: u, className: f, children: _ } = e,
         p = (0, d.xUy)({
             label: u,
@@ -225,7 +225,7 @@ let Z = i.forwardRef((e) => {
                 })
         })
     );
-});
+}
 function H(e) {
     let { isSelected: t, onSelect: n, chatWallpaperMetadata: i } = e,
         { label: o, default: a, designGroupId: s } = i;
@@ -332,7 +332,6 @@ function K() {
         ]
     });
 }
-Z.displayName = 'BaseChatWallpaperSelection';
 let z = function (e) {
     let { className: t, position: n = R.VD2.TOP_RIGHT, config: o } = e,
         { analyticsLocations: s } = (0, p.ZP)(_.Z.CHAT_WALLPAPER_PICKER),
