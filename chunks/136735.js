@@ -201,7 +201,18 @@ function B(e) {
                     });
                 else {
                     let e = new FormData();
-                    e.append('name', X), e.append('tags', r), e.append('description', en), (null == G ? void 0 : G.file) != null && e.append('file', G.file), (a = null != (s = null == (i = G.file) ? void 0 : i.type) ? s : ''), N.default.track(S.rMx.STICKER_UPLOAD_STARTED, { filetype: a }), await (0, I.lY)(K, e), W(!0);
+                    e.append('name', X),
+                        e.append('tags', r),
+                        e.append('description', en),
+                        (null == G ? void 0 : G.file) != null && e.append('file', G.file),
+                        (a = null != (s = null == (i = G.file) ? void 0 : i.type) ? s : ''),
+                        N.default.track(S.rMx.STICKER_UPLOAD_STARTED, { filetype: a }),
+                        await (0, I.lY)({
+                            guildId: K,
+                            body: e,
+                            platform: 'web'
+                        }),
+                        W(!0);
                 }
                 U();
             } catch (e) {

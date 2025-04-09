@@ -11,6 +11,7 @@ n.d(t, {
     pk: () => N,
     qB: () => w
 }),
+    n(953529),
     n(539854);
 var r = n(392711),
     i = n.n(r),
@@ -140,16 +141,47 @@ let I = async (e, t) => {
             rejectWithError: !1
         });
     },
-    C = async (e, t) => {
-        let n = await o.tn.post({
-            url: m.ANM.GUILD_STICKER_PACKS(e),
-            body: t,
-            rejectWithError: !1
-        });
+    C = async (e) => {
+        let { guildId: t } = e,
+            n = await o.tn.post({
+                url: m.ANM.GUILD_STICKER_PACKS(t),
+                body: 'web' === e.platform ? e.body : void 0,
+                fields:
+                    'mobile' === e.platform
+                        ? [
+                              {
+                                  name: 'name',
+                                  value: e.name
+                              },
+                              {
+                                  name: 'tags',
+                                  value: e.tags
+                              },
+                              {
+                                  name: 'description',
+                                  value: e.description
+                              }
+                          ]
+                        : void 0,
+                attachments:
+                    'mobile' === e.platform
+                        ? [
+                              {
+                                  name: 'file',
+                                  file: {
+                                      uri: e.uri,
+                                      name: e.name,
+                                      type: e.mimeType
+                                  }
+                              }
+                          ]
+                        : void 0,
+                rejectWithError: !1
+            });
         return (
             a.Z.dispatch({
                 type: 'GUILD_STICKERS_CREATE_SUCCESS',
-                guildId: e,
+                guildId: t,
                 sticker: O(y({}, n.body), { user: _.default.getCurrentUser() })
             }),
             n.body
