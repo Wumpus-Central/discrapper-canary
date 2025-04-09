@@ -1,18 +1,15 @@
-n.d(t, { l: () => b }), n(388685);
+n.d(t, { l: () => m }), n(388685);
 var i = n(200651),
     o = n(192379),
-    r = n(442837),
-    a = n(481060),
-    s = n(607070),
-    l = n(100527),
-    c = n(906732),
-    u = n(181918),
-    d = n(7543),
-    h = n(823415),
-    p = n(670188),
-    m = n(592125),
-    f = n(91047);
-function g(e) {
+    r = n(481060),
+    a = n(100527),
+    s = n(906732),
+    l = n(181918),
+    c = n(823415),
+    u = n(670188),
+    d = n(592125),
+    h = n(91047);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -37,40 +34,39 @@ function g(e) {
     }
     return e;
 }
-function b(e) {
-    let { user: t, channelId: n, guildId: b, messageId: j, stopPropagation: v = !1, ariaLabel: O } = e,
-        { analyticsLocations: y } = (0, c.ZP)(l.Z.USERNAME),
-        T = (0, u.$V)(b, 'useUsernameHook'),
-        x = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
-        [S, _] = o.useState(!1),
-        C = (0, h.ic)({ location: 'useUsernameHook' }),
-        E = o.useCallback(
+function m(e) {
+    let { user: t, channelId: n, guildId: m, messageId: f, stopPropagation: g = !1, ariaLabel: b } = e,
+        { analyticsLocations: j } = (0, s.ZP)(a.Z.USERNAME),
+        v = (0, l.$V)(m, 'useUsernameHook'),
+        [O, y] = o.useState(!1),
+        T = (0, c.ic)({ location: 'useUsernameHook' }),
+        x = o.useCallback(
             (e) => {
-                let i = m.Z.getChannel(n);
-                null != i && null != t && (0, f.Pv)(e, t, i);
+                let i = d.Z.getChannel(n);
+                null != i && null != t && (0, h.Pv)(e, t, i);
             },
             [t, n]
         );
     return o.useCallback(
-        (e) => (o, r) => {
-            let s = null == e ? void 0 : e.colorStrings,
-                l = T && null != s && null != s.primaryColor && null != s.secondaryColor ? (0, d.Z)(s.primaryColor, s.secondaryColor, s.tertiaryColor, x) : void 0,
-                u = (t) => {
-                    var n, r;
+        (e) => (o, a) => {
+            let l = null == e ? void 0 : e.colorStrings,
+                c = v && null != l && null != l.primaryColor && null != l.secondaryColor,
+                d = (t) => {
+                    var n, a;
                     return (0, i.jsx)(
-                        a.rz2,
-                        ((n = g({}, null != t ? t : {})),
-                        (r = r =
+                        r.rz2,
+                        ((n = p({}, null != t ? t : {})),
+                        (a = a =
                             {
-                                onContextMenu: E,
+                                onContextMenu: x,
                                 name: o,
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
-                                roleGradient: l,
-                                'aria-label': O
+                                roleColors: c ? l : null,
+                                'aria-label': b
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -78,35 +74,35 @@ function b(e) {
                                       n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
                         n)
                     );
                 },
                 h = (e) => {
-                    v && (null == e || e.stopPropagation()), _(!S);
+                    g && (null == e || e.stopPropagation()), y(!O);
                 };
             return (0, i.jsx)(
-                c.Gt,
+                s.Gt,
                 {
-                    value: y,
+                    value: j,
                     children:
                         null != t
-                            ? (0, i.jsx)(p.Z, {
+                            ? (0, i.jsx)(u.Z, {
                                   user: t,
-                                  guildId: b,
+                                  guildId: m,
                                   channelId: n,
-                                  messageId: j,
-                                  shouldShowOnHover: C,
+                                  messageId: f,
+                                  shouldShowOnHover: T,
                                   roleId: null == e ? void 0 : e.colorRoleId,
-                                  clickTrap: S,
-                                  shouldShow: S,
-                                  onRequestClose: () => _(!1),
+                                  clickTrap: O,
+                                  shouldShow: O,
+                                  onRequestClose: () => y(!1),
                                   children: (e) => {
                                       var { onClick: t } = e;
-                                      return u(
-                                          g(
+                                      return d(
+                                          p(
                                               { onClick: h },
                                               (function (e, t) {
                                                   if (null == e) return {};
@@ -131,11 +127,11 @@ function b(e) {
                                       );
                                   }
                               })
-                            : u(void 0)
+                            : d(void 0)
                 },
-                r
+                a
             );
         },
-        [y, t, n, b, j, E, v, O, T, x, C, S]
+        [j, t, n, m, f, x, g, b, v, T, O]
     );
 }
