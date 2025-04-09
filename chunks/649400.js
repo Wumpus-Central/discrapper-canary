@@ -15,8 +15,8 @@ let f = (0, i.Z)(
         let { channel: n, guild: t, onSelect: i } = e,
             o = (0, s.Z)(n),
             f = (0, b.Z)(n, t),
-            O = (0, u.Z)(n),
-            p = (0, a.Z)({
+            E = (0, u.Z)(n),
+            O = (0, a.Z)({
                 id: n.id,
                 label: d.NW.string(d.t.gFHI3t)
             });
@@ -25,7 +25,7 @@ let f = (0, i.Z)(
             onClose: c.Zy,
             'aria-label': d.NW.string(d.t.Xm41aW),
             onSelect: i,
-            children: [(0, r.jsx)(l.kSQ, { children: o }), (0, r.jsx)(l.kSQ, { children: f }), (0, r.jsx)(l.kSQ, { children: O }), (0, r.jsx)(l.kSQ, { children: p })]
+            children: [(0, r.jsx)(l.kSQ, { children: o }), (0, r.jsx)(l.kSQ, { children: f }), (0, r.jsx)(l.kSQ, { children: E }), (0, r.jsx)(l.kSQ, { children: O })]
         });
     },
     [o.Z.CONTEXT_MENU, o.Z.CHANNEL_LIST_STORE_CHANNEL_MENU]

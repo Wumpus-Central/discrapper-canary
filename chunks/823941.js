@@ -79,7 +79,7 @@ function D(e) {
         { backgroundColors: o } = (0, b.Z)(t.styles),
         d = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         f = (0, l.e7)([h.Z], () => h.Z.isFocused()),
-        { bannerOverrides: _, categoryBannerStatic: p, categoryBannerAnimated: g } = (0, I.tK)(t),
+        { bannerOverrides: _, shopAllBannerStatic: p, shopAllBannerAnimated: g } = (0, I.t0)(t),
         S = !!(null == _ ? void 0 : _.showDarkBannerText);
     return (0, r.jsxs)(y.Z, {
         asset: p,

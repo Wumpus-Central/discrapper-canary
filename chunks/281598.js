@@ -13,15 +13,15 @@ n.d(t, {
     n(794429);
 var r = n(481060),
     i = (function (e) {
-        return (e.HERO_BANNER_STATIC = 'hero_banner'), (e.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (e.HERO_LOGO = 'hero_logo'), (e.FEATURED_BLOCK = 'featured_block'), (e.CATEGORY_BANNER_STATIC = 'category_banner'), (e.CATEGORY_BANNER_ANIMATED = 'category_banner_animated'), (e.UPSELL_BANNER = 'upsell_banner'), (e.UPSELL_BANNER_POPOUT = 'upsell_popout'), (e.PDP_BACKGROUND = 'pdp_bg'), (e.PDP_LOGO = 'pdp_logo'), (e.COLLECTED_MODAL_BG = 'collected_modal_bg'), (e.SHOP_BUTTON_BG_HOVER = 'shop_button_bg_hover'), (e.SHOP_BUTTON_BG_HOVER_DARK = 'shop_button_bg_hover_dark'), (e.SHOP_BUTTON_BG_HOVER_LIGHT = 'shop_button_bg_hover_light'), (e.SHOP_BUTTON_BG_RESTING = 'shop_button_bg_resting'), (e.SHOP_BUTTON_BG_RESTING_DARK = 'shop_button_bg_resting_dark'), (e.SHOP_BUTTON_BG_RESTING_LIGHT = 'shop_button_bg_resting_light'), (e.COACHTIP_AVATAR = 'coachtip_avatar'), e;
+        return (e.SHOP_ALL_BANNER_STATIC = 'shop_all_banner'), (e.SHOP_ALL_BANNER_ANIMATED = 'shop_all_banner_animated'), (e.HERO_BANNER_STATIC = 'hero_banner'), (e.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (e.HERO_LOGO = 'hero_logo'), (e.FEATURED_BLOCK = 'featured_block'), (e.UPSELL_BANNER = 'upsell_banner'), (e.UPSELL_BANNER_POPOUT = 'upsell_popout'), (e.PDP_BACKGROUND = 'pdp_bg'), (e.PDP_LOGO = 'pdp_logo'), (e.COLLECTED_MODAL_BG = 'collected_modal_bg'), (e.SHOP_BUTTON_BG_HOVER = 'shop_button_bg_hover'), (e.SHOP_BUTTON_BG_HOVER_DARK = 'shop_button_bg_hover_dark'), (e.SHOP_BUTTON_BG_HOVER_LIGHT = 'shop_button_bg_hover_light'), (e.SHOP_BUTTON_BG_RESTING = 'shop_button_bg_resting'), (e.SHOP_BUTTON_BG_RESTING_DARK = 'shop_button_bg_resting_dark'), (e.SHOP_BUTTON_BG_RESTING_LIGHT = 'shop_button_bg_resting_light'), (e.COACHTIP_AVATAR = 'coachtip_avatar'), e;
     })({});
 let o = {
+        'shop_all_banner.jpg': 'shop_all_banner',
+        'shop_all_banner_animated.webm': 'shop_all_banner_animated',
         'hero_banner.jpg': 'hero_banner',
         'hero_banner_animated.webm': 'hero_banner_animated',
         'hero_logo.png': 'hero_logo',
         'featured_block.png': 'featured_block',
-        'category_banner.jpg': 'category_banner',
-        'category_banner_animated.webm': 'category_banner_animated',
         'upsell_banner.jpg': 'upsell_banner',
         'upsell_banner_popout.png': 'upsell_popout',
         'pdp_bg.jpg': 'pdp_bg',

@@ -1,4 +1,4 @@
-n.d(t, { default: () => v }), n(388685);
+n.d(t, { default: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(831209),
@@ -59,8 +59,8 @@ function N(e, t) {
         e
     );
 }
-function v(e) {
-    let { guildId: t, transitionState: n, onClose: v, analyticsData: y } = e,
+function y(e) {
+    let { guildId: t, transitionState: n, onClose: y, analyticsData: v } = e,
         _ = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         C = !!(null == _ ? void 0 : _.hasFeature(h.oNc.INVITES_DISABLED)),
         [I] = i.useState(!1),
@@ -69,14 +69,14 @@ function v(e) {
         w = (0, p.BT)(_),
         T = (0, m.SG)(P) || C,
         Z = (0, m.sN)(P),
-        [k, W] = i.useState(T),
+        [W, k] = i.useState(T),
         [A, D] = i.useState(Z),
         [R, L] = i.useState(!1),
-        M = k !== T || A !== Z || R,
+        M = W !== T || A !== Z || R,
         B = C && !w;
-    if (null == _) return v(), null;
+    if (null == _) return y(), null;
     function U() {
-        W((e) => !e);
+        k((e) => !e);
     }
     return (0, r.jsxs)(a.Y0X, {
         transitionState: n,
@@ -141,7 +141,7 @@ function v(e) {
                                                 children: (0, r.jsx)(a.rsf, {
                                                     className: j.toggle,
                                                     onChange: U,
-                                                    checked: k,
+                                                    checked: W,
                                                     disabled: B
                                                 })
                                             })
@@ -183,18 +183,18 @@ function v(e) {
                 children: [
                     (0, r.jsx)(a.zxk, {
                         onClick: () => {
-                            (T || Z) && !k && !A ? ((0, u.n)(_.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, N(O({}, e), { guildId: t }))))) : (0, u.n)(_.id, k, A, S);
-                            let { source: e, alertType: n, messageId: i } = y;
+                            (T || Z) && !W && !A ? ((0, u.n)(_.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, N(O({}, e), { guildId: t }))))) : (0, u.n)(_.id, W, A, S);
+                            let { source: e, alertType: n, messageId: i } = v;
                             d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                 guild_id: t,
                                 source: e,
                                 raid_alert_id: i,
                                 raid_alert_type: n,
-                                intervention_type_enabled: (0, m.sO)(k, A),
-                                intervention_type_disabled: (0, m.lk)(k, A),
+                                intervention_type_enabled: (0, m.sO)(W, A),
+                                intervention_type_disabled: (0, m.lk)(W, A),
                                 duration: 60 * S
                             }),
-                                v();
+                                y();
                         },
                         color: a.zxk.Colors.BRAND,
                         look: a.zxk.Looks.FILLED,
@@ -203,7 +203,7 @@ function v(e) {
                         children: x.NW.string(x.t['pwm/z8'])
                     }),
                     (0, r.jsx)(a.zxk, {
-                        onClick: v,
+                        onClick: y,
                         color: a.zxk.Colors.PRIMARY,
                         look: a.zxk.Looks.LINK,
                         disabled: I,

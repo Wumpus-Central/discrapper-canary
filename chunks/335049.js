@@ -18,8 +18,8 @@ var r = n(200651),
     j = n(271383),
     O = n(430824),
     N = n(246946),
-    v = n(594174),
-    y = n(51144),
+    y = n(594174),
+    v = n(51144),
     _ = n(981631),
     C = n(388032),
     I = n(555781);
@@ -170,7 +170,7 @@ function w(e) {
                             children: ['(', f, ')']
                         })
                       : null,
-                  l ? (0, r.jsx)(k, { tooltipText: a }) : null
+                  l ? (0, r.jsx)(W, { tooltipText: a }) : null
               ]
           });
 }
@@ -222,13 +222,13 @@ function T(e) {
                       variant: 'text-md/normal',
                       children: b.name
                   }),
-                  s ? (0, r.jsx)(k, { tooltipText: m }) : null
+                  s ? (0, r.jsx)(W, { tooltipText: m }) : null
               ]
           });
 }
 function Z(e) {
     let { guild: t, id: n, isLocked: i, lockTooltipText: l, openEntryContextMenu: o } = e,
-        a = (0, d.e7)([v.default], () => v.default.getUser(n)),
+        a = (0, d.e7)([y.default], () => y.default.getUser(n)),
         s = (0, d.e7)(
             [j.ZP],
             () => {
@@ -261,13 +261,13 @@ function Z(e) {
                       : (0, r.jsx)(u.Text, {
                             className: I.tag,
                             variant: 'text-sm/normal',
-                            children: y.ZP.getUserTag(a)
+                            children: v.ZP.getUserTag(a)
                         }),
-                  i ? (0, r.jsx)(k, { tooltipText: l }) : null
+                  i ? (0, r.jsx)(W, { tooltipText: l }) : null
               ]
           });
 }
-function k(e) {
+function W(e) {
     let { tooltipText: t } = e;
     return (0, r.jsx)(u.ua7, {
         text: t,

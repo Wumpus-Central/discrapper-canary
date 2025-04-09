@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685), n(642613);
+n.d(t, { Z: () => k }), n(388685), n(642613);
 var r = n(200651),
     i = n(192379),
     l = n(512722),
@@ -18,8 +18,8 @@ var r = n(200651),
     j = n(430824),
     O = n(594174),
     N = n(626135),
-    v = n(5192),
-    y = n(709054),
+    y = n(5192),
+    v = n(709054),
     _ = n(360606),
     C = n(905753),
     I = n(399860),
@@ -53,7 +53,7 @@ function Z(e) {
     }
     return e;
 }
-function k(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function k(e, t) {
         e
     );
 }
-function W(e) {
+function k(e) {
     let { commandId: t, editPermissions: n, guildId: l, noneSelectedText: a, overwrites: p, hasAccessToMutatePermissions: g } = e,
         h = (0, c.e7)([j.Z], () => j.Z.getGuild(l));
     o()(null != h, '');
@@ -95,11 +95,11 @@ function W(e) {
                                 let i = O.default.getUser(e.id),
                                     l = O.default.getUser(t.id);
                                 if (null != i && null != l) {
-                                    let e = v.ZP.getName(n, void 0, i),
-                                        t = v.ZP.getName(n, void 0, l);
+                                    let e = y.ZP.getName(n, void 0, i),
+                                        t = y.ZP.getName(n, void 0, l);
                                     return null == e ? void 0 : e.localeCompare(t);
                                 }
-                                return y.default.compare(e.id, t.id);
+                                return v.default.compare(e.id, t.id);
                             })(n, r, l);
                         case m.Kw.ROLE:
                             if (n.id === l) return -1;
@@ -109,7 +109,7 @@ function W(e) {
                             if (n.id === e) return -1;
                             if (r.id === e) return 1;
                             let o = Number(n.canWrite) - Number(r.canWrite);
-                            return 0 !== o ? o : y.default.compare(n.id, r.id);
+                            return 0 !== o ? o : v.default.compare(n.id, r.id);
                     }
                 });
         }, [l, p, x]),
@@ -143,7 +143,7 @@ function W(e) {
         0 !== e.length && (u.Z.requestMembersById(l, e, !1), S((t) => new Set([...t, ...e])));
     }, [l, p, N, S]);
     let Z = (0, c.e7)([C.Z], () => C.Z.getApplicationId()),
-        k = (0, c.e7)([_.default], () =>
+        W = (0, c.e7)([_.default], () =>
             null == Z
                 ? void 0
                 : _.default.integrations.find((e) => {
@@ -151,7 +151,7 @@ function W(e) {
                       return (null == (t = e.application) ? void 0 : t.id) === Z;
                   })
         ),
-        W = (0, c.e7)([f.Z], () => void 0 !== k && f.Z.canShowToggleTooltip(k.id));
+        k = (0, c.e7)([f.Z], () => void 0 !== W && f.Z.canShowToggleTooltip(W.id));
     return E.length > 0
         ? E.map((e) =>
               (0, r.jsx)(
@@ -162,8 +162,8 @@ function W(e) {
                       onChange: (t) => w(e.id, e.type, t),
                       onRemove: () => P(e.id, e.type),
                       overwrite: e,
-                      integration: k,
-                      canShowMigrationTooltip: W,
+                      integration: W,
+                      canShowMigrationTooltip: k,
                       hasAccessToMutatePermissions: g
                   },
                   e.id
@@ -181,25 +181,25 @@ function W(e) {
 function A(e) {
     var t, n, l;
     let o,
-        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: v } = e,
-        y = f.id === a.id || f.id === (0, b.bD)(a.id),
+        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: y } = e,
+        v = f.id === a.id || f.id === (0, b.bD)(a.id),
         _ = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
-        C = !f.canWrite || !v,
+        C = !f.canWrite || !y,
         I = x.default.getId();
-    v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? w.NW.string(w.t['1VF/09']) : w.NW.string(w.t.P1GnER)) : f.type === m.Kw.ROLE && (o = w.NW.string(w.t.mcAijY))) : (o = null != s ? w.NW.string(w.t.tybdam) : w.NW.string(w.t.z2hjk5));
-    let W = O && null != j && f.id === a.id && void 0 !== _ && !f.permission;
+    y ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? w.NW.string(w.t['1VF/09']) : w.NW.string(w.t.P1GnER)) : f.type === m.Kw.ROLE && (o = w.NW.string(w.t.mcAijY))) : (o = null != s ? w.NW.string(w.t.tybdam) : w.NW.string(w.t.z2hjk5));
+    let k = O && null != j && f.id === a.id && void 0 !== _ && !f.permission;
     i.useEffect(() => {
-        if (W) {
+        if (k) {
             var e;
             N.default.track(
                 P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
-                k(Z({}, (0, p.hH)(a.id)), {
+                W(Z({}, (0, p.hH)(a.id)), {
                     application_id: null == j || null == (e = j.application) ? void 0 : e.id,
                     location: 'toggle'
                 })
             );
         }
-    }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, W]);
+    }, [a.id, null == j || null == (l = j.application) ? void 0 : l.id, k]);
     let A = (0, r.jsx)(d.ua7, {
             tooltipClassName: T.tooltip,
             text: o,
@@ -209,11 +209,11 @@ function A(e) {
             children: (e) =>
                 (0, r.jsx)(
                     'div',
-                    k(Z({}, e), {
+                    W(Z({}, e), {
                         children: (0, r.jsx)(E.Z, {
                             isDisabled: C,
                             currentValue: f.permission,
-                            onChange: W
+                            onChange: k
                                 ? (e) => {
                                       g.Z.dismissToggleTooltip(a.id, j), c(e);
                                   }
@@ -241,7 +241,7 @@ function A(e) {
             align: 'center',
             animation: d.yRy.Animation.TRANSLATE,
             onRequestClose: () => g.Z.dismissToggleTooltip(a.id, j),
-            shouldShow: W,
+            shouldShow: k,
             closeOnScroll: !0,
             children: () => A
         });
@@ -265,8 +265,8 @@ function A(e) {
                     children: [
                         (0, r.jsx)(D, {
                             commandId: s,
-                            isSentinel: y,
-                            isDisabled: !v,
+                            isSentinel: v,
+                            isDisabled: !y,
                             onRemove: u
                         }),
                         R

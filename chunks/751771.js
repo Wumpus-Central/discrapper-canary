@@ -13,18 +13,18 @@ var d,
     f = n(496675),
     j = n(699516),
     S = n(981631),
-    b = n(245335);
-let E = new Set(),
+    E = n(245335);
+let b = new Set(),
     T = [],
     _ = new Map();
 function O(e) {
     let t = new Set(),
-        n = null == s || u === b.Iq.EMBEDDED_APPLICATION ? void 0 : s.id,
-        l = (0, I.rh)(E, n);
+        n = null == s || u === E.Iq.EMBEDDED_APPLICATION ? void 0 : s.id,
+        l = (0, I.rh)(b, n);
     for (let e of (null == l || j.Z.isBlocked(l.id) || t.add(l.id), x.Z.getUserAffinitiesUserIds())) t.add(e);
     let i = new Set();
     return (
-        u === b.Iq.EMBEDDED_APPLICATION &&
+        u === E.Iq.EMBEDDED_APPLICATION &&
             v.Z.getChannelHistory()
                 .map((e) => N.Z.getChannel(e))
                 .filter(p.lm)
@@ -34,7 +34,7 @@ function O(e) {
                 .forEach((e) => i.add(e.id)),
         (0, I.an)({
             query: e,
-            omitUserIds: E,
+            omitUserIds: b,
             suggestedUserIds: t,
             maxRowsWithoutQuery: 100,
             omitGuildId: n,
@@ -93,7 +93,7 @@ let P = new C(m.Z, {
             (a = d),
             (o = c),
             (u = h),
-            (E = new Set([
+            (b = new Set([
                 ...t,
                 ...j.Z.getBlockedOrIgnoredIDs(),
                 ...(0, I.Sz)({

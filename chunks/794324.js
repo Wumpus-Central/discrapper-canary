@@ -4,7 +4,7 @@ n.d(t, {
     YG: () => f,
     hr: () => d,
     mB: () => m,
-    tK: () => _
+    t0: () => _
 });
 var r = n(192379),
     i = n(884697),
@@ -49,15 +49,15 @@ let d = (e) => {
         }, [n, e, t]);
     },
     _ = (e) => {
-        let t = (0, l.zL)(c.Fr.CATEGORY_BANNER_STATIC),
-            n = (0, l.zL)(c.Fr.CATEGORY_BANNER_ANIMATED);
+        let t = (0, l.zL)(c.Fr.SHOP_ALL_BANNER_STATIC),
+            n = (0, l.zL)(c.Fr.SHOP_ALL_BANNER_ANIMATED);
         return r.useMemo(() => {
             var r, i, o, a, s, l;
             let c = (0, u.ZS)(e.skuId);
             return {
                 bannerOverrides: c,
-                categoryBannerStatic: null != (a = null != (o = null != t ? t : n) ? o : null == (r = e.bannerAsset) ? void 0 : r.static) ? a : e.banner,
-                categoryBannerAnimated: null != (l = null != (s = null != n ? n : t) ? s : null == c ? void 0 : c.animatedBanner) ? l : null == (i = e.bannerAsset) ? void 0 : i.animated
+                shopAllBannerStatic: null != (a = null != (o = null != t ? t : n) ? o : null == (r = e.bannerAsset) ? void 0 : r.static) ? a : e.banner,
+                shopAllBannerAnimated: null != (l = null != (s = null != n ? n : t) ? s : null == c ? void 0 : c.animatedBanner) ? l : null == (i = e.bannerAsset) ? void 0 : i.animated
             };
         }, [t, n, e]);
     },

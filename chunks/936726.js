@@ -18,8 +18,8 @@ var r = n(200651),
     j = n(709054),
     O = n(51144),
     N = n(486199),
-    v = n(981631),
-    y = n(388032),
+    y = n(981631),
+    v = n(388032),
     _ = n(368938);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,17 +75,17 @@ function E(e, t) {
         : (0, h.ov)({
               id: e.id,
               avatar: t,
-              discriminator: v.fo$
+              discriminator: y.fo$
           });
 }
 function P(e) {
     let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: P, onToggleExpand: w } = e,
         [T, Z] = i.useState(!1),
-        [k] = i.useState(new s.V7());
-    i.useEffect(() => () => k.stop(), [k]);
-    let W = i.useMemo(() => E(n, n.avatar), [n]),
+        [W] = i.useState(new s.V7());
+    i.useEffect(() => () => W.stop(), [W]);
+    let k = i.useMemo(() => E(n, n.avatar), [n]),
         A = i.useCallback(() => {
-            let e = ''.concat((0, a.K0)(!1)).concat(v.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
+            let e = ''.concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
         }, [n]),
         D = i.useCallback(() => {
@@ -93,26 +93,26 @@ function P(e) {
                 (0, r.jsx)(
                     c.ConfirmModal,
                     I(C({}, e), {
-                        header: y.NW.formatToPlainString(y.t.QVFjHh, { name: n.name }),
-                        confirmText: y.NW.string(y.t['W+K1Fh']),
-                        cancelText: y.NW.string(y.t.xNhj0N),
+                        header: v.NW.formatToPlainString(v.t.QVFjHh, { name: n.name }),
+                        confirmText: v.NW.string(v.t['W+K1Fh']),
+                        cancelText: v.NW.string(v.t.xNhj0N),
                         onConfirm: () => {
                             p.Z.delete(n.guild_id, n.id).catch((e) => {
                                 let { status: t } = e;
                                 429 === t
                                     ? d.Z.show({
-                                          title: y.NW.string(y.t.N5riYm),
-                                          body: y.NW.string(y.t.eAxcCQ)
+                                          title: v.NW.string(v.t.N5riYm),
+                                          body: v.NW.string(v.t.eAxcCQ)
                                       })
                                     : d.Z.show({
-                                          title: y.NW.string(y.t.N5riYm),
-                                          body: y.NW.string(y.t['/4TwKS'])
+                                          title: v.NW.string(v.t.N5riYm),
+                                          body: v.NW.string(v.t['/4TwKS'])
                                       });
                             });
                         },
                         children: (0, r.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: y.NW.format(y.t['rIWe+/'], { name: n.name })
+                            children: v.NW.format(v.t['rIWe+/'], { name: n.name })
                         })
                     })
                 )
@@ -122,14 +122,14 @@ function P(e) {
     null != n.user
         ? R.push({
               icon: c.T39,
-              text: y.NW.formatToPlainString(y.t['7EcUbm'], {
+              text: v.NW.formatToPlainString(v.t['7EcUbm'], {
                   user: S(n.user),
                   timestamp: j.default.extractTimestamp(n.id)
               })
           })
         : R.push({
               icon: c.T39,
-              text: y.NW.formatToPlainString(y.t['7mv59P'], { timestamp: j.default.extractTimestamp(n.id) })
+              text: v.NW.formatToPlainString(v.t['7mv59P'], { timestamp: j.default.extractTimestamp(n.id) })
           });
     let L = null;
     return (
@@ -175,7 +175,7 @@ function P(e) {
                                             (0, r.jsx)(m.Z.Child, {
                                                 basis: '50%',
                                                 children: (0, r.jsx)(c.xJW, {
-                                                    title: y.NW.string(y.t.ukdxur),
+                                                    title: v.NW.string(v.t.ukdxur),
                                                     children: (0, r.jsx)(c.oil, {
                                                         value: l.name,
                                                         onChange: (e) => {
@@ -189,14 +189,14 @@ function P(e) {
                                             (0, r.jsx)(m.Z.Child, {
                                                 basis: '50%',
                                                 children: (0, r.jsx)(c.xJW, {
-                                                    title: y.NW.string(y.t.GK18KC),
+                                                    title: v.NW.string(v.t.GK18KC),
                                                     children: (0, r.jsx)(c.VcW, {
                                                         value: l.channel_id,
                                                         options: g,
                                                         onChange: (e) => {
                                                             u.Z.updateWebhook({ channelId: e });
                                                         },
-                                                        placeholder: y.NW.string(y.t.r2pts7)
+                                                        placeholder: v.NW.string(v.t.r2pts7)
                                                     })
                                                 })
                                             })
@@ -206,7 +206,7 @@ function P(e) {
                                     (0, r.jsxs)(m.Z, {
                                         children: [
                                             (0, r.jsx)(c.ua7, {
-                                                text: y.NW.string(y.t.wwdb3t),
+                                                text: v.NW.string(v.t.wwdb3t),
                                                 forceOpen: T,
                                                 color: c.FGA.GREEN,
                                                 disableTooltipPointerEvents: !0,
@@ -236,14 +236,14 @@ function P(e) {
                                                         I(C({}, s), {
                                                             'aria-label': '',
                                                             onClick: () => {
-                                                                null == t || t(), Z(!0), c.uvj.announce(y.NW.string(y.t.wwdb3t)), k.start(1000, () => Z(!1)), A();
+                                                                null == t || t(), Z(!0), c.uvj.announce(v.NW.string(v.t.wwdb3t)), W.start(1000, () => Z(!1)), A();
                                                             },
                                                             size: c.zxk.Sizes.SMALL,
                                                             color: c.zxk.Colors.PRIMARY,
                                                             look: c.zxk.Looks.FILLED,
                                                             className: _.copyButton,
                                                             disabled: null == n.token || '' === n.token,
-                                                            children: y.NW.string(y.t.Ae9rUV)
+                                                            children: v.NW.string(v.t.Ae9rUV)
                                                         })
                                                     );
                                                 }
@@ -253,7 +253,7 @@ function P(e) {
                                                 size: c.zxk.Sizes.SMALL,
                                                 color: c.zxk.Colors.RED,
                                                 look: c.zxk.Looks.LINK,
-                                                children: y.NW.string(y.t.jVrUnJ)
+                                                children: v.NW.string(v.t.jVrUnJ)
                                             })
                                         ]
                                     })
@@ -279,7 +279,7 @@ function P(e) {
                             children: [
                                 (0, r.jsx)(N.Z, {
                                     name: n.name,
-                                    imageSrc: W,
+                                    imageSrc: k,
                                     details: R
                                 }),
                                 (0, r.jsx)(f.Z, {

@@ -19,8 +19,8 @@ var l = n(200651),
     f = n(933557),
     j = n(259473),
     S = n(600164),
-    b = n(266076),
-    E = n(227672),
+    E = n(266076),
+    b = n(227672),
     T = n(810123),
     _ = n(448486),
     O = n(427679),
@@ -143,7 +143,7 @@ function en(e) {
         d = null != (t = (0, f.ZP)(r)) ? t : '',
         h = null != (n = (0, _._)(r)) ? n : '';
     return (0, l.jsx)(ee, {
-        icon: (0, l.jsx)(b.Z, {
+        icon: (0, l.jsx)(E.Z, {
             'aria-hidden': !0,
             size: c.EFr.SIZE_32,
             channel: r,
@@ -310,10 +310,10 @@ function er(e) {
     let { transitionState: t, onClose: n, guild: r, channel: a, source: u, streamUserId: m, applicationId: x } = e,
         f = null;
     null != m ? (f = z.Iq.STREAM) : null != x && (f = z.Iq.EMBEDDED_APPLICATION);
-    let b = (0, j.Z)({ guildId: r.id }),
+    let E = (0, j.Z)({ guildId: r.id }),
         [T, _] = i.useState([]),
         [P, R] = i.useState(''),
-        { current: k } = i.useRef(X({}, $, null == b ? {} : { max_age: b }, null == x ? {} : { target_application_id: x }, null == f ? {} : { target_type: f }, null == m ? {} : { target_user_id: m })),
+        { current: k } = i.useRef(X({}, $, null == E ? {} : { max_age: E }, null == x ? {} : { target_application_id: x }, null == f ? {} : { target_type: f }, null == m ? {} : { target_user_id: m })),
         [L, J] = i.useState(k),
         [Q, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
@@ -353,7 +353,7 @@ function er(e) {
         ev = !(0, d.e7)([A.Z], () => null != em && A.Z.can(H.Plq.CREATE_INSTANT_INVITE, em), [em]) && !(null == em ? void 0 : em.isGuildVocal()),
         ex = (0, N.Z)(em),
         ep = (null == em ? void 0 : em.type) === H.d4z.GUILD_VOICE && !ev && !ex,
-        { enabled: eI } = E.o.useExperiment(
+        { enabled: eI } = b.o.useExperiment(
             {
                 guildId: r.id,
                 location: 'instant_invite_modal'
@@ -368,10 +368,10 @@ function er(e) {
             inviteTargetType: f,
             applicationId: x
         }),
-        eb = i.useCallback(() => {
+        eE = i.useCallback(() => {
             eh(), n();
         }, [eh, n]),
-        eE = i.useCallback(async () => {
+        eb = i.useCallback(async () => {
             var e, t, n, l;
             if (null == em) return null;
             ee(!0);
@@ -409,7 +409,7 @@ function er(e) {
             en(!0), er(null);
             let e = !1;
             try {
-                let t = await eE();
+                let t = await eb();
                 o()(null != t, 'Invite key could not be determined.');
                 let n = eS
                     .filter((e) => T.includes(e.item.id))
@@ -464,8 +464,8 @@ function er(e) {
             } catch (e) {
                 er(e), en(!1);
             }
-            e && eb();
-        }, [et, Q, en, T, eS, eE, eb]),
+            e && eE();
+        }, [et, Q, en, T, eS, eb, eE]),
         e_ = et || Q;
     return (0, l.jsx)(I.Gt, {
         value: eo,
@@ -488,7 +488,7 @@ function er(e) {
                                 }),
                                 (0, l.jsx)(c.olH, {
                                     className: K.closeButton,
-                                    onClick: eb
+                                    onClick: eE
                                 })
                             ]
                         }),
@@ -523,7 +523,7 @@ function er(e) {
                             guild: r,
                             channel: null != a ? a : null,
                             inviteChannel: em,
-                            getInviteKey: eE,
+                            getInviteKey: eb,
                             sendInvite: eT,
                             canUseVanityURL: ev,
                             disabled: e_ || 0 === T.length,
@@ -538,7 +538,7 @@ function er(e) {
                             (0, l.jsx)(F.W, {
                                 guild: r,
                                 error: el,
-                                onClose: eb
+                                onClose: eE
                             })
                     ]
                 })
