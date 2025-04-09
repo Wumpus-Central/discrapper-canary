@@ -1,5 +1,5 @@
 n.d(t, {
-    OG: () => x,
+    OG: () => C,
     ZP: () => O,
     Zu: () => j
 }),
@@ -32,7 +32,7 @@ function b(e) {
         t
     );
 }
-function y(e, t) {
+function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
@@ -51,9 +51,9 @@ function y(e, t) {
         }
     );
 }
-function _(e) {
+function y(e) {
     let { name: t, targetNode: n, combine: l, below: o } = e,
-        a = i.useMemo(() => y([p.eD.GUILD, p.eD.FOLDER], n, o, l), [n, o, l]),
+        a = i.useMemo(() => _([p.eD.GUILD, p.eD.FOLDER], n, o, l), [n, o, l]),
         [{ canDrop: s, isOver: u }, d] = (0, c.L)(a),
         h = b([
             [s, m.autoPointerEvents],
@@ -69,7 +69,7 @@ function _(e) {
 }
 function v(e) {
     let { name: t, targetNode: n, onDragOverChanged: l } = e,
-        [{ canDrop: a, isOver: s }, u] = (0, c.L)(() => y([p.eD.GUILD], n, !0, !0));
+        [{ canDrop: a, isOver: s }, u] = (0, c.L)(() => _([p.eD.GUILD], n, !0, !0));
     i.useEffect(() => {
         null == l || l(s);
     }, [l, s]);
@@ -99,7 +99,7 @@ let O = i.memo(function (e) {
         className: m.wrapper,
         'aria-hidden': !0,
         children: [
-            (0, r.jsx)(_, {
+            (0, r.jsx)(y, {
                 name: t,
                 targetNode: n,
                 below: l
@@ -116,7 +116,7 @@ let O = i.memo(function (e) {
 });
 function j(e) {
     let { name: t, targetNode: n } = e,
-        [{ canDrop: i, isOver: l }, o] = (0, c.L)(() => y([p.eD.GUILD], n, !0, !0)),
+        [{ canDrop: i, isOver: l }, o] = (0, c.L)(() => _([p.eD.GUILD], n, !0, !0)),
         a = b([[l, m.wrapperOver]]),
         s = b([
             [l, m.dragOver],
@@ -138,7 +138,7 @@ function j(e) {
         })
     });
 }
-function x(e) {
+function C(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, r.jsx)('div', {

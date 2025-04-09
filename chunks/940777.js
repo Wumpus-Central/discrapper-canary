@@ -14,20 +14,20 @@ var r = n(200651),
     g = n(276952),
     m = n(682662),
     b = n(674552),
-    y = n(593364),
-    _ = n(905423),
+    _ = n(593364),
+    y = n(905423),
     v = n(199902),
     O = n(592125),
     j = n(944486),
-    x = n(979651),
-    C = n(709054),
+    C = n(979651),
+    x = n(709054),
     S = n(853856),
     P = n(593214),
     I = n(919755),
     N = n(110977),
-    Z = n(603274),
-    w = n(981631),
-    E = n(388032),
+    E = n(603274),
+    Z = n(981631),
+    w = n(388032),
     T = n(940751);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,9 +56,9 @@ function A(e) {
 }
 let D = {
     analyticsSource: {
-        page: w.ZY5.GUILD_CHANNEL,
-        section: w.jXE.CHANNEL_LIST,
-        object: w.qAy.CHANNEL
+        page: Z.ZY5.GUILD_CHANNEL,
+        section: Z.jXE.CHANNEL_LIST,
+        object: Z.qAy.CHANNEL
     }
 };
 function R() {
@@ -70,10 +70,10 @@ function R() {
             favoriteChannels: S.Z.getFavoriteChannels(),
             favoriteServerMuted: S.Z.favoriteServerMuted
         })),
-        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(w.I_8)),
+        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(Z.I_8)),
         W = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
-        V = (0, _.Z)((e) => e.guildId) === w.I_8,
-        { badge: F, unread: H } = (0, I.Z)(B),
+        V = (0, y.Z)((e) => e.guildId) === Z.I_8,
+        { badge: H, unread: F } = (0, I.Z)(B),
         z = (function (e) {
             let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -83,8 +83,8 @@ function R() {
                     return null != t && null != e[t.channelId];
                 }),
                 i = (0, s.e7)([v.Z], () => v.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, s.e7)([x.Z], () => n && null != t && x.Z.hasVideo(t), [n, t]),
-                o = (0, s.Wu)([p.ZP], () => C.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                l = (0, s.e7)([C.Z], () => n && null != t && C.Z.hasVideo(t), [n, t]),
+                o = (0, s.Wu)([p.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 a = (0, s.e7)([p.ZP], () =>
                     Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
@@ -109,9 +109,9 @@ function R() {
                 })
             );
         })(B),
-        Y = F > 0 ? (0, y.N)(F) : null,
+        Y = H > 0 ? (0, _.N)(H) : null,
         q = (0, f.Q3)('FavoritesButton'),
-        Q = i.useCallback(() => {
+        K = i.useCallback(() => {
             L();
         }, [L]);
     return (0, r.jsxs)(m.H, {
@@ -119,11 +119,11 @@ function R() {
             (0, r.jsx)(g.Z, {
                 selected: V,
                 hovered: k,
-                unread: H && !G,
+                unread: F && !G,
                 className: T.pill
             }),
-            (0, r.jsx)(Z.Z, {
-                onShow: Q,
+            (0, r.jsx)(E.Z, {
+                onShow: K,
                 children: (0, r.jsx)(N.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: q || V || k,
@@ -134,12 +134,12 @@ function R() {
                             ((e = A({}, l)),
                             (t = t =
                                 {
-                                    ariaLabel: E.NW.formatToPlainString(E.t['/uzRsr'], {
-                                        guildName: E.NW.string(E.t.wMWycn),
-                                        mentions: F
+                                    ariaLabel: w.NW.formatToPlainString(w.t['/uzRsr'], {
+                                        guildName: w.NW.string(w.t.wMWycn),
+                                        mentions: H
                                     }),
                                     to: {
-                                        pathname: w.Z5c.CHANNEL(w.I_8, U),
+                                        pathname: Z.Z5c.CHANNEL(Z.I_8, U),
                                         state: D
                                     },
                                     selected: V || k,

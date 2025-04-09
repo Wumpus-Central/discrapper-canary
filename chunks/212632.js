@@ -1,52 +1,52 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var l = n(200651),
     r = n(192379),
     i = n(120356),
     o = n.n(i),
     a = n(481060),
     s = n(981631),
-    c = n(388032),
-    u = n(937848),
+    u = n(388032),
+    c = n(937848),
     d = n(20493);
 let E = 0,
     f = () => 'notification-position-selector-'.concat(E++),
     C = (e) => {
         switch (e) {
             case s._vf.TOP_LEFT:
-                return c.NW.string(c.t.xlchpa);
+                return u.NW.string(u.t.xlchpa);
             case s._vf.TOP_RIGHT:
-                return c.NW.string(c.t['4uHRHB']);
+                return u.NW.string(u.t['4uHRHB']);
             case s._vf.BOTTOM_LEFT:
-                return c.NW.string(c.t.ovWFnJ);
+                return u.NW.string(u.t.ovWFnJ);
             case s._vf.BOTTOM_RIGHT:
-                return c.NW.string(c.t['M/9V7+']);
+                return u.NW.string(u.t['M/9V7+']);
             default:
-                return c.NW.string(c.t.AlY4ZW);
+                return u.NW.string(u.t.AlY4ZW);
         }
     },
     p = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
-function h(e) {
+function _(e) {
     let { position: t, onChange: n } = e,
         [i] = r.useState(() => f()),
-        E = t === s._vf.DISABLED ? c.NW.string(c.t.R6LxVV) : c.NW.formatToPlainString(c.t.XXHDMz, { position: C(t) });
+        E = t === s._vf.DISABLED ? u.NW.string(u.t.R6LxVV) : u.NW.formatToPlainString(u.t.XXHDMz, { position: C(t) });
     return (0, l.jsxs)('div', {
         children: [
             (0, l.jsx)(a.tEY, {
                 within: !0,
                 offset: -2,
                 children: (0, l.jsx)('div', {
-                    className: o()(u.wrapper, { [u.disabledSelected]: t === s._vf.DISABLED }),
+                    className: o()(c.wrapper, { [c.disabledSelected]: t === s._vf.DISABLED }),
                     children: p.map((e) =>
                         (0, l.jsxs)(
                             'label',
                             {
                                 className: o()({
-                                    [u.selected]: e === t,
-                                    [u.disabled]: e === s._vf.DISABLED,
-                                    [u.topRight]: e === s._vf.TOP_RIGHT,
-                                    [u.topLeft]: e === s._vf.TOP_LEFT,
-                                    [u.bottomRight]: e === s._vf.BOTTOM_RIGHT,
-                                    [u.bottomLeft]: e === s._vf.BOTTOM_LEFT
+                                    [c.selected]: e === t,
+                                    [c.disabled]: e === s._vf.DISABLED,
+                                    [c.topRight]: e === s._vf.TOP_RIGHT,
+                                    [c.topLeft]: e === s._vf.TOP_LEFT,
+                                    [c.bottomRight]: e === s._vf.BOTTOM_RIGHT,
+                                    [c.bottomLeft]: e === s._vf.BOTTOM_LEFT
                                 }),
                                 children: [
                                     C(e),
@@ -54,7 +54,7 @@ function h(e) {
                                         ? (0, l.jsx)(a.t6m, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: u.disabledIcon
+                                              className: c.disabledIcon
                                           })
                                         : null,
                                     (0, l.jsx)('input', {
@@ -62,7 +62,7 @@ function h(e) {
                                         name: i,
                                         value: e,
                                         onChange: (t) => n(t, e),
-                                        className: u.hiddenInput
+                                        className: c.hiddenInput
                                     })
                                 ]
                             },
@@ -79,5 +79,5 @@ function h(e) {
         ]
     });
 }
-h.Positions = s._vf;
-let _ = h;
+_.Positions = s._vf;
+let h = _;

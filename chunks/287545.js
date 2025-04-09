@@ -148,79 +148,79 @@ async function ee(e) {
         delete Y[n];
 }
 function et(e) {
-    var t, n;
-    let { applicationId: r, isFirstActivityInChannel: o, isStart: a, participants: l, embeddedActivity: c, location: u, inviterUserId: f } = e,
-        h = y.default.getId(),
-        m = l.find((e) => e.userId === h),
-        g = (0, U.pY)(u),
-        E = v.Z.getChannel(g);
-    if ((a && null != E && E.isPrivate() && o && null == m && s.Z.selectParticipant(E.id, null), null == m)) return;
-    let b = O.ZP.getMediaSessionId(),
-        I = c.compositeInstanceId,
-        N = null == b && (null == E ? void 0 : E.isVocal()) === !0 && (null == E ? void 0 : E.isPrivate()) === !1;
-    if (null == I || N) return;
-    let A = (0, i.Z)(),
-        P = 'location' in c ? 2 : 1,
-        w = null == E ? void 0 : E.getGuildId(),
-        x = S.default.getCurrentUser();
-    if (null == x) return;
-    let M = D.ZP.getShelfActivities(w),
-        k = R.Z.getState().shelfOrder,
-        j = (0, L.Z)({
-            applicationId: r,
-            activityConfigs: M
+    var t, n, r;
+    let { applicationId: o, isFirstActivityInChannel: a, isStart: l, participants: c, embeddedActivity: u, location: f, inviterUserId: h } = e,
+        m = y.default.getId(),
+        g = c.find((e) => e.userId === m),
+        E = null != (r = (0, U.pY)(f)) ? r : (0, U.wq)(f),
+        b = v.Z.getChannel(E);
+    if ((l && null != b && b.isPrivate() && a && null == g && s.Z.selectParticipant(b.id, null), null == g)) return;
+    let I = O.ZP.getMediaSessionId(),
+        N = u.compositeInstanceId,
+        A = null == I && (null == b ? void 0 : b.isVocal()) === !0 && (null == b ? void 0 : b.isPrivate()) === !1;
+    if (null == N || A) return;
+    let P = (0, i.Z)(),
+        w = 'location' in u ? 2 : 1,
+        x = null == b ? void 0 : b.getGuildId(),
+        M = S.default.getCurrentUser();
+    if (null == M) return;
+    let k = D.ZP.getShelfActivities(x),
+        j = R.Z.getState().shelfOrder,
+        G = (0, L.Z)({
+            applicationId: o,
+            activityConfigs: k
         }),
-        G = 1 + k.findIndex((e) => e === r),
-        { releasePhase: B } = q(j),
-        V = p.Z.getRawThermalState(),
-        Z = null != b ? [b] : [],
-        H = {
-            activitySessionId: I,
-            activityUserSessionId: A,
-            launchId: c.launchId,
-            mediaSessionIds: Z,
-            activitiesInfraVersion: P
+        B = 1 + j.findIndex((e) => e === o),
+        { releasePhase: V } = q(G),
+        Z = p.Z.getRawThermalState(),
+        H = null != I ? [I] : [],
+        W = {
+            activitySessionId: N,
+            activityUserSessionId: P,
+            launchId: u.launchId,
+            mediaSessionIds: H,
+            activitiesInfraVersion: w
         };
-    Y[r] = H;
-    let W = K[r];
-    (0, C.Ew)(m.nonce) || m.nonce === (null == W ? void 0 : W.nonce) || (W = void 0),
+    Y[o] = W;
+    let z = K[o];
+    (0, C.Ew)(g.nonce) || g.nonce === (null == z ? void 0 : z.nonce) || (z = void 0),
         T.default.track(F.rMx.ACTIVITY_SESSION_JOINED, {
-            channel_id: null == E ? void 0 : E.id,
-            guild_id: w,
-            media_session_id: Z[0],
-            activity_session_id: I,
-            application_id: r,
-            location_stack: null == W ? void 0 : W.locations,
-            user_premium_tier: x.premiumType,
-            raw_thermal_state: V,
-            n_participants: null != E ? _.Z.getUserParticipantCount(E.id) : null,
-            is_activity_start: a,
-            release_phase: B,
-            shelf_rank: null == j || null == (t = j.activity) ? void 0 : t.shelf_rank,
-            shelf_sorted_rank: G > 0 ? G : null,
-            activity_user_session_id: A,
-            channel_type: null == E ? void 0 : E.type,
-            source: null == W ? void 0 : W.source,
-            command_context_type: null != E ? (0, d.Vh)(E, r) : null,
-            invite_inviter_id: f,
-            interaction_id: null == W ? void 0 : W.interactionId,
-            embedded_activity_location_kind: u.kind
+            channel_id: null == b ? void 0 : b.id,
+            guild_id: x,
+            media_session_id: H[0],
+            activity_session_id: N,
+            application_id: o,
+            location_stack: null == z ? void 0 : z.locations,
+            user_premium_tier: M.premiumType,
+            raw_thermal_state: Z,
+            n_participants: null != b ? _.Z.getUserParticipantCount(b.id) : null,
+            is_activity_start: l,
+            release_phase: V,
+            shelf_rank: null == G || null == (t = G.activity) ? void 0 : t.shelf_rank,
+            shelf_sorted_rank: B > 0 ? B : null,
+            activity_user_session_id: P,
+            channel_type: null == b ? void 0 : b.type,
+            source: null == z ? void 0 : z.source,
+            command_context_type: null != b ? (0, d.Vh)(b, o) : null,
+            invite_inviter_id: h,
+            interaction_id: null == z ? void 0 : z.interactionId,
+            embedded_activity_location_kind: f.kind
         }),
         T.default.track(F.rMx.ACTIVITY_IFRAME_MOUNT, {
-            location_stack: null == W ? void 0 : W.locations,
-            channel_id: null == E ? void 0 : E.id,
-            channel_type: null == E ? void 0 : E.type,
-            guild_id: w,
-            application_id: r,
-            instance_id: c.launchId,
-            initial_media_session_id: Z[0],
-            activity_user_session_id: A,
-            raw_thermal_state: V,
-            is_activity_start: a,
-            shelf_rank: null == j || null == (n = j.activity) ? void 0 : n.shelf_rank,
-            shelf_sorted_rank: G > 0 ? G : null,
-            activities_infra_version: P,
-            embedded_activity_location_kind: u.kind
+            location_stack: null == z ? void 0 : z.locations,
+            channel_id: null == b ? void 0 : b.id,
+            channel_type: null == b ? void 0 : b.type,
+            guild_id: x,
+            application_id: o,
+            instance_id: u.launchId,
+            initial_media_session_id: H[0],
+            activity_user_session_id: P,
+            raw_thermal_state: Z,
+            is_activity_start: l,
+            shelf_rank: null == G || null == (n = G.activity) ? void 0 : n.shelf_rank,
+            shelf_sorted_rank: B > 0 ? B : null,
+            activities_infra_version: w,
+            embedded_activity_location_kind: f.kind
         });
 }
 function en(e) {

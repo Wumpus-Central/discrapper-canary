@@ -14,18 +14,18 @@ var r,
     g = n(93687),
     m = n(266076),
     b = n(199902),
-    y = n(19780),
-    _ = n(306680),
+    _ = n(19780),
+    y = n(306680),
     v = n(944486),
     O = n(594174),
     j = n(451478),
-    x = n(276952),
-    C = n(682662),
+    C = n(276952),
+    x = n(682662),
     S = n(662146),
     P = n(674552),
     I = n(981631),
     N = n(223203);
-function Z(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function Z(e, t, n) {
         e
     );
 }
-function w(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,12 +49,12 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                Z(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,9 +80,9 @@ function A(e) {
     switch (e) {
         case 'height':
         case 'opacity':
-            return w({ duration: 150 }, T);
+            return Z({ duration: 150 }, T);
         case 'scale':
-            return w({}, T);
+            return Z({}, T);
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -150,12 +150,12 @@ class D extends (r = l.PureComponent) {
     render() {
         let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: s, stream: u, isCurrentUserInThisDMCall: d, unread: p, isGDMFacepileEnabled: h, isVisualRefreshEnabled: f } = this.props,
             { hovered: g, animating: b } = this.state,
-            y = e.isMultiUserDM() && null == e.icon && h;
+            _ = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, i.jsxs)(C.H, {
+            children: (0, i.jsxs)(x.H, {
                 children: [
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(C.Z, {
                         hovered: !b && g,
                         selected: !b && n,
                         unread: !b && p,
@@ -180,7 +180,7 @@ class D extends (r = l.PureComponent) {
                                 children: (r) =>
                                     (0, i.jsx)(
                                         c.LYs,
-                                        w(
+                                        Z(
                                             {
                                                 to: I.Z5c.CHANNEL(I.ME, e.id),
                                                 onMouseEnter: () => this.setState({ hovered: !0 }),
@@ -188,9 +188,9 @@ class D extends (r = l.PureComponent) {
                                                 selected: n || g,
                                                 ariaLabel: null != t ? t : '',
                                                 onContextMenu: this.handleContextMenu,
-                                                icon: y ? void 0 : this.getChannelIcon(),
-                                                backgroundStyle: y ? 'on-hover' : 'always',
-                                                children: y
+                                                icon: _ ? void 0 : this.getChannelIcon(),
+                                                backgroundStyle: _ ? 'on-hover' : 'always',
+                                                children: _
                                                     ? (0, i.jsx)(m.Z, {
                                                           channel: e,
                                                           size: c.EFr.SIZE_40,
@@ -212,7 +212,7 @@ class D extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'state', {
+            E(this, 'state', {
                 hovered: !1,
                 animating: !0,
                 controller: new o.Controller({
@@ -222,7 +222,7 @@ class D extends (r = l.PureComponent) {
                     config: A
                 })
             }),
-            Z(this, 'handleContextMenu', (e) => {
+            E(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     r = t.type === I.d4z.DM ? O.default.getUser(t.getRecipientId()) : null;
                 null != r
@@ -231,7 +231,7 @@ class D extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  E(w({}, n), {
+                                  w(Z({}, n), {
                                       channel: t,
                                       user: r
                                   })
@@ -242,7 +242,7 @@ class D extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  E(w({}, n), {
+                                  w(Z({}, n), {
                                       channel: t,
                                       selected: !1
                                   })
@@ -251,7 +251,7 @@ class D extends (r = l.PureComponent) {
             });
     }
 }
-Z(D, 'defaultProps', {
+E(D, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,
@@ -260,32 +260,32 @@ Z(D, 'defaultProps', {
 let R = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         r = (0, h.ZP)(e.channel),
-        l = (0, s.e7)([y.ZP], () => y.ZP.getChannelId(), []),
+        l = (0, s.e7)([_.ZP], () => _.ZP.getChannelId(), []),
         o = (0, s.e7)([d.Z], () => (null != l ? d.Z.getMode(l) : I.WtW.VOICE), [l]),
         a = (0, s.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
         u = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
-        p = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
+        p = (0, s.e7)([y.ZP], () => y.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: m } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         O = l === n,
         j = !1,
-        x = !1;
-    O && ((j = o === I.WtW.VOICE), (x = o === I.WtW.VIDEO));
-    let C = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
+        C = !1;
+    O && ((j = o === I.WtW.VOICE), (C = o === I.WtW.VIDEO));
+    let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
         S = (0, f.Q3)('DirectMessage');
     return (0, i.jsx)(
         D,
-        E(w({}, e), {
+        w(Z({}, e), {
             ref: t,
             channelName: r,
             unread: p > 0,
             selected: u === n,
             badge: p,
             audio: j,
-            video: x,
+            video: C,
             stream: a,
             isCurrentUserInThisDMCall: O,
             isGDMFacepileEnabled: m,
-            size: S ? C : 56,
+            size: S ? x : 56,
             isVisualRefreshEnabled: S
         })
     );

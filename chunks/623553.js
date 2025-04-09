@@ -19,7 +19,7 @@ function h() {
 }
 function x(e) {
     let { isPaused: t, width: n, height: x } = e,
-        N = (0, s.useRef)(),
+        N = (0, s.useRef)(null),
         v = (0, s.useRef)(-1),
         [O, j] = (0, s.useState)(!1),
         Z = (0, s.useRef)(h()),

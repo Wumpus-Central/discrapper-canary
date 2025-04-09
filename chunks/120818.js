@@ -1,4 +1,4 @@
-n.d(t, { T: () => y });
+n.d(t, { T: () => _ });
 var r = n(200651),
     i = n(192379),
     l = n(91192),
@@ -24,23 +24,23 @@ function b(e, t) {
         t
     );
 }
-let y = i.memo(function (e) {
+let _ = i.memo(function (e) {
     var t, n;
-    let { guild: y } = e,
-        _ = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(y.id), [y.id]),
-        v = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(y.id)),
+    let { guild: _ } = e,
+        y = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(_.id), [_.id]),
+        v = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(_.id)),
         O = i.useMemo(() => {
-            if (null == _ || null == v) return 0;
+            if (null == y || null == v) return 0;
             let e = 0;
             return (
-                _.forEach((t) => {
+                y.forEach((t) => {
                     null != v[t.channelId] && e++;
                 }),
                 e
             );
-        }, [v, _]),
-        j = null == _ ? 0 : _.length,
-        x = (0, l.JA)('progress-bar-'.concat(y.id));
+        }, [v, y]),
+        j = null == y ? 0 : y.length,
+        C = (0, l.JA)('progress-bar-'.concat(_.id));
     return (0, r.jsxs)('li', {
         children: [
             (0, r.jsxs)(
@@ -69,14 +69,14 @@ let y = i.memo(function (e) {
                             });
                     }
                     return e;
-                })({}, x)),
+                })({}, C)),
                 (n = n =
                     {
                         role: 'button',
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(h.Z5c.CHANNEL(y.id, f.oC.GUILD_HOME));
+                            (0, d.uL)(h.Z5c.CHANNEL(_.id, f.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)('div', {

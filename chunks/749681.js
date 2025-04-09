@@ -6,11 +6,11 @@ n.r(t),
                 let b = t.tab;
                 switch ((u.Z.setState({ selectedTab: b }), b)) {
                     case d.GlobalDiscoveryTab.SERVERS:
-                        let y = t.selectedServersTab;
+                        let _ = t.selectedServersTab;
                         return (
-                            null != y
+                            null != _
                                 ? l.Z.setState({
-                                      selectedTab: y,
+                                      selectedTab: _,
                                       entrypoint: null != (n = t.entrypoint) ? n : f.Qq.UNKNOWN
                                   })
                                 : l.Z.setState({ entrypoint: null != (g = t.entrypoint) ? g : f.Qq.UNKNOWN }),

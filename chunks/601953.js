@@ -42,7 +42,7 @@ function i(e, t) {
     );
 }
 function r(e, t) {
-    var n, r, s, a, o, d, u;
+    var n, r, s, a, o, u, d;
     let c = i(
         l(
             i(
@@ -54,11 +54,11 @@ function r(e, t) {
                     },
                     (null == (n = e.targetUser) ? void 0 : n.id) == null ? {} : { target_user_id: e.targetUser.id }
                 ),
-                { target_type: null != (d = e.targetType) ? d : null }
+                { target_type: null != (u = e.targetType) ? u : null }
             ),
             (null == (r = e.targetApplication) ? void 0 : r.id) == null ? {} : { target_application_id: e.targetApplication.id }
         ),
-        { flags: null != (u = e.flags) ? u : null }
+        { flags: null != (d = e.flags) ? d : null }
     );
     for (let e of Object.keys(t)) if (t[e] !== c[e]) return !1;
     return !0;

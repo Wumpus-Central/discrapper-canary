@@ -280,7 +280,7 @@ function ec(e) {
               s.Z.wait(() => {
                   s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
               }))
-            : (J = P !== _.Z.getChannelId() || (0, S.Z)(P) ? N.Ez.PIP : N.Ez.PANEL),
+            : (J = P !== _.Z.getChannelId() || (0, S.Z)(P) ? (c.kind === o.E.CONTEXTLESS ? N.Ez.PANEL : N.Ez.PIP) : N.Ez.PANEL),
         X.set(eC(c.id, i), Date.now());
 }
 function eu(e) {

@@ -92,7 +92,7 @@ let x = () => [
 ];
 function N(e) {
     let { isPaused: t } = e,
-        n = (0, s.useRef)(),
+        n = (0, s.useRef)(null),
         [c, g] = (0, s.useState)((0, o.sample)(x())),
         [b, N] = (0, s.useState)({}),
         [v, O] = (0, s.useState)({

@@ -1,13 +1,13 @@
-n.d(t, { T: () => l });
-var i = n(526120),
-    d = n(563534),
-    r = n(734893),
-    a = n(931261);
-async function l(e, t) {
-    if (null == e || !(0, a.s)(e)) return;
-    let n = d.Z.getSettings(e);
-    if ((n === d.P && (await (0, i.cP)(e), (n = d.Z.getSettings(e))), n !== d.P && null != n)) {
-        if (null != n.newMemberActions && null != n.newMemberActions.find((e) => e.channelId === t)) return r.j.TODO;
-        if (null != n.resourceChannels && null != n.resourceChannels.find((e) => e.channelId === t)) return r.j.RESOURCE;
+n.d(t, { T: () => a });
+var r = n(526120),
+    i = n(563534),
+    l = n(734893),
+    s = n(931261);
+async function a(e, t) {
+    if (null == e || !(0, s.s)(e)) return;
+    let n = i.Z.getSettings(e);
+    if ((n === i.P && (await (0, r.cP)(e), (n = i.Z.getSettings(e))), n !== i.P && null != n)) {
+        if (null != n.newMemberActions && null != n.newMemberActions.find((e) => e.channelId === t)) return l.j.TODO;
+        if (null != n.resourceChannels && null != n.resourceChannels.find((e) => e.channelId === t)) return l.j.RESOURCE;
     }
 }

@@ -17,7 +17,7 @@ function p(e) {
     let m = (0, s.dQu)(a.Z.unsafe_rawColors.BRAND_500).hex(),
         b = (0, s.dQu)(a.Z.unsafe_rawColors.PRIMARY_630).hex();
     i && null == t.icon && ((f.backgroundColor = m), (g.backgroundColor = b));
-    let y = (0, s.Yzy)(n, {
+    let _ = (0, s.Yzy)(n, {
         from: f,
         enter: g,
         leave: f,
@@ -26,7 +26,7 @@ function p(e) {
         onRest: h
     });
     return (0, r.jsx)(r.Fragment, {
-        children: y(
+        children: _(
             (e, n, i) =>
                 n &&
                 (0, r.jsx)(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -14,16 +14,16 @@ var r = n(200651),
     g = n(496675),
     m = n(527379),
     b = n(981631),
-    y = n(388032);
-function _(e) {
+    _ = n(388032);
+function y(e) {
     let { guild: t, selected: n } = e,
-        _ = (0, d.jS)(t.id, 'Guild Sidebar'),
+        y = (0, d.jS)(t.id, 'Guild Sidebar'),
         v = (0, l.e7)([g.Z], () => g.Z.can(b.Plq.KICK_MEMBERS, t)),
         O = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        j = _ && v && null != O ? O : 0;
+        j = y && v && null != O ? O : 0;
     i.useEffect(() => {
         v &&
-            _ &&
+            y &&
             t.hasFeature(b.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
             t.hasFeature(b.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
             c.Z.fetchGuildJoinRequests({
@@ -31,13 +31,13 @@ function _(e) {
                 status: p.wB.SUBMITTED,
                 limit: h.p
             });
-    }, [v, t, _]);
-    let x = i.useCallback(() => {
+    }, [v, t, y]);
+    let C = i.useCallback(() => {
             (0, m._X)(t.id);
         }, [t.id]),
-        C = (0, s.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
+        x = (0, s.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
     return (0, r.jsx)('div', {
-        ref: C,
+        ref: x,
         children: (0, r.jsx)(f.m, {
             id: 'members-'.concat(t.id),
             renderIcon: (e) =>
@@ -46,9 +46,9 @@ function _(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: y.NW.string(y.t.oclz3d),
+            text: _.NW.string(_.t.oclz3d),
             selected: n,
-            onClick: x,
+            onClick: C,
             trailing: j > 0 ? (0, r.jsx)(a.mAB, { count: j }) : null
         })
     });

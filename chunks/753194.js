@@ -12,11 +12,11 @@ function d(e) {
     let t,
         { color: n, size: d, forcedIconColor: p, className: h, iconClassName: f, tooltipText: g } = e,
         [m, b] = (0, l.Wu)([s.Z], () => [s.Z.desaturateUserColors, s.Z.saturation]),
-        y = (0, a.dQu)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        _ = (0, i._i)(null != n ? n : y),
-        v = (0, i.ho)(_, !1, m ? b : null);
+        _ = (0, a.dQu)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        y = (0, i._i)(null != n ? n : _),
+        v = (0, i.ho)(y, !1, m ? b : null);
     return (
-        (t = null != p ? p : 0.3 > (0, i.Bd)(_) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css),
+        (t = null != p ? p : 0.3 > (0, i.Bd)(y) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css),
         (0, r.jsx)(a.ua7, {
             text: null != g ? g : u.NW.string(u.t.T3PvV1),
             children: (e) => {

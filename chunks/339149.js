@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => N,
-    Z: () => Z
+    Z: () => E
 }),
     n(388685),
     n(539854);
@@ -19,12 +19,12 @@ var r,
     g = n(703656),
     m = n(417363),
     b = n(941128),
-    y = n(780570),
-    _ = n(353042),
+    _ = n(780570),
+    y = n(353042),
     v = n(981631),
     O = n(388032),
     j = n(496614);
-function x(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function x(e, t, n) {
         e
     );
 }
-function C(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -115,7 +115,7 @@ class P extends l.PureComponent {
         if (e.type === v.vxO.UPDATING || e.type === v.vxO.REPAIRING || e.type === v.vxO.INSTALLING) {
             if (t) return O.NW.string(O.t['5oxtFR']);
             else if (e.stage === v.f07.PATCHING || e.stage === v.f07.REPAIRING)
-                return (0, i.jsx)(_.Z, {
+                return (0, i.jsx)(y.Z, {
                     getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
@@ -129,7 +129,7 @@ class P extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'renderProgressBody', (e, t) => {
+            C(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: r } = this.props,
                     { stage: i, progress: l, total: o, type: a } = n;
                 if (null == l || null == o || null == i) return null;
@@ -186,7 +186,7 @@ class I extends (r = l.PureComponent) {
                     var r, l;
                     return (0, i.jsx)(
                         'div',
-                        ((r = C({}, n)),
+                        ((r = x({}, n)),
                         (l = l =
                             {
                                 children: (0, i.jsx)(p._3P, {
@@ -219,8 +219,8 @@ class I extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'state', { animationScale: new s.Z.Value(0) }),
-            x(this, 'handleOnClick', (e) => {
+            C(this, 'state', { animationScale: new s.Z.Value(0) }),
+            C(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(v.Z5c.APPLICATION_LIBRARY);
             });
@@ -233,13 +233,13 @@ function N(e, t) {
         return null != l && e.push(l), e;
     }, []);
 }
-x(I, 'defaultProps', { strokeSize: p._3P.StrokeSizes.MEDIUM });
-let Z = c.ZP.connectStores([b.Z, m.Z, h.Z], () => {
+C(I, 'defaultProps', { strokeSize: p._3P.StrokeSizes.MEDIUM });
+let E = c.ZP.connectStores([b.Z, m.Z, h.Z], () => {
     let e = b.Z.activeItems,
         t = N(e, m.Z),
-        { total: n, progress: r } = y.lK(t);
+        { total: n, progress: r } = _.lK(t);
     return {
-        percent: y.xI(r, n),
+        percent: _.xI(r, n),
         isPaused: b.Z.paused,
         firstApplication: e.length > 0 ? h.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null
@@ -268,7 +268,7 @@ let Z = c.ZP.connectStores([b.Z, m.Z, h.Z], () => {
     return t
         ? (0, i.jsx)(d.W, {
               component: l.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, C({}, n)) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, x({}, n)) : null
           })
-        : (0, i.jsx)(I, C({}, n));
+        : (0, i.jsx)(I, x({}, n));
 });

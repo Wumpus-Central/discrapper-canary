@@ -1,4 +1,4 @@
-n.d(t, { m: () => C });
+n.d(t, { m: () => x });
 var r = n(200651),
     i = n(192379),
     l = n(399606),
@@ -14,28 +14,28 @@ var r = n(200651),
     g = n(306680),
     m = n(709054),
     b = n(540126),
-    y = n(434479),
-    _ = n(981631),
+    _ = n(434479),
+    y = n(981631),
     v = n(176505),
     O = n(490897),
     j = n(388032),
-    x = n(990252);
-function C(e) {
-    let { guild: t, selected: C } = e,
+    C = n(990252);
+function x(e) {
+    let { guild: t, selected: x } = e,
         S = (0, p.Z)(t),
         P = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([h.Z], () => Array.from(h.Z.getNewChannelIds(t.id)).filter((e) => h.Z.shouldIndicateNewChannel(t.id, e))),
         N = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, O.W.GUILD_ONBOARDING_QUESTION)),
-        Z = I.length > b.Cb,
-        w = (0, l.e7)([d.Z, g.ZP], () => {
+        E = I.length > b.Cb,
+        Z = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
                 n = g.ZP.lastMessageId(t.id, O.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let r = m.default.extractTimestamp(n);
             return null != e && e > r;
         }),
-        E = i.useCallback(() => {
-            (0, f.uL)(_.Z5c.CHANNEL(t.id, S ? v.oC.CUSTOMIZE_COMMUNITY : v.oC.CHANNEL_BROWSER));
+        w = i.useCallback(() => {
+            (0, f.uL)(y.Z5c.CHANNEL(t.id, S ? v.oC.CUSTOMIZE_COMMUNITY : v.oC.CHANNEL_BROWSER));
         }, [t.id, S]),
         T = i.useCallback(
             (e) => {
@@ -92,15 +92,15 @@ function C(e) {
         ),
         A = null;
     return (
-        (P && !N && !Z) ||
-            C ||
-            w ||
+        (P && !N && !E) ||
+            x ||
+            Z ||
             (A = (0, r.jsx)(s.IGR, {
                 color: a.Z.colors.BADGE_BRAND_BG.css,
                 text: j.NW.string(j.t.y2b7CA),
-                className: x.newChannel
+                className: C.newChannel
             })),
-        (0, r.jsx)(y.m, {
+        (0, r.jsx)(_.m, {
             id: 'channels-'.concat(t.id),
             renderIcon: (e) =>
                 (0, r.jsx)(s.H$4, {
@@ -109,8 +109,8 @@ function C(e) {
                     className: e
                 }),
             text: S ? j.NW.string(j.t.h9mGOD) : j.NW.string(j.t.et6wam),
-            selected: C,
-            onClick: E,
+            selected: x,
+            onClick: w,
             onContextMenu: T,
             trailing: A
         })

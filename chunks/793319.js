@@ -496,7 +496,7 @@ let ek = function (e) {
             return (null != (e = null == G ? void 0 : G.channelId) ? e : ei.Z.getVoiceChannelId()) === l.id;
         }),
         K = (0, O.Z)(l, !0),
-        Q = (0, u.e7)([C.ZP], () => C.ZP.getSelfEmbeddedActivityForChannel(l.id)),
+        Q = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: et, limit: en } = (0, eu.Z)(l),
         { analyticsLocations: ef } = (0, v.ZP)(x.Z.VOICE_CONTROL_TRAY),
         eb = (0, ec.Z)(l),

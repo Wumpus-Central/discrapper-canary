@@ -46,22 +46,22 @@ function D(e) {
         G = a.useRef(null),
         [V, X] = a.useState(null != B ? B : null),
         $ = U.length > 0 || null != L,
-        Q = A && null != V ? V.label() : w.NW.string(w.t['xod36+']),
-        [J, ee] = a.useState(Q),
-        { ref: et, width: en } = (0, c.Z)(Q);
+        J = A && null != V ? V.label() : w.NW.string(w.t['xod36+']),
+        [Q, ee] = a.useState(J),
+        { ref: et, width: en } = (0, c.Z)(J);
     a.useEffect(() => {
         let e = G.current;
         if (null == en || null == e) return;
         let t = en - 78;
-        e.textContent = Q;
+        e.textContent = J;
         let n = e.getBoundingClientRect().width;
-        if (n <= t) ee(Q);
+        if (n <= t) ee(J);
         else {
-            let e = n / Q.length,
+            let e = n / J.length,
                 r = Math.floor((t - 3 * e) / e);
-            ee(''.concat(Q.substring(0, r)).concat('...'));
+            ee(''.concat(J.substring(0, r)).concat('...'));
         }
-    }, [en, Q]),
+    }, [en, J]),
         a.useEffect(() => {
             b.default.track(T.rMx.OPEN_MODAL, {
                 type: m.Z.CUSTOM_STATUS_MODAL,
@@ -139,7 +139,7 @@ function D(e) {
                                 user: W,
                                 previewText: U,
                                 previewEmoji: L,
-                                placeHolderText: Q,
+                                placeHolderText: J,
                                 transitionState: i
                             })
                         }),
@@ -237,7 +237,7 @@ function D(e) {
                                         maxLength: C.s0,
                                         rows: 1,
                                         showRemainingCharacterCount: !1,
-                                        placeholder: J,
+                                        placeholder: Q,
                                         onChange: (e) => {
                                             z(e);
                                         },
@@ -249,7 +249,7 @@ function D(e) {
                                     }),
                                     (0, r.jsx)(s.nn4, {
                                         id: el,
-                                        children: ''.concat(w.NW.string(w.t.EVV6ub), ': ').concat(Q)
+                                        children: ''.concat(w.NW.string(w.t.EVV6ub), ': ').concat(J)
                                     }),
                                     (U.length > 0 || null != L) &&
                                         (0, r.jsx)('div', {

@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(474936),
     m = n(388032),
     b = n(706442),
-    y = n(777091);
-let _ = (e, t) => {
+    _ = n(777091);
+let y = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
@@ -32,16 +32,16 @@ let _ = (e, t) => {
     },
     j = (e) => {
         let { children: t, channelId: n, selectedChannelId: j } = e,
-            x = (0, a.wE)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            C = j === n,
+            C = (0, a.wE)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+            x = j === n,
             { canAccessPicker: S, entryPoint: P } = (0, d.m)({
                 location: 'ChatWallpaperDMListCoachmark',
                 selectedChannelId: j
             }),
             I = P === u.FN.CONTEXT_MENU,
-            [N, Z] = (0, s.US)(x && I && C && S ? [l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            w = (0, c.m)(g.p9.TIER_2),
-            E = (0, p.Z)(n),
+            [N, E] = (0, s.US)(C && I && x && S ? [l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            Z = (0, c.m)(g.p9.TIER_2),
+            w = (0, p.Z)(n),
             T = N === l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             A = (0, i.useRef)(null),
             D = (0, i.useRef)(null),
@@ -62,9 +62,9 @@ let _ = (e, t) => {
         )
             return t;
         let k = () => {
-                Z(f.L.USER_DISMISS);
+                E(f.L.USER_DISMISS);
             },
-            M = _(w, null != E ? E : null),
+            M = y(Z, null != w ? w : null),
             G = v(M),
             B = O(M);
         return (0, r.jsx)('div', {
@@ -81,7 +81,7 @@ let _ = (e, t) => {
                         buttonText: m.NW.string(m.t['+IrDzM']),
                         header: G,
                         art: (0, r.jsx)('img', {
-                            src: y.Z,
+                            src: _.Z,
                             alt: '',
                             className: b.chatWallpaperDMListCoachmarkArt
                         }),

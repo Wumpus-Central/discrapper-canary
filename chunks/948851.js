@@ -2,63 +2,63 @@ n.d(t, { Z: () => h });
 var l = n(200651);
 n(192379);
 var i = n(533800),
-    s = n(481060),
-    r = n(630388),
+    r = n(481060),
+    s = n(630388),
     a = n(971130),
     o = n(388032),
-    d = n(842515);
-let u = a.ZP.getMaxAgeOptions,
+    u = n(842515);
+let d = a.ZP.getMaxAgeOptions,
     c = a.ZP.getMaxUsesOptions;
 function h(e) {
     var t;
-    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: x, onSelectMaxAge: v, onSelectMaxUses: p, isGuestInviteCreationToggleEnabled: N, inviteFlags: I, onSetInviteFlags: f } = e,
-        j = u.find((e) => e.value === a),
+    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: p, isGuestInviteCreationToggleEnabled: I, inviteFlags: N, onSetInviteFlags: f } = e,
+        j = d.find((e) => e.value === a),
         S = c.find((e) => e.value === h);
     return (0, l.jsx)('div', {
-        className: d.settingsContent,
+        className: u.settingsContent,
         children: (0, l.jsxs)('form', {
             onSubmit: m,
-            className: d.settingsForm,
+            className: u.settingsForm,
             children: [
-                (0, l.jsx)(s.xJW, {
+                (0, l.jsx)(r.xJW, {
                     title: o.NW.string(o.t['60qw29']),
-                    children: (0, l.jsx)(s.VcW, {
-                        options: u,
-                        value: null != (t = null == j ? void 0 : j.value) ? t : u[0].value,
-                        onChange: v
+                    children: (0, l.jsx)(r.VcW, {
+                        options: d,
+                        value: null != (t = null == j ? void 0 : j.value) ? t : d[0].value,
+                        onChange: x
                     })
                 }),
-                (0, l.jsx)(s.xJW, {
+                (0, l.jsx)(r.xJW, {
                     title: o.NW.string(o.t.jDqWHR),
-                    children: (0, l.jsx)(s.VcW, {
+                    children: (0, l.jsx)(r.VcW, {
                         options: c,
                         value: null == S ? void 0 : S.value,
                         onChange: p
                     })
                 }),
                 !n &&
-                    (0, l.jsx)(s.xJW, {
-                        children: (0, l.jsx)(s.j7V, {
-                            className: d.switch,
+                    (0, l.jsx)(r.xJW, {
+                        children: (0, l.jsx)(r.j7V, {
+                            className: u.switch,
                             value: g,
-                            onChange: (e) => x(e),
+                            onChange: (e) => v(e),
                             note: o.NW.string(o.t.UN5IRU),
                             hideBorder: !0,
-                            children: (0, l.jsx)(s.Text, {
+                            children: (0, l.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 children: o.NW.string(o.t['wE+9dn'])
                             })
                         })
                     }),
-                N &&
-                    (0, l.jsx)(s.xJW, {
-                        children: (0, l.jsx)(s.j7V, {
-                            className: d.switch,
-                            value: (0, r.yE)(I, i.$.IS_GUEST_INVITE),
-                            onChange: (e) => f((0, r.mB)(I, i.$.IS_GUEST_INVITE, e)),
+                I &&
+                    (0, l.jsx)(r.xJW, {
+                        children: (0, l.jsx)(r.j7V, {
+                            className: u.switch,
+                            value: (0, s.yE)(N, i.$.IS_GUEST_INVITE),
+                            onChange: (e) => f((0, s.mB)(N, i.$.IS_GUEST_INVITE, e)),
                             note: o.NW.string(o.t['/FeTKy']),
                             hideBorder: !0,
-                            children: (0, l.jsx)(s.Text, {
+                            children: (0, l.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 children: o.NW.string(o.t.siexRU)
                             })

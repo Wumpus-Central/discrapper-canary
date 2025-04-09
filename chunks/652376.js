@@ -17,9 +17,9 @@ function c(e) {
         g = null == (t = (0, l.Z)()) ? void 0 : t.guild_id,
         m = null != g && c.includes(g),
         b = (0, i.e7)([s.Z], () => null != f && s.Z.hasVideo(f), [f]),
-        y = (0, i.e7)([o.Z], () => o.Z.getCurrentUserActiveStream());
+        _ = (0, i.e7)([o.Z], () => o.Z.getCurrentUserActiveStream());
     return (
-        u && ((d = !b), (p = b), (h = null != y && null != y.guildId && c.includes(y.guildId))),
+        u && ((d = !b), (p = b), (h = null != _ && null != _.guildId && c.includes(_.guildId))),
         r.useMemo(
             () => ({
                 audio: d,

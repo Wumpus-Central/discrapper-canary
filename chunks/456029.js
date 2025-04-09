@@ -49,7 +49,7 @@ function _(e) {
     var t, n;
     let { height: _, width: P, isPaused: C } = e,
         [w, E] = (0, s.useState)({}),
-        S = (0, s.useRef)(),
+        S = (0, s.useRef)(null),
         I = (0, a.e7)([l.Z], () => l.Z.hasPurchasedUpgrade(b.yN.WEEDS, b.uv.WEED_KILLER)),
         k = c.Mq[b.yN.WEEDS],
         [M, W] = (0, u.Z)(b.yN.WEEDS),

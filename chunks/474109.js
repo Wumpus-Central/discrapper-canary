@@ -14,10 +14,10 @@ var r = n(200651),
     g = n(388032);
 let m = 'app-download-item',
     b = 'add-server-item';
-function y() {
+function _() {
     return !1;
 }
-function _(e) {
+function y(e) {
     var t;
     let n = s.default.getMutableGuildStates();
     return (e === f.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(f.x8Z.SERVER_DISCOVERY_BADGE)) || (e !== m && e !== b && (null == (t = n[null != e ? e : 'null']) ? void 0 : t.highImportanceMentionCount) > 0);
@@ -59,10 +59,10 @@ let v = (0, h.oH)((e, t, n) => ['null', ...t, ...e, b, f.x8Z.E3_SERVER_DISCOVERY
                 {
                     ref: t,
                     items: d,
-                    isUnread: y,
+                    isUnread: _,
                     textUnread: g.NW.string(g.t.y2b7CA),
                     textMention: g.NW.string(g.t.y2b7CA),
-                    isMentioned: _,
+                    isMentioned: y,
                     animate: h,
                     expandedFolders: f
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -56,9 +56,9 @@ function b(e, t) {
         e
     );
 }
-function y(e) {
-    let { guild: t, selected: y } = e,
-        { hasUnread: _, mentionCount: v } = (0, i.cj)(
+function _(e) {
+    let { guild: t, selected: _ } = e,
+        { hasUnread: y, mentionCount: v } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, h.W.GUILD_EVENT),
@@ -74,8 +74,8 @@ function y(e) {
         }),
             (0, s.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let x = (0, c.ZP)(t.id),
-        C = x.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: x.length }) : f.NW.string(f.t.tlopTE);
+    let C = (0, c.ZP)(t.id),
+        x = C.length > 0 ? f.NW.formatToPlainString(f.t.IBdqSk, { number: C.length }) : f.NW.string(f.t.tlopTE);
     return (0, r.jsx)(p.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -84,8 +84,8 @@ function y(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: C,
-        selected: y,
+        text: x,
+        selected: _,
         onClick: j,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
@@ -93,7 +93,7 @@ function y(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: _ && !O,
+        showUnread: y && !O,
         trailing:
             !O && v > 0
                 ? (0, r.jsx)(o.mAB, {

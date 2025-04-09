@@ -1,7 +1,7 @@
 n.d(t, {
     KE: () => b,
     KT: () => m,
-    ZP: () => y
+    ZP: () => _
 }),
     n(388685),
     n(457542);
@@ -83,17 +83,17 @@ function b(e, t) {
         { modalKey: h.H2 }
     );
 }
-function y(e, t) {
+function _(e, t) {
     var m;
-    let { analyticsLocations: y } = (0, a.ZP)(),
-        [_, v] = i.useState(!1),
+    let { analyticsLocations: _ } = (0, a.ZP)(),
+        [y, v] = i.useState(!1),
         [O, j] = i.useState(void 0),
-        x = (0, l.e7)([p.Z], () => {
+        C = (0, l.e7)([p.Z], () => {
             var t, n;
             return null != (n = null == (t = p.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
-        C = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        S = Math.max((null != (m = null == C ? void 0 : C.premiumSubscriberCount) ? m : 0) - x, 0),
+        x = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+        S = Math.max((null != (m = null == x ? void 0 : x.premiumSubscriberCount) ? m : 0) - C, 0),
         P = i.useCallback(
             (n) => {
                 let r = n ? d.H6 : d.Th;
@@ -114,7 +114,7 @@ function y(e, t) {
         ),
         I = i.useCallback(
             (e) => {
-                if ((e.stopPropagation(), null != C))
+                if ((e.stopPropagation(), null != x))
                     return S < t.cost
                         ? void (0, s.u)({
                               analyticsLocation: {
@@ -122,8 +122,8 @@ function y(e, t) {
                                   section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
                               numberOfBoostsToAdd: t.cost - S,
-                              analyticsLocations: y,
-                              guild: C,
+                              analyticsLocations: _,
+                              guild: x,
                               intent: t.type === h.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
                                   P(!0).then(() => {
@@ -134,7 +134,7 @@ function y(e, t) {
                                                   e,
                                                   g(
                                                       {
-                                                          guildId: C.id,
+                                                          guildId: x.id,
                                                           powerup: t
                                                       },
                                                       n
@@ -151,7 +151,7 @@ function y(e, t) {
                                           e,
                                           g(
                                               {
-                                                  guildId: C.id,
+                                                  guildId: x.id,
                                                   powerup: t
                                               },
                                               n
@@ -160,11 +160,11 @@ function y(e, t) {
                               });
                           });
             },
-            [P, t, S, y, C]
+            [P, t, S, _, x]
         ),
         N = i.useCallback((e) => (e.stopPropagation(), P(!1)), [P]);
     return {
-        isLoading: _,
+        isLoading: y,
         error: O,
         onActivate: I,
         onDeactivate: N,

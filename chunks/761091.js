@@ -14,25 +14,25 @@ var r = n(399606),
     g = n(50101),
     m = n(639777),
     b = n(330791),
-    y = n(443063),
-    _ = n(981631);
+    _ = n(443063),
+    y = n(981631);
 function v(e) {
     let t = (0, h.Z)(e.id),
         n = (0, o.W)(e.id),
         v = (0, p.j0)(e.id),
         O = (0, i.u)(e),
         j = (0, u.g)(e.id),
-        x = (0, r.e7)([s.Z], () => s.Z.getNewMemberActions(e.id), [e.id]),
-        C = (0, d.Z)(e.id),
+        C = (0, r.e7)([s.Z], () => s.Z.getNewMemberActions(e.id), [e.id]),
+        x = (0, d.Z)(e.id),
         S = (0, c.PE)(e.id),
         P = (0, a.n2)(e.id),
         I = [],
-        N = e.hasFeature(_.oNc.HUB),
-        Z = e.hasFeature(_.oNc.COMMUNITY),
-        w = (0, b.lN)(!(0, f.r1)(e.id)),
-        E = e.hasFeature(_.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
+        N = e.hasFeature(y.oNc.HUB),
+        E = e.hasFeature(y.oNc.COMMUNITY),
+        Z = (0, b.lN)(!(0, f.r1)(e.id)),
+        w = e.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         T = (0, l.jS)(e.id, 'Guild Sidebar'),
         A = (0, g.Ek)(e.id, 'useGuildActionRow'),
         D = (0, m.Z)(e.id);
-    return N && I.push(y.z.GUILD_HUB_HEADER_OPTIONS), !S && j && C && null != x && x.length > 0 ? I.push(y.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && I.push(y.z.GUILD_PREMIUM_PROGRESS_BAR), !N && j && I.push(y.z.GUILD_HOME), t && I.push(y.z.GUILD_SCHEDULED_EVENTS), !N && Z && w && I.push(y.z.CHANNELS_AND_ROLES), v && I.push(y.z.GUILD_ROLE_SUBSCRIPTIONS), O && I.push(y.z.GUILD_SHOP), !T && n && I.push(y.z.GUILD_MEMBER_APPLICATIONS), P && (Z || E || (T && e.hasFeature(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) && I.push(y.z.GUILD_MOD_DASH_MEMBER_SAFETY), A && D && I.push(y.z.GUILD_BOOSTS), I;
+    return N && I.push(_.z.GUILD_HUB_HEADER_OPTIONS), !S && j && x && null != C && C.length > 0 ? I.push(_.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && I.push(_.z.GUILD_PREMIUM_PROGRESS_BAR), !N && j && I.push(_.z.GUILD_HOME), t && I.push(_.z.GUILD_SCHEDULED_EVENTS), !N && E && Z && I.push(_.z.CHANNELS_AND_ROLES), v && I.push(_.z.GUILD_ROLE_SUBSCRIPTIONS), O && I.push(_.z.GUILD_SHOP), !T && n && I.push(_.z.GUILD_MEMBER_APPLICATIONS), P && (E || w || (T && e.hasFeature(y.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) && I.push(_.z.GUILD_MOD_DASH_MEMBER_SAFETY), A && D && I.push(_.z.GUILD_BOOSTS), I;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -17,7 +17,7 @@ let b = {
     friction: 30,
     tension: 300
 };
-function y(e) {
+function _(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
         a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
@@ -62,24 +62,24 @@ function y(e) {
         ]
     });
 }
-function _(e) {
+function y(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: h, topBar: _ } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
+        { bottomBar: h, topBar: y } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
         v = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: O, mentionCount: j, targetChannelId: x } = 'bottom' === t ? h : _,
-        C = O === f.x.HIDDEN,
+        { mode: O, mentionCount: j, targetChannelId: C } = 'bottom' === t ? h : y,
+        x = O === f.x.HIDDEN,
         S = (0, c.q_F)(
             {
-                to: { transform: C ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: x ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: b
             },
             v ? 'respect-motion-settings' : 'animate-never'
         ),
         P = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != x && d(x);
+                e.preventDefault(), e.stopPropagation(), null != C && d(C);
             },
-            [d, x]
+            [d, C]
         );
     return (0, r.jsx)('div', {
         className: o()(m.container, {
@@ -89,7 +89,7 @@ function _(e) {
         children: (0, r.jsx)(a.animated.div, {
             className: m.containerPadding,
             style: S,
-            'aria-hidden': C,
+            'aria-hidden': x,
             children:
                 O === f.x.HIDDEN
                     ? (0, r.jsx)('div', { className: o()(m.bar, m.emptyBar) })
@@ -133,7 +133,7 @@ function _(e) {
                               })
                           })
                         : O === f.x.VOICE_CHANNELS
-                          ? (0, r.jsx)(y, {
+                          ? (0, r.jsx)(_, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,
                                 guildChannelsVersion: l

@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => y,
+    ZP: () => _,
     dt: () => m,
     eo: () => b
 }),
@@ -48,12 +48,12 @@ function b(e, t, n) {
         .concat(r ? '-divider' : '')
         .concat(i ? '-voice-summary' : '');
 }
-let y = i.memo(function (e) {
-    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: p, voiceStates: h, guildId: m, selectedChannelId: b, selectedVoiceChannelId: y, optInEnabled: _ } = e,
-        { hasDivider: v, canHaveVoiceSummary: O } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, p]),
+let _ = i.memo(function (e) {
+    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: p, voiceStates: h, guildId: m, selectedChannelId: b, selectedVoiceChannelId: _, optInEnabled: y } = e,
+        { hasDivider: v, canHaveVoiceSummary: O } = i.useMemo(() => (0, d.ie)(n, y, t), [n, y, t, p]),
         j = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
-        x = (0, a.DM)(m),
-        C = (0, l.Wu)(
+        C = (0, a.DM)(m),
+        x = (0, l.Wu)(
             [s.ZP],
             () => {
                 if (null == j || !j.isCollapsed || !O) return [];
@@ -62,21 +62,21 @@ let y = i.memo(function (e) {
                 for (let n of e) {
                     if (!n.isGuildVocal()) continue;
                     let e = s.ZP.isChannelOrParentOptedIn(m, n.id);
-                    (!x || e) && t.push(n);
+                    (!C || e) && t.push(n);
                 }
                 return t;
             },
-            [j, O, m, x]
+            [j, O, m, C]
         ),
         S = i.useMemo(
             () =>
                 (0, c.c4)({
-                    channels: C,
+                    channels: x,
                     selectedChannelId: b,
-                    selectedVoiceChannelId: y,
+                    selectedVoiceChannelId: _,
                     voiceStates: h
                 }),
-            [C, b, y, h]
+            [x, b, _, h]
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {

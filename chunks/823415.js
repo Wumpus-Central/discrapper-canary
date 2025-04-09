@@ -1,5 +1,5 @@
-r.d(t, { ic: () => l });
-let n = (0, r(818083).B)({
+n.d(t, { ic: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-02_show_popout_on_delayed_hover',
     label: 'Show Profile Popout On Delayed Hover Experiment',
@@ -12,8 +12,8 @@ let n = (0, r(818083).B)({
         }
     ]
 });
-function l(e) {
-    let { location: t, autoTrackExposure: r = !0 } = e,
-        { enabled: l } = n.useExperiment({ location: t }, { autoTrackExposure: r });
-    return l;
+function i(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
+    return i;
 }

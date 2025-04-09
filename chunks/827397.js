@@ -1,25 +1,25 @@
-t.d(n, { Z: () => l });
-var r = t(192379),
-    o = t(481060),
-    s = t(434404),
-    i = t(535396),
-    a = t(981631);
-function l(e, n) {
-    let t = r.useCallback(
-        (t) => {
-            if ((t.stopPropagation(), n.type !== i.Us.LEVEL))
-                switch (((0, o.Mr3)(i.H2), n.skuId)) {
-                    case i.IN:
-                        s.Z.open(e, a.pNK.TAG, a.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+n.d(t, { Z: () => i });
+var r = n(192379),
+    o = n(481060),
+    a = n(434404),
+    s = n(535396),
+    c = n(981631);
+function i(e, t) {
+    let n = r.useCallback(
+        (n) => {
+            if ((n.stopPropagation(), t.type !== s.Us.LEVEL))
+                switch (((0, o.Mr3)(s.H2), t.skuId)) {
+                    case s.IN:
+                        a.Z.open(e, c.pNK.TAG, c.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case i.If:
-                        s.Z.open(e, a.pNK.ROLES, a.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case s.If:
+                        a.Z.open(e, c.pNK.ROLES, c.jXE.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     default:
                         return;
                 }
         },
-        [e, n]
+        [e, t]
     );
-    return n.type === i.Us.PERK ? t : void 0;
+    return t.type === s.Us.PERK ? n : void 0;
 }

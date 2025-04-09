@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => y,
-    Z: () => _
+    R: () => _,
+    Z: () => y
 });
 var r,
     i = n(200651);
@@ -42,19 +42,19 @@ function b(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
-let _ = (e) => {
-    let { type: t, guildId: r, closePopout: y } = e,
-        _ = (0, c.Dt)(),
-        { notClaimed: v, notEmailVerified: O, notPhoneVerified: j, newAccount: x, newMember: C } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
+var _ = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
+let y = (e) => {
+    let { type: t, guildId: r, closePopout: _ } = e,
+        y = (0, c.Dt)(),
+        { notClaimed: v, notEmailVerified: O, notPhoneVerified: j, newAccount: C, newMember: x } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
         S = 0 === t ? g.NW.string(g.t['6zY8BA']) : null,
         P = null,
         I = null;
-    return (0 === t && (v ? ((P = g.NW.string(g.t.IRxUlJ)), (I = g.NW.string(g.t.fiNVio))) : j ? ((P = g.NW.string(g.t.vW8iUF)), (I = g.NW.string(g.t['50gfOj']))) : O ? ((P = g.NW.string(g.t.vdSOp6)), (I = g.NW.string(g.t.lm1UKi))) : C ? ((P = g.NW.formatToPlainString(g.t.v1ktYW, { min: h.YeM.MEMBER_AGE })), (I = g.NW.string(g.t.BddRzc))) : x && ((P = g.NW.formatToPlainString(g.t['sncw4+'], { min: h.YeM.ACCOUNT_AGE })), (I = g.NW.string(g.t.BddRzc)))), null == S || null == P)
+    return (0 === t && (v ? ((P = g.NW.string(g.t.IRxUlJ)), (I = g.NW.string(g.t.fiNVio))) : j ? ((P = g.NW.string(g.t.vW8iUF)), (I = g.NW.string(g.t['50gfOj']))) : O ? ((P = g.NW.string(g.t.vdSOp6)), (I = g.NW.string(g.t.lm1UKi))) : x ? ((P = g.NW.formatToPlainString(g.t.v1ktYW, { min: h.YeM.MEMBER_AGE })), (I = g.NW.string(g.t.BddRzc))) : C && ((P = g.NW.formatToPlainString(g.t['sncw4+'], { min: h.YeM.ACCOUNT_AGE })), (I = g.NW.string(g.t.BddRzc)))), null == S || null == P)
         ? null
         : (0, i.jsxs)(o.VqE, {
               className: m.container,
-              'aria-labelledby': _,
+              'aria-labelledby': y,
               children: [
                   (0, i.jsx)('img', {
                       alt: '',
@@ -66,7 +66,7 @@ let _ = (e) => {
                       children: [
                           (0, i.jsx)(o.X6q, {
                               variant: 'heading-md/semibold',
-                              id: _,
+                              id: y,
                               children: S
                           }),
                           (0, i.jsx)(o.Text, {
@@ -126,7 +126,7 @@ let _ = (e) => {
                                                                 n)
                                                             );
                                                         })),
-                                                    y();
+                                                    _();
                                             },
                                             className: m.primaryButton,
                                             children: I
@@ -134,7 +134,7 @@ let _ = (e) => {
                                       : null,
                                   v || j || O
                                       ? (0, i.jsx)(o.zxk, {
-                                            onClick: y,
+                                            onClick: _,
                                             look: o.zxk.Looks.BLANK,
                                             className: m.cancel,
                                             children: g.NW.string(g.t.oEAioK)

@@ -1,4 +1,4 @@
-n.d(t, { i: () => _ }), n(388685);
+n.d(t, { i: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -14,15 +14,15 @@ var r = n(200651),
     g = n(479766),
     m = n(331663),
     b = n(921944),
-    y = n(46140);
-function _() {
+    _ = n(46140);
+function y() {
     let { hasLayers: e } = (0, l.cj)([h.Z], () => ({ hasLayers: h.Z.hasLayers() })),
         { onboardingModalOpenedPrior: t } = (0, l.cj)([g.Z], () => ({ onboardingModalOpenedPrior: g.Z.onboardingModalOpenedPrior })),
-        { enabled: _ } = (0, f.W)({ location: 'virtual_currency_announcement_modal' }),
-        [v, O] = (0, d.US)(_ ? [o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...m.b.useSelectedDismissibleContent),
+        { enabled: y } = (0, f.W)({ location: 'virtual_currency_announcement_modal' }),
+        [v, O] = (0, d.US)(y ? [o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...m.b.useSelectedDismissibleContent),
         j = (0, s.s9z)(s.JQI);
     i.useEffect(() => {
-        _ &&
+        y &&
             !t &&
             v === o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             (e ||
@@ -46,7 +46,7 @@ function _() {
                                             dismissAction: b.L.INDIRECT_ACTION,
                                             groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING
                                         }),
-                                        (0, p.navigateToQuestHome)({ questId: y.V6 }),
+                                        (0, p.navigateToQuestHome)({ questId: _.V6 }),
                                         n();
                                 }
                             });
@@ -58,5 +58,5 @@ function _() {
                         }
                     }
                 )));
-    }, [v, _, t, O, e, j]);
+    }, [v, y, t, O, e, j]);
 }

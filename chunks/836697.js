@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(539854);
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(289090),
     m = n(727258),
     b = n(234383),
-    y = n(179809),
-    _ = n(588275),
+    _ = n(179809),
+    y = n(588275),
     v = n(388032),
     O = n(315268);
 function j(e) {
@@ -127,14 +127,14 @@ function j(e) {
         })
     );
 }
-function x(e) {
+function C(e) {
     let { onActivate: t } = e,
         n = (0, u.Q3)('PendingGuildJoinRequestsFolderNode'),
-        [l, x] = i.useState(!1),
-        C = (0, a.e7)([f.Z], () => f.Z.getGuildId()),
+        [l, C] = i.useState(!1),
+        x = (0, a.e7)([f.Z], () => f.Z.getGuildId()),
         S = (0, a.e7)([h.Z], () => h.Z.hasFetchedRequestToJoinGuilds),
         P = (0, b.Z)(),
-        I = (0, c.Z)(C),
+        I = (0, c.Z)(x),
         N = i.useMemo(() => {
             let e = (0, m.qQ)({
                 folderId: g.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -148,25 +148,25 @@ function x(e) {
     i.useEffect(() => {
         l && !S && d.Z.fetchRequestToJoinGuilds();
     }, [l, S]);
-    let Z = null != C && P.includes(C);
+    let E = null != x && P.includes(x);
     return (i.useEffect(() => {
-        !l && Z && I !== C && x(!0);
-    }, [l, Z, I, C]),
+        !l && E && I !== x && C(!0);
+    }, [l, E, I, x]),
     0 === P.length)
         ? null
         : (0, r.jsx)(j, {
               onActivate: t,
               children: (0, r.jsx)('div', {
                   className: o()({ [O.folderWrapperCollapsed]: !l }),
-                  children: (0, r.jsx)(y.Z, {
+                  children: (0, r.jsx)(_.Z, {
                       folderNode: N,
                       expanded: l,
-                      useCircleMask: !l && !Z,
-                      selected: Z,
+                      useCircleMask: !l && !E,
+                      selected: E,
                       draggable: !1,
                       sorting: !1,
                       onExpandCollapse: () => {
-                          x(!l), p.ZP.clearCoachmark();
+                          C(!l), p.ZP.clearCoachmark();
                       },
                       folderIconContentClassName: O.folderIconContent,
                       folderIconContent: (0, r.jsx)(s.wGF, {
@@ -178,7 +178,7 @@ function x(e) {
                           return e.type !== m.eD.GUILD
                               ? null
                               : (0, r.jsx)(
-                                    _.Z,
+                                    y.Z,
                                     {
                                         guildNode: e,
                                         height: t

@@ -14,19 +14,19 @@ var r = n(200651),
     g = n(496675),
     m = n(158776),
     b = n(979651),
-    y = n(823379),
-    _ = n(355363),
+    _ = n(823379),
+    y = n(355363),
     v = n(449932),
     O = n(561788),
     j = n(876548),
-    x = n(543432),
-    C = n(981631),
+    C = n(543432),
+    x = n(981631),
     S = n(388032),
     P = n(642317),
     I = n(656855);
 function N(e) {
     var t, l;
-    let { channel: o, guild: h, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: _ } = e,
+    let { channel: o, guild: h, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
         O = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
@@ -44,10 +44,10 @@ function N(e) {
         }, [o, g]);
     (0, c.$)(O);
     let j = (0, u.ZP)(o),
-        x = Array.from((0, u.uF)(j).values()),
-        I = null != (t = null == g ? void 0 : g.filter(y.lm)) ? t : [],
-        N = (e) => (t) => ([C.IIU.PLAYING, C.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === C.IIU.LISTENING,
-        w = (0, a.e7)(
+        C = Array.from((0, u.uF)(j).values()),
+        I = null != (t = null == g ? void 0 : g.filter(_.lm)) ? t : [],
+        N = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
+        Z = (0, a.e7)(
             [m.Z],
             () => {
                 let e = {};
@@ -64,7 +64,7 @@ function N(e) {
                                               members: [],
                                               activity: n
                                           };
-                            s.members.push(t), (0, d.Z)(s.activity, C.xjy.JOIN) || (s.activity = n), (e[a] = s);
+                            s.members.push(t), (0, d.Z)(s.activity, x.xjy.JOIN) || (s.activity = n), (e[a] = s);
                         }
                     }),
                     Object.values(e)
@@ -73,18 +73,18 @@ function N(e) {
             [I],
             a.pF
         );
-    return w.length + x.length === 0
+    return Z.length + C.length === 0
         ? null
         : (0, r.jsxs)(s.Ttm, {
               className: P.container,
               children: [
-                  (0, r.jsx)(Z, {
+                  (0, r.jsx)(E, {
                       channel: o,
                       isChannelSelected: b,
                       voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0
                   }),
                   (0, r.jsx)('div', { className: P.headerDivider }),
-                  x.map((e, t) => {
+                  C.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
                           v.Z,
@@ -97,7 +97,7 @@ function N(e) {
                           t
                       );
                   }),
-                  w.map((e, t) => {
+                  Z.map((e, t) => {
                       let { members: n, activity: i } = e;
                       return (0, r.jsx)(
                           v.Z,
@@ -110,7 +110,7 @@ function N(e) {
                           t
                       );
                   }),
-                  _ &&
+                  y &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('div', { className: P.headerDivider }),
@@ -178,11 +178,11 @@ function N(e) {
               ]
           });
 }
-function Z(e) {
+function E(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
-        l = (0, a.e7)([g.Z], () => !g.Z.can(C.Plq.CONNECT, t)),
+        l = (0, a.e7)([g.Z], () => !g.Z.can(x.Plq.CONNECT, t)),
         s = (0, a.e7)([b.Z], () => b.Z.hasVideo(t.id)),
-        c = (0, _.ZP)({
+        c = (0, y.ZP)({
             channel: t,
             locked: l,
             video: s,
@@ -201,7 +201,7 @@ function Z(e) {
                             video: s,
                             channel: t
                         })
-                      : (0, r.jsx)(x.Z, { userCount: i })
+                      : (0, r.jsx)(C.Z, { userCount: i })
               ]
           });
 }

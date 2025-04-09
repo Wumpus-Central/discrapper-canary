@@ -197,7 +197,7 @@ function eM(e) {
     if ((ex(e, 'shouldAutomaticallyAck called'), e.type !== ei.W.CHANNEL)) return ex(e, 'not channel read state'), !1;
     let t = F.Z.getChannel(e.channelId),
         n = null != t && t.isForumPost();
-    if (null != _.ZP.getConnectedActivityChannelId() && _.ZP.getActivityPanelMode() === et.Ez.PANEL && _.ZP.getFocusedLayout() === et.MI.NO_CHAT) return ex(e, 'In activity'), !1;
+    if (null != _.ZP.getConnectedActivityLocation() && _.ZP.getActivityPanelMode() === et.Ez.PANEL && _.ZP.getFocusedLayout() === et.MI.NO_CHAT) return ex(e, 'In activity'), !1;
     if (Y.Z.isIdle()) return ex(e, 'Is idle'), !1;
     if (!e.canTrackUnreads()) return ex(e, 'Cannot track unreads'), !1;
     if ((null == t ? void 0 : t.isForumLikeChannel()) !== !0) {

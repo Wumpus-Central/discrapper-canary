@@ -54,7 +54,7 @@ function h(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: y, background: _, showUnread: v = !1 } = e,
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: y, showUnread: v = !1 } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -75,7 +75,7 @@ function f(e) {
             return i;
         })(e, ['id', 'className', 'innerClassName', 'renderIcon', 'text', 'selected', 'trailing', 'background', 'showUnread']);
     let j = (0, o.JA)(n),
-        x = null != (t = (0, a.qg)(m)) ? t : '';
+        C = null != (t = (0, a.qg)(m)) ? t : '';
     return (0, r.jsx)('li', {
         children: (0, r.jsxs)(
             s.kL8,
@@ -85,7 +85,7 @@ function f(e) {
                     role: 'button'
                 }),
                 tag: 'div',
-                'aria-label': x,
+                'aria-label': C,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -101,7 +101,7 @@ function f(e) {
                           },
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    _,
+                    y,
                     v ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)('div', {
                         className: l()([d.link, d.basicChannelRowLink, f]),
@@ -117,7 +117,7 @@ function f(e) {
                                     'aria-hidden': !0,
                                     children: m
                                 }),
-                                y
+                                _
                             ]
                         })
                     })
