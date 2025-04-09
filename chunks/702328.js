@@ -139,7 +139,7 @@ let ep = (e) => {
             eS = (0, O.I5)(eC),
             ev = (0, S.xP)('PremiumMarketingHome'),
             eT = (0, v.C)('PremiumMarketingHome'),
-            eI = ((ev && !eS) || eT) && F,
+            eI = ((ev && !eS) || (eS && eT)) && F,
             [ey, eA] = i.useState(!1),
             [eP, eR] = i.useState(!1),
             [eD, eZ] = i.useState(!1),
@@ -244,11 +244,12 @@ let ep = (e) => {
                             className: ea.heroHeaderBackgroundStars,
                             alt: ''
                         }),
-                    (0, r.jsx)(U.Z, {
-                        premiumSubscription: eM,
-                        className: a()(L ? ea.fullscreenExistingSubscriberSpacing : ea.existingSubscriberSpacing, { [ea.zIndex1]: eX }),
-                        isFullscreen: L
-                    }),
+                    !eI &&
+                        (0, r.jsx)(U.Z, {
+                            premiumSubscription: eM,
+                            className: a()(L ? ea.fullscreenExistingSubscriberSpacing : ea.existingSubscriberSpacing, { [ea.zIndex1]: eX }),
+                            isFullscreen: L
+                        }),
                     !eI &&
                         (0, r.jsx)(eh, {
                             isFullscreen: L,
