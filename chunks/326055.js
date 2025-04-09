@@ -1,60 +1,69 @@
-t.d(n, { default: () => d }), t(388685), t(953529);
-var r = t(200651),
-    o = t(192379),
-    a = t(481060),
-    i = t(262212),
-    s = t(795338),
-    c = t(845602),
-    l = t(535396),
-    u = t(384732);
+n.d(t, { default: () => d }), n(388685), n(953529);
+var r = n(200651),
+    o = n(192379),
+    a = n(481060),
+    i = n(262212),
+    s = n(795338),
+    l = n(845602),
+    c = n(535396),
+    u = n(384732);
 function d(e) {
-    var n,
-        t,
+    var t,
+        n,
         { guildId: d, powerup: p } = e,
-        f = (function (e, n) {
+        f = (function (e, t) {
             if (null == e) return {};
-            var t,
+            var n,
                 r,
-                o = (function (e, n) {
+                o = (function (e, t) {
                     if (null == e) return {};
-                    var t,
+                    var n,
                         r,
                         o = {},
                         a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (t = a[r]), n.indexOf(t) >= 0 || (o[t] = e[t]);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
-                })(e, n);
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (t = a[r]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let [_, m] = o.useState(void 0),
-        g = o.useMemo(() => (p.skuId === l.IN ? (0, r.jsx)(c.Z, { guildId: d }) : void 0), [p, d]);
+    let [m, _] = o.useState(void 0),
+        g = o.useMemo(() => {
+            switch (p.skuId) {
+                case c.IN:
+                    return (0, r.jsx)(l.E, { guildId: d });
+                case c.If:
+                    return (0, r.jsx)(l.Z, {});
+                default:
+                    return;
+            }
+        }, [p, d]);
     return (0, r.jsxs)(
         a.Y0X,
-        ((n = (function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var t = null != arguments[n] ? arguments[n] : {},
-                    r = Object.keys(t);
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
-                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    r.forEach(function (n) {
+                    r.forEach(function (t) {
                         var r;
-                        (r = t[n]),
-                            n in e
-                                ? Object.defineProperty(e, n, {
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[n] = r);
+                                : (e[t] = r);
                     });
             }
             return e;
@@ -65,7 +74,7 @@ function d(e) {
             },
             f
         )),
-        (t = t =
+        (n = n =
             {
                 children: [
                     (0, r.jsxs)(a.hzk, {
@@ -75,9 +84,9 @@ function d(e) {
                             (0, r.jsxs)('div', {
                                 className: u.sidebar,
                                 children: [
-                                    (0, r.jsx)('div', {
-                                        className: u.powerupImageContainer,
-                                        children: (0, r.jsx)(s.m, { powerup: p })
+                                    (0, r.jsx)(s.m, {
+                                        className: u.powerupImage,
+                                        powerup: p
                                     }),
                                     (0, r.jsxs)('div', {
                                         className: u.contentContainer,
@@ -91,18 +100,18 @@ function d(e) {
                                                 variant: 'text-sm/normal',
                                                 children: p.description
                                             }),
-                                            null != _ &&
+                                            null != m &&
                                                 (0, r.jsx)(a.Text, {
                                                     className: u.error,
                                                     color: 'status-danger',
                                                     variant: 'text-sm/semibold',
-                                                    children: _
+                                                    children: m
                                                 }),
                                             (0, r.jsx)(i.ZP, {
                                                 className: u.footer,
                                                 guildId: d,
                                                 powerup: p,
-                                                onError: m
+                                                onError: _
                                             })
                                         ]
                                     })
@@ -122,17 +131,17 @@ function d(e) {
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
-            : (function (e, n) {
-                  var t = Object.keys(e);
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var r = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, r);
+                      n.push.apply(n, r);
                   }
-                  return t;
-              })(Object(t)).forEach(function (e) {
-                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        n)
+        t)
     );
 }
