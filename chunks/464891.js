@@ -260,6 +260,7 @@ function X(e) {
                           [D.a.BADGES]: k
                       },
                       renderRemixTag: !0,
+                      previewGuildId: i,
                       preview: O
                   }),
                   s &&

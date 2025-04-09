@@ -12,14 +12,14 @@ var n = r(200651),
     p = r(30804);
 let Z = h.memo(function (e) {
     var t, r, h, v;
-    let { message: Z, channel: u, compact: M, className: d, isGroupStart: b, hideSimpleEmbedContent: H = !0, disableInteraction: y, preview: V, author: j } = e,
-        O = null != (t = Z.getGuildId()) ? t : void 0,
-        g = (0, o.Z)(j),
-        m = (0, l.A)((null != (r = Z.editedTimestamp) ? r : Z.timestamp).valueOf()),
-        { content: x } = (0, s.Z)(Z, {
+    let { message: Z, channel: u, compact: M, className: d, isGroupStart: b, hideSimpleEmbedContent: H = !0, disableInteraction: y, previewGuildId: V, preview: j, author: O } = e,
+        g = null != (t = null != V ? V : Z.getGuildId()) ? t : void 0,
+        m = (0, o.Z)(O),
+        x = (0, l.A)((null != (r = Z.editedTimestamp) ? r : Z.timestamp).valueOf()),
+        { content: w } = (0, s.Z)(Z, {
             hideSimpleEmbedContent: H,
-            allowList: m,
-            allowHeading: m,
+            allowList: x,
+            allowHeading: x,
             allowLinks: !0,
             previewLinkTarget: !0
         });
@@ -59,8 +59,7 @@ let Z = h.memo(function (e) {
             (v = v =
                 {
                     channel: u,
-                    guildId: void 0,
-                    preview: V
+                    guildId: g
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(h, Object.getOwnPropertyDescriptors(v))
@@ -76,10 +75,10 @@ let Z = h.memo(function (e) {
                   }),
             h)
         ),
-        childrenMessageContent: (0, c.Z)(e, x),
+        childrenMessageContent: (0, c.Z)(e, w),
         disableInteraction: y,
-        authorHasGradientRole: g,
-        guildId: O,
-        preview: V
+        authorHasGradientRole: m,
+        guildId: g,
+        preview: j
     });
 });
