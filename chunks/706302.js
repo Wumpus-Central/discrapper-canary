@@ -8,6 +8,7 @@ function l(e) {
             applicationId: n,
             botUserId: l
         }),
-        o = (0, r.Z)({ context: t });
-    return a && null != l && !o;
+        o = (0, r.Z)({ context: t }),
+        c = 'contextless' === t.type;
+    return a && null != l && !o && !c;
 }
