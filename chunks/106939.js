@@ -22,8 +22,8 @@ var r = n(200651),
     _ = n(984370),
     E = n(797614),
     j = n(108427),
-    O = n(210887),
-    C = n(695346),
+    C = n(210887),
+    O = n(695346),
     S = n(594174),
     v = n(626135),
     T = n(260722),
@@ -157,7 +157,7 @@ function Y() {
         h = (0, N.Dt)(),
         f = S.default.getCurrentUser(),
         _ = null != e,
-        O = s && null != f && !_;
+        C = s && null != f && !_;
     (0, g.ZP)(() => {
         (0, j.e)('family-center'),
             T.ZP.initialPageLoad(),
@@ -167,15 +167,15 @@ function Y() {
                     forceTrack: !0
                 });
     });
-    let C = {
+    let O = {
             isConsideredAdult: e,
             numOfAcceptedRequests: t,
             selectedTab: l,
             selectedTeenId: a
         },
-        D = i.useRef(C);
+        D = i.useRef(O);
     return (i.useEffect(() => {
-        D.current = C;
+        D.current = O;
     }),
     i.useEffect(() => {
         if (s && _) {
@@ -191,9 +191,9 @@ function Y() {
         }
     }, [s, _]),
     i.useEffect(() => {
-        O && (0, p.mN)(L.L0.FAMILY_CENTER);
-    }, [O]),
-    O)
+        C && (0, p.mN)(L.L0.FAMILY_CENTER);
+    }, [C]),
+    C)
         ? null
         : (0, r.jsxs)('main', {
               className: V.container,
@@ -222,7 +222,7 @@ function K() {
         s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
         _ = (0, A.M)(),
-        D = (0, c.e7)([O.Z], () => O.Z.theme),
+        D = (0, c.e7)([C.Z], () => C.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
         G = (0, N.Dt)(),
         H = S.default.getCurrentUser(),
@@ -263,8 +263,8 @@ function K() {
             }
         }, [l, Y]),
         i.useEffect(() => {
-            let e = C.Ex.getSetting();
-            l && t && void 0 === e && C.Ex.updateSetting(!0);
+            let e = O.Ex.getSetting();
+            l && t && void 0 === e && O.Ex.updateSetting(!0);
         }, [l, t]),
         i.useEffect(() => {
             K && (0, p.mN)(L.L0.FAMILY_CENTER);

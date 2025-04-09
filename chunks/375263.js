@@ -1,4 +1,4 @@
-n.d(t, { O: () => f });
+n.d(t, { O: () => h });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
@@ -11,12 +11,12 @@ var r = n(200651),
     m = n(486324),
     g = n(200299),
     p = n(388032),
-    h = n(615511);
-function f(e) {
+    f = n(615511);
+function h(e) {
     let { guild: t, canManageGuild: n } = e,
-        f = t.hasFeature(d.oNc.BANNER),
+        h = t.hasFeature(d.oNc.BANNER),
         b = t.hasFeature(d.oNc.ANIMATED_BANNER),
-        x = f && n,
+        x = h && n,
         { analyticsLocations: j } = (0, a.ZP)(),
         N = i.useCallback(
             (e, n) => {
@@ -24,7 +24,7 @@ function f(e) {
             },
             [j, t]
         ),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -38,7 +38,7 @@ function f(e) {
             },
             [j, t]
         ),
-        v = (0, r.jsx)(l.Z, {
+        _ = (0, r.jsx)(l.Z, {
             image: t.banner,
             makeURL: (e) =>
                 null != e
@@ -69,13 +69,13 @@ function f(e) {
                 }),
             enabled: x
         });
-    return f
-        ? v
+    return h
+        ? _
         : (0, r.jsx)(s.P3F, {
               'aria-hidden': !0,
               tabIndex: -1,
-              className: h.upsell,
-              onClick: _,
-              children: v
+              className: f.upsell,
+              onClick: v,
+              children: _
           });
 }

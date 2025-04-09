@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(217472),
     g = n(651390),
     p = n(981631),
-    h = n(388032),
-    f = n(52930);
+    f = n(388032),
+    h = n(52930);
 function b(e) {
     let { requireTerms: t, rules: n } = e,
         s = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
@@ -37,22 +37,22 @@ function b(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: f.headerContainer,
+                className: h.headerContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: f.headerText,
+                        className: h.headerText,
                         children: [
                             (0, r.jsx)(l.X6, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: h.NW.string(h.t.d21uOj)
+                                children: f.NW.string(f.t.d21uOj)
                             }),
                             (0, r.jsx)(l.xv, {
                                 tag: 'p',
                                 variant: 'text-sm/medium',
                                 color: 'text-secondary',
-                                className: f.bodyText,
-                                children: h.NW.string(h.t.SzpUBA)
+                                className: h.bodyText,
+                                children: f.NW.string(f.t.SzpUBA)
                             })
                         ]
                     }),
@@ -65,15 +65,15 @@ function b(e) {
             }),
             t && (0, r.jsx)(g.c, { guildId: s.id }),
             (0, r.jsx)('div', {
-                className: a()(f.rules, { [f.disabled]: !t }),
+                className: a()(h.rules, { [h.disabled]: !t }),
                 children: (0, r.jsxs)('div', {
                     inert: t ? void 0 : '',
                     children: [
                         (0, r.jsx)(l.X6, {
                             variant: 'text-xs/bold',
                             color: 'text-muted',
-                            className: f.rulesHeader,
-                            children: h.NW.string(h.t.XcAzbm)
+                            className: h.rulesHeader,
+                            children: f.NW.string(f.t.XcAzbm)
                         }),
                         (0, r.jsx)(d.k, {
                             guild: s,

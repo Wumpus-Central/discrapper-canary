@@ -18,12 +18,12 @@ var i = n(442837),
 function N(e) {
     var t;
     let { app: n, currentSubscription: g, currentListing: h, alternativeListings: N, navigateToHome: _, subscriptionGroup: E, renewalSkuId: j } = e,
-        O = (0, a.y)(n, 100),
-        C = (0, m.KK)(E.flags),
-        S = C ? s.QTo : s.tBG,
-        v = C ? f.NW.string(f.t['46YF2N']) : f.NW.string(f.t.fFyGiI),
+        C = (0, a.y)(n, 100),
+        O = (0, m.KK)(E.flags),
+        S = O ? s.QTo : s.tBG,
+        v = O ? f.NW.string(f.t['46YF2N']) : f.NW.string(f.t.fFyGiI),
         T = null == (t = g.metadata) ? void 0 : t.application_subscription_guild_id,
-        I = (0, i.e7)([d.Z], () => (C && null != T ? d.Z.getGuild(T) : void 0), [T, C]),
+        I = (0, i.e7)([d.Z], () => (O && null != T ? d.Z.getGuild(T) : void 0), [T, O]),
         y = (0, i.e7)(
             [u.Z],
             () => {
@@ -37,9 +37,9 @@ function N(e) {
             (0, r.jsxs)('div', {
                 className: b.header,
                 children: [
-                    null != O &&
+                    null != C &&
                         (0, r.jsx)(s.Eep, {
-                            src: O.href,
+                            src: C.href,
                             imageClassName: b.appIcon,
                             width: 48,
                             height: 48

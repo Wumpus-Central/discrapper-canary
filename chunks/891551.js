@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(434580);
 function m(e) {
     let { className: t, iconClassName: n, sliderClassName: i, userId: m, context: g, currentWindow: b = window, location: _ } = e,
-        { currentVolume: C, muted: y } = (0, o.cj)([u.Z], () => ({
+        { currentVolume: y, muted: C } = (0, o.cj)([u.Z], () => ({
             currentVolume: u.Z.getLocalVolume(m, g),
             muted: u.Z.isLocalMute(m, g)
         }));
@@ -24,14 +24,14 @@ function m(e) {
             iconClassName: l()(n, f.controlIcon),
             sliderClassName: i,
             className: t,
-            value: (0, d.P)(C),
-            muted: y,
+            value: (0, d.P)(y),
+            muted: C,
             maxValue: p.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && y && a.Z.toggleLocalMute(m, g), a.Z.setLocalVolume(m, (0, d.A)(e), g);
+                e > 0 && C && a.Z.toggleLocalMute(m, g), a.Z.setLocalVolume(m, (0, d.A)(e), g);
             },
             onToggleMute: () => {
-                null != _ && (0, s.v)(_, s.d.VOLUME, y), a.Z.toggleLocalMute(m, g);
+                null != _ && (0, s.v)(_, s.d.VOLUME, C), a.Z.toggleLocalMute(m, g);
             }
         })
     });

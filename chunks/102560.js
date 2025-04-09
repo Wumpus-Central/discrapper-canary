@@ -14,15 +14,15 @@ var r = n(200651),
 let p = (e) => {
     let { guild: t, transitionState: n, onClose: o } = e,
         [p, f] = l.useState(7),
-        [h, j] = l.useState(null),
-        [g, x] = l.useState([]),
-        y = l.useCallback(async () => {
-            j(null), j(await c.Z.updateEstimate(t.id, p, g));
-        }, [p, t.id, g]);
+        [h, g] = l.useState(null),
+        [j, x] = l.useState([]),
+        O = l.useCallback(async () => {
+            g(null), g(await c.Z.updateEstimate(t.id, p, j));
+        }, [p, t.id, j]);
     l.useEffect(() => {
-        y();
-    }, [y]);
-    let v = (0, i.Wu)(
+        O();
+    }, [O]);
+    let y = (0, i.Wu)(
         [C.Z, d.Z],
         () => {
             let e = C.Z.getHighestRole(t);
@@ -82,9 +82,9 @@ let p = (e) => {
                             children: (0, r.jsx)(s.VcW, {
                                 maxVisibleItems: 10,
                                 multi: !0,
-                                value: g,
+                                value: j,
                                 onChange: (e) => x(e),
-                                options: v
+                                options: y
                             })
                         })
                     }),
@@ -92,7 +92,7 @@ let p = (e) => {
                         type: s.R94.Types.DESCRIPTION,
                         className: b.spacing,
                         children:
-                            g.length > 0
+                            j.length > 0
                                 ? m.NW.format(m.t['5WxHHh'], {
                                       members: h,
                                       days: p
@@ -108,7 +108,7 @@ let p = (e) => {
                 children: [
                     (0, r.jsx)(s.zxk, {
                         onClick: () => {
-                            c.Z.prune(t.id, p, g), o();
+                            c.Z.prune(t.id, p, j), o();
                         },
                         children: m.NW.string(m.t['2mIlKS'])
                     }),

@@ -1,5 +1,5 @@
 n.d(t, {
-    GF: () => C,
+    GF: () => O,
     ZP: () => v,
     yo: () => S
 }),
@@ -104,7 +104,7 @@ function j(e) {
               ]
           });
 }
-function O(e) {
+function C(e) {
     let { setting: t, userIds: n, listType: s } = e,
         [a, l] = i.useState(5);
     return (0, r.jsx)(h.U, {
@@ -149,9 +149,9 @@ function O(e) {
         })
     });
 }
-function C() {
+function O() {
     let e = (0, l.Wu)([m.Z], () => m.Z.getBlockedIDs());
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(C, {
         setting: b.s6.BLOCKED_USERS,
         userIds: e,
         listType: 'blocked'
@@ -159,7 +159,7 @@ function C() {
 }
 function S() {
     let e = (0, l.Wu)([m.Z], () => m.Z.getIgnoredIDs());
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(C, {
         setting: b.s6.IGNORED_USERS,
         userIds: e,
         listType: 'ignored'
@@ -175,7 +175,7 @@ function v() {
                 header: x.NW.string(x.t['3wRorq']),
                 description: x.NW.format(x.t['0aNQo6'], { helpArticle: p.Z.getArticleURL(N.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
             }),
-            (0, r.jsx)(C, {}),
+            (0, r.jsx)(O, {}),
             (0, r.jsx)(S, {})
         ]
     });

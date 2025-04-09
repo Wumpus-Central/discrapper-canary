@@ -20,9 +20,9 @@ let x = () => {
             animateOnHover: !0
         }),
         x = (0, s.Fg)(),
-        f = (0, i.ap)(x),
-        h = a.ZP.getName(e),
-        m = f ? d.Z : c.Z;
+        h = (0, i.ap)(x),
+        f = a.ZP.getName(e),
+        j = h ? d.Z : c.Z;
     return null == e
         ? null
         : (0, r.jsxs)('div', {
@@ -69,9 +69,9 @@ let x = () => {
                   (0, r.jsx)(l.Text, {
                       variant: 'text-xs/bold',
                       className: _.bannerHeader,
-                      children: p.NW.format(p.t.oxhCOj, { userName: h })
+                      children: p.NW.format(p.t.oxhCOj, { userName: f })
                   }),
-                  (0, r.jsx)(m, { className: _.bannerIcon })
+                  (0, r.jsx)(j, { className: _.bannerIcon })
               ]
           });
 };

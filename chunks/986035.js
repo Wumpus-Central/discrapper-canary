@@ -12,10 +12,10 @@ let d = function (e) {
     i.useEffect(() => {
         (0, s.YT)(g, b, _);
     }, [g, b, _]);
-    let C = i.useCallback(() => {
+    let y = i.useCallback(() => {
             (0, s.qd)(s.iP.NSFW_CHANNEL_DISAGREE_CTA, g, b, _), null == h || h();
         }, [h, g, b, _]),
-        y = i.useCallback(() => {
+        C = i.useCallback(() => {
             (0, s.qd)(s.iP.NSFW_CHANNEL_AGREE_CTA, g, b, _), null == p || p();
         }, [p, g, b, _]);
     return (0, r.jsxs)(a.Kqy, {
@@ -43,14 +43,14 @@ let d = function (e) {
                     null != d && null != h
                         ? (0, r.jsx)(a.zxk, {
                               color: a.Ttl.PRIMARY,
-                              onClick: C,
+                              onClick: y,
                               children: d
                           })
                         : null,
                     null != l && null != p
                         ? (0, r.jsx)(a.zxk, {
                               color: m,
-                              onClick: y,
+                              onClick: C,
                               children: l
                           })
                         : null

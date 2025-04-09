@@ -11,9 +11,9 @@ var r = n(200651),
     m = n(388032),
     g = n(932270),
     p = n(130116);
-function h(e) {
-    let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: s, minGames: o = 1, error: h } = e,
-        { options: f, matchSorterOptions: b } = (0, c.h)(),
+function f(e) {
+    let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: s, minGames: o = 1, error: f } = e,
+        { options: h, matchSorterOptions: b } = (0, c.h)(),
         x = i.useMemo(() => Array.from(t), [t]),
         j = i.useCallback(
             (e) => {
@@ -29,18 +29,18 @@ function h(e) {
             },
             [n, t, s]
         ),
-        _ = i.useCallback(() => null, []);
+        v = i.useCallback(() => null, []);
     return (0, r.jsx)('div', {
         className: g.inputContainer,
         children: (0, r.jsxs)(l.xJW, {
-            error: h,
+            error: f,
             children: [
                 (0, r.jsx)(l.VcW, {
                     multi: !0,
                     hidePills: !0,
                     autoFocus: !0,
                     wrapperClassName: a()(p.input, g.input),
-                    options: f,
+                    options: h,
                     value: x,
                     placeholder: m.NW.string(m.t.acyezc),
                     onChange: j,
@@ -48,7 +48,7 @@ function h(e) {
                     matchSorterOptions: b,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: g.pills,
-                    renderCustomPill: _
+                    renderCustomPill: v
                 }),
                 x.length > 0 &&
                     (0, r.jsxs)('div', {
@@ -137,18 +137,18 @@ function h(e) {
         })
     });
 }
-function f(e) {
+function h(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: s } = e,
         { topGames: a, tryFetchTopGames: c } = (0, o.I)(),
         u = a.get(t),
-        [p, h] = i.useState(!1);
+        [p, f] = i.useState(!1);
     i.useEffect(() => {
-        h(!0),
+        f(!0),
             c(t).finally(() => {
-                h(!1);
+                f(!1);
             });
     }, [t, c]);
-    let f = i.useMemo(() => (null == u ? [] : Object.keys(u).sort((e, t) => u[t].score - u[e].score)), [u]),
+    let h = i.useMemo(() => (null == u ? [] : Object.keys(u).sort((e, t) => u[t].score - u[e].score)), [u]),
         b = i.useCallback(
             (e) => {
                 let t = new Set(n);
@@ -158,7 +158,7 @@ function f(e) {
         );
     return p && null == u
         ? (0, r.jsx)(l.$jN, { className: g.loadingSpinner })
-        : null == f || 0 === f.length
+        : null == h || 0 === h.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -173,7 +173,7 @@ function f(e) {
                             }),
                             (0, r.jsx)('div', {
                                 className: g.gamesList,
-                                children: f.map((e) =>
+                                children: h.map((e) =>
                                     (0, r.jsx)(
                                         d.Z,
                                         {
@@ -208,7 +208,7 @@ let b = (e) => {
                 className: p.subtitle,
                 children: n
             }),
-            (0, r.jsx)(h, {
+            (0, r.jsx)(f, {
                 minGames: o,
                 gameApplicationIds: s,
                 preventGameRemoval: m,
@@ -217,7 +217,7 @@ let b = (e) => {
             }),
             u &&
                 null != d &&
-                (0, r.jsx)(f, {
+                (0, r.jsx)(h, {
                     guildId: d,
                     selectedGameApplicationIds: s,
                     onUpdateGames: i

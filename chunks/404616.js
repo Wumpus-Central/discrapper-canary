@@ -32,8 +32,8 @@ var i = n(200651),
     x = n(824578),
     S = n(95398),
     _ = n(247206),
-    C = n(406432),
-    E = n(169525),
+    E = n(406432),
+    C = n(169525),
     N = n(566006),
     P = n(255269),
     R = n(937889),
@@ -130,7 +130,7 @@ let ea = 72,
                 null == r || r(T.current, t);
             }, [T, r, t]);
         let _ = o.useRef(null),
-            { handleLeftClick: C, handleRightClick: E } = (0, Q.Z)({
+            { handleLeftClick: E, handleRightClick: C } = (0, Q.Z)({
                 facepileRef: _,
                 goToThread: n,
                 channel: m
@@ -160,17 +160,17 @@ let ea = 72,
         return (0, i.jsxs)('div', {
             ref: T,
             'data-item-id': t,
-            onClick: C,
-            onContextMenu: E,
+            onClick: E,
+            onContextMenu: C,
             className: a()(ei.container, c, { [ei.isOpen]: g }),
             children: [
                 (0, i.jsx)(
                     f.P3F,
                     er(
                         {
-                            onClick: C,
+                            onClick: E,
                             focusProps: { ringTarget: T },
-                            onContextMenu: E,
+                            onContextMenu: C,
                             'aria-label': en.NW.formatToPlainString(en.t.pgYN6e, {
                                 title: m.name,
                                 count: j
@@ -560,9 +560,9 @@ function ej(e) {
         n,
         { firstMedia: o, shouldObscure: r, obscureReason: s, shouldShowAgeVerification: l } = e,
         c = (0, p.e7)([B.Z], () => B.Z.isFocused()),
-        u = (0, C.d$)(o.src),
+        u = (0, E.d$)(o.src),
         d = M.QK.useSetting(),
-        h = (0, E.MC)(s),
+        h = (0, C.MC)(s),
         { src: m, width: g, height: b, alt: j } = o;
     if ((b > g ? (n = es) : (t = ea), l)) {
         var v;
@@ -608,11 +608,11 @@ function ej(e) {
 }
 function ev(e) {
     let { channel: t, firstMedia: n } = e,
-        [o, r] = (0, E.hL)({
+        [o, r] = (0, C.hL)({
             media: n,
             channel: t
         }),
-        a = (0, _.m8)() && r === E.wk.EXPLICIT_CONTENT;
+        a = (0, _.m8)() && r === C.wk.EXPLICIT_CONTENT;
     return (0, i.jsx)(f.Rny, {
         enabled: !0,
         children: (0, i.jsxs)('div', {

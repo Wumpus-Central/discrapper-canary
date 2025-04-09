@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(953529);
+n.d(t, { Z: () => h }), n(953529);
 var r,
     i = n(442837),
     s = n(570140),
@@ -39,7 +39,7 @@ function p(e) {
     } else g = d = c;
     m = !1;
 }
-class h extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(a.Z);
     }
@@ -58,8 +58,8 @@ class h extends (r = i.ZP.Store) {
         };
     }
 }
-o(h, 'displayName', 'WelcomeScreenSettingsStore');
-let f = new h(s.Z, {
+o(f, 'displayName', 'WelcomeScreenSettingsStore');
+let h = new f(s.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: p,
     WELCOME_SCREEN_UPDATE: p,
     WELCOME_SCREEN_SETTINGS_RESET: function () {

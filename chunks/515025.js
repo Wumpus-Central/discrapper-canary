@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(981631),
     g = n(30513),
     p = n(200299),
-    h = n(388032),
-    f = n(722733);
+    f = n(388032),
+    h = n(722733);
 function b(e) {
     let { guild: t, canManageGuild: n } = e,
         b = t.hasFeature(m.oNc.INVITE_SPLASH),
@@ -21,7 +21,7 @@ function b(e) {
         N = i.useCallback((e) => {
             d.Z.updateGuild({ splash: e });
         }, []),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -35,7 +35,7 @@ function b(e) {
             },
             [j, t]
         ),
-        v = (0, r.jsx)(o.Z, {
+        _ = (0, r.jsx)(o.Z, {
             image: t.splash,
             makeURL: (e) =>
                 null != e
@@ -46,18 +46,18 @@ function b(e) {
                     : null,
             disabled: !x,
             onChange: N,
-            hint: h.NW.string(h.t.uPvxqK),
+            hint: f.NW.string(f.t.uPvxqK),
             enabled: x,
             maxFileSizeBytes: p.B,
             onFileSizeError: () => (0, l.Z)(p.B)
         });
     return b
-        ? v
+        ? _
         : (0, r.jsx)(s.P3F, {
               'aria-hidden': !0,
               tabIndex: -1,
-              className: f.upsell,
-              onClick: _,
-              children: v
+              className: h.upsell,
+              onClick: v,
+              children: _
           });
 }

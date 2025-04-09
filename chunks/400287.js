@@ -25,8 +25,8 @@ function x() {
         _ = p.R$.useSetting(),
         E = p.cC.useSetting(),
         j = p.vF.useSetting(),
-        O = p.H1.useSetting(),
-        C = p.ev.useSetting(),
+        C = p.H1.useSetting(),
+        O = p.ev.useSetting(),
         S = p.x4.useSetting(),
         v = p.RS.useSetting(),
         T = p.NA.useSetting(),
@@ -66,7 +66,7 @@ function x() {
                         setting: h.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, r.jsx)(a.j7V, {
                             className: s()(N.marginTop8, N.marginBottom40),
-                            value: O,
+                            value: C,
                             note: b.NW.string(b.t.T0rbtL),
                             onChange: p.H1.updateSetting,
                             children: b.NW.string(b.t['w8j+yc'])
@@ -112,7 +112,7 @@ function x() {
                         setting: h.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, r.jsx)(a.j7V, {
                             className: N.marginBottom40,
-                            value: C,
+                            value: O,
                             note: d.Z.parse(b.NW.string(b.t['20dvub'])),
                             onChange: p.ev.updateSetting,
                             children: b.NW.string(b.t['79qal5'])

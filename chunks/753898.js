@@ -40,8 +40,8 @@ function _(e) {
         g = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = null != (t = (0, s.ZP)(d)) ? t : '',
         {
-            avatarDecorationSrc: C,
-            eventHandlers: y,
+            avatarDecorationSrc: y,
+            eventHandlers: C,
             isAnimating: x
         } = (0, h.Z)({
             user: m,
@@ -74,7 +74,7 @@ function _(e) {
                     });
             }
             return e;
-        })({ channelId: d.id }, y)),
+        })({ channelId: d.id }, C)),
         (c = c =
             {
                 children: [
@@ -92,7 +92,7 @@ function _(e) {
                                   'aria-label': _,
                                   size: l.EFr.SIZE_80,
                                   src: (0, a.x)(d, 80, e),
-                                  avatarDecoration: C
+                                  avatarDecoration: y
                               });
                     })(),
                     (0, r.jsx)(f.Ot, { children: _ }),

@@ -17,10 +17,10 @@ var r = n(200651),
 let _ = function (e) {
     let { participants: t, channel: n, hasConnectPermission: l } = e,
         _ = t.filter(m.Io),
-        C = (0, d.J)(n.guild_id),
-        y = i.useCallback(() => {
-            C ? (0, u.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, C]),
+        y = (0, d.J)(n.guild_id),
+        C = i.useCallback(() => {
+            y ? (0, u.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, y]),
         x = (0, c.Q3)('ChannelCallEmpty'),
         v = (0, a._q$)('ChannelCallEmpty'),
         j = 4 === _.length ? 2 : 3;
@@ -81,7 +81,7 @@ let _ = function (e) {
                 disabled: !l,
                 className: o()(b.joinButton, { [b.roundButton]: !x }),
                 color: l ? (x ? a.zxk.Colors.WHITE : a.zxk.Colors.GREEN) : a.zxk.Colors.PRIMARY,
-                onClick: y,
+                onClick: C,
                 size: a.zxk.Sizes.MEDIUM,
                 children: l ? g.NW.string(g.t['96ANUF']) : g.NW.string(g.t.TVBCKS)
             })

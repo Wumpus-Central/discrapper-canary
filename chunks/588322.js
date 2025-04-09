@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(703558),
     b = n(430824),
     _ = n(228392),
-    C = n(388032),
-    y = n(43200);
+    y = n(388032),
+    C = n(43200);
 function x(e) {
     let { channelId: t } = e,
         x = (0, l.e7)([m.Z], () => m.Z.getChannel(t)),
@@ -40,7 +40,7 @@ function x(e) {
             }),
             (0, r.jsx)(d.ZP, {
                 toolbar: N,
-                'aria-label': C.NW.string(C.t.Pwe8tL),
+                'aria-label': y.NW.string(y.t.Pwe8tL),
                 children: (0, p.ud)({
                     channel: x,
                     parentChannel: v,
@@ -103,7 +103,7 @@ function x(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: y.chat,
+                className: C.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {

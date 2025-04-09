@@ -12,19 +12,19 @@ var r = n(200651),
     p = n(139668),
     f = n(223143),
     g = n(364111),
-    h = n(752053),
-    m = n(81136),
+    m = n(752053),
+    h = n(81136),
     _ = n(953655),
     v = n(548685),
     C = n(580914),
     x = n(963278),
-    O = n(384067),
-    y = n(215023),
+    y = n(384067),
+    O = n(215023),
     j = n(388032),
     k = n(806734);
 let S = (e) => {
         let { handleTransition: t, numVisibleItems: n, isFetchingCategories: a, tab: s } = e,
-            { noCache: c, includeUnpublished: u } = (0, m.Z)(),
+            { noCache: c, includeUnpublished: u } = (0, h.Z)(),
             {
                 isFetchingShopHome: d,
                 fetchShopHomeError: b,
@@ -35,13 +35,13 @@ let S = (e) => {
                 includeUnpublished: u,
                 includeBundles: !0
             }),
-            y = l.useCallback(() => {
+            O = l.useCallback(() => {
                 f();
             }, [f]);
         if (null != b)
-            return (0, r.jsx)(h.Z, {
-                onRetry: y,
-                errorOrigin: h.i.SHOP_PAGE,
+            return (0, r.jsx)(m.Z, {
+                onRetry: O,
+                errorOrigin: m.i.SHOP_PAGE,
                 errorMessage: b.message
             });
         if (d || 0 === p.length)
@@ -109,7 +109,7 @@ let S = (e) => {
                     break;
                 case i.z.WIDE_BANNER:
                     c = (0, r.jsx)(
-                        O.Z,
+                        y.Z,
                         {
                             handleTransition: t,
                             wideBannerBlock: e,
@@ -146,15 +146,15 @@ let S = (e) => {
     P = (e) => {
         var t;
         let { isFullScreen: n, handleTransition: a, numVisibleItems: i, tab: g } = e,
-            { isFetchingCategories: _, fetchCategoriesError: v, fetchPurchasesError: C, claimError: x, refreshCategories: O } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
+            { isFetchingCategories: _, fetchCategoriesError: v, fetchPurchasesError: C, claimError: x, refreshCategories: y } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
             P = null != (t = null != v ? v : C) ? t : x,
             E = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
             w = (0, b.b)('Collectibles Shop Button'),
             I = (0, p.R)('CollectiblesFeedShop'),
-            { noCache: B, includeUnpublished: N } = (0, m.Z)(),
+            { noCache: B, includeUnpublished: N } = (0, h.Z)(),
             T = l.useCallback(() => {
-                O();
-            }, [O]);
+                y();
+            }, [y]);
         if (null == E) return null;
         if (null != P) {
             let e = [];
@@ -169,9 +169,9 @@ let S = (e) => {
                 });
         }
         return null != v
-            ? (0, r.jsx)(h.Z, {
+            ? (0, r.jsx)(m.Z, {
                   onRetry: T,
-                  errorOrigin: h.i.SHOP_PAGE,
+                  errorOrigin: m.i.SHOP_PAGE,
                   errorMessage: v.message
               })
             : (0, r.jsx)('div', {
@@ -185,7 +185,7 @@ let S = (e) => {
                               isFetchingCategories: _,
                               tab: g
                           }),
-                          g !== y.AW.CATALOG &&
+                          g !== O.AW.CATALOG &&
                               i >= I &&
                               (0, r.jsxs)('div', {
                                   className: k.endOfFeed,

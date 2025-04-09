@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(692547),
     g = n(215569),
     p = n(481060),
-    h = n(484614),
-    f = n(852860),
+    f = n(484614),
+    h = n(852860),
     b = n(782568),
     x = n(367907),
     j = n(674180),
     N = n(999382),
-    _ = n(626135),
-    v = n(730647),
+    v = n(626135),
+    _ = n(730647),
     y = n(584825),
     O = n(981631),
     C = n(388032),
@@ -31,24 +31,24 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         let { guild: s, canEnable: l } = e,
             c = (0, y.YB)(s.id),
             { loading: u, updateSubscriptionsSettings: N } = (0, y.QV)(),
-            [v, P] = i.useState(s.hasFeature(O.oNc.CREATOR_STORE_PAGE)),
+            [_, P] = i.useState(s.hasFeature(O.oNc.CREATOR_STORE_PAGE)),
             [w, R] = i.useState(null != (t = null == c ? void 0 : c.store_page_primary_color) ? t : T),
             [D, Z] = i.useState(null == c ? void 0 : c.store_page_trailer_url),
-            A = null == D || null != D.match(S),
-            [k, W] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
+            k = null == D || null != D.match(S),
+            [A, W] = i.useState(null != (n = null == c ? void 0 : c.store_page_show_subscriber_count) && n),
             L = i.useRef(null == c ? void 0 : c.store_page_slug).current,
-            M = v !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            M = _ !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != A && A !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             G = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
-                v !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = v),
+                _ !== s.hasFeature(O.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = _),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && w !== T) || ((null == c ? void 0 : c.store_page_primary_color) != null && w !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = w),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
-                    k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
+                    A !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = A),
                     !d().isEmpty(e) &&
                         (await N(s.id, e),
                         'store_page_enabled' in e &&
-                            _.default.track(
+                            v.default.track(
                                 O.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
@@ -74,13 +74,13 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                             });
                                     }
                                     return e;
-                                })({ enabled: v }, (0, x.hH)(s.id))
+                                })({ enabled: _ }, (0, x.hH)(s.id))
                             ));
             },
             U = O.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(L),
             B = null != D && D === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: F } = (0, j.gX)(s.id),
-            z = F || !A;
+            z = F || !k;
         return (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(p.vwX, {
@@ -93,9 +93,9 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 }),
                 (0, r.jsx)(p.j7V, {
                     className: I.enableSwitch,
-                    value: v,
-                    disabled: F || (!v && !l),
-                    tooltipNote: v || l ? void 0 : C.NW.string(C.t.mIgfEh),
+                    value: _,
+                    disabled: F || (!_ && !l),
+                    tooltipNote: _ || l ? void 0 : C.NW.string(C.t.mIgfEh),
                     hideBorder: !0,
                     onChange: (e) => P(e),
                     children: (0, r.jsx)(p.Text, {
@@ -108,7 +108,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     title: C.NW.string(C.t.N46WOj),
                     disabled: F,
                     children: [
-                        (0, r.jsx)(h.Z, {
+                        (0, r.jsx)(f.Z, {
                             value: U,
                             className: a()({ [I.disabled]: F })
                         }),
@@ -167,15 +167,15 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         (0, r.jsx)(p.oil, {
                             value: null != D ? D : void 0,
                             onChange: (e) => Z('' === e ? null : e),
-                            error: A ? null : C.NW.string(C.t['1kL79f']),
+                            error: k ? null : C.NW.string(C.t['1kL79f']),
                             placeholder: C.NW.string(C.t['+I4gdX']),
                             className: I.trailerInputWrapper,
                             inputClassName: a()(I.trailerInput, {
-                                [I.error]: !A,
-                                [I.trailerInputWithCheckmark]: B || !A
+                                [I.error]: !k,
+                                [I.trailerInputWithCheckmark]: B || !k
                             }),
                             prefixElement:
-                                A &&
+                                k &&
                                 B &&
                                 (0, r.jsx)(p.owK, {
                                     size: 'md',
@@ -198,7 +198,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         }),
                         (0, r.jsx)(p.j7V, {
                             className: I.premiumMemberCountSwitchContainer,
-                            value: k,
+                            value: A,
                             hideBorder: !0,
                             onChange: (e) => W(e),
                             disabled: F,
@@ -240,7 +240,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     children:
                         M &&
                         (0, r.jsx)(p.oXn, {
-                            children: (0, r.jsx)(f.Z, {
+                            children: (0, r.jsx)(h.Z, {
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
@@ -256,7 +256,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
     };
 function w() {
     let e = (0, u.e7)([N.Z], () => N.Z.getGuild()),
-        t = (0, v.f)(),
+        t = (0, _.f)(),
         n = (0, y.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
         ? (0, r.jsx)(P, {
@@ -267,7 +267,7 @@ function w() {
 }
 function R() {
     let e = (0, u.e7)([N.Z], () => N.Z.getGuild());
-    return (0, r.jsx)(v.l, {
+    return (0, r.jsx)(_.l, {
         guildId: null == e ? void 0 : e.id,
         refetchOnMount: !0,
         children: (0, r.jsx)(w, {})

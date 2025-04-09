@@ -34,12 +34,12 @@ function p(e) {
     }
     return e;
 }
-let _ = {
+let h = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330
     },
-    h = {
+    _ = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330
@@ -53,16 +53,16 @@ function f(e) {
     let b = (0, o.UCu)(f),
         { name: E, rarity: C } = g,
         { color: O } = (0, c.F7)(C),
-        y = (0, i.wj)(m) ? _ : h,
+        y = (0, i.wj)(m) ? h : _,
         v = (b.size - b.offset - 2 * b.stroke) * 0.8,
-        N = b.size - b.stroke,
-        S = {
+        S = b.size - b.stroke,
+        N = {
             width: 0.4 * v,
             height: 0.4 * v
         },
         x = {
-            width: S.width + 1,
-            height: S.height + 1,
+            width: N.width + 1,
+            height: N.height + 1,
             right: b.stroke + 1,
             bottom: b.stroke + 1,
             padding: 0
@@ -70,8 +70,8 @@ function f(e) {
     return (0, r.jsxs)('div', {
         className: d.container,
         style: {
-            width: N,
-            height: N,
+            width: S,
+            height: S,
             padding: b.stroke
         },
         'aria-label': ''.concat(null != (t = E()) ? t : ''),
@@ -96,7 +96,7 @@ function f(e) {
                                 size: 'custom',
                                 color: (0, s.Lq)(y.locked)
                             },
-                            S
+                            N
                         )
                     )
                 }),
@@ -105,7 +105,7 @@ function f(e) {
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
                     style: x,
-                    children: (0, r.jsx)(a.Z, p({ className: d.confettiIcon }, S))
+                    children: (0, r.jsx)(a.Z, p({ className: d.confettiIcon }, N))
                 })
         ]
     });

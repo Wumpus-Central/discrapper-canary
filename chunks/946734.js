@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(430824),
     b = n(594174),
     _ = n(251625),
-    C = n(823379),
-    y = n(665149),
+    y = n(823379),
+    C = n(665149),
     x = n(981631),
     v = n(228168),
     j = n(388032),
@@ -89,7 +89,7 @@ class N {
                                         var t;
                                         return null == (t = g.Z.getGuild(e)) ? void 0 : t.name;
                                     })
-                                    .filter(C.lm)
+                                    .filter(y.lm)
                             ];
                         })
                         .value();
@@ -166,7 +166,7 @@ function I(e) {
         : (0, r.jsxs)(d.Gt, {
               value: f,
               children: [
-                  (0, r.jsx)(y.iz, { className: O.divider }),
+                  (0, r.jsx)(C.iz, { className: O.divider }),
                   (0, r.jsx)(s.IGR, {
                       text: j.NW.string(j.t.l1QVfn),
                       disableColor: !0,

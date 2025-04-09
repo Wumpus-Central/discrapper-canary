@@ -65,7 +65,7 @@ let E = new RegExp('https?://'.concat(null != (r = window.GLOBAL_ENV.CDN_HOST) ?
 function j(e) {
     return 'string' == typeof e.content ? e.content : S(e.content);
 }
-let O = _(x({}, d().defaultRules), {
+let C = _(x({}, d().defaultRules), {
         heading: _(x({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let r = 'h'.concat(e.level);
@@ -174,8 +174,8 @@ let O = _(x({}, d().defaultRules), {
             }
         })
     }),
-    C = d().parserFor(O),
-    S = d().reactFor(d().ruleOutput(O, 'react'));
+    O = d().parserFor(C),
+    S = d().reactFor(d().ruleOutput(C, 'react'));
 class v extends (i = a.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: i } = this.props,
@@ -186,9 +186,9 @@ class v extends (i = a.PureComponent) {
         });
     }
 }
-N(v, 'rules', O),
+N(v, 'rules', C),
     N(v, 'defaultProps', {
-        parser: C,
+        parser: O,
         output: S
     });
 let T = v;

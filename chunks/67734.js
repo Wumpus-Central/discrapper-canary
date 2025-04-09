@@ -12,14 +12,14 @@ var r = n(200651),
     g = n(388032);
 function p(e) {
     let { guild: t, canManageGuild: n, buttonClassName: p } = e,
-        { analyticsLocations: h } = (0, a.ZP)(),
-        f = t.hasFeature(c.oNc.BANNER),
+        { analyticsLocations: f } = (0, a.ZP)(),
+        h = t.hasFeature(c.oNc.BANNER),
         b = i.useCallback(
             (e) => {
                 let { imageUri: n, file: r } = e;
-                (0, o.f4)(t, h, n, r);
+                (0, o.f4)(t, f, n, r);
             },
-            [h, t]
+            [f, t]
         ),
         x = i.useCallback(
             (e) => {
@@ -27,17 +27,17 @@ function p(e) {
                     e.stopPropagation(),
                     (0, o.E6)({
                         guild: t,
-                        analyticsLocations: h,
+                        analyticsLocations: f,
                         analyticsSection: c.jXE.GUILD_BANNER,
                         analyticsObject: c.qAy.BUTTON_CTA,
                         perks: (0, d.XO)()
                     });
             },
-            [h, t]
+            [f, t]
         );
-    return f
+    return h
         ? (0, r.jsx)(s.zxk, {
-              disabled: !(f && n),
+              disabled: !(h && n),
               color: s.zxk.Colors.BRAND,
               className: p,
               onClick: () =>
@@ -49,7 +49,7 @@ function p(e) {
                           page: c.ZY5.GUILD_SETTINGS,
                           section: c.jXE.GUILD_BANNER
                       },
-                      analyticsLocations: h
+                      analyticsLocations: f
                   }),
               children: g.NW.string(g.t.yG2pUl)
           })

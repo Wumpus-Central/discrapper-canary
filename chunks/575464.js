@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(900054);
 function m(e) {
     var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: C, onClick: y, onMouseEnter: x, 'aria-setsize': v, 'aria-posinset': j } = e,
+    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, onClick: C, onMouseEnter: x, 'aria-setsize': v, 'aria-posinset': j } = e,
         O = (0, a.e7)([p.Z], () => p.Z.getStatus(i.id)),
         E = (0, o.JA)(String(i.id));
     return (0, r.jsx)(
@@ -48,7 +48,7 @@ function m(e) {
                 id: 'user-row-'.concat(m),
                 className: f.friendWrapper,
                 onClick: () => {
-                    null != y && y(i.id);
+                    null != C && C(i.id);
                 },
                 onMouseEnter: () => {
                     null != x && x(m);
@@ -59,7 +59,7 @@ function m(e) {
         (n = n =
             {
                 role: 'option',
-                'aria-selected': C,
+                'aria-selected': y,
                 'aria-setsize': v,
                 'aria-posinset': j,
                 children: (0, r.jsxs)(d.Z, {
@@ -95,7 +95,7 @@ function m(e) {
                         (0, r.jsx)(s.XZJ, {
                             displayOnly: !0,
                             size: 22,
-                            value: C,
+                            value: y,
                             className: f.checkbox
                         })
                     ]

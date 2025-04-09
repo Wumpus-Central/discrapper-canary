@@ -24,8 +24,8 @@ var o = n(200651),
 function I(e) {
     let { transitionState: t, videoEnabled: n, onEnable: I, onClose: k } = e,
         y = h.Z.getCameraComponent(),
-        B = (0, u.Dt)(),
-        P = (0, m.Z)(),
+        P = (0, u.Dt)(),
+        B = (0, m.Z)(),
         w = b.qF.useSetting(),
         [A, E] = r.useState((0, f.P)(S.default.getCurrentUser())),
         N = (0, l.O)(),
@@ -80,15 +80,15 @@ function I(e) {
             children: (0, o.jsxs)(a.Y0X, {
                 className: O.modalRoot,
                 size: a.CgR.DYNAMIC,
-                'aria-labelledby': B,
+                'aria-labelledby': P,
                 transitionState: t,
                 children: [
                     (0, o.jsxs)(a.hzk, {
-                        className: P ? O.contentWithVideoBackgrounds : O.content,
+                        className: B ? O.contentWithVideoBackgrounds : O.content,
                         scrollerRef: j,
                         children: [
                             (0, o.jsx)(a.X6q, {
-                                id: B,
+                                id: P,
                                 className: O.header,
                                 variant: 'heading-xl/semibold',
                                 children: n ? x.NW.string(x.t.LAwwbW) : x.NW.string(x.t['/HITVF'])

@@ -33,9 +33,9 @@ function m(e) {
 function g(e) {
     let { title: t, children: n, buttonLabel: s, buttonCallback: a, disabled: o } = e,
         [g, p] = i.useState(!1),
-        h = n.flatMap((e) => e.items.map((e) => e.completed)),
-        f = h.filter((e) => e).length / h.length,
-        b = (0, c.q_F)({ width: ''.concat(100 * f, '%') });
+        f = n.flatMap((e) => e.items.map((e) => e.completed)),
+        h = f.filter((e) => e).length / f.length,
+        b = (0, c.q_F)({ width: ''.concat(100 * h, '%') });
     return (0, r.jsxs)('div', {
         className: u.container,
         children: [
@@ -99,7 +99,7 @@ function g(e) {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.BRAND,
                             onClick: a,
-                            disabled: 1 !== f || o,
+                            disabled: 1 !== h || o,
                             children: s
                         })
                     ]

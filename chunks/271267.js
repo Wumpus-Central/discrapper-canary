@@ -91,15 +91,15 @@ function p(e) {
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, checkboxText: n } = e,
         { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: g } = (0, a.Z)(t.id),
-        [p, h] = i.useState(!1);
+        [p, f] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.XZJ, {
                 onChange: function () {
-                    h((e) => !e);
+                    f((e) => !e);
                 },
                 size: 20,
                 type: s.XZJ.Types.INVERTED,
@@ -127,13 +127,13 @@ function h(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { guild: t, monetizationEligibility: n } = e,
         { eligibilityLoading: i, eligibilityError: s, refreshEligibility: a, eligibility: l, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
     return c
         ? u
             ? (0, r.jsx)(o.Z, m({}, n))
-            : (0, r.jsx)(h, {
+            : (0, r.jsx)(f, {
                   guild: t,
                   checkboxText: d
               })
@@ -170,7 +170,7 @@ function b(e) {
                         children: c.NW.string(c.t['41wkMT'])
                     }),
                     (0, r.jsx)(s.LZC, { size: 24 }),
-                    (0, r.jsx)(f, {
+                    (0, r.jsx)(h, {
                         guild: t,
                         monetizationEligibility: n
                     })

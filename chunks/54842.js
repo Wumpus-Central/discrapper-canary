@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(496675),
     g = n(63063),
     p = n(981631),
-    h = n(190378),
-    f = n(388032),
+    f = n(190378),
+    h = n(388032),
     b = n(239721),
     x = n(438825),
     j = n(236140),
     N = n(37069),
-    _ = n(518513),
-    v = n(168179),
+    v = n(518513),
+    _ = n(168179),
     y = n(348986),
     O = n(930065),
     C = n(345669);
@@ -69,8 +69,8 @@ let S = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
-            header: f.NW.string(f.t.oVQF29),
-            body: f.NW.format(f.t.A6G7am, {
+            header: h.NW.string(h.t.oVQF29),
+            body: h.NW.format(h.t.A6G7am, {
                 featureHook: (e, t) =>
                     (0, r.jsx)(
                         'strong',
@@ -85,12 +85,12 @@ let S = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.PARTNER.css,
-            header: f.NW.string(f.t['0rJl9/']),
-            body: f.NW.format(f.t.XsCNk5, {
+            header: h.NW.string(h.t['0rJl9/']),
+            body: h.NW.format(h.t.XsCNk5, {
                 infoHook: () =>
                     (0, r.jsx)(c.ua7, {
-                        text: f.NW.string(f.t.kPJlTk),
-                        'aria-label': f.NW.string(f.t.kPJlTk),
+                        text: h.NW.string(h.t.kPJlTk),
+                        'aria-label': h.NW.string(h.t.kPJlTk),
                         children: (e) =>
                             (0, r.jsx)(
                                 c.d3s,
@@ -118,8 +118,8 @@ let S = () => [
         {
             icon: c.d3s,
             color: o.Z.unsafe_rawColors.RED_360.css,
-            header: f.NW.string(f.t.W2kLJC),
-            body: f.NW.string(f.t.hyNkHx)
+            header: h.NW.string(h.t.W2kLJC),
+            body: h.NW.string(h.t.hyNkHx)
         }
     ],
     T = [
@@ -136,13 +136,13 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: _,
+            iconSrc: v,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
         },
         {
-            iconSrc: v,
+            iconSrc: _,
             name: 'r/leagueoflegends',
             position: [-320, -30],
             rightAlign: !0
@@ -217,15 +217,15 @@ let S = () => [
         let { guild: t } = e,
             [n, s] = i.useState(0),
             [a, o] = i.useState(0),
-            [N, _] = i.useState(),
-            v = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
+            [N, v] = i.useState(),
+            _ = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
             y = null == N ? void 0 : N.offsetWidth,
             O = null == N ? void 0 : N.offsetHeight;
         i.useEffect(() => {
             null != y && s(y / 2), null != O && o(O / 2);
         }, [y, O, s, o]),
             i.useEffect(() => {
-                (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+                (0, d.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
         let C = () => {
             u.Z.open();
@@ -235,7 +235,7 @@ let S = () => [
             children: [
                 (0, r.jsxs)('div', {
                     className: b.banner,
-                    ref: (e) => _(e),
+                    ref: (e) => v(e),
                     children: [
                         T.map((e) =>
                             (0, r.jsx)(
@@ -261,17 +261,17 @@ let S = () => [
                 }),
                 (0, r.jsx)(c.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: f.NW.string(f.t['M/gBcH'])
+                    children: h.NW.string(h.t['M/gBcH'])
                 }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-md/normal',
                     className: b.body,
-                    children: f.NW.format(f.t['52EgsL'], { helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
+                    children: h.NW.format(h.t['52EgsL'], { helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
                 }),
                 (0, r.jsx)(c.ua7, {
-                    text: v ? null : f.NW.string(f.t['pjG+T0']),
-                    'aria-label': v ? void 0 : f.NW.string(f.t['pjG+T0']),
+                    text: _ ? null : h.NW.string(h.t['pjG+T0']),
+                    'aria-label': _ ? void 0 : h.NW.string(h.t['pjG+T0']),
                     children: (e) =>
                         (0, r.jsx)(
                             c.zxk,
@@ -280,11 +280,11 @@ let S = () => [
                                     {
                                         onClick: C,
                                         className: b.button,
-                                        disabled: !v
+                                        disabled: !_
                                     },
                                     e
                                 ),
-                                { children: f.NW.string(f.t.LhlgY2) }
+                                { children: h.NW.string(h.t.LhlgY2) }
                             )
                         )
                 }),
@@ -292,13 +292,13 @@ let S = () => [
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: f.NW.string(f.t.OzLWLC)
+                    children: h.NW.string(h.t.OzLWLC)
                 }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     className: b.body,
                     variant: 'text-sm/normal',
-                    children: f.NW.format(f.t.rjhrqK, { helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE) })
+                    children: h.NW.format(h.t.rjhrqK, { helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE) })
                 }),
                 (0, r.jsx)('div', {
                     className: b.features,

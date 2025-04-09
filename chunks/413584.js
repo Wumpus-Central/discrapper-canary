@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(481060),
     g = n(239091),
     p = n(596454),
-    h = n(493773),
-    f = n(607070),
+    f = n(493773),
+    h = n(607070),
     b = n(933557),
     x = n(471445),
     j = n(339085),
     N = n(565138),
-    _ = n(372769),
-    v = n(690221),
+    v = n(372769),
+    _ = n(690221),
     y = n(524329),
     O = n(575258),
     C = n(514698),
@@ -31,8 +31,8 @@ var r = n(200651),
     R = n(981631),
     D = n(231338),
     Z = n(388032),
-    A = n(983459);
-function k(e) {
+    k = n(983459);
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -79,8 +79,8 @@ let L = 'WELCOME_CHANNEL',
     M = (e) => {
         var t;
         let s,
-            { guildId: l, welcomeChannel: o, onEdit: h, onChannelReorder: f, isDropHovered: N, index: _ } = e,
-            [v, y] = i.useState(!1),
+            { guildId: l, welcomeChannel: o, onEdit: f, onChannelReorder: h, isDropHovered: N, index: v } = e,
+            [_, y] = i.useState(!1),
             O = i.useRef(null),
             S = (0, u.e7)([I.Z], () => I.Z.getChannel(o.channel_id)),
             P = (0, u.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
@@ -91,19 +91,19 @@ let L = 'WELCOME_CHANNEL',
                 type: L,
                 item: {
                     channel: o,
-                    index: _
+                    index: v
                 },
                 end: (e, t) => {
-                    null == e || t.didDrop() || f(e.channel, null, !0);
+                    null == e || t.didDrop() || h(e.channel, null, !0);
                 }
             }),
             [, B] = (0, d.L)({
                 accept: L,
                 hover: (e) => {
-                    f(e.channel, _, !1);
+                    h(e.channel, v, !1);
                 },
                 drop: (e) => {
-                    f(e.channel, _, !0);
+                    h(e.channel, v, !0);
                 }
             });
         return (
@@ -126,15 +126,15 @@ let L = 'WELCOME_CHANNEL',
                     : (0, r.jsx)(M, {
                           size: 'md',
                           color: 'currentColor',
-                          className: A.channelIcon
+                          className: k.channelIcon
                       })
                 : (0, r.jsx)(E.Z, {
                       width: 24,
                       height: 24,
-                      className: A.warningIcon
+                      className: k.warningIcon
                   })),
             (0, r.jsxs)('div', {
-                className: a()(A.welcomeChannel, { [A.dragging]: N }),
+                className: a()(k.welcomeChannel, { [k.dragging]: N }),
                 ref: O,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
@@ -143,13 +143,13 @@ let L = 'WELCOME_CHANNEL',
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                W(k({}, t), {
+                                W(A({}, t), {
                                     guildId: l,
                                     welcomeChannel: o,
-                                    onChannelReorder: f,
+                                    onChannelReorder: h,
                                     setShowConfirmModal: y,
-                                    onEdit: h,
-                                    index: _
+                                    onEdit: f,
+                                    index: v
                                 })
                             );
                     });
@@ -157,7 +157,7 @@ let L = 'WELCOME_CHANNEL',
                 children: [
                     s,
                     (0, r.jsxs)('div', {
-                        className: A.channelDescriptionWrapper,
+                        className: k.channelDescriptionWrapper,
                         children: [
                             (0, r.jsx)(m.Text, {
                                 variant: 'text-md/semibold',
@@ -165,12 +165,12 @@ let L = 'WELCOME_CHANNEL',
                                 children: o.description
                             }),
                             (0, r.jsxs)(m.Text, {
-                                className: w ? void 0 : A.channelWarning,
+                                className: w ? void 0 : k.channelWarning,
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 children: [
                                     (0, r.jsx)(M, {
-                                        className: A.channelTitleIcon,
+                                        className: k.channelTitleIcon,
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
@@ -190,10 +190,10 @@ let L = 'WELCOME_CHANNEL',
                                     return (t) =>
                                         (0, r.jsx)(
                                             e,
-                                            W(k({}, t), {
+                                            W(A({}, t), {
                                                 welcomeChannel: o,
                                                 guildId: l,
-                                                onSave: h
+                                                onSave: f
                                             })
                                         );
                                 },
@@ -201,9 +201,9 @@ let L = 'WELCOME_CHANNEL',
                             ),
                         children: Z.NW.string(Z.t.bt75u7)
                     }),
-                    v &&
+                    _ &&
                         (0, r.jsx)(C.Z, {
-                            onConfirm: () => h(),
+                            onConfirm: () => f(),
                             onCancel: () => y(!1),
                             channelId: o.channel_id
                         })
@@ -214,7 +214,7 @@ let L = 'WELCOME_CHANNEL',
     G = (e) => {
         let { guild: t, showCreateModal: s } = e,
             { welcomeSettings: a, originalWelcomeSettings: l } = (0, u.e7)([O.Z], () => O.Z.getSettingsProps()),
-            c = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+            c = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
             [d, g] = i.useState(null),
             [p, b] = i.useState(!1),
             [x, j] = i.useState(!1),
@@ -244,7 +244,7 @@ let L = 'WELCOME_CHANNEL',
                 null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, y.VP)({ channels: i })), n ? (G(i), g(null)) : g(t);
             },
             H = i.useRef(!1);
-        (0, h.ZP)(
+        (0, f.ZP)(
             () => (
                 null != t &&
                     s &&
@@ -254,7 +254,7 @@ let L = 'WELCOME_CHANNEL',
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    W(k({}, n), {
+                                    W(A({}, n), {
                                         guildId: t.id,
                                         onSave: B
                                     })
@@ -300,14 +300,14 @@ let L = 'WELCOME_CHANNEL',
                   tag: m.RB0.H1,
                   children: [
                       (0, r.jsx)('div', {
-                          className: A.notice,
+                          className: k.notice,
                           children: (0, r.jsxs)(m.Text, {
                               variant: 'text-md/normal',
                               children: [
-                                  (0, r.jsx)(E.Z, { className: A.noticeIcon }),
+                                  (0, r.jsx)(E.Z, { className: k.noticeIcon }),
                                   Z.NW.format(Z.t.oj2vi4, {
                                       onboardingLink: (e) =>
-                                          (0, r.jsx)(v.Z, {
+                                          (0, r.jsx)(_.Z, {
                                               onClick: V,
                                               children: e
                                           })
@@ -331,7 +331,7 @@ let L = 'WELCOME_CHANNEL',
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
-                                                        W(k({}, n), {
+                                                        W(A({}, n), {
                                                             guildId: t.id,
                                                             isPreview: !0
                                                         })
@@ -349,20 +349,20 @@ let L = 'WELCOME_CHANNEL',
                           secondLine: T ? Z.NW.string(Z.t['TA1g7+']) : Z.NW.string(Z.t.nc6r1N)
                       }),
                       (0, r.jsxs)('div', {
-                          className: A.previewContainer,
+                          className: k.previewContainer,
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: A.welcomeHeader,
+                                  className: k.welcomeHeader,
                                   children: [
                                       (0, r.jsx)(N.Z, {
                                           size: N.Z.Sizes.LARGER,
-                                          className: A.icon,
+                                          className: k.icon,
                                           guild: t,
                                           animate: !0,
                                           tabIndex: -1
                                       }),
                                       (0, r.jsx)(m.X6q, {
-                                          className: A.welcomeTitle,
+                                          className: k.welcomeTitle,
                                           variant: 'heading-xl/semibold',
                                           children: Z.NW.format(Z.t['0aydCA'], {
                                               guildName: t.name,
@@ -371,10 +371,10 @@ let L = 'WELCOME_CHANNEL',
                                                       'span',
                                                       {
                                                           children: [
-                                                              (0, r.jsx)(_.Z, {
+                                                              (0, r.jsx)(v.Z, {
                                                                   guild: t,
-                                                                  className: A.headerGuildBadge,
-                                                                  flowerStarClassName: A.flowerStar
+                                                                  className: k.headerGuildBadge,
+                                                                  flowerStarClassName: k.flowerStar
                                                               }),
                                                               (0, r.jsx)('strong', { children: e })
                                                           ]
@@ -384,9 +384,9 @@ let L = 'WELCOME_CHANNEL',
                                           })
                                       }),
                                       (0, r.jsx)('div', {
-                                          className: A.descriptionWrapper,
+                                          className: k.descriptionWrapper,
                                           children: (0, r.jsx)(m.Kx8, {
-                                              className: A.descriptionInput,
+                                              className: k.descriptionInput,
                                               placeholder: Z.NW.string(Z.t.qzZHaW),
                                               onChange: (e) => {
                                                   (0, y.VP)({ description: e });
@@ -404,14 +404,14 @@ let L = 'WELCOME_CHANNEL',
                                       })
                                   ]
                               }),
-                              (0, r.jsx)(m.$i$, { className: A.divider }),
+                              (0, r.jsx)(m.$i$, { className: k.divider }),
                               (0, r.jsxs)('div', {
-                                  className: A.welcomeChannels,
+                                  className: k.welcomeChannels,
                                   children: [
                                       (0, r.jsx)(m.vwX, { children: Z.NW.string(Z.t.euJXzc) }),
                                       (0, r.jsx)(m.Text, {
                                           variant: 'text-sm/normal',
-                                          className: A.addChannelSubtext,
+                                          className: k.addChannelSubtext,
                                           children: Z.NW.string(Z.t.VOnnn5)
                                       }),
                                       null == I
@@ -439,7 +439,7 @@ let L = 'WELCOME_CHANNEL',
                                                           return (n) =>
                                                               (0, r.jsx)(
                                                                   e,
-                                                                  W(k({}, n), {
+                                                                  W(A({}, n), {
                                                                       guildId: t.id,
                                                                       onSave: B
                                                                   })
@@ -447,7 +447,7 @@ let L = 'WELCOME_CHANNEL',
                                                       },
                                                       { onCloseRequest: () => D.Vq }
                                                   ),
-                                              className: A.addChannelButton,
+                                              className: k.addChannelButton,
                                               disabled: !0,
                                               color: m.zxk.Colors.PRIMARY,
                                               children: Z.NW.string(Z.t.U1BDe3)

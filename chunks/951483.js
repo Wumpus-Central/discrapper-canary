@@ -1,7 +1,7 @@
 n.d(t, {
     Sr: () => v,
-    Xq: () => N,
-    Zg: () => S
+    Xq: () => S,
+    Zg: () => N
 }),
     n(415506);
 var r = n(186070),
@@ -14,8 +14,8 @@ var r = n(186070),
     u = n(239748),
     d = n(337482),
     p = n(679080),
-    _ = n(908552),
-    h = n(189509),
+    h = n(908552),
+    _ = n(189509),
     f = n(673553),
     m = n(280492),
     g = n(746887),
@@ -32,8 +32,8 @@ function y() {
     });
 }
 let v = {
-        [C.EkH.SERVER_NEXT]: _.nq,
-        [C.EkH.SERVER_PREV]: _.X3,
+        [C.EkH.SERVER_NEXT]: h.nq,
+        [C.EkH.SERVER_PREV]: h.X3,
         [C.EkH.CHANNEL_NEXT]: i.tQ,
         [C.EkH.CHANNEL_PREV]: i.x5,
         [C.EkH.NAVIGATE_BACK]: i.Nx,
@@ -44,7 +44,7 @@ let v = {
         [C.EkH.MENTION_CHANNEL_PREV]: E.uX,
         [C.EkH.TOGGLE_PREVIOUS_GUILD]: i.$c,
         [C.EkH.JUMP_TO_GUILD]: o.u,
-        [C.EkH.SUBMIT]: h.z,
+        [C.EkH.SUBMIT]: _.z,
         [C.EkH.TEXTAREA_FOCUS]: f.U,
         [C.EkH.MARK_CHANNEL_READ]: l.f,
         [C.EkH.MARK_SERVER_READ]: s.l,
@@ -61,8 +61,8 @@ let v = {
         [C.EkH.CALL_START]: r.FI,
         [C.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    N = { [C.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function S() {
+    S = { [C.EkH.QUICKSWITCHER_SHOW]: c.$ };
+function N() {
     return [
         {
             description: O.NW.string(O.t.bx4Uy8),

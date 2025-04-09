@@ -12,14 +12,14 @@ var i = n(442837),
     m = n(626135),
     g = n(983135),
     p = n(8426),
-    h = n(969632),
-    f = n(570961),
+    f = n(969632),
+    h = n(570961),
     b = n(84658),
     x = n(974513),
     j = n(677892),
     N = n(981631),
-    _ = n(388032),
-    v = n(276);
+    v = n(388032),
+    _ = n(276);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function C(e) {
     let u = async function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             s
-                ? (await (0, f.$y)(t, !1),
+                ? (await (0, h.$y)(t, !1),
                   m.default.track(
                       N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
                       O(y({}, (0, l.hH)(t)), {
@@ -79,7 +79,7 @@ function C(e) {
                           location: c
                       })
                   ))
-                : (await (0, f.$y)(t, !0),
+                : (await (0, h.$y)(t, !0),
                   e && (0, p.To)(t, !0),
                   n
                       ? m.default.track(
@@ -99,7 +99,7 @@ function C(e) {
                             })
                         ));
         },
-        h = () => {
+        f = () => {
             m.default.track(
                 N.rMx.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED,
                 O(y({}, (0, l.hH)(t)), {
@@ -125,7 +125,7 @@ function C(e) {
                     },
                     disableGoodStatus: n
                 }),
-                (0, r.jsx)(d.Z, { className: v.divider }),
+                (0, r.jsx)(d.Z, { className: _.divider }),
                 (0, r.jsx)(j.ap, {
                     guildId: t,
                     onEdit: () => {
@@ -140,7 +140,7 @@ function C(e) {
                     },
                     disableGoodStatus: n
                 }),
-                (0, r.jsx)(d.Z, { className: v.divider }),
+                (0, r.jsx)(d.Z, { className: _.divider }),
                 (0, r.jsx)(j.P_, {
                     guildId: t,
                     onEdit: () => {
@@ -162,11 +162,11 @@ function C(e) {
               children: [
                   (0, r.jsx)(I, {
                       guildId: t,
-                      handlePreview: h
+                      handlePreview: f
                   }),
                   (0, r.jsx)(E, {}),
                   (0, r.jsxs)('div', {
-                      className: v.content,
+                      className: _.content,
                       children: [
                           (0, r.jsx)(S, {
                               guildId: t,
@@ -180,12 +180,12 @@ function C(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)('div', {
-                      className: v.content,
+                      className: _.content,
                       children: [
                           (0, r.jsx)(T, {
                               guildId: t,
                               handleOnboardingToggle: u,
-                              handlePreview: h
+                              handlePreview: f
                           }),
                           x
                       ]
@@ -201,17 +201,17 @@ function I(e) {
             (0, r.jsx)(s.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: v.header,
-                children: _.NW.string(_.t.mhxUsL)
+                className: _.header,
+                children: v.NW.string(v.t.mhxUsL)
             }),
             (0, r.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: v.subheader,
-                children: _.NW.string(_.t.GtWdQE)
+                className: _.subheader,
+                children: v.NW.string(v.t.GtWdQE)
             }),
             (0, r.jsxs)('div', {
-                className: v.help,
+                className: _.help,
                 children: [
                     (0, r.jsx)(s.eee, {
                         target: '_blank',
@@ -219,19 +219,19 @@ function I(e) {
                         children: (0, r.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: _.NW.string(_.t.Ok55Ki)
+                            children: v.NW.string(v.t.Ok55Ki)
                         })
                     }),
-                    (0, r.jsx)('div', { className: v.helpSeparator }),
+                    (0, r.jsx)('div', { className: _.helpSeparator }),
                     (0, r.jsx)(s.eee, {
                         onClick: n,
                         children: (0, r.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: _.NW.string(_.t['6gsjdH'])
+                            children: v.NW.string(v.t['6gsjdH'])
                         })
                     }),
-                    (0, r.jsx)('div', { className: v.helpSeparator }),
+                    (0, r.jsx)('div', { className: _.helpSeparator }),
                     (0, r.jsx)(x.Wu, { guildId: t })
                 ]
             })
@@ -241,10 +241,10 @@ function I(e) {
 function E() {
     let e = '\u2022 ';
     return (0, r.jsxs)('div', {
-        className: v.notice,
+        className: _.notice,
         children: [
             (0, r.jsx)('img', {
-                className: v.wumpus,
+                className: _.wumpus,
                 src: n(33631),
                 alt: 'wumpus'
             }),
@@ -253,18 +253,18 @@ function E() {
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        className: v.header,
-                        children: _.NW.string(_.t.WslWRE)
+                        className: _.header,
+                        children: v.NW.string(v.t.WslWRE)
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, _.NW.string(_.t.z9k21N)]
+                        children: [e, v.NW.string(v.t.z9k21N)]
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, _.NW.string(_.t.t1LelZ)]
+                        children: [e, v.NW.string(v.t.t1LelZ)]
                     })
                 ]
             })
@@ -276,19 +276,19 @@ function S(e) {
         a = (0, j.$$)(t),
         l = (0, i.e7)([o.Z], () => o.Z.getEnabled(t));
     return (0, r.jsxs)('div', {
-        className: v.review,
+        className: _.review,
         children: [
             (0, r.jsxs)('div', {
-                className: v.reviewHeaderText,
+                className: _.reviewHeaderText,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        children: l ? _.NW.string(_.t.MBdTCQ) : _.NW.string(_.t.Wslim5)
+                        children: l ? v.NW.string(v.t.MBdTCQ) : v.NW.string(v.t.Wslim5)
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: l ? _.NW.string(_.t.LokpLi) : _.NW.string(_.t.nBIyJi)
+                        children: l ? v.NW.string(v.t.LokpLi) : v.NW.string(v.t.nBIyJi)
                     })
                 ]
             }),
@@ -303,40 +303,40 @@ function S(e) {
 function T(e) {
     let { guildId: t, handleOnboardingToggle: n, handlePreview: a } = e,
         l = (0, j.$$)(t),
-        o = (0, i.e7)([h.Z], () => h.Z.getSettings()),
+        o = (0, i.e7)([f.Z], () => f.Z.getSettings()),
         d = (0, c.uo)(o);
     return (0, r.jsxs)('div', {
-        className: v.reviewHeader,
+        className: _.reviewHeader,
         children: [
             (0, r.jsxs)('div', {
-                className: v.reviewHeaderText,
+                className: _.reviewHeaderText,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        children: l ? _.NW.string(_.t.FcIcT0) : _.NW.string(_.t.R09tJy)
+                        children: l ? v.NW.string(v.t.FcIcT0) : v.NW.string(v.t.R09tJy)
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/normal',
-                        children: l ? _.NW.string(_.t.ockHVV) : _.NW.string(_.t['u/ji09'])
+                        children: l ? v.NW.string(v.t.ockHVV) : v.NW.string(v.t['u/ji09'])
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: v.reviewActions,
+                className: _.reviewActions,
                 children: [
                     (0, r.jsx)(s.zxk, {
                         size: s.zxk.Sizes.SMALL,
                         color: s.zxk.Colors.PRIMARY,
                         look: s.zxk.Looks.OUTLINED,
                         onClick: a,
-                        children: _.NW.string(_.t['6gsjdH'])
+                        children: v.NW.string(v.t['6gsjdH'])
                     }),
                     (0, r.jsx)(s.zxk, {
                         size: s.zxk.Sizes.SMALL,
                         color: s.zxk.Colors.BRAND,
                         onClick: () => n(d),
                         disabled: !l,
-                        children: _.NW.string(_.t.Yz7hsL)
+                        children: v.NW.string(v.t.Yz7hsL)
                     })
                 ]
             })
@@ -349,17 +349,17 @@ function P(e) {
     return null == n || n.verificationLevel < N.sFg.VERY_HIGH
         ? null
         : (0, r.jsxs)('div', {
-              className: v.rolesWarning,
+              className: _.rolesWarning,
               children: [
                   (0, r.jsx)(s.P4T, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: v.warningIcon
+                      className: _.warningIcon
                   }),
                   (0, r.jsx)(s.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-muted',
-                      children: _.NW.string(_.t.HVoKZ2)
+                      children: v.NW.string(v.t.HVoKZ2)
                   })
               ]
           });

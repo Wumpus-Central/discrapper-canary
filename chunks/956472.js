@@ -1,19 +1,19 @@
 n.d(t, {
-    Ip: () => p,
+    Ip: () => h,
     T4: () => u,
-    oQ: () => b
+    oQ: () => p
 }),
     n(539854);
 var r = n(932563),
-    l = n(822857),
-    a = n(594174),
-    o = n(74538),
-    i = n(215023),
-    s = n(981631);
+    i = n(822857),
+    o = n(594174),
+    l = n(74538),
+    s = n(215023),
+    a = n(981631);
 let c = (e) => {
-        var t, n, r, l;
-        let { product: a, isPremiumUser: o } = e;
-        return null != (l = null == (r = a.prices[o ? s.tuJ.PREMIUM_TIER_2 : s.tuJ.DEFAULT]) || null == (n = r.countryPrices) || null == (t = n.prices) ? void 0 : t.slice(0, 2)) ? l : [];
+        var t, n, r, i;
+        let { product: o, isPremiumUser: l } = e;
+        return null != (i = null == (r = o.prices[l ? a.tuJ.PREMIUM_TIER_2 : a.tuJ.DEFAULT]) || null == (n = r.countryPrices) || null == (t = n.prices) ? void 0 : t.slice(0, 2)) ? i : [];
     },
     u = (e) => {
         var t;
@@ -22,52 +22,52 @@ let c = (e) => {
             (t = c({
                 product: n,
                 isPremiumUser: r
-            }).find((e) => e.currency === s.pKx.DISCORD_ORB))
+            }).find((e) => e.currency === a.pKx.DISCORD_ORB))
             ? t
             : null;
     },
     d = (e) => {
         var t;
-        let { product: n, isPremiumUser: r, tab: a, orbBalance: o } = e,
+        let { product: n, isPremiumUser: r, tab: o, orbBalance: l } = e,
             u = c({
                 product: n,
                 isPremiumUser: r
             }),
-            { enabled: d } = (0, l.C)({ location: 'getShopProductPrices' }),
-            b = d ? u.find((e) => e.currency === s.pKx.DISCORD_ORB) : void 0,
-            p = u.find((e) => e.currency !== s.pKx.DISCORD_ORB),
+            { enabled: d } = (0, i.C)({ location: 'getShopProductPrices' }),
+            p = d ? u.find((e) => e.currency === a.pKx.DISCORD_ORB) : void 0,
+            h = u.find((e) => e.currency !== a.pKx.DISCORD_ORB),
+            _ = [],
             f = [],
-            g = [],
-            h = 1 === u.length && null != b,
-            m = null != b && null != o && o >= b.amount;
-        null != b && null != p ? (m ? f.push(b, p) : f.push(p, b), a === i.AW.ORBS ? g.push(b) : g.push(p, b)) : null != b ? (f.push(b), g.push(b)) : null != p && (f.push(p), a !== i.AW.ORBS && g.push(p));
-        let _ = f.length > 0 && (null == (t = f[0]) ? void 0 : t.currency) === s.pKx.DISCORD_ORB;
+            m = 1 === u.length && null != p,
+            g = null != p && null != l && l >= p.amount;
+        null != p && null != h ? (g ? _.push(p, h) : _.push(h, p), o === s.AW.ORBS ? f.push(p) : f.push(h, p)) : null != p ? (_.push(p), f.push(p)) : null != h && (_.push(h), o !== s.AW.ORBS && f.push(h));
+        let b = _.length > 0 && (null == (t = _[0]) ? void 0 : t.currency) === a.pKx.DISCORD_ORB;
         return {
-            displayPrices: g,
-            checkoutEligiblePrices: f,
-            isOrbExclusive: h,
-            hasSufficientOrbs: m,
-            shouldCheckoutWithOrbs: _
+            displayPrices: f,
+            checkoutEligiblePrices: _,
+            isOrbExclusive: m,
+            hasSufficientOrbs: g,
+            shouldCheckoutWithOrbs: b
         };
     },
-    b = (e) => {
+    p = (e) => {
         let { tab: t, product: n } = e,
-            l = (0, r.z)(),
-            i = a.default.getCurrentUser(),
-            { shouldCheckoutWithOrbs: s } = d({
+            i = (0, r.z)(),
+            s = o.default.getCurrentUser(),
+            { shouldCheckoutWithOrbs: a } = d({
                 product: n,
-                isPremiumUser: o.ZP.canUseCollectibles(i),
-                orbBalance: l,
+                isPremiumUser: l.ZP.canUseCollectibles(s),
+                orbBalance: i,
                 tab: t
             });
-        return s;
+        return a;
     };
-function p(e) {
-    let { product: t, isPremiumUser: n, tab: l } = e;
+function h(e) {
+    let { product: t, isPremiumUser: n, tab: i } = e;
     return d({
         product: t,
         isPremiumUser: n,
-        tab: l,
+        tab: i,
         orbBalance: (0, r.c)()
     });
 }

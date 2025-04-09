@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(586382),
     g = n(859481),
     p = n(981631),
-    h = n(388032),
-    f = n(50986);
+    f = n(388032),
+    h = n(50986);
 function b(e) {
     let { guild: t } = e,
         n = (0, s.e7)([o.Z], () => o.Z.hideInstantInvites),
@@ -21,7 +21,7 @@ function b(e) {
             vanityURLUses: x,
             originalVanityURLCode: j,
             errorDetails: N,
-            fetched: _
+            fetched: v
         } = (0, s.cj)([u.Z], () => ({
             vanityURLCode: u.Z.vanityURLCode,
             vanityURLUses: u.Z.vanityURLUses,
@@ -29,10 +29,10 @@ function b(e) {
             errorDetails: u.Z.errorDetails,
             fetched: u.Z.fetchedVanityURL
         })),
-        v = null == t ? void 0 : t.id;
+        _ = null == t ? void 0 : t.id;
     return (i.useEffect(() => {
-        null == v || _ || (0, d.U5)(v);
-    }, [_, v]),
+        null == _ || v || (0, d.U5)(_);
+    }, [v, _]),
     null == t)
         ? null
         : n
@@ -40,14 +40,14 @@ function b(e) {
           : (0, r.jsxs)(a.hjN, {
                 children: [
                     (0, r.jsxs)(a.vwX, {
-                        className: f.title,
-                        children: [h.NW.string(h.t['5XZKy8']), (0, r.jsx)(m.xl, { guild: t })]
+                        className: h.title,
+                        children: [f.NW.string(f.t['5XZKy8']), (0, r.jsx)(m.xl, { guild: t })]
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
-                        className: f.description,
-                        children: h.NW.format(h.t.koklFB, { helpCenterArticle: c.Z.getArticleURL(p.BhN.GUILD_VANITY_URL) })
+                        className: h.description,
+                        children: f.NW.format(f.t.koklFB, { helpCenterArticle: c.Z.getArticleURL(p.BhN.GUILD_VANITY_URL) })
                     }),
                     (0, r.jsx)(g.z, {
                         guild: t,

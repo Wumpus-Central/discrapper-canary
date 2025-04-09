@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(785145),
     E = n(981631),
     j = n(526761),
-    O = n(726985),
-    C = n(388032),
+    C = n(726985),
+    O = n(388032),
     S = n(545784);
 function v() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
@@ -51,13 +51,13 @@ function v() {
     let Z = !0,
         w = !0;
     return (
-        P && 1 === R.length && (R.includes(O.s6.PROFILE_SERVER_PROFILES) ? (D(j.NB.GUILD), (w = !1)) : R.includes(O.s6.PROFILE_USER_PROFILE) && (D(j.NB.USER_PROFILE), (Z = !1))),
+        P && 1 === R.length && (R.includes(C.s6.PROFILE_SERVER_PROFILES) ? (D(j.NB.GUILD), (w = !1)) : R.includes(C.s6.PROFILE_USER_PROFILE) && (D(j.NB.USER_PROFILE), (Z = !1))),
         (0, r.jsx)(o.Gt, {
             value: A,
             children: (0, r.jsxs)(a.y5t, {
                 component: (0, r.jsx)(a.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: C.NW.string(C.t['vi7f+v'])
+                    children: O.NW.string(O.t['vi7f+v'])
                 }),
                 children: [
                     (0, r.jsxs)(a.njP, {
@@ -73,7 +73,7 @@ function v() {
                                       {
                                           className: S.tabBarItem,
                                           id: j.NB.USER_PROFILE,
-                                          children: C.NW.string(C.t['OU3/Pj'])
+                                          children: O.NW.string(O.t['OU3/Pj'])
                                       },
                                       j.NB.USER_PROFILE
                                   )
@@ -84,7 +84,7 @@ function v() {
                                       {
                                           className: S.tabBarItem,
                                           id: j.NB.GUILD,
-                                          children: C.NW.string(C.t.kPHroa)
+                                          children: O.NW.string(O.t.kPHroa)
                                       },
                                       j.NB.GUILD
                                   )

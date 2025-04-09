@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(63063),
     E = n(74538),
     j = n(18438),
-    O = n(778825),
-    C = n(856607),
+    C = n(778825),
+    O = n(856607),
     S = n(594496),
     v = n(856768),
     T = n(981631),
@@ -83,7 +83,7 @@ function R(e) {
         }),
         R = (0, l.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
         D = (0, l.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        Z = (0, l.cj)([O.Z], () => A(y({}, O.Z.getAllPending()), { source: O.Z.getSource() })),
+        Z = (0, l.cj)([C.Z], () => A(y({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
         { source: w, pendingAvatar: k } = Z,
         W = (function (e, t) {
             if (null == e) return {};
@@ -152,7 +152,7 @@ function R(e) {
                                   })
                               ]
                           })
-                        : (0, r.jsx)(C.Z, {})
+                        : (0, r.jsx)(O.Z, {})
                 ]
             })
           : (0, r.jsx)(o.$jN, {});

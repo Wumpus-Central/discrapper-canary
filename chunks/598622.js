@@ -1,4 +1,4 @@
-n.d(t, { Q: () => h });
+n.d(t, { Q: () => f });
 var r = n(200651);
 n(192379);
 var i = n(63568),
@@ -12,7 +12,7 @@ var i = n(63568),
     m = n(3896),
     g = n(981631),
     p = n(388032);
-let h = (e) => {
+let f = (e) => {
     let { enabled: t } = i.tW.getCurrentConfig(
             {
                 guildId: e.id,

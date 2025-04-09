@@ -36,9 +36,9 @@ let N = (e) => {
         let { transitionState: n, groupListing: i, guildId: s, listing: o, subscription: x, onClose: _ } = e,
             E = (0, u.Dt)(),
             j = (0, g.YB)(s),
-            O = (null == j || null == (t = j.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(j.cover_image_asset.application_id, j.cover_image_asset, 440) : void 0,
-            { analyticsLocations: C } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: S, error: v, submitting: T } = N(C),
+            C = (null == j || null == (t = j.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(j.cover_image_asset.application_id, j.cover_image_asset, 440) : void 0,
+            { analyticsLocations: O } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+            { cancelSubscription: S, error: v, submitting: T } = N(O),
             I = async () => {
                 (await S(x.id)) && _();
             },
@@ -58,7 +58,7 @@ let N = (e) => {
                 (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)('img', {
-                            src: O,
+                            src: C,
                             alt: '',
                             className: b.headerImage
                         }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -19,9 +19,9 @@ var r = n(200651),
     _ = n(839526),
     E = n(4046),
     j = n(423741);
-let O = i.forwardRef((e, t) => {
+let C = i.forwardRef((e, t) => {
     var n, s;
-    let { className: O, isFooterVisible: C, isDarkMode: S, isReducedMotion: v, subscriptionTier: T } = e,
+    let { className: C, isFooterVisible: O, isDarkMode: S, isReducedMotion: v, subscriptionTier: T } = e,
         { analyticsLocations: I } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         y = (0, g.Ng)(),
         A = (0, g.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
@@ -32,13 +32,13 @@ let O = i.forwardRef((e, t) => {
         [w, k] = i.useState(!1);
     return (
         i.useEffect(() => {
-            !C || v || w || null == Z.current || Z.current.play();
-        }, [C, v, w]),
+            !O || v || w || null == Z.current || Z.current.play();
+        }, [O, v, w]),
         (0, r.jsx)(c.Gt, {
             value: I,
             children: (0, r.jsxs)('div', {
                 ref: t,
-                className: a()(x.container, O),
+                className: a()(x.container, C),
                 children: [
                     (0, r.jsx)(l.X6q, {
                         className: x.footerHeader,

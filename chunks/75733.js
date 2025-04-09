@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(273039),
     g = n(176354),
     p = n(434404),
-    h = n(185923),
-    f = n(388032),
+    f = n(185923),
+    h = n(388032),
     b = n(186667),
     x = n(381109);
 function j(e) {
@@ -41,10 +41,10 @@ function j(e) {
     return e;
 }
 let N = { label: '' };
-function _(e) {
+function v(e) {
     let { emoji: t, disabled: n, handleClearEmoji: s, handleSelectEmoji: a } = e,
         p = i.useRef(null),
-        f = i.useMemo(
+        h = i.useMemo(
             () =>
                 null == t || null == t.name
                     ? null
@@ -63,7 +63,7 @@ function _(e) {
         ? (0, r.jsx)(d.Z, {
               tabIndex: -1,
               active: !1,
-              renderButtonContents: f
+              renderButtonContents: h
           })
         : (0, r.jsx)(m.Z, {
               className: b.emojiWrapper,
@@ -79,7 +79,7 @@ function _(e) {
                       return (0, r.jsx)(u.Z, {
                           closePopout: t,
                           onSelectEmoji: a(t),
-                          pickerIntention: h.Hz.GUILD_PROFILE
+                          pickerIntention: f.Hz.GUILD_PROFILE
                       });
                   },
                   children: (e, t) => {
@@ -93,7 +93,7 @@ function _(e) {
                                   ref: p,
                                   tabIndex: 0,
                                   active: s,
-                                  renderButtonContents: f
+                                  renderButtonContents: h
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -113,7 +113,7 @@ function _(e) {
               })
           });
 }
-function v(e) {
+function _(e) {
     let { guildId: t, trait: n, index: s, onTraitUpdate: o, disabled: c } = e,
         d = i.useCallback(() => {
             o(t, s, { emoji: void 0 });
@@ -126,8 +126,8 @@ function v(e) {
         ),
         [m, g] = i.useState(!1),
         p = i.useCallback(() => g(!0), []),
-        h = i.useCallback(() => g(!1), []),
-        f = i.useCallback(
+        f = i.useCallback(() => g(!1), []),
+        h = i.useCallback(
             (e) => {
                 o(t, s, { label: e });
             },
@@ -138,9 +138,9 @@ function v(e) {
         'aria-disabled': c,
         disabled: c,
         value: n.label,
-        onChange: f,
+        onChange: h,
         maxLength: 24,
-        prefixElement: (0, r.jsx)(_, {
+        prefixElement: (0, r.jsx)(v, {
             emoji: x,
             disabled: c,
             handleClearEmoji: d,
@@ -149,7 +149,7 @@ function v(e) {
         className: a()(b.traitContainer, { [b.traitContainerFocused]: m }),
         inputClassName: b.traitInput,
         onFocus: p,
-        onBlur: h
+        onBlur: f
     });
 }
 let y = [0, 1, 2, 3, 4];
@@ -169,10 +169,10 @@ function O(e) {
             (0, r.jsxs)('div', {
                 className: x.sectionHeader,
                 children: [
-                    (0, r.jsx)(l.vwX, { children: f.NW.string(f.t.S6JNrq) }),
+                    (0, r.jsx)(l.vwX, { children: h.NW.string(h.t.S6JNrq) }),
                     (0, r.jsx)(l.R94, {
                         type: 'description',
-                        children: f.NW.string(f.t.l7Ig5e)
+                        children: h.NW.string(h.t.l7Ig5e)
                     })
                 ]
             }),
@@ -181,7 +181,7 @@ function O(e) {
                 children: y.map((e) => {
                     var i;
                     return (0, r.jsx)(
-                        v,
+                        _,
                         {
                             guildId: t.id,
                             trait: null != (i = s[e]) ? i : N,

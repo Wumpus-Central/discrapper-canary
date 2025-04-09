@@ -1,50 +1,50 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    c = n.n(o),
-    s = n(481060),
-    a = n(838221),
-    l = n(246364),
-    u = n(700833),
-    d = n(388032),
-    f = n(664305);
-function p(e) {
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
+    o = n(838221),
+    c = n(246364),
+    d = n(700833),
+    u = n(388032),
+    m = n(664305);
+function g(e) {
     let { onClick: t, text: n, icon: i } = e;
     return (0, r.jsx)('div', {
-        className: f.addFormFieldContainer,
-        children: (0, r.jsxs)(s.P3F, {
-            className: f.addFormField,
+        className: m.addFormFieldContainer,
+        children: (0, r.jsxs)(l.P3F, {
+            className: m.addFormField,
             onClick: t,
             children: [
                 (0, r.jsx)(i, {
-                    className: f.icon,
+                    className: m.icon,
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                (0, r.jsx)(s.R94, {
-                    className: f.addFormFieldText,
+                (0, r.jsx)(l.R94, {
+                    className: m.addFormFieldText,
                     children: n
                 })
             ]
         })
     });
 }
-let b = function (e) {
-    let { addFormField: t, showManualApprovalWarning: o, guild: b, showHeader: j } = e,
-        y = i.useCallback(
+let p = function (e) {
+    let { addFormField: t, showManualApprovalWarning: s, guild: p, showHeader: f } = e,
+        h = i.useCallback(
             (e) => {
-                (0, u.Md)(e, t, b);
+                (0, d.Md)(e, t, p);
             },
-            [t, b]
+            [t, p]
         ),
-        m = i.useCallback(
+        b = i.useCallback(
             (e) => {
-                o
-                    ? (0, s.ZDy)(async () => {
+                s
+                    ? (0, l.ZDy)(async () => {
                           let { default: t } = await n.e('54845').then(n.bind(n, 199836));
                           return (n) => {
-                              var i, o;
+                              var i, s;
                               return (0, r.jsx)(
                                   t,
                                   ((i = (function (e) {
@@ -72,9 +72,9 @@ let b = function (e) {
                                       }
                                       return e;
                                   })({}, n)),
-                                  (o = o = { onSubmit: () => y(e) }),
+                                  (s = s = { onSubmit: () => h(e) }),
                                   Object.getOwnPropertyDescriptors
-                                      ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                      ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                                       : (function (e, t) {
                                             var n = Object.keys(e);
                                             if (Object.getOwnPropertySymbols) {
@@ -82,75 +82,75 @@ let b = function (e) {
                                                 n.push.apply(n, r);
                                             }
                                             return n;
-                                        })(Object(o)).forEach(function (e) {
-                                            Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                        })(Object(s)).forEach(function (e) {
+                                            Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                                         }),
                                   i)
                               );
                           };
                       })
-                    : y(e);
+                    : h(e);
             },
-            [o, y]
+            [s, h]
         );
     return (0, r.jsxs)('div', {
-        className: c()(f.spacingContainer, f.backgroundContainer),
+        className: a()(m.spacingContainer, m.backgroundContainer),
         children: [
-            j &&
+            f &&
                 (0, r.jsx)('div', {
-                    className: f.containerTopHat,
-                    children: (0, r.jsx)(s.Text, {
-                        className: f.containerTopHatText,
+                    className: m.containerTopHat,
+                    children: (0, r.jsx)(l.Text, {
+                        className: m.containerTopHatText,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
-                        children: d.NW.string(d.t.neG9U1)
+                        children: u.NW.string(u.t.neG9U1)
                     })
                 }),
             (0, r.jsxs)('div', {
-                className: f.leftRailIconContainer,
+                className: m.leftRailIconContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: f.iconContainer,
-                        children: (0, r.jsx)(s.qJs, {
+                        className: m.iconContainer,
+                        children: (0, r.jsx)(l.qJs, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 18,
                             height: 20,
-                            className: f.icon
+                            className: m.icon
                         })
                     }),
-                    (0, r.jsxs)(s.hjN, {
+                    (0, r.jsxs)(l.hjN, {
                         children: [
-                            (0, r.jsx)(s.vwX, {
+                            (0, r.jsx)(l.vwX, {
                                 tag: 'h3',
-                                className: f.leftRailIconContainerTitle,
-                                children: d.NW.string(d.t['7v2xvr'])
+                                className: m.leftRailIconContainerTitle,
+                                children: u.NW.string(u.t['7v2xvr'])
                             }),
-                            (0, r.jsx)(s.R94, {
-                                className: f.leftRailIconContainerDescription,
-                                type: s.R94.Types.DESCRIPTION,
-                                children: d.NW.string(d.t.DyARHR)
+                            (0, r.jsx)(l.R94, {
+                                className: m.leftRailIconContainerDescription,
+                                type: l.R94.Types.DESCRIPTION,
+                                children: u.NW.string(u.t.DyARHR)
                             }),
-                            (0, r.jsx)(p, {
-                                formFieldType: l.QJ.TEXT_INPUT,
+                            (0, r.jsx)(g, {
+                                formFieldType: c.QJ.TEXT_INPUT,
                                 addFormField: t,
-                                icon: (0, s.GSL)(a.Z),
-                                text: d.NW.string(d.t.w6Q9w8),
-                                onClick: () => m(l.QJ.TEXT_INPUT)
+                                icon: (0, l.GSL)(o.Z),
+                                text: u.NW.string(u.t.w6Q9w8),
+                                onClick: () => b(c.QJ.TEXT_INPUT)
                             }),
-                            (0, r.jsx)(p, {
-                                formFieldType: l.QJ.PARAGRAPH,
+                            (0, r.jsx)(g, {
+                                formFieldType: c.QJ.PARAGRAPH,
                                 addFormField: t,
-                                icon: s.OvV,
-                                text: d.NW.string(d.t.gG0JBA),
-                                onClick: () => m(l.QJ.PARAGRAPH)
+                                icon: l.OvV,
+                                text: u.NW.string(u.t.gG0JBA),
+                                onClick: () => b(c.QJ.PARAGRAPH)
                             }),
-                            (0, r.jsx)(p, {
-                                formFieldType: l.QJ.MULTIPLE_CHOICE,
+                            (0, r.jsx)(g, {
+                                formFieldType: c.QJ.MULTIPLE_CHOICE,
                                 addFormField: t,
-                                icon: s.jE$,
-                                text: d.NW.string(d.t.ooKh3t),
-                                onClick: () => m(l.QJ.MULTIPLE_CHOICE)
+                                icon: l.jE$,
+                                text: u.NW.string(u.t.ooKh3t),
+                                onClick: () => b(c.QJ.MULTIPLE_CHOICE)
                             })
                         ]
                     })

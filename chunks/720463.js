@@ -1,6 +1,6 @@
 n.d(t, {
     BalanceWidgetEarnedOrbsCoachmarkModal: () => S,
-    E: () => C
+    E: () => O
 });
 var r = n(200651);
 n(192379);
@@ -23,7 +23,7 @@ var i = n(120356),
     _ = n(293401),
     E = n(447489),
     j = n(484885);
-let O = () => {
+let C = () => {
         let e = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
         return (0, r.jsx)('div', {
             className: _.centerContent,
@@ -51,7 +51,7 @@ let O = () => {
                   })
         });
     },
-    C = (e) => {
+    O = (e) => {
         let { descriptionText: t = N.NW.string(N.t['6If1Cw']), onClose: n = () => {} } = e;
         return (0, r.jsxs)('div', {
             className: s()(_.container, x.baseCardOutline),
@@ -63,7 +63,7 @@ let O = () => {
                     tailSpineClassName: _.coachmarkTailSpine,
                     tailTargetInnerClassName: _.coachmarkTailTargetInner
                 }),
-                (0, r.jsx)(O, {}),
+                (0, r.jsx)(C, {}),
                 (0, r.jsx)('div', {
                     className: _.contentContainer,
                     children: (0, r.jsxs)('div', {
@@ -132,7 +132,7 @@ function S(e) {
                 balance: a,
                 balanceWidgetMode: m.b.DEFAULT
             }),
-            (0, r.jsx)(C, { onClose: l })
+            (0, r.jsx)(O, { onClose: l })
         ]
     });
 }

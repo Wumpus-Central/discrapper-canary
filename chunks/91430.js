@@ -25,8 +25,8 @@ var r = n(200651),
     _ = n(925329),
     E = n(963249),
     j = n(301766),
-    O = n(594174),
-    C = n(626135),
+    C = n(594174),
+    O = n(626135),
     S = n(63063),
     v = n(74538),
     T = n(212895),
@@ -42,8 +42,8 @@ var r = n(200651),
 function W(e) {
     let t,
         { subscription: n, renewalInvoicePreview: i, fromStandaloneBillingPage: s = !0, className: l } = e,
-        c = (0, u.e7)([O.default], () => {
-            let e = O.default.getCurrentUser();
+        c = (0, u.e7)([C.default], () => {
+            let e = C.default.getCurrentUser();
             return o()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
         });
     if (0 === (0, v.uV)(n.additionalPlans)) return null;
@@ -104,7 +104,7 @@ function W(e) {
 function L() {
     return (
         i.useEffect(() => {
-            C.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_missing_payment_method' });
+            O.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_missing_payment_method' });
         }, []),
         (0, r.jsxs)('div', {
             className: k.paymentBanner,
@@ -128,7 +128,7 @@ function L() {
 function B() {
     return (
         i.useEffect(() => {
-            C.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_invalid_payment_method' });
+            O.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_invalid_payment_method' });
         }, []),
         (0, r.jsxs)('div', {
             className: k.paymentBanner,
@@ -154,7 +154,7 @@ function M(e) {
         { analyticsLocations: a } = (0, f.ZP)(h.Z.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
         i.useEffect(() => {
-            C.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_invalid_payment_method' });
+            O.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_invalid_payment_method' });
         }, []),
         (0, r.jsxs)('div', {
             className: k.paymentBanner,
@@ -324,7 +324,7 @@ let F = new Set([Z.O0b.ACTIVE, Z.O0b.PAST_DUE, Z.O0b.CANCELED, Z.O0b.PAUSE_PENDI
 function H() {
     return (
         i.useEffect(() => {
-            C.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_duplicate_subscriptions' });
+            O.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_duplicate_subscriptions' });
         }, []),
         (0, r.jsxs)('div', {
             className: k.duplicateSubscriptionsBanner,
@@ -365,14 +365,14 @@ function z(e) {
             analyticsLocation: c
         }),
         x = null == a ? void 0 : a.invalid,
-        _ = (0, u.e7)([O.default], () => {
+        _ = (0, u.e7)([C.default], () => {
             var e;
-            return null == (e = O.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
+            return null == (e = C.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
         }),
         E = d()(i.currentPeriodEnd),
-        C = null != i.paymentSourceId,
+        O = null != i.paymentSourceId,
         S = null != (t = null == N ? void 0 : N.total) ? t : 0,
-        v = !C && S > 0 && (7 >= E.diff(d()(), 'days') || i.status === Z.O0b.PAST_DUE) && !_ && !i.isPurchasedExternally,
+        v = !O && S > 0 && (7 >= E.diff(d()(), 'days') || i.status === Z.O0b.PAST_DUE) && !_ && !i.isPurchasedExternally,
         T = x && i.status === Z.O0b.PAST_DUE && !_ && !i.isPurchasedExternally,
         A = (0, y.U)(),
         P = !_ && A,

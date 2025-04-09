@@ -22,8 +22,8 @@ let E = function (e) {
     let { className: t, guildId: n, boostingVariant: i } = e,
         E = (0, a.e7)([p.Z], () => p.Z.getGuild(n), [n]),
         j = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        { fractionalState: O } = (0, o.Z)(),
-        C = (0, m.y)('guild_boosting_setting_guild_info_card', j, O),
+        { fractionalState: C } = (0, o.Z)(),
+        O = (0, m.y)('guild_boosting_setting_guild_info_card', j, C),
         S = (0, g.Z)(null == E ? void 0 : E.id).total;
     return null == E
         ? (0, r.jsx)('div', {
@@ -87,7 +87,7 @@ let E = function (e) {
                             size: l.zxk.Sizes.MEDIUM,
                             color: l.zxk.Colors.PRIMARY,
                             buttonText: x.NW.string(x.t.aBHecH),
-                            disabled: C
+                            disabled: O
                         })
                       : (0, r.jsx)(l.zxk, {
                             color: l.zxk.Colors.PRIMARY,
@@ -98,7 +98,7 @@ let E = function (e) {
                                 });
                             },
                             size: l.zxk.Sizes.MEDIUM,
-                            disabled: C,
+                            disabled: O,
                             children: x.NW.string(x.t.KLOhbG)
                         })
               ]

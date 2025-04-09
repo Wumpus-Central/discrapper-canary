@@ -1,36 +1,36 @@
 n.d(t, {
-    QC: () => p,
-    dd: () => f
+    QC: () => x,
+    dd: () => h
 }),
     n(388685);
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    o = n(481060),
-    l = n(454585),
-    s = n(476770),
+var l = n(120356),
+    a = n.n(l),
+    i = n(481060),
+    s = n(454585),
+    o = n(476770),
     c = n(388032),
     d = n(641198);
 function u(e) {
-    let { terms: t, channelId: n, className: a } = e;
+    let { terms: t, channelId: n, className: l } = e;
     return (0, r.jsx)('div', {
-        className: i()(d.termsFieldBody, a),
+        className: a()(d.termsFieldBody, l),
         children: t.map((e, t) =>
             (0, r.jsxs)(
                 'div',
                 {
                     className: d.termsRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             children: ''.concat(t + 1, '.')
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             className: d.termsRowContent,
-                            children: l.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
+                            children: s.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
                         })
                     ]
                 },
@@ -40,32 +40,32 @@ function u(e) {
     });
 }
 function m(e) {
-    let { onChange: t, checked: n, disabled: a } = e;
-    return (0, r.jsx)(o.XZJ, {
+    let { onChange: t, checked: n, disabled: l } = e;
+    return (0, r.jsx)(i.XZJ, {
         size: 24,
-        type: o.XZJ.Types.INVERTED,
+        type: i.XZJ.Types.INVERTED,
         value: n,
         onChange: t,
-        disabled: a,
+        disabled: l,
         style: { borderWidth: 2 },
         className: d.checkbox,
-        children: (0, r.jsx)(o.Text, {
+        children: (0, r.jsx)(i.Text, {
             variant: 'text-md/normal',
             children: c.NW.string(c.t['2EXfGB'])
         })
     });
 }
-function p(e) {
+function x(e) {
     let { formField: t } = e;
-    return (0, r.jsx)(s.Ih, {
-        icon: o.snC,
+    return (0, r.jsx)(o.Ih, {
+        icon: i.snC,
         text: c.NW.string(c.t['2xbmoK']),
         meetsRequirement: !!t.response
     });
 }
-let f = (e) => {
-    let { channelId: t, formField: n, onChange: a } = e;
-    return (0, r.jsxs)(s.hK, {
+let h = (e) => {
+    let { channelId: t, formField: n, onChange: l } = e;
+    return (0, r.jsxs)(o.hK, {
         title: c.NW.string(c.t.Q8OFNz),
         children: [
             (0, r.jsx)(u, {
@@ -74,7 +74,7 @@ let f = (e) => {
                 channelId: t
             }),
             (0, r.jsx)(m, {
-                onChange: a,
+                onChange: l,
                 checked: n.response
             })
         ]

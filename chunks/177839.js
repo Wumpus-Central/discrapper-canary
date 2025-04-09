@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(953529);
+n.d(t, { Z: () => C }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -77,14 +77,14 @@ let _ = (e) => (e ? N.NW.string(N.t.QX14gI) : N.NW.string(N.t.RGadQU)),
             })
         });
     },
-    O = (e) => {
+    C = (e) => {
         let { className: t, isSubscriberNitroHome: n = !1 } = e,
             [s, d] = i.useState(!1),
             m = (0, f.N)({ styles: x }),
             g = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
             { analyticsLocations: N } = (0, u.ZP)(),
-            O = (0, p._f)(),
-            C = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, O ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
+            C = (0, p._f)(),
+            O = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, C ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
         return (0, r.jsxs)('div', {
             className: a()(x.perksContainer, t, {
                 [x.partiallyHidden]: n && !s,
@@ -99,7 +99,7 @@ let _ = (e) => (e ? N.NW.string(N.t.QX14gI) : N.NW.string(N.t.RGadQU)),
                 }),
                 (0, r.jsx)('div', {
                     className: a()(x.perkCardContainer, { [x.perkCardContainerExpanded]: s }),
-                    children: C.map(
+                    children: O.map(
                         (e) =>
                             null != e &&
                             (0, r.jsx)(

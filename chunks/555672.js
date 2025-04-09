@@ -1,7 +1,7 @@
 n.d(t, {
     Hs: () => p,
     ZP: () => f,
-    qy: () => h
+    qy: () => _
 });
 var r = n(200651),
     i = n(192379),
@@ -13,9 +13,9 @@ var r = n(200651),
     u = n(443487),
     d = n(522314);
 let p = [c.E6],
-    _ = [o._.WEEK];
-function h(e) {
-    return null != e && _.includes(e);
+    h = [o._.WEEK];
+function _(e) {
+    return null != e && h.includes(e);
 }
 let f = i.memo((e) => {
     let { entry: t, channel: n, selected: i } = e,
@@ -23,8 +23,8 @@ let f = i.memo((e) => {
             entry: t,
             showCoverImage: !1
         }),
-        _ = (0, a.Nq)(t);
-    return null != _ && h(_)
+        h = (0, a.Nq)(t);
+    return null != h && _(h)
         ? (0, r.jsxs)(u.Zb, {
               selected: i,
               children: [

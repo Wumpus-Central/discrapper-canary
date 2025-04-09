@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(453687),
     b = n(930282),
     _ = n(318713),
-    C = n(981631),
-    y = n(388032),
+    y = n(981631),
+    C = n(388032),
     x = n(684525),
     v = n(848697),
     j = n(73433);
@@ -55,7 +55,7 @@ let O = i.memo(function (e) {
                             color: 'interactive-normal',
                             tag: 'span',
                             className: x.learnMore,
-                            children: y.NW.format(y.t.Nd3Gh4, { helpUrl: f.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                            children: C.NW.format(C.t.Nd3Gh4, { helpUrl: f.Z.getArticleURL(y.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                         })
                     })
                 })
@@ -64,7 +64,7 @@ let O = i.memo(function (e) {
     }),
     E = i.memo(function (e) {
         var t, n;
-        let { className: l, compact: a, message: u, children: f, content: m, onUpdate: C } = e,
+        let { className: l, compact: a, message: u, children: f, content: m, onUpdate: y } = e,
             E = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
             N = i.useRef(!1),
             I = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
@@ -73,8 +73,8 @@ let O = i.memo(function (e) {
             }, [u, I]);
         return (
             i.useLayoutEffect(() => {
-                N.current ? null != C && C() : (N.current = !0);
-            }, [C, u.content, m, E, f]),
+                N.current ? null != y && y() : (N.current = !0);
+            }, [y, u.content, m, E, f]),
             (0, r.jsxs)('div', {
                 id: (0, g.ut)(u),
                 className: o()(l, j.markup, {
@@ -96,13 +96,13 @@ let O = i.memo(function (e) {
                                     isInline: !1,
                                     children: (0, r.jsxs)('span', {
                                         className: v.edited,
-                                        children: ['(', y.NW.string(y.t.Z7eEx8), ')']
+                                        children: ['(', C.NW.string(C.t.Z7eEx8), ')']
                                     })
                                 })
                             ]
                         }),
                     (0, r.jsx)(O, {
-                        notice: null != (n = null == I ? void 0 : I.errorMessage) ? n : y.NW.string(y.t.zQ69pq),
+                        notice: null != (n = null == I ? void 0 : I.errorMessage) ? n : C.NW.string(C.t.zQ69pq),
                         message: u,
                         compact: a,
                         onDismiss: P

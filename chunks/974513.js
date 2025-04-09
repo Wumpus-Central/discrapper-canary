@@ -1,6 +1,6 @@
 n.d(t, {
     O4: () => b,
-    OA: () => f,
+    OA: () => h,
     Wu: () => x
 }),
     n(388685);
@@ -40,7 +40,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function h(e, t) {
         e
     );
 }
-function f(e, t) {
+function h(e, t) {
     let n = (0, s.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts));
     return [(0, s.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts, c.V7)), n];
 }
@@ -74,13 +74,13 @@ function x(e) {
     let { guildId: t, className: n } = e,
         c = (0, l.UQ)(t).advancedModeAllowed,
         u = (0, s.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             let e = u ? m.Un.ONBOARDING_DEFAULT : m.Un.ONBOARDING_ADVANCED;
             u
                 ? (0, a.h7j)((n) =>
                       (0, r.jsx)(
                           a.ConfirmModal,
-                          h(
+                          f(
                               p(
                                   {
                                       header: g.NW.string(g.t['49+ONj']),
@@ -103,7 +103,7 @@ function x(e) {
                 : (0, a.h7j)((n) =>
                       (0, r.jsx)(
                           a.ConfirmModal,
-                          h(
+                          f(
                               p(
                                   {
                                       header: g.NW.string(g.t.YB9xUF),
@@ -128,7 +128,7 @@ function x(e) {
         ? (0, r.jsx)('div', {
               className: n,
               children: (0, r.jsx)(a.eee, {
-                  onClick: f,
+                  onClick: h,
                   children: (0, r.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-link',

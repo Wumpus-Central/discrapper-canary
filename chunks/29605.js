@@ -17,14 +17,14 @@ var r = n(200651),
     m = n(442837),
     g = n(481060),
     p = n(668781),
-    h = n(80932),
-    f = n(225433),
+    f = n(80932),
+    h = n(225433),
     b = n(599059),
     x = n(327802),
     j = n(110924),
     N = n(200876),
-    _ = n(730089),
-    v = n(372444),
+    v = n(730089),
+    _ = n(372444),
     y = n(889564),
     O = n(372129),
     C = n(357156),
@@ -37,8 +37,8 @@ var r = n(200651),
     R = n(434404),
     D = n(471613),
     Z = n(999382),
-    A = n(981631),
-    k = n(185923),
+    k = n(981631),
+    A = n(185923),
     W = n(388032),
     L = n(808574),
     M = n(588866);
@@ -67,7 +67,7 @@ function G(e) {
     }
     return e;
 }
-let U = d().throttle(h.OQ, 1000),
+let U = d().throttle(f.OQ, 1000),
     B = (e) => {
         let { guildId: t, emoji: n, onEdit: s, editingDisabled: l = !1 } = e,
             [o, c] = i.useState(n.name),
@@ -119,7 +119,7 @@ let U = d().throttle(h.OQ, 1000),
                             className: a()({ [L.emojiAliasInputDisabled]: l }),
                             disabled: l,
                             minLen: 1,
-                            maxLen: k.Yc,
+                            maxLen: A.Yc,
                             name: W.NW.string(W.t.qUpzYG),
                             autoComplete: 'off',
                             value: null != o ? o : '',
@@ -127,7 +127,7 @@ let U = d().throttle(h.OQ, 1000),
                                 if (o !== n.name) {
                                     let e = T.ZP.sanitizeEmojiName(o);
                                     e !== n.name &&
-                                        (0, h.dv)({
+                                        (0, f.dv)({
                                             guildId: t,
                                             emojiId: n.id,
                                             name: e
@@ -168,10 +168,10 @@ let U = d().throttle(h.OQ, 1000),
                         })
                     }),
                 !l &&
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(h.Z, {
                         className: L.emojiRemove,
                         onClick: () => {
-                            (0, h.RE)(t, n.id).catch((e) => {
+                            (0, f.RE)(t, n.id).catch((e) => {
                                 let { status: t } = e;
                                 429 === t &&
                                     p.Z.show({
@@ -301,16 +301,16 @@ let U = d().throttle(h.OQ, 1000),
             c = Math.min(o - s, o - a),
             d = l.premiumTier,
             u = (0, P.FZ)(d);
-        return null == u || d === A.Eu4.TIER_3 || c > 0
+        return null == u || d === k.Eu4.TIER_3 || c > 0
             ? null
-            : (c > o ? ((t = W.NW.formatToPlainString(W.t.j0UH0t, { level: u })), (n = W.NW.formatToPlainString(W.t.VQeyKy, { level: u })), (i = A.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = W.NW.string(W.t.zT9Sxc)), (n = W.NW.formatToPlainString(W.t.dBZ1RU, { level: u })), (i = A.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
-              (0, r.jsx)(v.Z, {
+            : (c > o ? ((t = W.NW.formatToPlainString(W.t.j0UH0t, { level: u })), (n = W.NW.formatToPlainString(W.t.VQeyKy, { level: u })), (i = k.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = W.NW.string(W.t.zT9Sxc)), (n = W.NW.formatToPlainString(W.t.dBZ1RU, { level: u })), (i = k.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+              (0, r.jsx)(_.Z, {
                   header: t,
                   text: n,
                   guild: l,
                   analyticsLocation: {
-                      page: A.ZY5.GUILD_SETTINGS,
-                      section: A.jXE.GUILD_SETTINGS_STICKERS,
+                      page: k.ZY5.GUILD_SETTINGS,
+                      section: k.jXE.GUILD_SETTINGS_STICKERS,
                       object: i,
                       objectType: (0, P.ge)(u)
                   }
@@ -326,19 +326,19 @@ let U = d().throttle(h.OQ, 1000),
                 revision: D.Z.getEmojiRevision(e.id),
                 emojis: D.Z.getEmojis(e.id)
             })),
-            h = (0, j.Z)(c),
-            [f, b] = i.useState(!1),
-            [v, S] = i.useState(!1),
+            f = (0, j.Z)(c),
+            [h, b] = i.useState(!1),
+            [_, S] = i.useState(!1),
             T = i.useRef(null);
         i.useEffect(() => {
-            f && K();
-        }, [f]),
+            h && K();
+        }, [h]),
             i.useEffect(() => {
                 U(e.id);
             }, [e.id]),
             i.useEffect(() => {
-                null != h && h < c && U(e.id);
-            }, [c, h, e.id]);
+                null != f && f < c && U(e.id);
+            }, [c, f, e.id]);
         let [w, M] = i.useMemo(() => {
                 let t = null == p ? void 0 : p.filter((t) => !(0, y.Kt)(t, e.id)),
                     [n, r] = d().partition(t, (e) => !e.animated);
@@ -347,7 +347,7 @@ let U = d().throttle(h.OQ, 1000),
             B = (0, P.y4)(e),
             z = Math.max(B - w.length, B - M.length),
             H = (n, r, i) =>
-                (0, _.G)({
+                (0, v.G)({
                     data: n,
                     file: r,
                     image: i,
@@ -357,7 +357,7 @@ let U = d().throttle(h.OQ, 1000),
                 }),
             Y = async (n) => {
                 s((0, u.Z)()),
-                    E.default.track(A.rMx.EMOJI_UPLOAD_STARTED, {
+                    E.default.track(k.rMx.EMOJI_UPLOAD_STARTED, {
                         guild_id: e.id,
                         upload_id: t
                     }),
@@ -402,7 +402,7 @@ let U = d().throttle(h.OQ, 1000),
                                 X &&
                                     (0, r.jsx)(g.R94, {
                                         type: g.geA.DESCRIPTION,
-                                        children: W.NW.format(W.t.uMkfTk, { onClick: () => R.Z.open(e.id, A.pNK.ROLE_SUBSCRIPTIONS, void 0, A.KsC.ROLE_SUBSCRIPTION_EMOJI) })
+                                        children: W.NW.format(W.t.uMkfTk, { onClick: () => R.Z.open(e.id, k.pNK.ROLE_SUBSCRIPTIONS, void 0, k.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                     }),
                                 (0, r.jsxs)('div', {
                                     children: [
@@ -423,7 +423,7 @@ let U = d().throttle(h.OQ, 1000),
                                                 (0, r.jsx)('li', {
                                                     children: (0, r.jsx)(g.R94, {
                                                         type: g.geA.DESCRIPTION,
-                                                        children: W.NW.format(W.t.gfAXoa, { maxSize: k.xG })
+                                                        children: W.NW.format(W.t.gfAXoa, { maxSize: A.xG })
                                                     })
                                                 }),
                                                 (0, r.jsx)('li', {
@@ -448,19 +448,19 @@ let U = d().throttle(h.OQ, 1000),
                                     onClick: () => {
                                         let t = (0, u.Z)();
                                         s(t),
-                                            E.default.track(A.rMx.EMOJI_UPLOAD_STARTED, {
+                                            E.default.track(k.rMx.EMOJI_UPLOAD_STARTED, {
                                                 guild_id: e.id,
                                                 upload_id: t
                                             });
                                     },
-                                    disabled: v || 0 === z || !l,
-                                    submitting: v,
+                                    disabled: _ || 0 === z || !l,
+                                    submitting: _,
                                     focusProps: { within: !0 },
                                     children: [
                                         W.NW.string(W.t.DU0dy8),
                                         z > 0
                                             ? (0, r.jsx)(O.Z, {
-                                                  disabled: v || 0 === z || !l,
+                                                  disabled: _ || 0 === z || !l,
                                                   tabIndex: 0,
                                                   onChange: H,
                                                   setLoading: S,

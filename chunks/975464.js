@@ -15,8 +15,8 @@ var i = n(990547),
     m = n(320893),
     g = n(81509),
     p = n(662379),
-    h = n(60533),
-    f = n(581050),
+    f = n(60533),
+    h = n(581050),
     b = n(551131);
 function x(e) {
     let { onboardingMarketing: t, onboardingMarketingError: n } = e,
@@ -26,8 +26,8 @@ function x(e) {
                 children: [(0, r.jsx)(s.$i$, { className: b.sectionDivider }), t]
             });
         },
-        a = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, f.q.HOW_IT_WORKS),
-        l = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, f.q.BENEFITS);
+        a = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, h.q.HOW_IT_WORKS),
+        l = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, h.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null
         ? (0, r.jsxs)(r.Fragment, {
               children: [a, l]
@@ -35,12 +35,12 @@ function x(e) {
         : (0, r.jsx)(r.Fragment, {
               children: t.sections.map((e) => {
                   switch (e.type) {
-                      case f.q.HOW_IT_WORKS:
+                      case h.q.HOW_IT_WORKS:
                           return a;
-                      case f.q.BENEFITS:
+                      case h.q.BENEFITS:
                           return l;
-                      case f.q.OTHER_CREATORS:
-                          return (0, r.jsx)(i, { children: (0, r.jsx)(g.Z, { highlightedCreators: e.creators }) }, f.q.OTHER_CREATORS);
+                      case h.q.OTHER_CREATORS:
+                          return (0, r.jsx)(i, { children: (0, r.jsx)(g.Z, { highlightedCreators: e.creators }) }, h.q.OTHER_CREATORS);
                   }
               })
           });
@@ -49,8 +49,8 @@ function j(e) {
     let { guild: t } = e,
         n = (0, c.Z)(t),
         { eligibilityLoading: m, eligibilityError: g, eligibility: p } = n,
-        f = (0, l.j)(p),
-        { isLoading: j, error: N, creatorMonetizationOnboardingMarketing: _ } = (0, o.Z)(t.id);
+        h = (0, l.j)(p),
+        { isLoading: j, error: N, creatorMonetizationOnboardingMarketing: v } = (0, o.Z)(t.id);
     return ((0, a.Z)(
         {
             type: i.ImpressionTypes.PANE,
@@ -59,7 +59,7 @@ function j(e) {
                 guild_id: t.id,
                 is_owner: n.isGuildOwner,
                 is_eligible: n.eligibleForMonetization,
-                ineligible_reasons: f
+                ineligible_reasons: h
             }
         },
         { disableTrack: null == t.id || null == p }
@@ -67,7 +67,7 @@ function j(e) {
     m || null == p || j)
         ? (0, r.jsx)(s.$jN, {})
         : p.actionRequired
-          ? (0, r.jsx)(h.Z, { guild: t })
+          ? (0, r.jsx)(f.Z, { guild: t })
           : null != g
             ? (0, r.jsx)(d.Z, { children: g.message })
             : (0, r.jsxs)('div', {
@@ -78,7 +78,7 @@ function j(e) {
                           monetizationEligibility: n
                       }),
                       (0, r.jsx)(x, {
-                          onboardingMarketing: _,
+                          onboardingMarketing: v,
                           onboardingMarketingError: N
                       })
                   ]

@@ -1,30 +1,30 @@
 r.d(t, {
-    W: () => E,
-    r: () => C
+    W: () => _,
+    r: () => S
 }),
     r(388685);
 var n = r(200651),
     i = r(192379),
     o = r(442837),
-    l = r(430824),
-    s = r(594174),
+    s = r(430824),
+    l = r(594174),
     c = r(63568),
-    u = r(246364),
-    a = r(990686),
-    f = r(118346),
-    d = r(186078),
-    b = r(73880),
-    j = r(276486),
-    O = r(196345),
-    g = r(707592),
-    p = r(23262),
-    y = r(483760),
-    m = r(465588),
-    v = r(842310),
-    h = r(644929),
-    P = r(814960),
-    x = r(981631);
-function N(e) {
+    a = r(246364),
+    u = r(990686),
+    d = r(118346),
+    f = r(186078),
+    m = r(73880),
+    h = r(276486),
+    p = r(196345),
+    j = r(707592),
+    b = r(23262),
+    g = r(483760),
+    O = r(465588),
+    x = r(842310),
+    y = r(644929),
+    v = r(814960),
+    N = r(981631);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -49,7 +49,7 @@ function N(e) {
     }
     return e;
 }
-function w(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,154 +67,154 @@ function w(e, t) {
         e
     );
 }
-function S(e) {
-    let { guildId: t, formFields: r, updateFormFields: i, v2Enabled: s } = e,
-        c = (0, o.e7)([l.Z], () => {
+function C(e) {
+    let { guildId: t, formFields: r, updateFormFields: i, v2Enabled: l } = e,
+        c = (0, o.e7)([s.Z], () => {
             var e;
-            return null == (e = l.Z.getGuild(t)) ? void 0 : e.rulesChannelId;
+            return null == (e = s.Z.getGuild(t)) ? void 0 : e.rulesChannelId;
         }),
-        a = (e, t) => {
+        u = (e, t) => {
             let n = r[e];
-            i([...r.slice(0, e), w(N({}, n), { response: t }), ...r.slice(e + 1)]);
+            i([...r.slice(0, e), E(P({}, n), { response: t }), ...r.slice(e + 1)]);
         },
-        f = (e, t) => {
+        d = (e, t) => {
             let n = r[e];
-            i([...r.slice(0, e), w(N({}, n), { response: t }), ...r.slice(e + 1)]);
+            i([...r.slice(0, e), E(P({}, n), { response: t }), ...r.slice(e + 1)]);
         },
-        j = (e, t) => {
+        h = (e, t) => {
             let { value: n } = t,
                 o = r[e];
-            i([...r.slice(0, e), w(N({}, o), { response: n }), ...r.slice(e + 1)]);
+            i([...r.slice(0, e), E(P({}, o), { response: n }), ...r.slice(e + 1)]);
         },
-        p = (e, t) => {
+        b = (e, t) => {
             switch (e.field_type) {
-                case u.QJ.TERMS:
+                case a.QJ.TERMS:
                     return (0, n.jsx)(
-                        O.dd,
+                        p.dd,
                         {
                             channelId: c,
                             formField: e,
-                            onChange: (e, r) => a(t, r)
+                            onChange: (e, r) => u(t, r)
                         },
                         t
                     );
-                case u.QJ.TEXT_INPUT:
+                case a.QJ.TEXT_INPUT:
                     return (0, n.jsx)(
-                        g.zY,
+                        j.zY,
                         {
                             formField: e,
                             autofocus: 0 === t,
-                            onChange: (e) => f(t, e)
+                            onChange: (e) => d(t, e)
                         },
                         t
                     );
-                case u.QJ.PARAGRAPH:
-                    return (0, n.jsx)(
-                        b.lX,
-                        {
-                            formField: e,
-                            autofocus: 0 === t,
-                            onChange: (e) => f(t, e)
-                        },
-                        t
-                    );
-                case u.QJ.MULTIPLE_CHOICE:
-                    return (0, n.jsx)(
-                        d.sp,
-                        {
-                            formField: e,
-                            onChange: (e) => j(t, e)
-                        },
-                        t
-                    );
-            }
-        },
-        v = (e, t) => {
-            switch (e.field_type) {
-                case u.QJ.TERMS:
-                    return (0, n.jsx)(
-                        h.dd,
-                        {
-                            channelId: c,
-                            formField: e,
-                            onChange: (e, r) => a(t, r)
-                        },
-                        t
-                    );
-                case u.QJ.TEXT_INPUT:
-                    return (0, n.jsx)(
-                        P.zY,
-                        {
-                            formField: e,
-                            autofocus: 0 === t,
-                            onChange: (e) => f(t, e)
-                        },
-                        t
-                    );
-                case u.QJ.PARAGRAPH:
+                case a.QJ.PARAGRAPH:
                     return (0, n.jsx)(
                         m.lX,
                         {
                             formField: e,
                             autofocus: 0 === t,
-                            onChange: (e) => f(t, e)
+                            onChange: (e) => d(t, e)
                         },
                         t
                     );
-                case u.QJ.MULTIPLE_CHOICE:
+                case a.QJ.MULTIPLE_CHOICE:
                     return (0, n.jsx)(
-                        y.sp,
+                        f.sp,
                         {
                             formField: e,
-                            onChange: (e) => j(t, e)
+                            onChange: (e) => h(t, e)
+                        },
+                        t
+                    );
+            }
+        },
+        x = (e, t) => {
+            switch (e.field_type) {
+                case a.QJ.TERMS:
+                    return (0, n.jsx)(
+                        y.dd,
+                        {
+                            channelId: c,
+                            formField: e,
+                            onChange: (e, r) => u(t, r)
+                        },
+                        t
+                    );
+                case a.QJ.TEXT_INPUT:
+                    return (0, n.jsx)(
+                        v.zY,
+                        {
+                            formField: e,
+                            autofocus: 0 === t,
+                            onChange: (e) => d(t, e)
+                        },
+                        t
+                    );
+                case a.QJ.PARAGRAPH:
+                    return (0, n.jsx)(
+                        O.lX,
+                        {
+                            formField: e,
+                            autofocus: 0 === t,
+                            onChange: (e) => d(t, e)
+                        },
+                        t
+                    );
+                case a.QJ.MULTIPLE_CHOICE:
+                    return (0, n.jsx)(
+                        g.sp,
+                        {
+                            formField: e,
+                            onChange: (e) => h(t, e)
                         },
                         t
                     );
             }
         };
-    return (0, n.jsx)(n.Fragment, { children: r.map((e, t) => (s ? v(e, t) : p(e, t))) });
+    return (0, n.jsx)(n.Fragment, { children: r.map((e, t) => (l ? x(e, t) : b(e, t))) });
 }
-function E(e) {
+function _(e) {
     let t,
-        { guildId: r, formFields: i, updateFormFields: l, disableVerification: u } = e,
-        d = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
-        b = (0, a.i)({ guildId: r }),
-        O = (0, c.jS)(r, 'PreviewFormRenderer');
-    return ((t = b === x.sFg.NONE ? null : b === x.sFg.VERY_HIGH ? (O ? v.l : j.l) : O ? p.b : f.b), null == d)
+        { guildId: r, formFields: i, updateFormFields: s, disableVerification: a } = e,
+        f = (0, o.e7)([l.default], () => l.default.getCurrentUser()),
+        m = (0, u.i)({ guildId: r }),
+        p = (0, c.jS)(r, 'PreviewFormRenderer');
+    return ((t = m === N.sFg.NONE ? null : m === N.sFg.VERY_HIGH ? (p ? x.l : h.l) : p ? b.b : d.b), null == f)
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  !u && null != t && (0, n.jsx)(t, {}),
-                  (0, n.jsx)(S, {
+                  !a && null != t && (0, n.jsx)(t, {}),
+                  (0, n.jsx)(C, {
                       guildId: r,
                       formFields: i,
-                      updateFormFields: l,
-                      v2Enabled: O
+                      updateFormFields: s,
+                      v2Enabled: p
                   })
               ]
           });
 }
-function C(e) {
+function S(e) {
     let t,
-        { guildId: r, formFields: l, updateFormFields: u, disableVerification: d } = e,
-        b = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
-        O = (0, a.i)({ guildId: r }),
-        g = (0, c.jS)(r, 'PreviewFormRenderer'),
-        y = (null == b ? void 0 : b.isPhoneVerified()) || (null == b ? void 0 : b.isStaff()),
-        m = (null == b ? void 0 : b.verified) || y,
-        h = !1;
-    O === x.sFg.NONE ? ((h = !0), (t = null)) : O === x.sFg.VERY_HIGH ? ((h = null != y && y), (t = g ? v.v : j.v)) : ((h = null != m && m), (t = g ? p.B : f.B));
-    let P = i.useRef(h);
-    return null == b
+        { guildId: r, formFields: s, updateFormFields: a, disableVerification: f } = e,
+        m = (0, o.e7)([l.default], () => l.default.getCurrentUser()),
+        p = (0, u.i)({ guildId: r }),
+        j = (0, c.jS)(r, 'PreviewFormRenderer'),
+        g = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
+        O = (null == m ? void 0 : m.verified) || g,
+        y = !1;
+    p === N.sFg.NONE ? ((y = !0), (t = null)) : p === N.sFg.VERY_HIGH ? ((y = null != g && g), (t = j ? x.v : h.v)) : ((y = null != O && O), (t = j ? b.B : d.B));
+    let v = i.useRef(y);
+    return null == m
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  !d && !P.current && null != t && (0, n.jsx)(t, { isUserVerified: h }),
-                  (0, n.jsx)(S, {
+                  !f && !v.current && null != t && (0, n.jsx)(t, { isUserVerified: y }),
+                  (0, n.jsx)(C, {
                       guildId: r,
-                      formFields: l,
-                      updateFormFields: u,
-                      v2Enabled: g
+                      formFields: s,
+                      updateFormFields: a,
+                      v2Enabled: j
                   })
               ]
           });

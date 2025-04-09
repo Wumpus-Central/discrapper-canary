@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(74299),
     E = n(365023),
     j = n(131951),
-    O = n(556296),
-    C = n(808506),
+    C = n(556296),
+    O = n(808506),
     S = n(63063),
     v = n(358085),
     T = n(13140),
@@ -492,9 +492,9 @@ class G extends i.PureComponent {
     }
 }
 function F() {
-    let e = (0, c.e7)([O.ZP], () => O.ZP.getState()),
+    let e = (0, c.e7)([C.ZP], () => C.ZP.getState()),
         t = (0, c.e7)([j.Z], () => (0, _.Z)(j.Z)),
-        n = (0, c.e7)([C.default], () => C.default.isSupported()),
+        n = (0, c.e7)([O.default], () => O.default.isSupported()),
         i = (0, N.Go)();
     return (0, r.jsx)(G, {
         keybinds: e,

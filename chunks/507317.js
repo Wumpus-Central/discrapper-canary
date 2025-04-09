@@ -11,15 +11,15 @@ var r = n(200651),
     m = n(768581),
     g = n(434404),
     p = n(981631),
-    h = n(30513),
-    f = n(486324),
+    f = n(30513),
+    h = n(486324),
     b = n(200299),
     x = n(388032),
     j = n(773100);
 let N = function (e) {
     let { guild: t } = e,
         N = t.hasFeature(p.oNc.BANNER),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, s.ZDy)(async () => {
@@ -59,7 +59,7 @@ let N = function (e) {
                                         let { imageUri: n } = e;
                                         return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: f.pC.HOME_HEADER
+                                    uploadType: h.pC.HOME_HEADER
                                 },
                                 n
                             )
@@ -68,7 +68,7 @@ let N = function (e) {
             },
             [t.id]
         ),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -88,7 +88,7 @@ let N = function (e) {
                             page: p.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
-                        perks: (0, h.XO)()
+                        perks: (0, f.XO)()
                     });
             },
             [t]
@@ -103,7 +103,7 @@ let N = function (e) {
                       })
                     : null,
             disabled: !N,
-            onChange: _,
+            onChange: v,
             hint: x.NW.string(x.t.NyXznp),
             enabled: N,
             maxFileSizeBytes: b.B
@@ -123,7 +123,7 @@ let N = function (e) {
                               className: j.boostIndicator,
                               guild: t,
                               guildFeature: p.oNc.BANNER,
-                              onClick: v
+                              onClick: _
                           })
                       ]
                   }),
@@ -142,7 +142,7 @@ let N = function (e) {
                                       color: s.Ttl.BRAND,
                                       className: j.uploadButton,
                                       buttonCTA: x.NW.string(x.t.yG2pUl),
-                                      onChange: _,
+                                      onChange: v,
                                       maxFileSizeBytes: b.B
                                   })
                               ]
@@ -166,7 +166,7 @@ let N = function (e) {
                               className: j.boostIndicator,
                               guild: t,
                               guildFeature: p.oNc.BANNER,
-                              onClick: v
+                              onClick: _
                           })
                       ]
                   }),
@@ -185,7 +185,7 @@ let N = function (e) {
                                       className: j.upsellButton,
                                       innerClassName: j.upsellButtonInner,
                                       color: s.zxk.Colors.GREEN,
-                                      onClick: v,
+                                      onClick: _,
                                       children: [
                                           (0, r.jsx)(u.Z, {
                                               height: 16,
@@ -204,7 +204,7 @@ let N = function (e) {
                               children: (0, r.jsx)(s.P3F, {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
-                                  onClick: v,
+                                  onClick: _,
                                   children: y
                               })
                           })

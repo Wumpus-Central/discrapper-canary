@@ -14,7 +14,7 @@ function u(e) {
         g = (0, a.FZ)(m),
         p = o._k[m] - 2;
     if (null == g || m === l.Eu4.TIER_3 || n < p) return null;
-    let h = u
+    let f = u
         ? {
               color: i.Ttl.GREEN,
               look: i.iLD.FILLED,
@@ -29,7 +29,7 @@ function u(e) {
         }),
         headerColor: 'header-primary',
         textColor: 'text-normal',
-        buttonProps: h,
+        buttonProps: f,
         guild: t,
         analyticsLocation: {
             page: l.ZY5.GUILD_SETTINGS,

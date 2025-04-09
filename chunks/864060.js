@@ -172,7 +172,7 @@ function x(e, t, n) {
             (e.isManaged() && n.bot && u === (0, a.F6)(e, y.default, h.Z)) || (u = ''.concat(u, ' (').concat((0, a.F6)(e, y.default, h.Z, !0), ')'));
     }
     let f = t.content;
-    if ((0, g.Z)(t) && null == (f = U.Z.stringify(t, e))) throw (new r.Z('NotificationTextUtils').warn('SystemMessageUtils.stringify(...) could not convert', t), Error('failed to stringify system message'));
+    if ((0, g.Z)(t) && null == (f = U.Z.stringify(t, e))) throw (new r.Z('NotificationTextUtils').warn('SystemMessageUtils.stringify(...) could not convert', { message: t }), Error('failed to stringify system message'));
     let E = 'sticker_items' in t ? t.sticker_items : 'stickerItems' in t ? t.stickerItems : t.stickers;
     if ('message_reference' in t ? (0, o.s)(t) : (0, o.Z)(t)) i = k.NW.string(k.t['9ddYKi']);
     else if (null != t.activity && null != t.application)

@@ -58,16 +58,16 @@ function p(e) {
         l = (0, s.e7)([c.Z], () => c.Z.getSearchStateByGuildId(t), [t], o()),
         { selectedJoinDateOption: a } = l,
         { afterDate: p, beforeDate: f, optionId: h } = a,
-        j = h === d.Ol.CUSTOM,
-        g = j && null != p ? i()(p).format(d.N2) : null,
-        x = j && null != f ? i()(f).format(d.N2) : null;
+        g = h === d.Ol.CUSTOM,
+        j = g && null != p ? i()(p).format(d.N2) : null,
+        x = g && null != f ? i()(f).format(d.N2) : null;
     return (0, r.jsx)(d.ZP, {
-        startDateLabel: g,
+        startDateLabel: j,
         endDateLabel: x,
         afterDate: p,
         beforeDate: f,
         selectedOption: h,
-        isCustomDateRange: j,
+        isCustomDateRange: g,
         menuName: 'joined-date',
         accessibilityLabel: C.NW.string(C.t.XMVinZ),
         onClose: n,
@@ -90,8 +90,8 @@ function p(e) {
                 b(m({}, l), {
                     selectedJoinDateOption: {
                         optionId: d.Ol.CUSTOM,
-                        afterDate: j ? p : null,
-                        beforeDate: j ? f : null
+                        afterDate: g ? p : null,
+                        beforeDate: g ? f : null
                     }
                 })
             );

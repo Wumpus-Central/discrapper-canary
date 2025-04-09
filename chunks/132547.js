@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(65234), n(111804), n(490233), n(97749), n(35282);
+n.d(t, { Z: () => O }), n(388685), n(65234), n(111804), n(490233), n(97749), n(35282);
 var r = n(200651),
     i = n(192379),
     s = n(622535),
@@ -19,12 +19,12 @@ var r = n(200651),
     _ = n(981631),
     E = n(388032),
     j = n(614729),
-    O = n(865215);
-let C = () => {
+    C = n(865215);
+let O = () => {
     (0, d.z)(c.X), (0, f.u)();
     let e = i.useRef(null),
         t = i.useRef(null),
-        [n, C] = i.useState(!1),
+        [n, O] = i.useState(!1),
         { analyticsLocations: S } = (0, o.ZP)(l.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [v, T] = i.useState(!1);
     (0, m.FM)();
@@ -57,7 +57,7 @@ let C = () => {
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, r.jsx)(x.Z, {
-                                        setIsAllPerksVisible: C,
+                                        setIsAllPerksVisible: O,
                                         previousComponent: b.MQ.HOME
                                     })
                                 }),
@@ -81,7 +81,7 @@ let C = () => {
                                     })
                                 }),
                                 (0, r.jsx)('img', {
-                                    src: O,
+                                    src: C,
                                     className: j.bottomIllustration,
                                     width: 112,
                                     height: 85,
@@ -93,7 +93,7 @@ let C = () => {
                 }),
                 (0, r.jsx)(N.Z, {
                     isAllPerksVisible: n,
-                    setIsAllPerksVisible: C,
+                    setIsAllPerksVisible: O,
                     previousComponent: b.MQ.HOME
                 })
             ]

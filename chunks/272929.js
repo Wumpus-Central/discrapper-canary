@@ -72,7 +72,7 @@ let h = (0, o.animated)((e) => {
 });
 function f(e) {
     var { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: i, onKeyDown: f, onMouseEnter: m, onMouseLeave: g, isActive: b = !1, isCenterButton: _ = !1 } = e,
-        C = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -91,7 +91,7 @@ function f(e) {
             }
             return i;
         })(e, ['totalCooldownSeconds', 'remainingCooldownSeconds', 'onClick', 'onKeyDown', 'onMouseEnter', 'onMouseLeave', 'isActive', 'isCenterButton']);
-    let y = n > 0,
+    let C = n > 0,
         x = (0, a.q_F)(
             {
                 percentComplete: 0 !== n ? (t - n) / t : 0,
@@ -99,20 +99,20 @@ function f(e) {
             },
             'animate-always'
         ),
-        v = y ? c.NW.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
+        v = C ? c.NW.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
         j = _ ? s.d : s.Z;
     return (0, r.jsxs)('div', {
         className: u.container,
         children: [
-            y ? (0, r.jsx)(h, { percentComplete: x.percentComplete }) : null,
+            C ? (0, r.jsx)(h, { percentComplete: x.percentComplete }) : null,
             (0, r.jsx)(
                 j,
-                p(d({}, C), {
-                    disabled: y,
+                p(d({}, y), {
+                    disabled: C,
                     label: v,
                     iconComponent: a.EO4,
                     iconClassName: l()(u.iconHover, b && u.active),
-                    className: l()(C.className, u.button),
+                    className: l()(y.className, u.button),
                     onClick: i,
                     onKeyDown: f,
                     onMouseEnter: m,

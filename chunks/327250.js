@@ -16,8 +16,8 @@ var i = n(120356),
     g = n(314897),
     b = n(271383),
     _ = n(430824),
-    C = n(496675),
-    y = n(158776),
+    y = n(496675),
+    C = n(158776),
     x = n(885110),
     v = n(594174),
     j = n(572004),
@@ -72,7 +72,7 @@ function Z(e, t) {
 function T(e) {
     let { user: t, guildId: n, onClose: i } = e,
         l = t.id,
-        s = (0, o.e7)([x.Z, y.Z, g.default], () => (l === g.default.getId() ? x.Z.getStatus() : y.Z.getStatus(l, n)), [l, n]);
+        s = (0, o.e7)([x.Z, C.Z, g.default], () => (l === g.default.getId() ? x.Z.getStatus() : C.Z.getStatus(l, n)), [l, n]);
     return (0, r.jsxs)('div', {
         className: P.topRow,
         children: [
@@ -180,14 +180,14 @@ function w(e) {
         u = (0, o.e7)([_.Z], () => _.Z.getGuild(l)),
         {
             canKickUser: b,
-            canBanUser: y,
+            canBanUser: C,
             canModerateMembers: x
         } = (0, o.cj)(
-            [C.Z, v.default, _.Z],
+            [y.Z, v.default, _.Z],
             () => ({
                 canKickUser: (0, f.BK)(t, u),
                 canBanUser: (0, f.mm)(t, u),
-                canModerateMembers: null != u && (0, h.F)(u.id, t.id, [v.default, _.Z, C.Z])
+                canModerateMembers: null != u && (0, h.F)(u.id, t.id, [v.default, _.Z, y.Z])
             }),
             [t, u]
         ),
@@ -240,7 +240,7 @@ function w(e) {
                 })
             }),
             (0, r.jsx)(A, {
-                disabled: !y,
+                disabled: !C,
                 text: I.NW.string(I.t['5MBJ5O']),
                 onClick: () => {
                     (0, a.ZDy)(async () => {

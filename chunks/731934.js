@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(250285),
     E = n(292352),
     j = n(134612),
-    O = n(332495),
-    C = n(388032),
+    C = n(332495),
+    O = n(388032),
     S = n(589608),
     v = n(34997),
     T = n(20493),
@@ -66,20 +66,20 @@ function A() {
                             (0, r.jsx)(c.X6q, {
                                 className: T.marginBottom8,
                                 variant: 'heading-xl/medium',
-                                children: (0, r.jsx)(c.y5t, { children: C.NW.string(O.Z.pHEnV1) })
+                                children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z.pHEnV1) })
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
                                 className: T.marginBottom20,
-                                children: C.NW.string(O.Z['1J/gZ2'])
+                                children: O.NW.string(C.Z['1J/gZ2'])
                             })
                         ]
                     }),
                     (0, r.jsx)('img', {
                         className: v.bannerArt,
                         src: I,
-                        alt: C.NW.string(O.Z['r+PDmp'])
+                        alt: O.NW.string(C.Z['r+PDmp'])
                     })
                 ]
             }),
@@ -87,18 +87,18 @@ function A() {
                 className: v.steps,
                 children: [
                     (0, r.jsx)(y, {
-                        header: C.NW.string(O.Z['7xxAnp']),
-                        description: C.NW.string(O.Z['1M9So6']),
+                        header: O.NW.string(C.Z['7xxAnp']),
+                        description: O.NW.string(C.Z['1M9So6']),
                         stepNumber: 1
                     }),
                     (0, r.jsx)(y, {
-                        header: C.NW.string(O.Z['AXgx+f']),
-                        description: C.NW.string(O.Z.GzMFnZ),
+                        header: O.NW.string(C.Z['AXgx+f']),
+                        description: O.NW.string(C.Z.GzMFnZ),
                         stepNumber: 2
                     }),
                     (0, r.jsx)(y, {
-                        header: C.NW.string(O.Z.MZn1tL),
-                        description: C.NW.string(O.Z['8rLBxM']),
+                        header: O.NW.string(C.Z.MZn1tL),
+                        description: O.NW.string(C.Z['8rLBxM']),
                         stepNumber: 3
                     })
                 ]
@@ -116,13 +116,13 @@ function P() {
                     (0, r.jsx)(c.X6q, {
                         className: T.marginBottom8,
                         variant: 'heading-xl/medium',
-                        children: (0, r.jsx)(c.y5t, { children: C.NW.string(O.Z.zUCWEB) })
+                        children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z.zUCWEB) })
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         className: T.marginBottom20,
-                        children: C.NW.format(O.Z.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        children: O.NW.format(C.Z.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
                     e ? null : (0, r.jsx)(b.Z, {})
                 ]
@@ -130,7 +130,7 @@ function P() {
             (0, r.jsx)('img', {
                 className: v.bannerArt,
                 src: I,
-                alt: C.NW.string(O.Z['r+PDmp'])
+                alt: O.NW.string(C.Z['r+PDmp'])
             })
         ]
     });
@@ -260,7 +260,7 @@ let D = () => {
                 count: t.length,
                 max: n
             },
-            s = (0, m.o)(C.NW.formatToPlainString(O.Z['+tnO39'], i), C.NW.formatToPlainString(O.Z['pu6/U1'], i));
+            s = (0, m.o)(O.NW.formatToPlainString(C.Z['+tnO39'], i), O.NW.formatToPlainString(C.Z['pu6/U1'], i));
         return t.length > 0
             ? (0, r.jsx)(R, {
                   sectionType: E.ne.ACTIVE,
@@ -278,7 +278,7 @@ let D = () => {
                       }),
                       (0, r.jsx)('div', {
                           className: v.box,
-                          children: (0, r.jsx)(f.Z, { text: C.NW.string(O.Z.C4ScLC) })
+                          children: (0, r.jsx)(f.Z, { text: O.NW.string(C.Z.C4ScLC) })
                       })
                   ]
               });
@@ -286,7 +286,7 @@ let D = () => {
     Z = () => {
         let e = (0, h.VM)(),
             t = (0, p.Z)() ? E.AG : E.i0,
-            n = (0, m.o)(C.NW.formatToPlainString(O.Z['1/PzIi'], { maxConnections: t }), C.NW.formatToPlainString(O.Z.RcTgiI, { maxConnections: t }));
+            n = (0, m.o)(O.NW.formatToPlainString(C.Z['1/PzIi'], { maxConnections: t }), O.NW.formatToPlainString(C.Z.RcTgiI, { maxConnections: t }));
         return e
             ? (0, r.jsx)('div', {
                   className: v.maxConnectionInfo,
@@ -305,8 +305,8 @@ let D = () => {
                 helpline: e,
                 throughline: t
             })
-                .with({ helpline: !0 }, () => C.NW.format(O.Z.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => C.NW.format(O.Z['6tsC8v'], { helpLink: j.$l }))
+                .with({ helpline: !0 }, () => O.NW.format(C.Z.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
+                .with({ throughline: !0 }, () => O.NW.format(C.Z['6tsC8v'], { helpLink: j.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
@@ -316,7 +316,7 @@ let D = () => {
                       (0, r.jsx)(c.X6q, {
                           className: v.supportHeader,
                           variant: 'heading-sm/semibold',
-                          children: (0, r.jsx)(c.y5t, { children: C.NW.string(O.Z['7/tVho']) })
+                          children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z['7/tVho']) })
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: 'text-xs/medium',
@@ -328,7 +328,7 @@ let D = () => {
     },
     k = () => {
         let e = (0, h.mq)(E.ne.PENDING),
-            t = (0, m.o)(C.NW.formatToPlainString(O.Z.IkAgkJ, { count: e.length }), C.NW.formatToPlainString(O.Z.Q8XnAQ, { count: e.length }));
+            t = (0, m.o)(O.NW.formatToPlainString(C.Z.IkAgkJ, { count: e.length }), O.NW.formatToPlainString(C.Z.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
             : (0, r.jsx)(R, {

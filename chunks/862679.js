@@ -8,10 +8,10 @@ var r = n(200651),
     c = n(433355),
     u = n(423163);
 let d = function (e) {
-    let { message: t, subtitle: n, countdown: d, buttonText: p, buttonColor: h, buttonSubmitting: f, onButtonClick: m, imageSrc: g, animationSrc: b, secondaryButtonText: _, onSecondaryButtonClick: C, children: y, useReducedMotion: x = !1 } = e,
+    let { message: t, subtitle: n, countdown: d, buttonText: p, buttonColor: h, buttonSubmitting: f, onButtonClick: m, imageSrc: g, animationSrc: b, secondaryButtonText: _, onSecondaryButtonClick: y, children: C, useReducedMotion: x = !1 } = e,
         v = (0, o.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (l.tq && v) return null;
-    if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(y) });
+    if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(C) });
     let j = null;
     return (
         null != g
@@ -58,7 +58,7 @@ let d = function (e) {
                             (0, r.jsx)(a.zxk, {
                                 className: u.button,
                                 size: a.zxk.Sizes.SMALL,
-                                onClick: C,
+                                onClick: y,
                                 look: a.zxk.Looks.LINK,
                                 color: a.zxk.Colors.PRIMARY,
                                 submitting: f,

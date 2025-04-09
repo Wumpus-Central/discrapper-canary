@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => N,
-    u: () => _
+    u: () => v
 }),
     n(290780);
 var r = n(200651),
@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(324067),
     g = n(699516),
     p = n(594174),
-    h = n(434404),
-    f = n(388032);
+    f = n(434404),
+    h = n(388032);
 let b = 'NO_CHANNEL';
 function x(e) {
     return {
@@ -53,23 +53,23 @@ function N(e) {
             return (
                 e.unshift({
                     value: b,
-                    label: f.NW.string(f.t.wGiHkJ)
+                    label: h.NW.string(h.t.wGiHkJ)
                 }),
                 e
             );
         }, [c]),
         u = i.useCallback((e) => {
             let t = e === b ? null : e;
-            h.Z.updateGuild({ afkChannelId: t });
+            f.Z.updateGuild({ afkChannelId: t });
         }, []);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(_, {
         value: null != l ? l : b,
         options: d,
         canManageGuild: t,
         onChange: u
     });
 }
-function _(e) {
+function v(e) {
     let { canManageGuild: t, guildId: n, systemChannelId: l } = e,
         c = (0, a.e7)([m.Z], () => m.Z.getCategories(n)),
         d = i.useMemo(() => {
@@ -85,23 +85,23 @@ function _(e) {
             return (
                 e.unshift({
                     value: b,
-                    label: f.NW.string(f.t.ibUhoa)
+                    label: h.NW.string(h.t.ibUhoa)
                 }),
                 e
             );
         }, [c]),
         u = i.useCallback((e) => {
             let t = e === b ? null : e;
-            h.Z.updateGuild({ systemChannelId: t });
+            f.Z.updateGuild({ systemChannelId: t });
         }, []);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(_, {
         value: null != l ? l : b,
         options: d,
         canManageGuild: t,
         onChange: u
     });
 }
-function v(e) {
+function _(e) {
     let { value: t, options: n, canManageGuild: s, onChange: a } = e,
         o = i.useCallback((e) => {
             if (null != e) return (0, r.jsx)(j, { option: e });

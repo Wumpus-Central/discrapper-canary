@@ -1,4 +1,4 @@
-n.d(t, { I: () => y }), n(539854);
+n.d(t, { I: () => O }), n(539854);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
@@ -12,13 +12,13 @@ var r = n(200651),
     p = n(341907),
     f = n(822857),
     g = n(775451),
-    h = n(594174),
-    m = n(471731),
+    m = n(594174),
+    h = n(471731),
     _ = n(335131),
     v = n(215023),
     C = n(388032),
     x = n(774457);
-function O(e) {
+function y(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
     return (0, r.jsx)(b.Z.Title, {
         onClick: () => a(t),
@@ -27,10 +27,10 @@ function O(e) {
         children: n
     });
 }
-function y(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: y, handleTransition: j } = e,
+function O(e) {
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: O, handleTransition: j } = e,
         k = (0, d.ZP)(),
-        S = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
+        S = (0, i.e7)([m.default], () => m.default.getCurrentUser()),
         P = (null == S ? void 0 : S.isStaff()) || (null == S ? void 0 : S.isStaffPersonal()) || !1,
         { enabled: E } = (0, f.W)({ location: 'collectibles_shop_header_bar' }),
         w = [
@@ -60,18 +60,18 @@ function y(e) {
                 innerClassname: E ? x.headerBarInner : void 0,
                 toolbar: t || !P ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
-                    (0, r.jsx)(m.Z, { className: x.discordLogo }),
+                    (0, r.jsx)(h.Z, { className: x.discordLogo }),
                     (0, r.jsx)(b.Z.Title, { children: C.NW.string(C.t.pWG4zc) }),
                     (0, r.jsx)('div', {
                         className: x.tabs,
                         children: w.map((e) => {
                             let { tab: t, displayText: n } = e;
                             return (0, r.jsx)(
-                                O,
+                                y,
                                 {
                                     tab: t,
                                     displayText: n,
-                                    selected: y === t,
+                                    selected: O === t,
                                     handleTransition: j
                                 },
                                 t

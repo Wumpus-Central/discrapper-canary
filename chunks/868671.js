@@ -19,8 +19,8 @@ var r = n(192379),
     g = n(178762),
     b = n(206583),
     _ = n(809017),
-    C = n(981631),
-    y = n(388032);
+    y = n(981631),
+    C = n(388032);
 let x = 0;
 function v(e) {
     let {
@@ -54,12 +54,12 @@ function v(e) {
                 key: _.G,
                 count: e.length,
                 index: n.length,
-                title: y.NW.string(y.t['6gwSFR']),
+                title: C.NW.string(C.t['6gwSFR']),
                 onToggleExpand: () => {
                     E((e) => {
                         let t = !e;
                         return (
-                            u.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                            u.default.track(y.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: v,
                                 guild_id: j,
                                 expanded: t
@@ -77,8 +77,8 @@ function v(e) {
         U = r.useRef(0),
         B = r.useRef(I),
         H = r.useRef(void 0),
-        F = r.useRef({ impressionCappedEntryIds: P }),
-        G = r.useCallback(
+        G = r.useRef({ impressionCappedEntryIds: P }),
+        F = r.useCallback(
             (e) => {
                 var t;
                 let n = Math.floor(e / g.YN),
@@ -92,7 +92,7 @@ function v(e) {
             B.current = I;
         }, [I]),
         r.useEffect(() => {
-            F.current = { impressionCappedEntryIds: P };
+            G.current = { impressionCappedEntryIds: P };
         }, [P]),
         r.useEffect(
             () => (
@@ -106,7 +106,7 @@ function v(e) {
                     !Z &&
                         T &&
                         k &&
-                        ((0, f.e)(C.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                        ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: N,
                             first_shown_at: H.current,
                             item_ids: r,
@@ -114,7 +114,7 @@ function v(e) {
                             channel_id: v,
                             guild_id: j,
                             all_item_ids: n,
-                            impression_capped_item_ids: [...F.current.impressionCappedEntryIds]
+                            impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
                         }),
                         (0, d.wm)('useInjectContentInventoryFeed') &&
                             l.Z.dispatch({
@@ -129,7 +129,7 @@ function v(e) {
             groups: M,
             rows: L,
             version: D,
-            updateMaxRowSeen: G
+            updateMaxRowSeen: F
         }
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(953529);
+n.d(t, { Z: () => _ }), n(388685), n(953529);
 var r,
     i,
     s = n(200651),
@@ -11,8 +11,8 @@ var r,
     m = n(119331),
     g = n(902807),
     p = n(402766),
-    h = n(981631),
-    f = n(388032),
+    f = n(981631),
+    h = n(388032),
     b = n(824302);
 let x = {
         tension: 200,
@@ -70,7 +70,7 @@ function N(e) {
         g = 2 === t,
         p = 1 === t;
     if (!(!(r >= i) && r / i >= 0.8) || g) return null;
-    let h = p || g ? b.hidden : null,
+    let f = p || g ? b.hidden : null,
         x = p ? u.Z.Stages.FLYING : u.Z.Stages.HOVERING;
     return (0, s.jsx)(d.AMe, {
         from: { opacity: 0 },
@@ -88,12 +88,12 @@ function N(e) {
                         onFlyingComplete: m
                     }),
                     (0, s.jsx)('div', {
-                        className: o()(b.tierCloseHint, h),
-                        children: f.NW.format(f.t.qV3Erq, { numLeft: i - r })
+                        className: o()(b.tierCloseHint, f),
+                        children: h.NW.format(h.t.qV3Erq, { numLeft: i - r })
                     }),
                     (0, s.jsx)(d.P3F, {
                         onClick: l,
-                        className: o()(b.tierCloseClose, h),
+                        className: o()(b.tierCloseClose, f),
                         children: (0, s.jsx)(d.k$p, {
                             size: 'md',
                             color: 'currentColor',
@@ -104,15 +104,15 @@ function N(e) {
             })
     });
 }
-function _(e) {
-    let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: r, onSetRef: i, tier: l, showHeaderLockStatus: c, headerButton: u = null, subscriptionsRequired: m, subscriptionCount: g, className: h } = e,
-        f = (e) => {
+function v(e) {
+    let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: r, onSetRef: i, tier: l, showHeaderLockStatus: c, headerButton: u = null, subscriptionsRequired: m, subscriptionCount: g, className: f } = e,
+        h = (e) => {
             null == i || i(e);
         },
-        [j, _] = a.useState(0);
+        [j, v] = a.useState(0);
     return (
         a.useLayoutEffect(() => {
-            n && _(1);
+            n && v(1);
         }, [n]),
         (0, s.jsx)(d.AMe, {
             from: { unlockedTranslateY: 50 },
@@ -126,9 +126,9 @@ function _(e) {
                             [b.tierHeaderUnlocked]: r,
                             [b.tierHeaderLocked]: !r
                         },
-                        h
+                        f
                     ),
-                    ref: f,
+                    ref: h,
                     children: (0, s.jsxs)('div', {
                         className: b.tierHeaderContent,
                         children: [
@@ -159,11 +159,11 @@ function _(e) {
         })
     );
 }
-function v(e) {
+function _(e) {
     let { children: t, subscriptionCount: n, onSetRef: r, tier: i, isAnimatedTo: a, hasBottomMargin: l, headerButton: c = null, withCardBody: u = !0, guildId: p, showHeaderLockStatus: x = !0 } = e,
-        j = h.oCV[i.tier],
+        j = f.oCV[i.tier],
         N = a && n >= j,
-        v = i.tier !== h.Eu4.NONE && i.tier !== h.Eu4.TIER_1,
+        _ = i.tier !== f.Eu4.NONE && i.tier !== f.Eu4.TIER_1,
         y = (e, t) => {
             var n;
             let { Icon: r, className: i } = (0, m.t)(e.icon, t);
@@ -188,7 +188,7 @@ function v(e) {
                                         e.isNew
                                             ? (0, s.jsx)(d.IGR, {
                                                   className: b.newBadge,
-                                                  text: f.NW.string(f.t.y2b7CA)
+                                                  text: h.NW.string(h.t.y2b7CA)
                                               })
                                             : null
                                     ]
@@ -209,7 +209,7 @@ function v(e) {
         {
             className: o()(b.tier, { [b.tierBottomMargin]: l }),
             children: [
-                (0, s.jsx)(_, {
+                (0, s.jsx)(v, {
                     subscriptionCount: n,
                     tier: i,
                     headerButton: c,
@@ -231,10 +231,10 @@ function v(e) {
                             ? t
                             : (0, s.jsxs)(s.Fragment, {
                                   children: [
-                                      v
+                                      _
                                           ? (0, s.jsx)('div', {
                                                 className: b.previousPerks,
-                                                children: f.NW.string(f.t.oKzyRU)
+                                                children: h.NW.string(h.t.oKzyRU)
                                             })
                                           : null,
                                       null != i.perks &&
@@ -259,7 +259,7 @@ let y = (e) => {
         return (0, s.jsx)(c.animated.div, {
             style: { transform: t },
             className: b.tierUnlocked,
-            children: f.NW.string(f.t.dNGM0t)
+            children: h.NW.string(h.t.dNGM0t)
         });
     },
     C = (e) => {
@@ -268,7 +268,7 @@ let y = (e) => {
             children: [
                 (0, s.jsx)('div', {
                     className: b.tierRequirement,
-                    children: f.NW.format(f.t.t2Wbo6, { required: t })
+                    children: h.NW.format(h.t.t2Wbo6, { required: t })
                 }),
                 (0, s.jsx)(d.mBM, {
                     size: 'md',

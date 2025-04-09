@@ -286,7 +286,7 @@ function D(e) {
         x = null == C || null == (t = C.bot) ? void 0 : t.id,
         _ = (0, f.Z)({
             context: n,
-            applicationId: l.id,
+            application: l,
             botUserId: x
         }),
         { analyticsLocations: g } = (0, m.ZP)(),

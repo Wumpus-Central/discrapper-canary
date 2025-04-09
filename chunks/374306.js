@@ -18,10 +18,10 @@ function m(e) {
         m = (0, i.e7)([o.Z], () => o.Z.hasHidden(t.id)),
         g = (0, d.c)(t.id),
         { sortOrder: b, tagFilter: _ } = (0, c.H)(t.id),
-        C = (0, i.e7)([s.Z, p.Z], () => !!(s.Z.getThreadIds(t.id, b, _).length > 0) || !!(p.Z.getThreads(t.id, b, _).length > 0), [t.id, b, _]),
-        y = t.isMediaChannel();
-    if (!n || g || (y && C)) return null;
-    let x = m ? (y ? f.NW.string(f.t['WP/IEx']) : f.NW.string(f.t.zfq9V1)) : y ? f.NW.string(f.t.p60yFx) : f.NW.string(f.t.SNOqYG);
+        y = (0, i.e7)([s.Z, p.Z], () => !!(s.Z.getThreadIds(t.id, b, _).length > 0) || !!(p.Z.getThreads(t.id, b, _).length > 0), [t.id, b, _]),
+        C = t.isMediaChannel();
+    if (!n || g || (C && y)) return null;
+    let x = m ? (C ? f.NW.string(f.t['WP/IEx']) : f.NW.string(f.t.zfq9V1)) : C ? f.NW.string(f.t.p60yFx) : f.NW.string(f.t.SNOqYG);
     return (0, r.jsx)(h.JO, {
         tooltip: x,
         icon: l.d3s,

@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(27457),
     b = n(111248),
     _ = n(312703),
-    C = n(796638),
-    y = n(981631),
+    y = n(796638),
+    C = n(981631),
     x = n(354459),
     v = n(363987),
     j = n(999976);
@@ -64,13 +64,13 @@ function E(e, t) {
     );
 }
 let N = 16 / 9,
-    I = 8 + C.cF;
+    I = 8 + y.cF;
 function P(e) {
     var t;
     let n,
         { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: S, participants: Z, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: W, height: U, layout: B, idle: H } = e,
-        F = null != A,
-        G = h.Z.getVideoComponent(),
+        G = null != A,
+        F = h.Z.getVideoComponent(),
         V = p.default.getId(),
         [z, Y] = i.useState(null),
         [q, K] = i.useState(!0),
@@ -81,7 +81,7 @@ function P(e) {
         et = U <= 2 * I + 144,
         en = M && !et,
         er = (0, c.Z)(en),
-        ei = B === y.AEg.MINIMUM || B === y.AEg.NORMAL,
+        ei = B === C.AEg.MINIMUM || B === C.AEg.NORMAL,
         el = !et && (!ei || J),
         eo = (0, m.Z)(el, 100),
         ea = (null != (t = (0, c.Z)(k.id)) ? t : k.id) !== k.id,
@@ -108,9 +108,9 @@ function P(e) {
                 delay: eh || !en ? 0 : 100,
                 config: E(O({}, a.config.stiff), { clamp: !0 }),
                 onStart: () => Q(!0),
-                onChange: () => f.S.dispatch(y.CkL.REMEASURE_TARGET),
+                onChange: () => f.S.dispatch(C.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    Q(!1), f.S.dispatch(y.CkL.REMEASURE_TARGET);
+                    Q(!1), f.S.dispatch(C.CkL.REMEASURE_TARGET);
                 }
             },
             ef
@@ -136,7 +136,7 @@ function P(e) {
             },
             ef
         ),
-        eC = (0, s.Yzy)(
+        ey = (0, s.Yzy)(
             k,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
@@ -148,11 +148,11 @@ function P(e) {
             },
             ef
         ),
-        ey = i.useCallback((e) => {
+        eC = i.useCallback((e) => {
             Y(e), K(!1);
         }, []),
         ex = en || D ? [] : (0, _.n3)(Z, k, V),
-        { visibleParticipants: ev, participantTileWidth: ej } = (0, C.ZB)(W, T);
+        { visibleParticipants: ev, participantTileWidth: ej } = (0, y.ZB)(W, T);
     return (0, r.jsxs)('div', {
         className: o()(j.root, v.flexCenter, L),
         children: [
@@ -170,7 +170,7 @@ function P(e) {
                                 children: (0, r.jsx)('div', {
                                     className: v.videoSizer,
                                     style: { aspectRatio: ec },
-                                    children: eC((e, t, n) => {
+                                    children: ey((e, t, n) => {
                                         let { key: i } = n;
                                         return null != t
                                             ? (0, r.jsx)(
@@ -183,16 +183,16 @@ function P(e) {
                                                           noBorder: ed >= W || eu >= U,
                                                           channel: R,
                                                           className: v.focusedVideo,
-                                                          videoComponent: G,
+                                                          videoComponent: F,
                                                           paused: D,
                                                           width: W,
                                                           participant: t,
                                                           onClick: l,
                                                           onDoubleClick: S,
                                                           onContextMenu: P,
-                                                          onVideoResize: ey,
+                                                          onVideoResize: eC,
                                                           inCall: w,
-                                                          inPopout: F
+                                                          inPopout: G
                                                       })
                                                   },
                                                   i
@@ -221,7 +221,7 @@ function P(e) {
                             opacity: em.value,
                             visibility: em.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
-                        children: (0, r.jsx)(C.ZP, {
+                        children: (0, r.jsx)(y.ZP, {
                             channel: R,
                             onClick: l,
                             onContextMenu: P,

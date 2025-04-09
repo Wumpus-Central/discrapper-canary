@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => C });
 var r = n(200651),
     a = n(192379),
     l = n(442837),
@@ -22,20 +22,20 @@ var r = n(200651),
     T = n(217702),
     y = n(388032),
     P = n(915298);
-function w(e) {
-    return e.isActiveThread() ? (0, r.jsx)(O, { channel: e }) : (0, r.jsx)(S, { channel: e });
+function C(e) {
+    return e.isActiveThread() ? (0, r.jsx)(w, { channel: e }) : (0, r.jsx)(S, { channel: e });
 }
-function O(e) {
+function w(e) {
     let { channel: t } = e,
         n = (0, l.e7)([p.Z], () => p.Z.getMostRecentMessage(t.id));
     return null == n
-        ? (0, r.jsx)(C, { channel: t })
+        ? (0, r.jsx)(O, { channel: t })
         : (0, r.jsx)(I, {
               channel: t,
               message: n
           });
 }
-function C(e) {
+function O(e) {
     let { channel: t } = e,
         n = (0, b.Ok)(t);
     return (0, r.jsxs)(s.Text, {
@@ -53,8 +53,8 @@ function I(e) {
             return null != (e = v.default.getUser(n.author.id)) ? e : n.author;
         }),
         { nick: f, colorString: x, colorStrings: N } = (0, h.ZP)(n),
-        p = (0, m.E)(t.guild_id, N),
-        { isBlocked: y, isIgnored: w } = (0, l.cj)(
+        p = (0, m.X)(t.guild_id, N),
+        { isBlocked: y, isIgnored: C } = (0, l.cj)(
             [j.Z],
             () => ({
                 isBlocked: j.Z.isBlockedForMessage(n),
@@ -62,13 +62,13 @@ function I(e) {
             }),
             [n]
         ),
-        O = (0, d.p)(),
-        C = a.useMemo(() => {
+        w = (0, d.p)(),
+        O = a.useMemo(() => {
             let e =
                     null != n.content && '' !== n.content
                         ? (0, u.ZP)(n, {
                               formatInline: !0,
-                              shouldFilterKeywords: O
+                              shouldFilterKeywords: w
                           }).content
                         : null,
                 {
@@ -76,7 +76,7 @@ function I(e) {
                     renderedContent: a,
                     trailingIcon: l,
                     leadingIcon: s
-                } = (0, g.f)(n, e, y, w, P.messageContent, {
+                } = (0, g.f)(n, e, y, C, P.messageContent, {
                     trailingIconClass: P.messageContentTrailingIcon,
                     leadingIconClass: P.messageContentLeadingIcon,
                     iconSize: T.WW
@@ -84,7 +84,7 @@ function I(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [s, null != a ? a : (0, r.jsx)('span', { children: t }), l]
             });
-        }, [n, y, w, O]);
+        }, [n, y, C, w]);
     return (0, r.jsxs)(s.Text, {
         className: P.subtext,
         variant: 'text-sm/normal',
@@ -98,11 +98,11 @@ function I(e) {
             (0, r.jsx)(s.PUh, {
                 name: f,
                 color: x,
-                roleGradient: p,
+                roleColors: p,
                 className: P.authorName
             }),
             ':\xA0',
-            C,
+            O,
             '\xA0 \u2022 \xA0',
             (0, b.Ye)(Z.default.extractTimestamp(n.id))
         ]
@@ -116,7 +116,7 @@ function S(e) {
     (0, o.$)({ [d.guild_id]: [d.ownerId] });
     let g = (0, l.e7)([v.default], () => v.default.getUser(d.ownerId)),
         j = (0, l.e7)([f.ZP], () => f.ZP.getMember(d.guild_id, d.ownerId)),
-        p = (0, m.E)(d.guild_id, null == j ? void 0 : j.colorStrings),
+        p = (0, m.X)(d.guild_id, null == j ? void 0 : j.colorStrings),
         T = null != (a = (0, c.KS)(d)) ? a : s.or_;
     return (0, r.jsx)(s.Text, {
         className: P.subtext,
@@ -153,7 +153,7 @@ function S(e) {
                                       {
                                           className: P.startedByName,
                                           color: null != (n = null == j ? void 0 : j.colorString) ? n : void 0,
-                                          roleGradient: p,
+                                          roleColors: p,
                                           name: null != (a = null == j ? void 0 : j.nick) ? a : N.ZP.getName(g)
                                       },
                                       t

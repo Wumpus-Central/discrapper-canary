@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -87,7 +87,7 @@ class _ extends (r = i.ZP.Store) {
     }
 }
 s(_, 'displayName', 'GuildDirectoryStore');
-let C = new _(l.Z, {
+let y = new _(l.Z, {
     GUILD_DIRECTORY_FETCH_START: function () {
         p = !0;
     },
@@ -135,16 +135,16 @@ let C = new _(l.Z, {
     GUILD_DIRECTORY_ENTRY_UPDATE: function (e) {
         var t, n, r, i, l, s, d, p, f;
         let { channelId: b, entry: _ } = e,
-            C = (0, o.MQ)(_),
-            y = null == (t = h[b]) ? void 0 : t[C.guildId];
-        h[b] = u(c({}, h[b]), { [C.guildId]: c({}, y, C) });
-        let x = null != (i = null == y ? void 0 : y.primaryCategoryId) ? i : a.AR.UNCATEGORIZED,
-            v = null != (l = C.primaryCategoryId) ? l : a.AR.UNCATEGORIZED,
+            y = (0, o.MQ)(_),
+            C = null == (t = h[b]) ? void 0 : t[y.guildId];
+        h[b] = u(c({}, h[b]), { [y.guildId]: c({}, C, y) });
+        let x = null != (i = null == C ? void 0 : C.primaryCategoryId) ? i : a.AR.UNCATEGORIZED,
+            v = null != (l = y.primaryCategoryId) ? l : a.AR.UNCATEGORIZED,
             j = Object.assign({}, null == (n = m[b]) ? void 0 : n[x]);
-        null != y && x !== v && delete j[C.guildId],
+        null != C && x !== v && delete j[y.guildId],
             (m[b] = u(c({}, m[b]), {
                 [x]: j,
-                [v]: u(c({}, null == (r = m[b]) ? void 0 : r[v]), { [C.guildId]: c({}, y, C) })
+                [v]: u(c({}, null == (r = m[b]) ? void 0 : r[v]), { [y.guildId]: c({}, C, y) })
             })),
             v !== x &&
                 null != g[b] &&

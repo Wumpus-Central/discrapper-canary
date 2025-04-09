@@ -9,7 +9,7 @@ var r = n(200651),
 function u(e) {
     let t, n;
     var { hasPermission: u, streamActive: d, isSelfStream: p, centerButton: h, onMouseEnter: f, onMouseLeave: m, premiumGlow: g, renderNUXHighlight: b, buttonRef: _ } = e,
-        C = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,7 +28,7 @@ function u(e) {
             }
             return i;
         })(e, ['hasPermission', 'streamActive', 'isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave', 'premiumGlow', 'renderNUXHighlight', 'buttonRef']);
-    let { mode: y } = (0, o.ZP)({ location: 'StreamButton' }),
+    let { mode: C } = (0, o.ZP)({ location: 'StreamButton' }),
         { squareButtonsEnabled: x, coloredIconsEnabled: v } = (0, a.Z)({ location: 'StreamButton' }),
         j = h ? s.d : s.Z;
     t = d ? (p ? c.NW.string(c.t.S5anIS) : c.NW.string(c.t.q3O3Jy)) : u ? c.NW.string(c.t.fjBNo6) : c.NW.string(c.t.uQn9Bw);
@@ -68,7 +68,7 @@ function u(e) {
                     disabled: !u,
                     iconComponent: O,
                     isActive: d,
-                    color: (b ? (n = 'premiumGradient') : (x || y === o.BK.GroupedButtonsRedMic) && d && (n = 'green'), n),
+                    color: (b ? (n = 'premiumGradient') : (x || C === o.BK.GroupedButtonsRedMic) && d && (n = 'green'), n),
                     caretColor: v ? 'green' : 'primaryDark',
                     onMouseEnter: (e) => {
                         null == f || f(e), E.onMouseEnter();
@@ -78,7 +78,7 @@ function u(e) {
                     },
                     premiumGlow: g
                 },
-                C
+                y
             )
         )
     );

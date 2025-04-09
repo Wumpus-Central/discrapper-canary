@@ -11,17 +11,17 @@ var r = n(200651),
     m = n(214715),
     g = n(18100),
     p = n(308083),
-    h = n(388032),
-    f = n(203514),
+    f = n(388032),
+    h = n(203514),
     b = n(130116);
 let x = (e) => {
     let { guildId: t, handleUpdate: n, progress: s, error: x } = e,
         { interests: j } = s,
-        [N, _] = i.useState(''),
-        [v, y] = i.useState(0),
+        [N, v] = i.useState(''),
+        [_, y] = i.useState(0),
         O = (0, c.e7)([d.default], () => d.default.getId()),
         C = i.useMemo(() => (0, l.chunk)((0, u.XV)(p.i6, O), 9), [O]),
-        I = [...C[v], ...C[(v + 1) % C.length]],
+        I = [...C[_], ...C[(_ + 1) % C.length]],
         E = i.useMemo(() => Array.from(j), [j]),
         S = i.useMemo(() => E.filter((e) => !p.WZ.has(e) && !p.gh.has(e)), [E]),
         T = (e) => {
@@ -34,7 +34,7 @@ let x = (e) => {
                 let t = null != e ? e : N.trim();
                 if (0 === t.length) return;
                 let r = new Set(j);
-                r.add(t), n({ interests: r }), _('');
+                r.add(t), n({ interests: r }), v('');
             },
             [n, N, j]
         ),
@@ -57,13 +57,13 @@ let x = (e) => {
             (0, r.jsx)(o.X6q, {
                 variant: 'heading-xxl/medium',
                 className: b.title,
-                children: h.NW.string(h.t.V69HzM)
+                children: f.NW.string(f.t.V69HzM)
             }),
             (0, r.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: b.subtitle,
-                children: h.NW.format(h.t['BAK+ND'], {})
+                children: f.NW.format(f.t['BAK+ND'], {})
             }),
             null != x &&
                 (0, r.jsx)(o.Text, {
@@ -85,15 +85,15 @@ let x = (e) => {
                                         variant: 'text-xs/semibold',
                                         color: 'text-muted',
                                         className: b.contentLabel,
-                                        children: h.NW.string(h.t.qMh4Oj)
+                                        children: f.NW.string(f.t.qMh4Oj)
                                     }),
                                     (0, r.jsx)(o.oil, {
                                         autoFocus: !0,
                                         inputClassName: b.input,
                                         value: N,
                                         onKeyDown: w,
-                                        onChange: _,
-                                        placeholder: h.NW.string(h.t.axCpsL),
+                                        onChange: v,
+                                        placeholder: f.NW.string(f.t.axCpsL),
                                         maxLength: p.Sq,
                                         disabled: j.size === p.c4
                                     }),
@@ -112,7 +112,7 @@ let x = (e) => {
                                             color: 'text-muted',
                                             variant: 'text-xs/normal',
                                             className: b.enterToSearchText,
-                                            children: h.NW.string(h.t.ZGkhJS)
+                                            children: f.NW.string(f.t.ZGkhJS)
                                         })
                                 ]
                             }),
@@ -120,7 +120,7 @@ let x = (e) => {
                                 className: b.interestsCategoryTitle,
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: h.NW.string(h.t.P793o6)
+                                children: f.NW.string(f.t.P793o6)
                             }),
                             (0, r.jsx)(o.Epb, {
                                 items: I,
@@ -145,8 +145,8 @@ let x = (e) => {
                                 children: (0, r.jsxs)(o.zxk, {
                                     color: o.Ttl.PRIMARY,
                                     onClick: R,
-                                    className: f.rerollButton,
-                                    innerClassName: f.innerRerollButton,
+                                    className: h.rerollButton,
+                                    innerClassName: h.innerRerollButton,
                                     children: [
                                         (0, r.jsx)(o.$2U, {
                                             size: 'sm',
@@ -155,7 +155,7 @@ let x = (e) => {
                                         (0, r.jsx)(o.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'none',
-                                            children: h.NW.string(h.t.ldYCQ0)
+                                            children: f.NW.string(f.t.ldYCQ0)
                                         })
                                     ]
                                 })

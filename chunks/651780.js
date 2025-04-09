@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(15640),
     g = n(774380),
     p = n(404270),
-    h = n(441536),
-    f = n(174604),
+    f = n(441536),
+    h = n(174604),
     b = n(386937),
     x = n(316350),
     j = n(899667),
     N = n(626135),
-    _ = n(267642),
-    v = n(63063),
+    v = n(267642),
+    _ = n(63063),
     y = n(999382),
     O = n(981631),
     C = n(388032),
@@ -42,10 +42,10 @@ function E(e) {
 }
 function S(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
-        i = (0, _.gZ)(t, n),
-        s = (0, _.nW)((0, _.Jh)(n));
+        i = (0, v.gZ)(t, n),
+        s = (0, v.nW)((0, v.Jh)(n));
     if (null == i || null == s) return null;
-    let l = (0, _._k)(t, n);
+    let l = (0, v._k)(t, n);
     return (0, r.jsxs)(a.Wn, {
         messageType: a.QYI.WARNING,
         children: [
@@ -102,19 +102,19 @@ function P() {
                     (0, r.jsx)(a.R94, {
                         type: a.R94.Types.DESCRIPTION,
                         className: I.titleBlurb,
-                        children: C.NW.format(C.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(O.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: C.NW.format(C.t.hLOkp6, { helpdeskArticle: _.Z.getArticleURL(O.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
             null != e &&
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(h.Z, {
                     guild: e,
                     onButtonClick: function () {
-                        null != e && ((0, c.xf)(), (0, h.Z)(e.id));
+                        null != e && ((0, c.xf)(), (0, f.Z)(e.id));
                     }
                 }),
             (0, r.jsx)(b.Z, {
-                tiers: (0, _.cP)(null != e && e.hasFeature(O.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= O.B9o),
+                tiers: (0, v.cP)(null != e && e.hasFeature(O.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= O.B9o),
                 renderTier: T
             }),
             (0, r.jsx)('div', { className: I.divider }),

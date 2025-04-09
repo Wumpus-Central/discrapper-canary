@@ -1,87 +1,87 @@
 n.d(t, {
-    I9: () => f,
-    ZP: () => b
+    I9: () => m,
+    ZP: () => p
 });
 var r = n(200651),
     i = n(192379),
-    o = n(692547),
-    c = n(481060),
-    s = n(496675),
-    a = n(484455),
-    l = n(981631),
-    u = n(388032),
-    d = n(664305);
-function f(e) {
+    s = n(692547),
+    a = n(481060),
+    l = n(496675),
+    o = n(484455),
+    c = n(981631),
+    d = n(388032),
+    u = n(664305);
+function m(e) {
     switch (e) {
-        case l.sFg.LOW:
-            return u.NW.string(u.t.SsCK8P);
-        case l.sFg.MEDIUM:
-            return u.NW.string(u.t.WwNoR0);
-        case l.sFg.HIGH:
-            return u.NW.string(u.t.I2jMUF);
-        case l.sFg.VERY_HIGH:
-            return u.NW.string(u.t.cJY8w8);
+        case c.sFg.LOW:
+            return d.NW.string(d.t.SsCK8P);
+        case c.sFg.MEDIUM:
+            return d.NW.string(d.t.WwNoR0);
+        case c.sFg.HIGH:
+            return d.NW.string(d.t.I2jMUF);
+        case c.sFg.VERY_HIGH:
+            return d.NW.string(d.t.cJY8w8);
         default:
             return '';
     }
 }
-let p = {
-        [l.sFg.NONE]: '',
-        [l.sFg.LOW]: o.Z.unsafe_rawColors.GREEN_360.css,
-        [l.sFg.MEDIUM]: o.Z.unsafe_rawColors.YELLOW_300.css,
-        [l.sFg.HIGH]: o.Z.unsafe_rawColors.ORANGE_345.css,
-        [l.sFg.VERY_HIGH]: o.Z.unsafe_rawColors.RED_400.css
+let g = {
+        [c.sFg.NONE]: '',
+        [c.sFg.LOW]: s.Z.unsafe_rawColors.GREEN_360.css,
+        [c.sFg.MEDIUM]: s.Z.unsafe_rawColors.YELLOW_300.css,
+        [c.sFg.HIGH]: s.Z.unsafe_rawColors.ORANGE_345.css,
+        [c.sFg.VERY_HIGH]: s.Z.unsafe_rawColors.RED_400.css
     },
-    b = function (e) {
+    p = function (e) {
         let { guild: t } = e,
-            o = s.Z.can(l.Plq.MANAGE_GUILD, t),
-            b = t.verificationLevel,
-            j = b === l.sFg.VERY_HIGH ? c.AtH : c._XJ,
-            y = i.useMemo(() => f(b), [b]),
-            m = p[b],
-            g = (0, r.jsx)('div', {
-                className: d.verificationLevelTitle,
-                children: u.NW.format(u.t.OpV87e, {
+            s = l.Z.can(c.Plq.MANAGE_GUILD, t),
+            p = t.verificationLevel,
+            f = p === c.sFg.VERY_HIGH ? a.AtH : a._XJ,
+            h = i.useMemo(() => m(p), [p]),
+            b = g[p],
+            x = (0, r.jsx)('div', {
+                className: u.verificationLevelTitle,
+                children: d.NW.format(d.t.OpV87e, {
                     verificationLevelHook: function () {
                         return (0, r.jsx)(
-                            c.Text,
+                            a.Text,
                             {
-                                className: d.verificationLevelHook,
-                                style: { color: m },
+                                className: u.verificationLevelHook,
+                                style: { color: b },
                                 variant: 'text-sm/semibold',
-                                children: y
+                                children: h
                             },
                             'hook'
                         );
                     }
                 })
             }),
-            O = b === l.sFg.VERY_HIGH ? u.NW.string(u.t.IlXyd3) : u.NW.string(u.t.JlzMPj);
-        return (0, r.jsx)(a.Z, {
-            title: g,
+            j = p === c.sFg.VERY_HIGH ? d.NW.string(d.t.IlXyd3) : d.NW.string(d.t.JlzMPj);
+        return (0, r.jsx)(o.Z, {
+            title: x,
             children: (0, r.jsxs)('div', {
-                className: d.verificationContainer,
+                className: u.verificationContainer,
                 children: [
-                    (0, r.jsx)(j, {
+                    (0, r.jsx)(f, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
                         height: 20,
-                        className: d.icon
+                        className: u.icon
                     }),
-                    (0, r.jsx)(c.Text, {
-                        className: d.guildVerificationText,
+                    (0, r.jsx)(a.Text, {
+                        className: u.guildVerificationText,
                         variant: 'text-sm/normal',
-                        children: O
+                        children: j
                     }),
-                    o &&
-                        (0, r.jsx)(c.P3F, {
-                            className: d.iconInteractiveContainer,
+                    s &&
+                        (0, r.jsx)(a.P3F, {
+                            className: u.iconInteractiveContainer,
                             onClick: () =>
-                                (0, c.ZDy)(async () => {
+                                (0, a.ZDy)(async () => {
                                     let { default: e } = await n.e('72458').then(n.bind(n, 694278));
                                     return (n) => {
-                                        var i, o;
+                                        var i, s;
                                         return (0, r.jsx)(
                                             e,
                                             ((i = (function (e) {
@@ -109,9 +109,9 @@ let p = {
                                                 }
                                                 return e;
                                             })({}, n)),
-                                            (o = o = { guild: t }),
+                                            (s = s = { guild: t }),
                                             Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                                                 : (function (e, t) {
                                                       var n = Object.keys(e);
                                                       if (Object.getOwnPropertySymbols) {
@@ -119,19 +119,19 @@ let p = {
                                                           n.push.apply(n, r);
                                                       }
                                                       return n;
-                                                  })(Object(o)).forEach(function (e) {
-                                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                                  })(Object(s)).forEach(function (e) {
+                                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                                                   }),
                                             i)
                                         );
                                     };
                                 }),
-                            children: (0, r.jsx)(c.vdY, {
+                            children: (0, r.jsx)(a.vdY, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
                                 height: 20,
-                                className: d.iconInteractive
+                                className: u.iconInteractive
                             })
                         })
                 ]

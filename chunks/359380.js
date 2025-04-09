@@ -67,25 +67,25 @@ function m(e) {
                 e
             );
         }, []),
-        h = i.useMemo(() => {
+        f = i.useMemo(() => {
             var e;
             return null != (e = null != m ? m : null == a ? void 0 : a.interests) ? e : new Set();
         }, [m, null == a ? void 0 : a.interests]),
-        f = i.useMemo(() => Array.from(h), [h]),
-        b = i.useMemo(() => f.filter((e) => o.gh.has(e)), [f]),
+        h = i.useMemo(() => Array.from(f), [f]),
+        b = i.useMemo(() => h.filter((e) => o.gh.has(e)), [h]),
         x = i.useCallback(
             (e) => {
-                n(new Set([...f.filter((e) => !o.gh.has(e)), ...e]));
-            },
-            [n, f]
-        ),
-        j = i.useMemo(() => f.filter((e) => o.WZ.has(e) || o.gh.has(e)), [f]),
-        N = i.useCallback(
-            (e) => {
-                let t = new Set(h);
-                t.delete(e), n(t);
+                n(new Set([...h.filter((e) => !o.gh.has(e)), ...e]));
             },
             [n, h]
+        ),
+        j = i.useMemo(() => h.filter((e) => o.WZ.has(e) || o.gh.has(e)), [h]),
+        N = i.useCallback(
+            (e) => {
+                let t = new Set(f);
+                t.delete(e), n(t);
+            },
+            [n, f]
         );
     return (0, r.jsxs)('div', {
         className: d.content,
@@ -97,14 +97,14 @@ function m(e) {
                         title: c.NW.string(c.t.SXqVqq),
                         icon: s.tBG,
                         availableTraits: o.jK,
-                        selectedTraits: h,
+                        selectedTraits: f,
                         onUpdateTraits: n
                     }),
                     (0, r.jsx)(u, {
                         title: c.NW.string(c.t['7uZoaG']),
                         icon: s.tBG,
                         availableTraits: o.CT,
-                        selectedTraits: h,
+                        selectedTraits: f,
                         onUpdateTraits: n
                     }),
                     (0, r.jsx)(s.Text, {
@@ -130,7 +130,7 @@ function m(e) {
                 className: d.fixedWidthSidebar,
                 children:
                     null != a &&
-                    f.length > 0 &&
+                    h.length > 0 &&
                     !g &&
                     (0, r.jsx)(l.Z, {
                         guildId: t,

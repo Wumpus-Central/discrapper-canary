@@ -27,7 +27,7 @@ function _(e, t, n) {
         e
     );
 }
-let C = [
+let y = [
         {
             timeSinceJoin: +d.Z.Millis.HOUR,
             sends: 1,
@@ -49,7 +49,7 @@ let C = [
             viewTime: 30 * d.Z.Millis.MINUTE
         }
     ],
-    y = 5 * C[C.length - 1].viewTime,
+    C = 5 * y[y.length - 1].viewTime,
     x = d.Z.Millis.WEEK,
     v = { channels: {} },
     j = new Set(),
@@ -59,7 +59,7 @@ let C = [
 function I() {
     if (null == O || !Z(O)) return !1;
     let e = S(O);
-    if (e.lastActionTime > Date.now() - d.Z.Millis.DAY && e.viewDuration > y) return !1;
+    if (e.lastActionTime > Date.now() - d.Z.Millis.DAY && e.viewDuration > C) return !1;
     let t = Date.now();
     (e.lastActionTime = t), (e.viewDuration += t - E), (E = t);
 }
@@ -120,7 +120,7 @@ class A extends (r = i.ZP.PersistedStore) {
                     i = Math.min(h.default.age(e.id), Date.now() - r.getTime()),
                     l = v.channels[e.id];
                 if (null == l || l.lastActionTime < Date.now() - x) return !1;
-                for (let e of C) if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
+                for (let e of y) if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(t) &&
             (delete v.channels[e], j.add(e), (0, f.IG)(t.guild_id, t.id, g.i.ALL_MESSAGES), !0)

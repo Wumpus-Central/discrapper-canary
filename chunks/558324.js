@@ -10,7 +10,7 @@ var r = n(200651),
 let u = (e) => {
     var t,
         n,
-        { className: s, tags: u, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: h, maxTaxLength: f, maxTags: b, disabled: x, placeholder: j } = e,
+        { className: s, tags: u, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: f, maxTaxLength: h, maxTags: b, disabled: x, placeholder: j } = e,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -30,7 +30,7 @@ let u = (e) => {
             }
             return i;
         })(e, ['className', 'tags', 'value', 'onRemoveTag', 'onAddTag', 'onAddTagError', 'maxTaxLength', 'maxTags', 'disabled', 'placeholder']);
-    let [_, v] = i.useState(null != m ? m : ''),
+    let [v, _] = i.useState(null != m ? m : ''),
         y = u.map((e, t) =>
             (0, r.jsxs)(
                 'span',
@@ -54,20 +54,20 @@ let u = (e) => {
             )
         ),
         O = i.useCallback(() => {
-            let e = _.trim();
+            let e = v.trim();
             if (0 !== e.length) {
                 if (null != b && u.length >= b) {
-                    null == h || h(c.NW.string(c.t.Xx7XeH));
+                    null == f || f(c.NW.string(c.t.Xx7XeH));
                     return;
                 }
-                p(e), v('');
+                p(e), _('');
             }
-        }, [_, b, p, h, u.length]),
+        }, [v, b, p, f, u.length]),
         C = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
-                        0 === _.length && u.length > 0 && (e.preventDefault(), e.stopPropagation(), g(u.length - 1));
+                        0 === v.length && u.length > 0 && (e.preventDefault(), e.stopPropagation(), g(u.length - 1));
                         break;
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
@@ -75,7 +75,7 @@ let u = (e) => {
                         e.preventDefault(), e.stopPropagation(), O();
                 }
             },
-            [O, _.length, g, u.length]
+            [O, v.length, g, u.length]
         );
     return (0, r.jsxs)('div', {
         className: a()(s, d.inputWrapper, { [d.disabled]: x }),
@@ -116,10 +116,10 @@ let u = (e) => {
                 )),
                 (n = n =
                     {
-                        value: _,
+                        value: v,
                         onKeyDown: C,
-                        onChange: v,
-                        maxLength: f,
+                        onChange: _,
+                        maxLength: h,
                         disabled: x,
                         onBlur: O,
                         placeholder: j

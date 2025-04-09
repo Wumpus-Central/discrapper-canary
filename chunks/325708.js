@@ -52,7 +52,7 @@ function _(e) {
                     return 'callParticipantsSidebarWidth';
             }
         })(t),
-        [C, y] = l.useState(h.ZP[_]),
+        [y, C] = l.useState(h.ZP[_]),
         x = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [_]: e });
@@ -65,7 +65,7 @@ function _(e) {
             minWidth: v
         }),
         O = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
-        E = (0, s.clamp)(C, v, n),
+        E = (0, s.clamp)(y, v, n),
         N = j ? E : E + O;
     l.useEffect(() => {
         null == r || r(E, j);
@@ -90,7 +90,7 @@ function _(e) {
                                 minWidth: v,
                                 maxWidth: n,
                                 resizableNode: g,
-                                onResize: y,
+                                onResize: C,
                                 onResizeEnd: x
                             }),
                         (0, i.jsx)('div', {

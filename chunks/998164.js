@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,7 +53,7 @@ function h(e, t) {
         e
     );
 }
-let f = [];
+let h = [];
 function b() {
     return (0, r.jsx)('div', {
         className: g.actionItemContainer,
@@ -90,7 +90,7 @@ function x(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            h(p({}, n), {
+                            f(p({}, n), {
                                 guildId: t,
                                 onSave: s
                             })
@@ -117,7 +117,7 @@ let j = function (e) {
     let { guildId: t } = e,
         n = (0, s.Wu)([d.Z], () => {
             var e;
-            return null != (e = d.Z.getSettings().newMemberActions) ? e : f;
+            return null != (e = d.Z.getSettings().newMemberActions) ? e : h;
         }),
         a = i.useCallback(
             (e, n) => {
@@ -156,8 +156,8 @@ let j = function (e) {
             },
             [n, t]
         ),
-        N = n.map((e) => h(p({}, e), { id: e.channelId })),
-        _ = i.useCallback(
+        N = n.map((e) => f(p({}, e), { id: e.channelId })),
+        v = i.useCallback(
             (e) => {
                 (0, c.hS)(e);
                 let n = d.Z.getSettings();
@@ -165,7 +165,7 @@ let j = function (e) {
             },
             [t]
         ),
-        { handleDragStart: v, handleDragReset: y, handleDragComplete: O } = (0, l.Z)(N, _);
+        { handleDragStart: _, handleDragReset: y, handleDragComplete: O } = (0, l.Z)(N, v);
     return (0, r.jsxs)('div', {
         className: g.section,
         children: [
@@ -178,7 +178,7 @@ let j = function (e) {
                         actionIndex: n,
                         onChange: m,
                         onDelete: j,
-                        onDragStart: v,
+                        onDragStart: _,
                         onDragReset: y,
                         onDragComplete: O
                     },

@@ -12,7 +12,7 @@ let u = (e) => {
     let t,
         n,
         i,
-        { guildFeature: u, guild: m, className: g, hideTooltip: p = !1, tooltipPosition: h = 'left', onClick: f } = e,
+        { guildFeature: u, guild: m, className: g, hideTooltip: p = !1, tooltipPosition: f = 'left', onClick: h } = e,
         b = m.hasFeature(u),
         x = (0, o._p)(u);
     return (b
@@ -45,7 +45,7 @@ let u = (e) => {
                   children: t
               })
             : (0, r.jsx)(a.ua7, {
-                  position: h,
+                  position: f,
                   text: i,
                   children: (e) => {
                       var n, i;
@@ -97,10 +97,10 @@ let u = (e) => {
                       );
                   }
               })),
-    null == f || b)
+    null == h || b)
         ? n
         : (0, r.jsx)(a.P3F, {
-              onClick: f,
+              onClick: h,
               className: d.clickable,
               children: n
           });

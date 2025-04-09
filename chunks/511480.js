@@ -17,14 +17,14 @@ var r = n(200651),
     m = n(345861),
     g = n(208567),
     p = n(984933),
-    h = n(496675),
-    f = n(699516),
+    f = n(496675),
+    h = n(699516),
     b = n(594174),
     x = n(768581),
     j = n(900849),
     N = n(434404),
-    _ = n(999382),
-    v = n(718157),
+    v = n(999382),
+    _ = n(718157),
     y = n(450474),
     O = n(209054),
     C = n(118215),
@@ -37,8 +37,8 @@ var r = n(200651),
     R = n(203377),
     D = n(929834),
     Z = n(981631),
-    A = n(388032),
-    k = n(131027);
+    k = n(388032),
+    A = n(131027);
 function W(e, t, n) {
     return (
         t in e
@@ -79,8 +79,8 @@ function M(e) {
     }
     return e;
 }
-let G = s.ZP.connectStores([_.Z], () => {
-    let { guild: e, originalGuild: t, submitting: n, guildMetadata: r } = _.Z.getProps();
+let G = s.ZP.connectStores([v.Z], () => {
+    let { guild: e, originalGuild: t, submitting: n, guildMetadata: r } = v.Z.getProps();
     return {
         guild: e,
         submitting: n,
@@ -131,26 +131,26 @@ class U extends i.PureComponent {
         if (null == e) return;
         let n = e.hasFeature(Z.oNc.DISCOVERABLE);
         return (0, r.jsxs)(a.hjN, {
-            className: k.twoColumnFormSection,
+            className: A.twoColumnFormSection,
             children: [
                 (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(a.vwX, {
-                            className: k.formTitle,
-                            children: A.NW.string(A.t.XU0S6u)
+                            className: A.formTitle,
+                            children: k.NW.string(k.t.XU0S6u)
                         }),
                         (0, r.jsx)(a.R94, {
                             type: a.geA.DESCRIPTION,
-                            className: k.formDescription,
-                            children: A.NW.string(A.t['IIiV/P'])
+                            className: A.formDescription,
+                            children: k.NW.string(k.t['IIiV/P'])
                         }),
                         (0, r.jsx)(a.R94, {
                             type: a.geA.DESCRIPTION,
-                            className: k.formDescription,
-                            children: A.NW.string(A.t.rSHA09)
+                            className: A.formDescription,
+                            children: k.NW.string(k.t.rSHA09)
                         }),
                         (0, r.jsx)(a.ua7, {
-                            text: t ? null : A.NW.string(A.t['5VbUBw']),
+                            text: t ? null : k.NW.string(k.t['5VbUBw']),
                             children: (e) => {
                                 var i, s;
                                 return (0, r.jsx)(
@@ -164,7 +164,7 @@ class U extends i.PureComponent {
                                         },
                                         e
                                     )),
-                                    (s = s = { children: n ? A.NW.string(A.t.VHHyFR) : A.NW.string(A.t.XU0S6u) }),
+                                    (s = s = { children: n ? k.NW.string(k.t.VHHyFR) : k.NW.string(k.t.XU0S6u) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                                         : (function (e, t) {
@@ -184,7 +184,7 @@ class U extends i.PureComponent {
                     ]
                 }),
                 (0, r.jsx)(I.Z, {
-                    className: k.guildCard,
+                    className: A.guildCard,
                     loading: null == e,
                     guild: e
                 })
@@ -197,21 +197,21 @@ class U extends i.PureComponent {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)(a.hjN, {
-                        className: k.twoColumnFormSection,
+                        className: A.twoColumnFormSection,
                         children: [
                             (0, r.jsxs)('div', {
                                 children: [
                                     (0, r.jsx)(a.vwX, {
-                                        className: k.formTitle,
-                                        children: A.NW.string(A.t['8bT/Cg'])
+                                        className: A.formTitle,
+                                        children: k.NW.string(k.t['8bT/Cg'])
                                     }),
                                     (0, r.jsx)(a.R94, {
                                         type: a.geA.DESCRIPTION,
-                                        className: k.formDescription,
-                                        children: A.NW.string(A.t.Ltsutr)
+                                        className: A.formDescription,
+                                        children: k.NW.string(k.t.Ltsutr)
                                     }),
                                     (0, r.jsx)(m.Z, {
-                                        buttonCTA: A.NW.string(A.t.yG2pUl),
+                                        buttonCTA: k.NW.string(k.t.yG2pUl),
                                         size: a.zxk.Sizes.SMALL,
                                         color: a.zxk.Colors.PRIMARY,
                                         disabled: !n,
@@ -220,7 +220,7 @@ class U extends i.PureComponent {
                                 ]
                             }),
                             (0, r.jsx)('div', {
-                                className: k.imageUploaderWrapper,
+                                className: A.imageUploaderWrapper,
                                 children: (0, r.jsx)(g.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
@@ -231,8 +231,8 @@ class U extends i.PureComponent {
                                         }),
                                     disabled: !n,
                                     onChange: this.handleSplashChange,
-                                    hint: A.NW.string(A.t.uPvxqK),
-                                    imageClassName: k.imageUploaderInnerSquare,
+                                    hint: k.NW.string(k.t.uPvxqK),
+                                    imageClassName: A.imageUploaderInnerSquare,
                                     hideSize: !0
                                 })
                             })
@@ -253,26 +253,26 @@ class U extends i.PureComponent {
             { discoverableGuild: i } = this.state,
             { emojiDiscoverabilityEnabled: s } = t;
         return (0, r.jsxs)(a.hjN, {
-            className: k.twoColumnFormSection,
+            className: A.twoColumnFormSection,
             children: [
                 (0, r.jsxs)('div', {
-                    className: k.formColumnLeft,
+                    className: A.formColumnLeft,
                     children: [
                         (0, r.jsx)(a.vwX, {
-                            className: k.formTitle,
-                            children: A.NW.string(A.t.DhJ8ur)
+                            className: A.formTitle,
+                            children: k.NW.string(k.t.DhJ8ur)
                         }),
                         (0, r.jsx)(a.R94, {
-                            className: k.description,
+                            className: A.description,
                             type: a.geA.DESCRIPTION,
-                            children: A.NW.string(A.t['/RSSlZ'])
+                            children: k.NW.string(k.t['/RSSlZ'])
                         }),
                         (0, r.jsx)(a.zxk, {
                             size: a.zxk.Sizes.SMALL,
                             color: s ? a.zxk.Colors.PRIMARY : a.zxk.Colors.GREEN,
                             disabled: !e,
                             onClick: this.handleToggleEmojiDiscoverability,
-                            children: s ? A.NW.string(A.t.XnrNLi) : A.NW.string(A.t.bHbZLC)
+                            children: s ? k.NW.string(k.t.XnrNLi) : k.NW.string(k.t.bHbZLC)
                         })
                     ]
                 }),
@@ -287,23 +287,23 @@ class U extends i.PureComponent {
         let { guild: e, canManageGuild: t, localeOptions: n } = this.props;
         if (null != e)
             return (0, r.jsxs)(a.hjN, {
-                className: k.twoColumnFormSection,
+                className: A.twoColumnFormSection,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsx)(a.vwX, {
-                                className: k.formTitle,
-                                children: A.NW.string(A.t.pO60f3)
+                                className: A.formTitle,
+                                children: k.NW.string(k.t.pO60f3)
                             }),
                             (0, r.jsx)(a.R94, {
                                 type: a.geA.DESCRIPTION,
-                                className: k.formDescription,
-                                children: A.NW.string(A.t['SF/GRk'])
+                                className: A.formDescription,
+                                children: k.NW.string(k.t['SF/GRk'])
                             })
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: k.formSelect,
+                        className: A.formSelect,
                         children: (0, r.jsx)(a.q4e, {
                             value: e.preferredLocale,
                             options: n,
@@ -322,27 +322,27 @@ class U extends i.PureComponent {
                     (0, r.jsxs)(a.hjN, {
                         children: [
                             (0, r.jsx)(a.vwX, {
-                                className: k.formTitle,
-                                children: A.NW.string(A.t['5b4VCQ'])
+                                className: A.formTitle,
+                                children: k.NW.string(k.t['5b4VCQ'])
                             }),
                             (0, r.jsx)(a.R94, {
                                 type: a.geA.DESCRIPTION,
-                                className: k.description,
-                                children: A.NW.string(A.t.MSfJlZ)
+                                className: A.description,
+                                children: k.NW.string(k.t.MSfJlZ)
                             })
                         ]
                     }),
-                    (0, r.jsx)(v.E, {
+                    (0, r.jsx)(_.E, {
                         guildId: i.id,
                         guildMetadata: t,
                         isDisabled: !e
                     }),
                     (0, r.jsxs)(a.hjN, {
-                        className: k.noDividerFormSection,
+                        className: A.noDividerFormSection,
                         children: [
                             (0, r.jsx)(a.vwX, {
-                                className: k.formTitle,
-                                children: A.NW.string(A.t.oOPlPD)
+                                className: A.formTitle,
+                                children: k.NW.string(k.t.oOPlPD)
                             }),
                             (0, r.jsx)(y.Z, {
                                 guild: i,
@@ -353,7 +353,7 @@ class U extends i.PureComponent {
                     (null == n ? void 0 : n.category) != null
                         ? (0, r.jsx)(a.Text, {
                               color: 'text-danger',
-                              className: k.error,
+                              className: A.error,
                               variant: 'text-sm/normal',
                               children: n.category
                           })
@@ -366,13 +366,13 @@ class U extends i.PureComponent {
         return (0, r.jsxs)(a.hjN, {
             children: [
                 (0, r.jsx)(a.vwX, {
-                    className: k.formTitle,
-                    children: A.NW.string(A.t.V5pXNT)
+                    className: A.formTitle,
+                    children: k.NW.string(k.t.V5pXNT)
                 }),
                 (0, r.jsx)(a.R94, {
-                    className: k.description,
+                    className: A.description,
                     type: a.geA.DESCRIPTION,
-                    children: A.NW.format(A.t.FLMb5O, {})
+                    children: k.NW.format(k.t.FLMb5O, {})
                 }),
                 (0, r.jsx)(o.Z, {
                     tags: t.keywords,
@@ -385,7 +385,7 @@ class U extends i.PureComponent {
                 (null == n ? void 0 : n.keywords) != null
                     ? (0, r.jsx)(a.Text, {
                           color: 'text-danger',
-                          className: k.error,
+                          className: A.error,
                           variant: 'text-sm/normal',
                           children: n.keywords
                       })
@@ -407,10 +407,10 @@ class U extends i.PureComponent {
                 return (0, r.jsx)(P.Z, { guild: e });
             case T.d5.SETTINGS:
                 return (0, r.jsxs)(a.hjN, {
-                    className: k.__invalid_discoverySettings,
-                    title: A.NW.string(A.t.oGaVGx),
+                    className: A.__invalid_discoverySettings,
+                    title: k.NW.string(k.t.oGaVGx),
                     tag: a.RB0.H1,
-                    children: [this.renderDiscoverableSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderCoverImageSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderEmojiDiscoverabilitySection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderCategoriesSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderKeywordsSection(), (0, r.jsx)(a.$i$, { className: k.divider }), this.renderLocaleSelector()]
+                    children: [this.renderDiscoverableSection(), (0, r.jsx)(a.$i$, { className: A.divider }), this.renderCoverImageSection(), (0, r.jsx)(a.$i$, { className: A.divider }), this.renderEmojiDiscoverabilitySection(), (0, r.jsx)(a.$i$, { className: A.divider }), this.renderCategoriesSection(), (0, r.jsx)(a.$i$, { className: A.divider }), this.renderKeywordsSection(), (0, r.jsx)(a.$i$, { className: A.divider }), this.renderLocaleSelector()]
                 });
             default:
                 return null;
@@ -471,10 +471,10 @@ class U extends i.PureComponent {
             });
     }
 }
-let B = s.ZP.connectStores([_.Z, h.Z, C.ZP, p.ZP, b.default, f.Z], () => {
-    let { guild: e, errors: t, submitting: n, guildMetadata: r } = _.Z.getProps(),
-        i = h.Z.can(Z.Plq.MANAGE_GUILD, e),
-        s = h.Z.can(Z.Plq.ADMINISTRATOR, e),
+let B = s.ZP.connectStores([v.Z, f.Z, C.ZP, p.ZP, b.default, h.Z], () => {
+    let { guild: e, errors: t, submitting: n, guildMetadata: r } = v.Z.getProps(),
+        i = f.Z.can(Z.Plq.MANAGE_GUILD, e),
+        s = f.Z.can(Z.Plq.ADMINISTRATOR, e),
         a = null != e ? C.ZP.getDiscoveryChecklist(e.id) : null,
         l = null != e ? p.ZP.getChannels(e.id) : null,
         o = [];
@@ -485,7 +485,7 @@ let B = s.ZP.connectStores([_.Z, h.Z, C.ZP, p.ZP, b.default, f.Z], () => {
                 t.type === Z.d4z.GUILD_TEXT &&
                     o.push({
                         value: t.id,
-                        label: (0, c.F6)(t, b.default, f.Z, !0)
+                        label: (0, c.F6)(t, b.default, h.Z, !0)
                     });
             }),
         {

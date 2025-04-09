@@ -11,9 +11,9 @@ var i = n(120356),
 let u = (e) => {
     var t, n, i;
     let { guildId: u, handleUpdate: m, progress: g, errors: p } = e,
-        { wildcardDescriptors: h, description: f } = g,
+        { wildcardDescriptors: f, description: h } = g,
         b = (e, t) => {
-            let n = [...h];
+            let n = [...f];
             (n[t] = e), m({ wildcardDescriptors: n });
         };
     return (0, r.jsxs)('div', {
@@ -49,7 +49,7 @@ let u = (e) => {
                                     className: d.input,
                                     maxLength: o.Us,
                                     onChange: (e) => m({ description: e }),
-                                    value: null != f ? f : '',
+                                    value: null != h ? h : '',
                                     rows: 5,
                                     autoFocus: !0,
                                     autosize: !0,
@@ -80,21 +80,21 @@ let u = (e) => {
                                 children: [
                                     (0, r.jsx)(a.oil, {
                                         inputClassName: s()(d.input, d.wildcardInput),
-                                        value: null != (t = h[0]) ? t : '',
+                                        value: null != (t = f[0]) ? t : '',
                                         onChange: (e) => b(e, 0),
                                         maxLength: o.TY,
                                         placeholder: o.LK['0']
                                     }),
                                     (0, r.jsx)(a.oil, {
                                         inputClassName: s()(d.input, d.wildcardInput),
-                                        value: null != (n = h[1]) ? n : '',
+                                        value: null != (n = f[1]) ? n : '',
                                         onChange: (e) => b(e, 1),
                                         maxLength: o.TY,
                                         placeholder: o.LK['1']
                                     }),
                                     (0, r.jsx)(a.oil, {
                                         inputClassName: s()(d.input, d.wildcardInput),
-                                        value: null != (i = h[2]) ? i : '',
+                                        value: null != (i = f[2]) ? i : '',
                                         onChange: (e) => b(e, 2),
                                         maxLength: o.TY,
                                         placeholder: o.LK['2']

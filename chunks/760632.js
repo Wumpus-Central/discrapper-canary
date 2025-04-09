@@ -36,13 +36,13 @@ function g(e) {
             ],
             []
         ),
-        h = i.useCallback((e) => {
+        f = i.useCallback((e) => {
             a.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
         }, []);
     return (0, r.jsx)(s.q4e, {
         value: null == n ? null : ''.concat(n),
         options: p,
         isDisabled: null == g || !t,
-        onChange: h
+        onChange: f
     });
 }

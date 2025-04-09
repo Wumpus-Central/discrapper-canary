@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(430824),
     g = n(570961),
     p = n(208665),
-    h = n(959508),
-    f = n(290511),
+    f = n(959508),
+    h = n(290511),
     b = n(388032),
     x = n(795808);
 function j(e) {
@@ -58,16 +58,16 @@ function N(e, t) {
         e
     );
 }
-function _(e) {
+function v(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: s } = e,
         c = (0, l.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         m = u.length,
         {
-            drag: h,
+            drag: f,
             drop: j,
             dragSourcePosition: N,
-            setIsDraggable: _
+            setIsDraggable: v
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -76,25 +76,25 @@ function _(e) {
             onDragComplete: () => {},
             onDragReset: () => {}
         }),
-        v = i.useRef(null);
+        _ = i.useRef(null);
     return (
         i.useEffect(() => {
-            _(!1);
-        }, [_]),
+            v(!1);
+        }, [v]),
         i.useEffect(() => {
-            h(j(v));
-        }, [h, j, v]),
+            f(j(_));
+        }, [f, j, _]),
         (0, r.jsxs)('div', {
-            ref: v,
+            ref: _,
             className: a()(x.separatorSection, {
                 [x.dropIndicatorBefore]: null != N && m < N,
                 [x.dropIndicatorAfter]: null != N && m > N
             }),
             children: [
-                !s && u.length < f.b3
+                !s && u.length < h.b3
                     ? (0, r.jsxs)(o.P3F, {
                           className: x.addPrompt,
-                          onClick: () => (0, g.tS)(t, [...c, (0, f.yZ)(!0)], !1),
+                          onClick: () => (0, g.tS)(t, [...c, (0, h.yZ)(!0)], !1),
                           children: [
                               (0, r.jsx)(o.oFk, {
                                   size: 'custom',
@@ -132,12 +132,12 @@ function _(e) {
         })
     );
 }
-function v(e) {
+function _(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: s, singleColumn: a } = e,
         d = (0, l.e7)([m.Z], () => m.Z.getGuild(t)),
-        v = (0, l.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
-        y = v.filter((e) => e.inOnboarding),
-        O = v.filter((e) => !0 !== e.inOnboarding),
+        _ = (0, l.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
+        y = _.filter((e) => e.inOnboarding),
+        O = _.filter((e) => !0 !== e.inOnboarding),
         C = [
             ...y.map((e) => ({
                 id: e.id,
@@ -145,7 +145,7 @@ function v(e) {
             })),
             {
                 id: 'separator',
-                data: (0, f.ae)()
+                data: (0, h.ae)()
             },
             ...O.map((e) => ({
                 id: e.id,
@@ -165,10 +165,10 @@ function v(e) {
                         required: !1
                     })
                 );
-            if (n.length > f.b3)
+            if (n.length > h.b3)
                 return void c.Z.show({
                     title: b.NW.string(b.t['Cxtq5+']),
-                    body: b.NW.formatToPlainString(b.t['pkbZ+f'], { numQuestions: f.b3 })
+                    body: b.NW.formatToPlainString(b.t['pkbZ+f'], { numQuestions: h.b3 })
                 });
             (0, g.tS)(d, [...n, ...r]);
         });
@@ -198,7 +198,7 @@ function v(e) {
                                       }),
                                 y.map((e, t) =>
                                     (0, r.jsx)(
-                                        h.Z,
+                                        f.Z,
                                         {
                                             guild: d,
                                             prompt: e,
@@ -216,7 +216,7 @@ function v(e) {
                                 )
                             ]
                         }),
-                  (0, r.jsx)(_, {
+                  (0, r.jsx)(v, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: i
@@ -227,7 +227,7 @@ function v(e) {
                             children: [
                                 O.map((e, t) =>
                                     (0, r.jsx)(
-                                        h.Z,
+                                        f.Z,
                                         {
                                             guild: d,
                                             prompt: e,
@@ -240,10 +240,10 @@ function v(e) {
                                         e.id
                                     )
                                 ),
-                                v.length < f.YW
+                                _.length < h.YW
                                     ? (0, r.jsxs)(o.P3F, {
                                           className: x.addPrompt,
-                                          onClick: () => (0, g.tS)(d, [...v, (0, f.yZ)(!1)], !1),
+                                          onClick: () => (0, g.tS)(d, [..._, (0, h.yZ)(!1)], !1),
                                           children: [
                                               (0, r.jsx)(o.oFk, {
                                                   size: 'custom',

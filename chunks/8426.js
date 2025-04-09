@@ -2,8 +2,8 @@ n.d(t, {
     Hr: () => x,
     Hz: () => y,
     To: () => E,
-    XG: () => v,
-    _N: () => h,
+    XG: () => _,
+    _N: () => f,
     ad: () => N,
     bj: () => P,
     el: () => b,
@@ -12,8 +12,8 @@ n.d(t, {
     mM: () => C,
     oo: () => I,
     q6: () => T,
-    r2: () => _,
-    vR: () => f
+    r2: () => v,
+    vR: () => h
 }),
     n(361932),
     n(187205);
@@ -29,13 +29,13 @@ var r = n(392711),
     m = n(969632),
     g = n(981631),
     p = n(388032);
-function h(e) {
+function f(e) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE',
         welcomeMessage: e
     });
 }
-function f(e) {
+function h(e) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION',
         action: e
@@ -91,13 +91,13 @@ async function N(e, t, n, r) {
         );
     }
 }
-function _(e) {
+function v(e) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e
     });
 }
-function v(e, t) {
+function _(e, t) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL',
         channelId: e,
@@ -212,7 +212,7 @@ function E(e, t) {
           ));
 }
 async function S(e, t) {
-    var n, r, o, u, m, h, f, b, x;
+    var n, r, o, u, m, f, h, b, x;
     a.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_START' });
     try {
         let i = await s.tn.put({
@@ -232,8 +232,8 @@ async function S(e, t) {
                 guild_id: e,
                 welcome_message_author_id: (null != (u = null == l || null == (n = l.welcomeMessage) ? void 0 : n.authorIds) ? u : [])[0],
                 welcome_message_length: null != (m = null == l || null == (o = l.welcomeMessage) || null == (r = o.message) ? void 0 : r.length) ? m : 0,
-                member_action_channel_ids: (null != (h = null == l ? void 0 : l.newMemberActions) ? h : []).map((e) => e.channelId),
-                member_action_channel_actions: (null != (f = null == l ? void 0 : l.newMemberActions) ? f : []).map((e) => e.actionType),
+                member_action_channel_ids: (null != (f = null == l ? void 0 : l.newMemberActions) ? f : []).map((e) => e.channelId),
+                member_action_channel_actions: (null != (h = null == l ? void 0 : l.newMemberActions) ? h : []).map((e) => e.actionType),
                 resource_channel_ids: (null != (b = null == l ? void 0 : l.resourceChannels) ? b : []).map((e) => e.channelId),
                 enabled: null == l ? void 0 : l.enabled
             }),

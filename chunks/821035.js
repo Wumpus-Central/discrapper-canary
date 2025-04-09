@@ -40,12 +40,12 @@ function N() {
                 label: f.NW.string(f.t.S49UaW)
             }
         ],
-        O = {
+        C = {
             value: i.Q4.SHOW,
             label: f.NW.string(f.t['5k5OFh'])
         };
     return (
-        t && (E.unshift(O), j.unshift(O)),
+        t && (E.unshift(C), j.unshift(C)),
         (0, r.jsxs)(m.U, {
             setting: p.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: g.FY.EXPLICIT_MEDIA_REDACTION_V2,

@@ -53,14 +53,14 @@ function h(e, t) {
 }
 function f(e) {
     let { entry: t, onSelect: f, closePopout: m, hideEditButton: g = !1 } = e,
-        { isEntryAdmin: b, canEdit: _, canRemove: C } = (0, u.Z)(t),
-        y = (0, a.Z)({
+        { isEntryAdmin: b, canEdit: _, canRemove: y } = (0, u.Z)(t),
+        C = (0, a.Z)({
             id: t.guildId,
             label: d.NW.string(d.t['94lLDw']),
             onSuccess: m
         });
     i.useEffect(() => {
-        _ || C || null != y || (0, o.Zy)();
+        _ || y || null != C || (0, o.Zy)();
     });
     let x = () => {
         c.kx(t.channelId, t.guildId);
@@ -89,7 +89,7 @@ function f(e) {
                               }
                           })
                         : null,
-                    C
+                    y
                         ? (0, r.jsx)(l.sNh, {
                               id: 'remove-from-hub',
                               label: d.NW.string(d.t.KUxYWF),
@@ -134,7 +134,7 @@ function f(e) {
                           })
                 ]
             }),
-            (0, r.jsx)(l.kSQ, { children: y })
+            (0, r.jsx)(l.kSQ, { children: C })
         ]
     });
 }

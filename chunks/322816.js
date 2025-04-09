@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(594174),
     g = n(626135),
     p = n(233608),
-    h = n(700785),
-    f = n(764260),
+    f = n(700785),
+    h = n(764260),
     b = n(631969),
     x = n(95242),
     j = n(420966),
     N = n(275296),
-    _ = n(203377),
-    v = n(981631),
+    v = n(203377),
+    _ = n(981631),
     y = n(388032),
     O = n(96878),
     C = n(877248);
@@ -70,16 +70,16 @@ function S(e) {
         a = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         d = i.useMemo(
             () =>
-                h.uB({
+                f.uB({
                     user: a,
                     context: t
                 }),
             [a, t]
         ),
-        u = i.useMemo(() => ({ [n.id]: E(I({}, n), { permissions: h.Hn }) }), [n]),
+        u = i.useMemo(() => ({ [n.id]: E(I({}, n), { permissions: f.Hn }) }), [n]),
         g = i.useMemo(
             () =>
-                h.uB({
+                f.uB({
                     user: a,
                     context: t,
                     roles: u
@@ -100,10 +100,10 @@ function S(e) {
                     size: c.zxk.Sizes.TINY,
                     look: c.zxk.Looks.LINK,
                     color: c.zxk.Colors.LINK,
-                    onClick: () => (0, f.TY)(n.id),
+                    onClick: () => (0, h.TY)(n.id),
                     onMouseEnter: t,
                     onMouseLeave: i,
-                    disabled: l.fS(n.permissions, h.Hn) || p || s,
+                    disabled: l.fS(n.permissions, f.Hn) || p || s,
                     children: y.NW.string(y.t['UYq7+P'])
                 });
             }
@@ -144,7 +144,7 @@ function T(e) {
                         locked: s,
                         onChange: (e, t) => {
                             if ('string' == typeof t) throw Error('Unexpected string `allow`');
-                            (0, f.lO)(n.id, e, t);
+                            (0, h.lO)(n.id, e, t);
                         },
                         permissionRender: a
                     },
@@ -168,28 +168,28 @@ function P(e) {
                 })
             )
             .filter((e) => e.permissions.length > 0),
-        { headerHeight: h, headerRef: f } = (0, x.Z)(0),
+        { headerHeight: f, headerRef: h } = (0, x.Z)(0),
         { scrolledToTop: b, handleScroll: S } = (0, j.V)(),
         P = i.useRef(!1);
     return (
         i.useEffect(() => {
-            P.current || '' === d.trimStart() || (g.default.track(v.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (P.current = !0));
+            P.current || '' === d.trimStart() || (g.default.track(_.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (P.current = !0));
         }, [d]),
         (0, r.jsx)(c.yWw, {
             className: O.scroller,
-            style: { scrollPaddingTop: h },
+            style: { scrollPaddingTop: f },
             onScroll: S,
             children: (0, r.jsxs)('div', {
                 className: C.contentWidth,
                 children: [
                     (0, r.jsxs)('div', {
                         className: a()(C.header, C.stickyHeader, { [C.stickyHeaderElevated]: !b }),
-                        ref: f,
+                        ref: h,
                         children: [
                             (0, r.jsx)(j.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: _.ZI.PERMISSIONS,
+                                selectedSection: v.ZI.PERMISSIONS,
                                 setSelectedSection: l
                             }),
                             (0, r.jsx)('div', {

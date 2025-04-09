@@ -1,4 +1,4 @@
-n.d(t, { x: () => h });
+n.d(t, { x: () => f });
 var r = n(200651);
 n(192379);
 var i = n(512722),
@@ -13,19 +13,19 @@ var i = n(512722),
     p = n(409813),
     _ = n(614223),
     x = n(388032),
-    f = n(959803);
-function h(e) {
+    h = n(959803);
+function f(e) {
     let { handleStepChange: t, handleClose: n } = e,
         i = (0, a.ZP)(),
-        { activeSubscription: h, selectedSkuId: m, setSelectedPlanId: j, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
+        { activeSubscription: f, selectedSkuId: j, setSelectedPlanId: m, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
         { isGift: g } = (0, c.wD)(),
-        S = null != h ? (0, d.Af)(h) : null,
+        S = null != f ? (0, d.Af)(f) : null,
         y = null != S ? (0, d.gq)(S.planId) : null,
         E = null != S ? (0, d.Rd)(S.planId) : null,
         b = (0, _.Kp)({
             isTrial: !1,
             isGift: g,
-            selectedSkuId: m,
+            selectedSkuId: j,
             startedPaymentFlowWithPaymentSources: L.current
         });
     return (
@@ -35,11 +35,11 @@ function h(e) {
             titleText: x.NW.string(x.t['7VcWW1']),
             subtitleText: x.NW.format(x.t.Qk34Ii, { subscriptionName: y }),
             footer: (0, r.jsxs)('div', {
-                className: f.whatYouLoseButtonContainer,
+                className: h.whatYouLoseButtonContainer,
                 children: [
                     (0, r.jsx)(o.zxk, {
                         onClick: () => {
-                            b ? (j((0, _.nA)(m, h)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            b ? (m((0, _.nA)(j, f)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
                         children: x.NW.string(x.t['3PatS0'])
                     }),

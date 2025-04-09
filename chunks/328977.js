@@ -1,7 +1,7 @@
-n.d(t, { L: () => i });
+n.d(t, { L: () => a });
 var r = n(442837),
-    a = n(826581);
-function i(e) {
+    l = n(826581);
+function a(e) {
     let { guildId: t } = e;
-    return (0, r.e7)([a.Z], () => a.Z.getSelectedGuildJoinRequest(t), [t]);
+    return (0, r.e7)([l.Z], () => l.Z.getSelectedGuildJoinRequest(t), [t]);
 }

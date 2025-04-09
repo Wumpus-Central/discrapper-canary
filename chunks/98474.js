@@ -61,9 +61,9 @@ function O(e) {
     let { messageId: t, emoji: n, startPosition: O, targetPosition: y } = e,
         [T, x] = o.useState(0),
         [S, _] = o.useState(0),
-        [C, E] = o.useState(null),
+        [E, C] = o.useState(null),
         { confettiCanvas: N } = o.useContext(u.h),
-        P = (0, r.uR)(N, C),
+        P = (0, r.uR)(N, E),
         R = o.useMemo(
             () => [
                 {
@@ -136,7 +136,7 @@ function O(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.Ji, {
-                    ref: E,
+                    ref: C,
                     sprites: R,
                     colors: v,
                     spriteWidth: f.Ko,

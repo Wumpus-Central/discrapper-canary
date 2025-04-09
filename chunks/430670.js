@@ -62,22 +62,22 @@ function _(e) {
     let l = (0, p.Z)();
     (0, s.t)();
     let [_] = t.recipients,
-        C = (0, a.e7)([d.default], () => d.default.getUser(_));
-    o()(null != C, 'UserProfilePanelWrapper: user cannot be undefined');
-    let y = (0, a.e7)([d.default], () => d.default.getCurrentUser());
-    o()(null != y, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
+        y = (0, a.e7)([d.default], () => d.default.getUser(_));
+    o()(null != y, 'UserProfilePanelWrapper: user cannot be undefined');
+    let C = (0, a.e7)([d.default], () => d.default.getCurrentUser());
+    o()(null != C, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         i.useEffect(() => {
-            (0, h.Z)(C, {
+            (0, h.Z)(y, {
                 type: 'panel',
-                withMutualFriendsCount: !C.bot,
+                withMutualFriendsCount: !y.bot,
                 withMutualFriends: !1,
                 withMutualGuilds: !0,
                 channelId: t.id
             });
-        }, [C, t.id]);
+        }, [y, t.id]);
     let { isBlocked: x, isIgnored: v } = (0, a.cj)([u.Z], () => ({
-            isBlocked: u.Z.isBlocked(C.id),
-            isIgnored: u.Z.isIgnored(C.id)
+            isBlocked: u.Z.isBlocked(y.id),
+            isIgnored: u.Z.isIgnored(y.id)
         })),
         [j, O] = i.useState(x || v || x);
     i.useEffect(() => {
@@ -91,21 +91,21 @@ function _(e) {
                 f.A,
                 b(
                     {
-                        user: C,
-                        currentUser: y,
+                        user: y,
+                        currentUser: C,
                         channel: t,
                         onViewBlockedProfileClick: () => O(!1)
                     },
                     n
                 )
             )
-          : C.isNonUserBot()
+          : y.isNonUserBot()
             ? (0, r.jsx)(
                   m.Z,
                   b(
                       {
-                          user: C,
-                          currentUser: y,
+                          user: y,
+                          currentUser: C,
                           channel: t
                       },
                       n
@@ -115,8 +115,8 @@ function _(e) {
                   g.Z,
                   b(
                       {
-                          user: C,
-                          currentUser: y,
+                          user: y,
+                          currentUser: C,
                           channel: t
                       },
                       n

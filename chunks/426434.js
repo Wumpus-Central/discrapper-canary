@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(392711),
@@ -12,26 +12,26 @@ var i = n(392711),
     m = n(981631),
     g = n(388032),
     p = n(296205);
-function h(e) {
+function f(e) {
     let t,
         { guild: n } = e,
-        h = n.mfaLevel,
-        f = (0, s.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
+        f = n.mfaLevel,
+        h = (0, s.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
         b = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         x = n.isOwner(b),
         j = null == b ? void 0 : b.mfaEnabled,
-        N = h === m.BpS.ELEVATED,
-        _ = x && j,
-        v = (0, i.throttle)(async (e) => {
-            _ &&
+        N = f === m.BpS.ELEVATED,
+        v = x && j,
+        _ = (0, i.throttle)(async (e) => {
+            v &&
                 (await d.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? m.BpS.ELEVATED : m.BpS.NONE,
                     isEnabled: !e
                 }));
         }, 1000);
-    if (!f) return null;
-    _ || (t = x ? g.NW.format(g.t.nFwNyc, { settingsHook: () => l.Z.open(m.oAB.ACCOUNT) }) : g.NW.string(g.t['9Ghu4+']));
+    if (!h) return null;
+    v || (t = x ? g.NW.format(g.t.nFwNyc, { settingsHook: () => l.Z.open(m.oAB.ACCOUNT) }) : g.NW.string(g.t['9Ghu4+']));
     let y = n.hasFeature(m.oNc.DISCOVERABLE);
     return (0, r.jsxs)('div', {
         className: p.simpleItemWrapper,
@@ -51,21 +51,21 @@ function h(e) {
                     })
                 ]
             }),
-            !_ || (N && y)
+            !v || (N && y)
                 ? (0, r.jsx)(a.ua7, {
                       text: y ? g.NW.string(g.t['KG1V/P']) : x ? g.NW.string(g.t.NmsheX) : g.NW.string(g.t.LieBtb),
                       children: (e) =>
                           (0, r.jsx)(u.Z, {
                               checked: N,
                               disabled: !0,
-                              onChange: v,
+                              onChange: _,
                               className: p.bringToFront,
                               tooltipProps: e
                           })
                   })
                 : (0, r.jsx)(u.Z, {
                       checked: N,
-                      onChange: v,
+                      onChange: _,
                       className: p.bringToFront
                   })
         ]

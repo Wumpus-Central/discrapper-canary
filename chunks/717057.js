@@ -134,7 +134,7 @@ function D(e) {
             theme: I,
             saturation: 1
         }).hex(),
-        G = (0, b.nj)(F, V, 'top center');
+        W = (0, b.nj)(F, V, 'top center');
     return null == A || null == B || null == R || null == C
         ? null
         : (0, n.jsx)(
@@ -172,7 +172,7 @@ function D(e) {
                       size: u.CgR.DYNAMIC,
                       children: (0, n.jsxs)(u.hzk, {
                           className: Z.content,
-                          style: G,
+                          style: W,
                           children: [
                               (0, n.jsxs)('div', {
                                   className: Z.infoSide,

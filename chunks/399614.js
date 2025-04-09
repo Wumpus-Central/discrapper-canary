@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,16 +53,16 @@ function h(e, t) {
         e
     );
 }
-let f = [],
+let h = [],
     b = function (e) {
         let { guildId: t } = e,
             b = (0, s.Wu)([d.Z], () => {
                 var e;
-                return null != (e = d.Z.getSettings().resourceChannels) ? e : f;
+                return null != (e = d.Z.getSettings().resourceChannels) ? e : h;
             }),
-            x = i.useMemo(() => b.map((e) => h(p({}, e), { id: e.channelId })), [b]),
-            { handleDragStart: j, handleDragReset: N, handleDragComplete: _ } = (0, l.Z)(x, c.lq),
-            v = i.useCallback(
+            x = i.useMemo(() => b.map((e) => f(p({}, e), { id: e.channelId })), [b]),
+            { handleDragStart: j, handleDragReset: N, handleDragComplete: v } = (0, l.Z)(x, c.lq),
+            _ = i.useCallback(
                 (e, n) => {
                     let r = d.Z.getSettings();
                     null != r &&
@@ -80,14 +80,14 @@ let f = [],
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                h(p({}, n), {
+                                f(p({}, n), {
                                     guildId: t,
                                     onSave: c.r2,
-                                    onIconUpload: v
+                                    onIconUpload: _
                                 })
                             );
                     });
-            }, [t, v]);
+            }, [t, _]);
         return (0, r.jsxs)('div', {
             className: g.editResources,
             children: [
@@ -100,7 +100,7 @@ let f = [],
                             index: n,
                             onDragStart: j,
                             onDragReset: N,
-                            onDragComplete: _
+                            onDragComplete: v
                         },
                         e.channelId
                     )

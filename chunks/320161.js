@@ -17,7 +17,7 @@ function b(e) {
     let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: N = h } = e,
         [x, _] = i.useState(0),
         [E, j] = i.useState(!1),
-        [O, C] = i.useState(!1),
+        [C, O] = i.useState(!1),
         [S] = i.useState(() => new a.V7()),
         [v] = i.useState(() => new a.V7());
     if (
@@ -34,7 +34,7 @@ function b(e) {
         I = T ? l.FGA.RED : l.FGA.GREEN,
         y = E ? I : l.FGA.PRIMARY,
         A = () => {
-            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || _(x + 1), C(!0), j(!0), S.start(g, () => C(!1)), v.start(p, () => _(0));
+            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), C || _(x + 1), O(!0), j(!0), S.start(g, () => O(!1)), v.start(p, () => _(0));
         };
     return (0, r.jsx)(l.ua7, {
         text: (() => {
@@ -50,9 +50,9 @@ function b(e) {
         delay: N,
         'aria-label': b,
         color: y,
-        forceOpen: O,
+        forceOpen: C,
         onAnimationRest: (e, t) => {
-            !O && E && t.phase === u.UkZ.LEAVE && j(!1);
+            !C && E && t.phase === u.UkZ.LEAVE && j(!1);
         },
         children: (e) => {
             var t,
@@ -115,7 +115,7 @@ function b(e) {
                                 null == i || i();
                                 return;
                             }
-                            S.stop(), C(!1);
+                            S.stop(), O(!1);
                         }
                     }),
                 Object.getOwnPropertyDescriptors

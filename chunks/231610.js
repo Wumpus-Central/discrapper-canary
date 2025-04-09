@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -12,10 +12,10 @@ var i = n(481060),
     m = n(388032),
     g = n(301849),
     p = n(181517);
-function h() {
+function f() {
     let { editStateId: e, guildId: t } = (0, a.N)(),
-        [, h] = l.p9(e, t),
-        [f, b] = l.Ek(e, t),
+        [, f] = l.p9(e, t),
+        [h, b] = l.Ek(e, t),
         x = l.qs(e, t);
     function j() {
         (0, i.ZDy)(async () => {
@@ -53,12 +53,12 @@ function h() {
                         {
                             guildId: t,
                             onUploadIcon: (e) =>
-                                h({
+                                f({
                                     icon: e,
                                     unicodeEmoji: null
                                 }),
                             onSelectUnicodeEmoji: (e) =>
-                                h({
+                                f({
                                     icon: null,
                                     unicodeEmoji: e
                                 })
@@ -89,7 +89,7 @@ function h() {
                 title: m.NW.string(m.t['6OUqDQ']),
                 disabled: N,
                 children: (0, r.jsx)(d.Z, {
-                    value: f,
+                    value: h,
                     onChange: b,
                     disabled: N
                 })

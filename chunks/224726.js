@@ -11,24 +11,24 @@ var r = n(200651),
     m = n(910200),
     g = n(496675),
     p = n(434404),
-    h = n(999382),
-    f = n(12078),
+    f = n(999382),
+    h = n(12078),
     b = n(934638),
     x = n(566036),
     j = n(979664),
     N = n(343397),
-    _ = n(509798),
-    v = n(75733),
+    v = n(509798),
+    _ = n(75733),
     y = n(474024),
     O = n(981631),
     C = n(388032),
     I = n(83951);
 let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
-        t = (0, s.e7)([h.Z], () => h.Z.getGuild(), []),
+        t = (0, s.e7)([f.Z], () => f.Z.getGuild(), []),
         n = null == t ? void 0 : t.id,
         { fetchGuildProfile: E, fetchStatus: S } = (0, u.u)(null == t ? void 0 : t.id),
-        T = (0, s.e7)([h.Z], () => h.Z.getGuildProfile(), []),
+        T = (0, s.e7)([f.Z], () => f.Z.getGuildProfile(), []),
         P = (0, s.e7)([g.Z], () => g.Z.can(O.Plq.MANAGE_GUILD, t)),
         w = i.useCallback(
             (e) => {
@@ -52,7 +52,7 @@ let E = function () {
         l.Z.getDetectableGames();
     }, []),
     S === d.a.FETCHED && null == T)
-        ? (0, r.jsx)(_.g, { forceFetchGuildProfile: D })
+        ? (0, r.jsx)(v.g, { forceFetchGuildProfile: D })
         : S === d.a.NOT_FETCHED || S === d.a.FETCHING
           ? (0, r.jsx)('main', {
                 className: I.spinner,
@@ -94,13 +94,13 @@ let E = function () {
                                       onIconChange: w
                                   }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(f.Z, {
+                                  (0, r.jsx)(h.Z, {
                                       profile: T,
                                       onCustomBannerChange: R,
                                       canManageGuild: P
                                   }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(v.Z, {
+                                  (0, r.jsx)(_.Z, {
                                       profile: T,
                                       canManageGuild: P
                                   }),

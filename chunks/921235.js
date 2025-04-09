@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(626135),
     b = n(51144),
     _ = n(901461),
-    C = n(981631),
-    y = n(388032),
+    y = n(981631),
+    C = n(388032),
     x = n(900170);
 let v = '749054660769218631';
 function j(e) {
@@ -31,26 +31,26 @@ function j(e) {
             () =>
                 !!o()(f.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== h.default.getId() && e.state === C.yb.SENT && !(0, _.Z)(e))
+                    .find((e) => e.author.id !== h.default.getId() && e.state === y.yb.SENT && !(0, _.Z)(e))
         ),
         E = (0, a.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        N = null != (t = b.ZP.useName(E)) ? t : y.NW.string(y.t.y1Wu2d),
+        N = null != (t = b.ZP.useName(E)) ? t : C.NW.string(C.t.y1Wu2d),
         I = (0, a.e7)([d.Z], () => d.Z.getStickerById(v)),
         P = i.useCallback(async () => {
             if (null == l || '' === l)
                 try {
                     await c.Z.sendGreetMessage(n.id, v),
-                        g.default.track(C.rMx.DM_EMPTY_ACTION, {
+                        g.default.track(y.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || j(y.NW.string(y.t['Whhv4+']));
+                    e.ok || 429 !== e.status || j(C.NW.string(C.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
-        S = y.NW.formatToPlainString(y.t.m0zYbW, { username: N }),
+        S = C.NW.formatToPlainString(C.t.m0zYbW, { username: N }),
         Z =
             null != l && '' !== l
                 ? (0, r.jsx)(s.Text, {
@@ -66,7 +66,7 @@ function j(e) {
               children: [
                   (0, r.jsxs)(s.P3F, {
                       className: null != l && '' !== l ? x.compactButtonDisabled : x.compactButton,
-                      'aria-label': y.NW.string(y.t.pJObYG),
+                      'aria-label': C.NW.string(C.t.pJObYG),
                       onClick: P,
                       children: [
                           (0, r.jsx)(p.Z, {

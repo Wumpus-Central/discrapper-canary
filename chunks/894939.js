@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(581883),
     E = n(738486),
     j = n(918257),
-    O = n(970813),
-    C = n(726985),
+    C = n(970813),
+    O = n(726985),
     S = n(981631),
     v = n(710111),
     T = n(388032),
@@ -38,11 +38,11 @@ function P(e) {
         n = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(g.F, {
-                    setting: C.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, r.jsx)(j.Z, { refreshStyles: t }), (0, r.jsx)(O.Z, { refreshStyles: t })]
+                    setting: O.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                    children: [(0, r.jsx)(j.Z, { refreshStyles: t }), (0, r.jsx)(C.Z, { refreshStyles: t })]
                 }),
                 (0, r.jsxs)(g.F, {
-                    setting: C.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                    setting: O.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                     children: [t ? null : (0, r.jsx)(o.$i$, { className: I.callSoundsDivider }), (0, r.jsx)(R, { refreshStyles: t })]
                 })
             ]
@@ -64,14 +64,14 @@ function R(e) {
         g = (0, b.tT)(s),
         _ = A(g),
         j = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
-        O = (0, l.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == _;
+        C = (0, l.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == _;
     i.useEffect(() => {
-        O && (0, f.tt)({ location: n });
-    }, [O, n]),
+        C && (0, f.tt)({ location: n });
+    }, [C, n]),
         i.useEffect(() => {
             (0, p.w)();
         }, []);
-    let C = i.useCallback((e, t) => {
+    let O = i.useCallback((e, t) => {
             let { inDropdown: n } = t;
             return null == e ? null : n ? (0, r.jsx)(D, { guildId: e.value }) : null;
         }, []),
@@ -91,7 +91,7 @@ function R(e) {
                     onChange: (e) => {
                         c(null == e ? v.hY : e.id);
                     },
-                    renderOptionSuffix: C,
+                    renderOptionSuffix: O,
                     hideDivider: !0
                 }),
                 (0, r.jsxs)(m.Z, {
@@ -113,7 +113,7 @@ function R(e) {
                                 null == e ? (0, f.aC)(s, n) : (0, f.SZ)(s, e, n);
                             }
                         }),
-                        O &&
+                        C &&
                             (0, r.jsx)(o.Wn, {
                                 className: I.notice,
                                 messageType: o.QYI.WARNING,

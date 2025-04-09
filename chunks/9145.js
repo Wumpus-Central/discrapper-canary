@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(871499),
     b = n(402113),
     _ = n(592125),
-    C = n(271383),
-    y = n(944486),
+    y = n(271383),
+    C = n(944486),
     x = n(594174),
     v = n(585483),
     j = n(51144),
@@ -43,11 +43,11 @@ function U(e) {
     var t, n;
     let { maxHeight: l, connectedLocation: U, renderExternalHeader: B } = e,
         H = (0, m.Z)({ location: 'ActivityPanelFocusedView' }),
-        F = (0, S.Z)(),
-        G = (0, a.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(U), [U]),
+        G = (0, S.Z)(),
+        F = (0, a.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(U), [U]),
         V = (0, P.pY)(U),
         z = (0, a.e7)([_.Z], () => _.Z.getChannel(V)),
-        Y = (0, N.gb)(G),
+        Y = (0, N.gb)(F),
         q = (0, N.uF)(Y),
         K = i.useCallback(() => {
             (0, O.tg)(R.Ez.PIP);
@@ -78,19 +78,19 @@ function U(e) {
     let el = er.width / Math.max(er.height, 1) < R.I0,
         eo = 0,
         ea = 0,
-        es = (0, I.Z)(null == F ? void 0 : F.id);
+        es = (0, I.Z)(null == G ? void 0 : G.id);
     if (!es) {
         let e = er.width,
             t = er.height;
         el ? ((t = er.width / R.I0) > er.height && (e = (t = er.height) * R.I0), (ea = (er.height - t) / 2)) : ((e = Math.min(er.height * R.I0)) > er.width && (t = (e = er.width) / R.I0), (eo = (er.width - e) / 2));
     }
-    let ec = q.get(null != (n = null == F ? void 0 : F.id) ? n : ''),
-        eu = (0, a.e7)([y.Z], () => y.Z.getChannelId()),
+    let ec = q.get(null != (n = null == G ? void 0 : G.id) ? n : ''),
+        eu = (0, a.e7)([C.Z], () => C.Z.getChannelId()),
         ed = (0, a.Wu)(
-            [C.ZP],
+            [y.ZP],
             () => {
                 var e;
-                return null == z ? [] : Array.from(null != (e = null == ec ? void 0 : ec.embeddedActivity.userIds) ? e : []).map((e) => C.ZP.getMember(z.guild_id, e));
+                return null == z ? [] : Array.from(null != (e = null == ec ? void 0 : ec.embeddedActivity.userIds) ? e : []).map((e) => y.ZP.getMember(z.guild_id, e));
             },
             [ec, z]
         ),
@@ -170,7 +170,7 @@ function U(e) {
                     : l;
             }, [s, e, n, t]);
         })(J, $, l);
-    if (null == F) return null;
+    if (null == G) return null;
     let ef = [];
     null != ec &&
         (ef = Array.from(ec.embeddedActivity.userIds)
@@ -219,7 +219,7 @@ function U(e) {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
                                           className: L.headerTitle,
-                                          children: null == F ? void 0 : F.name
+                                          children: null == G ? void 0 : G.name
                                       })
                                   }),
                             (0, r.jsx)('div', {
@@ -233,7 +233,7 @@ function U(e) {
                                 ref: en,
                                 children: (0, r.jsx)(Z.Z, {
                                     className: L.iframe,
-                                    embedId: (0, A.Z)(U.id, F.id)
+                                    embedId: (0, A.Z)(U.id, G.id)
                                 })
                             }),
                             null != eu
@@ -274,7 +274,7 @@ function U(e) {
                                                   (0, r.jsx)('div', {
                                                       className: L.leaveButtonContainer,
                                                       children: (0, r.jsx)(b.Z, {
-                                                          applicationId: F.id,
+                                                          applicationId: G.id,
                                                           location: U,
                                                           centerButton: !0,
                                                           color: 'disconnect',

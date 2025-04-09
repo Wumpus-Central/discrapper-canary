@@ -52,10 +52,10 @@ function u(e, t) {
 function m(e) {
     var t;
     let { rule: n, onChangeRule: m, collapsed: g = !1 } = e,
-        [p, h] = i.useState(!g),
-        f = i.useCallback(() => {
-            h(!p);
-        }, [p, h]),
+        [p, f] = i.useState(!g),
+        h = i.useCallback(() => {
+            f(!p);
+        }, [p, f]),
         b = i.useCallback(
             (e) => {
                 m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
@@ -76,7 +76,7 @@ function m(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(s.P3F, {
                       onClick: (e) => {
-                          f(), t(e);
+                          h(), t(e);
                       },
                       children: (0, r.jsxs)('div', {
                           className: c.header,

@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(65154),
     E = n(388032),
     j = n(209782),
-    O = n(20493);
-let C = f.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
+    C = n(20493);
+let O = f.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
 function S() {
     let e,
         t,
@@ -42,11 +42,11 @@ function S() {
         P = i.useMemo(() => {
             let e = a()(y).find((e) => e.id === T),
                 t = a()(A).find((e) => e.id === I),
-                n = C.some((t) => {
+                n = O.some((t) => {
                     var n;
                     return null == e || null == (n = e.hardwareId) ? void 0 : n.startsWith(t);
                 }),
-                r = C.some((e) => {
+                r = O.some((e) => {
                     var n;
                     return null == t || null == (n = t.hardwareId) ? void 0 : n.startsWith(e);
                 });
@@ -55,13 +55,13 @@ function S() {
     S ||
         (e = (0, r.jsx)(c.R94, {
             type: c.R94.Types.DESCRIPTION,
-            className: O.marginTop8,
+            className: C.marginTop8,
             children: E.NW.format(E.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
         })),
         v ||
             (t = (0, r.jsx)(c.R94, {
                 type: c.R94.Types.DESCRIPTION,
-                className: O.marginTop8,
+                className: C.marginTop8,
                 children: E.NW.format(E.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
             }));
     let R = a()(y).values().first(),

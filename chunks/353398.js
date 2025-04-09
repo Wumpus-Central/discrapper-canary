@@ -18,14 +18,14 @@ var r,
     m = n(481060),
     g = n(570140),
     p = n(484614),
-    h = n(852860),
-    f = n(881052),
+    f = n(852860),
+    h = n(881052),
     b = n(751189),
     x = n(409059),
     j = n(518936),
     N = n(999382),
-    _ = n(260539),
-    v = n(388032),
+    v = n(260539),
+    _ = n(388032),
     y = n(651412),
     O = n(20493);
 function C(e, t, n) {
@@ -46,7 +46,7 @@ class I extends (r = d.ZP.Store) {
         let e = N.Z.getProps().guild;
         if (null == e) return null;
         let t = x.Z.getForGuild(e.id);
-        return null != t && t.state !== _.Rj.RESOLVING ? t : null;
+        return null != t && t.state !== v.Rj.RESOLVING ? t : null;
     }
     showNotice() {
         let e = this.getTemplate();
@@ -86,7 +86,7 @@ function S() {
         n = async () => {
             t(!0), await E.save(), t(!1);
         };
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(f.Z, {
         submitting: e,
         onReset: E.reset,
         onSave: n
@@ -98,13 +98,13 @@ function T() {
         children: (0, i.jsxs)(m.y5t, {
             component: (0, i.jsx)(m.vwX, {
                 tag: m.RB0.H1,
-                children: v.NW.string(v.t.KUw7Sk)
+                children: _.NW.string(_.t.KUw7Sk)
             }),
             children: [
                 (0, i.jsx)(m.R94, {
                     className: O.marginBottom20,
                     type: m.geA.DESCRIPTION,
-                    children: v.NW.format(v.t.c0m8bG, {})
+                    children: _.NW.format(_.t.c0m8bG, {})
                 }),
                 (0, i.jsx)(w, {}),
                 (0, i.jsx)(m.$i$, { className: y.divider }),
@@ -127,7 +127,7 @@ function P() {
                         try {
                             await b.Z.loadTemplatesForGuild(e), n(!1);
                         } catch (e) {
-                            E.setError(new f.Hx(e));
+                            E.setError(new h.Hx(e));
                         }
                     })();
                 }, [e]),
@@ -190,7 +190,7 @@ function w() {
                 children: [
                     (0, i.jsx)(m.X6q, {
                         variant: 'eyebrow',
-                        children: v.NW.string(v.t['f8u+VF'])
+                        children: _.NW.string(_.t['f8u+VF'])
                     }),
                     (0, i.jsxs)('div', {
                         className: y.descriptionRow,
@@ -201,7 +201,7 @@ function w() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.NW.string(v.t.K2tn19)
+                            _.NW.string(_.t.K2tn19)
                         ]
                     }),
                     (0, i.jsxs)('div', {
@@ -213,7 +213,7 @@ function w() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.NW.string(v.t.om5gNj)
+                            _.NW.string(_.t.om5gNj)
                         ]
                     }),
                     (0, i.jsxs)('div', {
@@ -225,7 +225,7 @@ function w() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.NW.string(v.t['/VNqdH'])
+                            _.NW.string(_.t['/VNqdH'])
                         ]
                     })
                 ]
@@ -235,7 +235,7 @@ function w() {
                 children: [
                     (0, i.jsx)(m.X6q, {
                         variant: 'eyebrow',
-                        children: v.NW.string(v.t['8zhJEh'])
+                        children: _.NW.string(_.t['8zhJEh'])
                     }),
                     (0, i.jsxs)('div', {
                         className: y.descriptionRow,
@@ -246,7 +246,7 @@ function w() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.NW.string(v.t.WOKI6u)
+                            _.NW.string(_.t.WOKI6u)
                         ]
                     }),
                     (0, i.jsxs)('div', {
@@ -258,7 +258,7 @@ function w() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.NW.string(v.t.ddhDJC)
+                            _.NW.string(_.t.ddhDJC)
                         ]
                     }),
                     (0, i.jsxs)('div', {
@@ -270,7 +270,7 @@ function w() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.NW.string(v.t['6Q/DHh'])
+                            _.NW.string(_.t['6Q/DHh'])
                         ]
                     })
                 ]
@@ -282,15 +282,15 @@ function R(e) {
     let { cancel: t, confirm: n } = e;
     return (0, i.jsx)(m.sYh, {
         dismissable: !0,
-        header: v.NW.string(v.t['cN/RFB']),
-        confirmText: v.NW.string(v.t['cN/RFB']),
-        cancelText: v.NW.string(v.t['ETE/oK']),
+        header: _.NW.string(_.t['cN/RFB']),
+        confirmText: _.NW.string(_.t['cN/RFB']),
+        cancelText: _.NW.string(_.t['ETE/oK']),
         onCancel: t,
         onConfirm: n,
         children: (0, i.jsx)(m.Text, {
             variant: 'text-md/normal',
             color: 'text-normal',
-            children: v.NW.string(v.t.apCQv7)
+            children: _.NW.string(_.t.apCQv7)
         })
     });
 }
@@ -302,23 +302,23 @@ function D() {
         children: [
             (0, i.jsx)(m.xJW, {
                 className: O.marginBottom20,
-                title: v.NW.string(v.t.z1a9R0),
+                title: _.NW.string(_.t.z1a9R0),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('name'),
                 children: (0, i.jsx)(m.oil, {
                     value: e,
                     onChange: (e) => E.setName(e),
-                    placeholder: v.NW.string(v.t.bMlpvr),
+                    placeholder: _.NW.string(_.t.bMlpvr),
                     maxLength: 100
                 })
             }),
             (0, i.jsx)(m.xJW, {
                 className: O.marginBottom20,
-                title: v.NW.string(v.t.GxirWV),
+                title: _.NW.string(_.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('description'),
                 children: (0, i.jsx)(m.Kx8, {
                     value: t,
                     onChange: (e) => E.setDescription(e),
-                    placeholder: v.NW.string(v.t.n1FBXl),
+                    placeholder: _.NW.string(_.t.n1FBXl),
                     maxLength: 120
                 })
             })
@@ -328,11 +328,11 @@ function D() {
 function Z(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
-        ? (0, i.jsx)(A, { guild: t })
+        ? (0, i.jsx)(k, { guild: t })
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(m.xJW, {
-                      title: v.NW.string(v.t.zGGcLy),
+                      title: _.NW.string(_.t.zGGcLy),
                       children: (0, i.jsx)(p.Z, {
                           buttonLook: m.zxk.Looks.FILLED,
                           buttonColor: m.zxk.Colors.BRAND,
@@ -344,13 +344,13 @@ function Z(e) {
                           color: 'text-warning',
                           className: O.marginTop8,
                           variant: 'text-sm/normal',
-                          children: v.NW.string(v.t.aWsjtL)
+                          children: _.NW.string(_.t.aWsjtL)
                       }),
                   (0, i.jsxs)('div', {
                       className: l()(O.marginTop20, y.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, i.jsx)(k, {
+                              (0, i.jsx)(A, {
                                   guild: t,
                                   guildTemplate: n
                               }),
@@ -369,12 +369,12 @@ function Z(e) {
                   n.isDirty &&
                       (0, i.jsx)('div', {
                           className: y.lastSync,
-                          children: v.NW.format(v.t.v0AVur, { timestamp: new Date(n.updatedAt) })
+                          children: _.NW.format(_.t.v0AVur, { timestamp: new Date(n.updatedAt) })
                       })
               ]
           });
 }
-function A(e) {
+function k(e) {
     let { guild: t } = e,
         n = (0, d.e7)([E], () => E.name),
         [r, a] = s.useState(!1),
@@ -383,7 +383,7 @@ function A(e) {
             try {
                 await b.Z.createGuildTemplate(t.id, E.name, E.description);
             } catch (e) {
-                E.setError(new f.Hx(e));
+                E.setError(new h.Hx(e));
             }
             a(!1);
         };
@@ -392,10 +392,10 @@ function A(e) {
         disabled: !(null != n && n.trim().length >= 2),
         color: m.zxk.Colors.BRAND,
         onClick: l,
-        children: v.NW.string(v.t.Wxdi8P)
+        children: _.NW.string(_.t.Wxdi8P)
     });
 }
-function k(e) {
+function A(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, a] = s.useState(!1),
         l = async () => {
@@ -403,7 +403,7 @@ function k(e) {
             try {
                 await b.Z.syncGuildTemplate(t.id, n.code);
             } catch (e) {
-                E.setError(new f.Hx(e));
+                E.setError(new h.Hx(e));
             }
             a(!1);
         };
@@ -411,7 +411,7 @@ function k(e) {
         submitting: r,
         className: y.button,
         onClick: l,
-        children: v.NW.string(v.t['Nw+0Y2'])
+        children: _.NW.string(_.t['Nw+0Y2'])
     });
 }
 function W(e) {
@@ -422,7 +422,7 @@ function W(e) {
             try {
                 await b.Z.deleteGuildTemplate(t.id, n.code), E.setName(''), E.setDescription('');
             } catch (e) {
-                E.setError(new f.Hx(e));
+                E.setError(new h.Hx(e));
             }
             a(!1);
         };
@@ -433,7 +433,7 @@ function W(e) {
                 className: y.button,
                 color: m.zxk.Colors.RED,
                 onClick: () => a(!0),
-                children: v.NW.string(v.t['cN/RFB'])
+                children: _.NW.string(_.t['cN/RFB'])
             }),
             r
                 ? (0, i.jsx)(R, {
@@ -489,6 +489,6 @@ function L(e) {
                     );
                 };
             }),
-        children: v.NW.string(v.t.YI3iV1)
+        children: _.NW.string(_.t.YI3iV1)
     });
 }

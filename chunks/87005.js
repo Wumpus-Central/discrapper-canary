@@ -10,8 +10,8 @@ var r = n(192379),
     d = n(881998),
     p = n(424602);
 n(445392);
-var _ = n(783097),
-    h = n(701488),
+var h = n(783097),
+    _ = n(701488),
     f = n(689079);
 let m = {
         commandTypes: [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT]
@@ -46,10 +46,10 @@ function b(e) {
                 C = 'contextless' === n.type,
                 O = r.useMemo(() => {
                     let e = [];
-                    return C && e.push(h.jT), E && e.push(p.gu), e;
+                    return C && e.push(_.jT), E && e.push(p.gu), e;
                 }, [E, C]),
                 y = (0, u.h)(b, g);
-            return r.useMemo(() => (s ? y.filter((e) => null != e.application && (0, _.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !O.includes(e.id)) : y.filter((e) => !O.includes(e.id))), [s, y, n, O]);
+            return r.useMemo(() => (s ? y.filter((e) => null != e.application && (0, h.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !O.includes(e.id)) : y.filter((e) => !O.includes(e.id))), [s, y, n, O]);
         })({
             sectionDescriptors: E,
             context: t,

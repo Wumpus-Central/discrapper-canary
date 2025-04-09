@@ -13,7 +13,7 @@ var i = n(442837),
 let g = (e) => {
     let { guildId: t, error: n, inSettings: g = !1 } = e,
         p = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
-        h = (0, i.e7)([c.Z, d.ZP], () => {
+        f = (0, i.e7)([c.Z, d.ZP], () => {
             var e, n;
             return g ? c.Z.getState().settings.verificationForm : null == (n = d.ZP.getStateForGuild(t)) || null == (e = n.progress) ? void 0 : e.verificationForm;
         });
@@ -47,7 +47,7 @@ let g = (e) => {
                               guild: p,
                               isClanContext: !0,
                               onFieldsSave: (e, t) => (a.ZP.updateVerificationFormFieldsLocal(e, [...t]), Promise.resolve()),
-                              verificationForm: h
+                              verificationForm: f
                           })
                       ]
                   })

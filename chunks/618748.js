@@ -12,14 +12,14 @@ var i = n(442837),
     m = n(703656),
     g = n(577275),
     p = n(430824),
-    h = n(594174),
-    f = n(823379),
+    f = n(594174),
+    h = n(823379),
     b = n(730647),
     x = n(584825),
     j = n(723047),
     N = n(303737),
-    _ = n(568074),
-    v = n(411667),
+    v = n(568074),
+    _ = n(411667),
     y = n(903773),
     O = n(822531),
     C = n(909656),
@@ -32,7 +32,7 @@ var i = n(442837),
     R = n(829857),
     D = n(388032),
     Z = n(173409);
-function A(e) {
+function k(e) {
     let { application: t, guild: n } = e,
         s = (0, x.YB)(n.id),
         a = (0, x.qi)(n.id),
@@ -88,7 +88,7 @@ function A(e) {
         ];
     return (0, r.jsx)(I.Z, { children: m });
 }
-function k(e) {
+function A(e) {
     let { application: t } = e,
         { teams: n } = (0, g.Z)({ refreshOnDepChange: !1 }),
         i = n.find((e) => {
@@ -132,8 +132,8 @@ function L(e) {
         c = null != l && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         { currentTab: g, setCurrentTab: x } = (0, S.dw)(),
         j = (0, b.f)(),
-        y = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
-        I = (0, _.Z)(n.id),
+        y = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        I = (0, v.Z)(n.id),
         R = n.isOwner(y),
         W = () => {
             let e = p.Z.getRole(n.id, n.getEveryoneRoleId());
@@ -164,7 +164,7 @@ function L(e) {
             t = (0, r.jsx)(T.Z, { guild: n });
             break;
         default:
-            (0, f.vE)(g);
+            (0, h.vE)(g);
     }
     return (0, r.jsxs)('div', {
         className: Z.container,
@@ -180,8 +180,8 @@ function L(e) {
                         type: s.R94.Types.DESCRIPTION,
                         children: D.NW.string(D.t.KyGv0t)
                     }),
-                    (0, r.jsx)(v.Z, { guild: n }),
-                    c && (0, r.jsx)(k, { application: l }),
+                    (0, r.jsx)(_.Z, { guild: n }),
+                    c && (0, r.jsx)(A, { application: l }),
                     (0, r.jsxs)('div', {
                         className: Z.tabBarContainer,
                         children: [
@@ -247,7 +247,7 @@ function L(e) {
                     t
                 ]
             }),
-            (0, r.jsx)(A, {
+            (0, r.jsx)(k, {
                 application: l,
                 guild: n
             })

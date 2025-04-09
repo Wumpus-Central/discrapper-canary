@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(275388),
     E = n(720463),
     j = n(931928),
-    O = n(450272),
-    C = n(981631),
+    C = n(450272),
+    O = n(981631),
     S = n(388032),
     v = n(751318);
 function T() {
@@ -48,21 +48,21 @@ function I() {
             }
         },
         { analyticsLocations: y } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
-    return (0, r.jsxs)(O.$0, {
+    return (0, r.jsxs)(C.$0, {
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Balance Widget Components'
             }),
-            (0, r.jsx)(O.E_, {
+            (0, r.jsx)(C.E_, {
                 label: 'Balance Widget Menu',
                 children: (0, r.jsx)(N.V9, {
                     ctaText: S.NW.string(S.t['J+vlIS']),
-                    ctaOnClick: C.dG4,
+                    ctaOnClick: O.dG4,
                     isCoachmarkEnabled: !1
                 })
             }),
-            (0, r.jsxs)(O.E_, {
+            (0, r.jsxs)(C.E_, {
                 label: 'Open Balance Widget Pill Overlay in Shop',
                 direction: 'vertical',
                 children: [
@@ -76,7 +76,7 @@ function I() {
                     (0, r.jsx)(s.zx, {
                         onClick: () => {
                             (0, l.xf)(),
-                                (0, u.s1)().location.pathname.includes(C.Z5c.COLLECTIBLES_SHOP) ||
+                                (0, u.s1)().location.pathname.includes(O.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
                                         analyticsLocations: y,
@@ -90,7 +90,7 @@ function I() {
                     })
                 ]
             }),
-            (0, r.jsxs)(O.E_, {
+            (0, r.jsxs)(C.E_, {
                 label: 'Open Balance Widget Coachmark in Shop',
                 direction: 'vertical',
                 children: [
@@ -112,7 +112,7 @@ function I() {
                     (0, r.jsx)(s.zx, {
                         onClick: () => {
                             (0, l.xf)(),
-                                (0, u.s1)().location.pathname.includes(C.Z5c.COLLECTIBLES_SHOP) ||
+                                (0, u.s1)().location.pathname.includes(O.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
                                         analyticsLocations: y,
@@ -127,7 +127,7 @@ function I() {
                     })
                 ]
             }),
-            (0, r.jsxs)(O.E_, {
+            (0, r.jsxs)(C.E_, {
                 label: 'Balance Widget Pill',
                 children: [
                     (0, r.jsx)(x.A4, {
@@ -153,7 +153,7 @@ function I() {
                     })
                 ]
             }),
-            (0, r.jsxs)(O.E_, {
+            (0, r.jsxs)(C.E_, {
                 label: 'Balance Widget Pill Interactive (click to change mode)',
                 direction: 'vertical',
                 children: [
@@ -208,12 +208,12 @@ function I() {
                     })
                 ]
             }),
-            (0, r.jsx)(O.E_, {
+            (0, r.jsx)(C.E_, {
                 label: 'Balance Widget Card',
                 children: (0, r.jsx)(b.L, {
                     ctaText: S.NW.string(S.t['H57f4+']),
                     linkText: S.NW.string(S.t['7f4H7O']),
-                    ctaOnClick: C.dG4
+                    ctaOnClick: O.dG4
                 })
             })
         ]
@@ -221,13 +221,13 @@ function I() {
 }
 function y() {
     let [e, t] = i.useState('1144308439720394944');
-    return (0, r.jsxs)(O.$0, {
+    return (0, r.jsxs)(C.$0, {
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Orb Checkout Components'
             }),
-            (0, r.jsxs)(O.E_, {
+            (0, r.jsxs)(C.E_, {
                 label: 'Orb Checkout Modal',
                 direction: 'vertical',
                 children: [
@@ -267,13 +267,13 @@ function y() {
 }
 function A() {
     let { resetOnboardingAnnouncementModal: e } = (0, p.Z)();
-    return (0, r.jsxs)(O.$0, {
+    return (0, r.jsxs)(C.$0, {
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: 'heading-xl/semibold',
                 children: 'Onboarding Components'
             }),
-            (0, r.jsx)(O.E_, {
+            (0, r.jsx)(C.E_, {
                 label: 'Announcement Modal',
                 children: (0, r.jsx)(s.zx, {
                     onClick: () => {
@@ -354,7 +354,7 @@ function A() {
                     children: 'Open Announcement Modal'
                 })
             }),
-            (0, r.jsxs)(O.E_, {
+            (0, r.jsxs)(C.E_, {
                 label: 'Announcement Modal [Reset Dismissible Content]',
                 direction: 'vertical',
                 children: [
@@ -370,18 +370,18 @@ function A() {
                     })
                 ]
             }),
-            (0, r.jsxs)(O.E_, {
+            (0, r.jsxs)(C.E_, {
                 label: 'Onboarding Coachmark',
                 direction: 'horizontal',
                 children: [
-                    (0, r.jsx)(j.ED, { onClose: C.dG4 }),
+                    (0, r.jsx)(j.ED, { onClose: O.dG4 }),
                     (0, r.jsx)(j.ED, {
-                        onClose: C.dG4,
+                        onClose: O.dG4,
                         invertCoachmark: !0
                     })
                 ]
             }),
-            (0, r.jsx)(O.E_, {
+            (0, r.jsx)(C.E_, {
                 label: 'Balance Widget Coachmark',
                 children: (0, r.jsx)(E.E, {})
             })

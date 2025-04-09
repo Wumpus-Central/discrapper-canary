@@ -1,9 +1,9 @@
 r.d(t, {
-    KJ: () => y,
-    N0: () => v,
-    k3: () => h,
-    lk: () => P,
-    ng: () => m
+    KJ: () => g,
+    N0: () => x,
+    k3: () => y,
+    lk: () => v,
+    ng: () => O
 }),
     r(388685),
     r(457542),
@@ -12,38 +12,38 @@ r.d(t, {
 var n,
     i = r(192379),
     o = r(442837),
-    l = r(999382),
-    s = r(658666),
+    s = r(999382),
+    l = r(658666),
     c = r(384632),
-    u = r(601964),
-    a = r(430824),
-    f = r(863249),
-    d = r(944163),
-    b = r(63568),
-    j = r(246364),
-    O = r(983736),
-    g = r(266395),
-    p = r(388032),
-    y = (((n = {})[(n.CLAIM_ACCOUNT = 0)] = 'CLAIM_ACCOUNT'), (n[(n.EMAIL_CONFIRMATION = 1)] = 'EMAIL_CONFIRMATION'), (n[(n.VERIFICATION_FORM = 2)] = 'VERIFICATION_FORM'), n);
-function m(e, t, r) {
-    let [n, l] = i.useState(!1),
-        u = (0, b.jS)(e, 'MemberVerificationScreens'),
-        a = (0, o.e7)([d.Z], () => d.Z.get(e)),
-        O = (0, o.e7)([s.Z], () => s.Z.pendingState);
+    a = r(601964),
+    u = r(430824),
+    d = r(863249),
+    f = r(944163),
+    m = r(63568),
+    h = r(246364),
+    p = r(983736),
+    j = r(266395),
+    b = r(388032),
+    g = (((n = {})[(n.CLAIM_ACCOUNT = 0)] = 'CLAIM_ACCOUNT'), (n[(n.EMAIL_CONFIRMATION = 1)] = 'EMAIL_CONFIRMATION'), (n[(n.VERIFICATION_FORM = 2)] = 'VERIFICATION_FORM'), n);
+function O(e, t, r) {
+    let [n, s] = i.useState(!1),
+        a = (0, m.jS)(e, 'MemberVerificationScreens'),
+        u = (0, o.e7)([f.Z], () => f.Z.get(e)),
+        p = (0, o.e7)([l.Z], () => l.Z.pendingState);
     i.useEffect(() => {
-        t || f.ZP.fetchVerificationForm(e, r).finally(() => l(!0));
+        t || d.ZP.fetchVerificationForm(e, r).finally(() => s(!0));
     }, [e, r, t]);
-    let g = i.useMemo(() => {
+    let j = i.useMemo(() => {
         var e, r;
         let n;
-        if (!t || !u || null == O) return null;
-        if (O.joinType === c.A.APPLY) n = null != O.pendingVerificationFields ? [...O.pendingVerificationFields] : void 0;
-        else if (null != O.termRules) {
-            let e = O.termRules.map((e) => e.value.trim()).filter((e) => '' !== e);
+        if (!t || !a || null == p) return null;
+        if (p.joinType === c.A.APPLY) n = null != p.pendingVerificationFields ? [...p.pendingVerificationFields] : void 0;
+        else if (null != p.termRules) {
+            let e = p.termRules.map((e) => e.value.trim()).filter((e) => '' !== e);
             n = [
                 {
-                    field_type: j.QJ.TERMS,
-                    label: p.NW.string(p.t['9suSIC']),
+                    field_type: h.QJ.TERMS,
+                    label: b.NW.string(b.t['9suSIC']),
                     values: e,
                     required: !0
                 }
@@ -52,52 +52,52 @@ function m(e, t, r) {
         return null == n
             ? null
             : {
-                  version: null != (e = null == a ? void 0 : a.version) ? e : '',
-                  description: null != (r = null == a ? void 0 : a.description) ? r : '',
+                  version: null != (e = null == u ? void 0 : u.version) ? e : '',
+                  description: null != (r = null == u ? void 0 : u.description) ? r : '',
                   formFields: n,
-                  guild: null == a ? void 0 : a.guild
+                  guild: null == u ? void 0 : u.guild
               };
-    }, [t, u, O, a]);
+    }, [t, a, p, u]);
     return {
         hasFetched: n,
-        verificationForm: null != g ? g : a
+        verificationForm: null != j ? j : u
     };
 }
-function v(e, t, r) {
-    let n = (0, o.e7)([a.Z], () => a.Z.getGuild(e)),
-        s = (0, o.e7)([l.Z], () => l.Z.getGuild());
-    return i.useMemo(() => (r && (null == s ? void 0 : s.id) === e ? s : null != n ? n : null != t ? new u.ZP(t) : null), [r, s, e, n, t]);
+function x(e, t, r) {
+    let n = (0, o.e7)([u.Z], () => u.Z.getGuild(e)),
+        l = (0, o.e7)([s.Z], () => s.Z.getGuild());
+    return i.useMemo(() => (r && (null == l ? void 0 : l.id) === e ? l : null != n ? n : null != t ? new a.ZP(t) : null), [r, l, e, n, t]);
 }
-function h(e, t) {
+function y(e, t) {
     let r = !(null == e ? void 0 : e.isClaimed()),
         n = null == e ? void 0 : e.verified,
-        [o, l] = i.useState(!t && r ? 0 : 2);
+        [o, s] = i.useState(!t && r ? 0 : 2);
     return (
         i.useEffect(() => {
-            null != e && e.isClaimed() && l(2);
+            null != e && e.isClaimed() && s(2);
         }, [e]),
         i.useEffect(() => {
-            1 === o && n && l(2);
+            1 === o && n && s(2);
         }, [o, n]),
         {
             currentStep: o,
-            setCurrentStep: l
+            setCurrentStep: s
         }
     );
 }
-function P(e) {
-    let t = (0, g.rb)((e) => e.hasUnsubmittedChanges);
+function v(e) {
+    let t = (0, j.rb)((e) => e.hasUnsubmittedChanges);
     i.useEffect(
         () => (
-            (0, g.a5)(!1),
+            (0, j.a5)(!1),
             () => {
-                (0, g.a5)(!1);
+                (0, j.a5)(!1);
             }
         ),
         []
     ),
         i.useEffect(() => {
-            let r = e.some((e) => e.field_type !== j.QJ.TERMS && (0, O.OA)(e));
-            r && !t ? (0, g.a5)(!0) : !r && t && (0, g.a5)(!1);
+            let r = e.some((e) => e.field_type !== h.QJ.TERMS && (0, p.OA)(e));
+            r && !t ? (0, j.a5)(!0) : !r && t && (0, j.a5)(!1);
         }, [e, t]);
 }

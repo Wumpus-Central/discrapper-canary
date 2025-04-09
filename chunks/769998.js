@@ -13,12 +13,12 @@ var i = n(442837),
     g = n(467397);
 function p(e) {
     var t;
-    let { action: n, triggerType: p, guildId: h, toggled: f, onToggleAction: b } = e,
+    let { action: n, triggerType: p, guildId: f, toggled: h, onToggleAction: b } = e,
         x = (e) => () => b(e),
         j = (0, o.c)(n.type, n, p),
         N = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        _ = null != N ? (0, u.L9)(N) : null,
-        v = (0, i.e7)([l.Z, a.Z], () => l.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(h)), [h]);
+        v = null != N ? (0, u.L9)(N) : null,
+        _ = (0, i.e7)([l.Z, a.Z], () => l.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(f)), [f]);
     if (null == j) return null;
     let { headerText: y, descriptionText: O, icon: C } = j;
     return (0, r.jsxs)('div', {
@@ -44,13 +44,13 @@ function p(e) {
                         variant: 'text-xs/medium',
                         children: O
                     }),
-                    f &&
+                    h &&
                         (0, r.jsxs)(s.Text, {
                             color: 'interactive-normal',
                             variant: 'text-xs/medium',
                             children: [
-                                null === _ ? null : p === c.fX.MENTION_SPAM ? m.NW.format(m.t.i3lsKC, { friendlyDurationString: _ }) : m.NW.format(m.t.mvHxzc, { friendlyDurationString: _ }),
-                                v &&
+                                null === v ? null : p === c.fX.MENTION_SPAM ? m.NW.format(m.t.i3lsKC, { friendlyDurationString: v }) : m.NW.format(m.t.mvHxzc, { friendlyDurationString: v }),
+                                _ &&
                                     (0, r.jsx)(s.P3F, {
                                         onClick: x(!0),
                                         className: g.editChannel,
@@ -65,7 +65,7 @@ function p(e) {
             (0, r.jsx)(s.ua7, {
                 text: m.NW.format(m.t.wx6Vb2, {}),
                 'aria-label': m.NW.formatToMarkdownString(m.t.wx6Vb2, {}),
-                shouldShow: !v,
+                shouldShow: !_,
                 children: (e) => {
                     var t, n;
                     return (0, r.jsx)(
@@ -99,9 +99,9 @@ function p(e) {
                             {
                                 children: (0, r.jsx)(s.XZJ, {
                                     type: s.XZJ.Types.INVERTED,
-                                    value: f,
+                                    value: h,
                                     onChange: x(!1),
-                                    disabled: !v,
+                                    disabled: !_,
                                     className: g.__invalid_actionCheckbox
                                 })
                             }),

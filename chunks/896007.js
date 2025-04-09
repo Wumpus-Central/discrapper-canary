@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => h,
+    ZP: () => f,
     vE: () => p
 }),
     n(539854);
@@ -19,11 +19,11 @@ let { getSectionDefinition: m } = c.Z,
     };
 function p(e) {
     var t, n;
-    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageWebhooks: b, canUnlinkChannels: x, canManageBans: j, canAccessMembersPage: N, canViewGuildAnalytics: _, isOwner: v, isOwnerWithRequiredMfaLevel: y, canAccessClanSettings: O, isGuildSettingsFoundationEnabled: C, isGuildAdmin: I, canManageGuildExpressions: E } = e,
+    let { guild: c, canManageGuild: p, canViewAuditLog: f, canManageRoles: h, canManageWebhooks: b, canUnlinkChannels: x, canManageBans: j, canAccessMembersPage: N, canViewGuildAnalytics: v, isOwner: _, isOwnerWithRequiredMfaLevel: y, canAccessClanSettings: O, isGuildSettingsFoundationEnabled: C, isGuildAdmin: I, canManageGuildExpressions: E } = e,
         S = () =>
             (0, l.X$)({
                 guild: c,
-                isOwner: v,
+                isOwner: _,
                 canManageGuildRoleSubscriptions: (0, l.H2)(c),
                 isMonetizationWaitlistEnabledForGuild: (0, r.mG)(c.id),
                 isGuildEligibleForRoleSubscriptions: (0, a.kT)(c.id),
@@ -86,7 +86,7 @@ function p(e) {
                 e.push(m(d.pNK.EMOJI, T)),
                 e.push(m(d.pNK.STICKERS, T)),
                 e.push(m(d.pNK.SOUNDBOARD, T))),
-            (p || f || N || I) &&
+            (p || h || N || I) &&
                 (e.push({ section: g.DIVIDER }),
                 e.push({
                     section: g.HEADER,
@@ -104,7 +104,7 @@ function p(e) {
             e.push(m(d.pNK.INTEGRATIONS, T)),
             e.push(m(d.pNK.APP_DIRECTORY, T));
         let t = !c.hasFeature(d.oNc.COMMUNITY) && ((0, s.Nb)(c.id) || (0, s.ze)(c.id));
-        (p || h || j || t) &&
+        (p || f || j || t) &&
             (e.push({ section: g.DIVIDER }),
             e.push({
                 section: g.HEADER,
@@ -115,7 +115,7 @@ function p(e) {
             e.push(m(d.pNK.AUDIT_LOG, T)),
             e.push(m(d.pNK.BANS, T)),
             e.push(m(d.pNK.GUILD_AUTOMOD, T)));
-        let n = c.hasFeature(d.oNc.COMMUNITY) && _,
+        let n = c.hasFeature(d.oNc.COMMUNITY) && v,
             r = S();
         return (p || n || r) && (e.push({ section: g.DIVIDER }), e.push(m(d.pNK.COMMUNITY, T)), e.push(m(d.pNK.ONBOARDING, T)), e.push(m(d.pNK.ANALYTICS, T)), e.push(m(d.pNK.COMMUNITY_WELCOME, T)), e.push(m(d.pNK.DISCOVERY_LANDING_PAGE, T)), e.push(m(d.pNK.ROLE_SUBSCRIPTIONS, T)), e.push(m(d.pNK.GUILD_PRODUCTS, T)), e.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, T))), e.push({ section: g.DIVIDER }), e.push(m(d.pNK.GUILD_PREMIUM, T)), e.push(m(d.pNK.GUILD_TEMPLATES, T)), e.push(m(d.pNK.DELETE, T)), e.filter(o.lm);
     }
@@ -160,12 +160,12 @@ function p(e) {
         m(d.pNK.BANS, T),
         {
             section: g.DIVIDER,
-            predicate: () => p || _
+            predicate: () => p || v
         },
         {
             section: g.HEADER,
             label: u.NW.string(u.t['1g9A/f']),
-            predicate: () => !O && (p || _)
+            predicate: () => !O && (p || v)
         },
         m(d.pNK.CLAN, T),
         m(d.pNK.COMMUNITY, T),
@@ -202,4 +202,4 @@ function p(e) {
         m(d.pNK.DELETE, T)
     ].filter(o.lm);
 }
-let h = { generateSections: p };
+let f = { generateSections: p };

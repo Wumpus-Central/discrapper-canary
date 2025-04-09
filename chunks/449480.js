@@ -52,7 +52,7 @@ function p(e, t) {
         e
     );
 }
-function h(e) {
+function f(e) {
     let { games: t, gameActivity: n } = e;
     return (0, r.jsx)('div', {
         className: m.tooltipGames,
@@ -97,19 +97,19 @@ function h(e) {
         })
     });
 }
-function f(e) {
+function h(e) {
     var t;
     let { game: n, gameActivity: i, highlighted: s = !1 } = e,
         d = n.getIconURL(24);
     if (null == d) return null;
-    let h = (null == i || null == (t = i[n.id]) ? void 0 : t.level) === l.m.HIGH,
-        f = (0, r.jsxs)(o.Text, {
+    let f = (null == i || null == (t = i[n.id]) ? void 0 : t.level) === l.m.HIGH,
+        h = (0, r.jsxs)(o.Text, {
             variant: 'text-sm/semibold',
             color: 'interactive-active',
             className: m.tooltipText,
             children: [
                 n.name,
-                h &&
+                f &&
                     (0, r.jsx)(o.Text, {
                         tag: 'div',
                         variant: 'text-sm/normal',
@@ -119,7 +119,7 @@ function f(e) {
             ]
         });
     return (0, r.jsx)(o.ua7, {
-        text: f,
+        text: h,
         position: 'bottom',
         'aria-label': n.name,
         children: (e) =>
@@ -133,7 +133,7 @@ function f(e) {
                             alt: n.name,
                             className: m.gameImage
                         }),
-                        h &&
+                        f &&
                             (0, r.jsx)(c.ZP, {
                                 mask: c.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
                                 width: 14,
@@ -175,7 +175,7 @@ let b = (e) => (t, n) => {
                 let n = t.getIconURL(24);
                 if (null == n) return null;
                 if (l.length <= 4)
-                    return (0, r.jsx)(f, {
+                    return (0, r.jsx)(h, {
                         game: t,
                         gameActivity: s
                     });
@@ -183,7 +183,7 @@ let b = (e) => (t, n) => {
                 return (0, r.jsx)(o.ua7, {
                     'aria-label': null != (e = (0, d.f6)(i.map((e) => e.name))) ? e : '',
                     onTooltipShow: () => (null == a ? void 0 : a()),
-                    text: (0, r.jsx)(h, {
+                    text: (0, r.jsx)(f, {
                         games: i,
                         gameActivity: s
                     }),
@@ -216,7 +216,7 @@ let b = (e) => (t, n) => {
             children: [
                 c.map((e) =>
                     (0, r.jsx)(
-                        f,
+                        h,
                         {
                             game: e,
                             gameActivity: s,

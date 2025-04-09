@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(275759),
     E = n(231757),
     j = n(888496),
-    O = n(605236),
-    C = n(565138),
+    C = n(605236),
+    O = n(565138),
     S = n(297700),
     v = n(553795),
     T = n(430824),
@@ -97,8 +97,8 @@ let F = (e) => {
                 (0, r.jsxs)('div', {
                     className: U.integration,
                     children: [
-                        (0, r.jsx)(C.Z, {
-                            size: C.Z.Sizes.SMALL,
+                        (0, r.jsx)(O.Z, {
+                            size: O.Z.Sizes.SMALL,
                             guild: s.guild,
                             className: U.guildIcon
                         }),
@@ -141,7 +141,7 @@ function H(e) {
         a,
         { onDisconnect: l, account: o, theme: m, locale: p } = e,
         [h, b] = i.useState(o.friendSync),
-        [O, C] = i.useState(o.visibility),
+        [C, O] = i.useState(o.visibility),
         [v, T] = i.useState(o.metadataVisibility),
         [I, y] = i.useState(o.showActivity),
         [A, R] = i.useState(null),
@@ -151,7 +151,7 @@ function H(e) {
         q = (0, x.rR)(o.type),
         X = N.Z.get(q);
     i.useEffect(() => {
-        b(o.friendSync), C(o.visibility), T(o.metadataVisibility), y(o.showActivity);
+        b(o.friendSync), O(o.visibility), T(o.metadataVisibility), y(o.showActivity);
     }, [o]);
     let J = {
             inProgressVisibility: A,
@@ -164,7 +164,7 @@ function H(e) {
         i.useEffect(() => {
             if (!1 === o.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = Q.current;
-            null != e && (C(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (T(t), g.Z.setMetadataVisibility(o.type, o.id, t), V(null));
+            null != e && (O(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (T(t), g.Z.setMetadataVisibility(o.type, o.id, t), V(null));
         }, [o]);
     function $() {
         let e = N.Z.get(o.type),
@@ -448,7 +448,7 @@ function H(e) {
                         }
                         T(n), g.Z.setMetadataVisibility(o.type, o.id, n);
                     },
-                    disabled: 1 !== O || null == o.metadata,
+                    disabled: 1 !== C || null == o.metadata,
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         children: M.NW.string(M.t.FYKGsL)
@@ -462,7 +462,7 @@ function H(e) {
                         (0, r.jsx)(u.j7V, {
                             className: U.connectionOptionSwitch,
                             hideBorder: !0,
-                            value: 1 === O,
+                            value: 1 === C,
                             onChange: function (e) {
                                 let { verified: t } = o,
                                     n = +!!e;
@@ -474,7 +474,7 @@ function H(e) {
                                         });
                                     return;
                                 }
-                                C(n), g.Z.setVisibility(o.type, o.id, n);
+                                O(n), g.Z.setVisibility(o.type, o.id, n);
                             },
                             children: (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -527,7 +527,7 @@ function z() {
     return (
         i.useEffect(
             () => () => {
-                (0, O.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: B.L.AUTO });
+                (0, C.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: B.L.AUTO });
             },
             []
         ),

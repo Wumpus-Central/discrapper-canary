@@ -1,12 +1,12 @@
 n.d(t, {
-    c: () => a,
-    z: () => o
+    c: () => o,
+    z: () => l
 });
 var r = n(442837),
-    l = n(479766);
-function a() {
-    return (0, r.e7)([l.Z], () => l.Z.balance);
-}
+    i = n(479766);
 function o() {
-    return l.Z.getCurrentBalance();
+    return (0, r.e7)([i.Z], () => i.Z.balance);
+}
+function l() {
+    return i.Z.getCurrentBalance();
 }

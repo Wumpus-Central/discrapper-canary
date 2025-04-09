@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => f,
-    pi: () => h,
-    te: () => _
+    pi: () => _,
+    te: () => h
 }),
     n(388685);
 var r = n(200651),
@@ -14,8 +14,8 @@ var r = n(200651),
     u = n(297781),
     d = n(443487),
     p = n(522314);
-let _ = [u.XF];
-function h(e) {
+let h = [u.XF];
+function _(e) {
     var t, n, r, i;
     let s = (0, o.e7)([a.Z], () => a.Z.getMatchingActivity(e)),
         c = (0, o.e7)([l.default], () => l.default.getUser(e.author_id));
@@ -33,7 +33,7 @@ function h(e) {
 }
 let f = i.memo(function (e) {
     let { entry: t, channel: n, selected: i, hovered: o } = e,
-        { activity: l, artist: a } = h(t),
+        { activity: l, artist: a } = _(t),
         { largeImage: f } = (0, s.rv)({ entry: t });
     return null == l
         ? (0, r.jsx)(d.cA, {})
@@ -50,7 +50,7 @@ let f = i.memo(function (e) {
                           (0, r.jsx)(d.ll, { children: a }),
                           (0, r.jsx)(u.Gk, {
                               location: u.Gt.CARD,
-                              children: _.map((e, n) =>
+                              children: h.map((e, n) =>
                                   (0, r.jsx)(
                                       e,
                                       {

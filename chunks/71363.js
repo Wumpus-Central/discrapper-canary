@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(75077),
     E = n(981631),
     j = n(388032),
-    O = n(614729),
-    C = n(865215);
+    C = n(614729),
+    O = n(865215);
 let S = (e) => {
     let t,
         n,
@@ -40,18 +40,18 @@ let S = (e) => {
     return (
         w ? ((t = j.NW.string(j.t['+vt7w8'])), (n = j.NW.string(j.t.LgHbnJ))) : ((t = j.NW.string(j.t.LgHbnJ)), (n = j.NW.string(j.t['+vt7w8']))),
         (0, r.jsx)(c.yWw, {
-            className: a()(O.allPerksScroller, {
-                [O.open]: s,
-                [O.openCloseReduceMotion]: Z
+            className: a()(C.allPerksScroller, {
+                [C.open]: s,
+                [C.openCloseReduceMotion]: Z
             }),
             ref: I,
             children: (0, r.jsx)('div', {
-                className: O.container,
+                className: C.container,
                 children: (0, r.jsxs)(m.Gt, {
                     value: P,
                     children: [
                         (0, r.jsx)(f.Z, {
-                            className: O.heroHeading,
+                            className: C.heroHeading,
                             onBackClick: () => {
                                 S(!1),
                                     p.default.track(E.rMx.NITRO_HOME_NAVIGATION, {
@@ -62,16 +62,16 @@ let S = (e) => {
                             }
                         }),
                         (0, r.jsxs)('div', {
-                            className: O.column,
+                            className: C.column,
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: O.heading,
+                                    className: C.heading,
                                     children: t
                                 }),
                                 (0, r.jsx)(b.Z, {
-                                    className: O.cardCarousel,
+                                    className: C.cardCarousel,
                                     cards: (0, _.sP)({
                                         perksCards: A,
                                         variant: x.R0.CARD_CAROUSEL_FIRST_ROW,
@@ -85,11 +85,11 @@ let S = (e) => {
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: O.heading,
+                                    className: C.heading,
                                     children: n
                                 }),
                                 (0, r.jsx)(b.Z, {
-                                    className: O.cardCarousel,
+                                    className: C.cardCarousel,
                                     cards: (0, _.sP)({
                                         perksCards: A,
                                         variant: x.R0.CARD_CAROUSEL_SECOND_ROW,
@@ -103,11 +103,11 @@ let S = (e) => {
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: O.heading,
+                                    className: C.heading,
                                     children: j.NW.string(j.t.LTaxu7)
                                 }),
                                 (0, r.jsx)(b.Z, {
-                                    className: O.cardCarousel,
+                                    className: C.cardCarousel,
                                     cards: (0, _.sP)({
                                         perksCards: A,
                                         variant: x.R0.CARD_CAROUSEL_THIRD_ROW,
@@ -120,7 +120,7 @@ let S = (e) => {
                                 })
                             ]
                         }),
-                        (0, r.jsx)('div', { className: O.footerSpacing }),
+                        (0, r.jsx)('div', { className: C.footerSpacing }),
                         (0, r.jsx)(o.$, {
                             innerRef: y,
                             onChange: (e) => {
@@ -128,12 +128,12 @@ let S = (e) => {
                             },
                             children: (0, r.jsx)('div', {
                                 ref: y,
-                                className: O.bottomOfPageVisibilitySensor
+                                className: C.bottomOfPageVisibilitySensor
                             })
                         }),
                         (0, r.jsx)('img', {
-                            src: C,
-                            className: O.bottomIllustration,
+                            src: O,
+                            className: C.bottomIllustration,
                             width: 112,
                             height: 85,
                             alt: j.NW.string(j.t.X4IxWF)

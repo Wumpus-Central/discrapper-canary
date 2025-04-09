@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(683818),
     b = n(102888),
     _ = n(65839),
-    C = n(453879),
-    y = n(408310),
+    y = n(453879),
+    C = n(408310),
     x = n(75666),
     v = n(981631),
     j = n(400816);
@@ -51,7 +51,7 @@ let O = (e) => {
         },
         [O.id]
     );
-    let T = i.useMemo(() => (null != I ? (0, C.v)(Object.values(I), N) : null), [I, N]),
+    let T = i.useMemo(() => (null != I ? (0, y.v)(Object.values(I), N) : null), [I, N]),
         {
             mostRecentQuery: A,
             searchFetching: w,
@@ -159,16 +159,16 @@ let O = (e) => {
                     directory_guild_id: E.id
                 }));
         },
-        F = () => {
+        G = () => {
             M(''), h.So(O.id);
         };
     return L
-        ? (0, r.jsx)(y.Z, {
+        ? (0, r.jsx)(C.Z, {
               searchQuery: k,
               setSearchQuery: M,
               mostRecentQuery: A,
               handleSearchKeyPress: H,
-              handleClearSearch: F,
+              handleClearSearch: G,
               handleCreateOrAddGuild: B,
               searchResults: R,
               searchFetching: w
@@ -191,7 +191,7 @@ let O = (e) => {
                   searchQuery: k,
                   setSearchQuery: M,
                   handleSearchKeyPress: H,
-                  handleClearSearch: F,
+                  handleClearSearch: G,
                   handleCreateOrAddGuild: B,
                   currentCategoryId: N,
                   handleSelectCategory: (e) => {

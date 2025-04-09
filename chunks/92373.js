@@ -10,8 +10,8 @@ var r = n(200651),
     u = n(388032),
     m = n(402770);
 let g = function (e) {
-    let { applicationId: t, imageContainerClassName: n, onClick: s, selected: g, locked: p = !1, otherGamesCount: h = 0 } = e,
-        f = (0, l.dQu)(l.TVs.colors.WHITE),
+    let { applicationId: t, imageContainerClassName: n, onClick: s, selected: g, locked: p = !1, otherGamesCount: f = 0 } = e,
+        h = (0, l.dQu)(l.TVs.colors.WHITE),
         { isFetching: b, coverImageUrl: x } = (0, c.$)(t, {
             coverImageHeight: 336,
             coverImageWidth: 252
@@ -23,7 +23,7 @@ let g = function (e) {
         N = i.useCallback(() => {
             null == s || s(t);
         }, [t, s]),
-        _ = i.useMemo(
+        v = i.useMemo(
             () =>
                 b
                     ? null
@@ -52,18 +52,18 @@ let g = function (e) {
                             children: (0, r.jsx)(l.owK, {
                                 size: 'md',
                                 color: 'currentColor',
-                                secondaryColor: f.hex(),
+                                secondaryColor: h.hex(),
                                 className: a()(m.selectedGameCheck, { [m.selectedGameCheckLocked]: p })
                             })
                         }),
-                    _,
-                    h > 0 &&
+                    v,
+                    f > 0 &&
                         (0, r.jsx)('div', {
                             className: m.remainingGame,
                             children: (0, r.jsx)(l.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
-                                children: u.NW.format(u.t.F6iMs7, { count: h })
+                                children: u.NW.format(u.t.F6iMs7, { count: f })
                             })
                         })
                 ]

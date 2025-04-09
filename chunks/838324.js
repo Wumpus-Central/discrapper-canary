@@ -14,13 +14,13 @@ var i = n(442837),
 function p(e) {
     let { guildId: t, scrollToQuestions: n } = e,
         p = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
-        h = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [f, b] = (0, o.VF)(t, h),
-        [x, j] = (0, d.OA)(t, [...h]),
+        f = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
+        [h, b] = (0, o.VF)(t, f),
+        [x, j] = (0, d.OA)(t, [...f]),
         N = p ? j.length : b.length,
-        _ = p ? x.length : f.length,
-        v = N < u.md,
-        y = _ >= u.X,
+        v = p ? x.length : h.length,
+        _ = N < u.md,
+        y = v >= u.X,
         O = j.length - b.length,
         C = (0, r.jsx)(a.owK, {
             size: 'sm',
@@ -34,8 +34,8 @@ function p(e) {
             color: s.Z.colors.WHITE.css,
             secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css
         }),
-        E = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, N) / u.md) * 100],
-        S = !v && y ? [s.Z.colors.TEXT_POSITIVE.css, s.Z.colors.TEXT_POSITIVE.css] : [s.Z.colors.TEXT_BRAND.css, s.Z.colors.TEXT_MUTED.css];
+        E = [(Math.min(u.X, v) / u.md) * 100, (Math.min(u.md, N) / u.md) * 100],
+        S = !_ && y ? [s.Z.colors.TEXT_POSITIVE.css, s.Z.colors.TEXT_POSITIVE.css] : [s.Z.colors.TEXT_BRAND.css, s.Z.colors.TEXT_MUTED.css];
     return (0, r.jsxs)('div', {
         className: g.container,
         children: [
@@ -45,7 +45,7 @@ function p(e) {
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-brand',
-                        children: m.NW.format(m.t.kvroKC, { count: _ })
+                        children: m.NW.format(m.t.kvroKC, { count: v })
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/bold',
@@ -62,7 +62,7 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: g.requiredItem,
                 children: [
-                    v ? I : C,
+                    _ ? I : C,
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',

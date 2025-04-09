@@ -1,69 +1,69 @@
-i.r(t), i.d(t, { default: () => N });
-var n = i(200651),
-    l = i(192379),
-    r = i(215569),
-    s = i(481060),
-    a = i(852860),
-    o = i(313201),
-    u = i(944163),
-    c = i(266395),
-    d = i(187565),
-    m = i(200305),
-    f = i(592286),
-    E = i(388032),
-    g = i(916199);
-let h = () =>
-        (0, n.jsx)(a.Z, {
+l.r(t), l.d(t, { default: () => v });
+var s = l(200651),
+    n = l(192379),
+    r = l(215569),
+    i = l(481060),
+    a = l(852860),
+    o = l(313201),
+    c = l(944163),
+    d = l(266395),
+    u = l(187565),
+    m = l(200305),
+    x = l(592286),
+    h = l(388032),
+    g = l(916199);
+let j = () =>
+        (0, s.jsx)(a.Z, {
             submitting: !1,
-            message: E.NW.string(E.t['8g514e']),
+            message: h.NW.string(h.t['8g514e']),
             onReset: () => {
-                (0, c.PE)(!1);
+                (0, d.PE)(!1);
             },
-            onResetText: E.NW.string(E.t['ETE/oK']),
+            onResetText: h.NW.string(h.t['ETE/oK']),
             onSave: () => {
-                (0, c.PE)(!1), (0, s.Mr3)(f.Pn);
+                (0, d.PE)(!1), (0, i.Mr3)(x.Pn);
             },
-            onSaveText: E.NW.string(E.t['Xt+UaW']),
-            onSaveButtonColor: s.Ttl.RED
+            onSaveText: h.NW.string(h.t['Xt+UaW']),
+            onSaveButtonColor: i.Ttl.RED
         }),
-    N = (e) => {
-        let { guildId: t, transitionState: i, onClose: a, onComplete: f, inviteKey: E, isPreview: N = !1 } = e,
-            I = (0, c.rb)((e) => e.shouldShowWarning),
-            { hasFetched: v, verificationForm: p } = (0, d.ng)(t, N, E),
-            j = (0, o.Dt)();
-        return (l.useEffect(() => {
-            v && p === u.t && a();
-        }, [v, a, p]),
-        p === u.t)
+    v = (e) => {
+        let { guildId: t, transitionState: l, onClose: a, onComplete: x, inviteKey: h, isPreview: v = !1 } = e,
+            N = (0, d.rb)((e) => e.shouldShowWarning),
+            { hasFetched: f, verificationForm: p } = (0, u.ng)(t, v, h),
+            b = (0, o.Dt)();
+        return (n.useEffect(() => {
+            f && p === c.t && a();
+        }, [f, a, p]),
+        p === c.t)
             ? null
-            : (0, n.jsxs)(n.Fragment, {
+            : (0, s.jsxs)(s.Fragment, {
                   children: [
-                      (0, n.jsxs)(s.Y0X, {
-                          size: s.CgR.MEDIUM,
+                      (0, s.jsxs)(i.Y0X, {
+                          size: i.CgR.MEDIUM,
                           className: g.container,
-                          transitionState: i,
-                          'aria-labelledby': j,
+                          transitionState: l,
+                          'aria-labelledby': b,
                           children: [
-                              (0, n.jsx)(s.olH, {
+                              (0, s.jsx)(i.olH, {
                                   onClick: () => a(!1),
                                   className: g.closeButton
                               }),
-                              (0, n.jsx)(m.Z, {
+                              (0, s.jsx)(m.Z, {
                                   verificationForm: p,
-                                  headerId: j,
+                                  headerId: b,
                                   guildId: t,
                                   onClose: a,
-                                  onComplete: f,
-                                  isPreview: N
+                                  onComplete: x,
+                                  isPreview: v
                               })
                           ]
                       }),
-                      (0, n.jsx)(r.W, {
+                      (0, s.jsx)(r.W, {
                           children:
-                              !0 === I &&
-                              (0, n.jsx)(s.oXn, {
+                              !0 === N &&
+                              (0, s.jsx)(i.oXn, {
                                   className: g.notice,
-                                  children: (0, n.jsx)(h, {})
+                                  children: (0, s.jsx)(j, {})
                               })
                       })
                   ]

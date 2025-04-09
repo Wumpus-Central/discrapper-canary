@@ -27,34 +27,34 @@ function l(e, t, n) {
             return null == r ? void 0 : r.filter((e) => e.roles.some((e) => n.has(e)));
         }, [null == m ? void 0 : m.role_subscription]),
         p = null == m ? void 0 : m.guild.icon_hash,
-        h = i.ZP.getGuildIconURL({
+        f = i.ZP.getGuildIconURL({
             id: e,
             icon: p,
             size: n
         }),
-        f = r.useMemo(() => (null != g && g.length > t ? g.slice(0, t) : g), [g, t]),
+        h = r.useMemo(() => (null != g && g.length > t ? g.slice(0, t) : g), [g, t]),
         b = null != g && g.length > t ? g.length - t : null,
         x = null == u ? void 0 : u.slug,
         j = null != x ? a.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(x) : void 0,
         N = null == m || null == (l = m.guild) ? void 0 : l.name,
-        _ = null == m || null == (o = m.role_subscription) ? void 0 : o.subscriber_count,
-        v = !c && null != N && null != p && null != h;
-    return v
+        v = null == m || null == (o = m.role_subscription) ? void 0 : o.subscriber_count,
+        _ = !c && null != N && null != p && null != f;
+    return _
         ? {
-              hasAllImperativeDetails: v,
+              hasAllImperativeDetails: _,
               isLoading: c,
               details: {
                   guildName: N,
                   guildIcon: p,
-                  guildAvatarUrl: h,
+                  guildAvatarUrl: f,
                   storePageUrl: j,
-                  subscriberCount: _,
-                  emojisToShow: f,
+                  subscriberCount: v,
+                  emojisToShow: h,
                   notShownEmojiCount: b
               }
           }
         : {
-              hasAllImperativeDetails: v,
+              hasAllImperativeDetails: _,
               isLoading: c,
               error: d
           };

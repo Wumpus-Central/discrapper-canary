@@ -12,7 +12,7 @@ var i = n(481060),
 function m(e) {
     let { 'aria-labelledby': t, disabled: n = !1 } = e,
         { editStateId: m, guildId: g } = (0, s.N)(),
-        [p, h] = l.GP(m, g);
+        [p, f] = l.GP(m, g);
     return (0, r.jsx)(i.FXm, {
         className: u.__invalid_channelAccessSelect,
         radioItemClassName: u.__invalid_channelAccessSelectRadioButton,
@@ -20,7 +20,7 @@ function m(e) {
         size: i.FXm.Sizes.NOT_SET,
         onChange: (e) => {
             let { value: t } = e;
-            return h(t);
+            return f(t);
         },
         options: [
             {

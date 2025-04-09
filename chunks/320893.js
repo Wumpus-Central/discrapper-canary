@@ -12,8 +12,8 @@ var i = n(780384),
     m = n(867861),
     g = n(860790),
     p = n(268953),
-    h = n(487703),
-    f = n(458050),
+    f = n(487703),
+    h = n(458050),
     b = n(334364),
     x = n(431712);
 function j(e) {
@@ -43,13 +43,13 @@ function N() {
             }),
             (0, r.jsx)('img', {
                 className: c.roundAvatar,
-                src: h,
+                src: f,
                 alt: o.NW.string(o.t.NgjpTE)
             })
         ]
     });
 }
-function _() {
+function v() {
     let e = (0, a.ZP)();
     function t(e) {
         var t, n;
@@ -157,7 +157,7 @@ function _() {
         ]
     });
 }
-function v() {
+function _() {
     return (0, r.jsxs)('div', {
         className: c.earningBenefitCard,
         children: [
@@ -169,7 +169,7 @@ function v() {
             (0, r.jsx)(s.LZC, { size: 32 }),
             (0, r.jsx)(N, {}),
             (0, r.jsx)(s.LZC, { size: 24 }),
-            (0, r.jsx)(_, {})
+            (0, r.jsx)(v, {})
         ]
     });
 }
@@ -221,7 +221,7 @@ function O() {
             }),
             (0, r.jsx)('img', {
                 className: c.roleSubscriptionEarningIllo,
-                src: f,
+                src: h,
                 alt: o.NW.string(o.t.fD9Wv7)
             })
         ]
@@ -238,7 +238,7 @@ function C() {
             (0, r.jsx)(s.LZC, { size: 24 }),
             (0, r.jsxs)('div', {
                 className: c.creatorBenefitsContainer,
-                children: [(0, r.jsx)(v, {}), (0, r.jsx)(y, {}), (0, r.jsx)(O, {})]
+                children: [(0, r.jsx)(_, {}), (0, r.jsx)(y, {}), (0, r.jsx)(O, {})]
             })
         ]
     });

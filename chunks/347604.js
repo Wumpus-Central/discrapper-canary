@@ -11,18 +11,18 @@ var r = n(200651),
     m = n(118215),
     g = n(30766),
     p = n(166184),
-    h = n(654351),
-    f = n(259674),
+    f = n(654351),
+    h = n(259674),
     b = n(845377),
     x = n(981631),
     j = n(388032),
     N = n(88470),
-    _ = n(716455);
-let v = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
+    v = n(716455);
+let _ = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     y = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'],
     O = (e) => {
         let { guild: t, onEnableDiscovery: n, isGuildAdmin: s } = e,
-            [O, C] = (0, l.Z)(() => [a().sample(v), a().sample(y)], []);
+            [O, C] = (0, l.Z)(() => [a().sample(_), a().sample(y)], []);
         i.useEffect(() => {
             (0, u.z)([O, C]);
         }, [O, C]);
@@ -47,7 +47,7 @@ let v = ['322850917248663552', '172018499005317120', '414234792121597953', '2284
                 children: [
                     (0, r.jsx)('img', {
                         alt: '',
-                        src: _,
+                        src: v,
                         className: N.sparkles
                     }),
                     (0, r.jsxs)('div', {
@@ -87,10 +87,10 @@ let v = ['322850917248663552', '172018499005317120', '414234792121597953', '2284
                         color: 'header-secondary',
                         children: j.NW.format(j.t.BhkgBg, {
                             onLinkClick: () =>
-                                (0, f.lW)({
+                                (0, h.lW)({
                                     articleId: x.BhN.SERVER_DISCOVERY,
                                     guildId: t.id,
-                                    pageView: h.d5.INTRO
+                                    pageView: f.d5.INTRO
                                 })
                         })
                     }),
@@ -100,10 +100,10 @@ let v = ['322850917248663552', '172018499005317120', '414234792121597953', '2284
                         color: 'header-secondary',
                         children: j.NW.format(j.t.ALSi8v, {
                             onGuidelinesClick: () =>
-                                (0, f.lW)({
+                                (0, h.lW)({
                                     articleId: x.BhN.SERVER_DISCOVERY_GUIDELINES,
                                     guildId: t.id,
-                                    pageView: h.d5.INTRO
+                                    pageView: f.d5.INTRO
                                 })
                         })
                     }),

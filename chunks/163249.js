@@ -11,7 +11,7 @@ var r = n(200651),
     m = n(981631),
     g = n(388032),
     p = n(406116);
-function h(e) {
+function f(e) {
     let { color: t, children: n } = e;
     return (0, r.jsxs)('div', {
         className: p.roleTag,
@@ -27,7 +27,7 @@ function h(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { guild: t, display: n } = e;
     return (0, r.jsxs)('div', {
         className: a()(p.banner, t.backgroundClass, { [p.bannerOut]: !n }),
@@ -41,7 +41,7 @@ function f(e) {
                             className: p.rolesRow,
                             children: e.map((e) =>
                                 (0, r.jsx)(
-                                    h,
+                                    f,
                                     {
                                         color: e.color,
                                         children: e.name
@@ -204,7 +204,7 @@ function b() {
             'aria-hidden': !0,
             children: e.map((e, n) =>
                 (0, r.jsx)(
-                    f,
+                    h,
                     {
                         guild: e,
                         display: n === t
@@ -221,7 +221,7 @@ function x(e) {
         m = async () => {
             d(!0), await o.Z.createRole(t.id), d(!1);
         },
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             s(n.id);
         }, [s, n.id]);
     return (0, r.jsx)(c.NM, {
@@ -256,7 +256,7 @@ function x(e) {
                 (0, r.jsx)(l.$i$, { className: p.divider }),
                 (0, r.jsx)(u.Z, {
                     role: n,
-                    onClick: h
+                    onClick: f
                 })
             ]
         })

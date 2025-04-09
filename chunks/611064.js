@@ -21,8 +21,8 @@ function b(e) {
 }
 let _ = i.memo(function (e) {
     let t,
-        { title: p, onToggleExpand: b, expanded: _, expandedCount: C } = e,
-        y = (0, l.e7)([u.Z], () => u.Z.hidden),
+        { title: p, onToggleExpand: b, expanded: _, expandedCount: y } = e,
+        C = (0, l.e7)([u.Z], () => u.Z.hidden),
         x = i.useCallback((e) => {
             (0, a.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
@@ -35,12 +35,12 @@ let _ = i.memo(function (e) {
             (0, r.jsx)(o.nn4, {
                 children: f.NW.format(f.t.UaqbkZ, {
                     title: p,
-                    count: C
+                    count: y
                 })
             }),
             (0, r.jsxs)(o.P3F, {
                 onClick: (e) => {
-                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return y ? (0, c.lY)() : C > 3 ? b() : (0, h.dG4)();
+                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return C ? (0, c.lY)() : y > 3 ? b() : (0, h.dG4)();
                 },
                 onContextMenu: x,
                 tag: 'span',
@@ -51,14 +51,14 @@ let _ = i.memo(function (e) {
                         className: m.header,
                         children: [
                             (0, r.jsxs)('span', {
-                                children: [p, ' \u2014 ', C]
+                                children: [p, ' \u2014 ', y]
                             }),
                             (0, r.jsx)(d.Z, {})
                         ]
                     }),
-                    C <= 3 && !y
+                    y <= 3 && !C
                         ? null
-                        : ((t = y ? (0, r.jsx)(o.u04, { className: m.toggleExpandIcon }) : _ ? (0, r.jsx)(o.CJ0, { className: m.toggleExpandIcon }) : (0, r.jsx)(o.Fbu, { className: m.toggleExpandIcon })),
+                        : ((t = C ? (0, r.jsx)(o.u04, { className: m.toggleExpandIcon }) : _ ? (0, r.jsx)(o.CJ0, { className: m.toggleExpandIcon }) : (0, r.jsx)(o.Fbu, { className: m.toggleExpandIcon })),
                           (0, r.jsx)(o.tEY, {
                               children: (0, r.jsx)('div', {
                                   tabIndex: 0,

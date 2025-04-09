@@ -137,7 +137,7 @@ function c(e, t) {
             },
             [u, n]
         ),
-        h = r.useCallback(
+        f = r.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n, value: r } = t;
@@ -151,7 +151,7 @@ function c(e, t) {
             },
             [u]
         ),
-        f = r.useCallback(
+        h = r.useCallback(
             (e) => (t) => {
                 u((n) => {
                     let { tags: r, value: i } = n,
@@ -229,7 +229,7 @@ function c(e, t) {
             },
             [u]
         ),
-        _ = r.useCallback(
+        v = r.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -250,7 +250,7 @@ function c(e, t) {
             },
             [n, u, o]
         ),
-        v = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 let t = o.trim().length <= 0;
                 if (d.length > 0) {
@@ -330,9 +330,9 @@ function c(e, t) {
         ),
         C = r.useCallback(
             (e) => {
-                e.relatedTarget !== e.currentTarget && _(e, !1, !1);
+                e.relatedTarget !== e.currentTarget && v(e, !1, !1);
             },
-            [_]
+            [v]
         );
     return {
         handlePasteEvent: p,
@@ -340,20 +340,20 @@ function c(e, t) {
         handleKeyDown: r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                'Meta' !== e.key && (l.ye.has(e.key) ? _(e) : 'Backspace' === e.key ? v(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? O(e) : l.Bd.has(e.key) && t && y(e));
+                'Meta' !== e.key && (l.ye.has(e.key) ? v(e) : 'Backspace' === e.key ? _(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? O(e) : l.Bd.has(e.key) && t && y(e));
             },
-            [_, v, j, O, y]
+            [v, _, j, O, y]
         ),
         handleContainerKeyUp: r.useCallback(
             (e) => {
                 if (document.activeElement !== s.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? v(e) : 'a' === e.key && t ? O(e) : 'Escape' === e.key ? j(e) : l.Bd.has(e.key) && t ? y(e) : 'Meta' !== e.key && j(e);
+                'Backspace' === e.key ? _(e) : 'a' === e.key && t ? O(e) : 'Escape' === e.key ? j(e) : l.Bd.has(e.key) && t ? y(e) : 'Meta' !== e.key && j(e);
             },
-            [y, v, O, j, s]
+            [y, _, O, j, s]
         ),
-        handleRemoveTag: h,
-        handleTagChangeEvent: f,
+        handleRemoveTag: f,
+        handleTagChangeEvent: h,
         handleSelectTag: b,
         handleUnselectTag: x,
         handleResetTagSelections: j,

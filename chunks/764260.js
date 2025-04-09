@@ -1,12 +1,12 @@
 n.d(t, {
-    Gf: () => f,
+    Gf: () => h,
     OW: () => u,
     S1: () => l,
     TW: () => m,
     TY: () => c,
     Uv: () => d,
     _l: () => p,
-    d_: () => h,
+    d_: () => f,
     lO: () => o,
     sI: () => a,
     we: () => g
@@ -76,14 +76,14 @@ function p(e, t, n) {
         unicodeEmoji: n
     });
 }
-function h(e, t) {
+function f(e, t) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS',
         roleId: e,
         roleConnectionConfigurations: t
     });
 }
-async function f(e, t, n, a, l) {
+async function h(e, t, n, a, l) {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SUBMITTING' });
     try {
         let r = async () => {

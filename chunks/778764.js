@@ -60,11 +60,11 @@ function j(e, t) {
         e
     );
 }
-function O(e) {
+function C(e) {
     let { transitionState: t, onClose: a, ticket: o, challenge: u } = e,
         f = (0, c.Dt)(),
         [E, j] = i.useState(''),
-        [O, C] = i.useState(!0),
+        [C, O] = i.useState(!0),
         [S, v] = i.useState(b.x.INIT),
         [T, I] = i.useState(''),
         [y, A] = i.useState(null),
@@ -200,7 +200,7 @@ function O(e) {
                                                     className: _.input,
                                                     value: E,
                                                     onChange: (e) => {
-                                                        j(e), C(0 === e.length);
+                                                        j(e), O(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -214,7 +214,7 @@ function O(e) {
                                     children: [
                                         (0, r.jsx)(l.zxk, {
                                             type: 'submit',
-                                            disabled: O,
+                                            disabled: C,
                                             children: x.NW.string(x.t['5dyZ1d'])
                                         }),
                                         (0, r.jsx)(l.zxk, {
@@ -235,7 +235,7 @@ function O(e) {
         ]
     });
 }
-function C(e) {
+function O(e) {
     let { onSelect: t, credential: i } = e;
     return (0, r.jsxs)(l.v2r, {
         navId: 'webauthn-credential-actions',
@@ -300,7 +300,7 @@ function S() {
                                         color: l.zxk.Colors.TRANSPARENT,
                                         size: l.zxk.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, o.vq)(t, (t) => (0, r.jsx)(C, j(E({}, t), { credential: e })));
+                                            (0, o.vq)(t, (t) => (0, r.jsx)(O, j(E({}, t), { credential: e })));
                                         },
                                         'aria-label': x.NW.string(x.t['+nrTbG']),
                                         innerClassName: _.credentialOptions,
@@ -326,7 +326,7 @@ function S() {
                                     let { ticket: t, challenge: n } = e;
                                     (0, l.h7j)((e) =>
                                         (0, r.jsx)(
-                                            O,
+                                            C,
                                             j(E({}, e), {
                                                 ticket: t,
                                                 challenge: n

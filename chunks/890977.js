@@ -1,4 +1,4 @@
-n.d(t, { b: () => C }), n(49124);
+n.d(t, { b: () => y }), n(49124);
 var r,
     i,
     l = n(200651),
@@ -49,7 +49,7 @@ function _(e) {
         className: s()(m.trinkets, t)
     });
 }
-let C = (e) => {
+let y = (e) => {
     let { children: t, animationContainerClassName: n, glowClassName: r, trinketsClassName: i, onMount: a } = e;
     return (
         o.useEffect(() => {

@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(311821),
     E = n(42818),
     j = n(314884),
-    O = n(509545),
-    C = n(78839),
+    C = n(509545),
+    O = n(78839),
     S = n(267642),
     v = n(74538),
     T = n(937615),
@@ -98,7 +98,7 @@ async function Z(e, t, n, r) {
 function w(e) {
     var t, n, s;
     let { premiumSubscription: a, guildBoostSlotId: c, onBack: d, onNext: N, onClose: j } = e,
-        [C, S] = i.useState(!1),
+        [O, S] = i.useState(!1),
         [A, D] = i.useState(null),
         [w, k] = i.useMemo(() => {
             try {
@@ -114,11 +114,11 @@ function w(e) {
         i.useEffect(() => {
             k && W.current();
         }, [k]);
-    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, l.cj)([O.Z], () => {
-            let e = O.Z.get(a.planId);
+    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, l.cj)([C.Z], () => {
+            let e = C.Z.get(a.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? O.Z.getForSkuAndInterval((0, v.Wz)(y.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan: null != e ? C.Z.getForSkuAndInterval((0, v.Wz)(y.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
         { analyticsLocations: M } = (0, p.ZP)(),
@@ -200,7 +200,7 @@ function w(e) {
                 children: [
                     (0, r.jsx)(o.zxk, {
                         color: o.zxk.Colors.RED,
-                        disabled: C,
+                        disabled: O,
                         onClick: async () => {
                             try {
                                 S(!0), D(null), await Z(a, w, M, c), N();
@@ -248,9 +248,9 @@ function W(e) {
     let t,
         { guildBoostSlot: n, transitionState: s, onClose: a } = e;
     i.useEffect(() => {
-        C.ZP.hasFetchedSubscriptions() || (0, c.jg)();
+        O.ZP.hasFetchedSubscriptions() || (0, c.jg)();
     }, []);
-    let d = (0, l.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
+    let d = (0, l.e7)([O.ZP], () => O.ZP.getPremiumTypeSubscription()),
         [u, m] = i.useState(1),
         { analyticsLocations: h } = (0, p.ZP)(g.Z.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == d) t = (0, r.jsx)(o.hzk, { children: (0, r.jsx)(o.$jN, {}) });

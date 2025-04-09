@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(358797);
+n.d(t, { Z: () => h }), n(388685), n(358797);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -25,7 +25,7 @@ function p(e) {
         className: g.resizeHandle
     });
 }
-let h = i.forwardRef(function (e, t) {
+let f = i.forwardRef(function (e, t) {
     let { children: n, onFocus: s, onBlur: a, onClick: o } = e,
         c = i.useRef(null),
         [d, m] = i.useState(u.tq);
@@ -54,15 +54,15 @@ let h = i.forwardRef(function (e, t) {
         ]
     });
 });
-function f(e) {
+function h(e) {
     var t;
-    let { initialValue: n, onChangeTags: s, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: f, maxTags: b } = e,
+    let { initialValue: n, onChangeTags: s, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: p, className: h, maxTags: b } = e,
         x = i.useRef(null),
         j = i.useRef(null),
         N = i.useRef(null),
-        _ = (0, m.V)(n),
+        v = (0, m.V)(n),
         {
-            handlePasteEvent: v,
+            handlePasteEvent: _,
             handleInputChange: y,
             handleKeyDown: O,
             handleContainerKeyUp: C,
@@ -72,23 +72,23 @@ function f(e) {
             handleUnselectTag: T,
             handleResetTagSelections: P,
             handleInputBlurEvent: w
-        } = (0, m.Q)(_, {
+        } = (0, m.Q)(v, {
             scrollerRef: N,
             mainInputRef: x,
             mainContainerRef: j
         }),
         {
-            state: { value: R, tags: D, selections: Z, isSelecting: A }
-        } = _,
-        k = (0, o.Z)(D),
+            state: { value: R, tags: D, selections: Z, isSelecting: k }
+        } = v,
+        A = (0, o.Z)(D),
         [W, L] = i.useState(!1),
         M = i.useCallback(() => {
             var e;
             L(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
-        k !== D && s(D);
-    }, [s, k, D]),
+        A !== D && s(D);
+    }, [s, A, D]),
         i.useEffect(() => {
             W || c(R);
         }, [c, R, W]);
@@ -121,12 +121,12 @@ function f(e) {
             [S, T, Z, D]
         );
     return (0, r.jsxs)('div', {
-        className: a()(g.mainContainer, f),
+        className: a()(g.mainContainer, h),
         ref: j,
         tabIndex: 0,
         onKeyUp: C,
         children: [
-            (0, r.jsxs)(h, {
+            (0, r.jsxs)(f, {
                 ref: N,
                 onClick: M,
                 children: [
@@ -140,7 +140,7 @@ function f(e) {
                                 onFocus: U(t),
                                 onRemove: () => I(t),
                                 isSelected: Z.includes(e),
-                                isSelecting: A,
+                                isSelecting: k,
                                 error: u[e],
                                 forceShowErrorTooltip: !W && t === D.length - 1
                             },
@@ -152,7 +152,7 @@ function f(e) {
                         ref: x,
                         onChange: y,
                         onKeyDownCapture: O,
-                        onPaste: v,
+                        onPaste: _,
                         onBlur: w,
                         placeholder: 0 === D.length ? p : void 0,
                         value: R

@@ -1,36 +1,36 @@
 r.d(t, {
-    B: () => d,
-    b: () => f
+    B: () => f,
+    b: () => d
 }),
     r(388685);
 var n = r(200651),
     i = r(192379),
     o = r(481060),
-    l = r(893776),
-    s = r(476770),
+    s = r(893776),
+    l = r(476770),
     c = r(388032),
-    u = r(641198);
-function a() {
+    a = r(641198);
+function u() {
     let [e, t] = i.useState(!1),
-        [r, s] = i.useState(!1),
-        [a, f] = i.useState(!1);
+        [r, l] = i.useState(!1),
+        [u, d] = i.useState(!1);
     i.useEffect(() => {
         let e;
         return (
             r &&
                 (e = setTimeout(() => {
-                    s(!1);
+                    l(!1);
                 }, 2000)),
             () => {
                 null != e && clearTimeout(e);
             }
         );
     }, [r]);
-    let d = async () => {
+    let f = async () => {
         if (!e) {
             t(!0);
             try {
-                await l.Z.verifyResend(), s(!0), f(!0);
+                await s.Z.verifyResend(), l(!0), d(!0);
             } catch (e) {
             } finally {
                 t(!1);
@@ -39,7 +39,7 @@ function a() {
     };
     return r
         ? (0, n.jsx)(o.Text, {
-              className: u.verifyConfirmText,
+              className: a.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
               children: c.NW.string(c.t.H3Q7U1)
@@ -47,13 +47,13 @@ function a() {
         : (0, n.jsx)(o.zxk, {
               size: o.zxk.Sizes.SMALL,
               submitting: e,
-              onClick: d,
-              children: a ? c.NW.string(c.t.WnX4Jy) : c.NW.string(c.t['13ofGh'])
+              onClick: f,
+              children: u ? c.NW.string(c.t.WnX4Jy) : c.NW.string(c.t['13ofGh'])
           });
 }
-function f() {
-    return (0, n.jsx)(s.PU, {
-        className: u.editableRequirementContainer,
+function d() {
+    return (0, n.jsx)(l.PU, {
+        className: a.editableRequirementContainer,
         icon: o._XJ,
         text: c.NW.string(c.t.c6EUJC),
         footnote: c.NW.string(c.t['jMh+TU']),
@@ -113,15 +113,15 @@ function f() {
         })
     });
 }
-function d(e) {
+function f(e) {
     let { isUserVerified: t } = e,
         r = t ? c.NW.string(c.t.qY1jHB) : c.NW.string(c.t.c6EUJC);
-    return (0, n.jsx)(s.PU, {
-        className: u.editableRequirementContainer,
+    return (0, n.jsx)(l.PU, {
+        className: a.editableRequirementContainer,
         icon: o._XJ,
         text: r,
         footnote: c.NW.string(c.t['jMh+TU']),
         meetsRequirement: t,
-        children: (0, n.jsx)(a, {})
+        children: (0, n.jsx)(u, {})
     });
 }

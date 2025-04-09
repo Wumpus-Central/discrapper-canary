@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r,
     i,
     s,
@@ -43,7 +43,7 @@ class p extends (s = a.ZP.Store) {
               writable: !0
           })
         : (p[r] = i);
-let h = new p(l.Z, {
+let f = new p(l.Z, {
     GUILD_SETTINGS_INIT: function () {
         if (o.Z.getGuildId() === m) return !1;
         m = o.Z.getGuildId();

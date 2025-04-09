@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(430824),
     g = n(768581),
     p = n(921948),
-    h = n(434404),
-    f = n(981631),
+    f = n(434404),
+    h = n(981631),
     b = n(570911),
     x = n(388032),
     j = n(364313);
@@ -41,7 +41,7 @@ function N(e) {
     }
     return e;
 }
-function _(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function _(e, t) {
         e
     );
 }
-function v(e) {
+function _(e) {
     let { profile: t, canManageGuild: n, handleClick: i, hasCustomBanner: s } = e,
         l = (0, c.dQu)(o.Z.colors.BG_BASE_TERTIARY),
         u = (0, d.q)(t, l.hex());
@@ -68,7 +68,7 @@ function v(e) {
         children: (e) =>
             (0, r.jsx)(
                 c.P3F,
-                _(N({}, e), {
+                v(N({}, e), {
                     'aria-disabled': !n,
                     tabIndex: n ? 0 : -1,
                     'aria-label': x.NW.string(x.t.W4Nd7e),
@@ -138,11 +138,11 @@ function O(e) {
     var t;
     let { profile: n, onCustomBannerChange: s, canManageGuild: o } = e,
         u = (0, l.e7)([m.Z], () => m.Z.getGuild(n.id)),
-        g = null != (t = null == u ? void 0 : u.hasFeature(f.oNc.DISCOVERABLE)) && t,
+        g = null != (t = null == u ? void 0 : u.hasFeature(h.oNc.DISCOVERABLE)) && t,
         p = n.id,
         O = i.useCallback(
             (e) => () => {
-                h.Z.updateGuildProfile(p, {
+                f.Z.updateGuildProfile(p, {
                     brandColorPrimary: e,
                     customBanner: null
                 });
@@ -155,7 +155,7 @@ function O(e) {
         children: (0, r.jsxs)('div', {
             className: j.grid,
             children: [
-                (0, r.jsx)(v, {
+                (0, r.jsx)(_, {
                     profile: n,
                     canManageGuild: o,
                     handleClick: O(null),
@@ -170,7 +170,7 @@ function O(e) {
                             children: (e) =>
                                 (0, r.jsx)(
                                     c.P3F,
-                                    _(N({}, e), {
+                                    v(N({}, e), {
                                         'aria-disabled': !o,
                                         tabIndex: o ? 0 : -1,
                                         'aria-label': t,

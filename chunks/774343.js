@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => S });
 var l,
     r,
     i,
@@ -19,7 +19,7 @@ function g(e) {
     if (h === t) return !1;
     h = t;
 }
-class S extends (s = u.ZP.Store) {
+class O extends (s = u.ZP.Store) {
     initialize() {
         this.waitFor(E.Z, p.Z, C.Z, f.Z, d.Z);
     }
@@ -28,15 +28,15 @@ class S extends (s = u.ZP.Store) {
     }
 }
 (r = 'AppViewStore'),
-    (l = 'displayName') in S
-        ? Object.defineProperty(S, l, {
+    (l = 'displayName') in O
+        ? Object.defineProperty(O, l, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (S[l] = r);
-let O = new S(c.Z, {
+        : (O[l] = r);
+let S = new O(c.Z, {
     OVERLAY_INITIALIZE: function () {
         let e = p.Z.getPrivateChannelIds(),
             t = C.Z.getChannelId(_.ME);

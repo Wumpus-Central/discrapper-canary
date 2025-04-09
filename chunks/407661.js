@@ -84,7 +84,7 @@ function T(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: o, shouldMention: s, showMentionToggle: c } = t,
         { guildId: h, nick: m, colorString: O, colorStrings: T, colorRoleName: N } = (0, u.ZP)(o),
-        A = (0, d.E)(h, T),
+        A = (0, d.X)(h, T),
         C = I(i, o),
         R = (0, p.NE)(i, o),
         P = n.showThreadPromptOnReply && C >= v && R,
@@ -126,7 +126,7 @@ function T(e) {
                                                 name: m,
                                                 color: O,
                                                 roleName: N,
-                                                roleGradient: A
+                                                roleColors: A
                                             },
                                             t
                                         )

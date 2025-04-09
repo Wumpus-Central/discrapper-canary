@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     modalHeader: 'modalHeader__57752',
     modalCloseButton: 'modalCloseButton__57752',
     modalContent: 'modalContent__57752',

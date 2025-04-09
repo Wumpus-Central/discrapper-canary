@@ -90,18 +90,18 @@ let g = (e) => {
         });
     },
     p = (e) => {
-        let { onChange: t, multiple: o = !0, disabled: c, className: u, tabIndex: g = -1, 'aria-label': p, filters: h, setLoading: f } = e,
+        let { onChange: t, multiple: o = !0, disabled: c, className: u, tabIndex: g = -1, 'aria-label': p, filters: f, setLoading: h } = e,
             b = i.createRef(),
             x = i.useRef(null),
             [j, N] = i.useState(!1);
         i.useEffect(() => {
-            j && _();
+            j && v();
         }, [j]);
-        let _ = () => {
+        let v = () => {
                 null !== x.current && ((0, s.Mr3)(x.current), (x.current = null));
             },
-            v = async (e) => {
-                null == f || f(!0), await m(e, t), N(!0), null == f || f(!1);
+            _ = async (e) => {
+                null == h || h(!0), await m(e, t), N(!0), null == h || h(!1);
             },
             y = async (e) => {
                 var t, i, a;
@@ -109,12 +109,12 @@ let g = (e) => {
                 let l = e.currentTarget.files;
                 x.current = await (0, s.ZDy)(async () => {
                     let { default: e } = await n.e('16169').then(n.bind(n, 935333));
-                    return (t) => (0, r.jsx)(e, d({ processFiles: () => v(l) }, t));
+                    return (t) => (0, r.jsx)(e, d({ processFiles: () => _(l) }, t));
                 });
             };
         return (0, r.jsx)(a.Z, {
             onChange: y,
-            filters: null != h ? h : (0, l.Zj)(),
+            filters: null != f ? f : (0, l.Zj)(),
             multiple: o,
             disabled: c,
             className: u,

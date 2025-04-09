@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -80,7 +80,7 @@ function _(e) {
         )
     });
 }
-function C(e) {
+function y(e) {
     var t, n;
     let i,
         { item: o, channel: u, index: d } = e,

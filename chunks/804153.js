@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(24318),
     g = n(822693),
     p = n(388032),
-    h = n(476795);
-function f(e, t, n) {
+    f = n(476795);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ class b extends i.PureComponent {
                     guildId: e.id,
                     widgetEnabled: n,
                     widgetChannelId: t,
-                    className: h.spacing
+                    className: f.spacing
                 }),
                 (0, r.jsx)(a.R94, {
                     type: a.geA.DESCRIPTION,
@@ -57,16 +57,16 @@ class b extends i.PureComponent {
     renderAPIInfo(e) {
         let t = (0, m.S)(e.id);
         return (0, r.jsxs)('div', {
-            className: h.infoWrapper,
+            className: f.infoWrapper,
             children: [
                 (0, r.jsx)(a.xJW, {
                     title: p.NW.string(p.t.TRyLUl),
-                    className: h.infoItem,
+                    className: f.infoItem,
                     children: (0, r.jsx)(o.Z, { value: e.id })
                 }),
                 (0, r.jsx)(a.xJW, {
                     title: p.NW.string(p.t.VECJcH),
-                    className: h.infoItem,
+                    className: f.infoItem,
                     children: (0, r.jsx)(o.Z, { value: t })
                 })
             ]
@@ -76,10 +76,10 @@ class b extends i.PureComponent {
         let t = (0, m.a)(e.id);
         return (0, r.jsx)('div', {
             children: (0, r.jsxs)('div', {
-                className: h.infoWrapper,
+                className: f.infoWrapper,
                 children: [
                     (0, r.jsxs)(a.xJW, {
-                        className: h.infoItem,
+                        className: f.infoItem,
                         title: p.NW.string(p.t.XVGbn5),
                         children: [
                             (0, r.jsx)(o.Z, { value: t }),
@@ -90,7 +90,7 @@ class b extends i.PureComponent {
                         ]
                     }),
                     (0, r.jsx)('img', {
-                        className: h.infoItem,
+                        className: f.infoItem,
                         'data-accessibility': 'desaturate',
                         alt: '',
                         src: n(329488)
@@ -108,24 +108,24 @@ class b extends i.PureComponent {
               : (0, r.jsxs)(a.hjN, {
                     tag: a.RB0.H1,
                     title: p.NW.string(p.t.qlhNb2),
-                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, r.jsx)(a.$i$, { className: h.divider }), this.renderAPIInfo(e), (0, r.jsx)(a.$i$, { className: h.divider }), this.renderWidget(e)]
+                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, r.jsx)(a.$i$, { className: f.divider }), this.renderAPIInfo(e), (0, r.jsx)(a.$i$, { className: f.divider }), this.renderWidget(e)]
                 });
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            h(this, 'state', {
                 internalEnabled: this.props.widgetEnabled,
                 widgetEnabledProp: this.props.widgetEnabled
             }),
-            f(this, 'renderToggle', () =>
+            h(this, 'renderToggle', () =>
                 (0, r.jsx)(a.j7V, {
-                    className: h.spacing,
+                    className: f.spacing,
                     value: this.state.internalEnabled,
                     onChange: this.handleToggleWidget,
                     children: p.NW.string(p.t.NR6hub)
                 })
             ),
-            f(this, 'handleToggleWidget', (e) => {
+            h(this, 'handleToggleWidget', (e) => {
                 let { guild: t, widgetChannelId: n } = this.props;
                 null != t && (this.setState({ internalEnabled: e }), d.Z.updateEmbed(t.id, e, n));
             });

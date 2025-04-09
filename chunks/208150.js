@@ -12,14 +12,14 @@ var i = n(442837),
     m = n(926491),
     g = n(145499),
     p = n(424218),
-    h = n(267642),
-    f = n(63063),
+    f = n(267642),
+    h = n(63063),
     b = n(999382),
     x = n(981631),
     j = n(611480),
     N = n(388032),
-    _ = n(776739);
-let v = {
+    v = n(776739);
+let _ = {
         page: x.ZY5.GUILD_SETTINGS,
         section: x.jXE.GUILD_SETTINGS_STICKERS,
         object: x.qAy.BOOSTING_BANNER
@@ -30,36 +30,36 @@ let v = {
             i = (0, u.Z)(t.id).available,
             a = x.oCV[x.Eu4.TIER_1] - i;
         return (0, r.jsxs)('div', {
-            className: _.upsellContainer,
+            className: v.upsellContainer,
             children: [
                 (0, r.jsx)(s.X6q, {
-                    className: _.upsellHeader,
+                    className: v.upsellHeader,
                     variant: 'heading-xl/semibold',
                     children: N.NW.string(N.t.hzCkys)
                 }),
                 (0, r.jsx)(s.Text, {
-                    className: _.upsellDescription,
+                    className: v.upsellDescription,
                     variant: 'text-md/normal',
                     children: N.NW.string(N.t.jcesAA)
                 }),
                 (0, r.jsxs)('div', {
-                    className: _.upsellButtons,
+                    className: v.upsellButtons,
                     children: [
                         (0, r.jsx)(s.zxk, {
-                            className: _.upsellButtonPrimary,
-                            innerClassName: _.upsellButton,
+                            className: v.upsellButtonPrimary,
+                            innerClassName: v.upsellButton,
                             color: s.zxk.Colors.WHITE,
                             onClick: () =>
                                 (0, d.Z)({
                                     analyticsLocations: n,
-                                    analyticsLocation: v,
+                                    analyticsLocation: _,
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: a
                                 }),
                             children: N.NW.string(N.t.Q5dbTk)
                         }),
                         (0, r.jsx)(s.zxk, {
-                            innerClassName: _.upsellButton,
+                            innerClassName: v.upsellButton,
                             color: s.zxk.Colors.WHITE,
                             onClick: () =>
                                 (0, o.f)({
@@ -83,7 +83,7 @@ let v = {
                 }),
                 (0, r.jsx)(s.R94, {
                     type: s.geA.DESCRIPTION,
-                    children: N.NW.format(N.t.UBj0aW, { articleUrl: f.Z.getArticleURL(x.BhN.STICKERS_UPLOAD) })
+                    children: N.NW.format(N.t.UBj0aW, { articleUrl: h.Z.getArticleURL(x.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
@@ -93,9 +93,9 @@ let v = {
             i,
             { guild: s, guildStickers: a } = e,
             l = s.premiumTier,
-            o = (0, h.Qi)(a, l),
-            d = (0, h.FZ)(l),
-            u = (0, h.A3)(l),
+            o = (0, f.Qi)(a, l),
+            d = (0, f.FZ)(l),
+            u = (0, f.A3)(l),
             m = a.length;
         return null == d || l === x.Eu4.TIER_3 || o > 0
             ? null
@@ -104,7 +104,7 @@ let v = {
                   : ((t = N.NW.string(N.t.zT9Sxc)),
                     (n = N.NW.formatToPlainString(N.t.YaW9wM, {
                         level: d,
-                        numAdditional: (0, h.ig)(d)
+                        numAdditional: (0, f.ig)(d)
                     })),
                     (i = x.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(c.Z, {
@@ -115,7 +115,7 @@ let v = {
                       page: x.ZY5.GUILD_SETTINGS,
                       section: x.jXE.GUILD_SETTINGS_STICKERS,
                       object: i,
-                      objectType: (0, h.ge)(d)
+                      objectType: (0, f.ge)(d)
                   }
               }));
     },
@@ -149,7 +149,7 @@ let v = {
                               ]
                           })
                         : (0, r.jsx)(y, { guild: e }),
-                    (0, r.jsx)(s.$i$, { className: _.divider }),
+                    (0, r.jsx)(s.$i$, { className: v.divider }),
                     (0, r.jsx)(g.Z, { guild: e })
                 ]
             })

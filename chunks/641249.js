@@ -12,8 +12,8 @@ var i = n(442837),
     m = n(331146),
     g = n(798680),
     p = n(388032),
-    h = n(301849);
-function f(e) {
+    f = n(301849);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,8 +60,8 @@ function x() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
         [x, j] = c.XZ(e, t),
         N = (0, d.Z)(t, e),
-        { setCurrentTab: _ } = (0, g.dw)(),
-        v = () => _(g.ue.EMOJIS),
+        { setCurrentTab: v } = (0, g.dw)(),
+        _ = () => v(g.ue.EMOJIS),
         y = (0, i.e7)([a.Z], () => a.Z.getGuild(t)),
         O = null == y ? void 0 : y.getMaxRoleSubscriptionEmojiSlots();
     function C(e) {
@@ -78,9 +78,9 @@ function x() {
         children: [
             (0, r.jsxs)(s.R94, {
                 type: s.R94.Types.DESCRIPTION,
-                className: h.formDescription,
+                className: f.formDescription,
                 disabled: E,
-                children: [p.NW.format(p.t.zuwel5, { premiumEmojiMaximum: O }), (0, r.jsx)('br', {}), p.NW.format(p.t.sEkgBg, { handleTransitionToManageEmoji: v })]
+                children: [p.NW.format(p.t.zuwel5, { premiumEmojiMaximum: O }), (0, r.jsx)('br', {}), p.NW.format(p.t.sEkgBg, { handleTransitionToManageEmoji: _ })]
             }),
             (0, r.jsx)(m.E, {
                 tierEmojiIds: x,
@@ -93,7 +93,7 @@ function x() {
                               return (n) =>
                                   (0, r.jsx)(
                                       t,
-                                      b(f({}, n), {
+                                      b(h({}, n), {
                                           onConfirmDelete: () => {
                                               I(e.id), n.onClose();
                                           }
@@ -110,12 +110,12 @@ function x() {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                b(f({}, n), {
+                                b(h({}, n), {
                                     guildId: t,
                                     initialTierEmojiIds: x,
                                     onSubmit: C,
                                     transitionToManageEmoji: () => {
-                                        v(), n.onClose();
+                                        _(), n.onClose();
                                     }
                                 })
                             );

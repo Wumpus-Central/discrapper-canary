@@ -1,4 +1,4 @@
-n.d(t, { N: () => C }), n(388685);
+n.d(t, { N: () => y }), n(388685);
 var r = n(200651),
     i = n(442837),
     l = n(704215),
@@ -58,7 +58,7 @@ let b = (e) => {
             }
         });
     };
-function C(e) {
+function y(e) {
     let { children: t } = e,
         n = [l.z.LEADERBOARD_NUX_COACHMARK],
         [a, c] = (0, s.US)(n, void 0),

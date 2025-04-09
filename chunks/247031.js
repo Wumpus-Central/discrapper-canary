@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(493544),
     g = n(479531),
     p = n(118012),
-    h = n(210887),
-    f = n(246946),
+    f = n(210887),
+    h = n(246946),
     b = n(594174),
     x = n(251625),
     j = n(226951),
     N = n(51144),
-    _ = n(434404),
-    v = n(372454),
+    v = n(434404),
+    _ = n(372454),
     y = n(999382),
     O = n(84613),
     C = n(740903),
@@ -77,14 +77,14 @@ function D(e, t) {
 function Z(e) {
     let { transitionState: t, guild: n, user: s, ban: a, hideDiscriminator: l, onClose: o } = e,
         [d, m] = i.useState(!1),
-        [h, f] = i.useState(null);
+        [f, h] = i.useState(null);
     async function b() {
         if (null != n) {
-            f(null), m(!0);
+            h(null), m(!0);
             try {
                 await u.Z.unbanUser(n.id, s.id), o();
             } catch (e) {
-                f(new g.Z(e)), m(!1);
+                h(new g.Z(e)), m(!1);
             }
         }
     }
@@ -125,12 +125,12 @@ function Z(e) {
                         variant: 'text-sm/normal',
                         children: null != a.reason && '' !== a.reason ? a.reason : S.NW.string(S.t['t+2Zcn'])
                     }),
-                    null != h
+                    null != f
                         ? (0, r.jsx)(c.Text, {
                               className: T.error,
                               color: 'text-danger',
                               variant: 'text-sm/normal',
-                              children: h.getAnyErrorMessage()
+                              children: f.getAnyErrorMessage()
                           })
                         : null
                 ]
@@ -154,7 +154,7 @@ function Z(e) {
         ]
     });
 }
-class A extends i.PureComponent {
+class k extends i.PureComponent {
     render() {
         let { user: e, hideDiscriminator: t, guild: n } = this.props;
         return (0, r.jsxs)(c.P3F, {
@@ -210,7 +210,7 @@ class A extends i.PureComponent {
             });
     }
 }
-class k extends i.PureComponent {
+class A extends i.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
@@ -231,13 +231,13 @@ class k extends i.PureComponent {
         });
     }
     handleModerationClick() {
-        _.Z.setSection(E.pNK.SAFETY), (0, O.K)(C.u.DM_AND_SPAM_PROTECTION);
+        v.Z.setSection(E.pNK.SAFETY), (0, O.K)(C.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
-        _.Z.setSearchQuery(e);
+        v.Z.setSearchQuery(e);
     }
     handleQueryClear() {
-        _.Z.setSearchQuery('');
+        v.Z.setSearchQuery('');
     }
     constructor(...e) {
         super(...e),
@@ -283,7 +283,7 @@ class k extends i.PureComponent {
                     u = null == s ? void 0 : s.get(null != (t = null == d ? void 0 : d.id) ? t : '');
                 if (null != d && null != u)
                     return (0, r.jsx)(
-                        A,
+                        k,
                         {
                             user: d,
                             ban: u,
@@ -357,20 +357,20 @@ class k extends i.PureComponent {
             });
     }
 }
-let W = o.ZP.connectStores([y.Z, h.Z, f.Z], () => {
+let W = o.ZP.connectStores([y.Z, f.Z, h.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = y.Z.getProps();
     return {
         searchQuery: null != n ? n : '',
         bans: e,
         guild: t,
-        theme: h.Z.theme,
-        streamerMode: f.Z.hidePersonalInformation
+        theme: f.Z.theme,
+        streamerMode: h.Z.hidePersonalInformation
     };
-})(k);
+})(A);
 function L() {
     var e;
     let { guild: t } = (0, o.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
-        { enabled: n } = v.T.useExperiment(
+        { enabled: n } = _.T.useExperiment(
             {
                 guildId: null != (e = null == t ? void 0 : t.id) ? e : E.lds,
                 location: '4d6318_1'

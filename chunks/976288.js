@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(650774),
     g = n(434404),
     p = n(999382),
-    h = n(718157),
-    f = n(450474),
+    f = n(718157),
+    h = n(450474),
     b = n(166184),
     x = n(936735),
     j = n(654351),
     N = n(557359),
-    _ = n(386885),
-    v = n(203377),
+    v = n(386885),
+    _ = n(203377),
     y = n(929834),
     O = n(388032),
     C = n(356941);
@@ -43,7 +43,7 @@ function E(e) {
         p = i.useCallback((e) => {
             g.Z.updateGuild({ description: e });
         }, []),
-        { memberCount: h, onlineCount: f } = (0, a.cj)([m.Z], () => ({
+        { memberCount: f, onlineCount: h } = (0, a.cj)([m.Z], () => ({
             memberCount: m.Z.getMemberCount(n.id),
             onlineCount: m.Z.getOnlineCount(n.id)
         }));
@@ -132,8 +132,8 @@ function E(e) {
             (0, r.jsx)(b.Z, {
                 className: C.preview,
                 guild: n,
-                memberCount: h,
-                presenceCount: f
+                memberCount: f,
+                presenceCount: h
             })
         ]
     });
@@ -173,7 +173,7 @@ function S(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: C.editableSection,
-                        children: (0, r.jsx)(h.E, {
+                        children: (0, r.jsx)(f.E, {
                             guildId: t.id,
                             guildMetadata: n
                         })
@@ -195,7 +195,7 @@ function S(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: C.editableSection,
-                        children: (0, r.jsx)(f.Z, {
+                        children: (0, r.jsx)(h.Z, {
                             guild: t,
                             guildMetadata: n
                         })
@@ -226,16 +226,16 @@ function T(e) {
         p = i.useCallback(
             (e) => {
                 let { keywords: r } = n;
-                r.length >= v.G7 || (m(null), (0, c.zH)(t, [...r, e]));
+                r.length >= _.G7 || (m(null), (0, c.zH)(t, [...r, e]));
             },
             [t, n]
         ),
-        h = i.useMemo(
+        f = i.useMemo(
             () =>
                 (0, j.P5)(n.primaryCategoryId)
                     .filter((e) => !n.keywords.includes(e))
                     .map((e) => {
-                        let t = n.keywords.length >= v.G7;
+                        let t = n.keywords.length >= _.G7;
                         return {
                             text: e,
                             onClick: () => p(e),
@@ -245,7 +245,7 @@ function T(e) {
                     }),
             [n.keywords, n.primaryCategoryId, p]
         ),
-        f = null != a ? a : u;
+        h = null != a ? a : u;
     return (0, r.jsxs)('div', {
         className: C.sectionContainer,
         children: [
@@ -268,21 +268,21 @@ function T(e) {
                         onRemoveTag: g,
                         onAddTag: p,
                         onAddTagError: m,
-                        maxTags: v.G7,
-                        maxTaxLength: v._0,
+                        maxTags: _.G7,
+                        maxTaxLength: _._0,
                         placeholder: n.keywords.length < 1 ? O.NW.string(O.t.EL4Lho) : void 0
                     }),
-                    null != f
+                    null != h
                         ? (0, r.jsx)(l.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
                               className: C.error,
-                              children: f
+                              children: h
                           })
                         : null
                 ]
             }),
-            h.length > 0
+            f.length > 0
                 ? (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(l.X6q, {
@@ -293,7 +293,7 @@ function T(e) {
                           }),
                           (0, r.jsx)('div', {
                               className: C.editableSection,
-                              children: (0, r.jsx)(d.j, { pills: h })
+                              children: (0, r.jsx)(d.j, { pills: f })
                           })
                       ]
                   })
@@ -395,7 +395,7 @@ function D(e) {
             };
         });
     if (null == o) return null;
-    let c = i === _.U.ELIGIBLE_DISABLED;
+    let c = i === v.U.ELIGIBLE_DISABLED;
     return (0, r.jsxs)('div', {
         className: C.settings,
         children: [

@@ -11,19 +11,19 @@ var r = n(200651),
     m = n(836090);
 function g(e) {
     let { fetchDiscoveryData: t, settingsView: n, requireTerms: g, rules: p } = e,
-        h = (0, s.e7)([l.Z], () => l.Z.getProps().guild);
+        f = (0, s.e7)([l.Z], () => l.Z.getProps().guild);
     if (
         (i.useEffect(() => {
-            null != h && t(h.id);
-        }, [t, h]),
-        null == h)
+            null != f && t(f.id);
+        }, [t, f]),
+        null == f)
     )
         return null;
     switch (n) {
         case d.U.DISQUALIFIED:
             return (0, r.jsx)(o.Z, {
-                guild: h,
-                guildId: h.id,
+                guild: f,
+                guildId: f.id,
                 headerContent: (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(a.X6q, {
@@ -59,8 +59,8 @@ function g(e) {
             });
         case d.U.INELIGIBLE:
             return (0, r.jsx)(o.Z, {
-                guild: h,
-                guildId: h.id,
+                guild: f,
+                guildId: f.id,
                 headerContent: (0, r.jsx)(a.X6q, {
                     variant: 'heading-md/semibold',
                     children: u.NW.format(u.t['+6Hylp'], {

@@ -1,5 +1,5 @@
 n.d(t, {
-    O: () => J,
+    O: () => Q,
     Z: () => ee
 }),
     n(953529),
@@ -16,14 +16,14 @@ var r = n(200651),
     m = n(780384),
     g = n(481060),
     p = n(852860),
-    h = n(902840),
-    f = n(410030),
+    f = n(902840),
+    h = n(410030),
     b = n(100527),
     x = n(906732),
     j = n(34586),
     N = n(600164),
-    _ = n(699553),
-    v = n(65361),
+    v = n(699553),
+    _ = n(65361),
     y = n(536442),
     O = n(142497),
     C = n(345861),
@@ -36,8 +36,8 @@ var r = n(200651),
     R = n(434404),
     D = n(999382),
     Z = n(67734),
-    A = n(375263),
-    k = n(586382),
+    k = n(375263),
+    A = n(586382),
     W = n(594980),
     L = n(515025),
     M = n(760632),
@@ -64,7 +64,7 @@ function X(e, t, n) {
         e
     );
 }
-function Q(e) {
+function J(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,7 +80,7 @@ function Q(e) {
     }
     return e;
 }
-let J = () => {
+let Q = () => {
     let { guild: e, originalGuild: t, submitting: n, errors: s, profile: a, originalProfile: l } = (0, d.cj)([D.Z], () => D.Z.getProps()),
         o = (0, d.e7)([D.Z], () => D.Z.getProfileError()),
         c = i.useMemo(() => {
@@ -90,7 +90,7 @@ let J = () => {
         }, [s, o]),
         u = i.useCallback(async () => {
             if (null == e) return;
-            null != a && null != l && a.visibility !== l.visibility && (await (0, _.xV)(e.id, a.visibility));
+            null != a && null != l && a.visibility !== l.visibility && (await (0, v.xV)(e.id, a.visibility));
             let n = {
                 name: e.name,
                 icon: e.icon,
@@ -342,7 +342,7 @@ class $ extends i.PureComponent {
     }
     renderSummariesSection() {
         let { guild: e, canManageGuild: t } = this.props;
-        return (0, h.Jc)(e, !1)
+        return (0, f.Jc)(e, !1)
             ? (0, r.jsx)('div', {
                   children: (0, r.jsx)(g.hjN, {
                       className: Y.divider,
@@ -386,7 +386,7 @@ class $ extends i.PureComponent {
                             children: [
                                 (0, r.jsxs)(g.vwX, {
                                     className: Y.flexFormTitle,
-                                    children: [(0, r.jsx)('div', { children: V.NW.string(V.t.tzGY0t) }), (0, r.jsx)(k.hH, { guild: e })]
+                                    children: [(0, r.jsx)('div', { children: V.NW.string(V.t.tzGY0t) }), (0, r.jsx)(A.hH, { guild: e })]
                                 }),
                                 (0, r.jsx)(g.R94, {
                                     type: g.geA.DESCRIPTION,
@@ -432,7 +432,7 @@ class $ extends i.PureComponent {
                         children: [
                             (0, r.jsxs)(g.vwX, {
                                 className: Y.flexFormTitle,
-                                children: [(0, r.jsx)('div', { children: V.NW.string(V.t['0r0AzM']) }), (0, r.jsx)(k.zA, { guild: e })]
+                                children: [(0, r.jsx)('div', { children: V.NW.string(V.t['0r0AzM']) }), (0, r.jsx)(A.zA, { guild: e })]
                             }),
                             (0, r.jsx)(g.R94, {
                                 type: g.geA.DESCRIPTION,
@@ -453,7 +453,7 @@ class $ extends i.PureComponent {
                     (0, r.jsx)(N.Z.Child, {
                         wrap: !0,
                         basis: '50%',
-                        children: (0, r.jsx)(A.O, {
+                        children: (0, r.jsx)(k.O, {
                             guild: e,
                             canManageGuild: t
                         })
@@ -553,7 +553,7 @@ class $ extends i.PureComponent {
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            Q(
+                            J(
                                 {
                                     onCrop: (e) => {
                                         let { imageUri: t } = e;
@@ -574,7 +574,7 @@ class $ extends i.PureComponent {
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            Q(
+                            J(
                                 {
                                     imageUri: e,
                                     file: t,
@@ -607,7 +607,7 @@ class $ extends i.PureComponent {
 }
 function ee() {
     let { guild: e, errors: t, submitting: n, subsection: s, profile: a } = (0, d.cj)([D.Z], () => D.Z.getProps()),
-        l = (0, f.ZP)(),
+        l = (0, h.ZP)(),
         { analyticsLocations: c } = (0, x.ZP)(b.Z.OVERVIEW);
     i.useEffect(() => {
         (0, O.Kw)(y.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
@@ -618,11 +618,11 @@ function ee() {
         })),
         g = (0, j.E)(e),
         p = (0, d.e7)([S.default], () => S.default.getCurrentUser()),
-        h = null == e ? void 0 : e.id,
-        { fetchGuildProfile: N } = (0, v.u)(null == e ? void 0 : e.id);
+        f = null == e ? void 0 : e.id,
+        { fetchGuildProfile: N } = (0, _.u)(null == e ? void 0 : e.id);
     return (i.useEffect(() => {
-        null != h && N();
-    }, [h, N]),
+        null != f && N();
+    }, [f, N]),
     o()(null != p, 'GuildSettingsOverview: currentUser cannot be undefined'),
     null == e)
         ? null

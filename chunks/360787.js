@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var r,
     i,
     l,
@@ -29,7 +29,7 @@ function b(e) {
 function _() {
     (f = {}), (m = {});
 }
-class C extends (r = o.ZP.Store) {
+class y extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -38,15 +38,15 @@ class C extends (r = o.ZP.Store) {
     }
 }
 (l = 'PresenceSubscriptionsStore'),
-    (i = 'displayName') in C
-        ? Object.defineProperty(C, i, {
+    (i = 'displayName') in y
+        ? Object.defineProperty(y, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (C[i] = l);
-let y = new C(s.Z, {
+        : (y[i] = l);
+let C = new y(s.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {

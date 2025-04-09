@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(953529);
+n.d(t, { Z: () => f }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -11,16 +11,16 @@ var r = n(200651),
     m = n(717251),
     g = n(388032),
     p = n(184520);
-function h(e) {
+function f(e) {
     var t, n, s;
-    let { changeTitle: h, value: f, options: b, className: x, onChange: j } = e,
-        [N, _] = i.useState(f),
-        [v, y] = i.useState(!1),
+    let { changeTitle: f, value: h, options: b, className: x, onChange: j } = e,
+        [N, v] = i.useState(h),
+        [_, y] = i.useState(!1),
         [O, C] = i.useState(!1),
         I = i.useRef(null);
     i.useEffect(() => {
-        _(f);
-    }, [f]),
+        v(h);
+    }, [h]),
         i.useEffect(
             () => () => {
                 clearTimeout(I.current);
@@ -33,15 +33,15 @@ function h(e) {
                 e.value === N ||
                 (C(!0),
                 null == j || j(e),
-                _(e.value),
+                v(e.value),
                 (I.current = setTimeout(() => {
                     C(!1), y(!1);
                 }, 1000)));
         };
     return (0, r.jsx)(u.Z, {
-        title: v ? h : null != (t = null == E ? void 0 : E.title) ? t : h,
-        description: v ? '('.concat(null != (n = null == E ? void 0 : E.title) ? n : g.NW.string(g.t.PoWNfX), ')') : null != (s = null == E ? void 0 : E.description) ? s : '',
-        highlightColor: v ? d.q.NONE : null == E ? void 0 : E.highlightColor,
+        title: _ ? f : null != (t = null == E ? void 0 : E.title) ? t : f,
+        description: _ ? '('.concat(null != (n = null == E ? void 0 : E.title) ? n : g.NW.string(g.t.PoWNfX), ')') : null != (s = null == E ? void 0 : E.description) ? s : '',
+        highlightColor: _ ? d.q.NONE : null == E ? void 0 : E.highlightColor,
         action: (0, r.jsx)(l.zxk, {
             look: l.zxk.Looks.LINK,
             size: l.zxk.Sizes.MIN,

@@ -1,8 +1,8 @@
 n.d(t, {
     BV: () => j,
-    FW: () => O,
+    FW: () => C,
     Kt: () => E,
-    ZC: () => C
+    ZC: () => O
 });
 var r = n(442837),
     i = n(493683),
@@ -72,12 +72,12 @@ async function E(e, t, n) {
 function j(e, t) {
     s.ZP.updatedUnsyncedSettings({ showPlayAgain: e }), e || f.default.track(_.rMx.APP_DMS_QUICK_LAUNCHER_HIDDEN, { source: t });
 }
-function O() {
+function C() {
     let e = (0, r.e7)([g.ZP], () => g.ZP.showPlayAgain),
-        { frecentApps: t } = C();
+        { frecentApps: t } = O();
     return e && t.length > 0;
 }
-function C() {
+function O() {
     let { frecentApps: e, loading: t } = (0, d.f)({
         context: { type: 'contextless' },
         onlyActivityApps: !0,

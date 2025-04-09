@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(120356),
@@ -14,14 +14,14 @@ var r = n(200651),
     p = n(241559),
     f = n(893966),
     h = n(256003),
-    j = n(170323),
-    g = n(434368),
+    g = n(170323),
+    j = n(434368),
     x = n(42170),
-    y = n(123846),
-    v = n(42551),
-    O = n(981631),
-    N = n(388032),
-    _ = n(771429),
+    O = n(123846),
+    y = n(42551),
+    v = n(981631),
+    _ = n(388032),
+    N = n(771429),
     H = n(350381);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -92,13 +92,13 @@ let Z = l.forwardRef(function (e, t) {
         return (
             i && (u = 'text-brand'),
             (0, r.jsx)('th', {
-                className: a()(_.tableHeaderCellContainer, s),
+                className: a()(N.tableHeaderCellContainer, s),
                 children: (0, r.jsxs)(
                     d.P3F,
                     S(w({}, c), {
                         innerRef: t,
                         onClick: l,
-                        className: a()(_.tableHeaderCell, { [_.tableHeaderCellWithFilter]: null != l }),
+                        className: a()(N.tableHeaderCell, { [N.tableHeaderCellWithFilter]: null != l }),
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: 'eyebrow',
@@ -107,10 +107,10 @@ let Z = l.forwardRef(function (e, t) {
                             }),
                             null != l &&
                                 (0, r.jsx)('div', {
-                                    className: _.filterIconButton,
+                                    className: N.filterIconButton,
                                     children: (0, r.jsx)(d.gXV, {
                                         size: 'custom',
-                                        className: _.filterIcon,
+                                        className: N.filterIcon,
                                         color: o ? d.TVs.colors.CONTROL_BRAND_FOREGROUND.css : d.TVs.colors.TEXT_MUTED.css,
                                         width: 16,
                                         height: 16
@@ -122,17 +122,17 @@ let Z = l.forwardRef(function (e, t) {
             })
         );
     }),
-    R = 'member-safety-force-show-signals-tooltip';
-function L(e) {
+    L = 'member-safety-force-show-signals-tooltip';
+function R(e) {
     let { guildId: t, currentPagedMembers: n } = e,
         o = l.useRef(null),
         i = l.useRef(null),
-        L = l.useRef(null),
-        I = l.useRef(null),
+        R = l.useRef(null),
         P = l.useRef(null),
+        I = l.useRef(null),
         M = (0, c.e7)([f.Z], () => f.Z.getSearchStateByGuildId(t), [t], s()),
-        V = (0, c.e7)([m.Z, C.Z], () => m.Z.can(O.Plq.MANAGE_GUILD, C.Z.getGuild(t)), [t]),
-        { selectedUserIds: E, addUsers: T, clearSelection: k } = (0, h.Z)(t),
+        V = (0, c.e7)([m.Z, C.Z], () => m.Z.can(v.Plq.MANAGE_GUILD, C.Z.getGuild(t)), [t]),
+        { selectedUserIds: E, addUsers: k, clearSelection: T } = (0, h.Z)(t),
         A = M.requireUnusualDmActivity || M.requireCommunicationDisabled || M.requireUnusualAccountActivity || M.requireUsernameQuarantined,
         B = M.selectedRoleIds.size > 0,
         W = null != M.selectedJoinDateOption.afterDate,
@@ -142,33 +142,33 @@ function L(e) {
         q = null != M.selectedSourceInviteCode && '' !== M.selectedSourceInviteCode,
         G = null != M.selectedJoinSourceType,
         Y = q || G,
-        [K, X] = l.useState(null == u.K.get(R, null)),
-        J = l.useCallback(() => {
-            u.K.set(R, Date.now()), X(!1);
+        [X, J] = l.useState(null == u.K.get(L, null)),
+        K = l.useCallback(() => {
+            u.K.set(L, Date.now()), J(!1);
         }, []),
         Q = (0, p.xC)(t),
         $ = l.useMemo(() => n.filter((e) => (0, p.rX)(t, Q, e)), [Q, n, t]),
         ee = $.length > 0,
         et = 0 === $.filter((e) => !E.has(e)).length,
         en = l.useCallback(() => {
-            ee && (et ? k() : T($));
-        }, [ee, et, k, T, $]);
+            ee && (et ? T() : k($));
+        }, [ee, et, T, k, $]);
     return (0, r.jsx)('thead', {
         children: (0, r.jsxs)('tr', {
-            className: _.tableHeaderRow,
+            className: N.tableHeaderRow,
             children: [
                 Q &&
                     (0, r.jsx)('th', {
-                        className: a()(_.tableHeaderCellContainer, H.xsmallCol),
+                        className: a()(N.tableHeaderCellContainer, H.xsmallCol),
                         children: (0, r.jsx)(d.ua7, {
                             shouldShow: !ee,
-                            text: N.NW.string(N.t.tJEY0N),
+                            text: _.NW.string(_.t.tJEY0N),
                             children: (e) =>
                                 (0, r.jsx)(
                                     d.P3F,
                                     S(w({}, e), {
                                         onClick: en,
-                                        className: _.tableHeaderCell,
+                                        className: N.tableHeaderCell,
                                         children: (0, r.jsx)(d.XZJ, {
                                             type: d.XZJ.Types.INVERTED,
                                             value: et,
@@ -178,7 +178,7 @@ function L(e) {
                                 )
                         })
                     }),
-                (0, r.jsx)(Z, { label: N.NW.string(N.t.Es7n9f) }),
+                (0, r.jsx)(Z, { label: _.NW.string(_.t.Es7n9f) }),
                 V
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -191,7 +191,7 @@ function L(e) {
                                   renderPopout: () =>
                                       (0, r.jsx)(x.Z, {
                                           guildId: t,
-                                          onClose: O.dG4
+                                          onClose: v.dG4
                                       }),
                                   closeOnScroll: !0,
                                   children: (e) => {
@@ -202,7 +202,7 @@ function L(e) {
                                           w(
                                               {
                                                   ref: o,
-                                                  label: N.NW.string(N.t.xcKP1N),
+                                                  label: _.NW.string(_.t.xcKP1N),
                                                   onFilter: t,
                                                   isFiltered: W,
                                                   isSorted: U,
@@ -220,9 +220,9 @@ function L(e) {
                                   spacing: 4,
                                   align: 'left',
                                   renderPopout: () =>
-                                      (0, r.jsx)(j.Z, {
+                                      (0, r.jsx)(g.Z, {
                                           guildId: t,
-                                          onClose: O.dG4
+                                          onClose: v.dG4
                                       }),
                                   closeOnScroll: !0,
                                   children: (e) => {
@@ -233,7 +233,7 @@ function L(e) {
                                           w(
                                               {
                                                   ref: i,
-                                                  label: N.NW.string(N.t.sPph4O),
+                                                  label: _.NW.string(_.t.sPph4O),
                                                   onFilter: t,
                                                   isFiltered: F,
                                                   isSorted: z,
@@ -249,26 +249,26 @@ function L(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(Z, {
-                                  label: N.NW.string(N.t.xcKP1N),
+                                  label: _.NW.string(_.t.xcKP1N),
                                   className: H.smallCol
                               }),
                               (0, r.jsx)(Z, {
-                                  label: N.NW.string(N.t.sPph4O),
+                                  label: _.NW.string(_.t.sPph4O),
                                   className: H.smallCol
                               })
                           ]
                       }),
                 V
                     ? (0, r.jsx)(d.yRy, {
-                          targetElementRef: L,
+                          targetElementRef: R,
                           animation: d.yRy.Animation.FADE,
                           position: 'bottom',
                           spacing: 4,
                           align: 'left',
                           renderPopout: () =>
-                              (0, r.jsx)(y.Z, {
+                              (0, r.jsx)(O.Z, {
                                   guildId: t,
-                                  onClose: O.dG4
+                                  onClose: v.dG4
                               }),
                           closeOnScroll: !0,
                           children: (e) => {
@@ -278,8 +278,8 @@ function L(e) {
                                   Z,
                                   w(
                                       {
-                                          ref: L,
-                                          label: N.NW.string(N.t.yn0w19),
+                                          ref: R,
+                                          label: _.NW.string(_.t.yn0w19),
                                           onFilter: t,
                                           isFiltered: Y,
                                           className: H.smallCol
@@ -291,18 +291,18 @@ function L(e) {
                       })
                     : V &&
                       (0, r.jsx)(Z, {
-                          label: N.NW.string(N.t.yn0w19),
+                          label: _.NW.string(_.t.yn0w19),
                           className: H.smallCol
                       }),
                 (0, r.jsx)(d.yRy, {
-                    targetElementRef: I,
+                    targetElementRef: P,
                     animation: d.yRy.Animation.FADE,
                     position: 'bottom',
                     spacing: 4,
                     align: 'left',
                     renderPopout: (e) => {
                         let { closePopout: n } = e;
-                        return (0, r.jsx)(v.Z, {
+                        return (0, r.jsx)(y.Z, {
                             guildId: t,
                             onClose: n
                         });
@@ -314,8 +314,8 @@ function L(e) {
                             Z,
                             w(
                                 {
-                                    ref: I,
-                                    label: N.NW.string(N.t['2SZsWV']),
+                                    ref: P,
+                                    label: _.NW.string(_.t['2SZsWV']),
                                     onFilter: t,
                                     isFiltered: B,
                                     className: H.mediumCol
@@ -326,22 +326,22 @@ function L(e) {
                     }
                 }),
                 (0, r.jsx)(d.ua7, {
-                    text: N.NW.string(N.t['2cRO3d']),
+                    text: _.NW.string(_.t['2cRO3d']),
                     position: 'top',
                     align: 'left',
-                    forceOpen: K,
+                    forceOpen: X,
                     shouldShow: !0,
                     color: d.ua7.Colors.BRAND,
                     children: (e) =>
                         (0, r.jsx)(d.yRy, {
-                            targetElementRef: P,
+                            targetElementRef: I,
                             animation: d.yRy.Animation.FADE,
                             position: 'bottom',
                             spacing: 4,
                             align: 'left',
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
-                                return (0, r.jsx)(g.Z, {
+                                return (0, r.jsx)(j.Z, {
                                     guildId: t,
                                     onClose: n
                                 });
@@ -349,18 +349,18 @@ function L(e) {
                             closeOnScroll: !0,
                             children: (t) =>
                                 (0, r.jsx)(Z, {
-                                    ref: P,
-                                    label: N.NW.string(N.t['7V375+']),
-                                    'aria-label': N.NW.string(N.t['2cRO3d']),
+                                    ref: I,
+                                    label: _.NW.string(_.t['7V375+']),
+                                    'aria-label': _.NW.string(_.t['2cRO3d']),
                                     onFilter: (n) => {
                                         var r, l;
-                                        J(), null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e);
+                                        K(), null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e);
                                     },
                                     isFiltered: A,
                                     className: H.smallCol,
                                     onMouseEnter: () => {
                                         var n, r;
-                                        J(), null == (n = e.onMouseEnter) || n.call(e), null == (r = t.onMouseEnter) || r.call(t);
+                                        K(), null == (n = e.onMouseEnter) || n.call(e), null == (r = t.onMouseEnter) || r.call(t);
                                     },
                                     onMouseDown: t.onMouseDown,
                                     onMouseLeave: e.onMouseLeave,
@@ -373,7 +373,7 @@ function L(e) {
                         })
                 }),
                 (0, r.jsx)(Z, {
-                    label: N.NW.string(N.t['5Q9xGh']),
+                    label: _.NW.string(_.t['5Q9xGh']),
                     className: H.smallCol
                 })
             ]

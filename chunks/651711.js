@@ -14,7 +14,7 @@ function u(e) {
             var e, r;
             m ? g || (await (null == n || null == (r = n.onRequireModeratorMFAClick) ? void 0 : r.call(n))) : await (null == n || null == (e = n.onEnableMFAClick) ? void 0 : e.call(n)), null == t || t();
         }, [m, g, t, n]),
-        h = (0, l.R)({ onEnableMFAClick: p });
+        f = (0, l.R)({ onEnableMFAClick: p });
     return r.useMemo(() => {
         if (null == e) return null;
         let { minimumOwnerAgeInYears: t, minimumSize: r } = e,
@@ -90,12 +90,12 @@ function u(e) {
                 key: '2fa_requirement',
                 checkedLabel: d.NW.string(d.t.NqVyFh),
                 uncheckedLabel: d.NW.string(d.t.VcDNIS),
-                description: d.NW.format(d.t['7NzkfX'], { enableMFAHook: h }),
+                description: d.NW.format(d.t['7NzkfX'], { enableMFAHook: f }),
                 checked: e.hasEnabled2FA,
                 actionLabel: i ? d.NW.string(d.t.BU4Dio) : void 0,
                 actionHandler: i ? p : void 0
             });
         }
         return !0 === u && o.sort((e) => (e.checked ? 0 : -1)), o;
-    }, [e, u, m, n, g, h, p]);
+    }, [e, u, m, n, g, f, p]);
 }

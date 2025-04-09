@@ -15,14 +15,14 @@ var r = n(200651),
     m = n(454585),
     g = n(323502),
     p = n(958832),
-    h = n(324067),
-    f = n(984933),
+    f = n(324067),
+    h = n(984933),
     b = n(259580),
     x = n(999382),
     j = n(743475),
     N = n(889369),
-    _ = n(570961),
-    v = n(208665),
+    v = n(570961),
+    _ = n(208665),
     y = n(868814),
     O = n(974513),
     C = n(2348),
@@ -33,14 +33,14 @@ var r = n(200651),
 function P(e) {
     let { guild: t } = e,
         l = (0, s.e7)([d.Z], () => d.Z.getEnabled(t.id)),
-        h = (0, s.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        f = (0, y.Z)(t),
+        f = (0, s.e7)([p.Z], () => p.Z.hasFetched(t.id)),
+        h = (0, y.Z)(t),
         b = (0, s.e7)([N.Z], () => N.Z.editedDefaultChannelIds),
-        x = f.filter((e) => !b.has(e.id)),
-        [_, v] = i.useState(!1);
+        x = h.filter((e) => !b.has(e.id)),
+        [v, _] = i.useState(!1);
     i.useEffect(() => {
-        h || l || (0, g.S)(t.id);
-    }, [t.id, h, l]);
+        f || l || (0, g.S)(t.id);
+    }, [t.id, f, l]);
     let O = (e) => {
         (0, a.ZDy)(async () => {
             let { default: i } = await n.e('35641').then(n.bind(n, 89216));
@@ -95,7 +95,7 @@ function P(e) {
             };
         });
     };
-    return _ || 0 === x.length
+    return v || 0 === x.length
         ? null
         : (0, r.jsxs)('div', {
               className: T.recommendations,
@@ -115,7 +115,7 @@ function P(e) {
                           }),
                           (0, r.jsxs)(a.P3F, {
                               className: T.dismissAll,
-                              onClick: () => v(!0),
+                              onClick: () => _(!0),
                               children: [
                                   (0, r.jsx)(a.dz2, {
                                       size: 'xxs',
@@ -217,9 +217,9 @@ function w(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, s.e7)([x.Z], () => x.Z.getGuild()),
         l = (0, s.e7)([d.Z], () => d.Z.isLoading()),
-        o = (0, s.e7)([f.ZP], () => f.ZP.getChannels(null == n ? void 0 : n.id)),
-        c = (0, s.e7)([h.Z], () => h.Z.getCategories(null == n ? void 0 : n.id)),
-        u = (0, s.e7)([v.Z], () => v.Z.advancedMode),
+        o = (0, s.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
+        c = (0, s.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
+        u = (0, s.e7)([_.Z], () => _.Z.advancedMode),
         m = i.useRef(null),
         [g, p] = i.useState(!1),
         N = i.useRef(n);
@@ -233,7 +233,7 @@ function w(e) {
                 null != e &&
                     (0, j.DO)(e)
                         .then(() => {
-                            u && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -327,14 +327,14 @@ function w(e) {
 function R() {
     let e = (0, s.e7)([x.Z], () => x.Z.getProps().guild),
         t = (0, s.e7)([N.Z], () => N.Z.submitting),
-        n = (0, s.e7)([v.Z], () => v.Z.advancedMode);
+        n = (0, s.e7)([_.Z], () => _.Z.advancedMode);
     return null == e
         ? null
         : (0, r.jsx)(l.Z, {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {
-                          n && (0, _.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },

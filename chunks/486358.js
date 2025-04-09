@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => v }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(793030),
@@ -12,18 +12,18 @@ var i = n(793030),
     m = n(723914),
     g = n(30818),
     p = n(997698),
-    h = n(354031),
-    f = n(335438),
+    f = n(354031),
+    h = n(335438),
     b = n(166805),
     x = n(981631),
     j = n(388032),
     N = n(515636);
-let _ = function () {
+let v = function () {
     let { analyticsLocations: e } = (0, o.ZP)(l.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
         t = (0, s.e7)([u.Z], () => u.Z.getProps().guild, []),
         n = (0, s.e7)([d.Z], () => null != t && d.Z.can(x.Plq.MANAGE_GUILD, t)),
-        _ = (0, c.E)(t),
-        v = (0, a.l9)(null != t ? t : void 0);
+        v = (0, c.E)(t),
+        _ = (0, a.l9)(null != t ? t : void 0);
     return null == t
         ? null
         : (0, r.jsx)(o.Gt, {
@@ -47,26 +47,26 @@ let _ = function () {
                               })
                           ]
                       }),
-                      !0 === v &&
+                      !0 === _ &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(h.P, {
+                                  (0, r.jsx)(f.P, {
                                       canManageGuild: n,
                                       features: t.features
                                   }),
                                   (0, r.jsx)('div', { className: N.divider })
                               ]
                           }),
-                      (0, r.jsx)(f.l, {
+                      (0, r.jsx)(h.l, {
                           canManageGuild: n,
                           guild: t
                       }),
-                      void 0 !== _ &&
+                      void 0 !== v &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)('div', { className: N.divider }),
                                   (0, r.jsx)(m.q, {
-                                      isInventoryFeedEnabled: _,
+                                      isInventoryFeedEnabled: v,
                                       canManageGuild: n,
                                       features: t.features
                                   })

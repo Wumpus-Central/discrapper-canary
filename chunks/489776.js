@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(200100),
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,24 +53,24 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
+function h(e) {
     let { guildId: t, triggerType: n } = e,
-        f = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [b] = i.useState(f),
+        h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
+        [b] = i.useState(h),
         [x, j] = i.useState(!1),
-        { editingRule: N, createNewEditingRule: _ } = (0, d.V)(),
-        { getDefaultRuleName: v } = c.I6[n],
+        { editingRule: N, createNewEditingRule: v } = (0, d.V)(),
+        { getDefaultRuleName: _ } = c.I6[n],
         y = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
         [O, C] = i.useState(y ? N : b),
         I = (0, l.q_F)({
             opacity: +!y,
             pointerEvents: y ? 'none' : 'all',
-            config: h(p({}, s.config.stiff), { clamp: !0 })
+            config: f(p({}, s.config.stiff), { clamp: !0 })
         }),
         E = (0, l.q_F)({
             opacity: +!!y,
             pointerEvents: y ? 'all' : 'none',
-            config: h(p({}, s.config.stiff), { clamp: !0 }),
+            config: f(p({}, s.config.stiff), { clamp: !0 }),
             onStart: () => {
                 C(y ? N : b);
             },
@@ -97,7 +97,7 @@ function f(e) {
                       children: (0, r.jsxs)(l.P3F, {
                           className: g.addAnotherRuleCardContainer,
                           onClick: () => {
-                              _(t, n);
+                              v(t, n);
                           },
                           children: [
                               (0, r.jsx)(l.oFk, {
@@ -110,7 +110,7 @@ function f(e) {
                               (0, r.jsx)(l.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: m.NW.format(m.t.dNjRAQ, { ruleName: v() })
+                                  children: m.NW.format(m.t.dNjRAQ, { ruleName: _() })
                               })
                           ]
                       })

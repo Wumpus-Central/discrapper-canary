@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(104494),
     E = n(639119),
     j = n(230916),
-    O = n(346497),
-    C = n(823188),
+    C = n(346497),
+    O = n(823188),
     S = n(21023),
     v = n(318747),
     T = n(409100),
@@ -57,11 +57,11 @@ function w(e) {
     return e;
 }
 let k = () => {
-        let e = (0, O.W1)();
-        return (0, r.jsx)(C.Cy, {
+        let e = (0, C.W1)();
+        return (0, r.jsx)(O.Cy, {
             text: e,
             className: A.bogoPillWithSparkles,
-            colorOptions: C.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+            colorOptions: O.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
     W = () =>
@@ -170,7 +170,7 @@ let k = () => {
             ei = (0, N.CY)(I.Xh.PREMIUM_MONTH_TIER_2),
             es = (0, p.Z)(),
             ea = (0, S.n)(er, ei, ee, en, es.fractionalState),
-            el = (0, O.Vi)();
+            el = (0, C.Vi)();
         if (!G || !F) return null;
         let eo = {
             label: (0, r.jsx)(c.X6q, {
@@ -249,10 +249,10 @@ let k = () => {
             (n = D
                 ? null
                 : null != J || null != Q
-                  ? (0, r.jsx)(C.Cy, {
+                  ? (0, r.jsx)(O.Cy, {
                         text: null != J ? y.NW.string(y.t.IBYG5e) : y.NW.string(y.t.ce1v3d),
                         className: A.freeTrialPillWithSparkles,
-                        colorOptions: J === I.Si.TIER_0 ? (Y ? C.VE.PREMIUM_TIER_0_GRADIENT_FILL : C.VE.PREMIUM_TIER_0_WHITE_FILL) : Y ? (q ? C.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : C.VE.PREMIUM_TIER_2_WHITE_FILL
+                        colorOptions: J === I.Si.TIER_0 ? (Y ? O.VE.PREMIUM_TIER_0_GRADIENT_FILL : O.VE.PREMIUM_TIER_0_WHITE_FILL) : Y ? (q ? O.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : O.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : O.VE.PREMIUM_TIER_2_WHITE_FILL
                     })
                   : el
                     ? (0, r.jsx)(k, {})

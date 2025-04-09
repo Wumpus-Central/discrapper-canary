@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(13736),
     b = n(732393),
     _ = n(137591),
-    C = n(299206),
-    y = n(665149),
+    y = n(299206),
+    C = n(665149),
     x = n(695346),
     v = n(979651),
     j = n(488131),
@@ -84,7 +84,7 @@ function I(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                y.ZP.Icon,
+                C.ZP.Icon,
                 N(E({}, e), {
                     onClick: o,
                     tooltip: n ? null : a,
@@ -99,10 +99,10 @@ function I(e) {
 function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        y = (0, f.Z)(t),
+        C = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
         N = (0, g.Z)(t),
-        I = (0, C.Z)({
+        I = (0, y.Z)({
             id: t.id,
             label: O.NW.string(O.t.DQ797u)
         }),
@@ -140,7 +140,7 @@ function P(e) {
                 ]
             }),
             (0, r.jsxs)(s.kSQ, {
-                children: [w, l, y, S]
+                children: [w, l, C, S]
             }),
             (0, r.jsxs)(s.kSQ, {
                 children: [P, I]

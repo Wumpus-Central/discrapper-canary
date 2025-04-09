@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(524484),
     E = n(981631),
     j = n(388032),
-    O = n(966053);
-function C(e) {
+    C = n(966053);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -121,7 +121,7 @@ function D(e) {
                     disabled: t,
                     value: i[e.location],
                     note: e.description,
-                    onChange: (t) => s(S(C({}, i), { [e.location]: t })),
+                    onChange: (t) => s(S(O({}, i), { [e.location]: t })),
                     children: e.title
                 },
                 e.location
@@ -134,7 +134,7 @@ function D(e) {
 function Z(e) {
     let { children: t } = e;
     return (0, r.jsx)(o.Text, {
-        className: O.sliderDescription,
+        className: C.sliderDescription,
         variant: 'text-sm/normal',
         color: 'header-secondary',
         children: t
@@ -156,7 +156,7 @@ function w(e) {
                           (0, r.jsx)(
                               o.ConfirmModal,
                               S(
-                                  C(
+                                  O(
                                       {
                                           header: s ? j.NW.string(j.t['FxT+p6']) : j.NW.string(j.t.TAZ4Fx),
                                           confirmText: j.NW.string(j.t.JFfinp),
@@ -207,7 +207,7 @@ function k(e) {
             (0, r.jsxs)(o.xJW, {
                 disabled: c,
                 title: j.NW.string(j.t['vd0D8/']),
-                className: O.formItem,
+                className: C.formItem,
                 children: [
                     (0, r.jsx)(Z, { children: j.NW.string(j.t.a18Sur) }),
                     (0, r.jsx)(o.iRW, {
@@ -225,7 +225,7 @@ function k(e) {
             (0, r.jsxs)(o.xJW, {
                 disabled: c,
                 title: j.NW.string(j.t.sPO3io),
-                className: O.formItem,
+                className: C.formItem,
                 children: [
                     (0, r.jsx)(Z, { children: j.NW.string(j.t.xoldVl) }),
                     (0, r.jsx)(o.iRW, {
@@ -276,7 +276,7 @@ function W(e) {
             (0, r.jsxs)(o.xJW, {
                 disabled: l,
                 title: j.NW.string(j.t.L0oQur),
-                className: O.formItem,
+                className: C.formItem,
                 children: [
                     (0, r.jsx)(Z, { children: j.NW.string(j.t['/OOFpK']) }),
                     (0, r.jsx)(o.iRW, {
@@ -291,7 +291,7 @@ function W(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(o.$i$, { className: O.divider })
+            (0, r.jsx)(o.$i$, { className: C.divider })
         ]
     });
 }
@@ -320,7 +320,7 @@ function L(e) {
             (0, r.jsxs)(o.xJW, {
                 disabled: u,
                 title: j.NW.string(j.t.UxnnCw),
-                className: O.formItem,
+                className: C.formItem,
                 children: [
                     (0, r.jsx)(Z, { children: j.NW.string(j.t.CEOEOT) }),
                     (0, r.jsx)(o.iRW, {
@@ -351,14 +351,14 @@ function B(e) {
         tag: o.RB0.H1,
         title: j.NW.string(j.t.EuXv2t),
         children: (0, r.jsxs)(o.xJW, {
-            className: O.formItem,
+            className: C.formItem,
             children: [
                 (0, r.jsx)(o.R94, {
-                    className: O.formItem,
+                    className: C.formItem,
                     children: j.NW.string(j.t['1SLnkp'])
                 }),
                 (0, r.jsx)(o.zxk, {
-                    className: O.hideButton,
+                    className: C.hideButton,
                     size: o.zxk.Sizes.SMALL,
                     onClick: () => {
                         t({
@@ -379,17 +379,17 @@ function M(e) {
         children: [
             (0, r.jsxs)(o.P3F, {
                 onClick: () => t(1),
-                className: O.achievementContainer,
+                className: C.achievementContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: O.achievementIconContainer,
+                        className: C.achievementIconContainer,
                         children: (0, r.jsx)(o.rm8, {
                             size: 'md',
                             color: l.Z.unsafe_rawColors.ORANGE_345.css
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: O.achievementTextContainer,
+                        className: C.achievementTextContainer,
                         children: [
                             (0, r.jsx)(o.X6q, {
                                 variant: 'heading-md/semibold',
@@ -407,11 +407,11 @@ function M(e) {
                         size: 'custom',
                         color: 'currentColor',
                         width: 16,
-                        className: O.rightCaretIcon
+                        className: C.rightCaretIcon
                     })
                 ]
             }),
-            (0, r.jsx)(o.$i$, { className: O.divider })
+            (0, r.jsx)(o.$i$, { className: C.divider })
         ]
     });
 }
@@ -470,7 +470,7 @@ function V(e) {
             children: [
                 (0, r.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
-                    className: O.title,
+                    className: C.title,
                     children: j.NW.string(j.t.AtCukJ)
                 }),
                 (0, r.jsx)(w, {
@@ -531,15 +531,15 @@ function H() {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
-                    className: O.slideAnimator,
+                    className: C.slideAnimator,
                     step: e,
                     direction: n,
                     children: G(e, t, c)
                 }),
                 (0, r.jsx)('div', {
-                    className: g ? O.enableAnimationOverlayVisible : O.enableAnimationOverlayHidden,
+                    className: g ? C.enableAnimationOverlayVisible : C.enableAnimationOverlayHidden,
                     children: (0, r.jsx)(o.Fmz, {
-                        className: O.enableAnimation,
+                        className: C.enableAnimation,
                         importData: U,
                         shouldAnimate: g,
                         autoplay: !1,

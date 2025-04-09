@@ -22,8 +22,8 @@ let j = (e) => {
     let { isFullScreen: t, analyticsLocations: n } = e,
         i = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         j = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        O = (0, p.M5)(i, x.p9.TIER_0) || (0, p.M5)(i, x.p9.TIER_1),
-        C = new Date(N.Lk);
+        C = (0, p.M5)(i, x.p9.TIER_0) || (0, p.M5)(i, x.p9.TIER_1),
+        O = new Date(N.Lk);
     return (0, r.jsx)(u.O, {
         newLocations: [d.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, r.jsx)('div', {
@@ -37,12 +37,12 @@ let j = (e) => {
                     (0, r.jsx)(a.X6, {
                         variant: 'display-sm',
                         color: 'always-white',
-                        children: !0 === O ? _.NW.string(_.t.tY1el5) : _.NW.string(_.t.HaPg8P)
+                        children: !0 === C ? _.NW.string(_.t.tY1el5) : _.NW.string(_.t.HaPg8P)
                     }),
                     (0, r.jsx)(a.xv, {
                         className: E.countdown,
                         variant: 'text-sm/bold',
-                        children: (0, r.jsx)(h.Z, { endDate: C })
+                        children: (0, r.jsx)(h.Z, { endDate: O })
                     }),
                     (0, r.jsx)(a.xv, {
                         variant: 'text-sm/medium',

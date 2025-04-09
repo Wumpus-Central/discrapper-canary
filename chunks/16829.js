@@ -180,7 +180,7 @@ function C(e) {
     var t;
     let { guildId: n, inviterUser: a, joinSourceType: E, className: _, onClickInviter: A } = e,
         T = (0, i.e7)([d.ZP], () => (null == a ? null : d.ZP.getMember(n, a.id)), [a, n]),
-        N = (0, u.E)(null == T ? void 0 : T.guildId, null == T ? void 0 : T.colorStrings),
+        N = (0, u.X)(null == T ? void 0 : T.guildId, null == T ? void 0 : T.colorStrings),
         O = l.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), null != a && (null == A || A(a));
@@ -209,7 +209,7 @@ function C(e) {
                               children: (0, r.jsx)(o.PUh, {
                                   name: I.ZP.getName(n, null, a),
                                   color: null != (t = null == T ? void 0 : T.colorString) ? t : void 0,
-                                  roleGradient: N
+                                  roleColors: N
                               })
                           })
                       ]

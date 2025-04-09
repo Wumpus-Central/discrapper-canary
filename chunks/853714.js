@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(239091),
     g = n(497321),
     p = n(724757),
-    h = n(210887),
-    f = n(387667),
+    f = n(210887),
+    h = n(387667),
     b = n(598077),
     x = n(592125),
     j = n(430824),
     N = n(246946),
-    _ = n(594174),
-    v = n(823379),
+    v = n(594174),
+    _ = n(823379),
     y = n(51144),
     O = n(987707),
     C = n(999382),
@@ -43,7 +43,7 @@ function Z(e, t, n) {
         e
     );
 }
-function A(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function A(e) {
     }
     return e;
 }
-function k(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -103,7 +103,7 @@ let L = i.forwardRef((e, t) => {
         ? null
         : (0, r.jsx)(
               S.Z,
-              k(A({ ref: t }, l), {
+              A(k({ ref: t }, l), {
                   guildId: s,
                   guild: a,
                   onHeaderClick: () => {
@@ -120,7 +120,7 @@ let L = i.forwardRef((e, t) => {
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
-                                      k(A({}, t), {
+                                      A(k({}, t), {
                                           guildId: s,
                                           user: i
                                       })
@@ -135,7 +135,7 @@ let L = i.forwardRef((e, t) => {
                           null != i &&
                           (0, m.jW)(e, async () => {
                               let { default: e } = await n.e('51529').then(n.bind(n, 228620));
-                              return (n) => (null != t.options.channel ? (0, r.jsx)(e, k(A({}, n), { channel: t.options.channel })) : null);
+                              return (n) => (null != t.options.channel ? (0, r.jsx)(e, A(k({}, n), { channel: t.options.channel })) : null);
                           });
                   },
                   onTargetContextMenu: (e) => {
@@ -148,28 +148,28 @@ let L = i.forwardRef((e, t) => {
                               if (null != i && null != a)
                                   return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e('51529').then(n.bind(n, 228620));
-                                      return (t) => (0, r.jsx)(e, k(A({}, t), { channel: i }));
+                                      return (t) => (0, r.jsx)(e, A(k({}, t), { channel: i }));
                                   });
                               return (0, m.jW)(e, async () => {
                                   let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          k(A({}, n), {
+                                          A(k({}, n), {
                                               id: t.targetId,
                                               label: P.NW.string(P.t.rCaznZ)
                                           })
                                       );
                               });
                           case T.KFR.USER:
-                              let o = _.default.getUser(t.targetId);
+                              let o = v.default.getUser(t.targetId);
                               if (null != o && null != s)
                                   return (0, m.jW)(e, async () => {
                                       let { default: e } = await n.e('50929').then(n.bind(n, 595011));
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              k(A({}, t), {
+                                              A(k({}, t), {
                                                   guildId: s,
                                                   user: o
                                               })
@@ -183,20 +183,20 @@ let L = i.forwardRef((e, t) => {
 });
 function M(e) {
     let { logs: t, guildId: n, guild: s, expandedId: a, lastExpandedId: o, scroller: c, setExpandedRef: d, setLastExpandedRef: u, onHeaderClick: m, onContentClick: g } = e,
-        h = i.useRef(c);
+        f = i.useRef(c);
     i.useEffect(() => {
-        h.current = c;
+        f.current = c;
     }, [c]);
-    let f = (0, p.Z)('audit-log', h);
+    let h = (0, p.Z)('audit-log', f);
     return (0, r.jsx)(l.bG, {
-        navigator: f,
+        navigator: h,
         children: (0, r.jsx)(l.SJ, {
             children: (e) => {
                 var { ref: i } = e,
                     l = W(e, ['ref']);
                 return (0, r.jsx)(
                     'div',
-                    k(A({ ref: i }, l), {
+                    A(k({ ref: i }, l), {
                         className: w.list,
                         children: t.map((e) => {
                             let t = a === e.id,
@@ -371,8 +371,8 @@ class G extends i.PureComponent {
             Z(this, 'renderActionQuickSelectItem', (e, t) => {
                 var n;
                 let { actionFilter: i } = this.props,
-                    s = (0, f.Pw)(e.value),
-                    a = (0, f.p5)(e.value),
+                    s = (0, h.Pw)(e.value),
+                    a = (0, h.p5)(e.value),
                     l = e.value === i;
                 return (0, r.jsxs)(
                     d.lo1,
@@ -593,14 +593,14 @@ class G extends i.PureComponent {
             });
     }
 }
-let U = c.ZP.connectStores([O.Z, C.Z, j.Z, h.Z, N.Z, _.default], () => {
+let U = c.ZP.connectStores([O.Z, C.Z, j.Z, f.Z, N.Z, v.default], () => {
     let e = C.Z.getGuildId(),
         t = j.Z.getGuild(e),
         n = O.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: O.Z.userIds.map((e) => _.default.getUser(e)).filter(v.lm),
+        moderators: O.Z.userIds.map((e) => v.default.getUser(e)).filter(_.lm),
         isInitialLoading: O.Z.isInitialLoading,
         isLoading: O.Z.isLoading,
         isLoadingNextPage: O.Z.isLoadingNextPage,
@@ -610,7 +610,7 @@ let U = c.ZP.connectStores([O.Z, C.Z, j.Z, h.Z, N.Z, _.default], () => {
         logs: null != n && null != t ? I._$(n, t) : [],
         actionFilter: O.Z.actionFilter,
         userIdFilter: O.Z.userIdFilter,
-        theme: h.Z.theme,
+        theme: f.Z.theme,
         hide: N.Z.enabled
     };
 })(G);

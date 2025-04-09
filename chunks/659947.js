@@ -62,15 +62,15 @@ let E = [h.h8.VOICE_CHANNEL];
 function j(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function O(e) {
+function C(e) {
     let { height: t } = e;
     return (0, r.jsx)('div', { style: { height: t } });
 }
-function C() {
-    return (0, r.jsx)(O, { height: 16 }, 'footer');
+function O() {
+    return (0, r.jsx)(C, { height: 16 }, 'footer');
 }
 function S() {
-    return (0, r.jsx)(O, { height: 8 }, 'header');
+    return (0, r.jsx)(C, { height: 8 }, 'header');
 }
 function v() {
     return (0, r.jsx)('div', {
@@ -133,7 +133,7 @@ function I(e) {
         {
             mouseFocusEnabled: x,
             enableMouseFocus: _,
-            disableMouseFocus: O
+            disableMouseFocus: C
         } = (function () {
             let e = i.useRef(!1),
                 t = i.useCallback(() => {
@@ -221,7 +221,7 @@ function I(e) {
                         value: T,
                         onChange: I,
                         onKeyDown: function (e) {
-                            O();
+                            C();
                             let t = e.key.toLowerCase();
                             if ('arrowdown' === t || 'arrowup' === t || 'enter' === t || 'escape' === t)
                                 switch ((e.preventDefault(), t)) {
@@ -295,7 +295,7 @@ function I(e) {
                             );
                         },
                         renderListHeader: S,
-                        renderFooter: C,
+                        renderFooter: O,
                         sectionHeight: 0,
                         rowHeight: 34,
                         className: b.voiceChannelList,

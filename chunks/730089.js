@@ -1,4 +1,4 @@
-n.d(t, { G: () => f }), n(35282);
+n.d(t, { G: () => h }), n(35282);
 var r = n(36793),
     i = n(668781),
     s = n(80932),
@@ -18,7 +18,7 @@ let p = (e, t, n, r) => (
         }),
         a.d.TOO_BIG
     ),
-    h = (e, t, n) => {
+    f = (e, t, n) => {
         l.default.track(u.rMx.EMOJI_FILE_RESIZED, {
             is_animated: !1,
             file_type: e.type.split('/').pop(),
@@ -27,20 +27,20 @@ let p = (e, t, n, r) => (
             resized_file_too_big: n
         });
     },
-    f = async (e) => {
-        let { data: t, file: n, guildId: c, uploadId: f, roles: b, image: x, hideErrorModal: j } = e,
+    h = async (e) => {
+        let { data: t, file: n, guildId: c, uploadId: h, roles: b, image: x, hideErrorModal: j } = e,
             N = o.ZP.sanitizeEmojiName(n.name.split('.')[0]);
         if (o.ZP.isFileTooBig(n)) {
-            if ('image/gif' === n.type) return p(n.name, n.size, c, f);
+            if ('image/gif' === n.type) return p(n.name, n.size, c, h);
             else if (null != x) {
                 let e;
                 t = (0, r.Ae)(x, 128, 128);
                 try {
                     e = o.ZP.isDataTooBig(t);
                 } catch (e) {
-                    return p(n.name, n.size, c, f);
+                    return p(n.name, n.size, c, h);
                 }
-                if ((h(n, t, e), e)) return p(n.name, n.size, c, f);
+                if ((f(n, t, e), e)) return p(n.name, n.size, c, h);
             }
         }
         try {
@@ -52,7 +52,7 @@ let p = (e, t, n, r) => (
             }),
                 l.default.track(u.rMx.EMOJI_UPLOAD_COMPLETED, {
                     guild_id: c,
-                    upload_id: f
+                    upload_id: h
                 });
         } catch (o) {
             let e,
@@ -68,7 +68,7 @@ let p = (e, t, n, r) => (
                             ? (l.default.track(u.rMx.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
                                   guild_id: c,
                                   file_size: g.byteLength(t),
-                                  upload_id: f
+                                  upload_id: h
                               }),
                               (e = m.NW.formatToPlainString(m.t.kIO9j4, { maxSize: d.xG })),
                               (n = a.d.TOO_BIG))

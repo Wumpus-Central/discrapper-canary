@@ -1,16 +1,16 @@
 r.d(t, {
-    l: () => f,
-    v: () => d
+    l: () => d,
+    v: () => f
 });
 var n = r(200651);
 r(192379);
 var i = r(481060),
     o = r(144114),
-    l = r(476770),
-    s = r(815660),
+    s = r(476770),
+    l = r(815660),
     c = r(388032),
-    u = r(641198);
-function a(e) {
+    a = r(641198);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -35,9 +35,9 @@ function a(e) {
     }
     return e;
 }
-function f() {
-    return (0, n.jsx)(l.PU, {
-        className: u.editableRequirementContainer,
+function d() {
+    return (0, n.jsx)(s.PU, {
+        className: a.editableRequirementContainer,
         icon: i.AtH,
         text: c.NW.string(c.t.woMjLS),
         footnote: c.NW.string(c.t['jMh+TU']),
@@ -48,7 +48,7 @@ function f() {
                 var t, r;
                 return (0, n.jsx)(
                     i.zxk,
-                    ((t = a({}, e)),
+                    ((t = u({}, e)),
                     (r = r =
                         {
                             size: i.zxk.Sizes.SMALL,
@@ -73,13 +73,13 @@ function f() {
         })
     });
 }
-function d(e) {
+function f(e) {
     let { isUserVerified: t } = e,
-        f = t ? c.NW.string(c.t.WWzQtb) : c.NW.string(c.t.woMjLS);
-    return (0, n.jsx)(l.PU, {
-        className: u.editableRequirementContainer,
+        d = t ? c.NW.string(c.t.WWzQtb) : c.NW.string(c.t.woMjLS);
+    return (0, n.jsx)(s.PU, {
+        className: a.editableRequirementContainer,
         icon: i.AtH,
-        text: f,
+        text: d,
         footnote: c.NW.string(c.t['jMh+TU']),
         meetsRequirement: t,
         children: (0, n.jsx)(i.zxk, {
@@ -88,9 +88,9 @@ function d(e) {
                 (0, i.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([r.e('76540'), r.e('56898')]).then(r.bind(r, 607018));
-                        return (t) => (0, n.jsx)(e, a({ reason: o.L.GUILD_PHONE_REQUIRED }, t));
+                        return (t) => (0, n.jsx)(e, u({ reason: o.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: s.M }
+                    { modalKey: l.M }
                 );
             },
             children: c.NW.string(c.t['13ofGh'])

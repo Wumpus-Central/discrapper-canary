@@ -65,9 +65,9 @@ function u(e) {
 let d = i.forwardRef(function (e, t) {
     let { renderPopout: n, children: d, align: p = 'left', isPopoutBlocked: h, onPopoutOpen: f, onPopoutClose: m } = e,
         [g, b] = i.useState(!1),
-        { isHovered: _, setIsHovered: C, onMouseEnter: y, onMouseLeave: x, cancelTimers: v } = (0, o.Z)(200, 300);
+        { isHovered: _, setIsHovered: y, onMouseEnter: C, onMouseLeave: x, cancelTimers: v } = (0, o.Z)(200, 300);
     function j(e) {
-        'focus' === e.type || g || y();
+        'focus' === e.type || g || C();
     }
     function O() {
         g || x();
@@ -79,10 +79,10 @@ let d = i.forwardRef(function (e, t) {
         t,
         () => ({
             hidePopout() {
-                C(!1), b(!1);
+                y(!1), b(!1);
             }
         }),
-        [C, b]
+        [y, b]
     );
     let N = (_ && !h) || g;
     return (0, r.jsx)(l.yRy, {
@@ -93,7 +93,7 @@ let d = i.forwardRef(function (e, t) {
         align: p,
         spacing: 16,
         onRequestClose: () => {
-            C(!1), b(!1), null == m || m();
+            y(!1), b(!1), null == m || m();
         },
         renderPopout: (e) =>
             (0, r.jsx)(
@@ -102,7 +102,7 @@ let d = i.forwardRef(function (e, t) {
                     {
                         isHovered: N,
                         onFocus: () => b(!0),
-                        onMouseEnter: y,
+                        onMouseEnter: C,
                         onMouseLeave: O,
                         renderPopout: n
                     },

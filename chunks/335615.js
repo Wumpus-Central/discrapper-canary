@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(941028),
     b = n(144144),
     _ = n(276264),
-    C = n(607070),
-    y = n(100527),
+    y = n(607070),
+    C = n(100527),
     x = n(367907),
     v = n(906732),
     j = n(493324),
@@ -39,8 +39,8 @@ var r = n(200651),
     U = n(662594),
     B = n(430824),
     H = n(944486),
-    F = n(111583),
-    G = n(594174),
+    G = n(111583),
+    F = n(594174),
     V = n(979651),
     z = n(585483),
     Y = n(823379),
@@ -130,7 +130,7 @@ let er = K.ZP.getEnableHardwareAcceleration(),
         }
     },
     eo = i.memo(function (e) {
-        let { colorString: t, colorStrings: l, colorRoleName: o, colorRoleId: a, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: C, guildId: y, isTyping: x, isMobileOnline: v, premiumSince: j, nameplate: O, shouldShowPopoutOnHover: E } = e,
+        let { colorString: t, colorStrings: l, colorRoleName: o, colorRoleId: a, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: C, isTyping: x, isMobileOnline: v, premiumSince: j, nameplate: O, shouldShowPopoutOnHover: E } = e,
             N = en(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate', 'shouldShowPopoutOnHover']),
             [I, P] = i.useState(!1),
             S = null != j ? new Date(j) : null,
@@ -143,18 +143,18 @@ let er = K.ZP.getEnableHardwareAcceleration(),
                             e,
                             et(ee({}, n), {
                                 user: u,
-                                guildId: y,
-                                channel: C,
+                                guildId: C,
+                                channel: y,
                                 showMediaItems: t
                             })
                         );
                 });
             },
             T = (e) => {
-                null != y &&
+                null != C &&
                     (e.stopPropagation(),
                     (0, A.f)({
-                        guildId: y,
+                        guildId: C,
                         location: {
                             section: X.jXE.MEMBER_LIST,
                             object: X.qAy.BOOST_GEM_ICON
@@ -163,8 +163,8 @@ let er = K.ZP.getEnableHardwareAcceleration(),
             };
         return (0, r.jsx)(D.Z, {
             user: u,
-            guildId: y,
-            channelId: C.id,
+            guildId: C,
+            channelId: y.id,
             roleId: a,
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
@@ -175,7 +175,7 @@ let er = K.ZP.getEnableHardwareAcceleration(),
                     plainText: e,
                     rawText: t
                 }),
-                    b.Z.startTyping(C.id);
+                    b.Z.startTyping(y.id);
             },
             shouldShowOnHover: E,
             clickTrap: I,
@@ -205,8 +205,8 @@ let er = K.ZP.getEnableHardwareAcceleration(),
                             colorStrings: l,
                             colorRoleName: o,
                             isTyping: x,
-                            channel: C,
-                            guildId: y,
+                            channel: y,
+                            guildId: C,
                             isMobile: v,
                             onClickPremiumGuildIcon: T,
                             selected: I,
@@ -225,8 +225,8 @@ let er = K.ZP.getEnableHardwareAcceleration(),
             n = en(e, ['colorRoleId']),
             { channel: i, user: l, index: o } = e,
             a = (0, c.JA)(''.concat(o)),
-            s = (0, h.e7)([F.Z], () => F.Z.isTyping(i.id, l.id)),
-            u = (0, h.e7)([G.default], () => G.default.getCurrentUser()),
+            s = (0, h.e7)([G.Z], () => G.Z.isTyping(i.id, l.id)),
+            u = (0, h.e7)([F.default], () => F.default.getCurrentUser()),
             d = (0, h.e7)(
                 [B.Z],
                 () => {
@@ -542,8 +542,8 @@ class eu extends i.Component {
 }
 function ed(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, v.ZP)(y.Z.MEMBER_LIST),
-        a = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled),
+        { analyticsLocations: l } = (0, v.ZP)(C.Z.MEMBER_LIST),
+        a = (0, h.e7)([y.Z], () => y.Z.keyboardModeEnabled),
         s = (0, h.cj)([U.ZP], () => U.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,

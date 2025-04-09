@@ -13,7 +13,7 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.wO, s.f, s.n8, s.v1, s.pQ],
     d = i.memo((e) => {
         var t;
         let { entry: n, channel: i, selected: d, hovered: p } = e,
-            { largeImage: _ } = (0, o.rv)({
+            { largeImage: h } = (0, o.rv)({
                 entry: n,
                 showCoverImage: !1
             });
@@ -44,11 +44,11 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.wO, s.f, s.n8, s.v1, s.pQ],
                     ]
                 }),
                 (0, r.jsx)(l.f, {
-                    alt: null != (t = null == _ ? void 0 : _.text) ? t : null == _ ? void 0 : _.alt,
-                    src: null == _ ? void 0 : _.src,
+                    alt: null != (t = null == h ? void 0 : h.text) ? t : null == h ? void 0 : h.alt,
+                    src: null == h ? void 0 : h.src,
                     size: 48,
                     className: c.thumbnail,
-                    showTooltip: (null == _ ? void 0 : _.text) != null
+                    showTooltip: (null == h ? void 0 : h.text) != null
                 })
             ]
         });

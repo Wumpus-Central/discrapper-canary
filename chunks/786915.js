@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => C });
 var r = n(200651);
 n(192379);
 var i = n(512722),
@@ -16,7 +16,7 @@ var i = n(512722),
     g = n(871499),
     b = n(981631),
     _ = n(388032);
-function C(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,8 +41,8 @@ function C(e) {
     }
     return e;
 }
-function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: x, appContext: v, analyticsLocation: j, guildScheduledEvent: O, shouldPrioritizeGroupPlusIcon: E = !1, embeddedActivity: N, iconClassName: I, look: P, size: S, buttonText: Z } = e,
+function C(e) {
+    var { applicationId: t, stream: i, channel: C, exitFullScreen: x, appContext: v, analyticsLocation: j, guildScheduledEvent: O, shouldPrioritizeGroupPlusIcon: E = !1, embeddedActivity: N, iconClassName: I, look: P, size: S, buttonText: Z } = e,
         T = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -64,7 +64,7 @@ function y(e) {
         })(e, ['applicationId', 'stream', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'guildScheduledEvent', 'shouldPrioritizeGroupPlusIcon', 'embeddedActivity', 'iconClassName', 'look', 'size', 'buttonText']);
     let A = (0, u.bp)(),
         { parentAnalyticsLocation: w } = (0, d.ZP)(),
-        R = null == y ? void 0 : y.getGuildId(),
+        R = null == C ? void 0 : C.getGuildId(),
         k = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R) : null), [R]),
         M = (0, a.e7)([f.Z], () => (null != t ? f.Z.getApplicationActivity(t) : void 0));
     return null != M && (null == N ? void 0 : N.location.kind) === o.E.CONTEXTLESS
@@ -79,14 +79,14 @@ function y(e) {
               size: S,
               buttonText: Z
           })
-        : null != k && null != y && m.Z.can(b.Plq.CREATE_INSTANT_INVITE, y)
+        : null != k && null != C && m.Z.can(b.Plq.CREATE_INSTANT_INVITE, C)
           ? (0, r.jsx)(
                 g.Z,
-                C(
+                y(
                     {
                         onClick: () => {
                             l()(null != k, 'guild cannot be null'),
-                                l()(null != y, 'channel cannot be null'),
+                                l()(null != C, 'channel cannot be null'),
                                 null != w && (0, p.v)(w, p.d.INVITE),
                                 (function (e) {
                                     let { guild: t, channel: i, streamUserId: l, applicationId: o, appContext: a, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
@@ -98,7 +98,7 @@ function y(e) {
                                                     var a, s;
                                                     return (0, r.jsx)(
                                                         e,
-                                                        ((a = C({}, n)),
+                                                        ((a = y({}, n)),
                                                         (s = s =
                                                             {
                                                                 guild: t,
@@ -132,7 +132,7 @@ function y(e) {
                                         );
                                 })({
                                     guild: k,
-                                    channel: y,
+                                    channel: C,
                                     streamUserId: null == i ? void 0 : i.ownerId,
                                     applicationId: t,
                                     appContext: null != v ? v : A,

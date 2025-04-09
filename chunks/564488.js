@@ -10,37 +10,37 @@ var r = n(200651),
     u = n(495892);
 let m = i.memo(function (e) {
     let { rule: t, persistEdit: n = !1, initWithEdit: m = !1 } = e,
-        { hasChanges: g, editingRule: p, createNewEditingRule: h, setEditingRule: f } = (0, l.V)(),
+        { hasChanges: g, editingRule: p, createNewEditingRule: f, setEditingRule: h } = (0, l.V)(),
         { isLoading: b } = (0, l.w)(),
         [x] = i.useState(() => !(0, s.Vb)(t)),
         j = (null == p ? void 0 : p.id) === t.id || n,
         N = (0, a.U)(null == t ? void 0 : t.id),
-        _ = j && null != p ? p : t,
-        v = i.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
+        v = j && null != p ? p : t,
+        _ = i.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
         y = i.useCallback(() => {
-            h(t.guildId, t.triggerType);
-        }, [t.guildId, t.triggerType, h]),
+            f(t.guildId, t.triggerType);
+        }, [t.guildId, t.triggerType, f]),
         O = i.useCallback(
             (e) => {
-                b || f(e, !0);
+                b || h(e, !0);
             },
-            [b, f]
+            [b, h]
         );
     i.useEffect(() => {
-        m && f(t, !0);
-    }, [m, t, f]);
+        m && h(t, !0);
+    }, [m, t, h]);
     let C = i.useCallback(() => {
         j
-            ? g || f(null)
+            ? g || h(null)
             : g
-              ? v(() => {
-                    f(t);
+              ? _(() => {
+                    h(t);
                 })
-              : f(t);
-    }, [j, g, v, t, f]);
+              : h(t);
+    }, [j, g, _, t, h]);
     return (0, r.jsx)(d.Z, {
         renderHeader: (0, r.jsx)(u.Z, {
-            rule: _,
+            rule: v,
             forceSetup: x && !j && !N,
             triggerType: t.triggerType,
             isEditMode: j,
@@ -54,7 +54,7 @@ let m = i.memo(function (e) {
         children:
             j &&
             (0, r.jsx)(c.Z, {
-                rule: _,
+                rule: v,
                 isLoading: b,
                 onChangeRule: O
             })

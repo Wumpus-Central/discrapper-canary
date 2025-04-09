@@ -33,8 +33,8 @@ function r(e) {
         m = Math.min(d, i.height),
         g = (o ? n.height : n.width) / 2,
         p = (o ? n.width : n.height) / 2,
-        h = (t.width / 2 - g - l.x) * a,
-        f = (t.height / 2 - p - l.y) * a,
+        f = (t.width / 2 - g - l.x) * a,
+        h = (t.height / 2 - p - l.y) * a,
         b = o ? d : c,
         x = o ? c : d,
         { x: j, y: N } = (function (e, t, n) {
@@ -62,8 +62,8 @@ function r(e) {
             }
         })(c, d, s);
     return {
-        sourceX: h,
-        sourceY: f,
+        sourceX: f,
+        sourceY: h,
         sourceWidth: b,
         sourceHeight: x,
         destinationX: j,
@@ -85,8 +85,8 @@ function i(e) {
             destinationY: m,
             destinationWidth: g,
             destinationHeight: p,
-            canvasWidth: h,
-            canvasHeight: f
+            canvasWidth: f,
+            canvasHeight: h
         } = r({
             image: t,
             cropDimensions: n,
@@ -95,7 +95,7 @@ function i(e) {
             imageRotation: a
         }),
         b = document.createElement('canvas');
-    (b.width = h), (b.height = f);
+    (b.width = f), (b.height = h);
     let x = b.getContext('2d');
     return null != x && (x.rotate((a * Math.PI) / 180), x.drawImage(t, l, o, c, d, u, m, g, p)), b.toDataURL('image/png');
 }

@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(43982),
     b = n(721351),
     _ = n(420529),
-    C = n(927923),
-    y = n(981631),
+    y = n(927923),
+    C = n(981631),
     x = n(921944),
     v = n(388032);
 function j(e) {
@@ -71,7 +71,7 @@ function E(e) {
         P = (0, a.s9z)(a.JQI),
         S = (0, m.Z)().filter((e) => e.twoWayLink),
         [Z, T] = i.useState(!1),
-        A = y.WtW.VOICE !== N && [y.AEg.NO_CHAT, y.AEg.FULL_SCREEN].includes(I) ? 'top' : 'bottom',
+        A = C.WtW.VOICE !== N && [C.AEg.NO_CHAT, C.AEg.FULL_SCREEN].includes(I) ? 'top' : 'bottom',
         w = [];
     return (
         S.length > 0 && w.push(o.z.DONUT_DESKTOP_NUX),
@@ -138,7 +138,7 @@ function E(e) {
                             (i = i =
                                 {
                                     onClick: () => T(!0),
-                                    label: null != O ? (O === C.YE.XBOX ? v.NW.string(v.t.T0uYKy) : v.NW.string(v.t.FWAzS0)) : v.NW.string(v.t['mbi/fH']),
+                                    label: null != O ? (O === y.YE.XBOX ? v.NW.string(v.t.T0uYKy) : v.NW.string(v.t.FWAzS0)) : v.NW.string(v.t['mbi/fH']),
                                     iconComponent: (0, b.Z)(O)
                                 }),
                             Object.getOwnPropertyDescriptors

@@ -10,7 +10,7 @@ var r = n(200651),
 function u(e) {
     let { onChangeText: t, maxWordCount: n, className: s, textAreaClassName: u, subtitleText: m, initialValue: g } = e,
         p = i.useMemo(() => (null != g ? g : []), [g]),
-        { value: h, onChange: f, errorMessage: b } = (0, o.Z)(t, g, n);
+        { value: f, onChange: h, errorMessage: b } = (0, o.Z)(t, g, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -18,8 +18,8 @@ function u(e) {
                 children: [
                     (0, r.jsx)(l.lcI, {
                         className: a()(d.keywordsTextArea, u),
-                        value: h,
-                        onChange: f,
+                        value: f,
+                        onChange: h,
                         placeholder: c.NW.string(c.t.UyaxJy)
                     }),
                     (0, r.jsx)(l.Text, {

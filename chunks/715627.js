@@ -14,8 +14,8 @@ let o = {
     d = i.memo(function (e) {
         let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: m, offsetXPercentageMax: g, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: N = o, dragCoefficientValue: x = 1.66, onAnimationEnd: _ } = e,
             [E, j] = i.useState(null),
-            { confettiCanvas: O } = i.useContext(a.h),
-            C = (0, s.uR)(null != b ? b : O, E),
+            { confettiCanvas: C } = i.useContext(a.h),
+            O = (0, s.uR)(null != b ? b : C, E),
             [S, v] = i.useState(!1);
         i.useEffect(() => {
             S && (null == _ || _());
@@ -36,7 +36,7 @@ let o = {
                 return (
                     (e = e.map((n, r) =>
                         setTimeout(() => {
-                            C.createMultipleConfetti(
+                            O.createMultipleConfetti(
                                 (function (e, t, n, r, i) {
                                     var s, a;
                                     let d = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
@@ -130,7 +130,7 @@ let o = {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [C, t, u, m, g, p, h, f, N, x, _]),
+            }, [O, t, u, m, g, p, h, f, N, x, _]),
             (0, r.jsx)(s.Ji, {
                 ref: j,
                 sprites: null != T ? T : l.CA,

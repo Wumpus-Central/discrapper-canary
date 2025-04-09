@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(953529), n(388685);
+n.d(t, { Z: () => h }), n(953529), n(388685);
 var r,
     i,
     s,
@@ -27,7 +27,7 @@ function m(e) {
 }
 let g = {},
     p = 0;
-class h extends (r = o.ZP.Store) {
+class f extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(d.default);
     }
@@ -42,15 +42,15 @@ class h extends (r = o.ZP.Store) {
     }
 }
 (s = 'DiscoverGuildsStore'),
-    (i = 'displayName') in h
-        ? Object.defineProperty(h, i, {
+    (i = 'displayName') in f
+        ? Object.defineProperty(f, i, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[i] = s);
-let f = new h(c.Z, {
+        : (f[i] = s);
+let h = new f(c.Z, {
     DISCOVER_GUILDS_FETCH_START: function (e) {
         p += 1;
     },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(953529), n(539854);
+n.d(t, { Z: () => f }), n(388685), n(953529), n(539854);
 var r = n(200651),
     i = n(192379),
     s = n(481060);
@@ -53,10 +53,10 @@ function p(e, t) {
         e
     );
 }
-function h() {
+function f() {
     let { editStateId: e, guildId: t } = (0, l.N)(),
-        [n, h] = o.UE(e),
-        f = i.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
+        [n, f] = o.UE(e),
+        h = i.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
     function b(e, t) {
         let { channelId: r, description: i, emojiId: s, emojiName: a } = e,
             l = [...n],
@@ -68,7 +68,7 @@ function h() {
                 ref_type: u.Qs.CHANNEL,
                 ref_id: r
             };
-        null != t ? (l[t] = o) : l.push(o), h(l);
+        null != t ? (l[t] = o) : l.push(o), f(l);
     }
     let x = (0, a.mY)();
     return (0, r.jsxs)(r.Fragment, {
@@ -81,13 +81,13 @@ function h() {
                             c.x3,
                             p(g({}, i), {
                                 guildId: t,
-                                omitChannelIds: f,
+                                omitChannelIds: h,
                                 initialData: n[e],
                                 onSave: (t) => b(t, e),
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
-                                        t.splice(e, 1), h(t);
+                                        t.splice(e, 1), f(t);
                                     })(e)
                             })
                         )
@@ -96,7 +96,7 @@ function h() {
                 onMove: function (e, t) {
                     let r = [...n],
                         [i] = r.splice(e, 1);
-                    r.splice(t, 0, i), h(r);
+                    r.splice(t, 0, i), f(r);
                 },
                 guildId: t
             }),
@@ -108,7 +108,7 @@ function h() {
                             c.x3,
                             p(g({}, e), {
                                 guildId: t,
-                                omitChannelIds: f,
+                                omitChannelIds: h,
                                 onSave: (e) => b(e)
                             })
                         )

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(734893),
     g = n(216701),
     p = n(592125),
-    h = n(430824),
-    f = n(768581),
+    f = n(430824),
+    h = n(768581),
     b = n(388032),
     x = n(773100);
 function j(e) {
@@ -58,19 +58,19 @@ function N(e, t) {
         e
     );
 }
-let _ = function (e) {
-    var t, s, _, v, y;
+let v = function (e) {
+    var t, s, v, _, y;
     let { guildId: O, action: C, actionIndex: I, onChange: E, onDelete: S, onDragStart: T, onDragComplete: P, onDragReset: w } = e,
         R = (0, l.e7)([p.Z], () => p.Z.getChannel(C.channelId)),
-        D = (0, l.e7)([h.Z], () => h.Z.getGuild(O)),
-        { customEmoji: Z, unicodeEmoji: A } = (0, u.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (s = C.emoji) ? void 0 : s.name),
-        k = null == C.emoji || null != Z || null != A,
-        W = f.ZP.getNewMemberActionIconURL({
+        D = (0, l.e7)([f.Z], () => f.Z.getGuild(O)),
+        { customEmoji: Z, unicodeEmoji: k } = (0, u.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (s = C.emoji) ? void 0 : s.name),
+        A = null == C.emoji || null != Z || null != k,
+        W = h.ZP.getNewMemberActionIconURL({
             channelId: C.channelId,
             icon: C.icon
         }),
         L = null;
-    null != R && (0, m.kb)(R) ? k || (L = b.NW.string(b.t.wAkIZW)) : (L = b.NW.string(b.t.CbTEKC));
+    null != R && (0, m.kb)(R) ? A || (L = b.NW.string(b.t.wAkIZW)) : (L = b.NW.string(b.t.CbTEKC));
     let {
             drag: M,
             dragSourcePosition: G,
@@ -140,8 +140,8 @@ let _ = function (e) {
                         : (0, r.jsx)('div', {
                               className: x.actionItemEmojiWrapper,
                               children: (0, r.jsx)(g.Z, {
-                                  emojiId: null == (_ = C.emoji) ? void 0 : _.id,
-                                  emojiName: null == (v = C.emoji) ? void 0 : v.name,
+                                  emojiId: null == (v = C.emoji) ? void 0 : v.id,
+                                  emojiName: null == (_ = C.emoji) ? void 0 : _.name,
                                   size: g.R.MEDIUM,
                                   defaultComponent: (0, r.jsx)(z, {})
                               })

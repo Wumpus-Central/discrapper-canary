@@ -31,7 +31,7 @@ function j(e, t, n) {
         e
     );
 }
-function O(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function O(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -100,7 +100,7 @@ class v extends (r = s.PureComponent) {
                 }),
                 (0, i.jsx)(
                     b.ZP,
-                    C(O({}, e), {
+                    O(C({}, e), {
                         mode: b.ZP.Modes.EDIT,
                         layout: r,
                         onBillingAddressChange: this.handleAddressUpdate,
@@ -147,7 +147,7 @@ class v extends (r = s.PureComponent) {
                                       children: (e) =>
                                           (0, i.jsx)(
                                               'div',
-                                              O(
+                                              C(
                                                   {
                                                       'aria-hidden': !0,
                                                       className: E.disabledTooltipTarget
@@ -276,7 +276,7 @@ class v extends (r = s.PureComponent) {
                 this.setState({
                     billingAddress: e,
                     billingAddressValid: t,
-                    dirtyFields: C(O({}, this.state.dirtyFields), { billingAddress: n })
+                    dirtyFields: O(C({}, this.state.dirtyFields), { billingAddress: n })
                 });
             }),
             j(this, 'handleExpirationDateUpdate', (e, t) => {
@@ -289,7 +289,7 @@ class v extends (r = s.PureComponent) {
                 null != t &&
                     this.setState({
                         [t]: e,
-                        dirtyFields: C(O({}, this.state.dirtyFields), { [t]: !0 })
+                        dirtyFields: O(C({}, this.state.dirtyFields), { [t]: !0 })
                     });
             });
         let { paymentSource: o, isDefault: c } = e,

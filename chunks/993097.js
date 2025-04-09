@@ -19,10 +19,10 @@ function g() {
             hasChanges: d.Z.hasChanges(),
             errorDetails: d.Z.errorDetails
         })),
-        { guild: g, submitting: p, errors: h, hasChanges: f } = (0, s.cj)([o.Z], () => o.Z.getProps()),
-        b = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(h)), [h, n]),
+        { guild: g, submitting: p, errors: f, hasChanges: h } = (0, s.cj)([o.Z], () => o.Z.getProps()),
+        b = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(f)), [f, n]),
         x = i.useCallback(async () => {
-            if (null != g && (t && (await (0, c.en)(g.id, e, { throwErr: !0 })), f)) {
+            if (null != g && (t && (await (0, c.en)(g.id, e, { throwErr: !0 })), h)) {
                 let e = {
                     premiumProgressBarEnabled: g.premiumProgressBarEnabled,
                     banner: g.banner,
@@ -30,7 +30,7 @@ function g() {
                 };
                 await l.Z.saveGuild(g.id, e, { throwErr: !0 });
             }
-        }, [g, f, t, e]),
+        }, [g, h, t, e]),
         j = i.useCallback(() => {
             null != g && (l.Z.init(g.id), (0, c.H7)());
         }, [g]);

@@ -16,8 +16,8 @@ let h = (e) => {
     var t;
     let n,
         i,
-        { title: h, titleClassName: f, buttonClassName: b, perkImage: N, isCarousel: x, onCtaClick: _, perkComponent: E, subtitle: j = '', descriptionCta: O = '', cardVariant: C, subtitleClassName: S, imageOverlayText: v } = e,
-        T = (0, o._)(C),
+        { title: h, titleClassName: f, buttonClassName: b, perkImage: N, isCarousel: x, onCtaClick: _, perkComponent: E, subtitle: j = '', descriptionCta: C = '', cardVariant: O, subtitleClassName: S, imageOverlayText: v } = e,
+        T = (0, o._)(O),
         I = (0, l.Er)(),
         y = (null == I ? void 0 : I.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == I ? void 0 : I.nitroTenureStatus) {
@@ -71,7 +71,7 @@ let h = (e) => {
                     className: u.cardIllustrationNoHover,
                     children: [
                         E,
-                        0 !== O.length &&
+                        0 !== C.length &&
                             null != _ &&
                             (0, r.jsx)(a.zxk, {
                                 className: b,
@@ -85,7 +85,7 @@ let h = (e) => {
                                             alt: i,
                                             src: n
                                         }),
-                                        O
+                                        C
                                     ]
                                 })
                             })

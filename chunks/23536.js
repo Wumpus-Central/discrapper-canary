@@ -15,7 +15,7 @@ var r = n(200651),
 let g = [];
 function b(e) {
     let { channel: t, onJump: b } = e,
-        { messages: _, loading: C } = (0, l.cj)([d.Z], () => {
+        { messages: _, loading: y } = (0, l.cj)([d.Z], () => {
             let e = d.Z.getPinnedMessages(t.id),
                 n = null != e ? e.messages : g;
             return {
@@ -23,14 +23,14 @@ function b(e) {
                 loading: null == n || (null != e && e.loading)
             };
         }),
-        y = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
+        C = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
     return (
         (0, c.ZP)(() => {
             _.some(u.k5) && s.Z.fetchPins(t.id, !0);
         }),
         i.useEffect(() => {
-            y && s.Z.ackPins(t.id);
-        }, [y, t.id]),
+            C && s.Z.ackPins(t.id);
+        }, [C, t.id]),
         (0, r.jsx)(a.VqE, {
             'aria-label': m.NW.string(m.t['mp1N//']),
             children: (0, r.jsx)(h.ZP, {
@@ -39,7 +39,7 @@ function b(e) {
                 },
                 channel: t,
                 messages: _,
-                loading: C,
+                loading: y,
                 analyticsName: 'Channel Pins',
                 onCloseMessage: function (e, n) {
                     null != e && (n.shiftKey ? s.Z.unpinMessage(t, e.id) : f.Z.confirmUnpin(t, e));

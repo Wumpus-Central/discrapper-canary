@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(481060),
     g = n(541716),
     p = n(752305),
-    h = n(893718),
-    f = n(592125),
+    f = n(893718),
+    h = n(592125),
     b = n(984933),
     x = n(540457),
     j = n(681460),
     N = n(592286),
-    _ = n(981631),
-    v = n(388032),
+    v = n(981631),
+    _ = n(388032),
     y = n(350612);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,7 +65,7 @@ function C(e, t) {
 }
 let I = 'RULE';
 function E(e) {
-    let { rule: t, rulesChannel: n, index: s, onChange: l, onKeyDown: o, onClear: u, onRuleReorder: f, isDropHovered: b, focused: x, onFocus: j, previewEnabled: _, isDragEnabled: O } = e,
+    let { rule: t, rulesChannel: n, index: s, onChange: l, onKeyDown: o, onClear: u, onRuleReorder: h, isDropHovered: b, focused: x, onFocus: j, previewEnabled: v, isDragEnabled: O } = e,
         C = i.useRef(null),
         E = i.useRef(null),
         [{ textValue: S, richValue: T }, P] = i.useState((0, p.eK)(t.value)),
@@ -76,7 +76,7 @@ function E(e) {
                 index: s
             },
             end: (e, t) => {
-                null == e || t.didDrop() || f(e.rule, null, !0);
+                null == e || t.didDrop() || h(e.rule, null, !0);
             }
         }),
         [, D] = (0, d.L)({
@@ -89,10 +89,10 @@ function E(e) {
                 if (null == i || null == a) return;
                 let l = (i.bottom - i.top) / 2,
                     o = a.y - i.top;
-                (r < s && o < l) || (r > s && o > l) || f(e.rule, s, !1);
+                (r < s && o < l) || (r > s && o > l) || h(e.rule, s, !1);
             },
             drop: (e) => {
-                f(e.rule, s, !0);
+                h(e.rule, s, !0);
             }
         });
     if (
@@ -122,13 +122,13 @@ function E(e) {
             children: [
                 (0, r.jsx)(m.P3F, {
                     onMouseDown: () => j(s),
-                    children: (0, r.jsx)(h.Z, {
+                    children: (0, r.jsx)(f.Z, {
                         innerClassName: y.rulesTextAreaInput,
                         type: g.Ie.RULES_INPUT,
                         textValue: S,
                         richValue: T,
                         channel: n,
-                        placeholder: v.NW.string(v.t['BRkD4+']),
+                        placeholder: _.NW.string(_.t['BRkD4+']),
                         focused: x,
                         onChange: (e, t, n) => {
                             let r = t;
@@ -141,8 +141,8 @@ function E(e) {
                                 });
                         },
                         onKeyDown: o,
-                        canMentionChannels: _,
-                        canMentionRoles: _,
+                        canMentionChannels: v,
+                        canMentionRoles: v,
                         maxCharacterCount: N.fn,
                         onSubmit: () =>
                             Promise.resolve({
@@ -181,11 +181,11 @@ function E(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: s } = e,
         a = s.rulesChannelId,
-        l = s.hasFeature(_.oNc.PREVIEW_ENABLED),
-        c = (0, u.e7)([f.Z], () => (null != a ? f.Z.getChannel(a) : null)),
+        l = s.hasFeature(v.oNc.PREVIEW_ENABLED),
+        c = (0, u.e7)([h.Z], () => (null != a ? h.Z.getChannel(a) : null)),
         d = (0, u.e7)([b.ZP], () => b.ZP.getDefaultChannel(s.id)),
         [g, p] = i.useState(null),
-        [h, I] = i.useState(null),
+        [f, I] = i.useState(null),
         S = i.useCallback(
             (e) => {
                 if (t.length !== N.X2)
@@ -238,29 +238,29 @@ function S(e) {
         ),
         D = t.length === N.X2,
         Z = i.useMemo(() => {
-            let e = D ? v.NW.formatToPlainString(v.t.tU718P, { number: N.X2 }) : void 0;
+            let e = D ? _.NW.formatToPlainString(_.t.tU718P, { number: N.X2 }) : void 0;
             return [
                 {
-                    text: v.NW.string(v.t.DXq2oa),
-                    onClick: () => S(v.NW.string(v.t.XudkSk)),
+                    text: _.NW.string(_.t.DXq2oa),
+                    onClick: () => S(_.NW.string(_.t.XudkSk)),
                     disabled: D,
                     tooltipText: e
                 },
                 {
-                    text: v.NW.string(v.t.nSqTjI),
-                    onClick: () => S(v.NW.string(v.t.np91jI)),
+                    text: _.NW.string(_.t.nSqTjI),
+                    onClick: () => S(_.NW.string(_.t.np91jI)),
                     disabled: D,
                     tooltipText: e
                 },
                 {
-                    text: v.NW.string(v.t.AtRxsL),
-                    onClick: () => S(v.NW.string(v.t.PNIDDA)),
+                    text: _.NW.string(_.t.AtRxsL),
+                    onClick: () => S(_.NW.string(_.t.PNIDDA)),
                     disabled: D,
                     tooltipText: e
                 },
                 {
-                    text: v.NW.string(v.t['0K5NJi']),
-                    onClick: () => S(v.NW.string(v.t.HolIDw)),
+                    text: _.NW.string(_.t['0K5NJi']),
+                    onClick: () => S(_.NW.string(_.t.HolIDw)),
                     disabled: D,
                     tooltipText: e
                 }
@@ -281,7 +281,7 @@ function S(e) {
                             onClear: () => w(n),
                             onRuleReorder: R,
                             isDropHovered: n === g,
-                            focused: n === h,
+                            focused: n === f,
                             onFocus: I,
                             previewEnabled: null == l || l,
                             isDragEnabled: t.length > 1
@@ -292,14 +292,14 @@ function S(e) {
             }),
             !D &&
                 (0, r.jsx)(x.A, {
-                    text: v.NW.string(v.t.Cq5Jub),
+                    text: _.NW.string(_.t.Cq5Jub),
                     onClick: T
                 }),
             (0, r.jsx)(m.X6q, {
                 variant: 'text-xs/bold',
                 color: 'text-muted',
                 className: y.exampleRulesTitle,
-                children: v.NW.string(v.t.XHWj8f)
+                children: _.NW.string(_.t.XHWj8f)
             }),
             (0, r.jsx)(j.j, {
                 pills: Z,

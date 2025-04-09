@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(539854);
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     s = n(392711),
@@ -135,7 +135,7 @@ function j() {
         ]
     });
 }
-function O() {
+function C() {
     let e = p._j.useSetting();
     return (0, r.jsxs)(h.Z, {
         children: [

@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(179360),
     g = n(129861),
     p = n(999382),
-    h = n(905128),
-    f = n(151494),
+    f = n(905128),
+    h = n(151494),
     b = n(733683),
     x = n(237583),
     j = n(899667),
     N = n(271383),
-    _ = n(430824),
-    v = n(594174),
+    v = n(430824),
+    _ = n(594174),
     y = n(267642),
     O = n(624138),
     C = n(981631),
@@ -276,14 +276,14 @@ class R extends i.Component {
             );
     }
 }
-let D = c.ZP.connectStores([_.Z, h.Z, p.Z, j.Z, v.default, N.ZP], () => {
+let D = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, _.default, N.ZP], () => {
     let e = p.Z.getGuildId(),
-        t = (0, f.I)(e),
+        t = (0, h.I)(e),
         n = null != e ? j.Z.getAppliedGuildBoostsForGuild(e) : null,
         r = o()(null != n ? n : []).uniqBy((e) => e.userId),
         i = r
             .map((t) => ({
-                user: v.default.getUser(t.userId),
+                user: _.default.getUser(t.userId),
                 nick: N.ZP.getNick(e, t.userId)
             }))
             .filter((e) => null != e.user)

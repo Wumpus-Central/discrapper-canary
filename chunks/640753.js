@@ -25,8 +25,8 @@ let g = o.memo(function (e) {
         ),
         [x, S] = o.useState(!1),
         _ = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
-        C = c.Yk.useSetting(),
-        E = o.useCallback(() => {
+        E = c.Yk.useSetting(),
+        C = o.useCallback(() => {
             a.Z.dispatch({
                 type: 'BURST_REACTION_EFFECT_CLEAR',
                 channelId: t,
@@ -47,19 +47,19 @@ let g = o.memo(function (e) {
                     key: u.I.RANDOM
                 }));
         };
-        if (x || (_ && !C) || !C) return;
+        if (x || (_ && !E) || !E) return;
         e();
         let i = setInterval(e, 5000);
         return () => {
             clearInterval(i);
         };
-    }, [C, t, v, g, g.name, x, n, _]),
+    }, [E, t, v, g, g.name, x, n, _]),
     null == y)
         ? null
         : (0, i.jsx)(h.Z, {
               className: (b ? f : m).effect,
               effect: T,
-              onComplete: E,
+              onComplete: C,
               emojiSize: O
           });
 });

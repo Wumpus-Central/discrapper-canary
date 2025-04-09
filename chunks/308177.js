@@ -15,12 +15,12 @@ var r = n(200651),
     g = n(450369),
     b = n(388032),
     _ = n(816395);
-let C = {
+let y = {
         singleSpeaker: 424,
         twoSpeakers: 624,
         threeSpeakers: 824
     },
-    y = (e, t) => {
+    C = (e, t) => {
         let n = Math.floor(e / t - 8),
             r = Math.floor(n / g.Q);
         return {
@@ -28,14 +28,14 @@ let C = {
             speakerTileHeight: r
         };
     },
-    x = (e, t) => (e < C.singleSpeaker ? 1 : e < C.twoSpeakers ? 2 : e < C.threeSpeakers || t ? 3 : 4),
+    x = (e, t) => (e < y.singleSpeaker ? 1 : e < y.twoSpeakers ? 2 : e < y.threeSpeakers || t ? 3 : 4),
     v = (e) => Math.floor((e - 32) / 102);
 function j(e) {
     return e.type === u.Ui.VOICE;
 }
 let O = (0, o.Z)((e) => {
     var t, n;
-    let { channel: o, width: C, onScroll: O } = e,
+    let { channel: o, width: y, onScroll: O } = e,
         {
             selectedParticipantId: E,
             largeStream: N,
@@ -55,8 +55,8 @@ let O = (0, o.Z)((e) => {
         T = (0, c.w8)(o.id, u.pV.SPEAKER),
         A = T.filter(j),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
-        R = v(C),
-        k = x(C, I),
+        R = v(y),
+        k = x(y, I),
         M = {
             [u.pV.SPEAKER]: k,
             [u.pV.AUDIENCE]: R,
@@ -65,9 +65,9 @@ let O = (0, o.Z)((e) => {
         L = (0, d.Dx)(o.id),
         [D, W] = (0, d.aP)(o.id, M, L),
         U = [Math.max(null != (t = D[0]) ? t : 1, 1), Math.max(null != (n = D[1]) ? n : 1, 1), D[2]],
-        { speakerTileWidth: B, speakerTileHeight: H } = y(C, k),
-        F = N ? C - 32 : Math.min(C - 64, 3 * B + 8),
-        G = (e) => e === D.length - 1 || (0 === S && 1 === e),
+        { speakerTileWidth: B, speakerTileHeight: H } = C(y, k),
+        G = N ? y - 32 : Math.min(y - 64, 3 * B + 8),
+        F = (e) => e === D.length - 1 || (0 === S && 1 === e),
         [V, z] = i.useState(!1),
         [Y, q] = i.useState(!1);
     return (0, r.jsx)(h.Z, {
@@ -123,7 +123,7 @@ let O = (0, o.Z)((e) => {
                             children: (0, r.jsx)(g.Z, {
                                 channel: o,
                                 participant: l[0],
-                                width: F
+                                width: G
                             })
                         },
                         'selected-participant'
@@ -157,12 +157,12 @@ let O = (0, o.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == W[e][0] ? 0 : 0 === e ? F / g.Q + 8 : 1 === e ? (V ? 0 : H) : 98 * !Y),
+        rowHeight: (e) => (null == W[e][0] ? 0 : 0 === e ? G / g.Q + 8 : 1 === e ? (V ? 0 : H) : 98 * !Y),
         renderFooter: (e) => {
             let { section: t } = e;
-            return G(t) ? (0, r.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;
+            return F(t) ? (0, r.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;
         },
-        footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!G(e)),
+        footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!F(e)),
         className: _.scroller,
         chunkSize: 60,
         onScroll: O

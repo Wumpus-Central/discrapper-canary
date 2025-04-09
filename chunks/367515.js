@@ -76,7 +76,7 @@ function _(e) {
                         );
                 });
         }, [E, t]),
-        O = i.useCallback(() => {
+        C = i.useCallback(() => {
             a()(void 0 !== E, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
@@ -90,7 +90,7 @@ function _(e) {
                         );
                 });
         }, [E, t]),
-        C = i.useCallback(() => {
+        O = i.useCallback(() => {
             a()(void 0 !== E, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
@@ -121,7 +121,7 @@ function _(e) {
                           icon: o.Dio,
                           className: b.__invalid_actionDeny,
                           tooltip: f.NW.string(h.Z.e5iHmZ),
-                          onClick: C
+                          onClick: O
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -137,7 +137,7 @@ function _(e) {
                                   icon: o.Dio,
                                   className: b.__invalid_actionDeny,
                                   tooltip: f.NW.string(h.Z.bBDeND),
-                                  onClick: O
+                                  onClick: C
                               })
                           ]
                       })

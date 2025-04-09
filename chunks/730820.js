@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(325067),
     E = n(594174),
     j = n(572004),
-    O = n(287880),
-    C = n(714565),
+    C = n(287880),
+    O = n(714565),
     S = n(202858),
     v = n(726985),
     T = n(981631),
@@ -148,7 +148,7 @@ class k extends i.PureComponent {
                 })
             });
         else {
-            let t = (0, C.c)(i);
+            let t = (0, O.c)(i);
             e = (0, r.jsxs)(p.Z, {
                 className: a ? '' : P.marginTop8,
                 children: [
@@ -318,7 +318,7 @@ class k extends i.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return O.uZ
+        return C.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()

@@ -1,4 +1,4 @@
-n.d(t, { h: () => h });
+n.d(t, { h: () => f });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -11,13 +11,13 @@ var r = n(200651),
     m = n(981631),
     g = n(388032),
     p = n(109303);
-function h(e) {
+function f(e) {
     let { activeType: t, onTypePicked: n, guild: s } = e,
-        h = s.hasFeature(m.oNc.COMMUNITY),
-        f = (0, l.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, s)),
+        f = s.hasFeature(m.oNc.COMMUNITY),
+        h = (0, l.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, s)),
         b = i.useMemo(() => {
-            let e = t === u.A.DISCOVERABLE && !f,
-                n = h && (t === u.A.DISCOVERABLE || f);
+            let e = t === u.A.DISCOVERABLE && !h,
+                n = f && (t === u.A.DISCOVERABLE || h);
             return [
                 {
                     id: u.A.INVITE,
@@ -41,10 +41,10 @@ function h(e) {
                     body: g.NW.string(g.t.pqQylZ),
                     icon: o.enf,
                     enabled: n,
-                    ineligibleText: h ? g.NW.string(g.t.iBpXPj) : g.NW.string(g.t['5TQ+eH'])
+                    ineligibleText: f ? g.NW.string(g.t.iBpXPj) : g.NW.string(g.t['5TQ+eH'])
                 }
             ];
-        }, [t, h, f]);
+        }, [t, f, h]);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)(o.X6q, {

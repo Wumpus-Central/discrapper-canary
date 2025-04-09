@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(411667),
     g = n(434404),
     p = n(962086),
-    h = n(225675),
-    f = n(703656),
+    f = n(225675),
+    h = n(703656),
     b = n(430824),
     x = n(594174),
     j = n(63063),
     N = n(267101),
-    _ = n(294294),
-    v = n(310800),
+    v = n(294294),
+    _ = n(310800),
     y = n(833695),
     O = n(981631),
     C = n(176505),
@@ -33,23 +33,23 @@ function S(e) {
         { loading: R } = (0, o.H)(t),
         [D, Z] = i.useState(n ? 'manage_listings' : 'payment');
     (0, u.P)(T);
-    let A = i.useCallback(() => {
+    let k = i.useCallback(() => {
         if (null == T) return;
         let e = b.Z.getRole(T.id, T.getEveryoneRoleId());
         if (null == e) return;
         g.Z.close();
         let t = { [e.id]: e };
         (0, p.iD)(T.id, {
-            type: h.z.SERVER_SHOP,
+            type: f.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
             returnToSection: O.pNK.GUILD_PRODUCTS
         }),
-            (0, f.uL)(O.Z5c.CHANNEL(T.id, C.oC.GUILD_SHOP));
+            (0, h.uL)(O.Z5c.CHANNEL(T.id, C.oC.GUILD_SHOP));
     }, [T]);
     if (!S || R) return (0, r.jsx)(l.$jN, {});
     if (null == T) return null;
-    let k = (0, r.jsxs)(r.Fragment, {
+    let A = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.vwX, {
                     tag: l.RB0.H1,
@@ -95,7 +95,7 @@ function S(e) {
                     ? (0, r.jsx)('div', {
                           className: E.previewButton,
                           children: (0, r.jsx)(l.zxk, {
-                              onClick: A,
+                              onClick: k,
                               color: l.zxk.Colors.PRIMARY,
                               size: l.zxk.Sizes.SMALL,
                               look: l.zxk.Looks.OUTLINED,
@@ -106,8 +106,8 @@ function S(e) {
             ]
         }),
         L = (0, s.EQ)(D)
-            .with('basic_info', () => (0, r.jsx)(_.Z, { guildId: t }))
-            .with('manage_listings', () => (0, r.jsx)(v.Z, { guildId: t }))
+            .with('basic_info', () => (0, r.jsx)(v.Z, { guildId: t }))
+            .with('manage_listings', () => (0, r.jsx)(_.Z, { guildId: t }))
             .with('payment', () => (0, r.jsx)(y.Z, { guildId: t }))
             .exhaustive(),
         M = S
@@ -119,7 +119,7 @@ function S(e) {
     return (0, r.jsxs)(c.AL, {
         guildId: t,
         children: [
-            k,
+            A,
             (0, r.jsx)(m.Z, { guild: T }),
             (0, r.jsx)('div', {
                 className: E.tabBarContainer,

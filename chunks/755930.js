@@ -1,7 +1,7 @@
 n.d(t, {
-    GW: () => _,
-    Qg: () => f,
-    Yn: () => v,
+    GW: () => v,
+    Qg: () => h,
+    Yn: () => _,
     ZP: () => E,
     bL: () => O,
     i$: () => N,
@@ -47,7 +47,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -66,7 +66,7 @@ function h(e, t) {
     }
     return i;
 }
-function f(e) {
+function h(e) {
     return (t, n, r) => {
         let i = e(t),
             s = e(n);
@@ -75,7 +75,7 @@ function f(e) {
 }
 function b(e) {
     var { key: t, cellClassName: n, renderHeader: r, renderContent: i } = e,
-        s = h(e, ['key', 'cellClassName', 'renderHeader', 'renderContent']);
+        s = f(e, ['key', 'cellClassName', 'renderHeader', 'renderContent']);
     return p(
         {
             key: t,
@@ -96,7 +96,7 @@ function x() {
 }
 function j(e) {
     var { cellClassName: t, key: n, renderHeader: i } = e,
-        s = h(e, ['cellClassName', 'key', 'renderHeader']);
+        s = f(e, ['cellClassName', 'key', 'renderHeader']);
     return b(
         p(
             {
@@ -137,7 +137,7 @@ function j(e) {
 }
 function N(e) {
     var { cellClassName: t, getAmount: n, key: i, renderHeader: s } = e,
-        a = h(e, ['cellClassName', 'getAmount', 'key', 'renderHeader']);
+        a = f(e, ['cellClassName', 'getAmount', 'key', 'renderHeader']);
     return b(
         p(
             {
@@ -153,9 +153,9 @@ function N(e) {
         )
     );
 }
-function _(e) {
+function v(e) {
     var { cellClassName: t, getCount: n, key: i, renderHeader: s } = e,
-        a = h(e, ['cellClassName', 'getCount', 'key', 'renderHeader']);
+        a = f(e, ['cellClassName', 'getCount', 'key', 'renderHeader']);
     return b(
         p(
             {
@@ -171,7 +171,7 @@ function _(e) {
         )
     );
 }
-function v(e) {
+function _(e) {
     let t = [...e];
     for (let n = 1; n < e.length; ++n) {
         let r = e[n];
@@ -237,8 +237,8 @@ let y = (e) => {
     };
 function E(e) {
     var { className: t, headerClassName: n, rowClassName: s, enableRowSeparators: l = !1, initialSortKey: c, initialSortDirection: d = u.sHY.ASCENDING } = e,
-        m = h(e, ['className', 'headerClassName', 'rowClassName', 'enableRowSeparators', 'initialSortKey', 'initialSortDirection']);
-    let [f, b] = i.useState(c),
+        m = f(e, ['className', 'headerClassName', 'rowClassName', 'enableRowSeparators', 'initialSortKey', 'initialSortDirection']);
+    let [h, b] = i.useState(c),
         [x, j] = i.useState(d);
     return (0, r.jsx)('div', {
         className: a()(g.tableContainer, t),
@@ -249,7 +249,7 @@ function E(e) {
                     className: a()({ [g.tableWithoutSeparators]: !l }, g.table),
                     rowClassName: a()({ [g.rowWithSeparators]: l }, s),
                     headerClassName: a()(g.header, { [g.headerWithoutSeparators]: !l }, n),
-                    sortKey: f,
+                    sortKey: h,
                     sortDirection: x,
                     onSort: (e, t) => {
                         b(e), j(t);

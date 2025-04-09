@@ -1,4 +1,4 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => v });
 var r = n(200651),
     i = n(192379),
     s = n(580685),
@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(434404),
     g = n(600553),
     p = n(999382),
-    h = n(548522),
-    f = n(651390),
+    f = n(548522),
+    h = n(651390),
     b = n(981631),
     x = n(388032),
     j = n(98574);
@@ -35,25 +35,25 @@ let N = {
     badgeColorPrimary: null,
     badgeColorSecondary: null
 };
-function _(e) {
+function v(e) {
     let { pendingFields: t } = e,
-        { guild: n, guildProfile: _ } = (0, l.cj)([p.Z], () => ({
+        { guild: n, guildProfile: v } = (0, l.cj)([p.Z], () => ({
             guild: p.Z.getGuild(),
             guildProfile: p.Z.getGuildProfile()
         })),
-        v = null == n ? void 0 : n.id,
-        y = (0, l.e7)([c.Z], () => c.Z.get(v)),
-        { fetchGuildProfile: O } = (0, d.u)(v),
-        C = (null == _ ? void 0 : _.visibility) == null || !s.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
-        I = (null == _ ? void 0 : _.visibility) === s.k.PUBLIC_WITH_RECRUITMENT,
+        _ = null == n ? void 0 : n.id,
+        y = (0, l.e7)([c.Z], () => c.Z.get(_)),
+        { fetchGuildProfile: O } = (0, d.u)(_),
+        C = (null == v ? void 0 : v.visibility) == null || !s.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
+        I = (null == v ? void 0 : v.visibility) === s.k.PUBLIC_WITH_RECRUITMENT,
         E = (0, g.Dj)({
-            guildId: v,
+            guildId: _,
             location: 'recruitment'
         });
     i.useEffect(() => {
-        null != v && O();
-    }, [v, O]);
-    let S = i.useMemo(() => (null == n || null == _ ? N : _), [n, _]),
+        null != _ && O();
+    }, [_, O]);
+    let S = i.useMemo(() => (null == n || null == v ? N : v), [n, v]),
         T = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null && (I ? m.Z.updateGuildProfile(n.id, { visibility: s.k.PUBLIC }) : m.Z.updateGuildProfile(n.id, { visibility: s.k.PUBLIC_WITH_RECRUITMENT }));
         }, [null == n ? void 0 : n.id, I]),
@@ -76,12 +76,12 @@ function _(e) {
                 className: j.applicationBody,
                 children: x.NW.string(x.t.Z7TCtb)
             }),
-            (0, r.jsx)(f.c, { guildId: n.id }),
+            (0, r.jsx)(h.c, { guildId: n.id }),
             (0, r.jsx)('div', {
                 className: j.form,
                 children:
                     null != w
-                        ? (0, r.jsx)(h.y, {
+                        ? (0, r.jsx)(f.y, {
                               guild: n,
                               formFields: w
                           })

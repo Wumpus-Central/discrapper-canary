@@ -13,15 +13,15 @@ function m(e) {
     let { guildId: t, allPeriods: m } = e,
         g = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
         p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
-        h = (0, l.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: f } = (0, a.gX)(t),
+        f = (0, l.ue)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: h } = (0, a.gX)(t),
         b = m.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
             return (null == n ? void 0 : n.status) === d.x_.OPEN || (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED;
         }),
         x = p.length > 0,
-        j = h.length > 0,
+        j = f.length > 0,
         N = b.length > 0;
     return null == g
         ? null
@@ -33,7 +33,7 @@ function m(e) {
                   }),
                   (0, r.jsx)(s.LZC, { size: 16 }),
                   (0, r.jsx)(s.zxk, {
-                      disabled: !f || x || j || N,
+                      disabled: !h || x || j || N,
                       look: s.zxk.Looks.FILLED,
                       color: s.zxk.Colors.RED,
                       onClick: () => {

@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(110924),
     g = n(410030),
     p = n(367907),
-    h = n(906732),
-    f = n(118012),
+    f = n(906732),
+    h = n(118012),
     b = n(218867),
     x = n(733026),
     j = n(246946),
     N = n(594174),
-    _ = n(626135),
-    v = n(136015),
+    v = n(626135),
+    _ = n(136015),
     y = n(51144),
     O = n(434404),
     C = n(999382),
@@ -79,20 +79,20 @@ function Z(e) {
     let { transitionState: n, guild: s, user: a, ban: l, hideDiscriminator: c, onClose: m } = e,
         [g, b] = i.useState(!1),
         [x, j] = i.useState(null),
-        { analyticsLocations: N } = (0, h.ZP)(),
-        v = null != (t = null == N ? void 0 : N[0]) ? t : null;
+        { analyticsLocations: N } = (0, f.ZP)(),
+        _ = null != (t = null == N ? void 0 : N[0]) ? t : null;
     async function O() {
         if (null != s) {
             j(null), b(!0);
             try {
                 await d.Z.unbanUser(s.id, a.id),
                     m(),
-                    _.default.track(
+                    v.default.track(
                         S.rMx.GUILD_BAN_REMOVED,
                         D(R({}, (0, p.hH)(s.id)), {
                             target_user_id: a.id,
                             reason: l.reason,
-                            location: v
+                            location: _
                         })
                     );
             } catch (e) {
@@ -108,8 +108,8 @@ function Z(e) {
                 className: P.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(f.Z, {
-                        size: f.Z.Sizes.SIZE_24,
+                    (0, r.jsx)(h.Z, {
+                        size: h.Z.Sizes.SIZE_24,
                         className: P.userUsername,
                         children: y.ZP.getUserTag(a, {
                             mode: 'username',
@@ -118,8 +118,8 @@ function Z(e) {
                     }),
                     c || a.isPomelo()
                         ? null
-                        : (0, r.jsxs)(f.Z, {
-                              size: f.Z.Sizes.SIZE_24,
+                        : (0, r.jsxs)(h.Z, {
+                              size: h.Z.Sizes.SIZE_24,
                               className: P.userDiscrim,
                               children: ['#', a.discriminator]
                           })
@@ -167,7 +167,7 @@ function Z(e) {
         ]
     });
 }
-class A extends i.PureComponent {
+class k extends i.PureComponent {
     render() {
         var e;
         let { user: t, guild: n } = this.props;
@@ -224,7 +224,7 @@ class A extends i.PureComponent {
             });
     }
 }
-let k = i.forwardRef(function (e, t) {
+let A = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: s, bans: a } = e,
         c = (0, l.e7)([j.Z], () => j.Z.hidePersonalInformation, []),
         d = i.useCallback(
@@ -253,7 +253,7 @@ let k = i.forwardRef(function (e, t) {
                     l = null == a ? void 0 : a.get(null != (t = null == i ? void 0 : i.id) ? t : '');
                 if (null != i && null != l)
                     return (0, r.jsx)(
-                        A,
+                        k,
                         {
                             user: i,
                             ban: l,
@@ -302,7 +302,7 @@ function W(e) {
                     c(!1);
                 }
         }, [t, l, s]),
-        h = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 'Enter' === e.key && (e.preventDefault(), e.stopPropagation(), p());
             },
@@ -331,7 +331,7 @@ function W(e) {
                             placeholder: T.NW.string(T.t.MiqUmZ),
                             'aria-label': T.NW.string(T.t.MiqUmZ),
                             onChange: m,
-                            onKeyDown: h,
+                            onKeyDown: f,
                             onClear: g,
                             size: o.E1j.Sizes.MEDIUM,
                             isLoading: l
@@ -356,11 +356,11 @@ function L() {
     var e, t;
     let { guild: c, searchQuery: u } = (0, l.e7)([C.Z], () => C.Z.getProps(), [], s.isEqual),
         p = null != u && u.trim().length > 0,
-        h = (0, m.Z)(p),
-        f = p !== h,
-        [b] = (0, l.e7)([C.Z], () => C.Z.getBans(), [], v.Q),
+        f = (0, m.Z)(p),
+        h = p !== f,
+        [b] = (0, l.e7)([C.Z], () => C.Z.getBans(), [], _.Q),
         j = null != (e = null == b ? void 0 : b.size) ? e : 0,
-        _ = (0, g.ZP)(),
+        v = (0, g.ZP)(),
         y = null != (t = null == c ? void 0 : c.id) ? t : S.lds,
         O = i.useRef(null),
         I = i.useCallback(
@@ -388,15 +388,15 @@ function L() {
         ),
         w = i.useMemo(() => E(b, u, j), [b, E, u, j]),
         Z = null != b,
-        A = w.length % 1000 == 0 && w.length > 0 && Z,
+        k = w.length % 1000 == 0 && w.length > 0 && Z,
         L = 0 === w.length,
         [M, G] = i.useState({
             currentPage: 1,
             pageSize: 100
         });
     i.useEffect(() => {
-        f && 1 !== M.currentPage && G((e) => D(R({}, e), { currentPage: 1 }));
-    }, [f, M.currentPage]);
+        h && 1 !== M.currentPage && G((e) => D(R({}, e), { currentPage: 1 }));
+    }, [h, M.currentPage]);
     let U = i.useCallback(
             (e) => {
                 d.Z.fetchGuildBansBatch(y, 1000, e);
@@ -407,9 +407,9 @@ function L() {
         F = i.useCallback(
             (e) => {
                 var t, n, r;
-                null == (t = O.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && A && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || A) && G((t) => D(R({}, t), { currentPage: e }));
+                null == (t = O.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && k && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || k) && G((t) => D(R({}, t), { currentPage: e }));
             },
-            [M.pageSize, w, A, B, U, p]
+            [M.pageSize, w, k, B, U, p]
         ),
         z = i.useRef(null);
     i.useEffect(() => {
@@ -432,16 +432,16 @@ function L() {
                       className: P.scrollerContainer,
                       children: [
                           !L &&
-                              (0, r.jsx)(k, {
+                              (0, r.jsx)(A, {
                                   guild: c,
                                   bans: b,
                                   sortedBans: H,
                                   ref: O
                               }),
-                          !A &&
+                          !k &&
                               L &&
                               (0, r.jsxs)(o.ubH, {
-                                  theme: _,
+                                  theme: v,
                                   className: P.emptyState,
                                   children: [
                                       (0, r.jsx)(o.oxh, {
@@ -463,7 +463,7 @@ function L() {
                       className: P.__invalid_paginationContainer,
                       children: (0, r.jsx)(o.DsT, {
                           className: P.paginationInput,
-                          totalCount: w.length + (A ? M.pageSize : 0),
+                          totalCount: w.length + (k ? M.pageSize : 0),
                           pageSize: M.pageSize,
                           currentPage: M.currentPage,
                           onPageChange: F,

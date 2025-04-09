@@ -16,8 +16,8 @@ var i = n(442837),
     g = n(483424),
     b = n(681837),
     _ = n(78806),
-    C = n(91433),
-    y = n(900927),
+    y = n(91433),
+    C = n(900927),
     x = n(944043),
     v = n(678738),
     j = n(502762),
@@ -71,7 +71,7 @@ function Z(e) {
             }),
             R === I.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(j.Z.Overlay, {
-                    children: (0, r.jsx)(C.Z, {
+                    children: (0, r.jsx)(y.Z, {
                         user: t,
                         channelId: T.id,
                         applicationId: D ? k : void 0
@@ -82,7 +82,7 @@ function Z(e) {
                     (0, r.jsx)(
                         j.Z.Overlay,
                         {
-                            children: (0, r.jsx)(C.Z, {
+                            children: (0, r.jsx)(y.Z, {
                                 user: t,
                                 isGameRelationship: !0,
                                 applicationId: e.applicationId,
@@ -138,7 +138,7 @@ function Z(e) {
                     (0, r.jsx)(v.Z, {
                         heading: t.bot ? P.NW.string(P.t['A//N4u']) : P.NW.string(P.t.a6XYDw),
                         headingColor: 'header-primary',
-                        children: (0, r.jsx)(y.Z, { userId: t.id })
+                        children: (0, r.jsx)(C.Z, { userId: t.id })
                     })
                 ]
             })

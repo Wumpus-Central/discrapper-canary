@@ -11,15 +11,15 @@ var r = n(200651),
     m = n(949640),
     g = n(981631),
     p = n(30513),
-    h = n(388032),
-    f = n(919957);
+    f = n(388032),
+    h = n(919957);
 function b(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
     if (null != t)
         return (0, r.jsx)(s.Text, {
             variant: 'text-md/normal',
             color: 'text-danger',
-            className: f.vanityInfo,
+            className: h.vanityInfo,
             children: (0, d.i)(null == t ? void 0 : t.code)
         });
     if (null != n && n.length > 0) {
@@ -27,8 +27,8 @@ function b(e) {
         return (0, r.jsx)(s.Text, {
             variant: 'text-sm/medium',
             color: 'text-secondary',
-            className: f.vanityInfo,
-            children: h.NW.format(h.t['1qTOvr'], {
+            className: h.vanityInfo,
+            children: f.NW.format(f.t['1qTOvr'], {
                 urlText: e,
                 urlValue: e
             })
@@ -49,21 +49,21 @@ function x(e) {
         ? (0, r.jsx)(s.$jN, {})
         : (0, r.jsxs)(s.Zbd, {
               editable: !0,
-              className: f.editVanityUrlCard,
+              className: h.editVanityUrlCard,
               children: [
                   (0, r.jsxs)('div', {
-                      className: f.formTitleField,
+                      className: h.formTitleField,
                       children: [
                           (0, r.jsx)(s.X6q, {
                               variant: 'heading-sm/semibold',
                               color: 'text-normal',
-                              children: h.NW.string(h.t['6oJyq6'])
+                              children: f.NW.string(f.t['6oJyq6'])
                           }),
                           n.length > 0
                               ? (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    children: h.NW.format(h.t.MVWOUV, { uses: a })
+                                    children: f.NW.format(f.t.MVWOUV, { uses: a })
                                 })
                               : null
                       ]
@@ -78,12 +78,12 @@ function x(e) {
                   }),
                   null != o && o.length > 0
                       ? (0, r.jsx)(s.zxk, {
-                            className: f.removeVanityUrlButton,
+                            className: h.removeVanityUrlButton,
                             onClick: m,
                             look: s.zxk.Looks.LINK,
                             size: s.zxk.Sizes.MIN,
                             color: s.zxk.Colors.RED,
-                            children: h.NW.string(h.t['3ggb6O'])
+                            children: f.NW.string(f.t['3ggb6O'])
                         })
                       : null
               ]
@@ -92,7 +92,7 @@ function x(e) {
 function j(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: l, errorDetails: o } = e,
         { analyticsLocations: c } = (0, a.ZP)(),
-        h = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -118,8 +118,8 @@ function j(e) {
                       hasError: null != o
                   })
                 : (0, r.jsx)(u.P, {
-                      onClick: h,
-                      className: f.upsellButton
+                      onClick: f,
+                      className: h.upsellButton
                   }),
             (0, r.jsx)(b, {
                 errorDetails: o,

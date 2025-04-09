@@ -23,11 +23,11 @@ var l = n(200651),
     _ = n(622562),
     h = n(937860),
     g = n(921944),
-    S = n(973792),
-    O = n(447489),
-    I = n(484885);
-function T() {
-    return (T =
+    O = n(973792),
+    S = n(447489),
+    T = n(484885);
+function I() {
+    return (I =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -75,15 +75,15 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
     b = (e) => {
         let { invertTail: t, leftOffset: n, rightOffset: r, tailSpineClassName: i, tailTargetInnerClassName: a } = e;
         return (0, l.jsxs)('div', {
-            className: o()(S.tail, t ? S.tailPositionInverted : S.tailPositionNormal),
+            className: o()(O.tail, t ? O.tailPositionInverted : O.tailPositionNormal),
             style: {
                 left: n,
                 right: r
             },
             children: [
-                (0, l.jsx)('div', { className: o()(S.tailSpine, i) }),
+                (0, l.jsx)('div', { className: o()(O.tailSpine, i) }),
                 (0, l.jsx)('div', {
-                    className: o()(S.tailTargetOuter, t ? S.tailTargetPositionInverted : S.tailTargetPositionNormal),
+                    className: o()(O.tailTargetOuter, t ? O.tailTargetPositionInverted : O.tailTargetPositionNormal),
                     children: (0, l.jsx)('svg', {
                         xmlns: 'http://www.w3.org/2000/svg',
                         width: '8',
@@ -94,7 +94,7 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
                             cx: '50%',
                             cy: '50%',
                             r: '3',
-                            className: o()(S.tailTargetInner, a)
+                            className: o()(O.tailTargetInner, a)
                         })
                     })
                 })
@@ -104,26 +104,26 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
     P = (e) => {
         let { customIconSrcs: t } = e,
             n = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-            r = void 0 !== t ? t.animated : I.Z,
-            i = void 0 !== t ? t.static : O.Z;
+            r = void 0 !== t ? t.animated : T.Z,
+            i = void 0 !== t ? t.static : S.Z;
         return n || null == r
             ? (0, l.jsx)('img', {
                   src: i,
-                  className: S.orbAsset,
+                  className: O.orbAsset,
                   alt: 'Orb'
               })
             : (0, l.jsxs)(E.Z, {
                   autoPlay: !0,
                   loop: !0,
-                  className: S.orbAsset,
+                  className: O.orbAsset,
                   children: [
                       (0, l.jsx)('source', {
-                          src: I.Z,
+                          src: T.Z,
                           type: 'video/webm'
                       }),
                       (0, l.jsx)('img', {
-                          src: O.Z,
-                          className: S.orbAsset,
+                          src: S.Z,
+                          className: O.orbAsset,
                           alt: 'Orb'
                       })
                   ]
@@ -132,29 +132,29 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
     v = (e) => {
         let { titleText: t, descriptionText: n, onClose: r, onCtaClick: i, ctaText: o, iconComponent: a, tailLeftOffset: s = 22, renderTail: c, invertCoachmark: d = !1, coachmarkRef: E } = e;
         return (0, l.jsxs)('div', {
-            className: S.container,
+            className: O.container,
             ref: E,
             children: [
                 (0, l.jsx)(h.s, { onClick: r }),
                 a,
                 (0, l.jsxs)('div', {
-                    className: S.content,
+                    className: O.content,
                     children: [
                         (0, l.jsx)(u.X6q, {
-                            className: S.title,
+                            className: O.title,
                             variant: 'heading-md/bold',
                             children: t
                         }),
                         (0, l.jsx)(u.Text, {
                             variant: 'text-sm/medium',
-                            className: S.description,
+                            className: O.description,
                             children: n
                         })
                     ]
                 }),
                 void 0 !== o &&
                     (0, l.jsx)(u.zxk, {
-                        className: S.ctaButton,
+                        className: O.ctaButton,
                         color: u.zxk.Colors.BRAND,
                         look: u.zxk.Looks.FILLED,
                         onClick: i,
@@ -170,7 +170,7 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
         });
     },
     y = (e) => {
-        var t = T(
+        var t = I(
             {},
             (function (e) {
                 if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -210,9 +210,9 @@ function L(e) {
     let { calculateVisibility: t, children: n, popoutElement: i, positionControlRef: o, targetElementRef: a, defaultCoachmarkPosition: s, disableAutoInvert: d, onGetTargetElementDimensions: E, spacing: f } = e,
         [C, p] = r.useState('bottom' === s),
         [h, g] = r.useState(!0),
-        [S, O] = r.useState(String(Date.now())),
-        I = (0, c.Z)(),
-        T = r.useCallback(
+        [O, S] = r.useState(String(Date.now())),
+        T = (0, c.Z)(),
+        I = r.useCallback(
             (e) => {
                 let n = t(e);
                 n !== h && g(n);
@@ -243,13 +243,13 @@ function L(e) {
                     }),
                 null != l)
             ) {
-                if ((T(l), r && O(String(Date.now())), d)) return;
+                if ((I(l), r && S(String(Date.now())), d)) return;
                 let e = l.top < window.innerHeight / 2;
                 if (e === C) return;
-                p(e), O(String(Date.now()));
+                p(e), S(String(Date.now()));
             }
         },
-        [C, T, E, d]
+        [C, I, E, d]
     );
     (0, _.fu)({
         onGetElementDimensionsAndBoundingRect: A,
@@ -259,7 +259,7 @@ function L(e) {
     });
     let b = r.Children.map(i, (e) => r.cloneElement(e, { invertCoachmark: C })),
         P = r.useMemo(() => (d ? (null != s ? s : 'bottom') : C ? 'bottom' : 'top'), [d, s, C]),
-        v = h && !I;
+        v = h && !T;
     return (0, l.jsx)(u.yRy, {
         autoInvert: !1,
         renderPopout: () => b,
@@ -267,7 +267,7 @@ function L(e) {
         align: 'left',
         shouldShow: v,
         spacing: f,
-        positionKey: S,
+        positionKey: O,
         animation: u.yRy.Animation.TRANSLATE,
         targetElementRef: a,
         children: () => n

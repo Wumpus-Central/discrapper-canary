@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(909746),
     b = n(501801),
     _ = n(884902),
-    C = n(271383),
-    y = n(430824),
+    y = n(271383),
+    C = n(430824),
     x = n(5192),
     v = n(776767),
     j = n(981631),
@@ -29,12 +29,12 @@ function P(e) {
     let { log: n, member: l, guild: a } = e,
         { analyticsLocations: d } = (0, p.ZP)(),
         m = g.nm(n),
-        y = g.QM(n),
+        C = g.QM(n),
         v = null == (t = g.V$(j.zUn.REASON, n)) ? void 0 : t.newValue,
         I = g.J5(n),
         P = (0, h.LJ)(n.id),
-        S = (0, c.e7)([C.ZP], () => (null != n.userId ? C.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
-        Z = (0, _.E)(null == S ? void 0 : S.guildId, null == S ? void 0 : S.colorStrings),
+        S = (0, c.e7)([y.ZP], () => (null != n.userId ? y.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
+        Z = (0, _.X)(null == S ? void 0 : S.guildId, null == S ? void 0 : S.colorStrings),
         T = i.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, f.RE)(e, d);
@@ -64,7 +64,7 @@ function P(e) {
                                           (0, r.jsx)(u.PUh, {
                                               name: x.ZP.getName(l.guildId, null, n.user),
                                               color: null != (t = null == S ? void 0 : S.colorString) ? t : void 0,
-                                              roleGradient: Z
+                                              roleColors: Z
                                           })
                                       ]
                                   })
@@ -88,11 +88,11 @@ function P(e) {
                                     color: 'header-primary',
                                     children: m
                                 }),
-                            null != y &&
+                            null != C &&
                                 (0, r.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof y ? y : s()(y).fromNow(), ')']
+                                    children: ['(', 'string' == typeof C ? C : s()(C).fromNow(), ')']
                                 })
                         ]
                     }),
@@ -163,7 +163,7 @@ function P(e) {
 }
 function S(e) {
     let { member: t } = e,
-        n = (0, c.e7)([y.Z], () => y.Z.getGuild(t.guildId), [t.guildId]),
+        n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]),
         l = (0, c.e7)(
             [m.Z],
             () => {

@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(481060),
     g = n(410030),
     p = n(367907),
-    h = n(768762),
-    f = n(626135),
+    f = n(768762),
+    h = n(626135),
     b = n(585483),
     x = n(999382),
     j = n(743475),
     N = n(983135),
-    _ = n(8426),
-    v = n(969632),
+    v = n(8426),
+    _ = n(969632),
     y = n(570961),
     O = n(208665),
     C = n(359191),
@@ -31,7 +31,7 @@ var r = n(200651),
     R = n(981631),
     D = n(388032),
     Z = n(179556);
-function A(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function A(e) {
     }
     return e;
 }
-function k(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -134,16 +134,16 @@ function L(e) {
         else if (x === I.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(P.Zm, {});
         else if (x === I.PG.HOME_SETTINGS) return (0, r.jsx)(w.Z, {});
     }
-    let Q = x === I.xh[I.xh.length - 1],
-        J = async () => {
+    let J = x === I.xh[I.xh.length - 1],
+        Q = async () => {
             let e = O.Z.advancedMode;
             if (L)
                 try {
                     if (x === I.PG.DEFAULT_CHANNELS) await (0, j.DO)(t).then(() => (e ? (0, y.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (x === I.PG.CUSTOMIZATION_QUESTIONS) await (0, y.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (x === I.PG.HOME_SETTINGS) {
-                        let e = v.Z.getSettings();
-                        await (0, _.oo)(t.id, e);
+                        let e = _.Z.getSettings();
+                        await (0, v.oo)(t.id, e);
                     }
                 } catch (e) {
                     return !1;
@@ -151,27 +151,27 @@ function L(e) {
             return !0;
         },
         $ = async () => {
-            f.default.track(
+            h.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                k(A({}, (0, p.hH)(s)), {
+                A(k({}, (0, p.hH)(s)), {
                     step: I.PG[x],
                     back: !1,
                     skip: !L
                 })
             ),
                 (0, N.Nb)((0, I.lg)(x)),
-                (await J()) && (0, N.IG)(s, x);
+                (await Q()) && (0, N.IG)(s, x);
         },
         ee = async () => {
-            f.default.track(
+            h.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                k(A({}, (0, p.hH)(s)), {
+                A(k({}, (0, p.hH)(s)), {
                     step: I.PG[x],
                     back: !0,
                     skip: !1
                 })
             ),
-                (await J()) && (0, N.Wy)(s, x);
+                (await Q()) && (0, N.Wy)(s, x);
         },
         et = null;
     U && (x === I.PG.SAFETY_CHECK ? (et = (0, r.jsx)(S.j7, {})) : x === I.PG.DEFAULT_CHANNELS ? (et = (0, r.jsx)(S.Io, {})) : x === I.PG.CUSTOMIZATION_QUESTIONS ? (et = (0, r.jsx)(S.cZ, {})) : x === I.PG.HOME_SETTINGS && (et = (0, r.jsx)(S.g6, {})));
@@ -185,9 +185,9 @@ function L(e) {
             children: (0, r.jsxs)('span', {
                 className: Z.button,
                 children: [
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(f.Z, {
                         className: Z.arrow,
-                        direction: h.Z.Directions.LEFT
+                        direction: f.Z.Directions.LEFT
                     }),
                     D.NW.string(D.t['13/7kZ'])
                 ]
@@ -205,9 +205,9 @@ function L(e) {
                 style: { color: q },
                 children: [
                     M ? D.NW.string(D.t.PDTjLC) : D.NW.string(D.t['5WxrcX']),
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(f.Z, {
                         className: Z.arrow,
-                        direction: h.Z.Directions.RIGHT
+                        direction: f.Z.Directions.RIGHT
                     })
                 ]
             })
@@ -255,7 +255,7 @@ function L(e) {
                                                       children: D.NW.string(D.t.DhYsPD)
                                                   })
                                                 : null,
-                                            Q ? null : er
+                                            J ? null : er
                                         ]
                                     })
                                 ]

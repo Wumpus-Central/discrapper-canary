@@ -12,8 +12,8 @@ var i = n(852229),
     m = n(613810),
     g = n(391181),
     p = n(388032),
-    h = n(520880);
-let f = 'guild-product-listings-header';
+    f = n(520880);
+let h = 'guild-product-listings-header';
 function b(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         b = (0, c.ue)(t, { publishedOnly: !1 }),
@@ -62,21 +62,21 @@ function b(e) {
                     );
             });
         },
-        _ = (e, t) => {
+        v = (e, t) => {
             (0, i.J)((0, d.ar)(e, t));
         },
-        v = b.length > 0;
+        _ = b.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.vwX, {
-                className: h.productListingsHeader,
-                id: f,
-                children: v ? p.NW.string(p.t.RwuStb) : p.NW.string(p.t.WKMcMT)
+                className: f.productListingsHeader,
+                id: h,
+                children: _ ? p.NW.string(p.t.RwuStb) : p.NW.string(p.t.WKMcMT)
             }),
-            v
+            _
                 ? (0, r.jsx)('ul', {
-                      className: h.productListings,
-                      'aria-labelledby': f,
+                      className: f.productListings,
+                      'aria-labelledby': h,
                       children: b.map((e) =>
                           (0, r.jsx)(
                               'li',
@@ -87,7 +87,7 @@ function b(e) {
                                       onEditProduct: () => u(e.id),
                                       onUnpublishProduct: () => j(e.id),
                                       onDeleteProduct: () => N(e.id, e.name),
-                                      onCopyProductLink: () => _(t, e.id),
+                                      onCopyProductLink: () => v(t, e.id),
                                       onTestDownload: () =>
                                           m.Z.open({
                                               guildId: t,
@@ -118,8 +118,8 @@ function x(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(s.zxk, {
-                className: h.addButton,
-                innerClassName: h.addButtonInner,
+                className: f.addButton,
+                innerClassName: f.addButtonInner,
                 onClick: () => i(null),
                 disabled: n,
                 children: [

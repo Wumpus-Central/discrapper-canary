@@ -193,10 +193,10 @@ class T extends (r = o.Component) {
                 resizeKey: 0
             }),
             b(this, 'handlePopoutShow', () => {
-                this.context.windowDispatch.dispatch(E.CkL.POPOUT_SHOW);
+                this.context.windowDispatch.dispatch(E.CkL.POPOUT_SHOW, this.props.popoutKey);
             }),
             b(this, 'handlePopoutHide', () => {
-                this.context.windowDispatch.dispatch(E.CkL.POPOUT_HIDE);
+                this.context.windowDispatch.dispatch(E.CkL.POPOUT_HIDE, this.props.popoutKey);
             }),
             b(this, 'handleSetPopoutRef', (e) => {
                 var t;

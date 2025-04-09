@@ -82,12 +82,12 @@ function h(e) {
         { onFocus: _ } = x,
         E = p(x, ['onFocus']),
         { id: j } = (0, a.f$)(),
-        [O, C] = i.useState(!1),
+        [C, O] = i.useState(!1),
         S = null != b;
     i.useLayoutEffect(() => {
         if (S)
             return (0, s.N)(j, (e) => {
-                C(e === t);
+                O(e === t);
             });
     }, [t, j, S]);
     let v = (e) =>
@@ -134,8 +134,8 @@ function h(e) {
         ? (0, r.jsx)(o.yRy, {
               spacing: 0,
               renderPopout: b,
-              shouldShow: O,
-              onRequestClose: () => C(!0),
+              shouldShow: C,
+              onRequestClose: () => O(!0),
               children: v
           })
         : v();

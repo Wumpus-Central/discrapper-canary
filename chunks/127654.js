@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => y,
+    G: () => C,
     d: () => x
 }),
     n(539854),
@@ -21,8 +21,8 @@ var r = n(475179),
     g = n(981631),
     b = n(959517),
     _ = n(474936),
-    C = n(388032);
-function y(e, t) {
+    y = n(388032);
+function C(e, t) {
     let n = d.default.getCurrentUser(),
         r = e.getGuildId(),
         i = h.dg(r),
@@ -44,7 +44,7 @@ function y(e, t) {
             attachment_mimetypes: p
         }),
             (0, o.openUploadError)({
-                title: C.NW.string(C.t['/tGlcn']),
+                title: y.NW.string(y.t['/tGlcn']),
                 help: (0, m.BK)(n, r),
                 showPremiumUpsell: !(0, f.M5)(n, _.p9.TIER_2),
                 fileSize: c
@@ -52,8 +52,8 @@ function y(e, t) {
         return;
     }
     (0, o.openUploadError)({
-        title: C.NW.string(C.t['/tGlcn']),
-        help: C.NW.formatToPlainString(C.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
+        title: y.NW.string(y.t['/tGlcn']),
+        help: y.NW.formatToPlainString(y.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
     });
 }
 function x(e, t, n) {
@@ -61,11 +61,11 @@ function x(e, t, n) {
     if (e.length < 1) return;
     if (null != s && s.length !== e.length) throw Error('Unexpected mismatch between files and file metadata');
     let b = t.getGuildId();
-    if ((0, m.Bf)(e, b)) return void y(t, e);
+    if ((0, m.Bf)(e, b)) return void C(t, e);
     if (u.Z.getUploadCount(t.id, n) + e.length > g.dN1) {
         (0, o.openUploadError)({
-            title: C.NW.string(C.t.wOr6hI),
-            help: C.NW.formatToPlainString(C.t['qqyp/f'], { limit: g.dN1 })
+            title: y.NW.string(y.t.wOr6hI),
+            help: y.NW.formatToPlainString(y.t['qqyp/f'], { limit: g.dN1 })
         }),
             p.default.track(g.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: u.Z.getUploadCount(t.id, n),

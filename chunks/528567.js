@@ -1,30 +1,30 @@
 n.d(t, {
-    C: () => a,
-    s: () => l
+    C: () => i,
+    s: () => o
 });
 var r = n(939639),
-    i = n(99815),
-    o = n(388032);
-function a(e) {
+    a = n(99815),
+    l = n(388032);
+function i(e) {
     var t;
     return null !=
         (t = {
-            [i.E.LOL_TOTAL_KILLS]: o.NW.string(o.t.aIbY2N),
-            [i.E.LOL_TOTAL_DEATHS]: o.NW.string(o.t.Jec90d),
-            [i.E.LOL_TOTAL_ASSISTS]: o.NW.string(o.t['8+lHWV']),
-            [i.E.LOL_TOTAL_DAMAGE_DEALT]: o.NW.string(o.t['XEmO+P']),
-            [i.E.LOL_TOTAL_DAMAGE_TAKEN]: o.NW.string(o.t['TcQ7//']),
-            [i.E.LOL_TOTAL_WINS]: o.NW.string(o.t['/QfLjI']),
-            [i.E.LOL_MAX_CREEP_SCORE]: o.NW.string(o.t.M5pp7e)
+            [a.E.LOL_TOTAL_KILLS]: l.NW.string(l.t.aIbY2N),
+            [a.E.LOL_TOTAL_DEATHS]: l.NW.string(l.t.Jec90d),
+            [a.E.LOL_TOTAL_ASSISTS]: l.NW.string(l.t['8+lHWV']),
+            [a.E.LOL_TOTAL_DAMAGE_DEALT]: l.NW.string(l.t['XEmO+P']),
+            [a.E.LOL_TOTAL_DAMAGE_TAKEN]: l.NW.string(l.t['TcQ7//']),
+            [a.E.LOL_TOTAL_WINS]: l.NW.string(l.t['/QfLjI']),
+            [a.E.LOL_MAX_CREEP_SCORE]: l.NW.string(l.t.M5pp7e)
         }[e])
         ? t
-        : o.NW.string(o.t['IraB/v']);
+        : l.NW.string(l.t['IraB/v']);
 }
-function l(e) {
-    let { statisticId: t, sortDesc: n, aggregationType: i } = e,
-        l = a(t);
-    if (i === r.k.MAX)
-        if (n) return o.NW.formatToPlainString(o.t.nJYOFx, { statisticName: l });
-        else return o.NW.formatToPlainString(o.t.SYKIbW, { statisticName: l });
-    return n ? o.NW.formatToPlainString(o.t.M9sOp6, { statisticName: l }) : o.NW.formatToPlainString(o.t.USfwd3, { statisticName: l });
+function o(e) {
+    let { statisticId: t, sortDesc: n, aggregationType: a } = e,
+        o = i(t);
+    if (a === r.k.MAX)
+        if (n) return l.NW.formatToPlainString(l.t.nJYOFx, { statisticName: o });
+        else return l.NW.formatToPlainString(l.t.SYKIbW, { statisticName: o });
+    return n ? l.NW.formatToPlainString(l.t.M9sOp6, { statisticName: o }) : l.NW.formatToPlainString(l.t.USfwd3, { statisticName: o });
 }

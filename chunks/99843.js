@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function C(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function C(e, t) {
         e
     );
 }
-let y = (e) => {
+let C = (e) => {
         let { channel: t } = e;
         return (0, f.m$)({ channelId: t.id })
             ? (0, r.jsx)(a.ua7, {
@@ -65,7 +65,7 @@ let y = (e) => {
                   children: (e) =>
                       (0, r.jsx)(
                           a.tQf,
-                          C(_({}, e), {
+                          y(_({}, e), {
                               size: 'xs',
                               'aria-label': g.NW.string(g.t.VHXh8f),
                               color: a.TVs.colors.INTERACTIVE_NORMAL
@@ -98,7 +98,7 @@ let y = (e) => {
                                           children: (e) =>
                                               (0, r.jsxs)(
                                                   a.P3F,
-                                                  C(_({}, e), {
+                                                  y(_({}, e), {
                                                       className: b.clickableTitle,
                                                       onClick: () => f(c),
                                                       onDoubleClick: (e) => e.stopPropagation(),
@@ -118,7 +118,7 @@ let y = (e) => {
                                                   })
                                               )
                                       }),
-                                      (0, r.jsx)(y, { channel: t })
+                                      (0, r.jsx)(C, { channel: t })
                                   ]
                               })
                             : (0, r.jsx)('form', {
@@ -181,7 +181,7 @@ let y = (e) => {
                                 i !== e.currentTarget.value && s.Z.setName(t.id, e.currentTarget.value);
                             }
                         }),
-                        (0, r.jsx)(y, { channel: t })
+                        (0, r.jsx)(C, { channel: t })
                     ]
                 })
             ]

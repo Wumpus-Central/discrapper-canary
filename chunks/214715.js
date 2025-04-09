@@ -7,7 +7,7 @@ var r = n(200651),
     o = n(934846);
 let c = i.memo(function (e) {
     let { text: t, variant: n = 'text-xs/medium', color: s = 'text-normal', icon: c, className: d, selected: u, onMouseEnter: m, onMouseLeave: g, onClick: p } = e,
-        h = i.useMemo(() => {
+        f = i.useMemo(() => {
             if (null != p) return () => p(t);
         }, [p, t]);
     return (0, r.jsxs)(l.P3F, {
@@ -15,15 +15,15 @@ let c = i.memo(function (e) {
         className: a()(
             o.trait,
             {
-                [o.selectable]: null != h && !u,
+                [o.selectable]: null != f && !u,
                 [o.selected]: u,
-                [o.clickable]: null != h
+                [o.clickable]: null != f
             },
             d
         ),
         onMouseEnter: m,
         onMouseLeave: g,
-        onClick: h,
+        onClick: f,
         children: [
             null != c &&
                 (0, r.jsx)(c, {

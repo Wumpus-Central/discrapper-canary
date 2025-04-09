@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => g });
 var r = n(200651),
     l = n(192379),
     o = n(498607),
@@ -55,22 +55,22 @@ function h(e, t) {
         e
     );
 }
-function j(e) {
+function g(e) {
     let { guildId: t, onClose: n } = e,
         o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
-        j = (0, u.dW)(t),
-        g = l.useCallback(() => {
-            o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
-        }, [t, o, j]),
+        g = (0, u.dW)(t),
+        j = l.useCallback(() => {
+            o.requireUnusualDmActivity || g(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
+        }, [t, o, g]),
         x = l.useCallback(() => {
-            o.requireCommunicationDisabled || j(u.aY.COMMUNICATION_DISABLED), (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
-        }, [t, o, j]),
+            o.requireCommunicationDisabled || g(u.aY.COMMUNICATION_DISABLED), (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
+        }, [t, o, g]),
+        O = l.useCallback(() => {
+            o.requireUnusualAccountActivity || g(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
+        }, [t, o, g]),
         y = l.useCallback(() => {
-            o.requireUnusualAccountActivity || j(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
-        }, [t, o, j]),
-        v = l.useCallback(() => {
-            o.requireUsernameQuarantined || j(u.aY.USERNAME_QUARANTINED), (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
-        }, [t, o, j]);
+            o.requireUsernameQuarantined || g(u.aY.USERNAME_QUARANTINED), (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
+        }, [t, o, g]);
     return (0, r.jsx)(s.v2r, {
         navId: 'member-safety-flags',
         onClose: n,
@@ -93,7 +93,7 @@ function j(e) {
                             b.NW.string(b.t.ZRnONz)
                         ]
                     }),
-                    action: g,
+                    action: j,
                     checked: o.requireUnusualDmActivity
                 }),
                 (0, r.jsx)(s.S89, {
@@ -129,7 +129,7 @@ function j(e) {
                                     b.NW.string(b.t.DIQsDw)
                                 ]
                             }),
-                            action: y,
+                            action: O,
                             checked: o.requireUnusualAccountActivity
                         }),
                         (0, r.jsx)(s.S89, {
@@ -147,7 +147,7 @@ function j(e) {
                                     b.NW.string(b.t.Jloklp)
                                 ]
                             }),
-                            action: v,
+                            action: y,
                             checked: o.requireUsernameQuarantined
                         })
                     ]

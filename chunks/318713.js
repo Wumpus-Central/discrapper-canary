@@ -1,8 +1,8 @@
 r.d(t, { Z: () => d });
 var n = r(200651);
 r(192379);
-var i = r(120356),
-    l = r.n(i),
+var l = r(120356),
+    i = r.n(l),
     a = r(481060),
     o = r(55935),
     c = r(543388),
@@ -11,7 +11,7 @@ var i = r(120356),
     m = r(848697);
 function p(e) {
     var t, r;
-    let { tooltipProps: i, timeFormatted: l, children: a, compact: o, timestamp: c, id: s } = e;
+    let { tooltipProps: l, timeFormatted: i, children: a, compact: o, timestamp: c, id: s } = e;
     return (0, n.jsx)(
         'time',
         ((t = (function (e) {
@@ -38,7 +38,7 @@ function p(e) {
                     });
             }
             return e;
-        })({}, i)),
+        })({}, l)),
         (r = r =
             {
                 id: s,
@@ -53,7 +53,7 @@ function p(e) {
                                       'aria-hidden': !0,
                                       children: o ? '[' : ' \u2014 '
                                   }),
-                                  l,
+                                  i,
                                   o &&
                                       (0, n.jsxs)('i', {
                                           className: m.separator,
@@ -79,14 +79,14 @@ function p(e) {
     );
 }
 let d = function (e) {
-    let { children: t, className: r, compact: i = !1, timestamp: d, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: y = !1, isInline: O = !0, id: g, isEdited: j = !1, application: v, tooltipPosition: h } = e,
+    let { children: t, className: r, compact: l = !1, timestamp: d, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: y = !1, isInline: O = !0, id: g, isEdited: j = !1, application: v, tooltipPosition: h } = e,
         x = new Date(d),
         P = (0, o.Hg)(x),
-        S = null != f ? (0, o.vc)(x, f) : i ? (0, o.vc)(x, 'LT') : (0, o.Y4)(x, !0),
-        N = i ? (0, s.Z)(S) : null,
+        S = null != f ? (0, o.vc)(x, f) : l ? (0, o.vc)(x, 'LT') : (0, o.Y4)(x, !0),
+        N = l ? (0, s.Z)(S) : null,
         w = j ? u.NW.formatToPlainString(u.t.CDzOFR, { timeFormatted: P }) : P;
     return (0, n.jsx)('span', {
-        className: l()(r, N, {
+        className: i()(r, N, {
             [m.timestamp]: !0,
             [m.timestampVisibleOnHover]: b,
             [m.timestampInline]: O,
@@ -106,19 +106,19 @@ let d = function (e) {
                               timeFormatted: S,
                               timestamp: x,
                               id: g,
-                              compact: i,
+                              compact: l,
                               children: t
                           })
                   })
                 : (0, n.jsx)(c.Z, {
                       application: v,
                       timestamp: x,
-                      compact: i,
+                      compact: l,
                       children: (0, n.jsx)(p, {
                           timeFormatted: S,
                           timestamp: x,
                           id: g,
-                          compact: i,
+                          compact: l,
                           children: t
                       })
                   })

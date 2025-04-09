@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(314897),
     d = n(594174),
     p = n(626135),
-    _ = n(5192),
-    h = n(873128),
+    h = n(5192),
+    _ = n(873128),
     f = n(246627),
     m = n(709737),
     g = n(69589),
@@ -43,31 +43,31 @@ function v(e) {
         ]
     });
 }
-function N(e) {
+function S(e) {
     var t, n, b, C, y;
-    let N,
+    let S,
         { selected: x, channel: I, entry: T } = e,
         L = I.guild_id,
-        P = (0, h.Z)({
+        P = (0, _.Z)({
             guildId: L,
             leaderboardId: T.extra.leaderboard_id,
             intervalOffset: 0
         }),
-        { rankChanges: j } = (0, f.Z)({
+        { rankChanges: A } = (0, f.Z)({
             guildId: L,
             leaderboardId: T.extra.leaderboard_id,
             intervalStart: null != (C = null == P ? void 0 : P.interval_start) ? C : ''
         }),
-        A = (0, o.e7)([u.default], () => u.default.getId()),
+        j = (0, o.e7)([u.default], () => u.default.getId()),
         [R, w] = i.useMemo(() => {
-            let e = j.find((e) => e.userId === A),
-                t = j[0],
+            let e = A.find((e) => e.userId === j),
+                t = A[0],
                 n = null != e ? e : t,
                 r = null == P ? void 0 : P.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, r];
-        }, [P, j, A]),
+        }, [P, A, j]),
         k = (0, o.e7)([d.default], () => d.default.getUser(null == R ? void 0 : R.userId)),
-        M = _.ZP.getName(L, void 0, k);
+        M = h.ZP.getName(L, void 0, k);
     !(function (e) {
         let { leaderboard: t, guildId: n } = e,
             r = null == t ? void 0 : t.leaderboard_id;
@@ -85,7 +85,7 @@ function N(e) {
     let Z = (0, s.q)(null == P || null == (t = P.settings) ? void 0 : t.application_id);
     if (null == P || null == Z) return null;
     if (0 === P.users.length || null == R || null == k)
-        return (0, r.jsx)(S, {
+        return (0, r.jsx)(N, {
             application: Z,
             selected: x
         });
@@ -93,8 +93,8 @@ function N(e) {
         U = null != (y = null == w || null == (b = w.statistics) || null == (n = b[D]) ? void 0 : n.value) ? y : 0,
         { currentRank: V } = R;
     return (
-        (N =
-            R.userId === A
+        (S =
+            R.userId === j
                 ? O.NW.formatToPlainString(O.t['eU+JxM'], { rank: V })
                 : O.NW.formatToPlainString(O.t['8BLSQ0'], {
                       rank: V,
@@ -107,7 +107,7 @@ function N(e) {
                     children: [
                         (0, r.jsx)(v, { application: Z }),
                         (0, r.jsx)(l.LZC, { size: 2 }),
-                        (0, r.jsx)(c.ll, { children: N }),
+                        (0, r.jsx)(c.ll, { children: S }),
                         (0, r.jsx)(a.Gk, {
                             location: a.Gt.CARD,
                             children: (0, r.jsx)(m.DC, {
@@ -125,7 +125,7 @@ function N(e) {
         })
     );
 }
-function S(e) {
+function N(e) {
     let { selected: t, application: n } = e;
     return (0, r.jsxs)(c.Zb, {
         selected: t,

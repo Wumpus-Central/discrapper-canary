@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => C });
 var r = n(200651),
     i = n(192379),
     l = n(609784),
@@ -15,9 +15,9 @@ var r = n(200651),
     g = n(221241),
     b = n(378441),
     _ = n(871499),
-    C = n(981631);
-function y(e) {
-    var { selfMute: t, serverMute: n, suppress: y, centerButton: x = !1, awaitingRemote: v, onMouseEnter: j, onMouseLeave: O, onClick: E } = e,
+    y = n(981631);
+function C(e) {
+    var { selfMute: t, serverMute: n, suppress: C, centerButton: x = !1, awaitingRemote: v, onMouseEnter: j, onMouseLeave: O, onClick: E } = e,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -40,9 +40,9 @@ function y(e) {
     let { parentAnalyticsLocation: I } = (0, p.ZP)(),
         { mode: P } = (0, m.ZP)({ location: 'MicButton' }),
         { squareButtonsEnabled: S, coloredIconsEnabled: Z } = (0, g.Z)({ location: 'MuteButton' }),
-        T = t || n || y,
+        T = t || n || C,
         A = x ? _.d : _.Z,
-        w = (0, h.Z)(t, n, y, v, P === m.BK.GroupedButtonsRedMic || S),
+        w = (0, h.Z)(t, n, C, v, P === m.BK.GroupedButtonsRedMic || S),
         R = (0, c.O)(T ? 'unmute' : 'mute'),
         k = (0, u.P)(T ? 'unmute' : 'mute'),
         { activeVoice: M } = (0, b.o)(),
@@ -51,9 +51,9 @@ function y(e) {
         { events: W, play: U } = D;
     i.useEffect(() => () => U(), [U, T]);
     let B = D.Component;
-    (0, d.bp)() === C.IlC.POPOUT && (B = L ? (T ? o.T : l.x) : T ? s.n : a.S);
+    (0, d.bp)() === y.IlC.POPOUT && (B = L ? (T ? o.T : l.x) : T ? s.n : a.S);
     let H = (S || P === m.BK.GroupedButtonsRedMic) && T ? 'red' : void 0,
-        F = P !== m.BK.GroupedButtonsRedMic && !S;
+        G = P !== m.BK.GroupedButtonsRedMic && !S;
     return (0, r.jsx)(
         A,
         (function (e) {
@@ -82,7 +82,7 @@ function y(e) {
             return e;
         })(
             {
-                isActive: !!F && !T,
+                isActive: !!G && !T,
                 iconComponent: B,
                 caretColor: Z && T ? 'red' : 'primaryDark',
                 color: H,

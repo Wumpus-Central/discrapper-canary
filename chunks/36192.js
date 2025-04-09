@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(823379),
     E = n(981631),
     j = n(921944),
-    O = n(388032),
-    C = n(232696);
+    C = n(388032),
+    O = n(232696);
 function S() {
     let e,
         { currentSession: t, otherSessions: n } = (0, h.h)(),
@@ -47,19 +47,19 @@ function S() {
               null == t && 0 === n.length
                   ? u
                       ? (0, r.jsx)('div', {
-                            className: C.loading,
+                            className: O.loading,
                             children: (0, r.jsx)(d.$jN, {})
                         })
                       : null
                   : (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)('div', {
-                                className: C.sessions,
+                                className: O.sessions,
                                 children: [
                                     (0, r.jsx)(d.hjN, {
                                         tag: d.RB0.H5,
-                                        title: O.NW.string(O.t.LLS19v),
-                                        titleClassName: C.groupTitle,
+                                        title: C.NW.string(C.t.LLS19v),
+                                        titleClassName: O.groupTitle,
                                         children:
                                             null != t
                                                 ? (0, r.jsx)(v, {
@@ -72,9 +72,9 @@ function S() {
                                         ? null
                                         : (0, r.jsxs)(d.hjN, {
                                               tag: d.RB0.H5,
-                                              title: O.NW.string(O.t.xx1MWV),
-                                              titleClassName: C.groupTitle,
-                                              className: C.otherSessions,
+                                              title: C.NW.string(C.t.xx1MWV),
+                                              titleClassName: O.groupTitle,
+                                              className: O.otherSessions,
                                               children: [
                                                   n.map((e) =>
                                                       (0, r.jsx)(
@@ -99,21 +99,21 @@ function S() {
                             n.length > 0
                                 ? (0, r.jsxs)(d.hjN, {
                                       tag: d.RB0.H5,
-                                      title: _.size > 0 ? O.NW.string(O.t.mMEmRE) : O.NW.string(O.t.Vij32N),
+                                      title: _.size > 0 ? C.NW.string(C.t.mMEmRE) : C.NW.string(C.t.Vij32N),
                                       children: [
                                           (0, r.jsx)(d.R94, {
                                               type: d.geA.DESCRIPTION,
-                                              children: O.NW.string(O.t.OTXyaW)
+                                              children: C.NW.string(C.t.OTXyaW)
                                           }),
                                           (0, r.jsx)(d.zxk, {
                                               look: d.zxk.Looks.OUTLINED,
                                               color: d.zxk.Colors.RED,
                                               size: d.zxk.Sizes.SMALL,
-                                              className: C.logOutAllButton,
+                                              className: O.logOutAllButton,
                                               onClick: () => {
                                                   _.size > 0 ? (0, p.L$)(Array.from(_)) : (0, p.L$)(n.map((e) => e.id_hash));
                                               },
-                                              children: _.size > 0 ? O.NW.formatToPlainString(O.t['83CPLi'], { count: _.size }) : O.NW.string(O.t.cLmmeX)
+                                              children: _.size > 0 ? C.NW.formatToPlainString(C.t['83CPLi'], { count: _.size }) : C.NW.string(C.t.cLmmeX)
                                           })
                                       ]
                                   })
@@ -122,24 +122,24 @@ function S() {
                     })),
           (0, r.jsxs)(d.hjN, {
               tag: d.RB0.H1,
-              title: O.NW.string(O.t['+1h0k5']),
+              title: C.NW.string(C.t['+1h0k5']),
               children: [
                   (0, r.jsx)(d.R94, {
                       type: d.geA.DESCRIPTION,
-                      className: C.description,
-                      children: O.NW.string(O.t.zZp619)
+                      className: O.description,
+                      children: C.NW.string(C.t.zZp619)
                   }),
                   (null == a ? void 0 : a.isStaff())
                       ? (0, r.jsxs)('div', {
-                            className: C.tools,
+                            className: O.tools,
                             children: [
                                 (0, r.jsx)(d.Text, {
-                                    className: C.toolsTitle,
+                                    className: O.toolsTitle,
                                     variant: 'text-md/bold',
                                     children: 'DEV TOOLS'
                                 }),
                                 (0, r.jsx)(d.Text, {
-                                    className: C.toolsTitle,
+                                    className: O.toolsTitle,
                                     variant: 'text-sm/normal',
                                     color: 'text-danger',
                                     children: 'These tools are only shown to staff users.'
@@ -176,7 +176,7 @@ function v(e) {
                 case void 0:
                 case '':
                     return {
-                        text: O.NW.string(O.t.cDHCNT),
+                        text: C.NW.string(C.t.cDHCNT),
                         icon: d.pzj
                     };
                 case 'ios':
@@ -198,21 +198,21 @@ function v(e) {
     return (0, r.jsxs)(
         'div',
         {
-            className: a()(C.session, c ? C.currentSession : null),
+            className: a()(O.session, c ? O.currentSession : null),
             children: [
                 (0, r.jsx)('div', {
-                    className: C.sessionIcon,
+                    className: O.sessionIcon,
                     children: (0, r.jsx)(x, {
                         size: 'md',
                         color: 'currentColor'
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: C.sessionInfo,
+                    className: O.sessionInfo,
                     children: [
                         (0, r.jsxs)(d.Text, {
                             variant: 'eyebrow',
-                            className: C.sessionInfoRow,
+                            className: O.sessionInfoRow,
                             children: [
                                 (0, r.jsx)('span', { children: j[0] }),
                                 j.length > 1 &&
@@ -223,7 +223,7 @@ function v(e) {
                         }),
                         (0, r.jsxs)(d.Text, {
                             variant: 'text-sm/medium',
-                            className: C.sessionInfoRow,
+                            className: O.sessionInfoRow,
                             children: [
                                 (0, r.jsx)('span', { children: S[0] }),
                                 S.length > 1 &&
@@ -238,7 +238,7 @@ function v(e) {
                     ? null
                     : g
                       ? (0, r.jsx)('div', {
-                            className: C.sessionCheckbox,
+                            className: O.sessionCheckbox,
                             children: (0, r.jsx)(d.XZJ, {
                                 onChange: (e, t) => {
                                     null == u || u(t);
@@ -247,11 +247,11 @@ function v(e) {
                             })
                         })
                       : (0, r.jsx)(d.P3F, {
-                            className: C.sessionMoreButton,
+                            className: O.sessionMoreButton,
                             onClick: (e) => {
                                 e.shiftKey ? null == u || u(!0) : (0, p.L$)(o.id_hash);
                             },
-                            'aria-label': O.NW.string(O.t.E4MJNj),
+                            'aria-label': C.NW.string(C.t.E4MJNj),
                             children: (0, r.jsx)(d.Dio, {
                                 size: 'md',
                                 color: 'currentColor'
@@ -264,29 +264,29 @@ function v(e) {
 }
 function T() {
     return (0, r.jsxs)('div', {
-        className: a()(C.session, C.legacySession),
+        className: a()(O.session, O.legacySession),
         children: [
             (0, r.jsx)('div', {
-                className: C.sessionIcon,
+                className: O.sessionIcon,
                 children: (0, r.jsx)(x.Z, {
                     width: '32',
                     height: '32'
                 })
             }),
             (0, r.jsxs)('div', {
-                className: C.sessionInfo,
+                className: O.sessionInfo,
                 children: [
                     (0, r.jsx)(d.Text, {
                         variant: 'eyebrow',
-                        className: C.sessionInfoRow,
+                        className: O.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, r.jsx)('span', { children: O.NW.string(O.t.iUa0sr) })
+                        children: (0, r.jsx)('span', { children: C.NW.string(C.t.iUa0sr) })
                     }),
                     (0, r.jsx)(d.Text, {
                         variant: 'text-sm/medium',
-                        className: C.sessionInfoRow,
+                        className: O.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, r.jsx)('span', { children: O.NW.format(O.t['044+8v'], { onClick: () => u.Z.setSection(E.oAB.ACCOUNT, null, { analyticsLocations: [g.Z.USER_SETTINGS_SESSIONS] }) }) })
+                        children: (0, r.jsx)('span', { children: C.NW.format(C.t['044+8v'], { onClick: () => u.Z.setSection(E.oAB.ACCOUNT, null, { analyticsLocations: [g.Z.USER_SETTINGS_SESSIONS] }) }) })
                     })
                 ]
             })

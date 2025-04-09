@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function h(e) {
     }
     return e;
 }
-function f(e) {
+function h(e) {
     return new Set(Array.from(e).filter((e) => null != u.Z.getDetectableGame(e)));
 }
 let b = () => ({
@@ -49,7 +49,7 @@ let b = () => ({
         description: '',
         wildcardDescriptors: [g.U6, g.U6, g.U6],
         tag: '',
-        verificationForm: h({}, d.t),
+        verificationForm: f({}, d.t),
         badgeKind: m.ZD.SWORD,
         badgePrimaryColor: m.sg['0'].primary,
         badgeSecondaryColor: m.sg['0'].secondary,
@@ -60,44 +60,44 @@ let b = () => ({
     x = b(),
     j = l()(x),
     N = !1,
-    _ = !1,
-    v = {};
+    v = !1,
+    _ = {};
 class y extends (r = o.ZP.Store) {
     getState() {
         return {
             initialSettings: x,
             settings: j,
             dirty: N,
-            errors: v,
-            submitting: _
+            errors: _,
+            submitting: v
         };
     }
 }
 p(y, 'displayName', 'ClanSettingsStore');
 let O = new y(c.Z, {
     CLAN_SETTINGS_FETCH_START: function () {
-        (_ = !1), (x = b()), (j = l()(x)), (N = !1), (v = {});
+        (v = !1), (x = b()), (j = l()(x)), (N = !1), (_ = {});
     },
     CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        (x = h({}, b(), t)), ((j = l()(x)).gameApplicationIds = f(j.gameApplicationIds)), (N = !1);
+        (x = f({}, b(), t)), ((j = l()(x)).gameApplicationIds = h(j.gameApplicationIds)), (N = !1);
     },
     CLAN_SETTINGS_UPDATE: function (e) {
         let { updates: t } = e,
             { gameApplicationIds: n } = t;
-        for (let e in (null != n && (t.gameApplicationIds = f(n)), (j = h({}, j, l()(t))), t)) delete v[e], (v = h({}, v));
+        for (let e in (null != n && (t.gameApplicationIds = h(n)), (j = f({}, j, l()(t))), t)) delete _[e], (_ = f({}, _));
         N = !s().isEqual(s().omit(j, 'verificationForm'), s().omit(x, 'verificationForm'));
     },
     CLAN_SETTINGS_SUBMIT: function () {
-        (_ = !0), (v = {});
+        (v = !0), (_ = {});
     },
     CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-        (_ = !1), (x = l()(j)), (N = !1), (v = {});
+        (v = !1), (x = l()(j)), (N = !1), (_ = {});
     },
     CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
         let { error: t } = e;
-        (_ = !1),
-            (v = {
+        (v = !1),
+            (_ = {
                 gameApplicationIds: t.getFirstFieldErrorMessage('game_application_ids'),
                 playstyle: t.getFirstFieldErrorMessage('play_style'),
                 description: t.getFirstFieldErrorMessage('description'),
@@ -112,8 +112,8 @@ let O = new y(c.Z, {
         let { form: i, isLocalUpdate: a } = e;
         if (null == j.verificationForm) return !1;
         N =
-            ((t = h({}, j)),
-            (n = n = { verificationForm: h({}, j.verificationForm, i) }),
+            ((t = f({}, j)),
+            (n = n = { verificationForm: f({}, j.verificationForm, i) }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {

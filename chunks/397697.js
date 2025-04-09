@@ -52,7 +52,7 @@ let o = ['#01007f', '#0000b0', '#0000e1', '#2d3dee', '#5470e9', '#a091eb', '#cc9
 function p(e) {
     var t,
         n,
-        { width: p, height: h, primaryTintColor: f, secondaryTintColor: b } = e,
+        { width: p, height: f, primaryTintColor: h, secondaryTintColor: b } = e,
         x = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -74,7 +74,7 @@ function p(e) {
         })(e, ['width', 'height', 'primaryTintColor', 'secondaryTintColor']);
     let { primaryColorsTransformed: j, secondaryColorsTransformed: N } = (0, i.s)({
             primaryBaseColors: o,
-            primaryTintColor: f,
+            primaryTintColor: h,
             primaryTintLuminances: d,
             primaryLuminanceWeights: u,
             secondaryBaseColors: c,
@@ -82,7 +82,7 @@ function p(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: g
         }),
-        { styleContent: _, containerId: v } = (0, s.bC)(j, N);
+        { styleContent: v, containerId: _ } = (0, s.bC)(j, N);
     return (0, r.jsxs)(
         'svg',
         ((t = (function (e) {
@@ -114,13 +114,13 @@ function p(e) {
             {
                 'aria-label': a.NW.string(a.t.nH6S2d),
                 width: p,
-                height: h,
+                height: f,
                 viewBox: '0 0 '.concat(s.Km, ' ').concat(s.md),
                 children: [
-                    (0, r.jsx)('defs', { children: (0, r.jsx)('style', { children: _ }) }),
+                    (0, r.jsx)('defs', { children: (0, r.jsx)('style', { children: v }) }),
                     (0, r.jsx)('use', {
                         href: ''.concat(l, '#wrapper-layer'),
-                        id: v
+                        id: _
                     })
                 ]
             }),

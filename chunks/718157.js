@@ -16,7 +16,7 @@ function u(e) {
             },
             [t]
         ),
-        h = i.useMemo(
+        f = i.useMemo(
             () =>
                 g.map((e) => {
                     let { categoryId: t, name: n } = e;
@@ -34,11 +34,11 @@ function u(e) {
               {
                   value: n.primaryCategoryId === c.o3 ? null : n.primaryCategoryId,
                   placeholder: d.NW.string(d.t.XqMe3N),
-                  options: h,
+                  options: f,
                   onChange: p,
                   isDisabled: u,
                   clearable: m
               },
-              h.length
+              f.length
           );
 }

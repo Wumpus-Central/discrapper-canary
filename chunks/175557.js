@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(108930),
@@ -36,7 +36,7 @@ function p(e) {
     }
     return e;
 }
-function h(e) {
+function f(e) {
     var { banner: t } = e,
         n = (function (e, t) {
             if (null == e) return {};

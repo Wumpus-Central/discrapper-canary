@@ -100,7 +100,7 @@ function M(e) {
             var e;
             return [null != (e = null == J ? void 0 : J.colorString) ? e : 'inherit', null == J ? void 0 : J.colorStrings, null == J ? void 0 : J.colorRoleId];
         }, [J]),
-        er = (0, v.E)(null == J ? void 0 : J.guildId, et),
+        er = (0, v.X)(null == J ? void 0 : J.guildId, et),
         { reducedMotion: ei } = i.useContext(u.Sfi),
         [ea, el] = i.useState(!1),
         eo = i.useCallback(() => {
@@ -262,7 +262,7 @@ function M(e) {
                                                         ? (0, r.jsx)(u.rz2, {
                                                               name: F.authorName,
                                                               color: ee,
-                                                              roleGradient: er,
+                                                              roleColors: er,
                                                               className: k.authorName
                                                           })
                                                         : (0, r.jsx)(
@@ -281,7 +281,7 @@ function M(e) {
                                                                           L(D({}, e), {
                                                                               name: F.authorName,
                                                                               color: ee,
-                                                                              roleGradient: er,
+                                                                              roleColors: er,
                                                                               className: k.authorName
                                                                           })
                                                                       )

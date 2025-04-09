@@ -30,7 +30,7 @@ function a(e) {
         })(e, ['size', 'color', 'width', 'height']);
     let g = (0, s.m)(o),
         p = null != (a = null == g ? void 0 : g.width) ? a : d,
-        h = null != (l = null == g ? void 0 : g.height) ? l : u;
+        f = null != (l = null == g ? void 0 : g.height) ? l : u;
     return (0, r.jsxs)(
         'svg',
         ((t = (function (e) {
@@ -60,7 +60,7 @@ function a(e) {
         })(
             {
                 width: p,
-                height: h,
+                height: f,
                 viewBox: '0 0 10 16',
                 fill: 'string' == typeof c ? c : c.css
             },

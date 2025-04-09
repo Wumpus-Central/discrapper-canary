@@ -8,9 +8,9 @@ var r = n(200651),
 function c(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: d, setSelectedSection: u } = e,
         [m, g] = i.useState(''),
-        [p, h] = i.useState(o.Cl),
-        f = m.trim(),
-        b = i.useMemo(() => d.filter((e) => (0, s.uo)(e, f)), [d, f]),
+        [p, f] = i.useState(o.Cl),
+        h = m.trim(),
+        b = i.useMemo(() => d.filter((e) => (0, s.uo)(e, h)), [d, h]),
         x = i.useCallback(
             () =>
                 (0, r.jsx)(
@@ -22,7 +22,7 @@ function c(e) {
                         setEditRoleId: t,
                         query: m,
                         setQuery: g,
-                        setHeaderHeight: h
+                        setHeaderHeight: f
                     },
                     'header'
                 ),

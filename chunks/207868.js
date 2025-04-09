@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -15,12 +15,12 @@ var r = n(200651),
     g = n(665149),
     b = n(981631),
     _ = n(388032);
-let C = i.memo(function (e) {
+let y = i.memo(function (e) {
     let { channel: t } = e,
         n = (0, u.Z)(),
         l = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
-        C = (0, a.e7)([f.Z], () => !o().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
-        y = (0, a.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
+        y = (0, a.e7)([f.Z], () => !o().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
+        C = (0, a.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
         { needSubscriptionToAccess: x } = (0, d.Z)(t.id),
         v = (0, p.$R)(t),
         j = i.useCallback(() => {
@@ -49,13 +49,13 @@ let C = i.memo(function (e) {
     ).enabled &&
         !n &&
         !l &&
-        y &&
+        C &&
         v &&
         t.isVocalThread())
         ? (0, r.jsx)(g.ZP.Icon, {
               icon: s.Csw,
               onClick: j,
-              tooltip: C ? _.NW.string(_.t.fdEeb2) : _.NW.string(_.t.focH1t)
+              tooltip: y ? _.NW.string(_.t.fdEeb2) : _.NW.string(_.t.focH1t)
           })
         : null;
 });

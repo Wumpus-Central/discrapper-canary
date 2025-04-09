@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(539854);
+n.d(t, { Z: () => h }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -11,19 +11,19 @@ var r = n(200651),
     m = n(185923),
     g = n(388032),
     p = n(727138);
-let h = (e) => {
+let f = (e) => {
         var t;
-        let { reason: n = '', emoji_name: d, onSetReason: g, onSelectEmoji: h, onClearPressed: f, reasonMinLength: b, reasonMaxLength: x, placeholder: j, position: N } = e,
-            [_, v] = i.useState(!1),
+        let { reason: n = '', emoji_name: d, onSetReason: g, onSelectEmoji: f, onClearPressed: h, reasonMinLength: b, reasonMaxLength: x, placeholder: j, position: N } = e,
+            [v, _] = i.useState(!1),
             y = (0, s.e7)([u.Z], () => u.Z.isGuildMetadataLoaded());
         return (0, r.jsxs)('div', {
             className: p.reasonContainer,
             children: [
                 (0, r.jsx)(a.yRy, {
                     onRequestClose: () => {
-                        v(!1);
+                        _(!1);
                     },
-                    shouldShow: _,
+                    shouldShow: v,
                     position: 'right',
                     align: 'top',
                     animation: a.yRy.Animation.NONE,
@@ -33,7 +33,7 @@ let h = (e) => {
                             pickerIntention: m.Hz.COMMUNITY_CONTENT,
                             closePopout: t,
                             onSelectEmoji: (e, n) => {
-                                null != e && h(e), n && t();
+                                null != e && f(e), n && t();
                             }
                         });
                     },
@@ -43,7 +43,7 @@ let h = (e) => {
                             children: (0, r.jsx)(o.Z, {
                                 active: !1,
                                 onClick: () => {
-                                    v(!0);
+                                    _(!0);
                                 },
                                 tabIndex: 0,
                                 renderButtonContents:
@@ -78,7 +78,7 @@ let h = (e) => {
                         (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != d
                             ? (0, r.jsx)(a.zxk, {
                                   className: p.clearStatusButton,
-                                  onClick: f,
+                                  onClick: h,
                                   look: a.zxk.Looks.BLANK,
                                   size: a.zxk.Sizes.NONE,
                                   tabIndex: -1,
@@ -95,14 +95,14 @@ let h = (e) => {
             ]
         });
     },
-    f = (e) => {
+    h = (e) => {
         let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: s } = e,
             a = [g.NW.string(g.t['9dhBGh']), g.NW.string(g.t['8RmhKC']), g.NW.string(g.t['2t0V8/']), g.NW.string(g.t.l8WqCQ)],
             l = [];
         for (let e = 0; e < 4; e++)
             l.push(
                 (0, r.jsx)(
-                    h,
+                    f,
                     (function (e, t) {
                         return (
                             (t = null != t ? t : {}),

@@ -35,7 +35,7 @@ function f(e) {
             },
             [b, m]
         ),
-        C = r.useMemo(() => {
+        y = r.useMemo(() => {
             if (null == f || 0 === _.length) return h;
             let e = new Set();
             for (let t of _) {
@@ -47,5 +47,5 @@ function f(e) {
             }
             return e;
         }, [_, f]);
-    return r.useMemo(() => (null == t ? void 0 : t.filter((e) => C.has(e.author_id))), [t, C]);
+    return r.useMemo(() => (null == t ? void 0 : t.filter((e) => y.has(e.author_id))), [t, y]);
 }
