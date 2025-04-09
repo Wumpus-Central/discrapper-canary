@@ -9,40 +9,40 @@ var n = s(200651),
     o = s(931839),
     m = s(905987),
     x = s(789662),
-    u = s(981631),
-    h = s(388032),
+    h = s(981631),
+    u = s(388032),
     j = s(699343);
 function g(e) {
     let { onClose: t, transitionState: s, dismissable: c, guildPain: g, myUsage: _ } = e,
-        [b, f] = i.useState(o.O.Intro),
-        { submitted: v, submitting: p, saveSettings: C } = (0, l.vo)(t),
-        { guildPlans: W, overrideGuild: T, getDebug: y } = (0, l.F6)(g, _),
+        [b, v] = i.useState(o.O.Intro),
+        { submitted: f, submitting: p, saveSettings: W } = (0, l.vo)(t),
+        { guildPlans: C, overrideGuild: T, getDebug: y } = (0, l.F6)(g, _),
         w = i.useRef(null);
     return (
         i.useEffect(() => {
-            a.default.track(u.rMx.OPEN_MODAL, { type: 'notification_migration_modal' });
+            a.default.track(h.rMx.OPEN_MODAL, { type: 'notification_migration_modal' });
         }, []),
         (0, n.jsxs)(r.Y0X, {
             className: j.__invalid_modal,
             transitionState: s,
-            'aria-label': h.NW.string(h.t.HcoRu7),
+            'aria-label': u.NW.string(u.t.HcoRu7),
             size: r.CgR.DYNAMIC,
             children: [
                 (0, n.jsx)(o.Z, {
                     selectedTab: b,
-                    onClick: f,
-                    submitted: v
+                    onClick: v,
+                    submitted: f
                 }),
                 b === o.O.Intro
                     ? (0, n.jsx)(d.Z, { ref: w })
                     : b === o.O.Customize
                       ? (0, n.jsx)(N, {
-                            guildPlans: W,
+                            guildPlans: C,
                             overrideGuild: T,
                             getDebug: y
                         })
                       : (0, n.jsx)(m.Z, {
-                            count: Object.values(W).filter((e) => {
+                            count: Object.values(C).filter((e) => {
                                 var t;
                                 return (null != (t = e.overrideMode) ? t : e.mode) === x.AR.UseGreyDot;
                             }).length
@@ -61,7 +61,7 @@ function g(e) {
                                           children: (0, n.jsx)(r.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'interactive-normal',
-                                              children: h.NW.string(h.t.hvVgAQ)
+                                              children: u.NW.string(u.t.hvVgAQ)
                                           })
                                       }),
                                 c && b === o.O.Intro
@@ -71,7 +71,7 @@ function g(e) {
                                           children: (0, n.jsx)(r.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'interactive-normal',
-                                              children: h.NW.string(h.t.WAI6xs)
+                                              children: u.NW.string(u.t.WAI6xs)
                                           })
                                       })
                                     : null,
@@ -82,7 +82,7 @@ function g(e) {
                                           children: (0, n.jsx)(r.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'interactive-normal',
-                                              children: h.NW.string(h.t['ETE/oK'])
+                                              children: u.NW.string(u.t['ETE/oK'])
                                           })
                                       })
                                     : null
@@ -96,13 +96,13 @@ function g(e) {
                                           className: j.warning,
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
-                                          children: h.NW.string(h.t.nlpqxM)
+                                          children: u.NW.string(u.t.nlpqxM)
                                       })
                                     : null,
-                                b !== o.O.Customize || v
+                                b !== o.O.Customize || f
                                     ? null
                                     : (0, n.jsxs)(r.zxk, {
-                                          onClick: () => f(o.O.Intro),
+                                          onClick: () => v(o.O.Intro),
                                           color: r.zxk.Colors.TRANSPARENT,
                                           children: [
                                               (0, n.jsx)(r.whL, {
@@ -110,17 +110,17 @@ function g(e) {
                                                   color: 'currentColor'
                                               }),
                                               ' ',
-                                              h.NW.string(h.t['13/7kZ'])
+                                              u.NW.string(u.t['13/7kZ'])
                                           ]
                                       }),
                                 b === o.O.Intro
                                     ? (0, n.jsxs)(r.zxk, {
                                           onClick: () => {
                                               var e;
-                                              (null == (e = w.current) ? void 0 : e.maybeChangeToAfterTab()) && f(o.O.Customize);
+                                              (null == (e = w.current) ? void 0 : e.maybeChangeToAfterTab()) && v(o.O.Customize);
                                           },
                                           children: [
-                                              h.NW.string(h.t.uw9zIy),
+                                              u.NW.string(u.t.uw9zIy),
                                               ' ',
                                               (0, n.jsx)(r.ZSh, {
                                                   size: 'xs',
@@ -131,10 +131,10 @@ function g(e) {
                                     : b === o.O.Customize
                                       ? (0, n.jsxs)(r.zxk, {
                                             onClick: () => {
-                                                f(o.O.Tips), C(W);
+                                                v(o.O.Tips), W(C);
                                             },
                                             children: [
-                                                h.NW.string(h.t['1Qm829']),
+                                                u.NW.string(u.t['1Qm829']),
                                                 ' ',
                                                 (0, n.jsx)(r.dz2, {
                                                     size: 'xs',
@@ -145,7 +145,7 @@ function g(e) {
                                       : (0, n.jsx)(r.zxk, {
                                             submitting: p,
                                             onClick: t,
-                                            children: h.NW.string(h.t.cpT0Cg)
+                                            children: u.NW.string(u.t.cpT0Cg)
                                         })
                             ]
                         })
@@ -166,13 +166,13 @@ function N(e) {
                     (0, n.jsx)(r.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        children: h.NW.string(h.t['zBC2+f'])
+                        children: u.NW.string(u.t['zBC2+f'])
                     }),
                     (0, n.jsx)(r.Text, {
                         className: j.__invalid_subtitle,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: h.NW.string(h.t['zE9e//'])
+                        children: u.NW.string(u.t['zE9e//'])
                     })
                 ]
             }),

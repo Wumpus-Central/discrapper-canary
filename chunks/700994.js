@@ -1,76 +1,76 @@
-n.d(t, { Z: () => f });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(846027),
-    o = n(131951),
-    s = n(594174),
-    u = n(36703),
-    c = n(358085),
+    i = n(481060),
+    o = n(846027),
+    a = n(131951),
+    u = n(594174),
+    c = n(36703),
+    s = n(358085),
     d = n(65154),
-    g = n(388032);
-function f(e) {
+    f = n(388032);
+function g(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
-        f = (0, l.e7)([o.Z], () => o.Z.getLocalVolume(e, n), [e, n]),
-        b = e === (null == (t = s.default.getCurrentUser()) ? void 0 : t.id),
-        Z = n === d.Yn.STREAM;
+        g = (0, l.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
+        b = e === (null == (t = u.default.getCurrentUser()) ? void 0 : t.id),
+        O = n === d.Yn.STREAM;
     return b
         ? null
-        : (0, i.jsx)(r.II_, {
+        : (0, r.jsx)(i.II_, {
               id: 'user-volume',
-              label: Z ? g.NW.string(g.t.t4JBnJ) : g.NW.string(g.t.m7TNdH),
+              label: O ? f.NW.string(f.t.t4JBnJ) : f.NW.string(f.t.m7TNdH),
               control: (t, l) => {
-                  var o, s;
-                  return (0, i.jsx)(
-                      r._wy,
-                      ((o = (function (e) {
+                  var a, u;
+                  return (0, r.jsx)(
+                      i._wy,
+                      ((a = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
-                                  i = Object.keys(n);
+                                  r = Object.keys(n);
                               'function' == typeof Object.getOwnPropertySymbols &&
-                                  (i = i.concat(
+                                  (r = r.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                       })
                                   )),
-                                  i.forEach(function (t) {
-                                      var i;
-                                      (i = n[t]),
+                                  r.forEach(function (t) {
+                                      var r;
+                                      (r = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: i,
+                                                    value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = i);
+                                              : (e[t] = r);
                                   });
                           }
                           return e;
                       })({}, t)),
-                      (s = s =
+                      (u = u =
                           {
                               ref: l,
-                              value: (0, u.P)(f),
-                              maxValue: c.isPlatformEmbedded ? 200 : 100,
-                              onChange: (t) => a.Z.setLocalVolume(e, (0, u.A)(t), n),
-                              'aria-label': Z ? g.NW.string(g.t.t4JBnJ) : g.NW.string(g.t.m7TNdH)
+                              value: (0, c.P)(g),
+                              maxValue: s.isPlatformEmbedded ? 200 : 100,
+                              onChange: (t) => o.Z.setLocalVolume(e, (0, c.A)(t), n),
+                              'aria-label': O ? f.NW.string(f.t.t4JBnJ) : f.NW.string(f.t.m7TNdH)
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(s))
+                          ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var i = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, i);
+                                    var r = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(s)).forEach(function (e) {
-                                Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(s, e));
+                            })(Object(u)).forEach(function (e) {
+                                Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
                             }),
-                      o)
+                      a)
                   );
               }
           });

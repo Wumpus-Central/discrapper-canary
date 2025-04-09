@@ -105,7 +105,7 @@ let P = new s.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var o;
-            await Promise.all([n.e('48835'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('11212'), n.e('86328'), n.e('80284'), n.e('9710'), n.e('24967'), n.e('7654'), n.e('62117'), n.e('49751'), n.e('49049'), n.e('44156'), n.e('83957'), n.e('53967'), n.e('49286'), n.e('55666'), n.e('23988'), n.e('58227'), n.e('56444'), n.e('93375'), n.e('64679'), n.e('15327'), n.e('21881'), n.e('52526')]).then(n.bind(n, 994763)),
+            await Promise.all([n.e('48835'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('11212'), n.e('86328'), n.e('80284'), n.e('9710'), n.e('57971'), n.e('7654'), n.e('62117'), n.e('49751'), n.e('49049'), n.e('44156'), n.e('83957'), n.e('53967'), n.e('49286'), n.e('55666'), n.e('23988'), n.e('58227'), n.e('56444'), n.e('93375'), n.e('64679'), n.e('92216'), n.e('21881'), n.e('52526')]).then(n.bind(n, 994763)),
                 t === v.pNK.DISCOVERY && (0, l.K2)(e, 'GuildSettignsActionCreators.open') && ((t = v.pNK.ACCESS), (i = v.KsC.ACCESS_DISCOVERABLE)),
                 t === v.pNK.OVERVIEW &&
                     i === v.KsC.INVITE &&

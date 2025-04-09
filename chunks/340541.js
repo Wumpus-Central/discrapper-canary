@@ -1,5 +1,5 @@
 n.d(t, {
-    _k: () => l,
+    _k: () => o,
     jW: () => i
 });
 let r = (0, n(818083).B)({
@@ -20,7 +20,7 @@ function i(e) {
         { enabled: n } = r.getCurrentConfig({ location: t });
     return n;
 }
-function l(e) {
+function o(e) {
     let { location: t } = e,
         { enabled: n } = r.useExperiment({ location: t });
     return { enabled: n };

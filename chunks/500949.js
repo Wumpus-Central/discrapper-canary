@@ -1,10 +1,10 @@
 n.d(t, {
     $R: () => X,
     A0: () => et,
-    GU: () => K,
+    GU: () => Y,
     H8: () => q,
     HI: () => J,
-    HW: () => F,
+    HW: () => U,
     Ib: () => es,
     KB: () => eu,
     S2: () => H,
@@ -16,7 +16,7 @@ n.d(t, {
     iw: () => en,
     jC: () => W,
     jQ: () => G,
-    lT: () => Y,
+    lT: () => K,
     rd: () => ed,
     t4: () => ec,
     uF: () => em,
@@ -47,20 +47,20 @@ var r,
     j = n(940172),
     y = n(81011),
     C = n(981613),
-    T = n(762399),
-    N = n(232112),
-    S = n(53796),
-    O = n(723757),
+    O = n(762399),
+    S = n(232112),
+    N = n(53796),
+    T = n(723757),
     E = n(375924),
     k = n(596136),
-    w = n(341901),
-    P = n(856308),
+    P = n(341901),
+    w = n(856308),
     I = n(665352),
-    Z = n(394900),
-    R = n(661105),
+    R = n(394900),
+    Z = n(661105),
     L = n(525169),
-    D = n(433517),
-    A = n(190558),
+    A = n(433517),
+    D = n(190558),
     B = n(231338);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -105,7 +105,7 @@ function M(e, t) {
         e
     );
 }
-let F = {
+let U = {
         sRGB: i.Z,
         A98RGB: o.Z,
         ACEScc: s.Z,
@@ -124,28 +124,28 @@ let F = {
         Lab_D65: j.Z,
         Luv: y.Z,
         OKLCH: C.Z,
-        OKLab: T.Z,
-        P3: N.Z,
-        ProPhoto: S.Z,
-        REC_2020: O.Z,
+        OKLab: O.Z,
+        P3: S.Z,
+        ProPhoto: N.Z,
+        REC_2020: T.Z,
         REC_2100_HLG: E.Z,
         REC_2100_PQ: k.Z,
-        XYZ_D50: w.Z,
-        XYZ_D65: P.Z
+        XYZ_D50: P.Z,
+        XYZ_D65: w.Z
     },
-    G = Object.fromEntries(Object.keys(F).map((e) => [e, e]));
-Object.values(F).forEach((e) => I.Z.register(e));
-let { SemanticColors: U } = A.V,
-    W = U,
+    G = Object.fromEntries(Object.keys(U).map((e) => [e, e]));
+Object.values(U).forEach((e) => I.Z.register(e));
+let { SemanticColors: F } = D.V,
+    W = F,
     H = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function V(e, t) {
     let [n, r] = l.useState(() => {
-        let n = D.K.get(e);
+        let n = A.K.get(e);
         return null != n ? n : t;
     });
     return (
         l.useEffect(() => {
-            D.K.set(e, n);
+            A.K.set(e, n);
         }, [e, n]),
         [n, r]
     );
@@ -166,7 +166,7 @@ function X(e) {
         highlight: !1
     };
 }
-function Y(e, t, n, r, a) {
+function K(e, t, n, r, a) {
     return {
         name: t,
         colors: M(z({}, e.colors), {
@@ -178,11 +178,11 @@ function Y(e, t, n, r, a) {
         highlight: !1
     };
 }
-function K(e) {
+function Y(e) {
     return M(z({}, e), { highlight: !e.highlight });
 }
 function J(e) {
-    return (0, Z.Z)((0, R.Z)(e, i.Z), { format: 'hex' });
+    return (0, R.Z)((0, Z.Z)(e, i.Z), { format: 'hex' });
 }
 var q = (((r = {}).TOKENS = 'Tokens'), (r.PALETTES = 'Palettes'), r);
 function $() {
@@ -232,8 +232,8 @@ function er(e, t) {
 }
 function ea(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: o = 1 } = e,
-        s = F[e.colorSpace],
-        c = (0, R.Z)(n, s),
+        s = U[e.colorSpace],
+        c = (0, Z.Z)(n, s),
         d = (0, L.CD)(c, 'white', 1 - a, {
             space: s,
             outputSpace: i.Z

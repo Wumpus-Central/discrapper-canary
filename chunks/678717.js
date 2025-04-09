@@ -21,32 +21,32 @@ var g = n(392750),
     j = n(592197),
     y = n(806240),
     C = n(789654),
-    T = n(719672),
-    N = n(691867),
-    S = n(916790),
-    O = n(645973),
+    O = n(719672),
+    S = n(691867),
+    N = n(916790),
+    T = n(645973),
     E = n(903502),
     k = n(604776),
-    w = n(912072),
-    P = n(272193),
+    P = n(912072),
+    w = n(272193),
     I = n(685560),
-    Z = n(735959),
-    R = n(246992),
+    R = n(735959),
+    Z = n(246992),
     L = n(496025),
-    D = n(442954),
-    A = n(633001),
+    A = n(442954),
+    D = n(633001),
     B = n(702904),
     z = n(178821),
     M = n(958328),
-    F = n(315384),
+    U = n(315384),
     G = n(514866),
-    U = n(384207),
+    F = n(384207),
     W = n(264603),
     H = n(678639),
     V = n(351930),
     X = n(771751),
-    Y = n(596768),
-    K = n(56706),
+    K = n(596768),
+    Y = n(56706),
     J = n(621060),
     q = n(388032),
     $ = n(736967),
@@ -79,7 +79,7 @@ function et() {
                     id: 'triggers',
                     name: 'Triggers',
                     group: J.v0.EXPERIMENTS,
-                    render: () => (0, r.jsx)(Y.Z, {})
+                    render: () => (0, r.jsx)(K.Z, {})
                 },
                 {
                     id: 'stores',
@@ -91,7 +91,7 @@ function et() {
                     id: 'dispatcher',
                     name: 'Dispatcher',
                     group: J.v0.EVENTS,
-                    render: () => (0, r.jsx)(S.Z, {})
+                    render: () => (0, r.jsx)(N.Z, {})
                 }
             ];
             return (
@@ -100,7 +100,7 @@ function et() {
                         id: 'shop',
                         name: 'Shop',
                         group: J.v0.BILLING,
-                        render: () => (0, r.jsx)(U.C, {})
+                        render: () => (0, r.jsx)(F.C, {})
                     }),
                     e.push({
                         id: 'quick_actions',
@@ -112,7 +112,7 @@ function et() {
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
                         group: J.v0.DEVELOPMENT,
-                        render: () => (0, r.jsx)(O.Z, {})
+                        render: () => (0, r.jsx)(T.Z, {})
                     }),
                     e.push({
                         id: 'clans',
@@ -136,7 +136,7 @@ function et() {
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: J.v0.GAMES,
-                        render: () => (0, r.jsx)(A.Z, {})
+                        render: () => (0, r.jsx)(D.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -148,7 +148,7 @@ function et() {
                     id: 'intl',
                     name: 'Intl',
                     group: J.v0.UI,
-                    render: () => (0, r.jsx)(Z.Z, {})
+                    render: () => (0, r.jsx)(R.Z, {})
                 }),
                 e.push({
                     id: 'colors',
@@ -160,13 +160,13 @@ function et() {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: J.v0.UI,
-                    render: () => (0, r.jsx)(N.Z, {})
+                    render: () => (0, r.jsx)(S.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: J.v0.DEVELOPMENT,
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: _.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(P.Z, { devSettingsCategory: _.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -178,7 +178,7 @@ function et() {
                     id: 'reporting',
                     name: 'Reporting',
                     group: J.v0.EXPERIMENTS,
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: _.zU.REPORTING })
+                    render: () => (0, r.jsx)(P.Z, { devSettingsCategory: _.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -190,7 +190,7 @@ function et() {
                     id: 'modals',
                     name: 'Modals',
                     group: J.v0.UI,
-                    render: () => (0, r.jsx)(D.Z, {})
+                    render: () => (0, r.jsx)(A.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
@@ -209,13 +209,13 @@ function et() {
                     id: 'dcf',
                     name: 'DCF',
                     group: J.v0.EXPERIMENTS,
-                    render: () => (0, r.jsx)(T.Z, {})
+                    render: () => (0, r.jsx)(O.Z, {})
                 }),
                 e.push({
                     id: 'potions',
                     name: 'Potions',
                     group: J.v0.PREMIUM,
-                    render: () => (0, r.jsx)(F.Z, {})
+                    render: () => (0, r.jsx)(U.Z, {})
                 }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
@@ -252,13 +252,13 @@ function et() {
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
                     group: J.v0.PREMIUM,
-                    render: () => (0, r.jsx)(P.Z, {})
+                    render: () => (0, r.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
                     name: 'Voice Filters',
                     group: J.v0.AUDIO_VIDEO,
-                    render: () => (0, r.jsx)(K.Z, {})
+                    render: () => (0, r.jsx)(Y.Z, {})
                 }),
                 e.push({
                     id: 'skill_trees',
@@ -289,7 +289,7 @@ function et() {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: i }
         }),
-        (0, r.jsxs)(R.Gk, {
+        (0, r.jsxs)(Z.Gk, {
             children: [
                 (0, r.jsxs)(x.ZP, {
                     className: Q.headerBar,
@@ -308,7 +308,7 @@ function et() {
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(R.Br, { className: $.layerContainer })
+                (0, r.jsx)(Z.Br, { className: $.layerContainer })
             ]
         })
     );

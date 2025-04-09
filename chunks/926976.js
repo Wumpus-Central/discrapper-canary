@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(49124);
+n.d(t, { Z: () => R }), n(388685), n(49124);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -20,13 +20,13 @@ var r = n(200651),
     j = n(484036),
     y = n(681619),
     C = n(621060),
-    T = n(388032),
-    N = n(459100),
-    S = n(616257);
-let O = [
+    O = n(388032),
+    S = n(459100),
+    N = n(616257);
+let T = [
     {
         key: 'event',
-        cellClassName: N.eventColumn,
+        cellClassName: S.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
@@ -34,7 +34,7 @@ let O = [
     },
     {
         key: 'location',
-        cellClassName: N.locationColumn,
+        cellClassName: S.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
@@ -44,7 +44,7 @@ let O = [
 function E(e) {
     let { children: t } = e;
     return (0, r.jsx)(u.zJl, {
-        className: N.customPropertiesContainer,
+        className: S.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
@@ -59,16 +59,16 @@ function k(e) {
             }
         }, [i]),
         (0, r.jsxs)('div', {
-            className: N.customProperty,
+            className: S.customProperty,
             children: [
                 (0, r.jsx)('dt', {
-                    className: N.customPropertiesName,
+                    className: S.customPropertiesName,
                     children: t
                 }),
                 (0, r.jsx)('dd', { children: n }),
                 (0, r.jsx)(u.P3F, {
                     tag: 'span',
-                    className: N.copyPropertyButton,
+                    className: S.copyPropertyButton,
                     onClick: () => {
                         (0, c.J)(JSON.stringify(l)), o(!0);
                     },
@@ -86,7 +86,7 @@ function k(e) {
         })
     );
 }
-let w = [
+let P = [
         {
             id: 'details',
             name: 'Details',
@@ -101,19 +101,19 @@ let w = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(x.ZP, {
-                            className: i()(S.headerBar, N.subPanelHeaderBar),
+                            className: i()(N.headerBar, S.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(x.ZP.Icon, {
                                     icon: u.IeX,
                                     tooltip: t
                                 }),
                                 (0, r.jsxs)(x.ZP.Title, {
-                                    wrapperClassName: N.headerTitle,
+                                    wrapperClassName: S.headerTitle,
                                     children: [
                                         t,
                                         (0, r.jsx)(u.P3F, {
                                             tag: 'span',
-                                            className: N.copyEventButton,
+                                            className: S.copyEventButton,
                                             onClick: () => (0, c.J)(t),
                                             children: (0, r.jsx)(u.TIy, {
                                                 color: 'currentColor',
@@ -175,7 +175,7 @@ let w = [
                             ]
                         }),
                         (0, r.jsxs)(v.E, {
-                            className: N.commonProperties,
+                            className: S.commonProperties,
                             children: [
                                 (0, r.jsx)(v.Z9, {
                                     name: 'Timestamp (local)',
@@ -211,7 +211,7 @@ let w = [
                                             null != n
                                                 ? (0, r.jsx)('code', { children: JSON.stringify(n) })
                                                 : (0, r.jsx)('code', {
-                                                      className: N.emptyProperty,
+                                                      className: S.emptyProperty,
                                                       children: 'null'
                                                   })
                                     },
@@ -224,11 +224,11 @@ let w = [
             }
         }
     ],
-    P = {
+    w = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(P)
+                Object.entries(w)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -260,53 +260,53 @@ let w = [
         },
         throttleMs: 100
     };
-function Z() {
+function R() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (0, d.e7)([_.Z], () => _.Z.loggedEventsVersion),
-        [o, s] = a.useState(() => Object.keys(P)),
+        [o, s] = a.useState(() => Object.keys(w)),
         [c, m] = a.useState(_.Z.loggedEvents),
         x = a.useCallback((e) => {
             m(e);
         }, []);
     (0, p.BO)(t, _.Z.loggedEvents, x, I, [l]);
     let h = c.filter((e) => {
-            for (let t of o) if (P[t].filter(e)) return !0;
+            for (let t of o) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [b, f] = a.useState(void 0),
         v = h.find((e) => e.key === b),
-        { TabBar: E, renderSelectedTab: k } = (0, C.ZP)({ tabs: w }, []);
+        { TabBar: E, renderSelectedTab: k } = (0, C.ZP)({ tabs: P }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(S.panel, N.panel),
+        className: i()(N.panel, S.panel),
         children: [
             (0, r.jsxs)('div', {
-                className: N.toolbar,
+                className: S.toolbar,
                 children: [
                     (0, r.jsx)(u.zxk, {
-                        className: N.toolbarButton,
+                        className: S.toolbarButton,
                         look: u.zxk.Looks.BLANK,
                         size: u.zxk.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, r.jsx)('span', {
-                            title: T.NW.string(T.t.VkKicX),
+                            title: O.NW.string(O.t.VkKicX),
                             children: (0, r.jsx)(u.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': T.NW.string(T.t.VkKicX)
+                                'aria-label': O.NW.string(O.t.VkKicX)
                             })
                         })
                     }),
-                    (0, r.jsx)('div', { className: N.toolbarDivider }),
+                    (0, r.jsx)('div', { className: S.toolbarDivider }),
                     (0, r.jsx)('div', {
-                        className: N.filters,
-                        children: Object.entries(P).map((e) => {
+                        className: S.filters,
+                        children: Object.entries(w).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
                                 u.P3F,
                                 {
-                                    className: i()(N.filter, o.includes(t) && N.activeFilter),
+                                    className: i()(S.filter, o.includes(t) && S.activeFilter),
                                     onClick: () => {
                                         s((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -319,9 +319,9 @@ function Z() {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: N.toolbar,
+                className: S.toolbar,
                 children: (0, r.jsx)(u.E1j, {
-                    className: N.searchBar,
+                    className: S.searchBar,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -329,14 +329,14 @@ function Z() {
                 })
             }),
             (0, r.jsx)(y.Z, {
-                columns: O,
+                columns: T,
                 data: h,
                 selectedRowKey: b,
                 onClickRow: (e) => f(e.key)
             }),
             null != v &&
                 (0, r.jsxs)(j.Z, {
-                    className: N.subPanel,
+                    className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [

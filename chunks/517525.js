@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -11,18 +11,18 @@ var r = n(200651),
     f = n(481060),
     m = n(2052),
     p = n(906732),
-    g = n(194082),
-    E = n(484459),
+    E = n(194082),
+    g = n(484459),
     h = n(594174),
     v = n(626135),
-    b = n(74538),
-    S = n(557457),
+    S = n(74538),
+    b = n(557457),
     y = n(475674),
     O = n(981631),
-    Z = n(474936),
-    I = n(388032),
-    j = n(374336);
-function x(e) {
+    I = n(474936),
+    _ = n(388032),
+    Z = n(374336);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,19 +65,19 @@ function N(e, t) {
         e
     );
 }
-let _ = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
-    w = {
+let x = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
+    P = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
-    P = {
+    w = {
         opacity: 1,
         transform: 'translate3d(0%, 0, 0)'
     },
-    R = { opacity: 0 },
-    A = { opacity: 1 },
-    C = { borderRadius: ''.concat(_, 'px ').concat(_, 'px ').concat(_, 'px ').concat(_, 'px') },
-    T = { borderRadius: '0px '.concat(_, 'px ').concat(_, 'px 0px') },
+    A = { opacity: 0 },
+    R = { opacity: 1 },
+    T = { borderRadius: ''.concat(x, 'px ').concat(x, 'px ').concat(x, 'px ').concat(x, 'px') },
+    C = { borderRadius: '0px '.concat(x, 'px ').concat(x, 'px 0px') },
     D = {
         mass: 1,
         tension: 500,
@@ -87,105 +87,105 @@ let _ = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     M = (e) => {
         let t,
             i,
-            { participant: o, isUpsellEnabled: s, shape: d, size: E, didTrackUpsellViewed: _, setDidTrackUpsellViewed: w, className: P, premiumIndicator: R } = e,
-            A = (0, S.Wc)(o),
-            { analyticsLocations: C } = (0, p.ZP)(),
-            T = null != (0, y.Z)(o);
+            { participant: o, isUpsellEnabled: s, shape: d, size: g, didTrackUpsellViewed: x, setDidTrackUpsellViewed: P, className: w, premiumIndicator: A } = e,
+            R = (0, b.Wc)(o),
+            { analyticsLocations: T } = (0, p.ZP)(),
+            C = null != (0, y.Z)(o);
         try {
-            t = (0, S.nG)(A);
+            t = (0, b.nG)(R);
         } catch (e) {
             t = !1;
         }
         try {
-            i = (0, S.tR)(A);
+            i = (0, b.tR)(R);
         } catch (e) {
             i = !1;
         }
         let D = t || i,
             { location: M } = (0, m.O)(),
-            k = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-            L = s && !b.ZP.isPremium(k, Z.p9.TIER_1) && !b.ZP.canStreamQuality(b.ZP.StreamQuality.MID, k),
+            L = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
+            k = s && !S.ZP.isPremium(L, I.p9.TIER_1) && !S.ZP.canStreamQuality(S.ZP.StreamQuality.MID, L),
             U = l.useCallback(() => {
-                L &&
+                k &&
                     D &&
                     (0, f.ZDy)(async () => {
                         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
-                        return (t) => (0, r.jsx)(e, N(x({}, t), { analyticsSource: M }));
+                        return (t) => (0, r.jsx)(e, N(j({}, t), { analyticsSource: M }));
                     });
-            }, [L, D, M]);
+            }, [k, D, M]);
         if (
             (l.useEffect(() => {
-                !_ &&
+                !x &&
                     D &&
                     (v.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: Z.cd.STREAM_QUALITY_INDICATOR,
+                        type: I.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: i,
-                        location_stack: C
+                        location_stack: T
                     }),
-                    w(!0));
-            }, [t, i, D, _, w, C]),
-            null == A)
+                    P(!0));
+            }, [t, i, D, x, P, T]),
+            null == R)
         )
             return null;
-        let F = (0, r.jsx)(f.ua7, {
-            text: T ? I.NW.string(I.t.q8TiVl) : D ? I.NW.string(I.t.IHgpEh) : I.NW.string(I.t.vLb0VV),
+        let W = (0, r.jsx)(f.ua7, {
+            text: C ? _.NW.string(_.t.q8TiVl) : D ? _.NW.string(_.t.IHgpEh) : _.NW.string(_.t.vLb0VV),
             position: 'bottom',
             color: f.ua7.Colors.GREY,
             children: (e) =>
                 (0, r.jsxs)(
                     f.P3F,
-                    N(x({}, e), {
+                    N(j({}, e), {
                         onClick: U,
-                        className: a()(j.qualityIndicator, E, g.eE[d], T ? j.qualityIndicatorLowQuality : j.qualityIndicatorFullQuality, { [j.clickable]: L && D }),
+                        className: a()(Z.qualityIndicator, g, E.eE[d], C ? Z.qualityIndicatorLowQuality : Z.qualityIndicatorFullQuality, { [Z.clickable]: k && D }),
                         children: [
                             D
                                 ? (0, r.jsx)(f.SrA, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: j.premiumStreamIcon
+                                      className: Z.premiumStreamIcon
                                   })
                                 : null,
                             (0, r.jsx)('span', {
-                                className: j.qualityResolution,
-                                children: (0, S.ml)(A.maxResolution)
+                                className: Z.qualityResolution,
+                                children: (0, b.ml)(R.maxResolution)
                             }),
-                            (0, r.jsx)('span', { children: (0, S.bp)(A.maxFrameRate) })
+                            (0, r.jsx)('span', { children: (0, b.bp)(R.maxFrameRate) })
                         ]
                     })
                 )
         });
         return (0, r.jsx)(f.IGR, {
-            text: F,
-            className: a()(P, j.qualityIndicatorBadge, { [j.qualityIndicatorBadgePremium]: D && R }),
+            text: W,
+            className: a()(w, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: D && A }),
             color: c.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
     },
-    k = (e) => {
+    L = (e) => {
         let { participant: t, showQuality: n, isUpsellEnabled: i = !0, size: s, className: u, premiumIndicator: c } = e,
             [d, m] = l.useState(!1),
-            p = (0, S.Wc)(t),
+            p = (0, b.Wc)(t),
             { reducedMotion: h } = l.useContext(f.Sfi),
             v = n && null != p;
         l.useEffect(() => {
-            (0, E.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
+            (0, g.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
         }, [t]);
-        let b = (0, f.Yzy)(
+        let S = (0, f.Yzy)(
                 v,
                 {
                     enter: {
-                        from: h.enabled ? R : w,
-                        to: h.enabled ? A : P
+                        from: h.enabled ? A : P,
+                        to: h.enabled ? R : w
                     },
-                    leave: h.enabled ? R : w,
+                    leave: h.enabled ? A : P,
                     config: D
                 },
                 'animate-always'
             ),
             y = (0, f.q_F)(
                 {
-                    to: v ? T : C,
+                    to: v ? C : T,
                     config: D
                 },
                 'animate-always'
@@ -194,14 +194,14 @@ let _ = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             let { className: n, popoutProps: l } = e;
             return (0, r.jsxs)(
                 'div',
-                N(x({ className: a()(j.streamQualityIndicator, n) }, l), {
+                N(j({ className: a()(Z.streamQualityIndicator, n) }, l), {
                     children: [
-                        b((e, n) =>
+                        S((e, n) =>
                             n
                                 ? (0, r.jsx)(o.animated.div, {
                                       style: e,
                                       children: (0, r.jsx)(M, {
-                                          className: j.liveQualityIndicator,
+                                          className: Z.liveQualityIndicator,
                                           participant: t,
                                           size: s,
                                           shape: f.Dv2.ROUND_LEFT,
@@ -215,9 +215,9 @@ let _ = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         ),
                         (0, r.jsx)(o.animated.div, {
                             style: y,
-                            className: j.liveIndicator,
-                            children: (0, r.jsx)(g.ZP, {
-                                look: g.jZ.RED,
+                            className: Z.liveIndicator,
+                            children: (0, r.jsx)(E.ZP, {
+                                look: E.jZ.RED,
                                 size: s,
                                 shape: v ? f.Dv2.ROUND_RIGHT : f.Dv2.ROUND
                             })

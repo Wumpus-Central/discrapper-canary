@@ -3,8 +3,8 @@ var r = n(200651),
     l = n(192379),
     a = n(120356),
     s = n.n(a),
-    i = n(981631),
-    o = n(516459);
+    o = n(981631),
+    i = n(516459);
 function E(e, t, n) {
     return (
         t in e
@@ -28,7 +28,7 @@ class c extends l.Component {
     }
     render() {
         let e,
-            { className: t, name: n, autoComplete: l, maxLen: a, disabled: i } = this.props,
+            { className: t, name: n, autoComplete: l, maxLen: a, disabled: o } = this.props,
             E = {
                 position: 'absolute',
                 left: 0,
@@ -43,13 +43,13 @@ class c extends l.Component {
                   })
                 : (E.opacity = 0),
             (0, r.jsx)('div', {
-                className: s()(o.outer, t),
+                className: s()(i.outer, t),
                 children: (0, r.jsxs)('div', {
-                    className: o.container,
+                    className: i.container,
                     children: [
                         (0, r.jsx)('input', {
                             type: 'text',
-                            className: o.input,
+                            className: i.input,
                             ref: this.inputRef,
                             style: E,
                             value: this.state.value,
@@ -60,10 +60,10 @@ class c extends l.Component {
                             onChange: this.handleChange,
                             onFocus: this.handleFocus,
                             onBlur: this.handleBlur,
-                            disabled: i
+                            disabled: o
                         }),
                         (0, r.jsx)('div', {
-                            className: o.input,
+                            className: i.input,
                             style: e,
                             children: this.state.value
                         })
@@ -104,7 +104,7 @@ class c extends l.Component {
                     });
             }),
             E(this, 'handleKeyPress', (e) => {
-                if (e.which === i.yXg.ENTER) {
+                if (e.which === o.yXg.ENTER) {
                     var t;
                     null == (t = this.inputRef.current) || t.blur();
                 }

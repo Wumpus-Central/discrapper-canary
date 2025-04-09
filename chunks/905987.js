@@ -9,8 +9,8 @@ var n = s(200651),
     o = s(430824),
     m = s(771845),
     x = s(259580),
-    u = s(186523),
-    h = s(553826),
+    h = s(186523),
+    u = s(553826),
     j = s(388032),
     g = s(699343),
     N = s(949509);
@@ -71,7 +71,7 @@ function _(e) {
             }),
             (0, n.jsxs)('div', {
                 className: N.container,
-                children: [(0, n.jsx)(b, { hidden: 'channel' === s }), (0, n.jsx)(f, { hidden: 'server' === s })]
+                children: [(0, n.jsx)(b, { hidden: 'channel' === s }), (0, n.jsx)(v, { hidden: 'server' === s })]
             })
         ]
     });
@@ -82,16 +82,16 @@ function b(e) {
             var e;
             return null == (e = o.Z.getGuild(m.ZP.getFlattenedGuildIds()[0])) ? void 0 : e.name;
         }),
-        [r, u] = i.useState(0);
+        [r, h] = i.useState(0);
     i.useEffect(() => {
         if (t) return;
         let e = 0,
-            s = [1500, 1000, 1000, 500].map((t, s) => setTimeout(() => u(s + 1), (e += t)));
+            s = [1500, 1000, 1000, 500].map((t, s) => setTimeout(() => h(s + 1), (e += t)));
         return () => {
-            s.forEach((e) => clearTimeout(e)), setTimeout(() => u(0), 150);
+            s.forEach((e) => clearTimeout(e)), setTimeout(() => h(0), 150);
         };
     }, [t]);
-    let { enabled: h } = (0, d._k)({ location: 'tips_tab' });
+    let { enabled: u } = (0, d._k)({ location: 'tips_tab' });
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)('div', {
@@ -156,15 +156,15 @@ function b(e) {
                         (0, n.jsxs)('div', {
                             className: N.bigMenu,
                             children: [
-                                (0, n.jsx)(C, {
-                                    text: h ? j.NW.string(j.t.Sd8Ix8) : j.NW.string(j.t.BN75l5),
+                                (0, n.jsx)(W, {
+                                    text: u ? j.NW.string(j.t.Sd8Ix8) : j.NW.string(j.t.BN75l5),
                                     icon: (0, n.jsx)(c.ejJ, {
                                         size: 'sm',
                                         className: N.icon
                                     })
                                 }),
                                 (0, n.jsx)('div', { className: N.divider }),
-                                (0, n.jsx)(C, {
+                                (0, n.jsx)(W, {
                                     active: r >= 2,
                                     text: j.NW.string(j.t.h850Sk),
                                     icon: (0, n.jsx)(c.Dkj, {
@@ -173,7 +173,7 @@ function b(e) {
                                         className: N.icon
                                     })
                                 }),
-                                (0, n.jsx)(C, {
+                                (0, n.jsx)(W, {
                                     text: j.NW.string(j.t.BayiAg),
                                     icon: (0, n.jsx)(c.b7C, {
                                         size: 'sm',
@@ -181,7 +181,7 @@ function b(e) {
                                         className: N.icon
                                     })
                                 }),
-                                (0, n.jsx)(C, {
+                                (0, n.jsx)(W, {
                                     text: j.NW.string(j.t['154/bG']),
                                     icon: (0, n.jsx)(c.ewm, {
                                         size: 'sm',
@@ -189,7 +189,7 @@ function b(e) {
                                         className: N.icon
                                     })
                                 }),
-                                (0, n.jsx)(C, {
+                                (0, n.jsx)(W, {
                                     text: j.NW.string(j.t.qyjZub),
                                     icon: (0, n.jsx)(c.VZI, {
                                         size: 'sm',
@@ -276,7 +276,7 @@ function b(e) {
                     ]
                 })
             }),
-            (0, n.jsx)(v, {
+            (0, n.jsx)(f, {
                 text: j.NW.string(j.t['C//fOz']),
                 className: N.tipServers2,
                 hidden: t || r < 4
@@ -284,7 +284,7 @@ function b(e) {
         ]
     });
 }
-function f(e) {
+function v(e) {
     let { hidden: t } = e,
         [s, r] = i.useState(0);
     return (
@@ -342,7 +342,7 @@ function f(e) {
                             (0, n.jsxs)('div', {
                                 className: a()(N.menu, N.leftMenu),
                                 children: [
-                                    (0, n.jsx)(C, {
+                                    (0, n.jsx)(W, {
                                         small: !0,
                                         text: j.NW.string(j.t['w4m94+']),
                                         icon: (0, n.jsx)(x.Z, {
@@ -351,7 +351,7 @@ function f(e) {
                                             height: 12
                                         })
                                     }),
-                                    (0, n.jsx)(C, {
+                                    (0, n.jsx)(W, {
                                         small: !0,
                                         text: j.NW.string(j.t.HcoRu7),
                                         active: s >= 3,
@@ -366,53 +366,53 @@ function f(e) {
                             (0, n.jsxs)('div', {
                                 className: a()(N.menu, N.rightMenu),
                                 children: [
-                                    (0, n.jsx)(C, {
+                                    (0, n.jsx)(W, {
                                         small: !0,
                                         text: j.NW.string(j.t.hZrr6u),
                                         icon:
                                             s <= 4
-                                                ? (0, n.jsx)(h.Z, {
+                                                ? (0, n.jsx)(u.Z, {
                                                       className: N.icon,
                                                       width: 12,
                                                       height: 12
                                                   })
-                                                : (0, n.jsx)(u.Z, {
+                                                : (0, n.jsx)(h.Z, {
                                                       className: N.icon,
                                                       width: 12,
                                                       height: 12
                                                   }),
                                         active: s <= 4
                                     }),
-                                    (0, n.jsx)(C, {
+                                    (0, n.jsx)(W, {
                                         small: !0,
                                         text: j.NW.string(j.t.y59NJi),
                                         icon:
                                             s >= 5
-                                                ? (0, n.jsx)(h.Z, {
+                                                ? (0, n.jsx)(u.Z, {
                                                       className: N.icon,
                                                       width: 12,
                                                       height: 12
                                                   })
-                                                : (0, n.jsx)(u.Z, {
+                                                : (0, n.jsx)(h.Z, {
                                                       className: N.icon,
                                                       width: 12,
                                                       height: 12
                                                   }),
                                         active: s >= 5
                                     }),
-                                    (0, n.jsx)(C, {
+                                    (0, n.jsx)(W, {
                                         small: !0,
                                         text: j.NW.string(j.t['pGn/bG']),
-                                        icon: (0, n.jsx)(u.Z, {
+                                        icon: (0, n.jsx)(h.Z, {
                                             className: N.icon,
                                             width: 12,
                                             height: 12
                                         })
                                     }),
-                                    (0, n.jsx)(C, {
+                                    (0, n.jsx)(W, {
                                         small: !0,
                                         text: j.NW.string(j.t['32yow8']),
-                                        icon: (0, n.jsx)(u.Z, {
+                                        icon: (0, n.jsx)(h.Z, {
                                             className: N.icon,
                                             width: 12,
                                             height: 12
@@ -423,12 +423,12 @@ function f(e) {
                         ]
                     })
                 }),
-                (0, n.jsx)(v, {
+                (0, n.jsx)(f, {
                     text: j.NW.string(j.t['5Il5fn']),
                     className: N.tipChannels1,
                     hidden: t || s < 4
                 }),
-                (0, n.jsx)(v, {
+                (0, n.jsx)(f, {
                     text: j.NW.string(j.t['+ROcrq']),
                     className: N.tipChannels2,
                     hidden: t || s < 4
@@ -437,7 +437,7 @@ function f(e) {
         })
     );
 }
-function v(e) {
+function f(e) {
     let { text: t, className: s, hidden: i } = e;
     return (0, n.jsxs)('div', {
         className: a()(s, N.tip, { [N.hidden]: i }),
@@ -474,7 +474,7 @@ function p(e) {
         ]
     });
 }
-function C(e) {
+function W(e) {
     let { text: t, active: s, small: i, icon: r } = e;
     return (0, n.jsxs)('div', {
         className: a()(N.menuItem, { [N.active]: s }),

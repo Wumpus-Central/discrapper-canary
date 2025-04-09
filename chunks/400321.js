@@ -7,15 +7,15 @@ function a(e) {
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = 'round'), (n.lineJoin = 'round');
     let m = t.points.map((e) => (0, r.RR)(e, a, o)),
         p = d.current[t.id],
-        g = (e) => p + e.deltaTime,
-        E = (e) => g(e) + 1500 >= Date.now(),
-        h = (e) => g(e) <= Date.now() && E(e),
+        E = (e) => p + e.deltaTime,
+        g = (e) => E(e) + 1500 >= Date.now(),
+        h = (e) => E(e) <= Date.now() && g(e),
         v = m.find(h);
     if (null == v) {
-        E(t.points[t.points.length - 1]) || f.push(t);
+        g(t.points[t.points.length - 1]) || f.push(t);
         return;
     }
-    let b = (e, t) => {
+    let S = (e, t) => {
             let r = null;
             (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(v.x, v.y);
             for (let e = 1; e < m.length; e++) {
@@ -24,8 +24,8 @@ function a(e) {
             }
             return n.stroke(), r;
         },
-        { fillColor: S, outlineColor: y } = (0, r.bg)(t.userId, u, c, s),
-        O = b(y, 6 + i.q2),
-        Z = null != O && h(O);
-    Z && (0, l.I)(n, O.x, O.y, y, i.q2), b(S, 6), Z && (0, l.T)(n, O.x, O.y, t.userId);
+        { fillColor: b, outlineColor: y } = (0, r.bg)(t.userId, u, c, s),
+        O = S(y, 6 + i.q2),
+        I = null != O && h(O);
+    I && (0, l.I)(n, O.x, O.y, y, i.q2), S(b, 6), I && (0, l.T)(n, O.x, O.y, t.userId);
 }

@@ -7,8 +7,8 @@ var r,
     l = n(392711),
     a = n.n(l),
     s = n(442837),
-    i = n(570140),
-    o = n(246364);
+    o = n(570140),
+    i = n(246364);
 function E(e, t, n) {
     return (
         t in e
@@ -34,11 +34,11 @@ class _ extends (r = s.ZP.Store) {
     }
     getRulesPrompt(e) {
         var t;
-        return a().find(null == (t = u[e]) ? void 0 : t.formFields, o.J);
+        return a().find(null == (t = u[e]) ? void 0 : t.formFields, i.J);
     }
 }
 E(_, 'displayName', 'MemberVerificationFormStore');
-let d = new _(i.Z, {
+let d = new _(o.Z, {
     INVITE_ACCEPT_SUCCESS: function (e) {
         let { invite: t } = e,
             { member_verification_form: n } = t,

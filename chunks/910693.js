@@ -11,8 +11,8 @@ var r,
     l,
     a = n(192379),
     s = n(100527),
-    i = n(367907),
-    o = n(314897),
+    o = n(367907),
+    i = n(314897),
     E = n(626135),
     c = n(981631);
 function u(e, t, n) {
@@ -41,7 +41,7 @@ function u(e, t, n) {
                 });
         }
         return e;
-    })({}, t, (0, i.hH)(null != (r = t.guild_id) ? r : n));
+    })({}, t, (0, o.hH)(null != (r = t.guild_id) ? r : n));
     E.default.track(e, l);
 }
 function _(e) {
@@ -90,7 +90,7 @@ function I(e, t) {
         (t) => {
             let a = {
                 action_type: t,
-                mod_user_id: o.default.getId(),
+                mod_user_id: i.default.getId(),
                 guild_id: e,
                 location: n,
                 locations: s,

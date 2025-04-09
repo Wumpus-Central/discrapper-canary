@@ -2,7 +2,7 @@ n.d(t, {
     P7: () => p,
     RR: () => m,
     UN: () => c,
-    bg: () => g,
+    bg: () => E,
     hn: () => d,
     np: () => f
 });
@@ -38,7 +38,7 @@ function m(e, t, n) {
 function p(e) {
     return e.type === s.W.LINE;
 }
-function g(e, t, n, r) {
+function E(e, t, n, r) {
     var s;
     let c = o.default.getUser(e),
         d = null == c ? void 0 : c.getAvatarURL(null, u.Ks),

@@ -10,14 +10,14 @@ var r,
     l = n(192379),
     a = n(399606),
     s = n(906732),
-    i = n(171368),
-    o = n(430824),
+    o = n(171368),
+    i = n(430824),
     E = n(594174),
     c = n(91047),
     u = n(981631);
 let _ = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
-    (0, i.openUserProfileModal)({
+    (0, o.openUserProfileModal)({
         userId: r,
         guildId: n,
         sourceAnalyticsLocations: t,
@@ -68,12 +68,12 @@ function A(e, t, n) {
 }
 function T(e) {
     return (0, a.e7)(
-        [o.Z],
+        [i.Z],
         () => {
             var t;
             if (null == e) return null;
-            let n = o.Z.getGuild(e.guildId);
-            return null == n || null == e.highestRoleId ? null : null != (t = o.Z.getRole(n.id, e.highestRoleId)) ? t : null;
+            let n = i.Z.getGuild(e.guildId);
+            return null == n || null == e.highestRoleId ? null : null != (t = i.Z.getRole(n.id, e.highestRoleId)) ? t : null;
         },
         [e]
     );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(35282);
+n.d(t, { Z: () => O }), n(388685), n(35282);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -79,7 +79,7 @@ function C() {
         ]
     });
 }
-function T() {
+function O() {
     let e = g.ZP.allByCategory(g.zU.MESSAGING).map((e) => {
         let [t, n, { label: a }] = e;
         return (0, r.jsx)(

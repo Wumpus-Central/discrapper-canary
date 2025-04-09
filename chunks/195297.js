@@ -1,136 +1,136 @@
-n.d(i, { default: () => E }), n(388685);
-var t = n(200651),
-    o = n(192379),
-    r = n(120356),
-    a = n.n(r),
+n.d(t, { default: () => b }), n(388685);
+var i = n(200651),
+    a = n(192379),
+    o = n(120356),
+    r = n.n(o),
     l = n(481060),
     c = n(100527),
     s = n(906732),
     d = n(313201),
     u = n(455708),
-    g = n(222062),
-    f = n(530329),
-    _ = n(626135),
-    b = n(488499),
+    f = n(222062),
+    _ = n(530329),
+    g = n(626135),
+    N = n(488499),
     p = n(58384),
-    N = n(981631),
-    m = n(486324),
-    h = n(388032),
-    T = n(922349);
-function E(e) {
-    let { transitionState: i, onClose: r, onComplete: E, uploadType: x, showUpsellHeader: j, analyticsPage: I } = e,
-        [P, C] = o.useState(!1),
-        v = (0, l.vRw)(),
-        O = (0, d.Dt)(),
-        { analyticsLocations: R } = (0, s.ZP)(c.Z.GIF_PICKER);
-    async function B(e) {
-        let { gifSrc: i } = e;
-        if (null == i || P) return;
-        C(!0);
-        let o = (0, p.Q)(i),
-            a = await fetch(o),
-            c = await a.blob();
-        r(),
+    m = n(981631),
+    x = n(486324),
+    A = n(388032),
+    h = n(922349);
+function b(e) {
+    let { transitionState: t, onClose: o, onComplete: b, uploadType: P, showUpsellHeader: E, analyticsPage: R } = e,
+        [j, Z] = a.useState(!1),
+        C = (0, l.vRw)(),
+        v = (0, d.Dt)(),
+        { analyticsLocations: y } = (0, s.ZP)(c.Z.GIF_PICKER);
+    async function I(e) {
+        let { gifSrc: t } = e;
+        if (null == t || j) return;
+        Z(!0);
+        let a = (0, p.Q)(t),
+            r = await fetch(a),
+            c = await r.blob();
+        o(),
             (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('59732'), n.e('93157')]).then(n.bind(n, 712451));
-                    return (i) =>
-                        (0, t.jsx)(
+                    return (t) =>
+                        (0, i.jsx)(
                             e,
                             (function (e) {
-                                for (var i = 1; i < arguments.length; i++) {
-                                    var n = null != arguments[i] ? arguments[i] : {},
-                                        t = Object.keys(n);
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        i = Object.keys(n);
                                     'function' == typeof Object.getOwnPropertySymbols &&
-                                        (t = t.concat(
+                                        (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             })
                                         )),
-                                        t.forEach(function (i) {
-                                            var t;
-                                            (t = n[i]),
-                                                i in e
-                                                    ? Object.defineProperty(e, i, {
-                                                          value: t,
+                                        i.forEach(function (t) {
+                                            var i;
+                                            (i = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
+                                                          value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0
                                                       })
-                                                    : (e[i] = t);
+                                                    : (e[t] = i);
                                         });
                                 }
                                 return e;
                             })(
                                 {
-                                    imageUri: o,
+                                    imageUri: a,
                                     file: new File([c], 'tenor.gif', { type: 'image/gif' }),
-                                    onCrop: E,
-                                    uploadType: x,
-                                    showUpsellHeader: j
+                                    onCrop: b,
+                                    uploadType: P,
+                                    showUpsellHeader: E
                                 },
-                                i
+                                t
                             )
                         );
                 },
-                { contextKey: v }
+                { contextKey: C }
             );
     }
-    o.useEffect(() => {
-        _.default.track(N.rMx.OPEN_MODAL, {
-            type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location: { page: I }
+    a.useEffect(() => {
+        g.default.track(m.rMx.OPEN_MODAL, {
+            type: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location: { page: R }
         });
-    }, [I]);
-    let y = x === m.pC.AVATAR || x === m.pC.BANNER,
-        k = (0, g.M)(!y);
-    return (0, t.jsx)(s.Gt, {
-        value: R,
-        children: (0, t.jsxs)(l.Y0X, {
-            'aria-labelledby': O,
-            transitionState: i,
+    }, [R]);
+    let k = P === x.pC.AVATAR || P === x.pC.BANNER,
+        L = (0, f.M)(!k);
+    return (0, i.jsx)(s.Gt, {
+        value: y,
+        children: (0, i.jsxs)(l.Y0X, {
+            'aria-labelledby': v,
+            transitionState: t,
             size: l.CgR.SMALL,
             children: [
-                j &&
-                    !k &&
-                    (0, t.jsx)(b.Z, {
-                        type: x,
-                        analyticsPage: I,
-                        analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                E &&
+                    !L &&
+                    (0, i.jsx)(N.Z, {
+                        type: P,
+                        analyticsPage: R,
+                        analyticsSection: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
                     }),
-                (0, t.jsxs)(l.xBx, {
-                    className: T.modalHeader,
+                (0, i.jsxs)(l.xBx, {
+                    className: h.modalHeader,
                     separator: !1,
                     children: [
-                        (0, t.jsx)(l.vwX, {
-                            className: T.titleCase,
+                        (0, i.jsx)(l.vwX, {
+                            className: h.titleCase,
                             tag: l.RB0.H1,
-                            children: h.NW.string(h.t['xsC+//'])
+                            children: A.NW.string(A.t['xsC+//'])
                         }),
-                        (0, t.jsx)(l.olH, {
-                            onClick: r,
-                            className: T.modalCloseButton
+                        (0, i.jsx)(l.olH, {
+                            onClick: o,
+                            className: h.modalCloseButton
                         })
                     ]
                 }),
-                (0, t.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, t.jsx)(u.Z, {
-                            contentClassName: a()({ [T.gifPickerContent]: j && k }),
-                            className: a()(T.gifPicker, { [T.loadingOverlay]: P }),
-                            onSelectGIF: B,
+                        (0, i.jsx)(u.Z, {
+                            contentClassName: r()({ [h.gifPickerContent]: E && L }),
+                            className: r()(h.gifPicker, { [h.loadingOverlay]: j }),
+                            onSelectGIF: I,
                             hideFavorites: !0
                         }),
-                        P && (0, t.jsx)(l.$jN, { className: T.spinner })
+                        j && (0, i.jsx)(l.$jN, { className: h.spinner })
                     ]
                 }),
-                j &&
-                    k &&
-                    (0, t.jsx)(f.Z, {
-                        uploadType: x,
+                E &&
+                    L &&
+                    (0, i.jsx)(_.Z, {
+                        uploadType: P,
                         showUpsell: !0,
-                        className: T.nitroUpsell
+                        className: h.nitroUpsell
                     })
             ]
         })

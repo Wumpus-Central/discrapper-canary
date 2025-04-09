@@ -8,8 +8,8 @@ var r = n(200651),
     l = n(192379),
     a = n(120356),
     s = n.n(a),
-    i = n(91192),
-    o = n(442837),
+    o = n(91192),
+    i = n(442837),
     E = n(481060),
     c = n(43267),
     u = n(933557),
@@ -92,9 +92,9 @@ function b(e) {
 }
 function v(e) {
     let { channel: t, size: n = E.EFr.SIZE_20 } = e,
-        l = (0, o.e7)([f.default], () => f.default.getUser(null == t ? void 0 : t.recipients[0])),
-        a = (0, o.e7)([g.Z], () => !(null == l || null == t || t.isMultiUserDM()) && null != g.Z.getTypingUsers(null == t ? void 0 : t.id)[null == l ? void 0 : l.id]),
-        { status: s, isMobile: i } = (0, o.cj)([O.Z], () =>
+        l = (0, i.e7)([f.default], () => f.default.getUser(null == t ? void 0 : t.recipients[0])),
+        a = (0, i.e7)([g.Z], () => !(null == l || null == t || t.isMultiUserDM()) && null != g.Z.getTypingUsers(null == t ? void 0 : t.id)[null == l ? void 0 : l.id]),
+        { status: s, isMobile: o } = (0, i.cj)([O.Z], () =>
             null == l || null == t || t.isMultiUserDM()
                 ? {
                       status: null,
@@ -109,15 +109,15 @@ function v(e) {
         size: n,
         src: null == l ? void 0 : l.getAvatarURL(void 0, 40),
         status: s,
-        isMobile: i,
+        isMobile: o,
         isTyping: a,
         'aria-label': null == l ? void 0 : l.username,
         statusTooltip: !0
     });
 }
 let P = (e) => {
-        let { className: t, containerClassName: n, channel: l, locked: a, hasActiveThreads: i, withGuildIcon: c } = e,
-            u = (0, o.e7)([I.Z], () => I.Z.getGuild(l.guild_id), [l.guild_id]),
+        let { className: t, containerClassName: n, channel: l, locked: a, hasActiveThreads: o, withGuildIcon: c } = e,
+            u = (0, i.e7)([I.Z], () => I.Z.getGuild(l.guild_id), [l.guild_id]),
             d = l.type === p.d4z.DM || l.type === p.d4z.GROUP_DM,
             A = null;
         if (c && null != u && !d)
@@ -128,7 +128,7 @@ let P = (e) => {
                 channel: l,
                 guild: u,
                 locked: a,
-                hasActiveThreads: i
+                hasActiveThreads: o
             });
         else {
             let e = (function (e, t, n) {
@@ -146,7 +146,7 @@ let P = (e) => {
                 }
             })(l, u, {
                 locked: a,
-                hasActiveThreads: i
+                hasActiveThreads: o
             });
             if (null == e) return null;
             A = (0, r.jsx)(e, {
@@ -154,7 +154,7 @@ let P = (e) => {
                 className: s()(U.icon, t)
             });
         }
-        let N = c ? (null == u ? void 0 : u.name) : (0, _.bT)(l, u, a, i),
+        let N = c ? (null == u ? void 0 : u.name) : (0, _.bT)(l, u, a, o),
             O = c && null != u ? ''.concat(u.name, ' - ').concat(N, ' icon') : ''.concat(N, ' icon');
         return (0, r.jsx)(E.ua7, {
             text: N,
@@ -175,7 +175,7 @@ let P = (e) => {
         var n;
         let {
                 channel: a,
-                name: o,
+                name: i,
                 muted: c,
                 selected: _,
                 connected: T,
@@ -194,11 +194,11 @@ let P = (e) => {
                 channel: { type: F },
                 onMouseEnter: W,
                 onMouseLeave: B,
-                'aria-label': w,
-                children: z,
+                'aria-label': z,
+                children: w,
                 guild: k,
-                channelTypeOverride: V,
-                forceInteractable: H,
+                channelTypeOverride: H,
+                forceInteractable: V,
                 mentionCount: K,
                 resolvedUnreadSetting: Z,
                 isFavoriteSuggestion: Y,
@@ -206,7 +206,7 @@ let P = (e) => {
                 hasActiveEvent: X = !1
             } = e,
             J = Z === S.i.ALL_MESSAGES || (null != K && K > 0),
-            Q = (0, i.JA)(a.id),
+            Q = (0, o.JA)(a.id),
             { role: $ } = Q,
             ee = (function (e, t) {
                 if (null == e) return {};
@@ -233,7 +233,7 @@ let P = (e) => {
             el = p.Z5c.CHANNEL(er, a.id),
             ea = (0, u.ZP)(a),
             es = a.isGuildVocal(),
-            ei = (0, r.jsx)('div', {
+            eo = (0, r.jsx)('div', {
                 className: s()({ [U.favoritesSuggestion]: Y }),
                 ref: en,
                 children: (0, r.jsxs)(
@@ -251,7 +251,7 @@ let P = (e) => {
                             ee
                         ),
                         {
-                            'aria-label': w,
+                            'aria-label': z,
                             focusProps: { enabled: !1 },
                             children: [
                                 (0, r.jsxs)('div', {
@@ -268,13 +268,13 @@ let P = (e) => {
                                         (0, r.jsx)(d.Z, {
                                             className: s()(U.name, { [U.activeEvent]: X }),
                                             'aria-hidden': !0,
-                                            children: null == o ? ea : o
+                                            children: null == i ? ea : i
                                         }),
-                                        l.Children.count(z) > 0
+                                        l.Children.count(w) > 0
                                             ? (0, r.jsx)('div', {
                                                   onClick: m,
                                                   className: U.children,
-                                                  children: z
+                                                  children: w
                                               })
                                             : null
                                     ]
@@ -307,7 +307,7 @@ let P = (e) => {
                 ref: t,
                 className: s()(
                     y,
-                    null != f || null != M || null != R || H ? U.wrapper : U.notInteractive,
+                    null != f || null != M || null != R || V ? U.wrapper : U.notInteractive,
                     (() => {
                         if (_) return s()(h.selectedChannel, C.SELECTED);
                         if (T) return s()(h.selectedChannel, C.CONNECTED);
@@ -335,14 +335,14 @@ let P = (e) => {
                             default:
                                 return U.typeDefault;
                         }
-                    })(null != V ? V : F)
+                    })(null != H ? H : F)
                 ),
                 onMouseUp: (e) => (null == M ? void 0 : M(e, a)),
                 onMouseDown: (e) => (null == R ? void 0 : R(e, a)),
                 onContextMenu: (e) => (null == b ? void 0 : b(e, a)),
                 onMouseEnter: W,
                 onMouseLeave: B,
-                children: [c || !I ? null : (0, r.jsx)('div', { className: s()(U.unread, J ? U.unreadImportant : void 0) }), null != (n = null == v ? void 0 : v(ei)) ? n : ei]
+                children: [c || !I ? null : (0, r.jsx)('div', { className: s()(U.unread, J ? U.unreadImportant : void 0) }), null != (n = null == v ? void 0 : v(eo)) ? n : eo]
             })
         });
     });

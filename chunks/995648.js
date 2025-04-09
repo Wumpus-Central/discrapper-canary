@@ -1,25 +1,25 @@
 n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
-var o = n(120356),
-    a = n.n(o),
+var a = n(120356),
+    o = n.n(a),
     i = n(481060),
     c = n(422559),
     l = n(432161);
 function s(e) {
-    let { grantedPermissions: t, disabledPermissions: n, grantedPermissionsHeader: o, disabledPermissionsHeader: s, className: u } = e;
+    let { grantedPermissions: t, disabledPermissions: n, grantedPermissionsHeader: a, disabledPermissionsHeader: s, className: u } = e;
     return (0, r.jsxs)('div', {
-        className: a()(l.list, u),
+        className: o()(l.list, u),
         children: [
             null != t && t.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          null != o
+                          null != a
                               ? (0, r.jsx)(i.X6q, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
                                     className: l.header,
-                                    children: o
+                                    children: a
                                 })
                               : null,
                           (0, r.jsx)('div', {

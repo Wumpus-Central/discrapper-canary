@@ -3,8 +3,8 @@ var r,
     l = n(392711),
     a = n.n(l),
     s = n(442837),
-    i = n(570140),
-    o = n(944163),
+    o = n(570140),
+    i = n(944163),
     E = n(709054),
     c = n(116175),
     u = n(308083);
@@ -47,7 +47,7 @@ let A = new Map(),
         description: '',
         wildcardDescriptors: [u.U6, u.U6, u.U6],
         tag: '',
-        verificationForm: d({}, o.t),
+        verificationForm: d({}, i.t),
         badgeKind: c.ZD.SWORD,
         badgePrimaryColor: void 0,
         badgeSecondaryColor: void 0,
@@ -91,7 +91,7 @@ class f extends (r = s.ZP.PersistedStore) {
                     description: n.description,
                     wildcardDescriptors: null != (r = n.wildcardDescriptors) ? r : [u.U6, u.U6, u.U6],
                     tag: n.tag,
-                    verificationForm: null != (l = n.verificationForm) ? l : d({}, o.t),
+                    verificationForm: null != (l = n.verificationForm) ? l : d({}, i.t),
                     badgeKind: null != (a = n.badgeKind) ? a : c.ZD.SWORD,
                     badgePrimaryColor: n.badgePrimaryColor,
                     badgeSecondaryColor: n.badgeSecondaryColor,
@@ -142,7 +142,7 @@ class f extends (r = s.ZP.PersistedStore) {
     }
 }
 _(f, 'displayName', 'ClanSetupStore'), _(f, 'persistKey', 'ClanSetupStore');
-let R = new f(i.Z, {
+let R = new f(o.Z, {
     CLAN_SETUP_RESET: function () {
         A.clear(), T.clear();
     },
@@ -174,6 +174,6 @@ let R = new f(i.Z, {
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
         let t,
             { form: n, guildId: r, isLocalUpdate: l } = e;
-        l && ((t = null == n ? o.t : d({}, O(r).verificationForm, n)), g(r, { verificationForm: t }));
+        l && ((t = null == n ? i.t : d({}, O(r).verificationForm, n)), g(r, { verificationForm: t }));
     }
 });

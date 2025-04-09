@@ -3,8 +3,8 @@ var r,
     l,
     a,
     s = n(392711),
-    i = n.n(s),
-    o = n(149765),
+    o = n.n(s),
+    i = n(149765),
     E = n(442837),
     c = n(570140),
     u = n(387667),
@@ -39,13 +39,13 @@ function j(e) {
         e.reverse().forEach((e) => {
             var r, l, a;
             let s = [],
-                o = null,
+                i = null,
                 E = null,
                 c = null;
             if ((null != e.reason && s.push(new u.ms(T.zUn.REASON, null, e.reason)), null != e.changes))
                 for (let t of e.changes) {
                     let e = new u.ms(t.key, t.old_value, t.new_value);
-                    s.push(e), e.key === T.zUn.NAME ? (o = e) : e.key === T.zUn.TYPE ? (c = e) : e.key === T.zUn.TITLE && (E = e);
+                    s.push(e), e.key === T.zUn.NAME ? (i = e) : e.key === T.zUn.TYPE ? (c = e) : e.key === T.zUn.TITLE && (E = e);
                 }
             if (e.action_type === T.rsA.MEMBER_PRUNE) {
                 let t = null != e && null != e.options && null != e.options.delete_member_days ? e.options.delete_member_days : 1,
@@ -66,7 +66,7 @@ function j(e) {
                 (function (e, t, n) {
                     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 30,
                         l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
-                    return null != e && e.action === t.action && e.targetId === t.targetId && e.userId === t.userId && i().isEqual(e.options, t.options) && t.timestampStart.diff(e.timestampStart, 'minutes') < r && n < l && t.targetType !== T.KFR.INVITE && t.action !== T.rsA.MESSAGE_DELETE && t.action !== T.rsA.MESSAGE_BULK_DELETE && t.action !== T.rsA.MESSAGE_PIN && t.action !== T.rsA.MESSAGE_UNPIN && t.action !== T.rsA.MEMBER_MOVE && t.action !== T.rsA.MEMBER_DISCONNECT && t.action !== T.rsA.BOT_ADD && t.action !== T.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE && t.action !== T.rsA.MEMBER_PRUNE;
+                    return null != e && e.action === t.action && e.targetId === t.targetId && e.userId === t.userId && o().isEqual(e.options, t.options) && t.timestampStart.diff(e.timestampStart, 'minutes') < r && n < l && t.targetType !== T.KFR.INVITE && t.action !== T.rsA.MESSAGE_DELETE && t.action !== T.rsA.MESSAGE_BULK_DELETE && t.action !== T.rsA.MESSAGE_PIN && t.action !== T.rsA.MESSAGE_UNPIN && t.action !== T.rsA.MEMBER_MOVE && t.action !== T.rsA.MEMBER_DISCONNECT && t.action !== T.rsA.BOT_ADD && t.action !== T.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE && t.action !== T.rsA.MEMBER_PRUNE;
                 })(A, d, n)
             ) {
                 (t[0] = A.merge({
@@ -76,8 +76,8 @@ function j(e) {
                     n++;
                 return;
             }
-            if (d.actionType === T.vB8.DELETE && (null != o || null != E)) {
-                let e = null != (a = null == o ? void 0 : o.oldValue) ? a : null == E ? void 0 : E.oldValue;
+            if (d.actionType === T.vB8.DELETE && (null != i || null != E)) {
+                let e = null != (a = null == i ? void 0 : i.oldValue) ? a : null == E ? void 0 : E.oldValue;
                 (d.targetType === T.KFR.CHANNEL || d.targetType === T.KFR.CHANNEL_OVERWRITE) && null !== c && (0, _.r8)(c.oldValue) && (e = '#'.concat(e)), null == y[d.targetType] ? (y[d.targetType] = { [d.targetId]: e }) : (y[d.targetType][d.targetId] = e);
             }
             (n = 0), t.unshift(d);
@@ -91,13 +91,13 @@ function G(e) {
     let n = d.ZP.getMembers(I),
         r = A.Z.getGuild(I),
         l = null != I ? A.Z.getRoles(I) : void 0;
-    f = i()(n)
+    f = o()(n)
         .filter((e) =>
             e.roles.some((t) => {
                 if (null != r) {
                     if (e.userId === r.ownerId) return !0;
                     let n = null == l ? void 0 : l[t];
-                    return null != n && N.some((e) => o.e$(n.permissions, e));
+                    return null != n && N.some((e) => i.e$(n.permissions, e));
                 }
             })
         )
@@ -185,8 +185,8 @@ let W = new F(c.Z, {
         (C = !0), t && x++;
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
-        let { logs: t, integrations: n, webhooks: r, guildScheduledEvents: l, automodRules: a, threads: s, applicationCommands: i } = e;
-        if (((C = !1), (g = n), (R = r), (p = l), (S = a), (h = s), (U = i), (0 === t.length || t.length < T.Rg9) && (m = !1), t.length > 0)) {
+        let { logs: t, integrations: n, webhooks: r, guildScheduledEvents: l, automodRules: a, threads: s, applicationCommands: o } = e;
+        if (((C = !1), (g = n), (R = r), (p = l), (S = a), (h = s), (U = o), (0 === t.length || t.length < T.Rg9) && (m = !1), t.length > 0)) {
             let e = j(t);
             O = [...O, ...e];
         }

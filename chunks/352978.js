@@ -15,38 +15,38 @@ var r,
     f = n(106209),
     m = (((r = {}).CONTAIN = 'contain'), (r.COVER = 'cover'), r);
 let p = i.memo(function (e) {
-    let { streamId: t, onResize: n, wrapperClassName: r, videoComponent: a, className: m, fit: p = 'contain', mirror: g = !1, paused: E = !1, streamPreviewURL: h, videoSpinnerContext: v, userId: b, streamKey: S } = e,
+    let { streamId: t, onResize: n, wrapperClassName: r, videoComponent: a, className: m, fit: p = 'contain', mirror: E = !1, paused: g = !1, streamPreviewURL: h, videoSpinnerContext: v, userId: S, streamKey: b } = e,
         [y, O] = i.useState(!0);
     (0, c.Z)({
         location: 'VideoStream',
         videoSpinnerContext: v,
-        userId: b,
+        userId: S,
         streamId: t,
         loading: y,
-        paused: E
+        paused: g
     });
-    let { onReady: Z } = (0, u.Z)({
+    let { onReady: I } = (0, u.Z)({
             streamId: t,
-            userId: b,
+            userId: S,
             videoSpinnerContext: v,
-            streamKey: S,
-            paused: E
+            streamKey: b,
+            paused: g
         }),
-        I = i.useCallback(() => {
-            O(!1), Z();
-        }, [Z]);
+        _ = i.useCallback(() => {
+            O(!1), I();
+        }, [I]);
     return (0, l.jsxs)('div', {
         className: o()(f.wrapper, r),
         children: [
             null != t &&
                 (0, l.jsx)(a, {
-                    className: o()(f.video, (0, d.l)(f, 'video', p), { [f.mirror]: g }, m),
+                    className: o()(f.video, (0, d.l)(f, 'video', p), { [f.mirror]: E }, m),
                     streamId: t,
                     onResize: n,
-                    onReady: I,
-                    paused: E
+                    onReady: _,
+                    paused: g
                 }),
-            E
+            g
                 ? null
                 : (0, l.jsx)('div', {
                       className: o()(f.previewWrapper, { [f.loading]: y }),

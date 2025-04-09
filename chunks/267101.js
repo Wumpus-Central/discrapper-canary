@@ -1,5 +1,5 @@
 n.d(t, {
-    SO: () => O,
+    SO: () => S,
     eD: () => p,
     hO: () => f,
     r: () => _,
@@ -47,4 +47,4 @@ let p = (e) => {
         return (0, i.e7)([c.Z, o.Z], () => c.Z.getGuildProductsForGuild(e, { publishedOnly: null != t ? t : !o.Z.isViewingServerShop(e) }));
     },
     _ = (e) => (0, i.e7)([c.Z], () => (null == e ? void 0 : c.Z.getGuildProduct(e))),
-    O = (e) => (0, i.e7)([a.Z], () => null != e && a.Z.can(d.Plq.ADMINISTRATOR, e));
+    S = (e) => (0, i.e7)([a.Z], () => null != e && a.Z.can(d.Plq.ADMINISTRATOR, e));

@@ -15,7 +15,7 @@ var C = B(200651),
     d = B(602268);
 let n = function (A) {
     let { className: g, guildId: B, badge: w, primaryColor: n, secondaryColor: M } = A,
-        [L, s] = Q.useState(!1),
+        [s, L] = Q.useState(!1),
         X = Q.useMemo(() => r.go.every((A) => A.primary !== n || A.secondary !== M), [n, M]);
     function c(A) {
         let g = {};
@@ -60,8 +60,8 @@ let n = function (A) {
                         onSecondaryColorChange: (A) => {
                             c({ secondary: (0, f.Rf)(A) });
                         },
-                        shouldShow: L,
-                        onRequestClose: () => s(!1),
+                        shouldShow: s,
+                        onRequestClose: () => L(!1),
                         children: (A) => {
                             var g, B;
                             return (0, C.jsx)(
@@ -94,7 +94,7 @@ let n = function (A) {
                                 (B = B =
                                     {
                                         onClick: () => {
-                                            s((A) => !A);
+                                            L((A) => !A);
                                         },
                                         className: D()(d.pickerItem, { [d.pickerItemSelected]: X }),
                                         children: (0, C.jsx)(E.ilE, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(642613);
+n.d(t, { Z: () => T }), n(388685), n(642613);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -20,8 +20,8 @@ var r = n(200651),
     j = n(621060),
     y = n(388032),
     C = n(459100),
-    T = n(616257);
-let N = [
+    O = n(616257);
+let S = [
         {
             key: 'id',
             cellClassName: C.eventColumn,
@@ -47,7 +47,7 @@ let N = [
             }
         }
     ],
-    S = [
+    N = [
         {
             id: 'details',
             name: 'Details',
@@ -60,7 +60,7 @@ let N = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(h.ZP, {
-                            className: i()(T.headerBar, C.subPanelHeaderBar),
+                            className: i()(O.headerBar, C.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(h.ZP.Icon, {
                                     icon: m.IeX,
@@ -120,15 +120,15 @@ let N = [
             }
         }
     ];
-function O() {
+function T() {
     let [e, t] = a.useState(''),
         n = a.useRef(null),
         l = (0, u.Wu)([b.Z], () => b.Z.loggedTriggers),
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = a.useState(void 0),
         h = o.find((e) => e.key === c),
-        { TabBar: p, renderSelectedTab: _ } = (0, j.ZP)({ tabs: S }, []),
-        O = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
+        { TabBar: p, renderSelectedTab: _ } = (0, j.ZP)({ tabs: N }, []),
+        T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
         E = a.useCallback((e) => {
             x.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
@@ -137,7 +137,7 @@ function O() {
         }, []);
     return (0, r.jsxs)('div', {
         ref: n,
-        className: i()(T.panel, C.panel),
+        className: i()(O.panel, C.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: C.toolbar,
@@ -146,7 +146,7 @@ function O() {
                         title: 'Enables tracking of all triggers',
                         className: C.triggersEnable,
                         children: (0, r.jsx)(m.rsf, {
-                            checked: O,
+                            checked: T,
                             onChange: E,
                             className: C.__invalid_toolbarSwitch
                         })
@@ -175,7 +175,7 @@ function O() {
                 ]
             }),
             (0, r.jsx)(v.Z, {
-                columns: N,
+                columns: S,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)
