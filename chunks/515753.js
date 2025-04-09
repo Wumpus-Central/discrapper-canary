@@ -417,7 +417,7 @@ function es(e) {
         children: (e) => {
             var { role: t } = e,
                 n = ee(e, ['role']);
-            return (0, l.jsx)(v.Z, {
+            return (0, l.jsxs)(v.Z, {
                 className: o()(X.channel, X.dm),
                 role: t,
                 focusProps: $(J({}, en), {
@@ -431,73 +431,76 @@ function es(e) {
                 onContextMenu: em,
                 'aria-setsize': K,
                 'aria-posinset': B,
-                children: (0, l.jsxs)(f.vjx, {
-                    className: o()(X.interactive, {
-                        [X.interactiveSystemDM]: eL && ey,
-                        [X.interactiveSelected]: d,
-                        [X.platedWrapper]: null != H
-                    }),
-                    as: 'div',
-                    onClick: eN,
-                    muted: ex,
-                    selected: d,
-                    children: [
-                        (0, l.jsx)(w.Z, {
-                            nameplate: H,
-                            selected: d,
-                            hovered: z,
-                            content: ew,
-                            placement: x.i.CHANNEL
+                children: [
+                    ep ? (0, l.jsx)('div', { className: o()(X.unreadPill, { [X.muted]: ex }) }) : null,
+                    (0, l.jsxs)(f.vjx, {
+                        className: o()(X.interactive, {
+                            [X.interactiveSystemDM]: eL && ey,
+                            [X.interactiveSelected]: d,
+                            [X.platedWrapper]: null != H
                         }),
-                        (0, l.jsx)(
-                            u.rU,
-                            $(
-                                J(
+                        as: 'div',
+                        onClick: eN,
+                        muted: ex,
+                        selected: d,
+                        children: [
+                            (0, l.jsx)(w.Z, {
+                                nameplate: H,
+                                selected: d,
+                                hovered: z,
+                                content: ew,
+                                placement: x.i.CHANNEL
+                            }),
+                            (0, l.jsx)(
+                                u.rU,
+                                $(
+                                    J(
+                                        {
+                                            innerRef: ea,
+                                            to: Q.Z5c.CHANNEL(Q.ME, i.id),
+                                            className: o()(X.link, { [X.linkPlated]: null != H }),
+                                            'aria-label': (0, m.ZP)({
+                                                channel: i,
+                                                unread: ep
+                                            })
+                                        },
+                                        n
+                                    ),
                                     {
-                                        innerRef: ea,
-                                        to: Q.Z5c.CHANNEL(Q.ME, i.id),
-                                        className: o()(X.link, { [X.linkPlated]: null != H }),
-                                        'aria-label': (0, m.ZP)({
-                                            channel: i,
-                                            unread: ep
+                                        children: (0, l.jsx)(T.Z, {
+                                            ref: ew,
+                                            avatar: eP(),
+                                            selected: d,
+                                            highlighted: ep,
+                                            muted: ex,
+                                            subText: eb(),
+                                            name: (0, l.jsx)(y.Z, {
+                                                tooltipClassName: X.overflowTooltip,
+                                                children: eU
+                                            }),
+                                            decorators: i.isSystemDM()
+                                                ? (0, l.jsx)(I.Z, {
+                                                      className: X.decorator,
+                                                      type: I.Z.Types.SYSTEM_DM,
+                                                      verified: !0
+                                                  })
+                                                : null
                                         })
-                                    },
-                                    n
-                                ),
-                                {
-                                    children: (0, l.jsx)(T.Z, {
-                                        ref: ew,
-                                        avatar: eP(),
-                                        selected: d,
-                                        highlighted: ep,
-                                        muted: ex,
-                                        subText: eb(),
-                                        name: (0, l.jsx)(y.Z, {
-                                            tooltipClassName: X.overflowTooltip,
-                                            children: eU
-                                        }),
-                                        decorators: i.isSystemDM()
-                                            ? (0, l.jsx)(I.Z, {
-                                                  className: X.decorator,
-                                                  type: I.Z.Types.SYSTEM_DM,
-                                                  verified: !0
-                                              })
-                                            : null
-                                    })
-                                }
-                            )
-                        ),
-                        eh ? (0, l.jsx)(er, {}) : null,
-                        eZ ? (0, l.jsx)(ei, {}) : null,
-                        ej ? (0, l.jsx)(eo, {}) : null,
-                        (0, l.jsx)(el, {
-                            'aria-label': ev ? q.NW.string(q.t['26C4oq']) : q.NW.string(q.t.jsvgc3),
-                            onClick: ev ? eA : eO,
-                            onMouseDown: eT,
-                            nameplate: H
-                        })
-                    ]
-                })
+                                    }
+                                )
+                            ),
+                            eh ? (0, l.jsx)(er, {}) : null,
+                            eZ ? (0, l.jsx)(ei, {}) : null,
+                            ej ? (0, l.jsx)(eo, {}) : null,
+                            (0, l.jsx)(el, {
+                                'aria-label': ev ? q.NW.string(q.t['26C4oq']) : q.NW.string(q.t.jsvgc3),
+                                onClick: ev ? eA : eO,
+                                onMouseDown: eT,
+                                nameplate: H
+                            })
+                        ]
+                    })
+                ]
             });
         }
     });

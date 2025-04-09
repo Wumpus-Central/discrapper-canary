@@ -1,6 +1,8 @@
 e.exports = {
     channel: 'channel__972a0',
     fullWidth: 'fullWidth__972a0',
+    unreadPill: 'unreadPill__972a0',
+    muted: 'muted__972a0',
     interactive: 'interactive__972a0',
     overflowTooltip: 'overflowTooltip__972a0',
     clanTag: 'clanTag__972a0',
