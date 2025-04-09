@@ -38,6 +38,7 @@ function u(e) {
                 : null,
             null != u
                 ? (0, r.jsx)(a.Text, {
+                      className: l.errorCodeMessage,
                       variant: 'text-sm/semibold',
                       color: 'text-muted',
                       selectable: !0,
