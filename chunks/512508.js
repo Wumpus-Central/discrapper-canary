@@ -1,7 +1,7 @@
 n.d(t, {
-    PM: () => I,
-    WG: () => P,
-    ZP: () => k
+    PM: () => M,
+    WG: () => I,
+    ZP: () => T
 }),
     n(388685),
     n(781311);
@@ -19,14 +19,15 @@ var r = n(200651),
     b = n(91218),
     p = n(313201),
     f = n(518738),
-    h = n(662594),
-    g = n(592125),
-    j = n(430824),
-    x = n(699516),
-    O = n(594174),
-    y = n(388032),
-    v = n(962923);
-function _(e) {
+    h = n(884902),
+    g = n(662594),
+    j = n(592125),
+    x = n(430824),
+    O = n(699516),
+    y = n(594174),
+    v = n(388032),
+    _ = n(962923);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +52,7 @@ function _(e) {
     }
     return e;
 }
-function N(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,33 +70,33 @@ function N(e, t) {
         e
     );
 }
-function H(e) {
+function w(e) {
     var t = (function (e, t) {
-        if ('object' !== w(e) || null === e) return e;
+        if ('object' !== S(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== w(r)) return r;
+            if ('object' !== S(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === w(t) ? t : String(t);
+    return 'symbol' === S(t) ? t : String(t);
 }
-function w(e) {
+function S(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-let S = (0, p.hQ)(),
-    D = (0, p.hQ)(),
-    Z = 'text-sm/medium';
-function L(e) {
+let D = (0, p.hQ)(),
+    Z = (0, p.hQ)(),
+    L = 'text-sm/medium';
+function R(e) {
     return 1 === e.type;
 }
-function R(e) {
+function P(e) {
     return 0 === e.type;
 }
-function P(e) {
-    let t = ''.concat(!e.name.includes(h.CR) ? '@' : '').concat(e.name);
+function I(e) {
+    let t = ''.concat(!e.name.includes(g.CR) ? '@' : '').concat(e.name);
     return {
         tag: {
             type: d.Fj.ROLE,
@@ -109,8 +110,8 @@ function P(e) {
         }
     };
 }
-function I(e) {
-    let t = (0, C.F6)(e, O.default, x.Z);
+function M(e) {
+    let t = (0, C.F6)(e, y.default, O.Z);
     return {
         tag: {
             type: d.Fj.CHANNEL,
@@ -124,7 +125,7 @@ function I(e) {
         }
     };
 }
-let M = l.memo(function (e) {
+let V = l.memo(function (e) {
     var t;
     let { row: n, guildId: l, className: o } = e,
         { id: i, name: s } = n.record,
@@ -133,52 +134,54 @@ let M = l.memo(function (e) {
             roleId: i,
             size: 16
         }),
-        C = (0, c.e7)([j.Z], () => j.Z.getRole(l, i)),
-        m = s.includes(h.CR) ? '' : '@',
+        C = (0, c.e7)([x.Z], () => x.Z.getRole(l, i)),
+        m = s.includes(g.CR) ? '' : '@',
         p = (0, u.dQu)(u.TVs.unsafe_rawColors.PRIMARY_300).hsl(),
-        g = null != (t = null == C ? void 0 : C.colorString) ? t : p;
+        j = null != (t = null == C ? void 0 : C.colorString) ? t : p,
+        O = (0, h.X)(l, null == C ? void 0 : C.colorStrings);
     return (0, r.jsxs)('div', {
-        className: a()(v.rowLabel, v.roleTagContainer, o),
+        className: a()(_.rowLabel, _.roleTagContainer, o),
         children: [
             (0, r.jsx)(u.FhE, {
-                className: v.__invalid_roleDot,
-                color: g,
+                className: _.__invalid_roleDot,
+                color: j,
+                colors: O,
                 background: !1,
                 tooltip: !1
             }),
-            null != d ? (0, r.jsx)(b.Z, N(_({ className: v.roleTagIcon }, d), { enableTooltip: !1 })) : m,
+            null != d ? (0, r.jsx)(b.Z, H(N({ className: _.roleTagIcon }, d), { enableTooltip: !1 })) : m,
             (0, r.jsx)(u.Text, {
-                variant: Z,
-                className: v.roleTagLabel,
+                variant: L,
+                className: _.roleTagLabel,
                 children: s
             })
         ]
     });
 });
-function V(e) {
+function E(e) {
     let { channel: t, row: n, className: l } = e,
         o = null != t.parent_id,
         i = (0, m.KS)(t);
     return (0, r.jsxs)('div', {
-        className: a()(v.rowLabel, v.channelLabel, { [v.hasParent]: o }, l),
+        className: a()(_.rowLabel, _.channelLabel, { [_.hasParent]: o }, l),
         children: [
             null != i &&
                 (0, r.jsx)(i, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: v.channelIcon
+                    className: _.channelIcon
                 }),
             (0, r.jsx)(u.Text, {
-                variant: t.isCategory() ? 'eyebrow' : Z,
+                variant: t.isCategory() ? 'eyebrow' : L,
                 children: n.display
             })
         ]
     });
 }
-function E(e, t, n) {
-    return L(e)
+function k(e, t, n) {
+    return R(e)
         ? (0, r.jsx)(
-              M,
+              V,
               {
                   row: e,
                   guildId: t,
@@ -186,9 +189,9 @@ function E(e, t, n) {
               },
               e.record.id
           )
-        : R(e)
+        : P(e)
           ? (0, r.jsx)(
-                V,
+                E,
                 {
                     row: e,
                     channel: e.record,
@@ -198,36 +201,36 @@ function E(e, t, n) {
             )
           : null;
 }
-function k(e) {
+function T(e) {
     let { guildId: t, roleRows: n = [], channelRows: o = [], selectedChannelIds: i = new Set(), selectedRoleIds: C = new Set(), onChange: m, placeholder: b, helperText: p, className: f } = e,
-        h = (0, c.e7)([j.Z], () => j.Z.getRoles(t)),
-        x = l.useMemo(
+        h = (0, c.e7)([x.Z], () => x.Z.getRoles(t)),
+        g = l.useMemo(
             () =>
                 (function (e, t, n) {
                     if (null == e) return {};
                     let r = {};
                     return (
                         e.forEach((e) => {
-                            let t = g.Z.getChannel(e);
-                            null != t && (r[e] = I(t));
+                            let t = j.Z.getChannel(e);
+                            null != t && (r[e] = M(t));
                         }),
                         t.forEach((e) => {
-                            e in n && (r[e] = P(n[e]));
+                            e in n && (r[e] = I(n[e]));
                         }),
                         r
                     );
                 })(i, C, h),
             [i, C, h]
         ),
-        O = l.useMemo(() => Object.keys(x), [x]),
-        [w, Z] = l.useState(''),
-        [M, V] = l.useState(!1),
-        [k, T] = l.useState(!1),
+        O = l.useMemo(() => Object.keys(g), [g]),
+        [y, S] = l.useState(''),
+        [L, V] = l.useState(!1),
+        [E, T] = l.useState(!1),
         [A, B] = l.useState(!1),
         W = l.useRef(null),
         { sections: U, sectionCounts: F } = l.useMemo(() => {
-            let e = '' !== w ? o.filter((e) => s()(w, e.display.toLocaleLowerCase())) : o,
-                t = '' !== w ? n.filter((e) => s()(w, e.display.toLocaleLowerCase())) : n,
+            let e = '' !== y ? o.filter((e) => s()(y, e.display.toLocaleLowerCase())) : o,
+                t = '' !== y ? n.filter((e) => s()(y, e.display.toLocaleLowerCase())) : n,
                 r = [],
                 l = [];
             return (
@@ -240,20 +243,20 @@ function k(e) {
                     sectionCounts: l
                 }
             );
-        }, [w, o, n]),
+        }, [y, o, n]),
         z = l.useCallback(
             (e) => {
                 let t = Object.values(e),
                     n = t
                         .filter((e) => {
                             let { row: t } = e;
-                            return R(t);
+                            return P(t);
                         })
                         .map((e) => e.row.record.id),
                     r = t
                         .filter((e) => {
                             let { row: t } = e;
-                            return L(t);
+                            return R(t);
                         })
                         .map((e) => e.row.record.id);
                 m(new Set(n), new Set(r));
@@ -265,21 +268,21 @@ function k(e) {
         };
     l.useEffect(() => {
         let e = setTimeout(() => {
-            B(M || k);
+            B(L || E);
         }, 32);
         return () => {
             clearTimeout(e);
         };
-    }, [M, k]);
+    }, [L, E]);
     let G = (e, t, n) => {
             n.stopPropagation(), n.preventDefault(), 2 === t ? V(e) : (1 === t || V(e), T(e));
         },
         Y = l.useCallback(
             (e) => {
-                let t = _({}, x);
-                R(e) ? (t[e.id] = I(e.record)) : L(e) && (t[e.id] = P(e.record)),
+                let t = N({}, g);
+                P(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = I(e.record)),
                     z(t),
-                    Z(''),
+                    S(''),
                     q(),
                     setTimeout(() => {
                         var e;
@@ -292,7 +295,7 @@ function k(e) {
                             });
                     }, 16);
             },
-            [z, x]
+            [z, g]
         ),
         X = l.useCallback(
             (e) => {
@@ -301,13 +304,13 @@ function k(e) {
                 return (0, r.jsx)(
                     u.P3F,
                     {
-                        className: a()(v.selectableSearchRow, v.rowHeight),
+                        className: a()(_.selectableSearchRow, _.rowHeight),
                         onClick: (e) => {
                             e.stopPropagation(), Y(o);
                         },
                         children: (0, r.jsx)('div', {
-                            className: v.rowContainer,
-                            children: E(o, t, v.searchRowLabel)
+                            className: _.rowContainer,
+                            children: k(o, t, _.searchRowLabel)
                         })
                     },
                     o.id
@@ -319,25 +322,25 @@ function k(e) {
             () =>
                 O.map((e) => {
                     var n;
-                    return (n = x[e]), N(_({}, n.tag), { label: E(n.row, t, v.noIndent) });
+                    return (n = g[e]), H(N({}, n.tag), { label: k(n.row, t, _.noIndent) });
                 }),
-            [x, O, t]
+            [g, O, t]
         );
     return (0, r.jsxs)('div', {
-        className: a()(v.searchContainer, f),
+        className: a()(_.searchContainer, f),
         children: [
             (0, r.jsxs)('div', {
-                className: v.searchBox,
+                className: _.searchBox,
                 children: [
                     (0, r.jsx)(d.ZP, {
                         tags: J,
                         maxHeight: 98,
                         size: d.ZP.Sizes.MEDIUM,
-                        query: w,
+                        query: y,
                         ref: W,
                         onRemoveTag: (e) => {
                             let t = O[e],
-                                { [t]: n } = x;
+                                { [t]: n } = g;
                             z(
                                 (function (e, t) {
                                     if (null == e) return {};
@@ -357,19 +360,19 @@ function k(e) {
                                         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
                                     }
                                     return l;
-                                })(x, [t].map(H))
+                                })(g, [t].map(w))
                             ),
-                                Z(''),
+                                S(''),
                                 q();
                         },
                         onQueryChange: (e) => {
-                            Z(e.trim().toLocaleLowerCase());
+                            S(e.trim().toLocaleLowerCase());
                         },
-                        placeholder: null != b ? b : y.NW.string(y.t.uqHLzc),
+                        placeholder: null != b ? b : v.NW.string(v.t.uqHLzc),
                         sections: [O.length],
                         inputProps: {
-                            'aria-labelledby': S,
-                            'aria-controls': D,
+                            'aria-labelledby': D,
+                            'aria-controls': Z,
                             'aria-expanded': A,
                             onFocus: (e) => G(!0, 2, e),
                             onBlur: (e) => G(!1, 2, e)
@@ -377,13 +380,13 @@ function k(e) {
                     }),
                     A &&
                         (0, r.jsx)('div', {
-                            className: v.resultsListParent,
+                            className: _.resultsListParent,
                             onFocus: (e) => G(!0, 1, e),
                             onBlur: (e) => G(!1, 1, e),
                             tabIndex: -1,
                             children: (0, r.jsx)(u._2F, {
-                                className: v.resultsListContainer,
-                                innerClassName: v.resultsList,
+                                className: _.resultsListContainer,
+                                innerClassName: _.resultsList,
                                 sections: F,
                                 renderRow: X,
                                 rowHeight: 34,
@@ -394,20 +397,20 @@ function k(e) {
                                               u.vwX,
                                               {
                                                   tag: 'h5',
-                                                  className: a()(v.sectionTitle, v.sectionHeight),
-                                                  children: y.NW.string(y.t.OGiMXF)
+                                                  className: a()(_.sectionTitle, _.sectionHeight),
+                                                  children: v.NW.string(v.t.OGiMXF)
                                               },
-                                              y.NW.string(y.t.OGiMXF)
+                                              v.NW.string(v.t.OGiMXF)
                                           )
                                         : 1 === t
                                           ? (0, r.jsx)(
                                                 u.vwX,
                                                 {
                                                     tag: 'h5',
-                                                    className: a()(v.sectionTitle, v.sectionHeight),
-                                                    children: y.NW.string(y.t.LPJmLy)
+                                                    className: a()(_.sectionTitle, _.sectionHeight),
+                                                    children: v.NW.string(v.t.LPJmLy)
                                                 },
-                                                y.NW.string(y.t.LPJmLy)
+                                                v.NW.string(v.t.LPJmLy)
                                             )
                                           : null;
                                 },
@@ -417,7 +420,7 @@ function k(e) {
                                         ? 0 === F[1] && F[0] > 0
                                             ? null
                                             : (0, r.jsx)('div', {
-                                                  className: v.sectionFooter,
+                                                  className: _.sectionFooter,
                                                   children: (0, r.jsx)(u.$i$, {})
                                               })
                                         : null;
@@ -426,7 +429,7 @@ function k(e) {
                                 footerHeight: (e) => (0 === e ? (0 === F[1] && F[0] > 0 ? 0 : 32) : 0),
                                 role: void 0,
                                 innerRole: 'listbox',
-                                innerId: D,
+                                innerId: Z,
                                 innerAriaOrientation: 'vertical'
                             })
                         })
@@ -436,7 +439,7 @@ function k(e) {
                 (0, r.jsx)(u.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
-                    className: v.helperText,
+                    className: _.helperText,
                     children: p
                 })
         ]

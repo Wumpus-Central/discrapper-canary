@@ -91,25 +91,26 @@ function C(e) {
         q = (0, O.Z)(null != L ? L : B, 'BaseUsername'),
         Q = (0, j.ic)({ location: 'BaseUsername' }),
         K = (0, P.Z)(n),
-        ee = Y && q && null != J && null != J.primaryColor && null != J.secondaryColor,
-        et = (0, u.Nv7)(null == J ? void 0 : J.primaryColor, null == J ? void 0 : J.secondaryColor, null == J ? void 0 : J.tertiaryColor),
-        { text: er, gradient: en } = ee
-            ? et
+        ee = q && null != J && null != J.primaryColor && null != J.secondaryColor,
+        et = Y && ee,
+        er = (0, u.Nv7)(null == J ? void 0 : J.primaryColor, null == J ? void 0 : J.secondaryColor, null == J ? void 0 : J.tertiaryColor),
+        { text: en, gradient: el } = et
+            ? er
             : {
                   text: {},
                   gradient: {}
               },
-        el = {
-            className: o()([S.username, ee && er.gradientClassName, ee && en.gradientClassName]),
+        ei = {
+            className: o()([S.username, et && en.gradientClassName, et && el.gradientClassName]),
             style: (() => {
-                if (Y) return ee && null != J ? N({}, er.gradientStyle) : null != W ? { color: W } : void 0;
+                if (Y) return et && null != J ? N({}, en.gradientStyle) : null != W ? { color: W } : void 0;
             })(),
             onClick: k,
             onContextMenu: A,
             children: U + H,
             'data-text': U + H
         },
-        ei = i.useMemo(
+        ea = i.useMemo(
             () =>
                 R
                     ? (0, l.jsx)(b.ZP, {
@@ -121,12 +122,12 @@ function C(e) {
                     : null,
             [R, r.primaryGuild, B, n.author.id]
         ),
-        ea = null != f ? f : n.author,
-        eo =
+        eo = null != f ? f : n.author,
+        ec =
             null != D && null != E
                 ? (0, l.jsx)(v.Z, {
                       targetElementRef: M,
-                      user: ea,
+                      user: eo,
                       renderPopout: D,
                       shouldShow: E,
                       shouldShowOnHover: K && Q,
@@ -136,7 +137,7 @@ function C(e) {
                           null != r.guildMemberAvatar && null != B
                               ? (0, h.JM)({
                                     guildId: B,
-                                    userId: ea.id,
+                                    userId: eo.id,
                                     avatar: r.guildMemberAvatar,
                                     size: 80
                                 })
@@ -175,37 +176,38 @@ function C(e) {
                                                   innerRef: M
                                               },
                                               r,
-                                              el
+                                              ei
                                           ),
-                                          { className: o()(el.className, S.clickable, Z) }
+                                          { className: o()(ei.className, S.clickable, Z) }
                                       )
                                   ),
-                                  ei
+                                  ea
                               ]
                           });
                       }
                   })
                 : (0, l.jsxs)(l.Fragment, {
-                      children: [(0, l.jsx)(u.P3F, w(N({}, el), { className: o()(el.className, Z) })), ei]
+                      children: [(0, l.jsx)(u.P3F, w(N({}, ei), { className: o()(ei.className, Z) })), ea]
                   }),
-        ec = null != F ? F[0] : null,
-        es = null != F ? F[1] : null;
+        es = null != F ? F[0] : null,
+        eu = null != F ? F[1] : null;
     return (0, l.jsxs)(d.Gt, {
         value: z,
         children: [
-            null != ec && R
+            null != es && R
                 ? (0, l.jsxs)(l.Fragment, {
-                      children: [' ', ec, ' ']
+                      children: [' ', es, ' ']
                   })
                 : null,
             'dot' === X
                 ? (0, l.jsx)(u.FhE, {
                       color: W,
+                      colors: ee ? J : null,
                       name: V,
                       className: S.roleDot
                   })
                 : null,
-            eo,
+            ec,
             !R &&
                 (0, l.jsx)(b.ZP, {
                     primaryGuild: r.primaryGuild,
@@ -213,8 +215,8 @@ function C(e) {
                     contextGuildId: B,
                     className: S.clanTagChiplet
                 }),
-            null != es ? es : null,
-            null == ec || R ? null : ec,
+            null != eu ? eu : null,
+            null == es || R ? null : es,
             null != n && (0, x.f)(n) && $ && _ ? (0, l.jsx)(T, {}) : null
         ]
     });

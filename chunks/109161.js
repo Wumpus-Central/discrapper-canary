@@ -1,14 +1,15 @@
 n.d(t, {
-    F: () => _,
-    x: () => p
-});
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    o = n.n(i),
-    a = n(981729),
-    s = n(563373);
-function l(e, t, n) {
+    F: () => h,
+    x: () => m
+}),
+    n(388685);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(981729),
+    l = n(563373);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +33,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,78 +50,151 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e) {
-    let { color: t, className: n, background: i = !0 } = e;
-    return null == t
+function _(e, t, n) {
+    return i.useMemo(() => {
+        let i = [e, t, n].filter((e) => null != e),
+            o = i.length >= 2,
+            a = i.length > 1 ? 100 / (i.length - 1) : 0,
+            s = i.map((e, t) =>
+                (0, r.jsx)(
+                    'stop',
+                    {
+                        offset: ''.concat(t * a, '%'),
+                        style: { stopColor: e }
+                    },
+                    t
+                )
+            ),
+            l = i.join('');
+        return {
+            hasGradient: o,
+            stops: s,
+            gradientId: 'dotGradient-'.concat(l),
+            animatedGradientId: 'dotAnimatedGradient-'.concat(l)
+        };
+    }, [e, t, n]);
+}
+function p(e) {
+    var t;
+    let { color: n, colors: o, className: s, background: c = !0 } = e,
+        [u, d] = i.useState(!1),
+        f = null != (t = null == o ? void 0 : o.primaryColor) ? t : n,
+        { hasGradient: p, stops: h, gradientId: m, animatedGradientId: g } = _(f, null == o ? void 0 : o.secondaryColor, null == o ? void 0 : o.tertiaryColor);
+    return null == f
         ? null
         : (0, r.jsxs)('svg', {
-              className: o()(s.svg, n),
+              className: a()(l.svg, s),
               viewBox: '0 0 20 20',
               fill: 'none',
+              onMouseEnter: () => {
+                  d(!0);
+              },
+              onMouseLeave: () => {
+                  d(!1);
+              },
               children: [
-                  i &&
+                  p &&
+                      (0, r.jsxs)('defs', {
+                          children: [
+                              (0, r.jsx)('linearGradient', {
+                                  id: m,
+                                  x1: '0%',
+                                  y1: '0%',
+                                  x2: '100%',
+                                  y2: '0%',
+                                  spreadMethod: 'reflect',
+                                  children: h
+                              }),
+                              (0, r.jsxs)('linearGradient', {
+                                  id: g,
+                                  x1: '0%',
+                                  y1: '0%',
+                                  x2: '100%',
+                                  y2: '0%',
+                                  spreadMethod: 'reflect',
+                                  children: [
+                                      h,
+                                      (0, r.jsx)('animate', {
+                                          attributeName: 'x1',
+                                          from: '0%',
+                                          to: '200%',
+                                          dur: '3s',
+                                          repeatCount: 'indefinite'
+                                      }),
+                                      (0, r.jsx)('animate', {
+                                          attributeName: 'x2',
+                                          from: '100%',
+                                          to: '300%',
+                                          dur: '3s',
+                                          repeatCount: 'indefinite'
+                                      })
+                                  ]
+                              })
+                          ]
+                      }),
+                  c &&
                       (0, r.jsx)('path', {
-                          className: s.background,
+                          className: l.background,
                           d: 'M0 4C0 1.79086 1.79086 0 4 0H16C18.2091 0 20 1.79086 20 4V16C20 18.2091 18.2091 20 16 20H4C1.79086 20 0 18.2091 0 16V4Z'
                       }),
                   (0, r.jsx)('circle', {
-                      className: s.dotBorderBase,
+                      className: l.dotBorderBase,
                       cx: '10',
                       cy: '10',
                       r: '6'
                   }),
                   (0, r.jsx)('circle', {
-                      className: s.dotBorderColor,
+                      className: l.dotBorderColor,
                       cx: '10',
                       cy: '10',
                       r: '6',
-                      fill: t
+                      fill: p ? 'url(#'.concat(m, ')') : f
                   }),
                   (0, r.jsx)('circle', {
-                      className: s.dot,
+                      className: l.dot,
                       cx: '10',
                       cy: '10',
                       r: '5',
-                      fill: t
+                      fill: p ? 'url(#'.concat(u ? g : m, ')') : f
                   })
               ]
           });
 }
-function _(e) {
-    let { color: t, name: n, tooltip: i = !0 } = e;
-    return null == t
+function h(e) {
+    let { color: t, colors: n, name: i, tooltip: o = !0 } = e;
+    return null == t && null == n
         ? null
-        : i
-          ? (0, r.jsx)(a.u, {
-                text: n,
+        : o
+          ? (0, r.jsx)(s.u, {
+                text: i,
                 children: (t) =>
                     (0, r.jsx)(
                         'span',
-                        d(c({}, t), {
+                        f(u({}, t), {
                             'aria-hidden': !0,
-                            children: (0, r.jsx)(f, c({}, e))
+                            children: (0, r.jsx)(p, u({}, e))
                         })
                     )
             })
-          : (0, r.jsx)(f, c({}, e));
+          : (0, r.jsx)(p, u({}, e));
 }
-function p(e) {
+function m(e) {
     let { color: t, className: n } = e;
     return null == t
         ? null
         : (0, r.jsx)('span', {
-              className: o()(s.roleCircle, n),
+              className: a()(l.roleCircle, n),
               style: { backgroundColor: t }
           });
 }

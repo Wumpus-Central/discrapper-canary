@@ -275,7 +275,7 @@ function G(e) {
         I = ((null != t && 0 !== t) || (null != n && null != n.primaryColor)) && !f,
         S = I && 'dot' === g,
         T = I && 'username' === g,
-        N = T && E && null != n && null != n.secondaryColor ? (0, O.f)(n) : null,
+        N = E && null != n && null != n.secondaryColor ? (0, O.f)(n) : null,
         A = (e) =>
             (0, r.jsxs)(
                 y.Z,
@@ -284,7 +284,7 @@ function G(e) {
                         {
                             className: P.roleMention,
                             color: T ? t : null,
-                            roleColors: N
+                            roleColors: T ? N : null
                         },
                         e
                     ),
@@ -294,6 +294,7 @@ function G(e) {
                                 null != t &&
                                 (0, r.jsx)(c.FhE, {
                                     color: (0, s.Rf)(t),
+                                    colors: N,
                                     className: w.roleDot,
                                     background: !1,
                                     tooltip: !1

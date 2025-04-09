@@ -88,24 +88,26 @@ function E(e) {
     let { roleStyle: t, name: n, color: i, roleName: a, roleColors: s, dotAlignment: l = 'left', className: f } = e,
         p = 'username' === t,
         h = 'dot' === t,
-        m = p && null != s && null != s.primaryColor && null != s.secondaryColor,
-        { text: g, gradient: E } = (0, c.N)(null == s ? void 0 : s.primaryColor, null == s ? void 0 : s.secondaryColor, null == s ? void 0 : s.tertiaryColor),
-        b = h
+        m = null != s && null != s.primaryColor && null != s.secondaryColor,
+        g = p && m,
+        { text: E, gradient: b } = (0, c.N)(null == s ? void 0 : s.primaryColor, null == s ? void 0 : s.secondaryColor, null == s ? void 0 : s.tertiaryColor),
+        y = h
             ? (0, r.jsx)(u.F, {
                   color: i,
+                  colors: m ? s : null,
                   name: a,
                   className: 'left' === l ? d.roleDotLeft : d.roleDotRight
               })
             : null;
     return (0, r.jsxs)('span', {
-        style: _({ color: p && !m && null != i ? i : void 0 }, m ? g.gradientStyle : {}),
-        'data-text': m ? n : '',
+        style: _({ color: p && !m && null != i ? i : void 0 }, g ? E.gradientStyle : {}),
+        'data-text': g ? n : '',
         className: o()(f, {
             [d.username]: p,
-            [g.gradientClassName]: m,
-            [E.gradientClassName]: m
+            [E.gradientClassName]: g,
+            [b.gradientClassName]: g
         }),
-        children: ['left' === l && b, n, 'right' === l && b]
+        children: ['left' === l && y, n, 'right' === l && y]
     });
 }
 function b(e) {
