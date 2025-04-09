@@ -66,7 +66,7 @@ class m extends o.Z {
                     paymentGatewayPlanId: e.payment_gateway_plan_id,
                     paymentGatewaySubscriptionId: e.payment_gateway_subscription_id,
                     trialId: e.trial_id,
-                    trialEndsAt: e.trial_ends_at,
+                    trialEndsAt: null != e.trial_ends_at ? new Date(e.trial_ends_at) : null,
                     items: e.items.map(h),
                     renewalMutations:
                         null != e.renewal_mutations
@@ -147,6 +147,9 @@ class m extends o.Z {
     }
     get isActive() {
         return this.status === u.O0b.ACTIVE;
+    }
+    get hasActiveTrial() {
+        return null != this.trialId && null != this.trialEndsAt && new Date() < this.trialEndsAt;
     }
     get inReverseTrial() {
         return null != this.trialId && f.h8.includes(this.trialId) && null == this.paymentSourceId;
