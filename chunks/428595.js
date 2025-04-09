@@ -149,7 +149,10 @@ let F = (e) => {
         }),
         link: b.ZP,
         autolink: M(L({}, a().defaultRules.autolink), { parse: V }),
-        mailto: M(L({}, a().defaultRules.mailto), { requiredFirstCharacters: ['<'] }),
+        mailto: M(L({}, a().defaultRules.mailto), {
+            match: a().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
+            requiredFirstCharacters: ['<']
+        }),
         tel: M(L({}, a().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
             match: a().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:([0-9]+|\([0-9]+\)))(?:[- .\/]?([0-9]+|\([0-9]+\)))+)>/),
