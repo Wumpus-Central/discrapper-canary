@@ -148,7 +148,8 @@ function eo(e) {
         { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
         _ = (0, N.Z)(n),
         p = (0, T.Z)({ location: 'CallActionButtons' }),
-        g = i.useRef(null);
+        g = i.useRef(null),
+        E = o > 1;
     return (0, r.jsxs)('div', {
         className: a()(K.wrapper, p ? K.experimentActions : K.actions),
         children: [
@@ -187,19 +188,19 @@ function eo(e) {
                     animation: c.yRy.Animation.FADE,
                     children: (e, t) => {
                         let { onClick: i } = e,
-                            { isShown: a } = t;
+                            { isShown: o } = t;
                         return (0, r.jsx)(P.C, {
                             buttonRef: g,
                             join: !0,
                             enabled: d,
-                            className: K.actionButton,
+                            className: a()(K.actionButton, { [K.fullRegionDropdownButtonOverride]: E && p }),
                             color: 'green',
                             centerButton: !0,
                             hasPermission: _,
                             cameraUnavailable: l,
                             channel: n,
-                            onPopoutClick: o > 1 ? i : null,
-                            popoutOpen: a,
+                            onPopoutClick: E ? i : null,
+                            popoutOpen: o,
                             onCameraUnavailable: A.Z,
                             onChange: () => {
                                 var e;

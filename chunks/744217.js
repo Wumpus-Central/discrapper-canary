@@ -12,6 +12,7 @@ e.exports = {
     wrapper: 'wrapper__2dbe1',
     actions: 'actions__2dbe1',
     actionButton: 'actionButton__2dbe1',
+    fullRegionDropdownButtonOverride: 'fullRegionDropdownButtonOverride__2dbe1',
     experimentActions: 'experimentActions__2dbe1',
     previewButton: 'previewButton__2dbe1',
     guildIcon: 'guildIcon__2dbe1',

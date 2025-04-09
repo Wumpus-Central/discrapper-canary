@@ -38330,6 +38330,13 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     line-height: 12px
 }
 
+.labelIconsRow_ab8609 {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 2px
+}
+
 .section_bf424d {
     display: flex;
     flex-direction: column;
