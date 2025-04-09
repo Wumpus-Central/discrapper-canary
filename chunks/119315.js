@@ -8,15 +8,17 @@ n(192379);
 var l = n(120356),
     o = n.n(l),
     a = n(576073),
-    s = (((r = {})[(r.POPOUT = 0)] = 'POPOUT'), (r[(r.SECONDARY = 1)] = 'SECONDARY'), (r[(r.BLACK = 2)] = 'BLACK'), r);
+    s = (((r = {})[(r.POPOUT = 0)] = 'POPOUT'), (r[(r.PRIMARY = 1)] = 'PRIMARY'), (r[(r.SECONDARY = 2)] = 'SECONDARY'), (r[(r.BLACK = 3)] = 'BLACK'), r);
 let c = (e) => {
-    let { left: t, top: n = 0, right: r = 0, bottom: l, size: s = 8, alert: c = !1, maskColor: u = 1 } = e;
+    let { left: t, top: n = 0, right: r = 0, bottom: l, size: s = 8, alert: c = !1, showBlurpleTreatment: u = !1, maskColor: d = 2 } = e;
     return (0, i.jsx)('span', {
         className: o()(a.dot, {
             [a.alert]: c,
-            [a.maskPopout]: 0 === u,
-            [a.maskSecondary]: 1 === u,
-            [a.maskBlack]: 2 === u
+            [a.blurpleTreatment]: u,
+            [a.maskPopout]: 0 === d,
+            [a.maskPrimary]: 1 === d,
+            [a.maskSecondary]: 2 === d,
+            [a.maskBlack]: 3 === d
         }),
         style: {
             height: s,
