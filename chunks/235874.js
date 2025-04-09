@@ -109,31 +109,32 @@ function b(e) {
 }
 class y extends (r = o.Component) {
     render() {
-        let { children: e, shouldShow: t, onRequestOpen: n, onRequestClose: r, align: o, fixed: a, useRawTargetDimensions: s, onShiftClick: c, positionKey: u, overridePositionRef: d, preload: f, disablePointerEvents: _, ignoreModalClicks: p, closeOnScroll: h, useMouseEnter: m, renderPopout: g, layerContext: E, position: y = 'right', autoInvert: v = !0, nudgeAlignIntoViewport: O = !0, spacing: I = 8, clickTrap: S = !1 } = this.props;
+        let { children: e, shouldShow: t, onRequestOpen: n, onRequestClose: r, align: o, fixed: a, useRawTargetDimensions: s, onShiftClick: c, positionKey: u, popoutKey: d, overridePositionRef: f, preload: _, disablePointerEvents: p, ignoreModalClicks: h, closeOnScroll: m, useMouseEnter: g, renderPopout: E, layerContext: y, position: v = 'right', autoInvert: O = !0, nudgeAlignIntoViewport: I = !0, spacing: S = 8, clickTrap: T = !1 } = this.props;
         return (0, i.jsx)(l.H, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
-            overridePositionRef: d,
-            preload: f,
-            position: y,
-            align: null != o ? o : b(y),
-            autoInvert: v,
+            overridePositionRef: f,
+            preload: _,
+            position: v,
+            align: null != o ? o : b(v),
+            autoInvert: O,
             fixed: a,
-            nudgeAlignIntoViewport: O,
+            nudgeAlignIntoViewport: I,
             useRawTargetDimensions: s,
             renderPopout: this.renderPopout,
-            spacing: I,
-            shouldShow: null != g && t,
+            spacing: S,
+            shouldShow: null != E && t,
             onRequestOpen: n,
             onRequestClose: r,
             onShiftClick: c,
             positionKey: u,
-            disablePointerEvents: _,
-            ignoreModalClicks: p,
-            closeOnScroll: h,
-            useMouseEnter: m,
-            layerContext: E,
-            clickTrap: S,
+            popoutKey: d,
+            disablePointerEvents: p,
+            ignoreModalClicks: h,
+            closeOnScroll: m,
+            useMouseEnter: g,
+            layerContext: y,
+            clickTrap: T,
             children: e
         });
     }

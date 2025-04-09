@@ -1,35 +1,37 @@
 n.d(t, {
-    Ej: () => _,
+    Ej: () => p,
     Ig: () => s,
     JX: () => a,
-    P: () => h,
-    Tb: () => c,
+    P: () => m,
+    Tb: () => u,
+    Tg: () => l,
     a6: () => o,
-    cm: () => d,
-    n_: () => p,
-    oh: () => l,
+    cm: () => f,
+    n_: () => h,
+    oh: () => c,
     vB: () => i,
-    y0: () => u,
-    yM: () => f
+    y0: () => d,
+    yM: () => _
 });
 var r = n(981631);
 let i = 300,
     o = 100,
     a = 750,
-    s = 100;
-var l = (function (e) {
+    s = 100,
+    l = 'user-profile-popout';
+var c = (function (e) {
         return (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'), e;
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (e.ROLES = 'ROLES'), (e.CONNECTIONS = 'CONNECTIONS'), (e.NOTE = 'NOTE'), (e.RECENT_ACTIVITY = 'RECENT_ACTIVITY'), e;
     })({}),
-    u = (function (e) {
+    d = (function (e) {
         return (e.BITE_SIZE = 'BITE_SIZE'), (e.FULL_SIZE = 'FULL_SIZE'), (e.PANEL = 'PANEL'), e;
     })({}),
-    d = (function (e) {
+    f = (function (e) {
         return (e[(e.NICKNAME = 0)] = 'NICKNAME'), (e[(e.PRONOUNS = 1)] = 'PRONOUNS'), (e[(e.AVATAR = 2)] = 'AVATAR'), (e[(e.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'), (e[(e.BANNER = 4)] = 'BANNER'), (e[(e.ANIMATED_BANNER = 5)] = 'ANIMATED_BANNER'), (e[(e.BIO = 6)] = 'BIO'), (e[(e.THEME = 7)] = 'THEME'), (e[(e.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'), e;
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (
             (e.VIEW = 'VIEW'),
             (e.SEND_MESSAGE = 'SEND_MESSAGE'),
@@ -128,13 +130,13 @@ var l = (function (e) {
             e
         );
     })({});
-function _(e) {
+function p(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(r.ANM.BADGE_ICON(e));
 }
-var p = (function (e) {
+var h = (function (e) {
         return (e.ACTIVITY = 'ACTIVITY'), (e.AVATAR = 'AVATAR'), (e.STATUS = 'STATUS'), e;
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (e.REPLY = 'REPLY'), (e.REACT = 'REACT'), e;
     })({});
