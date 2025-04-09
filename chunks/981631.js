@@ -1629,6 +1629,7 @@ var N =
     (r.USER_STATUS_UPDATED = 'user_status_updated'),
     (r.CUSTOM_STATUS_UPDATED = 'custom_status_updated'),
     (r.CUSTOM_STATUS_RANDOMIZER_CLICKED = 'custom_status_randomizer_clicked'),
+    (r.CUSTOM_STATUS_LABEL_CLICKED = 'custom_status_label_clicked'),
     (r.TEXT_COPIED = 'text_copied'),
     (r.TEXT_SHARED = 'text_shared'),
     (r.NAV_DRAWER_OPENED = 'nav_drawer_opened'),
