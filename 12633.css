@@ -44642,7 +44642,9 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 
 .colorPickerSwatch__459fb.gradientPreset__459fb {
     width: 40px;
-    height: 20px
+    height: 20px;
+    border: none;
+    margin-right: var(--spacing-8)
 }
 
 .colorPickerSwatch__459fb.disabled__459fb {
@@ -48743,6 +48745,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 
 .actionButton__2dbe1 {
     line-height: 0
+}
+
+.fullRegionDropdownButtonOverride__2dbe1 {
+    padding: 0 4px
 }
 
 .experimentActions__2dbe1 {

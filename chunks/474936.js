@@ -15,7 +15,6 @@ n.d(t, {
     EA: () => S,
     ET: () => Q,
     EZ: () => ek,
-    Eg: () => e8,
     F_: () => l,
     GP: () => T,
     HO: () => eR,
@@ -33,7 +32,6 @@ n.d(t, {
     Rg: () => V,
     Rr: () => P,
     Rt: () => $,
-    SK: () => e6,
     Se: () => e4,
     Si: () => _,
     T7: () => eV,
@@ -713,16 +711,7 @@ var e3 = (function (e) {
         return (e[(e.HOUR = 1)] = 'HOUR'), (e[(e.DAY = 2)] = 'DAY'), e;
     })({});
 let e5 = {
-        [r.a.PREMIUM_TIER_2_1_HOUR]: [1, 1],
-        [r.a.PREMIUM_TIER_2_1_DAY]: [2, 1],
-        [r.a.PREMIUM_TIER_2_3_DAY]: [2, 3]
-    },
-    e6 = {
-        primary_color: 11127295,
-        secondary_color: 16759788,
-        tertiary_color: 16761760
-    },
-    e8 = {
-        primary_color: 10382335,
-        secondary_color: 10469887
-    };
+    [r.a.PREMIUM_TIER_2_1_HOUR]: [1, 1],
+    [r.a.PREMIUM_TIER_2_1_DAY]: [2, 1],
+    [r.a.PREMIUM_TIER_2_3_DAY]: [2, 3]
+};
