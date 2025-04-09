@@ -51,7 +51,7 @@ function _(e) {
                       })
                     : null,
                 null != u && null != s
-                    ? (0, r.jsx)(Z, {
+                    ? (0, r.jsx)(j, {
                           width: n,
                           channelId: i,
                           participant: d,
@@ -62,20 +62,20 @@ function _(e) {
         })
     });
 }
-function Z(e) {
+function j(e) {
     let { width: t, channelId: n, participant: i, applicationId: m } = e,
         p = (0, b.V_)(t),
         [_] = (0, b.Ym)(t),
-        Z = (0, o.e7)([v.Z], () => v.Z.getChannel(n)),
-        j = (0, o.e7)([S.default, h.default], () => ((0, d.J)(i, h.default) ? null : S.default.getUser(i.userId))),
-        N = l.useMemo(() => (null != j ? [j] : []), [j]),
-        x = (0, g.q)(m),
+        j = (0, o.e7)([v.Z], () => v.Z.getChannel(n)),
+        Z = (0, o.e7)([S.default, h.default], () => ((0, d.J)(i, h.default) ? null : S.default.getUser(i.userId))),
+        x = l.useMemo(() => (null != Z ? [Z] : []), [Z]),
+        N = (0, g.q)(m),
         { analyticsLocations: P } = (0, E.ZP)(),
         w = (0, u.O)(),
-        A = i.activity.session_id,
-        R = (0, f.Z)(i.activity, y.xjy.EMBEDDED) && (0, f.Z)(i.activity, y.xjy.CONTEXTLESS),
+        R = i.activity.session_id,
+        A = (0, f.Z)(i.activity, y.xjy.EMBEDDED) && (0, f.Z)(i.activity, y.xjy.CONTEXTLESS),
         [T, C] = l.useState(!1),
-        D = null == j ? void 0 : j.id,
+        D = null == Z ? void 0 : Z.id,
         M = l.useCallback(
             async (e) => {
                 e.stopPropagation(),
@@ -88,24 +88,24 @@ function Z(e) {
                             locationObject: w.location,
                             analyticsLocations: P,
                             joinUserId: D,
-                            joinSessionId: A,
+                            joinSessionId: R,
                             instanceId: void 0,
-                            isContextlessActivity: R
+                            isContextlessActivity: A
                         }),
                         C(!1));
             },
-            [m, D, w.location, P, A, n, R]
+            [m, D, w.location, P, R, n, A]
         );
-    return null == Z || null == j || null == x
+    return null == j || null == Z || null == N
         ? null
         : (0, r.jsxs)('div', {
               className: I.splash,
               children: [
                   (0, r.jsx)(b.OV, {
                       avatarSize: _,
-                      guildId: Z.guild_id,
-                      channelId: Z.id,
-                      users: N
+                      guildId: j.guild_id,
+                      channelId: j.id,
+                      users: x
                   }),
                   (0, r.jsx)(s.Text, {
                       className: a()(I.subheader, {
@@ -113,7 +113,7 @@ function Z(e) {
                           [I.medium]: p === b.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: O.NW.formatToPlainString(O.t['7Uuia2'], { username: j.username })
+                      children: O.NW.formatToPlainString(O.t['7Uuia2'], { username: Z.username })
                   }),
                   (0, r.jsx)(s.Text, {
                       className: a()(I.header, {
@@ -121,7 +121,7 @@ function Z(e) {
                           [I.medium]: p === b.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: x.name
+                      children: N.name
                   }),
                   (0, r.jsx)('div', {
                       className: I.buttons,

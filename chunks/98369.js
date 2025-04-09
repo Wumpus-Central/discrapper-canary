@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
+n.d(t, { Z: () => Z }), n(388685), n(410992), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733);
 var r,
     l,
     i,
@@ -58,7 +58,7 @@ function I(e) {
 function _() {
     h.clear(), v.clear(), (S = !1);
 }
-class Z extends (r = a.ZP.Store) {
+class j extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, E.Z, d.ZP, f.Z);
     }
@@ -73,15 +73,15 @@ class Z extends (r = a.ZP.Store) {
     }
 }
 (i = 'SecureFramesVerifiedStore'),
-    (l = 'displayName') in Z
-        ? Object.defineProperty(Z, l, {
+    (l = 'displayName') in j
+        ? Object.defineProperty(j, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (Z[l] = i);
-let j = new Z(s.Z, {
+        : (j[l] = i);
+let Z = new j(s.Z, {
     CONNECTION_OPEN: _,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;

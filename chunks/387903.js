@@ -1,6 +1,6 @@
 n.d(t, {
-    Y: () => B,
-    Z: () => K
+    Y: () => F,
+    Z: () => X
 }),
     n(997841),
     n(388685);
@@ -26,12 +26,12 @@ var r,
     S = n(565138),
     P = n(707409),
     N = n(424678),
-    I = n(750154),
-    E = n(81063),
+    E = n(750154),
+    I = n(81063),
     Z = n(768581),
     x = n(630388),
-    w = n(153066),
-    C = n(740265),
+    C = n(153066),
+    w = n(740265),
     T = n(122810),
     A = n(833664),
     D = n(503438),
@@ -55,7 +55,7 @@ function V(e, t, n) {
         e
     );
 }
-function F(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,7 +71,7 @@ function F(e) {
     }
     return e;
 }
-var B = (((l = {}).ACTIVITY_FEED = 'ActivityFeed'), (l.STREAM_PREVIEW = 'StreamPreview'), (l.VOICE_CHANNEL = 'VoiceChannel'), l);
+var F = (((l = {}).ACTIVITY_FEED = 'ActivityFeed'), (l.STREAM_PREVIEW = 'StreamPreview'), (l.VOICE_CHANNEL = 'VoiceChannel'), l);
 let Y = {
         StreamPreview: [108, 60],
         VoiceChannel: [108, 60],
@@ -114,7 +114,7 @@ class H extends (r = o.PureComponent) {
             : e;
     }
     getTypeClass(e, t) {
-        return (0, w.l)(R, e, this.props.type, t);
+        return (0, C.l)(R, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
         return (0, k.Z)(this.activity) && 'ActivityFeed' === this.props.type;
@@ -138,7 +138,7 @@ class H extends (r = o.PureComponent) {
                 t = U.NW.formatToPlainString(U.t.Ge29Z2, { name: c });
                 break;
             case M.IIU.PLAYING:
-                t = (0, C.Z)(a);
+                t = (0, w.Z)(a);
                 break;
             case M.IIU.COMPETING:
                 t = U.NW.formatToPlainString(U.t.SQCo6O, { name: c });
@@ -151,7 +151,7 @@ class H extends (r = o.PureComponent) {
             className: R.headerContainer,
             children: [
                 (0, i.jsx)(p.X6q, {
-                    className: s()((0, w.l)(R, 'headerText', e ? 'EmptyBody' : 'Normal')),
+                    className: s()((0, C.l)(R, 'headerText', e ? 'EmptyBody' : 'Normal')),
                     variant: l ? 'text-xs/semibold' : 'eyebrow',
                     children: (0, i.jsx)(y.Z, { children: t })
                 }),
@@ -182,7 +182,7 @@ class H extends (r = o.PureComponent) {
                 null != u.large_image
                     ? (0, i.jsx)('img', {
                           alt: null != (t = u.large_text) ? t : '',
-                          src: (0, E.xF)(d, u.large_image, null != l ? l : [W.Si.LARGE, W.Si.LARGE]),
+                          src: (0, I.xF)(d, u.large_image, null != l ? l : [W.Si.LARGE, W.Si.LARGE]),
                           className: s()(this.getTypeClass('assetsLargeImage', this.isStreamerOnTypeActivityFeed() ? M.ABu.TWITCH : ''), {
                               [null != (n = this.getTypeClass('assetsLargeMask')) ? n : '']: null != u.small_image,
                               [R.assetsLargeImageSpotify]: f
@@ -194,8 +194,8 @@ class H extends (r = o.PureComponent) {
                 onClick: this.handleOpenSpotifyAlbum,
                 children: m
             });
-        else if ((0, I.dS)(e)) {
-            let t = (0, I.rq)(e);
+        else if ((0, E.dS)(e)) {
+            let t = (0, E.rq)(e);
             if (null == t) return null;
             m = (0, i.jsx)(O.ZP, {
                 mask: O.ZP.Masks.SQUIRCLE,
@@ -242,7 +242,7 @@ class H extends (r = o.PureComponent) {
                     })
                 ]
             })),
-        (0, I.dS)(e) ||
+        (0, E.dS)(e) ||
             null == u.small_image ||
             (a = (0, i.jsx)(p.ua7, {
                 text: '' !== u.small_text ? u.small_text : null,
@@ -251,10 +251,10 @@ class H extends (r = o.PureComponent) {
                     var t;
                     return (0, i.jsx)(
                         'img',
-                        F(
+                        B(
                             {
                                 alt: null != (t = u.small_text) ? t : '',
-                                src: (0, E.xF)(d, u.small_image, [W.Si.SMALL, W.Si.SMALL]),
+                                src: (0, I.xF)(d, u.small_image, [W.Si.SMALL, W.Si.SMALL]),
                                 className: this.getTypeClass('assetsSmallImage', null == m ? 'WithoutLargeImage' : void 0)
                             },
                             e
@@ -320,13 +320,13 @@ class H extends (r = o.PureComponent) {
                         onClick: this.handleOpenSpotifyTrack,
                         children: l
                     }))
-                  : (0, I.dS)(e) && (u = e.name)),
+                  : (0, E.dS)(e) && (u = e.name)),
         null == u)
             ? null
             : (0, i.jsx)(p.Text, {
                   title: c,
                   variant: 'text-sm/semibold',
-                  className: s()((0, w.l)(R, 'name', t.bot ? 'wrap' : 'normal')),
+                  className: s()((0, C.l)(R, 'name', t.bot ? 'wrap' : 'normal')),
                   children: u
               });
     }
@@ -352,7 +352,7 @@ class H extends (r = o.PureComponent) {
                             n
                         )
                 });
-            else if ((0, I.dS)(e)) {
+            else if ((0, E.dS)(e)) {
                 var a;
                 l = null == (a = e.assets) ? void 0 : a.small_text;
             }
@@ -464,13 +464,13 @@ class H extends (r = o.PureComponent) {
                               )
                             : u
                 }))),
-        (null != c && '' !== c && e.type !== M.IIU.CUSTOM_STATUS) || (0, I.dS)(e))
+        (null != c && '' !== c && e.type !== M.IIU.CUSTOM_STATUS) || (0, E.dS)(e))
             ? ((null == a ? void 0 : a.size) == null && [W.Zc].includes(null != (n = e.application_id) ? n : '')
                   ? (l = U.NW.formatToPlainString(U.t['u//9Bw'], {
                         count: '0',
                         max: null != (r = null == t ? void 0 : t.getMaxParticipants()) ? r : 0
                     }))
-                  : (0, I.dS)(e) && (null == a ? void 0 : a.size) != null
+                  : (0, E.dS)(e) && (null == a ? void 0 : a.size) != null
                     ? (l = U.NW.formatToPlainString(U.t['JC/3x8'], {
                           numSpeakers: a.size[0],
                           numListeners: a.size[1] - a.size[0]
@@ -530,7 +530,7 @@ class H extends (r = o.PureComponent) {
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
                                 : (0, i.jsxs)(b.Z.Child, {
-                                      className: s()((0, w.l)(R, 'content', f ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
+                                      className: s()((0, C.l)(R, 'content', f ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
                                           (0, i.jsxs)(p.P3F, {
                                               className: s()(null != a && R.openGameProfile),
@@ -571,7 +571,7 @@ class H extends (r = o.PureComponent) {
             });
     }
 }
-V(H, 'Types', B);
+V(H, 'Types', F);
 let J = (e) => {
     var t, n, r, l, o;
     let a = (0, j.Z)({
@@ -583,7 +583,7 @@ let J = (e) => {
     });
     return (0, i.jsx)(
         H,
-        ((l = F({}, e)),
+        ((l = B({}, e)),
         (o = o = { onOpenGameProfileModal: a }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
@@ -600,5 +600,5 @@ let J = (e) => {
         l)
     );
 };
-J.Types = B;
-let K = J;
+J.Types = F;
+let X = J;

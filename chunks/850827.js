@@ -22,12 +22,12 @@ var l = n(120356),
     S = n(606925),
     P = n(719216),
     N = n(429589),
-    I = n(636245),
-    E = n(697761),
+    E = n(636245),
+    I = n(697761),
     Z = n(611459),
     x = n(544671),
-    w = n(757182),
-    C = n(910424),
+    C = n(757182),
+    w = n(910424),
     T = n(981631),
     A = n(477839),
     D = n(388032),
@@ -52,13 +52,13 @@ let L = (e) => {
     },
     W = (0, u.Z)((e) => {
         let { activity: t, embeddedActivity: n, user: l, applicationStream: o, className: u, guildId: p, channelId: g, source: W, color: M = c.zxk.Colors.WHITE, look: U = c.zxk.Looks.OUTLINED, type: R, onAction: V } = e,
-            F = (0, s.e7)([b.default], () => {
+            B = (0, s.e7)([b.default], () => {
                 let e = b.default.getCurrentUser();
                 return a()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
             }),
-            B = R === j.Y.STREAM_PREVIEW || null != o,
+            F = R === j.Y.STREAM_PREVIEW || null != o,
             Y = (0, h.Z)(t),
-            G = Y || B ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
+            G = Y || F ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === A.bO) {
             var z, H;
             return (
@@ -182,7 +182,7 @@ let L = (e) => {
                     return null == e
                         ? null
                         : (0, r.jsx)(
-                              I.Z,
+                              E.Z,
                               {
                                   guildId: e.guildId,
                                   channelId: e.channelId,
@@ -193,11 +193,11 @@ let L = (e) => {
                               e.channelId
                           );
                 }
-                return B
+                return F
                     ? (0, r.jsx)(
-                          C.Z,
+                          w.Z,
                           {
-                              isCurrentUser: F.id === l.id,
+                              isCurrentUser: B.id === l.id,
                               color: M,
                               look: U,
                               applicationStream: o,
@@ -208,7 +208,7 @@ let L = (e) => {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(
-                                  w.Z,
+                                  C.Z,
                                   {
                                       activity: t,
                                       color: M,
@@ -230,7 +230,7 @@ let L = (e) => {
                                   'join-activity-button'
                               ),
                               (0, r.jsx)(
-                                  E.Z,
+                                  I.Z,
                                   {
                                       activity: t,
                                       user: l,

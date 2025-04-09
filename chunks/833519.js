@@ -25,14 +25,14 @@ var r = n(200651),
     O = n(590076),
     I = n(507675),
     _ = n(199902),
-    Z = n(314897),
-    j = n(592125),
-    N = n(131951),
-    x = n(451478),
+    j = n(314897),
+    Z = n(592125),
+    x = n(131951),
+    N = n(451478),
     P = n(685203),
     w = n(112560),
-    A = n(442168),
-    R = n(822296),
+    R = n(442168),
+    A = n(822296),
     T = n(916771),
     C = n(792517),
     D = (n(351483), n(979425)),
@@ -49,7 +49,7 @@ function H(e) {
         c = (0, o.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, L.K)(s),
         [f, p] = l.useState(!1),
-        E = (0, o.e7)([j.Z], () => j.Z.getChannel(null == c ? void 0 : c.channelId));
+        E = (0, o.e7)([Z.Z], () => Z.Z.getChannel(null == c ? void 0 : c.channelId));
     return (
         (0, y.J)(E, () => {
             let e = setTimeout(() => {
@@ -81,14 +81,14 @@ function H(e) {
 }
 function z(e) {
     let { participant: t, selected: n, onVideoResize: i, paused: m, fit: p, inPopout: S, inOverlayPopout: y = !1, width: M, focused: L, wrapperClassName: H } = e,
-        z = N.Z.getVideoComponent(),
-        G = (0, o.e7)([Z.default], () => Z.default.getId()),
+        z = x.Z.getVideoComponent(),
+        G = (0, o.e7)([j.default], () => j.default.getId()),
         K = (0, g.Z)(),
         { stream: B, user: q, streamId: J } = t,
-        X = (0, o.e7)([j.Z], () => j.Z.getChannel(B.channelId)),
+        X = (0, o.e7)([Z.Z], () => Z.Z.getChannel(B.channelId)),
         Q = (0, o.e7)([_.Z], () => _.Z.getActiveStreamForUser(q.id, B.guildId), [q.id, B.guildId]),
         $ = (0, o.e7)([_.Z], () => _.Z.getAllActiveStreams().length > 0),
-        ee = (0, o.e7)([x.Z], () => x.Z.isFocused()),
+        ee = (0, o.e7)([N.Z], () => N.Z.isFocused()),
         et = (null == Q ? void 0 : Q.ownerId) === G,
         en = et && !ee && !S,
         er = null != Q ? (0, h.Z)(Q, q, q.id === G, en) : null,
@@ -104,7 +104,7 @@ function z(e) {
                     .concat(null != Q, ' | selected: ')
                     .concat(n, ' | Video: ')
                     .concat(null != z, ' | MediaEngine: ')
-                    .concat(N.Z.supports(W.AN.VIDEO))
+                    .concat(x.Z.supports(W.AN.VIDEO))
             );
         }, [z, Q, n]),
         K)
@@ -116,7 +116,7 @@ function z(e) {
             isSelfStream: q.id === G
         });
     if ((null == Q ? void 0 : Q.state) === k.jm8.ENDED)
-        return (0, r.jsx)(R.Z, {
+        return (0, r.jsx)(A.Z, {
             selected: n,
             stream: Q,
             width: M
@@ -134,7 +134,7 @@ function z(e) {
             participant: t,
             width: M
         });
-    if (!(null != Q && !n && null != z && N.Z.supports(W.AN.VIDEO)))
+    if (!(null != Q && !n && null != z && x.Z.supports(W.AN.VIDEO)))
         return (0, r.jsxs)('div', {
             className: a()(V.content, V.streamPreview, { [V.small]: el }),
             children: [
@@ -234,7 +234,7 @@ function z(e) {
                           })({ size: (0, w.L)(M) }, er)
                       )
                     : null,
-                (0, r.jsx)(A.Z, {
+                (0, r.jsx)(R.Z, {
                     stream: B,
                     inPopout: S
                 })

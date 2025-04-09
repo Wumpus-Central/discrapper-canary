@@ -55,15 +55,15 @@ function b(e) {
         O = d.n.getState().clipsButtonRef,
         I = (0, f.V9)(t),
         _ = (0, a.e7)([u.Z], () => u.Z.getActiveAnimation()),
-        Z = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(I)),
-        j = (0, l.useRef)(void 0);
+        j = (0, a.Wu)([u.Z], () => u.Z.getStreamClipAnimations(I)),
+        Z = (0, l.useRef)(void 0);
     l.useEffect(
         () => () => {
             (0, c.Gh)(I);
         },
         [I]
     );
-    let N = () => {
+    let x = () => {
             var e;
             let t = null == (e = y.current) ? void 0 : e.getBoundingClientRect();
             return null == t || n
@@ -75,9 +75,9 @@ function b(e) {
                       left: t.left
                   };
         },
-        x = (e) => {
+        N = (e) => {
             let t = null == O ? void 0 : O.getBoundingClientRect();
-            if (((j.current = t), e.timestamp !== _ || null == t || n)) return g;
+            if (((Z.current = t), e.timestamp !== _ || null == t || n)) return g;
             let { top: r, left: l } = t;
             return {
                 top: r + 36,
@@ -88,7 +88,7 @@ function b(e) {
         },
         P = (0, l.useRef)(null),
         w = (0, s.Yzy)(
-            Z,
+            j,
             {
                 keys: (e) => e.timestamp,
                 ref: P,
@@ -98,11 +98,11 @@ function b(e) {
             },
             'animate-always'
         ),
-        A = (0, l.useRef)(null),
-        R = (0, s.Yzy)(
-            Z,
+        R = (0, l.useRef)(null),
+        A = (0, s.Yzy)(
+            j,
             {
-                ref: A,
+                ref: R,
                 keys: (e) => e.timestamp,
                 from: (e) =>
                     E(
@@ -111,7 +111,7 @@ function b(e) {
                             visibility: 'hidden',
                             opacity: 1
                         },
-                        b.enabled ? x(e) : N()
+                        b.enabled ? N(e) : x()
                     ),
                 enter: (e) => [
                     E(
@@ -119,7 +119,7 @@ function b(e) {
                             opacity: 1,
                             visibility: 'visible'
                         },
-                        x(e)
+                        N(e)
                     )
                 ],
                 leave: E(
@@ -131,23 +131,23 @@ function b(e) {
                                 width: 0
                             },
                             (() => {
-                                if (null != j.current)
+                                if (null != Z.current)
                                     return {
-                                        top: j.current.top + 12,
-                                        left: j.current.left + 12
+                                        top: Z.current.top + 12,
+                                        left: Z.current.left + 12
                                     };
                             })()
                         )
                 ),
                 config: b.enabled ? S : v,
                 onRest: (e, t) => {
-                    null != t.item && null != Z.find((e) => e.timestamp === t.item.timestamp) && (0, c.Gh)(I, t.item.timestamp);
+                    null != t.item && null != j.find((e) => e.timestamp === t.item.timestamp) && (0, c.Gh)(I, t.item.timestamp);
                 }
             },
             'animate-always'
         );
     return (
-        (0, i.useChain)([P, A], [0, 0.1], 3000),
+        (0, i.useChain)([P, R], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
@@ -165,7 +165,7 @@ function b(e) {
                 (0, r.jsx)(m.ZP, {
                     children: (0, r.jsx)('div', {
                         className: p.hidden,
-                        children: R(
+                        children: A(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, r.jsx)(i.animated.img, {

@@ -8,7 +8,7 @@ var r = n(192379),
     c = n(231338);
 function u(e) {
     let { location: t, user: n, privateChannel: u, forceHide: d = !1 } = e,
-        p = (0, s.DW)(t),
+        p = (0, s.XD)(t),
         f = (0, r.useMemo)(() => (null == n || null == n.nameplate ? null : n.nameplate), [n]),
         m = (0, l.e7)([i.Z], () => {
             if (null == n) return !1;
