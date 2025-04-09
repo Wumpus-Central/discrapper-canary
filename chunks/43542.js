@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     o = n(442837),
     a = n(481060),
-    s = n(523751),
+    s = n(358555),
     l = n(706454),
     c = n(411198),
     u = n(709054),
@@ -70,9 +70,7 @@ function E(e) {
             let e = (0, c.$5)(t);
             return (0, r.jsx)(s.Z, {
                 guild: e,
-                className: _.guildBadge,
-                tooltipColor: a.ua7.Colors.NESTED,
-                disableBoostClick: !0
+                isBannerVisible: !1
             });
         }, [t]);
     return (0, r.jsxs)('div', {
