@@ -38,17 +38,15 @@ function f(e) {
     let { source: n, guild: t, channel: r, stageInstance: c } = e,
         i = (0, l.e7)([a.ZP], () => a.ZP.getDefaultChannel(t.id, !0, s.Plq.CREATE_INSTANT_INVITE)),
         b = (0, l.e7)([u.Z], () => (0, o.b)(u.Z, t, r, c)),
-        d = p(n, t, b && null != r ? r : i),
-        f = E(n, r);
+        d = O(n, t, b && null != r ? r : i),
+        f = N(n, r);
     return null == r && n === s.t4x.GUILD_CONTEXT_MENU ? null : b || null != i ? d : f;
 }
-function O(e) {
-    let n,
-        t = (null == e ? void 0 : e.type) === s.d4z.GUILD_VOICE;
-    return (0, i.jW)({ location: 'invite_menu_item' }) ? (t ? b.NW.string(b.t['EE+P0N']) : b.NW.string(b.t['0jeAXl'])) : b.NW.string(b.t.BN75l5);
+function E(e, n) {
+    return (0, i.jW)({ location: 'invite_menu_item' }) ? ((null != n && [s.t4x.GUILD_HEADER, s.t4x.GUILD_CONTEXT_MENU].includes(n)) || null == e ? b.NW.string(b.t.Sd8Ix8) : e.type === s.d4z.GUILD_VOICE ? b.NW.string(b.t['EE+P0N']) : b.NW.string(b.t['0jeAXl'])) : b.NW.string(b.t.BN75l5);
 }
-let p = (e, n, l) => {
-        let i = O(l);
+let O = (e, n, l) => {
+        let i = E(l, e);
         return (0, r.jsx)(c.sNh, {
             id: 'invite-people',
             label: i,
@@ -86,8 +84,8 @@ let p = (e, n, l) => {
                 })
         });
     },
-    E = (e, n) => {
-        let l = O(n);
+    N = (e, n) => {
+        let l = E(n, e);
         return (0, r.jsx)(c.sNh, {
             id: 'invite-people',
             label: l,
