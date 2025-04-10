@@ -20,11 +20,11 @@ var C = B(200651),
     d = B(500230),
     n = B(742409),
     M = B(981631),
-    s = B(116175),
-    L = B(817239),
+    L = B(116175),
+    s = B(817239),
     X = B(388032),
     c = B(602268);
-let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKULL, s.ZD.MOON, s.ZD.LIGHTNING, s.ZD.COMPASS, s.ZD.TOADSTOOL],
+let H = [L.ZD.LEAF, L.ZD.SWORD, L.ZD.HEART, L.ZD.FIRE, L.ZD.WATER_DROP, L.ZD.SKULL, L.ZD.MOON, L.ZD.LIGHTNING, L.ZD.COMPASS, L.ZD.TOADSTOOL],
     G = [
         {
             primary: '#ff1c90',
@@ -80,8 +80,8 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
         }
     ],
     b = function () {
-        var A, g, B, s;
-        (0, X.j1)(L.M);
+        var A, g, B, L;
+        (0, X.j1)(s.M);
         let b = (0, w.e7)([r.Z], () => r.Z.getGuild()),
             Y = (0, w.e7)([r.Z], () => r.Z.getGuildProfile()),
             { fetchGuildProfile: F, fetchStatus: a } = (0, v.u)(null == b ? void 0 : b.id);
@@ -107,7 +107,7 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                         className: c.section,
                         guildId: b.id,
                         isDisabled: i,
-                        tag: null != (s = Y.tag) ? s : '',
+                        tag: null != (L = Y.tag) ? L : '',
                         badge: K,
                         primaryColor: y,
                         secondaryColor: T
@@ -131,7 +131,7 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                 (0, C.jsx)(D.X6q, {
                     className: c.title,
                     variant: 'heading-lg/semibold',
-                    children: X.NW.string(L.Z.mf2OwM)
+                    children: X.NW.string(s.Z.mf2OwM)
                 }),
                 (0, C.jsxs)('div', {
                     className: c.container,
@@ -143,48 +143,41 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
                                     className: c.description,
-                                    children: X.NW.string(L.Z['655Un5'])
+                                    children: X.NW.format(s.Z['655Un5'], {
+                                        onClickServerProfile: () => {
+                                            P.Z.setSection(M.pNK.PROFILE);
+                                        },
+                                        onClickApplyToJoin: () => {
+                                            P.Z.setSection(M.pNK.ACCESS);
+                                        }
+                                    })
                                 }),
                                 N
-                                    ? (0, C.jsxs)(C.Fragment, {
+                                    ? (0, C.jsxs)('div', {
+                                          className: c.enableSwitchContainer,
                                           children: [
-                                              (0, C.jsxs)('div', {
-                                                  className: c.enableSwitchContainer,
-                                                  children: [
-                                                      (0, C.jsx)('label', {
-                                                          htmlFor: 'enable-server-tag',
-                                                          children: (0, C.jsx)(D.Text, {
-                                                              variant: 'text-md/semibold',
-                                                              color: 'header-primary',
-                                                              children: X.NW.string(L.Z['1zams7'])
-                                                          })
-                                                      }),
-                                                      (0, C.jsx)(D.rsf, {
-                                                          id: 'enable-server-tag',
-                                                          checked: !i,
-                                                          onChange: () => {
-                                                              if (i) {
-                                                                  var A;
-                                                                  P.Z.updateGuildProfile(b.id, {
-                                                                      tag: null != (A = Y.tag) ? A : '',
-                                                                      badge: K,
-                                                                      badgeColorPrimary: y,
-                                                                      badgeColorSecondary: T
-                                                                  });
-                                                              } else P.Z.updateGuildProfile(b.id, { tag: null });
-                                                          }
-                                                      })
-                                                  ]
-                                              }),
-                                              (0, C.jsx)(D.Text, {
-                                                  variant: 'text-xs/medium',
-                                                  color: 'text-muted',
-                                                  className: c.memberApplicationsInfo,
-                                                  children: X.NW.format(L.Z.WUACVF, {
-                                                      onClick: () => {
-                                                          P.Z.setSection(M.pNK.ACCESS);
-                                                      }
+                                              (0, C.jsx)('label', {
+                                                  htmlFor: 'enable-server-tag',
+                                                  children: (0, C.jsx)(D.Text, {
+                                                      variant: 'text-md/semibold',
+                                                      color: 'header-primary',
+                                                      children: X.NW.string(s.Z['1zams7'])
                                                   })
+                                              }),
+                                              (0, C.jsx)(D.rsf, {
+                                                  id: 'enable-server-tag',
+                                                  checked: !i,
+                                                  onChange: () => {
+                                                      if (i) {
+                                                          var A;
+                                                          P.Z.updateGuildProfile(b.id, {
+                                                              tag: null != (A = Y.tag) ? A : '',
+                                                              badge: K,
+                                                              badgeColorPrimary: y,
+                                                              badgeColorSecondary: T
+                                                          });
+                                                      } else P.Z.updateGuildProfile(b.id, { tag: null });
+                                                  }
                                               })
                                           ]
                                       })
