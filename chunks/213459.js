@@ -232,7 +232,8 @@ function ei(e) {
         let t = {
             descriptor: j(M({}, (0, R.X0)(ew(e))), {
                 permissions: null != e.permissions ? (0, p.tk)(eM(e.permissions, a)) : void 0,
-                botId: e.bot_id
+                botId: e.bot_id,
+                authorized: e.authorized
             }),
             commands: {}
         };
@@ -323,7 +324,11 @@ function es(e, t) {
 }
 function el(e) {
     let { applicationId: t, channelId: n, guildId: r } = e;
-    eh.hasContextStateApplication(t, n, r) &&
+    eh.hasContextStateApplication({
+        applicationId: t,
+        channelId: n,
+        guildId: r
+    }) &&
         Q(
             null != r
                 ? {
@@ -336,7 +341,7 @@ function el(e) {
                   },
             { serverVersion: B }
         ),
-        eh.hasUserStateApplication(t) && Q({ type: 'user' }, { serverVersion: B }),
+        eh.hasUserStateApplication({ applicationId: t }) && Q({ type: 'user' }, { serverVersion: B }),
         eh.hasApplicationState(t) &&
             Q(
                 {
@@ -394,10 +399,11 @@ class ep extends (r = l.ZP.Store) {
         var t, n;
         return 'contextless' !== e.type && eC(e.channel) ? (null != (n = this.indices[null != (t = e.channel.guild_id) ? t : e.channel.id]) ? n : H) : Z;
     }
-    hasContextStateApplication(e, t, n) {
-        var r, i;
-        let o = this.indices[null != n ? n : t];
-        return e in (null != (i = null == o || null == (r = o.result) ? void 0 : r.sections) ? i : {});
+    hasContextStateApplication(e) {
+        var t, n;
+        let { applicationId: r, channelId: i, guildId: o } = e,
+            a = this.indices[null != o ? o : i];
+        return null != (null != (n = null == a || null == (t = a.result) ? void 0 : t.sections) ? n : {})[r];
     }
     getGuildState(e) {
         var t;
@@ -409,8 +415,10 @@ class ep extends (r = l.ZP.Store) {
     }
     hasUserStateApplication(e) {
         var t, n;
-        let r = this.indices[G];
-        return e in (null != (n = null == r || null == (t = r.result) ? void 0 : t.sections) ? n : {});
+        let { applicationId: r, authorizedOnly: i = !1 } = e,
+            o = this.indices[G],
+            a = (null != (n = null == o || null == (t = o.result) ? void 0 : t.sections) ? n : {})[r];
+        return null != a && (!i || !1 !== a.descriptor.authorized);
     }
     getApplicationState(e) {
         var t;

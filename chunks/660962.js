@@ -357,8 +357,11 @@ function Y(e) {
             var t, n, r;
             return (null == (t = e.colorStrings) ? void 0 : t.secondaryColor) != null && (null == (n = e.colorStrings) ? void 0 : n.tertiaryColor) != null ? 'holographic' : (null == (r = e.colorStrings) ? void 0 : r.secondaryColor) != null ? 'gradient' : 'solid';
         },
-        [u, g] = i.useState(() => c(n)),
-        f = (0, p.pM)(null == t ? void 0 : t.id, n.id),
+        [u, g] = i.useState(() => c(n));
+    i.useEffect(() => {
+        g(c(n));
+    }, [n]);
+    let f = (0, p.pM)(null == t ? void 0 : t.id, n.id),
         h = s || f,
         b = (0, d.e7)([y.Z], () => y.Z.canImpersonateRole(t, n)),
         { headerHeight: x, headerRef: j } = (0, C.Z)(0),

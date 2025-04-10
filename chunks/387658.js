@@ -13,16 +13,16 @@ var i = n(200651),
     f = n(213459),
     h = n(10718),
     b = n(895924),
-    C = n(583027),
-    x = n(585483),
-    _ = n(499254),
-    y = n(541099),
-    v = n(827498),
-    N = n(496158),
-    g = n(676161),
-    j = n(660090),
-    P = n(783097),
-    E = n(46332),
+    C = n(104919),
+    x = n(583027),
+    _ = n(585483),
+    y = n(499254),
+    v = n(541099),
+    N = n(827498),
+    g = n(496158),
+    j = n(676161),
+    P = n(660090),
+    E = n(783097),
     A = n(176412),
     I = n(870205),
     O = n(981631),
@@ -36,9 +36,9 @@ function Z(e) {
     var t, n;
     let { context: l, command: a, section: s, sectionName: c } = e,
         d = r.useCallback(() => {
-            let e = y.Z.entrypoint();
-            _.yT(v.ti.COMMAND),
-                (0, C.Mo)({
+            let e = v.Z.entrypoint();
+            y.yT(N.ti.COMMAND),
+                (0, x.Mo)({
                     command: a,
                     location: b.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c
@@ -53,7 +53,7 @@ function Z(e) {
                         source: e,
                         commandOrigin: b.bB.APPLICATION_LAUNCHER
                     }),
-                    x.S.dispatch(O.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
+                    _.S.dispatch(O.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
         }, [l, a, s, c]),
         p = (null != (n = null == (t = a.options) ? void 0 : t.length) ? n : 0) > 0,
         f = r.useMemo(() => (0, A.ae)(a.displayDescription, void 0), [a.displayDescription]),
@@ -149,30 +149,33 @@ function M() {
 function W(e) {
     let { context: t, command: n, sectionName: l } = e;
     (0, f.PL)(!0, !0), (0, f.em)(t, !0, !0);
-    let a = (0, N.D)(t),
+    let a = (0, g.D)(t),
         [o, c] = r.useState(!1),
         d = r.useCallback(
             async (e) => {
                 if ('channel' !== t.type) return;
                 e.stopPropagation();
-                let i = y.Z.lastShownEntrypoint();
+                let i = v.Z.lastShownEntrypoint();
                 try {
-                    (await (0, E.L)({
+                    let { isAuthorized: e } = await (0, C.L)({
                         applicationId: n.applicationId,
                         channel: 'channel' === t.type ? t.channel : void 0,
-                        sectionName: l,
-                        location: b.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-                        entrypoint: i,
-                        commandIntegrationTypes: n.integration_types
-                    })) &&
-                        (await (0, P.Y$)({
+                        commandIntegrationTypes: n.integration_types,
+                        appLauncherContext: {
+                            entrypoint: i,
+                            location: b.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                            sectionName: l
+                        }
+                    });
+                    e &&
+                        (await (0, E.Y$)({
                             command: n,
                             optionValues: {},
                             context: a,
                             sectionName: l,
                             commandOrigin: b.bB.APP_LAUNCHER_APPLICATION_VIEW
                         }),
-                        _.yT(v.ti.COMMAND));
+                        y.yT(N.ti.COMMAND));
                 } finally {
                     c(!1);
                 }
@@ -265,14 +268,14 @@ function B(e) {
             setSortOrder: C,
             commands: x,
             canSort: _
-        } = (0, j.Z)({
+        } = (0, P.Z)({
             sectionId: l.id,
             commandsByActiveSection: u
         });
     r.useEffect(() => {
         c(l.id);
     }, [l.id, c]);
-    let y = (0, g.Z)({
+    let y = (0, j.Z)({
         context: n,
         commands: x,
         limit: 5

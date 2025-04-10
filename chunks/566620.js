@@ -26,11 +26,11 @@ var r = n(990547),
     d = n(904245),
     f = n(479531),
     _ = n(911969),
-    p = n(46332),
-    h = n(213459),
-    m = n(667204),
-    g = n(812236),
-    E = n(812206),
+    p = n(213459),
+    h = n(667204),
+    m = n(812236),
+    g = n(812206),
+    E = n(104919),
     b = n(413523),
     y = n(358221),
     v = n(233764),
@@ -203,7 +203,7 @@ async function en(e) {
 }
 function er(e, t) {
     let n = (null == t ? void 0 : t.type) === q.d4z.GUILD_VOICE,
-        r = E.Z.getApplication(e),
+        r = g.Z.getApplication(e),
         i = null != r && (0, M.yE)(r.flags, q.udG.EMBEDDED),
         o = (0, U.l5)(t);
     return (n && i) || o;
@@ -212,9 +212,9 @@ async function ei(e) {
     let { applicationId: t, nonce: n, channelId: r, guildId: i, commandOrigin: o, sectionName: a, source: s, onExecutedCallback: l, clientSupportsContextlessActivityLaunch: c, onConfirmActivityLaunchChecksAlertOpen: u, embeddedActivitiesManager: d, isContextlessActivity: b } = e,
         y = null;
     try {
-        y = await (0, g.ZP)(r, t);
+        y = await (0, m.ZP)(r, t);
     } catch (e) {
-        if (e.message === g.sV)
+        if (e.message === m.sV)
             return {
                 result: 'failure',
                 reason: 1
@@ -224,19 +224,18 @@ async function ei(e) {
     let v = y.handler !== _.VC.APP_HANDLER;
     if (!(v || Q.Yq.includes(t))) {
         null != r &&
-            (await (0, h.FN)({
+            (await (0, p.FN)({
                 type: 'channel',
                 channelId: r
             })),
-            await (0, h.FN)({ type: 'user' });
-        let e = C.Z.getChannel(r);
-        if (
-            !(await (0, p.L)({
+            await (0, p.FN)({ type: 'user' });
+        let e = C.Z.getChannel(r),
+            { isAuthorized: n } = await (0, E.L)({
                 applicationId: t,
                 channel: e,
                 commandIntegrationTypes: y.integration_types
-            }))
-        )
+            });
+        if (!n)
             return {
                 result: 'failure',
                 reason: 2
@@ -251,9 +250,9 @@ async function ei(e) {
         };
     if (v) {
         let e,
-            n = E.Z.getApplication(t),
+            n = g.Z.getApplication(t),
             r = B.ZP.getCurrentEmbeddedActivity();
-        (null == r ? void 0 : r.applicationId) != null && (e = E.Z.getApplication(null == r ? void 0 : r.applicationId));
+        (null == r ? void 0 : r.applicationId) != null && (e = g.Z.getApplication(null == r ? void 0 : r.applicationId));
         let i = w.default.getCurrentUser();
         if (
             null != i &&
@@ -276,7 +275,7 @@ async function ei(e) {
     }
     return (
         await new Promise((e, u) => {
-            (0, m.Z)({
+            (0, h.Z)({
                 command: y,
                 optionValues: {},
                 context: {
@@ -336,14 +335,14 @@ async function eo(e) {
             result: 'failure',
             reason: 1
         };
-    let g = (0, G.sq)(),
+    let E = (0, G.sq)(),
         b = await (0, Z.Z)(m, i);
     if (null == h || null == b)
         return {
             result: 'failure',
             reason: 2
         };
-    if (!g && null == i)
+    if (!E && null == i)
         return (
             x.S.dispatch(q.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: m }),
             {
@@ -352,7 +351,7 @@ async function eo(e) {
             }
         );
     let y = C.Z.getChannel(i);
-    if (!g && null == y)
+    if (!E && null == y)
         return {
             result: 'failure',
             reason: 3
@@ -384,7 +383,7 @@ async function eo(e) {
     }
     let O = B.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == O ? void 0 : O.applicationId) != null && (t = E.Z.getApplication(null == O ? void 0 : O.applicationId)),
+        ((null == O ? void 0 : O.applicationId) != null && (t = g.Z.getApplication(null == O ? void 0 : O.applicationId)),
         !(
             !a ||
             (await (0, V.p)({
@@ -578,7 +577,7 @@ async function eu(e) {
     var t, n, i, o;
     let { guildId: s, force: l = !1 } = e,
         c = B.ZP.getShelfActivities(s),
-        u = c.map((e) => E.Z.getApplication(e.application_id)).filter(k.lm);
+        u = c.map((e) => g.Z.getApplication(e.application_id)).filter(k.lm);
     if (!l && !B.ZP.shouldFetchShelf(s)) {
         if (null == (t = B.ZP.getShelfFetchStatus(s)) ? void 0 : t.isFetching) {
             let e,

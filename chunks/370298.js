@@ -2,8 +2,8 @@ n.d(t, { Z: () => D }), n(388685), n(539854);
 var r = n(200651),
     l = n(192379),
     o = n(442837),
-    i = n(749280),
-    a = n(481060),
+    a = n(749280),
+    i = n(481060),
     c = n(166459),
     u = n(911969),
     s = n(476326),
@@ -11,23 +11,23 @@ var r = n(200651),
     m = n(555573),
     p = n(213459),
     f = n(998698),
-    O = n(895924),
-    b = n(581364),
+    b = n(895924),
+    O = n(581364),
     E = n(667204),
     g = n(873387),
     y = n(809090),
-    h = n(147391),
+    h = n(104919),
     v = n(583027),
     C = n(978983),
-    P = n(592125),
-    _ = n(703558),
-    j = n(430824),
-    S = n(626135),
+    j = n(592125),
+    P = n(703558),
+    S = n(430824),
+    _ = n(626135),
     N = n(585483),
     M = n(619895),
     w = n(844439),
-    A = n(981631),
-    I = n(388032),
+    I = n(981631),
+    A = n(388032),
     T = n(568618);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,18 +56,18 @@ function R(e) {
 }
 function D(e) {
     let { toggleShowMenu: t, showMenu: n, className: c, channelId: u, imageUrl: s, mimeType: d } = e,
-        m = (0, o.e7)([P.Z], () => P.Z.getChannel(u)),
-        { Component: p, events: f, play: O } = (0, i.w)(),
-        [b, E] = l.useState(!1),
+        m = (0, o.e7)([j.Z], () => j.Z.getChannel(u)),
+        { Component: p, events: f, play: b } = (0, a.w)(),
+        [O, E] = l.useState(!1),
         g = l.useRef(null);
     return null == m
         ? null
-        : (b || O(),
-          (0, r.jsx)(a.yRy, {
+        : (O || b(),
+          (0, r.jsx)(i.yRy, {
               targetElementRef: g,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(U, {
+                  return (0, r.jsx)(x, {
                       onClose: t,
                       channel: m,
                       imageUrl: s,
@@ -76,17 +76,17 @@ function D(e) {
               },
               position: 'right',
               align: 'top',
-              animation: a.yRy.Animation.NONE,
+              animation: i.yRy.Animation.NONE,
               onRequestClose: t,
               shouldShow: n,
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, r.jsx)(a.ua7, {
-                      text: I.NW.string(I.t.emnnEB),
+                  return (0, r.jsx)(i.ua7, {
+                      text: A.NW.string(A.t.emnnEB),
                       children: (e) => {
                           var n, l;
                           return (0, r.jsx)(
-                              a.P3F,
+                              i.P3F,
                               ((n = R({}, e)),
                               (l = l =
                                   {
@@ -98,7 +98,7 @@ function D(e) {
                                           E(!0), f.onMouseEnter();
                                       },
                                       onMouseLeave: f.onMouseLeave,
-                                      'aria-label': I.NW.string(I.t.emnnEB),
+                                      'aria-label': A.NW.string(A.t.emnnEB),
                                       children: (0, r.jsx)(p, {
                                           size: 'custom',
                                           width: 20,
@@ -125,17 +125,17 @@ function D(e) {
               }
           }));
 }
-function U(e) {
-    let { onSelect: t, onClose: n, channel: i, imageUrl: P, mimeType: D } = e,
-        U = (0, o.e7)([j.Z], () => j.Z.getGuild(i.guild_id)),
-        { fetchState: x, imageRecCommandContexts: Z } = (0, M.h)({ channelId: i.id }),
-        k = x === w.M.FETCHING,
-        F = (0, g.g)(i),
+function x(e) {
+    let { onSelect: t, onClose: n, channel: a, imageUrl: j, mimeType: D } = e,
+        x = (0, o.e7)([S.Z], () => S.Z.getGuild(a.guild_id)),
+        { fetchState: U, imageRecCommandContexts: Z } = (0, M.h)({ channelId: a.id }),
+        k = U === w.M.FETCHING,
+        F = (0, g.g)(a),
         L = (0, p.PL)(!0, !0),
-        H = (0, p.LD)(i.guild_id, !0);
+        G = (0, p.LD)(a.guild_id, !0);
     l.useEffect(() => {
-        (x === w.M.ERROR || (x === w.M.FETCHED && 0 === Z.length)) && n();
-    }, [x, Z.length, n]),
+        (U === w.M.ERROR || (U === w.M.FETCHED && 0 === Z.length)) && n();
+    }, [U, Z.length, n]),
         l.useEffect(() => {
             var e, t;
             if (k || 0 === Z.length) return;
@@ -143,49 +143,49 @@ function U(e) {
             Z.forEach((e) => {
                 n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id));
             }),
-                S.default.track(A.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
-                    guild_id: null != (e = null == i ? void 0 : i.guild_id) ? e : '',
-                    channel_id: null != (t = null == i ? void 0 : i.id) ? t : '',
+                _.default.track(I.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+                    guild_id: null != (e = null == a ? void 0 : a.guild_id) ? e : '',
+                    channel_id: null != (t = null == a ? void 0 : a.id) ? t : '',
                     application_ids: [...Z.map((e) => Number(e.command.applicationId))],
                     command_ids: n
                 });
-        }, [Z, i, k]);
-    let G = l.useCallback(
+        }, [Z, a, k]);
+    let B = l.useCallback(
             async (e) => {
-                let t = await fetch(P),
+                let t = await fetch(j),
                     n = await t.arrayBuffer(),
                     r = D.join('/'),
                     l = new File([n], 'image'.concat((0, M.Q)({ contentType: r })), { type: r });
                 c.Z.setFile({
-                    channelId: i.id,
+                    channelId: a.id,
                     id: e,
                     file: {
                         id: e,
                         file: l,
                         platform: s.ow.WEB
                     },
-                    draftType: _.d.SlashCommand
+                    draftType: P.d.SlashCommand
                 });
             },
-            [P, i.id, D]
+            [j, a.id, D]
         ),
-        B = l.useCallback(
+        H = l.useCallback(
             async (e, t, n, r) => {
                 var l, o;
                 if (!F) return;
-                let a = e.applicationId,
-                    c = (null == (l = L.result) ? void 0 : l.sections[a]) != null,
-                    s = (null == (o = H.result) ? void 0 : o.sections[a]) != null;
-                await G(r),
-                    null != f.Z.getActiveCommand(i.id) &&
+                let i = e.applicationId,
+                    c = (null == (l = L.result) ? void 0 : l.sections[i]) != null,
+                    s = (null == (o = G.result) ? void 0 : o.sections[i]) != null;
+                await B(r),
+                    null != f.Z.getActiveCommand(a.id) &&
                         m.Po({
-                            channelId: i.id,
+                            channelId: a.id,
                             command: null,
                             section: null
                         }),
-                    c || s || p.ZP.queryInstallOnDemandApp(e.applicationId, i.id),
+                    c || s || p.ZP.queryInstallOnDemandApp(e.applicationId, a.id),
                     m.Po({
-                        channelId: i.id,
+                        channelId: a.id,
                         command: e,
                         section: t,
                         location: n,
@@ -197,38 +197,41 @@ function U(e) {
                                 value: 'image'
                             }
                         },
-                        commandOrigin: n === O.Vh.IMAGE_RECS_SUBMENU ? O.bB.IMAGE_RECS_SUBMENU : O.bB.IMAGE_RECS_MENU
+                        commandOrigin: n === b.Vh.IMAGE_RECS_SUBMENU ? b.bB.IMAGE_RECS_SUBMENU : b.bB.IMAGE_RECS_MENU
                     }),
                     (0, v.Mo)({
                         command: e,
                         location: n,
                         sectionName: t.name
                     }),
-                    N.S.dispatch(A.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: i.id });
+                    N.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
             },
-            [i.id, G, F, L, H]
+            [a.id, B, F, L, G]
         ),
         V = l.useCallback(
             async (e, t, n) => {
                 var r, l;
                 let o = e.applicationId,
-                    a = (null == (r = L.result) ? void 0 : r.sections[o]) != null,
-                    c = (null == (l = H.result) ? void 0 : l.sections[o]) != null;
-                a || c || p.ZP.queryInstallOnDemandApp(e.applicationId, i.id);
-                let u = await (0, h.L)({
+                    i = (null == (r = L.result) ? void 0 : r.sections[o]) != null,
+                    c = (null == (l = G.result) ? void 0 : l.sections[o]) != null;
+                i || c || p.ZP.queryInstallOnDemandApp(e.applicationId, a.id);
+                let { isAuthorized: u } = await (0, h.L)({
                     applicationId: o,
-                    userIndexState: L,
-                    guildIndexState: H,
-                    location: t,
-                    source: d._b.TEXT
+                    channel: a,
+                    commandIntegrationTypes: e.integration_types,
+                    appLauncherContext: {
+                        entrypoint: d._b.TEXT,
+                        location: t,
+                        sectionName: void 0
+                    }
                 });
-                (0, b.qJ)({
+                (0, O.qJ)({
                     command: e,
                     location: t,
                     source: d._b.TEXT
                 }),
                     u &&
-                        (await G(n),
+                        (await B(n),
                         await (0, E.Z)({
                             command: R({}, e),
                             optionValues: {
@@ -240,40 +243,40 @@ function U(e) {
                                 ]
                             },
                             context: {
-                                channel: i,
-                                guild: U
+                                channel: a,
+                                guild: x
                             },
-                            commandOrigin: t === O.Vh.IMAGE_RECS_SUBMENU ? O.bB.IMAGE_RECS_SUBMENU : O.bB.IMAGE_RECS_MENU
+                            commandOrigin: t === b.Vh.IMAGE_RECS_SUBMENU ? b.bB.IMAGE_RECS_SUBMENU : b.bB.IMAGE_RECS_MENU
                         }));
             },
-            [i, U, L, H, G]
+            [a, x, L, G, B]
         );
-    return (0, r.jsxs)(a.v2r, {
+    return (0, r.jsxs)(i.v2r, {
         onSelect: t,
         navId: 'image-context-commands-popout',
         onClose: n,
-        'aria-label': I.NW.string(I.t.P3ShV1),
+        'aria-label': A.NW.string(A.t.P3ShV1),
         children: [
             (0, r.jsx)(
-                a.sNh,
+                i.sNh,
                 {
                     id: 'menu-image-rec-header',
                     render: () =>
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(i.Text, {
                             className: T.title,
                             variant: 'text-md/bold',
                             color: 'header-primary',
-                            children: I.NW.string(I.t.emnnEB)
+                            children: A.NW.string(A.t.emnnEB)
                         }),
                     navigable: !1,
                     disabled: !0
                 },
                 'menu-image-rec-header'
             ),
-            (0, r.jsx)(a.Clw, {}),
+            (0, r.jsx)(i.Clw, {}),
             k
                 ? (0, r.jsx)(
-                      a.sNh,
+                      i.sNh,
                       {
                           id: 'menu-image-recs-placeholder',
                           render: () => (0, r.jsx)(C.Z, {}),
@@ -292,19 +295,19 @@ function U(e) {
                           return null == c
                               ? null
                               : (0, r.jsx)(
-                                    a.sNh,
+                                    i.sNh,
                                     {
                                         id: e.command.id,
                                         action: () => {
-                                            o ? B(e.command, e.section, O.Vh.IMAGE_RECS_MENU, c) : V(l ? t : e.command, O.Vh.IMAGE_RECS_MENU, l ? n.imageOption : c);
+                                            o ? H(e.command, e.section, b.Vh.IMAGE_RECS_MENU, c) : V(l ? t : e.command, b.Vh.IMAGE_RECS_MENU, l ? n.imageOption : c);
                                         },
                                         label: e.command.displayName,
                                         subtext: e.command.displayDescription,
                                         subtextLineClamp: 1,
-                                        icon: o ? a.vdY : l ? void 0 : a.Uuj,
+                                        icon: o ? i.vdY : l ? void 0 : i.Uuj,
                                         iconLeft: () =>
                                             (0, r.jsx)(y.Z, {
-                                                channel: i,
+                                                channel: a,
                                                 section: e.section,
                                                 width: 32,
                                                 height: 32,
@@ -318,26 +321,26 @@ function U(e) {
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
                                                       (0, r.jsx)(
-                                                          a.sNh,
+                                                          i.sNh,
                                                           {
                                                               id: ''.concat(e.command.id, '-send'),
-                                                              label: I.NW.string(I.t['M+BhUV']),
-                                                              subtext: I.NW.string(I.t.zXFjJS),
-                                                              action: () => V(t, O.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
-                                                              icon: a.Uuj
+                                                              label: A.NW.string(A.t['M+BhUV']),
+                                                              subtext: A.NW.string(A.t.zXFjJS),
+                                                              action: () => V(t, b.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
+                                                              icon: i.Uuj
                                                           },
                                                           ''.concat(e.command.id, '-send')
                                                       ),
                                                       (0, r.jsx)(
-                                                          a.sNh,
+                                                          i.sNh,
                                                           {
                                                               id: ''.concat(e.command.id, '-edit'),
-                                                              label: I.NW.string(I.t['wTaN+P']),
-                                                              subtext: I.NW.string(I.t.bIB3bm),
+                                                              label: A.NW.string(A.t['wTaN+P']),
+                                                              subtext: A.NW.string(A.t.bIB3bm),
                                                               action: () => {
-                                                                  B(e.command, e.section, O.Vh.IMAGE_RECS_SUBMENU, c);
+                                                                  H(e.command, e.section, b.Vh.IMAGE_RECS_SUBMENU, c);
                                                               },
-                                                              icon: a.vdY,
+                                                              icon: i.vdY,
                                                               disabled: !F
                                                           },
                                                           ''.concat(e.command.id, '-edit')
