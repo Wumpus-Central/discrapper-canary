@@ -86,14 +86,14 @@ class R extends i.Component {
     }
     renderProgressBar(e) {
         let { tierPositions: t } = this.state,
-            { guildId: n, levelSubscriptionCount: i } = this.props;
+            { guildId: n, levelSubscriptionCount: i, currentTier: s } = this.props;
         if (null == t || null == n) return null;
-        let s = {
+        let a = {
                 numRequired: 0,
                 y: 0,
                 key: b.x
             },
-            a = e.map((e) => {
+            l = e.map((e) => {
                 var n;
                 return {
                     numRequired: C.oCV[e.tier],
@@ -103,9 +103,10 @@ class R extends i.Component {
                 };
             });
         return (0, r.jsx)(b.Z, {
+            currentTier: s,
             className: i > 0 ? E.progressWithSubscriptions : E.progress,
             progress: i,
-            tiers: [s, ...a],
+            tiers: [a, ...l],
             initialAnimationDelay: 500,
             onAnimatedTierMaker: this.handleAnimatedTier
         });
@@ -277,21 +278,24 @@ class R extends i.Component {
     }
 }
 let Z = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, _.default, N.ZP], () => {
-    let e = p.Z.getGuildId(),
-        t = (0, h.I)(e),
-        n = null != e ? j.Z.getAppliedGuildBoostsForGuild(e) : null,
-        r = o()(null != n ? n : []).uniqBy((e) => e.userId),
-        i = r
-            .map((t) => ({
-                user: _.default.getUser(t.userId),
-                nick: N.ZP.getNick(e, t.userId)
+    var e, t;
+    let n = p.Z.getGuildId(),
+        r = null != (t = null == (e = v.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : C.Eu4.NONE,
+        i = (0, h.I)(n),
+        s = null != n ? j.Z.getAppliedGuildBoostsForGuild(n) : null,
+        a = o()(null != s ? s : []).uniqBy((e) => e.userId),
+        l = a
+            .map((e) => ({
+                user: _.default.getUser(e.userId),
+                nick: N.ZP.getNick(n, e.userId)
             }))
             .filter((e) => null != e.user)
             .value();
     return {
-        guildId: e,
-        levelSubscriptionCount: t,
-        subscribers: i,
-        uniqueSubscriberCount: r.size()
+        guildId: n,
+        currentTier: r,
+        levelSubscriptionCount: i,
+        subscribers: l,
+        uniqueSubscriberCount: a.size()
     };
 })(R);
