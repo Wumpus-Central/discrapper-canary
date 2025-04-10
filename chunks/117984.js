@@ -1,12 +1,12 @@
 n.d(t, {
-    CM: () => h,
-    UT: () => E,
-    _Z: () => v,
+    CM: () => p,
+    UT: () => O,
+    _Z: () => _,
     kj: () => f,
-    oC: () => _,
-    s3: () => O,
-    uA: () => g,
-    xh: () => p
+    oC: () => g,
+    s3: () => N,
+    uA: () => b,
+    xh: () => E
 }),
     n(388685);
 var i = n(524437),
@@ -15,14 +15,14 @@ var i = n(524437),
     l = n(496675),
     o = n(709054),
     u = n(853856),
-    d = n(231338);
+    s = n(231338);
 function c() {
     let e = u.Z.getFavoriteChannels(),
         t = 1;
     for (let n in e) t = Math.max(t, e[n].order);
     return t + 1;
 }
-function s(e) {
+function d(e) {
     for (let t in e) {
         let n = e[t];
         if (null == n) {
@@ -31,7 +31,7 @@ function s(e) {
         }
         if (n.type === i.Dd.CATEGORY) continue;
         let r = a.Z.getChannel(t);
-        if (null == r || (!r.isPrivate() && !l.Z.can(d.Pl.VIEW_CHANNEL, r))) {
+        if (null == r || (!r.isPrivate() && !l.Z.can(s.Pl.VIEW_CHANNEL, r))) {
             delete e[t];
             continue;
         }
@@ -48,24 +48,24 @@ function f(e, t) {
                     position: c(),
                     parentId: null != t ? t : '0'
                 })),
-                    s(n.favoriteChannels);
+                    d(n.favoriteChannels);
             },
             r.fy.FREQUENT_USER_ACTION
         );
 }
-function _(e) {
+function g(e) {
     let t = u.Z.getFavorite(e);
     null != t &&
         r.hW.updateAsync(
             'favorites',
             (n) => {
                 if ((delete n.favoriteChannels[e], t.type === i.Dd.CATEGORY)) for (let t in n.favoriteChannels) n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = '0');
-                s(n.favoriteChannels);
+                d(n.favoriteChannels);
             },
             r.fy.INFREQUENT_USER_ACTION
         );
 }
-function E(e, t) {
+function O(e, t) {
     u.Z.isFavorite(e) &&
         r.hW.updateAsync(
             'favorites',
@@ -75,7 +75,7 @@ function E(e, t) {
             r.fy.INFREQUENT_USER_ACTION
         );
 }
-function h(e) {
+function p(e) {
     let t = o.default.fromTimestamp(Date.now());
     r.hW.updateAsync(
         'favorites',
@@ -90,10 +90,10 @@ function h(e) {
         r.fy.FREQUENT_USER_ACTION
     );
 }
-function p(e) {
-    _(e);
+function E(e) {
+    g(e);
 }
-function O(e) {
+function N(e) {
     r.hW.updateAsync(
         'favorites',
         (t) => {
@@ -106,7 +106,7 @@ function O(e) {
         r.fy.FREQUENT_USER_ACTION
     );
 }
-function g(e, t) {
+function b(e, t) {
     r.hW.updateAsync(
         'favorites',
         (n) => {
@@ -115,7 +115,7 @@ function g(e, t) {
         r.fy.FREQUENT_USER_ACTION
     );
 }
-function v() {
+function _() {
     r.hW.updateAsync(
         'favorites',
         (e) => {
