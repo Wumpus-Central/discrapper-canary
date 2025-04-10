@@ -1,17 +1,18 @@
 n.d(t, {
-    CM: () => O,
-    Cf: () => y,
-    ID: () => v,
-    Xz: () => T,
+    CM: () => I,
+    Cf: () => v,
+    ID: () => O,
+    Ls: () => g,
+    Xz: () => N,
     Z: () => m,
-    c_: () => S,
-    f4: () => N,
-    g_: () => b,
-    ho: () => E,
-    pG: () => g,
-    rf: () => A,
-    x3: () => C,
-    z5: () => I
+    c_: () => T,
+    f4: () => A,
+    g_: () => y,
+    ho: () => b,
+    pG: () => E,
+    rf: () => C,
+    x3: () => R,
+    z5: () => S
 });
 var r = n(544891),
     i = n(570140),
@@ -109,75 +110,86 @@ async function m(e, t) {
         );
     }
 }
-function g() {
+function g(e, t) {
+    var n;
+    let r = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
+    null != r &&
+        i.Z.dispatch({
+            type: 'USER_PROFILE_PIN_BADGES_ON_CLIENT',
+            badges: e,
+            ttlInSeconds: t,
+            userId: r
+        });
+}
+function E() {
     i.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
 }
-function E(e) {
+function b(e) {
     (null == e ? void 0 : e.startsWith('https:')) === !0
         ? fetch(e)
               .then((e) => e.blob())
               .then((e) => (0, u.fD)(e))
-              .then((e) => b(e))
-        : null != e && b(e);
+              .then((e) => y(e))
+        : null != e && y(e);
 }
-function b(e) {
+function y(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER',
         banner: e
     });
 }
-function y(e) {
+function v(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BIO',
         bio: e
     });
 }
-function v(e) {
+function O(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS',
         pronouns: e
     });
 }
-function O(e) {
+function I(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e
     });
 }
-function I(e) {
+function S(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS',
         themeColors: e
     });
 }
-function S(e) {
+function T(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
         h(f.QP.ANIMATED_AVATAR);
 }
-function T(e) {
+function N(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
         h(f.QP.AVATAR_DECORATION);
 }
-function N(e) {
+function A(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
         h(f.QP.PROFILE_BANNER);
 }
-function A(e) {
+function C(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
         h(f.QP.PROFILE_THEME_COLOR);
 }
-function C(e) {
+function R(e) {
     i.Z.dispatch(p({ type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET' }, e)), h(f.QP.PRESET);
 }
