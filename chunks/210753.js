@@ -29,6 +29,7 @@ class f {
         this._pending.forEach((t) => {
             this._fetched.add(t), e.push(t);
         }),
+            this._pending.clear(),
             o()
                 .chunk(e, d)
                 .forEach((e) => {
