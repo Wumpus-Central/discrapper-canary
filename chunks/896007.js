@@ -171,7 +171,6 @@ function p(e) {
         m(d.pNK.COMMUNITY, T),
         m(d.pNK.ONBOARDING, T),
         m(d.pNK.ANALYTICS, T),
-        m(d.pNK.DISCOVERY, T),
         m(d.pNK.DISCOVERY_LANDING_PAGE, T),
         m(d.pNK.COMMUNITY_WELCOME, T),
         {
