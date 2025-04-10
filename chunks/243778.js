@@ -1,4 +1,5 @@
 n.d(t, {
+    O1: () => _,
     US: () => l,
     XR: () => c,
     Xf: () => f,
@@ -49,6 +50,19 @@ function f(e) {
             children: l({
                 visibleContent: c,
                 markAsDismissed: u
+            })
+        })
+    );
+}
+function _(e) {
+    let { contentType: t, newSnowflakeId: n, timeRecurringConfig: i, groupName: o, bypassAutoDismiss: l, children: c } = e,
+        [u, d] = (0, a.sx)(t, i, n, o);
+    return (
+        (0, s.A)(u, d, l),
+        (0, r.jsx)(r.Fragment, {
+            children: c({
+                visibleContent: u,
+                markAsDismissed: d
             })
         })
     );

@@ -1,35 +1,43 @@
 n.d(t, {
-    A2: () => b,
-    BU: () => y,
-    Pz: () => p,
-    Qf: () => S,
-    X_: () => h,
-    ZC: () => O,
-    kr: () => m,
-    t8: () => E,
-    tq: () => v
+    A2: () => T,
+    BU: () => N,
+    Pz: () => y,
+    Qf: () => w,
+    X_: () => v,
+    ZC: () => R,
+    a0: () => A,
+    kr: () => O,
+    t8: () => S,
+    tq: () => C
 }),
     n(997841),
     n(704826),
-    n(35282);
+    n(35282),
+    n(642613);
 var r = n(544891),
-    i = n(780384),
-    o = n(706454),
-    a = n(78839),
-    s = n(431),
-    l = n(630388),
-    c = n(358085),
-    u = n(1844),
-    d = n(474936),
-    f = n(981631);
-let _ = '{code}';
-function p(e, t) {
-    let n = (0, i.wj)(t) ? 'logo-dark' : 'logo-light',
+    i = n(704215),
+    o = n(780384),
+    a = n(605236),
+    s = n(706454),
+    l = n(581883),
+    c = n(78839),
+    u = n(431),
+    d = n(630388),
+    f = n(358085),
+    _ = n(709054),
+    p = n(450839),
+    h = n(1844),
+    m = n(474936),
+    g = n(981631);
+let E = '{code}',
+    b = 259200000;
+function y(e, t) {
+    let n = (0, o.wj)(t) ? 'logo-dark' : 'logo-light',
         r = window.GLOBAL_ENV.CDN_HOST,
-        o = '?size=256';
-    return null != r ? ''.concat(location.protocol, '//').concat(r, '/promotions/').concat(e, '/').concat(n).concat(o) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/').concat(e, '/').concat(n).concat(o);
+        i = '?size=256';
+    return null != r ? ''.concat(location.protocol, '//').concat(r, '/promotions/').concat(e, '/').concat(n).concat(i) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/').concat(e, '/').concat(n).concat(i);
 }
-function h(e) {
+function v(e) {
     return {
         id: e.id,
         startDate: e.start_date,
@@ -43,79 +51,107 @@ function h(e) {
         flags: e.flags
     };
 }
-function m(e) {
+function O(e) {
     return {
         id: e.id,
         startDate: e.start_date,
         endDate: e.end_date
     };
 }
-function g(e) {
+function I(e) {
     return {
         code: e.code,
         userId: e.user_id,
         claimedAt: e.claimed_at,
-        promotion: h(e.promotion)
+        promotion: v(e.promotion)
     };
 }
-async function E() {
+async function S() {
     return (
         await r.tn.get({
-            url: f.ANM.CLAIMED_OUTBOUND_PROMOTION_CODES,
-            query: { locale: o.default.locale },
+            url: g.ANM.CLAIMED_OUTBOUND_PROMOTION_CODES,
+            query: { locale: s.default.locale },
             oldFormErrors: !0,
             rejectWithError: !1
         })
-    ).body.map(g);
+    ).body.map(I);
 }
-async function b(e) {
-    return g(
+async function T(e) {
+    return I(
         (
             await r.tn.post({
-                url: f.ANM.CLAIM_OUTBOUND_PROMOTION_CODE(e),
+                url: g.ANM.CLAIM_OUTBOUND_PROMOTION_CODE(e),
                 rejectWithError: !1
             })
         ).body
     );
 }
-function y(e, t) {
-    return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace(_, encodeURIComponent(e)) : t.outboundRedemptionPageLink;
+function N(e, t) {
+    return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace(E, encodeURIComponent(e)) : t.outboundRedemptionPageLink;
 }
-function v() {
-    let e = u.Z.lastSeenOutboundPromotionStartDate,
-        t = u.Z.outboundPromotions,
-        n = u.Z.consumedInboundPromotionId,
-        r = t.filter((e) => {
-            let { id: t, flags: r } = e;
-            return t !== n && !(0, l.yE)(r, d.TD.SUPPRESS_NOTIFICATION);
+function A() {
+    var e, t;
+    let n = h.Z.outboundPromotions,
+        r = h.Z.consumedInboundPromotionId,
+        o = n.filter((e) => {
+            let { id: t, flags: n } = e;
+            return t !== r && !(0, d.yE)(n, m.TD.SUPPRESS_NOTIFICATION);
         }),
-        i =
-            null == e
-                ? r
-                : r.filter((t) => {
-                      let { startDate: n } = t;
-                      return new Date(n) > new Date(e);
+        a = null == (t = l.Z.settings.userContent) || null == (e = t.recurringDismissibleContentStates[i.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR]) ? void 0 : e.lastDismissedObjectId,
+        s =
+            null == a
+                ? o
+                : o.filter((e) => {
+                      let { id: t } = e;
+                      return 1 === _.default.compare(t, a);
                   }),
-        o = u.Z.lastDismissedOutboundPromotionStartDate,
-        c = a.ZP.getPremiumTypeSubscription(),
-        f = (null == c ? void 0 : c.trialId) != null,
-        _ = s.Z.hasAnyUnexpiredOffer(),
-        p = f || _ ? i.filter((e) => I(e)) : i;
-    return (
-        0 !== p.length &&
-        (null == o ||
-            p.some((e) => {
+        f = c.ZP.getPremiumTypeSubscription(),
+        p = (null == f ? void 0 : f.trialId) != null,
+        g = u.Z.hasAnyUnexpiredOffer(),
+        E = p || g ? s.filter((e) => P(e)) : s;
+    return 0 === E.length ? null : E.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
+}
+function C() {
+    if ((0, p.A7)('outbound_promotion_notice')) {
+        let e = A();
+        return null != e && !(0, a.UJ)(i.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: b });
+    }
+    {
+        let e = h.Z.outboundPromotions,
+            t = h.Z.consumedInboundPromotionId,
+            n = e.filter((e) => {
+                let { id: n, flags: r } = e;
+                return n !== t && !(0, d.yE)(r, m.TD.SUPPRESS_NOTIFICATION);
+            }),
+            r = h.Z.lastSeenOutboundPromotionStartDate,
+            i =
+                null == r
+                    ? n
+                    : n.filter((e) => {
+                          let { startDate: t } = e;
+                          return new Date(t) > new Date(r);
+                      }),
+            o = c.ZP.getPremiumTypeSubscription(),
+            a = (null == o ? void 0 : o.trialId) != null,
+            s = u.Z.hasAnyUnexpiredOffer(),
+            l = a || s ? i.filter((e) => P(e)) : i;
+        if (0 === l.length) return !1;
+        let f = h.Z.lastDismissedOutboundPromotionStartDate;
+        return (
+            null == f ||
+            l.some((e) => {
                 let { startDate: t } = e;
-                return new Date(t) > new Date(o);
-            }))
-    );
+                return new Date(t) > new Date(f);
+            })
+        );
+    }
 }
-function O(e) {
-    return !(0, c.isIOS)() || !(0, l.yE)(e.flags, d.TD.IS_BLOCKED_IOS);
+function R(e) {
+    return !(0, f.isIOS)() || !(0, d.yE)(e.flags, m.TD.IS_BLOCKED_IOS);
 }
-function I(e) {
-    return (0, l.yE)(e.flags, d.TD.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
+function P(e) {
+    return (0, d.yE)(e.flags, m.TD.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
 }
-function S(e, t) {
-    return null != t[e.id] || I(e);
+function w(e, t) {
+    return null != t[e.id] || P(e);
 }
