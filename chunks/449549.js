@@ -25,5 +25,8 @@ e.exports = {
     expandableDescriptionClickable: 'expandableDescriptionClickable__95856',
     overflowHidden: 'overflowHidden__95856',
     developerShelfControls: 'developerShelfControls__95856',
-    monetizationDisclosureStyle: 'monetizationDisclosureStyle__95856'
+    monetizationDisclosureStyle: 'monetizationDisclosureStyle__95856',
+    friendsMotivationText: 'friendsMotivationText__95856',
+    friendsContainer: 'friendsContainer__95856',
+    fixedHeight: 'fixedHeight__95856'
 };
