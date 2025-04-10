@@ -6,5 +6,6 @@ e.exports = {
     pencilIconWrapper: 'pencilIconWrapper__46773',
     iconPlaceholder: 'iconPlaceholder__46773',
     iconImage: 'iconImage__46773',
-    closeButtonWrapper: 'closeButtonWrapper__46773'
+    closeButtonWrapper: 'closeButtonWrapper__46773',
+    cancelButton: 'cancelButton__46773'
 };

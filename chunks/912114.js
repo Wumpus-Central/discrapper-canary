@@ -66,9 +66,9 @@ let f = function (e) {
         v = (0, u.Dt)(),
         g = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
         j = (null != (n = null == g ? void 0 : g.name) ? n : '').length > 0,
-        b = (0, c.ZP)(g),
-        N = (0, c.cO)(g),
-        [y, _] = r.useState(j && null != b ? b : ''),
+        N = (0, c.ZP)(g),
+        b = (0, c.cO)(g),
+        [y, _] = r.useState(j && null != N ? N : ''),
         [C, W] = r.useState(void 0);
     return null == g
         ? null
@@ -106,7 +106,7 @@ let f = function (e) {
                                   onIconRemove: () => W(null)
                               }),
                               (0, l.jsx)(i.oil, {
-                                  placeholder: null != N ? N : '',
+                                  placeholder: null != b ? b : '',
                                   value: y,
                                   onChange: _,
                                   autoFocus: !0
@@ -123,6 +123,7 @@ let f = function (e) {
                                   onClick: s,
                                   look: i.zxk.Looks.LINK,
                                   color: i.zxk.Colors.PRIMARY,
+                                  innerClassName: m.cancelButton,
                                   children: p.NW.string(p.t['ETE/oK'])
                               })
                           ]
