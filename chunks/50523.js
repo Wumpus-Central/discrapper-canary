@@ -44,7 +44,7 @@ function v(e) {
         M = [];
     D &&
         M.push({
-            label: null != O.primaryCta ? O.primaryCta : null == Z ? y.NW.string(y.t.cnBQPD) : y.NW.string(y.t.VJlc0d),
+            label: null == Z ? y.NW.string(y.t.cnBQPD) : y.NW.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
                 (0, g.G6)({
@@ -61,8 +61,9 @@ function v(e) {
             disabledReason: null != Z && (null == k ? void 0 : k.compositeInstanceId) === Z ? y.NW.string(y.t.wJNK8P) : void 0
         }),
         T &&
+            !D &&
             M.push({
-                label: D || null == O.primaryCta ? y.NW.string(y.t.JeK1Wl) : O.primaryCta,
+                label: y.NW.string(y.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
                     (0, o.W)({
