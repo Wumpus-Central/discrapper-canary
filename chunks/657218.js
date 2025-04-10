@@ -331,13 +331,15 @@ function q(e) {
                                 textAreaState: _,
                                 setTextAreaState: y,
                                 submit: I,
-                                error: O
+                                error: O,
+                                isRefreshChatInputEnabled: T
                             }),
                             T
                                 ? null
                                 : (0, r.jsx)(d.Z, {
                                       channel: t,
-                                      isThreadCreation: !0
+                                      isThreadCreation: !0,
+                                      className: G.typingIndicator
                                   })
                         ]
                     })
@@ -417,11 +419,11 @@ function X(e) {
     });
 }
 function Q(e) {
-    let { parentChannel: t, textAreaState: n, setTextAreaState: l, submit: d, error: p } = e,
-        [h, f] = i.useState(!0),
-        m = i.useCallback(() => f(!0), []),
-        g = i.useCallback(() => f(!1), []),
-        b = i.useCallback(
+    let { parentChannel: t, textAreaState: n, setTextAreaState: l, submit: d, error: p, isRefreshChatInputEnabled: h } = e,
+        [f, m] = i.useState(!0),
+        g = i.useCallback(() => m(!0), []),
+        b = i.useCallback(() => m(!1), []),
+        C = i.useCallback(
             (e, n, r) => {
                 c.Z.saveDraft(t.id, n, S.d.FirstThreadMessage),
                     l(
@@ -436,7 +438,7 @@ function Q(e) {
             },
             [t.id, l]
         ),
-        C = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 let { value: t, uploads: n, stickers: r } = e;
                 return d(t, r, n);
@@ -445,24 +447,24 @@ function Q(e) {
         );
     (0, w.yp)({
         event: B.CkL.TEXTAREA_FOCUS,
-        handler: m
+        handler: g
     }),
         (0, w.yp)({
             event: B.CkL.TEXTAREA_BLUR,
-            handler: g
+            handler: b
         });
-    let x = (0, a.e7)([T.Z], () => T.Z.can(B.Plq.ATTACH_FILES, t)),
-        v = (0, M.Op)(p, { content: n.textValue });
+    let v = (0, a.e7)([T.Z], () => T.Z.can(B.Plq.ATTACH_FILES, t)),
+        j = (0, M.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(y.Z, {
                 channelId: t.id,
                 type: z,
-                canAttachFiles: x
+                canAttachFiles: v
             }),
             (0, r.jsx)('div', {
                 className: G.starterMessageError,
-                children: (0, r.jsx)(s.pdY, { error: v })
+                children: (0, r.jsx)(s.pdY, { error: j })
             }),
             (0, r.jsx)(_.Z, {
                 type: z,
@@ -470,13 +472,13 @@ function Q(e) {
                 placeholder: H.NW.string(H.t.taZfIC),
                 textValue: n.textValue,
                 richValue: n.richValue,
-                focused: h,
-                className: G.channelTextArea,
-                innerClassName: o()(G.channelTextAreaInner, { [G.channelTextAreaInnerError]: null != v }),
-                onFocus: m,
-                onBlur: g,
-                onChange: b,
-                onSubmit: C,
+                focused: f,
+                className: o()(G.channelTextArea, { [G.channelTextAreaWithTypingIndicator]: !h }),
+                innerClassName: o()(G.channelTextAreaInner, { [G.channelTextAreaInnerError]: null != j }),
+                onFocus: g,
+                onBlur: b,
+                onChange: C,
+                onSubmit: x,
                 promptToUpload: k.d
             })
         ]

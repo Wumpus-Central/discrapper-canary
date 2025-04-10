@@ -10,6 +10,8 @@ e.exports = {
     form: 'form_fb64c9',
     channelTextArea: 'channelTextArea_fb64c9',
     channelTextAreaInner: 'channelTextAreaInner_fb64c9',
+    channelTextAreaWithTypingIndicator: 'channelTextAreaWithTypingIndicator_fb64c9',
+    typingIndicator: 'typingIndicator_fb64c9',
     channelTextAreaInnerError: 'channelTextAreaInnerError_fb64c9',
     starterMessageError: 'starterMessageError_fb64c9',
     privateThreadFormTitle: 'privateThreadFormTitle_fb64c9',
