@@ -6,10 +6,10 @@ var n = r(200651);
 r(192379);
 var i = r(481060),
     o = r(144114),
-    s = r(476770),
-    l = r(815660),
-    c = r(388032),
-    a = r(641198);
+    l = r(476770),
+    s = r(815660),
+    a = r(388032),
+    c = r(641198);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -36,14 +36,14 @@ function u(e) {
     return e;
 }
 function d() {
-    return (0, n.jsx)(s.PU, {
-        className: a.editableRequirementContainer,
+    return (0, n.jsx)(l.PU, {
+        className: c.editableRequirementContainer,
         icon: i.AtH,
-        text: c.NW.string(c.t.woMjLS),
-        footnote: c.NW.string(c.t['jMh+TU']),
+        text: a.NW.string(a.t.woMjLS),
+        footnote: a.NW.string(a.t['jMh+TU']),
         meetsRequirement: !1,
         children: (0, n.jsx)(i.ua7, {
-            text: c.NW.string(c.t.mGlP39),
+            text: a.NW.string(a.t.mGlP39),
             children: (e) => {
                 var t, r;
                 return (0, n.jsx)(
@@ -53,7 +53,7 @@ function d() {
                         {
                             size: i.zxk.Sizes.SMALL,
                             disabled: !0,
-                            children: c.NW.string(c.t['13ofGh'])
+                            children: a.NW.string(a.t['13ofGh'])
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -75,12 +75,12 @@ function d() {
 }
 function f(e) {
     let { isUserVerified: t } = e,
-        d = t ? c.NW.string(c.t.WWzQtb) : c.NW.string(c.t.woMjLS);
-    return (0, n.jsx)(s.PU, {
-        className: a.editableRequirementContainer,
+        d = t ? a.NW.string(a.t.WWzQtb) : a.NW.string(a.t.woMjLS);
+    return (0, n.jsx)(l.PU, {
+        className: c.editableRequirementContainer,
         icon: i.AtH,
         text: d,
-        footnote: c.NW.string(c.t['jMh+TU']),
+        footnote: a.NW.string(a.t['jMh+TU']),
         meetsRequirement: t,
         children: (0, n.jsx)(i.zxk, {
             size: i.zxk.Sizes.SMALL,
@@ -90,10 +90,10 @@ function f(e) {
                         let { default: e } = await Promise.all([r.e('76540'), r.e('56898')]).then(r.bind(r, 607018));
                         return (t) => (0, n.jsx)(e, u({ reason: o.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: l.M }
+                    { modalKey: s.M }
                 );
             },
-            children: c.NW.string(c.t['13ofGh'])
+            children: a.NW.string(a.t['13ofGh'])
         })
     });
 }

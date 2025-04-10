@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var i,
     r = n(200651),
     l = n(192379),
@@ -6,7 +6,7 @@ var i,
     o = n(388032),
     s = n(780775),
     c = (((i = c || {})[(i.VIEW_MORE = 0)] = 'VIEW_MORE'), (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'), i);
-function u(e) {
+function d(e) {
     let { title: t, buttonType: n, onClickViewButton: i } = e;
     return (0, r.jsxs)('div', {
         className: s.header,
@@ -31,8 +31,8 @@ function u(e) {
         ]
     });
 }
-(u.buttonTypes = c),
-    (u.Loading = function () {
+(d.buttonTypes = c),
+    (d.Loading = function () {
         let e = l.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
         return (0, r.jsx)('div', {
             className: s.loadingHeader,

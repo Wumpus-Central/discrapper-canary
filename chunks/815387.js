@@ -406,7 +406,7 @@ let ek = Object.freeze({
                 message: t,
                 compact: n,
                 onClick: () => {
-                    null != o && N.Z.open(o, eS.pNK.DISCOVERY);
+                    null != o && N.Z.open(o, eS.pNK.ACCESS, eS.KsC.ACCESS_DISCOVERABLE);
                 }
             });
         },

@@ -79,13 +79,13 @@ let x = function (e) {
             onDragComplete: j,
             onDragReset: v
         }),
-        D = i.useCallback(
+        Z = i.useCallback(
             (e) => {
                 (0, m.XG)(s.channelId, e);
             },
             [s.channelId]
         ),
-        Z = i.useCallback(
+        D = i.useCallback(
             (e, n) => {
                 let r = g.Z.getSettings();
                 null != r &&
@@ -106,13 +106,13 @@ let x = function (e) {
                             b(h({}, n), {
                                 guildId: t,
                                 resourceChannel: s,
-                                onSave: D,
+                                onSave: Z,
                                 onDelete: () => (0, m.Hz)(s.channelId),
-                                onIconUpload: Z
+                                onIconUpload: D
                             })
                         );
                 }),
-            [t, s, D, Z]
+            [t, s, Z, D]
         );
     return null == C
         ? null

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(200651),
     l = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     s = n(200100),
     o = n(399606),
     c = n(481060),
@@ -29,29 +29,29 @@ function f(e) {
     });
 }
 function N(e) {
-    let { guild: t, className: n, onPageChange: a, onMemberSelect: s } = e,
+    let { guild: t, className: n, onPageChange: i, onMemberSelect: s } = e,
         N = t.id,
         C = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(N), [N]),
         p = (0, d.$j)(N),
-        v = (0, d.M3)(N),
+        _ = (0, d.M3)(N),
         g = l.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s]
         ),
-        _ = (0, m.xb)(v, p, C),
+        v = (0, m.xb)(_, p, C),
         T = l.useRef(null),
-        I = l.useRef(null),
-        E = l.useCallback(() => {
+        E = l.useRef(null),
+        I = l.useCallback(() => {
             var e;
             null == (e = T.current) || e.resetSearchText();
         }, []);
     return (0, r.jsx)('div', {
-        className: i()(b.mainTableContainer, n),
+        className: a()(b.mainTableContainer, n),
         children: (0, r.jsxs)(c.Den, {
             className: b.horizatonalScroller,
-            ref: I,
+            ref: E,
             orientation: 'horizontal',
             children: [
                 (0, r.jsx)(j.Z, {
@@ -62,13 +62,13 @@ function N(e) {
                 (0, r.jsx)(x.Z, {
                     guild: t,
                     onSelectRow: g,
-                    searchState: _,
-                    onResetForNewMembers: E
+                    searchState: v,
+                    onResetForNewMembers: I
                 }),
-                _ !== m.po.SUCCESS_STILL_INDEXING &&
+                v !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, r.jsx)(h.Z, {
                         guildId: t.id,
-                        onPageChange: a
+                        onPageChange: i
                     })
             ]
         })

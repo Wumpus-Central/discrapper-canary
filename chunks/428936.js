@@ -56,8 +56,8 @@ function p(e) {
     let { guildId: t, onPageChange: n } = e,
         [p, f] = l.useTransition(),
         h = (0, o.e7)([c.Z], () => c.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        g = (0, o.cj)([c.Z], () => c.Z.getPaginationStateByGuildId(t), [t]),
-        j = (0, s.$j)(t),
+        j = (0, o.cj)([c.Z], () => c.Z.getPaginationStateByGuildId(t), [t]),
+        g = (0, s.$j)(t),
         x = l.useMemo(
             () =>
                 i.LU.map((e) => ({
@@ -67,15 +67,15 @@ function p(e) {
             []
         ),
         O = new Intl.NumberFormat(d.NW.currentLocale).format(h),
-        y = d.NW.formatToPlainString(d.t.RNDnQ0, { count: j ? '...' : O }),
-        v = h > g.pageSize || j,
-        _ = h > i.LU['0'];
+        y = d.NW.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : O }),
+        v = h > j.pageSize || g,
+        N = h > i.LU['0'];
     return (0, r.jsxs)('div', {
         className: C.paginationContainer,
         children: [
             (0, r.jsx)('div', {
                 className: C.pageSizeSelection,
-                children: _
+                children: N
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(a.Text, {
@@ -87,10 +87,10 @@ function p(e) {
                                   'aria-label': y,
                                   className: C.pageSizeInput,
                                   options: x,
-                                  isSelected: (e) => e === g.pageSize,
+                                  isSelected: (e) => e === j.pageSize,
                                   select: (e) => {
                                       f(() => {
-                                          (0, u._o)(t, b(m({}, g), { pageSize: e }));
+                                          (0, u._o)(t, b(m({}, j), { pageSize: e }));
                                       });
                                   },
                                   serialize: (e) => ''.concat(e),
@@ -99,7 +99,7 @@ function p(e) {
                               }),
                               (0, r.jsx)(a.ua7, {
                                   text: d.NW.string(d.t.ZTNur6),
-                                  shouldShow: j,
+                                  shouldShow: g,
                                   children: (e) =>
                                       (0, r.jsx)(
                                           a.Text,
@@ -131,15 +131,15 @@ function p(e) {
                     (0, r.jsx)(a.DsT, {
                         className: C.paginationInput,
                         totalCount: h,
-                        pageSize: g.pageSize,
+                        pageSize: j.pageSize,
                         disablePaginationGap: !0,
                         hideMaxPage: !0,
-                        currentPage: g.currentPage,
+                        currentPage: j.currentPage,
                         onPageChange: (e) => {
                             null == n || n(e),
                                 requestIdleCallback(() => {
                                     f(() => {
-                                        (0, u._o)(t, b(m({}, g), { currentPage: e }));
+                                        (0, u._o)(t, b(m({}, j), { currentPage: e }));
                                     });
                                 });
                         },

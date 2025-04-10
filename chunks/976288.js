@@ -1,4 +1,4 @@
-n.d(t, { d: () => D }), n(953529), n(388685);
+n.d(t, { d: () => Z }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(345074),
@@ -380,7 +380,7 @@ function w(e) {
 function R() {
     return (0, r.jsx)('div', { className: C.divider });
 }
-function D(e) {
+function Z(e) {
     let { requireTerms: t, rules: n, settingsView: i } = e,
         {
             errors: s,

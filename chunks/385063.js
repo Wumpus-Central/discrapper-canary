@@ -53,7 +53,7 @@ function f(e) {
                   channelName: t.content,
                   editGroupButton: (0, r.jsx)(a.Text, {
                       tag: 'span',
-                      variant: 'text-md/semibold',
+                      variant: 'text-md/medium',
                       color: 'text-link',
                       children: d.NW.string(d.t['5Q9+/P'])
                   }),

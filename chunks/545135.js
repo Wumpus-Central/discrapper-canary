@@ -1,4 +1,4 @@
-n.d(t, { default: () => w });
+n.d(t, { default: () => G });
 var i = n(200651);
 n(192379);
 var r = n(512722),
@@ -73,11 +73,11 @@ function T(e, t) {
         e
     );
 }
-function G(e) {
+function w(e) {
     let { guild: t, onSelect: r, hideSettings: c } = e,
         u = t.id,
-        G = O.ZP.getDefaultChannel(u),
-        w = (0, l.e7)(
+        w = O.ZP.getDefaultChannel(u),
+        G = (0, l.e7)(
             [N.default],
             () => {
                 let e = N.default.getCurrentUser();
@@ -88,7 +88,7 @@ function G(e) {
         k = (0, I.Z)({
             guild: t,
             source: Z.t4x.GUILD_CONTEXT_MENU,
-            channel: G
+            channel: w
         }),
         U = (0, L.Z)(u),
         C = (0, P.Z)(t),
@@ -112,8 +112,8 @@ function G(e) {
         H = (0, _.Z)(t, { section: Z.jXE.GUILD_LIST }),
         V = (0, p.Z)(t.id),
         q = (0, m.Z)(t.id),
-        K = (0, S.ng)(t.id, !1),
-        X = (0, j.Z)(t),
+        X = (0, S.ng)(t.id, !1),
+        K = (0, j.Z)(t),
         z = (0, b.Mn)('GuildContextMenu'),
         J = (0, x.p)(t);
     function $() {
@@ -141,7 +141,7 @@ function G(e) {
                           B
                       ]
                   }),
-                  w
+                  G
                       ? null
                       : (0, i.jsx)(o.kSQ, {
                             children: (0, i.jsx)(o.sNh, {
@@ -163,7 +163,7 @@ function G(e) {
                   (0, i.jsx)(o.kSQ, { children: H }),
                   (0, i.jsx)(o.kSQ, { children: k }),
                   (0, i.jsxs)(o.kSQ, {
-                      children: [C, z || __OVERLAY__ ? null : R, z && !__OVERLAY__ ? q : null, K, U, V]
+                      children: [C, z || __OVERLAY__ ? null : R, z && !__OVERLAY__ ? q : null, X, U, V]
                   }),
                   (0, i.jsxs)(o.kSQ, {
                       children: [
@@ -187,8 +187,8 @@ function G(e) {
                   }),
                   (0, i.jsxs)(o.kSQ, {
                       children: [
-                          X,
-                          !w &&
+                          K,
+                          !G &&
                               (0, i.jsx)(o.sNh, {
                                   id: 'leave-guild',
                                   label: D.NW.string(D.t.J2TBi4),
@@ -202,10 +202,10 @@ function G(e) {
               ]
           });
 }
-function w(e) {
+function G(e) {
     let { analyticsLocations: t } = (0, u.ZP)(c.Z.CONTEXT_MENU);
     return (0, i.jsx)(u.Gt, {
         value: t,
-        children: (0, i.jsx)(G, M({}, e))
+        children: (0, i.jsx)(w, M({}, e))
     });
 }

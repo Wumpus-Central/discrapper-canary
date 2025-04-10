@@ -1,11 +1,11 @@
 n.d(t, {
     $Y: () => R,
     JK: () => p,
-    Je: () => f,
+    Je: () => A,
     T9: () => g,
     UE: () => C,
     Xx: () => P,
-    mm: () => A,
+    mm: () => f,
     qY: () => S
 }),
     n(388685);
@@ -95,7 +95,7 @@ async function p(e) {
         )
     );
 }
-async function f(e) {
+async function A(e) {
     let t = N(e);
     return T(
         (
@@ -107,7 +107,7 @@ async function f(e) {
         ).body
     );
 }
-async function A(e, t) {
+async function f(e, t) {
     return (
         await r.tn.del({
             url: _.ANM.GUILD_AUTOMOD_RULE(t, e),

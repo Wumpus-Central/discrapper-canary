@@ -58,16 +58,16 @@ function p(e) {
         l = (0, s.e7)([c.Z], () => c.Z.getSearchStateByGuildId(t), [t], o()),
         { selectedAccountAgeOption: a } = l,
         { afterDate: p, beforeDate: f, optionId: h } = a,
-        g = h === d.Ol.CUSTOM,
-        j = g && null != p ? i()(p).format(d.N2) : null,
-        x = g && null != f ? i()(f).format(d.N2) : null;
+        j = h === d.Ol.CUSTOM,
+        g = j && null != p ? i()(p).format(d.N2) : null,
+        x = j && null != f ? i()(f).format(d.N2) : null;
     return (0, r.jsx)(d.ZP, {
-        startDateLabel: j,
+        startDateLabel: g,
         endDateLabel: x,
         afterDate: p,
         beforeDate: f,
         selectedOption: h,
-        isCustomDateRange: g,
+        isCustomDateRange: j,
         menuName: 'account-age',
         accessibilityLabel: C.NW.string(C.t['D++TgY']),
         onClose: n,
@@ -90,8 +90,8 @@ function p(e) {
                 b(m({}, l), {
                     selectedAccountAgeOption: {
                         optionId: d.Ol.CUSTOM,
-                        afterDate: g ? p : null,
-                        beforeDate: g ? f : null
+                        afterDate: j ? p : null,
+                        beforeDate: j ? f : null
                     }
                 })
             );

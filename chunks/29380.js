@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -6,24 +6,24 @@ var i = n(200651),
     o = n(895924),
     s = n(626135),
     c = n(499254),
-    u = n(424602),
-    d = n(541099),
+    d = n(424602),
+    u = n(541099),
     p = n(827498),
     m = n(160973),
     f = n(783097),
     h = n(890280),
     b = n(176412),
-    C = n(981631),
-    x = n(388032),
+    x = n(981631),
+    C = n(388032),
     _ = n(854408);
-function y(e) {
-    let { context: t, application: n, sectionName: y, primaryEntryPointCommand: v, buttonSize: N = l.PhG.MEDIUM, playSolo: g = !1 } = e,
+function v(e) {
+    let { context: t, application: n, sectionName: v, primaryEntryPointCommand: y, buttonSize: N = l.PhG.MEDIUM, playSolo: g = !1 } = e,
         j = r.useId(),
         P = r.useCallback(() => {
             c.yT(p.ti.ACTIVITY);
         }, []),
         E = r.useCallback(() => {
-            d.Z.shouldShowModal() && P();
+            u.Z.shouldShowModal() && P();
         }, [P]),
         { submitting: A, wasSubmitting: I } = (0, h.Z)({
             applicationId: n.id,
@@ -36,8 +36,8 @@ function y(e) {
             applicationId: n.id,
             context: t
         }),
-        L = u.PM.useExperiment({ location: 'AppPrimaryEntryPointButton()' }),
-        w = r.useMemo(() => (0, f.XZ)(v.displayName), [v.displayName]),
+        L = d.PM.useExperiment({ location: 'AppPrimaryEntryPointButton()' }),
+        w = r.useMemo(() => (0, f.XZ)(y.displayName), [y.displayName]),
         {
             onActivityItemSelected: R,
             buttonColor: k,
@@ -46,7 +46,7 @@ function y(e) {
             context: t,
             application: n,
             location: o.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: y,
+            sectionName: v,
             commandName: w,
             autoDismissOnClick: T === a.JS.LEAVE,
             launchingComponentId: j,
@@ -59,7 +59,7 @@ function y(e) {
             application: n,
             activityAction: T
         }),
-        D = L.enabled ? x.NW.string(x.t['1KxmJi']) : Z;
+        D = L.enabled ? C.NW.string(C.t['1KxmJi']) : Z;
     return (0, i.jsx)(l.ua7, {
         shouldShow: null != W,
         tooltipContentClassName: _.tooltipContent,
@@ -125,12 +125,12 @@ function y(e) {
                             S(!0),
                                 R(),
                                 null == a || a(),
-                                s.default.track(C.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                                s.default.track(x.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                     application_id: n.id,
                                     button_action: p._y.USE_APP_COMMAND
                                 });
                         },
-                        'aria-label': x.NW.formatToPlainString(x.t['XjP/R0'], {
+                        'aria-label': C.NW.formatToPlainString(C.t['XjP/R0'], {
                             buttonText: D,
                             applicationName: n.name
                         }),

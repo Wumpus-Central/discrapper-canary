@@ -11,7 +11,7 @@ function o(e) {
             botUserId: o
         }),
         c = (0, r.BQ)(n) && (0, i.Kb)(n),
-        u = (0, a.Z)({ context: t }),
-        d = 'contextless' === t.type;
-    return s && null != o && !u && !d && !c;
+        d = (0, a.Z)({ context: t }),
+        u = 'contextless' === t.type;
+    return s && null != o && !d && !u && !c;
 }

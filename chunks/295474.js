@@ -1,7 +1,7 @@
 n.d(t, {
     Ux: () => S,
     gS: () => p,
-    ww: () => f
+    ww: () => A
 }),
     n(997841);
 var r = n(192379),
@@ -56,7 +56,7 @@ function p(e) {
         [e]
     );
 }
-function f(e) {
+function A(e) {
     let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: c, openWithoutBackstack: E } = e,
         { analyticsLocations: _ } = (0, o.ZP)(),
         N = (0, i.e7)([u.Z], () => u.Z.getGuild(t), [t]),

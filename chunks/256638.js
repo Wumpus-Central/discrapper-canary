@@ -753,7 +753,7 @@ let eC =
                           })
                       });
                   case ef.kVF.OUTBOUND_PROMOTION:
-                      return (0, r.jsx)(Y.Z, {});
+                      return (0, r.jsx)(Y.D, {});
                   case ef.kVF.VIEWING_ROLES:
                       return (0, r.jsx)(V.Z, {});
                   case ef.kVF.PREMIUM_UNCANCEL:

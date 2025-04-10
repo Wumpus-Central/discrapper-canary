@@ -165,8 +165,8 @@ function P() {
     let o = null != t && null == t.getFirstFieldErrorMessage('name') && null == t.getFirstFieldErrorMessage('description');
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(D, {}),
-            (0, i.jsx)(Z, {
+            (0, i.jsx)(Z, {}),
+            (0, i.jsx)(D, {
                 guild: e,
                 guildTemplate: l
             }),
@@ -294,7 +294,7 @@ function R(e) {
         })
     });
 }
-function D() {
+function Z() {
     let e = (0, d.e7)([E], () => E.name),
         t = (0, d.e7)([E], () => E.description),
         n = (0, d.e7)([E], () => E.error);
@@ -325,7 +325,7 @@ function D() {
         ]
     });
 }
-function Z(e) {
+function D(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
         ? (0, i.jsx)(k, { guild: t })
@@ -350,14 +350,14 @@ function Z(e) {
                       className: l()(O.marginTop20, y.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, i.jsx)(A, {
+                              (0, i.jsx)(W, {
                                   guild: t,
                                   guildTemplate: n
                               }),
                           (0, i.jsxs)('div', {
                               className: y.rightButtonContainer,
                               children: [
-                                  (0, i.jsx)(W, {
+                                  (0, i.jsx)(A, {
                                       guild: t,
                                       guildTemplate: n
                                   }),
@@ -395,7 +395,7 @@ function k(e) {
         children: _.NW.string(_.t.Wxdi8P)
     });
 }
-function A(e) {
+function W(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, a] = s.useState(!1),
         l = async () => {
@@ -414,7 +414,7 @@ function A(e) {
         children: _.NW.string(_.t['Nw+0Y2'])
     });
 }
-function W(e) {
+function A(e) {
     let { guild: t, guildTemplate: n } = e,
         [r, a] = s.useState(!1),
         l = async () => {

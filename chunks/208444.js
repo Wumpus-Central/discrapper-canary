@@ -17,7 +17,7 @@ var r = n(192379),
     b = n(388032);
 function x(e, t) {
     let { isDiscoverable: n, customInstallUrl: x, installParams: y, integrationTypesConfig: v } = e,
-        E = (0, f.E)({
+        E = (0, f.Eb)({
             customInstallUrl: x,
             installParams: y,
             integrationTypesConfig: v

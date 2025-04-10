@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -70,16 +70,16 @@ function w(e, t) {
     );
 }
 let R = 'DRAGGABLE_ROLE';
-function D(e) {
+function Z(e) {
     var t, i;
     let s,
         { guild: d, role: g, highestRole: p, selectedItem: f, onClick: x, currentPosition: N, onDragStart: v, onDragReset: _, onDragComplete: O, roleStyle: C } = e,
         I = (0, y.T)(d, p, g),
         S = (0, h.pM)(d.id, g.id),
-        D = null == I && !S,
-        Z = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
+        Z = null == I && !S,
+        D = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
         k = (0, j.X)(d.id, g.colorStrings),
-        [, A] = (0, l.c)({
+        [, W] = (0, l.c)({
             type: R,
             item: () => (
                 v(g.id),
@@ -88,16 +88,16 @@ function D(e) {
                     position: N
                 }
             ),
-            canDrag: () => D,
+            canDrag: () => Z,
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) return void _();
                 O(n.roleId);
             }
         }),
-        [{ dragSourcePosition: W }, L] = (0, o.L)({
+        [{ dragSourcePosition: A }, L] = (0, o.L)({
             accept: R,
-            canDrop: () => D,
+            canDrop: () => Z,
             collect: (e) => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
@@ -106,7 +106,7 @@ function D(e) {
         }),
         M = null != (i = g.colorString) ? i : (0, c.Rf)(E.p6O);
     return (
-        (s = Z
+        (s = D
             ? (0, r.jsx)(b.Z, {
                   size: 12,
                   color: g.colorString,
@@ -125,8 +125,8 @@ function D(e) {
                 })),
         (0, r.jsxs)(u.njP.Item, {
             className: a()(T.row, {
-                [T.dragBefore]: null !== W && N < W,
-                [T.dragAfter]: null !== W && N > W
+                [T.dragBefore]: null !== A && N < A,
+                [T.dragAfter]: null !== A && N > A
             }),
             id: g.id,
             selectedItem: f,
@@ -148,7 +148,7 @@ function D(e) {
             'aria-label': g.name,
             clickableRef: (e) => {
                 var t;
-                A(L(null != (t = null == e ? void 0 : e.ref) ? t : null));
+                W(L(null != (t = null == e ? void 0 : e.ref) ? t : null));
             },
             children: [
                 s,
@@ -168,16 +168,16 @@ function D(e) {
         })
     );
 }
-function Z(e) {
+function D(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: s, setSelectedSection: l } = e,
         o = (0, d.e7)([_.Z], () => _.Z.roles),
         c = (0, d.e7)([N.Z], () => N.Z.getHighestRole(t)),
         m = (0, d.e7)([f.Z], () => f.Z.roleStyle),
         [h, b] = i.useState(o.length),
         { scrolledToTop: j, handleScroll: y } = (0, C.V)(),
-        { handleDragStart: E, handleDragReset: R, handleDragComplete: Z } = (0, O.Z)(o),
+        { handleDragStart: E, handleDragReset: R, handleDragComplete: D } = (0, O.Z)(o),
         k = i.useRef(null),
-        A = i.useCallback(
+        W = i.useCallback(
             (e) => {
                 var t, n;
                 let r = o.findIndex((t) => t.id === e);
@@ -186,12 +186,12 @@ function Z(e) {
             [o]
         );
     (0, p.ZP)(() => {
-        A(n);
+        W(n);
     }),
         i.useEffect(() => {
-            o.length > h && A(n), o.length !== h && b(o.length);
-        }, [o.length, h, b, A, n]);
-    let W = () => {
+            o.length > h && W(n), o.length !== h && b(o.length);
+        }, [o.length, h, b, W, n]);
+    let A = () => {
         g.Z.createRole(t.id), l(I.ZI.DISPLAY);
     };
     return (0, r.jsx)(x.ZP.Sidebar, {
@@ -227,7 +227,7 @@ function Z(e) {
                                 (0, r.jsx)(
                                     u.P3F,
                                     w(P({ className: T.addRole }, e), {
-                                        onClick: W,
+                                        onClick: A,
                                         children: (0, r.jsx)(u.qJs, {
                                             size: 'custom',
                                             color: 'currentColor',
@@ -249,7 +249,7 @@ function Z(e) {
                         orientation: 'vertical',
                         children: o.map((e, i) =>
                             (0, r.jsx)(
-                                D,
+                                Z,
                                 {
                                     guild: t,
                                     role: e,
@@ -259,7 +259,7 @@ function Z(e) {
                                     currentPosition: i,
                                     onDragStart: E,
                                     onDragReset: R,
-                                    onDragComplete: Z,
+                                    onDragComplete: D,
                                     roleStyle: m
                                 },
                                 e.id

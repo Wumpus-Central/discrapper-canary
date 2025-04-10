@@ -6,10 +6,10 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(607070),
-    u = n(98880),
-    d = n(85884);
+    d = n(98880),
+    u = n(85884);
 function p(e) {
-    let { look: t = u.U4.LARGE_BANNER } = e,
+    let { look: t = d.U4.LARGE_BANNER } = e,
         n = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         { styleLarge: l, styleSmall: p } = r.useMemo(
             () => ({
@@ -19,30 +19,30 @@ function p(e) {
             []
         );
     return (0, i.jsxs)('div', {
-        className: a()(d.container, d.loadingAnimation, {
-            [d.noAnimation]: n,
-            [d.containerBorderRadius]: t !== u.U4.ROW,
-            [d.rowContainer]: t === u.U4.ROW
+        className: a()(u.container, u.loadingAnimation, {
+            [u.noAnimation]: n,
+            [u.containerBorderRadius]: t !== d.U4.ROW,
+            [u.rowContainer]: t === d.U4.ROW
         }),
         children: [
             (0, i.jsx)('div', {
-                className: a()(d.bannerImage, {
-                    [d.mediumBanner]: t === u.U4.MEDIUM_BANNER,
-                    [d.largeBanner]: t === u.U4.LARGE_BANNER
+                className: a()(u.bannerImage, {
+                    [u.mediumBanner]: t === d.U4.MEDIUM_BANNER,
+                    [u.largeBanner]: t === d.U4.LARGE_BANNER
                 })
             }),
             (0, i.jsxs)('div', {
-                className: a()(d.appDetailsContainer, { [d.appDetailsRowContainer]: t === u.U4.ROW }),
+                className: a()(u.appDetailsContainer, { [u.appDetailsRowContainer]: t === d.U4.ROW }),
                 children: [
-                    (0, i.jsx)('div', { className: a()(d.iconPlaceholder, { [d.rowIconPlaceholder]: t === u.U4.ROW }) }),
+                    (0, i.jsx)('div', { className: a()(u.iconPlaceholder, { [u.rowIconPlaceholder]: t === d.U4.ROW }) }),
                     (0, i.jsxs)('div', {
-                        className: d.textContainer,
+                        className: u.textContainer,
                         children: [
                             (0, i.jsx)('div', {
-                                className: d.textPlaceholder,
+                                className: u.textPlaceholder,
                                 style: l,
                                 children: (0, i.jsx)(s.X6q, {
-                                    className: d.hidden,
+                                    className: u.hidden,
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     lineClamp: 1,
@@ -50,10 +50,10 @@ function p(e) {
                                 })
                             }),
                             (0, i.jsx)('div', {
-                                className: d.textPlaceholder,
+                                className: u.textPlaceholder,
                                 style: p,
                                 children: (0, i.jsx)(s.Text, {
-                                    className: d.hidden,
+                                    className: u.hidden,
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
                                     lineClamp: 1,
@@ -62,7 +62,7 @@ function p(e) {
                             })
                         ]
                     }),
-                    t === u.U4.ROW && (0, i.jsx)('div', { className: d.rowDivider })
+                    t === d.U4.ROW && (0, i.jsx)('div', { className: u.rowDivider })
                 ]
             })
         ]

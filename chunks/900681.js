@@ -209,10 +209,10 @@ function C(e) {
 }
 function I(e) {
     var t;
-    let { clan: n, bannerComponent: s, expanded: u, isMember: f = !1, traitsToHighlight: I, prioritizedGameIds: E, className: S, position: T, showBrandingFooter: P = !1, bannerUrl: w, onlyAnimateIconOnHover: R = !1, hasPendingJoinRequest: D = !1, atMaxMemberCapacity: Z = !1, footer: k = null } = e,
+    let { clan: n, bannerComponent: s, expanded: u, isMember: f = !1, traitsToHighlight: I, prioritizedGameIds: E, className: S, position: T, showBrandingFooter: P = !1, bannerUrl: w, onlyAnimateIconOnHover: R = !1, hasPendingJoinRequest: Z = !1, atMaxMemberCapacity: D = !1, footer: k = null } = e,
         {
-            tag: A,
-            badge: W,
+            tag: W,
+            badge: A,
             branding: { primaryColor: L, secondaryColor: M },
             bannerHash: G,
             gameActivity: U
@@ -266,8 +266,8 @@ function I(e) {
                 children: [
                     $,
                     (0, r.jsx)(C, {
-                        hasPendingJoinRequest: D,
-                        atMaxMemberCapacity: Z,
+                        hasPendingJoinRequest: Z,
+                        atMaxMemberCapacity: D,
                         isGuildMember: f
                     })
                 ]
@@ -305,14 +305,14 @@ function I(e) {
                                                 (0, r.jsx)(h.A, {
                                                     width: 16,
                                                     height: 16,
-                                                    badge: W.badgeKind,
-                                                    primaryTintColor: W.primaryColor,
-                                                    secondaryTintColor: W.secondaryColor
+                                                    badge: A.badgeKind,
+                                                    primaryTintColor: A.primaryColor,
+                                                    secondaryTintColor: A.secondaryColor
                                                 }),
                                                 (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-primary',
-                                                    children: A
+                                                    children: W
                                                 })
                                             ]
                                         })

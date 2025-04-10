@@ -39,7 +39,7 @@ function _(e) {
         [T, P] = i.useState(!1),
         w = null != c && s.Y.VISIBLE.has(c.visibility),
         R = !y && !w && !C,
-        D = (0, f.Dj)({
+        Z = (0, f.Dj)({
             guildId: t,
             location: 'widget settings'
         });
@@ -49,7 +49,7 @@ function _(e) {
         i.useEffect(() => {
             g();
         }, [t, g]);
-    let Z = i.useCallback(
+    let D = i.useCallback(
         async (e) => {
             P(!0), await (0, b.c)(t, e, I), P(!1);
         },
@@ -62,7 +62,7 @@ function _(e) {
                       disabled: T,
                       value: C,
                       hideBorder: !0,
-                      onChange: Z,
+                      onChange: D,
                       children: N.NW.string(N.t.NR6hub)
                   }),
                   R
@@ -70,7 +70,7 @@ function _(e) {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             className: v.subtext,
-                            children: D ? N.NW.string(N.t.zCGuJy) : N.NW.string(N.t.yInR2t)
+                            children: Z ? N.NW.string(N.t.zCGuJy) : N.NW.string(N.t.yInR2t)
                         })
                       : null,
                   C

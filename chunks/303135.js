@@ -22,7 +22,7 @@ function u(e) {
                   usernameHook: m,
                   editGroupButton: (0, r.jsx)(i.Text, {
                       tag: 'span',
-                      variant: 'text-md/semibold',
+                      variant: 'text-md/medium',
                       color: 'text-link',
                       children: c.NW.string(c.t['5Q9+/P'])
                   }),

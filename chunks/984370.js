@@ -21,14 +21,14 @@ var i = n(120356),
     T = n(2818),
     S = n(954551),
     p = n(208450),
-    f = n(975146),
-    A = n(979651),
+    A = n(975146),
+    f = n(979651),
     R = n(358085),
     P = n(998502),
     C = n(665149),
     g = n(300986),
-    m = n(314451),
-    D = n(35583),
+    D = n(314451),
+    m = n(35583),
     y = n(981631),
     h = n(176505),
     b = n(220705);
@@ -85,7 +85,7 @@ async function L() {
 function Z(e) {
     let { children: t, className: n, channelId: i, channelType: l, guildId: c, innerClassname: u, transparent: R = !1, toolbar: P, mobileToolbar: U, 'aria-label': M, 'aria-labelledby': Z, scrollable: k, role: v, hideSearch: j, showDivider: x } = e,
         F = null == i || (0, h.AB)(i) ? null : i,
-        V = (0, a.e7)([A.Z], () => A.Z.isInChannel(F) || !1),
+        V = (0, a.e7)([f.Z], () => f.Z.isInChannel(F) || !1),
         G = (0, a.e7)([E.Z], () => null != F && E.Z.getParticipantsListOpen(F)),
         { hasBugReporterAccess: w } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: W, inInbox: B } = T.Z.useExperiment({ location: 'HeaderBar' }),
@@ -104,11 +104,11 @@ function Z(e) {
                           P,
                           e ? (0, r.jsx)(p.Z, { className: b.search }, null != c ? c : i) : null,
                           x && (0, r.jsx)(C.ZP.Divider, {}),
-                          !H && (0, r.jsx)(D.Z, {}),
+                          !H && (0, r.jsx)(m.Z, {}),
                           !H && (0, r.jsx)(I.Z, { canShowReminder: !0 }),
                           !H && (0, r.jsx)(O.Z, {}),
                           W && !B ? (0, r.jsx)(S.Z, {}) : null,
-                          !H && (w ? (0, r.jsx)(m.Z, {}) : (0, r.jsx)(g.Z, {})),
+                          !H && (w ? (0, r.jsx)(D.Z, {}) : (0, r.jsx)(g.Z, {})),
                           z &&
                               V &&
                               null != F &&
@@ -116,7 +116,7 @@ function Z(e) {
                               l === y.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
                                   className: b.controlButtonWrapper,
-                                  children: [(0, r.jsx)(C.ZP.Divider, {}), (0, r.jsx)(f.Z, { onClick: () => s.Z.toggleParticipantsList(F, !G) })]
+                                  children: [(0, r.jsx)(C.ZP.Divider, {}), (0, r.jsx)(A.Z, { onClick: () => s.Z.toggleParticipantsList(F, !G) })]
                               })
                       ]
                   });

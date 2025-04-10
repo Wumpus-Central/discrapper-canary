@@ -1,10 +1,10 @@
 n.d(t, {
     GG: () => O,
-    HQ: () => A,
+    HQ: () => f,
     JH: () => C,
     QV: () => P,
     YB: () => R,
-    _1: () => f,
+    _1: () => A,
     _k: () => I,
     jO: () => N,
     oC: () => g,
@@ -123,7 +123,7 @@ let E = [],
             }
         };
     },
-    f = () => {
+    A = () => {
         let [e, t] = (0, o.Z)(c.AE),
             { loading: n, error: r } = t;
         return {
@@ -132,7 +132,7 @@ let E = [],
             archiveSubscriptionListing: e
         };
     },
-    A = () => {
+    f = () => {
         let [e, t] = r.useState(!1),
             [n, i] = r.useState(null);
         return {

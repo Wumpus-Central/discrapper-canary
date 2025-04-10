@@ -1,7 +1,7 @@
-n.d(t, { n: () => a });
+n.d(t, { n: () => i });
 var r = n(192379),
     l = n(941028);
-function a(e) {
+function i(e) {
     r.useEffect(
         () => (
             l.k$(e),

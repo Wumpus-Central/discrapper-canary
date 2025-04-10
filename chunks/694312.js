@@ -6,19 +6,19 @@ var i = n(192379),
     o = n(594174),
     s = n(695103),
     c = n(823379),
-    u = n(358085),
-    d = n(317381),
+    d = n(358085),
+    u = n(317381),
     p = n(761122);
 function m(e, t) {
     let n = (0, r.e7)([o.default], o.default.getCurrentUser),
-        m = (0, r.Wu)([d.ZP], () => d.ZP.getShelfActivities(e)),
+        m = (0, r.Wu)([u.ZP], () => u.ZP.getShelfActivities(e)),
         f = (0, r.e7)([s.Z], () => s.Z.testModeEmbeddedApplicationId),
         h = m.map((e) => e.application_id),
         b = null != f ? [f, ...h] : h,
-        C = (0, a.Z)(b),
-        x = 'channel' in t && (0, l.aZ)(t.channel, 'useActivityShelfData()'),
-        _ = i.useMemo(() => C.filter(c.lm), [C]),
-        y = i.useMemo(
+        x = (0, a.Z)(b),
+        C = 'channel' in t && (0, l.aZ)(t.channel, 'useActivityShelfData()'),
+        _ = i.useMemo(() => x.filter(c.lm), [x]),
+        v = i.useMemo(
             () =>
                 null != f && _.length > 0 && _[0].id === f && null != _[0].embeddedActivityConfig
                     ? [
@@ -30,7 +30,7 @@ function m(e, t) {
                     : [],
             [_, f]
         ),
-        v = i.useMemo(
+        y = i.useMemo(
             () =>
                 m
                     .map((e) => {
@@ -47,17 +47,17 @@ function m(e, t) {
         );
     return i.useMemo(
         () =>
-            [...y, ...v]
+            [...v, ...y]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
-                    return (null != (t = n.supported_platforms) ? t : []).includes((0, p.Z)((0, u.getOS)()));
+                    return (null != (t = n.supported_platforms) ? t : []).includes((0, p.Z)((0, d.getOS)()));
                 })
                 .filter((e) => {
                     let { activity: t } = e;
                     return !t.requires_age_gate || (null == n ? void 0 : n.nsfwAllowed) === !0 || (null == n ? void 0 : n.nsfwAllowed) == null;
                 })
-                .filter((e) => !x || e.application.id !== l.gu),
-        [null == n ? void 0 : n.nsfwAllowed, v, x, y]
+                .filter((e) => !C || e.application.id !== l.gu),
+        [null == n ? void 0 : n.nsfwAllowed, y, C, v]
     );
 }

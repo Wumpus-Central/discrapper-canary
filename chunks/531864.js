@@ -102,8 +102,8 @@ let p = {
     g = (e) => {
         let { peaking: t, transitioning: n, style: a } = e,
             p = window.innerHeight,
-            [g, h] = l.useState(!1),
-            m = f.map((e) => {
+            [g, m] = l.useState(!1),
+            h = f.map((e) => {
                 let { skuId: t } = e;
                 return c.Z.getProduct(t);
             });
@@ -111,7 +111,7 @@ let p = {
             l.useEffect(() => {
                 n &&
                     setTimeout(() => {
-                        h(!0);
+                        m(!0);
                     }, d.lb);
             }, [n]),
             (0, r.jsx)('div', {
@@ -122,16 +122,16 @@ let p = {
                 }),
                 children: f.map((e, t) => {
                     var l, a;
-                    let { top: o, left: c, rotation: f, size: g, skuId: h } = e,
-                        _ = null == (l = m[t]) ? void 0 : l.items[0],
-                        v = null == (a = m[t]) ? void 0 : a.type,
-                        C = v === i.Z.AVATAR_DECORATION ? 384 : 512;
+                    let { top: o, left: c, rotation: f, size: g, skuId: m } = e,
+                        _ = null == (l = h[t]) ? void 0 : l.items[0],
+                        C = null == (a = h[t]) ? void 0 : a.type,
+                        v = C === i.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         'div',
                         {
                             className: b.asset,
                             style: {
-                                top: n ? -p - C : o,
+                                top: n ? -p - v : o,
                                 left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
                                 transform: 'rotate('.concat(f, 'deg)'),
                                 height: g.y,
@@ -140,9 +140,9 @@ let p = {
                                 transitionDuration: ''.concat(d.lb - 200 * Math.random(), 'ms')
                             },
                             children: [
-                                null != _ && v === i.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: _ }),
+                                null != _ && C === i.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: _ }),
                                 null != _ &&
-                                    v === i.Z.PROFILE_EFFECT &&
+                                    C === i.Z.PROFILE_EFFECT &&
                                     (0, r.jsx)(s.Z, {
                                         profileEffectId: _.id,
                                         isPurchased: !1,
@@ -150,7 +150,7 @@ let p = {
                                     })
                             ]
                         },
-                        h + t
+                        m + t
                     );
                 })
             })

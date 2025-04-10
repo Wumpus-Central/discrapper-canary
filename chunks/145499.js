@@ -144,7 +144,7 @@ let I = (e, t) => (e < (0, b.A3)(y.Eu4.NONE) ? y.Eu4.NONE : e < (0, b.A3)(y.Eu4.
                         totalNumberOfSlotsToAssign: e
                     });
             },
-            D = [
+            Z = [
                 {
                     tier: y.Eu4.NONE,
                     title: (0, r.jsx)(E, {
@@ -183,7 +183,7 @@ let I = (e, t) => (e < (0, b.A3)(y.Eu4.NONE) ? y.Eu4.NONE : e < (0, b.A3)(y.Eu4.
                 }
             ];
         return (0, r.jsx)(N.Z, {
-            tiers: D,
+            tiers: Z,
             renderTier: (e) => {
                 let i,
                     { isAnimatedTo: s, onSetRef: l, tier: d, tiers: u, tierIndex: g } = e,
@@ -191,20 +191,20 @@ let I = (e, t) => (e < (0, b.A3)(y.Eu4.NONE) ? y.Eu4.NONE : e < (0, b.A3)(y.Eu4.
                     j = u[g - 1],
                     N = null != j ? (0, b.A3)(j.tier) : 0,
                     E = (0, b.A3)(d.tier, t),
-                    D = (0, b.ig)(d.tier),
-                    Z = c.slice(N, E),
-                    k = Z.length > 0,
-                    A = S < d.tier,
-                    W = I(c.length, t),
-                    L = f && !A && W === d.tier && E !== Z.length,
-                    M = L || Z.length > 0,
+                    Z = (0, b.ig)(d.tier),
+                    D = c.slice(N, E),
+                    k = D.length > 0,
+                    W = S < d.tier,
+                    A = I(c.length, t),
+                    L = f && !W && A === d.tier && E !== D.length,
+                    M = L || D.length > 0,
                     G = E - N,
                     U = n(872732),
-                    B = D - Z.length,
-                    F = L ? Math.min(5 - ((Z.length + 0) % 5), B) : 0,
+                    B = Z - D.length,
+                    F = L ? Math.min(5 - ((D.length + 0) % 5), B) : 0,
                     z = [];
                 for (let e = 0; e < F; e++) z.push((0, r.jsx)(T, {}, 'placeholder-'.concat(e)));
-                let H = W === g + 1 && W > S,
+                let H = A === g + 1 && A > S,
                     V = L || H || g > S;
                 return (
                     H
@@ -239,11 +239,11 @@ let I = (e, t) => (e < (0, b.A3)(y.Eu4.NONE) ? y.Eu4.NONE : e < (0, b.A3)(y.Eu4.
                                     (0, r.jsxs)('div', {
                                         className: C.grid,
                                         children: [
-                                            Z.map((e) =>
+                                            D.map((e) =>
                                                 (0, r.jsx)(
                                                     _.Z,
                                                     {
-                                                        isDisabled: A,
+                                                        isDisabled: W,
                                                         sticker: e,
                                                         canManageSticker: x(e)
                                                     },
@@ -253,9 +253,9 @@ let I = (e, t) => (e < (0, b.A3)(y.Eu4.NONE) ? y.Eu4.NONE : e < (0, b.A3)(y.Eu4.
                                             z
                                         ]
                                     }),
-                                !A &&
+                                !W &&
                                     !L &&
-                                    0 === Z.length &&
+                                    0 === D.length &&
                                     (0, r.jsx)('div', {
                                         className: a()(C.emptyTierWrapper, C.unusedTierWrapper),
                                         children: (0, r.jsx)(o.Text, {
@@ -264,7 +264,7 @@ let I = (e, t) => (e < (0, b.A3)(y.Eu4.NONE) ? y.Eu4.NONE : e < (0, b.A3)(y.Eu4.
                                             children: O.NW.string(O.t.lqwv0N)
                                         })
                                     }),
-                                A &&
+                                W &&
                                     !k &&
                                     (0, r.jsxs)('div', {
                                         className: C.emptyTierWrapper,

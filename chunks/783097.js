@@ -265,5 +265,5 @@ function K(e) {
 function z(e, t) {
     let n = null != t ? l.ZP.getGuildState(t) : null,
         r = null != n && (0, u.TK)(e.id, n);
-    return (0, f.D)(e) || r;
+    return (0, f.Dz)(e) || r;
 }

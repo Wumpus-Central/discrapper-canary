@@ -17,26 +17,26 @@ var i = n(512722),
     T = n(981631);
 async function S(e) {
     var t, n, i, S, p;
-    let { applicationId: f, skuId: A, initialPlanId: R, analyticsLocations: P, analyticsLocationObject: C } = e,
-        g = O.Z.get(A);
+    let { applicationId: A, skuId: f, initialPlanId: R, analyticsLocations: P, analyticsLocationObject: C } = e,
+        g = O.Z.get(f);
     if (null == g) {
-        let e = (await (0, a.oJ)(f)).find((e) => e.sku.id === A);
-        l()(null != e, 'Could not find store listing for sku'), e.sku.type === T.epS.SUBSCRIPTION_GROUP && (await (0, I.rx)(f, e.id));
+        let e = (await (0, a.oJ)(A)).find((e) => e.sku.id === f);
+        l()(null != e, 'Could not find store listing for sku'), e.sku.type === T.epS.SUBSCRIPTION_GROUP && (await (0, I.rx)(A, e.id));
     }
-    (g = null != g ? g : O.Z.get(A)), l()(null != g && g.applicationId === f, 'SKU must belong to application'), g.type !== T.epS.SUBSCRIPTION || (0, u.a)([g.id]) || (await (0, s.GZ)(g.id));
-    let m = (function (e) {
+    (g = null != g ? g : O.Z.get(f)), l()(null != g && g.applicationId === A, 'SKU must belong to application'), g.type !== T.epS.SUBSCRIPTION || (0, u.a)([g.id]) || (await (0, s.GZ)(g.id));
+    let D = (function (e) {
         let t = (0, c.jA)({ applicationId: e }),
             n = null != t ? _.Z.getWindow(t) : void 0;
         return null == n || n.closed ? o.z1l : o.u1M;
-    })(f);
+    })(A);
     if (g.type !== T.epS.SUBSCRIPTION)
         return new Promise((e, t) => {
             (0, E.Z)({
-                applicationId: f,
-                skuId: A,
+                applicationId: A,
+                skuId: f,
                 analyticsLocationObject: C,
                 analyticsLocations: P,
-                contextKey: m,
+                contextKey: D,
                 onComplete: (t) => {
                     var n;
                     e(null != (n = null == t ? void 0 : t.entitlements) ? n : []);
@@ -46,8 +46,8 @@ async function S(e) {
                 }
             });
         });
-    await ((t = f),
-    (n = A),
+    await ((t = A),
+    (n = f),
     (i = R),
     (S = C),
     (p = P),

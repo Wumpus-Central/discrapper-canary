@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(953529);
+n.d(t, { Z: () => W }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -70,8 +70,8 @@ function R(e, t) {
         e
     );
 }
-let D = (0, v.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
-function Z() {
+let Z = (0, v.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+function D() {
     return [
         {
             name: T.NW.string(T.t.rXqxhI),
@@ -90,7 +90,7 @@ function Z() {
 function k(e) {
     let { value: t, 'aria-labelledby': n, onChange: s, disabled: l = !1 } = e,
         { ref: o, width: c } = (0, f.Z)(),
-        d = (0, h.Z)(Z),
+        d = (0, h.Z)(D),
         u = i.useMemo(
             () =>
                 d.map((e) =>
@@ -127,19 +127,19 @@ function k(e) {
         })
     });
 }
-function A(e) {
+function W(e) {
     var t;
     let { guild: n, isGuildProducts: s = !1 } = e,
         { format: a } = (0, C.Z)(n.id),
         l = (0, _.YB)(n.id),
         c = i.useCallback(() => {
             var e;
-            return (null == l || null == (e = l.cover_image_asset) ? void 0 : e.application_id) == null ? null : (0, N._W)(l.cover_image_asset.application_id, l.cover_image_asset, D);
+            return (null == l || null == (e = l.cover_image_asset) ? void 0 : e.application_id) == null ? null : (0, N._W)(l.cover_image_asset.application_id, l.cover_image_asset, Z);
         }, [l]),
         [m, f] = i.useState(a),
         [h, v] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ''),
-        [Z, A] = i.useState(c),
-        [W, L] = i.useState(null == l ? void 0 : l.store_page_guild_products_default_sort),
+        [D, W] = i.useState(c),
+        [A, L] = i.useState(null == l ? void 0 : l.store_page_guild_products_default_sort),
         [M, G] = i.useState(null == l ? void 0 : l.server_shop_tab_order),
         { loading: U, error: B, updateSubscriptionsSettings: F } = (0, _.QV)(),
         { imageCTA: z, imageAriaLabel: H, setFilename: V } = (0, O.Z)(null == l ? void 0 : l.cover_image_asset),
@@ -147,16 +147,16 @@ function A(e) {
         K = (0, b.Dt)(),
         q = (0, b.Dt)();
     function X(e, t) {
-        o()(null != e, 'Null value not allowed'), null != t && V(t.name), A(e);
+        o()(null != e, 'Null value not allowed'), null != t && V(t.name), W(e);
     }
     let J = i.useMemo(() => {
             var e;
-            return (null != h && h !== (null != (e = null == l ? void 0 : l.description) ? e : '')) || (null == Z ? void 0 : Z.startsWith('data:')) === !0 || m !== a || (null == l ? void 0 : l.store_page_guild_products_default_sort) !== W || (null == l ? void 0 : l.server_shop_tab_order) !== M;
-        }, [Z, a, h, l, m, W, M]),
-        Q = null != h && '' !== h && null != Z;
+            return (null != h && h !== (null != (e = null == l ? void 0 : l.description) ? e : '')) || (null == D ? void 0 : D.startsWith('data:')) === !0 || m !== a || (null == l ? void 0 : l.store_page_guild_products_default_sort) !== A || (null == l ? void 0 : l.server_shop_tab_order) !== M;
+        }, [D, a, h, l, m, A, M]),
+        Q = null != h && '' !== h && null != D;
     i.useEffect(() => {
         var e;
-        (null == l || null == (e = l.cover_image_asset) ? void 0 : e.application_id) != null && A((0, N._W)(l.cover_image_asset.application_id, l.cover_image_asset, D));
+        (null == l || null == (e = l.cover_image_asset) ? void 0 : e.application_id) != null && W((0, N._W)(l.cover_image_asset.application_id, l.cover_image_asset, Z));
     }, [null == l ? void 0 : l.cover_image_asset]);
     let $ = (0, y.mY)(),
         ee = i.useMemo(
@@ -258,7 +258,7 @@ function A(e) {
                         children: T.NW.string(T.t.i2rCwc)
                     }),
                     (0, r.jsx)(j.Z, {
-                        image: Z,
+                        image: D,
                         hint: z,
                         showIcon: !0,
                         showRemoveButton: !1,
@@ -298,7 +298,7 @@ function A(e) {
                                       children: T.NW.string(T.t.TILN8v)
                                   }),
                                   (0, r.jsx)(g.q4e, {
-                                      value: W,
+                                      value: A,
                                       placeholder: T.NW.string(T.t.XqMe3N),
                                       options: ee,
                                       onChange: (e) => L(e)
@@ -344,12 +344,12 @@ function A(e) {
                             disabled: !Q,
                             onReset: () => {
                                 var e;
-                                f(a), v(null != (e = null == l ? void 0 : l.description) ? e : ''), A(c), L(null == l ? void 0 : l.store_page_guild_products_default_sort), G(null == l ? void 0 : l.server_shop_tab_order);
+                                f(a), v(null != (e = null == l ? void 0 : l.description) ? e : ''), W(c), L(null == l ? void 0 : l.store_page_guild_products_default_sort), G(null == l ? void 0 : l.server_shop_tab_order);
                             },
                             onSave: () => {
                                 o()(null != l, 'Settings must be defined');
                                 let e = {};
-                                h !== l.description && (e.description = h), null != Z && Z.startsWith('data:') && (e.cover_image = Z), m !== a && (e.full_server_gate = m === E.e3.ALL_CHANNELS), W !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = W), M !== l.server_shop_tab_order && (e.server_shop_tab_order = M), d().isEmpty(e) || F(n.id, e);
+                                h !== l.description && (e.description = h), null != D && D.startsWith('data:') && (e.cover_image = D), m !== a && (e.full_server_gate = m === E.e3.ALL_CHANNELS), A !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = A), M !== l.server_shop_tab_order && (e.server_shop_tab_order = M), d().isEmpty(e) || F(n.id, e);
                             },
                             saveButtonTooltip: Q ? void 0 : T.NW.string(T.t['6HRvio'])
                         })

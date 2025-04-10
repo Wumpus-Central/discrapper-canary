@@ -29,10 +29,10 @@ var r = n(200651),
     P = n(999382),
     w = n(70409),
     R = n(981631),
-    D = n(710111),
-    Z = n(388032),
+    Z = n(710111),
+    D = n(388032),
     k = n(832183);
-function A(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function A(e) {
     }
     return e;
 }
-function W(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function M() {
         ? null
         : (0, r.jsx)(u.hjN, {
               tag: u.RB0.H1,
-              title: Z.NW.string(Z.t.OWQNYm),
+              title: D.NW.string(D.t.OWQNYm),
               children: (0, r.jsx)(z, { guild: e })
           });
 }
@@ -101,7 +101,7 @@ function U(e) {
         a = null != s ? (0, E.nL)(s) : 0;
     return 0 === t
         ? (0, r.jsx)(r.Fragment, {
-              children: Z.NW.format(Z.t['7E9Hd3'], {
+              children: D.NW.format(D.t['7E9Hd3'], {
                   slots: n,
                   totalSlots: a
               })
@@ -109,7 +109,7 @@ function U(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(u.ua7, {
-                      text: Z.NW.formatToPlainString(Z.t.tuuJJS, { currentBoostLevel: t }),
+                      text: D.NW.formatToPlainString(D.t.tuuJJS, { currentBoostLevel: t }),
                       children: (e) =>
                           (0, r.jsx)(u.P3F, {
                               className: k.boostingIconWrapper,
@@ -123,10 +123,10 @@ function U(e) {
                                   });
                               },
                               tabIndex: -1,
-                              children: (0, r.jsx)(C.Z, A({}, e))
+                              children: (0, r.jsx)(C.Z, W({}, e))
                           })
                   }),
-                  Z.NW.format(Z.t.HHCdvb, {
+                  D.NW.format(D.t.HHCdvb, {
                       slots: n,
                       totalSlots: a,
                       boostLevel: t
@@ -165,8 +165,8 @@ let B = (e) => {
             }, [o]);
         return (0, r.jsx)(
             u.yRy,
-            W(
-                A(
+            A(
+                W(
                     {
                         shouldShow: a,
                         renderPopout: (e) =>
@@ -189,14 +189,14 @@ let B = (e) => {
                 (0, r.jsx)(u.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: Z.NW.format(Z.t.bGXPVl, {})
+                    children: D.NW.format(D.t.bGXPVl, {})
                 }),
             renderPopoutChildren: (e) =>
                 (0, r.jsx)(
                     u.zxk,
-                    W(A({}, e), {
+                    A(W({}, e), {
                         disabled: !0,
-                        children: Z.NW.string(Z.t['/uNYPD'])
+                        children: D.NW.string(D.t['/uNYPD'])
                     })
                 )
         });
@@ -204,7 +204,7 @@ function z(e) {
     let { guild: t } = e,
         [s, a] = (0, c.Wu)([x.Z], () => {
             var e;
-            return [null != (e = x.Z.getSoundsForGuild(t.id)) ? e : D.Hy, x.Z.isFetchingSounds() || x.Z.isFetchingDefaultSounds()];
+            return [null != (e = x.Z.getSoundsForGuild(t.id)) ? e : Z.Hy, x.Z.isFetchingSounds() || x.Z.isFetchingDefaultSounds()];
         }),
         { canCreateExpressions: l } = (0, h.XJ)(t),
         o = i.useRef(null),
@@ -238,11 +238,11 @@ function z(e) {
               onClick: function () {
                   (0, u.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e('56035'), n.e('15878')]).then(n.bind(n, 758961));
-                      return (n) => (0, r.jsx)(e, W(A({}, n), { guildId: t.id }));
+                      return (n) => (0, r.jsx)(e, A(W({}, n), { guildId: t.id }));
                   });
               },
               disabled: g <= 0 || !l,
-              children: Z.NW.string(Z.t['/uNYPD'])
+              children: D.NW.string(D.t['/uNYPD'])
           })
         : (0, r.jsx)(F, {});
     return (0, r.jsxs)(r.Fragment, {
@@ -253,7 +253,7 @@ function z(e) {
                         className: k.helpText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: Z.NW.string(Z.t.BohnsL)
+                        children: D.NW.string(D.t.BohnsL)
                     }),
                     (0, r.jsx)('div', {
                         className: k.buttons,
@@ -273,9 +273,9 @@ function z(e) {
                               height: 212
                           }),
                           (0, r.jsx)(u.OZU, {
-                              note: Z.NW.string(Z.t.ZhoSBA),
+                              note: D.NW.string(D.t.ZhoSBA),
                               noteClassName: k.emptyText,
-                              children: Z.NW.string(Z.t.I6P1p6)
+                              children: D.NW.string(D.t.I6P1p6)
                           }),
                           y
                       ]
@@ -303,7 +303,7 @@ function z(e) {
                               children: [
                                   (0, r.jsxs)('div', {
                                       className: k.tableHeaders,
-                                      children: [(0, r.jsx)(G, { children: Z.NW.string(Z.t.sMOuub) }), (0, r.jsx)(G, { children: Z.NW.string(Z.t.lLFvlZ) }), (0, r.jsx)(G, { children: Z.NW.string(Z.t['85qMS0']) })]
+                                      children: [(0, r.jsx)(G, { children: D.NW.string(D.t.sMOuub) }), (0, r.jsx)(G, { children: D.NW.string(D.t.lLFvlZ) }), (0, r.jsx)(G, { children: D.NW.string(D.t['85qMS0']) })]
                                   }),
                                   s.map((e) =>
                                       (0, r.jsx)(
@@ -332,7 +332,7 @@ function H(e) {
         E = i.useMemo(() => C(t), [t, C]),
         S = null != j || null != N,
         [P, w] = i.useState(!1),
-        D = (0, v.z)(t, o.id);
+        Z = (0, v.z)(t, o.id);
     async function L() {
         if (!P) {
             w(!0);
@@ -376,7 +376,7 @@ function H(e) {
                 onClick: () => {
                     P || l(t);
                 },
-                onContextMenu: D,
+                onContextMenu: Z,
                 className: k.soundName,
                 children: (0, r.jsxs)(u.Text, {
                     variant: 'text-sm/normal',
@@ -423,14 +423,14 @@ function H(e) {
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  W(A({}, n), {
+                                                  A(W({}, n), {
                                                       guildId: o.id,
                                                       existingSound: t
                                                   })
                                               );
                                       });
                               },
-                              'aria-label': Z.NW.string(Z.t.bt75u7),
+                              'aria-label': D.NW.string(D.t.bt75u7),
                               children: (0, r.jsx)(u.vdY, {
                                   size: 'xs',
                                   color: 'currentColor',
@@ -444,12 +444,12 @@ function H(e) {
                                       (0, u.h7j)((e) =>
                                           (0, r.jsx)(
                                               u.ConfirmModal,
-                                              W(
-                                                  A(
+                                              A(
+                                                  W(
                                                       {
-                                                          header: Z.NW.formatToPlainString(Z.t['PR/VbG'], { soundName: p }),
-                                                          confirmText: Z.NW.string(Z.t.oyYWHB),
-                                                          cancelText: Z.NW.string(Z.t['ETE/oK']),
+                                                          header: D.NW.formatToPlainString(D.t['PR/VbG'], { soundName: p }),
+                                                          confirmText: D.NW.string(D.t.oyYWHB),
+                                                          cancelText: D.NW.string(D.t['ETE/oK']),
                                                           onConfirm: L
                                                       },
                                                       e
@@ -457,14 +457,14 @@ function H(e) {
                                                   {
                                                       children: (0, r.jsx)(u.Text, {
                                                           variant: 'text-md/normal',
-                                                          children: Z.NW.format(Z.t['u6+CmJ'], { soundName: p })
+                                                          children: D.NW.format(D.t['u6+CmJ'], { soundName: p })
                                                       })
                                                   }
                                               )
                                           )
                                       );
                               },
-                              'aria-label': Z.NW.string(Z.t.N86XcH),
+                              'aria-label': D.NW.string(D.t.N86XcH),
                               children: (0, r.jsx)(u.Dio, {
                                   size: 'md',
                                   color: 'currentColor',

@@ -17,19 +17,19 @@ var i = n(442837),
     T = n(246965),
     S = n(703656),
     p = n(706454),
-    f = n(933429),
-    A = n(395361),
+    A = n(933429),
+    f = n(395361),
     R = n(626135),
     P = n(243778),
     C = n(921944),
     g = n(981631),
-    m = n(801461),
-    D = n(474936),
+    D = n(801461),
+    m = n(474936),
     y = n(388032),
     h = n(131715);
 let b = (e) => {
     let { dismissibleContent: t, noticeType: b } = e,
-        U = (0, i.e7)([f.ZP], () => f.ZP.getNotice()),
+        U = (0, i.e7)([A.ZP], () => A.ZP.getNotice()),
         M = (0, i.e7)([p.default], () => p.default.locale);
     return (0, r.jsx)(P.ZP, {
         contentTypes: [t],
@@ -98,7 +98,7 @@ let b = (e) => {
                                 onClick: () => i(C.L.UNKNOWN),
                                 noticeType: b
                             }),
-                            (0, r.jsx)(A.Z, { className: h.platformIcon }),
+                            (0, r.jsx)(f.Z, { className: h.platformIcon }),
                             y.NW.string(y.t['5NUVHB']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
@@ -180,12 +180,12 @@ let b = (e) => {
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
                     return (0, r.jsx)(T.Z, {
                         dismissCurrentNotice: () => i(C.L.UNKNOWN),
-                        subscriptionTier: D.Si.TIER_2
+                        subscriptionTier: m.Si.TIER_2
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
                     return (0, r.jsx)(T.Z, {
                         dismissCurrentNotice: () => i(C.L.UNKNOWN),
-                        subscriptionTier: D.Si.TIER_0
+                        subscriptionTier: m.Si.TIER_0
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
                     return (0, r.jsxs)(o.qXd, {
@@ -258,7 +258,7 @@ let b = (e) => {
                             }),
                             y.NW.format(y.t.pdYZys, {}),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, N.Z)(m.Kq.NOTICE),
+                                onClick: () => (0, N.Z)(D.Kq.NOTICE),
                                 noticeType: b,
                                 children: y.NW.string(y.t.LhlgY2)
                             })
@@ -274,7 +274,7 @@ let b = (e) => {
                             }),
                             y.NW.format(y.t.zT1hgo, { date: (0, I.IE)(M) }),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, N.Z)(m.Kq.NOTICE),
+                                onClick: () => (0, N.Z)(D.Kq.NOTICE),
                                 noticeType: b,
                                 children: y.NW.string(y.t.LhlgY2)
                             })
@@ -292,7 +292,7 @@ let b = (e) => {
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     (0, _.Z)({
-                                        subscriptionTier: D.Si.TIER_2,
+                                        subscriptionTier: m.Si.TIER_2,
                                         analyticsLocations: [u.Z.CHECKOUT_RECOVERY_NAGBAR],
                                         analyticsLocation: g.Sbl.CHECKOUT_RECOVERY_NAGBAR,
                                         onClose: () => i(C.L.UNKNOWN)

@@ -7,13 +7,13 @@ var r = n(780384),
     o = n(540059),
     s = n(176412),
     c = n(146173),
-    u = n(983008),
-    d = n(478408);
+    d = n(983008),
+    u = n(478408);
 function p(e) {
     let { searchQuery: t, textContent: n, type: p } = e,
         m = (0, o.Q3)('AppLauncherEmptyState'),
         f = (0, a.ZP)(),
-        h = (0, r.ap)(f) ? d : u;
+        h = (0, r.ap)(f) ? u : d;
     return (
         (0, s.Bm)(p, t),
         (0, i.jsxs)('div', {

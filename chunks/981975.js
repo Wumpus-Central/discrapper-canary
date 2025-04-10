@@ -82,8 +82,8 @@ function P(e) {
 function w(e) {
     let { guild: t, role: n, locked: s, setSelectedSection: l, integrations: o } = e,
         { headerHeight: g, headerRef: w } = (0, x.Z)(0),
-        { scrolledToTop: R, handleScroll: D } = (0, N.V)(),
-        Z = (0, c.e7)(
+        { scrolledToTop: R, handleScroll: Z } = (0, N.V)(),
+        D = (0, c.e7)(
             [f.Z],
             () => {
                 var e;
@@ -95,12 +95,12 @@ function w(e) {
             var e;
             return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
-        A = k.length > 1 ? m.O1.OR : m.O1.AND,
-        W = i.useMemo(() => (A === m.O1.OR ? k.flat() : null != k && k.length > 0 ? k[0] : []), [A, k]),
-        L = i.useMemo(() => new Set(W.map((e) => e.connectionType)), [W]);
+        W = k.length > 1 ? m.O1.OR : m.O1.AND,
+        A = i.useMemo(() => (W === m.O1.OR ? k.flat() : null != k && k.length > 0 ? k[0] : []), [W, k]),
+        L = i.useMemo(() => new Set(A.map((e) => e.connectionType)), [A]);
     function M(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            r = [...W];
+            r = [...A];
         r.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -108,7 +108,7 @@ function w(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, h.d_)(n.id, T(r, A));
+            (0, h.d_)(n.id, T(r, W));
     }
     function G() {
         u.Z.dispatch({
@@ -120,15 +120,15 @@ function w(e) {
         });
     }
     let U = null;
-    if (0 === W.length)
+    if (0 === A.length)
         U = (0, r.jsx)(P, {
             handleAddVerificationClicked: G,
             locked: s
         });
-    else if (W.length > 0) {
+    else if (A.length > 0) {
         var B;
         let e = null;
-        W.length < 10 &&
+        A.length < 10 &&
             (e = (0, r.jsx)(d.zxk, {
                 className: a()(C.addVerificationButton, C.addVerificationButtonAppend),
                 size: d.zxk.Sizes.LARGE,
@@ -201,7 +201,7 @@ function w(e) {
                                 'aria-labelledby': S
                             })
                         });
-                    })(s, n.id, A, W, (e, t) => (0, h.d_)(n.id, T(e, t))),
+                    })(s, n.id, W, A, (e, t) => (0, h.d_)(n.id, T(e, t))),
                     (function (e, t, n, i, s) {
                         function a(n, r) {
                             let i = [];
@@ -281,7 +281,7 @@ function w(e) {
                                 )
                             )
                         });
-                    })(W, (e) => (0, h.d_)(n.id, T(e, A)), s, n.id, o),
+                    })(A, (e) => (0, h.d_)(n.id, T(e, W)), s, n.id, o),
                     e
                 ]
             }));
@@ -289,7 +289,7 @@ function w(e) {
     return (0, r.jsx)(d.yWw, {
         className: C.scroller,
         style: { scrollPaddingTop: g },
-        onScroll: D,
+        onScroll: Z,
         children: (0, r.jsxs)('div', {
             className: I.contentWidth,
             children: [
@@ -303,7 +303,7 @@ function w(e) {
                         setSelectedSection: l
                     })
                 }),
-                (null != Z ? Z : 0) > 0
+                (null != D ? D : 0) > 0
                     ? (0, r.jsxs)('div', {
                           className: C.warningContainer,
                           children: [

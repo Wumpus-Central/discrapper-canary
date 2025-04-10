@@ -105,7 +105,7 @@ function R(e) {
                 } else (0, b.L)(N({ applicationId: C.id }, C));
         }, [L, C, x, w, n]),
         k = L ? S.NW.string(S.t['Cia+Aw']) : S.NW.string(S.t.NgXl3N);
-    if (null == C || !(0, d.E)(C)) return null;
+    if (null == C || !(0, d.Eb)(C)) return null;
     let { customInstallUrl: j } = C,
         U = null == j || E.Z.isDiscordUrl(j) ? a.qJs : a.Gr1,
         G = L ? void 0 : U;

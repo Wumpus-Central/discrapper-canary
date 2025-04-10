@@ -12,8 +12,8 @@ var r = n(200651),
     p = n(474936),
     f = n(231338),
     g = n(388032),
-    h = n(846165);
-let m = {
+    m = n(846165);
+let h = {
         dark: [
             {
                 box: '#FFF19E',
@@ -76,7 +76,7 @@ let m = {
         ]
     },
     _ = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: v, tooltipDelay: C, isGiftEasterEggEnabled: x, color: O = a.Ttl.BRAND } = e,
+        let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: C, tooltipDelay: v, isGiftEasterEggEnabled: x, color: O = a.Ttl.BRAND } = e,
             { analyticsLocations: j } = (0, i.ZP)(),
             y = l.useRef(null),
             k = (0, o.Z)(y),
@@ -85,7 +85,7 @@ let m = {
             ? null
             : (0, r.jsx)(a.ua7, {
                   text: g.NW.string(g.t['JCFN//']),
-                  delay: C,
+                  delay: v,
                   children: (e) => {
                       var l, o;
                       return (0, r.jsx)(
@@ -118,11 +118,11 @@ let m = {
                           (o = o =
                               {
                                   buttonRef: y,
-                                  className: h.giftButton,
+                                  className: m.giftButton,
                                   color: O,
                                   look: a.zxk.Looks.FILLED,
                                   size: a.PhG.ICON,
-                                  innerClassName: h.giftButtonInner,
+                                  innerClassName: m.giftButtonInner,
                                   'aria-label': g.NW.string(g.t.PEjaCw),
                                   onClick: (e) => {
                                       e.stopPropagation(),
@@ -137,9 +137,9 @@ let m = {
                                               returnRef: _,
                                               variantsReturnStyle: S,
                                               onClose:
-                                                  null != v
+                                                  null != C
                                                       ? (e) => {
-                                                            e && v();
+                                                            e && C();
                                                         }
                                                       : void 0
                                           });
@@ -149,7 +149,7 @@ let m = {
                                             hovered: k,
                                             isContentDismissed: !0,
                                             themeOverride: f.BR.DARK,
-                                            boxColors: m
+                                            boxColors: h
                                         })
                                       : (0, r.jsx)(a.OgN, {
                                             size: 'md',

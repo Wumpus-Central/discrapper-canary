@@ -1,6 +1,6 @@
 n.d(t, {
     Kp: () => O,
-    u9: () => C,
+    u9: () => v,
     xV: () => j
 }),
     n(413496),
@@ -22,16 +22,16 @@ var r = n(192379),
     p = n(410127),
     f = n(237031),
     g = n(956472),
-    h = n(981631);
-let m = ''.concat('#').concat('itemSkuId', '='),
-    _ = new RegExp('^'.concat(m, '(\\d+)$')),
-    v = [h.Z5c.COLLECTIBLES_SHOP, h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-    C = (e) => {
+    m = n(981631);
+let h = ''.concat('#').concat('itemSkuId', '='),
+    _ = new RegExp('^'.concat(h, '(\\d+)$')),
+    C = [m.Z5c.COLLECTIBLES_SHOP, m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    v = (e) => {
         let t = (0, l.TH)();
         r.useEffect(() => {
-            if (null != e && v.includes(t.pathname))
+            if (null != e && C.includes(t.pathname))
                 return () => {
-                    window.location.hash.startsWith(m) && window.location.replace('#');
+                    window.location.hash.startsWith(h) && window.location.replace('#');
                 };
         }, [e, t.pathname]);
     },
@@ -85,9 +85,9 @@ let m = ''.concat('#').concat('itemSkuId', '='),
             b = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
             f = r.useRef(null),
             g = (0, l.TH)(),
-            m = g.pathname === h.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : g.pathname === h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? s.Z.COLLECTIBLES_SHOP_FULLSCREEN : s.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: v } = (0, c.ZP)(m),
-            C = (0, p.Z)();
+            h = g.pathname === m.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : g.pathname === m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? s.Z.COLLECTIBLES_SHOP_FULLSCREEN : s.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: C } = (0, c.ZP)(h),
+            v = (0, p.Z)();
         (0, o.ZP)(() => {
             if (n) return;
             let e = _.exec(g.hash);
@@ -102,11 +102,11 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                     n = setTimeout(() => {
                         let n = x({
                             productSkuId: e,
-                            analyticsLocations: v,
-                            analyticsSource: m,
+                            analyticsLocations: C,
+                            analyticsSource: h,
                             initialItemCardRef: u,
                             reducedMotion: b,
-                            tab: C
+                            tab: v
                         });
                         t.push(n);
                     }, 250);
@@ -117,7 +117,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [n, v, m, t, O, u, b, C]);
+        }, [n, C, h, t, O, u, b, v]);
     },
     j = (e) => {
         let t = r.useRef({}),

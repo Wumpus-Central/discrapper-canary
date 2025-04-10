@@ -23,26 +23,26 @@ var l = s(200651),
     g = s(906732),
     L = s(170046),
     v = s(333867),
-    E = s(197115),
+    F = s(197115),
     Z = s(876917),
-    F = s(210887),
-    N = s(751648),
-    b = s(822857),
+    N = s(210887),
+    b = s(751648),
+    E = s(822857),
     w = s(82856),
-    O = s(960919),
-    y = s(275388),
-    k = s(74538),
+    y = s(960919),
+    k = s(275388),
+    O = s(74538),
     P = s(335131),
     _ = s(1870),
-    S = s(429368),
-    R = s(884697),
+    R = s(429368),
+    S = s(884697),
     M = s(664018),
     I = s(819570),
-    T = s(228624),
-    A = s(635552),
+    A = s(228624),
+    T = s(635552),
     H = s(290175),
-    B = s(905357),
-    W = s(724994),
+    W = s(905357),
+    B = s(724994),
     D = s(297651),
     V = s(390698),
     U = s(813083),
@@ -272,49 +272,49 @@ let eh = (e) => {
     eL =
         12633 == s.j
             ? function (e) {
-                  let { product: t, user: s, category: r, onMount: n, isGiftEasterEggEnabled: Z, isInFeedView: Q, tab: J } = e,
-                      { analyticsLocations: en } = (0, g.ZP)([...(Q ? [m.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), m.Z.COLLECTIBLES_SHOP_CARD]),
-                      ep = i.useRef(null),
-                      em = (0, f.Z)(ep),
-                      [eL, ev] = i.useState(!1),
-                      eE = em || eL,
-                      eZ = (0, el.f)(t),
-                      { previewingVariantIndex: eF } = eZ,
-                      eN = (0, B.T)(t),
+                  let { product: t, user: s, category: r, onMount: n, isGiftEasterEggEnabled: Z, tab: Q } = e,
+                      { analyticsLocations: J } = (0, g.ZP)([m.Z.COLLECTIBLES_SHOP_CARD]),
+                      en = i.useRef(null),
+                      ep = (0, f.Z)(en),
+                      [em, eL] = i.useState(!1),
+                      ev = ep || em,
+                      eF = (0, el.f)(t),
+                      { previewingVariantIndex: eZ } = eF,
+                      eN = (0, W.T)(t),
                       eb = (0, p.e7)([j.Z], () => j.Z.useReducedMotion),
-                      ew = k.ZP.canUseCollectibles(s),
-                      eO = i.useMemo(() => (0, R.BH)(t, ew), [t, ew]),
-                      ey = (0, R.G1)(t),
-                      ek = (0, R.rN)(t),
-                      [eP, e_, eS] = (0, p.Wu)([_.Z], () => [_.Z.isClaiming === t.skuId, null != _.Z.isClaiming && _.Z.isClaiming !== t.skuId, _.Z.purchases]),
-                      eR = (0, es.o)(t, eS, eF),
-                      eM = (0, p.e7)([F.Z], () => (0, x.wjy)(F.Z.theme)),
-                      eI = (0, R.Yq)(t.skuId),
-                      eT = r.skuId === c.T.ANIME_V3 && (0, R.WW)(t.skuId),
+                      eE = O.ZP.canUseCollectibles(s),
+                      ew = i.useMemo(() => (0, S.BH)(t, eE), [t, eE]),
+                      ey = (0, S.G1)(t),
+                      ek = (0, S.rN)(t),
+                      [eO, eP, e_] = (0, p.Wu)([_.Z], () => [_.Z.isClaiming === t.skuId, null != _.Z.isClaiming && _.Z.isClaiming !== t.skuId, _.Z.purchases]),
+                      eR = (0, es.o)(t, e_, eZ),
+                      eS = (0, p.e7)([N.Z], () => (0, x.wjy)(N.Z.theme)),
+                      eM = (0, S.Yq)(t.skuId),
+                      eI = r.skuId === c.T.ANIME_V3 && (0, S.WW)(t.skuId),
                       { hoverVariant: eA } = (0, M.E)('CollectiblesShopTallCard'),
-                      eH = (0, T.hv)('CollectiblesShopTallCard'),
-                      eB = (0, S.o)(t, eS),
-                      eW = (0, et.W)(t, eB),
-                      eD = (0, R.XM)(eW, ew, !1),
-                      { isPurchased: eV, isPartiallyOwnedBundle: eU } = (0, W.L)(eW),
-                      { isDisabled: eG } = (0, H.G)(eW.skuId),
-                      ez = (0, R.ne)({
+                      eT = (0, A.hv)('CollectiblesShopTallCard'),
+                      eH = (0, R.o)(t, e_),
+                      eW = (0, et.W)(t, eH),
+                      eB = (0, S.XM)(eW, eE, !1),
+                      { isPurchased: eD, isPartiallyOwnedBundle: eV } = (0, B.L)(eW),
+                      { isDisabled: eU } = (0, H.G)(eW.skuId),
+                      eG = (0, S.ne)({
                           product: eW,
-                          isPartiallyOwnedBundle: eU,
-                          isPurchased: eV
+                          isPartiallyOwnedBundle: eV,
+                          isPurchased: eD
                       }),
-                      eq = null !== eF ? eF : eB,
-                      [eK, eY] = i.useState(!1),
-                      { enabled: eX } = (0, b.W)({ location: 'collectibles_shop_tall_card' }),
-                      eQ = (0, L.N)('CollectiblesShopTallCard'),
-                      { handleCardVisibilityChange: e$ } = (0, D.E)(eW.skuId, Q ? 'home' : 'full'),
-                      eJ = (0, I.E)('shop_tall_card');
+                      ez = null !== eZ ? eZ : eH,
+                      [eq, eK] = i.useState(!1),
+                      { enabled: eY } = (0, E.W)({ location: 'collectibles_shop_tall_card' }),
+                      eX = (0, L.N)('CollectiblesShopTallCard'),
+                      { handleCardVisibilityChange: eQ } = (0, D.E)(eW.skuId, Q === eo.AW.CATALOG ? 'full' : Q),
+                      e$ = (0, I.E)('shop_tall_card');
                   i.useEffect(() => {
-                      let { current: e } = ep;
+                      let { current: e } = en;
                       if (null == e) return;
-                      let t = () => ev(!0),
+                      let t = () => eL(!0),
                           s = (t) => {
-                              e.contains(t.relatedTarget) || ev(!1);
+                              e.contains(t.relatedTarget) || eL(!1);
                           };
                       return (
                           e.addEventListener('focusin', t),
@@ -326,98 +326,98 @@ let eh = (e) => {
                       );
                   }, []),
                       i.useEffect(() => {
-                          null == n || n(ep);
+                          null == n || n(en);
                       }, [n]);
-                  let e1 = i.useRef(null),
-                      { handleUseNow: e2, isApplying: e5 } = (0, A.W)({ product: eW }),
+                  let eJ = i.useRef(null),
+                      { handleUseNow: e1, isApplying: e2 } = (0, T.W)({ product: eW }),
                       {
-                          displayPrices: e8,
-                          checkoutEligiblePrices: e9,
-                          isOrbExclusive: e0,
-                          shouldCheckoutWithOrbs: e7,
-                          hasSufficientOrbs: e3
+                          displayPrices: e5,
+                          checkoutEligiblePrices: e8,
+                          isOrbExclusive: e9,
+                          shouldCheckoutWithOrbs: e0,
+                          hasSufficientOrbs: e7
                       } = (0, ei.Ip)({
                           product: t,
-                          isPremiumUser: ew,
-                          tab: J
+                          isPremiumUser: eE,
+                          tab: Q
                       }),
-                      e6 = (e) => (s) => {
-                          (e1.current = s.currentTarget),
+                      e3 = (e) => (s) => {
+                          (eJ.current = s.currentTarget),
                               (0, q.T)({
                                   product: t,
                                   category: r,
-                                  shouldCheckoutWithOrbs: e7,
-                                  analyticsLocations: en,
+                                  shouldCheckoutWithOrbs: e0,
+                                  analyticsLocations: J,
                                   analyticsSource: e,
-                                  returnRef: e1,
-                                  tab: J
+                                  returnRef: eJ,
+                                  tab: Q
                               });
                       },
-                      e4 = e6(m.Z.COLLECTIBLES_SHOP_CARD),
-                      te = e6(m.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-                      tt = () =>
+                      e6 = e3(m.Z.COLLECTIBLES_SHOP_CARD),
+                      e4 = e3(m.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+                      te = () =>
                           (0, l.jsx)('div', {
                               className: ed.hoverUpsellContainer,
-                              children: (0, l.jsx)(E.Z, {
+                              children: (0, l.jsx)(F.Z, {
                                   fullWidth: !0,
                                   className: ed.__invalid_premiumSubscribeButton,
-                                  disabled: e_,
+                                  disabled: eP,
                                   onClick: (e) => e.stopPropagation(),
                                   buttonText: eC.NW.string(eC.t.sEAnVF),
                                   subscriptionTier: ea.Si.TIER_2
                               })
                           });
-                  if (0 === e8.length) return null;
-                  let ts = () =>
-                          ey || d.tq || e0 || t.type === u.Z.NAMEPLATE || !ez || J === eo.AW.ORBS
+                  if (0 === e5.length) return null;
+                  let tt = () =>
+                          ey || d.tq || e9 || t.type === u.Z.NAMEPLATE || !eG || Q === eo.AW.ORBS
                               ? null
                               : ek
-                                ? (0, l.jsx)(ex, { onClick: te })
+                                ? (0, l.jsx)(ex, { onClick: e4 })
                                 : (0, l.jsx)(G.Z, {
                                       product: t,
-                                      selectedVariantIndex: eB,
-                                      returnRef: ep,
+                                      selectedVariantIndex: eH,
+                                      returnRef: en,
                                       isGiftEasterEggEnabled: Z,
                                       tooltipDelay: 250
                                   }),
-                      tl = () =>
+                      ts = () =>
                           (0, l.jsx)(eh, {
-                              onClick: te,
+                              onClick: e4,
                               children: eC.NW.string(eC.t.FdGl5O)
                           }),
-                      ti = () =>
+                      tl = () =>
                           (0, l.jsx)(eh, {
                               onClick: () => {
                                   (0, v.Z)({
                                       skuId: (0, ee.S)({
                                           product: t,
-                                          selectedVariantIndex: eB
+                                          selectedVariantIndex: eH
                                       }),
-                                      analyticsLocations: en,
-                                      returnRef: ep,
-                                      variantsReturnStyle: eH
+                                      analyticsLocations: J,
+                                      returnRef: en,
+                                      variantsReturnStyle: eT
                                   });
                               },
-                              children: eC.NW.formatToPlainString(eC.t['cNSL/v'], { price: eD })
+                              children: eC.NW.formatToPlainString(eC.t['cNSL/v'], { price: eB })
                           }),
-                      tr = () =>
+                      ti = () =>
                           (0, l.jsx)(eh, {
                               onClick: () => {
-                                  (0, y.q)({
+                                  (0, k.q)({
                                       skuId: (0, ee.S)({
                                           product: t,
-                                          selectedVariantIndex: eB
+                                          selectedVariantIndex: eH
                                       }),
                                       onCheckoutSuccess: (e) => {
                                           var s;
                                           let { entitlements: l } = e;
                                           (0, P.qg)({
-                                              variantsReturnStyle: eH,
+                                              variantsReturnStyle: eT,
                                               location: 'collectible_checkout_with_orb'
                                           }),
                                               (0, er.Z)({
                                                   product: t,
-                                                  analyticsLocations: en,
+                                                  analyticsLocations: J,
                                                   onCloseCallback: () => {
                                                       (0, w.vp)();
                                                   },
@@ -425,69 +425,69 @@ let eh = (e) => {
                                                   purchaseType: eo.o8.ORB
                                               });
                                       },
-                                      analyticsLocations: en
+                                      analyticsLocations: J
                                   }),
-                                      (0, N.S6)();
+                                      (0, b.S6)();
                               },
                               children: eC.NW.format(eC.t.kAgx5O, {
-                                  orbPrice: e9[0].amount,
-                                  orbIconHook: () => (0, l.jsx)(O.Z, {})
+                                  orbPrice: e8[0].amount,
+                                  orbIconHook: () => (0, l.jsx)(y.Z, {})
                               })
                           }),
-                      to = () => {
+                      tr = () => {
                           let e = async () => {
                               await (0, P.fK)(t.skuId),
                                   (0, er.Z)({
                                       product: t,
-                                      analyticsLocations: en,
+                                      analyticsLocations: J,
                                       purchaseType: eo.o8.PREMIUM_PURCHASE
                                   });
                           };
                           return (0, l.jsx)(eh, {
                               onClick: e,
-                              disabled: e_,
-                              submitting: eP,
+                              disabled: eP,
+                              submitting: eO,
                               submittingStartedLabel: eC.NW.string(eC.t['TYw+9v']),
                               submittingFinishedLabel: eC.NW.string(eC.t.Pg1UPz),
                               children: eC.NW.string(eC.t.zp6caG)
                           });
                       },
-                      tn = () =>
+                      to = () =>
                           (0, l.jsx)(eh, {
-                              onClick: e2,
-                              submitting: e5,
+                              onClick: e1,
+                              submitting: e2,
                               children: eC.NW.string(eC.t.MAS7uL)
                           }),
-                      ta = () =>
+                      tn = () =>
                           (0, l.jsx)(eh, {
-                              onClick: te,
+                              onClick: e4,
                               children: eC.NW.string(eC.t.GpnHfH)
                           }),
-                      tC = () => {
-                          if (ey && !ew && !ek) return tt();
-                          if (!ez || eG) return tl();
-                          if (eV) return tn();
-                          if (ey) return to();
-                          if (e7)
-                              if (e3) return tr();
-                              else return tl();
-                          return J === eo.AW.ORBS ? ta() : ti();
+                      ta = () => {
+                          if (ey && !eE && !ek) return te();
+                          if (!eG || eU) return ts();
+                          if (eD) return to();
+                          if (ey) return tr();
+                          if (e0)
+                              if (e7) return ti();
+                              else return ts();
+                          return Q === eo.AW.ORBS ? tn() : tl();
                       };
-                  return (0, R.x6)(t) && null != eO && eO.discountPercentage < 0
+                  return (0, S.x6)(t) && null != ew && ew.discountPercentage < 0
                       ? null
                       : (0, l.jsx)(h.$, {
-                            innerRef: ep,
-                            onChange: e$,
+                            innerRef: en,
+                            onChange: eQ,
                             threshold: 0,
                             children: (0, l.jsx)(x.tEY, {
                                 children: (0, l.jsxs)(x.kL8, {
-                                    className: o()(eM ? ed.shopCardDark : ed.shopCard, {
-                                        [ed.partiallyOwned]: eU && !eE,
+                                    className: o()(eS ? ed.shopCardDark : ed.shopCard, {
+                                        [ed.partiallyOwned]: eV && !ev,
                                         [ed.shopCardAnimation]: !eb && eA !== M.D.NO_MOVEMENT,
-                                        [eM ? ed.shopCardDarkHighlighted : ed.shopCardHighlighted]: eE
+                                        [eS ? ed.shopCardDarkHighlighted : ed.shopCardHighlighted]: ev
                                     }),
-                                    ref: ep,
-                                    onClick: e4,
+                                    ref: en,
+                                    onClick: e6,
                                     'aria-label': t.name,
                                     children: [
                                         ey &&
@@ -513,9 +513,9 @@ let eh = (e) => {
                                             children: (0, C.EQ)(t.type)
                                                 .with(u.Z.PROFILE_EFFECT, () =>
                                                     (0, l.jsx)(ef, {
-                                                        isHighlighted: eE,
+                                                        isHighlighted: ev,
                                                         profileEffectId: eR.id,
-                                                        isPurchased: eV
+                                                        isPurchased: eD
                                                     })
                                                 )
                                                 .with(
@@ -525,8 +525,8 @@ let eh = (e) => {
                                                         (0, l.jsx)(ej, {
                                                             item: eR,
                                                             user: s,
-                                                            isHighlighted: eE,
-                                                            isPurchased: eV
+                                                            isHighlighted: ev,
+                                                            isPurchased: eD
                                                         })
                                                     )
                                                 )
@@ -534,30 +534,30 @@ let eh = (e) => {
                                                     (0, l.jsx)(eg, {
                                                         user: s,
                                                         nameplate: eR,
-                                                        isHighlighted: eE,
-                                                        isPurchased: eV
+                                                        isHighlighted: ev,
+                                                        isPurchased: eD
                                                     })
                                                 )
                                                 .with(u.Z.BUNDLE, () =>
                                                     (0, l.jsx)($.d, {
                                                         product: t,
                                                         user: s,
-                                                        isPurchased: eV,
-                                                        isHighlighted: eE
+                                                        isPurchased: eD,
+                                                        isHighlighted: ev
                                                     })
                                                 )
                                                 .with(u.Z.VARIANTS_GROUP, () => {
                                                     if (null == t.variants || 0 === t.variants.length) return null;
-                                                    let e = t.variants[eq];
+                                                    let e = t.variants[ez];
                                                     return null == e
                                                         ? null
                                                         : (0, C.EQ)(e.type)
                                                               .with(u.Z.PROFILE_EFFECT, () => {
                                                                   let [t] = e.items;
                                                                   return (0, l.jsx)(ef, {
-                                                                      isHighlighted: eE,
+                                                                      isHighlighted: ev,
                                                                       profileEffectId: t.id,
-                                                                      isPurchased: eV && !eK
+                                                                      isPurchased: eD && !eq
                                                                   });
                                                               })
                                                               .with(u.Z.AVATAR_DECORATION, () => {
@@ -567,8 +567,8 @@ let eh = (e) => {
                                                                       (0, l.jsx)(ej, {
                                                                           item: t,
                                                                           user: s,
-                                                                          isHighlighted: eE,
-                                                                          isPurchased: eV
+                                                                          isHighlighted: ev,
+                                                                          isPurchased: eD
                                                                       })
                                                                   );
                                                               })
@@ -577,14 +577,14 @@ let eh = (e) => {
                                                 .with(u.Z.EXTERNAL_SKU, () =>
                                                     (0, l.jsx)(K.b, {
                                                         product: t,
-                                                        animationState: eE ? 'on' : 'off',
-                                                        className: eG || (eV && !eE) ? ed.externalProductDimmed : void 0
+                                                        animationState: ev ? 'on' : 'off',
+                                                        className: eU || (eD && !ev) ? ed.externalProductDimmed : void 0
                                                     })
                                                 )
                                                 .otherwise(() => null)
                                         }),
                                         (() => {
-                                            let e = eV ? x.sV5 : eG ? x.mBM : null;
+                                            let e = eD ? x.sV5 : eU ? x.mBM : null;
                                             return null == e
                                                 ? null
                                                 : (0, l.jsx)('div', {
@@ -594,12 +594,12 @@ let eh = (e) => {
                                                           color: 'currentColor',
                                                           width: 38,
                                                           height: 38,
-                                                          className: o()(ed.cardStateIcon, { [ed.checkmark]: eV })
+                                                          className: o()(ed.cardStateIcon, { [ed.checkmark]: eD })
                                                       })
                                                   });
                                         })(),
                                         (0, l.jsxs)('div', {
-                                            className: o()(ed.cardText, eM ? ed.darkCardBackground : ed.lightCardBackground, { [ed.variantsGroup]: t.type === u.Z.VARIANTS_GROUP }),
+                                            className: o()(ed.cardText, eS ? ed.darkCardBackground : ed.lightCardBackground, { [ed.variantsGroup]: t.type === u.Z.VARIANTS_GROUP }),
                                             children: [
                                                 (0, l.jsx)(x.Text, {
                                                     variant: 'text-lg/bold',
@@ -609,10 +609,10 @@ let eh = (e) => {
                                                 t.type === u.Z.VARIANTS_GROUP
                                                     ? (0, l.jsx)(X.P, {
                                                           variantGroupProduct: t,
-                                                          previewingVariantIndexProps: eZ,
-                                                          setIsHoveringOnSwitch: eY,
-                                                          purchases: eS,
-                                                          minimal: !eE,
+                                                          previewingVariantIndexProps: eF,
+                                                          setIsHoveringOnSwitch: eK,
+                                                          purchases: e_,
+                                                          minimal: !ev,
                                                           alternativeBackgroundColor: (null == eR ? void 0 : eR.type) === u.Z.PROFILE_EFFECT
                                                       })
                                                     : null,
@@ -621,17 +621,17 @@ let eh = (e) => {
                                                     children: [
                                                         (0, l.jsx)('div', {
                                                             className: ed.innerBlur,
-                                                            children: eG
+                                                            children: eU
                                                                 ? (0, l.jsx)(x.X6q, {
                                                                       variant: 'heading-md/semibold',
                                                                       color: 'header-muted',
                                                                       className: ed.priceTag,
                                                                       children: eC.NW.string(eC.t.wu4gyc)
                                                                   })
-                                                                : eV || eU
+                                                                : eD || eV
                                                                   ? (0, l.jsx)(V.U, {
                                                                         className: ed.priceTag,
-                                                                        isPartiallyPurchased: eU
+                                                                        isPartiallyPurchased: eV
                                                                     })
                                                                   : ey
                                                                     ? (0, l.jsx)(x.Text, {
@@ -639,26 +639,26 @@ let eh = (e) => {
                                                                           className: ed.priceTag,
                                                                           children: eC.NW.string(eC.t.rt69oq)
                                                                       })
-                                                                    : eX
+                                                                    : eY
                                                                       ? (0, l.jsx)(Y.e, {
-                                                                            displayPrices: e8,
-                                                                            isPremiumUser: ew,
-                                                                            discount: eO,
-                                                                            hasSufficientOrbs: e3
+                                                                            displayPrices: e5,
+                                                                            isPremiumUser: eE,
+                                                                            discount: ew,
+                                                                            hasSufficientOrbs: e7
                                                                         })
                                                                       : (0, l.jsx)(z.Z, {
                                                                             product: eW,
-                                                                            discount: eO,
-                                                                            isPremiumUser: ew,
+                                                                            discount: ew,
+                                                                            isPremiumUser: eE,
                                                                             className: ed.priceTag,
-                                                                            hideStrikethroughPrice: eJ
+                                                                            hideStrikethroughPrice: e$
                                                                         })
                                                         }),
                                                         (0, l.jsx)('div', {
                                                             className: ed.innerHover,
                                                             children: (0, l.jsxs)('div', {
                                                                 className: ed.buttonsContainer,
-                                                                children: [tC(), ts()]
+                                                                children: [ta(), tt()]
                                                             })
                                                         })
                                                     ]
@@ -670,20 +670,20 @@ let eh = (e) => {
                                             className: ed.limitedTimeBadge,
                                             display: 'card'
                                         }),
-                                        eU || eV || !eI
-                                            ? e0
+                                        eV || eD || !eM
+                                            ? e9
                                                 ? (0, l.jsx)(x.IGR, {
                                                       text: eC.NW.string(eC.t['KUYR+P']),
                                                       disableColor: !0,
                                                       className: ed.badge
                                                   })
-                                                : eT
+                                                : eI
                                                   ? (0, l.jsx)(x.IGR, {
                                                         text: eC.NW.string(eC.t.S6kE9v),
                                                         disableColor: !0,
                                                         className: ed.badge
                                                     })
-                                                  : r.skuId === c.T.NAMEPLATE && eQ
+                                                  : r.skuId === c.T.NAMEPLATE && eX
                                                     ? (0, l.jsx)(x.IGR, {
                                                           text: eC.NW.string(eC.t['soka7+']),
                                                           disableColor: !0,

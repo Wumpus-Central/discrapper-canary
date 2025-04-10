@@ -3,8 +3,8 @@ var n,
     i,
     a,
     o = r(442837),
-    s = r(570140),
-    l = r(823379),
+    l = r(570140),
+    s = r(823379),
     c = r(128449),
     d = r(388032);
 let u = null,
@@ -16,7 +16,7 @@ class O extends (n = o.ZP.Store) {
         return _;
     }
     getDiscoveryCategories() {
-        let e = c.L3.map((e) => p.find((t) => t.categoryId === e)).filter(l.lm);
+        let e = c.L3.map((e) => p.find((t) => t.categoryId === e)).filter(s.lm);
         return [
             {
                 categoryId: c.Hk,
@@ -26,7 +26,7 @@ class O extends (n = o.ZP.Store) {
         ];
     }
     getClanDiscoveryCategories() {
-        let e = c.L3.map((e) => p.find((t) => t.categoryId === e)).filter(l.lm);
+        let e = c.L3.map((e) => p.find((t) => t.categoryId === e)).filter(s.lm);
         return [
             {
                 categoryId: c.Hk,
@@ -54,7 +54,7 @@ class O extends (n = o.ZP.Store) {
               writable: !0
           })
         : (O[i] = a);
-let I = new O(s.Z, {
+let I = new O(l.Z, {
     GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
         let t,
             { categories: r, locale: n } = e,

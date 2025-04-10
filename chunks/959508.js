@@ -24,12 +24,12 @@ function y(e) {
     let { guild: n, prompt: s, disableAutofocus: d, promptIndex: x, dragIndex: y, includeCount: I, singleColumn: E, onPromptDragComplete: S, onPromptDragStart: T, onPromptDragReset: P } = e,
         { dropdownsAllowed: w } = (0, m.Ug)(n.id),
         R = (0, l.e7)([f.Z], () => f.Z.editedDefaultChannelIds),
-        D = w ? j.qm : j.M$,
+        Z = w ? j.qm : j.M$,
         {
-            drag: Z,
+            drag: D,
             dragSourcePosition: k,
-            drop: A,
-            setIsDraggable: W
+            drop: W,
+            setIsDraggable: A
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: y,
@@ -74,13 +74,13 @@ function y(e) {
                       [v.containerFocused]: U
                   }),
                   ref: (e) => {
-                      Z(A(e));
+                      D(W(e));
                   },
                   children: [
                       (0, r.jsx)('div', {
                           className: v.dragContainer,
-                          onMouseEnter: () => W(!0),
-                          onMouseLeave: () => W(!1),
+                          onMouseEnter: () => A(!0),
+                          onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(o.Vni, {
                               size: 'xs',
                               color: 'currentColor',
@@ -133,13 +133,13 @@ function y(e) {
                       [v.containerFocused]: U
                   }),
                   ref: (e) => {
-                      Z(A(e));
+                      D(W(e));
                   },
                   children: [
                       (0, r.jsx)('div', {
                           className: v.dragContainer,
-                          onMouseEnter: () => W(!0),
-                          onMouseLeave: () => W(!1),
+                          onMouseEnter: () => A(!0),
+                          onMouseLeave: () => A(!1),
                           children: (0, r.jsx)(o.Vni, {
                               size: 'xs',
                               color: 'currentColor',
@@ -173,11 +173,11 @@ function y(e) {
                           children: H
                               ? N.NW.formatToPlainString(N.t.AbvhZG, {
                                     count: s.options.length,
-                                    total: D
+                                    total: Z
                                 })
                               : N.NW.formatToPlainString(N.t.b7VxYW, {
                                     count: s.options.length,
-                                    total: D
+                                    total: Z
                                 })
                       }),
                       (0, r.jsx)(C, {

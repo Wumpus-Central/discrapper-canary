@@ -29,10 +29,10 @@ var r = n(200651),
     P = n(434404),
     w = n(92160),
     R = n(981631),
-    D = n(231338),
-    Z = n(388032),
+    Z = n(231338),
+    D = n(388032),
     k = n(983459);
-function A(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function A(e) {
     }
     return e;
 }
-function W(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -143,7 +143,7 @@ let L = 'WELCOME_CHANNEL',
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                W(A({}, t), {
+                                A(W({}, t), {
                                     guildId: l,
                                     welcomeChannel: o,
                                     onChannelReorder: h,
@@ -174,7 +174,7 @@ let L = 'WELCOME_CHANNEL',
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    (0, r.jsx)('span', { children: w ? G : Z.NW.string(Z.t.zFuCsL) })
+                                    (0, r.jsx)('span', { children: w ? G : D.NW.string(D.t.zFuCsL) })
                                 ]
                             })
                         ]
@@ -190,16 +190,16 @@ let L = 'WELCOME_CHANNEL',
                                     return (t) =>
                                         (0, r.jsx)(
                                             e,
-                                            W(A({}, t), {
+                                            A(W({}, t), {
                                                 welcomeChannel: o,
                                                 guildId: l,
                                                 onSave: f
                                             })
                                         );
                                 },
-                                { onCloseRequest: () => D.Vq }
+                                { onCloseRequest: () => Z.Vq }
                             ),
-                        children: Z.NW.string(Z.t.bt75u7)
+                        children: D.NW.string(D.t.bt75u7)
                     }),
                     _ &&
                         (0, r.jsx)(C.Z, {
@@ -254,13 +254,13 @@ let L = 'WELCOME_CHANNEL',
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    W(A({}, n), {
+                                    A(W({}, n), {
                                         guildId: t.id,
                                         onSave: B
                                     })
                                 );
                         },
-                        { onCloseRequest: () => D.Vq }
+                        { onCloseRequest: () => Z.Vq }
                     ),
                 () => {
                     H.current = !0;
@@ -296,7 +296,7 @@ let L = 'WELCOME_CHANNEL',
         return null == t
             ? null
             : (0, r.jsxs)(m.hjN, {
-                  title: Z.NW.string(Z.t['2rkmDg']),
+                  title: D.NW.string(D.t['2rkmDg']),
                   tag: m.RB0.H1,
                   children: [
                       (0, r.jsx)('div', {
@@ -305,7 +305,7 @@ let L = 'WELCOME_CHANNEL',
                               variant: 'text-md/normal',
                               children: [
                                   (0, r.jsx)(E.Z, { className: k.noticeIcon }),
-                                  Z.NW.format(Z.t.oj2vi4, {
+                                  D.NW.format(D.t.oj2vi4, {
                                       onboardingLink: (e) =>
                                           (0, r.jsx)(_.Z, {
                                               onClick: V,
@@ -317,7 +317,7 @@ let L = 'WELCOME_CHANNEL',
                       }),
                       (0, r.jsx)(m.Text, {
                           variant: 'text-sm/normal',
-                          children: Z.NW.string(Z.t['w2d74+'])
+                          children: D.NW.string(D.t['w2d74+'])
                       }),
                       (0, r.jsx)(w.Z, {
                           enabled: T,
@@ -331,7 +331,7 @@ let L = 'WELCOME_CHANNEL',
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
-                                                        W(A({}, n), {
+                                                        A(W({}, n), {
                                                             guildId: t.id,
                                                             isPreview: !0
                                                         })
@@ -345,8 +345,8 @@ let L = 'WELCOME_CHANNEL',
                                     }
                                   : void 0,
                           animateStatus: x,
-                          firstLine: T ? Z.NW.string(Z.t.JbB7Qk) : Z.NW.string(Z.t['/bd0Qk']),
-                          secondLine: T ? Z.NW.string(Z.t['TA1g7+']) : Z.NW.string(Z.t.nc6r1N)
+                          firstLine: T ? D.NW.string(D.t.JbB7Qk) : D.NW.string(D.t['/bd0Qk']),
+                          secondLine: T ? D.NW.string(D.t['TA1g7+']) : D.NW.string(D.t.nc6r1N)
                       }),
                       (0, r.jsxs)('div', {
                           className: k.previewContainer,
@@ -364,7 +364,7 @@ let L = 'WELCOME_CHANNEL',
                                       (0, r.jsx)(m.X6q, {
                                           className: k.welcomeTitle,
                                           variant: 'heading-xl/semibold',
-                                          children: Z.NW.format(Z.t['0aydCA'], {
+                                          children: D.NW.format(D.t['0aydCA'], {
                                               guildName: t.name,
                                               guildNameHook: (e, n) =>
                                                   (0, r.jsxs)(
@@ -387,7 +387,7 @@ let L = 'WELCOME_CHANNEL',
                                           className: k.descriptionWrapper,
                                           children: (0, r.jsx)(m.Kx8, {
                                               className: k.descriptionInput,
-                                              placeholder: Z.NW.string(Z.t.qzZHaW),
+                                              placeholder: D.NW.string(D.t.qzZHaW),
                                               onChange: (e) => {
                                                   (0, y.VP)({ description: e });
                                               },
@@ -408,11 +408,11 @@ let L = 'WELCOME_CHANNEL',
                               (0, r.jsxs)('div', {
                                   className: k.welcomeChannels,
                                   children: [
-                                      (0, r.jsx)(m.vwX, { children: Z.NW.string(Z.t.euJXzc) }),
+                                      (0, r.jsx)(m.vwX, { children: D.NW.string(D.t.euJXzc) }),
                                       (0, r.jsx)(m.Text, {
                                           variant: 'text-sm/normal',
                                           className: k.addChannelSubtext,
-                                          children: Z.NW.string(Z.t.VOnnn5)
+                                          children: D.NW.string(D.t.VOnnn5)
                                       }),
                                       null == I
                                           ? void 0
@@ -439,18 +439,18 @@ let L = 'WELCOME_CHANNEL',
                                                           return (n) =>
                                                               (0, r.jsx)(
                                                                   e,
-                                                                  W(A({}, n), {
+                                                                  A(W({}, n), {
                                                                       guildId: t.id,
                                                                       onSave: B
                                                                   })
                                                               );
                                                       },
-                                                      { onCloseRequest: () => D.Vq }
+                                                      { onCloseRequest: () => Z.Vq }
                                                   ),
                                               className: k.addChannelButton,
                                               disabled: !0,
                                               color: m.zxk.Colors.PRIMARY,
-                                              children: Z.NW.string(Z.t.U1BDe3)
+                                              children: D.NW.string(D.t.U1BDe3)
                                           })
                                   ]
                               })

@@ -6,18 +6,18 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(367907),
-    u = n(895924),
-    d = n(970321),
+    d = n(895924),
+    u = n(970321),
     p = n(311819),
     m = n(433534),
     f = n(299206),
     h = n(726721),
     b = n(726521),
-    C = n(973616),
-    x = n(914010),
+    x = n(973616),
+    C = n(914010),
     _ = n(594174),
-    y = n(626135),
-    v = n(572004),
+    v = n(626135),
+    y = n(572004),
     N = n(630388),
     g = n(135431),
     j = n(541099),
@@ -76,24 +76,24 @@ function w(e) {
         Z = r.useRef(null),
         M = (0, o.e7)([j.Z], () => j.Z.entrypoint()),
         W = (0, P.L1)(l),
-        D = (0, m.E)(W),
-        B = (0, d.R)(l.id),
-        U = (0, o.e7)(
-            [x.Z],
+        D = (0, m.Eb)(W),
+        U = (0, u.R)(l.id),
+        B = (0, o.e7)(
+            [C.Z],
             () => {
                 var e;
-                return null != (e = x.Z.getGuildId()) ? e : void 0;
+                return null != (e = C.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
         H = {
-            location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
+            location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: l.id,
             section_name: k,
             source: j.Z.lastShownEntrypoint()
         },
         V = _.default.getCurrentUser(),
-        F = h.Z.useExperiment({ location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
+        F = h.Z.useExperiment({ location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
         z = (0, f.Z)({
             id: l.id,
             label: O.NW.string(O.t['+NP/b2'])
@@ -112,8 +112,8 @@ function w(e) {
                               referrerId: null == V ? void 0 : V.id
                           })
                         : (0, p.J)(T({ id: l.id }, W));
-                    (0, v.JG)(e),
-                        y.default.track(I.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                    (0, y.JG)(e),
+                        v.default.track(I.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
                         }),
@@ -139,7 +139,7 @@ function w(e) {
                         children: [
                             (0, i.jsxs)(s.kSQ, {
                                 children: [
-                                    B &&
+                                    U &&
                                         (0, i.jsx)(s.sNh, {
                                             id: 'open-storefront',
                                             label: O.NW.string(O.t.kRvlKC),
@@ -151,7 +151,7 @@ function w(e) {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
                                                             appId: l.id,
-                                                            guildId: U
+                                                            guildId: B
                                                         });
                                                 });
                                             }
@@ -174,7 +174,7 @@ function w(e) {
                                               }
                                           })
                                         : null,
-                                    F && l instanceof C.ZP
+                                    F && l instanceof x.ZP
                                         ? (0, i.jsx)(s.sNh, {
                                               id: 'report-app',
                                               color: 'danger',

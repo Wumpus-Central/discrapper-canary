@@ -10,7 +10,7 @@ function o(e) {
             var e, i;
             return null != (i = null == (e = n.find((e) => e.section.id === t)) ? void 0 : e.data) ? i : [];
         }, [n, t]),
-        { popularSortedCommands: u, canSort: d } = (function (e) {
+        { popularSortedCommands: d, canSort: u } = (function (e) {
             let { alphabeticalSortedCommands: t } = e;
             return i.useMemo(() => {
                 if (t.length <= 1)
@@ -55,12 +55,12 @@ function o(e) {
         r.i6(t, { dontRefetchMs: l.Z.Millis.DAY });
     }, [t]),
         i.useLayoutEffect(() => {
-            d && s(a.bS.POPULAR);
-        }, [d]);
+            u && s(a.bS.POPULAR);
+        }, [u]);
     let p = c;
     switch (o) {
         case a.bS.POPULAR:
-            p = u;
+            p = d;
             break;
         case a.bS.ALPHABETICAL:
             p = c;
@@ -69,6 +69,6 @@ function o(e) {
         sortOrder: o,
         setSortOrder: s,
         commands: p,
-        canSort: d
+        canSort: u
     };
 }

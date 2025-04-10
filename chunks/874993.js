@@ -28,28 +28,28 @@ function O(e) {
         P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : O) ? n : v.lds,
         w = null != I,
         [R] = (0, g.RD)(P),
-        { rulesByTriggerType: D } = (0, g.pH)(P),
-        Z = {
+        { rulesByTriggerType: Z } = (0, g.pH)(P),
+        D = {
             [p.vh.MEMBERS]: _.NW.string(_.t.sx4E5u),
             [p.vh.CONTENT]: _.NW.string(_.t.fphZb2)
         },
         k = i.useMemo(
             () =>
-                Object.values(null != D ? D : {})
+                Object.values(null != Z ? Z : {})
                     .flat()
                     .filter(d.lm),
-            [D]
+            [Z]
         ),
-        A = {
+        W = {
             isInEditMode: w,
             setEditingRule: E
         },
-        W = i.useRef(A);
+        A = i.useRef(W);
     i.useEffect(() => {
-        W.current = A;
+        A.current = W;
     }),
         i.useEffect(() => {
-            let { isInEditMode: e, setEditingRule: t } = W.current;
+            let { isInEditMode: e, setEditingRule: t } = A.current;
             e && t(null);
         }, [P]);
     let L = i.useCallback(
@@ -89,7 +89,7 @@ function O(e) {
                         {
                             guildId: P,
                             triggerType: e,
-                            rules: null != (t = D[e]) ? t : [],
+                            rules: null != (t = Z[e]) ? t : [],
                             initWithEdit: T === v.KsC.AUTOMOD_MENTION_SPAM && e === N.fX.MENTION_SPAM
                         },
                         e
@@ -157,14 +157,14 @@ function O(e) {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);
                       let s =
-                          null != Z[t]
+                          null != D[t]
                               ? (0, r.jsx)(l.hjN, {
                                     tag: 'h3',
                                     className: y.categoryHeader,
                                     children: (0, r.jsx)(l.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
-                                        children: Z[t]
+                                        children: D[t]
                                     })
                                 })
                               : null;

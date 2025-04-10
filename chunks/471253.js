@@ -1,12 +1,12 @@
 n.d(t, {
     DT: () => P,
-    Ef: () => D,
-    HO: () => m,
+    Ef: () => m,
+    HO: () => D,
     NZ: () => y,
     Pq: () => g,
     Q1: () => p,
-    RK: () => A,
-    _0: () => f,
+    RK: () => f,
+    _0: () => A,
     hz: () => C,
     yi: () => R
 });
@@ -66,7 +66,7 @@ function p(e, t) {
         })
     );
 }
-function f(e, t) {
+function A(e, t) {
     let n = e.getGuildId();
     return (
         i()(null != n, 'This channel cannot be guildless.'),
@@ -81,7 +81,7 @@ function f(e, t) {
         })
     );
 }
-function A(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = null == e ? void 0 : e.getGuildId();
     i()(null != r, 'This channel cannot be guildless.');
@@ -165,13 +165,13 @@ function g(e, t, n) {
         );
     n ? ((c.allow = l.IH(c.allow, t)), (c.deny = l.Od(c.deny, t))) : ((c.allow = l.Od(c.allow, t)), (c.deny = l.IH(c.deny, t))), a.Z.updatePermissionOverwrite(e.id, c);
 }
-async function m(e, t, n, r) {
+async function D(e, t, n, r) {
     if ('' === t) return;
     u.Z.getVoiceChannelId() !== e.id && (0, _.TM)(e);
     let i = await (0, N.me)(e.id, t, n, r);
-    return A(e, !1, !0), i;
+    return f(e, !1, !0), i;
 }
-async function D(e, t, n) {
+async function m(e, t, n) {
     if ('' !== t) return await (0, N.Dk)(e.id, t, n);
 }
 async function y(e) {

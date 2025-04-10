@@ -14,11 +14,11 @@ var r = n(200651),
 let p = (e) => {
     let { guild: t, transitionState: n, onClose: o } = e,
         [p, f] = l.useState(7),
-        [h, g] = l.useState(null),
-        [j, x] = l.useState([]),
+        [h, j] = l.useState(null),
+        [g, x] = l.useState([]),
         O = l.useCallback(async () => {
-            g(null), g(await c.Z.updateEstimate(t.id, p, j));
-        }, [p, t.id, j]);
+            j(null), j(await c.Z.updateEstimate(t.id, p, g));
+        }, [p, t.id, g]);
     l.useEffect(() => {
         O();
     }, [O]);
@@ -82,7 +82,7 @@ let p = (e) => {
                             children: (0, r.jsx)(s.VcW, {
                                 maxVisibleItems: 10,
                                 multi: !0,
-                                value: j,
+                                value: g,
                                 onChange: (e) => x(e),
                                 options: y
                             })
@@ -92,7 +92,7 @@ let p = (e) => {
                         type: s.R94.Types.DESCRIPTION,
                         className: b.spacing,
                         children:
-                            j.length > 0
+                            g.length > 0
                                 ? m.NW.format(m.t['5WxHHh'], {
                                       members: h,
                                       days: p
@@ -108,7 +108,7 @@ let p = (e) => {
                 children: [
                     (0, r.jsx)(s.zxk, {
                         onClick: () => {
-                            c.Z.prune(t.id, p, j), o();
+                            c.Z.prune(t.id, p, g), o();
                         },
                         children: m.NW.string(m.t['2mIlKS'])
                     }),

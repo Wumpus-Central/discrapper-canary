@@ -29,11 +29,11 @@ var r = n(200651),
     P = n(203377),
     w = n(981631),
     R = n(141006),
-    D = n(388032),
-    Z = n(275302),
+    Z = n(388032),
+    D = n(275302),
     k = n(877248),
-    A = n(179517),
-    W = n(79829);
+    W = n(179517),
+    A = n(79829);
 let L = (0, f.Un)({
         createPromise: () => n.e('4848').then(n.bind(n, 797967)),
         webpackId: 797967
@@ -47,7 +47,7 @@ function G(e) {
             a(t.name);
         }, [t.name]),
         (0, r.jsx)(m.xJW, {
-            title: D.NW.string(D.t.dLbkBg),
+            title: Z.NW.string(Z.t.dLbkBg),
             required: !0,
             children: (0, r.jsx)(m.oil, {
                 type: 'text',
@@ -65,46 +65,46 @@ let U = [
     {
         id: 'solid',
         colors: { primary_color: w.p6O },
-        labelString: D.t['8Qyaho']
+        labelString: Z.t['8Qyaho']
     },
     {
         id: 'gradient',
         colors: R.Eg,
-        labelString: D.t.XpWmJy
+        labelString: Z.t.XpWmJy
     },
     {
         id: 'holographic',
         colors: R.SK,
-        labelString: D.t.QTKppa
+        labelString: Z.t.QTKppa
     }
 ];
 function B(e) {
     let { role: t, guildId: n, selectedStyle: i, onStyleSelect: s, disabled: l } = e,
-        o = z(D.NW.string(D.t.Mi9KbW)),
+        o = z(Z.NW.string(Z.t.Mi9KbW)),
         d = (0, g.ZP)(),
         p = (0, b.oC)(n, t),
         f = {
             dark: {
-                src: A,
+                src: W,
                 name: t.name
             },
             light: {
-                src: W,
+                src: A,
                 name: t.name
             }
         };
     return (0, r.jsx)(m.xJW, {
-        title: D.NW.string(D.t['9wVJRE']),
+        title: Z.NW.string(Z.t['9wVJRE']),
         children: (0, r.jsx)('div', {
-            className: Z.roleStyleContainer,
+            className: D.roleStyleContainer,
             children: U.map((e) => {
                 let { id: g, colors: h, labelString: b } = e;
                 return (0, r.jsxs)(
                     'button',
                     {
-                        className: a()(Z.roleStylePreviewContainer, {
-                            [Z.selected]: i === g,
-                            [Z.disabled]: l
+                        className: a()(D.roleStylePreviewContainer, {
+                            [D.selected]: i === g,
+                            [D.disabled]: l
                         }),
                         onClick: () =>
                             (function (e) {
@@ -138,7 +138,7 @@ function B(e) {
                         children: [
                             (0, r.jsx)(m.Rny, {
                                 children: (0, r.jsx)('div', {
-                                    className: Z.roleStyleMessageContainer,
+                                    className: D.roleStyleMessageContainer,
                                     children: (0, r.jsx)(N.Z, {
                                         author: {
                                             nick: o.author.username,
@@ -159,8 +159,8 @@ function B(e) {
                                 })
                             }),
                             (0, r.jsx)('div', {
-                                className: Z.roleStyleLabel,
-                                children: D.NW.string(b)
+                                className: D.roleStyleLabel,
+                                children: Z.NW.string(b)
                             })
                         ]
                     },
@@ -174,13 +174,13 @@ function F(e) {
     var t;
     let { role: n, disabled: i, currentStyle: s, hasEnhancedRoleColors: a } = e;
     return (0, r.jsxs)(m.xJW, {
-        className: Z.colorPicker,
-        title: D.NW.string(D.t['1F6FzM']),
+        className: D.colorPicker,
+        title: Z.NW.string(Z.t['1F6FzM']),
         required: !0,
         children: [
             (0, r.jsx)(m.R94, {
-                className: Z.colorDescription,
-                children: D.NW.string(D.t['9UCxlZ'])
+                className: D.colorDescription,
+                children: Z.NW.string(Z.t['9UCxlZ'])
             }),
             (0, r.jsx)(
                 L,
@@ -264,7 +264,7 @@ function z(e) {
         return (
             (i.author = new _.Z({
                 id: '313337',
-                username: D.NW.string(D.t.cqpybG),
+                username: Z.NW.string(Z.t.cqpybG),
                 discriminator: '0000',
                 bot: !1
             })),
@@ -276,7 +276,7 @@ function z(e) {
 function H(e) {
     var t, n, i, s;
     let { role: a, guildId: l } = e,
-        o = z(D.NW.string(D.t.Mi9KbW)),
+        o = z(Z.NW.string(Z.t.Mi9KbW)),
         c = {
             nick: o.author.username,
             colorStrings: {
@@ -287,18 +287,18 @@ function H(e) {
             colorString: null != (s = a.colorString) ? s : void 0
         },
         d = {
-            src: A,
+            src: W,
             name: a.name
         },
         g = {
-            src: W,
+            src: A,
             name: a.name
         },
         p = (0, b.oC)(l, a),
         f = (0, h.Q3)('RolePreview') ? [w.BRd.LIGHT, w.BRd.DARK, w.BRd.DARKER, w.BRd.MIDNIGHT] : [w.BRd.LIGHT, w.BRd.DARK];
     return (0, r.jsx)(m.Rny, {
         children: (0, r.jsx)('div', {
-            className: Z.previewContainer,
+            className: D.previewContainer,
             'aria-hidden': !0,
             'data-disable-adaptive-theme': !0,
             children: f.map((e) =>
@@ -310,7 +310,7 @@ function H(e) {
                             (0, r.jsx)('div', {
                                 className: t,
                                 children: (0, r.jsx)('div', {
-                                    className: Z.messageContainer,
+                                    className: D.messageContainer,
                                     children: (0, r.jsx)(N.Z, {
                                         author: c,
                                         message: o,
@@ -336,16 +336,16 @@ function V(e) {
                 value: t.hoist,
                 onChange: (e) => (0, O.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
-                children: D.NW.string(D.t.vceJPj)
+                children: Z.NW.string(Z.t.vceJPj)
             }),
-            (0, r.jsx)(m.$i$, { className: Z.divider }),
+            (0, r.jsx)(m.$i$, { className: D.divider }),
             (0, r.jsx)(m.j7V, {
                 disabled: n,
                 value: t.mentionable,
                 onChange: (e) => (0, O.we)(t.id, t.hoist, e),
-                note: D.NW.string(D.t.kRg5W1),
+                note: Z.NW.string(Z.t.kRg5W1),
                 hideBorder: !0,
-                children: D.NW.format(D.t.DTXoJS, {})
+                children: Z.NW.format(Z.t.DTXoJS, {})
             })
         ]
     });
@@ -367,7 +367,7 @@ function Y(e) {
         { headerHeight: x, headerRef: j } = (0, C.Z)(0),
         { scrolledToTop: N, handleScroll: _ } = (0, E.V)();
     return (0, r.jsx)(m.yWw, {
-        className: Z.scroller,
+        className: D.scroller,
         style: { scrollPaddingTop: x },
         onScroll: _,
         children: (0, r.jsxs)('div', {
@@ -388,10 +388,10 @@ function Y(e) {
                     disabled: h
                 }),
                 (0, r.jsx)('div', {
-                    className: Z.noticeContainer,
+                    className: D.noticeContainer,
                     children: (0, r.jsx)(T.Z, { role: n })
                 }),
-                (0, r.jsx)(m.$i$, { className: Z.divider }),
+                (0, r.jsx)(m.$i$, { className: D.divider }),
                 o &&
                     (0, r.jsx)(B, {
                         role: n,
@@ -416,7 +416,7 @@ function Y(e) {
                     role: n,
                     guildId: t.id
                 }),
-                (0, r.jsx)(m.$i$, { className: Z.divider }),
+                (0, r.jsx)(m.$i$, { className: D.divider }),
                 (0, r.jsx)(V, {
                     role: n,
                     disabled: h
@@ -424,7 +424,7 @@ function Y(e) {
                 b
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(m.$i$, { className: Z.divider }),
+                              (0, r.jsx)(m.$i$, { className: D.divider }),
                               (0, r.jsx)(S.L, {
                                   guildId: t.id,
                                   role: n

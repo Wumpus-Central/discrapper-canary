@@ -154,7 +154,7 @@ function k(e) {
                     }, [e, n, t]),
                     canInstall: a.useMemo(
                         () =>
-                            (0, f.E)({
+                            (0, f.Eb)({
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
                                 integrationTypesConfig: e.integration_types_config

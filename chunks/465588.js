@@ -5,16 +5,16 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    i = n(481060),
+    i = n.n(l),
+    a = n(481060),
     s = n(476770),
     o = n(592286),
     c = n(388032),
     d = n(641198);
 function u(e) {
     let { value: t, placeholder: n, onChange: l, disabled: s, className: c, autofocus: u } = e;
-    return (0, r.jsx)(i.Kx8, {
-        className: a()(d.paragraphFieldBody, c),
+    return (0, r.jsx)(a.Kx8, {
+        className: i()(d.paragraphFieldBody, c),
         maxLength: o.RS,
         value: null != t ? t : '',
         placeholder: null != n ? n : '',

@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => Z,
+    ZP: () => D,
     av: () => P,
     bL: () => C,
     kA: () => I
@@ -217,7 +217,7 @@ let O = (e, t, n, i) => {
             children: [v.NW.string(v.t.oypxx8), ' ', e]
         });
     },
-    D = [
+    Z = [
         {
             key: 'dropdown',
             cellClassName: _.toggleExpandColumn,
@@ -272,13 +272,13 @@ let O = (e, t, n, i) => {
             }
         }
     ],
-    Z = (e) => {
+    D = (e) => {
         let { payoutsByPeriod: t } = e,
             [n, s] = i.useState(new Set());
         return (0, r.jsx)('div', {
             className: _.tableContainer,
             children: (0, r.jsx)(u.Z, {
-                columns: D,
+                columns: Z,
                 data: t,
                 className: _.table,
                 rowClassName: _.row,

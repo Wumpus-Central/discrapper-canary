@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => d,
-    d: () => u
+    Z: () => u,
+    d: () => d
 });
 var i = n(200651),
     r = n(120356),
@@ -9,7 +9,7 @@ var i = n(200651),
     o = n(884338),
     s = n(388032),
     c = n(708348);
-function u(e, t) {
+function d(e, t) {
     var n;
     return e
         ? s.NW.format(s.t.hv7hEx, {
@@ -18,10 +18,10 @@ function u(e, t) {
           })
         : s.NW.format(s.t.IgnqIS, { friendCount: t.length });
 }
-function d(e) {
+function u(e) {
     let { friends: t, onClick: n, shortText: r, className: s } = e;
     if (0 === t.length) return null;
-    let d = u(r, t);
+    let u = d(r, t);
     return (0, i.jsxs)(a.P3F, {
         className: l()(c.friendsWhoPlay, s),
         onClick: n,
@@ -36,7 +36,7 @@ function d(e) {
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
                 lineClamp: 1,
-                children: d
+                children: u
             })
         ]
     });

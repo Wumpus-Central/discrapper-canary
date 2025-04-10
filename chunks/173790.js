@@ -6,29 +6,29 @@ var i = n(200651),
     o = n(481060),
     s = n(115130),
     c = n(361213),
-    u = n(778569),
-    d = n(213459),
+    d = n(778569),
+    u = n(213459),
     p = n(835473),
     m = n(424602),
     f = n(541099),
     h = n(827498),
     b = n(783097),
-    C = n(753972),
-    x = n(387658),
+    x = n(753972),
+    C = n(387658),
     _ = n(536650),
-    y = n(675993),
-    v = n(689079),
+    v = n(675993),
+    y = n(689079),
     N = n(388032),
     g = n(189102),
     j = n(413097);
 function P(e) {
     var t;
-    let { context: n, application: c, sectionName: u, showFriendsTab: P } = e,
+    let { context: n, application: c, sectionName: d, showFriendsTab: P } = e,
         A = 'channel' === n.type ? n.channel : void 0,
         I = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
-        O = null != (t = (0, p.q)(c.id === v.bi.BUILT_IN ? null : c.id)) ? t : c,
+        O = null != (t = (0, p.q)(c.id === y.bi.BUILT_IN ? null : c.id)) ? t : c,
         S = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(O.id)),
-        T = (0, b.ye)(O) ? E : y.Z,
+        T = (0, b.ye)(O) ? E : v.Z,
         L = m.PM.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
         w = r.useRef(null),
         [R, k] = r.useState(!1),
@@ -40,14 +40,14 @@ function P(e) {
                 }),
             [O]
         ),
-        W = (0, d.PL)(!0, !0),
-        D = (0, d.LD)(null == A ? void 0 : A.guild_id, !0),
-        B = r.useMemo(() => (0, d.If)(n, O.id), [W, D, n, O.id]),
-        U = !B.isGuildInstalled && !B.isUserInstalled;
+        W = (0, u.PL)(!0, !0),
+        D = (0, u.LD)(null == A ? void 0 : A.guild_id, !0),
+        U = r.useMemo(() => (0, u.If)(n, O.id), [W, D, n, O.id]),
+        B = !U.isGuildInstalled && !U.isUserInstalled;
     return (
         r.useEffect(() => {
-            U && d.ZP.queryInstallOnDemandApp(O.id, null == A ? void 0 : A.id);
-        }, [O.id, null == A ? void 0 : A.id, U]),
+            B && u.ZP.queryInstallOnDemandApp(O.id, null == A ? void 0 : A.id);
+        }, [O.id, null == A ? void 0 : A.id, B]),
         (0, i.jsxs)(o.u2D, {
             className: g.container,
             fade: !0,
@@ -61,10 +61,10 @@ function P(e) {
                     name: M,
                     iconURL: Z,
                     scrollerRef: w,
-                    sectionName: u
+                    sectionName: d
                 }),
                 null != Z &&
-                    (0, i.jsx)(C.Z, {
+                    (0, i.jsx)(x.Z, {
                         src: Z,
                         className: g.appIcon
                     }),
@@ -72,21 +72,21 @@ function P(e) {
                 (0, i.jsx)(T, {
                     context: n,
                     application: O,
-                    sectionName: u,
+                    sectionName: d,
                     hasCommands: R,
                     showFriendsTab: P
                 }),
                 I === h._b.TEXT
-                    ? (0, i.jsx)(x.Z, {
+                    ? (0, i.jsx)(C.Z, {
                           context: n,
                           application: O,
-                          sectionName: u,
-                          installOnDemand: U,
+                          sectionName: d,
+                          installOnDemand: B,
                           setHasCommands: k
                       })
                     : null,
                 L.enabled
-                    ? (0, i.jsx)(y.u, {
+                    ? (0, i.jsx)(v.u, {
                           context: n,
                           application: O,
                           hasCommands: R,
@@ -99,18 +99,18 @@ function P(e) {
 }
 function E(e) {
     let { context: t, application: n, sectionName: r, hasCommands: l, showFriendsTab: a } = e,
-        o = (0, u.Z)({
+        o = (0, d.Z)({
             applicationId: n.id,
             size: 2048,
             names: ['embedded_cover']
         }),
         s = (0, b.yJ)(n),
-        d = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(y.Z, {
+        u = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
+    return (0, i.jsx)(v.Z, {
         context: t,
         application: n,
         imageCoverUrl: o.url,
-        videoUrl: d,
+        videoUrl: u,
         sectionName: r,
         hasCommands: l,
         showFriendsTab: a

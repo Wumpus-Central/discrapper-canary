@@ -1,52 +1,52 @@
-r.d(t, { V: () => c }), r(388685);
-var s = r(192379),
-    a = r(259674),
-    i = r(981631),
-    n = r(388032);
-function c(e) {
-    let [t, r] = s.useState(!1),
-        [c, l] = s.useState(!1),
-        [o, d] = s.useState(!1);
+c.d(t, { V: () => s }), c(388685);
+var n = c(192379),
+    r = c(259674),
+    i = c(981631),
+    l = c(388032);
+function s(e) {
+    let [t, c] = n.useState(!1),
+        [s, o] = n.useState(!1),
+        [a, d] = n.useState(!1);
     return {
-        rules: s.useMemo(() => {
-            let s = n.NW.format(n.t.S2lVJS, {
+        rules: n.useMemo(() => {
+            let n = l.NW.format(l.t.S2lVJS, {
                 onCommunityGuidelinesClick: () =>
-                    (0, a.lW)({
+                    (0, r.lW)({
                         articleId: i.BhN.PUBLIC_GUILD_GUILDLINES,
                         guildId: e,
-                        modalStep: a.tK.AGREE_TO_RULES
+                        modalStep: r.tK.AGREE_TO_RULES
                     }),
                 onDiscoveryGuidelinesClick: () =>
-                    (0, a.lW)({
+                    (0, r.lW)({
                         articleId: i.BhN.SERVER_DISCOVERY_GUIDELINES,
                         guildId: e,
-                        modalStep: a.tK.AGREE_TO_RULES
+                        modalStep: r.tK.AGREE_TO_RULES
                     })
             });
             return [
                 {
                     key: 'healthy',
-                    title: n.NW.string(n.t.jIi9go),
-                    body: n.NW.string(n.t['4uUAXl']),
-                    onCheck: () => r(!t),
+                    title: l.NW.string(l.t.jIi9go),
+                    body: l.NW.string(l.t['4uUAXl']),
+                    onCheck: () => c(!t),
                     checked: t
                 },
                 {
                     key: 'nonNSFW',
-                    title: n.NW.string(n.t.iwnCh4),
-                    body: n.NW.string(n.t.UKFzER),
-                    onCheck: () => l(!c),
-                    checked: c
+                    title: l.NW.string(l.t.iwnCh4),
+                    body: l.NW.string(l.t.UKFzER),
+                    onCheck: () => o(!s),
+                    checked: s
                 },
                 {
                     key: 'guidelines',
-                    title: s,
-                    body: n.NW.string(n.t.u0Go2t),
-                    onCheck: () => d(!o),
-                    checked: o
+                    title: n,
+                    body: l.NW.string(l.t.u0Go2t),
+                    onCheck: () => d(!a),
+                    checked: a
                 }
             ];
-        }, [o, e, t, c]),
-        rulesAccepted: t && c && o
+        }, [a, e, t, s]),
+        rulesAccepted: t && s && a
     };
 }

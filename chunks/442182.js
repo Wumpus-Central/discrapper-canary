@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => A }), n(781311), n(642613), n(388685);
+n.d(t, { ZP: () => W }), n(781311), n(642613), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -193,7 +193,7 @@ function R(e) {
         })
     );
 }
-function D(e) {
+function Z(e) {
     let { handleAddClick: t, locked: n } = e;
     return (0, r.jsx)('div', {
         className: S.contentWidth,
@@ -227,7 +227,7 @@ function D(e) {
         })
     });
 }
-function Z(e) {
+function D(e) {
     let { guildId: t, roleId: n, query: s, headerHeight: a, locked: l, onScroll: c, roleMembers: d, handleAddClick: u } = e,
         { analyticsLocations: p } = (0, g.ZP)(m.Z.MEMBER_LIST),
         f = i.useMemo(() => s.trim().toLowerCase(), [s]);
@@ -247,7 +247,7 @@ function Z(e) {
                 let { row: i } = e;
                 if (0 === b.length)
                     return (0, r.jsx)(
-                        D,
+                        Z,
                         {
                             handleAddClick: u,
                             locked: l
@@ -293,7 +293,7 @@ function k(e) {
         ]
     });
 }
-function A(e) {
+function W(e) {
     let { guild: t, role: s, locked: c, setSelectedSection: d } = e,
         [u, m] = i.useState(''),
         { headerHeight: g, headerRef: p } = (0, v.Z)(0),
@@ -357,7 +357,7 @@ function A(e) {
                     })
                 })
             }),
-            (0, r.jsx)(Z, {
+            (0, r.jsx)(D, {
                 headerHeight: g + 8,
                 query: u,
                 guildId: t.id,

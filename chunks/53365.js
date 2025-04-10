@@ -1,6 +1,6 @@
 r.d(t, {
     $J: () => I,
-    He: () => l,
+    He: () => s,
     av: () => p,
     df: () => E,
     hY: () => O,
@@ -14,8 +14,8 @@ var n = r(544891),
     i = r(570140),
     a = r(728345),
     o = r(981631),
-    s = r(674563);
-async function l(e) {
+    l = r(674563);
+async function s(e) {
     await n.tn.post({
         url: o.ANM.CREATOR_MONETIZATION_ENABLE_REQUESTS(e),
         rejectWithError: !1
@@ -102,7 +102,7 @@ async function T(e) {
     return (
         await A(e),
         await a.ZP.getApplicationsForGuild(e, {
-            type: s.wW.GUILD_ROLE_SUBSCRIPTIONS,
+            type: l.wW.GUILD_ROLE_SUBSCRIPTIONS,
             includeTeam: !0
         })
     );

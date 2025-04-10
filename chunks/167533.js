@@ -3,8 +3,8 @@ var n,
     i = r(200651),
     a = r(192379),
     o = r(120356),
-    s = r.n(o),
-    l = r(481060),
+    l = r.n(o),
+    s = r(481060),
     c = r(981631),
     d = r(483849);
 function u(e, t, r) {
@@ -74,11 +74,11 @@ class O extends (n = a.PureComponent) {
         let { columns: e, data: t, sortDirection: r, sortKey: n, headerCellClassName: a, headerClassName: o, sortedHeaderCellClassName: u, stickyHeader: _ } = this.props,
             p = e.map((e) => {
                 let o = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
-                    _ = r === c.sHY.ASCENDING ? l.u04 : l.CJ0;
+                    _ = r === c.sHY.ASCENDING ? s.u04 : s.CJ0;
                 return (0, i.jsx)(
-                    l.P3F,
+                    s.P3F,
                     {
-                        className: s()(d.headerCell, a, e.headerCellClassName, e.cellClassName, n === e.key && u, { [d.clickable]: this.isSortable(e) }),
+                        className: l()(d.headerCell, a, e.headerCellClassName, e.cellClassName, n === e.key && u, { [d.clickable]: this.isSortable(e) }),
                         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
                         children: (0, i.jsxs)('div', {
                             className: d.headerCellContent,
@@ -89,12 +89,12 @@ class O extends (n = a.PureComponent) {
                 );
             });
         return (0, i.jsx)(E, {
-            className: s()(o, d.row, { [d.stickyHeader]: _ }),
+            className: l()(o, d.row, { [d.stickyHeader]: _ }),
             children: p
         });
     }
     renderBody() {
-        let { columns: e, data: t, sortData: r, sortKey: n, sortDirection: i, bodyCellClassName: o, rowClassName: l, cellProps: u, rowProps: E, rowComponent: O, cellComponent: I } = this.props,
+        let { columns: e, data: t, sortData: r, sortKey: n, sortDirection: i, bodyCellClassName: o, rowClassName: s, cellProps: u, rowProps: E, rowComponent: O, cellComponent: I } = this.props,
             A = t;
         if (r) {
             let r =
@@ -106,8 +106,8 @@ class O extends (n = a.PureComponent) {
                         : null,
                 a = [...t],
                 o = null != r && r.sort,
-                s = null != r && null != n && this.isSortable(r) ? a.sort('function' == typeof o ? (e, t) => o(e, t, i) : this.getDefaultSort(n)) : a;
-            A = null != r && i === c.sHY.DESCENDING ? s.reverse() : s;
+                l = null != r && null != n && this.isSortable(r) ? a.sort('function' == typeof o ? (e, t) => o(e, t, i) : this.getDefaultSort(n)) : a;
+            A = null != r && i === c.sHY.DESCENDING ? l.reverse() : l;
         }
         return A.map((t, r) => {
             let n = e.map((e) =>
@@ -116,7 +116,7 @@ class O extends (n = a.PureComponent) {
                     p(_({}, u), {
                         key: e.key,
                         item: t,
-                        className: s()(o, e.bodyCellClassName, e.cellClassName)
+                        className: l()(o, e.bodyCellClassName, e.cellClassName)
                     }),
                     null != e.render ? e.render(t, u, r) : t[e.key]
                 )
@@ -126,7 +126,7 @@ class O extends (n = a.PureComponent) {
                 p(_({}, E), {
                     key: t.key,
                     item: t,
-                    className: s()(d.row, l)
+                    className: l()(d.row, s)
                 }),
                 n
             );

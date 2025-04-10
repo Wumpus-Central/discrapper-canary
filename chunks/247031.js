@@ -56,7 +56,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function D(e, t) {
         e
     );
 }
-function Z(e) {
+function D(e) {
     let { transitionState: t, guild: n, user: s, ban: a, hideDiscriminator: l, onClose: o } = e,
         [d, m] = i.useState(!1),
         [f, h] = i.useState(null);
@@ -192,8 +192,8 @@ class k extends i.PureComponent {
                 let { guild: e, user: t, hideDiscriminator: n, ban: i } = this.props;
                 (0, c.h7j)((s) =>
                     (0, r.jsx)(
-                        Z,
-                        D(R({}, s), {
+                        D,
+                        Z(R({}, s), {
                             guild: e,
                             user: t,
                             ban: i,
@@ -205,12 +205,12 @@ class k extends i.PureComponent {
             w(this, 'handleContextMenu', (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('23835').then(n.bind(n, 768079));
-                    return (t) => (0, r.jsx)(e, D(R({}, t), { user: this.props.user }));
+                    return (t) => (0, r.jsx)(e, Z(R({}, t), { user: this.props.user }));
                 });
             });
     }
 }
-class A extends i.PureComponent {
+class W extends i.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
@@ -357,7 +357,7 @@ class A extends i.PureComponent {
             });
     }
 }
-let W = o.ZP.connectStores([y.Z, f.Z, h.Z], () => {
+let A = o.ZP.connectStores([y.Z, f.Z, h.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = y.Z.getProps();
     return {
         searchQuery: null != n ? n : '',
@@ -366,7 +366,7 @@ let W = o.ZP.connectStores([y.Z, f.Z, h.Z], () => {
         theme: f.Z.theme,
         streamerMode: h.Z.hidePersonalInformation
     };
-})(A);
+})(W);
 function L() {
     var e;
     let { guild: t } = (0, o.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
@@ -377,5 +377,5 @@ function L() {
             },
             { autoTrackExposure: !0 }
         );
-    return n ? (0, r.jsx)(I.Z, {}) : (0, r.jsx)(W, {});
+    return n ? (0, r.jsx)(I.Z, {}) : (0, r.jsx)(A, {});
 }

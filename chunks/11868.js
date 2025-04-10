@@ -20,14 +20,14 @@ var r = n(200651),
     T = n(15274),
     S = n(924301),
     p = n(725436),
-    f = n(978227),
-    A = n(236373),
+    A = n(978227),
+    f = n(236373),
     R = n(854698),
     P = n(405613),
     C = n(95291),
     g = n(742593),
-    m = n(217804),
-    D = n(139712),
+    D = n(217804),
+    m = n(139712),
     y = n(765305),
     h = n(388032),
     b = n(690606);
@@ -59,7 +59,7 @@ let U = (e, t) => (n) => {
                 },
                 [n]
             ),
-            N = (0, m.u)(l, o),
+            N = (0, D.u)(l, o),
             T = i.useCallback(
                 (e) => {
                     u && null != l && (e.stopPropagation(), (0, c.Bk)(l));
@@ -73,11 +73,11 @@ let U = (e, t) => (n) => {
                 [l]
             );
         if (null == _) return null;
-        let f = null == N ? void 0 : N.IconComponent,
-            A = (0, r.jsxs)(r.Fragment, {
+        let A = null == N ? void 0 : N.IconComponent,
+            f = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != f &&
-                        (0, r.jsx)(f, {
+                    null != A &&
+                        (0, r.jsx)(A, {
                             size: 'xs',
                             color: 'currentColor',
                             className: b.channelIcon
@@ -126,9 +126,9 @@ let U = (e, t) => (n) => {
                                 ? (0, r.jsx)(s.P3F, {
                                       className: b.channelLocationLink,
                                       onClick: S,
-                                      children: A
+                                      children: f
                                   })
-                                : A
+                                : f
                         })
                     ]
                 })
@@ -168,7 +168,7 @@ let U = (e, t) => (n) => {
                         color: s.zxk.Colors.PRIMARY,
                         look: _ ? s.zxk.Looks.OUTLINED : s.zxk.Looks.FILLED,
                         onClick: (e) => {
-                            e.stopPropagation(), (0, D.Z)(n, i, t);
+                            e.stopPropagation(), (0, m.Z)(n, i, t);
                         },
                         children: [
                             _
@@ -197,8 +197,8 @@ let U = (e, t) => (n) => {
         var t;
         let { guildScheduledEvent: n, guild: l, channel: a, isMember: c, recurrenceId: u, onAcceptInstantInvite: d, onTransitionToInviteChannel: _ } = e,
             I = null != u ? u : null != n ? (0, R.DK)(n) : null,
-            N = (null == n ? void 0 : n.recurrence_rule) == null || null == I || (0, R.Rp)((0, A.KV)(null == n ? void 0 : n.recurrence_rule), I),
-            O = (0, f.Z)(n),
+            N = (null == n ? void 0 : n.recurrence_rule) == null || null == I || (0, R.Rp)((0, f.KV)(null == n ? void 0 : n.recurrence_rule), I),
+            O = (0, A.Z)(n),
             p = i.useCallback(() => {
                 c &&
                     null != n &&
@@ -208,8 +208,8 @@ let U = (e, t) => (n) => {
                     });
             }, [c, n, I]);
         if (null == n || !N) return null;
-        let m = (0, S.xt)(n),
-            D = (0, S.Z2)(n),
+        let D = (0, S.xt)(n),
+            m = (0, S.Z2)(n),
             h = n.entity_type === y.WX.EXTERNAL;
         return (0, r.jsx)(E.Z, {
             className: o()({ [b.clickable]: c }),
@@ -241,8 +241,8 @@ let U = (e, t) => (n) => {
                                 isMember: c
                             }),
                             (0, r.jsx)(v, {
-                                isActive: m,
-                                isEnded: D,
+                                isActive: D,
+                                isEnded: m,
                                 isMember: c,
                                 guildId: n.guild_id,
                                 guildScheduledEventId: n.id,

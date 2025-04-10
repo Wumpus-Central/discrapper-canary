@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(481060),
     s = n(695676),
     c = n(388032),
-    u = n(672425);
-function d(e) {
+    d = n(672425);
+function u(e) {
     let { className: t } = e,
         { goBack: n } = (0, s.hH)(),
         l = r.useCallback(() => {
@@ -15,7 +15,7 @@ function d(e) {
         }, [n]);
     return (0, i.jsx)(o.P3F, {
         onClick: l,
-        className: a()(u.clickable, t),
+        className: a()(d.clickable, t),
         'aria-label': c.NW.string(c.t.ybUZqq),
         children: (0, i.jsx)(o.j9r, {
             size: 'sm',

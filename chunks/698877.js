@@ -69,7 +69,7 @@ function u(e) {
                     iconComponent: O,
                     isActive: d,
                     color: (b ? (n = 'premiumGradient') : (x || C === o.BK.GroupedButtonsRedMic) && d && (n = 'green'), n),
-                    caretColor: v ? 'green' : 'primaryDark',
+                    caretColor: v ? void 0 : 'primaryDark',
                     onMouseEnter: (e) => {
                         null == f || f(e), E.onMouseEnter();
                     },

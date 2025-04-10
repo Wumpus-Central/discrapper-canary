@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(607070),
-    u = n(847800);
-function d() {
+    d = n(847800);
+function u() {
     let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         { styleLarge: t, styleSmall: n } = r.useMemo(
             () => ({
@@ -17,17 +17,17 @@ function d() {
             []
         );
     return (0, i.jsxs)('div', {
-        className: a()(u.container, { [u.noAnimation]: e }),
+        className: a()(d.container, { [d.noAnimation]: e }),
         children: [
-            (0, i.jsx)('div', { className: u.iconPlaceholder }),
+            (0, i.jsx)('div', { className: d.iconPlaceholder }),
             (0, i.jsxs)('div', {
-                className: u.textContainer,
+                className: d.textContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: u.textPlaceholder,
+                        className: d.textPlaceholder,
                         style: t,
                         children: (0, i.jsx)(s.X6q, {
-                            className: u.hidden,
+                            className: d.hidden,
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
@@ -35,10 +35,10 @@ function d() {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: u.textPlaceholder,
+                        className: d.textPlaceholder,
                         style: n,
                         children: (0, i.jsx)(s.Text, {
-                            className: u.hidden,
+                            className: d.hidden,
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
@@ -47,7 +47,7 @@ function d() {
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: u.underline })
+            (0, i.jsx)('div', { className: d.underline })
         ]
     });
 }

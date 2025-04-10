@@ -68,15 +68,15 @@ function I(e) {
     let { pendingState: s, dirtyState: h, originalGuild: x, settingsGuild: I, settingsMetadata: E, settingsProfile: S } = e,
         T = I.id,
         [P, w] = i.useState(!1),
-        [R, D] = i.useState(null),
-        Z = I.hasFeature(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        [R, Z] = i.useState(null),
+        D = I.hasFeature(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         k = null != (t = (0, g.A)({ guildId: I.id })) ? t : 0,
-        A = i.useCallback(() => {
-            D(null), f.Z.init(T, v.pNK.ACCESS);
+        W = i.useCallback(() => {
+            Z(null), f.Z.init(T, v.pNK.ACCESS);
         }, [T]),
-        W = i.useCallback(async (e) => {
+        A = i.useCallback(async (e) => {
             try {
-                w(!0), await e(), D(null);
+                w(!0), await e(), Z(null);
             } finally {
                 w(!1);
             }
@@ -86,7 +86,7 @@ function I(e) {
                 try {
                     await f.Z.saveGuild(T, e, { throwErr: !0 });
                 } catch (e) {
-                    throw ('object' == typeof e && 'message' in e ? D(e.message) : D(y.NW.formatToPlainString(y.t.aTVNen, { statusPageURL: v.yXt.STATUS })), e);
+                    throw ('object' == typeof e && 'message' in e ? Z(e.message) : Z(y.NW.formatToPlainString(y.t.aTVNen, { statusPageURL: v.yXt.STATUS })), e);
                 }
             },
             [T]
@@ -96,7 +96,7 @@ function I(e) {
                 try {
                     await d.ZP.updateVerificationForm(T, e, t);
                 } catch (e) {
-                    throw (D(new o.Hx(e).getAnyErrorMessage()), e);
+                    throw (Z(new o.Hx(e).getAnyErrorMessage()), e);
                 }
             },
             [T]
@@ -122,7 +122,7 @@ function I(e) {
             if (s.joinType === j.A.INVITE) {
                 let { requireTerms: e, termRules: t = [] } = s,
                     n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
-                W(async () => {
+                A(async () => {
                     if (I.hasFeature(v.oNc.DISCOVERABLE)) {
                         let e = new Set(I.features);
                         e.delete(v.oNc.DISCOVERABLE), await L({ features: e });
@@ -132,7 +132,7 @@ function I(e) {
             } else if (s.joinType === j.A.APPLY) {
                 let { pendingVerificationFields: e } = s;
                 if (null == e) return;
-                W(async () => {
+                A(async () => {
                     if (I.hasFeature(v.oNc.DISCOVERABLE)) {
                         let e = new Set(I.features);
                         e.delete(v.oNc.DISCOVERABLE), await L({ features: e });
@@ -142,7 +142,7 @@ function I(e) {
             } else if (s.joinType === j.A.DISCOVERABLE) {
                 let { requireTerms: e, termRules: t = [] } = s,
                     n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
-                W(async () => {
+                A(async () => {
                     if ((h.verificationDirty && (await G(e, n)), h.guildDirty)) {
                         (0, b.UA)(I, x);
                         let e = new Set(I.features);
@@ -157,12 +157,12 @@ function I(e) {
                         try {
                             await (0, c.Vv)(O({ guildId: I.id }, E));
                         } catch (e) {
-                            throw (D(new o.Hx(e).getAnyErrorMessage()), e);
+                            throw (Z(new o.Hx(e).getAnyErrorMessage()), e);
                         }
                     }
                 });
             }
-        }, [s, W, I, h, L, G, S, M, x, E]),
+        }, [s, A, I, h, L, G, S, M, x, E]),
         B = i.useCallback(() => {
             var e;
             let t = (e) => {
@@ -181,7 +181,7 @@ function I(e) {
                     e();
                 },
                 i = (e) => {
-                    if (Z && k > 0 && s.joinType !== j.A.APPLY)
+                    if (D && k > 0 && s.joinType !== j.A.APPLY)
                         return void (0, a.ZDy)(async () => {
                             let { default: t } = await n.e('55009').then(n.bind(n, 826390));
                             return (n) =>
@@ -198,11 +198,11 @@ function I(e) {
                 };
             if (s.joinType === j.A.INVITE || s.joinType === j.A.DISCOVERABLE) {
                 let { requireTerms: e, termRules: t = [] } = s;
-                if (t.map((e) => e.value.trim()).filter((e) => '' !== e).length < 1 && e) return void D(y.NW.string(y.t.TCHkcX));
+                if (t.map((e) => e.value.trim()).filter((e) => '' !== e).length < 1 && e) return void Z(y.NW.string(y.t.TCHkcX));
             }
-            if (s.joinType === j.A.APPLY && !(null == (e = s.pendingVerificationFields) ? void 0 : e.some((e) => (0, m._C)(e)))) return void D(y.NW.string(y.t.HGVrIy));
+            if (s.joinType === j.A.APPLY && !(null == (e = s.pendingVerificationFields) ? void 0 : e.some((e) => (0, m._C)(e)))) return void Z(y.NW.string(y.t.HGVrIy));
             i(() => t(U));
-        }, [Z, U, s, T, k]),
+        }, [D, U, s, T, k]),
         F = s.joinType === j.A.DISCOVERABLE && s.settingsView === N.U.ELIGIBLE_DISABLED,
         z = null != I.description && E.primaryCategoryId !== _.o3 && E.keywords.length > 0;
     return (0, r.jsx)(l.Z, {
@@ -210,7 +210,7 @@ function I(e) {
         onSaveText: F ? y.NW.string(y.t['qjtt/v']) : void 0,
         submitting: P,
         errorMessage: R,
-        onReset: A,
+        onReset: W,
         onSave: B,
         disabled: F && !z
     });

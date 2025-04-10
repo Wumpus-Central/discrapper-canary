@@ -14,8 +14,8 @@ var r = n(200651),
     p = n(241559),
     f = n(256003),
     h = n(981631),
-    g = n(388032),
-    j = n(571031);
+    j = n(388032),
+    g = n(571031);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,12 +62,12 @@ function O(e, t) {
 function y(e) {
     let { guildId: t } = e,
         y = (0, p.xC)(t),
-        { selectedUserIds: v, clearSelection: _ } = (0, f.Z)(t),
-        N = v.size > 0,
-        H = async (e, t, n, r) => {
+        { selectedUserIds: v, clearSelection: N } = (0, f.Z)(t),
+        H = v.size > 0,
+        _ = async (e, t, n, r) => {
             try {
                 let l = await c.Z.banMultipleUsers(e, t, n, r);
-                (0, s.showToast)((0, s.createToast)(g.NW.string(g.t.AsCe5O), s.ToastType.SUCCESS)),
+                (0, s.showToast)((0, s.createToast)(j.NW.string(j.t.AsCe5O), s.ToastType.SUCCESS)),
                     m.default.track(
                         h.rMx.BULK_MODERATION_ACTION_COMPLETED,
                         O(x({}, (0, d.hH)(e)), {
@@ -79,15 +79,15 @@ function y(e) {
                         })
                     );
             } catch (e) {
-                (0, s.showToast)((0, s.createToast)(g.NW.string(g.t.mICAWV), s.ToastType.FAILURE));
+                (0, s.showToast)((0, s.createToast)(j.NW.string(j.t.mICAWV), s.ToastType.FAILURE));
             }
-            _();
+            N();
         },
         w = l.useCallback(() => {
-            _();
-        }, [_]),
+            N();
+        }, [N]),
         S = (0, r.jsxs)('span', {
-            className: j.messageContainer,
+            className: g.messageContainer,
             children: [
                 (0, r.jsx)(s.tBG, {
                     size: 'custom',
@@ -98,19 +98,19 @@ function y(e) {
                 (0, r.jsx)(s.Text, {
                     variant: 'heading-md/bold',
                     color: 'text-normal',
-                    children: g.NW.format(g.t.TstoSU, { count: v.size })
+                    children: j.NW.format(j.t.TstoSU, { count: v.size })
                 }),
                 (0, r.jsx)(s.zxk, {
                     color: s.zxk.Colors.LINK,
                     look: s.zxk.Looks.LINK,
                     onClick: w,
-                    className: j.clearButton,
-                    children: g.NW.string(g.t.yW6ZdH)
+                    className: g.clearButton,
+                    children: j.NW.string(j.t.yW6ZdH)
                 })
             ]
         }),
         D = (0, r.jsxs)('span', {
-            className: j.buttonContainer,
+            className: g.buttonContainer,
             children: [
                 (0, r.jsx)(s.pgN, {
                     size: 'custom',
@@ -120,16 +120,16 @@ function y(e) {
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-sm/semibold',
-                    children: g.NW.string(g.t['2a50fH'])
+                    children: j.NW.string(j.t['2a50fH'])
                 })
             ]
         });
     return y
         ? (0, r.jsx)(a.W, {
               component: 'div',
-              className: j.saveNoticeContainer,
+              className: g.saveNoticeContainer,
               children:
-                  N &&
+                  H &&
                   (0, r.jsx)(s.oXn, {
                       children: (0, r.jsx)(u.Z, {
                           onSave: () => {
@@ -151,7 +151,7 @@ function y(e) {
                                                   guildId: t,
                                                   canBulkBan: y,
                                                   userIds: v,
-                                                  onBanMultiple: H
+                                                  onBanMultiple: _
                                               })
                                           );
                                   });

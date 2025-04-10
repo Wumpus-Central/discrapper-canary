@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => j });
 var r = n(200651),
     l = n(192379),
     o = n(498607),
@@ -55,22 +55,22 @@ function h(e, t) {
         e
     );
 }
-function g(e) {
+function j(e) {
     let { guildId: t, onClose: n } = e,
         o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
-        g = (0, u.dW)(t),
-        j = l.useCallback(() => {
-            o.requireUnusualDmActivity || g(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
-        }, [t, o, g]),
+        j = (0, u.dW)(t),
+        g = l.useCallback(() => {
+            o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
+        }, [t, o, j]),
         x = l.useCallback(() => {
-            o.requireCommunicationDisabled || g(u.aY.COMMUNICATION_DISABLED), (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
-        }, [t, o, g]),
+            o.requireCommunicationDisabled || j(u.aY.COMMUNICATION_DISABLED), (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
+        }, [t, o, j]),
         O = l.useCallback(() => {
-            o.requireUnusualAccountActivity || g(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
-        }, [t, o, g]),
+            o.requireUnusualAccountActivity || j(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
+        }, [t, o, j]),
         y = l.useCallback(() => {
-            o.requireUsernameQuarantined || g(u.aY.USERNAME_QUARANTINED), (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
-        }, [t, o, g]);
+            o.requireUsernameQuarantined || j(u.aY.USERNAME_QUARANTINED), (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
+        }, [t, o, j]);
     return (0, r.jsx)(s.v2r, {
         navId: 'member-safety-flags',
         onClose: n,
@@ -93,7 +93,7 @@ function g(e) {
                             b.NW.string(b.t.ZRnONz)
                         ]
                     }),
-                    action: j,
+                    action: g,
                     checked: o.requireUnusualDmActivity
                 }),
                 (0, r.jsx)(s.S89, {

@@ -62,12 +62,12 @@ function R() {
         ascending: !1
     });
 }
-function D(e) {
+function Z(e) {
     let { section: t } = e;
     if (null != r || t !== N.pNK.ROLES) return !1;
-    Z();
+    D();
 }
-function Z() {
+function D() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     (r = j.Z.getProps().guild),
         (O = !1),
@@ -101,7 +101,7 @@ let k = o().debounce(() => {
         [..._].forEach((t) => {
             var n;
             o().isEqual(
-                W(t),
+                A(t),
                 ((n = t),
                 E.find((e) => {
                     let { id: t } = e;
@@ -113,7 +113,7 @@ let k = o().debounce(() => {
         S && o().isEqual(P, w) && ((e = !0), (S = !1)),
         e && G.emitChange();
 }, 500);
-function A(e, t) {
+function W(e, t) {
     let n = I.indexOf(e);
     if (n < 0) return !1;
     let r = (function (e) {
@@ -134,7 +134,7 @@ function A(e, t) {
     })({}, e, t);
     (I[n] = r), (I = [...I]), (O = !0), _.add(r.id), k();
 }
-function W(e) {
+function A(e) {
     return I.find((t) => {
         let { id: n } = t;
         return n === e;
@@ -155,7 +155,7 @@ function L(e) {
             .reverse()
             .value()),
         _.forEach((e) => {
-            let t = W(e),
+            let t = A(e),
                 r = -1;
             null ==
                 n.find((t, n) => {
@@ -207,7 +207,7 @@ class M extends (a = u.ZP.Store) {
         return this.hasChanges();
     }
     getRole(e) {
-        return W(e);
+        return A(e);
     }
     getPermissionSearchQuery() {
         return i;
@@ -222,48 +222,48 @@ let G = new M(
         __OVERLAY__
             ? {}
             : {
-                  GUILD_SETTINGS_ROLES_INIT: () => Z(),
-                  GUILD_SETTINGS_INIT: D,
-                  GUILD_SETTINGS_SET_SECTION: D,
+                  GUILD_SETTINGS_ROLES_INIT: () => D(),
+                  GUILD_SETTINGS_INIT: Z,
+                  GUILD_SETTINGS_SET_SECTION: Z,
                   GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                       let { roles: t } = e;
                       if (null != I && t.length !== I.length) return !1;
-                      (I = t.map((e) => W(e)).filter(b.lm)), (C = !0), k();
+                      (I = t.map((e) => A(e)).filter(b.lm)), (C = !0), k();
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                       let { id: t, flag: n, allow: r } = e,
-                          i = W(t);
+                          i = A(t);
                       if (null == i) return !1;
                       let { permissions: s } = i;
-                      return A(i, { permissions: (s = r ? c.IH(s, n) : c.Od(s, n)) });
+                      return W(i, { permissions: (s = r ? c.IH(s, n) : c.Od(s, n)) });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET: function (e) {
                       let { id: t, permissions: n } = e,
-                          r = W(t);
-                      return null != r && A(r, { permissions: n });
+                          r = A(t);
+                      return null != r && W(r, { permissions: n });
                   },
                   GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                       let { id: t } = e,
-                          n = W(t);
-                      return null != n && A(n, { permissions: x.Hn });
+                          n = A(t);
+                      return null != n && W(n, { permissions: x.Hn });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                       let { id: t, name: n } = e,
-                          r = W(t);
-                      return null != r && A(r, { name: n });
+                          r = A(t);
+                      return null != r && W(r, { name: n });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION: function (e) {
                       let { id: t, description: n } = e,
-                          r = W(t);
-                      return null != r && A(r, { description: n });
+                          r = A(t);
+                      return null != r && W(r, { description: n });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_COLOR: function (e) {
                       let { id: t, color: n } = e,
                           r = 0 === n ? null : (0, d.Rf)(n),
-                          i = W(t);
+                          i = A(t);
                       return (
                           null != i &&
-                          A(i, {
+                          W(i, {
                               color: n,
                               colorString: r,
                               colors: {
@@ -281,10 +281,10 @@ let G = new M(
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_COLORS: function (e) {
                       let { id: t, colors: n } = e,
-                          r = W(t);
+                          r = A(t);
                       if (null == r) return !1;
                       let i = (0, p.D)(n);
-                      return A(r, {
+                      return W(r, {
                           color: n.primary_color,
                           colors: n,
                           colorString: i.primaryColor,
@@ -293,10 +293,10 @@ let G = new M(
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_SETTINGS: function (e) {
                       let { id: t, hoist: n, mentionable: r } = e,
-                          i = W(t);
+                          i = A(t);
                       return (
                           null != i &&
-                          A(i, {
+                          W(i, {
                               hoist: n,
                               mentionable: r
                           })
@@ -304,10 +304,10 @@ let G = new M(
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON: function (e) {
                       let { id: t, icon: n, unicodeEmoji: r } = e,
-                          i = W(t);
+                          i = A(t);
                       return (
                           null != i &&
-                          A(i, {
+                          W(i, {
                               icon: n,
                               unicodeEmoji: r
                           })
@@ -316,13 +316,13 @@ let G = new M(
                   GUILD_SETTINGS_ROLE_SELECT: function (e) {
                       let { role: t, searchQuery: n } = e;
                       if (((i = n), null != t)) {
-                          if (null != W(t.id)) return void A(t, t);
+                          if (null != A(t.id)) return void W(t, t);
                           (I = [...I, t]), k();
                       }
                   },
                   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (e) {
                       let { roleId: t, roleConnectionConfigurations: n } = e,
-                          r = W(t);
+                          r = A(t);
                       if (null == r) return !1;
                       let i = P.get(r.id);
                       if (o().isEqual(i, n)) return !1;
@@ -330,7 +330,7 @@ let G = new M(
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function (e) {
                       let { roleId: t, roleConnectionConfigurations: n } = e,
-                          r = W(t);
+                          r = A(t);
                       if (null == r) return !1;
                       (S = !0), T.add(r.id), w.set(r.id, n), k();
                   },
@@ -350,7 +350,7 @@ let G = new M(
                       (y = N.QZA.OPEN), (s = t);
                   },
                   GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function () {
-                      Z(!1);
+                      D(!1);
                   }
               }
     ),

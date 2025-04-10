@@ -12,11 +12,11 @@ var r = n(200651),
     p = n(139668),
     f = n(223143),
     g = n(364111),
-    h = n(752053),
-    m = n(81136),
+    m = n(752053),
+    h = n(81136),
     _ = n(953655),
-    v = n(548685),
-    C = n(580914),
+    C = n(548685),
+    v = n(580914),
     x = n(963278),
     O = n(384067),
     j = n(215023),
@@ -24,7 +24,7 @@ var r = n(200651),
     k = n(806734);
 let S = (e) => {
         let { handleTransition: t, numVisibleItems: n, isFetchingCategories: a, tab: s } = e,
-            { noCache: c, includeUnpublished: u } = (0, m.Z)(),
+            { noCache: c, includeUnpublished: u } = (0, h.Z)(),
             {
                 isFetchingShopHome: d,
                 fetchShopHomeError: b,
@@ -39,16 +39,16 @@ let S = (e) => {
                 f();
             }, [f]);
         if (null != b)
-            return (0, r.jsx)(h.Z, {
+            return (0, r.jsx)(m.Z, {
                 onRetry: j,
-                errorOrigin: h.i.SHOP_PAGE,
+                errorOrigin: m.i.SHOP_PAGE,
                 errorMessage: b.message
             });
         if (d || 0 === p.length)
             return (0, r.jsxs)('div', {
                 className: k.loadingContainer,
                 children: [
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(v.Z, {
                         isLoading: d,
                         handleTransition: t,
                         tab: s
@@ -58,7 +58,7 @@ let S = (e) => {
                         handleTransition: t,
                         categories: []
                     }),
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(C.Z, {
                         isLoading: d,
                         handleTransition: t,
                         numVisibleItems: n,
@@ -73,7 +73,7 @@ let S = (e) => {
             switch (e.type) {
                 case i.z.HERO:
                     c = (0, r.jsx)(
-                        C.Z,
+                        v.Z,
                         {
                             isLoading: d,
                             handleTransition: t,
@@ -96,7 +96,7 @@ let S = (e) => {
                     break;
                 case i.z.FEED:
                     c = (0, r.jsx)(
-                        v.Z,
+                        C.Z,
                         {
                             isLoading: d || a,
                             handleTransition: t,
@@ -146,33 +146,33 @@ let S = (e) => {
     P = (e) => {
         var t;
         let { isFullScreen: n, handleTransition: a, numVisibleItems: i, tab: g } = e,
-            { isFetchingCategories: _, fetchCategoriesError: v, fetchPurchasesError: C, claimError: x, refreshCategories: O } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
-            P = null != (t = null != v ? v : C) ? t : x,
+            { isFetchingCategories: _, fetchCategoriesError: C, fetchPurchasesError: v, claimError: x, refreshCategories: O } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
+            P = null != (t = null != C ? C : v) ? t : x,
             E = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
             w = (0, b.b)('Collectibles Shop Button'),
-            I = (0, p.R)('CollectiblesFeedShop'),
-            { noCache: B, includeUnpublished: N } = (0, m.Z)(),
+            B = (0, p.R)('CollectiblesFeedShop'),
+            { noCache: I, includeUnpublished: N } = (0, h.Z)(),
             T = l.useCallback(() => {
                 O();
             }, [O]);
         if (null == E) return null;
         if (null != P) {
             let e = [];
-            null != v ? e.push('shop load fetch categories error: '.concat(P.message)) : null != C ? e.push('shop load fetch purchase error: '.concat(P.message)) : e.push('shop load claim error: '.concat(P.message)),
+            null != C ? e.push('shop load fetch categories error: '.concat(P.message)) : null != v ? e.push('shop load fetch purchase error: '.concat(P.message)) : e.push('shop load claim error: '.concat(P.message)),
                 d.Z.captureMessage(e.join('\n'), {
                     tags: {
                         isStaff: E.isStaff().toString(),
                         preloadEnabled: w.toString(),
-                        disableCache: B.toString(),
+                        disableCache: I.toString(),
                         includeUnpublished: N.toString()
                     }
                 });
         }
-        return null != v
-            ? (0, r.jsx)(h.Z, {
+        return null != C
+            ? (0, r.jsx)(m.Z, {
                   onRetry: T,
-                  errorOrigin: h.i.SHOP_PAGE,
-                  errorMessage: v.message
+                  errorOrigin: m.i.SHOP_PAGE,
+                  errorMessage: C.message
               })
             : (0, r.jsx)('div', {
                   className: o()(k.shop, { [k.shopFullscreen]: n }),
@@ -186,7 +186,7 @@ let S = (e) => {
                               tab: g
                           }),
                           g !== j.AW.CATALOG &&
-                              i >= I &&
+                              i >= B &&
                               (0, r.jsxs)('div', {
                                   className: k.endOfFeed,
                                   children: [

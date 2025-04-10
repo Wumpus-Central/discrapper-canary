@@ -11,26 +11,26 @@ var r = n(200651),
 let b = (e) => {
     var t, n, b;
     let p,
-        { category: f, subblock: g, badgeText: h, handleTransition: m } = e;
+        { category: f, subblock: g, badgeText: m, handleTransition: h } = e;
     null != g && (p = null == (t = i.Z.getCategoryByStoreListingId(null == g ? void 0 : g.categoryStoreListingId)) ? void 0 : t.skuId);
     let _ = null != (n = null != p ? p : null == f ? void 0 : f.skuId) ? n : '',
-        { handleCardVisibilityChange: v } = (0, s.E)(_, 'home', 'marketing featured block'),
-        { featuredBlockBanner: C } = (0, c.YG)(f, g),
+        { handleCardVisibilityChange: C } = (0, s.E)(_, 'home', 'marketing featured block'),
+        { featuredBlockBanner: v } = (0, c.YG)(f, g),
         x = l.useRef(null);
     return (0, r.jsx)(a.$, {
         innerRef: x,
-        onChange: v,
+        onChange: C,
         threshold: 0,
         children: (0, r.jsxs)(o.P3F, {
             className: d.featuredBlock,
             innerRef: x,
-            style: { backgroundImage: 'url('.concat(C, ')') },
-            onClick: () => m('shop marketing tile', _),
+            style: { backgroundImage: 'url('.concat(v, ')') },
+            onClick: () => h('shop marketing tile', _),
             children: [
-                null != h &&
+                null != m &&
                     (0, r.jsx)(o.IGR, {
                         disableColor: !0,
-                        text: h,
+                        text: m,
                         className: d.featuredBlockBadge
                     }),
                 (null == g ? void 0 : g.bodyText) != null &&

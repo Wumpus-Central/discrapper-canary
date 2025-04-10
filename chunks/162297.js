@@ -17,7 +17,7 @@ function f(e) {
         null != a || o || s || u.ZP.fetchApplication(t);
     }, [a, o, s, t]),
     null != a &&
-        (0, m.E)({
+        (0, m.Eb)({
             customInstallUrl: a.customInstallUrl,
             installParams: a.installParams,
             integrationTypesConfig: a.integrationTypesConfig

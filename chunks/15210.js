@@ -129,7 +129,7 @@ function v(e) {
                 o.zxk,
                 y(E({}, L), {
                     onClick: A,
-                    children: m.NW.string(m.t.KLOhbG)
+                    children: m.NW.string(m.t.IRoQXl)
                 })
             );
         case _.sE.ADOPT_TAG:

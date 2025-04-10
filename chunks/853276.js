@@ -168,13 +168,13 @@ function h(e) {
             },
             []
         );
-    let D = i.useCallback(
+    let Z = i.useCallback(
             (e) => {
                 n(e.target.value);
             },
             [n]
         ),
-        Z = i.useCallback(
+        D = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if ((t.trim().length <= 0 && p(), null != N.current && null != O.current && null != v.current)) {
@@ -188,18 +188,18 @@ function h(e) {
         k = i.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
-                u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), Z(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), Z(!0));
+                u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), D(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), D(!0));
             },
-            [Z, t]
+            [D, t]
         ),
-        A = i.useCallback(
+        W = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : y(!0), e.stopPropagation();
             },
             [g]
         ),
-        W = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 p();
             },
@@ -219,8 +219,8 @@ function h(e) {
             children: [
                 (0, r.jsxs)(o.P3F, {
                     tag: 'div',
-                    onBlur: () => Z(!1),
-                    onClick: A,
+                    onBlur: () => D(!1),
+                    onClick: W,
                     ignoreKeyPress: !0,
                     onMouseEnter: () => P(!0),
                     onMouseLeave: () => P(!1),
@@ -236,7 +236,7 @@ function h(e) {
                                 [m.isSelecting]: b
                             }),
                             ref: N,
-                            onChange: D,
+                            onChange: Z,
                             onKeyDownCapture: k,
                             value: t,
                             style: { width: R > 0 ? R : 'calc('.concat(t.length, 'ch + 10px)') }
@@ -254,7 +254,7 @@ function h(e) {
                 !_ &&
                     (0, r.jsx)(o.P3F, {
                         className: m.closeIconContainer,
-                        onClick: W,
+                        onClick: A,
                         children: (0, r.jsx)(o.Dio, {
                             size: 'xxs',
                             color: 'currentColor',

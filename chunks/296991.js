@@ -79,7 +79,7 @@ function E(e) {
                 null == e || t.didDrop() || h(e.rule, null, !0);
             }
         }),
-        [, D] = (0, d.L)({
+        [, Z] = (0, d.L)({
             accept: I,
             hover: (e, t) => {
                 var n;
@@ -99,12 +99,12 @@ function E(e) {
         (i.useLayoutEffect(
             () => (
                 w(E),
-                R(D(C)),
+                R(Z(C)),
                 () => {
-                    w(null), D(null);
+                    w(null), Z(null);
                 }
             ),
-            [w, D, R]
+            [w, Z, R]
         ),
         i.useEffect(() => {
             '' !== t.value && '' === S && P((0, p.eK)(t.value));
@@ -112,11 +112,11 @@ function E(e) {
         null == n)
     )
         return null;
-    let Z = '' !== t.value ? t.value : t.id;
+    let D = '' !== t.value ? t.value : t.id;
     return (0, r.jsx)('div', {
         ref: C,
         className: a()(y.draggableInputContainer, { [y.dragging]: b }),
-        'data-dnd-name': Z,
+        'data-dnd-name': D,
         children: (0, r.jsxs)('div', {
             className: y.inputWrapper,
             children: [
@@ -165,7 +165,7 @@ function E(e) {
                 (0, r.jsx)('div', {
                     ref: E,
                     className: y.dragContainer,
-                    'data-dnd-name': Z,
+                    'data-dnd-name': D,
                     children:
                         O &&
                         (0, r.jsx)(m.Vni, {
@@ -236,36 +236,36 @@ function S(e) {
             },
             [g, t, n]
         ),
-        D = t.length === N.X2,
-        Z = i.useMemo(() => {
-            let e = D ? _.NW.formatToPlainString(_.t.tU718P, { number: N.X2 }) : void 0;
+        Z = t.length === N.X2,
+        D = i.useMemo(() => {
+            let e = Z ? _.NW.formatToPlainString(_.t.tU718P, { number: N.X2 }) : void 0;
             return [
                 {
                     text: _.NW.string(_.t.DXq2oa),
                     onClick: () => S(_.NW.string(_.t.XudkSk)),
-                    disabled: D,
+                    disabled: Z,
                     tooltipText: e
                 },
                 {
                     text: _.NW.string(_.t.nSqTjI),
                     onClick: () => S(_.NW.string(_.t.np91jI)),
-                    disabled: D,
+                    disabled: Z,
                     tooltipText: e
                 },
                 {
                     text: _.NW.string(_.t.AtRxsL),
                     onClick: () => S(_.NW.string(_.t.PNIDDA)),
-                    disabled: D,
+                    disabled: Z,
                     tooltipText: e
                 },
                 {
                     text: _.NW.string(_.t['0K5NJi']),
                     onClick: () => S(_.NW.string(_.t.HolIDw)),
-                    disabled: D,
+                    disabled: Z,
                     tooltipText: e
                 }
             ];
-        }, [S, D]);
+        }, [S, Z]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
@@ -290,7 +290,7 @@ function S(e) {
                     )
                 )
             }),
-            !D &&
+            !Z &&
                 (0, r.jsx)(x.A, {
                     text: _.NW.string(_.t.Cq5Jub),
                     onClick: T
@@ -302,7 +302,7 @@ function S(e) {
                 children: _.NW.string(_.t.XHWj8f)
             }),
             (0, r.jsx)(j.j, {
-                pills: Z,
+                pills: D,
                 pillClassName: y.pill
             })
         ]

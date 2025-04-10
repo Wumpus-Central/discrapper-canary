@@ -89,13 +89,13 @@ class T extends i.PureComponent {
 }
 let P = i.forwardRef((e, t) => {
     let n,
-        { log: i, className: s, expanded: o, guildId: f, guild: N, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: D, onUserContextMenu: Z, theme: k } = e,
-        A = (function () {
+        { log: i, className: s, expanded: o, guildId: f, guild: N, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: Z, onUserContextMenu: D, theme: k } = e,
+        W = (function () {
             let { changes: e } = i;
             return (i.actionType !== O.vB8.DELETE || i.action === O.rsA.MEMBER_BAN_ADD || i.action === O.rsA.MEMBER_KICK || i.action === O.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, y.xO)(i, e));
         })(),
-        W = I.headerDefault;
-    o ? (W = I.headerExpanded) : A && (W = I.headerClickable);
+        A = I.headerDefault;
+    o ? (A = I.headerExpanded) : W && (A = I.headerClickable);
     let L = i.timestampStart.calendar(),
         M = i.timestampEnd.calendar();
     n =
@@ -110,7 +110,7 @@ let P = i.forwardRef((e, t) => {
                   variant: 'text-sm/normal',
                   children: [L, '\u2014', M]
               });
-    let G = A ? R : O.dG4;
+    let G = W ? R : O.dG4;
     return (0, r.jsx)(l.mh, {
         id: i.id,
         children: (e) =>
@@ -123,7 +123,7 @@ let P = i.forwardRef((e, t) => {
                         S(
                             E(
                                 {
-                                    className: W,
+                                    className: A,
                                     'aria-expanded': o,
                                     onClick: G
                                 },
@@ -197,7 +197,7 @@ let P = i.forwardRef((e, t) => {
                                                                               T,
                                                                               {
                                                                                   user: i.user,
-                                                                                  onContextMenu: Z
+                                                                                  onContextMenu: D
                                                                               },
                                                                               t
                                                                           );
@@ -214,14 +214,14 @@ let P = i.forwardRef((e, t) => {
                                                                                 T,
                                                                                 {
                                                                                     user: i.target,
-                                                                                    onContextMenu: D
+                                                                                    onContextMenu: Z
                                                                                 },
                                                                                 t
                                                                             )
                                                                           : (0, r.jsx)(
                                                                                 'span',
                                                                                 {
-                                                                                    onContextMenu: D,
+                                                                                    onContextMenu: Z,
                                                                                     children: e
                                                                                 },
                                                                                 t
@@ -246,7 +246,7 @@ let P = i.forwardRef((e, t) => {
                                             n
                                         ]
                                     }),
-                                    A
+                                    W
                                         ? (0, r.jsx)(j.Z, {
                                               className: I.expand,
                                               foreground: I.expandForeground,

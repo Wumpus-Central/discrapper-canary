@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -6,10 +6,10 @@ var i = n(200651),
     o = n(314734),
     s = n(388032),
     c = n(556342);
-function u(e) {
+function d(e) {
     let t,
-        { sortOrder: n, onSortOptionClick: u } = e,
-        d = r.useRef(null);
+        { sortOrder: n, onSortOptionClick: d } = e,
+        u = r.useRef(null);
     switch (n) {
         case o.bS.POPULAR:
             t = s.NW.string(s.t.SzxiqK);
@@ -18,12 +18,12 @@ function u(e) {
             t = s.NW.string(s.t.m8xstr);
     }
     return (0, i.jsx)(l.yRy, {
-        targetElementRef: d,
+        targetElementRef: u,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(a.Z, {
                 sortOrder: n,
-                onSortOptionClick: u,
+                onSortOptionClick: d,
                 closePopout: t
             });
         },
@@ -61,7 +61,7 @@ function u(e) {
                 })({}, e)),
                 (a = a =
                     {
-                        buttonRef: d,
+                        buttonRef: u,
                         size: l.zxk.Sizes.MIN,
                         color: l.zxk.Colors.CUSTOM,
                         className: c.sortDropdown,

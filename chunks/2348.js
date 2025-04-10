@@ -147,7 +147,7 @@ let O = i.memo(function () {
             P = (0, h.lL)(s.id, i.id),
             w = null != (0, b.Z)(s).find((e) => e.id === t.id),
             R = (0, m.mn)(t.id),
-            D = (e) => {
+            Z = (e) => {
                 if (!S)
                     return (
                         e.stopPropagation(),
@@ -167,7 +167,7 @@ let O = i.memo(function () {
                         !0
                     );
             },
-            Z = (e) => {
+            D = (e) => {
                 t.isGuildVocal()
                     ? (0, c.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('58059'), n.e('42743'), n.e('84181'), n.e('18320'), n.e('83331'), n.e('67180')]).then(n.bind(n, 213202));
@@ -213,8 +213,8 @@ let O = i.memo(function () {
                                     e
                                 ),
                                 {
-                                    onClick: D,
-                                    onContextMenu: Z,
+                                    onClick: Z,
+                                    onContextMenu: D,
                                     children: [
                                         (0, r.jsx)('div', {
                                             className: N.channelInfo,

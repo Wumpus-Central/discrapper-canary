@@ -6,20 +6,20 @@ r.d(t, {
 var n = r(200651),
     i = r(192379),
     o = r(481060),
-    s = r(893776),
-    l = r(476770),
-    c = r(388032),
-    a = r(641198);
+    l = r(893776),
+    s = r(476770),
+    a = r(388032),
+    c = r(641198);
 function u() {
     let [e, t] = i.useState(!1),
-        [r, l] = i.useState(!1),
+        [r, s] = i.useState(!1),
         [u, d] = i.useState(!1);
     i.useEffect(() => {
         let e;
         return (
             r &&
                 (e = setTimeout(() => {
-                    l(!1);
+                    s(!1);
                 }, 2000)),
             () => {
                 null != e && clearTimeout(e);
@@ -30,7 +30,7 @@ function u() {
         if (!e) {
             t(!0);
             try {
-                await s.Z.verifyResend(), l(!0), d(!0);
+                await l.Z.verifyResend(), s(!0), d(!0);
             } catch (e) {
             } finally {
                 t(!1);
@@ -39,27 +39,27 @@ function u() {
     };
     return r
         ? (0, n.jsx)(o.Text, {
-              className: a.verifyConfirmText,
+              className: c.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
-              children: c.NW.string(c.t.H3Q7U1)
+              children: a.NW.string(a.t.H3Q7U1)
           })
         : (0, n.jsx)(o.zxk, {
               size: o.zxk.Sizes.SMALL,
               submitting: e,
               onClick: f,
-              children: u ? c.NW.string(c.t.WnX4Jy) : c.NW.string(c.t['13ofGh'])
+              children: u ? a.NW.string(a.t.WnX4Jy) : a.NW.string(a.t['13ofGh'])
           });
 }
 function d() {
-    return (0, n.jsx)(l.PU, {
-        className: a.editableRequirementContainer,
+    return (0, n.jsx)(s.PU, {
+        className: c.editableRequirementContainer,
         icon: o._XJ,
-        text: c.NW.string(c.t.c6EUJC),
-        footnote: c.NW.string(c.t['jMh+TU']),
+        text: a.NW.string(a.t.c6EUJC),
+        footnote: a.NW.string(a.t['jMh+TU']),
         meetsRequirement: !1,
         children: (0, n.jsx)(o.ua7, {
-            text: c.NW.string(c.t.mGlP39),
+            text: a.NW.string(a.t.mGlP39),
             children: (e) => {
                 var t, r;
                 return (0, n.jsx)(
@@ -93,7 +93,7 @@ function d() {
                         {
                             size: o.zxk.Sizes.SMALL,
                             disabled: !0,
-                            children: c.NW.string(c.t['13ofGh'])
+                            children: a.NW.string(a.t['13ofGh'])
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -115,12 +115,12 @@ function d() {
 }
 function f(e) {
     let { isUserVerified: t } = e,
-        r = t ? c.NW.string(c.t.qY1jHB) : c.NW.string(c.t.c6EUJC);
-    return (0, n.jsx)(l.PU, {
-        className: a.editableRequirementContainer,
+        r = t ? a.NW.string(a.t.qY1jHB) : a.NW.string(a.t.c6EUJC);
+    return (0, n.jsx)(s.PU, {
+        className: c.editableRequirementContainer,
         icon: o._XJ,
         text: r,
-        footnote: c.NW.string(c.t['jMh+TU']),
+        footnote: a.NW.string(a.t['jMh+TU']),
         meetsRequirement: t,
         children: (0, n.jsx)(u, {})
     });

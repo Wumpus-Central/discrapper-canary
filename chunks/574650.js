@@ -17,8 +17,8 @@ var i = n(120356),
     T = n(176505),
     S = n(388032),
     p = n(246752),
-    f = n(240211);
-function A(e) {
+    A = n(240211);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,21 +51,21 @@ let R = () => {
         C = (0, o.TH)(),
         g = (null == (e = (0, o.LX)(C.pathname, O.Z5c.CHANNEL(null == R ? void 0 : R.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
     if (null == R || !(0, I.Dc)(R) || g) return null;
-    let m = null != (t = null == P ? void 0 : P.applicationStatus) ? t : _.wB.STARTED,
-        D = null,
+    let D = null != (t = null == P ? void 0 : P.applicationStatus) ? t : _.wB.STARTED,
+        m = null,
         y = null,
         h = null,
-        b = [p.notice, f.notice];
-    switch (m) {
+        b = [p.notice, A.notice];
+    switch (D) {
         case _.wB.SUBMITTED:
-            (D = S.NW.string(S.t['5iLvS0'])),
+            (m = S.NW.string(S.t['5iLvS0'])),
                 (y = S.NW.string(S.t.mqtdmZ)),
                 (h = () => {
                     (0, s.h7j)((e) => {
                         var t, n;
                         return (0, r.jsx)(
                             s.ConfirmModal,
-                            ((t = A(
+                            ((t = f(
                                 {
                                     header: S.NW.string(S.t.aIz1oa),
                                     confirmText: S.NW.string(S.t['cY+Ooa']),
@@ -100,18 +100,18 @@ let R = () => {
                 });
             break;
         case _.wB.REJECTED:
-            (D = S.NW.string(S.t.lk30cX)),
+            (m = S.NW.string(S.t.lk30cX)),
                 (y = S.NW.string(S.t['8RrsHh'])),
                 (h = () => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('82075').then(n.bind(n, 76075));
-                        return (t) => (0, r.jsx)(e, A({ guildId: R.id }, t));
+                        return (t) => (0, r.jsx)(e, f({ guildId: R.id }, t));
                     });
                 }),
                 b.push(p.error);
             break;
         default:
-            (D = S.NW.string(S.t.G5YKXF)),
+            (m = S.NW.string(S.t.G5YKXF)),
                 (y = S.NW.string(S.t['r8/DT0'])),
                 (h = () => {
                     (0, E.hk)(R.id);
@@ -123,7 +123,7 @@ let R = () => {
             (0, r.jsx)(s.Text, {
                 className: p.header,
                 variant: 'text-sm/normal',
-                children: D
+                children: m
             }),
             (0, r.jsx)(s.zxk, {
                 className: p.button,

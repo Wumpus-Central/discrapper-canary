@@ -36,10 +36,10 @@ var r = n(200651),
     P = n(981631),
     w = n(388032),
     R = n(818771);
-let D = (0, x.hQ)(),
-    Z = (0, x.hQ)(),
+let Z = (0, x.hQ)(),
+    D = (0, x.hQ)(),
     k = (0, C.Mg)(u.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
-function A(e) {
+function W(e) {
     var t;
     let { emojiId: n, emojiName: i, className: s } = e,
         a = (0, c.e7)([j.ZP], () => (null != n ? j.ZP.getCustomEmojiById(n) : void 0));
@@ -50,7 +50,7 @@ function A(e) {
         className: s
     });
 }
-function W(e) {
+function A(e) {
     let { icon: t, children: n, checked: i, disabled: s = !1, onChange: l } = e,
         o = i || s;
     return (0, r.jsxs)('label', {
@@ -106,7 +106,7 @@ function L(e) {
                   i.length - s.size > 1 &&
                       (0, r.jsx)('div', {
                           className: R.list,
-                          children: (0, r.jsx)(W, {
+                          children: (0, r.jsx)(A, {
                               icon: (0, r.jsx)(m.avL, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -127,9 +127,9 @@ function L(e) {
                       className: R.list,
                       children: i.map((e) =>
                           (0, r.jsxs)(
-                              W,
+                              A,
                               {
-                                  icon: (0, r.jsx)(A, {
+                                  icon: (0, r.jsx)(W, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
                                       className: R.rowIcon
@@ -380,7 +380,7 @@ function B(e) {
                   (0, r.jsxs)(m.xBx, {
                       children: [
                           (0, r.jsx)(m.X6q, {
-                              id: D,
+                              id: Z,
                               variant: 'heading-md/semibold',
                               children: w.NW.string(w.t['3JrZ/P'])
                           }),
@@ -436,7 +436,7 @@ function F(e) {
             (0, r.jsxs)(m.xBx, {
                 children: [
                     (0, r.jsx)(m.X6q, {
-                        id: Z,
+                        id: D,
                         variant: 'heading-md/semibold',
                         children: w.NW.format(w.t.iuPodH, { roleName: c.name })
                     }),
@@ -452,7 +452,7 @@ function F(e) {
                     u.length > 1 &&
                         (0, r.jsx)('div', {
                             className: R.list,
-                            children: (0, r.jsx)(W, {
+                            children: (0, r.jsx)(A, {
                                 icon: (0, r.jsx)(m.avL, {
                                     size: 'md',
                                     color: 'currentColor'
@@ -474,7 +474,7 @@ function F(e) {
                             var t;
                             let n = null != (t = (0, f.Th)(e.type)) ? t : m.VL1;
                             return (0, r.jsx)(
-                                W,
+                                A,
                                 {
                                     icon: (0, r.jsx)('div', {
                                         className: R.rowIcon,
@@ -522,7 +522,7 @@ function z(e) {
         [l, o] = i.useState();
     return (0, r.jsx)(m.Y0X, {
         transitionState: t,
-        'aria-labelledby': null == l ? D : Z,
+        'aria-labelledby': null == l ? Z : D,
         children: (0, r.jsxs)(m.MyZ, {
             contentDisplay: 'flex',
             activeSlide: +(null != l),

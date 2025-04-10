@@ -24,12 +24,12 @@ let N = function (e) {
     i.useEffect(() => P(e.formFields), [e.formFields]);
     let w = i.useRef(e.formFields),
         R = i.useMemo(() => T.filter(c.kT), [T]),
-        D = i.useMemo(() => T.filter(c._C), [T]),
-        Z = D.length,
+        Z = i.useMemo(() => T.filter(c._C), [T]),
+        D = Z.length,
         k = i.useMemo(() => T.length === h.nx, [T]),
-        A = i.useMemo(() => T.some(o.J), [T]),
-        W = i.useMemo(() => T.some((e) => !(0, o.J)(e)), [T]),
-        L = Z > 0,
+        W = i.useMemo(() => T.some(o.J), [T]),
+        A = i.useMemo(() => T.some((e) => !(0, o.J)(e)), [T]),
+        L = D > 0,
         M = t.hasFeature(b.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || _,
         G = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(x.NW.string(x.t.R0RpRU), a.ToastType.FAILURE));
@@ -100,7 +100,7 @@ let N = function (e) {
                     disable: !U
                 }),
                 U &&
-                    !A &&
+                    !W &&
                     !k &&
                     (0, r.jsx)(m.Z, {
                         addFormField: F,
@@ -128,14 +128,14 @@ let N = function (e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   !_ && K,
-                  !W &&
+                  !A &&
                       (0, r.jsx)(d.Z, {
                           addFormField: F,
                           showManualApprovalWarning: !_ && !L,
                           guild: t,
                           showHeader: !_
                       }),
-                  D.map((e) =>
+                  Z.map((e) =>
                       (0, f.a0)({
                           dropHoveredIndex: E,
                           formField: e,
@@ -146,12 +146,12 @@ let N = function (e) {
                           removeFormField: V,
                           updateFormField: z,
                           updateFormFieldOrder: H,
-                          canRemove: !(_ && D.length <= 1) && U,
+                          canRemove: !(_ && Z.length <= 1) && U,
                           actionsLocation: Y,
                           fieldStyle: o.it.REGULAR
                       })
                   ),
-                  W &&
+                  A &&
                       !k &&
                       U &&
                       (0, r.jsx)('div', {

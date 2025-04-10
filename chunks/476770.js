@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    i = n(692547),
+    i = n.n(l),
+    a = n(692547),
     s = n(481060),
     o = n(747995);
 function c(e) {
@@ -63,13 +63,13 @@ function u(e) {
                       size: 'sm',
                       color: 'currentColor',
                       className: o.requirementSuccess,
-                      secondaryColor: i.Z.colors.WHITE.css
+                      secondaryColor: a.Z.colors.WHITE.css
                   })
                 : (0, r.jsx)(s.k$p, {
                       size: 'sm',
                       color: 'currentColor',
                       className: o.requirementFailure,
-                      secondaryColor: i.Z.colors.WHITE.css
+                      secondaryColor: a.Z.colors.WHITE.css
                   })
         ]
     });
@@ -79,7 +79,7 @@ function m(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: a()(o.requirementContainer, u),
+                className: i()(o.requirementContainer, u),
                 children: [
                     (0, r.jsx)(t, {
                         className: o.requirementIcon,
@@ -98,7 +98,7 @@ function m(e) {
                               size: 'md',
                               color: 'currentColor',
                               className: o.requirementSuccess,
-                              secondaryColor: i.Z.colors.WHITE.css
+                              secondaryColor: a.Z.colors.WHITE.css
                           })
                         : d
                 ]

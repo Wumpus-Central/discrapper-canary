@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => g });
 var r = n(200651),
     l = n(192379),
     o = n(722770),
@@ -151,7 +151,7 @@ function h(e) {
         ]
     });
 }
-function g(e) {
+function j(e) {
     let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: n, incidentData: l, guildName: i } = e;
     return (0, r.jsxs)('div', {
         className: b.subheaderContainer,
@@ -219,7 +219,7 @@ function g(e) {
         ]
     });
 }
-function j(e) {
+function g(e) {
     let { guild: t, incidentData: n, isUnderLockdown: o, isRaidDetected: m } = e,
         b = l.useCallback(() => {
             (0, a.ZDy)(async () => {
@@ -283,7 +283,7 @@ function j(e) {
             let e = C.Z.getLastIncidentAlertMessage(t.id);
             (0, d.kW)(e, t.id);
         }, [t.id]),
-        j = (() => {
+        g = (() => {
             switch (!0) {
                 case m && o:
                     return 3;
@@ -296,7 +296,7 @@ function j(e) {
             }
         })();
     if (null == t || null == n) return null;
-    switch (j) {
+    switch (g) {
         case 1:
             return (0, r.jsx)(f, {
                 onHandleEnableLockdown: b,
@@ -310,7 +310,7 @@ function j(e) {
                 guildName: t.name
             });
         case 3:
-            return (0, r.jsx)(g, {
+            return (0, r.jsx)(j, {
                 onHandleEnableLockdown: b,
                 onHandleReportFalseAlarm: p,
                 incidentData: n,

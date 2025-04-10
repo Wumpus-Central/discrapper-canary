@@ -72,7 +72,7 @@ function N(e) {
             drag: P,
             dragSourcePosition: w,
             drop: R,
-            setIsDraggable: D
+            setIsDraggable: Z
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(N.id),
             index: T,
@@ -81,9 +81,9 @@ function N(e) {
             onDragComplete: I,
             onDragReset: E
         }),
-        { customEmoji: Z, unicodeEmoji: k } = (0, m.Z)(null == (t = y.emoji) ? void 0 : t.id, null == (i = y.emoji) ? void 0 : i.name);
+        { customEmoji: D, unicodeEmoji: k } = (0, m.Z)(null == (t = y.emoji) ? void 0 : t.id, null == (i = y.emoji) ? void 0 : i.name);
     return (
-        (0, f.Oq)(y.emoji) || null != Z || null != k || (S = h.NW.string(h.t['61wfmp'])),
+        (0, f.Oq)(y.emoji) || null != D || null != k || (S = h.NW.string(h.t['61wfmp'])),
         (0, r.jsxs)(o.P3F, {
             className: s()(b.optionCard, {
                 [b.hasError]: O || null != S,
@@ -111,8 +111,8 @@ function N(e) {
                             })
                         );
                 }),
-            onMouseEnter: () => D(!0),
-            onMouseLeave: () => D(!1),
+            onMouseEnter: () => Z(!0),
+            onMouseLeave: () => Z(!1),
             innerRef: (e) => P(R(e)),
             children: [
                 (0, r.jsx)('div', {

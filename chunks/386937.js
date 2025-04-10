@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -276,7 +276,7 @@ class R extends i.Component {
             );
     }
 }
-let D = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, _.default, N.ZP], () => {
+let Z = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, _.default, N.ZP], () => {
     let e = p.Z.getGuildId(),
         t = (0, h.I)(e),
         n = null != e ? j.Z.getAppliedGuildBoostsForGuild(e) : null,

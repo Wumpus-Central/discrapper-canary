@@ -56,16 +56,16 @@ function A(e, t, l, v) {
         D = g.ZP.canUseCustomNotificationSounds(I),
         M = D ? (null != L ? L : A) : j.YC.CLASSIC,
         T = p.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
-        [G, w] = r.useState(!1),
+        [w, G] = r.useState(!1),
         { playSound: k } = (0, h.Z)(),
         [U, C] = (0, c.cv)([l]),
         R = U === l;
     if (
         (r.useEffect(
             () => () => {
-                G && C(y.L.TAKE_ACTION);
+                w && C(y.L.TAKE_ACTION);
             },
-            [G, C]
+            [w, C]
         ),
         !T)
     )
@@ -89,7 +89,7 @@ function A(e, t, l, v) {
         label: (e) => {
             let { isFocused: t } = e;
             return (
-                t && w(t),
+                t && G(t),
                 (0, i.jsxs)('div', {
                     className: P.rootContainer,
                     children: [

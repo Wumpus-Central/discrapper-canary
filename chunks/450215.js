@@ -25,12 +25,12 @@ function O(e) {
     let { guildId: s, initialEditStateId: l, allSubscriptionListings: O, priceTiers: C, onDeleteEditState: I, groupListingId: E, onBeforeDispatchNewListing: S, onAfterDispatchNewListing: T } = e,
         [P, w] = i.useState(l),
         R = (0, c.e7)([f.Z], () => f.Z.getSubscriptionListing(P)),
-        D = null == R,
-        [Z, k] = i.useState(D),
-        A = null == R ? void 0 : R.subscription_plans[0],
-        W = null != (t = null == R ? void 0 : R.published) && t,
+        Z = null == R,
+        [D, k] = i.useState(Z),
+        W = null == R ? void 0 : R.subscription_plans[0],
+        A = null != (t = null == R ? void 0 : R.published) && t,
         L = null != (n = null == R ? void 0 : R.archived) && n,
-        M = !L && !W && void 0 !== R,
+        M = !L && !A && void 0 !== R,
         G = void 0 === R,
         U = (0, h.mY)(),
         [B] = x._T(P),
@@ -47,7 +47,7 @@ function O(e) {
         className: y.container,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(y.header, { [y.headerExpanded]: Z }),
+                className: a()(y.header, { [y.headerExpanded]: D }),
                 children: [
                     (0, r.jsx)('div', {
                         className: y.headerImageContainer,
@@ -93,24 +93,24 @@ function O(e) {
                                             text: _.NW.string(_.t.aiwXen),
                                             className: y.unsavedBadge
                                         }),
-                                    null != A &&
+                                    null != W &&
                                         (0, r.jsxs)(d.Text, {
                                             color: 'interactive-normal',
                                             variant: 'text-sm/normal',
-                                            children: [(0, m.T4)(A.price, A.currency), '/', (0, g.JE)(A)]
+                                            children: [(0, m.T4)(W.price, W.currency), '/', (0, g.JE)(W)]
                                         })
                                 ]
                             })
                         ]
                     }),
-                    Z
+                    D
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(d.zxk, {
                                       look: d.zxk.Looks.BLANK,
                                       className: y.cancel,
                                       onClick: () => {
-                                          x.GM(P), D ? null == I || I() : k(!1);
+                                          x.GM(P), Z ? null == I || I() : k(!1);
                                       },
                                       children: _.NW.string(_.t['ETE/oK'])
                                   }),
@@ -143,7 +143,7 @@ function O(e) {
                           })
                 ]
             }),
-            Z &&
+            D &&
                 (0, r.jsx)(b.I, {
                     editStateId: P,
                     guildId: s,

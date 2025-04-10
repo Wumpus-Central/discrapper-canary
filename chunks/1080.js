@@ -56,7 +56,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function D(e, t) {
         e
     );
 }
-function Z(e) {
+function D(e) {
     var t;
     let { transitionState: n, guild: s, user: a, ban: l, hideDiscriminator: c, onClose: m } = e,
         [g, b] = i.useState(!1),
@@ -89,7 +89,7 @@ function Z(e) {
                     m(),
                     v.default.track(
                         S.rMx.GUILD_BAN_REMOVED,
-                        D(R({}, (0, p.hH)(s.id)), {
+                        Z(R({}, (0, p.hH)(s.id)), {
                             target_user_id: a.id,
                             reason: l.reason,
                             location: _
@@ -206,8 +206,8 @@ class k extends i.PureComponent {
                 let { guild: e, user: t, hideDiscriminator: n, ban: i } = this.props;
                 (0, o.h7j)((s) =>
                     (0, r.jsx)(
-                        Z,
-                        D(R({}, s), {
+                        D,
+                        Z(R({}, s), {
                             guild: e,
                             user: t,
                             ban: i,
@@ -219,12 +219,12 @@ class k extends i.PureComponent {
             w(this, 'handleContextMenu', (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('23835').then(n.bind(n, 768079));
-                    return (t) => (0, r.jsx)(e, D(R({}, t), { user: this.props.user }));
+                    return (t) => (0, r.jsx)(e, Z(R({}, t), { user: this.props.user }));
                 });
             });
     }
 }
-let A = i.forwardRef(function (e, t) {
+let W = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: s, bans: a } = e,
         c = (0, l.e7)([j.Z], () => j.Z.hidePersonalInformation, []),
         d = i.useCallback(
@@ -274,7 +274,7 @@ let A = i.forwardRef(function (e, t) {
         ref: t
     });
 });
-function W(e) {
+function A(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [s, a] = i.useState(null != n ? n : ''),
         [l, c] = i.useState(!1),
@@ -387,15 +387,15 @@ function L() {
             [I]
         ),
         w = i.useMemo(() => E(b, u, j), [b, E, u, j]),
-        Z = null != b,
-        k = w.length % 1000 == 0 && w.length > 0 && Z,
+        D = null != b,
+        k = w.length % 1000 == 0 && w.length > 0 && D,
         L = 0 === w.length,
         [M, G] = i.useState({
             currentPage: 1,
             pageSize: 100
         });
     i.useEffect(() => {
-        h && 1 !== M.currentPage && G((e) => D(R({}, e), { currentPage: 1 }));
+        h && 1 !== M.currentPage && G((e) => Z(R({}, e), { currentPage: 1 }));
     }, [h, M.currentPage]);
     let U = i.useCallback(
             (e) => {
@@ -407,7 +407,7 @@ function L() {
         F = i.useCallback(
             (e) => {
                 var t, n, r;
-                null == (t = O.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && k && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || k) && G((t) => D(R({}, t), { currentPage: e }));
+                null == (t = O.current) || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && k && !p && ((z.current = null != (r = null == (n = w[w.length - 1]) ? void 0 : n.id) ? r : null), U(z.current)), (null != B[e - 1] || k) && G((t) => Z(R({}, t), { currentPage: e }));
             },
             [M.pageSize, w, k, B, U, p]
         ),
@@ -424,7 +424,7 @@ function L() {
         : (0, r.jsxs)('div', {
               className: P.container,
               children: [
-                  (0, r.jsx)(W, {
+                  (0, r.jsx)(A, {
                       guildId: y,
                       storedSearchQuery: u
                   }),
@@ -432,7 +432,7 @@ function L() {
                       className: P.scrollerContainer,
                       children: [
                           !L &&
-                              (0, r.jsx)(A, {
+                              (0, r.jsx)(W, {
                                   guild: c,
                                   bans: b,
                                   sortedBans: H,

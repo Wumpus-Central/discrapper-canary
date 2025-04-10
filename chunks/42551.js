@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(539854);
+n.d(t, { Z: () => N }), n(388685), n(539854);
 var r = n(200651),
     l = n(192379),
     o = n(120356),
@@ -14,19 +14,19 @@ var r = n(200651),
     p = n(563115),
     f = n(910693),
     h = n(893966),
-    g = n(527379),
-    j = n(285173),
+    j = n(527379),
+    g = n(285173),
     x = n(388032),
     O = n(506192),
     y = n(350381);
 let v = new Set();
-function _(e) {
+function N(e) {
     let { guildId: t, onClose: n } = e,
         o = (0, f.BG)(t),
         i = (0, m.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], C()),
         [c, d] = l.useState(i.selectedRoleIds),
-        _ = (0, p.h)(t, v, !0),
-        N = (e, n) => {
+        N = (0, p.h)(t, v, !0),
+        H = (e, n) => {
             let { record: l } = e;
             return (0, r.jsx)(
                 b.lo1,
@@ -41,7 +41,7 @@ function _(e) {
                                     (0, r.jsx)('div', { className: a()(O.labelBackground, n && O.selected) }),
                                     (0, r.jsx)(b.lo1.Label, {
                                         children: (0, r.jsx)(
-                                            j.Z,
+                                            g.Z,
                                             {
                                                 className: y.roleTooltipItem,
                                                 role: l,
@@ -62,15 +62,15 @@ function _(e) {
                 l.id
             );
         },
-        H = (e, t) =>
-            _.reduce((n, r) => {
+        _ = (e, t) =>
+            N.reduce((n, r) => {
                 let { record: l } = r,
                     o = e.has(l.id);
-                return s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(N(r, o)) : o && n.push(N(r, o)), n;
+                return s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(H(r, o)) : o && n.push(H(r, o)), n;
             }, []),
         w = l.useCallback(
             (e) => {
-                (0, g.Dr)(t, { selectedRoleIds: e }), o(e);
+                (0, j.Dr)(t, { selectedRoleIds: e }), o(e);
             },
             [t, o]
         ),
@@ -93,6 +93,6 @@ function _(e) {
         multiSelect: !0,
         showScrollbar: !0,
         autoFocus: !0,
-        children: (e) => H(c, e)
+        children: (e) => _(c, e)
     });
 }

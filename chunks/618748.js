@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(953529);
+n.d(t, { Z: () => A }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -30,8 +30,8 @@ var i = n(442837),
     P = n(981631),
     w = n(176505),
     R = n(829857),
-    D = n(388032),
-    Z = n(173409);
+    Z = n(388032),
+    D = n(173409);
 function k(e) {
     let { application: t, guild: n } = e,
         s = (0, x.YB)(n.id),
@@ -43,44 +43,44 @@ function k(e) {
         u = null != t && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         m = [
             {
-                title: D.NW.string(D.t.p2Rsdn),
+                title: Z.NW.string(Z.t.p2Rsdn),
                 items: [
                     {
-                        description: D.NW.string(D.t.zbO7fX),
+                        description: Z.NW.string(Z.t.zbO7fX),
                         completed: u
                     }
                 ]
             },
             {
-                title: D.NW.string(D.t['/CfKoK']),
+                title: Z.NW.string(Z.t['/CfKoK']),
                 items: [
                     {
-                        description: D.NW.string(D.t.zvuI3d),
+                        description: Z.NW.string(Z.t.zvuI3d),
                         completed: !0
                     },
                     {
-                        description: D.NW.string(D.t.cVcEYG),
+                        description: Z.NW.string(Z.t.cVcEYG),
                         completed: (null == s ? void 0 : s.description) != null && '' !== s.description
                     },
                     {
-                        description: D.NW.string(D.t['88XnXF']),
+                        description: Z.NW.string(Z.t['88XnXF']),
                         completed: (null == s ? void 0 : s.cover_image_asset) != null
                     }
                 ]
             },
             {
-                title: D.NW.string(D.t.pXbGYW),
+                title: Z.NW.string(Z.t.pXbGYW),
                 items: [
                     {
-                        description: D.NW.string(D.t.pCxWKC),
+                        description: Z.NW.string(Z.t.pCxWKC),
                         completed: l
                     },
                     {
-                        description: D.NW.string(D.t['+amv5e']),
+                        description: Z.NW.string(Z.t['+amv5e']),
                         completed: c
                     },
                     {
-                        description: D.NW.string(D.t['/P03Cw']),
+                        description: Z.NW.string(Z.t['/P03Cw']),
                         completed: d
                     }
                 ]
@@ -88,7 +88,7 @@ function k(e) {
         ];
     return (0, r.jsx)(I.Z, { children: m });
 }
-function A(e) {
+function W(e) {
     let { application: t } = e,
         { teams: n } = (0, g.Z)({ refreshOnDepChange: !1 }),
         i = n.find((e) => {
@@ -98,11 +98,11 @@ function A(e) {
         a = [R.C.ACTION_REQUIRED, R.C.BLOCKED, R.C.SUSPENDED];
     return (null == i ? void 0 : i.payout_account_status) != null && a.includes(null == i ? void 0 : i.payout_account_status)
         ? (0, r.jsxs)(r.Fragment, {
-              children: [(0, r.jsx)(s.LZC, { size: 16 }), (0, r.jsx)(y.Z, { children: D.NW.format(D.t.Yo0ZBw, { url: P.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }) }), (0, r.jsx)(s.LZC, { size: 16 })]
+              children: [(0, r.jsx)(s.LZC, { size: 16 }), (0, r.jsx)(y.Z, { children: Z.NW.format(Z.t.Yo0ZBw, { url: P.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }) }), (0, r.jsx)(s.LZC, { size: 16 })]
           })
         : null;
 }
-function W(e) {
+function A(e) {
     let t,
         { guild: n, application: s } = e,
         a = (0, i.e7)([c.Z], () => c.Z.getProps().subsection),
@@ -135,7 +135,7 @@ function L(e) {
         y = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         I = (0, v.Z)(n.id),
         R = n.isOwner(y),
-        W = () => {
+        A = () => {
             let e = p.Z.getRole(n.id, n.getEveryoneRoleId());
             if (null == e) return;
             o.Z.close();
@@ -167,27 +167,27 @@ function L(e) {
             (0, h.vE)(g);
     }
     return (0, r.jsxs)('div', {
-        className: Z.container,
+        className: D.container,
         children: [
             (0, r.jsxs)('div', {
-                className: Z.mainContent,
+                className: D.mainContent,
                 children: [
                     (0, r.jsx)(s.vwX, {
                         tag: 'h1',
-                        children: D.NW.string(D.t['KzCF//'])
+                        children: Z.NW.string(Z.t['KzCF//'])
                     }),
                     (0, r.jsx)(s.R94, {
                         type: s.R94.Types.DESCRIPTION,
-                        children: D.NW.string(D.t.KyGv0t)
+                        children: Z.NW.string(Z.t.KyGv0t)
                     }),
                     (0, r.jsx)(_.Z, { guild: n }),
-                    c && (0, r.jsx)(A, { application: l }),
+                    c && (0, r.jsx)(W, { application: l }),
                     (0, r.jsxs)('div', {
-                        className: Z.tabBarContainer,
+                        className: D.tabBarContainer,
                         children: [
                             (0, r.jsxs)(s.njP, {
-                                className: Z.tabBar,
-                                'aria-label': D.NW.string(D.t['+1H47u']),
+                                className: D.tabBar,
+                                'aria-label': Z.NW.string(Z.t['+1H47u']),
                                 selectedItem: g,
                                 type: 'top',
                                 look: 'brand',
@@ -195,49 +195,49 @@ function L(e) {
                                 children: [
                                     (0, r.jsx)(a.Z, {
                                         id: S.ue.BASIC_INFO,
-                                        disabledTooltip: D.NW.string(D.t.NVDuUV),
+                                        disabledTooltip: Z.NW.string(Z.t.NVDuUV),
                                         disabled: !c,
-                                        children: D.NW.string(D.t['/CfKoK'])
+                                        children: Z.NW.string(Z.t['/CfKoK'])
                                     }),
                                     (0, r.jsx)(a.Z, {
                                         id: S.ue.TIERS,
-                                        disabledTooltip: D.NW.string(D.t.NVDuUV),
+                                        disabledTooltip: Z.NW.string(Z.t.NVDuUV),
                                         disabled: !c,
-                                        children: D.NW.string(D.t.pXbGYW)
+                                        children: Z.NW.string(Z.t.pXbGYW)
                                     }),
                                     (0, r.jsx)(a.Z, {
                                         id: S.ue.EMOJIS,
-                                        disabledTooltip: D.NW.string(D.t.NVDuUV),
+                                        disabledTooltip: Z.NW.string(Z.t.NVDuUV),
                                         disabled: !c,
-                                        children: D.NW.string(D.t.XBkDoK)
+                                        children: Z.NW.string(Z.t.XBkDoK)
                                     }),
                                     R
                                         ? (0, r.jsx)(s.njP.Item, {
-                                              className: Z.__invalid_tabBarItem,
+                                              className: D.__invalid_tabBarItem,
                                               id: S.ue.PAYMENT,
-                                              children: D.NW.string(D.t.p2Rsdn)
+                                              children: Z.NW.string(Z.t.p2Rsdn)
                                           })
                                         : null
                                 ]
                             }),
                             c &&
                                 (0, r.jsx)('div', {
-                                    className: Z.previewButton,
+                                    className: D.previewButton,
                                     children: (0, r.jsx)(s.ua7, {
-                                        text: D.NW.string(D.t['1wCH4O']),
+                                        text: Z.NW.string(Z.t['1wCH4O']),
                                         children: (e) => {
                                             let { onMouseEnter: t, onMouseLeave: n } = e;
                                             return (0, r.jsx)(s.zxk, {
                                                 disabled: I,
                                                 onMouseEnter: I ? t : void 0,
                                                 onMouseLeave: I ? n : void 0,
-                                                onClick: W,
+                                                onClick: A,
                                                 color: s.zxk.Colors.PRIMARY,
                                                 size: s.zxk.Sizes.SMALL,
                                                 grow: !I,
                                                 look: s.zxk.Looks.OUTLINED,
-                                                className: Z.previewButton,
-                                                children: D.NW.string(D.t.vM81yc)
+                                                className: D.previewButton,
+                                                children: Z.NW.string(Z.t.vM81yc)
                                             });
                                         }
                                     })

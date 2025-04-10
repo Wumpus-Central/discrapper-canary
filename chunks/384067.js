@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
@@ -12,11 +12,11 @@ var r = n(200651),
     p = n(981631),
     f = n(388032),
     g = n(806734);
-let h = (e) => {
+let m = (e) => {
     var t, n, a;
-    let { wideBannerBlock: h, handleTransition: m, tab: _ } = e,
-        v = null == (t = u.Z.getCategoryByStoreListingId(h.categoryStoreListingId)) ? void 0 : t.skuId,
-        C = l.useRef(null),
+    let { wideBannerBlock: m, handleTransition: h, tab: _ } = e,
+        C = null == (t = u.Z.getCategoryByStoreListingId(m.categoryStoreListingId)) ? void 0 : t.skuId,
+        v = l.useRef(null),
         x = l.useRef(null),
         [O, j] = l.useState();
     l.useEffect(() => {
@@ -32,17 +32,17 @@ let h = (e) => {
             }
         );
     }, []);
-    let y = null != v ? v : '',
+    let y = null != C ? C : '',
         { handleCardVisibilityChange: k } = (0, d.E)(y, 'home', 'marketing wide banner'),
-        S = h.bannerUrl;
+        S = m.bannerUrl;
     return null == S
         ? null
         : (0, r.jsx)(i.$, {
-              innerRef: C,
+              innerRef: v,
               onChange: k,
               threshold: 0,
               children: (0, r.jsxs)('div', {
-                  ref: C,
+                  ref: v,
                   className: o()(g.row, g.between, g.bannerBlockContainer, g.centeredSection),
                   children: [
                       (0, r.jsx)('div', {
@@ -50,7 +50,7 @@ let h = (e) => {
                           children: (0, r.jsx)('img', {
                               ref: x,
                               src: S,
-                              alt: h.title,
+                              alt: m.title,
                               style: {
                                   width: '100%',
                                   height: null != O ? ''.concat(O, 'px') : 'auto',
@@ -67,24 +67,24 @@ let h = (e) => {
                               className: g.wideBannerTextContainer,
                               children: [
                                   (0, r.jsx)(s.X6q, {
-                                      style: { color: null != (n = h.bannerTextColor) ? n : 'var(--text-normal)' },
+                                      style: { color: null != (n = m.bannerTextColor) ? n : 'var(--text-normal)' },
                                       variant: _ === b.AW.ORBS ? 'heading-xl/bold' : 'heading-lg/semibold',
-                                      children: h.title
+                                      children: m.title
                                   }),
                                   (0, r.jsx)(s.Text, {
-                                      style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-normal)' },
+                                      style: { color: null != (a = m.bannerTextColor) ? a : 'var(--text-normal)' },
                                       lineClamp: 2,
                                       variant: _ === b.AW.ORBS ? 'text-md/medium' : 'text-sm/medium',
-                                      children: _ === b.AW.ORBS ? f.NW.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(p.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
+                                      children: _ === b.AW.ORBS ? f.NW.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(p.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : m.body
                                   })
                               ]
                           })
                       }),
-                      !0 !== h.disableCta &&
+                      !0 !== m.disableCta &&
                           (0, r.jsx)(s.zxk, {
                               className: g.wideBannerBlockButton,
                               color: s.Ttl.PRIMARY,
-                              onClick: () => m('shop wide banner', y),
+                              onClick: () => h('shop wide banner', y),
                               children: f.NW.string(f.t.jVcuVV)
                           })
                   ]

@@ -87,10 +87,10 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             P || null == d || ((0, g.le)(), (0, g.aC)(d.id), (0, g.i3)(d.id), w(!0));
         }, [d, P]);
         let { canManageGuild: R } = (0, s.cj)([b.Z], () => ({ canManageGuild: b.Z.can(I.Plq.MANAGE_GUILD, d) })),
-            D = (0, s.e7)([v.Z], () => v.Z.isGuildMetadataLoaded()),
-            Z = (0, s.e7)([v.Z], () => (null != d ? v.Z.getMetadata() : null)),
-            k = (0, s.e7)([v.Z], () => (null != d && (null == Z ? void 0 : Z.isPublished) ? v.Z.getSlug() : null)),
-            [A, W] = i.useState([!0]),
+            Z = (0, s.e7)([v.Z], () => v.Z.isGuildMetadataLoaded()),
+            D = (0, s.e7)([v.Z], () => (null != d ? v.Z.getMetadata() : null)),
+            k = (0, s.e7)([v.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? v.Z.getSlug() : null)),
+            [W, A] = i.useState([!0]),
             [L, M] = i.useState(!0),
             [G, U] = i.useState([!1]),
             [B, F] = i.useState(['']),
@@ -121,22 +121,22 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 }
             };
         i.useEffect(() => {
-            if (null !== Z) {
+            if (null !== D) {
                 let e = [],
                     t = [];
-                Z.socialLinks.forEach((n, r) => {
+                D.socialLinks.forEach((n, r) => {
                     if ('' !== n) {
                         let i = H(n);
                         null !== i ? ((t[r] = i), (e[r] = !0)) : (e[r] = !1);
                     } else e[r] = !0;
                 }),
                     F(t),
-                    W(e),
+                    A(e),
                     M(e.every((e) => !0 === e));
             }
-        }, [Z]);
+        }, [D]);
         let V = (0, s.e7)([v.Z], () => (null != d ? v.Z.getErrors() : null));
-        if (null == d || null == Z) return null;
+        if (null == d || null == D) return null;
         let Y = (e) => {
                 N.Z.updateGuild({ discoverySplash: e });
             },
@@ -146,27 +146,27 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         e
                             ? (0, g.Vv)({
                                   guildId: d.id,
-                                  primaryCategoryId: Z.primaryCategoryId,
-                                  keywords: Z.keywords,
-                                  emojiDiscoverabilityEnabled: Z.emojiDiscoverabilityEnabled,
-                                  partnerActionedTimestamp: Z.partnerActionedTimestamp,
-                                  partnerApplicationTimestamp: Z.partnerApplicationTimestamp,
+                                  primaryCategoryId: D.primaryCategoryId,
+                                  keywords: D.keywords,
+                                  emojiDiscoverabilityEnabled: D.emojiDiscoverabilityEnabled,
+                                  partnerActionedTimestamp: D.partnerActionedTimestamp,
+                                  partnerApplicationTimestamp: D.partnerApplicationTimestamp,
                                   isPublished: !0,
-                                  reasonsToJoin: Z.reasonsToJoin,
-                                  socialLinks: Z.socialLinks,
-                                  about: Z.about
+                                  reasonsToJoin: D.reasonsToJoin,
+                                  socialLinks: D.socialLinks,
+                                  about: D.about
                               })
                             : (0, g.Vv)({
                                   guildId: d.id,
-                                  primaryCategoryId: Z.primaryCategoryId,
-                                  keywords: Z.keywords,
-                                  emojiDiscoverabilityEnabled: Z.emojiDiscoverabilityEnabled,
-                                  partnerActionedTimestamp: Z.partnerActionedTimestamp,
-                                  partnerApplicationTimestamp: Z.partnerApplicationTimestamp,
+                                  primaryCategoryId: D.primaryCategoryId,
+                                  keywords: D.keywords,
+                                  emojiDiscoverabilityEnabled: D.emojiDiscoverabilityEnabled,
+                                  partnerActionedTimestamp: D.partnerActionedTimestamp,
+                                  partnerApplicationTimestamp: D.partnerApplicationTimestamp,
                                   isPublished: !1,
-                                  reasonsToJoin: Z.reasonsToJoin,
-                                  socialLinks: Z.socialLinks,
-                                  about: Z.about
+                                  reasonsToJoin: D.reasonsToJoin,
+                                  socialLinks: D.socialLinks,
+                                  about: D.about
                               }),
                         N.Z.saveGuild(d.id, {
                             discoverySplash: d.discoverySplash,
@@ -184,13 +184,13 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     : t();
             },
             q = (e, t) => {
-                let n = [...Z.socialLinks],
+                let n = [...D.socialLinks],
                     r = [...B],
-                    i = [...A];
-                (r[t] = e), (n[t] = C.z[e].baseUrl), (i[t] = !0), W(i), F(r), M(i.every((e) => !0 === e)), (0, g.t$)(d.id, n);
+                    i = [...W];
+                (r[t] = e), (n[t] = C.z[e].baseUrl), (i[t] = !0), A(i), F(r), M(i.every((e) => !0 === e)), (0, g.t$)(d.id, n);
             },
             X = (e, t) => {
-                let n = [...Z.socialLinks],
+                let n = [...D.socialLinks],
                     r = n[t],
                     i = e;
                 0 === r.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), /\.(zip|exe|pdf|dmg|msi|apk|rar|7z|tar|gz|iso|docx?|xlsx?|pptx?|mp4|mp3)$/i.test(i) || ((n[t] = i), (0, g.t$)(d.id, n));
@@ -198,11 +198,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             J = (e) => {
                 let t = [...G];
                 t.splice(e, 1), U(t);
-                let n = [...A];
-                n.splice(e, 1), W(n);
+                let n = [...W];
+                n.splice(e, 1), A(n);
                 let r = [...B];
                 r.splice(e, 1), F(r);
-                let i = [...Z.socialLinks];
+                let i = [...D.socialLinks];
                 i.splice(e, 1), (0, g.t$)(d.id, i);
             },
             Q = (e) => {
@@ -227,11 +227,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                         },
                         {
                             description: E.NW.string(E.t.m3b3WF),
-                            completed: null !== Z.about && Z.about.length >= 300 && Z.about.length <= 2400
+                            completed: null !== D.about && D.about.length >= 300 && D.about.length <= 2400
                         },
                         {
                             description: E.NW.string(E.t.qpx5MD),
-                            completed: null !== Z.reasonsToJoin && Z.reasonsToJoin.every((e) => $(e) || Q(e)) && Z.reasonsToJoin.filter(Q).length >= 2
+                            completed: null !== D.reasonsToJoin && D.reasonsToJoin.every((e) => $(e) || Q(e)) && D.reasonsToJoin.filter(Q).length >= 2
                         }
                     ]
                 }
@@ -267,7 +267,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 children: [E.NW.format(E.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', E.NW.format(E.t.T6WtKy, { learnMoreURL: j.Z.getArticleURL(I.BhN.SERVER_WEB_PAGES) })]
                                             }),
                                             (() => {
-                                                if (!Z.isPublished || null == k) return;
+                                                if (!D.isPublished || null == k) return;
                                                 let e = T + k;
                                                 return (0, r.jsxs)(l.hjN, {
                                                     className: S.noDividerFormSection,
@@ -307,7 +307,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                             }),
                                                             (0, r.jsx)(_.E, {
                                                                 guildId: d.id,
-                                                                guildMetadata: Z,
+                                                                guildMetadata: D,
                                                                 isDisabled: !R
                                                             }),
                                                             (0, r.jsxs)(l.hjN, {
@@ -319,7 +319,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     }),
                                                                     (0, r.jsx)(y.Z, {
                                                                         guild: d,
-                                                                        guildMetadata: Z,
+                                                                        guildMetadata: D,
                                                                         disabled: !R
                                                                     })
                                                                 ]
@@ -419,14 +419,14 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             }),
                                             (0, r.jsx)(l.$i$, { className: S.divider }),
                                             (() => {
-                                                if (null == Z) return null;
+                                                if (null == D) return null;
                                                 let e =
-                                                    0 === Z.reasonsToJoin.length
+                                                    0 === D.reasonsToJoin.length
                                                         ? [, , , ,].fill({
                                                               reason: '',
                                                               emoji_name: null
                                                           })
-                                                        : Z.reasonsToJoin;
+                                                        : D.reasonsToJoin;
                                                 return (0, r.jsxs)(l.hjN, {
                                                     children: [
                                                         (0, r.jsx)(l.vwX, {
@@ -476,7 +476,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 {
                                                                     showCharacterCount: !0,
                                                                     className: S.textArea,
-                                                                    value: Z.about,
+                                                                    value: D.about,
                                                                     placeholder: E.NW.string(E.t.TduTbm),
                                                                     onChange: (e) => {
                                                                         (0, g.mA)(d.id, e);
@@ -484,9 +484,9 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     minLength: 300,
                                                                     maxLength: 2400,
                                                                     disabled: !R,
-                                                                    defaultDirty: (null == (e = Z.about) ? void 0 : e.length) > 0
+                                                                    defaultDirty: (null == (e = D.about) ? void 0 : e.length) > 0
                                                                 },
-                                                                'text-area-'.concat(D)
+                                                                'text-area-'.concat(Z)
                                                             )
                                                         ]
                                                     }),
@@ -511,7 +511,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         type: l.geA.DESCRIPTION,
                                                         children: E.NW.string(E.t.d3kA9f)
                                                     }),
-                                                    Z.socialLinks.map((e, t) =>
+                                                    D.socialLinks.map((e, t) =>
                                                         (0, r.jsxs)(
                                                             'div',
                                                             {
@@ -524,7 +524,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     (0, r.jsx)(
                                                                         l.q4e,
                                                                         {
-                                                                            className: Z.isPublished ? S.socialLinksDropdownMax : S.socialLinksDropdownMin,
+                                                                            className: D.isPublished ? S.socialLinksDropdownMax : S.socialLinksDropdownMin,
                                                                             options: z(B[t]),
                                                                             placeholder: E.NW.string(E.t.xSALIC),
                                                                             value: B[t],
@@ -537,7 +537,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         l.oil,
                                                                         {
                                                                             value: e,
-                                                                            className: Z.isPublished ? S.socialLinksMax : S.socialLinksMin,
+                                                                            className: D.isPublished ? S.socialLinksMax : S.socialLinksMin,
                                                                             onChange: (e) => X(e, t),
                                                                             placeholder: E.NW.string(E.t.Q6o4pK),
                                                                             maxLength: 150,
@@ -545,12 +545,12 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         },
                                                                         'link-' + t
                                                                     ),
-                                                                    A[t]
+                                                                    W[t]
                                                                         ? (0, r.jsx)(
                                                                               l.owK,
                                                                               {
                                                                                   size: 'custom',
-                                                                                  className: Z.isPublished ? S.validationButtonMax : S.validationButtonMin,
+                                                                                  className: D.isPublished ? S.validationButtonMax : S.validationButtonMin,
                                                                                   color: a.Z.unsafe_rawColors.GREEN_230.css,
                                                                                   width: 20,
                                                                                   height: 20
@@ -561,7 +561,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                               l.k$p,
                                                                               {
                                                                                   size: 'custom',
-                                                                                  className: Z.isPublished ? S.validationButtonMax : S.validationButtonMin,
+                                                                                  className: D.isPublished ? S.validationButtonMax : S.validationButtonMin,
                                                                                   color: a.Z.unsafe_rawColors.RED_400.css,
                                                                                   width: 20,
                                                                                   height: 20
@@ -572,7 +572,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         (0, r.jsx)(
                                                                             o.Z,
                                                                             {
-                                                                                className: G[t] ? (Z.isPublished ? S.deleteButtonMax : S.deleteButtonMin) : Z.isPublished ? S.deleteButtonHiddenMax : S.deleteButtonHiddenMin,
+                                                                                className: G[t] ? (D.isPublished ? S.deleteButtonMax : S.deleteButtonMin) : D.isPublished ? S.deleteButtonHiddenMax : S.deleteButtonHiddenMin,
                                                                                 onClick: () => J(t)
                                                                             },
                                                                             'delete-button-' + t
@@ -593,17 +593,17 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         size: l.zxk.Sizes.SMALL,
                                                         color: l.zxk.Colors.PRIMARY,
                                                         onClick: () => {
-                                                            if (Z.socialLinks.length < 9) {
-                                                                let e = [...Z.socialLinks];
+                                                            if (D.socialLinks.length < 9) {
+                                                                let e = [...D.socialLinks];
                                                                 (0, g.t$)(d.id, e.concat('')), F(B.concat(''));
                                                             }
                                                         },
-                                                        disabled: !R || Z.socialLinks.length >= 9,
+                                                        disabled: !R || D.socialLinks.length >= 9,
                                                         children: E.NW.string(E.t.QvovjY)
                                                     })
                                                 ]
                                             }),
-                                            Z.isPublished &&
+                                            D.isPublished &&
                                                 (0, r.jsxs)(r.Fragment, {
                                                     children: [
                                                         (0, r.jsx)(l.$i$, { className: S.divider }),
@@ -638,7 +638,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 : null
                                         ]
                                     }),
-                                    !Z.isPublished &&
+                                    !D.isPublished &&
                                         (0, r.jsx)('div', {
                                             className: S.checklist,
                                             children: (0, r.jsx)(m.Z, {

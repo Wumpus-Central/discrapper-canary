@@ -78,20 +78,20 @@ function h(e) {
             mainContainerRef: j
         }),
         {
-            state: { value: R, tags: D, selections: Z, isSelecting: k }
+            state: { value: R, tags: Z, selections: D, isSelecting: k }
         } = v,
-        A = (0, o.Z)(D),
-        [W, L] = i.useState(!1),
+        W = (0, o.Z)(Z),
+        [A, L] = i.useState(!1),
         M = i.useCallback(() => {
             var e;
             L(!1), P(), null == (e = x.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
-        A !== D && s(D);
-    }, [s, A, D]),
+        W !== Z && s(Z);
+    }, [s, W, Z]),
         i.useEffect(() => {
-            W || c(R);
-        }, [c, R, W]);
+            A || c(R);
+        }, [c, R, A]);
     let G = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -103,7 +103,7 @@ function h(e) {
             (e) => (t) => {
                 if (t) {
                     var n;
-                    let t = Z.includes(D[e]);
+                    let t = D.includes(Z[e]);
                     null == (n = x.current) || n.focus(),
                         t
                             ? T(e)
@@ -118,7 +118,7 @@ function h(e) {
                               }));
                 } else T(e, !0), L(!0);
             },
-            [S, T, Z, D]
+            [S, T, D, Z]
         );
     return (0, r.jsxs)('div', {
         className: a()(g.mainContainer, h),
@@ -130,7 +130,7 @@ function h(e) {
                 ref: N,
                 onClick: M,
                 children: [
-                    D.map((e, t) =>
+                    Z.map((e, t) =>
                         (0, r.jsx)(
                             d.Z,
                             {
@@ -139,22 +139,22 @@ function h(e) {
                                 onBlur: G,
                                 onFocus: U(t),
                                 onRemove: () => I(t),
-                                isSelected: Z.includes(e),
+                                isSelected: D.includes(e),
                                 isSelecting: k,
                                 error: u[e],
-                                forceShowErrorTooltip: !W && t === D.length - 1
+                                forceShowErrorTooltip: !A && t === Z.length - 1
                             },
                             t
                         )
                     ),
                     (0, r.jsx)('input', {
-                        className: a()(g.mainTextInput, { [g.isEditingOtherNodes]: W }),
+                        className: a()(g.mainTextInput, { [g.isEditingOtherNodes]: A }),
                         ref: x,
                         onChange: y,
                         onKeyDownCapture: O,
                         onPaste: _,
                         onBlur: w,
-                        placeholder: 0 === D.length ? p : void 0,
+                        placeholder: 0 === Z.length ? p : void 0,
                         value: R
                     })
                 ]
@@ -164,7 +164,7 @@ function h(e) {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     className: g.maxTags,
-                    children: [null != (t = null == D ? void 0 : D.length) ? t : 0, '/', b]
+                    children: [null != (t = null == Z ? void 0 : Z.length) ? t : 0, '/', b]
                 })
         ]
     });

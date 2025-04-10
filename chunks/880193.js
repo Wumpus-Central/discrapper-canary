@@ -29,7 +29,7 @@ function v(e) {
         [I, E] = p.PK(n),
         [S, T] = p.d9(n, 1024),
         { imageCTA: P, imageAriaLabel: w, setFilename: R } = (0, f.Z)(v),
-        D = i.useMemo(() => {
+        Z = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -42,12 +42,12 @@ function v(e) {
                 ? e
                 : [];
         }, [t]);
-    function Z(e, t) {
+    function D(e, t) {
         null != t && R(t.name), T(e);
     }
     let k = (0, m.mY)(),
-        A = (0, l.Dt)(),
         W = (0, l.Dt)(),
+        A = (0, l.Dt)(),
         L = (0, l.Dt)();
     return (0, r.jsxs)(h.Z, {
         title: x.NW.string(x.t.iHU439),
@@ -60,14 +60,14 @@ function v(e) {
                         className: N.formSplitHalf,
                         children: (0, r.jsx)(a.hjN, {
                             title: x.NW.string(x.t.grbGJy),
-                            titleId: A,
+                            titleId: W,
                             disabled: k,
                             children: (0, r.jsx)(a.oil, {
                                 placeholder: x.NW.string(x.t['So2/xM']),
                                 value: _,
                                 inputClassName: j.formInput,
                                 onChange: y,
-                                'aria-labelledby': A,
+                                'aria-labelledby': W,
                                 disabled: k
                             })
                         })
@@ -76,10 +76,10 @@ function v(e) {
                         className: N.formSplitHalf,
                         children: (0, r.jsx)(a.hjN, {
                             title: x.NW.string(x.t.Ibl4BQ),
-                            titleId: W,
+                            titleId: A,
                             disabled: k,
                             children: (0, r.jsx)(a.q4e, {
-                                options: D,
+                                options: Z,
                                 className: j.formInput,
                                 isDisabled: k || null == t,
                                 placeholder: x.NW.string(x.t['88XZDg']),
@@ -87,7 +87,7 @@ function v(e) {
                                 onChange: C,
                                 maxVisibleItems: 5,
                                 look: a.qQH.CUSTOM,
-                                'aria-labelledby': W
+                                'aria-labelledby': A
                             })
                         })
                     })
@@ -125,7 +125,7 @@ function v(e) {
                                 children: x.NW.string(x.t['0iUofH'])
                             }),
                             (0, r.jsx)(o.Z, {
-                                onChange: Z,
+                                onChange: D,
                                 buttonCTA: P,
                                 'aria-label': w,
                                 disabled: k,
@@ -142,7 +142,7 @@ function v(e) {
                         hideSize: !0,
                         className: N.iconUploader,
                         imageClassName: N.tierSymbolUploaderInner,
-                        onChange: Z,
+                        onChange: D,
                         'aria-label': w,
                         disabled: k
                     })

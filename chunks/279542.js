@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => D,
+    ZP: () => Z,
     fp: () => P,
     k0: () => T
 }),
@@ -298,7 +298,7 @@ function R(e) {
           })
         : null;
 }
-function D() {
+function Z() {
     let { guild: e, mfaLevel: t } = (0, o.cj)([N.Z], () => N.Z.getProps(), []),
         n = (0, o.e7)([f.Z], () => f.Z.enabled, []);
     return null == e
