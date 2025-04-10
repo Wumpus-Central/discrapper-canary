@@ -69,8 +69,7 @@ let C = (e) => {
                                                           product: e,
                                                           category: n,
                                                           user: O,
-                                                          tab: x,
-                                                          isInFeedView: !0
+                                                          tab: x
                                                       },
                                                       e.skuId
                                                   )

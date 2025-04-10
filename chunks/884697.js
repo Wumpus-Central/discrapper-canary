@@ -15,6 +15,7 @@ n.d(t, {
     f_: () => T,
     gc: () => O,
     iC: () => x,
+    jm: () => J,
     mO: () => G,
     ne: () => X,
     qS: () => b,
@@ -263,4 +264,24 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     X = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: r } = e;
         return !n && !(f.Vt.ORB_PROFILE_BADGE === (null == t ? void 0 : t.skuId) && r);
+    },
+    J = (e, t) => {
+        switch (e) {
+            case i.Z.AVATAR_DECORATION:
+                return 'avatar decoration';
+            case i.Z.PROFILE_EFFECT:
+                return 'profile effect';
+            case i.Z.NAMEPLATE:
+                return 'nameplate';
+            case i.Z.BUNDLE:
+                return 'bundle';
+            case i.Z.EXTERNAL_SKU:
+                if (t === f.Vt.FRACTIONAL_PREMIUM) return '3-day nitro credit';
+                if (t === f.Vt.ORB_PROFILE_BADGE) return 'orb profile badge';
+                return 'unknown';
+            case i.Z.VARIANTS_GROUP:
+                return 'variants group';
+            default:
+                return 'unknown';
+        }
     };

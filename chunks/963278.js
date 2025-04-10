@@ -56,8 +56,7 @@ let f = (e) => {
                                                     product: o,
                                                     category: a,
                                                     user: f,
-                                                    tab: l,
-                                                    isInFeedView: !0
+                                                    tab: l
                                                 },
                                                 e
                                             )
