@@ -1,61 +1,62 @@
-i.d(e, { Z: () => h }), i(388685);
-var s = i(512722),
-    n = i.n(s),
-    a = i(921608),
-    r = i(693824);
-function o(t, e, i) {
+n.d(t, { Z: () => c }), n(388685);
+var r = n(512722),
+    i = n.n(r),
+    o = n(921608),
+    a = n(693824);
+function s(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = i),
-        t
+            : (e[t] = n),
+        e
     );
 }
-let h = class {
+class l {
     getCanvas() {
         return this.canvas;
     }
-    setColor(t) {
-        this.color = t;
+    setColor(e) {
+        this.color = e;
     }
-    setFont(t) {
-        var e, i, s, n, a;
-        (this.font.style = null != (e = t.style) ? e : this.font.style), (this.font.size = null != (i = t.size) ? i : this.font.size), (this.font.weight = null != (s = t.weight) ? s : this.font.weight), (this.font.family = null != (n = t.family) ? n : this.font.family), (this.font.truncate = null != (a = t.truncate) ? a : this.font.truncate);
+    setFont(e) {
+        var t, n, r, i, o;
+        (this.font.style = null != (t = e.style) ? t : this.font.style), (this.font.size = null != (n = e.size) ? n : this.font.size), (this.font.weight = null != (r = e.weight) ? r : this.font.weight), (this.font.family = null != (i = e.family) ? i : this.font.family), (this.font.truncate = null != (o = e.truncate) ? o : this.font.truncate);
     }
-    setFilter(t) {
-        var e, i, s, n, a, r, o, h, l;
-        (this.filter.blur = null != (e = t.blur) ? e : this.filter.blur), (this.filter.brightness = null != (i = t.brightness) ? i : this.filter.brightness), (this.filter.contrast = null != (s = t.contrast) ? s : this.filter.contrast), (this.filter.grayscale = null != (n = t.grayscale) ? n : this.filter.grayscale), (this.filter.hueRotation = null != (a = t.hueRotation) ? a : this.filter.hueRotation), (this.filter.invert = null != (r = t.invert) ? r : this.filter.invert), (this.filter.opacity = null != (o = t.opacity) ? o : this.filter.opacity), (this.filter.saturate = null != (h = t.saturate) ? h : this.filter.saturate), (this.filter.sepia = null != (l = t.sepia) ? l : this.filter.sepia);
+    setFilter(e) {
+        var t, n, r, i, o, a, s, l, c;
+        (this.filter.blur = null != (t = e.blur) ? t : this.filter.blur), (this.filter.brightness = null != (n = e.brightness) ? n : this.filter.brightness), (this.filter.contrast = null != (r = e.contrast) ? r : this.filter.contrast), (this.filter.grayscale = null != (i = e.grayscale) ? i : this.filter.grayscale), (this.filter.hueRotation = null != (o = e.hueRotation) ? o : this.filter.hueRotation), (this.filter.invert = null != (a = e.invert) ? a : this.filter.invert), (this.filter.opacity = null != (s = e.opacity) ? s : this.filter.opacity), (this.filter.saturate = null != (l = e.saturate) ? l : this.filter.saturate), (this.filter.sepia = null != (c = e.sepia) ? c : this.filter.sepia);
     }
     getFilterString() {
-        return ['blur('.concat(this.filter.blur, 'px)'), 'hue-rotate('.concat(this.filter.hueRotation, 'deg)'), ...['brightness', 'contrast', 'grayscale', 'invert', 'opacity', 'saturate', 'sepia'].map((t) => ''.concat(t, '(').concat(this.filter[t], ')'))].join(' ');
+        let e = ['brightness', 'contrast', 'grayscale', 'invert', 'opacity', 'saturate', 'sepia'];
+        return ['blur('.concat(this.filter.blur, 'px)'), 'hue-rotate('.concat(this.filter.hueRotation, 'deg)'), ...e.map((e) => ''.concat(e, '(').concat(this.filter[e], ')'))].join(' ');
     }
-    getLoadedImage(t) {
-        n()(null != this.assetMap, 'DiscordCanvas: An AssetStore has not been initialized.');
-        let e = this.assetMap.get(t);
-        return void 0 === e ? void console.error("DiscordCanvas: AssetMap hasn't loaded ".concat(t, '.  Make sure to load it before trying to render.')) : e;
+    getLoadedImage(e) {
+        i()(null != this.assetMap, 'DiscordCanvas: An AssetStore has not been initialized.');
+        let t = this.assetMap.get(e);
+        return void 0 === t ? void console.error("DiscordCanvas: AssetMap hasn't loaded ".concat(e, '.  Make sure to load it before trying to render.')) : t;
     }
-    drawRoundedImageWithFallbacks(t, e, i, s, n) {
-        for (let a of t) {
-            let t = this.drawRoundedImage(a, e, i, s, n);
-            if (t !== r.vP.Failure) return t;
+    drawRoundedImageWithFallbacks(e, t, n, r, i) {
+        for (let o of e) {
+            let e = this.drawRoundedImage(o, t, n, r, i);
+            if (e !== a.vP.Failure) return e;
         }
-        return r.vP.Failure;
+        return a.vP.Failure;
     }
-    constructor(t, e) {
-        o(this, 'color', 'black'),
-            o(this, 'font', {
+    constructor(e, t) {
+        s(this, 'color', 'black'),
+            s(this, 'font', {
                 style: 'normal',
                 weight: 300,
-                size: a.n,
+                size: o.n,
                 family: ['serif'],
-                truncate: r.GX.None
+                truncate: a.GX.None
             }),
-            o(this, 'filter', {
+            s(this, 'filter', {
                 blur: 0,
                 brightness: 1,
                 contrast: 1,
@@ -66,9 +67,10 @@ let h = class {
                 saturate: 1,
                 sepia: 0
             }),
-            o(this, 'assetMap', void 0),
-            o(this, 'canvas', void 0),
-            (this.canvas = t),
-            (this.assetMap = e);
+            s(this, 'assetMap', void 0),
+            s(this, 'canvas', void 0),
+            (this.canvas = e),
+            (this.assetMap = t);
     }
-};
+}
+let c = l;

@@ -1,130 +1,145 @@
-a.d(e, { Z: () => j });
-var c = a(200651);
-a(192379);
-var d = a(442837),
-    s = a(692547),
-    n = a(481060),
-    f = a(726542),
-    i = a(231757),
-    o = a(511010),
-    p = a(553795),
-    r = a(979192),
-    l = a(873128),
-    b = a(463031),
-    u = a(981631),
-    m = a(388032),
-    g = a(767826);
-let j = function (t) {
-    let { guildId: e, leaderboardId: j } = t,
-        { leaderboardsDisabled: h } = (0, r.O)(e, j),
-        y = (0, d.e7)([p.Z], () => p.Z.getAccount(null, u.ABu.RIOT_GAMES)),
-        _ = (0, d.e7)([p.Z], () => p.Z.getAccount(null, u.ABu.LEAGUE_OF_LEGENDS)),
-        B = (0, l.Z)({
-            guildId: e,
-            leaderboardId: j
+n.d(t, { Z: () => v });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    o = n(692547),
+    a = n(481060),
+    s = n(726542),
+    l = n(231757),
+    c = n(511010),
+    u = n(553795),
+    d = n(979192),
+    f = n(873128),
+    _ = n(463031),
+    p = n(981631),
+    h = n(388032),
+    m = n(767826);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let v = function (e) {
+    let { guildId: t, leaderboardId: g } = e,
+        { leaderboardsDisabled: b } = (0, d.O)(t, g),
+        v = (0, i.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.RIOT_GAMES)),
+        O = (0, i.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.LEAGUE_OF_LEGENDS)),
+        I = (0, f.Z)({
+            guildId: t,
+            leaderboardId: g
         }),
-        x = j === b.z;
-    if ((!x || (null != y && null != _)) && !h) return null;
-    let v = f.Z.get(u.ABu.RIOT_GAMES),
-        O = x && null == y && null == _,
-        N = x && null != y && null == _,
-        S = x && null == y && null != _,
-        Z = N || S;
-    return (0, c.jsxs)(c.Fragment, {
-        children: [
-            (0, c.jsx)(o.Z, { className: g.divider }),
-            (function () {
-                if (h) return null;
-                let t = O
-                        ? (0, c.jsx)(n.d3s, { className: g.infoMessageIcon })
-                        : (0, c.jsx)(n.aNP, {
-                              color: s.Z.colors.STATUS_WARNING,
-                              className: g.infoMessageIcon
-                          }),
-                    e = O ? m.NW.string(m.t['Ihg/Dg']) : m.NW.string(m.t['J8U+Iy']);
-                return (0, c.jsxs)('div', {
-                    className: g.updateMessage,
-                    children: [
-                        t,
-                        (0, c.jsx)(n.Text, {
-                            variant: 'text-xs/medium',
-                            color: 'text-muted',
-                            children: e
+        S = g === _.z;
+    if ((!S || (null != v && null != O)) && !b) return null;
+    let T = s.Z.get(p.ABu.RIOT_GAMES),
+        N = S && null == v && null == O,
+        A = S && null != v && null == O,
+        C = S && null == v && null != O,
+        P = A || C;
+    function R() {
+        null != I &&
+            (0, a.ZDy)(async () => {
+                let { default: e } = await n.e('73217').then(n.bind(n, 139964));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        y(E({}, n), {
+                            guildId: t,
+                            leaderboard: I
                         })
-                    ]
-                });
-            })(),
-            (0, c.jsxs)(n.zxk, {
-                className: g.joinLeaderboardButton,
-                innerClassName: g.joinLeaderboardButtonInner,
-                onClick: function () {
-                    return O || Z
-                        ? (0, i.Z)({ platformType: u.ABu.RIOT_GAMES })
-                        : void (
-                              null != B &&
-                              (0, n.ZDy)(async () => {
-                                  let { default: t } = await a.e('73217').then(a.bind(a, 139964));
-                                  return (a) => {
-                                      var d, s;
-                                      return (0, c.jsx)(
-                                          t,
-                                          ((d = (function (t) {
-                                              for (var e = 1; e < arguments.length; e++) {
-                                                  var a = null != arguments[e] ? arguments[e] : {},
-                                                      c = Object.keys(a);
-                                                  'function' == typeof Object.getOwnPropertySymbols &&
-                                                      (c = c.concat(
-                                                          Object.getOwnPropertySymbols(a).filter(function (t) {
-                                                              return Object.getOwnPropertyDescriptor(a, t).enumerable;
-                                                          })
-                                                      )),
-                                                      c.forEach(function (e) {
-                                                          var c;
-                                                          (c = a[e]),
-                                                              e in t
-                                                                  ? Object.defineProperty(t, e, {
-                                                                        value: c,
-                                                                        enumerable: !0,
-                                                                        configurable: !0,
-                                                                        writable: !0
-                                                                    })
-                                                                  : (t[e] = c);
-                                                      });
-                                              }
-                                              return t;
-                                          })({}, a)),
-                                          (s = s =
-                                              {
-                                                  guildId: e,
-                                                  leaderboard: B
-                                              }),
-                                          Object.getOwnPropertyDescriptors
-                                              ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(s))
-                                              : (function (t, e) {
-                                                    var a = Object.keys(t);
-                                                    if (Object.getOwnPropertySymbols) {
-                                                        var c = Object.getOwnPropertySymbols(t);
-                                                        a.push.apply(a, c);
-                                                    }
-                                                    return a;
-                                                })(Object(s)).forEach(function (t) {
-                                                    Object.defineProperty(d, t, Object.getOwnPropertyDescriptor(s, t));
-                                                }),
-                                          d)
-                                      );
-                                  };
-                              })
-                          );
-                },
+                    );
+            });
+    }
+    function w() {
+        return N || P ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : R();
+    }
+    function D() {
+        return N ? h.NW.string(h.t.w6VSSE) : P ? h.NW.string(h.t.CHNBdn) : h.NW.string(h.t['0yRXHx']);
+    }
+    function L() {
+        if (b) return null;
+        let e = N
+                ? (0, r.jsx)(a.d3s, { className: m.infoMessageIcon })
+                : (0, r.jsx)(a.aNP, {
+                      color: o.Z.colors.STATUS_WARNING,
+                      className: m.infoMessageIcon
+                  }),
+            t = N ? h.NW.string(h.t['Ihg/Dg']) : h.NW.string(h.t['J8U+Iy']);
+        return (0, r.jsxs)('div', {
+            className: m.updateMessage,
+            children: [
+                e,
+                (0, r.jsx)(a.Text, {
+                    variant: 'text-xs/medium',
+                    color: 'text-muted',
+                    children: t
+                })
+            ]
+        });
+    }
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(c.Z, { className: m.divider }),
+            L(),
+            (0, r.jsxs)(a.zxk, {
+                className: m.joinLeaderboardButton,
+                innerClassName: m.joinLeaderboardButtonInner,
+                onClick: w,
                 children: [
-                    x &&
-                        !h &&
-                        (0, c.jsx)('img', {
+                    S &&
+                        !b &&
+                        (0, r.jsx)('img', {
                             alt: 'Riot Games',
-                            src: v.icon.whiteSVG,
-                            className: g.riotIcon
+                            src: T.icon.whiteSVG,
+                            className: m.riotIcon
                         }),
-                    O ? m.NW.string(m.t.w6VSSE) : Z ? m.NW.string(m.t.CHNBdn) : m.NW.string(m.t['0yRXHx'])
+                    D()
                 ]
             })
         ]

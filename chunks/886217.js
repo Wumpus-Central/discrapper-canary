@@ -1,104 +1,106 @@
-n.d(t, { Z: () => I }), n(804061), n(704826), n(35282);
+n.d(t, { Z: () => A }), n(804061), n(704826), n(35282);
 var r = n(200651),
-    a = n(192379),
-    l = n(317261),
-    i = n(423875),
-    o = n(442837),
-    s = n(18323),
+    i = n(192379),
+    o = n(317261),
+    a = n(423875),
+    s = n(442837),
+    l = n(18323),
     c = n(594174),
     u = n(908841),
     d = n(823379),
-    m = n(5192),
-    p = n(561308),
-    h = n(319604),
-    f = n(31074),
-    g = n(206295),
-    x = n(278399),
-    v = n(297781),
-    y = n(591853),
-    j = n(410441),
-    P = n(981631),
+    f = n(5192),
+    _ = n(561308),
+    p = n(319604),
+    h = n(31074),
+    m = n(206295),
+    g = n(278399),
+    E = n(297781),
+    b = n(591853),
+    y = n(410441),
+    v = n(981631),
     O = n(616922),
-    b = n(388032);
-let C = (e, t, n, r) => {
-        let a = (function (e) {
-                if (e === l._.WEEK) return b.t.SjOZfn;
-            })(r),
-            i = m.ZP.getName(t.guild_id, t.id, n),
-            o = e.extra.artist.name;
-        return b.NW.formatToMarkdownString(a, {
-            artist: o,
-            userName: i
+    I = n(388032);
+function S(e) {
+    if (e === o._.WEEK) return I.t.SjOZfn;
+}
+let T = (e, t, n, r) => {
+        let i = S(r),
+            o = f.ZP.getName(t.guild_id, t.id, n),
+            a = e.extra.artist.name;
+        return I.NW.formatToMarkdownString(i, {
+            artist: a,
+            userName: o
         }).replaceAll('*', '');
     },
     N = (e, t) =>
-        b.NW.formatToPlainString(b.t.Osmpr6, {
+        I.NW.formatToPlainString(I.t.Osmpr6, {
             username: t.username,
             artist: e.extra.artist.name
         }),
-    I = (e) => {
-        let { channel: t, entry: n, onReaction: l, onVoiceChannelPreview: m } = e,
-            { parent_title: I, provider: E, image_url: w } = n.extra.media,
-            Z = n.extra.artist.name,
-            S = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
-            { primaryColor: T, secondaryColor: A } = (0, g.Z)(w),
-            _ = (0, p.Nq)(n),
-            k = a.useCallback(() => {
-                if (null == t || null == S || !(0, d.Hi)(_, x.y9)) return;
-                let e = C(n, t, S, _);
-                return (0, h.CR)({
-                    user: S,
+    A = (e) => {
+        let { channel: t, entry: n, onReaction: o, onVoiceChannelPreview: f } = e,
+            { parent_title: S, provider: A, image_url: C } = n.extra.media,
+            P = n.extra.artist.name,
+            R = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
+            { primaryColor: w, secondaryColor: D } = (0, m.Z)(C),
+            L = (0, _.Nq)(n),
+            x = i.useCallback(() => {
+                if (null == t || null == R || !(0, d.Hi)(L, g.y9)) return;
+                let e = T(n, t, R, L);
+                return (0, p.CR)({
+                    user: R,
                     channel: t,
-                    mediaImageSrc: w,
-                    artist: Z,
+                    mediaImageSrc: C,
+                    artist: P,
                     description: e,
-                    colors: [T, A],
-                    badges: (0, h.UU)(n)
+                    colors: [w, D],
+                    badges: (0, p.UU)(n)
                 });
-            }, [w, Z, t, n, T, _, A, S]),
-            R = (0, f.Z)(P.ABu.SPOTIFY);
-        if (null == S || !(0, d.Hi)(_, x.y9)) return null;
-        let M = () => {
-            let e = O.Hw.ALBUM,
-                t = s.Z.isProtocolRegistered() ? O.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : O.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
-            window.open(t);
-        };
-        return (0, r.jsxs)(y.yR, {
+            }, [C, P, t, n, w, L, D, R]),
+            M = (0, h.Z)(v.ABu.SPOTIFY);
+        if (null == R || !(0, d.Hi)(L, g.y9)) return null;
+        let k = () => {
+                let e = O.Hw.ALBUM,
+                    t = l.Z.isProtocolRegistered() ? O.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : O.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+                window.open(t);
+            },
+            j = () => {
+                let e = O.Hw.ARTIST,
+                    t = l.Z.isProtocolRegistered() ? O.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : O.C7.WEB_OPEN(e, n.extra.artist.external_id);
+                window.open(t);
+            };
+        return (0, r.jsxs)(b.yR, {
             children: [
-                (0, r.jsx)(y.wG, {
-                    onClickTitle: M,
-                    onClickSubtitle: () => {
-                        let e = O.Hw.ARTIST,
-                            t = s.Z.isProtocolRegistered() ? O.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : O.C7.WEB_OPEN(e, n.extra.artist.external_id);
-                        window.open(t);
-                    },
-                    onClickThumbnail: M,
+                (0, r.jsx)(b.wG, {
+                    onClickTitle: k,
+                    onClickSubtitle: j,
+                    onClickThumbnail: k,
                     channel: t,
                     entry: n,
                     headerIcons:
-                        E === i.p.SPOTIFY
-                            ? (0, r.jsx)(j.Z, {
-                                  onClick: R,
+                        A === a.p.SPOTIFY
+                            ? (0, r.jsx)(y.Z, {
+                                  onClick: M,
                                   Icon: u.Z,
-                                  'aria-label': b.NW.string(b.t['0ZB/XF'])
+                                  'aria-label': I.NW.string(I.t['0ZB/XF'])
                               })
                             : null,
-                    userDescription: b.t.CcVI1d,
-                    title: I,
-                    subtitle: Z,
-                    badges: (0, r.jsx)(v.Gk, {
-                        location: v.Gt.POPOUT,
-                        children: x.Ho.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+                    userDescription: I.t.CcVI1d,
+                    title: S,
+                    subtitle: P,
+                    badges: (0, r.jsx)(E.Gk, {
+                        location: E.Gt.POPOUT,
+                        children: g.Ho.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
                     })
                 }),
-                (0, r.jsx)(y.St, {
-                    children: (0, r.jsx)(y.WT, {
-                        onReaction: l,
-                        onVoiceChannelPreview: m,
-                        user: S,
+                (0, r.jsx)(b.St, {
+                    children: (0, r.jsx)(b.WT, {
+                        onReaction: o,
+                        onVoiceChannelPreview: f,
+                        user: R,
                         channel: t,
-                        generateReactionImage: k,
-                        reactionImageAltText: N(n, S),
+                        generateReactionImage: x,
+                        reactionImageAltText: N(n, R),
                         entry: n
                     })
                 })

@@ -1,85 +1,86 @@
-a.d(e, { Z: () => g });
-var c = a(200651);
-a(192379);
-var d = a(120356),
-    s = a.n(d),
-    n = a(381338),
-    f = a(442837),
-    i = a(481060),
-    o = a(206295),
-    p = a(594174),
-    r = a(5192),
-    l = a(528567),
-    b = a(371583),
-    u = a(388032),
-    m = a(445232);
-function g(t) {
-    var e, a, d, g;
-    let { guildId: j, leaderboard: h, className: y } = t,
-        _ = null == h || null == (e = h.users) ? void 0 : e[0],
-        { sort_by_statistic_id: B } = h.guild_settings,
-        x = null != (g = null == _ || null == (d = _.statistics) || null == (a = d[B]) ? void 0 : a.value) ? g : 0,
-        v = u.NW.formatToPlainString(u.t.yhdo8v, {
-            value: x,
-            statisticName: (0, l.C)(B)
+n.d(t, { Z: () => g });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    a = n(381338),
+    s = n(442837),
+    l = n(481060),
+    c = n(206295),
+    u = n(594174),
+    d = n(5192),
+    f = n(528567),
+    _ = n(371583),
+    p = n(388032),
+    h = n(445232);
+function m(e) {
+    switch (e) {
+        case a.q.DAILY:
+            return p.NW.string(p.t.UfbhDA);
+        case a.q.WEEKLY:
+            return p.NW.string(p.t['9x5Nam']);
+        case a.q.MONTHLY:
+            return p.NW.string(p.t.xB2Co6);
+        default:
+            return p.NW.string(p.t['4N67JS']);
+    }
+}
+function g(e) {
+    var t, n, i, a;
+    let { guildId: g, leaderboard: E, className: b } = e,
+        y = null == E || null == (t = E.users) ? void 0 : t[0],
+        { sort_by_statistic_id: v } = E.guild_settings,
+        O = null != (a = null == y || null == (i = y.statistics) || null == (n = i[v]) ? void 0 : n.value) ? a : 0,
+        I = p.NW.formatToPlainString(p.t.yhdo8v, {
+            value: O,
+            statisticName: (0, f.C)(v)
         }),
-        O = (0, b.j)(h),
-        { primaryColor: N, secondaryColor: S } = (0, o.Z)(''.concat(O, '?forColors')),
-        Z = (0, f.e7)([p.default], () => p.default.getUser(null == _ ? void 0 : _.user_id));
-    if (null == Z) return null;
-    let P = r.ZP.getName(j, void 0, Z);
-    return (0, c.jsxs)('div', {
-        className: s()(m.container, y),
-        style: { backgroundImage: 'linear-gradient(90deg, '.concat(S, ' 0%, ').concat(N, ' 100%)') },
+        S = (0, _.j)(E),
+        { primaryColor: T, secondaryColor: N } = (0, c.Z)(''.concat(S, '?forColors')),
+        A = (0, s.e7)([u.default], () => u.default.getUser(null == y ? void 0 : y.user_id));
+    if (null == A) return null;
+    let C = d.ZP.getName(g, void 0, A);
+    return (0, r.jsxs)('div', {
+        className: o()(h.container, b),
+        style: { backgroundImage: 'linear-gradient(90deg, '.concat(N, ' 0%, ').concat(T, ' 100%)') },
         children: [
-            (0, c.jsx)(i.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xs/medium',
-                className: m.title,
-                children: (function (t) {
-                    switch (t) {
-                        case n.q.DAILY:
-                            return u.NW.string(u.t.UfbhDA);
-                        case n.q.WEEKLY:
-                            return u.NW.string(u.t['9x5Nam']);
-                        case n.q.MONTHLY:
-                            return u.NW.string(u.t.xB2Co6);
-                        default:
-                            return u.NW.string(u.t['4N67JS']);
-                    }
-                })(h.settings.interval_type)
+                className: h.title,
+                children: m(E.settings.interval_type)
             }),
-            (0, c.jsx)(i.qEK, {
-                src: Z.getAvatarURL(j, 16),
-                size: i.EFr.SIZE_16,
+            (0, r.jsx)(l.qEK, {
+                src: A.getAvatarURL(g, 16),
+                size: l.EFr.SIZE_16,
                 'aria-label': 'avatar'
             }),
-            (0, c.jsx)(i.LZC, {
+            (0, r.jsx)(l.LZC, {
                 size: 6,
                 horizontal: !0
             }),
-            (0, c.jsxs)('div', {
-                className: m.textContainer,
+            (0, r.jsxs)('div', {
+                className: h.textContainer,
                 children: [
-                    (0, c.jsx)(i.Text, {
-                        className: m.username,
+                    (0, r.jsx)(l.Text, {
+                        className: h.username,
                         variant: 'text-xs/semibold',
                         color: 'header-primary',
-                        children: P
+                        children: C
                     }),
-                    (0, c.jsx)(i.Text, {
-                        className: m.statsText,
+                    (0, r.jsx)(l.Text, {
+                        className: h.statsText,
                         variant: 'text-xxs/medium',
                         color: 'text-secondary',
-                        children: v
+                        children: I
                     })
                 ]
             }),
-            null != O &&
-                (0, c.jsx)('div', {
-                    className: m.heroArtContainer,
-                    children: (0, c.jsx)('img', {
-                        className: m.heroArt,
-                        src: O,
+            null != S &&
+                (0, r.jsx)('div', {
+                    className: h.heroArtContainer,
+                    children: (0, r.jsx)('img', {
+                        className: h.heroArt,
+                        src: S,
                         alt: ''
                     })
                 })

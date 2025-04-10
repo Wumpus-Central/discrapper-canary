@@ -1,17 +1,33 @@
-n.d(t, { Z: () => x });
+n.d(t, {
+    N: () => b,
+    Z: () => y
+});
 var r = n(200651),
-    a = n(192379),
-    l = n(481060),
-    i = n(239091),
-    o = n(299206),
-    s = n(810568),
+    i = n(192379),
+    o = n(481060),
+    a = n(239091),
+    s = n(299206),
+    l = n(810568),
     c = n(168524),
     u = n(37258),
     d = n(26033),
-    m = n(178762),
-    p = n(388032),
-    h = n(442826);
-function f(e) {
+    f = n(178762),
+    _ = n(388032),
+    p = n(442826);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -22,110 +38,107 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
 function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function x(e) {
+let b = 'content-inventory-context';
+function y(e) {
     var t;
-    let { user: n, guildId: x, channel: v, entry: y, onSelect: j, disableGameProfileLinks: P } = e,
-        O = a.useRef(null),
-        b = a.useContext(m.Ir),
-        C = (0, u.Z)({
+    let { user: n, guildId: h, channel: g, entry: y, onSelect: v, disableGameProfileLinks: O } = e,
+        I = i.useRef(null),
+        S = i.useContext(f.Ir),
+        T = (0, u.Z)({
             userId: n.id,
-            guildId: x,
-            channelId: null == v ? void 0 : v.id,
-            onAction: b
+            guildId: h,
+            channelId: null == g ? void 0 : g.id,
+            onAction: S
         }),
-        N = (0, o.Z)({
+        N = (0, s.Z)({
             id: n.id,
-            label: p.NW.string(p.t['/AXYnJ'])
+            label: _.NW.string(_.t['/AXYnJ'])
         }),
-        I = 'application_id' in y.extra ? y.extra.application_id : null,
-        E = (0, o.Z)({
-            id: I,
-            label: p.NW.string(p.t['FfCL+/'])
+        A = 'application_id' in y.extra ? y.extra.application_id : null,
+        C = (0, s.Z)({
+            id: A,
+            label: _.NW.string(_.t['FfCL+/'])
         }),
-        w = (0, d.dX)(y),
-        Z = (0, c.Z)({
+        P = (0, d.dX)(y),
+        R = (0, c.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: w && !0 !== P ? (null == (t = y.extra) ? void 0 : t.application_id) : void 0,
-            source: s.m1.ActivityCardContextMenu,
+            applicationId: P && !0 !== O ? (null == (t = y.extra) ? void 0 : t.application_id) : void 0,
+            source: l.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id
         });
-    return (0, r.jsx)(l.yRy, {
-        targetElementRef: O,
+    return (0, r.jsx)(o.yRy, {
+        targetElementRef: I,
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(l.v2r, {
-                navId: 'content-inventory-context',
+            return (0, r.jsx)(o.v2r, {
+                navId: b,
                 onClose: () => {
-                    (0, i.Zy)(), t();
+                    (0, a.Zy)(), t();
                 },
-                'aria-label': p.NW.string(p.t.liqwPD),
-                onSelect: j,
+                'aria-label': _.NW.string(_.t.liqwPD),
+                onSelect: v,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(l.kSQ, {
+                        (0, r.jsxs)(o.kSQ, {
                             children: [
-                                C,
-                                null != Z &&
-                                    (0, r.jsx)(l.sNh, {
+                                T,
+                                null != R &&
+                                    (0, r.jsx)(o.sNh, {
                                         id: 'game-profile',
-                                        label: p.NW.string(p.t.f7aVGh),
+                                        label: _.NW.string(_.t.f7aVGh),
                                         action: (e) => {
-                                            Z(e), null == b || b();
+                                            R(e), null == S || S();
                                         }
                                     })
                             ]
                         }),
-                        (0, r.jsxs)(l.kSQ, {
-                            children: [N, E]
+                        (0, r.jsxs)(o.kSQ, {
+                            children: [N, C]
                         })
                     ]
                 })
             });
         },
         children: (e) =>
-            (0, r.jsx)(l.ua7, {
-                text: p.NW.string(p.t.UKOtz8),
+            (0, r.jsx)(o.ua7, {
+                text: _.NW.string(_.t.UKOtz8),
                 children: (t) =>
                     (0, r.jsx)(
-                        l.P3F,
-                        g(f(g(f({ innerRef: O }, t), { className: h.menuIcon }), e), {
-                            children: (0, r.jsx)(l.xhG, {
+                        o.P3F,
+                        E(m(E(m({ innerRef: I }, t), { className: p.menuIcon }), e), {
+                            children: (0, r.jsx)(o.xhG, {
                                 color: 'currentColor',
                                 size: 'custom',
                                 width: 16,

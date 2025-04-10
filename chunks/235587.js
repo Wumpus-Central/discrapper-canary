@@ -1,82 +1,83 @@
-a.d(e, { Z: () => b }), a(388685);
-var c,
-    d = a(442837),
-    s = a(902704),
-    n = a(570140),
-    f = a(709054);
-function i(t, e, a) {
+n.d(t, { Z: () => m }), n(388685);
+var r,
+    i = n(442837),
+    o = n(902704),
+    a = n(570140),
+    s = n(709054);
+function l(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: a,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = a),
-        t
+            : (e[t] = n),
+        e
     );
 }
-function o(t, e, a) {
-    return ''.concat(t, ',').concat(e, ',').concat(a);
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
 }
-let p = () => ({
+function u(e, t, n) {
+    return ''.concat(e, ',').concat(t, ',').concat(n);
+}
+let d = () => ({
         currentLeaderboardRanks: {},
         prevLeaderboardRanks: {}
     }),
-    r = p();
-class l extends (c = d.ZP.PersistedStore) {
-    initialize(t) {
-        r = (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var a = null != arguments[e] ? arguments[e] : {},
-                    c = Object.keys(a);
-                'function' == typeof Object.getOwnPropertySymbols &&
-                    (c = c.concat(
-                        Object.getOwnPropertySymbols(a).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(a, t).enumerable;
-                        })
-                    )),
-                    c.forEach(function (e) {
-                        i(t, e, a[e]);
-                    });
-            }
-            return t;
-        })({}, r, null != t ? t : {});
-        let e = Date.now();
-        for (let [t, a] of Object.entries(r.prevLeaderboardRanks)) (null == a || e > a.ttl) && delete r.prevLeaderboardRanks[t];
-        for (let [t, a] of Object.entries(r.currentLeaderboardRanks)) (null == a || e > a.ttl) && delete r.currentLeaderboardRanks[t];
-        return !0;
+    f = d();
+function _(e) {
+    var t;
+    let { leaderboardResponse: n, intervalOffset: r } = e;
+    if (0 !== r) return !1;
+    let { leaderboard: i } = n,
+        a = u(i.guild_id, i.leaderboard_id, i.interval_start),
+        l = {
+            ranks: i.users.map((e) => e.user_id),
+            ttl: s.default.extractTimestamp(i.interval_end)
+        },
+        c = f.currentLeaderboardRanks[a];
+    if ((0, o.E)(l.ranks, null != (t = null == c ? void 0 : c.ranks) ? t : [])) return !1;
+    (f.prevLeaderboardRanks[a] = c), (f.currentLeaderboardRanks[a] = l);
+}
+function p() {
+    let e = Date.now();
+    for (let [t, n] of Object.entries(f.prevLeaderboardRanks)) (null == n || e > n.ttl) && delete f.prevLeaderboardRanks[t];
+    for (let [t, n] of Object.entries(f.currentLeaderboardRanks)) (null == n || e > n.ttl) && delete f.currentLeaderboardRanks[t];
+}
+class h extends (r = i.ZP.PersistedStore) {
+    initialize(e) {
+        return (f = c({}, f, null != e ? e : {})), p(), !0;
     }
     getState() {
-        return r;
+        return f;
     }
-    getPrevLeaderboardRanks(t, e, a) {
-        let c = o(t, e, a);
-        return r.prevLeaderboardRanks[c];
+    getPrevLeaderboardRanks(e, t, n) {
+        let r = u(e, t, n);
+        return f.prevLeaderboardRanks[r];
     }
-    getCurrentLeaderboardRanks(t, e, a) {
-        let c = o(t, e, a);
-        return r.currentLeaderboardRanks[c];
+    getCurrentLeaderboardRanks(e, t, n) {
+        let r = u(e, t, n);
+        return f.currentLeaderboardRanks[r];
     }
     reset() {
-        r = p();
+        f = d();
     }
 }
-i(l, 'displayName', 'GuildLeaderboardRanksStore'), i(l, 'persistKey', 'GuildLeaderboardRanksStore');
-let b = new l(n.Z, {
-    SET_GUILD_LEADERBOARD: function (t) {
-        var e;
-        let { leaderboardResponse: a, intervalOffset: c } = t;
-        if (0 !== c) return !1;
-        let { leaderboard: d } = a,
-            n = o(d.guild_id, d.leaderboard_id, d.interval_start),
-            i = {
-                ranks: d.users.map((t) => t.user_id),
-                ttl: f.default.extractTimestamp(d.interval_end)
-            },
-            p = r.currentLeaderboardRanks[n];
-        if ((0, s.E)(i.ranks, null != (e = null == p ? void 0 : p.ranks) ? e : [])) return !1;
-        (r.prevLeaderboardRanks[n] = p), (r.currentLeaderboardRanks[n] = i);
-    }
-});
+l(h, 'displayName', 'GuildLeaderboardRanksStore'), l(h, 'persistKey', 'GuildLeaderboardRanksStore');
+let m = new h(a.Z, { SET_GUILD_LEADERBOARD: _ });

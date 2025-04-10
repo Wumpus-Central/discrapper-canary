@@ -1,25 +1,25 @@
 n.d(t, {
-    Ho: () => h,
-    ZP: () => f,
-    y9: () => _
+    Ho: () => _,
+    ZP: () => m,
+    y9: () => p
 });
 var r = n(200651),
     i = n(192379),
     o = n(317261),
-    l = n(823379),
+    a = n(823379),
     s = n(379357),
-    a = n(442550),
+    l = n(442550),
     c = n(561308),
     u = n(297781),
     d = n(443487),
-    p = n(522314);
-let h = [u.An],
-    _ = [o._.WEEK],
-    f = i.memo((e) => {
+    f = n(522314);
+let _ = [u.An],
+    p = [o._.WEEK],
+    h = (e) => {
         let { entry: t, channel: n, selected: i } = e,
             { largeImage: o } = (0, s.rv)({ entry: t }),
-            f = (0, c.Nq)(t);
-        return null != f && (0, l.Hi)(f, _)
+            h = (0, c.Nq)(t);
+        return null != h && (0, a.Hi)(h, p)
             ? (0, r.jsxs)(d.Zb, {
                   selected: i,
                   children: [
@@ -33,16 +33,17 @@ let h = [u.An],
                               (0, r.jsx)(d.ll, { children: t.extra.artist.name }),
                               (0, r.jsx)(u.Gk, {
                                   location: u.Gt.CARD,
-                                  children: h.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
+                                  children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                               })
                           ]
                       }),
-                      (0, r.jsx)(a.f, {
+                      (0, r.jsx)(l.f, {
                           src: null == o ? void 0 : o.src,
                           size: 48,
-                          className: p.thumbnail
+                          className: f.thumbnail
                       })
                   ]
               })
             : null;
-    });
+    },
+    m = i.memo(h);

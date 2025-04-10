@@ -1,164 +1,167 @@
-n.d(t, { ZP: () => S }), n(804061), n(704826), n(35282);
+n.d(t, { ZP: () => D }), n(804061), n(704826), n(35282);
 var r = n(200651),
-    a = n(192379),
-    l = n(442837),
-    i = n(481060),
-    o = n(456100),
-    s = n(620662),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(456100),
+    l = n(620662),
     c = n(841784),
     u = n(429589),
     d = n(499254),
-    m = n(827498),
-    p = n(541716),
-    h = n(706454),
-    f = n(823379),
-    g = n(5192),
-    x = n(379357),
-    v = n(192918),
-    y = n(561308),
-    j = n(907152),
-    P = n(206295),
+    f = n(827498),
+    _ = n(541716),
+    p = n(706454),
+    h = n(823379),
+    m = n(5192),
+    g = n(379357),
+    E = n(192918),
+    b = n(561308),
+    y = n(907152),
+    v = n(206295),
     O = n(297781),
-    b = n(591853),
-    C = n(797342),
-    N = n(981631),
-    I = n(388032);
-let E = (e, t) =>
-        I.NW.formatToPlainString(I.t.tAwI1t, {
+    I = n(591853),
+    S = n(797342),
+    T = n(981631),
+    N = n(388032);
+function A(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function C(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                A(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let P = (e, t) =>
+        N.NW.formatToPlainString(N.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
-    w = (e, t, n) => {
-        let r = I.t['bES+y8'],
-            a = g.ZP.getName(t.guild_id, t.id, n),
-            l = e.extra.activity_name;
-        return I.NW.formatToMarkdownString(r, {
-            gameName: l,
-            userName: a
+    R = (e, t, n) => {
+        let r = N.t['bES+y8'],
+            i = m.ZP.getName(t.guild_id, t.id, n),
+            o = e.extra.activity_name;
+        return N.NW.formatToMarkdownString(r, {
+            gameName: o,
+            userName: i
         }).replaceAll('*', '');
     },
-    Z = (e) => {
-        let { entry: t, channel: n, users: r, countOthers: a } = e,
-            l = I.t['7j/5mp'];
-        return I.NW.formatToMarkdownString(l, {
+    w = (e) => {
+        let { entry: t, channel: n, users: r, countOthers: i } = e,
+            o = N.t['7j/5mp'];
+        return N.NW.formatToMarkdownString(o, {
             gameName: t.extra.activity_name,
-            user1: g.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
-            user2: g.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
-            countOthers: a
+            user1: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
+            user2: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
+            countOthers: i
         }).replaceAll('*', '');
     },
-    S = (e) => {
-        let { channel: t, entry: n, onReaction: g, onVoiceChannelPreview: S } = e,
-            { largeImage: T } = (0, x.rv)({
+    D = (e) => {
+        let { channel: t, entry: n, onReaction: m, onVoiceChannelPreview: A, disableActivityProfileLinks: D } = e,
+            { largeImage: L } = (0, g.rv)({
                 entry: n,
                 showCoverImage: !1
             }),
-            { user: A, details: _, activity: k, embeddedActivity: R } = (0, C.n)(n),
-            { primaryColor: M, secondaryColor: D } = (0, P.Z)(null == T ? void 0 : T.src),
-            L = (0, l.e7)([h.default], () => h.default.locale),
-            { displayParticipants: W, participant1: U, participant2: z, numOtherParticipants: B } = (0, v.Z)(n, 3),
-            H = () => {
-                d.__(m._b.TEXT, p.Ie.NORMAL, { applicationId: n.extra.application_id });
+            { user: x, details: M, activity: k, embeddedActivity: j } = (0, S.n)(n),
+            { primaryColor: U, secondaryColor: G } = (0, v.Z)(null == L ? void 0 : L.src),
+            B = (0, o.e7)([p.default], () => p.default.locale),
+            { displayParticipants: V, participant1: F, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
+            W = () => {
+                d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
-            G = a.useCallback(
+            Y = i.useCallback(
                 (e) => {
-                    if ((null == T ? void 0 : T.src) == null || null == t || null == A) return;
+                    if ((null == L ? void 0 : L.src) == null || null == t || null == x) return;
                     let r =
-                        B > 0
-                            ? Z({
+                        H > 0
+                            ? w({
                                   entry: n,
                                   channel: t,
-                                  users: [U, z],
-                                  countOthers: B
+                                  users: [F, Z],
+                                  countOthers: H
                               })
-                            : w(n, t, A);
-                    return (0, j.C4)({
+                            : R(n, t, x);
+                    return (0, y.C4)({
                         entry: n,
-                        applicationImageSrc: null == T ? void 0 : T.src,
-                        avatarSrcs: W.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        applicationImageSrc: null == L ? void 0 : L.src,
+                        avatarSrcs: V.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
-                        timestamp: (0, y.yh)(n, L),
-                        colors: [M, D],
+                        timestamp: (0, b.yh)(n, B),
+                        colors: [U, G],
                         channelId: e
                     });
                 },
-                [null == T ? void 0 : T.src, t, W, n, L, B, U, z, M, D, A]
+                [null == L ? void 0 : L.src, t, V, n, B, H, F, Z, U, G, x]
             ),
-            { enabled: F } = o.c.useExperiment({ location: 'MemberListAcitivtyContentPopout' }, { autoTrackExposure: !0 });
-        if (null == A) return null;
-        let V = (0, r.jsx)(O.PZ, {
+            { enabled: K } = s.c.useExperiment({ location: 'MemberListAcitivtyContentPopout' }, { autoTrackExposure: !0 });
+        if (null == x) return null;
+        let z = (0, r.jsx)(O.PZ, {
                 location: O.Gt.POPOUT,
                 entry: n
             }),
-            Y = (0, r.jsx)(b.wG, {
+            q = (0, r.jsx)(I.wG, {
                 channel: t,
-                userDescription: (0, y.kr)(n) ? I.t.vPg1JS : I.t.rPqqtr,
+                userDescription: (0, b.kr)(n) ? N.t.vPg1JS : N.t.rPqqtr,
                 title: n.extra.activity_name,
-                subtitle: _,
-                badges: V,
+                subtitle: M,
+                badges: z,
                 entry: n,
                 showCoverImage: !1,
-                onClickTitle: H,
-                onClickSubtitle: H,
-                onClickThumbnail: H
+                onClickTitle: W,
+                onClickSubtitle: W,
+                onClickThumbnail: W
             }),
-            q = (0, s.Z)(k, N.xjy.JOIN) || (0, c.Z)(k),
-            J = q
+            Q = (0, l.Z)(k, T.xjy.JOIN) || (0, c.Z)(k),
+            X = Q
                 ? (0, r.jsx)(u.Z, {
-                      embeddedActivity: R,
+                      embeddedActivity: j,
                       activity: k,
-                      user: A,
-                      ButtonComponent: (e) =>
-                          (0, r.jsx)(
-                              b.Ll,
-                              (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
-                                      'function' == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
-                                          )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0
-                                                        })
-                                                      : (e[t] = r);
-                                          });
-                                  }
-                                  return e;
-                              })({ IconComponent: i.YVR }, e)
-                          )
+                      user: x,
+                      ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: a.YVR }, e))
                   })
                 : null,
-            X = F ? i.iWm : i.jje,
-            K = (0, r.jsx)(b.Ll, {
-                onClick: H,
-                IconComponent: X,
-                children: I.NW.string(I.t.GDWYR0)
-            }),
-            $ = [q ? J : K].filter(f.lm);
-        return (0, r.jsxs)(b.yR, {
+            J = K ? a.iWm : a.jje,
+            $ = D
+                ? null
+                : (0, r.jsx)(I.Ll, {
+                      onClick: W,
+                      IconComponent: J,
+                      children: N.NW.string(N.t.GDWYR0)
+                  }),
+            ee = [Q ? X : $].filter(h.lm);
+        return (0, r.jsxs)(I.yR, {
             children: [
-                Y,
-                (0, r.jsx)(b.St, {
-                    children: (0, r.jsx)(b.WT, {
-                        onReaction: g,
-                        onVoiceChannelPreview: S,
-                        user: A,
+                q,
+                (0, r.jsx)(I.St, {
+                    children: (0, r.jsx)(I.WT, {
+                        onReaction: m,
+                        onVoiceChannelPreview: A,
+                        user: x,
                         channel: t,
-                        generateReactionImage: G,
-                        reactionImageAltText: E(n, A),
+                        generateReactionImage: Y,
+                        reactionImageAltText: P(n, x),
                         entry: n,
-                        buttons: $
+                        buttons: ee
                     })
                 })
             ]

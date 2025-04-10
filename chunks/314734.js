@@ -1,14 +1,15 @@
 n.d(t, {
-    Gy: () => c,
+    Gy: () => u,
+    I4: () => c,
     Id: () => s,
     Jh: () => i,
-    K7: () => u,
+    K7: () => d,
     NN: () => l,
     bS: () => r,
     e9: () => o,
-    lv: () => d,
+    lv: () => f,
     t4: () => a,
-    u$: () => f
+    u$: () => _
 });
 var r = (function (e) {
     return (e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL'), e;
@@ -18,10 +19,11 @@ let i = 'app-launcher-element',
     a = 'app-launcher-entrypoint',
     s = 'app-launcher-app-dm-entrypoint',
     l = 'app-launcher-app-details-more-menu',
-    c = 500,
-    u = 680,
-    d = 'min(100vh, '.concat(u, 'px)'),
-    f = {
-        '--custom-app-launcher-width': ''.concat(c, 'px'),
-        '--custom-app-launcher-height': d
+    c = 'app-launcher-profile-friend-activity-entry',
+    u = 500,
+    d = 680,
+    f = 'min(100vh, '.concat(d, 'px)'),
+    _ = {
+        '--custom-app-launcher-width': ''.concat(u, 'px'),
+        '--custom-app-launcher-height': f
     };

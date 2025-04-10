@@ -1,24 +1,37 @@
 n.d(t, {
-    A7: () => O,
-    dE: () => C
+    A7: () => S,
+    dE: () => N
 }),
     n(388685);
 var r = n(200651),
-    a = n(192379),
-    l = n(120356),
-    i = n.n(l),
-    o = n(481060),
-    s = n(410030),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(410030),
     c = n(541716),
     u = n(752305),
     d = n(893718),
-    m = n(318766),
-    p = n(931651),
-    h = n(131704),
-    f = n(142550),
-    g = n(981631),
-    x = n(388032),
-    v = n(304222);
+    f = n(318766),
+    _ = n(931651),
+    p = n(131704),
+    h = n(142550),
+    m = n(981631),
+    g = n(388032),
+    E = n(304222);
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -30,97 +43,94 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let P = (0, h.kt)({
+let I = (0, p.kt)({
     id: '1',
-    type: g.d4z.DM
+    type: m.d4z.DM
 });
-function O(e) {
-    let { placeholder: t, onEnter: n, setEditorRef: l, showEmojiButton: o = !1, renderAttachButton: s, autoFocus: m = !0, onFocus: p, channel: h, className: g } = e,
-        [x, O] = a.useState(''),
-        [b, C] = a.useState((0, u.JM)('')),
-        N = () => {
-            O(''), C((0, u.JM)(''));
+function S(e) {
+    let { placeholder: t, onEnter: n, setEditorRef: o, showEmojiButton: s = !1, renderAttachButton: l, autoFocus: f = !0, onFocus: _, channel: p, className: m } = e,
+        [g, b] = i.useState(''),
+        [v, S] = i.useState((0, u.JM)('')),
+        T = () => {
+            b(''), S((0, u.JM)(''));
         },
-        I = c.Ie.ATOMIC_REACTOR_REPLY_INPUT,
-        E = a.useRef(null);
+        N = c.Ie.ATOMIC_REACTOR_REPLY_INPUT,
+        A = i.useRef(null),
+        C = () => {
+            if (null == A.current) return 'top';
+            let e = A.current.getBoundingClientRect(),
+                t = window.innerHeight;
+            return e.top < t / 2 ? 'bottom' : 'top';
+        };
     return (0, r.jsx)(d.Z, {
-        ref: E,
+        ref: A,
         placeholder: t,
-        editorClassName: g,
-        className: i()(v.replyInput, g),
+        editorClassName: m,
+        className: a()(E.replyInput, m),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: f.z,
-        channel: null != h ? h : P,
+        maxCharacterCount: h.z,
+        channel: null != p ? p : I,
         onChange: (e, t, n) => {
-            O(t), C(n);
+            b(t), S(n);
         },
-        type: o ? j(y({}, I), { emojis: { button: !0 } }) : I,
-        textValue: x,
-        richValue: b,
+        type: s ? O(y({}, N), { emojis: { button: !0 } }) : N,
+        textValue: g,
+        richValue: v,
         onSubmit: (e) => {
             let { value: t } = e;
-            return t.length > f.z
+            return t.length > h.z
                 ? Promise.resolve({
                       shouldClear: !1,
                       shouldRefocus: !0
                   })
                 : (n(t),
-                  N(),
+                  T(),
                   Promise.resolve({
                       shouldClear: !0,
                       shouldRefocus: !1
                   }));
         },
-        setEditorRef: l,
-        focused: m,
-        onFocus: p,
+        setEditorRef: o,
+        focused: f,
+        onFocus: _,
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
-        autoCompletePosition: (() => {
-            if (null == E.current) return 'top';
-            let e = E.current.getBoundingClientRect(),
-                t = window.innerHeight;
-            return e.top < t / 2 ? 'bottom' : 'top';
-        })(),
-        renderAttachButton: s
+        autoCompletePosition: C(),
+        renderAttachButton: l
     });
 }
-let b = (e, t) => {
-        a.useEffect(() => {
+let T = (e, t) => {
+        i.useEffect(() => {
             let n = (t) => {
                     'Escape' === t.key && e();
                 },
@@ -137,30 +147,30 @@ let b = (e, t) => {
             );
         }, [e, t]);
     },
-    C = (e) => {
+    N = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
-            l = (0, s.ZP)(),
-            [i, c] = a.useState(!1),
-            u = a.useRef(null),
-            d = a.useRef(null);
+            o = (0, l.ZP)(),
+            [a, c] = i.useState(!1),
+            u = i.useRef(null),
+            d = i.useRef(null);
         return (
-            b(() => c(!1), u),
-            (0, r.jsx)(o.yRy, {
+            T(() => c(!1), u),
+            (0, r.jsx)(s.yRy, {
                 targetElementRef: d,
                 align: 'right',
                 position: 'top',
-                shouldShow: i,
+                shouldShow: a,
                 disablePointerEvents: !1,
                 renderPopout: () =>
-                    (0, r.jsx)(o.f6W, {
-                        theme: l,
+                    (0, r.jsx)(s.f6W, {
+                        theme: o,
                         children: (e) =>
                             (0, r.jsx)('div', {
                                 className: e,
                                 ref: u,
-                                children: (0, r.jsx)(p.$, {
-                                    messageId: g.lds,
-                                    channel: P,
+                                children: (0, r.jsx)(_.$, {
+                                    messageId: m.lds,
+                                    channel: I,
                                     closePopout: () => {
                                         c(!1);
                                     },
@@ -171,14 +181,14 @@ let b = (e, t) => {
                             })
                     }),
                 children: () =>
-                    (0, r.jsx)(o.ua7, {
-                        text: x.NW.string(x.t.lfIHs7),
+                    (0, r.jsx)(s.ua7, {
+                        text: g.NW.string(g.t.lfIHs7),
                         children: (e) =>
                             (0, r.jsx)(
                                 'div',
-                                j(y({ ref: d }, e), {
-                                    className: v.reaction,
-                                    children: (0, r.jsx)(m.Z, {
+                                O(y({ ref: d }, e), {
+                                    className: E.reaction,
+                                    children: (0, r.jsx)(f.Z, {
                                         active: !1,
                                         tabIndex: 0,
                                         onClick: () => {

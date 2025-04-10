@@ -1,66 +1,68 @@
-n.d(t, { B: () => u }), n(539854), n(953529);
+n.d(t, { B: () => f }), n(539854), n(953529);
 var r = n(55000),
-    a = n(693824),
-    l = n(690725),
-    i = n(737583),
-    o = n(169040);
-let s = (e, t, n) =>
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r);
-                    });
-            }
-            return e;
-        })({ AvatarImage: e }, null != t && { MediaImage: t }, null != n && { ApplicationImage: n }),
-    c = (e, t) => {
+    i = n(693824),
+    o = n(690725),
+    a = n(737583),
+    s = n(169040);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null != n && { ApplicationImage: n }),
+    d = (e, t) => {
         let n = [
             {
-                iconPath: o.i6,
+                iconPath: s.i6,
                 text: e
             }
         ];
         return (
             null != t &&
                 n.push({
-                    iconPath: o.fj,
+                    iconPath: s.fj,
                     text: t
                 }),
             n
         );
     },
-    u = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: m, episodeDescription: p, colors: h, channelId: f } = e,
-            g = n.extra.media_title,
-            x = s(u, t);
-        return await (0, l.f)({
-            assetsToLoad: x,
-            drawImage: (e) => {
-                let t = h.map((e, t) => ({
+    f = async (e) => {
+        let { mediaImageSrc: t, entry: n, avatarSrc: l, description: c, timestamp: f, episodeDescription: _, colors: p, channelId: h } = e,
+            m = n.extra.media_title,
+            g = u(l, t),
+            E = (e) => {
+                let t = p.map((e, t) => ({
                     color: e,
                     stop: t
                 }));
                 e.setSize(
                     {
-                        w: o.nx,
-                        h: o.bg
+                        w: s.nx,
+                        h: s.bg
                     },
                     4
                 ),
@@ -68,17 +70,17 @@ let s = (e, t, n) =>
                         t,
                         {
                             x: 0,
-                            y: o.bg
+                            y: s.bg
                         },
                         {
-                            x: o.nx,
+                            x: s.nx,
                             y: 0
                         },
                         {
                             x: 0,
                             y: 0,
-                            h: o.bg,
-                            w: o.nx
+                            h: s.bg,
+                            w: s.nx
                         },
                         8
                     ),
@@ -86,35 +88,35 @@ let s = (e, t, n) =>
                 let n = e.drawRoundedImage(
                     'MediaImage',
                     {
-                        x: o.sB,
-                        y: o.sB
+                        x: s.sB,
+                        y: s.sB
                     },
                     {
-                        w: o.Pu,
-                        h: o.Pu
+                        w: s.Pu,
+                        h: s.Pu
                     },
                     8,
-                    { fillMode: a.JU.Contain }
+                    { fillMode: i.JU.Contain }
                 );
-                n === a.vP.Failure &&
+                n === i.vP.Failure &&
                     (n = e.drawRoundedImage(
                         'ApplicationImage',
                         {
-                            x: o.sB,
-                            y: o.sB
+                            x: s.sB,
+                            y: s.sB
                         },
                         {
-                            w: o.Pu,
-                            h: o.Pu
+                            w: s.Pu,
+                            h: s.Pu
                         },
                         8
                     )),
-                    n === a.vP.Failure &&
+                    n === i.vP.Failure &&
                         e.drawPath(
                             r.Cv,
                             {
-                                x: o.sB,
-                                y: o.sB
+                                x: s.sB,
+                                y: s.sB
                             },
                             !0,
                             2 + 2 / 3
@@ -122,45 +124,48 @@ let s = (e, t, n) =>
                     e.drawRoundedImage(
                         'AvatarImage',
                         {
-                            x: o.Iq,
-                            y: o.sB
+                            x: s.Iq,
+                            y: s.sB
                         },
                         {
-                            w: o.$S,
-                            h: o.$S
+                            w: s.$S,
+                            h: s.$S
                         },
                         50
                     ),
                     e.setFont({
                         size: 16,
-                        family: o.I8,
-                        weight: o.Ue,
-                        truncate: a.GX.Wrap
+                        family: s.I8,
+                        weight: s.Ue,
+                        truncate: i.GX.Wrap
                     }),
                     e.drawText(
-                        d,
+                        c,
                         {
-                            x: o.Iq,
+                            x: s.Iq,
                             y: 64,
                             h: 32,
-                            w: o.kC
+                            w: s.kC
                         },
                         !0
                     );
-                let l = c(m, p);
-                (0, i.J)({
+                let o = d(f, _);
+                (0, a.J)({
                     canvas: e,
-                    badges: l,
-                    startPosition: o.Iq,
-                    maxWidth: o.kC
+                    badges: o,
+                    startPosition: s.Iq,
+                    maxWidth: s.kC
                 });
-            },
+            };
+        return await (0, o.f)({
+            assetsToLoad: g,
+            drawImage: E,
             exportConfigs: {
-                format: a.kH.CloudUpload,
+                format: i.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(g, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(m, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: f
+                channelId: h
             }
         });
     };

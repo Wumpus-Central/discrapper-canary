@@ -1,35 +1,7 @@
-n.d(t, { Z: () => l }), n(388685);
-var r = n(241601),
-    i = n(147913),
-    o = n(405656);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s extends i.Z {
-    _initialize() {
-        this._unsubscribeIntlLoadingStore = (0, r.Ql)(o.Pe);
-    }
-    _terminate() {
-        var e, t;
-        null == (e = (t = this)._unsubscribeIntlLoadingStore) || e.call(t);
-    }
-    constructor(...e) {
-        super(...e),
-            a(this, 'actions', {
-                USER_SETTINGS_PROTO_UPDATE: o.Pe,
-                POST_CONNECTION_OPEN: o.Pe
-            }),
-            a(this, '_unsubscribeIntlLoadingStore', void 0);
-    }
-}
-let l = new s();
+n.r(t),
+    n.d(t, {
+        default: () => i,
+        metadata: () => r
+    });
+let r = { fileBytes: 209152 },
+    i = 'https://cdn.discordapp.com/assets/content/392e0c0d3e8bfa9d6a525fb8e7810dff634688c73140d2e0999960030b3faa4c.jpg';

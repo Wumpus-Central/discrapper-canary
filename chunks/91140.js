@@ -1,33 +1,33 @@
 n.d(t, {
     W: () => u,
-    Z: () => d
+    Z: () => f
 });
 var r = n(200651),
     i = n(192379),
     o = n(379357),
-    l = n(442550),
+    a = n(442550),
     s = n(297781),
-    a = n(443487),
+    l = n(443487),
     c = n(522314);
 let u = [s.OV, s.EE, s.Af, s.U9, s.wO, s.f, s.n8, s.v1, s.pQ],
-    d = i.memo((e) => {
+    d = (e) => {
         var t;
-        let { entry: n, channel: i, selected: d, hovered: p } = e,
-            { largeImage: h } = (0, o.rv)({
+        let { entry: n, channel: i, selected: d, hovered: f } = e,
+            { largeImage: _ } = (0, o.rv)({
                 entry: n,
                 showCoverImage: !1
             });
-        return (0, r.jsxs)(a.Zb, {
+        return (0, r.jsxs)(l.Zb, {
             selected: d,
             children: [
-                (0, r.jsxs)(a.e$, {
+                (0, r.jsxs)(l.e$, {
                     children: [
-                        (0, r.jsx)(a.F9, {
+                        (0, r.jsx)(l.F9, {
                             entry: n,
                             channelId: i.id,
                             guildId: i.guild_id
                         }),
-                        (0, r.jsx)(a.ll, { children: n.extra.game_name }),
+                        (0, r.jsx)(l.ll, { children: n.extra.game_name }),
                         (0, r.jsx)(s.Gk, {
                             location: s.Gt.CARD,
                             children: u.map((e, t) =>
@@ -35,7 +35,7 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.wO, s.f, s.n8, s.v1, s.pQ],
                                     e,
                                     {
                                         entry: n,
-                                        hovered: p
+                                        hovered: f
                                     },
                                     t
                                 )
@@ -43,13 +43,14 @@ let u = [s.OV, s.EE, s.Af, s.U9, s.wO, s.f, s.n8, s.v1, s.pQ],
                         })
                     ]
                 }),
-                (0, r.jsx)(l.f, {
-                    alt: null != (t = null == h ? void 0 : h.text) ? t : null == h ? void 0 : h.alt,
-                    src: null == h ? void 0 : h.src,
+                (0, r.jsx)(a.f, {
+                    alt: null != (t = null == _ ? void 0 : _.text) ? t : null == _ ? void 0 : _.alt,
+                    src: null == _ ? void 0 : _.src,
                     size: 48,
                     className: c.thumbnail,
-                    showTooltip: (null == h ? void 0 : h.text) != null
+                    showTooltip: (null == _ ? void 0 : _.text) != null
                 })
             ]
         });
-    });
+    },
+    f = i.memo(d);

@@ -1,58 +1,59 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(481060),
     a = n(100527),
     s = n(906732),
-    l = n(960870),
-    c = n(510659),
-    u = n(848966),
-    d = n(388032);
-function f(e) {
+    l = n(896449),
+    c = n(960870),
+    u = n(510659),
+    d = n(848966),
+    f = n(388032);
+function _(e) {
     var t;
-    let { children: n, user: f, activity: _, entry: p, display: h, onSelect: m, onClose: g, appContext: E } = e,
-        [b, y] = i.useState(!1),
-        { analyticsLocations: v } = (0, s.ZP)(a.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        O = (0, l.Z)({
-            display: h,
-            user: f,
-            activity: _,
-            entry: p,
-            analyticsLocations: v
+    let { children: n, user: _, activity: p, entry: h, display: m, onSelect: g, onClose: E, appContext: b } = e,
+        [y, v] = i.useState(!1),
+        { analyticsLocations: O } = (0, s.ZP)(a.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        I = (0, c.Z)({
+            display: m,
+            user: _,
+            activity: p,
+            entry: h,
+            analyticsLocations: O
         }),
-        I = (0, c.yi)(),
-        S = (0, u.Z)({
-            entry: p,
-            activity: _,
-            user: f,
-            display: h,
-            onClose: g,
-            onAction: O,
-            isMenuOpen: b,
-            appContext: E
+        S = (0, u.yi)(),
+        T = (0, d.Z)({
+            entry: h,
+            activity: p,
+            user: _,
+            display: m,
+            onClose: E,
+            onAction: I,
+            isMenuOpen: y,
+            appContext: b
         });
-    return 0 === S.length || f.bot
+    return 0 === T.length || _.bot
         ? null
         : (0, r.jsx)(o.yRy, {
-              targetElementRef: null != (t = null == I ? void 0 : I.interactionPopoutTargetRef) ? t : void 0,
+              targetElementRef: null != (t = null == S ? void 0 : S.interactionPopoutTargetRef) ? t : void 0,
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  O({ action: 'OPEN_MENU' }), y(!0);
+                  I({ action: 'OPEN_MENU' }), v(!0);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)('div', {
                       onClick: (e) => e.stopPropagation(),
                       children: (0, r.jsx)(o.v2r, {
-                          navId: 'content-inventory-context',
+                          navId: l.N,
                           onClose: () => {
-                              t(), y(!1);
+                              t(), v(!1);
                           },
-                          'aria-label': d.NW.string(d.t.PlAQz8),
-                          onSelect: m,
-                          children: (0, r.jsx)(o.kSQ, { children: S })
+                          'aria-label': f.NW.string(f.t.PlAQz8),
+                          onSelect: g,
+                          children: (0, r.jsx)(o.kSQ, { children: T })
                       })
                   });
               },

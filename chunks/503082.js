@@ -1,434 +1,441 @@
-i.d(e, { Z: () => f }), i(415506), i(388685), i(35282);
-var s = i(512722),
-    n = i.n(s),
-    a = i(129508),
-    r = i(921608),
-    o = i(693824);
-function h(t, e, i) {
+n.d(t, { Z: () => m }), n(415506), n(388685), n(35282);
+var r = n(512722),
+    i = n.n(r),
+    o = n(129508),
+    a = n(921608),
+    s = n(693824);
+function l(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = i),
-        t
+            : (e[t] = n),
+        e
     );
 }
-function l(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var i = null != arguments[e] ? arguments[e] : {},
-            s = Object.keys(i);
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (s = s.concat(
-                Object.getOwnPropertySymbols(i).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(i, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            s.forEach(function (e) {
-                h(t, e, i[e]);
+            r.forEach(function (t) {
+                l(e, t, n[t]);
             });
     }
-    return t;
+    return e;
 }
-function c(t, e) {
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
     return (
-        (e = null != e ? e : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var i = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var s = Object.getOwnPropertySymbols(t);
-                      i.push.apply(i, s);
-                  }
-                  return i;
-              })(Object(e)).forEach(function (i) {
-                  Object.defineProperty(t, i, Object.getOwnPropertyDescriptor(e, i));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        t
+        e
     );
 }
-let u = 'undefined' != typeof OffscreenCanvas;
-class d {
+let f = 'undefined' != typeof OffscreenCanvas,
+    _ = 4,
+    p = 2176;
+class h {
     reset() {
         this.context.clearRect(0, 0, this.MAX_ROW_WIDTH, this.MAX_HEIGHT), this.imageMap.clear(), (this.nextX = 0), (this.nextY = 0), (this.tallestImageHeight = 0), (this.needsReset = !1);
     }
     breakToNewRow() {
-        let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (this.nextX = 0), (this.nextY += this.tallestImageHeight + 4), (this.tallestImageHeight = 0), this.nextY > this.MAX_HEIGHT && (t ? this.reset() : (this.needsReset = !0));
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        (this.nextX = 0), (this.nextY += this.tallestImageHeight + _), (this.tallestImageHeight = 0), this.nextY > this.MAX_HEIGHT && (e ? this.reset() : (this.needsReset = !0));
     }
-    getImage(t, e, i) {
-        var s;
-        let n = null != i ? i : 'default',
-            a = this.imageMap.get(t);
-        if (null != a && null != a[n]) return a[n];
-        if ((this.needsReset && this.reset(), e.width > this.MAX_ROW_WIDTH || e.height > this.MAX_HEIGHT)) throw Error('Image: '.concat(t, ' is too wide to use with offscreen canvas. (').concat(e.width, ' x ').concat(e.height));
-        (this.nextX + e.width + 4 > this.MAX_ROW_WIDTH || this.nextY + e.height + 4 > this.MAX_HEIGHT) && this.breakToNewRow(!0), this.context.save(), null != i && (this.context.filter = i), this.context.drawImage(e, this.nextX, this.nextY, e.width, e.height), this.context.restore();
-        let r = null != (s = this.imageMap.get(t)) ? s : {},
-            o = {
+    getImage(e, t, n) {
+        var r;
+        let i = null != n ? n : 'default',
+            o = this.imageMap.get(e);
+        if (null != o && null != o[i]) return o[i];
+        if ((this.needsReset && this.reset(), t.width > this.MAX_ROW_WIDTH || t.height > this.MAX_HEIGHT)) throw Error('Image: '.concat(e, ' is too wide to use with offscreen canvas. (').concat(t.width, ' x ').concat(t.height));
+        (this.nextX + t.width + _ > this.MAX_ROW_WIDTH || this.nextY + t.height + _ > this.MAX_HEIGHT) && this.breakToNewRow(!0), this.context.save(), null != n && (this.context.filter = n), this.context.drawImage(t, this.nextX, this.nextY, t.width, t.height), this.context.restore();
+        let a = null != (r = this.imageMap.get(e)) ? r : {},
+            s = {
                 x: this.nextX,
                 y: this.nextY,
-                w: e.width,
-                h: e.height
+                w: t.width,
+                h: t.height
             };
-        return this.imageMap.set(t, c(l({}, r), { [n]: o })), e.height > this.tallestImageHeight && (this.tallestImageHeight = e.height), (this.nextX += e.width + 4), this.nextX > this.MAX_ROW_WIDTH && this.breakToNewRow(), o;
+        return this.imageMap.set(e, d(c({}, a), { [i]: s })), t.height > this.tallestImageHeight && (this.tallestImageHeight = t.height), (this.nextX += t.width + _), this.nextX > this.MAX_ROW_WIDTH && this.breakToNewRow(), s;
     }
     constructor() {
-        h(this, 'MAX_ROW_WIDTH', 2176), h(this, 'MAX_HEIGHT', 2176), h(this, 'nextX', 0), h(this, 'nextY', 0), h(this, 'tallestImageHeight', 0), h(this, 'needsReset', !1), h(this, 'canvas', void 0), h(this, 'context', void 0), h(this, 'imageMap', void 0), (this.imageMap = new Map()), u ? (this.canvas = new OffscreenCanvas(this.MAX_ROW_WIDTH, this.MAX_HEIGHT)) : ((this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT));
-        let t = this.canvas.getContext('2d', {
+        l(this, 'MAX_ROW_WIDTH', p), l(this, 'MAX_HEIGHT', p), l(this, 'nextX', 0), l(this, 'nextY', 0), l(this, 'tallestImageHeight', 0), l(this, 'needsReset', !1), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'imageMap', void 0), (this.imageMap = new Map()), f ? (this.canvas = new OffscreenCanvas(this.MAX_ROW_WIDTH, this.MAX_HEIGHT)) : ((this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT));
+        let e = this.canvas.getContext('2d', {
             alpha: !0,
             willReadFrequently: !1
         });
-        if (null == t) throw Error("Couldn't construct context for offscreen canvas");
-        this.context = t;
+        if (null == e) throw Error("Couldn't construct context for offscreen canvas");
+        this.context = e;
     }
 }
-class f extends a.Z {
+class m extends o.Z {
     setupOffscreenCanvas() {
         try {
-            this.offscreenCanvasCache = new d();
-        } catch (t) {
+            this.offscreenCanvasCache = new h();
+        } catch (e) {
             this.offscreenCanvasCache = void 0;
         }
     }
     getCanvasForExport() {
         return this.canvas;
     }
-    setFilter(t) {
-        !1 === this._warnedAboutFilters && this.offscreenCanvasCache, super.setFilter(t);
+    setFilter(e) {
+        !1 === this._warnedAboutFilters && this.offscreenCanvasCache, super.setFilter(e);
     }
     setContextProperties() {
         null != this.context && ((this.context.fillStyle = this.color), (this.context.strokeStyle = this.color), (this.context.font = ''.concat(this.font.style, ' ').concat(this.font.weight, ' ').concat(this.font.size, 'px ').concat(this.font.family.join(', '))));
     }
-    setSize(t, e) {
-        let { w: i, h: s } = t;
-        null != this.context && null != e ? ((this.canvas.width = i * e), (this.canvas.height = s * e), this.context.scale(e, e)) : ((this.canvas.width = i), (this.canvas.height = s));
+    setSize(e, t) {
+        let { w: n, h: r } = e;
+        null != this.context && null != t ? ((this.canvas.width = n * t), (this.canvas.height = r * t), this.context.scale(t, t)) : ((this.canvas.width = n), (this.canvas.height = r));
     }
-    clearRect(t) {
+    clearRect(e) {
         if (null == this.context) return;
-        let { x: e, y: i, w: s, h: n } = t;
-        this.context.clearRect(e, i, s, n);
+        let { x: t, y: n, w: r, h: i } = e;
+        this.context.clearRect(t, n, r, i);
     }
     restoreContext() {
         null != this.context && this.context.restore();
     }
-    rotateAroundOriginAndDraw(t, e, i) {
-        null != this.context && (this.context.save(), this.context.translate(t.x, t.y), this.context.rotate((e * Math.PI) / 180), i(), this.context.restore());
+    rotateAroundOriginAndDraw(e, t, n) {
+        null != this.context && (this.context.save(), this.context.translate(e.x, e.y), this.context.rotate((t * Math.PI) / 180), n(), this.context.restore());
     }
-    drawRect(t) {
-        let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+    drawRect(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         if (null == this.context) return;
-        let { x: s, y: n, w: a, h: r } = t;
-        i && this.setContextProperties(), e ? this.context.fillRect(s, n, a, r) : this.context.strokeRect(s, n, a, r);
+        let { x: r, y: i, w: o, h: a } = e;
+        n && this.setContextProperties(), t ? this.context.fillRect(r, i, o, a) : this.context.strokeRect(r, i, o, a);
     }
-    drawRoundedRect(t) {
-        let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            s = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+    drawRoundedRect(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+            r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (null == this.context) return;
-        let { x: n, y: a, w: r, h: o } = t;
-        s && this.setContextProperties(), this.context.beginPath(), this.context.roundRect(n, a, r, o, e), i ? this.context.fill() : this.context.stroke();
+        let { x: i, y: o, w: a, h: s } = e;
+        r && this.setContextProperties(), this.context.beginPath(), this.context.roundRect(i, o, a, s, t), n ? this.context.fill() : this.context.stroke();
     }
-    drawText(t, e, i) {
-        var s, a;
+    drawText(e, t, n) {
+        var r, o;
         if (null == this.context) return;
         this.setContextProperties();
-        let h = null != (s = e.w) ? s : this.canvas.width - e.x,
-            l = this.context.measureText(t),
-            c = !1,
-            u = this.font.size,
-            d = (t, e) => {
-                null != this.context && (i ? this.context.fillText(t, e.x, e.y) : this.context.strokeText(t, e.x, e.y));
+        let l = null != (r = t.w) ? r : this.canvas.width - t.x,
+            c = this.context.measureText(e),
+            u = !1,
+            d = this.font.size,
+            f = (e, t) => {
+                null != this.context && (n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y));
             },
-            f = (t) => {
-                if (null == this.context || l.width <= r.F) return '';
-                let e = ''.concat(t);
-                for (; l.width + r.F > h; ) (e = e.slice(0, -4)), (l = this.context.measureText(e)), (c = !0);
-                return c && (e += '...'), e;
+            _ = (e) => {
+                if (null == this.context || c.width <= a.F) return '';
+                let t = ''.concat(e);
+                for (; c.width + a.F > l; ) (t = t.slice(0, -4)), (c = this.context.measureText(t)), (u = !0);
+                return u && (t += '...'), t;
             };
-        if ((this.font.truncate === o.GX.None && d(t, e), this.font.truncate === o.GX.Truncate && d((t = f(t)), e), this.font.truncate === o.GX.Wrap)) {
-            let i = t.split(' '),
-                s = 1 / 0,
-                r = '',
-                o = 0;
-            for (null != e.h && ((s = e.h / u), n()(s > 0, 'DiscordCavas: boundingBox.h of '.concat(e.h, ' results in 0 visible lines with font size of ').concat(u))); i.length > 0; )
-                if ((l = this.context.measureText(r + ' ' + i[0])).width > h) {
-                    let t = !1;
+        if ((this.font.truncate === s.GX.None && f(e, t), this.font.truncate === s.GX.Truncate && f((e = _(e)), t), this.font.truncate === s.GX.Wrap)) {
+            let n = e.split(' '),
+                r = 1 / 0,
+                a = '',
+                s = 0;
+            for (null != t.h && ((r = t.h / d), i()(r > 0, 'DiscordCavas: boundingBox.h of '.concat(t.h, ' results in 0 visible lines with font size of ').concat(d))); n.length > 0; )
+                if ((c = this.context.measureText(a + ' ' + n[0])).width > l) {
+                    let e = !1;
                     if (
-                        (o + 1 >= s && i.length > 0 && (t = !0),
-                        '' !== r
-                            ? (d(t ? f(r + '...') : r, {
-                                  x: e.x,
-                                  y: e.y + u * o
+                        (s + 1 >= r && n.length > 0 && (e = !0),
+                        '' !== a
+                            ? (f(e ? _(a + '...') : a, {
+                                  x: t.x,
+                                  y: t.y + d * s
                               }),
-                              (r = ''))
-                            : d(f(null != (a = i.shift()) ? a : ''), {
-                                  x: e.x,
-                                  y: e.y + u * o
+                              (a = ''))
+                            : f(_(null != (o = n.shift()) ? o : ''), {
+                                  x: t.x,
+                                  y: t.y + d * s
                               }),
-                        t)
+                        e)
                     )
                         break;
-                    o += 1;
+                    s += 1;
                 } else
-                    (r += ' '.concat(i.shift())),
-                        0 === i.length &&
-                            d(r, {
-                                x: e.x,
-                                y: e.y + u * o
+                    (a += ' '.concat(n.shift())),
+                        0 === n.length &&
+                            f(a, {
+                                x: t.x,
+                                y: t.y + d * s
                             });
         }
         return {
-            x: e.x,
-            y: e.y,
-            w: l.width,
-            h: l.actualBoundingBoxAscent + l.actualBoundingBoxDescent
+            x: t.x,
+            y: t.y,
+            w: c.width,
+            h: c.actualBoundingBoxAscent + c.actualBoundingBoxDescent
         };
     }
-    drawFormattedMessage(t, e, i) {
-        this.font.truncate === o.GX.Wrap && console.warn("DiscordCavas: `drawFormattedMessage` doesn't currently support wrapping formatted text. The results of this draw likely won't match your expectations.");
-        let s = this.font.weight,
-            n = (t, e, i) => {
-                let n;
-                return 'strong' === t.type && this.setFont({ weight: 700 }), (n = Array.isArray(t.content) ? a(t.content, e, i) : this.drawText(t.content, e, i)), this.setFont({ weight: s }), n;
+    drawFormattedMessage(e, t, n) {
+        this.font.truncate === s.GX.Wrap && console.warn("DiscordCavas: `drawFormattedMessage` doesn't currently support wrapping formatted text. The results of this draw likely won't match your expectations.");
+        let r = this.font.weight,
+            i = (e, t, n) => {
+                let i;
+                return 'strong' === e.type && this.setFont({ weight: 700 }), (i = Array.isArray(e.content) ? o(e.content, t, n) : this.drawText(e.content, t, n)), this.setFont({ weight: r }), i;
             },
-            a = (t, e, i) => {
-                let s = 0;
+            o = (e, t, n) => {
+                let r = 0;
                 return (
-                    t.forEach((t) => {
-                        let { x: a, y: r, w: o, h } = e,
-                            l = null != o ? o - s : void 0,
-                            c = n(
-                                t,
+                    e.forEach((e) => {
+                        let { x: o, y: a, w: s, h: l } = t,
+                            c = null != s ? s - r : void 0,
+                            u = i(
+                                e,
                                 {
-                                    x: a + s,
-                                    y: r,
-                                    w: l,
-                                    h
+                                    x: o + r,
+                                    y: a,
+                                    w: c,
+                                    h: l
                                 },
-                                i
+                                n
                             );
-                        null != c && (s += c.w);
+                        null != u && (r += u.w);
                     }),
                     {
-                        x: e.x + s,
-                        y: e.y,
-                        w: s,
+                        x: t.x + r,
+                        y: t.y,
+                        w: r,
                         h: this.font.size
                     }
                 );
             };
-        Array.isArray(t) ? a(t, e, i) : n(t, e, i);
+        Array.isArray(e) ? o(e, t, n) : i(e, t, n);
     }
-    drawImage(t, e, i) {
-        let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { fillMode: o.JU.Stretch };
-        n()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.');
-        let { fillMode: a } = s;
-        if (null == this.context) return o.vP.Failure;
+    drawImage(e, t, n) {
+        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { fillMode: s.JU.Stretch };
+        i()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.');
+        let { fillMode: o } = r;
+        if (null == this.context) return s.vP.Failure;
         this.setContextProperties();
-        let r = this.assetMap.get(t);
-        if (null == r) return o.vP.ImageNotLoaded;
-        if (null != i) {
-            if (a === o.JU.Contain) {
-                let s,
-                    n = {
-                        w: r.width,
-                        h: r.height
+        let a = this.assetMap.get(e);
+        if (null == a) return s.vP.ImageNotLoaded;
+        if (null != n) {
+            if (o === s.JU.Contain) {
+                let r,
+                    i = {
+                        w: a.width,
+                        h: a.height
                     },
-                    a = +(n.w / n.h).toFixed(1);
-                if (+(i.w / i.h).toFixed(1) > a) {
-                    let t = i.h * a;
-                    s = {
-                        x: e.x + (i.w - t) / 2,
-                        y: e.y,
-                        w: t,
-                        h: i.h
+                    o = +(i.w / i.h).toFixed(1);
+                if (+(n.w / n.h).toFixed(1) > o) {
+                    let e = n.h * o;
+                    r = {
+                        x: t.x + (n.w - e) / 2,
+                        y: t.y,
+                        w: e,
+                        h: n.h
                     };
                 } else {
-                    let t = i.w / a;
-                    s = {
-                        x: e.x,
-                        y: e.y + (i.h - t) / 2,
-                        w: i.w,
-                        h: t
+                    let e = n.w / o;
+                    r = {
+                        x: t.x,
+                        y: t.y + (n.h - e) / 2,
+                        w: n.w,
+                        h: e
                     };
                 }
                 return (
                     this.drawCroppedImage(
-                        t,
+                        e,
                         {
                             x: 0,
                             y: 0,
-                            w: n.w,
-                            h: n.h
+                            w: i.w,
+                            h: i.h
                         },
                         {
-                            x: s.x,
-                            y: s.y,
-                            w: s.w,
-                            h: s.h
+                            x: r.x,
+                            y: r.y,
+                            w: r.w,
+                            h: r.h
                         }
                     ),
-                    o.vP.Success
+                    s.vP.Success
                 );
             }
-            if (a === o.JU.Cover) {
-                var h, u, d, f;
-                let n,
-                    a = {
-                        w: r.width,
-                        h: r.height
+            if (o === s.JU.Cover) {
+                var l, u, f, _;
+                let i,
+                    o = {
+                        w: a.width,
+                        h: a.height
                     },
-                    x = +(a.w / a.h).toFixed(1),
-                    g = +(i.w / i.h).toFixed(1);
-                if (g > x) {
-                    let t = a.w / g;
-                    n = c(
-                        l(
+                    p = +(o.w / o.h).toFixed(1),
+                    h = +(n.w / n.h).toFixed(1);
+                if (h > p) {
+                    let e = o.w / h;
+                    i = d(
+                        c(
                             {},
                             {
                                 x: 0,
-                                y: (a.h - t) * (null != (u = null == s || null == (h = s.focus) ? void 0 : h.y) ? u : 0.5)
+                                y: (o.h - e) * (null != (u = null == r || null == (l = r.focus) ? void 0 : l.y) ? u : 0.5)
                             }
                         ),
                         {
-                            w: r.width,
-                            h: t
+                            w: a.width,
+                            h: e
                         }
                     );
                 } else {
-                    let t = a.h * g;
-                    n = c(
-                        l(
+                    let e = o.h * h;
+                    i = d(
+                        c(
                             {},
                             {
-                                x: (r.width - t) * (null != (f = null == s || null == (d = s.focus) ? void 0 : d.x) ? f : 0.5),
+                                x: (a.width - e) * (null != (_ = null == r || null == (f = r.focus) ? void 0 : f.x) ? _ : 0.5),
                                 y: 0
                             }
                         ),
                         {
-                            w: t,
-                            h: r.height
+                            w: e,
+                            h: a.height
                         }
                     );
                 }
                 return (
-                    this.drawCroppedImage(t, n, {
-                        x: e.x,
-                        y: e.y,
-                        w: i.w,
-                        h: i.h
+                    this.drawCroppedImage(e, i, {
+                        x: t.x,
+                        y: t.y,
+                        w: n.w,
+                        h: n.h
                     }),
-                    o.vP.Success
+                    s.vP.Success
                 );
             }
-            if (null != this.offscreenCanvasCache) return this.drawCachedImage(t, e, i);
-            this.context.drawImage(r, e.x, e.y, i.w, i.h);
+            if (null != this.offscreenCanvasCache) return this.drawCachedImage(e, t, n);
+            this.context.drawImage(a, t.x, t.y, n.w, n.h);
         } else {
-            if (null != this.offscreenCanvasCache) return this.drawCachedImage(t, e);
-            this.context.drawImage(r, e.x, e.y);
+            if (null != this.offscreenCanvasCache) return this.drawCachedImage(e, t);
+            this.context.drawImage(a, t.x, t.y);
         }
-        return o.vP.Success;
+        return s.vP.Success;
     }
-    drawRoundedImage(t, e, i, s, n) {
-        if (null == this.context) return o.vP.Failure;
-        let { x: a, y: r } = e,
-            { w: h, h: l } = i;
+    drawRoundedImage(e, t, n, r, i) {
+        if (null == this.context) return s.vP.Failure;
+        let { x: o, y: a } = t,
+            { w: l, h: c } = n;
         this.context.save();
-        let c = new Path2D();
-        c.roundRect(a, r, h, l, s), this.context.clip(c);
-        let u = this.drawImage(t, e, i, n);
-        return this.restoreContext(), u;
+        let u = new Path2D();
+        u.roundRect(o, a, l, c, r), this.context.clip(u);
+        let d = this.drawImage(e, t, n, i);
+        return this.restoreContext(), d;
     }
-    drawCroppedImage(t, e, i) {
-        var s;
-        if ((null != this.offscreenCanvasCache && this.drawCroppedCachedImage(t, e, i), null == this.context)) return o.vP.Failure;
-        let n = null == (s = this.assetMap) ? void 0 : s.get(t);
-        if (null == n) return o.vP.ImageNotLoaded;
-        if (null != this.offscreenCanvasCache) return this.drawCroppedCachedImage(t, e, i);
+    drawCroppedImage(e, t, n) {
+        var r;
+        if ((null != this.offscreenCanvasCache && this.drawCroppedCachedImage(e, t, n), null == this.context)) return s.vP.Failure;
+        let i = null == (r = this.assetMap) ? void 0 : r.get(e);
+        if (null == i) return s.vP.ImageNotLoaded;
+        if (null != this.offscreenCanvasCache) return this.drawCroppedCachedImage(e, t, n);
         {
-            let { x: t, y: s, w: a, h: r } = e,
-                { x: o, y: h, w: l, h: c } = i;
-            this.context.drawImage(n, t, s, a, r, o, h, l, c);
+            let { x: e, y: r, w: o, h: a } = t,
+                { x: s, y: l, w: c, h: u } = n;
+            this.context.drawImage(i, e, r, o, a, s, l, c, u);
         }
-        return o.vP.Success;
+        return s.vP.Success;
     }
-    drawCachedImage(t, e, i) {
-        var s, a;
-        if ((n()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), n()(null != this.offscreenCanvasCache, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return o.vP.Failure;
-        let r = this.assetMap.get(t);
-        if (null == r) return o.vP.ImageNotLoaded;
-        let h = this.offscreenCanvasCache.getImage(t.toString(), r, this.getFilterString());
-        return null == h ? o.vP.Failure : (this.context.drawImage(this.offscreenCanvasCache.canvas, h.x, h.y, h.w, h.h, e.x, e.y, null != (s = null == i ? void 0 : i.w) ? s : h.w, null != (a = null == i ? void 0 : i.h) ? a : h.h), o.vP.Success);
+    drawCachedImage(e, t, n) {
+        var r, o;
+        if ((i()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), i()(null != this.offscreenCanvasCache, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return s.vP.Failure;
+        let a = this.assetMap.get(e);
+        if (null == a) return s.vP.ImageNotLoaded;
+        let l = this.offscreenCanvasCache.getImage(e.toString(), a, this.getFilterString());
+        return null == l ? s.vP.Failure : (this.context.drawImage(this.offscreenCanvasCache.canvas, l.x, l.y, l.w, l.h, t.x, t.y, null != (r = null == n ? void 0 : n.w) ? r : l.w, null != (o = null == n ? void 0 : n.h) ? o : l.h), s.vP.Success);
     }
-    drawCroppedCachedImage(t, e, i) {
-        if ((n()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), n()(null != this.offscreenCanvasCache, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return o.vP.Failure;
-        let s = this.assetMap.get(t);
-        if (null == s) return o.vP.ImageNotLoaded;
-        let a = this.offscreenCanvasCache.getImage(t.toString(), s, this.getFilterString());
-        if (null == a) return o.vP.Failure;
-        let { x: r, y: h, w: l, h: c } = e,
-            { x: u, y: d, w: f, h: x } = i;
-        return this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + r, a.y + h, l, c, u, d, f, x), o.vP.Success;
+    drawCroppedCachedImage(e, t, n) {
+        if ((i()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), i()(null != this.offscreenCanvasCache, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return s.vP.Failure;
+        let r = this.assetMap.get(e);
+        if (null == r) return s.vP.ImageNotLoaded;
+        let o = this.offscreenCanvasCache.getImage(e.toString(), r, this.getFilterString());
+        if (null == o) return s.vP.Failure;
+        let { x: a, y: l, w: c, h: u } = t,
+            { x: d, y: f, w: _, h: p } = n;
+        return this.context.drawImage(this.offscreenCanvasCache.canvas, o.x + a, o.y + l, c, u, d, f, _, p), s.vP.Success;
     }
-    drawPath(t, e) {
-        let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        if (null == this.context) return o.vP.Failure;
+    drawPath(e, t) {
+        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        if (null == this.context) return s.vP.Failure;
         this.setContextProperties(), this.context.save();
-        let n = new Path2D(t);
-        return this.context.translate(e.x, e.y), this.context.scale(s, s), i ? this.context.fill(n, 'evenodd') : this.context.stroke(n), this.restoreContext(), o.vP.Success;
+        let i = new Path2D(e);
+        return this.context.translate(t.x, t.y), this.context.scale(r, r), n ? this.context.fill(i, 'evenodd') : this.context.stroke(i), this.restoreContext(), s.vP.Success;
     }
-    setGradientFillStyle(t, e, i) {
+    setGradientFillStyle(e, t, n) {
         if (null == this.context) return;
-        let s = this.context.createLinearGradient(e.x, e.y, i.x, i.y);
-        for (let { color: e, stop: i } of t) s.addColorStop(i, e);
-        this.context.fillStyle = s;
+        let r = this.context.createLinearGradient(t.x, t.y, n.x, n.y);
+        for (let { color: t, stop: n } of e) r.addColorStop(n, t);
+        this.context.fillStyle = r;
     }
-    drawGradientRect(t, e, i, s) {
-        return null == this.context ? o.vP.Failure : (this.setGradientFillStyle(t, e, i), this.drawRect(s, !0, !1), o.vP.Success);
+    drawGradientRect(e, t, n, r) {
+        return null == this.context ? s.vP.Failure : (this.setGradientFillStyle(e, t, n), this.drawRect(r, !0, !1), s.vP.Success);
     }
-    drawRoundedGradientRect(t, e, i, s, n) {
-        return null == this.context ? o.vP.Failure : (this.setGradientFillStyle(t, e, i), this.drawRoundedRect(s, n, !0, !1), o.vP.Success);
+    drawRoundedGradientRect(e, t, n, r, i) {
+        return null == this.context ? s.vP.Failure : (this.setGradientFillStyle(e, t, n), this.drawRoundedRect(r, i, !0, !1), s.vP.Success);
     }
-    clip(t, e) {
-        if (null == this.context) return;
-        this.context.save();
-        let { x: i, y: s } = t,
-            n = new Path2D(e);
-        this.context.translate(i, s), this.context.clip(n);
-    }
-    clipRect(t, e) {
+    clip(e, t) {
         if (null == this.context) return;
         this.context.save();
-        let { x: i, y: s, w: n, h: a } = t;
-        if (e) {
-            let t = new Path2D();
-            t.moveTo(0, 0), t.lineTo(this.canvas.width, 0), t.lineTo(this.canvas.width, this.canvas.height), t.lineTo(0, this.canvas.height), t.lineTo(0, 0), t.closePath(), t.rect(i, s, n, a), this.context.clip(t, 'evenodd');
+        let { x: n, y: r } = e,
+            i = new Path2D(t);
+        this.context.translate(n, r), this.context.clip(i);
+    }
+    clipRect(e, t) {
+        if (null == this.context) return;
+        this.context.save();
+        let { x: n, y: r, w: i, h: o } = e;
+        if (t) {
+            let e = new Path2D();
+            e.moveTo(0, 0), e.lineTo(this.canvas.width, 0), e.lineTo(this.canvas.width, this.canvas.height), e.lineTo(0, this.canvas.height), e.lineTo(0, 0), e.closePath(), e.rect(n, r, i, o), this.context.clip(e, 'evenodd');
         } else {
-            let t = new Path2D();
-            t.rect(i, s, n, a), this.context.clip(t);
+            let e = new Path2D();
+            e.rect(n, r, i, o), this.context.clip(e);
         }
     }
-    clipRoundedRect(t) {
-        let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            i = arguments.length > 2 ? arguments[2] : void 0;
+    clipRoundedRect(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            n = arguments.length > 2 ? arguments[2] : void 0;
         if (null == this.context) return;
         this.context.save();
-        let { x: s, y: n, w: a, h: r } = t;
-        if (i) {
-            let t = new Path2D();
-            t.moveTo(0, 0), t.lineTo(this.canvas.width, 0), t.lineTo(this.canvas.width, this.canvas.height), t.lineTo(0, this.canvas.height), t.lineTo(0, 0), t.closePath(), t.roundRect(s, n, a, r, e), this.context.clip(t, 'evenodd');
+        let { x: r, y: i, w: o, h: a } = e;
+        if (n) {
+            let e = new Path2D();
+            e.moveTo(0, 0), e.lineTo(this.canvas.width, 0), e.lineTo(this.canvas.width, this.canvas.height), e.lineTo(0, this.canvas.height), e.lineTo(0, 0), e.closePath(), e.roundRect(r, i, o, a, t), this.context.clip(e, 'evenodd');
         } else {
-            let t = new Path2D();
-            t.roundRect(s, n, a, r, e), this.context.clip(t);
+            let e = new Path2D();
+            e.roundRect(r, i, o, a, t), this.context.clip(e);
         }
     }
-    constructor(t, e) {
-        super(t, e), h(this, 'canvas', void 0), h(this, 'context', void 0), h(this, 'offscreenCanvasCache', void 0), h(this, '_warnedAboutFilters', !1), (this.canvas = t), (this.context = this.canvas.getContext('2d')), null != this.context && (this.context.imageSmoothingQuality = 'high');
+    constructor(e, t) {
+        super(e, t), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'offscreenCanvasCache', void 0), l(this, '_warnedAboutFilters', !1), (this.canvas = e), (this.context = this.canvas.getContext('2d')), null != this.context && (this.context.imageSmoothingQuality = 'high');
     }
 }
