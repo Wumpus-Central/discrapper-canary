@@ -16,6 +16,7 @@ var r = (function (e) {
             (e.ACTIVITY_SHARE_MOMENT_MODAL = 'impression_activity_share_moment_modal'),
             (e.ACTIVITY_SHELF = 'impression_activity_shelf'),
             (e.ACTIVITY_SHELF_SELECT_CHANNEL = 'impression_activity_shelf_select_channel'),
+            (e.APP_LAUNCHER_BADGE = 'impression_app_launcher_badge'),
             (e.APP_LAUNCHER_HOME_ACTIVITY_ITEM = 'impression_app_launcher_home_activity_item'),
             (e.APP_LAUNCHER_ITEM = 'impression_app_launcher_item'),
             (e.APP_LAUNCHER_SEARCH_RESULTS_ITEM = 'impression_app_launcher_search_results_item'),

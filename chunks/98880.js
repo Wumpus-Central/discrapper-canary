@@ -155,7 +155,8 @@ function Q(e) {
             applicationFlags: (0, L.BQ)(t) ? t.flags : void 0,
             sectionName: a,
             sectionPosition: s,
-            sectionOverallPosition: d
+            sectionOverallPosition: d,
+            promotionalLabel: (0, L.dF)(t)
         }),
         y = l.useMemo(() => {
             let e = m ? H.containerDisabled : H.container;
@@ -477,6 +478,7 @@ function el(e) {
                         section_name: n,
                         search_results_position: i,
                         source: T.Z.entrypoint(),
+                        promotional_label: (0, L.dF)(t),
                         location: o,
                         query: r
                     }),
@@ -497,6 +499,7 @@ function el(e) {
                         section_name: n,
                         search_results_position: i,
                         source: T.Z.entrypoint(),
+                        promotional_label: (0, L.dF)(t),
                         location: o,
                         query: r
                     }),
