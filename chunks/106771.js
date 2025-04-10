@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(481060),
     a = n(239091),
     o = n(723163),
-    c = n(973616),
-    s = n(573188),
+    s = n(973616),
+    c = n(573188),
     u = n(783097),
     d = n(176412),
     p = n(570949),
@@ -20,7 +20,7 @@ function x(e) {
         g = r.useCallback(
             (e) => {
                 if ((0, u.BQ)(x)) {
-                    let t = x instanceof c.ZP ? x : c.ZP.createFromServer(x);
+                    let t = x instanceof s.ZP ? x : s.ZP.createFromServer(x);
                     (0, a.vq)(e, (e) =>
                         (0, i.jsx)(
                             p.Z,
@@ -67,7 +67,7 @@ function x(e) {
             query: y,
             searchResultsPosition: v
         }),
-        { enabled: O } = s.X.useExperiment({ location: 'AppLauncherSearchCard' }, { autoTrackExposure: !0 }),
+        { enabled: O } = c.X.useExperiment({ location: 'AppLauncherSearchCard' }, { autoTrackExposure: !0 }),
         { friends: S } = (0, o.Z)(x),
         T = O && (0, u.ye)(x) && S.length > 0;
     return (0, i.jsx)(l.P3F, {
@@ -97,6 +97,7 @@ function x(e) {
                             ? (0, i.jsx)(f.Z, {
                                   friends: S,
                                   onClick: N,
+                                  className: b.friendsWhoPlayHover,
                                   shortText: !0
                               })
                             : (0, i.jsx)(l.Text, {

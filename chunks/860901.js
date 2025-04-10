@@ -4,6 +4,7 @@ e.exports = {
     rowDivider: 'rowDivider_cb32c7',
     container: 'container_cb32c7',
     containerBorderRadius: 'containerBorderRadius_cb32c7',
+    friendsWhoPlayHover: 'friendsWhoPlayHover_cb32c7',
     rowContainer: 'rowContainer_cb32c7',
     containerDisabled: 'containerDisabled_cb32c7',
     icon: 'icon_cb32c7',
