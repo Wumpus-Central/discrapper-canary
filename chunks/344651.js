@@ -392,7 +392,7 @@ W(
                     });
                     let a = null == e.user_settings_proto ? void 0 : (0, g.ac)(e.user_settings_proto);
                     m.Z.dispatchReady.measure(() => {
-                        var n;
+                        var n, s;
                         K({
                             type: 'CONNECTION_OPEN',
                             sessionId: e.session_id,
@@ -414,11 +414,12 @@ W(
                             experiments: e.experiments,
                             connectedAccounts: e.connected_accounts,
                             guildExperiments: e.guild_experiments,
+                            apexUserExperiments: null != (n = e.apex_user_experiments) ? n : void 0,
                             requiredAction: e.required_action,
                             consents: e.consents,
                             sessions: Q(e.sessions || []),
                             pendingPayments: e.pending_payments,
-                            countryCode: null != (n = e.country_code) ? n : void 0,
+                            countryCode: null != (s = e.country_code) ? s : void 0,
                             guildJoinRequests: e.guild_join_requests || [],
                             userSettingsProto: a,
                             apiCodeVersion: e.api_code_version,
@@ -442,7 +443,11 @@ W(
         }
     ),
     H(['STATE_UPDATE'], (e) => {
-        K({ type: 'STATE_UPDATE' });
+        var t;
+        K({
+            type: 'STATE_UPDATE',
+            apexUserExperiments: null != (t = e.apex_user_experiments) ? t : void 0
+        });
     }),
     H(['RESUMED'], () => {
         w.RR.forceUpdate(), w.GC.forceUpdate(), K({ type: 'CONNECTION_RESUMED' });
