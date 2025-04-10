@@ -1,29 +1,32 @@
-n.d(t, { Z: () => s });
-var i = n(990547),
-    r = n(442837),
-    l = n(213609),
+n.d(t, { Z: () => c });
+var i = n(192379),
+    r = n(990547),
+    l = n(442837),
+    o = n(213609),
     a = n(541099),
-    o = n(312871);
-function s(e) {
-    let { applicationId: t, applicationFlags: n, sectionName: s, sectionPosition: c, sectionOverallPosition: d, promotionalLabel: u } = e,
-        p = (0, r.e7)([a.Z], () => a.Z.entrypoint());
+    s = n(312871);
+function c(e) {
+    let { applicationId: t, applicationFlags: n, sectionName: c, sectionPosition: u, sectionOverallPosition: d, promotionalLabel: p, numFriendsWhoPlay: m } = e,
+        f = (0, l.e7)([a.Z], () => a.Z.entrypoint()),
+        h = i.useCallback(() => {
+            (0, o.h)({
+                type: r.ImpressionTypes.VIEW,
+                name: r.ImpressionNames.APP_LAUNCHER_ITEM,
+                properties: {
+                    application_id: t,
+                    application_flags: n,
+                    section_name: c,
+                    section_position: u,
+                    section_overall_position: d,
+                    source: f,
+                    promotional_label: p,
+                    num_friends_who_play: m
+                }
+            });
+        }, [m]);
     return {
-        trackItemImpressionRef: (0, o.Z)({
-            onVisible: () => {
-                (0, l.h)({
-                    type: i.ImpressionTypes.VIEW,
-                    name: i.ImpressionNames.APP_LAUNCHER_ITEM,
-                    properties: {
-                        application_id: t,
-                        application_flags: n,
-                        section_name: s,
-                        section_position: c,
-                        section_overall_position: d,
-                        source: p,
-                        promotional_label: u
-                    }
-                });
-            },
+        trackItemImpressionRef: (0, s.Z)({
+            onVisible: h,
             threshold: 0.5,
             minTimeVisibleMs: 1000
         })
