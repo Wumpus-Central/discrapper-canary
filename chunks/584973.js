@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -7,9 +7,10 @@ var r = n(200651),
     l = n(596454),
     c = n(633302),
     u = n(695346),
-    d = n(556638),
-    f = n(843280);
-function _(e, t, n) {
+    d = n(563114),
+    f = n(556638),
+    _ = n(843280);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,32 +34,37 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e) {
-    let { emoji: t, className: n, animate: o = !0, hideTooltip: _ = !1, tooltipDelay: h = d.X } = e,
-        m = u.Yk.useSetting(),
-        g = i.useRef(null),
-        E = null != t.id ? ':'.concat(t.name, ':') : c.ZP.translateSurrogatesToInlineEmoji(t.name),
-        b = {
-            className: a()(f.emoji, n),
-            emojiId: t.id,
-            emojiName: t.name,
-            autoplay: !0,
-            animated: !!(t.animated && m && o),
-            registerInnerRef: (e) => {
-                g.current = e;
-            }
-        };
-    return _
-        ? (0, r.jsx)(l.Z, p({}, b))
+function m(e) {
+    let { emoji: t, className: n, animate: o = !0, hideTooltip: p = !1, tooltipDelay: m = f.X } = e,
+        g = u.Yk.useSetting(),
+        E = i.useRef(null),
+        b = null != t.id ? ':'.concat(t.name, ':') : c.ZP.translateSurrogatesToInlineEmoji(t.name);
+    if (null == t.id && d.T.has(t.name))
+        return (0, r.jsx)('span', {
+            className: a()(_.emoji, n),
+            children: t.name
+        });
+    let y = {
+        className: a()(_.emoji, n),
+        emojiId: t.id,
+        emojiName: t.name,
+        autoplay: !0,
+        animated: !!(t.animated && g && o),
+        registerInnerRef: (e) => {
+            E.current = e;
+        }
+    };
+    return p
+        ? (0, r.jsx)(l.Z, h({}, y))
         : (0, r.jsx)(s.ua7, {
-              targetElementRef: g,
-              text: E,
-              delay: h,
-              children: (e) => (0, r.jsx)(l.Z, p({}, e, b))
+              targetElementRef: E,
+              text: b,
+              delay: m,
+              children: (e) => (0, r.jsx)(l.Z, h({}, e, y))
           });
 }
