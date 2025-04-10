@@ -78,7 +78,7 @@ function T(e) {
 }
 function C(e) {
     var t;
-    let { author: r, message: n, channel: a, userOverride: f, compact: R = !1, withMentionPrefix: C = !1, showPopout: E = !1, className: Z, onClick: k, onContextMenu: A, onPopoutRequestClose: I, renderPopout: D, renderRemixTag: _ = !1, decorations: F, previewGuildId: L } = e,
+    let { author: r, message: n, channel: a, userOverride: f, compact: R = !1, withMentionPrefix: C = !1, showPopout: E = !1, className: Z, onClick: k, onContextMenu: I, onPopoutRequestClose: A, renderPopout: D, renderRemixTag: _ = !1, decorations: F, previewGuildId: L } = e,
         M = i.useRef(null),
         G = i.useContext(y.Z),
         B = null != (t = null == a ? void 0 : a.guild_id) ? t : G,
@@ -93,7 +93,7 @@ function C(e) {
         K = (0, P.Z)(n),
         ee = q && null != J && null != J.primaryColor && null != J.secondaryColor,
         et = Y && ee,
-        er = (0, u.Nv7)(null == J ? void 0 : J.primaryColor, null == J ? void 0 : J.secondaryColor, null == J ? void 0 : J.tertiaryColor),
+        er = (0, u.Icv)(null == J ? void 0 : J.primaryColor, null == J ? void 0 : J.secondaryColor, null == J ? void 0 : J.tertiaryColor, 'username'),
         { text: en, gradient: el } = et
             ? er
             : {
@@ -106,7 +106,7 @@ function C(e) {
                 if (Y) return et && null != J ? N({}, en.gradientStyle) : null != W ? { color: W } : void 0;
             })(),
             onClick: k,
-            onContextMenu: A,
+            onContextMenu: I,
             children: U + H,
             'data-text': U + H
         },
@@ -142,7 +142,7 @@ function C(e) {
                                     size: 80
                                 })
                               : void 0,
-                      onRequestClose: I,
+                      onRequestClose: A,
                       clickTrap: E,
                       children: (e) => {
                           var { onClick: t } = e,

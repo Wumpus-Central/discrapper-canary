@@ -4,20 +4,20 @@ var i = n(192379),
     l = n(424602),
     a = n(835473),
     o = n(594174),
-    c = n(695103),
-    s = n(823379),
+    s = n(695103),
+    c = n(823379),
     u = n(358085),
     d = n(317381),
     p = n(761122);
 function m(e, t) {
     let n = (0, r.e7)([o.default], o.default.getCurrentUser),
         m = (0, r.Wu)([d.ZP], () => d.ZP.getShelfActivities(e)),
-        f = (0, r.e7)([c.Z], () => c.Z.testModeEmbeddedApplicationId),
+        f = (0, r.e7)([s.Z], () => s.Z.testModeEmbeddedApplicationId),
         h = m.map((e) => e.application_id),
         b = null != f ? [f, ...h] : h,
         C = (0, a.Z)(b),
         x = 'channel' in t && (0, l.aZ)(t.channel, 'useActivityShelfData()'),
-        _ = i.useMemo(() => C.filter(s.lm), [C]),
+        _ = i.useMemo(() => C.filter(c.lm), [C]),
         y = i.useMemo(
             () =>
                 null != f && _.length > 0 && _[0].id === f && null != _[0].embeddedActivityConfig
@@ -42,7 +42,7 @@ function m(e, t) {
                                   application: t
                               };
                     })
-                    .filter(s.lm),
+                    .filter(c.lm),
             [m, _]
         );
     return i.useMemo(

@@ -16,7 +16,7 @@ var i = n(442837),
     g = n(906667);
 function b(e) {
     let { channel: t } = e;
-    return (0, c.I3)('EmptyMessages')
+    return (0, c.I3)('EmptyMessages', t.id)
         ? (0, r.jsxs)('div', {
               className: g.buttonContainer,
               children: [

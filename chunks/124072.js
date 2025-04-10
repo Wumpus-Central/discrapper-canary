@@ -83,7 +83,7 @@ let g = (e) => {
     var { children: t, className: n, color: o, roleColors: d, iconType: _, onMouseEnter: m, onMouseLeave: g } = e,
         E = h(e, ['children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
     let [b, y] = i.useState(!1),
-        { text: v, gradient: O } = (0, l.Nv7)(null == d ? void 0 : d.primaryColor, null == d ? void 0 : d.secondaryColor, null == d ? void 0 : d.tertiaryColor),
+        { text: v, gradient: O } = (0, l.Icv)(null == d ? void 0 : d.primaryColor, null == d ? void 0 : d.secondaryColor, null == d ? void 0 : d.tertiaryColor, 'username'),
         I = i.useCallback(
             (e) => {
                 y(!0), null == m || m(e);

@@ -177,9 +177,9 @@ function e7(e) {
         })(e, ['isSidebar']);
     return t ? (0, r.jsx)('section', e1(e0({}, n), { role: 'complementary' })) : (0, r.jsx)('main', e0({}, n));
 }
-let e4 = i.forwardRef((e, t) => (0, r.jsx)(e6, e1(e0({}, e), { refInstance: t })));
-e4.displayName = 'ChannelTextAreaForm';
-class e6 extends i.PureComponent {
+let e6 = i.forwardRef((e, t) => (0, r.jsx)(e4, e1(e0({}, e), { refInstance: t })));
+e6.displayName = 'ChannelTextAreaForm';
+class e4 extends i.PureComponent {
     componentDidMount() {
         eO.Z.addChangeListener(this.draftDidChange);
     }
@@ -592,7 +592,7 @@ class e8 extends i.PureComponent {
                         tutorialId: 'writing-messages',
                         position: 'left',
                         offsetX: 75,
-                        children: (0, r.jsx)(e4, {
+                        children: (0, r.jsx)(e6, {
                             ref: this.channelTextAreaFormRef,
                             focused: A,
                             highlighted: w,

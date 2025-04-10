@@ -5,8 +5,8 @@ var r = n(780384),
     l = n(481060),
     a = n(410030),
     o = n(540059),
-    c = n(176412),
-    s = n(146173),
+    s = n(176412),
+    c = n(146173),
     u = n(983008),
     d = n(478408);
 function p(e) {
@@ -15,14 +15,14 @@ function p(e) {
         f = (0, a.ZP)(),
         h = (0, r.ap)(f) ? d : u;
     return (
-        (0, c.Bm)(p, t),
+        (0, s.Bm)(p, t),
         (0, i.jsxs)('div', {
-            className: s.emptyStateContainer,
+            className: c.emptyStateContainer,
             children: [
                 m
                     ? null
                     : (0, i.jsx)('img', {
-                          className: s.emptyStateImage,
+                          className: c.emptyStateImage,
                           src: h,
                           alt: 'empty state'
                       }),

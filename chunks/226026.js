@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => s });
 var i = n(990547),
     r = n(442837),
     l = n(213609),
     a = n(541099),
     o = n(312871);
-function c(e) {
-    let { applicationId: t, applicationFlags: n, sectionName: c, sectionPosition: s, sectionOverallPosition: u } = e,
+function s(e) {
+    let { applicationId: t, applicationFlags: n, sectionName: s, sectionPosition: c, sectionOverallPosition: u } = e,
         d = (0, r.e7)([a.Z], () => a.Z.entrypoint());
     return {
         trackItemImpressionRef: (0, o.Z)({
@@ -16,8 +16,8 @@ function c(e) {
                     properties: {
                         application_id: t,
                         application_flags: n,
-                        section_name: c,
-                        section_position: s,
+                        section_name: s,
+                        section_position: c,
                         section_overall_position: u,
                         source: d
                     }

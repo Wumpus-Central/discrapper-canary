@@ -1,10 +1,10 @@
-n.d(t, { Z: () => c }), n(539854);
+n.d(t, { Z: () => s }), n(539854);
 var i = n(192379),
     r = n(442837),
     l = n(835473),
     a = n(541099),
     o = n(695676);
-function c() {
+function s() {
     let e = (0, r.e7)([a.Z], () => a.Z.initialState(), []),
         t = (0, l.q)(null == e ? void 0 : e.applicationId);
     return i.useMemo(() => {

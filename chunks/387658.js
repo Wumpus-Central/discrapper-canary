@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(120356),
     a = n.n(l),
     o = n(140835),
-    c = n(246521),
-    s = n(442837),
+    s = n(246521),
+    c = n(442837),
     u = n(481060),
     d = n(911969),
     p = n(607070),
@@ -34,27 +34,27 @@ let R = 'placeholder',
     k = [, , , , ,].fill(R);
 function Z(e) {
     var t, n;
-    let { context: l, command: a, section: c, sectionName: s } = e,
+    let { context: l, command: a, section: s, sectionName: c } = e,
         d = r.useCallback(() => {
             let e = y.Z.entrypoint();
             _.yT(v.ti.COMMAND),
                 (0, C.Mo)({
                     command: a,
                     location: b.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-                    sectionName: s
+                    sectionName: c
                 }),
                 'channel' === l.type &&
                     (m.Po({
                         channelId: l.channel.id,
                         command: a,
-                        section: c,
+                        section: s,
                         location: b.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-                        sectionName: s,
+                        sectionName: c,
                         source: e,
                         commandOrigin: b.bB.APPLICATION_LAUNCHER
                     }),
                     x.S.dispatch(O.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
-        }, [l, a, c, s]),
+        }, [l, a, s, c]),
         p = (null != (n = null == (t = a.options) ? void 0 : t.length) ? n : 0) > 0,
         f = r.useMemo(() => (0, A.ae)(a.displayDescription, void 0), [a.displayDescription]),
         h = r.useMemo(
@@ -87,16 +87,16 @@ function Z(e) {
             }),
             p
                 ? (0, i.jsx)(o.F, {})
-                : (0, i.jsx)(D, {
+                : (0, i.jsx)(W, {
                       context: l,
                       command: a,
-                      sectionName: s
+                      sectionName: c
                   })
         ]
     });
 }
 function M() {
-    let e = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
+    let e = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         { styleLarge: t, styleSmall: n } = r.useMemo(
             () => ({
                 styleLarge: {
@@ -146,11 +146,11 @@ function M() {
         children: l
     });
 }
-function D(e) {
+function W(e) {
     let { context: t, command: n, sectionName: l } = e;
     (0, f.PL)(!0, !0), (0, f.em)(t, !0, !0);
     let a = (0, N.D)(t),
-        [o, s] = r.useState(!1),
+        [o, c] = r.useState(!1),
         d = r.useCallback(
             async (e) => {
                 if ('channel' !== t.type) return;
@@ -174,7 +174,7 @@ function D(e) {
                         }),
                         _.yT(v.ti.COMMAND));
                 } finally {
-                    s(!1);
+                    c(!1);
                 }
             },
             [n, t, l, a]
@@ -194,14 +194,14 @@ function D(e) {
                 color: 'currentColor',
                 children: T.NW.string(T.t.TXNS7e)
             }),
-            (0, i.jsx)(c.U, {
+            (0, i.jsx)(s.U, {
                 size: 'xs',
                 color: 'currentColor'
             })
         ]
     });
 }
-function W(e) {
+function D(e) {
     let { context: t, commands: n, section: r, headerName: l, sectionName: a, children: o } = e;
     return 0 === n.length
         ? null
@@ -240,9 +240,9 @@ function W(e) {
 }
 function B(e) {
     var t;
-    let { context: n, application: l, sectionName: a, installOnDemand: o, setHasCommands: c } = e,
+    let { context: n, application: l, sectionName: a, installOnDemand: o, setHasCommands: s } = e,
         {
-            filterSection: s,
+            filterSection: c,
             commandsByActiveSection: u,
             sectionDescriptors: p,
             loading: m
@@ -270,28 +270,28 @@ function B(e) {
             commandsByActiveSection: u
         });
     r.useEffect(() => {
-        s(l.id);
-    }, [l.id, s]);
+        c(l.id);
+    }, [l.id, c]);
     let y = (0, g.Z)({
         context: n,
         commands: x,
         limit: 5
     });
     return (r.useEffect(() => {
-        c(x.length > 0);
-    }, [c, x]),
+        s(x.length > 0);
+    }, [s, x]),
     m || 0 !== x.length)
         ? (0, i.jsxs)('ul', {
               className: w.contentContainer,
               children: [
-                  (0, i.jsx)(W, {
+                  (0, i.jsx)(D, {
                       context: n,
                       section: f,
                       commands: y,
                       headerName: T.NW.string(T.t.acSE0t),
                       sectionName: a
                   }),
-                  (0, i.jsx)(W, {
+                  (0, i.jsx)(D, {
                       context: n,
                       section: f,
                       commands: m ? k : x,

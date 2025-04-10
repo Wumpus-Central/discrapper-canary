@@ -24,10 +24,10 @@ var l = n(200651),
     h = n(937860),
     g = n(921944),
     O = n(973792),
-    S = n(447489),
-    T = n(484885);
-function I() {
-    return (I =
+    T = n(447489),
+    I = n(484885);
+function S() {
+    return (S =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -104,8 +104,8 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
     P = (e) => {
         let { customIconSrcs: t } = e,
             n = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-            r = void 0 !== t ? t.animated : T.Z,
-            i = void 0 !== t ? t.static : S.Z;
+            r = void 0 !== t ? t.animated : I.Z,
+            i = void 0 !== t ? t.static : T.Z;
         return n || null == r
             ? (0, l.jsx)('img', {
                   src: i,
@@ -118,11 +118,11 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
                   className: O.orbAsset,
                   children: [
                       (0, l.jsx)('source', {
-                          src: T.Z,
+                          src: I.Z,
                           type: 'video/webm'
                       }),
                       (0, l.jsx)('img', {
-                          src: S.Z,
+                          src: T.Z,
                           className: O.orbAsset,
                           alt: 'Orb'
                       })
@@ -170,7 +170,7 @@ let N = () => (0, C.Lk)(document.body.style.getPropertyValue('--custom-app-panel
         });
     },
     y = (e) => {
-        var t = I(
+        var t = S(
             {},
             (function (e) {
                 if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -210,9 +210,9 @@ function L(e) {
     let { calculateVisibility: t, children: n, popoutElement: i, positionControlRef: o, targetElementRef: a, defaultCoachmarkPosition: s, disableAutoInvert: d, onGetTargetElementDimensions: E, spacing: f } = e,
         [C, p] = r.useState('bottom' === s),
         [h, g] = r.useState(!0),
-        [O, S] = r.useState(String(Date.now())),
-        T = (0, c.Z)(),
-        I = r.useCallback(
+        [O, T] = r.useState(String(Date.now())),
+        I = (0, c.Z)(),
+        S = r.useCallback(
             (e) => {
                 let n = t(e);
                 n !== h && g(n);
@@ -243,13 +243,13 @@ function L(e) {
                     }),
                 null != l)
             ) {
-                if ((I(l), r && S(String(Date.now())), d)) return;
+                if ((S(l), r && T(String(Date.now())), d)) return;
                 let e = l.top < window.innerHeight / 2;
                 if (e === C) return;
-                p(e), S(String(Date.now()));
+                p(e), T(String(Date.now()));
             }
         },
-        [C, I, E, d]
+        [C, S, E, d]
     );
     (0, _.fu)({
         onGetElementDimensionsAndBoundingRect: A,
@@ -259,7 +259,7 @@ function L(e) {
     });
     let b = r.Children.map(i, (e) => r.cloneElement(e, { invertCoachmark: C })),
         P = r.useMemo(() => (d ? (null != s ? s : 'bottom') : C ? 'bottom' : 'top'), [d, s, C]),
-        v = h && !T;
+        v = h && !I;
     return (0, l.jsx)(u.yRy, {
         autoInvert: !1,
         renderPopout: () => b,

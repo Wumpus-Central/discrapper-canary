@@ -4,16 +4,16 @@ var i = n(192379),
     l = n.n(r),
     a = n(442837),
     o = n(567409),
-    c = n(699516),
-    s = n(594174),
+    s = n(699516),
+    c = n(594174),
     u = n(709054);
 function d(e) {
     let t = (0, o.Ns)(e.id),
-        n = (0, a.cj)([s.default, c.Z], () => {
+        n = (0, a.cj)([c.default, s.Z], () => {
             let e = {};
             for (let n of t.values()) {
-                let t = s.default.getUser(n.author_id),
-                    i = c.Z.isFriend(n.author_id);
+                let t = c.default.getUser(n.author_id),
+                    i = s.Z.isFriend(n.author_id);
                 null != t && i && (e[t.id] = n.id);
             }
             return e;
@@ -29,7 +29,7 @@ function d(e) {
                 l()
                     .map(e, (e) => {
                         let [t, n] = e;
-                        return s.default.getUser(t);
+                        return c.default.getUser(t);
                     })
                     .filter((e) => null != e)
             );

@@ -348,7 +348,7 @@ class J extends i.Z {
                 AUDIO_INPUT_DETECTED: this.updateActiveErrors,
                 AUDIO_SET_DISPLAY_SILENCE_WARNING: this.updateActiveErrors,
                 CERTIFIED_DEVICES_SET: this.updateActiveErrors,
-                AUDIO_SET_INPUT_DEVICE: this.handleAudioInputDeviceChanged,
+                AUDIO_SET_INPUT_DEVICE: this.handleAudioInputDeviceChanged.bind(this),
                 AUDIO_SET_OUTPUT_DEVICE: this.updateActiveErrors,
                 MEDIA_ENGINE_DEVICES: this.updateActiveErrors,
                 RTC_CONNECTION_STATE: this.updateActiveErrors,

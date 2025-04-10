@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var l,
     r,
     i,
@@ -36,7 +36,7 @@ class O extends (s = u.ZP.Store) {
               writable: !0
           })
         : (O[l] = r);
-let S = new O(c.Z, {
+let T = new O(c.Z, {
     OVERLAY_INITIALIZE: function () {
         let e = p.Z.getPrivateChannelIds(),
             t = C.Z.getChannelId(_.ME);

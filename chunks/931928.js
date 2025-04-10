@@ -1,7 +1,7 @@
 n.d(t, {
     ED: () => g,
-    fO: () => S,
-    qp: () => T
+    fO: () => T,
+    qp: () => I
 }),
     n(388685);
 var l = n(200651),
@@ -57,7 +57,7 @@ let g = (e) =>
             )
         ),
     O = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
-    S = (e) => {
+    T = (e) => {
         var { onClose: t, onCtaClick: n, targetElementRef: a, isGuildBarScrolling: u, children: C } = e,
             p = (function (e, t) {
                 if (null == e) return {};
@@ -79,13 +79,13 @@ let g = (e) =>
                 return r;
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
         let _ = r.useRef(null),
-            [T, I] = r.useState(22),
+            [I, S] = r.useState(22),
             N = r.useRef(null),
             m = (0, s.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
             A = r.useCallback(
                 (e) => {
                     if (m) {
-                        let t = window.innerHeight - ((0, E.t4)() + S.COACHMARK_VERTICAL_OFFSET);
+                        let t = window.innerHeight - ((0, E.t4)() + T.COACHMARK_VERTICAL_OFFSET);
                         return e.top <= t;
                     }
                     return !0;
@@ -106,9 +106,9 @@ let g = (e) =>
             y = r.useCallback(
                 (e) => {
                     let t = Math.floor(e.width / 2) - 2;
-                    T !== t && I(t);
+                    I !== t && S(t);
                 },
-                [T]
+                [I]
             );
         return (0, l.jsx)(E.WS, {
             positionControlRef: _,
@@ -123,7 +123,7 @@ let g = (e) =>
                     {
                         onClose: t,
                         onCtaClick: v,
-                        tailLeftOffset: T,
+                        tailLeftOffset: I,
                         coachmarkRef: N
                     },
                     p
@@ -133,8 +133,8 @@ let g = (e) =>
             children: C
         });
     };
-S.COACHMARK_VERTICAL_OFFSET = 10;
-let T = (e) => {
+T.COACHMARK_VERTICAL_OFFSET = 10;
+let I = (e) => {
     let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: l } = e,
         i = (0, s.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
         o = r.useCallback(() => {
@@ -149,8 +149,8 @@ let T = (e) => {
         }),
         _ = r.useCallback(() => {
             (0, u.EW)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
-                forceTrack: !0,
-                dismissAction: C.L.USER_DISMISS
+                dismissAction: C.L.INDIRECT_ACTION,
+                groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
             }),
                 d();
         }, [d]),

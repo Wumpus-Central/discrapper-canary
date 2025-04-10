@@ -13,8 +13,8 @@ var C = B(200651),
     o = B(602268);
 let t = function (A) {
     let { className: g, guildId: B, tag: Q, badge: t, primaryColor: d, secondaryColor: n, isDisabled: M = !1 } = A,
-        s = (0, D.e7)([P.Z], () => P.Z.getProps().originalProfile),
-        L = null != s && s.tag !== Q;
+        L = (0, D.e7)([P.Z], () => P.Z.getProps().originalProfile),
+        s = null != L && L.tag !== Q;
     return (0, C.jsxs)('div', {
         className: g,
         children: [
@@ -57,7 +57,7 @@ let t = function (A) {
                     })
                 ]
             }),
-            L &&
+            s &&
                 (0, C.jsx)(v.Z, {
                     className: o.tagChangeInfoBox,
                     children: (0, C.jsx)(f.Text, {

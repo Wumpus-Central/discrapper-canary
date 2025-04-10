@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
-    c = n(481060),
-    s = n(367907),
+    s = n(481060),
+    c = n(367907),
     u = n(895924),
     d = n(970321),
     p = n(311819),
@@ -75,8 +75,8 @@ function w(e) {
     let { application: l, context: w, className: R, sectionName: k } = e,
         Z = r.useRef(null),
         M = (0, o.e7)([j.Z], () => j.Z.entrypoint()),
-        D = (0, P.L1)(l),
-        W = (0, m.E)(D),
+        W = (0, P.L1)(l),
+        D = (0, m.E)(W),
         B = (0, d.R)(l.id),
         U = (0, o.e7)(
             [x.Z],
@@ -99,52 +99,52 @@ function w(e) {
             label: O.NW.string(O.t['+NP/b2'])
         }),
         G = (0, E.P)({ application: l }),
-        q = (0, N.yE)(null != (t = l.flags) ? t : 0, I.udG.EMBEDDED),
-        X = 'channel' === w.type ? w.channel : void 0;
+        X = (0, N.yE)(null != (t = l.flags) ? t : 0, I.udG.EMBEDDED),
+        q = 'channel' === w.type ? w.channel : void 0;
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
-            (0, i.jsx)(c.P3F, {
+            (0, i.jsx)(s.P3F, {
                 onClick: () => {
-                    let e = q
+                    let e = X
                         ? (0, p.H)({
                               applicationId: l.id,
                               referrerId: null == V ? void 0 : V.id
                           })
-                        : (0, p.J)(T({ id: l.id }, D));
+                        : (0, p.J)(T({ id: l.id }, W));
                     (0, v.JG)(e),
                         y.default.track(I.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
                         }),
-                        (0, c.showToast)((0, c.createToast)(O.NW.string(O.t['L/PwZW']), c.ToastType.SUCCESS));
+                        (0, s.showToast)((0, s.createToast)(O.NW.string(O.t['L/PwZW']), s.ToastType.SUCCESS));
                 },
                 className: a()(S.clickable, R),
                 'aria-label': O.NW.string(O.t.WqhZsr),
-                children: (0, i.jsx)(c.xPt, {
+                children: (0, i.jsx)(s.xPt, {
                     size: 'sm',
-                    color: c.TVs.colors.INTERACTIVE_ACTIVE
+                    color: s.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, i.jsx)(c.yRy, {
+            (0, i.jsx)(s.yRy, {
                 targetElementRef: Z,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsxs)(c.v2r, {
+                    return (0, i.jsxs)(s.v2r, {
                         className: A.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
                         'aria-label': O.NW.string(O.t.AXIHpa),
                         onSelect: void 0,
                         children: [
-                            (0, i.jsxs)(c.kSQ, {
+                            (0, i.jsxs)(s.kSQ, {
                                 children: [
                                     B &&
-                                        (0, i.jsx)(c.sNh, {
+                                        (0, i.jsx)(s.sNh, {
                                             id: 'open-storefront',
                                             label: O.NW.string(O.t.kRvlKC),
                                             action: () => {
-                                                (0, c.ZDy)(async () => {
+                                                (0, s.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('53458')]).then(n.bind(n, 7225));
                                                     return (t) =>
                                                         (0, i.jsx)(e, {
@@ -156,17 +156,17 @@ function w(e) {
                                                 });
                                             }
                                         }),
-                                    W
-                                        ? (0, i.jsx)(c.sNh, {
+                                    D
+                                        ? (0, i.jsx)(s.sNh, {
                                               id: 'add-app',
                                               label: O.NW.string(O.t.NgXl3N),
                                               action: () => {
-                                                  null == D.customInstallUrl && (0, s.yw)(I.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
+                                                  null == W.customInstallUrl && (0, c.yw)(I.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
                                                       (0, g.L)(
-                                                          L(T({}, D), {
+                                                          L(T({}, W), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
-                                                                  null != t && (0, s.yw)(I.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, H);
+                                                                  null != t && (0, c.yw)(I.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, H);
                                                               },
                                                               source: 'app_launcher_app_details'
                                                           })
@@ -175,7 +175,7 @@ function w(e) {
                                           })
                                         : null,
                                     F && l instanceof C.ZP
-                                        ? (0, i.jsx)(c.sNh, {
+                                        ? (0, i.jsx)(s.sNh, {
                                               id: 'report-app',
                                               color: 'danger',
                                               label: O.NW.string(O.t.jhJze3),
@@ -184,8 +184,8 @@ function w(e) {
                                                   (0, b.uu)({
                                                       application: l,
                                                       entrypoint: 'app_launcher',
-                                                      contextualGuildId: null != (e = null == X ? void 0 : X.getGuildId()) ? e : void 0,
-                                                      contextualChannelId: null == X ? void 0 : X.id
+                                                      contextualGuildId: null != (e = null == q ? void 0 : q.getGuildId()) ? e : void 0,
+                                                      contextualChannelId: null == q ? void 0 : q.id
                                                   });
                                               }
                                           })
@@ -193,7 +193,7 @@ function w(e) {
                                     G
                                 ]
                             }),
-                            (0, i.jsx)(c.kSQ, { children: z })
+                            (0, i.jsx)(s.kSQ, { children: z })
                         ]
                     });
                 },
@@ -201,14 +201,14 @@ function w(e) {
                 position: 'bottom',
                 children: (e) =>
                     (0, i.jsx)(
-                        c.P3F,
+                        s.P3F,
                         L(T({ innerRef: Z }, e), {
                             onClick: e.onClick,
                             className: a()(S.clickable, R),
                             'aria-label': O.NW.string(O.t.UKOtz8),
-                            children: (0, i.jsx)(c.xhG, {
+                            children: (0, i.jsx)(s.xhG, {
                                 size: 'sm',
-                                color: c.TVs.colors.INTERACTIVE_ACTIVE
+                                color: s.TVs.colors.INTERACTIVE_ACTIVE
                             })
                         })
                     )

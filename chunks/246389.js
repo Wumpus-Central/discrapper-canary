@@ -1,7 +1,7 @@
 n.d(t, { default: () => f });
-var r = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(481060),
+var r = n(481060),
     o = n(239091),
     i = n(883385),
     u = n(108843),
@@ -18,14 +18,14 @@ let f = (0, u.Z)(
                 { analyticsLocations: E } = (0, a.ZP)(c.Z.CONTEXT_MENU),
                 O = null != (t = null == s ? void 0 : s[0]) ? t : E[0],
                 g = (0, d.Z)(n.id, i, !0, O, b);
-            return (0, r.jsx)(l.v2r, {
+            return (0, l.jsx)(r.v2r, {
                 navId: 'guild-moderation-roles',
                 onClose: () => {
                     (0, o.Zy)(), null == f || f();
                 },
                 'aria-label': _.NW.string(_.t.liqwPD),
                 onSelect: u,
-                children: (0, r.jsx)(l.kSQ, { children: g })
+                children: (0, l.jsx)(r.kSQ, { children: g })
             });
         },
         { object: s.qAy.CONTEXT_MENU }

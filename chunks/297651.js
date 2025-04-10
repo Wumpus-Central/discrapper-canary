@@ -14,13 +14,13 @@ function p(e, t) {
         p = (0, i.sp)(),
         f = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
         g = (0, d.x)(),
-        m = o.ZP.canUseCollectibles(g),
-        h = r.useRef(null),
+        h = o.ZP.canUseCollectibles(g),
+        m = r.useRef(null),
         _ = (0, u.B)('shop_product_card'),
         v = r.useCallback(() => {
             if (!_) return;
-            let r = null != f ? (0, c.Vw)(f, m, !1) : null,
-                l = null != f ? (0, c.eu)(f, m, !1) : void 0;
+            let r = null != f ? (0, c.Vw)(f, h, !1) : null,
+                l = null != f ? (0, c.eu)(f, h, !1) : void 0;
             a.default.track(b.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: null == p ? void 0 : p.sessionId,
                 sku_id: e,
@@ -34,22 +34,22 @@ function p(e, t) {
                 type: n,
                 category_position: null == p ? void 0 : p.categoryPosition
             });
-        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, m, _, t, f, e, n]),
+        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, h, _, t, f, e, n]),
         C = r.useCallback(
             (e) => {
                 e
-                    ? null === h.current &&
-                      (h.current = setTimeout(() => {
-                          v(), (h.current = null);
+                    ? null === m.current &&
+                      (m.current = setTimeout(() => {
+                          v(), (m.current = null);
                       }, 1000))
-                    : null !== h.current && (clearTimeout(h.current), (h.current = null));
+                    : null !== m.current && (clearTimeout(m.current), (m.current = null));
             },
             [v]
         );
     return (
         r.useEffect(
             () => () => {
-                null !== h.current && (clearTimeout(h.current), (h.current = null));
+                null !== m.current && (clearTimeout(m.current), (m.current = null));
             },
             []
         ),

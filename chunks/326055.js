@@ -30,8 +30,8 @@ function d(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let [m, _] = o.useState(void 0),
-        g = o.useMemo(() => {
+    let [_, g] = o.useState(void 0),
+        m = o.useMemo(() => {
             switch (p.skuId) {
                 case c.IN:
                     return (0, r.jsx)(l.E, { guildId: d });
@@ -100,27 +100,27 @@ function d(e) {
                                                 variant: 'text-sm/normal',
                                                 children: p.description
                                             }),
-                                            null != m &&
+                                            null != _ &&
                                                 (0, r.jsx)(a.Text, {
                                                     className: u.error,
                                                     color: 'status-danger',
                                                     variant: 'text-sm/semibold',
-                                                    children: m
+                                                    children: _
                                                 }),
                                             (0, r.jsx)(i.ZP, {
                                                 className: u.footer,
                                                 guildId: d,
                                                 powerup: p,
-                                                onError: _
+                                                onError: g
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            null != g &&
+                            null != m &&
                                 (0, r.jsx)('div', {
                                     className: u.exampleImage,
-                                    children: g
+                                    children: m
                                 })
                         ]
                     }),

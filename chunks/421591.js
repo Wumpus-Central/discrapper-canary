@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(481060),
     a = n(100527),
     o = n(367907),
-    c = n(906732),
-    s = n(541099),
+    s = n(906732),
+    c = n(541099),
     u = n(695676),
     d = n(173790),
     p = n(692656),
@@ -21,7 +21,7 @@ let C = {
     _ = r.memo(
         r.forwardRef(function (e, t) {
             let { context: n, entrypoint: l, initHistory: u } = e,
-                { analyticsLocations: d } = (0, c.ZP)(a.Z.APP_LAUNCHER);
+                { analyticsLocations: d } = (0, s.ZP)(a.Z.APP_LAUNCHER);
             return (
                 r.useEffect(() => {
                     (0, o.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
@@ -33,7 +33,7 @@ let C = {
                     let e = Date.now();
                     return () => {
                         (0, o.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
-                            reason: s.Z.closeReason(),
+                            reason: c.Z.closeReason(),
                             time_spent: Date.now() - e,
                             source: l
                         });
@@ -45,7 +45,7 @@ let C = {
                     style: C,
                     children: (0, i.jsx)('div', {
                         className: b.contentWrapper,
-                        children: (0, i.jsx)(c.Gt, {
+                        children: (0, i.jsx)(s.Gt, {
                             value: d,
                             children: (0, i.jsx)(y, {
                                 initHistory: u,
@@ -63,8 +63,8 @@ let C = {
 function y(e) {
     let { initHistory: t, children: n } = e,
         [l, a] = r.useState(null != t ? t : [{ type: u.gc.HOME }]),
-        [o, c] = r.useState({}),
-        s = l[l.length - 1],
+        [o, s] = r.useState({}),
+        c = l[l.length - 1],
         [d, p] = r.useState(!1),
         m = r.useCallback((e) => {
             a((t) => [...t, e]);
@@ -72,7 +72,7 @@ function y(e) {
         f = r.useCallback(() => {
             let e = null;
             a((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
-                c((t) => {
+                s((t) => {
                     var n, i;
                     return null == e
                         ? t
@@ -128,7 +128,7 @@ function y(e) {
         value: {
             history: l,
             discard: o,
-            currentView: s,
+            currentView: c,
             pushHistory: m,
             goBack: f,
             getMostRecentHistoryItemByType: h,
@@ -141,7 +141,7 @@ function y(e) {
 function v(e) {
     let { context: t, entrypoint: n } = e,
         [a, o] = r.useState(''),
-        { setScroller: c, isCloseToBottom: s } = (function (e) {
+        { setScroller: s, isCloseToBottom: c } = (function (e) {
             let [t, n] = r.useState(null),
                 [i, l] = r.useState(!1),
                 a = r.useRef(0);
@@ -189,8 +189,8 @@ function v(e) {
                     className: b.slideContent,
                     style: x,
                     children: (0, i.jsx)(p.Z, {
-                        isScrollCloseToBottom: s,
-                        setScroller: c,
+                        isScrollCloseToBottom: c,
+                        setScroller: s,
                         context: t,
                         entrypoint: n,
                         searchQuery: a,

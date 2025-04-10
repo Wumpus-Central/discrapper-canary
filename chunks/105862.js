@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(780384),
     a = n(481060),
     o = n(410030),
-    c = n(782568),
-    s = n(63063),
+    s = n(782568),
+    c = n(63063),
     u = n(827498),
     d = n(888617),
     p = n(981631),
@@ -18,7 +18,7 @@ function C(e) {
         C = (0, o.ZP)(),
         x = (0, l.ap)(C) ? b : h,
         _ = r.useCallback(() => {
-            (0, c.Z)(s.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
+            (0, s.Z)(c.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
         { trackSectionImpressionRef: y } = (0, d.Z)({
             sectionName: u.L3.NEW_TO_APPS,

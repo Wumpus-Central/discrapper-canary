@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(392711),
     a = n(780384),
     o = n(481060),
-    c = n(410030),
-    s = n(220082),
+    s = n(410030),
+    c = n(220082),
     u = n(564334),
     d = n(302221),
     p = n(783097),
@@ -23,13 +23,13 @@ function b(e) {
 }
 function C(e) {
     let { application: t, context: n, name: C, iconURL: x, scrollerRef: _, sectionName: y } = e,
-        v = (0, a.ap)((0, c.ZP)()),
+        v = (0, a.ap)((0, s.ZP)()),
         N = r.useRef(null),
         g = r.useRef(null),
         j = r.useRef(null),
         P = r.useRef(null),
         E = (0, o.dQu)(o.TVs.colors.BG_BASE_PRIMARY).hex(),
-        A = (0, s.ZP)('number' == typeof x ? '' : x, null != E ? E : ''),
+        A = (0, c.ZP)('number' == typeof x ? '' : x, null != E ? E : ''),
         I = r.useMemo(() => {
             var e, t;
             let n = (0, l.compact)([u.Z.parseHexString(A), u.Z.parseHexString(v ? '#000000' : '#ffffff')]);
@@ -53,14 +53,14 @@ function C(e) {
             let r = _.current,
                 a = N.current,
                 o = j.current,
-                c = null == P ? void 0 : P.current,
-                s = parseInt(null != (e = null == O ? void 0 : O.height) ? e : ''),
+                s = null == P ? void 0 : P.current,
+                c = parseInt(null != (e = null == O ? void 0 : O.height) ? e : ''),
                 u = parseInt(null != (t = null == S ? void 0 : S.height) ? t : '');
-            if (null != r && null != a && null != o && !isNaN(s) && !isNaN(u)) {
+            if (null != r && null != a && null != o && !isNaN(c) && !isNaN(u)) {
                 let e = null != (n = r.scrollTop) ? n : 0,
                     t = 0 !== r.scrollHeight ? r.scrollHeight : u + 20,
                     d = 0 !== r.clientHeight ? r.clientHeight : u + 20,
-                    p = u - s,
+                    p = u - c,
                     m = (0, l.clamp)(t - d, p + 1, u + 20),
                     f = p === m ? 1 : (0, l.clamp)((e - p) / (m - p), 0, 1);
                 (a.style.filter = 'brightness('.concat(1 + ((v ? 1.4 : 0.6) - 1) * f, ')')),
@@ -69,8 +69,8 @@ function C(e) {
                         .concat((1 - f) * 100, '%, ')
                         .concat(I, ')')),
                     (o.style.opacity = ''.concat(0 + +f)),
-                    (o.style.transform = 'translateY('.concat((i = s / 4) + (0 - i) * f, 'px)')),
-                    null != c && (c.style.opacity = ''.concat(1 + -1 * f));
+                    (o.style.transform = 'translateY('.concat((i = c / 4) + (0 - i) * f, 'px)')),
+                    null != s && (s.style.opacity = ''.concat(1 + -1 * f));
             }
         }, [I, A, null == S ? void 0 : S.height, v, _, null == O ? void 0 : O.height]);
     return (

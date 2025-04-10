@@ -109,8 +109,8 @@ var r = n(200651),
     e2 = n(176505),
     e3 = n(981631),
     e7 = n(918559),
-    e4 = n(354459),
-    e6 = n(921944),
+    e6 = n(354459),
+    e4 = n(921944),
     e8 = n(440493),
     e5 = n(157925),
     e9 = n(388032),
@@ -539,7 +539,7 @@ class tl extends i.PureComponent {
             }),
             tt(this, 'renderStreamQualityLiveIndicatorToolbarItem', () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
-                return (null == e ? void 0 : e.type) !== e4.fO.STREAM
+                return (null == e ? void 0 : e.type) !== e6.fO.STREAM
                     ? null
                     : (0, r.jsx)(
                           G.Z,
@@ -833,7 +833,7 @@ let to = (0, j.Z)(tl),
         i.useEffect(() => {
             let e = eC && !ey,
                 t = eC && ey && (null == c ? void 0 : c.id) !== ex;
-            (e || t) && (0, W.EW)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e6.L.AUTO });
+            (e || t) && (0, W.EW)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e4.L.AUTO });
         }, [null == c ? void 0 : c.id, ex, ey, eC]);
         let ev = (0, f.f9)(),
             eO = (0, L.Q3)('Channel');

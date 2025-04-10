@@ -4,11 +4,11 @@ var i = n(200651),
     l = n(558522),
     a = n(484112);
 function o(e) {
-    let { imageBackground: t, applicationName: n, imageClassName: o, imageNotFoundClassName: c } = e,
-        [s, u] = r.useState(!1);
-    return 'not-found' === t.state || s
+    let { imageBackground: t, applicationName: n, imageClassName: o, imageNotFoundClassName: s } = e,
+        [c, u] = r.useState(!1);
+    return 'not-found' === t.state || c
         ? (0, i.jsx)('div', {
-              className: c,
+              className: s,
               children: (0, i.jsx)(l.Z, { className: a.brokenImageIcon })
           })
         : 'loading' === t.state

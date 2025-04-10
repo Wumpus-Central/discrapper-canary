@@ -4,11 +4,11 @@ var i = n(200651),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
-    c = n(481060),
-    s = n(607070),
+    s = n(481060),
+    c = n(607070),
     u = n(847800);
 function d() {
-    let e = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+    let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         { styleLarge: t, styleSmall: n } = r.useMemo(
             () => ({
                 styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
@@ -26,7 +26,7 @@ function d() {
                     (0, i.jsx)('div', {
                         className: u.textPlaceholder,
                         style: t,
-                        children: (0, i.jsx)(c.X6q, {
+                        children: (0, i.jsx)(s.X6q, {
                             className: u.hidden,
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
@@ -37,7 +37,7 @@ function d() {
                     (0, i.jsx)('div', {
                         className: u.textPlaceholder,
                         style: n,
-                        children: (0, i.jsx)(c.Text, {
+                        children: (0, i.jsx)(s.Text, {
                             className: u.hidden,
                             variant: 'text-sm/normal',
                             color: 'text-secondary',

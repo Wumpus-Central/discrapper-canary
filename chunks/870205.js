@@ -4,18 +4,18 @@ var i = n(200651),
     l = n(481060),
     a = n(984168),
     o = n(314734),
-    c = n(388032),
-    s = n(556342);
+    s = n(388032),
+    c = n(556342);
 function u(e) {
     let t,
         { sortOrder: n, onSortOptionClick: u } = e,
         d = r.useRef(null);
     switch (n) {
         case o.bS.POPULAR:
-            t = c.NW.string(c.t.SzxiqK);
+            t = s.NW.string(s.t.SzxiqK);
             break;
         case o.bS.ALPHABETICAL:
-            t = c.NW.string(c.t.m8xstr);
+            t = s.NW.string(s.t.m8xstr);
     }
     return (0, i.jsx)(l.yRy, {
         targetElementRef: d,
@@ -64,14 +64,14 @@ function u(e) {
                         buttonRef: d,
                         size: l.zxk.Sizes.MIN,
                         color: l.zxk.Colors.CUSTOM,
-                        className: s.sortDropdown,
-                        innerClassName: s.sortDropdownInner,
-                        'aria-label': c.NW.string(c.t.yeYaHR),
+                        className: c.sortDropdown,
+                        innerClassName: c.sortDropdownInner,
+                        'aria-label': s.NW.string(s.t.yeYaHR),
                         children: [
                             (0, i.jsx)(l.uVW, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: s.sortIconMargin
+                                className: c.sortIconMargin
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',

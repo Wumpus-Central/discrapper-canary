@@ -11,7 +11,7 @@ function u(e) {
     let { message: t, usernameHook: u, compact: d } = e,
         p = (0, o.ZP)(t),
         m = u(p),
-        f = (0, a.I3)('GdmNameChangeSystemMessage');
+        f = (0, a.I3)('GdmNameChangeSystemMessage', t.channel_id);
     return (0, r.jsx)(s.Z, {
         icon: n(819373),
         timestamp: t.timestamp,

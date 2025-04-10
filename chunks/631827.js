@@ -1,8 +1,8 @@
 function i(e, t) {
-    var n, i, r, l, a, o, c;
-    let s,
+    var n, i, r, l, a, o, s;
+    let c,
         u = null != (n = t.limit) ? n : 1 / 0,
-        d = ((o = e), (c = null != (i = t.filterPredicates) ? i : []), o.filter((e) => c.every((t) => t(e))));
+        d = ((o = e), (s = null != (i = t.filterPredicates) ? i : []), o.filter((e) => s.every((t) => t(e))));
     return (function (e, t, n) {
         let i = [];
         for (let r of e) {

@@ -189,7 +189,7 @@ let C = (e) => {
     },
     j = (e) => {
         let { channel: t, legacyIconClassName: n } = e,
-            i = (0, d.I3)('header_bar');
+            i = (0, d.I3)('header_bar', t.id);
         return (0, r.jsx)(i ? x : v, {
             channel: t,
             children: (0, r.jsx)(h.v, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     l = n(192379),
     a = n(200100),
@@ -70,8 +70,8 @@ let d = [
     p = 1 / 300,
     f = (0, a.animated)(c.Z),
     g = (0, a.animated)(u.Z),
-    m = (0, a.animated)(i.OgN),
-    h = l.memo(function (e) {
+    h = (0, a.animated)(i.OgN),
+    m = l.memo(function (e) {
         let {
                 themeOverride: t,
                 hovered: n,
@@ -82,7 +82,7 @@ let d = [
                 }
             } = e,
             u = (0, s.ZP)(),
-            [h, _] = (function (e) {
+            [m, _] = (function (e) {
                 let [t, n] = l.useState(!1),
                     [r, a] = l.useState(Math.floor(7 * Math.random())),
                     o = l.useRef(r);
@@ -116,8 +116,8 @@ let d = [
             C = a ? _ : 0,
             x = (0, o.wj)(null != t ? t : u) ? c.dark[C] : c.light[C];
         return !n && a
-            ? (0, r.jsx)(m, {})
-            : a && h
+            ? (0, r.jsx)(h, {})
+            : a && m
               ? (0, r.jsx)(g, {
                     isDark: (0, o.wj)(u),
                     style: v

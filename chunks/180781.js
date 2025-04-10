@@ -1,61 +1,61 @@
-n.d(e, { Z: () => x });
-var i = n(200651);
+n.d(e, { Z: () => b });
+var o = n(200651);
 n(192379);
-var o = n(442837),
-    a = n(481060),
-    r = n(906732),
+var r = n(442837),
+    i = n(481060),
+    a = n(906732),
     l = n(48217),
-    s = n(26323),
-    c = n(430824),
-    d = n(914010),
-    u = n(709586),
-    _ = n(981631),
-    g = n(30513),
-    h = n(388032),
-    m = n(273233);
-function x(t) {
-    let { analyticsSection: e, analyticsPage: n, isGIF: x, banner: N } = t,
-        f = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
-        p = (0, o.e7)([c.Z], () => c.Z.getGuild(f)),
-        { analyticsLocations: b } = (0, r.ZP)();
-    return null == p || p.hasFeature(_.oNc.ANIMATED_BANNER) || (!x && p.hasFeature(_.oNc.BANNER))
+    c = n(26323),
+    s = n(430824),
+    u = n(914010),
+    _ = n(709586),
+    d = n(981631),
+    f = n(30513),
+    m = n(388032),
+    p = n(273233);
+function b(t) {
+    let { analyticsSection: e, analyticsPage: n, isGIF: b, banner: g } = t,
+        C = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
+        N = (0, r.e7)([s.Z], () => s.Z.getGuild(C)),
+        { analyticsLocations: v } = (0, a.ZP)();
+    return null == N || N.hasFeature(d.oNc.ANIMATED_BANNER) || (!b && N.hasFeature(d.oNc.BANNER))
         ? null
-        : (0, i.jsxs)('div', {
-              className: m.container,
+        : (0, o.jsxs)('div', {
+              className: p.container,
               children: [
-                  (0, i.jsx)(u.Z, { className: m.guildBoostingIcon }),
-                  (0, i.jsx)(a.Text, {
+                  (0, o.jsx)(_.Z, { className: p.guildBoostingIcon }),
+                  (0, o.jsx)(i.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: h.NW.string(h.t['56M7xc'])
+                      children: m.NW.string(m.t['56M7xc'])
                   }),
-                  (0, i.jsx)(a.zxk, {
-                      look: a.zxk.Looks.LINK,
-                      color: a.zxk.Colors.LINK,
-                      className: m.subscribeButton,
+                  (0, o.jsx)(i.zxk, {
+                      look: i.zxk.Looks.LINK,
+                      color: i.zxk.Colors.LINK,
+                      className: p.subscribeButton,
                       onClick: () => {
-                          if (null == p) return;
+                          if (null == N) return;
                           let t = {
                               section: e,
                               page: n,
-                              object: _.qAy.UPSELL_HEADER
+                              object: d.qAy.UPSELL_HEADER
                           };
-                          null != N
+                          null != g
                               ? (0, l.c)({
-                                    analyticsLocations: b,
+                                    analyticsLocations: v,
                                     analyticsLocation: t,
-                                    guild: p,
-                                    isGIF: x,
-                                    banner: N
+                                    guild: N,
+                                    isGIF: b,
+                                    banner: g
                                 })
-                              : (0, s.Z)({
-                                    analyticsLocations: b,
+                              : (0, c.Z)({
+                                    analyticsLocations: v,
                                     analyticsSourceLocation: t,
-                                    guild: p,
-                                    perks: x ? (0, g.zC)() : (0, g.XO)()
+                                    guild: N,
+                                    perks: b ? (0, f.zC)() : (0, f.XO)()
                                 });
                       },
-                      children: h.NW.string(h.t.WUHdZW)
+                      children: m.NW.string(m.t.WUHdZW)
                   })
               ]
           });

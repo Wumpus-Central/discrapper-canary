@@ -809,12 +809,12 @@ t.exports = (function () {
                 if (!e.length && 'string' === t6(t) && t3[t.toLowerCase()]) return 'named';
             }
         });
-    var t5 = i.unpack,
-        t4 = i.type,
+    var t4 = i.unpack,
+        t5 = i.type,
         t8 = i.type,
         t7 = function () {
             for (var t = [], e = arguments.length; e--; ) t[e] = arguments[e];
-            var a = t5(t, 'rgb');
+            var a = t4(t, 'rgb');
             return (a[0] << 16) + (a[1] << 8) + a[2];
         };
     (u.prototype.num = function () {
@@ -825,7 +825,7 @@ t.exports = (function () {
             return new (Function.prototype.bind.apply(u, [null].concat(t, ['num'])))();
         }),
         (c.format.num = function (t) {
-            if ('number' == t4(t) && t >= 0 && t <= 16777215) return [t >> 16, (t >> 8) & 255, 255 & t, 1];
+            if ('number' == t5(t) && t >= 0 && t <= 16777215) return [t >> 16, (t >> 8) & 255, 255 & t, 1];
             throw Error('unknown num color: ' + t);
         }),
         c.autodetect.push({
@@ -1499,8 +1499,8 @@ t.exports = (function () {
             e2 = i.TWOPI,
             e3 = Math.pow,
             e6 = Math.sin,
-            e5 = Math.cos,
-            e4 = Math.floor,
+            e4 = Math.cos,
+            e5 = Math.floor,
             e8 = Math.random,
             e7 = Math.log,
             e9 = Math.pow,
@@ -1723,7 +1723,7 @@ t.exports = (function () {
                 var c = e2 * ((t + 120) / 360 + e * i),
                     s = e3(n[0] + _ * i, r),
                     E = ((0 !== o ? a[0] + i * o : a) * s * (1 - s)) / 2,
-                    l = e5(c),
+                    l = e4(c),
                     u = e6(c);
                 return I(e1([255 * (s + E * (-0.14861 * l + 1.78277 * u)), 255 * (s + E * (-0.29227 * l - 0.90649 * u)), 255 * (s + 1.97294 * l * E), 1]));
             };
@@ -1752,7 +1752,7 @@ t.exports = (function () {
         }),
         (I.mix = I.interpolate = eG),
         (I.random = function () {
-            for (var t = '#', e = 0; e < 6; e++) t += '0123456789abcdef'.charAt(e4(16 * e8()));
+            for (var t = '#', e = 0; e < 6; e++) t += '0123456789abcdef'.charAt(e5(16 * e8()));
             return new u(t, 'hex');
         }),
         (I.scale = e$),

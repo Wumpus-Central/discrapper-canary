@@ -13,8 +13,8 @@ var l = t(200651),
     b = t(496675),
     f = t(594174),
     p = t(981631),
-    O = t(388032);
-function m(e) {
+    m = t(388032);
+function O(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -72,7 +72,7 @@ function h(e, n, h) {
         E
             ? (0, l.jsx)(a.sNh, {
                   id: 'remove',
-                  label: P.isForumPost() ? O.NW.formatToPlainString(O.t.v2KNNz, { user: e.username }) : O.NW.formatToPlainString(O.t['27xWaW'], { user: e.username }),
+                  label: P.isForumPost() ? m.NW.formatToPlainString(m.t.v2KNNz, { user: e.username }) : m.NW.formatToPlainString(m.t['27xWaW'], { user: e.username }),
                   color: 'danger',
                   action: () => c.Z.removeMember(P, e.id, 'Context Menu')
               })
@@ -80,7 +80,7 @@ function h(e, n, h) {
         (0, s.BK)(e, x)
             ? (0, l.jsx)(a.sNh, {
                   id: 'kick',
-                  label: E ? O.NW.formatToPlainString(O.t['1Ie87u'], { user: e.username }) : O.NW.formatToPlainString(O.t['9l/iTU'], { user: e.username }),
+                  label: E ? m.NW.formatToPlainString(m.t['1Ie87u'], { user: e.username }) : m.NW.formatToPlainString(m.t['9l/iTU'], { user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.ZDy)(async () => {
@@ -88,7 +88,7 @@ function h(e, n, h) {
                           return (t) =>
                               (0, l.jsx)(
                                   n,
-                                  N(m({}, t), {
+                                  N(O({}, t), {
                                       guildId: x.id,
                                       user: e
                                   })
@@ -99,7 +99,7 @@ function h(e, n, h) {
         (0, s.mm)(e, x)
             ? (0, l.jsx)(a.sNh, {
                   id: 'ban',
-                  label: E ? O.NW.formatToPlainString(O.t.i62APT, { user: e.username }) : O.NW.formatToPlainString(O.t.WnpUBg, { user: e.username }),
+                  label: E ? m.NW.formatToPlainString(m.t.i62APT, { user: e.username }) : m.NW.formatToPlainString(m.t.WnpUBg, { user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.ZDy)(async () => {
@@ -107,7 +107,7 @@ function h(e, n, h) {
                           return (t) =>
                               (0, l.jsx)(
                                   n,
-                                  N(m({}, t), {
+                                  N(O({}, t), {
                                       guildId: x.id,
                                       user: e
                                   })

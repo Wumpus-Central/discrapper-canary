@@ -67,8 +67,8 @@ let x = (0, s.Z)(
                 T = (0, b.Z)(t),
                 F = (0, h.Z)(t),
                 D = (0, d.D)(t),
-                k = (0, v.p1)('GroupDMContextMenu'),
-                U = (0, v.I3)('GroupDMContextMenu');
+                k = (0, v.p1)('GroupDMContextMenu', t.id),
+                U = (0, v.I3)('GroupDMContextMenu', t.id);
             return null == t || t.isManaged()
                 ? null
                 : (0, r.jsxs)(a.v2r, {

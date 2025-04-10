@@ -12,8 +12,8 @@ var i = n(192379),
     l = n.n(r),
     a = n(373793),
     o = n(288385),
-    c = n(442837),
-    s = n(911969),
+    s = n(442837),
+    c = n(911969),
     u = n(127255),
     d = n(654455),
     p = n(213459),
@@ -41,7 +41,7 @@ function E(e, t) {
     return (0, p.un)(e.displayName, t.displayName);
 }
 function A(e) {
-    let { context: t, query: n, commandLimit: r, applicationLimit: a, searchesCommands: o = !0, searchesBots: c = !0, searchesActivities: h = !0 } = e;
+    let { context: t, query: n, commandLimit: r, applicationLimit: a, searchesCommands: o = !0, searchesBots: s = !0, searchesActivities: h = !0 } = e;
     n.startsWith(''.concat(g.GI)) && (n = n.substring(1));
     let {
             commands: b,
@@ -51,12 +51,12 @@ function A(e) {
             var t, n;
             let { context: r, includeBuiltIn: l = !0, allowFetch: a = !0 } = e,
                 o = (0, p.em)(r, !0, a),
-                c = (0, p.PL)(!0, a);
+                s = (0, p.PL)(!0, a);
             return i.useMemo(() => {
                 var e, t, n, i, a;
-                let s = null != (n = null == (e = o.result) ? void 0 : e.sections) ? n : {},
-                    u = null != (i = null == (t = c.result) ? void 0 : t.sections) ? i : {},
-                    d = [...Object.keys(s), ...Object.keys(u).filter((e) => !(e in s))];
+                let c = null != (n = null == (e = o.result) ? void 0 : e.sections) ? n : {},
+                    u = null != (i = null == (t = s.result) ? void 0 : t.sections) ? i : {},
+                    d = [...Object.keys(c), ...Object.keys(u).filter((e) => !(e in c))];
                 l && d.push(N.bi.BUILT_IN);
                 let m = 'channel' in r && (0, _.aZ)(r.channel, 'AppLauncherSearchUtils.useApplicationCommandsInContext()'),
                     f = [],
@@ -72,17 +72,17 @@ function A(e) {
                 return {
                     commands: f.filter((e) => !m || e.applicationId !== _.gu),
                     commandSectionMap: h,
-                    loading: !0 === o.fetchState.fetching || !0 === c.fetchState.fetching
+                    loading: !0 === o.fetchState.fetching || !0 === s.fetchState.fetching
                 };
-            }, [r, l, o.fetchState.fetching, null == (t = o.result) ? void 0 : t.sections, c.fetchState.fetching, null == (n = c.result) ? void 0 : n.sections]);
+            }, [r, l, o.fetchState.fetching, null == (t = o.result) ? void 0 : t.sections, s.fetchState.fetching, null == (n = s.result) ? void 0 : n.sections]);
         })({
             context: t,
             includeBuiltIn: !0
         }),
         { apps: A } = (function (e) {
             let { context: t, onlyWithCommands: n, includeBuiltIn: r, allowFetch: l = !0, includeEmbeddedApps: a, includeNonEmbeddedApps: o } = e,
-                c = 'channel' === t.type ? t.channel : void 0,
-                u = (0, m.Hs)(c, [s.yU.CHAT]).hasBaseAccessPermissions,
+                s = 'channel' === t.type ? t.channel : void 0,
+                u = (0, m.Hs)(s, [c.yU.CHAT]).hasBaseAccessPermissions,
                 d = (0, p.em)(t, u, l),
                 f = (0, p.PL)(u, l),
                 h = i.useCallback(
@@ -115,41 +115,41 @@ function A(e) {
             onlyWithCommands: !0,
             includeBuiltIn: !0,
             includeEmbeddedApps: h,
-            includeNonEmbeddedApps: c
+            includeNonEmbeddedApps: s
         }),
         I = (0, u.Z)({
             guildId: 'channel' === t.type ? t.channel.guild_id : null,
             context: t
         }),
         O = i.useMemo(() => {
-            var e, i, l, a, c, u;
+            var e, i, l, a, s, u;
             if (!o) return [];
             return (0, x.N)(b, {
                 limit: r,
                 filterPredicates: [
                     (function (e) {
-                        let t = (0, m.k)('channel' === e.type ? e.channel : void 0, [s.yU.CHAT]),
+                        let t = (0, m.k)('channel' === e.type ? e.channel : void 0, [c.yU.CHAT]),
                             n = {};
                         return (i) => {
                             let { context: r, userId: l, roleIds: a, isImpersonating: o } = t;
                             if (!(i.applicationId in n)) {
-                                let { descriptor: t, isGuildInstalled: c, isUserInstalled: s } = (0, p.If)(e, i.applicationId),
+                                let { descriptor: t, isGuildInstalled: s, isUserInstalled: c } = (0, p.If)(e, i.applicationId),
                                     u = (null == r ? void 0 : r.guild_id) != null ? f.ML(null == t ? void 0 : t.permissions, r.guild_id, l, a, o) : null,
                                     d = (null == r ? void 0 : r.guild_id) != null ? f.ZJ(null == t ? void 0 : t.permissions, r, r.guild_id) : null;
                                 n[i.applicationId] = {
                                     descriptor: t,
                                     applicationAllowedForUser: u,
                                     applicationAllowedForChannel: d,
-                                    isGuildInstalled: c,
-                                    isUserInstalled: s
+                                    isGuildInstalled: s,
+                                    isUserInstalled: c
                                 };
                             }
-                            let { descriptor: c, applicationAllowedForChannel: s, applicationAllowedForUser: u, isGuildInstalled: d, isUserInstalled: m } = n[i.applicationId];
+                            let { descriptor: s, applicationAllowedForChannel: c, applicationAllowedForUser: u, isGuildInstalled: d, isUserInstalled: m } = n[i.applicationId];
                             return (
                                 f.Ft(i, t, {
                                     applicationAllowedForUser: u,
-                                    applicationAllowedForChannel: s,
-                                    commandBotId: null == c ? void 0 : c.botId,
+                                    applicationAllowedForChannel: c,
+                                    commandBotId: null == s ? void 0 : s.botId,
                                     isGuildInstalled: d,
                                     isUserInstalled: m
                                 }) === f.mF.ALLOWED
@@ -186,10 +186,10 @@ function A(e) {
                         for (let { name: n, serverLocalizedName: i } of null != (t = e.options) ? t : []) if (n.startsWith(a) || ''.concat(e.untranslatedName, ' ').concat(n).startsWith(a) || (null != e.displayName && ''.concat(e.displayName, ' ').concat(n).startsWith(a)) || (null != i && (i.startsWith(a) || ''.concat(e.untranslatedName, ' ').concat(i).startsWith(a) || (null != e.displayName && ''.concat(e.displayName, ' ').concat(i).startsWith(a))))) return !0;
                         return !1;
                     }),
-                    ((c = e),
+                    ((s = e),
                     (e) => {
                         var t;
-                        for (let { name: n, serverLocalizedName: i } of null != (t = e.options) ? t : []) if (n.includes(c) || (null == i ? void 0 : i.includes(c))) return !0;
+                        for (let { name: n, serverLocalizedName: i } of null != (t = e.options) ? t : []) if (n.includes(s) || (null == i ? void 0 : i.includes(s))) return !0;
                         return !1;
                     })
                 ],
@@ -242,27 +242,27 @@ function A(e) {
                             return t;
                         })
                     );
-            } else c && (u = A);
+            } else s && (u = A);
             return (0, x.N)(u, {
                 limit: a,
                 filterPredicates: [
                     (function (e) {
-                        let t = (0, m.k)('channel' === e.type ? e.channel : void 0, [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT]);
+                        let t = (0, m.k)('channel' === e.type ? e.channel : void 0, [c.yU.CHAT, c.yU.PRIMARY_ENTRY_POINT]);
                         return (n) => {
                             let { context: i, userId: r, roleIds: l, isImpersonating: a } = t,
-                                { descriptor: o, sectionCommands: c, isGuildInstalled: s, isUserInstalled: u } = (0, p.If)(e, n.id),
+                                { descriptor: o, sectionCommands: s, isGuildInstalled: c, isUserInstalled: u } = (0, p.If)(e, n.id),
                                 d = (null == i ? void 0 : i.guild_id) != null ? f.ML(null == o ? void 0 : o.permissions, i.guild_id, r, l, a) : null,
                                 m = (null == i ? void 0 : i.guild_id) != null ? f.ZJ(null == o ? void 0 : o.permissions, i, i.guild_id) : null;
                             return (
-                                null == c ||
-                                !(c.length > 0) ||
-                                c.some(
+                                null == s ||
+                                !(s.length > 0) ||
+                                s.some(
                                     (e) =>
                                         f.Ft(e, t, {
                                             applicationAllowedForUser: d,
                                             applicationAllowedForChannel: m,
                                             commandBotId: null == o ? void 0 : o.botId,
-                                            isGuildInstalled: s,
+                                            isGuildInstalled: c,
                                             isUserInstalled: u
                                         }) === f.mF.ALLOWED
                                 )
@@ -288,7 +288,7 @@ function A(e) {
                 ],
                 sortComparers: [j, P]
             });
-        }, [c, h, a, t, n, A, I]),
+        }, [s, h, a, t, n, A, I]),
         L = S.length > 0,
         w = T.length > 0;
     return {
@@ -301,14 +301,14 @@ function A(e) {
     };
 }
 function I(e) {
-    let { context: t, query: n, fetches: r = !0, pageLimit: l = 1 / 0, entrypoint: s } = e;
+    let { context: t, query: n, fetches: r = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
     n.startsWith(''.concat(g.GI)) && (n = n.substring(1));
-    let u = s === y._b.VOICE,
+    let u = c === y._b.VOICE,
         d = 'channel' === t.type ? t.channel.guild_id : void 0,
         [p, m] = i.useState(1),
         f = i.useRef(p);
     f.current = p;
-    let { fetchState: h, totalPages: x } = (0, c.cj)(
+    let { fetchState: h, totalPages: x } = (0, s.cj)(
             [C.Z],
             () => {
                 var e, t;

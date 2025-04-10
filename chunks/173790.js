@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(442837),
     a = n(218061),
     o = n(481060),
-    c = n(115130),
-    s = n(361213),
+    s = n(115130),
+    c = n(361213),
     u = n(778569),
     d = n(213459),
     p = n(835473),
@@ -23,11 +23,11 @@ var i = n(200651),
     j = n(413097);
 function P(e) {
     var t;
-    let { context: n, application: s, sectionName: u, showFriendsTab: P } = e,
+    let { context: n, application: c, sectionName: u, showFriendsTab: P } = e,
         A = 'channel' === n.type ? n.channel : void 0,
         I = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
-        O = null != (t = (0, p.q)(s.id === v.bi.BUILT_IN ? null : s.id)) ? t : s,
-        S = (0, l.e7)([c.Z], () => c.Z.inDevModeForApplication(O.id)),
+        O = null != (t = (0, p.q)(c.id === v.bi.BUILT_IN ? null : c.id)) ? t : c,
+        S = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(O.id)),
         T = (0, b.ye)(O) ? E : y.Z,
         L = m.PM.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
         w = r.useRef(null),
@@ -40,9 +40,9 @@ function P(e) {
                 }),
             [O]
         ),
-        D = (0, d.PL)(!0, !0),
-        W = (0, d.LD)(null == A ? void 0 : A.guild_id, !0),
-        B = r.useMemo(() => (0, d.If)(n, O.id), [D, W, n, O.id]),
+        W = (0, d.PL)(!0, !0),
+        D = (0, d.LD)(null == A ? void 0 : A.guild_id, !0),
+        B = r.useMemo(() => (0, d.If)(n, O.id), [W, D, n, O.id]),
         U = !B.isGuildInstalled && !B.isUserInstalled;
     return (
         r.useEffect(() => {
@@ -104,8 +104,8 @@ function E(e) {
             size: 2048,
             names: ['embedded_cover']
         }),
-        c = (0, b.yJ)(n),
-        d = null != c && null != c.activity_preview_video_asset_id ? (0, s.Z)(n.id, c.activity_preview_video_asset_id) : null;
+        s = (0, b.yJ)(n),
+        d = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
     return (0, i.jsx)(y.Z, {
         context: t,
         application: n,

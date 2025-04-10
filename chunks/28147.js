@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(392711),
     a = n.n(l),
     o = n(209173),
-    c = n(110924),
-    s = n(367907),
+    s = n(110924),
+    c = n(367907),
     u = n(555573),
     d = n(895924),
     p = n(583027),
@@ -61,8 +61,8 @@ function k(e) {
     return (0, i.jsx)(Z, T({}, e));
 }
 function Z(e) {
-    let { context: t, query: n, entrypoint: l, isScrollCloseToBottom: c } = e,
-        s = l === C._b.TEXT,
+    let { context: t, query: n, entrypoint: l, isScrollCloseToBottom: s } = e,
+        c = l === C._b.TEXT,
         u = l === C._b.TEXT,
         {
             loading: d,
@@ -74,7 +74,7 @@ function Z(e) {
             context: t,
             query: n,
             searchesActivities: !0,
-            searchesCommands: s,
+            searchesCommands: c,
             searchesBots: u
         }),
         {
@@ -89,8 +89,8 @@ function Z(e) {
             entrypoint: l
         });
     r.useEffect(() => {
-        c && _ === m.M.FETCHED && v();
-    }, [v, _, c]);
+        s && _ === m.M.FETCHED && v();
+    }, [v, _, s]);
     let N = null == _ || _ === m.M.FETCHING,
         j = r.useMemo(() => {
             let e = b.map((e) => ({
@@ -136,7 +136,7 @@ function Z(e) {
                             query: n
                         }),
                     (P || N) &&
-                        (0, i.jsx)(W, {
+                        (0, i.jsx)(D, {
                             context: t,
                             applicationResults: j,
                             includePlaceholder: N,
@@ -152,9 +152,9 @@ function M(e) {
         m = a.length > 4,
         x = r.useMemo(() => (m ? a.slice(0, 4) : a), [a, m]),
         [_, y] = r.useState(!1),
-        N = null != (t = (0, c.Z)(_)) ? t : _,
+        N = null != (t = (0, s.Z)(_)) ? t : _,
         g = r.useCallback(() => y((e) => !e), []),
-        E = (null != (n = (0, c.Z)(o)) ? n : o)[0] !== o[0],
+        E = (null != (n = (0, s.Z)(o)) ? n : o)[0] !== o[0],
         T = _ && !E;
     r.useLayoutEffect(() => y(!1), [E]);
     let {
@@ -170,7 +170,7 @@ function M(e) {
     r.useEffect(() => {
         !N &&
             _ &&
-            (0, s.yw)(I.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, c.yw)(I.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: C.L3.SEARCH,
                 source: b.Z.entrypoint(),
                 num: a.length
@@ -230,7 +230,7 @@ function M(e) {
         ]
     });
 }
-function D(e) {
+function W(e) {
     var t, n;
     let { trackSearchResultsItemImpressionRef: r } = (0, N.Z)({
         applicationId: e.application.id,
@@ -266,7 +266,7 @@ function D(e) {
         )
     });
 }
-function W(e) {
+function D(e) {
     let { context: t, applicationResults: n, includePlaceholder: r, query: l, searchesBots: a } = e;
     return a
         ? (0, i.jsxs)('div', {
@@ -305,7 +305,7 @@ function W(e) {
                           n.map((e, n) => {
                               let { application: r, installOnDemand: a } = e;
                               return (0, i.jsx)(
-                                  D,
+                                  W,
                                   {
                                       context: t,
                                       application: r,

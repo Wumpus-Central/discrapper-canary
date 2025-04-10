@@ -5,8 +5,8 @@ var i = n(192379),
     a = n(314734);
 function o(e) {
     let { sectionId: t, commandsByActiveSection: n } = e,
-        [o, c] = i.useState(a.bS.ALPHABETICAL),
-        s = i.useMemo(() => {
+        [o, s] = i.useState(a.bS.ALPHABETICAL),
+        c = i.useMemo(() => {
             var e, i;
             return null != (i = null == (e = n.find((e) => e.section.id === t)) ? void 0 : e.data) ? i : [];
         }, [n, t]),
@@ -50,24 +50,24 @@ function o(e) {
                           canSort: !1
                       };
             }, [t]);
-        })({ alphabeticalSortedCommands: s });
+        })({ alphabeticalSortedCommands: c });
     i.useEffect(() => {
         r.i6(t, { dontRefetchMs: l.Z.Millis.DAY });
     }, [t]),
         i.useLayoutEffect(() => {
-            d && c(a.bS.POPULAR);
+            d && s(a.bS.POPULAR);
         }, [d]);
-    let p = s;
+    let p = c;
     switch (o) {
         case a.bS.POPULAR:
             p = u;
             break;
         case a.bS.ALPHABETICAL:
-            p = s;
+            p = c;
     }
     return {
         sortOrder: o,
-        setSortOrder: c,
+        setSortOrder: s,
         commands: p,
         canSort: d
     };

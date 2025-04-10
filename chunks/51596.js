@@ -28,9 +28,9 @@ var l = n(570140),
     h = n(283595),
     g = n(944486),
     O = n(914010),
-    S = n(626135),
-    T = n(777754),
-    I = n(823385),
+    T = n(626135),
+    I = n(777754),
+    S = n(823385),
     N = n(981631),
     m = n(176505);
 function A(e) {
@@ -78,13 +78,13 @@ function y(e) {
     };
 }
 function L(e, t) {
-    let { results: n, queryMode: l, query: r, maxQueryLength: i } = I.Z.getProps(),
+    let { results: n, queryMode: l, query: r, maxQueryLength: i } = S.Z.getProps(),
         o = O.Z.getGuildId(),
         a = g.Z.getChannelId(o),
         s = n[(0, u.gJ)(u.a8.DOWN, -1, n)],
-        c = T.Z.isEmail(r),
-        d = T.Z.isPhoneNumber(r),
-        E = T.Z.isUserTagLike(r),
+        c = I.Z.isEmail(r),
+        d = I.Z.isPhoneNumber(r),
+        E = I.Z.isUserTagLike(r),
         f = null != a && (0, m.AB)(a),
         C = (e) => (null == e ? null : e.type === u.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
         h = {
@@ -100,12 +100,12 @@ function L(e, t) {
             query: c || d || E ? null : r,
             top_result_type: C(s),
             top_result_score: null != s ? s.score : null,
-            num_results_total: I.Z.getResultTotals(),
-            num_results_users: I.Z.getResultTotals(u.h8.USER),
-            num_results_text_channels: I.Z.getResultTotals(u.h8.TEXT_CHANNEL),
-            num_results_voice_channels: I.Z.getResultTotals(u.h8.VOICE_CHANNEL),
-            num_results_guilds: I.Z.getResultTotals(u.h8.GUILD),
-            num_results_group_dms: I.Z.getResultTotals(u.h8.GROUP_DM)
+            num_results_total: S.Z.getResultTotals(),
+            num_results_users: S.Z.getResultTotals(u.h8.USER),
+            num_results_text_channels: S.Z.getResultTotals(u.h8.TEXT_CHANNEL),
+            num_results_voice_channels: S.Z.getResultTotals(u.h8.VOICE_CHANNEL),
+            num_results_guilds: S.Z.getResultTotals(u.h8.GUILD),
+            num_results_group_dms: S.Z.getResultTotals(u.h8.GROUP_DM)
         };
     if (null != a) {
         let e = _.Z.getChannel(a);
@@ -128,7 +128,7 @@ function L(e, t) {
                 h.selected_user_id = r.id;
         }
     }
-    S.default.track(e, h);
+    T.default.track(e, h);
 }
 function R() {
     l.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' });
@@ -138,14 +138,14 @@ function D() {
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
     !(function (e) {
         let t;
-        if (I.Z.isOpen()) return;
+        if (S.Z.isOpen()) return;
         let n = O.Z.getGuildId(),
             l = g.Z.getChannelId(n);
         if (null != l) {
             let e = _.Z.getChannel(l);
             t = null != e ? e.type : null;
         }
-        S.default.track(N.rMx.QUICKSWITCHER_OPENED, {
+        T.default.track(N.rMx.QUICKSWITCHER_OPENED, {
             source: e,
             current_guild_id: n,
             current_channel_id: l,
@@ -198,8 +198,8 @@ function x(e) {
             (0, E.Kh)(g.id, { navigationReplace: !0 }), o.Z.channelListScrollTo(N.ME, g.id);
             break;
         case u.h8.APPLICATION:
-            let S = h.Z.getActiveLibraryApplication(g.id);
-            b(g.id, S, {
+            let T = h.Z.getActiveLibraryApplication(g.id);
+            b(g.id, T, {
                 analyticsParams: {
                     source: N.Sbl.QUICK_SWITCHER,
                     location: N.Sbl.QUICK_SWITCHER

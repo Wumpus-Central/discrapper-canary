@@ -4,8 +4,8 @@ var i = n(200651),
     l = n(120356),
     a = n.n(l),
     o = n(481060),
-    c = n(895924),
-    s = n(827498),
+    s = n(895924),
+    c = n(827498),
     u = n(106066),
     d = n(98880),
     p = n(772606),
@@ -14,7 +14,7 @@ var i = n(200651),
 function h(e) {
     let { context: t, entrypoint: n, title: l, look: h, items: b, sectionName: C, sectionOverallPosition: x } = e,
         _ = (0, u.s)('AppLauncherApplicationListViewScreen'),
-        y = r.useMemo(() => (n === s._b.TEXT ? d.kA : d.qR), [n]);
+        y = r.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
     return (0, i.jsxs)('section', {
         className: f.container,
         'aria-label': m.NW.formatToPlainString(m.t.iobNIC, { sectionTitle: l }),
@@ -46,7 +46,7 @@ function h(e) {
                                 look: h,
                                 sectionName: C,
                                 resultsPosition: n,
-                                location: c.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
+                                location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
                                 installOnDemand: l,
                                 isOneClickCTA: _,
                                 sectionOverallPosition: x,
