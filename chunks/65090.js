@@ -102,7 +102,8 @@ let E = {
                         selected: _ === t + a.length + s.length,
                         index: a.length + s.length + t,
                         role: e,
-                        hideDescription: m.hideMentionDescription
+                        hideDescription: m.hideMentionDescription,
+                        guildId: p.guild_id
                     },
                     e.id
                 )
