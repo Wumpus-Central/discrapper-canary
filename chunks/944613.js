@@ -47,7 +47,8 @@ let m = function (e) {
                                   })
                                 : (0, r.jsx)(u.xko, {
                                       className: h.popoutRoleCircle,
-                                      color: null != (n = e.colorString) ? n : (0, l.Rf)(_.p6O)
+                                      color: null != (n = e.colorString) ? n : (0, l.Rf)(_.p6O),
+                                      colors: b ? e.colorStrings : null
                                   }),
                             (0, r.jsx)(u.lo1.Label, { children: e.name })
                         ]
