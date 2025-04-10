@@ -60,7 +60,6 @@ let i = [
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,
-            bundle: !0,
             dependencies: []
         },
         {
@@ -69,7 +68,6 @@ let i = [
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,
-            bundle: !0,
             dependencies: []
         },
         {
@@ -78,7 +76,6 @@ let i = [
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,
-            bundle: !1,
             dependencies: []
         },
         {
@@ -87,7 +84,6 @@ let i = [
             title: 'Lorem ipsum',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao',
             cost: 1,
-            bundle: !1,
             dependencies: []
         }
     ];
