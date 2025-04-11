@@ -11,22 +11,22 @@ var r = n(200651),
     s = n(430824),
     c = n(639777),
     u = n(441536),
-    d = n(279604),
-    p = n(921944),
-    h = n(680278),
-    f = n(388032),
-    g = n(423151),
-    m = n(942570);
+    d = n(795338),
+    p = n(279604),
+    h = n(921944),
+    f = n(680278),
+    g = n(388032),
+    m = n(423151);
 function b(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(O, {
         asset: (0, r.jsx)(v, {
-            src: m,
+            powerups: n,
             markAsDismissed: i
         }),
-        header: f.NW.formatToPlainString(h.Z['Zg/m9P'], { perkName: n.title }),
-        content: f.NW.formatToPlainString(h.Z['1EGXSE'], { perkName: n.title }),
-        buttonCTA: f.NW.string(f.t.RzWDqa),
+        header: g.NW.formatToPlainString(f.Z['Zg/m9P'], { perkName: n.title }),
+        content: g.NW.formatToPlainString(f.Z['1EGXSE'], { perkName: n.title }),
+        buttonCTA: g.NW.string(g.t.RzWDqa),
         onClick: () => (0, u.Z)(t, n.skuId),
         markAsDismissed: i
     });
@@ -37,12 +37,12 @@ function _(e) {
     let l = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title);
     return (0, r.jsx)(O, {
         asset: (0, r.jsx)(v, {
-            src: m,
+            powerups: n,
             markAsDismissed: i
         }),
-        header: f.NW.string(h.Z.xyE2AQ),
-        content: f.NW.formatToPlainString(h.Z.IJP4YG, { perks: l }),
-        buttonCTA: f.NW.string(f.t.RzWDqa),
+        header: g.NW.string(f.Z.xyE2AQ),
+        content: g.NW.formatToPlainString(f.Z.IJP4YG, { perks: l }),
+        buttonCTA: g.NW.string(g.t.RzWDqa),
         onClick: () => (0, u.Z)(t),
         markAsDismissed: i
     });
@@ -53,35 +53,36 @@ function y(e) {
             var e;
             return null == (e = s.Z.getGuild(t)) ? void 0 : e.name;
         }),
-        { onActivate: a } = (0, d.ZP)(t, n[0]);
+        { onActivate: a } = (0, p.ZP)(t, n[0]);
     if (0 === n.length) return;
     let c = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
-        p = 1 === n.length;
+        d = 1 === n.length;
     return (0, r.jsx)(O, {
         asset: (0, r.jsx)(v, {
-            src: m,
+            powerups: n,
             markAsDismissed: i
         }),
-        header: f.NW.formatToPlainString(h.Z.LmpChI, { guildName: o }),
-        content: n.length > 1 ? f.NW.formatToPlainString(h.Z.wcQOqK, { perks: c }) : f.NW.formatToPlainString(h.Z.ZF8NT0, { perk: c }),
-        buttonCTA: p ? f.NW.string(h.Z.gSxlHR) : f.NW.string(f.t.RzWDqa),
-        onClick: (e) => (p ? a(e) : (0, u.Z)(t)),
+        header: g.NW.formatToPlainString(f.Z.LmpChI, { guildName: o }),
+        content: n.length > 1 ? g.NW.formatToPlainString(f.Z.wcQOqK, { perks: c }) : g.NW.formatToPlainString(f.Z.ZF8NT0, { perk: c }),
+        buttonCTA: d ? g.NW.string(f.Z.gSxlHR) : g.NW.string(g.t.RzWDqa),
+        onClick: (e) => (d ? a(e) : (0, u.Z)(t)),
         markAsDismissed: i
     });
 }
 function v(e) {
-    let { src: t, markAsDismissed: n } = e;
+    let { powerups: t, markAsDismissed: n } = e;
     return (0, r.jsxs)('div', {
-        className: g.imageContainer,
+        className: m.imageContainer,
         children: [
-            (0, r.jsx)('img', {
-                className: g.image,
-                src: t,
-                alt: ''
-            }),
+            Array.isArray(t) && 1 === t.length
+                ? (0, r.jsx)(d.m, {
+                      className: m.image,
+                      powerup: t[0]
+                  })
+                : (0, r.jsx)(d.g, { className: m.image }),
             (0, r.jsx)(o.olH, {
-                className: g.close,
-                onClick: () => n(p.L.USER_DISMISS)
+                className: m.close,
+                onClick: () => n(h.L.USER_DISMISS)
             })
         ]
     });
@@ -147,9 +148,9 @@ function O(e) {
                     color: 'text-muted',
                     children: o
                 }),
-                className: g.container,
-                headerClassName: g.header,
-                contentClassName: g.header,
+                className: m.container,
+                headerClassName: m.header,
+                contentClassName: m.header,
                 caretPosition: a.DF.LEFT_TOP
             }),
         Object.getOwnPropertyDescriptors
