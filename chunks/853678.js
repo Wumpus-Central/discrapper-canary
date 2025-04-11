@@ -111,15 +111,15 @@ let v = new Set([y.Fu, y.JT]),
                 var t;
                 let {
                     socket: n,
-                    args: { custom_id: r, message: i, link_id: l, referrer_id: a }
+                    args: { custom_id: r, message: i, link_id: l }
                 } = e;
                 (0, _.bu)(n.transport);
-                let o = (0, _._f)(n.application);
-                if (null == o) throw new b.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No application.');
+                let a = (0, _._f)(n.application);
+                if (null == a) throw new b.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No application.');
                 if (!(0, f.yE)(null != (t = n.application.flags) ? t : 0, N.udG.EMBEDDED)) throw new b.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
                     (0, u._)({
-                        applicationId: o,
+                        applicationId: a,
                         customId: r,
                         linkId: l,
                         message: i,
@@ -129,8 +129,7 @@ let v = new Set([y.Fu, y.JT]),
                                 didCopyLink: n,
                                 didSendMessage: t
                             });
-                        },
-                        referrerId: a
+                        }
                     });
                 });
             }

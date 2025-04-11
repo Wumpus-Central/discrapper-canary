@@ -5,16 +5,16 @@ var i = n(481060),
     l = n(812206),
     a = n(531826);
 function o(e) {
-    let { applicationId: t, customId: o, linkId: s, message: c, onShare: u, referrerId: d } = e,
-        p = l.Z.getApplication(t);
-    if (null == p) return void u(!1, !1);
-    let h = null != (0, a.jA)({ applicationId: p.id }) ? i.u1M : i.z1l,
-        f = !1;
-    function g(e) {
-        u(e, f);
+    let { applicationId: t, customId: o, linkId: s, message: c, onShare: u } = e,
+        d = l.Z.getApplication(t);
+    if (null == d) return void u(!1, !1);
+    let p = null != (0, a.jA)({ applicationId: d.id }) ? i.u1M : i.z1l,
+        h = !1;
+    function f(e) {
+        u(e, h);
     }
-    function m() {
-        f = !0;
+    function g() {
+        h = !0;
     }
     (0, i.ZDy)(
         async () => {
@@ -52,9 +52,8 @@ function o(e) {
                             customId: o,
                             linkId: s,
                             message: c,
-                            onCopyLink: m,
-                            onShare: g,
-                            referrerId: d
+                            onCopyLink: g,
+                            onShare: f
                         },
                         n
                     )
@@ -62,9 +61,9 @@ function o(e) {
         },
         {
             modalKey: 'activity-share-moment-modal',
-            contextKey: h,
+            contextKey: p,
             onCloseCallback: () => {
-                u(!1, f);
+                u(!1, h);
             }
         }
     );
