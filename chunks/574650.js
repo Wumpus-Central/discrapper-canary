@@ -47,11 +47,11 @@ let P = () => {
     var e, t;
     let i = (0, a.e7)([u.Z], () => u.Z.getGuildId(), []),
         P = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
-        f = (0, a.e7)([N.Z], () => (null != i ? N.Z.getRequest(i) : null), [i]),
-        C = (0, o.TH)(),
-        D = (null == (e = (0, o.LX)(C.pathname, O.Z5c.CHANNEL(null == P ? void 0 : P.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+        C = (0, a.e7)([N.Z], () => (null != i ? N.Z.getRequest(i) : null), [i]),
+        f = (0, o.TH)(),
+        D = (null == (e = (0, o.LX)(f.pathname, O.Z5c.CHANNEL(null == P ? void 0 : P.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
     if (null == P || !(0, I.Dc)(P) || D) return null;
-    let g = null != (t = null == f ? void 0 : f.applicationStatus) ? t : _.wB.STARTED,
+    let g = null != (t = null == C ? void 0 : C.applicationStatus) ? t : _.wB.STARTED,
         m = null,
         y = null,
         h = null,

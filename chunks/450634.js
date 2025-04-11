@@ -3,20 +3,20 @@ var a = n(200651),
     i = n(192379),
     l = n(481060),
     o = n(332664),
-    s = n(142497),
-    c = n(626135),
+    c = n(142497),
+    s = n(626135),
     r = n(672655),
     d = n(768015),
     u = n(701488),
-    _ = n(981631),
-    m = n(190378),
+    m = n(981631),
+    _ = n(190378),
     p = n(388032);
 let b = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
 function x(e) {
     var t;
     let { channel: x, embeddedActivityLocation: f, activityApplication: h, onClose: v, transitionState: N, analyticsData: g } = e;
     i.useEffect(() => {
-        c.default.track(_.rMx.OPEN_MODAL, {
+        s.default.track(m.rMx.OPEN_MODAL, {
             type: 'Activity Feedback Modal',
             application_id: h.id,
             application_name: h.name,
@@ -38,11 +38,11 @@ function x(e) {
             r &&
                 (function (e) {
                     let { applicationId: t, rating: n } = e;
-                    c.default.track(_.rMx.ACTIVITY_REPORT_DONT_SHOW, {
+                    s.default.track(m.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                         application_id: t,
                         rating: n
                     }),
-                        (0, s.Kw)(m.v.POST_ACTIVITY_FEEDBACK);
+                        (0, c.Kw)(_.v.POST_ACTIVITY_FEEDBACK);
                 })({
                     rating: i,
                     applicationId: h.id

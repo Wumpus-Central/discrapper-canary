@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(709054),
     x = n(594173),
     y = n(786761),
-    v = n(493892),
-    E = n(901461),
-    O = n(739566),
-    N = n(443877),
+    E = n(493892),
+    v = n(901461),
+    N = n(739566),
+    O = n(443877),
     j = n(492593),
     C = n(938353),
     S = n(25015),
@@ -91,7 +91,7 @@ let F = i.memo(function e(t) {
         ee = h.QK.useSetting(),
         et = (0, u.A)((null != (n = R.editedTimestamp) ? n : R.timestamp).valueOf()),
         en = (0, d.Z)(null == s ? void 0 : s.id),
-        { disableReactionCreates: er } = (0, N.Z)(s),
+        { disableReactionCreates: er } = (0, O.Z)(s),
         { content: ei, hasSpoilerEmbeds: ea } = (0, S.Z)(R, {
             hideSimpleEmbedContent: J && $,
             allowList: et,
@@ -99,7 +99,7 @@ let F = i.memo(function e(t) {
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        el = (0, O.ZP)(R),
+        el = (0, N.ZP)(R),
         eo = null != (i = R.getGuildId()) ? i : void 0,
         es = (0, m.Z)(el),
         ec = (0, o.e7)([g.Z], () => R.hasFlag(k.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(R.id))),
@@ -122,7 +122,7 @@ let F = i.memo(function e(t) {
                   hasThread: !1
               })
           )
-        : (_.Z.isBlockedForMessage(R) ? (a = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(R) ? (a = D.t.VFWjc3) : (0, v.DQ)(R) && K && (a = D.t.xfkfTE), void 0 !== a)
+        : (_.Z.isBlockedForMessage(R) ? (a = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(R) ? (a = D.t.VFWjc3) : (0, E.DQ)(R) && K && (a = D.t.xfkfTE), void 0 !== a)
           ? (0, r.jsx)(B, {
                 className: F,
                 compact: L,
@@ -173,7 +173,7 @@ let F = i.memo(function e(t) {
                 onClick: H,
                 hasThread: !1 !== z && null != ec && R.hasFlag(k.iLy.HAS_THREAD),
                 hasReply: R.type === k.uaV.REPLY,
-                isSystemMessage: (0, E.Z)(R),
+                isSystemMessage: (0, v.Z)(R),
                 messageRef: ep,
                 guildId: eo,
                 authorHasGradientRole: es

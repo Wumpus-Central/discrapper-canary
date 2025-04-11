@@ -16,10 +16,10 @@ let p = (e) => {
             {
                 initialized: x,
                 loading: y,
-                items: v,
-                hasMore: E,
-                cursor: O,
-                errored: N
+                items: E,
+                hasMore: v,
+                cursor: N,
+                errored: O
             } = (0, i.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
@@ -39,9 +39,9 @@ let p = (e) => {
         let S = (0, l.Z)();
         r.useEffect(
             () => () => {
-                p ? !S() && (N || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
+                p ? !S() && (O || E.length > 100) && (0, s.jF)() : n && E.length > 100 && (0, s.jF)();
             },
-            [n, v, p, S, N]
+            [n, E, p, S, O]
         ),
             r.useEffect(() => {
                 let e = h && t;
@@ -57,14 +57,14 @@ let p = (e) => {
             async (e) => {
                 !g.current &&
                     x &&
-                    E &&
-                    null != O &&
-                    (e || !N) &&
+                    v &&
+                    null != N &&
+                    (e || !O) &&
                     ((g.current = !0),
                     b(!0),
                     await (0, s.jk)(
                         {
-                            after: O,
+                            after: N,
                             with_mentions: m,
                             roles_filter: j,
                             everyone_filter: C,
@@ -76,19 +76,19 @@ let p = (e) => {
                     ),
                     b(!1));
             },
-            [x, E, O, N, m, j, C]
+            [x, v, N, O, m, j, C]
         );
         return {
             initialized: x,
             loading: y,
-            items: v,
-            hasMore: E,
+            items: E,
+            hasMore: v,
             loadMore: I,
             loadingMore: _,
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);
             },
-            errored: N
+            errored: O
         };
     },
     m = () => {

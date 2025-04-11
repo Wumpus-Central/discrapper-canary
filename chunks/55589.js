@@ -7,8 +7,8 @@ var l,
     u = n.n(c),
     d = n(442837),
     p = n(759174),
-    _ = n(570140),
-    h = n(333023),
+    h = n(570140),
+    _ = n(333023),
     f = n(355298),
     m = n(333984),
     b = n(131704),
@@ -113,7 +113,7 @@ class P extends (l = d.ZP.Store) {
               writable: !0
           })
         : (P[s] = a);
-let A = new P(_.Z, {
+let A = new P(h.Z, {
     CONNECTION_OPEN: T,
     CONNECTION_OPEN_SUPPLEMENTAL: T,
     OVERLAY_INITIALIZE: T,
@@ -127,7 +127,7 @@ let A = new P(_.Z, {
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (!(0, b.hv)(t.type) || t.id === h.V) return !1;
+        if (!(0, b.hv)(t.type) || t.id === _.V) return !1;
         N.set(t.id, v(t));
     },
     CHANNEL_DELETE: function (e) {

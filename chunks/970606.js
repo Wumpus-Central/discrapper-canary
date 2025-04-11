@@ -1,9 +1,9 @@
 n.d(t, {
     Af: () => u,
     GO: () => c,
-    Gh: () => h,
+    Gh: () => _,
     Pq: () => p,
-    Q2: () => _,
+    Q2: () => h,
     Qh: () => d,
     Vr: () => s,
     hx: () => a
@@ -69,7 +69,7 @@ function d(e) {
 function p(e) {
     i.default.track(l.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
-function _(e) {
+function h(e) {
     let { guildId: t, source: n, tab: r } = e;
     i.default.track(l.rMx.CLAN_APPLICATION_NAVIGATION, {
         guild_id: t,
@@ -77,7 +77,7 @@ function _(e) {
         tab: r
     });
 }
-function h(e) {
+function _(e) {
     let { feature: t, guildId: n, position: r } = e;
     i.default.track(l.rMx.DISCOVERY_GUILD_CARD_INTERACTION, {
         guild_id: n,

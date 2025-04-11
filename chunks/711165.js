@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(74365),
     x = n(618857),
     y = n(695346),
-    v = n(23750),
-    E = n(592125),
-    O = n(594174),
-    N = n(823379),
+    E = n(23750),
+    v = n(592125),
+    N = n(594174),
+    O = n(823379),
     j = n(324081),
     C = n(240126),
     S = n(791914),
@@ -152,7 +152,7 @@ function R(e) {
             () =>
                 t.reduce((e, t) => {
                     var n, r;
-                    let i = E.Z.getChannel(t.scheduledMessage.channelId);
+                    let i = v.Z.getChannel(t.scheduledMessage.channelId);
                     return (
                         null == i ||
                             (e[i.id] = {
@@ -199,10 +199,10 @@ function R(e) {
 }
 let k = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: a } = e,
-        o = new v.ZP({
+        o = new E.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
-            author: O.default.getUser(t.userId),
+            author: N.default.getUser(t.userId),
             timestamp: s()(t.sendAtTimestamp).toDate(),
             channel_id: t.scheduledMessage.channelId
         }),
@@ -239,7 +239,7 @@ let k = i.memo(function (e) {
                         stateMessage: T.NW.string(T.t.j8uIfH)
                     };
                 default:
-                    (0, N.vE)(e);
+                    (0, O.vE)(e);
             }
         })(t.state),
         d = i.useCallback(() => {

@@ -10,8 +10,8 @@ var i = n(392711),
     u = n(358221),
     d = n(963249),
     p = n(93127),
-    _ = n(430824),
-    h = n(594174),
+    h = n(430824),
+    _ = n(594174),
     f = n(431),
     m = n(626135),
     b = n(74538),
@@ -133,7 +133,7 @@ class M extends a.Z {
             j(this, '_premiumPaymentModalCloseResolve', null),
             j(this, '_premiumPaymentModalCloseReject', null),
             j(this, '_maybeFetchPremiumOffer', async () => {
-                let e = h.default.getCurrentUser();
+                let e = _.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = !(0, b.I5)(e) && f.Z.shouldFetchOffer();
                     await (0, v.T)('PremiumManager', t);
@@ -141,7 +141,7 @@ class M extends a.Z {
                 l.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             j(this, '_maybeFetchCheckoutRecovery', async () => {
-                let e = h.default.getCurrentUser();
+                let e = _.default.getCurrentUser();
                 null != e && e.verified && !(0, b.I5)(e) && O.Z.shouldFetchCheckoutRecovery() && (await (0, E.o)());
             }),
             j(this, '_maybeFetchUserAffinities', () => {
@@ -169,7 +169,7 @@ class M extends a.Z {
                 t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null);
             }),
             j(this, 'maybeShowHDStreamingViewerUpsellMessage', (e) => {
-                let t = h.default.getCurrentUser();
+                let t = _.default.getCurrentUser();
                 (null == t ? void 0 : t.id) !== e.senderUserId && this._maybeSendViewerUpsellMessage(e.channelId, e.guildId, t);
             }),
             j(
@@ -180,7 +180,7 @@ class M extends a.Z {
                     let o = u.Z.getSelectedParticipant(e),
                         l = (0, N.o)(o, n),
                         { sendNitroMessage: a } = (0, C.TD)(l),
-                        c = null != (i = null == (r = _.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE;
+                        c = null != (i = null == (r = h.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE;
                     if (S.Z.cooldownIsActive() || !a || c >= P.Eu4.TIER_2 || (null == o ? void 0 : o.type) !== A.fO.STREAM || (null == o ? void 0 : o.id) === (null == n ? void 0 : n.id) || null == o.maxResolution || null == o.maxFrameRate) return;
                     y.I();
                     let d = w.NW.formatToPlainString(w.t.AbyeZG, {

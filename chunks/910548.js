@@ -17,10 +17,10 @@ var r,
     b = n(709586),
     x = n(267642),
     y = n(739566),
-    v = n(834129),
-    E = n(981631),
-    O = n(388032),
-    N = n(573510);
+    E = n(834129),
+    v = n(981631),
+    N = n(388032),
+    O = n(573510);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -185,7 +185,7 @@ function W(e) {
         { createMultipleConfettiAt: g, confettiCanvas: _ } = a.useContext(f.h),
         [b, x] = a.useState(null),
         y = (0, s.uR)(_, b),
-        v = (function (e, t) {
+        E = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -201,8 +201,8 @@ function W(e) {
                     return 'enter';
             }
         })(d, h),
-        E = T.includes(h),
-        O = E && 'exit' === d,
+        v = T.includes(h),
+        N = v && 'exit' === d,
         j = a.useCallback((e) => {
             m(e);
         }, []),
@@ -246,7 +246,7 @@ function W(e) {
             }
         }, [g, h, d, l]),
         a.useEffect(() => {
-            if (E && 'leaf_fall' === d) {
+            if (v && 'leaf_fall' === d) {
                 let e = w[h].leafRotationDirection;
                 y.createConfetti(
                     {
@@ -298,7 +298,7 @@ function W(e) {
                     { sprite: 'TOP_LEFT' === h ? k : D }
                 );
             }
-        }, [E, y, h, d]),
+        }, [v, y, h, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
@@ -310,16 +310,16 @@ function W(e) {
                 }),
                 (0, i.jsx)(p.P3F, {
                     onClick: n,
-                    className: o()(N.easterEggAnimationClickTarget, {
-                        [N.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === h,
-                        [N.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === h,
-                        [N.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === h,
-                        [N.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === h
+                    className: o()(O.easterEggAnimationClickTarget, {
+                        [O.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === h,
+                        [O.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === h,
+                        [O.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === h,
+                        [O.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === h
                     }),
                     children: (0, i.jsx)(p.kci, {
                         animationRef: A,
-                        className: o()(N.easterEggAnimation, { [N.easterEggAnimationHideLeaf]: O }),
-                        nextScene: v,
+                        className: o()(O.easterEggAnimation, { [O.easterEggAnimationHideLeaf]: N }),
+                        nextScene: E,
                         sceneSegments: S,
                         onScenePlay: j,
                         onSceneComplete: C,
@@ -336,12 +336,12 @@ function U(e) {
         { message: n, compact: r, guild: l, usernameHook: o, onClickMessage: s } = e,
         c = (function (e) {
             switch (e.type) {
-                case E.uaV.GUILD_BOOST_TIER_1:
-                    return E.Eu4.TIER_1;
-                case E.uaV.GUILD_BOOST_TIER_2:
-                    return E.Eu4.TIER_2;
-                case E.uaV.GUILD_BOOST_TIER_3:
-                    return E.Eu4.TIER_3;
+                case v.uaV.GUILD_BOOST_TIER_1:
+                    return v.Eu4.TIER_1;
+                case v.uaV.GUILD_BOOST_TIER_2:
+                    return v.Eu4.TIER_2;
+                case v.uaV.GUILD_BOOST_TIER_3:
+                    return v.Eu4.TIER_3;
             }
             return null;
         })(n),
@@ -356,24 +356,24 @@ function U(e) {
     t =
         null == c || null == l
             ? u > 1
-                ? O.NW.format(O.t.yfC9dn, {
+                ? N.NW.format(N.t.yfC9dn, {
                       username: A,
                       usernameHook: w,
                       numSubscriptions: u
                   })
-                : O.NW.format(O.t['57St//'], {
+                : N.NW.format(N.t['57St//'], {
                       username: A,
                       usernameHook: w
                   })
             : u > 1
-              ? O.NW.format(O.t.PO9uJC, {
+              ? N.NW.format(N.t.PO9uJC, {
                     username: A,
                     usernameHook: w,
                     numSubscriptions: u,
                     guildName: l.name,
                     newTierName: (0, x.nW)(c)
                 })
-              : O.NW.format(O.t.cUfTTE, {
+              : N.NW.format(N.t.cUfTTE, {
                     username: A,
                     usernameHook: w,
                     guildName: l.name,
@@ -392,7 +392,7 @@ function U(e) {
             S(!1);
         }, []),
         D = a.useCallback(() => {
-            (0, g.AI)({ settingsVisible: !0 }), m.Z.open(E.oAB.POGGERMODE), S(!1);
+            (0, g.AI)({ settingsVisible: !0 }), m.Z.open(v.oAB.POGGERMODE), S(!1);
         }, []),
         L = a.useCallback(
             (e, t) => {
@@ -402,28 +402,28 @@ function U(e) {
         );
     a.useEffect(() => j(L));
     let M = (0, i.jsx)(p.P3F, {
-        className: N.iconWrapper,
+        className: O.iconWrapper,
         innerRef: I,
         onClick: s,
         children: (0, i.jsx)(b.Z, {
-            className: N.icon,
+            className: O.icon,
             onMouseEnter: R
         })
     });
-    return (0, i.jsxs)(v.Z, {
+    return (0, i.jsxs)(E.Z, {
         iconNode: M,
         timestamp: n.timestamp,
         compact: r,
         children: [
             (0, i.jsx)('div', {
                 onClick: s,
-                className: N.message,
+                className: O.message,
                 children: t
             }),
             C
                 ? (0, i.jsx)(h.ZP, {
                       children: (0, i.jsx)('div', {
-                          className: N.cannonWrapper,
+                          className: O.cannonWrapper,
                           children: (0, i.jsx)(W, {
                               onAnimationComplete: k,
                               onClick: D

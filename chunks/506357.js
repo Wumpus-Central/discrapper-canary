@@ -20,16 +20,16 @@ var r = n(200651),
 function A(e) {
     var t, A;
     let { onDismiss: P } = e,
-        f = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        C = (0, l.e7)([E.Z], () => (null != f ? E.Z.getChannelId(f) : null), [f]),
-        D = null != f ? f : null,
+        C = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        f = (0, l.e7)([E.Z], () => (null != C ? E.Z.getChannelId(C) : null), [C]),
+        D = null != C ? C : null,
         g = (0, l.e7)([u.Z], () => (null != D ? u.Z.getGuild(D) : null), [D]),
         { shouldShowIncidentActions: m, incidentData: y, isUnderLockdown: h } = (0, I.mI)(D),
         U = (0, s.n2)(null != (t = null == g ? void 0 : g.id) ? t : T.lds),
         b = i.useCallback(() => null != g && (0, c._X)(g.id), [g]);
     if (null == g || null == y || !m) return null;
     let M = (e) => {
-            if (e && U && C !== S.oC.MEMBER_SAFETY && b())
+            if (e && U && f !== S.oC.MEMBER_SAFETY && b())
                 return void _.default.track(T.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: T.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: g.id
@@ -96,7 +96,7 @@ function A(e) {
             guild: g,
             size: a.Z.Sizes.MINI
         }),
-        Z = (0, O.OY)(y, g.name);
+        k = (0, O.OY)(y, g.name);
     if (null != (null != (A = y.dmsDisabledUntil) ? A : y.invitesDisabledUntil) && h)
         return (0, r.jsxs)(o.qXd, {
             className: R.notice,
@@ -107,7 +107,7 @@ function A(e) {
                     noticeType: T.kVF.GUILD_RAID_NOTIFICATION
                 }),
                 L,
-                Z,
+                k,
                 (0, r.jsx)(o.EyT, {
                     className: R.actionButton,
                     onClick: () => M(!1),
@@ -124,8 +124,8 @@ function A(e) {
                 })
             ]
         });
-    let k = (0, O.CG)(y) ? p.NW.formatToPlainString(p.t.tZTx2N, { guildName: g.name }) : (0, O.kk)(y) ? p.NW.formatToPlainString(p.t['1bSmxs'], { guildName: g.name }) : p.NW.formatToPlainString(p.t.W87xDA, { guildName: g.name }),
-        j = U && C === S.oC.MEMBER_SAFETY;
+    let Z = (0, O.CG)(y) ? p.NW.formatToPlainString(p.t.tZTx2N, { guildName: g.name }) : (0, O.kk)(y) ? p.NW.formatToPlainString(p.t['1bSmxs'], { guildName: g.name }) : p.NW.formatToPlainString(p.t.W87xDA, { guildName: g.name }),
+        j = U && f === S.oC.MEMBER_SAFETY;
     return (0, r.jsxs)(o.qXd, {
         className: R.notice,
         color: o.DM8.WARNING,
@@ -135,7 +135,7 @@ function A(e) {
                 noticeType: T.kVF.GUILD_RAID_NOTIFICATION
             }),
             L,
-            k,
+            Z,
             !j &&
                 (0, r.jsx)(o.EyT, {
                     className: R.actionButton,

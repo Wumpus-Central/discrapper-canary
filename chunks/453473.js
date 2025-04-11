@@ -21,10 +21,10 @@ var r = n(200651),
     b = n(213609),
     x = n(294218),
     y = n(373662),
-    v = n(695346),
-    E = n(496675),
-    O = n(626135),
-    N = n(585483),
+    E = n(695346),
+    v = n(496675),
+    N = n(626135),
+    O = n(585483),
     j = n(70956),
     C = n(324701),
     S = n(575016),
@@ -133,7 +133,7 @@ function B(e) {
         d = i.useCallback(() => {
             c(!s), s ? null == n || n() : null == t || t();
         }, [n, t, s]);
-    i.useEffect(() => (N.S.subscribe(R.CkL.TOGGLE_FOR_LATER, d), () => void N.S.unsubscribe(R.CkL.TOGGLE_FOR_LATER, d)), [d]);
+    i.useEffect(() => (O.S.subscribe(R.CkL.TOGGLE_FOR_LATER, d), () => void O.S.unsubscribe(R.CkL.TOGGLE_FOR_LATER, d)), [d]);
     let p = (0, m.e7)([I.Z], () => I.Z.hasOverdueReminder(), []);
     return (0, r.jsx)(f.yRy, {
         animation: f.yRy.Animation.NONE,
@@ -229,7 +229,7 @@ function H(e) {
                 var r;
                 await (0, S.fC)(t, o),
                     e.shiftKey || n(),
-                    O.default.track(R.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    N.default.track(R.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (r = t.message) ? void 0 : r.author.id,
@@ -239,7 +239,7 @@ function H(e) {
             },
             [n, t, o]
         ),
-        c = (0, m.e7)([E.Z], () => !!((null == o ? void 0 : o.type) === R.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || E.Z.can(R.Plq.VIEW_CHANNEL, o));
+        c = (0, m.e7)([v.Z], () => !!((null == o ? void 0 : o.type) === R.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || v.Z.can(R.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && c
         ? (0, r.jsxs)('div', {
               className: D.messageContainer,
@@ -262,7 +262,7 @@ function H(e) {
                           message: t.message,
                           channel: o,
                           className: D.message,
-                          compact: v.jU.getSetting(),
+                          compact: E.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: W,
                           trackAnnouncementViews: !0

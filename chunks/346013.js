@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(406432),
     x = n(348238),
     y = n(38267),
-    v = n(884902),
-    E = n(670188),
-    O = n(695346),
-    N = n(271383),
+    E = n(884902),
+    v = n(670188),
+    N = n(695346),
+    O = n(271383),
     j = n(594174),
     C = n(768581),
     S = n(900849),
@@ -81,26 +81,26 @@ function M(e) {
         F = (0, P.J)(M, W),
         { setPopout: B } = (0, y.Z)(W.id, w.d$),
         G = (0, x.qo)(W, U, B, !0),
-        H = O.QK.useSetting(),
+        H = N.QK.useSetting(),
         V = (0, I.n)(),
         [z, K] = i.useState(!1),
         [Y, X] = i.useState((null == F ? void 0 : F.coverImage) == null),
         q = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         Q = (0, c.e7)(
-            [N.ZP, j.default],
+            [O.ZP, j.default],
             () => {
                 var e;
-                return N.ZP.isMember(null == F ? void 0 : F.guildId, null == (e = j.default.getCurrentUser()) ? void 0 : e.id);
+                return O.ZP.isMember(null == F ? void 0 : F.guildId, null == (e = j.default.getCurrentUser()) ? void 0 : e.id);
             },
             [F]
         ),
-        J = (0, c.e7)([N.ZP], () => ((null == F ? void 0 : F.authorId) != null ? N.ZP.getMember(F.guildId, F.authorId) : null)),
+        J = (0, c.e7)([O.ZP], () => ((null == F ? void 0 : F.authorId) != null ? O.ZP.getMember(F.guildId, F.authorId) : null)),
         $ = (0, f.Z)((null == J ? void 0 : J.avatarDecoration) != null ? (null == J ? void 0 : J.avatarDecoration) : null == F || null == (t = F.user) ? void 0 : t.avatarDecoration),
         [ee, et, en] = i.useMemo(() => {
             var e;
             return [null != (e = null == J ? void 0 : J.colorString) ? e : 'inherit', null == J ? void 0 : J.colorStrings, null == J ? void 0 : J.colorRoleId];
         }, [J]),
-        er = (0, v.X)(null == J ? void 0 : J.guildId, et),
+        er = (0, E.X)(null == J ? void 0 : J.guildId, et),
         { reducedMotion: ei } = i.useContext(u.Sfi),
         [ea, el] = i.useState(!1),
         eo = i.useCallback(() => {
@@ -203,7 +203,7 @@ function M(e) {
                         children: [
                             null != F.authorId &&
                                 null != ed &&
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(v.Z, {
                                     userId: F.authorId,
                                     guildId: F.guildId,
                                     channelId: U.id,
@@ -266,7 +266,7 @@ function M(e) {
                                                               className: R.authorName
                                                           })
                                                         : (0, r.jsx)(
-                                                              E.Z,
+                                                              v.Z,
                                                               {
                                                                   userId: F.authorId,
                                                                   guildId: F.guildId,

@@ -23,8 +23,8 @@ var r = n(200651),
     R = n(978227),
     A = n(236373),
     P = n(854698),
-    f = n(405613),
-    C = n(95291),
+    C = n(405613),
+    f = n(95291),
     D = n(742593),
     g = n(217804),
     m = n(139712),
@@ -47,8 +47,8 @@ let b = (e, t) => (n) => {
         }
         return () => {};
     },
-    Z = (e, t) => t && [y.WX.STAGE_INSTANCE, y.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
-    k = i.memo(function (e) {
+    k = (e, t) => t && [y.WX.STAGE_INSTANCE, y.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
+    Z = i.memo(function (e) {
         var t;
         let { guild: n, guildScheduledEvent: l, channel: o, isMember: u } = e,
             _ = (0, a.e7)(
@@ -122,7 +122,7 @@ let b = (e, t) => (n) => {
                         }),
                         (0, r.jsx)('div', {
                             className: U.channelInfoContainer,
-                            children: Z(l, u)
+                            children: k(l, u)
                                 ? (0, r.jsx)(s.P3F, {
                                       className: U.channelLocationLink,
                                       onClick: S,
@@ -217,8 +217,8 @@ let b = (e, t) => (n) => {
                 onClick: p,
                 children: [
                     null != n.image &&
-                        (0, r.jsx)(C.Z, {
-                            source: (0, f.Z)(n),
+                        (0, r.jsx)(f.Z, {
+                            source: (0, C.Z)(n),
                             className: U.banner
                         }),
                     (0, r.jsx)(D.ZP, {
@@ -234,7 +234,7 @@ let b = (e, t) => (n) => {
                     (0, r.jsxs)('div', {
                         className: U.footerContainer,
                         children: [
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(Z, {
                                 guild: l,
                                 channel: a,
                                 guildScheduledEvent: n,

@@ -1,4 +1,4 @@
-n.d(t, { H: () => O }), n(35282);
+n.d(t, { H: () => N }), n(35282);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -18,10 +18,10 @@ var i = n(120356),
     b = n(938475),
     x = n(5192),
     y = n(981631),
-    v = n(388032),
-    E = n(653072);
-function O(e) {
-    var t, n, i, O, N, j, C, S, I, T;
+    E = n(388032),
+    v = n(653072);
+function N(e) {
+    var t, n, i, N, O, j, C, S, I, T;
     let { message: P, channel: A } = e,
         w =
             null == (i = P.embeds[0]) ||
@@ -35,14 +35,14 @@ function O(e) {
                 : t.rawValue,
         Z =
             null == (j = P.embeds[0]) ||
-            null == (N = j.fields) ||
+            null == (O = j.fields) ||
             null ==
-                (O = N.find((e) => {
+                (N = O.find((e) => {
                     let { rawName: t } = e;
                     return 'channel_id' === t;
                 }))
                 ? void 0
-                : O.rawValue,
+                : N.rawValue,
         R = (0, l.e7)([g.Z], () => g.Z.getGuild(w)),
         k = (0, l.e7)([h.Z], () => h.Z.getChannel(Z)),
         D = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
@@ -65,15 +65,15 @@ function O(e) {
                 : S.rawValue,
         V = null != H ? H.split(',') : [],
         z = (0, l.Wu)([_.default], () => V.map((e) => _.default.getUser(e)).filter(Boolean)),
-        K = L && null != W ? v.NW.formatToPlainString(v.t['er/cHx'], { username: F }) : v.NW.formatToPlainString(v.t.noNjkZ, { username: U.nick }),
+        K = L && null != W ? E.NW.formatToPlainString(E.t['er/cHx'], { username: F }) : E.NW.formatToPlainString(E.t.noNjkZ, { username: U.nick }),
         Y = null != R && null != k,
         X = null;
-    (X = Y ? (L || G ? v.NW.format(v.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : v.NW.format(v.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : v.NW.string(v.t['tHT/Vl'])), 0 === B.length && (X = L ? v.NW.string(v.t.IE2uZW) : v.NW.string(v.t.QVhmGx));
-    let q = L ? v.NW.string(v.t['00XIbm']) : v.NW.string(v.t['7CrE9/']);
+    (X = Y ? (L || G ? E.NW.format(E.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : E.NW.format(E.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : E.NW.string(E.t['tHT/Vl'])), 0 === B.length && (X = L ? E.NW.string(E.t.IE2uZW) : E.NW.string(E.t.QVhmGx));
+    let q = L ? E.NW.string(E.t['00XIbm']) : E.NW.string(E.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)('div', {
-                className: E.card,
+                className: v.card,
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: 'text-md/semibold',
@@ -87,7 +87,7 @@ function O(e) {
                     }),
                     B.length > 0
                         ? (0, r.jsx)('div', {
-                              className: E.participants,
+                              className: v.participants,
                               children: (0, r.jsx)(m.Z, {
                                   guildId: w,
                                   partySize: {
@@ -100,7 +100,7 @@ function O(e) {
                               })
                           })
                         : (0, r.jsx)('div', {
-                              className: a()(E.participants, E.disabled),
+                              className: a()(v.participants, v.disabled),
                               children: (0, r.jsx)(m.Z, {
                                   guildId: w,
                                   partySize: {
@@ -115,22 +115,22 @@ function O(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: E.actions,
+                className: v.actions,
                 children: [
                     (0, r.jsxs)(o.zxk, {
                         color: o.zxk.Colors.BRAND,
                         onClick: () => {
                             null != Z && null != w && ((0, f.uL)(y.Z5c.CHANNEL(w, Z)), c.default.selectVoiceChannel(Z));
                         },
-                        className: E.button,
-                        innerClassName: E.buttonInner,
+                        className: v.button,
+                        innerClassName: v.buttonInner,
                         disabled: G || !Y,
                         children: [
                             (0, r.jsx)(o.gj8, {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            v.NW.string(v.t.zIeJq6)
+                            E.NW.string(E.t.zIeJq6)
                         ]
                     }),
                     (0, r.jsx)(o.zxk, {
@@ -138,7 +138,7 @@ function O(e) {
                         onClick: () => {
                             s.Z.sendMessage(A.id, u.ZP.parse(A, '\uD83D\uDC4B'));
                         },
-                        className: E.button,
+                        className: v.button,
                         children: q
                     })
                 ]

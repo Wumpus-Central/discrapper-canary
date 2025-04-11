@@ -1,38 +1,38 @@
-t.d(n, { Z: () => h }), t(388685);
-var l = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    s = t(259580),
-    o = t(70956),
-    u = t(586826),
-    c = t(174727),
-    d = t(882126),
-    f = t(943351),
-    m = t(862370);
+n.d(t, { Z: () => h }), n(388685);
+var l = n(200651),
+    a = n(192379),
+    r = n(120356),
+    i = n.n(r),
+    s = n(259580),
+    o = n(70956),
+    u = n(586826),
+    c = n(174727),
+    d = n(882126),
+    f = n(943351),
+    m = n(862370);
 let h = a.memo(function (e) {
-    let { playing: n, onPausePlayback: t, onPlaybackChange: i, onChangePosition: h, disabled: g = !1 } = e,
+    let { playing: t, onPausePlayback: n, onPlaybackChange: r, onChangePosition: h, disabled: g = !1 } = e,
         p = (function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var t = null != arguments[n] ? arguments[n] : {},
-                    l = Object.keys(t);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    l = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (l = l.concat(
-                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    l.forEach(function (n) {
+                    l.forEach(function (t) {
                         var l;
-                        (l = t[n]),
-                            n in e
-                                ? Object.defineProperty(e, n, {
+                        (l = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
                                       value: l,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[n] = l);
+                                : (e[t] = l);
                     });
             }
             return e;
@@ -45,23 +45,23 @@ let h = a.memo(function (e) {
         [N, w] = a.useState(0),
         [C, S] = a.useState(0),
         [O, P] = a.useState(0),
-        [k, E] = a.useState(!1),
+        [E, k] = a.useState(!1),
         [Z, M] = a.useState(!1),
         [I, _] = a.useState(!1),
         [D, R] = a.useState(0),
-        [T, W] = a.useState(-1),
-        F = a.useMemo(() => D / p.fineTuningScale, [p.fineTuningScale, D]);
+        [T, F] = a.useState(-1),
+        W = a.useMemo(() => D / p.fineTuningScale, [p.fineTuningScale, D]);
     a.useEffect(() => {
         if (null == b) return;
         let e = b.duration * o.Z.Millis.SECOND;
         w(0), S(0), P(e), R(e);
     }, [b]);
     let z = a.useCallback(
-            (e, n) => {
-                if ((t(), 0 === e.button))
-                    switch (n) {
+            (e, t) => {
+                if ((n(), 0 === e.button))
+                    switch (t) {
                         case 0:
-                            E(!0);
+                            k(!0);
                             break;
                         case 1:
                             M(!0);
@@ -70,12 +70,12 @@ let h = a.memo(function (e) {
                             _(!0);
                     }
             },
-            [t]
+            [n]
         ),
         A = a.useCallback((e) => {
             switch (e) {
                 case 0:
-                    E(!1);
+                    k(!1);
                     break;
                 case 1:
                     M(!1);
@@ -83,33 +83,33 @@ let h = a.memo(function (e) {
                 case 2:
                     _(!1);
             }
-            W(-1);
+            F(-1);
         }, []),
         L = a.useCallback(
             (e) => {
-                if (null == b || !k) return;
-                let n = parseInt(e.target.value),
-                    t = n > O ? O : n;
-                i((0, c.my)(t)), w(t), S(t);
+                if (null == b || !E) return;
+                let t = parseInt(e.target.value),
+                    n = t > O ? O : t;
+                r((0, c.my)(n)), w(n), S(n);
             },
-            [b, i, O, k]
+            [b, r, O, E]
         ),
         B = a.useCallback(
             (e) => {
                 if (null == b || !Z) return;
-                let n = parseInt(e.target.value);
-                n < N ? (i((0, c.my)(N)), S(N)) : n > O ? (i((0, c.my)(O)), S(O)) : (i((0, c.my)(n)), S(n));
+                let t = parseInt(e.target.value);
+                t < N ? (r((0, c.my)(N)), S(N)) : t > O ? (r((0, c.my)(O)), S(O)) : (r((0, c.my)(t)), S(t));
             },
-            [b, i, O, Z, N]
+            [b, r, O, Z, N]
         ),
         U = a.useCallback(
             (e) => {
                 if (null == b || !I) return;
-                let n = parseInt(e.target.value),
-                    t = n > N ? n : N;
-                i((0, c.my)(N)), S(N), P(t);
+                let t = parseInt(e.target.value),
+                    n = t > N ? t : N;
+                r((0, c.my)(N)), S(N), P(n);
             },
-            [b, i, I, N]
+            [b, r, I, N]
         );
     return (
         a.useEffect(() => {
@@ -125,26 +125,26 @@ let h = a.memo(function (e) {
             let e;
             if (null != b)
                 return (
-                    n &&
+                    t &&
                         (e = setInterval(() => {
-                            b.currentTime < (0, c.my)(O) ? b.currentTime >= (0, c.my)(C) && S(b.currentTime * o.Z.Millis.SECOND) : (t((0, c.my)(N)), S(N));
+                            b.currentTime < (0, c.my)(O) ? b.currentTime >= (0, c.my)(C) && S(b.currentTime * o.Z.Millis.SECOND) : (n((0, c.my)(N)), S(N));
                         }, 16)),
                     () => {
                         clearInterval(e);
                     }
                 );
-        }, [b, O, t, C, n, N]),
+        }, [b, O, n, C, t, N]),
         a.useEffect(() => {
             if (p.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
-                k && N == N && -1 === T ? W(N) : I && O == O && -1 === T ? W(O) : Z && C == C && -1 === T && W(C);
+                E && N == N && -1 === T ? F(N) : I && O == O && -1 === T ? F(O) : Z && C == C && -1 === T && F(C);
             }, p.fineTuningDelay);
             return () => {
                 clearTimeout(e);
             };
-        }, [p.fineTuningDelay, I, O, T, Z, C, k, N]),
+        }, [p.fineTuningDelay, I, O, T, Z, C, E, N]),
         (0, l.jsxs)('div', {
-            className: r()(m.timeline, { [m.initialized]: y }),
+            className: i()(m.timeline, { [m.initialized]: y }),
             children: [
                 (0, l.jsxs)('div', {
                     className: m.rangeHandleContainer,
@@ -154,10 +154,10 @@ let h = a.memo(function (e) {
                             children: [
                                 (0, l.jsx)('input', {
                                     ref: v,
-                                    className: r()(m.rangeHandle, m.rangeHandleStart),
+                                    className: i()(m.rangeHandle, m.rangeHandleStart),
                                     type: 'range',
-                                    min: (0, c.ao)(T, F, D),
-                                    max: (0, c.MN)(T, F, D),
+                                    min: (0, c.ao)(T, W, D),
+                                    max: (0, c.MN)(T, W, D),
                                     value: N,
                                     onChange: L,
                                     onMouseDown: (e) => z(e, 0),
@@ -166,10 +166,10 @@ let h = a.memo(function (e) {
                                 }),
                                 (0, l.jsx)('input', {
                                     ref: j,
-                                    className: r()(m.rangeHandle, m.rangeHandleEnd),
+                                    className: i()(m.rangeHandle, m.rangeHandleEnd),
                                     type: 'range',
-                                    min: (0, c.ao)(T, F, D),
-                                    max: (0, c.MN)(T, F, D),
+                                    min: (0, c.ao)(T, W, D),
+                                    max: (0, c.MN)(T, W, D),
                                     value: O,
                                     onChange: U,
                                     onMouseDown: (e) => z(e, 2),
@@ -182,10 +182,10 @@ let h = a.memo(function (e) {
                             className: m.__invalid_handlePlayheadTrack,
                             children: (0, l.jsx)('input', {
                                 ref: x,
-                                className: r()(m.rangeHandle, m.rangeHandlePlayhead),
+                                className: i()(m.rangeHandle, m.rangeHandlePlayhead),
                                 type: 'range',
-                                min: (0, c.ao)(T, F, D),
-                                max: (0, c.MN)(T, F, D),
+                                min: (0, c.ao)(T, W, D),
+                                max: (0, c.MN)(T, W, D),
                                 value: C,
                                 onChange: B,
                                 onMouseDown: (e) => z(e, 1),
@@ -199,19 +199,19 @@ let h = a.memo(function (e) {
                     className: m.handleContainer,
                     children: [
                         (0, l.jsxs)('div', {
-                            className: r()(m.handleFrame, {
-                                [m.startDragging]: k,
+                            className: i()(m.handleFrame, {
+                                [m.startDragging]: E,
                                 [m.endDragging]: I
                             }),
                             style: {
-                                left: ''.concat((0, c.pN)(N, T, F, D), '%'),
-                                right: ''.concat((0, c.kD)(O, T, F, D), '%')
+                                left: ''.concat((0, c.pN)(N, T, W, D), '%'),
+                                right: ''.concat((0, c.kD)(O, T, W, D), '%')
                             },
                             children: [
                                 (0, l.jsx)('div', {
-                                    className: r()(m.handleIconFrame, m.handleIconFrameStart),
+                                    className: i()(m.handleIconFrame, m.handleIconFrameStart),
                                     children: (0, l.jsx)('div', {
-                                        className: r()(m.handleIconContainer, m.__invalid_start),
+                                        className: i()(m.handleIconContainer, m.__invalid_start),
                                         children: (0, l.jsx)(s.Z, {
                                             direction: s.Z.Directions.RIGHT,
                                             className: m.handleIcon,
@@ -221,9 +221,9 @@ let h = a.memo(function (e) {
                                     })
                                 }),
                                 (0, l.jsx)('div', {
-                                    className: r()(m.handleIconFrame, m.handleIconFrameEnd),
+                                    className: i()(m.handleIconFrame, m.handleIconFrameEnd),
                                     children: (0, l.jsx)('div', {
-                                        className: r()(m.handleIconContainer, m.__invalid_end),
+                                        className: i()(m.handleIconContainer, m.__invalid_end),
                                         children: (0, l.jsx)(s.Z, {
                                             direction: s.Z.Directions.LEFT,
                                             className: m.handleIcon,
@@ -237,8 +237,8 @@ let h = a.memo(function (e) {
                         (0, l.jsx)('div', {
                             className: m.playheadTrack,
                             children: (0, l.jsx)('div', {
-                                className: r()(m.playhead, { [m.dragging]: Z || k || I || n }),
-                                style: { left: ''.concat((0, c.pN)(C, T, F, D), '%') }
+                                className: i()(m.playhead, { [m.dragging]: Z || E || I || t }),
+                                style: { left: ''.concat((0, c.pN)(C, T, W, D), '%') }
                             })
                         })
                     ]
@@ -247,7 +247,7 @@ let h = a.memo(function (e) {
                     className: m.waveformContainer,
                     children: (0, l.jsx)(d.Z, {
                         fineTuning: T,
-                        fineTuningResolution: F,
+                        fineTuningResolution: W,
                         duration: D
                     })
                 })

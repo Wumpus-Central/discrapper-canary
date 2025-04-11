@@ -1,17 +1,17 @@
-t.d(n, { Z: () => s });
-var l = t(200651),
-    a = t(192379),
-    i = t(586826),
-    r = t(990792);
+n.d(t, { Z: () => s });
+var l = n(200651),
+    a = n(192379),
+    r = n(586826),
+    i = n(990792);
 let s = a.memo(function (e) {
-    let { fineTuning: n, fineTuningResolution: t, duration: a } = e,
-        { file: s, audio: o } = (0, i.p)();
-    return (0, l.jsx)(r.Z, {
+    let { fineTuning: t, fineTuningResolution: n, duration: a } = e,
+        { file: s, audio: o } = (0, r.p)();
+    return (0, l.jsx)(i.Z, {
         file: s,
         audio: o,
         waveformSettings: {
-            fineTuning: n,
-            fineTuningResolution: t,
+            fineTuning: t,
+            fineTuningResolution: n,
             duration: a
         }
     });

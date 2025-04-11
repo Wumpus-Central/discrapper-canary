@@ -1,9 +1,9 @@
 n.d(t, {
-    RB: () => O,
+    RB: () => N,
     VH: () => y,
-    Vi: () => N,
+    Vi: () => O,
     Vu: () => j,
-    q7: () => E
+    q7: () => v
 });
 var r = n(692547),
     i = n(497089),
@@ -39,7 +39,7 @@ let x = {
         ADD_FRIEND: l,
         FIRST_MESSAGE: g
     },
-    v = (e) => {
+    E = (e) => {
         switch (e.item_enum) {
             case i.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
@@ -53,10 +53,10 @@ let x = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    E = (e) => {
+    v = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return v(e);
+                return E(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -69,8 +69,8 @@ let x = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    O = (e) => ('icHighlight' === e ? 'TOP_MESSAGES' : 'NOTIFICATION_CENTER'),
-    N = (e) => {
+    N = (e) => ('icHighlight' === e ? 'TOP_MESSAGES' : 'NOTIFICATION_CENTER'),
+    O = (e) => {
         switch (e) {
             case i.DY.GO_LIVE_PUSH:
                 return {

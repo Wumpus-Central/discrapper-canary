@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(953529);
+n.d(t, { Z: () => N }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -17,12 +17,12 @@ var r = n(200651),
     b = n(910200),
     x = n(358595),
     y = n(981631),
-    v = n(388032),
-    E = n(583136);
-function O(e) {
+    E = n(388032),
+    v = n(583136);
+function N(e) {
     let { guild: t, invite: n } = e,
         a = i.useRef(null),
-        [O, N] = i.useState(!0),
+        [N, O] = i.useState(!0),
         [j, C] = i.useState(!1),
         S = n.state === y.r2o.ACCEPTING,
         I = null != t,
@@ -38,39 +38,39 @@ function O(e) {
         }, [n, T, I]),
         w = (0, m.PC)(n),
         Z = i.useCallback(() => {
-            j && O && N(!1);
-        }, [O, j]),
+            j && N && O(!1);
+        }, [N, j]),
         R = i.useCallback(() => {
-            j && (O || N(!0));
-        }, [O, j]),
+            j && (N || O(!0));
+        }, [N, j]),
         k = i.useMemo(() => {
             var e;
             return j && (null == (e = a.current) ? void 0 : e.clientHeight) != null
                 ? {
-                      height: O ? 328 : a.current.clientHeight + 24 + 65,
+                      height: N ? 328 : a.current.clientHeight + 24 + 65,
                       transition: P ? void 0 : 'height 0.2s ease'
                   }
                 : {};
-        }, [O, j, P]);
+        }, [N, j, P]);
     return null == w
         ? (0, r.jsx)(x.Z, {})
         : (0, r.jsxs)(s.P3F, {
-              className: l()(E.guildInviteContainer, { [E.clickable]: j && O }),
+              className: l()(v.guildInviteContainer, { [v.clickable]: j && N }),
               onClick: Z,
               style: k,
               children: [
                   (0, r.jsxs)('div', {
-                      className: E.cardHeightMeasure,
+                      className: v.cardHeightMeasure,
                       ref: a,
                       children: [
                           (0, r.jsx)(b.Z7, {
                               profile: w,
-                              className: E.banner
+                              className: v.banner
                           }),
                           (0, r.jsx)(b.N3, { profile: w }),
                           (0, r.jsx)(g.Z, { profile: w }),
                           (0, r.jsxs)('div', {
-                              className: E.mainContent,
+                              className: v.mainContent,
                               children: [
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
@@ -83,31 +83,31 @@ function O(e) {
                           })
                       ]
                   }),
-                  j && !O
+                  j && !N
                       ? (0, r.jsx)(s.zxk, {
                             look: s.zxk.Looks.LINK,
                             color: s.zxk.Colors.TRANSPARENT,
                             size: s.zxk.Sizes.NONE,
                             onClick: R,
-                            className: E.hideDetailsButton,
-                            innerClassName: E.hideDetailsButtonInner,
+                            className: v.hideDetailsButton,
+                            innerClassName: v.hideDetailsButtonInner,
                             children: (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'interactive-normal',
-                                children: v.NW.string(v.t.xdCLeH)
+                                children: E.NW.string(E.t.xdCLeH)
                             })
                         })
                       : null,
                   (0, r.jsxs)('div', {
-                      className: l()(E.footer, { [E.floatingFooter]: j }),
+                      className: l()(v.footer, { [v.floatingFooter]: j }),
                       children: [
-                          j && O ? (0, r.jsx)('div', { className: E.gradient }) : null,
+                          j && N ? (0, r.jsx)('div', { className: v.gradient }) : null,
                           (0, r.jsxs)('div', {
-                              className: E.footerContent,
+                              className: v.footerContent,
                               children: [
-                                  (0, r.jsx)('div', { className: E.separator }),
+                                  (0, r.jsx)('div', { className: v.separator }),
                                   (0, r.jsx)('div', {
-                                      className: E.buttonContainer,
+                                      className: v.buttonContainer,
                                       children: (0, r.jsx)(f.Z, {
                                           profile: w,
                                           submitting: S,

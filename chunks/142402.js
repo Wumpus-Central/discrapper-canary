@@ -1,4 +1,4 @@
-n.d(t, { default: () => x });
+n.d(t, { default: () => g });
 var r = n(200651),
     l = n(192379),
     i = n(990547),
@@ -10,32 +10,32 @@ var r = n(200651),
     d = n(142497),
     m = n(626135),
     b = n(981631),
-    p = n(531578),
-    _ = n(70722),
+    _ = n(531578),
+    p = n(70722),
     f = n(190378),
     h = n(388032);
-let O = [_.kr.OTHER];
-function x(e) {
-    let { isStreamer: t, stream: x, streamApplication: g, onClose: N, transitionState: j, analyticsData: v } = e;
+let O = [p.kr.OTHER];
+function g(e) {
+    let { isStreamer: t, stream: g, streamApplication: x, onClose: v, transitionState: N, analyticsData: j } = e;
     l.useEffect(() => {
         m.default.track(b.rMx.OPEN_MODAL, {
             type: 'Stream Problem Report',
-            other_user_id: x.ownerId,
-            application_id: null != g ? g.id : null,
-            application_name: null != g ? g.name : null,
-            game_id: null != g ? g.id : null,
+            other_user_id: g.ownerId,
+            application_id: null != x ? x.id : null,
+            application_name: null != x ? x.name : null,
+            game_id: null != x ? x.id : null,
             source: 'Stream End'
         });
-    }, [x.ownerId, g]);
+    }, [g.ownerId, x]);
     let { showFormStyleSurvey: y, hideNeutralOption: S, showVibesHoneypot: k } = (0, o.X)({ location: 'StreamFeedback' }),
         E = y ? h.NW.string(h.t.OR6KNz) : h.NW.string(h.t['5smP3d']),
         R = y ? void 0 : h.NW.string(h.t['0uxA2d']),
         w = y ? void 0 : h.NW.string(h.t.CqjnLC),
-        L = S ? [p.aZ.BAD, p.aZ.GOOD] : void 0,
+        L = S ? [_.aZ.BAD, _.aZ.GOOD] : void 0,
         P = y
             ? {
-                  [p.aZ.BAD]: h.NW.string(h.t.ISINlJ),
-                  [p.aZ.GOOD]: h.NW.string(h.t.IySkjY)
+                  [_.aZ.BAD]: h.NW.string(h.t.ISINlJ),
+                  [_.aZ.GOOD]: h.NW.string(h.t.IySkjY)
               }
             : void 0;
     return (0, r.jsx)(s.Z, {
@@ -44,9 +44,9 @@ function x(e) {
         impression: {
             impressionName: i.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
-                media_session_id: v.media_session_id,
-                rtc_connection_id: v.rtc_connection_id,
-                parent_media_session_id: v.parent_media_session_id
+                media_session_id: j.media_session_id,
+                rtc_connection_id: j.rtc_connection_id,
+                parent_media_session_id: j.parent_media_session_id
             }
         },
         body: t ? R : w,
@@ -66,10 +66,10 @@ function x(e) {
                 null != l &&
                     ((0, u.Z)({
                         problem: null != (t = null == i ? void 0 : i.value) ? t : null,
-                        stream: x,
+                        stream: g,
                         feedback: s,
-                        streamApplication: g,
-                        analyticsData: v,
+                        streamApplication: x,
+                        analyticsData: j,
                         location: 'Stream End',
                         rating: l
                     }),
@@ -107,8 +107,8 @@ function x(e) {
                                 );
                         }));
         },
-        onClose: N,
-        transitionState: j,
-        otherKey: _.kr.OTHER
+        onClose: v,
+        transitionState: N,
+        otherKey: p.kr.OTHER
     });
 }

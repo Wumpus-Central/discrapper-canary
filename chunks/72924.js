@@ -17,7 +17,7 @@ var i = n(512722),
     T = n(981631);
 async function S(e) {
     var t, n, i, S, p;
-    let { applicationId: R, skuId: A, initialPlanId: P, analyticsLocations: f, analyticsLocationObject: C } = e,
+    let { applicationId: R, skuId: A, initialPlanId: P, analyticsLocations: C, analyticsLocationObject: f } = e,
         D = O.Z.get(A);
     if (null == D) {
         let e = (await (0, a.oJ)(R)).find((e) => e.sku.id === A);
@@ -34,8 +34,8 @@ async function S(e) {
             (0, d.Z)({
                 applicationId: R,
                 skuId: A,
-                analyticsLocationObject: C,
-                analyticsLocations: f,
+                analyticsLocationObject: f,
+                analyticsLocations: C,
                 contextKey: g,
                 onComplete: (t) => {
                     var n;
@@ -49,8 +49,8 @@ async function S(e) {
     await ((t = R),
     (n = A),
     (i = P),
-    (S = C),
-    (p = f),
+    (S = f),
+    (p = C),
     (0, E.m)({
         applicationId: t,
         skuId: n,

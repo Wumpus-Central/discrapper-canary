@@ -2,13 +2,13 @@ n.d(t, { default: () => _ });
 var a = n(200651),
     r = n(192379),
     l = n(481060),
-    s = n(332664),
-    o = n(142497),
+    o = n(332664),
+    s = n(142497),
     c = n(626135),
     i = n(981631),
     u = n(190378),
     d = n(388032);
-function b(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -33,14 +33,14 @@ function b(e) {
     }
     return e;
 }
-let m = ['OTHER'];
+let b = ['OTHER'];
 function _(e) {
     let { analyticsData: t, transitionState: _, onClose: x } = e;
     return (
         r.useEffect(() => {
             c.default.track(i.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
         }, []),
-        (0, a.jsx)(s.Z, {
+        (0, a.jsx)(o.Z, {
             modalType: 'video_background',
             header: d.NW.string(d.t.Wl8qXl),
             body: d.NW.string(d.t.vPw6j4),
@@ -67,24 +67,24 @@ function _(e) {
                     label: d.NW.string(d.t['emlT9/'])
                 }
             ],
-            freeformNeededProblems: m,
+            freeformNeededProblems: b,
             onSubmit: function (e) {
-                var r, s, m, _;
+                var r, o, b, _;
                 let { rating: x, problem: p, dontShowAgain: f, feedback: h } = e;
-                f && (0, o.Kw)(u.v.VIDEO_BACKGROUND_FEEDBACK),
+                f && (0, s.Kw)(u.v.VIDEO_BACKGROUND_FEEDBACK),
                     null != x &&
-                        ((s = null != (r = null == p ? void 0 : p.value) ? r : null),
+                        ((o = null != (r = null == p ? void 0 : p.value) ? r : null),
                         c.default.track(
                             i.rMx.VIDEO_BACKGROUND_FEEDBACK,
-                            ((m = b({}, t)),
+                            ((b = m({}, t)),
                             (_ = _ =
                                 {
-                                    reason: s,
+                                    reason: o,
                                     rating: x,
                                     feedback: h
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(m, Object.getOwnPropertyDescriptors(_))
+                                ? Object.defineProperties(b, Object.getOwnPropertyDescriptors(_))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -93,14 +93,14 @@ function _(e) {
                                       }
                                       return n;
                                   })(Object(_)).forEach(function (e) {
-                                      Object.defineProperty(m, e, Object.getOwnPropertyDescriptor(_, e));
+                                      Object.defineProperty(b, e, Object.getOwnPropertyDescriptor(_, e));
                                   }),
-                            m)
+                            b)
                         ),
                         null != p &&
                             (0, l.ZDy)(async () => {
                                 let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                return (t) => (0, a.jsx)(e, b({ body: d.NW.string(d.t.aHB11d) }, t));
+                                return (t) => (0, a.jsx)(e, m({ body: d.NW.string(d.t.aHB11d) }, t));
                             }));
             },
             onClose: x,

@@ -34,12 +34,12 @@ function p(e) {
     }
     return e;
 }
-let _ = {
+let h = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330
     },
-    h = {
+    _ = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330
@@ -53,7 +53,7 @@ function f(e) {
     let g = (0, o.UCu)(f),
         { name: E, rarity: O } = b,
         { color: y } = (0, c.F7)(O),
-        C = (0, i.wj)(m) ? _ : h,
+        C = (0, i.wj)(m) ? h : _,
         S = (g.size - g.offset - 2 * g.stroke) * 0.8,
         N = g.size - g.stroke,
         v = {

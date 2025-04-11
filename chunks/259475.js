@@ -1,5 +1,5 @@
-t(492189)('Uint32', function (e) {
-    return function (n, t, l) {
-        return e(this, n, t, l);
+n(492189)('Uint32', function (e) {
+    return function (t, n, l) {
+        return e(this, t, n, l);
     };
 });

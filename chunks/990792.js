@@ -1,19 +1,19 @@
-t.d(n, { Z: () => p }), t(388685);
-var l = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    s = t(392711),
-    o = t(780384),
-    u = t(481060),
-    c = t(410030),
-    d = t(44315),
-    f = t(293501),
-    m = t(943351),
-    h = t(231338),
-    g = t(183519);
+n.d(t, { Z: () => p }), n(388685);
+var l = n(200651),
+    a = n(192379),
+    r = n(120356),
+    i = n.n(r),
+    s = n(392711),
+    o = n(780384),
+    u = n(481060),
+    c = n(410030),
+    d = n(44315),
+    f = n(293501),
+    m = n(943351),
+    h = n(231338),
+    g = n(183519);
 let p = a.memo(function (e) {
-    let { file: n, audio: t, className: i, waveformSettings: p } = e,
+    let { file: t, audio: n, className: r, waveformSettings: p } = e,
         [b, y] = a.useState({
             width: 0,
             height: 0
@@ -21,46 +21,46 @@ let p = a.memo(function (e) {
         v = a.useRef(null),
         x = a.useMemo(() => {
             var e;
-            let n = null != (e = null == t ? void 0 : t.duration) ? e : 1;
+            let t = null != (e = null == n ? void 0 : n.duration) ? e : 1;
             return (function (e) {
-                for (var n = 1; n < arguments.length; n++) {
-                    var t = null != arguments[n] ? arguments[n] : {},
-                        l = Object.keys(t);
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        l = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
                         (l = l.concat(
-                            Object.getOwnPropertySymbols(t).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        l.forEach(function (n) {
+                        l.forEach(function (t) {
                             var l;
-                            (l = t[n]),
-                                n in e
-                                    ? Object.defineProperty(e, n, {
+                            (l = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
                                           value: l,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[n] = l);
+                                    : (e[t] = l);
                         });
                 }
                 return e;
             })(
                 {
                     fineTuning: -1,
-                    fineTuningResolution: n / m.nl.fineTuningScale,
-                    duration: n
+                    fineTuningResolution: t / m.nl.fineTuningScale,
+                    duration: t
                 },
                 null != p ? p : {}
             );
-        }, [t, p]),
-        j = (0, f.b1)(n),
+        }, [n, p]),
+        j = (0, f.b1)(t),
         N = (0, f.NN)(j, v.current, x),
         w = (0, c.ZP)(),
         C = (0, d.Sl)((0, o.wj)(w) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
         S = null == j || null == N,
-        O = (0 === b.width || 0 === b.height || S) && null != n,
+        O = (0 === b.width || 0 === b.height || S) && null != t,
         P = a.useCallback(() => {
             null != v.current &&
                 y({
@@ -83,23 +83,23 @@ let p = a.memo(function (e) {
         a.useEffect(() => {
             if (null == v.current) return;
             let e = v.current,
-                n = e.getContext('2d');
-            if (null == n) return;
-            let { width: t, height: l } = e;
+                t = e.getContext('2d');
+            if (null == t) return;
+            let { width: n, height: l } = e;
             if (0 !== b.width && 0 !== b.height && null != N && N.length > 0) {
-                let e = t / N.length,
+                let e = n / N.length,
                     a = -(e * (m.nl.waveformBarWidth - 1));
-                n.clearRect(0, 0, t, l), (n.fillStyle = C.hex);
-                for (let t = 0; t < N.length; t++) {
-                    let i = N[t] * l,
-                        r = t * e + a,
-                        s = l / 2 - i / 2;
-                    n.fillRect(r, s, e - a, i);
+                t.clearRect(0, 0, n, l), (t.fillStyle = C.hex);
+                for (let n = 0; n < N.length; n++) {
+                    let r = N[n] * l,
+                        i = n * e + a,
+                        s = l / 2 - r / 2;
+                    t.fillRect(i, s, e - a, r);
                 }
             }
         }, [C, b, w, N]),
         (0, l.jsxs)('div', {
-            className: r()(g.container, i),
+            className: i()(g.container, r),
             children: [
                 (0, l.jsx)('canvas', {
                     className: g.waveformCanvas,

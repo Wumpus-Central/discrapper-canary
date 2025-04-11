@@ -8,8 +8,8 @@ var r = n(200651),
     i = n(798733),
     u = n(559187),
     d = n(981631),
-    f = n(190378),
-    m = n(388032);
+    m = n(190378),
+    f = n(388032);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,15 +69,15 @@ function x(e) {
             _(
                 {
                     modalType: 'in_app_report',
-                    header: m.NW.string(m.t.MP5lDg),
-                    body: m.NW.string(m.t['7Ct0Dg']),
-                    problemTitle: m.NW.string(m.t.FJmoxM),
+                    header: f.NW.string(f.t.MP5lDg),
+                    body: f.NW.string(f.t['7Ct0Dg']),
+                    problemTitle: f.NW.string(f.t.FJmoxM),
                     problems: (0, i.Z)(),
                     freeformNeededProblems: b,
                     onSubmit: function (e) {
                         var a;
                         let { rating: l, problem: c, dontShowAgain: i, feedback: d } = e;
-                        i && (0, s.Kw)(f.v.IN_APP_REPORTS_FEEDBACK),
+                        i && (0, s.Kw)(m.v.IN_APP_REPORTS_FEEDBACK),
                             (0, u.Z)({
                                 rating: l,
                                 problem: null != (a = null == c ? void 0 : c.value) ? a : null,
@@ -90,7 +90,7 @@ function x(e) {
                                 null != c &&
                                 (0, o.ZDy)(async () => {
                                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                    return (t) => (0, r.jsx)(e, _({ body: m.NW.string(m.t['d9+vQ0']) }, t));
+                                    return (t) => (0, r.jsx)(e, _({ body: f.NW.string(f.t['d9+vQ0']) }, t));
                                 });
                     },
                     otherKey: i.f.OTHER

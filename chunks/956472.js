@@ -1,5 +1,5 @@
 n.d(t, {
-    Ip: () => _,
+    Ip: () => h,
     T4: () => u,
     oQ: () => p
 }),
@@ -35,16 +35,16 @@ let c = (e) => {
             }),
             { enabled: d } = (0, i.C)({ location: 'getShopProductPrices' }),
             p = d ? u.find((e) => e.currency === a.pKx.DISCORD_ORB) : void 0,
-            _ = u.find((e) => e.currency !== a.pKx.DISCORD_ORB),
-            h = [],
+            h = u.find((e) => e.currency !== a.pKx.DISCORD_ORB),
+            _ = [],
             f = [],
             m = 1 === u.length && null != p,
             b = null != p && null != l && l >= p.amount;
-        null != p && null != _ ? (b ? h.push(p, _) : h.push(_, p), o === s.AW.ORBS ? f.push(p) : f.push(_, p)) : null != p ? (h.push(p), f.push(p)) : null != _ && (h.push(_), o !== s.AW.ORBS && f.push(_));
-        let g = h.length > 0 && (null == (t = h[0]) ? void 0 : t.currency) === a.pKx.DISCORD_ORB;
+        null != p && null != h ? (b ? _.push(p, h) : _.push(h, p), o === s.AW.ORBS ? f.push(p) : f.push(h, p)) : null != p ? (_.push(p), f.push(p)) : null != h && (_.push(h), o !== s.AW.ORBS && f.push(h));
+        let g = _.length > 0 && (null == (t = _[0]) ? void 0 : t.currency) === a.pKx.DISCORD_ORB;
         return {
             displayPrices: f,
-            checkoutEligiblePrices: h,
+            checkoutEligiblePrices: _,
             isOrbExclusive: m,
             hasSufficientOrbs: b,
             shouldCheckoutWithOrbs: g
@@ -62,7 +62,7 @@ let c = (e) => {
             });
         return a;
     };
-function _(e) {
+function h(e) {
     let { product: t, isPremiumUser: n, tab: i } = e;
     return d({
         product: t,

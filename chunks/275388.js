@@ -11,8 +11,8 @@ var r = n(200651),
 let c = 'orb-checkout-payment-modal-key',
     u = () => (0, o.VXO)(c),
     d = (e) => {
-        var { skuId: t, analyticsLocations: u = [], analyticsSourceLocation: d, onCloseCallback: p, onCheckoutSuccess: _ } = e,
-            h = (function (e, t) {
+        var { skuId: t, analyticsLocations: u = [], analyticsSourceLocation: d, onCloseCallback: p, onCheckoutSuccess: h } = e,
+            _ = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -70,10 +70,10 @@ let c = 'orb-checkout-payment-modal-key',
                                 analyticsLocations: u,
                                 analyticsSourceLocation: d,
                                 onCheckoutSuccess: (e) => {
-                                    (f = !0), _(e);
+                                    (f = !0), h(e);
                                 }
                             },
-                            h,
+                            _,
                             n
                         )),
                         (o = o = { loadId: m }),

@@ -3,8 +3,8 @@ n.d(t, {
     JK: () => p,
     Je: () => R,
     T9: () => D,
-    UE: () => C,
-    Xx: () => f,
+    UE: () => f,
+    Xx: () => C,
     mm: () => A,
     qY: () => S
 }),
@@ -123,7 +123,7 @@ async function P(e) {
     });
     return Array.isArray(t.body) ? t.body.map(T) : [];
 }
-async function f(e, t, n) {
+async function C(e, t, n) {
     a.Z.can(_.Plq.MANAGE_MESSAGES, t) &&
         (await r.tn.post({
             url: _.ANM.GUILD_AUTOMOD_ALERT_ACTION(t.guild_id),
@@ -135,7 +135,7 @@ async function f(e, t, n) {
             rejectWithError: !1
         }));
 }
-function C(e, t, n) {
+function f(e, t, n) {
     let i = o.Z.getGuild(e);
     null != i &&
         a.Z.can(_.Plq.MANAGE_GUILD, i) &&

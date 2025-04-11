@@ -9,14 +9,14 @@ var r = n(570140),
     u = n(626135),
     d = n(782605),
     p = n(621600),
-    _ = n(88658),
-    h = n(981631);
+    h = n(88658),
+    _ = n(981631);
 let f = {
     acceptInvite(e) {
         let t = i.ZP.getInviteContext('Desktop Invite Modal', e),
             n = (0, a.y)(),
             u = (0, a.h6)(),
-            h = (0, a.U1)(),
+            _ = (0, a.U1)(),
             f = (0, a.yS)();
         i.ZP.acceptInvite({
             inviteKey: e.code,
@@ -29,21 +29,21 @@ let f = {
                 if ((0, s.gY)({ location: 'acceptInvite' }) && null != e.guild) {
                     if (u) {
                         if (c.h2.getSetting().includes(e.guild.id)) {
-                            let t = new Set((0, _.YK)());
+                            let t = new Set((0, h.YK)());
                             t.delete(e.guild.id), c.h2.updateSetting(Array.from(t));
                         }
                     } else {
                         var t;
-                        let n = new Set((0, _.YK)());
+                        let n = new Set((0, h.YK)());
                         n.add(null == (t = e.guild) ? void 0 : t.id), c.h2.updateSetting(Array.from(n));
                     }
-                    if (h) {
+                    if (_) {
                         if (c.SE.getSetting().includes(e.guild.id)) {
-                            let t = new Set((0, _._o)());
+                            let t = new Set((0, h._o)());
                             t.delete(e.guild.id), c.SE.updateSetting(Array.from(t));
                         }
                     } else {
-                        let t = new Set((0, _._o)());
+                        let t = new Set((0, h._o)());
                         t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
                     null != n && n.length > 0 && (0, l.iq)(e.guild.id, { nick: n }), (0, s.m4)({ location: 'acceptInvite' }) && o.Z.updateGuildNotificationSettings(e.guild.id, { muted: f }, p.ZB.Muted);
@@ -67,7 +67,7 @@ let f = {
                 i = (0, a.U1)(),
                 o = (0, a.yS)(),
                 l = (0, a.aP)();
-            u.default.track(h.rMx.INVITE_ACCEPT_JOIN_SETTINGS_SET, {
+            u.default.track(_.rMx.INVITE_ACCEPT_JOIN_SETTINGS_SET, {
                 invite_code: e,
                 guild_id: t,
                 nickname_present: null != n && n.length > 0,

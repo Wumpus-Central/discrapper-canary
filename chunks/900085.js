@@ -9,8 +9,8 @@ var r,
     u = n(481060),
     d = n(239091),
     p = n(134616),
-    _ = n(714338),
-    h = n(212819),
+    h = n(714338),
+    _ = n(212819),
     f = n(815372),
     m = n(14429),
     b = n(576855),
@@ -159,10 +159,10 @@ function K(e, t, n) {
 }
 class X extends o.PureComponent {
     componentDidMount() {
-        _.Z.disable(), _.Z.enableTemp(p.u);
+        h.Z.disable(), h.Z.enableTemp(p.u);
     }
     componentWillUnmount() {
-        _.Z.disableTemp(), _.Z.enable();
+        h.Z.disableTemp(), h.Z.enable();
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: r } = this.state,
@@ -244,10 +244,10 @@ class X extends o.PureComponent {
             className: s()(M.protip, { [M.hasContent]: this.state.query.length > 0 }),
             type: b.Z.Types.INLINE,
             children: L.NW.format(L.t.wukqXV, {
-                userSymbolHook: (e, t) => K(t, h.xQ.USER, L.NW.string(L.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => K(t, h.xQ.TEXT_CHANNEL, L.NW.string(L.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => K(t, h.xQ.VOICE_CHANNEL, L.NW.string(L.t['jz+hJi'])),
-                guildSymbolHook: (e, t) => K(t, h.xQ.GUILD, L.NW.string(L.t.WuwCWl)),
+                userSymbolHook: (e, t) => K(t, _.xQ.USER, L.NW.string(L.t.GQRCGh)),
+                textChannelSymbolHook: (e, t) => K(t, _.xQ.TEXT_CHANNEL, L.NW.string(L.t.wrwhub)),
+                voiceChannelSymbolHook: (e, t) => K(t, _.xQ.VOICE_CHANNEL, L.NW.string(L.t['jz+hJi'])),
+                guildSymbolHook: (e, t) => K(t, _.xQ.GUILD, L.NW.string(L.t.WuwCWl)),
                 helpdeskArticle: x.Z.getArticleURL(k.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
@@ -292,12 +292,12 @@ class X extends o.PureComponent {
                 this.state.mouseFocusDisabled || (0, P.tF)(this.props.results.indexOf(e));
             }),
             D(this, 'selectResult', (e) => {
-                (0, P.Se)(e, this.props.queryMode === h.h8.TEXT_CHANNEL);
+                (0, P.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL);
             }),
             D(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
-                    case h.h8.GUILD:
+                    case _.h8.GUILD:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('49286'), n.e('55666'), n.e('60696'), n.e('58227'), n.e('54408'), n.e('33472'), n.e('56534'), n.e('69760'), n.e('33213'), n.e('16890')]).then(n.bind(n, 545135));
                             return (n) =>
@@ -310,8 +310,8 @@ class X extends o.PureComponent {
                                     })
                                 );
                         });
-                    case h.h8.TEXT_CHANNEL:
-                    case h.h8.VOICE_CHANNEL:
+                    case _.h8.TEXT_CHANNEL:
+                    case _.h8.VOICE_CHANNEL:
                         let r = t.record,
                             o = C.Z.getGuild(r.getGuildId());
                         if (null == o) return;
@@ -380,7 +380,7 @@ class X extends o.PureComponent {
                                 });
                         }
                         break;
-                    case h.h8.GROUP_DM:
+                    case _.h8.GROUP_DM:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('53912'), n.e('2016')]).then(n.bind(n, 354741));
                             return (n) =>
@@ -393,7 +393,7 @@ class X extends o.PureComponent {
                                     })
                                 );
                         });
-                    case h.h8.USER:
+                    case _.h8.USER:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('86423')]).then(n.bind(n, 881351));
                             return (n) =>
@@ -428,18 +428,18 @@ class X extends o.PureComponent {
                         return;
                     }
                     case 'arrowup':
-                        o = (0, h.gJ)(h.a8.UP, o, r);
+                        o = (0, _.gJ)(_.a8.UP, o, r);
                         break;
                     case 'arrowdown':
-                        o = (0, h.gJ)(h.a8.DOWN, o, r);
+                        o = (0, _.gJ)(_.a8.DOWN, o, r);
                         break;
                     case 'n':
                         if (!e.ctrlKey) return;
-                        o = (0, h.gJ)(h.a8.DOWN, o, r);
+                        o = (0, _.gJ)(_.a8.DOWN, o, r);
                         break;
                     case 'p':
                         if (!e.ctrlKey) return;
-                        o = (0, h.gJ)(h.a8.UP, o, r);
+                        o = (0, _.gJ)(_.a8.UP, o, r);
                         break;
                     default:
                         return;
@@ -452,9 +452,9 @@ class X extends o.PureComponent {
                     { selectedIndex: r } = this.props,
                     { showScores: o } = m.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (n.type) {
-                    case h.h8.HEADER:
+                    case _.h8.HEADER:
                         return (0, i.jsx)(R.h4, { children: n.record.text }, ''.concat(n.type, '-').concat(n.record.id));
-                    case h.h8.TEXT_CHANNEL:
+                    case _.h8.TEXT_CHANNEL:
                         return (0, i.jsx)(
                             H,
                             {
@@ -469,7 +469,7 @@ class X extends o.PureComponent {
                             },
                             ''.concat(n.type, '-').concat(n.record.id)
                         );
-                    case h.h8.VOICE_CHANNEL:
+                    case _.h8.VOICE_CHANNEL:
                         return (0, i.jsx)(
                             B,
                             {
@@ -484,7 +484,7 @@ class X extends o.PureComponent {
                             },
                             ''.concat(n.type, '-').concat(n.record.id)
                         );
-                    case h.h8.GUILD:
+                    case _.h8.GUILD:
                         return (0, i.jsx)(
                             F,
                             {
@@ -499,7 +499,7 @@ class X extends o.PureComponent {
                             },
                             ''.concat(n.type, '-').concat(n.record.id)
                         );
-                    case h.h8.USER:
+                    case _.h8.USER:
                         return (0, i.jsx)(
                             Y,
                             {
@@ -515,7 +515,7 @@ class X extends o.PureComponent {
                             },
                             ''.concat(n.type, '-').concat(n.record.id)
                         );
-                    case h.h8.GROUP_DM:
+                    case _.h8.GROUP_DM:
                         return (0, i.jsx)(
                             z,
                             {
@@ -530,7 +530,7 @@ class X extends o.PureComponent {
                             },
                             ''.concat(n.type, '-').concat(n.record.id)
                         );
-                    case h.h8.APPLICATION:
+                    case _.h8.APPLICATION:
                         return (0, i.jsx)(
                             R.Mx,
                             {
@@ -543,7 +543,7 @@ class X extends o.PureComponent {
                             },
                             ''.concat(n.type, '-').concat(n.record.id)
                         );
-                    case h.h8.LINK:
+                    case _.h8.LINK:
                         return (0, i.jsx)(
                             R.rU,
                             {
@@ -558,7 +558,7 @@ class X extends o.PureComponent {
                             },
                             ''.concat(n.type, '-').concat(n.record.id)
                         );
-                    case h.h8.IN_APP_NAVIGATION:
+                    case _.h8.IN_APP_NAVIGATION:
                         return (0, i.jsx)(
                             R.s8,
                             {

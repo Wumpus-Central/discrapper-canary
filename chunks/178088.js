@@ -17,10 +17,10 @@ var r = n(200651),
     b = n(932232),
     x = n(400445),
     y = n(153209),
-    v = n(956961),
-    E = n(903672),
-    O = n(711165),
-    N = n(946443),
+    E = n(956961),
+    v = n(903672),
+    N = n(711165),
+    O = n(946443),
     j = n(264233),
     C = n(981631),
     S = n(388032);
@@ -105,7 +105,7 @@ function I(e) {
                                   closePopout: W
                               })
                             : k === o.X.MENTIONS
-                              ? (0, r.jsx)(E.Z, {
+                              ? (0, r.jsx)(v.Z, {
                                     setTab: D,
                                     onJump: z,
                                     badgeState: T,
@@ -118,7 +118,7 @@ function I(e) {
                                       closePopout: W
                                   })
                                 : F && k === o.X.TODOS
-                                  ? (0, r.jsx)(v.Z, {
+                                  ? (0, r.jsx)(E.Z, {
                                         setTab: D,
                                         onJump: z,
                                         closePopout: W
@@ -130,17 +130,17 @@ function I(e) {
                                           closePopout: W
                                       })
                                     : k === o.X.SCHEDULED
-                                      ? (0, r.jsx)(O._, {
+                                      ? (0, r.jsx)(N._, {
                                             setTab: D,
                                             closePopout: W
                                         })
                                       : (0, r.jsx)(a.SV, {
-                                            fallback: (0, r.jsx)(N.h, {
+                                            fallback: (0, r.jsx)(O.h, {
                                                 setTab: D,
                                                 closePopout: W,
                                                 badgeState: T
                                             }),
-                                            children: (0, r.jsx)(N.Z, {
+                                            children: (0, r.jsx)(O.Z, {
                                                 setTab: D,
                                                 onJump: z,
                                                 showTutorial: L,

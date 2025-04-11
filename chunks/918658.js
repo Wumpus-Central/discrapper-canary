@@ -23,8 +23,8 @@ var i = n(120356),
     R = n(962086),
     A = n(160404),
     P = n(889695),
-    f = n(981631),
-    C = n(176505),
+    C = n(981631),
+    f = n(176505),
     D = n(302463),
     g = n(293810),
     m = n(388032),
@@ -65,28 +65,28 @@ function b() {
     if (null == n || null == e) return null;
     let b = (function (e) {
             switch (e) {
-                case f.pNK.INTEGRATIONS:
+                case C.pNK.INTEGRATIONS:
                     return m.NW.string(m.t.k7LGdn);
-                case f.pNK.ROLE_SUBSCRIPTIONS:
+                case C.pNK.ROLE_SUBSCRIPTIONS:
                     return m.NW.string(m.t.bRqiqa);
-                case f.pNK.ONBOARDING:
+                case C.pNK.ONBOARDING:
                     return m.NW.string(m.t.qZpU3d);
                 default:
                     return m.NW.string(m.t.MTIXho);
             }
         })(i),
-        M = i === f.pNK.ROLE_SUBSCRIPTIONS ? m.NW.string(m.t.hZUCzc) : m.NW.string(m.t['/djIh4']),
-        L = t === C.oC.GUILD_ONBOARDING,
-        Z = (t) => {
+        M = i === C.pNK.ROLE_SUBSCRIPTIONS ? m.NW.string(m.t.hZUCzc) : m.NW.string(m.t['/djIh4']),
+        L = t === f.oC.GUILD_ONBOARDING,
+        k = (t) => {
             let { backToSettings: n } = t;
-            null != e && (A.Z.isFullServerPreview(e) && (0, I.uL)(f.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, E.EI)(e)), (0, R.mL)(e), n && _.Z.open(e, i), i === f.pNK.ROLE_SUBSCRIPTIONS && (0, d.GN)(e));
+            null != e && (A.Z.isFullServerPreview(e) && (0, I.uL)(C.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, E.EI)(e)), (0, R.mL)(e), n && _.Z.open(e, i), i === C.pNK.ROLE_SUBSCRIPTIONS && (0, d.GN)(e));
         };
     return (0, r.jsxs)(s.qXd, {
         color: s.DM8.BRAND,
         className: y.notice,
         children: [
             (0, r.jsxs)(h, {
-                onClick: () => Z({ backToSettings: !0 }),
+                onClick: () => k({ backToSettings: !0 }),
                 className: y.backButton,
                 children: [
                     (0, r.jsx)(T.Z, {
@@ -155,7 +155,7 @@ function b() {
                               })
                       ]
                   }),
-            l || i === f.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => Z({ backToSettings: !1 }) })
+            l || i === C.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => k({ backToSettings: !1 }) })
         ]
     });
 }

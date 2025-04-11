@@ -1,4 +1,4 @@
-n.d(t, { default: () => y });
+n.d(t, { default: () => E });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -15,30 +15,30 @@ var r = n(481060),
     b = n(251746),
     p = n(193987),
     g = n(933793),
-    O = n(13736),
-    Z = n(732393),
+    Z = n(13736),
+    O = n(732393),
     N = n(214906),
     _ = n(612856),
     m = n(137591),
-    E = n(388032);
-let y = (0, l.Z)(
+    y = n(388032);
+let E = (0, l.Z)(
     function (e) {
         let { channel: t, onSelect: n } = e,
             l = (0, c.Z)(t),
             o = (0, h.Z)(t),
-            y = (0, N.Z)(t),
+            E = (0, N.Z)(t),
             C = (0, s.Z)(t),
             j = (0, p.Z)(t),
             A = (0, f.Z)(t),
             P = (0, d.Z)({
                 id: t.id,
-                label: E.NW.string(E.t.DQ797u)
+                label: y.NW.string(y.t.DQ797u)
             }),
             W = (0, v.Z)(t, 'Context Menu'),
             U = (0, g.Z)(t),
             R = (0, _.Z)(t),
-            S = (0, O.Z)(t),
-            T = (0, Z.Z)(t.id),
+            S = (0, Z.Z)(t),
+            T = (0, O.Z)(t.id),
             k = (0, b.Z)(t),
             x = (0, m.Z)(t),
             D = (0, u.l)(t),
@@ -46,7 +46,7 @@ let y = (0, l.Z)(
         return (0, i.jsxs)(r.v2r, {
             navId: 'thread-context',
             onClose: a.Zy,
-            'aria-label': E.NW.string(E.t['1NBjqa']),
+            'aria-label': y.NW.string(y.t['1NBjqa']),
             onSelect: n,
             children: [
                 (0, i.jsxs)(
@@ -66,7 +66,7 @@ let y = (0, l.Z)(
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [y, R]
+                        children: [E, R]
                     },
                     'notifications'
                 ),

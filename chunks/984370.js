@@ -24,8 +24,8 @@ var i = n(120356),
     R = n(975146),
     A = n(979651),
     P = n(358085),
-    f = n(998502),
-    C = n(665149),
+    C = n(998502),
+    f = n(665149),
     D = n(300986),
     g = n(314451),
     m = n(35583),
@@ -79,11 +79,11 @@ async function L() {
     if ((0, P.isMac)() && P.isPlatformEmbedded) {
         var e, t, n;
         let r = null != (n = await (null == (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) ? void 0 : e.call(t))) ? n : 'Maximize';
-        'Minimize' === r ? f.ZP.minimize() : 'Maximize' === r && f.ZP.maximize();
+        'Minimize' === r ? C.ZP.minimize() : 'Maximize' === r && C.ZP.maximize();
     }
 }
-function Z(e) {
-    let { children: t, className: n, channelId: i, channelType: l, guildId: c, innerClassname: u, transparent: P = !1, toolbar: f, mobileToolbar: b, 'aria-label': M, 'aria-labelledby': Z, scrollable: k, role: j, hideSearch: v, showDivider: F } = e,
+function k(e) {
+    let { children: t, className: n, channelId: i, channelType: l, guildId: c, innerClassname: u, transparent: P = !1, toolbar: C, mobileToolbar: b, 'aria-label': M, 'aria-labelledby': k, scrollable: Z, role: j, hideSearch: v, showDivider: F } = e,
         x = null == i || (0, h.AB)(i) ? null : i,
         V = (0, a.e7)([A.Z], () => A.Z.isInChannel(x) || !1),
         G = (0, a.e7)([d.Z], () => null != x && d.Z.getParticipantsListOpen(x)),
@@ -91,19 +91,19 @@ function Z(e) {
         { enabled: W, inInbox: B } = T.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: z } = (0, _.Z)({ location: 'HeaderBar' }),
         H = (0, N.Q3)('HeaderBar');
-    return (0, r.jsx)(C.ZP, {
+    return (0, r.jsx)(f.ZP, {
         className: n,
         innerClassName: u,
         toolbar: (function () {
-            if (null == f) return null;
+            if (null == C) return null;
             let e = null != i && !v;
             return o.tq
                 ? b
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          f,
+                          C,
                           e ? (0, r.jsx)(p.Z, { className: U.search }, null != c ? c : i) : null,
-                          F && (0, r.jsx)(C.ZP.Divider, {}),
+                          F && (0, r.jsx)(f.ZP.Divider, {}),
                           !H && (0, r.jsx)(m.Z, {}),
                           !H && (0, r.jsx)(I.Z, { canShowReminder: !0 }),
                           !H && (0, r.jsx)(O.Z, {}),
@@ -116,7 +116,7 @@ function Z(e) {
                               l === y.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
                                   className: U.controlButtonWrapper,
-                                  children: [(0, r.jsx)(C.ZP.Divider, {}), (0, r.jsx)(R.Z, { onClick: () => s.Z.toggleParticipantsList(x, !G) })]
+                                  children: [(0, r.jsx)(f.ZP.Divider, {}), (0, r.jsx)(R.Z, { onClick: () => s.Z.toggleParticipantsList(x, !G) })]
                               })
                       ]
                   });
@@ -124,15 +124,15 @@ function Z(e) {
         transparent: P,
         onDoubleClick: L,
         'aria-label': M,
-        'aria-labelledby': Z,
+        'aria-labelledby': k,
         role: j,
-        scrollable: k,
+        scrollable: Z,
         children: t
     });
 }
-function k(e) {
+function Z(e) {
     let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: o } = e;
-    return (0, r.jsx)(C.ZP, {
+    return (0, r.jsx)(f.ZP, {
         className: n,
         onDoubleClick: L,
         'aria-label': i,
@@ -166,8 +166,8 @@ function j(e) {
         o = l()(n.className, { [U.forumOrHome]: (null != n.channelType && y.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === h.oC.GUILD_HOME });
     return (0, r.jsx)(u.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(Z, M(b({}, n), { className: o })) : (0, r.jsx)(k, M(b({}, n), { className: o }))
+        children: t ? (0, r.jsx)(k, M(b({}, n), { className: o })) : (0, r.jsx)(Z, M(b({}, n), { className: o }))
     });
 }
-(j.Title = C.ZP.Title), (j.Icon = C.ZP.Icon), (j.Divider = C.ZP.Divider), (j.Caret = C.ZP.Caret);
+(j.Title = f.ZP.Title), (j.Icon = f.ZP.Icon), (j.Divider = f.ZP.Divider), (j.Caret = f.ZP.Caret);
 let v = j;

@@ -16,17 +16,17 @@ var r = n(192379),
     _ = n(49898),
     b = n(388032);
 function x(e, t) {
-    let { isDiscoverable: n, customInstallUrl: x, installParams: y, integrationTypesConfig: v } = e,
-        E = (0, f.Eb)({
+    let { isDiscoverable: n, customInstallUrl: x, installParams: y, integrationTypesConfig: E } = e,
+        v = (0, f.Eb)({
             customInstallUrl: x,
             installParams: y,
-            integrationTypesConfig: v
+            integrationTypesConfig: E
         }),
-        O = (0, i.e7)([p.Z], () => {
+        N = (0, i.e7)([p.Z], () => {
             var e;
             return null != (e = p.Z.getGuildId()) ? e : void 0;
         }),
-        N = (0, i.e7)(
+        O = (0, i.e7)(
             [c.Z, u.Z, d.Z],
             () => {
                 let e = c.Z.getChannel(d.Z.getChannelId());
@@ -34,7 +34,7 @@ function x(e, t) {
             },
             []
         ),
-        j = (0, a.PZ)(e, O) && N,
+        j = (0, a.PZ)(e, N) && O,
         C = n || j;
     return r.useMemo(
         () =>
@@ -51,7 +51,7 @@ function x(e, t) {
                           });
                       }
                   }
-                : E
+                : v
                   ? {
                         label: b.NW.string(b.t.NgXl3N),
                         trackingArea: h.j_.ADD_APP,
@@ -61,13 +61,13 @@ function x(e, t) {
                                     applicationId: e.id,
                                     customInstallUrl: x,
                                     installParams: y,
-                                    integrationTypesConfig: v,
-                                    guildId: O,
+                                    integrationTypesConfig: E,
+                                    guildId: N,
                                     source: 'app_message_embed'
                                 });
                         }
                     }
                   : void 0,
-        [e.id, j, C, x, y, v, E, t, O]
+        [e.id, j, C, x, y, E, v, t, N]
     );
 }

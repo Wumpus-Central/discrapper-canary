@@ -9,25 +9,25 @@ var r = n(200651),
     u = n(442837),
     d = n(607070),
     p = n(663389),
-    _ = n(834166);
-function h(e) {
+    h = n(834166);
+function _(e) {
     let { children: t, className: n, onFlashEnd: o, animationDelay: u = 500 } = e,
         p = c.TVs.colors.TEXT_LINK,
-        h = (0, c.dQu)(p).spring({ opacity: 0 }),
+        _ = (0, c.dQu)(p).spring({ opacity: 0 }),
         f = (0, c.dQu)(p).spring({ opacity: 0.1 }),
         m = (0, c.dQu)(p).spring({ opacity: 0 }),
         b = (0, c.dQu)(p).spring({ opacity: 1 }),
         [g, E] = (0, c.q_F)(
             () => ({
                 from: {
-                    backgroundColor: h,
-                    borderColor: h
+                    backgroundColor: _,
+                    borderColor: _
                 }
             }),
             'animate-never'
         ),
         O = {
-            startColor: h,
+            startColor: _,
             handleRest: (e) => {
                 e.finished && (null == o || o());
             },
@@ -89,7 +89,7 @@ function h(e) {
         }, [E]),
         (0, r.jsx)(s.animated.div, {
             style: g,
-            className: l()(_.settingsItemHighlight, n),
+            className: l()(h.settingsItemHighlight, n),
             children: t
         })
     );
@@ -102,7 +102,7 @@ function f(e) {
         l && a(!0);
     }, [l]),
     s)
-        ? (0, r.jsx)(h, {
+        ? (0, r.jsx)(_, {
               animationDelay: o,
               onFlashEnd: () => a(!1),
               children: t

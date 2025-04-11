@@ -1,8 +1,8 @@
 n.d(t, {
     GG: () => O,
     HQ: () => A,
-    JH: () => C,
-    QV: () => f,
+    JH: () => f,
+    QV: () => C,
     YB: () => P,
     _1: () => R,
     _k: () => I,
@@ -162,7 +162,7 @@ let d = [],
         };
     },
     P = (e) => (0, i.e7)([u.Z], () => (null != e ? u.Z.getSubscriptionSettings(e) : void 0)),
-    f = () => {
+    C = () => {
         let [e, t] = r.useState(!1),
             [n, i] = r.useState(null);
         return {
@@ -180,7 +180,7 @@ let d = [],
             error: n
         };
     },
-    C = () => {
+    f = () => {
         let [e, t] = r.useState(!1),
             [n, i] = r.useState(null);
         return {

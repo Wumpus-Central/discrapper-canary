@@ -19,8 +19,8 @@ var r = n(200651),
     R = n(748770),
     A = n(474936),
     P = n(981631),
-    f = n(921944),
-    C = n(388032),
+    C = n(921944),
+    f = n(388032),
     D = n(301307);
 let g = () => {
     let e = (0, p.a0)(),
@@ -100,7 +100,7 @@ let g = () => {
                 (0, r.jsx)(s.RyX, {
                     noticeType: P.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        R.ZP.dismissOutboundPromotionNotice(), null !== e && e(f.L.USER_DISMISS);
+                        R.ZP.dismissOutboundPromotionNotice(), null !== e && e(C.L.USER_DISMISS);
                     }
                 }),
                 (0, r.jsx)(s.SrA, {
@@ -113,16 +113,16 @@ let g = () => {
                         ? (0, r.jsxs)(l.xv, {
                               variant: 'text-sm/normal',
                               className: D.text,
-                              children: [C.NW.string(C.t['5JMiOj']), ' ', C.NW.format(C.t.fjSvsL, { onClick: b })]
+                              children: [f.NW.string(f.t['5JMiOj']), ' ', f.NW.format(f.t.fjSvsL, { onClick: b })]
                           })
-                        : C.NW.string(C.t['B3a/cH'])
-                    : C.NW.string(C.t['Pzh+Gx']),
+                        : f.NW.string(f.t['B3a/cH'])
+                    : f.NW.string(f.t['Pzh+Gx']),
                 (0, r.jsx)(s.NoS, {
                     noticeType: P.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        M(), null !== e && e(f.L.TAKE_ACTION);
+                        M(), null !== e && e(C.L.TAKE_ACTION);
                     },
-                    children: g ? C.NW.string(C.t.pj0XBA) : C.NW.string(C.t.jVcuVV)
+                    children: g ? f.NW.string(f.t.pj0XBA) : f.NW.string(f.t.jVcuVV)
                 })
             ]
         });
@@ -131,7 +131,7 @@ let g = () => {
               contentType: a.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
               newSnowflakeId: e,
               timeRecurringConfig: { cooldownDurationMs: 0 },
-              groupName: f.R.NOTICE_BAR,
+              groupName: C.R.NOTICE_BAR,
               bypassAutoDismiss: !0,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: n } = e;
