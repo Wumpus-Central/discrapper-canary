@@ -1,10 +1,10 @@
-n.d(t, { Z: () => w }), n(35282), n(539854), n(388685), n(387201), n(642613);
+n.d(t, { Z: () => O }), n(35282), n(539854), n(388685), n(387201), n(642613);
 var r = n(200651),
     l = n(192379),
     i = n(442837),
     s = n(481060),
-    o = n(212819),
-    a = n(938078),
+    a = n(212819),
+    o = n(938078),
     c = n(318374),
     d = n(823385),
     u = n(601565),
@@ -17,19 +17,19 @@ var r = n(200651),
     _ = n(914010),
     j = n(594174),
     v = n(938475),
-    b = n(823379),
-    S = n(102172),
+    S = n(823379),
+    N = n(102172),
     C = n(981631),
-    N = n(843874),
+    b = n(843874),
     y = n(388032),
     Z = n(152965);
 function I(e) {
     let { result: t, onSelectChannel: n } = e,
         l = (0, i.e7)([p.Z], () => p.Z.getGuild(t.record.guild_id)),
-        o = (0, i.Wu)([v.ZP, j.default], () =>
+        a = (0, i.Wu)([v.ZP, j.default], () =>
             v.ZP.getVoiceStatesForChannel(t.record)
                 .map((e) => j.default.getUser(e.user.id))
-                .filter(b.lm)
+                .filter(S.lm)
         );
     return (0, r.jsxs)(s.P3F, {
         className: Z.channelResult,
@@ -68,13 +68,13 @@ function I(e) {
                 ]
             }),
             (0, r.jsx)(c.Z, {
-                users: o,
+                users: a,
                 maxUsers: 4
             })
         ]
     });
 }
-function w(e) {
+function O(e) {
     let { onSelectChannel: t } = e,
         { search: n, query: c, results: j } = (0, u.Z)({ searchOptions: { frecencyBoosters: !0 } }),
         v = (0, i.Wu)([_.Z, x.ZP, m.Z, p.Z, g.Z], () => {
@@ -83,34 +83,33 @@ function w(e) {
             if (null == t) return e;
             for (let n of x.ZP.getVocalChannelIds(t)) {
                 let t = m.Z.getChannel(n);
-                null != t && (0, S.JL)(t, p.Z, g.Z) && e.push(t);
+                null != t && (0, N.JL)(t, p.Z, g.Z) && e.push(t);
             }
             return e;
         }),
-        w = (0, i.Wu)([d.Z, m.Z, h.Z, p.Z, g.Z], () => {
+        O = (0, i.Wu)([d.Z, m.Z, h.Z, p.Z, g.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of d.Z.getChannelHistory()) {
                 let r = m.Z.getChannel(n);
-                (null == r ? void 0 : r.type) === C.d4z.GUILD_VOICE && (0, S.JL)(r, p.Z, g.Z) && (t.add(r.id), e.push(r));
+                (null == r ? void 0 : r.type) === C.d4z.GUILD_VOICE && (0, N.JL)(r, p.Z, g.Z) && (t.add(r.id), e.push(r));
             }
-            for (let n of h.Z.getFrequentlyWithoutFetchingLatest()) n instanceof f.Sf && n.type === C.d4z.GUILD_VOICE && !t.has(n.id) && (0, S.JL)(n, p.Z, g.Z) && (t.add(n.id), e.push(n));
+            for (let n of h.Z.getFrequentlyWithoutFetchingLatest()) n instanceof f.Sf && n.type === C.d4z.GUILD_VOICE && !t.has(n.id) && (0, N.JL)(n, p.Z, g.Z) && (t.add(n.id), e.push(n));
             return e;
         }),
         T = l.useMemo(() => {
-            let e = new Set(w.map((e) => e.id)),
+            let e = new Set(O.map((e) => e.id)),
                 t = new Set(v.map((e) => e.id));
             return [
                 ...v
                     .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
-                    .map((e) => (0, a.Z)(e.id))
-                    .filter(b.lm),
-                ...w
-                    .filter((e) => !t.has(e.id))
-                    .map((e) => (0, a.Z)(e.id))
-                    .filter(b.lm)
+                    .map((e) => (0, o.Z)(e.id))
+                    .filter(S.lm),
+                ...O.filter((e) => !t.has(e.id))
+                    .map((e) => (0, o.Z)(e.id))
+                    .filter(S.lm)
             ];
-        }, [w, v]),
+        }, [O, v]),
         E = '' !== c ? j : T;
     return (0, r.jsxs)('div', {
         className: Z.root,
@@ -123,12 +122,12 @@ function w(e) {
                 onChange: (e) =>
                     n({
                         query: e,
-                        resultTypes: [o.h8.VOICE_CHANNEL]
+                        resultTypes: [a.h8.VOICE_CHANNEL]
                     }),
                 onClear: () =>
                     n({
                         query: '',
-                        resultTypes: [o.h8.VOICE_CHANNEL]
+                        resultTypes: [a.h8.VOICE_CHANNEL]
                     }),
                 autoFocus: !0
             }),
@@ -138,7 +137,7 @@ function w(e) {
                           return (0, r.jsx)(s.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-muted',
-                              children: y.NW.string(N.Z.FZ9Fl5)
+                              children: y.NW.string(b.Z.FZ9Fl5)
                           });
                       },
                       sections: [E.length],
@@ -157,11 +156,11 @@ function w(e) {
                           );
                       }
                   })
-                : (0, r.jsx)(O, {})
+                : (0, r.jsx)(w, {})
         ]
     });
 }
-function O() {
+function w() {
     return (0, r.jsxs)('div', {
         className: Z.emptyState,
         children: [
@@ -174,12 +173,12 @@ function O() {
                 className: Z.emptyHeader,
                 variant: 'text-lg/medium',
                 color: 'header-primary',
-                children: y.NW.string(N.Z.sWGfr6)
+                children: y.NW.string(b.Z.sWGfr6)
             }),
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
-                children: y.NW.string(N.Z.nBRtt7)
+                children: y.NW.string(b.Z.nBRtt7)
             })
         ]
     });
