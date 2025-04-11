@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => v }), n(388685);
+n.d(t, { ZP: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(399606),
@@ -7,35 +7,31 @@ var r = n(200651),
     s = n(377171),
     c = n(706140),
     u = n(645041),
-    d = n(430824),
-    p = n(823379),
-    h = n(267642),
-    f = n(608949),
-    g = n(905128),
-    m = n(326660),
-    b = n(317169),
-    _ = n(19394),
-    y = n(535396);
-function v(e) {
-    let t = (0, l.e7)([f.Z], () => f.Z.getNotificationStateForGuild(e), [e]),
-        n = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(e)),
-        { trailing: v, showUnread: O } = (function (e, t, n) {
-            let o = (0, l.e7)([d.Z], () => {
-                var t, n;
-                return null != (n = null == (t = d.Z.getGuild(e)) ? void 0 : t.premiumSubscriberCount) ? n : 0;
-            });
+    d = n(823379),
+    p = n(267642),
+    h = n(608949),
+    f = n(905128),
+    g = n(326660),
+    m = n(317169),
+    b = n(19394),
+    _ = n(535396);
+function y(e) {
+    let t = (0, l.e7)([h.Z], () => h.Z.getNotificationStateForGuild(e), [e]),
+        n = (0, l.e7)([f.Z], () => f.Z.getStateForGuild(e)),
+        { trailing: y, showUnread: v } = (function (e, t, n) {
+            let l = (0, m.Z)(e).available;
             return i.useMemo(() => {
-                var e, i, l;
+                var e, i, o;
                 if (null == t)
                     return {
                         trailing: void 0,
                         showUnread: !1
                     };
                 let { unlocked: c } = t,
-                    u = (0, _.h)(c),
+                    u = (0, b.h)(c),
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
                     p = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
-                    h = null != (l = null == n ? void 0 : n.lastBoostCount) ? l : 0;
+                    h = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
                 return u.length > 0 && d < p
                     ? {
                           trailing: (0, r.jsx)(a.P4T, {
@@ -44,10 +40,10 @@ function v(e) {
                           }),
                           showUnread: !0
                       }
-                    : o !== h && o - h > 0
+                    : l !== h && l - h > 0
                       ? {
                             trailing: (0, r.jsx)(a.mAB, {
-                                count: o - h,
+                                count: l - h,
                                 color: s.Z.BACKGROUND_ACCENT
                             }),
                             showUnread: !0
@@ -56,27 +52,27 @@ function v(e) {
                             trailing: void 0,
                             showUnread: !1
                         };
-            }, [o, null == n ? void 0 : n.lastBoostCount, null == n ? void 0 : n.lastSeenWarningNotification, t]);
+            }, [l, null == n ? void 0 : n.lastBoostCount, null == n ? void 0 : n.lastSeenWarningNotification, t]);
         })(e, n, t),
-        j = (function (e, t) {
+        O = (function (e, t) {
             let [n, r] = (0, c.cv)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
-                { available: l } = (0, b.Z)(e),
+                { available: l } = (0, m.Z)(e),
                 a = i.useMemo(() => {
                     if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
                     let r = (function (e, t) {
-                        let n = h.Oe.find((e) => {
-                            let n = y.Cp[e],
+                        let n = p.Oe.find((e) => {
+                            let n = _.Cp[e],
                                 r = null != n ? t.unlocked.get(n) : void 0;
-                            return null != r && r.user_id !== y.Fq;
+                            return null != r && r.user_id !== _.Fq;
                         });
                         if (null == n) return;
-                        let r = y.Q1[n];
+                        let r = _.Q1[n];
                         if (null == r || (0, u.OY)(r, e)) return;
-                        let i = y.Cp[n],
+                        let i = _.Cp[n],
                             l = null != i ? t.powerups.get(i) : void 0;
                         if (null != l)
                             return {
-                                type: m.J.LEVEL_REACHED,
+                                type: g.J.LEVEL_REACHED,
                                 powerup: l,
                                 markAsDismissed: (t) => {
                                     (0, u.Qd)(r, e, !0, t);
@@ -85,15 +81,15 @@ function v(e) {
                     })(e, t);
                     if (null != r) return r;
                     let i = (function (e, t, n) {
-                        let r = Array.from(y.KW.values())
+                        let r = Array.from(_.KW.values())
                             .map((e) => {
                                 if (null == t.unlocked.get(e)) return t.powerups.get(e);
                             })
-                            .filter(p.lm);
+                            .filter(d.lm);
                         if (0 !== r.length) {
                             if (1 === r.length && n >= r[0].cost && !(0, u.OY)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
                                 return {
-                                    type: m.J.PERKS_PURCHASABLE,
+                                    type: g.J.PERKS_PURCHASABLE,
                                     powerups: r,
                                     markAsDismissed: (t) => {
                                         (0, u.Qd)(o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e, !0, t);
@@ -105,7 +101,7 @@ function v(e) {
                                     l = t && !(0, u.OY)(o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK, e) ? o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK : i && !(0, u.OY)(o.C.GUILD_POWERUP_BOTH_SKU_PURCHASE_COACHMARK, e) ? o.C.GUILD_POWERUP_BOTH_SKU_PURCHASE_COACHMARK : void 0;
                                 if (null == l) return;
                                 return {
-                                    type: m.J.PERKS_PURCHASABLE,
+                                    type: g.J.PERKS_PURCHASABLE,
                                     powerups: r,
                                     markAsDismissed: (t) => {
                                         (0, u.Qd)(l, e, !0, t);
@@ -116,15 +112,15 @@ function v(e) {
                     })(e, t, l);
                     if (null != i) return i;
                 }, [e, t, n, l]),
-                [s, d] = (0, c.Tt)(null != a ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: m.d });
+                [s, h] = (0, c.Tt)(null != a ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: g.d });
             return i.useMemo(() => {
                 if (null != t) {
                     if (n === o.z.GUILD_POWERUP_PERKS_COACHMARK)
                         return {
-                            type: m.J.PERKS_AVAILABLE,
-                            powerups: Array.from(y.KW.values())
+                            type: g.J.PERKS_AVAILABLE,
+                            powerups: Array.from(_.KW.values())
                                 .map((e) => t.powerups.get(e))
-                                .filter(p.lm),
+                                .filter(d.lm),
                             markAsDismissed: r
                         };
                     if (s === o.z.GUILD_POWERUP_NOTIFICATION && null != a) {
@@ -158,7 +154,7 @@ function v(e) {
                             (i = i =
                                 {
                                     markAsDismissed: (e) => {
-                                        d(e, !0), a.markAsDismissed(e);
+                                        h(e, !0), a.markAsDismissed(e);
                                     }
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -177,12 +173,12 @@ function v(e) {
                         );
                     }
                 }
-            }, [t, n, r, a, s, d]);
+            }, [t, n, r, a, s, h]);
         })(e, n);
-    if (null !== n && (null != v || O || null != j))
+    if (null !== n && (null != y || v || null != O))
         return {
-            trailing: v,
-            showUnread: O,
-            popout: j
+            trailing: y,
+            showUnread: v,
+            popout: O
         };
 }
