@@ -38539,8 +38539,7 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .clickableContainer__39ec2 {
-    cursor: pointer;
-    display: contents
+    cursor: pointer
 }
 
 .clickableContainer__39ec2:hover>.card__39ec2 {
