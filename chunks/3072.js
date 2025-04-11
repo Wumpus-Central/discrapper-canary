@@ -13,20 +13,21 @@ var r = n(192379),
 let c = (0, s.N)();
 async function d(e) {
     let t = await fetch(e),
-        n = await c.decodeAudioData(await t.arrayBuffer()),
-        r = c.createBufferSource();
-    return (r.buffer = n), r;
+        n = await (null == c ? void 0 : c.decodeAudioData(await t.arrayBuffer()));
+    if (null == n) return null;
+    let r = null == c ? void 0 : c.createBufferSource();
+    return null == r ? null : ((r.buffer = n), r);
 }
 async function u(e, t) {
     let n = await d(e);
-    return n.connect(t).connect(c.destination), n.start(), n;
+    return null == n || null == c ? null : (n.connect(t).connect(c.destination), n.start(), n);
 }
 function m(e) {
     let t = (0, i.e7)([a.Z], () => a.Z.volume),
         n = (0, i.e7)([a.Z], () => a.Z.isMuted);
     return (0, r.useCallback)(() => {
-        let r = c.createGain();
-        (r.gain.value = n ? 0 : t), u(e, r);
+        let r = null == c ? void 0 : c.createGain();
+        null != r && ((r.gain.value = n ? 0 : t), u(e, r));
     }, [n, e, t]);
 }
 function g(e) {
@@ -34,17 +35,17 @@ function g(e) {
 }
 function p(e, t) {
     let n = (0, r.useRef)(null),
-        s = (0, r.useRef)(c.createGain()),
+        s = (0, r.useRef)(null == c ? void 0 : c.createGain()),
         l = (0, i.e7)([a.Z], () => a.Z.volume),
         o = (0, i.e7)([a.Z], () => a.Z.isMuted),
         d = (0, r.useRef)(!0);
     (0, r.useEffect)(() => {
         (async () => {
-            null != n.current && g(n), !t && ((n.current = await u(e, s.current)), (n.current.loop = !0), d.current || g(n));
+            null != n.current && g(n), !t && null != s.current && ((n.current = await u(e, s.current)), null != n.current && (n.current.loop = !0), d.current || g(n));
         })();
     }, [t, e]),
         (0, r.useEffect)(() => {
-            s.current.gain.value = o ? 0 : l;
+            null != s.current && (s.current.gain.value = o ? 0 : l);
         }, [o, l]),
         (0, r.useEffect)(
             () => () => {

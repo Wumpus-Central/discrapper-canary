@@ -6,8 +6,8 @@ n.r(t),
         voiceSinkId: () => m
     }),
     n(388685),
-    n(35282),
-    n(415506);
+    n(415506),
+    n(35282);
 var r = n(392711),
     i = n.n(r),
     o = n(856901),
@@ -37,8 +37,10 @@ let _ = 'default',
     g = new Map();
 async function E(e) {
     let t = await fetch(n(451343)('./'.concat(e, '.mp3'))),
-        r = await t.arrayBuffer();
-    return (0, a.N)().decodeAudioData(r);
+        r = await t.arrayBuffer(),
+        i = await (0, a.N)();
+    if (null == i) throw Error('Unable to create audio context');
+    return i.decodeAudioData(r);
 }
 function b(e) {
     let t = g.get(e);
@@ -212,7 +214,8 @@ let I = class {
                 this._ensureAudioPromise = b(this.name)
                     .then((t) => {
                         if (null == t) return Promise.reject(Error('Failed to load audio: '.concat(this.name)));
-                        if (((this._audioContext = (0, a.N)()), (this._gain = new GainNode(this._audioContext)), (this._gain.gain.value = e), u.isPlatformEmbedded)) {
+                        if (((this._audioContext = (0, a.N)()), null == this._audioContext)) return Promise.reject(Error('Failed to create audio context: '.concat(this.name)));
+                        if (((this._gain = new GainNode(this._audioContext)), (this._gain.gain.value = e), u.isPlatformEmbedded)) {
                             var n, r;
                             null == (n = (r = this._audioContext).setSinkId) || n.call(r, this.outputChannel === d.w.DEFAULT ? _ : m);
                         }
