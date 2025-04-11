@@ -118,9 +118,6 @@ function y(e) {
                     if (n === o.z.GUILD_POWERUP_PERKS_COACHMARK)
                         return {
                             type: g.J.PERKS_AVAILABLE,
-                            powerups: Array.from(_.KW.values())
-                                .map((e) => t.powerups.get(e))
-                                .filter(d.lm),
                             markAsDismissed: r
                         };
                     if (s === o.z.GUILD_POWERUP_NOTIFICATION && null != a) {
