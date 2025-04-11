@@ -137,7 +137,7 @@ let q = {
                 ? u.Z.getAllActiveStreams().reduce((e, t) => {
                       var n;
                       let r = null == (n = g.Z.getRTCConnection((0, l.V9)(t))) ? void 0 : n.getMediaEngineConnectionId();
-                      if (null == r) return e;
+                      if (t.ownerId === d.default.getId() || null == r) return e;
                       let i = K(r, t.ownerId);
                       if (null == i) return e;
                       let o = a.Z.getParticipant(t.channelId, (0, l.V9)(t));
@@ -153,6 +153,7 @@ let q = {
             z()
                 ? u.Z.getAllActiveStreams().reduce((e, t) => {
                       var n;
+                      if (t.ownerId === d.default.getId()) return e;
                       let r = null == (n = g.Z.getRTCConnection((0, l.V9)(t))) ? void 0 : n.getMediaEngineConnectionId();
                       if (null == r) return e;
                       let i = K(r, t.ownerId);
@@ -165,7 +166,7 @@ let q = {
         getActiveErrors: () => {
             var e;
             let t = u.Z.getCurrentUserActiveStream();
-            if (null == t) return null;
+            if (null == t || 0 === u.Z.getViewerIds(t).length) return null;
             let n = null == (e = g.Z.getRTCConnection((0, l.V9)(t))) ? void 0 : e.getMediaEngineConnectionId();
             if (null == n) return null;
             let r = K(n, t.ownerId);
@@ -177,7 +178,7 @@ let q = {
         getActiveErrors: () => {
             var e;
             let t = u.Z.getCurrentUserActiveStream();
-            if (null == t) return null;
+            if (null == t || 0 === u.Z.getViewerIds(t).length) return null;
             let n = null == (e = g.Z.getRTCConnection((0, l.V9)(t))) ? void 0 : e.getMediaEngineConnectionId();
             if (null == n) return null;
             let r = a.Z.getParticipant(t.channelId, (0, l.V9)(t));
