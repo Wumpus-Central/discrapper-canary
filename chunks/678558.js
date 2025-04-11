@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -11,16 +11,17 @@ var r = n(200651),
     f = n(975298),
     _ = n(125529),
     p = n(124570),
-    h = n(594174),
-    m = n(314884),
-    g = n(78839),
-    E = n(267642),
-    b = n(879892),
-    y = n(981631),
-    v = n(474936),
-    O = n(388032),
-    I = n(412439);
-function S(e, t, n) {
+    h = n(404380),
+    m = n(594174),
+    g = n(314884),
+    E = n(78839),
+    b = n(267642),
+    y = n(879892),
+    v = n(981631),
+    O = n(474936),
+    I = n(388032),
+    S = n(412439);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +45,12 @@ function T(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,29 +62,29 @@ function N(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function C(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,83 +93,84 @@ function P(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: S, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: R = () => {}, pauseAnimation: w = !1, applicationId: D, handleSubscribeModalClose: L, withHighlight: x = !1, icon: M, intent: k } = e,
-        j = C(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
-        { analyticsLocations: U } = (0, d.ZP)(),
-        G = (0, u.bp)() === y.IlC.POPOUT,
-        [B, V] = i.useState(!1),
-        F = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        { fractionalState: Z } = (0, f.Z)(),
-        H = (0, p.y)('guild_boosting_subscribe_button', F, Z);
-    m.Z.hasFetched || (0, c.X8)();
-    let W = (0, E.vx)(m.Z.boostSlots),
-        Y = null != N ? Math.max((0, E.KK)(o, N), 1) : 1,
-        K = (0, E.aq)({ isBoostManagementDisabledForFractionalPremium: H }),
-        z = async () => {
-            V(!0),
-                await (0, b.u)({
-                    analyticsLocations: U,
+let w = (e) => {
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: T, targetBoostedGuildTier: A, onClose: R = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
+        U = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
+        { analyticsLocations: G } = (0, d.ZP)(),
+        B = (0, u.bp)() === v.IlC.POPOUT,
+        [V, F] = i.useState(!1),
+        Z = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        { fractionalState: H } = (0, f.Z)(),
+        W = (0, p.y)('guild_boosting_subscribe_button', Z, H);
+    g.Z.hasFetched || (0, c.X8)();
+    let Y = (0, b.vx)(g.Z.boostSlots),
+        K = null != A ? Math.max((0, b.KK)(o, A), 1) : 1,
+        z = (0, b.aq)({ isBoostManagementDisabledForFractionalPremium: W }),
+        q = async () => {
+            F(!0),
+                await (0, y.u)({
+                    analyticsLocations: G,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: o,
-                    numberOfBoostsToAdd: Y,
-                    onClose: P,
-                    closeLayer: R,
-                    inPopout: G,
-                    applicationId: D,
-                    handleSubscribeModalClose: L,
-                    intent: k
+                    numberOfBoostsToAdd: K,
+                    onClose: R,
+                    closeLayer: w,
+                    inPopout: B,
+                    applicationId: L,
+                    handleSubscribeModalClose: x,
+                    intent: j
                 }),
-                V(!1);
+                F(!1);
         },
-        q = g.ZP.getPremiumTypeSubscription(),
-        Q = (0, r.jsxs)('div', {
-            className: I.button,
-            children: [M, null != S ? S : O.NW.string(O.t.gKmQ1N)]
-        });
-    return ((null == q ? void 0 : q.isPausedOrPausePending) &&
-        (Z === v.a$.NONE || 0 === W.length) &&
-        ((Q = (0, r.jsxs)('div', {
-            className: I.button,
+        Q = E.ZP.getPremiumTypeSubscription(),
+        X = (0, r.jsxs)('div', {
+            className: S.button,
+            children: [k, null != T ? T : I.NW.string(I.t.gKmQ1N)]
+        }),
+        J = (0, h.o)('GuildBoostingSubscribeButton', Z, H),
+        $ = !1;
+    return (($ = null !== Q && !(Y.length > 0) && (null == Q ? void 0 : Q.isPausedOrPausePending) && (H === O.a$.NONE || J)) &&
+        ((X = (0, r.jsxs)('div', {
+            className: S.button,
             children: [
                 (0, r.jsx)(l.mBM, {
                     size: 'xs',
-                    className: I.buttonIcon
+                    className: S.buttonIcon
                 }),
                 ' ',
-                Q
+                X
             ]
         })),
-        (j.disabled = !0)),
-    null != K)
+        (U.disabled = !0)),
+    null != z)
         ? (0, r.jsx)(_.Z, {
-              text: K,
+              text: z,
               'aria-label': !1,
               children: (e) =>
                   (0, r.jsx)(
                       l.gtL,
-                      A(
-                          T(
-                              A(T({}, e), {
+                      C(
+                          N(
+                              C(N({}, e), {
                                   disabled: !0,
                                   size: l.zxk.Sizes.SMALL,
-                                  pauseAnimation: w
+                                  pauseAnimation: D
                               }),
-                              j
+                              U
                           ),
-                          { children: Q }
+                          { children: X }
                       )
                   )
           })
         : (0, r.jsx)(
               l.gtL,
-              A(T({ size: l.zxk.Sizes.SMALL }, j), {
-                  className: a()(j.className, { [I.buttonHighlighted]: x }),
-                  submitting: B,
-                  onClick: z,
-                  pauseAnimation: w,
-                  children: Q
+              C(N({ size: l.zxk.Sizes.SMALL }, U), {
+                  className: a()(U.className, { [S.buttonHighlighted]: M }),
+                  submitting: V,
+                  onClick: q,
+                  pauseAnimation: D,
+                  children: X
               })
           );
 };

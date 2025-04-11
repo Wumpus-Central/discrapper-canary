@@ -6082,6 +6082,7 @@
   "XSbQZW": "{minutes, plural, =1 {!!{minutes}!! minute} other {!!{minutes}!! minutes} } left",
   "SBd+Bg": "{minutes, plural, other {} }< 1H LEFT",
   "r77oHR": "{minutes, plural, =1 {!!{minutes}!! minute} other {!!{minutes}!! minutes} }",
+  "gFaKd3": "Boost success!\\n\\nYour remaining Nitro credits will be saved and activated later. [Learn more.](Learn more.)\\n\\n",
   "8Xm6uL": "**{hours, plural, =1 { hour} other { hours} }** of **Nitro credit** will be saved and activated at the end of your billing cycle. Choose a plan to begin now!",
   "J9Lu4u": "!!{hours}!!-hour",
   "bg3jBg": "[Learn more about Nitro credits](Learn more about Nitro credits)",
