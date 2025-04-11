@@ -1,7 +1,7 @@
 n.d(t, {
-    XX: () => k,
-    ZP: () => L,
-    ul: () => M
+    XX: () => R,
+    ZP: () => M,
+    ul: () => k
 }),
     n(388685);
 var r = n(200651),
@@ -22,19 +22,18 @@ var r = n(200651),
     _ = n(102172),
     y = n(525925),
     C = n(701362),
-    x = n(823415),
-    v = n(670188),
-    j = n(597998),
-    O = n(314897),
-    E = n(430824),
-    N = n(496675),
-    I = n(594174),
-    P = n(979651),
-    S = n(927923),
-    Z = n(70722),
-    T = n(388032),
-    A = n(587382);
-function w(e) {
+    x = n(670188),
+    v = n(597998),
+    j = n(314897),
+    O = n(430824),
+    E = n(496675),
+    N = n(594174),
+    I = n(979651),
+    P = n(927923),
+    S = n(70722),
+    Z = n(388032),
+    T = n(587382);
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +58,7 @@ function w(e) {
     }
     return e;
 }
-function R(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,10 +76,10 @@ function R(e, t) {
         e
     );
 }
-function k(e) {
+function R(e) {
     let { numUsers: t } = e;
     return (0, r.jsx)('div', {
-        className: A.moreContainer,
+        className: T.moreContainer,
         children: (0, r.jsxs)(a.Text, {
             color: 'text-muted',
             variant: 'text-sm/medium',
@@ -88,18 +87,18 @@ function k(e) {
         })
     });
 }
-function M(e) {
+function k(e) {
     let { numAudience: t, collapsed: n } = e,
-        i = n ? t : T.NW.formatToPlainString(T.t['+v2pNz'], { count: t });
+        i = n ? t : Z.NW.formatToPlainString(Z.t['+v2pNz'], { count: t });
     return (0, r.jsxs)('div', {
-        className: o()(A.audienceContainer, { [A.audienceContainerCollapsed]: n }),
+        className: o()(T.audienceContainer, { [T.audienceContainerCollapsed]: n }),
         children: [
             (0, r.jsx)('div', {
-                className: A.audienceIconContainer,
+                className: T.audienceIconContainer,
                 children: (0, r.jsx)(a.VWR, {
                     size: 'md',
                     color: 'currentColor',
-                    className: A.audienceIcon
+                    className: T.audienceIcon
                 })
             }),
             (0, r.jsx)(a.Text, {
@@ -110,93 +109,92 @@ function M(e) {
         ]
     });
 }
-let L = (0, p.$)(function (e) {
+let M = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: k, mute: M, localMute: L, localVideoDisabled: D, deaf: W, video: U, embeddedApplication: B, serverMute: G, serverDeaf: F, nick: H, ringing: V, speaking: z, disconnected: Y, connectUserDragSource: q, canDrag: K, isStreaming: X, isWatching: Q, isGuest: J, priority: $, showPreview: ee, hidePreview: et, shouldShowPreview: en, previewIsOpen: er, otherClientSessionType: ei, voicePlatform: el, isSelfOnOtherClient: eo = !1, tabIndex: ea, location: es, isSelf: ec, application: eu } = e,
-        ed = i.useRef(null),
-        [ep, eh] = i.useState(!1),
-        ef = (0, x.ic)({ location: 'VoiceUser' }),
-        em = () => {
-            eh(!ep);
+    let { collapsed: l, user: p, channel: R, mute: k, localMute: M, localVideoDisabled: L, deaf: D, video: W, embeddedApplication: U, serverMute: B, serverDeaf: G, nick: F, ringing: H, speaking: V, disconnected: z, connectUserDragSource: Y, canDrag: q, isStreaming: K, isWatching: X, isGuest: Q, priority: J, showPreview: $, hidePreview: ee, shouldShowPreview: et, previewIsOpen: en, otherClientSessionType: er, voicePlatform: ei, isSelfOnOtherClient: el = !1, tabIndex: eo, location: ea, isSelf: es, application: ec } = e,
+        eu = i.useRef(null),
+        [ed, ep] = i.useState(!1),
+        eh = () => {
+            ep(!ed);
         },
+        ef = () => {
+            K && (null == ee || ee(p.id));
+        },
+        em = () => K && (0, _.p9)(R, I.Z, O.Z, E.Z, m.Z)[0],
         eg = () => {
-            X && (null == et || et(p.id));
-        },
-        eb = () => X && (0, _.p9)(k, P.Z, E.Z, N.Z, m.Z)[0],
-        e_ = () => {
-            if (!eb()) return;
+            if (!em()) return;
             let e = {
-                streamType: Z.lo.GUILD,
+                streamType: S.lo.GUILD,
                 ownerId: p.id,
-                channelId: k.id,
-                guildId: k.guild_id
+                channelId: R.id,
+                guildId: R.guild_id
             };
-            O.default.getId() !== p.id && u.default.selectVoiceChannel(k.id), Q ? ((0, y.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == et || et(p.id);
+            j.default.getId() !== p.id && u.default.selectVoiceChannel(R.id), X ? ((0, y.Z)(e), s.Z.selectParticipant(e.channelId, (0, b.V9)(e))) : (0, d.iV)(e), null == ee || ee(p.id);
         },
-        ey = (e) => {
+        eb = (e) => {
             (0, c.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        R(w({}, t), {
+                        w(A({}, t), {
                             user: p,
-                            guildId: k.guild_id,
-                            channel: k,
+                            guildId: R.guild_id,
+                            channel: R,
                             showMediaItems: !0,
-                            showStageChannelItems: k.isGuildStageVoice(),
+                            showStageChannelItems: R.isGuildStageVoice(),
                             onInteraction: (0, f.u)('GuildChannelUserContextMenu', h.Z.VOICE_USER, { targetUserId: p.id })
                         })
                     );
             });
         },
-        eC = () =>
+        e_ = () =>
             (0, r.jsx)(C.Z, {
                 user: p,
-                channel: k,
-                onWatch: e_,
-                previewIsOpen: er,
-                location: es
+                channel: R,
+                onWatch: eg,
+                previewIsOpen: en,
+                location: ea
             }),
-        ex = (e) => {
-            let t = S.al.has(null != ei ? ei : ''),
+        ey = (e) => {
+            let t = P.al.has(null != er ? er : ''),
                 n = {
                     user: p,
-                    speaking: z,
-                    disconnected: Y,
-                    mute: M,
-                    localMute: L,
-                    localVideoDisabled: D,
-                    isStreaming: X,
-                    isGuest: J,
-                    video: U,
-                    priority: $,
-                    ringing: V,
-                    deaf: W,
-                    nick: H,
+                    speaking: V,
+                    disconnected: z,
+                    mute: k,
+                    localMute: M,
+                    localVideoDisabled: L,
+                    isStreaming: K,
+                    isGuest: Q,
+                    video: W,
+                    priority: J,
+                    ringing: H,
+                    deaf: D,
+                    nick: F,
                     collapsed: l,
                     overlap: l,
-                    serverMute: G,
-                    serverDeaf: F,
-                    tabIndex: ea,
-                    otherClientSessionType: ei,
-                    voicePlatform: el,
-                    embeddedApplication: B,
-                    avatarContainerClass: o()({ [A.userAvatar]: !0 }),
-                    disabled: eo && !t,
-                    selected: ep,
-                    onClick: t ? void 0 : em,
-                    onDoubleClick: e_,
-                    onContextMenu: ey,
-                    guildId: k.guild_id,
-                    isSelf: ec,
-                    application: eu,
-                    channelId: k.id
+                    serverMute: B,
+                    serverDeaf: G,
+                    tabIndex: eo,
+                    otherClientSessionType: er,
+                    voicePlatform: ei,
+                    embeddedApplication: U,
+                    avatarContainerClass: o()({ [T.userAvatar]: !0 }),
+                    disabled: el && !t,
+                    selected: ed,
+                    onClick: t ? void 0 : eh,
+                    onDoubleClick: eg,
+                    onContextMenu: eb,
+                    guildId: R.guild_id,
+                    isSelf: es,
+                    application: ec,
+                    channelId: R.id
                 };
-            if (eo) {
+            if (el) {
                 var i;
                 return (0, r.jsx)(a.ua7, {
-                    text: null != (i = (0, g.Z)(ei)) ? i : T.NW.string(T.t.IyYqqa),
+                    text: null != (i = (0, g.Z)(er)) ? i : Z.NW.string(Z.t.IyYqqa),
                     children: (e) => {
                         var { onClick: t, onContextMenu: i } = e,
                             l = (function (e, t) {
@@ -218,49 +216,48 @@ let L = (0, p.$)(function (e) {
                                 }
                                 return i;
                             })(e, ['onClick', 'onContextMenu']);
-                        return (0, r.jsx)(j.ZP, w({ ref: ed }, n, l));
+                        return (0, r.jsx)(v.ZP, A({ ref: eu }, n, l));
                     }
                 });
             }
             return (0, r.jsx)(a.yRy, {
-                targetElementRef: ed,
+                targetElementRef: eu,
                 position: 'right',
-                renderPopout: eC,
-                shouldShow: en && !ep,
-                onRequestClose: eg,
+                renderPopout: e_,
+                shouldShow: et && !ed,
+                onRequestClose: ef,
                 spacing: 0,
                 children: () =>
                     (0, r.jsx)(
-                        j.ZP,
-                        R(w({}, n), {
-                            ref: ed,
+                        v.ZP,
+                        w(A({}, n), {
+                            ref: eu,
                             onMouseDown: e.onMouseDown,
                             onKeyDown: e.onKeyDown
                         })
                     )
             });
         },
-        ev = (0, r.jsx)('div', {
-            className: A.draggable,
-            'data-dnd-name': k.name,
-            onMouseEnter: eo
+        eC = (0, r.jsx)('div', {
+            className: T.draggable,
+            'data-dnd-name': R.name,
+            onMouseEnter: el
                 ? void 0
                 : () => {
-                      X && !ep && (null == ee || ee(p.id));
+                      K && !ed && (null == $ || $(p.id));
                   },
-            onMouseLeave: eo ? void 0 : eg,
-            children: (0, r.jsx)(v.Z, {
-                clickTrap: (null == p ? void 0 : p.id) === (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) && ep,
-                targetElementRef: ed,
+            onMouseLeave: el ? void 0 : ef,
+            children: (0, r.jsx)(x.Z, {
+                clickTrap: (null == p ? void 0 : p.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && ed,
+                targetElementRef: eu,
                 user: p,
-                guildId: k.guild_id,
-                channelId: k.id,
+                guildId: R.guild_id,
+                channelId: R.id,
                 newAnalyticsLocations: [h.Z.VOICE_USER],
-                shouldShow: ep,
-                onRequestClose: () => eh(!1),
-                shouldShowOnHover: ef && !X,
-                children: (e) => ex(e)
+                shouldShow: ed,
+                onRequestClose: () => ep(!1),
+                children: (e) => ey(e)
             })
         });
-    return K ? q(ev) : ev;
+    return q ? Y(eC) : eC;
 });
