@@ -1,7 +1,7 @@
 n.d(t, {
-    PD: () => D,
-    ZP: () => k,
-    aR: () => R
+    PD: () => R,
+    ZP: () => M,
+    aR: () => L
 }),
     n(388685);
 var r = n(200651),
@@ -30,8 +30,9 @@ var r = n(200651),
     P = n(30513),
     I = n(981631),
     N = n(388032),
-    E = n(30009);
-function Z(e) {
+    E = n(680278),
+    Z = n(30009);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +57,7 @@ function Z(e) {
     }
     return e;
 }
-function w(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,8 +75,8 @@ function w(e, t) {
         e
     );
 }
-let T = (0, j.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    A = (e) => {
+let A = (0, j.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    D = (e) => {
         let { guild: t, onSelect: n } = e,
             [l, o] = i.useState(t.premiumProgressBarEnabled),
             [a, s] = i.useState(!1),
@@ -97,41 +98,42 @@ let T = (0, j.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             })
         });
     },
-    D = 57,
-    R = 57 + T,
-    L = {
+    R = 57,
+    L = 57 + A,
+    k = {
         tension: 180,
         friction: 80
     },
-    k = (e) => {
+    M = (e) => {
         let { guild: t, withMargin: n } = e,
             l = (0, m.Q3)('GuildBoostingSidebarDisplay'),
             { analyticsLocations: u } = (0, g.ZP)(h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
             b = (0, O.Jh)(t.id),
             j = (0, _.Z)(t.id),
-            T = (0, O.FZ)(b),
-            D = null == T,
-            R = null != T ? T : b,
-            k = (0, c.e7)([x.Z], () => {
+            A = (0, O.FZ)(b),
+            R = null == A,
+            L = null != A ? A : b,
+            M = (0, c.e7)([x.Z], () => {
                 var e;
                 return null != (e = x.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            M = (0, c.e7)([y.Z], () => y.Z.can(I.Plq.MANAGE_GUILD, t));
+            G = (0, c.e7)([y.Z], () => y.Z.can(I.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            k !== j && (0, C.v)(t.id, j);
-        }, [t.id, k, j]);
-        let G = ''.concat(Math.min(100, (j / I.oCV[R]) * 100), '%'),
-            { current: B } = i.useRef(G),
-            [U] = (0, d.q_F)(
+            M !== j && (0, C.v)(t.id, j);
+        }, [t.id, M, j]);
+        let B = ''.concat(Math.min(100, (j / I.oCV[L]) * 100), '%'),
+            { current: U } = i.useRef(B),
+            [W] = (0, d.q_F)(
                 () => ({
-                    from: { width: k === j ? B : '0%' },
-                    to: { width: G },
-                    config: L
+                    from: { width: M === j ? U : '0%' },
+                    to: { width: B },
+                    config: k
                 }),
                 'respect-motion-settings',
-                [k, j, B, G]
+                [M, j, U, B]
             ),
-            W = () => {
+            V = t.premiumTier < L && M >= I.oCV[L],
+            H = () => {
                 (0, f.yw)(I.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: { section: I.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                     guild_id: t.id,
@@ -149,16 +151,16 @@ let T = (0, j.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         perkIntro: N.NW.string(N.t.ZhvSn5)
                     });
             },
-            V = N.NW.formatToPlainString(N.t['2oNfMT'], { levelName: (0, O.e9)(R) }),
-            H = N.NW.format(N.t.dhKnYm, {
+            F = N.NW.formatToPlainString(N.t['2oNfMT'], { levelName: (0, O.e9)(L) }),
+            z = N.NW.format(N.t.dhKnYm, {
                 numBoosts: j,
-                numTotal: I.oCV[R]
+                numTotal: I.oCV[L]
             });
-        D && ((V = (0, O.e9)(R)), (H = N.NW.format(N.t.B2byER, { numBoosts: j }))), l && (V = V.toLocaleLowerCase());
-        let F = (0, s.JA)('boosts-'.concat(t.id));
+        R && ((F = (0, O.e9)(L)), (z = N.NW.format(N.t.B2byER, { numBoosts: j }))), l && (F = F.toLocaleLowerCase());
+        let Y = (0, s.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {
-                text: D ? N.NW.string(N.t['Y+V9go']) : N.NW.formatToPlainString(N.t.UyDKl5, { levelName: (0, O.nW)(R) }),
+                text: V ? N.NW.formatToPlainString(E.Z['9CtPjo'], { perk: (0, O.nW)(L) }) : R ? N.NW.string(N.t['Y+V9go']) : N.NW.formatToPlainString(N.t.UyDKl5, { levelName: (0, O.nW)(L) }),
                 color: d.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
@@ -166,7 +168,7 @@ let T = (0, j.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 children: (e) =>
                     (0, r.jsxs)(
                         d.P3F,
-                        w(Z({}, F, e), {
+                        T(w({}, Y, e), {
                             'aria-label': void 0,
                             role: 'button',
                             focusProps: {
@@ -175,38 +177,38 @@ let T = (0, j.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     right: 4
                                 }
                             },
-                            onClick: W,
-                            className: o()(E.container, { [E.containerWithMargin]: n }),
+                            onClick: H,
+                            className: o()(Z.container, { [Z.containerWithMargin]: n }),
                             onContextMenu: (e) => {
-                                M && (0, p.vq)(e, (e) => (0, r.jsx)(A, w(Z({}, e), { guild: t })));
+                                G && (0, p.vq)(e, (e) => (0, r.jsx)(D, T(w({}, e), { guild: t })));
                             },
                             children: [
                                 (0, r.jsx)(d.nn4, { children: e['aria-label'] }),
                                 (0, r.jsxs)('div', {
-                                    className: E.textArea,
+                                    className: Z.textArea,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: E.goalTextContainer,
+                                            className: Z.goalTextContainer,
                                             children: (0, r.jsx)(d.Text, {
-                                                className: E.goalText,
+                                                className: Z.goalText,
                                                 color: l ? 'none' : 'interactive-active',
                                                 variant: l ? 'text-sm/medium' : 'text-xs/bold',
                                                 lineClamp: 1,
-                                                children: V
+                                                children: F
                                             })
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: E.progressFraction,
+                                            className: Z.progressFraction,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
                                                     color: l ? 'none' : 'interactive-normal',
                                                     variant: l ? 'text-sm/medium' : 'text-xs/normal',
-                                                    className: E.progressText,
+                                                    className: Z.progressText,
                                                     lineClamp: 1,
-                                                    children: H
+                                                    children: z
                                                 }),
                                                 (0, r.jsx)(v.Z, {
-                                                    className: E.count,
+                                                    className: Z.count,
                                                     height: 16,
                                                     width: 16,
                                                     direction: v.Z.Directions.RIGHT
@@ -216,17 +218,17 @@ let T = (0, j.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     ]
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: o()(E.progressBarContainer, { [E.progressBarContainerComplete]: D }),
+                                    className: o()(Z.progressBarContainer, { [Z.progressBarContainerComplete]: R }),
                                     children: [
                                         (0, r.jsx)(a.animated.div, {
-                                            className: E.progressBar,
-                                            style: U
+                                            className: Z.progressBar,
+                                            style: W
                                         }),
-                                        D
+                                        R
                                             ? (0, r.jsx)('span', {
                                                   'aria-label': N.NW.string(N.t['7iL1q6']),
                                                   role: 'img',
-                                                  className: E.tadaIcon,
+                                                  className: Z.tadaIcon,
                                                   children: '\uD83C\uDF89'
                                               })
                                             : null
