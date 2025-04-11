@@ -1,0 +1,20 @@
+e.exports = {
+    table: 'table_fda3e4',
+    header: 'header_fda3e4',
+    rowBase: 'rowBase_fda3e4',
+    row: 'row_fda3e4 rowBase_fda3e4',
+    rowAmount: 'rowAmount_fda3e4',
+    rowLabel: 'rowLabel_fda3e4',
+    rowPercentDiscount: 'rowPercentDiscount_fda3e4',
+    rowDiscountOriginalPrice: 'rowDiscountOriginalPrice_fda3e4',
+    entitlementDiscountRow: 'entitlementDiscountRow_fda3e4 rowBase_fda3e4',
+    divider: 'divider_fda3e4',
+    negativeMarginTop: 'negativeMarginTop_fda3e4',
+    negativeMarginBottom: 'negativeMarginBottom_fda3e4',
+    dividerExtended: 'dividerExtended_fda3e4',
+    totalRow: 'totalRow_fda3e4',
+    totalLabel: 'totalLabel_fda3e4',
+    totalAmount: 'totalAmount_fda3e4',
+    finePrint: 'finePrint_fda3e4',
+    trialEndPrice: 'trialEndPrice_fda3e4'
+};
