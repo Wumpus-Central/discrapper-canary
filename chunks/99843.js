@@ -1,20 +1,21 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
     a = n(481060),
     s = n(493683),
-    c = n(599059),
-    u = n(933557),
-    d = n(641360),
-    p = n(266076),
-    h = n(187237),
-    f = n(210975),
-    m = n(981631),
-    g = n(388032),
-    b = n(791293);
-function _(e) {
+    c = n(239091),
+    u = n(599059),
+    d = n(933557),
+    p = n(641360),
+    h = n(266076),
+    f = n(187237),
+    m = n(210975),
+    g = n(981631),
+    b = n(388032),
+    _ = n(791293);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +40,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,60 +58,79 @@ function y(e, t) {
         e
     );
 }
-let C = (e) => {
+let x = (e) => {
         let { channel: t } = e;
-        return (0, f.m$)({ channelId: t.id })
+        return (0, m.m$)({ channelId: t.id })
             ? (0, r.jsx)(a.ua7, {
-                  text: g.NW.string(g.t.QyZ4TU),
+                  text: b.NW.string(b.t.QyZ4TU),
                   children: (e) =>
                       (0, r.jsx)(
                           a.tQf,
-                          y(_({}, e), {
+                          C(y({}, e), {
                               size: 'xs',
-                              'aria-label': g.NW.string(g.t.VHXh8f),
+                              'aria-label': b.NW.string(b.t.VHXh8f),
                               color: a.TVs.colors.INTERACTIVE_NORMAL
                           })
                       )
               })
             : null;
     },
-    x = (e) => {
-        let { channel: t, children: n } = e,
-            l = t.id,
-            c = t.name,
-            d = (0, u.ZP)(t),
-            p = (0, u.cO)(t),
-            [h, f] = i.useState(!1);
+    v = (e) => {
+        let { channel: t, children: l } = e,
+            u = t.id,
+            p = t.name,
+            h = (0, d.ZP)(t),
+            f = (0, d.cO)(t),
+            [m, v] = i.useState(!1);
         return (0, r.jsxs)('div', {
-            className: b.newWrapper,
+            className: _.newWrapper,
             children: [
                 (0, r.jsxs)('div', {
-                    className: o()(b.hoverableContainer, { [b.editing]: !1 !== h }),
+                    className: o()(_.hoverableContainer, { [_.editing]: !1 !== m }),
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: [
-                        n,
-                        !1 === h
+                        l,
+                        !1 === m
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(a.ua7, {
-                                          text: g.NW.string(g.t.pYO54e),
+                                          text: b.NW.string(b.t.pYO54e),
                                           position: 'bottom',
                                           children: (e) =>
                                               (0, r.jsxs)(
                                                   a.P3F,
-                                                  y(_({}, e), {
-                                                      className: b.clickableTitle,
-                                                      onClick: () => f(c),
+                                                  C(y({}, e), {
+                                                      className: _.clickableTitle,
+                                                      onClick: () => v(p),
+                                                      onContextMenu: (e) =>
+                                                          (0, c.jW)(
+                                                              e,
+                                                              () =>
+                                                                  Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('53912'), n.e('518')])
+                                                                      .then(n.bind(n, 354741))
+                                                                      .then((e) => {
+                                                                          let { default: n } = e;
+                                                                          return (e) =>
+                                                                              (0, r.jsx)(
+                                                                                  n,
+                                                                                  C(y({}, e), {
+                                                                                      channel: t,
+                                                                                      selected: !0
+                                                                                  })
+                                                                              );
+                                                                      }),
+                                                              { noBlurEvent: !0 }
+                                                          ),
                                                       onDoubleClick: (e) => e.stopPropagation(),
-                                                      'aria-label': g.NW.string(g.t.bt75u7),
+                                                      'aria-label': b.NW.string(b.t.bt75u7),
                                                       children: [
                                                           (0, r.jsx)(a.Text, {
                                                               variant: 'text-md/semibold',
                                                               color: 'header-primary',
-                                                              children: null != d ? d : ''
+                                                              children: null != h ? h : ''
                                                           }),
                                                           (0, r.jsx)(a.vdY, {
-                                                              className: b.editIcon,
+                                                              className: _.editIcon,
                                                               size: 'xs',
                                                               color: 'currentColor'
                                                           })
@@ -118,62 +138,62 @@ let C = (e) => {
                                                   })
                                               )
                                       }),
-                                      (0, r.jsx)(C, { channel: t })
+                                      (0, r.jsx)(x, { channel: t })
                                   ]
                               })
                             : (0, r.jsx)('form', {
                                   onSubmit: () => {
-                                      !1 !== h && h !== c && s.Z.setName(l, h), f(!1);
+                                      !1 !== m && m !== p && s.Z.setName(u, m), v(!1);
                                   },
                                   children: (0, r.jsx)(a.oil, {
                                       autoFocus: !0,
-                                      maxLength: m.HN8,
-                                      inputClassName: b.newInput,
+                                      maxLength: g.HN8,
+                                      inputClassName: _.newInput,
                                       name: 'channel_name',
                                       autoComplete: 'off',
-                                      value: h,
-                                      placeholder: null != p ? p : '',
-                                      onChange: (e) => f(e),
-                                      onBlur: () => f(!1),
-                                      onKeyUp: (e) => 'Escape' === e.key && f(!1)
+                                      value: m,
+                                      placeholder: null != f ? f : '',
+                                      onChange: (e) => v(e),
+                                      onBlur: () => v(!1),
+                                      onKeyUp: (e) => 'Escape' === e.key && v(!1)
                                   })
                               })
                     ]
                 }),
-                !1 !== h &&
+                !1 !== m &&
                     (0, r.jsxs)('div', {
-                        className: b.explainer,
+                        className: _.explainer,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-muted',
-                                children: g.NW.string(g.t.a7oCBg)
+                                children: b.NW.string(b.t.a7oCBg)
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-muted',
-                                className: b.visibleLink,
-                                children: g.NW.format(g.t.HVqAgI, { onCancel: () => f(!1) })
+                                className: _.visibleLink,
+                                children: b.NW.format(b.t.HVqAgI, { onCancel: () => v(!1) })
                             })
                         ]
                     })
             ]
         });
     },
-    v = (e) => {
+    j = (e) => {
         let { channel: t, children: n } = e,
-            i = (0, u.ZP)(t);
+            i = (0, d.ZP)(t);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 n,
                 (0, r.jsxs)('div', {
-                    className: b.container,
+                    className: _.container,
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: [
-                        (0, r.jsx)(c.Z, {
+                        (0, r.jsx)(u.Z, {
                             minLen: 1,
-                            maxLen: m.HN8,
-                            className: b.channelName,
+                            maxLen: g.HN8,
+                            className: _.channelName,
                             name: 'channel_name',
                             autoComplete: 'off',
                             value: null != i ? i : '',
@@ -181,21 +201,21 @@ let C = (e) => {
                                 i !== e.currentTarget.value && s.Z.setName(t.id, e.currentTarget.value);
                             }
                         }),
-                        (0, r.jsx)(C, { channel: t })
+                        (0, r.jsx)(x, { channel: t })
                     ]
                 })
             ]
         });
     },
-    j = (e) => {
+    O = (e) => {
         let { channel: t, legacyIconClassName: n } = e,
-            i = (0, d.I3)('header_bar', t.id);
-        return (0, r.jsx)(i ? x : v, {
+            i = (0, p.I3)('header_bar', t.id);
+        return (0, r.jsx)(i ? v : j, {
             channel: t,
-            children: (0, r.jsx)(h.v, {
+            children: (0, r.jsx)(f.v, {
                 channel: t,
-                className: i ? b.newGdmIcon : n,
-                children: (0, r.jsx)(p.Z, {
+                className: i ? _.newGdmIcon : n,
+                children: (0, r.jsx)(h.Z, {
                     'aria-hidden': !0,
                     channel: t,
                     size: a.EFr.SIZE_24,

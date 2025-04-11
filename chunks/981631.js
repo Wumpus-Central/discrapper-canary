@@ -2013,6 +2013,7 @@ var N =
     (r.IAR_REMOVE_APP_BUTTON_CLICKED = 'iar_remove_app_button_clicked'),
     (r.DM_MUTE_FEEDBACK_SUBMITTED = 'dm_mute_feedback_submitted'),
     (r.BLOCK_USER_FEEDBACK_SUBMITTED = 'block_user_feedback_submitted'),
+    (r.IGNORE_USER_FEEDBACK_SUBMITTED = 'ignore_user_feedback_submitted'),
     (r.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED = 'emoji_upload_file_size_limit_exceeded'),
     (r.EMOJI_UPLOAD_STARTED = 'emoji_upload_started'),
     (r.EMOJI_UPLOAD_COMPLETED = 'emoji_upload_completed'),
