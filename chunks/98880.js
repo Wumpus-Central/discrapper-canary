@@ -140,7 +140,7 @@ function Y(e) {
 }
 function Q(e) {
     let { application: t, onClick: n, children: i, sectionName: o, resultsPosition: s, sectionOverallPosition: d, tracksImpression: p, disabled: m, containerStyle: f, look: h } = e,
-        _ = l.useCallback(
+        b = l.useCallback(
             (e) => {
                 if ((0, L.BQ)(t)) {
                     let n = t instanceof P.ZP ? t : P.ZP.createFromServer(t);
@@ -149,18 +149,16 @@ function Q(e) {
             },
             [t]
         ),
-        { name: y, description: x } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
-        { friends: C } = (0, b.Z)(t),
-        { trackItemImpressionRef: v } = (0, k.Z)({
+        { name: _, description: y } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
+        { trackItemImpressionRef: x } = (0, k.Z)({
             applicationId: t.id,
             applicationFlags: (0, L.BQ)(t) ? t.flags : void 0,
             sectionName: o,
             sectionPosition: s,
             sectionOverallPosition: d,
-            promotionalLabel: (0, L.dF)(t),
-            numFriendsWhoPlay: C.length
+            promotionalLabel: (0, L.dF)(t)
         }),
-        g = l.useMemo(() => {
+        C = l.useMemo(() => {
             let e = m ? H.containerDisabled : H.container;
             return a()(
                 e,
@@ -174,18 +172,18 @@ function Q(e) {
         }, [f, m, h]);
     return m
         ? (0, r.jsx)('div', {
-              ref: p ? v : void 0,
-              className: g,
+              ref: p ? x : void 0,
+              className: C,
               children: i
           })
         : (0, r.jsx)(c.P3F, {
-              innerRef: p ? v : void 0,
-              className: g,
+              innerRef: p ? x : void 0,
+              className: C,
               onClick: n,
-              onContextMenu: _,
+              onContextMenu: b,
               'aria-label': U.NW.formatToPlainString(U.t['zLhr9/'], {
-                  applicationName: y,
-                  applicationDescription: x
+                  applicationName: _,
+                  applicationDescription: y
               }),
               children: (0, r.jsx)(c.Rny, { children: i })
           });

@@ -161,6 +161,7 @@ function F(e) {
                 : null,
             k && 0 !== U.length
                 ? (0, i.jsxs)(m.njP, {
+                      className: B.tabBar,
                       selectedItem: Z ? 'friends' : 'overview',
                       onItemSelect: (e) => {
                           'friends' === e ? M(!0) : M(!1);
@@ -169,6 +170,7 @@ function F(e) {
                       children: [
                           (0, i.jsx)(m.njP.Item, {
                               id: 'overview',
+                              className: B.tabItem,
                               children: D.NW.string(D.t['/dp6yc'])
                           }),
                           (0, i.jsx)(m.njP.Item, {

@@ -1300,6 +1300,7 @@
   "GRL3Nj": "!!{firstFriendName}!! and {friendCount, plural, =2 {!!{secondFriendName}!!} other {!!{friendCountMinusOne}!! others} } are playing.\\n\\nDon't get left behind.\\n\\n",
   "GoLnc3": "Welcome back.\\n\\nJoin your {friendCount, plural, =1 {friend} other {friends} } and jump in!\\n\\n",
   "erHFxM": "Apps",
+  "oEqLs7": "Friends who play",
   "0TBExc": "Discover games, music, and other fun things to do with friends!",
   "bCPN5+": "Find New Apps",
   "AHtm4O": "Hide Play Again",

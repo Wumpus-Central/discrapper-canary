@@ -28,5 +28,7 @@ e.exports = {
     monetizationDisclosureStyle: 'monetizationDisclosureStyle__95856',
     friendsMotivationText: 'friendsMotivationText__95856',
     friendsContainer: 'friendsContainer__95856',
-    fixedHeight: 'fixedHeight__95856'
+    fixedHeight: 'fixedHeight__95856',
+    tabBar: 'tabBar__95856',
+    tabItem: 'tabItem__95856'
 };

@@ -60213,6 +60213,7 @@ html {
 }
 
 .appMount__51fd7 {
+    color: var(--background-base-lowest);
     display: flex;
     flex-direction: column;
     overflow: hidden;
