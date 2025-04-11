@@ -17,6 +17,6 @@ e.exports = {
     sidebarListRounded: 'sidebarListRounded_c48ade',
     dragging: 'dragging_c48ade',
     draggingMin: 'draggingMin_c48ade',
-    collapsing: 'collapsing_c48ade',
-    draggingMax: 'draggingMax_c48ade'
+    draggingMax: 'draggingMax_c48ade',
+    collapsing: 'collapsing_c48ade'
 };

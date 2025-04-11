@@ -50,8 +50,8 @@ var i = n(200651),
     F = n(55935),
     W = n(109434),
     V = n(456269),
-    H = n(109590),
-    G = n(660189),
+    G = n(109590),
+    H = n(660189),
     z = n(208970),
     K = n(73315),
     J = n(470623),
@@ -106,7 +106,7 @@ let ea = 72,
                     i = (0, p.e7)([L.Z], () => L.Z.getChannel(t));
                 l()(null != i, 'the thread should not be null here, a store must have missed an update');
                 let r = (0, p.e7)([k.ZP], () => k.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id),
-                    { firstMessage: o } = (0, H.cl)(i),
+                    { firstMessage: o } = (0, G.cl)(i),
                     { content: a, firstMedia: s } = (0, V.mX)({ firstMessage: o }),
                     { messageCountText: c } = (0, V.nP)(i);
                 return {
@@ -293,7 +293,7 @@ let ed = r.memo(function (e) {
             isBlocked: null != t && B.Z.isBlockedForMessage(t),
             isIgnored: null != t && B.Z.isIgnoredForMessage(t)
         })),
-        u = (0, p.e7)([G.Z], () => G.Z.isLoading(n.id)),
+        u = (0, p.e7)([H.Z], () => H.Z.isLoading(n.id)),
         d = (0, p.e7)([D.Z], () => D.Z.can(ee.Plq.MANAGE_MESSAGES, n)),
         h = M.cC.useSetting(),
         m = null;

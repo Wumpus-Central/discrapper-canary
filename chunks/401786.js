@@ -14,8 +14,8 @@ var r = n(200651),
     h = n(600164),
     f = n(374649),
     b = n(431369),
-    N = n(55610),
-    x = n(653798),
+    N = n(811334),
+    x = n(55610),
     _ = n(311821),
     E = n(42818),
     j = n(314884),
@@ -58,7 +58,7 @@ function D(e) {
                                   ? P.NW.format(P.t.gXSnur, { endDate: t.currentPeriodEnd })
                                   : P.NW.format(P.t.otHdfX, { endDate: t.currentPeriodEnd })
                     }),
-                    (0, r.jsx)(N.Z, { fromBoostCancelModal: !0 })
+                    (0, r.jsx)(x.Z, { fromBoostCancelModal: !0 })
                 ]
             }),
             t.isPurchasedExternally
@@ -97,7 +97,7 @@ async function Z(e, t, n, r) {
 }
 function w(e) {
     var t, n, s;
-    let { premiumSubscription: a, guildBoostSlotId: c, onBack: d, onNext: N, onClose: j } = e,
+    let { premiumSubscription: a, guildBoostSlotId: c, onBack: d, onNext: x, onClose: j } = e,
         [O, S] = i.useState(!1),
         [A, D] = i.useState(null),
         [w, k] = i.useMemo(() => {
@@ -169,11 +169,11 @@ function w(e) {
                             children: A
                         }),
                     (0, r.jsx)('div', { children: P.NW.format(P.t['0W23cn'], { endDate: G.subscriptionPeriodStart }) }),
-                    (0, r.jsxs)(x.PO, {
+                    (0, r.jsxs)(N.aO, {
                         className: R.invoiceTable,
                         children: [
-                            (0, r.jsx)(x.q9, { children: P.NW.string(P.t.iqhIp6) }),
-                            (0, r.jsx)(x.R$, {
+                            (0, r.jsx)(N.Z9, { children: P.NW.string(P.t.iqhIp6) }),
+                            (0, r.jsx)(N.B1, {
                                 label: P.NW.format(P.t['Vg+LRk'], { subscriptionCount: 1 }),
                                 value: (0, T.og)((0, T.T4)(z, a.currency), Y, K),
                                 className: R.invoiceCancelRow
@@ -181,7 +181,7 @@ function w(e) {
                             null != V && V.length > 0
                                 ? (0, r.jsxs)('div', {
                                       children: [
-                                          (0, r.jsx)(x.KU, {}),
+                                          (0, r.jsx)(N.UN, {}),
                                           (0, r.jsx)(E.nd, {
                                               premiumSubscription: a,
                                               renewalInvoice: G,
@@ -203,7 +203,7 @@ function w(e) {
                         disabled: O,
                         onClick: async () => {
                             try {
-                                S(!0), D(null), await Z(a, w, M, c), N();
+                                S(!0), D(null), await Z(a, w, M, c), x();
                             } catch (t) {
                                 let e = t instanceof u.HF ? t : new u.HF(t, t.code);
                                 D(P.NW.string(e.code === m.SM.BILLING_PAUSE_INVALID_UPDATE ? P.t.dq4vq6 : P.t['5mlOCQ'])), S(!1);

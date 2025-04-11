@@ -26,7 +26,7 @@ function N(e) {
         S,
         { message: I, channel: T, compact: P } = e,
         A = null == (t = I.chatWallpaperInfo) ? void 0 : t.wallpaperId,
-        w = (0, m.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
+        { enabled: w } = (0, m.sX)({ location: 'ChatWallpaperSetSystemMessage' }),
         Z = (0, s.ZP)(I),
         R = (0, l.wjy)((0, o.ZP)()),
         {

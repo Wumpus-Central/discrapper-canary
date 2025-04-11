@@ -2,8 +2,8 @@ n.d(t, { default: () => s });
 var r = n(200651),
     a = n(503817),
     i = n(211065),
-    o = n(66630);
-function l(e) {
+    l = n(66630);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,5 +49,5 @@ function s(e) {
             }
             return a;
         })(e, ['location']);
-    return (0, a.D)({ location: t }) ? (0, r.jsx)(o.Z, l({}, n)) : (0, r.jsx)(i.Z, l({}, n));
+    return (0, a.D)({ location: t }) ? (0, r.jsx)(l.Z, o({}, n)) : (0, r.jsx)(i.Z, o({}, n));
 }

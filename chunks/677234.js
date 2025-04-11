@@ -52,8 +52,8 @@ n.r(
         targetGuildScheduledEvent: 'targetGuildScheduledEvent__43dab',
         thread: 'thread__43dab',
         applicationCommand: 'applicationCommand__43dab',
-        autoModerationBlockMessage: 'autoModerationBlockMessage__43dab',
         autoModerationRule: 'autoModerationRule__43dab',
+        autoModerationBlockMessage: 'autoModerationBlockMessage__43dab',
         targetGuildHome: 'targetGuildHome__43dab',
         targetGuildSoundboard: 'targetGuildSoundboard__43dab',
         themeOverrideDark: 'themeOverrideDark__43dab'

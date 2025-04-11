@@ -1,4 +1,4 @@
-n.d(t, { P: () => o });
+n.d(t, { P: () => l });
 var r = n(818083),
     a = n(355820);
 let i = (0, r.B)({
@@ -14,18 +14,18 @@ let i = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, a.P)({
             location: t,
             autoTrackExposure: n
         }),
-        { enabled: o } = i.useExperiment(
+        { enabled: l } = i.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r
             }
         );
-    return o;
+    return l;
 }

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o }), n(314940);
+n.d(t, { Z: () => l }), n(314940);
 var r = n(278074),
     a = n(481060),
     i = n(695346);
-function o() {
+function l() {
     let e = i.co.getSetting();
     return (0, r.EQ)(e)
         .with(a.Skl.IDLE, () => a.Skl.IDLE)

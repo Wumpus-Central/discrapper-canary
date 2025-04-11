@@ -1,23 +1,23 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
-var c = n(442837),
-    l = n(481060),
-    o = n(496675),
-    i = n(981631),
-    a = n(388032);
-function u(e, t) {
-    let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        s = (0, c.e7)([o.Z], () => o.Z.can(i.Plq.MANAGE_CHANNELS, e), [e]);
-    if (__OVERLAY__ || !s) return null;
-    let b = () => {
-        (0, l.ZDy)(async () => {
+var i = n(442837),
+    o = n(481060),
+    c = n(496675),
+    a = n(981631),
+    l = n(388032);
+function s(e, t) {
+    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
+        u = (0, i.e7)([c.Z], () => c.Z.can(a.Plq.MANAGE_CHANNELS, e), [e]);
+    if (__OVERLAY__ || !u) return null;
+    let d = () => {
+        (0, o.ZDy)(async () => {
             let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
             return (n) => {
-                var c, l;
+                var i, o;
                 return (0, r.jsx)(
                     t,
-                    ((c = (function (e) {
+                    ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -42,14 +42,14 @@ function u(e, t) {
                         }
                         return e;
                     })({}, n)),
-                    (l = l =
+                    (o = o =
                         {
-                            channelType: u,
+                            channelType: s,
                             guildId: e.guild_id,
                             categoryId: e.parent_id
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -57,26 +57,26 @@ function u(e, t) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(l, e));
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                           }),
-                    c)
+                    i)
                 );
             };
         });
     };
-    switch (u) {
-        case i.d4z.GUILD_TEXT:
-            return (0, r.jsx)(l.sNh, {
+    switch (s) {
+        case a.d4z.GUILD_TEXT:
+            return (0, r.jsx)(o.sNh, {
                 id: 'create-text-channel',
-                label: a.NW.string(a.t.HHkTJC),
-                action: b
+                label: l.NW.string(l.t.HHkTJC),
+                action: d
             });
-        case i.d4z.GUILD_VOICE:
-            return (0, r.jsx)(l.sNh, {
+        case a.d4z.GUILD_VOICE:
+            return (0, r.jsx)(o.sNh, {
                 id: 'create-voice-channel',
-                label: a.NW.string(a.t.AlbZaG),
-                action: b
+                label: l.NW.string(l.t.AlbZaG),
+                action: d
             });
         default:
             return null;

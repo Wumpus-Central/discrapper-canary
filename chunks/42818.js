@@ -29,7 +29,7 @@ var r = n(200651),
     b = n(374649),
     y = n(591548),
     v = n(639119),
-    O = n(653798),
+    O = n(811334),
     I = n(585602),
     S = n(474936),
     T = n(981631),
@@ -237,7 +237,7 @@ function j(e) {
                   })
                 : null,
             0 !== l && null != a && null != s
-                ? (0, r.jsx)(O.R$, {
+                ? (0, r.jsx)(O.B1, {
                       label: N.NW.formatToPlainString(N.t.a3cAOj, {
                           numGuildSubscriptions: a.quantity,
                           planName: (0, g.Gf)(s.id, !1, n)
@@ -246,8 +246,8 @@ function j(e) {
                   })
                 : null,
             (0, r.jsx)(I.Z, { invoice: t }),
-            (0, r.jsx)(O.KU, {}),
-            (0, r.jsx)(O.Ji, {
+            (0, r.jsx)(O.UN, {}),
+            (0, r.jsx)(O.az, {
                 label: N.NW.format(t.taxInclusive ? (n ? N.t.BqdxQk : N.t.XH4raG) : N.t.RUI48P, {}),
                 value: t.currency === T.pKx.USD ? (0, E.T4)(t.total, t.currency) : ''.concat((0, E.T4)(t.total, t.currency), '*')
             })
@@ -277,7 +277,7 @@ function U(e) {
             }),
             0 === h || f
                 ? null
-                : (0, r.jsx)(O.R$, {
+                : (0, r.jsx)(O.B1, {
                       label: (0, r.jsx)(k, {
                           label: N.NW.formatToPlainString(N.t.ZSVgeX, { planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name }),
                           tooltipText: N.NW.string(N.t.JmwQJC)
@@ -285,7 +285,7 @@ function U(e) {
                       value: (0, E.T4)(h, t.currency)
                   }),
             0 !== m
-                ? (0, r.jsx)(O.R$, {
+                ? (0, r.jsx)(O.B1, {
                       label: (0, r.jsx)(k, {
                           label: N.NW.string(N.t['+as5ZW']),
                           tooltipText: N.NW.format(N.t.UDop9f, {}),
@@ -295,8 +295,8 @@ function U(e) {
                   })
                 : null,
             (0, r.jsx)(I.Z, { invoice: t }),
-            (0, r.jsx)(O.KU, {}),
-            (0, r.jsx)(O.Ji, {
+            (0, r.jsx)(O.UN, {}),
+            (0, r.jsx)(O.az, {
                 label: N.NW.format(t.taxInclusive ? (i ? N.t.BqdxQk : N.t.XH4raG) : N.t.RUI48P, {}),
                 value: t.currency === T.pKx.USD ? (0, E.T4)(t.total, t.currency) : ''.concat((0, E.T4)(t.total, t.currency), '*')
             })
@@ -339,11 +339,11 @@ function F(e) {
         d = null != l && (l.intervalType !== c || l.intervalCount !== u);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(O.KU, { extended: !0 }),
+            (0, r.jsx)(O.UN, { extended: !0 }),
             null != n
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(O.q9, { children: N.NW.string(N.t.tuqjWV) }),
+                          (0, r.jsx)(O.Z9, { children: N.NW.string(N.t.tuqjWV) }),
                           B(G((0, y.j)(n.invoiceItems))).map((e) =>
                               (0, r.jsx)(
                                   M,
@@ -355,11 +355,11 @@ function F(e) {
                                   e.id
                               )
                           ),
-                          (0, r.jsx)(O.KU, { extended: !0 })
+                          (0, r.jsx)(O.UN, { extended: !0 })
                       ]
                   })
                 : null,
-            (0, r.jsx)(O.q9, { children: N.NW.string(N.t.qxVrh4) }),
+            (0, r.jsx)(O.Z9, { children: N.NW.string(N.t.qxVrh4) }),
             B(G((0, y.j)(i.invoiceItems))).map((e) => {
                 let n = null != s && !s.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity);
                 return (0, r.jsx)(
@@ -374,8 +374,8 @@ function F(e) {
                 );
             }),
             (0, r.jsx)(I.Z, { invoice: i }),
-            (0, r.jsx)(O.KU, {}),
-            (0, r.jsx)(O.R$, {
+            (0, r.jsx)(O.UN, {}),
+            (0, r.jsx)(O.B1, {
                 label: N.NW.string(N.t.AChTLS),
                 value: (0, E.og)((0, E.T4)(i.total, i.currency), c, u),
                 className: A.subscriptionCostRow
@@ -433,7 +433,7 @@ function H(e) {
         children: [
             d
                 ? null
-                : (0, r.jsx)(O.HE, {
+                : (0, r.jsx)(O.P7, {
                       children: (0, r.jsx)(Z, {
                           proratedInvoice: n,
                           renewalInvoice: o,
@@ -492,17 +492,17 @@ function W(e) {
                                   className: A.purchaseDetailsHeaderText,
                                   children: t
                               }),
-                              (0, r.jsxs)(O.PO, {
+                              (0, r.jsxs)(O.aO, {
                                   className: i,
                                   children: [
-                                      (0, r.jsx)(O.q9, { children: N.NW.string(N.t.sail9P) }),
-                                      (0, r.jsx)(O.R$, {
+                                      (0, r.jsx)(O.Z9, { children: N.NW.string(N.t.sail9P) }),
+                                      (0, r.jsx)(O.B1, {
                                           label: t,
                                           value: p
                                       }),
                                       (0, r.jsx)(I.Z, { invoice: s }),
-                                      (0, r.jsx)(O.KU, {}),
-                                      (0, r.jsx)(O.R$, {
+                                      (0, r.jsx)(O.UN, {}),
+                                      (0, r.jsx)(O.B1, {
                                           label: N.NW.string(N.t.txajQE),
                                           value: h,
                                           className: A.subscriptionCostRow

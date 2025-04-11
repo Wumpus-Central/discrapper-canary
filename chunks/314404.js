@@ -32,8 +32,8 @@ var r = n(200651),
     P = n(847903),
     R = n(104494),
     w = n(639119),
-    D = n(55610),
-    L = n(653798),
+    D = n(811334),
+    L = n(55610),
     x = n(553797),
     M = n(346071),
     k = n(927699),
@@ -323,7 +323,7 @@ function et(e) {
             (0, r.jsxs)('div', {
                 className: eO ? e0 : void 0,
                 children: [
-                    (0, r.jsx)(D.Z, {
+                    (0, r.jsx)(L.Z, {
                         fromBoostCancelModal: !1,
                         className: K.legacyPricingNotice
                     }),
@@ -356,7 +356,7 @@ function et(e) {
                                 ? (0, r.jsxs)('div', {
                                       children: [
                                           (0, r.jsx)('div', { className: K.selectPlanDivider }),
-                                          (0, r.jsx)(L.Ji, {
+                                          (0, r.jsx)(D.az, {
                                               label: W.NW.string(W.t.txajQE),
                                               value: (0, r.jsx)(x.Z, {
                                                   price: eZ.amount,

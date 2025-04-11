@@ -7,23 +7,23 @@ n(192379);
 var i = n(512722),
     o = n.n(i),
     a = n(228624),
-    s = n(215148),
-    l = n(653798),
+    s = n(811334),
+    l = n(215148),
     c = n(937615),
     u = n(981631),
     d = n(388032),
     f = n(718578);
 let _ = (e) => {
     let { sku: t, shouldShowProductPreview: n, value: i } = e;
-    return (0, r.jsx)(l.PO, {
+    return (0, r.jsx)(s.aO, {
         className: f.invoice,
         children: n
-            ? (0, r.jsx)(s.C, {
+            ? (0, r.jsx)(l.C, {
                   sku: t,
                   value: i,
                   className: f.subscriptionCostRow
               })
-            : (0, r.jsx)(l.R$, {
+            : (0, r.jsx)(s.B1, {
                   label: t.name,
                   value: i,
                   className: f.subscriptionCostRow
@@ -37,27 +37,27 @@ function p(e) {
         p = (0, a.ed)('SKUInvoicePreview'),
         h = t.productLine === u.POd.COLLECTIBLES && p;
     return !n.tax_inclusive && n.tax > 0
-        ? (0, r.jsxs)(l.PO, {
+        ? (0, r.jsxs)(s.aO, {
               className: f.invoice,
               children: [
                   h
-                      ? (0, r.jsx)(s.C, {
+                      ? (0, r.jsx)(l.C, {
                             sku: t,
                             value: (0, c.T4)(i, n.currency),
                             className: f.subscriptionCostRow
                         })
-                      : (0, r.jsx)(l.R$, {
+                      : (0, r.jsx)(s.B1, {
                             label: t.name,
                             value: (0, c.T4)(i, n.currency),
                             className: f.subscriptionCostRow
                         }),
-                  (0, r.jsx)(l.R$, {
+                  (0, r.jsx)(s.B1, {
                       label: d.NW.string(d.t['/I8zmJ']),
                       value: (0, c.T4)(n.tax, n.currency),
                       className: f.subscriptionCostRow
                   }),
-                  (0, r.jsx)(l.KU, {}),
-                  (0, r.jsx)(l.Ji, {
+                  (0, r.jsx)(s.UN, {}),
+                  (0, r.jsx)(s.az, {
                       label: d.NW.format(d.t['+B5KfH'], {}),
                       value: (0, c.T4)(n.amount, n.currency),
                       className: f.subscriptionCostRow

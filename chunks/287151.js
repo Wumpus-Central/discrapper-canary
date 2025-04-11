@@ -47,8 +47,8 @@ var i,
     F = n(74538),
     W = n(960020),
     V = n(566006),
-    H = n(886132),
-    G = n(183023),
+    G = n(886132),
+    H = n(183023),
     z = n(524444),
     K = n(89729),
     J = n(620652),
@@ -618,14 +618,14 @@ let eu = o.memo((e) => {
                       children: [
                           (0, r.jsx)('div', {
                               className: Q.reactionEmojiDetailsUnfurlGuildDetails,
-                              children: (0, r.jsx)(G.Oe, {
+                              children: (0, r.jsx)(H.Oe, {
                                   expressionSourceGuild: a,
                                   hasJoinedExpressionSourceGuild: s,
-                                  isDisplayingJoinGuildButtonInPopout: c.type === H.$.JOIN_GUILD
+                                  isDisplayingJoinGuildButtonInPopout: c.type === G.$.JOIN_GUILD
                               })
                           }),
                           f &&
-                              (0, r.jsx)(G.n_, {
+                              (0, r.jsx)(H.n_, {
                                   emojiId: o,
                                   expressionSourceGuild: a,
                                   hasJoinedEmojiSourceGuild: s,
@@ -659,7 +659,7 @@ let eu = o.memo((e) => {
             P = L.Z.getGuildId(),
             E = null != P && (P === (null == u ? void 0 : u.id) || P === (null == c ? void 0 : c.id)),
             I = D.default.getCurrentUser(),
-            w = (0, H.a)({
+            w = (0, G.a)({
                 sourceType: g,
                 expressionSourceApplication: null != m ? m : null,
                 isPremium: F.ZP.isPremium(I),
@@ -704,7 +704,7 @@ let eu = o.memo((e) => {
                           children: [
                               (0, r.jsx)('div', { className: Q.reactionEmojiDetailsDivider }),
                               null != w.emojiDescription &&
-                                  w.type !== H.$.UNAVAILABLE &&
+                                  w.type !== G.$.UNAVAILABLE &&
                                   (0, r.jsx)(p.Text, {
                                       variant: 'text-sm/normal',
                                       'aria-label': w.type,

@@ -18,7 +18,7 @@ n.d(t, {
     n(388685);
 var r = n(887003),
     i = n(46140),
-    o = n(576641);
+    o = n(151702);
 let a = /\.([a-zA-Z0-9]+)$/,
     s = ['video/mp4', 'video/webm'];
 var l = (function (e) {

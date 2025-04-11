@@ -79,7 +79,7 @@ function p(e) {
     );
 }
 let d = function (e) {
-    let { children: t, className: r, compact: l = !1, timestamp: d, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: y = !1, isInline: O = !0, id: g, isEdited: j = !1, application: v, tooltipPosition: h } = e,
+    let { children: t, className: r, compact: l = !1, timestamp: d, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: y = !1, isInline: g = !0, id: O, isEdited: j = !1, application: v, tooltipPosition: h } = e,
         x = new Date(d),
         P = (0, o.Hg)(x),
         S = null != f ? (0, o.vc)(x, f) : l ? (0, o.vc)(x, 'LT') : (0, o.Y4)(x, !0),
@@ -89,7 +89,7 @@ let d = function (e) {
         className: i()(r, N, {
             [m.timestamp]: !0,
             [m.timestampVisibleOnHover]: b,
-            [m.timestampInline]: O,
+            [m.timestampInline]: g,
             [m.alt]: y
         }),
         children:
@@ -105,7 +105,7 @@ let d = function (e) {
                               tooltipProps: e,
                               timeFormatted: S,
                               timestamp: x,
-                              id: g,
+                              id: O,
                               compact: l,
                               children: t
                           })
@@ -117,7 +117,7 @@ let d = function (e) {
                       children: (0, n.jsx)(p, {
                           timeFormatted: S,
                           timestamp: x,
-                          id: g,
+                          id: O,
                           compact: l,
                           children: t
                       })
