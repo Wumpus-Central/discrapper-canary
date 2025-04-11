@@ -11,7 +11,8 @@ n.d(t, {
     z_: () => E
 }),
     n(388685),
-    n(539854);
+    n(539854),
+    n(467055);
 var r = n(379649),
     i = n(909766),
     o = n(179654);
@@ -36,10 +37,10 @@ var d = (function (e) {
         return (e.H264 = 'H264'), (e.H265 = 'H265'), (e.VP8 = 'VP8'), (e.VP9 = 'VP9'), (e.AV1 = 'AV1'), (e.UNKNOWN = 'UNKNOWN'), e;
     })({}),
     f = (function (e) {
-        return (e.NVIDIA_CUDA = 'nvidia_cuda'), (e.NVIDIA_DIRECT_3D = 'nvidia_direct_3d'), (e.OPENH264 = 'openh264'), (e.VIDEOTOOLBOX = 'videotoolbox'), (e.AMD_DIRECT_3D = 'amd_direct_3d'), (e.INTEL = 'intel'), (e.INTEL_DIRECT_3D = 'intel_direct_3d'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e;
+        return (e.NVIDIA_CUDA = 'nvidia_cuda'), (e.NVIDIA_DIRECT_3D = 'nvidia_direct_3d'), (e.OPENH264 = 'openh264'), (e.VIDEOTOOLBOX = 'videotoolbox'), (e.AMD_DIRECT_3D = 'amd_direct_3d'), (e.INTEL = 'intel'), (e.INTEL_DIRECT_3D = 'intel_direct_3d'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.EXYNOS = 'exynos'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e;
     })({}),
     _ = (function (e) {
-        return (e.VIDEOTOOLBOX = 'videotoolbox'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.ELECTRON = 'electron'), (e.FFMPEG = 'ffmpeg'), (e.DAV1D = 'dav1d'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e;
+        return (e.VIDEOTOOLBOX = 'videotoolbox'), (e.VP8_LIBVPX = 'vp8_libvpx'), (e.ELECTRON = 'electron'), (e.FFMPEG = 'ffmpeg'), (e.DAV1D = 'dav1d'), (e.WEBRTC = 'WebRTC'), (e.EXYNOS = 'exynos'), (e.UNCATEGORIZED = 'uncategorized'), (e.UNKNOWN = 'unknown'), e;
     })({});
 let p = Object.freeze({
         'nvidia: cuda': 'nvidia_cuda',
@@ -49,14 +50,17 @@ let p = Object.freeze({
         intel: 'intel',
         VideoToolbox: 'videotoolbox',
         OpenH264: 'openh264',
-        libvpx: 'vp8_libvpx'
+        libvpx: 'vp8_libvpx',
+        'c2.exynos': 'exynos'
     }),
     h = Object.freeze({
         VideoToolbox: 'videotoolbox',
         libvpx: 'vp8_libvpx',
         electron: 'electron',
         ffmpeg: 'ffmpeg',
-        dav1d: 'dav1d'
+        dav1d: 'dav1d',
+        WebRTC: 'WebRTC',
+        'c2.exynos': 'exynos'
     });
 var m = (function (e) {
     return (e[(e.None = 0)] = 'None'), (e[(e.ClientSideDisableVideo = 1)] = 'ClientSideDisableVideo'), (e[(e.SenderStopped = 2)] = 'SenderStopped'), e;
@@ -214,15 +218,7 @@ class v {
         return e;
     }
     constructor(e) {
-        a(this, 'decoderBuckets', {
-            vp8_libvpx: 0,
-            dav1d: 0,
-            ffmpeg: 0,
-            electron: 0,
-            videotoolbox: 0,
-            uncategorized: 0,
-            unknown: 0
-        }),
+        a(this, 'decoderBuckets', Object.fromEntries(Object.values(_).map((e) => [e, 0]))),
             a(this, 'codecBuckets', {
                 H264: 0,
                 H265: 0,
@@ -303,43 +299,6 @@ class O extends v {
         (this.targetFrames = this.targetFrames + e * i), (this.targetBytesNetwork = this.targetBytesNetwork + (t / 8) * i), (this.targetBytesMax = this.targetBytesMax + (n / 8) * i), (this.outboundBytesAvailable = this.outboundBytesAvailable + (r / 8) * i), this.targetBitrateHistogram.addSample(t), this.outboundBandwidthSurplus.addSample(r - t);
     }
     constructor(...e) {
-        super(...e),
-            a(this, 'encoderBuckets', {
-                nvidia_cuda: 0,
-                nvidia_direct_3d: 0,
-                openh264: 0,
-                videotoolbox: 0,
-                amd_direct_3d: 0,
-                intel: 0,
-                intel_direct_3d: 0,
-                vp8_libvpx: 0,
-                uncategorized: 0,
-                unknown: 0
-            }),
-            a(this, 'encoderCodec', 'UNKNOWN'),
-            a(this, 'targetFrames', 0),
-            a(this, 'targetBytesMax', 0),
-            a(this, 'targetBytesNetwork', 0),
-            a(this, 'targetBitrateHistogram', new i.b()),
-            a(this, 'outboundBytesAvailable', 0),
-            a(this, 'outboundBandwidthSurplus', new i.b()),
-            a(this, 'averageEncodeTime', 0),
-            a(this, 'vmafScoreSum', 0),
-            a(this, 'vmafScoreNum', 0),
-            a(this, 'vmafHistogram', new i.b()),
-            a(this, 'psnrDbSum', 0),
-            a(this, 'psnrDbNum', 0),
-            a(this, 'psnrHistogram', new i.b()),
-            a(this, 'qualityDecodeErrors', 0),
-            a(this, 'qualityDecoderReboots', 0),
-            a(this, 'qualityScoreErrors', 0),
-            a(this, 'qualityFrameDrops', 0),
-            a(this, 'qualitySizeMismatches', 0),
-            a(this, 'outboundSinkWantSum', 0),
-            a(this, 'outboundSinkWantNum', 0),
-            a(this, 'framesDroppedRateLimiter', null),
-            a(this, 'framesDroppedEncoderQueue', null),
-            a(this, 'framesDroppedCongestionWindow', null),
-            a(this, 'framesDroppedEncoder', null);
+        super(...e), a(this, 'encoderBuckets', Object.fromEntries(Object.values(f).map((e) => [e, 0]))), a(this, 'encoderCodec', 'UNKNOWN'), a(this, 'targetFrames', 0), a(this, 'targetBytesMax', 0), a(this, 'targetBytesNetwork', 0), a(this, 'targetBitrateHistogram', new i.b()), a(this, 'outboundBytesAvailable', 0), a(this, 'outboundBandwidthSurplus', new i.b()), a(this, 'averageEncodeTime', 0), a(this, 'vmafScoreSum', 0), a(this, 'vmafScoreNum', 0), a(this, 'vmafHistogram', new i.b()), a(this, 'psnrDbSum', 0), a(this, 'psnrDbNum', 0), a(this, 'psnrHistogram', new i.b()), a(this, 'qualityDecodeErrors', 0), a(this, 'qualityDecoderReboots', 0), a(this, 'qualityScoreErrors', 0), a(this, 'qualityFrameDrops', 0), a(this, 'qualitySizeMismatches', 0), a(this, 'outboundSinkWantSum', 0), a(this, 'outboundSinkWantNum', 0), a(this, 'framesDroppedRateLimiter', null), a(this, 'framesDroppedEncoderQueue', null), a(this, 'framesDroppedCongestionWindow', null), a(this, 'framesDroppedEncoder', null);
     }
 }
