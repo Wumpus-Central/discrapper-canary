@@ -1643,6 +1643,7 @@ var N =
     (r.EXPERIMENT_CUSTOM_EVENT = 'experiment_custom_event'),
     (r.EXPERIMENT_SAVE_EXPOSURE_FAILED = 'experiment_save_exposure_failed'),
     (r.EXPERIMENT_FETCH_IGNORED = 'experiment_fetch_ignored'),
+    (r.EXPERIMENT_USER_EVALUATION_EXPOSED = 'experiment_user_evaluation_exposed'),
     (r.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED = 'guild_insights_settings_cta_clicked'),
     (r.GUILD_SETTINGS_DISCOVERY_VIEWED = 'guild_settings_discovery_viewed'),
     (r.GUILD_SETTINGS_DISCOVERY_UPDATED = 'guild_settings_discovery_updated'),
