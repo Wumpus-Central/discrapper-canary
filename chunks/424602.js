@@ -1,32 +1,12 @@
 n.d(t, {
-    PM: () => u,
-    _f: () => a,
-    aZ: () => c,
-    aq: () => o,
-    gu: () => s
+    PM: () => c,
+    _f: () => o,
+    aZ: () => l,
+    gu: () => a
 });
 var r = n(818083),
     i = n(987338);
 let o = (0, r.B)({
-        kind: 'user',
-        id: '2024-08_open_platform_app_launcher_holdout',
-        label: 'Open Platform App Launcher Holdout',
-        commonTriggerPoint: i.$P.VOICE_CALL,
-        defaultConfig: { clickOnHomeActivityOpensAppDetail: !0 },
-        treatments: [
-            {
-                id: 1,
-                label: 'clicking activity in voice app launcher -> performs activity action',
-                config: { clickOnHomeActivityOpensAppDetail: !1 }
-            },
-            {
-                id: 2,
-                label: 'clicking activity in voice app launcher -> opens activity detail page',
-                config: { clickOnHomeActivityOpensAppDetail: !0 }
-            }
-        ]
-    }),
-    a = (0, r.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',
@@ -54,8 +34,8 @@ let o = (0, r.B)({
             }
         ]
     }),
-    s = '1211781489931452447',
-    l = (0, r.B)({
+    a = '1211781489931452447',
+    s = (0, r.B)({
         kind: 'guild',
         id: '2025-02_filter_wordle_from_voice_channel_launcher',
         label: 'Filter Wordle From Voice Channel Launcher',
@@ -68,10 +48,10 @@ let o = (0, r.B)({
             }
         ]
     });
-function c(e, t) {
-    return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && l.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+function l(e, t) {
+    return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && s.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
 }
-let u = (0, r.B)({
+let c = (0, r.B)({
     kind: 'user',
     id: '2025-03_app_launcher_pep_button_label',
     label: 'Change PEP Button Label To Play',
