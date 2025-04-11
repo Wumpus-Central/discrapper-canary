@@ -103,9 +103,6 @@ function J(e) {
             let e = a()(q.preview, eo),
                 t = (e) => {
                     e.stopPropagation(), e_({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(o.channelId), (0, u.iV)(o), null == $ || $();
-                },
-                n = (e) => {
-                    (e.keyCode === Y.yXg.SPACE || e.keyCode === Y.yXg.ENTER) && t(e);
                 };
             return null == eO && eE
                 ? (0, r.jsx)('div', {
@@ -116,7 +113,6 @@ function J(e) {
                   ? (0, r.jsxs)(l.P3F, {
                         className: a()(e, q.overlay, { [q.clickable]: eh }),
                         onClick: eh ? t : void 0,
-                        onKeyDown: eh ? n : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
@@ -142,7 +138,6 @@ function J(e) {
                   : (0, r.jsxs)(l.P3F, {
                         className: a()(e, q.overlay, { [q.clickable]: eh }),
                         onClick: eh ? t : void 0,
-                        onKeyDown: eh ? n : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
