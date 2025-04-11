@@ -511,7 +511,7 @@ function er(e) {
                         onToggle: eg,
                         scrollerRef: ea,
                         selection: T,
-                        disabled: et
+                        disabled: e_
                     })
                 }),
                 (0, l.jsxs)(c.mzw, {
@@ -526,7 +526,8 @@ function er(e) {
                             getInviteKey: eb,
                             sendInvite: eT,
                             canUseVanityURL: ev,
-                            disabled: e_ || 0 === T.length,
+                            disabled: e_,
+                            hasSelection: T.length > 0,
                             options: L,
                             setOptions: ec,
                             isGuestInviteAllowed: ej,
