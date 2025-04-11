@@ -1,4 +1,4 @@
-t.d(n, { default: () => f }), t(388685);
+t.d(n, { default: () => x }), t(388685);
 var l = t(200651),
     r = t(192379),
     o = t(442837),
@@ -11,7 +11,7 @@ var l = t(200651),
     h = t(140106),
     p = t(388032),
     m = t(285580);
-function x(e) {
+function f(e) {
     let { channel: n, previewIcon: t, onIconChange: r, onIconRemove: o } = e,
         a = void 0 !== t ? t : null != n.icon ? (0, s.x)(n, 120) : null;
     return (0, l.jsxs)('div', {
@@ -40,7 +40,7 @@ function x(e) {
                         className: m.pencilIconWrapper,
                         children: (0, l.jsx)(i.vdY, {
                             color: 'currentColor',
-                            size: 'md'
+                            size: 'refresh_sm'
                         })
                     })
                 ]
@@ -60,32 +60,36 @@ function x(e) {
         ]
     });
 }
-let f = function (e) {
+let x = function (e) {
     var n;
-    let { channelId: t, onClose: s, transitionState: f } = e,
-        v = (0, u.Dt)(),
-        g = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
-        j = (null != (n = null == g ? void 0 : g.name) ? n : '').length > 0,
-        N = (0, c.ZP)(g),
-        b = (0, c.cO)(g),
-        [y, _] = r.useState(j && null != N ? N : ''),
-        [C, W] = r.useState(void 0);
-    return null == g
+    let { channelId: t, onClose: s, transitionState: x, setHasPendingChanges: v, closeOrShowDiscardChangesAlert: g } = e,
+        j = (0, u.Dt)(),
+        N = (0, o.e7)([d.Z], () => d.Z.getChannel(t)),
+        b = null == N ? void 0 : N.name,
+        y = (null != (n = null == N ? void 0 : N.name) ? n : '').length > 0,
+        _ = (0, c.ZP)(N),
+        C = (0, c.cO)(N),
+        [W, k] = r.useState(y && null != _ ? _ : ''),
+        [w, P] = r.useState(void 0);
+    return (r.useEffect(() => {
+        v(W !== b || void 0 !== w);
+    }, [W, b, w, v]),
+    null == N)
         ? null
         : (0, l.jsx)('form', {
               onSubmit: (e) => {
-                  e.preventDefault(), y !== g.name && a.Z.setName(t, y), void 0 !== C && a.Z.setIcon(t, C).catch(h.es), s();
+                  e.preventDefault(), W !== N.name && a.Z.setName(t, W), void 0 !== w && a.Z.setIcon(t, w).catch(h.es), s();
               },
               children: (0, l.jsxs)(i.Y0X, {
-                  transitionState: f,
-                  'aria-labelledby': v,
+                  transitionState: x,
+                  'aria-labelledby': j,
                   children: [
                       (0, l.jsxs)(i.xBx, {
                           separator: !0,
                           className: m.header,
                           children: [
                               (0, l.jsx)(i.X6q, {
-                                  id: v,
+                                  id: j,
                                   variant: 'heading-lg/semibold',
                                   color: 'header-primary',
                                   children: p.NW.string(p.t['5Q9+/P'])
@@ -99,16 +103,16 @@ let f = function (e) {
                       (0, l.jsxs)(i.hzk, {
                           className: m.modalContent,
                           children: [
-                              (0, l.jsx)(x, {
-                                  channel: g,
-                                  previewIcon: C,
-                                  onIconChange: (e) => W(e.imageUri),
-                                  onIconRemove: () => W(null)
+                              (0, l.jsx)(f, {
+                                  channel: N,
+                                  previewIcon: w,
+                                  onIconChange: (e) => P(e.imageUri),
+                                  onIconRemove: () => P(null)
                               }),
                               (0, l.jsx)(i.oil, {
-                                  placeholder: null != b ? b : '',
-                                  value: y,
-                                  onChange: _,
+                                  placeholder: null != C ? C : '',
+                                  value: W,
+                                  onChange: k,
                                   autoFocus: !0
                               })
                           ]
@@ -120,7 +124,7 @@ let f = function (e) {
                                   children: p.NW.string(p.t.R3BPHx)
                               }),
                               (0, l.jsx)(i.zxk, {
-                                  onClick: s,
+                                  onClick: g,
                                   look: i.zxk.Looks.LINK,
                                   color: i.zxk.Colors.PRIMARY,
                                   innerClassName: m.cancelButton,
