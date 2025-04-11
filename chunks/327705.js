@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var i = n(723938),
     o = n(931989),
-    a = n(648894);
+    a = n(396704);
 function s(e, t, n) {
     return (
         t in e
@@ -34,7 +34,6 @@ function l(e) {
     return e;
 }
 function c(e) {
-    let { useRiveAsset: t } = (0, a._)(),
-        { status: n, buffer: s } = t(i.Z);
-    return 'loading' === n ? null : (0, r.jsx)(o.Z, l({ buffer: s }, e));
+    let { status: t, buffer: n } = (0, a.V)(i.Z);
+    return 'loading' === t ? null : (0, r.jsx)(o.Z, l({ buffer: n }, e));
 }
