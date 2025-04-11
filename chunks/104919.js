@@ -1,47 +1,53 @@
-n.d(t, { L: () => c });
+n.d(t, { L: () => d });
 var r = n(373793),
     i = n(367907),
     o = n(69580),
-    a = n(812206),
-    s = n(433534),
-    l = n(981631);
-function c(e) {
-    var t, n, c;
-    let { applicationId: u, channel: d, commandIntegrationTypes: f, appLauncherContext: _ } = e;
+    a = n(973616),
+    s = n(728345),
+    l = n(812206),
+    c = n(433534),
+    u = n(981631);
+async function d(e) {
+    var t, n, d;
+    let { applicationId: f, channel: _, commandIntegrationTypes: p, appLauncherContext: h } = e;
     if (
-        !(0, s.x$)({
-            applicationId: u,
-            channel: d,
-            commandIntegrationTypes: f
+        !(0, c.x$)({
+            applicationId: f,
+            channel: _,
+            commandIntegrationTypes: p
         })
     )
         return Promise.resolve({ isAuthorized: !0 });
-    let p = a.Z.getApplication(u),
-        h = r.Y.USER_INSTALL,
-        m = null == p || null == (c = p.integrationTypesConfig) || null == (n = c[h]) || null == (t = n.oauth2InstallParams) ? void 0 : t.scopes;
+    let m = l.Z.getApplication(f);
+    if (null == m) {
+        let e = await (0, s.UM)(f);
+        m = a.ZP.createFromServer(e);
+    }
+    let g = r.Y.USER_INSTALL,
+        E = null == m || null == (d = m.integrationTypesConfig) || null == (n = d[g]) || null == (t = n.oauth2InstallParams) ? void 0 : t.scopes;
     return (
-        null != _ &&
-            (0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
-                application_id: u,
-                location: _.location,
-                section_name: _.sectionName,
-                source: _.entrypoint
+        null != h &&
+            (0, i.yw)(u.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
+                application_id: f,
+                location: h.location,
+                section_name: h.sectionName,
+                source: h.entrypoint
             }),
         new Promise((e) => {
             (0, o.openOAuth2Modal)(
                 {
-                    clientId: u,
-                    integrationType: h,
-                    scopes: m,
+                    clientId: f,
+                    integrationType: g,
+                    scopes: E,
                     callback: (t) => {
                         let { location: n } = t;
                         null != n
-                            ? (null != _ &&
-                                  (0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
-                                      application_id: u,
-                                      location: _.location,
-                                      section_name: _.sectionName,
-                                      source: _.entrypoint
+                            ? (null != h &&
+                                  (0, i.yw)(u.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
+                                      application_id: f,
+                                      location: h.location,
+                                      section_name: h.sectionName,
+                                      source: h.entrypoint
                                   }),
                               e({ isAuthorized: !0 }))
                             : e({ isAuthorized: !1 });
