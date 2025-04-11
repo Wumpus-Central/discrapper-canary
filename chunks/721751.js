@@ -11,11 +11,11 @@ var i = n(200651),
     p = n(568154),
     h = n(353926),
     g = n(703656),
-    f = n(981631),
-    m = n(963865);
+    m = n(981631),
+    f = n(963865);
 let _ = n(575703),
     b = n(2984),
-    x = [f.Z5c.LOGIN, f.Z5c.LOGIN_HANDOFF, f.Z5c.REGISTER, f.Z5c.INVITE(''), f.Z5c.GIFT_CODE(''), f.Z5c.GUILD_TEMPLATE_LOGIN(''), f.Z5c.GUILD_TEMPLATE(''), f.Z5c.DISABLE_EMAIL_NOTIFICATIONS, f.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, f.Z5c.BILLING_PREMIUM_SUBSCRIBE, f.Z5c.BILLING_PAYMENT_SOURCES_CREATE, f.Z5c.BILLING_PAYMENTS, f.Z5c.BILLING_PREMIUM_SWITCH_PLAN, f.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, f.Z5c.VERIFY, f.Z5c.VERIFY_HUB_EMAIL, f.Z5c.REJECT_IP, f.Z5c.REJECT_MFA, f.Z5c.AUTHORIZE_IP, f.Z5c.AUTHORIZE_PAYMENT, f.Z5c.RESET, f.Z5c.HANDOFF, f.Z5c.REPORT, f.Z5c.REPORT_SECOND_LOOK, f.Z5c.ACCOUNT_REVERT('')];
+    x = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK, m.Z5c.ACCOUNT_REVERT('')];
 function N(e) {
     return x.some((t) => e.startsWith(t));
 }
@@ -35,12 +35,12 @@ function E(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('img', {
-                        className: m.artwork,
+                        className: f.artwork,
                         src: _,
                         alt: ''
                     }),
                     (0, i.jsx)('img', {
-                        className: m.logoWithText,
+                        className: f.logoWithText,
                         src: b,
                         alt: ''
                     }),
@@ -81,7 +81,7 @@ class I extends o.Component {
                 )
             });
         return (0, i.jsx)('div', {
-            className: m.characterBackground,
+            className: f.characterBackground,
             children: (0, i.jsx)(s.y5t, {
                 forceLevel: 1,
                 children:
@@ -90,7 +90,7 @@ class I extends o.Component {
                               children: [
                                   (0, i.jsx)(d.Z, {
                                       show: !0,
-                                      className: m.logo
+                                      className: f.logo
                                   }),
                                   (0, i.jsx)(p.h, {
                                       splash: e,

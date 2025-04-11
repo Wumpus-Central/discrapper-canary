@@ -56,7 +56,7 @@ function T(e) {
         N = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         A = (null == E ? void 0 : E.actionType) === m.oi.VIEW,
         C = (0, c.dQu)(c.TVs.colors.WHITE),
-        [R, P] = i.useState(!1),
+        [P, R] = i.useState(!1),
         [w] = i.useState(new s.Z.Value(0)),
         [D] = i.useState(new s.Z.Value(0));
     i.useEffect(() => {
@@ -66,7 +66,7 @@ function T(e) {
                   duration: N ? 1 : 350,
                   easing: s.Z.Easing.quad,
                   delay: 500 * !A
-              }).start(() => P(!0))
+              }).start(() => R(!0))
             : s.Z.timing(w, {
                   toValue: 1,
                   duration: N ? 1 : 350,
@@ -76,23 +76,23 @@ function T(e) {
     }, [b, w, A, N]),
         i.useEffect(() => {
             b &&
-                R &&
+                P &&
                 s.Z.timing(D, {
                     toValue: 1,
                     duration: 350 * !N,
                     easing: s.Z.Easing.quad,
                     delay: 400
                 }).start();
-        }, [b, D, R, N]);
+        }, [b, D, P, N]);
     let L = i.useCallback(() => {
         null != T && (0, h.gp)(f, T.channelId);
     }, [f, T]);
-    return null == E || (A && !R)
+    return null == E || (A && !P)
         ? null
         : (0, r.jsx)('div', {
               className: a()(v.container, p),
               children:
-                  R && null != T
+                  P && null != T
                       ? (0, r.jsx)(s.Z.div, {
                             style: {
                                 marginBottom: D.interpolate({

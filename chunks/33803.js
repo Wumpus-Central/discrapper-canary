@@ -30,8 +30,8 @@ var r = n(200651),
     A = n(464891),
     w = n(507418),
     Z = n(348238),
-    k = n(38267),
-    R = n(83561),
+    R = n(38267),
+    k = n(83561),
     D = n(834129),
     L = n(959517),
     M = n(981631),
@@ -102,7 +102,7 @@ function V(e, t) {
     return i;
 }
 function z(e, t) {
-    let { popouts: n, selected: r, setPopout: a } = (0, k.Z)(e.id, L.d$),
+    let { popouts: n, selected: r, setPopout: a } = (0, R.Z)(e.id, L.d$),
         { usernameProfile: l, avatarProfile: o } = n,
         s = (0, Z.wq)(e.author.id, t.id),
         c = (0, Z.RN)(e.author.id, t.id, e.id),
@@ -325,11 +325,11 @@ function ee(e) {
         {
             avatarSrc: E,
             eventHandlers: { onMouseEnter: N, onMouseLeave: j }
-        } = (0, R.m)(!0),
+        } = (0, k.m)(!0),
         C = (0, c.JA)(null != n ? n : ''),
         { onFocus: I } = C,
         T = V(C, ['onFocus']),
-        { isFocused: w, handleFocus: k, handleBlur: L } = (0, Z.bb)(I),
+        { isFocused: w, handleFocus: R, handleBlur: L } = (0, Z.bb)(I),
         K = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         q = (0, d.e7)([O.Z], () => O.Z.can(M.Plq.MANAGE_MESSAGES, s), [s]),
         { ruleName: Q, embedChannel: ee, decisionId: et, keywordMatchedContent: en, keyword: er, content: ei, flaggedMessageId: ea, timeoutDuration: el, decisionReason: eo, alertActionsExecution: es, quarantineType: ec, interactionUserId: eu } = (0, _.ZP)(o),
@@ -371,7 +371,7 @@ function ee(e) {
         onMouseLeave: j,
         children: (0, r.jsx)(D.Z, {
             className: l()(B.mainContainer, { [B.compact]: a }),
-            iconNode: a ? null : (0, r.jsx)(R.S, { src: E }),
+            iconNode: a ? null : (0, r.jsx)(k.S, { src: E }),
             iconContainerClassName: B.iconContainer,
             compact: a,
             children: (0, r.jsxs)('div', {
@@ -489,7 +489,7 @@ function ee(e) {
                                 }),
                                 popoutProps: ef,
                                 zalgo: !0,
-                                onFocus: k,
+                                onFocus: R,
                                 onBlur: L,
                                 onClick: eg
                             })

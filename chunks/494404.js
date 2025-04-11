@@ -86,7 +86,7 @@ let w = (e) => {
             ]
         });
     };
-class k extends i.PureComponent {
+class R extends i.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, r.jsxs)(d.P3F, {
@@ -137,15 +137,15 @@ class k extends i.PureComponent {
             });
     }
 }
-let R = u.ZP.connectStores([E.Z], (e) => {
+let k = u.ZP.connectStores([E.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && E.Z.can(S.Plq.MANAGE_MESSAGES, t) };
-})(k);
+})(R);
 function D(e) {
     let { analyticsName: t, items: n, hasMore: a, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: v, className: E, listName: w } = e,
         Z = i.useRef(null),
-        k = (0, f.Z)(w, Z),
-        R = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
+        R = (0, f.Z)(w, Z),
+        k = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
         D = (0, u.e7)([N.Z], () => N.Z.windowSize()),
         L = (0, g.Q3)('ItemsPopout');
     i.useEffect(() => {
@@ -237,7 +237,7 @@ function D(e) {
                   })
                 : null,
         H = { maxHeight: D.height - 43 - 25 };
-    R && (H.maxHeight -= 40), L && (H.maxHeight -= 48);
+    k && (H.maxHeight -= 40), L && (H.maxHeight -= 48);
     let V = null != p && a;
     return (0, r.jsx)('div', {
         className: l()(E, T.messagesPopoutWrap),
@@ -254,7 +254,7 @@ function D(e) {
                     ref: Z,
                     children: [
                         (0, r.jsx)(c.bG, {
-                            navigator: k,
+                            navigator: R,
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var t,
@@ -390,7 +390,7 @@ function L(e) {
                                       message: t,
                                       channel: n
                                   }),
-                                  (0, r.jsx)(R, {
+                                  (0, r.jsx)(k, {
                                       channel: a,
                                       message: t,
                                       jumping: P,

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => f });
+t.d(n, { Z: () => g });
 var r = t(200651);
 t(192379);
 var o = t(793030),
@@ -7,56 +7,56 @@ var o = t(793030),
     a = t(678558),
     l = t(343649),
     c = t(430824),
-    u = t(63063),
-    d = t(317169),
-    m = t(639660),
-    p = t(767218),
+    d = t(63063),
+    u = t(317169),
+    p = t(639660),
+    m = t(767218),
     x = t(981631),
     _ = t(680278),
     v = t(388032),
-    g = t(658585);
-function f(e) {
+    f = t(658585);
+function g(e) {
     let { guildId: n } = e,
         t = (0, s.e7)([c.Z], () => c.Z.getGuild(n)),
-        { available: f, spent: b, total: j } = (0, d.Z)(n);
+        { available: g, spent: j, total: b } = (0, u.Z)(n);
     if (null != t)
         return (0, r.jsxs)('div', {
-            className: g.container,
+            className: f.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: g.headerContainer,
+                    className: f.headerContainer,
                     children: [
                         (0, r.jsx)(o.xv, {
                             variant: 'eyebrow',
                             children: v.NW.string(_.Z.hjvcLC)
                         }),
                         (0, r.jsx)(o.xv, {
-                            className: g.learnMore,
+                            className: f.learnMore,
                             variant: 'text-xs/semibold',
-                            children: v.NW.format(_.Z.fXE30d, { helpDeskArticle: u.Z.getArticleURL(x.BhN.GUILD_BOOSTING_FAQ) })
+                            children: v.NW.format(_.Z.fXE30d, { helpDeskArticle: d.Z.getArticleURL(x.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: g.contentContainer,
+                    className: f.contentContainer,
                     children: [
-                        (0, r.jsx)(p.Z, {
-                            count: f,
-                            type: p.b.AVAILABLE
+                        (0, r.jsx)(m.Z, {
+                            count: g,
+                            type: m.b.AVAILABLE
                         }),
-                        (0, r.jsx)(p.Z, {
-                            count: b,
-                            type: p.b.SPENT
-                        }),
-                        (0, r.jsx)(p.Z, {
+                        (0, r.jsx)(m.Z, {
                             count: j,
-                            type: p.b.TOTAL
+                            type: m.b.SPENT
+                        }),
+                        (0, r.jsx)(m.Z, {
+                            count: b,
+                            type: m.b.TOTAL
                         })
                     ]
                 }),
-                (0, r.jsx)(m.Z, { guildId: n }),
+                (0, r.jsx)(p.Z, { guildId: n }),
                 (0, r.jsx)(a.Z, {
-                    className: g.boostButton,
+                    className: f.boostButton,
                     guild: t,
                     analyticsLocation: {
                         page: x.ZY5.GUILD_POWERUPS_OVERVIEW,
@@ -66,7 +66,7 @@ function f(e) {
                     size: i.PhG.LARGE,
                     intent: l.P.NONE,
                     icon: (0, r.jsx)(i.$Eu, {
-                        className: g.boostButtonIcon,
+                        className: f.boostButtonIcon,
                         size: 'sm',
                         color: i.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                     })

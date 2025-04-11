@@ -111,7 +111,7 @@ function C(e) {
         null == (n = e.onSuccess) || n.call(e), j(t.nonce);
     }
 }
-function R(e) {
+function P(e) {
     var t;
     let { nonce: n, errorCode: r, errorMessage: i, status: o, reasonCode: a } = e;
     if (null == n) return !1;
@@ -126,7 +126,7 @@ function R(e) {
                   errorMessage: i
               }));
 }
-function P(e) {
+function R(e) {
     let { channelId: t } = e;
     if (null == d.Z.getChannel(t)) return !1;
     for (let [e, t] of Object.entries(y)) t.state === _.F.FAILED && j(e);
@@ -208,9 +208,9 @@ let G = new U(s.Z, {
     INTERACTION_QUEUE: T,
     INTERACTION_CREATE: N,
     INTERACTION_SUCCESS: A,
-    INTERACTION_FAILURE: R,
+    INTERACTION_FAILURE: P,
     MESSAGE_CREATE: C,
-    CHANNEL_SELECT: P,
+    CHANNEL_SELECT: R,
     INTERACTION_IFRAME_MODAL_CREATE: D,
     INTERACTION_IFRAME_MODAL_CLOSE: L,
     INTERACTION_IFRAME_MODAL_KEY_CREATE: x,

@@ -13,8 +13,8 @@ var r,
     p = n(699516),
     m = n(594174),
     g = n(55589),
-    h = n(981631);
-function I(e, t, n) {
+    I = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function C(e) {
                                 })
                             )),
                             a.forEach(function (t) {
-                                I(e, t, n[t]);
+                                h(e, t, n[t]);
                             });
                     }
                     return e;
@@ -93,7 +93,7 @@ class P extends (r = i.ZP.Store) {
         return E;
     }
 }
-I(P, 'displayName', 'ActivityInviteModalStore');
+h(P, 'displayName', 'ActivityInviteModalStore');
 let O = new P(o.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             (b = e.activity),
@@ -110,7 +110,7 @@ let O = new P(o.Z, {
                                               g.Z.getPrivateChannelIds().forEach((t) => {
                                                   let n = u.Z.getChannel(t);
                                                   if (null != n)
-                                                      if (n.type === h.d4z.DM) {
+                                                      if (n.type === I.d4z.DM) {
                                                           let t = n.getRecipientId(),
                                                               a = null != t ? m.default.getUser(t) : null;
                                                           null != a &&
@@ -184,14 +184,14 @@ let O = new P(o.Z, {
             null != t
                 ? l.Z.sendActivityInvite({
                       channelId: t,
-                      type: h.mFx.JOIN,
+                      type: I.mFx.JOIN,
                       activity: b,
                       location: 'Channel Text Area - Invite to Join Modal'
                   }).then(() => C(t))
                 : null != n &&
                   l.Z.sendActivityInviteUser({
                       userId: n,
-                      type: h.mFx.JOIN,
+                      type: I.mFx.JOIN,
                       activity: b,
                       location: 'Channel Text Area - Invite to Join Modal'
                   }).then(() => C(n));

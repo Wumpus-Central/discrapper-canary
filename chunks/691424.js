@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(285063),
     A = n(943362),
     C = n(551452),
-    R = n(69626),
-    P = n(142990),
+    P = n(69626),
+    R = n(142990),
     w = n(532901),
     D = n(311739),
     L = n(981631),
@@ -381,11 +381,11 @@ let W = {
 function Y(e) {
     return B(U({}, W), {
         link: (0, w.Z)(e),
-        devLink: (0, P.Z)(e),
+        devLink: (0, R.Z)(e),
         emoji: V(e),
         customEmoji: F(e),
         channelMention: (0, C.Z)(e),
-        commandMention: (0, R.ZP)(e),
+        commandMention: (0, P.ZP)(e),
         attachmentLink: (0, A.Z)(e),
         shopLink: (0, D.Z)(e)
     });

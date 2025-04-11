@@ -1,4 +1,4 @@
-t.d(n, { Z: () => d });
+t.d(n, { Z: () => u });
 var r = t(200651),
     o = t(793030),
     s = t(481060),
@@ -6,8 +6,8 @@ var r = t(200651),
     a = t(680278),
     l = t(388032),
     c = t(305063),
-    u = t(719119);
-function d(e) {
+    d = t(719119);
+function u(e) {
     let { markAsDismissed: n } = e;
     return (0, r.jsxs)('div', {
         className: c.container,
@@ -15,7 +15,7 @@ function d(e) {
             (0, r.jsx)('img', {
                 alt: '',
                 className: c.image,
-                src: u
+                src: d
             }),
             (0, r.jsx)(o.xv, {
                 color: 'always-white',

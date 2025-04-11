@@ -39,8 +39,8 @@ var i = n(200651),
     k = n(29380),
     Z = n(783685),
     M = n(981631),
-    D = n(206583),
-    W = n(388032),
+    W = n(206583),
+    D = n(388032),
     B = n(449549),
     U = n(73433);
 function H(e) {
@@ -112,7 +112,7 @@ function F(e) {
                 let l = u().sample(1 === t.length ? K : $);
                 return (
                     s()(l, 'intl message arrays should not be empty'),
-                    W.NW.format(l, {
+                    D.NW.format(l, {
                         friendCount: t.length,
                         count: t.length,
                         friendCountMinusOne: t.length - 1,
@@ -122,7 +122,7 @@ function F(e) {
                     })
                 );
             }, [t])),
-        ee = (0, d.e7)([g.Z], () => g.Z.getFeed(D.YN.GLOBAL_FEED)),
+        ee = (0, d.e7)([g.Z], () => g.Z.getFeed(W.YN.GLOBAL_FEED)),
         et = r
             .useMemo(() => {
                 if (null == ee) return [];
@@ -169,7 +169,7 @@ function F(e) {
                       children: [
                           (0, i.jsx)(m.njP.Item, {
                               id: 'overview',
-                              children: W.NW.string(W.t['/dp6yc'])
+                              children: D.NW.string(D.t['/dp6yc'])
                           }),
                           (0, i.jsx)(m.njP.Item, {
                               id: 'friends',
@@ -220,7 +220,7 @@ function F(e) {
                                         (0, i.jsx)('img', {
                                             className: B.videoCover,
                                             src: c,
-                                            'aria-label': W.NW.string(W.t.X4IxWF)
+                                            'aria-label': D.NW.string(D.t.X4IxWF)
                                         })
                                     ]
                                 })
@@ -281,7 +281,7 @@ function G(e) {
                                 (0, i.jsx)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: W.NW.string(W.t['8z5B2d'])
+                                    children: D.NW.string(D.t['8z5B2d'])
                                 })
                             ]
                         })
@@ -297,7 +297,7 @@ function G(e) {
                                 (0, i.jsx)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: W.NW.string(W.t['5khEk5'])
+                                    children: D.NW.string(D.t['5khEk5'])
                                 })
                             ]
                         })
@@ -325,7 +325,7 @@ function X(e) {
                       children: (0, i.jsx)(m.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: W.NW.string(W.t.LO4f0N)
+                          children: D.NW.string(D.t.LO4f0N)
                       })
                   })
                 : null
@@ -449,9 +449,9 @@ function Q(e) {
                                             variant: 'text-sm/medium',
                                             className: B.entryPointCheckboxLabel,
                                             children: [
-                                                W.NW.string(W.t['e+CzPj']),
+                                                D.NW.string(D.t['e+CzPj']),
                                                 (0, i.jsx)(m.ua7, {
-                                                    text: W.NW.string(W.t.QOZI8f),
+                                                    text: D.NW.string(D.t.QOZI8f),
                                                     children: (e) => (0, i.jsx)(p.d, V(H({}, e), { size: 'xs' }))
                                                 })
                                             ]
@@ -475,7 +475,7 @@ function Q(e) {
           ? (0, i.jsx)(m.Wn, {
                 className: B.primaryEntryPointWarningMessage,
                 messageType: m.QYI.WARNING,
-                children: W.NW.format(W.t['s/3hjI'], {})
+                children: D.NW.format(D.t['s/3hjI'], {})
             })
           : null;
 }
@@ -542,7 +542,7 @@ function J(e) {
                           (0, i.jsx)(m.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: b ? W.NW.string(W.t.u4YJ8v) : W.NW.string(W.t['N/tajI'])
+                              children: b ? D.NW.string(D.t.u4YJ8v) : D.NW.string(D.t['N/tajI'])
                           }),
                           b
                               ? (0, i.jsx)(m.u04, {
@@ -559,5 +559,5 @@ function J(e) {
         ]
     });
 }
-let K = [W.t.eCLLn5, W.t.d8pkUF],
-    $ = [W.t.d8pkUF, W.t.MbWAxs, W.t['8kiRMT'], W.t.GRL3Nj];
+let K = [D.t.eCLLn5, D.t.d8pkUF],
+    $ = [D.t.d8pkUF, D.t.MbWAxs, D.t['8kiRMT'], D.t.GRL3Nj];

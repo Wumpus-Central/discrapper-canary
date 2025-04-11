@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -73,8 +73,8 @@ function A(e, t) {
     );
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function R(e) {
-    let { user: t, displayProfile: n, guildId: o, channelId: h, profileType: S, animateOnHover: N, onOpenProfile: R, className: P, previewStatus: w } = e,
+function P(e) {
+    let { user: t, displayProfile: n, guildId: o, channelId: h, profileType: S, animateOnHover: N, onOpenProfile: P, className: R, previewStatus: w } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
@@ -95,7 +95,7 @@ function R(e) {
                 [I.fullSize]: S === y.y0.FULL_SIZE,
                 [I.panel]: S === y.y0.PANEL
             },
-            P
+            R
         ),
         {
             avatarDecorationSrc: H,
@@ -112,14 +112,14 @@ function R(e) {
             avatarDecoration: H,
             size: F,
             'aria-label': t.username,
-            imageClassName: null != R ? I.overlay : void 0,
+            imageClassName: null != P ? I.overlay : void 0,
             status: k ? v.Skl.UNKNOWN : V,
             statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB
         });
-    return null == R
+    return null == P
         ? (0, r.jsx)(
               'div',
               A(T({}, Y), {
@@ -137,7 +137,7 @@ function R(e) {
                           action: 'PRESS_VIEW_PROFILE',
                           analyticsLocations: L
                       }),
-                          null == R || R();
+                          null == P || P();
                   },
                   children: K
               })

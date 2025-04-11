@@ -19,10 +19,10 @@ var r = n(200651),
     y = n(981631),
     v = n(843280);
 function O(e) {
-    let { user: t, activities: n, applicationStream: o, voiceChannel: O, textClassName: I, emojiClassName: S, textSize: T = 'xs', animate: N = !0, hasQuest: A = !1, hideEmoji: C = !1, hideTooltip: R = !1 } = e,
-        P = 'activity-status-web',
-        { blockeeExperimentEnabled: w, blockerExperimentEnabled: D } = (0, u.NR)(P);
-    (0, d.Z)(null == t ? void 0 : t.id, P);
+    let { user: t, activities: n, applicationStream: o, voiceChannel: O, textClassName: I, emojiClassName: S, textSize: T = 'xs', animate: N = !0, hasQuest: A = !1, hideEmoji: C = !1, hideTooltip: P = !1 } = e,
+        R = 'activity-status-web',
+        { blockeeExperimentEnabled: w, blockerExperimentEnabled: D } = (0, u.NR)(R);
+    (0, d.Z)(null == t ? void 0 : t.id, R);
     let L = w && (null == o ? void 0 : o.discoverable) === !1 ? null : o,
         x = i.useMemo(() => {
             var e, t;
@@ -50,7 +50,7 @@ function O(e) {
                     textClassName: I,
                     hideText: j,
                     hideIcon: k,
-                    hideTooltip: R
+                    hideTooltip: P
                 });
             let e =
                 null == n
@@ -66,7 +66,7 @@ function O(e) {
                       textClassName: I,
                       hideText: j,
                       hideIcon: k,
-                      hideTooltip: R
+                      hideTooltip: P
                   })
                 : null != O
                   ? (0, r.jsx)(E.Z, {
@@ -74,7 +74,7 @@ function O(e) {
                         textVariant: 'text-'.concat(T, '/medium'),
                         textClassName: I,
                         hideText: j,
-                        hideTooltip: R
+                        hideTooltip: P
                     })
                   : null;
         },
@@ -89,7 +89,7 @@ function O(e) {
                         (0, r.jsx)(_.Z, {
                             emoji: e,
                             animate: N,
-                            hideTooltip: R,
+                            hideTooltip: P,
                             className: S
                         }),
                     null != t &&

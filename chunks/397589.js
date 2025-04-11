@@ -1,36 +1,36 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     o = n(192379),
     a = n(481060),
     i = n(782568),
     s = n(592125),
-    c = n(594174),
-    l = n(63063),
+    l = n(594174),
+    c = n(63063),
     u = n(5192),
     d = n(992970),
     p = n(111810),
     g = n(287941),
     m = n(477931),
     f = n(235894),
-    _ = n(981631),
-    b = n(388032),
-    h = n(277586);
-let y = (e) => {
+    b = n(981631),
+    h = n(388032),
+    y = n(277586);
+let _ = (e) => {
     var t;
     let { message: n } = e,
-        y = o.useRef(null),
-        v = (0, p.p7)('Message Header') && n.hasPotions(),
-        O = s.Z.getChannel(n.getChannelId()),
-        x = null == (t = n.potions) ? void 0 : t[0],
-        j = o.useMemo(() => {
+        _ = o.useRef(null),
+        O = (0, p.p7)('Message Header') && n.hasPotions(),
+        v = s.Z.getChannel(n.getChannelId()),
+        j = null == (t = n.potions) ? void 0 : t[0],
+        x = o.useMemo(() => {
             var e;
-            if (null == x) return null;
-            let t = c.default.getUser(x.used_by);
-            return null != (e = (0, u.y)(null == O ? void 0 : O.getGuildId(), null == O ? void 0 : O.id, t)) ? e : null == t ? void 0 : t.globalName;
-        }, [x, O]),
+            if (null == j) return null;
+            let t = l.default.getUser(j.used_by);
+            return null != (e = (0, u.y)(null == v ? void 0 : v.getGuildId(), null == v ? void 0 : v.id, t)) ? e : null == t ? void 0 : t.globalName;
+        }, [j, v]),
         C = o.useCallback(() => {
-            if (null != y.current && (0, f.Uw)(n)) {
-                let { x: e, y: t, width: r, height: o } = y.current.getBoundingClientRect();
+            if (null != _.current && (0, f.Uw)(n)) {
+                let { x: e, y: t, width: r, height: o } = _.current.getBoundingClientRect();
                 (0, g.Z)(
                     n,
                     {
@@ -45,15 +45,15 @@ let y = (e) => {
             }
         }, [n]),
         P = o.useCallback(() => {
-            (0, i.Z)(l.Z.getArticleURL(_.BhN.CONFETTI_POTION));
+            (0, i.Z)(c.Z.getArticleURL(b.BhN.CONFETTI_POTION));
         }, []);
-    return v && null != j && (null == x ? void 0 : x.type) === m.B.CONFETTI
+    return O && null != x && (null == j ? void 0 : j.type) === m.B.CONFETTI
         ? (0, r.jsx)(a.P3F, {
               onFocus: C,
               onClick: P,
-              'aria-label': b.NW.string(b.t.Mp5k6O),
+              'aria-label': h.NW.string(h.t.Mp5k6O),
               children: (0, r.jsx)(a.ua7, {
-                  text: b.NW.formatToPlainString(b.t['FE++aG'], { user: j }),
+                  text: h.NW.formatToPlainString(h.t['FE++aG'], { user: x }),
                   children: (e) => {
                       var t, n;
                       return (0, r.jsxs)(
@@ -84,8 +84,8 @@ let y = (e) => {
                               return e;
                           })(
                               {
-                                  ref: y,
-                                  className: h.potionBadge
+                                  ref: _,
+                                  className: y.potionBadge
                               },
                               e
                           )),
@@ -101,7 +101,7 @@ let y = (e) => {
                                       (0, r.jsx)(a.Text, {
                                           variant: 'text-xs/bold',
                                           color: 'currentColor',
-                                          children: b.NW.string(b.t['8Rrro6'])
+                                          children: h.NW.string(h.t['8Rrro6'])
                                       })
                                   ]
                               }),

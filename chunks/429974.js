@@ -74,7 +74,7 @@ async function O(e) {
         o,
         a,
         m,
-        { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: N, analyticsLocation: A, showGuildProfile: C = !0, appContext: R, customStatusPrompt: P } = e,
+        { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: N, analyticsLocation: A, showGuildProfile: C = !0, appContext: P, customStatusPrompt: R } = e,
         w = E(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'analyticsLocation', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
     let D = d.default.getUser(b);
     if (null == D) return;
@@ -90,7 +90,7 @@ async function O(e) {
         Z = k === p.Skl.ONLINE ? F : k;
     (y = await (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('94989'), n.e('41150'), n.e('82412'), n.e('2960'), n.e('78604')]).then(n.bind(n, 533835));
+            let { default: e } = await Promise.all([n.e('94989'), n.e('82412'), n.e('62880'), n.e('69774')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, r.jsx)(
                     e,
@@ -104,7 +104,7 @@ async function O(e) {
                             initialSubsection: I,
                             channelId: T,
                             showGuildProfile: C,
-                            customStatusPrompt: P
+                            customStatusPrompt: R
                         },
                         t,
                         w
@@ -113,7 +113,7 @@ async function O(e) {
         },
         {
             modalKey: v(b, C ? S : void 0),
-            contextKey: (0, i.VnL)(null != R ? R : p.IlC.APP)
+            contextKey: (0, i.VnL)(null != P ? P : p.IlC.APP)
         }
     )),
         f.default.track(

@@ -1,27 +1,27 @@
-n.d(t, { Z: () => C }), n(953529);
+n.d(t, { Z: () => y }), n(953529);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(239091),
-    o = n(723163),
+    o = n(239091),
+    a = n(723163),
     s = n(973616),
     c = n(573188),
-    d = n(783097),
-    u = n(176412),
+    u = n(783097),
+    d = n(176412),
     p = n(570949),
     m = n(753972),
     f = n(635753),
     h = n(532309),
     b = n(654715),
-    x = n(413097);
-function C(e) {
+    _ = n(413097);
+function y(e) {
     var t;
-    let { command: n, application: C, onClick: _, query: v, searchResultsPosition: y, onClickAppCardFriends: N } = e,
-        g = r.useCallback(
+    let { command: n, application: y, onClick: x, query: C, searchResultsPosition: v, onClickAppCardFriends: g } = e,
+        N = r.useCallback(
             (e) => {
-                if ((0, d.BQ)(C)) {
-                    let t = C instanceof s.ZP ? C : s.ZP.createFromServer(C);
-                    (0, a.vq)(e, (e) =>
+                if ((0, u.BQ)(y)) {
+                    let t = y instanceof s.ZP ? y : s.ZP.createFromServer(y);
+                    (0, o.vq)(e, (e) =>
                         (0, i.jsx)(
                             p.Z,
                             (function (e) {
@@ -53,28 +53,28 @@ function C(e) {
                     );
                 }
             },
-            [C]
+            [y]
         ),
-        { iconURL: j, name: P, description: E } = r.useMemo(() => (0, d.sl)(C, { fakeAppIconURL: x }), [C]),
-        A = r.useMemo(() => {
+        { iconURL: j, name: P, description: E } = r.useMemo(() => (0, u.sl)(y, { fakeAppIconURL: _ }), [y]),
+        O = r.useMemo(() => {
             var e;
             let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : E;
-            return null == t ? null : (0, u.ae)(t, void 0);
+            return null == t ? null : (0, d.ae)(t, void 0);
         }, [E, null == n ? void 0 : n.displayDescription]),
-        { trackSearchResultsItemImpressionRef: I } = (0, h.Z)({
-            applicationId: C.id,
+        { trackSearchResultsItemImpressionRef: A } = (0, h.Z)({
+            applicationId: y.id,
             commandId: null == n ? void 0 : n.id,
-            query: v,
-            searchResultsPosition: y
+            query: C,
+            searchResultsPosition: v
         }),
-        { enabled: O } = c.X.useExperiment({ location: 'AppLauncherSearchCard' }, { autoTrackExposure: !0 }),
-        { friends: S } = (0, o.Z)(C),
-        T = O && (0, d.ye)(C) && S.length > 0;
+        { enabled: I } = c.X.useExperiment({ location: 'AppLauncherSearchCard' }, { autoTrackExposure: !0 }),
+        { friends: S } = (0, a.Z)(y),
+        T = I && (0, u.ye)(y) && S.length > 0;
     return (0, i.jsx)(l.P3F, {
         className: b.clickable,
-        innerRef: (e) => (I.current = e),
-        onClick: _,
-        onContextMenu: g,
+        innerRef: (e) => (A.current = e),
+        onClick: x,
+        onContextMenu: N,
         children: (0, i.jsxs)(l.Rny, {
             className: b.focusBlock,
             children: [
@@ -96,7 +96,7 @@ function C(e) {
                         T
                             ? (0, i.jsx)(f.Z, {
                                   friends: S,
-                                  onClick: N,
+                                  onClick: g,
                                   className: b.friendsWhoPlayHover,
                                   shortText: !0
                               })
@@ -104,7 +104,7 @@ function C(e) {
                                   variant: 'text-sm/normal',
                                   color: 'text-secondary',
                                   lineClamp: 1,
-                                  children: A
+                                  children: O
                               })
                     ]
                 }),

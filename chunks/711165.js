@@ -127,7 +127,7 @@ function Z() {
                                 },
                                 o
                             )),
-                            (i = i = { children: (0, r.jsx)(k, { scheduledMessages: t }) }),
+                            (i = i = { children: (0, r.jsx)(R, { scheduledMessages: t }) }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                 : (function (e, t) {
@@ -146,7 +146,7 @@ function Z() {
                 })
             });
 }
-function k(e) {
+function R(e) {
     let { scheduledMessages: t } = e,
         n = i.useMemo(
             () =>
@@ -181,7 +181,7 @@ function k(e) {
                         i.map((e) => {
                             let t = a.has(e.scheduledMessageId);
                             return (0, r.jsx)(
-                                R,
+                                k,
                                 {
                                     scheduledMessage: e,
                                     channel: n,
@@ -197,7 +197,7 @@ function k(e) {
         })
     });
 }
-let R = i.memo(function (e) {
+let k = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: a } = e,
         o = new v.ZP({
             id: t.scheduledMessageId,

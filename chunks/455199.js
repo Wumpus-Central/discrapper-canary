@@ -52,8 +52,8 @@ function T(e) {
 let N = 'recentMentionFilterSettings',
     A = [],
     C = {},
-    R = {},
-    P = !1,
+    P = {},
+    R = !1,
     w = !0,
     D = s.K.get(N, {
         guildFilter: I.NgX.ALL_SERVERS,
@@ -82,7 +82,7 @@ function j(e) {
 }
 function U(e) {
     let { guildId: t } = e;
-    (P = !0), null == t && D.guildFilter === I.NgX.THIS_SERVER && z({ guildFilter: I.NgX.ALL_SERVERS });
+    (R = !0), null == t && D.guildFilter === I.NgX.THIS_SERVER && z({ guildFilter: I.NgX.ALL_SERVERS });
 }
 function G(e) {
     if (e instanceof p.ZP) return e;
@@ -93,17 +93,17 @@ function B(e) {
     let { hasMoreAfter: t, messages: n, isAfter: r } = e,
         i = o().map(n, G);
     j({ addedMessages: i }),
-        r ? (A = A.concat(i)) : ((A = i), (R = {})),
+        r ? (A = A.concat(i)) : ((A = i), (P = {})),
         o().forEach(i, (e) => {
-            R[e.id] = !0;
+            P[e.id] = !0;
         }),
-        (P = !1),
+        (R = !1),
         (w = t),
         (x = (0, l.zO)()),
         (L = !0);
 }
 function V() {
-    P = !1;
+    R = !1;
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -149,11 +149,11 @@ function Z(e) {
         return !1;
     let i = F(n, t);
     if (null == i) return !1;
-    (A = A.slice()).unshift(i), (R[i.id] = !0), j({ addedMessages: [i] });
+    (A = A.slice()).unshift(i), (P[i.id] = !0), j({ addedMessages: [i] });
 }
 function H(e) {
     let t = e.message.id;
-    if (null == R[String(t)]) return !1;
+    if (null == P[String(t)]) return !1;
     let n = o().findIndex(A, (e) => {
             let { id: n } = e;
             return n === t;
@@ -162,8 +162,8 @@ function H(e) {
     null != r && (A[n] = (0, u.wi)(r, e.message));
 }
 function W(e) {
-    if (null == R[e]) return !1;
-    delete R[e],
+    if (null == P[e]) return !1;
+    delete P[e],
         j({
             deletedMessages: o().filter(A, (t) => {
                 let { id: n } = t;
@@ -188,12 +188,12 @@ function z(e) {
     (D = o().defaults(o().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), D)), s.K.set(N, D);
     let n = (e, n) => t[e] !== D[e] && D[e] === n,
         r = n('guildFilter', I.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
-    R = {};
+    P = {};
     let i = [];
     r &&
         A.forEach((e) => {
             let t = F(e);
-            null != t && (i.push(t), (R[t.id] = !0));
+            null != t && (i.push(t), (P[t.id] = !0));
         }),
         k((A = i)),
         0 === A.length && (L = !1);
@@ -203,14 +203,14 @@ function q() {
     L = !1;
 }
 function Q() {
-    (A = []), (R = {}), (L = !1), (M = !1), (C = {});
+    (A = []), (P = {}), (L = !1), (M = !1), (C = {});
 }
 function X(e) {
     let { guild: t } = e,
         n = [];
     (A = o().filter(A, (e) => {
         let r = m.Z.getChannel(e.channel_id);
-        return (null != r && r.getGuildId() !== t.id) || (delete R[e.id], n.push(e), !1);
+        return (null != r && r.getGuildId() !== t.id) || (delete P[e.id], n.push(e), !1);
     })),
         j({ deletedMessages: n });
 }
@@ -220,7 +220,7 @@ function J() {
 function $(e) {
     let { channel: t } = e,
         n = [];
-    (A = o().filter(A, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), j({ deletedMessages: n });
+    (A = o().filter(A, (e) => e.channel_id !== t.id || (delete P[e.id], n.push(e), !1))), j({ deletedMessages: n });
 }
 function ee(e) {
     Q();
@@ -228,7 +228,7 @@ function ee(e) {
 function et(e) {
     let { size: t } = e;
     j({ deletedMessages: A.slice(t) });
-    for (let e = t; e < A.length; ++e) delete R[A[e].id];
+    for (let e = t; e < A.length; ++e) delete P[A[e].id];
     A.length > (A = A.slice(0, t)).length && (w = !0);
 }
 function en(e) {
@@ -248,10 +248,10 @@ class er extends (r = a.ZP.Store) {
         return L || A.length > 0 ? A : null;
     }
     hasMention(e) {
-        return R[e];
+        return P[e];
     }
     get loading() {
-        return P;
+        return R;
     }
     get hasMore() {
         return w;

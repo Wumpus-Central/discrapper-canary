@@ -53,13 +53,13 @@ class i {
         if (n) return n;
         let r = this.options.loose,
             i = r ? u[d.HYPHENRANGELOOSE] : u[d.HYPHENRANGE];
-        l('hyphen replace', (e = e.replace(i, P(this.options.includePrerelease)))), l('comparator trim', (e = e.replace(u[d.COMPARATORTRIM], f))), l('tilde trim', (e = e.replace(u[d.TILDETRIM], _))), l('caret trim', (e = e.replace(u[d.CARETTRIM], p)));
+        l('hyphen replace', (e = e.replace(i, R(this.options.includePrerelease)))), l('comparator trim', (e = e.replace(u[d.COMPARATORTRIM], f))), l('tilde trim', (e = e.replace(u[d.TILDETRIM], _))), l('caret trim', (e = e.replace(u[d.CARETTRIM], p)));
         let a = e
             .split(' ')
             .map((e) => y(e, this.options))
             .join(' ')
             .split(/\s+/)
-            .map((e) => R(e, this.options));
+            .map((e) => P(e, this.options));
         r && (a = a.filter((e) => (l('loose invalid filter', e, this.options), !!e.match(u[d.COMPARATORLOOSE])))), l('range list', a);
         let c = new Map();
         for (let e of a.map((e) => new s(e, this.options))) {
@@ -153,8 +153,8 @@ let o = new (n(147567))(),
         });
     },
     C = (e, t) => (l('replaceStars', e, t), e.trim().replace(u[d.STAR], '')),
-    R = (e, t) => (l('replaceGTE0', e, t), e.trim().replace(u[t.includePrerelease ? d.GTE0PRE : d.GTE0], '')),
-    P = (e) => (t, n, r, i, o, a, s, l, c, u, d, f) => ((n = v(r) ? '' : v(i) ? `>=${r}.0.0${e ? '-0' : ''}` : v(o) ? `>=${r}.${i}.0${e ? '-0' : ''}` : a ? `>=${n}` : `>=${n}${e ? '-0' : ''}`), (l = v(c) ? '' : v(u) ? `<${+c + 1}.0.0-0` : v(d) ? `<${c}.${+u + 1}.0-0` : f ? `<=${c}.${u}.${d}-${f}` : e ? `<${c}.${u}.${+d + 1}-0` : `<=${l}`), `${n} ${l}`.trim()),
+    P = (e, t) => (l('replaceGTE0', e, t), e.trim().replace(u[t.includePrerelease ? d.GTE0PRE : d.GTE0], '')),
+    R = (e) => (t, n, r, i, o, a, s, l, c, u, d, f) => ((n = v(r) ? '' : v(i) ? `>=${r}.0.0${e ? '-0' : ''}` : v(o) ? `>=${r}.${i}.0${e ? '-0' : ''}` : a ? `>=${n}` : `>=${n}${e ? '-0' : ''}`), (l = v(c) ? '' : v(u) ? `<${+c + 1}.0.0-0` : v(d) ? `<${c}.${+u + 1}.0-0` : f ? `<=${c}.${u}.${d}-${f}` : e ? `<${c}.${u}.${+d + 1}-0` : `<=${l}`), `${n} ${l}`.trim()),
     w = (e, t, n) => {
         for (let n = 0; n < e.length; n++) if (!e[n].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {

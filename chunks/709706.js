@@ -203,11 +203,11 @@ function C(e) {
         downloadedBytes: void 0
     });
 }
-function R(e) {
+function P(e) {
     let { timeInSeconds: t } = e;
     b((0, o.Z)(new Date(), t));
 }
-function P(e) {
+function R(e) {
     m.nativeVoiceFilterModuleState = e.state;
 }
 d(I, 'displayName', 'VoiceFilterStore');
@@ -219,6 +219,6 @@ let w = new I(l.Z, {
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: v,
     VOICE_FILTER_CATALOG_FETCH_FAILED: O,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: S,
-    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: R,
-    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: P
+    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: P,
+    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: R
 });

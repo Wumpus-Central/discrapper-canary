@@ -1,5 +1,5 @@
 n.d(t, {
-    Es: () => O,
+    Es: () => b,
     Eu: () => h,
     bt: () => y
 }),
@@ -18,13 +18,13 @@ var r = n(192379),
     f = n(19780),
     m = n(594174),
     g = n(979651),
-    b = n(823379);
-function O(e, t) {
+    O = n(823379);
+function b(e, t) {
     let n = (0, i.e7)([p.Z, f.ZP], () => (e === f.ZP.getChannelId() ? p.Z.getDesyncedVoiceStates() : null)),
         o = (0, i.Wu)([a.Z], () => (null == e ? [] : [...a.Z.getGuildRingingUsers(e)])),
-        c = (0, i.Wu)([m.default], () => o.map((e) => m.default.getUser(e)).filter(b.lm)),
+        c = (0, i.Wu)([m.default], () => o.map((e) => m.default.getUser(e)).filter(O.lm)),
         g = (0, i.e7)([u.Z], () => u.Z.getBasicChannel(e)),
-        O = r.useMemo(
+        b = r.useMemo(
             () =>
                 c.map((e) => ({
                     voiceState: new s.Z(e.id),
@@ -57,8 +57,8 @@ function O(e, t) {
                 n.length > 0)
                     ? [...r, ...n]
                     : r;
-            })(n, t, O),
-        [n, t, O]
+            })(n, t, b),
+        [n, t, b]
     );
 }
 function y(e, t) {

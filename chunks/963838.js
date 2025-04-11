@@ -32,8 +32,8 @@ var r = n(392711),
     N = n(200997),
     A = n(633302),
     C = n(134432),
-    R = n(594174),
-    P = n(768581),
+    P = n(594174),
+    R = n(768581),
     w = n(176354),
     D = n(353368),
     L = n(388032);
@@ -76,7 +76,7 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D.v;
     if (null != e.id) {
         var n;
-        return P.ZP.getEmojiURL({
+        return R.ZP.getEmojiURL({
             id: e.id,
             animated: null != (n = e.animated) && n,
             size: t
@@ -106,18 +106,18 @@ function F(e) {
         ? ''
         : 1 === s.length
           ? L.NW.formatToPlainString(L.t.yZYxzM, {
-                firstUsername: null == (n = R.default.getUser(s[0])) ? void 0 : n.username,
+                firstUsername: null == (n = P.default.getUser(s[0])) ? void 0 : n.username,
                 emojiNames: c
             })
           : 2 === s.length
             ? L.NW.formatToPlainString(L.t['8rmtbW'], {
-                  firstUsername: null == (r = R.default.getUser(s[0])) ? void 0 : r.username,
-                  secondUsername: null == (i = R.default.getUser(s[1])) ? void 0 : i.username,
+                  firstUsername: null == (r = P.default.getUser(s[0])) ? void 0 : r.username,
+                  secondUsername: null == (i = P.default.getUser(s[1])) ? void 0 : i.username,
                   emojiNames: c
               })
             : L.NW.formatToPlainString(L.t['/okjv7'], {
-                  firstUsername: null == (o = R.default.getUser(s[0])) ? void 0 : o.username,
-                  secondUsername: null == (a = R.default.getUser(s[1])) ? void 0 : a.username,
+                  firstUsername: null == (o = P.default.getUser(s[0])) ? void 0 : o.username,
+                  secondUsername: null == (a = P.default.getUser(s[1])) ? void 0 : a.username,
                   count: s.length - 2,
                   emojiNames: c
               });

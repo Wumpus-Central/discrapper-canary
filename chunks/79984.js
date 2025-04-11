@@ -1,14 +1,14 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(607070),
-    d = n(847800);
-function u() {
-    let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+    u = n(847800);
+function d() {
+    let e = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         { styleLarge: t, styleSmall: n } = r.useMemo(
             () => ({
                 styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
@@ -17,17 +17,17 @@ function u() {
             []
         );
     return (0, i.jsxs)('div', {
-        className: a()(d.container, { [d.noAnimation]: e }),
+        className: o()(u.container, { [u.noAnimation]: e }),
         children: [
-            (0, i.jsx)('div', { className: d.iconPlaceholder }),
+            (0, i.jsx)('div', { className: u.iconPlaceholder }),
             (0, i.jsxs)('div', {
-                className: d.textContainer,
+                className: u.textContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: d.textPlaceholder,
+                        className: u.textPlaceholder,
                         style: t,
                         children: (0, i.jsx)(s.X6q, {
-                            className: d.hidden,
+                            className: u.hidden,
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
@@ -35,10 +35,10 @@ function u() {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: d.textPlaceholder,
+                        className: u.textPlaceholder,
                         style: n,
                         children: (0, i.jsx)(s.Text, {
-                            className: d.hidden,
+                            className: u.hidden,
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
@@ -47,7 +47,7 @@ function u() {
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: d.underline })
+            (0, i.jsx)('div', { className: u.underline })
         ]
     });
 }

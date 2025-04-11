@@ -1,46 +1,46 @@
-function s(t, e, i) {
+function r(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = i),
-        t
+            : (e[t] = n),
+        e
     );
 }
-i.d(e, {
-    ZP: () => o,
-    k2: () => a
+n.d(t, {
+    ZP: () => s,
+    k2: () => o
 }),
-    i(388685);
-let n = new (i(259443).Yd)('AssetMap');
-async function a(t) {
-    let e = new r(),
-        i = Object.entries(t).map((t) => {
-            let [i, s] = t;
-            return e.loadRemoteImage(i, s).catch((t) => n.warn('Failed to load canvas asset', t, i, s));
+    n(388685);
+let i = new (n(259443).Yd)('AssetMap');
+async function o(e) {
+    let t = new a(),
+        n = Object.entries(e).map((e) => {
+            let [n, r] = e;
+            return t.loadRemoteImage(n, r).catch((e) => i.warn('Failed to load canvas asset', e, n, r));
         });
-    return await Promise.all(i), e;
+    return await Promise.all(n), t;
 }
-class r {
+class a {
     loadFonts() {
         return Promise.resolve();
     }
-    async loadRemoteImage(t, e) {
-        let i = new Image();
-        return (i.src = e), (i.crossOrigin = 'anonymous'), await i.decode(), (this.assets[t] = i), Promise.resolve();
+    async loadRemoteImage(e, t) {
+        let n = new Image();
+        return (n.src = t), (n.crossOrigin = 'anonymous'), await n.decode(), (this.assets[e] = n), Promise.resolve();
     }
-    get(t) {
-        return this.assets[t];
+    get(e) {
+        return this.assets[e];
     }
-    has(t) {
-        return null != this.assets[t];
+    has(e) {
+        return null != this.assets[e];
     }
     constructor() {
-        s(this, 'assets', {}), s(this, 'fontManager', void 0);
+        r(this, 'assets', {}), r(this, 'fontManager', void 0);
     }
 }
-let o = r;
+let s = a;

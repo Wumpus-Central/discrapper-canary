@@ -37,8 +37,8 @@ function v(e) {
             let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === v.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
-        k = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        R = (0, b.Z)(),
+        R = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        k = (0, b.Z)(),
         D = w === x.jy.CAN_LAUNCH,
         L = null != E ? E : O.customId,
         M = [];
@@ -52,13 +52,13 @@ function v(e) {
                     applicationId: v.id,
                     isStart: null == Z,
                     instanceId: Z,
-                    embeddedActivitiesManager: R,
+                    embeddedActivitiesManager: k,
                     customId: L,
                     referrerId: j,
                     analyticsLocations: P
                 });
             },
-            disabledReason: null != Z && (null == k ? void 0 : k.compositeInstanceId) === Z ? y.NW.string(y.t.wJNK8P) : void 0
+            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.NW.string(y.t.wJNK8P) : void 0
         }),
         T &&
             !D &&

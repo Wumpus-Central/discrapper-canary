@@ -1,7 +1,7 @@
 r.d(t, {
     YP: () => f,
     ZP: () => b,
-    aN: () => h
+    aN: () => m
 });
 var n = r(200651);
 r(192379);
@@ -71,14 +71,14 @@ function p(e) {
         })
     );
 }
-function h() {
+function m() {
     return (0, n.jsx)(i.P4T, {
         size: 'xs',
         color: 'currentColor',
         className: g.warningIcon
     });
 }
-function m(e) {
+function h(e) {
     let { roleName: t } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -149,7 +149,7 @@ function b(e) {
               title: (0, n.jsxs)('div', {
                   className: g.warningTitle,
                   children: [
-                      (0, n.jsx)(h, {}),
+                      (0, n.jsx)(m, {}),
                       (0, n.jsx)(i.LZC, {
                           horizontal: !0,
                           size: 4
@@ -256,7 +256,7 @@ function b(e) {
                                                 })(
                                                     {
                                                         title: u.NW.string(u.t.Y3Hi3d),
-                                                        body: (0, n.jsx)(m, { roleName: A }),
+                                                        body: (0, n.jsx)(h, { roleName: A }),
                                                         cta: u.NW.string(u.t.VawZV1),
                                                         closeLabel: u.NW.string(u.t['6y+3Bw']),
                                                         onConfirm: t

@@ -68,9 +68,9 @@ let N = 16 / 9,
 function P(e) {
     var t;
     let n,
-        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: S, participants: Z, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: W, height: U, layout: B, idle: H } = e,
-        G = null != A,
-        F = h.Z.getVideoComponent(),
+        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: S, participants: Z, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: W, height: U, layout: B, idle: G } = e,
+        F = null != A,
+        H = h.Z.getVideoComponent(),
         V = p.default.getId(),
         [z, Y] = i.useState(null),
         q = (0, c.Z)(z),
@@ -185,7 +185,7 @@ function P(e) {
                                                           noBorder: ep >= W || ed >= U,
                                                           channel: R,
                                                           className: v.focusedVideo,
-                                                          videoComponent: F,
+                                                          videoComponent: H,
                                                           paused: D,
                                                           width: W,
                                                           participant: t,
@@ -194,7 +194,7 @@ function P(e) {
                                                           onContextMenu: P,
                                                           onVideoResize: ev,
                                                           inCall: w,
-                                                          inPopout: G
+                                                          inPopout: F
                                                       })
                                                   },
                                                   i
@@ -205,7 +205,7 @@ function P(e) {
                             }),
                             eo
                                 ? (0, r.jsx)(a.animated.div, {
-                                      className: o()(j.actionRow, { [j.idle]: H }),
+                                      className: o()(j.actionRow, { [j.idle]: G }),
                                       style: { bottom: eC.value },
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: R.id,

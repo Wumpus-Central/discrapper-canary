@@ -5,8 +5,8 @@ var o = n(120356),
     a = n.n(o),
     i = n(481060),
     s = n(477747),
-    c = n(848697);
-function l(e) {
+    l = n(848697);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,25 +59,25 @@ let d = function (e) {
             disableInteraction: g = !1,
             childrenRepliedMessage: m,
             childrenExecutedCommand: f,
-            childrenHeader: _,
-            childrenSystemMessage: b,
-            childrenButtons: h,
-            childrenMessageContent: y,
-            childrenAccessories: v,
-            messageRef: O,
-            focusProps: x = {
+            childrenHeader: b,
+            childrenSystemMessage: h,
+            childrenButtons: y,
+            childrenMessageContent: _,
+            childrenAccessories: O,
+            messageRef: v,
+            focusProps: j = {
                 offset: {
                     left: 4,
                     right: 4
                 }
             },
-            hasThread: j,
+            hasThread: x,
             isSystemMessage: C,
             hasReply: P,
-            authorHasGradientRole: T = !1,
-            guildId: N
+            authorHasGradientRole: N = !1,
+            guildId: T
         } = e,
-        I = (function (e, t) {
+        w = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -96,30 +96,30 @@ let d = function (e) {
             }
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'authorHasGradientRole', 'guildId']);
-    let w = (0, s.Z)(N, 'BaseMessage'),
-        S = (0, r.jsx)(
+    let S = (0, s.Z)(T, 'BaseMessage'),
+        I = (0, r.jsx)(
             i.tEY,
-            u(l({}, x), {
+            u(c({}, j), {
                 children: (0, r.jsxs)(
                     'div',
                     u(
-                        l(
+                        c(
                             {
                                 className: a()(t, {
-                                    [c.gradient]: !!w && T,
-                                    [c.wrapper]: !0,
-                                    [c.contentOnly]: o,
-                                    [c.compact]: n,
-                                    [c.preview]: p,
-                                    [c.cozy]: !n,
-                                    [c.zalgo]: d,
-                                    [c.hasThread]: j,
-                                    [c.isSystemMessage]: C,
-                                    [c.hasReply]: P
+                                    [l.gradient]: !!S && N,
+                                    [l.wrapper]: !0,
+                                    [l.contentOnly]: o,
+                                    [l.compact]: n,
+                                    [l.preview]: p,
+                                    [l.cozy]: !n,
+                                    [l.zalgo]: d,
+                                    [l.hasThread]: x,
+                                    [l.isSystemMessage]: C,
+                                    [l.hasReply]: P
                                 }),
-                                ref: O
+                                ref: v
                             },
-                            I
+                            w
                         ),
                         {
                             role: 'article',
@@ -127,14 +127,14 @@ let d = function (e) {
                                 m,
                                 f,
                                 (0, r.jsxs)('div', {
-                                    className: c.contents,
-                                    children: [b, _, null == b && y]
+                                    className: l.contents,
+                                    children: [h, b, null == h && _]
                                 }),
-                                v,
-                                null != h
+                                O,
+                                null != y
                                     ? (0, r.jsx)('div', {
-                                          className: c.buttonContainer,
-                                          children: h
+                                          className: l.buttonContainer,
+                                          children: y
                                       })
                                     : null
                             ]
@@ -143,5 +143,5 @@ let d = function (e) {
                 )
             })
         );
-    return g ? (0, r.jsx)(i.Rny, { children: S }) : S;
+    return g ? (0, r.jsx)(i.Rny, { children: I }) : I;
 };

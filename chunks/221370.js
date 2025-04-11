@@ -1,14 +1,14 @@
-r.d(t, { Z: () => b }), r(388685), r(539854);
+r.d(t, { Z: () => O }), r(388685), r(539854);
 var n = r(200651),
     a = r(192379),
-    o = r(120356),
-    i = r.n(o),
-    l = r(758713),
-    s = r(657707),
+    i = r(120356),
+    l = r.n(i),
+    s = r(758713),
+    o = r(657707),
     c = r(481060),
     u = r(388032),
     d = r(263930);
-function p(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -33,8 +33,8 @@ function p(e) {
     }
     return e;
 }
-let f = [l.z.DESKTOP, l.z.XBOX, l.z.PLAYSTATION, l.z.NINTENDO];
-function m(e) {
+let g = [s.z.DESKTOP, s.z.XBOX, s.z.PLAYSTATION, s.z.NINTENDO];
+function f(e) {
     var { platform: t } = e,
         r = (function (e, t) {
             if (null == e) return {};
@@ -45,33 +45,33 @@ function m(e) {
                     var r,
                         n,
                         a = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
             }
             return a;
         })(e, ['platform']);
     switch (t) {
-        case l.z.DESKTOP:
-            return (0, n.jsx)(s.pzj, p({ size: 'xs' }, r));
-        case l.z.XBOX:
-            return (0, n.jsx)(s.Mko, p({ size: 'xs' }, r));
-        case l.z.PLAYSTATION:
-            return (0, n.jsx)(s.Tsp, p({ size: 'xs' }, r));
-        case l.z.NINTENDO:
-            return (0, n.jsx)(s.aPH, p({ size: 'xs' }, r));
+        case s.z.DESKTOP:
+            return (0, n.jsx)(o.pzj, m({ size: 'xs' }, r));
+        case s.z.XBOX:
+            return (0, n.jsx)(o.Mko, m({ size: 'xs' }, r));
+        case s.z.PLAYSTATION:
+            return (0, n.jsx)(o.Tsp, m({ size: 'xs' }, r));
+        case s.z.NINTENDO:
+            return (0, n.jsx)(o.aPH, m({ size: 'xs' }, r));
         default:
             return null;
     }
 }
-function g(e) {
+function p(e) {
     let { platforms: t } = e;
     return (0, n.jsx)('div', {
-        className: i()(d.row, d.gapSm),
+        className: l()(d.row, d.gapSm),
         style: { alignItems: 'center' },
         children: t.map((e) =>
             (0, n.jsx)(
@@ -79,13 +79,13 @@ function g(e) {
                 {
                     text: (function (e) {
                         switch (e) {
-                            case l.z.DESKTOP:
+                            case s.z.DESKTOP:
                                 return u.NW.string(u.t.KT6uCA);
-                            case l.z.XBOX:
+                            case s.z.XBOX:
                                 return u.NW.string(u.t.DDWUJi);
-                            case l.z.PLAYSTATION:
+                            case s.z.PLAYSTATION:
                                 return u.NW.string(u.t.fzMz2t);
-                            case l.z.NINTENDO:
+                            case s.z.NINTENDO:
                                 return u.NW.string(u.t.AMW8jY);
                             default:
                                 return null;
@@ -94,8 +94,8 @@ function g(e) {
                     children: (t) => {
                         var r, a;
                         return (0, n.jsx)(
-                            m,
-                            ((r = p({}, t)),
+                            f,
+                            ((r = m({}, t)),
                             (a = a = { platform: e }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -118,17 +118,17 @@ function g(e) {
         )
     });
 }
-function b(e) {
+function O(e) {
     let { detectedGame: t, className: r } = e,
-        o = a.useMemo(() => {
+        i = a.useMemo(() => {
             let e = new Set(t.platforms),
                 r = [...e];
-            return !e.has(l.z.DESKTOP) && (e.has(l.z.MACOS) || e.has(l.z.LINUX)) && r.push(l.z.DESKTOP), r.filter((e) => f.includes(e));
+            return !e.has(s.z.DESKTOP) && (e.has(s.z.MACOS) || e.has(s.z.LINUX)) && r.push(s.z.DESKTOP), r.filter((e) => g.includes(e));
         }, [t.platforms]);
-    return 0 === o.length
+    return 0 === i.length
         ? null
         : (0, n.jsx)('div', {
-              className: i()(d.column, d.gapLg, r),
-              children: o.length > 0 && (0, n.jsx)(g, { platforms: o })
+              className: l()(d.column, d.gapLg, r),
+              children: i.length > 0 && (0, n.jsx)(p, { platforms: i })
           });
 }

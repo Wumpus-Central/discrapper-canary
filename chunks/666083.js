@@ -1,10 +1,10 @@
 n.d(t, { default: () => j }), n(388685), n(953529);
 var r = n(200651),
     o = n(192379),
-    s = n(48026),
-    i = n(442837),
-    a = n(481060),
-    l = n(607070),
+    i = n(48026),
+    s = n(442837),
+    l = n(481060),
+    a = n(607070),
     c = n(530618),
     u = n(372654),
     d = n(262212),
@@ -12,11 +12,11 @@ var r = n(200651),
     f = n(535396),
     b = n(680278),
     m = n(388032),
-    g = n(548197);
+    O = n(548197);
 function j(e) {
     var t,
         n,
-        { guildId: j, powerup: O } = e,
+        { guildId: j, powerup: g } = e,
         y = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -26,30 +26,30 @@ function j(e) {
                     var n,
                         r,
                         o = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let v = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
+    let v = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
         x = o.useRef(null),
-        _ = o.useRef(new s.qA()),
-        [C, h] = o.useState(null),
-        w = f.uc.has(O.skuId);
+        _ = o.useRef(new i.qA()),
+        [h, C] = o.useState(null),
+        w = f.uc.has(g.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.O_, {
-                ref: h,
-                className: g.confettiCanvas,
+            (0, r.jsx)(i.O_, {
+                ref: C,
+                className: O.confettiCanvas,
                 environment: _.current
             }),
             (0, r.jsxs)(
-                a.Y0X,
+                l.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,46 +76,46 @@ function j(e) {
                     return e;
                 })(
                     {
-                        className: g.modal,
-                        size: a.CgR.DYNAMIC
+                        className: O.modal,
+                        size: l.CgR.DYNAMIC
                     },
                     y
                 )),
                 (n = n =
                     {
                         children: [
-                            (0, r.jsx)(a.hzk, {
-                                className: g.modalContentContainer,
+                            (0, r.jsx)(l.hzk, {
+                                className: O.modalContentContainer,
                                 scrollbarType: 'none',
                                 children: (0, r.jsxs)('div', {
-                                    className: g.container,
+                                    className: O.container,
                                     ref: x,
                                     children: [
                                         (0, r.jsx)(p.m, {
-                                            className: g.image,
-                                            powerup: O
+                                            className: O.image,
+                                            powerup: g
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: g.contentContainer,
+                                            className: O.contentContainer,
                                             children: [
-                                                (0, r.jsx)(a.X6q, {
+                                                (0, r.jsx)(l.X6q, {
                                                     variant: 'heading-xl/extrabold',
-                                                    children: m.NW.formatToPlainString(b.Z.lFuOFB, { perkName: O.title })
+                                                    children: m.NW.formatToPlainString(b.Z.lFuOFB, { perkName: g.title })
                                                 }),
-                                                (0, r.jsx)(a.Text, {
-                                                    className: g.description,
+                                                (0, r.jsx)(l.Text, {
+                                                    className: O.description,
                                                     variant: 'text-sm/normal',
-                                                    children: m.NW.formatToPlainString(b.Z.y3wHoq, { perkName: O.title })
+                                                    children: m.NW.formatToPlainString(b.Z.y3wHoq, { perkName: g.title })
                                                 }),
                                                 w
                                                     ? (0, r.jsx)(d.ms, {
-                                                          className: g.button,
+                                                          className: O.button,
                                                           guildId: j,
-                                                          powerup: O,
+                                                          powerup: g,
                                                           onClick: y.onClose
                                                       })
-                                                    : (0, r.jsx)(a.zxk, {
-                                                          className: g.button,
+                                                    : (0, r.jsx)(l.zxk, {
+                                                          className: O.button,
                                                           onClick: y.onClose,
                                                           children: m.NW.string(m.t.cpT0Cg)
                                                       })
@@ -124,14 +124,14 @@ function j(e) {
                                     ]
                                 })
                             }),
-                            (0, r.jsx)(a.olH, {
-                                className: g.close,
+                            (0, r.jsx)(l.olH, {
+                                className: O.close,
                                 onClick: y.onClose
                             }),
                             !v &&
                                 (0, r.jsx)(c.Z, {
                                     confettiTarget: x.current,
-                                    confettiCanvas: C,
+                                    confettiCanvas: h,
                                     sprites: (0, u.vK)()
                                 })
                         ]

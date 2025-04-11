@@ -26,7 +26,7 @@ let h = function (e) {
             let e = setTimeout(() => (0, u.uL)((0, s.M)()), 3000);
             return () => clearTimeout(e);
         }, [h]);
-    let f = i.useCallback(
+    let m = i.useCallback(
         async (e, t) => {
             try {
                 g(2), await o(e, t), g(3);
@@ -48,7 +48,7 @@ let h = function (e) {
                     (0, r.jsx)(c.DK, { children: d.NW.string(d.t.SXCxyc) }),
                     (0, r.jsx)(c.zx, {
                         className: p.marginTop40,
-                        onClick: () => f(t, n),
+                        onClick: () => m(t, n),
                         children: d.NW.string(d.t.UQvCf3)
                     }),
                     (0, r.jsx)(c.zx, {

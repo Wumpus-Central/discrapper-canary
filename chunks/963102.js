@@ -50,7 +50,7 @@ function y(e) {
             displayText: x.NW.string(x.t['KUYR+P'])
         });
     let I = n ? C.DR : a,
-        N = l.useCallback(() => {
+        T = l.useCallback(() => {
             t && (I(), (0, u.Ou)()), (0, f.navigateToQuestHome)({ fromContent: i.j.ORBS_BALANCE_MENU });
         }, [I, t]);
     return (0, r.jsx)(c.f6W, {
@@ -87,7 +87,7 @@ function y(e) {
                                     (0, r.jsx)(m.V9, {
                                         cardAlignment: m.V9.CardAlignment.END,
                                         ctaText: x.NW.string(x.t.VC4Mq6),
-                                        ctaOnClick: N,
+                                        ctaOnClick: T,
                                         className: O.balanceWidgetMenu
                                     }),
                                 t &&

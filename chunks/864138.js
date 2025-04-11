@@ -1,21 +1,21 @@
-a.d(e, { z: () => n });
-var c = a(200651);
-a(192379);
-var d = a(206295),
-    s = a(650623);
-function n(t) {
-    let { children: e, imageUrl: a } = t,
-        { primaryColor: n, secondaryColor: f } = (0, d.Z)(''.concat(a, '?forColors'));
-    return (0, c.jsxs)('div', {
-        className: s.heroContainer,
-        style: { backgroundImage: 'linear-gradient(180deg, '.concat(n, ' 0%, ').concat(f, ' 100%), radial-gradient(99.17% 98.53% at 0% 1.47%, #deca7b 0%, #c89b3c 30.5%, #785a28 100%)') },
+n.d(t, { z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(206295),
+    o = n(650623);
+function a(e) {
+    let { children: t, imageUrl: n } = e,
+        { primaryColor: a, secondaryColor: s } = (0, i.Z)(''.concat(n, '?forColors'));
+    return (0, r.jsxs)('div', {
+        className: o.heroContainer,
+        style: { backgroundImage: 'linear-gradient(180deg, '.concat(a, ' 0%, ').concat(s, ' 100%), radial-gradient(99.17% 98.53% at 0% 1.47%, #deca7b 0%, #c89b3c 30.5%, #785a28 100%)') },
         children: [
-            (0, c.jsx)('img', {
-                src: a,
+            (0, r.jsx)('img', {
+                src: n,
                 alt: '',
-                className: s.heroSplash
+                className: o.heroSplash
             }),
-            e
+            t
         ]
     });
 }

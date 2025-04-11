@@ -1,4 +1,4 @@
-t.d(n, { Z: () => m }), t(539854);
+t.d(n, { Z: () => I }), t(539854);
 var r = t(442837),
     o = t(468363),
     i = t(158776),
@@ -12,21 +12,21 @@ var r = t(442837),
     p = t(228168),
     b = t(981631),
     y = t(388032);
-function m(e) {
-    let { user: n, currentUser: t, guildId: m, initialSubsection: g } = e,
-        { voiceActivityStatusEnabled: I } = (0, o.U)({ location: 'useUserProfileModalTabBarItems' }),
-        { live: j, recent: v, stream: h, outbox: _ } = (0, s.Z)(n.id),
-        { voiceChannel: x, voiceActivity: O } = (0, a.Z)({
+function I(e) {
+    let { user: n, currentUser: t, guildId: I, initialSubsection: g } = e,
+        { voiceActivityStatusEnabled: m } = (0, o.U)({ location: 'useUserProfileModalTabBarItems' }),
+        { live: j, recent: v, stream: h, outbox: x } = (0, s.Z)(n.id),
+        { voiceChannel: O, voiceActivity: _ } = (0, a.Z)({
             userId: n.id,
-            guildId: m,
+            guildId: I,
             surface: 'use-user-profile-modal-tab-bar-items'
         }),
         Z = n.id === (null == t ? void 0 : t.id),
-        P = (0, r.e7)([l.Z, i.Z], () => {
+        N = (0, r.e7)([l.Z, i.Z], () => {
             let e = Z ? l.Z.getStatus() : i.Z.getStatus(n.id);
             return e === b.Skl.OFFLINE || e === b.Skl.INVISIBLE;
         }),
-        N = null != h || j.length > 0,
+        P = null != h || j.length > 0,
         E = v.length > 0,
         { mutualFriendsCount: S, mutualGuilds: T } = (0, c.Z)(n),
         C = null == T ? void 0 : T.length,
@@ -41,12 +41,12 @@ function m(e) {
             }
         ];
     return (
-        !P && (N || (I && null == h && null == O && null != x))
+        !N && (P || (m && null == h && null == _ && null != O))
             ? w.push({
                   section: p.oh.ACTIVITY,
                   text: y.NW.string(y.t.chq59f)
               })
-            : (E || (null == _ && g === p.Tb.RECENT_ACTIVITY)) &&
+            : (E || (null == x && g === p.Tb.RECENT_ACTIVITY)) &&
               w.push({
                   section: p.oh.ACTIVITY,
                   text: y.NW.string(y.t.chq59f)

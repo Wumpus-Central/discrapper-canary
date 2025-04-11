@@ -13,17 +13,17 @@ var o = t(442837),
     p = t(250822),
     b = t(771362),
     y = t(280885),
-    m = t(819602),
+    I = t(819602),
     g = t(78806),
-    I = t(900927),
+    m = t(900927),
     j = t(678738),
     v = t(652853),
     h = t(179828),
-    _ = t(228168),
-    x = t(388032),
-    O = t(349966);
+    x = t(228168),
+    O = t(388032),
+    _ = t(349966);
 function Z(e) {
-    let { user: n, currentUser: t, displayProfile: Z, subsection: P, onClose: N } = e,
+    let { user: n, currentUser: t, displayProfile: Z, subsection: N, onClose: P } = e,
         { theme: E } = (0, v.z)(),
         { trackUserProfileAction: S } = (0, f.KZ)(),
         T = null == Z ? void 0 : Z.guildId,
@@ -38,7 +38,7 @@ function Z(e) {
         M = (0, p.Z)(n.id);
     return (0, r.jsxs)(i.zJl, {
         fade: !0,
-        className: O.scroller,
+        className: _.scroller,
         children: [
             (null == Z ? void 0 : Z.bio) != null &&
                 (null == Z ? void 0 : Z.bio) !== '' &&
@@ -51,7 +51,7 @@ function Z(e) {
                     user: n,
                     currentUser: t,
                     guild: C,
-                    scrollIntoView: P === _.Tb.ROLES
+                    scrollIntoView: N === x.Tb.ROLES
                 }),
             n.isProvisional &&
                 (0, r.jsx)(c.WR, {
@@ -60,24 +60,24 @@ function Z(e) {
                 }),
             w.length > 0 &&
                 (0, r.jsx)(j.Z, {
-                    heading: x.NW.string(x.t['Uv/eT0']),
+                    heading: O.NW.string(O.t['Uv/eT0']),
                     children: (0, r.jsx)(g.Z, { applicationIds: w })
                 }),
             (0, r.jsx)(j.Z, {
-                heading: x.NW.string(x.t.a6XYDw),
-                children: (0, r.jsx)(I.Z, {
+                heading: O.NW.string(O.t.a6XYDw),
+                children: (0, r.jsx)(m.Z, {
                     userId: n.id,
                     guildId: null == Z ? void 0 : Z.guildId,
-                    tooltipDelay: _.vB
+                    tooltipDelay: x.vB
                 })
             }),
             R.length > 0 &&
                 (0, r.jsx)(j.Z, {
-                    heading: x.NW.string(x.t['3fe7U1']),
-                    scrollIntoView: P === _.Tb.CONNECTIONS,
-                    children: (0, r.jsx)(m.OA, {
+                    heading: O.NW.string(O.t['3fe7U1']),
+                    scrollIntoView: N === x.Tb.CONNECTIONS,
+                    children: (0, r.jsx)(I.OA, {
                         connectedAccounts: R,
-                        className: O.connections,
+                        className: _.connections,
                         userId: n.id,
                         theme: E,
                         locale: L
@@ -85,16 +85,16 @@ function Z(e) {
                 }),
             M.length > 0 &&
                 (0, r.jsx)(j.Z, {
-                    heading: x.NW.string(x.t.PHjkRE),
+                    heading: O.NW.string(O.t.PHjkRE),
                     children: M.map((e) =>
                         (0, r.jsx)(
-                            m.tH,
+                            I.tH,
                             {
-                                className: O.appsConnections,
+                                className: _.appsConnections,
                                 applicationRoleConnection: e,
                                 locale: L,
                                 onApplicationClicked: () => {
-                                    S({ action: 'PRESS_APP_CONNECTION' }), N();
+                                    S({ action: 'PRESS_APP_CONNECTION' }), P();
                                 },
                                 selectedGuildId: null != A ? A : void 0
                             },
@@ -103,12 +103,12 @@ function Z(e) {
                     )
                 }),
             (0, r.jsx)(j.Z, {
-                heading: x.NW.string(x.t['mQKv+v']),
-                scrollIntoView: P === _.Tb.NOTE,
+                heading: O.NW.string(O.t['mQKv+v']),
+                scrollIntoView: N === x.Tb.NOTE,
                 children: (0, r.jsx)(l.Z, {
                     userId: n.id,
-                    className: O.note,
-                    autoFocus: P === _.Tb.NOTE,
+                    className: _.note,
+                    autoFocus: N === x.Tb.NOTE,
                     onUpdate: () => S({ action: 'SET_NOTE' })
                 })
             })

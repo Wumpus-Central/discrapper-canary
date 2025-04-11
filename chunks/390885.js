@@ -71,21 +71,21 @@ function h(e, t) {
 }
 function g(e) {
     var t = (function (e, t) {
-        if ('object' !== f(e) || null === e) return e;
+        if ('object' !== m(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== f(r)) return r;
+            if ('object' !== m(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === f(t) ? t : String(t);
+    return 'symbol' === m(t) ? t : String(t);
 }
-function f(e) {
+function m(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-let m = 'UserFlowAnalyticsStore_current',
+let f = 'UserFlowAnalyticsStore_current',
     _ = 'UserFlowAnalyticsStore';
 function b(e) {
     if (e === c.MK.UNKNOWN) return null;
@@ -102,7 +102,7 @@ let x = (0, r.U)()(
         currentFlow: null,
         activeFlow: () => {
             var e;
-            let n = null != (e = t().currentFlow) ? e : a.K.get(m);
+            let n = null != (e = t().currentFlow) ? e : a.K.get(f);
             if (null == n) return null;
             let { [n]: r } = t().flows,
                 i = null != r ? r : b(n);
@@ -173,7 +173,7 @@ x.subscribe(
             (!(function (e) {
                 if (e.type === c.MK.UNKNOWN) return;
                 let t = ''.concat(_, '-').concat(e.type);
-                e.ended ? (a.K.remove(t), a.K.remove(m)) : (a.K.set(''.concat(_, '-').concat(e.type), p(d({}, e), { version: 1 })), a.K.set(m, e.type));
+                e.ended ? (a.K.remove(t), a.K.remove(f)) : (a.K.set(''.concat(_, '-').concat(e.type), p(d({}, e), { version: 1 })), a.K.set(f, e.type));
             })(e),
             s.default.track(
                 u.rMx.NUO_TRANSITION,

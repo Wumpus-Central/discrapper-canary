@@ -9,12 +9,12 @@ var i = n(120356),
     o = n(481060),
     a = n(239091),
     u = n(166081),
-    s = n(937615),
-    c = n(942833),
+    c = n(937615),
+    s = n(942833),
     d = n(48691),
     p = n(231338),
-    f = n(388032),
-    E = n(306846);
+    E = n(388032),
+    f = n(306846);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,13 +59,13 @@ function S(e, t) {
     );
 }
 function O(e) {
-    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: i, showTestDownload: l, showDeleteProduct: a, showReportProduct: u, onEditProduct: s, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: p, onTestDownload: _, onReportProduct: S, closePopout: O, onSelect: I } = e;
+    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: i, showTestDownload: l, showDeleteProduct: a, showReportProduct: u, onEditProduct: c, onUnpublishProduct: s, onDeleteProduct: d, onCopyLink: p, onTestDownload: _, onReportProduct: S, closePopout: O, onSelect: I } = e;
     return (0, r.jsx)('div', {
-        className: E.menuContainer,
+        className: f.menuContainer,
         children: (0, r.jsxs)(o.v2r, {
             navId: 'guild-product-context',
             onClose: O,
-            'aria-label': f.NW.string(f.t.Z146dH),
+            'aria-label': E.NW.string(E.t.Z146dH),
             onSelect: I,
             children: [
                 (0, r.jsxs)(o.kSQ, {
@@ -73,20 +73,20 @@ function O(e) {
                         t &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'guild-product-edit',
-                                label: f.NW.string(f.t.EEfce3),
-                                action: s
+                                label: E.NW.string(E.t.EEfce3),
+                                action: c
                             }),
                         i &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'guild-product-copy-link',
-                                label: f.NW.string(f.t.XR26ur),
+                                label: E.NW.string(E.t.XR26ur),
                                 icon: o.xPt,
                                 action: p
                             }),
                         l &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'guild-product-test-download',
-                                label: f.NW.string(f.t.aXoI6e),
+                                label: E.NW.string(E.t.aXoI6e),
                                 icon: o._8t,
                                 action: _
                             })
@@ -97,13 +97,13 @@ function O(e) {
                         n &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'guild-product-unpublish',
-                                label: f.NW.string(f.t.QrkMlJ),
-                                action: c
+                                label: E.NW.string(E.t.QrkMlJ),
+                                action: s
                             }),
                         a &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'guild-product-delete',
-                                label: f.NW.string(f.t.zWjqvL),
+                                label: E.NW.string(E.t.zWjqvL),
                                 color: 'danger',
                                 action: d
                             })
@@ -114,7 +114,7 @@ function O(e) {
                         u &&
                         (0, r.jsx)(o.sNh, {
                             id: 'guild-product-report',
-                            label: f.NW.string(f.t['6yUzvL']),
+                            label: E.NW.string(E.t['6yUzvL']),
                             color: 'danger',
                             action: S
                         })
@@ -124,7 +124,7 @@ function O(e) {
     });
 }
 function I(e) {
-    let { product: t, guildId: n, showEditProduct: i, showUnpublishProduct: l, showTestDownload: a, showCopyLink: u, showDeleteProduct: s, showReportProduct: c, onEditProduct: d, onUnpublishProduct: p, onDeleteProduct: I, onCopyProductLink: g, onTestDownload: T, onReportProduct: h } = e;
+    let { product: t, guildId: n, showEditProduct: i, showUnpublishProduct: l, showTestDownload: a, showCopyLink: u, showDeleteProduct: c, showReportProduct: s, onEditProduct: d, onUnpublishProduct: p, onDeleteProduct: I, onCopyProductLink: g, onTestDownload: T, onReportProduct: b } = e;
     return (0, r.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
@@ -144,14 +144,14 @@ function I(e) {
                         showUnpublishProduct: l,
                         showCopyLink: u,
                         showTestDownload: a,
-                        showReportProduct: c,
-                        showDeleteProduct: s,
+                        showReportProduct: s,
+                        showDeleteProduct: c,
                         onEditProduct: d,
                         onUnpublishProduct: p,
                         onDeleteProduct: I,
                         onCopyLink: g,
                         onTestDownload: T,
-                        onReportProduct: h
+                        onReportProduct: b
                     })
                 ),
             children: (e, n) => {
@@ -159,14 +159,14 @@ function I(e) {
                 return (0, r.jsx)(
                     o.P3F,
                     S(_({}, e), {
-                        'aria-label': f.NW.formatToPlainString(f.t.RtqjeH, { productName: t.name }),
+                        'aria-label': E.NW.formatToPlainString(E.t.RtqjeH, { productName: t.name }),
                         'aria-haspopup': 'listbox',
                         'aria-expanded': i,
-                        className: E.productActionMenuButton,
+                        className: f.productActionMenuButton,
                         children: (0, r.jsx)(o.Huf, {
                             size: 'md',
                             color: 'currentColor',
-                            className: E.productActionMenuIcon,
+                            className: f.productActionMenuIcon,
                             'aria-hidden': !0
                         })
                     })
@@ -176,13 +176,13 @@ function I(e) {
     });
 }
 function g(e) {
-    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: g, onDeleteProduct: T, onCopyProductLink: h, onTestDownload: b, disabled: N = !1 } = e,
+    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: g, onDeleteProduct: T, onCopyProductLink: b, onTestDownload: h, disabled: N = !1 } = e,
         C = (0, u.U)(t, 600),
-        y = null !== t.price_tier ? (0, s.T4)(t.price_tier, p.pK.USD) : void 0,
-        m = (0, c.C)(t);
+        y = null !== t.price_tier ? (0, c.T4)(t.price_tier, p.pK.USD) : void 0,
+        P = (0, s.C)(t);
     return (0, r.jsxs)(o.kL8, {
         tag: 'article',
-        className: l()(E.productCardClickable, E.productCard, { [E.disabled]: N }),
+        className: l()(f.productCardClickable, f.productCard, { [f.disabled]: N }),
         onClick: N ? void 0 : i,
         onContextMenu: function (e) {
             (0, a.jW)(e, () =>
@@ -202,50 +202,50 @@ function g(e) {
                             onEditProduct: i,
                             onUnpublishProduct: g,
                             onDeleteProduct: T,
-                            onCopyLink: h,
-                            onTestDownload: b,
+                            onCopyLink: b,
+                            onTestDownload: h,
                             onReportProduct: () => {}
                         })
                     )
                 )
             );
         },
-        'aria-label': f.NW.formatToPlainString(f.t['X/yAKi'], { productName: t.name }),
+        'aria-label': E.NW.formatToPlainString(E.t['X/yAKi'], { productName: t.name }),
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 src: C,
-                className: E.productThumbnail
+                className: f.productThumbnail
             }),
             (0, r.jsxs)('div', {
-                className: E.productInfo,
+                className: f.productInfo,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: E.productInfoContent,
+                        className: f.productInfoContent,
                         children: [
                             (0, r.jsx)(o.X6q, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: E.productName,
+                                className: f.productName,
                                 children: t.name
                             }),
                             (0, r.jsx)(o.LZC, { size: 8 }),
                             (0, r.jsxs)('div', {
-                                className: E.productDetails,
+                                className: f.productDetails,
                                 children: [
                                     (0, r.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
                                         children: y
                                     }),
-                                    null != m
+                                    null != P
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
-                                                  (0, r.jsx)('div', { className: E.dotSeparator }),
+                                                  (0, r.jsx)('div', { className: f.dotSeparator }),
                                                   (0, r.jsx)(o.Text, {
                                                       variant: 'text-md/normal',
                                                       color: 'header-secondary',
-                                                      children: m
+                                                      children: P
                                                   })
                                               ]
                                           })
@@ -269,8 +269,8 @@ function g(e) {
                             onEditProduct: i,
                             onUnpublishProduct: g,
                             onDeleteProduct: T,
-                            onCopyProductLink: h,
-                            onTestDownload: b,
+                            onCopyProductLink: b,
+                            onTestDownload: h,
                             onReportProduct: () => {}
                         })
                 ]

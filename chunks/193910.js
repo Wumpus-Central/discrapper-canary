@@ -120,7 +120,7 @@ function A(e) {
                 { modalKey: I.$z }
             );
     }
-    function H() {
+    function G() {
         y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
@@ -133,7 +133,7 @@ function A(e) {
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
-    function G() {
+    function F() {
         let e = w,
             n = 'txt',
             r = '',
@@ -194,7 +194,7 @@ function A(e) {
                             {
                                 id: 'upload-text-as-file',
                                 label: i,
-                                action: G
+                                action: F
                             },
                             'upload-text-as-file'
                         );
@@ -307,7 +307,7 @@ function A(e) {
                             {
                                 id: 'activity',
                                 label: i,
-                                action: H,
+                                action: G,
                                 hint: (0, r.jsx)(T, {})
                             },
                             'activity'

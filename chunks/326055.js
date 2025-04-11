@@ -30,8 +30,8 @@ function d(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let [_, g] = o.useState(void 0),
-        m = o.useMemo(() => {
+    let [_, m] = o.useState(void 0),
+        g = o.useMemo(() => {
             switch (p.skuId) {
                 case c.IN:
                     return (0, r.jsx)(l.E, { guildId: d });
@@ -111,16 +111,16 @@ function d(e) {
                                                 className: u.footer,
                                                 guildId: d,
                                                 powerup: p,
-                                                onError: g
+                                                onError: m
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            null != m &&
+                            null != g &&
                                 (0, r.jsx)('div', {
                                     className: u.exampleImage,
-                                    children: m
+                                    children: g
                                 })
                         ]
                     }),

@@ -15,8 +15,8 @@ var r = n(200651),
     p = n(47343),
     h = n(973616),
     g = n(131704),
-    f = n(601964),
-    m = n(598077),
+    m = n(601964),
+    f = n(598077),
     _ = n(594174),
     b = n(51144),
     x = n(981631),
@@ -76,10 +76,10 @@ let j = () =>
             T = (0, d.WR)({ location: 'invite' }),
             { currentUser: P } = (0, o.cj)([_.default], () => ({ currentUser: _.default.getCurrentUser() }));
         if (null == c) return null;
-        let A = null != c.guild ? new f.ZP(c.guild) : null,
+        let A = null != c.guild ? new m.ZP(c.guild) : null,
             Z = null != c.channel ? (0, g.jD)(c.channel) : null,
             R = null != c.target_application ? new h.ZP(c.target_application) : null,
-            w = j || null == c.inviter ? null : new m.Z(c.inviter),
+            w = j || null == c.inviter ? null : new f.Z(c.inviter),
             L = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != A && A.hasFeature(x.oNc.COMMUNITY))) && null != w,
             D = null,
             k = !1;

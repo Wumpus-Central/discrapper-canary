@@ -43,8 +43,8 @@ var r = n(200651),
     N = n(424602),
     A = n(728345),
     C = n(979200),
-    R = n(388905),
-    P = n(560067),
+    P = n(388905),
+    R = n(560067),
     w = n(353926),
     D = n(341298),
     L = n(703656),
@@ -191,8 +191,8 @@ function eh() {
                 !0 === d
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(R.Dx, { children: ea.NW.string(ea.t.csrAMD) }),
-                              (0, r.jsx)(R.DK, { children: ea.NW.string(ea.t['m1+IBg']) }),
+                              (0, r.jsx)(P.Dx, { children: ea.NW.string(ea.t.csrAMD) }),
+                              (0, r.jsx)(P.DK, { children: ea.NW.string(ea.t['m1+IBg']) }),
                               (0, r.jsx)(h.zx, {
                                   onClick: () => c(!0),
                                   color: h.zx.Colors.BRAND,
@@ -201,7 +201,7 @@ function eh() {
                           ]
                       })
                     : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(R.Dx, { children: ea.NW.string(ea.t['Z+hCVV']) }), (0, r.jsx)(E.$, {})]
+                          children: [(0, r.jsx)(P.Dx, { children: ea.NW.string(ea.t['Z+hCVV']) }), (0, r.jsx)(E.$, {})]
                       })),
             (0, r.jsx)(ee.G, {
                 removeChildWrapper: !0,
@@ -255,9 +255,9 @@ function eg(e) {
         g,
         T,
         N,
-        R,
         P,
-        { clientId: D, responseType: j, redirectUri: ee, codeChallenge: eo, codeChallengeMethod: el, state: eu, nonce: ef, prompt: e_, authorizations: eh, scopes: em, permissions: eg, guildId: eE, channelId: eb, integrationType: ey, disableGuildSelect: ev = !1, showLogout: eO = !1, cancelCompletesFlow: eI = !0, isTrustedName: eS = !1, isEmbeddedFlow: eT = !1, callback: eN, callbackWithoutPost: eA, onClose: eC, disclosures: eR, isExternalStandaloneOAuthPage: eP = !1 } = e,
+        R,
+        { clientId: D, responseType: j, redirectUri: ee, codeChallenge: eo, codeChallengeMethod: el, state: eu, nonce: ef, prompt: e_, authorizations: eh, scopes: em, permissions: eg, guildId: eE, channelId: eb, integrationType: ey, disableGuildSelect: ev = !1, showLogout: eO = !1, cancelCompletesFlow: eI = !0, isTrustedName: eS = !1, isEmbeddedFlow: eT = !1, callback: eN, callbackWithoutPost: eA, onClose: eC, disclosures: eP, isExternalStandaloneOAuthPage: eR = !1 } = e,
         ew = null != ey ? (null == eh ? void 0 : eh.get(ey)) : void 0,
         eD = (0, s.TH)(),
         eL = (0, _.e7)([w.Z], () => w.Z.hasLoadedExperiments);
@@ -303,8 +303,8 @@ function eg(e) {
             return null != t ? t : G.Hn;
         }, [null == e4 ? void 0 : e4.permissions, eg, e1]),
         e7 = i.useRef(!1),
-        [e9, te] = i.useState(null != eR ? eR : []),
-        [tt, tn] = i.useState(null != eR && eR.length > 0);
+        [e9, te] = i.useState(null != eP ? eP : []),
+        [tt, tn] = i.useState(null != eP && eP.length > 0);
     i.useEffect(() => {
         if (e7.current) return;
         let e = async () => {
@@ -320,11 +320,11 @@ function eg(e) {
                 e7.current = !1;
             }
         };
-        if (null == eR) {
+        if (null == eP) {
             if (!k.default.isAuthenticated()) return void (0, F.c$)(eD, 'oauth2_error_not_authenticated');
             e();
         }
-    }, [D, eD, eR, te, eG, tn, ej]);
+    }, [D, eD, eP, te, eG, tn, ej]);
     let tr = i.useCallback(
             async (e) => {
                 if (null != eA) {
@@ -465,7 +465,7 @@ function eg(e) {
         }, []),
         tc = (0, I.O)(tl);
     if (eU instanceof Error)
-        return eP
+        return eR
             ? { body: (0, r.jsx)(et.Lk, { message: eU.message }) }
             : {
                   header: (0, r.jsxs)(b.xBx, {
@@ -612,7 +612,7 @@ function eg(e) {
         th &&
             null != ex &&
             null != eX &&
-            (R = (0, r.jsx)(J.Z, {
+            (P = (0, r.jsx)(J.Z, {
                 id: ep,
                 user: eX,
                 application: ex.application,
@@ -623,7 +623,7 @@ function eg(e) {
                 scopes: e5
             })),
         tm &&
-            (P = (0, r.jsxs)('div', {
+            (R = (0, r.jsxs)('div', {
                 className: es.footer,
                 children: [
                     null != g
@@ -682,9 +682,9 @@ function eg(e) {
                 ]
             })),
         {
-            header: R,
+            header: P,
             body: m,
-            footer: P,
+            footer: R,
             nextStep: T,
             appDetails: N,
             sendAuthorize: tr,
@@ -744,7 +744,7 @@ function eE(e, t) {
             : null == (i = window.open(t.location, '_blank')) || i.focus();
 }
 function eb(e, t) {
-    if ((0, D.g)('create-guild-and-oauth2-modal')) return void P.Z.openCreateGuildModal({ onSuccess: (n) => ey(ed(ec({}, e), { guildId: n }), t) });
+    if ((0, D.g)('create-guild-and-oauth2-modal')) return void R.Z.openCreateGuildModal({ onSuccess: (n) => ey(ed(ec({}, e), { guildId: n }), t) });
     ey(e, t);
 }
 function ey(e, t) {

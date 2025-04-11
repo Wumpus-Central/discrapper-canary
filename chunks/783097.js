@@ -1,13 +1,13 @@
 n.d(t, {
     $d: () => w,
-    BQ: () => P,
+    BQ: () => R,
     Cb: () => V,
     Hu: () => F,
     L1: () => K,
     Ow: () => Y,
     PZ: () => z,
     WA: () => k,
-    Wx: () => R,
+    Wx: () => P,
     XZ: () => H,
     Y$: () => G,
     Yn: () => Z,
@@ -119,27 +119,27 @@ function C(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = { id: v.bi.BUILT_IN };
-function P(e) {
+let P = { id: v.bi.BUILT_IN };
+function R(e) {
     return e.id !== v.bi.BUILT_IN;
 }
 function w(e) {
-    return P(e) ? e.name : O.NW.string(O.t.UB2gGx);
+    return R(e) ? e.name : O.NW.string(O.t.UB2gGx);
 }
 function D(e) {
-    return P(e) ? e.description : O.NW.string(O.t.X9fusr);
+    return R(e) ? e.description : O.NW.string(O.t.X9fusr);
 }
 function L(e) {
     var t;
-    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
+    return R(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
 }
 function x(e) {
     var t;
-    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
+    return R(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
 function M(e) {
     var t;
-    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
+    return R(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
 }
 function k(e) {
     let t = U(e),
@@ -161,7 +161,7 @@ function j(e) {
     }
 }
 function U(e) {
-    return P(e) && L(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return R(e) && L(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function G(e) {
     let { command: t, optionValues: n, context: r, commandTargetId: a, maxSizeCallback: s, sectionName: l, commandOrigin: u = c.bB.APPLICATION_LAUNCHER } = e,
@@ -201,7 +201,7 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n } = t,
         r = A(t, ['fakeAppIconURL']);
-    return P(e)
+    return R(e)
         ? {
               iconURL: h.ZP.getApplicationIconURL(
                   N(S({}, r), {
@@ -219,7 +219,7 @@ function B(e) {
           };
 }
 function V(e) {
-    return !!P(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
+    return !!R(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
 }
 function F(e) {
     let t = U(e);

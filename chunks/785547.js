@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(415506), n(388685);
+n.d(t, { Z: () => R }), n(415506), n(388685);
 var r,
     i,
     a = n(200651),
@@ -227,7 +227,7 @@ class Z extends (r = l.Component) {
             });
     }
 }
-function k(e) {
+function R(e) {
     let { libraryApplication: t } = e,
         n = (0, d.O)(),
         [r, i] = (0, o.Wu)([_.Z, b.Z], () => [(0, h.i)(t, _.Z, b.Z), _.Z.getState(t.id, t.branchId)], [t]),

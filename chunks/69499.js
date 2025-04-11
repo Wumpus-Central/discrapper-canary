@@ -12,8 +12,8 @@ var r = n(200651),
     s = n(585237),
     c = n(812206),
     u = n(55563),
-    d = n(73346),
-    E = n(388032);
+    E = n(73346),
+    d = n(388032);
 function _(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ class N extends i.PureComponent {
                 return (0, r.jsx)(o.v2r, {
                     onSelect: n,
                     navId: 'test-skus',
-                    'aria-label': E.NW.string(E.t.ogxXGh),
+                    'aria-label': d.NW.string(d.t.ogxXGh),
                     onClose: a.Zy,
                     children: e.map((e) =>
                         (0, r.jsx)(
@@ -134,7 +134,7 @@ class N extends i.PureComponent {
 let O = l.ZP.connectStores([u.Z, c.Z], (e) => {
     var t;
     let { applicationId: n } = e,
-        r = (0, d.uF)(n, c.Z, u.Z);
+        r = (0, E.uF)(n, c.Z, u.Z);
     return {
         skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) => (null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1)),
         primarySKU: r

@@ -142,7 +142,7 @@ let W = i.forwardRef(function (e, t) {
         return () => clearTimeout(e);
     }, []);
     let { enabled: B } = I.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
-        H = i.useCallback(() => {
+        G = i.useCallback(() => {
             (0, A.Z)({
                 channel: a,
                 openInPopout: W,
@@ -151,7 +151,7 @@ let W = i.forwardRef(function (e, t) {
                 b(),
                 _();
         }, [M, a, _, b, W]),
-        G = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 u(),
                     N.default.track(w.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -161,7 +161,7 @@ let W = i.forwardRef(function (e, t) {
             },
             [u, a]
         ),
-        F = B ? p.iWm : p.nG3;
+        H = B ? p.iWm : p.nG3;
     return (0, r.jsx)(g.Gt, {
         value: M,
         children: (0, r.jsx)(O.Z, {
@@ -181,7 +181,7 @@ let W = i.forwardRef(function (e, t) {
                     }),
                     (0, r.jsxs)('div', {
                         className: k.container,
-                        onMouseEnter: G,
+                        onMouseEnter: F,
                         onMouseLeave: b,
                         children: [
                             (0, r.jsxs)('div', {
@@ -190,7 +190,7 @@ let W = i.forwardRef(function (e, t) {
                                     (0, r.jsxs)('div', {
                                         className: k.titleLeft,
                                         children: [
-                                            (0, r.jsx)(F, {
+                                            (0, r.jsx)(H, {
                                                 size: 'md',
                                                 className: k.titleLeftIcon,
                                                 color: 'var(--interactive-active)'
@@ -203,7 +203,7 @@ let W = i.forwardRef(function (e, t) {
                                     }),
                                     (0, r.jsxs)(p.P3F, {
                                         className: k.titleRight,
-                                        onClick: H,
+                                        onClick: G,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: 'eyebrow',

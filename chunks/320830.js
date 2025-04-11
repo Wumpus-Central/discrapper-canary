@@ -38,8 +38,8 @@ function g(e) {
     }
     return e;
 }
-let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    m = {
+let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+    f = {
         START: 0,
         END: 1
     },
@@ -56,13 +56,13 @@ let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                 clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
             }
             componentWillAppear(e) {
-                this.state.shouldAnimate ? this.animateTo(m.END, e) : e();
+                this.state.shouldAnimate ? this.animateTo(f.END, e) : e();
             }
             componentWillEnter(e) {
-                this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(m.END, e), 40))) : e();
+                this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(f.END, e), 40))) : e();
             }
             componentWillLeave(e) {
-                this.state.shouldAnimate ? this.animateTo(m.START, e) : e();
+                this.state.shouldAnimate ? this.animateTo(f.START, e) : e();
             }
             animateTo(e, t) {
                 l.Z.spring(this.anim, g({ toValue: e }, _)).start(t);
@@ -108,11 +108,11 @@ let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
             constructor(...e) {
                 super(...e),
                     h(this, 'timeout', void 0),
-                    h(this, 'anim', new l.Z.Value(m.START)),
+                    h(this, 'anim', new l.Z.Value(f.START)),
                     h(this, 'state', { shouldAnimate: !s.tq }),
                     h(this, 'handleResize', () => {
-                        let e = window.innerWidth > f;
-                        !this.state.shouldAnimate && e && this.anim.setValue(m.END), this.setState({ shouldAnimate: e });
+                        let e = window.innerWidth > m;
+                        !this.state.shouldAnimate && e && this.anim.setValue(f.END), this.setState({ shouldAnimate: e });
                     }),
                     h(this, 'handleResizeDebounced', a()(this.handleResize, 60));
             }

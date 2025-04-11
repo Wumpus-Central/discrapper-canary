@@ -107,7 +107,7 @@ function A(e) {
 function C(e) {
     return null != e ? e : I;
 }
-function R(e) {
+function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = e.guild_scheduled_event_id;
@@ -115,7 +115,7 @@ function R(e) {
     let i = C(e.guild_scheduled_event_exception_id);
     null == S[r][i] && (S[r][i] = {}), (S[r][i][e.user_id] = e), t && D(e), n && (v += 1);
 }
-function P(e) {
+function R(e) {
     var t, n, r, i;
     let o = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         a = C(e.guild_scheduled_event_exception_id),
@@ -201,21 +201,21 @@ function H(e) {
 }
 function W(e) {
     let { guildScheduledEventUsers: t } = e;
-    return t.forEach((e) => R(e, !1, !1)), (v += 1), !0;
+    return t.forEach((e) => P(e, !1, !1)), (v += 1), !0;
 }
 function Y(e) {
     let { guildScheduledEventUsers: t } = e;
-    return t.forEach((e) => R(e, !1, !1)), (v += 1), !0;
+    return t.forEach((e) => P(e, !1, !1)), (v += 1), !0;
 }
 function K(e) {
     var t, n;
     let { userId: r, guildEventId: i, guildId: o, guildEventExceptionId: a, response: s } = e,
         l = C(a),
         c = null == (n = S[i]) || null == (t = n[l]) ? void 0 : t[r];
-    null != c && P(c, !1);
+    null != c && R(c, !1);
     let d = u.ZP.getMember(o, r);
     return (
-        R({
+        P({
             user_id: r,
             guild_scheduled_event_id: i,
             member: null != d ? d : void 0,
@@ -227,7 +227,7 @@ function K(e) {
 }
 function z(e) {
     let { userId: t, guildEventId: n, guildEventExceptionId: r, response: i } = e;
-    P({
+    R({
         user_id: t,
         guild_scheduled_event_id: n,
         guild_scheduled_event_exception_id: r,

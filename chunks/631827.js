@@ -1,8 +1,8 @@
 function i(e, t) {
-    var n, i, r, l, a, o, s;
+    var n, i, r, l, o, a, s;
     let c,
-        d = null != (n = t.limit) ? n : 1 / 0,
-        u = ((o = e), (s = null != (i = t.filterPredicates) ? i : []), o.filter((e) => s.every((t) => t(e))));
+        u = null != (n = t.limit) ? n : 1 / 0,
+        d = ((a = e), (s = null != (i = t.filterPredicates) ? i : []), a.filter((e) => s.every((t) => t(e))));
     return (function (e, t, n) {
         let i = [];
         for (let r of e) {
@@ -20,7 +20,7 @@ function i(e, t) {
         return i;
     })(
         null != t.bucketPredicates && t.bucketPredicates.length > 0
-            ? d >= u.length
+            ? u >= d.length
                 ? (function (e, t) {
                       let n = Array(t.length)
                           .fill(null)
@@ -32,7 +32,7 @@ function i(e, t) {
                                   break;
                               }
                       return n;
-                  })(u, null != (r = t.bucketPredicates) ? r : [])
+                  })(d, null != (r = t.bucketPredicates) ? r : [])
                 : (function (e, t, n) {
                       let i = [],
                           r = e;
@@ -43,10 +43,10 @@ function i(e, t) {
                           if ((i.push(l), (r = t), i.reduce((e, t) => t.length + e, 0) >= n)) break;
                       }
                       return i;
-                  })(u, null != (l = t.bucketPredicates) ? l : [], d)
-            : [u],
-        null != (a = t.sortComparers) ? a : [],
-        d
-    ).slice(0, d);
+                  })(d, null != (l = t.bucketPredicates) ? l : [], u)
+            : [d],
+        null != (o = t.sortComparers) ? o : [],
+        u
+    ).slice(0, u);
 }
 n.d(t, { N: () => i }), n(539854), n(388685), n(642613);

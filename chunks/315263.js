@@ -25,8 +25,8 @@ var r = n(873546),
     N = n(540709),
     A = n(881706),
     C = n(701190),
-    R = n(944486),
-    P = n(914010),
+    P = n(944486),
+    R = n(914010),
     w = n(771845),
     D = n(626135),
     L = n(591759),
@@ -80,7 +80,7 @@ function B(e) {
                                 applicationId: void 0,
                                 skuId: void 0
                             },
-                c = null != (o = P.Z.getGuildId()) ? o : void 0;
+                c = null != (o = R.Z.getGuildId()) ? o : void 0;
             return (
                 null == s
                     ? (0, x.Z)(e)
@@ -88,7 +88,7 @@ function B(e) {
                           application_id: s,
                           device_platform: r.tq ? 'mobile_web' : 'desktop_web',
                           guild_id: c,
-                          channel_id: R.Z.getChannelId()
+                          channel_id: P.Z.getChannelId()
                       }),
                       n
                           .e('11866')
@@ -236,7 +236,7 @@ function B(e) {
     if (null != B && Z && null != H)
         return (e) => {
             null == e || e.preventDefault();
-            let t = P.Z.getGuildId();
+            let t = R.Z.getGuildId();
             null != H.guildId && '' !== H.guildId && H.guildId !== t && (0, I.Z)(M.Z5c.CHANNEL(H.guildId));
             let n = y.ZP.getGuildScheduledEvent(H.guildEventId);
             return null != n && (0, b.bO)({ eventId: n.id }), !0;

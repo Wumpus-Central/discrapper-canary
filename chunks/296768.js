@@ -1,24 +1,24 @@
-r.d(t, { Z: () => P }), r(388685);
+r.d(t, { Z: () => I }), r(388685);
 var n = r(200651),
     a = r(192379),
-    o = r(120356),
-    i = r.n(o),
-    l = r(392711),
-    s = r.n(l),
+    i = r(120356),
+    l = r.n(i),
+    s = r(392711),
+    o = r.n(s),
     c = r(442837),
     u = r(481060),
     d = r(224706),
-    p = r(812206),
-    f = r(669764),
-    m = r(810568),
-    g = r(839392),
-    b = r(774073),
-    _ = r(426482),
-    O = r(644941),
+    m = r(812206),
+    g = r(669764),
+    f = r(810568),
+    p = r(839392),
+    O = r(774073),
+    E = r(426482),
+    N = r(644941),
     h = r(388032),
-    y = r(263930),
-    v = r(276220);
-function j(e) {
+    x = r(263930),
+    j = r(276220);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -43,29 +43,29 @@ function j(e) {
     }
     return e;
 }
-let x = (e) => {
+let b = (e) => {
     let { game: t, onClose: r, trackClick: a } = e,
-        o = (0, c.e7)([p.Z], () => p.Z.getApplication(t.applicationId));
+        i = (0, c.e7)([m.Z], () => m.Z.getApplication(t.applicationId));
     return (0, n.jsx)(u.ua7, {
         text: t.name,
         children: (e) => {
-            var i, l;
+            var l, s;
             return (0, n.jsx)(
                 u.P3F,
-                ((i = j({}, e)),
-                (l = l =
+                ((l = v({}, e)),
+                (s = s =
                     {
-                        className: v.similarGameImageClickable,
+                        className: j.similarGameImageClickable,
                         onClick: async () => {
-                            a(m.as.ClickSimilarGame, t.applicationId),
+                            a(f.as.ClickSimilarGame, t.applicationId),
                                 (0, u.ZDy)(() =>
                                     Promise.resolve((e) =>
                                         (0, n.jsx)(
-                                            O.default,
-                                            j(
+                                            N.default,
+                                            v(
                                                 {
                                                     applicationId: t.applicationId,
-                                                    source: m.m1.SimilarGames
+                                                    source: f.m1.SimilarGames
                                                 },
                                                 e
                                             )
@@ -75,15 +75,15 @@ let x = (e) => {
                                 await new Promise((e) => setTimeout(e, 10)),
                                 r();
                         },
-                        children: (0, n.jsx)(_.C, {
+                        children: (0, n.jsx)(E.C, {
                             game: t,
-                            application: o,
-                            className: v.similarGameImage,
-                            size: _.Z.SMALL
+                            application: i,
+                            className: j.similarGameImage,
+                            size: E.Z.SMALL
                         })
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
                           var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -91,62 +91,62 @@ let x = (e) => {
                               r.push.apply(r, n);
                           }
                           return r;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                      })(Object(s)).forEach(function (e) {
+                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
-                i)
+                l)
             );
         }
     });
 };
-function P(e) {
-    let { applicationId: t, onClose: r, trackAction: o, similarGames: l, similarGamesError: p } = e,
-        m = (0, c.e7)([g.Z, f.Z], () => {
-            let e = void 0 === g.Z.getSimilarGames(t) && null == g.Z.getSimilarGamesError(t),
-                r = l.some((e) => f.Z.isFetching(e));
+function I(e) {
+    let { applicationId: t, onClose: r, trackAction: i, similarGames: s, similarGamesError: m } = e,
+        f = (0, c.e7)([p.Z, g.Z], () => {
+            let e = void 0 === p.Z.getSimilarGames(t) && null == p.Z.getSimilarGamesError(t),
+                r = s.some((e) => g.Z.isFetching(e));
             return e || r;
         }),
-        _ = (0, c.Wu)([f.Z], () =>
-            l
-                .map((e) => f.Z.getGame(e))
+        E = (0, c.Wu)([g.Z], () =>
+            s
+                .map((e) => g.Z.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, b.z6)(e.applicationId))
+                .filter((e) => (0, O.z6)(e.applicationId))
                 .slice(0, 5)
         );
     return (a.useEffect(() => {
-        l.length > 0 && d.Z.getDetectableGamesSupplemental([t, ...l]);
-    }, [t, l]),
-    m && null == p)
+        s.length > 0 && d.Z.getDetectableGamesSupplemental([t, ...s]);
+    }, [t, s]),
+    f && null == m)
         ? (0, n.jsxs)('div', {
               children: [
-                  (0, n.jsx)('div', { className: i()(v.loadingHeading, y.sectionHeader) }),
+                  (0, n.jsx)('div', { className: l()(j.loadingHeading, x.sectionHeader) }),
                   (0, n.jsx)('div', {
-                      className: i()(y.row, y.gapLg),
-                      children: s()
+                      className: l()(x.row, x.gapLg),
+                      children: o()
                           .range(0, 5)
-                          .map((e) => (0, n.jsx)('div', { className: v.loadingArtwork }, e))
+                          .map((e) => (0, n.jsx)('div', { className: j.loadingArtwork }, e))
                   })
               ]
           })
-        : (m || 0 !== _.length) && null == p
+        : (f || 0 !== E.length) && null == m
           ? (0, n.jsxs)('div', {
                 children: [
                     (0, n.jsx)(u.X6q, {
-                        className: y.sectionHeader,
+                        className: x.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: h.NW.string(h.t['6rLyQE'])
                     }),
                     (0, n.jsx)('div', {
-                        className: v.similarGames,
+                        className: j.similarGames,
                         style: {},
-                        children: _.map((e) =>
+                        children: E.map((e) =>
                             (0, n.jsx)(
-                                x,
+                                b,
                                 {
                                     game: e,
                                     onClose: r,
-                                    trackClick: o
+                                    trackClick: i
                                 },
                                 e.applicationId
                             )

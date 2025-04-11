@@ -25,8 +25,8 @@ var r = n(392711),
     N = n(660199),
     A = n(364458),
     C = n(981631),
-    R = n(689079),
-    P = n(377668),
+    P = n(689079),
+    R = n(377668),
     w = n(388032);
 function D(e, t, n) {
     return (
@@ -299,7 +299,7 @@ let F = (e) => {
                     var l;
                     r = null != (l = p.ZP.getNickname(a.getGuildId(), n.channelId, o)) ? l : h.ZP.getName(o);
                 }
-                null == o && '@Clyde' === e[0] && (0, s.gJ)(Z(n), a) && (i = P.fL);
+                null == o && '@Clyde' === e[0] && (0, s.gJ)(Z(n), a) && (i = R.fL);
                 let c = e[1],
                     u = null != c && C.Xyh.test(c.trim()),
                     f = u && n.unknownUserMentionPlaceholder ? '@'.concat(w.NW.string(w.t.sKdZ6e)) : e[0];
@@ -346,7 +346,7 @@ let F = (e) => {
                         id: e[2]
                     };
                 let [, ...r] = e[1].split(' '),
-                    i = ''.concat(e[2]).concat([...r].map((e) => ''.concat(R.oQ).concat(e)).join(''));
+                    i = ''.concat(e[2]).concat([...r].map((e) => ''.concat(P.oQ).concat(e)).join(''));
                 return {
                     channelId: n.channelId,
                     commandId: e[2],

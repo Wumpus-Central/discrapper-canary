@@ -72,7 +72,7 @@ function w(e, t) {
 }
 let Z = i.memo(function (e) {
     var t, n, i;
-    let { message: a, compact: Z = !1, className: k, onContextMenu: R, onClick: D, hideSimpleEmbedContent: L = !0, channel: M, isGroupStart: W, animateAvatar: U, subscribeToComponentDispatch: F, renderThreadAccessory: B, trackAnnouncementViews: G = !1 } = e,
+    let { message: a, compact: Z = !1, className: R, onContextMenu: k, onClick: D, hideSimpleEmbedContent: L = !0, channel: M, isGroupStart: W, animateAvatar: U, subscribeToComponentDispatch: F, renderThreadAccessory: B, trackAnnouncementViews: G = !1 } = e,
         H = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -127,7 +127,7 @@ let Z = i.memo(function (e) {
         A(
             {
                 compact: Z,
-                className: l()(k, {
+                className: l()(R, {
                     [P.ephemeral]: (0, g.Pv)(a),
                     [P.disableInteraction]: V
                 }),
@@ -144,7 +144,7 @@ let Z = i.memo(function (e) {
                 childrenAccessories: e.hideAccessories ? void 0 : (0, O.Q)(e, X),
                 childrenMessageContent: (0, N.Z)(e, Y),
                 childrenSystemMessage: (0, C.Z)(w(A({}, e), { disableInteraction: V })),
-                onContextMenu: R,
+                onContextMenu: k,
                 onClick: D,
                 hasThread: B && null != en && a.hasFlag(T.iLy.HAS_THREAD),
                 hasReply: a.type === T.uaV.REPLY,

@@ -8,7 +8,7 @@ function c(e) {
     var t, r;
     let c,
         { entry: s, baseEntryData: u } = e,
-        { provider: p, image_url: d } = s.extra.media,
+        { provider: d, image_url: p } = s.extra.media,
         f = s.extra.artist.name,
         b = {
             onClick: () => (0, l.o)(o.Hw.ALBUM, s.extra.media.external_parent_id),
@@ -19,7 +19,7 @@ function c(e) {
             ariaDescription: a.NW.formatToPlainString(a.t.xTsar6, { itemName: f })
         };
     return (
-        p === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),
+        d === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),
         (t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -48,7 +48,7 @@ function c(e) {
         (r = r =
             {
                 title: f,
-                thumbnailUrl: d,
+                thumbnailUrl: p,
                 titleClickable: O,
                 subtitleClickable: b,
                 thumbnailClickable: b,

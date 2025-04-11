@@ -75,8 +75,8 @@ let O = (e) => {
         A = (0, p.k)(I);
     if (null == I) return null;
     let [C] = I.items,
-        R = () => (C.type === a.Z.AVATAR_DECORATION ? m.NW.string(m.t['7v0T9P']) : C.type === a.Z.PROFILE_EFFECT ? m.NW.string(m.t.wR5wOj) : null),
-        P = null != S && S.id !== (null == N ? void 0 : N.id),
+        P = () => (C.type === a.Z.AVATAR_DECORATION ? m.NW.string(m.t['7v0T9P']) : C.type === a.Z.PROFILE_EFFECT ? m.NW.string(m.t.wR5wOj) : null),
+        R = null != S && S.id !== (null == N ? void 0 : N.id),
         w = () => {
             null != t && null != E && E(t);
         };
@@ -91,7 +91,7 @@ let O = (e) => {
                             className: g.previewTitle,
                             children: m.NW.string(m.t.PpoJzs)
                         }),
-                        P &&
+                        R &&
                             (0, r.jsx)(
                                 l.yRy,
                                 {
@@ -152,7 +152,7 @@ let O = (e) => {
                                     (0, r.jsx)(l.X6q, {
                                         variant: 'heading-sm/medium',
                                         color: 'header-secondary',
-                                        children: R()
+                                        children: P()
                                     })
                                 ]
                             }),

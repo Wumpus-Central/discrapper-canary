@@ -10,19 +10,19 @@ function u(e) {
     let { entry: t } = e,
         r = (0, i.q)(t.extra.application_id),
         u = null == r ? void 0 : r.getIconURL(c.Si.LARGE),
-        p = t.extra.activity_name,
-        d = (0, a.Jg)(t) ? s.t.vPg1JS : s.t.rPqqtr,
+        d = t.extra.activity_name,
+        p = (0, a.Jg)(t) ? s.t.vPg1JS : s.t.rPqqtr,
         f = {
             onClick: () => {
                 n.__(l._b.TEXT, o.Ie.NORMAL, { applicationId: t.extra.application_id });
             },
-            ariaDescription: s.NW.formatToPlainString(s.t.NTHttL, { title: p })
+            ariaDescription: s.NW.formatToPlainString(s.t.NTHttL, { title: d })
         };
     return {
         thumbnailUrl: u,
-        title: p,
+        title: d,
         titleClickable: f,
         thumbnailClickable: f,
-        userDescription: d
+        userDescription: p
     };
 }

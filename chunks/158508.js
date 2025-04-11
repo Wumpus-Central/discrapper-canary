@@ -90,9 +90,9 @@ function v(e) {
             }),
             [T]
         ),
-        R = [o.z.IGNORE_USER_NEW_BADGE],
-        [P, w] = (0, c.US)(R),
-        D = P === o.z.IGNORE_USER_NEW_BADGE;
+        P = [o.z.IGNORE_USER_NEW_BADGE],
+        [R, w] = (0, c.US)(P),
+        D = R === o.z.IGNORE_USER_NEW_BADGE;
     return N || C
         ? null
         : (0, r.jsx)(a.sNh, {

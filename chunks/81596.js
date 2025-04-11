@@ -1,93 +1,93 @@
-n.d(t, { default: () => h }), n(388685);
-var i = n(200651),
-    a = n(192379),
-    r = n(442837),
-    o = n(481060),
-    c = n(230711),
-    l = n(485267),
-    d = n(564990),
-    s = n(353647),
-    _ = n(527790),
-    f = n(540440),
-    E = n(365583),
-    u = n(388032),
-    T = n(807069);
-function h(e) {
-    let { user: t, entry: n, transitionState: h, onAction: N, onClose: x, onOpenGameSettings: p } = e,
-        [R, S] = (0, r.Wu)([s.Z], () => [s.Z.isDeletingEntryHistory, s.Z.deleteOutboxEntryError]);
+n.d(e, { default: () => T }), n(388685);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    l = n(481060),
+    d = n(230711),
+    o = n(485267),
+    c = n(564990),
+    a = n(353647),
+    E = n(527790),
+    u = n(540440),
+    _ = n(365583),
+    h = n(388032),
+    N = n(807069);
+function T(t) {
+    let { user: e, entry: n, transitionState: T, onAction: x, onClose: R, onOpenGameSettings: f } = t,
+        [L, p] = (0, s.Wu)([a.Z], () => [a.Z.isDeletingEntryHistory, a.Z.deleteOutboxEntryError]);
     return (
-        a.useEffect(() => l.Bt, []),
-        (0, i.jsxs)(o.Y0X, {
-            size: o.CgR.SMALL,
-            transitionState: h,
+        i.useEffect(() => o.Bt, []),
+        (0, r.jsxs)(l.Y0X, {
+            size: l.CgR.SMALL,
+            transitionState: T,
             children: [
-                (0, i.jsxs)(o.hzk, {
-                    className: T.content,
+                (0, r.jsxs)(l.hzk, {
+                    className: N.content,
                     children: [
-                        null != S
-                            ? (0, i.jsxs)('div', {
-                                  className: T.error,
+                        null != p
+                            ? (0, r.jsxs)('div', {
+                                  className: N.error,
                                   children: [
-                                      (0, i.jsx)(o.k$p, { color: o.TVs.colors.STATUS_DANGER }),
-                                      (0, i.jsx)(o.Text, {
+                                      (0, r.jsx)(l.k$p, { color: l.TVs.colors.STATUS_DANGER }),
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-sm/medium',
-                                          children: u.NW.string(u.t.FMbL3t)
+                                          children: h.NW.string(h.t.FMbL3t)
                                       })
                                   ]
                               })
                             : null,
-                        (0, i.jsx)(o.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: (0, f.y)(n)
+                            children: (0, u.y)(n)
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             tag: 'span',
-                            children: u.NW.format(u.t.KV72oa, {
-                                settingsHook: (e, t) => {
-                                    let a = (0, E.C)({
+                            children: h.NW.format(h.t.KV72oa, {
+                                settingsHook: (t, e) => {
+                                    let i = (0, _.C)({
                                         entry: n,
-                                        onOpenGameSettings: p
+                                        onOpenGameSettings: f
                                     });
-                                    return (0, i.jsx)(
-                                        o.eee,
+                                    return (0, r.jsx)(
+                                        l.eee,
                                         {
                                             onClick: () => {
-                                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != a ? a() : c.Z.open(), x();
+                                                null == x || x({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != i ? i() : d.Z.open(), R();
                                             },
-                                            children: e
+                                            children: t
                                         },
-                                        t
+                                        e
                                     );
                                 }
                             })
                         }),
-                        (0, i.jsx)(_.Z, {
-                            user: t,
+                        (0, r.jsx)(E.Z, {
+                            user: e,
                             entry: n,
-                            className: T.card,
+                            className: N.card,
                             hideContextMenu: !0
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.mzw, {
-                    className: T.footer,
+                (0, r.jsxs)(l.mzw, {
+                    className: N.footer,
                     children: [
-                        (0, i.jsx)(o.zxk, {
-                            disabled: R,
-                            color: o.Ttl.RED,
-                            size: o.PhG.SMALL,
+                        (0, r.jsx)(l.zxk, {
+                            disabled: L,
+                            color: l.Ttl.RED,
+                            size: l.PhG.SMALL,
                             onClick: () => {
-                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, d.CV)(n, t.id, x);
+                                null == x || x({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(n, e.id, R);
                             },
-                            children: null != S ? u.NW.string(u.t['5911LS']) : u.NW.string(u.t.VkKicX)
+                            children: null != p ? h.NW.string(h.t['5911LS']) : h.NW.string(h.t.VkKicX)
                         }),
-                        (0, i.jsx)(o.zxk, {
-                            onClick: x,
-                            size: o.PhG.SMALL,
-                            look: o.iLD.FILLED,
-                            color: o.Ttl.TRANSPARENT,
-                            children: u.NW.string(u.t['ETE/oK'])
+                        (0, r.jsx)(l.zxk, {
+                            onClick: R,
+                            size: l.PhG.SMALL,
+                            look: l.iLD.FILLED,
+                            color: l.Ttl.TRANSPARENT,
+                            children: h.NW.string(h.t['ETE/oK'])
                         })
                     ]
                 })

@@ -16,8 +16,8 @@ var r,
     p = n(481060),
     h = n(570140),
     g = n(893776),
-    f = n(899742),
-    m = n(579806),
+    m = n(899742),
+    f = n(579806),
     _ = n(743142),
     b = n(254942),
     x = n(388905),
@@ -107,7 +107,7 @@ class $ extends (r = o.PureComponent) {
     }
     componentDidMount() {
         let { handoffAvailable: e, authenticated: t, giftCodeSKU: n, invite: r, location: i } = this.props;
-        e && !t ? (0, f.is)() : t && this.loginOrSSO(t, i, !0),
+        e && !t ? (0, m.is)() : t && this.loginOrSSO(t, i, !0),
             k.default.track(
                 z.rMx.LOGIN_VIEWED,
                 X(
@@ -123,7 +123,7 @@ class $ extends (r = o.PureComponent) {
                 ),
                 { flush: !0 }
             ),
-            null == m.Z &&
+            null == f.Z &&
                 null != window.PublicKeyCredential &&
                 null != PublicKeyCredential.isConditionalMediationAvailable &&
                 PublicKeyCredential.isConditionalMediationAvailable().then((e) => {

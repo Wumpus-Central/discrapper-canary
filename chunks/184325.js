@@ -26,8 +26,8 @@ var i = n(120356),
     N = n(228168),
     A = n(981631),
     C = n(215023),
-    R = n(474936),
-    P = n(681642),
+    P = n(474936),
+    R = n(681642),
     w = n(388032),
     D = n(286020);
 function L(e, t, n) {
@@ -63,7 +63,7 @@ let M = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === m.l.ORB_PROFILE_BADGE
         ? (0, r.jsx)(g.Z, { showSubtext: !i && !t.isPreviewMode })
-        : void 0 !== n && t.id !== P.a
+        : void 0 !== n && t.id !== R.a
           ? (0, r.jsx)(d.Z, {
                 profileBadge: t,
                 tenureBadge: n
@@ -76,7 +76,7 @@ function k(e) {
         { analyticsLocations: j } = (0, c.ZP)(l.Z.BADGE),
         { context: U, trackUserProfileAction: G } = (0, O.KZ)(),
         B = E.default.getCurrentUser(),
-        V = (0, y.yd)(null == B ? void 0 : B.premiumType, R.p9.TIER_2),
+        V = (0, y.yd)(null == B ? void 0 : B.premiumType, P.p9.TIER_2),
         F = (0, T.Of)(null != (t = null == B ? void 0 : B.id) ? t : null),
         Z = (0, S.Z)(F).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)('div', {
@@ -87,7 +87,7 @@ function k(e) {
             var n;
             let i = e.id === m.l.ORB_PROFILE_BADGE,
                 c = (0, v.fv)(e.id),
-                E = null != c || e.id === P.a,
+                E = null != c || e.id === R.a,
                 y = (t) => {
                     if (
                         (G({ action: 'PRESS_BADGE' }),
@@ -158,7 +158,7 @@ function k(e) {
                 },
                 T = M({
                     badge: e,
-                    tieredTenureBadge: E && e.id !== P.a ? c : void 0,
+                    tieredTenureBadge: E && e.id !== R.a ? c : void 0,
                     currentUserOwnsOrbBadge: Z
                 });
             return (0, r.jsx)(

@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(669079),
     A = n(74538),
     C = n(51144),
-    R = n(987209),
-    P = n(981631),
+    P = n(987209),
+    R = n(981631),
     w = n(474936),
     D = n(388032),
     L = n(136266);
@@ -36,9 +36,9 @@ function M(e) {
         [O, S] = i.useState(u.kO8.Modes.DEFAULT),
         M = (0, c.e7)([I.Z], () => I.Z.enabled),
         j = f || (null != l && null != h),
-        U = (null == o ? void 0 : o.productLine) === P.POd.COLLECTIBLES,
+        U = (null == o ? void 0 : o.productLine) === R.POd.COLLECTIBLES,
         G = (0, E.Z)(),
-        { selectedGiftingPromotionReward: B } = (0, R.wD)(),
+        { selectedGiftingPromotionReward: B } = (0, P.wD)(),
         V = null == G ? void 0 : G.giftPurchaseConfirmation,
         F = (0, g.tK)(null == B ? void 0 : B.skuId),
         Z = (0, g.a5)(s) && null != F && null != V,
@@ -213,9 +213,9 @@ let k = (e) => {
         T = (0, c.e7)([O.Z], () => O.Z.getFriendIDs()),
         N = l().difference(T, I),
         A = [...I, ...N],
-        R = (0, c.e7)([S.default], () => S.default.filter((e) => A.includes(e.id) && !e.bot), [A]);
-    if (null == R || 0 === R.length) return null;
-    let P = l().sortBy(R, (e) => A.indexOf(e.id));
+        P = (0, c.e7)([S.default], () => S.default.filter((e) => A.includes(e.id) && !e.bot), [A]);
+    if (null == P || 0 === P.length) return null;
+    let R = l().sortBy(P, (e) => A.indexOf(e.id));
     return (0, r.jsxs)('div', {
         className: L.giftRecipientSection,
         children: [
@@ -239,7 +239,7 @@ let k = (e) => {
                         onChange: (e) => {
                             a(e), p(!1);
                         },
-                        options: P.map((e) => ({
+                        options: R.map((e) => ({
                             value: e,
                             label: ''.concat(C.ZP.getUserTag(e))
                         }))

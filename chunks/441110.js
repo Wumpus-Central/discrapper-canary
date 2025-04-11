@@ -5,8 +5,8 @@ var o = n(481060),
     a = n(493773),
     i = n(367907),
     s = n(524444),
-    c = n(297047),
-    l = n(592125),
+    l = n(297047),
+    c = n(592125),
     u = n(944486),
     d = n(626135),
     p = n(981631),
@@ -14,15 +14,15 @@ var o = n(481060),
     m = n(400822);
 let f = function (e) {
     let { guild: t, message: n, onClose: f } = e,
-        _ = l.Z.getChannel(u.Z.getChannelId(t.id));
+        b = c.Z.getChannel(u.Z.getChannelId(t.id));
     return ((0, a.ZP)(() => {
         d.default.track(p.rMx.OPEN_POPOUT, {
             type: 'New Member Badge Popout',
             guild_id: t.id,
-            channel_id: null == _ ? void 0 : _.id
+            channel_id: null == b ? void 0 : b.id
         });
     }),
-    null == _)
+    null == b)
         ? null
         : (0, r.jsx)(s.W_, {
               className: m.messagePopoutContent,
@@ -62,7 +62,7 @@ let f = function (e) {
                           className: m.ctaButton,
                           fullWidth: !0,
                           onClick: () => {
-                              i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, c.q)(n.author, _.id);
+                              i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, l.q)(n.author, b.id);
                           },
                           children: g.NW.format(g.t['+xsVS0'], { username: n.author.username })
                       })

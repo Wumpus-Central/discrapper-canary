@@ -1,6 +1,6 @@
 t.d(n, {
-    Z: () => m,
-    b: () => d
+    Z: () => p,
+    b: () => u
 });
 var r,
     o = t(200651);
@@ -10,15 +10,15 @@ var s = t(657707),
     a = t(692547),
     l = t(680278),
     c = t(388032),
-    u = t(154142),
-    d = (((r = {})[(r.AVAILABLE = 0)] = 'AVAILABLE'), (r[(r.SPENT = 1)] = 'SPENT'), (r[(r.TOTAL = 2)] = 'TOTAL'), r);
-function m(e) {
+    d = t(154142),
+    u = (((r = {})[(r.AVAILABLE = 0)] = 'AVAILABLE'), (r[(r.SPENT = 1)] = 'SPENT'), (r[(r.TOTAL = 2)] = 'TOTAL'), r);
+function p(e) {
     let { count: n, type: t } = e;
     return (0, o.jsxs)('div', {
-        className: u.container,
+        className: d.container,
         children: [
             (0, o.jsxs)('div', {
-                className: u.headerContainer,
+                className: d.headerContainer,
                 children: [
                     (0, o.jsx)(s.$Eu, {
                         size: 'sm',

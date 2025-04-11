@@ -1,45 +1,45 @@
-n.d(t, { Z: () => o }), n(388685), n(539854);
+n.d(t, { Z: () => a }), n(388685), n(539854);
 var r = n(192379),
     i = n(442837),
-    l = n(235587);
-function o(e) {
-    let { guildId: t, leaderboardId: n, intervalStart: o } = e,
-        a = (0, i.Wu)(
-            [l.Z],
-            () => {
-                var e, r;
-                return null != (r = null == (e = l.Z.getPrevLeaderboardRanks(t, n, o)) ? void 0 : e.ranks) ? r : [];
-            },
-            [t, o, n]
-        ),
+    o = n(235587);
+function a(e) {
+    let { guildId: t, leaderboardId: n, intervalStart: a } = e,
         s = (0, i.Wu)(
-            [l.Z],
+            [o.Z],
             () => {
                 var e, r;
-                return null != (r = null == (e = l.Z.getCurrentLeaderboardRanks(t, n, o)) ? void 0 : e.ranks) ? r : [];
+                return null != (r = null == (e = o.Z.getPrevLeaderboardRanks(t, n, a)) ? void 0 : e.ranks) ? r : [];
             },
-            [t, o, n]
+            [t, a, n]
+        ),
+        l = (0, i.Wu)(
+            [o.Z],
+            () => {
+                var e, r;
+                return null != (r = null == (e = o.Z.getCurrentLeaderboardRanks(t, n, a)) ? void 0 : e.ranks) ? r : [];
+            },
+            [t, a, n]
         );
     return {
         rankChanges: r.useMemo(() => {
             let e = new Map();
-            a.forEach((t, n) => {
+            s.forEach((t, n) => {
                 e.set(t, n + 1);
             });
             let t = [];
             return (
-                s.forEach((n, r) => {
+                l.forEach((n, r) => {
                     let i = r + 1,
-                        l = e.get(n);
-                    l !== i &&
+                        o = e.get(n);
+                    o !== i &&
                         t.push({
                             userId: n,
                             currentRank: i,
-                            previousRank: l
+                            previousRank: o
                         });
                 }),
                 t
             );
-        }, [a, s])
+        }, [s, l])
     };
 }

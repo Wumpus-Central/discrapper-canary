@@ -22,18 +22,18 @@ function u(e) {
                 n = o.Z.isBlocked(u.getRecipientId());
             return e || t || n;
         }),
-        b = p && null != f && m && !g && !d ? f : void 0,
-        [O, y] = (0, r.useState)(b);
+        O = p && null != f && m && !g && !d ? f : void 0,
+        [b, y] = (0, r.useState)(O);
     return (
         (0, r.useEffect)(() => {
             let e = setTimeout(
                 () => {
-                    y(b);
+                    y(O);
                 },
                 m ? 100 : 1000
             );
             return () => clearTimeout(e);
-        }, [b, m]),
-        O
+        }, [O, m]),
+        b
     );
 }

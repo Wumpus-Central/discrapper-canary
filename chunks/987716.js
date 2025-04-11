@@ -90,8 +90,8 @@ function T(e, t) {
 }
 let N = (e) => {
     let { isShopGift: t, className: n, optionsContainerClassName: o } = e,
-        { giftRecipient: y, selectedGiftStyle: O, setSelectedGiftStyle: T, emojiConfetti: N, soundEffect: A, setEmojiConfetti: C, setSoundEffect: R } = (0, l.wD)(),
-        [P, w] = i.useState(!1),
+        { giftRecipient: y, selectedGiftStyle: O, setSelectedGiftStyle: T, emojiConfetti: N, soundEffect: A, setEmojiConfetti: C, setSoundEffect: P } = (0, l.wD)(),
+        [R, w] = i.useState(!1),
         D = i.useRef(null),
         L = (0, s.arW)({ orientation: 'horizontal' }),
         { ref: x } = L,
@@ -105,7 +105,7 @@ let N = (e) => {
         F = null;
     U && (F = G && B ? g.kJ : g.QI), V && (F = g.RQ);
     let Z = (e) => {
-        null != R && R(null == e ? void 0 : e);
+        null != P && P(null == e ? void 0 : e);
     };
     return (0, r.jsxs)('div', {
         children: [
@@ -149,7 +149,7 @@ let N = (e) => {
                 I(
                     v(
                         {
-                            tabIndex: null != O || P ? void 0 : 0,
+                            tabIndex: null != O || R ? void 0 : 0,
                             onFocus: (e) => {
                                 var t;
                                 e.target === e.currentTarget && (null == (t = D.current) || t.focus());

@@ -85,7 +85,7 @@ function S(e, t) {
 }
 function T(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: i, planError: o, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: v, planGroup: T, isPrepaid: N, isTrial: A, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w } = e,
+    let { legalTermsNodeRef: n, invoiceError: i, planError: o, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: v, planGroup: T, isPrepaid: N, isTrial: A, makePurchase: C, needsPaymentSource: P, inReverseTrial: R, onNext: w } = e,
         { application: D, selectedPlan: L, hasAcceptedTerms: x, purchaseType: M, paymentSourceId: k, activeSubscription: j, devShelfFetchState: U } = (0, c.JL)(),
         G = I({
             purchaseType: M,
@@ -94,7 +94,7 @@ function T(e) {
             isGift: v,
             planGroup: T,
             isPrepaidPaymentSource: N,
-            inReverseTrial: P
+            inReverseTrial: R
         }),
         { analyticsLocations: B } = (0, l.ZP)();
     if (null != i || null != o || d)
@@ -103,7 +103,7 @@ function T(e) {
             disabled: !0,
             children: G
         });
-    if (R)
+    if (P)
         return (0, r.jsx)(a.ua7, {
             text: m.NW.string(m.t.L7jbQU),
             children: (e) =>
@@ -164,7 +164,7 @@ function T(e) {
                     })
                 )
         });
-    else if (P && null != j && null != k)
+    else if (R && null != j && null != k)
         return (0, r.jsx)(_.Z, {
             activeSubscription: j,
             onNext: w,

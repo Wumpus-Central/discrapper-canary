@@ -7,26 +7,26 @@ var n = r(200651),
     c = r(40330),
     s = r(95398),
     u = r(169525),
-    p = r(546432),
-    d = r(944486),
+    d = r(546432),
+    p = r(944486),
     f = r(388032),
     b = r(823670);
 function O(e) {
     let { file: t, name: r, size: i, spoiler: O } = e,
-        y = (0, a.e7)([d.Z], () => d.Z.getChannelId()),
-        m = l.useMemo(() => (null != t.contentType && -1 !== t.contentType.indexOf('/') ? t.contentType.split('/') : ['unknown', 'unknown']), [t.contentType]),
+        m = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
+        y = l.useMemo(() => (null != t.contentType && -1 !== t.contentType.indexOf('/') ? t.contentType.split('/') : ['unknown', 'unknown']), [t.contentType]),
         [j, g] = l.useState(O),
         h = l.useMemo(
             () => () =>
-                (0, n.jsx)(p.mz, {
-                    mimeType: m,
+                (0, n.jsx)(d.mz, {
+                    mimeType: y,
                     downloadURL: t.url,
                     showDownload: !0,
                     showImageAppPicker: !1,
                     isVisualMediaType: !1,
-                    channelId: y
+                    channelId: m
                 }),
-            [t, m, y]
+            [t, y, m]
         ),
         v = (e) =>
             (0, n.jsx)(c.Z, {

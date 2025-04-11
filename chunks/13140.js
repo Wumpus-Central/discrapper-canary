@@ -133,7 +133,7 @@ function N(e) {
 function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY,
-        r = R(e, t, n);
+        r = P(e, t, n);
     if (null != r) return r;
     let i = (0, u.T_)(e);
     return null != i ? i.keyCode : null;
@@ -142,7 +142,7 @@ function C(e) {
     let t = e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, '$2').replace('meta', 'command');
     return 'pause' === t || 'break' === t ? 'pause/break' : t;
 }
-function R(e) {
+function P(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
@@ -175,7 +175,7 @@ function R(e) {
     }
     return null != t ? t : null;
 }
-let P = [
+let R = [
         ['META', '\u2318'],
         ['RIGHT META', 'RIGHT \u2318'],
         ['SHIFT', '\u21E7'],
@@ -200,11 +200,11 @@ let P = [
         ['SPACE', '\u2423']
     ],
     w = (e) => {
-        for (let [t, n] of P) if (t === e.toUpperCase()) return n;
+        for (let [t, n] of R) if (t === e.toUpperCase()) return n;
         return e;
     },
     D = (e) => {
-        for (let [t, n] of P) if (n === e.toUpperCase()) return t.toLowerCase();
+        for (let [t, n] of R) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
     L = /shift|meta|ctrl|alt$/;

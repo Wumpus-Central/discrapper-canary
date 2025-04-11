@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => k,
+    F: () => R,
     P: () => Z
 }),
     n(388685),
@@ -109,7 +109,7 @@ function Z(e) {
                 });
         });
     };
-    return (0, r.jsx)(R, {
+    return (0, r.jsx)(k, {
         appName: u.name,
         title: T.NW.formatToPlainString(T.t.XDRjs7, { appName: u.name }),
         description: A,
@@ -138,7 +138,7 @@ function Z(e) {
         })
     });
 }
-function k(e) {
+function R(e) {
     var t, a;
     let { appId: l, skuId: c, message: u } = e,
         {
@@ -171,7 +171,7 @@ function k(e) {
         ),
         E = i.useMemo(() => (null != x ? (0, O.y)(x, 45) : void 0), [x]),
         Z = (0, j.R)(null != (a = null == x ? void 0 : x.id) ? a : ''),
-        { openModal: k, subscriptionPurchaseButtonState: D } = (0, h.Z)({
+        { openModal: R, subscriptionPurchaseButtonState: D } = (0, h.Z)({
             skuId: c,
             initialSubscribeForGuild: y
         });
@@ -255,7 +255,7 @@ function k(e) {
             area: 'purchase_button'
         });
     };
-    return (0, r.jsx)(R, {
+    return (0, r.jsx)(k, {
         appName: x.name,
         title: m.name,
         description: F,
@@ -291,7 +291,7 @@ function k(e) {
                 L
                     ? null != _
                         ? (0, r.jsx)(C.pV, {
-                              onClick: k,
+                              onClick: R,
                               appId: x.id,
                               subscriptionType: M ? 'user' : 'guild',
                               skuId: m.id,
@@ -320,7 +320,7 @@ function k(e) {
         })
     });
 }
-function R(e) {
+function k(e) {
     let { appName: t, title: n, description: i, link: a, iconSrc: l, onIconClick: o, onLinkCopy: c, children: u } = e;
     return (0, r.jsxs)('div', {
         className: P.wrapper,

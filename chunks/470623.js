@@ -6,9 +6,9 @@ n.d(t, {
     n(388685),
     n(781311);
 var i = n(200651),
-    o = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    o = n(512722),
+    a = n.n(o),
     s = n(993192),
     l = n(731965),
     c = n(430742),
@@ -32,7 +32,7 @@ function f(e, t, n) {
 }
 class g {
     constructor(e, t, n) {
-        var i, o, r;
+        var i, r, o;
         f(this, 'channelId', void 0),
             f(this, '_set', void 0),
             f(this, 'get', void 0),
@@ -182,23 +182,23 @@ class g {
             g = null == a.template ? '' : a.template.trim(),
             b = h.Z.getDraft(a.id, h.d.FirstThreadMessage),
             j = (0, u.eK)(null != b && '' !== b.trim() ? b : g);
-        (this.name = null != (o = s.name) ? o : ''), (r = new Set(s.appliedTags)), (this.appliedTags = void 0 !== r ? r : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = j);
+        (this.name = null != (r = s.name) ? r : ''), (o = new Set(s.appliedTags)), (this.appliedTags = void 0 !== o ? o : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = j);
     }
 }
-let b = o.createContext(null);
+let b = r.createContext(null);
 function j(e) {
     let { children: t, channel: n } = e,
-        r = o.useMemo(() => (0, s.F)((e, t) => new g(n.id, e, t)), [n]);
+        o = r.useMemo(() => (0, s.F)((e, t) => new g(n.id, e, t)), [n]);
     return (0, i.jsx)(b.Provider, {
-        value: r,
+        value: o,
         children: t
     });
 }
 function v(e, t) {
-    let n = o.useContext(b);
+    let n = r.useContext(b);
     return a()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t);
 }
 function O() {
-    let e = o.useContext(b);
+    let e = r.useContext(b);
     return a()(null != e, '[useForumPostComposerStore] Context should not be null'), e;
 }

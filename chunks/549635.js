@@ -96,8 +96,8 @@ function S(e) {
 function T(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: o, maxHeight: s, onContextMenu: f } = e,
-        { width: p, height: E, url: y, proxyUrl: I, alt: T, type: N, maxWidth: C, maxHeight: R } = n,
-        P = O(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
+        { width: p, height: E, url: y, proxyUrl: I, alt: T, type: N, maxWidth: C, maxHeight: P } = n,
+        R = O(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
         { zoomed: w, setZoomed: D } = (0, m.Y)(),
         L = A(w, y, I),
         x = null != p && 0 !== p && null != E && 0 !== E;
@@ -108,7 +108,7 @@ function T(e) {
         let t = null != (M = n.renderLinkComponent) ? M : d.iT;
         return (0, r.jsx)(
             c.Z,
-            v(b({}, P), {
+            v(b({}, R), {
                 src: L,
                 width: p,
                 height: E,
@@ -133,7 +133,7 @@ function T(e) {
             (t = x
                 ? (0, r.jsx)(
                       l.ZP,
-                      v(b({}, P), {
+                      v(b({}, R), {
                           src: L,
                           width: p,
                           height: E,

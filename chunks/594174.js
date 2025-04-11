@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: () => v,
-        default: () => eP,
+        default: () => eR,
         mergeUser: () => A,
         transformUser: () => T,
         users: () => b
@@ -99,7 +99,7 @@ function A(e) {
         n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = b[e.id],
         i = void 0 !== e.id && e.id === _.default.getId();
-    if (null == r) void 0 !== (t = (r = new u.Z(e)).premiumType) && i && (r.premiumType = R((0, c.QI)(r), r.premiumType));
+    if (null == r) void 0 !== (t = (r = new u.Z(e)).premiumType) && i && (r.premiumType = P((0, c.QI)(r), r.premiumType));
     else if (n) {
         var o;
         let n = T(e);
@@ -112,16 +112,16 @@ function A(e) {
 function C(e) {
     var t;
     let n = null != (t = e.premium_type) ? t : e.premiumType,
-        r = R((0, c.VR)(e), n);
+        r = P((0, c.VR)(e), n);
     return void 0 !== e.premiumType ? (e.premiumType = r) : void 0 !== e.premium_type && (e.premium_type = r), e;
 }
-function R(e, t) {
+function P(e, t) {
     if (!e) return t;
     let n = l.Z.getPremiumTypeOverride(),
         r = l.Z.getPremiumTypeActual();
     return n === g.F_ ? r : n;
 }
-function P(e, t) {
+function R(e, t) {
     var n, r, i, o, a, s;
     if (
         (null != e.author && 'SENDING' !== e.state && N(e.author) && A(e.author, t),
@@ -204,11 +204,11 @@ function j(e) {
 }
 function U(e) {
     let { messages: t } = e;
-    return t.forEach((e) => P(e, !0)), !1;
+    return t.forEach((e) => R(e, !0)), !1;
 }
 function G(e) {
     let { mostRecentMessages: t } = e;
-    return null == t || t.forEach((e) => P(e, !1)), !1;
+    return null == t || t.forEach((e) => R(e, !1)), !1;
 }
 function B(e) {
     let { messages: t } = e;
@@ -216,20 +216,20 @@ function B(e) {
 }
 function V(e) {
     let { firstMessages: t, owners: n } = e;
-    null != t && t.forEach((e) => P(e, !0)), null != n && n.forEach((e) => A(e.user, !0));
+    null != t && t.forEach((e) => R(e, !0)), null != n && n.forEach((e) => A(e.user, !0));
 }
 function F(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
-        null != t && P(t, !0), null != n && P(n, !0), null != r && null != r.user && A(r.user, !0);
+        null != t && R(t, !0), null != n && R(n, !0), null != r && null != r.user && A(r.user, !0);
     });
 }
 function Z(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
-        null != t && P(t, !0);
+        null != t && R(t, !0);
     });
 }
 function H(e) {
@@ -254,7 +254,7 @@ function Y(e) {
 }
 function K(e) {
     let { message: t } = e;
-    if ((P(t, !0), null != t.flags && d.yE(t.flags, h.iLy.URGENT))) {
+    if ((R(t, !0), null != t.flags && d.yE(t.flags, h.iLy.URGENT))) {
         let e = b[_.default.getId()];
         return null != e && ((b[_.default.getId()] = e.set('flags', d.mB(e.flags, h.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
     }
@@ -451,7 +451,7 @@ function eS(e) {
 function eT(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
-        null != e.message && P(e.message, !0);
+        null != e.message && R(e.message, !0);
     }, !1);
 }
 function eN(e) {
@@ -468,19 +468,19 @@ function eC(e) {
         n = b[_.default.getId()];
     return null != n && n.ageVerificationStatus === i.F$.CLIENT_ONLY_PENDING && ((b[_.default.getId()] = n.set('ageVerificationStatus', t)), !0);
 }
-class eR extends p.Z {
+class eP extends p.Z {
     initialize() {
         this.waitFor(_.default, l.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: eR.LATEST_SNAPSHOT_VERSION,
+            version: eP.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(f.lm) }
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(eR.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(eP.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) b[e.id] = new u.Z(e);
         if (null != e.users) for (let t of e.users) (t.id in b && L(t)) || (b[t.id] = new u.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
@@ -586,5 +586,5 @@ class eR extends p.Z {
         });
     }
 }
-E(eR, 'displayName', 'UserStore'), E(eR, 'LATEST_SNAPSHOT_VERSION', 1);
-let eP = new eR();
+E(eP, 'displayName', 'UserStore'), E(eP, 'LATEST_SNAPSHOT_VERSION', 1);
+let eR = new eP();

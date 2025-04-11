@@ -69,8 +69,8 @@ function O(e, t) {
 }
 function I(e, t, n) {
     var b, v, I, S, T, N, A;
-    let { channel: C, type: R } = e,
-        [P, w] = r.useState(() => (0, p.P)()),
+    let { channel: C, type: P } = e,
+        [R, w] = r.useState(() => (0, p.P)()),
         D = (0, i.Z)(),
         L = (0, o.e7)([u.ZP], () => {
             if (null != e.guild) {
@@ -88,10 +88,10 @@ function I(e, t, n) {
         { canMentionEveryone: k, hidePersonalInformation: j } = (0, o.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: C.isPrivate() || M || R === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, C),
+                canMentionEveryone: C.isPrivate() || M || P === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, C),
                 hidePersonalInformation: f.Z.hidePersonalInformation
             }),
-            [C, R, M]
+            [C, P, M]
         ),
         { activeCommand: U, activeCommandOption: G } = (0, o.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(C.id),
@@ -100,7 +100,7 @@ function I(e, t, n) {
         B = (0, h.Z)({
             navId: 'channel-autocomplete',
             scrollerRef: n,
-            state: P,
+            state: R,
             onFocus: (e) => Z.setSelectedIndex(e)
         }),
         V = null == (b = e.editorRef.current) ? void 0 : b.getCurrentWord(),
@@ -108,12 +108,12 @@ function I(e, t, n) {
             navigator: B,
             activeCommand: U,
             activeCommandOption: G,
-            canMentionUsers: null != (T = null == (v = R.users) ? void 0 : v.allowMentioning) && T,
+            canMentionUsers: null != (T = null == (v = P.users) ? void 0 : v.allowMentioning) && T,
             canMentionEveryone: k,
             canMentionClyde: x,
             hidePersonalInformation: j,
-            hideMentionDescription: R === l.Ie.RULES_INPUT,
-            emojiIntention: R === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
+            hideMentionDescription: P === l.Ie.RULES_INPUT,
+            emojiIntention: P === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
             currentWord: null != (N = null == V ? void 0 : V.word) ? N : '',
             currentWordIsAtStart: (null == V ? void 0 : V.isAtStart) === !0,
             optionText: null != G ? (0, a.KF)({ [G.name]: null != (A = null == (I = e.editorRef.current) ? void 0 : I.getCurrentCommandOptionValue()) ? A : [] }, G.name) : ''
@@ -136,7 +136,7 @@ function I(e, t, n) {
         }, [D, Z]),
         r.useEffect(() => {
             var e;
-            let t = null == (e = P.query) ? void 0 : e.typeInfo.stores;
+            let t = null == (e = R.query) ? void 0 : e.typeInfo.stores;
             if (null != t) {
                 let e = () => Z.queryResults();
                 for (let n of t) n.addChangeListener(e);
@@ -144,7 +144,7 @@ function I(e, t, n) {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [Z, null == (S = P.query) ? void 0 : S.typeInfo]),
-        [P, Z, B]
+        }, [Z, null == (S = R.query) ? void 0 : S.typeInfo]),
+        [R, Z, B]
     );
 }

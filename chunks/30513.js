@@ -3,8 +3,8 @@ n.d(t, {
     WW: () => C,
     XO: () => N,
     Yp: () => T,
-    hC: () => P,
-    o9: () => R,
+    hC: () => R,
+    o9: () => P,
     zC: () => A
 });
 var r = n(692547),
@@ -131,10 +131,10 @@ function A() {
 function C() {
     return [g(), _(), m(l.Eu4.TIER_3), O()];
 }
-function R() {
+function P() {
     return [u(), h(), d(), O()];
 }
-function P() {
+function R() {
     return [h(), O()];
 }
 function w() {

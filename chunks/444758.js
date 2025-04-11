@@ -119,14 +119,14 @@ function C(e, t) {
         content: [n]
     };
 }
-function R(e) {
+function P(e) {
     return {
         type: 'channel',
         content: [D('')],
         iconType: e ? 'post' : 'message'
     };
 }
-function P(e, t) {
+function R(e, t) {
     var n;
     let r = c.Z.getChannel(e),
         i = (0, s.$)(e, c.Z, o.Z, d.Z).isSubscriptionGated,
@@ -212,7 +212,7 @@ function M(e, t, n, r, i) {
 function k(e, t, n, r) {
     let i = N(e),
         o = A(t),
-        a = R(t.isForumPost);
+        a = P(t.isForumPost);
     if (n && r) {
         if (t.isForumPost) {
             let e = c.Z.getChannel(t.parentId);
@@ -268,7 +268,7 @@ function j(e, t, n, r) {
             return S(O({}, i), {
                 guildId: b.ME,
                 inContent: [A(e)],
-                content: [R(!1)]
+                content: [P(!1)]
             });
         else return L(r);
     let a = e.guildId === n;
@@ -285,7 +285,7 @@ let U = {
                     type: 'channelMention',
                     id: r
                 };
-            let i = P(r, n.mentionChannels);
+            let i = R(r, n.mentionChannels);
             return null == i ? M(null, r, null, T(n.channelId)) : j(i, null, T(n.channelId));
         }
     },
@@ -304,7 +304,7 @@ let U = {
                     o = e[2],
                     a = e[3];
                 if (null == o) return w(r);
-                let s = P(o, null);
+                let s = R(o, null);
                 return null == s ? M(i, o, a, T(n.channelId), r) : j(s, a, T(n.channelId), r);
             }
         },
@@ -319,9 +319,9 @@ let U = {
                     a = e[3],
                     s = e[4];
                 if (null == o || null == a) return w(r);
-                let l = P(a, null);
+                let l = R(a, null);
                 if (null != l) return j(l, s, T(n.channelId), r);
-                let c = P(o, null);
+                let c = R(o, null);
                 return null != c ? j(c, s, T(n.channelId), r) : M(i, o, s, T(n.channelId), r);
             }
         }

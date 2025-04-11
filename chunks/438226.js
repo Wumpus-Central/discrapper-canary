@@ -1,6 +1,6 @@
 n.d(t, {
-    HV: () => s,
-    IS: () => i,
+    HV: () => l,
+    IS: () => a,
     VY: () => c
 }),
     n(804061),
@@ -8,33 +8,33 @@ n.d(t, {
     n(35282),
     n(201133);
 var r = n(5192),
-    a = n(561308),
-    l = n(388032);
-let i = (e, t) =>
-        l.NW.formatToPlainString(l.t.tAwI1t, {
+    i = n(561308),
+    o = n(388032);
+let a = (e, t) =>
+        o.NW.formatToPlainString(o.t.tAwI1t, {
             username: t.username,
             activity: e.extra.game_name
         }),
-    o = (e) => {
-        let t = (0, a.kr)(e);
-        return (0, a.Ol)(e) ? (t ? l.t.MHO1AQ : l.t.i7AOz8) : t ? l.t.lLPKY2 : l.t['bES+y8'];
+    s = (e) => {
+        let t = (0, i.kr)(e);
+        return (0, i.Ol)(e) ? (t ? o.t.MHO1AQ : o.t.i7AOz8) : t ? o.t.lLPKY2 : o.t['bES+y8'];
     },
-    s = (e, t, n) => {
-        let a = o(e),
-            i = r.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
-            s = e.extra.game_name;
-        return l.NW.formatToMarkdownString(a, {
-            gameName: s,
-            userName: i
+    l = (e, t, n) => {
+        let i = s(e),
+            a = r.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+            l = e.extra.game_name;
+        return o.NW.formatToMarkdownString(i, {
+            gameName: l,
+            userName: a
         }).replaceAll('*', '');
     },
     c = (e) => {
-        let { entry: t, channel: n, users: i, countOthers: o } = e,
-            s = (0, a.kr)(t) ? l.t.QaUWPT : l.t['7j/5mp'];
-        return l.NW.formatToMarkdownString(s, {
+        let { entry: t, channel: n, users: a, countOthers: s } = e,
+            l = (0, i.kr)(t) ? o.t.QaUWPT : o.t['7j/5mp'];
+        return o.NW.formatToMarkdownString(l, {
             gameName: t.extra.game_name,
-            user1: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[0]),
-            user2: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[1]),
-            countOthers: o
+            user1: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, a[0]),
+            user2: r.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, a[1]),
+            countOthers: s
         }).replaceAll('*', '');
     };

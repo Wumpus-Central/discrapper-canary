@@ -51,9 +51,9 @@ function N(e) {
     return e;
 }
 function A(e) {
-    let { user: t, guildId: n, setPopoutRef: o, channelId: T, messageId: A, roleId: C, onViewBlockedProfileClick: R, newAnalyticsLocations: P = [] } = e,
+    let { user: t, guildId: n, setPopoutRef: o, channelId: T, messageId: A, roleId: C, onViewBlockedProfileClick: P, newAnalyticsLocations: R = [] } = e,
         w = (0, s.e7)([f.Z], () => f.Z.isBlocked(t.id)),
-        { analyticsLocations: D } = (0, u.ZP)([...P, w ? c.Z.BLOCKED_PROFILE_POPOUT : c.Z.IGNORED_PROFILE_POPOUT]),
+        { analyticsLocations: D } = (0, u.ZP)([...R, w ? c.Z.BLOCKED_PROFILE_POPOUT : c.Z.IGNORED_PROFILE_POPOUT]),
         L = (0, p.ZB)({
             layout: w ? 'BLOCKED_PROFILE_POPOUT' : 'IGNORED_PROFILE_POPOUT',
             userId: t.id,
@@ -116,7 +116,7 @@ function A(e) {
                                             (0, r.jsx)(y.Z, {
                                                 isBlocked: w,
                                                 onClick: () => {
-                                                    null == R || R(),
+                                                    null == P || P(),
                                                         (0, h.pQ)(
                                                             N(
                                                                 {
@@ -131,7 +131,7 @@ function A(e) {
                                             (0, r.jsx)(b.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    null == R || R(),
+                                                    null == P || P(),
                                                         (0, h.pQ)(
                                                             N(
                                                                 {

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => p }), r(388685);
+r.d(t, { Z: () => d }), r(388685);
 var n = r(200651),
     l = r(192379),
     i = r(481060),
@@ -31,20 +31,20 @@ function u(e) {
     }
     return e;
 }
-function p(e) {
+function d(e) {
     let t,
-        { type: r, style: p, label: d, placeholder: f, minLength: b, maxLength: O, required: y, value: m } = e,
-        [j, g] = l.useState(null != m ? m : ''),
+        { type: r, style: d, label: p, placeholder: f, minLength: b, maxLength: O, required: m, value: y } = e,
+        [j, g] = l.useState(null != y ? y : ''),
         {
             state: h,
             executeStateUpdate: v,
             error: P
         } = (0, a.Ee)(
             e,
-            null != m
+            null != y
                 ? {
                       type: r,
-                      value: m
+                      value: y
                   }
                 : void 0
         ),
@@ -52,13 +52,13 @@ function p(e) {
     l.useEffect(() => {
         (null == h ? void 0 : h.type) === r && g(h.value);
     }, [r, h]);
-    let w = {
-        name: d,
+    let S = {
+        name: p,
         value: j,
         placeholder: f,
         minLength: b,
         maxLength: O,
-        required: y,
+        required: m,
         onChange: (e) => {
             g(e),
                 v({
@@ -68,16 +68,16 @@ function p(e) {
         },
         autoFocus: x
     };
-    switch (p) {
+    switch (d) {
         case o.PT.SMALL:
-            t = (0, n.jsx)(i.oil, u({}, w));
+            t = (0, n.jsx)(i.oil, u({}, S));
             break;
         case o.PT.PARAGRAPH:
-            t = (0, n.jsx)(i.Kx8, u({ autosize: !0 }, w));
+            t = (0, n.jsx)(i.Kx8, u({ autosize: !0 }, S));
     }
     return (0, n.jsx)(i.xJW, {
-        title: d,
-        required: y,
+        title: p,
+        required: m,
         className: s.formItem,
         error: P,
         children: t

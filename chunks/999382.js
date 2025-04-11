@@ -16,8 +16,8 @@ var _,
     N = n(758449),
     A = n(598077),
     C = n(430824),
-    R = n(594174),
-    P = n(709054),
+    P = n(594174),
+    R = n(709054),
     w = n(372454),
     D = n(330010),
     L = n(621319),
@@ -135,7 +135,7 @@ function em(e) {
         (K = M.QZA.OPEN),
         (z = {}),
         (q = null),
-        (u = P.default.castGuildIdAsEveryoneGuildRoleId(n)),
+        (u = R.default.castGuildIdAsEveryoneGuildRoleId(n)),
         (er = s.mfaLevel),
         (el = es),
         (f = null),
@@ -246,10 +246,10 @@ function eC(e) {
         flags: e.flags
     });
 }
-function eR(e) {
+function eP(e) {
     ef = e.invites.reduce((e, t) => ((e[t.code] = eC(t)), e), {});
 }
-function eP(e) {
+function eR(e) {
     (ef = G({}, ef)), delete ef[e.code];
 }
 function ew(e) {
@@ -435,7 +435,7 @@ function e8(e) {
 }
 class e7 extends (_ = E.ZP.Store) {
     initialize() {
-        this.waitFor(C.Z, I.Z, R.default);
+        this.waitFor(C.Z, I.Z, P.default);
     }
     getMetadata() {
         return el;
@@ -550,7 +550,7 @@ let e9 = new e7(
               GUILD_SETTINGS_SET_SEARCH_QUERY: ey,
               GUILD_SETTINGS_LOADED_BANS: eD,
               GUILD_SETTINGS_LOADED_BANS_BATCH: eL,
-              GUILD_SETTINGS_LOADED_INVITES: eR,
+              GUILD_SETTINGS_LOADED_INVITES: eP,
               GUILD_SETTINGS_SET_WIDGET: eF,
               GUILD_SETTINGS_SET_VANITY_URL: eH,
               GUILD_SETTINGS_SET_MFA_SUCCESS: eW,
@@ -572,7 +572,7 @@ let e9 = new e7(
               GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: e6,
               USER_CONNECTIONS_UPDATE: eK,
               GUILD_INTEGRATIONS_UPDATE: eK,
-              INSTANT_INVITE_REVOKE_SUCCESS: eP,
+              INSTANT_INVITE_REVOKE_SUCCESS: eR,
               INSTANT_INVITE_CREATE_SUCCESS: ew,
               GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: ez,
               GUILD_DISCOVERY_METADATA_FETCH_FAIL: eq,

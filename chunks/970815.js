@@ -56,19 +56,19 @@ let p = () =>
             [I, S] = (0, i.useState)(!1),
             [T, N] = (0, i.useState)(!1),
             [A, C] = (0, i.useState)(0.9 * u.D2),
-            R = null === n;
+            P = null === n;
         (0, i.useEffect)(() => {
-            R &&
+            P &&
                 !I &&
                 (S(!0),
                 setTimeout(() => {
                     N(!0);
                 }, 500));
-        }, [R, S, I]),
+        }, [P, S, I]),
             (0, i.useEffect)(() => {
-                T && !R && S(!1);
-            }, [R, T]);
-        let P = R || I,
+                T && !P && S(!1);
+            }, [P, T]);
+        let R = P || I,
             w = I ? null : n,
             [D, L] = (0, i.useState)(null),
             x = (0, i.useRef)(null),
@@ -88,7 +88,7 @@ let p = () =>
                 onSetAnimationDurationMS: C
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: P ? void 0 : g,
+            onClick: R ? void 0 : g,
             className: d.clickable,
             children: (0, r.jsxs)('span', {
                 onMouseDown: E,
@@ -96,10 +96,10 @@ let p = () =>
                 onMouseLeave: () => v(!1),
                 id: h,
                 ref: t,
-                className: a()(d.container, O, b, { [d.containerLoading]: P }),
+                className: a()(d.container, O, b, { [d.containerLoading]: R }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: a()(d.orbsLottieContainer, P ? d.orbIconloading : void 0),
+                        className: a()(d.orbsLottieContainer, R ? d.orbIconloading : void 0),
                         children: (0, r.jsx)(u.ZP, _({}, j))
                     }),
                     (0, r.jsx)(c.Z, {
@@ -107,7 +107,7 @@ let p = () =>
                         onValueChange: k,
                         onValueReached: M,
                         targetTotalCounterTime: A,
-                        className: P ? d.counterLoading : void 0
+                        className: R ? d.counterLoading : void 0
                     }),
                     f && (0, r.jsx)(p, {})
                 ]

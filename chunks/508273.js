@@ -40,10 +40,10 @@ function O(e) {
         Z = i.useCallback(() => {
             j && O && N(!1);
         }, [O, j]),
-        k = i.useCallback(() => {
+        R = i.useCallback(() => {
             j && (O || N(!0));
         }, [O, j]),
-        R = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e;
             return j && (null == (e = a.current) ? void 0 : e.clientHeight) != null
                 ? {
@@ -57,7 +57,7 @@ function O(e) {
         : (0, r.jsxs)(s.P3F, {
               className: l()(E.guildInviteContainer, { [E.clickable]: j && O }),
               onClick: Z,
-              style: R,
+              style: k,
               children: [
                   (0, r.jsxs)('div', {
                       className: E.cardHeightMeasure,
@@ -88,7 +88,7 @@ function O(e) {
                             look: s.zxk.Looks.LINK,
                             color: s.zxk.Colors.TRANSPARENT,
                             size: s.zxk.Sizes.NONE,
-                            onClick: k,
+                            onClick: R,
                             className: E.hideDetailsButton,
                             innerClassName: E.hideDetailsButtonInner,
                             children: (0, r.jsx)(s.Text, {

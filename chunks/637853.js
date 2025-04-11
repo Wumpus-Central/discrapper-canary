@@ -4,7 +4,7 @@ n.d(t, {
     V7: () => I,
     VF: () => w,
     b$: () => g,
-    d9: () => R,
+    d9: () => P,
     dF: () => O,
     dX: () => L,
     iF: () => S,
@@ -143,7 +143,7 @@ function C(e, t) {
         }
     return o;
 }
-function R(e, t) {
+function P(e, t) {
     let n = C(e, t),
         r = s.ZP.getChannels(e)[s.sH],
         i = {};
@@ -159,7 +159,7 @@ function R(e, t) {
         n
     ];
 }
-function P(e, t) {
+function R(e, t) {
     return e[0].length === t[0].length && e[1].length === t[1].length && (0, i.Z)(e[0], t[0]) && (0, i.Z)(e[1], t[1]);
 }
 function w(e, t) {
@@ -174,7 +174,7 @@ function w(e, t) {
             return [i, r];
         },
         [e, t],
-        P
+        R
     );
 }
 function D(e) {

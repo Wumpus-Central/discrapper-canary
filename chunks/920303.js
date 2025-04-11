@@ -45,10 +45,10 @@ let b = 25,
 function C() {
     (y = !1), (v = !0), (O = !1), (I = !1), (S = null), (T = s.z.LATEST_ACTIVITY), (r = new Set()), (A = 0), (N = []);
 }
-function R(e, t) {
+function P(e, t) {
     return t === s.z.LATEST_ACTIVITY ? p.ZP.lastMessageId(e.id) : e.id;
 }
-function P(e) {
+function R(e) {
     (e.channelId === S && e.sortOrder === T && (0, h.OL)(e.tagFilter, r)) || C(), (S = e.channelId), (T = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (y = !0), (v = !1);
 }
 function w(e) {
@@ -79,7 +79,7 @@ function L() {
     if (null == S) return !1;
     let e = !O,
         t = _.Z.getChannel(N[N.length - 1]),
-        n = null == t ? null : R(t, T);
+        n = null == t ? null : P(t, T);
     N = a()(_.Z.getAllThreadsForParent(S))
         .filter((e) => e.isArchivedThread())
         .filter((t) => {
@@ -87,11 +87,11 @@ function L() {
             if (0 !== r.size && (null == (i = t.appliedTags) ? void 0 : i.some((e) => r.has(e))) !== !0) return !1;
             if (e || null == n) return !0;
             {
-                let e = null == t ? null : R(t, T);
+                let e = null == t ? null : P(t, T);
                 return null != e && m.default.compare(e, n) >= 0;
             }
         })
-        .sort((e, t) => m.default.compare(R(e, T), R(t, T)))
+        .sort((e, t) => m.default.compare(P(e, T), P(t, T)))
         .map((e) => e.id)
         .reverse()
         .value();
@@ -143,7 +143,7 @@ let V = new B(c.Z, {
     THREAD_DELETE: j,
     THREAD_UPDATE: U,
     CHANNEL_DELETE: M,
-    LOAD_ARCHIVED_THREADS: P,
+    LOAD_ARCHIVED_THREADS: R,
     LOAD_ARCHIVED_THREADS_SUCCESS: w,
     LOAD_ARCHIVED_THREADS_FAIL: x,
     RESORT_THREADS: D

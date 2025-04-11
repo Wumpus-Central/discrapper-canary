@@ -102,11 +102,11 @@ function C(e) {
     let { savedMessage: t } = e;
     I(t);
 }
-function R(e) {
+function P(e) {
     let { savedMessageData: t } = e;
     return S(t);
 }
-function P(e) {
+function R(e) {
     let { messageId: t, channelId: n } = e,
         r = O({
             messageId: t,
@@ -119,7 +119,7 @@ function P(e) {
 }
 function w(e) {
     let { id: t, channelId: n } = e;
-    return P({
+    return R({
         messageId: t,
         channelId: n
     });
@@ -127,7 +127,7 @@ function w(e) {
 function D(e) {
     let { ids: t, channelId: n } = e;
     for (let e of t)
-        P({
+        R({
             messageId: e,
             channelId: n
         });
@@ -234,7 +234,7 @@ let V = new B(a.Z, {
     LOGOUT: N,
     SAVED_MESSAGES_UPDATE: A,
     SAVED_MESSAGE_CREATE: C,
-    SAVED_MESSAGE_DELETE: R,
+    SAVED_MESSAGE_DELETE: P,
     MESSAGE_DELETE: w,
     MESSAGE_DELETE_BULK: D,
     MESSAGE_UPDATE: L,

@@ -106,22 +106,22 @@ let I = {
             : (0, g.g2)('resolveSettingWithDefaults')
               ? i.Q4.BLUR
               : (null == o ? void 0 : o.nsfwAllowed) === !1
-                ? P({
+                ? R({
                       isDm: n,
                       isFriend: r
                   })
-                : R({
+                : P({
                       isDm: n,
                       isFriend: r
                   });
     },
-    R = (e) => {
+    P = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return i.Q4.SHOW;
         let r = u.UP.getSetting();
         return n ? I[r] : S[r];
     },
-    P = (e) => {
+    R = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return i.Q4.BLUR;
         let r = u.UP.getSetting();

@@ -82,10 +82,10 @@ let y = ['discordapp.com/gifts', 'discord.com/gifts'],
             .map(() => '['.concat(N, ']{').concat(e, '}'))
             .join('-?'),
     C = A(4, 4),
-    R = A(4, 6),
-    P = A(5, 3),
+    P = A(4, 6),
+    R = A(5, 3),
     w = 'WUMP-?',
-    D = [C, R, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
+    D = [C, P, R, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     L = new RegExp('^('.concat(w, ')?(').concat(D, ')$')),
     x = '-';
 var M = (function (e) {

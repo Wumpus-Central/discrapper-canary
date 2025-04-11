@@ -1,43 +1,43 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(542094),
-    o = n(895924),
+    o = n(542094),
+    a = n(895924),
     s = n(626135),
     c = n(499254),
-    d = n(424602),
-    u = n(541099),
+    u = n(424602),
+    d = n(541099),
     p = n(827498),
     m = n(160973),
     f = n(783097),
     h = n(890280),
     b = n(176412),
-    x = n(981631),
-    C = n(388032),
-    _ = n(854408);
-function v(e) {
-    let { context: t, application: n, sectionName: v, primaryEntryPointCommand: y, buttonSize: N = l.PhG.MEDIUM, playSolo: g = !1 } = e,
+    _ = n(981631),
+    y = n(388032),
+    x = n(854408);
+function C(e) {
+    let { context: t, application: n, sectionName: C, primaryEntryPointCommand: v, buttonSize: g = l.PhG.MEDIUM, playSolo: N = !1 } = e,
         j = r.useId(),
         P = r.useCallback(() => {
             c.yT(p.ti.ACTIVITY);
         }, []),
         E = r.useCallback(() => {
-            u.Z.shouldShowModal() && P();
+            d.Z.shouldShowModal() && P();
         }, [P]),
-        { submitting: A, wasSubmitting: I } = (0, h.Z)({
+        { submitting: O, wasSubmitting: A } = (0, h.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: j,
             onSubmissionComplete: P
         }),
-        [O, S] = r.useState(!1),
-        T = (0, a.Qv)({
+        [I, S] = r.useState(!1),
+        T = (0, o.Qv)({
             applicationId: n.id,
             context: t
         }),
-        L = d.PM.useExperiment({ location: 'AppPrimaryEntryPointButton()' }),
-        w = r.useMemo(() => (0, f.XZ)(y.displayName), [y.displayName]),
+        L = u.PM.useExperiment({ location: 'AppPrimaryEntryPointButton()' }),
+        w = r.useMemo(() => (0, f.XZ)(v.displayName), [v.displayName]),
         {
             onActivityItemSelected: R,
             buttonColor: k,
@@ -45,30 +45,30 @@ function v(e) {
         } = (0, b.P7)({
             context: t,
             application: n,
-            location: o.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: v,
+            location: a.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+            sectionName: C,
             commandName: w,
-            autoDismissOnClick: T === a.JS.LEAVE,
+            autoDismissOnClick: T === o.JS.LEAVE,
             launchingComponentId: j,
-            submitting: null != I ? I : A,
+            submitting: null != A ? A : O,
             onConfirmActivityLaunchChecksAlertOpen: E,
-            playSolo: !!L.altLayout && g
+            playSolo: !!L.altLayout && N
         }),
         { disabled: M, reason: W } = (0, m.Z)({
             context: t,
             application: n,
             activityAction: T
         }),
-        D = L.enabled ? C.NW.string(C.t['1KxmJi']) : Z;
+        D = L.enabled ? y.NW.string(y.t['1KxmJi']) : Z;
     return (0, i.jsx)(l.ua7, {
         shouldShow: null != W,
-        tooltipContentClassName: _.tooltipContent,
+        tooltipContentClassName: x.tooltipContent,
         text: W,
         children: (e) => {
             var t,
                 r,
-                { onClick: a } = e,
-                o = (function (e, t) {
+                { onClick: o } = e,
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         i,
@@ -113,24 +113,24 @@ function v(e) {
                             });
                     }
                     return e;
-                })({}, o)),
+                })({}, a)),
                 (r = r =
                     {
                         type: 'submit',
-                        size: N,
+                        size: g,
                         color: k,
                         disabled: M,
-                        submitting: O,
+                        submitting: I,
                         onClick: () => {
                             S(!0),
                                 R(),
-                                null == a || a(),
-                                s.default.track(x.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                                null == o || o(),
+                                s.default.track(_.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                     application_id: n.id,
                                     button_action: p._y.USE_APP_COMMAND
                                 });
                         },
-                        'aria-label': C.NW.formatToPlainString(C.t['XjP/R0'], {
+                        'aria-label': y.NW.formatToPlainString(y.t['XjP/R0'], {
                             buttonText: D,
                             applicationName: n.name
                         }),

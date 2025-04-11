@@ -94,13 +94,13 @@ function A(e) {
     });
 }
 function C(e) {
-    let { className: t, userId: d, channelId: I, parsedUserId: T, content: C, inlinePreview: R = !1, viewingChannelId: P } = e,
+    let { className: t, userId: d, channelId: I, parsedUserId: T, content: C, inlinePreview: P = !1, viewingChannelId: R } = e,
         { analyticsLocations: w } = (0, c.ZP)(l.Z.USER_MENTION),
         D = (0, a.e7)([b.default], () => b.default.getUser(d)),
         L = (0, a.e7)([h.Z], () => h.Z.getChannel(I)),
         x = null != L ? L.getGuildId() : null,
         M =
-            R || null == D || null == x || null == I
+            P || null == D || null == x || null == I
                 ? void 0
                 : (e) => {
                       null != L &&
@@ -110,7 +110,7 @@ function C(e) {
                                   (0, r.jsx)(
                                       e,
                                       N(S({}, t), {
-                                          viewingChannelId: P,
+                                          viewingChannelId: R,
                                           user: D,
                                           channel: L,
                                           guildId: x
@@ -147,7 +147,7 @@ function C(e) {
                 { children: '@'.concat(null != j ? j : k) }
             )
         );
-    return R
+    return P
         ? (0, r.jsx)(c.Gt, {
               value: w,
               children: H()

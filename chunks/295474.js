@@ -1,7 +1,7 @@
 n.d(t, {
     Ux: () => S,
     gS: () => p,
-    ww: () => A
+    ww: () => R
 }),
     n(997841);
 var r = n(192379),
@@ -12,8 +12,8 @@ var r = n(192379),
     s = n(314897),
     c = n(271383),
     u = n(430824),
-    d = n(496675),
-    E = n(914010),
+    E = n(496675),
+    d = n(914010),
     _ = n(715903),
     I = n(981631),
     N = n(372897),
@@ -32,13 +32,13 @@ function S(e) {
 }
 function p(e) {
     return (0, i.cj)(
-        [s.default, c.ZP, E.Z, u.Z],
+        [s.default, c.ZP, d.Z, u.Z],
         () => {
             let t = {
                     nick: void 0,
                     bio: void 0
                 },
-                n = E.Z.getGuildId(),
+                n = d.Z.getGuildId(),
                 r = null != e ? e : n,
                 i = u.Z.getGuild(r);
             if (null == i || null == r) return t;
@@ -48,19 +48,19 @@ function p(e) {
             if (0 === a.size) return t;
             if (a.has(N.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
-                    var d;
-                    t.nick = [T.NW.formatToPlainString(T.t.WBUh3N, { guildName: null != (d = i.name) ? d : '' })];
+                    var E;
+                    t.nick = [T.NW.formatToPlainString(T.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
                 } else t.nick = [T.NW.string(T.t.EPZCrK)];
             return a.has(N.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [T.NW.string(T.t.dZh1v7)]), t;
         },
         [e]
     );
 }
-function A(e) {
-    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: c, openWithoutBackstack: E } = e,
+function R(e) {
+    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: c, openWithoutBackstack: d } = e,
         { analyticsLocations: _ } = (0, o.ZP)(),
         N = (0, i.e7)([u.Z], () => u.Z.getGuild(t), [t]),
-        T = (0, i.e7)([d.Z], () => null != N && d.Z.can(I.Plq.CHANGE_NICKNAME, N), [N]);
+        T = (0, i.e7)([E.Z], () => null != N && E.Z.can(I.Plq.CHANGE_NICKNAME, N), [N]);
     return [
         r.useCallback(() => {
             if (null == N) return;
@@ -71,9 +71,9 @@ function A(e) {
                     scrollPosition: n,
                     analyticsLocation: s,
                     analyticsLocations: c,
-                    openWithoutBackstack: E
+                    openWithoutBackstack: d
                 });
-        }, [T, n, s, c, E, N, _]),
+        }, [T, n, s, c, d, N, _]),
         T
     ];
 }

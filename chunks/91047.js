@@ -1,8 +1,8 @@
 n.d(t, {
     Pv: () => a,
     _j: () => u,
-    nm: () => s,
-    xS: () => c
+    nm: () => c,
+    xS: () => s
 }),
     n(415506);
 var r = n(200651);
@@ -97,7 +97,7 @@ function a(e, t, a) {
               });
 }
 function u(e, t) {
-    var { user: a, channel: u, moderationAlertId: s, guildId: c } = t,
+    var { user: a, channel: u, moderationAlertId: c, guildId: s } = t,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -118,7 +118,7 @@ function u(e, t) {
             return i;
         })(t, ['user', 'channel', 'moderationAlertId', 'guildId']);
     if ((null == u ? void 0 : u.isGroupDM()) || (null == u ? void 0 : u.isDM())) throw Error('Cannot moderate user in DM or group DM');
-    let p = null != c ? c : null == u ? void 0 : u.getGuildId();
+    let p = null != s ? s : null == u ? void 0 : u.getGuildId();
     null != p &&
         (0, i.jW)(e, async () => {
             let { default: e } = await n.e('16120').then(n.bind(n, 833737));
@@ -130,15 +130,15 @@ function u(e, t) {
                             user: a,
                             channelId: null == u ? void 0 : u.id,
                             guildId: p,
-                            moderationAlertId: s
+                            moderationAlertId: c
                         }),
                         d
                     )
                 );
         });
 }
-function s(e, t) {
-    let { user: a, guildId: u, analyticsLocations: s, onCloseContextMenu: c, isViewOnly: d } = t;
+function c(e, t) {
+    let { user: a, guildId: u, analyticsLocations: c, onCloseContextMenu: s, isViewOnly: d } = t;
     (0, i.jW)(e, async () => {
         let { default: e } = await n.e('45130').then(n.bind(n, 246389));
         return (t) =>
@@ -147,14 +147,14 @@ function s(e, t) {
                 o(l({}, t), {
                     user: a,
                     guildId: u,
-                    analyticsLocations: s,
-                    onCloseContextMenu: c,
+                    analyticsLocations: c,
+                    onCloseContextMenu: s,
                     isViewOnly: d
                 })
             );
     });
 }
-function c(e, t, a) {
+function s(e, t, a) {
     null != a &&
         (0, i.jW)(e, async () => {
             let { default: e } = await n.e('50331').then(n.bind(n, 158195));

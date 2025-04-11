@@ -4,10 +4,10 @@ n.d(t, {
     EO: () => eh,
     G: () => ea,
     GE: () => eA,
-    GM: () => eR,
+    GM: () => eP,
     GV: () => Y,
     K2: () => eC,
-    LI: () => R,
+    LI: () => P,
     MH: () => er,
     Mg: () => eg,
     O1: () => $,
@@ -33,7 +33,7 @@ n.d(t, {
     pl: () => eE,
     qu: () => em,
     qv: () => G,
-    r5: () => eP,
+    r5: () => eR,
     rt: () => eN,
     sF: () => K,
     sk: () => es,
@@ -158,7 +158,7 @@ async function C(e) {
         );
     }
 }
-async function R(e, t) {
+async function P(e, t) {
     s.Z.dispatch({ type: 'BILLING_PAYMENT_SOURCE_UPDATE_START' });
     try {
         let {
@@ -195,7 +195,7 @@ async function R(e, t) {
         );
     }
 }
-async function P(e) {
+async function R(e) {
     let { stripe_payment_intent_client_secret: t } = (
         await a.tn.get({
             url: E.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
@@ -938,7 +938,7 @@ async function ed(e) {
     let t = await g.d2();
     if (null == t) throw U('Stripe has not loaded.');
     if (null == e) throw U('payment intent id cannot be null.');
-    let n = await P(e),
+    let n = await R(e),
         { paymentIntent: r, error: i } = await t.retrievePaymentIntent(n);
     if (null != i) throw U(i);
     if (null == r) throw U('paymentIntent not available with successful stripe call');
@@ -1245,10 +1245,10 @@ async function eA() {
 function eC() {
     s.Z.dispatch({ type: 'RESET_PAYMENT_ID' });
 }
-function eR() {
+function eP() {
     s.Z.dispatch({ type: 'BILLING_SUBSCRIPTION_RESET' });
 }
-function eP(e) {
+function eR(e) {
     s.Z.dispatch({
         type: 'USER_PAYMENT_BROWSER_CHECKOUT_STARTED',
         loadId: e

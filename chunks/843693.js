@@ -156,10 +156,10 @@ function C(e) {
                     }
                 }));
 }
-function R(e) {
+function P(e) {
     N.set(e.messageId, e);
 }
-function P(e) {
+function R(e) {
     var { type: t } = e,
         n = b(e, ['type']);
     if (!d.Z.isEnabled()) return !1;
@@ -168,7 +168,7 @@ function P(e) {
 function w(e) {
     let { comboMessage: t } = e;
     if (!d.Z.isEnabled()) return !1;
-    R(t);
+    P(t);
 }
 function D(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
@@ -241,7 +241,7 @@ class x extends (r = i.ZP.Store) {
 }
 h(x, 'displayName', 'PoggermodeStore');
 let M = new x(s.Z, {
-        POGGERMODE_UPDATE_COMBO: P,
+        POGGERMODE_UPDATE_COMBO: R,
         POGGERMODE_UPDATE_MESSAGE_COMBO: w,
         MESSAGE_CREATE: L
     }),

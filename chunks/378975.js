@@ -7,8 +7,8 @@ var n = r(200651),
     c = r(596454),
     s = r(911969),
     u = r(739754),
-    p = r(970184),
-    d = r(280501),
+    d = r(970184),
+    p = r(280501),
     f = r(388032),
     b = r(950386);
 function O(e) {
@@ -36,7 +36,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function y(e, t) {
         e
     );
 }
-function m(e) {
+function y(e) {
     let { emoji: t, label: r, description: l, isDisabled: i, isOffset: a } = e,
         s = o()(b.labelContainer, {
             [b.disabled]: i,
@@ -155,45 +155,45 @@ function h(e) {
         P = l.useMemo(() => r.filter((e) => e.default).map((e) => e.value), [r]),
         {
             state: x,
-            executeStateUpdate: w,
-            visualState: S,
+            executeStateUpdate: S,
+            visualState: w,
             isDisabled: C,
             error: E
-        } = (0, p.Ee)(e, {
+        } = (0, d.Ee)(e, {
             type: t,
             values: P
         }),
         N = c > 1,
-        I = S === d.gH.LOADING,
-        [k, Z] = l.useState(!1),
-        [T, D] = l.useState(() => new Set(r.filter((e) => e.default).map((e) => e.value))),
-        [L, R] = l.useState(T),
+        I = w === p.gH.LOADING,
+        [T, k] = l.useState(!1),
+        [Z, L] = l.useState(() => new Set(r.filter((e) => e.default).map((e) => e.value))),
+        [D, R] = l.useState(Z),
         _ = l.useMemo(() => r.some((e) => null != e.emoji), [r]);
     l.useEffect(() => {
         if ((null == x ? void 0 : x.type) === s.re.STRING_SELECT) {
             let e = new Set(x.values);
-            D(e), R(e);
+            L(e), R(e);
         } else {
             let e = new Set(P);
-            D(e), R(e);
+            L(e), R(e);
         }
     }, [i, P, x]);
     let A = l.useCallback(() => {
-        L !== T &&
-            w({
+        D !== Z &&
+            S({
                 type: s.re.STRING_SELECT,
-                values: Array.from(T)
+                values: Array.from(Z)
             }) &&
-            R(T);
-    }, [T, L, R, w]);
+            R(Z);
+    }, [Z, D, R, S]);
     l.useEffect(() => {
-        !k && ((T.size === L.size && Array.from(L).every((e) => T.has(e))) || A());
-    }, [k, T, L, A]);
+        !T && ((Z.size === D.size && Array.from(D).every((e) => Z.has(e))) || A());
+    }, [T, Z, D, A]);
     let M = a.UNb;
     N ? (M = a.gzz) : 0 === h && (M = a.s6k);
     let U = (0, a.cYr)({
-        value: T,
-        onChange: (e) => D(e),
+        value: Z,
+        onChange: (e) => L(e),
         onSelectInteraction: M
     });
     return (0, n.jsxs)(l.Fragment, {
@@ -207,18 +207,18 @@ function h(e) {
                             {
                                 isDisabled: v || C,
                                 className: b.select,
-                                options: r.map((e) => y(O({}, e), { disabled: N && !T.has(e.value) && T.size === c })),
+                                options: r.map((e) => m(O({}, e), { disabled: N && !Z.has(e.value) && Z.size === c })),
                                 placeholder: null != o ? o : f.NW.string(f.t.Otr6W1),
-                                onClose: () => Z(!1),
-                                onOpen: () => Z(!0),
+                                onClose: () => k(!1),
+                                onOpen: () => k(!0),
                                 maxVisibleItems: 5,
                                 closeOnSelect: !N,
                                 optionClassName: b.selectOption,
                                 renderOptionLabel: (e) =>
                                     (0, n.jsx)(
-                                        m,
-                                        y(O({}, e), {
-                                            isDisabled: N && !T.has(e.value) && T.size === c,
+                                        y,
+                                        m(O({}, e), {
+                                            isDisabled: N && !Z.has(e.value) && Z.size === c,
                                             isOffset: _
                                         })
                                     ),
@@ -238,7 +238,7 @@ function h(e) {
                         : null
                 ]
             }),
-            null != E ? (0, n.jsx)(u.st, y(O({}, (0, u.c4)(E)), { className: b.error })) : null
+            null != E ? (0, n.jsx)(u.st, m(O({}, (0, u.c4)(E)), { className: b.error })) : null
         ]
     });
 }

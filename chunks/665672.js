@@ -1,7 +1,7 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => a });
 var r = n(512722),
-    a = n.n(r);
-function l(e, t, n) {
+    i = n.n(r);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,16 +14,16 @@ function l(e, t, n) {
         e
     );
 }
-class i {
+class a {
     setExporter(e) {
         this.exporter = e;
     }
     export(e) {
-        a()(null != this.exporter, 'DiscordCanvas: Exporting the canvas requires a valid DiscordCanvasExporter to be initialized.');
+        i()(null != this.exporter, 'DiscordCanvas: Exporting the canvas requires a valid DiscordCanvasExporter to be initialized.');
         let t = this.canvas.getCanvasForExport();
-        return a()(null != t, "DiscordCanvas: Couldn't get a canvas for export."), this.exporter.exportCanvas(t, e);
+        return i()(null != t, "DiscordCanvas: Couldn't get a canvas for export."), this.exporter.exportCanvas(t, e);
     }
     constructor(e, t) {
-        l(this, 'canvas', void 0), l(this, 'exporter', void 0), (this.canvas = e), (this.exporter = t);
+        o(this, 'canvas', void 0), o(this, 'exporter', void 0), (this.canvas = e), (this.exporter = t);
     }
 }

@@ -3,8 +3,8 @@ var r = n(200651),
     l = n(192379),
     i = n(512722),
     s = n.n(i),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     c = n(856901),
     d = n(481060),
     u = n(687058),
@@ -17,17 +17,17 @@ var r = n(200651),
 function _(e) {
     let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: i } = e;
     s()(null != t, 'Camera capture device cannot be null');
-    let o = (0, m.Z)(),
+    let a = (0, m.Z)(),
         _ = (0, u.Z)(),
         [j, v] = l.useState(
             (function (e, t, n) {
                 if (null != t && null != n) {
                     let r = t.find((t) => t.id === e);
                     if (null == r) return;
-                    let l = a().reduce(n, (e, t) => ((0, c.stringSimilarity)(r.name, t.name) > (0, c.stringSimilarity)(r.name, e.name) ? t : e));
+                    let l = o().reduce(n, (e, t) => ((0, c.stringSimilarity)(r.name, t.name) > (0, c.stringSimilarity)(r.name, e.name) ? t : e));
                     if (null != l) return l.id;
                 }
-            })(t.id, o, _)
+            })(t.id, a, _)
         );
     return (
         null != j && i(j),
@@ -62,7 +62,7 @@ function _(e) {
                         onChange: (e) => {
                             v(e), i(e);
                         },
-                        options: a().map(_, (e) => {
+                        options: o().map(_, (e) => {
                             let { id: t, name: n } = e;
                             return {
                                 value: t,

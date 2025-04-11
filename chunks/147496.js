@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { ItemDetailsModal: () => m }), r(953529), r(781311);
+r.r(t), r.d(t, { ItemDetailsModal: () => y }), r(953529), r(781311);
 var n = r(200651);
 r(192379);
 var l = r(752843),
@@ -8,44 +8,44 @@ var l = r(752843),
     c = r(551428),
     s = r(73346),
     u = r(591759),
-    p = r(110742),
-    d = r(886253),
+    d = r(110742),
+    p = r(886253),
     f = r(680005),
     b = r(938337),
     O = r(981631),
-    y = r(388032);
-function m(e) {
-    var t, r, m, j;
+    m = r(388032);
+function y(e) {
+    var t, r, y, j;
     let { onClose: g, transitionState: h, skuId: v, appId: P, onHeaderTitleClick: x } = e,
-        w = (0, i.e7)([c.Z], () => c.Z.getForSKU(v), [v]),
-        S = (0, i.e7)([a.Z], () => a.Z.get(v), [v]),
-        C = (0, p.M)(v);
-    if (null == S) return null;
-    let E = null != (r = S.name) ? r : '',
-        N = null != (m = null == w || null == (t = w.description) ? void 0 : t.trim()) ? m : void 0,
-        I = (null == w ? void 0 : w.headerBackground) != null && null != (j = u.Z.toURLSafe((0, s._W)(P, w.headerBackground, 256))) ? j : void 0,
-        k = S.type === O.epS.DURABLE && C,
-        Z = S.type === O.epS.DURABLE ? (k ? y.NW.string(y.t.bm82mp) : y.NW.string(y.t['6gprwc'])) : void 0,
-        { price: T } = S;
-    return null == T
+        S = (0, i.e7)([c.Z], () => c.Z.getForSKU(v), [v]),
+        w = (0, i.e7)([a.Z], () => a.Z.get(v), [v]),
+        C = (0, d.M)(v);
+    if (null == w) return null;
+    let E = null != (r = w.name) ? r : '',
+        N = null != (y = null == S || null == (t = S.description) ? void 0 : t.trim()) ? y : void 0,
+        I = (null == S ? void 0 : S.headerBackground) != null && null != (j = u.Z.toURLSafe((0, s._W)(P, S.headerBackground, 256))) ? j : void 0,
+        T = w.type === O.epS.DURABLE && C,
+        k = w.type === O.epS.DURABLE ? (T ? m.NW.string(m.t.bm82mp) : m.NW.string(m.t['6gprwc'])) : void 0,
+        { price: Z } = w;
+    return null == Z
         ? null
-        : (0, n.jsx)(d.A, {
+        : (0, n.jsx)(p.A, {
               appId: P,
-              skuId: S.id,
+              skuId: w.id,
               transitionState: h,
               onHeaderTitleClick: null != x ? x : g,
               onClose: g,
               footer: (0, n.jsx)(f.YG, {
                   appId: P,
-                  sku: S
+                  sku: w
               }),
               children: (0, n.jsx)(b.i, {
                   appId: P,
-                  skuId: S.id,
+                  skuId: w.id,
                   title: E,
                   description: N,
                   imgSrc: I,
-                  tag: null != Z ? (0, n.jsx)(l.V, { text: Z }) : void 0,
+                  tag: null != k ? (0, n.jsx)(l.V, { text: k }) : void 0,
                   FallbackIcon: o.Prq
               })
           });

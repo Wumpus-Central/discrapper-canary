@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(107998),
     l = n(981631);
 function s(e) {
-    let { initialPlanId: t, activeSubscription: s, trialId: c, trialFooterMessageOverride: d, onClose: u, analyticsObject: _, analyticsLocation: m, analyticsLocations: f, analyticsSubscriptionType: p, renderHeader: g, renderPurchaseConfirmation: h, planGroup: v, reviewWarningMessage: b, skuId: y } = e;
+    let { initialPlanId: t, activeSubscription: s, trialId: c, trialFooterMessageOverride: d, onClose: u, analyticsObject: _, analyticsLocation: m, analyticsLocations: f, analyticsSubscriptionType: p, renderHeader: g, renderPurchaseConfirmation: h, planGroup: b, reviewWarningMessage: v, skuId: y } = e;
     (0, i.ZDy)(
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
@@ -81,10 +81,10 @@ function s(e) {
                                         skuId: y,
                                         renderHeader: g,
                                         renderPurchaseConfirmation: h,
-                                        planGroup: v,
+                                        planGroup: b,
                                         trialId: c,
                                         trialFooterMessageOverride: d,
-                                        reviewWarningMessage: b
+                                        reviewWarningMessage: v
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(x, Object.getOwnPropertyDescriptors(j))

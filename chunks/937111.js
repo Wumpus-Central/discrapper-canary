@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => P,
+    Z: () => R,
     j: () => h
 });
 var r,
@@ -135,7 +135,7 @@ function A(e) {
 function C() {
     u = null;
 }
-class R extends (r = i.ZP.Store) {
+class P extends (r = i.ZP.Store) {
     getRequest(e) {
         return d[e];
     }
@@ -157,8 +157,8 @@ class R extends (r = i.ZP.Store) {
         return p[e];
     }
 }
-c(R, 'displayName', 'UserGuildJoinRequestStore');
-let P = new R(o.Z, {
+c(P, 'displayName', 'UserGuildJoinRequestStore');
+let R = new P(o.Z, {
     CONNECTION_OPEN: g,
     GUILD_JOIN_REQUEST_UPDATE: b,
     GUILD_JOIN_REQUEST_CREATE: b,

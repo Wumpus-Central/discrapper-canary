@@ -1,4 +1,4 @@
-r.d(t, { Z: () => y });
+r.d(t, { Z: () => m });
 var n = r(200651);
 r(192379);
 var l = r(442837),
@@ -8,15 +8,15 @@ var l = r(442837),
     c = r(611170),
     s = r(128854),
     u = r(884182),
-    p = r(207982),
-    d = r(592125),
+    d = r(207982),
+    p = r(592125),
     f = r(52824),
     b = r(970184),
     O = r(981631);
-function y(e) {
+function m(e) {
     let { message: t } = (0, b.CJ)(),
-        r = (0, l.e7)([d.Z], () => d.Z.getChannel(null == t ? void 0 : t.channel_id)),
-        { shouldHideMediaOptions: y, shouldRedactExplicitContent: m, gifAutoPlay: j, getGifFavButton: g, getOnMediaItemContextMenu: h } = (0, s.c)();
+        r = (0, l.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.channel_id)),
+        { shouldHideMediaOptions: m, shouldRedactExplicitContent: y, gifAutoPlay: j, getGifFavButton: g, getOnMediaItemContextMenu: h } = (0, s.c)();
     if (null == t || null == r) return null;
     let v = e.items
             .map((e) => {
@@ -70,11 +70,11 @@ function y(e) {
             .filter((e) => 'INVALID' !== e.type),
         { srcToOnClickOverride: P, srcToHandlePreloadImage: x } =
             v.length > 1
-                ? (0, p.G)(
+                ? (0, d.G)(
                       v,
                       {
-                          shouldHideMediaOptions: y,
-                          shouldRedactExplicitContent: m
+                          shouldHideMediaOptions: m,
+                          shouldRedactExplicitContent: y
                       },
                       'Media Mosaic'
                   )
@@ -82,12 +82,12 @@ function y(e) {
                       srcToOnClickOverride: {},
                       srcToHandlePreloadImage: {}
                   };
-    function w(e, r) {
+    function S(e, r) {
         var n;
         let l = e.originalItem;
         return (0, o.lK)(l.media, r, l.spoiler, null != (n = null == t ? void 0 : t.author.bot) && n);
     }
-    let S = e.items.map((e, r) => {
+    let w = e.items.map((e, r) => {
         let n = e.media,
             l = null == h ? void 0 : h(n),
             i = {
@@ -105,7 +105,7 @@ function y(e) {
                 },
                 onContextMenu: l,
                 autoPlayGif: j,
-                getObscureReason: w,
+                getObscureReason: S,
                 renderImageComponent: c.aB,
                 renderVideoComponent: c.rJ,
                 renderVisualPlaceholderComponent: c.yF,
@@ -126,7 +126,7 @@ function y(e) {
     });
     return (0, n.jsx)('div', {
         children: (0, n.jsx)(u.Z, {
-            items: S,
+            items: w,
             isInAppComponentsV2: !0
         })
     });

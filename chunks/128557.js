@@ -125,12 +125,12 @@ function U(e) {
         l = (0, s.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && N.default.extractTimestamp(l.id) < Date.now() - P._8R,
         v = (0, s.e7)([y.default], () => (null == l ? void 0 : l.ownerId) === y.default.getId(), [l]),
-        { canInvite: U, canManageGuild: B, canMessage: H } = (0, m.TE)(t, l),
-        G = (0, s.e7)([x.default], () => {
+        { canInvite: U, canManageGuild: B, canMessage: G } = (0, m.TE)(t, l),
+        F = (0, s.e7)([x.default], () => {
             var e, t;
             return (null == (e = x.default.getCurrentUser()) ? void 0 : e.desktop) === !0 || (null == (t = x.default.getCurrentUser()) ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: F, guildMessaged: V, guildPersonalized: z } = (0, m.h_)(l),
+        { guildPopulated: H, guildMessaged: V, guildPersonalized: z } = (0, m.h_)(l),
         {
             handleInvite: Y,
             handleMessage: q,
@@ -204,7 +204,7 @@ function U(e) {
                 }, [e])
             };
         })(l),
-        J = !(G || F || V || z),
+        J = !(F || H || V || z),
         { titleAnimatedStyle: $, opacities: ee } = (function (e) {
             let t = (0, d.Z)(() => new a.Z.Value(0)),
                 n = (0, d.Z)(() => new a.Z.Value(0)),
@@ -288,7 +288,7 @@ function U(e) {
                         children: (0, r.jsx)(W, {
                             iconUrl: ei ? u.YvY : R,
                             header: Z.NW.string(Z.t.q9n0TU),
-                            completed: F,
+                            completed: H,
                             onClick: Y
                         })
                     },
@@ -312,7 +312,7 @@ function U(e) {
                     'customize'
                 )
             ),
-        H &&
+        G &&
             el.push(
                 (0, r.jsx)(
                     a.Z.div,
@@ -339,7 +339,7 @@ function U(e) {
                         children: (0, r.jsx)(W, {
                             iconUrl: ei ? u.yIb : w,
                             header: Z.NW.string(Z.t.pGVNIy),
-                            completed: G,
+                            completed: F,
                             onClick: X
                         })
                     },

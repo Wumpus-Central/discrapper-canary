@@ -4,14 +4,14 @@ n(192379);
 var l = n(442837),
     i = n(780384),
     s = n(481060),
-    o = n(210887),
-    a = n(475595),
+    a = n(210887),
+    o = n(475595),
     c = n(231338),
     d = n(388032),
     u = n(554431);
 let f = function (e) {
     let { quest: t } = e,
-        n = (0, l.e7)([o.Z], () => o.Z.getState().theme),
+        n = (0, l.e7)([a.Z], () => a.Z.getState().theme),
         f = (0, i.wj)(n) ? c.BR.DARK : c.BR.LIGHT;
     return (0, r.jsx)('div', {
         className: u.wrapper,
@@ -19,7 +19,7 @@ let f = function (e) {
             className: u.content,
             children: [
                 (0, r.jsx)('img', {
-                    src: (0, a.fh)(t, a.eC.GAME_TILE, f).url,
+                    src: (0, o.fh)(t, o.eC.GAME_TILE, f).url,
                     alt: '',
                     className: u.gameTile
                 }),

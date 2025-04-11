@@ -7,16 +7,16 @@ var r = n(200651),
     s = n(481060),
     c = n(749210),
     u = n(703656),
-    d = n(430824),
-    E = n(914010),
+    E = n(430824),
+    d = n(914010),
     _ = n(900849),
     I = n(981631),
     N = n(388032),
     O = n(8940),
     T = n(240211);
 let S = () => {
-    let e = (0, a.e7)([E.Z], () => E.Z.getGuildId(), []),
-        t = (0, a.e7)([d.Z], () => d.Z.getGuild(e), [e]),
+    let e = (0, a.e7)([d.Z], () => d.Z.getGuildId(), []),
+        t = (0, a.e7)([E.Z], () => E.Z.getGuild(e), [e]),
         [n, l] = i.useState(!1);
     if (null == t) return null;
     let S = async () => {

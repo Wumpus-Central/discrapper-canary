@@ -65,7 +65,7 @@ function m(e, t) {
 function g(e, t, _) {
     if (d.isPlatformEmbedded)
         (0, i.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e('46746'), n.e('24184')]).then(n.bind(n, 60594));
+            let { default: t } = await Promise.all([n.e('46746'), n.e('79887')]).then(n.bind(n, 60594));
             return (n) =>
                 (0, r.jsx)(
                     t,

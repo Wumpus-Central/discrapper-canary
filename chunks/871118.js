@@ -1,61 +1,61 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => m });
 var r = n(200651),
-    l = n(192379),
-    i = n(120356),
-    o = n.n(i),
-    a = n(442837),
-    s = n(481060),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
+    l = n(481060),
     c = n(592125),
     u = n(496675),
     d = n(449605),
-    p = n(981631),
-    f = n(388032),
-    m = n(269363);
-function g(e) {
-    let { isLoading: t, noText: n, noImage: l, previewText: i, className: a } = e;
+    f = n(981631),
+    _ = n(388032),
+    p = n(269363);
+function h(e) {
+    let { isLoading: t, noText: n, noImage: i, previewText: o, className: s } = e;
     return (0, r.jsx)('div', {
-        className: o()(m.emptyPreviewContainer, a),
+        className: a()(p.emptyPreviewContainer, s),
         children: t
-            ? (0, r.jsx)(s.$jN, {})
+            ? (0, r.jsx)(l.$jN, {})
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)('div', { className: o()(m.emptyPreviewImage, { [m.noImage]: l }) }),
+                      (0, r.jsx)('div', { className: a()(p.emptyPreviewImage, { [p.noImage]: i }) }),
                       n
                           ? null
-                          : (0, r.jsx)(s.Text, {
+                          : (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'none',
-                                className: m.emptyPreviewText,
-                                children: null != i ? i : f.NW.string(f.t.uQZTBQ)
+                                className: p.emptyPreviewText,
+                                children: null != o ? o : _.NW.string(_.t.uQZTBQ)
                             })
                   ]
               })
     });
 }
-function b(e) {
-    let { stream: t, className: n, noText: i = !1, noImage: o = !1 } = e,
-        s = (0, a.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
-        b = (0, a.e7)([u.Z], () => null != s && u.Z.canBasicChannel(p.S7T.CONNECT, s)),
-        { previewUrl: O, isLoading: y } = (0, d.Z)(t.guildId, t.channelId, t.ownerId),
-        h = l.useRef(y ? null : O);
-    l.useEffect(() => {
-        y || (h.current = O);
-    }, [O, y]);
-    let v = null == O || y ? h.current : O;
-    return null == v
-        ? (0, r.jsx)(g, {
+function m(e) {
+    let { stream: t, className: n, noText: o = !1, noImage: a = !1 } = e,
+        l = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(t.channelId)),
+        m = (0, s.e7)([u.Z], () => null != l && u.Z.canBasicChannel(f.S7T.CONNECT, l)),
+        { previewUrl: g, isLoading: E } = (0, d.Z)(t.guildId, t.channelId, t.ownerId),
+        b = i.useRef(E ? null : g);
+    i.useEffect(() => {
+        E || (b.current = g);
+    }, [g, E]);
+    let y = null == g || E ? b.current : g;
+    return null == y
+        ? (0, r.jsx)(h, {
               className: n,
-              isLoading: y,
-              noText: i,
-              noImage: o,
-              previewText: b ? void 0 : f.NW.string(f.t.pgUTZG)
+              isLoading: E,
+              noText: o,
+              noImage: a,
+              previewText: m ? void 0 : _.NW.string(_.t.pgUTZG)
           })
         : (0, r.jsx)('div', {
               className: n,
               children: (0, r.jsx)('img', {
-                  src: v,
+                  src: y,
                   alt: '',
-                  className: m.image
+                  className: p.image
               })
           });
 }

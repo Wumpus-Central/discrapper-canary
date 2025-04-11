@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(680278),
     A = n(388032),
     C = n(840969),
-    R = n(501867);
-function P(e, t, n) {
+    P = n(501867);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -84,8 +84,8 @@ function x(e) {
         g = null != (0, v.Z)(t, n),
         E = (0, c.e7)([h.Z, m.Z], () => (0, O.D)(m.Z, h.Z.getGuild(t))),
         [b, S] = i.useState(!1),
-        [P, D] = i.useState(!1),
-        x = P,
+        [R, D] = i.useState(!1),
+        x = R,
         M = i.useCallback(() => {
             let e = h.Z.getGuild(t);
             null != e &&
@@ -132,33 +132,33 @@ function x(e) {
         Z = (0, d.O)(F),
         H = (0, y.Z)(n);
     return (0, r.jsxs)('div', {
-        className: a()(R.topPerksCard, R.animatedTopPerksCard, C.powerupCard, { [R.animate]: b }),
+        className: a()(P.topPerksCard, P.animatedTopPerksCard, C.powerupCard, { [P.animate]: b }),
         onMouseEnter: () => D(!0),
         onMouseLeave: () => D(!1),
         children: [
             (0, r.jsx)('div', {
-                className: R.intObserver,
+                className: P.intObserver,
                 ref: Z
             }),
             (0, r.jsxs)('div', {
-                className: R.topPerksCardImageWrapper,
+                className: P.topPerksCardImageWrapper,
                 children: [
                     (0, r.jsx)(s.animated.img, {
-                        className: a()(R.topPerksCardImage, C.image),
+                        className: a()(P.topPerksCardImage, C.image),
                         src: H,
                         alt: '',
                         style: U
                     }),
                     (0, r.jsx)(s.animated.div, {
-                        className: R.imageGradientOverlay,
+                        className: P.imageGradientOverlay,
                         style: V
                     })
                 ]
             }),
-            x && (0, r.jsx)('div', { className: R.borderGlowOverlay }),
+            x && (0, r.jsx)('div', { className: P.borderGlowOverlay }),
             (0, r.jsxs)(s.animated.div, {
                 style: L(w({}, G), { transform: G.y.to((e) => 'translateY('.concat(e, 'px)')) }),
-                className: a()(R.contentContainer, C.contentContainer),
+                className: a()(P.contentContainer, C.contentContainer),
                 children: [
                     (0, r.jsx)(p.xm, {
                         heading: n.title,
@@ -168,13 +168,13 @@ function x(e) {
                     }),
                     (0, r.jsxs)(s.animated.div, {
                         style: B,
-                        className: R.buttonsContainer,
+                        className: P.buttonsContainer,
                         children: [
                             (0, r.jsx)(u.zxk, {
                                 grow: !0,
                                 onClick: M,
                                 color: u.zxk.Colors.BRAND,
-                                className: R.button,
+                                className: P.button,
                                 children: A.NW.string(A.t['oPAx7+'])
                             }),
                             E &&
@@ -182,7 +182,7 @@ function x(e) {
                                     grow: !0,
                                     onClick: k,
                                     color: u.zxk.Colors.PRIMARY,
-                                    className: R.button,
+                                    className: P.button,
                                     children: A.NW.string(A.t.GoCQxc)
                                 })
                         ]
@@ -190,10 +190,10 @@ function x(e) {
                 ]
             }),
             (0, r.jsx)(u.IGR, {
-                className: R.topPerksCardNew,
+                className: P.topPerksCardNew,
                 text: A.NW.string(A.t.y2b7CA)
             }),
-            b && (0, r.jsx)('div', { className: R.shineLine })
+            b && (0, r.jsx)('div', { className: P.shineLine })
         ]
     });
 }

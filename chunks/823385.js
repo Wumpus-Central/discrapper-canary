@@ -25,8 +25,8 @@ var i,
     N = n(483360),
     A = n(823379),
     C = n(981631),
-    R = n(388032);
-function P(e, t, n) {
+    P = n(388032);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -118,15 +118,15 @@ function K() {
         let t = Y(Z[e]);
         null != t && ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) || v.Z.can(C.Plq.VIEW_CHANNEL, t.record)) && o.push(t);
     }
-    o.length > 0 && i.push((0, u.o6)(R.NW.string(R.t['80lOZ2'])), ...o);
+    o.length > 0 && i.push((0, u.o6)(P.NW.string(P.t['80lOZ2'])), ...o);
     let s = W((e) => e === r || Z.includes(e));
-    s.length > 0 && i.push((0, u.o6)(R.NW.string(R.t['4B63jY'])), ...s);
+    s.length > 0 && i.push((0, u.o6)(P.NW.string(P.t['4B63jY'])), ...s);
     let l = O.ZP.getMentionChannelIds()
         .filter((e) => e !== r && !Z.includes(e))
         .map((e) => Y(e))
         .filter(A.lm)
         .reverse();
-    if ((l.length > 0 && (i.push((0, u.o6)(R.NW.string(R.t['61Df19']))), (i = i.concat(l))), null != n)) {
+    if ((l.length > 0 && (i.push((0, u.o6)(P.NW.string(P.t['61Df19']))), (i = i.concat(l))), null != n)) {
         let e = E.ZP.getSelectableChannelIds(n)
             .filter((e) => {
                 let t = m.Z.getChannel(e);
@@ -140,7 +140,7 @@ function K() {
                 null != t && e.push(t);
             }
         }),
-            e.length > 0 && (i.push((0, u.o6)(R.NW.string(R.t.ieCAhI))), (i = i.concat(e)));
+            e.length > 0 && (i.push((0, u.o6)(P.NW.string(P.t.ieCAhI))), (i = i.concat(e)));
     }
     return a()(i)
         .uniqBy((e) => e.record.id)
@@ -150,20 +150,20 @@ function z(e, t) {
     switch (U) {
         case u.h8.USER: {
             let t = y.Z.getGuild(S.Z.getGuildId());
-            e.unshift((0, u.o6)(null != t ? R.NW.formatToPlainString(R.t.FREzQk, { name: t.name }) : R.NW.string(R.t.XFYW1t))), (G = e);
+            e.unshift((0, u.o6)(null != t ? P.NW.formatToPlainString(P.t.FREzQk, { name: t.name }) : P.NW.string(P.t.XFYW1t))), (G = e);
             break;
         }
         case u.h8.TEXT_CHANNEL:
-            e.unshift((0, u.o6)(R.NW.string(R.t.W26k4e))), (G = e);
+            e.unshift((0, u.o6)(P.NW.string(P.t.W26k4e))), (G = e);
             break;
         case u.h8.VOICE_CHANNEL:
-            e.unshift((0, u.o6)(R.NW.string(R.t.zUoI5O))), (G = e);
+            e.unshift((0, u.o6)(P.NW.string(P.t.zUoI5O))), (G = e);
             break;
         case u.h8.GUILD:
-            e.unshift((0, u.o6)(R.NW.string(R.t.olADPj))), (G = e);
+            e.unshift((0, u.o6)(P.NW.string(P.t.olADPj))), (G = e);
             break;
         case u.h8.APPLICATION:
-            e.unshift((0, u.o6)(R.NW.string(R.t.VwK1lZ))), (G = e);
+            e.unshift((0, u.o6)(P.NW.string(P.t.VwK1lZ))), (G = e);
             break;
         default:
             G = e;
@@ -289,7 +289,7 @@ class er extends (i = s.ZP.PersistedStore) {
         };
     }
 }
-P(er, 'displayName', 'QuickSwitcherStore'), P(er, 'persistKey', 'QuickSwitcherStore');
+R(er, 'displayName', 'QuickSwitcherStore'), R(er, 'persistKey', 'QuickSwitcherStore');
 let ei = new er(c.Z, {
         CONNECTION_OPEN: H,
         CONNECTION_OPEN_SUPPLEMENTAL: H,

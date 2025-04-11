@@ -26,8 +26,8 @@ var f = 0,
     N = 256,
     A = 16,
     C = 17,
-    R = 18,
-    P = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0],
+    P = 18,
+    R = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0],
     w = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13],
     D = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7],
     L = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
@@ -113,7 +113,7 @@ function X() {
         a,
         s,
         l = Array(I + 1);
-    for (a = 0, n = 0; a < g - 1; a++) for (e = 0, G[a] = n; e < 1 << P[a]; e++) U[n++] = a;
+    for (a = 0, n = 0; a < g - 1; a++) for (e = 0, G[a] = n; e < 1 << R[a]; e++) U[n++] = a;
     for (U[n - 1] = a, s = 0, a = 0; a < 16; a++) for (e = 0, B[a] = s; e < 1 << w[a]; e++) j[s++] = a;
     for (s >>= 7; a < y; a++) for (e = 0, B[a] = s << 7; e < 1 << (w[a] - 7); e++) j[256 + s++] = a;
     for (t = 0; t <= I; t++) l[t] = 0;
@@ -122,7 +122,7 @@ function X() {
     for (; e <= 279; ) (M[2 * e + 1] = 7), e++, l[7]++;
     for (; e <= 287; ) (M[2 * e + 1] = 8), e++, l[8]++;
     for (Q(M, b + 1, l), e = 0; e < y; e++) (k[2 * e + 1] = 5), (k[2 * e] = K(e, 5));
-    (r = new V(M, P, E + 1, b, I)), (i = new V(k, w, 0, y, I)), (o = new V([], D, 0, v, T));
+    (r = new V(M, R, E + 1, b, I)), (i = new V(k, w, 0, y, I)), (o = new V([], D, 0, v, T));
 }
 function J(e) {
     var t;
@@ -153,7 +153,7 @@ function er(e, t, n) {
         a,
         s = 0;
     if (0 !== e.last_lit)
-        do (r = (e.pending_buf[e.d_buf + 2 * s] << 8) | e.pending_buf[e.d_buf + 2 * s + 1]), (i = e.pending_buf[e.l_buf + s]), s++, 0 === r ? Y(e, i, t) : (Y(e, (o = U[i]) + E + 1, t), 0 !== (a = P[o]) && W(e, (i -= G[o]), a), Y(e, (o = Z(--r)), n), 0 !== (a = w[o]) && W(e, (r -= B[o]), a));
+        do (r = (e.pending_buf[e.d_buf + 2 * s] << 8) | e.pending_buf[e.d_buf + 2 * s + 1]), (i = e.pending_buf[e.l_buf + s]), s++, 0 === r ? Y(e, i, t) : (Y(e, (o = U[i]) + E + 1, t), 0 !== (a = R[o]) && W(e, (i -= G[o]), a), Y(e, (o = Z(--r)), n), 0 !== (a = w[o]) && W(e, (r -= B[o]), a));
         while (s < e.last_lit);
     Y(e, N, t);
 }
@@ -182,7 +182,7 @@ function eo(e, t, n) {
         s = 0,
         l = 7,
         c = 4;
-    for (0 === a && ((l = 138), (c = 3)), t[(n + 1) * 2 + 1] = 65535, r = 0; r <= n; r++) (i = a), (a = t[(r + 1) * 2 + 1]), (++s < l && i === a) || (s < c ? (e.bl_tree[2 * i] += s) : 0 !== i ? (i !== o && e.bl_tree[2 * i]++, e.bl_tree[2 * A]++) : s <= 10 ? e.bl_tree[2 * C]++ : e.bl_tree[2 * R]++, (s = 0), (o = i), 0 === a ? ((l = 138), (c = 3)) : i === a ? ((l = 6), (c = 3)) : ((l = 7), (c = 4)));
+    for (0 === a && ((l = 138), (c = 3)), t[(n + 1) * 2 + 1] = 65535, r = 0; r <= n; r++) (i = a), (a = t[(r + 1) * 2 + 1]), (++s < l && i === a) || (s < c ? (e.bl_tree[2 * i] += s) : 0 !== i ? (i !== o && e.bl_tree[2 * i]++, e.bl_tree[2 * A]++) : s <= 10 ? e.bl_tree[2 * C]++ : e.bl_tree[2 * P]++, (s = 0), (o = i), 0 === a ? ((l = 138), (c = 3)) : i === a ? ((l = 6), (c = 3)) : ((l = 7), (c = 4)));
 }
 function ea(e, t, n) {
     var r,
@@ -197,7 +197,7 @@ function ea(e, t, n) {
             if (s < c)
                 do Y(e, i, e.bl_tree);
                 while (0 != --s);
-            else 0 !== i ? (i !== o && (Y(e, i, e.bl_tree), s--), Y(e, A, e.bl_tree), W(e, s - 3, 2)) : s <= 10 ? (Y(e, C, e.bl_tree), W(e, s - 3, 3)) : (Y(e, R, e.bl_tree), W(e, s - 11, 7));
+            else 0 !== i ? (i !== o && (Y(e, i, e.bl_tree), s--), Y(e, A, e.bl_tree), W(e, s - 3, 2)) : s <= 10 ? (Y(e, C, e.bl_tree), W(e, s - 3, 3)) : (Y(e, P, e.bl_tree), W(e, s - 11, 7));
             (s = 0), (o = i), 0 === a ? ((l = 138), (c = 3)) : i === a ? ((l = 6), (c = 3)) : ((l = 7), (c = 4));
         }
 }

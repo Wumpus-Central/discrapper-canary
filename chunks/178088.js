@@ -27,8 +27,8 @@ var r = n(200651),
 function I(e) {
     let { onOpen: t, onClose: n, children: I, badgeState: T, popoutPosition: P, popoutAlign: A } = e,
         { analyticsLocations: w } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
-        [Z, k] = i.useState(!1),
-        [R, D] = (function () {
+        [Z, R] = i.useState(!1),
+        [k, D] = (function () {
             let { showForYouTab: e } = b.V.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
                 t = (0, l.e7)([g.Z], () => {
                     var e, t;
@@ -64,12 +64,12 @@ function I(e) {
                 showTutorial: !t && e === o.X.UNREADS,
                 setSeenTutorial: n
             };
-        })(R),
+        })(k),
         W = i.useCallback(() => {
-            k(!1), Z && (null == n || n());
+            R(!1), Z && (null == n || n());
         }, [n, Z]),
         U = i.useCallback(() => {
-            k(!Z), Z ? null == n || n() : null == t || t();
+            R(!Z), Z ? null == n || n() : null == t || t();
         }, [n, t, Z]);
     i.useEffect(() => (_.S.subscribe(C.CkL.TOGGLE_INBOX, U), () => void _.S.unsubscribe(C.CkL.TOGGLE_INBOX, U)), [U]);
     let { showReminders: F } = f.Z.useExperiment({ location: 'RecentsPopout' }),
@@ -77,7 +77,7 @@ function I(e) {
         H = (0, l.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && B && G,
         { enabled: V } = d.Z.useExperiment({ location: 'RecentsPopout' });
     i.useEffect(() => {
-        (((!F || (B && G)) && R === o.X.TODOS) || (R === o.X.BOOKMARKS && !(B || G))) && D(o.X.MENTIONS);
+        (((!F || (B && G)) && k === o.X.TODOS) || (k === o.X.BOOKMARKS && !(B || G))) && D(o.X.MENTIONS);
     });
     let z = i.useCallback(
         (e) => {
@@ -98,38 +98,38 @@ function I(e) {
                 return (0, r.jsx)(s.VqE, {
                     'aria-label': S.NW.string(S.t.GSmTKC),
                     children:
-                        R === o.X.FOR_YOU
+                        k === o.X.FOR_YOU
                             ? (0, r.jsx)(y.Z, {
                                   setTab: D,
                                   badgeState: T,
                                   closePopout: W
                               })
-                            : R === o.X.MENTIONS
+                            : k === o.X.MENTIONS
                               ? (0, r.jsx)(E.Z, {
                                     setTab: D,
                                     onJump: z,
                                     badgeState: T,
                                     closePopout: W
                                 })
-                              : V && R === o.X.GAME_INVITES
+                              : V && k === o.X.GAME_INVITES
                                 ? (0, r.jsx)(j.Z, {
                                       setTab: D,
                                       badgeState: T,
                                       closePopout: W
                                   })
-                                : F && R === o.X.TODOS
+                                : F && k === o.X.TODOS
                                   ? (0, r.jsx)(v.Z, {
                                         setTab: D,
                                         onJump: z,
                                         closePopout: W
                                     })
-                                  : B && G && R === o.X.BOOKMARKS
+                                  : B && G && k === o.X.BOOKMARKS
                                     ? (0, r.jsx)(x.Z, {
                                           setTab: D,
                                           badgeState: T,
                                           closePopout: W
                                       })
-                                    : R === o.X.SCHEDULED
+                                    : k === o.X.SCHEDULED
                                       ? (0, r.jsx)(O._, {
                                             setTab: D,
                                             closePopout: W

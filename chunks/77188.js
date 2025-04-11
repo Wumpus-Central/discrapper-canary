@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(192379),
     i = n(836560),
     o = n(327432),
@@ -74,7 +74,7 @@ function C(e, t) {
         e
     );
 }
-function R(e) {
+function P(e) {
     let t = r.useContext(a.ZP),
         n = c.R$.useSetting(),
         [i] = r.useState(() => {
@@ -85,7 +85,7 @@ function R(e) {
                     anchor: S.nO,
                     focus: S.nO
                 }),
-                P(
+                R(
                     C(N({}, e), {
                         editor: r,
                         windowContext: t,
@@ -112,35 +112,35 @@ function R(e) {
         i
     );
 }
-function P(e) {
+function R(e) {
     var t, n, r;
     let { editor: o, chatInputType: a, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: S, forTests: T, onChangeStart: N, onChangeEnd: A, updateState: C } = e,
-        R = o,
-        { onChange: P } = R;
-    (R.chatInputType = a),
-        (R.windowContext = u),
-        (R.previewMarkdown = S),
-        (R.composition = null),
-        (R.events = new i.EventEmitter()),
-        (R.isMac = 'MacIntel' === navigator.platform),
-        (R.onChange = () => {
-            R.events.emit('onChange'), P();
+        P = o,
+        { onChange: R } = P;
+    (P.chatInputType = a),
+        (P.windowContext = u),
+        (P.previewMarkdown = S),
+        (P.composition = null),
+        (P.events = new i.EventEmitter()),
+        (P.isMac = 'MacIntel' === navigator.platform),
+        (P.onChange = () => {
+            P.events.emit('onChange'), R();
         }),
-        (R = (0, y.B)(R, !0 === T)),
-        (R = (0, b.Z)(R)),
-        (R = (0, E.Z)(R)),
-        (null == (t = a.commands) ? void 0 : t.enabled) && (R = (0, d.Z)(R, s, !0 === l, !0 === c)),
-        (R = (0, g.ZP)(R, s.guild_id, s.id)),
-        (null == (n = a.markdown) ? void 0 : n.disableBlockQuotes) || (R = (0, f.Z)(R)),
-        (null == (r = a.markdown) ? void 0 : r.disableCodeBlocks) || (R = (0, _.ZP)(R)),
-        T && (R = (0, O.Z)(R)),
-        (R = (0, m.Z)(R)),
-        (R = (0, p.Z)(R)),
-        (R = (0, v.Z)(R)),
-        (R = (0, I.Z)(R, N, A)),
-        (R = (0, h.Z)(R, (e) => {
+        (P = (0, y.B)(P, !0 === T)),
+        (P = (0, b.Z)(P)),
+        (P = (0, E.Z)(P)),
+        (null == (t = a.commands) ? void 0 : t.enabled) && (P = (0, d.Z)(P, s, !0 === l, !0 === c)),
+        (P = (0, g.ZP)(P, s.guild_id, s.id)),
+        (null == (n = a.markdown) ? void 0 : n.disableBlockQuotes) || (P = (0, f.Z)(P)),
+        (null == (r = a.markdown) ? void 0 : r.disableCodeBlocks) || (P = (0, _.ZP)(P)),
+        T && (P = (0, O.Z)(P)),
+        (P = (0, m.Z)(P)),
+        (P = (0, p.Z)(P)),
+        (P = (0, v.Z)(P)),
+        (P = (0, I.Z)(P, N, A)),
+        (P = (0, h.Z)(P, (e) => {
             let { newValue: t, newSelection: n } = e;
-            return C(R, 'undo', {
+            return C(P, 'undo', {
                 value: t,
                 selection: n
             });

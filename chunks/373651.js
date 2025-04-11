@@ -1,14 +1,14 @@
 n.d(t, { default: () => N });
-var i = n(200651);
+var r = n(200651);
 n(192379);
 var o = n(481060),
-    r = n(239091),
-    a = n(883385),
-    c = n(108843),
+    i = n(239091),
+    c = n(883385),
+    a = n(108843),
     l = n(947440),
-    d = n(100527),
-    _ = n(299206),
-    u = n(916069),
+    u = n(100527),
+    d = n(299206),
+    _ = n(916069),
     s = n(895563),
     p = n(212205),
     b = n(478035),
@@ -16,151 +16,151 @@ var o = n(481060),
     m = n(423589),
     h = n(398048),
     x = n(109764),
-    g = n(3689),
-    C = n(323597),
+    C = n(3689),
+    g = n(323597),
     v = n(852245),
     y = n(367722),
     O = n(461535),
-    P = n(776568),
-    S = n(218035),
-    Z = n(775666),
-    j = n(593589),
-    k = n(442754),
+    Z = n(776568),
+    j = n(218035),
+    k = n(775666),
+    P = n(593589),
+    S = n(442754),
     I = n(981631),
     w = n(388032);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function T(e) {
+function L(e) {
     let { channel: t, onSelect: n } = e,
-        a = (0, O.Z)(t),
-        c = (0, x.Z)(t),
-        d = (0, s.l)(t),
-        u = (0, s.P)(t),
+        c = (0, O.Z)(t),
+        a = (0, x.Z)(t),
+        u = (0, s.l)(t),
+        _ = (0, s.P)(t),
         h = (0, p.Z)(t),
-        g = (0, b.Z)(t),
-        C = (0, f.Z)(t),
-        y = (0, P.ZP)(t),
-        j = (0, S.Z)(t),
-        k = (0, v.Z)(t),
-        I = (0, _.Z)({
+        C = (0, b.Z)(t),
+        g = (0, f.Z)(t),
+        y = (0, Z.ZP)(t),
+        P = (0, j.Z)(t),
+        S = (0, v.Z)(t),
+        I = (0, d.Z)({
             id: t.id,
             label: w.NW.string(w.t.gFHI3t)
         }),
         E = (0, l.Z)(t),
-        T = (0, Z.ZP)(t),
-        L = (0, m.Mn)('ChannelContextFavoritesMenu');
-    return (0, i.jsxs)(o.v2r, {
+        L = (0, k.ZP)(t),
+        T = (0, m.Mn)('ChannelContextFavoritesMenu');
+    return (0, r.jsxs)(o.v2r, {
         navId: 'channel-context',
-        onClose: r.Zy,
+        onClose: i.Zy,
         'aria-label': w.NW.string(w.t.Xm41aW),
         onSelect: n,
         children: [
-            (0, i.jsx)(o.kSQ, { children: a }),
-            (0, i.jsxs)(o.kSQ, {
-                children: [g, C, h, d]
+            (0, r.jsx)(o.kSQ, { children: c }),
+            (0, r.jsxs)(o.kSQ, {
+                children: [C, g, h, u]
             }),
-            (0, i.jsxs)(o.kSQ, {
-                children: [y, L ? T : j]
+            (0, r.jsxs)(o.kSQ, {
+                children: [y, T ? L : P]
             }),
-            (0, i.jsx)(o.kSQ, { children: k }),
-            (0, i.jsx)(o.kSQ, { children: E }),
-            (0, i.jsx)(o.kSQ, { children: u }),
-            (0, i.jsx)(o.kSQ, { children: c }),
-            (0, i.jsx)(o.kSQ, { children: I })
+            (0, r.jsx)(o.kSQ, { children: S }),
+            (0, r.jsx)(o.kSQ, { children: E }),
+            (0, r.jsx)(o.kSQ, { children: _ }),
+            (0, r.jsx)(o.kSQ, { children: a }),
+            (0, r.jsx)(o.kSQ, { children: I })
         ]
     });
 }
-function L(e) {
-    let { channel: t, guild: n, onSelect: a } = e,
-        c = (0, O.Z)(t),
-        d = (0, x.Z)(t),
-        u = (0, s.l)(t),
+function T(e) {
+    let { channel: t, guild: n, onSelect: c } = e,
+        a = (0, O.Z)(t),
+        u = (0, x.Z)(t),
+        _ = (0, s.l)(t),
         p = (0, s.P)(t),
-        b = (0, k.Z)(t),
-        f = (0, P.ZP)(t),
+        b = (0, S.Z)(t),
+        f = (0, Z.ZP)(t),
         I = (0, v.Z)(t),
         E = (0, y.Z)(t, n),
-        T = (0, h.Z)(t, n),
-        L = (0, g.Z)(t, n),
-        N = (0, C.Z)(t),
-        A = (0, _.Z)({
+        L = (0, h.Z)(t, n),
+        T = (0, C.Z)(t, n),
+        N = (0, g.Z)(t),
+        A = (0, d.Z)({
             id: t.id,
             label: w.NW.string(w.t.gFHI3t)
         }),
-        B = (0, l.Z)(t),
-        U = (0, j.Z)(t, 'list_text_channel_context_menu'),
-        M = (0, S.Z)(t),
-        D = (0, Z.ZP)(t),
+        U = (0, l.Z)(t),
+        M = (0, P.Z)(t, 'list_text_channel_context_menu'),
+        B = (0, j.Z)(t),
+        D = (0, k.ZP)(t),
         G = (0, m.Mn)('ChannelContextMenuNormal');
-    return (0, i.jsxs)(o.v2r, {
+    return (0, r.jsxs)(o.v2r, {
         navId: 'channel-context',
-        onClose: r.Zy,
+        onClose: i.Zy,
         'aria-label': w.NW.string(w.t.Xm41aW),
-        onSelect: a,
+        onSelect: c,
         children: [
-            (0, i.jsxs)(
+            (0, r.jsxs)(
                 o.kSQ,
                 {
-                    children: [c, u]
+                    children: [a, _]
                 },
                 'mark-as-read-or-favorite'
             ),
-            (0, i.jsxs)(
+            (0, r.jsxs)(
                 o.kSQ,
                 {
-                    children: [E, b, d, U]
+                    children: [E, b, u, M]
                 },
                 'channel-actions'
             ),
-            (0, i.jsxs)(
+            (0, r.jsxs)(
                 o.kSQ,
                 {
-                    children: [f, G ? D : M]
+                    children: [f, G ? D : B]
                 },
                 'notifications'
             ),
-            (0, i.jsxs)(
+            (0, r.jsxs)(
                 o.kSQ,
                 {
-                    children: [I, T, L, N]
+                    children: [I, L, T, N]
                 },
                 'admin-actions'
             ),
-            (0, i.jsx)(o.kSQ, { children: B }),
-            (0, i.jsx)(o.kSQ, { children: p }),
-            (0, i.jsx)(o.kSQ, { children: A }, 'developer-actions')
+            (0, r.jsx)(o.kSQ, { children: U }),
+            (0, r.jsx)(o.kSQ, { children: p }),
+            (0, r.jsx)(o.kSQ, { children: A }, 'developer-actions')
         ]
     });
 }
-let N = (0, c.Z)(
-    (0, a.Z)(
+let N = (0, a.Z)(
+    (0, c.Z)(
         function (e) {
-            return (0, u.Z)() ? (0, i.jsx)(T, E({}, e)) : (0, i.jsx)(L, E({}, e));
+            return (0, _.Z)() ? (0, r.jsx)(L, E({}, e)) : (0, r.jsx)(T, E({}, e));
         },
         { object: I.qAy.CONTEXT_MENU }
     ),
-    [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU]
 );

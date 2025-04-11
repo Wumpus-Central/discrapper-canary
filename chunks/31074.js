@@ -1,13 +1,13 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(192379),
-    a = n(442837),
-    l = n(231757),
-    i = n(553795);
-function o(e) {
-    let t = (0, a.e7)([i.Z], () => i.Z.getAccounts().some((t) => t.type === e)),
+    i = n(442837),
+    o = n(231757),
+    a = n(553795);
+function s(e) {
+    let t = (0, i.e7)([a.Z], () => a.Z.getAccounts().some((t) => t.type === e)),
         n = r.useCallback(() => {
             if (null == e) return null;
-            (0, l.Z)({
+            (0, o.Z)({
                 platformType: e,
                 location: 'Member List Content Popout'
             });

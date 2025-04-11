@@ -1,27 +1,27 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => _ });
 var i = n(200651),
     r = n(192379),
     l = n(780384),
-    a = n(481060),
-    o = n(410030),
+    o = n(481060),
+    a = n(410030),
     s = n(782568),
     c = n(63063),
-    d = n(827498),
-    u = n(888617),
+    u = n(827498),
+    d = n(888617),
     p = n(981631),
     m = n(388032),
     f = n(434666),
     h = n(983008),
     b = n(478408);
-function x(e) {
+function _(e) {
     let { showImage: t = !0, padding: n = !1 } = e,
-        x = (0, o.ZP)(),
-        C = (0, l.ap)(x) ? b : h,
-        _ = r.useCallback(() => {
+        _ = (0, a.ZP)(),
+        y = (0, l.ap)(_) ? b : h,
+        x = r.useCallback(() => {
             (0, s.Z)(c.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: v } = (0, u.Z)({
-            sectionName: d.L3.NEW_TO_APPS,
+        { trackSectionImpressionRef: C } = (0, d.Z)({
+            sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
         });
@@ -29,39 +29,39 @@ function x(e) {
         className: n ? f.containerPadding : void 0,
         children: (0, i.jsxs)('div', {
             ref: (e) => {
-                v.current = e;
+                C.current = e;
             },
             className: f.container,
             children: [
                 t &&
                     (0, i.jsx)('img', {
                         className: f.image,
-                        src: C,
+                        src: y,
                         alt: '',
                         'aria-hidden': !0
                     }),
                 (0, i.jsxs)('div', {
                     className: f.body,
                     children: [
-                        (0, i.jsx)(a.X6q, {
+                        (0, i.jsx)(o.X6q, {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
                             children: m.NW.string(m.t['kw8/ER'])
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-normal',
                             children: m.NW.string(m.t.GZoV1N)
                         })
                     ]
                 }),
-                (0, i.jsx)(a.zxk, {
-                    size: a.zxk.Sizes.MEDIUM,
+                (0, i.jsx)(o.zxk, {
+                    size: o.zxk.Sizes.MEDIUM,
                     'aria-label': m.NW.formatToPlainString(m.t.xx5Sur, {
                         sectionTitle: m.NW.string(m.t['kw8/ER']),
                         sectionBody: m.NW.string(m.t.GZoV1N)
                     }),
-                    onClick: _,
+                    onClick: x,
                     children: m.NW.string(m.t.Ye51oa)
                 })
             ]

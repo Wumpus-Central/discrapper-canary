@@ -1,70 +1,70 @@
 n.d(t, {
-    J: () => l,
-    l: () => i
+    J: () => o,
+    l: () => a
 }),
     n(388685);
 var r = n(693824),
-    a = n(169040);
-function l(e) {
+    i = n(169040);
+function o(e) {
     let t,
-        { canvas: n, badges: l, startPosition: i, maxWidth: o } = e;
-    for (let { iconPath: e, text: s } of (n.setFont({
+        { canvas: n, badges: o, startPosition: a, maxWidth: s } = e;
+    for (let { iconPath: e, text: l } of (n.setFont({
         size: 12,
-        family: a.I8,
-        weight: a.Ue,
+        family: i.I8,
+        weight: i.Ue,
         truncate: r.GX.None
     }),
-    l)) {
-        let r = null != t ? t.w + t.x + a.PW : i,
-            l = null != t ? t.w + t.x + a.PW + a.NC : i + a.NC;
+    o)) {
+        let r = null != t ? t.w + t.x + i.PW : a,
+            o = null != t ? t.w + t.x + i.PW + i.NC : a + i.NC;
         n.drawPath(
             e,
             {
                 x: r,
-                y: a.f0
+                y: i.f0
             },
             !0,
             0.6
         ),
             (t = n.drawText(
-                s,
+                l,
                 {
-                    x: l,
-                    y: a.m2,
-                    w: o
+                    x: o,
+                    y: i.m2,
+                    w: s
                 },
                 !0
             ));
     }
 }
-function i(e) {
+function a(e) {
     let {
         canvas: t,
         avatarSrcs: n,
-        position: { x: a, y: l },
-        avatarImageSize: i
+        position: { x: i, y: o },
+        avatarImageSize: a
     } = e;
     for (let e = 0; e < n.length; e++)
         e < n.length - 1 &&
             t.clipRoundedRect(
                 {
-                    x: a + (e + 1) * (i - 8) - 2,
-                    y: l - 1,
-                    w: i + 2,
-                    h: i + 2
+                    x: i + (e + 1) * (a - 8) - 2,
+                    y: o - 1,
+                    w: a + 2,
+                    h: a + 2
                 },
-                i / 2,
+                a / 2,
                 !0
             ),
             t.drawRoundedImage(
                 n[e],
                 {
-                    x: a + e * (i - 8),
-                    y: l
+                    x: i + e * (a - 8),
+                    y: o
                 },
                 {
-                    w: i,
-                    h: i
+                    w: a,
+                    h: a
                 },
                 50,
                 { fillMode: r.JU.Cover }

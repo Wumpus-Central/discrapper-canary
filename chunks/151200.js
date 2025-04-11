@@ -8,13 +8,13 @@ var l = r(120356),
     c = r(442550),
     s = r(435439),
     u = r(206295),
-    p = r(297781),
-    d = r(313201),
+    d = r(297781),
+    p = r(313201),
     f = r(231338),
     b = r(388032),
     O = r(217440),
-    y = r(72378);
-function m(e) {
+    m = r(72378);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -59,7 +59,7 @@ function j(e, t) {
 }
 function g(e) {
     let { className: t, clickableClassName: r, clickable: l, children: a } = e,
-        c = (0, d.Dt)();
+        c = (0, p.Dt)();
     if (null != l && 'href' in l) {
         let { ariaDescription: e, href: s } = l;
         return (0, n.jsxs)(n.Fragment, {
@@ -119,18 +119,18 @@ function h(e) {
         })(e, ['clickable']);
     return (0, n.jsx)(
         g,
-        j(m({}, r), {
-            clickable: j(m({}, t), { ariaDescription: '' }),
-            clickableClassName: y.clickable
+        j(y({}, r), {
+            clickable: j(y({}, t), { ariaDescription: '' }),
+            clickableClassName: m.clickable
         })
     );
 }
 function v(e) {
-    let { entry: t, channel: r, title: l, subtitle: y, thumbnailUrl: j, titleClickable: v, subtitleClickable: P, thumbnailClickable: x, providerIconProps: w, style: S = {} } = e,
-        C = (0, d.Dt)(),
+    let { entry: t, channel: r, title: l, subtitle: m, thumbnailUrl: j, titleClickable: v, subtitleClickable: P, thumbnailClickable: x, providerIconProps: S, style: w = {} } = e,
+        C = (0, p.Dt)(),
         { primaryColor: E, secondaryColor: N } = (0, u.Z)(j);
     return (
-        null != j && (S.background = 'linear-gradient(45deg, '.concat(E, ', ').concat(N, ')')),
+        null != j && (w.background = 'linear-gradient(45deg, '.concat(E, ', ').concat(N, ')')),
         (0, n.jsx)(o.f6W, {
             theme: f.BR.DARK,
             children: (e) =>
@@ -139,7 +139,7 @@ function v(e) {
                     'aria-labelledby': C,
                     'data-disable-adaptive-theme': !0,
                     className: i()(O.container, e),
-                    style: S,
+                    style: w,
                     children: [
                         (0, n.jsx)(g, {
                             className: O.thumbnailContainer,
@@ -173,7 +173,7 @@ function v(e) {
                                         children: l
                                     })
                                 }),
-                                null != y
+                                null != m
                                     ? (0, n.jsxs)(n.Fragment, {
                                           children: [
                                               (0, n.jsx)(o.LZC, { size: 2 }),
@@ -185,22 +185,22 @@ function v(e) {
                                                       className: i()(O.textSecondary, O.truncatedText),
                                                       lineClamp: 1,
                                                       scaleFontToUserSetting: !0,
-                                                      children: y
+                                                      children: m
                                                   })
                                               })
                                           ]
                                       })
                                     : null,
-                                (0, n.jsx)(p.PZ, {
+                                (0, n.jsx)(d.PZ, {
                                     className: O.badges,
                                     entry: t,
-                                    location: p.Gt.EMBED
+                                    location: d.Gt.EMBED
                                 })
                             ]
                         }),
                         (0, n.jsx)('div', {
                             className: O.headerIcons,
-                            children: null != w ? (0, n.jsx)(s.Z, m({}, w)) : null
+                            children: null != S ? (0, n.jsx)(s.Z, y({}, S)) : null
                         })
                     ]
                 })

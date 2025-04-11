@@ -125,20 +125,20 @@ function c(e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, T, N, A, { match: /\$\d+/ }, O];
-    I.contains = R.concat({
+        P = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, T, N, A, { match: /\$\d+/ }, O];
+    I.contains = P.concat({
         begin: /\{/,
         end: /\}/,
         keywords: E,
-        contains: ['self'].concat(R)
+        contains: ['self'].concat(P)
     });
-    let P = [].concat(C, I.contains),
-        w = P.concat([
+    let R = [].concat(C, I.contains),
+        w = R.concat([
             {
                 begin: /(\s*)\(/,
                 end: /\)/,
                 keywords: E,
-                contains: ['self'].concat(P)
+                contains: ['self'].concat(R)
             }
         ]),
         D = {

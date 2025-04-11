@@ -19,8 +19,8 @@ var r = n(200651),
     f = n(367907),
     m = n(906732),
     g = n(522651),
-    b = n(795318),
-    O = n(194082),
+    O = n(795318),
+    b = n(194082),
     y = n(282256),
     h = n(925329),
     v = n(880395),
@@ -33,8 +33,8 @@ var r = n(200651),
     Z = n(639351),
     x = n(630388),
     C = n(51144),
-    w = n(981631),
-    T = n(354459),
+    T = n(981631),
+    w = n(354459),
     A = n(927923),
     D = n(388032),
     _ = n(850999);
@@ -72,9 +72,9 @@ let L = (e) => {
     });
 };
 function W(e) {
-    let { className: t, mute: n, localMute: l, localVideoDisabled: i, serverMute: a, deaf: c, serverDeaf: u, collapsed: f, video: m, isStreaming: g, disabled: b, isWatching: y, iconClassName: h, embeddedApplication: v, otherClientSessionType: j, voicePlatform: S, application: P, guildId: N, channelId: E, user: C, disconnected: k } = e,
+    let { className: t, mute: n, localMute: l, localVideoDisabled: i, serverMute: a, deaf: c, serverDeaf: u, collapsed: f, video: m, isStreaming: g, disabled: O, isWatching: y, iconClassName: h, embeddedApplication: v, otherClientSessionType: j, voicePlatform: S, application: P, guildId: N, channelId: E, user: C, disconnected: k } = e,
         { enabled: L } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
-    if (f || b) return null;
+    if (f || O) return null;
     let W = [],
         M = (0, r.jsx)(R, {
             iconClassName: h,
@@ -149,7 +149,7 @@ function W(e) {
                 'activity'
             )
         ),
-        j === A.YE.XBOX || S === T.wR.XBOX
+        j === A.YE.XBOX || S === w.wR.XBOX
             ? W.push(
                   (0, r.jsx)(
                       'div',
@@ -160,7 +160,7 @@ function W(e) {
                       'xbox'
                   )
               )
-            : (j === A.YE.PLAYSTATION || S === T.wR.PLAYSTATION) &&
+            : (j === A.YE.PLAYSTATION || S === w.wR.PLAYSTATION) &&
               W.push(
                   (0, r.jsx)(
                       'div',
@@ -193,13 +193,13 @@ function W(e) {
                     'div',
                     {
                         className: o()(_.iconSpacing, _.liveIconSpacing),
-                        children: (0, r.jsx)(O.ZP, { size: O.ZP.Sizes.SMALL })
+                        children: (0, r.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
                     },
                     'stream'
                 )
             );
-    let B = null != P && !(0, x.yE)(P.flags, w.udG.EMBEDDED);
-    return 0 !== W.length || null != M || B
+    let F = null != P && !(0, x.yE)(P.flags, T.udG.EMBEDDED);
+    return 0 !== W.length || null != M || F
         ? (0, r.jsxs)('div', {
               className: o()(_.icons, t),
               children: [
@@ -207,7 +207,7 @@ function W(e) {
                       className: _.iconGroup,
                       children: [M, W]
                   }),
-                  B &&
+                  F &&
                       (0, r.jsx)('div', {
                           className: _.iconGroup,
                           children: (0, r.jsx)(
@@ -228,7 +228,7 @@ function W(e) {
 }
 let M = l.forwardRef(function (e, t) {
     var n,
-        { avatarContainerClass: i = _.avatarContainer, userNameClassName: c = _.usernameFont, size: d = w.ipw.SMALL, selected: p = !1, disabled: f = !1, isOverlay: O = !1 } = e,
+        { avatarContainerClass: i = _.avatarContainer, userNameClassName: c = _.usernameFont, size: d = T.ipw.SMALL, selected: p = !1, disabled: f = !1, isOverlay: b = !1 } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -248,7 +248,7 @@ let M = l.forwardRef(function (e, t) {
             }
             return l;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: I, onKeyDown: Z, onDoubleClick: x, onContextMenu: A, onMouseLeave: L, onMouseDown: M, priority: U, speaking: R, collapsed: V, mute: B, serverMute: F, guildId: Y, nick: G, isGuest: z, flipped: H, className: J, overlap: X, 'aria-label': K, ringing: Q, user: q, channelId: $ } = h,
+    let { onClick: I, onKeyDown: Z, onDoubleClick: x, onContextMenu: A, onMouseLeave: L, onMouseDown: M, priority: U, speaking: R, collapsed: V, mute: F, serverMute: Y, guildId: B, nick: G, isGuest: z, flipped: H, className: J, overlap: X, 'aria-label': K, ringing: q, user: Q, channelId: $ } = h,
         { parentAnalyticsLocation: ee } = (0, m.ZP)(),
         et = (0, u.bp)(),
         en = null != $ ? P.Z.getChannel($) : null,
@@ -270,28 +270,28 @@ let M = l.forwardRef(function (e, t) {
                 [_.overlap]: X,
                 [_.selected]: p,
                 [_.clickable]: null != I,
-                [_.userSmall]: d === w.ipw.SMALL,
-                [_.userLarge]: d === w.ipw.LARGE,
+                [_.userSmall]: d === T.ipw.SMALL,
+                [_.userLarge]: d === T.ipw.LARGE,
                 [_.disabled]: !p && f,
-                [_.ringing]: Q
+                [_.ringing]: q
             }),
             onClick: (e) => {
-                null == I || I(e, q);
+                null == I || I(e, Q);
             },
             onDoubleClick: (e) => {
-                null == x || x(e, q);
+                null == x || x(e, Q);
             },
             onContextMenu: (e) => {
-                null == A || A(e, q);
+                null == A || A(e, Q);
             },
             onMouseLeave: (e) => {
-                null == L || L(e, q);
+                null == L || L(e, Q);
             },
             onMouseDown: (e) => {
-                null == M || M(e, q);
+                null == M || M(e, Q);
             },
             onKeyDown: Z,
-            'aria-label': null != (n = null != K ? K : G) ? n : q.username,
+            'aria-label': null != (n = null != K ? K : G) ? n : Q.username,
             focusProps: { offset: { right: 4 } },
             children: (0, r.jsxs)('div', {
                 className: o()(_.content, { [_.flipped]: H }),
@@ -299,26 +299,26 @@ let M = l.forwardRef(function (e, t) {
                     U && !V
                         ? (0, r.jsx)(s.ua7, {
                               text: D.NW.string(D.t.BVK71t),
-                              children: (e) => (0, r.jsx)('div', k({ className: o()(_.iconPriortySpeaker, { [_.iconPriortySpeakerSpeaking]: !B && !F && R }) }, e))
+                              children: (e) => (0, r.jsx)('div', k({ className: o()(_.iconPriortySpeaker, { [_.iconPriortySpeakerSpeaking]: !F && !Y && R }) }, e))
                           })
                         : null,
                     (0, r.jsx)('div', {
                         className: o()(i, _.avatar, {
-                            [_.avatarLarge]: d === w.ipw.LARGE,
-                            [_.avatarSmall]: d === w.ipw.SMALL,
+                            [_.avatarLarge]: d === T.ipw.LARGE,
+                            [_.avatarSmall]: d === T.ipw.SMALL,
                             [_.avatarSpeaking]: R
                         }),
-                        style: { backgroundImage: 'url('.concat(q.getAvatarURL(Y, d === w.ipw.LARGE ? 38 : 24), ')') }
+                        style: { backgroundImage: 'url('.concat(Q.getAvatarURL(B, d === T.ipw.LARGE ? 38 : 24), ')') }
                     }),
                     (function () {
                         var e, t;
                         let n = (0, r.jsxs)('div', {
                                 className: o()(c, {
                                     [_.username]: !0,
-                                    [_.usernameSpeaking]: !B && !F && R
+                                    [_.usernameSpeaking]: !F && !Y && R
                                 }),
                                 children: [
-                                    null != G ? G : C.ZP.getName(q),
+                                    null != G ? G : C.ZP.getName(Q),
                                     z
                                         ? (0, r.jsxs)('span', {
                                               className: _.guestSuffix,
@@ -328,15 +328,15 @@ let M = l.forwardRef(function (e, t) {
                                 ]
                             }),
                             l = {
-                                primaryGuild: q.primaryGuild,
-                                userId: q.id,
-                                contextGuildId: Y,
-                                isOverlay: O,
+                                primaryGuild: Q.primaryGuild,
+                                userId: Q.id,
+                                contextGuildId: B,
+                                isOverlay: b,
                                 disableTooltip: !0,
-                                className: o()(_.clanTag, O && _.isOverlay),
-                                profileViewedAnalytics: { source: O ? w.jXE.OVERLAY : w.Sbl.VOICE_PANEL }
+                                className: o()(_.clanTag, b && _.isOverlay),
+                                profileViewedAnalytics: { source: b ? T.jXE.OVERLAY : T.Sbl.VOICE_PANEL }
                             };
-                        return !V || O
+                        return !V || b
                             ? (0, r.jsx)(
                                   y.Z,
                                   ((e = k({}, l)),
@@ -366,17 +366,17 @@ let M = l.forwardRef(function (e, t) {
                                   children: (0, r.jsx)(s.P3F, {
                                       className: o()(_.optionsButton, { [_.optionsActive]: ei }),
                                       onClick: function (e) {
-                                          null != Y &&
+                                          null != B &&
                                               null != en &&
                                               ((0, g.v)(ee, g.d.MORE),
                                               eo(!0),
-                                              (0, v.D)(e, q, en, { context: et }, (e, t) => {
-                                                  (0, b.o)({
+                                              (0, v.D)(e, Q, en, { context: et }, (e, t) => {
+                                                  (0, O.o)({
                                                       menuName: e,
                                                       menuItemProps: t,
-                                                      entrypoint: T.A5.THREE_DOT,
+                                                      entrypoint: w.A5.THREE_DOT,
                                                       location: ee,
-                                                      targetUserId: q.id
+                                                      targetUserId: Q.id
                                                   });
                                               }));
                                       },
@@ -399,7 +399,7 @@ function U(e) {
     return (
         l.useEffect(() => {
             d &&
-                f.ZP.trackWithMetadata(w.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+                f.ZP.trackWithMetadata(T.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
                     channel_id: a,
                     guild_id: i,
                     user_id: u
@@ -416,7 +416,7 @@ function U(e) {
                     game: t,
                     size: h.Z.Sizes.XSMALL,
                     onMouseEnter: () => {
-                        f.ZP.trackWithMetadata(w.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
+                        f.ZP.trackWithMetadata(T.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                             channel_id: a,
                             guild_id: i,
                             game_name: t.name,

@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => k,
-    Z: () => R
+    U: () => R,
+    Z: () => k
 });
 var r,
     i = n(200651),
@@ -33,9 +33,9 @@ var r,
     A = n(957825),
     w = n(388032),
     Z = n(587862),
-    k = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
-function R(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: l, onMouseLeave: k, popoutPosition: R, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
+    R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
+function k(e) {
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: l, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: W } = e,
         U = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: F } = (0, h.ZP)(),
         B = (0, c.e7)([C.Z], () => C.Z.getFriendAnniversaryYears(r.id));
@@ -67,7 +67,7 @@ function R(e) {
             [Z.contentCoachmark]: H
         }),
         onMouseEnter: l,
-        onMouseLeave: k,
+        onMouseLeave: R,
         children: (0, i.jsxs)('div', {
             className: o()(V, { [Z.innerGlow]: M }),
             children: [
@@ -197,11 +197,11 @@ function R(e) {
                         })
                     ]
                 }),
-                null != R &&
+                null != k &&
                     (0, i.jsx)('div', {
                         className: o()(Z.connector, {
-                            [Z.leftPopoutConnector]: 'left' === R,
-                            [Z.rightPopoutConnector]: 'right' === R
+                            [Z.leftPopoutConnector]: 'left' === k,
+                            [Z.rightPopoutConnector]: 'right' === k
                         })
                     })
             ]

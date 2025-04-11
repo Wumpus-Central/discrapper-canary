@@ -1,6 +1,6 @@
 n.d(t, {
     Ui: () => S,
-    ZP: () => R,
+    ZP: () => P,
     pV: () => I
 }),
     n(539854),
@@ -109,7 +109,7 @@ function C(e) {
         s = [];
     return A(r) && s.push('ALL_REQUESTED_TO_SPEAK'), r === g.xO.REQUESTED_TO_SPEAK && s.push('REQUESTED_TO_SPEAK_ONLY'), t ? s.push('SPEAKER') : (null != n ? s.push(n.id) : s.push('NO_ROLE'), s.push('AUDIENCE')), i ? s.push('BLOCKED') : o && s.push('IGNORED'), a && s.push('FRIEND'), s;
 }
-class R {
+class P {
     _getParticipantsForUser(e, t) {
         var n, r, i;
         let s,
@@ -141,9 +141,9 @@ class R {
                 rtsState: (0, g.gf)(v)
             });
         b.push(C);
-        let R = null != (i = a.Z.getStreamForUser(e, this.guildId)) ? i : a.Z.getActiveStreamForUser(e, this.guildId);
-        if (null != R && R.channelId === this.channelId) {
-            let e = (0, o.V9)(R);
+        let P = null != (i = a.Z.getStreamForUser(e, this.guildId)) ? i : a.Z.getActiveStreamForUser(e, this.guildId);
+        if (null != P && P.channelId === this.channelId) {
+            let e = (0, o.V9)(P);
             (s = O(y({}, A), {
                 id: e,
                 type: 'STREAM',

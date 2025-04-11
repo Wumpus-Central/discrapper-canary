@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -11,54 +11,54 @@ var r = n(200651),
     m = n(881998),
     x = n(709054),
     p = n(388032),
-    f = n(711845),
-    b = n(970952);
-let h = (e) => {
+    b = n(711845),
+    h = n(970952);
+let _ = (e) => {
     var t, n;
-    let { entry: h } = e,
-        { name: _ } = h,
+    let { entry: _ } = e,
+        { name: f } = _,
         g = (0, i.e7)([m.Z], () => {
             let e = m.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === h.id) : null;
+            return null != e ? e.find((e) => e.application.id === _.id) : null;
         }),
-        v = null != (n = h.getIconURL(40)) ? n : b,
-        j = (0, d.Z)({ application: h }),
+        v = null != (n = _.getIconURL(40)) ? n : h,
+        j = (0, d.Z)({ application: _ }),
         N = l.useRef(!1);
     l.useEffect(() => {
         N.current || (o.Z.fetch(), (N.current = !0));
     }, []);
     let y = null != g ? x.default.extractTimestamp(g.id) : void 0;
     return (0, r.jsxs)('div', {
-        className: f.container,
+        className: b.container,
         children: [
             (0, r.jsx)(a.X6q, {
-                className: f.header,
+                className: b.header,
                 variant: 'heading-sm/semibold',
                 children: p.NW.string(p.t['aYfK//'])
             }),
             (0, r.jsx)('div', {
-                className: f.appContainer,
+                className: b.appContainer,
                 children: (0, r.jsxs)('div', {
-                    className: f.appInfo,
+                    className: b.appInfo,
                     children: [
                         (0, r.jsx)(s.ZP, {
                             mask: s.ZP.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
-                            className: f.appIconMask,
+                            className: b.appIconMask,
                             children: (0, r.jsx)('img', {
                                 src: v,
                                 alt: '',
-                                className: f.appIcon
+                                className: b.appIcon
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: f.textContainer,
+                            className: b.textContainer,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     color: 'header-primary',
                                     variant: 'text-md/medium',
-                                    children: _
+                                    children: f
                                 }),
                                 j.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
@@ -69,7 +69,7 @@ let h = (e) => {
                                                   children: (0, u.Z)(j.length)
                                               }),
                                               (0, r.jsx)(c.Z, {
-                                                  className: f.guildStack,
+                                                  className: b.guildStack,
                                                   guilds: j,
                                                   maxGuilds: 6
                                               })
@@ -80,7 +80,7 @@ let h = (e) => {
                                               (0, r.jsx)(a.Text, {
                                                   color: 'text-normal',
                                                   variant: 'text-md/normal',
-                                                  children: null == (t = h.bot) ? void 0 : t.tag
+                                                  children: null == (t = _.bot) ? void 0 : t.tag
                                               }),
                                               null != y &&
                                                   (0, r.jsx)(a.Text, {

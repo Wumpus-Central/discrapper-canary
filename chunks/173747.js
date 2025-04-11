@@ -37,12 +37,12 @@ let y = new Set(),
     N = 10 * m.Z.Millis.MINUTE,
     A = 6 * m.Z.Millis.HOUR,
     C = 10 * m.Z.Millis.MINUTE,
-    R = new s.V7();
-function P(e) {
-    R.start(e + Math.random() * N, c.o);
+    P = new s.V7();
+function R(e) {
+    P.start(e + Math.random() * N, c.o);
 }
 function w() {
-    return P(A), D();
+    return R(A), D();
 }
 function D() {
     if (!(0, E.Q)()) return !1;
@@ -126,13 +126,13 @@ function V(e) {
         }
         T[t] = r;
     }
-    P(A);
+    R(A);
 }
 function F() {
-    P(C);
+    R(C);
 }
 function Z() {
-    R.stop();
+    P.stop();
 }
 function H(e) {
     let { entitlements: t } = e;

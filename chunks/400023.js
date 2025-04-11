@@ -62,7 +62,7 @@ function B(e) {
     }
     return e;
 }
-function H(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function H(e, t) {
         e
     );
 }
-function G(e, t) {
+function F(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -99,12 +99,12 @@ function G(e, t) {
     }
     return i;
 }
-let F = i.memo(
+let H = i.memo(
         function (e) {
             var t;
             let { className: n, messageGroupSpacing: l, scrollerClassName: d, channel: f, messages: m, unreadCount: g, showNewMessagesBar: b, messageDisplayCompact: _, channelStream: C, uploads: x, hasUnreads: v, editingMessageId: j, fontSize: O, keyboardModeEnabled: E, filterAfterTimestamp: I, showingQuarantineBanner: P, hideSummaries: S = !1, jumpBarClassName: T } = e,
                 [A, R] = i.useState(!1),
-                F = i.useMemo(
+                H = i.useMemo(
                     () =>
                         _
                             ? (0, w.aJ)({
@@ -131,7 +131,7 @@ let F = i.memo(
                     compact: _,
                     hasUnreads: v,
                     focusId: j,
-                    placeholderHeight: F.totalHeight,
+                    placeholderHeight: H.totalHeight,
                     canLoadMore: null == I,
                     handleScrollToBottom: i.useCallback(() => R(!0), [R]),
                     handleScrollFromBottom: i.useCallback(() => R(!1), [R])
@@ -159,7 +159,7 @@ let F = i.memo(
                     uploads: x,
                     loadMore: V.loadMore,
                     scrollManager: V,
-                    specs: F,
+                    specs: H,
                     filterAfterTimestamp: null != I ? I : Y,
                     showingQuarantineBanner: P,
                     hideSummaries: S,
@@ -201,7 +201,7 @@ let F = i.memo(
             let $ = (0, c.mFp)(),
                 ee = (0, a.l2)(z),
                 { ref: et } = ee,
-                en = G(ee, ['ref']),
+                en = F(ee, ['ref']),
                 er = (0, p.Z)((e) => {
                     var t;
                     (V.ref.current = e), (et.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
@@ -216,7 +216,7 @@ let F = i.memo(
                             null == J && K,
                             (0, r.jsxs)(
                                 c.eTT,
-                                H(
+                                G(
                                     B(
                                         {
                                             ref: er,
@@ -237,7 +237,7 @@ let F = i.memo(
                                             Q,
                                             (0, r.jsxs)(
                                                 'ol',
-                                                H(
+                                                G(
                                                     B(
                                                         {
                                                             className: U.scrollerInner,
@@ -279,7 +279,7 @@ let F = i.memo(
     ),
     V = i.memo(function (e) {
         var { channel: t, showingQuarantineBanner: n, hideSummaries: l = !1, forceCompact: o = !1, forceCozy: a = !1 } = e,
-            c = G(e, ['channel', 'showingQuarantineBanner', 'hideSummaries', 'forceCompact', 'forceCozy']);
+            c = F(e, ['channel', 'showingQuarantineBanner', 'hideSummaries', 'forceCompact', 'forceCozy']);
         let {
                 canManageMessages: u,
                 permissionVersion: p,
@@ -398,8 +398,8 @@ let F = i.memo(
             value: (0, T.Z)(M, u),
             children: (0, r.jsx)(R.v, {
                 children: (0, r.jsx)(
-                    F,
-                    H(B({}, c), {
+                    H,
+                    G(B({}, c), {
                         messageGroupSpacing: Z,
                         showNewMessagesBar: !0,
                         channel: t,

@@ -68,8 +68,8 @@ function N(e, t) {
 }
 let A = O.QZA.CLOSED,
     C = {},
-    R = {},
-    P = !1,
+    P = {},
+    R = !1,
     w = !1,
     D = null,
     L = ['name', 'type', 'topic_', 'bitrate_', 'userLimit_', 'nsfw_', 'flags_', 'rateLimitPerUser_', 'defaultThreadRateLimitPerUser', 'defaultAutoArchiveDuration', 'template', 'defaultReactionEmoji', 'rtcRegion', 'videoQualityMode', 'threadMetadata', 'banner', 'availableTags', 'defaultSortOrder', 'defaultForumLayout', 'iconEmoji', 'themeColor'];
@@ -111,7 +111,7 @@ function j(e) {
         (i = e.subsection),
         null != a &&
             r === O.CoT.INSTANT_INVITES &&
-            ((P = !0),
+            ((R = !0),
             h.tn
                 .get({
                     url: O.ANM.INSTANT_INVITES(a.id),
@@ -120,17 +120,17 @@ function j(e) {
                 })
                 .then(
                     (e) => {
-                        (P = !1),
+                        (R = !1),
                             m.Z.dispatch({
                                 type: 'CHANNEL_SETTINGS_LOADED_INVITES',
                                 invites: e.body
                             });
                     },
-                    () => (P = !1)
+                    () => (R = !1)
                 ));
 }
 function U() {
-    (w = !1), (A = O.QZA.CLOSED), (r = null), (a = o = null), (s = null), (R = {});
+    (w = !1), (A = O.QZA.CLOSED), (r = null), (a = o = null), (s = null), (P = {});
 }
 function G() {
     (A = O.QZA.SUBMITTING), (C = {});
@@ -173,16 +173,16 @@ function H(e) {
     });
 }
 function W(e) {
-    (R = {}),
+    (P = {}),
         e.invites.forEach((e) => {
-            R[e.code] = H(e);
+            P[e.code] = H(e);
         });
 }
 function Y(e) {
-    (R = S({}, R)), delete R[e.code];
+    (P = S({}, P)), delete P[e.code];
 }
 function K(e) {
-    R = N(S({}, R), { [e.invite.code]: H(e.invite) });
+    P = N(S({}, P), { [e.invite.code]: H(e.invite) });
 }
 function z(e) {
     return !!x(e) && null != a && (null != l && null == a.permissionOverwrites[l] && (l = a.getGuildId()), !0);
@@ -224,8 +224,8 @@ class $ extends (c = p.ZP.Store) {
     }
     getInvites() {
         return {
-            invites: R,
-            loading: P
+            invites: P,
+            loading: R
         };
     }
     showNotice() {
@@ -247,7 +247,7 @@ class $ extends (c = p.ZP.Store) {
             channel: a,
             section: r,
             subsection: i,
-            invites: R,
+            invites: P,
             selectedOverwriteId: l,
             hasChanges: this.hasChanges(),
             analyticsLocation: D

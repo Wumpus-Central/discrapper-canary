@@ -12,12 +12,12 @@ var r = n(192379),
     u = n(430824),
     d = n(594174),
     p = n(731722),
-    h = n(864133),
-    _ = n(981631);
+    _ = n(864133),
+    h = n(981631);
 function f(e) {
     let { fetchGuildProfile: t, fetchStatus: n, guildProfile: f } = (0, a.u)(e),
         m = (function (e) {
-            let t = (0, l.FT)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : _.lds);
+            let t = (0, l.FT)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : h.lds);
             return (
                 (0, i.e7)(
                     [u.Z, d.default, c.ZP],
@@ -35,8 +35,8 @@ function f(e) {
                 ) && !t
             );
         })(e),
-        g = (function (e, t) {
-            let n = (0, i.e7)([h.Z], () => (null === e ? null : h.Z.getGuildLastSeenInfo(e))),
+        b = (function (e, t) {
+            let n = (0, i.e7)([_.Z], () => (null === e ? null : _.Z.getGuildLastSeenInfo(e))),
                 r = (0, i.e7)([d.default], () => {
                     var e;
                     return null == (e = d.default.getCurrentUser()) ? void 0 : e.primaryGuild;
@@ -51,7 +51,7 @@ function f(e) {
     }, [t, n]),
     null === f)
         ? null
-        : g
+        : b
           ? 'changed'
           : m
             ? 'available'

@@ -1,5 +1,5 @@
 n.d(t, {
-    O: () => k,
+    O: () => R,
     U: () => I.Un
 }),
     n(539854),
@@ -38,7 +38,7 @@ var r = n(200651),
     A = n(208444),
     w = n(388032),
     Z = n(758364);
-function k(e) {
+function R(e) {
     let { app: t, embedUrl: n, linkType: a, activityCustomId: l, activityReferrerId: s, onView: g } = e,
         { name: _, bot: b } = (t = (0, T.O)(t)),
         y = null == b ? void 0 : b.id,
@@ -49,7 +49,7 @@ function k(e) {
             bot: b
         }),
         { staticBannerSrc: N, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
-        k = (0, o.e7)([x.default], () => (null != s ? s : x.default.getId()), [s]),
+        R = (0, o.e7)([x.default], () => (null != s ? s : x.default.getId()), [s]),
         { analyticsLocations: L } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: W, isCurrentlyInInstance: U, canLaunchInChannel: F } = (0, j.c)(t.id),
         B = (0, u.Z)(),
@@ -76,7 +76,7 @@ function k(e) {
                                 instanceId: null != W ? W : void 0,
                                 embeddedActivitiesManager: B,
                                 customId: l,
-                                referrerId: k,
+                                referrerId: R,
                                 analyticsLocations: L
                             });
                         },
@@ -93,15 +93,15 @@ function k(e) {
                                 botId: y,
                                 analyticsLocations: L,
                                 customId: l,
-                                referrerId: k
+                                referrerId: R
                             });
                         }
                     }),
                 null != z && e.push(z),
                 e
             );
-        }, [V, H, z, W, U, M, t.id, B, l, k, L, y]),
-        Y = v ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(R, { app: t });
+        }, [V, H, z, W, U, M, t.id, B, l, R, L, y]),
+        Y = v ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(k, { app: t });
     return (0, r.jsx)(C.W, {
         title: _,
         staticBannerSrc: N,
@@ -114,13 +114,13 @@ function k(e) {
         trackingConfig: {
             id: t.id,
             linkType: a,
-            referrerId: k,
+            referrerId: R,
             activityCustomId: l,
             onView: g
         }
     });
 }
-function R(e) {
+function k(e) {
     var t, n, l;
     let { app: c } = e,
         u =

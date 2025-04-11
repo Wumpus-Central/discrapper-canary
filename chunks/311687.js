@@ -1,51 +1,51 @@
-a.d(e, { Z: () => o });
-var c,
-    d = a(442837),
-    s = a(570140);
-function n(t, e, a) {
+n.d(t, { Z: () => d });
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: a,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = a),
-        t
+            : (e[t] = n),
+        e
     );
 }
-let f = { lastUpdateRequested: {} };
-class i extends (c = d.ZP.PersistedStore) {
-    initialize(t) {
-        f = (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var a = null != arguments[e] ? arguments[e] : {},
-                    c = Object.keys(a);
-                'function' == typeof Object.getOwnPropertySymbols &&
-                    (c = c.concat(
-                        Object.getOwnPropertySymbols(a).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(a, t).enumerable;
-                        })
-                    )),
-                    c.forEach(function (e) {
-                        n(t, e, a[e]);
-                    });
-            }
-            return t;
-        })({}, f, null != t ? t : {});
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+let l = { lastUpdateRequested: {} };
+function c(e) {
+    let { lastUpdateRequested: t, leaderboardId: n } = e;
+    l.lastUpdateRequested[n] = t;
+}
+class u extends (r = i.ZP.PersistedStore) {
+    initialize(e) {
+        l = s({}, l, null != e ? e : {});
     }
     getState() {
-        return f;
+        return l;
     }
-    getLastUpdateRequested(t) {
-        return f.lastUpdateRequested[t];
+    getLastUpdateRequested(e) {
+        return l.lastUpdateRequested[e];
     }
 }
-n(i, 'displayName', 'UserLeaderboardStore'), n(i, 'persistKey', 'UserLeaderboardStore');
-let o = new i(s.Z, {
-    SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: function (t) {
-        let { lastUpdateRequested: e, leaderboardId: a } = t;
-        f.lastUpdateRequested[a] = e;
-    }
-});
+a(u, 'displayName', 'UserLeaderboardStore'), a(u, 'persistKey', 'UserLeaderboardStore');
+let d = new u(o.Z, { SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: c });

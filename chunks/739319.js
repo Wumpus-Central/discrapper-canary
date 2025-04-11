@@ -15,7 +15,7 @@ function m(e) {
             }
         } = e,
         [x, p] = l.useState(!1),
-        f = l.useRef(s.Z.reactParserFor(s.Z.defaultRules));
+        b = l.useRef(s.Z.reactParserFor(s.Z.defaultRules));
     return m
         ? (0, r.jsxs)('div', {
               className: u.container,
@@ -29,7 +29,7 @@ function m(e) {
                   (0, r.jsx)(o.Text, {
                       variant: 'text-sm/normal',
                       className: u.bodyText,
-                      children: f.current(n)
+                      children: b.current(n)
                   }),
                   (0, r.jsx)('div', {
                       children: (0, r.jsxs)('div', {

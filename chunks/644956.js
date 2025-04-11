@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(430824),
     A = n(594174),
     C = n(51144),
-    R = n(388032),
-    P = n(73433),
+    P = n(388032),
+    R = n(73433),
     w = n(83902);
 function D(e, t, n) {
     return (
@@ -225,7 +225,7 @@ function U(e) {
     let y =
         null == g
             ? h.name
-            : R.NW.formatToPlainString(R.t.CuAQkJ, {
+            : P.NW.formatToPlainString(P.t.CuAQkJ, {
                   title: h.name,
                   count: g
               });
@@ -234,18 +234,18 @@ function U(e) {
         M(
             L(
                 {
-                    className: P.rolePopout,
+                    className: R.rolePopout,
                     ref: u
                 },
                 t
             ),
             {
                 children: (0, r.jsxs)(c.Ttm, {
-                    className: P.roleScroller,
+                    className: R.roleScroller,
                     children: [
                         (0, r.jsx)(m.Z, {
-                            className: P.roleHeader,
-                            'aria-label': R.NW.formatToPlainString(R.t.UaqbkZ, {
+                            className: R.roleHeader,
+                            'aria-label': P.NW.formatToPlainString(P.t.UaqbkZ, {
                                 title: h.name,
                                 count: b.length
                             }),
@@ -258,8 +258,8 @@ function U(e) {
                         null == g || g <= b.length
                             ? null
                             : (0, r.jsx)(m.Z, {
-                                  className: P.roleHeader,
-                                  children: R.NW.formatToPlainString(R.t['9oMmZG'], { count: g - b.length })
+                                  className: R.roleHeader,
+                                  children: P.NW.formatToPlainString(P.t['9oMmZG'], { count: g - b.length })
                               })
                     ]
                 })
@@ -282,7 +282,7 @@ function G(e) {
                 M(
                     L(
                         {
-                            className: P.roleMention,
+                            className: R.roleMention,
                             color: T ? t : null,
                             roleColors: T ? N : null
                         },

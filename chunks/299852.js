@@ -11,8 +11,8 @@ var r,
     p = n(108427),
     h = n(598077),
     g = n(896797),
-    f = n(981631),
-    m = n(930441),
+    m = n(981631),
+    f = n(930441),
     _ = n(388032),
     b = n(20493);
 function x(e, t, n) {
@@ -35,7 +35,7 @@ class N extends (r = o.PureComponent) {
             t = (0, a.parse)(this.props.location.search);
         s.tn
             .post({
-                url: f.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -88,7 +88,7 @@ class N extends (r = o.PureComponent) {
                     className: b.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => r(f.Z5c.SETTINGS('notifications', m.vG)),
+                    onClick: () => r(m.Z5c.SETTINGS('notifications', f.vG)),
                     children: _.NW.string(_.t.YYTira)
                 })
             ]
@@ -98,7 +98,7 @@ class N extends (r = o.PureComponent) {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: r } = this.state;
         if (null != r) {
-            let e = m.Od.find((e) => e.category === r);
+            let e = f.Od.find((e) => e.category === r);
             if (null != e) return this.renderCategorySuccess(r, e.label());
         }
         return (0, i.jsxs)(d.ZP, {

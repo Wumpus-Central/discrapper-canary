@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => u,
-    n: () => s
+    n: () => c
 });
 var r,
     i = n(290486),
@@ -49,7 +49,7 @@ function a(e, t) {
     );
 }
 var u = (((r = {})[(r.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'), (r[(r.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS'), r);
-let s = (0, i.U)((e) => ({
+let c = (0, i.U)((e) => ({
     listings: {},
     setListing: (t, n) => (0, l.j)(() => e((e) => ({ listings: a(o({}, e.listings), { [t]: n(e.listings[t]) }) }))),
     editStateIdsForGroup: {},

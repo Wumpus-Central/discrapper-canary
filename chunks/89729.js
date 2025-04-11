@@ -1,7 +1,7 @@
 n.d(t, { g: () => h });
 var i = n(392711),
-    o = n.n(i),
-    r = n(995774),
+    r = n.n(i),
+    o = n(995774),
     a = n(592125),
     s = n(542578),
     l = n(699516),
@@ -17,7 +17,7 @@ function h(e, t) {
         f = null == m || m.isPrivate() ? null : m.getGuildId(),
         g = e.getReaction(t),
         b = i === u.O.BURST,
-        j = o()(p)
+        j = r()(p)
             .reject((e) => l.Z.isBlockedOrIgnored(e.id))
             .take(3)
             .map((e) => c.ZP.getName(f, null == m ? void 0 : m.id, e))
@@ -53,39 +53,39 @@ function h(e, t) {
         },
         O = b ? v.burst : v.standard,
         y = Math.max(0, (null != (n = b ? (null == g ? void 0 : g.burst_count) : null == g ? void 0 : g.count) ? n : 0) - j.length),
-        T = (0, r.Lh)(t);
+        x = (0, o.Lh)(t);
     if (1 === j.length)
         if (!(y > 0))
             return d.NW.formatToPlainString(O.reactionTooltip1, {
                 a: j[0],
-                emojiName: T
+                emojiName: x
             });
         else if (null != h)
             return d.NW.formatToPlainString(O.reactionTooltip1NInteractive, {
                 a: j[0],
                 n: y,
-                emojiName: T,
+                emojiName: x,
                 onClick: h
             });
         else
             return d.NW.formatToPlainString(O.reactionTooltip1N, {
                 a: j[0],
                 n: y,
-                emojiName: T
+                emojiName: x
             });
     if (2 === j.length)
         if (!(y > 0))
             return d.NW.formatToPlainString(O.reactionTooltip2, {
                 a: j[0],
                 b: j[1],
-                emojiName: T
+                emojiName: x
             });
         else if (null != h)
             return d.NW.formatToPlainString(O.reactionTooltip2NInteractive, {
                 a: j[0],
                 b: j[1],
                 n: y,
-                emojiName: T,
+                emojiName: x,
                 onClick: h
             });
         else
@@ -93,18 +93,18 @@ function h(e, t) {
                 a: j[0],
                 b: j[1],
                 n: y,
-                emojiName: T
+                emojiName: x
             });
     return 3 !== j.length
         ? null != h
             ? d.NW.formatToPlainString(O.reactionTooltipNInteractive, {
                   n: y,
-                  emojiName: T,
+                  emojiName: x,
                   onClick: h
               })
             : d.NW.formatToPlainString(O.reactionTooltipN, {
                   n: y,
-                  emojiName: T
+                  emojiName: x
               })
         : y > 0
           ? null != h
@@ -113,7 +113,7 @@ function h(e, t) {
                     b: j[1],
                     c: j[2],
                     n: y,
-                    emojiName: T,
+                    emojiName: x,
                     onClick: h
                 })
               : d.NW.formatToPlainString(O.reactionTooltip3N, {
@@ -121,12 +121,12 @@ function h(e, t) {
                     b: j[1],
                     c: j[2],
                     n: y,
-                    emojiName: T
+                    emojiName: x
                 })
           : d.NW.formatToPlainString(O.reactionTooltip3, {
                 a: j[0],
                 b: j[1],
                 c: j[2],
-                emojiName: T
+                emojiName: x
             });
 }

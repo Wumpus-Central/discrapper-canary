@@ -1,7 +1,7 @@
 n.d(t, { l: () => m }), n(388685);
 var i = n(200651),
-    o = n(192379),
-    r = n(481060),
+    r = n(192379),
+    o = n(481060),
     a = n(100527),
     s = n(906732),
     l = n(181918),
@@ -38,28 +38,28 @@ function m(e) {
     let { user: t, channelId: n, guildId: m, messageId: f, stopPropagation: g = !1, ariaLabel: b } = e,
         { analyticsLocations: j } = (0, s.ZP)(a.Z.USERNAME),
         v = (0, l.$V)(m, 'useUsernameHook'),
-        [O, y] = o.useState(!1),
-        T = (0, c.ic)({ location: 'useUsernameHook' }),
-        x = o.useCallback(
+        [O, y] = r.useState(!1),
+        x = (0, c.ic)({ location: 'useUsernameHook' }),
+        T = r.useCallback(
             (e) => {
                 let i = d.Z.getChannel(n);
                 null != i && null != t && (0, h.Pv)(e, t, i);
             },
             [t, n]
         );
-    return o.useCallback(
-        (e) => (o, a) => {
+    return r.useCallback(
+        (e) => (r, a) => {
             let l = null == e ? void 0 : e.colorStrings,
                 c = v && null != l && null != l.primaryColor && null != l.secondaryColor,
                 d = (t) => {
                     var n, a;
                     return (0, i.jsx)(
-                        r.rz2,
+                        o.rz2,
                         ((n = p({}, null != t ? t : {})),
                         (a = a =
                             {
-                                onContextMenu: x,
-                                name: o,
+                                onContextMenu: T,
+                                name: r,
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
                                 roleColors: c ? l : null,
@@ -94,7 +94,7 @@ function m(e) {
                                   guildId: m,
                                   channelId: n,
                                   messageId: f,
-                                  shouldShowOnHover: T,
+                                  shouldShowOnHover: x,
                                   roleId: null == e ? void 0 : e.colorRoleId,
                                   clickTrap: O,
                                   shouldShow: O,
@@ -108,20 +108,20 @@ function m(e) {
                                                   if (null == e) return {};
                                                   var n,
                                                       i,
-                                                      o = (function (e, t) {
+                                                      r = (function (e, t) {
                                                           if (null == e) return {};
                                                           var n,
                                                               i,
-                                                              o = {},
-                                                              r = Object.keys(e);
-                                                          for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                                                          return o;
+                                                              r = {},
+                                                              o = Object.keys(e);
+                                                          for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                                                          return r;
                                                       })(e, t);
                                                   if (Object.getOwnPropertySymbols) {
-                                                      var r = Object.getOwnPropertySymbols(e);
-                                                      for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                                                      var o = Object.getOwnPropertySymbols(e);
+                                                      for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                                                   }
-                                                  return o;
+                                                  return r;
                                               })(e, ['onClick'])
                                           )
                                       );
@@ -132,6 +132,6 @@ function m(e) {
                 a
             );
         },
-        [j, t, n, m, f, x, g, b, v, T, O]
+        [j, t, n, m, f, T, g, b, v, x, O]
     );
 }

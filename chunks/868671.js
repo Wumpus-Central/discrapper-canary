@@ -76,9 +76,9 @@ function v(e) {
         }, [v, I, O, t, j, N, n, x, Z, k, S]),
         U = r.useRef(0),
         B = r.useRef(I),
-        H = r.useRef(void 0),
-        G = r.useRef({ impressionCappedEntryIds: P }),
-        F = r.useCallback(
+        G = r.useRef(void 0),
+        F = r.useRef({ impressionCappedEntryIds: P }),
+        H = r.useCallback(
             (e) => {
                 var t;
                 let n = Math.floor(e / g.YN),
@@ -92,15 +92,15 @@ function v(e) {
             B.current = I;
         }, [I]),
         r.useEffect(() => {
-            G.current = { impressionCappedEntryIds: P };
+            F.current = { impressionCappedEntryIds: P };
         }, [P]),
         r.useEffect(
             () => (
                 (U.current = 0),
-                (H.current = Date.now()),
+                (G.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == N || null == H.current || Date.now() - H.current < 3000) return;
+                    if (null == N || null == G.current || Date.now() - G.current < 3000) return;
                     let n = null != (t = null == (e = B.current) ? void 0 : e.map((e) => e.id)) ? t : [],
                         r = n.slice(0, U.current);
                     !Z &&
@@ -108,13 +108,13 @@ function v(e) {
                         k &&
                         ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: N,
-                            first_shown_at: H.current,
+                            first_shown_at: G.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
                             channel_id: v,
                             guild_id: j,
                             all_item_ids: n,
-                            impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
+                            impression_capped_item_ids: [...F.current.impressionCappedEntryIds]
                         }),
                         (0, d.wm)('useInjectContentInventoryFeed') &&
                             l.Z.dispatch({
@@ -129,7 +129,7 @@ function v(e) {
             groups: M,
             rows: L,
             version: D,
-            updateMaxRowSeen: F
+            updateMaxRowSeen: H
         }
     );
 }

@@ -27,8 +27,8 @@ let N = function (e) {
         N = i.useRef(null),
         A = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         C = (0, s.e7)([g.Z], () => g.Z.boostSlots),
-        { analyticsLocations: R } = (0, u.ZP)(),
-        { fractionalState: P } = (0, d.Z)({ forceFetch: !1 }),
+        { analyticsLocations: P } = (0, u.ZP)(),
+        { fractionalState: R } = (0, d.Z)({ forceFetch: !1 }),
         w = i.useMemo(
             () =>
                 Object.keys(C).filter((e) => {
@@ -43,7 +43,7 @@ let N = function (e) {
         (0, _.Z)({
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
-            analyticsLocations: R,
+            analyticsLocations: P,
             analyticsObject: {
                 page: O.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: O.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -58,7 +58,7 @@ let N = function (e) {
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
             isGift: !0,
-            analyticsLocations: R,
+            analyticsLocations: P,
             analyticsObject: {
                 page: O.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: O.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -137,7 +137,7 @@ let N = function (e) {
                             })
                         })
                     }),
-                    y.ZP.hasFreeBoosts(A, P) || y.ZP.isPremium(A, I.p9.TIER_2)
+                    y.ZP.hasFreeBoosts(A, R) || y.ZP.isPremium(A, I.p9.TIER_2)
                         ? (0, r.jsxs)(c.zxk, {
                               className: a()(T.guildBoostCta, T.guildBoostCtaSecondary),
                               innerClassName: a()(T.__invalid_guildBoostCtaContent, T.guildBoostCtaGiftContent),

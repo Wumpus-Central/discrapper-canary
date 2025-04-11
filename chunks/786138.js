@@ -27,8 +27,8 @@ function y(e) {
         N = f.Z.supports(E.AN.DESKTOP_CAPTURE_APPLICATIONS),
         A = (0, o.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
         C = (0, o.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
-        R = (0, h.Z)(t, I),
-        P = (0, p.Z)(t, I, g.Vq),
+        P = (0, h.Z)(t, I),
+        R = (0, p.Z)(t, I, g.Vq),
         w = null != S && A && (!S.startsWith('screen') || C),
         D = u.Z.useExperiment(
             { location: 'ManageStreamsMenu' },
@@ -78,7 +78,7 @@ function y(e) {
             ? (0, r.jsx)(a.sNh, {
                   id: 'stream-settings',
                   label: b.NW.string(b.t.ytAD9f),
-                  children: R
+                  children: P
               })
             : null,
         k = D
@@ -109,6 +109,6 @@ function y(e) {
               children: [U, j, M, k]
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [M, y ? P : null, k, j, U]
+              children: [M, y ? R : null, k, j, U]
           });
 }

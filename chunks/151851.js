@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -116,7 +116,7 @@ let I = '#ffffff',
                 })
         });
     };
-function R(e) {
+function P(e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: o = !1, themeOverride: s } = e,
         c = (0, u.bp)(),
         f = (0, a.e7)([d.Z], () => d.Z.isFullscreenInContext(c)),

@@ -7,18 +7,18 @@ var n = r(200651),
     c = r(128854),
     s = r(524444),
     u = r(295435),
-    p = r(217702),
-    d = r(583760);
+    d = r(217702),
+    p = r(583760);
 function f(e) {
     let { media: t, spoiler: r, description: f } = e,
         b = (0, a.pU)(t),
         { gifAutoPlay: O } = (0, c.c)(),
-        [y, m] = l.useState(r),
+        [m, y] = l.useState(r),
         j = (e) => {
             var r, l;
             return 'IMAGE' !== b
                 ? (0, n.jsx)(u.S, {
-                      className: d.imgContainer,
+                      className: p.imgContainer,
                       media: t,
                       placeholderWidth: 85,
                       placeholderHeight: 85,
@@ -27,8 +27,8 @@ function f(e) {
                       hiddenSpoilers: e
                   })
                 : (0, n.jsx)(s.Yi, {
-                      containerClassName: d.imgContainer,
-                      imageClassName: d.img,
+                      containerClassName: p.imgContainer,
+                      imageClassName: p.img,
                       src: t.proxyUrl,
                       alt: f,
                       original: t.url,
@@ -42,7 +42,7 @@ function f(e) {
                       minWidth: 85,
                       minHeight: 85,
                       autoPlay: O && !e,
-                      mediaLayoutType: p.hV.MOSAIC,
+                      mediaLayoutType: d.hV.MOSAIC,
                       reducedSizeAltTextButton: !0
                   });
         };
@@ -50,8 +50,8 @@ function f(e) {
         ? (0, n.jsx)(i.ZP, {
               type: i.ZP.Types.ATTACHMENT,
               reason: o.wk.SPOILER,
-              obscured: y,
-              onToggleObscurity: () => m((e) => !e),
+              obscured: m,
+              onToggleObscurity: () => y((e) => !e),
               children: (e) => j(e)
           })
         : j(!1);

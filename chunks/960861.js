@@ -44,14 +44,14 @@ let S = !1,
     N = 0,
     A = !1,
     C = {};
-function R() {
+function P() {
     return f.Z.supports(y.AN.NATIVE_SCREENSHARE_PICKER);
 }
-function P() {
+function R() {
     return f.Z.getUseSystemScreensharePicker();
 }
 function w() {
-    let e = P() && (N > 0 || (S && 0 === T));
+    let e = R() && (N > 0 || (S && 0 === T));
     if (e !== A) {
         var t, n;
         (A = e), null == (n = f.Z.getMediaEngine()) || null == (t = n.setNativeDesktopVideoSourcePickerActive) || t.call(n, A);
@@ -104,10 +104,10 @@ class U extends (i = a.ZP.Store) {
         this.syncWith([f.Z, p.Z, u.Z, d.Z, _.Z], x), c.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, w), x();
     }
     supported() {
-        return R();
+        return P();
     }
     enabled() {
-        return P();
+        return R();
     }
     releasePickerStream() {
         (0, b.t)();

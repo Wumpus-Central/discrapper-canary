@@ -29,15 +29,15 @@ function h(e) {
         case d.O7.FRIEND_REQUESTS_GROUPED:
             let w = u.ZP.getName(s.default.getUser(null == (g = S.other_users) || null == (h = g[0]) ? void 0 : h.id)),
                 Z = u.ZP.getName(s.default.getUser(null == (b = S.other_users) || null == (_ = b[1]) ? void 0 : _.id)),
-                k = Math.max((null != (y = null == (x = S.other_users) ? void 0 : x.length) ? y : 0) - 2, 0);
+                R = Math.max((null != (y = null == (x = S.other_users) ? void 0 : x.length) ? y : 0) - 2, 0);
             return m.NW.format(m.t.g5xyIC, {
                 user: w,
                 user2: Z,
-                count: k
+                count: R
             });
         case d.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let R = null != (E = null == (v = S.local_id) ? void 0 : v.split('_').pop()) ? E : 'unknown';
-            return 'Update to build '.concat(R, ' available!');
+            let k = null != (E = null == (v = S.local_id) ? void 0 : v.split('_').pop()) ? E : 'unknown';
+            return 'Update to build '.concat(k, ' available!');
         case d.DY.FRIEND_SUGGESTION_CREATED:
             return o.Z.getRelationshipType(T), p.OGo.PENDING_OUTGOING, null != (O = S.body) ? O : '';
         case d.DY.GUILD_SCHEDULED_EVENT_STARTED:

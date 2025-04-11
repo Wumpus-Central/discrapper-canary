@@ -62,7 +62,7 @@ function Z(e) {
     }
     return e;
 }
-function k(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function k(e, t) {
         e
     );
 }
-function R(e, t) {
+function k(e, t) {
     let n = [...t],
         r = 0,
         i = 0;
@@ -209,7 +209,7 @@ async function F(e) {
             n,
             (e) => (
                 i()(null != e, 'Must not be able to vote without existing state!'),
-                k(Z({}, e), {
+                R(Z({}, e), {
                     submitting: !0,
                     editing: !1
                 })
@@ -240,7 +240,7 @@ async function F(e) {
             }),
             (0, T.eu)(t, n, (e) => {
                 if (null != e)
-                    return k(Z({}, e), {
+                    return R(Z({}, e), {
                         submitting: !1,
                         editing: !1
                     });
@@ -398,7 +398,7 @@ let H = {
             var t, n;
             if (null == e) {
                 let e = new Set([r]),
-                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: i, selectedEmojiAnswersCount: s } = R(null == (n = o.poll) ? void 0 : n.answers, e);
+                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: i, selectedEmojiAnswersCount: s } = k(null == (n = o.poll) ? void 0 : n.answers, e);
                 return (
                     h.ZP.trackWithMetadata(A.rMx.POLL_VOTE_SELECTED, {
                         channel_id: a,
@@ -423,7 +423,7 @@ let H = {
                 if (!c) for (let e of s) s.delete(e);
                 s.add(r);
             }
-            let { analyticsSelectedAnswerIds: u, selectedTextAnswersCount: d, selectedEmojiAnswersCount: p } = R(null == (t = o.poll) ? void 0 : t.answers, s);
+            let { analyticsSelectedAnswerIds: u, selectedTextAnswersCount: d, selectedEmojiAnswersCount: p } = k(null == (t = o.poll) ? void 0 : t.answers, s);
             return (
                 h.ZP.trackWithMetadata(A.rMx.POLL_VOTE_SELECTED, {
                     channel_id: a,
@@ -481,7 +481,7 @@ let H = {
             } else await m.Z.sendPollMessage(t.id, d);
             null == s || s();
         } catch (e) {
-            if ('poll' === (e instanceof f.Hx ? e : new f.Hx(e)).getAnyErrorMessage() && null != e.text) throw k(Z({}, e), { body: JSON.parse(e.text) });
+            if ('poll' === (e instanceof f.Hx ? e : new f.Hx(e)).getAnyErrorMessage() && null != e.text) throw R(Z({}, e), { body: JSON.parse(e.text) });
             throw e;
         }
     },

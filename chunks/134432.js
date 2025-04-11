@@ -1,5 +1,5 @@
 n.d(t, {
-    Q4: () => R,
+    Q4: () => P,
     Vv: () => S,
     oO: () => N,
     po: () => T,
@@ -150,7 +150,7 @@ function C(e) {
     });
     return (o = h.width), (a = h.height), (o !== n || a !== r) && ((p.width = 0 | o), (p.height = 0 | a)), i().isEmpty(p) || (_ += '?' + s.stringify(p)), _;
 }
-function R(e) {
+function P(e) {
     let { src: t, width: n, height: r, maxWidth: i, maxHeight: o, ratio: a = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
         f = n,
         _ = r;

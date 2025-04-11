@@ -1,20 +1,20 @@
 n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
-var o = n(374470),
-    r = n(239091);
+var r = n(374470),
+    o = n(239091);
 let a = (e) => {
     let { facepileRef: t, goToThread: a, channel: s } = e;
     return {
         handleLeftClick: (e) => {
             var n;
-            ((0, o.k)(e.target) && (null == (n = t.current) ? void 0 : n.contains(e.target))) || a(s, e.shiftKey);
+            ((0, r.k)(e.target) && (null == (n = t.current) ? void 0 : n.contains(e.target))) || a(s, e.shiftKey);
         },
         handleRightClick: (e) =>
-            (0, r.jW)(e, async () => {
+            (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('22356'), n.e('86797')]).then(n.bind(n, 422200));
                 return (t) => {
-                    var n, o;
+                    var n, r;
                     return (0, i.jsx)(
                         e,
                         ((n = (function (e) {
@@ -42,9 +42,9 @@ let a = (e) => {
                             }
                             return e;
                         })({}, t)),
-                        (o = o = { channel: s }),
+                        (r = r = { channel: s }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -52,8 +52,8 @@ let a = (e) => {
                                       n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(r)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                               }),
                         n)
                     );

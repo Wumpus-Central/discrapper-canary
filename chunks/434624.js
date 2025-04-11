@@ -22,12 +22,12 @@ let g = i.memo(function (e) {
             A = i ? h : f,
             w = I ? y : _,
             Z = (0, u.y)(w, m.aO),
-            k = {};
+            R = {};
         if (I && null != P) {
-            var R;
+            var k;
             let { accentColor: e, backgroundColor: r, opacity: i } = P,
-                a = null != (R = (0, o.wK)(null != r ? r : '', i)) ? R : '';
-            T && (k.borderColor = r), (k.background = a), (t = e), (n = e);
+                a = null != (k = (0, o.wK)(null != r ? r : '', i)) ? k : '';
+            T && (R.borderColor = r), (R.background = a), (t = e), (n = e);
         }
         let D = {
             minWidth: Z,
@@ -39,7 +39,7 @@ let g = i.memo(function (e) {
                 [A.reactionMe]: T,
                 [A.reactionReadOnly]: E && !O && !j && !N
             }),
-            style: k,
+            style: R,
             children: [
                 (0, r.jsx)(s.Z, {
                     className: l()({ [A.hideEmoji]: a }),

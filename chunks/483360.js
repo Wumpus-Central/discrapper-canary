@@ -38,8 +38,8 @@ var i = n(658722),
     N = n(373228),
     A = n(601070),
     C = n(675478),
-    R = n(131704),
-    P = n(598077),
+    P = n(131704),
+    R = n(598077),
     w = n(592125),
     D = n(580005),
     L = n(984933),
@@ -146,10 +146,10 @@ function eA() {
     return eb * e * (null != t ? t : 1);
 }
 let eC = [L.sH, L.Zb, X.d4z.GUILD_CATEGORY];
-function eR(e, t) {
+function eP(e, t) {
     return e.split(/(?:,| )+/).every((e) => RegExp(K.Z.escape(e), 'i').test(t));
 }
-function eP(e, t) {
+function eR(e, t) {
     let { exactQuery: n, containQuery: r, queryLower: i } = t,
         a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     try {
@@ -158,7 +158,7 @@ function eP(e, t) {
             return ec;
         }
         if (r.test(e)) return eu;
-        if (eR(i, e)) return ed;
+        if (eP(i, e)) return ed;
         if (a && o()(i, e)) return ef;
     } catch (e) {
         es.error(e);
@@ -184,7 +184,7 @@ function eD(e) {
         let e,
             r,
             d = n[h];
-        d instanceof P.Z ? ((r = d), (e = null == (E = x.ZP.getNick(l, r.id)) ? void 0 : E.toLocaleLowerCase())) : ((e = null == (b = d.nick) ? void 0 : b.toLocaleLowerCase()), (r = s[d.userId]));
+        d instanceof R.Z ? ((r = d), (e = null == (E = x.ZP.getNick(l, r.id)) ? void 0 : E.toLocaleLowerCase())) : ((e = null == (b = d.nick) ? void 0 : b.toLocaleLowerCase()), (r = s[d.userId]));
         let p = null == (g = Q.ZP.getGlobalName(r)) ? void 0 : g.toLocaleLowerCase();
         if (null != r && (null == i || i(r))) {
             let n = r.username.toLocaleLowerCase(),
@@ -241,10 +241,10 @@ function eL(e) {
     }
 }
 function ex(e, t, n) {
-    return e === t || ((!!n || !!(0, R.Km)(t)) && (e === L.sH ? (0, R.r8)(t) || (0, R.bw)(t) : e === L.Zb && (0, R.bw)(t)));
+    return e === t || ((!!n || !!(0, P.Km)(t)) && (e === L.sH ? (0, P.r8)(t) || (0, P.bw)(t) : e === L.Zb && (0, P.bw)(t)));
 }
 function eM(e, t) {
-    return e === L.sH && (0, R.bw)(t);
+    return e === L.sH && (0, P.bw)(t);
 }
 function ek(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -275,7 +275,7 @@ function ej(e, t, n) {
     let r = 0,
         i = null;
     for (let o of t) {
-        let t = eP(e, o, n);
+        let t = eR(e, o, n);
         t > r && ((r = t), (i = o));
     }
     return null != i && (i.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(i), 1)), r;
@@ -440,7 +440,7 @@ let eV = {
             E = D.Z.getMaxScore();
         for (let e of t) {
             var b;
-            if (!ex(l, e.type, null != r) || ((0, R.Km)(e.type) && !j.Z.can(u ? e.accessPermissions : X.Plq.VIEW_CHANNEL, e)) || !a(e)) continue;
+            if (!ex(l, e.type, null != r) || ((0, P.Km)(e.type) && !j.Z.can(u ? e.accessPermissions : X.Plq.VIEW_CHANNEL, e)) || !a(e)) continue;
             let t = [...h],
                 i = e.name.toLocaleLowerCase(),
                 s = p && n === e.id,
@@ -460,7 +460,7 @@ let eV = {
                     (eM(l, e.type) && (c = Math.max(c - e_, ef / 2)),
                     (c = Math.min(c + Math.min(null != (b = D.Z.getScoreWithoutFetchingLatest(e.id)) ? b : 0 / E, 1) * ep, c >= ec ? el : ec)),
                     g.push({
-                        type: (0, R.bw)(e.type) ? J.h8.VOICE_CHANNEL : J.h8.TEXT_CHANNEL,
+                        type: (0, P.bw)(e.type) ? J.h8.VOICE_CHANNEL : J.h8.TEXT_CHANNEL,
                         record: e,
                         score: eA(c, _[e.id]),
                         comparator: (0, f.F6)(e, F.default, G.Z),
@@ -482,7 +482,7 @@ let eV = {
         for (let e of s()(M.Z.getGuilds()).values().value()) {
             if (!i(e)) continue;
             let t = e.name.toLocaleLowerCase(),
-                n = eP(t, l, r);
+                n = eR(t, l, r);
             n > 0 &&
                 c.push({
                     type: J.h8.GUILD,
@@ -508,7 +508,7 @@ let eV = {
             if (!e.isMultiUserDM() || !i(e)) continue;
             let t = (0, f.F6)(e, F.default, G.Z).toLocaleLowerCase(),
                 n = (0, q._I)((0, q.Fv)(t)),
-                a = eP(n, l, r);
+                a = eR(n, l, r);
             a > 0 &&
                 u.push({
                     type: J.h8.GROUP_DM,
@@ -533,7 +533,7 @@ let eV = {
         for (let { application: e } of s) {
             if (!i(e)) continue;
             let t = e.name.toLocaleLowerCase(),
-                n = eP(t, a, r);
+                n = eR(t, a, r);
             n > 0 &&
                 l.push({
                     type: J.h8.APPLICATION,
@@ -566,7 +566,7 @@ let eV = {
             if (null != n)
                 for (let e of n) {
                     let n = e.toLocaleLowerCase(),
-                        i = eP(n, o, r);
+                        i = eR(n, o, r);
                     i > 0 &&
                         l.push({
                             type: J.h8.IN_APP_NAVIGATION,
@@ -581,7 +581,7 @@ let eV = {
             eo.getState().options.forEach((e) => {
                 var t;
                 let n = [e.title].concat(e.searchableTitles),
-                    i = null != (t = (0, a.max)(n.map((e) => eA(eP(e.toLocaleLowerCase(), o, r))))) ? t : 0;
+                    i = null != (t = (0, a.max)(n.map((e) => eA(eR(e.toLocaleLowerCase(), o, r))))) ? t : 0;
                 i > 0 &&
                     l.push({
                         type: J.h8.IN_APP_NAVIGATION,
@@ -609,7 +609,7 @@ let eV = {
         for (let e of l)
             if (e.type === X.epS.DURABLE_PRIMARY && i(e)) {
                 let t = e.name.toLocaleLowerCase(),
-                    n = eP(t, a, r);
+                    n = eR(t, a, r);
                 n > 0 &&
                     c.push({
                         type: J.h8.SKU,
@@ -720,7 +720,7 @@ let eV = {
             l = RegExp(K.Z.escape(o), 'i'),
             c = s()(n)
                 .map((e, t) => {
-                    let n = eP(
+                    let n = eR(
                         e.displayName.toLocaleLowerCase(),
                         {
                             exactQuery: a,
@@ -771,9 +771,9 @@ let eV = {
             (e.id !== $.HY.SERVER_GUIDE || o) &&
                 (e.id !== $.HY.CHANNEL_BROWSER || a) &&
                 (e.id !== $.HY.CUSTOMIZE_COMMUNITY || s) &&
-                eP(e.name.toLocaleLowerCase(), i, !1) > 0 &&
+                eR(e.name.toLocaleLowerCase(), i, !1) > 0 &&
                 c.push(
-                    new R.nl({
+                    new P.nl({
                         id: e.id,
                         name: e.name,
                         type: X.d4z.UNKNOWN,

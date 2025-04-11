@@ -42,11 +42,11 @@ function h(e) {
     return e;
 }
 var g = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
-let f = Object.freeze({
+let m = Object.freeze({
         SIZE_40: 'size-40',
         SIZE_60: 'size-60'
     }),
-    m = n(515695);
+    f = n(515695);
 class _ extends (i = l.PureComponent) {
     render() {
         let e = this.props,
@@ -98,7 +98,7 @@ p(_, 'defaultProps', {
 class b extends (o = l.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = f[null != e ? e : 'SIZE_40'];
+            t = m[null != e ? e : 'SIZE_40'];
         return (0, a.jsxs)('div', {
             className: d.qrCodeOverlayContainer,
             children: [
@@ -107,7 +107,7 @@ class b extends (o = l.PureComponent) {
                     className: d.qrCodeOverlay,
                     children: (0, a.jsx)('img', {
                         className: d[t],
-                        src: m,
+                        src: f,
                         alt: ''
                     })
                 })

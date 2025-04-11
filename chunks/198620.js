@@ -1,5 +1,5 @@
 n.d(t, {
-    B_: () => R,
+    B_: () => P,
     MO: () => b,
     _M: () => y,
     k5: () => A,
@@ -82,7 +82,7 @@ async function C(e) {
     });
     return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }
-async function R(e) {
+async function P(e) {
     let t = l.Z.toURLSafe(e);
     if (null == t || !I(t)) return e;
     let n = await C(e);

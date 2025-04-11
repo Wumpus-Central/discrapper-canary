@@ -4,10 +4,10 @@ n.d(t, {
     Tg: () => U,
     UU: () => G,
     gK: () => j,
-    hM: () => P,
+    hM: () => R,
     iy: () => B,
     mO: () => x,
-    t1: () => R,
+    t1: () => P,
     uL: () => V,
     v2: () => M,
     yC: () => L
@@ -106,7 +106,7 @@ function N(e, t) {
 }
 let A = 250,
     C = /-/g;
-function R(e) {
+function P(e) {
     let t = null != e ? { [e]: 1 } : {};
     c.ZP.trackWithMetadata(E.rMx.SEARCH_STARTED, {
         search_type: E.aib.GIF,
@@ -115,7 +115,7 @@ function R(e) {
         modifiers: t
     });
 }
-function P(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     var { startTime: r } = n,
         i = T(n, ['startTime']);
@@ -130,7 +130,7 @@ function P(e, t) {
 }
 function w(e, t, n) {
     let r = Date.now();
-    R(t),
+    P(t),
         a.tn
             .get({
                 url: E.ANM.GIFS_SEARCH,
@@ -147,7 +147,7 @@ function w(e, t, n) {
             .then(
                 (i) => {
                     let o = i.body;
-                    P(o, t, {
+                    R(o, t, {
                         startTime: r,
                         limit: n
                     }),
@@ -270,7 +270,7 @@ function U() {
 }
 function G(e) {
     let t = Date.now();
-    R(E.wI2.TRENDING_GIFS),
+    P(E.wI2.TRENDING_GIFS),
         a.tn
             .get({
                 url: E.ANM.GIFS_TRENDING_GIFS,
@@ -286,7 +286,7 @@ function G(e) {
             .then(
                 (n) => {
                     let { body: r } = n;
-                    P(r, E.wI2.TRENDING_GIFS, {
+                    R(r, E.wI2.TRENDING_GIFS, {
                         startTime: t,
                         limit: e
                     }),

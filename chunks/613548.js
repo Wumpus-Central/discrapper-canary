@@ -38,9 +38,9 @@ var r = n(200651),
     W = n(594174),
     U = n(358221),
     B = n(887012),
-    H = n(444253),
-    G = n(355827),
-    F = n(185935),
+    G = n(444253),
+    F = n(355827),
+    H = n(185935),
     V = n(795318),
     z = n(354459),
     Y = n(981631),
@@ -154,7 +154,7 @@ function $(e) {
         es = (0, v.o)(er, eo),
         ec = (0, x.lL)('CallHeader', !0, eo, es),
         eu = n.isGuildVoice() && !s,
-        { hasParticipantsPanel: ed } = (0, F.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        { hasParticipantsPanel: ed } = (0, H.Z)({ location: 'ChannelCallHeaderToolbar' }),
         ep = !el && ed && (n.isGuildVoice() || n.isGroupDM()),
         { enabled: eh, inInbox: ef } = O.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         em = (0, b.Q3)('ChannelCallHeaderToolbar'),
@@ -233,7 +233,7 @@ function $(e) {
                     {
                         targetElementRef: L,
                         position: 'bottom',
-                        renderPopout: () => (0, r.jsx)(Z.Z, { children: (0, r.jsx)(G.Z, { channel: n }) }),
+                        renderPopout: () => (0, r.jsx)(Z.Z, { children: (0, r.jsx)(F.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
@@ -298,7 +298,7 @@ function $(e) {
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, r.jsx)(Z.Z, {
-                                children: (0, r.jsx)(H.Z, {
+                                children: (0, r.jsx)(G.Z, {
                                     channelId: et,
                                     onClose: t,
                                     appContext: l,

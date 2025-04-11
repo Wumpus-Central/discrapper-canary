@@ -73,8 +73,8 @@ let v = 'default',
     N = null,
     A = null,
     C = {},
-    R = null,
     P = null,
+    R = null,
     w = {},
     D = {
         clipsEnabled: !1,
@@ -132,7 +132,7 @@ function U(e) {
     if (((T += 1), (L.hasTakenDecoupledClip = L.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
         var i;
         let e = Date.now();
-        (P = null != P ? P : e),
+        (R = null != R ? R : e),
             (w[n] = [
                 ...(null != (i = w[n]) ? i : []),
                 {
@@ -144,7 +144,7 @@ function U(e) {
 }
 function G(e) {
     let { streamKey: t, timestamp: n } = e;
-    P === n && (P = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n));
+    R === n && (R = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n));
 }
 function B() {
     T = Math.max(T - 1, 0);
@@ -196,7 +196,7 @@ function W(e) {
 }
 function Y(e) {
     let { applicationName: t } = e;
-    if (((R = null), !L.clipsSettings.clipsEnabled)) return !1;
+    if (((P = null), !L.clipsSettings.clipsEnabled)) return !1;
     A = {
         applicationName: t,
         newClipIds: [],
@@ -205,7 +205,7 @@ function Y(e) {
 }
 function K(e) {
     let { errMsg: t } = e;
-    R = t;
+    P = t;
 }
 function z(e) {
     let { sourceName: t, pid: n } = e;
@@ -225,7 +225,7 @@ function z(e) {
 }
 function q(e) {
     let { streamKey: t } = e;
-    if (((P = null), (w[t] = []), null == A || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
+    if (((R = null), (w[t] = []), null == A || (0, l.my)(t).ownerId !== c.default.getId())) return !1;
     A = 0 === A.newClipIds.length ? null : y(E({}, A), { ended: !0 });
 }
 function Q(e) {
@@ -260,7 +260,7 @@ function en(e) {
     let { educationType: t } = e;
     switch (t) {
         case p.D5.Error:
-            R = null;
+            P = null;
             break;
         case p.D5.Disabled:
         case p.D5.Enabled:
@@ -290,7 +290,7 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
         return N === e;
     }
     getActiveAnimation() {
-        return P;
+        return R;
     }
     getStreamClipAnimations(e) {
         var t;
@@ -312,7 +312,7 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
         return T >= p.Kw;
     }
     getLastClipsError() {
-        return R;
+        return P;
     }
     isClipsEnabledForUser(e) {
         var t, n;

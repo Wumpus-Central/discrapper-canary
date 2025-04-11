@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(453070),
     A = n(926491),
     C = n(373228),
-    R = n(462109),
-    P = n(422195),
+    P = n(462109),
+    R = n(422195),
     w = n(657795),
     D = n(489762),
     L = n(31543),
@@ -175,12 +175,12 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 [V, e_, c, ev]
             ),
             {
-                getItemProps: eR,
-                getRowProps: eP,
+                getItemProps: eP,
+                getRowProps: eR,
                 gridContainerProps: ew,
                 handleGridContainerKeyDown: eD,
                 isUsingKeyboardNavigation: eL
-            } = (0, R.t)({
+            } = (0, P.t)({
                 columnCounts: eA,
                 stickersListRef: ee,
                 stickersGrid: eT,
@@ -261,8 +261,8 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                         ref: ee,
                                                         collapsedStickersCategories: ef,
                                                         filteredStickers: ep,
-                                                        getStickerItemProps: eR,
-                                                        getStickerRowProps: eP,
+                                                        getStickerItemProps: eP,
+                                                        getStickerRowProps: eR,
                                                         gridWidth: eu,
                                                         gutterWidth: eN,
                                                         isUsingKeyboardNavigation: eL,
@@ -277,7 +277,7 @@ let Z = (0, O.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                       }
                                   )
                               ),
-                              (0, r.jsx)(P.Z, {
+                              (0, r.jsx)(R.Z, {
                                   stickersListRef: ee,
                                   channel: c
                               })

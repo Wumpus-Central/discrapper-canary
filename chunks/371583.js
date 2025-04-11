@@ -1,33 +1,33 @@
-a.d(e, {
-    j: () => f,
-    r: () => n
+n.d(t, {
+    j: () => c,
+    r: () => s
 });
-var c = a(99815),
-    d = a(81063),
-    s = a(463031);
-function n(t) {
-    if (t.leaderboard_id === s.z) {
-        var e;
-        let d = t.users[0],
-            s = null == d || null == (e = d.statistics[c.E.LOL_MOST_PLAYED_CHAMPION_ID]) ? void 0 : e.value;
-        try {
-            return null != s ? a(624119)('./champion_'.concat(s, '.jpg')).default : a(610067).Z;
-        } catch (t) {
-            return a(610067).Z;
-        }
+var r = n(99815),
+    i = n(81063),
+    o = n(463031);
+function a(e) {
+    var t;
+    let i = e.users[0],
+        o = null == i || null == (t = i.statistics[r.E.LOL_MOST_PLAYED_CHAMPION_ID]) ? void 0 : t.value;
+    try {
+        return null != o ? n(624119)('./champion_'.concat(o, '.jpg')).default : n(610067).Z;
+    } catch (e) {
+        return n(610067).Z;
     }
-    return null != t.settings.splash_asset_id ? (0, d.xF)(t.settings.application_id, t.settings.splash_asset_id) : null;
 }
-function f(t) {
-    if (t.leaderboard_id === s.z) {
-        var e, n;
-        let d = null == t || null == (e = t.users) ? void 0 : e[0],
-            s = null == d || null == (n = d.statistics[c.E.LOL_MOST_PLAYED_CHAMPION_ID]) ? void 0 : n.value;
-        try {
-            return null != s ? a(692425)('./champion_'.concat(s, '.jpg')).default : null;
-        } catch (t) {
-            return null;
-        }
+function s(e) {
+    return e.leaderboard_id === o.z ? a(e) : null != e.settings.splash_asset_id ? (0, i.xF)(e.settings.application_id, e.settings.splash_asset_id) : null;
+}
+function l(e) {
+    var t, i;
+    let o = null == e || null == (t = e.users) ? void 0 : t[0],
+        a = null == o || null == (i = o.statistics[r.E.LOL_MOST_PLAYED_CHAMPION_ID]) ? void 0 : i.value;
+    try {
+        return null != a ? n(692425)('./champion_'.concat(a, '.jpg')).default : null;
+    } catch (e) {
+        return null;
     }
-    return (0, d.xF)(t.settings.application_id, t.settings.winner_asset_id);
+}
+function c(e) {
+    return e.leaderboard_id === o.z ? l(e) : (0, i.xF)(e.settings.application_id, e.settings.winner_asset_id);
 }

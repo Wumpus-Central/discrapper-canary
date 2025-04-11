@@ -107,10 +107,10 @@ function S(e) {
     let L = null != k,
         A = null != k && new Date(k).getTime() < Date.now(),
         D = (null == I ? void 0 : I.sku_id) === f.Si.TIER_0,
-        B = async () => {
-            S(!0), L ? await z({ expiresAt: null }) : await (0, d.a)(u), p(), S(!1);
+        z = async () => {
+            S(!0), L ? await B({ expiresAt: null }) : await (0, d.a)(u), p(), S(!1);
         },
-        z = async (e) => {
+        B = async (e) => {
             let { expiresAt: t } = e;
             S(!0);
             try {
@@ -243,7 +243,7 @@ function S(e) {
                         (0, r.jsx)('input', {
                             type: 'date',
                             value: null != k ? k.substring(0, 10) : '',
-                            onChange: (e) => z({ expiresAt: e.target.value })
+                            onChange: (e) => B({ expiresAt: e.target.value })
                         })
                     ]
                 }),
@@ -251,7 +251,7 @@ function S(e) {
                     className: g.badgeContainer,
                     children: [
                         (0, r.jsx)(c.P3F, {
-                            onClick: B,
+                            onClick: z,
                             className: i()(g.badge, g.clickable, {
                                 [g.acked]: L,
                                 [g.expired]: A

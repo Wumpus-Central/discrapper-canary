@@ -38,9 +38,9 @@ var r = n(200651),
     W = n(541716),
     U = n(752305),
     B = n(516887),
-    H = n(974251),
-    G = n(893718),
-    F = n(436660),
+    G = n(974251),
+    F = n(893718),
+    H = n(436660),
     V = n(131565),
     z = n(680783),
     Y = n(540059),
@@ -92,9 +92,9 @@ var r = n(200651),
     eW = n(979956),
     eU = n(655687),
     eB = n(165540),
-    eH = n(583027),
-    eG = n(25007),
-    eF = n(685006),
+    eG = n(583027),
+    eF = n(25007),
+    eH = n(685006),
     eV = n(685722),
     ez = n(199649),
     eY = n(1397),
@@ -177,9 +177,9 @@ function e7(e) {
         })(e, ['isSidebar']);
     return t ? (0, r.jsx)('section', e1(e0({}, n), { role: 'complementary' })) : (0, r.jsx)('main', e0({}, n));
 }
-let e6 = i.forwardRef((e, t) => (0, r.jsx)(e4, e1(e0({}, e), { refInstance: t })));
-e6.displayName = 'ChannelTextAreaForm';
-class e4 extends i.PureComponent {
+let e4 = i.forwardRef((e, t) => (0, r.jsx)(e6, e1(e0({}, e), { refInstance: t })));
+e4.displayName = 'ChannelTextAreaForm';
+class e6 extends i.PureComponent {
     componentDidMount() {
         eO.Z.addChangeListener(this.draftDidChange);
     }
@@ -236,7 +236,7 @@ class e4 extends i.PureComponent {
     render() {
         let { channel: e, focused: t, onBlur: n, onFocus: i, onResize: l, highlighted: o, pendingReply: a, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: h, poggermodeEnabled: f, onCommandSentinelTyped: m, renderAppLauncherButton: g, renderAppCommandButton: b, pendingScheduledMessage: _ } = this.props,
             { contentWarningProps: y } = this.state,
-            x = (0, r.jsx)(G.Z, {
+            x = (0, r.jsx)(F.Z, {
                 ref: this.props.refInstance,
                 textValue: this.state.textValue,
                 richValue: this.state.richValue,
@@ -396,7 +396,7 @@ class e4 extends i.PureComponent {
                             });
                     } else if (e === R.bB.APPLICATION_LAUNCHER || e === R.bB.IMAGE_RECS_MENU || e === R.bB.IMAGE_RECS_SUBMENU) {
                         var h;
-                        let { location: t, sectionName: n } = null != (h = (0, eH._U)(l)) ? h : {},
+                        let { location: t, sectionName: n } = null != (h = (0, eG._U)(l)) ? h : {},
                             r = e === R.bB.APPLICATION_LAUNCHER ? I.Z.lastShownEntrypoint() : P._b.TEXT,
                             { isAuthorized: i } = await (0, D.L)({
                                 applicationId: l.applicationId,
@@ -413,7 +413,7 @@ class e4 extends i.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             });
-                        (0, eH.SC)(l);
+                        (0, eG.SC)(l);
                     }
                     let n = await (0, M.Z)({
                         command: l,
@@ -545,10 +545,10 @@ class e4 extends i.PureComponent {
             e$(this, 'handleSetValue', (e) => {
                 var t, n;
                 let r = null == (t = this.editorRef) ? void 0 : t.getSlateEditor();
-                null != r && (F.Q.select(r, []), r.insertText(e), null == (n = this.editorRef) || n.focus());
+                null != r && (H.Q.select(r, []), r.insertText(e), null == (n = this.editorRef) || n.focus());
             }),
             e$(this, 'renderAttachButton', (e, t) =>
-                (0, r.jsx)(H.Z, {
+                (0, r.jsx)(G.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: eO.d.ChannelMessage,
@@ -606,7 +606,7 @@ class e8 extends i.PureComponent {
                         tutorialId: 'writing-messages',
                         position: 'left',
                         offsetX: 75,
-                        children: (0, r.jsx)(e6, {
+                        children: (0, r.jsx)(e4, {
                             ref: this.channelTextAreaFormRef,
                             focused: A,
                             highlighted: w,
@@ -643,7 +643,7 @@ class e8 extends i.PureComponent {
                 guildId: null == Z ? void 0 : Z.guild_id,
                 location: 'ChannelChat'
             }),
-            H = B && null != S && null != Z;
+            G = B && null != S && null != Z;
         return (0, r.jsx)(
             y.Z,
             {
@@ -678,12 +678,12 @@ class e8 extends i.PureComponent {
                                     onFocus: this.handleChatInteract,
                                     children: [
                                         (0, r.jsx)(V.Z, { channel: n }),
-                                        H &&
+                                        G &&
                                             (0, r.jsx)(eq.Z, {
                                                 recipientUser: S,
                                                 voiceChannel: Z
                                             }),
-                                        (0, r.jsx)(eG.Z, {
+                                        (0, r.jsx)(eF.Z, {
                                             channel: n,
                                             guild: i,
                                             narrow: R
@@ -837,7 +837,7 @@ class e8 extends i.PureComponent {
                 return e && !t
                     ? (0, r.jsx)('div', {
                           className: eQ.entryPointButtonContainer,
-                          children: (0, r.jsx)(eF.ZP, {
+                          children: (0, r.jsx)(eH.ZP, {
                               context: {
                                   channel: n,
                                   type: 'channel'
@@ -898,7 +898,7 @@ let e5 = i.memo(function (e) {
         W = (0, Y.Q3)('ChannelChat'),
         U = (0, d.e7)([eS.Z], () => eS.Z.getVoiceChannelId()),
         B = (0, d.e7)([ej.Z], () => ej.Z.getChannel(U)),
-        H = (0, d.e7)([eT.default], () => (t.type !== eK.d4z.DM ? null : eT.default.getUser(t.getRecipientId())));
+        G = (0, d.e7)([eT.default], () => (t.type !== eK.d4z.DM ? null : eT.default.getUser(t.getRecipientId())));
     return (0, r.jsx)(e8, {
         channel: t,
         isEditing: null != (0, d.e7)([eE.Z], () => eE.Z.getEditingMessageId(t.id)),
@@ -925,7 +925,7 @@ let e5 = i.memo(function (e) {
         isRefreshChatInputEnabled: D,
         isRefreshEnabled: W,
         pendingScheduledMessage: x,
-        recipientUser: H,
+        recipientUser: G,
         voiceChannel: B,
         chatWallpaperState: j
     });

@@ -16,14 +16,14 @@ function _(e, t) {
     let A = u.Z.getUserProfile(e),
         C = Date.now() - (null != (h = null == A ? void 0 : A.lastFetched) ? h : 0) >= f;
     if (((null == A || null == (n = A.fetchError) ? void 0 : n.status) === 404 || (null == A || null == (_ = A.fetchError) ? void 0 : _.status) === 429) && !C) return Promise.resolve();
-    let R = u.Z.getGuildMemberProfile(e, I),
-        P = u.Z.getMutualGuilds(e),
+    let P = u.Z.getGuildMemberProfile(e, I),
+        R = u.Z.getMutualGuilds(e),
         w = u.Z.getMutualFriends(e),
         D = u.Z.getMutualFriendsCount(e),
         L = null == w && b,
         x = null == D && E,
-        M = (null == P && g) || L || x,
-        k = null == I ? null == A : null == R,
+        M = (null == R && g) || L || x,
+        k = null == I ? null == A : null == P,
         j = !k && (C || M);
     if (!k && !j) return Promise.resolve();
     (0, s.z)(), null != t && (0, o.vM)(t);

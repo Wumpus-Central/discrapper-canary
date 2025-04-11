@@ -8,13 +8,13 @@ var n = r(200651),
     s = r(744053);
 let c = function (e) {
     var t;
-    let { message: r, errorMessage: c, submitting: d, onReset: u, onSave: g, onSaveText: f, onResetText: p, onSaveButtonColor: h, disabled: m, saveButtonTooltip: b } = e,
+    let { message: r, errorMessage: c, submitting: d, onReset: u, onSave: g, onSaveText: f, onResetText: p, onSaveButtonColor: m, disabled: h, saveButtonTooltip: b } = e,
         v = A.useRef(null),
-        [C, x] = A.useState(!1);
+        [C, q] = A.useState(!1);
     return (
         A.useEffect(() => {
             function e() {
-                x(!0), setTimeout(() => x(!1), 1000);
+                q(!0), setTimeout(() => q(!1), 1000);
             }
             return (
                 o.S.subscribe(l.CkL.EMPHASIZE_NOTICE, e),
@@ -85,9 +85,9 @@ let c = function (e) {
                                                   })(
                                                       {
                                                           size: a.zxk.Sizes.SMALL,
-                                                          color: null != h ? h : a.zxk.Colors.GREEN,
+                                                          color: null != m ? m : a.zxk.Colors.GREEN,
                                                           submitting: d,
-                                                          disabled: m,
+                                                          disabled: h,
                                                           onClick: g
                                                       },
                                                       e

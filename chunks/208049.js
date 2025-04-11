@@ -6,10 +6,10 @@ n.d(t, {
     HZ: () => x,
     R: () => w,
     TB: () => N,
-    XE: () => R,
+    XE: () => P,
     hs: () => A,
     w: () => O,
-    xR: () => P,
+    xR: () => R,
     xU: () => C,
     xz: () => D
 }),
@@ -144,7 +144,7 @@ async function C(e, t) {
         throw new l.Z(e);
     }
 }
-function R(e, t, n) {
+function P(e, t, n) {
     a.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY',
         sound: t,
@@ -152,7 +152,7 @@ function R(e, t, n) {
         trigger: n
     });
 }
-function P(e, t) {
+function R(e, t) {
     a.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_START',
         soundId: e,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => Q,
-    f: () => R
+    f: () => P
 }),
     n(388685),
     n(361932),
@@ -69,10 +69,10 @@ function C(e, t) {
     var n, r;
     return (null != (n = t.created_at) ? n : 0) - (null != (r = e.created_at) ? r : 0);
 }
-function R(e, t) {
+function P(e, t) {
     return T(e, t) || A(e, t) || C(e, t);
 }
-function P(e) {
+function R(e) {
     if ((delete E[e], delete b[e], delete y[e], delete v[e], null == g[e])) return;
     let t = s().sortBy(g[e], (e) => -e.timestamp),
         [n] = t;
@@ -123,7 +123,7 @@ function L(e) {
             timestamp: Date.now()
         };
     else {
-        let e = a.length > 1 ? [...a].sort(R) : a,
+        let e = a.length > 1 ? [...a].sort(P) : a,
             n = l[t];
         (a = null != n && o()(n.activities, e) ? n.activities : e),
             (l[t] = {
@@ -134,7 +134,7 @@ function L(e) {
                 timestamp: Date.now()
             });
     }
-    return delete O[n], P(n), !0;
+    return delete O[n], R(n), !0;
 }
 function x(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: o, hiddenActivities: a, timestamp: s } = e;
@@ -153,7 +153,7 @@ function x(e) {
             timestamp: Date.now()
         };
     else {
-        let e = o.length > 1 ? [...o].sort(R) : o;
+        let e = o.length > 1 ? [...o].sort(P) : o;
         l[t] = {
             status: r,
             clientStatus: i,
@@ -167,7 +167,7 @@ function M(e, t) {
     if (t === f.default.getId()) return !1;
     let n = g[t];
     if (null == n || null == n[e]) return !1;
-    delete n[e], 0 === Object.keys(n).length && delete g[t], P(t);
+    delete n[e], 0 === Object.keys(n).length && delete g[t], R(t);
 }
 function k(e) {
     for (let t of d.default.keys(g)) M(e, t);
@@ -303,7 +303,7 @@ function Y(e) {
 function K(e) {
     let t = f.default.getId();
     if (E[t] === e.status && b[t] === e.activities && y[t] === e.hiddenActivities) return !1;
-    (E[t] = e.status), (b[t] = [...e.activities].sort(R)), (y[t] = [...e.hiddenActivities].sort(R)), delete O[t];
+    (E[t] = e.status), (b[t] = [...e.activities].sort(P)), (y[t] = [...e.hiddenActivities].sort(P)), delete O[t];
 }
 function z(e) {
     let { userId: t, metadata: n } = e;
@@ -314,7 +314,7 @@ class q extends (r = l.ZP.Store) {
         this.waitFor(f.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (E[f.default.getId()] = e), (b[f.default.getId()] = [...t].sort(R));
+        (E[f.default.getId()] = e), (b[f.default.getId()] = [...t].sort(P));
     }
     getStatus(e) {
         var t, n;

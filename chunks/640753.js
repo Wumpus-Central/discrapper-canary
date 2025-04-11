@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g }), n(388685);
 var i = n(200651),
-    o = n(192379),
-    r = n(442837),
+    r = n(192379),
+    o = n(442837),
     a = n(570140),
     s = n(607070),
     l = n(222677),
@@ -12,10 +12,10 @@ var i = n(200651),
     p = n(815605),
     m = n(981341),
     f = n(994648);
-let g = o.memo(function (e) {
+let g = r.memo(function (e) {
     let { channelId: t, messageId: n, emoji: g, useChatFontScaling: b, color: j, count: v, emojiSize: O } = e,
-        y = (0, r.e7)([u.Z], () => u.Z.getEffectForEmojiId(t, n, g)),
-        T = o.useMemo(
+        y = (0, o.e7)([u.Z], () => u.Z.getEffectForEmojiId(t, n, g)),
+        x = r.useMemo(
             () =>
                 (0, p.Zn)(g, j, t, {
                     key: y,
@@ -23,10 +23,10 @@ let g = o.memo(function (e) {
                 }),
             [j, y, g, t, n]
         ),
-        [x, S] = o.useState(!1),
-        _ = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
-        E = c.Yk.useSetting(),
-        C = o.useCallback(() => {
+        [T, S] = r.useState(!1),
+        _ = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        N = c.Yk.useSetting(),
+        C = r.useCallback(() => {
             a.Z.dispatch({
                 type: 'BURST_REACTION_EFFECT_CLEAR',
                 channelId: t,
@@ -34,9 +34,9 @@ let g = o.memo(function (e) {
                 emoji: g
             });
         }, [g, t, n]);
-    return (o.useEffect(() => {
+    return (r.useEffect(() => {
         let e = () => {
-            if (x) return;
+            if (T) return;
             let e = (0, d.vJ)(''.concat(Date.now()).concat(t).concat(n).concat(g.name)) % 10;
             (e += v > 4 ? 4 : v - 1) > 7 &&
                 (S(!0),
@@ -47,18 +47,18 @@ let g = o.memo(function (e) {
                     key: u.I.RANDOM
                 }));
         };
-        if (x || (_ && !E) || !E) return;
+        if (T || (_ && !N) || !N) return;
         e();
         let i = setInterval(e, 5000);
         return () => {
             clearInterval(i);
         };
-    }, [E, t, v, g, g.name, x, n, _]),
+    }, [N, t, v, g, g.name, T, n, _]),
     null == y)
         ? null
         : (0, i.jsx)(h.Z, {
               className: (b ? f : m).effect,
-              effect: T,
+              effect: x,
               onComplete: C,
               emojiSize: O
           });

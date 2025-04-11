@@ -42,7 +42,7 @@ let C = () => {
             subscriptionTier: T.Si.TIER_2
         });
     },
-    R = (e) => {
+    P = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
                 null == t || t(S.L.DISMISS), (0, y.G8)();
@@ -72,7 +72,7 @@ let C = () => {
             ]
         });
     },
-    P = (e) => {
+    R = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, s.e7)([v.Z], () => v.Z.isUpsellPreview),
             o = () => {
@@ -126,7 +126,7 @@ function w(e) {
                   'data-app-right-panel': !0,
                   children: (0, r.jsxs)(l.y5t, {
                       children: [
-                          (0, r.jsx)(R, { markAsDismissed: n }),
+                          (0, r.jsx)(P, { markAsDismissed: n }),
                           (0, r.jsx)(l.Ttm, {
                               className: A.editorBody,
                               children: (0, r.jsx)(O.Z, {
@@ -134,7 +134,7 @@ function w(e) {
                                   isEditor: !0
                               })
                           }),
-                          (0, r.jsx)(P, {
+                          (0, r.jsx)(R, {
                               markAsDismissed: n,
                               isCoachmark: t
                           })

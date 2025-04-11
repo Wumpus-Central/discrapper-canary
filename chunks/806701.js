@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -22,7 +22,7 @@ function g(e) {
         })
     });
 }
-function f(e) {
+function m(e) {
     let { setSlide: t, transitionTo: i } = e;
     return (0, r.jsxs)('div', {
         children: [

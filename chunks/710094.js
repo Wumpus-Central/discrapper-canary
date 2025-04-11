@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(51499),
     A = n(678334),
     C = n(614277),
-    R = n(474936),
-    P = n(231338),
+    P = n(474936),
+    R = n(231338),
     w = n(388032);
 let D = 500;
 function L(e) {
@@ -41,14 +41,14 @@ function L(e) {
         [eO, eI] = (0, s.Z)(!1, D);
     (0, p.t)();
     let eS = null != (n = null != x ? x : V) ? n : null,
-        eT = null != eS && (!ec || R.nG[eS].skus.includes(en)) ? eS : null,
+        eT = null != eS && (!ec || P.nG[eS].skus.includes(en)) ? eS : null,
         eN = (0, d.N)(V),
         eA = (0, u.Ng)(),
         eC = { user_trial_offer_id: null == eN ? void 0 : eN.id };
     i.useEffect(() => {
         null != J && null != ev.current && ev.current.scrollIntoView({ behavior: 'smooth' });
     }, [J]);
-    let eR = i.useCallback(
+    let eP = i.useCallback(
             (e, t) => {
                 Y(e),
                     null != t && ef(t),
@@ -61,28 +61,28 @@ function L(e) {
             },
             [L, Y, ef]
         ),
-        eP = (0, T.m)(Q, q),
-        ew = null != et && R.o4.has(et.id) && null != eP && !(0, l.aQ)(eP) ? Error(w.NW.string(w.t['2ik8io'])) : null,
+        eR = (0, T.m)(Q, q),
+        ew = null != et && P.o4.has(et.id) && null != eR && !(0, l.aQ)(eR) ? Error(w.NW.string(w.t['2ik8io'])) : null,
         eD = i.useRef(null),
         [eL, ex] = i.useState(null),
-        eM = !em && null != eN && null != en && R.nG[eN.trial_id].skus.includes(en),
+        eM = !em && null != eN && null != en && P.nG[eN.trial_id].skus.includes(en),
         ek = null == eA || null == (t = eA.discount) ? void 0 : t.plan_ids,
         ej = !em && null != eA && null != ek && null != et && ek.includes(et.id),
         eU = em && (0, h.pO)(eE),
-        eG = null == F && null == Z && ed === P.GZ.SUBSCRIPTION,
+        eG = null == F && null == Z && ed === R.GZ.SUBSCRIPTION,
         eB = (0, I.Kp)({
             isTrial: eM,
             isGift: em,
             selectedSkuId: en,
             startedPaymentFlowWithPaymentSources: e_.current
         }),
-        eV = em && ed === P.GZ.ONE_TIME,
+        eV = em && ed === R.GZ.ONE_TIME,
         eF = eV || (eB ? eG && ec : ec),
         eZ = (0, c.id)(et, em, eb),
         eH = i.useCallback(() => (eB ? void L(E.h8.SKU_SELECT) : eZ ? void L(E.h8.SELECT_FREE_SKU) : eV ? L(E.h8.GIFT_CUSTOMIZATION) : L(E.h8.PLAN_SELECT)), [L, eB, eV, eZ]),
         eW = !1;
     return (
-        ed === P.GZ.ONE_TIME
+        ed === R.GZ.ONE_TIME
             ? ((eW = null != $),
               (o = (0, r.jsx)(S.Z, {
                   hasLegalTermsFlash: eO,
@@ -90,7 +90,7 @@ function L(e) {
                   onPaymentSourceChange: (e) => ei(null != e ? e.id : null),
                   handlePaymentSourceAdd: () => L(E.h8.ADD_PAYMENT_STEPS)
               })))
-            : ((eW = em ? null == ep : null != eP && ed === P.GZ.SUBSCRIPTION && eM && !eP.canRedeemTrial()),
+            : ((eW = em ? null == ep : null != eR && ed === R.GZ.SUBSCRIPTION && eM && !eR.canRedeemTrial()),
               null == W || eh || em
                   ? (a()(null != et, 'Expected plan to be selected'),
                     (o = (0, r.jsx)(f.Z, {
@@ -149,7 +149,7 @@ function L(e) {
                         premiumSubscription: null != W ? W : null,
                         setPurchaseState: eo,
                         onBack: eH,
-                        onNext: eR,
+                        onNext: eP,
                         onPurchaseError: (e) => ea(e),
                         legalTermsNodeRef: eD,
                         flashLegalTerms: () => eI(!0),

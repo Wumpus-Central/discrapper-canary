@@ -9,9 +9,9 @@ let c = (e) => {
     let t,
         { button: n, submitting: c, disableNext: d, onClick: u, canNavigateBack: m, onBackClicked: x } = e,
         p = l.useRef(null),
-        f = null != n && 'cancel' !== n.type,
-        b = m && (null == n ? void 0 : n.type) !== 'done',
-        h = f || b;
+        b = null != n && 'cancel' !== n.type,
+        h = m && (null == n ? void 0 : n.type) !== 'done',
+        _ = b || h;
     if (
         (l.useEffect(() => {
             if ((null == n ? void 0 : n.type) === 'submit' || (null == n ? void 0 : n.type) === 'done') {
@@ -19,23 +19,23 @@ let c = (e) => {
                 null == (e = p.current) || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
-        !h)
+        !_)
     )
         return null;
-    let _ = o.NW.string(o.t.i4jeWV);
+    let f = o.NW.string(o.t.i4jeWV);
     return (
-        (null == n ? void 0 : n.type) === 'submit' ? ((_ = o.NW.string(o.t['G+vU8/'])), (t = i.zxk.Colors.RED)) : (null == n ? void 0 : n.type) === 'next' ? (_ = o.NW.string(o.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((_ = o.NW.string(o.t['ETE/oK'])), (t = i.zxk.Colors.TRANSPARENT)),
+        (null == n ? void 0 : n.type) === 'submit' ? ((f = o.NW.string(o.t['G+vU8/'])), (t = i.zxk.Colors.RED)) : (null == n ? void 0 : n.type) === 'next' ? (f = o.NW.string(o.t.PDTjLC)) : (null == n ? void 0 : n.type) === 'cancel' && ((f = o.NW.string(o.t['ETE/oK'])), (t = i.zxk.Colors.TRANSPARENT)),
         (0, r.jsxs)(i.mzw, {
             direction: a.Z.Direction.HORIZONTAL,
             children: [
-                b &&
+                h &&
                     (0, r.jsx)(i.zxk, {
                         onClick: x,
                         color: i.zxk.Colors.TRANSPARENT,
                         disabled: c,
                         children: o.NW.string(o.t['13/7kZ'])
                     }),
-                f &&
+                b &&
                     (0, r.jsx)(i.zxk, {
                         onClick: () => {
                             null != n && u(n);
@@ -44,7 +44,7 @@ let c = (e) => {
                         className: s.actionButton,
                         disabled: c || d,
                         buttonRef: p,
-                        children: _
+                        children: f
                     })
             ]
         })

@@ -10,7 +10,7 @@ function c(e) {
     let { channelId: t, blockedUserIds: c, ignoredUserIds: u } = e;
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('25176'), n.e('2908')]).then(n.bind(n, 164375));
+            let { default: e } = await n.e('87337').then(n.bind(n, 164375));
             return (n) => {
                 let { transitionState: i, onClose: o } = n;
                 return (0, r.jsx)(e, {

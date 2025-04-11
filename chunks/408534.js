@@ -37,9 +37,9 @@ function O(e) {
         W = (0, c.$A)(P),
         U = (0, c.j8)(P),
         B = (0, b.Z)(A, I),
-        H = (0, g.Z)(w, P),
-        G = (0, f.Z)(),
-        F = (0, s.Z)(O);
+        G = (0, g.Z)(w, P),
+        F = (0, f.Z)(),
+        H = (0, s.Z)(O);
     return (0, r.jsxs)(l.v2r, {
         className: j.menu,
         onClose: t,
@@ -50,12 +50,12 @@ function O(e) {
         children: [
             (0, r.jsx)(l.kSQ, { children: S !== x.d4z.GUILD_STAGE_VOICE ? M : null }),
             (0, r.jsxs)(l.kSQ, {
-                children: [S === x.d4z.GUILD_STAGE_VOICE ? W : null, S === x.d4z.GUILD_STAGE_VOICE ? U : null, E || S === x.d4z.GUILD_STAGE_VOICE ? null : L, G, S !== x.d4z.GUILD_STAGE_VOICE ? R : null, S === x.d4z.GUILD_STAGE_VOICE || S === x.d4z.GUILD_VOICE ? k : null]
+                children: [S === x.d4z.GUILD_STAGE_VOICE ? W : null, S === x.d4z.GUILD_STAGE_VOICE ? U : null, E || S === x.d4z.GUILD_STAGE_VOICE ? null : L, F, S !== x.d4z.GUILD_STAGE_VOICE ? R : null, S === x.d4z.GUILD_STAGE_VOICE || S === x.d4z.GUILD_VOICE ? k : null]
             }),
-            (0, r.jsx)(l.kSQ, { children: F }),
+            (0, r.jsx)(l.kSQ, { children: H }),
             (0, r.jsx)(l.kSQ, { children: D }),
             (0, r.jsxs)(l.kSQ, {
-                children: [null != A ? B : null, null != w ? H : null]
+                children: [null != A ? B : null, null != w ? G : null]
             })
         ]
     });

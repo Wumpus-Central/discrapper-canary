@@ -73,7 +73,7 @@ function A(e, t) {
     );
 }
 let C = 150;
-function R(e, t) {
+function P(e, t) {
     switch (e) {
         case y.fO.ACTIVITY:
             return O.NW.formatToPlainString(O.t.TCM94e, { numUsers: t });
@@ -83,9 +83,9 @@ function R(e, t) {
             throw Error('Unknown participant type.');
     }
 }
-function P(e) {
+function R(e) {
     let { users: t, disableInteraction: n, guildId: i, participantType: o, channelId: s, handleUserContextMenu: l } = e,
-        c = R(o, t.length);
+        c = P(o, t.length);
     return (0, r.jsx)(d.VqE, {
         'aria-label': c,
         className: I.popoutWrapper,
@@ -121,7 +121,7 @@ function P(e) {
 }
 function w(e) {
     let { users: t, guildId: n, channelId: i, maxVisibleUsers: o = 3, className: s, participantType: l } = e,
-        c = R(l, t.length),
+        c = P(l, t.length),
         u =
             t.length < o
                 ? t.map((e) =>
@@ -158,7 +158,7 @@ let D = [];
 function L(e) {
     let { channelId: t, guildId: o, participant: s, className: h, compact: b = !1, disableInteraction: O = !1, maxVisibleUsers: S = 3 } = e,
         N = i.useRef(null),
-        R = (0, p.Z)(),
+        P = (0, p.Z)(),
         [L, x] = i.useState(!1),
         M = i.useRef(new u.sW(C, () => x(!1))),
         k = (0, c.Wu)(
@@ -177,8 +177,8 @@ function L(e) {
             [s]
         );
     i.useEffect(() => {
-        R && (M.current.cancel(), x(!1));
-    }, [R]);
+        P && (M.current.cancel(), x(!1));
+    }, [P]);
     let j = i.useCallback(() => {
             M.current.cancel(), x(!0);
         }, []),
@@ -242,7 +242,7 @@ function L(e) {
                 children: (0, r.jsx)(d.yRy, {
                     targetElementRef: N,
                     renderPopout: () =>
-                        (0, r.jsx)(P, {
+                        (0, r.jsx)(R, {
                             participantType: s.type,
                             handleUserContextMenu: G,
                             guildId: o,
@@ -250,7 +250,7 @@ function L(e) {
                             users: k,
                             disableInteraction: O
                         }),
-                    shouldShow: L && !R,
+                    shouldShow: L && !P,
                     position: 'top',
                     children: () =>
                         (0, r.jsx)('div', {

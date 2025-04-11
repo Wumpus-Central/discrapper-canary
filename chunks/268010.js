@@ -1,64 +1,64 @@
-n.d(t, { Z: () => N }), n(804061), n(704826), n(35282);
+n.d(t, { Z: () => T }), n(804061), n(704826), n(35282);
 var r = n(200651),
-    a = n(192379),
-    l = n(442837),
-    i = n(481060),
-    o = n(706454),
-    s = n(594174),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(706454),
+    l = n(594174),
     c = n(49012),
     u = n(5192),
     d = n(591759),
-    m = n(379357),
-    p = n(561308),
-    h = n(685270),
-    f = n(31074),
-    g = n(206295),
-    x = n(335326),
-    v = n(297781),
-    y = n(591853),
-    j = n(410441),
-    P = n(981631),
+    f = n(379357),
+    _ = n(561308),
+    p = n(685270),
+    h = n(31074),
+    m = n(206295),
+    g = n(335326),
+    E = n(297781),
+    b = n(591853),
+    y = n(410441),
+    v = n(981631),
     O = n(388032);
-let b = (e, t, n) => {
+let I = (e, t, n) => {
         let r = O.t.LHF6Dw,
-            a = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
-            l = e.extra.media_title;
+            i = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+            o = e.extra.media_title;
         return O.NW.formatToMarkdownString(r, {
-            mediaTitle: l,
-            userName: a,
+            mediaTitle: o,
+            userName: i,
             episodeDescription: e.extra.media_subtitle
         }).replaceAll('*', '');
     },
-    C = (e, t) =>
+    S = (e, t) =>
         O.NW.formatToPlainString(O.t.kCbfbG, {
             username: t.username,
             activity: e.extra.media_title
         }),
-    N = (e) => {
-        let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: N } = e,
-            I = (0, l.e7)([s.default], () => s.default.getUser(n.author_id)),
-            { largeImage: E } = (0, m.rv)({ entry: n }),
-            { primaryColor: w, secondaryColor: Z } = (0, g.Z)(null == E ? void 0 : E.src),
-            S = (0, l.e7)([o.default], () => o.default.locale),
-            T = (0, f.Z)(P.ABu.CRUNCHYROLL),
-            A = (0, p.ap)(n.extra.media_assets_large_text),
-            _ = a.useCallback(
+    T = (e) => {
+        let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
+            N = (0, o.e7)([l.default], () => l.default.getUser(n.author_id)),
+            { largeImage: A } = (0, f.rv)({ entry: n }),
+            { primaryColor: C, secondaryColor: P } = (0, m.Z)(null == A ? void 0 : A.src),
+            R = (0, o.e7)([s.default], () => s.default.locale),
+            w = (0, h.Z)(v.ABu.CRUNCHYROLL),
+            D = (0, _.ap)(n.extra.media_assets_large_text),
+            L = i.useCallback(
                 (e) => {
-                    if (null != I && (null == E ? void 0 : E.src) != null)
-                        return (0, h.B)({
+                    if (null != N && (null == A ? void 0 : A.src) != null)
+                        return (0, p.B)({
                             entry: n,
-                            mediaImageSrc: null == E ? void 0 : E.src,
-                            avatarSrc: I.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                            description: b(n, t, I),
-                            timestamp: (0, p.yh)(n, S),
-                            episodeDescription: A,
-                            colors: [w, Z],
+                            mediaImageSrc: null == A ? void 0 : A.src,
+                            avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
+                            description: I(n, t, N),
+                            timestamp: (0, _.yh)(n, R),
+                            episodeDescription: D,
+                            colors: [C, P],
                             channelId: e
                         });
                 },
-                [t, n, A, S, null == E ? void 0 : E.src, w, Z, I]
+                [t, n, D, R, null == A ? void 0 : A.src, C, P, N]
             ),
-            k = () => {
+            x = () => {
                 if (null == n.extra.url) return;
                 let e = d.Z.safeParseWithQuery(n.extra.url);
                 null != e &&
@@ -69,36 +69,36 @@ let b = (e, t, n) => {
                         trusted: !1
                     });
             };
-        return null == I
+        return null == N
             ? null
-            : (0, r.jsxs)(y.yR, {
+            : (0, r.jsxs)(b.yR, {
                   children: [
-                      (0, r.jsx)(y.wG, {
+                      (0, r.jsx)(b.wG, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, p.kr)(n) ? O.t['LH+Z39'] : O.t.YuKgmp,
+                          userDescription: (0, _.kr)(n) ? O.t['LH+Z39'] : O.t.YuKgmp,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
-                          headerIcons: (0, r.jsx)(j.Z, {
-                              onClick: T,
-                              Icon: i.omf,
+                          headerIcons: (0, r.jsx)(y.Z, {
+                              onClick: w,
+                              Icon: a.omf,
                               'aria-label': O.NW.string(O.t.jdJYX1)
                           }),
-                          badges: (0, r.jsx)(v.Gk, {
-                              location: v.Gt.POPOUT,
-                              children: x.t.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
+                          badges: (0, r.jsx)(E.Gk, {
+                              location: E.Gt.POPOUT,
+                              children: g.t.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
                           }),
-                          onClickTitle: k,
-                          onClickThumbnail: k
+                          onClickTitle: x,
+                          onClickThumbnail: x
                       }),
-                      (0, r.jsx)(y.St, {
-                          children: (0, r.jsx)(y.WT, {
+                      (0, r.jsx)(b.St, {
+                          children: (0, r.jsx)(b.WT, {
                               onReaction: u,
-                              onVoiceChannelPreview: N,
-                              user: I,
+                              onVoiceChannelPreview: T,
+                              user: N,
                               channel: t,
-                              generateReactionImage: _,
-                              reactionImageAltText: C(n, I),
+                              generateReactionImage: L,
+                              reactionImageAltText: S(n, N),
                               entry: n
                           })
                       })

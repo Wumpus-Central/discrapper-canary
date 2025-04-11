@@ -366,12 +366,12 @@ function A(e) {
     let { navId: n, variant: o = 'flexible', hideScroller: s = !1, className: f, children: h, onClose: b, onSelect: v, onInteraction: I } = e,
         A = S(h),
         C = T(A),
-        P = i.useRef([]);
-    l()(P.current, C) || (P.current = C);
+        R = i.useRef([]);
+    l()(R.current, C) || (R.current = C);
     let w = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
         D = (0, c.ZP)({
             navId: n,
-            items: P.current,
+            items: R.current,
             initialFocusPath: p.Z.keyboardModeEnabled && null != w ? [w] : [],
             closeMenu: b
         });
@@ -401,7 +401,7 @@ function A(e) {
                         0 === A.length &&
                             (0, r.jsx)(g.ck, {
                                 disabled: !0,
-                                label: () => (0, r.jsx)(R, {}),
+                                label: () => (0, r.jsx)(P, {}),
                                 menuItemProps: D.getItemProps({ path: ['empty'] }),
                                 isFocused: !1,
                                 onFocus: () => {},
@@ -420,7 +420,7 @@ function C() {
         children: (0, r.jsx)(f.$, {})
     });
 }
-function R() {
+function P() {
     let e = '\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A',
         t = '\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A',
         [n, o] = i.useState(e);

@@ -8,8 +8,8 @@ var i = n(120356),
     s = n(944486),
     c = n(471253),
     u = n(623633),
-    d = n(930180),
-    E = n(388032),
+    E = n(930180),
+    d = n(388032),
     _ = n(957991);
 function I(e) {
     let t = s.Z.getVoiceChannelId();
@@ -20,14 +20,14 @@ function I(e) {
 function N(e) {
     var t, n;
     let { channelId: i } = e,
-        o = null != (t = (0, d._d)(i)) ? t : 0,
-        a = null != (n = (0, d.K3)(i)) ? n : 0;
+        o = null != (t = (0, E._d)(i)) ? t : 0,
+        a = null != (n = (0, E.K3)(i)) ? n : 0;
     return o > 0 && a > 0
         ? (0, r.jsx)('div', {
               className: _.blocked,
               children: (0, r.jsx)('div', {
                   className: l()(_.blockedText, _.noIcon),
-                  children: E.NW.string(E.t.xlJRfn)
+                  children: d.NW.string(d.t.xlJRfn)
               })
           })
         : o > 0
@@ -35,7 +35,7 @@ function N(e) {
                 className: _.blocked,
                 children: (0, r.jsx)('div', {
                     className: l()(_.blockedText, _.noIcon),
-                    children: E.NW.string(E.t.WYad9f)
+                    children: d.NW.string(d.t.WYad9f)
                 })
             })
           : a > 0
@@ -43,7 +43,7 @@ function N(e) {
                   className: _.blocked,
                   children: (0, r.jsx)('div', {
                       className: l()(_.blockedText, _.noIcon),
-                      children: E.NW.string(E.t.eHq2OD)
+                      children: d.NW.string(d.t.eHq2OD)
                   })
               })
             : null;
@@ -56,7 +56,7 @@ function O() {
               className: _.container,
               color: o.DM8.DEFAULT,
               children: [
-                  (0, r.jsx)('div', { children: E.NW.string(E.t.Ul1RJS) }),
+                  (0, r.jsx)('div', { children: d.NW.string(d.t.Ul1RJS) }),
                   (0, r.jsx)(N, { channelId: e.id }),
                   (0, r.jsx)(o.zxk, {
                       className: _.acceptButton,
@@ -67,7 +67,7 @@ function O() {
                           className: _.acceptText,
                           variant: 'text-xs/normal',
                           color: 'none',
-                          children: E.NW.string(E.t.MpO0p6)
+                          children: d.NW.string(d.t.MpO0p6)
                       })
                   }),
                   (0, r.jsx)(o.zxk, {
@@ -80,7 +80,7 @@ function O() {
                           className: _.declineText,
                           variant: 'text-xs/normal',
                           color: 'none',
-                          children: E.NW.string(E.t['1YDv7e'])
+                          children: d.NW.string(d.t['1YDv7e'])
                       })
                   })
               ]

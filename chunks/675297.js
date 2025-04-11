@@ -27,9 +27,9 @@ function x(e) {
         A = (0, f.C)(t),
         w = (0, u.SO)(I),
         { shouldHideGuildPurchaseEntryPoints: Z } = (0, o.uP)(n),
-        k = (0, f.k)(t);
+        R = (0, f.k)(t);
     if (null == I || Z) return null;
-    let R = () =>
+    let k = () =>
             (0, g.e)({
                 guildId: n,
                 guildProductListingId: t.id,
@@ -65,7 +65,7 @@ function x(e) {
             imageUrl: P,
             name: t.name,
             description: t.description,
-            formattedPrice: k,
+            formattedPrice: R,
             role: T,
             ctaComponent: (0, r.jsx)(_.Z, {
                 guildId: n,
@@ -74,8 +74,8 @@ function x(e) {
             }),
             productType: A,
             shouldShowFullDescriptionButton: y,
-            onShowFullDescription: R,
-            onTapCard: R,
+            onShowFullDescription: k,
+            onTapCard: k,
             actionMenu: D,
             showOpaqueBackground: S,
             hideRoleTag: v,

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => p });
+r.d(t, { Z: () => d });
 var n = r(192379),
     l = r(835473),
     i = r(81063),
@@ -7,27 +7,27 @@ var n = r(192379),
     c = r(206583),
     s = r(701488),
     u = r(388032);
-function p(e) {
+function d(e) {
     var t, r;
-    let p,
-        { entry: d, baseEntryData: f } = e,
-        b = (0, l.q)(d.extra.application_id),
+    let d,
+        { entry: p, baseEntryData: f } = e,
+        b = (0, l.q)(p.extra.application_id),
         O = null == b ? void 0 : b.getIconURL(128),
-        y = (0, i.xF)(d.extra.application_id, d.extra.media_assets_large_image, [s.Si.LARGE, s.Si.LARGE]),
-        m = d.extra.media_title,
-        j = d.extra.media_subtitle,
-        g = (0, a.Jg)(d) ? u.t['LH+Z39'] : u.t.YuKgmp,
+        m = (0, i.xF)(p.extra.application_id, p.extra.media_assets_large_image, [s.Si.LARGE, s.Si.LARGE]),
+        y = p.extra.media_title,
+        j = p.extra.media_subtitle,
+        g = (0, a.Jg)(p) ? u.t['LH+Z39'] : u.t.YuKgmp,
         h = { type: c.kG.CRUNCHYROLL },
         v = n.useMemo(() => {
-            if (null == d.extra.url) return;
-            let e = o.Z.safeParseWithQuery(d.extra.url);
+            if (null == p.extra.url) return;
+            let e = o.Z.safeParseWithQuery(p.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
-        }, [d.extra.url]);
+        }, [p.extra.url]);
     return (
         null != v &&
-            (p = {
+            (d = {
                 href: o.Z.format(v),
-                ariaDescription: u.NW.formatToPlainString(u.t.aFFQ3t, { title: m })
+                ariaDescription: u.NW.formatToPlainString(u.t.aFFQ3t, { title: y })
             }),
         (t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -56,10 +56,10 @@ function p(e) {
         })({}, f)),
         (r = r =
             {
-                thumbnailUrl: null != y ? y : O,
-                title: m,
-                titleClickable: p,
-                thumbnailClickable: p,
+                thumbnailUrl: null != m ? m : O,
+                title: y,
+                titleClickable: d,
+                thumbnailClickable: d,
                 subtitle: j,
                 userDescription: g,
                 providerIconProps: h

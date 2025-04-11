@@ -8,8 +8,8 @@ var i = n(481060),
     s = n(222727),
     c = n(981631),
     u = n(921944),
-    d = n(388032),
-    E = n(131715);
+    E = n(388032),
+    d = n(131715);
 let _ = (e) => {
     let { notice: t, noticeType: n, dismissCurrentNotice: _ } = e,
         I = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
@@ -29,7 +29,7 @@ let _ = (e) => {
                 (0, r.jsx)(i.SrA, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.premiumIcon
+                    className: d.premiumIcon
                 }),
             (0, o.Gv)(O, T, S, I),
             (0, r.jsx)(i.NoS, {
@@ -37,7 +37,7 @@ let _ = (e) => {
                     _(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM);
                 },
                 noticeType: n,
-                children: d.NW.string(d.t.hvVgAQ)
+                children: E.NW.string(E.t.hvVgAQ)
             })
         ]
     });

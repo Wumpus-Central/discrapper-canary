@@ -41,8 +41,8 @@ var y = n(807675),
 let N = 10,
     A = /^\/([a-zA-Z0-9-]+)$/,
     C = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-    R = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-    P = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    P = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+    R = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
     w = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
     D = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     L = /^\/activities\/([0-9-]+)\/?$/,
@@ -98,7 +98,7 @@ function ee(e) {
 }
 function et(e) {
     if (null == e) return null;
-    let t = e.match(P);
+    let t = e.match(R);
     return null != t && t.length >= 4
         ? {
               guildId: t[1],
@@ -153,7 +153,7 @@ function er(e) {
             v.Z.getInvite(e), u(S.g.INVITE, e);
         }
         (null == l ? void 0 : l.match(A)) != null && u(S.g.TEMPLATE, l.substring(1));
-        let d = null == c ? void 0 : c.match(R);
+        let d = null == c ? void 0 : c.match(P);
         if (null != d) {
             let e = d[1].toUpperCase();
             if (e === S.g.INVITE) {

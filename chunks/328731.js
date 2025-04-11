@@ -1,4 +1,4 @@
-r.d(t, { Z: () => m });
+r.d(t, { Z: () => y });
 var n = r(200651),
     l = r(120356),
     i = r.n(l),
@@ -7,8 +7,8 @@ var n = r(200651),
     c = r(5192),
     s = r(192918),
     u = r(256139),
-    p = r(91907),
-    d = r(866040),
+    d = r(91907),
+    p = r(866040),
     f = r(388032),
     b = r(103395);
 function O(e) {
@@ -36,7 +36,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,26 +54,26 @@ function y(e, t) {
         e
     );
 }
-function m(e) {
+function y(e) {
     let { entry: t, channel: r, className: l } = e,
-        { displayParticipants: m, participant1: j, participant2: g, numOtherParticipants: h, orderedParticipants: v } = (0, s.Z)(t),
+        { displayParticipants: y, participant1: j, participant2: g, numOtherParticipants: h, orderedParticipants: v } = (0, s.Z)(t),
         P = [j, g];
     return (0, n.jsxs)('div', {
         className: i()(b.container, l),
         children: [
-            m.length > 0
+            y.length > 0
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(d.Z, {
+                          (0, n.jsx)(p.Z, {
                               participants: v,
                               channel: r,
                               children: (e) =>
                                   (0, n.jsx)(
                                       o.P3F,
-                                      y(O({ className: b.clickable }, e), {
+                                      m(O({ className: b.clickable }, e), {
                                           children: (0, n.jsx)(a.Z, {
                                               maxUsers: 3,
-                                              users: m,
+                                              users: y,
                                               size: o.EFr.SIZE_20,
                                               avatarClassName: b.stackedAvatar,
                                               hideOverflowCount: !0,
@@ -100,7 +100,7 @@ function m(e) {
                     countOthers: h,
                     name0Hook: (e, t) =>
                         (0, n.jsx)(
-                            p.Z,
+                            d.Z,
                             {
                                 text: e,
                                 user: P[0],
@@ -110,7 +110,7 @@ function m(e) {
                         ),
                     name1Hook: (e, t) =>
                         (0, n.jsx)(
-                            p.Z,
+                            d.Z,
                             {
                                 text: e,
                                 user: P[1],
@@ -120,14 +120,14 @@ function m(e) {
                         ),
                     countOthersHook: (e, t) =>
                         (0, n.jsx)(
-                            d.Z,
+                            p.Z,
                             {
                                 participants: v,
                                 channel: r,
                                 children: (t) =>
                                     (0, n.jsx)(
                                         u.Z,
-                                        y(O({}, t), {
+                                        m(O({}, t), {
                                             tag: 'span',
                                             children: (0, n.jsx)(o.Text, {
                                                 variant: 'text-sm/semibold',

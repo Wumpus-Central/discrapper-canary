@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G });
+n.d(t, { Z: () => F });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -38,7 +38,7 @@ var r = n(200651),
     W = n(388032),
     U = n(906667),
     B = n(20493);
-function H(e) {
+function G(e) {
     let { canManageRoles: t, channel: n } = e,
         i = t && (0, p.Yk)(n),
         o = (0, l.e7)([x.ZP], () => null != n.guild_id && n === x.ZP.getDefaultChannel(n.guild_id), [n]);
@@ -49,7 +49,7 @@ function H(e) {
     if (i) return (0, r.jsx)(A.Z, { channel: n });
     return (0, r.jsx)(R.Z, { channel: n });
 }
-function G(e) {
+function F(e) {
     var t, n;
     let { channel: p, showingBanner: h } = e,
         y = (0, d.ZP)(p),
@@ -61,12 +61,12 @@ function G(e) {
             canReadMessageHistory: v.Z.can(L.Plq.READ_MESSAGE_HISTORY, p)
         })),
         M = (0, l.e7)([b.Z], () => (x === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, x]),
-        { systemDMRedesignEnabled: G } = g.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null != (t = p.isSystemDM()) && t }),
-        F = (0, u.Z)(null != (n = null == I ? void 0 : I.id) ? n : L.lds),
+        { systemDMRedesignEnabled: F } = g.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null != (t = p.isSystemDM()) && t }),
+        H = (0, u.Z)(null != (n = null == I ? void 0 : I.id) ? n : L.lds),
         { authorizedAppToken: V, authorizedAppsFetchState: z } = (0, l.cj)([C.Z], () => {
             var e;
             return {
-                authorizedAppToken: null != F ? (null == (e = C.Z.getApps()) ? void 0 : e.find((e) => e.application.id === F.id)) : void 0,
+                authorizedAppToken: null != H ? (null == (e = C.Z.getApps()) ? void 0 : e.find((e) => e.application.id === H.id)) : void 0,
                 authorizedAppsFetchState: C.Z.getFetchState()
             };
         }),
@@ -80,7 +80,7 @@ function G(e) {
         }, [null == I ? void 0 : I.bot, z]),
         p.isSystemDM())
     )
-        return G
+        return F
             ? (0, r.jsx)(w.Z, { channel: p })
             : (0, r.jsx)(T.Z, {
                   channel: p,
@@ -89,7 +89,7 @@ function G(e) {
     if (x === L.d4z.DM) {
         let e;
         return (
-            null != I && null != F
+            null != I && null != H
                 ? null != V &&
                   (e = (0, r.jsxs)('div', {
                       className: U.buttonContainer,
@@ -102,7 +102,7 @@ function G(e) {
                           (0, r.jsx)(S.n, {
                               className: U.button,
                               user: I,
-                              application: F,
+                              application: H,
                               channel: p,
                               oauth2Token: V
                           }),
@@ -150,7 +150,7 @@ function G(e) {
                 children: W.NW.format(W.t.MFwcqK, { name: y })
             });
     return k
-        ? (0, r.jsx)(H, {
+        ? (0, r.jsx)(G, {
               channel: p,
               canManageRoles: R
           })

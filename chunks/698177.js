@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(952802),
     h = n(388905),
     g = n(815660),
-    f = n(388032),
-    m = n(893354),
+    m = n(388032),
+    f = n(893354),
     _ = n(20493);
 let b = () => {
     let [e, t] = i.useState(''),
@@ -45,9 +45,9 @@ let b = () => {
             children: [
                 (0, r.jsx)(h.Ee, { src: n(292824) }),
                 (0, r.jsxs)(h.Dx, {
-                    className: a()(_.marginTop20, m.flex, m.justifyCenter, m.alignCenter),
+                    className: a()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
                     children: [
-                        f.NW.string(f.t.WWzQtb),
+                        m.NW.string(m.t.WWzQtb),
                         (0, r.jsx)(s.owK, {
                             size: 'md',
                             color: 'currentColor',
@@ -61,16 +61,16 @@ let b = () => {
         ? A
         : (0, r.jsxs)(h.ZP, {
               children: [
-                  (0, r.jsx)(h.Dx, { children: f.NW.string(f.t.o4JNrK) }),
+                  (0, r.jsx)(h.Dx, { children: m.NW.string(m.t.o4JNrK) }),
                   (0, r.jsx)(h.DK, {
                       className: _.marginTop8,
-                      children: f.NW.string(f.t.y0tVbm)
+                      children: m.NW.string(m.t.y0tVbm)
                   }),
                   (0, r.jsxs)(h.gO, {
                       className: _.marginTop20,
                       children: [
                           (0, r.jsx)(p.Z, {
-                              label: f.NW.string(f.t.eJnn09),
+                              label: m.NW.string(m.t.eJnn09),
                               alpha2: C.alpha2,
                               countryCode: y,
                               value: e,
@@ -82,7 +82,7 @@ let b = () => {
                           }),
                           (0, r.jsx)(h.II, {
                               className: _.marginTop20,
-                              label: f.NW.string(f.t.OdzNbm),
+                              label: m.NW.string(m.t.OdzNbm),
                               value: o,
                               onChange: b,
                               maxLength: g.z,
@@ -92,13 +92,13 @@ let b = () => {
                               size: h.zx.Sizes.SMALL,
                               look: h.zx.Looks.LINK,
                               onClick: T,
-                              children: f.NW.string(f.t['5b60go'])
+                              children: m.NW.string(m.t['5b60go'])
                           }),
                           (0, r.jsx)(h.zx, {
                               className: _.marginTop20,
                               onClick: P,
                               submitting: x,
-                              children: f.NW.string(f.t.i4jeWV)
+                              children: m.NW.string(m.t.i4jeWV)
                           })
                       ]
                   })

@@ -1,5 +1,5 @@
 n.d(t, {
-    Cg: () => P,
+    Cg: () => R,
     Y0: () => L,
     YA: () => G,
     fM: () => D,
@@ -85,14 +85,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,7 +101,7 @@ function R(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var P = (function (e) {
+var R = (function (e) {
     return (e.SMALL = 'small'), (e.MEDIUM = 'medium'), (e.LARGE = 'large'), (e.DYNAMIC = 'dynamic'), e;
 })({});
 let w = Object.freeze({
@@ -117,12 +117,12 @@ function L(e) {
     var t,
         { transitionState: n, children: o, size: f = 'small', role: h = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: b = v.dG, returnRef: O, animation: S = 'default' } = e,
         N = C(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation']);
-    let R = n === y.Dv.ENTERING || n === y.Dv.ENTERED,
-        { reducedMotion: P } = i.useContext(d.S),
+    let P = n === y.Dv.ENTERING || n === y.Dv.ENTERED,
+        { reducedMotion: R } = i.useContext(d.S),
         D = (0, u.q)(
             {
-                opacity: +!!R,
-                transform: R || P.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
+                opacity: +!!P,
+                transform: P || R.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),

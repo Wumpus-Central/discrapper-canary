@@ -142,9 +142,9 @@ let E = i.memo(function (e) {
         ),
         U = (0, C.wq)(null == w ? void 0 : w.author.id, N.id),
         B = (0, C.$3)(n, w, D, W),
-        H = (0, C.Wl)(w, N, P, Z),
-        G = (0, C.rY)(S, Z),
-        F = i.useCallback(() => {
+        G = (0, C.Wl)(w, N, P, Z),
+        F = (0, C.rY)(S, Z),
+        H = i.useCallback(() => {
             Z({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1
@@ -164,11 +164,11 @@ let E = i.memo(function (e) {
         showAvatarPopout: S,
         showUsernamePopout: P,
         renderPopout: y.Z,
-        onClickAvatar: G,
-        onClickUsername: H,
+        onClickAvatar: F,
+        onClickUsername: G,
         onClickReply: B,
         onContextMenu: U,
-        onPopoutRequestClose: F,
+        onPopoutRequestClose: H,
         isReplySpineClickable: T,
         showReplySpine: A
     });

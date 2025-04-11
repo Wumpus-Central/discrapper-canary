@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -173,7 +173,7 @@ function C(e) {
               })
           });
 }
-function R(e) {
+function P(e) {
     var { guild: t, disableBoostClick: n } = e,
         i = T(e, ['guild', 'disableBoostClick']);
     let o = !(0, l.Q3)('GuildHeaderGuildBadge') && i.isBannerVisible;

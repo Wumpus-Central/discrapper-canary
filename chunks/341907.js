@@ -38,8 +38,8 @@ var i = n(772848),
     N = n(150560),
     A = n(46140),
     C = n(981631),
-    R = n(49898);
-function P(e, t, n) {
+    P = n(49898);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -189,7 +189,7 @@ function V() {
         utmContentCurrent: Object.keys(b.jn).find((t) => b.jn[t] === e)
     });
     let n = null != t ? '#'.concat(t) : '';
-    l.Z.setState({ selectedTab: R.GlobalDiscoveryTab.QUESTS }), (0, u.uL)(C.Z5c.QUEST_HOME + n);
+    l.Z.setState({ selectedTab: P.GlobalDiscoveryTab.QUESTS }), (0, u.uL)(C.Z5c.QUEST_HOME + n);
 }
 function F(e) {
     let t = (0, I.T)({ quest: e }),

@@ -91,8 +91,8 @@ function T(e, t) {
 let N = 3,
     A = 80,
     C = 12,
-    R = 16,
-    P = () => A,
+    P = 16,
+    R = () => A,
     w = (e) => {
         var { children: t, className: n, onSelect: i, isSelected: o = !1 } = e,
             s = S(e, ['children', 'className', 'onSelect', 'isSelected']);
@@ -115,12 +115,12 @@ let N = 3,
             T = p.ZP.canUseCollectibles(t),
             N = a === m.$0.PREMIUM_PURCHASE && !T,
             C = i.useRef(null),
-            R = (0, d.Z)(null != o ? o : C),
-            { avatarDecorationSrc: P } = (0, g.Z)({
+            P = (0, d.Z)(null != o ? o : C),
+            { avatarDecorationSrc: R } = (0, g.Z)({
                 user: t,
                 avatarDecorationOverride: n,
                 size: A,
-                onlyAnimateOnHover: !R
+                onlyAnimateOnHover: !P
             }),
             D = () =>
                 a === m.$0.PURCHASE || (a === m.$0.PREMIUM_PURCHASE && T)
@@ -171,7 +171,7 @@ let N = 3,
                     children: [
                         (0, r.jsx)('img', {
                             className: b.presetDecorationImg,
-                            src: P,
+                            src: R,
                             alt: n.label
                         }),
                         D()
@@ -266,7 +266,7 @@ let N = 3,
                 let { items: t } = e;
                 return t.length;
             }),
-            sectionGutter: R,
+            sectionGutter: P,
             itemGutter: C,
             paddingHorizontal: C,
             paddingVertical: 0,
@@ -275,6 +275,6 @@ let N = 3,
             renderSection: f,
             getSectionHeight: (e) => c[e].height,
             getItemKey: (e, t) => c[e].items[t].id,
-            getItemHeight: P
+            getItemHeight: R
         });
     };

@@ -71,7 +71,7 @@ class u extends i.Component {
             { children: t, location: n, history: u, staticContext: d, match: p } = e,
             h = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
             g = null,
-            f = null;
+            m = null;
         return (
             i.Children.forEach(t, (e) => {
                 if (null == g && i.isValidElement(e)) {
@@ -87,10 +87,10 @@ class u extends i.Component {
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (f = i.createElement(r, p)) : null != a && (f = a(p)));
+                        null != r ? (m = i.createElement(r, p)) : null != a && (m = a(p)));
                 }
             }),
-            (0, r.jsx)(a.W, s(l({}, h), { children: f }))
+            (0, r.jsx)(a.W, s(l({}, h), { children: m }))
         );
     }
 }

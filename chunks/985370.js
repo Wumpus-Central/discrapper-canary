@@ -45,9 +45,9 @@ let v = (e) => {
             },
             [I, P, j, v, l]
         ),
-        H = (j || P) && (l === y.D.EMOJI || null == l);
+        G = (j || P) && (l === y.D.EMOJI || null == l);
     return (0, r.jsx)(s.yRy, {
-        shouldShow: H,
+        shouldShow: G,
         animation: k ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
         animationPosition: k ? 'top' : 'bottom',
         position: 'bottom',
@@ -59,7 +59,7 @@ let v = (e) => {
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(_.Z, {
-                isHovered: H,
+                isHovered: G,
                 channel: t,
                 closePopout: n,
                 onMouseEnter: E,

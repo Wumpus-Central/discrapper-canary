@@ -30,7 +30,7 @@ var r = n(200651),
     S = n(128406);
 function I(e) {
     var t, n, a, o, I, P, A;
-    let { setTab: w, onJump: Z, showTutorial: k, setSeenTutorial: R, closePopout: D, badgeState: L } = e,
+    let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: L } = e,
         M = i.useRef(null),
         [W, U] = (0, N.ZP)(M),
         { loadState: F, channels: B } = W,
@@ -189,7 +189,7 @@ function I(e) {
                                 {
                                     onScroll: F === N.jd.Done ? void 0 : G,
                                     className: S.scroller,
-                                    children: [k ? (0, r.jsx)(T, { setSeenTutorial: R }) : null, (0, O.Z)(B, U, Z), F === N.jd.Done ? null : (0, r.jsx)(p.$jN, { className: S.spinner })]
+                                    children: [R ? (0, r.jsx)(T, { setSeenTutorial: k }) : null, (0, O.Z)(B, U, Z), F === N.jd.Done ? null : (0, r.jsx)(p.$jN, { className: S.spinner })]
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => s,
+    H: () => c,
     R: () => u
 });
 var r = n(192379),
@@ -20,7 +20,7 @@ function u(e, t) {
         }
     );
 }
-function s(e) {
+function c(e) {
     let { fetchSubscriptionsSettings: t, loading: n, error: i } = (0, l.JH)();
     r.useEffect(() => {
         t(e);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -28,14 +28,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -44,11 +44,11 @@ function R(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function P(e) {
+function R(e) {
     var t,
         n,
         o,
-        { title: R, type: P, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: M, glowUp: k, modalClassName: j, modalContentClassName: U, artContainerClassName: G, headerClassName: B, bodyClassName: V, transitionState: F, onClose: Z, onSubscribeClick: H, onSubscribeFinish: W, onSecondaryClick: Y, secondaryCTA: K, subscribeButtonText: z, showNewBadge: q = !1, showBetaBadge: Q = !1, enableArtBoxShadow: X = !0, subscriptionTier: J = I.Si.TIER_2, isLoading: $ = !1, hideBackButton: ee, backButtonText: et, showEnhancedUpsell: en, useSubscribeButtonGradient: er, subscribeButtonClassname: ei, hidePremiumOfferUpsell: eo, children: ea, LeadingComponent: es, backgroundElements: el, smallText: ec = !1, footerClassName: eu } = e,
+        { title: P, type: R, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: M, glowUp: k, modalClassName: j, modalContentClassName: U, artContainerClassName: G, headerClassName: B, bodyClassName: V, transitionState: F, onClose: Z, onSubscribeClick: H, onSubscribeFinish: W, onSecondaryClick: Y, secondaryCTA: K, subscribeButtonText: z, showNewBadge: q = !1, showBetaBadge: Q = !1, enableArtBoxShadow: X = !0, subscriptionTier: J = I.Si.TIER_2, isLoading: $ = !1, hideBackButton: ee, backButtonText: et, showEnhancedUpsell: en, useSubscribeButtonGradient: er, subscribeButtonClassname: ei, hidePremiumOfferUpsell: eo, children: ea, LeadingComponent: es, backgroundElements: el, smallText: ec = !1, footerClassName: eu } = e,
         ed = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
     let ef = null != w,
         e_ = (0, E.N)(),
@@ -60,7 +60,7 @@ function P(e) {
             analyticsLocations: em,
             analyticsSource: D,
             guildBoostProps: w,
-            type: P
+            type: R
         },
         eE = i.useRef(eg);
     i.useEffect(() => {
@@ -86,7 +86,7 @@ function P(e) {
                   });
         }, [ef, J, $]);
     let eb = (0, s.e7)([m.Z], () => m.Z.affinities),
-        ey = eb.length > 1 && (0, O.Y)(P),
+        ey = eb.length > 1 && (0, O.Y)(R),
         ev = (0, s.e7)([m.Z], () => m.Z.hasFetched);
     i.useEffect(() => {
         ev || c.MH();
@@ -133,7 +133,7 @@ function P(e) {
             : null != ed.artElement && (eS = ed.artElement),
         (0, r.jsxs)(l.Y0X, {
             className: a()(N.root, !eh && j),
-            'aria-label': R,
+            'aria-label': P,
             transitionState: F,
             children: [
                 null != eS &&
@@ -158,9 +158,9 @@ function P(e) {
                         : eh
                           ? (0, r.jsx)(b.ZP, {
                                 onClose: Z,
-                                type: P,
+                                type: R,
                                 subscriptionTier: null != (o = null == e_ || null == (n = e_.subscription_trial) ? void 0 : n.sku_id) ? o : I.Si.TIER_2,
-                                headingText: R,
+                                headingText: P,
                                 context: M,
                                 analyticsLocationObject: L,
                                 discountOffer: ep,
@@ -177,7 +177,7 @@ function P(e) {
                                             (0, r.jsxs)(l.X6q, {
                                                 className: a()(N.header, { [N.enhancedHeader]: en }, B),
                                                 variant: 'heading-xl/bold',
-                                                children: [R, Q ? (0, r.jsx)(f.Z, { className: N.betaTag }) : null]
+                                                children: [P, Q ? (0, r.jsx)(f.Z, { className: N.betaTag }) : null]
                                             }),
                                             ey ? (0, r.jsx)(v.Z, { affinities: eb }) : void 0,
                                             ea,

@@ -30,8 +30,8 @@ var r = n(200651),
     A = n(669079),
     w = n(74538),
     Z = n(296848),
-    k = n(51144),
-    R = n(626799),
+    R = n(51144),
+    k = n(626799),
     D = n(981631),
     L = n(474936),
     M = n(388032),
@@ -200,7 +200,7 @@ class V extends i.Component {
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
-        return this.isCustomGiftMessage() && !n ? M.NW.formatToPlainString(M.t.t1SOIS, { recipientDisplayName: k.ZP.getName(t) }) : null == r ? null : e.isSubscription ? (n ? M.NW.string(M.t['2PJ1ND']) : M.NW.string(M.t.hrnGnp)) : n ? M.NW.string(M.t.QLEMlZ) : M.NW.string(M.t.W4DBc3);
+        return this.isCustomGiftMessage() && !n ? M.NW.formatToPlainString(M.t.t1SOIS, { recipientDisplayName: R.ZP.getName(t) }) : null == r ? null : e.isSubscription ? (n ? M.NW.string(M.t['2PJ1ND']) : M.NW.string(M.t.hrnGnp)) : n ? M.NW.string(M.t.QLEMlZ) : M.NW.string(M.t.W4DBc3);
     }
     renderBody(e) {
         let { libraryApplication: t, isSelfGift: n, sku: r, gifter: i, subscriptionPlan: a, currentUser: l } = this.props;
@@ -227,12 +227,12 @@ class V extends i.Component {
             return null != i
                 ? e.isSubscription
                     ? M.NW.format(M.t.l3VxgI, {
-                          username: k.ZP.getUserTag(i),
+                          username: R.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: o
                       })
                     : M.NW.format(M.t['9cYrw8'], {
-                          username: k.ZP.getUserTag(i),
+                          username: R.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: o
                       })
@@ -250,7 +250,7 @@ class V extends i.Component {
             if (null != i) {
                 let e = a.interval === L.rV.MONTH ? M.t['/RDIEB'] : M.t['3CX6Eh'];
                 return M.NW.format(e, {
-                    username: k.ZP.getUserTag(i),
+                    username: R.ZP.getUserTag(i),
                     skuName: o,
                     intervalCount: a.intervalCount
                 });
@@ -261,7 +261,7 @@ class V extends i.Component {
                 intervalCount: a.intervalCount
             });
         }
-        return null != i ? M.NW.format(M.t['3HsdQ0'], { username: k.ZP.getUserTag(i) }) : M.NW.string(M.t.Jdnjjo);
+        return null != i ? M.NW.format(M.t['3HsdQ0'], { username: R.ZP.getUserTag(i) }) : M.NW.string(M.t.Jdnjjo);
     }
     renderPromotionActions() {
         return (0, r.jsx)(u.zxk, {
@@ -274,7 +274,7 @@ class V extends i.Component {
         let { giftCode: e, width: t } = this.props;
         return null == e
             ? null
-            : (0, r.jsx)(R.$, {
+            : (0, r.jsx)(k.$, {
                   skuId: e.skuId,
                   onEmbedClick: this.handleEmbedClick,
                   analyticsSection: D.jXE.GIFT_CODE_EMBED,
@@ -288,7 +288,7 @@ class V extends i.Component {
     render() {
         let { giftCode: e, resolved: t, width: n, isSelfGift: i } = this.props;
         if (null != e && null != e.promotion)
-            return (0, r.jsx)(R.$, {
+            return (0, r.jsx)(k.$, {
                 skuId: e.skuId,
                 onEmbedClick: this.handleClaimPromotion,
                 analyticsSection: D.jXE.GIFT_CODE_EMBED,

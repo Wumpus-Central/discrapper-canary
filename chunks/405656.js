@@ -4,7 +4,7 @@ n.d(t, {
     Fr: () => C,
     Fz: () => A,
     Ko: () => p,
-    Pe: () => R,
+    Pe: () => P,
     WU: () => N,
     cl: () => I,
     g9: () => b,
@@ -233,6 +233,6 @@ function C(e, t) {
     let n = u.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!u.KA4.test(t.type));
 }
-function R() {
+function P() {
     (0, a.Pe)(), S.reset(), i()(a.ZP).forOwn((e, t) => S.addRule(_({ type: t }, e)));
 }

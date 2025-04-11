@@ -4,15 +4,15 @@ n(192379);
 var l = n(442837),
     i = n(481060),
     s = n(100527),
-    o = n(906732),
-    a = n(436774),
+    a = n(906732),
+    o = n(436774),
     c = n(451478),
     d = n(156582),
     u = n(388032),
     f = n(393095);
 function m(e) {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
+        { analyticsLocations: n } = (0, a.ZP)(s.Z.GO_LIVE_MODAL_V2),
         m = (0, l.e7)([c.Z], () => c.Z.isFocused());
     return (0, r.jsxs)('div', {
         className: f.root,
@@ -21,7 +21,7 @@ function m(e) {
                 className: f.infoText,
                 variant: 'text-sm/medium',
                 color: 'text-normal',
-                children: [(0, r.jsx)(i.SrA, { color: a.JX.PREMIUM_TIER_2 }), u.NW.string(u.t.ZVevCg)]
+                children: [(0, r.jsx)(i.SrA, { color: o.JX.PREMIUM_TIER_2 }), u.NW.string(u.t.ZVevCg)]
             }),
             (0, r.jsxs)(i.gtL, {
                 onClick: () =>

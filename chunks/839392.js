@@ -1,14 +1,14 @@
 r.d(t, { Z: () => d });
 var n,
     a,
-    o,
-    i = r(442837),
-    l = r(570140);
-let s = {},
+    i,
+    l = r(442837),
+    s = r(570140);
+let o = {},
     c = {};
-class u extends (o = i.ZP.Store) {
+class u extends (i = l.ZP.Store) {
     getSimilarGames(e) {
-        return s[e];
+        return o[e];
     }
     getSimilarGamesError(e) {
         return c[e];
@@ -23,10 +23,10 @@ class u extends (o = i.ZP.Store) {
               writable: !0
           })
         : (u[n] = a);
-let d = new u(l.Z, {
+let d = new u(s.Z, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
         let { applicationId: t, games: r } = e;
-        s[t] = r;
+        o[t] = r;
     },
     GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
         let { applicationId: t, error: r } = e;

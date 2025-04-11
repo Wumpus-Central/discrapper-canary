@@ -66,7 +66,7 @@ function b(e, t) {
 }
 function y(e) {
     let { analyticsData: t, initialPlanId: n, breadcrumbSteps: r, handleStepChange: m, referralTrialOfferId: E, onReturn: y, continueSessionToInitialStep: v } = e,
-        { contextMetadata: O, step: I, paymentSources: S, paymentSourceId: T, setPaymentSourceId: N, purchaseError: A, setPurchaseError: C, purchaseErrorBlockRef: R, paymentAuthenticationState: P, selectedSkuId: w, activeSubscription: D, previousStepRef: L, setPurchaseState: x } = (0, u.JL)(),
+        { contextMetadata: O, step: I, paymentSources: S, paymentSourceId: T, setPaymentSourceId: N, purchaseError: A, setPurchaseError: C, purchaseErrorBlockRef: P, paymentAuthenticationState: R, selectedSkuId: w, activeSubscription: D, previousStepRef: L, setPurchaseState: x } = (0, u.JL)(),
         { isGift: M } = (0, c.wD)(),
         k = b(g({}, (0, s.fL)()), {
             paymentSources: S,
@@ -74,8 +74,8 @@ function y(e) {
             setPaymentSourceId: N,
             purchaseError: A,
             setPurchaseError: C,
-            purchaseErrorBlockRef: R,
-            paymentAuthenticationState: P,
+            purchaseErrorBlockRef: P,
+            paymentAuthenticationState: R,
             selectedSkuId: w,
             isGift: M
         }),

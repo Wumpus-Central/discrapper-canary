@@ -30,8 +30,8 @@ var r = n(200651),
     A = n(981631),
     w = n(245335),
     Z = n(388032),
-    k = n(582909);
-function R(e) {
+    R = n(582909);
+function k(e) {
     let { members: t, membersOnline: n, textColor: i } = e,
         a = [];
     return (
@@ -41,12 +41,12 @@ function R(e) {
                 (0, r.jsxs)(
                     'div',
                     {
-                        className: k.statusWrapper,
+                        className: R.statusWrapper,
                         children: [
-                            (0, r.jsx)('i', { className: k.statusOnline }),
+                            (0, r.jsx)('i', { className: R.statusOnline }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: k.count,
+                                className: R.count,
                                 color: i,
                                 children: Z.NW.format(Z.t['LC+S+v'], { membersOnline: n })
                             })
@@ -60,12 +60,12 @@ function R(e) {
                 (0, r.jsxs)(
                     'div',
                     {
-                        className: k.statusWrapper,
+                        className: R.statusWrapper,
                         children: [
-                            (0, r.jsx)('i', { className: k.statusOffline }),
+                            (0, r.jsx)('i', { className: R.statusOffline }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: k.count,
+                                className: R.count,
                                 color: i,
                                 children: Z.NW.format(Z.t.zRl6XV, { count: t })
                             })
@@ -75,7 +75,7 @@ function R(e) {
                 )
             ),
         (0, r.jsx)('div', {
-            className: k.statusCounts,
+            className: R.statusCounts,
             children: a
         })
     );
@@ -85,11 +85,11 @@ function D(e) {
     if (null != t && null != n) {
         let e = (0, v.KS)(t, n);
         return (0, r.jsxs)('div', {
-            className: l()(k.channel, { [k.ended]: i }),
+            className: l()(R.channel, { [R.ended]: i }),
             children: [
                 null != e
                     ? (0, r.jsx)(e, {
-                          className: k.channelIcon,
+                          className: R.channelIcon,
                           size: 'xs',
                           color: 'currentColor'
                       })
@@ -109,7 +109,7 @@ function D(e) {
     }
     return null != n
         ? (0, r.jsx)('div', {
-              className: l()(k.channel, { [k.ended]: i }),
+              className: l()(R.channel, { [R.ended]: i }),
               children: (0, r.jsx)(E.Z, {
                   children: (0, r.jsx)(u.Text, {
                       variant: 'text-xs/normal',
@@ -146,18 +146,18 @@ function L(e) {
                 return _.id === t;
             });
         }),
-        k = N.Z.getChannel(null == (n = l.channel) ? void 0 : n.id),
-        R = (0, c.e7)([C.Z], () => null != k && C.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
+        R = N.Z.getChannel(null == (n = l.channel) ? void 0 : n.id),
+        k = (0, c.e7)([C.Z], () => null != R && C.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, R), [R]),
         { analyticsLocations: D } = (0, f.ZP)(m.Z.INVITE_EMBED),
         L = (0, c.Wu)(
             [p.ZP],
             () =>
-                null != k
-                    ? p.ZP.getEmbeddedActivitiesForChannel(k.id)
+                null != R
+                    ? p.ZP.getEmbeddedActivitiesForChannel(R.id)
                           .filter((e) => e.applicationId === _.id)
                           .flatMap((e) => Array.from(e.userIds))
                     : [],
-            [k, _.id]
+            [R, _.id]
         ),
         W = (0, c.Wu)([S.default], () => L.map((e) => S.default.getUser(e)).filter((e) => null != e), [L]),
         U = i.useCallback(() => {
@@ -174,8 +174,8 @@ function L(e) {
         if (null == l.guild) return (0, r.jsx)(P.Z, {});
         x = new O.ZP(l.guild);
     }
-    let G = (B && !R) || (B && E);
-    return (B && E && (a = Z.NW.string(Z.t.wJNK8P)), R || (a = Z.NW.string(Z.t.hHGrW1)), null == l.code || '' === l.code || null == v)
+    let G = (B && !k) || (B && E);
+    return (B && E && (a = Z.NW.string(Z.t.wJNK8P)), k || (a = Z.NW.string(Z.t.hHGrW1)), null == l.code || '' === l.code || null == v)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: D,
@@ -184,7 +184,7 @@ function L(e) {
                   invite: l,
                   activityUsers: W,
                   isMember: B,
-                  channel: k,
+                  channel: R,
                   guild: x,
                   members: u,
                   membersOnline: h,
@@ -260,7 +260,7 @@ function M(e) {
         (n = n =
             {
                 info: (0, r.jsxs)('div', {
-                    className: k.infoWrapper,
+                    className: R.infoWrapper,
                     children: [
                         (0, r.jsx)(D, {
                             channel: c,
@@ -275,7 +275,7 @@ function M(e) {
                                   guildId: u.id,
                                   activityText: Z.NW.string(Z.t.BMTj29)
                               })
-                            : (0, r.jsx)(R, {
+                            : (0, r.jsx)(k, {
                                   members: d,
                                   membersOnline: p,
                                   textColor: 'none'

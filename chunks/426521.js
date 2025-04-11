@@ -30,7 +30,7 @@ var r = n(200651),
     A = n(884492),
     w = n(756688),
     Z = n(886765);
-function k(e) {
+function R(e) {
     var t, n, i;
     let { item: a } = e,
         s = null == (t = a.message) ? void 0 : t.content;
@@ -53,7 +53,7 @@ function k(e) {
         ]
     });
 }
-function R(e) {
+function k(e) {
     let {
         item: { callout: t }
     } = e;
@@ -196,8 +196,8 @@ let M = i.memo(function (e) {
                                     color: p ? 'text-muted' : 'text-normal',
                                     children: 'string' != typeof N ? N : d.Z.parse(N)
                                 }),
-                                (null == (t = a.message) ? void 0 : t.content) != null ? (0, r.jsx)(k, { item: a }) : null,
-                                null != a.callout ? (0, r.jsx)(R, { item: a }) : null,
+                                (null == (t = a.message) ? void 0 : t.content) != null ? (0, r.jsx)(R, { item: a }) : null,
+                                null != a.callout ? (0, r.jsx)(k, { item: a }) : null,
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
                                     color: p ? 'text-muted' : 'header-secondary',

@@ -1,5 +1,5 @@
 let r;
-n.r(t), n.d(t, { default: () => eR }), n(358797), n(539854), n(415506);
+n.r(t), n.d(t, { default: () => eP }), n(358797), n(539854), n(415506);
 var i,
     o = n(213919),
     a = n(756647),
@@ -37,8 +37,8 @@ function N(e, t, n) {
 }
 let A = new m.Z('AuthenticationStore'),
     C = 'fingerprint',
-    R = 'user_id_cache',
-    P = null,
+    P = 'user_id_cache',
+    R = null,
     w = null,
     D = null,
     L = null,
@@ -189,12 +189,12 @@ function eh(e) {
 function em(e) {
     var t;
     let { user: n, sessionId: r, authSessionIdHash: i, analyticsToken: o, auth: a, staticAuthSessionId: s } = e;
-    q('handleConnectionOpen called'), v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)), (w = r), (D = i), (L = s), (k = o), (P = n.id), void 0 !== a && (G = a.authenticator_types), c.K.set(R, n.id);
+    q('handleConnectionOpen called'), v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)), (w = r), (D = i), (L = s), (k = o), (R = n.id), void 0 !== a && (G = a.authenticator_types), c.K.set(P, n.id);
 }
 function eg(e) {
     var t;
     let { user: n, sessionId: r, analyticsToken: i, token: o } = e;
-    v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)), (w = r), (k = i), $(o), J(), (P = n.id), c.K.set(R, n.id);
+    v.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)), (w = r), (k = i), $(o), J(), (R = n.id), c.K.set(P, n.id);
 }
 function eE(e) {
     let { code: t } = e;
@@ -202,7 +202,7 @@ function eE(e) {
     let r = n(952265).nf;
     if (4004 === t) {
         if (U || r(T.$$) || r(T.dG)) return void ev();
-        b.default.track(S.rMx.APP_USER_DEAUTHENTICATED, { user_id: c.K.get(R) }), eO(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
+        b.default.track(S.rMx.APP_USER_DEAUTHENTICATED, { user_id: c.K.get(P) }), eO(), setImmediate(() => (0, g.uL)(S.Z5c.DEFAULT_LOGGED_OUT));
     }
 }
 function eb(e) {
@@ -232,8 +232,8 @@ function eO(e) {
         I.Z.clearAll(),
         h.ZH(),
         v.Z.clearUser(),
-        c.K.remove(R),
-        (P = null),
+        c.K.remove(P),
+        (R = null),
         (w = null),
         (j = (null == e ? void 0 : e.isSwitchingAccount) ? S.u34.LOGGING_IN : S.u34.NONE),
         (B = ''),
@@ -250,7 +250,7 @@ function eS() {
 }
 function eT(e) {
     let { user: t } = e;
-    (P = t.id), void 0 !== t.authenticator_types && (G = t.authenticator_types), c.K.set(R, t.id);
+    (R = t.id), void 0 !== t.authenticator_types && (G = t.authenticator_types), c.K.set(P, t.id);
 }
 function eN(e) {
     let { suspendedUserToken: t } = e;
@@ -261,13 +261,13 @@ function eA() {
 }
 class eC extends (i = s.ZP.Store) {
     initialize() {
-        (P = c.K.get(R)), null == o.getToken() && Q(), this.addChangeListener(() => (0, p.u)(P));
+        (R = c.K.get(P)), null == o.getToken() && Q(), this.addChangeListener(() => (0, p.u)(R));
     }
     getLoginStatus() {
         return j;
     }
     getId() {
-        return P;
+        return R;
     }
     getSessionId() {
         return w;
@@ -332,7 +332,7 @@ class eC extends (i = s.ZP.Store) {
     }
 }
 N(eC, 'displayName', 'AuthenticationStore');
-let eR = new eC(
+let eP = new eC(
     u.Z,
     {
         CONNECTION_OPEN: em,

@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => A,
-    Z: () => P
+    Z: () => R
 }),
     n(413496),
     n(433524),
@@ -65,10 +65,10 @@ function C() {
         return (t) => (0, r.jsx)(e, N({}, t));
     });
 }
-function R(e) {
+function P(e) {
     return ''.concat(v.GI).concat(e.displayName);
 }
-let P = {
+let R = {
     sentinel: v.GI,
     stores: [f.Z, c.ZP, g.Z],
     matches: (e, t, n, r, i) => i.commands !== y.L8.DISABLED && null == f.Z.getActiveCommand(e.id) && (r || i.commands !== y.L8.OLD_BUILT_INS),
@@ -192,7 +192,7 @@ let P = {
             } = e,
             { command: c, section: u } = t[n];
         if (c.inputType === _.iw.PLACEHOLDER) return null;
-        if (i.commands === y.L8.OLD_BUILT_INS) i.insertText(R(c));
+        if (i.commands === y.L8.OLD_BUILT_INS) i.insertText(P(c));
         else {
             let e = a;
             null == e && (e = l ? _.Vh.QUERY : _.Vh.DISCOVERY),

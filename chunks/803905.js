@@ -1,5 +1,5 @@
 n.d(t, {
-    $0: () => P,
+    $0: () => R,
     AN: () => j,
     Ct: () => A,
     DU: () => F,
@@ -19,7 +19,7 @@ n.d(t, {
     g7: () => w,
     g_: () => p,
     hs: () => b,
-    j4: () => R,
+    j4: () => P,
     ks: () => W,
     lX: () => y,
     m_: () => h,
@@ -78,8 +78,8 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     N = new _(r.q.INCREASED_RECENT_AVATARS_LIMIT),
     A = new _('appIcons'),
     C = new _(r.q.CLIENT_THEMES),
-    R = new _('boostDiscount'),
-    P = new _('freeBoosts'),
+    P = new _('boostDiscount'),
+    R = new _('freeBoosts'),
     w = new _(r.q.STREAM_MID_QUALITY),
     D = new _(r.q.STREAM_HIGH_QUALITY),
     L = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
@@ -95,10 +95,10 @@ let U = new _(r.q.INCREASED_GUILD_LIMIT),
     F = new _(r.q.CHAT_WALLPAPERS),
     Z = Object.freeze({
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, B, V, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, v, I, R, w, x, B, V, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, v, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, V, A, T, L, b, N, F])
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, v, I, P, w, x, B, V, A]),
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, v, O, I, S, C, P, R, w, D, x, M, k, j, U, G, B, V, A, T, L, b, N, F])
     }),
-    H = [R, P];
+    H = [P, R];
 function W(e, t, n) {
     return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && H.includes(e))) && e.getFeatureValue(t);
 }

@@ -55,14 +55,14 @@ function C(e) {
     if (t !== p.pNK.INTEGRATIONS) return !1;
     if (null == r) {
         let e = _.Z.getGuildId();
-        null != e && (u.Z.fetchForGuild(e), (O = !0)), P(!1);
+        null != e && (u.Z.fetchForGuild(e), (O = !0)), R(!1);
     }
 }
-function R(e) {
+function P(e) {
     let { section: t, sectionId: n } = e;
     (i = t), (A = n);
 }
-function P(e) {
+function R(e) {
     if (null != (r = _.Z.getProps().guild) && d.Z.can(p.Plq.MANAGE_GUILD, r)) {
         let e = _.Z.getProps().integrations;
         null == e && (I = !0), (g = null != e ? e : []);
@@ -180,10 +180,10 @@ function H() {
     (v = null), (T = {}), (N = !1);
 }
 function W() {
-    return P(!1);
+    return R(!1);
 }
 function Y() {
-    return P(!0);
+    return R(!0);
 }
 function K(e) {
     return g.find((t) => {
@@ -267,7 +267,7 @@ let Q = new q(
                   INTEGRATION_SETTINGS_SAVE_SUCCESS: Y,
                   GUILD_SETTINGS_INIT: C,
                   GUILD_SETTINGS_SET_SECTION: C,
-                  INTEGRATION_SETTINGS_SET_SECTION: R,
+                  INTEGRATION_SETTINGS_SET_SECTION: P,
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: G,
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: B,
                   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: V,

@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(86724),
     A = n(847302),
     C = n(657198),
-    R = n(321127),
-    P = n(981631),
+    P = n(321127),
+    R = n(981631),
     w = n(117335);
 let D = i.forwardRef(function (e, t) {
     let { value: n, type: o, channel: D, className: L, id: x, disabled: M, submitting: k, placeholder: j, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: V, onResize: F, onFocus: Z, onBlur: H, onKeyDown: W, onKeyUp: Y, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: Q, hideAutocomplete: X, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': eo, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': el, 'aria-controls': ec, 'aria-invalid': eu, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
@@ -129,11 +129,11 @@ let D = i.forwardRef(function (e, t) {
                     var n, r;
                     let e = o[0];
                     E.Q.selectCommandOption(eO, e.name),
-                        f.S.dispatch(P.CkL.SHAKE_APP, {
+                        f.S.dispatch(R.CkL.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
                         }),
-                        (0, l.yw)(P.rMx.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        (0, l.yw)(R.rMx.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: null == t ? void 0 : t.applicationId,
                             command_id: null == t || null == (n = t.rootCommand) ? void 0 : n.id,
                             argument_type: s.jw[null != (r = null == e ? void 0 : e.type) ? r : 3],
@@ -167,13 +167,13 @@ let D = i.forwardRef(function (e, t) {
             moveSelection: J
         }),
         { handlePaste: eA, handleGlobalPaste: eC } = (0, S.Z)(eO, eE, V),
-        eR = i.useCallback(
+        eP = i.useCallback(
             (e) => {
                 null == Q || Q();
             },
             [Q]
         ),
-        eP = i.useCallback(
+        eR = i.useCallback(
             (e) => {
                 e !== eh.current ? eg.current && (null == B || B(null, (0, g.sk)(e, { mode: 'raw' }), e)) : eg.current && Q();
             },
@@ -192,11 +192,11 @@ let D = i.forwardRef(function (e, t) {
         }, [D, eO, eI]);
     let ew = i.useCallback((e, t) => (0, y.Z)(e, t), []),
         eD = i.useCallback((e) => (0, C.Z)(eO, e, D.id), [D.id, eO]),
-        eL = i.useCallback((e) => (0, R.Z)(e), []);
+        eL = i.useCallback((e) => (0, P.Z)(e), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.d9, {
-                event: P.CkL.GLOBAL_CLIPBOARD_PASTE,
+                event: R.CkL.GLOBAL_CLIPBOARD_PASTE,
                 handler: eC
             }),
             (0, r.jsx)('div', {
@@ -213,10 +213,10 @@ let D = i.forwardRef(function (e, t) {
                     spellCheck: $,
                     autoFocus: !en,
                     canFocus: !M,
-                    onChange: eP,
+                    onChange: eR,
                     onFocus: Z,
                     onBlur: H,
-                    onClick: eR,
+                    onClick: eP,
                     onPaste: eA,
                     onKeyDown: eT,
                     onKeyUp: eN,

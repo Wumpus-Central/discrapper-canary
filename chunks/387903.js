@@ -1,5 +1,5 @@
 n.d(t, {
-    Y: () => F,
+    Y: () => Y,
     Z: () => X
 }),
     n(997841),
@@ -17,8 +17,8 @@ var r,
     f = n(438139),
     m = n(410030),
     g = n(726542),
-    b = n(600164),
-    O = n(686546),
+    O = n(600164),
+    b = n(686546),
     y = n(111028),
     h = n(925329),
     v = n(810568),
@@ -31,8 +31,8 @@ var r,
     Z = n(768581),
     x = n(630388),
     C = n(153066),
-    w = n(740265),
-    T = n(122810),
+    T = n(740265),
+    w = n(122810),
     A = n(833664),
     D = n(503438),
     _ = n(802856),
@@ -55,7 +55,7 @@ function V(e, t, n) {
         e
     );
 }
-function B(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,8 +71,8 @@ function B(e) {
     }
     return e;
 }
-var F = (((l = {}).ACTIVITY_FEED = 'ActivityFeed'), (l.STREAM_PREVIEW = 'StreamPreview'), (l.VOICE_CHANNEL = 'VoiceChannel'), l);
-let Y = {
+var Y = (((l = {}).ACTIVITY_FEED = 'ActivityFeed'), (l.STREAM_PREVIEW = 'StreamPreview'), (l.VOICE_CHANNEL = 'VoiceChannel'), l);
+let B = {
         StreamPreview: [108, 60],
         VoiceChannel: [108, 60],
         ActivityFeed: [900, 500]
@@ -138,7 +138,7 @@ class H extends (r = o.PureComponent) {
                 t = U.NW.formatToPlainString(U.t.Ge29Z2, { name: c });
                 break;
             case M.IIU.PLAYING:
-                t = (0, w.Z)(a);
+                t = (0, T.Z)(a);
                 break;
             case M.IIU.COMPETING:
                 t = U.NW.formatToPlainString(U.t.SQCo6O, { name: c });
@@ -176,7 +176,7 @@ class H extends (r = o.PureComponent) {
             { type: c } = this.props,
             { assets: u, application_id: d } = e;
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
-        (0, k.Z)(e) && (l = Y[c]);
+        (0, k.Z)(e) && (l = B[c]);
         let f = (0, D.Z)(e),
             m =
                 null != u.large_image
@@ -197,8 +197,8 @@ class H extends (r = o.PureComponent) {
         else if ((0, E.dS)(e)) {
             let t = (0, E.rq)(e);
             if (null == t) return null;
-            m = (0, i.jsx)(O.ZP, {
-                mask: O.ZP.Masks.SQUIRCLE,
+            m = (0, i.jsx)(b.ZP, {
+                mask: b.ZP.Masks.SQUIRCLE,
                 width: W.Si.SMALL,
                 height: W.Si.SMALL,
                 children: (0, i.jsx)('img', {
@@ -251,7 +251,7 @@ class H extends (r = o.PureComponent) {
                     var t;
                     return (0, i.jsx)(
                         'img',
-                        B(
+                        F(
                             {
                                 alt: null != (t = u.small_text) ? t : '',
                                 src: (0, I.xF)(d, u.small_image, [W.Si.SMALL, W.Si.SMALL]),
@@ -289,7 +289,7 @@ class H extends (r = o.PureComponent) {
     }
     renderGameImage(e) {
         let { user: t, type: n, application: r, activityGuild: l } = this.props;
-        return null != e.assets || (0, T.Z)(e) || e.type !== M.IIU.PLAYING || 'ActivityFeed' === n || t.bot
+        return null != e.assets || (0, w.Z)(e) || e.type !== M.IIU.PLAYING || 'ActivityFeed' === n || t.bot
             ? null
             : null == r && null != l
               ? (0, i.jsx)('div', { className: s()(R.gameIcon, R.screenshareIcon) })
@@ -415,7 +415,7 @@ class H extends (r = o.PureComponent) {
         let { timestamps: n } = e;
         return null == n
             ? null
-            : (0, T.Z)(e)
+            : (0, w.Z)(e)
               ? (0, i.jsx)(G, { timestamps: n })
               : (0, i.jsx)(P.ZP, {
                     start: n.start,
@@ -511,12 +511,12 @@ class H extends (r = o.PureComponent) {
         (0, _.Z)(c) ? ((e = this.renderXboxImage()), (f = !0)) : null == (e = this.renderImage(c)) && (f = null != (e = this.renderGameImage(c)));
         let m = this.renderName(c),
             g = this.renderDetails(c),
-            O = this.renderState(c, l),
+            b = this.renderState(c, l),
             y = this.renderTimePlayed(c),
             h = this.renderChannelDetails(c),
             v = null != n ? n() : null,
             j = this.renderTimeBar(c),
-            S = ![e, m, g, O, y, j, v].some((e) => null != e);
+            S = ![e, m, g, b, y, j, v].some((e) => null != e);
         return (0, i.jsxs)('div', {
             className: s()(this.getTypeClass('activity'), r),
             children: [
@@ -529,7 +529,7 @@ class H extends (r = o.PureComponent) {
                             e,
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
-                                : (0, i.jsxs)(b.Z.Child, {
+                                : (0, i.jsxs)(O.Z.Child, {
                                       className: s()((0, C.l)(R, 'content', f ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
                                           (0, i.jsxs)(p.P3F, {
@@ -540,7 +540,7 @@ class H extends (r = o.PureComponent) {
                                                             a(e), null == o || o();
                                                         }
                                                       : void 0,
-                                              children: [m, g, O, y]
+                                              children: [m, g, b, y]
                                           }),
                                           h,
                                           d ? null : j,
@@ -571,7 +571,7 @@ class H extends (r = o.PureComponent) {
             });
     }
 }
-V(H, 'Types', F);
+V(H, 'Types', Y);
 let J = (e) => {
     var t, n, r, l, o;
     let a = (0, j.Z)({
@@ -583,7 +583,7 @@ let J = (e) => {
     });
     return (0, i.jsx)(
         H,
-        ((l = B({}, e)),
+        ((l = F({}, e)),
         (o = o = { onOpenGameProfileModal: a }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
@@ -600,5 +600,5 @@ let J = (e) => {
         l)
     );
 };
-J.Types = F;
+J.Types = Y;
 let X = J;

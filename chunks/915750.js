@@ -2,8 +2,8 @@ n.d(t, {
     B5: () => T,
     PI: () => v,
     WD: () => C,
-    aM: () => R,
-    ui: () => P
+    aM: () => P,
+    ui: () => R
 }),
     n(388685),
     n(642613),
@@ -234,11 +234,11 @@ function C() {
     let e = i.useContext(A);
     return null == e ? void 0 : e.current;
 }
-function R() {
+function P() {
     var e;
     return null == (e = C()) ? void 0 : e.getId();
 }
-function P(e) {
+function R(e) {
     let { visible: t, visibleChanged: n, reference: o, focused: a, focusedChanged: s, impression: l } = e,
         c = N(e.questOrQuests),
         d = (0, u.KZ)(e.questContent);

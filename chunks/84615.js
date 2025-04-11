@@ -1,7 +1,7 @@
 n.d(t, {
     Ox: () => A,
     QP: () => I,
-    ob: () => R,
+    ob: () => P,
     q4: () => C
 }),
     n(388685);
@@ -93,7 +93,7 @@ function S(e) {
         i.useEffect(
             () => (
                 _.Z.disable(),
-                t.key !== m.CV && _.Z.enableTemp(P(t.key)),
+                t.key !== m.CV && _.Z.enableTemp(R(t.key)),
                 () => {
                     _.Z.disableTemp();
                 }
@@ -108,7 +108,7 @@ function S(e) {
                     (0, r.jsx)('div', { className: g.drag }),
                     t.render({
                         transitionState: null != t ? t.transitionState : 3,
-                        closeLayer: () => R(t.key)
+                        closeLayer: () => P(t.key)
                     })
                 ]
             })
@@ -176,18 +176,18 @@ function C(e) {
         i
     );
 }
-function R(e) {
+function P(e) {
     (0, u.j)(() => {
         I.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });
 }
-function P(e) {
+function R(e) {
     return {
         POP_LAYER: {
             binds: ['esc'],
             comboKeysBindGlobal: !0,
             action() {
-                R(e);
+                P(e);
             }
         }
     };

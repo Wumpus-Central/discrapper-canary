@@ -9,7 +9,7 @@ var r = n(200651),
 let u = i.memo(
     i.forwardRef((e, t) => {
         let { onScroll: n, onResize: o, listPadding: u = [0, 0, 0, 0], renderRow: d, renderSection: f, renderSectionHeader: _, renderSectionFooter: p, renderListHeader: h, rowCount: m, rowCountBySection: g, rowHeight: E, sectionMarginBottom: b, sectionHeaderHeight: y, sectionFooterHeight: v, listHeaderHeight: O, stickyHeaders: I = !1, className: S, hideScrollbar: T = !1, fade: N = !1, initialScrollTop: A = 0, role: C = 'list' } = e,
-            [R, P] = i.useState(-1),
+            [P, R] = i.useState(-1),
             [w, D] = i.useState(-1),
             L = i.useRef(null),
             x = i.useRef(0),
@@ -107,7 +107,7 @@ let u = i.memo(
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: r, scrollTop: i } = t;
             D(r),
-                P(i),
+                R(i),
                 null == o ||
                     o({
                         width: n,
@@ -132,7 +132,7 @@ let u = i.memo(
                 (window.cancelAnimationFrame(M.current),
                 (M.current = window.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (x.current = e), null == n || n(e), P(e);
+                    (x.current = e), null == n || n(e), R(e);
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -212,13 +212,13 @@ let u = i.memo(
             [U, I, Z, w]
         );
         let { visibleItems: z, listOffset: q } = i.useMemo(() => {
-                if (-1 === w || -1 === R)
+                if (-1 === w || -1 === P)
                     return {
                         visibleItems: null,
                         listOffset: 0
                     };
-                let e = R,
-                    t = R + w,
+                let e = P,
+                    t = P + w,
                     n = 0,
                     r = u[0],
                     i = [],
@@ -266,7 +266,7 @@ let u = i.memo(
                     visibleItems: i,
                     listOffset: r
                 };
-            }, [j, G, U, B, u, d, f, p, _, R, W, I, h, k, w]),
+            }, [j, G, U, B, u, d, f, p, _, P, W, I, h, k, w]),
             Q = i.useMemo(() => {
                 var e, t, n;
                 return {

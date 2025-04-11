@@ -1,6 +1,6 @@
 n.d(t, {
     $s: () => C,
-    A0: () => R,
+    A0: () => P,
     Sg: () => T,
     ow: () => y,
     rQ: () => N,
@@ -163,7 +163,7 @@ function C(e) {
     for (let e of null != t ? t : []) if (e.type === a.jw.ATTACHMENT) return !1;
     return !0;
 }
-function R(e, t) {
+function P(e, t) {
     switch (e) {
         case l.Z.ReasonCodes.TIMEOUT:
             let n = s.Z.getApplication(t);

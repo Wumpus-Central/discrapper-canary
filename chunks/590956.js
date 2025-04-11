@@ -153,8 +153,8 @@ let I = (e) => {
             [v, I] = i.useState(String(Date.now())),
             [S, N] = i.useState(!1),
             [A, C] = i.useState(!1),
-            R = i.useRef(null),
-            P = function () {
+            P = i.useRef(null),
+            R = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 return (0, r.jsx)(
                     c.Z,
@@ -198,7 +198,7 @@ let I = (e) => {
                                 (0, r.jsx)(
                                     l.P3F,
                                     O(y({}, e), {
-                                        innerRef: R,
+                                        innerRef: P,
                                         onMouseEnter: () => {
                                             var t;
                                             null == e || null == (t = e.onMouseEnter) || t.call(e);
@@ -217,7 +217,7 @@ let I = (e) => {
                                             [E.emojiContainerClickable]: u,
                                             [E.emojiJumbo]: t.jumboable
                                         }),
-                                        children: P(n)
+                                        children: R(n)
                                     })
                                 )
                         }
@@ -244,7 +244,7 @@ let I = (e) => {
             position: 'right',
             renderPopout: L,
             positionKey: v,
-            targetElementRef: R,
+            targetElementRef: P,
             children: D
         });
     },

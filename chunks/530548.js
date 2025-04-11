@@ -280,10 +280,10 @@ function b(e) {
         N = S[1],
         A = d.fitCanvasToArtboardHeight,
         C = d.shouldResizeCanvasToContainer,
-        R = d.useDevicePixelRatio,
-        P = d.customDevicePixelRatio,
+        P = d.useDevicePixelRatio,
+        R = d.customDevicePixelRatio,
         w = m(o, C),
-        D = u(P),
+        D = u(R),
         L = null != c ? c : {},
         x = L.maxX,
         M = L.maxY,
@@ -347,7 +347,7 @@ function b(e) {
                 l && (T || a) && l && l(), T && N(!1);
             }
         },
-        [i, o, w, D, k, T, N, v, O, p, h, l, C, A, R, n]
+        [i, o, w, D, k, T, N, v, O, p, h, l, C, A, P, n]
     ),
         r.useEffect(
             function () {

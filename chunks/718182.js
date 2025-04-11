@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(703656),
     h = n(108427),
     g = n(981631),
-    f = n(388032),
-    m = n(20493);
+    m = n(388032),
+    f = n(20493);
 function _(e) {
     let { location: t, transitionTo: o = p.uL } = e,
         [l, _] = i.useState('submitting');
@@ -21,7 +21,7 @@ function _(e) {
             ? null
             : (0, r.jsx)(d.zx, {
                   onClick: () => o(g.Z5c.LOGIN, { source: 'authorizeIPAdress' }),
-                  children: f.NW.string(f.t.dKhVQE)
+                  children: m.NW.string(m.t.dKhVQE)
               });
     }
     return ((0, c.ZP)(() => {
@@ -42,15 +42,15 @@ function _(e) {
                   (0, r.jsx)('img', {
                       alt: '',
                       src: n(262467),
-                      className: m.marginBottom20
+                      className: f.marginBottom20
                   }),
                   (0, r.jsx)(d.Dx, {
-                      className: m.marginBottom8,
-                      children: f.NW.string(f.t['f/54a2'])
+                      className: f.marginBottom8,
+                      children: m.NW.string(m.t['f/54a2'])
                   }),
                   (0, r.jsx)(d.DK, {
-                      className: m.marginBottom40,
-                      children: f.NW.string(f.t.i3ehMj)
+                      className: f.marginBottom40,
+                      children: m.NW.string(m.t.i3ehMj)
                   }),
                   b()
               ]
@@ -61,21 +61,21 @@ function _(e) {
                     (0, r.jsx)('img', {
                         alt: '',
                         src: n(640356),
-                        className: m.marginBottom20
+                        className: f.marginBottom20
                     }),
                     (0, r.jsx)(d.Dx, {
-                        className: m.marginBottom8,
-                        children: f.NW.string(f.t.iG0SlJ)
+                        className: f.marginBottom8,
+                        children: m.NW.string(m.t.iG0SlJ)
                     }),
                     (0, r.jsx)(d.DK, {
-                        className: m.marginBottom40,
-                        children: f.NW.string(f.t['Elv+qq'])
+                        className: f.marginBottom40,
+                        children: m.NW.string(m.t['Elv+qq'])
                     }),
                     b()
                 ]
             })
           : (0, r.jsxs)(d.ZP, {
-                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: f.NW.string(f.t['9exy+f']) })]
+                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: m.NW.string(m.t['9exy+f']) })]
             });
 }
 l.ZP.initialize();

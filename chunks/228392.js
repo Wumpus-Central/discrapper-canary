@@ -1,13 +1,13 @@
 n.d(t, {
     B: () => D,
-    B5: () => R,
+    B5: () => P,
     Do: () => w,
     GX: () => k,
     HR: () => F,
     Hr: () => C,
     Je: () => N,
     Js: () => b,
-    KR: () => P,
+    KR: () => R,
     MO: () => U,
     N3: () => j,
     Oq: () => T,
@@ -235,7 +235,7 @@ function C(e) {
         })
     );
 }
-function R(e) {
+function P(e) {
     let { guildId: t, channelId: n, postId: i, location: o } = e;
     r.ZP.trackWithMetadata(
         _.rMx.FORUM_CHANNEL_POST_CLICKED,
@@ -247,7 +247,7 @@ function R(e) {
         })
     );
 }
-function P(e) {
+function R(e) {
     let { guildId: t, channelId: n, sortOrder: i } = e;
     r.ZP.trackWithMetadata(
         _.rMx.FORUM_CHANNEL_POSTS_SORTED,

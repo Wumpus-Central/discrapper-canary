@@ -14,8 +14,8 @@ var r = n(200651),
     p = n(56848),
     g = n(378441),
     h = n(388032),
-    v = n(270217);
-function b(e) {
+    b = n(270217);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -179,7 +179,7 @@ function N(e) {
                           : [
                                 {
                                     translateY: -4,
-                                    config: y(b({}, I), { restVelocity: 0.5 })
+                                    config: y(v({}, I), { restVelocity: 0.5 })
                                 },
                                 {
                                     translateY: 0,
@@ -247,26 +247,26 @@ function N(e) {
         ),
         U = h.NW.string(E ? h.t.esVyo6 : h.t.UQqFCA);
     return (0, r.jsxs)(l.animated.div, {
-        className: v.voiceFilterHero,
+        className: b.voiceFilterHero,
         'aria-hidden': D,
         style: M,
         children: [
             (0, r.jsx)('div', {
-                className: o()([v.bgGradient, v.bgGradientHighlight])
+                className: o()([b.bgGradient, b.bgGradientHighlight])
             }),
             F((e) =>
                 (0, r.jsx)(l.animated.div, {
-                    className: v.bgGradient,
+                    className: b.bgGradient,
                     style: e
                 })
             ),
             (0, r.jsx)('div', {
-                className: v.iconWrapper,
+                className: b.iconWrapper,
                 children: B((e, t) =>
                     (0, r.jsx)(
                         l.animated.img,
                         {
-                            className: v.activeVoiceIcon,
+                            className: b.activeVoiceIcon,
                             style: e,
                             alt: '',
                             src: t
@@ -276,16 +276,16 @@ function N(e) {
                 )
             }),
             (0, r.jsx)('div', {
-                className: v.descriptionWrapper,
+                className: b.descriptionWrapper,
                 children: z((e, t) =>
                     (0, r.jsxs)(l.animated.div, {
-                        className: v.description,
+                        className: b.description,
                         style: e,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
-                                className: v.offWhiteText,
+                                className: b.offWhiteText,
                                 children: h.NW.string(h.t.WW5DAA)
                             }),
                             (0, r.jsx)(c.Text, {
@@ -298,19 +298,19 @@ function N(e) {
                 )
             }),
             (0, r.jsxs)('div', {
-                className: v.buttonWrapper,
+                className: b.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.ua7, {
                         'aria-label': U,
-                        tooltipClassName: v.tooltip,
-                        tooltipContentClassName: v.tooltipContent,
+                        tooltipClassName: b.tooltip,
+                        tooltipContentClassName: b.tooltipContent,
                         shouldShow: Z,
                         text: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-sm/normal',
                                     color: 'header-primary',
-                                    className: v.tooltipHeader,
+                                    className: b.tooltipHeader,
                                     children: U
                                 }),
                                 (0, r.jsx)(c.Text, {
@@ -322,14 +322,14 @@ function N(e) {
                         }),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
-                                className: v.buttonWrapper,
+                                className: b.buttonWrapper,
                                 style: R[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
-                                        b(
+                                        v(
                                             {
-                                                className: o()(v.button, { [v.loopbackEnabled]: E }),
+                                                className: o()(b.button, { [b.loopbackEnabled]: E }),
                                                 'aria-hidden': D,
                                                 focusProps: { enabled: Z },
                                                 tabIndex: Z ? 0 : -1
@@ -354,14 +354,14 @@ function N(e) {
                         text: h.NW.string(h.t.UvMx7O),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
-                                className: v.buttonWrapper,
+                                className: b.buttonWrapper,
                                 style: R[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
-                                        b(
+                                        v(
                                             {
-                                                className: v.button,
+                                                className: b.button,
                                                 'aria-hidden': D,
                                                 focusProps: { enabled: Z },
                                                 tabIndex: Z ? 0 : -1

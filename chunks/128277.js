@@ -37,7 +37,7 @@ function C(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function R(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,14 +70,14 @@ function w(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function D(e) {
-    let { user: t, currentUser: n, activity: o, className: C, onClose: P } = e,
+    let { user: t, currentUser: n, activity: o, className: C, onClose: R } = e,
         { profileType: D } = (0, E.z)(),
         L = { [A.fullSize]: D === N.y0.FULL_SIZE },
         x = (0, _.Z)({
@@ -159,17 +159,17 @@ function D(e) {
             ref: G,
             className: a()(A.card, C),
             onAction: U,
-            onClose: P,
+            onClose: R,
             children: [
                 (0, r.jsx)(
                     v.Z,
-                    w(R({}, M), {
+                    w(P({}, M), {
                         contextMenu: (0, r.jsx)(T.Z, {
                             display: 'live',
                             user: t,
                             activity: o,
                             entry: x,
-                            onClose: P
+                            onClose: R
                         })
                     })
                 ),

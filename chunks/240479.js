@@ -55,11 +55,11 @@ function N(e) {
         v = (0, s.e7)([m.Z], () => m.Z.getGuild(t.guildId)),
         N = !y && null != v,
         [A, C] = i.useState(),
-        R = (0, E.V2)({ location: 'SoundmojiGuildInfo' }),
-        P = y || N || null != A || !R,
-        [w, D] = i.useState(!P);
+        P = (0, E.V2)({ location: 'SoundmojiGuildInfo' }),
+        R = y || N || null != A || !P,
+        [w, D] = i.useState(!R);
     i.useEffect(() => {
-        P ||
+        R ||
             (D(!0),
             (0, _.xU)(t.soundId, t.guildId)
                 .then((e) => {
@@ -68,7 +68,7 @@ function N(e) {
                 .finally(() => {
                     D(!1), g();
                 }));
-    }, [g, P, t.guildId, t.soundId]);
+    }, [g, R, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, b.Z)(t, n, N, A),
         M = L === b.y.JOIN_GUILD,
         k = !y && w,

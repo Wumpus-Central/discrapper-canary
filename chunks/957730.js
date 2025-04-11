@@ -25,8 +25,8 @@ var r = n(392711),
     N = n(51144),
     A = n(981631),
     C = n(185923),
-    R = n(388032);
-function P(e, t, n) {
+    P = n(388032);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -324,7 +324,7 @@ let U = u.Z.RULES,
         },
         spoiler: {
             match: a().anyScopeRegex(A.$92),
-            parse: () => ({ content: '<'.concat(R.NW.string(R.t['F+x38P']).toLowerCase(), '>') })
+            parse: () => ({ content: '<'.concat(P.NW.string(P.t['F+x38P']).toLowerCase(), '>') })
         },
         staticRouteLink: {
             match: a().anyScopeRegex(A.PEY),

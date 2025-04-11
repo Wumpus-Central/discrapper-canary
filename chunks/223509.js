@@ -24,8 +24,8 @@ var r,
     N = 3,
     A = 4,
     C = 5,
-    R = 6,
-    P = 7,
+    P = 6,
+    R = 7,
     w = 8,
     D = 9,
     L = 10,
@@ -190,11 +190,11 @@ function ep(e, t) {
                     }
                     (n.length = ea), n.head && (n.head.extra_len = ea), 512 & n.flags && ((eN[0] = 255 & ea), (eN[1] = (ea >>> 8) & 255), (n.check = s(n.check, eN, 2, 0))), (ea = 0), (es = 0);
                 } else n.head && (n.head.extra = null);
-                n.mode = R;
-            case R:
-                if (1024 & n.flags && ((eu = n.length) > er && (eu = er), eu && (n.head && ((ev = n.head.extra_len - n.length), n.head.extra || (n.head.extra = Array(n.head.extra_len)), o.arraySet(n.head.extra, r, et, eu, ev)), 512 & n.flags && (n.check = s(n.check, r, eu, et)), (er -= eu), (et += eu), (n.length -= eu)), n.length)) break i;
-                (n.length = 0), (n.mode = P);
+                n.mode = P;
             case P:
+                if (1024 & n.flags && ((eu = n.length) > er && (eu = er), eu && (n.head && ((ev = n.head.extra_len - n.length), n.head.extra || (n.head.extra = Array(n.head.extra_len)), o.arraySet(n.head.extra, r, et, eu, ev)), 512 & n.flags && (n.check = s(n.check, r, eu, et)), (er -= eu), (et += eu), (n.length -= eu)), n.length)) break i;
+                (n.length = 0), (n.mode = R);
+            case R:
                 if (2048 & n.flags) {
                     if (0 === er) break i;
                     eu = 0;

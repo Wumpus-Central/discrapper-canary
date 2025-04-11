@@ -49,7 +49,7 @@ function I(e) {
 }
 function S() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    P();
+    R();
     let t = d.Z.getForApplication(g.CL),
         n = (0, m.kG)(t),
         r = u.default.getCurrentUser();
@@ -58,7 +58,7 @@ function S() {
         return;
     }
     if ((0, p.dR)({ location: 'tenure_reward_manager' }))
-        if (!0 === e || A(r)) R();
+        if (!0 === e || A(r)) P();
         else {
             let e = d.Z.getForApplication(g.CL);
             if (null == e) return;
@@ -86,20 +86,20 @@ function A(e) {
     return (null != t && null != e && e.id !== t.user_id) || T() || N();
 }
 function C() {
-    if ((P(), h.Z.getFetchState() !== h.M.FETCHED || y)) return;
+    if ((R(), h.Z.getFetchState() !== h.M.FETCHED || y)) return;
     let e = (0, m.GT)();
     if ((null == e ? void 0 : e.redeemable_at) == null) return;
     let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
     null != t && t > 0 && (b = setTimeout(S, t));
 }
-async function R() {
+async function P() {
     y || ((y = !0), await _.V(), (y = !1), o.Z.wait(() => C()));
 }
-function P() {
+function R() {
     clearTimeout(b), (b = null);
 }
 function w() {
-    P();
+    R();
 }
 function D() {
     S();
@@ -118,7 +118,7 @@ class L extends a.Z {
                 ENTITLEMENT_CREATE: I,
                 ENTITLEMENT_UPDATE: () => S(),
                 ENTITLEMENT_DELETE: () => S(),
-                LOGOUT: P
+                LOGOUT: R
             });
     }
 }

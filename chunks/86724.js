@@ -1,5 +1,5 @@
 n.d(t, {
-    L: () => P,
+    L: () => R,
     Z: () => A
 }),
     n(388685),
@@ -127,14 +127,14 @@ function C(e) {
     let { editor: i, storeCommandState: a, channel: s, canUseCommands: l, canOnlyUseTextCommands: u, commandChanged: d, previousOptionValues: f } = e,
         { command: _, commandText: p } = x(i),
         h = a.activeCommand;
-    if ((!l && (null == h || null == (t = h.integration_types) ? void 0 : t.includes(r.Y.GUILD_INSTALL))) || (u && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_TEXT && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_INTEGRATION)) return null != _ && P(i, s.id, h, !0), null;
+    if ((!l && (null == h || null == (t = h.integration_types) ? void 0 : t.includes(r.Y.GUILD_INSTALL))) || (u && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_TEXT && (null == h ? void 0 : h.inputType) !== c.iw.BUILT_IN_INTEGRATION)) return null != _ && R(i, s.id, h, !0), null;
     if (null != _) {
-        if (y.bN.isEditorEmpty(i) || null == h) return P(i, s.id, h, !1), null;
+        if (y.bN.isEditorEmpty(i) || null == h) return R(i, s.id, h, !1), null;
         let e = ''.concat(I.GI).concat(_.displayName);
-        if (null == p || !p.startsWith(e) || (0 === m.cu(i).length && (p.length < e.length + 1 || ' ' !== p[e.length]))) return P(i, s.id, h, !0), null;
+        if (null == p || !p.startsWith(e) || (0 === m.cu(i).length && (p.length < e.length + 1 || ' ' !== p[e.length]))) return R(i, s.id, h, !0), null;
     } else {
         if (null != h && d) {
-            let e = R(i, s, a),
+            let e = P(i, s, a),
                 t = m.tM(i, h, s.id);
             return (
                 L({
@@ -204,7 +204,7 @@ function C(e) {
     }
     return null;
 }
-function R(e, t, n) {
+function P(e, t, n) {
     var r, i, o, a, s;
     let l,
         { initialValues: c, activeCommand: u } = n;
@@ -275,7 +275,7 @@ function R(e, t, n) {
     let C = null;
     return null != S ? (b.Q.selectCommandOption(e, S.optionName), (C = S.optionName)) : null != N ? (b.Q.selectCommandOption(e, N.optionName, !1), (C = N.optionName)) : b.Q.resetSelectionToEnd(e), null == N && D(e, u), C;
 }
-function P(e, t, n, r) {
+function R(e, t, n, r) {
     let [i] = y.bN.blocks(e)[0],
         a = (r ? (0, E.sg)(i, { mode: 'plain' }).trimEnd() : '').split('\n').map((e) => ({
             type: 'line',

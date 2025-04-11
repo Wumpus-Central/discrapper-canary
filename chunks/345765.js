@@ -37,8 +37,8 @@ let v = 4,
     N = new Set(),
     A = new Map(),
     C = null,
-    R = (0, r.debounce)(h.yK, 3000, { trailing: !0 });
-function P() {
+    P = (0, r.debounce)(h.yK, 3000, { trailing: !0 });
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
     return Math.random() * (e + 1) * O;
 }
@@ -70,7 +70,7 @@ function x() {
     let n = g.Z.getFeed(I);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == C) return;
     let r = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
-        o = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), r) + (t > 0 ? P() : 0);
+        o = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), r) + (t > 0 ? R() : 0);
     w(I, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + o)
@@ -111,7 +111,7 @@ async function M(e) {
             var i;
             let e = null != (i = A.get(t)) ? i : 0;
             if (e < v) {
-                let i = _.Z.Millis.MINUTE * Math.pow(2, e) + P(e);
+                let i = _.Z.Millis.MINUTE * Math.pow(2, e) + R(e);
                 T.set(
                     t,
                     setTimeout(
@@ -159,7 +159,7 @@ function B(e) {
 function V(e) {
     var t;
     let { connectionId: n, track: r } = e;
-    null != n && (null == (t = u.Z.getAccount(n, b.ABu.SPOTIFY)) ? void 0 : t.showActivity) && R(n, r);
+    null != n && (null == (t = u.Z.getAccount(n, b.ABu.SPOTIFY)) ? void 0 : t.showActivity) && P(n, r);
 }
 function F() {
     let { enabled: e } = p.iC.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });

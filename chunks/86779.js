@@ -11,14 +11,14 @@ var r = n(200651),
     p = n(893776),
     h = n(314897),
     g = n(626135),
-    f = n(70956),
-    m = n(970648),
+    m = n(70956),
+    f = n(970648),
     _ = n(981631),
     b = n(388032),
     x = n(493148);
 let N = 'mweb_handoff_nonce',
     v = 'mweb_handoff_nonce_expiration',
-    E = +f.Z.Millis.MINUTE,
+    E = +m.Z.Millis.MINUTE,
     I = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
     j = new Set(['deep_link_failed']),
     S = () => {
@@ -27,16 +27,16 @@ let N = 'mweb_handoff_nonce',
     O = () => {
         let e = (0, l.e7)([h.default], () => h.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, o.parse)(window.location.search),
-            f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
-            O = null != f ? f : null !== e ? e : void 0;
+            m = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
+            O = null != m ? m : null !== e ? e : void 0;
         i.useEffect(() => {
-            null !== f &&
-                e !== f &&
+            null !== m &&
+                e !== m &&
                 d.Z.dispatch({
                     type: 'FINGERPRINT',
-                    fingerprint: f
+                    fingerprint: m
                 });
-        }, [f, e]);
+        }, [m, e]);
         let [C, y] = i.useState(null),
             T = i.useCallback(
                 (e) => {
@@ -126,7 +126,7 @@ let N = 'mweb_handoff_nonce',
                       (0, r.jsx)(u.zxk, {
                           color: u.zxk.Colors.BRAND_INVERTED,
                           onClick: () => {
-                              let e = m.Z.generateNonce();
+                              let e = f.Z.generateNonce();
                               c.K.set(N, e), c.K.set(v, Date.now() + E);
                               let t = new URL(_.x0X),
                                   n = new URLSearchParams(window.location.search);

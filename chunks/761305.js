@@ -11,8 +11,8 @@ var r,
     p = n(129293),
     h = n(388905),
     g = n(981631),
-    f = n(388032),
-    m = n(20493);
+    m = n(388032),
+    f = n(20493);
 function _(e, t, n) {
     return (
         t in e
@@ -71,23 +71,23 @@ class b extends (r = o.PureComponent) {
         return (0, i.jsxs)(h.ZP, {
             children: [
                 (0, i.jsx)(h.Dx, {
-                    className: m.marginBottom8,
-                    children: f.NW.string(f.t.Z33eiI)
+                    className: f.marginBottom8,
+                    children: m.NW.string(m.t.Z33eiI)
                 }),
-                (0, i.jsx)(h.DK, { children: f.NW.format(f.t.NRWtfH, { guildName: n.name }) }),
+                (0, i.jsx)(h.DK, { children: m.NW.format(m.t.NRWtfH, { guildName: n.name }) }),
                 (0, i.jsx)(h.zx, {
-                    className: m.marginTop40,
+                    className: f.marginTop40,
                     onClick: () => t(e),
-                    children: f.NW.string(f.t.fIv16O)
+                    children: m.NW.string(m.t.fIv16O)
                 }),
                 (0, i.jsx)(h.zx, {
-                    className: m.marginTop8,
+                    className: f.marginTop8,
                     color: h.zx.Colors.LINK,
                     look: h.zx.Looks.LINK,
                     onClick: () => {
                         t(g.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: f.NW.string(f.t['cGmT/P'])
+                    children: m.NW.string(m.t['cGmT/P'])
                 })
             ]
         });
@@ -98,17 +98,17 @@ class b extends (r = o.PureComponent) {
             children: [
                 (0, i.jsx)(h.Ee, {
                     src: n(105020),
-                    className: m.marginBottom20
+                    className: f.marginBottom20
                 }),
                 (0, i.jsx)(h.Dx, {
-                    className: m.marginBottom8,
-                    children: f.NW.string(f.t.ox9hIS)
+                    className: f.marginBottom8,
+                    children: m.NW.string(m.t.ox9hIS)
                 }),
-                (0, i.jsx)(h.DK, { children: f.NW.string(f.t['/dcuR0']) }),
+                (0, i.jsx)(h.DK, { children: m.NW.string(m.t['/dcuR0']) }),
                 (0, i.jsx)(h.zx, {
-                    className: m.marginTop40,
+                    className: f.marginTop40,
                     onClick: () => t(e),
-                    children: f.NW.string(f.t.fIv16O)
+                    children: m.NW.string(m.t.fIv16O)
                 })
             ]
         });

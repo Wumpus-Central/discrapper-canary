@@ -73,8 +73,8 @@ function C(e, t) {
         e
     );
 }
-let R = (e, t) => (0, r.jsx)(y.G0, { columns: e }, t);
-function P(e) {
+let P = (e, t) => (0, r.jsx)(y.G0, { columns: e }, t);
+function R(e) {
     var t;
     let n = l().sample(l().values(e));
     return {
@@ -132,7 +132,7 @@ class w extends i.PureComponent {
         super(...e),
             T(this, '_masonryRef', i.createRef()),
             T(this, 'state', {
-                favoritesTile: P(this.props.favorites),
+                favoritesTile: R(this.props.favorites),
                 selectedIndex: {
                     column: 0,
                     row: 0
@@ -198,7 +198,7 @@ class w extends i.PureComponent {
                     ? (0, r.jsx)(y.u$, {
                           columns: e,
                           width: t,
-                          renderColumn: R
+                          renderColumn: P
                       })
                     : (0, r.jsx)(_.GMG, {
                           ref: this._masonryRef,

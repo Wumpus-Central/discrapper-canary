@@ -28,9 +28,9 @@ function O(e) {
         A = null == (t = I.chatWallpaperInfo) ? void 0 : t.wallpaperId,
         w = (0, m.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
         Z = (0, s.ZP)(I),
-        k = (0, l.wjy)((0, o.ZP)()),
+        R = (0, l.wjy)((0, o.ZP)()),
         {
-            chatWallpaper: R,
+            chatWallpaper: k,
             isUpdatingChatWallpaperFlag: D,
             lastSetMessageId: L
         } = (0, a.cj)([f.Z], () => ({
@@ -45,20 +45,20 @@ function O(e) {
         B = (0, c.m)(y.p9.TIER_2),
         G = h.t(T);
     return (i.useEffect(() => {
-        null == R && f.Z.shouldFetchWallpapers && g.k9();
-    }, [R]),
+        null == k && f.Z.shouldFetchWallpapers && g.k9();
+    }, [k]),
     null == A)
         ? null
         : ((j = F
-              ? v.NW.format(v.t.z847Tk, { wallpaper_name: null != (n = null == R ? void 0 : R.label) ? n : v.NW.string(v.t['UQMV/P']) })
+              ? v.NW.format(v.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.NW.string(v.t['UQMV/P']) })
               : v.NW.format(v.t['+lKndX'], {
                     username: null == Z ? void 0 : Z.nick,
-                    wallpaper_name: null != (O = null == R ? void 0 : R.label) ? O : v.NW.string(v.t['UQMV/P'])
+                    wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : v.NW.string(v.t['UQMV/P'])
                 })),
           w
-              ? k
+              ? R
                   ? G && W
-                      ? (C = v.NW.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (N = null == R ? void 0 : R.label) ? N : v.NW.string(v.t['UQMV/P']) }))
+                      ? (C = v.NW.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (N = null == k ? void 0 : k.label) ? N : v.NW.string(v.t['UQMV/P']) }))
                       : F ||
                         B ||
                         !W ||

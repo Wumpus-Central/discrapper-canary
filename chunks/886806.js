@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(17894),
     h = n(108427),
     g = n(626135),
-    f = n(981631),
-    m = n(388032),
+    m = n(981631),
+    f = n(388032),
     _ = n(726401),
     b = n(20493);
 function x(e) {
@@ -36,10 +36,10 @@ function N(e) {
         })();
     });
     let E = i.useCallback(() => {
-            o(f.Z5c.LOGIN, { source: 'verify_email' });
+            o(m.Z5c.LOGIN, { source: 'verify_email' });
         }, [o]),
         I = i.useCallback(() => {
-            g.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, p.Z)('verify_email');
+            g.default.track(m.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, p.Z)('verify_email');
         }, []);
     return 'failed' === l
         ? (0, r.jsxs)(d.ZP, {
@@ -50,15 +50,15 @@ function N(e) {
                   }),
                   (0, r.jsx)(d.Dx, {
                       className: b.marginBottom8,
-                      children: m.NW.string(m.t.PCgG39)
+                      children: f.NW.string(f.t.PCgG39)
                   }),
                   (0, r.jsx)(d.DK, {
                       className: b.marginBottom40,
-                      children: m.NW.string(m.t.tQpeAw)
+                      children: f.NW.string(f.t.tQpeAw)
                   }),
                   (0, r.jsx)(d.zx, {
                       onClick: E,
-                      children: m.NW.string(m.t.dKhVQE)
+                      children: f.NW.string(f.t.dKhVQE)
                   })
               ]
           })
@@ -71,11 +71,11 @@ function N(e) {
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: b.marginBottom40,
-                        children: m.NW.string(m.t.dAfGb2)
+                        children: f.NW.string(f.t.dAfGb2)
                     }),
                     (0, r.jsx)(d.zx, {
                         onClick: I,
-                        children: m.NW.string(m.t.uJWIj4)
+                        children: f.NW.string(f.t.uJWIj4)
                     })
                 ]
             })
@@ -87,11 +87,11 @@ function N(e) {
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: b.marginBottom8,
-                        children: m.NW.string(m.t['0c8+5u'])
+                        children: f.NW.string(f.t['0c8+5u'])
                     }),
                     (0, r.jsx)(d.DK, {
                         className: b.marginBottom40,
-                        children: m.NW.string(m.t.ULTCBA)
+                        children: f.NW.string(f.t.ULTCBA)
                     }),
                     (0, r.jsx)(d.zx, {
                         submitting: !0,

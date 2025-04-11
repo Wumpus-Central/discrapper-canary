@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(626135),
     h = n(44609),
     g = n(731971),
-    f = n(981631),
-    m = n(388032),
+    m = n(981631),
+    f = n(388032),
     _ = n(190981);
 let b = () => {
     var e;
@@ -28,7 +28,7 @@ let b = () => {
                 className: _.header,
                 onClick: () => {
                     t ||
-                        p.default.track(f.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                        p.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                             guild_id: O,
                             invite_code: C
                         }),
@@ -45,12 +45,12 @@ let b = () => {
                             (0, r.jsx)(l.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: m.NW.string(m.t.A5wHQ0)
+                                children: f.NW.string(f.t.A5wHQ0)
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: m.NW.string(m.t.UKCSER)
+                                children: f.NW.string(f.t.UKCSER)
                             })
                         ]
                     }),
@@ -74,30 +74,30 @@ let b = () => {
                                 (0, r.jsx)(l.Text, {
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
-                                    children: m.NW.string(m.t.me1lRk)
+                                    children: f.NW.string(f.t.me1lRk)
                                 }),
                                 (0, r.jsx)(l.oil, {
-                                    placeholder: m.NW.string(m.t['09Q8ys']),
-                                    maxLength: f.l$U,
+                                    placeholder: f.NW.string(f.t['09Q8ys']),
+                                    maxLength: m.l$U,
                                     value: b,
                                     onChange: E
                                 })
                             ]
                         }),
                     (0, r.jsx)(u.Z, {
-                        title: m.NW.string(m.t['/2ed39']),
+                        title: f.NW.string(f.t['/2ed39']),
                         value: x,
                         onChange: I
                     }),
                     o &&
                         (0, r.jsx)(u.Z, {
-                            title: m.NW.string(m.t.bN4m1N),
+                            title: f.NW.string(f.t.bN4m1N),
                             value: N,
                             onChange: j
                         }),
                     T &&
                         (0, r.jsx)(u.Z, {
-                            title: m.NW.string(m.t['0nZCqK']),
+                            title: f.NW.string(f.t['0nZCqK']),
                             value: v,
                             onChange: S
                         })

@@ -2,7 +2,7 @@ n.d(t, {
     EB: () => o,
     Je: () => u,
     cf: () => a,
-    mh: () => s
+    mh: () => c
 });
 var r = n(570140),
     i = n(881052),
@@ -61,7 +61,7 @@ async function u(e, t, n) {
         i
     );
 }
-async function s(e, t) {
+async function c(e, t) {
     return (
         await l.mh(e, t),
         r.Z.dispatch({

@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(74299),
     A = n(863908),
     C = n(803647),
-    R = n(266910),
-    P = n(788983),
+    P = n(266910),
+    R = n(788983),
     w = n(703656),
     D = n(937995),
     L = n(618158),
@@ -218,7 +218,7 @@ class e_ extends i.PureComponent {
                           streamId: t,
                           component: V.Z.getVideoComponent(),
                           mirror: s,
-                          children: (0, r.jsx)(R.Z, {
+                          children: (0, r.jsx)(P.Z, {
                               size: d.EFr.SIZE_80,
                               src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                               'aria-label': null == n ? void 0 : n.user.username
@@ -290,7 +290,7 @@ class e_ extends i.PureComponent {
             }),
             ec(this, 'handleOpenPopout', () => {
                 let { channel: e } = this.props;
-                (0, O.v)(g.Z.VIDEO_PIP, O.d.POPOUT, !0), P.hP(e);
+                (0, O.v)(g.Z.VIDEO_PIP, O.d.POPOUT, !0), R.hP(e);
             }),
             ec(this, 'renderBottomLeftControls', () => {
                 let { canSeeParticipantName: e } = this.viewProperties;

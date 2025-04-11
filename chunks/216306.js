@@ -2,8 +2,8 @@ n.d(t, {
     Fo: () => L,
     KY: () => C,
     Uo: () => m,
-    fU: () => b,
-    qw: () => v,
+    fU: () => v,
+    qw: () => b,
     tn: () => M
 }),
     n(290780);
@@ -119,7 +119,7 @@ function M(e, t, n, r) {
         s
     );
 }
-function b(e) {
+function v(e) {
     var t, n;
     let r = (0, i.e7)([O.Z], () => O.Z.getCategories(e)),
         l = r._categories.length,
@@ -128,7 +128,7 @@ function b(e) {
     let s = r[null != (n = null == (t = a.channel) ? void 0 : t.id) ? n : 'null'];
     return null == s ? 0 : 0 === s.length ? a.index + 2 - l : s[s.length - 1].index + 2 - l;
 }
-function v(e) {
+function b(e) {
     var t;
     return U.NW.formatToPlainString(U.t['8N0BHR'], { timeAgo: o()(f.default.extractTimestamp(null != (t = g.ZP.lastMessageId(e)) ? t : e)).fromNow() });
 }

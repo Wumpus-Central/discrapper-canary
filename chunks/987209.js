@@ -25,12 +25,12 @@ function O(e) {
         { selectedSkuId: I } = (0, p.JL)(),
         [S, T] = i.useState(n),
         [N, A] = i.useState(),
-        [C, R] = i.useState(!1),
-        P = (0, _.pO)(S),
+        [C, P] = i.useState(!1),
+        R = (0, _.pO)(S),
         w = (0, l.TX)(),
         { enabled: D } = c.O.useExperiment({ location: 'gift card' }),
         L = E;
-    P && ((L = w ? h.Cj.SEASONAL_STANDARD_BOX : null != y ? y : g), D && (L = h.Cj.NITROWEEN_STANDARD));
+    R && ((L = w ? h.Cj.SEASONAL_STANDARD_BOX : null != y ? y : g), D && (L = h.Cj.NITROWEEN_STANDARD));
     let [x, M] = i.useState(L),
         k = (0, d.iE)(),
         [j, U] = i.useState(),
@@ -69,7 +69,7 @@ function O(e) {
             giftRecipientError: N,
             setGiftRecipientError: A,
             validatingGiftRecipient: C,
-            setValidatingGiftRecipient: R,
+            setValidatingGiftRecipient: P,
             soundEffect: V,
             setSoundEffect: F,
             emojiConfetti: Z,

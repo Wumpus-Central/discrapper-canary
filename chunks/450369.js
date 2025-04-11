@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => W,
-    Z: () => H
+    Z: () => G
 });
 var r = n(200651),
     i = n(192379),
@@ -157,7 +157,7 @@ let W = 16 / 9,
             m
         );
     },
-    H = i.memo(function (e) {
+    G = i.memo(function (e) {
         var t;
         let { participant: i, channel: l, width: c } = e,
             { newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.STAGE_TILE),

@@ -111,8 +111,8 @@ function y(e) {
     (0, s.ZP)(() => {
         null == S || S();
     });
-    let R = null != m,
-        P = (e) => {
+    let P = null != m,
+        R = (e) => {
             y(e), null == N || N(l.L.PRIMARY);
         },
         w = () => {
@@ -136,14 +136,14 @@ function y(e) {
                 variant: 'text-sm/normal',
                 children: f
             }),
-            null != h || R
+            null != h || P
                 ? (0, r.jsxs)('div', {
                       className: o()(c.upsellButtonsContainer, {
                           [c.upsellButtonsAdjacent]: 0 === C,
                           [c.upsellButtonsStacked]: 1 === C
                       }),
                       children: [
-                          R
+                          P
                               ? (0, r.jsx)(
                                     a.zxk,
                                     _(d({}, I), {
@@ -158,8 +158,8 @@ function y(e) {
                               : (0, r.jsx)(
                                     a.zxk,
                                     _(d({}, O), {
-                                        fullWidth: !R || 1 === C,
-                                        onClick: P,
+                                        fullWidth: !P || 1 === C,
+                                        onClick: R,
                                         children: h
                                     })
                                 )

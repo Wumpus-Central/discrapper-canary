@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => v }), n(781311);
+n.d(t, { ZP: () => b }), n(781311);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
@@ -246,7 +246,7 @@ function M(e) {
               }
           });
 }
-function b(e) {
+function v(e) {
     var { sourceInviteCode: t, joinSourceType: n, integrationType: a, showInviterAsFooter: o, guildId: E, inviterUser: c, onClickInviter: u } = e,
         _ = (function (e, t) {
             if (null == e) return {};
@@ -347,7 +347,7 @@ function b(e) {
             return (0, r.jsx)(U, S({}, _));
     }
 }
-let v = l.memo(function (e) {
+let b = l.memo(function (e) {
     var t, n;
     let { userId: a, guildId: s, showInviterAsFooter: i, onClickInviter: c } = e,
         u = (0, o.e7)([O.Z], () => O.Z.getEnhancedMember(s, a), [s, a]),
@@ -370,7 +370,7 @@ let v = l.memo(function (e) {
               joinSourceType: R,
               children: (e) =>
                   (0, r.jsx)(
-                      b,
+                      v,
                       S(
                           {
                               sourceInviteCode: g,

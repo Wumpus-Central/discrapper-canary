@@ -204,7 +204,7 @@ class b extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, c, u, _, p, m, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k;
+        var t, n, i, o, a, s, l, c, u, _, p, m, g, E, b, y, v, O, I, S, T, N, A, C, P, R, w, D, L, x, M, k;
         super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
         let j = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
@@ -227,8 +227,8 @@ class b extends i.Z {
             (this.phone = null != (N = e.phone) ? N : null),
             (this.nsfwAllowed = null != (A = e.nsfw_allowed) ? A : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (C = e.age_verification_status) ? C : e.ageVerificationStatus),
-            (this.guildMemberAvatars = null != (R = e.guildMemberAvatars) ? R : {}),
-            (this.hasBouncedEmail = null != (w = null != (P = e.has_bounced_email) ? P : e.hasBouncedEmail) && w),
+            (this.guildMemberAvatars = null != (P = e.guildMemberAvatars) ? P : {}),
+            (this.hasBouncedEmail = null != (w = null != (R = e.has_bounced_email) ? R : e.hasBouncedEmail) && w),
             (this.personalConnectionId = null != (L = null != (D = e.personal_connection_id) ? D : e.personalConnectionId) ? L : null),
             (this.globalName = null != (x = e.global_name) ? x : e.globalName),
             (this.banner = e.banner),

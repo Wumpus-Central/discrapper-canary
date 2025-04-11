@@ -1,13 +1,13 @@
 n.d(t, {
     D$: () => D,
     N4: () => U,
-    UI: () => P,
+    UI: () => R,
     Uu: () => N,
     _N: () => w,
     cS: () => L,
     cZ: () => G,
     e1: () => F,
-    eQ: () => R,
+    eQ: () => P,
     fw: () => C,
     uY: () => x,
     x9: () => k
@@ -101,11 +101,11 @@ function C(e) {
     let t = /\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i;
     return e.replace(t, '');
 }
-function R(e) {
+function P(e) {
     for (let t of e.reactions) if (null == t.me_vote) return !0;
     return !1;
 }
-function P(e) {
+function R(e) {
     return (0, l.e7)([h.Z], () => null != e && e.id !== c.V && !!y.TPd.POLLS.has(e.type) && (!!e.isPrivate() || (h.Z.can(y.Plq.SEND_MESSAGES, e) && h.Z.can(y.Plq.SEND_POLLS, e))));
 }
 function w() {

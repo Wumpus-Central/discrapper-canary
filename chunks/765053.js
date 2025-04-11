@@ -164,13 +164,13 @@ var m = {
             }, [])
             .reverse();
     },
-    R = function (e, t) {
+    P = function (e, t) {
         if (Array.isArray(e) && e.length) {
             for (var n = 0; n < e.length; n += 1) if (e[n][t]) return !0;
         }
         return !1;
     },
-    P = function (e) {
+    R = function (e) {
         return Array.isArray(e) ? e.join('') : e;
     },
     w = function (e, t) {
@@ -240,7 +240,7 @@ var m = {
                     toString: function () {
                         return (function (e, t, n, r) {
                             var i = M(n),
-                                o = P(t);
+                                o = R(t);
                             return i ? '<' + e + ' data-rh="true" ' + i + '>' + x(o, r) + '</' + e + '>' : '<' + e + ' data-rh="true">' + x(o, r) + '</' + e + '>';
                         })(e, t.title, t.titleAttributes, n);
                     }
@@ -471,7 +471,7 @@ var Y = function (e, t) {
         K(m.BODY, e.bodyAttributes),
             K(m.HTML, r),
             (function (e, t) {
-                void 0 !== e && document.title !== e && (document.title = P(e)), K(m.TITLE, t);
+                void 0 !== e && document.title !== e && (document.title = R(e)), K(m.TITLE, t);
             })(u, d);
         var f = {
                 baseTag: Y(m.BASE, n),
@@ -536,7 +536,7 @@ var Y = function (e, t) {
                         styleTags: C(m.STYLE, ['cssText'], e),
                         title: S(e),
                         titleAttributes: N('titleAttributes', e),
-                        prioritizeSeoTags: R(e, 'prioritizeSeoTags')
+                        prioritizeSeoTags: P(e, 'prioritizeSeoTags')
                     };
                 W.canUseDOM
                     ? ((t = o),

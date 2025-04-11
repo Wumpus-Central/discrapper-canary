@@ -107,14 +107,14 @@ let I = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP'
     N = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
     A = new Set([...I, ...T, ...N]),
     C = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
-function R(e) {
+function P(e) {
     return !A.has(e) && !D.has(e) && !C.has(e);
 }
-function P(e) {
-    return (t) => -((+(null != e && !!e.includes(t)) << 4) | (+!!R(t) << 3) | (+!!S.has(t) << 2) | (+!!T.includes(t) << 1) | (+!!N.includes(t) << 0));
+function R(e) {
+    return (t) => -((+(null != e && !!e.includes(t)) << 4) | (+!!P(t) << 3) | (+!!S.has(t) << 2) | (+!!T.includes(t) << 1) | (+!!N.includes(t) << 0));
 }
 function w(e, t) {
-    return i().sortBy(e, P(t));
+    return i().sortBy(e, R(t));
 }
 let D = new Set(['anime', 'fanart', 'venting', 'mudae', 'OwO bot', 'movie nights', 'study together', 'scheduled gaming', 'all day vc', 'slow paced', 'art streams', 'work from home', 'gartic phone', 'fast food reviews', 'dress to impress', 'music production', 'variety shows', 'manga', 'webtoon', 'brainrot', 'topsters', 'dad jokes', 'photography', 'minecraft smp', 'pirate shows', 'skincare', 'microwaved food', 'board games', 'sci-fi books', 'sleeping', 'brunch pics', 'pet pics', 'recipes', 'speedrunning', 'eating on mic', 'k-pop', 'deafened', 'programming', 'study buddies', 'DnD', 'lore dumping', 'sleepy cats', 'podcasts', 'houseplants', 'knitting', 'tech', 'keyboards', 'horses', 'bad movies', 'hiking', 'lo-fi chilling', 'watch together', 'listen alongs', 'late night tacos', 'drip', 'trading', 'travel', 'cups', 'coffee', 'F1', 'roman history', 'ssense doomscrolling', 'skibidi toilet', 'capcut editing', 'tiktok rizz party', 'industrial grade glycine', 'frutiger aero', 'y2k', 'sanrio', 'nuzlockes', 'small form factor pcs', 'esports', 'game modding', 'chiikawa', 'underground rap', 'pc music', 'homestuck', 'horse hoof cleaning', 'analog horror', 'pimple popping', 'asmr', 'ya fiction', 'fanfiction', 'cosplay', 'fanart', 'zines', 'vtubers', 'JRPGs', 'retro gaming', 'collecting', 'coquette', 'true crime', 'critical role', 'cottagecore', 'goblincore', 'renfaire', 'letterboxd', 'tarot readings', 'fortune telling', 'magic tricks', 'ice cold sprite', 'slime', 'soap cutting', 'mukbang', 'premier league', 'NBA', 'hyperpop', 'dance covers', 'photocard trading', 'toploader decorating', 'unboxing', 'decoden', 'jpop', 'mandopop', 'cantopop', 'amapiano', 'ghibli', 'pokemon vgc', 'subway surfers', 'family guy funny moments', 'cranking 90s', 'friday night funkin', 'FNAF']);
 var L = (function (e) {

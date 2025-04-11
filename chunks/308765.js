@@ -221,7 +221,7 @@ let i = {
     },
     SearchManager: {
         actions: ['USER_SETTINGS_PROTO_UPDATE', 'POST_CONNECTION_OPEN'],
-        inlineRequire: () => n(941467).Z,
+        inlineRequire: () => n(433538).Z,
         neverLoadBeforeConnectionOpen: !0
     },
     SelectedChannelManager: {

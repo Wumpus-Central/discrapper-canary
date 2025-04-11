@@ -125,8 +125,8 @@ function T(e) {
     });
     let A = S.activeSlide,
         C = (0, d.Z)(S.activeSlide),
-        R = null != (t = S.directionOverride) ? t : O(null != C ? T[C] : null, T[A]),
-        { reducedMotion: P } = i.useContext(l.S),
+        P = null != (t = S.directionOverride) ? t : O(null != C ? T[C] : null, T[A]),
+        { reducedMotion: R } = i.useContext(l.S),
         w = i.useContext(f.Z),
         D = T[A].impressionName,
         L = E(m({}, T[A].impressionProperties), { location_stack: N });
@@ -137,7 +137,7 @@ function T(e) {
         _stackContext: { isSlide: !0 }
     });
     let { ref: x, width: M = 0, height: k = 0 } = (0, u.Z)(A),
-        j = m({}, v, S.springConfig, P.enabled ? { clamp: !0 } : null),
+        j = m({}, v, S.springConfig, R.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {
                 width: null != (n = S.width) ? n : M,
@@ -161,7 +161,7 @@ function T(e) {
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
-        B = (0, p.Z)(R),
+        B = (0, p.Z)(P),
         { width: V, centered: F = !0 } = S,
         Z = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
@@ -199,7 +199,7 @@ function T(e) {
                             width: s.tq ? '100%' : V
                         },
                         W,
-                        P.enabled
+                        R.enabled
                             ? a
                             : m(
                                   {

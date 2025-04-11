@@ -33,8 +33,8 @@ var r = n(200651),
     N = n(687476),
     A = n(761966),
     C = n(563927),
-    R = n(98278),
-    P = n(197115),
+    P = n(98278),
+    R = n(197115),
     w = n(703656),
     D = n(944486),
     L = n(914010),
@@ -359,7 +359,7 @@ let Q = 32,
                             location_page: $.page,
                             location_section: $.section
                         }),
-                        (0, R.z)();
+                        (0, P.z)();
                 }
             }),
             ec = Q && en && !eo && ((z && et) || !z),
@@ -389,7 +389,7 @@ let Q = 32,
                     n = !Q && X,
                     i = () =>
                         e_
-                            ? (0, r.jsx)(P.Z, {
+                            ? (0, r.jsx)(R.Z, {
                                   className: W.ctaButton,
                                   subscriptionTier: Z.Si.TIER_2,
                                   size: u.zxk.Sizes.SMALL,
@@ -553,7 +553,7 @@ let Q = 32,
                 _ === G.$.GET_PREMIUM
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(P.Z, {
+                              (0, r.jsx)(R.Z, {
                                   subscriptionTier: Z.Si.TIER_2,
                                   buttonText: a.text,
                                   className: W.ctaButton,

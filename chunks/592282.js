@@ -73,7 +73,7 @@ function v(e) {
     i.useEffect(() => {
         v && (0, u.F)(A);
     }, [v]);
-    let R = i.useCallback(
+    let P = i.useCallback(
         (e) => {
             I(e), null == N || N({ type: c.U.CHECKBOX });
         },
@@ -90,7 +90,7 @@ function v(e) {
                         [m.focused]: v,
                         [null != T ? T : '']: v
                     }),
-                    onClick: b ? void 0 : R
+                    onClick: b ? void 0 : P
                 },
                 O
             ),

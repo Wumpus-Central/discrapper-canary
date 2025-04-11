@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => R,
+    C: () => P,
     Z: () => M
 }),
     n(953529),
@@ -41,11 +41,11 @@ function C(e, t) {
         'data-id': t
     });
 }
-function R(e) {
+function P(e) {
     let t = 'description' in e && null != e.description ? ''.concat(e.name, ', ').concat(e.description) : e.name;
     return y.NW.formatToPlainString(y.t.rk6pOz, { stickerName: t });
 }
-let P = (e) => {
+let R = (e) => {
         let { children: t, hasError: n, isLoading: i, maskAsset: o, size: s, withLoadingIndicator: l = !0 } = e,
             c = s >= S;
         return (0, r.jsxs)('div', {
@@ -129,9 +129,9 @@ let P = (e) => {
             : (0, r.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': S ? y.NW.string(y.t.yEvsKy) : R(a),
+                  'aria-label': S ? y.NW.string(y.t.yEvsKy) : P(a),
                   ref: _,
-                  children: (0, r.jsx)(P, {
+                  children: (0, r.jsx)(R, {
                       hasError: S,
                       isLoading: O,
                       maskAsset: f,
@@ -187,7 +187,7 @@ let P = (e) => {
                   children: (0, r.jsx)('div', {
                       className: a()(l, v.__invalid_pngImageWrapper),
                       ref: u,
-                      children: (0, r.jsx)(P, {
+                      children: (0, r.jsx)(R, {
                           hasError: E,
                           isLoading: m,
                           maskAsset: c,
@@ -196,7 +196,7 @@ let P = (e) => {
                           children: C(
                               (0, r.jsx)('img', {
                                   className: v.pngImage,
-                                  alt: R(n),
+                                  alt: P(n),
                                   src: N,
                                   draggable: !1,
                                   onError: w,

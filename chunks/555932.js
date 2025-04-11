@@ -80,7 +80,7 @@ function v(e) {
             isProgressBarAnimationComplete: N,
             setShouldFireConfetti: A,
             shouldFireConfetti: C,
-            tierMarkerAnimationPosition: R
+            tierMarkerAnimationPosition: P
         } = y({
             fillFactor: I,
             isRevealed: O,
@@ -134,7 +134,7 @@ function v(e) {
                             setConfettiCount: E,
                             setShouldFireConfetti: A,
                             tier: e,
-                            tierMarkerAnimationPosition: R,
+                            tierMarkerAnimationPosition: P,
                             totalAvailableBoostsCount: S,
                             children: (0, c.nW)(e)
                         },

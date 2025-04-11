@@ -181,20 +181,20 @@ function A(e) {
 function C(e) {
     return b.deleteChannelCache(e.channel.id);
 }
-function R() {
+function P() {
     if (0 === b.retainWhere((e) => null != u.Z.getChannel(e))) return !1;
 }
-function P(e, t) {
+function R(e, t) {
     if (!b.has(e, t)) return !1;
     b.set(e, t, { state: 2 });
 }
 function w(e) {
     let { id: t, channelId: n } = e;
-    return P(n, t);
+    return R(n, t);
 }
 function D(e) {
     let { ids: t, channelId: n } = e;
-    return v(t, (e) => P(n, e));
+    return v(t, (e) => R(n, e));
 }
 function L(e) {
     let { message: t } = e;
@@ -253,7 +253,7 @@ let U = new j(s.Z, {
     CREATE_PENDING_REPLY: L,
     CHANNEL_DELETE: C,
     THREAD_DELETE: C,
-    GUILD_DELETE: R,
+    GUILD_DELETE: P,
     CONNECTION_OPEN: x,
     LOGOUT: x
 });

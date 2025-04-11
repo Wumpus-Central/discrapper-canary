@@ -3,8 +3,8 @@ var r = n(192379),
     l = n(268146),
     i = n(846519),
     s = n(59468);
-let o = [l.vA.CAMERA],
-    a = [l.vA.SCREEN, l.vA.WINDOW, l.vA.CAMERA];
+let a = [l.vA.CAMERA],
+    o = [l.vA.SCREEN, l.vA.WINDOW, l.vA.CAMERA];
 function c(e, t) {
     let n = r.useRef(new i.Xp());
     r.useEffect(() => {
@@ -12,7 +12,7 @@ function c(e, t) {
             l = {
                 width: 376,
                 height: 212,
-                types: e ? o : a
+                types: e ? a : o
             };
         return (
             (0, s.t)(l).then((e) => {

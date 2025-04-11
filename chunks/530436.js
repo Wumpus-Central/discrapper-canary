@@ -1,38 +1,38 @@
-n.d(t, { W: () => d });
-var r = n(200651),
-    l = n(192379),
-    a = n(481060),
-    i = n(434404),
-    s = n(496675),
+n.d(t, { W: () => c });
+var l = n(200651),
+    i = n(192379),
+    r = n(481060),
+    s = n(434404),
+    a = n(496675),
     o = n(981631),
-    c = n(388032),
-    u = n(821022);
-function d(e) {
-    let { guild: t, error: n, onClose: d } = e,
-        m = t.id,
-        x = l.useCallback(() => {
-            d(), i.Z.open(m, o.pNK.INSTANT_INVITES);
-        }, [m, d]),
-        g = l.useCallback(
+    u = n(388032),
+    d = n(821022);
+function c(e) {
+    let { guild: t, error: n, onClose: c } = e,
+        h = t.id,
+        g = i.useCallback(() => {
+            c(), s.Z.open(h, o.pNK.INSTANT_INVITES);
+        }, [h, c]),
+        m = i.useCallback(
             (e) =>
-                (0, r.jsx)(a.P3F, {
-                    className: u.errorLink,
-                    onClick: x,
-                    children: (0, r.jsx)(a.Text, {
+                (0, l.jsx)(r.P3F, {
+                    className: d.errorLink,
+                    onClick: g,
+                    children: (0, l.jsx)(r.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
                         children: e
                     })
                 }),
-            [x]
+            [g]
         ),
-        h = l.useCallback(
+        v = i.useCallback(
             (e) =>
-                (0, r.jsx)(a.eee, {
+                (0, l.jsx)(r.eee, {
                     href: o.EYA.INVITES_HELP,
                     target: '_blank',
-                    children: (0, r.jsx)(a.Text, {
+                    children: (0, l.jsx)(r.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
@@ -41,19 +41,19 @@ function d(e) {
                 }),
             []
         ),
-        v =
+        x =
             n.code !== o.evJ.TOO_MANY_INVITES
                 ? n.getAnyErrorMessage()
-                : s.Z.can(o.Plq.MANAGE_GUILD, t)
-                  ? c.NW.format(c.t['H/RUY2'], {
-                        inviteListHook: g,
-                        inviteHelpHook: h
+                : a.Z.can(o.Plq.MANAGE_GUILD, t)
+                  ? u.NW.format(u.t['H/RUY2'], {
+                        inviteListHook: m,
+                        inviteHelpHook: v
                     })
-                  : c.NW.string(c.t['/FxH6O']);
-    return (0, r.jsx)(a.Text, {
-        className: u.errorMessage,
+                  : u.NW.string(u.t['/FxH6O']);
+    return (0, l.jsx)(r.Text, {
+        className: d.errorMessage,
         variant: 'text-xs/normal',
         color: 'text-danger',
-        children: v
+        children: x
     });
 }

@@ -144,7 +144,7 @@ function E(e) {
             },
             [R.result]
         ),
-        H = i.useMemo(() => {
+        G = i.useMemo(() => {
             var e, t, n, r;
             return null == R.result
                 ? {
@@ -170,7 +170,7 @@ function E(e) {
                       showNoResultsAlt: !1
                   };
         }, [R.result, U]);
-    return null == k || null == M || null == H
+    return null == k || null == M || null == G
         ? null
         : (0, r.jsxs)('div', {
               className: o()(j.container, I),
@@ -186,7 +186,7 @@ function E(e) {
                       onScroll: D,
                       children: (0, r.jsx)(m.Z, {
                           searchResults: B,
-                          search: H,
+                          search: G,
                           searchId: l,
                           renderEmbeds: !0,
                           blockCount: 0,

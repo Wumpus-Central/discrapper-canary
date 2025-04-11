@@ -91,8 +91,8 @@ function C(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = new s.Z('GuildSettingsActionCreators'),
-    P = {
+let P = new s.Z('GuildSettingsActionCreators'),
+    R = {
         init(e, t, n, r) {
             o.Z.dispatch({
                 type: 'GUILD_SETTINGS_INIT',
@@ -104,7 +104,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var o;
-            await Promise.all([n.e('48835'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('11212'), n.e('86328'), n.e('80284'), n.e('9710'), n.e('57971'), n.e('7654'), n.e('62117'), n.e('49751'), n.e('49049'), n.e('44156'), n.e('83957'), n.e('49286'), n.e('55666'), n.e('60696'), n.e('58227'), n.e('54408'), n.e('33472'), n.e('93375'), n.e('64679'), n.e('92216'), n.e('56534'), n.e('10054')]).then(n.bind(n, 994763)),
+            await Promise.all([n.e('48835'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('91245'), n.e('80284'), n.e('9710'), n.e('27146'), n.e('7654'), n.e('62117'), n.e('49751'), n.e('49049'), n.e('44156'), n.e('94400'), n.e('49286'), n.e('55666'), n.e('60696'), n.e('58227'), n.e('54408'), n.e('33472'), n.e('93375'), n.e('64679'), n.e('12910'), n.e('56534'), n.e('6823')]).then(n.bind(n, 994763)),
                 t === y.pNK.OVERVIEW &&
                     i === y.KsC.INVITE &&
                     (0, E.i1)({
@@ -113,7 +113,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                     }) &&
                     ((t = y.pNK.BOOST_PERKS), (i = void 0)),
                 (null == (o = h.Z.getGuild(e)) ? void 0 : o.hasFeature(y.oNc.COMMUNITY)) && (t === y.pNK.GUILD_AUTOMOD && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_AUTOMOD)), t === y.pNK.MEMBER_VERIFICATION && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
-                P.init(e, t, r, i),
+                R.init(e, t, r, i),
                 f.Z.closeGuildSidebar(e),
                 (0, a.jN)(y.S9g.GUILD_SETTINGS);
         },
@@ -239,7 +239,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
             );
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: a, splash: s, banner: c, homeHeader: u, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: b, rulesChannelId: O, safetyAlertsChannelId: I, discoverySplash: T, publicUpdatesChannelId: A, premiumProgressBarEnabled: C, profile: P } = t,
+            let { name: n, description: r, icon: a, splash: s, banner: c, homeHeader: u, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: b, rulesChannelId: O, safetyAlertsChannelId: I, discoverySplash: T, publicUpdatesChannelId: A, premiumProgressBarEnabled: C, profile: R } = t,
                 w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 D = N(
                     S(
@@ -266,7 +266,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                         },
                         null != C ? { premium_progress_bar_enabled: C } : null
                     ),
-                    { profile: null != P ? (0, v.n1)(P) : P }
+                    { profile: null != R ? (0, v.n1)(R) : R }
                 );
             return (
                 o.Z.dispatch({ type: 'GUILD_SETTINGS_SUBMIT' }),
@@ -292,7 +292,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                                     type: 'GUILD_SETTINGS_SUBMIT_FAILURE',
                                     errors: e.body
                                 }),
-                                R.error('Failed to save guild settings', { errors: e.body }),
+                                P.error('Failed to save guild settings', { errors: e.body }),
                                 w.throwErr)
                             )
                                 throw e.body;
@@ -378,7 +378,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                     checkEnabled: !1
                 }
             ).then(() => {
-                P.close();
+                R.close();
             }),
         async leaveGuild(e) {
             await i.tn.del({
@@ -387,7 +387,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-                P.close();
+                R.close();
         },
         async updateMemberRoles(e, t, n, r, a) {
             if (u.Z.isFullServerPreview(e) && t === _.default.getId()) return void (0, c.og)(e, n);
@@ -466,4 +466,4 @@ let R = new s.Z('GuildSettingsActionCreators'),
             });
         }
     },
-    w = P;
+    w = R;

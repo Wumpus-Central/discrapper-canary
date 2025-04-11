@@ -1,16 +1,16 @@
-n.d(t, { Z: () => o }), n(642613), n(388685);
+n.d(t, { Z: () => a }), n(642613), n(388685);
 var i = n(192379),
     r = n(471518),
     l = n(70956),
-    a = n(314734);
-function o(e) {
+    o = n(314734);
+function a(e) {
     let { sectionId: t, commandsByActiveSection: n } = e,
-        [o, s] = i.useState(a.bS.ALPHABETICAL),
+        [a, s] = i.useState(o.bS.ALPHABETICAL),
         c = i.useMemo(() => {
             var e, i;
             return null != (i = null == (e = n.find((e) => e.section.id === t)) ? void 0 : e.data) ? i : [];
         }, [n, t]),
-        { popularSortedCommands: d, canSort: u } = (function (e) {
+        { popularSortedCommands: u, canSort: d } = (function (e) {
             let { alphabeticalSortedCommands: t } = e;
             return i.useMemo(() => {
                 if (t.length <= 1)
@@ -55,20 +55,20 @@ function o(e) {
         r.i6(t, { dontRefetchMs: l.Z.Millis.DAY });
     }, [t]),
         i.useLayoutEffect(() => {
-            u && s(a.bS.POPULAR);
-        }, [u]);
+            d && s(o.bS.POPULAR);
+        }, [d]);
     let p = c;
-    switch (o) {
-        case a.bS.POPULAR:
-            p = d;
+    switch (a) {
+        case o.bS.POPULAR:
+            p = u;
             break;
-        case a.bS.ALPHABETICAL:
+        case o.bS.ALPHABETICAL:
             p = c;
     }
     return {
-        sortOrder: o,
+        sortOrder: a,
         setSortOrder: s,
         commands: p,
-        canSort: u
+        canSort: d
     };
 }

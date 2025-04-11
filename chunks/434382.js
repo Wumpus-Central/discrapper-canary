@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(152057),
     i = n(570140),
     o = n(147913),
@@ -144,4 +144,4 @@ class C extends o.Z {
             });
     }
 }
-let R = new C();
+let P = new C();

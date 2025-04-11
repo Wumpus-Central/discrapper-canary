@@ -74,7 +74,7 @@ let b = 57.75,
             C = (e) => {
                 null != e && (I(e), T(!N && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > b && A(!0));
             },
-            R = () => {
+            P = () => {
                 null == n || n(),
                     (0, d.openUserProfileModal)(
                         E(m({}, y), {
@@ -84,7 +84,7 @@ let b = 57.75,
                         })
                     );
             },
-            P = (e) => {
+            R = (e) => {
                 null == O || (null == O ? void 0 : O.contains(e.relatedTarget)) || (O.scrollTop = 0);
             };
         return h || null == o || '' === o
@@ -94,7 +94,7 @@ let b = 57.75,
                       (0, r.jsx)('div', {
                           ref: C,
                           className: a()(p.descriptionClamp, N && p.maxBioHeight),
-                          onBlur: P,
+                          onBlur: R,
                           children: (0, r.jsx)(u.Z, {
                               userBio: o,
                               setLineClamp: !1,
@@ -107,7 +107,7 @@ let b = 57.75,
                               size: s.zxk.Sizes.NONE,
                               className: p.viewFullBio,
                               color: a()(p.viewFullBioColor, g && p.viewFullBioDisabled),
-                              onClick: R,
+                              onClick: P,
                               children: (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',

@@ -38,9 +38,9 @@ var r = n(200651),
     W = n(427679),
     U = n(592473),
     B = n(831002),
-    H = n(903108),
-    G = n(981631),
-    F = n(354459),
+    G = n(903108),
+    F = n(981631),
+    H = n(354459),
     V = n(474936),
     z = n(388032),
     Y = n(523335);
@@ -102,8 +102,8 @@ function X(e) {
         w = (0, L.B)(n.id),
         R = (0, k.Rk)(n.id, M.pV.REQUESTED_TO_SPEAK_ONLY),
         { preventIdle: D, allowIdle: W } = (0, I.Y)('popup'),
-        { hasParticipantsPanel: H } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
-        G = H && A,
+        { hasParticipantsPanel: G } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
+        F = G && A,
         V = (0, x.Q3)('StageChannelCallHeader'),
         { simplifiedSettingsEnabled: z } = (0, N.Z)({ location: 'StageChannelCallHeader' });
     return (0, r.jsxs)(h.Gt, {
@@ -124,7 +124,7 @@ function X(e) {
                                     K(q({}, e), {
                                         channelId: n.id,
                                         appContext: _,
-                                        onInteraction: (0, b.u)('StageChannelCallOverflowMenu', j, { entrypoint: F.A5.THREE_DOT })
+                                        onInteraction: (0, b.u)('StageChannelCallOverflowMenu', j, { entrypoint: H.A5.THREE_DOT })
                                     })
                                 )
                             }),
@@ -169,7 +169,7 @@ function X(e) {
                   })
                 : null,
             !A &&
-                H &&
+                G &&
                 (0, r.jsx)(
                     T.Z,
                     {
@@ -182,7 +182,7 @@ function X(e) {
                 ),
             !O &&
                 (0, r.jsx)('div', {
-                    className: o()(Y.button, { [Y.sidebarOpen]: G || s }),
+                    className: o()(Y.button, { [Y.sidebarOpen]: F || s }),
                     children: (0, r.jsx)(S.T, {
                         channelId: n.id,
                         showRequestToSpeakSidebar: s,
@@ -202,13 +202,13 @@ function Q(e) {
         g = (0, k.Rk)(l.id, M.pV.AUDIENCE),
         b = (0, a.e7)([A.Z], () => A.Z.getGuild(l.guild_id), [l.guild_id]),
         y = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        C = (null == b ? void 0 : b.isCommunity()) ? y < G.TU7 : (null == b ? void 0 : b.premiumTier) !== G.Eu4.TIER_3 && y <= G.eez,
-        E = (0, H.Z)(l),
+        C = (null == b ? void 0 : b.isCommunity()) ? y < F.TU7 : (null == b ? void 0 : b.premiumTier) !== F.Eu4.TIER_3 && y <= F.eez,
+        E = (0, G.Z)(l),
         N = (0, a.e7)([w.Z], () => w.Z.can(D.yP, l)),
         I = (0, x.Q3)('StageChannelCallHeader'),
         P = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(l.id, !0),
-                R.default.track(G.rMx.BOOSTING_UPSELL_CLICKED, {
+                R.default.track(F.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: l.guild_id,
                     type: V.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: N,
@@ -228,7 +228,7 @@ function Q(e) {
         i.useEffect(() => {
             let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = Z.current;
             E &&
-                R.default.track(G.rMx.BOOSTING_UPSELL_VIEWED, {
+                R.default.track(F.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
                     type: V.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
@@ -236,7 +236,7 @@ function Q(e) {
                 });
         }, [E]);
     let T = (0, r.jsx)(c.f6W, {
-        theme: G.BRd.DARK,
+        theme: F.BRd.DARK,
         children: (e) => {
             var t;
             return (0, r.jsxs)(j.ZP, {
@@ -332,9 +332,9 @@ function Q(e) {
                                                 onClick: () => {
                                                     (0, v.f)({
                                                         guildId: l.guild_id,
-                                                        location: { section: G.jXE.STAGE_VIDEO_LIMIT }
+                                                        location: { section: F.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
-                                                        R.default.track(G.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                        R.default.track(F.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: l.guild_id,
                                                             type: V.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: N,

@@ -1,8 +1,8 @@
 n.d(t, {
     Ee: () => w,
     Fj: () => N,
-    ar: () => R,
-    xU: () => P
+    ar: () => P,
+    xU: () => R
 }),
     n(388685);
 var r,
@@ -297,7 +297,7 @@ class C extends (r = o.PureComponent) {
             });
     }
 }
-function R() {
+function P() {
     let { orientation: e = 'vertical', isDisabled: t = !1, labelledBy: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         r = o.useRef(null),
         i = o.useMemo(
@@ -342,7 +342,7 @@ function R() {
         'aria-disabled': t
     };
 }
-function P(e) {
+function R(e) {
     let { isSelected: t, label: n } = e;
     return {
         role: 'radio',
@@ -354,7 +354,7 @@ function P(e) {
 function w(e) {
     let { itemInfoClassName: t, itemTitleClassName: n, radioItemClassName: r, collapsibleClassName: o, className: a, value: s = null, size: l = T.MEDIUM, radioPosition: c = 'left', onChange: u = g.dG4, disabled: f = !1, options: _ = [], 'aria-labelledby': p, orientation: h, withTransparentBackground: m } = e,
         E = (0, d.Gc)(),
-        b = R({
+        b = P({
             labelledBy: null != p ? p : E.titleId,
             orientation: h,
             isDisabled: f

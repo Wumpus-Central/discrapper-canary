@@ -49,7 +49,7 @@ function _(e) {
     if (t.id !== (null == m ? void 0 : m.id) || 'recent' !== u || !(0, a.Rh)(c)) return null;
     let g = () => {
         (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e('41150'), n.e('2960'), n.e('66229')]).then(n.bind(n, 81596));
+            let { default: e } = await Promise.all([n.e('62880'), n.e('26545')]).then(n.bind(n, 81596));
             return (n) =>
                 (0, r.jsx)(
                     e,

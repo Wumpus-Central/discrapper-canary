@@ -47,7 +47,7 @@ function C(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function R(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -80,7 +80,7 @@ function w(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -208,7 +208,7 @@ function j(e) {
                 analyticsSource: l.Z.QUEST_HOME_PAGE
             });
         }, []),
-        P = null == (t = (0, h.WD)()) ? void 0 : t.getId(),
+        R = null == (t = (0, h.WD)()) ? void 0 : t.getId(),
         { launchInGameActivity: L } = (0, g.zB)(n);
     return i.useMemo(() => {
         switch (r) {
@@ -246,7 +246,7 @@ function j(e) {
                                     ctaContent: p.jZ.CONNECT_CONSOLE,
                                     position: s,
                                     rowIndex: u,
-                                    impressionId: P
+                                    impressionId: R
                                 }
                             )
                     };
@@ -282,8 +282,8 @@ function j(e) {
                     tooltipText: null,
                     onClick: b
                 };
-                if (o) return w(R({}, i), { text: A.NW.string(A.t.MAS7uL) });
-                if ((0, y.vQ)(n.config)) return w(R({}, i), { text: A.NW.string(A.t.vTgCW1) });
+                if (o) return w(P({}, i), { text: A.NW.string(A.t.MAS7uL) });
+                if ((0, y.vQ)(n.config)) return w(P({}, i), { text: A.NW.string(A.t.vTgCW1) });
                 if ((0, y.Bg)(n.config))
                     return {
                         tooltipText: null,
@@ -296,9 +296,9 @@ function j(e) {
                         text: A.NW.string(A.t.WYchdX),
                         onClick: C
                     };
-                return w(R({}, i), { text: A.NW.string(A.t.bAGFz8) });
+                return w(P({}, i), { text: A.NW.string(A.t.bAGFz8) });
         }
-    }, [r, _, v, f, b, o, n, a, s, u, P, O, I, C, E, L]);
+    }, [r, _, v, f, b, o, n, a, s, u, R, O, I, C, E, L]);
 }
 function U() {
     return (0, a.e7)([E.Z], () => {

@@ -11,8 +11,8 @@ var i,
     p = n(430824),
     h = n(701190),
     g = n(496675),
-    f = n(594174),
-    m = n(998502),
+    m = n(594174),
+    f = n(998502),
     _ = n(981631),
     b = n(176505);
 function x(e, t, n) {
@@ -53,7 +53,7 @@ function S() {
 }
 class O extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, h.Z, f.default);
+        this.waitFor(p.Z, h.Z, m.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? _.IlC.OVERLAY : _.IlC.APP;
@@ -81,7 +81,7 @@ let C = new O(a.Z, {
             let { channel: e, guild: n } = t;
             if (null == e) return !1;
             if ((0, c.bc)(e.type)) {
-                if (null != d.Z.getChannel(e.id)) return (0, s.XU)(_.ME, e.id), m.ZP.focus(), !1;
+                if (null != d.Z.getChannel(e.id)) return (0, s.XU)(_.ME, e.id), f.ZP.focus(), !1;
             } else {
                 if (null == n) return !1;
                 if (null != p.Z.getGuild(n.id) && !(0, l.TY)(t)) {
@@ -94,7 +94,7 @@ let C = new O(a.Z, {
                         }
                         return null;
                     })(t);
-                    return (0, s.XU)(n.id, e), m.ZP.focus(), !1;
+                    return (0, s.XU)(n.id, e), f.ZP.focus(), !1;
                 }
             }
         }

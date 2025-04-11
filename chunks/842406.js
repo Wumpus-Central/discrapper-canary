@@ -117,10 +117,10 @@ function A(e) {
 function C(e) {
     return m(e, d);
 }
-function R(e) {
+function P(e) {
     return m(e, f);
 }
-function P(e) {
+function R(e) {
     return m(e, _);
 }
 function w(e) {
@@ -146,12 +146,12 @@ function D(e) {
         return '[object WebAssembly.Module]' === u(e);
     }),
     (t.isNumberObject = C),
-    (t.isStringObject = R),
-    (t.isBooleanObject = P),
+    (t.isStringObject = P),
+    (t.isBooleanObject = R),
     (t.isBigIntObject = w),
     (t.isSymbolObject = D),
     (t.isBoxedPrimitive = function (e) {
-        return C(e) || R(e) || P(e) || w(e) || D(e);
+        return C(e) || P(e) || R(e) || w(e) || D(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
         return 'undefined' != typeof Uint8Array && (O(e) || A(e));

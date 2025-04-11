@@ -77,8 +77,8 @@ function C(e, t) {
         e
     );
 }
-let R = 20,
-    P = 24,
+let P = 20,
+    R = 24,
     w = 18,
     D = 77,
     L = {
@@ -107,13 +107,13 @@ let R = 20,
     };
 function M(e, t) {
     return {
-        '--custom-emoji-sprite-size': ''.concat(t ? w : P, 'px'),
-        '--custom-emoji-sprite-row': Math.floor(e / R),
-        '--custom-emoji-sprite-col': e % R
+        '--custom-emoji-sprite-size': ''.concat(t ? w : R, 'px'),
+        '--custom-emoji-sprite-row': Math.floor(e / P),
+        '--custom-emoji-sprite-col': e % P
     };
 }
 function k(e, t) {
-    let { tabIndex: n, className: o, renderButtonContents: T, active: A, onClick: R, 'aria-controls': P, focusProps: w, shouldShowSoundmojiCoachmark: k = !1 } = e,
+    let { tabIndex: n, className: o, renderButtonContents: T, active: A, onClick: P, 'aria-controls': R, focusProps: w, shouldShowSoundmojiCoachmark: k = !1 } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
         V = j || A,
@@ -176,10 +176,10 @@ function k(e, t) {
                             onFocus: Y,
                             onClick: (e) => {
                                 var t;
-                                null == R || R(e), null == (t = i.onClick) || t.call(i);
+                                null == P || P(e), null == (t = i.onClick) || t.call(i);
                             },
                             'aria-label': I.NW.string(I.t['59QgaG']),
-                            'aria-controls': P,
+                            'aria-controls': R,
                             'aria-expanded': A,
                             'aria-haspopup': 'dialog',
                             focusProps: w,

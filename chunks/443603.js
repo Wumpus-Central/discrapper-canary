@@ -94,12 +94,12 @@ let b = 24,
         }
     };
 function O(e) {
-    let { className: t, disabled: n = !1, innerClassName: i, childClassName: o, iconClassName: p, icon: m, children: E, onClick: O, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: N, onBlur: A, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
+    let { className: t, disabled: n = !1, innerClassName: i, childClassName: o, iconClassName: p, icon: m, children: E, onClick: O, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: N, onBlur: A, pulse: C, sparkle: P, notification: R, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
         M = (0, u.Q3)('ChannelTextAreaButton'),
         k = (0, l.Yzy)(null != E, g(h({}, v), { keys: (e) => (e ? 'children' : 'icon') })),
         j = (e) => {
             let { component: t } = e;
-            return null != P
+            return null != R
                 ? (0, r.jsxs)('div', {
                       className: _.buttonContent,
                       children: [
@@ -166,7 +166,7 @@ function O(e) {
                         )
                       : void 0;
             }),
-            R &&
+            P &&
                 (0, r.jsxs)('div', {
                     className: _.sparkleContainer,
                     children: [(0, r.jsx)(f.Z, { className: _.sparkleStar }), (0, r.jsx)(d.Z, { className: _.sparklePlus })]

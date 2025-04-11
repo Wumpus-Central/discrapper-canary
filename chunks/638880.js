@@ -23,7 +23,7 @@ function O(e) {
 }
 async function I(e) {
     let t,
-        { applicationId: n, activityChannelId: c, locationObject: O, analyticsLocations: I, componentId: S, sectionName: T, source: N, partyId: A, joinUserId: C, joinSessionId: R, secret: P, inviterUserId: w, instanceId: D, isContextlessActivity: L, customId: x, referrerId: M } = e,
+        { applicationId: n, activityChannelId: c, locationObject: O, analyticsLocations: I, componentId: S, sectionName: T, source: N, partyId: A, joinUserId: C, joinSessionId: P, secret: R, inviterUserId: w, instanceId: D, isContextlessActivity: L, customId: x, referrerId: M } = e,
         k = (0, g.Z)(),
         j = o.Z.getChannel(c),
         U = null == j ? void 0 : j.getGuildId(),
@@ -78,8 +78,8 @@ async function I(e) {
             source: N,
             partyId: A,
             joinUserId: C,
-            joinSessionId: R,
-            secret: P,
+            joinSessionId: P,
+            secret: R,
             inviterUserId: w,
             isContextlessActivity: L,
             customId: x,

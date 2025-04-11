@@ -3,7 +3,7 @@ n.d(t, {
     Fc: () => S,
     Ft: () => C,
     W5: () => A,
-    ZP: () => R,
+    ZP: () => P,
     _T: () => b,
     oY: () => E,
     u5: () => O
@@ -147,7 +147,7 @@ function C(e) {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-let R = {
+let P = {
     getName: E,
     useName: b,
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),

@@ -112,9 +112,9 @@ function T(e, t) {
         A = m && N && (!S || x || P),
         w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
         Z = null != w ? d.ZP.getSelfMember(w) : null,
-        k = (0, s.EY)(Z),
-        R = (0, c.b)(Z),
-        D = !b && C && !T && m && !k && !R;
+        R = (0, s.EY)(Z),
+        k = (0, c.b)(Z),
+        D = !b && C && !T && m && !R && !k;
     return {
         poll: o,
         canTapAnswers: A,
@@ -150,7 +150,7 @@ function P(e, t) {
         A = _.layout_type,
         w = T(e, t, { formattedExpirationLabel: p });
     if (null == w) return;
-    let { canTapAnswers: Z, canRemoveVote: k, canShowVoteCounts: R, canSubmitVote: D, expirationLabel: L = N.NW.string(N.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: W, isEditingVote: U, isExpired: F, isInteractive: B, reactions: G, selectedAnswerIds: H, submitting: V, tapShouldOpenVotersModal: z, showResults: K } = w,
+    let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: k, canSubmitVote: D, expirationLabel: L = N.NW.string(N.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: W, isEditingVote: U, isExpired: F, isInteractive: B, reactions: G, selectedAnswerIds: H, submitting: V, tapShouldOpenVotersModal: z, showResults: K } = w,
         Y = (0, b.cZ)(G),
         X = N.NW.formatToPlainString(N.t.XRkuoa, { count: Y.toLocaleString() }),
         q = Math.max(
@@ -224,7 +224,7 @@ function P(e, t) {
             canSubmitVote: D,
             hasVoted: W,
             isEditingVote: U,
-            canRemoveVote: k,
+            canRemoveVote: R,
             isInteractive: B,
             showResults: K
         })
@@ -336,7 +336,7 @@ function P(e, t) {
         canTapAnswers: Z,
         canSelectMultipleAnswers: en,
         hasSelectedAnswer: M,
-        canShowVoteCounts: R,
+        canShowVoteCounts: k,
         hasVoted: W,
         isExpired: F,
         myAvatarUrl: I,

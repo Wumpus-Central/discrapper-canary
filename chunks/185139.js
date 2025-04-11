@@ -19,9 +19,9 @@ var h = n(122289),
     b = n(106194);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function v(e) {
-    let { steps: t, currentStep: n, body: a, paymentError: v, header: O, footer: I, isGift: S = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
+    let { steps: t, currentStep: n, body: a, paymentError: v, header: O, footer: I, isGift: S = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: P, planError: R, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
         x = null;
-    null != v && null == (0, p.ly)(v) ? (x = v) : null != C ? (x = C) : null != P && (x = P);
+    null != v && null == (0, p.ly)(v) ? (x = v) : null != C ? (x = C) : null != R && (x = R);
     let M = null != x ? x.message : '';
     null != x && x instanceof d.HF && (x.code === f.SM.CARD_DECLINED && L && (M += ' '.concat(E.NW.string(E.t.iWvwQU))), x.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.NW.string(E.t.ypuSd3)), x.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.NW.string(E.t.mXMmWF)));
     let { stripe: k } = (0, _.JL)();
@@ -81,7 +81,7 @@ function v(e) {
                                 : (0, r.jsx)('div', {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
-                                          ref: R,
+                                          ref: P,
                                           children: M
                                       })
                                   }),

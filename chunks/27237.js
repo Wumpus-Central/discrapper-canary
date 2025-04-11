@@ -6,26 +6,26 @@ var r = t(200651),
     a = t(793030),
     l = t(481060),
     c = t(808189),
-    u = t(690786),
-    d = t(838968),
-    m = t(262212),
-    p = t(279604),
+    d = t(690786),
+    u = t(838968),
+    p = t(262212),
+    m = t(279604),
     x = t(981631),
     _ = t(680278),
     v = t(388032),
-    g = t(568413),
-    f = t(117172);
-function b(e) {
+    f = t(568413),
+    g = t(117172);
+function j(e) {
     let n,
         { active: t, nextActive: o, position: s } = e;
     return (
         (n = t && !1 !== o ? 'full' : t && !1 === o ? 'half' : 'none'),
         (0, r.jsxs)('div', {
-            className: g.progressContainer,
+            className: f.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: i()(g.progress, g[s], g[n]) }),
+                (0, r.jsx)('div', { className: i()(f.progress, f[s], f[n]) }),
                 (0, r.jsx)('div', {
-                    className: i()(g.boostContainer, { [g.boostContainerActive]: t }),
+                    className: i()(f.boostContainer, { [f.boostContainerActive]: t }),
                     children: (0, r.jsx)(l.$Eu, {
                         size: 'sm',
                         color: 'white'
@@ -35,7 +35,7 @@ function b(e) {
         })
     );
 }
-function j(e) {
+function b(e) {
     let { index: n } = e,
         t = o.useMemo(() => {
             let e = c.C[n];
@@ -47,14 +47,14 @@ function j(e) {
                       (0, r.jsxs)(
                           'div',
                           {
-                              className: g.perkRow,
+                              className: f.perkRow,
                               children: [
                                   (0, r.jsx)(e.icon, {
                                       color: l.TVs.colors.TEXT_MUTED,
                                       size: 'sm'
                                   }),
                                   (0, r.jsx)(a.xv, {
-                                      className: g.perkText,
+                                      className: f.perkText,
                                       color: 'text-muted',
                                       variant: 'text-sm/medium',
                                       children: e.getCopy()
@@ -66,11 +66,11 @@ function j(e) {
                   );
         }, [n]);
     return (0, r.jsxs)('div', {
-        className: g.perkRowContainer,
+        className: f.perkRowContainer,
         children: [
             t,
             (0, r.jsx)('div', {
-                className: g.perkRow,
+                className: f.perkRow,
                 children: (0, r.jsx)(a.xv, {
                     color: 'text-muted',
                     variant: 'text-sm/medium',
@@ -83,40 +83,40 @@ function j(e) {
 function h(e) {
     let n,
         { guildId: t, index: s, powerup: i, nextPowerup: l } = e,
-        c = null != (0, u.Z)(t, i),
-        x = null != (0, u.Z)(t, l),
+        c = null != (0, d.Z)(t, i),
+        x = null != (0, d.Z)(t, l),
         [_, v] = o.useState(void 0);
     return (
-        (0, p.KT)(_),
+        (0, m.KT)(_),
         (n = 0 === s ? 'start' : null == l ? 'end' : 'middle'),
-        (0, r.jsxs)(d.Z, {
+        (0, r.jsxs)(u.Z, {
             guildId: t,
             powerup: i,
-            className: g.card,
+            className: f.card,
             children: [
-                (0, r.jsx)(b, {
+                (0, r.jsx)(j, {
                     position: n,
                     active: c,
                     nextActive: x
                 }),
                 (0, r.jsxs)('div', {
-                    className: f.contentContainer,
+                    className: g.contentContainer,
                     children: [
                         (0, r.jsx)(a.X6, {
                             variant: 'heading-md/bold',
                             children: i.title
                         }),
-                        (0, r.jsx)(j, { index: s }),
-                        (0, r.jsx)(d.u, {
-                            className: g.footer,
+                        (0, r.jsx)(b, { index: s }),
+                        (0, r.jsx)(u.u, {
+                            className: f.footer,
                             guildId: t,
                             powerup: i
                         })
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: f.buttonContainer,
-                    children: (0, r.jsx)(m.ZP, {
+                    className: g.buttonContainer,
+                    children: (0, r.jsx)(p.ZP, {
                         guildId: t,
                         powerup: i,
                         onError: v

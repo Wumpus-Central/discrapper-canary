@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(296848),
     A = n(374649),
     C = n(642530),
-    R = n(653798),
-    P = n(585602),
+    P = n(653798),
+    R = n(585602),
     w = n(314182),
     D = n(314404),
     L = n(42818),
@@ -37,12 +37,12 @@ var r = n(200651),
     U = n(236691);
 function G(e) {
     let t,
-        { premiumSubscription: n, paymentSources: o, priceOptions: p, onPaymentSourceChange: h, onPaymentSourceAdd: A, planId: P, setHasAcceptedTerms: L, legalTermsNodeRef: x, hasLegalTermsFlash: j, onInvoiceError: G, planGroup: W, currencies: Y, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: q, handleClose: Q } = e,
+        { premiumSubscription: n, paymentSources: o, priceOptions: p, onPaymentSourceChange: h, onPaymentSourceAdd: A, planId: R, setHasAcceptedTerms: L, legalTermsNodeRef: x, hasLegalTermsFlash: j, onInvoiceError: G, planGroup: W, currencies: Y, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: q, handleClose: Q } = e,
         { selectedSkuId: X, defaultPlanId: J, isPremium: $, startedPaymentFlowWithPaymentSourcesRef: ee } = (0, E.JL)(),
         { isGift: et } = (0, g.wD)(),
         en = p.paymentSourceId,
         er = (0, v.$)(o, en),
-        ei = (0, l.e7)([S.Z], () => S.Z.get(P));
+        ei = (0, l.e7)([S.Z], () => S.Z.get(R));
     a()(null != ei, 'Missing newPlan');
     let eo = (0, l.e7)([O.Z], () => O.Z.hidePersonalInformation),
         ea = (0, m.Z)(),
@@ -66,7 +66,7 @@ function G(e) {
                 }),
             [X, n, J, $]
         );
-    t = z || eu ? k.NW.string(k.t.nyzoFR) : (0, T.PV)(P) ? (0, T.W_)(n, ei) : k.NW.formatToPlainString(k.t['sBpy9/'], { planName: ei.name });
+    t = z || eu ? k.NW.string(k.t.nyzoFR) : (0, T.PV)(R) ? (0, T.W_)(n, ei) : k.NW.formatToPlainString(k.t['sBpy9/'], { planName: ei.name });
     let ef = null;
     return (
         null != n &&
@@ -84,7 +84,7 @@ function G(e) {
                         priceOptions: p,
                         preventFetch: el
                     })
-                  : (0, N.R4)(n, P, W)
+                  : (0, N.R4)(n, R, W)
                     ? (0, r.jsx)(V, {
                           premiumSubscription: n,
                           newPlan: ei,
@@ -109,7 +109,7 @@ function G(e) {
                     ec &&
                     (0, r.jsxs)('div', {
                         children: [
-                            (0, r.jsx)(R.KU, {
+                            (0, r.jsx)(P.KU, {
                                 negativeMarginBottom: !0,
                                 negativeMarginTop: !0
                             }),
@@ -117,12 +117,12 @@ function G(e) {
                             (0, r.jsx)(D.O, {
                                 planOptions: ed,
                                 eligibleForMultiMonthPlans: !1,
-                                selectedPlanId: P,
+                                selectedPlanId: R,
                                 planGroup: W,
                                 showTotal: !1,
                                 handleClose: Q
                             }),
-                            (0, r.jsx)(R.KU, {})
+                            (0, r.jsx)(P.KU, {})
                         ]
                     }),
                 (0, r.jsx)(c.vwX, {
@@ -167,7 +167,7 @@ function G(e) {
                     isActive: j,
                     ref: x,
                     children:
-                        null != n && (0, N.R4)(n, P, W)
+                        null != n && (0, N.R4)(n, R, W)
                             ? (0, r.jsx)(F, {
                                   premiumSubscription: n,
                                   newPlan: ei,
@@ -213,7 +213,7 @@ function B(e) {
     }, [n, l]);
     let u = (0, T.Ap)(o.paymentSourceId);
     return null != s
-        ? (0, r.jsxs)(R.PO, {
+        ? (0, r.jsxs)(P.PO, {
               className: j.__invalid_invoice,
               children: [
                   (0, r.jsx)(L.By, {
@@ -266,13 +266,13 @@ function V(e) {
         null != C)
     )
         return (0, r.jsx)(c.kzN, { children: C.message });
-    let P = (0, y.Kp)({
+    let R = (0, y.Kp)({
             isTrial: !1,
             isGift: m,
             selectedSkuId: f,
             startedPaymentFlowWithPaymentSources: _.current
         }),
-        w = (0, y.$g)(P, O, o);
+        w = (0, y.$g)(R, O, o);
     if ((null !== u && null !== O && (t = (0, T.N1)(O.subscriptionPeriodEnd, u.unactivatedUnits, u.endsAt)), null == O || null == S || w)) return (0, r.jsx)(c.$jN, { className: U.__invalid_spinner });
     let D = (0, T.Ap)(l.paymentSourceId);
     return (0, r.jsxs)(r.Fragment, {
@@ -282,10 +282,10 @@ function V(e) {
                 renewalInvoice: S,
                 overrideRenewalDate: t
             }),
-            (0, r.jsxs)(R.PO, {
+            (0, r.jsxs)(P.PO, {
                 className: U.invoice,
                 children: [
-                    (0, r.jsx)(R.q9, { children: k.NW.string(k.t['2eh+Cg']) }),
+                    (0, r.jsx)(P.q9, { children: k.NW.string(k.t['2eh+Cg']) }),
                     (0, r.jsx)(L.Lu, {
                         invoice: O,
                         newPlan: o,
@@ -391,10 +391,10 @@ function Z(e) {
                 className: j.renewalInvoiceDate,
                 children: k.NW.string(k.t.spIYoq)
             }),
-            (0, r.jsxs)(R.PO, {
+            (0, r.jsxs)(P.PO, {
                 className: U.invoice,
                 children: [
-                    (0, r.jsx)(R.q9, { children: k.NW.string(k.t['2eh+Cg']) }),
+                    (0, r.jsx)(P.q9, { children: k.NW.string(k.t['2eh+Cg']) }),
                     (0, r.jsx)(L.By, {
                         invoice: l,
                         isPrepaidPaymentSource: m
@@ -439,16 +439,16 @@ function H(e) {
                     className: j.renewalInvoiceDate,
                     children: k.NW.format(k.t['+y0Tj4'], { renewalDate: p })
                 }),
-                (0, r.jsxs)(R.PO, {
+                (0, r.jsxs)(P.PO, {
                     className: U.invoice,
                     children: [
-                        (0, r.jsx)(R.q9, { children: k.NW.string(k.t.iqhIp6) }),
-                        (0, r.jsx)(R.R$, {
+                        (0, r.jsx)(P.q9, { children: k.NW.string(k.t.iqhIp6) }),
+                        (0, r.jsx)(P.R$, {
                             label: t,
                             value: (0, T.PK)(i, s, !0)
                         }),
-                        (0, r.jsx)(P.Z, { invoice: d }),
-                        (0, r.jsx)(R.KU, {}),
+                        (0, r.jsx)(R.Z, { invoice: d }),
+                        (0, r.jsx)(P.KU, {}),
                         (0, r.jsx)(L.nd, {
                             premiumSubscription: n,
                             renewalInvoice: d,

@@ -41,9 +41,9 @@ function I(e) {
         U = D === l.z.CONSUMABLE_HD_POTION_UPSELL,
         B = (0, g.Z)(t);
     if (null == t || null != w) return null;
-    let H = (0, m.Z)(t),
-        G = !Z && H,
-        F = !Z && B,
+    let G = (0, m.Z)(t),
+        F = !Z && G,
+        H = !Z && B,
         V = k && M,
         z = R && n;
     return (0, r.jsxs)(a.Gt, {
@@ -52,12 +52,12 @@ function I(e) {
             (0, r.jsxs)('div', {
                 className: N.voiceEffectsActionBar,
                 children: [
-                    G &&
+                    F &&
                         (0, r.jsx)(O.Z, {
                             channel: t,
                             themeable: P
                         }),
-                    F && (0, r.jsx)(v.Z, { channel: t }),
+                    H && (0, r.jsx)(v.Z, { channel: t }),
                     V && (0, r.jsx)(y.Z, { channel: t }),
                     U &&
                         (0, r.jsx)(p.t, {
@@ -76,7 +76,7 @@ function I(e) {
                     z && (0, r.jsx)(E.Z, {})
                 ]
             }),
-            I && (G || F || V || U || T || z) && (0, r.jsx)('div', { className: N.divider })
+            I && (F || H || V || U || T || z) && (0, r.jsx)('div', { className: N.divider })
         ]
     });
 }

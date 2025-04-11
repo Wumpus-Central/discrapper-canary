@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => H }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -94,7 +94,7 @@ function B(e) {
         })
     });
 }
-function H(e) {
+function G(e) {
     let { user: t, channel: n, stream: i, color: l } = e,
         o = (0, E.Z)(n, t, i);
     return null == t || null == i
@@ -116,7 +116,7 @@ function H(e) {
               ]
           });
 }
-function G(e) {
+function F(e) {
     let t,
         { focusedApplication: n, focusedParticipant: i, channel: l } = e,
         o = (0, S.Z)(l, !0),
@@ -151,7 +151,7 @@ function G(e) {
         t = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(y.ZP.Divider, { className: L.divider }),
-                (0, r.jsx)(H, {
+                (0, r.jsx)(G, {
                     user: e,
                     channel: l,
                     stream: n,
@@ -175,7 +175,7 @@ function G(e) {
         children: t
     });
 }
-function F(e) {
+function H(e) {
     let { channel: t, guild: i, appContext: s, inCall: c, isChatOpen: u, exitFullScreen: m } = e,
         { focusedParticipant: g } = (0, o.cj)(
             [I.Z],
@@ -193,7 +193,7 @@ function F(e) {
     let S = (0, o.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         T = t.isGuildVoice() && c && null != S && S.length > 0,
         B = (0, P.ZP)(t),
-        H = T
+        G = T
             ? (0, r.jsx)(a.ua7, {
                   text: M.NW.string(M.t.Mgpxi4),
                   delay: 500,
@@ -204,7 +204,7 @@ function F(e) {
                           a.P3F,
                           U(W({}, e), {
                               className: l()(L.channelStatusClickable, { [L.hoverable]: B }),
-                              onClick: B ? F : void 0,
+                              onClick: B ? H : void 0,
                               children: [
                                   (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
@@ -224,7 +224,7 @@ function F(e) {
                       )
               })
             : null;
-    function F() {
+    function H() {
         (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 339340));
@@ -244,7 +244,7 @@ function F(e) {
                         onDoubleClick: C.O,
                         transparent: !0,
                         className: e,
-                        childrenBottom: H,
+                        childrenBottom: G,
                         toolbar: (0, r.jsx)(Z.Z, {
                             inPopout: s === R.IlC.POPOUT,
                             channel: t,
@@ -286,7 +286,7 @@ function F(e) {
                                 channel: t,
                                 guild: i
                             }),
-                            (0, r.jsx)(G, {
+                            (0, r.jsx)(F, {
                                 focusedApplication: E,
                                 focusedParticipant: g,
                                 channel: t

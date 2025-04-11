@@ -4,19 +4,19 @@ n(192379);
 var l = n(120356),
     i = n.n(l),
     s = n(481060),
-    o = n(884338),
-    a = n(933557),
+    a = n(884338),
+    o = n(933557),
     c = n(471445),
     d = n(5192),
     u = n(388032),
     f = n(304118);
 function m(e) {
     let { channel: t, users: n, selected: l = !1 } = e,
-        m = (0, a.ZP)(t),
+        m = (0, o.ZP)(t),
         h = null;
     null != n &&
         n.length > 0 &&
-        (h = (0, r.jsx)(o.Z, {
+        (h = (0, r.jsx)(a.Z, {
             guildId: t.guild_id,
             className: f.voiceUserList,
             users: n,

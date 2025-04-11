@@ -24,8 +24,8 @@ var r = n(687249),
     N = 4,
     A = '[object Arguments]',
     C = '[object Array]',
-    R = '[object Boolean]',
-    P = '[object Date]',
+    P = '[object Boolean]',
+    R = '[object Date]',
     w = '[object Error]',
     D = '[object Function]',
     L = '[object GeneratorFunction]',
@@ -49,12 +49,12 @@ var r = n(687249),
     X = '[object Uint16Array]',
     J = '[object Uint32Array]',
     $ = {};
-function ee(e, t, n, C, R, P) {
+function ee(e, t, n, C, P, R) {
     var w,
         x = t & S,
         M = t & T,
         j = t & N;
-    if ((n && (w = R ? n(e, C, R, P) : n(e)), void 0 !== w)) return w;
+    if ((n && (w = P ? n(e, C, P, R) : n(e)), void 0 !== w)) return w;
     if (!v(e)) return e;
     var U = E(e);
     if (U) {
@@ -63,32 +63,32 @@ function ee(e, t, n, C, R, P) {
         var G = p(e),
             B = G == D || G == L;
         if (b(e)) return l(e, x);
-        if (G == k || G == A || (B && !R)) {
+        if (G == k || G == A || (B && !P)) {
             if (((w = M || B ? {} : g(e)), !x)) return M ? d(e, s(w, e)) : u(e, a(w, e));
         } else {
-            if (!$[G]) return R ? e : {};
+            if (!$[G]) return P ? e : {};
             w = m(e, G, x);
         }
     }
-    P || (P = new r());
-    var V = P.get(e);
+    R || (R = new r());
+    var V = R.get(e);
     if (V) return V;
-    P.set(e, w),
+    R.set(e, w),
         O(e)
             ? e.forEach(function (r) {
-                  w.add(ee(r, t, n, r, e, P));
+                  w.add(ee(r, t, n, r, e, R));
               })
             : y(e) &&
               e.forEach(function (r, i) {
-                  w.set(i, ee(r, t, n, i, e, P));
+                  w.set(i, ee(r, t, n, i, e, R));
               });
     var F = j ? (M ? _ : f) : M ? keysIn : I,
         Z = U ? void 0 : F(e);
     return (
         i(Z || e, function (r, i) {
-            Z && (r = e[(i = r)]), o(w, i, ee(r, t, n, i, e, P));
+            Z && (r = e[(i = r)]), o(w, i, ee(r, t, n, i, e, R));
         }),
         w
     );
 }
-($[A] = $[C] = $[F] = $[Z] = $[R] = $[P] = $[H] = $[W] = $[Y] = $[K] = $[z] = $[x] = $[M] = $[k] = $[j] = $[U] = $[G] = $[B] = $[q] = $[Q] = $[X] = $[J] = !0), ($[w] = $[D] = $[V] = !1), (e.exports = ee);
+($[A] = $[C] = $[F] = $[Z] = $[P] = $[R] = $[H] = $[W] = $[Y] = $[K] = $[z] = $[x] = $[M] = $[k] = $[j] = $[U] = $[G] = $[B] = $[q] = $[Q] = $[X] = $[J] = !0), ($[w] = $[D] = $[V] = !1), (e.exports = ee);

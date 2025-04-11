@@ -12,20 +12,20 @@ var l = r(120356),
     c = r(197653),
     s = r(987106),
     u = r(927057),
-    p = r(574597),
-    d = r(378975),
+    d = r(574597),
+    p = r(378975),
     f = r(732586),
     b = r(988075),
     O = r(12067),
-    y = r(676149),
-    m = r(861529),
+    m = r(676149),
+    y = r(861529),
     j = r(568248),
     g = r(770009),
     h = r(889515),
     v = r(985184),
     P = r(892519),
     x = r(841806);
-function w(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -50,7 +50,7 @@ function w(e) {
     }
     return e;
 }
-function S(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,35 +73,35 @@ function C(e) {
         (function (e, t) {
             switch (e.type) {
                 case o.re.ACTION_ROW:
-                    return (0, n.jsx)(h.Z, S(w({}, e), { renderComponents: C }), t);
+                    return (0, n.jsx)(h.Z, w(S({}, e), { renderComponents: C }), t);
                 case o.re.BUTTON:
-                    return (0, n.jsx)(s.Z, w({}, e), t);
+                    return (0, n.jsx)(s.Z, S({}, e), t);
                 case o.re.STRING_SELECT:
-                    return (0, n.jsx)(d.Z, w({}, e), t);
+                    return (0, n.jsx)(p.Z, S({}, e), t);
                 case o.re.CHANNEL_SELECT:
-                    return (0, n.jsx)(u.Z, w({}, e), t);
+                    return (0, n.jsx)(u.Z, S({}, e), t);
                 case o.re.USER_SELECT:
                 case o.re.ROLE_SELECT:
                 case o.re.MENTIONABLE_SELECT:
-                    return (0, n.jsx)(p.Z, w({}, e), t);
+                    return (0, n.jsx)(d.Z, S({}, e), t);
                 case o.re.TEXT_INPUT:
-                    return (0, n.jsx)(f.Z, w({}, e), t);
+                    return (0, n.jsx)(f.Z, S({}, e), t);
                 case o.re.SECTION:
-                    return (0, n.jsx)(P.Z, w({}, e), t);
+                    return (0, n.jsx)(P.Z, S({}, e), t);
                 case o.re.TEXT_DISPLAY:
-                    return (0, n.jsx)(m.Z, w({}, e), t);
+                    return (0, n.jsx)(y.Z, S({}, e), t);
                 case o.re.MEDIA_GALLERY:
-                    return (0, n.jsx)(O.Z, w({}, e), t);
+                    return (0, n.jsx)(O.Z, S({}, e), t);
                 case o.re.THUMBNAIL:
-                    return (0, n.jsx)(j.Z, w({}, e), t);
+                    return (0, n.jsx)(j.Z, S({}, e), t);
                 case o.re.FILE:
-                    return (0, n.jsx)(b.Z, w({}, e), t);
+                    return (0, n.jsx)(b.Z, S({}, e), t);
                 case o.re.SEPARATOR:
-                    return (0, n.jsx)(y.Z, w({}, e), t);
+                    return (0, n.jsx)(m.Z, S({}, e), t);
                 case o.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, n.jsx)(g.Z, w({}, e), t);
+                    return (0, n.jsx)(g.Z, S({}, e), t);
                 case o.re.CONTAINER:
-                    return (0, n.jsx)(v.ZP, S(w({}, e), { renderComponents: C }), t);
+                    return (0, n.jsx)(v.ZP, w(S({}, e), { renderComponents: C }), t);
             }
         })(e, t.toString())
     );

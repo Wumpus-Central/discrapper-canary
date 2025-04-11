@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(602667),
     A = n(644646),
     C = n(667105),
-    R = n(341907),
-    P = n(46140),
+    P = n(341907),
+    R = n(46140),
     w = n(981631),
     D = n(231338),
     L = n(388032),
@@ -143,7 +143,7 @@ function V(e) {
                 questContentCTA: O.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, R.openDisclosureModal)(y, {
+                (0, P.openDisclosureModal)(y, {
                     content: S.jn.MEMBERS_LIST,
                     ctaContent: O.jZ.OPEN_DISCLOSURE
                 });
@@ -155,7 +155,7 @@ function V(e) {
                 questContentCTA: O.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, R.navigateToQuestHome)({
+                (0, P.navigateToQuestHome)({
                     fromContent: S.jn.MEMBERS_LIST,
                     questId: y.id
                 });
@@ -285,7 +285,7 @@ function V(e) {
                                             quest: y,
                                             questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
-                                            location: P.dr.MEMBERS_LIST,
+                                            location: R.dr.MEMBERS_LIST,
                                             onClick: ea
                                         })
                                 ]

@@ -1,6 +1,6 @@
 r.d(t, {
     aB: () => u,
-    rJ: () => p,
+    rJ: () => d,
     yF: () => s
 }),
     r(953529);
@@ -78,7 +78,7 @@ function u(e) {
         })
     );
 }
-function p(e) {
+function d(e) {
     let t = e.item.originalItem.media,
         r = i.Z.toURLSafe(t.proxyUrl);
     return null == r

@@ -1,23 +1,23 @@
-n.d(t, { Z: () => o }), n(642613);
+n.d(t, { Z: () => a }), n(642613);
 var i = n(192379),
     r = n(700089),
     l = n(654455),
-    a = n(496158);
-function o(e) {
-    let { context: t, commands: n, limit: o = n.length } = e,
-        s = (0, a.D)(t),
+    o = n(496158);
+function a(e) {
+    let { context: t, commands: n, limit: a = n.length } = e,
+        s = (0, o.D)(t),
         c = (0, r.R)(s),
-        d = i.useMemo(() => n.reduce((e, t) => ((e[t.id] = t), e), {}), [n]);
+        u = i.useMemo(() => n.reduce((e, t) => ((e[t.id] = t), e), {}), [n]);
     return i.useMemo(
         () =>
             c
-                .map((e) => d[e])
+                .map((e) => u[e])
                 .filter((e) => null != e)
                 .sort((e, t) => {
                     let n = l.ZP.getScoreWithoutLoadingLatest(s, e);
                     return l.ZP.getScoreWithoutLoadingLatest(s, t) - n;
                 })
-                .slice(0, o),
-        [c, d, s, o]
+                .slice(0, a),
+        [c, u, s, a]
     );
 }

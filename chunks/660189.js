@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r,
     i = n(442837),
     o = n(570140),
@@ -166,7 +166,7 @@ class C extends (r = i.ZP.Store) {
     }
 }
 u(C, 'displayName', 'ForumPostMessagesStore');
-let R = new C(o.Z, {
+let P = new C(o.Z, {
     CONNECTION_OPEN: h,
     MESSAGE_CREATE: E,
     MESSAGE_UPDATE: y,

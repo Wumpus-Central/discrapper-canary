@@ -93,18 +93,18 @@ function C(e, t) {
         e
     );
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -129,7 +129,7 @@ function x() {
 }
 function M(e) {
     var { children: t } = e,
-        n = R(e, ['children']);
+        n = P(e, ['children']);
     return (0, r.jsx)('div', C(N({ className: S.badgeContainer }, n), { children: t }));
 }
 function k(e) {

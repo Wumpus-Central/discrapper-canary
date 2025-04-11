@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => R }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => P }), n(388685), n(704826), n(35282);
 var i,
     o = n(442837),
     a = n(570140),
@@ -170,7 +170,7 @@ class C extends (i = o.ZP.PersistedStore) {
     }
 }
 d(C, 'displayName', 'InstallationManagerStore'), d(C, 'persistKey', 'InstallationManagerStore');
-let R = new C(a.Z, {
+let P = new C(a.Z, {
     DISPATCH_APPLICATION_INSTALL: v,
     DISPATCH_APPLICATION_UNINSTALL: I,
     DISPATCH_APPLICATION_CANCEL: O,

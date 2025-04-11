@@ -82,11 +82,11 @@ function g(e, t) {
 }
 let E = i.forwardRef(function (e, t) {
     var n,
-        { avatar: o, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: v, selected: O, muted: I, to: S, avatarClassName: T, selectedClassName: N, innerClassName: A, wrapContent: C, highlighted: R, focusProps: P } = e,
+        { avatar: o, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: v, selected: O, muted: I, to: S, avatarClassName: T, selectedClassName: N, innerClassName: A, wrapContent: C, highlighted: P, focusProps: R } = e,
         w = m(e, ['avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
     (w.className = a()(w.className, d.container, {
         [d.selected]: O,
-        [d.highlighted]: R,
+        [d.highlighted]: P,
         [d.active]: O,
         [null != N ? N : '']: O,
         [d.clickable]: !O && (null != S || null != y),
@@ -149,7 +149,7 @@ let E = i.forwardRef(function (e, t) {
     return null != S
         ? (0, r.jsx)(
               l.tEY,
-              h(_({}, P), {
+              h(_({}, R), {
                   children: (0, r.jsx)(
                       s.rU,
                       h(
@@ -176,7 +176,7 @@ let E = i.forwardRef(function (e, t) {
                     _(
                         {
                             onClick: y,
-                            focusProps: P
+                            focusProps: R
                         },
                         w
                     ),
@@ -189,7 +189,7 @@ let E = i.forwardRef(function (e, t) {
             )
           : (0, r.jsx)(
                 l.tEY,
-                h(_({}, P), {
+                h(_({}, R), {
                     children: (0, r.jsx)(
                         'div',
                         h(_({}, w), {

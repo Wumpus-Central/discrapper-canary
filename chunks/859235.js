@@ -97,8 +97,8 @@ function S(e, t) {
     let { id: n, channelId: i, className: o, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: O, onKeyDown: S, draftType: T, size: N = 1 } = e,
         A = (0, s.JA)(n),
         { onFocus: C } = A,
-        R = y(A, ['onFocus']),
-        { handleFocus: P, handleBlur: w } = (0, f.b)(C),
+        P = y(A, ['onFocus']),
+        { handleFocus: R, handleBlur: w } = (0, f.b)(C),
         D = 0 === N,
         L = null != E,
         x = (e) => {
@@ -124,8 +124,8 @@ function S(e, t) {
     return (0, r.jsx)(l.tEY, {
         children: (0, r.jsx)(
             'li',
-            b(g({}, R), {
-                onFocus: P,
+            b(g({}, P), {
+                onFocus: R,
                 onBlur: w,
                 onKeyDown: x,
                 className: a()(h.upload, o, { [h.sizeClip]: 2 === N }),

@@ -2,93 +2,93 @@ n.d(t, { Z: () => P }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    a = n(218061),
-    o = n(481060),
+    o = n(218061),
+    a = n(481060),
     s = n(115130),
     c = n(361213),
-    d = n(778569),
-    u = n(213459),
+    u = n(778569),
+    d = n(213459),
     p = n(835473),
     m = n(424602),
     f = n(541099),
     h = n(827498),
     b = n(783097),
-    x = n(753972),
-    C = n(387658),
-    _ = n(536650),
-    v = n(675993),
-    y = n(689079),
-    N = n(388032),
-    g = n(189102),
+    _ = n(753972),
+    y = n(387658),
+    x = n(536650),
+    C = n(675993),
+    v = n(689079),
+    g = n(388032),
+    N = n(189102),
     j = n(413097);
 function P(e) {
     var t;
-    let { context: n, application: c, sectionName: d, showFriendsTab: P } = e,
-        A = 'channel' === n.type ? n.channel : void 0,
-        I = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
-        O = null != (t = (0, p.q)(c.id === y.bi.BUILT_IN ? null : c.id)) ? t : c,
-        S = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(O.id)),
-        T = (0, b.ye)(O) ? E : v.Z,
+    let { context: n, application: c, sectionName: u, showFriendsTab: P } = e,
+        O = 'channel' === n.type ? n.channel : void 0,
+        A = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
+        I = null != (t = (0, p.q)(c.id === v.bi.BUILT_IN ? null : c.id)) ? t : c,
+        S = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(I.id)),
+        T = (0, b.ye)(I) ? E : C.Z,
         L = m.PM.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
         w = r.useRef(null),
         [R, k] = r.useState(!1),
         { iconURL: Z, name: M } = r.useMemo(
             () =>
-                (0, b.sl)(O, {
+                (0, b.sl)(I, {
                     fakeAppIconURL: j,
                     size: 84
                 }),
-            [O]
+            [I]
         ),
-        W = (0, u.PL)(!0, !0),
-        D = (0, u.LD)(null == A ? void 0 : A.guild_id, !0),
-        U = r.useMemo(() => (0, u.If)(n, O.id), [W, D, n, O.id]),
-        B = !U.isGuildInstalled && !U.isUserInstalled;
+        W = (0, d.PL)(!0, !0),
+        D = (0, d.LD)(null == O ? void 0 : O.guild_id, !0),
+        B = r.useMemo(() => (0, d.If)(n, I.id), [W, D, n, I.id]),
+        U = !B.isGuildInstalled && !B.isUserInstalled;
     return (
         r.useEffect(() => {
-            B && u.ZP.queryInstallOnDemandApp(O.id, null == A ? void 0 : A.id);
-        }, [O.id, null == A ? void 0 : A.id, B]),
-        (0, i.jsxs)(o.u2D, {
-            className: g.container,
+            U && d.ZP.queryInstallOnDemandApp(I.id, null == O ? void 0 : O.id);
+        }, [I.id, null == O ? void 0 : O.id, U]),
+        (0, i.jsxs)(a.u2D, {
+            className: N.container,
             fade: !0,
             ref: w,
             role: 'region',
-            'aria-label': N.NW.formatToPlainString(N.t['4OP4Ul'], { applicationName: M }),
+            'aria-label': g.NW.formatToPlainString(g.t['4OP4Ul'], { applicationName: M }),
             children: [
-                (0, i.jsx)(_.Z, {
-                    application: O,
+                (0, i.jsx)(x.Z, {
+                    application: I,
                     context: n,
                     name: M,
                     iconURL: Z,
                     scrollerRef: w,
-                    sectionName: d
+                    sectionName: u
                 }),
                 null != Z &&
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(_.Z, {
                         src: Z,
-                        className: g.appIcon
+                        className: N.appIcon
                     }),
-                (0, i.jsx)(a.Z, { size: L.enabled ? 44 : 54 }),
+                (0, i.jsx)(o.Z, { size: L.enabled ? 44 : 54 }),
                 (0, i.jsx)(T, {
                     context: n,
-                    application: O,
-                    sectionName: d,
+                    application: I,
+                    sectionName: u,
                     hasCommands: R,
                     showFriendsTab: P
                 }),
-                I === h._b.TEXT
-                    ? (0, i.jsx)(C.Z, {
+                A === h._b.TEXT
+                    ? (0, i.jsx)(y.Z, {
                           context: n,
-                          application: O,
-                          sectionName: d,
-                          installOnDemand: B,
+                          application: I,
+                          sectionName: u,
+                          installOnDemand: U,
                           setHasCommands: k
                       })
                     : null,
                 L.enabled
-                    ? (0, i.jsx)(v.u, {
+                    ? (0, i.jsx)(C.u, {
                           context: n,
-                          application: O,
+                          application: I,
                           hasCommands: R,
                           isDeveloperOfThisApp: S
                       })
@@ -98,21 +98,21 @@ function P(e) {
     );
 }
 function E(e) {
-    let { context: t, application: n, sectionName: r, hasCommands: l, showFriendsTab: a } = e,
-        o = (0, d.Z)({
+    let { context: t, application: n, sectionName: r, hasCommands: l, showFriendsTab: o } = e,
+        a = (0, u.Z)({
             applicationId: n.id,
             size: 2048,
             names: ['embedded_cover']
         }),
         s = (0, b.yJ)(n),
-        u = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(v.Z, {
+        d = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
+    return (0, i.jsx)(C.Z, {
         context: t,
         application: n,
-        imageCoverUrl: o.url,
-        videoUrl: u,
+        imageCoverUrl: a.url,
+        videoUrl: d,
         sectionName: r,
         hasCommands: l,
-        showFriendsTab: a
+        showFriendsTab: o
     });
 }

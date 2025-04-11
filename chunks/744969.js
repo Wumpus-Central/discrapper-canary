@@ -7,24 +7,24 @@ var n = r(200651),
     c = r(570140),
     s = r(171246),
     u = r(509545),
-    p = r(55563),
-    d = r(551428),
+    d = r(55563),
+    p = r(551428),
     f = r(74538),
     b = r(937615),
     O = r(147496),
-    y = r(519896),
-    m = r(981631),
+    m = r(519896),
+    y = r(981631),
     j = r(388032);
-let g = (0, i.Kb)([p.Z, u.Z, d.Z], {
-    queryId: (e) => m.McO.APP_PREMIUM_BUTTON(e),
+let g = (0, i.Kb)([d.Z, u.Z, p.Z], {
+    queryId: (e) => y.McO.APP_PREMIUM_BUTTON(e),
     get: (e) => {
         var t;
         if (null == e) return;
-        let r = p.Z.get(e),
+        let r = d.Z.get(e),
             n = null != (t = u.Z.getForSKU(e)) ? t : [],
-            l = d.Z.getForSKU(e),
-            i = p.Z.getParentSKU(e);
-        if (null != r && null != l && (null == r || r.type !== m.epS.SUBSCRIPTION || null != i))
+            l = p.Z.getForSKU(e),
+            i = d.Z.getParentSKU(e);
+        if (null != r && null != l && (null == r || r.type !== y.epS.SUBSCRIPTION || null != i))
             return {
                 parentSku: i,
                 sku: r,
@@ -35,7 +35,7 @@ let g = (0, i.Kb)([p.Z, u.Z, d.Z], {
     load: async (e, t) => {
         if (null == t) return;
         let r = {
-                url: m.ANM.STOREFRONT_PREMIUM_BUTTON(t),
+                url: y.ANM.STOREFRONT_PREMIUM_BUTTON(t),
                 rejectWithError: !1
             },
             { body: n } = await o.tn.get(r);
@@ -69,7 +69,7 @@ function h(e) {
             if ((null == i ? void 0 : i.applicationId) == null || (null == i ? void 0 : i.id) == null || (null == i ? void 0 : i.flags) == null) return null;
             (0, a.h7j)((e) => {
                 let { onClose: t, transitionState: r } = e;
-                return (0, n.jsx)(y.SubscriptionDetailsModal, {
+                return (0, n.jsx)(m.SubscriptionDetailsModal, {
                     appId: i.applicationId,
                     subscriptionType: (0, s.KW)(i.flags) ? 'user' : 'guild',
                     onClose: t,
@@ -79,7 +79,7 @@ function h(e) {
                 });
             });
         }, [null == i ? void 0 : i.applicationId, null == i ? void 0 : i.id, null == i ? void 0 : i.flags]),
-        p = l.useCallback(() => {
+        d = l.useCallback(() => {
             if (null == i) return null;
             (0, a.h7j)((e) => {
                 let { onClose: t, transitionState: r } = e;
@@ -91,13 +91,13 @@ function h(e) {
                 });
             });
         }, [i]);
-    if (null != i && null != o && (null == i || i.type !== m.epS.SUBSCRIPTION || null != r)) {
+    if (null != i && null != o && (null == i || i.type !== y.epS.SUBSCRIPTION || null != r)) {
         if (null == e || (null != i && !i.available))
             return {
                 disabled: !0,
                 label: j.NW.string(j.t.CHa0vL)
             };
-        if (i.type === m.epS.SUBSCRIPTION) {
+        if (i.type === y.epS.SUBSCRIPTION) {
             if (null == c || 0 === c.length)
                 return {
                     disabled: !0,
@@ -125,7 +125,7 @@ function h(e) {
                       skuName: i.name,
                       price: (0, b.T4)(i.price.amount, i.price.currency)
                   }),
-                  onClick: p
+                  onClick: d
               };
     }
 }

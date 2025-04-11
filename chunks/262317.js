@@ -112,7 +112,7 @@ function M(e) {
 }
 let L = (0, p.$)(function (e) {
     var t;
-    let { collapsed: l, user: p, channel: k, mute: M, localMute: L, localVideoDisabled: D, deaf: W, video: U, embeddedApplication: B, serverMute: H, serverDeaf: G, nick: F, ringing: V, speaking: z, disconnected: Y, connectUserDragSource: q, canDrag: K, isStreaming: X, isWatching: Q, isGuest: J, priority: $, showPreview: ee, hidePreview: et, shouldShowPreview: en, previewIsOpen: er, otherClientSessionType: ei, voicePlatform: el, isSelfOnOtherClient: eo = !1, tabIndex: ea, location: es, isSelf: ec, application: eu } = e,
+    let { collapsed: l, user: p, channel: k, mute: M, localMute: L, localVideoDisabled: D, deaf: W, video: U, embeddedApplication: B, serverMute: G, serverDeaf: F, nick: H, ringing: V, speaking: z, disconnected: Y, connectUserDragSource: q, canDrag: K, isStreaming: X, isWatching: Q, isGuest: J, priority: $, showPreview: ee, hidePreview: et, shouldShowPreview: en, previewIsOpen: er, otherClientSessionType: ei, voicePlatform: el, isSelfOnOtherClient: eo = !1, tabIndex: ea, location: es, isSelf: ec, application: eu } = e,
         ed = i.useRef(null),
         [ep, eh] = i.useState(!1),
         ef = (0, x.ic)({ location: 'VoiceUser' }),
@@ -173,11 +173,11 @@ let L = (0, p.$)(function (e) {
                     priority: $,
                     ringing: V,
                     deaf: W,
-                    nick: F,
+                    nick: H,
                     collapsed: l,
                     overlap: l,
-                    serverMute: H,
-                    serverDeaf: G,
+                    serverMute: G,
+                    serverDeaf: F,
                     tabIndex: ea,
                     otherClientSessionType: ei,
                     voicePlatform: el,

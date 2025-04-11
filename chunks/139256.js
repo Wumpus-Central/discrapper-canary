@@ -3,7 +3,7 @@ n.d(t, {
     $w: () => L,
     Og: () => W,
     ZY: () => M,
-    sc: () => R,
+    sc: () => k,
     zs: () => U
 }),
     n(314940),
@@ -240,7 +240,7 @@ function Z(e) {
             });
     }
 }
-function k(e) {
+function R(e) {
     var t;
     let { attachment: n, className: i } = e,
         a = (0, g.n)(),
@@ -258,7 +258,7 @@ function k(e) {
         shouldRenderAccessory: !1
     });
 }
-function R(e) {
+function k(e) {
     let { className: t, emoji: n } = e;
     return (0, r.jsx)(c.Z, {
         className: t,
@@ -286,7 +286,7 @@ function L(e) {
         if (null != e)
             return D(
                 n,
-                (0, r.jsx)(k, {
+                (0, r.jsx)(R, {
                     className: i,
                     attachment: e
                 })
@@ -295,7 +295,7 @@ function L(e) {
     return null != t.emoji
         ? D(
               n,
-              (0, r.jsx)(R, {
+              (0, r.jsx)(k, {
                   className: a,
                   emoji: t.emoji
               })

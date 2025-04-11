@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -52,15 +52,15 @@ function C(e) {
     }
     return e;
 }
-function R(e) {
-    let { user: t, currentUser: n, guildId: A, channelId: R, messageId: P, roleId: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
+function P(e) {
+    let { user: t, currentUser: n, guildId: A, channelId: P, messageId: R, roleId: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         { analyticsLocations: k } = (0, c.ZP)([...M, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         j = (0, f.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
             guildId: A,
-            channelId: R,
-            messageId: P,
+            channelId: P,
+            messageId: R,
             roleId: w
         }),
         U = (0, p.ZP)(t.id, A),
@@ -128,7 +128,7 @@ function R(e) {
                                     user: t,
                                     displayProfile: U,
                                     guildId: A,
-                                    channelId: R,
+                                    channelId: P,
                                     profileType: S.y0.BITE_SIZE,
                                     onOpenProfile: x ? void 0 : Z
                                 }),
@@ -147,13 +147,13 @@ function R(e) {
                             guild: G,
                             isHovering: F,
                             onOpenProfile: x ? void 0 : Z,
-                            channelId: R,
+                            channelId: P,
                             onClose: D
                         }),
                         (0, r.jsx)(I.Z, {
                             user: t,
                             guildId: A,
-                            channelId: R,
+                            channelId: P,
                             onClose: D
                         })
                     ]

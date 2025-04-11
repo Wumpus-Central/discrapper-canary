@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(613413),
     A = n(94795),
     C = n(327943),
-    R = n(907459),
-    P = n(559407),
+    P = n(907459),
+    R = n(559407),
     w = n(556766),
     D = n(514361),
     L = n(724145),
@@ -135,7 +135,7 @@ let eg = (0, en.Un)({
         webpackId: 177741
     }),
     eE = (0, en.Un)({
-        createPromise: () => Promise.all([n.e('78447'), n.e('13474')]).then(n.bind(n, 420541)),
+        createPromise: () => n.e('13474').then(n.bind(n, 420541)),
         webpackId: 420541
     }),
     eb = i.memo(function (e) {
@@ -188,13 +188,13 @@ let eg = (0, en.Un)({
                 }));
         }, [eN, eA, eT, o]);
         let eC = i.useRef(document.body),
-            eR = ev || eA,
-            eP = eO && !eA,
+            eP = ev || eA,
+            eR = eO && !eA,
             ew = e_ || eh,
             { enabled: eD } = Y.Z.useExperiment(
                 { location: 'AppSkeleton' },
                 {
-                    autoTrackExposure: ew && (eR || eP),
+                    autoTrackExposure: ew && (eP || eR),
                     disable: !ew
                 }
             ),
@@ -243,7 +243,7 @@ let eg = (0, en.Un)({
                                                                                             className: a()(y ? ef.mobileApp : ef.app),
                                                                                             children: t
                                                                                         }),
-                                                                                        (0, r.jsx)(P.Z, {}),
+                                                                                        (0, r.jsx)(R.Z, {}),
                                                                                         (0, r.jsx)(g.Z, {}),
                                                                                         (0, r.jsx)(p.nKe, {}),
                                                                                         (0, r.jsx)(E.Z, {}),
@@ -263,7 +263,7 @@ let eg = (0, en.Un)({
                                                                 }),
                                                                 (0, r.jsx)(w.Z, {}),
                                                                 (0, r.jsx)(m.Z, {}),
-                                                                eR &&
+                                                                eP &&
                                                                     !eD &&
                                                                     (0, r.jsx)(L.Z, {
                                                                         markAsDismissed: eA
@@ -276,16 +276,16 @@ let eg = (0, en.Un)({
                                                                               },
                                                                         showClientThemesCoachmark: eA
                                                                     }),
-                                                                eP &&
+                                                                eR &&
                                                                     !eD &&
-                                                                    (0, r.jsx)(R.Z, {
+                                                                    (0, r.jsx)(P.Z, {
                                                                         isCoachmark: eN,
                                                                         markAsDismissed: eT
                                                                     }),
-                                                                (eR || eP) &&
+                                                                (eP || eR) &&
                                                                     eD &&
                                                                     (0, r.jsx)(q.Z, {
-                                                                        initialTab: eP ? q._.APP_ICONS : q._.CLIENT_THEMES,
+                                                                        initialTab: eR ? q._.APP_ICONS : q._.CLIENT_THEMES,
                                                                         markAsDismissed: eT,
                                                                         isCoachmark: eA
                                                                     }),

@@ -92,17 +92,17 @@ function N(e, t) {
 let A = i.forwardRef(function (e, t) {
     var o, v, I;
     let N,
-        { canRemove: A, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
-        x = (0, s.JA)(R.id),
+        { canRemove: A, className: C, role: P, onRemove: R, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
+        x = (0, s.JA)(P.id),
         { tabIndex: M } = x,
         k = T(x, ['tabIndex']),
         j = (0, g.p9)({
-            roleId: R.id,
+            roleId: P.id,
             size: 16,
             guildId: w
         }),
         U = (0, c.e7)([_.Z], () => _.Z.roleStyle),
-        G = (null == (o = R.tags) ? void 0 : o.guild_connections) === null,
+        G = (null == (o = P.tags) ? void 0 : o.guild_connections) === null,
         B = i.useCallback(
             (e) => {
                 (0, f.jW)(e, async () => {
@@ -111,21 +111,21 @@ let A = i.forwardRef(function (e, t) {
                         (0, r.jsx)(
                             e,
                             S(O({}, t), {
-                                id: R.id,
+                                id: P.id,
                                 label: b.NW.string(b.t.sMsaLi)
                             })
                         );
                 });
             },
-            [R.id]
+            [P.id]
         ),
         V = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        F = null != (v = R.colorString) ? v : V,
+        F = null != (v = P.colorString) ? v : V,
         Z = null != (I = (0, l.wK)(F, 0.6)) ? I : void 0,
         H = u.Z.unsafe_rawColors.WHITE_500.css,
         W = (0, l._i)(F);
     null != W && 0.3 > (0, l.Bd)(W) && (H = u.Z.unsafe_rawColors.PRIMARY_630.css);
-    let Y = (0, E.X)(w, R.colorStrings);
+    let Y = (0, E.X)(w, P.colorStrings);
     N = G
         ? (0, r.jsx)(p.Z, {
               className: y.roleFlowerStar,
@@ -156,11 +156,11 @@ let A = i.forwardRef(function (e, t) {
                       text: b.NW.string(b.t.u3RVsL),
                       children: (0, r.jsxs)(d.P3F, {
                           className: a()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
-                          onClick: P,
+                          onClick: R,
                           tabIndex: M,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
                           'aria-hidden': !1,
-                          'aria-label': b.NW.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
+                          'aria-label': b.NW.formatToPlainString(b.t.QrxwhY, { roleName: P.name }),
                           children: [
                               N,
                               (0, r.jsx)(d.Dio, {
@@ -177,7 +177,7 @@ let A = i.forwardRef(function (e, t) {
                       tabIndex: -1,
                       focusProps: { focusClassName: y.roleRemoveIconFocused },
                       'aria-hidden': !0,
-                      'aria-label': b.NW.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
+                      'aria-label': b.NW.formatToPlainString(b.t.QrxwhY, { roleName: P.name }),
                       children: N
                   });
     return (0, r.jsx)(d.tEY, {
@@ -191,7 +191,7 @@ let A = i.forwardRef(function (e, t) {
                         style: K,
                         onContextMenu: B,
                         onMouseDown: L,
-                        'aria-label': R.name,
+                        'aria-label': P.name,
                         tabIndex: M
                     },
                     k
@@ -205,7 +205,7 @@ let A = i.forwardRef(function (e, t) {
                             className: y.roleName,
                             children: (0, r.jsx)(d.Text, {
                                 variant: 'text-xs/medium',
-                                children: (0, r.jsx)(h.Z, { children: R.name })
+                                children: (0, r.jsx)(h.Z, { children: P.name })
                             })
                         })
                     ]

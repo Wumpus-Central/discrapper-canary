@@ -6,8 +6,8 @@ var a = n(481060),
     i = n(190014),
     c = n(301812),
     l = n(988043),
-    s = n(919539),
-    _ = n(526761),
+    _ = n(919539),
+    s = n(526761),
     d = n(388032),
     u = n(671364);
 function b(e) {
@@ -15,19 +15,19 @@ function b(e) {
     return (0, o.jsxs)(r.Z, {
         children: [
             (0, o.jsx)(l.Z, {
-                ingress: _.f4.SERVER_PRIVACY_MODAL,
+                ingress: s.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
-            (0, o.jsx)(s.Z, {
-                ingress: _.f4.SERVER_PRIVACY_MODAL,
+            (0, o.jsx)(_.Z, {
+                ingress: s.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
             (0, o.jsx)(c.Z, {
-                ingress: _.f4.SERVER_PRIVACY_MODAL,
+                ingress: s.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
             (0, o.jsx)(i.Z, {
-                ingress: _.f4.SERVER_PRIVACY_MODAL,
+                ingress: s.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
             (0, o.jsx)(a.Text, {

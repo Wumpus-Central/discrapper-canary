@@ -7,11 +7,11 @@ function a(e, t, r) {
     let a = {},
         c = {};
     for (let [s, u] of e.entries()) {
-        let p = (0, o.q)({
+        let d = (0, o.q)({
             proxyURL: u.proxyUrl,
             url: u.url
         });
-        (a[p] = (l) =>
+        (a[d] = (l) =>
             (function (e, t, r) {
                 var l, o;
                 let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -65,7 +65,7 @@ function a(e, t, r) {
                         l)
                     );
             })(l, e, s, t, r)),
-            (c[p] = () => (0, l.WG)(u, e.length > 1));
+            (c[d] = () => (0, l.WG)(u, e.length > 1));
     }
     return {
         srcToOnClickOverride: a,

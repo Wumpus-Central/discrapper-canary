@@ -1,33 +1,33 @@
-n.d(t, { Z: () => s }), n(539854), n(388685);
-var r = n(512722),
-    i = n.n(r),
-    l = n(90757),
-    u = n.n(l),
-    o = n(65154);
-let a = [o.vA.WINDOW, o.vA.SCREEN];
-function s(e, t, n) {
-    var r;
-    let l = window.DiscordNative;
-    i()(null != l, "Can't get desktop sources outside of native app"),
-        (t = null != (r = null == t ? void 0 : t.filter((e) => a.includes(e))) ? r : a),
-        (n =
-            null != n
-                ? n
+r.d(t, { Z: () => c }), r(539854), r(388685);
+var n = r(512722),
+    l = r.n(n),
+    o = r(90757),
+    i = r.n(o),
+    u = r(65154);
+let a = [u.vA.WINDOW, u.vA.SCREEN];
+function c(e, t, r) {
+    var n;
+    let o = window.DiscordNative;
+    l()(null != o, "Can't get desktop sources outside of native app"),
+        (t = null != (n = null == t ? void 0 : t.filter((e) => a.includes(e))) ? n : a),
+        (r =
+            null != r
+                ? r
                 : {
                       width: 150,
                       height: 150
                   });
-    let s = [];
+    let c = [];
     return (
-        t.includes(o.vA.SCREEN) && e.supports(o.AN.SCREEN_PREVIEWS) && (s.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== o.vA.SCREEN))),
-        t.includes(o.vA.WINDOW) && e.supports(o.AN.WINDOW_PREVIEWS) && (s.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== o.vA.WINDOW))),
+        t.includes(u.vA.SCREEN) && e.supports(u.AN.SCREEN_PREVIEWS) && (c.push(e.getScreenPreviews(r.width, r.height)), (t = t.filter((e) => e !== u.vA.SCREEN))),
+        t.includes(u.vA.WINDOW) && e.supports(u.AN.WINDOW_PREVIEWS) && (c.push(e.getWindowPreviews(r.width, r.height)), (t = t.filter((e) => e !== u.vA.WINDOW))),
         0 !== t.length &&
-            s.push(
-                l.desktopCapture.getDesktopCaptureSources({
+            c.push(
+                o.desktopCapture.getDesktopCaptureSources({
                     types: t,
-                    thumbnailSize: n
+                    thumbnailSize: r
                 })
             ),
-        Promise.all(s).then((e) => u()(e))
+        Promise.all(c).then((e) => i()(e))
     );
 }

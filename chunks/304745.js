@@ -35,10 +35,10 @@ function Z(e) {
         { isHovered: M, setIsHovered: L, onMouseEnter: D, onMouseLeave: W } = (0, x.Z)(200, 300),
         U = (0, O.Z)({ location: 'CenterControlTrayActivityButton' }),
         { coloredIconsEnabled: B } = (0, j.Z)({ location: 'VideoButton' }),
-        H = (0, p.a)(s.eR.VOICE_LAUNCHER),
-        G = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
-        F = (0, d.Z)({ channelId: t.id }),
-        V = (B && G) || (!B && (F || (!U && M))),
+        G = (0, p.a)(s.eR.VOICE_LAUNCHER),
+        F = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
+        H = (0, d.Z)({ channelId: t.id }),
+        V = (B && F) || (!B && (H || (!U && M))),
         z = !k,
         Y = i.useCallback(
             (e) => {
@@ -164,7 +164,7 @@ function Z(e) {
                                         );
                                     }
                                 }),
-                                H
+                                G
                                     ? U
                                         ? (0, r.jsx)(g.r, {
                                               top: 2,

@@ -73,14 +73,14 @@ function I(e) {
     let { type: v, textValue: I, maxCharacterCount: S, showRemainingCharsAfterCount: T, className: N } = e,
         A = (0, a.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         C = (0, u.Z)(),
-        R = null != S ? S : C,
-        P = null != (b = null != T ? T : S) ? b : C / 10,
+        P = null != S ? S : C,
+        R = null != (b = null != T ? T : S) ? b : C / 10,
         w = I.length,
         D = null != v.upsellLongMessages && (null != w ? w : 0) > h.J6R && A,
         L = null != v.upsellLongMessages && !A,
         x = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2,
-        M = R - w,
-        k = M > P,
+        M = P - w,
+        k = M > R,
         j = M < 0 && x,
         U = 0 === M ? g.NW.string(g.t.tU6YQ0) : M > 0 ? g.NW.formatToPlainString(g.t.qH8uFR, { count: M }) : g.NW.string(g.t.YSRIqa),
         { analyticsLocations: G } = (0, c.ZP)(l.Z.CHARACTER_COUNT);
@@ -96,7 +96,7 @@ function I(e) {
                     children: [
                         D && B
                             ? (0, r.jsx)(s.ua7, {
-                                  text: g.NW.formatToPlainString(g.t.vcvHa2, { maxLength: R }),
+                                  text: g.NW.formatToPlainString(g.t.vcvHa2, { maxLength: P }),
                                   position: 'top',
                                   children: (e) =>
                                       (0, r.jsx)(

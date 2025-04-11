@@ -83,8 +83,8 @@ let v = 'scientist:triggered',
     N = new u.Z('ExperimentStore'),
     A = !1,
     C = {},
-    R = new Map(),
-    P = {},
+    P = new Map(),
+    R = {},
     w = {
         rawUserExperiments: [],
         rawGuildExperiments: []
@@ -132,7 +132,7 @@ function z(e, t) {
     return !(null == n || (K ? n.time < Y : Date.now() - n.time > V)) && n.hash === t;
 }
 function q(e, t) {
-    return R.get(e) === t;
+    return P.get(e) === t;
 }
 function Q(e) {
     let { experimentId: t, descriptor: n, location: r, location_stack: i, context: o, fingerprint: a, excluded: s, exposureType: l } = e,
@@ -227,7 +227,7 @@ function Q(e) {
             });
     }
     c
-        ? R.set(f, p)
+        ? P.set(f, p)
         : ((C[H(t, n, r, u)] = {
               time: Date.now(),
               hash: W(n)
@@ -551,7 +551,7 @@ function e_(e) {
 }
 function ep(e) {
     let { experimentId: t, experimentType: n, title: r, description: i, buckets: o, commonTriggerPoint: a } = e;
-    P[t] = {
+    R[t] = {
         type: n,
         title: r,
         description: i,
@@ -562,7 +562,7 @@ function ep(e) {
 function eh(e) {
     var t;
     let { experimentId: n, experimentBucket: r, experimentType: i, skipCleanup: o } = e,
-        a = null != i ? i : null == (t = P[n]) ? void 0 : t.type;
+        a = null != i ? i : null == (t = R[n]) ? void 0 : t.type;
     if (null == a) return !1;
     if (
         (null == r
@@ -587,7 +587,7 @@ function eh(e) {
                 })),
         !o)
     )
-        for (let e of [M, k]) for (let t in e) null == P[t] && delete M[t];
+        for (let e of [M, k]) for (let t in e) null == R[t] && delete M[t];
     ef();
 }
 function em(e) {
@@ -615,7 +615,7 @@ class eg extends f.Z {
         return A;
     }
     hasRegisteredExperiment(e) {
-        return null != P[e];
+        return null != R[e];
     }
     getUserExperimentDescriptor(e) {
         if (j) {
@@ -667,7 +667,7 @@ class eg extends f.Z {
             });
     }
     getRegisteredExperiments() {
-        return P;
+        return R;
     }
     getAllExperimentOverrideDescriptors() {
         return j ? E({}, M, k) : {};
@@ -679,7 +679,7 @@ class eg extends f.Z {
     getAllExperimentAssignments() {
         let e = {},
             t = {};
-        for (let n in (Object.keys(P).forEach((e) => {
+        for (let n in (Object.keys(R).forEach((e) => {
             t[G(''.concat(e))] = e;
         }),
         D)) {

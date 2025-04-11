@@ -13,8 +13,8 @@ var l = n(120356),
     f = n(600164),
     m = n(750154),
     g = n(171368),
-    b = n(594174),
-    O = n(374129),
+    O = n(594174),
+    b = n(374129),
     y = n(639351),
     h = n(503438),
     v = n(802856),
@@ -27,8 +27,8 @@ var l = n(120356),
     Z = n(611459),
     x = n(544671),
     C = n(757182),
-    w = n(910424),
-    T = n(981631),
+    T = n(910424),
+    w = n(981631),
     A = n(477839),
     D = n(388032),
     _ = n(622802),
@@ -44,7 +44,7 @@ let L = (e) => {
                 look: l,
                 activity: i,
                 onAction: () => {
-                    a.dispatch(T.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == o || o();
+                    a.dispatch(w.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == o || o();
                 }
             },
             'custom-activity-button'
@@ -52,13 +52,13 @@ let L = (e) => {
     },
     W = (0, u.Z)((e) => {
         let { activity: t, embeddedActivity: n, user: l, applicationStream: o, className: u, guildId: p, channelId: g, source: W, color: M = c.zxk.Colors.WHITE, look: U = c.zxk.Looks.OUTLINED, type: R, onAction: V } = e,
-            B = (0, s.e7)([b.default], () => {
-                let e = b.default.getCurrentUser();
+            F = (0, s.e7)([O.default], () => {
+                let e = O.default.getCurrentUser();
                 return a()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
             }),
-            F = R === j.Y.STREAM_PREVIEW || null != o,
-            Y = (0, h.Z)(t),
-            G = Y || F ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
+            Y = R === j.Y.STREAM_PREVIEW || null != o,
+            B = (0, h.Z)(t),
+            G = B || Y ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === A.bO) {
             var z, H;
             return (
@@ -126,7 +126,7 @@ let L = (e) => {
                     return (0, r.jsx)(
                         S.Z,
                         {
-                            platform: d.Z.get(T.ABu.XBOX),
+                            platform: d.Z.get(w.ABu.XBOX),
                             look: U,
                             color: M,
                             onAction: V,
@@ -134,19 +134,19 @@ let L = (e) => {
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if ((null == t ? void 0 : t.platform) === T.M7m.PS4 || (null == t ? void 0 : t.platform) === T.M7m.PS5)
+                if ((null == t ? void 0 : t.platform) === w.M7m.PS4 || (null == t ? void 0 : t.platform) === w.M7m.PS5)
                     return (0, r.jsx)(
                         S.Z,
                         {
                             look: U,
                             color: M,
-                            platform: d.Z.get(T.ABu.PLAYSTATION),
+                            platform: d.Z.get(w.ABu.PLAYSTATION),
                             onAction: V,
-                            Icon: O.Z
+                            Icon: b.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if (Y) {
+                if (B) {
                     let e = (0, r.jsx)(
                             x.Z,
                             {
@@ -193,11 +193,11 @@ let L = (e) => {
                               e.channelId
                           );
                 }
-                return F
+                return Y
                     ? (0, r.jsx)(
-                          w.Z,
+                          T.Z,
                           {
-                              isCurrentUser: B.id === l.id,
+                              isCurrentUser: F.id === l.id,
                               color: M,
                               look: U,
                               applicationStream: o,

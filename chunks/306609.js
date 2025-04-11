@@ -14,8 +14,8 @@ var r = n(200651),
     p = n(795318),
     g = n(53691),
     h = n(457165),
-    v = n(221241),
-    b = n(594174),
+    b = n(221241),
+    v = n(594174),
     y = n(626135),
     x = n(111361),
     j = n(74538),
@@ -90,7 +90,7 @@ function F(e) {
             orientation: u.y.VERTICAL_TOP
         });
     (0, D.j1)(Z.M);
-    let H = (0, s.e7)([b.default], () => (0, x.I5)(b.default.getCurrentUser())),
+    let H = (0, s.e7)([v.default], () => (0, x.I5)(v.default.getCurrentUser())),
         G = (0, s.e7)([C.Z], () => C.Z.getCatalogUpdateTime()),
         [Y, q] = i.useState(!1),
         [X, K] = i.useState(!1),
@@ -128,7 +128,7 @@ function F(e) {
     (0, d.ZP)(() => {
         (0, O.r5)(), y.default.track(T.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != J ? J : null });
     });
-    let { simplifiedSettingsEnabled: en } = (0, v.Z)({ location: 'VoiceFiltersPopout' }),
+    let { simplifiedSettingsEnabled: en } = (0, b.Z)({ location: 'VoiceFiltersPopout' }),
         er = i.useCallback(() => R(''), [R]);
     return (0, r.jsx)(m.Gt, {
         value: B,

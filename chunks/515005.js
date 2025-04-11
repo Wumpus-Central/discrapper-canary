@@ -91,11 +91,11 @@ function C(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = (0, l.Mg)(O.__invalid_stickerPickerPreviewDimensions),
-    P = (0, l.Mg)(O.__invalid_stickerPickerPreviewPadding),
+let P = (0, l.Mg)(O.__invalid_stickerPickerPreviewDimensions),
+    R = (0, l.Mg)(O.__invalid_stickerPickerPreviewPadding),
     w = 250,
     D = i.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: o = !0, getStickerItemProps: l, getStickerRowProps: I, gutterWidth: T, inspectedStickerPosition: C, isScrolling: D, isUsingKeyboardNavigation: L, onInspect: x, onSelect: M, rowIndex: k, stickerClassName: j, stickerDescriptors: U, stickerPadding: G = P, stickerSize: B = R, ownedStickerPacks: V, enlargeOnInteraction: F = !1, channel: Z, currentUser: H, checkSendability: W = !0 } = e,
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: o = !0, getStickerItemProps: l, getStickerRowProps: I, gutterWidth: T, inspectedStickerPosition: C, isScrolling: D, isUsingKeyboardNavigation: L, onInspect: x, onSelect: M, rowIndex: k, stickerClassName: j, stickerDescriptors: U, stickerPadding: G = R, stickerSize: B = P, ownedStickerPacks: V, enlargeOnInteraction: F = !1, channel: Z, currentUser: H, checkSendability: W = !0 } = e,
             { location: Y } = (0, d.O)(),
             K = B + 2 * G,
             z = i.useMemo(
@@ -136,10 +136,10 @@ let R = (0, l.Mg)(O.__invalid_stickerPickerPreviewDimensions),
                                 let n = t.altKey;
                                 n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && X(e.sticker.id), null == M || M(e, n);
                             },
-                            R = (0, s.throttle)(() => {
+                            P = (0, s.throttle)(() => {
                                 (null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0 || f || null == x || x(e);
                             }, w),
-                            P = () => {
+                            R = () => {
                                 e.type === m.al.CREATE_STICKER &&
                                     (p.default.track(y.rMx.OPEN_MODAL, {
                                         type: y.jXE.CREATE_STICKER_MODAL,
@@ -163,9 +163,9 @@ let R = (0, l.Mg)(O.__invalid_stickerPickerPreviewDimensions),
                                             className: a()(O.createSticker, j, { [O.createInspected]: f }),
                                             innerRef: G,
                                             tabIndex: K,
-                                            onFocus: null != z ? z : R,
-                                            onMouseMove: R,
-                                            onClick: P,
+                                            onFocus: null != z ? z : P,
+                                            onMouseMove: P,
+                                            onClick: R,
                                             style: q,
                                             children: [
                                                 !F && (0, r.jsx)('div', { className: O.inspectedIndicator }),
@@ -205,8 +205,8 @@ let R = (0, l.Mg)(O.__invalid_stickerPickerPreviewDimensions),
                                         }),
                                         innerRef: G,
                                         tabIndex: K,
-                                        onFocus: null != z ? z : R,
-                                        onMouseMove: R,
+                                        onFocus: null != z ? z : P,
+                                        onMouseMove: P,
                                         onClick: T,
                                         onContextMenu: l,
                                         style: q,

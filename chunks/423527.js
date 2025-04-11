@@ -11,8 +11,8 @@ var r,
     p = n(846519),
     h = n(481060),
     g = n(893776),
-    f = n(881052),
-    m = n(899370),
+    m = n(881052),
+    f = n(899370),
     _ = n(224841),
     b = n(13430),
     x = n(213609),
@@ -193,7 +193,7 @@ class ed extends (r = o.PureComponent) {
             p = null != a ? a.code : null,
             h = null != s ? s.skuId : null,
             g = N.MD.getState(),
-            m = (0, q.Ew)(u) ? null : t === u,
+            f = (0, q.Ew)(u) ? null : t === u,
             _ = ee.a ? await (0, y.K)(t) : t,
             b = ee.a ? await (0, y.K)(n) : n;
         H.S.dispatch(Q.CkL.WAVE_EMPHASIZE),
@@ -210,7 +210,7 @@ class ed extends (r = o.PureComponent) {
                       consent: i,
                       password: r,
                       invite: p,
-                      usedUsernameSuggestion: m,
+                      usedUsernameSuggestion: f,
                       guildTemplateCode: null == l ? void 0 : l.code,
                       giftCodeSKUId: h,
                       birthday: o,
@@ -220,12 +220,12 @@ class ed extends (r = o.PureComponent) {
                       consent: i,
                       invite: p,
                       giftCodeSKUId: h,
-                      usedUsernameSuggestion: m,
+                      usedUsernameSuggestion: f,
                       globalName: b
                   }),
                 null == c || c();
         } catch (t) {
-            if ((this.setState({ registering: !1 }), !(t instanceof f.Hx))) return;
+            if ((this.setState({ registering: !1 }), !(t instanceof m.Hx))) return;
             let e = (0, v.F)(t);
             this.setState({ apiErrors: e });
         }
@@ -450,7 +450,7 @@ class ed extends (r = o.PureComponent) {
               });
     }
     renderFull(e, t) {
-        let { email: n, username: r, globalName: a, password: s, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: p, usernameClientError: g, passwordClientError: f, dateOfBirthClientError: m, registering: _, apiErrors: { email: x, username: N, global_name: v, password: E, date_of_birth: j } = {} } = this.state,
+        let { email: n, username: r, globalName: a, password: s, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: p, usernameClientError: g, passwordClientError: m, dateOfBirthClientError: f, registering: _, apiErrors: { email: x, username: N, global_name: v, password: E, date_of_birth: j } = {} } = this.state,
             {
                 consentRequired: S,
                 isMobileWebInviteRegistration: C,
@@ -561,7 +561,7 @@ class ed extends (r = o.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? er.NW.string(er.t.EkokLy) : null
                             }),
-                        error: null != f ? f : eu(E),
+                        error: null != m ? m : eu(E),
                         type: 'password',
                         autoComplete: 'new-password',
                         setRef: (e) => {
@@ -575,7 +575,7 @@ class ed extends (r = o.PureComponent) {
                         name: 'date_of_birth',
                         onChange: this.handleBirthdayChange,
                         ref: this.dateOfBirthRef,
-                        error: null != m ? m : eu(j),
+                        error: null != f ? f : eu(j),
                         value: u,
                         required: !0
                     }),
@@ -753,10 +753,10 @@ class ed extends (r = o.PureComponent) {
     }
 }
 function ep(e) {
-    let t = (0, d.cj)([F.Z, U.default, m.Z, R.Z, A.Z], () => ({
+    let t = (0, d.cj)([F.Z, U.default, f.Z, R.Z, A.Z], () => ({
             consentRequired: F.Z.getAuthenticationConsentRequired(),
             authenticated: U.default.isAuthenticated(),
-            isUnderage: m.Z.isUnderageAnonymous(),
+            isUnderage: f.Z.isUnderageAnonymous(),
             country: R.Z.getCountryCode(),
             hasLoggedInAccounts: A.Z.getHasLoggedInAccounts()
         })),

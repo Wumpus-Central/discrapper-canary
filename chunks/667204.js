@@ -37,8 +37,8 @@ var r = n(512722),
     N = n(823379),
     A = n(861990),
     C = n(555573),
-    R = n(160062),
-    P = n(456007),
+    P = n(160062),
+    R = n(456007),
     w = n(10718),
     D = n(998698),
     L = n(895924),
@@ -121,8 +121,8 @@ async function F(e) {
             if (e.type === c.jw.SUB_COMMAND || e.type === c.jw.SUB_COMMAND_GROUP || !(e.name in w)) continue;
             let n = (null == (l = k.autocomplete) ? void 0 : l.name) === e.name || void 0;
             if (e.type === c.jw.STRING) {
-                let r = null != (d = null == (u = P.li(w, e.name)) ? void 0 : u.trim()) ? d : '';
-                if ((null != e.choices ? (t = (0, R.cT)(e.choices, r)) : e.autocomplete && (t = null != k.autocomplete && n ? k.autocomplete.query : (0, R.Wv)(k.channel.id, e.name, r)), null == t && (t = r), '' === t && null != k.autocomplete && !n)) continue;
+                let r = null != (d = null == (u = R.li(w, e.name)) ? void 0 : u.trim()) ? d : '';
+                if ((null != e.choices ? (t = (0, P.cT)(e.choices, r)) : e.autocomplete && (t = null != k.autocomplete && n ? k.autocomplete.query : (0, P.Wv)(k.channel.id, e.name, r)), null == t && (t = r), '' === t && null != k.autocomplete && !n)) continue;
                 i()(null != k.autocomplete || null != t, 'Option "'.concat(e.name, '" expects a value')),
                     Q.push({
                         type: e.type,
@@ -146,7 +146,7 @@ async function F(e) {
                     });
                 continue;
             }
-            let r = P.OU(w[e.name]);
+            let r = R.OU(w[e.name]);
             if ((i()(null != k.autocomplete || 1 === r.length, 'Option "'.concat(e.name, '" expects a single option type')), null == r[0] && !n)) continue;
             let o =
                 null != (p = r[0])
@@ -196,18 +196,18 @@ async function F(e) {
                         }
                     break;
                 case c.jw.BOOLEAN:
-                    'text' === o.type && (t = (0, R.Kl)(o.text.trim()));
+                    'text' === o.type && (t = (0, P.Kl)(o.text.trim()));
                     break;
                 case c.jw.INTEGER:
                     if ('text' === o.type) {
                         let r = o.text.trim();
-                        null != e.choices ? (t = (0, R.l1)(e.choices, r)) : e.autocomplete && (t = null != k.autocomplete && n ? k.autocomplete.query : (0, R.xg)(k.channel.id, e.name, r)), null == t && (t = Number(P.AS(v.default.locale, r)));
+                        null != e.choices ? (t = (0, P.l1)(e.choices, r)) : e.autocomplete && (t = null != k.autocomplete && n ? k.autocomplete.query : (0, P.xg)(k.channel.id, e.name, r)), null == t && (t = Number(R.AS(v.default.locale, r)));
                     }
                     break;
                 case c.jw.NUMBER:
                     if ('text' === o.type) {
                         let r = o.text.trim();
-                        null != e.choices ? (t = (0, R.l1)(e.choices, r)) : e.autocomplete && (t = null != k.autocomplete && n ? k.autocomplete.query : (0, R.xg)(k.channel.id, e.name, r)), null == t && (t = Number(P.AS(v.default.locale, r)));
+                        null != e.choices ? (t = (0, P.l1)(e.choices, r)) : e.autocomplete && (t = null != k.autocomplete && n ? k.autocomplete.query : (0, P.xg)(k.channel.id, e.name, r)), null == t && (t = Number(R.AS(v.default.locale, r)));
                     }
                     break;
                 default:

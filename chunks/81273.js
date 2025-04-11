@@ -14,8 +14,8 @@ var r = n(200651),
     p = n(246364),
     g = n(937111),
     h = n(281956),
-    v = n(41776),
-    b = n(738737),
+    b = n(41776),
+    v = n(738737),
     y = n(509545),
     x = n(63063),
     j = n(817460),
@@ -30,7 +30,7 @@ var r = n(200651),
     T = n(388032);
 let L = (e, t, n, a) => {
     let l,
-        L = (0, c.e7)([v.Z], () => v.Z.isLurking(t)),
+        L = (0, c.e7)([b.Z], () => b.Z.isLurking(t)),
         k = (0, h.J)(t),
         Z = (0, c.e7)([g.Z], () => (null != t ? g.Z.getRequest(t) : null)),
         D = (null == Z ? void 0 : Z.applicationStatus) === p.wB.SUBMITTED,
@@ -68,7 +68,7 @@ let L = (e, t, n, a) => {
                     n = null == K || null == (l = K.active_trial) ? void 0 : l.id;
                 } else i = T.NW.string(T.t.vuvsKy);
             }
-            (0, b.Z)({
+            (0, v.Z)({
                 activeSubscription: B,
                 analyticsSubscriptionType: w.NYc.GUILD,
                 trialId: n,

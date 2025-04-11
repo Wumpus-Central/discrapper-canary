@@ -6,7 +6,7 @@ n.d(t, {
     Tj: () => c,
     XN: () => O,
     _H: () => g,
-    c0: () => R,
+    c0: () => P,
     fD: () => T,
     kD: () => C,
     rn: () => m,
@@ -149,7 +149,7 @@ function C(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function R(e) {
+async function P(e) {
     var t;
     if ('image/png' !== (null == (t = e.type) ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
     let n = await e.text(),

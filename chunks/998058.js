@@ -1,16 +1,16 @@
-r.d(t, { i: () => l });
+r.d(t, { i: () => s });
 var n = r(544891),
     a = r(570140),
-    o = r(881052),
-    i = r(981631);
-let l = async (e) => {
+    i = r(881052),
+    l = r(981631);
+let s = async (e) => {
     try {
         var t;
         let r = (
             null !=
             (t = (
                 await n.tn.get({
-                    url: i.ANM.SIMILAR_GAMES(e),
+                    url: l.ANM.SIMILAR_GAMES(e),
                     rejectWithError: !1
                 })
             ).body.similar_games)
@@ -23,6 +23,6 @@ let l = async (e) => {
             games: r
         });
     } catch (e) {
-        throw new o.Hx(e);
+        throw new i.Hx(e);
     }
 };

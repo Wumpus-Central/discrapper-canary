@@ -33,8 +33,8 @@ var r = n(192379),
     N = n(111361),
     A = n(392552),
     C = n(543241),
-    R = n(304852),
-    P = n(199257),
+    P = n(304852),
+    R = n(199257),
     w = n(149203),
     D = n(185923),
     L = n(388032);
@@ -112,7 +112,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                 autoTrackExposure: !0
             });
         f.Xb.useExperiment({ location: 'useEmojiGrid' }, { autoTrackExposure: !0 });
-        let { topEmojis: q, newlyAddedEmojis: Q } = (0, P.Z)(F, l),
+        let { topEmojis: q, newlyAddedEmojis: Q } = (0, R.Z)(F, l),
             X = (0, s.Wu)([O.ZP], () => O.ZP.getFlattenedGuildIds(), []),
             J = (0, s.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
             { canCreateExpressions: $ } = (0, m.XJ)(V),
@@ -158,10 +158,10 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                             O = v.Z.getGuildId(),
                             I = _.sectionId === w.En.TOP_GUILD_EMOJI,
                             N = !I && null != y && O === y.id && b.length < (0, T.y4)(y),
-                            R = I && b.length < f && !ea,
-                            P = null != y && I && ea && es === A.B.WITH_TOP_LIST && eo[y.id].length < (0, T.y4)(y),
-                            D = i && $ && null != y && (N || R || P);
-                        D && P && b.length === f && b.shift();
+                            P = I && b.length < f && !ea,
+                            R = null != y && I && ea && es === A.B.WITH_TOP_LIST && eo[y.id].length < (0, T.y4)(y),
+                            D = i && $ && null != y && (N || P || R);
+                        D && R && b.length === f && b.shift();
                         let x = b.length > m && null != y && _.isNitroLocked,
                             U = x && !J.has(y.id);
                         U && b.splice(m - 1);
@@ -311,7 +311,7 @@ let G = [D.Z5.DISALLOW_EXTERNAL, D.Z5.DISALLOW_CUSTOM],
                             if ((null != V && n(V.id), (0, D.Gt)(l))) for (let e of X) (null == V || V.id !== e) && n(e);
                         } else if (e === w.UX.TOP_GUILD_EMOJI) {
                             if (null != V) {
-                                let { allEmojis: t } = (0, R.J)({
+                                let { allEmojis: t } = (0, P.J)({
                                     topEmojis: q,
                                     newlyAddedEmojis: Q
                                 });

@@ -1,8 +1,8 @@
 n.d(t, {
     ZP: () => y,
     _W: () => P,
-    ge: () => b,
-    je: () => v
+    ge: () => v,
+    je: () => b
 });
 var r = n(200651),
     l = n(192379),
@@ -82,7 +82,7 @@ function m(e) {
     e.preventDefault(), e.stopPropagation();
 }
 let M = R.ZP.getEnableHardwareAcceleration() ? E.Xo$ : E.qEK;
-function b(e) {
+function v(e) {
     let { channel: t, size: n = E.EFr.SIZE_20 } = e;
     return (0, r.jsx)(M, {
         src: (0, c.x)(t),
@@ -90,7 +90,7 @@ function b(e) {
         size: n
     });
 }
-function v(e) {
+function b(e) {
     let { channel: t, size: n = E.EFr.SIZE_20 } = e,
         l = (0, i.e7)([f.default], () => f.default.getUser(null == t ? void 0 : t.recipients[0])),
         a = (0, i.e7)([g.Z], () => !(null == l || null == t || t.isMultiUserDM()) && null != g.Z.getTypingUsers(null == t ? void 0 : t.id)[null == l ? void 0 : l.id]),
@@ -135,11 +135,11 @@ let P = (e) => {
                 switch (e.type) {
                     case p.d4z.DM:
                         return function () {
-                            return (0, r.jsx)(v, { channel: e });
+                            return (0, r.jsx)(b, { channel: e });
                         };
                     case p.d4z.GROUP_DM:
                         return function () {
-                            return (0, r.jsx)(b, { channel: e });
+                            return (0, r.jsx)(v, { channel: e });
                         };
                     default:
                         return (0, _.KS)(e, t, n);
@@ -185,8 +185,8 @@ let P = (e) => {
                 onClick: f,
                 onMouseDown: R,
                 onMouseUp: M,
-                onContextMenu: b,
-                connectDragPreview: v,
+                onContextMenu: v,
+                connectDragPreview: b,
                 className: y,
                 iconClassName: x,
                 subtitle: j,
@@ -194,8 +194,8 @@ let P = (e) => {
                 channel: { type: F },
                 onMouseEnter: W,
                 onMouseLeave: B,
-                'aria-label': z,
-                children: w,
+                'aria-label': w,
+                children: z,
                 guild: k,
                 channelTypeOverride: H,
                 forceInteractable: V,
@@ -251,7 +251,7 @@ let P = (e) => {
                             ee
                         ),
                         {
-                            'aria-label': z,
+                            'aria-label': w,
                             focusProps: { enabled: !1 },
                             children: [
                                 (0, r.jsxs)('div', {
@@ -270,11 +270,11 @@ let P = (e) => {
                                             'aria-hidden': !0,
                                             children: null == i ? ea : i
                                         }),
-                                        l.Children.count(w) > 0
+                                        l.Children.count(z) > 0
                                             ? (0, r.jsx)('div', {
                                                   onClick: m,
                                                   className: U.children,
-                                                  children: w
+                                                  children: z
                                               })
                                             : null
                                     ]
@@ -339,10 +339,10 @@ let P = (e) => {
                 ),
                 onMouseUp: (e) => (null == M ? void 0 : M(e, a)),
                 onMouseDown: (e) => (null == R ? void 0 : R(e, a)),
-                onContextMenu: (e) => (null == b ? void 0 : b(e, a)),
+                onContextMenu: (e) => (null == v ? void 0 : v(e, a)),
                 onMouseEnter: W,
                 onMouseLeave: B,
-                children: [c || !I ? null : (0, r.jsx)('div', { className: s()(U.unread, J ? U.unreadImportant : void 0) }), null != (n = null == v ? void 0 : v(eo)) ? n : eo]
+                children: [c || !I ? null : (0, r.jsx)('div', { className: s()(U.unread, J ? U.unreadImportant : void 0) }), null != (n = null == b ? void 0 : b(eo)) ? n : eo]
             })
         });
     });

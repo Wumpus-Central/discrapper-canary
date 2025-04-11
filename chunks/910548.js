@@ -149,10 +149,10 @@ let T = ['TOP_LEFT', 'TOP_RIGHT'],
         })
     }),
     Z = 'falling-leaf',
-    k = ['#61D5B2'],
-    R = n(303893),
+    R = ['#61D5B2'],
+    k = n(303893),
     D = n(313226),
-    L = [R, D];
+    L = [k, D];
 function M() {
     return n
         .e('77843')
@@ -295,7 +295,7 @@ function W(e) {
                             }
                         }
                     },
-                    { sprite: 'TOP_LEFT' === h ? R : D }
+                    { sprite: 'TOP_LEFT' === h ? k : D }
                 );
             }
         }, [E, y, h, d]),
@@ -304,7 +304,7 @@ function W(e) {
                 (0, i.jsx)(s.Ji, {
                     ref: x,
                     sprites: L,
-                    colors: k,
+                    colors: R,
                     spriteWidth: 45,
                     spriteHeight: 45
                 }),
@@ -379,7 +379,7 @@ function U(e) {
                     guildName: l.name,
                     newTierName: (0, x.nW)(c)
                 });
-    let k = a.useCallback(() => {
+    let R = a.useCallback(() => {
             if (!T.enabled)
                 if (C || 0 !== Math.floor(50 * Math.random())) {
                     var e;
@@ -388,7 +388,7 @@ function U(e) {
                     d(t.left + t.width / 2, t.top + t.height / 2);
                 } else S(!0);
         }, [d, T, C]),
-        R = a.useCallback(() => {
+        k = a.useCallback(() => {
             S(!1);
         }, []),
         D = a.useCallback(() => {
@@ -407,7 +407,7 @@ function U(e) {
         onClick: s,
         children: (0, i.jsx)(b.Z, {
             className: N.icon,
-            onMouseEnter: k
+            onMouseEnter: R
         })
     });
     return (0, i.jsxs)(v.Z, {
@@ -425,7 +425,7 @@ function U(e) {
                       children: (0, i.jsx)('div', {
                           className: N.cannonWrapper,
                           children: (0, i.jsx)(W, {
-                              onAnimationComplete: R,
+                              onAnimationComplete: k,
                               onClick: D
                           })
                       })

@@ -1,8 +1,8 @@
 t.d(a, { default: () => S }), t(388685), t(539854);
 var n = t(200651),
-    l = t(192379),
-    s = t(658722),
-    i = t.n(s),
+    s = t(192379),
+    l = t(658722),
+    i = t.n(l),
     r = t(392711),
     o = t(442837),
     c = t(481060),
@@ -12,15 +12,15 @@ var n = t(200651),
     h = t(206295),
     g = t(669764),
     x = t(925329),
-    N = t(77498),
-    p = t(49012),
-    f = t(810568),
-    j = t(701488),
+    p = t(77498),
+    N = t(49012),
+    j = t(810568),
+    f = t(701488),
     v = t(388032),
     _ = t(271387);
 function I(e) {
     let { showOutdatedInfoOption: a, onChoice: t } = e,
-        l = [
+        s = [
             {
                 name: v.NW.string(v.t['o/xUFh']),
                 value: 1
@@ -53,7 +53,7 @@ function I(e) {
             }),
             (0, n.jsx)(c.FXm, {
                 className: _.radioGroup,
-                options: l,
+                options: s,
                 onChange: (e) => {
                     let { value: a } = e;
                     return t(a);
@@ -63,8 +63,8 @@ function I(e) {
     });
 }
 function k(e) {
-    let { applicationId: a, onSubmitted: t, viewId: l } = e,
-        s = (0, u.q)(a);
+    let { applicationId: a, onSubmitted: t, viewId: s } = e,
+        l = (0, u.q)(a);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(c.hzk, {
@@ -87,14 +87,14 @@ function k(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, p.q)({
-                            href: (null == s ? void 0 : s.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(s.name)) : 'https://www.igdb.com',
+                        (0, N.q)({
+                            href: (null == l ? void 0 : l.name) != null ? ''.concat('https://www.igdb.com/search?utf8=\u2713&q=').concat(encodeURIComponent(l.name)) : 'https://www.igdb.com',
                             trusted: !0
                         }),
-                            (0, f.MH)({
+                            (0, j.MH)({
                                 applicationId: a,
                                 submitted: !0,
-                                viewId: l
+                                viewId: s
                             }),
                             t();
                     },
@@ -104,14 +104,14 @@ function k(e) {
         ]
     });
 }
-let C = (e) => {
-    let { id: a, name: t, applicationRecord: l } = e;
+let W = (e) => {
+    let { id: a, name: t, applicationRecord: s } = e;
     return (0, n.jsxs)('div', {
         className: _.gameSuggestion,
         children: [
             null != a
                 ? (0, n.jsx)(x.Z, {
-                      game: l,
+                      game: s,
                       className: _.smolGameIcon
                   })
                 : (0, n.jsx)(c.vdY, {
@@ -122,25 +122,25 @@ let C = (e) => {
         ]
     });
 };
-function W(e) {
-    var a, t, s;
-    let { applicationId: x, onSubmitted: p, viewId: I } = e,
-        [k, W] = l.useState(''),
-        b = (0, o.e7)([m.Z], () => m.Z.getApplication(x)),
-        [w, S] = l.useState(''),
+function b(e) {
+    var a, t, l;
+    let { applicationId: x, onSubmitted: N, viewId: I } = e,
+        [k, b] = s.useState(''),
+        w = (0, o.e7)([m.Z], () => m.Z.getApplication(x)),
+        [C, S] = s.useState(''),
         z = (0, o.e7)([g.Z], () => g.Z.getGame(x)),
-        G = null != (t = null != (a = null == z ? void 0 : z.name) ? a : null == b ? void 0 : b.name) ? t : '',
-        L = null == b ? void 0 : b.getIconURL(j.Si.LARGE),
-        { primaryColor: R, secondaryColor: Z } = (0, h.Z)(L);
-    l.useEffect(() => {
+        G = null != (t = null != (a = null == z ? void 0 : z.name) ? a : null == w ? void 0 : w.name) ? t : '',
+        L = null == w ? void 0 : w.getIconURL(f.Si.LARGE),
+        { primaryColor: Z, secondaryColor: X } = (0, h.Z)(L);
+    s.useEffect(() => {
         d.Z.getDetectableGames();
     }, []);
-    let B = (0, o.Wu)(
-            [N.Z],
+    let q = (0, o.Wu)(
+            [p.Z],
             () => {
                 let e = ((null == k ? void 0 : k.length) > 0 ? k : G).toLowerCase(),
-                    a = null != w ? N.Z.getDetectableGame(w) : void 0;
-                return (0, r.chain)(N.Z.games)
+                    a = null != C ? p.Z.getDetectableGame(C) : void 0;
+                return (0, r.chain)(p.Z.games)
                     .filter((a) => i()(e, a.name.toLowerCase()))
                     .filter((e) => e.id !== x)
                     .take(4)
@@ -149,16 +149,16 @@ function W(e) {
                     .uniqBy('id')
                     .value();
             },
-            [x, w, G, k]
+            [x, C, G, k]
         ),
-        T = (0, u.Z)(B.map((e) => e.id)),
-        F = (0, r.chain)(T).compact().keyBy('id').value(),
-        X = k.length > 0 && !B.map((e) => e.name.toLowerCase()).includes(k.toLowerCase()),
-        q = w === x || (null === w && 0 === k.length),
-        y = B.map((e) => {
+        B = (0, u.Z)(q.map((e) => e.id)),
+        F = (0, r.chain)(B).compact().keyBy('id').value(),
+        R = k.length > 0 && !q.map((e) => e.name.toLowerCase()).includes(k.toLowerCase()),
+        T = C === x || (null === C && 0 === k.length),
+        y = q.map((e) => {
             let { name: a, id: t } = e;
             return {
-                name: (0, n.jsx)(C, {
+                name: (0, n.jsx)(W, {
                     name: a,
                     id: t,
                     applicationRecord: F[t]
@@ -167,9 +167,9 @@ function W(e) {
             };
         });
     return (
-        X &&
+        R &&
             y.push({
-                name: (0, n.jsx)(C, { name: k }),
+                name: (0, n.jsx)(W, { name: k }),
                 value: ''
             }),
         (0, n.jsxs)(n.Fragment, {
@@ -189,7 +189,7 @@ function W(e) {
                         }),
                         (0, n.jsxs)('div', {
                             className: _.gameInfoBox,
-                            style: { background: 'linear-gradient(45deg, '.concat(R, ', ').concat(Z, ')') },
+                            style: { background: 'linear-gradient(45deg, '.concat(Z, ', ').concat(X, ')') },
                             children: [
                                 null != L &&
                                     (0, n.jsx)('img', {
@@ -200,7 +200,7 @@ function W(e) {
                                 (0, n.jsx)(c.X6q, {
                                     variant: 'heading-lg/semibold',
                                     className: _.gameTitle,
-                                    children: null != (s = null == z ? void 0 : z.name) ? s : null == b ? void 0 : b.name
+                                    children: null != (l = null == z ? void 0 : z.name) ? l : null == w ? void 0 : w.name
                                 })
                             ]
                         }),
@@ -211,17 +211,17 @@ function W(e) {
                                     className: _.searchBar,
                                     query: k,
                                     onChange: (e) => {
-                                        if (0 === e.length) null === w && S(x);
+                                        if (0 === e.length) null === C && S(x);
                                         else {
                                             var a;
-                                            let t = B.find((a) => a.name.toLowerCase() === e.toLowerCase());
+                                            let t = q.find((a) => a.name.toLowerCase() === e.toLowerCase());
                                             S(null != (a = null == t ? void 0 : t.id) ? a : '');
                                         }
-                                        W(e);
+                                        b(e);
                                     },
                                     size: c.E1j.Sizes.MEDIUM,
                                     onClear: () => {
-                                        null === w && S(x), W('');
+                                        null === C && S(x), b('');
                                     },
                                     placeholder: v.NW.string(v.t.UedRLy)
                                 }),
@@ -230,7 +230,7 @@ function W(e) {
                                     radioPosition: 'right',
                                     withTransparentBackground: !0,
                                     radioItemClassName: _.gameSuggestionRadioItem,
-                                    value: w,
+                                    value: C,
                                     options: y,
                                     onChange: (e) => {
                                         let { value: a } = e;
@@ -246,17 +246,17 @@ function W(e) {
                     children: (0, n.jsx)(c.zxk, {
                         fullWidth: !0,
                         onClick: () => {
-                            let e = null != w && w.length > 0;
-                            (0, f.MH)({
+                            let e = null != C && C.length > 0;
+                            (0, j.MH)({
                                 applicationId: x,
-                                suggestedGameApplicationId: e ? w : void 0,
+                                suggestedGameApplicationId: e ? C : void 0,
                                 suggestedGameName: e ? void 0 : k,
                                 submitted: !0,
                                 viewId: I
                             }),
-                                p();
+                                N();
                         },
-                        disabled: q,
+                        disabled: T,
                         children: v.NW.string(v.t.geKm7u)
                     })
                 })
@@ -264,9 +264,9 @@ function W(e) {
         })
     );
 }
-function b(e) {
-    let { applicationId: a, onSubmitted: t, viewId: s } = e,
-        [i, r] = l.useState('');
+function w(e) {
+    let { applicationId: a, onSubmitted: t, viewId: l } = e,
+        [i, r] = s.useState('');
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(c.hzk, {
@@ -298,11 +298,11 @@ function b(e) {
                 children: (0, n.jsx)(c.zxk, {
                     fullWidth: !0,
                     onClick: () => {
-                        (0, f.MH)({
+                        (0, j.MH)({
                             applicationId: a,
                             submitted: !0,
                             feedback: i,
-                            viewId: s
+                            viewId: l
                         }),
                             t();
                     },
@@ -313,7 +313,7 @@ function b(e) {
         ]
     });
 }
-function w(e) {
+function C(e) {
     let { onClose: a } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -344,11 +344,11 @@ function w(e) {
     });
 }
 function S(e) {
-    let { applicationId: a, viewId: t, transitionState: s, onClose: i, showOutdatedInfoOption: r } = e,
-        [o, d] = l.useState(0);
+    let { applicationId: a, viewId: t, transitionState: l, onClose: i, showOutdatedInfoOption: r } = e,
+        [o, d] = s.useState(0);
     return (0, n.jsx)(c.Y0X, {
         size: c.CgR.SMALL,
-        transitionState: s,
+        transitionState: l,
         children: (() => {
             switch (o) {
                 case 0:
@@ -357,7 +357,7 @@ function S(e) {
                         onChoice: (e) => d(e)
                     });
                 case 1:
-                    return (0, n.jsx)(W, {
+                    return (0, n.jsx)(b, {
                         applicationId: a,
                         viewId: t,
                         onSubmitted: () => d(4)
@@ -369,13 +369,13 @@ function S(e) {
                         onSubmitted: () => i()
                     });
                 case 3:
-                    return (0, n.jsx)(b, {
+                    return (0, n.jsx)(w, {
                         applicationId: a,
                         viewId: t,
                         onSubmitted: () => d(4)
                     });
                 case 4:
-                    return (0, n.jsx)(w, { onClose: i });
+                    return (0, n.jsx)(C, { onClose: i });
             }
         })()
     });

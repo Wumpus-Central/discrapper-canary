@@ -38,9 +38,9 @@ var r = n(200651),
     W = n(706454),
     U = n(662594),
     B = n(430824),
-    H = n(944486),
-    G = n(111583),
-    F = n(594174),
+    G = n(944486),
+    F = n(111583),
+    H = n(594174),
     V = n(979651),
     z = n(585483),
     Y = n(823379),
@@ -137,7 +137,7 @@ let er = K.ZP.getEnableHardwareAcceleration(),
             Z = (e) => {
                 (0, m.jW)(e, async () => {
                     let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387)),
-                        t = V.Z.isInChannel(H.Z.getVoiceChannelId(), u.id);
+                        t = V.Z.isInChannel(G.Z.getVoiceChannelId(), u.id);
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -225,8 +225,8 @@ let er = K.ZP.getEnableHardwareAcceleration(),
             n = en(e, ['colorRoleId']),
             { channel: i, user: l, index: o } = e,
             a = (0, c.JA)(''.concat(o)),
-            s = (0, h.e7)([G.Z], () => G.Z.isTyping(i.id, l.id)),
-            u = (0, h.e7)([F.default], () => F.default.getCurrentUser()),
+            s = (0, h.e7)([F.Z], () => F.Z.isTyping(i.id, l.id)),
+            u = (0, h.e7)([H.default], () => H.default.getCurrentUser()),
             d = (0, h.e7)(
                 [B.Z],
                 () => {

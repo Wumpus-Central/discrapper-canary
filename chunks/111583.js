@@ -62,7 +62,7 @@ function v(e) {
                 n === u.default.getId() &&
                 null != r.timeout &&
                 ((r.timeout = null),
-                R(t) > g ||
+                P(t) > g ||
                     a.tn
                         .post({
                             url: f.ANM.TYPING(t),
@@ -164,11 +164,11 @@ function A(e) {
 function C() {
     E = {};
 }
-function R(e) {
+function P(e) {
     let t = y(e);
     return t === b ? 0 : Object.keys(t).length;
 }
-class P extends (i = o.ZP.Store) {
+class R extends (i = o.ZP.Store) {
     getTypingUsers(e) {
         return y(e);
     }
@@ -176,8 +176,8 @@ class P extends (i = o.ZP.Store) {
         return null != y(e)[t];
     }
 }
-_(P, 'displayName', 'TypingStore');
-let w = new P(s.Z, {
+_(R, 'displayName', 'TypingStore');
+let w = new R(s.Z, {
     TYPING_START: T,
     TYPING_STOP: N,
     TYPING_START_LOCAL: v,

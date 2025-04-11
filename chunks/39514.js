@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(232567),
     h = n(388905),
     g = n(362762),
-    f = n(108427),
-    m = n(314897),
+    m = n(108427),
+    f = n(314897),
     _ = n(896797),
     b = n(82142),
     x = n(283595),
@@ -43,7 +43,7 @@ l.ZP.initialize();
 class A extends i.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, f.e)('gift_code');
+        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, m.e)('gift_code');
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
@@ -254,7 +254,7 @@ class A extends i.PureComponent {
             });
     }
 }
-let Z = l.ZP.connectStores([b.Z, x.Z, m.default, N.Z, _.Z, g.Z], (e) => {
+let Z = l.ZP.connectStores([b.Z, x.Z, f.default, N.Z, _.Z, g.Z], (e) => {
     let t = e.match.params.giftCode,
         n = b.Z.get(t),
         r = null != n ? N.Z.get(n.skuId) : null;
@@ -262,7 +262,7 @@ let Z = l.ZP.connectStores([b.Z, x.Z, m.default, N.Z, _.Z, g.Z], (e) => {
         giftCode: n,
         sku: r,
         libraryApplication: null != r && (null == n ? void 0 : n.entitlementBranches) != null ? v.z2(n.entitlementBranches, r, x.Z) : null,
-        authenticated: m.default.isAuthenticated(),
+        authenticated: f.default.isAuthenticated(),
         defaultRoute: _.Z.defaultRoute,
         isResolved: b.Z.getIsResolved(t),
         isAccepting: b.Z.getIsAccepting(t),

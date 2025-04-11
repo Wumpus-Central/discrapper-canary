@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(415506), n(388685);
+n.d(t, { Z: () => D }), n(415506), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(392711),
@@ -10,27 +10,27 @@ var i = n(392711),
     u = n(358221),
     d = n(963249),
     p = n(93127),
-    h = n(430824),
-    _ = n(594174),
+    _ = n(430824),
+    h = n(594174),
     f = n(431),
     m = n(626135),
-    g = n(74538),
-    b = n(557457),
+    b = n(74538),
+    g = n(557457),
     E = n(970645),
-    C = n(30684),
-    O = n(514701),
-    y = n(6242),
-    v = n(467721),
-    S = n(757692),
-    N = n(937579),
-    x = n(522558),
+    O = n(30684),
+    y = n(514701),
+    C = n(6242),
+    S = n(467721),
+    N = n(757692),
+    v = n(937579),
+    T = n(522558),
     I = n(11352),
-    T = n(474936),
-    L = n(981631),
-    P = n(354459),
-    A = n(37113),
-    j = n(388032);
-function R(e, t, n) {
+    x = n(474936),
+    P = n(981631),
+    A = n(354459),
+    R = n(37113),
+    w = n(388032);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function R(e, t, n) {
         e
     );
 }
-function w(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +54,12 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                j(e, t, n[t]);
             });
     }
     return e;
 }
-function k(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -91,7 +91,7 @@ class M extends a.Z {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    w(
+                    k(
                         {
                             channel: t,
                             content: i
@@ -105,7 +105,7 @@ class M extends a.Z {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
         return new Promise((t, n) => {
             (0, d.Z)(
-                k(w({}, e), {
+                L(k({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
                     }
@@ -130,30 +130,30 @@ class M extends a.Z {
     }
     constructor(...e) {
         super(...e),
-            R(this, '_premiumPaymentModalCloseResolve', null),
-            R(this, '_premiumPaymentModalCloseReject', null),
-            R(this, '_maybeFetchPremiumOffer', async () => {
-                let e = _.default.getCurrentUser();
+            j(this, '_premiumPaymentModalCloseResolve', null),
+            j(this, '_premiumPaymentModalCloseReject', null),
+            j(this, '_maybeFetchPremiumOffer', async () => {
+                let e = h.default.getCurrentUser();
                 if (null != e && e.verified) {
-                    let t = !(0, g.I5)(e) && f.Z.shouldFetchOffer();
-                    await (0, N.T)('PremiumManager', t);
+                    let t = !(0, b.I5)(e) && f.Z.shouldFetchOffer();
+                    await (0, v.T)('PremiumManager', t);
                 }
                 l.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
-            R(this, '_maybeFetchCheckoutRecovery', async () => {
-                let e = _.default.getCurrentUser();
-                null != e && e.verified && !(0, g.I5)(e) && C.Z.shouldFetchCheckoutRecovery() && (await (0, E.o)());
+            j(this, '_maybeFetchCheckoutRecovery', async () => {
+                let e = h.default.getCurrentUser();
+                null != e && e.verified && !(0, b.I5)(e) && O.Z.shouldFetchCheckoutRecovery() && (await (0, E.o)());
             }),
-            R(this, '_maybeFetchUserAffinities', () => {
-                let { enabled: e } = x.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+            j(this, '_maybeFetchUserAffinities', () => {
+                let { enabled: e } = T.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, p.W)();
             }),
-            R(this, '_trackCustomNotificationSoundsExposure', () => {
+            j(this, '_trackCustomNotificationSoundsExposure', () => {
                 I.Y.trackExposure({ location: 'PremiumManager' });
             }),
-            R(this, '_handlePremiumPaymentModalOpen', (e) => {
+            j(this, '_handlePremiumPaymentModalOpen', (e) => {
                 (0, d.Z)(
-                    k(w({}, e), {
+                    L(k({}, e), {
                         analyticsLocations: [c.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
@@ -164,39 +164,39 @@ class M extends a.Z {
                     })
                 );
             }),
-            R(this, '_handlePremiumPaymentModalClose', (e) => {
+            j(this, '_handlePremiumPaymentModalClose', (e) => {
                 let { didSucceed: t } = e;
                 t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null);
             }),
-            R(this, 'maybeShowHDStreamingViewerUpsellMessage', (e) => {
-                let t = _.default.getCurrentUser();
+            j(this, 'maybeShowHDStreamingViewerUpsellMessage', (e) => {
+                let t = h.default.getCurrentUser();
                 (null == t ? void 0 : t.id) !== e.senderUserId && this._maybeSendViewerUpsellMessage(e.channelId, e.guildId, t);
             }),
-            R(
+            j(
                 this,
                 '_maybeSendViewerUpsellMessage',
                 (0, i.debounce)((e, t, n) => {
                     var r, i;
                     let o = u.Z.getSelectedParticipant(e),
-                        l = (0, S.o)(o, n),
-                        { sendNitroMessage: a } = (0, y.TD)(l),
-                        c = null != (i = null == (r = h.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : L.Eu4.NONE;
-                    if (v.Z.cooldownIsActive() || !a || c >= L.Eu4.TIER_2 || (null == o ? void 0 : o.type) !== P.fO.STREAM || (null == o ? void 0 : o.id) === (null == n ? void 0 : n.id) || null == o.maxResolution || null == o.maxFrameRate) return;
-                    O.I();
-                    let d = j.NW.formatToPlainString(j.t.AbyeZG, {
+                        l = (0, N.o)(o, n),
+                        { sendNitroMessage: a } = (0, C.TD)(l),
+                        c = null != (i = null == (r = _.Z.getGuild(t)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE;
+                    if (S.Z.cooldownIsActive() || !a || c >= P.Eu4.TIER_2 || (null == o ? void 0 : o.type) !== A.fO.STREAM || (null == o ? void 0 : o.id) === (null == n ? void 0 : n.id) || null == o.maxResolution || null == o.maxFrameRate) return;
+                    y.I();
+                    let d = w.NW.formatToPlainString(w.t.AbyeZG, {
                         nickname: o.userNick,
-                        resolution: (0, A.o6)(o.maxResolution.height),
-                        fps: (0, b.bp)(o.maxFrameRate)
+                        resolution: (0, R.o6)(o.maxResolution.height),
+                        fps: (0, g.bp)(o.maxFrameRate)
                     });
                     s.Z.sendNitroSystemMessage(e, d),
-                        m.default.track(L.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
-                            type: T.cd.HD_STREAMING_VIEWER_UPSELL,
-                            location_section: null != t ? L.jXE.TEXT_IN_VOICE : L.jXE.CHANNEL_TEXT_AREA,
-                            location_object: L.qAy.MESSAGE,
+                        m.default.track(P.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                            type: x.cd.HD_STREAMING_VIEWER_UPSELL,
+                            location_section: null != t ? P.jXE.TEXT_IN_VOICE : P.jXE.CHANNEL_TEXT_AREA,
+                            location_object: P.qAy.MESSAGE,
                             guild_id: t
                         });
                 }, 200)
             );
     }
 }
-let Z = new M();
+let D = new M();

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => U,
+    Z: () => b,
     d: () => M
 });
 var r = n(200651);
@@ -11,8 +11,8 @@ var i = n(120356),
     s = n(481060),
     c = n(549817),
     u = n(819553),
-    d = n(17181),
-    E = n(303737),
+    E = n(17181),
+    d = n(303737),
     _ = n(434404),
     I = n(703656),
     N = n(944486),
@@ -20,13 +20,13 @@ var i = n(120356),
     T = n(671533),
     S = n(259580),
     p = n(358085),
-    A = n(962086),
-    f = n(160404),
-    R = n(889695),
-    P = n(981631),
+    R = n(962086),
+    A = n(160404),
+    P = n(889695),
+    f = n(981631),
     C = n(176505),
-    g = n(302463),
-    D = n(293810),
+    D = n(302463),
+    g = n(293810),
     m = n(388032),
     y = n(800515);
 function h(e) {
@@ -41,14 +41,14 @@ function h(e) {
         children: i
     });
 }
-function b(e) {
+function U(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(h, {
         onClick: t,
         children: m.NW.string(m.t.R9GHyc)
     });
 }
-function U() {
+function b() {
     let e = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
         t = (0, o.e7)([N.Z], () => N.Z.getChannelId(e)),
         {
@@ -56,30 +56,30 @@ function U() {
             backNavigationSection: i,
             isFullServerPreview: l,
             isServerShopPreview: p
-        } = (0, o.cj)([f.Z], () => ({
-            viewingRoles: null != e ? f.Z.getViewingRoles(e) : null,
-            backNavigationSection: f.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && f.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && f.Z.isViewingServerShop(e)
+        } = (0, o.cj)([A.Z], () => ({
+            viewingRoles: null != e ? A.Z.getViewingRoles(e) : null,
+            backNavigationSection: A.Z.getBackNavigationSection(e),
+            isFullServerPreview: null != e && A.Z.isFullServerPreview(e),
+            isServerShopPreview: null != e && A.Z.isViewingServerShop(e)
         }));
     if (null == n || null == e) return null;
-    let U = (function (e) {
+    let b = (function (e) {
             switch (e) {
-                case P.pNK.INTEGRATIONS:
+                case f.pNK.INTEGRATIONS:
                     return m.NW.string(m.t.k7LGdn);
-                case P.pNK.ROLE_SUBSCRIPTIONS:
+                case f.pNK.ROLE_SUBSCRIPTIONS:
                     return m.NW.string(m.t.bRqiqa);
-                case P.pNK.ONBOARDING:
+                case f.pNK.ONBOARDING:
                     return m.NW.string(m.t.qZpU3d);
                 default:
                     return m.NW.string(m.t.MTIXho);
             }
         })(i),
-        M = i === P.pNK.ROLE_SUBSCRIPTIONS ? m.NW.string(m.t.hZUCzc) : m.NW.string(m.t['/djIh4']),
+        M = i === f.pNK.ROLE_SUBSCRIPTIONS ? m.NW.string(m.t.hZUCzc) : m.NW.string(m.t['/djIh4']),
         L = t === C.oC.GUILD_ONBOARDING,
         Z = (t) => {
             let { backToSettings: n } = t;
-            null != e && (f.Z.isFullServerPreview(e) && (0, I.uL)(P.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, d.EI)(e)), (0, A.mL)(e), n && _.Z.open(e, i), i === P.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(e));
+            null != e && (A.Z.isFullServerPreview(e) && (0, I.uL)(f.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, E.EI)(e)), (0, R.mL)(e), n && _.Z.open(e, i), i === f.pNK.ROLE_SUBSCRIPTIONS && (0, d.GN)(e));
         };
     return (0, r.jsxs)(s.qXd, {
         color: s.DM8.BRAND,
@@ -95,7 +95,7 @@ function U() {
                         direction: T.Z.Directions.LEFT,
                         className: y.backArrow
                     }),
-                    U
+                    b
                 ]
             }),
             L && l
@@ -115,7 +115,7 @@ function U() {
                           }),
                           (0, r.jsx)(s.yRy, {
                               position: 'bottom',
-                              renderPopout: () => (0, r.jsx)(R.Z, { guildId: e }),
+                              renderPopout: () => (0, r.jsx)(P.Z, { guildId: e }),
                               children: (e) => {
                                   let { onClick: t } = e;
                                   return (0, r.jsxs)(h, {
@@ -145,8 +145,8 @@ function U() {
                               (0, r.jsx)(s.DY3, {
                                   className: y.previewWarning,
                                   text: m.NW.formatToPlainString(m.t.eummvb, {
-                                      maxTiers: D.fF,
-                                      maxProducts: g.dD
+                                      maxTiers: g.fF,
+                                      maxProducts: D.dD
                                   }),
                                   children: (0, r.jsx)(s.P4T, {
                                       size: 'xs',
@@ -155,19 +155,19 @@ function U() {
                               })
                       ]
                   }),
-            l || i === P.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => Z({ backToSettings: !1 }) })
+            l || i === f.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => Z({ backToSettings: !1 }) })
         ]
     });
 }
 function M(e) {
     let { guildId: t } = e;
-    return (0, o.e7)([f.Z], () => f.Z.isViewingRoles(t))
+    return (0, o.e7)([A.Z], () => A.Z.isViewingRoles(t))
         ? (0, r.jsx)('div', {
               className: l()(y.settingsWrapper, {
                   [y.windows]: (0, p.isWindows)(),
                   [y.osx]: (0, p.isMac)()
               }),
-              children: (0, r.jsx)(U, {})
+              children: (0, r.jsx)(b, {})
           })
         : null;
 }

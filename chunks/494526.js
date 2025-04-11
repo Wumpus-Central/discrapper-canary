@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(937154),
     h = n(448986),
     g = n(388905),
-    f = n(198993),
-    m = n(710845),
+    m = n(198993),
+    f = n(710845),
     _ = n(314897),
     b = n(585483),
     x = n(358085),
@@ -25,7 +25,7 @@ var r = n(200651),
     O = n(84879),
     C = n(20493);
 let y = n(515695),
-    T = new m.Z('LoginQRSocket');
+    T = new f.Z('LoginQRSocket');
 function P(e) {
     let { text: t = '' } = e,
         [n, o] = i.useState(!1);
@@ -43,7 +43,7 @@ function P(e) {
                 '' !== t && n
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(f.ZP, {
+                              (0, r.jsx)(m.ZP, {
                                   className: O.qrCode,
                                   size: 160,
                                   text: t
@@ -155,7 +155,7 @@ function R(e) {
             state: u,
             rsaKeyPair: d,
             cancel: g,
-            handleFailure: f
+            handleFailure: m
         } = (function (e) {
             let [t, n] = i.useState(0),
                 [r, o] = i.useState(!1),
@@ -163,12 +163,12 @@ function R(e) {
                 [c, u] = i.useState(null),
                 d = (0, p.Z)(),
                 g = i.useMemo(() => new a.Z(1500, 30000), []),
-                f = (0, h.Z)(() => {
+                m = (0, h.Z)(() => {
                     s({ step: 0 }), d ? n((e) => e + 1) : (T.info('document is not visible, will defer reconnection when document becomes visible.'), o(!0));
                 }),
-                m = i.useCallback(() => {
-                    T.error('Could not complete QR code login, trying to restart with a new QR code.'), s({ step: 0 }), g.pending || g.fail(f);
-                }, [f, g]);
+                f = i.useCallback(() => {
+                    T.error('Could not complete QR code login, trying to restart with a new QR code.'), s({ step: 0 }), g.pending || g.fail(m);
+                }, [m, g]);
             return (
                 i.useEffect(() => {
                     d && r && 0 === l.step && (T.info('reconnecting, now that document is visible'), o(!1), n((e) => e + 1));
@@ -190,7 +190,7 @@ function R(e) {
                         throw Error('No key pair set');
                     }
                     let _ = () => {
-                        p ? ((p = !1), i.send(JSON.stringify({ op: 'heartbeat' }))) : (o('heartbeat timeout, reconnecting.'), i.close(), m());
+                        p ? ((p = !1), i.send(JSON.stringify({ op: 'heartbeat' }))) : (o('heartbeat timeout, reconnecting.'), i.close(), f());
                     };
                     return (
                         (i.onmessage = async (t) => {
@@ -222,7 +222,7 @@ function R(e) {
                                 }
                                 case 'pending_login': {
                                     let e = r.ticket;
-                                    null == e && m(),
+                                    null == e && f(),
                                         s({
                                             step: 4,
                                             ticket: e
@@ -254,7 +254,7 @@ function R(e) {
                                     return;
                                 }
                                 case 'cancel':
-                                    o('remote auth handshake cancelled.'), f();
+                                    o('remote auth handshake cancelled.'), m();
                                     return;
                                 case 'hello': {
                                     o('got hello, auth timeout='.concat(r.timeout_ms, 'ms'));
@@ -284,25 +284,25 @@ function R(e) {
                                 u(a);
                         }),
                         (i.onclose = (e) => {
-                            o('disconnected, code: '.concat(e.code, ' ').concat(e.reason)), m();
+                            o('disconnected, code: '.concat(e.code, ' ').concat(e.reason)), f();
                         }),
                         (i.onerror = (e) => {
-                            o('disconnected, error: '.concat(JSON.stringify(e))), m();
+                            o('disconnected, error: '.concat(JSON.stringify(e))), f();
                         }),
                         () => {
                             o('cleaning up'), (i.onopen = () => null), (i.onmessage = () => null), (i.onclose = () => null), (i.onerror = () => null), i.close(1000), g.cancel(), null != d && clearTimeout(d), null != c && clearInterval(c);
                         }
                     );
-                }, [f, e, t, g, m]),
+                }, [m, e, t, g, f]),
                 {
                     state: l,
                     rsaKeyPair: c,
-                    cancel: f,
-                    handleFailure: m
+                    cancel: m,
+                    handleFailure: f
                 }
             );
         })(t),
-        m = (function (e) {
+        f = (function (e) {
             switch (e) {
                 case 0:
                 case 1:
@@ -331,21 +331,21 @@ function R(e) {
                                 let n = await (0, N.FW)(d, e.body.encrypted_token);
                                 t(n);
                             } catch (e) {
-                                f();
+                                m();
                             }
-                        else f();
+                        else m();
                     })
                     .catch(() => {
-                        f();
+                        m();
                     });
-        }, [u, t, d, f]),
+        }, [u, t, d, m]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', { className: O.verticalSeparator }),
                 (0, r.jsx)(c.qBt, {
                     fillParent: !0,
                     className: O.qrLogin,
-                    step: m,
+                    step: f,
                     steps: [0, 1],
                     children: (0, r.jsx)('div', {
                         className: O.qrLoginInner,

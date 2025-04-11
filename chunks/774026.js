@@ -4,8 +4,8 @@ n(192379);
 var l = n(913527),
     i = n.n(l),
     s = n(793030),
-    o = n(739566),
-    a = n(942951),
+    a = n(739566),
+    o = n(942951),
     c = n(67390),
     d = n(63063),
     u = n(981631),
@@ -14,8 +14,8 @@ var l = n(913527),
 function h(e) {
     var t;
     let { streamingUntil: n, user: l, channel: h } = e,
-        x = (0, o.JZ)(l, h),
-        p = (0, a.l)({
+        x = (0, a.JZ)(l, h),
+        p = (0, o.l)({
             user: l,
             channelId: h.id,
             guildId: h.guild_id,

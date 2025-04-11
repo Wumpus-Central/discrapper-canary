@@ -59,7 +59,7 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: v, renderSectionHeader: O, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: N, renderHeaderAccessories: A, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: v, renderSectionHeader: O, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: N, renderHeaderAccessories: A, rowHeight: C, sectionHeaderHeight: P, sectionFooterHeight: R, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
         B = i.useRef(null),
         V = i.useRef(null),
         F = i.useRef(null),
@@ -197,8 +197,8 @@ function p(e) {
                                                     rowCount: z,
                                                     rowCountBySection: q,
                                                     rowHeight: C,
-                                                    sectionHeaderHeight: R,
-                                                    sectionFooterHeight: P,
+                                                    sectionHeaderHeight: P,
+                                                    sectionFooterHeight: R,
                                                     renderUpsell: U,
                                                     setShowUpsell: G
                                                 })

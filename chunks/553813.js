@@ -205,11 +205,11 @@ function A(e, t) {
 function C(e, t) {
     return new y(e, t).patch;
 }
-function R(e, t, n) {
+function P(e, t, n) {
     return new y(e, n).compare(new y(t, n));
 }
-function P(e, t) {
-    return R(e, t, !0);
+function R(e, t) {
+    return P(e, t, !0);
 }
 function w(e, t, n) {
     var r = new y(e, n),
@@ -217,7 +217,7 @@ function w(e, t, n) {
     return r.compare(i) || r.compareBuild(i);
 }
 function D(e, t, n) {
-    return R(t, e, n);
+    return P(t, e, n);
 }
 function L(e, n) {
     return e.sort(function (e, r) {
@@ -230,22 +230,22 @@ function x(e, n) {
     });
 }
 function M(e, t, n) {
-    return R(e, t, n) > 0;
+    return P(e, t, n) > 0;
 }
 function k(e, t, n) {
-    return 0 > R(e, t, n);
+    return 0 > P(e, t, n);
 }
 function j(e, t, n) {
-    return 0 === R(e, t, n);
+    return 0 === P(e, t, n);
 }
 function U(e, t, n) {
-    return 0 !== R(e, t, n);
+    return 0 !== P(e, t, n);
 }
 function G(e, t, n) {
-    return R(e, t, n) >= 0;
+    return P(e, t, n) >= 0;
 }
 function B(e, t, n) {
-    return 0 >= R(e, t, n);
+    return 0 >= P(e, t, n);
 }
 function V(e, t, n, r) {
     switch (t) {
@@ -285,7 +285,7 @@ function F(e, t) {
     if (!(this instanceof F)) return new F(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === Z ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.rcompareIdentifiers = T), (t.major = N), (t.minor = A), (t.patch = C), (t.compare = R), (t.compareLoose = P), (t.compareBuild = w), (t.rcompare = D), (t.sort = L), (t.rsort = x), (t.gt = M), (t.lt = k), (t.eq = j), (t.neq = U), (t.gte = G), (t.lte = B), (t.cmp = V), (t.Comparator = F);
+(t.rcompareIdentifiers = T), (t.major = N), (t.minor = A), (t.patch = C), (t.compare = P), (t.compareLoose = R), (t.compareBuild = w), (t.rcompare = D), (t.sort = L), (t.rsort = x), (t.gt = M), (t.lt = k), (t.eq = j), (t.neq = U), (t.gte = G), (t.lte = B), (t.cmp = V), (t.Comparator = F);
 var Z = {};
 function H(e, t) {
     if (

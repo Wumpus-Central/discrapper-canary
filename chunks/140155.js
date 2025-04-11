@@ -142,11 +142,11 @@ function C(e) {
         }),
         (v.notifCenterLocalItems = t);
 }
-function R(e) {
+function P(e) {
     let { items: t, hasMore: n, cursor: r } = e;
     v.loading && ((v.loading = !1), (v.initialized = !0), (v.errored = !1), (v.isDataStale = !1), (null != r && v.notifCenterIds.has(r)) || ((v.paginationHasMore = t.length > 0 && n), (v.paginationCursor = t.length > 0 ? r : void 0)), (v.notifCenterItems = [...v.notifCenterItems, ...t.map(A).filter((e) => !v.notifCenterIds.has(e.id))]), v.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id)), t.forEach((e) => v.notifCenterIds.add(e.id)));
 }
-function P(e) {
+function R(e) {
     let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? A(e.item) : e.item;
     if (!v.initialized || !O(t) || v.notifCenterIds.has(t.id)) return !1;
     v.notifCenterIds.add(t.id), (v.notifCenterItems = [t, ...v.notifCenterItems]), v.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id));
@@ -321,12 +321,12 @@ let z = new K(o.Z, {
     NOTIFICATION_CENTER_ITEMS_ACK: L,
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: x,
     GUILD_SCHEDULED_EVENT_UPDATE: H,
-    NOTIFICATION_CENTER_ITEM_CREATE: P,
+    NOTIFICATION_CENTER_ITEM_CREATE: R,
     NOTIFICATION_CENTER_ITEM_DELETE: w,
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: P,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: R,
     LOAD_NOTIFICATION_CENTER_ITEMS: T,
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: N,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: R,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: P,
     RESET_NOTIFICATION_CENTER: () => S(),
     NOTIFICATION_CENTER_SET_ACTIVE: M,
     NOTIFICATION_CENTER_TAB_FOCUSED: k,

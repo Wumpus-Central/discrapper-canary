@@ -9,10 +9,10 @@ var a = t(100527),
     o = t(670451);
 function d(e) {
     let { user: n, entry: t, className: d, onClose: x, hideContextMenu: m = !1, appContext: u } = e,
-        { analyticsLocations: E } = (0, i.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
+        { analyticsLocations: j } = (0, i.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
     return (0, l.Rh)(t)
         ? (0, s.jsx)(i.Gt, {
-              value: E,
+              value: j,
               children: (0, s.jsx)(c.Z, {
                   entry: t,
                   user: n,

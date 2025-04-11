@@ -73,10 +73,10 @@ let v = 2,
     N = null,
     A = !1,
     C = new Map(),
-    R = (e, t) => {
+    P = (e, t) => {
         C = new Map(C.set(e, t));
     },
-    P = p.Z.Millis.HOUR,
+    R = p.Z.Millis.HOUR,
     w = async () => {
         if (0 !== v) return;
         let e = s.Z.database();
@@ -95,7 +95,7 @@ function D(e) {
         if (f.Z.isMember(e) && !C.has(e)) {
             let t = _.Z.getGuild(e);
             for (let e of n) L(e, !0, t);
-            R(e, n);
+            P(e, n);
         }
 }
 let L = function (e) {
@@ -185,7 +185,7 @@ let L = function (e) {
     };
 function G(e) {
     let t = _.Z.getGuild(e.id);
-    null != t && null != e.stickers && (e.stickers.forEach((e) => L(e, !0, t)), R(t.id, e.stickers));
+    null != t && null != e.stickers && (e.stickers.forEach((e) => L(e, !0, t)), P(t.id, e.stickers));
 }
 function B(e) {
     let { guild: t } = e;
@@ -216,13 +216,13 @@ let F = () => {
     },
     Y = (e) => {
         let { guildId: t, stickers: n } = e;
-        n.forEach((e) => L(e)), R(t, n);
+        n.forEach((e) => L(e)), P(t, n);
     },
     K = (e) => {
         var t, n;
         let { guildId: r, sticker: i } = e,
             o = null != (t = C.get(r)) ? t : [];
-        R(r, [...(null != (n = o.filter((e) => e.id !== i.id)) ? n : []), i]), L(i);
+        P(r, [...(null != (n = o.filter((e) => e.id !== i.id)) ? n : []), i]), L(i);
     },
     z = (e) => {
         let { sticker: t } = e;
@@ -242,7 +242,7 @@ let F = () => {
                 I.delete(e.id), null != S && S.delete(e.id);
             });
         let o = r.map((e) => i(e));
-        o.forEach((e) => L(e)), R(n, o);
+        o.forEach((e) => L(e)), P(n, o);
     };
 class Q extends (r = o.ZP.Store) {
     initialize() {
@@ -258,7 +258,7 @@ class Q extends (r = o.ZP.Store) {
         return w(), null == S && ((S = new Map()), k()), S;
     }
     get hasLoadedStickerPacks() {
-        return null != N && N + P > Date.now();
+        return null != N && N + R > Date.now();
     }
     get isFetchingStickerPacks() {
         return A;

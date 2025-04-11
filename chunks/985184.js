@@ -11,22 +11,22 @@ var n = r(200651),
     c = r(169525),
     s = r(197653),
     u = r(719877);
-let p = { isInContainer: !0 },
-    d = l.createContext({ isInContainer: !1 });
+let d = { isInContainer: !0 },
+    p = l.createContext({ isInContainer: !1 });
 function f(e) {
     let { children: t } = e;
-    return (0, n.jsx)(d.Provider, {
-        value: p,
+    return (0, n.jsx)(p.Provider, {
+        value: d,
         children: t
     });
 }
 function b() {
-    let { isInContainer: e } = l.useContext(d);
+    let { isInContainer: e } = l.useContext(p);
     return e;
 }
 function O(e) {
-    let { components: t, accentColor: r, spoiler: i, renderComponents: p } = e,
-        [d, b] = l.useState(i),
+    let { components: t, accentColor: r, spoiler: i, renderComponents: d } = e,
+        [p, b] = l.useState(i),
         O = (e) =>
             (0, n.jsx)(s.am.AutoMeasuredNestedContainer, {
                 children: (l) =>
@@ -37,7 +37,7 @@ function O(e) {
                             [u.withAccentColor]: null != r
                         }),
                         style: { '--__accent-color': r },
-                        children: (0, n.jsx)(f, { children: p(t) })
+                        children: (0, n.jsx)(f, { children: d(t) })
                     })
             });
     return null == t || 0 === t.length
@@ -46,7 +46,7 @@ function O(e) {
           ? (0, n.jsx)(a.ZP, {
                 type: a.ZP.Types.ATTACHMENT,
                 reason: c.wk.SPOILER,
-                obscured: d,
+                obscured: p,
                 onToggleObscurity: () => b((e) => !e),
                 children: (e) => O(e)
             })

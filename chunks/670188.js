@@ -97,7 +97,7 @@ let O = (0, a.pxk)(a.EFr.SIZE_80),
         position: void 0
     };
 function T(e) {
-    var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestClose: A, onClosePopout: C, shouldShow: R, shouldPreload: P = !0, shouldShowOnHover: w = !1 } = e,
+    var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestClose: A, onClosePopout: C, shouldShow: P, shouldPreload: R = !0, shouldShowOnHover: w = !1 } = e,
         D = y(e, ['children', 'userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'renderPopout', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload', 'shouldShowOnHover']);
     let L = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         x = (0, o.e7)([c.default], () => (null != p ? p : c.default.getUser(n))),
@@ -145,7 +145,7 @@ function T(e) {
               className: h.hoverable,
               onMouseEnter: () => {
                   (G.current = !0),
-                      P &&
+                      R &&
                           (B.current = setTimeout(async () => {
                               if (G.current)
                                   try {
@@ -170,8 +170,8 @@ function T(e) {
                       g(
                           {
                               popoutKey: _.Tg,
-                              shouldShow: !0 === R || M,
-                              preload: !P || j || M ? void 0 : W,
+                              shouldShow: !0 === P || M,
+                              preload: !R || j || M ? void 0 : W,
                               renderPopout: Y,
                               onRequestClose: () => {
                                   k(!1), null == A || A();
@@ -189,8 +189,8 @@ function T(e) {
                   g(
                       {
                           popoutKey: _.Tg,
-                          shouldShow: R,
-                          preload: P ? W : void 0,
+                          shouldShow: P,
+                          preload: R ? W : void 0,
                           renderPopout: Y,
                           onRequestClose: A
                       },

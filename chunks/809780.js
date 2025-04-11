@@ -37,8 +37,8 @@ var r,
     A = n(306680),
     w = n(771845),
     Z = n(9156),
-    k = n(70956),
-    R = n(823379),
+    R = n(70956),
+    k = n(823379),
     D = n(709054),
     L = n(981631),
     M = n(124368);
@@ -124,7 +124,7 @@ class V extends l.EventEmitter {
                 hasLoadedAnything: t
             });
         }
-        (0, R.vE)(e);
+        (0, k.vE)(e);
     }
     clearScrollToChannelIndex() {
         this.setState({ scrollToChannelIndex: null });
@@ -356,7 +356,7 @@ function K() {
         })(e),
         n = u()
             .uniq(t.map((e) => e.guildId))
-            .filter(R.lm);
+            .filter(k.lm);
     return (
         d.Z.dispatch({
             type: 'INBOX_OPEN',
@@ -435,8 +435,8 @@ function Y(e, t, n, r) {
                 })
             );
 }
-let X = 2 * k.Z.Millis.DAY,
-    q = 10 * k.Z.Millis.DAY;
+let X = 2 * R.Z.Millis.DAY,
+    q = 10 * R.Z.Millis.DAY;
 function Q(e) {
     let [t, n] = a.useState(() => new V(K(), e)),
         [r, i] = a.useState(!1),
@@ -456,7 +456,7 @@ function Q(e) {
             if (null == o || o.channels.length > 0 || r) return;
             let t = Date.now(),
                 a = K();
-            0 === a.channels.length || t - l.current < 10 * k.Z.Millis.SECOND ? i(!0) : ((l.current = Date.now()), n(new V(a, e)));
+            0 === a.channels.length || t - l.current < 10 * R.Z.Millis.SECOND ? i(!0) : ((l.current = Date.now()), n(new V(a, e)));
         }, [o, r, e]);
     let c = a.useRef(t);
     return (

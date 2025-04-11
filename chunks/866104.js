@@ -104,8 +104,8 @@ function I(e) {
         T = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: Z, isPhantomPreview: k } = (0, v.m)(),
-        R = Z === E.y.GUILD_PRODUCTS_PREVIEW ? N.NW.string(N.t['LvXy/P']) : N.NW.string(N.t.XyqKh4),
+        { selectedTab: Z, isPhantomPreview: R } = (0, v.m)(),
+        k = Z === E.y.GUILD_PRODUCTS_PREVIEW ? N.NW.string(N.t['LvXy/P']) : N.NW.string(N.t.XyqKh4),
         D = T
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -126,7 +126,7 @@ function I(e) {
             : (0, r.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-normal',
-                  children: k ? R : N.NW.string(N.t['NY/FIS'])
+                  children: R ? k : N.NW.string(N.t['NY/FIS'])
               });
     return (0, r.jsxs)('div', {
         className: j.container,
@@ -138,7 +138,7 @@ function I(e) {
                         children: (0, r.jsx)(p.Z, {
                             guild: a,
                             size: p.Z.Sizes.LARGER,
-                            iconSrc: null == a.icon || k ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                            iconSrc: null == a.icon || R ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
                     (0, r.jsx)(s.LZC, {
@@ -155,7 +155,7 @@ function I(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: k ? N.NW.string(N.t.rtgp7u) : N.NW.formatToPlainString(N.t.NZeik5, { guildName: a.name })
+                                    children: R ? N.NW.string(N.t.rtgp7u) : N.NW.formatToPlainString(N.t.NZeik5, { guildName: a.name })
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 8 }),
@@ -184,7 +184,7 @@ function I(e) {
             }),
             (0, r.jsx)(S, {
                 coverImageAsset: null == d ? void 0 : d.cover_image_asset,
-                isPreview: k
+                isPreview: R
             })
         ]
     });

@@ -48,7 +48,7 @@ function C(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function R(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,7 +81,7 @@ function w(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -162,7 +162,7 @@ function M(e) {
                         (0, r.jsx)(
                             u.idN,
                             w(
-                                R(
+                                P(
                                     {
                                         size: 'md',
                                         color: 'currentColor'
@@ -204,7 +204,7 @@ function k(e) {
                     (0, r.jsx)(
                         u.idN,
                         w(
-                            R(
+                            P(
                                 {
                                     size: 'md',
                                     color: 'currentColor'
@@ -417,7 +417,7 @@ function Z(e) {
 function H(e) {
     let { premiumSubscription: t, proratedInvoice: n, renewalInvoice: o, overrideRenewalDate: a, isUpdate: s = !1, isTrial: l = !1, priceOptions: c, isPrepaidPaymentSource: d = !1, trialFooterMessageOverride: p, hideSubscriptionDetails: m = !1 } = e,
         { analyticsLocations: g } = (0, _.ZP)(),
-        E = R(
+        E = P(
             {
                 subscriptionId: null == t ? void 0 : t.id,
                 renewal: !0,

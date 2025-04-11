@@ -75,8 +75,8 @@ function O(e) {
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
     };
     let { primaryColor: w, secondaryColor: Z } = (0, p.Z)(null != I ? I : j),
-        k = 'linear-gradient(45deg, '.concat(w, ', ').concat(Z, ')'),
-        R = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        R = 'linear-gradient(45deg, '.concat(w, ', ').concat(Z, ')'),
+        k = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         D = a.useRef(!1),
         L = (0, u.O)(
             (e) => {
@@ -104,7 +104,7 @@ function O(e) {
                   })
                 : null,
         W = null != j,
-        U = null != C && !1 === R,
+        U = null != C && !1 === k,
         F = W || U,
         B = 0 === S ? x.bannerAspectRatioBot : x.bannerAspectRatioActivity,
         G = a.useRef(null),
@@ -145,7 +145,7 @@ function O(e) {
                 }),
             (0, i.jsxs)('div', {
                 className: x.contentContainer,
-                style: { background: k },
+                style: { background: R },
                 children: [
                     null != O &&
                         (0, i.jsxs)('div', {

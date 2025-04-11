@@ -66,10 +66,10 @@ let u = new Map(),
             triggerTime: Date.now()
         };
     },
-    R = (e) => {
+    P = (e) => {
         g = e.enabled;
     };
-class P extends (i = o.ZP.Store) {
+class R extends (i = o.ZP.Store) {
     get lastConfetti() {
         return r;
     }
@@ -101,8 +101,8 @@ class P extends (i = o.ZP.Store) {
         return m;
     }
 }
-c(P, 'displayName', 'ConsumablesStore');
-let w = new P(a.Z, {
+c(R, 'displayName', 'ConsumablesStore');
+let w = new R(a.Z, {
     CONSUMABLES_PRICE_FETCH_STARTED: E,
     CONSUMABLES_PRICE_FETCH_SUCCEEDED: b,
     CONSUMABLES_PRICE_FETCH_FAILED: y,
@@ -114,5 +114,5 @@ let w = new P(a.Z, {
     SET_PREVIOUS_GO_LIVE_SETTINGS: N,
     CLEAR_CONSUMED_ENTITLEMENT: A,
     POTIONS_TRIGGER_MESSAGE_CONFETTI: C,
-    POTIONS_SET_CONFETTI_MODE: R
+    POTIONS_SET_CONFETTI_MODE: P
 });

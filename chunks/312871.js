@@ -3,21 +3,21 @@ var i = n(192379),
     r = n(434650);
 function l(e) {
     let { onVisible: t, threshold: n, minTimeVisibleMs: l } = e,
-        a = i.useRef(!1),
-        o = i.useRef(null);
+        o = i.useRef(!1),
+        a = i.useRef(null);
     return (
         i.useEffect(
             () => () => {
-                null != o.current && (clearTimeout(o.current), (o.current = null));
+                null != a.current && (clearTimeout(a.current), (a.current = null));
             },
             []
         ),
         (0, r.O)((e) => {
-            if ((null == o.current || e || !1 !== a.current || (clearTimeout(o.current), (o.current = null)), !e || !0 === a.current)) return;
+            if ((null == a.current || e || !1 !== o.current || (clearTimeout(a.current), (a.current = null)), !e || !0 === o.current)) return;
             let n = () => {
-                t(), (a.current = !0), (o.current = null);
+                t(), (o.current = !0), (a.current = null);
             };
-            null != l ? (o.current = setTimeout(n, l)) : n();
+            null != l ? (a.current = setTimeout(n, l)) : n();
         }, n)
     );
 }

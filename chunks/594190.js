@@ -37,8 +37,8 @@ var i,
     N = n(626135),
     A = n(70956),
     C = n(877481),
-    R = n(823379),
-    P = n(358085),
+    P = n(823379),
+    R = n(358085),
     w = n(998502),
     D = n(145597),
     L = n(370862),
@@ -404,7 +404,7 @@ function eT() {
     );
 }
 function eN() {
-    if (!__OVERLAY__ && P.isPlatformEmbedded) {
+    if (!__OVERLAY__ && R.isPlatformEmbedded) {
         let e = [...z, ...a().values(et.gameOverrides)];
         w.ZP.setGameCandidateOverrides(e);
     }
@@ -436,13 +436,13 @@ function eC(e) {
         }),
         et.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         eO(),
-        C.Z.setRecentGames(eR().map((e) => eI(e))));
+        C.Z.setRecentGames(eP().map((e) => eI(e))));
 }
-function eR() {
+function eP() {
     let e = a().values(et.gameOverrides);
     return et.gamesSeen.filter((e) => void 0 === et.gameOverrides[eg(e)]).concat(e);
 }
-function eP(e, t) {
+function eR(e, t) {
     if (void 0 === t) {
         let t = w.ZP.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
@@ -568,7 +568,7 @@ function eW(e) {
 }
 function eY(e) {
     var t;
-    if (__OVERLAY__ || !P.isPlatformEmbedded) return;
+    if (__OVERLAY__ || !R.isPlatformEmbedded) return;
     let n = w.ZP.getDiscordUtils().notifyGameLaunched;
     if (null == n) return;
     let r = I.Z.getDetectableGame(e.applicationId);
@@ -578,7 +578,7 @@ function eK() {
     g.Z.hasLoadedExperiments && Z.length > 0 && (eC(Z), (Z = []));
 }
 !__OVERLAY__ &&
-    ((0, P.isDesktop)() || M.iP) &&
+    ((0, R.isDesktop)() || M.iP) &&
     (en = function () {
         let e = [],
             t = new Set();
@@ -623,7 +623,7 @@ function eK() {
                         (e.distributor = eA(e)),
                         (e.isLauncher = e.isLauncher || t.has(e.exeName)),
                         e.isLauncher && null != e.id && (i[e.id] = e),
-                        (e.windowHandle = eP(e.pid, e.windowHandle)),
+                        (e.windowHandle = eR(e.pid, e.windowHandle)),
                         null ==
                             H.find((t) => {
                                 let { name: n } = t;
@@ -696,7 +696,7 @@ class ez extends (i = c.ZP.Store) {
     getRunningVerifiedApplicationIds() {
         return this.getRunningGames()
             .map((e) => I.Z.getGameByName(e.name))
-            .filter(R.lm)
+            .filter(P.lm)
             .map((e) => e.id);
     }
     getGameForPID(e) {
@@ -722,7 +722,7 @@ class ez extends (i = c.ZP.Store) {
     }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = eR();
+            n = eP();
         if (e) {
             let e = this.getVisibleGame();
             if (null != e) {

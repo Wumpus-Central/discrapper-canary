@@ -11,8 +11,8 @@ var r = n(200651),
     p = n(479446),
     h = n(981632),
     g = n(594174),
-    f = n(509545),
-    m = n(55563),
+    m = n(509545),
+    f = n(55563),
     _ = n(296848),
     b = n(981631),
     x = n(474936),
@@ -20,9 +20,9 @@ var r = n(200651),
     v = n(378027),
     E = n(893354),
     I = n(20493);
-let j = l.ZP.connectStores([m.Z, c.Z, f.Z, g.default], (e) => {
+let j = l.ZP.connectStores([f.Z, c.Z, m.Z, g.default], (e) => {
     let { giftCode: t } = e,
-        n = m.Z.get(t.skuId),
+        n = f.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
     return {
         sku: n,
@@ -32,11 +32,11 @@ let j = l.ZP.connectStores([m.Z, c.Z, f.Z, g.default], (e) => {
     };
 })((e) => {
     let { error: t, giftCode: n, gifter: o, sku: l, application: c, subscriptionPlan: g } = e,
-        f = null == o ? N.NW.string(N.t.lTGZAg) : N.NW.formatToPlainString(N.t.TjWdPT, { username: o.username }),
-        m = l.name;
+        m = null == o ? N.NW.string(N.t.lTGZAg) : N.NW.formatToPlainString(N.t.TjWdPT, { username: o.username }),
+        f = l.name;
     return (
         null != g &&
-            (m = N.NW.formatToPlainString(g.interval === x.rV.MONTH ? N.t.CTpcCQ : N.t.rgPWGx, {
+            (f = N.NW.formatToPlainString(g.interval === x.rV.MONTH ? N.t.CTpcCQ : N.t.rgPWGx, {
                 skuName: l.name,
                 intervalCount: g.intervalCount
             })),
@@ -59,7 +59,7 @@ let j = l.ZP.connectStores([m.Z, c.Z, f.Z, g.default], (e) => {
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.DK, { children: f }),
+                              (0, r.jsx)(u.DK, { children: m }),
                               (0, r.jsxs)(u.Dx, {
                                   className: a()(I.marginTop8, E.flexCenter),
                                   children: [
@@ -70,7 +70,7 @@ let j = l.ZP.connectStores([m.Z, c.Z, f.Z, g.default], (e) => {
                                               game: c,
                                               skuId: l.id
                                           }),
-                                      m
+                                      f
                                   ]
                               })
                           ]

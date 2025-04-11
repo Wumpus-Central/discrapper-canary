@@ -90,7 +90,7 @@ function T(e, t) {
     return i;
 }
 function N(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: O, onSubscriptionConfirmation: T, analyticsLocations: N, analyticsObject: A, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: V, giftRecipient: F, returnRef: Z, subscription: H, skipConfirm: W, repeatPurchase: Y } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: O, onSubscriptionConfirmation: T, analyticsLocations: N, analyticsObject: A, analyticsLocation: C, analyticsSourceLocation: P, confirmationFooter: R, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: V, giftRecipient: F, returnRef: Z, subscription: H, skipConfirm: W, repeatPurchase: Y } = null != e ? e : {},
         K = !1,
         z = (0, a.Z)(),
         q = p.default.getCurrentUser(),
@@ -132,8 +132,8 @@ function N(e) {
                         analyticsLocations: N,
                         analyticsObject: A,
                         analyticsLocation: C,
-                        analyticsSourceLocation: R,
-                        confirmationFooter: P,
+                        analyticsSourceLocation: P,
+                        confirmationFooter: R,
                         paymentModalBanner: w,
                         trialId: j,
                         postSuccessGuild: U,
@@ -157,7 +157,7 @@ function N(e) {
                         load_id: z,
                         payment_type: E.Zuq[E.GZQ.SUBSCRIPTION],
                         location: null != C ? C : A,
-                        source: R,
+                        source: P,
                         subscription_type: E.NYc.PREMIUM,
                         is_gift: D,
                         sku_id: J,

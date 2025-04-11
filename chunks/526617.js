@@ -31,8 +31,8 @@ var r = n(200651),
     N = n(695346),
     A = n(19780),
     C = n(594174),
-    R = n(979651),
-    P = n(259580),
+    P = n(979651),
+    R = n(259580),
     w = n(626135),
     D = n(74538),
     L = n(763296),
@@ -197,9 +197,9 @@ function eu(e) {
                                 className: K.sectionTitle,
                                 children: d()
                             }),
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(R.Z, {
                                 className: K.headerIcon,
-                                direction: n ? P.Z.Directions.RIGHT : P.Z.Directions.DOWN
+                                direction: n ? R.Z.Directions.RIGHT : R.Z.Directions.DOWN
                             })
                         ]
                     })
@@ -212,7 +212,7 @@ function ed() {
     return (0, r.jsx)(d.Z, { message: Y.NW.string(Y.t.bgDdND) });
 }
 function ef(e) {
-    let { guildId: t, channel: o, containerWidth: d, onClose: g, onSelect: I, shouldValidateSelectedSound: P = !1, suppressPlaySound: z = !1, shouldShowUpsell: Q = !0, gridNotice: J, soundButtonOverlay: ef, listPadding: e_, renderHeader: ep, defaultSoundsOnly: eh = !1, inExpressionPicker: em, refreshEnabled: eg, analyticsSource: eE } = e,
+    let { guildId: t, channel: o, containerWidth: d, onClose: g, onSelect: I, shouldValidateSelectedSound: R = !1, suppressPlaySound: z = !1, shouldShowUpsell: Q = !0, gridNotice: J, soundButtonOverlay: ef, listPadding: e_, renderHeader: ep, defaultSoundsOnly: eh = !1, inExpressionPicker: em, refreshEnabled: eg, analyticsSource: eE } = e,
         { audioRef: eb } = i.useContext(T.Z),
         { analyticsLocations: ey } = (0, p.ZP)(),
         { analyticsLocations: ev } = (0, p.ZP)(_.Z.PREMIUM_UPSELL),
@@ -221,19 +221,19 @@ function ef(e) {
         [eS, eT] = i.useState(null),
         eN = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
         eA = (0, D.I5)(eN, W.p9.TIER_2),
-        eC = (0, l.e7)([R.Z], () => {
+        eC = (0, l.e7)([P.Z], () => {
             var e;
-            return R.Z.getVoiceState(t, null != (e = null == eN ? void 0 : eN.id) ? e : H.lds);
+            return P.Z.getVoiceState(t, null != (e = null == eN ? void 0 : eN.id) ? e : H.lds);
         }),
-        eR = (null == eC ? void 0 : eC.selfDeaf) || (null == eC ? void 0 : eC.mute) || (null == eC ? void 0 : eC.suppress),
-        eP = (0, b.Iu)((e) => e.searchQuery),
-        ew = null != eP && '' !== eP,
+        eP = (null == eC ? void 0 : eC.selfDeaf) || (null == eC ? void 0 : eC.mute) || (null == eC ? void 0 : eC.suppress),
+        eR = (0, b.Iu)((e) => e.searchQuery),
+        ew = null != eR && '' !== eR,
         eD = (0, m.Dt)(),
         eL = (0, l.Wu)([L.Z], () => L.Z.getShownAllGuildIds()),
         { categories: ex, allSounds: eM, soundCounts: ek } = (0, G.ZP)(o, { shownAllGuildIds: eL }, eh),
         [ej, eU] = i.useState([]),
         [eG, eB] = i.useState(!1),
-        eV = (0, G.FS)(ex, ej, eP).filter((e) => e.items.length > 0),
+        eV = (0, G.FS)(ex, ej, eR).filter((e) => e.items.length > 0),
         eF = eV.some((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eZ = !eA && Q && eF,
         eH = N.T4.useSetting(),
@@ -248,9 +248,9 @@ function ef(e) {
         ),
         eq = i.useCallback(
             (e, t, n) => {
-                if (null != I && !P) return I(e, n);
+                if (null != I && !R) return I(e, n);
                 let r = (0, M.Nq)(eN, e, o, !1);
-                if (null != I && P && r) I(e, n);
+                if (null != I && R && r) I(e, n);
                 else if (!z && r && (0, M.C0)(o)) {
                     var i;
                     (0, M.GN)(e, null != (i = null == o ? void 0 : o.id) ? i : H.lds, t),
@@ -258,7 +258,7 @@ function ef(e) {
                             w.default.track(H.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: H.aib.SOUNDBOARD,
                                 channel_id: null == o ? void 0 : o.id,
-                                query: eP,
+                                query: eR,
                                 location_stack: t
                             });
                 } else {
@@ -266,7 +266,7 @@ function ef(e) {
                     Q && eT(e);
                 }
             },
-            [z, eN, o, Q, ew, eP, I, P]
+            [z, eN, o, Q, ew, eR, I, R]
         ),
         eQ = i.useCallback(
             (e, t) => {
@@ -298,7 +298,7 @@ function ef(e) {
                                     descriptor: e,
                                     soundButtonProps: {
                                         channel: o,
-                                        interactive: eY ? eK : !eR,
+                                        interactive: eY ? eK : !eP,
                                         forceSecondaryActions: !0,
                                         analyticsLocations: ey
                                     },
@@ -322,7 +322,7 @@ function ef(e) {
                     'row-'.concat(n['aria-rowindex'])
                 );
             },
-            [eV, Q, eA, t, z, eQ, o, eY, eK, eR, ey, ef, eZ, eg, em]
+            [eV, Q, eA, t, z, eQ, o, eY, eK, eP, ey, ef, eZ, eg, em]
         ),
         eJ = i.useCallback(
             (e, t) => {

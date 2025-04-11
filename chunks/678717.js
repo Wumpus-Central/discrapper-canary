@@ -35,14 +35,14 @@ var g = n(392750),
     L = n(496025),
     A = n(442954),
     D = n(633001),
-    B = n(702904),
-    z = n(178821),
+    z = n(702904),
+    B = n(178821),
     M = n(958328),
     U = n(315384),
     G = n(514866),
     F = n(384207),
-    W = n(264603),
-    H = n(678639),
+    H = n(264603),
+    W = n(678639),
     V = n(351930),
     X = n(771751),
     K = n(596768),
@@ -85,7 +85,7 @@ function et() {
                     id: 'stores',
                     name: 'Stores',
                     group: J.v0.EVENTS,
-                    render: () => (0, r.jsx)(H.Z, {})
+                    render: () => (0, r.jsx)(W.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -124,7 +124,7 @@ function et() {
                         id: 'performance',
                         name: 'Performance',
                         group: J.v0.DEVELOPMENT,
-                        render: () => (0, r.jsx)(z.ZP, {})
+                        render: () => (0, r.jsx)(B.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -142,7 +142,7 @@ function et() {
                         id: 'slayer_sdk',
                         name: 'Slayer SDK',
                         group: J.v0.GAMES,
-                        render: () => (0, r.jsx)(W.Z, {})
+                        render: () => (0, r.jsx)(H.Z, {})
                     })),
                 e.push({
                     id: 'intl',
@@ -228,7 +228,7 @@ function et() {
                         id: 'payments',
                         name: 'Payments',
                         group: J.v0.BILLING,
-                        render: () => (0, r.jsx)(B.Z, {})
+                        render: () => (0, r.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',

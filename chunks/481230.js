@@ -1,6 +1,6 @@
 n.d(t, {
-    R$: () => m,
-    ZP: () => f
+    R$: () => f,
+    ZP: () => m
 });
 var r = n(913527),
     i = n.n(r),
@@ -14,11 +14,11 @@ var r = n(913527),
     p = n(959776),
     h = n(981631),
     g = n(723359);
-function f(e) {
+function m(e) {
     var t,
         n,
         { invite: r = null, giftCodeSKUId: i = null } = e;
-    return m(
+    return f(
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -85,8 +85,8 @@ function f(e) {
         t)
     );
 }
-function m(e) {
-    let { email: t, phoneToken: n, username: r, globalName: f, consent: m, password: _, guildTemplateCode: b, birthday: x, invite: N = null, giftCodeSKUId: v = null, promoEmailConsent: E = null, usedUsernameSuggestion: I = null } = e;
+function f(e) {
+    let { email: t, phoneToken: n, username: r, globalName: m, consent: f, password: _, guildTemplateCode: b, birthday: x, invite: N = null, giftCodeSKUId: v = null, promoEmailConsent: E = null, usedUsernameSuggestion: I = null } = e;
     if ((a.Z.dispatch({ type: 'REGISTER' }), null != x)) {
         (0, p.Z)(x, h.jXE.REGISTER),
             u.default.track(h.rMx.AGE_GATE_ACTION, {
@@ -102,10 +102,10 @@ function m(e) {
             fingerprint: c.default.getFingerprint(),
             email: t,
             username: r,
-            global_name: f,
+            global_name: m,
             password: _,
             invite: N,
-            consent: m,
+            consent: f,
             phone_token: n,
             date_of_birth: null == x ? void 0 : x.format('YYYY-MM-DD'),
             gift_code_sku_id: v,

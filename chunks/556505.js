@@ -2,22 +2,22 @@ n.d(t, { Z: () => c }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(911969),
-    o = n(388032),
+    o = n(911969),
+    a = n(388032),
     s = n(261773);
 function c(e) {
     let { labelType: t, collapsed: n = !1 } = e,
-        c = t === a.ww.NEW ? o.NW.string(o.t.y2b7CA) : o.NW.string(o.t['/qdhkp']),
-        d = t === a.ww.NEW ? s.activityNewBadge : s.activityUpdatedBadge,
-        [u, p] = r.useState(n ? '' : c);
+        c = t === o.ww.NEW ? a.NW.string(a.t.y2b7CA) : a.NW.string(a.t['/qdhkp']),
+        u = t === o.ww.NEW ? s.activityNewBadge : s.activityUpdatedBadge,
+        [d, p] = r.useState(n ? '' : c);
     return (r.useEffect(() => {
-        n ? p('') : t === a.ww.NEW ? p(o.NW.string(o.t.y2b7CA)) : t === a.ww.UPDATED && p(o.NW.string(o.t['/qdhkp']));
+        n ? p('') : t === o.ww.NEW ? p(a.NW.string(a.t.y2b7CA)) : t === o.ww.UPDATED && p(a.NW.string(a.t['/qdhkp']));
     }, [n, t]),
-    t === a.ww.NONE)
+    t === o.ww.NONE)
         ? null
         : (0, i.jsx)(l.IGR, {
-              className: d,
+              className: u,
               disableColor: !0,
-              text: (0, i.jsx)('span', { children: u })
+              text: (0, i.jsx)('span', { children: d })
           });
 }

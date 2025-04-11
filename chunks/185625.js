@@ -1,7 +1,7 @@
 n.d(t, {
     B0: () => h,
     Jj: () => v,
-    M4: () => R,
+    M4: () => P,
     Nt: () => p,
     RV: () => y,
     VP: () => C,
@@ -9,7 +9,7 @@ n.d(t, {
     ZD: () => g,
     fw: () => E,
     hs: () => O,
-    i_: () => P,
+    i_: () => R,
     k8: () => N,
     ox: () => m,
     yL: () => b
@@ -313,10 +313,10 @@ function C(e, t, n, r, i) {
         ((null == n ? void 0 : n.should_submit_data) === !0 && (null == i || 0 === Object.keys(i).length))
     );
 }
-var R = (function (e) {
+var P = (function (e) {
     return (e.SETTINGS_UPSELLS_VIEWED = 'SETTINGS_UPSELLS_VIEWED'), (e.SETTINGS_UPSELLS_APPLY_CLICKED = 'SETTINGS_UPSELLS_APPLY_CLICKED'), (e.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED = 'SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED'), e;
 })({});
-function P(e, t, n) {
+function R(e, t, n) {
     return r.useCallback(
         (r) => (i) => {
             a.ZP.trackWithMetadata(c.rMx.IAR_SETTINGS_UPSELLS_ACTION, {

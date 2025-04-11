@@ -1,6 +1,6 @@
 let r, i;
 n.d(t, {
-    Z: () => R,
+    Z: () => P,
     q: () => m
 }),
     n(539854);
@@ -199,7 +199,7 @@ f(C, 'displayName', 'MultiAccountStore'),
             };
         }
     ]);
-let R = new C(l.Z, {
+let P = new C(l.Z, {
     CONNECTION_OPEN: b,
     LOGOUT: y,
     MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => I(e.userId, 1),

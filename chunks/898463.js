@@ -127,7 +127,7 @@ function C(e) {
         })
     });
 }
-function R(e) {
+function P(e) {
     let { file: t, alt: n, spoiler: o, size: s = y.q.MEDIUM, onMouseEnter: c } = e,
         [u, d] = i.useState(),
         [f, _] = i.useState({
@@ -205,7 +205,7 @@ function R(e) {
         })
     });
 }
-function P(e) {
+function R(e) {
     let { file: t, alt: n, spoiler: o, size: s = y.q.MEDIUM, onMouseEnter: l, onVideoLoadError: c } = e,
         [u, d] = i.useState(),
         f = i.useRef(null);
@@ -249,7 +249,7 @@ function w(e) {
         [l, c] = i.useState(!1),
         u = o === y.q.SMALL;
     return n.isImage && n.item.platform === d.ow.WEB
-        ? (0, r.jsx)(R, {
+        ? (0, r.jsx)(P, {
               file: n.item.file,
               alt: n.description,
               spoiler: n.spoiler,
@@ -257,7 +257,7 @@ function w(e) {
               onMouseEnter: s
           })
         : !l && n.isVideo && n.item.platform === d.ow.WEB
-          ? (0, r.jsx)(P, {
+          ? (0, r.jsx)(R, {
                 file: n.item.file,
                 size: o,
                 alt: n.description,
@@ -286,11 +286,11 @@ function D(e) {
     let { channelId: t, draftType: n, upload: o, keyboardModeEnabled: d, label: p, size: h = y.q.MEDIUM, canEdit: g = !0, hideFileName: I = !1, clip: T } = e,
         A = null != T,
         C = (h = A ? y.q.CLIP : h) === y.q.SMALL,
-        R = (0, s.e7)([m.Z], () => {
+        P = (0, s.e7)([m.Z], () => {
             var e;
             return null == (e = m.Z.getChannel(t)) ? void 0 : e.guild_id;
         }),
-        P = (e) => {
+        R = (e) => {
             e.stopPropagation(),
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
@@ -336,7 +336,7 @@ function D(e) {
                     ? (0, r.jsx)(b.Z, {
                           className: a()({ [O.action]: C }),
                           tooltip: v.NW.string(v.t.Y8ujqq),
-                          onClick: P,
+                          onClick: R,
                           children: (0, r.jsx)(l.vdY, {
                               size: 'xs',
                               color: 'currentColor',
@@ -360,7 +360,7 @@ function D(e) {
         draftType: n,
         id: o.id,
         channelId: t,
-        handleEditModal: P,
+        handleEditModal: R,
         keyboardModeEnabled: d,
         size: h,
         className: a()({ [O.attachmentItemSmall]: C }),
@@ -388,7 +388,7 @@ function D(e) {
                             participantIds: T.users,
                             applicationId: T.applicationId,
                             title: T.name,
-                            guildId: R
+                            guildId: P
                         }),
                         (0, r.jsx)(l.IGR, {
                             color: _.Z.BG_BRAND,

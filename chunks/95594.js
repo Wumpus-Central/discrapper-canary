@@ -73,8 +73,8 @@ function f(e) {
         A = Math.min(null != h ? h : 1 / 0, N.offsetWidth),
         C = null != h ? Math.max(0, N.offsetWidth - h) : 0,
         {
-            dirty: R,
-            chunkStart: P,
+            dirty: P,
+            chunkStart: R,
             chunkEnd: w,
             forceUpdateOnChunkChange: D
         } = (0, a.Z)({
@@ -85,7 +85,7 @@ function f(e) {
     return (
         (S.current = (0, r.useMemo)(
             () =>
-                R > 0
+                P > 0
                     ? S.current
                     : (T.mergeProps({
                           sections: t,
@@ -103,9 +103,9 @@ function f(e) {
                           marginLeft: C / 2,
                           dir: O
                       }),
-                      T.computeVisibleSections(Math.max(0, P * _), w * _),
+                      T.computeVisibleSections(Math.max(0, R * _), w * _),
                       T.getState()),
-            [R, T, t, n, s, c, f, P, w, _, m, g, E, b, y, v, A, O]
+            [P, T, t, n, s, c, f, R, w, _, m, g, E, b, y, v, A, O]
         )),
         u(l({}, S.current), {
             masonryComputer: T,

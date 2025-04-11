@@ -9,40 +9,40 @@ var r = n(200651),
     u = n(442837),
     d = n(607070),
     p = n(663389),
-    h = n(834166);
-function _(e) {
+    _ = n(834166);
+function h(e) {
     let { children: t, className: n, onFlashEnd: o, animationDelay: u = 500 } = e,
         p = c.TVs.colors.TEXT_LINK,
-        _ = (0, c.dQu)(p).spring({ opacity: 0 }),
+        h = (0, c.dQu)(p).spring({ opacity: 0 }),
         f = (0, c.dQu)(p).spring({ opacity: 0.1 }),
         m = (0, c.dQu)(p).spring({ opacity: 0 }),
-        g = (0, c.dQu)(p).spring({ opacity: 1 }),
-        [b, E] = (0, c.q_F)(
+        b = (0, c.dQu)(p).spring({ opacity: 1 }),
+        [g, E] = (0, c.q_F)(
             () => ({
                 from: {
-                    backgroundColor: _,
-                    borderColor: _
+                    backgroundColor: h,
+                    borderColor: h
                 }
             }),
             'animate-never'
         ),
-        C = {
-            startColor: _,
+        O = {
+            startColor: h,
             handleRest: (e) => {
                 e.finished && (null == o || o());
             },
             endColor: m,
-            targetBorderColor: g,
+            targetBorderColor: b,
             targetColor: f,
             animationDelay: u
         },
-        O = i.useRef(C);
+        y = i.useRef(O);
     return (
         i.useEffect(() => {
-            O.current = C;
+            y.current = O;
         }),
         i.useEffect(() => {
-            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: o } = O.current,
+            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: o } = y.current,
                 { useReducedMotion: l } = d.Z,
                 s = 200 * !l;
             E({
@@ -88,8 +88,8 @@ function _(e) {
                 });
         }, [E]),
         (0, r.jsx)(s.animated.div, {
-            style: b,
-            className: l()(h.settingsItemHighlight, n),
+            style: g,
+            className: l()(_.settingsItemHighlight, n),
             children: t
         })
     );
@@ -102,7 +102,7 @@ function f(e) {
         l && a(!0);
     }, [l]),
     s)
-        ? (0, r.jsx)(_, {
+        ? (0, r.jsx)(h, {
               animationDelay: o,
               onFlashEnd: () => a(!1),
               children: t

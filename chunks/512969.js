@@ -1,6 +1,6 @@
 n.d(t, {
     $B: () => j,
-    AW: () => R,
+    AW: () => P,
     EN: () => D,
     F0: () => m,
     LX: () => C,
@@ -193,7 +193,7 @@ function C(e, t) {
               };
     }, null);
 }
-var R = (function (e) {
+var P = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -219,7 +219,7 @@ var R = (function (e) {
         t
     );
 })(i.Component);
-function P(e) {
+function R(e) {
     return '/' === e.charAt(0) ? e : '/' + e;
 }
 i.Component;

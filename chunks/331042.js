@@ -30,8 +30,8 @@ var r = n(200651),
     N = n(350327),
     A = n(594174),
     C = n(626135),
-    R = n(585483),
-    P = n(597688),
+    P = n(585483),
+    R = n(597688),
     w = n(1870),
     D = n(429368),
     L = n(884697),
@@ -274,10 +274,10 @@ let el = 880,
             N = i.useMemo(() => {
                 if (!O) return;
                 let e = I.type === u.Z.AVATAR_DECORATION ? (0, X.R9)(I.skuId, T) : null;
-                return null != e ? P.Z.getProduct(e) : void 0;
+                return null != e ? R.Z.getProduct(e) : void 0;
             }, [O, I.skuId, I.type, T]),
             { confettiColors: C } = (0, G.Z)(I.styles),
-            R = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
+            P = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
             w = i.useRef(null),
             { analyticsLocations: D } = (0, g.ZP)([...l, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
             { collectedModalBackground: L } = (0, Q.Ac)(I);
@@ -310,7 +310,7 @@ let el = 880,
                             (0, r.jsx)(ed, {
                                 product: I,
                                 pairedProduct: N,
-                                reducedMotion: R
+                                reducedMotion: P
                             })
                         ]
                     }),
@@ -342,7 +342,7 @@ let el = 880,
                     children: M()
                 }),
                 !s &&
-                    !R &&
+                    !P &&
                     (0, r.jsx)(B.Z, {
                         confettiTarget: null != o ? o : w.current,
                         confettiCanvas: a,
@@ -388,7 +388,7 @@ let el = 880,
                               : en.NW.format(en.t.YNaxMj, { itemName: h }),
                 [l, n.skuId, g, p, f, h, m]
             ),
-            P = i.useMemo(
+            R = i.useMemo(
                 () =>
                     null != d
                         ? d
@@ -415,7 +415,7 @@ let el = 880,
                                   (0, r.jsx)(_.zxk, {
                                       color: _.Ttl.BRAND,
                                       onClick: () => {
-                                          a(), R.S.dispatch($.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                                          a(), P.S.dispatch($.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
                                       },
                                       children: en.NW.string(et.Z.yfwZu7)
                                   }),
@@ -443,7 +443,7 @@ let el = 880,
                         }),
                         (0, r.jsx)(_.Text, {
                             variant: 'text-sm/normal',
-                            children: P
+                            children: R
                         })
                     ]
                 }),
