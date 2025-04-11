@@ -64,7 +64,17 @@ function b(e) {
                       embeddedActivity: _,
                       activity: b,
                       user: n,
-                      ButtonComponent: (e) => (0, i.jsx)(l.zxk, h(f({}, e), { className: m.joinButton }))
+                      ButtonComponent: (e) =>
+                          (0, i.jsx)(
+                              l.zxk,
+                              h(f({}, e), {
+                                  className: m.joinButton,
+                                  onClick: function (t) {
+                                      var n;
+                                      t.stopPropagation(), null == (n = e.onClick) || n.call(e, t);
+                                  }
+                              })
+                          )
                   })
                 : null;
         }, [b, _, n]);
