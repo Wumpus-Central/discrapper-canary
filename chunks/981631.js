@@ -1440,6 +1440,7 @@ var N =
     (r.PAYMENT_REQUEST_COMPLETED = 'payment_request_completed'),
     (r.GIFT_CATEGORY_SELECT_MODAL_OPENED = 'gift_category_select_modal_opened'),
     (r.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED = 'collectibles_gifting_shop_item_clicked'),
+    (r.ORBS_ENTRYPOINT_CLICKED = 'orbs_entrypoint_clicked'),
     (r.PAYMENT_SOURCE_CREATION_FAILED = 'payment_source_creation_failed'),
     (r.PREMIUM_UPGRADE_STARTED = 'premium_upgrade_started'),
     (r.CHANNEL_MEMBER_KICKED = 'channel_member_kicked'),
