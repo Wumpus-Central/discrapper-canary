@@ -28,10 +28,9 @@ function h() {
             useSystemTheme: g.ZP.useSystemTheme,
             useForcedColors: s.Z.useForcedColors
         })),
-        S = f.YC.useSetting(),
-        v = (0, p.Q3)('appearance_settings'),
+        v = f.YC.useSetting(),
+        S = (0, p.Q3)('appearance_settings'),
         P = (0, p.o9)('appearance_settings'),
-        x = (0, p.nm)('appearance_settings'),
         Z = (e, i) =>
             (0, n.jsx)(c.k5B, {
                 id: e,
@@ -48,19 +47,19 @@ function h() {
                         (0, a.ZI)({ theme: e });
                 }
             }),
-        w = Z(O.BRd.DARK, v ? y.NW.string(y.t.SMPT1t) : y.NW.string(y.t.b8Cei4)),
-        k = Z(O.BRd.LIGHT, y.NW.string(y.t.K2sFfn)),
+        x = Z(O.BRd.DARK, S ? y.NW.string(y.t.SMPT1t) : y.NW.string(y.t.b8Cei4)),
+        w = Z(O.BRd.LIGHT, y.NW.string(y.t.K2sFfn)),
         E = [
             (0, n.jsxs)(
                 c.kSQ,
                 {
                     children: [
-                        v
+                        S
                             ? (0, n.jsxs)(n.Fragment, {
-                                  children: [k, w, Z(O.BRd.DARKER, y.NW.string(y.t.b8Cei4)), Z(O.BRd.MIDNIGHT, y.NW.string(y.t.Do4ZJy))]
+                                  children: [w, x, Z(O.BRd.DARKER, y.NW.string(y.t.b8Cei4)), Z(O.BRd.MIDNIGHT, y.NW.string(y.t.Do4ZJy))]
                               })
                             : (0, n.jsxs)(n.Fragment, {
-                                  children: [w, k]
+                                  children: [x, w]
                               }),
                         Z('system', y.NW.string(y.t['7rOU6u']))
                     ]
@@ -81,7 +80,7 @@ function h() {
                                   id: 'compact-ui',
                                   group: 'list-density',
                                   label: y.NW.string(y.t['7iegX1']),
-                                  checked: S === o.Pi.COMPACT,
+                                  checked: v === o.Pi.COMPACT,
                                   action: () => {
                                       f.YC.updateSetting(o.Pi.COMPACT);
                                   }
@@ -90,7 +89,7 @@ function h() {
                                   id: 'default-ui',
                                   group: 'list-density',
                                   label: y.NW.string(y.t.bBvAEB),
-                                  checked: S === o.Pi.DEFAULT,
+                                  checked: v === o.Pi.DEFAULT,
                                   action: () => {
                                       f.YC.updateSetting(o.Pi.DEFAULT);
                                   }
@@ -99,7 +98,7 @@ function h() {
                                   id: 'cozy-ui',
                                   group: 'list-density',
                                   label: y.NW.string(y.t['4cuYHx']),
-                                  checked: S === o.Pi.COZY,
+                                  checked: v === o.Pi.COZY,
                                   action: () => {
                                       f.YC.updateSetting(o.Pi.COZY);
                                   }
@@ -137,24 +136,7 @@ function h() {
                       },
                       'chat-density'
                   )
-              ),
-              x &&
-                  E.push(
-                      (0, n.jsx)(
-                          c.kSQ,
-                          {
-                              children: (0, n.jsx)(c.S89, {
-                                  id: 'desktop-refresh-override',
-                                  label: 'Enable Desktop Refresh',
-                                  action: () => {
-                                      a.ZP.updatedUnsyncedSettings({ disableVisualRefresh: v });
-                                  },
-                                  checked: v
-                              })
-                          },
-                          'refresh-experiment'
-                      )
-                  ))
+              ))
             : E.push(
                   (0, n.jsx)(
                       c.kSQ,

@@ -515,27 +515,11 @@ class ee extends i.Component {
             })
         });
     }
-    renderVisualRefreshOverride() {
-        let { isRefreshEnabled: e, isRefreshExperimentEnabled: t, canOptOutOfRefresh: n } = this.props;
-        return t && n
-            ? (0, r.jsx)(u.xJW, {
-                  className: G.marginTop8,
-                  children: (0, r.jsx)(u.j7V, {
-                      hideBorder: !0,
-                      value: e,
-                      onChange: this.handleDesktopRefreshEnabledChanged,
-                      className: G.marginTop20,
-                      children: 'Enable Desktop Refresh'
-                  })
-              })
-            : null;
-    }
     render() {
         return (0, r.jsxs)(u.hjN, {
             tag: u.RB0.H1,
             title: U.NW.string(U.t['iHH+k5']),
             children: [
-                this.renderVisualRefreshOverride(),
                 (0, r.jsxs)(y.F, {
                     setting: W.s6.APPEARANCE_THEME,
                     children: [this.renderPreview(), this.renderTheme()]
@@ -748,7 +732,7 @@ class et extends ee {
         return (0, r.jsxs)(u.hjN, {
             tag: u.RB0.H1,
             title: U.NW.string(U.t['iHH+k5']),
-            children: [this.renderVisualRefreshOverride(), t, n, s, a, l, o, d]
+            children: [t, n, s, a, l, o, d]
         });
     }
 }
@@ -784,21 +768,19 @@ function er() {
                 gradientPreset: x.Z.gradientPreset
             };
         }),
-        d = (0, j.nm)('UserSettingsAppearance'),
-        u = (0, j.o9)('UserSettingsAppearance'),
-        m = (0, j.Q3)('UserSettingsAppearance');
+        d = (0, j.o9)('UserSettingsAppearance'),
+        u = (0, j.Q3)('UserSettingsAppearance');
     return (0, r.jsx)(
-        m ? et : ee,
+        u ? et : ee,
         H(
             {
                 messageDisplayCompact: e,
                 hideSimpleEmbedContent: t && n,
                 clientTheme: i,
                 timestampHourCycle: s,
-                isRefreshEnabled: m,
-                isRefreshExperimentEnabled: u,
-                density: a,
-                canOptOutOfRefresh: d
+                isRefreshEnabled: u,
+                isRefreshExperimentEnabled: d,
+                density: a
             },
             c
         )
