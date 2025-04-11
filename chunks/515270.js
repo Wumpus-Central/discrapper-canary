@@ -1,12 +1,11 @@
 n.d(t, {
-    L6: () => w,
-    ZP: () => E,
-    iF: () => R
+    L6: () => C,
+    ZP: () => h,
+    iF: () => A
 }),
     n(388685),
-    n(35282),
-    n(415506),
     n(539854),
+    n(35282),
     n(704826);
 var r = n(147519),
     i = n(31775),
@@ -19,26 +18,15 @@ var r = n(147519),
     d = n(887490),
     f = n(42530);
 let _ = new Set(['line']),
-    p = r.Z.listLanguages(),
-    h = new Map();
-for (let e of p) {
-    e = e.toLowerCase();
-    let t = r.Z.getLanguage(e);
-    if (null == t) continue;
-    let n = t.aliases;
-    if ((h.set(e, e), null != n)) for (let t of n) h.set(t.toLowerCase(), e);
-}
-let m = /^[a-z0-9_+\-.#]+$/,
-    g = /^[a-z0-9_+\-.#]+$/i;
-for (let [e, t] of h) if (null == e.match(m)) throw Error('Language name does not match regex: '.concat(e));
-function E(e) {
+    p = /^[a-z0-9_+\-.#]+$/i;
+function h(e) {
     let { onChange: t } = e,
         n = null;
     return (
         (e.onChange = () => {
             d.bN.richValue(e) !== n &&
                 (l.T.withMergedEntry(e, () => {
-                    d.bN.withoutNormalizing(e, () => b(e));
+                    d.bN.withoutNormalizing(e, () => m(e));
                 }),
                 (n = d.bN.richValue(e))),
                 t();
@@ -46,56 +34,56 @@ function E(e) {
         e
     );
 }
-function b(e) {
-    let t = v(e);
-    I(e, t);
+function m(e) {
+    let t = E(e);
+    y(e, t);
 }
-let y = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
-function v(e) {
+let g = /(?:<span class="([^"]*)">)|(?:<\/span>)/g;
+function E(e) {
     let t = [],
         n = null;
     for (let r of d.bN.blocks(e)) {
         let i = null != n && (n.isInCodeBlock || n.opensCodeBlock);
-        (n = O(e, r, i, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
+        (n = b(e, r, i, null != n && (n.isStyledCodeBlockLine || n.opensCodeBlockOnOwnLine), null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)), t.push(n);
     }
-    return T(t), t;
+    return O(t), t;
 }
-function O(e, t, n, r, i) {
+function b(e, t, n, r, i) {
     var o;
-    let a = P(t),
-        s = a[0],
-        l = a[a.length - 1],
-        c = null;
-    if (null != l) {
-        let [t] = d.bN.node(e, l.path);
-        c = t.text.substring(l.offset + 3);
+    let a = N(t),
+        l = a[0],
+        c = a[a.length - 1],
+        u = null;
+    if (null != c) {
+        let [t] = d.bN.node(e, c.path);
+        u = t.text.substring(c.offset + 3);
     }
-    let u = n && null != s,
-        f = n && 0 === a.length,
-        _ = r && 0 === a.length,
-        p = (u ? a.slice(1) : a).length % 2 == 1,
-        m = p && (null == c || '' === c || null != c.match(g)),
-        E = m && null != c && null != (o = h.get(c.toLowerCase())) ? o : null;
+    let f = n && null != l,
+        _ = n && 0 === a.length,
+        h = r && 0 === a.length,
+        m = (f ? a.slice(1) : a).length % 2 == 1,
+        g = m && (null == u || '' === u || null != u.match(p)),
+        E = g && null != u && null != (o = s.default.resolveLanguageName(u)) ? o : null;
     return {
         blockEntry: t,
         wasInCodeBlock: n,
-        isInCodeBlock: f,
-        isStyledCodeBlockLine: _,
-        lang: p || u ? E : i,
+        isInCodeBlock: _,
+        isStyledCodeBlockLine: h,
+        lang: m || f ? E : i,
         hljsTypes: null,
-        closesCodeBlock: u,
-        opensCodeBlock: p,
-        opensCodeBlockOnOwnLine: m
+        closesCodeBlock: f,
+        opensCodeBlock: m,
+        opensCodeBlockOnOwnLine: g
     };
 }
-function I(e, t) {
+function y(e, t) {
     for (let n of t) {
         let [t, r] = n.blockEntry,
-            i = S(n);
+            i = v(n);
         (null == t ? void 0 : t.codeBlockState) != i && u.Q.setNodes(e, { codeBlockState: i }, { at: r });
     }
 }
-function S(e) {
+function v(e) {
     return e.isStyledCodeBlockLine || e.wasInCodeBlock
         ? {
               lang: e.lang,
@@ -106,7 +94,7 @@ function S(e) {
           }
         : null;
 }
-function T(e) {
+function O(e) {
     let t = [],
         n = !1;
     for (let i of e) {
@@ -115,7 +103,7 @@ function T(e) {
             let e = t.map((e) => (0, c.sg)(e.blockEntry[0])).join('\n'),
                 n = t[0].lang;
             if (null != n && null != r.Z.getLanguage(n)) {
-                let r = C(e, n);
+                let r = T(e, n);
                 if (null != r && r.length === t.length) {
                     let e = [];
                     for (let n = 0; n < t.length; n++) {
@@ -129,7 +117,7 @@ function T(e) {
                             a = [],
                             s = 0,
                             l = 0;
-                        for (; null != (i = y.exec(o)); ) {
+                        for (; null != (i = g.exec(o)); ) {
                             let t = i.index + i[0].length,
                                 n = i.index - l;
                             i.index > l &&
@@ -160,22 +148,22 @@ function T(e) {
         n && t.push(i), i.opensCodeBlock && (n = !0);
     }
 }
-let N = {
+let I = {
         max: 1 / 0,
         maxAge: +a.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    A = new (o())(N);
-function C(e, t) {
+    S = new (o())(I);
+function T(e, t) {
     let n = ''.concat(e, '-').concat(t),
-        r = A.get(n);
+        r = S.get(n);
     if (null != r) return r;
     let i = s.default.highlight(t, e, !1);
     if (null == i || i.illegal) return null;
     let o = i.value.split('\n');
-    return A.set(n, o), o;
+    return S.set(n, o), o;
 }
-function P(e) {
+function N(e) {
     let t,
         [n, r] = e;
     if (!_.has(n.type)) return [];
@@ -197,7 +185,7 @@ function P(e) {
     }
     return i;
 }
-function R(e, t) {
+function A(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {
         at: {
@@ -218,8 +206,8 @@ function R(e, t) {
     }
     return n % 2 != 0;
 }
-function w(e) {
+function C(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
-    return R(e, t);
+    return A(e, t);
 }
