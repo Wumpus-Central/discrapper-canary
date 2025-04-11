@@ -25,7 +25,6 @@ function g(e) {
         I = i.useRef(!1);
     return (0, r.jsx)(l.Z, {
         className: h.container,
-        innerClassName: h.inner,
         editorClassName: h.editor,
         type: a.Ie.USER_PROFILE,
         placeholder: p.NW.formatToPlainString(p.t['0ZQw/f'], { name: u.ZP.getName(n, c, t) }),

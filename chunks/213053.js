@@ -40,47 +40,26 @@ function p(e) {
 }
 let h = 'custom-user-profile-theme',
     m = Object.freeze({
-        '--profile-gradient-primary-color': 'var(--background-secondary-alt)',
-        '--profile-gradient-secondary-color': 'var(--background-secondary-alt)',
+        '--profile-gradient-primary-color': 'var(--background-surface-high)',
+        '--profile-gradient-secondary-color': 'var(--background-surface-high)',
         '--profile-gradient-overlay-color': 'rgba(0, 0, 0, 0)',
-        '--profile-gradient-button-color': 'var(--button-secondary-background)',
-        '--profile-avatar-border-color': 'var(--background-secondary-alt)',
-        '--profile-body-background-color': 'var(--background-floating)',
-        '--profile-body-background-hover': 'var(--background-modifier-hover)',
-        '--profile-body-divider-color': 'var(--background-modifier-accent)',
-        '--profile-body-border-color': 'var(--border-faint)',
-        '--profile-message-input-border-color': 'var(--background-modifier-accent)',
-        '--profile-note-background-color': 'var(--background-tertiary)',
-        '--profile-role-pill-background-color': 'var(--background-secondary-alt)',
-        '--profile-role-pill-border-color': 'var(--interactive-normal)'
+        '--profile-gradient-button-color': 'var(--background-mod-subtle)'
     });
 function g(e) {
     let { theme: t, primaryColor: n, secondaryColor: i } = e,
         [_, g] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
         E = (0, f.fq)(t),
-        b = (0, f.wu)(t, n, g),
-        y = (0, f.lM)(t, n),
-        v = (0, f.e4)(t, i),
-        O = g ? (null == E ? void 0 : E.overlaySyncedWithUserTheme) : null == E ? void 0 : E.overlay;
+        b = g ? (null == E ? void 0 : E.overlaySyncedWithUserTheme) : null == E ? void 0 : E.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == n || null == i || null == E || null == b || null == y || null == v || null == O) return m;
+            if (null == n || null == i || null == E || null == b) return m;
             let e = (e, t) => (0, a.ho)(e, _, null, t);
             return p(
                 {
                     '--profile-gradient-primary-color': e(n),
                     '--profile-gradient-secondary-color': e(i),
-                    '--profile-gradient-overlay-color': O,
-                    '--profile-gradient-button-color': e((0, f.ZB)(n)),
-                    '--profile-avatar-border-color': e(b),
-                    '--profile-body-background-color': E.sectionBox,
-                    '--profile-body-background-hover': E.profileBodyBackgroundHover,
-                    '--profile-body-divider-color': e(y, E.dividerOpacity),
-                    '--profile-body-border-color': e(y, 0.12),
-                    '--profile-message-input-border-color': e(v),
-                    '--profile-note-background-color': E.noteBackgroundColor,
-                    '--profile-role-pill-background-color': E.rolePillBackgroundColor,
-                    '--profile-role-pill-border-color': E.rolePillBorderColor
+                    '--profile-gradient-overlay-color': b,
+                    '--profile-gradient-button-color': e((0, f.ZB)(n))
                 },
                 (0, u.W4)({
                     enabled: !0,
@@ -90,7 +69,7 @@ function g(e) {
                     textMixAmount: 25
                 })
             );
-        }, [n, i, E, b, y, v, O, t, _]),
+        }, [n, i, E, b, t, _]),
         profileThemeClassName: o()((0, l.QeD)(t), {
             [d.e3]: null != n,
             [h]: null != n

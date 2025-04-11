@@ -94,10 +94,7 @@ function P(e) {
                         e.applicationId
                     )
                 ),
-            (0, r.jsx)(E.Z, {
-                user: t,
-                source: E.t.POPOUT
-            }),
+            (0, r.jsx)(E.Z, { user: t }),
             !V &&
                 (0, r.jsx)(T.Z, {
                     user: t,
@@ -117,16 +114,14 @@ function P(e) {
             V &&
                 (0, r.jsx)(p.Z, {
                     isPremiumUser: F,
-                    onInteraction: x,
-                    className: C.upsell
+                    onInteraction: x
                 }),
             (0, r.jsx)(h.Z, {
                 user: t,
                 currentUser: n,
                 displayProfile: P,
                 guildId: null == R ? void 0 : R.id,
-                onClose: x,
-                className: C.activity
+                onClose: x
             }),
             null != R &&
                 (0, r.jsx)(S.Z, {

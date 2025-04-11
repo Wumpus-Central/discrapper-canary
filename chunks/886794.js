@@ -11,26 +11,26 @@ var r = t(200651),
     f = t(687158),
     p = t(899007),
     b = t(648052),
-    y = t(867176),
+    m = t(867176),
     I = t(280885),
     g = t(900927),
-    m = t(678738),
+    y = t(678738),
     j = t(502762),
-    v = t(530),
-    h = t(679332),
+    h = t(530),
+    v = t(679332),
     x = t(544989),
-    O = t(228168),
-    _ = t(981631),
+    _ = t(228168),
+    O = t(981631),
     Z = t(388032),
     N = t(405666),
     P = t(349966),
     E = t(923243);
 function S(e) {
     let { user: n, guildId: t, channelId: S, messageId: T, roleId: C, sessionId: A, transitionState: w, onClose: L, sourceAnalyticsLocations: R = [] } = e,
-        M = t === _.ME ? void 0 : t,
+        M = t === O.ME ? void 0 : t,
         U = (0, f.ZP)(n.id, M),
-        { analyticsLocations: B } = (0, c.ZP)([...R, s.Z.SIMPLIFIED_PROFILE_MODAL]),
-        D = (0, u.ZB)({
+        { analyticsLocations: D } = (0, c.ZP)([...R, s.Z.SIMPLIFIED_PROFILE_MODAL]),
+        B = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: A,
@@ -42,9 +42,9 @@ function S(e) {
         W = o.createRef(),
         F = (0, l.Z)(W);
     return (0, r.jsx)(c.Gt, {
-        value: B,
+        value: D,
         children: (0, r.jsx)(u.Mt, {
-            value: D,
+            value: B,
             children: (0, r.jsxs)(i.Y0X, {
                 transitionState: w,
                 className: N.root,
@@ -54,19 +54,19 @@ function S(e) {
                     (0, r.jsxs)(j.Z, {
                         user: n,
                         displayProfile: U,
-                        profileType: O.y0.FULL_SIZE,
+                        profileType: _.y0.FULL_SIZE,
                         ref: W,
                         children: [
                             (0, r.jsx)(x.Z, {
-                                profileType: O.y0.FULL_SIZE,
-                                children: (0, r.jsx)(h.Z, { user: n })
+                                profileType: _.y0.FULL_SIZE,
+                                children: (0, r.jsx)(v.Z, { user: n })
                             }),
                             (0, r.jsxs)('header', {
                                 children: [
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         user: n,
                                         displayProfile: U,
-                                        profileType: O.y0.FULL_SIZE
+                                        profileType: _.y0.FULL_SIZE
                                     }),
                                     (0, r.jsx)('div', {
                                         className: N.headerInner,
@@ -75,7 +75,7 @@ function S(e) {
                                             displayProfile: U,
                                             guildId: M,
                                             channelId: S,
-                                            profileType: O.y0.FULL_SIZE
+                                            profileType: _.y0.FULL_SIZE
                                         })
                                     })
                                 ]
@@ -83,63 +83,61 @@ function S(e) {
                             (0, r.jsxs)('div', {
                                 className: N.body,
                                 children: [
-                                    (0, r.jsx)(v.Z, {
+                                    (0, r.jsx)(h.Z, {
+                                        className: N.username,
                                         user: n,
-                                        profileType: O.y0.FULL_SIZE,
+                                        profileType: _.y0.FULL_SIZE,
                                         nickname: d.ZP.getName(M, S, n),
                                         pronouns: null == U ? void 0 : U.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
                                         tags: (0, r.jsx)(b.Z, {
                                             displayProfile: U,
-                                            profileType: O.y0.FULL_SIZE,
+                                            profileType: _.y0.FULL_SIZE,
                                             onClose: L
                                         })
                                     }),
-                                    (0, r.jsx)(j.Z.Overlay, {
-                                        className: N.overlay,
-                                        children: (0, r.jsxs)('div', {
-                                            className: E.container,
-                                            children: [
-                                                (0, r.jsx)(i.njP, {
-                                                    className: E.tabBar,
-                                                    type: 'top',
-                                                    selectedItem: O.oh.BOT_INFO,
-                                                    onItemSelect: _.dG4,
-                                                    children: (0, r.jsx)(
-                                                        i.njP.Item,
-                                                        {
-                                                            className: E.tabBarItem,
-                                                            id: O.oh.BOT_INFO,
-                                                            'aria-label': Z.NW.string(Z.t.jGoPJS),
-                                                            children: (0, r.jsx)(i.Text, {
-                                                                variant: 'text-sm/normal',
-                                                                children: Z.NW.string(Z.t.jGoPJS)
-                                                            })
-                                                        },
-                                                        O.oh.BOT_INFO
-                                                    )
-                                                }),
-                                                (0, r.jsxs)(i.zJl, {
-                                                    fade: !0,
-                                                    className: P.scroller,
-                                                    children: [
-                                                        (0, r.jsx)(I.Z, {
-                                                            userId: n.id,
-                                                            userBio: null == U ? void 0 : U.bio,
-                                                            setLineClamp: !1
-                                                        }),
-                                                        (0, r.jsx)(m.Z, {
-                                                            heading: Z.NW.string(Z.t['A//N4u']),
-                                                            children: (0, r.jsx)(g.Z, {
-                                                                userId: n.id,
-                                                                guildId: M,
-                                                                tooltipDelay: O.vB
-                                                            })
+                                    (0, r.jsxs)('div', {
+                                        className: E.container,
+                                        children: [
+                                            (0, r.jsx)(i.njP, {
+                                                className: E.tabBar,
+                                                type: 'top',
+                                                selectedItem: _.oh.BOT_INFO,
+                                                onItemSelect: O.dG4,
+                                                children: (0, r.jsx)(
+                                                    i.njP.Item,
+                                                    {
+                                                        className: E.tabBarItem,
+                                                        id: _.oh.BOT_INFO,
+                                                        'aria-label': Z.NW.string(Z.t.jGoPJS),
+                                                        children: (0, r.jsx)(i.Text, {
+                                                            variant: 'text-sm/normal',
+                                                            children: Z.NW.string(Z.t.jGoPJS)
                                                         })
-                                                    ]
-                                                })
-                                            ]
-                                        })
+                                                    },
+                                                    _.oh.BOT_INFO
+                                                )
+                                            }),
+                                            (0, r.jsxs)(i.zJl, {
+                                                fade: !0,
+                                                className: P.scroller,
+                                                children: [
+                                                    (0, r.jsx)(I.Z, {
+                                                        userId: n.id,
+                                                        userBio: null == U ? void 0 : U.bio,
+                                                        setLineClamp: !1
+                                                    }),
+                                                    (0, r.jsx)(y.Z, {
+                                                        heading: Z.NW.string(Z.t['A//N4u']),
+                                                        children: (0, r.jsx)(g.Z, {
+                                                            userId: n.id,
+                                                            guildId: M,
+                                                            tooltipDelay: _.vB
+                                                        })
+                                                    })
+                                                ]
+                                            })
+                                        ]
                                     })
                                 ]
                             })

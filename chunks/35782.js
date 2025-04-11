@@ -2133,6 +2133,66 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     }
                 }
+            },
+            USER_PROFILE_BACKGROUND_HOVER: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
+                    },
+                    [r.LIGHT]: {
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [r.DARKER]: {
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
+                    }
+                }
+            },
+            USER_PROFILE_OVERLAY_BACKGROUND: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'NEUTRAL_60',
+                        opacity: 1
+                    },
+                    [r.LIGHT]: {
+                        raw: 'NEUTRAL_1',
+                        opacity: 1
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'NEUTRAL_83',
+                        opacity: 1
+                    },
+                    [r.DARKER]: {
+                        raw: 'NEUTRAL_73',
+                        opacity: 1
+                    }
+                }
+            },
+            USER_PROFILE_OVERLAY_BACKGROUND_HOVER: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
+                    },
+                    [r.LIGHT]: {
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [r.DARKER]: {
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
+                    }
+                }
             }
         }
     };

@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => b,
-    Z: () => y
+    W: () => y,
+    Z: () => v
 });
 var r = n(200651);
 n(192379);
@@ -14,31 +14,32 @@ var i = n(442837),
     d = n(769654),
     f = n(496675),
     _ = n(323038),
-    p = n(652853),
-    h = n(788858),
-    m = n(228168),
-    g = n(981631),
-    E = n(227832);
-let b = 3;
-function y(e) {
-    let { user: t, guild: n, channel: y, onAction: v, onClose: O } = e,
-        { profileType: I } = (0, p.z)(),
-        S = (0, _.Z)(y);
-    if (!(0, i.e7)([f.Z], () => f.Z.can(g.Plq.VIEW_CHANNEL, y))) return null;
-    let T = (e) => {
-            e.stopPropagation(), (0, d.X)(n.id), null == v || v({ action: 'OPEN_VOICE_GUILD' }), null == O || O();
+    p = n(483517),
+    h = n(652853),
+    m = n(788858),
+    g = n(228168),
+    E = n(981631),
+    b = n(227832);
+let y = 3;
+function v(e) {
+    let { user: t, guild: n, channel: v, onAction: O, onClose: I } = e,
+        { profileType: S } = (0, h.z)(),
+        T = (0, _.Z)(v);
+    if (!(0, i.e7)([f.Z], () => f.Z.can(E.Plq.VIEW_CHANNEL, v))) return null;
+    let N = (e) => {
+            e.stopPropagation(), (0, d.X)(n.id), null == O || O({ action: 'OPEN_VOICE_GUILD' }), null == I || I();
         },
-        N = (e) => {
-            e.stopPropagation(), a.default.selectVoiceChannel(y.id), (0, u.Kh)(y.id), null == v || v({ action: 'OPEN_VOICE_CHANNEL' }), null == O || O();
+        A = (e) => {
+            e.stopPropagation(), a.default.selectVoiceChannel(v.id), (0, u.Kh)(v.id), null == O || O({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
         },
-        A = I === m.y0.FULL_SIZE,
-        C = I === m.y0.PANEL,
-        P = !A && !C;
+        C = S === g.y0.FULL_SIZE,
+        P = S === g.y0.PANEL,
+        R = !C && !P;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', { className: E.voiceChannelDivider }),
+            (0, r.jsx)(p.Z, { className: b.voiceChannelDivider }),
             (0, r.jsxs)('div', {
-                className: E.voiceChannel,
+                className: b.voiceChannel,
                 children: [
                     (0, r.jsx)(o.DY3, {
                         text: n.name,
@@ -46,8 +47,8 @@ function y(e) {
                         children: (0, r.jsx)(c.Z, {
                             guild: n,
                             size: c.Z.Sizes.SMOL,
-                            className: E.guildIcon,
-                            onClick: T
+                            className: b.guildIcon,
+                            onClick: N
                         })
                     }),
                     (0, r.jsx)(o.Fbu, {
@@ -55,37 +56,37 @@ function y(e) {
                         color: o.TVs.colors.INTERACTIVE_NORMAL
                     }),
                     (0, r.jsxs)('div', {
-                        className: E.voiceChannelText,
+                        className: b.voiceChannelText,
                         children: [
-                            (0, r.jsx)(h.Z, {
-                                channel: y,
+                            (0, r.jsx)(m.Z, {
+                                channel: v,
                                 size: 'xxs',
                                 color: o.TVs.colors.INTERACTIVE_NORMAL,
-                                className: E.voiceIcon
+                                className: b.voiceIcon
                             }),
                             (0, r.jsx)(o.P3F, {
-                                onClick: N,
-                                className: E.clickableText,
+                                onClick: A,
+                                className: b.clickableText,
                                 children: (0, r.jsx)(o.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-normal',
                                     lineClamp: 1,
-                                    children: (0, r.jsx)(s.Z, { children: y.name })
+                                    children: (0, r.jsx)(s.Z, { children: v.name })
                                 })
                             })
                         ]
                     }),
                     (0, r.jsx)(l.Z, {
-                        users: S,
+                        users: T,
                         guildId: n.id,
-                        channelId: y.id,
-                        maxUsers: b,
+                        channelId: v.id,
+                        maxUsers: y,
                         size: o.EFr.SIZE_16,
                         onClick: (e) => {
-                            e.stopPropagation(), null == v || v({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
+                            e.stopPropagation(), null == O || O({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },
                         onUserClick: (e) => e.stopPropagation(),
-                        disableUserPopout: !!P || ((e) => e === t.id),
+                        disableUserPopout: !!R || ((e) => e === t.id),
                         overflowCountVariant: 'text-xs/normal'
                     })
                 ]

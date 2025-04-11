@@ -82,6 +82,7 @@ function I(e) {
                     text: y.NW.string(y.t.b2d0Nz),
                     look: s.zxk.Looks.FILLED,
                     color: s.zxk.Colors.PRIMARY,
+                    themeColor: 'none',
                     size: t ? s.zxk.Sizes.TINY : s.zxk.Sizes.SMALL,
                     className: v.upsellButton,
                     onClick: () => {

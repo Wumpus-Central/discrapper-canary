@@ -4772,25 +4772,6 @@ let { Themes: r } = a(15202).V,
                     opacity: 1
                 }
             },
-            PROFILE_GRADIENT_MESSAGE_INPUT_BORDER: {
-                category: 'generic',
-                [r.DARK]: {
-                    raw: 'PRIMARY_500',
-                    opacity: 0.48
-                },
-                [r.LIGHT]: {
-                    raw: 'PRIMARY_430',
-                    opacity: 0.24
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'PRIMARY_500',
-                    opacity: 0.48
-                },
-                [r.DARKER]: {
-                    raw: 'PRIMARY_500',
-                    opacity: 0.48
-                }
-            },
             PROFILE_GRADIENT_NOTE_BACKGROUND: {
                 category: 'generic',
                 [r.DARK]: {
@@ -4846,25 +4827,6 @@ let { Themes: r } = a(15202).V,
                 [r.DARKER]: {
                     raw: 'BLACK',
                     opacity: 0.8
-                }
-            },
-            PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER: {
-                category: 'generic',
-                [r.DARK]: {
-                    raw: 'WHITE',
-                    opacity: 0.16
-                },
-                [r.LIGHT]: {
-                    raw: 'BLACK',
-                    opacity: 0.08
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'WHITE',
-                    opacity: 0.16
-                },
-                [r.DARKER]: {
-                    raw: 'WHITE',
-                    opacity: 0.16
                 }
             },
             PROFILE_GRADIENT_ROLE_PILL_BACKGROUND: {
@@ -6998,6 +6960,44 @@ let { Themes: r } = a(15202).V,
                     }
                 }
             },
+            USER_PROFILE_BACKGROUND_HOVER: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'PRIMARY_500',
+                    opacity: 0.3
+                },
+                [r.LIGHT]: {
+                    raw: 'PRIMARY_400',
+                    opacity: 0.16
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'PLUM_13',
+                    opacity: 0.3
+                },
+                [r.DARKER]: {
+                    raw: 'PLUM_13',
+                    opacity: 0.3
+                }
+            },
+            USER_PROFILE_BORDER: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'WHITE',
+                    opacity: 0.08
+                },
+                [r.LIGHT]: {
+                    raw: 'BLACK',
+                    opacity: 0.08
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'PLUM_11',
+                    opacity: 0.14
+                },
+                [r.DARKER]: {
+                    raw: 'PLUM_11',
+                    opacity: 0.12
+                }
+            },
             USER_PROFILE_HEADER_OVERFLOW_BACKGROUND: {
                 category: 'generic',
                 [r.DARK]: {
@@ -7015,6 +7015,63 @@ let { Themes: r } = a(15202).V,
                 [r.DARKER]: {
                     raw: 'PLUM_20',
                     opacity: 0.5
+                }
+            },
+            USER_PROFILE_NOTE_BACKGROUND_FOCUS: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'PRIMARY_700',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'PRIMARY_200',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'PLUM_19',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'PLUM_16',
+                    opacity: 1
+                }
+            },
+            USER_PROFILE_OVERLAY_BACKGROUND: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'PRIMARY_800',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'WHITE',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'PLUM_23',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'PLUM_18',
+                    opacity: 1
+                }
+            },
+            USER_PROFILE_OVERLAY_BACKGROUND_HOVER: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'PRIMARY_500',
+                    opacity: 0.3
+                },
+                [r.LIGHT]: {
+                    raw: 'PRIMARY_400',
+                    opacity: 0.16
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'PLUM_13',
+                    opacity: 0.3
+                },
+                [r.DARKER]: {
+                    raw: 'PLUM_13',
+                    opacity: 0.3
                 }
             },
             VOICE_VIDEO_VIDEO_TILE_BACKGROUND: {
@@ -7345,6 +7402,7 @@ let { Themes: r } = a(15202).V,
             NEUTRAL_5: '#efeff0',
             NEUTRAL_59: '#41424a',
             NEUTRAL_6: '#ebebed',
+            NEUTRAL_60: '#3f4048',
             NEUTRAL_64: '#393a41',
             NEUTRAL_66: '#36373e',
             NEUTRAL_69: '#323339',
@@ -7354,6 +7412,7 @@ let { Themes: r } = a(15202).V,
             NEUTRAL_79: '#242429',
             NEUTRAL_8: '#e3e3e6',
             NEUTRAL_82: '#202024',
+            NEUTRAL_83: '#1e1f22',
             NEUTRAL_86: '#1a1a1e',
             NEUTRAL_9: '#dfe0e2',
             NEUTRAL_90: '#151518',

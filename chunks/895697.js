@@ -90,8 +90,7 @@ function A(e) {
                 currentUser: n,
                 displayProfile: A,
                 guildId: null == C ? void 0 : C.id,
-                onClose: D,
-                className: N.activity
+                onClose: D
             }),
             (null == x ? void 0 : x.popularApplicationCommandIds) != null &&
                 null != M &&
