@@ -501,9 +501,12 @@ function ey(e, t) {
                     .with({ taskType: s.X.PLAY_ON_DESKTOP_V2 }, () => M.cd.DESKTOP)
                     .with({ taskType: s.X.PLAY_ACTIVITY }, () => M.cd.DESKTOP)
                     .with({ taskType: s.X.WATCH_VIDEO }, () => M.cd.DESKTOP)
+                    .with({ taskType: s.X.WATCH_VIDEO_ON_MOBILE }, () => M.cd.DESKTOP)
                     .with({ taskType: s.X.STREAM_ON_DESKTOP }, () => M.cd.DESKTOP)
                     .with({ taskType: s.X.PLAY_ON_XBOX }, () => M.cd.CONSOLE)
                     .with({ taskType: s.X.PLAY_ON_PLAYSTATION }, () => M.cd.CONSOLE)
+                    .with({ taskType: s.X.ACHIEVEMENT_IN_GAME }, () => M.cd.DESKTOP)
+                    .with({ taskType: s.X.ACHIEVEMENT_IN_ACTIVITY }, () => M.cd.DESKTOP)
                     .exhaustive(),
             [t]
         ),
