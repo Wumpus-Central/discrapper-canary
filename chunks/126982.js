@@ -1,66 +1,68 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => E });
 var r = n(200651);
 n(192379);
-var i = n(442837),
-    o = n(481060),
-    a = n(131388),
-    s = n(607070),
-    l = n(70097),
-    c = n(409813),
-    u = n(750143),
-    d = n(177116),
-    f = n(315853),
-    _ = n(420602),
-    p = n(197099);
-let h = (e) => {
+var i = n(120356),
+    o = n.n(i),
+    a = n(442837),
+    s = n(481060),
+    l = n(131388),
+    c = n(607070),
+    u = n(70097),
+    d = n(409813),
+    f = n(750143),
+    _ = n(177116),
+    p = n(315853),
+    h = n(420602),
+    m = n(197099);
+let g = (e) => {
     let { className: t } = e;
-    return (0, i.e7)([s.Z], () => s.Z.useReducedMotion)
+    return (0, a.e7)([c.Z], () => c.Z.useReducedMotion)
         ? (0, r.jsx)('img', {
-              src: _.Z,
+              src: h.Z,
               className: t,
               alt: ''
           })
-        : (0, r.jsxs)(l.Z, {
+        : (0, r.jsxs)(u.Z, {
               className: t,
               autoPlay: !0,
               loop: !0,
               children: [
                   (0, r.jsx)('source', {
-                      src: p.Z,
+                      src: m.Z,
                       type: 'video/webm'
                   }),
                   (0, r.jsx)('img', {
-                      src: _.Z,
+                      src: h.Z,
                       className: t,
                       alt: ''
                   })
               ]
           });
 };
-function m(e) {
+function E(e) {
     let { step: t, onClose: n, isOrbCheckout: i } = e,
-        s = (0, a.Z)(u.X);
-    return t === c.h8.BENEFITS || t === c.h8.CONFIRM
+        a = (0, l.Z)(f.X);
+    return t === d.h8.BENEFITS || t === d.h8.CONFIRM
         ? null
         : (0, r.jsxs)('div', {
-              className: d.headerContainer,
+              className: _.headerContainer,
               children: [
-                  !s &&
+                  !a &&
                       (0, r.jsx)('div', {
-                          className: d.headerImageContainer,
+                          className: _.headerImageContainer,
                           'aria-hidden': 'true',
                           'data-accessibility': 'desaturate',
                           children: i
-                              ? (0, r.jsx)(h, { className: d.headerImage })
+                              ? (0, r.jsx)(g, { className: o()(_.headerImage, _.orbCheckoutHeaderVideo) })
                               : (0, r.jsx)('img', {
-                                    src: f,
+                                    src: p,
                                     alt: '',
-                                    className: d.headerImage
+                                    className: _.headerImage
                                 })
                       }),
-                  (0, r.jsx)(o.olH, {
+                  (0, r.jsx)(s.olH, {
                       withCircleBackground: !0,
-                      className: d.closeButton,
+                      className: _.closeButton,
                       onClick: n
                   })
               ]
