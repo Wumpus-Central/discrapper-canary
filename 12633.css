@@ -60205,8 +60205,7 @@ img[alt] {
 .visual-refresh.refresh-fast-follow-avatars {
     --custom-guild-list-padding: min(var(--space-md), var(--space-16));
     --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)*2);
-    --custom-app-top-bar-height: calc(24px + var(--space-xs));
-    --custom-channel-header-height: var(--guildbar-avatar-size)
+    --custom-channel-header-height: calc(40px + var(--space-xs))
 }
 
 .visual-refresh.density-compact {
