@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(135431),
     j = n(541099),
     P = n(783097),
-    E = n(570949),
-    O = n(314734),
+    O = n(570949),
+    E = n(314734),
     A = n(981631),
     I = n(388032),
     S = n(640724);
@@ -98,7 +98,7 @@ function w(e) {
             id: l.id,
             label: I.NW.string(I.t['+NP/b2'])
         }),
-        G = (0, E.P)({ application: l }),
+        G = (0, O.P)({ application: l }),
         X = (0, g.yE)(null != (t = l.flags) ? t : 0, A.udG.EMBEDDED),
         q = 'channel' === w.type ? w.channel : void 0;
     return (0, i.jsxs)('div', {
@@ -131,7 +131,7 @@ function w(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsxs)(s.v2r, {
-                        className: O.NN,
+                        className: E.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
                         'aria-label': I.NW.string(I.t.AXIHpa),

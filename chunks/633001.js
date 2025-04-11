@@ -368,9 +368,9 @@ function B() {
         ].map((e) => I(w({}, e), { label: ''.concat(e.label, ' ').concat(E === e.value ? '(current)' : '') })),
         G = (0, s.cj)([p.default], () => p.default.getTrackedGames()),
         F = (0, s.e7)([j.default], () => j.default.getFocusedPID()),
-        H = (0, s.e7)([j.default], () => j.default.isFocusedPidOutOfProcess()),
-        W = (0, O.getPID)(),
-        V = (0, s.e7)([p.default], () => p.default.isOverlayOOPEnabledForPid(W), [W]),
+        W = (0, s.e7)([j.default], () => j.default.isFocusedPidOutOfProcess()),
+        H = (0, O.getPID)(),
+        V = (0, s.e7)([p.default], () => p.default.isOverlayOOPEnabledForPid(H), [H]),
         [X, K] = (0, s.Wu)([_.Z], () => [_.Z.enabled, _.Z.keepOpen]),
         Y = (0, s.e7)([x.ZP], () => x.ZP.getRunningGames());
     a.useEffect(() => {
@@ -681,12 +681,12 @@ function B() {
                                 (0, r.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['isFocusedPidOutOfProcess: ', H ? 'Yes' : 'No']
+                                    children: ['isFocusedPidOutOfProcess: ', W ? 'Yes' : 'No']
                                 }),
                                 (0, r.jsxs)(c.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-primary',
-                                    children: ['processPid: ', null != (t = null == W ? void 0 : W.toString()) ? t : 'unknown']
+                                    children: ['processPid: ', null != (t = null == H ? void 0 : H.toString()) ? t : 'unknown']
                                 }),
                                 (0, r.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',

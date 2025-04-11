@@ -22,10 +22,10 @@ function C(e) {
         P = r.useCallback(() => {
             c.yT(p.ti.ACTIVITY);
         }, []),
-        E = r.useCallback(() => {
+        O = r.useCallback(() => {
             d.Z.shouldShowModal() && P();
         }, [P]),
-        { submitting: O, wasSubmitting: A } = (0, h.Z)({
+        { submitting: E, wasSubmitting: A } = (0, h.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: j,
@@ -50,8 +50,8 @@ function C(e) {
             commandName: w,
             autoDismissOnClick: T === o.JS.LEAVE,
             launchingComponentId: j,
-            submitting: null != A ? A : O,
-            onConfirmActivityLaunchChecksAlertOpen: E,
+            submitting: null != A ? A : E,
+            onConfirmActivityLaunchChecksAlertOpen: O,
             playSolo: !!L.altLayout && N
         }),
         { disabled: M, reason: W } = (0, m.Z)({

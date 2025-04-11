@@ -127,9 +127,9 @@ let P = (e, t) =>
                 badges: z,
                 entry: n,
                 showCoverImage: !1,
-                onClickTitle: W,
-                onClickSubtitle: W,
-                onClickThumbnail: W
+                onClickTitle: D ? void 0 : W,
+                onClickSubtitle: D ? void 0 : W,
+                onClickThumbnail: D ? void 0 : W
             }),
             Q = (0, l.Z)(k, T.xjy.JOIN) || (0, c.Z)(k),
             X = Q
@@ -148,7 +148,7 @@ let P = (e, t) =>
                       IconComponent: J,
                       children: N.NW.string(N.t.GDWYR0)
                   }),
-            ee = [Q ? X : $].filter(h.lm);
+            ee = [Q && !D ? X : $].filter(h.lm);
         return (0, r.jsxs)(I.yR, {
             children: [
                 q,

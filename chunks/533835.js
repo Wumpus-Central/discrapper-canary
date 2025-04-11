@@ -52,7 +52,7 @@ function b(e, n) {
         e
     );
 }
-let y = [l.Z.BITE_SIZE_PROFILE_POPOUT, l.Z.PROFILE_PANEL];
+let m = [l.Z.BITE_SIZE_PROFILE_POPOUT, l.Z.PROFILE_PANEL];
 function I(e) {
     var { user: n } = e,
         t = (function (e, n) {
@@ -78,22 +78,22 @@ function I(e) {
             isBlocked: c.Z.isBlocked(n.id),
             isIgnored: c.Z.isIgnored(n.id)
         })),
-        [g, m] = o.useState(l || I || l);
+        [g, y] = o.useState(l || I || l);
     o.useEffect(() => {
-        m(I || l);
+        y(I || l);
     }, [I, l]);
-    let j = !y.some((e) => {
+    let j = !m.some((e) => {
             var n;
             return (null != (n = t.sourceAnalyticsLocations) ? n : []).includes(e);
         }),
-        v = s.Rt.useSetting();
-    return g && j && !(I && v)
+        h = s.Rt.useSetting();
+    return g && j && !(I && h)
         ? (0, r.jsx)(
               a.W,
               p(
                   {
                       user: n,
-                      onViewBlockedProfileClick: () => m(!1)
+                      onViewBlockedProfileClick: () => y(!1)
                   },
                   t
               )

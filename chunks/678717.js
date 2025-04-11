@@ -41,8 +41,8 @@ var g = n(392750),
     U = n(315384),
     G = n(514866),
     F = n(384207),
-    H = n(264603),
-    W = n(678639),
+    W = n(264603),
+    H = n(678639),
     V = n(351930),
     X = n(771751),
     K = n(596768),
@@ -85,7 +85,7 @@ function et() {
                     id: 'stores',
                     name: 'Stores',
                     group: J.v0.EVENTS,
-                    render: () => (0, r.jsx)(W.Z, {})
+                    render: () => (0, r.jsx)(H.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -142,7 +142,7 @@ function et() {
                         id: 'slayer_sdk',
                         name: 'Slayer SDK',
                         group: J.v0.GAMES,
-                        render: () => (0, r.jsx)(H.Z, {})
+                        render: () => (0, r.jsx)(W.Z, {})
                     })),
                 e.push({
                     id: 'intl',

@@ -11,17 +11,17 @@ var r = t(200651),
     f = t(699516),
     p = t(5192),
     b = t(785717),
-    y = t(221292),
+    m = t(221292),
     I = t(687158),
     g = t(471879),
-    m = t(502762),
+    y = t(502762),
     j = t(848780),
-    v = t(907179);
+    h = t(907179);
 t(475413);
-var h = t(228168),
+var v = t(228168),
     x = t(981631),
-    O = t(388032),
-    _ = t(17291),
+    _ = t(388032),
+    O = t(17291),
     Z = t(161068);
 function N(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -65,62 +65,62 @@ function P(e) {
         U = [
             {
                 icon: c.owK,
-                description: O.NW.string(O.t.kcuWvb)
+                description: _.NW.string(_.t.kcuWvb)
             },
             {
                 icon: c.owK,
-                description: O.NW.string(L ? O.t.QxrDY2 : O.t.W6fjkZ)
+                description: _.NW.string(L ? _.t.QxrDY2 : _.t.W6fjkZ)
             }
         ],
-        B = (0, I.ZP)(n.id, C ? w : void 0),
-        D = o.createRef();
+        D = (0, I.ZP)(n.id, C ? w : void 0),
+        B = o.createRef();
     return (0, r.jsx)(d.Gt, {
         value: R,
         children: (0, r.jsx)(b.Mt, {
             value: M,
             children: (0, r.jsx)(c.Y0X, {
                 transitionState: S,
-                className: _.root,
+                className: O.root,
                 hideShadow: !0,
-                'aria-label': O.NW.string(O.t['3N/J2t']),
-                children: (0, r.jsx)(m.Z, {
+                'aria-label': _.NW.string(_.t['3N/J2t']),
+                children: (0, r.jsx)(y.Z, {
                     user: n,
-                    displayProfile: B,
-                    profileType: h.y0.FULL_SIZE,
-                    ref: D,
+                    displayProfile: D,
+                    profileType: v.y0.FULL_SIZE,
+                    ref: B,
                     children: (0, r.jsxs)('div', {
-                        className: _.container,
+                        className: O.container,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: Z,
-                                className: _.previewForCollected,
+                                className: O.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, r.jsxs)('div', {
-                                className: l()(_.body, _.bodySpacing),
+                                className: l()(O.body, O.bodySpacing),
                                 children: [
                                     (0, r.jsx)(g.i, {
                                         user: n,
                                         guildId: w
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: _.headerContainer,
+                                        className: O.headerContainer,
                                         children: [
                                             (0, r.jsx)(c.X6q, {
                                                 variant: 'heading-xl/bold',
                                                 color: 'header-primary',
-                                                children: O.NW.string(O.t.b33pLC)
+                                                children: _.NW.string(_.t.b33pLC)
                                             }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: O.NW.format(L ? O.t['8F+WNz'] : O.t['/cZp5u'], { username: p.ZP.getName(w, i, n) })
+                                                children: _.NW.format(L ? _.t['8F+WNz'] : _.t['/cZp5u'], { username: p.ZP.getName(w, i, n) })
                                             })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
-                                        className: _.restrictedSafetyTable,
+                                        className: O.restrictedSafetyTable,
                                         children: U.map((e, n) => {
                                             let { icon: t, description: o } = e;
                                             return (0, r.jsx)(
@@ -137,12 +137,12 @@ function P(e) {
                                     (0, r.jsxs)(c.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, r.jsx)(v.Z, {
+                                            (0, r.jsx)(h.Z, {
                                                 size: c.PhG.MEDIUM,
                                                 isBlocked: L,
                                                 onClick: () => {
                                                     null == T || T(),
-                                                        (0, y.pQ)(
+                                                        (0, m.pQ)(
                                                             N(
                                                                 {
                                                                     action: L ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
@@ -157,7 +157,7 @@ function P(e) {
                                                 userId: n.id,
                                                 onClick: () => {
                                                     null == T || T(),
-                                                        (0, y.pQ)(
+                                                        (0, m.pQ)(
                                                             N(
                                                                 {
                                                                     action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',

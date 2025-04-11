@@ -1,4 +1,4 @@
-r.d(t, { default: () => Z }), r(388685), r(704826), r(35282);
+r.d(t, { default: () => x }), r(388685), r(704826), r(35282);
 var n = r(200651),
     i = r(192379),
     o = r(481060),
@@ -17,29 +17,29 @@ var n = r(200651),
     y = r(45570),
     h = r(308512),
     m = r(594791),
-    S = r(393431),
-    v = r(69021),
+    v = r(393431),
+    S = r(69021),
     P = r(981631),
-    x = r(388032);
-let Z = (0, s.Z)(
+    Z = r(388032);
+let x = (0, s.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: r, onInteraction: s } = e,
-            [u, Z] = i.useState(!1),
+            [u, x] = i.useState(!1),
             w = (0, y.Z)(),
-            k = (0, h.Z)(),
-            E = (0, j.Z)(),
+            E = (0, h.Z)(),
+            k = (0, j.Z)(),
             N = (0, f.Z)(),
-            D = (0, S.Z)(),
+            D = (0, v.Z)(),
             C = (0, m.Z)(),
             W = (0, O.Z)(),
-            I = (0, v.Z)(),
+            I = (0, S.Z)(),
             { analyticsLocations: B } = (0, d.ZP)(),
             T = i.useMemo(() => (0, b.j)(), []);
         async function A() {
             try {
-                Z(!0), await (0, p.bF)(), window.location.reload(!0);
+                x(!0), await (0, p.bF)(), window.location.reload(!0);
             } catch (e) {
-                Z(!1);
+                x(!1);
             }
         }
         let M = (e) => {
@@ -47,9 +47,9 @@ let Z = (0, s.Z)(
                     case P.oAB.GAMES:
                         return w;
                     case P.oAB.STREAMER_MODE:
-                        return k;
-                    case P.oAB.APPEARANCE:
                         return E;
+                    case P.oAB.APPEARANCE:
+                        return k;
                     case P.oAB.ACCESSIBILITY:
                         return N;
                     case P.oAB.VOICE:
@@ -64,7 +64,7 @@ let Z = (0, s.Z)(
                         return null;
                 }
             },
-            R = (0, g.VO)()
+            _ = (0, g.VO)()
                 .filter((e) => {
                     let { section: t } = e;
                     return t !== l.ID.HEADER && t !== l.ID.CUSTOM && t !== l.ID.DIVIDER && 'logout' !== t;
@@ -75,11 +75,11 @@ let Z = (0, s.Z)(
             children: (0, n.jsxs)(o.v2r, {
                 navId: 'user-settings-cog',
                 onClose: c.Zy,
-                'aria-label': x.NW.string(x.t.opYYHh),
+                'aria-label': Z.NW.string(Z.t.opYYHh),
                 onSelect: r,
                 onInteraction: s,
                 children: [
-                    R.map((e) => {
+                    _.map((e) => {
                         var t, r;
                         let { section: i, label: c, onClick: l } = e,
                             s = i.replace(/\W/gi, '_');
@@ -167,7 +167,7 @@ let Z = (0, s.Z)(
                               children: (0, n.jsx)(o.sNh, {
                                   id: 'clear-build-override',
                                   disabled: u,
-                                  label: x.NW.string(x.t['/Nz9ra']),
+                                  label: Z.NW.string(Z.t['/Nz9ra']),
                                   action: A,
                                   color: 'danger'
                               })

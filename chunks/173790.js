@@ -24,11 +24,11 @@ var i = n(200651),
 function P(e) {
     var t;
     let { context: n, application: c, sectionName: u, showFriendsTab: P } = e,
-        O = 'channel' === n.type ? n.channel : void 0,
+        E = 'channel' === n.type ? n.channel : void 0,
         A = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
         I = null != (t = (0, p.q)(c.id === v.bi.BUILT_IN ? null : c.id)) ? t : c,
         S = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(I.id)),
-        T = (0, b.ye)(I) ? E : C.Z,
+        T = (0, b.ye)(I) ? O : C.Z,
         L = m.PM.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
         w = r.useRef(null),
         [R, k] = r.useState(!1),
@@ -41,13 +41,13 @@ function P(e) {
             [I]
         ),
         W = (0, d.PL)(!0, !0),
-        D = (0, d.LD)(null == O ? void 0 : O.guild_id, !0),
+        D = (0, d.LD)(null == E ? void 0 : E.guild_id, !0),
         B = r.useMemo(() => (0, d.If)(n, I.id), [W, D, n, I.id]),
         U = !B.isGuildInstalled && !B.isUserInstalled;
     return (
         r.useEffect(() => {
-            U && d.ZP.queryInstallOnDemandApp(I.id, null == O ? void 0 : O.id);
-        }, [I.id, null == O ? void 0 : O.id, U]),
+            U && d.ZP.queryInstallOnDemandApp(I.id, null == E ? void 0 : E.id);
+        }, [I.id, null == E ? void 0 : E.id, U]),
         (0, i.jsxs)(a.u2D, {
             className: N.container,
             fade: !0,
@@ -97,7 +97,7 @@ function P(e) {
         })
     );
 }
-function E(e) {
+function O(e) {
     let { context: t, application: n, sectionName: r, hasCommands: l, showFriendsTab: o } = e,
         a = (0, u.Z)({
             applicationId: n.id,

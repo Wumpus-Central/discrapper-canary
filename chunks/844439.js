@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => s,
-    ZP: () => E
+    ZP: () => g
 });
 var r,
     l,
@@ -100,7 +100,7 @@ class O extends (l = o.ZP.Store) {
     }
 }
 i(O, 'displayName', void 0);
-let E = new O(a.Z, {
+let g = new O(a.Z, {
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
         let { location: t, channelId: n, withCommands: r } = e;
         m = u(c({}, m), {

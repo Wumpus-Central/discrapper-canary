@@ -445,7 +445,7 @@ W(
     H(['STATE_UPDATE'], (e) => {
         var t;
         K({
-            type: 'STATE_UPDATE',
+            type: 'CONNECTION_OPEN_STATE_UPDATE',
             apexUserExperiments: null != (t = e.apex_user_experiments) ? t : void 0
         });
     }),

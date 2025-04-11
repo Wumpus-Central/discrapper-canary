@@ -1,6 +1,6 @@
 n.d(t, {
     Q2: () => A,
-    pe: () => O
+    pe: () => E
 }),
     n(388685),
     n(539854),
@@ -37,10 +37,10 @@ function P(e, t) {
         i = (0, v.$d)(t);
     return (0, p.un)(n, i);
 }
-function E(e, t) {
+function O(e, t) {
     return (0, p.un)(e.displayName, t.displayName);
 }
-function O(e) {
+function E(e) {
     let { context: t, query: n, commandLimit: r, applicationLimit: o, searchesCommands: a = !0, searchesBots: s = !0, searchesActivities: h = !0 } = e;
     n.startsWith(''.concat(N.GI)) && (n = n.substring(1));
     let {
@@ -79,7 +79,7 @@ function O(e) {
             context: t,
             includeBuiltIn: !0
         }),
-        { apps: O } = (function (e) {
+        { apps: E } = (function (e) {
             let { context: t, onlyWithCommands: n, includeBuiltIn: r, allowFetch: l = !0, includeEmbeddedApps: o, includeNonEmbeddedApps: a } = e,
                 s = 'channel' === t.type ? t.channel : void 0,
                 u = (0, m.Hs)(s, [c.yU.CHAT]).hasBaseAccessPermissions,
@@ -199,13 +199,13 @@ function O(e) {
                         let n = d.ZP.getScoreWithoutLoadingLatest(u, e);
                         return d.ZP.getScoreWithoutLoadingLatest(u, t) - n;
                     }),
-                    E
+                    O
                 ]
             });
         }, [a, b, r, t, n]),
         S = i.useMemo(() => {
             if (0 === I.length) return [];
-            let e = new Map(O.map((e) => [e.id, e]));
+            let e = new Map(E.map((e) => [e.id, e]));
             return l().compact(
                 I.map((t) => {
                     var n;
@@ -219,18 +219,18 @@ function O(e) {
                     };
                 })
             );
-        }, [O, I, _]),
+        }, [E, I, _]),
         T = i.useMemo(() => {
             var e, i, r, l, a;
             let u = [];
             if (h) {
                 let e = new Set(
-                    O.map((e) => {
+                    E.map((e) => {
                         let { id: t } = e;
                         return t;
                     })
                 );
-                u.push(...O),
+                u.push(...E),
                     u.push(
                         ...A.filter((t) => {
                             let {
@@ -242,7 +242,7 @@ function O(e) {
                             return t;
                         })
                     );
-            } else s && (u = O);
+            } else s && (u = E);
             return (0, y.N)(u, {
                 limit: o,
                 filterPredicates: [
@@ -288,7 +288,7 @@ function O(e) {
                 ],
                 sortComparers: [j, P]
             });
-        }, [s, h, o, t, n, O, A]),
+        }, [s, h, o, t, n, E, A]),
         L = S.length > 0,
         w = T.length > 0;
     return {

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => O });
+t.d(n, { Z: () => _ });
 var r = t(200651);
 t(192379);
 var o = t(442837),
@@ -12,21 +12,21 @@ var o = t(442837),
     f = t(29899),
     p = t(678738),
     b = t(151545),
-    y = t(744802),
+    m = t(744802),
     I = t(493043),
     g = t(864141),
-    m = t(228168),
+    y = t(228168),
     j = t(981631),
-    v = t(388032),
-    h = t(316879),
+    h = t(388032),
+    v = t(316879),
     x = t(301150);
-function O(e) {
-    let { user: n, currentUser: t, displayProfile: O, guildId: _, subsection: Z, onClose: N } = e,
+function _(e) {
+    let { user: n, currentUser: t, displayProfile: _, guildId: O, subsection: Z, onClose: N } = e,
         { voiceActivityStatusEnabled: P } = (0, l.U)({ location: 'UserProfileModalActivity' }),
         { live: E, recent: S, stream: T } = (0, u.Z)(n.id),
         { voiceChannel: C, voiceActivity: A } = (0, f.Z)({
             userId: n.id,
-            guildId: _,
+            guildId: O,
             surface: 'user-profile-modal-activity'
         }),
         w = (0, o.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
@@ -37,10 +37,10 @@ function O(e) {
         }),
         M = E.length > 0 || null != T,
         U = P && null == T && null == A && null != C,
-        B = S.length > 0;
-    return (!R && (M || U)) || B || !w
+        D = S.length > 0;
+    return (!R && (M || U)) || D || !w
         ? (0, r.jsxs)(i.zJl, {
-              className: h.scroller,
+              className: v.scroller,
               fade: !0,
               children: [
                   !R && (M || U)
@@ -60,7 +60,7 @@ function O(e) {
                                         currentUser: t,
                                         stream: T,
                                         onClose: N,
-                                        profileGuildId: null == O ? void 0 : O.guildId
+                                        profileGuildId: null == _ ? void 0 : _.guildId
                                     }),
                                 E.map((e, o) =>
                                     (0, r.jsx)(
@@ -70,7 +70,7 @@ function O(e) {
                                             currentUser: t,
                                             activity: e,
                                             onClose: N,
-                                            profileGuildId: null == O ? void 0 : O.guildId
+                                            profileGuildId: null == _ ? void 0 : _.guildId
                                         },
                                         'live-'.concat(o)
                                     )
@@ -78,11 +78,11 @@ function O(e) {
                             ]
                         })
                       : null,
-                  B
+                  D
                       ? (0, r.jsx)(p.Z, {
-                            heading: v.NW.string(v.t.M0zgnZ),
+                            heading: h.NW.string(h.t.M0zgnZ),
                             subheading: L
-                                ? v.NW.format(v.t['4bk9Ag'], {
+                                ? h.NW.format(h.t['4bk9Ag'], {
                                       learnMoreHook: (e, n) =>
                                           (0, r.jsx)(
                                               i.eee,
@@ -94,16 +94,16 @@ function O(e) {
                                           )
                                   })
                                 : void 0,
-                            scrollIntoView: Z === m.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: Z === y.Tb.RECENT_ACTIVITY,
                             children: S.map((e) =>
                                 (0, r.jsx)(
-                                    y.Z,
+                                    m.Z,
                                     {
                                         location: 'UserProfileModalActivity',
                                         user: n,
                                         currentUser: t,
                                         entry: e,
-                                        profileGuildId: null == O ? void 0 : O.guildId,
+                                        profileGuildId: null == _ ? void 0 : _.guildId,
                                         onClose: N
                                     },
                                     e.id

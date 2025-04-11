@@ -13,7 +13,7 @@ var i = n(200651),
     f = n(655420);
 function h(e) {
     let { context: t, entrypoint: n, title: l, look: h, items: b, sectionName: _, sectionOverallPosition: y } = e,
-        x = (0, u.s)('AppLauncherApplicationListViewScreen'),
+        x = (0, u.s)(),
         C = r.useMemo(() => (n === c._b.TEXT ? d.kA : d.qR), [n]);
     return (0, i.jsxs)('section', {
         className: f.container,

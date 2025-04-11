@@ -104,7 +104,7 @@ let S = 'rgba(88, 74, 192, 1)',
         outline: '1px auto var(--accent-background)',
         interactiveFilter: 'brightness(95%)'
     },
-    b = {
+    M = {
         foreground: '#ebe6ef',
         background: '#29232f',
         accentForeground: 'white',
@@ -116,7 +116,7 @@ let S = 'rgba(88, 74, 192, 1)',
         outline: '1px auto var(--accent-background)',
         interactiveFilter: 'brightness(150%)'
     };
-function M(t) {
+function b(t) {
     return `
   --foreground: ${t.foreground};
   --background: ${t.background};
@@ -233,10 +233,10 @@ let U =
 
   ${'system' !== t ? 'color-scheme: only light;' : ''}
 
-  ${M(
+  ${b(
       'dark' === t
           ? {
-                ...b,
+                ...M,
                 ...e
             }
           : {
@@ -251,8 +251,8 @@ ${
         ? `
 @media (prefers-color-scheme: dark) {
   :host {
-    ${M({
-        ...b,
+    ${b({
+        ...M,
         ...e
     })}
   }
@@ -943,7 +943,7 @@ function tG(t, e) {
         }, e)
     );
 }
-function tb() {
+function tM() {
     for (var t; (t = tp.shift()); )
         if (t.__P && t.__H)
             try {
@@ -983,12 +983,12 @@ function tb() {
                         function (t) {
                             var e,
                                 a = function () {
-                                    clearTimeout(r), tM && cancelAnimationFrame(e), setTimeout(t);
+                                    clearTimeout(r), tb && cancelAnimationFrame(e), setTimeout(t);
                                 },
                                 r = setTimeout(a, 100);
-                            tM && (e = requestAnimationFrame(a));
+                            tb && (e = requestAnimationFrame(a));
                         }
-                    )(tb)),
+                    )(tM)),
             e.__H.__.forEach(function (t) {
                 t.i && (t.__H = t.i), t.__V !== tN && (t.__ = t.__V), (t.i = void 0), (t.__V = tN);
             })),
@@ -1027,7 +1027,7 @@ function tb() {
             (a.__H = void 0),
             e && tT.__e(e, a.__v));
     });
-var tM = 'function' == typeof requestAnimationFrame;
+var tb = 'function' == typeof requestAnimationFrame;
 function tU(t) {
     var e = tR,
         a = t.__c;
@@ -1182,10 +1182,10 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
         [m, v] = ty(!1),
         C = E && E.input,
         [S, G] = ty(null),
-        b = tG((t) => {
+        M = tG((t) => {
             G(t), v(!1);
         }, []),
-        M = tG(
+        b = tG(
             (t) => {
                 let e = (function (t, e) {
                     let a = [];
@@ -1217,7 +1217,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                 message: tx(e, 'message'),
                                 attachments: a ? [a] : void 0
                             };
-                        if (!M(r)) return;
+                        if (!b(r)) return;
                         try {
                             await n(
                                 {
@@ -1245,7 +1245,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
         },
         C && m
             ? z(C, {
-                  onError: b,
+                  onError: M,
                   __self: this,
                   __source: {
                       fileName: tk,

@@ -82,7 +82,7 @@ class f extends (r = s.ZP.Store) {
             c.Z,
             {
                 CONNECTION_OPEN: (e) => this.processExperimentsMessage(e.apexUserExperiments),
-                STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexUserExperiments)
+                CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexUserExperiments)
             },
             c.c.Early
         );

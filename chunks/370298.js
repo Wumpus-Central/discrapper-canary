@@ -13,18 +13,18 @@ var r = n(200651),
     f = n(998698),
     b = n(895924),
     O = n(581364),
-    E = n(667204),
-    g = n(873387),
+    g = n(667204),
+    E = n(873387),
     y = n(809090),
     h = n(104919),
     v = n(583027),
-    C = n(978983),
-    j = n(592125),
+    j = n(978983),
+    C = n(592125),
     P = n(703558),
     S = n(430824),
-    _ = n(626135),
-    N = n(585483),
-    M = n(619895),
+    N = n(626135),
+    M = n(585483),
+    _ = n(619895),
     w = n(844439),
     I = n(981631),
     A = n(388032),
@@ -56,15 +56,15 @@ function R(e) {
 }
 function D(e) {
     let { toggleShowMenu: t, showMenu: n, className: c, channelId: u, imageUrl: s, mimeType: d } = e,
-        m = (0, o.e7)([j.Z], () => j.Z.getChannel(u)),
+        m = (0, o.e7)([C.Z], () => C.Z.getChannel(u)),
         { Component: p, events: f, play: b } = (0, a.w)(),
-        [O, E] = l.useState(!1),
-        g = l.useRef(null);
+        [O, g] = l.useState(!1),
+        E = l.useRef(null);
     return null == m
         ? null
         : (O || b(),
           (0, r.jsx)(i.yRy, {
-              targetElementRef: g,
+              targetElementRef: E,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(x, {
@@ -92,10 +92,10 @@ function D(e) {
                                   {
                                       className: c,
                                       focusProps: { offset: 2 },
-                                      innerRef: g,
+                                      innerRef: E,
                                       onClick: t,
                                       onMouseEnter: () => {
-                                          E(!0), f.onMouseEnter();
+                                          g(!0), f.onMouseEnter();
                                       },
                                       onMouseLeave: f.onMouseLeave,
                                       'aria-label': A.NW.string(A.t.emnnEB),
@@ -126,13 +126,13 @@ function D(e) {
           }));
 }
 function x(e) {
-    let { onSelect: t, onClose: n, channel: a, imageUrl: j, mimeType: D } = e,
+    let { onSelect: t, onClose: n, channel: a, imageUrl: C, mimeType: D } = e,
         x = (0, o.e7)([S.Z], () => S.Z.getGuild(a.guild_id)),
-        { fetchState: U, imageRecCommandContexts: Z } = (0, M.h)({ channelId: a.id }),
+        { fetchState: U, imageRecCommandContexts: Z } = (0, _.h)({ channelId: a.id }),
         k = U === w.M.FETCHING,
-        F = (0, g.g)(a),
-        L = (0, p.PL)(!0, !0),
-        G = (0, p.LD)(a.guild_id, !0);
+        F = (0, E.g)(a),
+        G = (0, p.PL)(!0, !0),
+        L = (0, p.LD)(a.guild_id, !0);
     l.useEffect(() => {
         (U === w.M.ERROR || (U === w.M.FETCHED && 0 === Z.length)) && n();
     }, [U, Z.length, n]),
@@ -143,7 +143,7 @@ function x(e) {
             Z.forEach((e) => {
                 n.push(Number(e.command.id)), null != e.overrideSendCommand && n.push(Number(e.overrideSendCommand.id));
             }),
-                _.default.track(I.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+                N.default.track(I.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
                     guild_id: null != (e = null == a ? void 0 : a.guild_id) ? e : '',
                     channel_id: null != (t = null == a ? void 0 : a.id) ? t : '',
                     application_ids: [...Z.map((e) => Number(e.command.applicationId))],
@@ -152,10 +152,10 @@ function x(e) {
         }, [Z, a, k]);
     let B = l.useCallback(
             async (e) => {
-                let t = await fetch(j),
+                let t = await fetch(C),
                     n = await t.arrayBuffer(),
                     r = D.join('/'),
-                    l = new File([n], 'image'.concat((0, M.Q)({ contentType: r })), { type: r });
+                    l = new File([n], 'image'.concat((0, _.Q)({ contentType: r })), { type: r });
                 c.Z.setFile({
                     channelId: a.id,
                     id: e,
@@ -167,15 +167,15 @@ function x(e) {
                     draftType: P.d.SlashCommand
                 });
             },
-            [j, a.id, D]
+            [C, a.id, D]
         ),
         H = l.useCallback(
             async (e, t, n, r) => {
                 var l, o;
                 if (!F) return;
                 let i = e.applicationId,
-                    c = (null == (l = L.result) ? void 0 : l.sections[i]) != null,
-                    s = (null == (o = G.result) ? void 0 : o.sections[i]) != null;
+                    c = (null == (l = G.result) ? void 0 : l.sections[i]) != null,
+                    s = (null == (o = L.result) ? void 0 : o.sections[i]) != null;
                 await B(r),
                     null != f.Z.getActiveCommand(a.id) &&
                         m.Po({
@@ -204,16 +204,16 @@ function x(e) {
                         location: n,
                         sectionName: t.name
                     }),
-                    N.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
+                    M.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
             },
-            [a.id, B, F, L, G]
+            [a.id, B, F, G, L]
         ),
-        V = l.useCallback(
+        W = l.useCallback(
             async (e, t, n) => {
                 var r, l;
                 let o = e.applicationId,
-                    i = (null == (r = L.result) ? void 0 : r.sections[o]) != null,
-                    c = (null == (l = G.result) ? void 0 : l.sections[o]) != null;
+                    i = (null == (r = G.result) ? void 0 : r.sections[o]) != null,
+                    c = (null == (l = L.result) ? void 0 : l.sections[o]) != null;
                 i || c || p.ZP.queryInstallOnDemandApp(e.applicationId, a.id);
                 let { isAuthorized: u } = await (0, h.L)({
                     applicationId: o,
@@ -232,7 +232,7 @@ function x(e) {
                 }),
                     u &&
                         (await B(n),
-                        await (0, E.Z)({
+                        await (0, g.Z)({
                             command: R({}, e),
                             optionValues: {
                                 [n]: [
@@ -249,7 +249,7 @@ function x(e) {
                             commandOrigin: t === b.Vh.IMAGE_RECS_SUBMENU ? b.bB.IMAGE_RECS_SUBMENU : b.bB.IMAGE_RECS_MENU
                         }));
             },
-            [a, x, L, G, B]
+            [a, x, G, L, B]
         );
     return (0, r.jsxs)(i.v2r, {
         onSelect: t,
@@ -279,7 +279,7 @@ function x(e) {
                       i.sNh,
                       {
                           id: 'menu-image-recs-placeholder',
-                          render: () => (0, r.jsx)(C.Z, {}),
+                          render: () => (0, r.jsx)(j.Z, {}),
                           navigable: !1,
                           disabled: !0
                       },
@@ -299,7 +299,7 @@ function x(e) {
                                     {
                                         id: e.command.id,
                                         action: () => {
-                                            o ? H(e.command, e.section, b.Vh.IMAGE_RECS_MENU, c) : V(l ? t : e.command, b.Vh.IMAGE_RECS_MENU, l ? n.imageOption : c);
+                                            o ? H(e.command, e.section, b.Vh.IMAGE_RECS_MENU, c) : W(l ? t : e.command, b.Vh.IMAGE_RECS_MENU, l ? n.imageOption : c);
                                         },
                                         label: e.command.displayName,
                                         subtext: e.command.displayDescription,
@@ -326,7 +326,7 @@ function x(e) {
                                                               id: ''.concat(e.command.id, '-send'),
                                                               label: A.NW.string(A.t['M+BhUV']),
                                                               subtext: A.NW.string(A.t.zXFjJS),
-                                                              action: () => V(t, b.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
+                                                              action: () => W(t, b.Vh.IMAGE_RECS_SUBMENU, n.imageOption),
                                                               icon: i.Uuj
                                                           },
                                                           ''.concat(e.command.id, '-send')

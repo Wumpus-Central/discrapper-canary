@@ -11,20 +11,20 @@ var r = t(200651),
     f = t(343074);
 function p(e) {
     let { autoFocus: n = !1, className: t, userId: p, onUpdate: b } = e,
-        y = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        m = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
         { loading: I, note: g } = (0, c.Z)(p),
-        m = o.useRef(null);
+        y = o.useRef(null);
     return (o.useEffect(() => {
-        if (!n || y) return;
-        let e = m.current;
+        if (!n || m) return;
+        let e = y.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, y]),
-    y)
+    }, [n, m]),
+    m)
         ? null
         : (0, r.jsx)('div', {
               className: t,
               children: (0, r.jsx)(l.lcI, {
-                  ref: m,
+                  ref: y,
                   className: f.textarea,
                   disabled: I,
                   placeholder: I ? u.NW.string(u.t['WLKx//']) : u.NW.string(u.t.VBhOe3),

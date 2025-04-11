@@ -19,15 +19,15 @@ let x = (e) => {
     let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: C, customCTA: v, popoutClassname: g, popoutPosition: N = 'right' } = e,
         j = r.useRef(null),
         P = (0, a.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
-        E = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
-        { nick: O, avatar: A } = r.useMemo(() => {
-            let e = null == E ? void 0 : E.getAvatarURL(null == P ? void 0 : P.guild_id, 48, !1);
+        O = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
+        { nick: E, avatar: A } = r.useMemo(() => {
+            let e = null == O ? void 0 : O.getAvatarURL(null == P ? void 0 : P.guild_id, 48, !1);
             return {
-                nick: p.ZP.getName(null == P ? void 0 : P.guild_id, null == P ? void 0 : P.id, E),
+                nick: p.ZP.getName(null == P ? void 0 : P.guild_id, null == P ? void 0 : P.id, O),
                 avatar: e
             };
-        }, [E, P]);
-    return null == E
+        }, [O, P]);
+    return null == O
         ? null
         : (0, i.jsx)(s.yRy, {
               targetElementRef: j,
@@ -97,7 +97,7 @@ let x = (e) => {
                                           (0, i.jsx)('img', {
                                               className: _.avatar,
                                               src: A,
-                                              alt: b.NW.formatToPlainString(b.t.IzVXxc, { userName: O })
+                                              alt: b.NW.formatToPlainString(b.t.IzVXxc, { userName: E })
                                           }),
                                           (0, i.jsx)('div', {
                                               className: _.playerInfo,
@@ -108,7 +108,7 @@ let x = (e) => {
                                                           variant: 'text-md/medium',
                                                           color: 'text-primary',
                                                           lineClamp: 1,
-                                                          children: O
+                                                          children: E
                                                       }),
                                                       (0, i.jsx)(h.Gk, {
                                                           location: h.Gt.GAME_PROFILE,

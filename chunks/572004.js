@@ -9,7 +9,7 @@ var r = n(852229),
 let a = (() => {
     if (i.isPlatformEmbedded) return null != o.ZP.copy;
     try {
-        return document.queryCommandEnabled('copy') || document.queryCommandSupported('copy');
+        return r.a() || document.queryCommandEnabled('copy') || document.queryCommandSupported('copy');
     } catch (e) {
         return !1;
     }

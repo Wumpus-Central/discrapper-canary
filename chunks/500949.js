@@ -7,14 +7,14 @@ n.d(t, {
     HW: () => U,
     Ib: () => es,
     KB: () => eu,
-    S2: () => W,
+    S2: () => H,
     W6: () => er,
     XM: () => ea,
     YC: () => ex,
     YE: () => ei,
     h9: () => eo,
     iw: () => en,
-    jC: () => H,
+    jC: () => W,
     jQ: () => G,
     lT: () => K,
     rd: () => ed,
@@ -136,8 +136,8 @@ let U = {
     G = Object.fromEntries(Object.keys(U).map((e) => [e, e]));
 Object.values(U).forEach((e) => I.Z.register(e));
 let { SemanticColors: F } = D.V,
-    H = F,
-    W = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
+    W = F,
+    H = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function V(e, t) {
     let [n, r] = l.useState(() => {
         let n = A.K.get(e);
@@ -151,7 +151,7 @@ function V(e, t) {
     );
 }
 function X(e) {
-    let t = H[e];
+    let t = W[e];
     return {
         name: e,
         colors: Object.fromEntries(

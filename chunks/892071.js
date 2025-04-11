@@ -21,44 +21,44 @@ function d() {
     return e;
 }
 function f(e) {
-    let { isRefreshEnabled: t, isRefreshChatInputEnabled: n, rootClassName: o, lang: d, theme: f, density: _, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: y, useForcedColors: v, systemForcedColors: O, useReducedMotion: I, alwaysShowLinkDecorations: S, hardwareAccelerationEnabled: T, children: N } = e,
-        A = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        C = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
-        P = a()(
+    let { rootClassName: t, lang: n, theme: o, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: v, alwaysShowLinkDecorations: O, hardwareAccelerationEnabled: I, children: S } = e,
+        T = window.CSS.supports('selector(::-webkit-scrollbar)'),
+        N = 'font-size: '.concat(_, '%; --saturation-factor: ').concat(g, ';'),
+        A = a()(
             (0, c.Z)(),
-            (0, l.QeD)(f),
-            'density-'.concat(_),
-            m,
+            (0, l.QeD)(o),
+            'density-'.concat(d),
+            p,
             {
-                'low-saturation': b <= l.AEw,
-                'keyboard-mode': E,
-                'decorate-links': S,
-                'no-webkit-scrollbar': !A,
-                'has-webkit-scrollbar': A,
-                'mouse-mode': g,
-                'reduce-motion': I,
-                'full-motion': !I,
+                'low-saturation': g <= l.AEw,
+                'keyboard-mode': m,
+                'decorate-links': O,
+                'no-webkit-scrollbar': !T,
+                'has-webkit-scrollbar': T,
+                'mouse-mode': h,
+                'reduce-motion': v,
+                'full-motion': !v,
                 'is-mobile': s.tq,
-                'app-focused': p,
-                'desaturate-user-colors': y,
-                'disable-forced-colors': !v && 'active' === O,
-                'enable-forced-colors': v,
-                'visual-refresh': t,
-                'hardware-acceleration': T,
-                'visual-refresh-chat-input': n
+                'app-focused': f,
+                'desaturate-user-colors': E,
+                'disable-forced-colors': !b && 'active' === y,
+                'enable-forced-colors': b,
+                'visual-refresh': !0,
+                'hardware-acceleration': I,
+                'visual-refresh-chat-input': !1
             },
-            o
+            t
         ),
-        R = i.useMemo(
+        C = i.useMemo(
             () => ({
-                lang: d,
-                style: C,
-                className: P
+                lang: n,
+                style: N,
+                className: A
             }),
-            [d, C, P]
+            [n, N, A]
         );
     return (0, r.jsx)(u.Provider, {
-        value: R,
-        children: N
+        value: C,
+        children: S
     });
 }

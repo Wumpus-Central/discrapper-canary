@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(496158),
     j = n(676161),
     P = n(660090),
-    E = n(783097),
-    O = n(176412),
+    O = n(783097),
+    E = n(176412),
     A = n(870205),
     I = n(981631),
     S = n(689079),
@@ -56,7 +56,7 @@ function Z(e) {
                     x.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
         }, [l, o, s, c]),
         p = (null != (n = null == (t = o.options) ? void 0 : t.length) ? n : 0) > 0,
-        f = r.useMemo(() => (0, O.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        f = r.useMemo(() => (0, E.ae)(o.displayDescription, void 0), [o.displayDescription]),
         h = r.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -168,7 +168,7 @@ function W(e) {
                         }
                     });
                     e &&
-                        (await (0, E.Y$)({
+                        (await (0, O.Y$)({
                             command: n,
                             optionValues: {},
                             context: o,

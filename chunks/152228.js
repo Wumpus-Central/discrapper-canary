@@ -32,9 +32,9 @@ function O(t, e) {
     let r = C(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
-        M(_)(() => {
+        b(_)(() => {
             let a = (0, i.nZ)(),
-                _ = b(a),
+                _ = M(a),
                 o =
                     t.onlyIfParent && !_
                         ? new p.b()
@@ -69,9 +69,9 @@ function D(t, e) {
     let r = C(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
-        M(_)(() => {
+        b(_)(() => {
             let a = (0, i.nZ)(),
-                _ = b(a),
+                _ = M(a),
                 o =
                     t.onlyIfParent && !_
                         ? new p.b()
@@ -109,7 +109,7 @@ function g(t) {
         { forceTransaction: r, parentSpan: n } = t;
     return (t.scope ? (e) => (0, i.$e)(t.scope, e) : void 0 !== n ? (t) => m(n, t) : (t) => t())(() => {
         let e = (0, i.nZ)(),
-            n = b(e);
+            n = M(e);
         return t.onlyIfParent && !n
             ? new p.b()
             : v({
@@ -230,12 +230,12 @@ function G(t, e, a) {
         });
     return void 0 !== s && l.setAttribute(E.TE, s), r && r.emit('spanStart', l), l;
 }
-function b(t) {
+function M(t) {
     let e = (0, I.Y)(t);
     if (!e) return;
     let a = (0, i.s3)();
     return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, R.Gx)(e) : e;
 }
-function M(t) {
+function b(t) {
     return void 0 !== t ? (e) => m(t, e) : (t) => t();
 }

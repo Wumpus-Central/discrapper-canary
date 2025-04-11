@@ -47,8 +47,8 @@ let L = {
                 traceFetch: C,
                 traceXHR: S,
                 shouldCreateSpanForRequest: G,
-                enableHTTPTimings: b,
-                instrumentPageLoad: M,
+                enableHTTPTimings: M,
+                instrumentPageLoad: b,
                 instrumentNavigation: U
             } = {
                 ...L,
@@ -126,7 +126,7 @@ let L = {
                         });
                     }),
                     p.m9.location &&
-                        (M &&
+                        (b &&
                             O(t, {
                                 name: p.m9.location.pathname,
                                 startTime: R.Z1 ? R.Z1 / 1000 : void 0,
@@ -196,7 +196,7 @@ let L = {
                         traceXHR: S,
                         tracePropagationTargets: t.getOptions().tracePropagationTargets,
                         shouldCreateSpanForRequest: G,
-                        enableHTTPTimings: b
+                        enableHTTPTimings: M
                     });
             }
         };

@@ -1,7 +1,7 @@
 e.exports = {
     popout: 'popout_cba592',
-    header: 'header_cba592',
     searchBar: 'searchBar_cba592',
+    header: 'header_cba592',
     searchBarComponent: 'searchBarComponent_cba592',
     addButton: 'addButton_cba592',
     subtitleWarning: 'subtitleWarning_cba592',

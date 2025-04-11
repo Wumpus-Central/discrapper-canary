@@ -170,8 +170,8 @@ t.exports = (function () {
             return n.length > 3 ? [e, a, r, n[3]] : [e, a, r, 1];
         },
         G = /^rgb\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*\)$/,
-        b = /^rgba\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*([01]|[01]?\.\d+)\)$/,
-        M = /^rgb\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
+        M = /^rgba\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*([01]|[01]?\.\d+)\)$/,
+        b = /^rgb\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
         U = /^rgba\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/,
         w = /^hsl\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
         B = /^hsla\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/,
@@ -185,11 +185,11 @@ t.exports = (function () {
                 for (var e, a = e.slice(1, 4), r = 0; r < 3; r++) a[r] = +a[r];
                 return (a[3] = 1), a;
             }
-            if ((e = t.match(b))) {
+            if ((e = t.match(M))) {
                 for (var n = e.slice(1, 5), _ = 0; _ < 4; _++) n[_] = +n[_];
                 return n;
             }
-            if ((e = t.match(M))) {
+            if ((e = t.match(b))) {
                 for (var o = e.slice(1, 4), i = 0; i < 3; i++) o[i] = W(2.55 * o[i]);
                 return (o[3] = 1), o;
             }
@@ -211,7 +211,7 @@ t.exports = (function () {
             }
         };
     Y.test = function (t) {
-        return G.test(t) || b.test(t) || M.test(t) || U.test(t) || w.test(t) || B.test(t);
+        return G.test(t) || M.test(t) || b.test(t) || U.test(t) || w.test(t) || B.test(t);
     };
     var H = i.type,
         K = function () {
@@ -529,9 +529,9 @@ t.exports = (function () {
             return [E < 0 ? 0 : E, 500 * (i - c), 200 * (c - s)];
         },
         tG = i.unpack,
-        tb = Math.pow,
-        tM = function (t) {
-            return 255 * (t <= 0.00304 ? 12.92 * t : 1.055 * tb(t, 1 / 2.4) - 0.055);
+        tM = Math.pow,
+        tb = function (t) {
+            return 255 * (t <= 0.00304 ? 12.92 * t : 1.055 * tM(t, 1 / 2.4) - 0.055);
         },
         tU = function (t) {
             return t > tP.t1 ? t * t * t : tP.t2 * (t - tP.t0);
@@ -541,7 +541,7 @@ t.exports = (function () {
             var o = (n = tG(n, 'lab'))[0],
                 i = n[1],
                 c = n[2];
-            return (e = (o + 16) / 116), (t = isNaN(i) ? e : e + i / 500), (a = isNaN(c) ? e : e - c / 200), (e = tP.Yn * tU(e)), (r = tM(3.2404542 * (t = tP.Xn * tU(t)) - 1.5371385 * e - 0.4985314 * (a = tP.Zn * tU(a)))), [r, tM(-0.969266 * t + 1.8760108 * e + 0.041556 * a), tM(0.0556434 * t - 0.2040259 * e + 1.0572252 * a), n.length > 3 ? n[3] : 1];
+            return (e = (o + 16) / 116), (t = isNaN(i) ? e : e + i / 500), (a = isNaN(c) ? e : e - c / 200), (e = tP.Yn * tU(e)), (r = tb(3.2404542 * (t = tP.Xn * tU(t)) - 1.5371385 * e - 0.4985314 * (a = tP.Zn * tU(a)))), [r, tb(-0.969266 * t + 1.8760108 * e + 0.041556 * a), tb(0.0556434 * t - 0.2040259 * e + 1.0572252 * a), n.length > 3 ? n[3] : 1];
         },
         tB = i.unpack,
         tW = i.type;
@@ -1064,7 +1064,7 @@ t.exports = (function () {
         (u.prototype.desaturate = function (t) {
             return void 0 === t && (t = 1), this.saturate(-t);
         });
-    var eb = i.type;
+    var eM = i.type;
     (u.prototype.set = function (t, e, a) {
         void 0 === a && (a = !1);
         var r = t.split('.'),
@@ -1074,7 +1074,7 @@ t.exports = (function () {
         if (!_) return o;
         var i = n.indexOf(_) - 2 * ('ok' === n.substr(0, 2));
         if (i > -1) {
-            if ('string' == eb(e))
+            if ('string' == eM(e))
                 switch (e.charAt(0)) {
                     case '+':
                     case '-':
@@ -1089,7 +1089,7 @@ t.exports = (function () {
                     default:
                         o[i] = +e;
                 }
-            else if ('number' === eb(e)) o[i] = e;
+            else if ('number' === eM(e)) o[i] = e;
             else throw Error('unsupported value for Color.set');
             var c = new u(o, n);
             return a ? ((this._rgb = c._rgb), this) : c;
@@ -1101,7 +1101,7 @@ t.exports = (function () {
                 n = e._rgb;
             return new u(r[0] + a * (n[0] - r[0]), r[1] + a * (n[1] - r[1]), r[2] + a * (n[2] - r[2]), 'rgb');
         });
-    var eM = Math.sqrt,
+    var eb = Math.sqrt,
         eU = Math.pow;
     (eC.lrgb = function (t, e, a) {
         var r = t._rgb,
@@ -1112,7 +1112,7 @@ t.exports = (function () {
             c = i[0],
             s = i[1],
             E = i[2];
-        return new u(eM(eU(n, 2) * (1 - a) + eU(c, 2) * a), eM(eU(_, 2) * (1 - a) + eU(s, 2) * a), eM(eU(o, 2) * (1 - a) + eU(E, 2) * a), 'rgb');
+        return new u(eb(eU(n, 2) * (1 - a) + eU(c, 2) * a), eb(eU(_, 2) * (1 - a) + eU(s, 2) * a), eb(eU(o, 2) * (1 - a) + eU(E, 2) * a), 'rgb');
     }),
         (eC.lab = function (t, e, a) {
             var r = t.lab(),
@@ -1577,8 +1577,8 @@ t.exports = (function () {
                                 C < m && ((m = C), (y = v)), N[y]++, (p[g] = y);
                             }
                         for (var S = Array(a), G = 0; G < a; G++) S[G] = null;
-                        for (var b = 0; b < f; b++) null === S[(A = p[b])] ? (S[A] = o[b]) : (S[A] += o[b]);
-                        for (var M = 0; M < a; M++) S[M] *= 1 / N[M];
+                        for (var M = 0; M < f; M++) null === S[(A = p[M])] ? (S[A] = o[M]) : (S[A] += o[M]);
+                        for (var b = 0; b < a; b++) S[b] *= 1 / N[b];
                         T = !1;
                         for (var U = 0; U < a; U++)
                             if (S[U] !== h[U]) {
@@ -1798,11 +1798,11 @@ t.exports = (function () {
             (C = 180 >= as(C) ? C : m <= P ? C + 360 : C - 360), (C = 2 * an(L * h) * al(o(C) / 2));
             var S = h - L,
                 G = 1 + (0.015 * a_(A - 50, 2)) / an(20 + a_(A - 50, 2)),
-                b = 1 + 0.045 * O,
-                M = 1 + 0.015 * O * v,
+                M = 1 + 0.045 * O,
+                b = 1 + 0.015 * O * v,
                 U = 30 * au(-a_((y - 275) / 25, 2)),
                 w = -(2 * an(a_(O, 7) / (a_(O, 7) + a_(25, 7)))) * al(2 * o(U));
-            return ai(0, ao(100, an(a_((I - c) / (a * G), 2) + a_(S / (r * b), 2) + a_(C / (n * M), 2) + (S / (r * b)) * w * (C / (n * M)))));
+            return ai(0, ao(100, an(a_((I - c) / (a * G), 2) + a_(S / (r * M), 2) + a_(C / (n * b), 2) + (S / (r * M)) * w * (C / (n * b)))));
         }),
         (I.distance = function (t, e, a) {
             void 0 === a && (a = 'lab'), (t = new u(t)), (e = new u(e));
