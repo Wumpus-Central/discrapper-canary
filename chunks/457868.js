@@ -215,7 +215,9 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                             lostPermissionTooltipText: M ? void 0 : F.NW.string(F.t['/QcoT0']),
                             isOwner: D,
                             nameplate: q,
-                            onClick: () => X((e) => !e)
+                            onClick: (e) => {
+                                e.shiftKey ? null == H || H() : X((e) => !e);
+                            }
                         },
                         i
                     )
