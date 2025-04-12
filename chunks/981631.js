@@ -2110,6 +2110,7 @@ var N =
     (r.MESSAGE_MENU_GOOGLE_SEARCHED = 'message_menu_google_searched'),
     (r.EVENT_RINGTONE_TOGGLED = 'event_ringtone_toggled'),
     (r.USER_PROFILE_ACTION = 'user_profile_action'),
+    (r.USER_PROFILE_UI_VIEWED = 'user_profile_ui_viewed'),
     (r.USER_PROFILE_ACTIVITY_JOINED = 'user_profile_activity_joined'),
     (r.USER_PROFILE_ACTIVITY_ACTION = 'user_profile_activity_action'),
     (r.USER_PROFILE_BADGE_PRESSED = 'user_profile_badge_pressed'),

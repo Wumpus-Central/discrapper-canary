@@ -15,8 +15,8 @@ var r = t(200651),
     I = t(687158),
     g = t(471879),
     y = t(502762),
-    j = t(848780),
-    h = t(907179);
+    h = t(848780),
+    j = t(907179);
 t(475413);
 var v = t(228168),
     x = t(981631),
@@ -49,35 +49,39 @@ function N(e) {
     return e;
 }
 function P(e) {
-    let { user: n, guildId: t, channelId: i, messageId: P, roleId: E, transitionState: S, onViewBlockedProfileClick: T, showGuildProfile: C = !0, sourceAnalyticsLocations: A = [] } = e,
+    let { user: n, guildId: t, channelId: i, messageId: P, roleId: E, transitionState: S, openedAt: T, onViewBlockedProfileClick: C, showGuildProfile: A = !0, sourceAnalyticsLocations: L = [] } = e,
         w = t === x.ME ? void 0 : t,
-        L = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
-        { analyticsLocations: R } = (0, d.ZP)([...A, L ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
-        M = (0, b.ZB)({
-            layout: L ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
+        R = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
+        { analyticsLocations: M } = (0, d.ZP)([...L, R ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        U = (0, b.ZB)({
+            layout: R ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
             userId: n.id,
             guildId: w,
             channelId: i,
             messageId: P,
             roleId: E,
-            showGuildProfile: C
+            showGuildProfile: A
         }),
-        U = [
+        D = [
             {
                 icon: c.owK,
                 description: _.NW.string(_.t.kcuWvb)
             },
             {
                 icon: c.owK,
-                description: _.NW.string(L ? _.t.QxrDY2 : _.t.W6fjkZ)
+                description: _.NW.string(R ? _.t.QxrDY2 : _.t.W6fjkZ)
             }
         ],
-        D = (0, I.ZP)(n.id, C ? w : void 0),
-        B = o.createRef();
+        B = (0, I.ZP)(n.id, A ? w : void 0),
+        W = o.createRef();
     return (0, r.jsx)(d.Gt, {
-        value: R,
+        value: M,
         children: (0, r.jsx)(b.Mt, {
-            value: M,
+            value: U,
+            openedAt: T,
+            fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
+            fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
+            isLoaded: null == B ? void 0 : B.isLoaded,
             children: (0, r.jsx)(c.Y0X, {
                 transitionState: S,
                 className: O.root,
@@ -85,9 +89,9 @@ function P(e) {
                 'aria-label': _.NW.string(_.t['3N/J2t']),
                 children: (0, r.jsx)(y.Z, {
                     user: n,
-                    displayProfile: D,
+                    displayProfile: B,
                     profileType: v.y0.FULL_SIZE,
-                    ref: B,
+                    ref: W,
                     children: (0, r.jsxs)('div', {
                         className: O.container,
                         children: [
@@ -115,13 +119,13 @@ function P(e) {
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: _.NW.format(L ? _.t['8F+WNz'] : _.t['/cZp5u'], { username: p.ZP.getName(w, i, n) })
+                                                children: _.NW.format(R ? _.t['8F+WNz'] : _.t['/cZp5u'], { username: p.ZP.getName(w, i, n) })
                                             })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
                                         className: O.restrictedSafetyTable,
-                                        children: U.map((e, n) => {
+                                        children: D.map((e, n) => {
                                             let { icon: t, description: o } = e;
                                             return (0, r.jsx)(
                                                 u.ZP,
@@ -137,33 +141,33 @@ function P(e) {
                                     (0, r.jsxs)(c.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, r.jsx)(h.Z, {
+                                            (0, r.jsx)(j.Z, {
                                                 size: c.PhG.MEDIUM,
-                                                isBlocked: L,
+                                                isBlocked: R,
                                                 onClick: () => {
-                                                    null == T || T(),
+                                                    null == C || C(),
                                                         (0, m.pQ)(
                                                             N(
                                                                 {
-                                                                    action: L ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                                                    analyticsLocations: R
+                                                                    action: R ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                                    analyticsLocations: M
                                                                 },
-                                                                M
+                                                                U
                                                             )
                                                         );
                                                 }
                                             }),
-                                            (0, r.jsx)(j.Z, {
+                                            (0, r.jsx)(h.Z, {
                                                 userId: n.id,
                                                 onClick: () => {
-                                                    null == T || T(),
+                                                    null == C || C(),
                                                         (0, m.pQ)(
                                                             N(
                                                                 {
                                                                     action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                                    analyticsLocations: R
+                                                                    analyticsLocations: M
                                                                 },
-                                                                M
+                                                                U
                                                             )
                                                         );
                                                 }

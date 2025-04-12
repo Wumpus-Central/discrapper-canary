@@ -15,8 +15,8 @@ var r = t(200651),
     I = t(5192),
     g = t(785717),
     y = t(221292),
-    j = t(687158),
-    h = t(510659),
+    h = t(687158),
+    j = t(510659),
     v = t(113557),
     x = t(867176),
     _ = t(451834),
@@ -29,8 +29,8 @@ var r = t(200651),
     T = t(4517),
     C = t(171368),
     A = t(62154),
-    w = t(412317),
-    L = t(228168),
+    L = t(412317),
+    w = t(228168),
     R = t(388032),
     M = t(405666);
 function U(e) {
@@ -77,9 +77,9 @@ function D(e, n) {
     );
 }
 function B(e) {
-    let { user: n, currentUser: t, guildId: B, channelId: W, messageId: F, roleId: k, sessionId: G, friendToken: V, initialSection: Y, initialSubsection: z, transitionState: K, customStatusPrompt: J, onClose: H, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
-        { analyticsLocations: Q } = (0, u.ZP)([...q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
-        $ = (0, g.ZB)({
+    let { user: n, currentUser: t, guildId: B, channelId: W, messageId: F, roleId: k, sessionId: G, friendToken: V, initialSection: Y, initialSubsection: z, transitionState: K, customStatusPrompt: J, openedAt: H, onClose: X, showGuildProfile: q = !0, sourceAnalyticsLocations: Q = [] } = e,
+        { analyticsLocations: $ } = (0, u.ZP)([...Q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
+        ee = (0, g.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: G,
@@ -87,29 +87,33 @@ function B(e) {
             channelId: W,
             messageId: F,
             roleId: k,
-            showGuildProfile: X
+            showGuildProfile: q
         }),
-        ee = (0, h.$m)(),
-        en = (0, s.q_F)({
-            opacity: +(null != ee.interactionType),
+        en = (0, j.$m)(),
+        et = (0, s.q_F)({
+            opacity: +(null != en.interactionType),
             config: { duration: 150 }
         }),
-        et = (0, j.ZP)(n.id, X ? B : void 0),
-        er = (0, j.ZP)(n.id, B),
-        eo = (0, l.e7)([m.Z], () => m.Z.getRelationshipType(n.id)),
-        ei = n.id === t.id,
-        el = (0, f.p)({ location: 'UserProfileModal' }),
-        es = o.useMemo(() => (null != J ? J : (0, p.Z)()), [J]),
-        ec = o.useMemo(() => (null != B ? { [B]: [n.id] } : {}), [B, n.id]);
-    (0, a.$)(ec);
-    let ea = o.createRef(),
-        ed = (0, c.Z)(ea);
+        er = (0, h.ZP)(n.id, q ? B : void 0),
+        eo = (0, h.ZP)(n.id, B),
+        ei = (0, l.e7)([m.Z], () => m.Z.getRelationshipType(n.id)),
+        el = n.id === t.id,
+        es = (0, f.p)({ location: 'UserProfileModal' }),
+        ec = o.useMemo(() => (null != J ? J : (0, p.Z)()), [J]),
+        ea = o.useMemo(() => (null != B ? { [B]: [n.id] } : {}), [B, n.id]);
+    (0, a.$)(ea);
+    let ed = o.createRef(),
+        eu = (0, c.Z)(ed);
     return (0, r.jsx)(u.Gt, {
-        value: Q,
+        value: $,
         children: (0, r.jsx)(g.Mt, {
-            value: $,
-            children: (0, r.jsx)(h.NJ, {
-                value: ee,
+            value: ee,
+            openedAt: H,
+            fetchStartedAt: null == er ? void 0 : er.fetchStartedAt,
+            fetchEndedAt: null == er ? void 0 : er.fetchEndedAt,
+            isLoaded: null == er ? void 0 : er.isLoaded,
+            children: (0, r.jsx)(j.NJ, {
+                value: en,
                 children: (0, r.jsxs)(s.Y0X, {
                     transitionState: K,
                     className: M.root,
@@ -118,23 +122,23 @@ function B(e) {
                     children: [
                         (0, r.jsxs)(O.Z, {
                             user: n,
-                            displayProfile: et,
-                            profileType: L.y0.FULL_SIZE,
-                            ref: ea,
+                            displayProfile: er,
+                            profileType: w.y0.FULL_SIZE,
+                            ref: ed,
                             children: [
                                 (0, r.jsxs)(Z.Z, {
-                                    profileType: L.y0.FULL_SIZE,
+                                    profileType: w.y0.FULL_SIZE,
                                     children: [
                                         (0, r.jsx)(E.Z, {
-                                            shouldShowTooltip: null === ee.interactionType,
+                                            shouldShowTooltip: null === en.interactionType,
                                             user: n,
                                             guildId: B,
                                             channelId: W,
-                                            onClose: H
+                                            onClose: X
                                         }),
                                         (0, r.jsx)(P.Z, {
-                                            shouldShowTooltip: null === ee.interactionType,
-                                            profileType: L.y0.FULL_SIZE,
+                                            shouldShowTooltip: null === en.interactionType,
+                                            profileType: w.y0.FULL_SIZE,
                                             user: n,
                                             friendToken: V
                                         }),
@@ -142,29 +146,29 @@ function B(e) {
                                             user: n,
                                             guildId: B,
                                             viewProfileItem:
-                                                (null == er ? void 0 : er.guildId) == null
+                                                (null == eo ? void 0 : eo.guildId) == null
                                                     ? null
-                                                    : (null == et ? void 0 : et.guildId) != null
+                                                    : (null == er ? void 0 : er.guildId) != null
                                                       ? (0, r.jsx)(s.sNh, {
                                                             id: 'view-main-profile',
                                                             label: R.NW.string(R.t.GISTtb),
                                                             subtext: R.NW.formatToPlainString(R.t['mn/nW1'], { displayName: I.ZP.getName(void 0, void 0, n) }),
                                                             action: () => {
-                                                                H(),
+                                                                X(),
                                                                     (0, C.openUserProfileModal)(
-                                                                        D(U({}, $), {
+                                                                        D(U({}, ee), {
                                                                             showGuildProfile: !1,
                                                                             friendToken: V,
-                                                                            sourceAnalyticsLocations: q
+                                                                            sourceAnalyticsLocations: Q
                                                                         })
                                                                     ),
                                                                     (0, y.pQ)(
                                                                         U(
                                                                             {
                                                                                 action: 'PRESS_VIEW_MAIN_PROFILE',
-                                                                                analyticsLocations: Q
+                                                                                analyticsLocations: $
                                                                             },
-                                                                            $
+                                                                            ee
                                                                         )
                                                                     );
                                                             }
@@ -174,21 +178,21 @@ function B(e) {
                                                             label: R.NW.string(R.t.DisZzM),
                                                             subtext: R.NW.formatToPlainString(R.t['mn/nW1'], { displayName: I.ZP.getName(B, W, n) }),
                                                             action: () => {
-                                                                H(),
+                                                                X(),
                                                                     (0, C.openUserProfileModal)(
-                                                                        D(U({}, $), {
+                                                                        D(U({}, ee), {
                                                                             showGuildProfile: !0,
                                                                             friendToken: V,
-                                                                            sourceAnalyticsLocations: q
+                                                                            sourceAnalyticsLocations: Q
                                                                         })
                                                                     ),
                                                                     (0, y.pQ)(
                                                                         U(
                                                                             {
                                                                                 action: 'PRESS_VIEW_SERVER_PROFILE',
-                                                                                analyticsLocations: Q
+                                                                                analyticsLocations: $
                                                                             },
-                                                                            $
+                                                                            ee
                                                                         )
                                                                     );
                                                             }
@@ -200,17 +204,17 @@ function B(e) {
                                     children: [
                                         (0, r.jsx)(x.Z, {
                                             user: n,
-                                            displayProfile: et,
-                                            profileType: L.y0.FULL_SIZE
+                                            displayProfile: er,
+                                            profileType: w.y0.FULL_SIZE
                                         }),
                                         (0, r.jsx)(_.Z, {
                                             userId: n.id,
-                                            onClose: H,
+                                            onClose: X,
                                             className: M.toast
                                         }),
-                                        null != ee.interactionType &&
+                                        null != en.interactionType &&
                                             (0, r.jsx)(i.animated.div, {
-                                                style: en,
+                                                style: et,
                                                 className: M.backdrop
                                             }),
                                         (0, r.jsxs)('div', {
@@ -219,35 +223,35 @@ function B(e) {
                                                 (0, r.jsx)(v.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
-                                                    displayProfile: et,
+                                                    displayProfile: er,
                                                     guildId: B,
                                                     channelId: W,
-                                                    profileType: L.y0.FULL_SIZE
+                                                    profileType: w.y0.FULL_SIZE
                                                 }),
                                                 (0, r.jsx)(T.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
                                                     guildId: B,
                                                     channelId: W,
-                                                    profileType: L.y0.FULL_SIZE,
+                                                    profileType: w.y0.FULL_SIZE,
                                                     hasEntered: K === s.Dvm.ENTERED,
-                                                    onCloseProfile: H,
-                                                    prompt: el && ei ? es : null
+                                                    onCloseProfile: X,
+                                                    prompt: es && el ? ec : null
                                                 }),
                                                 (0, r.jsxs)('div', {
                                                     className: M.headerButtons,
                                                     children: [
-                                                        (0, r.jsx)(w.Z, {
-                                                            isCurrentUser: ei,
+                                                        (0, r.jsx)(L.Z, {
+                                                            isCurrentUser: el,
                                                             user: n,
-                                                            relationshipType: eo,
+                                                            relationshipType: ei,
                                                             friendToken: V,
-                                                            onClose: H
+                                                            onClose: X
                                                         }),
                                                         (0, r.jsx)(N.Z, {
                                                             user: n,
                                                             guildId: B,
-                                                            onClose: H
+                                                            onClose: X
                                                         })
                                                     ]
                                                 })
@@ -260,18 +264,18 @@ function B(e) {
                                     currentUser: t,
                                     guildId: B,
                                     channelId: W,
-                                    displayProfile: et,
+                                    displayProfile: er,
                                     initialSection: Y,
                                     initialSubsection: z,
                                     friendToken: V,
-                                    onClose: H
+                                    onClose: X
                                 })
                             ]
                         }),
-                        (null == et ? void 0 : et.profileEffectId) != null &&
+                        (null == er ? void 0 : er.profileEffectId) != null &&
                             (0, r.jsx)(b.Z, {
-                                profileEffectId: null == et ? void 0 : et.profileEffectId,
-                                isHovering: ed
+                                profileEffectId: null == er ? void 0 : er.profileEffectId,
+                                isHovering: eu
                             })
                     ]
                 })

@@ -97,70 +97,74 @@ let O = (0, a.pxk)(a.EFr.SIZE_80),
         position: void 0
     };
 function T(e) {
-    var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestClose: A, onClosePopout: C, shouldShow: P, shouldPreload: R = !0, shouldShowOnHover: w = !1 } = e,
-        D = y(e, ['children', 'userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'renderPopout', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload', 'shouldShowOnHover']);
-    let L = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        x = (0, o.e7)([c.default], () => (null != p ? p : c.default.getUser(n))),
-        [M, k] = i.useState(!1),
-        [j, U] = i.useState(!1),
-        G = i.useRef(!1),
-        B = i.useRef(void 0),
+    var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestOpen: A, onRequestClose: C, onClosePopout: P, shouldShow: R, shouldPreload: w = !0, shouldShowOnHover: D = !1 } = e,
+        L = y(e, ['children', 'userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload', 'shouldShowOnHover']);
+    let x = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+        M = (0, o.e7)([c.default], () => (null != p ? p : c.default.getUser(n))),
+        [k, j] = i.useState(!1),
+        [U, G] = i.useState(!1),
+        B = i.useRef(!1),
         V = i.useRef(void 0),
         F = i.useRef(void 0),
-        Z = (0, u.Z)(),
-        H = (0, l.Z)(Z),
-        W = i.useCallback(() => {
-            clearTimeout(B.current), clearTimeout(V.current), clearTimeout(F.current);
+        Z = i.useRef(void 0),
+        H = i.useRef(void 0),
+        W = (0, u.Z)(),
+        Y = (0, l.Z)(W),
+        K = i.useCallback(() => {
+            clearTimeout(V.current), clearTimeout(F.current), clearTimeout(Z.current);
         }, []);
-    if (((0, s.zq)(W), null == x || null == L)) return t(I, S);
-    let Y = () =>
+    if (((0, s.zq)(K), null == M || null == x)) return t(I, S);
+    let z = () =>
             null != T
                 ? T()
-                : (0, d.Z)(x.id, null != v ? v : x.getAvatarURL(m, O), {
+                : (0, d.Z)(M.id, null != v ? v : M.getAvatarURL(m, O), {
+                      withMutualGuilds: M.id !== x.id,
+                      withMutualFriends: !M.bot && M.id !== x.id,
                       guildId: m,
                       channelId: E
                   }),
-        K = (e) =>
-            j
+        q = (e) =>
+            (null == H.current && (H.current = Date.now()), U)
                 ? (0, r.jsx)(a.xxz, {})
                 : null != N
-                  ? N(e)
+                  ? N(e, H.current)
                   : (0, r.jsx)(
                         f.Z,
-                        b(g({}, D, e), {
-                            userId: x.id,
-                            user: x,
+                        b(g({}, L, e), {
+                            userId: M.id,
+                            user: M,
                             guildId: m,
                             channelId: E,
+                            openedAt: H.current,
                             closePopout: () => {
-                                e.closePopout(), null == C || C();
+                                e.closePopout(), null == P || P();
                             }
                         })
                     );
-    return w
+    return D
         ? (0, r.jsx)('div', {
               className: h.hoverable,
               onMouseEnter: () => {
-                  W(),
-                      (G.current = !0),
-                      R &&
-                          (B.current = setTimeout(async () => {
-                              if (G.current)
+                  K(),
+                      (B.current = !0),
+                      w &&
+                          (V.current = setTimeout(async () => {
+                              if (B.current)
                                   try {
-                                      U(!0), await Y();
+                                      G(!0), await z();
                                   } finally {
-                                      U(!1);
+                                      G(!1);
                                   }
                           }, _.a6)),
-                      (V.current = setTimeout(() => {
-                          (0, a.$sL)() || H.current || (G.current && k(!0));
+                      (F.current = setTimeout(() => {
+                          (0, a.$sL)() || Y.current || (B.current && (null == H.current && (H.current = Date.now()), j(!0)));
                       }, _.JX));
               },
               onMouseLeave: () => {
-                  W(),
-                      (G.current = !1),
-                      (F.current = setTimeout(() => {
-                          G.current || k(!1);
+                  K(),
+                      (B.current = !1),
+                      (Z.current = setTimeout(() => {
+                          B.current || ((H.current = void 0), j(!1));
                       }, _.Ig));
               },
               children: (0, r.jsx)(
@@ -169,14 +173,17 @@ function T(e) {
                       g(
                           {
                               popoutKey: _.Tg,
-                              shouldShow: !0 === P || M,
-                              preload: !R || j || M ? void 0 : Y,
-                              renderPopout: K,
+                              shouldShow: !0 === R || k,
+                              preload: !w || U || k ? void 0 : z,
+                              renderPopout: q,
+                              onRequestOpen: () => {
+                                  null == H.current && (H.current = Date.now()), null == A || A();
+                              },
                               onRequestClose: () => {
-                                  k(!1), null == A || A();
+                                  (H.current = void 0), j(!1), null == C || C();
                               }
                           },
-                          D
+                          L
                       ),
                       { children: t }
                   )
@@ -188,12 +195,17 @@ function T(e) {
                   g(
                       {
                           popoutKey: _.Tg,
-                          shouldShow: P,
-                          preload: R ? Y : void 0,
-                          renderPopout: K,
-                          onRequestClose: A
+                          shouldShow: R,
+                          preload: w ? z : void 0,
+                          renderPopout: q,
+                          onRequestOpen: () => {
+                              null == H.current && (H.current = Date.now()), null == A || A();
+                          },
+                          onRequestClose: () => {
+                              (H.current = void 0), null == C || C();
+                          }
                       },
-                      D
+                      L
                   ),
                   { children: t }
               )

@@ -64,6 +64,9 @@ function I(e) {
         value: Z,
         children: (0, r.jsx)(m.Mt, {
             value: T,
+            fetchStartedAt: null == I ? void 0 : I.fetchStartedAt,
+            fetchEndedAt: null == I ? void 0 : I.fetchEndedAt,
+            isLoaded: null == I ? void 0 : I.isLoaded,
             children: (0, r.jsx)(y.Z, {
                 ref: A,
                 user: t,

@@ -73,57 +73,61 @@ function J(e) {
     return e;
 }
 function Q(e) {
-    let { currentUser: t, onClose: n, setPopoutRef: Q, highlightBadge: $ } = e,
-        ee = __OVERLAY__,
-        et = (0, _.ZP)(t.id),
-        { analyticsLocations: en } = (0, m.ZP)(u.Z.ACCOUNT_PROFILE_POPOUT),
-        er = (0, x.ZB)({
+    let { currentUser: t, onClose: n, setPopoutRef: Q, highlightBadge: $, openedAt: ee } = e,
+        et = __OVERLAY__,
+        en = (0, _.ZP)(t.id),
+        { analyticsLocations: er } = (0, m.ZP)(u.Z.ACCOUNT_PROFILE_POPOUT),
+        ei = (0, x.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
         }),
-        { ref: ei } = (0, c.Z)(),
-        es = (0, d.Z)(ei);
+        { ref: es } = (0, c.Z)(),
+        ea = (0, d.Z)(es);
     i.useEffect(() => {
-        null == Q || Q(ei.current);
-    }, [ei, Q]),
+        null == Q || Q(es.current);
+    }, [es, Q]),
         i.useEffect(() => (M.a.setState({ isOpen: !0 }), () => M.a.setState({ isOpen: !1 })), []);
-    let ea = (0, l.e7)([w.Z], () => w.Z.getStatus(t.id)),
-        el = Z.Cr.useSetting(),
-        eo = (0, F.F)(el),
-        { expiringStatusProfileFeedback: ec } = h.Y.useExperiment({ location: 'AccountProfilePopout' }, { autoTrackExposure: !1 }),
-        ed = (0, l.e7)([k.Z], () => k.Z.hidePersonalInformation),
-        eu = (0, f.p)(),
-        em = Z.Sb.useSetting(),
-        eg = (0, F.I)(ea),
-        ep = (0, U.g)(n),
-        eh = (0, b.Z)({ analyticsLocations: en }),
-        ef = (0, B.I5)(t),
-        eb = (0, g.p)({ location: 'AccountProfilePopout' }),
-        eN = i.useMemo(() => (0, p.Z)(), []),
-        ex = (e) => {
+    let el = (0, l.e7)([w.Z], () => w.Z.getStatus(t.id)),
+        eo = Z.Cr.useSetting(),
+        ec = (0, F.F)(eo),
+        { expiringStatusProfileFeedback: ed } = h.Y.useExperiment({ location: 'AccountProfilePopout' }, { autoTrackExposure: !1 }),
+        eu = (0, l.e7)([k.Z], () => k.Z.hidePersonalInformation),
+        em = (0, f.p)(),
+        eg = Z.Sb.useSetting(),
+        ep = (0, F.I)(el),
+        eh = (0, U.g)(n),
+        ef = (0, b.Z)({ analyticsLocations: er }),
+        eb = (0, B.I5)(t),
+        eN = (0, g.p)({ location: 'AccountProfilePopout' }),
+        ex = i.useMemo(() => (0, p.Z)(), []),
+        e_ = (e) => {
             null == n || n(),
                 (0, R.openUserProfileModal)(
                     J(
                         {
-                            customStatusPrompt: eN,
-                            sourceAnalyticsLocations: en
+                            customStatusPrompt: ex,
+                            sourceAnalyticsLocations: er
                         },
-                        er,
+                        ei,
                         e
                     )
                 );
         };
     return (0, r.jsx)(m.Gt, {
-        value: en,
+        value: er,
         children: (0, r.jsx)(x.Mt, {
-            value: er,
+            value: ei,
+            openedAt: ee,
+            fetchStartedAt: null == en ? void 0 : en.fetchStartedAt,
+            fetchEndedAt: null == en ? void 0 : en.fetchEndedAt,
+            isLoaded: null == en ? void 0 : en.isLoaded,
             children: (0, r.jsx)(o.VqE, {
-                ref: ei,
+                ref: es,
                 'aria-label': t.username,
                 children: (0, r.jsxs)(I.Z, {
                     className: q.themeContainer,
                     user: t,
-                    displayProfile: et,
+                    displayProfile: en,
                     profileType: Y.y0.BITE_SIZE,
                     children: [
                         (0, r.jsxs)('header', {
@@ -131,28 +135,28 @@ function Q(e) {
                             children: [
                                 (0, r.jsx)(C.Z, {
                                     user: t,
-                                    displayProfile: et,
+                                    displayProfile: en,
                                     profileType: Y.y0.BITE_SIZE
                                 }),
                                 (0, r.jsx)(E.Z, {
                                     user: t,
-                                    displayProfile: et,
+                                    displayProfile: en,
                                     profileType: Y.y0.BITE_SIZE,
-                                    onOpenProfile: ee ? void 0 : ex
+                                    onOpenProfile: et ? void 0 : e_
                                 }),
                                 (0, r.jsx)(P.Z, {
                                     location: 'AccountProfilePopout',
                                     user: t,
                                     profileType: Y.y0.BITE_SIZE,
                                     onCloseProfile: n,
-                                    prompt: eb ? eN : null
+                                    prompt: eN ? ex : null
                                 })
                             ]
                         }),
-                        (null == et ? void 0 : et.profileEffectId) != null &&
+                        (null == en ? void 0 : en.profileEffectId) != null &&
                             (0, r.jsx)(N.Z, {
-                                profileEffectId: null == et ? void 0 : et.profileEffectId,
-                                isHovering: es
+                                profileEffectId: null == en ? void 0 : en.profileEffectId,
+                                isHovering: ea
                             }),
                         (0, r.jsxs)(o.Ttm, {
                             className: q.body,
@@ -162,10 +166,10 @@ function Q(e) {
                                     className: q.username,
                                     profileType: Y.y0.BITE_SIZE,
                                     nickname: L.ZP.getName(null, null, t),
-                                    onOpenProfile: ee ? void 0 : ex,
-                                    pronouns: null == et ? void 0 : et.pronouns,
+                                    onOpenProfile: et ? void 0 : e_,
+                                    pronouns: null == en ? void 0 : en.pronouns,
                                     tags: (0, r.jsx)(j.Z, {
-                                        displayProfile: et,
+                                        displayProfile: en,
                                         profileType: Y.y0.BITE_SIZE,
                                         onClose: n,
                                         shouldOpenBadgeTooltip: null != $ ? (e) => e === $ : void 0
@@ -175,25 +179,25 @@ function Q(e) {
                                             (0, r.jsx)(T.Z, { userId: t.id }),
                                             (0, r.jsx)(A.Z, {
                                                 user: t,
-                                                isHovering: es
+                                                isHovering: ea
                                             })
                                         ]
                                     })
                                 }),
                                 (0, r.jsx)(D.Z, {
                                     user: t,
-                                    bio: null == et ? void 0 : et.bio,
-                                    hidePersonalInformation: ed,
+                                    bio: null == en ? void 0 : en.bio,
+                                    hidePersonalInformation: eu,
                                     onClose: n
                                 }),
                                 (0, r.jsx)(O.Z, {
-                                    isPremiumUser: ef,
+                                    isPremiumUser: eb,
                                     onInteraction: n
                                 }),
                                 (0, r.jsx)(v.Z, {
                                     user: t,
                                     currentUser: t,
-                                    displayProfile: et,
+                                    displayProfile: en,
                                     onClose: n
                                 }),
                                 (0, r.jsxs)('div', {
@@ -210,7 +214,7 @@ function Q(e) {
                                                         label: K.NW.string(K.t.s5vZlZ),
                                                         icon: o.vdY,
                                                         onClick: () => {
-                                                            eh(), n();
+                                                            ef(), n();
                                                         }
                                                     }),
                                                     (0, r.jsx)(S.Z, { className: q.menuDivider }),
@@ -219,19 +223,19 @@ function Q(e) {
                                                         action: 'PRESS_SET_STATUS',
                                                         label: (0, r.jsx)(G.Z, {}),
                                                         sublabel:
-                                                            ec &&
-                                                            null != eo &&
+                                                            ed &&
+                                                            null != ec &&
                                                             (0, r.jsx)(o.Text, {
                                                                 color: 'currentColor',
                                                                 variant: 'text-xs/medium',
-                                                                children: eo
+                                                                children: ec
                                                             }),
                                                         icon: () =>
                                                             (0, r.jsx)(o.qbd, {
-                                                                status: ea,
+                                                                status: el,
                                                                 size: 12
                                                             }),
-                                                        hint: (eu || ea === z.Skl.DND) && (0, r.jsx)(o.owu, { size: 'xxs' }),
+                                                        hint: (em || el === z.Skl.DND) && (0, r.jsx)(o.owu, { size: 'xxs' }),
                                                         renderSubmenu: s.tq
                                                             ? void 0
                                                             : (e) => {
@@ -241,7 +245,7 @@ function Q(e) {
                                                                       className: q.statusPickerModalMenu,
                                                                       'aria-label': K.NW.string(K.t.E13trK),
                                                                       onClose: t,
-                                                                      children: eg
+                                                                      children: ep
                                                                   });
                                                               },
                                                         onClick: s.tq
@@ -289,7 +293,7 @@ function Q(e) {
                                                                                                       hideScroller: !0,
                                                                                                       onClose: i,
                                                                                                       onSelect: void 0,
-                                                                                                      children: eg
+                                                                                                      children: ep
                                                                                                   })
                                                                                               }),
                                                                                           Object.getOwnPropertyDescriptors
@@ -334,13 +338,13 @@ function Q(e) {
                                                                 navId: 'switch-accounts-submenu',
                                                                 'aria-label': K.NW.string(K.t.wFhVqK),
                                                                 onClose: t,
-                                                                children: ep
+                                                                children: eh
                                                             });
                                                         }
                                                     }),
                                                     !__OVERLAY__ &&
                                                         W.wS &&
-                                                        em &&
+                                                        eg &&
                                                         (0, r.jsxs)(r.Fragment, {
                                                             children: [
                                                                 (0, r.jsx)(S.Z, { className: q.menuDivider }),

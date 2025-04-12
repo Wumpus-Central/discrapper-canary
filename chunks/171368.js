@@ -55,6 +55,7 @@ async function h(e) {
             messageId: null != i ? i : void 0,
             roleId: null != s ? s : void 0,
             sessionId: null != l ? l : void 0,
+            openedAt: Date.now(),
             customStatusPrompt: v,
             section: _,
             subsection: h,

@@ -69,8 +69,8 @@ var r = n(200651),
     eu = n(14357),
     em = n(763296),
     eg = n(640806),
-    ep = n(184301),
-    eh = n(52538),
+    ep = n(52538),
+    eh = n(670188),
     ef = n(861254),
     eb = n(221241),
     eN = n(879815),
@@ -210,20 +210,22 @@ function e4(e) {
         ? null
         : (0, r.jsx)(_.Z, {
               object: eq.qAy.AVATAR,
-              children: (0, r.jsx)(f.yRy, {
+              children: (0, r.jsx)(eh.Z, {
+                  user: s,
                   targetElementRef: g,
                   clickTrap: !0,
-                  renderPopout: (e) => {
-                      let { closePopout: t, setPopoutRef: n } = e;
+                  renderPopout: (e, t) => {
+                      let { closePopout: n, setPopoutRef: i } = e;
                       return (0, r.jsx)('div', {
                           className: eQ.accountProfilePopoutWrapper,
                           children: (0, r.jsx)($.Z, {
                               currentUser: s,
                               highlightBadge: j,
+                              openedAt: t,
                               onClose: () => {
-                                  null == t || t();
+                                  null == n || n();
                               },
-                              setPopoutRef: n
+                              setPopoutRef: i
                           })
                       });
                   },
@@ -235,11 +237,6 @@ function e4(e) {
                   onRequestClose: () => {
                       c(), C(void 0);
                   },
-                  preload: () =>
-                      (0, ep.Z)(s, void 0, {
-                          withMutualGuilds: !1,
-                          withMutualFriends: !1
-                      }),
                   children: (e) => (
                       E(e),
                       (0, r.jsxs)(
@@ -807,7 +804,7 @@ function te(e) {
         position: 'top',
         align: 'center',
         shouldShow: null != h,
-        renderPopout: h === c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2 ? () => (0, r.jsx)(eo.Z, {}) : h === c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK ? () => (0, r.jsx)(ed.Z, { markAsDismissed: b }) : h === c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE ? () => (0, r.jsx)(eu.Z, { markAsDismissed: b }) : h === c.z.SOUNDBOARD_VOLUME_EDUCATION ? () => (0, r.jsx)(eg.Z, { markAsDismissed: b }) : h === c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK ? () => (0, r.jsx)(eh.Z, {}) : () => (0, r.jsx)(r.Fragment, {}),
+        renderPopout: h === c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2 ? () => (0, r.jsx)(eo.Z, {}) : h === c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK ? () => (0, r.jsx)(ed.Z, { markAsDismissed: b }) : h === c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE ? () => (0, r.jsx)(eu.Z, { markAsDismissed: b }) : h === c.z.SOUNDBOARD_VOLUME_EDUCATION ? () => (0, r.jsx)(eg.Z, { markAsDismissed: b }) : h === c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK ? () => (0, r.jsx)(ep.Z, {}) : () => (0, r.jsx)(r.Fragment, {}),
         children: () =>
             (0, r.jsx)(
                 ez.Z,

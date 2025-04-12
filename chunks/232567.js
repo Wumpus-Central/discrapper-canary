@@ -90,7 +90,8 @@ function E(e) {
 }
 async function b(e) {
     let { type: t, friendToken: n, withMutualGuilds: r, withMutualFriendsCount: i, withMutualFriends: o, guildId: a, connectionsRoleId: u, joinRequestId: d, abortSignal: f } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        h = arguments.length > 2 ? arguments[2] : void 0;
+        h = arguments.length > 2 ? arguments[2] : void 0,
+        m = Date.now();
     l.Z.dispatch({
         type: 'USER_PROFILE_FETCH_START',
         userId: e,
@@ -120,7 +121,8 @@ async function b(e) {
             }),
             l.Z.dispatch({
                 type: 'USER_PROFILE_FETCH_SUCCESS',
-                userProfile: c.body
+                userProfile: c.body,
+                fetchStartedAt: m
             }),
             null != a &&
                 null != c.body.guild_member &&
@@ -135,6 +137,7 @@ async function b(e) {
             l.Z.dispatch({
                 type: 'USER_PROFILE_FETCH_FAILURE',
                 apiError: new c.Hx(t),
+                fetchStartedAt: m,
                 userId: e,
                 guildId: a
             }),
