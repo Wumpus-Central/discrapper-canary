@@ -14,7 +14,7 @@ function _(e, t) {
     let { type: m, withMutualGuilds: g = !1, withMutualFriendsCount: E = !1, withMutualFriends: b = !1, friendToken: y, dispatchWait: v = !1, waitForRefetch: O = !0, guildId: I, channelId: S, joinRequestId: T, abortSignal: N } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if ('' === e || u.Z.isFetchingProfile(e, I)) return Promise.resolve();
     let A = u.Z.getUserProfile(e),
-        C = Date.now() - (null != (h = null == A ? void 0 : A.lastFetched) ? h : 0) >= f;
+        C = Date.now() - (null != (h = null == A ? void 0 : A.fetchEndedAt) ? h : 0) >= f;
     if (((null == A || null == (n = A.fetchError) ? void 0 : n.status) === 404 || (null == A || null == (_ = A.fetchError) ? void 0 : _.status) === 429) && !C) return Promise.resolve();
     let P = u.Z.getGuildMemberProfile(e, I),
         R = u.Z.getMutualGuilds(e),

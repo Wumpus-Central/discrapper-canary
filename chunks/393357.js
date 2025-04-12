@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => m });
+t.r(n), t.d(n, { default: () => p });
 var r = t(200651),
     o = t(512969),
     s = t(442837),
@@ -8,15 +8,15 @@ var r = t(200651),
     c = t(50101),
     d = t(639777),
     u = t(504392),
-    p = t(981631);
-function m(e) {
+    m = t(981631);
+function p(e) {
     let { guildId: n, powerupSkuId: t } = e,
-        m = (0, s.e7)([l.Z], () => l.Z.getGuild(n)),
+        p = (0, s.e7)([l.Z], () => l.Z.getGuild(n)),
         x = (0, s.e7)([i.Z], () => i.Z.hasLoadedExperiments),
         _ = (0, d.Z)(n),
-        v = (0, c.Ek)(n, 'GuildPowerupsPage');
-    return x && null != _ && null != m
-        ? v
+        f = (0, c.Ek)(n, 'GuildPowerupsPage');
+    return x && null != _ && null != p
+        ? f
             ? _
                 ? (0, r.jsx)(u.Z, {
                       guildId: n,
@@ -24,11 +24,11 @@ function m(e) {
                   })
                 : (0, r.jsx)(a.Z, {
                       analyticsLocation: {
-                          section: p.jXE.CHANNEL_LIST,
-                          object: p.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
+                          section: m.jXE.CHANNEL_LIST,
+                          object: m.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
                       },
-                      guild: m
+                      guild: p
                   })
-            : (0, r.jsx)(o.l_, { to: p.Z5c.CHANNEL(n) })
+            : (0, r.jsx)(o.l_, { to: m.Z5c.CHANNEL(n) })
         : null;
 }

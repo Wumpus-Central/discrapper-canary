@@ -6,6 +6,6 @@ e.exports = {
     uploadedFileListItem: 'uploadedFileListItem__77347',
     ignoredFileListItem: 'ignoredFileListItem__77347',
     removeFileButtonInnerContents: 'removeFileButtonInnerContents__77347',
-    profileEffectPreviewSelector: 'profileEffectPreviewSelector__77347',
+    previewSelector: 'previewSelector__77347',
     divider: 'divider__77347'
 };

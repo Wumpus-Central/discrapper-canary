@@ -1,6 +1,6 @@
 s.d(e, { s: () => _ });
-var n = s(731889),
-    i = s(573736),
+var i = s(731889),
+    n = s(573736),
     r = s(101284),
     o = s(394798),
     a = s(622916),
@@ -8,7 +8,7 @@ var n = s(731889),
     h = s(99342);
 class u {
     constructor() {
-        (this._notifyingListeners = !1), (this._scopeListeners = []), (this._eventProcessors = []), (this._breadcrumbs = []), (this._attachments = []), (this._user = {}), (this._tags = {}), (this._extra = {}), (this._contexts = {}), (this._sdkProcessingMetadata = {}), (this._propagationContext = (0, n.Q)());
+        (this._notifyingListeners = !1), (this._scopeListeners = []), (this._eventProcessors = []), (this._breadcrumbs = []), (this._attachments = []), (this._user = {}), (this._tags = {}), (this._extra = {}), (this._contexts = {}), (this._sdkProcessingMetadata = {}), (this._propagationContext = (0, i.Q)());
     }
     clone() {
         let t = new u();
@@ -115,8 +115,8 @@ class u {
     update(t) {
         if (!t) return this;
         let e = 'function' == typeof t ? t(this) : t,
-            [s, n] = e instanceof _ ? [e.getScopeData(), e.getRequestSession()] : (0, i.PO)(e) ? [t, t.requestSession] : [],
-            { tags: r, extra: o, user: a, contexts: c, level: h, fingerprint: u = [], propagationContext: d } = s || {};
+            [s, i] = e instanceof _ ? [e.getScopeData(), e.getRequestSession()] : (0, n.PO)(e) ? [t, t.requestSession] : [],
+            { tags: r, extra: o, user: a, contexts: c, level: h, fingerprint: u = [], propagationContext: p } = s || {};
         return (
             (this._tags = {
                 ...this._tags,
@@ -133,23 +133,23 @@ class u {
             a && Object.keys(a).length && (this._user = a),
             h && (this._level = h),
             u.length && (this._fingerprint = u),
-            d && (this._propagationContext = d),
-            n && (this._requestSession = n),
+            p && (this._propagationContext = p),
+            i && (this._requestSession = i),
             this
         );
     }
     clear() {
-        return (this._breadcrumbs = []), (this._tags = {}), (this._extra = {}), (this._user = {}), (this._contexts = {}), (this._level = void 0), (this._transactionName = void 0), (this._fingerprint = void 0), (this._requestSession = void 0), (this._session = void 0), (0, h.D)(this, void 0), (this._attachments = []), (this._propagationContext = (0, n.Q)()), this._notifyScopeListeners(), this;
+        return (this._breadcrumbs = []), (this._tags = {}), (this._extra = {}), (this._user = {}), (this._contexts = {}), (this._level = void 0), (this._transactionName = void 0), (this._fingerprint = void 0), (this._requestSession = void 0), (this._session = void 0), (0, h.D)(this, void 0), (this._attachments = []), (this._propagationContext = (0, i.Q)()), this._notifyScopeListeners(), this;
     }
     addBreadcrumb(t, e) {
         let s = 'number' == typeof e ? e : 100;
         if (s <= 0) return this;
-        let n = {
+        let i = {
                 timestamp: (0, r.yW)(),
                 ...t
             },
-            i = this._breadcrumbs;
-        return i.push(n), (this._breadcrumbs = i.length > s ? i.slice(-s) : i), this._notifyScopeListeners(), this;
+            n = this._breadcrumbs;
+        return n.push(i), (this._breadcrumbs = n.length > s ? n.slice(-s) : n), this._notifyScopeListeners(), this;
     }
     getLastBreadcrumb() {
         return this._breadcrumbs[this._breadcrumbs.length - 1];
@@ -198,13 +198,13 @@ class u {
     captureException(t, e) {
         let s = e && e.event_id ? e.event_id : (0, o.DM)();
         if (!this._client) return a.kg.warn('No client configured on scope - will not capture exception!'), s;
-        let n = Error('Sentry syntheticException');
+        let i = Error('Sentry syntheticException');
         return (
             this._client.captureException(
                 t,
                 {
                     originalException: t,
-                    syntheticException: n,
+                    syntheticException: i,
                     ...e,
                     event_id: s
                 },
@@ -214,22 +214,22 @@ class u {
         );
     }
     captureMessage(t, e, s) {
-        let n = s && s.event_id ? s.event_id : (0, o.DM)();
-        if (!this._client) return a.kg.warn('No client configured on scope - will not capture message!'), n;
-        let i = Error(t);
+        let i = s && s.event_id ? s.event_id : (0, o.DM)();
+        if (!this._client) return a.kg.warn('No client configured on scope - will not capture message!'), i;
+        let n = Error(t);
         return (
             this._client.captureMessage(
                 t,
                 e,
                 {
                     originalException: t,
-                    syntheticException: i,
+                    syntheticException: n,
                     ...s,
-                    event_id: n
+                    event_id: i
                 },
                 this
             ),
-            n
+            i
         );
     }
     captureEvent(t, e) {

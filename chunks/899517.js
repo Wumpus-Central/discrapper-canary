@@ -1,12 +1,12 @@
-s.d(e, {
-    Y: () => r,
-    n: () => i
+a.d(e, {
+    Y: () => _,
+    n: () => n
 });
-var n = s(452896);
-let i = globalThis;
-function r(t, e, s) {
-    let r = s || i,
-        o = (r.__SENTRY__ = r.__SENTRY__ || {}),
-        a = (o[n.J] = o[n.J] || {});
-    return a[t] || (a[t] = e());
+var r = a(452896);
+let n = globalThis;
+function _(t, e, a) {
+    let _ = a || n,
+        o = (_.__SENTRY__ = _.__SENTRY__ || {}),
+        i = (o[r.J] = o[r.J] || {});
+    return i[t] || (i[t] = e());
 }

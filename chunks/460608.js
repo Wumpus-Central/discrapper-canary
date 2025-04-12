@@ -8,8 +8,8 @@ var r = t(200651),
     c = t(899667),
     d = t(430824),
     u = t(659679),
-    p = t(388032),
-    m = t(211886);
+    m = t(388032),
+    p = t(211886);
 function x(e) {
     let { guildId: n } = e,
         t = (0, a.Wu)(
@@ -33,12 +33,12 @@ function x(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(i.X6, {
-                      className: m.header,
+                      className: p.header,
                       variant: 'eyebrow',
-                      children: p.NW.string(p.t.yM9Krq)
+                      children: m.NW.string(m.t.yM9Krq)
                   }),
                   (0, r.jsx)(s.zJ, {
-                      className: m.container,
+                      className: p.container,
                       fade: !0,
                       children: x.map((e, n) => (0, r.jsx)(u.Z, { boost: e }, 'boost-activity-'.concat(n)))
                   })

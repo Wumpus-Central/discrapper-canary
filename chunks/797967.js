@@ -162,13 +162,13 @@ function _(e) {
             },
             [i, w]
         ),
-        D = o.useCallback(
+        R = o.useCallback(
             (e) => {
                 null == i || i(e), w(e);
             },
             [i, w]
         ),
-        R = o.useCallback(
+        D = o.useCallback(
             (e, t) => {
                 S({
                     start: e,
@@ -220,7 +220,7 @@ function _(e) {
                               position: _,
                               onRequestClose: () => Z('showStart', !1),
                               onShowPopout: () => Z('showStart', !0),
-                              onColorChange: (e) => R(e, k.end),
+                              onColorChange: (e) => D(e, k.end),
                               disabled: d
                           }),
                           (0, n.jsx)(m, {
@@ -233,20 +233,20 @@ function _(e) {
                               onShowPopout: () => Z('showEnd', !0),
                               onColorChange: (e) => {
                                   var t;
-                                  return R(null != (t = k.start) ? t : c.p6O, e);
+                                  return D(null != (t = k.start) ? t : c.p6O, e);
                               },
                               disabled: d
                           })
                       ]
                   });
-        }, [_, d, k, N, R, Z]),
+        }, [_, d, k, N, D, Z]),
         W = o.useCallback(
             () =>
                 (0, n.jsx)(s.Z$W, {
-                    onChange: D,
+                    onChange: R,
                     value: P
                 }),
-            [D, P]
+            [R, P]
         ),
         T = o.useCallback(
             (e) => {
@@ -289,7 +289,7 @@ function _(e) {
             renderGradientCustomButton: B,
             isGradient: O,
             customColor: P,
-            onChange: O ? R : E
+            onChange: O ? D : E
         })
     );
 }

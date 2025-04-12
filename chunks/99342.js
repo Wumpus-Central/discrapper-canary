@@ -2,11 +2,11 @@ s.d(e, {
     D: () => r,
     Y: () => o
 });
-var n = s(370336);
-let i = '_sentrySpan';
+var i = s(370336);
+let n = '_sentrySpan';
 function r(t, e) {
-    e ? (0, n.xp)(t, i, e) : delete t[i];
+    e ? (0, i.xp)(t, n, e) : delete t[n];
 }
 function o(t) {
-    return t[i];
+    return t[n];
 }

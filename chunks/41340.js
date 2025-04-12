@@ -67,7 +67,7 @@ function g(e) {
     let { subscription: g, onUpdated: v } = e,
         [j, y] = a.useState(!1),
         [C, O] = a.useState(!1),
-        [S, N] = a.useState(null),
+        [N, S] = a.useState(null),
         T = (e) => ((null == e && (e = g.status), e in f) ? f[e] : 'Unknown status '.concat(e)),
         E = (e) => {
             let t = new Date(e);
@@ -120,15 +120,15 @@ function g(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                N(e.body.message);
+                S(e.body.message);
             }
             v();
         },
-        w = (null == (t = h.GP[g.planIdFromItems]) ? void 0 : t.premiumType) === h.p9.TIER_0,
-        I = null == (n = g.metadata) ? void 0 : n.ended_at,
-        R = null != I ? new Date(I).toISOString().substring(0, 10) : '';
+        I = (null == (t = h.GP[g.planIdFromItems]) ? void 0 : t.premiumType) === h.p9.TIER_0,
+        w = null == (n = g.metadata) ? void 0 : n.ended_at,
+        R = null != w ? new Date(w).toISOString().substring(0, 10) : '';
     return (0, r.jsxs)('div', {
-        className: i()(b.card, w ? b.gradientWrapperTier0 : b.gradientWrapperTier2),
+        className: i()(b.card, I ? b.gradientWrapperTier0 : b.gradientWrapperTier2),
         children: [
             (0, r.jsxs)(s.Text, {
                 variant: 'text-md/normal',
@@ -243,11 +243,11 @@ function g(e) {
                                             onClick: (e) => P(),
                                             children: 'Renew Subscription'
                                         }),
-                                        null !== S &&
+                                        null !== N &&
                                             (0, r.jsx)(s.kzN, {
                                                 className: p.error,
-                                                onDismiss: () => N(null),
-                                                children: S
+                                                onDismiss: () => S(null),
+                                                children: N
                                             })
                                     ]
                                 }),

@@ -82,12 +82,12 @@ function I(e) {
     o.useEffect(() => {
         y(I || l);
     }, [I, l]);
-    let j = !m.some((e) => {
+    let h = !m.some((e) => {
             var n;
             return (null != (n = t.sourceAnalyticsLocations) ? n : []).includes(e);
         }),
-        h = s.Rt.useSetting();
-    return g && j && !(I && h)
+        j = s.Rt.useSetting();
+    return g && h && !(I && j)
         ? (0, r.jsx)(
               a.W,
               p(

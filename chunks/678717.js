@@ -22,14 +22,14 @@ var g = n(392750),
     y = n(806240),
     C = n(789654),
     O = n(719672),
-    S = n(691867),
-    N = n(916790),
+    N = n(691867),
+    S = n(916790),
     T = n(645973),
     E = n(903502),
     k = n(604776),
     P = n(912072),
-    w = n(272193),
-    I = n(685560),
+    I = n(272193),
+    w = n(685560),
     R = n(735959),
     Z = n(246992),
     L = n(496025),
@@ -91,7 +91,7 @@ function et() {
                     id: 'dispatcher',
                     name: 'Dispatcher',
                     group: J.v0.EVENTS,
-                    render: () => (0, r.jsx)(N.Z, {})
+                    render: () => (0, r.jsx)(S.Z, {})
                 }
             ];
             return (
@@ -160,7 +160,7 @@ function et() {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: J.v0.UI,
-                    render: () => (0, r.jsx)(S.Z, {})
+                    render: () => (0, r.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
@@ -252,7 +252,7 @@ function et() {
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
                     group: J.v0.PREMIUM,
-                    render: () => (0, r.jsx)(w.Z, {})
+                    render: () => (0, r.jsx)(I.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
@@ -264,7 +264,7 @@ function et() {
                     id: 'skill_trees',
                     name: 'Skill Trees',
                     group: J.v0.GUILDS,
-                    render: () => (0, r.jsx)(I.Z, {})
+                    render: () => (0, r.jsx)(w.Z, {})
                 }),
                 e
             );

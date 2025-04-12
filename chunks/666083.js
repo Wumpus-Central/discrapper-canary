@@ -1,7 +1,7 @@
 n.d(t, { default: () => j }), n(388685), n(953529);
 var r = n(200651),
     o = n(192379),
-    i = n(48026),
+    i = n(9971),
     s = n(442837),
     l = n(481060),
     a = n(607070),
@@ -39,12 +39,12 @@ function j(e) {
     let v = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
         x = o.useRef(null),
         _ = o.useRef(new i.qA()),
-        [h, C] = o.useState(null),
+        [C, h] = o.useState(null),
         w = f.uc.has(g.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.O_, {
-                ref: C,
+                ref: h,
                 className: O.confettiCanvas,
                 environment: _.current
             }),
@@ -131,7 +131,7 @@ function j(e) {
                             !v &&
                                 (0, r.jsx)(c.Z, {
                                     confettiTarget: x.current,
-                                    confettiCanvas: h,
+                                    confettiCanvas: C,
                                     sprites: (0, u.vK)()
                                 })
                         ]

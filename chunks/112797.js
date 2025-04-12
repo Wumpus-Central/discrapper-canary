@@ -1,8 +1,8 @@
 s.d(e, { CT: () => r });
-var n = s(101284),
-    i = s(394798);
+var i = s(101284),
+    n = s(394798);
 function r(t, e = {}) {
-    if ((e.user && (!t.ipAddress && e.user.ip_address && (t.ipAddress = e.user.ip_address), t.did || e.did || (t.did = e.user.id || e.user.email || e.user.username)), (t.timestamp = e.timestamp || (0, n.ph)()), e.abnormal_mechanism && (t.abnormal_mechanism = e.abnormal_mechanism), e.ignoreDuration && (t.ignoreDuration = e.ignoreDuration), e.sid && (t.sid = 32 === e.sid.length ? e.sid : (0, i.DM)()), void 0 !== e.init && (t.init = e.init), !t.did && e.did && (t.did = `${e.did}`), 'number' == typeof e.started && (t.started = e.started), t.ignoreDuration)) t.duration = void 0;
+    if ((e.user && (!t.ipAddress && e.user.ip_address && (t.ipAddress = e.user.ip_address), t.did || e.did || (t.did = e.user.id || e.user.email || e.user.username)), (t.timestamp = e.timestamp || (0, i.ph)()), e.abnormal_mechanism && (t.abnormal_mechanism = e.abnormal_mechanism), e.ignoreDuration && (t.ignoreDuration = e.ignoreDuration), e.sid && (t.sid = 32 === e.sid.length ? e.sid : (0, n.DM)()), void 0 !== e.init && (t.init = e.init), !t.did && e.did && (t.did = `${e.did}`), 'number' == typeof e.started && (t.started = e.started), t.ignoreDuration)) t.duration = void 0;
     else if ('number' == typeof e.duration) t.duration = e.duration;
     else {
         let e = t.timestamp - t.started;

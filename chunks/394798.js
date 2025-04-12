@@ -1,7 +1,7 @@
-s.d(e, { DM: () => i });
-var n = s(899517);
-function i() {
-    let t = n.n,
+s.d(e, { DM: () => n });
+var i = s(899517);
+function n() {
+    let t = i.n,
         e = t.crypto || t.msCrypto,
         s = () => 16 * Math.random();
     try {

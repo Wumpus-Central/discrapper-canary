@@ -1,4 +1,4 @@
-t.d(n, { Z: () => j });
+t.d(n, { Z: () => h });
 var r = t(200651);
 t(192379);
 var o = t(120356),
@@ -16,8 +16,8 @@ var o = t(120356),
     I = t(386019),
     g = t(228168),
     y = t(227832);
-function j(e) {
-    let { user: n, entry: t, profileGuildId: o, className: j, onClose: h, hideContextMenu: v = !1 } = e,
+function h(e) {
+    let { user: n, entry: t, profileGuildId: o, className: h, onClose: j, hideContextMenu: v = !1 } = e,
         { analyticsLocations: x } = (0, s.ZP)(l.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
         { profileType: _ } = (0, p.z)(),
         { interactionSource: O, interactionSourceId: Z } = (0, d.Xo)(),
@@ -56,14 +56,14 @@ function j(e) {
                                             display: 'recent',
                                             entry: t,
                                             user: n,
-                                            onClose: h,
+                                            onClose: j,
                                             children: e
                                         }),
                               children: (0, r.jsx)(m.Z, {
                                   entry: t,
                                   user: n,
-                                  onClose: h,
-                                  className: i()(j, { [y.hoisted]: O === g.n_.ACTIVITY && Z === t.id })
+                                  onClose: j,
+                                  className: i()(h, { [y.hoisted]: O === g.n_.ACTIVITY && Z === t.id })
                               })
                           })
                   })

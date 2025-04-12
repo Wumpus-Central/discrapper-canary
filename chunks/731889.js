@@ -1,8 +1,8 @@
-s.d(e, { Q: () => i });
-var n = s(394798);
-function i() {
+s.d(e, { Q: () => n });
+var i = s(394798);
+function n() {
     return {
-        traceId: (0, n.DM)(),
-        spanId: (0, n.DM)().substring(16)
+        traceId: (0, i.DM)(),
+        spanId: (0, i.DM)().substring(16)
     };
 }

@@ -16,8 +16,8 @@ var o = t(442837),
     I = t(493043),
     g = t(864141),
     y = t(228168),
-    j = t(981631),
-    h = t(388032),
+    h = t(981631),
+    j = t(388032),
     v = t(316879),
     x = t(301150);
 function _(e) {
@@ -29,16 +29,16 @@ function _(e) {
             guildId: O,
             surface: 'user-profile-modal-activity'
         }),
-        w = (0, o.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
-        L = n.id === t.id,
+        L = (0, o.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
+        w = n.id === t.id,
         R = (0, o.e7)([a.Z, c.Z], () => {
-            let e = L ? a.Z.getStatus() : c.Z.getStatus(n.id);
+            let e = w ? a.Z.getStatus() : c.Z.getStatus(n.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         M = E.length > 0 || null != T,
         U = P && null == T && null == A && null != C,
         D = S.length > 0;
-    return (!R && (M || U)) || D || !w
+    return (!R && (M || U)) || D || !L
         ? (0, r.jsxs)(i.zJl, {
               className: v.scroller,
               fade: !0,
@@ -80,14 +80,14 @@ function _(e) {
                       : null,
                   D
                       ? (0, r.jsx)(p.Z, {
-                            heading: h.NW.string(h.t.M0zgnZ),
-                            subheading: L
-                                ? h.NW.format(h.t['4bk9Ag'], {
+                            heading: j.NW.string(j.t.M0zgnZ),
+                            subheading: w
+                                ? j.NW.format(j.t['4bk9Ag'], {
                                       learnMoreHook: (e, n) =>
                                           (0, r.jsx)(
                                               i.eee,
                                               {
-                                                  href: d.Z.getArticleURL(j.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: d.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e
                                               },
                                               n

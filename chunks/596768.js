@@ -21,7 +21,7 @@ var r = n(200651),
     y = n(388032),
     C = n(459100),
     O = n(616257);
-let S = [
+let N = [
         {
             key: 'id',
             cellClassName: C.eventColumn,
@@ -47,7 +47,7 @@ let S = [
             }
         }
     ],
-    N = [
+    S = [
         {
             id: 'details',
             name: 'Details',
@@ -127,7 +127,7 @@ function T() {
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = a.useState(void 0),
         h = o.find((e) => e.key === c),
-        { TabBar: p, renderSelectedTab: _ } = (0, j.ZP)({ tabs: N }, []),
+        { TabBar: p, renderSelectedTab: _ } = (0, j.ZP)({ tabs: S }, []),
         T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
         E = a.useCallback((e) => {
             x.Z.dispatch({
@@ -175,7 +175,7 @@ function T() {
                 ]
             }),
             (0, r.jsx)(v.Z, {
-                columns: S,
+                columns: N,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

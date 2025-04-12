@@ -21,13 +21,13 @@ var r = n(200651),
     y = n(572004),
     C = n(70956),
     O = n(145597),
-    S = n(246992),
-    N = n(981631),
+    N = n(246992),
+    S = n(981631),
     T = n(757744),
     E = n(388032),
     k = n(931207),
     P = n(616257);
-function w(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function w(e) {
     }
     return e;
 }
-function I(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,11 +71,11 @@ function I(e, t) {
     );
 }
 let R = {
-        [N.Odu.CLICK_ZONE_DEBUG]: (e) =>
-            I(
-                w(
+        [S.Odu.CLICK_ZONE_DEBUG]: (e) =>
+            w(
+                I(
                     {
-                        type: N.Odu.CLICK_ZONE_DEBUG,
+                        type: S.Odu.CLICK_ZONE_DEBUG,
                         id: (0, o.Z)(),
                         layoutId: e,
                         anchor: {
@@ -87,15 +87,15 @@ let R = {
                             height: 100
                         }
                     },
-                    g.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG)
+                    g.Z.getWidgetDefaultSettings(S.Odu.CLICK_ZONE_DEBUG)
                 ),
                 { pinned: !0 }
             ),
-        [N.Odu.PERFORMANCE_DEBUG]: (e) =>
-            I(
-                w(
+        [S.Odu.PERFORMANCE_DEBUG]: (e) =>
+            w(
+                I(
                     {
-                        type: N.Odu.PERFORMANCE_DEBUG,
+                        type: S.Odu.PERFORMANCE_DEBUG,
                         id: (0, o.Z)(),
                         layoutId: e,
                         anchor: {
@@ -108,7 +108,7 @@ let R = {
                             height: 'auto'
                         }
                     },
-                    g.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG)
+                    g.Z.getWidgetDefaultSettings(S.Odu.PERFORMANCE_DEBUG)
                 ),
                 { pinned: !0 }
             )
@@ -332,8 +332,8 @@ function z(e) {
 }
 function B() {
     var e, t;
-    let [n, l] = z(N.Odu.CLICK_ZONE_DEBUG),
-        [o, d] = z(N.Odu.PERFORMANCE_DEBUG),
+    let [n, l] = z(S.Odu.CLICK_ZONE_DEBUG),
+        [o, d] = z(S.Odu.PERFORMANCE_DEBUG),
         g = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
         v = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
         y = (0, s.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.DisabledGPUBoost)),
@@ -365,7 +365,7 @@ function B() {
                 label: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 value: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
             }
-        ].map((e) => I(w({}, e), { label: ''.concat(e.label, ' ').concat(E === e.value ? '(current)' : '') })),
+        ].map((e) => w(I({}, e), { label: ''.concat(e.label, ' ').concat(E === e.value ? '(current)' : '') })),
         G = (0, s.cj)([p.default], () => p.default.getTrackedGames()),
         F = (0, s.e7)([j.default], () => j.default.getFocusedPID()),
         W = (0, s.e7)([j.default], () => j.default.isFocusedPidOutOfProcess()),
@@ -409,7 +409,7 @@ function B() {
                                 e
                             );
                         },
-                        w({}, e)
+                        I({}, e)
                     )
                 );
             }, 10 * C.Z.Millis.SECOND)),
@@ -454,7 +454,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(I({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: g,
                                             onChange: () => ee(),
@@ -477,7 +477,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(I({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: v,
                                             onChange: () => et(),
@@ -500,7 +500,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(I({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: y,
                                             onChange: () => en(),
@@ -523,7 +523,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(I({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: T,
                                             onChange: () => er(),
@@ -547,7 +547,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(I({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: null != n,
                                             onChange: () => l(),
@@ -570,7 +570,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    I(w({}, e), {
+                                    w(I({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: null != o,
                                             onChange: () => d(),
@@ -595,14 +595,14 @@ function B() {
                     children: (e) =>
                         (0, r.jsx)(
                             'div',
-                            I(w({}, e), {
+                            w(I({}, e), {
                                 className: k.panelGroup,
                                 children: (0, r.jsx)(c.PhF, {
                                     serialize: (e) => e,
                                     isSelected: (e) => e === L,
                                     options: U,
                                     select: M,
-                                    popoutLayerContext: S.O$
+                                    popoutLayerContext: N.O$
                                 })
                             })
                         )
@@ -614,7 +614,7 @@ function B() {
                         children: (e) =>
                             (0, r.jsx)(
                                 'div',
-                                I(w({}, e), {
+                                w(I({}, e), {
                                     children: (0, r.jsxs)('div', {
                                         className: k.panelGroup,
                                         children: [
@@ -645,7 +645,7 @@ function B() {
                     children: (e) =>
                         (0, r.jsx)(
                             'div',
-                            I(w({}, e), {
+                            w(I({}, e), {
                                 children: (0, r.jsxs)('div', {
                                     className: k.panelGroup,
                                     children: [
@@ -713,7 +713,7 @@ function B() {
                     children: (e) =>
                         (0, r.jsx)(
                             'div',
-                            I(w({}, e), {
+                            w(I({}, e), {
                                 children: (0, r.jsxs)('div', {
                                     className: k.panelGroup,
                                     children: [

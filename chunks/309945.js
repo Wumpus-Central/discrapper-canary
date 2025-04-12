@@ -8,8 +8,8 @@ var r = t(200651),
     c = t(899667),
     d = t(905128),
     u = t(680278),
-    p = t(388032),
-    m = t(45355);
+    m = t(388032),
+    p = t(45355);
 function x(e) {
     let { guildId: n, powerups: t } = e,
         x = (0, a.e7)([d.Z], () => {
@@ -17,30 +17,30 @@ function x(e) {
             return null != (t = null == (e = d.Z.getStateForGuild(n)) ? void 0 : e.appliedBoosts) ? t : 0;
         }),
         _ = (0, a.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(n), [n]),
-        v =
+        f =
             x -
             o.useMemo(() => {
                 var e, n, t;
                 return null != (t = null == _ || null == (n = _.filter) || null == (e = n.call(_, (e) => !e.ended && null == e.endsAt)) ? void 0 : e.length) ? t : 0;
             }, [_]);
-    return v <= 0
+    return f <= 0
         ? null
         : (0, r.jsxs)('div', {
-              className: m.container,
+              className: p.container,
               children: [
                   (0, r.jsx)(s.P4T, {
                       color: l.Z.colors.TEXT_WARNING,
-                      className: m.icon
+                      className: p.icon
                   }),
                   (0, r.jsx)(i.xv, {
                       variant: 'text-md/semibold',
                       color: 'text-warning',
-                      children: p.NW.string(u.Z.n5hQhY)
+                      children: m.NW.string(u.Z.n5hQhY)
                   }),
                   (0, r.jsx)(i.xv, {
                       variant: 'text-sm/medium',
-                      children: p.NW.formatToPlainString(u.Z.iAaAiI, {
-                          boostCount: v,
+                      children: m.NW.formatToPlainString(u.Z.iAaAiI, {
+                          boostCount: f,
                           perksString: t.map((e) => e.title).join(', ')
                       })
                   })
