@@ -106,9 +106,8 @@ function L(e) {
             friction: 30
         },
         k = (0, u.q_F)({
-            transform: w ? 'translateX(-50%) translateY(0px) scale(2.40)' : 'translateX(-50%) translateY(32px) scale(1)',
-            borderRadius: w ? '7px' : '0px',
-            opacity: w ? 0.3 : 1,
+            transform: w ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
+            borderRadius: '0px',
             transformOrigin: 'center 0%',
             config: M
         }),
@@ -121,15 +120,11 @@ function L(e) {
             transform: w ? 'translateY(0)' : 'translateY(20px)',
             config: M
         }),
-        G = (0, u.q_F)({
-            opacity: +!!w,
-            config: M
-        }),
-        B = i.useCallback((e) => {
+        G = i.useCallback((e) => {
             e && E(!0);
         }, []),
-        V = (0, d.O)(B),
-        F = (0, b.Z)(n);
+        B = (0, d.O)(G),
+        V = (0, b.Z)(n, I);
     return (0, r.jsxs)('div', {
         className: a()(C.topPerksCard, C.animatedTopPerksCard, A.powerupCard, { [C.animate]: g }),
         onMouseEnter: () => P(!0),
@@ -137,24 +132,17 @@ function L(e) {
         children: [
             (0, r.jsx)('div', {
                 className: C.intObserver,
-                ref: V
+                ref: B
             }),
-            (0, r.jsxs)('div', {
+            (0, r.jsx)('div', {
                 className: C.topPerksCardImageWrapper,
-                children: [
-                    (0, r.jsx)(s.animated.img, {
-                        className: a()(C.topPerksCardImage, A.image),
-                        src: F,
-                        alt: '',
-                        style: k
-                    }),
-                    (0, r.jsx)(s.animated.div, {
-                        className: C.imageGradientOverlay,
-                        style: G
-                    })
-                ]
+                children: (0, r.jsx)(s.animated.img, {
+                    className: a()(C.topPerksCardImage, A.image),
+                    src: V,
+                    alt: '',
+                    style: k
+                })
             }),
-            w && (0, r.jsx)('div', { className: C.borderGlowOverlay }),
             (0, r.jsxs)(s.animated.div, {
                 style: D(R({}, j), { transform: j.y.to((e) => 'translateY('.concat(e, 'px)')) }),
                 className: a()(C.contentContainer, A.contentContainer),

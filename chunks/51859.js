@@ -12,50 +12,51 @@ var r = t(200651),
 function p(e) {
     let { guildId: n, powerup: t } = e,
         [p, x] = o.useState(void 0);
-    return (
-        (0, d.KT)(p),
-        (0, r.jsxs)(a.Z, {
-            guildId: n,
-            powerup: t,
-            children: [
-                (0, r.jsx)(c.m, {
-                    className: m.image,
-                    powerup: t
-                }),
-                (0, r.jsxs)('div', {
-                    className: m.contentContainer,
-                    children: [
-                        (0, r.jsx)('div', {
-                            className: m.headerContainer,
-                            children: (0, r.jsx)(s.X6, {
-                                variant: 'heading-md/bold',
-                                children: t.title
-                            })
-                        }),
-                        (0, r.jsx)(s.xv, {
-                            className: m.description,
-                            variant: 'text-sm/medium',
-                            children: t.description
-                        }),
-                        (0, r.jsx)(a.u, {
-                            guildId: n,
-                            powerup: t
+    (0, d.KT)(p);
+    let [_, v] = o.useState(!1);
+    return (0, r.jsxs)(a.Z, {
+        onHover: (e) => v(e),
+        guildId: n,
+        powerup: t,
+        children: [
+            (0, r.jsx)(c.m, {
+                className: m.image,
+                powerup: t,
+                isHovering: _
+            }),
+            (0, r.jsxs)('div', {
+                className: m.contentContainer,
+                children: [
+                    (0, r.jsx)('div', {
+                        className: m.headerContainer,
+                        children: (0, r.jsx)(s.X6, {
+                            variant: 'heading-md/bold',
+                            children: t.title
                         })
-                    ]
-                }),
-                (0, r.jsx)('div', {
-                    className: m.buttonContainer,
-                    children: (0, r.jsx)(l.ZP, {
+                    }),
+                    (0, r.jsx)(s.xv, {
+                        className: m.description,
+                        variant: 'text-sm/medium',
+                        children: t.description
+                    }),
+                    (0, r.jsx)(a.u, {
                         guildId: n,
-                        powerup: t,
-                        onError: x
+                        powerup: t
                     })
-                }),
-                (0, r.jsx)(i.IGR, {
-                    className: m.new,
-                    text: u.NW.string(u.t.y2b7CA)
+                ]
+            }),
+            (0, r.jsx)('div', {
+                className: m.buttonContainer,
+                children: (0, r.jsx)(l.ZP, {
+                    guildId: n,
+                    powerup: t,
+                    onError: x
                 })
-            ]
-        })
-    );
+            }),
+            (0, r.jsx)(i.IGR, {
+                className: m.new,
+                text: u.NW.string(u.t.y2b7CA)
+            })
+        ]
+    });
 }

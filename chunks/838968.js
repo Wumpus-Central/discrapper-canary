@@ -71,22 +71,24 @@ function x(e) {
     });
 }
 function _(e) {
-    let { guildId: n, powerup: t, className: o, children: l } = e,
-        d = (0, a.Z)(n, t),
-        u = null != d,
-        p = (null == d ? void 0 : d.ends_at) != null,
-        { onShowMore: x } = (0, c.ZP)(n, t);
+    let { guildId: n, powerup: t, className: o, onHover: l, children: d } = e,
+        u = (0, a.Z)(n, t),
+        p = null != u,
+        x = (null == u ? void 0 : u.ends_at) != null,
+        { onShowMore: _ } = (0, c.ZP)(n, t);
     return (0, r.jsx)(i.kL8, {
         'aria-label': t.title,
-        onClick: x,
+        onClick: _,
+        onMouseOver: () => (null == l ? void 0 : l(!0)),
+        onMouseLeave: () => (null == l ? void 0 : l(!1)),
         className: s()(
             m.container,
             {
-                [m.active]: u,
-                [m.warning]: p
+                [m.active]: p,
+                [m.warning]: x
             },
             o
         ),
-        children: l
+        children: d
     });
 }
