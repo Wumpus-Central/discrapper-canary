@@ -2384,6 +2384,7 @@ var N =
     (r.VOICE_FILTER_FEEDBACK = 'voice_filter_feedback'),
     (r.VOICE_FILTER_PICKER_OPENED = 'voice_filter_picker_opened'),
     (r.VOICE_FILTER_ENABLED = 'voice_filter_enabled'),
+    (r.VOICE_FILTER_ERROR = 'voice_filter_error'),
     (r.VOICE_FILTER_DISABLED = 'voice_filter_disabled'),
     (r.VOICE_FILTER_DOWNLOAD_ATTEMPTED = 'voice_filter_download_attempted'),
     (r.VOICE_FILTER_ACTIVATE_FAILED = 'voice_filter_activate_failed'),
