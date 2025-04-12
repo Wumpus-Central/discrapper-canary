@@ -20278,6 +20278,7 @@
   "TZsu1d": "Disable Perk",
   "5HQUzM": "Get {boostCount, plural, =1 { Boost} other { Boosts} } back.",
   "ol/ao6": "Expires !!{dateString}!!",
+  "M4XL5u": "You will lose your custom invite url immediately.",
   "cavtEh": "If you choose to disable this perk, !!{perk}!! will be removed from all members.",
   "4jSvr6": "If you choose to disable this perk, !!{perk}!! will be removed from {memberCount, plural, =1 { member} other { members} }.",
   "OVt5CA": "Warning",
