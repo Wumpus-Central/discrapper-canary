@@ -11,7 +11,6 @@ function l(e) {
         let { powerups: e, unlocked: t } = n;
         return (0, a.h)(t)
             .map((n) => e.get(n.sku_id))
-            .filter(s.lm)
-            .slice(0, 1);
+            .filter(s.lm);
     }, [n]);
 }
