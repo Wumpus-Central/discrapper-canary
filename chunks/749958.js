@@ -13,6 +13,7 @@ let r = (0, n(818083).B)({
     ]
 });
 function i() {
-    let { enabled: e } = r.useExperiment({ location: 'GuildProfileEmbedExperiment' }, { autoTrackExposure: !1 });
-    return e;
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+        { enabled: t } = r.useExperiment({ location: 'GuildProfileEmbedExperiment' }, { autoTrackExposure: e });
+    return t;
 }
