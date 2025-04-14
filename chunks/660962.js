@@ -184,28 +184,25 @@ function H(e) {
                 className: W.colorDescription,
                 children: D.NW.string(D.t['9UCxlZ'])
             }),
-            (0, r.jsx)(
-                G,
-                {
-                    defaultColor: R.p6O,
-                    colors: 'gradient' === s && l ? Z.tl : R.pmI,
-                    value: n.color,
-                    disabled: i,
-                    onChange: (e) => {
-                        var t;
-                        return (t = e), void (n.color !== t && (t !== R.p6O || 0 !== n.color) && (t === R.p6O && (t = 0), (0, y.OW)(n.id, t)));
-                    },
-                    secondaryValue: 'gradient' === s && l ? (null == (t = n.colors) ? void 0 : t.secondary_color) : void 0,
-                    onChangeGradientColors: (e) =>
-                        (0, y.TW)(n.id, {
-                            primary_color: e[0],
-                            secondary_color: e[1],
-                            tertiary_color: void 0
-                        }),
-                    customPickerPosition: 'right'
+            (0, r.jsx)(G, {
+                defaultColor: R.p6O,
+                colors: 'gradient' === s && l ? Z.tl : R.pmI,
+                value: n.color,
+                disabled: i,
+                onChange: (e) => {
+                    var t;
+                    return (t = e), void (n.color !== t && (t !== R.p6O || 0 !== n.color) && (t === R.p6O && (t = 0), (0, y.OW)(n.id, t)));
                 },
-                n.id
-            )
+                secondaryValue: 'gradient' === s && l ? (null == (t = n.colors) ? void 0 : t.secondary_color) : void 0,
+                onChangeGradientColors: (e) =>
+                    (0, y.TW)(n.id, {
+                        primary_color: e[0],
+                        secondary_color: e[1],
+                        tertiary_color: void 0
+                    }),
+                isGradient: 'gradient' === s,
+                customPickerPosition: 'right'
+            })
         ]
     });
 }

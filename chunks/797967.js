@@ -134,8 +134,7 @@ let b = (e) => {
         });
     };
 function _(e) {
-    let { defaultColor: t, colors: r, value: a, onChange: i, disabled: d = !1, customPickerPosition: _ = 'bottom', secondaryValue: j, onChangeGradientColors: y } = e,
-        O = null != j,
+    let { defaultColor: t, colors: r, value: a, onChange: i, disabled: d = !1, customPickerPosition: _ = 'bottom', secondaryValue: j, onChangeGradientColors: y, isGradient: O = !1 } = e,
         h = o.useCallback((e) => 0 !== e && e !== t && !r.some((t) => t === e), [r, t]),
         C = o.useRef(null),
         x = o.useRef(null),
