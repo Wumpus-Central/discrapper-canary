@@ -224,46 +224,63 @@ class eT extends i.PureComponent {
             g = i || l || a;
         return null == t
             ? null
-            : (0, r.jsx)(N.Gt, {
-                  value: o,
-                  children: (0, r.jsx)(f.KeG, {
-                      renderPopout: this.renderMenuPopout,
-                      position: 'bottom',
-                      align: 'center',
-                      animation: f.yRy.Animation.SCALE,
-                      shouldShow: n,
-                      onRequestClose: () => {
-                          (0, Z.l)(!1);
-                      },
-                      spacing: s ? 4 : 8,
-                      children: (i) => {
-                          var { onClick: l } = i,
-                              a = ev(i, ['onClick']);
-                          return (0, r.jsx)(
-                              ed.ZP,
-                              eI(
-                                  ey(
-                                      {
-                                          guild: t,
-                                          controller: c,
-                                          renderBanner: u,
-                                          hasSubheader: e,
-                                          bannerVisible: d,
-                                          communityInfoVisible: h,
-                                          guildBanner: this.getGuildBannerHash(),
-                                          onClick: this.handleHeaderMenuToggle,
-                                          onContextMenu: this.handleHeaderContextMenu,
-                                          disableBannerAnimation: g,
-                                          animationOverlayHeight: p
-                                      },
-                                      a
-                                  ),
-                                  { children: this.renderGuildHeaderNotices(n) }
-                              )
-                          );
-                      }
-                  })
-              });
+            : (0, U.jW)({ location: 'guild_sidebar' })
+              ? (0, r.jsx)(N.Gt, {
+                    value: o,
+                    children: (0, r.jsx)(ed.ZP, {
+                        guild: t,
+                        controller: c,
+                        renderBanner: u,
+                        hasSubheader: e,
+                        bannerVisible: d,
+                        communityInfoVisible: h,
+                        guildBanner: this.getGuildBannerHash(),
+                        onContextMenu: this.handleHeaderContextMenu,
+                        disableBannerAnimation: g,
+                        animationOverlayHeight: p,
+                        children: this.renderGuildHeaderNotices(n)
+                    })
+                })
+              : (0, r.jsx)(N.Gt, {
+                    value: o,
+                    children: (0, r.jsx)(f.KeG, {
+                        renderPopout: this.renderMenuPopout,
+                        position: 'bottom',
+                        align: 'center',
+                        animation: f.yRy.Animation.SCALE,
+                        shouldShow: n,
+                        onRequestClose: () => {
+                            (0, Z.l)(!1);
+                        },
+                        spacing: s ? 4 : 8,
+                        children: (i) => {
+                            var { onClick: l } = i,
+                                a = ev(i, ['onClick']);
+                            return (0, r.jsx)(
+                                ed.ZP,
+                                eI(
+                                    ey(
+                                        {
+                                            guild: t,
+                                            controller: c,
+                                            renderBanner: u,
+                                            hasSubheader: e,
+                                            bannerVisible: d,
+                                            communityInfoVisible: h,
+                                            guildBanner: this.getGuildBannerHash(),
+                                            onClick: this.handleHeaderMenuToggle,
+                                            onContextMenu: this.handleHeaderContextMenu,
+                                            disableBannerAnimation: g,
+                                            animationOverlayHeight: p
+                                        },
+                                        a
+                                    ),
+                                    { children: this.renderGuildHeaderNotices(n) }
+                                )
+                            );
+                        }
+                    })
+                });
     }
     setAnimatedValue(e) {
         let { guild: t } = this.props,
