@@ -32,8 +32,8 @@ var r = n(200651),
     Z = n(141006),
     D = n(388032),
     A = n(680278),
-    k = n(275302),
-    W = n(877248),
+    W = n(275302),
+    k = n(877248),
     L = n(179517),
     M = n(79829);
 let G = (0, h.Un)({
@@ -98,15 +98,15 @@ function z(e) {
     return (0, r.jsx)(m.xJW, {
         title: D.NW.string(D.t['9wVJRE']),
         children: (0, r.jsx)('div', {
-            className: k.roleStyleContainer,
+            className: W.roleStyleContainer,
             children: F.map((e) => {
                 let { id: g, colors: f, labelString: x } = e;
                 return (0, r.jsxs)(
                     'button',
                     {
-                        className: l()(k.roleStylePreviewContainer, {
-                            [k.selected]: i === g,
-                            [k.disabled]: a
+                        className: l()(W.roleStylePreviewContainer, {
+                            [W.selected]: i === g,
+                            [W.disabled]: a
                         }),
                         onClick: () =>
                             (function (e) {
@@ -140,7 +140,7 @@ function z(e) {
                         children: [
                             (0, r.jsx)(m.Rny, {
                                 children: (0, r.jsx)('div', {
-                                    className: k.roleStyleMessageContainer,
+                                    className: W.roleStyleMessageContainer,
                                     children: (0, r.jsx)(N.Z, {
                                         author: {
                                             nick: o.author.username,
@@ -161,7 +161,7 @@ function z(e) {
                                 })
                             }),
                             (0, r.jsx)('div', {
-                                className: k.roleStyleLabel,
+                                className: W.roleStyleLabel,
                                 children: D.NW.string(x)
                             })
                         ]
@@ -176,12 +176,12 @@ function H(e) {
     var t;
     let { role: n, disabled: i, currentStyle: s, hasEnhancedRoleColors: l } = e;
     return (0, r.jsxs)(m.xJW, {
-        className: k.colorPicker,
+        className: W.colorPicker,
         title: D.NW.string(D.t['1F6FzM']),
         required: !0,
         children: [
             (0, r.jsx)(m.R94, {
-                className: k.colorDescription,
+                className: W.colorDescription,
                 children: D.NW.string(D.t['9UCxlZ'])
             }),
             (0, r.jsx)(
@@ -300,7 +300,7 @@ function Y(e) {
         h = (0, f.Q3)('RolePreview') ? [R.BRd.LIGHT, R.BRd.DARK, R.BRd.DARKER, R.BRd.MIDNIGHT] : [R.BRd.LIGHT, R.BRd.DARK];
     return (0, r.jsx)(m.Rny, {
         children: (0, r.jsx)('div', {
-            className: k.previewContainer,
+            className: W.previewContainer,
             'aria-hidden': !0,
             'data-disable-adaptive-theme': !0,
             children: h.map((e) =>
@@ -312,7 +312,7 @@ function Y(e) {
                             (0, r.jsx)('div', {
                                 className: t,
                                 children: (0, r.jsx)('div', {
-                                    className: k.messageContainer,
+                                    className: W.messageContainer,
                                     children: (0, r.jsx)(N.Z, {
                                         author: c,
                                         message: o,
@@ -340,7 +340,7 @@ function K(e) {
                 hideBorder: !0,
                 children: D.NW.string(D.t.vceJPj)
             }),
-            (0, r.jsx)(m.$i$, { className: k.divider }),
+            (0, r.jsx)(m.$i$, { className: W.divider }),
             (0, r.jsx)(m.j7V, {
                 disabled: n,
                 value: t.mentionable,
@@ -369,14 +369,14 @@ function X(e) {
         { headerHeight: b, headerRef: j } = (0, I.Z)(0),
         { scrolledToTop: N, handleScroll: O } = (0, S.V)();
     return (0, r.jsx)(m.yWw, {
-        className: k.scroller,
+        className: W.scroller,
         style: { scrollPaddingTop: b },
         onScroll: O,
         children: (0, r.jsxs)('div', {
-            className: W.contentWidth,
+            className: k.contentWidth,
             children: [
                 (0, r.jsx)('div', {
-                    className: l()(W.header, W.stickyHeader, { [W.stickyHeaderElevated]: !N }),
+                    className: l()(k.header, k.stickyHeader, { [k.stickyHeaderElevated]: !N }),
                     ref: j,
                     children: (0, r.jsx)(S.Z, {
                         guild: t,
@@ -390,10 +390,10 @@ function X(e) {
                     disabled: f
                 }),
                 (0, r.jsx)('div', {
-                    className: k.noticeContainer,
+                    className: W.noticeContainer,
                     children: (0, r.jsx)(P.Z, { role: n })
                 }),
-                (0, r.jsx)(m.$i$, { className: k.divider }),
+                (0, r.jsx)(m.$i$, { className: W.divider }),
                 o &&
                     (0, r.jsx)(z, {
                         role: n,
@@ -411,7 +411,7 @@ function X(e) {
                     }),
                 'holographic' === u &&
                     (0, r.jsx)(v.Z, {
-                        className: k.holographicInfoBox,
+                        className: W.holographicInfoBox,
                         children: (0, r.jsx)(m.Text, {
                             variant: 'text-xs/medium',
                             children: D.NW.string(A.Z.tBhCys)
@@ -426,7 +426,7 @@ function X(e) {
                     role: n,
                     guildId: t.id
                 }),
-                (0, r.jsx)(m.$i$, { className: k.divider }),
+                (0, r.jsx)(m.$i$, { className: W.divider }),
                 (0, r.jsx)(K, {
                     role: n,
                     disabled: f
@@ -434,7 +434,7 @@ function X(e) {
                 x
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(m.$i$, { className: k.divider }),
+                              (0, r.jsx)(m.$i$, { className: W.divider }),
                               (0, r.jsx)(T.L, {
                                   guildId: t.id,
                                   role: n

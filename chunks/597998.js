@@ -19,8 +19,8 @@ var r = n(200651),
     f = n(367907),
     m = n(906732),
     g = n(522651),
-    O = n(795318),
-    b = n(194082),
+    b = n(795318),
+    O = n(194082),
     y = n(282256),
     h = n(925329),
     v = n(880395),
@@ -72,9 +72,9 @@ let L = (e) => {
     });
 };
 function W(e) {
-    let { className: t, mute: n, localMute: l, localVideoDisabled: i, serverMute: a, deaf: c, serverDeaf: u, collapsed: f, video: m, isStreaming: g, disabled: O, isWatching: y, iconClassName: h, embeddedApplication: v, otherClientSessionType: j, voicePlatform: S, application: P, guildId: N, channelId: E, user: C, disconnected: k } = e,
+    let { className: t, mute: n, localMute: l, localVideoDisabled: i, serverMute: a, deaf: c, serverDeaf: u, collapsed: f, video: m, isStreaming: g, disabled: b, isWatching: y, iconClassName: h, embeddedApplication: v, otherClientSessionType: j, voicePlatform: S, application: P, guildId: N, channelId: E, user: C, disconnected: k } = e,
         { enabled: L } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
-    if (f || O) return null;
+    if (f || b) return null;
     let W = [],
         M = (0, r.jsx)(R, {
             iconClassName: h,
@@ -193,7 +193,7 @@ function W(e) {
                     'div',
                     {
                         className: o()(_.iconSpacing, _.liveIconSpacing),
-                        children: (0, r.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
+                        children: (0, r.jsx)(O.ZP, { size: O.ZP.Sizes.SMALL })
                     },
                     'stream'
                 )
@@ -228,7 +228,7 @@ function W(e) {
 }
 let M = l.forwardRef(function (e, t) {
     var n,
-        { avatarContainerClass: i = _.avatarContainer, userNameClassName: c = _.usernameFont, size: d = T.ipw.SMALL, selected: p = !1, disabled: f = !1, isOverlay: b = !1 } = e,
+        { avatarContainerClass: i = _.avatarContainer, userNameClassName: c = _.usernameFont, size: d = T.ipw.SMALL, selected: p = !1, disabled: f = !1, isOverlay: O = !1 } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -331,12 +331,12 @@ let M = l.forwardRef(function (e, t) {
                                 primaryGuild: Q.primaryGuild,
                                 userId: Q.id,
                                 contextGuildId: B,
-                                isOverlay: b,
+                                isOverlay: O,
                                 disableTooltip: !0,
-                                className: o()(_.clanTag, b && _.isOverlay),
-                                profileViewedAnalytics: { source: b ? T.jXE.OVERLAY : T.Sbl.VOICE_PANEL }
+                                className: o()(_.clanTag, O && _.isOverlay),
+                                profileViewedAnalytics: { source: O ? T.jXE.OVERLAY : T.Sbl.VOICE_PANEL }
                             };
-                        return !V || b
+                        return !V || O
                             ? (0, r.jsx)(
                                   y.Z,
                                   ((e = k({}, l)),
@@ -371,7 +371,7 @@ let M = l.forwardRef(function (e, t) {
                                               ((0, g.v)(ee, g.d.MORE),
                                               eo(!0),
                                               (0, v.D)(e, Q, en, { context: et }, (e, t) => {
-                                                  (0, O.o)({
+                                                  (0, b.o)({
                                                       menuName: e,
                                                       menuItemProps: t,
                                                       entrypoint: w.A5.THREE_DOT,

@@ -1,20 +1,20 @@
 n.d(t, {
     PM: () => M,
     WG: () => I,
-    ZP: () => T
+    ZP: () => k
 }),
     n(388685),
     n(781311);
 var r = n(200651),
     l = n(192379),
     o = n(120356),
-    i = n.n(o),
-    a = n(658722),
-    s = n.n(a),
+    a = n.n(o),
+    i = n(658722),
+    s = n.n(i),
     c = n(442837),
     u = n(481060),
-    C = n(461745),
-    d = n(933557),
+    d = n(461745),
+    C = n(933557),
     m = n(471445),
     b = n(91218),
     p = n(313201),
@@ -23,9 +23,9 @@ var r = n(200651),
     j = n(662594),
     g = n(592125),
     x = n(430824),
-    O = n(699516),
-    y = n(594174),
-    v = n(388032),
+    v = n(699516),
+    O = n(594174),
+    y = n(388032),
     N = n(962923);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -99,7 +99,7 @@ function I(e) {
     let t = ''.concat(!e.name.includes(j.CR) ? '@' : '').concat(e.name);
     return {
         tag: {
-            type: C.Fj.ROLE,
+            type: d.Fj.ROLE,
             label: t
         },
         row: {
@@ -111,10 +111,10 @@ function I(e) {
     };
 }
 function M(e) {
-    let t = (0, d.F6)(e, y.default, O.Z);
+    let t = (0, C.F6)(e, O.default, v.Z);
     return {
         tag: {
-            type: C.Fj.CHANNEL,
+            type: d.Fj.CHANNEL,
             label: t
         },
         row: {
@@ -128,28 +128,28 @@ function M(e) {
 let V = l.memo(function (e) {
     var t;
     let { row: n, guildId: l, className: o } = e,
-        { id: a, name: s } = n.record,
-        C = (0, f.p9)({
+        { id: i, name: s } = n.record,
+        d = (0, f.p9)({
             guildId: l,
-            roleId: a,
+            roleId: i,
             size: 16
         }),
-        d = (0, c.e7)([x.Z], () => x.Z.getRole(l, a)),
+        C = (0, c.e7)([x.Z], () => x.Z.getRole(l, i)),
         m = s.includes(j.CR) ? '' : '@',
         p = (0, u.dQu)(u.TVs.unsafe_rawColors.PRIMARY_300).hsl(),
-        g = null != (t = null == d ? void 0 : d.colorString) ? t : p,
-        O = (0, h.X)(l, null == d ? void 0 : d.colorStrings);
+        g = null != (t = null == C ? void 0 : C.colorString) ? t : p,
+        v = (0, h.X)(l, null == C ? void 0 : C.colorStrings);
     return (0, r.jsxs)('div', {
-        className: i()(N.rowLabel, N.roleTagContainer, o),
+        className: a()(N.rowLabel, N.roleTagContainer, o),
         children: [
             (0, r.jsx)(u.FhE, {
                 className: N.__invalid_roleDot,
                 color: g,
-                colors: O,
+                colors: v,
                 background: !1,
                 tooltip: !1
             }),
-            null != C ? (0, r.jsx)(b.Z, H(_({ className: N.roleTagIcon }, C), { enableTooltip: !1 })) : m,
+            null != d ? (0, r.jsx)(b.Z, H(_({ className: N.roleTagIcon }, d), { enableTooltip: !1 })) : m,
             (0, r.jsx)(u.Text, {
                 variant: L,
                 className: N.roleTagLabel,
@@ -161,12 +161,12 @@ let V = l.memo(function (e) {
 function E(e) {
     let { channel: t, row: n, className: l } = e,
         o = null != t.parent_id,
-        a = (0, m.KS)(t);
+        i = (0, m.KS)(t);
     return (0, r.jsxs)('div', {
-        className: i()(N.rowLabel, N.channelLabel, { [N.hasParent]: o }, l),
+        className: a()(N.rowLabel, N.channelLabel, { [N.hasParent]: o }, l),
         children: [
-            null != a &&
-                (0, r.jsx)(a, {
+            null != i &&
+                (0, r.jsx)(i, {
                     size: 'xs',
                     color: 'currentColor',
                     className: N.channelIcon
@@ -178,7 +178,7 @@ function E(e) {
         ]
     });
 }
-function k(e, t, n) {
+function T(e, t, n) {
     return R(e)
         ? (0, r.jsx)(
               V,
@@ -201,8 +201,8 @@ function k(e, t, n) {
             )
           : null;
 }
-function T(e) {
-    let { guildId: t, roleRows: n = [], channelRows: o = [], selectedChannelIds: a = new Set(), selectedRoleIds: d = new Set(), onChange: m, placeholder: b, helperText: p, className: f } = e,
+function k(e) {
+    let { guildId: t, roleRows: n = [], channelRows: o = [], selectedChannelIds: i = new Set(), selectedRoleIds: C = new Set(), onChange: m, placeholder: b, helperText: p, className: f } = e,
         h = (0, c.e7)([x.Z], () => x.Z.getRoles(t)),
         j = l.useMemo(
             () =>
@@ -219,18 +219,18 @@ function T(e) {
                         }),
                         r
                     );
-                })(a, d, h),
-            [a, d, h]
+                })(i, C, h),
+            [i, C, h]
         ),
-        O = l.useMemo(() => Object.keys(j), [j]),
-        [y, S] = l.useState(''),
+        v = l.useMemo(() => Object.keys(j), [j]),
+        [O, S] = l.useState(''),
         [L, V] = l.useState(!1),
-        [E, T] = l.useState(!1),
+        [E, k] = l.useState(!1),
         [A, W] = l.useState(!1),
         B = l.useRef(null),
         { sections: U, sectionCounts: F } = l.useMemo(() => {
-            let e = '' !== y ? o.filter((e) => s()(y, e.display.toLocaleLowerCase())) : o,
-                t = '' !== y ? n.filter((e) => s()(y, e.display.toLocaleLowerCase())) : n,
+            let e = '' !== O ? o.filter((e) => s()(O, e.display.toLocaleLowerCase())) : o,
+                t = '' !== O ? n.filter((e) => s()(O, e.display.toLocaleLowerCase())) : n,
                 r = [],
                 l = [];
             return (
@@ -243,7 +243,7 @@ function T(e) {
                     sectionCounts: l
                 }
             );
-        }, [y, o, n]),
+        }, [O, o, n]),
         z = l.useCallback(
             (e) => {
                 let t = Object.values(e),
@@ -264,7 +264,7 @@ function T(e) {
             [m]
         ),
         q = () => {
-            V(!1), T(!1);
+            V(!1), k(!1);
         };
     l.useEffect(() => {
         let e = setTimeout(() => {
@@ -275,7 +275,7 @@ function T(e) {
         };
     }, [L, E]);
     let G = (e, t, n) => {
-            n.stopPropagation(), n.preventDefault(), 2 === t ? V(e) : (1 === t || V(e), T(e));
+            n.stopPropagation(), n.preventDefault(), 2 === t ? V(e) : (1 === t || V(e), k(e));
         },
         Y = l.useCallback(
             (e) => {
@@ -304,13 +304,13 @@ function T(e) {
                 return (0, r.jsx)(
                     u.P3F,
                     {
-                        className: i()(N.selectableSearchRow, N.rowHeight),
+                        className: a()(N.selectableSearchRow, N.rowHeight),
                         onClick: (e) => {
                             e.stopPropagation(), Y(o);
                         },
                         children: (0, r.jsx)('div', {
                             className: N.rowContainer,
-                            children: k(o, t, N.searchRowLabel)
+                            children: T(o, t, N.searchRowLabel)
                         })
                     },
                     o.id
@@ -318,28 +318,28 @@ function T(e) {
             },
             [t, Y, U]
         ),
-        J = l.useMemo(
+        K = l.useMemo(
             () =>
-                O.map((e) => {
+                v.map((e) => {
                     var n;
-                    return (n = j[e]), H(_({}, n.tag), { label: k(n.row, t, N.noIndent) });
+                    return (n = j[e]), H(_({}, n.tag), { label: T(n.row, t, N.noIndent) });
                 }),
-            [j, O, t]
+            [j, v, t]
         );
     return (0, r.jsxs)('div', {
-        className: i()(N.searchContainer, f),
+        className: a()(N.searchContainer, f),
         children: [
             (0, r.jsxs)('div', {
                 className: N.searchBox,
                 children: [
-                    (0, r.jsx)(C.ZP, {
-                        tags: J,
+                    (0, r.jsx)(d.ZP, {
+                        tags: K,
                         maxHeight: 98,
-                        size: C.ZP.Sizes.MEDIUM,
-                        query: y,
+                        size: d.ZP.Sizes.MEDIUM,
+                        query: O,
                         ref: B,
                         onRemoveTag: (e) => {
-                            let t = O[e],
+                            let t = v[e],
                                 { [t]: n } = j;
                             z(
                                 (function (e, t) {
@@ -368,8 +368,8 @@ function T(e) {
                         onQueryChange: (e) => {
                             S(e.trim().toLocaleLowerCase());
                         },
-                        placeholder: null != b ? b : v.NW.string(v.t.uqHLzc),
-                        sections: [O.length],
+                        placeholder: null != b ? b : y.NW.string(y.t.uqHLzc),
+                        sections: [v.length],
                         inputProps: {
                             'aria-labelledby': D,
                             'aria-controls': Z,
@@ -397,20 +397,20 @@ function T(e) {
                                               u.vwX,
                                               {
                                                   tag: 'h5',
-                                                  className: i()(N.sectionTitle, N.sectionHeight),
-                                                  children: v.NW.string(v.t.OGiMXF)
+                                                  className: a()(N.sectionTitle, N.sectionHeight),
+                                                  children: y.NW.string(y.t.OGiMXF)
                                               },
-                                              v.NW.string(v.t.OGiMXF)
+                                              y.NW.string(y.t.OGiMXF)
                                           )
                                         : 1 === t
                                           ? (0, r.jsx)(
                                                 u.vwX,
                                                 {
                                                     tag: 'h5',
-                                                    className: i()(N.sectionTitle, N.sectionHeight),
-                                                    children: v.NW.string(v.t.LPJmLy)
+                                                    className: a()(N.sectionTitle, N.sectionHeight),
+                                                    children: y.NW.string(y.t.LPJmLy)
                                                 },
-                                                v.NW.string(v.t.LPJmLy)
+                                                y.NW.string(y.t.LPJmLy)
                                             )
                                           : null;
                                 },

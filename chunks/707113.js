@@ -1,10 +1,10 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => p });
 var r = n(200651),
     l = n(192379),
     i = n(120356),
     a = n.n(i),
-    s = n(200100),
-    o = n(399606),
+    o = n(200100),
+    s = n(399606),
     c = n(481060),
     d = n(201070),
     u = n(893966),
@@ -18,54 +18,54 @@ function f(e) {
         n = (0, d.$j)(t.id),
         l = (0, c.q_F)({
             height: 3 * !!n,
-            config: s.config.stiff
+            config: o.config.stiff
         });
     return (0, r.jsx)('div', {
         className: b.loaderContainer,
-        children: (0, r.jsx)(s.animated.div, {
+        children: (0, r.jsx)(o.animated.div, {
             className: b.loaderBar,
             style: l
         })
     });
 }
-function N(e) {
-    let { guild: t, className: n, onPageChange: i, onMemberSelect: s } = e,
-        N = t.id,
-        p = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(N), [N]),
-        C = (0, d.$j)(N),
-        g = (0, d.M3)(N),
-        v = l.useCallback(
+function p(e) {
+    let { guild: t, className: n, onPageChange: i, onMemberSelect: o } = e,
+        p = t.id,
+        N = (0, s.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(p), [p]),
+        g = (0, d.$j)(p),
+        C = (0, d.M3)(p),
+        _ = l.useCallback(
             (e) => {
-                null != e && (null == s || s(e));
+                null != e && (null == o || o(e));
             },
-            [s]
+            [o]
         ),
-        _ = (0, m.xb)(g, C, p),
-        T = l.useRef(null),
+        v = (0, m.xb)(C, g, N),
         E = l.useRef(null),
+        T = l.useRef(null),
         I = l.useCallback(() => {
             var e;
-            null == (e = T.current) || e.resetSearchText();
+            null == (e = E.current) || e.resetSearchText();
         }, []);
     return (0, r.jsx)('div', {
         className: a()(b.mainTableContainer, n),
         children: (0, r.jsxs)(c.Den, {
             className: b.horizatonalScroller,
-            ref: E,
+            ref: T,
             orientation: 'horizontal',
             children: [
                 (0, r.jsx)(j.Z, {
                     guild: t,
-                    ref: T
+                    ref: E
                 }),
                 (0, r.jsx)(f, { guild: t }),
                 (0, r.jsx)(x.Z, {
                     guild: t,
-                    onSelectRow: v,
-                    searchState: _,
+                    onSelectRow: _,
+                    searchState: v,
                     onResetForNewMembers: I
                 }),
-                _ !== m.po.SUCCESS_STILL_INDEXING &&
+                v !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, r.jsx)(h.Z, {
                         guildId: t.id,
                         onPageChange: i

@@ -37,8 +37,8 @@ var r = n(200651),
     Z = n(999382),
     D = n(67734),
     A = n(375263),
-    k = n(586382),
-    W = n(594980),
+    W = n(586382),
+    k = n(594980),
     L = n(515025),
     M = n(760632),
     G = n(578053),
@@ -386,7 +386,7 @@ class $ extends i.PureComponent {
                             children: [
                                 (0, r.jsxs)(g.vwX, {
                                     className: Y.flexFormTitle,
-                                    children: [(0, r.jsx)('div', { children: V.NW.string(V.t.tzGY0t) }), (0, r.jsx)(k.hH, { guild: e })]
+                                    children: [(0, r.jsx)('div', { children: V.NW.string(V.t.tzGY0t) }), (0, r.jsx)(W.hH, { guild: e })]
                                 }),
                                 (0, r.jsx)(g.R94, {
                                     type: g.geA.DESCRIPTION,
@@ -397,7 +397,7 @@ class $ extends i.PureComponent {
                                     type: g.geA.DESCRIPTION,
                                     children: V.NW.format(V.t.ZYA9PT, { articleURL: w.Z.getArticleURL(z.BhN.GUILD_INVITE_SPLASH) })
                                 }),
-                                (0, r.jsx)(W.c, {
+                                (0, r.jsx)(k.c, {
                                     guild: e,
                                     canManageGuild: t,
                                     buttonClassName: Y.marginTop16
@@ -432,7 +432,7 @@ class $ extends i.PureComponent {
                         children: [
                             (0, r.jsxs)(g.vwX, {
                                 className: Y.flexFormTitle,
-                                children: [(0, r.jsx)('div', { children: V.NW.string(V.t['0r0AzM']) }), (0, r.jsx)(k.zA, { guild: e })]
+                                children: [(0, r.jsx)('div', { children: V.NW.string(V.t['0r0AzM']) }), (0, r.jsx)(W.zA, { guild: e })]
                             }),
                             (0, r.jsx)(g.R94, {
                                 type: g.geA.DESCRIPTION,

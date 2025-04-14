@@ -2,7 +2,7 @@ n.d(t, { Z: () => u }), n(388685);
 var r = n(359959),
     l = n(993192),
     o = n(731965);
-function i(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,7 +27,7 @@ function i(e) {
     }
     return e;
 }
-function a(e, t) {
+function i(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,7 +52,7 @@ let s = (0, l.F)((e, t) => ({
             let { selectedUserIds: s } = t(),
                 c = new Set([...(null != (l = s[n]) ? l : new Set()), ...r]);
             (0, o.j)(() => {
-                e({ selectedUserIds: a(i({}, s), { [n]: c }) });
+                e({ selectedUserIds: i(a({}, s), { [n]: c }) });
             });
         },
         removeUser: (n, r) => {
@@ -61,14 +61,14 @@ let s = (0, l.F)((e, t) => ({
             if (null == s) return;
             let c = [...s].filter((e) => e !== r);
             (0, o.j)(() => {
-                e({ selectedUserIds: a(i({}, l), { [n]: new Set(c) }) });
+                e({ selectedUserIds: i(a({}, l), { [n]: new Set(c) }) });
             });
         },
         clearSelection: (n) => {
             let { selectedUserIds: r } = t();
             null != r &&
                 (0, o.j)(() => {
-                    e({ selectedUserIds: a(i({}, r), { [n]: new Set() }) });
+                    e({ selectedUserIds: i(a({}, r), { [n]: new Set() }) });
                 });
         }
     })),

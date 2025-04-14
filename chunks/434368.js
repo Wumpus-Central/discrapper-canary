@@ -2,13 +2,13 @@ n.d(t, { Z: () => j });
 var r = n(200651),
     l = n(192379),
     o = n(498607),
-    i = n.n(o),
-    a = n(399606),
+    a = n.n(o),
+    i = n(399606),
     s = n(481060),
     c = n(203893),
     u = n(910693),
-    C = n(893966),
-    d = n(527379),
+    d = n(893966),
+    C = n(527379),
     m = n(981631),
     b = n(388032),
     p = n(771221);
@@ -57,19 +57,19 @@ function h(e, t) {
 }
 function j(e) {
     let { guildId: t, onClose: n } = e,
-        o = (0, a.e7)([C.Z], () => C.Z.getSearchStateByGuildId(t), [t], i()),
+        o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
         j = (0, u.dW)(t),
         g = l.useCallback(() => {
-            o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY), (0, d.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
+            o.requireUnusualDmActivity || j(u.aY.UNUSUAL_DM_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualDmActivity: !o.requireUnusualDmActivity }));
         }, [t, o, j]),
         x = l.useCallback(() => {
-            o.requireCommunicationDisabled || j(u.aY.COMMUNICATION_DISABLED), (0, d.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
+            o.requireCommunicationDisabled || j(u.aY.COMMUNICATION_DISABLED), (0, C.Dr)(t, h(f({}, o), { requireCommunicationDisabled: !o.requireCommunicationDisabled }));
+        }, [t, o, j]),
+        v = l.useCallback(() => {
+            o.requireUnusualAccountActivity || j(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, C.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
         }, [t, o, j]),
         O = l.useCallback(() => {
-            o.requireUnusualAccountActivity || j(u.aY.UNUSUAL_ACCOUNT_ACTIVITY), (0, d.Dr)(t, h(f({}, o), { requireUnusualAccountActivity: !o.requireUnusualAccountActivity }));
-        }, [t, o, j]),
-        y = l.useCallback(() => {
-            o.requireUsernameQuarantined || j(u.aY.USERNAME_QUARANTINED), (0, d.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
+            o.requireUsernameQuarantined || j(u.aY.USERNAME_QUARANTINED), (0, C.Dr)(t, h(f({}, o), { requireUsernameQuarantined: !o.requireUsernameQuarantined }));
         }, [t, o, j]);
     return (0, r.jsx)(s.v2r, {
         navId: 'member-safety-flags',
@@ -129,7 +129,7 @@ function j(e) {
                                     b.NW.string(b.t.DIQsDw)
                                 ]
                             }),
-                            action: O,
+                            action: v,
                             checked: o.requireUnusualAccountActivity
                         }),
                         (0, r.jsx)(s.S89, {
@@ -147,7 +147,7 @@ function j(e) {
                                     b.NW.string(b.t.Jloklp)
                                 ]
                             }),
-                            action: y,
+                            action: O,
                             checked: o.requireUsernameQuarantined
                         })
                     ]

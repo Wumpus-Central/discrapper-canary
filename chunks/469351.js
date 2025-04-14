@@ -49,7 +49,7 @@ function S(e) {
     }, [T]);
     if (!S || R) return (0, r.jsx)(a.$jN, {});
     if (null == T) return null;
-    let k = (0, r.jsxs)(r.Fragment, {
+    let W = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.vwX, {
                     tag: a.RB0.H1,
@@ -64,7 +64,7 @@ function S(e) {
                 })
             ]
         }),
-        W = (0, r.jsxs)(a.njP, {
+        k = (0, r.jsxs)(a.njP, {
             type: 'top',
             look: 'brand',
             className: E.tabBar,
@@ -119,11 +119,11 @@ function S(e) {
     return (0, r.jsxs)(c.AL, {
         guildId: t,
         children: [
-            k,
+            W,
             (0, r.jsx)(m.Z, { guild: T }),
             (0, r.jsx)('div', {
                 className: E.tabBarContainer,
-                children: W
+                children: k
             }),
             M
         ]

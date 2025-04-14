@@ -32,7 +32,7 @@ var r = n(200651),
     Z = n(231338),
     D = n(388032),
     A = n(983459);
-function k(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function k(e) {
     }
     return e;
 }
-function W(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -143,7 +143,7 @@ let L = 'WELCOME_CHANNEL',
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                W(k({}, t), {
+                                k(W({}, t), {
                                     guildId: a,
                                     welcomeChannel: o,
                                     onChannelReorder: f,
@@ -190,7 +190,7 @@ let L = 'WELCOME_CHANNEL',
                                     return (t) =>
                                         (0, r.jsx)(
                                             e,
-                                            W(k({}, t), {
+                                            k(W({}, t), {
                                                 welcomeChannel: o,
                                                 guildId: a,
                                                 onSave: h
@@ -254,7 +254,7 @@ let L = 'WELCOME_CHANNEL',
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    W(k({}, n), {
+                                    k(W({}, n), {
                                         guildId: t.id,
                                         onSave: B
                                     })
@@ -331,7 +331,7 @@ let L = 'WELCOME_CHANNEL',
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
-                                                        W(k({}, n), {
+                                                        k(W({}, n), {
                                                             guildId: t.id,
                                                             isPreview: !0
                                                         })
@@ -439,7 +439,7 @@ let L = 'WELCOME_CHANNEL',
                                                           return (n) =>
                                                               (0, r.jsx)(
                                                                   e,
-                                                                  W(k({}, n), {
+                                                                  k(W({}, n), {
                                                                       guildId: t.id,
                                                                       onSave: B
                                                                   })

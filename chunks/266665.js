@@ -79,7 +79,7 @@ function Z(e) {
         Z = null == I && !S,
         D = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
         A = (0, j.X)(d.id, g.colorStrings),
-        [, k] = (0, a.c)({
+        [, W] = (0, a.c)({
             type: R,
             item: () => (
                 _(g.id),
@@ -95,7 +95,7 @@ function Z(e) {
                 C(n.roleId);
             }
         }),
-        [{ dragSourcePosition: W }, L] = (0, o.L)({
+        [{ dragSourcePosition: k }, L] = (0, o.L)({
             accept: R,
             canDrop: () => Z,
             collect: (e) => {
@@ -125,8 +125,8 @@ function Z(e) {
                 })),
         (0, r.jsxs)(u.njP.Item, {
             className: l()(T.row, {
-                [T.dragBefore]: null !== W && N < W,
-                [T.dragAfter]: null !== W && N > W
+                [T.dragBefore]: null !== k && N < k,
+                [T.dragAfter]: null !== k && N > k
             }),
             id: g.id,
             selectedItem: h,
@@ -148,7 +148,7 @@ function Z(e) {
             'aria-label': g.name,
             clickableRef: (e) => {
                 var t;
-                k(L(null != (t = null == e ? void 0 : e.ref) ? t : null));
+                W(L(null != (t = null == e ? void 0 : e.ref) ? t : null));
             },
             children: [
                 s,
@@ -177,7 +177,7 @@ function D(e) {
         { scrolledToTop: j, handleScroll: O } = (0, y.V)(),
         { handleDragStart: E, handleDragReset: R, handleDragComplete: D } = (0, C.Z)(o),
         A = i.useRef(null),
-        k = i.useCallback(
+        W = i.useCallback(
             (e) => {
                 var t, n;
                 let r = o.findIndex((t) => t.id === e);
@@ -186,12 +186,12 @@ function D(e) {
             [o]
         );
     (0, p.ZP)(() => {
-        k(n);
+        W(n);
     }),
         i.useEffect(() => {
-            o.length > f && k(n), o.length !== f && x(o.length);
-        }, [o.length, f, x, k, n]);
-    let W = () => {
+            o.length > f && W(n), o.length !== f && x(o.length);
+        }, [o.length, f, x, W, n]);
+    let k = () => {
         g.Z.createRole(t.id), a(I.ZI.DISPLAY);
     };
     return (0, r.jsx)(b.ZP.Sidebar, {
@@ -227,7 +227,7 @@ function D(e) {
                                 (0, r.jsx)(
                                     u.P3F,
                                     w(P({ className: T.addRole }, e), {
-                                        onClick: W,
+                                        onClick: k,
                                         children: (0, r.jsx)(u.qJs, {
                                             size: 'custom',
                                             color: 'currentColor',

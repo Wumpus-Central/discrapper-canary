@@ -12,8 +12,8 @@ var r = n(200651),
     f = n(258609),
     m = n(199902),
     g = n(314897),
-    O = n(430824),
-    b = n(496675),
+    b = n(430824),
+    O = n(496675),
     y = n(158776),
     h = n(979651),
     v = n(626135),
@@ -135,7 +135,7 @@ function C(e) {
             }
             return l;
         })(e, ['user', 'channel']);
-    let [c, d] = (0, a.Wu)([h.Z, O.Z, b.Z, f.Z], () => (0, j.p9)(o, h.Z, O.Z, b.Z, f.Z)),
+    let [c, d] = (0, a.Wu)([h.Z, b.Z, O.Z, f.Z], () => (0, j.p9)(o, h.Z, b.Z, O.Z, f.Z)),
         p = (0, a.e7)([m.Z], () => m.Z.getStreamForUser(i.id, o.getGuildId())),
         v = (0, a.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(p)),
         P = (0, a.e7)([g.default], () => g.default.getId()),

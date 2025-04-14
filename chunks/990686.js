@@ -1,20 +1,20 @@
-r.d(t, { i: () => s });
-var n = r(442837),
-    i = r(430824),
-    o = r(944163),
-    l = r(981631);
+n.d(t, { i: () => s });
+var r = n(442837),
+    i = n(430824),
+    l = n(944163),
+    o = n(981631);
 function s(e) {
     let { guildId: t } = e;
-    return (0, n.e7)(
-        [o.Z, i.Z],
+    return (0, r.e7)(
+        [l.Z, i.Z],
         () => {
             var e;
-            let r = o.Z.get(t),
-                n = null == r ? void 0 : r.guild,
+            let n = l.Z.get(t),
+                r = null == n ? void 0 : n.guild,
                 s = i.Z.getGuild(t),
-                u = null == s ? void 0 : s.verificationLevel,
-                c = null == n ? void 0 : n.verification_level;
-            return null != (e = null != u ? u : c) ? e : l.sFg.NONE;
+                a = null == s ? void 0 : s.verificationLevel,
+                c = null == r ? void 0 : r.verification_level;
+            return null != (e = null != a ? a : c) ? e : o.sFg.NONE;
         },
         [t]
     );

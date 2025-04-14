@@ -6,7 +6,7 @@ var r = n(200651),
     o = n(693546),
     s = n(937111),
     c = n(388032),
-    u = n(916199);
+    u = n(568410);
 let d = (e) => {
     let { headerId: t, reapplyText: n, onReapply: d, confirmText: p, onWithdrawApplication: h, rejectionReason: f = null, guild: g = null } = e,
         m = (0, l.e7)([s.Z], () => {

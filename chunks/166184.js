@@ -1,162 +1,162 @@
-n.d(t, { Z: () => N }), n(953529), n(388685), n(35282);
-var r = n(200651),
-    i = n(192379),
-    s = n(120356),
-    l = n.n(s),
-    a = n(780384),
-    o = n(481060),
-    c = n(410030),
-    d = n(686546),
-    u = n(372769),
-    m = n(134432),
-    g = n(768581),
-    p = n(624138),
-    h = n(388032),
-    f = n(192639),
-    x = n(129512),
-    b = n(330065);
-let j = [16, 16, 14, 14, 12, 10, 8],
-    N = function (e) {
-        var t, n;
-        let { guild: s, disabled: N, small: _, loading: v = !1, description: O, memberCount: C, presenceCount: y, className: I } = e,
-            E = (0, c.ZP)(),
-            [S, T] = i.useState(!1);
-        if (null == s || v)
-            return (0, r.jsx)('div', {
-                className: l()(I, f.card, f.cardPlaceholder, {
-                    [f.cardSmall]: _,
-                    [f.cardDisabled]: N
+t.d(i, { Z: () => p }), t(953529), t(388685), t(35282);
+var n = t(200651),
+    l = t(192379),
+    r = t(120356),
+    a = t.n(r),
+    s = t(780384),
+    u = t(481060),
+    o = t(410030),
+    c = t(686546),
+    d = t(372769),
+    E = t(134432),
+    f = t(768581),
+    I = t(624138),
+    _ = t(388032),
+    m = t(192639),
+    S = t(129512),
+    h = t(330065);
+let g = [16, 16, 14, 14, 12, 10, 8],
+    p = function (e) {
+        var i, t;
+        let { guild: r, disabled: p, small: v, loading: N = !1, description: A, memberCount: T, presenceCount: C, className: P } = e,
+            y = (0, o.ZP)(),
+            [O, D] = l.useState(!1);
+        if (null == r || N)
+            return (0, n.jsx)('div', {
+                className: a()(P, m.card, m.cardPlaceholder, {
+                    [m.cardSmall]: v,
+                    [m.cardDisabled]: p
                 })
             });
-        let { name: P } = s,
-            w =
-                null != s.discoverySplash && /^data:/.test(s.discoverySplash)
-                    ? s.discoverySplash
-                    : g.ZP.getGuildDiscoverySplashURL({
-                          id: s.id,
-                          splash: s.discoverySplash,
-                          size: 240 * (0, m.x_)()
+        let { name: L } = r,
+            b =
+                null != r.discoverySplash && /^data:/.test(r.discoverySplash)
+                    ? r.discoverySplash
+                    : f.ZP.getGuildDiscoverySplashURL({
+                          id: r.id,
+                          splash: r.discoverySplash,
+                          size: 240 * (0, E.x_)()
                       }),
-            R = (0, a.wj)(E) ? x : b,
-            Z =
+            R = (0, s.wj)(y) ? S : h,
+            j =
                 null !=
-                (t = g.ZP.getGuildIconURL({
-                    id: s.id,
-                    icon: s.icon,
+                (i = f.ZP.getGuildIconURL({
+                    id: r.id,
+                    icon: r.icon,
                     size: 40
                 }))
-                    ? t
+                    ? i
                     : void 0,
-            D = null != s.description ? s.description : O,
-            A = null != C ? C : null == s ? void 0 : s.memberCount,
-            k = null != y ? y : null == s ? void 0 : s.presenceCount,
-            W = null;
-        if (null != Z)
-            W = (0, r.jsx)('img', {
-                src: Z,
+            F = null != r.description ? r.description : A,
+            V = null != T ? T : null == r ? void 0 : r.memberCount,
+            x = null != C ? C : null == r ? void 0 : r.presenceCount,
+            G = null;
+        if (null != j)
+            G = (0, n.jsx)('img', {
+                src: j,
                 alt: '',
-                className: f.avatar
+                className: m.avatar
             });
         else {
-            let e = (0, p.Zg)(s.name);
-            W = (0, r.jsx)('div', {
-                className: f.defaultIcon,
-                children: (0, r.jsx)(o.Text, {
-                    className: f.acronym,
-                    style: { fontSize: null != (n = j[e.length]) ? n : j[j.length - 1] },
+            let e = (0, I.Zg)(r.name);
+            G = (0, n.jsx)('div', {
+                className: m.defaultIcon,
+                children: (0, n.jsx)(u.Text, {
+                    className: m.acronym,
+                    style: { fontSize: null != (t = g[e.length]) ? t : g[g.length - 1] },
                     variant: 'text-sm/normal',
                     children: e
                 })
             });
         }
-        return (0, r.jsxs)('div', {
-            className: l()(I, f.card, {
-                [f.cardSmall]: _,
-                [f.cardDisabled]: N,
-                [f.splashLoaded]: S
+        return (0, n.jsxs)('div', {
+            className: a()(P, m.card, {
+                [m.cardSmall]: v,
+                [m.cardDisabled]: p,
+                [m.splashLoaded]: O
             }),
             children: [
-                (0, r.jsxs)('div', {
-                    className: f.cardHeader,
+                (0, n.jsxs)('div', {
+                    className: m.cardHeader,
                     children: [
-                        (0, r.jsx)('div', {
-                            className: f.splash,
-                            children: (0, r.jsx)('img', {
-                                src: null != w ? w : R,
+                        (0, n.jsx)('div', {
+                            className: m.splash,
+                            children: (0, n.jsx)('img', {
+                                src: null != b ? b : R,
                                 alt: '',
-                                className: f.splashImage,
-                                onLoad: () => T(!0)
+                                className: m.splashImage,
+                                onLoad: () => D(!0)
                             })
                         }),
-                        (0, r.jsx)('div', {
-                            className: f.guildIcon,
-                            children: (0, r.jsx)(d.ZP, {
-                                mask: d.ZP.Masks.SQUIRCLE,
+                        (0, n.jsx)('div', {
+                            className: m.guildIcon,
+                            children: (0, n.jsx)(c.ZP, {
+                                mask: c.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
-                                children: (0, r.jsx)('div', {
-                                    className: f.iconMask,
-                                    children: (0, r.jsx)(d.ZP, {
-                                        mask: d.ZP.Masks.SQUIRCLE,
+                                children: (0, n.jsx)('div', {
+                                    className: m.iconMask,
+                                    children: (0, n.jsx)(c.ZP, {
+                                        mask: c.ZP.Masks.SQUIRCLE,
                                         width: 40,
                                         height: 40,
-                                        children: null != W ? W : null
+                                        children: null != G ? G : null
                                     })
                                 })
                             })
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
-                    className: f.guildInfo,
+                (0, n.jsxs)('div', {
+                    className: m.guildInfo,
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: f.title,
+                        (0, n.jsxs)('div', {
+                            className: m.title,
                             children: [
-                                (0, r.jsx)(u.Z, {
-                                    className: f.verifiedIcon,
-                                    guild: s,
-                                    tooltipColor: o.ua7.Colors.PRIMARY
+                                (0, n.jsx)(d.Z, {
+                                    className: m.verifiedIcon,
+                                    guild: r,
+                                    tooltipColor: u.ua7.Colors.PRIMARY
                                 }),
-                                (0, r.jsx)(o.Text, {
-                                    className: f.guildName,
+                                (0, n.jsx)(u.Text, {
+                                    className: m.guildName,
                                     variant: 'text-md/normal',
-                                    children: (0, r.jsx)('span', { children: P })
+                                    children: (0, n.jsx)('span', { children: L })
                                 })
                             ]
                         }),
-                        (0, r.jsx)('div', {
-                            className: f.descriptionContainer,
-                            children: (0, r.jsx)(o.Text, {
+                        (0, n.jsx)('div', {
+                            className: m.descriptionContainer,
+                            children: (0, n.jsx)(u.Text, {
                                 lineClamp: 3,
-                                className: f.description,
+                                className: m.description,
                                 variant: 'text-sm/normal',
                                 tag: 'span',
-                                children: D
+                                children: F
                             })
                         }),
-                        (0, r.jsxs)('div', {
-                            className: f.memberInfo,
+                        (0, n.jsxs)('div', {
+                            className: m.memberInfo,
                             children: [
-                                null != k &&
-                                    (0, r.jsxs)('div', {
-                                        className: f.memberCount,
+                                null != x &&
+                                    (0, n.jsxs)('div', {
+                                        className: m.memberCount,
                                         children: [
-                                            (0, r.jsx)('div', { className: f.dotOnline }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, n.jsx)('div', { className: m.dotOnline }),
+                                            (0, n.jsx)(u.Text, {
                                                 variant: 'text-xs/normal',
-                                                children: _ ? h.NW.formatToPlainString(h.t.YMor7u, { count: k }) : h.NW.formatToPlainString(h.t['LC+S+v'], { membersOnline: k })
+                                                children: v ? _.NW.formatToPlainString(_.t.YMor7u, { count: x }) : _.NW.formatToPlainString(_.t['LC+S+v'], { membersOnline: x })
                                             })
                                         ]
                                     }),
-                                null != A &&
-                                    (0, r.jsxs)('div', {
-                                        className: f.memberCount,
+                                null != V &&
+                                    (0, n.jsxs)('div', {
+                                        className: m.memberCount,
                                         children: [
-                                            (0, r.jsx)('div', { className: f.dotOffline }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, n.jsx)('div', { className: m.dotOffline }),
+                                            (0, n.jsx)(u.Text, {
                                                 variant: 'text-xs/normal',
-                                                children: _ ? h.NW.formatToPlainString(h.t.YMor7u, { count: A }) : h.NW.formatToPlainString(h.t.zRl6XV, { count: A })
+                                                children: v ? _.NW.formatToPlainString(_.t.YMor7u, { count: V }) : _.NW.formatToPlainString(_.t.zRl6XV, { count: V })
                                             })
                                         ]
                                     })

@@ -22,7 +22,7 @@ function p(e) {
         : (0, r.jsxs)(o.P3F, {
               onClick: () => {
                   (0, o.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e('3940'), n.e('25183'), n.e('18831'), n.e('68464')]).then(n.bind(n, 41164));
+                      let { default: e } = await Promise.all([n.e('25183'), n.e('3940'), n.e('18831'), n.e('68464')]).then(n.bind(n, 41164));
                       return (t) =>
                           (0, r.jsx)(e, {
                               classificationId: g,

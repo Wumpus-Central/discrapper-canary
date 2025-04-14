@@ -2,13 +2,13 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(399606),
-    i = n(481060),
-    a = n(823596),
+    a = n(481060),
+    i = n(823596),
     s = n(201070),
     c = n(893966),
     u = n(527379),
-    C = n(388032),
-    d = n(673285);
+    d = n(388032),
+    C = n(673285);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,32 +60,32 @@ function p(e) {
         g = (0, s.$j)(t),
         x = l.useMemo(
             () =>
-                a.LU.map((e) => ({
+                i.LU.map((e) => ({
                     value: e,
                     label: Number(e).toLocaleString()
                 })),
             []
         ),
-        O = new Intl.NumberFormat(C.NW.currentLocale).format(h),
-        y = C.NW.formatToPlainString(C.t.RNDnQ0, { count: g ? '...' : O }),
-        v = h > j.pageSize || g,
-        N = h > a.LU['0'];
+        v = new Intl.NumberFormat(d.NW.currentLocale).format(h),
+        O = d.NW.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : v }),
+        y = h > j.pageSize || g,
+        N = h > i.LU['0'];
     return (0, r.jsxs)('div', {
-        className: d.paginationContainer,
+        className: C.paginationContainer,
         children: [
             (0, r.jsx)('div', {
-                className: d.pageSizeSelection,
+                className: C.pageSizeSelection,
                 children: N
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(i.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: C.NW.string(C.t.jNwLu7)
+                                  children: d.NW.string(d.t.jNwLu7)
                               }),
-                              (0, r.jsx)(i.PhF, {
-                                  'aria-label': y,
-                                  className: d.pageSizeInput,
+                              (0, r.jsx)(a.PhF, {
+                                  'aria-label': O,
+                                  className: C.pageSizeInput,
                                   options: x,
                                   isSelected: (e) => e === j.pageSize,
                                   select: (e) => {
@@ -97,39 +97,39 @@ function p(e) {
                                   popoutPosition: 'top',
                                   popoutWidth: 72
                               }),
-                              (0, r.jsx)(i.ua7, {
-                                  text: C.NW.string(C.t.ZTNur6),
+                              (0, r.jsx)(a.ua7, {
+                                  text: d.NW.string(d.t.ZTNur6),
                                   shouldShow: g,
                                   children: (e) =>
                                       (0, r.jsx)(
-                                          i.Text,
+                                          a.Text,
                                           b(
                                               m(
                                                   {
                                                       variant: 'text-md/normal',
                                                       color: 'text-muted',
-                                                      className: d.pageLabel
+                                                      className: C.pageLabel
                                                   },
                                                   e
                                               ),
-                                              { children: y }
+                                              { children: O }
                                           )
                                       )
                               })
                           ]
                       })
-                    : (0, r.jsx)(i.Text, {
+                    : (0, r.jsx)(a.Text, {
                           variant: 'text-md/normal',
                           color: 'text-muted',
-                          children: C.NW.format(C.t.GZpwMD, { count: h })
+                          children: d.NW.format(d.t.GZpwMD, { count: h })
                       })
             }),
             (0, r.jsx)('div', {
-                className: d.pagination,
+                className: C.pagination,
                 children:
-                    v &&
-                    (0, r.jsx)(i.DsT, {
-                        className: d.paginationInput,
+                    y &&
+                    (0, r.jsx)(a.DsT, {
+                        className: C.paginationInput,
                         totalCount: h,
                         pageSize: j.pageSize,
                         disablePaginationGap: !0,
@@ -143,7 +143,7 @@ function p(e) {
                                     });
                                 });
                         },
-                        maxVisiblePages: a.hW
+                        maxVisiblePages: i.hW
                     })
             })
         ]

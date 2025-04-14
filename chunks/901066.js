@@ -1,10 +1,10 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => A });
 var r = n(200651),
     l = n(192379),
     i = n(120356),
     a = n.n(i),
-    s = n(913527),
-    o = n.n(s),
+    o = n(913527),
+    s = n.n(o),
     c = n(442837),
     d = n(481060),
     u = n(906732),
@@ -14,14 +14,14 @@ var r = n(200651),
     j = n(246364),
     b = n(328977),
     f = n(666233),
-    N = n(360328),
-    p = n(171368),
-    C = n(598077),
-    g = n(430824),
-    v = n(709054),
-    _ = n(51144),
-    T = n(981631),
-    E = n(308083),
+    p = n(360328),
+    N = n(171368),
+    g = n(598077),
+    C = n(430824),
+    _ = n(709054),
+    v = n(51144),
+    E = n(981631),
+    T = n(308083),
     I = n(388032),
     S = n(145870),
     y = n(157092);
@@ -29,7 +29,7 @@ function R(e) {
     let { icon: t, label: n, onClick: l, disabled: i } = e;
     return (0, r.jsxs)(d.P3F, {
         className: a()(S.actionButton, { [S.disabled]: i }),
-        onClick: i ? T.dG4 : l,
+        onClick: i ? E.dG4 : l,
         'aria-label': n,
         children: [
             (0, r.jsx)(t, {
@@ -49,14 +49,14 @@ function R(e) {
 function O(e) {
     let { user: t, guildId: n, joinRequest: l } = e,
         { analyticsLocations: i } = (0, u.ZP)(),
-        s = () => {
-            (0, p.openUserProfileModal)({
+        o = () => {
+            (0, N.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: l.joinRequestId,
                 sourceAnalyticsLocations: i,
                 analyticsLocation: {
-                    section: T.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                    object: T.qAy.JOIN_REQUEST
+                    section: E.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                    object: E.qAy.JOIN_REQUEST
                 }
             });
         };
@@ -67,7 +67,7 @@ function O(e) {
                 className: y.memberNameContainer,
                 children: [
                     (0, r.jsx)(d.P3F, {
-                        onClick: s,
+                        onClick: o,
                         className: a()(S.clickable, y.memberAvatar),
                         children: (0, r.jsx)(d.qEK, {
                             src: t.getAvatarURL(n, 48),
@@ -82,7 +82,7 @@ function O(e) {
                                 className: y.memberNameTextContainer,
                                 children: [
                                     (0, r.jsx)(d.P3F, {
-                                        onClick: s,
+                                        onClick: o,
                                         className: S.clickable,
                                         children: (0, r.jsx)(d.Text, {
                                             variant: 'text-lg/medium',
@@ -93,7 +93,7 @@ function O(e) {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: E.NC.SIZE_16,
+                                        badgeSize: T.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: y.memberClanTag,
                                         containerClassName: y.memberClanTagContainer
@@ -101,12 +101,12 @@ function O(e) {
                                 ]
                             }),
                             (0, r.jsx)(d.P3F, {
-                                onClick: s,
+                                onClick: o,
                                 className: S.clickable,
                                 children: (0, r.jsx)(d.Text, {
                                     variant: 'text-md/medium',
                                     color: 'text-normal',
-                                    children: _.ZP.getUserTag(t)
+                                    children: v.ZP.getUserTag(t)
                                 })
                             })
                         ]
@@ -126,7 +126,7 @@ function O(e) {
 }
 function P(e) {
     let { user: t, guildId: n, joinRequest: l } = e,
-        { approveRequest: i, rejectRequest: a, handleOpenInterview: s, submitting: o } = (0, N.s)(n, t.id, l.joinRequestId, l.interviewChannelId);
+        { approveRequest: i, rejectRequest: a, handleOpenInterview: o, submitting: s } = (0, p.s)(n, t.id, l.joinRequestId, l.interviewChannelId);
     return (0, r.jsxs)('div', {
         className: S.actionRow,
         children: [
@@ -134,19 +134,19 @@ function P(e) {
                 icon: d.owK,
                 label: I.NW.string(I.t.BzjDQE),
                 onClick: i,
-                disabled: o
+                disabled: s
             }),
             (0, r.jsx)(R, {
                 icon: d.k$p,
                 label: I.NW.string(I.t.hDtbs7),
                 onClick: a,
-                disabled: o
+                disabled: s
             }),
             (0, r.jsx)(R, {
                 icon: d.kBi,
                 label: I.NW.string(I.t.KQeYoK),
-                onClick: s,
-                disabled: o
+                onClick: o,
+                disabled: s
             })
         ]
     });
@@ -183,7 +183,7 @@ function w(e) {
                                   (0, r.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      children: o()(v.default.extractTimestamp(l)).format('ll')
+                                      children: s()(_.default.extractTimestamp(l)).format('ll')
                                   })
                               ]
                           })
@@ -199,7 +199,7 @@ function w(e) {
         ]
     });
 }
-function A(e) {
+function M(e) {
     let { user: t, joinRequest: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -223,7 +223,7 @@ function A(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: o()(v.default.extractTimestamp(t.id)).format('ll')
+                                children: s()(_.default.extractTimestamp(t.id)).format('ll')
                             })
                         ]
                     }),
@@ -238,7 +238,7 @@ function A(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: o()(n.createdAt).format('ll')
+                                children: s()(n.createdAt).format('ll')
                             })
                         ]
                     })
@@ -247,21 +247,21 @@ function A(e) {
         ]
     });
 }
-function M(e) {
+function A(e) {
     let { guildId: t } = e,
         n = (0, b.L)({ guildId: t }),
         { user: i } = null != n ? n : {},
-        s = l.useMemo(() => {
+        o = l.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.formResponses) ? e : [];
         }, [null == n ? void 0 : n.formResponses]),
-        o = l.useMemo(() => (null != i ? new C.Z(i) : null), [i]),
-        u = (0, c.e7)([g.Z], () => g.Z.getGuild(t), [t]);
+        s = l.useMemo(() => (null != i ? new g.Z(i) : null), [i]),
+        u = (0, c.e7)([C.Z], () => C.Z.getGuild(t), [t]);
     return ((0, x.Tt)({
         subsection: I.NW.string(I.t.nqrK8f),
         location: null == u ? void 0 : u.name
     }),
-    null == n || null == u || null == o || null == i)
+    null == n || null == u || null == s || null == i)
         ? null
         : (0, r.jsx)('section', {
               className: S.sidebar,
@@ -273,13 +273,13 @@ function M(e) {
                               className: S.cardContainer,
                               children: [
                                   (0, r.jsx)(O, {
-                                      user: o,
+                                      user: s,
                                       guildId: t,
                                       joinRequest: n
                                   }),
                                   n.applicationStatus === j.wB.SUBMITTED &&
                                       (0, r.jsx)(P, {
-                                          user: o,
+                                          user: s,
                                           guildId: t,
                                           joinRequest: n
                                       }),
@@ -291,13 +291,13 @@ function M(e) {
                               children: [
                                   (0, r.jsx)(f.Z, {
                                       guildId: u.id,
-                                      formFields: s,
-                                      user: o,
+                                      formFields: o,
+                                      user: s,
                                       showRequirements: !1
                                   }),
-                                  (0, r.jsx)(A, {
+                                  (0, r.jsx)(M, {
                                       guildId: t,
-                                      user: o,
+                                      user: s,
                                       joinRequest: n
                                   })
                               ]

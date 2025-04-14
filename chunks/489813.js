@@ -1,23 +1,23 @@
 n.d(t, {
-    CA: () => d,
-    Ih: () => u,
-    PU: () => m,
+    CA: () => u,
+    Ih: () => d,
+    PU: () => C,
     hK: () => c
 });
 var r = n(200651);
 n(192379);
 var l = n(120356),
-    i = n.n(l),
+    o = n.n(l),
     a = n(692547),
-    s = n(481060),
-    o = n(396561);
+    i = n(481060),
+    s = n(396561);
 function c(e) {
     let { title: t, children: n } = e;
     return (0, r.jsxs)('div', {
-        className: o.questionContainer,
+        className: s.questionContainer,
         children: [
-            (0, r.jsx)(s.Text, {
-                className: o.questionTitle,
+            (0, r.jsx)(i.Text, {
+                className: s.questionTitle,
                 variant: 'text-md/normal',
                 color: 'header-primary',
                 children: t
@@ -26,13 +26,13 @@ function c(e) {
         ]
     });
 }
-function d(e) {
+function u(e) {
     let { title: t, children: n } = e;
     return (0, r.jsxs)('div', {
-        className: o.disabledQuestionContainer,
+        className: s.disabledQuestionContainer,
         children: [
-            (0, r.jsx)(s.Text, {
-                className: o.questionTitle,
+            (0, r.jsx)(i.Text, {
+                className: s.questionTitle,
                 variant: 'text-sm/medium',
                 color: 'text-muted',
                 children: t
@@ -41,72 +41,72 @@ function d(e) {
         ]
     });
 }
-function u(e) {
+function d(e) {
     let { icon: t, text: n, meetsRequirement: l } = e;
     return (0, r.jsxs)('div', {
-        className: o.requirementContainer,
+        className: s.requirementContainer,
         children: [
             (0, r.jsx)(t, {
-                className: o.requirementIcon,
+                className: s.requirementIcon,
                 height: 16,
                 width: 16,
                 size: 'custom',
                 color: 'currentColor'
             }),
-            (0, r.jsx)(s.Text, {
-                className: o.requirementText,
+            (0, r.jsx)(i.Text, {
+                className: s.requirementText,
                 variant: 'text-sm/medium',
                 children: n
             }),
             l
-                ? (0, r.jsx)(s.owK, {
+                ? (0, r.jsx)(i.owK, {
                       size: 'sm',
                       color: 'currentColor',
-                      className: o.requirementSuccess,
+                      className: s.requirementSuccess,
                       secondaryColor: a.Z.colors.WHITE.css
                   })
-                : (0, r.jsx)(s.k$p, {
+                : (0, r.jsx)(i.k$p, {
                       size: 'sm',
                       color: 'currentColor',
-                      className: o.requirementFailure,
+                      className: s.requirementFailure,
                       secondaryColor: a.Z.colors.WHITE.css
                   })
         ]
     });
 }
-function m(e) {
-    let { icon: t, text: n, footnote: l, meetsRequirement: c, children: d, className: u } = e;
+function C(e) {
+    let { icon: t, text: n, footnote: l, meetsRequirement: c, children: u, className: d } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: i()(o.requirementContainer, u),
+                className: o()(s.requirementContainer, d),
                 children: [
                     (0, r.jsx)(t, {
-                        className: o.requirementIcon,
+                        className: s.requirementIcon,
                         height: 20,
                         width: 20,
                         size: 'custom',
                         color: 'currentColor'
                     }),
-                    (0, r.jsx)(s.Text, {
-                        className: o.requirementText,
+                    (0, r.jsx)(i.Text, {
+                        className: s.requirementText,
                         variant: 'text-md/normal',
                         children: n
                     }),
                     c
-                        ? (0, r.jsx)(s.owK, {
+                        ? (0, r.jsx)(i.owK, {
                               size: 'md',
                               color: 'currentColor',
-                              className: o.requirementSuccess,
+                              className: s.requirementSuccess,
                               secondaryColor: a.Z.colors.WHITE.css
                           })
-                        : d
+                        : u
                 ]
             }),
             null != l &&
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(i.Text, {
                     color: 'header-secondary',
-                    className: o.footnote,
+                    className: s.footnote,
                     variant: 'text-xs/normal',
                     children: l
                 })

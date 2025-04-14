@@ -1,44 +1,44 @@
 r.d(t, { Z: () => s });
 var n = r(200651);
 r(192379);
-var o = r(481060),
-    c = r(313201),
-    i = r(268999);
+var l = r(481060),
+    i = r(313201),
+    u = r(268999);
 function s(e) {
-    let { transitionState: t, title: r, subtitle: s, children: l } = e,
-        a = (0, c.Dt)();
-    return (0, n.jsxs)(o.Y0X, {
+    let { transitionState: t, title: r, subtitle: s, children: a } = e,
+        o = (0, i.Dt)();
+    return (0, n.jsxs)(l.Y0X, {
         transitionState: t,
-        'aria-labelledby': a,
+        'aria-labelledby': o,
         children: [
             (0, n.jsx)('div', {
-                className: i.shieldIconContainer,
+                className: u.shieldIconContainer,
                 children: (0, n.jsx)('div', {
-                    className: i.shieldIcon,
-                    children: (0, n.jsx)(o.tQf, {
+                    className: u.shieldIcon,
+                    children: (0, n.jsx)(l.tQf, {
                         size: 'custom',
                         width: 55,
                         height: 55,
-                        color: o.TVs.colors.HEADER_SECONDARY
+                        color: l.TVs.colors.HEADER_SECONDARY
                     })
                 })
             }),
-            (0, n.jsxs)(o.hzk, {
-                className: i.content,
+            (0, n.jsxs)(l.hzk, {
+                className: u.content,
                 children: [
-                    (0, n.jsx)(o.X6q, {
-                        className: i.title,
+                    (0, n.jsx)(l.X6q, {
+                        className: u.title,
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
                         children: r
                     }),
-                    (0, n.jsx)(o.Text, {
-                        className: i.subtitle,
+                    (0, n.jsx)(l.Text, {
+                        className: u.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: s
                     }),
-                    l
+                    a
                 ]
             })
         ]

@@ -2,13 +2,13 @@ n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(498607),
-    i = n.n(o),
-    a = n(200100),
+    a = n.n(o),
+    i = n(200100),
     s = n(748780),
     c = n(692547),
     u = n(481060),
-    C = n(110924);
-function d(e) {
+    d = n(110924);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ let b = {
         clamp: !0
     };
 function f(e) {
-    var { value: t, children: n, equalityFn: o = i(), style: s } = e,
+    var { value: t, children: n, equalityFn: o = a(), style: s } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -82,11 +82,11 @@ function f(e) {
             }
             return l;
         })(e, ['value', 'children', 'equalityFn', 'style']);
-    let h = (0, C.Z)(t),
+    let h = (0, d.Z)(t),
         [{ spring: j }, g] = (0, u.q_F)(() => ({ spring: 0 }), 'animate-always'),
         x = (0, u.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
-        O = (0, u.dQu)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
-        y = l.useCallback(() => {
+        v = (0, u.dQu)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
+        O = l.useCallback(() => {
             g({
                 spring: 1,
                 config: b
@@ -98,19 +98,19 @@ function f(e) {
                 });
         }, [g]);
     l.useEffect(() => {
-        null != t && null != h && (o(t, h) || y());
-    }, [y, t, h, o]);
-    let v =
+        null != t && null != h && (o(t, h) || O());
+    }, [O, t, h, o]);
+    let y =
             null == j
                 ? void 0
                 : j.to({
                       range: [0, 1],
-                      output: [''.concat(x, '00'), ''.concat(O, '27')]
+                      output: [''.concat(x, '00'), ''.concat(v, '27')]
                   }),
-        N = null != s ? m(d({}, s), { backgroundColor: v }) : { backgroundColor: v };
+        N = null != s ? m(C({}, s), { backgroundColor: y }) : { backgroundColor: y };
     return (0, r.jsx)(
-        a.animated.tr,
-        m(d({}, f), {
+        i.animated.tr,
+        m(C({}, f), {
             style: N,
             children: n
         })

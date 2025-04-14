@@ -1,4 +1,4 @@
-i.exports = {
+e.exports = {
     classificationContainer: 'classificationContainer_a48d6b',
     classificationHeader: 'classificationHeader_a48d6b',
     classificationActionsTakenContainer: 'classificationActionsTakenContainer_a48d6b',
