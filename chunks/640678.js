@@ -1,19 +1,18 @@
-n.d(t, { t: () => u });
+n.d(t, { t: () => c });
 var i = n(163400),
     r = n(995532),
     s = n(496675),
     l = n(600553),
-    o = n(896007),
-    a = n(981631);
-let c = {
+    o = n(896007);
+let a = {
     HEADER: 'HEADER',
     DIVIDER: 'DIVIDER'
 };
-function u(e) {
+function c(e) {
     var t, n;
-    let u = s.Z.getGuildPermissionProps(e),
-        d = (0, i.p)(e.id).length > 0,
-        g = (0, l.i1)({
+    let c = s.Z.getGuildPermissionProps(e),
+        u = (0, i.p)(e.id).length > 0,
+        d = (0, l.i1)({
             guildId: e.id,
             location: 'getGuildSettingsSections'
         });
@@ -42,13 +41,12 @@ function u(e) {
                     });
             }
             return e;
-        })({ showDirtyGuildTemplateIndicator: !1 }, u)),
+        })({ showDirtyGuildTemplateIndicator: !1 }, c)),
         (n = n =
             {
-                canUnlinkChannels: d,
-                canAccessClanSettings: u.isGuildAdmin && e.hasFeature(a.oNc.CLAN),
+                canUnlinkChannels: u,
                 welcomeScreenEmpty: r.Z.isEmpty(e.id),
-                isGuildSettingsFoundationEnabled: g
+                isGuildSettingsFoundationEnabled: d
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -66,7 +64,7 @@ function u(e) {
     )
         .filter((e) => {
             let { section: t } = e;
-            return t !== c.HEADER && t !== c.DIVIDER;
+            return t !== a.HEADER && t !== a.DIVIDER;
         })
         .filter((e) => null == e.predicate || e.predicate());
 }

@@ -1,29 +1,19 @@
 n.d(t, {
-    EJ: () => h,
-    Pb: () => p,
-    XV: () => _,
-    f6: () => g,
-    ky: () => b,
-    p0: () => v,
-    pY: () => y,
-    up: () => m
+    Pb: () => u,
+    ky: () => _,
+    p0: () => p,
+    up: () => d
 }),
-    n(642613);
-var r = n(108131),
-    i = n.n(r),
-    o = n(442837),
-    a = n(607070),
-    s = n(715903),
-    l = n(271383),
-    c = n(594174),
-    u = n(308083),
-    d = n(981631),
-    f = n(388032);
-function _(e, t) {
-    let n = Array.from(e);
-    return n.sort((e, n) => i().v3(''.concat(e).concat(t)) - i().v3(''.concat(n).concat(t))), n;
-}
-function p(e) {
+    n(642613),
+    n(108131);
+var r = n(442837),
+    i = n(607070),
+    o = n(715903),
+    a = n(271383),
+    s = n(594174),
+    l = n(308083),
+    c = n(981631);
+function u(e) {
     return null != e && e.identityEnabled
         ? {
               guildId: e.identityGuildId,
@@ -32,70 +22,38 @@ function p(e) {
           }
         : {};
 }
-function h(e) {
-    return null != e && e.hasFeature(d.oNc.CLAN);
+function d(e) {
+    return e.hasFeature(c.oNc.CLAN) || e.hasFeature(c.oNc.GUILD_TAGS);
 }
-function m(e) {
-    return e.hasFeature(d.oNc.CLAN) || e.hasFeature(d.oNc.GUILD_TAGS);
-}
-let g = (e, t) => {
-        if (0 === e.length) return null;
-        if (1 === e.length) return e[0];
-        if (2 === e.length)
-            return f.NW.formatToPlainString(f.t['+v1gGx'], {
-                item1: e[0],
-                item2: e[1]
-            });
-        if (null != t && e.length > t) {
-            let n = e.slice(0, t).join(', '),
-                r = f.NW.formatToPlainString(f.t['+E2fNj'], { n: e.length - t });
-            return f.NW.formatToPlainString(f.t.hZNSNz, {
-                items: n,
-                last: r
-            });
-        }
-        {
-            let t = e.slice(0, -1).join(', '),
-                n = e[e.length - 1];
-            return f.NW.formatToPlainString(f.t.hZNSNz, {
-                items: t,
-                last: n
-            });
-        }
-    },
-    E = {
-        [u.NC.SIZE_12]: 16,
-        [u.NC.SIZE_16]: 16,
-        [u.NC.SIZE_24]: 24,
-        [u.NC.SIZE_32]: 32,
-        [u.NC.SIZE_36]: 40
-    };
-function b(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.NC.SIZE_12;
+n(388032);
+let f = {
+    [l.NC.SIZE_12]: 16,
+    [l.NC.SIZE_16]: 16,
+    [l.NC.SIZE_24]: 24,
+    [l.NC.SIZE_32]: 32,
+    [l.NC.SIZE_36]: 40
+};
+function _(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.NC.SIZE_12;
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     if (null == r) return;
-    let i = E[n];
+    let i = f[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function y(e, t) {
-    if (null == t) return;
-    let { CDN_HOST: n } = window.GLOBAL_ENV;
-    if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
-}
-function v(e, t) {
-    let n = (0, o.e7)([a.Z], () => a.Z.hideTags),
-        r = (0, o.e7)([c.default], () => c.default.getUser(e), [e]),
-        i = (0, o.e7)(
-            [l.ZP],
+function p(e, t) {
+    let n = (0, r.e7)([i.Z], () => i.Z.hideTags),
+        l = (0, r.e7)([s.default], () => s.default.getUser(e), [e]),
+        c = (0, r.e7)(
+            [a.ZP],
             () => {
                 if (null == t || null == e) return null;
-                let n = l.ZP.getMember(t, e);
-                return (0, s.EY)(n);
+                let n = a.ZP.getMember(t, e);
+                return (0, o.EY)(n);
             },
             [t, e]
         ),
-        { tag: u, guildId: d } = p(null == r ? void 0 : r.primaryGuild);
-    return !n && null != d && null != u && !i;
+        { tag: d, guildId: f } = u(null == l ? void 0 : l.primaryGuild);
+    return !n && null != f && null != d && !c;
 }
-u.NC.SIZE_12, u.NC.SIZE_16, u.NC.SIZE_24, u.NC.SIZE_32, u.NC.SIZE_36;
+l.NC.SIZE_12, l.NC.SIZE_16, l.NC.SIZE_24, l.NC.SIZE_32, l.NC.SIZE_36;

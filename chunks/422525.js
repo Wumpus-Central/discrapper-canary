@@ -1,57 +1,54 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var r = n(481060),
     s = n(40851),
-    l = n(593128),
-    o = n(749681),
-    a = n(258971),
-    c = n(434404),
-    u = n(956324),
-    d = n(640678),
-    g = n(84615),
-    b = n(981631),
-    p = n(308083),
-    S = n(49898),
-    f = n(388032);
-function O(e) {
+    l = n(749681),
+    o = n(258971),
+    a = n(434404),
+    c = n(956324),
+    u = n(640678),
+    d = n(981631),
+    g = n(49898),
+    b = n(388032);
+function p(e) {
     let t = (0, s.Aq)(),
-        n = (0, u.Z)(e);
+        n = (0, c.Z)(e);
     if (__OVERLAY__ || !n) return null;
-    let O = (n) => {
-        c.Z.open(e.id, n), t.dispatch(b.CkL.POPOUT_CLOSE), (0, r.pTH)();
+    let p = (n) => {
+        a.Z.open(e.id, n), t.dispatch(d.CkL.POPOUT_CLOSE), (0, r.pTH)();
     };
     return (0, i.jsx)(r.sNh, {
         id: 'guild-settings',
-        label: f.NW.string(f.t['154/bG']),
-        action: () => O(),
-        children: (0, d.t)(e).map((t) => {
+        label: b.NW.string(b.t['154/bG']),
+        action: () => p(),
+        children: (0, u.t)(e).map((t) => {
             let { section: n, label: s } = t;
             if (null == s) return null;
             switch (n) {
-                case b.pNK.DELETE:
+                case d.pNK.DELETE:
                     return null;
-                case b.pNK.COMMUNITY:
+                case d.pNK.COMMUNITY:
                     return (0, i.jsx)(
                         r.sNh,
                         {
                             id: n,
-                            action: () => O(n),
-                            label: f.NW.string(f.t.nRtNqq)
+                            action: () => p(n),
+                            label: b.NW.string(b.t.nRtNqq)
                         },
                         n
                     );
-                case b.pNK.APP_DIRECTORY:
+                case d.pNK.APP_DIRECTORY:
                     return (0, i.jsx)(
                         r.sNh,
                         {
                             id: n,
                             action: () => {
-                                (0, o.transitionToGlobalDiscovery)({
-                                    tab: S.GlobalDiscoveryTab.APPS,
+                                (0, l.transitionToGlobalDiscovery)({
+                                    tab: g.GlobalDiscoveryTab.APPS,
                                     newSessionState: {
                                         guildId: e.id,
-                                        entrypoint: { name: a.xF.GUILD_HEADER_POPOUT }
+                                        entrypoint: { name: o.xF.GUILD_HEADER_POPOUT }
                                     }
                                 });
                             },
@@ -59,28 +56,12 @@ function O(e) {
                         },
                         n
                     );
-                case b.pNK.CLAN:
-                    return (0, i.jsx)(r.sNh, {
-                        id: 'guild-settings',
-                        label: f.NW.string(f.t['6g8uHB']),
-                        action: () =>
-                            (0, g.q4)(
-                                (t) => {
-                                    let { closeLayer: n } = t;
-                                    return (0, i.jsx)(l.Z, {
-                                        onClose: n,
-                                        guildId: e.id
-                                    });
-                                },
-                                { layerKey: p.q2 }
-                            )
-                    });
                 default:
                     return (0, i.jsx)(
                         r.sNh,
                         {
                             id: n,
-                            action: () => O(n),
+                            action: () => p(n),
                             label: s
                         },
                         n

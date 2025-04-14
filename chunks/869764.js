@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => P,
-    k: () => A
+    Z: () => D,
+    k: () => b
 }),
     n(997841);
 var l = n(200651),
@@ -11,27 +11,22 @@ var l = n(200651),
     o = n(481060),
     c = n(933557),
     d = n(471445),
-    u = n(905362),
-    m = n(353093),
-    N = n(979264),
-    h = n(937111),
-    I = n(592125),
-    g = n(271383),
-    f = n(430824),
-    p = n(496675),
-    E = n(186523),
-    S = n(768581),
-    x = n(630388),
-    T = n(526120),
-    O = n(563534),
-    _ = n(846121),
-    j = n(216701),
-    v = n(981631),
-    b = n(308083),
-    D = n(372897),
-    C = n(388032),
-    G = n(411114);
-function A(e) {
+    u = n(592125),
+    m = n(271383),
+    N = n(430824),
+    I = n(496675),
+    h = n(186523),
+    g = n(768581),
+    f = n(630388),
+    p = n(526120),
+    E = n(563534),
+    S = n(846121),
+    T = n(216701),
+    x = n(981631),
+    O = n(372897),
+    _ = n(388032),
+    j = n(411114);
+function b(e) {
     var { title: t, emojiId: n, emojiName: r, icon: i, completed: a, Icon: c, onClick: d } = e,
         u = (function (e, t) {
             if (null == e) return {};
@@ -54,40 +49,40 @@ function A(e) {
         })(e, ['title', 'emojiId', 'emojiName', 'icon', 'completed', 'Icon', 'onClick']);
     let m = 'channel' === u.variant ? u.channelId : null,
         N = 'static' === u.variant ? u.subtitle : u.channelName,
-        h =
+        I =
             null != m
-                ? S.ZP.getNewMemberActionIconURL({
+                ? g.ZP.getNewMemberActionIconURL({
                       channelId: m,
                       icon: i
                   })
                 : null;
     return (0, l.jsxs)(o.Zbd, {
-        className: s()(G.action, { [G.clickableAction]: null != d }),
+        className: s()(j.action, { [j.clickableAction]: null != d }),
         onClick: d,
         children: [
-            null != h
+            null != I
                 ? (0, l.jsx)('img', {
-                      src: h,
-                      className: G.icon,
+                      src: I,
+                      className: j.icon,
                       width: 32,
                       height: 32,
                       alt: '',
                       'aria-hidden': !0
                   })
-                : (0, l.jsx)(j.Z, {
+                : (0, l.jsx)(T.Z, {
                       emojiId: n,
                       emojiName: r,
-                      size: j.R.LARGE,
+                      size: T.R.LARGE,
                       defaultComponent: (0, l.jsx)('div', {
-                          className: G.channelIconContainer,
+                          className: j.channelIconContainer,
                           children: (0, l.jsx)(c, {
-                              className: G.channelIcon,
+                              className: j.channelIcon,
                               color: 'currentColor'
                           })
                       })
                   }),
             (0, l.jsxs)('div', {
-                className: G.actionInfo,
+                className: j.actionInfo,
                 children: [
                     (0, l.jsx)(o.Text, {
                         variant: 'text-md/semibold',
@@ -108,124 +103,95 @@ function A(e) {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: '#fff',
-                      className: G.checkCircleCompleted
+                      className: j.checkCircleCompleted
                   })
-                : (0, l.jsx)(E.Z, {
-                      className: G.checkCircle,
+                : (0, l.jsx)(h.Z, {
+                      className: j.checkCircle,
                       width: 24,
                       height: 24
                   })
         ]
     });
 }
-function L(e) {
+function v(e) {
     var t;
     let { action: n, completed: i } = e,
-        { channelId: s, title: u, emoji: m, icon: N } = n,
-        { id: h, name: g } = null != m ? m : {},
-        f = (0, a.e7)([I.Z], () => I.Z.getChannel(s)),
-        E = (0, c.ZP)(f, !0),
-        S = (0, a.e7)([p.Z], () => p.Z.can(v.Plq.VIEW_CHANNEL, f)),
-        x = r.useMemo(() => {
-            if (null != f) return () => (0, T.gp)(f.guild_id, f.id);
-        }, [f]);
-    if (null == f || !S) return null;
-    let O = null != (t = (0, d.KS)(f)) ? t : o.VL1;
-    return (0, l.jsx)(A, {
+        { channelId: s, title: m, emoji: N, icon: h } = n,
+        { id: g, name: f } = null != N ? N : {},
+        E = (0, a.e7)([u.Z], () => u.Z.getChannel(s)),
+        S = (0, c.ZP)(E, !0),
+        T = (0, a.e7)([I.Z], () => I.Z.can(x.Plq.VIEW_CHANNEL, E)),
+        O = r.useMemo(() => {
+            if (null != E) return () => (0, p.gp)(E.guild_id, E.id);
+        }, [E]);
+    if (null == E || !T) return null;
+    let _ = null != (t = (0, d.KS)(E)) ? t : o.VL1;
+    return (0, l.jsx)(b, {
         variant: 'channel',
         channelId: s,
-        title: u,
-        channelName: E,
-        emojiId: h,
-        emojiName: g,
-        icon: N,
+        title: m,
+        channelName: S,
+        emojiId: g,
+        emojiName: f,
+        icon: h,
         completed: i,
-        Icon: O,
-        onClick: x
+        Icon: _,
+        onClick: O
     });
 }
-function P(e) {
-    var t;
-    let { guildId: n } = e,
-        i = (0, a.e7)([O.Z], () => O.Z.getNewMemberActions(n), [n]),
-        c = (0, a.e7)([_.Z], () => _.Z.getCompletedActions(n)),
-        d = (0, a.e7)([g.ZP], () => g.ZP.getSelfMember(n)),
-        I = (0, a.e7)([f.Z], () => f.Z.getGuild(n)),
-        p = null != I ? (0, m.ky)(I.id, null == (t = I.profile) ? void 0 : t.badge, b.NC.SIZE_16) : null,
-        E = (0, a.e7)([h.Z], () => h.Z.getRequest(n));
+function D(e) {
+    let { guildId: t } = e,
+        n = (0, a.e7)([E.Z], () => E.Z.getNewMemberActions(t), [t]),
+        i = (0, a.e7)([S.Z], () => S.Z.getCompletedActions(t)),
+        c = (0, a.e7)([m.ZP], () => m.ZP.getSelfMember(t)),
+        d = (0, a.e7)([N.Z], () => N.Z.getGuild(t));
     r.useEffect(() => {
         var e;
-        null == c && (null == d ? void 0 : d.flags) != null && (0, x.yE)(null != (e = d.flags) ? e : 0, D.q.STARTED_HOME_ACTIONS) && (0, T.Fg)(n);
-    }, [c, n, null == d ? void 0 : d.flags]);
-    let S = r.useCallback(() => {
-        null != I && null != I.rulesChannelId && (0, T.gp)(I.id, I.rulesChannelId);
-    }, [I]);
-    return null == d || null == i || 0 === i.length
+        null == i && (null == c ? void 0 : c.flags) != null && (0, f.yE)(null != (e = c.flags) ? e : 0, O.q.STARTED_HOME_ACTIONS) && (0, p.Fg)(t);
+    }, [i, t, null == c ? void 0 : c.flags]);
+    let u = r.useCallback(() => {
+        null != d && null != d.rulesChannelId && (0, p.gp)(d.id, d.rulesChannelId);
+    }, [d]);
+    return null == c || null == n || 0 === n.length
         ? null
         : (0, l.jsxs)('div', {
-              className: G.container,
+              className: j.container,
               children: [
                   (0, l.jsx)(o.X6q, {
                       variant: 'heading-lg/bold',
                       color: 'header-primary',
-                      children: C.NW.string(C.t.LhlgY2)
+                      children: _.NW.string(_.t.LhlgY2)
                   }),
-                  (null == I ? void 0 : I.hasFeature(v.oNc.CLAN)) &&
-                      null != p &&
-                      (0, l.jsx)(o.P3F, {
-                          className: G.clickableAction,
-                          onClick: () => (0, u.C)(n, null == E ? void 0 : E.joinRequestId),
-                          children: (0, l.jsxs)('div', {
-                              className: G.action,
-                              children: [
-                                  (0, l.jsx)('div', {
-                                      className: G.tagIconContainer,
-                                      children: (0, l.jsx)(N.KQ, {
-                                          src: p,
-                                          size: b.NC.SIZE_16
-                                      })
-                                  }),
-                                  (0, l.jsx)('div', {
-                                      className: G.actionInfo,
-                                      children: (0, l.jsx)(o.Text, {
-                                          variant: 'text-md/semibold',
-                                          color: 'header-primary',
-                                          children: C.NW.string(C.t.MNhFER)
-                                      })
-                                  })
-                              ]
-                          })
-                      }),
-                  i.map((e) =>
+                  n.map((e) =>
                       (0, l.jsx)(
-                          L,
+                          v,
                           {
                               action: e,
-                              completed: (null == c ? void 0 : c[e.channelId]) === !0,
-                              guildId: n
+                              completed: (null == i ? void 0 : i[e.channelId]) === !0,
+                              guildId: t
                           },
                           e.channelId
                       )
                   ),
-                  (null == I ? void 0 : I.rulesChannelId) != null &&
+                  (null == d ? void 0 : d.rulesChannelId) != null &&
                       (0, l.jsxs)(o.Zbd, {
-                          className: s()(G.action, G.clickableAction),
-                          onClick: S,
+                          className: s()(j.action, j.clickableAction),
+                          onClick: u,
                           children: [
                               (0, l.jsx)('div', {
-                                  className: G.rulesIconContainer,
+                                  className: j.rulesIconContainer,
                                   children: (0, l.jsx)(o.snC, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: G.rulesIcon
+                                      className: j.rulesIcon
                                   })
                               }),
                               (0, l.jsx)('div', {
-                                  className: G.actionInfo,
+                                  className: j.actionInfo,
                                   children: (0, l.jsx)(o.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'header-primary',
-                                      children: C.NW.string(C.t['K/i3iY'])
+                                      children: _.NW.string(_.t['K/i3iY'])
                                   })
                               })
                           ]
