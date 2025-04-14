@@ -17938,6 +17938,8 @@
   "oItgEx": "$[!!{username}!!]({{usernameHook}}) changed the channel name: **!!{channelName}!!**",
   "rk0be3": "[!!{username}!!](!!{username}!!) changed the group name: **!!{channelName}!!**. [Edit group](Edit group)",
   "geP3ra": "$[!!{username}!!]({{usernameHook}}) changed the group name: **!!{channelName}!!**. [!!{editGroupButton}!!](!!{editGroupButton}!!)",
+  "hToFyc": "[!!{username}!!](!!{username}!!) removed the custom group name. [Edit group](Edit group)",
+  "AI1ZZm": "$[!!{username}!!]({{usernameHook}}) removed the custom group name. [!!{editGroupButton}!!](!!{editGroupButton}!!)",
   "UoHq/f": "Upgrade everyone in the VC session to HD Quality streaming, ensuring crystal-clear streams for your gaming session.",
   "AeU3uL": "HD Streaming",
   "N6rchI": "purple potion",
