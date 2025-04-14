@@ -1,4 +1,4 @@
-t.d(n, { Z: () => w }), t(953529);
+t.d(n, { Z: () => I }), t(953529);
 var r = t(200651),
     o = t(192379),
     s = t(120356),
@@ -8,8 +8,8 @@ var r = t(200651),
     c = t(377171),
     d = t(984370),
     u = t(430824),
-    m = t(713081),
-    p = t(905128),
+    p = t(713081),
+    m = t(905128),
     x = t(27237),
     _ = t(51859),
     v = t(953478),
@@ -22,18 +22,18 @@ var r = t(200651),
     C = t(680278),
     Z = t(388032),
     E = t(782285);
-let I = [j.Us.LEVEL, j.Us.PERK];
-function w(e) {
+let w = [j.Us.LEVEL, j.Us.PERK];
+function I(e) {
     let { guildId: n, powerupSkuId: t } = e,
         s = (0, h.ZP)(n);
     o.useEffect(() => {
-        (0, m.Sn)(n), (0, m.Fm)(n);
+        (0, p.Sn)(n), (0, p.Fm)(n);
     }, [n]),
         o.useEffect(() => {
             var e;
-            (0, m.jd)(n), null == s || null == (e = s.popout) || e.markAsDismissed(N.L.AUTO_DISMISS);
+            (0, p.jd)(n), null == s || null == (e = s.popout) || e.markAsDismissed(N.L.AUTO_DISMISS);
         }, [n, s]);
-    let w = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(n)),
+    let I = (0, a.e7)([m.Z], () => m.Z.getStateForGuild(n)),
         S = (0, a.e7)([u.Z], () => {
             var e;
             return (null == (e = u.Z.getGuild(n)) ? void 0 : e.hasFeature(b.oNc.INTERNAL_EMPLOYEE_ONLY)) === !0;
@@ -42,10 +42,10 @@ function w(e) {
     return (o.useEffect(() => {
         var e, r;
         if (null == t) return;
-        let o = null == w || null == (r = w.powerups) || null == (e = r.get) ? void 0 : e.call(r, t);
+        let o = null == I || null == (r = I.powerups) || null == (e = r.get) ? void 0 : e.call(r, t);
         null == o || T.current || ((0, g.KE)(n, o), (T.current = !0));
-    }, [n, t, null == w ? void 0 : w.powerups]),
-    (null == w ? void 0 : w.catalog) == null)
+    }, [n, t, null == I ? void 0 : I.powerups]),
+    (null == I ? void 0 : I.catalog) == null)
         ? null
         : (0, r.jsxs)('div', {
               className: E.container,
@@ -66,7 +66,7 @@ function w(e) {
                   (0, r.jsxs)('div', {
                       className: E.contentContainer,
                       children: [
-                          (0, r.jsxs)('div', {
+                          (0, r.jsxs)(l.zJl, {
                               className: E.powerupsContainer,
                               children: [
                                   S &&
@@ -92,8 +92,8 @@ function w(e) {
                                               })
                                           ]
                                       }),
-                                  I.map((e) => {
-                                      let t = w.catalog.get(e);
+                                  w.map((e) => {
+                                      let t = I.catalog.get(e);
                                       if (null == t) return;
                                       let { title: o, description: s } = (function (e) {
                                               switch (e) {
@@ -116,6 +116,7 @@ function w(e) {
                                               className: E.powerupsSection,
                                               children: [
                                                   (0, r.jsxs)('div', {
+                                                      className: E.powerupHorizontalPadding,
                                                       children: [
                                                           (0, r.jsxs)('div', {
                                                               className: E.headerContainer,
@@ -141,7 +142,7 @@ function w(e) {
                                                   }),
                                                   (0, r.jsx)(a, {
                                                       orientation: 'horizontal',
-                                                      className: i()(E.powerupContainer, { [E.powerupsLevelContainer]: e === j.Us.LEVEL }),
+                                                      className: i()(E.powerupContainer, E.powerupHorizontalPadding, { [E.powerupsLevelContainer]: e === j.Us.LEVEL }),
                                                       fade: !0,
                                                       children: t.map((e, o) => {
                                                           switch (e.type) {

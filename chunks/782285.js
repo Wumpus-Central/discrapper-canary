@@ -5,6 +5,7 @@ e.exports = {
     staffContainer: 'staffContainer__89463',
     staffHeader: 'staffHeader__89463',
     powerupsContainer: 'powerupsContainer__89463',
+    powerupHorizontalPadding: 'powerupHorizontalPadding__89463',
     sidebarContainer: 'sidebarContainer__89463',
     powerupsSection: 'powerupsSection__89463',
     headerContainer: 'headerContainer__89463',
