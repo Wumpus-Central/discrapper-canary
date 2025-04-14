@@ -9,16 +9,17 @@ var r = n(192379),
     s = n(695346),
     l = n(981631);
 function c(e, t) {
-    let n = null;
+    var n;
+    let r = null;
     if (null != t)
-        n = {
+        r = {
             id: t.id,
             name: t.name,
             animated: t.animated
         };
     else if (null != e.emojiName && '' !== e.emojiName) {
         let t = a.ZP.getByName(a.ZP.convertSurrogateToName(e.emojiName, !1));
-        n =
+        r =
             null != t
                 ? {
                       id: null,
@@ -27,13 +28,14 @@ function c(e, t) {
                   }
                 : null;
     }
-    let r = Number(e.expiresAtMs);
+    let i = Number(e.expiresAtMs);
     return {
         name: 'Custom Status',
         type: l.IIU.CUSTOM_STATUS,
         state: e.text.length > 0 ? e.text : void 0,
-        timestamps: r > 0 ? { end: r } : void 0,
-        emoji: n
+        timestamps: i > 0 ? { end: i } : void 0,
+        emoji: r,
+        metadata: { label: null == (n = e.label) ? void 0 : n.value }
     };
 }
 function u(e) {
