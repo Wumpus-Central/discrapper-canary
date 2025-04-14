@@ -1,7 +1,8 @@
 n.d(t, {
-    R: () => E,
-    Z: () => T
+    R: () => b,
+    Z: () => A
 }),
+    n(539854),
     n(388685);
 var r = n(392711),
     i = n.n(r),
@@ -11,8 +12,9 @@ var r = n(392711),
     l = n(810788),
     c = n(19780),
     u = n(115470),
-    d = n(531578);
-function f(e, t, n) {
+    d = n(681926),
+    f = n(531578);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +38,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,107 +55,125 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = 200,
-    g = {
+let g = 200,
+    E = {
         chance: 0.2,
         cooldown: 86400000
     },
-    E = {
-        [d.nw.VOICE]: h(_({}, g), {
+    b = {
+        [f.nw.VOICE]: m(p({}, E), {
+            group: f.FB.AV,
             hotspot: s.v6.VOICE_CALL_FEEDBACK,
             storageKey: 'lastVoiceFeedback',
-            eligibilityChecks: [I]
+            eligibilityChecks: [T]
         }),
-        [d.nw.STREAM]: h(_({}, g), {
+        [f.nw.STREAM]: m(p({}, E), {
+            group: f.FB.AV,
             hotspot: s.v6.REPORT_PROBLEM_POST_STREAM,
             storageKey: 'lastStreamFeedback'
         }),
-        [d.nw.VIDEO_BACKGROUND]: h(_({}, g), {
+        [f.nw.VIDEO_BACKGROUND]: m(p({}, E), {
+            group: f.FB.AV,
             hotspot: s.v6.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: 'lastVideoBackgroundFeedback'
         }),
-        [d.nw.ACTIVITY]: {
+        [f.nw.ACTIVITY]: {
             cooldown: 0,
             chance: 0.5,
+            group: f.FB.AV,
             hotspot: s.v6.POST_ACTIVITY_FEEDBACK,
             storageKey: 'lastActivityFeedback'
         },
-        [d.nw.IN_APP_REPORTS]: {
+        [f.nw.IN_APP_REPORTS]: {
             cooldown: 172800000,
             chance: 0.5,
+            group: f.FB.SOCIAL,
             hotspot: s.v6.IN_APP_REPORTS_FEEDBACK,
             storageKey: 'inAppReportsFeedback'
         },
-        [d.nw.USER_DM_MUTE]: {
+        [f.nw.USER_DM_MUTE]: {
             cooldown: 604800000,
             chance: 1,
+            group: f.FB.SOCIAL,
             hotspot: s.v6.USER_DM_MUTE_FEEDBACK,
             storageKey: 'userDmMute'
         },
-        [d.nw.BLOCK_USER]: {
+        [f.nw.BLOCK_USER]: {
             cooldown: 0,
             chance: 1,
+            group: f.FB.SOCIAL,
             hotspot: s.v6.BLOCK_USER_FEEDBACK,
             storageKey: 'blockUser'
         },
-        [d.nw.VOICE_FILTER]: h(_({}, g), {
+        [f.nw.VOICE_FILTER]: m(p({}, E), {
+            group: f.FB.AV,
             hotspot: s.v6.VOICE_FILTER_FEEDBACK,
             storageKey: 'lastVoiceFilterFeedback',
-            eligibilityChecks: [I]
+            eligibilityChecks: [T]
         })
     };
-function b(e) {
+function y(e) {
     var t, n;
     if (__OVERLAY__) return !1;
-    let r = null != (t = u.Z.getFeedbackConfig(e)) ? t : E[e],
-        i = [O, v, y],
-        o = null != (n = r.eligibilityChecks) ? n : [];
-    return i.every((e) => e(r)) && o.every((e) => e(r));
-}
-function y(e) {
-    return l.Z.hasHotspot(e.hotspot);
+    let r = null != (t = u.Z.getFeedbackConfig(e)) ? t : b[e],
+        i = [O, v],
+        { doGroupEligibilityCheck: o } = (0, d.T)({ location: 'FeedbackManager' });
+    o ? i.push(S) : i.push((e) => I(e, e));
+    let a = null != (n = r.eligibilityChecks) ? n : [];
+    return i.every((e) => e(r)) && a.every((e) => e(r));
 }
 function v(e) {
-    return Math.random() < e.chance;
+    return l.Z.hasHotspot(e.hotspot);
 }
 function O(e) {
-    if (null != e.storageKey) {
-        let t = o.K.get(e.storageKey);
-        if (null != t && Date.now() - t < e.cooldown) return !1;
+    return Math.random() < e.chance;
+}
+function I(e, t) {
+    if (null != e.storageKey && null != t.storageKey) {
+        let n = o.K.get(t.storageKey);
+        if (null != n) return Date.now() - n >= e.cooldown;
     }
     return !0;
 }
-function I(e) {
+function S(e) {
+    for (let t of Object.values(b).filter((t) => {
+        let { group: n } = t;
+        return n === e.group;
+    }))
+        if (!I(e, t)) return !1;
+    return !0;
+}
+function T(e) {
     return !c.Z.getWasEverRtcConnected() || c.Z.getWasEverMultiParticipant();
 }
-function S(e) {
-    let t = E[e];
+function N(e) {
+    let t = b[e];
     null != t.storageKey && o.K.set(t.storageKey, Date.now());
 }
-class T extends a.Z {
+class A extends a.Z {
     possiblyShowFeedbackModal(e, t) {
-        b(e) && (null == this.feedbackTypeToShow || !(d.b5[this.feedbackTypeToShow] < d.b5[e])) && ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t));
+        y(e) && (null == this.feedbackTypeToShow || !(f.b5[this.feedbackTypeToShow] < f.b5[e])) && ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t));
     }
     constructor(...e) {
         super(...e),
-            f(this, 'feedbackTypeToShow', null),
-            f(
+            _(this, 'feedbackTypeToShow', null),
+            _(
                 this,
                 'showFeedbackModalDebounced',
                 i().debounce((e) => {
-                    null != this.feedbackTypeToShow && (S(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e());
-                }, m)
+                    null != this.feedbackTypeToShow && (N(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e());
+                }, g)
             );
     }
 }
