@@ -800,7 +800,8 @@ let A = Object.freeze({
         IGNORE_USER: (t) => '/users/@me/relationships/'.concat(t, '/ignore'),
         SCHEDULED_MESSAGES: '/users/@me/scheduled-messages',
         SCHEDULED_MESSAGE: (t) => '/users/@me/scheduled-messages/'.concat(t),
-        HOLIDAY_REDEEM_PRIZE: '/holidays/redeem-prize'
+        HOLIDAY_REDEEM_PRIZE: '/holidays/redeem-prize',
+        APPLIED_BOOST_MODIFY_END_DATE: (t) => '/debug/applied-boosts/'.concat(t, '/ends-at')
     }),
     f = Object.freeze({
         INDEX: '/',
