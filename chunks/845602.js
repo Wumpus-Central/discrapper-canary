@@ -96,7 +96,8 @@ function C() {
                         primary_color: e[0],
                         secondary_color: e[1],
                         tertiary_color: void 0
-                    })
+                    }),
+                isGradient: !0
             })
         ]
     });
