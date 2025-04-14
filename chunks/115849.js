@@ -86,41 +86,42 @@ function S(e, t) {
             });
     }
 }
-function T() {
-    let e = i.createRef(),
-        t = i.createRef(),
-        [n, l] = i.useReducer(S, y),
-        { canSend: o, hint: d, success: E, error: O } = n,
-        T = (0, p.Q3)('AddFriendInput');
+function T(e) {
+    let { placeholder: t = m.NW.string(m.t['Rn/sLi']) } = e,
+        n = i.createRef(),
+        l = i.createRef(),
+        [o, d] = i.useReducer(S, y),
+        { canSend: E, hint: O, success: T, error: P } = o,
+        j = (0, p.Q3)('AddFriendInput');
     return (
         i.useEffect(() => {
-            null != E && (s()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
-        }, [E, e]),
+            null != T && (s()(null != n.current, 'Input is submitting when not mounted'), (n.current.value = ''), n.current.focus());
+        }, [T, n]),
         (0, r.jsxs)('form', {
-            onSubmit: (t) => {
-                t.preventDefault(), s()(null != e.current, 'Input is submitted when not mounted');
-                let n = e.current.value.trim();
-                !n.includes('#') && n.startsWith('@') && (n = n.substring(1));
-                let r = (0, h.Zy)(n);
+            onSubmit: (e) => {
+                e.preventDefault(), s()(null != n.current, 'Input is submitted when not mounted');
+                let t = n.current.value.trim();
+                !t.includes('#') && t.startsWith('@') && (t = t.substring(1));
+                let r = (0, h.Zy)(t);
                 if (null != r)
-                    return void l({
+                    return void d({
                         type: 'ERROR',
                         text: r
                     });
                 u.Z.sendRequest({
-                    discordTag: n,
+                    discordTag: t,
                     context: { location: 'Add Friend' }
                 }).then(
                     () =>
-                        l({
+                        d({
                             type: 'SUCCESS',
-                            text: m.NW.format(m.t.Rtl1Eh, { discordTag: n })
+                            text: m.NW.format(m.t.Rtl1Eh, { discordTag: t })
                         }),
                     (e) => {
-                        var t;
-                        return l({
+                        var n;
+                        return d({
                             type: 'ERROR',
-                            text: (0, h.NF)(null == (t = e.body) ? void 0 : t.code, n)
+                            text: (0, h.NF)(null == (n = e.body) ? void 0 : n.code, t)
                         });
                     }
                 );
@@ -139,7 +140,7 @@ function T() {
                                 children: m.NW.string(m.t['Rn/sLi'])
                             })
                         }),
-                        T
+                        j
                             ? (0, r.jsx)('img', {
                                   src: N,
                                   alt: 'Wumpus Waving'
@@ -148,38 +149,38 @@ function T() {
                     ]
                 }),
                 (0, r.jsx)(c.tEY, {
-                    focusTarget: e,
-                    ringTarget: t,
+                    focusTarget: n,
+                    ringTarget: l,
                     ringClassName: b.ring,
                     children: (0, r.jsxs)('div', {
-                        ref: t,
+                        ref: l,
                         className: a()(b.addFriendInputWrapper, {
-                            [b.success]: E,
-                            [b.error]: O
+                            [b.success]: T,
+                            [b.error]: P
                         }),
                         children: [
                             (0, r.jsx)(c.oil, {
                                 id: I,
-                                inputRef: e,
+                                inputRef: n,
                                 className: b.addFriendInput,
                                 inputClassName: b.input,
-                                onKeyPress: (t) => {
-                                    let n = t.currentTarget.value;
-                                    if (t.key !== g.mR.Enter && n.includes('#')) {
-                                        s()(null != e.current, 'Input is handling keypress when not mounted');
-                                        let r = n.indexOf('#'),
-                                            i = e.current.selectionStart,
-                                            l = t.key === g.mR.Backspace || t.key === g.mR.ArrowRight || t.key === g.mR.ArrowLeft,
-                                            a = t.which >= 48 && t.which <= 57;
-                                        null != i && i > r && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null == i || !(i > r) || a || l || t.preventDefault();
+                                onKeyPress: (e) => {
+                                    let t = e.currentTarget.value;
+                                    if (e.key !== g.mR.Enter && t.includes('#')) {
+                                        s()(null != n.current, 'Input is handling keypress when not mounted');
+                                        let r = t.indexOf('#'),
+                                            i = n.current.selectionStart,
+                                            l = e.key === g.mR.Backspace || e.key === g.mR.ArrowRight || e.key === g.mR.ArrowLeft,
+                                            a = e.which >= 48 && e.which <= 57;
+                                        null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l ? e.preventDefault() : null == i || !(i > r) || a || l || e.preventDefault();
                                     }
                                 },
                                 onChange: (e) => {
-                                    if (e.length <= 0) return void l({ type: 'RESET' });
+                                    if (e.length <= 0) return void d({ type: 'RESET' });
                                     let t = '',
                                         [, n] = e.split('#');
                                     null != n && (t = e + f.LYt.slice(null != n ? n.length + 1 : 0)),
-                                        l({
+                                        d({
                                             type: 'HINT',
                                             text: t
                                         });
@@ -191,40 +192,40 @@ function T() {
                                 'data-form-type': 'other',
                                 'data-lpignore': !0,
                                 'data-1p-ignore': !0,
-                                placeholder: m.NW.string(m.t['Rn/sLi']),
-                                'aria-label': m.NW.string(m.t['Rn/sLi']),
-                                'aria-invalid': null != O || void 0,
-                                'aria-describedby': null != O ? C : v
+                                placeholder: t,
+                                'aria-label': t,
+                                'aria-invalid': null != P || void 0,
+                                'aria-describedby': null != P ? C : v
                             }),
-                            null != d &&
+                            null != O &&
                                 (0, r.jsx)('div', {
                                     className: b.addFriendHint,
                                     'aria-hidden': !0,
-                                    children: d
+                                    children: O
                                 }),
                             (0, r.jsx)(c.zxk, {
                                 size: c.zxk.Sizes.SMALL,
-                                disabled: !o,
+                                disabled: !E,
                                 type: 'submit',
                                 children: m.NW.string(m.t['PMsq/f'])
                             })
                         ]
                     })
                 }),
-                null != O &&
+                null != P &&
                     (0, r.jsx)(c.R94, {
                         role: 'alert',
                         id: C,
                         type: c.R94.Types.ERROR,
                         className: _.marginTop8,
-                        children: O
+                        children: P
                     }),
-                null != E &&
+                null != T &&
                     (0, r.jsx)(c.R94, {
                         role: 'status',
                         type: c.R94.Types.SUCCESS,
                         className: _.marginTop8,
-                        children: E
+                        children: T
                     })
             ]
         })
