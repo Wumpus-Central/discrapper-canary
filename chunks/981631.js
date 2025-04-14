@@ -1030,6 +1030,7 @@ let A = Object.freeze({
         VOICE: 'Voice & Video',
         PRIVACY_AND_SAFETY: 'Privacy & Safety',
         CONTENT_AND_SOCIAL: 'Content & Social',
+        CONNECTED_GAMES: 'Connected Games',
         DATA_AND_PRIVACY: 'Data & Privacy',
         ACCOUNT_STANDING: 'Account Standing',
         NOTIFICATIONS: 'Notifications',

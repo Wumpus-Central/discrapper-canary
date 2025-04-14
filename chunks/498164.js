@@ -158,7 +158,9 @@ let w = {
         }
     },
     [A.Etm.DEEP_LINK]: {
-        scope: j.cE,
+        scope: {
+            [j.Gp.ANY]: [j.cE, j.lH]
+        },
         handler(e) {
             let {
                 args: { type: t, params: n }
