@@ -295,7 +295,18 @@ let I = {
                 onCheckoutSuccess: i,
                 analyticsLocations: a,
                 analyticsSourceLocation: s,
-                children: (0, r.jsx)(o.KB, { children: (0, r.jsx)(Z, S({ skuId: t }, l)) })
+                children: (0, r.jsx)(o.KB, {
+                    children: (0, r.jsx)(
+                        Z,
+                        S(
+                            {
+                                skuId: t,
+                                analyticsLocations: a
+                            },
+                            l
+                        )
+                    )
+                })
             })
         });
     };

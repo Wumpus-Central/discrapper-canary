@@ -1,17 +1,16 @@
-n.d(t, { Z: () => g }), n(388685), n(539854);
+n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
     a = n(481060),
     s = n(835473),
     l = n(925329),
-    c = n(372460),
-    u = n(699516),
-    d = n(594174),
-    f = n(981631),
-    _ = n(998587);
-let p = [];
-function h(e, t) {
+    c = n(699516),
+    u = n(594174),
+    d = n(981631),
+    f = n(998587);
+let _ = [];
+function p(e, t) {
     let n = (0, s.Z)(e, t);
     return i.useMemo(() => {
         let e = new Map();
@@ -23,10 +22,10 @@ function h(e, t) {
         );
     }, [n]);
 }
-function m(e) {
+function h(e) {
     let { application: t } = e;
     return (0, r.jsxs)('div', {
-        className: _.subtext,
+        className: f.subtext,
         children: [
             (0, r.jsx)(l.Z, {
                 game: t,
@@ -36,49 +35,48 @@ function m(e) {
         ]
     });
 }
-function g(e) {
-    let { menuItemId: t, user: n, label: s, gameRelationships: _, onClick: g, color: E } = e,
-        { id: b, bot: y } = n,
-        v = (0, o.e7)([d.default], () => {
-            var e;
-            return (null == (e = d.default.getCurrentUser()) ? void 0 : e.id) === b;
-        }),
-        O = (0, c.wn)({ location: 'useAcceptGameFriendRequest' }),
-        I = v || y || !O,
-        S = I ? p : _,
-        [T, N] = i.useState(!1),
-        A = i.useCallback(() => N(!0), []),
-        C = i.useMemo(
+function m(e) {
+    let { menuItemId: t, user: n, label: s, gameRelationships: f, onClick: m, color: g } = e,
+        { id: E, bot: b } = n,
+        y =
+            (0, o.e7)([u.default], () => {
+                var e;
+                return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
+            }) || b,
+        v = y ? _ : f,
+        [O, I] = i.useState(!1),
+        S = i.useCallback(() => I(!0), []),
+        T = i.useMemo(
             () =>
-                S.map((e) => {
+                v.map((e) => {
                     let { applicationId: t } = e;
                     return t;
                 }),
-            [S]
+            [v]
         ),
-        R = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(b), [b]),
-        P = h(C, T || 1 === S.length);
-    if (I || 0 === S.length || R === f.OGo.FRIEND) return null;
-    if (1 === S.length) {
-        let { applicationId: e } = S[0],
-            n = P.get(e);
+        N = (0, o.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
+        A = p(T, O || 1 === v.length);
+    if (y || 0 === v.length || N === d.OGo.FRIEND) return null;
+    if (1 === v.length) {
+        let { applicationId: e } = v[0],
+            n = A.get(e);
         return null == n
             ? null
             : (0, r.jsx)(a.sNh, {
-                  color: E,
+                  color: g,
                   id: t,
                   label: s,
-                  subtext: (0, r.jsx)(m, { application: n }),
-                  onFocus: A,
-                  action: () => g(n)
+                  subtext: (0, r.jsx)(h, { application: n }),
+                  onFocus: S,
+                  action: () => m(n)
               });
     }
-    let w = [];
-    return (S.forEach((e) => {
+    let C = [];
+    return (v.forEach((e) => {
         let { applicationId: t } = e,
-            n = P.get(t);
+            n = A.get(t);
         null != n &&
-            w.push(
+            C.push(
                 (0, r.jsx)(
                     a.sNh,
                     {
@@ -88,19 +86,19 @@ function g(e) {
                             game: n,
                             size: l.Z.Sizes.XXSMALL
                         }),
-                        action: () => g(n)
+                        action: () => m(n)
                     },
                     t
                 )
             );
     }),
-    0 === w.length)
+    0 === C.length)
         ? null
         : (0, r.jsx)(a.sNh, {
-              color: E,
+              color: g,
               id: t,
               label: s,
-              onFocus: A,
-              children: w
+              onFocus: S,
+              children: C
           });
 }

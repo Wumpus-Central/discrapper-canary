@@ -1,19 +1,18 @@
-t.d(n, { Z: () => j });
+t.d(n, { Z: () => h });
 var r = t(200651);
 t(192379);
 var o = t(481060),
     i = t(194359),
     l = t(906732),
-    s = t(372460),
-    c = t(475413),
-    a = t(934861),
-    d = t(156518),
-    u = t(690501),
-    f = t(562831),
-    p = t(981631),
-    b = t(388032),
-    m = t(940427);
-function I(e) {
+    s = t(475413),
+    c = t(934861),
+    a = t(156518),
+    d = t(690501),
+    u = t(562831),
+    f = t(981631),
+    p = t(388032),
+    b = t(940427);
+function m(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -56,7 +55,7 @@ function g(e, n) {
         e
     );
 }
-function y(e) {
+function I(e) {
     var { user: n, analyticsLocation: t } = e,
         o = (function (e, n) {
             if (null == e) return {};
@@ -77,120 +76,119 @@ function y(e) {
             }
             return o;
         })(e, ['user', 'analyticsLocation']);
-    let i = (0, d.Y)({
+    let i = (0, a.Y)({
         user: n,
         analyticsLocation: t
     });
     return 0 === i.length
-        ? (0, r.jsx)(c.ef, g(I({}, o), { disabled: !0 }))
-        : (0, r.jsx)(d.Z, {
+        ? (0, r.jsx)(s.ef, g(m({}, o), { disabled: !0 }))
+        : (0, r.jsx)(a.Z, {
               menuItems: i,
-              children: (e) => (0, r.jsx)('div', g(I({}, e), { children: (0, r.jsx)(c.ef, I({}, o)) }))
+              children: (e) => (0, r.jsx)('div', g(m({}, e), { children: (0, r.jsx)(s.ef, m({}, o)) }))
           });
 }
-function h(e) {
+function y(e) {
     let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: o, user: i, analyticsLocation: l } = e,
         {
             onMouseEnter: s,
             ariaLabel: c,
             tooltipText: a,
-            icon: d
-        } = (0, u.N)({
+            icon: u
+        } = (0, d.N)({
             gameFriends: n,
             hasIncomingPendingGameFriends: t,
             hasOutgoingPendingGameFriends: o
         });
-    return (0, r.jsx)(y, {
+    return (0, r.jsx)(I, {
         tooltipText: a,
         ariaLabel: c,
-        icon: d,
+        icon: u,
         onMouseEnter: s,
         user: i,
         analyticsLocation: l
     });
 }
-function j(e) {
-    let { isCurrentUser: n, user: t, relationshipType: d, friendToken: u, onClose: I } = e,
+function h(e) {
+    let { isCurrentUser: n, user: t, relationshipType: a, friendToken: d, onClose: m } = e,
         { newestAnalyticsLocation: g } = (0, l.ZP)(),
-        j = (0, s.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
-        { gameFriends: v, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: _ } = (0, f.H)({ userId: t.id }),
-        O = v.length > 0 || x || _;
-    return n || d === p.OGo.BLOCKED
+        { gameFriends: h, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: v } = (0, u.H)({ userId: t.id }),
+        x = h.length > 0 || j || v;
+    return n || a === f.OGo.BLOCKED
         ? null
-        : d === p.OGo.FRIEND || t.bot
+        : a === f.OGo.FRIEND || t.bot
           ? (0, r.jsx)('div', {
-                className: m.multipleButtons,
-                children: (0, r.jsx)(a.c, {
+                className: b.multipleButtons,
+                children: (0, r.jsx)(c.c, {
                     userId: t.id,
-                    onClose: I
+                    onClose: m
                 })
             })
-          : d === p.OGo.NONE && j && O
+          : a === f.OGo.NONE && x
             ? (0, r.jsxs)('div', {
-                  className: m.multipleButtons,
+                  className: b.multipleButtons,
                   children: [
-                      (0, r.jsx)(h, {
+                      (0, r.jsx)(y, {
                           user: t,
                           analyticsLocation: g,
-                          gameFriends: v,
-                          hasIncomingPendingGameFriends: _,
-                          hasOutgoingPendingGameFriends: x
+                          gameFriends: h,
+                          hasIncomingPendingGameFriends: v,
+                          hasOutgoingPendingGameFriends: j
                       }),
-                      (0, r.jsx)(a.c, {
+                      (0, r.jsx)(c.c, {
                           userId: t.id,
-                          onClose: I
+                          onClose: m
                       })
                   ]
               })
-            : d === p.OGo.PENDING_OUTGOING
+            : a === f.OGo.PENDING_OUTGOING
               ? (0, r.jsxs)('div', {
-                    className: m.multipleButtons,
+                    className: b.multipleButtons,
                     children: [
-                        (0, r.jsx)(y, {
+                        (0, r.jsx)(I, {
                             icon: o.iHX,
-                            tooltipText: b.NW.string(b.t.zz2i8v),
+                            tooltipText: p.NW.string(p.t.zz2i8v),
                             user: t,
                             analyticsLocation: g
                         }),
-                        (0, r.jsx)(a.c, {
+                        (0, r.jsx)(c.c, {
                             userId: t.id,
-                            onClose: I
+                            onClose: m
                         })
                     ]
                 })
-              : d === p.OGo.PENDING_INCOMING
+              : a === f.OGo.PENDING_INCOMING
                 ? (0, r.jsxs)('div', {
-                      className: m.multipleButtons,
+                      className: b.multipleButtons,
                       children: [
-                          (0, r.jsx)(y, {
+                          (0, r.jsx)(I, {
                               icon: o.iHX,
-                              tooltipText: b.NW.string(b.t.ZOFd1N),
+                              tooltipText: p.NW.string(p.t.ZOFd1N),
                               user: t,
                               analyticsLocation: g
                           }),
-                          (0, r.jsx)(a.c, {
+                          (0, r.jsx)(c.c, {
                               userId: t.id,
-                              onClose: I
+                              onClose: m
                           })
                       ]
                   })
                 : (0, r.jsxs)('div', {
-                      className: m.multipleButtons,
+                      className: b.multipleButtons,
                       children: [
-                          (0, r.jsx)(a.v, {
+                          (0, r.jsx)(c.v, {
                               userId: t.id,
-                              onClose: I
+                              onClose: m
                           }),
-                          (0, r.jsx)(c.tG, {
+                          (0, r.jsx)(s.tG, {
                               action: 'SEND_FRIEND_REQUEST',
                               icon: o.oLu,
-                              text: b.NW.string(b.t['7815aW']),
+                              text: p.NW.string(p.t['7815aW']),
                               color: o.zxk.Colors.BRAND,
                               onClick: () => {
                                   i.Z.addRelationship({
                                       userId: t.id,
                                       context: { location: g },
-                                      friendToken: u
+                                      friendToken: d
                                   });
                               }
                           })
