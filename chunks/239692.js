@@ -19,6 +19,7 @@ e.exports = {
     redGlow: 'redGlow__37e49',
     voiceFilterWarning: 'voiceFilterWarning__37e49',
     buttons: 'buttons__37e49',
+    containerRtcOpened: 'containerRtcOpened__37e49',
     buttonChevronIcon: 'buttonChevronIcon__37e49',
     iconForeground: 'iconForeground__37e49',
     plated: 'plated__37e49'

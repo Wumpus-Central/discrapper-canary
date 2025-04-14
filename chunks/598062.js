@@ -1,15 +1,16 @@
 n.d(t, {
-    PW: () => a,
-    XD: () => o,
-    i5: () => i
+    AK: () => l,
+    PW: () => s,
+    XD: () => a,
+    i5: () => o
 });
 var r = n(818083),
-    l = n(987338);
-let i = (0, r.B)({
+    i = n(987338);
+let o = (0, r.B)({
         kind: 'user',
         id: '2025-02_name_plate_experiment',
         label: 'Nameplates Experiment',
-        commonTriggerPoint: l.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         defaultConfig: {
             canView: !1,
             canViewAll: !1,
@@ -36,5 +37,6 @@ let i = (0, r.B)({
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !1 }).canView,
-    a = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !1 }).canViewAll;
+    a = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !1 }).canView,
+    s = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !1 }).canViewAll,
+    l = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !1 }).hasUpdatedDMBehavior;
