@@ -96,7 +96,7 @@ let H = [s.ZD.LEAF, s.ZD.SWORD, s.ZD.HEART, s.ZD.FIRE, s.ZD.WATER_DROP, s.ZD.SKU
                 children: (0, C.jsx)(D.$jN, {})
             });
         if (null == G || null == a) return null;
-        let N = (0, E.u)(G),
+        let N = (0, E.up)(G),
             i = !N || (null == a ? void 0 : a.tag) == null,
             K = null != (A = a.badge) ? A : H[0],
             y = null != (g = a.badgeColorPrimary) ? g : b[0].primary,

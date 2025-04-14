@@ -54,8 +54,8 @@ var r,
     E = n(375924),
     k = n(596136),
     P = n(341901),
-    I = n(856308),
-    w = n(665352),
+    w = n(856308),
+    I = n(665352),
     R = n(394900),
     Z = n(661105),
     L = n(525169),
@@ -131,10 +131,10 @@ let U = {
         REC_2100_HLG: E.Z,
         REC_2100_PQ: k.Z,
         XYZ_D50: P.Z,
-        XYZ_D65: I.Z
+        XYZ_D65: w.Z
     },
     G = Object.fromEntries(Object.keys(U).map((e) => [e, e]));
-Object.values(U).forEach((e) => w.Z.register(e));
+Object.values(U).forEach((e) => I.Z.register(e));
 let { SemanticColors: F } = D.V,
     W = F,
     H = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');

@@ -62,10 +62,10 @@ function N() {
         r
     );
 }
-function E() {
+function I() {
     h.clear(), v.clear(), j.clear();
 }
-class I extends (r = o.ZP.Store) {
+class E extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, m.default, p.Z, f.Z), this.syncWith([m.default], N);
     }
@@ -83,23 +83,23 @@ class I extends (r = o.ZP.Store) {
     }
 }
 (i = 'RTCConnectionDesyncStore'),
-    (l = 'displayName') in I
-        ? Object.defineProperty(I, l, {
+    (l = 'displayName') in E
+        ? Object.defineProperty(E, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (I[l] = i);
-let Z = new I(s.Z, {
+        : (E[l] = i);
+let Z = new E(s.Z, {
     CONNECTION_OPEN: function () {
-        E();
+        I();
     },
-    VOICE_CHANNEL_SELECT: E,
+    VOICE_CHANNEL_SELECT: I,
     RTC_CONNECTION_STATE: function (e) {
         let { state: t, context: n } = e;
         if (n !== a.Yn.DEFAULT || t !== O.hes.DISCONNECTED) return !1;
-        E();
+        I();
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,

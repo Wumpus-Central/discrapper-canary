@@ -27,8 +27,8 @@ var r = n(200651),
     E = n(789086),
     k = n(206583),
     P = n(403542),
-    I = n(616257);
-let w = [
+    w = n(616257);
+let I = [
     {
         key: 'type',
         cellClassName: i()(P.cell, P.cellType),
@@ -128,7 +128,7 @@ function Z() {
         B = (0, b.Z)(z).filter(y.lm),
         M = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, r.jsx)('div', {
-        className: I.panel,
+        className: w.panel,
         children: (0, r.jsxs)(x.zJl, {
             className: P.content,
             children: [
@@ -137,7 +137,7 @@ function Z() {
                         (0, r.jsx)(x.vwX, { children: 'Inventory' }),
                         o.length > 0 &&
                             (0, r.jsx)(_.Z, {
-                                columns: w,
+                                columns: I,
                                 data: o
                             }),
                         (0, r.jsx)(x.LZC, { size: 8 }),

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => c });
 var r = n(570140),
     i = n(149071),
     l = n(9156);
-let o = {
+let c = {
     update(e) {
         r.Z.dispatch({
             type: 'CHANNEL_COLLAPSE',

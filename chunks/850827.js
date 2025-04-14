@@ -22,8 +22,8 @@ var l = n(120356),
     S = n(606925),
     P = n(719216),
     N = n(429589),
-    E = n(636245),
-    I = n(697761),
+    I = n(636245),
+    E = n(697761),
     Z = n(611459),
     x = n(544671),
     C = n(757182),
@@ -57,8 +57,8 @@ let L = (e) => {
                 return a()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
             }),
             Y = R === j.Y.STREAM_PREVIEW || null != o,
-            B = (0, h.Z)(t),
-            G = B || Y ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
+            G = (0, h.Z)(t),
+            B = G || Y ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === A.bO) {
             var z, H;
             return (
@@ -114,11 +114,11 @@ let L = (e) => {
                 })
             );
         }
-        let J = G === f.Z.Direction.VERTICAL;
+        let J = B === f.Z.Direction.VERTICAL;
         return (0, r.jsx)(f.Z, {
             grow: 0,
             align: f.Z.Align.STRETCH,
-            direction: G,
+            direction: B,
             wrap: J ? f.Z.Wrap.WRAP : f.Z.Wrap.NO_WRAP,
             className: i()(u, k.buttonsWrapper, J ? k.vertical : k.horizontal),
             children: (() => {
@@ -146,7 +146,7 @@ let L = (e) => {
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if (B) {
+                if (G) {
                     let e = (0, r.jsx)(
                             x.Z,
                             {
@@ -182,7 +182,7 @@ let L = (e) => {
                     return null == e
                         ? null
                         : (0, r.jsx)(
-                              E.Z,
+                              I.Z,
                               {
                                   guildId: e.guildId,
                                   channelId: e.channelId,
@@ -230,7 +230,7 @@ let L = (e) => {
                                   'join-activity-button'
                               ),
                               (0, r.jsx)(
-                                  I.Z,
+                                  E.Z,
                                   {
                                       activity: t,
                                       user: l,

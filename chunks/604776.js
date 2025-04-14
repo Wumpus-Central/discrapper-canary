@@ -116,15 +116,15 @@ function N() {
         [N, S] = a.useState([]),
         [T, E] = a.useState([]),
         k = async (e) => {
-            await j(e), await w();
+            await j(e), await I();
         },
         P = async (e) => {
-            await y(e), await w();
-        },
-        I = async () => {
-            await C(), await w();
+            await y(e), await I();
         },
         w = async () => {
+            await C(), await I();
+        },
+        I = async () => {
             try {
                 t(!0);
                 let e = await v();
@@ -137,7 +137,7 @@ function N() {
         Z = (e) => e.filter((e) => Object.values(o.a).includes(e.skuId) && null == e.startsAt);
     return (
         a.useEffect(() => {
-            w();
+            I();
         }, []),
         a.useEffect(() => {
             S(R(m)), E(Z(m));
@@ -231,7 +231,7 @@ function N() {
                                                 size: c.zxk.Sizes.TINY,
                                                 color: c.zxk.Colors.PRIMARY,
                                                 look: c.zxk.Looks.OUTLINED,
-                                                onClick: () => I(),
+                                                onClick: () => w(),
                                                 children: 'Run fulfillment'
                                             }),
                                             (0, r.jsx)(c.zxk, {
@@ -246,7 +246,7 @@ function N() {
                                                 disabled: e,
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.ICON,
-                                                onClick: w,
+                                                onClick: I,
                                                 children: (0, r.jsx)('span', {
                                                     title: 'Refresh',
                                                     children: (0, r.jsx)(c.DuK, {

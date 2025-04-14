@@ -36,6 +36,6 @@ function u(e) {
             );
             return () => clearTimeout(e);
         }, [O, g, f]),
-        y
+        f ? O : y
     );
 }
