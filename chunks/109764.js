@@ -10,17 +10,19 @@ var r = n(852229),
     c = n(981631),
     s = n(388032);
 function f(e, t, n) {
-    let f = (0, a.e7)([u.Z], () => u.Z.getChannel(e.parent_id));
-    return (0, i.jsx)(l.sNh, {
-        id: 'channel-copy-link',
-        label: s.NW.string(s.t.WqhZsr),
-        action: () => {
-            e.isForumPost() &&
-                (0, o.B)({
-                    postId: e.id,
-                    location: { section: c.jXE.CONTEXT_MENU }
-                }),
-                (0, r.J)((0, d.EO)(e, f, t, n));
-        }
-    });
+    let f = (0, a.e7)([u.Z], () => (null != e ? u.Z.getChannel(e.parent_id) : null));
+    return null == e
+        ? null
+        : (0, i.jsx)(l.sNh, {
+              id: 'channel-copy-link',
+              label: s.NW.string(s.t.WqhZsr),
+              action: () => {
+                  e.isForumPost() &&
+                      (0, o.B)({
+                          postId: e.id,
+                          location: { section: c.jXE.CONTEXT_MENU }
+                      }),
+                      (0, r.J)((0, d.EO)(e, f, t, n));
+              }
+          });
 }
