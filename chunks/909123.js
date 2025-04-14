@@ -22,9 +22,13 @@ class u extends r.Z {
     handleSelectedGuildChange() {
         let e = o.Z.getGuildId();
         if (null == e) return;
-        let t = i.Z.getGuild(e),
-            n = (0, l.gV)(null == t ? void 0 : t.id, 'GuildPowerupsManager');
-        null != t && n && (s.Z.shouldFetchCatalogForGuild(e) && (0, a.Sn)(e), s.Z.shouldFetchPowerupsForGuild(e) && (0, a.Fm)(e));
+        let t = i.Z.getGuild(e);
+        null != t &&
+            (l.ZP.trackExposure({
+                guildId: t.id,
+                location: 'GuildPowerupsManager'
+            }),
+            (0, l.gV)(t.id, 'GuildPowerupsManager') && (s.Z.shouldFetchCatalogForGuild(e) && (0, a.Sn)(e), s.Z.shouldFetchPowerupsForGuild(e) && (0, a.Fm)(e)));
     }
     handleEntitlementUpdate(e) {
         let { guildId: t } = e;
