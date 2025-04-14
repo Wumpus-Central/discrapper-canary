@@ -1,4 +1,5 @@
 n.d(t, {
+    PW: () => a,
     XD: () => o,
     i5: () => i
 });
@@ -10,8 +11,8 @@ let i = (0, r.B)({
         label: 'Nameplates Experiment',
         commonTriggerPoint: l.$P.CONNECTION_OPEN,
         defaultConfig: {
-            canSee: !1,
-            canSeeOffline: !1,
+            canView: !1,
+            canViewAll: !1,
             hasUpdatedDMBehavior: !1
         },
         treatments: [
@@ -19,8 +20,8 @@ let i = (0, r.B)({
                 id: 1,
                 label: 'Can see',
                 config: {
-                    canSee: !0,
-                    canSeeOffline: !1,
+                    canView: !0,
+                    canViewAll: !1,
                     hasUpdatedDMBehavior: !1
                 }
             },
@@ -28,11 +29,12 @@ let i = (0, r.B)({
                 id: 2,
                 label: 'Can see (updated)',
                 config: {
-                    canSee: !0,
-                    canSeeOffline: !0,
+                    canView: !0,
+                    canViewAll: !0,
                     hasUpdatedDMBehavior: !0
                 }
             }
         ]
     }),
-    o = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !1 }).canSee;
+    o = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !1 }).canView,
+    a = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !1 }).canViewAll;
