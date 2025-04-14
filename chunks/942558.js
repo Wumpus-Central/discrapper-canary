@@ -1,7 +1,8 @@
 e.exports = {
     footer: 'footer__6be55',
+    preview: 'preview__6be55',
     guildRow: 'guildRow__6be55',
-    guildAsset: 'guildAsset__6be55',
+    inviteIcon: 'inviteIcon__6be55',
     inviteTarget: 'inviteTarget__6be55',
     inviteTargetIcon: 'inviteTargetIcon__6be55',
     inviteTargetHeading: 'inviteTargetHeading__6be55',
