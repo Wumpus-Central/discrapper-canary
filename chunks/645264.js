@@ -1,69 +1,74 @@
-n.r(t), n.d(t, { default: () => f });
-var i = n(200651),
-    r = n(192379),
+n.d(t, { default: () => g });
+var r = n(200651),
+    i = n(192379),
     l = n(215569),
     o = n(481060),
-    a = n(852860),
-    s = n(313201),
+    s = n(852860),
+    a = n(313201),
     c = n(944163),
-    d = n(266395),
-    u = n(187565),
+    u = n(266395),
+    d = n(187565),
     m = n(200305),
-    x = n(592286),
+    f = n(592286),
     h = n(388032),
-    b = n(916199);
-let g = () =>
-        (0, i.jsx)(a.Z, {
+    p = n(916199);
+let b = () =>
+        (0, r.jsx)(s.Z, {
             submitting: !1,
             message: h.NW.string(h.t['8g514e']),
             onReset: () => {
-                (0, d.PE)(!1);
+                (0, u.PE)(!1);
             },
             onResetText: h.NW.string(h.t['ETE/oK']),
             onSave: () => {
-                (0, d.PE)(!1), (0, o.Mr3)(x.Pn);
+                (0, u.PE)(!1), (0, o.Mr3)(f.Pn);
             },
             onSaveText: h.NW.string(h.t['Xt+UaW']),
             onSaveButtonColor: o.Ttl.RED
         }),
-    f = (e) => {
-        let { guildId: t, transitionState: n, onClose: a, onComplete: x, inviteKey: h, isPreview: f = !1 } = e,
-            p = (0, d.rb)((e) => e.shouldShowWarning),
-            { hasFetched: j, verificationForm: _ } = (0, u.ng)(t, f, h),
-            v = (0, s.Dt)();
-        return (r.useEffect(() => {
-            j && _ === c.t && a();
-        }, [j, a, _]),
-        _ === c.t)
+    g = (e) => {
+        let { transitionState: t, guildId: n, onClose: s, onComplete: f, inviteKey: h, isPreview: g = !1 } = e,
+            x = (0, u.rb)((e) => e.shouldShowWarning),
+            { verificationForm: j, hasFetched: v } = (0, d.ng)(n, g, h),
+            N = (0, a.Dt)();
+        return (i.useEffect(() => {
+            v && j === c.t && s();
+        }, [v, s, j]),
+        j === c.t)
             ? null
-            : (0, i.jsxs)(i.Fragment, {
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, i.jsxs)(o.Y0X, {
-                          size: o.CgR.MEDIUM,
-                          className: b.container,
-                          transitionState: n,
-                          'aria-labelledby': v,
+                      (0, r.jsxs)(o.Y0X, {
+                          transitionState: t,
+                          'aria-labelledby': N,
+                          size: o.CgR.DYNAMIC,
+                          className: p.container,
+                          hideShadow: !0,
                           children: [
-                              (0, i.jsx)(o.olH, {
-                                  onClick: () => a(!1),
-                                  className: b.closeButton
+                              (0, r.jsx)('div', {
+                                  className: p.closeButton,
+                                  children: (0, r.jsx)(o.olH, {
+                                      className: p.closeButtonInner,
+                                      innerClassName: p.closeButtonInner,
+                                      onClick: () => s(!1)
+                                  })
                               }),
-                              (0, i.jsx)(m.Z, {
-                                  verificationForm: _,
-                                  headerId: v,
-                                  guildId: t,
-                                  onClose: a,
-                                  onComplete: x,
-                                  isPreview: f
+                              (0, r.jsx)(m.Z, {
+                                  verificationForm: j,
+                                  headerId: N,
+                                  guildId: n,
+                                  onClose: s,
+                                  onComplete: f,
+                                  isPreview: g
                               })
                           ]
                       }),
-                      (0, i.jsx)(l.W, {
+                      (0, r.jsx)(l.W, {
                           children:
-                              !0 === p &&
-                              (0, i.jsx)(o.oXn, {
-                                  className: b.notice,
-                                  children: (0, i.jsx)(g, {})
+                              !0 === x &&
+                              (0, r.jsx)(o.oXn, {
+                                  className: p.notice,
+                                  children: (0, r.jsx)(b, {})
                               })
                       })
                   ]

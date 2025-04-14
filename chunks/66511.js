@@ -1,14 +1,13 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(952265),
     o = n(626135),
     a = n(863249),
-    s = n(63568),
-    l = n(266395),
-    c = n(592286),
-    u = n(981631);
-function d(e, t, n) {
+    s = n(266395),
+    l = n(592286),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +31,12 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,58 +48,57 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = () => {
-        o.default.track(u.rMx.MODAL_DISMISSED, { type: c.N4 });
+let p = () => {
+        o.default.track(c.rMx.MODAL_DISMISSED, { type: l.N4 });
     },
-    m = (e) => {
-        o.default.track(u.rMx.OPEN_MODAL, {
-            type: c.N4,
+    h = (e) => {
+        o.default.track(c.rMx.OPEN_MODAL, {
+            type: l.N4,
             guild_id: e
         });
     },
-    g = {
+    m = {
         openMemberVerificationModal(e, t, o) {
             if (__OVERLAY__) return;
-            m(e);
-            let u = async (t) => {
-                    await a.ZP.submitVerificationForm(e, t);
-                },
-                d = (0, s.K2)(e, 'MemberVerificationModalActionCreators');
+            h(e);
+            let c = async (t) => {
+                await a.ZP.submitVerificationForm(e, t);
+            };
             (0, i.ZD)(
                 async () => {
-                    let { default: t } = d ? await Promise.all([n.e('53967'), n.e('58157'), n.e('81954')]).then(n.bind(n, 309135)) : await Promise.all([n.e('53967'), n.e('58157'), n.e('66246')]).then(n.bind(n, 645264));
+                    let { default: t } = await Promise.all([n.e('54408'), n.e('77025')]).then(n.bind(n, 645264));
                     return (n) =>
                         (0, r.jsx)(
                             t,
-                            p(f({}, n), {
+                            _(d({}, n), {
                                 guildId: e,
                                 inviteKey: o,
-                                onComplete: u,
+                                onComplete: c,
                                 onClose: function () {
                                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                     if (!e)
-                                        if (l.rb.getState().hasUnsubmittedChanges) return void (0, l.PE)(!0);
-                                        else h();
+                                        if (s.rb.getState().hasUnsubmittedChanges) return void (0, s.PE)(!0);
+                                        else p();
                                     n.onClose();
                                 }
                             })
                         );
                 },
                 {
-                    modalKey: c.Pn,
+                    modalKey: l.Pn,
                     onCloseRequest: () => {
-                        h(), l.rb.getState().hasUnsubmittedChanges ? (0, l.PE)(!0) : (0, i.Mr)(c.Pn);
+                        p(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn);
                     },
                     onCloseCallback: t
                 }
@@ -108,16 +106,15 @@ let h = () => {
         },
         closeMemberVerificationModal() {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            e || h(), (0, i.Mr)(c.Pn);
+            e || p(), (0, i.Mr)(l.Pn);
         },
         openMemberVerificationPreviewModal(e) {
-            let t = (0, s.K2)(e, 'openMemberVerificationPreviewModal');
             (0, i.ZD)(async () => {
-                let { default: i } = t ? await Promise.all([n.e('53967'), n.e('58157'), n.e('81954')]).then(n.bind(n, 309135)) : await Promise.all([n.e('53967'), n.e('58157'), n.e('66246')]).then(n.bind(n, 645264));
-                return (t) =>
+                let { default: t } = await Promise.all([n.e('54408'), n.e('77025')]).then(n.bind(n, 645264));
+                return (n) =>
                     (0, r.jsx)(
-                        i,
-                        p(f({}, t), {
+                        t,
+                        _(d({}, n), {
                             guildId: e,
                             isPreview: !0
                         })

@@ -1,42 +1,33 @@
 n.d(t, {
-    Dc: () => u,
-    OA: () => l,
-    _C: () => c
+    Dc: () => c,
+    OA: () => s,
+    _C: () => l
 }),
     n(781311);
 var r = n(823379),
-    i = n(63568),
-    o = n(246364),
-    a = n(592286),
-    s = n(981631);
-let l = (e) => {
-    let { required: t, response: n, field_type: i } = e;
+    i = n(246364),
+    o = n(592286),
+    a = n(981631);
+let s = (e) => {
+    let { required: t, response: n, field_type: o } = e;
     if (!t) return !0;
     if (null == n) return !1;
-    switch (i) {
-        case o.QJ.TERMS:
-        case o.QJ.VERIFICATION:
+    switch (o) {
+        case i.QJ.TERMS:
+        case i.QJ.VERIFICATION:
             return !!n;
-        case o.QJ.TEXT_INPUT:
-        case o.QJ.PARAGRAPH:
+        case i.QJ.TEXT_INPUT:
+        case i.QJ.PARAGRAPH:
             return 'string' == typeof n && '' !== n.trim();
-        case o.QJ.MULTIPLE_CHOICE:
+        case i.QJ.MULTIPLE_CHOICE:
             return 'number' == typeof n;
         default:
-            return (0, r.vE)(i);
+            return (0, r.vE)(o);
     }
 };
-function c(e) {
-    return a.hZ.has(null == e ? void 0 : e.field_type);
+function l(e) {
+    return o.hZ.has(null == e ? void 0 : e.field_type);
 }
-function u(e) {
-    if (null == e) return !1;
-    let { enabled: t } = i.tW.getCurrentConfig(
-        {
-            guildId: e.id,
-            location: 'GuildRecord'
-        },
-        { autoTrackExposure: !1 }
-    );
-    return t ? e.hasFeature(s.oNc.MEMBER_VERIFICATION_GATE_ENABLED) : e.hasVerificationGate();
+function c(e) {
+    return null != e && e.hasFeature(a.oNc.MEMBER_VERIFICATION_GATE_ENABLED);
 }

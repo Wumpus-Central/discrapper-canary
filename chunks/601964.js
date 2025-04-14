@@ -102,9 +102,6 @@ class c extends r.Z {
     isCommunity() {
         return this.hasFeature(s.oNc.COMMUNITY);
     }
-    hasVerificationGate() {
-        return this.hasFeature(s.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && (this.hasFeature(s.oNc.COMMUNITY) || this.hasFeature(s.oNc.CLAN));
-    }
     hasCommunityInfoSubheader() {
         return this.hasFeature(s.oNc.COMMUNITY) && this.hasFeature(s.oNc.DISCOVERABLE);
     }
