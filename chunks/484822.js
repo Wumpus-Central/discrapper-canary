@@ -19,7 +19,6 @@ e.exports = {
     italicPrompt: 'italicPrompt_ab8609',
     addStatusIcon: 'addStatusIcon_ab8609',
     addStatusIconColor: 'addStatusIconColor_ab8609',
-    labelContent: 'labelContent_ab8609',
-    labelText: 'labelText_ab8609',
-    labelIconsRow: 'labelIconsRow_ab8609'
+    labelIconsRow: 'labelIconsRow_ab8609',
+    labelRow: 'labelRow_ab8609'
 };
