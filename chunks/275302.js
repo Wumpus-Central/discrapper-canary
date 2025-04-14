@@ -12,5 +12,10 @@ e.exports = {
     selected: 'selected__981c8',
     roleStyleLabel: 'roleStyleLabel__981c8',
     disabled: 'disabled__981c8',
+    roleStyleUpsell: 'roleStyleUpsell__981c8',
+    roleStyleUpsellMesssages: 'roleStyleUpsellMesssages__981c8',
+    roleStyleUpsellButton: 'roleStyleUpsellButton__981c8',
+    roleStyleUpsellButtonContents: 'roleStyleUpsellButtonContents__981c8',
+    guildBoostBadge: 'guildBoostBadge__981c8',
     holographicInfoBox: 'holographicInfoBox__981c8'
 };
