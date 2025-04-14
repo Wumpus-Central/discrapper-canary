@@ -90,7 +90,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             Z = (0, s.e7)([_.Z], () => _.Z.isGuildMetadataLoaded()),
             D = (0, s.e7)([_.Z], () => (null != d ? _.Z.getMetadata() : null)),
             A = (0, s.e7)([_.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? _.Z.getSlug() : null)),
-            [W, k] = i.useState([!0]),
+            [k, W] = i.useState([!0]),
             [L, M] = i.useState(!0),
             [G, U] = i.useState([!1]),
             [B, F] = i.useState(['']),
@@ -131,7 +131,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     } else e[r] = !0;
                 }),
                     F(t),
-                    k(e),
+                    W(e),
                     M(e.every((e) => !0 === e));
             }
         }, [D]);
@@ -186,8 +186,8 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             X = (e, t) => {
                 let n = [...D.socialLinks],
                     r = [...B],
-                    i = [...W];
-                (r[t] = e), (n[t] = y.z[e].baseUrl), (i[t] = !0), k(i), F(r), M(i.every((e) => !0 === e)), (0, g.t$)(d.id, n);
+                    i = [...k];
+                (r[t] = e), (n[t] = y.z[e].baseUrl), (i[t] = !0), W(i), F(r), M(i.every((e) => !0 === e)), (0, g.t$)(d.id, n);
             },
             q = (e, t) => {
                 let n = [...D.socialLinks],
@@ -198,8 +198,8 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             J = (e) => {
                 let t = [...G];
                 t.splice(e, 1), U(t);
-                let n = [...W];
-                n.splice(e, 1), k(n);
+                let n = [...k];
+                n.splice(e, 1), W(n);
                 let r = [...B];
                 r.splice(e, 1), F(r);
                 let i = [...D.socialLinks];
@@ -545,7 +545,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         },
                                                                         'link-' + t
                                                                     ),
-                                                                    W[t]
+                                                                    k[t]
                                                                         ? (0, r.jsx)(
                                                                               a.owK,
                                                                               {

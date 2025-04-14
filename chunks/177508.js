@@ -60,8 +60,8 @@ function E(e, t) {
     );
 }
 let j = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
-    C = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
-    O = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
+    O = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
+    C = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
 function S() {
     return (0, r.jsxs)('div', {
         className: x.root,
@@ -312,7 +312,7 @@ function D() {
 function Z() {
     let [e, t] = i.useState(!1),
         n = j.flatMap((e) => [
-            ...C.map((t) =>
+            ...O.map((t) =>
                 (0, r.jsxs)(
                     d.zxk,
                     {
@@ -327,7 +327,7 @@ function Z() {
             ),
             (0, r.jsx)('hr', { className: x.sectionDivider }, e + 'divider')
         ]),
-        s = O.flatMap((e) =>
+        s = C.flatMap((e) =>
             (0, r.jsx)(d.zxk, {
                 color: d.zxk.Colors.BRAND,
                 look: d.zxk.Looks.FILLED,

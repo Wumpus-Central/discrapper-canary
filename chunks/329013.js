@@ -22,8 +22,8 @@ var r = n(200651),
     _ = n(639119),
     E = n(311476),
     j = n(165583),
-    C = n(197115),
-    O = n(504983),
+    O = n(197115),
+    C = n(504983),
     S = n(626135),
     v = n(210887),
     T = n(981631),
@@ -67,7 +67,7 @@ let R = () => {
                                   onClick: () => R(),
                                   children: p ? A.NW.string(A.t.SKNnqq) : A.NW.string(A.t['E+COuL'])
                               }),
-                              (0, r.jsx)(C.Z, {
+                              (0, r.jsx)(O.Z, {
                                   showGradient: p,
                                   subscriptionTier: y.Si.TIER_2,
                                   buttonText: p ? A.NW.string(A.t.pj0XBA) : d ? A.NW.formatToPlainString(A.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : A.NW.string(A.t.mr4K7O),
@@ -101,10 +101,10 @@ let R = () => {
                                   children: [
                                       (0, r.jsx)(f.ZP.Basic, { className: P.basicThemeSelectors }),
                                       N && (0, r.jsx)(Z, {}),
-                                      (0, r.jsxs)(O.Z, {
+                                      (0, r.jsxs)(C.Z, {
                                           className: P.featureBorder,
                                           isShown: a,
-                                          type: O.Y.PREMIUM,
+                                          type: C.Y.PREMIUM,
                                           children: [
                                               (0, r.jsx)(f.ZP.Gradient, {
                                                   disabled: a,

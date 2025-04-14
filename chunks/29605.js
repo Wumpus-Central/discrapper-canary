@@ -38,8 +38,8 @@ var r = n(200651),
     Z = n(471613),
     D = n(999382),
     A = n(981631),
-    W = n(185923),
-    k = n(388032),
+    k = n(185923),
+    W = n(388032),
     L = n(808574),
     M = n(588866);
 function G(e) {
@@ -83,7 +83,7 @@ let U = d().throttle(h.OQ, 1000),
                 (0, r.jsx)('div', {
                     className: L.emojiColumn,
                     children: (0, r.jsx)(g.ua7, {
-                        text: n.available ? null : k.NW.string(k.t['KUzI7+']),
+                        text: n.available ? null : W.NW.string(W.t['KUzI7+']),
                         children: (e) => {
                             var t, i;
                             return (0, r.jsx)(
@@ -119,8 +119,8 @@ let U = d().throttle(h.OQ, 1000),
                             className: l()({ [L.emojiAliasInputDisabled]: a }),
                             disabled: a,
                             minLen: 1,
-                            maxLen: W.Yc,
-                            name: k.NW.string(k.t.qUpzYG),
+                            maxLen: k.Yc,
+                            name: W.NW.string(W.t.qUpzYG),
                             autoComplete: 'off',
                             value: null != o ? o : '',
                             onBlur: () => {
@@ -158,7 +158,7 @@ let U = d().throttle(h.OQ, 1000),
                 null != s &&
                     !a &&
                     (0, r.jsx)(g.P3F, {
-                        'aria-label': k.NW.string(k.t.bt75u7),
+                        'aria-label': W.NW.string(W.t.bt75u7),
                         className: L.editEmojiRolesButton,
                         onClick: () => s(n, t),
                         children: (0, r.jsx)(g.vdY, {
@@ -175,8 +175,8 @@ let U = d().throttle(h.OQ, 1000),
                                 let { status: t } = e;
                                 429 === t &&
                                     p.Z.show({
-                                        title: k.NW.string(k.t.iufib2),
-                                        body: k.NW.string(k.t['Whhv4+'])
+                                        title: W.NW.string(W.t.iufib2),
+                                        body: W.NW.string(W.t['Whhv4+'])
                                     });
                             });
                         }
@@ -203,15 +203,15 @@ let U = d().throttle(h.OQ, 1000),
                             height: 212
                         }),
                         (0, r.jsx)(g.OZU, {
-                            note: k.NW.string(k.t.RBbtMz),
-                            children: k.NW.string(k.t.lxsmBQ)
+                            note: W.NW.string(W.t.RBbtMz),
+                            children: W.NW.string(W.t.lxsmBQ)
                         })
                     ]
                 })
               : (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(z, {
-                            title: k.NW.string(k.t.sMOuub),
+                            title: W.NW.string(W.t.sMOuub),
                             maxSlots: (0, P.y4)(a),
                             emojiCount: i.length
                         }),
@@ -220,7 +220,7 @@ let U = d().throttle(h.OQ, 1000),
                             guild: a
                         }),
                         (0, r.jsx)(z, {
-                            title: k.NW.string(k.t.wWjQyc),
+                            title: W.NW.string(W.t.wWjQyc),
                             maxSlots: (0, P.y4)(a),
                             emojiCount: s.length
                         }),
@@ -239,7 +239,7 @@ let U = d().throttle(h.OQ, 1000),
             children: [
                 t,
                 (0, r.jsxs)('span', {
-                    children: [' \u2014 ', k.NW.format(k.t.sgL8sL, { count: n - i })]
+                    children: [' \u2014 ', W.NW.format(W.t.sgL8sL, { count: n - i })]
                 })
             ]
         });
@@ -252,7 +252,7 @@ let U = d().throttle(h.OQ, 1000),
             ? (0, r.jsx)(g.R94, {
                   type: g.geA.DESCRIPTION,
                   className: L.content,
-                  children: k.NW.string(k.t.SpxYoa)
+                  children: W.NW.string(W.t.SpxYoa)
               })
             : (0, r.jsxs)(g.hjN, {
                   className: L.content,
@@ -263,17 +263,17 @@ let U = d().throttle(h.OQ, 1000),
                               (0, r.jsx)(g.R94, {
                                   type: g.geA.DESCRIPTION,
                                   className: L.emojiColumn,
-                                  children: k.NW.string(k.t.Z0i3Gh)
+                                  children: W.NW.string(W.t.Z0i3Gh)
                               }),
                               (0, r.jsx)(g.R94, {
                                   type: g.geA.DESCRIPTION,
                                   className: L.columnLabel,
-                                  children: k.NW.string(k.t.giajw8)
+                                  children: W.NW.string(W.t.giajw8)
                               }),
                               (0, r.jsx)(g.R94, {
                                   type: g.geA.DESCRIPTION,
                                   className: L.columnLabel,
-                                  children: k.NW.string(k.t.edavpq)
+                                  children: W.NW.string(W.t.edavpq)
                               })
                           ]
                       }),
@@ -303,7 +303,7 @@ let U = d().throttle(h.OQ, 1000),
             u = (0, P.FZ)(d);
         return null == u || d === A.Eu4.TIER_3 || c > 0
             ? null
-            : (c > o ? ((t = k.NW.formatToPlainString(k.t.j0UH0t, { level: u })), (n = k.NW.formatToPlainString(k.t.VQeyKy, { level: u })), (i = A.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = k.NW.string(k.t.zT9Sxc)), (n = k.NW.formatToPlainString(k.t.dBZ1RU, { level: u })), (i = A.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+            : (c > o ? ((t = W.NW.formatToPlainString(W.t.j0UH0t, { level: u })), (n = W.NW.formatToPlainString(W.t.VQeyKy, { level: u })), (i = A.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = W.NW.string(W.t.zT9Sxc)), (n = W.NW.formatToPlainString(W.t.dBZ1RU, { level: u })), (i = A.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(v.Z, {
                   header: t,
                   text: n,
@@ -385,7 +385,7 @@ let U = d().throttle(h.OQ, 1000),
                       }),
                 (0, r.jsxs)(g.hjN, {
                     tag: g.RB0.H1,
-                    title: k.NW.string(k.t.sMOuub),
+                    title: W.NW.string(W.t.sMOuub),
                     children: [
                         (0, r.jsx)(V, {
                             guild: e,
@@ -397,19 +397,19 @@ let U = d().throttle(h.OQ, 1000),
                             children: [
                                 (0, r.jsx)(g.R94, {
                                     type: g.geA.DESCRIPTION,
-                                    children: k.NW.format(k.t.TA1BR0, { count: B })
+                                    children: W.NW.format(W.t.TA1BR0, { count: B })
                                 }),
                                 q &&
                                     (0, r.jsx)(g.R94, {
                                         type: g.geA.DESCRIPTION,
-                                        children: k.NW.format(k.t.uMkfTk, { onClick: () => R.Z.open(e.id, A.pNK.ROLE_SUBSCRIPTIONS, void 0, A.KsC.ROLE_SUBSCRIPTION_EMOJI) })
+                                        children: W.NW.format(W.t.uMkfTk, { onClick: () => R.Z.open(e.id, A.pNK.ROLE_SUBSCRIPTIONS, void 0, A.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                     }),
                                 (0, r.jsxs)('div', {
                                     children: [
                                         (0, r.jsx)(g.vwX, {
                                             tag: g.RB0.H2,
                                             className: L.emojiUploadUploadRequirementsHeading,
-                                            children: k.NW.string(k.t.jrXfy8)
+                                            children: W.NW.string(W.t.jrXfy8)
                                         }),
                                         (0, r.jsxs)('ul', {
                                             className: L.emojiUploadUploadRequirementsList,
@@ -417,25 +417,25 @@ let U = d().throttle(h.OQ, 1000),
                                                 (0, r.jsx)('li', {
                                                     children: (0, r.jsx)(g.R94, {
                                                         type: g.geA.DESCRIPTION,
-                                                        children: k.NW.string(k.t.N2qTQ0)
+                                                        children: W.NW.string(W.t.N2qTQ0)
                                                     })
                                                 }),
                                                 (0, r.jsx)('li', {
                                                     children: (0, r.jsx)(g.R94, {
                                                         type: g.geA.DESCRIPTION,
-                                                        children: k.NW.format(k.t.gfAXoa, { maxSize: W.xG })
+                                                        children: W.NW.format(W.t.gfAXoa, { maxSize: k.xG })
                                                     })
                                                 }),
                                                 (0, r.jsx)('li', {
                                                     children: (0, r.jsx)(g.R94, {
                                                         type: g.geA.DESCRIPTION,
-                                                        children: k.NW.string(k.t.rnwKPD)
+                                                        children: W.NW.string(W.t.rnwKPD)
                                                     })
                                                 }),
                                                 (0, r.jsx)('li', {
                                                     children: (0, r.jsx)(g.R94, {
                                                         type: g.geA.DESCRIPTION,
-                                                        children: k.NW.string(k.t['8Vr5QU'])
+                                                        children: W.NW.string(W.t['8Vr5QU'])
                                                     })
                                                 })
                                             ]
@@ -457,7 +457,7 @@ let U = d().throttle(h.OQ, 1000),
                                     submitting: v,
                                     focusProps: { within: !0 },
                                     children: [
-                                        k.NW.string(k.t.DU0dy8),
+                                        W.NW.string(W.t.DU0dy8),
                                         z > 0
                                             ? (0, r.jsx)(C.Z, {
                                                   disabled: v || 0 === z || !a,

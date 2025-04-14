@@ -90,7 +90,7 @@ function N(e) {
             clearTimeout(e);
         };
     }, [O]);
-    let { id: E, expires_at: k, redeemed_at: P, trial_id: w, subscription_trial: I, referrer: R } = u,
+    let { id: E, expires_at: P, redeemed_at: k, trial_id: w, subscription_trial: I, referrer: R } = u,
         Z =
             null !=
             (n =
@@ -104,13 +104,13 @@ function N(e) {
                 ? n
                 : 'Unknown';
     null != R && (Z = ''.concat(Z, ' from @').concat(R.username));
-    let L = null != k,
-        A = null != k && new Date(k).getTime() < Date.now(),
+    let L = null != P,
+        A = null != P && new Date(P).getTime() < Date.now(),
         D = (null == I ? void 0 : I.sku_id) === f.Si.TIER_0,
-        z = async () => {
-            N(!0), L ? await B({ expiresAt: null }) : await (0, d.a)(u), p(), N(!1);
+        B = async () => {
+            N(!0), L ? await z({ expiresAt: null }) : await (0, d.a)(u), p(), N(!1);
         },
-        B = async (e) => {
+        z = async (e) => {
             let { expiresAt: t } = e;
             N(!0);
             try {
@@ -242,8 +242,8 @@ function N(e) {
                         }),
                         (0, r.jsx)('input', {
                             type: 'date',
-                            value: null != k ? k.substring(0, 10) : '',
-                            onChange: (e) => B({ expiresAt: e.target.value })
+                            value: null != P ? P.substring(0, 10) : '',
+                            onChange: (e) => z({ expiresAt: e.target.value })
                         })
                     ]
                 }),
@@ -251,7 +251,7 @@ function N(e) {
                     className: g.badgeContainer,
                     children: [
                         (0, r.jsx)(c.P3F, {
-                            onClick: z,
+                            onClick: B,
                             className: i()(g.badge, g.clickable, {
                                 [g.acked]: L,
                                 [g.expired]: A
@@ -262,7 +262,7 @@ function N(e) {
                                 children: M
                             })
                         }),
-                        null != P &&
+                        null != k &&
                             (0, r.jsx)('div', {
                                 className: i()(g.badge, g.__invalid_badgeBottom, g.redeemed),
                                 children: (0, r.jsx)(c.Text, {
@@ -298,7 +298,7 @@ function S(e) {
         };
     }, [_]);
     let { id: O, expires_at: N, applied_at: S, discount_id: T, discount: E } = l,
-        k =
+        P =
             null !=
             (n =
                 null ==
@@ -310,10 +310,10 @@ function S(e) {
                     : t.label)
                 ? n
                 : 'Unknown',
-        P = null != N,
+        k = null != N,
         w = null != N && new Date(N).getTime() < Date.now(),
         I = async () => {
-            v(!0), P ? await R({ expiresAt: null }) : await (0, d.a)(void 0, l), u(), v(!1);
+            v(!0), k ? await R({ expiresAt: null }) : await (0, d.a)(void 0, l), u(), v(!1);
         },
         R = async (e) => {
             let { expiresAt: t } = e;
@@ -349,7 +349,7 @@ function S(e) {
     let Z = 'Active';
     return (
         w && (Z = 'Expired'),
-        P && (Z = 'Acknowledged'),
+        k && (Z = 'Acknowledged'),
         (0, r.jsxs)('div', {
             className: i()(g.card, g.discount),
             children: [
@@ -359,7 +359,7 @@ function S(e) {
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
                             color: 'text-normal',
-                            children: k
+                            children: P
                         }),
                         (0, r.jsx)(c.P3F, {
                             onClick: async () => {
@@ -450,7 +450,7 @@ function S(e) {
                         (0, r.jsx)(c.P3F, {
                             onClick: I,
                             className: i()(g.badge, g.clickable, {
-                                [g.acked]: P,
+                                [g.acked]: k,
                                 [g.expired]: w
                             }),
                             children: (0, r.jsx)(c.Text, {
@@ -485,7 +485,7 @@ function T() {
         [x, h] = a.useState(),
         [b, f] = a.useState([]),
         [y, T] = a.useState([]),
-        [E, k] = a.useState(!0);
+        [E, P] = a.useState(!0);
     a.useEffect(() => {
         (0 === e.length || 0 === n.length || E) &&
             v().then((e) => {
@@ -502,21 +502,21 @@ function T() {
     }, [e, n, i, x, E]),
         a.useEffect(() => {
             E &&
-                (k(!1),
+                (P(!1),
                 m.Z.forceReset(),
                 (0, d.T)(),
                 C().then((e) => {
                     f(e.trial.sort((e, t) => e.id.localeCompare(t.id))), T(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
         }, [E]);
-    let P = async () => {
-            null != i && (await j(i, 'trial'), k(!0));
+    let k = async () => {
+            null != i && (await j(i, 'trial'), P(!0));
         },
         w = async () => {
-            null != x && (await j(x, 'discount'), k(!0));
+            null != x && (await j(x, 'discount'), P(!0));
         },
         I = async () => {
-            await O(), k(!0);
+            await O(), P(!0);
         };
     return (0, r.jsx)(c.zJl, {
         className: _.panel,
@@ -545,7 +545,7 @@ function T() {
                                 }),
                                 (0, r.jsx)(c.zxk, {
                                     size: c.zxk.Sizes.SMALL,
-                                    onClick: () => k(!0),
+                                    onClick: () => P(!0),
                                     children: 'Refresh DevTools'
                                 })
                             ]
@@ -572,7 +572,7 @@ function T() {
                                     popoutLayerContext: p.O$
                                 }),
                                 (0, r.jsx)(c.zxk, {
-                                    onClick: P,
+                                    onClick: k,
                                     children: 'Create'
                                 })
                             ]
@@ -620,7 +620,7 @@ function T() {
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => k(!0)
+                                        forceRefetch: () => P(!0)
                                     },
                                     t.id
                                 )
@@ -641,7 +641,7 @@ function T() {
                                     {
                                         offer: e,
                                         offerOptions: n,
-                                        forceRefetch: () => k(!0)
+                                        forceRefetch: () => P(!0)
                                     },
                                     e.id
                                 )

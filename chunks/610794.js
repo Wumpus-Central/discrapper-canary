@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(457542);
+n.d(t, { Z: () => O }), n(388685), n(457542);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -51,13 +51,13 @@ function E(e) {
         case b.ABu.TIKTOK:
             j = (0, g.hf)(m, _.metadataItem);
     }
-    let C = (0, u.FI)(m[N.PC.CREATED_AT], h),
-        O = null,
+    let O = (0, u.FI)(m[N.PC.CREATED_AT], h),
+        C = null,
         S = x.NW.string(x.t.wzzjk5);
     return (
         (null == j || 0 === j.length) &&
-            null == C &&
-            ((O = (0, r.jsx)(
+            null == O &&
+            ((C = (0, r.jsx)(
                 l.Text,
                 {
                     variant: 'text-xs/normal',
@@ -71,7 +71,7 @@ function E(e) {
         (0, r.jsxs)('div', {
             className: _.metadataContainer,
             children: [
-                O,
+                C,
                 null == j
                     ? void 0
                     : j.map((e, t) =>
@@ -79,14 +79,14 @@ function E(e) {
                               children: [e, t < j.length - 1 ? (0, r.jsx)('span', { className: _.dot }) : null]
                           })
                       ),
-                null != j && j.length > 0 && null != C ? (0, r.jsx)('div', { className: _.dot }) : null,
-                null != C
+                null != j && j.length > 0 && null != O ? (0, r.jsx)('div', { className: _.dot }) : null,
+                null != O
                     ? (0, r.jsx)(
                           l.Text,
                           {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
-                              children: x.NW.format(x.t['9rfonp'], { date: C })
+                              children: x.NW.format(x.t['9rfonp'], { date: O })
                           },
                           'member-since'
                       )
@@ -197,7 +197,7 @@ function j(e) {
         ]
     });
 }
-function C() {
+function O() {
     let e = (0, s.e7)([h.Z], () => h.Z.getAccounts()),
         t = i.useMemo(() => e.filter((e) => d.Z.isSupported(e.type)), [e]),
         [n, a] = i.useState([]),

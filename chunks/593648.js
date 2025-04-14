@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(476756),
     E = n(734934),
     j = n(223683),
-    C = n(312400),
-    O = n(115345),
+    O = n(312400),
+    C = n(115345),
     S = n(392888),
     v = n(106371),
     T = n(995774),
@@ -544,8 +544,8 @@ function Q() {
         : null;
 }
 function $() {
-    let e = C.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = C.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+    let e = O.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = O.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([P.ZP], () => P.ZP.useNewNotifications),
         [s, l] = i.useState(!1);
     return e && (n || t)
@@ -630,13 +630,13 @@ async function ee(e) {
     e(!0);
     let t = await (0, j.Tn)();
     0 === t.length
-        ? await (0, O.oL)()
+        ? await (0, C.oL)()
         : m.Z.show({
               title: U.NW.string(U.t['cY+Ooa']),
               body: U.NW.format(U.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: U.NW.string(U.t['ETE/oK']),
               confirmText: U.NW.string(U.t.Rm96T0),
-              onConfirm: O.oL
+              onConfirm: C.oL
           }),
         e(!1);
 }

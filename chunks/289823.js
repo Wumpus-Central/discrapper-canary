@@ -1,19 +1,19 @@
-n.d(t, { Z: () => g });
-var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    a = n(974674),
-    u = n(438784),
-    c = n(481060),
-    s = n(686546),
-    d = n(3682),
-    p = n(630403);
-let E = {},
-    f = 1 / 4;
-function _(e) {
+n.d(t, { Z: () => v });
+var a = n(200651),
+    r = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    l = n(974674),
+    c = n(438784),
+    s = n(481060),
+    u = n(686546),
+    _ = n(3682),
+    d = n(630403);
+let f = {},
+    p = 1 / 4;
+function m(e) {
     let { height: t, fillColor: n } = e;
-    return (0, r.jsx)('div', {
+    return (0, a.jsx)('div', {
         style: {
             display: 'flex',
             justifyContent: 'center',
@@ -21,33 +21,33 @@ function _(e) {
             borderRadius: t / 2,
             backgroundColor: n,
             height: t,
-            width: t * d.jR
+            width: t * _.jR
         },
-        children: (0, r.jsx)(u.b, {
-            className: p.dots,
-            dotRadius: t * f
+        children: (0, a.jsx)(c.b, {
+            className: d.dots,
+            dotRadius: t * p
         })
     });
 }
-function S(e) {
-    let { isTyping: t, statusCoords: n, status: i } = e,
-        l = (0, c.vjg)(c.Skl.ONLINE);
+function g(e) {
+    let { isTyping: t, statusCoords: n, status: r } = e,
+        i = (0, s.vjg)(s.Skl.ONLINE);
     return t
-        ? (0, r.jsx)('div', {
+        ? (0, a.jsx)('div', {
               style: {
                   position: 'absolute',
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(_, {
+              children: (0, a.jsx)(m, {
                   height: n.height,
-                  fillColor: l
+                  fillColor: i
               })
           })
-        : null != i
-          ? (0, r.jsx)(c.qbd, {
+        : null != r
+          ? (0, a.jsx)(s.qbd, {
                 size: n.height,
-                status: i,
+                status: r,
                 style: {
                     position: 'absolute',
                     top: n.y,
@@ -56,178 +56,178 @@ function S(e) {
             })
           : null;
 }
-function O(e) {
+function I(e) {
     let { src: t, size: n } = e;
-    return (0, r.jsx)('img', {
-        className: p.circularImage,
+    return (0, a.jsx)('img', {
+        className: d.circularImage,
         src: t,
         alt: '',
         width: n,
         height: n
     });
 }
-let I = {
-        [c.EFr.SIZE_16]: {
-            default: s.QS.DIAGONAL_FACEPILE_16,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_16,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_16
+let h = {
+        [s.EFr.SIZE_16]: {
+            default: u.QS.DIAGONAL_FACEPILE_16,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_16
         },
-        [c.EFr.SIZE_20]: {
-            default: s.QS.DIAGONAL_FACEPILE_20,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_20,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_20
+        [s.EFr.SIZE_20]: {
+            default: u.QS.DIAGONAL_FACEPILE_20,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_20,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_20
         },
-        [c.EFr.SIZE_24]: {
-            default: s.QS.DIAGONAL_FACEPILE_24,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_24,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_24
+        [s.EFr.SIZE_24]: {
+            default: u.QS.DIAGONAL_FACEPILE_24,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_24,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_24
         },
-        [c.EFr.SIZE_32]: {
-            default: s.QS.DIAGONAL_FACEPILE_32,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_32,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_32
+        [s.EFr.SIZE_32]: {
+            default: u.QS.DIAGONAL_FACEPILE_32,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_32
         },
-        [c.EFr.SIZE_40]: {
-            default: s.QS.DIAGONAL_FACEPILE_32,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_32,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_32
+        [s.EFr.SIZE_40]: {
+            default: u.QS.DIAGONAL_FACEPILE_32,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_32,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_32
         },
-        [c.EFr.SIZE_48]: {
-            default: s.QS.DIAGONAL_FACEPILE_40,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_40,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_40
+        [s.EFr.SIZE_48]: {
+            default: u.QS.DIAGONAL_FACEPILE_40,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_40,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_40
         },
-        [c.EFr.SIZE_56]: {
-            default: s.QS.DIAGONAL_FACEPILE_56,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_56,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_56
+        [s.EFr.SIZE_56]: {
+            default: u.QS.DIAGONAL_FACEPILE_56,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_56,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_56
         },
-        [c.EFr.SIZE_80]: {
-            default: s.QS.DIAGONAL_FACEPILE_80,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_80,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_80
+        [s.EFr.SIZE_80]: {
+            default: u.QS.DIAGONAL_FACEPILE_80,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_80,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_80
         },
-        [c.EFr.SIZE_120]: {
-            default: s.QS.DIAGONAL_FACEPILE_120,
-            typing: s.QS.DIAGONAL_FACEPILE_TYPING_120,
-            status: s.QS.DIAGONAL_FACEPILE_STATUS_120
+        [s.EFr.SIZE_120]: {
+            default: u.QS.DIAGONAL_FACEPILE_120,
+            typing: u.QS.DIAGONAL_FACEPILE_TYPING_120,
+            status: u.QS.DIAGONAL_FACEPILE_STATUS_120
         }
     },
-    g = function (e) {
+    v = function (e) {
         var t,
-            { backSrc: n, frontSrc: l, size: u, isTyping: f, status: _, style: g, className: T } = e,
-            b = (function (e, t) {
+            { backSrc: n, frontSrc: i, size: c, isTyping: p, status: m, style: v, className: b } = e,
+            y = (function (e, t) {
                 if (null == e) return {};
                 var n,
-                    r,
-                    i = (function (e, t) {
+                    a,
+                    r = (function (e, t) {
                         if (null == e) return {};
                         var n,
-                            r,
-                            i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
+                            a,
+                            r = {},
+                            i = Object.keys(e);
+                        for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (a = 0; a < i.length; a++) (n = i[a]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
-                return i;
+                return r;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: h } = c.ny6[u],
+        let { size: S } = s.ny6[c],
             {
-                statusCoords: C,
-                frontAvatarOffsetPx: N,
-                frontAvatarSizePx: y,
-                backAvatarSizePx: P
-            } = i.useMemo(() => {
+                statusCoords: E,
+                frontAvatarOffsetPx: C,
+                frontAvatarSizePx: A,
+                backAvatarSizePx: N
+            } = r.useMemo(() => {
                 var e;
-                let t = ''.concat(h, '-').concat(f);
-                return null != (e = E[t])
+                let t = ''.concat(S, '-').concat(p);
+                return null != (e = f[t])
                     ? e
                     : (function (e, t, n) {
-                          let r = c.ny6[e],
-                              i = r.size / (d.z3 + d.o),
-                              l = i * d.z3,
-                              o = i * d.o,
-                              u = {
-                                  statusCoords: (0, a.Vq)(r, c.Skl.ONLINE, !1, t),
-                                  frontAvatarSizePx: l,
-                                  backAvatarSizePx: i,
+                          let a = s.ny6[e],
+                              r = a.size / (_.z3 + _.o),
+                              i = r * _.z3,
+                              o = r * _.o,
+                              c = {
+                                  statusCoords: (0, l.Vq)(a, s.Skl.ONLINE, !1, t),
+                                  frontAvatarSizePx: i,
+                                  backAvatarSizePx: r,
                                   frontAvatarOffsetPx: o,
-                                  frontAvatarCenter: o + l / 2
+                                  frontAvatarCenter: o + i / 2
                               };
-                          return (E[n] = u), u;
-                      })(u, f, t);
-            }, [h, f, u]),
-            m = ((t = null != _), f ? I[u].typing : t ? I[u].status : I[u].default);
-        return (0, r.jsxs)('div', {
+                          return (f[n] = c), c;
+                      })(c, p, t);
+            }, [S, p, c]),
+            P = ((t = null != m), p ? h[c].typing : t ? h[c].status : h[c].default);
+        return (0, a.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        a = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (a = a.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        a.forEach(function (t) {
+                            var a;
+                            (a = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: a,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = a);
                         });
                 }
                 return e;
             })(
                 {
-                    width: h,
-                    height: h
+                    width: S,
+                    height: S
                 },
-                g
+                v
             ),
-            'aria-label': b['aria-label'],
-            'aria-hidden': b['aria-hidden'],
-            className: o()(p.container, T),
+            'aria-label': y['aria-label'],
+            'aria-hidden': y['aria-hidden'],
+            className: o()(d.container, b),
             children: [
-                (0, r.jsxs)(s.ZP, {
-                    mask: m,
-                    height: h,
-                    width: h,
+                (0, a.jsxs)(u.ZP, {
+                    mask: P,
+                    height: S,
+                    width: S,
                     children: [
-                        (0, r.jsx)('img', {
+                        (0, a.jsx)('img', {
                             src: n,
                             alt: '',
-                            width: P,
-                            height: P
+                            width: N,
+                            height: N
                         }),
-                        (0, r.jsx)('div', {
+                        (0, a.jsx)('div', {
                             style: {
                                 position: 'absolute',
-                                top: N,
-                                left: N
+                                top: C,
+                                left: C
                             },
-                            children: (0, r.jsx)(O, {
-                                src: l,
-                                size: y,
-                                isTyping: f,
-                                status: _
+                            children: (0, a.jsx)(I, {
+                                src: i,
+                                size: A,
+                                isTyping: p,
+                                status: m
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)(S, {
-                    statusCoords: C,
-                    status: _,
-                    isTyping: f
+                (0, a.jsx)(g, {
+                    statusCoords: E,
+                    status: m,
+                    isTyping: p
                 })
             ]
         });

@@ -24,7 +24,7 @@ let b = {
     N = (e) => {
         let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, isCoachmarkEnabled: N = !0, linkText: x = h.NW.string(h.t.XRdyj4), cardAlignment: _ = b.START, className: E } = e,
             { balance: j } = (0, c.A)(),
-            [C, O] = i.useState(d.b.DEFAULT),
+            [O, C] = i.useState(d.b.DEFAULT),
             [S, v] = i.useState(!1),
             [T, I] = i.useState(!1),
             y = i.useRef(null),
@@ -43,7 +43,7 @@ let b = {
         }, [N, R]);
         let D = i.useCallback(() => {
                 let e = !S;
-                O(e ? d.b.SELECTED : d.b.DEFAULT), v(e);
+                C(e ? d.b.SELECTED : d.b.DEFAULT), v(e);
             }, [S]),
             Z = i.useCallback(() => {
                 S && D();
@@ -58,7 +58,7 @@ let b = {
                 (0, r.jsx)(m.A4, {
                     ref: y,
                     balance: j,
-                    balanceWidgetMode: R ? d.b.DEFAULT : C,
+                    balanceWidgetMode: R ? d.b.DEFAULT : O,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },

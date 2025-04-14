@@ -17,7 +17,7 @@ function s(e, t, n) {
     );
 }
 let l = 30,
-    c = 5,
+    c = 15,
     u = {},
     d = {},
     f = {};

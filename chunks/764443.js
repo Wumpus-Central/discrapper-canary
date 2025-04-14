@@ -91,7 +91,7 @@ function _(e) {
                 );
             })
         }),
-        C = (0, r.jsx)('div', {
+        O = (0, r.jsx)('div', {
             className: f.durationButtons,
             children: N.map((e) => {
                 let { duration: i, label: s } = e;
@@ -143,7 +143,7 @@ function _(e) {
                             className: f.description,
                             children: s
                         }),
-                    h && d && E ? C : void 0
+                    h && d && E ? O : void 0
                 ]
             });
         },
@@ -213,12 +213,12 @@ function j(e) {
             status: p.Skl.ONLINE,
             currentStatus: e
         }),
-        C = _({
+        O = _({
             status: p.Skl.IDLE,
             currentStatus: e,
             description: N(p.Skl.IDLE)
         }),
-        O = _({
+        C = _({
             status: p.Skl.DND,
             currentStatus: e,
             description: N(p.Skl.DND)
@@ -232,8 +232,8 @@ function j(e) {
         children: [
             j,
             (0, r.jsx)(a.Clw, {}, 'menu-separator-statuses'),
-            C,
             O,
+            C,
             S,
             u || i
                 ? (0, r.jsxs)(r.Fragment, {

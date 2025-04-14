@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -108,7 +108,7 @@ function j() {
         })
     );
 }
-function C() {
+function O() {
     let e = (0, g.wE)(o.z.CLICKER_COACHMARK),
         { enableGame: t } = h.C.getCurrentConfig({ location: 'Coachmark' });
     return e || !t ? null : (0, r.jsx)(j, {});

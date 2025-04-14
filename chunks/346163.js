@@ -39,7 +39,7 @@ function h(e) {
     let Z = n && x && !1 === f,
         D = n && !1 === h,
         A = (0, m.f)(),
-        W = I && w && x ? p.NW.format(p.t.wbVIUF, {}) : void 0;
+        k = I && w && x ? p.NW.format(p.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
             Z && C();
@@ -58,7 +58,7 @@ function h(e) {
             isApplicationPending: P,
             hasPreviousApplicationRejection: I,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: W,
+            reapplyNoticeText: k,
             showAcceptTermsFlow: D,
             wasRejectedInV1: D && (S || I),
             requirementsFinePrintText: R,

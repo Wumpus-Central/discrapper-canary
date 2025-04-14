@@ -1,11 +1,11 @@
-t.d(n, { Z: () => i });
+t.d(n, { Z: () => c });
 var r = t(466330),
-    c = t(981631);
-function i(e, n, t) {
+    l = t(981631);
+function c(e, n, t) {
     return (0, r.Z)({
         guild: n,
         channel: e,
         stageInstance: t,
-        source: c.t4x.CONTEXT_MENU
+        source: l.t4x.CONTEXT_MENU
     });
 }

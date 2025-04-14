@@ -46,8 +46,8 @@ function _(e) {
         null != t && R(t.name), T(e);
     }
     let A = (0, m.mY)(),
-        W = (0, a.Dt)(),
         k = (0, a.Dt)(),
+        W = (0, a.Dt)(),
         L = (0, a.Dt)();
     return (0, r.jsxs)(f.Z, {
         title: b.NW.string(b.t.iHU439),
@@ -60,14 +60,14 @@ function _(e) {
                         className: N.formSplitHalf,
                         children: (0, r.jsx)(l.hjN, {
                             title: b.NW.string(b.t.grbGJy),
-                            titleId: W,
+                            titleId: k,
                             disabled: A,
                             children: (0, r.jsx)(l.oil, {
                                 placeholder: b.NW.string(b.t['So2/xM']),
                                 value: v,
                                 inputClassName: j.formInput,
                                 onChange: O,
-                                'aria-labelledby': W,
+                                'aria-labelledby': k,
                                 disabled: A
                             })
                         })
@@ -76,7 +76,7 @@ function _(e) {
                         className: N.formSplitHalf,
                         children: (0, r.jsx)(l.hjN, {
                             title: b.NW.string(b.t.Ibl4BQ),
-                            titleId: k,
+                            titleId: W,
                             disabled: A,
                             children: (0, r.jsx)(l.q4e, {
                                 options: Z,
@@ -87,7 +87,7 @@ function _(e) {
                                 onChange: y,
                                 maxVisibleItems: 5,
                                 look: l.qQH.CUSTOM,
-                                'aria-labelledby': k
+                                'aria-labelledby': W
                             })
                         })
                     })

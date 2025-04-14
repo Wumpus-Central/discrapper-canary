@@ -61,8 +61,8 @@ function N(e) {
             N((e) => !e);
         }, []),
         j = (0, l.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
-        C = (0, l.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
-        O = (0, l.Wu)([u.Z], () =>
+        O = (0, l.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
+        C = (0, l.Wu)([u.Z], () =>
             a()
                 .sortBy(u.Z.getRecentExposures(h.xY.USER, s), (e) => {
                     let [t, n] = e;
@@ -158,7 +158,7 @@ function N(e) {
                                       type: o.geA.DESCRIPTION,
                                       children: ['Current assigned to bucket ', null != (t = null == j ? void 0 : j.bucket) ? t : h.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == C
+                                  null == O
                                       ? (0, r.jsx)(o.R94, {
                                             type: o.geA.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -177,7 +177,7 @@ function N(e) {
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
                                             className: f.pre,
-                                            children: null == C ? 'None' : JSON.stringify(C, void 0, 2)
+                                            children: null == O ? 'None' : JSON.stringify(O, void 0, 2)
                                         }),
                                         (0, r.jsx)(o.vwX, {
                                             tag: 'h5',
@@ -197,7 +197,7 @@ function N(e) {
                                         (0, r.jsx)(o.Text, {
                                             variant: 'code',
                                             className: f.pre,
-                                            children: 0 === O.length ? 'None' : O.join('\n')
+                                            children: 0 === C.length ? 'None' : C.join('\n')
                                         })
                                     ]
                                 })
@@ -255,7 +255,7 @@ function x(e) {
                 .join(', ');
             return [r.join('\n'), s];
         }),
-        C = (0, r.jsx)(o.P3F, {
+        O = (0, r.jsx)(o.P3F, {
             onClick: N,
             children: (0, r.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
@@ -284,7 +284,7 @@ function x(e) {
               children: [
                   (0, r.jsxs)(o.hjN, {
                       children: [
-                          C,
+                          O,
                           (0, r.jsxs)('div', {
                               children: [
                                   (0, r.jsx)(o.xJW, {
@@ -380,6 +380,6 @@ function x(e) {
           })
         : (0, r.jsx)('div', {
               className: f.group,
-              children: (0, r.jsx)(o.hjN, { children: C })
+              children: (0, r.jsx)(o.hjN, { children: O })
           });
 }

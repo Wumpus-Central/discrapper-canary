@@ -20,8 +20,8 @@ var i = n(120356),
     _ = n(981631),
     E = n(388032),
     j = n(20493);
-let C = n(775322),
-    O = n(853453),
+let O = n(775322),
+    C = n(853453),
     S = (0, u.hQ)(),
     v = {
         page: _.ZY5.USER_SETTINGS,
@@ -95,7 +95,7 @@ function I(e) {
                         className: j.marginBottom8,
                         type: o.Dd5.PRIMARY,
                         imageData: {
-                            src: (0, l.ap)(n) ? C : O,
+                            src: (0, l.ap)(n) ? O : C,
                             width: 70,
                             height: 40
                         },
@@ -131,7 +131,7 @@ function y(e) {
         {
             hasEchoCancellation: f,
             hasNoiseSuppression: b,
-            hasAutomaticGainControl: C
+            hasAutomaticGainControl: O
         } = (0, a.cj)(
             [g.Z],
             () => ({
@@ -141,10 +141,10 @@ function y(e) {
             }),
             [i]
         ),
-        O = n === _.pM4.VOICE_ACTIVITY && u,
+        C = n === _.pM4.VOICE_ACTIVITY && u,
         S = (0, r.jsxs)(N.Z, {
             children: [
-                (f || b || C) &&
+                (f || b || O) &&
                     (0, r.jsx)(o.R94, {
                         className: t ? void 0 : j.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
@@ -175,7 +175,7 @@ function y(e) {
                         value: h,
                         onChange: (e) => c.Z.setMode(n, { vadUseKrisp: e }),
                         note: E.NW.string(E.t.LoOB1N),
-                        disabled: !O,
+                        disabled: !C,
                         hideBorder: t,
                         children: E.NW.string(E.t.BbESsr)
                     })
@@ -190,7 +190,7 @@ function y(e) {
                                 section: _.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
                         note: E.NW.string(E.t['6EjbvL']),
-                        disabled: C,
+                        disabled: O,
                         hideBorder: t,
                         children: E.NW.string(E.t.cUMdHx)
                     })

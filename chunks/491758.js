@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(39604),
     E = n(442334),
     j = n(356659),
-    C = n(981631),
-    O = n(37113),
+    O = n(981631),
+    C = n(37113),
     S = n(526761),
     v = n(388032),
     T = n(99645),
@@ -30,7 +30,7 @@ function A() {
     let e = (0, l.e7)([p.Z], () => p.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: A, clipsQuality: P } = (0, l.cj)([b.Z], () => b.Z.getSettings()),
         R = (0, l.e7)([b.Z], () => b.Z.getHardwareClassification()),
-        D = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(C.kg4.SAVE_CLIP, !0)),
+        D = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         Z = b.Z.isDecoupledGameClippingEnabled(),
         w = (0, x.Z)(p.Z),
         { showClipsHeaderEntrypoint: k } = f.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
@@ -56,23 +56,23 @@ function A() {
         B = i.useMemo(
             () => [
                 {
-                    value: O.LY.RESOLUTION_480,
-                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: O.LY.RESOLUTION_480 })
+                    value: C.LY.RESOLUTION_480,
+                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: C.LY.RESOLUTION_480 })
                 },
                 {
-                    value: O.LY.RESOLUTION_720,
-                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: O.LY.RESOLUTION_720 })
+                    value: C.LY.RESOLUTION_720,
+                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: C.LY.RESOLUTION_720 })
                 },
                 {
-                    value: O.LY.RESOLUTION_1080,
-                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: O.LY.RESOLUTION_1080 })
+                    value: C.LY.RESOLUTION_1080,
+                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: C.LY.RESOLUTION_1080 })
                 },
                 {
-                    value: O.LY.RESOLUTION_1440,
-                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: O.LY.RESOLUTION_1440 })
+                    value: C.LY.RESOLUTION_1440,
+                    label: v.NW.formatToPlainString(v.t.TEOC0N, { resolution: C.LY.RESOLUTION_1440 })
                 },
                 {
-                    value: O.LY.RESOLUTION_SOURCE,
+                    value: C.LY.RESOLUTION_SOURCE,
                     label: v.NW.string(v.t.XjXqzs)
                 }
             ],
@@ -81,16 +81,16 @@ function A() {
         M = i.useMemo(
             () => [
                 {
-                    value: O.ws.FPS_15,
-                    label: v.NW.formatToPlainString(v.t.Qb44XF, { fps: O.ws.FPS_15 })
+                    value: C.ws.FPS_15,
+                    label: v.NW.formatToPlainString(v.t.Qb44XF, { fps: C.ws.FPS_15 })
                 },
                 {
-                    value: O.ws.FPS_30,
-                    label: v.NW.formatToPlainString(v.t.Qb44XF, { fps: O.ws.FPS_30 })
+                    value: C.ws.FPS_30,
+                    label: v.NW.formatToPlainString(v.t.Qb44XF, { fps: C.ws.FPS_30 })
                 },
                 {
-                    value: O.ws.FPS_60,
-                    label: v.NW.formatToPlainString(v.t.Qb44XF, { fps: O.ws.FPS_60 })
+                    value: C.ws.FPS_60,
+                    label: v.NW.formatToPlainString(v.t.Qb44XF, { fps: C.ws.FPS_60 })
                 }
             ],
             [W]
@@ -151,7 +151,7 @@ function A() {
                         (0, r.jsx)(g.Z, {
                             look: g.z.WARNING,
                             className: I.formItem,
-                            children: v.NW.format(v.t.kiaF4e, { onClick: () => d.Z.open(C.oAB.VOICE, null, { scrollPosition: S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: v.NW.format(v.t.kiaF4e, { onClick: () => d.Z.open(O.oAB.VOICE, null, { scrollPosition: S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     R === N.x.BELOW_MINIMUM
                         ? (0, r.jsx)(g.Z, {

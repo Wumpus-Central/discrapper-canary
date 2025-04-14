@@ -44,7 +44,7 @@ function p(e) {
         a &&
             i.push(
                 (0, r.jsx)(
-                    O,
+                    C,
                     {
                         className: n,
                         label: m.NW.string(m.t['06rDHR'])
@@ -55,7 +55,7 @@ function p(e) {
         l &&
             i.push(
                 (0, r.jsx)(
-                    O,
+                    C,
                     {
                         className: n,
                         label: m.NW.string(m.t.oWM95O)
@@ -123,7 +123,7 @@ function f(e) {
         c > -1 &&
             l.push(
                 (0, r.jsx)(
-                    C,
+                    O,
                     {
                         className: a,
                         label: m.NW.format(m.t['Y88M5+'], { count: c }),
@@ -136,7 +136,7 @@ function f(e) {
         d > -1 &&
             l.push(
                 (0, r.jsx)(
-                    C,
+                    O,
                     {
                         className: a,
                         label: m.NW.format(m.t['Y88M5+'], { count: d }),
@@ -156,7 +156,7 @@ function b(e) {
         '1' === e[u.PC.PAYPAL_VERIFIED] &&
             n.push(
                 (0, r.jsx)(
-                    O,
+                    C,
                     {
                         className: s()(t, g.paypalVerifiedTag),
                         label: m.NW.string(m.t.IhXLy8)
@@ -190,7 +190,7 @@ function N(e) {
         a &&
             i.push(
                 (0, r.jsx)(
-                    O,
+                    C,
                     {
                         className: n,
                         label: m.NW.string(m.t.TEEYwc)
@@ -249,7 +249,7 @@ function x(e) {
         l &&
             a.push(
                 (0, r.jsx)(
-                    O,
+                    C,
                     {
                         className: s,
                         label: m.NW.string(m.t.QHHwRU)
@@ -280,7 +280,7 @@ function _(e) {
                     ((s.type === u.xn.BOOLEAN_EQUAL && '1' === l) || (s.type === u.xn.BOOLEAN_NOT_EQUAL && '1' !== l)) &&
                         i.push(
                             (0, r.jsx)(
-                                O,
+                                C,
                                 {
                                     className: t,
                                     label: s.name
@@ -356,7 +356,7 @@ function j(e) {
         })
     });
 }
-function C(e) {
+function O(e) {
     let { label: t, imageSrc: n, imageAlt: i, className: a } = e;
     return (0, r.jsxs)('div', {
         className: s()(g.connectedAccountVanityMetadata, g.connectedAccountVanityMetadataItem, a),
@@ -422,7 +422,7 @@ function C(e) {
         ]
     });
 }
-function O(e) {
+function C(e) {
     let { label: t, className: n } = e;
     return (0, r.jsx)(o.Text, {
         variant: 'text-xs/semibold',

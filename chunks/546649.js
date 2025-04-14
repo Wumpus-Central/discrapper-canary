@@ -1,23 +1,23 @@
-e.d(t, { default: () => o });
-var i = e(200651);
-e(192379);
-var a = e(481060),
-    l = e(239091),
-    r = e(299206),
-    c = e(461757),
-    s = e(388032);
+l.d(t, { default: () => o });
+var e = l(200651);
+l(192379);
+var i = l(481060),
+    a = l(239091),
+    r = l(299206),
+    c = l(461757),
+    s = l(388032);
 function o(n) {
-    let { channel: t, channelId: e, originalLink: o, messageId: d, onSelect: h } = n,
-        u = (0, c.Z)(t, o, d),
+    let { channel: t, channelId: l, originalLink: o, messageId: u, onSelect: d } = n,
+        h = (0, c.Z)(t, o, u),
         p = (0, r.Z)({
-            id: e,
+            id: l,
             label: s.NW.string(s.t.gFHI3t)
         });
-    return (0, i.jsxs)(a.v2r, {
+    return (0, e.jsxs)(i.v2r, {
         navId: 'channel-mention-context',
-        onClose: l.Zy,
-        onSelect: h,
+        onClose: a.Zy,
+        onSelect: d,
         'aria-label': s.NW.string(s.t.feGACA),
-        children: [(0, i.jsx)(a.kSQ, { children: u }, 'channel-mention-actions'), (0, i.jsx)(a.kSQ, { children: p }, 'developer-actions')]
+        children: [(0, e.jsx)(i.kSQ, { children: h }, 'channel-mention-actions'), (0, e.jsx)(i.kSQ, { children: p }, 'developer-actions')]
     });
 }

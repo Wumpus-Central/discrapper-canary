@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(295474),
     E = n(144114),
     j = n(918505),
-    C = n(332473),
-    O = n(921801),
+    O = n(332473),
+    C = n(921801),
     S = n(485341),
     v = n(687158),
     T = n(518950),
@@ -88,7 +88,7 @@ function z(e) {
     let { className: l, user: o } = e,
         c = i.useRef(null),
         m = (0, j.o9)(),
-        g = (0, C.b)(),
+        g = (0, O.b)(),
         p = (0, _.gS)(),
         h = null != (s = null == p || null == (t = p.nick) ? void 0 : t[0]) ? s : null,
         [f, b] = i.useState(!1);
@@ -614,32 +614,32 @@ function ee() {
                     (0, r.jsxs)('div', {
                         className: V.fieldList,
                         children: [
-                            (0, r.jsx)(O.F, {
+                            (0, r.jsx)(C.F, {
                                 setting: W.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, r.jsx)(Y, {
                                     className: V.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
-                            (0, r.jsx)(O.F, {
+                            (0, r.jsx)(C.F, {
                                 setting: W.s6.ACCOUNT_USERNAME,
                                 children: (0, r.jsx)(z, { user: t })
                             }),
-                            (0, r.jsx)(O.F, {
+                            (0, r.jsx)(C.F, {
                                 setting: W.s6.ACCOUNT_EMAIL,
                                 children: (0, r.jsx)(q, {
                                     className: V.fieldSpacer,
                                     user: t
                                 })
                             }),
-                            (0, r.jsx)(O.F, {
+                            (0, r.jsx)(C.F, {
                                 setting: W.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, r.jsx)(X, {
                                     className: V.fieldSpacer,
                                     user: t
                                 })
                             }),
-                            (0, r.jsx)(O.F, {
+                            (0, r.jsx)(C.F, {
                                 setting: W.s6.ACCOUNT_AGE_GROUP,
                                 children: (0, r.jsx)($, { className: V.fieldSpacer })
                             })

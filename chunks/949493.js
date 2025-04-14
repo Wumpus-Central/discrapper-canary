@@ -20,8 +20,8 @@ var i = n(442837),
     _ = n(864239),
     E = n(190014),
     j = n(301812),
-    C = n(988043),
-    O = n(919539),
+    O = n(988043),
+    C = n(919539),
     S = n(726985),
     v = n(583139),
     T = n(981631),
@@ -36,8 +36,8 @@ let y = () =>
                         setting: S.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                         children: (0, r.jsx)(f.Z, {})
                     }),
-                    (0, r.jsx)(C.Z, {}),
                     (0, r.jsx)(O.Z, {}),
+                    (0, r.jsx)(C.Z, {}),
                     (0, r.jsx)(j.Z, {}),
                     (0, r.jsx)(E.Z, {})
                 ]

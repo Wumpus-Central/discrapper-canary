@@ -57,7 +57,7 @@ function N(e, t) {
     );
 }
 function x(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: _, label: E, colorPickerMiddle: j, colorPickerFooter: C, showEyeDropper: O } = e,
+    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: _, label: E, colorPickerMiddle: j, colorPickerFooter: O, showEyeDropper: C } = e,
         S = i.useRef(null),
         v = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         T = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -66,12 +66,12 @@ function x(e) {
         A = y === v ? T : y,
         P = (0, m.Lq)(I ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
         R = (0, u.Z)(j),
-        D = (0, u.Z)(C),
+        D = (0, u.Z)(O),
         [Z, w] = i.useState((0, l.Z)());
     return (
         i.useEffect(() => {
-            (R !== j || D !== C) && w((0, l.Z)());
-        }, [C, j, D, R]),
+            (R !== j || D !== O) && w((0, l.Z)());
+        }, [O, j, D, R]),
         (0, r.jsx)(d.yRy, {
             positionKey: Z,
             renderPopout: (e) =>
@@ -82,8 +82,8 @@ function x(e) {
                         onChange: t,
                         suggestedColors: x,
                         middle: j,
-                        footer: C,
-                        showEyeDropper: O
+                        footer: O,
+                        showEyeDropper: C
                     })
                 ),
             onRequestClose: n,

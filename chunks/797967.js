@@ -141,7 +141,7 @@ function _(e) {
         v = o.useRef(null),
         [P, w] = o.useState(() => (h(a) ? a : null)),
         [k, S] = o.useState({
-            start: h(a) ? a : void 0,
+            start: a,
             end: null != j ? j : c.p6O
         }),
         [N, I] = o.useState({
@@ -151,7 +151,7 @@ function _(e) {
     o.useEffect(() => {
         w(h(a) ? a : null),
             S({
-                start: h(a) ? a : void 0,
+                start: a,
                 end: null != j ? j : c.p6O
             });
     }, [a, h, j]);

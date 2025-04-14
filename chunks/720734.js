@@ -24,8 +24,8 @@ var r = n(200651),
     _ = n(410575),
     E = n(941129),
     j = n(634894),
-    C = n(586902),
-    O = n(980591),
+    O = n(586902),
+    C = n(980591),
     S = n(468363),
     v = n(326255),
     T = n(747017),
@@ -78,8 +78,8 @@ var r = n(200651),
     e_ = n(875527),
     eE = n(56848),
     ej = n(378441),
-    eC = n(358820),
-    eO = n(469887),
+    eO = n(358820),
+    eC = n(469887),
     eS = n(306609),
     ev = n(199902),
     eT = n(314897),
@@ -173,7 +173,7 @@ function e4(e) {
         {
             updateOpenPopoutRef: E,
             highlightBadge: j,
-            setHighlightBadge: C
+            setHighlightBadge: O
         } = (function () {
             let e = i.useRef(null),
                 t = i.useCallback((t) => {
@@ -184,7 +184,7 @@ function e4(e) {
                 [n, r] = i.useState(),
                 [s, a] = i.useState(!1);
             return (
-                (0, O.Z)(() => a(!0), 750),
+                (0, C.Z)(() => a(!0), 750),
                 i.useEffect(() => {
                     let t = (t) => {
                         var n;
@@ -235,7 +235,7 @@ function e4(e) {
                   spacing: 14,
                   fixed: !0,
                   onRequestClose: () => {
-                      c(), C(void 0);
+                      c(), O(void 0);
                   },
                   children: (e) => (
                       E(e),
@@ -624,10 +624,10 @@ class e9 extends i.PureComponent {
 }
 function e5(e) {
     let { selfDeaf: t, selfMute: n, awaitingRemote: i, serverMute: s, serverDeaf: a, suppress: l, shouldShowSpeakingWhileMutedTooltip: o, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: g, handleToggleSelfMute: p, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: N, handleOpenSettingsContextMenu: x, dismissibleContents: _, nameplate: E, accountContainerRef: j } = e,
-        C = (0, en.A)(E);
+        O = (0, en.A)(E);
     return (0, r.jsxs)('div', {
         className: eQ.buttons,
-        style: C,
+        style: O,
         children: [
             (0, r.jsx)(tt, {
                 accountContainerRef: j,
@@ -688,7 +688,7 @@ function e7() {
             };
         }),
         d = (0, o.e7)([ev.Z], () => ev.Z.getAnyStreamForUser(n)),
-        u = (0, C.Z)({ userId: n }),
+        u = (0, O.Z)({ userId: n }),
         m = eF.ZP.useUserTag(t, { decoration: 'never' }),
         g = (0, o.e7)([eZ.Z], () => eZ.Z.hidePersonalInformation),
         p = (0, o.e7)([eP.Z, eI.Z], () => {
@@ -696,7 +696,7 @@ function e7() {
             return null != e ? eI.Z.getChannel(e) : null;
         }),
         { mute: h, selfMute: N, suppress: x } = (0, ex.Z)(p),
-        { selfDeaf: _, deaf: O } = (0, eN.Z)(p),
+        { selfDeaf: _, deaf: C } = (0, eN.Z)(p),
         v = (0, o.e7)([Z.C], () => {
             var e;
             return (0, w.fD)() ? (null == (e = Z.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
@@ -774,7 +774,7 @@ function e7() {
                 premiumSubscription: T,
                 selfDeaf: _,
                 selfMute: N,
-                serverDeaf: O,
+                serverDeaf: C,
                 serverMute: h,
                 speaking: u,
                 speakingWhileMuted: I,
@@ -829,12 +829,12 @@ function te(e) {
     });
 }
 function tt(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: c, tooltipText: d, tooltipColor: u, tooltipForceOpen: p, iconForeground: b, onMouseEnter: N, onMouseLeave: x, onClick: _, onContextMenu: E, nameplate: j, accountContainerRef: C } = e,
-        O = t || s || n,
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: c, tooltipText: d, tooltipColor: u, tooltipForceOpen: p, iconForeground: b, onMouseEnter: N, onMouseLeave: x, onClick: _, onContextMenu: E, nameplate: j, accountContainerRef: O } = e,
+        C = t || s || n,
         S = i.useRef(null),
         v = i.useRef(null),
-        T = (0, m.O)(O ? 'unmute' : 'mute'),
-        I = (0, g.P)(O ? 'unmute' : 'mute'),
+        T = (0, m.O)(C ? 'unmute' : 'mute'),
+        I = (0, g.P)(C ? 'unmute' : 'mute'),
         { activeVoice: y } = (0, ej.o)(),
         R = null != y,
         D = (0, eE.z)(y),
@@ -849,7 +849,7 @@ function tt(e) {
             location: A.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0
         });
-    i.useEffect(() => () => L(), [O, L]);
+    i.useEffect(() => () => L(), [C, L]);
     let H = i.useCallback(
             (e) => {
                 E(e, G);
@@ -898,16 +898,16 @@ function tt(e) {
                             size: 'custom',
                             width: 20,
                             height: 20,
-                            color: O ? f.TVs.colors.STATUS_DANGER : 'currentColor',
+                            color: C ? f.TVs.colors.STATUS_DANGER : 'currentColor',
                             className: b
                         }),
                         onClick: _,
                         onContextMenu: H,
                         role: 'switch',
                         className: a()({ [eQ.micButtonWithMenu]: F }),
-                        redGlow: O && U,
+                        redGlow: C && U,
                         'aria-label': eJ.NW.string(eJ.t['w4m94+']),
-                        'aria-checked': O,
+                        'aria-checked': C,
                         disabled: c
                     }),
                     F &&
@@ -916,11 +916,11 @@ function tt(e) {
                             position: 'top',
                             align: 'left',
                             nudgeAlignIntoViewport: !1,
-                            overridePositionRef: C,
+                            overridePositionRef: O,
                             animation: f.yRy.Animation.FADE,
                             useMouseEnter: !0,
                             ignoreModalClicks: !0,
-                            onRequestOpen: eC.r5,
+                            onRequestOpen: eO.r5,
                             onRequestClose: K,
                             shouldShow: z,
                             renderPopout: (e) => {
@@ -951,7 +951,7 @@ function tt(e) {
                                     { isShown: s } = t;
                                 let l = s ? f.u04 : f.CJ0;
                                 return (0, r.jsx)('div', {
-                                    children: (0, r.jsx)(eO.B, {
+                                    children: (0, r.jsx)(eC.B, {
                                         targetElementRef: v,
                                         onCTA: () => Y(!0),
                                         canBeShown: !s,
@@ -986,11 +986,11 @@ function tt(e) {
                                                             size: 'custom',
                                                             width: 12,
                                                             height: 12,
-                                                            color: U && O ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
+                                                            color: U && C ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
                                                         }),
                                                         role: 'button',
-                                                        className: a()([eQ.buttonChevron], { [eQ.redGlow]: O && U }),
-                                                        redGlow: O && U,
+                                                        className: a()([eQ.buttonChevron], { [eQ.redGlow]: C && U }),
+                                                        redGlow: C && U,
                                                         'aria-label': eJ.NW.string(eJ.t.Hapb4O),
                                                         disabled: c,
                                                         onClick: (e) => {

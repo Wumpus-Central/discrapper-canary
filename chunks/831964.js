@@ -23,8 +23,8 @@ var r,
     _ = n(290650),
     E = n(751125),
     j = n(357003),
-    C = n(904505),
-    O = n(712626),
+    O = n(904505),
+    C = n(712626),
     S = n(386014),
     v = n(845571),
     T = n(220046),
@@ -85,8 +85,8 @@ let D = () => {
                     name: 'referralProgram',
                     title: m.NW.string(m.t.tPY4o6),
                     description: m.NW.format(m.t.jRPQUF, { learnMoreLink: g }),
-                    previewImage: O.Z,
-                    videoUrl: r ? C.ZP : S.ZP
+                    previewImage: C.Z,
+                    videoUrl: r ? O.ZP : S.ZP
                 }
             },
             N = {

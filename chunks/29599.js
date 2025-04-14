@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(725727),
     E = n(454982),
     j = n(197115),
-    C = n(504983),
-    O = n(703656),
+    O = n(504983),
+    C = n(703656),
     S = n(594174),
     v = n(580130),
     T = n(669079),
@@ -39,29 +39,29 @@ function Z(e) {
         b = (0, h.ZP)(),
         _ = (0, x.Pz)(n.id, b),
         j = null != s,
-        C = (0, N.Z)(n, j);
+        O = (0, N.Z)(n, j);
     j && c
         ? (t = R.NW.format(R.t.pkxVx8, {
-              endDate: C,
+              endDate: O,
               onClickDetails: p
           }))
         : j && !c
           ? (t = R.NW.format(R.t['4sFeoa'], {
-                endDate: C,
+                endDate: O,
                 onClickDetails: p
             }))
           : !j && c
             ? (t = R.NW.format(R.t['RBnE+v'], {
-                  endDate: C,
+                  endDate: O,
                   onClickDetails: p
               }))
             : j ||
               c ||
               (t = R.NW.format(R.t['57+7Qk'], {
-                  endDate: C,
+                  endDate: O,
                   onClickDetails: p
               }));
-    let O = j ? R.NW.string(R.t['2cHUtr']) : R.NW.string(R.t.O13yh4),
+    let C = j ? R.NW.string(R.t['2cHUtr']) : R.NW.string(R.t.O13yh4),
         S = i.useCallback(() => g(!1), []),
         { outboundTitle: v, outboundTermsAndConditions: T } = n;
     return (0, r.jsxs)(r.Fragment, {
@@ -105,7 +105,7 @@ function Z(e) {
                                 size: d.zxk.Sizes.SMALL,
                                 onClick: () => g(!0),
                                 disabled: !0 === o,
-                                children: O
+                                children: C
                             })
                         ]
                     }),
@@ -226,7 +226,7 @@ let w = function () {
                                                     className: D.promoDescription,
                                                     children: R.NW.format(R.t.G4fwxM, {
                                                         onClick: () => {
-                                                            (0, g.xf)(), (0, O.uL)(A.Z5c.APPLICATION_STORE);
+                                                            (0, g.xf)(), (0, C.uL)(A.Z5c.APPLICATION_STORE);
                                                         }
                                                     })
                                                 })
@@ -244,10 +244,10 @@ let w = function () {
                                     variant: 'heading-md/semibold',
                                     children: W ? R.NW.string(R.t.wFsj3N) : void 0
                                 });
-                      return (0, r.jsx)(C.Z, {
+                      return (0, r.jsx)(O.Z, {
                           className: D.containerWithMargin,
                           isShown: L,
-                          type: C.Y.PREMIUM,
+                          type: O.Y.PREMIUM,
                           hasBackground: !0,
                           children: (0, r.jsxs)(d.hjN, {
                               className: a()({ [D.containerWithMargin]: !L }),

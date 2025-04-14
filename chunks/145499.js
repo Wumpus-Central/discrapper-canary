@@ -194,9 +194,9 @@ let I = (e, t) => (e < (0, x.A3)(O.Eu4.NONE) ? O.Eu4.NONE : e < (0, x.A3)(O.Eu4.
                     Z = (0, x.ig)(d.tier),
                     D = c.slice(N, E),
                     A = D.length > 0,
-                    W = S < d.tier,
-                    k = I(c.length, t),
-                    L = h && !W && k === d.tier && E !== D.length,
+                    k = S < d.tier,
+                    W = I(c.length, t),
+                    L = h && !k && W === d.tier && E !== D.length,
                     M = L || D.length > 0,
                     G = E - N,
                     U = n(872732),
@@ -204,7 +204,7 @@ let I = (e, t) => (e < (0, x.A3)(O.Eu4.NONE) ? O.Eu4.NONE : e < (0, x.A3)(O.Eu4.
                     F = L ? Math.min(5 - ((D.length + 0) % 5), B) : 0,
                     z = [];
                 for (let e = 0; e < F; e++) z.push((0, r.jsx)(T, {}, 'placeholder-'.concat(e)));
-                let H = k === g + 1 && k > S,
+                let H = W === g + 1 && W > S,
                     V = L || H || g > S;
                 return (
                     H
@@ -243,7 +243,7 @@ let I = (e, t) => (e < (0, x.A3)(O.Eu4.NONE) ? O.Eu4.NONE : e < (0, x.A3)(O.Eu4.
                                                 (0, r.jsx)(
                                                     v.Z,
                                                     {
-                                                        isDisabled: W,
+                                                        isDisabled: k,
                                                         sticker: e,
                                                         canManageSticker: b(e)
                                                     },
@@ -253,7 +253,7 @@ let I = (e, t) => (e < (0, x.A3)(O.Eu4.NONE) ? O.Eu4.NONE : e < (0, x.A3)(O.Eu4.
                                             z
                                         ]
                                     }),
-                                !W &&
+                                !k &&
                                     !L &&
                                     0 === D.length &&
                                     (0, r.jsx)('div', {
@@ -264,7 +264,7 @@ let I = (e, t) => (e < (0, x.A3)(O.Eu4.NONE) ? O.Eu4.NONE : e < (0, x.A3)(O.Eu4.
                                             children: C.NW.string(C.t.lqwv0N)
                                         })
                                     }),
-                                W &&
+                                k &&
                                     !A &&
                                     (0, r.jsxs)('div', {
                                         className: y.emptyTierWrapper,

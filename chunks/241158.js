@@ -41,7 +41,7 @@ function x(e) {
     return e;
 }
 let _ = (e) => {
-        let { name: t, title: n, description: s, descriptionCta: b, previewImage: x, videoUrl: _, shouldLoadVideo: E, index: j, isCompact: C, isReducedMotion: O, onClick: S } = e,
+        let { name: t, title: n, description: s, descriptionCta: b, previewImage: x, videoUrl: _, shouldLoadVideo: E, index: j, isCompact: O, isReducedMotion: C, onClick: S } = e,
             v = (0, g.rO)(),
             T = i.useRef(null),
             I = i.useRef(0),
@@ -81,24 +81,24 @@ let _ = (e) => {
                 m.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
             }, 800),
             Z = () => {
-                null == T.current || O || ((T.current.currentTime = I.current), T.current.play());
+                null == T.current || C || ((T.current.currentTime = I.current), T.current.play());
             },
             w = () => {
-                null == T.current || O || ((I.current = T.current.currentTime), T.current.pause());
+                null == T.current || C || ((I.current = T.current.currentTime), T.current.pause());
             },
             k = () =>
                 (0, r.jsxs)('div', {
                     className: a()({
-                        [N.whatsNewTextBoxOuter]: !C,
-                        [N.compactTextBox]: C
+                        [N.whatsNewTextBoxOuter]: !O,
+                        [N.compactTextBox]: O
                     }),
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-xxl/extrabold',
                             color: 'header-primary',
                             className: a()({
-                                [N.whatsNewBoxHeader]: !C,
-                                [N.compactBoxHeader]: C
+                                [N.whatsNewBoxHeader]: !O,
+                                [N.compactBoxHeader]: O
                             }),
                             children: n
                         }),
@@ -125,8 +125,8 @@ let _ = (e) => {
                 let { isLeft: t } = e;
                 return (0, r.jsx)('div', {
                     className: a()({
-                        [N.whatsNewArtContainer]: !C,
-                        [N.compactBoxArtContainer]: C
+                        [N.whatsNewArtContainer]: !O,
+                        [N.compactBoxArtContainer]: O
                     }),
                     children: (0, r.jsx)(
                         u.Z,
@@ -137,9 +137,9 @@ let _ = (e) => {
                             poster: x,
                             loop: !0,
                             className: a()({
-                                [N.perkBoxVideo]: !C,
-                                [N.leftSideArt]: t && !C,
-                                [N.compactBoxVideo]: C
+                                [N.perkBoxVideo]: !O,
+                                [N.leftSideArt]: t && !O,
+                                [N.compactBoxVideo]: O
                             }),
                             ref: T,
                             children: (0, r.jsx)('source', {
@@ -154,8 +154,8 @@ let _ = (e) => {
             L = j % 2 != 0;
         return (0, r.jsx)('div', {
             className: a()(y, {
-                [N.whatsNewBoxContainer]: !C,
-                [N.compactBoxContainer]: C
+                [N.whatsNewBoxContainer]: !O,
+                [N.compactBoxContainer]: O
             }),
             onMouseEnter: Z,
             onFocus: Z,

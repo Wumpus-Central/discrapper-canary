@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(687158),
     E = n(899007),
     j = n(648052),
-    C = n(867176),
-    O = n(537006),
+    O = n(867176),
+    C = n(537006),
     S = n(483517),
     v = n(483424),
     T = n(681837),
@@ -133,7 +133,7 @@ function Q(e) {
                         (0, r.jsxs)('header', {
                             className: X.header,
                             children: [
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(O.Z, {
                                     user: t,
                                     displayProfile: en,
                                     profileType: Y.y0.BITE_SIZE
@@ -190,7 +190,7 @@ function Q(e) {
                                     hidePersonalInformation: eu,
                                     onClose: n
                                 }),
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(C.Z, {
                                     isPremiumUser: eb,
                                     onInteraction: n
                                 }),

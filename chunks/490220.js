@@ -20,8 +20,8 @@ function m(e) {
             pendingBio: _,
             tryItOutThemeColors: E,
             tryItOutAvatar: j,
-            tryItOutBanner: C,
-            tryItOutAvatarDecoration: O,
+            tryItOutBanner: O,
+            tryItOutAvatarDecoration: C,
             tryItOutProfileEffectId: S
         } = (0, s.cj)([c.Z], () =>
             (function (e) {
@@ -54,13 +54,13 @@ function m(e) {
             userId: m.id,
             image: null != j ? j : f
         }),
-        T = (0, l.Z)(O, !1);
+        T = (0, l.Z)(C, !1);
     return (0, r.jsx)(d.Z, {
         containerClassName: p,
         user: m,
         pendingPronouns: x,
         pendingBio: _,
-        pendingBanner: null != (t = null != C ? C : b) ? t : n(466045),
+        pendingBanner: null != (t = null != O ? O : b) ? t : n(466045),
         pendingAvatar: v,
         pendingThemeColors: null != E ? E : N,
         pendingAvatarDecoration: T,

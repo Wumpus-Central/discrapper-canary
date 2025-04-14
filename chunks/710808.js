@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(726985),
     E = n(981631),
     j = n(65154),
-    C = n(388032),
-    O = n(20493);
+    O = n(388032),
+    C = n(20493);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,9 +75,9 @@ function I(e) {
             v(
                 S(
                     {
-                        header: C.NW.string(C.t['7UXEFx']),
-                        confirmText: C.NW.string(C.t.BddRzc),
-                        cancelText: C.NW.string(C.t['ETE/oK']),
+                        header: O.NW.string(O.t['7UXEFx']),
+                        confirmText: O.NW.string(O.t.BddRzc),
+                        cancelText: O.NW.string(O.t['ETE/oK']),
                         onCancel: t.onClose,
                         onConfirm: () => l.Z.setDebugLogging(e)
                     },
@@ -86,7 +86,7 @@ function I(e) {
                 {
                     children: (0, r.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: C.NW.string(C.t.IYPrRk)
+                        children: O.NW.string(O.t.IYPrRk)
                     })
                 }
             )
@@ -108,8 +108,8 @@ function y(e) {
         d(!0);
         try {
             await f.Z.getMediaEngine().writeAudioDebugState(), await N.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, m.E)(E.GU0.RTC);
-            let e = C.NW.string(C.t['fKBB8/']),
-                t = C.NW.string(C.t.BvyxEx);
+            let e = O.NW.string(O.t['fKBB8/']),
+                t = O.NW.string(O.t.BvyxEx);
             (0, a.h7j)((n) =>
                 (0, r.jsx)(
                     a.ConfirmModal,
@@ -118,7 +118,7 @@ function y(e) {
                             {
                                 header: e,
                                 confirmButtonColor: a.zxk.Colors.BRAND,
-                                confirmText: C.NW.string(C.t.BddRzc)
+                                confirmText: O.NW.string(O.t.BddRzc)
                             },
                             n
                         ),
@@ -134,10 +134,10 @@ function y(e) {
         } catch (e) {
             !(function (e) {
                 var t;
-                let n = C.NW.string(C.t.QZg0Jy),
-                    i = null != e ? e : C.NW.string(C.t.VzHcSk),
+                let n = O.NW.string(O.t.QZg0Jy),
+                    i = null != e ? e : O.NW.string(O.t.VzHcSk),
                     s = null == (t = (0, g.hp)(g.u.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : t.errorCode,
-                    l = C.NW.formatToPlainString(C.t['ejOT9/'], { errorCode: s });
+                    l = O.NW.formatToPlainString(O.t['ejOT9/'], { errorCode: s });
                 (0, a.h7j)((e) =>
                     (0, r.jsx)(
                         a.ConfirmModal,
@@ -146,7 +146,7 @@ function y(e) {
                                 {
                                     header: n,
                                     confirmButtonColor: a.zxk.Colors.BRAND,
-                                    confirmText: C.NW.string(C.t.BddRzc)
+                                    confirmText: O.NW.string(O.t.BddRzc)
                                 },
                                 e
                             ),
@@ -186,9 +186,9 @@ function y(e) {
                     onChange: (e) => {
                         (0, x.Z)('stream_info_overlay_enabled', e, P), (0, o.y)({ isStreamInfoOverlayEnabled: e });
                     },
-                    note: C.NW.string(C.t.kBXuW1),
+                    note: O.NW.string(O.t.kBXuW1),
                     hideBorder: t,
-                    children: C.NW.string(C.t['0CEP6e'])
+                    children: O.NW.string(O.t['0CEP6e'])
                 })
             }),
             (0, r.jsx)(p.F, {
@@ -196,9 +196,9 @@ function y(e) {
                 children: (0, r.jsx)(a.j7V, {
                     value: A,
                     onChange: (e) => l.Z.setAecDump(e),
-                    note: C.NW.string(C.t['xl9+Iy']),
+                    note: O.NW.string(O.t['xl9+Iy']),
                     hideBorder: t,
-                    children: C.NW.string(C.t['r6K+TE'])
+                    children: O.NW.string(O.t['r6K+TE'])
                 })
             }),
             (0, r.jsxs)(p.F, {
@@ -208,24 +208,24 @@ function y(e) {
                         hideBorder: !0,
                         value: R,
                         onChange: (e) => c.TC(e),
-                        note: C.NW.string(C.t.Lm72RU),
-                        children: C.NW.string(C.t.U4FgFB)
+                        note: O.NW.string(O.t.Lm72RU),
+                        children: O.NW.string(O.t.U4FgFB)
                     }),
                     (0, r.jsx)(a.xJW, {
                         children: (0, r.jsx)(u.Z, {
-                            className: O.marginBottom20,
+                            className: C.marginBottom20,
                             children: (0, r.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
                                 children: (0, r.jsx)(a.zxk, {
                                     size: a.zxk.Sizes.SMALL,
                                     onClick: () => c.z4(),
-                                    children: C.NW.string(C.t.nJnOHB)
+                                    children: O.NW.string(O.t.nJnOHB)
                                 })
                             })
                         })
                     }),
-                    t ? null : (0, r.jsx)(a.$i$, { className: O.marginBottom20 })
+                    t ? null : (0, r.jsx)(a.$i$, { className: C.marginBottom20 })
                 ]
             }),
             (0, r.jsx)(p.F, {
@@ -236,8 +236,8 @@ function y(e) {
                             hideBorder: !0,
                             value: y,
                             onChange: I,
-                            note: C.NW.string(C.t['/7ak9f']),
-                            children: C.NW.string(C.t['726JHB'])
+                            note: O.NW.string(O.t['/7ak9f']),
+                            children: O.NW.string(O.t['726JHB'])
                         }),
                         (0, r.jsx)(a.xJW, {
                             children: (0, r.jsxs)(u.Z, {
@@ -249,7 +249,7 @@ function y(e) {
                                             disabled: n,
                                             size: a.zxk.Sizes.SMALL,
                                             onClick: D,
-                                            children: C.NW.string(C.t['3UB9aW'])
+                                            children: O.NW.string(O.t['3UB9aW'])
                                         })
                                     }),
                                     (0, r.jsx)(u.Z.Child, {
@@ -258,7 +258,7 @@ function y(e) {
                                         children: (0, r.jsx)(a.zxk, {
                                             size: a.zxk.Sizes.SMALL,
                                             onClick: T,
-                                            children: C.NW.string(C.t.nuPtYm)
+                                            children: O.NW.string(O.t.nuPtYm)
                                         })
                                     })
                                 ]
@@ -272,8 +272,8 @@ function y(e) {
     return t
         ? Z
         : (0, r.jsx)(a.hjN, {
-              className: O.marginBottom40,
-              title: C.NW.string(C.t.OFpL3d),
+              className: C.marginBottom40,
+              title: O.NW.string(O.t.OFpL3d),
               children: Z
           });
 }

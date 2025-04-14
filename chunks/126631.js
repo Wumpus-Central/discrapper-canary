@@ -20,13 +20,13 @@ let h = (0, c.hQ)(),
 function N(e) {
     let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: N, currentBio: x, disabled: _ = !1 } = e,
         [E, j] = i.useState(null != d ? d : x),
-        [C, O] = i.useState((0, l.JM)(E)),
+        [O, C] = i.useState((0, l.JM)(E)),
         S = i.useRef(!1);
     return (
         i.useEffect(() => {
             if (void 0 === d) {
                 let e = (0, l.JM)(x);
-                j(x), O(e);
+                j(x), C(e);
             }
         }, [d, x]),
         (0, r.jsxs)(u.Z, {
@@ -43,12 +43,12 @@ function N(e) {
                     innerClassName: p.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== E && (j(t), O(n), c(t));
+                        t !== E && (j(t), C(n), c(t));
                     },
                     placeholder: N,
                     channel: f,
                     textValue: E,
-                    richValue: C,
+                    richValue: O,
                     type: a.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         S.current = !1;

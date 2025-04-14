@@ -80,18 +80,18 @@ function f(e) {
         {
             state: { value: R, tags: Z, selections: D, isSelecting: A }
         } = _,
-        W = (0, o.Z)(Z),
-        [k, L] = i.useState(!1),
+        k = (0, o.Z)(Z),
+        [W, L] = i.useState(!1),
         M = i.useCallback(() => {
             var e;
             L(!1), P(), null == (e = b.current) || e.focus({ preventScroll: !0 });
         }, [P]);
     i.useEffect(() => {
-        W !== Z && s(Z);
-    }, [s, W, Z]),
+        k !== Z && s(Z);
+    }, [s, k, Z]),
         i.useEffect(() => {
-            k || c(R);
-        }, [c, R, k]);
+            W || c(R);
+        }, [c, R, W]);
     let G = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -142,13 +142,13 @@ function f(e) {
                                 isSelected: D.includes(e),
                                 isSelecting: A,
                                 error: u[e],
-                                forceShowErrorTooltip: !k && t === Z.length - 1
+                                forceShowErrorTooltip: !W && t === Z.length - 1
                             },
                             t
                         )
                     ),
                     (0, r.jsx)('input', {
-                        className: l()(g.mainTextInput, { [g.isEditingOtherNodes]: k }),
+                        className: l()(g.mainTextInput, { [g.isEditingOtherNodes]: W }),
                         ref: b,
                         onChange: O,
                         onKeyDownCapture: C,

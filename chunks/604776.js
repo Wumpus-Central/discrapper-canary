@@ -115,10 +115,10 @@ function N() {
         [m, p] = a.useState([]),
         [N, S] = a.useState([]),
         [T, E] = a.useState([]),
-        k = async (e) => {
+        P = async (e) => {
             await j(e), await I();
         },
-        P = async (e) => {
+        k = async (e) => {
             await y(e), await I();
         },
         w = async () => {
@@ -206,7 +206,7 @@ function N() {
                             }),
                             (0, r.jsx)(c.zxk, {
                                 size: c.zxk.Sizes.MEDIUM,
-                                onClick: () => k(s),
+                                onClick: () => P(s),
                                 children: 'Grant Fractional Nitro'
                             })
                         ]
@@ -239,7 +239,7 @@ function N() {
                                                 size: c.zxk.Sizes.TINY,
                                                 color: c.zxk.Colors.RED,
                                                 look: c.zxk.Looks.OUTLINED,
-                                                onClick: () => P(),
+                                                onClick: () => k(),
                                                 children: 'Delete all'
                                             }),
                                             (0, r.jsx)(c.zxk, {
@@ -274,7 +274,7 @@ function N() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => P(e.id)
+                                                        onDelete: () => k(e.id)
                                                     },
                                                     e.id
                                                 )

@@ -19,8 +19,8 @@ var r,
     _ = n(267101),
     E = n(240864),
     j = n(942833),
-    C = n(400916),
-    O = n(916001),
+    O = n(400916),
+    C = n(916001),
     S = n(539290),
     v = n(336197),
     T = n(690221),
@@ -219,7 +219,7 @@ function es(e) {
                                     className: Y.guildProductBenefitLabel,
                                     children: z.NW.string(z.t.hxawo6)
                                 }),
-                                (0, i.jsx)(C.Z, {
+                                (0, i.jsx)(O.Z, {
                                     guildId: r,
                                     productId: a.id
                                 })
@@ -235,7 +235,7 @@ function es(e) {
                                     className: Y.guildProductBenefitLabel,
                                     children: z.NW.string(z.t.gWBNen)
                                 }),
-                                (0, i.jsx)(O.Z, { role: c })
+                                (0, i.jsx)(C.Z, { role: c })
                             ]
                         })
                 ]

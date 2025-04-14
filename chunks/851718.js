@@ -96,8 +96,8 @@ function p(e) {
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: C } = p,
-                O = (function (e, t) {
+            let { route: O } = p,
+                C = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
@@ -116,7 +116,7 @@ function p(e) {
                     }
                     return i;
                 })(p, ['route']);
-            return (0, r.jsx)(d.Z, g(m({}, O), { navigateToHome: b }));
+            return (0, r.jsx)(d.Z, g(m({}, C), { navigateToHome: b }));
         default:
             (0, s.vE)(f);
     }

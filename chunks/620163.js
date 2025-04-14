@@ -20,8 +20,8 @@ var i = n(990547),
     _ = n(489968),
     E = n(703288),
     j = n(574755),
-    C = n(377171),
-    O = n(540059),
+    O = n(377171),
+    C = n(540059),
     S = n(621628),
     v = n(243778),
     T = n(18438),
@@ -74,8 +74,8 @@ var i = n(990547),
     e_ = n(293389),
     eE = n(88624),
     ej = n(387747),
-    eC = n(389650),
-    eO = n(649157),
+    eO = n(389650),
+    eC = n(649157),
     eS = n(593648),
     ev = n(327885),
     eT = n(595242),
@@ -477,7 +477,7 @@ let eQ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: R,
                 newIndicator: (0, r.jsx)(l.IGR, {
                     text: eK.NW.string(eK.t.y2b7CA),
-                    color: C.Z.BG_BRAND
+                    color: O.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [s.z.FAMILY_CENTER_NEW_BADGE],
                 url: eH.Z5c.SETTINGS('family-center')
@@ -684,9 +684,9 @@ let eQ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eG.s6.APPEARANCE,
                 newIndicator: (0, r.jsx)(l.IGR, {
                     text: eK.NW.string(eK.t.y2b7CA),
-                    color: C.Z.BG_BRAND
+                    color: O.Z.BG_BRAND
                 }),
-                predicate: () => (0, O.i9)('SettingsRendererConfig')
+                predicate: () => (0, C.i9)('SettingsRendererConfig')
             },
             [eG.s6.APPEARANCE_SCALING_SPACING]: {
                 section: eH.oAB.APPEARANCE,
@@ -1356,14 +1356,14 @@ let eQ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eH.oAB.KEYBINDS,
                 searchableTitles: [eK.NW.string(eK.t.T9DA2N)],
                 label: eK.NW.string(eK.t.T9DA2N),
-                element: eC.Z,
+                element: eO.Z,
                 url: eH.Z5c.SETTINGS('keybinds')
             },
             [eG.s6.LANGUAGE]: {
                 section: eH.oAB.LOCALE,
                 searchableTitles: [eK.NW.string(eK.t.IHMsPj)],
                 label: eK.NW.string(eK.t.IHMsPj),
-                element: eO.Z,
+                element: eC.Z,
                 url: eH.Z5c.SETTINGS('language')
             },
             [eG.s6.WINDOW_SETTINGS]: {

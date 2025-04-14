@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(526761),
     E = n(676654),
     j = n(388032),
-    C = n(530435);
-function O(e) {
+    O = n(530435);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -87,23 +87,23 @@ function v(e) {
     return null == l
         ? null
         : (0, r.jsx)('div', {
-              className: C.guildRow,
+              className: O.guildRow,
               children: (0, r.jsx)(o.j7V, {
-                  className: C.serverOptionSwitchContainer,
+                  className: O.serverOptionSwitchContainer,
                   value: h,
                   onChange: () => {
                       T(!h);
                   },
                   hideBorder: !0,
                   children: (0, r.jsxs)('div', {
-                      className: C.guildInfo,
+                      className: O.guildInfo,
                       children: [
                           (0, r.jsx)(o.aRk, {
-                              className: C.guildIcon,
+                              className: O.guildIcon,
                               children: (0, r.jsx)(
                                   o.LYs,
                                   S(
-                                      O(
+                                      C(
                                           {
                                               ariaLabel: l.toString(),
                                               name: l.toString(),
@@ -116,7 +116,7 @@ function v(e) {
                               )
                           }),
                           (0, r.jsx)(o.Text, {
-                              className: C.guildText,
+                              className: O.guildText,
                               variant: 'text-md/medium',
                               lineClamp: 1,
                               color: 'text-normal',
@@ -124,7 +124,7 @@ function v(e) {
                           }),
                           (0, r.jsx)(o.Text, {
                               variant: 'text-xs/normal',
-                              className: C.guildSubtitle,
+                              className: O.guildSubtitle,
                               children: j.NW.formatToPlainString(E.Z.obBqMj, { count: null != g ? g : 0 })
                           })
                       ]
@@ -160,16 +160,16 @@ function T() {
     return (0, r.jsxs)(o.hjN, {
         tag: o.RB0.H5,
         title: j.NW.string(E.Z.o0peVV),
-        titleClassName: C.title,
+        titleClassName: O.title,
         children: [
             (0, r.jsxs)(o.xJW, {
                 tag: o.RB0.H5,
                 title: j.NW.string(E.Z.eAQM7u),
-                className: C.defaultSetting,
+                className: O.defaultSetting,
                 children: [
                     (0, r.jsx)(o.R94, {
                         type: o.R94.Types.DESCRIPTION,
-                        className: C.description,
+                        className: O.description,
                         children: j.NW.string(E.Z.lKsV2t)
                     }),
                     (0, r.jsx)(o.q4e, {
@@ -186,22 +186,22 @@ function T() {
                     children: [
                         (0, r.jsx)(o.R94, {
                             type: o.R94.Types.DESCRIPTION,
-                            className: C.description,
+                            className: O.description,
                             children: j.NW.string(E.Z.tHLm2N)
                         }),
                         !e &&
                             (0, r.jsx)(o.Wn, {
                                 messageType: o.QYI.WARNING,
-                                className: C.ignoredWarning,
+                                className: O.ignoredWarning,
                                 children: j.NW.string(E.Z.mUwVAQ)
                             }),
                         (0, r.jsx)(o.zJl, {
                             fade: !0,
-                            className: C.scroller,
+                            className: O.scroller,
                             children: c.map((e) => (0, r.jsx)(v, { guildId: e }, e))
                         }),
                         (0, r.jsx)('div', {
-                            className: C.toggleAll,
+                            className: O.toggleAll,
                             children: (0, r.jsx)(o.zxk, {
                                 look: o.zxk.Looks.LINK,
                                 onClick: u,
@@ -228,7 +228,7 @@ function y() {
     return (0, r.jsxs)(o.hjN, {
         tag: o.RB0.H5,
         title: j.NW.string(j.t['5gexRU']),
-        titleClassName: C.title,
+        titleClassName: O.title,
         children: [
             (0, r.jsx)(o.j7V, {
                 disabled: e,
@@ -255,14 +255,14 @@ function A(e) {
         s = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('83909').then(n.bind(n, 932374));
-                return (n) => (0, r.jsx)(e, S(O({}, n), { onScrollToGuildsSection: t }));
+                return (n) => (0, r.jsx)(e, S(C({}, n), { onScrollToGuildsSection: t }));
             });
         },
         a = h.isPlatformEmbedded ? j.NW.string(j.t.MznbeH) : j.NW.string(j.t.oKqC4u);
     return (0, r.jsx)(o.hjN, {
         tag: o.RB0.H5,
         title: j.NW.string(j.t.Wspazs),
-        className: C.allActivitySharingTitle,
+        className: O.allActivitySharingTitle,
         children: (0, r.jsx)(o.j7V, {
             value: i,
             onChange: (e) => {
@@ -275,7 +275,7 @@ function A(e) {
 }
 function P() {
     return (0, r.jsx)(o.hjN, {
-        className: C.privacyAndTerms,
+        className: O.privacyAndTerms,
         children: (0, r.jsx)(o.ToO, {
             type: o.ToO.Types.PRIMARY,
             body: j.NW.format(j.t.xvCsx8, {
@@ -299,10 +299,10 @@ let R = function (e) {
                 }
             }),
             (0, r.jsx)(I, {}),
-            (0, r.jsx)(o.$i$, { className: C.divider }),
+            (0, r.jsx)(o.$i$, { className: O.divider }),
             (0, r.jsx)('div', { ref: n }),
             (0, r.jsx)(T, {}),
-            (0, r.jsx)(o.$i$, { className: C.divider }),
+            (0, r.jsx)(o.$i$, { className: O.divider }),
             (0, r.jsx)(y, {}),
             (0, r.jsx)(P, {})
         ]

@@ -16,11 +16,11 @@ var i = n(120356),
     f = n(388032),
     b = n(732391);
 function N(e) {
-    let { user: t, pendingAvatarSrc: n, pendingColors: i, onThemeColorsChange: a, preventDisabled: N, guildId: x, className: _, showPremiumIcon: E = !0, showResetThemeButton: j = !1, forcedDivider: C } = e,
-        O = (0, u.ZP)(t.id, x),
+    let { user: t, pendingAvatarSrc: n, pendingColors: i, onThemeColorsChange: a, preventDisabled: N, guildId: x, className: _, showPremiumIcon: E = !0, showResetThemeButton: j = !1, forcedDivider: O } = e,
+        C = (0, u.ZP)(t.id, x),
         { primaryColor: S, secondaryColor: v } = (0, m.Z)({
             user: t,
-            displayProfile: O,
+            displayProfile: C,
             pendingThemeColors: i,
             isPreview: !0
         }),
@@ -30,14 +30,14 @@ function N(e) {
         A = (0, d.Cf)(I, y, !1);
     if (null == S || null == v) return null;
     let P = (e) => {
-        a(l()(e, null == O ? void 0 : O.themeColors) ? void 0 : e);
+        a(l()(e, null == C ? void 0 : C.themeColors) ? void 0 : e);
     };
     return (0, r.jsx)(h.Z, {
         title: f.NW.string(f.t.DMeO2d),
         disabled: !T && !N,
         className: s()(b.__invalid_profileThemesSection, _),
         showPremiumIcon: E,
-        forcedDivider: C,
+        forcedDivider: O,
         children: (0, r.jsxs)('div', {
             className: b.sectionContainer,
             children: [

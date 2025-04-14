@@ -90,12 +90,12 @@ class T extends i.PureComponent {
 let P = i.forwardRef((e, t) => {
     let n,
         { log: i, className: s, expanded: o, guildId: h, guild: N, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: Z, onUserContextMenu: D, theme: A } = e,
-        W = (function () {
+        k = (function () {
             let { changes: e } = i;
             return (i.actionType !== C.vB8.DELETE || i.action === C.rsA.MEMBER_BAN_ADD || i.action === C.rsA.MEMBER_KICK || i.action === C.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, O.xO)(i, e));
         })(),
-        k = I.headerDefault;
-    o ? (k = I.headerExpanded) : W && (k = I.headerClickable);
+        W = I.headerDefault;
+    o ? (W = I.headerExpanded) : k && (W = I.headerClickable);
     let L = i.timestampStart.calendar(),
         M = i.timestampEnd.calendar();
     n =
@@ -110,7 +110,7 @@ let P = i.forwardRef((e, t) => {
                   variant: 'text-sm/normal',
                   children: [L, '\u2014', M]
               });
-    let G = W ? R : C.dG4;
+    let G = k ? R : C.dG4;
     return (0, r.jsx)(a.mh, {
         id: i.id,
         children: (e) =>
@@ -123,7 +123,7 @@ let P = i.forwardRef((e, t) => {
                         S(
                             E(
                                 {
-                                    className: k,
+                                    className: W,
                                     'aria-expanded': o,
                                     onClick: G
                                 },
@@ -246,7 +246,7 @@ let P = i.forwardRef((e, t) => {
                                             n
                                         ]
                                     }),
-                                    W
+                                    k
                                         ? (0, r.jsx)(j.Z, {
                                               className: I.expand,
                                               foreground: I.expandForeground,

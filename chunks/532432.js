@@ -23,7 +23,7 @@ let _ = [
     }
 ];
 function E(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: j, guildId: C, className: O, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: I = !1 } = e,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: j, guildId: O, className: C, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: I = !1 } = e,
         y = I ? o.gtL : o.zxk,
         A = (0, u.T)({ location: 'AvatarSection' }),
         P = [];
@@ -33,10 +33,10 @@ function E(e) {
         w = (0, m._)(),
         { recentAvatarsLimit: k } = (0, d.pC)(w),
         W = i.useCallback(() => {
-            D(f.L.TAKE_ACTION), (0, p.$r)(b.pC.AVATAR, C, v, v ? _ : void 0);
-        }, [C, v, D]);
+            D(f.L.TAKE_ACTION), (0, p.$r)(b.pC.AVATAR, O, v, v ? _ : void 0);
+        }, [O, v, D]);
     return (0, r.jsx)(h.Z, {
-        className: O,
+        className: C,
         title: E,
         titleIcon: Z ? (0, r.jsx)(g.Z, { className: x.newBadge }) : void 0,
         description: A
@@ -64,7 +64,7 @@ function E(e) {
                         look: o.zxk.Looks.LINK,
                         size: o.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != C ? N.NW.string(N.t.TDjKDg) : N.NW.string(N.t.twB3f3)
+                        children: null != O ? N.NW.string(N.t.TDjKDg) : N.NW.string(N.t.twB3f3)
                     })
             ]
         })

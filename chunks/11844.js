@@ -63,7 +63,7 @@ let _ = function () {
         _ = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { fractionalState: E } = (0, o.Z)(),
         j = (0, u.y)('guild_boosting_boost_cta', _, E);
-    function C(n) {
+    function O(n) {
         null != e.current && (0, a.Mr3)(e.current),
             (0, d.u)({
                 analyticsLocation: {
@@ -76,11 +76,11 @@ let _ = function () {
                 guild: n
             });
     }
-    async function O() {
+    async function C() {
         e.current = await (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, r.jsx)(e, x(N({}, t), { onSelectGuild: C }));
+                return (t) => (0, r.jsx)(e, x(N({}, t), { onSelectGuild: O }));
             },
             {
                 onCloseRequest: () => {
@@ -112,7 +112,7 @@ let _ = function () {
                                     disabled: n,
                                     color: a.zxk.Colors.LINK,
                                     look: a.zxk.Looks.LINK,
-                                    onClick: n ? void 0 : O,
+                                    onClick: n ? void 0 : C,
                                     children: e
                                 },
                                 t

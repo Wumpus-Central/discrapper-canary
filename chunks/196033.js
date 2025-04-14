@@ -13,8 +13,8 @@ var r = n(192379),
     p = n(786792),
     h = n(161594);
 let f = () => {
-    let e = (0, c.zL)(d.Fr.UPSELL_BANNER),
-        t = (0, c.zL)(d.Fr.UPSELL_BANNER_POPOUT),
+    let e = (0, c.zL)(d.jE.UPSELL_BANNER),
+        t = (0, c.zL)(d.jE.UPSELL_BANNER_POPOUT),
         n = (0, l.H)('upsell_banner'),
         f = (0, a.e7)([o.Z], () => o.Z.getMarketingBySurface(i.K.EDIT_PROFILE_SETTINGS)),
         b = r.useMemo(

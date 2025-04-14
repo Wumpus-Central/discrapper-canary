@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => O }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -60,14 +60,14 @@ function j(e, t) {
         e
     );
 }
-function C() {
+function O() {
     var e;
     let [t, n] = (0, i.useState)(!1),
         [s, a] = (0, i.useState)(!1),
         [l, c] = (0, i.useState)(null),
         m = (0, g.ZP)((e) => e.toolsCache),
         { setToolsCache: f, removeToolsCache: N } = (0, g.L3)(),
-        { setImgCache: C } = (0, g.W_)(),
+        { setImgCache: O } = (0, g.W_)(),
         A = (0, i.useCallback)(
             (e) => {
                 let t = m[e];
@@ -190,7 +190,7 @@ function C() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         r = await n.arrayBuffer();
-                                    C(t, t, (0, h.xh)(r)), f(t, t, p.jD);
+                                    O(t, t, (0, h.xh)(r)), f(t, t, p.jD);
                                 }
                             }),
                             (0, r.jsx)('div', {
@@ -198,7 +198,7 @@ function C() {
                                 children: Object.values(m).map((e) => {
                                     let { url: t } = e;
                                     return (0, r.jsx)(
-                                        O,
+                                        C,
                                         {
                                             src: t,
                                             onSetStatic: A,
@@ -228,7 +228,7 @@ function C() {
         ]
     });
 }
-function O(e) {
+function C(e) {
     let { src: t, onSetStatic: n, removeAsset: i } = e;
     return (0, r.jsxs)('div', {
         className: _.uploaded,

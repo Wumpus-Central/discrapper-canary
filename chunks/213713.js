@@ -25,13 +25,13 @@ var r = n(200651),
     S = n(780106),
     T = n(650613),
     E = n(789086),
-    k = n(206583),
-    P = n(403542),
+    P = n(206583),
+    k = n(403542),
     w = n(616257);
 let I = [
     {
         key: 'type',
-        cellClassName: i()(P.cell, P.cellType),
+        cellClassName: i()(k.cell, k.cellType),
         render(e) {
             let { type: t } = e;
             return (0, r.jsx)(x.Text, {
@@ -42,7 +42,7 @@ let I = [
     },
     {
         key: 'count',
-        cellClassName: i()(P.cell, P.cellCount),
+        cellClassName: i()(k.cell, k.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, r.jsx)('div', {
@@ -55,7 +55,7 @@ let I = [
     },
     {
         key: 'only?',
-        cellClassName: P.cell,
+        cellClassName: k.cell,
         render(e) {
             let { type: t } = e;
             return (0, r.jsx)(R, { type: t });
@@ -84,7 +84,7 @@ function R(e) {
 }
 function Z() {
     var e, t;
-    let n = (0, u.e7)([N.Z], () => N.Z.getFeed(k.YN.GLOBAL_FEED)),
+    let n = (0, u.e7)([N.Z], () => N.Z.getFeed(P.YN.GLOBAL_FEED)),
         l = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
         i = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
         o = (function (e) {
@@ -100,7 +100,7 @@ function Z() {
         })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
         c = (0, u.e7)([N.Z], () => {
             var e;
-            return (null == (e = N.Z.getFeedState(k.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = N.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [R, Z] = a.useState(''),
         A = (0, u.e7)(
@@ -116,7 +116,7 @@ function Z() {
             location: 'DevToolsContentInventory',
             source: g.m1.DevTools
         }),
-        z = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
+        B = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -125,12 +125,12 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        B = (0, b.Z)(z).filter(y.lm),
+        z = (0, b.Z)(B).filter(y.lm),
         M = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, r.jsx)('div', {
         className: w.panel,
         children: (0, r.jsxs)(x.zJl, {
-            className: P.content,
+            className: k.content,
             children: [
                 (0, r.jsxs)(x.hjN, {
                     children: [
@@ -147,7 +147,7 @@ function Z() {
                             onClick: function () {
                                 h.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: k.YN.GLOBAL_FEED,
+                                    feedId: P.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },
@@ -206,7 +206,7 @@ function Z() {
                             error: R.length > 0 && null == D ? 'No game profile for '.concat(null != A ? A : R + ' - try by id', '.') : void 0,
                             style: null != D ? { border: '1px solid green' } : {}
                         }),
-                        (0, r.jsx)('ul', { children: B.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: z.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, r.jsxs)(x.hjN, {

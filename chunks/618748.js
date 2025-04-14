@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(953529);
+n.d(t, { Z: () => W }), n(953529);
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -88,7 +88,7 @@ function A(e) {
         ];
     return (0, r.jsx)(I.Z, { children: m });
 }
-function W(e) {
+function k(e) {
     let { application: t } = e,
         { teams: n } = (0, g.Z)({ refreshOnDepChange: !1 }),
         i = n.find((e) => {
@@ -102,7 +102,7 @@ function W(e) {
           })
         : null;
 }
-function k(e) {
+function W(e) {
     let t,
         { guild: n, application: s } = e,
         l = (0, i.e7)([c.Z], () => c.Z.getProps().subsection),
@@ -135,7 +135,7 @@ function L(e) {
         O = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
         I = (0, _.Z)(n.id),
         R = n.isOwner(O),
-        k = () => {
+        W = () => {
             let e = p.Z.getRole(n.id, n.getEveryoneRoleId());
             if (null == e) return;
             o.Z.close();
@@ -181,7 +181,7 @@ function L(e) {
                         children: Z.NW.string(Z.t.KyGv0t)
                     }),
                     (0, r.jsx)(v.Z, { guild: n }),
-                    c && (0, r.jsx)(W, { application: a }),
+                    c && (0, r.jsx)(k, { application: a }),
                     (0, r.jsxs)('div', {
                         className: D.tabBarContainer,
                         children: [
@@ -231,7 +231,7 @@ function L(e) {
                                                 disabled: I,
                                                 onMouseEnter: I ? t : void 0,
                                                 onMouseLeave: I ? n : void 0,
-                                                onClick: k,
+                                                onClick: W,
                                                 color: s.zxk.Colors.PRIMARY,
                                                 size: s.zxk.Sizes.SMALL,
                                                 grow: !I,

@@ -21,9 +21,9 @@ let E = (0, g.hQ)();
 function j() {
     let [e, t] = i.useState(-100),
         [n, s] = i.useState(!1),
-        { threshold: j, autoThreshold: C } = (0, l.cj)([p.Z], () => p.Z.getModeOptions()),
+        { threshold: j, autoThreshold: O } = (0, l.cj)([p.Z], () => p.Z.getModeOptions()),
         {
-            inputMode: O,
+            inputMode: C,
             automaticVADSupported: S,
             isEnabled: v
         } = (0, l.cj)([p.Z], () => ({
@@ -35,7 +35,7 @@ function j() {
         t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE);
     }
     function I(e, t) {
-        m.Z.setMode(O, {
+        m.Z.setMode(C, {
             threshold: e,
             autoThreshold: t
         });
@@ -56,7 +56,7 @@ function j() {
         children: (0, r.jsx)(u.iRW, {
             initialValue: j + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => I(-((100 - e) * 1), C),
+            onValueChange: (e) => I(-((100 - e) * 1), O),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': E,
@@ -73,7 +73,7 @@ function j() {
         })
     });
     return (
-        C &&
+        O &&
             (y = (0, r.jsxs)('section', {
                 className: b.inputSensitivityToggle,
                 children: [
@@ -109,7 +109,7 @@ function j() {
                                     }),
                                     (0, r.jsx)(u.rsf, {
                                         id: e,
-                                        checked: C,
+                                        checked: O,
                                         onChange: (e) => I(j, e)
                                     })
                                 ]

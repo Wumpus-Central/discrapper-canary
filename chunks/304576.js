@@ -19,14 +19,14 @@ var r = n(200651),
     _ = n(318747),
     E = n(635921),
     j = n(474936),
-    C = n(388032),
-    O = n(909176);
+    O = n(388032),
+    C = n(909176);
 let S = (e) => {
         let t,
             { trialOffer: n, discountOffer: i } = e;
-        if ((null != n ? (t = C.NW.string(C.t.IBYG5e)) : null != i && (t = C.NW.formatToPlainString(C.t.iiLbvr, { percent: i.discount.amount })), null != t))
+        if ((null != n ? (t = O.NW.string(O.t.IBYG5e)) : null != i && (t = O.NW.formatToPlainString(O.t.iiLbvr, { percent: i.discount.amount })), null != t))
             return (0, r.jsx)('div', {
-                className: O.premiumOfferPill,
+                className: C.premiumOfferPill,
                 children: (0, r.jsx)(o.Text, {
                     variant: 'redesign/heading-18/bold',
                     color: 'always-white',
@@ -52,10 +52,10 @@ let S = (e) => {
             value: P,
             children: (0, r.jsx)('div', {
                 ref: t,
-                className: a()(O.container, O.marketingPageV2Container, v),
+                className: a()(C.container, C.marketingPageV2Container, v),
                 'data-testid': 'v2-marketing-page-hero-header',
                 children: (0, r.jsxs)('div', {
-                    className: O.marketingPageV2TextContainer,
+                    className: C.marketingPageV2TextContainer,
                     children: [
                         k &&
                             (0, r.jsx)(S, {
@@ -63,10 +63,10 @@ let S = (e) => {
                                 discountOffer: D
                             }),
                         (0, r.jsx)(o.X6q, {
-                            className: O.marketingPageV2Heading,
+                            className: C.marketingPageV2Heading,
                             variant: 'display-sm',
                             color: 'header-primary',
-                            children: C.NW.string(C.t.YCZldH)
+                            children: O.NW.string(O.t.YCZldH)
                         }),
                         M
                             ? (0, r.jsx)(x.Z, {
@@ -75,7 +75,7 @@ let S = (e) => {
                               })
                             : U &&
                               (0, r.jsx)('div', {
-                                  className: O.affinityDescriptionV2,
+                                  className: C.affinityDescriptionV2,
                                   children: (0, r.jsx)(N.Z, {
                                       textColor: 'text-normal',
                                       smallerText: !s,
@@ -84,16 +84,16 @@ let S = (e) => {
                               }),
                         W || R
                             ? (0, r.jsx)('div', {
-                                  className: a()(O.buttonContainer, O.marketingPageV2CTAContainer, { [O.marketingPageV2CTAMargin]: !(U || M) }),
+                                  className: a()(C.buttonContainer, C.marketingPageV2CTAContainer, { [C.marketingPageV2CTAMargin]: !(U || M) }),
                                   children: (0, r.jsx)(_.Z, {
-                                      className: a()(O.button, T),
+                                      className: a()(C.button, T),
                                       forceWhite: !0
                                   })
                               })
                             : (0, r.jsx)(E.PK, {
                                   subscriptionTier: null != (i = null != I ? I : null == w || null == (n = w.subscription_trial) ? void 0 : n.sku_id) ? i : Z,
                                   inOfferExperience: k,
-                                  containerClassName: a()(O.marketingPageV2CTAContainer, { [O.marketingPageV2CTAMargin]: !(U || M) }),
+                                  containerClassName: a()(C.marketingPageV2CTAContainer, { [C.marketingPageV2CTAMargin]: !(U || M) }),
                                   buttonClassName: T,
                                   isMarketingPageV2Enabled: !0,
                                   isDarkMode: A

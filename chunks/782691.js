@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(704826), n(35282), n(539854), n(49124), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => C }), n(388685), n(704826), n(35282), n(539854), n(49124), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -64,11 +64,11 @@ let j = {
         [h.cq.STATIC]: null,
         [h.cq.REDUCED_MOTION]: null
     },
-    C = 'debug',
-    O = (e) => {
+    O = 'debug',
+    C = (e) => {
         let { effect: t, back: n } = e,
             { upsertConfig: s } = (0, p.n6)(),
-            O = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+            C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             [S, v] = i.useState(!0),
             T = i.useRef(null),
             [I, y] = i.useState(!1),
@@ -81,11 +81,11 @@ let j = {
             M = i.useMemo(
                 () => ({
                     type: l.Z.PROFILE_EFFECT,
-                    id: C,
-                    skuId: C,
-                    title: C,
-                    description: C,
-                    accessibilityLabel: C,
+                    id: O,
+                    skuId: O,
+                    title: O,
+                    description: O,
+                    accessibilityLabel: O,
                     reducedMotionSrc: '',
                     effects: R,
                     animationType: 0
@@ -176,7 +176,7 @@ let j = {
             },
             []
         ),
-        null == O)
+        null == C)
             ? (0, r.jsx)('div', {})
             : (0, r.jsxs)('div', {
                   className: b.root,
@@ -451,7 +451,7 @@ let j = {
                                                   className: a()(b.userProfilePreview, b.preview),
                                                   children: [
                                                       (0, r.jsx)(m.Z, {
-                                                          user: O,
+                                                          user: C,
                                                           pendingAvatar: void 0,
                                                           pendingProfileEffectId: null,
                                                           canUsePremiumCustomization: !0,

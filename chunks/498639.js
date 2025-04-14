@@ -19,8 +19,8 @@ var r = n(200651),
     _ = n(963249),
     E = n(87484),
     j = n(197115),
-    C = n(911367),
-    O = n(43747),
+    O = n(911367),
+    C = n(43747),
     S = n(970815),
     v = n(430824),
     T = n(78839),
@@ -95,7 +95,7 @@ let Z = function () {
         [n, b] = i.useState(null),
         [N] = (0, a.Wu)([v.Z], () => [v.Z.getGuilds()]),
         [Z] = (0, a.Wu)([T.ZP], () => [T.ZP.getPremiumSubscription()]);
-    (0, C.t)();
+    (0, O.t)();
     let w = Object.values(N).map((e) => ({
             value: e,
             label: e.name
@@ -111,8 +111,8 @@ let Z = function () {
         { analyticsLocations: H } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [z, Y] = i.useState(''),
         [K, q] = i.useState(I.lds),
-        { balance: X, isFetching: J, error: Q } = (0, O.A)(),
-        { isSubmitting: $, responseMessage: ee, redeemVirtualCurrency: et } = (0, O.f)(),
+        { balance: X, isFetching: J, error: Q } = (0, C.A)(),
+        { isSubmitting: $, responseMessage: ee, redeemVirtualCurrency: et } = (0, C.f)(),
         [en, er] = i.useState(I.lds),
         [ei, es] = i.useState(''),
         [ea, el] = i.useState(I.lds),
