@@ -333,33 +333,33 @@ function $(e) {
 }
 function ee(e) {
     var t, n, i, s;
-    let { role: l, guildId: a } = e,
-        o = $(M.NW.string(M.t.Mi9KbW)),
-        c = {
-            nick: o.author.username,
-            colorStrings: {
-                primaryColor: null == (t = l.colorStrings) ? void 0 : t.primaryColor,
-                secondaryColor: null == (n = l.colorStrings) ? void 0 : n.secondaryColor,
-                tertiaryColor: null == (i = l.colorStrings) ? void 0 : i.tertiaryColor
-            },
-            colorString: null != (s = l.colorString) ? s : void 0
-        },
-        d = {
-            src: F,
-            name: l.name
-        },
+    let { role: a, guildId: o, disableInteraction: c } = e,
+        d = $(M.NW.string(M.t.Mi9KbW)),
         g = {
-            src: z,
-            name: l.name
+            nick: d.author.username,
+            colorStrings: {
+                primaryColor: null == (t = a.colorStrings) ? void 0 : t.primaryColor,
+                secondaryColor: null == (n = a.colorStrings) ? void 0 : n.secondaryColor,
+                tertiaryColor: null == (i = a.colorStrings) ? void 0 : i.tertiaryColor
+            },
+            colorString: null != (s = a.colorString) ? s : void 0
         },
-        p = (0, b.oC)(a, l),
-        h = (0, x.Q3)('RolePreview') ? [W.BRd.LIGHT, W.BRd.DARK, W.BRd.DARKER, W.BRd.MIDNIGHT] : [W.BRd.LIGHT, W.BRd.DARK];
+        p = {
+            src: F,
+            name: a.name
+        },
+        h = {
+            src: z,
+            name: a.name
+        },
+        f = (0, b.oC)(o, a),
+        j = (0, x.Q3)('RolePreview') ? [W.BRd.LIGHT, W.BRd.DARK, W.BRd.DARKER, W.BRd.MIDNIGHT] : [W.BRd.LIGHT, W.BRd.DARK];
     return (0, r.jsx)(m.Rny, {
         children: (0, r.jsx)('div', {
-            className: U.previewContainer,
+            className: l()(U.previewContainer, { [U.disableInteraction]: c }),
             'aria-hidden': !0,
             'data-disable-adaptive-theme': !0,
-            children: h.map((e) =>
+            children: j.map((e) =>
                 (0, r.jsx)(
                     m.f6W,
                     {
@@ -370,10 +370,10 @@ function ee(e) {
                                 children: (0, r.jsx)('div', {
                                     className: U.messageContainer,
                                     children: (0, r.jsx)(_.Z, {
-                                        author: c,
-                                        message: o,
-                                        roleIcon: null != p ? p : (0, u.ap)(e) ? g : d,
-                                        previewGuildId: a,
+                                        author: g,
+                                        message: d,
+                                        roleIcon: null != f ? f : (0, u.ap)(e) ? h : p,
+                                        previewGuildId: o,
                                         isGroupStart: !0
                                     })
                                 })
@@ -482,7 +482,8 @@ function en(e) {
                 }),
                 (0, r.jsx)(ee, {
                     role: n,
-                    guildId: t.id
+                    guildId: t.id,
+                    disableInteraction: !o
                 }),
                 (0, r.jsx)(m.$i$, { className: U.divider }),
                 (0, r.jsx)(et, {
