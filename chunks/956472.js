@@ -36,15 +36,15 @@ let c = (e) => {
             { enabled: d } = (0, i.C)({ location: 'getShopProductPrices' }),
             p = d ? u.find((e) => e.currency === a.pKx.DISCORD_ORB) : void 0,
             h = u.find((e) => e.currency !== a.pKx.DISCORD_ORB),
-            _ = [],
             f = [],
+            _ = [],
             m = 1 === u.length && null != p,
             b = null != p && null != l && l >= p.amount;
-        null != p && null != h ? (b ? _.push(p, h) : _.push(h, p), o === s.AW.ORBS ? f.push(p) : f.push(h, p)) : null != p ? (_.push(p), f.push(p)) : null != h && (_.push(h), o !== s.AW.ORBS && f.push(h));
-        let g = _.length > 0 && (null == (t = _[0]) ? void 0 : t.currency) === a.pKx.DISCORD_ORB;
+        null != p && null != h ? (b ? f.push(p, h) : f.push(h, p), o === s.AW.ORBS ? _.push(p) : _.push(h, p)) : null != p ? (f.push(p), _.push(p)) : null != h && (f.push(h), o !== s.AW.ORBS && _.push(h));
+        let g = f.length > 0 && (null == (t = f[0]) ? void 0 : t.currency) === a.pKx.DISCORD_ORB;
         return {
-            displayPrices: f,
-            checkoutEligiblePrices: _,
+            displayPrices: _,
+            checkoutEligiblePrices: f,
             isOrbExclusive: m,
             hasSufficientOrbs: b,
             shouldCheckoutWithOrbs: g

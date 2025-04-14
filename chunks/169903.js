@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(192379),
     i = n(584825),
     s = n(14263);
-function a(e, t) {
+function l(e, t) {
     let n = (0, i.qi)(e),
-        a = (0, s.Z)(e);
+        l = (0, s.Z)(e);
     return r.useMemo(
         () =>
             n.map((e) => {
@@ -40,7 +40,7 @@ function a(e, t) {
                         {
                             key: e.id,
                             subscriptionListing: e,
-                            roleMemberCount: null == s || null == a ? void 0 : a[s]
+                            roleMemberCount: null == s || null == l ? void 0 : l[s]
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -57,6 +57,6 @@ function a(e, t) {
                     r
                 );
             }),
-        [n, null == t ? void 0 : t.ppgs, a]
+        [n, null == t ? void 0 : t.ppgs, l]
     );
 }

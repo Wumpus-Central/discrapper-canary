@@ -1,13 +1,13 @@
 n.d(t, {
-    $: () => f,
-    Z: () => h
+    $: () => h,
+    Z: () => f
 });
 var r = n(200651);
 n(192379);
 var i = n(392711),
     s = n(442837),
-    a = n(481060),
-    l = n(241559),
+    l = n(481060),
+    a = n(241559),
     o = n(527379),
     c = n(313364),
     d = n(434404),
@@ -15,21 +15,21 @@ var i = n(392711),
     m = n(981631),
     g = n(388032),
     p = n(953592);
-function f() {
+function h() {
     var e;
     let t = (0, s.e7)([u.Z], () => u.Z.getProps().guild, []),
         n = null != (e = null == t ? void 0 : t.isCommunity()) && e,
         i = null == t ? void 0 : t.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-        l = n || i;
-    return (0, r.jsxs)(a.P3F, {
+        a = n || i;
+    return (0, r.jsxs)(l.P3F, {
         onClick: (e) => {
-            null != t && (l ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, m.pNK.MEMBERS));
+            null != t && (a ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, m.pNK.MEMBERS));
         },
         className: p.rowContainer,
         children: [
             (0, r.jsx)('div', { children: g.NW.string(g.t['9Oq93t']) }),
-            l &&
-                (0, r.jsx)(a.rgF, {
+            a &&
+                (0, r.jsx)(l.rgF, {
                     size: 'custom',
                     color: 'currentColor',
                     className: p.linkIcon,
@@ -39,9 +39,9 @@ function f() {
         ]
     });
 }
-function h() {
+function f() {
     var e;
     let { guild: t } = (0, s.e7)([u.Z], () => u.Z.getProps(), [], i.isEqual),
         n = null != (e = null == t ? void 0 : t.id) ? e : m.lds;
-    return (0, l.n2)(n) ? (0, r.jsx)(c.Z, { guildId: n }) : null;
+    return (0, a.n2)(n) ? (0, r.jsx)(c.Z, { guildId: n }) : null;
 }

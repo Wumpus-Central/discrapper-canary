@@ -3,12 +3,12 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(44315),
-    a = n(981631),
-    l = n(388032);
+    l = n(981631),
+    a = n(388032);
 function o(e) {
     var t,
         n,
-        { className: o, color: c = (0, s.Lq)(a.Ilk.BRAND_500) } = e,
+        { className: o, color: c = (0, s.Lq)(l.Ilk.BRAND_500) } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -57,7 +57,7 @@ function o(e) {
         })({}, d)),
         (n = n =
             {
-                text: l.NW.string(l.t.G6GWZ2),
+                text: a.NW.string(a.t.G6GWZ2),
                 color: c,
                 className: o
             }),

@@ -2,8 +2,8 @@ n.d(t, { m: () => j }), n(388685), n(290780);
 var r = n(200651),
     i = n(192379),
     s = n(149765),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     o = n(933557),
     c = n(984933),
     d = n(496675),
@@ -11,14 +11,14 @@ var r = n(200651),
     m = n(594174),
     g = n(434404),
     p = n(800223),
-    f = n(981631),
-    h = n(388032);
-let b = 'NO_CHANNEL',
-    x = s.$e(f.Plq.VIEW_CHANNEL, f.Plq.CREATE_INSTANT_INVITE);
+    h = n(981631),
+    f = n(388032);
+let x = 'NO_CHANNEL',
+    b = s.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
-    let { guildId: t, widgetEnabled: n, widgetChannelId: s, className: f, enableLocalUpdate: j } = e,
-        N = (0, a.e7)([c.ZP], () => c.ZP.getChannels(t)),
-        v = i.useMemo(() => {
+    let { guildId: t, widgetEnabled: n, widgetChannelId: s, className: h, enableLocalUpdate: j } = e,
+        N = (0, l.e7)([c.ZP], () => c.ZP.getChannels(t)),
+        _ = i.useMemo(() => {
             let e = [...N[c.sH], ...N[c.Zb]]
                 .filter((e) => {
                     let { channel: n } = e;
@@ -26,7 +26,7 @@ function j(e) {
                 })
                 .filter((e) => {
                     let { channel: t } = e;
-                    return t.id === s || d.Z.can(x, t);
+                    return t.id === s || d.Z.can(b, t);
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -37,22 +37,22 @@ function j(e) {
                 });
             return (
                 e.unshift({
-                    value: b,
-                    label: h.NW.string(h.t.u197b2)
+                    value: x,
+                    label: f.NW.string(f.t.u197b2)
                 }),
                 e
             );
         }, [N, t, s]),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
-                j ? (0, p.c)(t, n, e !== b ? e : null) : g.Z.updateEmbed(t, n, e !== b ? e : null);
+                j ? (0, p.c)(t, n, e !== x ? e : null) : g.Z.updateEmbed(t, n, e !== x ? e : null);
             },
             [t, n, j]
         );
-    return (0, r.jsx)(l.q4e, {
-        options: v,
+    return (0, r.jsx)(a.q4e, {
+        options: _,
         value: s,
-        onChange: _,
-        className: f
+        onChange: v,
+        className: h
     });
 }

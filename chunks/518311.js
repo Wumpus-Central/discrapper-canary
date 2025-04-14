@@ -23,8 +23,8 @@ var r,
     m = n(570140),
     g = n(26151),
     b = n(493683),
-    _ = n(529103),
-    y = n(447543),
+    y = n(529103),
+    _ = n(447543),
     C = n(708690),
     x = n(194359),
     v = n(425493),
@@ -266,7 +266,7 @@ class ed extends (r = l.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = K.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        y.ZP.createInvite(e.id, { max_age: t }, J.t4x.GROUP_DM);
+        _.ZP.createInvite(e.id, { max_age: t }, J.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -639,7 +639,7 @@ class ed extends (r = l.PureComponent) {
                 t.has(e) ? C.Z.removeUser(e) : (C.Z.addUser(e), n.length > 0 && C.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
             }),
             en(this, 'handleAddFriendNavigation', () => {
-                (0, T.uL)(J.Z5c.FRIENDS), _.Z.setSection(J.pJs.ADD_FRIEND), this.props.onClose();
+                (0, T.uL)(J.Z5c.FRIENDS), y.Z.setSection(J.pJs.ADD_FRIEND), this.props.onClose();
             }),
             en(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -762,16 +762,16 @@ function eh(e) {
     var t, n;
     let { channel: r, iconClassName: o, className: a, icon: s, tooltip: c, tooltipPosition: u = 'bottom', popoutPosition: d = 'bottom', popoutAlign: p = 'right', subscribeToGlobalHotkey: m = !1 } = e,
         g = l.useRef(null),
-        [b, _] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        y = l.useCallback(() => _((e) => !e), []);
+        [b, y] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
+        _ = l.useCallback(() => y((e) => !e), []);
     l.useEffect(
         () => (
-            m && V.S.subscribe(J.CkL.TOGGLE_DM_CREATE, y),
+            m && V.S.subscribe(J.CkL.TOGGLE_DM_CREATE, _),
             () => {
-                V.S.unsubscribe(J.CkL.TOGGLE_DM_CREATE, y);
+                V.S.unsubscribe(J.CkL.TOGGLE_DM_CREATE, _);
             }
         ),
-        [m, y]
+        [m, _]
     );
     let C = (0, h.e7)([G.default], () => G.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return (l.useEffect(() => {
@@ -792,7 +792,7 @@ function eh(e) {
               position: d,
               shouldShow: b,
               align: p,
-              onRequestClose: () => _(!1),
+              onRequestClose: () => y(!1),
               animation: f.yRy.Animation.NONE,
               clickTrap: !0,
               children: (e) =>
@@ -800,7 +800,7 @@ function eh(e) {
                       X.ZP.Icon,
                       ei(er({}, e), {
                           ref: g,
-                          onClick: y,
+                          onClick: _,
                           icon: null != s ? s : null == r ? f.kL_ : f.ejJ,
                           className: a,
                           iconClassName: o,

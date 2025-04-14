@@ -2,13 +2,13 @@ n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(498607),
-    a = n.n(o),
-    i = n(200100),
+    i = n.n(o),
+    a = n(200100),
     s = n(748780),
     c = n(692547),
     u = n(481060),
-    d = n(110924);
-function C(e) {
+    C = n(110924);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ let b = {
         clamp: !0
     };
 function f(e) {
-    var { value: t, children: n, equalityFn: o = a(), style: s } = e,
+    var { value: t, children: n, equalityFn: o = i(), style: s } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -82,7 +82,7 @@ function f(e) {
             }
             return l;
         })(e, ['value', 'children', 'equalityFn', 'style']);
-    let h = (0, d.Z)(t),
+    let h = (0, C.Z)(t),
         [{ spring: j }, g] = (0, u.q_F)(() => ({ spring: 0 }), 'animate-always'),
         x = (0, u.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         O = (0, u.dQu)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
@@ -107,10 +107,10 @@ function f(e) {
                       range: [0, 1],
                       output: [''.concat(x, '00'), ''.concat(O, '27')]
                   }),
-        N = null != s ? m(C({}, s), { backgroundColor: v }) : { backgroundColor: v };
+        N = null != s ? m(d({}, s), { backgroundColor: v }) : { backgroundColor: v };
     return (0, r.jsx)(
-        i.animated.tr,
-        m(C({}, f), {
+        a.animated.tr,
+        m(d({}, f), {
             style: N,
             children: n
         })

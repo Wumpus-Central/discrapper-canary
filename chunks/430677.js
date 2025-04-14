@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(399606),
+    l = n.n(s),
+    a = n(399606),
     o = n(481060),
     c = n(471445),
     d = n(603211),
@@ -11,10 +11,10 @@ var r = n(200651),
     m = n(734893),
     g = n(216701),
     p = n(592125),
-    f = n(430824),
-    h = n(768581),
-    b = n(388032),
-    x = n(773100);
+    h = n(430824),
+    f = n(768581),
+    x = n(388032),
+    b = n(773100);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,19 +58,19 @@ function N(e, t) {
         e
     );
 }
-let v = function (e) {
-    var t, s, v, _, y;
-    let { guildId: O, action: C, actionIndex: I, onChange: E, onDelete: S, onDragStart: T, onDragComplete: P, onDragReset: w } = e,
-        R = (0, l.e7)([p.Z], () => p.Z.getChannel(C.channelId)),
-        Z = (0, l.e7)([f.Z], () => f.Z.getGuild(O)),
-        { customEmoji: D, unicodeEmoji: k } = (0, u.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (s = C.emoji) ? void 0 : s.name),
-        W = null == C.emoji || null != D || null != k,
-        A = h.ZP.getNewMemberActionIconURL({
-            channelId: C.channelId,
-            icon: C.icon
+let _ = function (e) {
+    var t, s, _, v, O;
+    let { guildId: C, action: y, actionIndex: I, onChange: E, onDelete: S, onDragStart: T, onDragComplete: P, onDragReset: w } = e,
+        R = (0, a.e7)([p.Z], () => p.Z.getChannel(y.channelId)),
+        Z = (0, a.e7)([h.Z], () => h.Z.getGuild(C)),
+        { customEmoji: D, unicodeEmoji: A } = (0, u.Z)(null == (t = y.emoji) ? void 0 : t.id, null == (s = y.emoji) ? void 0 : s.name),
+        k = null == y.emoji || null != D || null != A,
+        W = f.ZP.getNewMemberActionIconURL({
+            channelId: y.channelId,
+            icon: y.icon
         }),
         L = null;
-    null != R && (0, m.kb)(R) ? W || (L = b.NW.string(b.t.wAkIZW)) : (L = b.NW.string(b.t.CbTEKC));
+    null != R && (0, m.kb)(R) ? k || (L = x.NW.string(x.t.wAkIZW)) : (L = x.NW.string(x.t.CbTEKC));
     let {
             drag: M,
             dragSourcePosition: G,
@@ -79,58 +79,58 @@ let v = function (e) {
         } = (0, d.Z)({
             type: 'NEW_MEMBER_ACTION',
             index: I,
-            optionId: C.channelId,
+            optionId: y.channelId,
             onDragStart: T,
             onDragComplete: P,
             onDragReset: w
         }),
         F = i.useCallback(() => {
-            if (null != O)
+            if (null != C)
                 return (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('14653').then(n.bind(n, 380716));
                     return (t) =>
                         (0, r.jsx)(
                             e,
                             N(j({}, t), {
-                                guildId: O,
-                                action: C,
+                                guildId: C,
+                                action: y,
                                 onSave: (e, t, n) => E(I, e, t, n),
                                 onDelete: () => S(I)
                             })
                         );
                 });
-        }, [O, C, I, E, S]);
+        }, [C, y, I, E, S]);
     if (null == R || null == Z) return null;
-    let z = null != (y = (0, c.KS)(R)) ? y : o.VL1;
+    let z = null != (O = (0, c.KS)(R)) ? O : o.VL1;
     return (0, r.jsxs)('div', {
-        className: x.actionItemContainer,
+        className: b.actionItemContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(x.actionItem, {
-                    [x.dropIndicatorBefore]: null != G && I < G,
-                    [x.dropIndicatorAfter]: null != G && I > G,
-                    [x.actionItemError]: null != L
+                className: l()(b.actionItem, {
+                    [b.dropIndicatorBefore]: null != G && I < G,
+                    [b.dropIndicatorAfter]: null != G && I > G,
+                    [b.actionItemError]: null != L
                 }),
                 ref: (e) => {
                     M(U(e));
                 },
                 children: [
                     (0, r.jsx)('div', {
-                        className: x.dragContainer,
+                        className: b.dragContainer,
                         onMouseEnter: () => B(!0),
                         onMouseLeave: () => B(!1),
                         children: (0, r.jsx)(o.Vni, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: x.dragIcon
+                            className: b.dragIcon
                         })
                     }),
-                    null != A
+                    null != W
                         ? (0, r.jsx)('div', {
-                              className: x.iconWrapper,
+                              className: b.iconWrapper,
                               children: (0, r.jsx)('img', {
-                                  src: A,
-                                  className: x.icon,
+                                  src: W,
+                                  className: b.icon,
                                   width: 48,
                                   height: 48,
                                   alt: '',
@@ -138,37 +138,37 @@ let v = function (e) {
                               })
                           })
                         : (0, r.jsx)('div', {
-                              className: x.actionItemEmojiWrapper,
+                              className: b.actionItemEmojiWrapper,
                               children: (0, r.jsx)(g.Z, {
-                                  emojiId: null == (v = C.emoji) ? void 0 : v.id,
-                                  emojiName: null == (_ = C.emoji) ? void 0 : _.name,
+                                  emojiId: null == (_ = y.emoji) ? void 0 : _.id,
+                                  emojiName: null == (v = y.emoji) ? void 0 : v.name,
                                   size: g.R.MEDIUM,
                                   defaultComponent: (0, r.jsx)(z, {})
                               })
                           }),
                     (0, r.jsxs)('div', {
-                        className: x.actionItemText,
+                        className: b.actionItemText,
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                children: C.title
+                                children: y.title
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                children: b.NW.format(b.t.Ngk8Nj, { channelName: R.name })
+                                children: x.NW.format(x.t.Ngk8Nj, { channelName: R.name })
                             })
                         ]
                     }),
                     (0, r.jsx)(o.ua7, {
-                        text: b.NW.string(b.t.bt75u7),
+                        text: x.NW.string(x.t.bt75u7),
                         children: (e) =>
                             (0, r.jsxs)(
                                 o.zxk,
                                 N(j({}, e), {
-                                    className: x.actionItemEditButton,
-                                    innerClassName: x.actionItemEditButtonInner,
+                                    className: b.actionItemEditButton,
+                                    innerClassName: b.actionItemEditButtonInner,
                                     size: o.zxk.Sizes.MIN,
                                     onClick: F,
                                     children: [
@@ -176,7 +176,7 @@ let v = function (e) {
                                             size: 'md',
                                             color: 'currentColor'
                                         }),
-                                        (0, r.jsx)(o.nn4, { children: b.NW.string(b.t.bt75u7) })
+                                        (0, r.jsx)(o.nn4, { children: x.NW.string(x.t.bt75u7) })
                                     ]
                                 })
                             )

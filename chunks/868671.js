@@ -18,8 +18,8 @@ var r = n(192379),
     m = n(590026),
     g = n(178762),
     b = n(206583),
-    _ = n(809017),
-    y = n(981631),
+    y = n(809017),
+    _ = n(981631),
     C = n(388032);
 let x = 0;
 function v(e) {
@@ -49,9 +49,9 @@ function v(e) {
                       requestId: N
                   }));
             let l = {
-                id: _.G,
+                id: y.G,
                 type: o.so.CONTENT_INVENTORY_GROUP,
-                key: _.G,
+                key: y.G,
                 count: e.length,
                 index: n.length,
                 title: C.NW.string(C.t['6gwSFR']),
@@ -59,7 +59,7 @@ function v(e) {
                     E((e) => {
                         let t = !e;
                         return (
-                            u.default.track(y.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                            u.default.track(_.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: v,
                                 guild_id: j,
                                 expanded: t
@@ -106,7 +106,7 @@ function v(e) {
                     !Z &&
                         T &&
                         k &&
-                        ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                        ((0, f.e)(_.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: N,
                             first_shown_at: G.current,
                             item_ids: r,

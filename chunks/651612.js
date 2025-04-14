@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854);
+n.d(t, { Z: () => _ }), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -14,10 +14,10 @@ var r = n(200651),
     m = n(918559),
     g = n(981631),
     b = n(388032),
-    _ = n(408912);
-function y(e) {
+    y = n(408912);
+function _(e) {
     var { channelId: t, className: n } = e,
-        y = (function (e, t) {
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -73,7 +73,7 @@ function y(e) {
         S = O > 0 ? O : j,
         Z = S > 0;
     return (0, r.jsxs)('div', {
-        className: _.wrapper,
+        className: y.wrapper,
         children: [
             (0, r.jsx)(
                 c.d,
@@ -112,14 +112,14 @@ function y(e) {
                         themeable: !0,
                         className: n
                     },
-                    y
+                    _
                 )
             ),
             Z
                 ? (0, r.jsx)(s.Z, {
                       hasMentions: O > 0,
                       truncatedCount: S > 99 ? '99+' : S,
-                      className: _.badge
+                      className: y.badge
                   })
                 : null
         ]

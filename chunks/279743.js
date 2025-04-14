@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -10,30 +10,30 @@ var r = n(200651),
     d = n(607070),
     p = n(663389),
     h = n(834166);
-function _(e) {
+function f(e) {
     let { children: t, className: n, onFlashEnd: o, animationDelay: u = 500 } = e,
         p = c.TVs.colors.TEXT_LINK,
-        _ = (0, c.dQu)(p).spring({ opacity: 0 }),
-        f = (0, c.dQu)(p).spring({ opacity: 0.1 }),
+        f = (0, c.dQu)(p).spring({ opacity: 0 }),
+        _ = (0, c.dQu)(p).spring({ opacity: 0.1 }),
         m = (0, c.dQu)(p).spring({ opacity: 0 }),
         b = (0, c.dQu)(p).spring({ opacity: 1 }),
         [g, E] = (0, c.q_F)(
             () => ({
                 from: {
-                    backgroundColor: _,
-                    borderColor: _
+                    backgroundColor: f,
+                    borderColor: f
                 }
             }),
             'animate-never'
         ),
         O = {
-            startColor: _,
+            startColor: f,
             handleRest: (e) => {
                 e.finished && (null == o || o());
             },
             endColor: m,
             targetBorderColor: b,
-            targetColor: f,
+            targetColor: _,
             animationDelay: u
         },
         y = i.useRef(O);
@@ -94,7 +94,7 @@ function _(e) {
         })
     );
 }
-function f(e) {
+function _(e) {
     let { children: t, scrollPosition: n, animationDelay: o } = e,
         l = (0, u.e7)([p.Z], () => p.Z.getScrollPosition() === n),
         [s, a] = i.useState(!1);
@@ -102,7 +102,7 @@ function f(e) {
         l && a(!0);
     }, [l]),
     s)
-        ? (0, r.jsx)(_, {
+        ? (0, r.jsx)(f, {
               animationDelay: o,
               onFlashEnd: () => a(!1),
               children: t

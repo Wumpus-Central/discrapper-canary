@@ -1,14 +1,14 @@
 n.d(t, {
-    O4: () => b,
-    OA: () => h,
-    Wu: () => x
+    O4: () => x,
+    OA: () => f,
+    Wu: () => b
 }),
     n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(399606),
-    a = n(481060),
-    l = n(312913),
+    l = n(481060),
+    a = n(312913),
     o = n(45966),
     c = n(637853),
     d = n(983135),
@@ -40,7 +40,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function f(e, t) {
         e
     );
 }
-function h(e, t) {
+function f(e, t) {
     let n = (0, s.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts));
     return [(0, s.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts, c.V7)), n];
 }
-function b(e) {
+function x(e) {
     let t = (0, s.e7)([o.Z], () => o.Z.isAdvancedMode(e)),
         [n, r] = (function (e) {
             let t = (0, s.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e)));
@@ -70,29 +70,29 @@ function b(e) {
         })(e);
     return !!t && r.length >= m.md && n.length >= m.X;
 }
-function x(e) {
+function b(e) {
     let { guildId: t, className: n } = e,
-        c = (0, l.UQ)(t).advancedModeAllowed,
+        c = (0, a.UQ)(t).advancedModeAllowed,
         u = (0, s.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             let e = u ? m.Un.ONBOARDING_DEFAULT : m.Un.ONBOARDING_ADVANCED;
             u
-                ? (0, a.h7j)((n) =>
+                ? (0, l.h7j)((n) =>
                       (0, r.jsx)(
-                          a.ConfirmModal,
-                          f(
+                          l.ConfirmModal,
+                          h(
                               p(
                                   {
                                       header: g.NW.string(g.t['49+ONj']),
                                       confirmText: g.NW.string(g.t.R9GHyc),
                                       cancelText: g.NW.string(g.t['ETE/oK']),
-                                      confirmButtonColor: a.zxk.Colors.BRAND,
+                                      confirmButtonColor: l.zxk.Colors.BRAND,
                                       onConfirm: () => (0, d.Ts)(t, e)
                                   },
                                   n
                               ),
                               {
-                                  children: (0, r.jsx)(a.Text, {
+                                  children: (0, r.jsx)(l.Text, {
                                       variant: 'text-md/normal',
                                       children: g.NW.string(g.t.TLkoOj)
                                   })
@@ -100,22 +100,22 @@ function x(e) {
                           )
                       )
                   )
-                : (0, a.h7j)((n) =>
+                : (0, l.h7j)((n) =>
                       (0, r.jsx)(
-                          a.ConfirmModal,
-                          f(
+                          l.ConfirmModal,
+                          h(
                               p(
                                   {
                                       header: g.NW.string(g.t.YB9xUF),
                                       confirmText: g.NW.string(g.t.ts6u6u),
                                       cancelText: g.NW.string(g.t['ETE/oK']),
-                                      confirmButtonColor: a.zxk.Colors.BRAND,
+                                      confirmButtonColor: l.zxk.Colors.BRAND,
                                       onConfirm: () => (0, d.Ts)(t, e)
                                   },
                                   n
                               ),
                               {
-                                  children: (0, r.jsx)(a.Text, {
+                                  children: (0, r.jsx)(l.Text, {
                                       variant: 'text-md/normal',
                                       children: g.NW.string(g.t.BcGGVl)
                                   })
@@ -127,9 +127,9 @@ function x(e) {
     return c
         ? (0, r.jsx)('div', {
               className: n,
-              children: (0, r.jsx)(a.eee, {
-                  onClick: h,
-                  children: (0, r.jsx)(a.Text, {
+              children: (0, r.jsx)(l.eee, {
+                  onClick: f,
+                  children: (0, r.jsx)(l.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-link',
                       children: u ? g.NW.string(g.t.OmpxW1) : g.NW.string(g.t.ozsQBA)

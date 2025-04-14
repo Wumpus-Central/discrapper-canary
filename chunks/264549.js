@@ -22,11 +22,11 @@ function h(e, t, n) {
         e
     );
 }
-let _ = {
+let f = {
         PRIMARY: () => !0,
         SECONDARY: () => !0
     },
-    f = () =>
+    _ = () =>
         (0, r.jsxs)(
             'div',
             {
@@ -48,10 +48,10 @@ class m extends i.PureComponent {
                 this.setState({ renderSecondary: !0 });
             }, 120)),
             (this._doneTimeout = setTimeout(this.done, 1000)),
-            _.PRIMARY();
+            f.PRIMARY();
     }
     componentDidUpdate(e, t) {
-        this.state.renderSecondary && !t.renderSecondary && _.SECONDARY();
+        this.state.renderSecondary && !t.renderSecondary && f.SECONDARY();
     }
     componentWillUnmount() {
         clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout);
@@ -246,7 +246,7 @@ class b extends i.PureComponent {
                 } else this.setTimeout(this.addSymbol, 750);
             }),
             h(this, 'addSymbol', () => {
-                (this.children = [(0, r.jsx)(f, {}, 'symbol')]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3000);
+                (this.children = [(0, r.jsx)(_, {}, 'symbol')]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3000);
             }),
             h(this, 'delayedClose', () => {
                 this.props.handleDemonClose();

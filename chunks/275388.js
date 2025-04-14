@@ -12,7 +12,7 @@ let c = 'orb-checkout-payment-modal-key',
     u = () => (0, o.VXO)(c),
     d = (e) => {
         var { skuId: t, analyticsLocations: u = [], analyticsSourceLocation: d, onCloseCallback: p, onCheckoutSuccess: h } = e,
-            _ = (function (e, t) {
+            f = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -31,7 +31,7 @@ let c = 'orb-checkout-payment-modal-key',
                 }
                 return i;
             })(e, ['skuId', 'analyticsLocations', 'analyticsSourceLocation', 'onCloseCallback', 'onCheckoutSuccess']);
-        let f = !1,
+        let _ = !1,
             m = (0, i.Z)();
         return (0, o.ZDy)(
             async () => {
@@ -70,10 +70,10 @@ let c = 'orb-checkout-payment-modal-key',
                                 analyticsLocations: u,
                                 analyticsSourceLocation: d,
                                 onCheckoutSuccess: (e) => {
-                                    (f = !0), h(e);
+                                    (_ = !0), h(e);
                                 }
                             },
-                            _,
+                            f,
                             n
                         )),
                         (o = o = { loadId: m }),
@@ -96,7 +96,7 @@ let c = 'orb-checkout-payment-modal-key',
             {
                 onCloseCallback: p,
                 onCloseRequest() {
-                    f ||
+                    _ ||
                         (0, s._Y)(a.rMx.PAYMENT_FLOW_CANCELED, {
                             loadId: m,
                             skuId: t,

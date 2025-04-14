@@ -16,7 +16,7 @@ var l = n(192379),
 function f(e) {
     let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         l = arguments.length > 2 ? arguments[2] : void 0;
-    return p(
+    return _(
         e === E._ || e === d.I_8 ? (0, o.t)() : i.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels,
         {
             currentVoiceChannelId: c.Z.getVoiceChannelId(),
@@ -40,7 +40,7 @@ function C(e, t, n) {
         }));
     return (0, l.useMemo)(
         () =>
-            p(
+            _(
                 t,
                 {
                     currentVoiceChannelId: f,
@@ -55,7 +55,7 @@ function C(e, t, n) {
         [t, n, d, E]
     );
 }
-function p(e, t) {
+function _(e, t) {
     let { currentVoiceChannelId: n, selectedChannelId: l } = t,
         { withVoiceChannels: r, withCurrentVoiceChannel: i } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         o = arguments.length > 3 ? arguments[3] : void 0,

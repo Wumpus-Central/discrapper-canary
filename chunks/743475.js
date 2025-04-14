@@ -1,14 +1,14 @@
 n.d(t, {
-    BG: () => f,
-    DO: () => b,
-    pt: () => h
+    BG: () => h,
+    DO: () => x,
+    pt: () => f
 }),
     n(388685);
 var r = n(570140),
     i = n(668781),
     s = n(881052),
-    a = n(45966),
-    l = n(637853),
+    l = n(45966),
+    a = n(637853),
     o = n(592125),
     c = n(823379),
     d = n(889369),
@@ -16,22 +16,22 @@ var r = n(570140),
     m = n(208665),
     g = n(290511),
     p = n(388032);
-function f() {
+function h() {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_RESET' });
 }
-function h(e) {
+function f(e) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE',
         channelId: e
     });
 }
-async function b(e) {
+async function x(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
-        [f, h] = (0, l.d9)(e.id, [...t]),
-        b = (0, l.kl)(e.id, t, m.Z.editedOnboardingPrompts),
-        x = (0, l.kl)(e.id, t, m.Z.editedOnboardingPrompts, l.V7);
-    if (a.Z.getEnabled(e.id) && ((!n && (h.length < g.md || f.length < g.X)) || (n && (b.length < g.md || x.length < g.X))))
+        [h, f] = (0, a.d9)(e.id, [...t]),
+        x = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
+        b = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
+    if (l.Z.getEnabled(e.id) && ((!n && (f.length < g.md || h.length < g.X)) || (n && (x.length < g.md || b.length < g.X))))
         return void i.Z.show({
             title: p.NW.string(p.t.iLdiqa),
             body: p.NW.string(p.t.JOT74e)

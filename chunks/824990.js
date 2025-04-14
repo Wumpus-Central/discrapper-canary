@@ -2,15 +2,15 @@ n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(471445),
-    l = n(8426),
+    l = n(471445),
+    a = n(8426),
     o = n(388032),
     c = n(773100);
 let d = function (e) {
     var t;
     let { channel: n, end: d } = e,
         u = i.useCallback(() => {
-            (0, l.r2)({
+            (0, a.r2)({
                 channelId: n.id,
                 title: n.name,
                 description: '',
@@ -18,7 +18,7 @@ let d = function (e) {
                 icon: null
             });
         }, [n]),
-        m = null != (t = (0, a.KS)(n)) ? t : s.VL1;
+        m = null != (t = (0, l.KS)(n)) ? t : s.VL1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {

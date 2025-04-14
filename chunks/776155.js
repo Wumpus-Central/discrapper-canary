@@ -3,15 +3,15 @@ var r = n(192379),
     i = n(295141);
 function s(e) {
     let [t, n] = r.useState(!0),
-        [s, a] = r.useState(),
-        [l, o] = r.useState(),
+        [s, l] = r.useState(),
+        [a, o] = r.useState(),
         c = r.useCallback(async (e) => {
-            n(!0), a(void 0);
+            n(!0), l(void 0);
             try {
                 let t = await i.HT(e);
                 o(t);
             } catch (e) {
-                a(e);
+                l(e);
             } finally {
                 n(!1);
             }
@@ -23,7 +23,7 @@ function s(e) {
         {
             isLoading: t,
             error: s,
-            highlightedCreatorDetails: l
+            highlightedCreatorDetails: a
         }
     );
 }

@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(807705),
     g = n(27457),
     b = n(111248),
-    _ = n(312703),
-    y = n(796638),
+    y = n(312703),
+    _ = n(796638),
     C = n(981631),
     x = n(354459),
     v = n(363987),
@@ -64,7 +64,7 @@ function E(e, t) {
     );
 }
 let N = 16 / 9,
-    I = 8 + y.cF;
+    I = 8 + _.cF;
 function P(e) {
     var t;
     let n,
@@ -117,19 +117,19 @@ function P(e) {
             },
             eg
         ),
-        e_ = (0, s.q_F)(
+        ey = (0, s.q_F)(
             {
                 value: +!!er,
                 config: E(O({}, a.config.stiff), { clamp: !0 })
             },
             eg
         ),
-        ey = (0, s.q_F)(
+        e_ = (0, s.q_F)(
             {
                 value: ep,
                 config: E(O({}, a.config.stiff), { clamp: !0 })
             },
-            (ei === er && e_.value.idle && !ea) || es || em ? 'animate-never' : 'animate-always'
+            (ei === er && ey.value.idle && !ea) || es || em ? 'animate-never' : 'animate-always'
         ),
         eC = (0, s.q_F)(
             {
@@ -153,8 +153,8 @@ function P(e) {
         ev = i.useCallback((e) => {
             Y(e), X(!1);
         }, []),
-        ej = er || D ? [] : (0, _.n3)(Z, k, V),
-        { visibleParticipants: eO, participantTileWidth: eE } = (0, y.ZB)(W, T);
+        ej = er || D ? [] : (0, y.n3)(Z, k, V),
+        { visibleParticipants: eO, participantTileWidth: eE } = (0, _.ZB)(W, T);
     return (0, r.jsxs)('div', {
         className: o()(j.root, v.flexCenter, L),
         children: [
@@ -164,10 +164,10 @@ function P(e) {
                 children: [
                     (0, r.jsxs)(a.animated.div, {
                         className: j.videoFrame,
-                        style: { top: e_.value.to((e) => (-e * I) / 2) },
+                        style: { top: ey.value.to((e) => (-e * I) / 2) },
                         children: [
                             (0, r.jsx)(a.animated.div, {
-                                style: { width: ey.value },
+                                style: { width: e_.value },
                                 className: j.videoWrapper,
                                 children: (0, r.jsx)('div', {
                                     className: v.videoSizer,
@@ -223,7 +223,7 @@ function P(e) {
                             opacity: eb.value,
                             visibility: eb.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
-                        children: (0, r.jsx)(y.ZP, {
+                        children: (0, r.jsx)(_.ZP, {
                             channel: R,
                             onClick: l,
                             onContextMenu: P,

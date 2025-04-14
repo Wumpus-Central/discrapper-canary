@@ -26,10 +26,10 @@ function b(e) {
     let t = h(e.applicationId, e.partyId);
     return t in f || t in m;
 }
-function _() {
+function y() {
     (f = {}), (m = {});
 }
-class y extends (r = o.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -38,15 +38,15 @@ class y extends (r = o.ZP.Store) {
     }
 }
 (l = 'PresenceSubscriptionsStore'),
-    (i = 'displayName') in y
-        ? Object.defineProperty(y, i, {
+    (i = 'displayName') in _
+        ? Object.defineProperty(_, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (y[i] = l);
-let C = new y(s.Z, {
+        : (_[i] = l);
+let C = new _(s.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {
@@ -73,8 +73,8 @@ let C = new y(s.Z, {
             !0
         );
     },
-    CONNECTION_OPEN: _,
-    CONNECTION_RESUMED: _,
+    CONNECTION_OPEN: y,
+    CONNECTION_RESUMED: y,
     LOGOUT: function () {
         (f = {}), (m = {});
     }

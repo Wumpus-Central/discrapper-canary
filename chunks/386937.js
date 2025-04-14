@@ -2,26 +2,26 @@ n.d(t, { Z: () => Z }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(392711),
-    o = n.n(l),
+    l = n.n(s),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     d = n(477690),
     u = n(481060),
     m = n(179360),
     g = n(129861),
     p = n(999382),
-    f = n(905128),
-    h = n(151494),
-    b = n(733683),
-    x = n(237583),
+    h = n(905128),
+    f = n(151494),
+    x = n(733683),
+    b = n(237583),
     j = n(899667),
     N = n(271383),
-    v = n(430824),
-    _ = n(594174),
-    y = n(267642),
-    O = n(624138),
-    C = n(981631),
+    _ = n(430824),
+    v = n(594174),
+    O = n(267642),
+    C = n(624138),
+    y = n(981631),
     I = n(388032),
     E = n(824302);
 function S(e, t, n) {
@@ -71,7 +71,7 @@ function P(e, t) {
         e
     );
 }
-let w = (0, O.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let w = (0, C.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class R extends i.Component {
     componentDidMount() {
         this.measure();
@@ -88,25 +88,25 @@ class R extends i.Component {
         let { tierPositions: t } = this.state,
             { guildId: n, levelSubscriptionCount: i, currentTier: s } = this.props;
         if (null == t || null == n) return null;
-        let a = {
+        let l = {
                 numRequired: 0,
                 y: 0,
-                key: b.x
+                key: x.x
             },
-            l = e.map((e) => {
+            a = e.map((e) => {
                 var n;
                 return {
-                    numRequired: C.oCV[e.tier],
-                    name: (0, y.nW)(e.tier),
+                    numRequired: y.oCV[e.tier],
+                    name: (0, O.nW)(e.tier),
                     y: null != (n = t[e.tier]) ? n : 0,
                     key: e.tier
                 };
             });
-        return (0, r.jsx)(b.Z, {
+        return (0, r.jsx)(x.Z, {
             currentTier: s,
             className: i > 0 ? E.progressWithSubscriptions : E.progress,
             progress: i,
-            tiers: [a, ...l],
+            tiers: [l, ...a],
             initialAnimationDelay: 500,
             onAnimatedTierMaker: this.handleAnimatedTier
         });
@@ -134,7 +134,7 @@ class R extends i.Component {
             ref: this.defaultTierRef,
             className: E.subscribers,
             children: [
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(b.Z, {
                     guildId: null != n ? n : void 0,
                     users: e,
                     renderUser: this.renderSubscriber,
@@ -169,7 +169,7 @@ class R extends i.Component {
                                             tiers: s,
                                             tierIndex: i,
                                             onSetRef: this.setTierRef,
-                                            isAnimatedTo: C.oCV[this.state.animatedTier] >= C.oCV[r.tier],
+                                            isAnimatedTo: y.oCV[this.state.animatedTier] >= y.oCV[r.tier],
                                             subscriptionCount: n,
                                             guildId: e
                                         })
@@ -186,7 +186,7 @@ class R extends i.Component {
             S(this, 'defaultTierRef', i.createRef()),
             S(this, 'state', {
                 tierPositions: null,
-                animatedTier: C.Eu4.NONE
+                animatedTier: y.Eu4.NONE
             }),
             S(this, 'measure', () => {
                 let { uniqueSubscriberCount: e } = this.props,
@@ -197,8 +197,8 @@ class R extends i.Component {
                 for (let [t, i] of Object.entries(this.tierRefs)) {
                     if (null == i) return;
                     let { top: s } = i.getBoundingClientRect(),
-                        a = e > 0 ? w : 0;
-                    r[t] = s - n + 32 - a;
+                        l = e > 0 ? w : 0;
+                    r[t] = s - n + 32 - l;
                 }
                 this.setState({ tierPositions: r });
             }),
@@ -226,7 +226,7 @@ class R extends i.Component {
                                       P(T({}, n), {
                                           tabIndex: -1,
                                           src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-                                          className: a()(E.avatar, t, null != t ? E.subscriberMask : null),
+                                          className: l()(E.avatar, t, null != t ? E.subscriberMask : null),
                                           size: u.EFr.SIZE_32
                                       })
                                   )
@@ -277,16 +277,16 @@ class R extends i.Component {
             );
     }
 }
-let Z = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, _.default, N.ZP], () => {
+let Z = c.ZP.connectStores([_.Z, h.Z, p.Z, j.Z, v.default, N.ZP], () => {
     var e, t;
     let n = p.Z.getGuildId(),
-        r = null != (t = null == (e = v.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : C.Eu4.NONE,
-        i = (0, h.I)(n),
+        r = null != (t = null == (e = _.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : y.Eu4.NONE,
+        i = (0, f.I)(n),
         s = null != n ? j.Z.getAppliedGuildBoostsForGuild(n) : null,
-        a = o()(null != s ? s : []).uniqBy((e) => e.userId),
-        l = a
+        l = o()(null != s ? s : []).uniqBy((e) => e.userId),
+        a = l
             .map((e) => ({
-                user: _.default.getUser(e.userId),
+                user: v.default.getUser(e.userId),
                 nick: N.ZP.getNick(n, e.userId)
             }))
             .filter((e) => null != e.user)
@@ -295,7 +295,7 @@ let Z = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, _.default, N.ZP], () => {
         guildId: n,
         currentTier: r,
         levelSubscriptionCount: i,
-        subscribers: l,
-        uniqueSubscriberCount: a.size()
+        subscribers: a,
+        uniqueSubscriberCount: l.size()
     };
 })(R);

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     l = n(192379),
-    a = n(525654),
-    s = n.n(a),
+    s = n(525654),
+    a = n.n(s),
     o = n(748780),
     i = n(782682);
 function E(e, t, n) {
@@ -32,7 +32,7 @@ class u extends l.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
-        'Firefox' !== s().name &&
+        'Firefox' !== a().name &&
             (o.Z.animate(e, {
                 loop: !0,
                 toValueMin: -74,

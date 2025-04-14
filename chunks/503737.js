@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -82,4 +82,4 @@ class h extends s.Z {
         (0, i.Mr3)(d);
     }
 }
-let _ = new h();
+let f = new h();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(314940), n(388685);
+n.d(t, { Z: () => y }), n(314940), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -61,12 +61,12 @@ function b(e) {
         })
     });
 }
-let _ = i.memo(function (e) {
+let y = i.memo(function (e) {
     var t;
     let { messages: n, channel: l, compact: a = !1, unreadId: s, collapsedReason: c } = e,
         { hasJumpTarget: p = !1 } = n,
-        [f, _] = i.useState(p),
-        y = i.useCallback(() => _((e) => !e), []),
+        [f, y] = i.useState(p),
+        _ = i.useCallback(() => y((e) => !e), []),
         C = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, r.jsxs)('div', {
         className: o()({
@@ -90,7 +90,7 @@ let _ = i.memo(function (e) {
                     count: C,
                     compact: a,
                     expanded: f,
-                    onClick: y,
+                    onClick: _,
                     collapsedReason: c
                 },
                 'collapsed-message-item'

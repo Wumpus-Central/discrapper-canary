@@ -1,13 +1,13 @@
 n.d(t, {
     Q: () => g,
-    Z: () => b
+    Z: () => x
 }),
     n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(957011),
-    l = n(587431),
+    l = n(957011),
+    a = n(587431),
     o = n(756066),
     c = n(388032),
     d = n(601781),
@@ -39,7 +39,7 @@ function m(e) {
 }
 let g = 'role_subscriptions_eligibility_modal';
 function p(e) {
-    let { guild: t, eligibility: i, eligibilityLoading: a, eligibilityError: l, refreshEligibility: o } = e;
+    let { guild: t, eligibility: i, eligibilityLoading: l, eligibilityError: a, refreshEligibility: o } = e;
     return (0, r.jsxs)(s.zxk, {
         color: s.Ttl.CUSTOM,
         className: d.ineligibleButton,
@@ -57,8 +57,8 @@ function p(e) {
                             (c = c =
                                 {
                                     eligibility: i,
-                                    eligibilityLoading: a,
-                                    eligibilityError: l,
+                                    eligibilityLoading: l,
+                                    eligibilityError: a,
                                     refreshEligibility: o,
                                     guildId: t.id
                                 }),
@@ -91,15 +91,15 @@ function p(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: g } = (0, a.Z)(t.id),
-        [p, f] = i.useState(!1);
+        { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: g } = (0, l.Z)(t.id),
+        [p, h] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.XZJ, {
                 onChange: function () {
-                    f((e) => !e);
+                    h((e) => !e);
                 },
                 size: 20,
                 type: s.XZJ.Types.INVERTED,
@@ -122,30 +122,30 @@ function f(e) {
             }),
             null != u &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(s.LZC, { size: 24 }), (0, r.jsx)(l.Z, { children: u.getAnyErrorMessage() })]
+                    children: [(0, r.jsx)(s.LZC, { size: 24 }), (0, r.jsx)(a.Z, { children: u.getAnyErrorMessage() })]
                 })
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, monetizationEligibility: n } = e,
-        { eligibilityLoading: i, eligibilityError: s, refreshEligibility: a, eligibility: l, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
+        { eligibilityLoading: i, eligibilityError: s, refreshEligibility: l, eligibility: a, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
     return c
         ? u
             ? (0, r.jsx)(o.Z, m({}, n))
-            : (0, r.jsx)(f, {
+            : (0, r.jsx)(h, {
                   guild: t,
                   checkboxText: d
               })
         : (0, r.jsx)(p, {
               guild: t,
-              eligibility: l,
+              eligibility: a,
               eligibilityLoading: i,
               eligibilityError: s,
-              refreshEligibility: a
+              refreshEligibility: l
           });
 }
-function b(e) {
+function x(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)('div', {
         className: d.ctaContainer,
@@ -170,7 +170,7 @@ function b(e) {
                         children: c.NW.string(c.t['41wkMT'])
                     }),
                     (0, r.jsx)(s.LZC, { size: 24 }),
-                    (0, r.jsx)(h, {
+                    (0, r.jsx)(f, {
                         guild: t,
                         monetizationEligibility: n
                     })

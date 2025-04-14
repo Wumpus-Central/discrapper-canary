@@ -2,8 +2,8 @@ n.d(t, { c: () => g });
 var r = n(200651),
     i = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(999382),
+    l = n(481060),
+    a = n(999382),
     o = n(845377),
     c = n(976288),
     d = n(386885),
@@ -11,22 +11,22 @@ var r = n(200651),
     m = n(836090);
 function g(e) {
     let { fetchDiscoveryData: t, settingsView: n, requireTerms: g, rules: p } = e,
-        f = (0, s.e7)([l.Z], () => l.Z.getProps().guild);
+        h = (0, s.e7)([a.Z], () => a.Z.getProps().guild);
     if (
         (i.useEffect(() => {
-            null != f && t(f.id);
-        }, [t, f]),
-        null == f)
+            null != h && t(h.id);
+        }, [t, h]),
+        null == h)
     )
         return null;
     switch (n) {
         case d.U.DISQUALIFIED:
             return (0, r.jsx)(o.Z, {
-                guild: f,
-                guildId: f.id,
+                guild: h,
+                guildId: h.id,
                 headerContent: (0, r.jsxs)('div', {
                     children: [
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
                             className: m.header,
@@ -42,7 +42,7 @@ function g(e) {
                                     )
                             })
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-secondary',
                             children: u.NW.string(u.t.Qgaw3d)
@@ -59,9 +59,9 @@ function g(e) {
             });
         case d.U.INELIGIBLE:
             return (0, r.jsx)(o.Z, {
-                guild: f,
-                guildId: f.id,
-                headerContent: (0, r.jsx)(a.X6q, {
+                guild: h,
+                guildId: h.id,
+                headerContent: (0, r.jsx)(l.X6q, {
                     variant: 'heading-md/semibold',
                     children: u.NW.format(u.t['+6Hylp'], {
                         doesNotHook: (e, t) =>
@@ -77,6 +77,6 @@ function g(e) {
                 })
             });
         default:
-            return (0, r.jsx)(a.$jN, {});
+            return (0, r.jsx)(l.$jN, {});
     }
 }

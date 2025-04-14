@@ -1,18 +1,18 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => l }), n(388685);
 var r = n(192379),
     i = n(881052),
     s = n(53365);
-function a(e) {
+function l(e) {
     let [t, n] = r.useState(!0),
-        [a, l] = r.useState(),
+        [l, a] = r.useState(),
         [o, c] = r.useState(),
         d = r.useCallback(async (e) => {
-            n(!0), l(void 0);
+            n(!0), a(void 0);
             try {
                 let t = await s.wZ(e);
                 c(t);
             } catch (e) {
-                l(new i.Hx(e));
+                a(new i.Hx(e));
             } finally {
                 n(!1);
             }
@@ -23,7 +23,7 @@ function a(e) {
         }, [e, d]),
         {
             isLoading: t,
-            error: a,
+            error: l,
             creatorMonetizationOnboardingMarketing: o
         }
     );

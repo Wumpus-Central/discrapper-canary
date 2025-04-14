@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => v,
+    Z: () => b,
     j: () => _
 });
 var l = n(200651);
@@ -14,15 +14,15 @@ var r = n(120356),
     u = n(869764),
     m = n(150512),
     N = n(430824),
-    h = n(594174),
-    I = n(626135),
+    I = n(594174),
+    h = n(626135),
     g = n(999382),
     f = n(983135),
     p = n(84658),
     E = n(981631),
     S = n(388032),
-    x = n(568614);
-let T = () => [
+    T = n(568614);
+let x = () => [
         {
             emoji: '\uD83E\uDDD9',
             emojiDescription: S.NW.string(S.t.Jh9uiY),
@@ -48,7 +48,7 @@ let T = () => [
                 (0, l.jsx)(a.MqZ, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: x.channelIcon
+                    className: T.channelIcon
                 }),
             channel: S.NW.string(S.t.MXJozM),
             selected: !0
@@ -58,7 +58,7 @@ let T = () => [
                 (0, l.jsx)(a.VL1, {
                     size: 'md',
                     color: 'currentColor',
-                    className: x.channelIcon
+                    className: T.channelIcon
                 }),
             channel: S.NW.string(S.t.Pkj0f3),
             selected: !0
@@ -68,7 +68,7 @@ let T = () => [
                 (0, l.jsx)(a.VL1, {
                     size: 'md',
                     color: 'currentColor',
-                    className: x.channelIcon
+                    className: T.channelIcon
                 }),
             channel: S.NW.string(S.t['imVD+v']),
             selected: !1
@@ -78,7 +78,7 @@ let T = () => [
                 (0, l.jsx)(a.Mmi, {
                     size: 'md',
                     color: 'currentColor',
-                    className: x.channelIcon
+                    className: T.channelIcon
                 }),
             channel: S.NW.string(S.t['Pj/Wpq']),
             selected: !0
@@ -86,7 +86,7 @@ let T = () => [
     ];
 function _(e) {
     let { isTooltip: t = !1 } = e,
-        n = T();
+        n = x();
     t && n.pop();
     let r = t
             ? (0, l.jsx)(a.Text, {
@@ -108,17 +108,17 @@ function _(e) {
                   children: S.NW.format(S.t['8XLD3t'], {})
               });
     return (0, l.jsxs)('div', {
-        className: i()(x.upsellPreview, x.spacingLarge, { [x.tooltip]: t }),
+        className: i()(T.upsellPreview, T.spacingLarge, { [T.tooltip]: t }),
         children: [
             r,
             (0, l.jsx)('div', {
-                className: x.spacingSmall,
+                className: T.spacingSmall,
                 children: n.map((e, t) => {
                     let { emoji: n, emojiDescription: r, title: s, selected: o } = e;
                     return (0, l.jsxs)(
                         'div',
                         {
-                            className: i()(x.previewListItem, { [x.selected]: o }),
+                            className: i()(T.previewListItem, { [T.selected]: o }),
                             children: [
                                 (0, l.jsx)('span', {
                                     role: 'img',
@@ -132,11 +132,11 @@ function _(e) {
                                 }),
                                 o &&
                                     (0, l.jsx)('div', {
-                                        className: x.checkboxCircle,
+                                        className: T.checkboxCircle,
                                         children: (0, l.jsx)(a.dz2, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: x.checkmark
+                                            className: T.checkmark
                                         })
                                     })
                             ]
@@ -174,32 +174,32 @@ function j() {
     ];
     return (0, l.jsx)(d.i, { testimonials: e });
 }
-function v() {
+function b() {
     let e = (0, s.e7)([g.Z], () => g.Z.getGuildId()),
         t = (0, s.e7)([N.Z], () => N.Z.getGuild(e)),
-        n = (0, s.e7)([h.default], () => h.default.getCurrentUser());
+        n = (0, s.e7)([I.default], () => I.default.getCurrentUser());
     return null == e || null == t || null == n
         ? null
         : (0, l.jsxs)('div', {
-              className: x.upsellContainer,
+              className: T.upsellContainer,
               children: [
                   (0, l.jsxs)('div', {
-                      className: x.upsellHeader,
+                      className: T.upsellHeader,
                       children: [
                           (0, l.jsxs)('div', {
-                              className: x.islands,
+                              className: T.islands,
                               children: [
                                   (0, l.jsx)(c.xm, {}),
                                   (0, l.jsx)(c._I, {
                                       guild: t,
-                                      mainIslandClassName: x.mainIsland,
-                                      balloonDogClassName: x.balloonDog
+                                      mainIslandClassName: T.mainIsland,
+                                      balloonDogClassName: T.balloonDog
                                   }),
                                   (0, l.jsx)(c.B0, {})
                               ]
                           }),
                           (0, l.jsxs)('div', {
-                              className: x.upsellHeaderText,
+                              className: T.upsellHeaderText,
                               children: [
                                   (0, l.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
@@ -212,12 +212,12 @@ function v() {
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: x.upsellButtons,
+                              className: T.upsellButtons,
                               children: (0, l.jsx)(a.zxk, {
                                   onClick: function () {
                                       if (null != e) {
                                           var t, n;
-                                          I.default.track(
+                                          h.default.track(
                                               E.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                                               ((t = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {
@@ -278,14 +278,14 @@ function v() {
                   (0, l.jsx)(j, {}),
                   (0, l.jsx)(a.$i$, {}),
                   (0, l.jsxs)('div', {
-                      className: x.valuesContainer,
+                      className: T.valuesContainer,
                       children: [
                           (0, l.jsxs)('div', {
-                              className: x.valueContainer,
+                              className: T.valueContainer,
                               children: [
                                   (0, l.jsx)(_, {}),
                                   (0, l.jsxs)('div', {
-                                      className: x.valueText,
+                                      className: T.valueText,
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
@@ -300,10 +300,10 @@ function v() {
                               ]
                           }),
                           (0, l.jsxs)('div', {
-                              className: x.valueContainer,
+                              className: T.valueContainer,
                               children: [
                                   (0, l.jsxs)('div', {
-                                      className: x.valueText,
+                                      className: T.valueText,
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',
@@ -316,7 +316,7 @@ function v() {
                                       ]
                                   }),
                                   (0, l.jsxs)('div', {
-                                      className: i()(x.upsellPreview, x.spacingLarge),
+                                      className: i()(T.upsellPreview, T.spacingLarge),
                                       children: [
                                           (0, l.jsx)(m.Z, {
                                               guildId: e,
@@ -344,19 +344,19 @@ function v() {
                               ]
                           }),
                           (0, l.jsxs)('div', {
-                              className: x.valueContainer,
+                              className: T.valueContainer,
                               children: [
                                   (0, l.jsx)('div', {
-                                      className: i()(x.upsellPreview, x.spacingLarge),
+                                      className: i()(T.upsellPreview, T.spacingLarge),
                                       children: O().map((e, t) => {
                                           let { channelIcon: n, channel: r, selected: s } = e;
                                           return (0, l.jsxs)(
                                               'div',
                                               {
-                                                  className: i()(x.previewListItem, x.spaceBetween, { [x.selected]: s }),
+                                                  className: i()(T.previewListItem, T.spaceBetween, { [T.selected]: s }),
                                                   children: [
                                                       (0, l.jsxs)('div', {
-                                                          className: x.channel,
+                                                          className: T.channel,
                                                           children: [
                                                               n(),
                                                               (0, l.jsx)(a.Text, {
@@ -367,13 +367,13 @@ function v() {
                                                           ]
                                                       }),
                                                       (0, l.jsx)('div', {
-                                                          className: i()(x.checkbox, { [x.selected]: s }),
+                                                          className: i()(T.checkbox, { [T.selected]: s }),
                                                           children:
                                                               s &&
                                                               (0, l.jsx)(a.dz2, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: x.checkmark
+                                                                  className: T.checkmark
                                                               })
                                                       })
                                                   ]
@@ -383,7 +383,7 @@ function v() {
                                       })
                                   }),
                                   (0, l.jsxs)('div', {
-                                      className: x.valueText,
+                                      className: T.valueText,
                                       children: [
                                           (0, l.jsx)(a.X6q, {
                                               variant: 'heading-md/semibold',

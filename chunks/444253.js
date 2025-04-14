@@ -15,7 +15,7 @@ var i = n(442837),
     m = n(354459),
     g = n(388032);
 function b(e) {
-    let { channelId: t, onClose: n, appContext: b, exitFullScreen: _, onSelect: y, onInteraction: C } = e,
+    let { channelId: t, onClose: n, appContext: b, exitFullScreen: y, onSelect: _, onInteraction: C } = e,
         x = (0, i.e7)([s.Z], () => s.Z.getSelectedParticipant(t)),
         v = (null == x ? void 0 : x.type) === m.fO.STREAM ? x.stream : null,
         j = (0, i.e7)([o.Z], () => ((null == x ? void 0 : x.type) === m.fO.ACTIVITY ? o.Z.getApplication(x.applicationId) : void 0)),
@@ -32,8 +32,8 @@ function b(e) {
         navId: 'channel-call-overflow-popout',
         onClose: n,
         'aria-label': g.NW.string(g.t.pkYeAw),
-        onSelect: y,
+        onSelect: _,
         onInteraction: C,
-        children: [O, E, N, I, (0, h.Z)(v, b, _), P, (0, r.jsx)(l.kSQ, { children: S })]
+        children: [O, E, N, I, (0, h.Z)(v, b, y), P, (0, r.jsx)(l.kSQ, { children: S })]
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(512722),
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function _(e) {
+function y(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -61,23 +61,23 @@ function _(e) {
         })(e, ['channel']);
     let l = (0, p.Z)();
     (0, s.t)();
-    let [_] = t.recipients,
-        y = (0, a.e7)([d.default], () => d.default.getUser(_));
-    o()(null != y, 'UserProfilePanelWrapper: user cannot be undefined');
+    let [y] = t.recipients,
+        _ = (0, a.e7)([d.default], () => d.default.getUser(y));
+    o()(null != _, 'UserProfilePanelWrapper: user cannot be undefined');
     let C = (0, a.e7)([d.default], () => d.default.getCurrentUser());
     o()(null != C, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         i.useEffect(() => {
-            (0, h.Z)(y, {
+            (0, h.Z)(_, {
                 type: 'panel',
-                withMutualFriendsCount: !y.bot,
+                withMutualFriendsCount: !_.bot,
                 withMutualFriends: !1,
                 withMutualGuilds: !0,
                 channelId: t.id
             });
-        }, [y, t.id]);
+        }, [_, t.id]);
     let { isBlocked: x, isIgnored: v } = (0, a.cj)([u.Z], () => ({
-            isBlocked: u.Z.isBlocked(y.id),
-            isIgnored: u.Z.isIgnored(y.id)
+            isBlocked: u.Z.isBlocked(_.id),
+            isIgnored: u.Z.isIgnored(_.id)
         })),
         [j, O] = i.useState(x || v || x);
     i.useEffect(() => {
@@ -91,7 +91,7 @@ function _(e) {
                 f.A,
                 b(
                     {
-                        user: y,
+                        user: _,
                         currentUser: C,
                         channel: t,
                         onViewBlockedProfileClick: () => O(!1)
@@ -99,12 +99,12 @@ function _(e) {
                     n
                 )
             )
-          : y.isNonUserBot()
+          : _.isNonUserBot()
             ? (0, r.jsx)(
                   m.Z,
                   b(
                       {
-                          user: y,
+                          user: _,
                           currentUser: C,
                           channel: t
                       },
@@ -115,7 +115,7 @@ function _(e) {
                   g.Z,
                   b(
                       {
-                          user: y,
+                          user: _,
                           currentUser: C,
                           channel: t
                       },

@@ -1,4 +1,4 @@
-n.d(e, { default: () => m });
+n.d(e, { default: () => k });
 var i = n(200651),
     c = n(192379),
     s = n(481060),
@@ -9,26 +9,26 @@ var i = n(200651),
     x = n(176505),
     d = n(388032),
     h = n(367503);
-let m = function (t) {
-    let { guildId: e, submittedGuildJoinRequestsCount: n, onClose: m, transitionState: u, onConfirm: f } = t,
-        k = (0, a.Dt)(),
-        p = c.useCallback(() => {
-            m(), f();
-        }, [m, f]),
+let k = function (t) {
+    let { guildId: e, submittedGuildJoinRequestsCount: n, onClose: k, transitionState: m, onConfirm: u } = t,
+        f = (0, a.Dt)(),
         b = c.useCallback(() => {
-            m(), o.Z.close(), (0, r.uL)(l.Z5c.CHANNEL(e, x.oC.MEMBER_SAFETY));
-        }, [e, m]);
+            k(), u();
+        }, [k, u]),
+        z = c.useCallback(() => {
+            k(), o.Z.close(), (0, r.uL)(l.Z5c.CHANNEL(e, x.oC.MEMBER_SAFETY));
+        }, [e, k]);
     return (0, i.jsxs)(s.Y0X, {
         className: h.container,
-        transitionState: u,
-        'aria-labelledby': k,
+        transitionState: m,
+        'aria-labelledby': f,
         children: [
             (0, i.jsxs)(s.hzk, {
                 className: h.content,
                 children: [
                     (0, i.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        id: k,
+                        id: f,
                         children: d.NW.format(d.t.chV4JS, { count: n })
                     }),
                     (0, i.jsx)(s.Text, {
@@ -39,7 +39,7 @@ let m = function (t) {
                     }),
                     (0, i.jsx)(s.P3F, {
                         className: h.actionText,
-                        onClick: b,
+                        onClick: z,
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
@@ -53,7 +53,7 @@ let m = function (t) {
                     (0, i.jsx)(s.zxk, {
                         className: h.actionButton,
                         color: s.zxk.Colors.BRAND,
-                        onClick: p,
+                        onClick: b,
                         size: s.zxk.Sizes.SMALL,
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
@@ -62,7 +62,7 @@ let m = function (t) {
                     }),
                     (0, i.jsx)(s.zxk, {
                         color: s.zxk.Colors.PRIMARY,
-                        onClick: m,
+                        onClick: k,
                         size: s.zxk.Sizes.SMALL,
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',

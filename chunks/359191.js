@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i,
     s,
-    a = n(442837),
-    l = n(570140),
+    l = n(442837),
+    a = n(570140),
     o = n(45966),
     c = n(734893),
     d = n(999382),
@@ -11,21 +11,21 @@ var r,
     m = n(740903),
     g = n(889369),
     p = n(969632),
-    f = n(208665),
-    h = n(84658),
-    b = n(142961),
-    x = n(981631);
+    h = n(208665),
+    f = n(84658),
+    x = n(142961),
+    b = n(981631);
 let j = new Set(),
-    N = h.PG.LANDING,
-    v = null;
-function _(e) {
+    N = f.PG.LANDING,
+    _ = null;
+function v(e) {
     let { subsection: t } = e;
-    if (d.Z.getGuildId() === v) return !1;
-    (N = t === x.KsC.SERVER_GUIDE ? h.PG.HOME_SETTINGS : h.PG.LANDING), (v = d.Z.getGuildId());
+    if (d.Z.getGuildId() === _) return !1;
+    (N = t === b.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (_ = d.Z.getGuildId());
 }
-class y extends (r = a.ZP.Store) {
+class O extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, g.Z, f.Z, p.Z, u.Z), this.syncWith([o.Z, g.Z, f.Z, p.Z, u.Z], () => !0);
+        this.waitFor(o.Z, g.Z, h.Z, p.Z, u.Z), this.syncWith([o.Z, g.Z, h.Z, p.Z, u.Z], () => !0);
     }
     isEducationUpsellDismissed(e) {
         return j.has(e);
@@ -34,41 +34,41 @@ class y extends (r = a.ZP.Store) {
         return N;
     }
     hasChanges() {
-        if (null == v) return !1;
-        let e = o.Z.isAdvancedMode(v);
-        if (N === h.PG.DEFAULT_CHANNELS)
-            if (e) return g.Z.hasChanges() || f.Z.hasChanges();
+        if (null == _) return !1;
+        let e = o.Z.isAdvancedMode(_);
+        if (N === f.PG.DEFAULT_CHANNELS)
+            if (e) return g.Z.hasChanges() || h.Z.hasChanges();
             else return g.Z.hasChanges();
-        return N === h.PG.CUSTOMIZATION_QUESTIONS ? f.Z.hasChanges() : N === h.PG.HOME_SETTINGS && p.Z.hasChanges();
+        return N === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.hasChanges() : N === f.PG.HOME_SETTINGS && p.Z.hasChanges();
     }
     hasConfiguredAnythingForCurrentStep() {
-        return null != v && (N === h.PG.SAFETY_CHECK || (N === h.PG.DEFAULT_CHANNELS ? g.Z.editedDefaultChannelIds.size > 0 : N === h.PG.CUSTOMIZATION_QUESTIONS ? f.Z.editedOnboardingPrompts.length > 0 : N === h.PG.HOME_SETTINGS && !(0, c.av)(p.Z.getSettings())));
+        return null != _ && (N === f.PG.SAFETY_CHECK || (N === f.PG.DEFAULT_CHANNELS ? g.Z.editedDefaultChannelIds.size > 0 : N === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.editedOnboardingPrompts.length > 0 : N === f.PG.HOME_SETTINGS && !(0, c.av)(p.Z.getSettings())));
     }
     hasErrors() {
-        return N === h.PG.CUSTOMIZATION_QUESTIONS && null != f.Z.errors.find((e) => null != e);
+        return N === f.PG.CUSTOMIZATION_QUESTIONS && null != h.Z.errors.find((e) => null != e);
     }
     showNotice() {
-        if (null == v) return !1;
-        if ((0, b.C)(v)) return this.hasChanges();
+        if (null == _) return !1;
+        if ((0, x.C)(_)) return this.hasChanges();
         let e = u.Z.getCurrentPage();
-        return (N !== h.PG.SAFETY_CHECK || e === m.u.OVERVIEW) && null != N && N !== h.PG.LANDING;
+        return (N !== f.PG.SAFETY_CHECK || e === m.u.OVERVIEW) && null != N && N !== f.PG.LANDING;
     }
     canCloseEarly() {
-        return null == v || (!this.hasErrors() && (!(0, b.C)(v) || !this.hasChanges()));
+        return null == _ || (!this.hasErrors() && (!(0, x.C)(_) || !this.hasChanges()));
     }
 }
 (s = 'GuildSettingsOnboardingStore'),
-    (i = 'displayName') in y
-        ? Object.defineProperty(y, i, {
+    (i = 'displayName') in O
+        ? Object.defineProperty(O, i, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (y[i] = s);
-let O = new y(l.Z, {
-    GUILD_SETTINGS_INIT: _,
-    GUILD_SETTINGS_SET_SECTION: _,
+        : (O[i] = s);
+let C = new O(a.Z, {
+    GUILD_SETTINGS_INIT: v,
+    GUILD_SETTINGS_SET_SECTION: v,
     GUILD_SETTINGS_ONBOARDING_STEP: function (e) {
         let { step: t } = e;
         N = t;

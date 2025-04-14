@@ -4,8 +4,8 @@ var r = n(192379),
     a = n(626135),
     i = n(937889),
     s = n(761910),
-    l = n(981631),
-    c = n(388032),
+    c = n(981631),
+    l = n(388032),
     u = n(875231);
 function d(e, t) {
     let { hideSimpleEmbedContent: d, formatInline: p = !1, noStyleAndInteraction: g = !1, isInteracting: m = !1, allowHeading: f = !1, allowList: b = !1, allowLinks: h = !1, allowDevLinks: y = !1, previewLinkTarget: _ = !1, viewingChannelId: O } = t,
@@ -14,11 +14,11 @@ function d(e, t) {
         if (null != e.customRenderedContent) return e.customRenderedContent;
         if (e.isUnsupported)
             return {
-                content: c.NW.string(c.t.sWi5ER),
+                content: l.NW.string(l.t.sWi5ER),
                 hasSpoilerEmbeds: !1
             };
-        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(l.iLy.LOADING)) return (0, s.Z)(e);
-        if (e.type === l.uaV.CHANGELOG) {
+        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(c.iLy.LOADING)) return (0, s.Z)(e);
+        if (e.type === c.uaV.CHANGELOG) {
             let { renderChangelogMessageMarkup: t } = n(55406);
             return t(e, u, {
                 track: (e, t) => {

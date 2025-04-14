@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var r = n(442837),
     i = n(570140);
 let s = {};
-class a extends r.ZP.Store {
+class l extends r.ZP.Store {
     hasFetched(e) {
         return null != s[e];
     }
@@ -10,7 +10,7 @@ class a extends r.ZP.Store {
         return '874345844743213126' === e ? ['1041887225819955252', '985996080107892776', '1035280727610241166'] : s[e];
     }
 }
-let l = new a(i.Z, {
+let a = new l(i.Z, {
     GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS: function (e) {
         let { guildId: t, topChannelIds: n } = e;
         s[t] = n;

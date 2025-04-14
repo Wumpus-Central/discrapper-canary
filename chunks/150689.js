@@ -2,39 +2,39 @@ n.d(t, { Z: () => c }), n(388685), n(781311);
 var r = n(200651),
     i = n(192379),
     s = n(130341),
-    a = n(34112),
-    l = n(623691),
+    l = n(34112),
+    a = n(623691),
     o = n(494831);
 function c(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: d, setSelectedSection: u } = e,
         [m, g] = i.useState(''),
-        [p, f] = i.useState(o.Cl),
-        h = m.trim(),
-        b = i.useMemo(() => d.filter((e) => (0, s.uo)(e, h)), [d, h]),
-        x = i.useCallback(
+        [p, h] = i.useState(o.Cl),
+        f = m.trim(),
+        x = i.useMemo(() => d.filter((e) => (0, s.uo)(e, f)), [d, f]),
+        b = i.useCallback(
             () =>
                 (0, r.jsx)(
-                    l.Z,
+                    a.Z,
                     {
                         guild: n,
                         everyoneRole: c,
-                        filteredRoles: b,
+                        filteredRoles: x,
                         setEditRoleId: t,
                         query: m,
                         setQuery: g,
-                        setHeaderHeight: f
+                        setHeaderHeight: h
                     },
                     'header'
                 ),
-            [n, c, b, t, m]
+            [n, c, x, t, m]
         );
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(l.Z, {
         setEditRoleId: t,
         guild: n,
         everyoneRole: c,
         otherRoles: d,
         setSelectedSection: u,
-        renderHeader: x,
+        renderHeader: b,
         headerHeight: p,
         query: m
     });

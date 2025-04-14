@@ -1,9 +1,9 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
     s = n(399606),
-    a = n(481060),
-    l = n(710344),
+    l = n(481060),
+    a = n(710344),
     o = n(734893),
     c = n(8426),
     d = n(969632),
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,16 +53,16 @@ function f(e, t) {
         e
     );
 }
-let h = [],
-    b = function (e) {
+let f = [],
+    x = function (e) {
         let { guildId: t } = e,
-            b = (0, s.Wu)([d.Z], () => {
+            x = (0, s.Wu)([d.Z], () => {
                 var e;
-                return null != (e = d.Z.getSettings().resourceChannels) ? e : h;
+                return null != (e = d.Z.getSettings().resourceChannels) ? e : f;
             }),
-            x = i.useMemo(() => b.map((e) => f(p({}, e), { id: e.channelId })), [b]),
-            { handleDragStart: j, handleDragReset: N, handleDragComplete: v } = (0, l.Z)(x, c.lq),
-            _ = i.useCallback(
+            b = i.useMemo(() => x.map((e) => h(p({}, e), { id: e.channelId })), [x]),
+            { handleDragStart: j, handleDragReset: N, handleDragComplete: _ } = (0, a.Z)(b, c.lq),
+            v = i.useCallback(
                 (e, n) => {
                     let r = d.Z.getSettings();
                     null != r &&
@@ -73,25 +73,25 @@ let h = [],
                 },
                 [t]
             ),
-            y = i.useCallback(() => {
+            O = i.useCallback(() => {
                 if (null != t)
-                    return (0, a.ZDy)(async () => {
+                    return (0, l.ZDy)(async () => {
                         let { default: e } = await n.e('84725').then(n.bind(n, 462499));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                f(p({}, n), {
+                                h(p({}, n), {
                                     guildId: t,
                                     onSave: c.r2,
-                                    onIconUpload: _
+                                    onIconUpload: v
                                 })
                             );
                     });
-            }, [t, _]);
+            }, [t, v]);
         return (0, r.jsxs)('div', {
             className: g.editResources,
             children: [
-                b.map((e, n) =>
+                x.map((e, n) =>
                     (0, r.jsx)(
                         u.Z,
                         {
@@ -100,21 +100,21 @@ let h = [],
                             index: n,
                             onDragStart: j,
                             onDragReset: N,
-                            onDragComplete: v
+                            onDragComplete: _
                         },
                         e.channelId
                     )
                 ),
-                b.length < o.x3 &&
-                    (0, r.jsxs)(a.P3F, {
+                x.length < o.x3 &&
+                    (0, r.jsxs)(l.P3F, {
                         className: g.addActionItem,
-                        onClick: y,
+                        onClick: O,
                         children: [
-                            (0, r.jsx)(a.oFk, {
+                            (0, r.jsx)(l.oFk, {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-md/normal',
                                 color: 'none',
                                 children: m.NW.string(m.t['w9/qGR'])

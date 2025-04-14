@@ -2,7 +2,7 @@ n.d(t, { Z: () => s }), n(388685);
 var r = n(999153),
     i = n(584922);
 function s(e, t, n, s) {
-    let [{ isDragging: a }, l, o] = (0, r.c)({
+    let [{ isDragging: l }, a, o] = (0, r.c)({
             type: t,
             item: () => ({ index: n }),
             collect: (e) => ({ isDragging: e.isDragging() })
@@ -13,16 +13,16 @@ function s(e, t, n, s) {
                 if (null == e.current) return;
                 let i = t.index;
                 if (i === n) return;
-                let a = e.current.getBoundingClientRect(),
-                    l = (a.bottom - a.top) / 2,
-                    o = r.getClientOffset().y - a.top;
-                (!(i < n) || !(o < l)) && ((i > n && o > l) || (s(i, n), (t.index = n)));
+                let l = e.current.getBoundingClientRect(),
+                    a = (l.bottom - l.top) / 2,
+                    o = r.getClientOffset().y - l.top;
+                (!(i < n) || !(o < a)) && ((i > n && o > a) || (s(i, n), (t.index = n)));
             }
         });
     return {
-        drag: l,
+        drag: a,
         dragPreview: o,
         drop: c,
-        isDragging: a
+        isDragging: l
     };
 }

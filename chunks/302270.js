@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(185935),
     g = n(522651),
     b = n(795318),
-    _ = n(933557),
-    y = n(320007),
+    y = n(933557),
+    _ = n(320007),
     C = n(236091),
     x = n(540059),
     v = n(623624),
@@ -89,7 +89,7 @@ function K(e, t) {
 }
 function X(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: s } = e,
-        _ = (0, d.bp)(),
+        y = (0, d.bp)(),
         { analyticsLocations: v, newestAnalyticsLocation: j } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
         { chatOpen: O, participantsListOpen: A } = (0, a.cj)(
             [f.Z],
@@ -123,7 +123,7 @@ function X(e) {
                                     B.ZP,
                                     K(q({}, e), {
                                         channelId: n.id,
-                                        appContext: _,
+                                        appContext: y,
                                         onInteraction: (0, b.u)('StageChannelCallOverflowMenu', j, { entrypoint: H.A5.THREE_DOT })
                                     })
                                 )
@@ -144,7 +144,7 @@ function X(e) {
                     },
                     'more-options-popout'
                 ),
-            !V && !t && (0, r.jsx)(y.Z, { className: Y.button }, 'clips'),
+            !V && !t && (0, r.jsx)(_.Z, { className: Y.button }, 'clips'),
             !z &&
                 !V &&
                 (0, r.jsx)(
@@ -196,13 +196,13 @@ function X(e) {
 function Q(e) {
     var t;
     let { inPopout: n, channel: l, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: p } = e,
-        h = (0, _.ZP)(l),
+        h = (0, y.ZP)(l),
         f = (0, a.e7)([W.Z], () => W.Z.getStageInstanceByChannel(l.id)),
         m = (0, k.Io)(l.id),
         g = (0, k.Rk)(l.id, M.pV.AUDIENCE),
         b = (0, a.e7)([A.Z], () => A.Z.getGuild(l.guild_id), [l.guild_id]),
-        y = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        C = (null == b ? void 0 : b.isCommunity()) ? y < F.TU7 : (null == b ? void 0 : b.premiumTier) !== F.Eu4.TIER_3 && y <= F.eez,
+        _ = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        C = (null == b ? void 0 : b.isCommunity()) ? _ < F.TU7 : (null == b ? void 0 : b.premiumTier) !== F.Eu4.TIER_3 && _ <= F.eez,
         E = (0, G.Z)(l),
         N = (0, a.e7)([w.Z], () => w.Z.can(D.yP, l)),
         I = (0, x.Q3)('StageChannelCallHeader'),

@@ -1,9 +1,9 @@
-n.d(t, { O: () => h });
+n.d(t, { O: () => f });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(906732),
-    l = n(516129),
+    l = n(906732),
+    a = n(516129),
     o = n(768581),
     c = n(949640),
     d = n(981631),
@@ -11,20 +11,20 @@ var r = n(200651),
     m = n(486324),
     g = n(200299),
     p = n(388032),
-    f = n(615511);
-function h(e) {
+    h = n(615511);
+function f(e) {
     let { guild: t, canManageGuild: n } = e,
-        h = t.hasFeature(d.oNc.BANNER),
-        b = t.hasFeature(d.oNc.ANIMATED_BANNER),
-        x = h && n,
-        { analyticsLocations: j } = (0, a.ZP)(),
+        f = t.hasFeature(d.oNc.BANNER),
+        x = t.hasFeature(d.oNc.ANIMATED_BANNER),
+        b = f && n,
+        { analyticsLocations: j } = (0, l.ZP)(),
         N = i.useCallback(
             (e, n) => {
                 (0, c.f4)(t, j, e, n);
             },
             [j, t]
         ),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -38,7 +38,7 @@ function h(e) {
             },
             [j, t]
         ),
-        _ = (0, r.jsx)(l.Z, {
+        v = (0, r.jsx)(a.Z, {
             image: t.banner,
             makeURL: (e) =>
                 null != e
@@ -47,10 +47,10 @@ function h(e) {
                               id: t.id,
                               banner: e
                           },
-                          b
+                          x
                       )
                     : null,
-            disabled: !x,
+            disabled: !b,
             onChange: N,
             hint: p.NW.string(p.t.uPvxqK),
             onOpenImageSelectModal: () =>
@@ -67,15 +67,15 @@ function h(e) {
                     },
                     analyticsLocations: j
                 }),
-            enabled: x
+            enabled: b
         });
-    return h
-        ? _
+    return f
+        ? v
         : (0, r.jsx)(s.P3F, {
               'aria-hidden': !0,
               tabIndex: -1,
-              className: f.upsell,
-              onClick: v,
-              children: _
+              className: h.upsell,
+              onClick: _,
+              children: v
           });
 }

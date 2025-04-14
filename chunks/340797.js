@@ -1,12 +1,12 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var o = n(481060),
     a = n(946273),
     i = n(441110),
     s = n(388032),
-    l = n(374701);
-function c(e) {
+    c = n(374701);
+function l(e) {
     let { guild: t, message: n } = e;
     return (0, a.vV)(t.id, n.author.id)
         ? (0, r.jsx)(o.yRy, {
@@ -58,7 +58,7 @@ function c(e) {
                                               });
                                       }
                                       return e;
-                                  })({ className: l.newMemberBadge }, e)),
+                                  })({ className: c.newMemberBadge }, e)),
                                   (n = n =
                                       {
                                           children: (0, r.jsx)(o.hg2, {

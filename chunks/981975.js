@@ -2,26 +2,26 @@ n.d(t, { Z: () => w }), n(388685), n(539854), n(472816), n(794429);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(392711),
-    o = n.n(l),
+    l = n.n(s),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     d = n(481060),
     u = n(570140),
     m = n(275759),
     g = n(313201),
     p = n(63063),
-    f = n(243730),
-    h = n(764260),
-    b = n(946724),
-    x = n(95242),
+    h = n(243730),
+    f = n(764260),
+    x = n(946724),
+    b = n(95242),
     j = n(530198),
     N = n(420966),
-    v = n(203377),
-    _ = n(981631),
-    y = n(856651),
-    O = n(388032),
-    C = n(419353),
+    _ = n(203377),
+    v = n(981631),
+    O = n(856651),
+    C = n(388032),
+    y = n(419353),
     I = n(877248);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -55,52 +55,52 @@ function T(e, t) {
 function P(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, r.jsxs)('div', {
-        className: C.headerNoConfigContainer,
+        className: y.headerNoConfigContainer,
         children: [
             (0, r.jsx)(d.X6q, {
-                className: C.headerHeading,
+                className: y.headerHeading,
                 variant: 'eyebrow',
-                children: O.NW.string(O.t.nMir29)
+                children: C.NW.string(C.t.nMir29)
             }),
             (0, r.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: O.NW.format(O.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: C.NW.format(C.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, r.jsx)(d.zxk, {
                 disabled: n,
-                className: C.addVerificationButton,
+                className: y.addVerificationButton,
                 size: d.zxk.Sizes.MEDIUM,
                 look: d.zxk.Looks.FILLED,
                 color: d.zxk.Colors.BRAND,
                 onClick: t,
-                children: O.NW.string(O.t['OSvW5+'])
+                children: C.NW.string(C.t['OSvW5+'])
             })
         ]
     });
 }
 function w(e) {
-    let { guild: t, role: n, locked: s, setSelectedSection: l, integrations: o } = e,
-        { headerHeight: g, headerRef: w } = (0, x.Z)(0),
+    let { guild: t, role: n, locked: s, setSelectedSection: a, integrations: o } = e,
+        { headerHeight: g, headerRef: w } = (0, b.Z)(0),
         { scrolledToTop: R, handleScroll: Z } = (0, N.V)(),
         D = (0, c.e7)(
-            [f.Z],
+            [h.Z],
             () => {
                 var e;
-                return null == (e = f.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
+                return null == (e = h.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
             },
             [n.id, t.id]
         ),
-        k = (0, c.Wu)([b.Z], () => {
+        A = (0, c.Wu)([x.Z], () => {
             var e;
-            return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
+            return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
-        W = k.length > 1 ? m.O1.OR : m.O1.AND,
-        A = i.useMemo(() => (W === m.O1.OR ? k.flat() : null != k && k.length > 0 ? k[0] : []), [W, k]),
-        L = i.useMemo(() => new Set(A.map((e) => e.connectionType)), [A]);
+        k = A.length > 1 ? m.O1.OR : m.O1.AND,
+        W = i.useMemo(() => (k === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [k, A]),
+        L = i.useMemo(() => new Set(W.map((e) => e.connectionType)), [W]);
     function M(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            r = [...A];
+            r = [...W];
         r.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -108,7 +108,7 @@ function w(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, h.d_)(n.id, T(r, W));
+            (0, f.d_)(n.id, T(r, k));
     }
     function G() {
         u.Z.dispatch({
@@ -116,94 +116,94 @@ function w(e) {
             onComplete: (e) => M(e),
             excludedPlatformTypes: L,
             integrations: o,
-            onCompleteApplication: (e) => M(y.Kt, e)
+            onCompleteApplication: (e) => M(O.Kt, e)
         });
     }
     let U = null;
-    if (0 === A.length)
+    if (0 === W.length)
         U = (0, r.jsx)(P, {
             handleAddVerificationClicked: G,
             locked: s
         });
-    else if (A.length > 0) {
+    else if (W.length > 0) {
         var B;
         let e = null;
-        A.length < 10 &&
+        W.length < 10 &&
             (e = (0, r.jsx)(d.zxk, {
-                className: a()(C.addVerificationButton, C.addVerificationButtonAppend),
+                className: l()(y.addVerificationButton, y.addVerificationButtonAppend),
                 size: d.zxk.Sizes.LARGE,
                 look: d.zxk.Looks.BLANK,
                 color: d.zxk.Colors.LINK,
                 onClick: G,
                 disabled: s,
                 children: (0, r.jsxs)('div', {
-                    className: C.addVerificationButtonAppendTextContainer,
+                    className: y.addVerificationButtonAppendTextContainer,
                     children: [
                         (0, r.jsx)(d.oFk, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                        O.NW.string(O.t['OSvW5+'])
+                        C.NW.string(C.t['OSvW5+'])
                     ]
                 })
             })),
             (U = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    ((B = () => (0, h.d_)(n.id, [])),
+                    ((B = () => (0, f.d_)(n.id, [])),
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)('div', {
-                                className: C.headerTitleContainer,
+                                className: y.headerTitleContainer,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: C.headerTitleTextContainer,
+                                        className: y.headerTitleTextContainer,
                                         children: (0, r.jsx)(d.X6q, {
                                             variant: 'eyebrow',
-                                            children: O.NW.string(O.t.nMir29)
+                                            children: C.NW.string(C.t.nMir29)
                                         })
                                     }),
                                     (0, r.jsx)(d.zxk, {
-                                        className: C.headerTitleButton,
+                                        className: y.headerTitleButton,
                                         size: d.zxk.Sizes.TINY,
                                         look: d.zxk.Looks.LINK,
                                         color: d.zxk.Colors.LINK,
                                         onClick: B,
                                         disabled: s,
-                                        children: O.NW.string(O.t.ntW1cX)
+                                        children: C.NW.string(C.t.ntW1cX)
                                     })
                                 ]
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: O.NW.format(O.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: C.NW.format(C.t.q5f7tL, { helpdeskArticleUrl: p.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
                     (function (e, t, n, i, s) {
-                        let a = T(i, m.O1.OR);
+                        let l = T(i, m.O1.OR);
                         return (0, r.jsx)(d.xJW, {
-                            className: C.operatorContainer,
-                            title: O.NW.string(O.t.Xs7PHR),
+                            className: y.operatorContainer,
+                            title: C.NW.string(C.t.Xs7PHR),
                             children: (0, r.jsx)(d.FXm, {
                                 options: [
                                     {
-                                        name: O.NW.string(O.t['W3iY5+']),
+                                        name: C.NW.string(C.t['W3iY5+']),
                                         value: m.O1.OR
                                     },
                                     {
-                                        name: O.NW.string(O.t.gHXS9P),
+                                        name: C.NW.string(C.t.gHXS9P),
                                         value: m.O1.AND
                                     }
                                 ],
                                 onChange: (e) => s(i, e.value),
                                 value: n,
-                                disabled: e || a.length < 2,
+                                disabled: e || l.length < 2,
                                 'aria-labelledby': S
                             })
                         });
-                    })(s, n.id, W, A, (e, t) => (0, h.d_)(n.id, T(e, t))),
+                    })(s, n.id, k, W, (e, t) => (0, f.d_)(n.id, T(e, t))),
                     (function (e, t, n, i, s) {
-                        function a(n, r) {
+                        function l(n, r) {
                             let i = [];
                             for (let t of e) i.push(E({}, t));
                             if (null == n) {
@@ -212,25 +212,25 @@ function w(e) {
                             } else -1 === r ? i.push(n) : r >= 0 && (i[r] = n);
                             t(i);
                         }
-                        let l = new Map();
+                        let a = new Map();
                         for (let t of (e.forEach((e, t) => {
                             let n = ''.concat(e.connectionType, ':').concat(e.applicationId);
-                            if (l.has(n)) {
-                                let r = l.get(n);
+                            if (a.has(n)) {
+                                let r = a.get(n);
                                 null == r ||
                                     r.push({
                                         index: t,
                                         configuration: e
                                     });
                             } else
-                                l.set(n, [
+                                a.set(n, [
                                     {
                                         index: t,
                                         configuration: e
                                     }
                                 ]);
                         }),
-                        l.values())) {
+                        a.values())) {
                             if (
                                 t.some((e) => {
                                     let { configuration: t } = e;
@@ -267,13 +267,13 @@ function w(e) {
                             });
                         }
                         return (0, r.jsx)('div', {
-                            className: C.configurationsContainer,
-                            children: Array.from(l.values()).map((e) =>
+                            className: y.configurationsContainer,
+                            children: Array.from(a.values()).map((e) =>
                                 (0, r.jsx)(
                                     j.Z,
                                     {
                                         configurationItems: e,
-                                        onConfigurationChange: a,
+                                        onConfigurationChange: l,
                                         locked: n,
                                         integrations: s
                                     },
@@ -281,43 +281,43 @@ function w(e) {
                                 )
                             )
                         });
-                    })(A, (e) => (0, h.d_)(n.id, T(e, W)), s, n.id, o),
+                    })(W, (e) => (0, f.d_)(n.id, T(e, k)), s, n.id, o),
                     e
                 ]
             }));
     }
     return (0, r.jsx)(d.yWw, {
-        className: C.scroller,
+        className: y.scroller,
         style: { scrollPaddingTop: g },
         onScroll: Z,
         children: (0, r.jsxs)('div', {
             className: I.contentWidth,
             children: [
                 (0, r.jsx)('div', {
-                    className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !R }),
+                    className: l()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !R }),
                     ref: w,
                     children: (0, r.jsx)(N.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: v.ZI.VERIFICATIONS,
-                        setSelectedSection: l
+                        selectedSection: _.ZI.VERIFICATIONS,
+                        setSelectedSection: a
                     })
                 }),
                 (null != D ? D : 0) > 0
                     ? (0, r.jsxs)('div', {
-                          className: C.warningContainer,
+                          className: y.warningContainer,
                           children: [
                               (0, r.jsx)(d.P4T, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: C.warningIcon
+                                  className: y.warningIcon
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-normal',
-                                  children: O.NW.string(O.t['2aFeeX'])
+                                  children: C.NW.string(C.t['2aFeeX'])
                               })
                           ]
                       })

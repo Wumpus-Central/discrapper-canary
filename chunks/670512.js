@@ -10,8 +10,8 @@ var r,
     d = n(585483),
     p = n(981631),
     h = n(388032),
-    _ = n(762447);
-function f(e, t, n) {
+    f = n(762447);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ class b extends (r = o.PureComponent) {
                                 })
                             )),
                             r.forEach(function (t) {
-                                f(e, t, n[t]);
+                                _(e, t, n[t]);
                             });
                     }
                     return e;
@@ -64,31 +64,31 @@ class b extends (r = o.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)('div', {
-            className: s()(_.arrowGroup, e),
+            className: s()(f.arrowGroup, e),
             children: [
                 (0, i.jsx)(a.Z.div, {
-                    className: s()(_.arrowContainer, _.horizontal),
+                    className: s()(f.arrowContainer, f.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(403756),
-                        className: _.arrowIcon
+                        className: f.arrowIcon
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(_.arrowContainer, _.diag1),
+                    className: s()(f.arrowContainer, f.diag1),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(536404),
-                        className: _.arrowIcon
+                        className: f.arrowIcon
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(_.arrowContainer, _.diag2),
+                    className: s()(f.arrowContainer, f.diag2),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(569347),
-                        className: _.arrowIcon
+                        className: f.arrowIcon
                     })
                 })
             ]
@@ -96,14 +96,14 @@ class b extends (r = o.PureComponent) {
     }
     renderContent() {
         return (0, i.jsxs)('div', {
-            className: _.tutorialMessages,
+            className: f.tutorialMessages,
             children: [
                 (0, i.jsx)('div', {
-                    className: _.searchMessage,
+                    className: f.searchMessage,
                     children: h.NW.string(h.t.Mp0IGB)
                 }),
                 (0, i.jsx)('div', {
-                    className: _.selectMessage,
+                    className: f.selectMessage,
                     children: h.NW.string(h.t['3CbpwM'])
                 })
             ]
@@ -114,11 +114,11 @@ class b extends (r = o.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)('div', {
             ref: this.rootRef,
-            className: s()(_.tutorial, {
-                [_.shown]: t,
-                [_.hasQuery]: e
+            className: s()(f.tutorial, {
+                [f.shown]: t,
+                [f.hasQuery]: e
             }),
-            children: [this.renderContent(), this.renderArrowGroup(_.__invalid_left), this.renderArrowGroup(_.right)]
+            children: [this.renderContent(), this.renderArrowGroup(f.__invalid_left), this.renderArrowGroup(f.right)]
         });
     }
     getStyle() {
@@ -140,13 +140,13 @@ class b extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            _(this, 'state', {
                 shown: !1,
                 translateY: new a.Z.Value(0)
             }),
-            f(this, 'rootRef', o.createRef()),
-            f(this, 'focusTimeout', new c.V7()),
-            f(this, 'handleResultFocus', (e) => {
+            _(this, 'rootRef', o.createRef()),
+            _(this, 'focusTimeout', new c.V7()),
+            _(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
@@ -159,5 +159,5 @@ class b extends (r = o.PureComponent) {
             });
     }
 }
-f(b, 'contextType', u.Sfi);
+_(b, 'contextType', u.Sfi);
 let g = b;

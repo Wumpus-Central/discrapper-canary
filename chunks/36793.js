@@ -1,7 +1,7 @@
 function r(e) {
     let { image: t, cropDimensions: n, cropOriginCoordinates: r, maxDimensions: i, imageRotation: s = 0 } = e,
-        a = t.naturalWidth / t.width,
-        l = (function (e, t) {
+        l = t.naturalWidth / t.width,
+        a = (function (e, t) {
             let { x: n, y: r } = e;
             switch (t) {
                 case 90:
@@ -27,16 +27,16 @@ function r(e) {
             }
         })(r, s),
         o = s % 180 != 0,
-        c = n.width * a,
-        d = n.height * a,
+        c = n.width * l,
+        d = n.height * l,
         u = Math.min(c, i.width),
         m = Math.min(d, i.height),
         g = (o ? n.height : n.width) / 2,
         p = (o ? n.width : n.height) / 2,
-        f = (t.width / 2 - g - l.x) * a,
-        h = (t.height / 2 - p - l.y) * a,
-        b = o ? d : c,
-        x = o ? c : d,
+        h = (t.width / 2 - g - a.x) * l,
+        f = (t.height / 2 - p - a.y) * l,
+        x = o ? d : c,
+        b = o ? c : d,
         { x: j, y: N } = (function (e, t, n) {
             switch (n) {
                 case 0:
@@ -62,10 +62,10 @@ function r(e) {
             }
         })(c, d, s);
     return {
-        sourceX: f,
-        sourceY: h,
-        sourceWidth: b,
-        sourceHeight: x,
+        sourceX: h,
+        sourceY: f,
+        sourceWidth: x,
+        sourceHeight: b,
         destinationX: j,
         destinationY: N,
         destinationWidth: o ? m : u,
@@ -75,9 +75,9 @@ function r(e) {
     };
 }
 function i(e) {
-    let { image: t, cropDimensions: n, cropOriginCoordinates: i, maxDimensions: s, imageRotation: a = 0 } = e,
+    let { image: t, cropDimensions: n, cropOriginCoordinates: i, maxDimensions: s, imageRotation: l = 0 } = e,
         {
-            sourceX: l,
+            sourceX: a,
             sourceY: o,
             sourceWidth: c,
             sourceHeight: d,
@@ -85,28 +85,28 @@ function i(e) {
             destinationY: m,
             destinationWidth: g,
             destinationHeight: p,
-            canvasWidth: f,
-            canvasHeight: h
+            canvasWidth: h,
+            canvasHeight: f
         } = r({
             image: t,
             cropDimensions: n,
             cropOriginCoordinates: i,
             maxDimensions: s,
-            imageRotation: a
+            imageRotation: l
         }),
-        b = document.createElement('canvas');
-    (b.width = f), (b.height = h);
-    let x = b.getContext('2d');
-    return null != x && (x.rotate((a * Math.PI) / 180), x.drawImage(t, l, o, c, d, u, m, g, p)), b.toDataURL('image/png');
+        x = document.createElement('canvas');
+    (x.width = h), (x.height = f);
+    let b = x.getContext('2d');
+    return null != b && (b.rotate((l * Math.PI) / 180), b.drawImage(t, a, o, c, d, u, m, g, p)), x.toDataURL('image/png');
 }
 function s(e, t, n) {
     let r = e.naturalWidth / e.naturalHeight,
         s = t,
-        a = n;
-    e.naturalWidth > e.naturalHeight ? (s /= r) : (a *= r);
-    let l = {
+        l = n;
+    e.naturalWidth > e.naturalHeight ? (s /= r) : (l *= r);
+    let a = {
         height: s,
-        width: a
+        width: l
     };
     return i({
         image: e,
@@ -118,7 +118,7 @@ function s(e, t, n) {
             x: 0,
             y: 0
         },
-        maxDimensions: l
+        maxDimensions: a
     });
 }
 n.d(t, {

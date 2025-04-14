@@ -77,7 +77,7 @@ function d(e) {
             }
             handleGuildContextMenu(e, t) {
                 (0, a.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('49286'), n.e('32652'), n.e('60696'), n.e('58227'), n.e('54408'), n.e('33472'), n.e('69760'), n.e('33213'), n.e('33702')]).then(n.bind(n, 545135));
+                    let { default: e } = await Promise.all([n.e('7654'), n.e('44156'), n.e('53967'), n.e('49286'), n.e('32652'), n.e('88256'), n.e('58227'), n.e('71018'), n.e('69760'), n.e('33213'), n.e('26711')]).then(n.bind(n, 545135));
                     return (n) => (0, r.jsx)(e, u(c({}, n), { guild: t }));
                 });
             }

@@ -10,17 +10,17 @@ var l = n(200651),
     u = n(903518),
     m = n(484459),
     N = n(430824),
-    h = n(594174),
-    I = n(5192),
+    I = n(594174),
+    h = n(5192),
     g = n(51144),
     f = n(82778);
 function p(e) {
     let { guildId: t, welcomeMessage: n, className: i } = e,
         p = (0, a.e7)([N.Z], () => N.Z.getGuild(t)),
         E = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        S = (0, a.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.authorIds[0])),
-        x = r.useMemo(() => (null != p && null != S && (0, u.Y)(p, S) ? S : null), [p, S]),
-        T = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        S = (0, a.e7)([I.default], () => I.default.getUser(null == n ? void 0 : n.authorIds[0])),
+        T = r.useMemo(() => (null != p && null != S && (0, u.Y)(p, S) ? S : null), [p, S]),
+        x = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         O = r.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.authorIds) ? e : [];
@@ -29,28 +29,28 @@ function p(e) {
         c.Z.requestMembersById(t, O);
     }, [t, O]),
         r.useEffect(() => {
-            null != x && (0, m.Z)(x.id, x.getAvatarURL(t, 48), { guildId: t });
-        }, [x, t]);
-    let _ = I.ZP.useName(t, null, x),
-        j = (0, g._T)(T);
-    if (null == x || null == T || null == n) return null;
-    let v = null != p && p.ownerId === x.id;
+            null != T && (0, m.Z)(T.id, T.getAvatarURL(t, 48), { guildId: t });
+        }, [T, t]);
+    let _ = h.ZP.useName(t, null, T),
+        j = (0, g._T)(x);
+    if (null == T || null == x || null == n) return null;
+    let b = null != p && p.ownerId === T.id;
     return (0, l.jsxs)(o.Zbd, {
         className: s()(f.welcomeMessageContainer, i),
         children: [
             (0, l.jsx)('div', { className: f.avatarBackground }),
             E
                 ? (0, l.jsx)(o.qEK, {
-                      src: x.getAvatarURL(t, 48),
+                      src: T.getAvatarURL(t, 48),
                       size: o.EFr.SIZE_48,
                       className: f.avatar,
-                      'aria-label': x.username
+                      'aria-label': T.username
                   })
                 : (0, l.jsx)(o.Xo$, {
-                      src: x.getAvatarURL(t, 48),
+                      src: T.getAvatarURL(t, 48),
                       size: o.EFr.SIZE_48,
                       className: f.avatar,
-                      'aria-label': x.username
+                      'aria-label': T.username
                   }),
             (0, l.jsx)('div', { className: f.avatarBorder }),
             (0, l.jsxs)('div', {
@@ -64,7 +64,7 @@ function p(e) {
                                 color: 'header-primary',
                                 children: _
                             }),
-                            v
+                            b
                                 ? (0, l.jsx)(o.CEn, {
                                       size: 'xxs',
                                       color: 'currentColor',
@@ -97,7 +97,7 @@ function p(e) {
                                     )
                                 )
                             });
-                        })(null == n ? void 0 : n.message, null != j ? j : T.username)
+                        })(null == n ? void 0 : n.message, null != j ? j : x.username)
                     })
                 ]
             })

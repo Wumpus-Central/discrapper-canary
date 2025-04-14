@@ -1,8 +1,8 @@
 n.d(t, {
-    Dr: () => _,
+    Dr: () => y,
     Rq: () => g,
     So: () => b,
-    Su: () => y,
+    Su: () => _,
     YZ: () => h,
     _Q: () => C,
     bF: () => f,
@@ -124,7 +124,7 @@ let g = i()(async (e, t) => {
             channelId: e
         });
     },
-    _ = async function (e, t, n) {
+    y = async function (e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u.AR.UNCATEGORIZED,
             i = await o.tn.patch({
                 url: d.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
@@ -140,7 +140,7 @@ let g = i()(async (e, t) => {
             entry: i.body
         });
     },
-    y = (e, t) => {
+    _ = (e, t) => {
         a.Z.dispatch({
             type: 'GUILD_DIRECTORY_CATEGORY_SELECT',
             channelId: e,

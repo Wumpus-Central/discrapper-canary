@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(566620),
     g = n(588580),
     b = n(119315),
-    _ = n(367907),
-    y = n(213609),
+    y = n(367907),
+    _ = n(213609),
     C = n(499254),
     x = n(541099),
     v = n(827498),
@@ -56,7 +56,7 @@ let U = i.forwardRef(function (e, t) {
     );
     let F = (0, g.a)(h.eR.TEXT_LAUNCHER),
         H = i.useCallback(() => {
-            (0, _.yw)(R.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED, {
+            (0, y.yw)(R.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED, {
                 source: v._b.TEXT,
                 badge_type: F ? I.valueOf() : null
             }),
@@ -69,7 +69,7 @@ let U = i.forwardRef(function (e, t) {
                 F &&
                 (W(),
                 B(),
-                (0, y.h)({
+                (0, _.h)({
                     type: a.ImpressionTypes.VIEW,
                     name: a.ImpressionNames.APP_LAUNCHER_BADGE,
                     properties: {

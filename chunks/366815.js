@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    i = n(536442),
+    i = n(481060),
+    a = n(536442),
     s = n(142497),
     o = n(388032),
     c = n(482945),
@@ -11,25 +11,25 @@ var l = n(442837),
 let d = () =>
     (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: c.inlineText,
                 children: o.NW.string(o.t.GcZzp6)
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: c.inlineText,
                 children: o.NW.string(o.t['/NEGrK'])
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: c.inlineText,
                 children: o.NW.string(o.t.eUbuHB)
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: c.inlineText,
@@ -39,7 +39,7 @@ let d = () =>
     });
 function m(e) {
     let { onClick: t } = e;
-    return (0, l.e7)([i.qc], () => !i.qc.hasHotspot(i.v6.STAGE_CHANNEL_UPSELL))
+    return (0, l.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
         ? null
         : (0, r.jsxs)('div', {
               className: c.container,
@@ -50,17 +50,17 @@ function m(e) {
                           (0, r.jsxs)('div', {
                               className: c.textContainer,
                               children: [
-                                  (0, r.jsx)(a.X6q, {
+                                  (0, r.jsx)(i.X6q, {
                                       variant: 'heading-md/semibold',
                                       children: o.NW.string(o.t.Sx8Ezs)
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
                                       className: c.descriptionText,
                                       children: o.NW.string(o.t.JUzPho)
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
                                       children: o.NW.format(o.t.Vh7rPz, { suggestionsHook: d })
@@ -79,20 +79,20 @@ function m(e) {
                   (0, r.jsxs)('div', {
                       className: c.footer,
                       children: [
-                          (0, r.jsx)(a.zxk, {
+                          (0, r.jsx)(i.zxk, {
                               onClick: t,
-                              color: a.zxk.Colors.PRIMARY,
-                              size: a.zxk.Sizes.SMALL,
+                              color: i.zxk.Colors.PRIMARY,
+                              size: i.zxk.Sizes.SMALL,
                               className: c.button,
                               children: o.NW.string(o.t['X/3SyM'])
                           }),
-                          (0, r.jsx)(a.zxk, {
+                          (0, r.jsx)(i.zxk, {
                               onClick: () => {
-                                  s.Kw(i.v6.STAGE_CHANNEL_UPSELL);
+                                  s.Kw(a.v6.STAGE_CHANNEL_UPSELL);
                               },
-                              color: a.zxk.Colors.TRANSPARENT,
-                              size: a.zxk.Sizes.SMALL,
-                              look: a.iLD.LINK,
+                              color: i.zxk.Colors.TRANSPARENT,
+                              size: i.zxk.Sizes.SMALL,
+                              look: i.iLD.LINK,
                               children: o.NW.string(o.t['5E9SBw'])
                           })
                       ]

@@ -2,8 +2,8 @@ n.d(t, { k: () => m });
 var r = n(200651),
     i = n(192379),
     s = n(772848),
-    a = n(442837),
-    l = n(339085),
+    l = n(442837),
+    a = n(339085),
     o = n(231053),
     c = n(183023),
     d = n(650774),
@@ -11,7 +11,7 @@ var r = n(200651),
 function m(e) {
     let { guild: t, discoverableGuild: n } = e,
         m = null == t ? void 0 : t.id,
-        { memberCount: g, onlineCount: p } = (0, a.cj)(
+        { memberCount: g, onlineCount: p } = (0, l.cj)(
             [d.Z],
             () => {
                 var e, t;
@@ -22,12 +22,12 @@ function m(e) {
             },
             [m]
         ),
-        f = i.useRef((0, s.Z)()),
-        h = i.useMemo(() => {
+        h = i.useRef((0, s.Z)()),
+        f = i.useMemo(() => {
             var e, r;
             if (null != n) return o.JO.createFromDiscoverableGuild(n);
             if (null == t) return null;
-            let i = l.ZP.getGuildEmoji(t.id);
+            let i = a.ZP.getGuildEmoji(t.id);
             return o.JO.createFromDiscoverableGuild(
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -77,9 +77,9 @@ function m(e) {
                 e)
             );
         }, [n, t, g, p]),
-        b = i.useMemo(() => {
+        x = i.useMemo(() => {
             var e;
-            let t = null == h || null == (e = h.emojis) ? void 0 : e[0];
+            let t = null == f || null == (e = f.emojis) ? void 0 : e[0];
             return null != t
                 ? {
                       name: t.require_colons ? ':'.concat(t.name, ':') : t.name,
@@ -88,15 +88,15 @@ function m(e) {
                       jumboable: !0
                   }
                 : {};
-        }, [null == h ? void 0 : h.emojis]);
-    return null != h && h.isDiscoverable()
+        }, [null == f ? void 0 : f.emojis]);
+    return null != f && f.isDiscoverable()
         ? (0, r.jsx)(c.UA, {
               sourceType: o.w6.GUILD,
               expressionSourceApplication: null,
-              expressionSourceGuild: h,
-              node: b,
+              expressionSourceGuild: f,
+              node: x,
               closePopout: u.dG,
-              nonce: f.current,
+              nonce: h.current,
               demoMode: !0
           })
         : null;

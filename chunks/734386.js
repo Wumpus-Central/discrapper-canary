@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(933557),
     g = n(605436),
     b = n(185413),
-    _ = n(42311),
-    y = n(626786),
+    y = n(42311),
+    _ = n(626786),
     C = n(434404),
     x = n(454585),
     v = n(430824),
@@ -172,7 +172,7 @@ function w(e) {
                             s = (null == (i = e.tags) ? void 0 : i.guild_connections) !== void 0;
                         return W
                             ? (0, r.jsx)(
-                                  _.Z,
+                                  y.Z,
                                   {
                                       className: o()(A.role, { [A.last]: n === L.length - 1 }),
                                       roleName: e.name,
@@ -186,7 +186,7 @@ function w(e) {
                                   e.id
                               )
                             : (0, r.jsx)(
-                                  y.Z,
+                                  _.Z,
                                   {
                                       className: o()(A.role, { [A.last]: n === L.length - 1 }),
                                       roleName: e.name,

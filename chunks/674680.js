@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(780384),
@@ -39,30 +39,30 @@ let h = {
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330
     },
-    _ = {
+    f = {
         trophy: u.Il.PRIMARY_400,
         locked: u.Il.PRIMARY_400,
         unlocked: u.Il.GREEN_330
     };
-function f(e) {
+function _(e) {
     var t;
-    let { achievementId: n, unlocked: u, size: f = o.EFr.SIZE_40 } = e,
+    let { achievementId: n, unlocked: u, size: _ = o.EFr.SIZE_40 } = e,
         m = (0, l.ZP)(),
         b = (0, c.oX)(n);
     if (null == b) return null;
-    let g = (0, o.UCu)(f),
+    let g = (0, o.UCu)(_),
         { name: E, rarity: O } = b,
         { color: y } = (0, c.F7)(O),
-        C = (0, i.wj)(m) ? h : _,
+        C = (0, i.wj)(m) ? h : f,
         S = (g.size - g.offset - 2 * g.stroke) * 0.8,
-        N = g.size - g.stroke,
-        v = {
+        v = g.size - g.stroke,
+        N = {
             width: 0.4 * S,
             height: 0.4 * S
         },
         T = {
-            width: v.width + 1,
-            height: v.height + 1,
+            width: N.width + 1,
+            height: N.height + 1,
             right: g.stroke + 1,
             bottom: g.stroke + 1,
             padding: 0
@@ -70,8 +70,8 @@ function f(e) {
     return (0, r.jsxs)('div', {
         className: d.container,
         style: {
-            width: N,
-            height: N,
+            width: v,
+            height: v,
             padding: g.stroke
         },
         'aria-label': ''.concat(null != (t = E()) ? t : ''),
@@ -96,7 +96,7 @@ function f(e) {
                                 size: 'custom',
                                 color: (0, s.Lq)(C.locked)
                             },
-                            v
+                            N
                         )
                     )
                 }),
@@ -105,9 +105,9 @@ function f(e) {
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
                     style: T,
-                    children: (0, r.jsx)(a.Z, p({ className: d.confettiIcon }, v))
+                    children: (0, r.jsx)(a.Z, p({ className: d.confettiIcon }, N))
                 })
         ]
     });
 }
-f.Sizes = o.EFr;
+_.Sizes = o.EFr;

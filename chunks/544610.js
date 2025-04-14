@@ -14,8 +14,8 @@ var i,
     m = n(624138),
     g = n(51144),
     b = n(592125),
-    _ = n(480294),
-    y = n(580005),
+    y = n(480294),
+    _ = n(580005),
     C = n(699516),
     x = n(594174),
     v = n(981631);
@@ -71,17 +71,17 @@ function A() {
                 },
                 n,
                 (function () {
-                    let e = y.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
+                    let e = _.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
                         t = Math.max(
                             ...e.map((e) => {
                                 let { id: t } = e;
-                                return y.Z.getScoreWithoutFetchingLatest(t);
+                                return _.Z.getScoreWithoutFetchingLatest(t);
                             })
                         ),
                         n = {};
                     return (
                         e.forEach((e) => {
-                            let r = y.Z.getScoreWithoutFetchingLatest(e.id),
+                            let r = _.Z.getScoreWithoutFetchingLatest(e.id),
                                 i = e.getRecipientId(),
                                 l = 0.2 * !!C.Z.isFriend(i),
                                 o = 0.1 * (null != b.Z.getDMFromUserId(i));
@@ -100,7 +100,7 @@ function w() {
     return (I = s().some(C.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
 }
 function R(e, t) {
-    if (_.Z.hasConsented(v.pjP.PERSONALIZATION)) {
+    if (y.Z.hasConsented(v.pjP.PERSONALIZATION)) {
         var n, r, i, l;
         let o = null != (i = null == (n = h.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability) ? i : 0,
             a = null != (l = null == (r = h.Z.getUserAffinity(t.user.id)) ? void 0 : r.communicationProbability) ? l : 0;
@@ -138,7 +138,7 @@ function W() {
 }
 class U extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(x.default, b.Z, C.Z, p.Z, _.Z), this.syncWith([x.default, b.Z], A), this.syncWith([C.Z], w);
+        this.waitFor(x.default, b.Z, C.Z, p.Z, y.Z), this.syncWith([x.default, b.Z], A), this.syncWith([C.Z], w);
     }
     getResults() {
         return N;

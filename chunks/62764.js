@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(48929),
     g = n(333535),
     b = n(566006),
-    _ = n(443877),
-    y = n(60174),
+    y = n(443877),
+    _ = n(60174),
     C = n(216337),
     x = n(920888),
     v = n(287151),
@@ -82,7 +82,7 @@ function M(e) {
         V = (0, s.e7)([E.Z], () => E.Z.getChannel(t), [t]),
         { firstMessage: z } = (0, P.cl)(V),
         Y = (0, s.e7)([j.Z], () => j.Z.hasJoined(t)),
-        { disableReactionUpdates: q, disableReactionCreates: K, isLurking: X, isGuest: Q, isPendingMember: J } = (0, _.Z)(V),
+        { disableReactionUpdates: q, disableReactionCreates: K, isLurking: X, isGuest: Q, isPendingMember: J } = (0, y.Z)(V),
         $ = (0, s.e7)([E.Z], () => E.Z.getChannel(M)),
         ee = (0, I.Bs)($),
         et = (0, s.e7)([m.Z], () => m.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -183,7 +183,7 @@ function M(e) {
                                 forceHideReactionCreates: !0
                             }),
                             !K &&
-                                (0, r.jsx)(y.X, {
+                                (0, r.jsx)(_.X, {
                                     type: b.O.NORMAL,
                                     message: z,
                                     channel: V,

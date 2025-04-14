@@ -2,8 +2,8 @@ n.d(t, { C: () => g });
 var r = n(200651),
     i = n(192379),
     s = n(442837),
-    a = n(852860),
-    l = n(434404),
+    l = n(852860),
+    a = n(434404),
     o = n(999382),
     c = n(621319),
     d = n(44550),
@@ -19,25 +19,25 @@ function g() {
             hasChanges: d.Z.hasChanges(),
             errorDetails: d.Z.errorDetails
         })),
-        { guild: g, submitting: p, errors: f, hasChanges: h } = (0, s.cj)([o.Z], () => o.Z.getProps()),
-        b = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(f)), [f, n]),
-        x = i.useCallback(async () => {
-            if (null != g && (t && (await (0, c.en)(g.id, e, { throwErr: !0 })), h)) {
+        { guild: g, submitting: p, errors: h, hasChanges: f } = (0, s.cj)([o.Z], () => o.Z.getProps()),
+        x = i.useMemo(() => (null != n ? (0, u.i)(null == n ? void 0 : n.code) : (0, m.LG)(h)), [h, n]),
+        b = i.useCallback(async () => {
+            if (null != g && (t && (await (0, c.en)(g.id, e, { throwErr: !0 })), f)) {
                 let e = {
                     premiumProgressBarEnabled: g.premiumProgressBarEnabled,
                     banner: g.banner,
                     splash: g.splash
                 };
-                await l.Z.saveGuild(g.id, e, { throwErr: !0 });
+                await a.Z.saveGuild(g.id, e, { throwErr: !0 });
             }
-        }, [g, h, t, e]),
+        }, [g, f, t, e]),
         j = i.useCallback(() => {
-            null != g && (l.Z.init(g.id), (0, c.H7)());
+            null != g && (a.Z.init(g.id), (0, c.H7)());
         }, [g]);
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(l.Z, {
         submitting: p,
-        errorMessage: b,
-        onSave: x,
+        errorMessage: x,
+        onSave: b,
         onReset: j
     });
 }

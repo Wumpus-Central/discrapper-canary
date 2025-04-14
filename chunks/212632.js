@@ -24,8 +24,8 @@ let E = 0,
                 return u.NW.string(u.t.AlY4ZW);
         }
     },
-    p = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
-function _(e) {
+    _ = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
+function p(e) {
     let { position: t, onChange: n } = e,
         [i] = r.useState(() => f()),
         E = t === s._vf.DISABLED ? u.NW.string(u.t.R6LxVV) : u.NW.formatToPlainString(u.t.XXHDMz, { position: C(t) });
@@ -36,7 +36,7 @@ function _(e) {
                 offset: -2,
                 children: (0, l.jsx)('div', {
                     className: o()(c.wrapper, { [c.disabledSelected]: t === s._vf.DISABLED }),
-                    children: p.map((e) =>
+                    children: _.map((e) =>
                         (0, l.jsxs)(
                             'label',
                             {
@@ -79,5 +79,5 @@ function _(e) {
         ]
     });
 }
-_.Positions = s._vf;
-let h = _;
+p.Positions = s._vf;
+let h = p;

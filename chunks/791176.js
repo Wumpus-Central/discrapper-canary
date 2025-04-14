@@ -14,18 +14,18 @@ var r = n(200651),
     m = n(50493),
     g = n(981631),
     b = n(388032),
-    _ = n(514983);
-function y(e) {
+    y = n(514983);
+function _(e) {
     var t, n;
     let { permission: i, roleIds: l, guild: p, specMap: h } = e,
         m = g.Plq[i],
-        y = null != (n = null == (t = h[m.toString()]) ? void 0 : t.title) ? n : (0, u.wt)(m),
+        _ = null != (n = null == (t = h[m.toString()]) ? void 0 : t.title) ? n : (0, u.wt)(m),
         C = f._o.has(m),
         x = (0, a.e7)([d.Z], () => d.Z.getRoles(p.id));
     return (0, r.jsx)(s.ua7, {
         'aria-label': b.NW.string(b.t['0g8Xd3']),
-        tooltipClassName: _.roleTooltipContainer,
-        tooltipContentClassName: _.roleTooltipContentContainer,
+        tooltipClassName: y.roleTooltipContainer,
+        tooltipContentClassName: y.roleTooltipContentContainer,
         allowOverflow: !0,
         text: (0, r.jsxs)(r.Fragment, {
             children: [
@@ -37,7 +37,7 @@ function y(e) {
                     (0, r.jsx)(
                         'div',
                         {
-                            className: _.roleTooltipItem,
+                            className: y.roleTooltipItem,
                             children: (0, r.jsx)(c.Z, {
                                 role: x[e],
                                 guildId: p.id
@@ -51,7 +51,7 @@ function y(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, r.jsxs)(s.P3F, {
-                className: o()(_.permissionChiplet, { [_.elevatedPermission]: C }),
+                className: o()(y.permissionChiplet, { [y.elevatedPermission]: C }),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 children: [
@@ -65,7 +65,7 @@ function y(e) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'interactive-normal',
-                        children: y
+                        children: _
                     })
                 ]
             });
@@ -85,7 +85,7 @@ let C = i.memo(function (e) {
             if (null == l || null == v) return null;
             if (0 === C)
                 return (0, r.jsx)('div', {
-                    className: o()(_.permissionChiplet, _.noModPerms),
+                    className: o()(y.permissionChiplet, y.noModPerms),
                     children: (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-positive',
@@ -104,7 +104,7 @@ let C = i.memo(function (e) {
                             null != o &&
                                 e.push(
                                     (0, r.jsx)(
-                                        y,
+                                        _,
                                         {
                                             permission: i,
                                             roleIds: o,
@@ -123,7 +123,7 @@ let C = i.memo(function (e) {
         ? null
         : (0, r.jsx)(s.xJW, {
               title: (0, r.jsxs)('div', {
-                  className: _.headerContainer,
+                  className: y.headerContainer,
                   children: [
                       (0, r.jsx)(s.Text, {
                           variant: 'eyebrow',
@@ -131,7 +131,7 @@ let C = i.memo(function (e) {
                           children: b.NW.string(b.t.ZCq2nJ)
                       }),
                       (0, r.jsxs)(s.P3F, {
-                          className: _.viewAllPermissions,
+                          className: y.viewAllPermissions,
                           onClick: () => n(m.k.PERMISSIONS),
                           children: [
                               (0, r.jsx)(s.Text, {
@@ -151,7 +151,7 @@ let C = i.memo(function (e) {
               children: (0, r.jsx)(h.WM, {
                   children: (0, r.jsx)(h._2, {
                       description: (0, r.jsx)('div', {
-                          className: _.permissionsContainer,
+                          className: y.permissionsContainer,
                           children: O
                       })
                   })

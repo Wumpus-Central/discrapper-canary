@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(592125),
     g = n(703558),
     b = n(430824),
-    _ = n(228392),
-    y = n(388032),
+    y = n(228392),
+    _ = n(388032),
     C = n(43200);
 function x(e) {
     let { channelId: t } = e,
@@ -26,7 +26,7 @@ function x(e) {
         E = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            null == x || E.current || ((E.current = !0), (0, _.lN)(x));
+            null == x || E.current || ((E.current = !0), (0, y.lN)(x));
         }, [x]),
         null == x || null == j)
     )
@@ -40,7 +40,7 @@ function x(e) {
             }),
             (0, r.jsx)(d.ZP, {
                 toolbar: N,
-                'aria-label': y.NW.string(y.t.Pwe8tL),
+                'aria-label': _.NW.string(_.t.Pwe8tL),
                 children: (0, p.ud)({
                     channel: x,
                     parentChannel: v,

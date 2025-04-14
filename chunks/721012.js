@@ -63,8 +63,8 @@ function u(e) {
                 return [(n + 1) % t.length, 'right'];
             });
         }, [d, t.length]),
-        h = t[n],
-        I = r.useCallback(
+        I = t[n],
+        h = r.useCallback(
             (e, t, n, r) =>
                 (0, l.jsx)(
                     m,
@@ -84,8 +84,8 @@ function u(e) {
             (0, l.jsx)('div', {
                 className: c.animatedContainer,
                 children: (0, l.jsx)(s.W3x, {
-                    items: [h],
-                    renderItem: I,
+                    items: [I],
+                    renderItem: h,
                     getItemKey: (e) => e.adminTitle
                 })
             }),

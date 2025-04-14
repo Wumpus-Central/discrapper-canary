@@ -14,8 +14,8 @@ var r,
     m = n(700785),
     g = n(709054),
     b = n(51144),
-    _ = n(981631);
-function y(e, t, n) {
+    y = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -130,16 +130,16 @@ class x {
                 null != l &&
                 null != t &&
                 m.BT({
-                    permission: _.Plq.VIEW_CHANNEL,
+                    permission: y.Plq.VIEW_CHANNEL,
                     user: l,
                     context: t
                 }),
-            u = a !== _.Skl.OFFLINE && a !== _.Skl.INVISIBLE && a !== _.Skl.UNKNOWN ? (null != (n = null == i ? void 0 : i.hoistRoleId) ? n : 'online') : 'offline',
+            u = a !== y.Skl.OFFLINE && a !== y.Skl.INVISIBLE && a !== y.Skl.UNKNOWN ? (null != (n = null == i ? void 0 : i.hoistRoleId) ? n : 'online') : 'offline',
             f = null != (r = null == i ? void 0 : i.nick) ? r : b.ZP.getName(l);
         return [u, null == f ? void 0 : f.toLowerCase(), s];
     }
     constructor(e, t, n) {
-        y(this, 'guildId', void 0), y(this, 'parentId', void 0), y(this, 'threadId', void 0), y(this, 'version', void 0), y(this, 'sections', void 0), y(this, 'allUserIds', void 0), (this.guildId = e), (this.parentId = t), (this.threadId = n), (this.version = 0), (this.sections = {}), (this.allUserIds = new Set());
+        _(this, 'guildId', void 0), _(this, 'parentId', void 0), _(this, 'threadId', void 0), _(this, 'version', void 0), _(this, 'sections', void 0), _(this, 'allUserIds', void 0), (this.guildId = e), (this.parentId = t), (this.threadId = n), (this.version = 0), (this.sections = {}), (this.allUserIds = new Set());
     }
 }
 function v(e) {
@@ -187,7 +187,7 @@ class E extends (r = o.ZP.Store) {
         return null != (i = null == o ? void 0 : o.canViewChannel) && i;
     }
 }
-y(E, 'displayName', 'ThreadMemberListStore');
+_(E, 'displayName', 'ThreadMemberListStore');
 let N = new E(a.Z, {
     CONNECTION_OPEN: function () {
         C = {};

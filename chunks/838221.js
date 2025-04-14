@@ -5,7 +5,7 @@ var i = n(325767);
 function s(e) {
     var t,
         n,
-        { width: s = 17, height: a = 16, color: l = 'currentColor', foreground: o } = e,
+        { width: s = 17, height: l = 16, color: a = 'currentColor', foreground: o } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -55,7 +55,7 @@ function s(e) {
         (n = n =
             {
                 width: s,
-                height: a,
+                height: l,
                 viewBox: '0 0 17 16',
                 xmlns: 'http://www.w3.org/2000/svg',
                 children: [
@@ -65,7 +65,7 @@ function s(e) {
                         width: '16',
                         height: '2',
                         rx: '1',
-                        fill: l
+                        fill: a
                     }),
                     (0, r.jsx)('rect', {
                         className: o,
@@ -73,7 +73,7 @@ function s(e) {
                         width: '8',
                         height: '2',
                         rx: '1',
-                        fill: l
+                        fill: a
                     })
                 ]
             }),

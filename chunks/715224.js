@@ -1,9 +1,9 @@
-n.d(t, { W: () => f });
+n.d(t, { W: () => h });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(890477),
-    l = n(688465),
+    l = n(890477),
+    a = n(688465),
     o = n(35125),
     c = n(630388),
     d = n(434404),
@@ -11,10 +11,10 @@ var r = n(200651),
     m = n(388032),
     g = n(387136);
 let p = 'NO_SYSTEM_CHANNEL';
-function f(e) {
+function h(e) {
     var t;
-    let { guild: n, canManageGuild: f, switchClassName: h } = e,
-        { enableDeadchat: b } = a.Z.useExperiment(
+    let { guild: n, canManageGuild: h, switchClassName: f } = e,
+        { enableDeadchat: x } = l.Z.useExperiment(
             {
                 guildId: n.id,
                 location: 'guild_settings'
@@ -24,20 +24,20 @@ function f(e) {
                 autoTrackExposure: !0
             }
         ),
-        x = i.useCallback(
+        b = i.useCallback(
             (e, t) => {
                 let r = (0, c.mB)(n.systemChannelFlags, e, t);
                 d.Z.updateGuild({ systemChannelFlags: r });
             },
             [n.systemChannelFlags]
         ),
-        j = i.useCallback((e) => x(u.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e), [x]),
-        N = i.useCallback((e) => x(u.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e), [x]),
-        v = i.useCallback((e) => x(u.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e), [x]),
-        _ = i.useCallback((e) => x(u.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e), [x]),
-        y = i.useCallback((e) => x(u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e), [x]),
-        O = i.useCallback((e) => x(u.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT, !e), [x]),
-        C = i.useCallback((e) => x(u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !e), [x]),
+        j = i.useCallback((e) => b(u.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e), [b]),
+        N = i.useCallback((e) => b(u.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e), [b]),
+        _ = i.useCallback((e) => b(u.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e), [b]),
+        v = i.useCallback((e) => b(u.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e), [b]),
+        O = i.useCallback((e) => b(u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e), [b]),
+        C = i.useCallback((e) => b(u.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT, !e), [b]),
+        y = i.useCallback((e) => b(u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES, !e), [b]),
         I = null != (t = n.systemChannelId) ? t : p,
         E = (0, o.eI)(n),
         S = E || (0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
@@ -45,65 +45,65 @@ function f(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.j7V, {
-                className: h,
+                className: f,
                 onChange: j,
                 value: !(0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
                 hideBorder: !0,
-                disabled: !f || I === p,
+                disabled: !h || I === p,
                 children: m.NW.string(m.t['+f0bXV'])
             }),
             (0, r.jsx)(s.j7V, {
-                className: h,
-                onChange: _,
+                className: f,
+                onChange: v,
                 value: !(0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
                 hideBorder: !0,
-                disabled: !f || I === p,
+                disabled: !h || I === p,
                 children: m.NW.string(m.t['72k7jY'])
             }),
             (0, r.jsx)(s.j7V, {
-                className: h,
+                className: f,
                 onChange: N,
                 value: !(0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
                 hideBorder: !0,
-                disabled: !f || I === p,
+                disabled: !h || I === p,
                 children: m.NW.string(m.t['2L8NCA'])
             }),
             (0, r.jsx)(s.j7V, {
-                className: h,
-                onChange: v,
+                className: f,
+                onChange: _,
                 value: !(0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                 hideBorder: !0,
-                disabled: !f || I === p,
+                disabled: !h || I === p,
                 children: m.NW.string(m.t['NvnW+f'])
             }),
             S &&
                 (0, r.jsx)(s.j7V, {
-                    className: h,
-                    onChange: y,
+                    className: f,
+                    onChange: O,
                     value: !(0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
                     hideBorder: !0,
-                    disabled: !f || I === p,
+                    disabled: !h || I === p,
                     children: m.NW.string(m.t['54n19f'])
                 }),
             T &&
                 (0, r.jsx)(s.j7V, {
-                    className: h,
-                    onChange: C,
+                    className: f,
+                    onChange: y,
                     value: !(0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
                     hideBorder: !0,
-                    disabled: !f || I === p,
+                    disabled: !h || I === p,
                     children: m.NW.string(m.t.IhF5d3)
                 }),
-            b &&
+            x &&
                 (0, r.jsx)(s.j7V, {
-                    className: h,
-                    onChange: O,
+                    className: f,
+                    onChange: C,
                     value: !(0, c.yE)(n.systemChannelFlags, u.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
                     hideBorder: !0,
-                    disabled: !f || I === p,
+                    disabled: !h || I === p,
                     children: (0, r.jsxs)('div', {
                         className: g.flexRow,
-                        children: [m.NW.string(m.t['3yOX19']), (0, r.jsx)(l.Z, {})]
+                        children: [m.NW.string(m.t['3yOX19']), (0, r.jsx)(a.Z, {})]
                     })
                 })
         ]

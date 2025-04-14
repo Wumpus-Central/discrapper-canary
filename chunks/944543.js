@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(704826), n(35282), n(388685);
+n.d(t, { Z: () => _ }), n(704826), n(35282), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -51,7 +51,7 @@ class b extends i.PureComponent {
         });
     }
 }
-class _ extends i.PureComponent {
+class y extends i.PureComponent {
     componentDidMount() {
         null == this.props.regions && c.Z.fetchRegions(null);
     }
@@ -122,4 +122,4 @@ class _ extends i.PureComponent {
             });
     }
 }
-let y = a.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(_);
+let _ = a.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(y);

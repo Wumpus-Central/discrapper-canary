@@ -2,8 +2,8 @@ n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(866442),
+    l = n.n(s),
+    a = n(866442),
     o = n(481060),
     c = n(393238),
     d = n(44315),
@@ -11,7 +11,7 @@ var r = n(200651),
     m = n(981631),
     g = n(388032),
     p = n(499650);
-function f(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,12 +54,12 @@ function h(e, t) {
         e
     );
 }
-let b = (0, u.Un)({
+let x = (0, u.Un)({
     createPromise: () => n.e('4848').then(n.bind(n, 797967)),
     webpackId: 797967
 });
-function x(e) {
-    let t = (0, l.Bd)(e) > 0.25;
+function b(e) {
+    let t = (0, a.Bd)(e) > 0.25;
     return (0, d.Lq)(t ? m.Ilk.WHITE_500 : m.Ilk.PRIMARY_530);
 }
 function j(e) {
@@ -68,23 +68,23 @@ function j(e) {
     function u() {
         n(c);
     }
-    function b(e) {
+    function x(e) {
         n(e), d(e);
     }
     let j = t === m.p6O,
         N = j ? c : t,
-        v = (0, r.jsx)(o.dz2, {
+        _ = (0, r.jsx)(o.dz2, {
             size: 'custom',
             width: 32,
             height: 24,
-            color: x(t)
+            color: b(t)
         }),
-        _ = (0, o.arW)({
+        v = (0, o.arW)({
             orientation: 'horizontal',
             isDisabled: s
         }),
-        { ref: y } = _,
-        O = (function (e, t) {
+        { ref: O } = v,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -102,34 +102,34 @@ function j(e) {
                 for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(_, ['ref']),
-        C = (0, o.xUy)({
+        })(v, ['ref']),
+        y = (0, o.xUy)({
             isSelected: j,
-            label: g.NW.formatToPlainString(g.t.ZC69mJ, { colorHex: (0, l.Rf)(m.p6O) })
+            label: g.NW.formatToPlainString(g.t.ZC69mJ, { colorHex: (0, a.Rf)(m.p6O) })
         }),
         I = (0, o.xUy)({
             isSelected: !j,
-            label: g.NW.formatToPlainString(g.t['3kiLZW'], { colorHex: (0, l.Rf)(t) })
+            label: g.NW.formatToPlainString(g.t['3kiLZW'], { colorHex: (0, a.Rf)(t) })
         });
     return (0, r.jsxs)(
         'div',
-        h(
-            f(
+        f(
+            h(
                 {
                     className: p.buttonsContainer,
                     'aria-label': g.NW.string(g.t.FJjrIy),
-                    ref: y
+                    ref: O
                 },
-                O
+                C
             ),
             {
                 children: [
                     (0, r.jsx)('div', {
-                        className: a()(p.colorSwatch, { [p.disabled]: s }),
+                        className: l()(p.colorSwatch, { [p.disabled]: s }),
                         children: (0, r.jsxs)(
                             o.P3F,
-                            h(
-                                f(
+                            f(
+                                h(
                                     {
                                         onClick: s
                                             ? void 0
@@ -138,14 +138,14 @@ function j(e) {
                                               },
                                         'aria-disabled': s
                                     },
-                                    C
+                                    y
                                 ),
                                 {
                                     children: [
                                         (0, r.jsx)('div', {
                                             className: p.swatch,
-                                            style: { backgroundColor: (0, l.Rf)(m.p6O) },
-                                            children: j ? v : null
+                                            style: { backgroundColor: (0, a.Rf)(m.p6O) },
+                                            children: j ? _ : null
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             className: p.swatchDescription,
@@ -160,12 +160,12 @@ function j(e) {
                         )
                     }),
                     (0, r.jsxs)('div', {
-                        className: a()(p.colorSwatch, { [p.disabled]: s }),
+                        className: l()(p.colorSwatch, { [p.disabled]: s }),
                         children: [
                             (0, r.jsxs)(
                                 o.P3F,
-                                h(
-                                    f(
+                                f(
+                                    h(
                                         {
                                             onClick: s ? void 0 : u,
                                             'aria-disabled': s
@@ -175,9 +175,9 @@ function j(e) {
                                     {
                                         children: [
                                             (0, r.jsx)('div', {
-                                                className: a()(p.customSwatch, { [p.defaultSwatch]: N === m.p6O }),
-                                                style: { '--custom-color': (0, l.Rf)(N) },
-                                                children: j ? null : v
+                                                className: l()(p.customSwatch, { [p.defaultSwatch]: N === m.p6O }),
+                                                style: { '--custom-color': (0, a.Rf)(N) },
+                                                children: j ? null : _
                                             }),
                                             (0, r.jsx)(o.Text, {
                                                 className: p.swatchDescription,
@@ -196,15 +196,15 @@ function j(e) {
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             o.Z$W,
-                                            h(f({}, e), {
+                                            f(h({}, e), {
                                                 value: t,
-                                                onChange: b
+                                                onChange: x
                                             })
                                         ),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             o.P3F,
-                                            h(f({}, e), {
+                                            f(h({}, e), {
                                                 className: p.dropperIconButton,
                                                 'aria-label': g.NW.string(g.t.Qp04hI),
                                                 children: (0, r.jsx)(o.ilE, {
@@ -212,7 +212,7 @@ function j(e) {
                                                     className: p.dropperIcon,
                                                     width: 14,
                                                     height: 14,
-                                                    color: x(N)
+                                                    color: b(N)
                                                 })
                                             })
                                         )
@@ -227,16 +227,16 @@ function j(e) {
 function N(e) {
     let t,
         { value: n, onChange: i, disabled: s = !1 } = e,
-        { ref: a, width: l } = (0, c.Z)();
+        { ref: l, width: a } = (0, c.Z)();
     return (
         (t =
-            null == l || l < 440
+            null == a || a < 440
                 ? (0, r.jsx)(j, {
                       value: n,
                       onChange: i,
                       disabled: s
                   })
-                : (0, r.jsx)(b, {
+                : (0, r.jsx)(x, {
                       defaultColor: m.p6O,
                       colors: m.pmI,
                       value: n,
@@ -244,7 +244,7 @@ function N(e) {
                       disabled: s
                   })),
         (0, r.jsx)('div', {
-            ref: a,
+            ref: l,
             children: t
         })
     );

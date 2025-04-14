@@ -1,14 +1,14 @@
 n.d(t, {
-    mp: () => m,
-    tP: () => M,
-    xO: () => D
+    mp: () => M,
+    tP: () => m,
+    xO: () => L
 }),
     n(539854),
     n(953529);
 var r = n(200651),
     l = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(392711),
     i = n.n(o),
     E = n(913527),
@@ -21,21 +21,21 @@ var r = n(200651),
     N = n(430824),
     I = n(594174),
     O = n(934415),
-    g = n(823379),
-    f = n(624138),
-    R = n(51144),
-    p = n(909746),
-    S = n(981631),
+    R = n(823379),
+    g = n(624138),
+    f = n(51144),
+    S = n(909746),
+    p = n(981631),
     h = n(388032),
     U = n(677234);
-function D(e, t) {
-    let n = p.vc[e.targetType];
+function L(e, t) {
+    let n = S.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
-let L = {
-    [S.vB8.CREATE]: U.typeCreate,
-    [S.vB8.UPDATE]: U.typeUpdate,
-    [S.vB8.DELETE]: U.typeDelete
+let D = {
+    [p.vB8.CREATE]: U.typeCreate,
+    [p.vB8.UPDATE]: U.typeUpdate,
+    [p.vB8.DELETE]: U.typeDelete
 };
 function C(e) {
     let { applicationId: t } = e,
@@ -47,83 +47,83 @@ function C(e) {
               children: n.name
           });
 }
-class m extends l.PureComponent {
+class M extends l.PureComponent {
     render() {
         let { actionType: e, targetType: t, action: n, themeOverride: l } = this.props,
-            a = null != l ? U['themeOverride'.concat((0, f.De)(l))] : null,
-            o = s()(
+            s = null != l ? U['themeOverride'.concat((0, g.De)(l))] : null,
+            o = a()(
                 U.icon,
-                L[e],
-                n === S.rsA.MESSAGE_DELETE
+                D[e],
+                n === p.rsA.MESSAGE_DELETE
                     ? U.targetMessage
-                    : n === S.rsA.AUTO_MODERATION_BLOCK_MESSAGE || n === S.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || n === S.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || n === S.rsA.AUTO_MODERATION_QUARANTINE_USER
+                    : n === p.rsA.AUTO_MODERATION_BLOCK_MESSAGE || n === p.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || n === p.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || n === p.rsA.AUTO_MODERATION_QUARANTINE_USER
                       ? U.autoModerationBlockMessage
                       : {
-                            [S.KFR.ALL]: U.targetAll,
-                            [S.KFR.GUILD]: U.targetGuild,
-                            [S.KFR.CHANNEL]: U.targetChannel,
-                            [S.KFR.CHANNEL_OVERWRITE]: U.targetChannel,
-                            [S.KFR.USER]: U.targetMember,
-                            [S.KFR.ROLE]: U.targetRole,
-                            [S.KFR.ONBOARDING_PROMPT]: U.targetOnboarding,
-                            [S.KFR.GUILD_ONBOARDING]: U.targetOnboarding,
-                            [S.KFR.HOME_SETTINGS]: U.targetOnboarding,
-                            [S.KFR.INTEGRATION]: U.targetIntegration,
-                            [S.KFR.INVITE]: U.targetInvite,
-                            [S.KFR.WEBHOOK]: U.targetWebhook,
-                            [S.KFR.EMOJI]: U.targetEmoji,
-                            [S.KFR.STICKER]: U.targetSticker,
-                            [S.KFR.STAGE_INSTANCE]: U.targetStageInstance,
-                            [S.KFR.GUILD_SCHEDULED_EVENT]: U.targetGuildScheduledEvent,
-                            [S.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: U.targetGuildScheduledEvent,
-                            [S.KFR.THREAD]: U.thread,
-                            [S.KFR.APPLICATION_COMMAND]: U.applicationCommand,
-                            [S.KFR.AUTO_MODERATION_RULE]: U.autoModerationRule,
-                            [S.KFR.GUILD_HOME]: U.targetGuildHome,
-                            [S.KFR.GUILD_SOUNDBOARD]: U.targetGuildSoundboard,
-                            [S.KFR.VOICE_CHANNEL_STATUS]: U.targetChannel,
-                            [S.KFR.GUILD_MEMBER_VERIFICATION]: U.targetMember,
-                            [S.KFR.GUILD_PROFILE]: U.targetGuild
+                            [p.KFR.ALL]: U.targetAll,
+                            [p.KFR.GUILD]: U.targetGuild,
+                            [p.KFR.CHANNEL]: U.targetChannel,
+                            [p.KFR.CHANNEL_OVERWRITE]: U.targetChannel,
+                            [p.KFR.USER]: U.targetMember,
+                            [p.KFR.ROLE]: U.targetRole,
+                            [p.KFR.ONBOARDING_PROMPT]: U.targetOnboarding,
+                            [p.KFR.GUILD_ONBOARDING]: U.targetOnboarding,
+                            [p.KFR.HOME_SETTINGS]: U.targetOnboarding,
+                            [p.KFR.INTEGRATION]: U.targetIntegration,
+                            [p.KFR.INVITE]: U.targetInvite,
+                            [p.KFR.WEBHOOK]: U.targetWebhook,
+                            [p.KFR.EMOJI]: U.targetEmoji,
+                            [p.KFR.STICKER]: U.targetSticker,
+                            [p.KFR.STAGE_INSTANCE]: U.targetStageInstance,
+                            [p.KFR.GUILD_SCHEDULED_EVENT]: U.targetGuildScheduledEvent,
+                            [p.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: U.targetGuildScheduledEvent,
+                            [p.KFR.THREAD]: U.thread,
+                            [p.KFR.APPLICATION_COMMAND]: U.applicationCommand,
+                            [p.KFR.AUTO_MODERATION_RULE]: U.autoModerationRule,
+                            [p.KFR.GUILD_HOME]: U.targetGuildHome,
+                            [p.KFR.GUILD_SOUNDBOARD]: U.targetGuildSoundboard,
+                            [p.KFR.VOICE_CHANNEL_STATUS]: U.targetChannel,
+                            [p.KFR.GUILD_MEMBER_VERIFICATION]: U.targetMember,
+                            [p.KFR.GUILD_PROFILE]: U.targetGuild
                         }[t],
-                a
+                s
             );
         return (0, r.jsx)('div', { className: o });
     }
 }
-function M(e) {
-    let { log: t, guild: n, onContentClick: a, className: o } = e,
+function m(e) {
+    let { log: t, guild: n, onContentClick: s, className: o } = e,
         E = l.useCallback(
             (e) => {
                 if (null == t.changes) return null;
                 let l = 0,
                     E = i()
                         .flatten(
-                            t.changes.map((a) => {
-                                if (D(t, a)) return null;
-                                let { oldValue: s, newValue: o } = (() => {
-                                        if ((t.action === S.rsA.CHANNEL_UPDATE || t.action === S.rsA.CHANNEL_CREATE) && a.key === S.zUn.TYPE) {
+                            t.changes.map((s) => {
+                                if (L(t, s)) return null;
+                                let { oldValue: a, newValue: o } = (() => {
+                                        if ((t.action === p.rsA.CHANNEL_UPDATE || t.action === p.rsA.CHANNEL_CREATE) && s.key === p.zUn.TYPE) {
                                             var e, n;
                                             return {
-                                                oldValue: null != (e = a.oldValue) ? e : (0, O.a5)({ type: a.oldValue }),
-                                                newValue: null != (n = a.newValue) ? n : (0, O.a5)({ type: a.newValue })
+                                                oldValue: null != (e = s.oldValue) ? e : (0, O.a5)({ type: s.oldValue }),
+                                                newValue: null != (n = s.newValue) ? n : (0, O.a5)({ type: s.newValue })
                                             };
                                         }
-                                        if (t.action === S.rsA.MEMBER_UPDATE && a.key === S.zUn.COMMUNICATION_DISABLED_UNTIL) {
-                                            let e = c()(a.newValue);
+                                        if (t.action === p.rsA.MEMBER_UPDATE && s.key === p.zUn.COMMUNICATION_DISABLED_UNTIL) {
+                                            let e = c()(s.newValue);
                                             return {
-                                                oldValue: a.oldValue,
-                                                newValue: e.isValid() ? e.calendar() : a.newValue
+                                                oldValue: s.oldValue,
+                                                newValue: e.isValid() ? e.calendar() : s.newValue
                                             };
                                         }
-                                        return t.action === S.rsA.GUILD_UPDATE && a.key === S.zUn.OWNER_ID
+                                        return t.action === p.rsA.GUILD_UPDATE && s.key === p.zUn.OWNER_ID
                                             ? {
-                                                  oldValue: R.ZP.getUserTag(a.oldValue, { mode: 'username' }),
-                                                  newValue: R.ZP.getUserTag(a.newValue, { mode: 'username' })
+                                                  oldValue: f.ZP.getUserTag(s.oldValue, { mode: 'username' }),
+                                                  newValue: f.ZP.getUserTag(s.newValue, { mode: 'username' })
                                               }
-                                            : a;
+                                            : s;
                                     })(),
                                     E = (() => {
-                                        if (t.action === S.rsA.MEMBER_ROLE_UPDATE)
+                                        if (t.action === p.rsA.MEMBER_ROLE_UPDATE)
                                             return (function (e) {
                                                 let { newValue: t } = e;
                                                 return Array.isArray(t)
@@ -138,8 +138,8 @@ function M(e) {
                                                           )
                                                       )
                                                     : null;
-                                            })(a);
-                                        if (t.targetType === S.KFR.ROLE || t.action === S.rsA.CHANNEL_OVERWRITE_CREATE || t.action === S.rsA.CHANNEL_OVERWRITE_UPDATE)
+                                            })(s);
+                                        if (t.targetType === p.KFR.ROLE || t.action === p.rsA.CHANNEL_OVERWRITE_CREATE || t.action === p.rsA.CHANNEL_OVERWRITE_UPDATE)
                                             return (function (e, t) {
                                                 let { newValue: n } = e;
                                                 return Array.isArray(n)
@@ -148,14 +148,14 @@ function M(e) {
                                                               'div',
                                                               {
                                                                   className: U.subListItem,
-                                                                  children: p.hQ(e, t)
+                                                                  children: S.hQ(e, t)
                                                               },
                                                               n
                                                           )
                                                       )
                                                     : null;
-                                            })(a, t);
-                                        if ((t.action === S.rsA.CHANNEL_UPDATE || t.action === S.rsA.THREAD_UPDATE) && a.key === S.zUn.FLAGS)
+                                            })(s, t);
+                                        if ((t.action === p.rsA.CHANNEL_UPDATE || t.action === p.rsA.THREAD_UPDATE) && s.key === p.zUn.FLAGS)
                                             return (function (e) {
                                                 let { newValue: t, oldValue: n } = e,
                                                     l = [];
@@ -166,7 +166,7 @@ function M(e) {
                                                                 'div',
                                                                 {
                                                                     className: U.subListItem,
-                                                                    children: p.cT(e)
+                                                                    children: S.cT(e)
                                                                 },
                                                                 e
                                                             )
@@ -179,7 +179,7 @@ function M(e) {
                                                                 'div',
                                                                 {
                                                                     className: U.subListItem,
-                                                                    children: p.em(e)
+                                                                    children: S.em(e)
                                                                 },
                                                                 e
                                                             )
@@ -188,11 +188,11 @@ function M(e) {
                                                 l.length > 0)
                                                     ? l
                                                     : null;
-                                            })(a);
-                                        if ((t.action === S.rsA.ONBOARDING_PROMPT_UPDATE || t.action === S.rsA.ONBOARDING_PROMPT_CREATE) && a.key === S.zUn.OPTIONS)
+                                            })(s);
+                                        if ((t.action === p.rsA.ONBOARDING_PROMPT_UPDATE || t.action === p.rsA.ONBOARDING_PROMPT_CREATE) && s.key === p.zUn.OPTIONS)
                                             return (function (e, t, n) {
-                                                let { newValue: l, oldValue: a } = e,
-                                                    s = (e) => {
+                                                let { newValue: l, oldValue: s } = e,
+                                                    a = (e) => {
                                                         var t;
                                                         let r = null != n ? (null == (t = N.Z.getRole(n.id, e)) ? void 0 : t.name) : void 0;
                                                         return null == r ? null : '@'.concat(r);
@@ -203,11 +203,11 @@ function M(e) {
                                                         return null == n ? null : '#'.concat(n);
                                                     },
                                                     E = (e, n) => {
-                                                        let { title: l, id: a } = n,
-                                                            E = e.role_ids.map(s).filter(g.lm),
-                                                            c = e.channel_ids.map(o).filter(g.lm),
-                                                            _ = n.role_ids.map(s).filter(g.lm),
-                                                            d = n.channel_ids.map(o).filter(g.lm),
+                                                        let { title: l, id: s } = n,
+                                                            E = e.role_ids.map(a).filter(R.lm),
+                                                            c = e.channel_ids.map(o).filter(R.lm),
+                                                            _ = n.role_ids.map(a).filter(R.lm),
+                                                            d = n.channel_ids.map(o).filter(R.lm),
                                                             A = i().difference(_, E),
                                                             T = i().difference(E, _),
                                                             N = i().difference(d, c),
@@ -222,8 +222,8 @@ function M(e) {
                                                                           (0, r.jsxs)('div', {
                                                                               className: U.onboardingChangeLogItemTitle,
                                                                               children: [
-                                                                                  (0, r.jsx)(m, {
-                                                                                      actionType: S.vB8.UPDATE,
+                                                                                  (0, r.jsx)(M, {
+                                                                                      actionType: p.vB8.UPDATE,
                                                                                       targetType: t.targetType,
                                                                                       action: t.action
                                                                                   }),
@@ -274,10 +274,10 @@ function M(e) {
                                                                           })
                                                                       ]
                                                                   },
-                                                                  a
+                                                                  s
                                                               );
                                                     },
-                                                    c = i().keyBy(null != a ? a : [], 'id'),
+                                                    c = i().keyBy(null != s ? s : [], 'id'),
                                                     _ = i().keyBy(null != l ? l : [], 'id'),
                                                     d = i()
                                                         .difference(Object.keys(_), Object.keys(c))
@@ -292,9 +292,9 @@ function M(e) {
                                                         className: U.onboardingChangeLogContainer,
                                                         children: [
                                                             d.map((e) => {
-                                                                let { role_ids: n, channel_ids: l, title: a, id: i } = e,
-                                                                    E = (null != n ? n : []).map(s).filter(g.lm),
-                                                                    c = (null != l ? l : []).map(o).filter(g.lm);
+                                                                let { role_ids: n, channel_ids: l, title: s, id: i } = e,
+                                                                    E = (null != n ? n : []).map(a).filter(R.lm),
+                                                                    c = (null != l ? l : []).map(o).filter(R.lm);
                                                                 return (0, r.jsxs)(
                                                                     'li',
                                                                     {
@@ -302,14 +302,14 @@ function M(e) {
                                                                             (0, r.jsxs)('div', {
                                                                                 className: U.onboardingChangeLogItemTitle,
                                                                                 children: [
-                                                                                    (0, r.jsx)(m, {
-                                                                                        actionType: S.vB8.CREATE,
+                                                                                    (0, r.jsx)(M, {
+                                                                                        actionType: p.vB8.CREATE,
                                                                                         targetType: t.targetType,
                                                                                         action: t.action
                                                                                     }),
                                                                                     (0, r.jsx)(u.Text, {
                                                                                         variant: 'text-md/normal',
-                                                                                        children: h.NW.format(h.t.CZ1tys, { title: a })
+                                                                                        children: h.NW.format(h.t.CZ1tys, { title: s })
                                                                                     })
                                                                                 ]
                                                                             }),
@@ -340,8 +340,8 @@ function M(e) {
                                                                         children: (0, r.jsxs)('div', {
                                                                             className: U.onboardingChangeLogItemTitle,
                                                                             children: [
-                                                                                (0, r.jsx)(m, {
-                                                                                    actionType: S.vB8.DELETE,
+                                                                                (0, r.jsx)(M, {
+                                                                                    actionType: p.vB8.DELETE,
                                                                                     targetType: t.targetType,
                                                                                     action: t.action
                                                                                 }),
@@ -360,15 +360,15 @@ function M(e) {
                                                     },
                                                     'options'
                                                 );
-                                            })(a, t, n);
-                                        if (t.action === S.rsA.HOME_SETTINGS_CREATE || t.action === S.rsA.HOME_SETTINGS_UPDATE)
+                                            })(s, t, n);
+                                        if (t.action === p.rsA.HOME_SETTINGS_CREATE || t.action === p.rsA.HOME_SETTINGS_UPDATE)
                                             return (function (e, t) {
-                                                let { oldValue: n, newValue: l, key: a } = e,
-                                                    { targetType: s, action: o } = t;
-                                                switch (a) {
-                                                    case S.zUn.WELCOME_MESSAGE:
+                                                let { oldValue: n, newValue: l, key: s } = e,
+                                                    { targetType: a, action: o } = t;
+                                                switch (s) {
+                                                    case p.zUn.WELCOME_MESSAGE:
                                                         return ((e, t) => {
-                                                            var n, l, a, s, o;
+                                                            var n, l, s, a, o;
                                                             let i = I.default.getUser(null == t || null == (n = t.author_ids) ? void 0 : n[0]),
                                                                 E = I.default.getUser(null == (l = e.author_ids) ? void 0 : l[0]),
                                                                 c =
@@ -379,8 +379,8 @@ function M(e) {
                                                                                   children: (0, r.jsx)(u.Text, {
                                                                                       variant: 'text-md/normal',
                                                                                       children: h.NW.format(h.t.PrOzAw, {
-                                                                                          oldUser: null != (a = null == i ? void 0 : i.username) ? a : h.NW.string(h.t.PoWNfX),
-                                                                                          newUser: null != (s = null == E ? void 0 : E.username) ? s : h.NW.string(h.t.PoWNfX)
+                                                                                          oldUser: null != (s = null == i ? void 0 : i.username) ? s : h.NW.string(h.t.PoWNfX),
+                                                                                          newUser: null != (a = null == E ? void 0 : E.username) ? a : h.NW.string(h.t.PoWNfX)
                                                                                       })
                                                                                   })
                                                                               })
@@ -405,13 +405,13 @@ function M(e) {
                                                                 children: [c, _]
                                                             });
                                                         })(l, n);
-                                                    case S.zUn.NEW_MEMBER_ACTIONS:
+                                                    case p.zUn.NEW_MEMBER_ACTIONS:
                                                         return ((e, t) => {
                                                             let n = e.map((e) => e.channel_id),
                                                                 l = t.map((e) => e.channel_id),
-                                                                a = i().difference(l, n),
+                                                                s = i().difference(l, n),
                                                                 E = i().difference(n, l),
-                                                                c = t.filter((e) => a.includes(e.channel_id)),
+                                                                c = t.filter((e) => s.includes(e.channel_id)),
                                                                 _ = e.filter((e) => E.includes(e.channel_id));
                                                             return (0, r.jsxs)('ul', {
                                                                 children: [
@@ -422,9 +422,9 @@ function M(e) {
                                                                                 children: (0, r.jsxs)('div', {
                                                                                     className: U.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(m, {
-                                                                                            actionType: S.vB8.CREATE,
-                                                                                            targetType: s,
+                                                                                        (0, r.jsx)(M, {
+                                                                                            actionType: p.vB8.CREATE,
+                                                                                            targetType: a,
                                                                                             action: o
                                                                                         }),
                                                                                         (0, r.jsx)(u.Text, {
@@ -444,9 +444,9 @@ function M(e) {
                                                                                 children: (0, r.jsxs)('div', {
                                                                                     className: U.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(m, {
-                                                                                            actionType: S.vB8.DELETE,
-                                                                                            targetType: s,
+                                                                                        (0, r.jsx)(M, {
+                                                                                            actionType: p.vB8.DELETE,
+                                                                                            targetType: a,
                                                                                             action: o
                                                                                         }),
                                                                                         (0, r.jsx)(u.Text, {
@@ -462,13 +462,13 @@ function M(e) {
                                                                 ]
                                                             });
                                                         })(null != n ? n : [], l);
-                                                    case S.zUn.RESOURCE_CHANNELS:
+                                                    case p.zUn.RESOURCE_CHANNELS:
                                                         return ((e, t) => {
                                                             let n = e.map((e) => e.channel_id),
                                                                 l = t.map((e) => e.channel_id),
-                                                                a = i().difference(l, n),
+                                                                s = i().difference(l, n),
                                                                 E = i().difference(n, l),
-                                                                c = t.filter((e) => a.includes(e.channel_id)),
+                                                                c = t.filter((e) => s.includes(e.channel_id)),
                                                                 _ = e.filter((e) => E.includes(e.channel_id));
                                                             return (0, r.jsxs)('ul', {
                                                                 children: [
@@ -479,9 +479,9 @@ function M(e) {
                                                                                 children: (0, r.jsxs)('div', {
                                                                                     className: U.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(m, {
-                                                                                            actionType: S.vB8.CREATE,
-                                                                                            targetType: s,
+                                                                                        (0, r.jsx)(M, {
+                                                                                            actionType: p.vB8.CREATE,
+                                                                                            targetType: a,
                                                                                             action: o
                                                                                         }),
                                                                                         (0, r.jsx)(u.Text, {
@@ -501,9 +501,9 @@ function M(e) {
                                                                                 children: (0, r.jsxs)('div', {
                                                                                     className: U.onboardingChangeLogItemTitle,
                                                                                     children: [
-                                                                                        (0, r.jsx)(m, {
-                                                                                            actionType: S.vB8.DELETE,
-                                                                                            targetType: s,
+                                                                                        (0, r.jsx)(M, {
+                                                                                            actionType: p.vB8.DELETE,
+                                                                                            targetType: a,
                                                                                             action: o
                                                                                         }),
                                                                                         (0, r.jsx)(u.Text, {
@@ -522,13 +522,13 @@ function M(e) {
                                                     default:
                                                         return null;
                                                 }
-                                            })(a, t);
+                                            })(s, t);
                                         return null;
                                     })(),
-                                    d = e[a.key];
+                                    d = e[s.key];
                                 return (function (e) {
                                     var t, n;
-                                    let { changeItem: l, subChanges: a, changeNumber: s, log: o, oldValue: i, newValue: E, change: c } = e;
+                                    let { changeItem: l, subChanges: s, changeNumber: a, log: o, oldValue: i, newValue: E, change: c } = e;
                                     if (null == l) return console.warn('No change string for', c), null;
                                     let d = h.NW.format(l, {
                                         oldValue: i,
@@ -594,16 +594,16 @@ function M(e) {
                                                           variant: 'code',
                                                           color: (function (e) {
                                                               switch (e) {
-                                                                  case S.vB8.CREATE:
+                                                                  case p.vB8.CREATE:
                                                                       return 'text-positive';
-                                                                  case S.vB8.DELETE:
+                                                                  case p.vB8.DELETE:
                                                                       return 'status-danger';
                                                                   default:
                                                                       return 'text-warning';
                                                               }
                                                           })(o.actionType),
                                                           children: [
-                                                              s < 10 ? '0'.concat(s) : s,
+                                                              a < 10 ? '0'.concat(a) : a,
                                                               (0, r.jsx)('span', {
                                                                   className: U.dash,
                                                                   children: '\u2014'
@@ -617,80 +617,80 @@ function M(e) {
                                                                   className: U.changeStr,
                                                                   children: d
                                                               }),
-                                                              null != a ? (0, r.jsx)('div', { children: a }) : null
+                                                              null != s ? (0, r.jsx)('div', { children: s }) : null
                                                           ]
                                                       })
                                                   ]
                                               },
-                                              s
+                                              a
                                           );
                                 })({
-                                    changeItem: 'function' == typeof d ? d(a) : d,
+                                    changeItem: 'function' == typeof d ? d(s) : d,
                                     subChanges: E,
                                     changeNumber: ++l,
                                     log: t,
-                                    oldValue: s,
+                                    oldValue: a,
                                     newValue: o,
-                                    change: a
+                                    change: s
                                 });
                             })
                         )
-                        .filter(g.lm);
+                        .filter(R.lm);
                 return (0, r.jsx)(u.P3F, {
-                    onClick: a,
-                    className: s()(U.changeDetails, o),
+                    onClick: s,
+                    className: a()(U.changeDetails, o),
                     children: E
                 });
             },
-            [t, n, a, o]
+            [t, n, s, o]
         );
     return l.useMemo(() => {
         switch (t.targetType) {
-            case S.KFR.GUILD:
-                return E(p.pY());
-            case S.KFR.CHANNEL:
-            case S.KFR.CHANNEL_OVERWRITE:
-                return E(p.ML());
-            case S.KFR.USER:
-                return E(p.lU());
-            case S.KFR.ROLE:
-                return E(p.HE());
-            case S.KFR.ONBOARDING_PROMPT:
-                return E(p.oD());
-            case S.KFR.GUILD_ONBOARDING:
-                return E(p.EN());
-            case S.KFR.HOME_SETTINGS:
-                return E(p.hx());
-            case S.KFR.INVITE:
-                return E(p.HN());
-            case S.KFR.WEBHOOK:
-                return E(p.lR());
-            case S.KFR.EMOJI:
-                return E(p.N$());
-            case S.KFR.STICKER:
-                return E(p.Bq());
-            case S.KFR.INTEGRATION:
-                return E(p.K());
-            case S.KFR.STAGE_INSTANCE:
-                return E(p.C2());
-            case S.KFR.GUILD_SCHEDULED_EVENT:
-                return E(p.uB());
-            case S.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                return E(p.pi());
-            case S.KFR.THREAD:
-                return E(p.pA());
-            case S.KFR.APPLICATION_COMMAND:
-                return E(p.vm(t.changes));
-            case S.KFR.AUTO_MODERATION_RULE:
-                return E(p.rK());
-            case S.KFR.GUILD_SOUNDBOARD:
-                return E(p.C0());
-            case S.KFR.VOICE_CHANNEL_STATUS:
-                return E(p.F1());
-            case S.KFR.GUILD_MEMBER_VERIFICATION:
-                return E(p.JA());
-            case S.KFR.GUILD_PROFILE:
-                return E(p.zT());
+            case p.KFR.GUILD:
+                return E(S.pY());
+            case p.KFR.CHANNEL:
+            case p.KFR.CHANNEL_OVERWRITE:
+                return E(S.ML());
+            case p.KFR.USER:
+                return E(S.lU());
+            case p.KFR.ROLE:
+                return E(S.HE());
+            case p.KFR.ONBOARDING_PROMPT:
+                return E(S.oD());
+            case p.KFR.GUILD_ONBOARDING:
+                return E(S.EN());
+            case p.KFR.HOME_SETTINGS:
+                return E(S.hx());
+            case p.KFR.INVITE:
+                return E(S.HN());
+            case p.KFR.WEBHOOK:
+                return E(S.lR());
+            case p.KFR.EMOJI:
+                return E(S.N$());
+            case p.KFR.STICKER:
+                return E(S.Bq());
+            case p.KFR.INTEGRATION:
+                return E(S.K());
+            case p.KFR.STAGE_INSTANCE:
+                return E(S.C2());
+            case p.KFR.GUILD_SCHEDULED_EVENT:
+                return E(S.uB());
+            case p.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                return E(S.pi());
+            case p.KFR.THREAD:
+                return E(S.pA());
+            case p.KFR.APPLICATION_COMMAND:
+                return E(S.vm(t.changes));
+            case p.KFR.AUTO_MODERATION_RULE:
+                return E(S.rK());
+            case p.KFR.GUILD_SOUNDBOARD:
+                return E(S.C0());
+            case p.KFR.VOICE_CHANNEL_STATUS:
+                return E(S.F1());
+            case p.KFR.GUILD_MEMBER_VERIFICATION:
+                return E(S.JA());
+            case p.KFR.GUILD_PROFILE:
+                return E(S.zT());
         }
     }, [t.targetType, t.changes, E]);
 }

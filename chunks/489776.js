@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(200100),
-    a = n(722770),
-    l = n(481060),
+    l = n(722770),
+    a = n(481060),
     o = n(236413),
     c = n(85960),
     d = n(65912),
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,64 +53,64 @@ function f(e, t) {
         e
     );
 }
-function h(e) {
+function f(e) {
     let { guildId: t, triggerType: n } = e,
-        h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [b] = i.useState(h),
-        [x, j] = i.useState(!1),
-        { editingRule: N, createNewEditingRule: v } = (0, d.V)(),
-        { getDefaultRuleName: _ } = c.I6[n],
-        y = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
-        [O, C] = i.useState(y ? N : b),
-        I = (0, l.q_F)({
-            opacity: +!y,
-            pointerEvents: y ? 'none' : 'all',
-            config: f(p({}, s.config.stiff), { clamp: !0 })
+        f = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
+        [x] = i.useState(f),
+        [b, j] = i.useState(!1),
+        { editingRule: N, createNewEditingRule: _ } = (0, d.V)(),
+        { getDefaultRuleName: v } = c.I6[n],
+        O = !(0, o.Vb)(N) && (null == N ? void 0 : N.triggerType) === n,
+        [C, y] = i.useState(O ? N : x),
+        I = (0, a.q_F)({
+            opacity: +!O,
+            pointerEvents: O ? 'none' : 'all',
+            config: h(p({}, s.config.stiff), { clamp: !0 })
         }),
-        E = (0, l.q_F)({
-            opacity: +!!y,
-            pointerEvents: y ? 'all' : 'none',
-            config: f(p({}, s.config.stiff), { clamp: !0 }),
+        E = (0, a.q_F)({
+            opacity: +!!O,
+            pointerEvents: O ? 'all' : 'none',
+            config: h(p({}, s.config.stiff), { clamp: !0 }),
             onStart: () => {
-                C(y ? N : b);
+                y(O ? N : x);
             },
             onRest: () => {
-                C(y ? N : b), j(y);
+                y(O ? N : x), j(O);
             }
         });
-    return null == N || y
+    return null == N || O
         ? (0, r.jsxs)('div', {
               className: g.mainRuleContainer,
-              style: { height: y ? 'auto' : '60px' },
+              style: { height: O ? 'auto' : '60px' },
               children: [
                   (0, r.jsx)(s.animated.div, {
                       className: g.animatedRuleCardContainer,
                       style: E,
                       children: (0, r.jsx)(u.Z, {
-                          rule: O,
-                          persistEdit: x
+                          rule: C,
+                          persistEdit: b
                       })
                   }),
                   (0, r.jsx)(s.animated.div, {
                       className: g.animatedNewRuleContainer,
                       style: I,
-                      children: (0, r.jsxs)(l.P3F, {
+                      children: (0, r.jsxs)(a.P3F, {
                           className: g.addAnotherRuleCardContainer,
                           onClick: () => {
-                              v(t, n);
+                              _(t, n);
                           },
                           children: [
-                              (0, r.jsx)(l.oFk, {
+                              (0, r.jsx)(a.oFk, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
-                                  color: a.Z.BLUE_345,
+                                  color: l.Z.BLUE_345,
                                   className: g.plusIcon
                               }),
-                              (0, r.jsx)(l.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: m.NW.format(m.t.dNjRAQ, { ruleName: _() })
+                                  children: m.NW.format(m.t.dNjRAQ, { ruleName: v() })
                               })
                           ]
                       })

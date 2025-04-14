@@ -10,8 +10,8 @@ var r = n(200651),
     a = n(120356),
     i = n.n(a),
     s = n(477660),
-    l = n.n(s),
-    c = n(481060),
+    c = n.n(s),
+    l = n(481060),
     u = n(37234),
     d = n(230711),
     p = n(454585),
@@ -44,13 +44,13 @@ function h(e) {
     }
     return e;
 }
-let y = l().defaultRules.link,
+let y = c().defaultRules.link,
     _ = { section: f.jXE.SETTINGS_CHANGELOG },
     O = (e) => {
         let { level: t, children: n, className: r = null, styleSheet: a = {} } = e,
-            s = (0, c.xSt)(),
-            l = parseInt(t, 10),
-            u = isNaN(l) ? 1 : l;
+            s = (0, l.xSt)(),
+            c = parseInt(t, 10),
+            u = isNaN(c) ? 1 : c;
         return o.createElement('h'.concat(s + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => a[e]))) }, n);
     },
     v = null != p.Z ? p.Z.defaultRules : null,
@@ -61,17 +61,17 @@ let y = l().defaultRules.link,
                 let a,
                     i = e[2],
                     s = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
-                    l = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
+                    c = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
                     p = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
                 return (
                     (a =
-                        s || l
+                        s || c
                             ? (e) => {
-                                  m.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: _ }), s ? d.Z.open(f.oAB.PREMIUM) : l && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault();
+                                  m.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: _ }), s ? d.Z.open(f.oAB.PREMIUM) : c && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, l.Mr3)(b.Xd), e.preventDefault();
                               }
                             : p
                               ? (e) => {
-                                    (0, g.uL)(i), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, h({}, m.default.getCampaignParams(i))), (0, u.Ou)(), (0, c.Mr3)(b.Xd), e.preventDefault();
+                                    (0, g.uL)(i), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, h({}, m.default.getCampaignParams(i))), (0, u.Ou)(), (0, l.Mr3)(b.Xd), e.preventDefault();
                                 }
                               : () => {
                                     n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
@@ -105,9 +105,9 @@ let y = l().defaultRules.link,
             },
             react: (e, t, n) =>
                 (0, r.jsx)(
-                    c.eee,
+                    l.eee,
                     {
-                        href: l().sanitizeUrl(e.target),
+                        href: c().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
                         target: '_blank',

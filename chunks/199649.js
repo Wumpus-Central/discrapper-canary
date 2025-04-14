@@ -16,12 +16,12 @@ var i = n(442837),
     g = n(388032);
 function b(e) {
     var t, b;
-    let { channel: _, children: y } = e,
-        C = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
-    (0, a.Z)(_.id);
-    let x = (0, s.Z)(_.id),
-        v = _.isSystemDM(),
-        j = C && !v && !_.isMultiUserDM(),
+    let { channel: y, children: _ } = e,
+        C = (0, i.e7)([u.Z], () => u.Z.isBlocked(y.getRecipientId()));
+    (0, a.Z)(y.id);
+    let x = (0, s.Z)(y.id),
+        v = y.isSystemDM(),
+        j = C && !v && !y.isMultiUserDM(),
         O = {};
     if (v) {
         let e = x
@@ -55,7 +55,7 @@ function b(e) {
             ((O.message = g.NW.string(g.t['9T6N5+'])),
             (O.buttonText = g.NW.string(g.t.XyHpKC)),
             (O.onButtonClick = () => {
-                o.Z.unblockUser(_.getRecipientId());
+                o.Z.unblockUser(y.getRecipientId());
             }));
     return (0, r.jsx)(
         h.Z,
@@ -84,7 +84,7 @@ function b(e) {
             }
             return e;
         })({}, O)),
-        (b = b = { children: y }),
+        (b = b = { children: _ }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(b))
             : (function (e, t) {

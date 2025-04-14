@@ -12,15 +12,15 @@ var r = n(200651),
     x = n(981631),
     p = n(864012);
 let b = (e) => {
-    let { reportType: t, menu: n, modalProps: b, onSubmit: h, onNavigate: _, emailToken: f, isAuthenticated: g = !0 } = e,
+    let { reportType: t, menu: n, modalProps: b, onSubmit: f, onNavigate: h, emailToken: _, isAuthenticated: g = !0 } = e,
         v = (0, s.Dt)(),
-        { nodes: j, root_node_id: N, success_node_id: y, fail_node_id: O } = n,
-        [Z, I] = l.useState(N),
+        { nodes: j, root_node_id: N, success_node_id: y, fail_node_id: Z } = n,
+        [O, I] = l.useState(N),
         [C, P] = l.useState(void 0),
         [S, T] = l.useState(void 0),
         [k, E] = l.useState([]),
         [w, W] = l.useState(void 0),
-        [R, D] = l.useState(void 0),
+        [D, R] = l.useState(void 0),
         A = (e) => {
             var n, r, l;
             let { destination: a } = e,
@@ -72,25 +72,25 @@ let b = (e) => {
                           }),
                     r)
                 );
-            if ((E([...k, e]), null != u.key && (null == _ || _(u.key)), P(void 0), T(void 0), t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)) {
+            if ((E([...k, e]), null != u.key && (null == h || h(u.key)), P(void 0), T(void 0), t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)) {
                 let e = t.record.id;
                 o.ZP.trackWithMetadata(x.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: u.report_type,
-                    current_node: j[Z].id,
+                    current_node: j[O].id,
                     next_node: u.id
                 });
             }
             I(s);
         },
-        L = async (e) => {
+        M = async (e) => {
             var r;
-            let l = g ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], f),
+            let l = g ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], _),
                 i = null == l || null == (r = l.body) ? void 0 : r.report_id;
-            null != i && W(i), D(j[e.nodeRef].report_type), null == h || h(i);
+            null != i && W(i), R(j[e.nodeRef].report_type), null == f || f(i);
         },
-        M = () => {
+        L = () => {
             var e, n;
             if (k.length < 1) return;
             let r = [...k],
@@ -102,11 +102,11 @@ let b = (e) => {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: j[i].report_type,
-                    current_node: j[Z].id,
+                    current_node: j[O].id,
                     next_node: j[i].id
                 });
             }
-            P(null == l || null == (e = l.multiSelect) ? void 0 : e.state), T(null == l ? void 0 : l.textInput), I(i), E(r), null == _ || _('..');
+            P(null == l || null == (e = l.multiSelect) ? void 0 : e.state), T(null == l ? void 0 : l.textInput), I(i), E(r), null == h || h('..');
         },
         B = l.useMemo(() => {
             let e = [],
@@ -114,7 +114,7 @@ let b = (e) => {
             for (let i in j) {
                 var n, r, l;
                 let a = j[i];
-                if (a.id !== y && a.id !== O && a.id !== N) {
+                if (a.id !== y && a.id !== Z && a.id !== N) {
                     if (a.key.endsWith('_SUBMIT') || (null == (n = a.button) ? void 0 : n.type) === 'submit') {
                         t.push(a);
                         continue;
@@ -126,14 +126,14 @@ let b = (e) => {
                     }
                 }
             }
-            return [j[N], ...e, ...t, j[y], j[O]];
-        }, [j, N, O, y]);
+            return [j[N], ...e, ...t, j[y], j[Z]];
+        }, [j, N, Z, y]);
     return (0, r.jsx)(a.Y0X, {
         transitionState: b.transitionState,
         'aria-labelledby': v,
         children: (0, r.jsx)(a.MyZ, {
             width: 440,
-            activeSlide: Z,
+            activeSlide: O,
             centered: !1,
             children: B.map((e) =>
                 (0, r.jsx)(
@@ -145,16 +145,16 @@ let b = (e) => {
                             children: (0, r.jsx)(m.Z, {
                                 node: e,
                                 reportType: t,
-                                reportSubType: R,
+                                reportSubType: D,
                                 history: k,
                                 onModalClose: b.onClose,
                                 onSelectChild: A,
-                                onNavigateBack: M,
+                                onNavigateBack: L,
                                 multiSelect: C,
                                 textInput: S,
                                 successNodeId: y,
-                                failNodeId: O,
-                                onSubmit: L,
+                                failNodeId: Z,
+                                onSubmit: M,
                                 reportId: w
                             })
                         })

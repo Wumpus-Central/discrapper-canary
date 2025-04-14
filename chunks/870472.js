@@ -10,29 +10,29 @@ n.d(t, {
 var r = n(192379),
     i = n(348327),
     s = n.n(i),
-    a = n(995295),
-    l = n(596390);
+    l = n(995295),
+    a = n(596390);
 function o(e) {
     let [t, n] = r.useState([e]),
-        [i, a] = r.useState(0),
-        l = r.useMemo(() => t[i], [t, i]),
+        [i, l] = r.useState(0),
+        a = r.useMemo(() => t[i], [t, i]),
         o = r.useCallback(
             (e) => {
-                let r = e(l);
-                if (s()(l, r)) return;
+                let r = e(a);
+                if (s()(a, r)) return;
                 let o = t.slice(0, i + 1);
-                o.push(r), n(o), a(o.length - 1);
+                o.push(r), n(o), l(o.length - 1);
             },
-            [i, l, t]
+            [i, a, t]
         );
     return {
-        state: l,
+        state: a,
         setState: o,
         goBack: r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                     n = Math.max(0, i - e);
-                return a(n), t[n];
+                return l(n), t[n];
             },
             [i, t]
         ),
@@ -40,7 +40,7 @@ function o(e) {
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                     n = Math.min(t.length - 1, i + e);
-                return a(n), t[n];
+                return l(n), t[n];
             },
             [i, t]
         )
@@ -116,11 +116,11 @@ function c(e, t) {
             (e) => {
                 var t, r;
                 let i = (null != (r = e.clipboardData.getData('text')) ? r : '')
-                    .split(l.uz)
+                    .split(a.uz)
                     .map((e) => e.trim())
                     .filter((e) => e.length > 0);
                 i.length <= 1 ||
-                    ((0, a.flushSync)(() => {
+                    ((0, l.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n } = e;
                             return {
@@ -137,7 +137,7 @@ function c(e, t) {
             },
             [u, n]
         ),
-        f = r.useCallback(
+        h = r.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n, value: r } = t;
@@ -151,7 +151,7 @@ function c(e, t) {
             },
             [u]
         ),
-        h = r.useCallback(
+        f = r.useCallback(
             (e) => (t) => {
                 u((n) => {
                     let { tags: r, value: i } = n,
@@ -169,7 +169,7 @@ function c(e, t) {
             },
             [u]
         ),
-        b = r.useCallback(
+        x = r.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n, value: r, selections: i, isSelecting: s } = t;
@@ -183,16 +183,16 @@ function c(e, t) {
             },
             [u]
         ),
-        x = r.useCallback(
+        b = r.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 u((n) => {
-                    let { tags: r, value: i, selections: s, isSelecting: a } = n;
+                    let { tags: r, value: i, selections: s, isSelecting: l } = n;
                     return {
                         value: i,
                         tags: r,
                         selections: t ? [] : s.filter((t) => t !== r[e]),
-                        isSelecting: a
+                        isSelecting: l
                     };
                 });
             },
@@ -229,12 +229,12 @@ function c(e, t) {
             },
             [u]
         ),
-        v = r.useCallback(
+        _ = r.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
                 !(o.trim().length <= 0) &&
-                    ((0, a.flushSync)(() => {
+                    ((0, l.flushSync)(() => {
                         u((e) => {
                             let { tags: t } = e;
                             return {
@@ -250,12 +250,12 @@ function c(e, t) {
             },
             [n, u, o]
         ),
-        _ = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 let t = o.trim().length <= 0;
                 if (d.length > 0) {
                     var n;
-                    (0, a.flushSync)(() => {
+                    (0, l.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n, selections: r } = e;
                             return {
@@ -271,7 +271,7 @@ function c(e, t) {
                         e.stopPropagation();
                 } else
                     t &&
-                        ((0, a.flushSync)(() => {
+                        ((0, l.flushSync)(() => {
                             u((e) => {
                                 let { tags: t } = e,
                                     n = [...t],
@@ -289,22 +289,22 @@ function c(e, t) {
             },
             [i, d.length, u, o]
         ),
-        y = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 var t, n, r, s;
-                let a = e.metaKey || e.ctrlKey;
-                'z' === e.key && a ? (m().selections.length > 0 ? null == (t = i.current) || t.blur() : null == (n = i.current) || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && a && (g().selections.length > 0 ? null == (r = i.current) || r.blur() : null == (s = i.current) || s.focus(), e.preventDefault(), e.stopPropagation());
+                let l = e.metaKey || e.ctrlKey;
+                'z' === e.key && l ? (m().selections.length > 0 ? null == (t = i.current) || t.blur() : null == (n = i.current) || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && l && (g().selections.length > 0 ? null == (r = i.current) || r.blur() : null == (s = i.current) || s.focus(), e.preventDefault(), e.stopPropagation());
             },
             [m, g, i]
         ),
-        O = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 var t;
                 let n = o.trim().length > 0,
-                    { selectionStart: r = 0, selectionEnd: l = 0 } = null != (t = i.current) ? t : {};
+                    { selectionStart: r = 0, selectionEnd: a = 0 } = null != (t = i.current) ? t : {};
                 0 === c.length ||
-                    (n && r === l) ||
-                    ((0, a.flushSync)(() => {
+                    (n && r === a) ||
+                    ((0, l.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n } = e;
                             return {
@@ -328,11 +328,11 @@ function c(e, t) {
             },
             [s, i, u, c.length, o]
         ),
-        C = r.useCallback(
+        y = r.useCallback(
             (e) => {
-                e.relatedTarget !== e.currentTarget && v(e, !1, !1);
+                e.relatedTarget !== e.currentTarget && _(e, !1, !1);
             },
-            [v]
+            [_]
         );
     return {
         handlePasteEvent: p,
@@ -340,23 +340,23 @@ function c(e, t) {
         handleKeyDown: r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                'Meta' !== e.key && (l.ye.has(e.key) ? v(e) : 'Backspace' === e.key ? _(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? O(e) : l.Bd.has(e.key) && t && y(e));
+                'Meta' !== e.key && (a.ye.has(e.key) ? _(e) : 'Backspace' === e.key ? v(e) : 'Escape' === e.key ? j(e) : 'a' === e.key && t ? C(e) : a.Bd.has(e.key) && t && O(e));
             },
-            [v, _, j, O, y]
+            [_, v, j, C, O]
         ),
         handleContainerKeyUp: r.useCallback(
             (e) => {
                 if (document.activeElement !== s.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? _(e) : 'a' === e.key && t ? O(e) : 'Escape' === e.key ? j(e) : l.Bd.has(e.key) && t ? y(e) : 'Meta' !== e.key && j(e);
+                'Backspace' === e.key ? v(e) : 'a' === e.key && t ? C(e) : 'Escape' === e.key ? j(e) : a.Bd.has(e.key) && t ? O(e) : 'Meta' !== e.key && j(e);
             },
-            [y, _, O, j, s]
+            [O, v, C, j, s]
         ),
-        handleRemoveTag: f,
-        handleTagChangeEvent: h,
-        handleSelectTag: b,
-        handleUnselectTag: x,
+        handleRemoveTag: h,
+        handleTagChangeEvent: f,
+        handleSelectTag: x,
+        handleUnselectTag: b,
         handleResetTagSelections: j,
-        handleInputBlurEvent: C
+        handleInputBlurEvent: y
     };
 }

@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(740903),
     s = n(426434),
-    a = n(112824),
-    l = n(181339),
+    l = n(112824),
+    a = n(181339),
     o = n(195189),
     c = n(3896),
     d = n(981631),
@@ -51,7 +51,7 @@ let m = (e) => {
     return {
         [i.u.CAPTCHA_AND_RAID_PROTECTION]: [
             {
-                renderComponent: () => (0, r.jsx)(l.Z, { guild: e }, 'raid-alerts'),
+                renderComponent: () => (0, r.jsx)(a.Z, { guild: e }, 'raid-alerts'),
                 enabled: !e.hasFeature(d.oNc.RAID_ALERTS_DISABLED)
             },
             {
@@ -70,8 +70,8 @@ let m = (e) => {
                 enabled: e.mfaLevel === d.BpS.ELEVATED
             },
             {
-                renderComponent: () => (0, r.jsx)(a.Z, { guild: e }, 'disable-risky-perms'),
-                enabled: 0 === (0, a.R)(e).length
+                renderComponent: () => (0, r.jsx)(l.Z, { guild: e }, 'disable-risky-perms'),
+                enabled: 0 === (0, l.R)(e).length
             }
         ]
     };

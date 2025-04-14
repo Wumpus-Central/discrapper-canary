@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -14,16 +14,16 @@ var r = n(200651),
     m = n(354459),
     g = n(388032),
     b = n(761325);
-let _ = function (e) {
+let y = function (e) {
     let { participants: t, channel: n, hasConnectPermission: l } = e,
-        _ = t.filter(m.Io),
-        y = (0, d.J)(n.guild_id),
+        y = t.filter(m.Io),
+        _ = (0, d.J)(n.guild_id),
         C = i.useCallback(() => {
-            y ? (0, u.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, y]),
+            _ ? (0, u.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, _]),
         x = (0, c.Q3)('ChannelCallEmpty'),
         v = (0, a._q$)('ChannelCallEmpty'),
-        j = 4 === _.length ? 2 : 3;
+        j = 4 === y.length ? 2 : 3;
     return (0, r.jsxs)('div', {
         className: o()(b.container, { [b.withRive]: v }),
         children: [
@@ -31,7 +31,7 @@ let _ = function (e) {
             (0, r.jsx)('div', {
                 className: b.tiles,
                 style: { maxWidth: 168 * j },
-                children: _.slice(0, 5).map((e) =>
+                children: y.slice(0, 5).map((e) =>
                     (0, r.jsx)(
                         h.ZP,
                         {
@@ -59,20 +59,20 @@ let _ = function (e) {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
-                        0 === _.length
+                        0 === y.length
                             ? g.NW.string(g.t.zSqdra)
-                            : 1 === _.length
-                              ? g.NW.formatToPlainString(g.t.BUyJIC, { a: (0, p.Z)(n, _[0]) })
-                              : 2 === _.length
+                            : 1 === y.length
+                              ? g.NW.formatToPlainString(g.t.BUyJIC, { a: (0, p.Z)(n, y[0]) })
+                              : 2 === y.length
                                 ? g.NW.formatToPlainString(g.t.dcyZf3, {
-                                      a: (0, p.Z)(n, _[0]),
-                                      b: (0, p.Z)(n, _[1])
+                                      a: (0, p.Z)(n, y[0]),
+                                      b: (0, p.Z)(n, y[1])
                                   })
-                                : _.length > 2
+                                : y.length > 2
                                   ? g.NW.formatToPlainString(g.t['44/Obm'], {
-                                        a: (0, p.Z)(n, _[0]),
-                                        b: (0, p.Z)(n, _[1]),
-                                        n: _.length - 2
+                                        a: (0, p.Z)(n, y[0]),
+                                        b: (0, p.Z)(n, y[1]),
+                                        n: y.length - 2
                                     })
                                   : void 0
                 })

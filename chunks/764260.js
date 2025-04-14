@@ -1,14 +1,14 @@
 n.d(t, {
-    Gf: () => h,
+    Gf: () => f,
     OW: () => u,
-    S1: () => l,
+    S1: () => a,
     TW: () => m,
     TY: () => c,
     Uv: () => d,
     _l: () => p,
-    d_: () => f,
+    d_: () => h,
     lO: () => o,
-    sI: () => a,
+    sI: () => l,
     we: () => g
 }),
     n(953529),
@@ -16,13 +16,13 @@ n.d(t, {
 var r = n(570140),
     i = n(749210),
     s = n(228643);
-function a(e) {
+function l(e) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_SORT_UPDATE',
         roles: e
     });
 }
-function l() {
+function a() {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_INIT' });
 }
 function o(e, t, n) {
@@ -76,14 +76,14 @@ function p(e, t, n) {
         unicodeEmoji: n
     });
 }
-function f(e, t) {
+function h(e, t) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS',
         roleId: e,
         roleConnectionConfigurations: t
     });
 }
-async function h(e, t, n, a, l) {
+async function f(e, t, n, l, a) {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SUBMITTING' });
     try {
         let r = async () => {
@@ -102,9 +102,9 @@ async function h(e, t, n, a, l) {
                 unicodeEmoji: n.unicodeEmoji
             }).then(r, r);
         };
-        if ((null != n && n.length > 0 ? await i.Z.batchRoleUpdate(e, n).then(r, r) : await r(), null != l && null != a))
-            for await (let t of a) {
-                let n = l.get(t);
+        if ((null != n && n.length > 0 ? await i.Z.batchRoleUpdate(e, n).then(r, r) : await r(), null != a && null != l))
+            for await (let t of l) {
+                let n = a.get(t);
                 await (0, s.L_)(e, t, null != n ? n : []);
             }
     } catch (e) {

@@ -11,14 +11,14 @@ var r = n(192379),
     p = n(424602);
 n(445392);
 var h = n(783097),
-    _ = n(701488),
-    f = n(689079);
+    f = n(701488),
+    _ = n(689079);
 let m = {
         commandTypes: [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT]
     },
     b = {
         placeholderCount: 0,
-        limit: f.tn,
+        limit: _.tn,
         includeFrecency: !0
     };
 function g(e) {
@@ -41,12 +41,12 @@ function g(e) {
                     var e, t;
                     return a && null != (t = null == (e = d.Z.getApps()) ? void 0 : e.filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS))) ? t : [];
                 }),
-                g = t.filter((e) => e.id !== f.bi.FRECENCY && e.id !== f.bi.BUILT_IN),
+                g = t.filter((e) => e.id !== _.bi.FRECENCY && e.id !== _.bi.BUILT_IN),
                 E = 'channel' in n && (0, p.aZ)(n.channel, 'useAppLauncherFrecents.useFrecentApps()'),
                 O = 'contextless' === n.type,
                 y = r.useMemo(() => {
                     let e = [];
-                    return O && e.push(_.jT), E && e.push(p.gu), e;
+                    return O && e.push(f.jT), E && e.push(p.gu), e;
                 }, [E, O]),
                 C = (0, u.h)(g, b);
             return r.useMemo(() => (s ? C.filter((e) => null != e.application && (0, h.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !y.includes(e.id)) : C.filter((e) => !y.includes(e.id))), [s, C, n, y]);

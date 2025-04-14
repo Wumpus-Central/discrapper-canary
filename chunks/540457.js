@@ -1,15 +1,15 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => l });
 var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(441012);
-function a(e) {
-    let { text: t, tooltipText: n, onClick: a } = e;
+function l(e) {
+    let { text: t, tooltipText: n, onClick: l } = e;
     return (0, r.jsx)(i.ua7, {
         text: n,
         shouldShow: null != n,
         children: (e) => {
-            var n, l;
+            var n, a;
             return (0, r.jsxs)(
                 i.P3F,
                 ((n = (function (e) {
@@ -37,10 +37,10 @@ function a(e) {
                     }
                     return e;
                 })({}, e)),
-                (l = l =
+                (a = a =
                     {
                         className: s.container,
-                        onClick: a,
+                        onClick: l,
                         children: [
                             (0, r.jsx)(i.qJs, {
                                 size: 'md',
@@ -55,7 +55,7 @@ function a(e) {
                         ]
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -63,8 +63,8 @@ function a(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
                 n)
             );

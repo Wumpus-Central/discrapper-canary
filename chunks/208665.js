@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => T });
 var l,
     r,
     i,
@@ -10,26 +10,26 @@ var l,
     u = n(999382),
     m = n(981631),
     N = n(290511);
-let h = !1,
-    I = null,
+let I = !1,
+    h = null,
     g = [],
     f = !1,
     p = [];
 function E() {
-    (h = !1), (I = null), (p = []), (f = !1), null != (I = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((g = d.Z.getOnboardingPrompts(I)), (f = d.Z.isAdvancedMode(I)));
+    (I = !1), (h = null), (p = []), (f = !1), null != (h = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((g = d.Z.getOnboardingPrompts(h)), (f = d.Z.isAdvancedMode(h)));
 }
 class S extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, d.Z);
     }
     hasChanges() {
-        return null != I && !a().isEqual(d.Z.getOnboardingPrompts(I), g);
+        return null != h && !a().isEqual(d.Z.getOnboardingPrompts(h), g);
     }
     get guildId() {
-        return I;
+        return h;
     }
     get submitting() {
-        return h;
+        return I;
     }
     get errors() {
         return p;
@@ -50,7 +50,7 @@ class S extends (i = o.ZP.Store) {
               writable: !0
           })
         : (S[l] = r);
-let x = new S(c.Z, {
+let T = new S(c.Z, {
     GUILD_SETTINGS_INIT: E,
     GUILD_SETTINGS_SET_SECTION: E,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: E,
@@ -59,14 +59,14 @@ let x = new S(c.Z, {
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: E,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
         var t;
-        (p = null != (t = e.errors) ? t : []), (h = !1);
+        (p = null != (t = e.errors) ? t : []), (I = !1);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
         let { prompts: t } = e;
         g = t;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (h = !0), (p = []);
+        (I = !0), (p = []);
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
         var t;

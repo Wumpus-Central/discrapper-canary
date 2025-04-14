@@ -11,9 +11,9 @@ var i = n(120356),
     c = n(821022),
     h = n(20493);
 let g = (e) => {
-    let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: p, isGuestInviteCreationToggleEnabled: I, onSetInviteFlags: N } = e,
+    let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: g, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, onSetInviteFlags: N } = e,
         f = (0, a.ZP)(),
-        { maxAge: j, maxUses: b, temporary: S, flags: T } = i;
+        { maxAge: j, maxUses: _, temporary: E, flags: S } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.xBx, {
@@ -36,15 +36,15 @@ let g = (e) => {
             (0, l.jsx)(o.Z, {
                 shouldHideTemporaryInviteToggle: g,
                 maxAge: j,
-                maxUses: b,
-                temporary: S,
-                onToggleTemporary: v,
-                onSelectMaxAge: x,
-                onSelectMaxUses: p,
+                maxUses: _,
+                temporary: E,
+                onToggleTemporary: p,
+                onSelectMaxAge: v,
+                onSelectMaxUses: x,
                 onGenerateNewLink: m,
                 isGuestInviteCreationToggleEnabled: I,
                 onSetInviteFlags: N,
-                inviteFlags: T
+                inviteFlags: S
             }),
             (0, l.jsx)(s.mzw, {
                 className: c.settingsFooter,

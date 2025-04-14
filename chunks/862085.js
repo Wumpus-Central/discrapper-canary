@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(556012),
-    a = n(388032),
-    l = n(467397);
+    l = n(388032),
+    a = n(467397);
 function o(e) {
     let { action: t, triggerType: n, toggled: o, onToggleAction: c } = e,
         d = (e) => () => c(e),
@@ -12,18 +12,18 @@ function o(e) {
     if (null == u) return null;
     let { headerText: m, descriptionText: g, icon: p } = u;
     return (0, r.jsxs)('div', {
-        className: l.actionContainer,
+        className: a.actionContainer,
         children: [
             (0, r.jsx)('div', {
-                className: l.actionIconContainer,
+                className: a.actionIconContainer,
                 children: (0, r.jsx)(p, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: l.actionIcon
+                    className: a.actionIcon
                 })
             }),
             (0, r.jsxs)('div', {
-                className: l.actionTextContainer,
+                className: a.actionTextContainer,
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: 'heading-sm/semibold',
@@ -39,13 +39,13 @@ function o(e) {
                               color: 'text-muted',
                               variant: 'text-xs/medium',
                               children: [
-                                  a.NW.string(a.t.Oa9oWF),
+                                  l.NW.string(l.t.Oa9oWF),
                                   (0, r.jsx)(i.P3F, {
                                       onClick: d(!0),
-                                      className: l.editChannel,
+                                      className: a.editChannel,
                                       tag: 'span',
                                       role: 'link',
-                                      children: a.NW.string(a.t.QupmYW)
+                                      children: l.NW.string(l.t.QupmYW)
                                   })
                               ]
                           })
@@ -57,7 +57,7 @@ function o(e) {
                     type: i.XZJ.Types.INVERTED,
                     value: o,
                     onChange: d(!1),
-                    className: l.__invalid_actionCheckbox
+                    className: a.__invalid_actionCheckbox
                 })
             })
         ]

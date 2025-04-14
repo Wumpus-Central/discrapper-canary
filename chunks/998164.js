@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(200651),
     i = n(192379),
     s = n(399606),
-    a = n(481060),
-    l = n(710344),
+    l = n(481060),
+    a = n(710344),
     o = n(734893),
     c = n(8426),
     d = n(969632),
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,8 +53,8 @@ function f(e, t) {
         e
     );
 }
-let h = [];
-function b() {
+let f = [];
+function x() {
     return (0, r.jsx)('div', {
         className: g.actionItemContainer,
         children: (0, r.jsxs)('div', {
@@ -62,7 +62,7 @@ function b() {
             children: [
                 (0, r.jsx)('div', {
                     className: g.actionItemEmojiWrapper,
-                    children: (0, r.jsx)(a.snC, {
+                    children: (0, r.jsx)(l.snC, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 20,
@@ -71,7 +71,7 @@ function b() {
                 }),
                 (0, r.jsx)('div', {
                     className: g.actionItemText,
-                    children: (0, r.jsx)(a.Text, {
+                    children: (0, r.jsx)(l.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: m.NW.string(m.t['K/i3iY'])
@@ -81,31 +81,31 @@ function b() {
         })
     });
 }
-function x(e) {
+function b(e) {
     let { guildId: t, onAddAction: s } = e,
-        l = i.useCallback(() => {
+        a = i.useCallback(() => {
             if (null != t)
-                return (0, a.ZDy)(async () => {
+                return (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('14653').then(n.bind(n, 380716));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            f(p({}, n), {
+                            h(p({}, n), {
                                 guildId: t,
                                 onSave: s
                             })
                         );
                 });
         }, [t, s]);
-    return (0, r.jsxs)(a.P3F, {
+    return (0, r.jsxs)(l.P3F, {
         className: g.addActionItem,
-        onClick: l,
+        onClick: a,
         children: [
-            (0, r.jsx)(a.oFk, {
+            (0, r.jsx)(l.oFk, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'none',
                 children: m.NW.string(m.t.qce3EB)
@@ -117,9 +117,9 @@ let j = function (e) {
     let { guildId: t } = e,
         n = (0, s.Wu)([d.Z], () => {
             var e;
-            return null != (e = d.Z.getSettings().newMemberActions) ? e : h;
+            return null != (e = d.Z.getSettings().newMemberActions) ? e : f;
         }),
-        a = i.useCallback(
+        l = i.useCallback(
             (e, n) => {
                 (0, c.vR)(e);
                 let r = d.Z.getSettings();
@@ -133,14 +133,14 @@ let j = function (e) {
         ),
         m = i.useCallback(
             (e, r, i, s) => {
-                var a;
-                let l = null == (a = n[e]) ? void 0 : a.channelId;
-                if (null == l) return;
+                var l;
+                let a = null == (l = n[e]) ? void 0 : l.channelId;
+                if (null == a) return;
                 let o = d.Z.getSettings();
                 null != o &&
-                    ((0, c.el)(l, r),
+                    ((0, c.el)(a, r),
                     (0, c.oo)(t, o, !0).then(() => {
-                        (0, c.ad)(t, l, i, s);
+                        (0, c.ad)(t, a, i, s);
                     }));
             },
             [n, t]
@@ -156,8 +156,8 @@ let j = function (e) {
             },
             [n, t]
         ),
-        N = n.map((e) => f(p({}, e), { id: e.channelId })),
-        v = i.useCallback(
+        N = n.map((e) => h(p({}, e), { id: e.channelId })),
+        _ = i.useCallback(
             (e) => {
                 (0, c.hS)(e);
                 let n = d.Z.getSettings();
@@ -165,7 +165,7 @@ let j = function (e) {
             },
             [t]
         ),
-        { handleDragStart: _, handleDragReset: y, handleDragComplete: O } = (0, l.Z)(N, v);
+        { handleDragStart: v, handleDragReset: O, handleDragComplete: C } = (0, a.Z)(N, _);
     return (0, r.jsxs)('div', {
         className: g.section,
         children: [
@@ -178,18 +178,18 @@ let j = function (e) {
                         actionIndex: n,
                         onChange: m,
                         onDelete: j,
-                        onDragStart: _,
-                        onDragReset: y,
-                        onDragComplete: O
+                        onDragStart: v,
+                        onDragReset: O,
+                        onDragComplete: C
                     },
                     e.channelId
                 )
             ),
-            (0, r.jsx)(b, {}),
+            (0, r.jsx)(x, {}),
             n.length < o.O9 &&
-                (0, r.jsx)(x, {
+                (0, r.jsx)(b, {
                     guildId: t,
-                    onAddAction: a
+                    onAddAction: l
                 })
         ]
     });

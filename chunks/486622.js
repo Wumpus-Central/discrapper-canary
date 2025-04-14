@@ -15,13 +15,13 @@ var r = n(192379),
     g = n(981631);
 function b(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: i, onError: b } = e,
-        _ = (0, f.Z)(),
-        [y, C] = r.useState(!1),
+        y = (0, f.Z)(),
+        [_, C] = r.useState(!1),
         [x, v] = r.useState(!1),
         [j, O] = r.useState(!1),
         [E, N] = r.useState(!1),
         [I, P] = r.useState(!1),
-        S = y || x || j,
+        S = _ || x || j,
         Z = r.useCallback(
             async (e) => {
                 if (!S) {
@@ -145,11 +145,11 @@ function b(e) {
             [Z]
         );
     return {
-        acceptMessageRequest: _ ? w : Z,
+        acceptMessageRequest: y ? w : Z,
         rejectMessageRequest: T,
         rejectAll: A,
         markAsNotSpam: R,
-        isAcceptLoading: y,
+        isAcceptLoading: _,
         isRejectLoading: x,
         isUserProfileLoading: j,
         isOptimisticAccepted: E,

@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(861254),
     g = n(221241),
     b = n(82965),
-    _ = n(643720),
-    y = n(127379),
+    y = n(643720),
+    _ = n(127379),
     C = n(981631),
     x = n(393740);
 let v = (e) => {
@@ -41,11 +41,11 @@ let v = (e) => {
         }, [N, P]),
         B = i.useCallback(
             (e, t) => {
-                I(), S(!P), l === y.D.EMOJI ? null == v || v(void 0) : null == v || v(y.D.EMOJI), (!j || P) && (null == t || t(e));
+                I(), S(!P), l === _.D.EMOJI ? null == v || v(void 0) : null == v || v(_.D.EMOJI), (!j || P) && (null == t || t(e));
             },
             [I, P, j, v, l]
         ),
-        G = (j || P) && (l === y.D.EMOJI || null == l);
+        G = (j || P) && (l === _.D.EMOJI || null == l);
     return (0, r.jsx)(s.yRy, {
         shouldShow: G,
         animation: k ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
@@ -58,7 +58,7 @@ let v = (e) => {
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, r.jsx)(_.Z, {
+            return (0, r.jsx)(y.Z, {
                 isHovered: G,
                 channel: t,
                 closePopout: n,

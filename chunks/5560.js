@@ -18,8 +18,8 @@ var r = n(200651),
     m = n(451478),
     g = n(21825),
     b = n(232495),
-    _ = n(10401),
-    y = n(322274);
+    y = n(10401),
+    _ = n(322274);
 function C(e, t, n) {
     return (
         t in e
@@ -118,10 +118,10 @@ class j extends i.PureComponent {
             l = (0, g.S)(e);
         if (null == l) return null;
         let { media: a, textAlign: s, isLongText: c, highPriority: u, spacing: p, arrowAlignment: f = h.cy.TOP, popoutPosition: m } = l,
-            { offsetX: b, offsetY: _ } = this.state,
+            { offsetX: b, offsetY: y } = this.state,
             C = {
                 left: null != b ? i.x + b : void 0,
-                top: null != _ ? i.y + _ : void 0
+                top: null != y ? i.y + y : void 0
             },
             j = (e) => {
                 let t = n && !e;
@@ -130,15 +130,15 @@ class j extends i.PureComponent {
                     : (0, r.jsxs)('div', {
                           children: [
                               (0, r.jsx)('div', {
-                                  className: o()(y.top, {
-                                      [y.animating]: t,
-                                      [y.notAnimating]: !t
+                                  className: o()(_.top, {
+                                      [_.animating]: t,
+                                      [_.notAnimating]: !t
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: o()(y.bottom, {
-                                      [y.animating]: t,
-                                      [y.notAnimating]: !t
+                                  className: o()(_.bottom, {
+                                      [_.animating]: t,
+                                      [_.notAnimating]: !t
                                   })
                               })
                           ]
@@ -147,9 +147,9 @@ class j extends i.PureComponent {
             O = (e) => {
                 let t = n && !e;
                 return {
-                    [y.animating]: t,
-                    [y.notAnimating]: !t,
-                    [y.highPriority]: u
+                    [_.animating]: t,
+                    [_.notAnimating]: !t,
+                    [_.highPriority]: u
                 };
             },
             E = this.getTutorialPopoutText();
@@ -177,12 +177,12 @@ class j extends i.PureComponent {
                         return (0, r.jsx)(
                             d.P3F,
                             v(x({}, e), {
-                                className: y.indicator,
+                                className: _.indicator,
                                 style: C,
                                 innerRef: this.contentRef,
                                 children: (0, r.jsxs)('div', {
-                                    className: o()(y.animationContainer, O(n)),
-                                    children: [j(n), (0, r.jsx)('div', { className: o()(y.innerCircle, O(n)) }), (0, r.jsx)('div', { className: o()(y.outerCircle, O(n)) })]
+                                    className: o()(_.animationContainer, O(n)),
+                                    children: [j(n), (0, r.jsx)('div', { className: o()(_.innerCircle, O(n)) }), (0, r.jsx)('div', { className: o()(_.outerCircle, O(n)) })]
                                 })
                             })
                         );
@@ -211,10 +211,10 @@ let O =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: i
-              } = (0, u.cj)([_.Z, m.Z, f.Z], () => ({
-                  indicators: _.Z.getIndicators(),
-                  tutorialData: _.Z.getData(),
-                  shouldShowAny: _.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
+              } = (0, u.cj)([y.Z, m.Z, f.Z], () => ({
+                  indicators: y.Z.getIndicators(),
+                  tutorialData: y.Z.getData(),
+                  shouldShowAny: y.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
                   windowFocused: m.Z.isFocused()
               }));
               return i

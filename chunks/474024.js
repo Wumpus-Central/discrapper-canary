@@ -1,9 +1,9 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(580685),
+    l = n.n(s),
+    a = n(580685),
     o = n(442837),
     c = n(481060),
     d = n(314852),
@@ -11,56 +11,56 @@ var r = n(200651),
     m = n(323220),
     g = n(434404),
     p = n(981631),
-    f = n(388032),
-    h = n(951767);
-function b(e) {
+    h = n(388032),
+    f = n(951767);
+function x(e) {
     var t;
     let { profile: n, canManageGuild: s } = e,
-        b = n.id,
-        x = l.Y.VISIBLE.has(n.visibility),
+        x = n.id,
+        b = a.Y.VISIBLE.has(n.visibility),
         j = (0, o.e7)(
             [d.Z],
             () => {
                 var e;
-                return (null == (e = d.Z.getProfile(b)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
+                return (null == (e = d.Z.getProfile(x)) ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
             },
-            [b]
+            [x]
         ),
         N = i.useCallback(() => {
-            x ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: j ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
-        }, [b, j, x]),
-        v = i.useCallback(() => {
+            b ? g.Z.updateGuildProfile(x, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(x, { visibility: j ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [x, j, b]),
+        _ = i.useCallback(() => {
             g.Z.setSection(p.pNK.ACCESS, p.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        _ = null == (t = n.features) ? void 0 : t.includes(p.oNc.DISCOVERABLE);
+        v = null == (t = n.features) ? void 0 : t.includes(p.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
-        className: h.twoColumnContainer,
+        className: f.twoColumnContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: h.column,
+                className: f.column,
                 children: [
                     (0, r.jsx)(c.j7V, {
                         onChange: N,
-                        value: !x,
+                        value: !b,
                         hideBorder: !0,
-                        disabled: _ || !s,
-                        children: f.NW.string(f.t.fjHWen)
+                        disabled: v || !s,
+                        children: h.NW.string(h.t.fjHWen)
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: f.NW.string(f.t.J1YOV1)
+                        children: h.NW.string(h.t.J1YOV1)
                     }),
-                    _ &&
+                    v &&
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: f.NW.format(f.t.R8jY9v, {
+                            children: h.NW.format(h.t.R8jY9v, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
                                         c.eee,
                                         {
-                                            onClick: v,
+                                            onClick: _,
                                             children: e
                                         },
                                         t
@@ -70,9 +70,9 @@ function b(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: a()(h.column, { [h.profileViewDisabled]: x }),
+                className: l()(f.column, { [f.profileViewDisabled]: b }),
                 children: (0, r.jsx)(m.Z, {
-                    guildId: b,
+                    guildId: x,
                     name: n.name
                 })
             })

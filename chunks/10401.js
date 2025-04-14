@@ -58,16 +58,16 @@ let h = {},
     m = !0,
     g = {},
     b = !1;
-function _() {
+function y() {
     if (((g = {}), !m))
         for (let [e, t] of Object.entries(s.Z)) {
             let n = !1 !== h[e];
             if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== h[n] && (g[e] = !1);
         }
 }
-class y extends (r = l.ZP.Store) {
+class _ extends (r = l.ZP.Store) {
     initialize() {
-        _(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(a.Z);
+        y(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(a.Z);
     }
     shouldShow(e) {
         return !(!b || m || c.a || (i.tq && ['writing-messages', 'organize-by-topic'].includes(e))) && (g[e] || !1);
@@ -86,17 +86,17 @@ class y extends (r = l.ZP.Store) {
         return null != t ? t[e] : null;
     }
 }
-u(y, 'displayName', 'TutorialIndicatorStore');
-let C = new y(o.Z, {
+u(_, 'displayName', 'TutorialIndicatorStore');
+let C = new _(o.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
-        (b = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), _();
+        (b = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), y();
     },
     CONNECTION_CLOSED: function () {
         b = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], _();
+        (h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], y();
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
         f = p(d({}, f), { [e.tutorialId]: e.renderData });

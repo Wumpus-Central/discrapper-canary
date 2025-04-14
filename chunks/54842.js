@@ -2,8 +2,8 @@ n.d(t, { Z: () => R }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(442837),
+    l = n.n(s),
+    a = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(142497),
@@ -11,17 +11,17 @@ var r = n(200651),
     m = n(496675),
     g = n(63063),
     p = n(981631),
-    f = n(190378),
-    h = n(388032),
-    b = n(239721),
-    x = n(438825),
+    h = n(190378),
+    f = n(388032),
+    x = n(239721),
+    b = n(438825),
     j = n(236140),
     N = n(37069),
-    v = n(518513),
-    _ = n(168179),
-    y = n(348986),
-    O = n(930065),
-    C = n(345669);
+    _ = n(518513),
+    v = n(168179),
+    O = n(348986),
+    C = n(930065),
+    y = n(345669);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,13 +69,13 @@ let S = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
-            header: h.NW.string(h.t.oVQF29),
-            body: h.NW.format(h.t.A6G7am, {
+            header: f.NW.string(f.t.oVQF29),
+            body: f.NW.format(f.t.A6G7am, {
                 featureHook: (e, t) =>
                     (0, r.jsx)(
                         'strong',
                         {
-                            className: b.featuredText,
+                            className: x.featuredText,
                             children: e
                         },
                         t
@@ -85,12 +85,12 @@ let S = () => [
         {
             icon: c.IeX,
             color: o.Z.unsafe_rawColors.PARTNER.css,
-            header: h.NW.string(h.t['0rJl9/']),
-            body: h.NW.format(h.t.XsCNk5, {
+            header: f.NW.string(f.t['0rJl9/']),
+            body: f.NW.format(f.t.XsCNk5, {
                 infoHook: () =>
                     (0, r.jsx)(c.ua7, {
-                        text: h.NW.string(h.t.kPJlTk),
-                        'aria-label': h.NW.string(h.t.kPJlTk),
+                        text: f.NW.string(f.t.kPJlTk),
+                        'aria-label': f.NW.string(f.t.kPJlTk),
                         children: (e) =>
                             (0, r.jsx)(
                                 c.d3s,
@@ -98,7 +98,7 @@ let S = () => [
                                     {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: b.infoIcon
+                                        className: x.infoIcon
                                     },
                                     e
                                 )
@@ -108,7 +108,7 @@ let S = () => [
                     (0, r.jsx)(
                         'strong',
                         {
-                            className: b.featuredText,
+                            className: x.featuredText,
                             children: e
                         },
                         t
@@ -118,37 +118,37 @@ let S = () => [
         {
             icon: c.d3s,
             color: o.Z.unsafe_rawColors.RED_360.css,
-            header: h.NW.string(h.t.W2kLJC),
-            body: h.NW.string(h.t.hyNkHx)
+            header: f.NW.string(f.t.W2kLJC),
+            body: f.NW.string(f.t.hyNkHx)
         }
     ],
     T = [
         {
-            iconSrc: y,
+            iconSrc: O,
             name: 'Pokemon GO Paris',
             position: [-230, -100]
         },
         {
-            iconSrc: O,
+            iconSrc: C,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
             rightAlign: !0
         },
         {
-            iconSrc: v,
+            iconSrc: _,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
         },
         {
-            iconSrc: _,
+            iconSrc: v,
             name: 'r/leagueoflegends',
             position: [-320, -30],
             rightAlign: !0
         },
         {
-            iconSrc: C,
+            iconSrc: y,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
@@ -161,12 +161,12 @@ let S = () => [
         }
     ],
     P = (e) => {
-        let { icon: t, color: n, size: i = 24, header: s, body: a } = e;
+        let { icon: t, color: n, size: i = 24, header: s, body: l } = e;
         return (0, r.jsxs)('div', {
-            className: b.featureCard,
+            className: x.featureCard,
             children: [
                 (0, r.jsx)('div', {
-                    className: b.featureIcon,
+                    className: x.featureIcon,
                     children: (0, r.jsx)(t, {
                         color: null != n ? n : 'currentColor',
                         width: i,
@@ -176,29 +176,29 @@ let S = () => [
                 }),
                 (0, r.jsx)(c.X6q, {
                     variant: 'heading-md/semibold',
-                    className: b.featureHeader,
+                    className: x.featureHeader,
                     children: s
                 }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: a
+                    children: l
                 })
             ]
         });
     },
     w = (e) => {
-        let { iconSrc: t, name: n, position: i, faded: s, rightAlign: l, imageCoordinates: o } = e,
+        let { iconSrc: t, name: n, position: i, faded: s, rightAlign: a, imageCoordinates: o } = e,
             d = {
-                [l ? 'right' : 'left']: o[0] + i[0],
+                [a ? 'right' : 'left']: o[0] + i[0],
                 top: o[1] + i[1]
             };
         return (0, r.jsxs)('div', {
-            className: a()(b.guildDetails, { [b.faded]: s }),
+            className: l()(x.guildDetails, { [x.faded]: s }),
             style: d,
             children: [
                 (0, r.jsx)('div', {
-                    className: b.guildIcon,
+                    className: x.guildIcon,
                     children: (0, r.jsx)('img', {
                         alt: '',
                         src: t,
@@ -216,92 +216,92 @@ let S = () => [
     R = (e) => {
         let { guild: t } = e,
             [n, s] = i.useState(0),
-            [a, o] = i.useState(0),
-            [N, v] = i.useState(),
-            _ = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
-            y = null == N ? void 0 : N.offsetWidth,
-            O = null == N ? void 0 : N.offsetHeight;
+            [l, o] = i.useState(0),
+            [N, _] = i.useState(),
+            v = (0, a.e7)([m.Z], () => m.Z.can(p.Plq.ADMINISTRATOR, t)),
+            O = null == N ? void 0 : N.offsetWidth,
+            C = null == N ? void 0 : N.offsetHeight;
         i.useEffect(() => {
-            null != y && s(y / 2), null != O && o(O / 2);
-        }, [y, O, s, o]),
+            null != O && s(O / 2), null != C && o(C / 2);
+        }, [O, C, s, o]),
             i.useEffect(() => {
-                (0, d.Kw)(f.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+                (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []);
-        let C = () => {
+        let y = () => {
             u.Z.open();
         };
         return (0, r.jsxs)('div', {
-            className: b.container,
+            className: x.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: b.banner,
-                    ref: (e) => v(e),
+                    className: x.banner,
+                    ref: (e) => _(e),
                     children: [
                         T.map((e) =>
                             (0, r.jsx)(
                                 w,
                                 E(I({}, e), {
-                                    imageCoordinates: [n, a]
+                                    imageCoordinates: [n, l]
                                 }),
                                 e.name
                             )
                         ),
                         (0, r.jsx)('img', {
                             alt: '',
-                            src: x,
-                            className: b.image,
+                            src: b,
+                            className: x.image,
                             width: 256
                         }),
                         (0, r.jsx)('img', {
                             alt: '',
                             src: j,
-                            className: b.sparkles
+                            className: x.sparkles
                         })
                     ]
                 }),
                 (0, r.jsx)(c.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: h.NW.string(h.t['M/gBcH'])
+                    children: f.NW.string(f.t['M/gBcH'])
                 }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-md/normal',
-                    className: b.body,
-                    children: h.NW.format(h.t['52EgsL'], { helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
+                    className: x.body,
+                    children: f.NW.format(f.t['52EgsL'], { helpdeskArticle: g.Z.getArticleURL(p.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
                 }),
                 (0, r.jsx)(c.ua7, {
-                    text: _ ? null : h.NW.string(h.t['pjG+T0']),
-                    'aria-label': _ ? void 0 : h.NW.string(h.t['pjG+T0']),
+                    text: v ? null : f.NW.string(f.t['pjG+T0']),
+                    'aria-label': v ? void 0 : f.NW.string(f.t['pjG+T0']),
                     children: (e) =>
                         (0, r.jsx)(
                             c.zxk,
                             E(
                                 I(
                                     {
-                                        onClick: C,
-                                        className: b.button,
-                                        disabled: !_
+                                        onClick: y,
+                                        className: x.button,
+                                        disabled: !v
                                     },
                                     e
                                 ),
-                                { children: h.NW.string(h.t.LhlgY2) }
+                                { children: f.NW.string(f.t.LhlgY2) }
                             )
                         )
                 }),
-                (0, r.jsx)('hr', { className: b.separator }),
+                (0, r.jsx)('hr', { className: x.separator }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: h.NW.string(h.t.OzLWLC)
+                    children: f.NW.string(f.t.OzLWLC)
                 }),
                 (0, r.jsx)(c.Text, {
                     color: 'header-secondary',
-                    className: b.body,
+                    className: x.body,
                     variant: 'text-sm/normal',
-                    children: h.NW.format(h.t.rjhrqK, { helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE) })
+                    children: f.NW.format(f.t.rjhrqK, { helpdeskArticle: g.Z.getArticleURL(p.BhN.GUILD_COMMUNITY_FEATURE) })
                 }),
                 (0, r.jsx)('div', {
-                    className: b.features,
+                    className: x.features,
                     children: S().map((e, t) => (0, r.jsx)(P, I({}, e), t))
                 })
             ]

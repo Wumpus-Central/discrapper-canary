@@ -5,14 +5,14 @@ let s = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { refreshOnDepChange: t } = e,
         [n, s] = r.useState([]),
-        [a, l] = r.useState(!0),
+        [l, a] = r.useState(!0),
         o = async () => {
-            l(!0);
+            a(!0);
             try {
                 let e = await i.Z.fetchTeams(!0);
                 s(e.body);
             } catch (e) {}
-            l(!1);
+            a(!1);
         },
         c = r.useRef(!0);
     return (
@@ -21,7 +21,7 @@ let s = function () {
         }, [t]),
         {
             teams: n,
-            loading: a,
+            loading: l,
             refresh: o
         }
     );

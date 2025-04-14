@@ -1,5 +1,5 @@
 n.d(t, {
-    d: () => b,
+    d: () => _,
     k: () => j
 }),
     n(388685);
@@ -15,9 +15,9 @@ var l = n(200651),
     h = n(751771),
     g = n(699516),
     m = n(594174),
-    v = n(768581),
-    x = n(624138),
-    p = n(51144),
+    p = n(768581),
+    v = n(624138),
+    x = n(51144),
     I = n(388032),
     N = n(821022);
 function f(e, t, n) {
@@ -34,7 +34,7 @@ function f(e, t, n) {
     );
 }
 let j = 44;
-class b extends i.Component {
+class _ extends i.Component {
     shouldComponentUpdate(e, t) {
         return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
     }
@@ -43,17 +43,17 @@ class b extends i.Component {
             t,
             n,
             { user: i, channel: r } = this.props;
-        if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = p.ZP.getName(i));
+        if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = x.ZP.getName(i));
         else if (null != r && ((t = (0, o.x)(r)), (n = (0, u.F6)(r, m.default, g.Z)), null == t && null != r.guild_id)) {
             let n = c.Z.getGuild(r.guild_id);
             null != n &&
                 (null != n.icon
-                    ? (t = v.ZP.getGuildIconURL({
+                    ? (t = p.ZP.getGuildIconURL({
                           id: r.guild_id,
                           icon: n.icon,
                           size: 32
                       }))
-                    : (e = (0, x.Zg)(n.name)));
+                    : (e = (0, v.Zg)(n.name)));
         }
         if (null == t || null == n)
             if (null != e)
@@ -104,7 +104,7 @@ class b extends i.Component {
                             this.renderUserOrChannel(),
                             (0, l.jsxs)('div', {
                                 className: N.inviteRowName,
-                                children: [p.ZP.getName(t), null != n ? (0, u.F6)(n, m.default, g.Z, !0) : null]
+                                children: [x.ZP.getName(t), null != n ? (0, u.F6)(n, m.default, g.Z, !0) : null]
                             })
                         ]
                     }),

@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(210975),
     g = n(981631),
     b = n(388032),
-    _ = n(791293);
-function y(e) {
+    y = n(791293);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ let x = (e) => {
                   children: (e) =>
                       (0, r.jsx)(
                           a.tQf,
-                          C(y({}, e), {
+                          C(_({}, e), {
                               size: 'xs',
                               'aria-label': b.NW.string(b.t.VHXh8f),
                               color: a.TVs.colors.INTERACTIVE_NORMAL
@@ -83,10 +83,10 @@ let x = (e) => {
             f = (0, d.cO)(t),
             [m, v] = i.useState(!1);
         return (0, r.jsxs)('div', {
-            className: _.newWrapper,
+            className: y.newWrapper,
             children: [
                 (0, r.jsxs)('div', {
-                    className: o()(_.hoverableContainer, { [_.editing]: !1 !== m }),
+                    className: o()(y.hoverableContainer, { [y.editing]: !1 !== m }),
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: [
                         l,
@@ -99,8 +99,8 @@ let x = (e) => {
                                           children: (e) =>
                                               (0, r.jsxs)(
                                                   a.P3F,
-                                                  C(y({}, e), {
-                                                      className: _.clickableTitle,
+                                                  C(_({}, e), {
+                                                      className: y.clickableTitle,
                                                       onClick: () => v(p),
                                                       onContextMenu: (e) =>
                                                           (0, c.jW)(
@@ -113,7 +113,7 @@ let x = (e) => {
                                                                           return (e) =>
                                                                               (0, r.jsx)(
                                                                                   n,
-                                                                                  C(y({}, e), {
+                                                                                  C(_({}, e), {
                                                                                       channel: t,
                                                                                       selected: !0
                                                                                   })
@@ -130,7 +130,7 @@ let x = (e) => {
                                                               children: null != h ? h : ''
                                                           }),
                                                           (0, r.jsx)(a.vdY, {
-                                                              className: _.editIcon,
+                                                              className: y.editIcon,
                                                               size: 'xs',
                                                               color: 'currentColor'
                                                           })
@@ -148,7 +148,7 @@ let x = (e) => {
                                   children: (0, r.jsx)(a.oil, {
                                       autoFocus: !0,
                                       maxLength: g.HN8,
-                                      inputClassName: _.newInput,
+                                      inputClassName: y.newInput,
                                       name: 'channel_name',
                                       autoComplete: 'off',
                                       value: m,
@@ -162,7 +162,7 @@ let x = (e) => {
                 }),
                 !1 !== m &&
                     (0, r.jsxs)('div', {
-                        className: _.explainer,
+                        className: y.explainer,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
@@ -172,7 +172,7 @@ let x = (e) => {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-muted',
-                                className: _.visibleLink,
+                                className: y.visibleLink,
                                 children: b.NW.format(b.t.HVqAgI, { onCancel: () => v(!1) })
                             })
                         ]
@@ -187,13 +187,13 @@ let x = (e) => {
             children: [
                 n,
                 (0, r.jsxs)('div', {
-                    className: _.container,
+                    className: y.container,
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: [
                         (0, r.jsx)(u.Z, {
                             minLen: 1,
                             maxLen: g.HN8,
-                            className: _.channelName,
+                            className: y.channelName,
                             name: 'channel_name',
                             autoComplete: 'off',
                             value: null != i ? i : '',
@@ -214,7 +214,7 @@ let x = (e) => {
             channel: t,
             children: (0, r.jsx)(f.v, {
                 channel: t,
-                className: i ? _.newGdmIcon : n,
+                className: i ? y.newGdmIcon : n,
                 children: (0, r.jsx)(h.Z, {
                     'aria-hidden': !0,
                     channel: t,

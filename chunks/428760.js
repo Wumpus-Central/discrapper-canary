@@ -2,27 +2,27 @@ n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(730671),
     c = n(388032),
     d = n(886678);
 function u(e) {
     let { onChangeText: t, maxWordCount: n, className: s, textAreaClassName: u, subtitleText: m, initialValue: g } = e,
         p = i.useMemo(() => (null != g ? g : []), [g]),
-        { value: f, onChange: h, errorMessage: b } = (0, o.Z)(t, g, n);
+        { value: h, onChange: f, errorMessage: x } = (0, o.Z)(t, g, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: a()(d.keywordsContainer, s),
+                className: l()(d.keywordsContainer, s),
                 children: [
-                    (0, r.jsx)(l.lcI, {
-                        className: a()(d.keywordsTextArea, u),
-                        value: f,
-                        onChange: h,
+                    (0, r.jsx)(a.lcI, {
+                        className: l()(d.keywordsTextArea, u),
+                        value: h,
+                        onChange: f,
                         placeholder: c.NW.string(c.t.UyaxJy)
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: d.keywordsCounter,
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -30,14 +30,14 @@ function u(e) {
                     })
                 ]
             }),
-            null != b
-                ? (0, r.jsx)(l.Text, {
-                      className: a()(d.paddingTop, d.errorText),
+            null != x
+                ? (0, r.jsx)(a.Text, {
+                      className: l()(d.paddingTop, d.errorText),
                       variant: 'text-xs/medium',
                       color: 'text-danger',
-                      children: b
+                      children: x
                   })
-                : (0, r.jsx)(l.Text, {
+                : (0, r.jsx)(a.Text, {
                       className: d.paddingTop,
                       variant: 'text-xs/normal',
                       color: 'header-secondary',

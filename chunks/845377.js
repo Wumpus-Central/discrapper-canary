@@ -2,23 +2,23 @@ n.d(t, { Z: () => I }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(498607),
-    o = n.n(l),
+    l = n.n(s),
+    a = n(498607),
+    o = n.n(a),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
     m = n(692547),
     g = n(481060),
     p = n(984933),
-    f = n(63063),
-    h = n(709054),
-    b = n(434404),
-    x = n(118215),
+    h = n(63063),
+    f = n(709054),
+    x = n(434404),
+    b = n(118215),
     j = n(981631),
     N = n(388032),
-    v = n(252151);
-function _(e) {
+    _ = n(252151);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,20 +61,20 @@ function y(e, t) {
         e
     );
 }
-let O = (e) => {
-    let { name: t, failingName: n, description: i, checked: s, pending: a, pendingDescription: l, failingDescription: o } = e,
+let C = (e) => {
+    let { name: t, failingName: n, description: i, checked: s, pending: l, pendingDescription: a, failingDescription: o } = e,
         c = t,
         d = null,
         u = null;
     return (
-        a
+        l
             ? ((d = (0, r.jsx)(g.P4T, {
                   size: 'custom',
                   color: m.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20
               })),
-              (u = null != l ? l : i))
+              (u = null != a ? a : i))
             : s
               ? ((d = (0, r.jsx)(g.XZJ, {
                     readOnly: !0,
@@ -93,14 +93,14 @@ let O = (e) => {
                 (c = null != n ? n : t),
                 (u = null != o ? o : i)),
         (0, r.jsxs)('div', {
-            className: v.checklistItem,
+            className: _.checklistItem,
             children: [
                 (0, r.jsx)('div', {
-                    className: v.checklistIcon,
+                    className: _.checklistIcon,
                     children: d
                 }),
                 (0, r.jsxs)('div', {
-                    className: v.checklistText,
+                    className: _.checklistText,
                     children: [
                         (0, r.jsx)(g.X6q, {
                             variant: 'heading-md/semibold',
@@ -117,7 +117,7 @@ let O = (e) => {
         })
     );
 };
-function C(e, t) {
+function y(e, t) {
     return o()(
         null == e
             ? void 0
@@ -134,8 +134,8 @@ function C(e, t) {
     );
 }
 let I = (e) => {
-    let { guild: t, guildId: s, className: l, headerContent: o, failedItemsOnly: c = !1 } = e,
-        [m, I] = (0, u.Wu)([x.ZP], () => [x.ZP.getDiscoveryChecklist(s), x.ZP.isLoading()], [s]),
+    let { guild: t, guildId: s, className: a, headerContent: o, failedItemsOnly: c = !1 } = e,
+        [m, I] = (0, u.Wu)([b.ZP], () => [b.ZP.getDiscoveryChecklist(s), b.ZP.isLoading()], [s]),
         { nsfwProperties: E } = null != m ? m : {},
         S = null == t ? void 0 : t.hasFeature(j.oNc.PARTNERED),
         T = null == E ? void 0 : E.channels_banned_keywords,
@@ -145,7 +145,7 @@ let I = (e) => {
                 var e, n, r;
                 if (null == T) return [];
                 let i = null != (n = (null != (e = p.ZP.getChannels(t.id)) ? e : {})[p.sH]) ? n : [],
-                    s = null != (r = null == i ? void 0 : i.map((e) => e.channel).reduce((e, t) => y(_({}, e), { [t.id]: t }), {})) ? r : {};
+                    s = null != (r = null == i ? void 0 : i.map((e) => e.channel).reduce((e, t) => O(v({}, e), { [t.id]: t }), {})) ? r : {};
                 return null == T
                     ? []
                     : Object.entries(T).map((e) => {
@@ -154,19 +154,19 @@ let I = (e) => {
                       });
             },
             [t.id, T],
-            C
+            y
         );
     if (I || null == m)
         return (0, r.jsxs)('div', {
-            className: a()(v.container, v.loaderContainer, l),
+            className: l()(_.container, _.loaderContainer, a),
             children: [
                 (0, r.jsx)(g.X6q, {
-                    className: v.loadingText,
+                    className: _.loadingText,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
                     children: N.NW.string(N.t.e1gm0d)
                 }),
-                (0, r.jsx)(g.$jN, { className: v.__invalid_spinner })
+                (0, r.jsx)(g.$jN, { className: _.__invalid_spinner })
             ]
         });
     let w = S ? N.t['WH+1Y2'] : N.t.a4MYDA,
@@ -177,7 +177,7 @@ let I = (e) => {
                 description: N.NW.string(N.t.hSLSMz),
                 failingDescription: N.NW.format(N.t.odsGg4, {
                     termsURL: j.EYA.TERMS,
-                    guidelinesURL: f.Z.getArticleURL(j.BhN.PUBLIC_GUILD_GUILDLINES)
+                    guidelinesURL: h.Z.getArticleURL(j.BhN.PUBLIC_GUILD_GUILDLINES)
                 }),
                 checked: null == m ? void 0 : m.safeEnvironment
             },
@@ -194,7 +194,7 @@ let I = (e) => {
                 description: N.NW.formatToPlainString(N.t.VT0bQE, { minimumGuildAge: Math.ceil(m.minimumGuildAge / 7) }),
                 failingDescription: N.NW.formatToPlainString(N.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
-                    passDate: d()(h.default.extractTimestamp(s)).add(m.minimumGuildAge, 'days').format('LL')
+                    passDate: d()(f.default.extractTimestamp(s)).add(m.minimumGuildAge, 'days').format('LL')
                 }),
                 checked: null == m ? void 0 : m.age
             },
@@ -206,7 +206,7 @@ let I = (e) => {
                     children: [
                         (0, r.jsx)(g.Text, {
                             color: 'text-muted',
-                            className: v.healthFailingDescription,
+                            className: _.healthFailingDescription,
                             variant: 'text-sm/normal',
                             children: N.NW.string(N.t.LjqS0N)
                         }),
@@ -231,14 +231,14 @@ let I = (e) => {
                             return (!e && null != s) || (!t && null != r && null != i);
                         })() &&
                             (0, r.jsx)(g.zxk, {
-                                className: v.detailsButton,
+                                className: _.detailsButton,
                                 look: g.zxk.Looks.LINK,
                                 size: g.zxk.Sizes.NONE,
                                 color: g.zxk.Colors.LINK,
                                 onClick: () =>
                                     (0, g.ZDy)(async () => {
                                         let { default: e } = await n.e('23401').then(n.bind(n, 666599));
-                                        return (t) => (0, r.jsx)(e, y(_({}, t), { guildChecklist: m }));
+                                        return (t) => (0, r.jsx)(e, O(v({}, t), { guildChecklist: m }));
                                     }),
                                 children: N.NW.string(N.t.qyiTHx)
                             })
@@ -250,7 +250,7 @@ let I = (e) => {
                               (0, r.jsx)(
                                   'strong',
                                   {
-                                      className: v.healthPending,
+                                      className: _.healthPending,
                                       children: e
                                   },
                                   t
@@ -275,7 +275,7 @@ let I = (e) => {
                                           (0, r.jsx)(
                                               'span',
                                               {
-                                                  className: v.doesNot,
+                                                  className: _.doesNot,
                                                   children: e
                                               },
                                               t
@@ -285,7 +285,7 @@ let I = (e) => {
                             : null,
                         P.length > 0
                             ? (0, r.jsx)('div', {
-                                  className: v.indent,
+                                  className: _.indent,
                                   children: P.map((e) => {
                                       let [t, n] = e;
                                       return null != t
@@ -311,7 +311,7 @@ let I = (e) => {
                                           (0, r.jsx)(
                                               'span',
                                               {
-                                                  className: v.doesNot,
+                                                  className: _.doesNot,
                                                   children: e
                                               },
                                               t
@@ -328,7 +328,7 @@ let I = (e) => {
                                           (0, r.jsx)(
                                               'span',
                                               {
-                                                  className: v.doesNot,
+                                                  className: _.doesNot,
                                                   children: e
                                               },
                                               t
@@ -344,24 +344,24 @@ let I = (e) => {
                 name: N.NW.string(N.t.lSXnLy),
                 failingName: N.NW.string(N.t.awA3PT),
                 description: N.NW.string(N.t.QbBJ7e),
-                failingDescription: N.NW.format(N.t.kBXInZ, { onClick: () => b.Z.setSection(j.pNK.SAFETY, j.KsC.SAFETY_PERMISSIONS) }),
+                failingDescription: N.NW.format(N.t.kBXInZ, { onClick: () => x.Z.setSection(j.pNK.SAFETY, j.KsC.SAFETY_PERMISSIONS) }),
                 checked: null == m ? void 0 : m.protected
             }
         ];
     return (0, r.jsxs)('div', {
-        className: a()(v.container, l),
+        className: l()(_.container, a),
         children: [
             (() => {
                 let e = (null == m ? void 0 : m.sufficient) ? n(909425) : n(177266);
                 return null == o
                     ? null
                     : (0, r.jsxs)('div', {
-                          className: v.header,
+                          className: _.header,
                           children: [
                               (0, r.jsx)('img', {
                                   alt: '',
                                   src: e,
-                                  className: v.headerIcon,
+                                  className: _.headerIcon,
                                   width: 40
                               }),
                               o
@@ -372,7 +372,7 @@ let I = (e) => {
                 (0, r.jsxs)(
                     i.Fragment,
                     {
-                        children: [(0, r.jsx)(O, _({}, e)), t < R.length - 1 ? (0, r.jsx)('hr', { className: v.separator }) : null]
+                        children: [(0, r.jsx)(C, v({}, e)), t < R.length - 1 ? (0, r.jsx)('hr', { className: _.separator }) : null]
                     },
                     ''.concat(e.name)
                 )

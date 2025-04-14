@@ -1,12 +1,12 @@
 n.d(t, {
-    Z: () => h,
+    Z: () => f,
     n: () => g
 });
 var r,
     i = n(200651),
     s = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(748780),
     c = n(215569),
     d = n(65187);
@@ -45,7 +45,7 @@ let p = {
     tension: 40,
     overshootClamping: !0
 };
-class f extends s.PureComponent {
+class h extends s.PureComponent {
     componentWillEnter(e) {
         var t, n;
         null == (t = (n = this.props).onAnimationStart) || t.call(n),
@@ -84,16 +84,16 @@ class f extends s.PureComponent {
         super(e), u(this, '_animated', void 0), (this._animated = new o.Z.Value(-1 * e.direction));
     }
 }
-let h = (e) => {
-    let { children: t, step: n, direction: r, className: s, onAnimationStart: a, onAnimationEnd: o } = e;
+let f = (e) => {
+    let { children: t, step: n, direction: r, className: s, onAnimationStart: l, onAnimationEnd: o } = e;
     return (0, i.jsx)(c.W, {
         component: 'div',
-        className: l()(d.animator, s),
+        className: a()(d.animator, s),
         children: (0, i.jsx)(
-            f,
+            h,
             {
                 direction: r,
-                onAnimationStart: a,
+                onAnimationStart: l,
                 onAnimationEnd: o,
                 children: t
             },

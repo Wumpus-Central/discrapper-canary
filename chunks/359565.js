@@ -1,5 +1,5 @@
 n.d(t, {
-    q: () => _,
+    q: () => y,
     s: () => b
 });
 var r = n(200651),
@@ -95,7 +95,7 @@ function b(e) {
         })
     );
 }
-function _(e) {
+function y(e) {
     let { channel: t, narrow: n } = e,
         l = (0, d.Xb)(t);
     return (

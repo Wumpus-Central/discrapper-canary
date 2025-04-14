@@ -1,127 +1,127 @@
-n.d(t, { default: () => C });
-var o = n(200651);
-n(192379);
-var r = n(442837),
-    i = n(481060),
-    c = n(100527),
-    a = n(970606),
-    l = n(313201),
-    d = n(271383),
-    s = n(430824),
-    u = n(594174),
-    b = n(693546),
-    _ = n(305325),
-    f = n(937111),
-    m = n(702286),
-    p = n(523924),
-    g = n(981631),
-    I = n(388032);
-let C = function (e) {
-    var t,
-        n,
-        { guildId: C, transitionState: N } = e,
-        O = (function (e, t) {
+t.d(n, { default: () => j });
+var o = t(200651);
+t(192379);
+var i = t(442837),
+    r = t(481060),
+    c = t(100527),
+    l = t(970606),
+    a = t(313201),
+    d = t(271383),
+    s = t(430824),
+    u = t(594174),
+    b = t(693546),
+    m = t(305325),
+    p = t(937111),
+    f = t(702286),
+    _ = t(523924),
+    g = t(981631),
+    C = t(388032);
+let j = function (e) {
+    var n,
+        t,
+        { guildId: j, transitionState: h } = e,
+        O = (function (e, n) {
             if (null == e) return {};
-            var n,
+            var t,
                 o,
-                r = (function (e, t) {
+                i = (function (e, n) {
                     if (null == e) return {};
-                    var n,
+                    var t,
                         o,
-                        r = {},
-                        i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
-                })(e, t);
+                        i = {},
+                        r = Object.keys(e);
+                    for (o = 0; o < r.length; o++) (t = r[o]), n.indexOf(t) >= 0 || (i[t] = e[t]);
+                    return i;
+                })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (o = 0; o < r.length; o++) (t = r[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
             }
-            return r;
+            return i;
         })(e, ['guildId', 'transitionState']);
-    let y = (0, l.Dt)(),
-        T = (0, r.e7)([f.Z], () => f.Z.getRequest(C), [C]),
-        h = (0, r.e7)([s.Z], () => s.Z.getGuild(C), [C]),
-        j = (0, r.e7)([u.default], () => {
+    let I = (0, a.Dt)(),
+        v = (0, i.e7)([p.Z], () => p.Z.getRequest(j), [j]),
+        x = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
+        N = (0, i.e7)([u.default], () => {
             var e;
             return null == (e = u.default.getCurrentUser()) ? void 0 : e.id;
         }),
-        A = (0, r.e7)([d.ZP], () => (null != j ? d.ZP.getMember(C, j) : null), [j, C]),
-        x = async () => {
+        P = (0, i.e7)([d.ZP], () => (null != N ? d.ZP.getMember(j, N) : null), [N, j]),
+        y = async () => {
             var e;
             if (
-                (null != (e = null == h ? void 0 : h.hasFeature(g.oNc.CLAN)) &&
+                (null != (e = null == x ? void 0 : x.hasFeature(g.oNc.CLAN)) &&
                     e &&
-                    (0, a.Vr)({
-                        guildId: C,
+                    (0, l.Vr)({
+                        guildId: j,
                         source: c.Z.CLAN_REAPPLY
                     }),
-                null == A ? void 0 : A.isPending)
+                null == P ? void 0 : P.isPending)
             ) {
                 try {
-                    await b.Z.removeGuildJoinRequest(C);
+                    await b.Z.removeGuildJoinRequest(j);
                 } catch (e) {
                     throw e;
                 }
-                O.onClose(), (0, _.hk)(C);
-            } else b.Z.resetGuildJoinRequest(C);
+                O.onClose(), (0, m.hk)(j);
+            } else b.Z.resetGuildJoinRequest(j);
         };
-    return (0, o.jsx)(i.Y0X, {
-        size: i.CgR.DYNAMIC,
-        transitionState: N,
-        'aria-labelledby': y,
+    return (0, o.jsx)(r.Y0X, {
+        size: r.CgR.DYNAMIC,
+        transitionState: h,
+        'aria-labelledby': I,
         children: (0, o.jsx)(
-            p.Z,
-            ((t = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        o = Object.keys(n);
+            _.Z,
+            ((n = (function (e) {
+                for (var n = 1; n < arguments.length; n++) {
+                    var t = null != arguments[n] ? arguments[n] : {},
+                        o = Object.keys(t);
                     'function' == typeof Object.getOwnPropertySymbols &&
                         (o = o.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             })
                         )),
-                        o.forEach(function (t) {
+                        o.forEach(function (n) {
                             var o;
-                            (o = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
+                            (o = t[n]),
+                                n in e
+                                    ? Object.defineProperty(e, n, {
                                           value: o,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = o);
+                                    : (e[n] = o);
                         });
                 }
                 return e;
             })({}, O)),
-            (n = n =
+            (t = t =
                 {
-                    headerId: y,
-                    reapplyText: I.NW.string(I.t.I1LYVl),
-                    onReapply: x,
-                    confirmText: I.NW.string(I.t.BddRzc),
+                    headerId: I,
+                    reapplyText: C.NW.string(C.t.I1LYVl),
+                    onReapply: y,
+                    confirmText: C.NW.string(C.t.BddRzc),
                     onWithdrawApplication: () => {
-                        O.onClose(), null == A && (0, m.Z)();
+                        O.onClose(), null == P && (0, f.Z)();
                     },
-                    rejectionReason: null == T ? void 0 : T.rejectionReason,
-                    guild: h
+                    rejectionReason: null == v ? void 0 : v.rejectionReason,
+                    guild: x
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+                : (function (e, n) {
+                      var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
                           var o = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, o);
+                          t.push.apply(t, o);
                       }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      return t;
+                  })(Object(t)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
                   }),
-            t)
+            n)
         )
     });
 };

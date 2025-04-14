@@ -1,4 +1,4 @@
-n.d(t, { default: () => ex }), n(997841), n(388685);
+n.d(t, { default: () => ev }), n(997841), n(388685);
 var l,
     i = n(200651),
     r = n(192379),
@@ -11,18 +11,18 @@ var l,
     h = n(990547),
     g = n(533800),
     m = n(442837),
-    v = n(902704),
-    x = n(692547),
-    p = n(481060),
+    p = n(902704),
+    v = n(692547),
+    x = n(481060),
     I = n(447543),
     N = n(247272),
     f = n(110924),
     j = n(100527),
-    b = n(906732),
-    S = n(835473),
-    T = n(447003),
-    E = n(471445),
-    _ = n(259473),
+    _ = n(906732),
+    E = n(835473),
+    S = n(447003),
+    b = n(471445),
+    T = n(259473),
     O = n(600164),
     y = n(687516),
     C = n(648159),
@@ -30,16 +30,16 @@ var l,
     Z = n(427679),
     w = n(199902),
     A = n(662594),
-    R = n(592125),
-    k = n(984933),
+    k = n(592125),
+    R = n(984933),
     M = n(341165),
-    W = n(751771),
+    D = n(751771),
     L = n(496675),
-    V = n(158776),
-    D = n(944486),
+    W = n(158776),
+    V = n(944486),
     U = n(594174),
-    B = n(938475),
-    F = n(626135),
+    F = n(938475),
+    B = n(626135),
     G = n(630388),
     z = n(971130),
     H = n(264229),
@@ -109,7 +109,7 @@ let { INVITE_OPTIONS_FOREVER: ec, INVITE_OPTIONS_7_DAYS: eh, INVITE_OPTIONS_UNLI
 class em extends (l = r.PureComponent) {
     componentDidMount() {
         let { inviteChannel: e, code: t, guild: n, source: l, canCreateInvites: i, analyticsLocation: r, streamUserId: s, targetType: a, targetUserId: o, application: u, initialCounts: d, rows: c, showFriends: h, modalState: g, setModalState: m } = this.props,
-            { maxAge: v, maxUses: x, temporary: p, flags: N } = g;
+            { maxAge: p, maxUses: v, temporary: x, flags: N } = g;
         if (i) {
             let n = null == e ? void 0 : e.id;
             if (null == n) return;
@@ -118,12 +118,12 @@ class em extends (l = r.PureComponent) {
                     n,
                     {
                         validate: null != t ? t : null,
-                        max_age: v,
-                        max_uses: x,
+                        max_age: p,
+                        max_uses: v,
                         target_user_id: o,
                         target_type: a,
                         target_application_id: null == u ? void 0 : u.id,
-                        temporary: p,
+                        temporary: x,
                         flags: N
                     },
                     l
@@ -131,7 +131,7 @@ class em extends (l = r.PureComponent) {
         }
         if (
             (h &&
-                F.default.track(et.rMx.INVITE_SUGGESTION_OPENED, {
+                B.default.track(et.rMx.INVITE_SUGGESTION_OPENED, {
                     location: l,
                     num_suggestions: c.length,
                     num_friends: d.numFriends,
@@ -143,8 +143,8 @@ class em extends (l = r.PureComponent) {
             null != s)
         ) {
             let e = w.Z.getStreamForUser(s, n.id),
-                t = (0, y.L2)(e, V.Z);
-            F.default.track(et.rMx.OPEN_MODAL, {
+                t = (0, y.L2)(e, W.Z);
+            B.default.track(et.rMx.OPEN_MODAL, {
                 type: 'Send Stream Invite',
                 source: l,
                 location: r,
@@ -155,7 +155,7 @@ class em extends (l = r.PureComponent) {
             });
         } else
             (null == u ? void 0 : u.id) != null ||
-                F.default.track(et.rMx.OPEN_MODAL, {
+                B.default.track(et.rMx.OPEN_MODAL, {
                     type: 'Instant Invite Modal',
                     source: l,
                     location: r
@@ -178,17 +178,17 @@ class em extends (l = r.PureComponent) {
     }
     renderChannelWarning() {
         let { inviteChannel: e } = this.props;
-        return (0, T.Z)(e)
+        return (0, S.Z)(e)
             ? (0, i.jsxs)('div', {
                   className: ei.warningContainer,
                   children: [
-                      (0, i.jsx)(p.P4T, {
+                      (0, i.jsx)(x.P4T, {
                           size: 'custom',
                           className: ei.warningIcon,
-                          color: x.Z.unsafe_rawColors.YELLOW_300.css,
+                          color: v.Z.unsafe_rawColors.YELLOW_300.css,
                           width: 12
                       }),
-                      (0, i.jsx)(p.Text, {
+                      (0, i.jsx)(x.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: el.NW.string(el.t.x1SQZW)
@@ -204,13 +204,13 @@ class em extends (l = r.PureComponent) {
             g = null,
             m = null;
         if (((e = o ? null : null != r ? el.NW.string(el.t['6VQaqa']) : null != s ? el.NW.formatToPlainString(el.t.ZdK3dX, { applicationName: s.name }) : null != l ? el.NW.string(el.t.JKV4FB) : (null == u ? void 0 : u.isGuildStageVoice()) ? el.NW.string(el.t.zTrsHx) : el.NW.format(el.t.NvVBJS, { name: t.toString() })), null != u)) {
-            let e = (0, E.KS)(u, t);
+            let e = (0, b.KS)(u, t);
             null != e &&
                 (m = (0, i.jsxs)('div', {
                     className: ei.headerChannelContainer,
                     children: [
                         (0, i.jsx)(e, { className: ei.channelIcon }),
-                        (0, i.jsx)(p.Text, {
+                        (0, i.jsx)(x.Text, {
                             color: 'interactive-normal',
                             variant: 'text-md/normal',
                             children: u.name
@@ -223,20 +223,20 @@ class em extends (l = r.PureComponent) {
                 ? (0, i.jsxs)('div', {
                       className: ei.hubHeader,
                       children: [
-                          (0, i.jsx)(p.X6q, {
+                          (0, i.jsx)(x.X6q, {
                               className: a()(ei.hubInviteTitle, ei.headerCloseButtonSpacing),
                               id: this._headerId,
                               variant: 'heading-xl/semibold',
                               color: 'header-primary',
                               children: el.NW.string(el.t.WhR38v)
                           }),
-                          (0, i.jsx)(p.Text, {
+                          (0, i.jsx)(x.Text, {
                               color: 'header-secondary',
                               variant: 'text-md/normal',
                               children: el.NW.string(el.t.Ed4BMj)
                           }),
                           n &&
-                              (0, i.jsx)(p.E1j, {
+                              (0, i.jsx)(x.E1j, {
                                   query: h,
                                   className: ei.hubFriendSearch,
                                   onChange: this.handleQueryChange,
@@ -253,7 +253,7 @@ class em extends (l = r.PureComponent) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: ei.__invalid_headerTopRow,
-                                children: (0, i.jsx)(p.vwX, {
+                                children: (0, i.jsx)(x.vwX, {
                                     id: this._headerId,
                                     tag: 'h2',
                                     className: a()(er.marginBottom4, ei.headerCloseButtonSpacing, ei.headerText),
@@ -261,7 +261,7 @@ class em extends (l = r.PureComponent) {
                                 })
                             }),
                             m,
-                            (0, i.jsx)(p.E1j, {
+                            (0, i.jsx)(x.E1j, {
                                 query: h,
                                 className: ei.searchBar,
                                 onChange: this.handleQueryChange,
@@ -277,7 +277,7 @@ class em extends (l = r.PureComponent) {
                     })
                   : (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(p.vwX, {
+                            (0, i.jsx)(x.vwX, {
                                 id: this._headerId,
                                 tag: 'h2',
                                 className: a()(er.marginReset, ei.headerCloseButtonSpacing, ei.headerText),
@@ -287,12 +287,12 @@ class em extends (l = r.PureComponent) {
                             this.renderChannelWarning()
                         ]
                     })),
-            (0, i.jsxs)(p.xBx, {
+            (0, i.jsxs)(x.xBx, {
                 separator: n,
                 children: [
                     (0, i.jsx)('div', {
                         className: ei.closeButton,
-                        children: (0, i.jsx)(p.olH, { onClick: c })
+                        children: (0, i.jsx)(x.olH, { onClick: c })
                     }),
                     (0, i.jsxs)('div', {
                         className: ei.headerContainer,
@@ -305,12 +305,12 @@ class em extends (l = r.PureComponent) {
                                             src: ea,
                                             alt: ''
                                         }),
-                                        (0, i.jsx)(p.X6q, {
+                                        (0, i.jsx)(x.X6q, {
                                             variant: 'heading-lg/semibold',
                                             className: ei.welcomeHeading,
                                             children: el.NW.string(el.t.DpoBNz)
                                         }),
-                                        (0, i.jsx)(p.Text, {
+                                        (0, i.jsx)(x.Text, {
                                             variant: 'text-md/normal',
                                             color: 'text-secondary',
                                             className: ei.welcomeSubheading,
@@ -330,16 +330,16 @@ class em extends (l = r.PureComponent) {
         let { rows: e } = this.props,
             t = this.getInviteKey();
         return 0 === e.length
-            ? (0, i.jsx)(p.hzk, {
+            ? (0, i.jsx)(x.hzk, {
                   className: ei.inviteRowEmptyState,
-                  children: (0, i.jsx)(p.OZU, { children: el.NW.string(el.t.ojoWgY) })
+                  children: (0, i.jsx)(x.OZU, { children: el.NW.string(el.t.ojoWgY) })
               })
             : null == t
-              ? (0, i.jsx)(p.hzk, {
+              ? (0, i.jsx)(x.hzk, {
                     className: ei.inviteRowEmptyState,
-                    children: (0, i.jsx)(p.OZU, { children: el.NW.string(el.t.hzPwGB) })
+                    children: (0, i.jsx)(x.OZU, { children: el.NW.string(el.t.hzPwGB) })
                 })
-              : (0, i.jsx)(p.YAO, {
+              : (0, i.jsx)(x.YAO, {
                     className: ei.scroller,
                     sections: [e.length],
                     renderSection: this.renderSection,
@@ -362,13 +362,13 @@ class em extends (l = r.PureComponent) {
         let o = t.isOwner(a) ? el.NW.string(el.t.HFbByM) : el.NW.string(el.t.ueBhAw);
         return (
             null != l ? (o = el.NW.string(el.t.CXpS1N)) : null != r && (o = el.NW.string(el.t.ueCrHB)),
-            (0, i.jsx)(p.hzk, {
+            (0, i.jsx)(x.hzk, {
                 className: ei.noScroll,
                 children: (0, i.jsxs)(O.Z, {
                     direction: O.Z.Direction.VERTICAL,
                     className: er.marginBottom20,
                     children: [
-                        (0, i.jsx)(p.Text, {
+                        (0, i.jsx)(x.Text, {
                             className: ei.subText,
                             variant: 'text-sm/normal',
                             children: o
@@ -398,7 +398,7 @@ class em extends (l = r.PureComponent) {
                     direction: O.Z.Direction.VERTICAL,
                     className: ei.content,
                     children: [
-                        (0, i.jsx)(p.vwX, {
+                        (0, i.jsx)(x.vwX, {
                             tag: 'h5',
                             className: er.marginBottom8,
                             children: e
@@ -418,28 +418,28 @@ class em extends (l = r.PureComponent) {
                     justify: O.Z.Justify.BETWEEN,
                     className: er.marginTop20,
                     children: [
-                        (0, i.jsx)(p.XZJ, {
+                        (0, i.jsx)(x.XZJ, {
                             size: 18,
-                            type: p.XZJ.Types.INVERTED,
+                            type: x.XZJ.Types.INVERTED,
                             value: d === ec.value,
                             onChange: this.handleToggleMaxAge,
-                            children: (0, i.jsx)(p.Text, {
+                            children: (0, i.jsx)(x.Text, {
                                 variant: 'text-sm/normal',
                                 children: el.NW.string(el.t.QKJru7)
                             })
                         }),
-                        (0, i.jsx)(p.ua7, {
+                        (0, i.jsx)(x.ua7, {
                             text: el.NW.string(el.t.Yx4IiI),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
-                                return (0, i.jsx)(p.P3F, {
+                                return (0, i.jsx)(x.P3F, {
                                     onClick: this.openSettings,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
                                     className: es.cursorPointer,
-                                    children: (0, i.jsx)(p.ewm, {
+                                    children: (0, i.jsx)(x.ewm, {
                                         size: 'sm',
-                                        color: x.Z.unsafe_rawColors.PRIMARY_400.css
+                                        color: v.Z.unsafe_rawColors.PRIMARY_400.css
                                     })
                                 });
                             }
@@ -447,7 +447,7 @@ class em extends (l = r.PureComponent) {
                     ]
                 }));
         return null != c
-            ? (0, i.jsx)(p.mzw, {
+            ? (0, i.jsx)(x.mzw, {
                   className: a()({
                       [ei.noPadding]: !n,
                       [ei.footer]: n
@@ -484,7 +484,7 @@ class em extends (l = r.PureComponent) {
         let { transitionState: e, inviteChannel: t, guild: n } = this.props;
         return (0, i.jsx)('div', {
             className: this.props.showFriends ? ei.wrapper : void 0,
-            children: (0, i.jsx)(p.Y0X, {
+            children: (0, i.jsx)(x.Y0X, {
                 impression: {
                     impressionName: h.ImpressionNames.GUILD_INVITE,
                     impressionProperties: {
@@ -596,23 +596,23 @@ eo(em, 'defaultProps', {
     analyticsLocation: et.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
     defaultMaxAge: eh.value
 });
-let ev = r.forwardRef(function (e, t) {
+let ep = r.forwardRef(function (e, t) {
     var n, l;
-    let { channel: s, guild: a, source: o, guildScheduledEvent: u, streamUserId: d, applicationId: c, transitionState: h, onClose: x, welcomeToServer: p, page: E, analyticsLocation: O } = e,
-        { analyticsLocations: y } = (0, b.ZP)(j.Z.INSTANT_INVITE_MODAL),
+    let { channel: s, guild: a, source: o, guildScheduledEvent: u, streamUserId: d, applicationId: c, transitionState: h, onClose: v, welcomeToServer: x, page: b, analyticsLocation: O } = e,
+        { analyticsLocations: y } = (0, _.ZP)(j.Z.INSTANT_INVITE_MODAL),
         C = (0, m.e7)(
-            [D.Z, R.Z, k.ZP],
+            [V.Z, k.Z, R.ZP],
             () => {
                 if (null != s) return s;
-                let e = D.Z.getChannelId(),
-                    t = null == e || (0, en.AB)(e) ? void 0 : R.Z.getChannel(e);
-                return (null == t ? void 0 : t.isThread()) && (t = R.Z.getChannel(t.parent_id)), null != t ? t : k.ZP.getDefaultChannel(a.id, !0, et.Plq.CREATE_INSTANT_INVITE);
+                let e = V.Z.getChannelId(),
+                    t = null == e || (0, en.AB)(e) ? void 0 : k.Z.getChannel(e);
+                return (null == t ? void 0 : t.isThread()) && (t = k.Z.getChannel(t.parent_id)), null != t ? t : R.ZP.getDefaultChannel(a.id, !0, et.Plq.CREATE_INSTANT_INVITE);
             },
             [s, a.id]
         ),
         w = null;
     null != d ? (w = ee.Iq.STREAM) : null != c && (w = ee.Iq.EMBEDDED_APPLICATION);
-    let V = null != s ? s.getGuildId() : null != a ? a.id : null,
+    let W = null != s ? s.getGuildId() : null != a ? a.id : null,
         U = (0, m.e7)(
             [M.Z],
             () => {
@@ -627,15 +627,15 @@ let ev = r.forwardRef(function (e, t) {
             },
             [C, w, d, c]
         ),
-        [F, z, H, q] = (0, m.Wu)([W.Z, B.ZP], () => [W.Z.getInviteSuggestionRows(), W.Z.getTotalSuggestionsCount() >= 1, W.Z.getInitialCounts(), null != s && null != C ? B.ZP.getVoiceStatesForChannel(C) : null], [C, s]),
+        [B, z, H, q] = (0, m.Wu)([D.Z, F.ZP], () => [D.Z.getInviteSuggestionRows(), D.Z.getTotalSuggestionsCount() >= 1, D.Z.getInitialCounts(), null != s && null != C ? F.ZP.getVoiceStatesForChannel(C) : null], [C, s]),
         Y = (0, m.e7)(
             [A.ZP],
             () => {
                 let e = null != C ? C.id : null;
-                return null != V ? A.ZP.getProps(V, e) : void 0;
+                return null != W ? A.ZP.getProps(W, e) : void 0;
             },
-            [C, V],
-            v.Z
+            [C, W],
+            p.Z
         ),
         X = (0, m.e7)([L.Z], () => null != C && L.Z.can(et.Plq.CREATE_INSTANT_INVITE, C), [C]),
         J = null === U || !X,
@@ -647,7 +647,7 @@ let ev = r.forwardRef(function (e, t) {
                           let { user: n } = t;
                           e.add(n.id);
                       })
-                    : null != V &&
+                    : null != W &&
                       null != Y &&
                       w !== ee.Iq.EMBEDDED_APPLICATION &&
                       Y.rows.forEach((t) => {
@@ -667,66 +667,66 @@ let ev = r.forwardRef(function (e, t) {
             inviteTargetType: w
         }).catch(et.VqG);
     }, [Q, s, a, c, w]);
-    let [ei] = (0, S.Z)(null != c ? [c] : []),
-        er = (0, _.Z)({ guildId: V }),
+    let [ei] = (0, E.Z)(null != c ? [c] : []),
+        er = (0, T.Z)({ guildId: W }),
         es = null != U ? U.code : void 0,
         ea = null == U ? void 0 : U.maxAge,
         eo = null == U ? void 0 : U.maxUses,
         ed = null == U ? void 0 : U.temporary,
-        ev = a.vanityURLCode,
-        ex = null != ev && ev.length > 0,
-        ep = !X && !(null == C ? void 0 : C.isGuildVocal()) && ex,
+        ep = a.vanityURLCode,
+        ev = null != ep && ep.length > 0,
+        ex = !X && !(null == C ? void 0 : C.isGuildVocal()) && ev,
         eI = (null == C ? void 0 : C.type) === et.d4z.GUILD_VOICE,
         eN = null != (n = null == U ? void 0 : U.flags) ? n : 0,
-        ef = (0, T.Z)(C);
+        ef = (0, S.Z)(C);
     X || (null == el ? void 0 : el.invite_code) == null || (es = el.invite_code);
-    let [ej, eb] = r.useState({
+    let [ej, e_] = r.useState({
             query: '',
             maxAge: null != (l = null != ea ? ea : er) ? l : eh.value,
             savedMaxAge: ea === ec.value ? (null != er ? er : eh.value) : ec.value,
             maxUses: null != eo && 0 !== eo ? eo : eg.value,
             temporary: null != ed && ed,
             networkError: void 0,
-            showVanityURL: ep,
-            currentPage: null != E ? E : ee.RV.MAIN,
+            showVanityURL: ex,
+            currentPage: null != b ? b : ee.RV.MAIN,
             lastPage: void 0,
             flags: eN
         }),
-        eS = r.useCallback((e) => {
-            eb((t) => eu({}, t, e));
+        eE = r.useCallback((e) => {
+            e_((t) => eu({}, t, e));
         }, []),
-        eT = r.useCallback(
+        eS = r.useCallback(
             (e) => {
-                eS({
+                eE({
                     currentPage: e,
                     lastPage: ej.currentPage
                 });
             },
-            [ej.currentPage, eS]
+            [ej.currentPage, eE]
         ),
-        eE = eI && !ep && !J && !ef,
-        { enabled: e_ } = P.o.useExperiment(
+        eb = eI && !ex && !J && !ef,
+        { enabled: eT } = P.o.useExperiment(
             {
                 guildId: null == a ? void 0 : a.id,
                 location: 'acc417_3'
             },
-            { autoTrackExposure: eE }
+            { autoTrackExposure: eb }
         ),
         { maxAge: eO, maxUses: ey, temporary: eC, savedMaxAge: eP, flags: eZ } = ej,
         ew = r.useCallback(() => {
             let { currentPage: e, lastPage: t } = ej;
-            e === ee.RV.SETTINGS && null != t ? eT(t) : x();
-        }, [eT, ej, x]),
+            e === ee.RV.SETTINGS && null != t ? eS(t) : v();
+        }, [eS, ej, v]),
         eA = r.useCallback(() => {
             let e = null == C ? void 0 : C.id;
-            0 === ey && 0 === eO && !eC && ep
-                ? eS({
+            0 === ey && 0 === eO && !eC && ex
+                ? eE({
                       networkError: void 0,
                       showVanityURL: !0
                   })
                 : X &&
                   null != e &&
-                  (eS({
+                  (eE({
                       networkError: void 0,
                       showVanityURL: !1
                   }),
@@ -743,22 +743,22 @@ let ev = r.forwardRef(function (e, t) {
                       },
                       o
                   ).catch((e) =>
-                      eS({
+                      eE({
                           networkError: e,
-                          showVanityURL: ep
+                          showVanityURL: ex
                       })
                   )),
-                eO !== ec.value && eP !== ec.value && eS({ savedMaxAge: ec.value });
-        }, [ep, X, C, o, null == ei ? void 0 : ei.id, w, d, eO, ey, eC, eS, eP, eZ]),
-        eR = (0, f.Z)(C),
-        ek = (0, f.Z)((0, G.yE)(eZ, g.$.IS_APPLICATION_BYPASS)),
-        eM = null != eR && eR !== C,
-        eW = null != ek && ek !== (0, G.yE)(eZ, g.$.IS_APPLICATION_BYPASS);
+                eO !== ec.value && eP !== ec.value && eE({ savedMaxAge: ec.value });
+        }, [ex, X, C, o, null == ei ? void 0 : ei.id, w, d, eO, ey, eC, eE, eP, eZ]),
+        ek = (0, f.Z)(C),
+        eR = (0, f.Z)((0, G.yE)(eZ, g.$.IS_APPLICATION_BYPASS)),
+        eM = null != ek && ek !== C,
+        eD = null != eR && eR !== (0, G.yE)(eZ, g.$.IS_APPLICATION_BYPASS);
     r.useEffect(() => {
-        !ep && (eM || eW) && eA();
-    }, [eA, eM, eW, ep]);
-    let { canCreateApplicationBypassInvites: eL, isManualApprovalGuild: eV } = (0, K.R)(a);
-    return (0, i.jsx)(b.Gt, {
+        !ex && (eM || eD) && eA();
+    }, [eA, eM, eD, ex]);
+    let { canCreateApplicationBypassInvites: eL, isManualApprovalGuild: eW } = (0, K.R)(a);
+    return (0, i.jsx)(_.Gt, {
         value: y,
         children: (0, i.jsx)(em, {
             ref: t,
@@ -768,34 +768,34 @@ let ev = r.forwardRef(function (e, t) {
             guild: a,
             guildScheduledEvent: u,
             streamUserId: d,
-            vanityURLCode: ev,
+            vanityURLCode: ep,
             targetType: w,
             targetUserId: d,
             application: ei,
-            rows: F,
+            rows: B,
             showFriends: z,
             initialCounts: H,
             code: es,
             source: o,
-            welcomeToServer: p,
+            welcomeToServer: x,
             analyticsLocations: y,
             analyticsLocation: O,
             transitionState: h,
-            onClose: x,
-            canShowVanityURL: ep,
-            isGuestInviteCreationToggleEnabled: e_ && eE,
-            shouldHideTemporaryInviteToggle: (e_ && eE) || eV,
+            onClose: v,
+            canShowVanityURL: ex,
+            isGuestInviteCreationToggleEnabled: eT && eb,
+            shouldHideTemporaryInviteToggle: (eT && eb) || eW,
             modalState: ej,
-            setModalState: eS,
-            changePage: eT,
+            setModalState: eE,
+            changePage: eS,
             onGenerateNewLink: eA,
             handleDone: ew,
             isApplicationBypassToggleEnabled: eL && !J
         })
     });
 });
-function ex(e) {
+function ev(e) {
     let { enabled: t } = (0, q._k)({ location: 'instant_invite_modal' }),
-        n = t ? X.H : ev;
+        n = t ? X.H : ep;
     return (0, i.jsx)(n, eu({}, e));
 }

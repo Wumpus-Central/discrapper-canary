@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(442837),
     c = n(210753),
     d = n(77498),
@@ -14,40 +14,40 @@ function m(e) {
             coverImageHeight: 336,
             coverImageWidth: 252
         }),
-        f = (0, o.e7)([d.Z], () => {
+        h = (0, o.e7)([d.Z], () => {
             var e, n;
             return null != (n = null == (e = d.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : '';
         }),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             null == s || s(t);
         }, [t, s]),
-        b = i.useMemo(
+        x = i.useMemo(
             () =>
                 g
                     ? null
                     : null == p
                       ? (0, r.jsx)('div', {
                             className: u.gameUnknownImage,
-                            children: (0, r.jsx)(l.IMN, { size: 'lg' })
+                            children: (0, r.jsx)(a.IMN, { size: 'lg' })
                         })
                       : (0, r.jsx)('img', {
                             className: u.gameImage,
-                            alt: f,
+                            alt: h,
                             src: p
                         }),
-            [p, g, f]
+            [p, g, h]
         );
     return (0, r.jsxs)('div', {
-        className: a()(u.selectedGame, {
+        className: l()(u.selectedGame, {
             [u.dimmed]: !n,
             [u.disabled]: m
         }),
         children: [
-            (0, r.jsxs)(l.P3F, {
+            (0, r.jsxs)(a.P3F, {
                 'aria-disabled': m,
                 tabIndex: m ? -1 : 0,
-                onClick: m ? void 0 : h,
-                className: a()(u.gameImageBackground, {
+                onClick: m ? void 0 : f,
+                className: l()(u.gameImageBackground, {
                     [u.gameImageLoading]: g,
                     [u.disabled]: m
                 }),
@@ -55,19 +55,19 @@ function m(e) {
                     n &&
                         (0, r.jsx)('div', {
                             className: u.checkBackground,
-                            children: (0, r.jsx)(l.XZJ, {
+                            children: (0, r.jsx)(a.XZJ, {
                                 displayOnly: !0,
                                 value: n
                             })
                         }),
-                    b
+                    x
                 ]
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 className: u.gameName,
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                children: f
+                children: h
             })
         ]
     });

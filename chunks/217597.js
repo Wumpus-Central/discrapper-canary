@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(380544);
-function a(e) {
-    let { label: t, sublabel: n, value: a, additionalContent: l, tooltip: o } = e;
+function l(e) {
+    let { label: t, sublabel: n, value: l, additionalContent: a, tooltip: o } = e;
     return (0, r.jsxs)('div', {
         className: s.metricCard,
         'aria-label': t,
@@ -72,9 +72,9 @@ function a(e) {
                 tag: 'span',
                 variant: 'heading-xl/medium',
                 color: 'header-primary',
-                children: a
+                children: l
             }),
-            l
+            a
         ]
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -43,7 +43,7 @@ function g(e) {
 function b(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class _ extends i.Component {
+class y extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -138,4 +138,4 @@ class _ extends i.Component {
             });
     }
 }
-let y = _;
+let _ = y;

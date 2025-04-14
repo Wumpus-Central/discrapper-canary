@@ -1,7 +1,7 @@
 n.d(t, {
     Sr: () => S,
-    Xq: () => N,
-    Zg: () => v
+    Xq: () => v,
+    Zg: () => N
 }),
     n(415506);
 var r = n(186070),
@@ -15,8 +15,8 @@ var r = n(186070),
     d = n(337482),
     p = n(679080),
     h = n(908552),
-    _ = n(189509),
-    f = n(673553),
+    f = n(189509),
+    _ = n(673553),
     m = n(280492),
     b = n(746887),
     g = n(721383),
@@ -44,8 +44,8 @@ let S = {
         [O.EkH.MENTION_CHANNEL_PREV]: E.uX,
         [O.EkH.TOGGLE_PREVIOUS_GUILD]: i.$c,
         [O.EkH.JUMP_TO_GUILD]: o.u,
-        [O.EkH.SUBMIT]: _.z,
-        [O.EkH.TEXTAREA_FOCUS]: f.U,
+        [O.EkH.SUBMIT]: f.z,
+        [O.EkH.TEXTAREA_FOCUS]: _.U,
         [O.EkH.MARK_CHANNEL_READ]: l.f,
         [O.EkH.MARK_SERVER_READ]: s.l,
         [O.EkH.TOGGLE_MUTE]: m.iN,
@@ -61,8 +61,8 @@ let S = {
         [O.EkH.CALL_START]: r.FI,
         [O.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    N = { [O.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function v() {
+    v = { [O.EkH.QUICKSWITCHER_SHOW]: c.$ };
+function N() {
     return [
         {
             description: y.NW.string(y.t.bx4Uy8),

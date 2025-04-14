@@ -2,17 +2,17 @@ n.d(t, { Z: () => j }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(399606),
-    s = n(481060),
-    a = n(367907),
-    i = n(863249),
+    i = n(481060),
+    s = n(367907),
+    a = n(863249),
     c = n(944163),
     u = n(768762),
     d = n(454585),
     m = n(626135),
-    h = n(981631),
-    x = n(388032),
+    f = n(981631),
+    h = n(388032),
     p = n(903864);
-function f(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,7 +67,7 @@ function j(e) {
         P = l.useCallback(async () => {
             if (null != k && null != O) {
                 try {
-                    await i.ZP.submitVerificationForm(n.id, g(f({}, k), { formFields: [g(f({}, O), { response: E })] }));
+                    await a.ZP.submitVerificationForm(n.id, g(x({}, k), { formFields: [g(x({}, O), { response: E })] }));
                 } catch (e) {}
                 N();
             }
@@ -98,18 +98,18 @@ function j(e) {
                   className: p.promptContent,
                   ref: Z,
                   children: [
-                      (0, r.jsxs)(s.h21, {
+                      (0, r.jsxs)(i.h21, {
                           className: p.scrollerContent,
                           ref: C,
                           children: [
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(i.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-muted',
-                                  children: x.NW.string(x.t['b1JC+v'])
+                                  children: h.NW.string(h.t['b1JC+v'])
                               }),
-                              (0, r.jsx)(s.X6q, {
+                              (0, r.jsx)(i.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  children: x.NW.string(x.t.prJqwc)
+                                  children: h.NW.string(h.t.prJqwc)
                               }),
                               (0, r.jsx)('div', {
                                   className: p.termsFieldBody,
@@ -120,12 +120,12 @@ function j(e) {
                                           {
                                               className: p.termsRow,
                                               children: [
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
                                                       children: ''.concat(t + 1, '.')
                                                   }),
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
                                                       className: p.termsRowContent,
                                                       children: d.Z.parseGuildVerificationFormRule(e, !0, { channelId: n.rulesChannelId })
@@ -146,13 +146,13 @@ function j(e) {
                                   className: p.leftButtons,
                                   children:
                                       -1 !== b &&
-                                      (0, r.jsxs)(s.zxk, {
+                                      (0, r.jsxs)(i.zxk, {
                                           innerClassName: p.buttonInner,
                                           onClick: () => {
                                               !_ &&
                                                   (m.default.track(
-                                                      h.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-                                                      g(f({}, (0, a.hH)(n.id)), {
+                                                      f.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+                                                      g(x({}, (0, s.hH)(n.id)), {
                                                           step: -1,
                                                           skipped: !1,
                                                           back: !0,
@@ -163,46 +163,46 @@ function j(e) {
                                                   ),
                                                   b >= 0 &&
                                                       m.default.track(
-                                                          h.rMx.GUILD_ONBOARDING_STEP_VIEWED,
-                                                          g(f({}, (0, a.hH)(n.id)), {
+                                                          f.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+                                                          g(x({}, (0, s.hH)(n.id)), {
                                                               step: b,
                                                               required: j[b].required
                                                           })
                                                       )),
                                                   v(b);
                                           },
-                                          size: s.zxk.Sizes.MEDIUM,
-                                          look: s.zxk.Looks.OUTLINED,
+                                          size: i.zxk.Sizes.MEDIUM,
+                                          look: i.zxk.Looks.OUTLINED,
                                           grow: !1,
-                                          color: s.zxk.Colors.PRIMARY,
+                                          color: i.zxk.Colors.PRIMARY,
                                           children: [
                                               (0, r.jsx)(u.Z, {
                                                   className: p.arrow,
                                                   direction: u.Z.Directions.LEFT
                                               }),
-                                              x.NW.string(x.t['13/7kZ'])
+                                              h.NW.string(h.t['13/7kZ'])
                                           ]
                                       })
                               }),
                               (0, r.jsxs)('div', {
                                   className: p.rightButtons,
                                   children: [
-                                      (0, r.jsx)(s.Text, {
+                                      (0, r.jsx)(i.Text, {
                                           className: p.helpText,
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
-                                          children: E ? x.NW.string(x.t.arAe3N) : x.NW.string(x.t.D0CVAQ)
+                                          children: E ? h.NW.string(h.t.arAe3N) : h.NW.string(h.t.D0CVAQ)
                                       }),
-                                      (0, r.jsxs)(s.zxk, {
+                                      (0, r.jsxs)(i.zxk, {
                                           innerClassName: p.buttonInner,
                                           onClick: P,
                                           disabled: !E,
-                                          size: s.zxk.Sizes.MEDIUM,
-                                          look: s.zxk.Looks.FILLED,
+                                          size: i.zxk.Sizes.MEDIUM,
+                                          look: i.zxk.Looks.FILLED,
                                           grow: !1,
-                                          color: s.zxk.Colors.BRAND,
+                                          color: i.zxk.Colors.BRAND,
                                           children: [
-                                              x.NW.string(x.t['8SuVoK']),
+                                              h.NW.string(h.t['8SuVoK']),
                                               (0, r.jsx)('span', {
                                                   className: p.finishEmoji,
                                                   role: 'img',

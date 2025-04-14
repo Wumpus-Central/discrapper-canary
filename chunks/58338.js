@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(997841);
+n.d(t, { Z: () => h }), n(388685), n(997841);
 var i = n(200651),
     r = n(192379),
     s = n(442837),
@@ -14,13 +14,13 @@ var i = n(200651),
     S = n(490897),
     f = n(526761),
     O = n(388032);
-function N(e) {
+function h(e) {
     let t = (0, d.ng)(e, !0),
-        N = (0, d.U)();
+        h = (0, d.U)();
     return (0, i.jsxs)(l.sNh, {
         id: 'notification',
         label: (0, i.jsxs)(i.Fragment, {
-            children: [N, O.NW.string(O.t.HcoRu7)]
+            children: [h, O.NW.string(O.t.HcoRu7)]
         }),
         action: () => {
             (0, l.ZDy)(async () => {
@@ -75,17 +75,17 @@ function N(e) {
         children: [
             (function (e) {
                 let [t, n] = r.useState(!1),
-                    [d, N] = r.useState(!1),
-                    h = (0, s.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
-                    E = (0, s.e7)([g.ZP], () => g.ZP.getMessageNotifications(e)),
-                    y = d ? u.s8.CUSTOM : (0, u.gs)(h, E),
+                    [d, h] = r.useState(!1),
+                    E = (0, s.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
+                    N = (0, s.e7)([g.ZP], () => g.ZP.getMessageNotifications(e)),
+                    y = d ? u.s8.CUSTOM : (0, u.gs)(E, N),
                     j = (t) => {
-                        N(!1);
+                        h(!1);
                         let n = { message_notifications: t };
-                        t === p.bL.ALL_MESSAGES && h !== S.i.ALL_MESSAGES && (n.flags = (0, a.Q4)(g.ZP.getGuildFlags(e), f.vc.UNREADS_ALL_MESSAGES)), o.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t));
+                        t === p.bL.ALL_MESSAGES && E !== S.i.ALL_MESSAGES && (n.flags = (0, a.Q4)(g.ZP.getGuildFlags(e), f.vc.UNREADS_ALL_MESSAGES)), o.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t));
                     },
                     _ = (t) => {
-                        N(!1);
+                        h(!1);
                         let n = g.ZP.getGuildFlags(e);
                         o.Z.updateGuildNotificationSettings(e, { flags: (0, a.Q4)(n, t === S.i.ALL_MESSAGES ? f.vc.UNREADS_ALL_MESSAGES : f.vc.UNREADS_ONLY_MENTIONS) }, b.UE.unreads(t));
                     };
@@ -98,27 +98,27 @@ function N(e) {
                                     group: 'notification-preset',
                                     checked: y === u.s8.ALL_MESSAGES,
                                     label: O.NW.string(O.t.hZrr6u),
-                                    action: () => ((0, c.V)(e, u.s8.ALL_MESSAGES), N(!1))
+                                    action: () => ((0, c.V)(e, u.s8.ALL_MESSAGES), h(!1))
                                 }),
                                 (0, i.jsx)(l.k5B, {
                                     id: 'essentials',
                                     group: 'notification-preset',
                                     checked: y === u.s8.MENTIONS,
                                     label: O.NW.string(O.t.y59NJi),
-                                    action: () => ((0, c.V)(e, u.s8.MENTIONS), N(!1))
+                                    action: () => ((0, c.V)(e, u.s8.MENTIONS), h(!1))
                                 }),
                                 (0, i.jsx)(l.k5B, {
                                     id: 'nothing',
                                     group: 'notification-preset',
                                     checked: y === u.s8.NOTHING,
                                     label: O.NW.string(O.t['pGn/bG']),
-                                    action: () => ((0, c.V)(e, u.s8.NOTHING), N(!1))
+                                    action: () => ((0, c.V)(e, u.s8.NOTHING), h(!1))
                                 }),
                                 (0, i.jsx)(l.k5B, {
                                     id: 'custom',
                                     group: 'notification-preset',
                                     checked: y === u.s8.CUSTOM,
-                                    action: () => (n(!0), N(!0)),
+                                    action: () => (n(!0), h(!0)),
                                     label: O.NW.string(O.t['32yow8'])
                                 })
                             ]
@@ -135,18 +135,18 @@ function N(e) {
                                                 (0, i.jsx)(l.k5B, {
                                                     id: 'unread_setting_all_messages',
                                                     group: 'unread_setting',
-                                                    checked: h === S.i.ALL_MESSAGES,
+                                                    checked: E === S.i.ALL_MESSAGES,
                                                     label: O.NW.string(O.t['HVah//']),
                                                     action: () => _(S.i.ALL_MESSAGES)
                                                 }),
                                                 (0, i.jsx)(l.k5B, {
                                                     id: 'unread_setting_mention_only',
                                                     group: 'unread_setting',
-                                                    checked: h === S.i.ONLY_MENTIONS,
+                                                    checked: E === S.i.ONLY_MENTIONS,
                                                     label: O.NW.string(O.t['tu+ZWF']),
                                                     action: () => _(S.i.ONLY_MENTIONS),
-                                                    disabled: h !== S.i.ONLY_MENTIONS && E === p.bL.ALL_MESSAGES,
-                                                    subtext: h !== S.i.ONLY_MENTIONS && E === p.bL.ALL_MESSAGES ? O.NW.string(O.t.eP8yWV) : void 0
+                                                    disabled: E !== S.i.ONLY_MENTIONS && N === p.bL.ALL_MESSAGES,
+                                                    subtext: E !== S.i.ONLY_MENTIONS && N === p.bL.ALL_MESSAGES ? O.NW.string(O.t.eP8yWV) : void 0
                                                 })
                                             ]
                                         },
@@ -162,14 +162,14 @@ function N(e) {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything',
                                                     label: O.NW.string(O.t['HVah//']),
-                                                    checked: E === p.bL.ALL_MESSAGES,
+                                                    checked: N === p.bL.ALL_MESSAGES,
                                                     action: () => j(p.bL.ALL_MESSAGES),
-                                                    subtext: h !== S.i.ALL_MESSAGES && E !== p.bL.ALL_MESSAGES ? O.NW.string(O.t.idXSbG) : void 0
+                                                    subtext: E !== S.i.ALL_MESSAGES && N !== p.bL.ALL_MESSAGES ? O.NW.string(O.t.idXSbG) : void 0
                                                 }),
                                                 (0, i.jsx)(l.k5B, {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything_mention',
-                                                    checked: E === p.bL.ONLY_MENTIONS,
+                                                    checked: N === p.bL.ONLY_MENTIONS,
                                                     label: O.NW.string(O.t['tu+ZWF']),
                                                     action: () => j(p.bL.ONLY_MENTIONS)
                                                 }),
@@ -177,7 +177,7 @@ function N(e) {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything_nothing',
                                                     label: O.NW.string(O.t.X4wWUl),
-                                                    checked: E === p.bL.NO_MESSAGES,
+                                                    checked: N === p.bL.NO_MESSAGES,
                                                     action: () => j(p.bL.NO_MESSAGES)
                                                 })
                                             ]

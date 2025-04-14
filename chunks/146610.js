@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(120356),
     s = n.n(i),
-    a = n(167533),
-    l = n(73346),
+    l = n(167533),
+    a = n(73346),
     o = n(169903),
     c = n(67152),
     d = n(388032),
@@ -19,7 +19,7 @@ let g = [
                 let t,
                     { subscriptionListing: n } = e;
                 if (null != n) {
-                    let e = (null == n ? void 0 : n.image_asset) == null ? void 0 : (0, l._W)(n.application_id, n.image_asset, 128);
+                    let e = (null == n ? void 0 : n.image_asset) == null ? void 0 : (0, a._W)(n.application_id, n.image_asset, 128);
                     t = (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)('img', {
@@ -57,12 +57,12 @@ let g = [
     ],
     p = (e) => {
         let { totalPayoutsForPeriod: t, guildId: n, className: i } = e,
-            l = (0, o.Z)(n, t);
+            a = (0, o.Z)(n, t);
         return (0, r.jsx)('div', {
             className: s()(m.tableContainer, i),
-            children: (0, r.jsx)(a.Z, {
+            children: (0, r.jsx)(l.Z, {
                 columns: g,
-                data: l,
+                data: a,
                 className: s()(m.table, u.table),
                 rowClassName: u.row,
                 headerClassName: s()(m.header, u.header)

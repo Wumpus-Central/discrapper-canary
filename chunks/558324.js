@@ -2,15 +2,15 @@ n.d(t, { Z: () => u }), n(388685), n(781311);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(981631),
     c = n(388032),
     d = n(306447);
 let u = (e) => {
     var t,
         n,
-        { className: s, tags: u, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: f, maxTaxLength: h, maxTags: b, disabled: x, placeholder: j } = e,
+        { className: s, tags: u, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: h, maxTaxLength: f, maxTags: x, disabled: b, placeholder: j } = e,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -30,19 +30,19 @@ let u = (e) => {
             }
             return i;
         })(e, ['className', 'tags', 'value', 'onRemoveTag', 'onAddTag', 'onAddTagError', 'maxTaxLength', 'maxTags', 'disabled', 'placeholder']);
-    let [v, _] = i.useState(null != m ? m : ''),
-        y = u.map((e, t) =>
+    let [_, v] = i.useState(null != m ? m : ''),
+        O = u.map((e, t) =>
             (0, r.jsxs)(
                 'span',
                 {
                     className: d.tag,
                     children: [
                         e,
-                        !x &&
-                            (0, r.jsx)(l.P3F, {
+                        !b &&
+                            (0, r.jsx)(a.P3F, {
                                 className: d.closeWrapper,
                                 onClick: () => g(t),
-                                children: (0, r.jsx)(l.Dio, {
+                                children: (0, r.jsx)(a.Dio, {
                                     size: 'xs',
                                     color: 'currentColor',
                                     className: d.close
@@ -53,36 +53,36 @@ let u = (e) => {
                 t
             )
         ),
-        O = i.useCallback(() => {
-            let e = v.trim();
+        C = i.useCallback(() => {
+            let e = _.trim();
             if (0 !== e.length) {
-                if (null != b && u.length >= b) {
-                    null == f || f(c.NW.string(c.t.Xx7XeH));
+                if (null != x && u.length >= x) {
+                    null == h || h(c.NW.string(c.t.Xx7XeH));
                     return;
                 }
-                p(e), _('');
+                p(e), v('');
             }
-        }, [v, b, p, f, u.length]),
-        C = i.useCallback(
+        }, [_, x, p, h, u.length]),
+        y = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
-                        0 === v.length && u.length > 0 && (e.preventDefault(), e.stopPropagation(), g(u.length - 1));
+                        0 === _.length && u.length > 0 && (e.preventDefault(), e.stopPropagation(), g(u.length - 1));
                         break;
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
                     case o.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), O();
+                        e.preventDefault(), e.stopPropagation(), C();
                 }
             },
-            [O, v.length, g, u.length]
+            [C, _.length, g, u.length]
         );
     return (0, r.jsxs)('div', {
-        className: a()(s, d.inputWrapper, { [d.disabled]: x }),
+        className: l()(s, d.inputWrapper, { [d.disabled]: b }),
         children: [
-            y,
+            O,
             (0, r.jsx)(
-                l.oil,
+                a.oil,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -116,12 +116,12 @@ let u = (e) => {
                 )),
                 (n = n =
                     {
-                        value: v,
-                        onKeyDown: C,
-                        onChange: _,
-                        maxLength: h,
-                        disabled: x,
-                        onBlur: O,
+                        value: _,
+                        onKeyDown: y,
+                        onChange: v,
+                        maxLength: f,
+                        disabled: b,
+                        onBlur: C,
                         placeholder: j
                     }),
                 Object.getOwnPropertyDescriptors

@@ -2,8 +2,8 @@ n.d(t, { z: () => j }), n(704826), n(35282);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(906732),
-    l = n(263145),
+    l = n(906732),
+    a = n(263145),
     o = n(366980),
     c = n(621319),
     d = n(770270),
@@ -11,15 +11,15 @@ var r = n(200651),
     m = n(949640),
     g = n(981631),
     p = n(30513),
-    f = n(388032),
-    h = n(919957);
-function b(e) {
+    h = n(388032),
+    f = n(919957);
+function x(e) {
     let { errorDetails: t, originalVanityURLCode: n } = e;
     if (null != t)
         return (0, r.jsx)(s.Text, {
             variant: 'text-md/normal',
             color: 'text-danger',
-            className: h.vanityInfo,
+            className: f.vanityInfo,
             children: (0, d.i)(null == t ? void 0 : t.code)
         });
     if (null != n && n.length > 0) {
@@ -27,8 +27,8 @@ function b(e) {
         return (0, r.jsx)(s.Text, {
             variant: 'text-sm/medium',
             color: 'text-secondary',
-            className: h.vanityInfo,
-            children: f.NW.format(f.t['1qTOvr'], {
+            className: f.vanityInfo,
+            children: h.NW.format(h.t['1qTOvr'], {
                 urlText: e,
                 urlValue: e
             })
@@ -36,8 +36,8 @@ function b(e) {
     }
     return null;
 }
-function x(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: a, originalVanityURLCode: o, hasError: d } = e,
+function b(e) {
+    let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: o, hasError: d } = e,
         u = (null == t ? void 0 : t.hasFeature(g.oNc.VANITY_URL)) === !0,
         m = i.useCallback(() => {
             (0, c.Gy)('');
@@ -49,26 +49,26 @@ function x(e) {
         ? (0, r.jsx)(s.$jN, {})
         : (0, r.jsxs)(s.Zbd, {
               editable: !0,
-              className: h.editVanityUrlCard,
+              className: f.editVanityUrlCard,
               children: [
                   (0, r.jsxs)('div', {
-                      className: h.formTitleField,
+                      className: f.formTitleField,
                       children: [
                           (0, r.jsx)(s.X6q, {
                               variant: 'heading-sm/semibold',
                               color: 'text-normal',
-                              children: f.NW.string(f.t['6oJyq6'])
+                              children: h.NW.string(h.t['6oJyq6'])
                           }),
                           n.length > 0
                               ? (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    children: f.NW.format(f.t.MVWOUV, { uses: a })
+                                    children: h.NW.format(h.t.MVWOUV, { uses: l })
                                 })
                               : null
                       ]
                   }),
-                  (0, r.jsx)(l.Z, {
+                  (0, r.jsx)(a.Z, {
                       prefix: ''.concat('https://discord.gg', '/'),
                       value: n,
                       onChange: p,
@@ -78,21 +78,21 @@ function x(e) {
                   }),
                   null != o && o.length > 0
                       ? (0, r.jsx)(s.zxk, {
-                            className: h.removeVanityUrlButton,
+                            className: f.removeVanityUrlButton,
                             onClick: m,
                             look: s.zxk.Looks.LINK,
                             size: s.zxk.Sizes.MIN,
                             color: s.zxk.Colors.RED,
-                            children: f.NW.string(f.t['3ggb6O'])
+                            children: h.NW.string(h.t['3ggb6O'])
                         })
                       : null
               ]
           });
 }
 function j(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: l, errorDetails: o } = e,
-        { analyticsLocations: c } = (0, a.ZP)(),
-        f = i.useCallback(
+    let { guild: t, vanityURLCode: n, vanityURLUses: s, originalVanityURLCode: a, errorDetails: o } = e,
+        { analyticsLocations: c } = (0, l.ZP)(),
+        h = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -110,20 +110,20 @@ function j(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, d.p)(t)
-                ? (0, r.jsx)(x, {
+                ? (0, r.jsx)(b, {
                       guild: t,
                       vanityURLCode: n,
                       vanityURLUses: s,
-                      originalVanityURLCode: l,
+                      originalVanityURLCode: a,
                       hasError: null != o
                   })
                 : (0, r.jsx)(u.P, {
-                      onClick: f,
-                      className: h.upsellButton
+                      onClick: h,
+                      className: f.upsellButton
                   }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(x, {
                 errorDetails: o,
-                originalVanityURLCode: l
+                originalVanityURLCode: a
             })
         ]
     });

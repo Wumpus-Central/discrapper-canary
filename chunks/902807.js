@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(200100),
+    l = n.n(s),
+    a = n(200100),
     o = n(481060),
     c = n(386476);
 class d extends i.Component {
@@ -74,10 +74,10 @@ class d extends i.Component {
         );
     }
 }
-let u = (0, l.animated)(d),
+let u = (0, a.animated)(d),
     m = function (e) {
         let { className: t, name: n, icon: i, iconClassName: s } = e,
-            l = (0, o.Yzy)(
+            a = (0, o.Yzy)(
                 {
                     name: n,
                     icon: i,
@@ -93,12 +93,12 @@ let u = (0, l.animated)(d),
                 'animate-always'
             );
         return (0, r.jsx)('div', {
-            className: a()(c.crossfade, t),
-            children: l((e, t) => {
+            className: l()(c.crossfade, t),
+            children: a((e, t) => {
                 let { icon: n, iconClassName: i } = t;
                 return (0, r.jsx)(u, {
                     icon: n,
-                    className: a()(c.icon, i),
+                    className: l()(c.icon, i),
                     style: e
                 });
             })

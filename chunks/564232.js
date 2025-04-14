@@ -1,67 +1,67 @@
-t.d(r, { default: () => I }), t(388685);
-var n = t(200651),
-    i = t(192379),
-    s = t(392711),
-    l = t.n(s),
-    c = t(442837),
-    o = t(481060),
-    u = t(239091),
-    d = t(276264),
-    a = t(600164),
-    b = t(313201),
-    m = t(670188),
-    p = t(271383),
-    f = t(699516),
-    g = t(594174),
-    j = t(709054),
-    h = t(432496),
-    O = t(981631),
-    y = t(388032),
-    w = t(763147);
-function x(e) {
-    for (var r = 1; r < arguments.length; r++) {
-        var t = null != arguments[r] ? arguments[r] : {},
-            n = Object.keys(t);
+r.d(t, { default: () => w }), r(388685);
+var n = r(200651),
+    i = r(192379),
+    s = r(392711),
+    l = r.n(s),
+    o = r(442837),
+    u = r(481060),
+    c = r(239091),
+    d = r(276264),
+    a = r(600164),
+    f = r(313201),
+    m = r(670188),
+    b = r(271383),
+    h = r(699516),
+    g = r(594174),
+    p = r(709054),
+    O = r(432496),
+    j = r(981631),
+    y = r(388032),
+    I = r(763147);
+function S(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            n.forEach(function (r) {
+            n.forEach(function (t) {
                 var n;
-                (n = t[r]),
-                    r in e
-                        ? Object.defineProperty(e, r, {
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
                               value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[r] = n);
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function I(e) {
-    let { guild: r, transitionState: s, onClose: I } = e,
-        P = (0, b.Dt)(),
-        k = i.useMemo(() => {
-            let e = f.Z.getRelationships();
-            return j.default.keys(e).filter((r) => e[r] === O.OGo.FRIEND);
+function w(e) {
+    let { guild: t, transitionState: s, onClose: w } = e,
+        M = (0, f.Dt)(),
+        x = i.useMemo(() => {
+            let e = h.Z.getRelationships();
+            return p.default.keys(e).filter((t) => e[t] === j.OGo.FRIEND);
         }, []);
     i.useEffect(() => {
-        h.Z.fetchFriendMembersIfNotFetched(r.id, k);
-    }, [r.id, k]);
-    let S = (0, c.e7)([p.ZP], () => p.ZP.getMembers(r.id)),
-        v = i.useMemo(
+        O.Z.fetchFriendMembersIfNotFetched(t.id, x);
+    }, [t.id, x]);
+    let N = (0, o.e7)([b.ZP], () => b.ZP.getMembers(t.id)),
+        P = i.useMemo(
             () =>
-                l()(S)
-                    .filter((e) => !!k.includes(e.userId) && null != g.default.getUser(e.userId))
+                l()(N)
+                    .filter((e) => !!x.includes(e.userId) && null != g.default.getUser(e.userId))
                     .sortBy((e) => {
-                        var r;
-                        let t = g.default.getUser(e.userId);
-                        return (null != t ? (null != (r = e.nick) ? r : t.username) : '').toLocaleLowerCase();
+                        var t;
+                        let r = g.default.getUser(e.userId);
+                        return (null != r ? (null != (t = e.nick) ? t : r.username) : '').toLocaleLowerCase();
                     })
                     .map((e) => {
                         let i = g.default.getUser(e.userId);
@@ -69,47 +69,47 @@ function I(e) {
                             m.Z,
                             {
                                 userId: e.userId,
-                                guildId: r.id,
+                                guildId: t.id,
                                 spacing: 14,
                                 clickTrap: !0,
                                 children: (s, l) => {
-                                    let { isShown: c } = l;
+                                    let { isShown: o } = l;
                                     return (0, n.jsx)(
                                         d.Z,
-                                        x(
+                                        S(
                                             {
-                                                className: w.member,
-                                                selected: c,
+                                                className: I.member,
+                                                selected: o,
                                                 colorString: e.colorString,
                                                 colorStrings: e.colorStrings,
                                                 user: i,
-                                                isOwner: e.userId === r.ownerId,
+                                                isOwner: e.userId === t.ownerId,
                                                 nick: e.nick,
                                                 premiumSince: null == e.premiumSince ? null : new Date(e.premiumSince),
-                                                guildId: r.id,
+                                                guildId: t.id,
                                                 onContextMenu: (e) => {
-                                                    (0, u.jW)(e, async () => {
-                                                        let { default: e } = await Promise.all([t.e('79695'), t.e('26976'), t.e('88606')]).then(t.bind(t, 415118));
-                                                        return (t) => {
+                                                    (0, c.jW)(e, async () => {
+                                                        let { default: e } = await Promise.all([r.e('79695'), r.e('26976'), r.e('88606')]).then(r.bind(r, 415118));
+                                                        return (r) => {
                                                             var s, l;
                                                             return (0, n.jsx)(
                                                                 e,
-                                                                ((s = x({}, t)),
+                                                                ((s = S({}, r)),
                                                                 (l = l =
                                                                     {
                                                                         user: i,
-                                                                        guildId: r.id,
+                                                                        guildId: t.id,
                                                                         showMediaItems: !0
                                                                     }),
                                                                 Object.getOwnPropertyDescriptors
                                                                     ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(l))
-                                                                    : (function (e, r) {
-                                                                          var t = Object.keys(e);
+                                                                    : (function (e, t) {
+                                                                          var r = Object.keys(e);
                                                                           if (Object.getOwnPropertySymbols) {
                                                                               var n = Object.getOwnPropertySymbols(e);
-                                                                              t.push.apply(t, n);
+                                                                              r.push.apply(r, n);
                                                                           }
-                                                                          return t;
+                                                                          return r;
                                                                       })(Object(l)).forEach(function (e) {
                                                                           Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(l, e));
                                                                       }),
@@ -129,37 +129,37 @@ function I(e) {
                         );
                     })
                     .value(),
-            [k, r.id, r.ownerId, S]
+            [x, t.id, t.ownerId, N]
         ),
-        N = h.Z.isFetchingFriendsForGuild(r.id);
-    return (0, n.jsxs)(o.Y0X, {
+        v = O.Z.isFetchingFriendsForGuild(t.id);
+    return (0, n.jsxs)(u.Y0X, {
         transitionState: s,
-        size: o.CgR.SMALL,
-        'aria-labelledby': P,
+        size: u.CgR.SMALL,
+        'aria-labelledby': M,
         children: [
-            (0, n.jsxs)(o.xBx, {
+            (0, n.jsxs)(u.xBx, {
                 separator: !1,
                 justify: a.Z.Justify.BETWEEN,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: w.heading,
+                        className: I.heading,
                         children: [
-                            (0, n.jsx)('span', { children: (0, n.jsx)(o.iFz, {}) }),
-                            (0, n.jsx)(o.X6q, {
+                            (0, n.jsx)('span', { children: (0, n.jsx)(u.iFz, {}) }),
+                            (0, n.jsx)(u.X6q, {
                                 variant: 'heading-lg/semibold',
-                                children: y.NW.format(N ? y.t.EtQnZm : y.t.OgMdNT, {
-                                    guildName: r.name,
-                                    numFriends: v.length
+                                children: y.NW.format(v ? y.t.EtQnZm : y.t.OgMdNT, {
+                                    guildName: t.name,
+                                    numFriends: P.length
                                 })
                             })
                         ]
                     }),
-                    (0, n.jsx)(o.olH, { onClick: I })
+                    (0, n.jsx)(u.olH, { onClick: w })
                 ]
             }),
-            (0, n.jsxs)(o.hzk, {
-                className: w.content,
-                children: [N && (0, n.jsx)(o.$jN, {}), (0, n.jsx)(o.Ttm, { children: v })]
+            (0, n.jsxs)(u.hzk, {
+                className: I.content,
+                children: [v && (0, n.jsx)(u.$jN, {}), (0, n.jsx)(u.Ttm, { children: P })]
             })
         ]
     });

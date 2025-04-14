@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,9 +56,9 @@ function _(e, t) {
         e
     );
 }
-function y(e) {
+function _(e) {
     let { channel: t, speaker: l, className: f } = e,
-        { newestAnalyticsLocation: y } = (0, d.ZP)(),
+        { newestAnalyticsLocation: _ } = (0, d.ZP)(),
         C = (0, u.bp)(),
         { reducedMotion: x } = i.useContext(a.Sfi),
         v = (0, c.Z)({ userId: l.id }),
@@ -71,14 +71,14 @@ function y(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            _(b({}, n), {
+                            y(b({}, n), {
                                 user: l.user,
                                 guildId: t.guild_id,
                                 channel: t,
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', y)
+                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', _)
                             })
                         );
                 },
@@ -97,7 +97,7 @@ function y(e) {
                 children: (n) =>
                     (0, r.jsx)(
                         a.P3F,
-                        _(b({}, n, e), {
+                        y(b({}, n, e), {
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },
@@ -123,7 +123,7 @@ function C(e) {
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                y,
+                _,
                 {
                     channel: n,
                     speaker: e,

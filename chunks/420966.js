@@ -1,13 +1,13 @@
 n.d(t, {
-    V: () => f,
-    Z: () => h
+    V: () => h,
+    Z: () => f
 }),
     n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(239091),
+    l = n(481060),
+    a = n(239091),
     o = n(605436),
     c = n(741247),
     d = n(243730),
@@ -15,7 +15,7 @@ var r = n(200651),
     m = n(203377),
     g = n(388032),
     p = n(793944);
-function f() {
+function h() {
     let [e, t] = i.useState(!0);
     return {
         scrolledToTop: e,
@@ -24,44 +24,44 @@ function f() {
         }
     };
 }
-function h(e) {
-    let { guild: t, role: f, selectedSection: h, setSelectedSection: b } = e,
-        x = i.useCallback(
+function f(e) {
+    let { guild: t, role: h, selectedSection: f, setSelectedSection: x } = e,
+        b = i.useCallback(
             (e) => {
-                b(e);
+                x(e);
             },
-            [b]
+            [x]
         ),
         j = (0, s.e7)(
             [d.Z],
             () => {
                 var e;
-                return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[f.id];
+                return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[h.id];
             },
-            [f.id, t.id]
+            [h.id, t.id]
         ),
-        N = (0, o.pM)(t.id, f.id),
-        v = (0, u.Z)(f);
+        N = (0, o.pM)(t.id, h.id),
+        _ = (0, u.Z)(h);
     i.useEffect(() => {
-        N && b(m.ZI.PERMISSIONS);
-    }, [N, b]);
-    let _ = (0, c.e)(t, f);
+        N && x(m.ZI.PERMISSIONS);
+    }, [N, x]);
+    let v = (0, c.e)(t, h);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
                 className: p.titleContainer,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(l.Text, {
                         className: p.titleText,
                         color: 'header-primary',
                         variant: 'text-md/semibold',
-                        children: g.NW.format(g.t.BUdGkJ, { roleName: f.name })
+                        children: g.NW.format(g.t.BUdGkJ, { roleName: h.name })
                     }),
-                    _
-                        ? (0, r.jsx)(a.P3F, {
+                    v
+                        ? (0, r.jsx)(l.P3F, {
                               className: p.menu,
                               onClick: function (e) {
-                                  (0, l.jW)(e, async () => {
+                                  (0, a.jW)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
                                       return (n) => {
                                           var i, s;
@@ -95,7 +95,7 @@ function h(e) {
                                               (s = s =
                                                   {
                                                       guild: t,
-                                                      role: f
+                                                      role: h
                                                   }),
                                               Object.getOwnPropertyDescriptors
                                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
@@ -115,7 +115,7 @@ function h(e) {
                                   });
                               },
                               'aria-label': g.NW.string(g.t.PdRCRk),
-                              children: (0, r.jsx)(a.xhG, {
+                              children: (0, r.jsx)(l.xhG, {
                                   size: 'md',
                                   color: 'currentColor'
                               })
@@ -123,38 +123,38 @@ function h(e) {
                         : null
                 ]
             }),
-            null != v
-                ? (0, r.jsx)(a.Wn, {
-                      messageType: a.QYI.WARNING,
-                      children: v
+            null != _
+                ? (0, r.jsx)(l.Wn, {
+                      messageType: l.QYI.WARNING,
+                      children: _
                   })
                 : null,
-            (0, r.jsxs)(a.njP, {
+            (0, r.jsxs)(l.njP, {
                 className: p.tabBar,
                 'aria-label': g.NW.string(g.t['+1H47u']),
-                selectedItem: h,
+                selectedItem: f,
                 type: 'top',
                 look: 'brand',
-                onItemSelect: x,
+                onItemSelect: b,
                 children: [
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(l.njP.Item, {
                         className: p.tabBarItem,
                         id: m.ZI.DISPLAY,
                         disabled: N,
                         children: g.NW.string(g.t.hmdom5)
                     }),
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(l.njP.Item, {
                         className: p.tabBarItem,
                         id: m.ZI.PERMISSIONS,
                         children: g.NW.string(g.t.WIDE1N)
                     }),
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(l.njP.Item, {
                         className: p.tabBarItem,
                         id: m.ZI.VERIFICATIONS,
                         disabled: N,
                         children: g.NW.string(g.t['5//Mur'])
                     }),
-                    (0, r.jsx)(a.njP.Item, {
+                    (0, r.jsx)(l.njP.Item, {
                         className: p.tabBarItem,
                         id: m.ZI.MEMBERS,
                         disabled: N,

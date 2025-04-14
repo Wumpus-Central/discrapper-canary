@@ -11,28 +11,28 @@ var l,
     E = n(430198),
     f = n(924301),
     C = n(601070),
-    p = n(569471),
-    _ = n(581883),
+    _ = n(569471),
+    p = n(581883),
     h = n(314897),
     g = n(680089),
-    O = n(592125),
-    T = n(58468),
-    I = n(77498),
+    I = n(592125),
+    O = n(58468),
+    T = n(77498),
     S = n(496675),
     N = n(306680),
-    m = n(944486),
-    A = n(9156),
-    b = n(823379),
-    P = n(709054),
+    A = n(944486),
+    m = n(9156),
+    P = n(823379),
+    b = n(709054),
     v = n(540126),
-    y = n(526761);
-let L = null,
+    L = n(526761);
+let y = null,
     R = null,
     D = new v.ZP();
 function Z() {
-    let e = m.Z.getChannelId(),
-        t = m.Z.getVoiceChannelId();
-    return (L = e), (R = t), D.clear();
+    let e = A.Z.getChannelId(),
+        t = A.Z.getVoiceChannelId();
+    return (y = e), (R = t), D.clear();
 }
 function j(e) {
     let {
@@ -63,24 +63,24 @@ function G(e) {
     return D.nonPositionalChannelIdUpdate(t);
 }
 function k() {
-    let e = m.Z.getChannelId(),
-        t = m.Z.getVoiceChannelId(),
-        n = L !== e || R !== t;
+    let e = A.Z.getChannelId(),
+        t = A.Z.getVoiceChannelId(),
+        n = y !== e || R !== t;
     return (
         !!n &&
-        (a()([L, R, e, t])
+        (a()([y, R, e, t])
             .uniq()
             .forEach((e) => {
                 null != e && D.nonPositionalChannelIdUpdate(e) && (n = !0);
             }),
-        (L = e),
+        (y = e),
         (R = t),
         !0)
     );
 }
 function H(e) {
     let { id: t } = e,
-        n = O.Z.getChannel(t);
+        n = I.Z.getChannel(t);
     return null == n ? D.clearGuildId(t) : D.clearGuildId(n.guild_id);
 }
 function V(e) {
@@ -96,7 +96,7 @@ function B(e) {
 }
 class W extends (l = s.ZP.Store) {
     initialize() {
-        this.waitFor(C.Z, h.default, g.Z, O.Z, T.Z, c.ZP, I.Z, E.Z, f.ZP, p.Z, S.Z, N.ZP, m.Z, A.ZP, _.Z);
+        this.waitFor(C.Z, h.default, g.Z, I.Z, O.Z, c.ZP, T.Z, E.Z, f.ZP, _.Z, S.Z, N.ZP, A.Z, m.ZP, p.Z);
     }
     getGuild(e, t) {
         var n, l;
@@ -143,9 +143,9 @@ let K = new W(u.Z, {
             a()(t)
                 .map((e) => {
                     var t;
-                    return null == (t = O.Z.getChannel(e.channelId)) ? void 0 : t.guild_id;
+                    return null == (t = I.Z.getChannel(e.channelId)) ? void 0 : t.guild_id;
                 })
-                .filter(b.lm)
+                .filter(P.lm)
                 .uniq()
                 .forEach((e) => {
                     D.clearGuildId(e) && (n = !0);
@@ -163,7 +163,7 @@ let K = new W(u.Z, {
     CHANNEL_COLLAPSE: function (e) {
         var t;
         let { channelId: n } = e;
-        return D.clearGuildId(null == (t = O.Z.getChannel(n)) ? void 0 : t.guild_id);
+        return D.clearGuildId(null == (t = I.Z.getChannel(n)) ? void 0 : t.guild_id);
     },
     CHANNEL_CREATE: U,
     CHANNEL_DELETE: U,
@@ -285,12 +285,12 @@ let K = new W(u.Z, {
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         var t;
         let { settings: n } = e;
-        if (n.type !== y.yP.PRELOADED_USER_SETTINGS) return !1;
+        if (n.type !== L.yP.PRELOADED_USER_SETTINGS) return !1;
         let l = null == (t = n.proto.guilds) ? void 0 : t.guilds,
             r = !1;
         return (
             null != l &&
-                P.default.keys(l).forEach((e) => {
+                b.default.keys(l).forEach((e) => {
                     null != l[e].guildRecentsDismissedAt && (r = D.updateRecentsCategory(e) || r);
                 }),
             r
@@ -310,6 +310,6 @@ let K = new W(u.Z, {
         return n;
     },
     WINDOW_FOCUS: function () {
-        return null != L && D.nonPositionalChannelIdUpdate(L);
+        return null != y && D.nonPositionalChannelIdUpdate(y);
     }
 });

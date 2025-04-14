@@ -1,9 +1,9 @@
-n.d(t, { Z: () => b }), n(953529), n(388685);
+n.d(t, { Z: () => x }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
-    a = n(481060),
-    l = n(570140),
+    l = n(481060),
+    a = n(570140),
     o = n(596454),
     c = n(524329),
     d = n(823379),
@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(413584),
     g = n(388032),
     p = n(673305),
-    f = n(62311);
-let h = (e) => {
+    h = n(62311);
+let f = (e) => {
         let { setWelcomeView: t, setShowCreateModal: i } = e,
             s = [
                 {
@@ -31,18 +31,18 @@ let h = (e) => {
                     name: g.NW.string(g.t.vrGLjo)
                 }
             ];
-        return (0, r.jsxs)(a.hjN, {
+        return (0, r.jsxs)(l.hjN, {
             title: g.NW.string(g.t['2rkmDg']),
             tag: 'h1',
             children: [
                 (0, r.jsxs)('div', {
                     className: p.welcomeDescription,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             children: g.NW.format(g.t.a59UeH, {})
                         }),
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(l.zxk, {
                             onClick: () => {
                                 i(!0), t(2);
                             },
@@ -73,28 +73,28 @@ let h = (e) => {
                             children: [
                                 (0, r.jsx)('img', {
                                     alt: '',
-                                    className: f.guildIcon,
+                                    className: h.guildIcon,
                                     src: n(691466),
                                     width: 64,
                                     height: 64
                                 }),
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(l.X6q, {
                                     variant: 'heading-xl/semibold',
                                     className: p.header,
                                     children: g.NW.format(g.t['5NJlXl'], {})
                                 }),
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    className: f.guildDescription,
+                                    className: h.guildDescription,
                                     children: g.NW.string(g.t.Xvsuk5)
                                 }),
-                                (0, r.jsx)(a.vwX, {
-                                    className: f.choiceHeader,
+                                (0, r.jsx)(l.vwX, {
+                                    className: h.choiceHeader,
                                     children: g.NW.string(g.t['haj5+v'])
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: f.options,
+                                    className: h.options,
                                     children: s.map((e) =>
                                         (0, r.jsxs)(
                                             'div',
@@ -103,17 +103,17 @@ let h = (e) => {
                                                 children: [
                                                     (0, r.jsx)(o.Z, {
                                                         emojiName: e.emoji,
-                                                        className: f.optionEmoji
+                                                        className: h.optionEmoji
                                                     }),
                                                     (0, r.jsxs)('div', {
-                                                        className: f.optionTextContainer,
+                                                        className: h.optionTextContainer,
                                                         children: [
-                                                            (0, r.jsx)(a.Text, {
+                                                            (0, r.jsx)(l.Text, {
                                                                 variant: 'text-md/semibold',
-                                                                className: f.channelDescription,
+                                                                className: h.channelDescription,
                                                                 children: e.description
                                                             }),
-                                                            (0, r.jsx)(a.Text, {
+                                                            (0, r.jsx)(l.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'header-secondary',
                                                                 children: '#'.concat(e.name)
@@ -133,14 +133,14 @@ let h = (e) => {
             ]
         });
     },
-    b = () => {
+    x = () => {
         let { guild: e } = (0, s.e7)([u.Z], () => u.Z.getProps()),
             [t, n] = i.useState(0),
             [o, g] = i.useState(!1);
         switch (
             (i.useEffect(() => {
                 null != e &&
-                    l.Z.wait(() => {
+                    a.Z.wait(() => {
                         (0, c.RM)(e.id).then((e) => {
                             n(null == e ? 1 : 2);
                         });
@@ -149,9 +149,9 @@ let h = (e) => {
             t)
         ) {
             case 0:
-                return (0, r.jsx)(a.$jN, { type: a.$jN.Type.SPINNING_CIRCLE });
+                return (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
             case 1:
-                return (0, r.jsx)(h, {
+                return (0, r.jsx)(f, {
                     setWelcomeView: n,
                     setShowCreateModal: g
                 });

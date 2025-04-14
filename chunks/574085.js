@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(723047),
-    a = n(727843),
-    l = n(290348),
+    l = n(727843),
+    a = n(290348),
     o = n(764163),
     c = n(861345),
     d = n(293810),
@@ -53,22 +53,22 @@ function g(e, t) {
     );
 }
 function p() {
-    let { editStateId: e, guildId: t } = (0, a.N)(),
-        [n, p] = l.R7(e);
-    function f(e, t) {
-        let { name: r, description: i, emojiId: s, emojiName: a } = e,
-            l = [...n],
+    let { editStateId: e, guildId: t } = (0, l.N)(),
+        [n, p] = a.R7(e);
+    function h(e, t) {
+        let { name: r, description: i, emojiId: s, emojiName: l } = e,
+            a = [...n],
             o = {
                 name: r,
                 description: i,
                 emoji_id: s,
-                emoji_name: a,
+                emoji_name: l,
                 ref_type: d.Qs.INTANGIBLE,
                 ref_id: void 0
             };
-        null != t ? (l[t] = o) : l.push(o), p(l);
+        null != t ? (a[t] = o) : a.push(o), p(a);
     }
-    let h = (0, s.mY)();
+    let f = (0, s.mY)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.p, {
@@ -80,7 +80,7 @@ function p() {
                             g(m({}, i), {
                                 guildId: t,
                                 initialData: n[e],
-                                onSave: (t) => f(t, e),
+                                onSave: (t) => h(t, e),
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
@@ -105,12 +105,12 @@ function p() {
                             o.DI,
                             g(m({}, e), {
                                 guildId: t,
-                                onSave: (e) => f(e)
+                                onSave: (e) => h(e)
                             })
                         )
                     );
                 },
-                disabled: h,
+                disabled: f,
                 children: u.NW.string(u.t['6dwqo6'])
             })
         ]

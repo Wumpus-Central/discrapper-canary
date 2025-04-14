@@ -14,15 +14,15 @@ var r = n(200651),
     m = n(63063),
     g = n(981631),
     b = n(388032),
-    _ = n(857651);
-function y(e) {
+    y = n(857651);
+function _(e) {
     let { guild: t, channelId: n } = e,
         l = (0, a.e7)([f.default], () => {
             var e;
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         o = (0, p.Kt)(),
-        { verifyAgreementButtonText: y, verifyGateDescription: C } = (0, p.a1)(),
+        { verifyAgreementButtonText: _, verifyGateDescription: C } = (0, p.a1)(),
         x = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
@@ -41,10 +41,10 @@ function y(e) {
               onDisagree: x,
               title: b.NW.string(b.t.ZmwvDQ),
               description: C,
-              agreement: y,
+              agreement: _,
               agreementButtonColor: s.zxk.Colors.BRAND,
               disagreement: b.NW.string(b.t['/g10LC']),
-              imageClassName: _.ageGatedImage
+              imageClassName: y.ageGatedImage
           })
         : l
           ? (0, r.jsx)(h.Z, {
@@ -57,7 +57,7 @@ function y(e) {
                 description: b.NW.format(b.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
                 disagreement: b.NW.string(b.t['/g10LC']),
-                imageClassName: _.ageGatedImage
+                imageClassName: y.ageGatedImage
             })
           : (0, r.jsx)(h.Z, {
                 guildId: null == t ? void 0 : t.id,
@@ -81,10 +81,10 @@ let C = function (e) {
         }, []),
         (0, r.jsx)(s.Den, {
             ref: a,
-            className: _.scroller,
+            className: y.scroller,
             children: (0, r.jsx)('div', {
-                className: o()(l, _.wrapper),
-                children: (0, r.jsx)(y, {
+                className: o()(l, y.wrapper),
+                children: (0, r.jsx)(_, {
                     guild: t,
                     channelId: n
                 })

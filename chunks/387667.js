@@ -6,8 +6,8 @@ n.d(t, {
 });
 var r = n(913527),
     l = n.n(r),
-    a = n(81825),
-    s = n(960048),
+    s = n(81825),
+    a = n(960048),
     o = n(709054),
     i = n(981631);
 function E(e, t, n) {
@@ -55,7 +55,7 @@ function c(e) {
     else if (e <= i.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return i.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION;
     else if (e <= i.rsA.GUILD_MEMBER_VERIFICATION_UPDATE) return i.KFR.GUILD_MEMBER_VERIFICATION;
     else if (e <= i.rsA.GUILD_PROFILE_UPDATE) return i.KFR.GUILD_PROFILE;
-    return s.Z.captureMessage('Unknown target type for: '.concat(e)), i.KFR.UNKNOWN;
+    return a.Z.captureMessage('Unknown target type for: '.concat(e)), i.KFR.UNKNOWN;
 }
 function u(e) {
     switch (e) {
@@ -146,10 +146,10 @@ class _ {
         E(this, 'key', void 0), E(this, 'oldValue', void 0), E(this, 'newValue', void 0), E(this, 'subtarget', void 0), (this.key = e), (this.oldValue = t), (this.newValue = n);
     }
 }
-class d extends a.Z {
+class d extends s.Z {
     constructor(e) {
-        var t, n, r, a, s, i;
-        super(), E(this, 'id', void 0), E(this, 'actionType', void 0), E(this, 'action', void 0), E(this, 'targetType', void 0), E(this, 'targetId', void 0), E(this, 'target', void 0), E(this, 'userId', void 0), E(this, 'changes', void 0), E(this, 'timestampStart', void 0), E(this, 'timestampEnd', void 0), E(this, 'user', void 0), E(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = u(this.action)), (this.targetId = e.targetId), (this.timestampStart = null != (t = e.timestampStart) ? t : l()(o.default.extractTimestamp(this.id))), (this.timestampEnd = null != (n = e.timestampEnd) ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null != (r = e.changes) ? r : []), (this.targetType = c(this.action)), (this.options = null != (a = e.options) ? a : {}), (this.target = null != (s = e.target) ? s : e.id), (this.user = null != (i = e.user) ? i : null);
+        var t, n, r, s, a, i;
+        super(), E(this, 'id', void 0), E(this, 'actionType', void 0), E(this, 'action', void 0), E(this, 'targetType', void 0), E(this, 'targetId', void 0), E(this, 'target', void 0), E(this, 'userId', void 0), E(this, 'changes', void 0), E(this, 'timestampStart', void 0), E(this, 'timestampEnd', void 0), E(this, 'user', void 0), E(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = u(this.action)), (this.targetId = e.targetId), (this.timestampStart = null != (t = e.timestampStart) ? t : l()(o.default.extractTimestamp(this.id))), (this.timestampEnd = null != (n = e.timestampEnd) ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null != (r = e.changes) ? r : []), (this.targetType = c(this.action)), (this.options = null != (s = e.options) ? s : {}), (this.target = null != (a = e.target) ? a : e.id), (this.user = null != (i = e.user) ? i : null);
     }
 }
 let A = d;

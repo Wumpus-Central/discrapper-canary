@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(388685), n(361932), n(187205), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(200100),
+    l = n.n(s),
+    a = n(200100),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -24,18 +24,18 @@ function m(e) {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: a()(u.rowIcon, u.rowIconChecked)
+                      className: l()(u.rowIcon, u.rowIconChecked)
                   })
-                : (0, r.jsx)('div', { className: a()(u.rowIcon, u.rowIconEmpty) })
+                : (0, r.jsx)('div', { className: l()(u.rowIcon, u.rowIconEmpty) })
         ]
     });
 }
 function g(e) {
-    let { title: t, children: n, buttonLabel: s, buttonCallback: a, disabled: o } = e,
+    let { title: t, children: n, buttonLabel: s, buttonCallback: l, disabled: o } = e,
         [g, p] = i.useState(!1),
-        f = n.flatMap((e) => e.items.map((e) => e.completed)),
-        h = f.filter((e) => e).length / f.length,
-        b = (0, c.q_F)({ width: ''.concat(100 * h, '%') });
+        h = n.flatMap((e) => e.items.map((e) => e.completed)),
+        f = h.filter((e) => e).length / h.length,
+        x = (0, c.q_F)({ width: ''.concat(100 * f, '%') });
     return (0, r.jsxs)('div', {
         className: u.container,
         children: [
@@ -56,9 +56,9 @@ function g(e) {
             }),
             (0, r.jsx)('div', {
                 className: u.progressBarOuter,
-                children: (0, r.jsx)(l.animated.div, {
+                children: (0, r.jsx)(a.animated.div, {
                     className: u.progressBarInner,
-                    style: b
+                    style: x
                 })
             }),
             !g &&
@@ -90,7 +90,7 @@ function g(e) {
                 }),
             null !== s &&
                 '' !== s &&
-                null !== a &&
+                null !== l &&
                 (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(c.$i$, { className: u.divider }),
@@ -98,8 +98,8 @@ function g(e) {
                             className: u.button,
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.BRAND,
-                            onClick: a,
-                            disabled: 1 !== h || o,
+                            onClick: l,
+                            disabled: 1 !== f || o,
                             children: s
                         })
                     ]

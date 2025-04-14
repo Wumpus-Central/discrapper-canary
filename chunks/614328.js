@@ -1,58 +1,58 @@
-n.d(t, { Z: () => a });
-var r = n(200651);
-n(192379);
-var l = n(325767);
+t.d(n, { Z: () => a });
+var r = t(200651);
+t(192379);
+var l = t(325767);
 function a(e) {
-    var t,
-        n,
+    var n,
+        t,
         { width: a = 120, height: i = 80, backgroundColor: o, foregroundColor: s } = e,
-        c = (function (e, t) {
+        c = (function (e, n) {
             if (null == e) return {};
-            var n,
+            var t,
                 r,
-                l = (function (e, t) {
+                l = (function (e, n) {
                     if (null == e) return {};
-                    var n,
+                    var t,
                         r,
                         l = {},
                         a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    for (r = 0; r < a.length; r++) (t = a[r]), n.indexOf(t) >= 0 || (l[t] = e[t]);
                     return l;
-                })(e, t);
+                })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                for (r = 0; r < a.length; r++) (t = a[r]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
             }
             return l;
         })(e, ['width', 'height', 'backgroundColor', 'foregroundColor']);
     return (0, r.jsxs)(
         'svg',
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+        ((n = (function (e) {
+            for (var n = 1; n < arguments.length; n++) {
+                var t = null != arguments[n] ? arguments[n] : {},
+                    r = Object.keys(t);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
+                    r.forEach(function (n) {
                         var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (r = t[n]),
+                            n in e
+                                ? Object.defineProperty(e, n, {
                                       value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
+                                : (e[n] = r);
                     });
             }
             return e;
         })({}, (0, l.Z)(c))),
-        (n = n =
+        (t = t =
             {
                 width: a,
                 height: i,
@@ -95,17 +95,17 @@ function a(e) {
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
+            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+            : (function (e, n) {
+                  var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      t.push.apply(t, r);
                   }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  return t;
+              })(Object(t)).forEach(function (e) {
+                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
               }),
-        t)
+        n)
     );
 }

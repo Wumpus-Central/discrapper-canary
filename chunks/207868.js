@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -14,12 +14,12 @@ var r = n(200651),
     m = n(585483),
     g = n(665149),
     b = n(981631),
-    _ = n(388032);
-let y = i.memo(function (e) {
+    y = n(388032);
+let _ = i.memo(function (e) {
     let { channel: t } = e,
         n = (0, u.Z)(),
         l = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
-        y = (0, a.e7)([f.Z], () => !o().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
+        _ = (0, a.e7)([f.Z], () => !o().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
         C = (0, a.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
         { needSubscriptionToAccess: x } = (0, d.Z)(t.id),
         v = (0, p.$R)(t),
@@ -55,7 +55,7 @@ let y = i.memo(function (e) {
         ? (0, r.jsx)(g.ZP.Icon, {
               icon: s.Csw,
               onClick: j,
-              tooltip: y ? _.NW.string(_.t.fdEeb2) : _.NW.string(_.t.focH1t)
+              tooltip: _ ? y.NW.string(y.t.fdEeb2) : y.NW.string(y.t.focH1t)
           })
         : null;
 });

@@ -11,9 +11,9 @@ let d = a.ZP.getMaxAgeOptions,
     c = a.ZP.getMaxUsesOptions;
 function h(e) {
     var t;
-    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: p, isGuestInviteCreationToggleEnabled: I, inviteFlags: N, onSetInviteFlags: f } = e,
+    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: p, onSelectMaxAge: v, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: I, inviteFlags: N, onSetInviteFlags: f } = e,
         j = d.find((e) => e.value === a),
-        b = c.find((e) => e.value === h);
+        _ = c.find((e) => e.value === h);
     return (0, l.jsx)('div', {
         className: u.settingsContent,
         children: (0, l.jsxs)('form', {
@@ -25,15 +25,15 @@ function h(e) {
                     children: (0, l.jsx)(r.VcW, {
                         options: d,
                         value: null != (t = null == j ? void 0 : j.value) ? t : d[0].value,
-                        onChange: x
+                        onChange: v
                     })
                 }),
                 (0, l.jsx)(r.xJW, {
                     title: o.NW.string(o.t.jDqWHR),
                     children: (0, l.jsx)(r.VcW, {
                         options: c,
-                        value: null == b ? void 0 : b.value,
-                        onChange: p
+                        value: null == _ ? void 0 : _.value,
+                        onChange: x
                     })
                 }),
                 !n &&
@@ -41,7 +41,7 @@ function h(e) {
                         children: (0, l.jsx)(r.j7V, {
                             className: u.switch,
                             value: g,
-                            onChange: (e) => v(e),
+                            onChange: (e) => p(e),
                             note: o.NW.string(o.t.UN5IRU),
                             hideBorder: !0,
                             children: (0, l.jsx)(r.Text, {

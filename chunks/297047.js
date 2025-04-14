@@ -9,8 +9,8 @@ var o = n(442837),
     a = n(481060),
     i = n(144144),
     s = n(592125),
-    l = n(496675),
-    c = n(944486),
+    c = n(496675),
+    l = n(944486),
     u = n(585483),
     d = n(51144),
     p = n(981631),
@@ -26,11 +26,11 @@ function m(e, t) {
 }
 function f(e, t, n) {
     let [i, u] = (0, o.Wu)(
-            [c.Z, s.Z, l.Z],
+            [l.Z, s.Z, c.Z],
             () => {
-                let e = c.Z.getChannelId(t),
+                let e = l.Z.getChannelId(t),
                     n = s.Z.getChannel(e);
-                return [e, null != n && (n.isMultiUserDM() || l.Z.can(p.Plq.SEND_MESSAGES, n))];
+                return [e, null != n && (n.isMultiUserDM() || c.Z.can(p.Plq.SEND_MESSAGES, n))];
             },
             [t]
         ),

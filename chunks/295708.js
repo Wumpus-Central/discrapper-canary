@@ -2,8 +2,8 @@ n.d(t, { Z: () => u }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(273504),
-    l = n(981631),
+    l = n(273504),
+    a = n(981631),
     o = n(388032),
     c = n(957270),
     d = n(282338);
@@ -66,10 +66,10 @@ function u(e) {
                 },
                 onClick: (e) => e.stopPropagation(),
                 onKeyPress: (e) => {
-                    e.which === l.yXg.SPACE && e.stopPropagation();
+                    e.which === a.yXg.SPACE && e.stopPropagation();
                 },
                 placeholder: o.NW.string(o.t['5AO43N']),
-                maxLength: a.OU,
+                maxLength: l.OU,
                 value: u
             })
         ]

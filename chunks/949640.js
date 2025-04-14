@@ -6,13 +6,13 @@ n.d(t, {
 var r = n(200651),
     i = n(481060),
     s = n(367907),
-    a = n(48217),
-    l = n(26323),
+    l = n(48217),
+    a = n(26323),
     o = n(267642),
     c = n(434404),
     d = n(981631);
 function u(e) {
-    let { uploadType: t, maxFileSizeBytes: s, onComplete: a, showUpsellHeader: l = !0, analyticsLocation: o, analyticsLocations: c } = e;
+    let { uploadType: t, maxFileSizeBytes: s, onComplete: l, showUpsellHeader: a = !0, analyticsLocation: o, analyticsLocations: c } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('91689'), n.e('89289'), n.e('71704')]).then(n.bind(n, 28130));
         return (n) =>
@@ -45,9 +45,9 @@ function u(e) {
                 })(
                     {
                         maxFileSizeBytes: s,
-                        onComplete: a,
+                        onComplete: l,
                         uploadType: t,
-                        showUpsellHeader: l,
+                        showUpsellHeader: a,
                         analyticsLocation: o,
                         analyticsLocations: c
                     },
@@ -57,7 +57,7 @@ function u(e) {
     });
 }
 function m(e) {
-    let { guild: t, analyticsLocations: n, analyticsSection: r, analyticsObject: i, perks: a, targetPremiumGuildTier: c } = e;
+    let { guild: t, analyticsLocations: n, analyticsSection: r, analyticsObject: i, perks: l, targetPremiumGuildTier: c } = e;
     (0, s.yw)(d.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
             section: r,
@@ -67,7 +67,7 @@ function m(e) {
         guild_id: t.id,
         location_stack: n
     }),
-        (0, l.Z)({
+        (0, a.Z)({
             analyticsLocations: n,
             analyticsSourceLocation: {
                 section: r,
@@ -75,7 +75,7 @@ function m(e) {
                 page: d.ZY5.GUILD_SETTINGS
             },
             guild: t,
-            perks: a
+            perks: l
         });
 }
 function g(e, t, n, r) {
@@ -89,7 +89,7 @@ function g(e, t, n, r) {
         if ('image/gif' !== i || e.hasFeature(d.oNc.ANIMATED_BANNER)) {
             if (!e.hasFeature(d.oNc.BANNER)) {
                 (s.object = d.qAy.IMAGE_CROPPING_MODAL),
-                    (0, a.c)({
+                    (0, l.c)({
                         guild: e,
                         analyticsLocations: t,
                         analyticsLocation: s,
@@ -100,7 +100,7 @@ function g(e, t, n, r) {
             }
         } else {
             (s.object = d.qAy.GIF_CROPPING_MODAL),
-                (0, a.c)({
+                (0, l.c)({
                     guild: e,
                     analyticsLocations: t,
                     analyticsLocation: s,

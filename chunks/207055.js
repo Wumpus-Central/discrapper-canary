@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(470956),
     g = n(597998),
     b = n(199902),
-    _ = n(314897),
-    y = n(271383),
+    y = n(314897),
+    _ = n(271383),
     C = n(131951),
     x = n(496675),
     v = n(158776),
@@ -33,14 +33,14 @@ let w = i.memo((e) => {
     var t, n, i;
     let { mute: l, deaf: o, user: s, channel: g, sessionId: x, nick: A } = e,
         w = s.id,
-        R = (0, a.e7)([_.default], () => _.default.getId() === w, [w]),
+        R = (0, a.e7)([y.default], () => y.default.getId() === w, [w]),
         [k, M, L] = (0, a.Wu)([C.Z], () => (R ? [!C.Z.isSupported() || C.Z.isSelfMute() || C.Z.isSelfMutedTemporarily(), C.Z.isSelfDeaf(), !1] : [!C.Z.isSupported() || C.Z.isLocalMute(w), !1, C.Z.isLocalVideoDisabled(w)]), [R, w]),
         D = (0, a.e7)([E.Z], () => E.Z.isPrioritySpeaker(w)),
         W = (0, c.Z)({
             userId: w,
             checkSoundSharing: !0
         }),
-        U = (0, a.e7)([y.ZP], () => y.ZP.isGuestOrLurker(g.guild_id, w)),
+        U = (0, a.e7)([_.ZP], () => _.ZP.isGuestOrLurker(g.guild_id, w)),
         B = (0, a.e7)([h.Z], () => h.Z.getGuildRingingUsers(g.id).has(w)),
         G = (0, a.e7)(
             [u.ZP],
@@ -109,7 +109,7 @@ let w = i.memo((e) => {
                     isStreaming: null != Y && Y.channelId === g.id,
                     isWatching: null != q && q.state !== Z.jm8.ENDED,
                     isGuest: U,
-                    isSelf: _.default.getId() === s.id,
+                    isSelf: y.default.getId() === s.id,
                     application: H ? z : void 0
                 }),
             Object.getOwnPropertyDescriptors
@@ -131,7 +131,7 @@ let w = i.memo((e) => {
 w.displayName = 'ConnectedVoiceUser';
 let R = [],
     k = function (e) {
-        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: h, location: f, numAudience: b, withGuildIcon: y = !1, className: C, children: j } = e,
+        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: h, location: f, numAudience: b, withGuildIcon: _ = !1, className: C, children: j } = e,
             [O, E] = i.useState(null),
             [N, I] = i.useState(!1),
             P = i.useRef(null),
@@ -183,7 +183,7 @@ let R = [],
                     {
                         user: i,
                         nick: o,
-                        isSelfOnOtherClient: _.default.getId() === i.id && a.sessionId !== _.default.getSessionId(),
+                        isSelfOnOtherClient: y.default.getId() === i.id && a.sessionId !== y.default.getSessionId(),
                         mute: a.isVoiceMuted(),
                         deaf: a.isVoiceDeafened(),
                         video: a.selfVideo,
@@ -220,7 +220,7 @@ let R = [],
             : (0, r.jsxs)(g.eJ, {
                   className: o()(C, A.list, {
                       [A.collapsed]: u,
-                      [A.withGuildIcon]: y
+                      [A.withGuildIcon]: _
                   }),
                   collapsed: u,
                   children: [U, j]

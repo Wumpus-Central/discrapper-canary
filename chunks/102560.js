@@ -2,13 +2,13 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(200651),
     l = n(192379),
     o = n(392711),
-    a = n.n(o),
-    i = n(442837),
+    i = n.n(o),
+    a = n(442837),
     s = n(481060),
     c = n(48210),
     u = n(605436),
-    d = n(430824),
-    C = n(496675),
+    C = n(430824),
+    d = n(496675),
     m = n(388032),
     b = n(201367);
 let p = (e) => {
@@ -22,14 +22,14 @@ let p = (e) => {
     l.useEffect(() => {
         O();
     }, [O]);
-    let y = (0, i.Wu)(
-        [C.Z, d.Z],
+    let y = (0, a.Wu)(
+        [d.Z, C.Z],
         () => {
-            let e = C.Z.getHighestRole(t);
-            return a()(d.Z.getRoles(t.id))
+            let e = d.Z.getHighestRole(t);
+            return i()(C.Z.getRoles(t.id))
                 .sortBy((e) => e.position)
                 .filter((e) => !(0, u.pM)(t.id, e.id))
-                .filter((n) => C.Z.isRoleHigher(t, e, n))
+                .filter((n) => d.Z.isRoleHigher(t, e, n))
                 .value()
                 .map((e) => {
                     let { id: t, name: n } = e;

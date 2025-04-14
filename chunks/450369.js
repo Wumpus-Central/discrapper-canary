@@ -17,8 +17,8 @@ var r = n(200651),
     m = n(906732),
     g = n(213609),
     b = n(358221),
-    _ = n(795318),
-    y = n(258609),
+    y = n(795318),
+    _ = n(258609),
     C = n(569545),
     x = n(102172),
     v = n(352978),
@@ -119,7 +119,7 @@ let W = 16 / 9,
     B = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: l, width: o, isModerator: a, onContextMenu: d, inPopout: h } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
-            { id: m, blocked: g, ignored: _ } = t,
+            { id: m, blocked: g, ignored: y } = t,
             j = (0, s.Wu)([N.Z], () => N.Z.getAllActiveStreams(), []),
             { selectedParticipant: O, largeStream: E } = (0, s.cj)([b.Z], () => ({
                 selectedParticipant: null != l ? b.Z.getSelectedParticipant(l.id) : null,
@@ -128,7 +128,7 @@ let W = 16 / 9,
             I = i.useCallback(
                 (e, t) => {
                     if (e.type === k.fO.STREAM && 0 === j.filter((t) => (0, C.V9)(t) === e.id && t.state !== R.jm8.ENDED).length) {
-                        if (!(0, x.p9)(l, Z.Z, P.Z, S.Z, y.Z)[0]) return;
+                        if (!(0, x.p9)(l, Z.Z, P.Z, S.Z, _.Z)[0]) return;
                         (0, p.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == O ? void 0 : O.id) === e.id ? (E ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
@@ -142,7 +142,7 @@ let W = 16 / 9,
                 aspectRatio: W,
                 fit: n.type === k.fO.USER ? v.L.COVER : void 0,
                 blocked: g,
-                ignored: _,
+                ignored: y,
                 channel: l,
                 className: M.tile,
                 inCall: !0,
@@ -162,10 +162,10 @@ let W = 16 / 9,
         let { participant: i, channel: l, width: c } = e,
             { newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.STAGE_TILE),
             p = (0, h.bp)(),
-            y = l.getGuildId(),
+            _ = l.getGuildId(),
             C = I.default.getId(),
             { simplifiedSettingsEnabled: x } = (0, E.Z)({ location: 'StageTile' });
-        o()(null != y, 'Channel cannot be guildless');
+        o()(null != _, 'Channel cannot be guildless');
         let { user: v } = i,
             O = (0, s.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
             N = (0, s.e7)([T.ZP], () => T.ZP.isModerator(v.id, l.id), [l.id, v.id]);
@@ -197,7 +197,7 @@ let W = 16 / 9,
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
-                                                onInteraction: (0, _.u)('StreamContextMenu', u, {
+                                                onInteraction: (0, y.u)('StreamContextMenu', u, {
                                                     entrypoint: o,
                                                     targetUserId: v.id,
                                                     tileType: k.TH.STREAM
@@ -212,7 +212,7 @@ let W = 16 / 9,
                     default:
                         if ((P(k.TH.USER), x && i))
                             return (0, j.D)(t, v, l, { context: p }, (e, t) =>
-                                (0, _.o)({
+                                (0, y.o)({
                                     menuName: e,
                                     menuItemProps: t,
                                     entrypoint: k.A5.THREE_DOT,
@@ -230,12 +230,12 @@ let W = 16 / 9,
                                         e,
                                         D(L({}, t), {
                                             user: v,
-                                            guildId: y,
+                                            guildId: _,
                                             channel: l,
                                             showMediaItems: !0,
                                             showStageChannelItems: !0,
                                             showChatItems: !1,
-                                            onInteraction: (0, _.u)('GuildChannelUserContextMenu', u, {
+                                            onInteraction: (0, y.u)('GuildChannelUserContextMenu', u, {
                                                 targetUserId: v.id,
                                                 tileType: k.TH.USER
                                             })
@@ -251,7 +251,7 @@ let W = 16 / 9,
                   stageParticipant: i,
                   rtcParticipant: O,
                   channel: l,
-                  guildId: y,
+                  guildId: _,
                   user: v,
                   width: c,
                   isModerator: N,
@@ -262,7 +262,7 @@ let W = 16 / 9,
                   stageParticipant: i,
                   rtcParticipant: O,
                   channel: l,
-                  guildId: y,
+                  guildId: _,
                   user: v,
                   width: c,
                   isModerator: N,

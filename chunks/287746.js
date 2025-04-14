@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(144144),
     g = n(166459),
     b = n(966390),
-    _ = n(738619),
-    y = n(410575),
+    y = n(738619),
+    _ = n(410575),
     C = n(744061),
     x = n(857595),
     v = n(607070),
@@ -68,8 +68,8 @@ var r = n(200651),
     em = n(45251),
     eg = n(705533),
     eb = n(618857),
-    e_ = n(268350),
-    ey = n(155409),
+    ey = n(268350),
+    e_ = n(155409),
     eC = n(163612),
     ex = n(314897),
     ev = n(433355),
@@ -234,8 +234,8 @@ class e6 extends i.PureComponent {
         }
     }
     render() {
-        let { channel: e, focused: t, onBlur: n, onFocus: i, onResize: l, highlighted: o, pendingReply: a, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: h, poggermodeEnabled: f, onCommandSentinelTyped: m, renderAppLauncherButton: g, renderAppCommandButton: b, pendingScheduledMessage: _ } = this.props,
-            { contentWarningProps: y } = this.state,
+        let { channel: e, focused: t, onBlur: n, onFocus: i, onResize: l, highlighted: o, pendingReply: a, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: h, poggermodeEnabled: f, onCommandSentinelTyped: m, renderAppLauncherButton: g, renderAppCommandButton: b, pendingScheduledMessage: y } = this.props,
+            { contentWarningProps: _ } = this.state,
             x = (0, r.jsx)(F.Z, {
                 ref: this.props.refInstance,
                 textValue: this.state.textValue,
@@ -261,18 +261,18 @@ class e6 extends i.PureComponent {
                 highlighted: o,
                 setEditorRef: (e) => (this.editorRef = e),
                 onCommandSentinelTyped: m,
-                pendingScheduledMessage: _
+                pendingScheduledMessage: y
             });
         return (0, r.jsx)(p.yRy, {
             position: 'top',
             onRequestClose: () => {
                 var e;
-                null == y || null == (e = y.onCancel) || e.call(y), this.setState({ contentWarningProps: null });
+                null == _ || null == (e = _.onCancel) || e.call(_), this.setState({ contentWarningProps: null });
             },
-            shouldShow: null != y,
+            shouldShow: null != _,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return s()(null != y, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, r.jsx)(C.Z, e0({ onClose: t }, y));
+                return s()(null != _, 'ChannelTextAreaForm > Popout > renderPopout: contentWarningProps cannot be null'), (0, r.jsx)(C.Z, e0({ onClose: t }, _));
             },
             children: () =>
                 f
@@ -458,13 +458,13 @@ class e6 extends i.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             };
-                    let _ = (0, er.g)(t, {
+                    let y = (0, er.g)(t, {
                         channel: c,
                         isEdit: !1
                     });
-                    null != _ && (null != _.content && (t = _.content), null != _.tts && (p = _.tts));
-                    let y = ei.ZP.parse(c, t);
-                    y.tts = y.tts || p;
+                    null != y && (null != y.content && (t = y.content), null != y.tts && (p = y.tts));
+                    let _ = ei.ZP.parse(c, t);
+                    _.tts = _.tts || p;
                     let C = f.Z.getSendMessageOptions({
                         content: t,
                         channelId: c.id,
@@ -478,7 +478,7 @@ class e6 extends i.PureComponent {
                     });
                     if (a)
                         return (
-                            f.Z.sendMessage(c.id, y, void 0, C),
+                            f.Z.sendMessage(c.id, _, void 0, C),
                             (0, eh.A6)(c.id),
                             {
                                 shouldClear: !1,
@@ -500,7 +500,7 @@ class e6 extends i.PureComponent {
                                 channelId: c.id,
                                 uploads: n,
                                 draftType: eO.d.ChannelMessage,
-                                parsedMessage: y,
+                                parsedMessage: _,
                                 options: C,
                                 raiseEndpointErrors: null != t
                             });
@@ -530,11 +530,11 @@ class e6 extends i.PureComponent {
                                 }
                             );
                         }
-                    else null != r && r.length > 0 && '' === t ? f.Z.sendStickers(c.id, r, t, C, y.tts) : f.Z.sendMessage(c.id, y, void 0, C);
+                    else null != r && r.length > 0 && '' === t ? f.Z.sendStickers(c.id, r, t, C, _.tts) : f.Z.sendMessage(c.id, _, void 0, C);
                     return (
                         this.setState((0, U.H2)()),
                         (0, eh.A6)(c.id),
-                        (0, e_.qB)(c.id, d.drafts.type),
+                        (0, ey.qB)(c.id, d.drafts.type),
                         {
                             shouldClear: !0,
                             shouldRefocus: !0
@@ -601,7 +601,7 @@ class e8 extends i.PureComponent {
             M = (0, r.jsxs)('div', {
                 className: eQ.channelBottomBarArea,
                 children: [
-                    (0, r.jsx)(ey.Z, {
+                    (0, r.jsx)(e_.Z, {
                         childRef: this.channelTextAreaFormRef,
                         tutorialId: 'writing-messages',
                         position: 'left',
@@ -645,7 +645,7 @@ class e8 extends i.PureComponent {
             }),
             G = B && null != S && null != Z;
         return (0, r.jsx)(
-            y.Z,
+            _.Z,
             {
                 page: (0, ew.mE)(this.props.channel),
                 children: (0, r.jsx)(en.sW, {
@@ -726,7 +726,7 @@ class e8 extends i.PureComponent {
                                                                       }),
                                                                 N
                                                                     ? null
-                                                                    : (0, r.jsx)(_.Z, {
+                                                                    : (0, r.jsx)(y.Z, {
                                                                           channel: n,
                                                                           poggermodeEnabled: C
                                                                       })
@@ -863,8 +863,8 @@ let e5 = i.memo(function (e) {
         }),
         g = (0, d.e7)([es.Z], () => es.Z.isEnabled()),
         b = (0, ed.Z)(t.id),
-        _ = (0, ee.Z)(t.id),
-        y = (0, S.R)({
+        y = (0, ee.Z)(t.id),
+        _ = (0, S.R)({
             channel: t,
             chatInputType: l
         }),
@@ -914,9 +914,9 @@ let e5 = i.memo(function (e) {
         communicationDisabledUntil: u,
         shakeIntensity: b,
         poggermodeEnabled: g,
-        isSelectedResourceChannel: _,
+        isSelectedResourceChannel: y,
         showAutomodUserProfileChatBlocker: h && !m,
-        showAppLauncherButton: y,
+        showAppLauncherButton: _,
         showAppDMsUI: C,
         isInitialLoading: N,
         showEntryPointAppCommandButton: null != P,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(201895),
     i = n(933557),
     s = n(592125),
-    a = n(699516),
-    l = n(594174),
+    l = n(699516),
+    a = n(594174),
     o = n(293810),
     c = n(981631),
     d = n(388032);
@@ -13,7 +13,7 @@ function u(e) {
             let t = s.Z.getChannel(e.ref_id);
             return null != t
                 ? (function (e) {
-                      let t = (0, i.F6)(e, l.default, a.Z);
+                      let t = (0, i.F6)(e, a.default, l.Z);
                       switch (e.type) {
                           case c.d4z.GUILD_VOICE:
                               return d.NW.formatToPlainString(d.t.bkpadH, { channelName: t });

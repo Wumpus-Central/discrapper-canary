@@ -1,6 +1,6 @@
 n.d(t, {
     Br: () => s,
-    Uj: () => a,
+    Uj: () => l,
     j0: () => i
 }),
     n(388685);
@@ -29,7 +29,7 @@ function s(e) {
         }
     );
 }
-function a(e, t) {
+function l(e, t) {
     let n, r, i, s;
     return (
         null != e && ((n = e.amount), (i = e.paymentsCount), null != t && ((r = e.amount / t.amount - 1), (s = e.paymentsCount - t.paymentsCount))),

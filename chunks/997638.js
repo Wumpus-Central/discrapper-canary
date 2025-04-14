@@ -31,7 +31,7 @@ function b(e, t, n) {
         e
     );
 }
-function _(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -162,7 +162,7 @@ class j extends (r = a.PureComponent) {
             f = 'top' === h.position || 'bottom' === h.position ? 'center' : 'top';
         return (0, o.jsx)(
             d.yRy,
-            y(_({}, h), {
+            _(y({}, h), {
                 align: f,
                 spacing: null != u ? u : 0,
                 renderPopout: this.renderPopoutContent,
@@ -189,7 +189,7 @@ class j extends (r = a.PureComponent) {
                     children: (e) =>
                         (0, o.jsx)(
                             v,
-                            y(_({}, this.props), {
+                            _(y({}, this.props), {
                                 className: c()(
                                     {
                                         [g.bottom]: 'bottom' === n,

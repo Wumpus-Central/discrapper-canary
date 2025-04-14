@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(717251),
     c = n(313795);
 function d(e) {
@@ -28,11 +28,11 @@ function d(e) {
             return i;
         })(e, ['action', 'children', 'className', 'onExpandChange', 'loading']);
     let [g, p] = i.useState(!1),
-        f = (e) => {
+        h = (e) => {
             p(e), null == d || d(e);
         };
-    return (0, r.jsx)(l.zF9, {
-        className: a()(c.groupContainer, s),
+    return (0, r.jsx)(a.zF9, {
+        className: l()(c.groupContainer, s),
         isExpanded: g,
         collapsibleContent: (0, r.jsxs)('div', {
             className: c.groupCollapsedContainer,
@@ -71,9 +71,9 @@ function d(e) {
                 (i = i =
                     {
                         className: c.groupHeaderRow,
-                        action: u ? (0, r.jsx)(l.$jN, { type: l.$jN.Type.PULSING_ELLIPSIS }) : t,
+                        action: u ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
                         onClick: (e) => {
-                            f(!g), s(e);
+                            h(!g), s(e);
                         }
                     }),
                 Object.getOwnPropertyDescriptors

@@ -2,8 +2,8 @@ n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(367907),
-    l = n(807582),
+    l = n(367907),
+    a = n(807582),
     o = n(26323),
     c = n(516129),
     d = n(345861),
@@ -11,15 +11,15 @@ var r = n(200651),
     m = n(768581),
     g = n(434404),
     p = n(981631),
-    f = n(30513),
-    h = n(486324),
-    b = n(200299),
-    x = n(388032),
+    h = n(30513),
+    f = n(486324),
+    x = n(200299),
+    b = n(388032),
     j = n(773100);
 let N = function (e) {
     let { guild: t } = e,
         N = t.hasFeature(p.oNc.BANNER),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, s.ZDy)(async () => {
@@ -59,7 +59,7 @@ let N = function (e) {
                                         let { imageUri: n } = e;
                                         return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: h.pC.HOME_HEADER
+                                    uploadType: f.pC.HOME_HEADER
                                 },
                                 n
                             )
@@ -68,11 +68,11 @@ let N = function (e) {
             },
             [t.id]
         ),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, a.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    (0, l.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: p.jXE.GUILD_SETTINGS_ONBOARDING,
                             object: p.qAy.LEARN_MORE
@@ -88,12 +88,12 @@ let N = function (e) {
                             page: p.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
-                        perks: (0, f.XO)()
+                        perks: (0, h.XO)()
                     });
             },
             [t]
         ),
-        y = (0, r.jsx)(c.Z, {
+        O = (0, r.jsx)(c.Z, {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
@@ -103,10 +103,10 @@ let N = function (e) {
                       })
                     : null,
             disabled: !N,
-            onChange: v,
-            hint: x.NW.string(x.t.NyXznp),
+            onChange: _,
+            hint: b.NW.string(b.t.NyXznp),
             enabled: N,
-            maxFileSizeBytes: b.B
+            maxFileSizeBytes: x.B
         });
     return N
         ? (0, r.jsxs)(r.Fragment, {
@@ -117,13 +117,13 @@ let N = function (e) {
                           (0, r.jsx)(s.X6q, {
                               className: j.header,
                               variant: 'heading-lg/extrabold',
-                              children: x.NW.string(x.t.BBj1nZ)
+                              children: b.NW.string(b.t.BBj1nZ)
                           }),
-                          (0, r.jsx)(l.Z, {
+                          (0, r.jsx)(a.Z, {
                               className: j.boostIndicator,
                               guild: t,
                               guildFeature: p.oNc.BANNER,
-                              onClick: _
+                              onClick: v
                           })
                       ]
                   }),
@@ -136,18 +136,18 @@ let N = function (e) {
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: x.NW.string(x.t.Vwintr)
+                                      children: b.NW.string(b.t.Vwintr)
                                   }),
                                   (0, r.jsx)(d.Z, {
                                       color: s.Ttl.BRAND,
                                       className: j.uploadButton,
-                                      buttonCTA: x.NW.string(x.t.yG2pUl),
-                                      onChange: v,
-                                      maxFileSizeBytes: b.B
+                                      buttonCTA: b.NW.string(b.t.yG2pUl),
+                                      onChange: _,
+                                      maxFileSizeBytes: x.B
                                   })
                               ]
                           }),
-                          (0, r.jsx)('div', { children: y })
+                          (0, r.jsx)('div', { children: O })
                       ]
                   })
               ]
@@ -160,13 +160,13 @@ let N = function (e) {
                           (0, r.jsx)(s.X6q, {
                               className: j.header,
                               variant: 'heading-lg/extrabold',
-                              children: x.NW.string(x.t.BBj1nZ)
+                              children: b.NW.string(b.t.BBj1nZ)
                           }),
-                          (0, r.jsx)(l.Z, {
+                          (0, r.jsx)(a.Z, {
                               className: j.boostIndicator,
                               guild: t,
                               guildFeature: p.oNc.BANNER,
-                              onClick: _
+                              onClick: v
                           })
                       ]
                   }),
@@ -179,13 +179,13 @@ let N = function (e) {
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: x.NW.string(x.t.Vwintr)
+                                      children: b.NW.string(b.t.Vwintr)
                                   }),
                                   (0, r.jsxs)(s.gtL, {
                                       className: j.upsellButton,
                                       innerClassName: j.upsellButtonInner,
                                       color: s.zxk.Colors.GREEN,
-                                      onClick: _,
+                                      onClick: v,
                                       children: [
                                           (0, r.jsx)(u.Z, {
                                               height: 16,
@@ -194,7 +194,7 @@ let N = function (e) {
                                           (0, r.jsx)(s.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'text-normal',
-                                              children: x.NW.string(x.t['+7XY39'])
+                                              children: b.NW.string(b.t['+7XY39'])
                                           })
                                       ]
                                   })
@@ -204,8 +204,8 @@ let N = function (e) {
                               children: (0, r.jsx)(s.P3F, {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
-                                  onClick: _,
-                                  children: y
+                                  onClick: v,
+                                  children: O
                               })
                           })
                       ]

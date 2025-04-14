@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(269128),
-    a = n(358555),
-    l = n(267642),
+    l = n(358555),
+    a = n(267642),
     o = n(26323),
     c = n(30513),
     d = n(981631),
@@ -18,7 +18,7 @@ function g(e) {
         children: (0, r.jsxs)('div', {
             className: m.guildHeader,
             children: [
-                (0, r.jsx)(a.Z, {
+                (0, r.jsx)(l.Z, {
                     guild: t,
                     isBannerVisible: !0
                 }),
@@ -36,8 +36,8 @@ function g(e) {
     });
 }
 function p(e) {
-    let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: s, banner: a } = e,
-        m = s ? (0, l._p)(d.oNc.ANIMATED_BANNER) : (0, l._p)(d.oNc.BANNER);
+    let { analyticsLocations: t, analyticsLocation: n, guild: i, isGIF: s, banner: l } = e,
+        m = s ? (0, a._p)(d.oNc.ANIMATED_BANNER) : (0, a._p)(d.oNc.BANNER);
     null != m &&
         (0, o.Z)({
             analyticsLocations: t,
@@ -46,12 +46,12 @@ function p(e) {
             headerProps: {
                 title: u.NW.string(u.t['rv2H+/']),
                 subtitle: (function (e, t) {
-                    let n = (0, l.nW)(e);
+                    let n = (0, a.nW)(e);
                     return t ? u.NW.formatToPlainString(u.t['TR/Uys'], { targetLevelOrPlan: n }) : u.NW.formatToPlainString(u.t.B253V1, { targetLevelOrPlan: n });
                 })(m, s),
                 image: (0, r.jsx)(g, {
                     guild: i,
-                    banner: a
+                    banner: l
                 })
             },
             perkIntro: u.NW.string(u.t.ZuItcH),

@@ -4,8 +4,8 @@ var r = n(200651),
     a = n(512722),
     i = n.n(a),
     s = n(392711),
-    l = n.n(s),
-    c = n(442837),
+    c = n.n(s),
+    l = n(442837),
     u = n(692547),
     d = n(780384),
     p = n(481060),
@@ -105,26 +105,26 @@ function D(e) {
     let { eligibilityStates: t } = e,
         n = (0, f.ZP)(),
         o = (0, p.dQu)(u.Z.unsafe_rawColors.GREEN_330).hex(),
-        a = l().groupBy(t, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : ''));
+        a = c().groupBy(t, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : ''));
     return (0, r.jsx)(r.Fragment, {
         children: Object.keys(a).map((e) => {
             var t, s;
-            let l,
-                c = a[e],
-                u = c.filter((e) => null != e.operator),
-                g = c.find((e) => null != e.application),
+            let c,
+                l = a[e],
+                u = l.filter((e) => null != e.operator),
+                g = l.find((e) => null != e.application),
                 f = b.Z.get(e),
                 h = null == g ? void 0 : g.application,
                 y = (null == h ? void 0 : h.bot) != null ? new v.Z(h.bot) : null;
             return (
                 C.SJ.includes(null != (t = null == h ? void 0 : h.id) ? t : '')
-                    ? (l = (0, r.jsx)(w.Z, {
+                    ? (c = (0, r.jsx)(w.Z, {
                           className: E.botTag,
                           color: o,
                           size: 16
                       }))
                     : null != y &&
-                      (l = (0, r.jsx)(_.Z, {
+                      (c = (0, r.jsx)(_.Z, {
                           className: E.botTag,
                           verified: y.isVerifiedBot()
                       })),
@@ -155,7 +155,7 @@ function D(e) {
                                         color: 'interactive-active',
                                         children: null != (s = null == f ? void 0 : f.name) ? s : null == h ? void 0 : h.name
                                     }),
-                                    l
+                                    c
                                 ]
                             }),
                             u.map((e) => {
@@ -187,27 +187,27 @@ function D(e) {
 }
 function L(e) {
     let t,
-        { onGetRolesClicked: n, onOpenProfile: a, eligibilityStates: i, userId: s, roleId: l, channelId: u, guildId: d } = e;
+        { onGetRolesClicked: n, onOpenProfile: a, eligibilityStates: i, userId: s, roleId: c, channelId: u, guildId: d } = e;
     o.useEffect(() => {
         x.default.track(
             k.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
             Z(
                 {
                     other_user_id: s,
-                    role_id: l
+                    role_id: c
                 },
                 (0, h.JS)(u),
                 (0, h.hH)(d)
             )
         );
-    }, [s, l, u, d]);
-    let g = (0, c.e7)(
+    }, [s, c, u, d]);
+    let g = (0, l.e7)(
         [j.ZP],
         () => {
             var e, t;
-            return null != (t = null == (e = j.ZP.getSelfMember(d)) ? void 0 : e.roles.includes(l)) && t;
+            return null != (t = null == (e = j.ZP.getSelfMember(d)) ? void 0 : e.roles.includes(c)) && t;
         },
-        [d, l]
+        [d, c]
     );
     return (
         (t = 1 === i.length && 1 === i[0].length ? M.NW.string(M.t.jDym4O) : 1 === i.length ? M.NW.format(M.t['0eBj39'], {}) : M.NW.format(M.t.D7uftL, {})),
@@ -251,9 +251,9 @@ function L(e) {
 }
 function B(e) {
     let { userId: t, messageId: n, guild: a, channel: s } = e,
-        { analyticsLocations: l } = (0, y.ZP)(),
+        { analyticsLocations: c } = (0, y.ZP)(),
         u = (0, N.Z)(a, t, s.id, !0),
-        d = (0, c.e7)([P.Z], () => P.Z.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
+        d = (0, l.e7)([P.Z], () => P.Z.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
         [m, f] = o.useState(null == d);
     if (null == u) return null;
     async function b() {
@@ -284,7 +284,7 @@ function B(e) {
                                   channelId: s.id,
                                   roleId: u.id,
                                   subsection: R.Tb.CONNECTIONS,
-                                  sourceAnalyticsLocations: l,
+                                  sourceAnalyticsLocations: c,
                                   analyticsLocation: { section: k.jXE.CHANNEL }
                               }),
                                   o();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(436992),
     g = n(20795);
 let b = 'CameraPreviewPosition';
-function _(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: _, participants: y, onSelectParticipant: C } = e,
+function y(e) {
+    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: _, onSelectParticipant: C } = e,
         [x, v] = (function () {
             let [e, t] = i.useState(() => s.K.get(b, h.VD2.BOTTOM_RIGHT));
             return [
@@ -26,9 +26,9 @@ function _(e) {
             ];
         })(),
         j = i.useRef(null),
-        O = null == _.getGuildId() ? 70 : 50,
+        O = null == y.getGuildId() ? 70 : 50,
         E = (0, a.e7)([d.Z], () => d.Z.pipWidth(f.cL.CAMERA_PREVIEW)),
-        N = y.length,
+        N = _.length,
         I = E * N + 8 * (N - 1),
         P = i.useMemo(
             () => ({
@@ -40,7 +40,7 @@ function _(e) {
     i.useLayoutEffect(() => {
         var e;
         null == (e = j.current) || e.ensureIsInPosition();
-    }, [y.length]);
+    }, [_.length]);
     let S = i.useCallback(
             (e) => {
                 let t = 0 === N ? e : (e - 8 * (N - 1)) / N;
@@ -72,12 +72,12 @@ function _(e) {
             resizeConfig: P,
             children: (0, r.jsx)('div', {
                 className: m.tileContainer,
-                children: y.map((e) =>
+                children: _.map((e) =>
                     (0, r.jsx)(
                         p.ZP,
                         {
                             participant: e,
-                            channel: _,
+                            channel: y,
                             onContextMenu: n,
                             className: o()(m.tile, g.elevationHigh),
                             fit: p.BP.COVER,

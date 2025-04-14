@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(793865),
     g = n(575175),
     b = n(522651),
-    _ = n(795318),
-    y = n(258609),
+    y = n(795318),
+    _ = n(258609),
     C = n(74299),
     x = n(924301),
     v = n(459502),
@@ -145,9 +145,9 @@ function ep(e) {
         f = (0, a.e7)([x.ZP], () => x.ZP.getGuildScheduledEvent(null == h ? void 0 : h.guild_scheduled_event_id)),
         m = (0, a.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: g } = (0, Z.Z)(t),
-        y = W.default.getId(),
+        _ = W.default.getId(),
         [C] = (0, ei.Z)(t),
-        v = K.ZP.isModerator(y, t.id),
+        v = K.ZP.isModerator(_, t.id),
         j = (0, Y.B)(t.id),
         E = l(f),
         N = (0, P.Z)({ location: 'ExitStageButton' }),
@@ -195,7 +195,7 @@ function ep(e) {
                           'aria-label': ea.NW.string(ea.t['3Uj+2t']),
                           onClose: l,
                           onSelect: n,
-                          onInteraction: (0, _.u)('End Stage', I, { entrypoint: eo.A5.CARET }),
+                          onInteraction: (0, y.u)('End Stage', I, { entrypoint: eo.A5.CARET }),
                           children: (0, r.jsx)(s.sNh, {
                               id: 'end-stage',
                               color: 'danger',
@@ -323,7 +323,7 @@ let em = i.memo(function (e) {
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
         { suppress: i, selfMute: l, mute: c } = (0, Z.Z)(t),
         u = (0, Y.B)(t.id),
-        d = (0, a.e7)([y.Z], () => null != y.Z.getAwaitingRemoteSessionInfo()),
+        d = (0, a.e7)([_.Z], () => null != _.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: b, enabled: x } = (0, N.Z)(),
         v = (0, S.Z)(t),
         { limit: j, reachedLimit: O } = (0, I.Z)(t),
@@ -336,7 +336,7 @@ let em = i.memo(function (e) {
         z = (O && !H) || (null != B && B.user.id !== (null == k ? void 0 : k.id)),
         q = (0, P.Z)({ location: 'SpeakerControlTray' }),
         { coloredIconsEnabled: K, simplifiedSettingsEnabled: X } = (0, E.Z)({ location: 'SpeakerControlTray' }),
-        J = (0, _.u)('AudioDeviceMenu', n, { entrypoint: eo.A5.CARET });
+        J = (0, y.u)('AudioDeviceMenu', n, { entrypoint: eo.A5.CARET });
     if (null == k) return null;
     let $ = (0, r.jsxs)(r.Fragment, {
         children: [
@@ -347,7 +347,7 @@ let em = i.memo(function (e) {
                         children: (0, r.jsx)(m.Z, {
                             onClose: t,
                             simplified: X,
-                            onInteraction: (0, _.u)('VideoDeviceMenu', n, { entrypoint: eo.A5.CARET })
+                            onInteraction: (0, y.u)('VideoDeviceMenu', n, { entrypoint: eo.A5.CARET })
                         })
                     });
                 },

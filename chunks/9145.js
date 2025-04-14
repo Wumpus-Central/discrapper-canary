@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(82965),
     g = n(871499),
     b = n(402113),
-    _ = n(592125),
-    y = n(271383),
+    y = n(592125),
+    _ = n(271383),
     C = n(944486),
     x = n(594174),
     v = n(585483),
@@ -46,7 +46,7 @@ function U(e) {
         F = (0, S.Z)(),
         H = (0, a.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(U), [U]),
         V = (0, P.pY)(U),
-        z = (0, a.e7)([_.Z], () => _.Z.getChannel(V)),
+        z = (0, a.e7)([y.Z], () => y.Z.getChannel(V)),
         Y = (0, N.gb)(H),
         q = (0, N.uF)(Y),
         K = i.useCallback(() => {
@@ -87,10 +87,10 @@ function U(e) {
     let ec = q.get(null != (n = null == F ? void 0 : F.id) ? n : ''),
         eu = (0, a.e7)([C.Z], () => C.Z.getChannelId()),
         ed = (0, a.Wu)(
-            [y.ZP],
+            [_.ZP],
             () => {
                 var e;
-                return null == z ? [] : Array.from(null != (e = null == ec ? void 0 : ec.embeddedActivity.userIds) ? e : []).map((e) => y.ZP.getMember(z.guild_id, e));
+                return null == z ? [] : Array.from(null != (e = null == ec ? void 0 : ec.embeddedActivity.userIds) ? e : []).map((e) => _.ZP.getMember(z.guild_id, e));
             },
             [ec, z]
         ),

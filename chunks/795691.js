@@ -2,22 +2,22 @@ n.d(t, { Z: () => d }), n(388685), n(457542), n(642613);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(279881),
-    l = n(383124),
+    l = n(279881),
+    a = n(383124),
     o = n(388032),
     c = n(955373);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
-        { topGames: m, tryFetchTopGames: g } = (0, a.I)(),
+        { topGames: m, tryFetchTopGames: g } = (0, l.I)(),
         p = m.get(t),
-        [f, h] = i.useState(!1);
+        [h, f] = i.useState(!1);
     i.useEffect(() => {
-        h(!0),
+        f(!0),
             g(t).finally(() => {
-                h(!1);
+                f(!1);
             });
     }, [t, g]);
-    let b = i.useMemo(
+    let x = i.useMemo(
             () =>
                 null == p
                     ? []
@@ -26,15 +26,15 @@ function d(e) {
                           .sort((e, t) => p[t].score - p[e].score),
             [p, n]
         ),
-        x = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
             [d, n]
         );
-    return f && null == p
+    return h && null == p
         ? (0, r.jsx)(s.$jN, {})
-        : null == b || 0 === b.length
+        : null == x || 0 === x.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -49,13 +49,13 @@ function d(e) {
                             }),
                             (0, r.jsx)('div', {
                                 className: c.gamesList,
-                                children: b.map((e) =>
+                                children: x.map((e) =>
                                     (0, r.jsx)(
-                                        l.Z,
+                                        a.Z,
                                         {
                                             applicationId: e,
                                             selected: !1,
-                                            onClick: x,
+                                            onClick: b,
                                             disabled: u
                                         },
                                         e

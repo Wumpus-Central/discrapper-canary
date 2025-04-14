@@ -104,7 +104,7 @@ let P = () => {
                 (y = S.NW.string(S.t['8RrsHh'])),
                 (h = () => {
                     (0, s.ZDy)(async () => {
-                        let { default: e } = await n.e('82075').then(n.bind(n, 76075));
+                        let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) => (0, r.jsx)(e, A({ guildId: P.id }, t));
                     });
                 }),

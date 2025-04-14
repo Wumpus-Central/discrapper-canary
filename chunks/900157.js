@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(287746),
     g = n(541716),
     b = n(665149),
-    _ = n(910611),
-    y = n(359110),
+    y = n(910611),
+    _ = n(359110),
     C = n(592125),
     x = n(703558),
     v = n(430824),
@@ -82,7 +82,7 @@ function T(e) {
                 type: 'SIDEBAR_CLOSE',
                 baseChannelId: k.parent_id
             }),
-            (0, y.ad)(k, { source: E.on.VOICE_AUTO_OPEN }));
+            (0, _.ad)(k, { source: E.on.VOICE_AUTO_OPEN }));
     }, [M, k]);
     let L = i.useRef(!1);
     if (
@@ -108,7 +108,7 @@ function T(e) {
             (0, r.jsx)(b.ZP, {
                 toolbar: D,
                 'aria-label': I.NW.string(I.t.Pwe8tL),
-                children: (0, _.ud)({
+                children: (0, y.ud)({
                     channel: A,
                     channelName: R,
                     guild: w,
@@ -120,7 +120,7 @@ function T(e) {
                         });
                     },
                     handleClick: function () {
-                        null != A && (0, y.Kh)(A.id);
+                        null != A && (0, _.Kh)(A.id);
                     }
                 })
             }),

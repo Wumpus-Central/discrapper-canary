@@ -19,14 +19,14 @@ var r = n(200651),
     m = n(937393),
     g = n(43982),
     b = n(721351),
-    _ = n(420529),
-    y = n(927923),
+    y = n(420529),
+    _ = n(927923),
     C = n(981631),
     x = n(921944),
     v = n(388032);
 function j(e) {
     let { onClose: t, channel: n } = e,
-        i = (0, _.Z)(n);
+        i = (0, y.Z)(n);
     return (0, r.jsx)(a.v2r, {
         onClose: t,
         onSelect: () => null,
@@ -61,10 +61,10 @@ function E(e) {
             }
             return i;
         })(e, ['channel']);
-    let _ = (0, f.Z)(),
+    let y = (0, f.Z)(),
         O = (0, l.e7)([h.Z], () => {
             var e, t;
-            return null == (e = h.Z.getSessionById(null != (t = null == _ ? void 0 : _.sessionId) ? t : '')) ? void 0 : e.clientInfo.os;
+            return null == (e = h.Z.getSessionById(null != (t = null == y ? void 0 : y.sessionId) ? t : '')) ? void 0 : e.clientInfo.os;
         }),
         E = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         [N, I] = (0, l.Wu)([s.Z], () => [s.Z.getMode(t.id), s.Z.getLayout(t.id)]),
@@ -138,7 +138,7 @@ function E(e) {
                             (i = i =
                                 {
                                     onClick: () => T(!0),
-                                    label: null != O ? (O === y.YE.XBOX ? v.NW.string(v.t.T0uYKy) : v.NW.string(v.t.FWAzS0)) : v.NW.string(v.t['mbi/fH']),
+                                    label: null != O ? (O === _.YE.XBOX ? v.NW.string(v.t.T0uYKy) : v.NW.string(v.t.FWAzS0)) : v.NW.string(v.t['mbi/fH']),
                                     iconComponent: (0, b.Z)(O)
                                 }),
                             Object.getOwnPropertyDescriptors

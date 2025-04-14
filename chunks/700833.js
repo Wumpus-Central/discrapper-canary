@@ -1,13 +1,13 @@
 n.d(t, {
-    Md: () => f,
+    Md: () => h,
     a0: () => p
 });
 var r = n(200651);
 n(192379);
 var i = n(392711),
     s = n(481060),
-    a = n(246364),
-    l = n(405545),
+    l = n(246364),
+    a = n(405545),
     o = n(382574),
     c = n(279988),
     d = n(786127),
@@ -56,71 +56,71 @@ function g(e, t) {
     );
 }
 function p(e) {
-    let { dropHoveredIndex: t, formField: p, guild: f, index: b, isDragEnabled: x, submittedGuildJoinRequestsCount: j, removeFormField: N, updateFormField: v, updateFormFieldOrder: _, canRemove: y, actionsLocation: O, fieldStyle: C } = e,
+    let { dropHoveredIndex: t, formField: p, guild: h, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: N, updateFormField: _, updateFormFieldOrder: v, canRemove: O, actionsLocation: C, fieldStyle: y } = e,
         I = async () => {
-            await N(b);
+            await N(x);
         },
         E = async (e) => {
-            await v(b, e);
+            await _(x, e);
         },
         S = async (e, t, n) => {
-            await _(e, t, n);
+            await v(e, t, n);
         },
         T = (0, i.uniqueId)(),
-        P = t === b,
+        P = t === x,
         w = {
             key: T,
-            index: b,
-            isDragEnabled: x,
+            index: x,
+            isDragEnabled: b,
             isDropHovered: P,
             onEdit: () => {
                 0 === j
-                    ? h(p, E, f)
+                    ? f(p, E, h)
                     : (0, s.ZDy)(async () => {
                           let { default: e } = await n.e('74673').then(n.bind(n, 394045));
                           return (t) =>
                               (0, r.jsx)(
                                   e,
                                   g(m({}, t), {
-                                      guildId: f.id,
+                                      guildId: h.id,
                                       submittedGuildJoinRequestsCount: j,
-                                      onConfirm: () => h(p, E, f)
+                                      onConfirm: () => f(p, E, h)
                                   })
                               );
                       });
             },
             onRemove: I,
             onDrop: S,
-            canRemove: y,
-            actionsLocation: O,
-            fieldStyle: C
+            canRemove: O,
+            actionsLocation: C,
+            fieldStyle: y
         };
     switch (p.field_type) {
-        case a.QJ.TERMS:
+        case l.QJ.TERMS:
             return (0, r.jsx)(
                 c.Z,
                 m(
                     {
-                        channelId: f.rulesChannelId,
-                        title: C === a.it.COMPACT ? u.NW.string(u.t['55+giY']) : u.NW.string(u.t['53vNcH']),
+                        channelId: h.rulesChannelId,
+                        title: y === l.it.COMPACT ? u.NW.string(u.t['55+giY']) : u.NW.string(u.t['53vNcH']),
                         formField: p
                     },
                     w
                 )
             );
-        case a.QJ.PARAGRAPH:
+        case l.QJ.PARAGRAPH:
             return (0, r.jsx)(o.Z, m({ formField: p }, w));
-        case a.QJ.TEXT_INPUT:
+        case l.QJ.TEXT_INPUT:
             return (0, r.jsx)(d.Z, m({ formField: p }, w));
-        case a.QJ.MULTIPLE_CHOICE:
-            return (0, r.jsx)(l.Z, m({ formField: p }, w));
+        case l.QJ.MULTIPLE_CHOICE:
+            return (0, r.jsx)(a.Z, m({ formField: p }, w));
         default:
             return null;
     }
 }
-function f(e, t, i) {
+function h(e, t, i) {
     switch (e) {
-        case a.QJ.TERMS:
+        case l.QJ.TERMS:
             return (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('5945').then(n.bind(n, 92451));
                 return (n) =>
@@ -133,7 +133,7 @@ function f(e, t, i) {
                         })
                     );
             });
-        case a.QJ.PARAGRAPH:
+        case l.QJ.PARAGRAPH:
             return (0, s.ZDy)(async () => {
                 let { ParagraphFormFieldModal: e } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
@@ -145,7 +145,7 @@ function f(e, t, i) {
                         })
                     );
             });
-        case a.QJ.TEXT_INPUT:
+        case l.QJ.TEXT_INPUT:
             return (0, s.ZDy)(async () => {
                 let { TextInputFormFieldModal: e } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
@@ -157,7 +157,7 @@ function f(e, t, i) {
                         })
                     );
             });
-        case a.QJ.MULTIPLE_CHOICE:
+        case l.QJ.MULTIPLE_CHOICE:
             return (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('94064').then(n.bind(n, 607569));
                 return (n) =>
@@ -171,9 +171,9 @@ function f(e, t, i) {
             });
     }
 }
-function h(e, t, i) {
+function f(e, t, i) {
     switch (e.field_type) {
-        case a.QJ.TERMS:
+        case l.QJ.TERMS:
             return (0, s.ZDy)(async () => {
                 let { default: s } = await n.e('5945').then(n.bind(n, 92451));
                 return (n) =>
@@ -186,7 +186,7 @@ function h(e, t, i) {
                         })
                     );
             });
-        case a.QJ.PARAGRAPH:
+        case l.QJ.PARAGRAPH:
             return (0, s.ZDy)(async () => {
                 let { ParagraphFormFieldModal: i } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
@@ -198,7 +198,7 @@ function h(e, t, i) {
                         })
                     );
             });
-        case a.QJ.TEXT_INPUT:
+        case l.QJ.TEXT_INPUT:
             return (0, s.ZDy)(async () => {
                 let { TextInputFormFieldModal: i } = await n.e('6595').then(n.bind(n, 457042));
                 return (n) =>
@@ -210,7 +210,7 @@ function h(e, t, i) {
                         })
                     );
             });
-        case a.QJ.MULTIPLE_CHOICE:
+        case l.QJ.MULTIPLE_CHOICE:
             return (0, s.ZDy)(async () => {
                 let { default: i } = await n.e('94064').then(n.bind(n, 607569));
                 return (n) =>

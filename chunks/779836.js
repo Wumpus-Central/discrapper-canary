@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -15,7 +15,7 @@ var i = n(120356),
     m = n(959517),
     g = n(388032),
     b = n(613873);
-function _(e) {
+function y(e) {
     let { summary: t, channel: n } = e,
         i = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
         l = (e, r) => {
@@ -80,7 +80,7 @@ function _(e) {
         )
     });
 }
-function y(e) {
+function _(e) {
     var t, n;
     let i,
         { item: o, channel: u, index: d } = e,
@@ -102,7 +102,7 @@ function y(e) {
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(_, {
+                      (0, r.jsx)(y, {
                           summary: h,
                           channel: u
                       }),

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f }), n(953529), n(388685);
+n.d(t, { Z: () => h }), n(953529), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    l = n.n(s),
+    a = n(481060),
     o = n(749210),
     c = n(63063),
     d = n(714939),
@@ -11,41 +11,41 @@ var r = n(200651),
     m = n(981631),
     g = n(388032),
     p = n(587072);
-function f(e) {
-    let { guild: t, everyoneRole: n, filteredRoles: s, setEditRoleId: a, query: o, setQuery: c, setHeaderHeight: d } = e,
+function h(e) {
+    let { guild: t, everyoneRole: n, filteredRoles: s, setEditRoleId: l, query: o, setQuery: c, setHeaderHeight: d } = e,
         m = i.useRef(null);
     i.useEffect(() => {
         var e, t;
         d(null != (t = null == (e = m.current) ? void 0 : e.offsetHeight) ? t : u.Cl);
     }, [d]);
-    let f = i.useCallback(() => {
-        a(n.id);
-    }, [a, n.id]);
+    let h = i.useCallback(() => {
+        l(n.id);
+    }, [l, n.id]);
     return (0, r.jsxs)('div', {
         ref: m,
         children: [
-            (0, r.jsx)(l.vwX, {
-                tag: l.RB0.H1,
+            (0, r.jsx)(a.vwX, {
+                tag: a.RB0.H1,
                 children: g.NW.string(g.t.LPJmLy)
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 className: p.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
                 children: g.NW.string(g.t['1ydhVl'])
             }),
-            (0, r.jsx)(h, {
+            (0, r.jsx)(f, {
                 guild: t,
                 everyoneRole: n,
                 filteredRoles: s,
                 query: o,
                 setQuery: c,
-                onEveryoneRoleClick: f
+                onEveryoneRoleClick: h
             })
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, everyoneRole: n, filteredRoles: i, query: s, setQuery: o, onEveryoneRoleClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -53,12 +53,12 @@ function h(e) {
                 role: n,
                 onClick: u
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(x, {
                 guild: t,
                 query: s,
                 setQuery: o
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 className: p.helpText,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
@@ -70,13 +70,13 @@ function h(e) {
                     className: p.tableHeader,
                     children: [
                         (0, r.jsx)('div', { className: p.dragSpacing }),
-                        (0, r.jsx)(l.Text, {
-                            className: a()(p.tableTitle, p.roleNameSpacing),
+                        (0, r.jsx)(a.Text, {
+                            className: l()(p.tableTitle, p.roleNameSpacing),
                             variant: 'text-sm/normal',
                             children: g.NW.format(g.t['38N3V1'], { numRoles: String(i.length) })
                         }),
-                        (0, r.jsx)(l.Text, {
-                            className: a()(p.tableTitle, p.memberSpacing),
+                        (0, r.jsx)(a.Text, {
+                            className: l()(p.tableTitle, p.memberSpacing),
                             variant: 'text-sm/normal',
                             children: g.NW.string(g.t['9Oq93t'])
                         }),
@@ -87,9 +87,9 @@ function h(e) {
         ]
     });
 }
-function b(e) {
+function x(e) {
     let { guild: t, query: n, setQuery: s } = e,
-        [a, c] = i.useState(!1),
+        [l, c] = i.useState(!1),
         d = i.useCallback(
             (e) => {
                 s(e);
@@ -107,19 +107,19 @@ function b(e) {
         children: (0, r.jsxs)('div', {
             className: p.searchContainer,
             children: [
-                (0, r.jsx)(l.E1j, {
-                    size: l.E1j.Sizes.MEDIUM,
+                (0, r.jsx)(a.E1j, {
+                    size: a.E1j.Sizes.MEDIUM,
                     query: n,
                     onChange: d,
                     onClear: u,
                     placeholder: g.NW.string(g.t.Sojqsr),
                     'aria-label': g.NW.string(g.t.Sojqsr)
                 }),
-                (0, r.jsx)(l.zxk, {
+                (0, r.jsx)(a.zxk, {
                     className: p.createButton,
-                    size: l.zxk.Sizes.SMALL,
+                    size: a.zxk.Sizes.SMALL,
                     onClick: m,
-                    submitting: a,
+                    submitting: l,
                     children: g.NW.string(g.t.JZZjQE)
                 })
             ]

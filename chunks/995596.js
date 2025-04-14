@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -15,8 +15,8 @@ var r = n(200651),
     b = n(889711),
     f = n(384433),
     N = n(388032),
-    C = n(86931);
-let p = (e) => [
+    p = n(86931);
+let C = (e) => [
         {
             id: f.e.ALL_MEMBERS,
             label: N.NW.string(N.t.NOOm1d)
@@ -30,7 +30,7 @@ let p = (e) => [
             label: N.NW.string(N.t.bSZklZ)
         }
     ],
-    _ = (e) => {
+    g = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: l, onClose: i } = e;
         return (0, r.jsx)(d.v2r, {
             navId: 'members-tabs-overflow-menu',
@@ -59,7 +59,7 @@ let p = (e) => [
             )
         });
     };
-function g(e) {
+function v(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = (0, u.ZP)(),
         o = (0, c.wj)(s),
@@ -77,7 +77,7 @@ function g(e) {
     return (0, r.jsx)(d.yRy, {
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, r.jsx)(_, {
+            return (0, r.jsx)(g, {
                 selectedTab: i,
                 onClose: l,
                 tabs: n,
@@ -120,7 +120,7 @@ function g(e) {
                     {
                         id: 'more',
                         color: 'text-muted',
-                        className: a()(C.more, { [C.selected]: m }),
+                        className: a()(p.more, { [p.selected]: m }),
                         'aria-label': N.NW.string(N.t.UKOtz8),
                         children: [
                             (0, r.jsx)(d.Text, {
@@ -156,13 +156,13 @@ function g(e) {
         }
     });
 }
-function v(e) {
+function _(e) {
     let { guildId: t, currentTab: n, onTabSelect: i } = e,
         [a, c] = l.useState(0),
         u = l.useRef(null),
-        _ = l.useRef(a),
-        v = (0, x.A)({ guildId: t }),
-        T = p(null != v ? v : 0),
+        g = l.useRef(a),
+        _ = (0, x.A)({ guildId: t }),
+        T = C(null != _ ? _ : 0),
         {
             lastVisibleIndex: E,
             onItemLayout: I,
@@ -181,7 +181,7 @@ function v(e) {
         A = l.useCallback(() => {
             var e;
             let t = null == (e = u.current) ? void 0 : e.getBoundingClientRect();
-            null != t && _.current !== t.width && (c(t.width), (_.current = t.width));
+            null != t && g.current !== t.width && (c(t.width), (g.current = t.width));
         }, []);
     return (
         l.useEffect(() => {
@@ -193,13 +193,13 @@ function v(e) {
         }, [A, O]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(h.Z.Divider, { className: C.divider }),
+                (0, r.jsx)(h.Z.Divider, { className: p.divider }),
                 (0, r.jsxs)('div', {
-                    className: C.tabsContainer,
+                    className: p.tabsContainer,
                     ref: u,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: C.measurements,
+                            className: p.measurements,
                             children: [
                                 T.map((e, t) =>
                                     (0, r.jsx)(
@@ -218,7 +218,7 @@ function v(e) {
                                 ),
                                 (0, r.jsx)('div', {
                                     ref: S,
-                                    children: (0, r.jsx)(g, {
+                                    children: (0, r.jsx)(v, {
                                         tabs: w,
                                         onTabSelect: i,
                                         selectedTab: n
@@ -244,7 +244,7 @@ function v(e) {
                                     )
                                 ),
                                 0 !== w.length
-                                    ? (0, r.jsx)(g, {
+                                    ? (0, r.jsx)(v, {
                                           tabs: w,
                                           onTabSelect: i,
                                           selectedTab: n

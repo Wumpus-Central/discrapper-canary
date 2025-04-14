@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(282338);
-function a(e) {
-    let { step: t, header: n, children: a } = e;
+function l(e) {
+    let { step: t, header: n, children: l } = e;
     return (0, r.jsxs)('div', {
         className: s.triggerContainer,
         children: [
@@ -30,10 +30,10 @@ function a(e) {
                             children: n
                         })
                     }),
-                    null != a &&
+                    null != l &&
                         (0, r.jsx)('div', {
                             className: s.triggerSettingsContainer,
-                            children: a
+                            children: l
                         })
                 ]
             })

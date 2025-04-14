@@ -14,8 +14,8 @@ var r = n(200651),
     m = n(633302),
     g = n(970731),
     b = n(594174),
-    _ = n(176354),
-    y = n(823379),
+    y = n(176354),
+    _ = n(823379),
     C = n(74538),
     x = n(401062),
     v = n(696900),
@@ -37,10 +37,10 @@ let M = T.Hz.CHAT,
         section: S.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
-    D = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(y.lm);
+    D = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(_.lm);
 function W(e) {
     var t;
-    let { channel: n, closePopout: m, onFocus: y } = e,
+    let { channel: n, closePopout: m, onFocus: _ } = e,
         T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         W = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         U = C.ZP.canUseFancyVoiceChannelReactions(W),
@@ -50,7 +50,7 @@ function W(e) {
         H = (0, l.uniqBy)([...F, ...D], 'name')
             .filter(
                 (e) =>
-                    !_.ZP.isEmojiFilteredOrLocked({
+                    !y.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
                         intention: M
@@ -111,7 +111,7 @@ function W(e) {
                 shouldShow: l,
                 renderPopout: () =>
                     (0, r.jsx)('div', {
-                        onMouseEnter: y,
+                        onMouseEnter: _,
                         children: (0, r.jsx)(g.ZP, {
                             className: k.reducedMotionTooltip,
                             header: R.NW.string(R.t['6gGHnZ']),
@@ -132,7 +132,7 @@ function W(e) {
                         closePopout: m,
                         onSelectEmoji: Y,
                         onSelectDisabledEmoji: q,
-                        onFocus: y,
+                        onFocus: _,
                         onExpandedToggle: K,
                         analyticsOverride: L,
                         emojiSearchProps: {

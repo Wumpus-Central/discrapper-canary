@@ -2,7 +2,7 @@ n.d(t, { Z: () => m }), n(388685);
 var r,
     i,
     s = n(748780);
-function a(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function l(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function l(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
@@ -43,7 +43,7 @@ class o {
         this.animation.stop();
     }
     constructor(e) {
-        a(this, 'animation', void 0), (this.animation = e);
+        l(this, 'animation', void 0), (this.animation = e);
     }
 }
 class c {
@@ -57,7 +57,7 @@ class c {
         this._map((e) => e.stop());
     }
     constructor(e) {
-        a(this, 'animations', void 0), (this.animations = e);
+        l(this, 'animations', void 0), (this.animations = e);
     }
 }
 class d {
@@ -71,14 +71,14 @@ class d {
         (this.stopped = !0), this.animations.map((e) => e.stop());
     }
     constructor(e) {
-        a(this, 'animations', void 0), a(this, 'stopped', !1), (this.animations = e);
+        l(this, 'animations', void 0), l(this, 'stopped', !1), (this.animations = e);
     }
 }
 function u(e, t, n) {
-    return new o(n(e, l({}, t)));
+    return new o(n(e, a({}, t)));
 }
 let m =
-    ((r = l({}, s.Z)),
+    ((r = a({}, s.Z)),
     (i = i =
         {
             timing: function (e, t) {

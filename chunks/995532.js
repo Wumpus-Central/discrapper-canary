@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     l,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(570140);
 let i = {},
     E = {},
@@ -21,7 +21,7 @@ function T(e) {
     let { welcomeScreen: t, guildId: n } = e;
     E[n] = null != t ? t : i;
 }
-class N extends (a = s.ZP.Store) {
+class N extends (s = a.ZP.Store) {
     get(e) {
         if (null != e) return E[e];
     }

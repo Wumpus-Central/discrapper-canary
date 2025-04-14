@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(399606),
+    l = n.n(s),
+    a = n(399606),
     o = n(481060),
     c = n(734893),
     d = n(150512),
@@ -11,9 +11,9 @@ var r = n(200651),
     m = n(8426),
     g = n(969632),
     p = n(535907),
-    f = n(388032),
-    h = n(773100);
-function b(e) {
+    h = n(388032),
+    f = n(773100);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function x(e, t) {
 }
 let j = function (e) {
     let { guildId: t } = e,
-        s = (0, l.cj)([g.Z], () => {
+        s = (0, a.cj)([g.Z], () => {
             var e;
             return null != (e = g.Z.getSettings().welcomeMessage) ? e : p.z;
         }),
@@ -69,7 +69,7 @@ let j = function (e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(b({}, n), {
+                            b(x({}, n), {
                                 guildId: t,
                                 welcomeMessage: s,
                                 onSave: (e) => (0, m._N)(e)
@@ -78,18 +78,18 @@ let j = function (e) {
                 }),
             [t, s]
         ),
-        N = (0, l.e7)([u.default], () => u.default.getId());
+        N = (0, a.e7)([u.default], () => u.default.getId());
     return (0, c.pw)(s)
         ? (0, r.jsx)(o.zxk, {
               size: o.zxk.Sizes.SMALL,
               onClick: j,
               children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/medium',
-                  children: f.NW.string(f.t['9Z+aEB'])
+                  children: h.NW.string(h.t['9Z+aEB'])
               })
           })
         : (0, r.jsxs)(o.P3F, {
-              className: h.editWelcomeSection,
+              className: f.editWelcomeSection,
               onClick: j,
               children: [
                   (0, r.jsx)(d.Z, {
@@ -100,18 +100,18 @@ let j = function (e) {
                       }
                   }),
                   (0, r.jsx)(o.ua7, {
-                      text: f.NW.string(f.t.bt75u7),
+                      text: h.NW.string(h.t.bt75u7),
                       children: (e) =>
                           (0, r.jsxs)(
                               'div',
-                              x(b({}, e), {
-                                  className: a()(h.actionItemEditButton, h.editWelcomeButton),
+                              b(x({}, e), {
+                                  className: l()(f.actionItemEditButton, f.editWelcomeButton),
                                   children: [
                                       (0, r.jsx)(o.vdY, {
                                           size: 'md',
                                           color: 'currentColor'
                                       }),
-                                      (0, r.jsx)(o.nn4, { children: f.NW.string(f.t.bt75u7) })
+                                      (0, r.jsx)(o.nn4, { children: h.NW.string(h.t.bt75u7) })
                                   ]
                               })
                           )

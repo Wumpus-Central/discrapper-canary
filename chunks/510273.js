@@ -66,8 +66,8 @@ let p = (e) => {
 };
 function h(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: o, description: h, rarity: _, hideDescriptionUntilUnlock: f, onAction: m } = t,
-        { color: b } = (0, a.F7)(_);
+        { name: o, description: h, rarity: f, hideDescriptionUntilUnlock: _, onAction: m } = t,
+        { color: b } = (0, a.F7)(f);
     i.useEffect(() => {
         let e = setTimeout(() => {
             c.Z.playAchievementUnlockSound();
@@ -103,7 +103,7 @@ function h(e) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: f && !n ? '?????' : h()
+                        children: _ && !n ? '?????' : h()
                     })
                 ]
             }),

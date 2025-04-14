@@ -9,14 +9,14 @@ var r = n(442837),
     a = n(430824),
     i = n(496675),
     s = n(594174),
-    l = n(630388),
-    c = n(372897),
+    c = n(630388),
+    l = n(372897),
     u = n(981631);
 let d = (e, t) => {
     var n;
     let i = (0, r.e7)([o.ZP], () => {
             var n, r;
-            return (0, l.yE)(null != (r = null == (n = o.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, c.q.DID_REJOIN);
+            return (0, c.yE)(null != (r = null == (n = o.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, l.q.DID_REJOIN);
         }),
         u = (0, r.e7)([a.Z], () => {
             var t;
@@ -34,14 +34,14 @@ let d = (e, t) => {
                 (function (e, t, n) {
                     let { maxDaysOld: r, minDaysOld: i = 0 } = t,
                         s = a.Z.getGuild(e),
-                        l = null == s ? void 0 : s.joinedAt;
+                        c = null == s ? void 0 : s.joinedAt;
                     if (null != n) {
                         let t = o.ZP.getMember(e, n);
-                        l = (null == t ? void 0 : t.joinedAt) == null ? null : new Date(t.joinedAt);
+                        c = (null == t ? void 0 : t.joinedAt) == null ? null : new Date(t.joinedAt);
                     }
-                    if (null == l) return !1;
-                    let c = Date.now() - l.getTime();
-                    return (null == r || c <= 86400000 * r) && c >= 86400000 * i;
+                    if (null == c) return !1;
+                    let l = Date.now() - c.getTime();
+                    return (null == r || l <= 86400000 * r) && l >= 86400000 * i;
                 })(e, n, t),
             [n, e, t]
         ) &&

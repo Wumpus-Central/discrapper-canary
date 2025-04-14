@@ -1,7 +1,7 @@
 n.d(t, {
     ED: () => g,
-    fO: () => T,
-    qp: () => I
+    fO: () => O,
+    qp: () => T
 }),
     n(388685);
 var l = n(200651),
@@ -16,8 +16,8 @@ var l = n(200651),
     E = n(432792),
     f = n(981631),
     C = n(921944),
-    p = n(46140),
-    _ = n(388032);
+    _ = n(46140),
+    p = n(388032);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,18 +48,18 @@ let g = (e) =>
             E.tE,
             h(
                 {
-                    titleText: _.NW.string(_.t.KnWRQU),
-                    descriptionText: _.NW.format(_.t['xYx+WV'], { quantity: 200 }),
-                    ctaText: _.NW.string(_.t.v4HbPz),
+                    titleText: p.NW.string(p.t.KnWRQU),
+                    descriptionText: p.NW.format(p.t['xYx+WV'], { quantity: 200 }),
+                    ctaText: p.NW.string(p.t.v4HbPz),
                     renderTail: !0
                 },
                 e
             )
         ),
-    O = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
-    T = (e) => {
+    I = [f.Z5c.ME, f.Z5c.COLLECTIBLES_SHOP, f.Z5c.NITRO_HOME],
+    O = (e) => {
         var { onClose: t, onCtaClick: n, targetElementRef: a, isGuildBarScrolling: u, children: C } = e,
-            p = (function (e, t) {
+            _ = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     l,
@@ -78,44 +78,44 @@ let g = (e) =>
                 }
                 return r;
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
-        let _ = r.useRef(null),
-            [I, S] = r.useState(22),
+        let p = r.useRef(null),
+            [T, S] = r.useState(22),
             N = r.useRef(null),
-            m = (0, s.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
-            A = r.useCallback(
+            A = (0, s.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
+            m = r.useCallback(
                 (e) => {
-                    if (m) {
-                        let t = window.innerHeight - ((0, E.t4)() + T.COACHMARK_VERTICAL_OFFSET);
+                    if (A) {
+                        let t = window.innerHeight - ((0, E.t4)() + O.COACHMARK_VERTICAL_OFFSET);
                         return e.top <= t;
                     }
                     return !0;
                 },
-                [m]
+                [A]
             ),
-            b = (0, o.e7)([d.Z], () => d.Z.getExpandedFolders().size);
+            P = (0, o.e7)([d.Z], () => d.Z.getExpandedFolders().size);
         r.useEffect(() => {
-            null !== _.current && _.current.updateElementPositionWithPolling();
-        }, [b]),
+            null !== p.current && p.current.updateElementPositionWithPolling();
+        }, [P]),
             r.useEffect(() => {
-                null !== _.current && _.current.updateElementPosition();
+                null !== p.current && p.current.updateElementPosition();
             }, [u]);
-        let P = (0, i.TH)().pathname,
+        let b = (0, i.TH)().pathname,
             v = r.useCallback(() => {
-                O.includes(P) || (0, c.uL)(f.Z5c.ME), n();
-            }, [P, n]),
-            y = r.useCallback(
+                I.includes(b) || (0, c.uL)(f.Z5c.ME), n();
+            }, [b, n]),
+            L = r.useCallback(
                 (e) => {
                     let t = Math.floor(e.width / 2) - 2;
-                    I !== t && S(t);
+                    T !== t && S(t);
                 },
-                [I]
+                [T]
             );
         return (0, l.jsx)(E.WS, {
-            positionControlRef: _,
+            positionControlRef: p,
             targetElementRef: a,
             coachmarkRef: N,
-            calculateVisibility: A,
-            onGetTargetElementDimensions: y,
+            calculateVisibility: m,
+            onGetTargetElementDimensions: L,
             defaultCoachmarkPosition: 'bottom',
             popoutElement: (0, l.jsx)(
                 g,
@@ -123,18 +123,18 @@ let g = (e) =>
                     {
                         onClose: t,
                         onCtaClick: v,
-                        tailLeftOffset: I,
+                        tailLeftOffset: T,
                         coachmarkRef: N
                     },
-                    p
+                    _
                 )
             ),
             spacing: 8,
             children: C
         });
     };
-T.COACHMARK_VERTICAL_OFFSET = 10;
-let I = (e) => {
+O.COACHMARK_VERTICAL_OFFSET = 10;
+let T = (e) => {
     let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: l } = e,
         i = (0, s.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
         o = r.useCallback(() => {
@@ -147,7 +147,7 @@ let I = (e) => {
             onboardingCoachmarkType: 'discover',
             onShowCoachmarkHandler: o
         }),
-        _ = r.useCallback(() => {
+        p = r.useCallback(() => {
             (0, u.EW)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                 dismissAction: C.L.INDIRECT_ACTION,
                 groupName: C.R.VIRTUAL_CURRENCY_ONBOARDING
@@ -158,9 +158,9 @@ let I = (e) => {
     return t
         ? {
               shouldShow: c,
-              questId: p.V6,
+              questId: _.V6,
               closeCoachmarkIfOpen: d,
-              onClose: _,
+              onClose: p,
               onCtaClick: h
           }
         : {

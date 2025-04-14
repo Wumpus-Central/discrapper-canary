@@ -1,27 +1,27 @@
-n.d(t, { Z: () => W }), n(388685), n(953529);
+n.d(t, { Z: () => k }), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(512722),
-    o = n.n(l),
+    l = n.n(s),
+    a = n(512722),
+    o = n.n(a),
     c = n(392711),
     d = n.n(c),
     u = n(215569),
     m = n(477690),
     g = n(481060),
     p = n(852860),
-    f = n(393238),
-    h = n(211266),
-    b = n(313201),
-    x = n(345861),
+    h = n(393238),
+    f = n(211266),
+    x = n(313201),
+    b = n(345861),
     j = n(208567),
     N = n(73346),
-    v = n(624138),
-    _ = n(584825),
-    y = n(723047),
-    O = n(927954),
-    C = n(164000),
+    _ = n(624138),
+    v = n(584825),
+    O = n(723047),
+    C = n(927954),
+    y = n(164000),
     I = n(587431),
     E = n(293810),
     S = n(333866),
@@ -70,7 +70,7 @@ function R(e, t) {
         e
     );
 }
-let Z = (0, v.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+let Z = (0, _.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function D() {
     return [
         {
@@ -87,10 +87,10 @@ function D() {
         }
     ];
 }
-function k(e) {
-    let { value: t, 'aria-labelledby': n, onChange: s, disabled: l = !1 } = e,
-        { ref: o, width: c } = (0, f.Z)(),
-        d = (0, h.Z)(D),
+function A(e) {
+    let { value: t, 'aria-labelledby': n, onChange: s, disabled: a = !1 } = e,
+        { ref: o, width: c } = (0, h.Z)(),
+        d = (0, f.Z)(D),
         u = i.useMemo(
             () =>
                 d.map((e) =>
@@ -116,49 +116,49 @@ function k(e) {
             value: t,
             orientation: m ? 'horizontal' : 'vertical',
             size: g.FXm.Sizes.NONE,
-            className: a()({ [P.radioGroupHorizontal]: m }),
+            className: l()({ [P.radioGroupHorizontal]: m }),
             radioItemClassName: P.formatOptionRadioItem,
             onChange: (e) => {
                 let { value: t } = e;
                 return s(t);
             },
             'aria-labelledby': n,
-            disabled: l
+            disabled: a
         })
     });
 }
-function W(e) {
+function k(e) {
     var t;
     let { guild: n, isGuildProducts: s = !1 } = e,
-        { format: a } = (0, C.Z)(n.id),
-        l = (0, _.YB)(n.id),
+        { format: l } = (0, y.Z)(n.id),
+        a = (0, v.YB)(n.id),
         c = i.useCallback(() => {
             var e;
-            return (null == l || null == (e = l.cover_image_asset) ? void 0 : e.application_id) == null ? null : (0, N._W)(l.cover_image_asset.application_id, l.cover_image_asset, Z);
-        }, [l]),
-        [m, f] = i.useState(a),
-        [h, v] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ''),
-        [D, W] = i.useState(c),
-        [A, L] = i.useState(null == l ? void 0 : l.store_page_guild_products_default_sort),
-        [M, G] = i.useState(null == l ? void 0 : l.server_shop_tab_order),
-        { loading: U, error: B, updateSubscriptionsSettings: F } = (0, _.QV)(),
-        { imageCTA: z, imageAriaLabel: H, setFilename: V } = (0, O.Z)(null == l ? void 0 : l.cover_image_asset),
-        Y = (0, b.Dt)(),
-        K = (0, b.Dt)(),
-        q = (0, b.Dt)();
-    function X(e, t) {
-        o()(null != e, 'Null value not allowed'), null != t && V(t.name), W(e);
+            return (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) == null ? null : (0, N._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z);
+        }, [a]),
+        [m, h] = i.useState(l),
+        [f, _] = i.useState(null != (t = null == a ? void 0 : a.description) ? t : ''),
+        [D, k] = i.useState(c),
+        [W, L] = i.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
+        [M, G] = i.useState(null == a ? void 0 : a.server_shop_tab_order),
+        { loading: U, error: B, updateSubscriptionsSettings: F } = (0, v.QV)(),
+        { imageCTA: z, imageAriaLabel: H, setFilename: V } = (0, C.Z)(null == a ? void 0 : a.cover_image_asset),
+        Y = (0, x.Dt)(),
+        K = (0, x.Dt)(),
+        X = (0, x.Dt)();
+    function q(e, t) {
+        o()(null != e, 'Null value not allowed'), null != t && V(t.name), k(e);
     }
     let J = i.useMemo(() => {
             var e;
-            return (null != h && h !== (null != (e = null == l ? void 0 : l.description) ? e : '')) || (null == D ? void 0 : D.startsWith('data:')) === !0 || m !== a || (null == l ? void 0 : l.store_page_guild_products_default_sort) !== A || (null == l ? void 0 : l.server_shop_tab_order) !== M;
-        }, [D, a, h, l, m, A, M]),
-        Q = null != h && '' !== h && null != D;
+            return (null != f && f !== (null != (e = null == a ? void 0 : a.description) ? e : '')) || (null == D ? void 0 : D.startsWith('data:')) === !0 || m !== l || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== W || (null == a ? void 0 : a.server_shop_tab_order) !== M;
+        }, [D, l, f, a, m, W, M]),
+        Q = null != f && '' !== f && null != D;
     i.useEffect(() => {
         var e;
-        (null == l || null == (e = l.cover_image_asset) ? void 0 : e.application_id) != null && W((0, N._W)(l.cover_image_asset.application_id, l.cover_image_asset, Z));
-    }, [null == l ? void 0 : l.cover_image_asset]);
-    let $ = (0, y.mY)(),
+        (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) != null && k((0, N._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
+    }, [null == a ? void 0 : a.cover_image_asset]);
+    let $ = (0, O.mY)(),
         ee = i.useMemo(
             () =>
                 S.kL.map((e) => ({
@@ -202,10 +202,10 @@ function W(e) {
                                       disabled: $,
                                       children: T.NW.string(T.t.x87YqK)
                                   }),
-                                  (0, r.jsx)(k, {
+                                  (0, r.jsx)(A, {
                                       value: m,
                                       onChange: (e) => {
-                                          a !== e &&
+                                          l !== e &&
                                               e === E.e3.ALL_CHANNELS &&
                                               (0, g.h7j)((e) =>
                                                   (0, r.jsx)(
@@ -221,7 +221,7 @@ function W(e) {
                                                       })
                                                   )
                                               ),
-                                              f(e);
+                                              h(e);
                                       },
                                       'aria-labelledby': Y,
                                       disabled: $
@@ -238,10 +238,10 @@ function W(e) {
                 children: (0, r.jsx)(g.Kx8, {
                     placeholder: s ? T.NW.string(T.t.SD6LRU) : T.NW.string(T.t['aVhW/f']),
                     maxLength: 1500,
-                    value: h,
+                    value: f,
                     rows: 2,
                     autosize: !0,
-                    onChange: v,
+                    onChange: _,
                     'aria-labelledby': K,
                     disabled: $
                 })
@@ -267,13 +267,13 @@ function W(e) {
                         iconWrapperClassName: P.coverImageUploaderIconWrapper,
                         imageClassName: P.coverImageUploaderInner,
                         iconClassName: P.coverImageUploaderIcon,
-                        onChange: X,
+                        onChange: q,
                         'aria-label': H,
                         disabled: $
                     }),
                     (0, r.jsx)(g.LZC, { size: 16 }),
-                    (0, r.jsx)(x.Z, {
-                        onChange: X,
+                    (0, r.jsx)(b.Z, {
+                        onChange: q,
                         buttonCTA: z,
                         'aria-label': H,
                         disabled: $,
@@ -288,7 +288,7 @@ function W(e) {
                           (0, r.jsx)(g.$i$, { className: P.divider }),
                           (0, r.jsxs)(g.hjN, {
                               title: T.NW.string(T.t.aaZ9pK),
-                              titleId: q,
+                              titleId: X,
                               disabled: $,
                               children: [
                                   (0, r.jsx)(g.R94, {
@@ -298,7 +298,7 @@ function W(e) {
                                       children: T.NW.string(T.t.TILN8v)
                                   }),
                                   (0, r.jsx)(g.q4e, {
-                                      value: A,
+                                      value: W,
                                       placeholder: T.NW.string(T.t.XqMe3N),
                                       options: ee,
                                       onChange: (e) => L(e)
@@ -314,7 +314,7 @@ function W(e) {
                         (0, r.jsx)(g.$i$, { className: P.divider }),
                         (0, r.jsxs)(g.hjN, {
                             title: T.NW.string(T.t['+dtmw8']),
-                            titleId: q,
+                            titleId: X,
                             disabled: $,
                             children: [
                                 (0, r.jsx)(g.R94, {
@@ -344,12 +344,12 @@ function W(e) {
                             disabled: !Q,
                             onReset: () => {
                                 var e;
-                                f(a), v(null != (e = null == l ? void 0 : l.description) ? e : ''), W(c), L(null == l ? void 0 : l.store_page_guild_products_default_sort), G(null == l ? void 0 : l.server_shop_tab_order);
+                                h(l), _(null != (e = null == a ? void 0 : a.description) ? e : ''), k(c), L(null == a ? void 0 : a.store_page_guild_products_default_sort), G(null == a ? void 0 : a.server_shop_tab_order);
                             },
                             onSave: () => {
-                                o()(null != l, 'Settings must be defined');
+                                o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                h !== l.description && (e.description = h), null != D && D.startsWith('data:') && (e.cover_image = D), m !== a && (e.full_server_gate = m === E.e3.ALL_CHANNELS), A !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = A), M !== l.server_shop_tab_order && (e.server_shop_tab_order = M), d().isEmpty(e) || F(n.id, e);
+                                f !== a.description && (e.description = f), null != D && D.startsWith('data:') && (e.cover_image = D), m !== l && (e.full_server_gate = m === E.e3.ALL_CHANNELS), W !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = W), M !== a.server_shop_tab_order && (e.server_shop_tab_order = M), d().isEmpty(e) || F(n.id, e);
                             },
                             saveButtonTooltip: Q ? void 0 : T.NW.string(T.t['6HRvio'])
                         })

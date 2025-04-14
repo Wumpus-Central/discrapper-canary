@@ -1,6 +1,6 @@
 n.d(t, {
     A2: () => m,
-    S3: () => f
+    S3: () => _
 });
 var r = n(192379),
     i = n(442837),
@@ -13,11 +13,11 @@ var r = n(192379),
     d = n(594174),
     p = n(731722),
     h = n(864133),
-    _ = n(981631);
-function f(e) {
-    let { fetchGuildProfile: t, fetchStatus: n, guildProfile: f } = (0, a.u)(e),
+    f = n(981631);
+function _(e) {
+    let { fetchGuildProfile: t, fetchStatus: n, guildProfile: _ } = (0, a.u)(e),
         m = (function (e) {
-            let t = (0, l.FT)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : _.lds);
+            let t = (0, l.FT)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : f.lds);
             return (
                 (0, i.e7)(
                     [u.Z, d.default, c.ZP],
@@ -45,11 +45,11 @@ function f(e) {
             let o = (null == r ? void 0 : r.identityGuildId) === e && (null == r ? void 0 : r.tag) === null,
                 l = null !== n && n.tag === t.tag;
             return o && !l;
-        })(e, f);
+        })(e, _);
     return (r.useEffect(() => {
         n === s.a.NOT_FETCHED && t();
     }, [t, n]),
-    null === f)
+    null === _)
         ? null
         : b
           ? 'changed'
@@ -58,5 +58,5 @@ function f(e) {
             : null;
 }
 function m(e) {
-    return null !== f(e);
+    return null !== _(e);
 }

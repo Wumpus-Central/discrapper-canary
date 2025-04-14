@@ -1,9 +1,9 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => W }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
-    a = n.n(s),
-    l = n(200100),
+    l = n.n(s),
+    a = n(200100),
     o = n(442837),
     c = n(692547),
     d = n(215569),
@@ -11,17 +11,17 @@ var r = n(200651),
     m = n(481060),
     g = n(410030),
     p = n(367907),
-    f = n(768762),
-    h = n(626135),
-    b = n(585483),
-    x = n(999382),
+    h = n(768762),
+    f = n(626135),
+    x = n(585483),
+    b = n(999382),
     j = n(743475),
     N = n(983135),
-    v = n(8426),
-    _ = n(969632),
-    y = n(570961),
-    O = n(208665),
-    C = n(359191),
+    _ = n(8426),
+    v = n(969632),
+    O = n(570961),
+    C = n(208665),
+    y = n(359191),
     I = n(84658),
     E = n(142961),
     S = n(232764),
@@ -31,7 +31,7 @@ var r = n(200651),
     R = n(981631),
     Z = n(388032),
     D = n(179556);
-function k(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
     }
     return e;
 }
-function W(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,27 +74,27 @@ function W(e, t) {
         e
     );
 }
-function A() {
-    let e = (0, o.e7)([x.Z], () => x.Z.getGuild());
+function W() {
+    let e = (0, o.e7)([b.Z], () => b.Z.getGuild());
     return null == e ? null : (0, r.jsx)(L, { guild: e });
 }
 function L(e) {
     let { guild: t } = e,
         s = t.id,
-        x = (0, o.e7)([C.Z], () => C.Z.getCurrentPage()),
-        A = (0, E.Z)(s),
+        b = (0, o.e7)([y.Z], () => y.Z.getCurrentPage()),
+        W = (0, E.Z)(s),
         {
             hasChanges: L,
             hasConfiguredAnythingForCurrentStep: M,
             hasErrors: G
-        } = (0, o.cj)([C.Z], () => ({
-            hasChanges: C.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: C.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: C.Z.hasErrors()
+        } = (0, o.cj)([y.Z], () => ({
+            hasChanges: y.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: y.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: y.Z.hasErrors()
         })),
-        U = (0, o.e7)([C.Z], () => {
-            let e = (0, I.lg)(x);
-            return null != e && !C.Z.isEducationUpsellDismissed(e);
+        U = (0, o.e7)([y.Z], () => {
+            let e = (0, I.lg)(b);
+            return null != e && !y.Z.isEducationUpsellDismissed(e);
         }),
         B = (0, g.ZP)(),
         F = i.useRef(null),
@@ -103,47 +103,47 @@ function L(e) {
         function e() {
             H({
                 spring: 1,
-                config: l.config.gentle
+                config: a.config.gentle
             }),
                 H({
                     spring: 0,
-                    config: l.config.gentle,
+                    config: a.config.gentle,
                     delay: 1000
                 });
         }
         return (
-            b.S.subscribe(R.CkL.EMPHASIZE_NOTICE, e),
+            x.S.subscribe(R.CkL.EMPHASIZE_NOTICE, e),
             () => {
-                b.S.unsubscribe(R.CkL.EMPHASIZE_NOTICE, e);
+                x.S.unsubscribe(R.CkL.EMPHASIZE_NOTICE, e);
             }
         );
     }, [H]);
     let V = (0, m.dQu)(c.Z.colors.BACKGROUND_FLOATING).hex(),
         Y = (0, m.dQu)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
         K = (0, u.wj)(B) ? V : Y,
-        q = z.to({
+        X = z.to({
             range: [0, 1],
             output: [(0, m.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.dQu)(c.Z.colors.TEXT_NORMAL).hex()]
         }),
-        X = z.to({
+        q = z.to({
             range: [0, 1],
             output: [K, (0, m.dQu)(c.Z.colors.STATUS_DANGER).hex()]
         });
-    if (A) {
-        if (x === I.PG.DEFAULT_CHANNELS) return (0, r.jsx)(T.j, {});
-        else if (x === I.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(P.Zm, {});
-        else if (x === I.PG.HOME_SETTINGS) return (0, r.jsx)(w.Z, {});
+    if (W) {
+        if (b === I.PG.DEFAULT_CHANNELS) return (0, r.jsx)(T.j, {});
+        else if (b === I.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(P.Zm, {});
+        else if (b === I.PG.HOME_SETTINGS) return (0, r.jsx)(w.Z, {});
     }
-    let J = x === I.xh[I.xh.length - 1],
+    let J = b === I.xh[I.xh.length - 1],
         Q = async () => {
-            let e = O.Z.advancedMode;
+            let e = C.Z.advancedMode;
             if (L)
                 try {
-                    if (x === I.PG.DEFAULT_CHANNELS) await (0, j.DO)(t).then(() => (e ? (0, y.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
-                    else if (x === I.PG.CUSTOMIZATION_QUESTIONS) await (0, y.rS)(t, { ignoreDefaultPrompt: !0 });
-                    else if (x === I.PG.HOME_SETTINGS) {
-                        let e = _.Z.getSettings();
-                        await (0, v.oo)(t.id, e);
+                    if (b === I.PG.DEFAULT_CHANNELS) await (0, j.DO)(t).then(() => (e ? (0, O.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    else if (b === I.PG.CUSTOMIZATION_QUESTIONS) await (0, O.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (b === I.PG.HOME_SETTINGS) {
+                        let e = v.Z.getSettings();
+                        await (0, _.oo)(t.id, e);
                     }
                 } catch (e) {
                     return !1;
@@ -151,32 +151,32 @@ function L(e) {
             return !0;
         },
         $ = async () => {
-            h.default.track(
+            f.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                W(k({}, (0, p.hH)(s)), {
-                    step: I.PG[x],
+                k(A({}, (0, p.hH)(s)), {
+                    step: I.PG[b],
                     back: !1,
                     skip: !L
                 })
             ),
-                (0, N.Nb)((0, I.lg)(x)),
-                (await Q()) && (0, N.IG)(s, x);
+                (0, N.Nb)((0, I.lg)(b)),
+                (await Q()) && (0, N.IG)(s, b);
         },
         ee = async () => {
-            h.default.track(
+            f.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                W(k({}, (0, p.hH)(s)), {
-                    step: I.PG[x],
+                k(A({}, (0, p.hH)(s)), {
+                    step: I.PG[b],
                     back: !0,
                     skip: !1
                 })
             ),
-                (await Q()) && (0, N.Wy)(s, x);
+                (await Q()) && (0, N.Wy)(s, b);
         },
         et = null;
-    U && (x === I.PG.SAFETY_CHECK ? (et = (0, r.jsx)(S.j7, {})) : x === I.PG.DEFAULT_CHANNELS ? (et = (0, r.jsx)(S.Io, {})) : x === I.PG.CUSTOMIZATION_QUESTIONS ? (et = (0, r.jsx)(S.cZ, {})) : x === I.PG.HOME_SETTINGS && (et = (0, r.jsx)(S.g6, {})));
+    U && (b === I.PG.SAFETY_CHECK ? (et = (0, r.jsx)(S.j7, {})) : b === I.PG.DEFAULT_CHANNELS ? (et = (0, r.jsx)(S.Io, {})) : b === I.PG.CUSTOMIZATION_QUESTIONS ? (et = (0, r.jsx)(S.cZ, {})) : b === I.PG.HOME_SETTINGS && (et = (0, r.jsx)(S.g6, {})));
     let en = (0, r.jsx)(m.zxk, {
-            className: a()(D.button, { [D.hidden]: U }),
+            className: l()(D.button, { [D.hidden]: U }),
             color: m.zxk.Colors.PRIMARY,
             look: m.zxk.Looks.OUTLINED,
             size: m.zxk.Sizes.SMALL,
@@ -185,9 +185,9 @@ function L(e) {
             children: (0, r.jsxs)('span', {
                 className: D.button,
                 children: [
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(h.Z, {
                         className: D.arrow,
-                        direction: f.Z.Directions.LEFT
+                        direction: h.Z.Directions.LEFT
                     }),
                     Z.NW.string(Z.t['13/7kZ'])
                 ]
@@ -200,14 +200,14 @@ function L(e) {
             size: m.zxk.Sizes.SMALL,
             onClick: $,
             disabled: U || G,
-            children: (0, r.jsxs)(l.animated.span, {
+            children: (0, r.jsxs)(a.animated.span, {
                 className: D.button,
-                style: { color: q },
+                style: { color: X },
                 children: [
                     M ? Z.NW.string(Z.t.PDTjLC) : Z.NW.string(Z.t['5WxrcX']),
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(h.Z, {
                         className: D.arrow,
-                        direction: f.Z.Directions.RIGHT
+                        direction: h.Z.Directions.RIGHT
                     })
                 ]
             })
@@ -216,9 +216,9 @@ function L(e) {
         component: 'div',
         children: (0, r.jsx)(m.oXn, {
             className: D.noticeRegion,
-            children: (0, r.jsx)(l.animated.div, {
+            children: (0, r.jsx)(a.animated.div, {
                 className: D.container,
-                style: { backgroundColor: X },
+                style: { backgroundColor: q },
                 children: (0, r.jsxs)('div', {
                     className: D.flexContainer,
                     ref: F,

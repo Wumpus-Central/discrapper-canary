@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(457414),
-    l = n(311173),
+    l = n(457414),
+    a = n(311173),
     o = n(388032),
     c = n(320705);
 function d(e) {
@@ -52,22 +52,22 @@ function u(e, t) {
 function m(e) {
     var t;
     let { rule: n, onChangeRule: m, collapsed: g = !1 } = e,
-        [p, f] = i.useState(!g),
-        h = i.useCallback(() => {
-            f(!p);
-        }, [p, f]),
-        b = i.useCallback(
+        [p, h] = i.useState(!g),
+        f = i.useCallback(() => {
+            h(!p);
+        }, [p, h]),
+        x = i.useCallback(
             (e) => {
                 m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
             [m, n]
         );
-    return (0, a.S)(n.triggerType)
+    return (0, l.S)(n.triggerType)
         ? (0, r.jsx)(s.zF9, {
               isExpanded: p,
-              collapsibleContent: (0, r.jsx)(l.Z, {
+              collapsibleContent: (0, r.jsx)(a.Z, {
                   rule: n,
-                  onChangeText: b,
+                  onChangeText: x,
                   className: c.textAreaContainer,
                   initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns
               }),
@@ -76,7 +76,7 @@ function m(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(s.P3F, {
                       onClick: (e) => {
-                          h(), t(e);
+                          f(), t(e);
                       },
                       children: (0, r.jsxs)('div', {
                           className: c.header,

@@ -1,9 +1,9 @@
-n.d(t, { h: () => b });
+n.d(t, { h: () => x });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(906732),
-    l = n(884858),
+    l = n(906732),
+    a = n(884858),
     o = n(516129),
     c = n(768581),
     d = n(434404),
@@ -11,17 +11,17 @@ var r = n(200651),
     m = n(981631),
     g = n(30513),
     p = n(200299),
-    f = n(388032),
-    h = n(722733);
-function b(e) {
+    h = n(388032),
+    f = n(722733);
+function x(e) {
     let { guild: t, canManageGuild: n } = e,
-        b = t.hasFeature(m.oNc.INVITE_SPLASH),
-        x = n && b,
-        { analyticsLocations: j } = (0, a.ZP)(),
+        x = t.hasFeature(m.oNc.INVITE_SPLASH),
+        b = n && x,
+        { analyticsLocations: j } = (0, l.ZP)(),
         N = i.useCallback((e) => {
             d.Z.updateGuild({ splash: e });
         }, []),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -35,7 +35,7 @@ function b(e) {
             },
             [j, t]
         ),
-        _ = (0, r.jsx)(o.Z, {
+        v = (0, r.jsx)(o.Z, {
             image: t.splash,
             makeURL: (e) =>
                 null != e
@@ -44,20 +44,20 @@ function b(e) {
                           splash: e
                       })
                     : null,
-            disabled: !x,
+            disabled: !b,
             onChange: N,
-            hint: f.NW.string(f.t.uPvxqK),
-            enabled: x,
+            hint: h.NW.string(h.t.uPvxqK),
+            enabled: b,
             maxFileSizeBytes: p.B,
-            onFileSizeError: () => (0, l.Z)(p.B)
+            onFileSizeError: () => (0, a.Z)(p.B)
         });
-    return b
-        ? _
+    return x
+        ? v
         : (0, r.jsx)(s.P3F, {
               'aria-hidden': !0,
               tabIndex: -1,
-              className: h.upsell,
-              onClick: v,
-              children: _
+              className: f.upsell,
+              onClick: _,
+              children: v
           });
 }

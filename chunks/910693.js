@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r,
     l,
-    a = n(192379),
-    s = n(100527),
+    s = n(192379),
+    a = n(100527),
     o = n(367907),
     i = n(314897),
     E = n(626135),
@@ -45,11 +45,11 @@ function u(e, t, n) {
     E.default.track(e, l);
 }
 function _(e) {
-    return a.useCallback(
+    return s.useCallback(
         (t) => {
             let n = {
                 guild_id: e,
-                location: s.Z.MEMBER_SAFETY_PAGE
+                location: a.Z.MEMBER_SAFETY_PAGE
             };
             u(c.rMx.MOD_DASH_SEARCH_MEMBERS, n);
         },
@@ -57,12 +57,12 @@ function _(e) {
     );
 }
 function d(e) {
-    return a.useCallback(
+    return s.useCallback(
         (t) => {
             let n = {
                 selected_role_count: t.size,
                 guild_id: e,
-                location: s.Z.MEMBER_SAFETY_PAGE
+                location: a.Z.MEMBER_SAFETY_PAGE
             };
             u(c.rMx.MOD_DASH_FILTER_ROLES, n);
         },
@@ -71,12 +71,12 @@ function d(e) {
 }
 var A = (((r = {}).UNUSUAL_DM_ACTIVITY = 'unusual_dm_activity'), (r.COMMUNICATION_DISABLED = 'communication_disabled'), (r.UNUSUAL_ACCOUNT_ACTIVITY = 'unusual_account_activity'), (r.USERNAME_QUARANTINED = 'username_quarantined'), r);
 function T(e) {
-    return a.useCallback(
+    return s.useCallback(
         (t) => {
             let n = {
                 flag_type: t,
                 guild_id: e,
-                location: s.Z.MEMBER_SAFETY_PAGE
+                location: a.Z.MEMBER_SAFETY_PAGE
             };
             u(c.rMx.MOD_DASH_FILTER_SAFETY_FLAGS, n);
         },
@@ -85,21 +85,21 @@ function T(e) {
 }
 var N = (((l = {}).BAN = 'ban'), (l.KICK = 'kick'), (l.MUTE = 'mute'), (l.TIMEOUT = 'timeout'), (l.ADD_ROLE = 'add_role'), (l.REMOVE_ROLE = 'remove_role'), (l.COPY_ID = 'copy_id'), (l.CHANGE_NICKNAME = 'change_nickname'), l);
 function I(e, t) {
-    let { location: n, targetUserId: r, targets: l, locations: s } = t;
-    return a.useCallback(
+    let { location: n, targetUserId: r, targets: l, locations: a } = t;
+    return s.useCallback(
         (t) => {
-            let a = {
+            let s = {
                 action_type: t,
                 mod_user_id: i.default.getId(),
                 guild_id: e,
                 location: n,
-                locations: s,
+                locations: a,
                 target_user_id: null != r ? r : void 0,
                 targets: null != l ? l : void 0
             };
-            u(c.rMx.MODERATION_ACTION, a);
+            u(c.rMx.MODERATION_ACTION, s);
         },
-        [e, n, r, l, s]
+        [e, n, r, l, a]
     );
 }
 function O(e, t) {

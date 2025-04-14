@@ -3,8 +3,8 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     s = n(63063),
-    a = n(67734),
-    l = n(375263),
+    l = n(67734),
+    a = n(375263),
     o = n(586382),
     c = n(981631),
     d = n(388032),
@@ -33,7 +33,7 @@ function m(e) {
                         className: u.text,
                         children: d.NW.format(d.t.vBcWUl, { articleURL: s.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH) })
                     }),
-                    (0, r.jsx)(a.F, {
+                    (0, r.jsx)(l.F, {
                         guild: t,
                         canManageGuild: n,
                         buttonClassName: u.button
@@ -42,7 +42,7 @@ function m(e) {
             }),
             (0, r.jsx)('div', {
                 className: u.column,
-                children: (0, r.jsx)(l.O, {
+                children: (0, r.jsx)(a.O, {
                     guild: t,
                     canManageGuild: n
                 })

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     s = n.n(i),
-    a = n(481060),
-    l = n(367907),
+    l = n(481060),
+    a = n(367907),
     o = n(357352),
     c = n(434404),
     d = n(626135),
@@ -12,7 +12,7 @@ var i = n(120356),
     m = n(981631),
     g = n(388032),
     p = n(765214);
-function f(e) {
+function h(e) {
     let { pills: t } = e;
     return (0, r.jsx)('div', {
         className: p.row,
@@ -21,7 +21,7 @@ function f(e) {
                 'div',
                 {
                     className: p.pill,
-                    children: (0, r.jsx)(a.Text, {
+                    children: (0, r.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         children: e
                     })
@@ -31,9 +31,9 @@ function f(e) {
         )
     });
 }
-function h(e) {
+function f(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
-        h = [
+        f = [
             [g.NW.string(g.t['73h51N']), g.NW.string(g.t['gbjs//'])],
             [g.NW.string(g.t.mCoH0d), g.NW.string(g.t['l/BuSE'])],
             [g.NW.string(g.t.psQktr), g.NW.string(g.t.nMhIZW)],
@@ -49,22 +49,22 @@ function h(e) {
                     children: [
                         (0, r.jsx)('div', {
                             className: p.pillContainer,
-                            children: h.map((e, t) => (0, r.jsx)(f, { pills: e }, 'pill-row-'.concat(t)))
+                            children: f.map((e, t) => (0, r.jsx)(h, { pills: e }, 'pill-row-'.concat(t)))
                         }),
                         (0, r.jsxs)('div', {
                             className: p.ctaContent,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: 'text-lg/medium',
                                     color: 'header-primary',
                                     children: g.NW.string(g.t['67arYG'])
                                 }),
                                 n &&
-                                    (0, r.jsxs)(a.gtL, {
-                                        size: a.zxk.Sizes.MEDIUM,
+                                    (0, r.jsxs)(l.gtL, {
+                                        size: l.zxk.Sizes.MEDIUM,
                                         className: p.getStartedButton,
                                         innerClassName: p.getStartedButtonContents,
-                                        shineSize: a.gtL.ShineSizes.SMALL,
+                                        shineSize: l.gtL.ShineSizes.SMALL,
                                         onClick: () => {
                                             var e, n;
                                             d.default.track(
@@ -93,7 +93,7 @@ function h(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, (0, l.hH)(t))),
+                                                })({}, (0, a.hH)(t))),
                                                 (n = n = { action_taken: u.mz.GET_STARTED_CLICK }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -113,7 +113,7 @@ function h(e) {
                                         },
                                         children: [
                                             g.NW.string(g.t.oyzLpK),
-                                            (0, r.jsx)(a.ZSh, {
+                                            (0, r.jsx)(l.ZSh, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 className: p.getStartedArrow

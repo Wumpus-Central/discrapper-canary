@@ -18,8 +18,8 @@ var r = n(200651),
     m = n(100527),
     g = n(906732),
     b = n(358221),
-    _ = n(414910),
-    y = n(909820),
+    y = n(414910),
+    _ = n(909820),
     C = n(493010),
     x = n(71127),
     v = n(185935),
@@ -77,7 +77,7 @@ function es(e) {
         h = R.default.getId(),
         f = !(0, s.e7)([b.Z], () => b.Z.isFullscreenInContext(n)) && (!W.isPlatformEmbedded || (W.isPlatformEmbedded && U.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS))),
         m = null != c && c.type !== et.fO.ACTIVITY && c.user.id !== h,
-        y = i.useMemo(() => {
+        _ = i.useMemo(() => {
             var e;
             return null != (e = null == o ? void 0 : o.window) ? e : window;
         }, [o]),
@@ -86,16 +86,16 @@ function es(e) {
             appContext: n,
             popoutOpen: l,
             popoutWindow: o,
-            currentWindow: y
+            currentWindow: _
         }),
         x = n === ee.IlC.POPOUT && W.isPlatformEmbedded && U.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             m
                 ? (0, r.jsx)(w.Z, {
-                      context: (0, _.Z)(c.type),
+                      context: (0, y.Z)(c.type),
                       userId: c.user.id,
-                      currentWindow: y,
+                      currentWindow: _,
                       sliderClassName: er.volumeSlider,
                       location: u
                   })
@@ -144,7 +144,7 @@ function ec(e) {
 }
 function eu(e) {
     let t,
-        { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: p, popoutOpen: h, chatOpen: _ } = e,
+        { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: p, popoutOpen: h, chatOpen: y } = e,
         { analyticsLocations: C } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
         x = (0, f.bp)(),
         v = (0, s.e7)([D.Z], () => D.Z.getVoiceChannelId() === n.id, [n.id]),
@@ -226,9 +226,9 @@ function eu(e) {
                     channel: n
                 }),
             renderChatToasts: () =>
-                !M || _ || I
+                !M || y || I
                     ? null
-                    : (0, r.jsx)(y.ZP, {
+                    : (0, r.jsx)(_.ZP, {
                           children: (0, r.jsx)(S.Z, {
                               className: o()(er.chatToasts, { [er.rtsSidebarOpen]: c }),
                               channelId: n.id
@@ -250,11 +250,11 @@ function ed(e) {
         d = i.useCallback(() => {
             a(!l);
         }, [l, a]),
-        { popoutWindow: _, popoutWindowAlwaysOnTop: j } = (0, s.cj)([N.Z], () => ({
+        { popoutWindow: y, popoutWindowAlwaysOnTop: j } = (0, s.cj)([N.Z], () => ({
             popoutWindow: N.Z.getWindow(ee.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: N.Z.getIsAlwaysOnTop(ee.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        O = null != _ && !_.closed,
+        O = null != y && !y.closed,
         { analyticsLocations: E } = (0, g.ZP)(m.Z.STAGE_CHANNEL_CALL),
         I = (0, f.bp)(),
         { chatOpen: P, participantsListOpen: S } = (0, s.cj)(
@@ -308,7 +308,7 @@ function ed(e) {
         k = !O || (O && I === ee.IlC.POPOUT);
     return (0, r.jsx)(g.Gt, {
         value: E,
-        children: (0, r.jsxs)(y.B2, {
+        children: (0, r.jsxs)(_.B2, {
             children: [
                 (0, r.jsxs)('div', {
                     className: er.container,
@@ -326,7 +326,7 @@ function ed(e) {
                                         channel: t,
                                         toggleRequestToSpeakSidebar: d,
                                         showRequestToSpeakSidebar: l,
-                                        popoutWindow: _,
+                                        popoutWindow: y,
                                         popoutWindowAlwaysOnTop: j,
                                         popoutOpen: O,
                                         chatOpen: P
@@ -361,7 +361,7 @@ function ed(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(y.H_, {})
+                (0, r.jsx)(_.H_, {})
             ]
         })
     });
