@@ -1,4 +1,4 @@
-n.d(t, { O: () => j }), n(388685);
+n.d(t, { O: () => y }), n(388685);
 var r = n(200651),
     a = n(192379),
     l = n(481060),
@@ -38,7 +38,11 @@ let h = {
         label: '[none selected]',
         value: null
     },
-    p = () => {
+    p = {
+        label: '[preview all]',
+        value: null
+    },
+    b = () => {
         (0, l.nfh)(s.g)
             ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
@@ -52,7 +56,7 @@ let h = {
                   }
               );
     },
-    b = () => {
+    f = () => {
         (0, l.nfh)(s.c)
             ? (0, l.Mr3)(s.c)
             : (0, l.ZDy)(
@@ -66,7 +70,7 @@ let h = {
                   }
               );
     },
-    f = () => {
+    _ = () => {
         let e = (0, o.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, c.N9)(),
             i = a.useMemo(
@@ -99,7 +103,7 @@ let h = {
                         (0, r.jsx)(l.zxk, {
                             look: l.zxk.Looks.BLANK,
                             size: l.zxk.Sizes.SMALL,
-                            onClick: b,
+                            onClick: f,
                             className: m.instructionsButton,
                             children: (0, r.jsx)(l.idN, { color: l.TVs.colors.BG_BRAND })
                         })
@@ -114,12 +118,12 @@ let h = {
             ]
         });
     },
-    _ = () => {
+    g = () => {
         let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, c.N9)(),
             { avatarDecorationAssets: n } = (0, c.xq)(),
             i = a.useMemo(
                 () => [
-                    h,
+                    p,
                     ...n.map((e) => ({
                         label: e.name,
                         value: e.name
@@ -135,7 +139,7 @@ let h = {
                       (0, r.jsx)(l.LZC, { size: 16 }),
                       (0, r.jsx)(l.X6q, {
                           variant: 'heading-md/bold',
-                          children: 'Preview Avatar Decoration'
+                          children: 'Preview Avatar Decorations'
                       }),
                       (0, r.jsx)(l.q4e, {
                           options: i,
@@ -146,7 +150,7 @@ let h = {
                   ]
               });
     },
-    g = (e) => {
+    v = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
             { collectionAssets: i } = (0, c.xq)(),
             { deleteCollectionAsset: o, clearAssets: s } = (0, c.N9)(),
@@ -209,7 +213,7 @@ let h = {
                   ]
               });
     },
-    v = (e) => {
+    j = (e) => {
         let { ignoredFiles: t, handleClearIgnoredFiles: n } = e;
         return 0 === t.length
             ? null
@@ -249,10 +253,10 @@ let h = {
                   ]
               });
     },
-    j = () => {
+    y = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, c.N9)(),
             { ignoredFilenames: o, clearAssets: s, clearIgnoredFilenames: x, processAndUpsertAssets: h } = (0, u.KI)(),
-            b = a.useCallback(
+            p = a.useCallback(
                 (e) => {
                     n(), h(e);
                 },
@@ -262,7 +266,7 @@ let h = {
             className: m.container,
             children: [
                 (0, r.jsx)(i.Z, { className: m.divider }),
-                (0, r.jsx)(d.L, { onDrop: b }),
+                (0, r.jsx)(d.L, { onDrop: p }),
                 (0, r.jsxs)('div', {
                     className: m.previewToggleContainer,
                     children: [
@@ -277,7 +281,7 @@ let h = {
                         (0, r.jsx)(l.zxk, {
                             look: l.zxk.Looks.BLANK,
                             size: l.zxk.Sizes.SMALL,
-                            onClick: p,
+                            onClick: b,
                             className: m.instructionsButton,
                             children: (0, r.jsx)(l.idN, { color: l.TVs.colors.BG_BRAND })
                         })
@@ -287,13 +291,13 @@ let h = {
                     variant: 'text-md/normal',
                     children: 'Drop files in this panel to begin preview.'
                 }),
-                (0, r.jsx)(f, {}),
                 (0, r.jsx)(_, {}),
-                (0, r.jsx)(g, {
+                (0, r.jsx)(g, {}),
+                (0, r.jsx)(v, {
                     clearAssets: s,
                     clearIgnoredFiles: x
                 }),
-                (0, r.jsx)(v, {
+                (0, r.jsx)(j, {
                     ignoredFiles: o,
                     handleClearIgnoredFiles: x
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
@@ -12,46 +12,48 @@ var r = n(200651),
     p = n(937510),
     f = n(38900),
     g = n(709999),
-    m = n(957058),
-    h = n(215023),
-    _ = n(388032),
-    C = n(806734);
-let v = (e) => {
-    let { isLoading: t, rankedSkuIds: n, handleTransition: a, numVisibleItems: v, tab: x } = e,
-        O = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        j = l.createRef(),
-        y = (0, m.u)(),
-        k = l.useMemo(() => y(n), [t, y, n]),
-        S = (0, b.a)()(k),
-        P = (0, p.l)(S);
-    return null == O
+    m = n(619899),
+    h = n(957058),
+    _ = n(215023),
+    C = n(388032),
+    v = n(806734);
+let x = (e) => {
+    let { isLoading: t, rankedSkuIds: n, handleTransition: a, numVisibleItems: x, tab: O } = e,
+        j = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+        y = l.createRef(),
+        k = (0, h.u)(),
+        S = l.useMemo(() => k(n), [t, k, n]),
+        P = (0, b.a)()(S),
+        E = (0, p.l)(P),
+        w = (0, m.St)(E);
+    return null == j
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(C.popularPicksSection, C.centeredSection),
+              className: o()(v.popularPicksSection, v.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
-                      className: C.blockHeader,
+                      className: v.blockHeader,
                       children: [
                           (0, r.jsx)(s.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: x === h.AW.ORBS ? _.NW.string(_.t.dFgeub) : _.NW.string(_.t.ivaAAw)
+                              children: O === _.AW.ORBS ? C.NW.string(C.t.dFgeub) : C.NW.string(C.t.ivaAAw)
                           }),
-                          x === h.AW.HOME &&
+                          O === _.AW.HOME &&
                               (0, r.jsx)(s.zxk, {
                                   color: s.Ttl.PRIMARY,
                                   look: s.iLD.FILLED,
                                   onClick: () => a('shop all top'),
-                                  children: _.NW.string(_.t.xFcotb)
+                                  children: C.NW.string(C.t.xFcotb)
                               })
                       ]
                   }),
                   (0, r.jsx)('div', {
-                      className: C.feed,
-                      ref: j,
+                      className: v.feed,
+                      ref: y,
                       children: t
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(f.K, {}, t + 1)) })
                           : (0, r.jsx)(r.Fragment, {
-                                children: P.slice(0, v).map((e, t) => {
+                                children: w.slice(0, x).map((e, t) => {
                                     let n = d.Z.getCategoryForProduct(e.skuId);
                                     return null == e || null == n
                                         ? null
@@ -68,8 +70,8 @@ let v = (e) => {
                                                       {
                                                           product: e,
                                                           category: n,
-                                                          user: O,
-                                                          tab: x
+                                                          user: j,
+                                                          tab: O
                                                       },
                                                       e.skuId
                                                   )

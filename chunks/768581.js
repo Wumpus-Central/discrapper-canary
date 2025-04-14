@@ -198,11 +198,14 @@ function M(e) {
 function k(e) {
     let { avatarDecoration: t, size: n, canAnimate: r = !1 } = e;
     if (null == t || (0, s.fO)(t)) return;
-    if (/^data:/.test(t.asset)) return t.asset;
-    let { CDN_HOST: i, API_ENDPOINT: o } = window.GLOBAL_ENV,
-        a = f.ANM.AVATAR_DECORATION_PRESETS(t.asset),
-        c = new URL(null != i ? ''.concat(location.protocol, '//').concat(i).concat(a) : ''.concat(location.protocol).concat(o).concat(a));
-    return c.searchParams.set('size', ''.concat((0, l.oO)(n * (0, l.x_)()))), c.searchParams.set('passthrough', ''.concat(r && (0, s.ae)(t.asset))), c.toString();
+    let i = t.asset;
+    if (null == i) return;
+    if (/^data:/.test(i)) return i;
+    let { CDN_HOST: o, API_ENDPOINT: a } = window.GLOBAL_ENV,
+        c = f.ANM.AVATAR_DECORATION_PRESETS(i);
+    if (/^blob:https?:\/\/[^\/]+\//i.test(i)) return i;
+    let u = new URL(null != o ? ''.concat(location.protocol, '//').concat(o).concat(c) : ''.concat(location.protocol).concat(a).concat(c));
+    return u.searchParams.set('size', ''.concat((0, l.oO)(n * (0, l.x_)()))), u.searchParams.set('passthrough', ''.concat(r && (0, s.ae)(i))), u.toString();
 }
 function j(e) {
     let t,
