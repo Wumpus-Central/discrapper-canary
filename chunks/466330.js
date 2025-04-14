@@ -1,91 +1,53 @@
-n.d(t, { Z: () => b });
-var r = n(200651);
-n(192379);
-var l = n(442837),
-    i = n(481060),
-    c = n(340541),
-    a = n(159300),
-    o = n(984933),
-    u = n(496675),
-    s = n(981631),
-    d = n(388032);
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+t.d(n, { Z: () => f });
+var r = t(200651);
+t(192379);
+var c = t(442837),
+    i = t(481060),
+    l = t(340541),
+    o = t(159300),
+    a = t(984933),
+    u = t(496675),
+    s = t(981631),
+    b = t(388032);
+function d(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var t = null != arguments[n] ? arguments[n] : {},
+            r = Object.keys(t);
         'function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
+            r.forEach(function (n) {
                 var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                (r = t[n]),
+                    n in e
+                        ? Object.defineProperty(e, n, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[n] = r);
             });
     }
     return e;
 }
-function b(e) {
-    let { source: t, guild: n, channel: r, stageInstance: i } = e,
-        c = (0, l.e7)([o.ZP], () => o.ZP.getDefaultChannel(n.id, !0, s.Plq.CREATE_INSTANT_INVITE)),
-        d = (0, l.e7)([u.Z], () => (0, a.b)(u.Z, n, r, i)),
-        p = O(t, n, d && null != r ? r : c),
-        b = f(t, r);
-    return null == r && t === s.t4x.GUILD_CONTEXT_MENU ? null : d || null != c ? p : b;
+function f(e) {
+    let { source: n, guild: t, channel: r, stageInstance: i } = e,
+        b = (0, c.e7)([a.ZP], () => a.ZP.getDefaultChannel(t.id, !0, s.Plq.CREATE_INSTANT_INVITE)),
+        d = (0, c.e7)([u.Z], () => (0, o.b)(u.Z, t, r, i)),
+        f = (0, l.jW)({ location: 'invite_people_menu_item' }) || (d && null != r) ? r : b,
+        p = E(n, t, f),
+        N = O(n, f);
+    return d ? p : N;
 }
-function y(e, t) {
-    return (0, c.jW)({ location: 'invite_menu_item' }) ? ((null != t && [s.t4x.GUILD_HEADER, s.t4x.GUILD_CONTEXT_MENU].includes(t)) || null == e ? d.NW.string(d.t.Sd8Ix8) : e.type === s.d4z.GUILD_VOICE ? d.NW.string(d.t['EE+P0N']) : d.NW.string(d.t['0jeAXl'])) : d.NW.string(d.t.BN75l5);
+function p(e, n) {
+    return (0, l.jW)({ location: 'invite_menu_item' }) ? ((null != n && [s.t4x.GUILD_HEADER, s.t4x.GUILD_CONTEXT_MENU].includes(n)) || null == e ? b.NW.string(b.t.Sd8Ix8) : e.type === s.d4z.GUILD_VOICE ? b.NW.string(b.t['EE+P0N']) : b.NW.string(b.t['0jeAXl'])) : b.NW.string(b.t.BN75l5);
 }
-let O = (e, t, l) => {
-        let c = y(l, e);
-        return (0, r.jsx)(i.sNh, {
-            id: 'invite-people',
-            label: c,
-            color: 'brand',
-            icon: e === s.t4x.GUILD_HEADER ? i.ejJ : void 0,
-            action: () =>
-                (0, i.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('7654'), n.e('96814')]).then(n.bind(n, 560114));
-                    return (n) => {
-                        var c, a;
-                        return (0, r.jsx)(
-                            i,
-                            ((c = p({}, n)),
-                            (a = a =
-                                {
-                                    guild: t,
-                                    channel: l,
-                                    source: e
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(a))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(a, e));
-                                  }),
-                            c)
-                        );
-                    };
-                })
-        });
-    },
-    f = (e, t) => {
-        let l = y(t, e);
+let E = (e, n, c) => {
+        let l = p(c, e);
         return (0, r.jsx)(i.sNh, {
             id: 'invite-people',
             label: l,
@@ -93,8 +55,47 @@ let O = (e, t, l) => {
             icon: e === s.t4x.GUILD_HEADER ? i.ejJ : void 0,
             action: () =>
                 (0, i.ZDy)(async () => {
-                    let { default: e } = await n.e('88358').then(n.bind(n, 598402));
-                    return (t) => (0, r.jsx)(e, p({}, t));
+                    let { default: i } = await Promise.all([t.e('7654'), t.e('96814')]).then(t.bind(t, 560114));
+                    return (t) => {
+                        var l, o;
+                        return (0, r.jsx)(
+                            i,
+                            ((l = d({}, t)),
+                            (o = o =
+                                {
+                                    guild: n,
+                                    channel: c,
+                                    source: e
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                : (function (e, n) {
+                                      var t = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          t.push.apply(t, r);
+                                      }
+                                      return t;
+                                  })(Object(o)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                  }),
+                            l)
+                        );
+                    };
+                })
+        });
+    },
+    O = (e, n) => {
+        let c = p(n, e);
+        return (0, r.jsx)(i.sNh, {
+            id: 'invite-people',
+            label: c,
+            color: 'brand',
+            icon: e === s.t4x.GUILD_HEADER ? i.ejJ : void 0,
+            action: () =>
+                (0, i.ZDy)(async () => {
+                    let { default: e } = await t.e('88358').then(t.bind(t, 598402));
+                    return (n) => (0, r.jsx)(e, d({}, n));
                 })
         });
     };
