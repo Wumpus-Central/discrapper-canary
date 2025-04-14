@@ -46,7 +46,7 @@ function d(e, t, n, d) {
                     })({ guild: t }, p)
                 );
         },
-        { enabled: f } = (0, o._k)({ location: 'more_settings_invite_item' }),
+        { entrypoints: f } = (0, o._k)({ location: 'more_settings_invite_item' }),
         m = f ? i.oLu : i.ejJ;
     if (null != d)
         return (0, r.jsx)(i.sNh, {

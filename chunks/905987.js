@@ -5,8 +5,8 @@ var n = s(200651),
     a = s.n(r),
     l = s(442837),
     c = s(481060),
-    d = s(340541),
-    o = s(430824),
+    o = s(340541),
+    d = s(430824),
     m = s(771845),
     x = s(259580),
     h = s(186523),
@@ -78,9 +78,9 @@ function _(e) {
 }
 function b(e) {
     let { hidden: t } = e,
-        s = (0, l.e7)([o.Z, m.ZP], () => {
+        s = (0, l.e7)([d.Z, m.ZP], () => {
             var e;
-            return null == (e = o.Z.getGuild(m.ZP.getFlattenedGuildIds()[0])) ? void 0 : e.name;
+            return null == (e = d.Z.getGuild(m.ZP.getFlattenedGuildIds()[0])) ? void 0 : e.name;
         }),
         [r, h] = i.useState(0);
     i.useEffect(() => {
@@ -91,7 +91,7 @@ function b(e) {
             s.forEach((e) => clearTimeout(e)), setTimeout(() => h(0), 150);
         };
     }, [t]);
-    let { enabled: u } = (0, d._k)({ location: 'tips_tab' });
+    let { entrypoints: u } = (0, o._k)({ location: 'tips_tab' });
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)('div', {

@@ -224,7 +224,7 @@ class eT extends i.PureComponent {
             g = i || l || a;
         return null == t
             ? null
-            : (0, U.jW)({ location: 'guild_sidebar' })
+            : (0, U.jW)({ location: 'guild_sidebar' }).entrypoints
               ? (0, r.jsx)(N.Gt, {
                     value: o,
                     children: (0, r.jsx)(ed.ZP, {
@@ -442,7 +442,7 @@ class eT extends i.PureComponent {
                       }));
             }),
             eN(this, 'renderGuildHeaderDropdownButton', (e) =>
-                (0, U.jW)({ location: 'guild_sidebar' })
+                (0, U.jW)({ location: 'guild_sidebar' }).entrypoints
                     ? (0, r.jsx)(ed.wD, { open: e })
                     : (0, r.jsx)(b.Z, {
                           open: e,

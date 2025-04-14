@@ -21,8 +21,8 @@ var l,
     _ = n(906732),
     E = n(835473),
     S = n(447003),
-    b = n(471445),
-    T = n(259473),
+    T = n(471445),
+    b = n(259473),
     O = n(600164),
     y = n(687516),
     C = n(648159),
@@ -204,7 +204,7 @@ class em extends (l = r.PureComponent) {
             g = null,
             m = null;
         if (((e = o ? null : null != r ? el.NW.string(el.t['6VQaqa']) : null != s ? el.NW.formatToPlainString(el.t.ZdK3dX, { applicationName: s.name }) : null != l ? el.NW.string(el.t.JKV4FB) : (null == u ? void 0 : u.isGuildStageVoice()) ? el.NW.string(el.t.zTrsHx) : el.NW.format(el.t.NvVBJS, { name: t.toString() })), null != u)) {
-            let e = (0, b.KS)(u, t);
+            let e = (0, T.KS)(u, t);
             null != e &&
                 (m = (0, i.jsxs)('div', {
                     className: ei.headerChannelContainer,
@@ -598,7 +598,7 @@ eo(em, 'defaultProps', {
 });
 let ep = r.forwardRef(function (e, t) {
     var n, l;
-    let { channel: s, guild: a, source: o, guildScheduledEvent: u, streamUserId: d, applicationId: c, transitionState: h, onClose: v, welcomeToServer: x, page: b, analyticsLocation: O } = e,
+    let { channel: s, guild: a, source: o, guildScheduledEvent: u, streamUserId: d, applicationId: c, transitionState: h, onClose: v, welcomeToServer: x, page: T, analyticsLocation: O } = e,
         { analyticsLocations: y } = (0, _.ZP)(j.Z.INSTANT_INVITE_MODAL),
         C = (0, m.e7)(
             [V.Z, k.Z, R.ZP],
@@ -668,7 +668,7 @@ let ep = r.forwardRef(function (e, t) {
         }).catch(et.VqG);
     }, [Q, s, a, c, w]);
     let [ei] = (0, E.Z)(null != c ? [c] : []),
-        er = (0, T.Z)({ guildId: W }),
+        er = (0, b.Z)({ guildId: W }),
         es = null != U ? U.code : void 0,
         ea = null == U ? void 0 : U.maxAge,
         eo = null == U ? void 0 : U.maxUses,
@@ -688,7 +688,7 @@ let ep = r.forwardRef(function (e, t) {
             temporary: null != ed && ed,
             networkError: void 0,
             showVanityURL: ex,
-            currentPage: null != b ? b : ee.RV.MAIN,
+            currentPage: null != T ? T : ee.RV.MAIN,
             lastPage: void 0,
             flags: eN
         }),
@@ -704,13 +704,13 @@ let ep = r.forwardRef(function (e, t) {
             },
             [ej.currentPage, eE]
         ),
-        eb = eI && !ex && !J && !ef,
-        { enabled: eT } = P.o.useExperiment(
+        eT = eI && !ex && !J && !ef,
+        { enabled: eb } = P.o.useExperiment(
             {
                 guildId: null == a ? void 0 : a.id,
                 location: 'acc417_3'
             },
-            { autoTrackExposure: eb }
+            { autoTrackExposure: eT }
         ),
         { maxAge: eO, maxUses: ey, temporary: eC, savedMaxAge: eP, flags: eZ } = ej,
         ew = r.useCallback(() => {
@@ -783,8 +783,8 @@ let ep = r.forwardRef(function (e, t) {
             transitionState: h,
             onClose: v,
             canShowVanityURL: ex,
-            isGuestInviteCreationToggleEnabled: eT && eb,
-            shouldHideTemporaryInviteToggle: (eT && eb) || eW,
+            isGuestInviteCreationToggleEnabled: eb && eT,
+            shouldHideTemporaryInviteToggle: (eb && eT) || eW,
             modalState: ej,
             setModalState: eE,
             changePage: eS,
@@ -795,7 +795,7 @@ let ep = r.forwardRef(function (e, t) {
     });
 });
 function ev(e) {
-    let { enabled: t } = (0, q._k)({ location: 'instant_invite_modal' }),
+    let { modal: t } = (0, q._k)({ location: 'instant_invite_modal' }),
         n = t ? X.H : ep;
     return (0, i.jsx)(n, eu({}, e));
 }

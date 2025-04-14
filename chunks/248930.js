@@ -13,8 +13,8 @@ var o = t(120356),
     p = t(652853),
     b = t(64621),
     m = t(382405),
-    I = t(386019),
-    g = t(228168),
+    g = t(386019),
+    I = t(228168),
     y = t(227832);
 function h(e) {
     let { user: n, entry: t, profileGuildId: o, className: h, onClose: j, hideContextMenu: v = !1 } = e,
@@ -31,7 +31,7 @@ function h(e) {
         ? (0, r.jsx)(s.Gt, {
               value: x,
               children: (0, r.jsx)(b.Z, {
-                  sourceType: g.n_.ACTIVITY,
+                  sourceType: I.n_.ACTIVITY,
                   user: n,
                   children: (0, r.jsx)(u.Z, {
                       user: n,
@@ -40,19 +40,19 @@ function h(e) {
                       sourceId: t.id,
                       entry: t,
                       onAction: N,
-                      sourceType: g.n_.ACTIVITY,
+                      sourceType: I.n_.ACTIVITY,
                       children: () =>
                           (0, r.jsx)(f.Z, {
                               user: n,
                               className: y.toolbarContainer,
                               interactionSourceId: t.id,
-                              sourceType: g.n_.ACTIVITY,
+                              sourceType: I.n_.ACTIVITY,
                               onAction: N,
                               onShowToolbar: () => N({ action: 'HOVER_ACTIVITY_CARD' }),
                               renderMoreButtonPopout: v
                                   ? void 0
                                   : (e) =>
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(g.Z, {
                                             display: 'recent',
                                             entry: t,
                                             user: n,
@@ -63,7 +63,7 @@ function h(e) {
                                   entry: t,
                                   user: n,
                                   onClose: j,
-                                  className: i()(h, { [y.hoisted]: O === g.n_.ACTIVITY && Z === t.id })
+                                  className: i()(h, { [y.hoisted]: O === I.n_.ACTIVITY && Z === t.id })
                               })
                           })
                   })

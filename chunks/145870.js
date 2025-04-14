@@ -11,7 +11,7 @@ e.exports = {
     userInfoContainer: 'userInfoContainer__6b102',
     infoRow: 'infoRow__6b102',
     accountLabel: 'accountLabel__6b102',
-    rejectionReasonContainer: 'rejectionReasonContainer__6b102',
+    actionContainer: 'actionContainer__6b102',
     actionedInfo: 'actionedInfo__6b102',
     dot: 'dot__6b102'
 };

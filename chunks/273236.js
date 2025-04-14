@@ -5,8 +5,8 @@ var n = s(200651),
     a = s.n(r),
     l = s(995295),
     c = s(481060),
-    d = s(388032),
-    o = s(94546),
+    o = s(388032),
+    d = s(94546),
     m = s(699343);
 let x = i.forwardRef(function (e, t) {
     let {} = e,
@@ -37,54 +37,54 @@ let x = i.forwardRef(function (e, t) {
                     (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: d.NW.string(d.t.c0Fhpa)
+                        children: o.NW.string(o.t.c0Fhpa)
                     }),
                     (0, n.jsx)(c.Text, {
                         className: m.__invalid_subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: d.NW.string(d.t.dKPfBQ)
+                        children: o.NW.string(o.t.dKPfBQ)
                     })
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: o.container,
+                className: d.container,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: o.tabs,
+                        className: d.tabs,
                         children: [
                             (0, n.jsx)('div', {
-                                className: o.tabBackground,
+                                className: d.tabBackground,
                                 style: { left: 'before' === r ? 0 : '50%' }
                             }),
                             (0, n.jsx)(c.P3F, {
-                                className: o.tab,
+                                className: d.tab,
                                 onClick: () => _('before'),
                                 children: (0, n.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'before' === r ? 'header-primary' : 'text-muted',
-                                    children: d.NW.string(d.t.sLv7LC)
+                                    children: o.NW.string(o.t.sLv7LC)
                                 })
                             }),
                             (0, n.jsx)(c.P3F, {
-                                className: o.tab,
+                                className: d.tab,
                                 onClick: () => _('after'),
                                 children: (0, n.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'after' === r ? 'header-primary' : 'text-muted',
-                                    children: d.NW.string(d.t.R8eSY2)
+                                    children: o.NW.string(o.t.R8eSY2)
                                 })
                             })
                         ]
                     }),
                     (0, n.jsxs)('div', {
-                        className: o.previewContainer,
+                        className: d.previewContainer,
                         children: [
                             (0, n.jsxs)('div', {
-                                className: o.guilds,
+                                className: d.guilds,
                                 children: [
                                     (0, n.jsx)('div', {
-                                        className: o.unreadGuild,
+                                        className: d.unreadGuild,
                                         children: (0, n.jsx)('img', {
                                             src: s(180681),
                                             width: 36,
@@ -93,7 +93,7 @@ let x = i.forwardRef(function (e, t) {
                                         })
                                     }),
                                     (0, n.jsx)('div', {
-                                        className: 'after' === r ? o.guild : o.unreadGuild,
+                                        className: 'after' === r ? d.guild : d.unreadGuild,
                                         children: (0, n.jsx)('img', {
                                             src: s(390115),
                                             width: 36,
@@ -102,7 +102,7 @@ let x = i.forwardRef(function (e, t) {
                                         })
                                     }),
                                     (0, n.jsx)('div', {
-                                        className: 'after' === r ? o.guild : o.unreadGuild,
+                                        className: 'after' === r ? d.guild : d.unreadGuild,
                                         children: (0, n.jsx)('img', {
                                             src: s(536411),
                                             width: 36,
@@ -113,29 +113,29 @@ let x = i.forwardRef(function (e, t) {
                                 ]
                             }),
                             (0, n.jsxs)('div', {
-                                className: o.channels,
+                                className: d.channels,
                                 children: [
                                     (0, n.jsx)(u, {
                                         mention: !0,
-                                        name: d.NW.string(d.t.WFejRk)
+                                        name: o.NW.string(o.t.WFejRk)
                                     }),
-                                    (0, n.jsx)(u, { name: d.NW.string(d.t.jqWm9f) }),
+                                    (0, n.jsx)(u, { name: o.NW.string(o.t.jqWm9f) }),
                                     (0, n.jsx)(u, {
                                         grey: 'after' === r,
-                                        name: d.NW.string(d.t.p9z9Iy)
-                                    }),
-                                    (0, n.jsx)(u, {
-                                        grey: 'after' === r,
-                                        name: d.NW.string(d.t['2bdWDw'])
-                                    }),
-                                    (0, n.jsx)(u, { name: d.NW.string(d.t['Ci+Our']) }),
-                                    (0, n.jsx)(u, {
-                                        grey: 'after' === r,
-                                        name: d.NW.string(d.t['/7TEdn'])
+                                        name: o.NW.string(o.t.p9z9Iy)
                                     }),
                                     (0, n.jsx)(u, {
                                         grey: 'after' === r,
-                                        name: d.NW.string(d.t['Ime/t7'])
+                                        name: o.NW.string(o.t['2bdWDw'])
+                                    }),
+                                    (0, n.jsx)(u, { name: o.NW.string(o.t['Ci+Our']) }),
+                                    (0, n.jsx)(u, {
+                                        grey: 'after' === r,
+                                        name: o.NW.string(o.t['/7TEdn'])
+                                    }),
+                                    (0, n.jsx)(u, {
+                                        grey: 'after' === r,
+                                        name: o.NW.string(o.t['Ime/t7'])
                                     })
                                 ]
                             })
@@ -143,23 +143,23 @@ let x = i.forwardRef(function (e, t) {
                     }),
                     (0, n.jsx)(h, {
                         hidden: x || 'after' === r,
-                        className: o.tipBefore1,
-                        text: d.NW.string(d.t.WrPMOD)
+                        className: d.tipBefore1,
+                        text: o.NW.string(o.t.WrPMOD)
                     }),
                     (0, n.jsx)(h, {
                         hidden: x || 'after' === r,
-                        className: o.tipBefore2,
-                        text: d.NW.string(d.t['pApL7+'])
+                        className: d.tipBefore2,
+                        text: o.NW.string(o.t['pApL7+'])
                     }),
                     (0, n.jsx)(h, {
                         hidden: x || 'before' === r,
-                        className: o.tipAfter1,
-                        text: d.NW.string(d.t.eZb3iY)
+                        className: d.tipAfter1,
+                        text: o.NW.string(o.t.eZb3iY)
                     }),
                     (0, n.jsx)(h, {
                         hidden: x || 'before' === r,
-                        className: o.tipAfter2,
-                        text: d.NW.string(d.t.M3KrJS)
+                        className: d.tipAfter2,
+                        text: o.NW.string(o.t.M3KrJS)
                     })
                 ]
             })
@@ -169,34 +169,34 @@ let x = i.forwardRef(function (e, t) {
 function h(e) {
     let { text: t, className: s, hidden: i } = e;
     return (0, n.jsxs)('div', {
-        className: a()(s, o.tip, { [o.hidden]: i }),
+        className: a()(s, d.tip, { [d.hidden]: i }),
         children: [
             (0, n.jsx)(c.Text, {
-                className: o.__invalid_tipText,
+                className: d.__invalid_tipText,
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
                 children: t
             }),
-            (0, n.jsx)('div', { className: o.tipLine })
+            (0, n.jsx)('div', { className: d.tipLine })
         ]
     });
 }
 function u(e) {
     let { grey: t, mention: s, name: i } = e;
     return (0, n.jsxs)('div', {
-        className: a()(o.channel, {
-            [o.grey]: t,
-            [o.mention]: s
+        className: a()(d.channel, {
+            [d.grey]: t,
+            [d.mention]: s
         }),
         children: [
             (0, n.jsx)(c.VL1, {
                 size: 'xs',
                 color: 'currentColor',
-                className: o.channelIcon
+                className: d.channelIcon
             }),
             (0, n.jsx)(c.Text, {
                 variant: 'text-md/medium',
-                className: o.channelName,
+                className: d.channelName,
                 children: i
             })
         ]

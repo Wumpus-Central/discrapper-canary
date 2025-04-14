@@ -33,19 +33,19 @@ let _ = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
         });
     }),
     E = (e) => {
-        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: h, setInviteFlags: E, copyValue: S, changePage: b, inviteChannel: T, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
+        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: h, setInviteFlags: E, copyValue: S, changePage: T, inviteChannel: b, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
             { maxAge: w, maxUses: A, networkError: k, showVanityURL: R, flags: M } = d,
             D = i.useCallback(() => {
                 g.default.track(I.rMx.COPY_INSTANT_INVITE, {
                     server: c.Z.getGuildId(),
-                    channel: null == T ? void 0 : T.id,
-                    channel_type: null == T ? void 0 : T.type,
+                    channel: null == b ? void 0 : b.id,
+                    channel_type: null == b ? void 0 : b.type,
                     location: O,
                     code: y,
                     guild_scheduled_event_id: null == C ? void 0 : C.id,
                     application_id: null == Z ? void 0 : Z.id
                 });
-            }, [null == Z ? void 0 : Z.id, T, O, y, C]);
+            }, [null == Z ? void 0 : Z.id, b, O, y, C]);
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(_, {
@@ -124,7 +124,7 @@ let _ = o.ZP.connectStores([h.Z], () => ({ hideValue: h.Z.hideInstantInvites }))
                               ' ',
                               r
                                   ? (0, l.jsx)(u.eee, {
-                                        onClick: () => b(x.RV.SETTINGS),
+                                        onClick: () => T(x.RV.SETTINGS),
                                         children: N.NW.string(N.t.VNe8Pz)
                                     })
                                   : null

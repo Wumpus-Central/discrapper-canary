@@ -78,7 +78,7 @@ function G(e) {
     let { guild: t, onSelect: r, hideSettings: c } = e,
         u = t.id,
         G = h.ZP.getDefaultChannel(u),
-        { enabled: k } = (0, b._k)({ location: 'guild_context_menu' }),
+        { entrypoints: k } = (0, b._k)({ location: 'guild_context_menu' }),
         U = (0, l.e7)(
             [E.default],
             () => {

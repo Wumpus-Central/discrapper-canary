@@ -12,8 +12,8 @@ var r = t(200651),
     p = t(899007),
     b = t(648052),
     m = t(867176),
-    I = t(280885),
-    g = t(900927),
+    g = t(280885),
+    I = t(900927),
     y = t(678738),
     h = t(502762),
     j = t(530),
@@ -126,14 +126,14 @@ function S(e) {
                                                 fade: !0,
                                                 className: P.scroller,
                                                 children: [
-                                                    (0, r.jsx)(I.Z, {
+                                                    (0, r.jsx)(g.Z, {
                                                         userId: n.id,
                                                         userBio: null == D ? void 0 : D.bio,
                                                         setLineClamp: !1
                                                     }),
                                                     (0, r.jsx)(y.Z, {
                                                         heading: Z.NW.string(Z.t['A//N4u']),
-                                                        children: (0, r.jsx)(g.Z, {
+                                                        children: (0, r.jsx)(I.Z, {
                                                             userId: n.id,
                                                             guildId: U,
                                                             tooltipDelay: _.vB

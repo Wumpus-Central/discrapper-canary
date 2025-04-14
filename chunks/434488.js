@@ -183,7 +183,7 @@ function w(e) {
     }, []);
     let { analyticsLocations: u } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE),
         p = (0, y.Q3)('SingleUserTile'),
-        { enabled: h } = (0, C._k)({ location: 'single_user_tile' }),
+        { entrypoints: h } = (0, C._k)({ location: 'single_user_tile' }),
         { enabled: b } = d.c.useExperiment({ location: 'SingleUserTile' }, { autoTrackExposure: !0 });
     function _() {
         (0, c.ZDy)(

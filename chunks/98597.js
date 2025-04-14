@@ -135,7 +135,7 @@ function T(e) {
 }
 function A(e) {
     let { channel: t, isDefaultChannel: r = !1, locked: o, tabIndex: u, forceShowButtons: f, hasChannelInfo: b = !1 } = e,
-        { enabled: O } = (0, p._k)({ location: 'channel_base' }),
+        { entrypoints: O } = (0, p._k)({ location: 'channel_base' }),
         j = (0, s.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
         P = (0, s.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         Z = (0, s.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),

@@ -342,7 +342,7 @@ let A = i.memo(function (e) {
             return null != n && !t;
         },
         q = (0, d.Q3)('GuildHeader'),
-        { enabled: K } = (0, h._k)({ location: 'guild_header' }),
+        { entrypoints: K } = (0, h._k)({ location: 'guild_header' }),
         Q = {
             bannerVisible: t,
             guild: O,

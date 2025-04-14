@@ -4,8 +4,8 @@ n(192379);
 var l = n(442837),
     i = n(481060),
     a = n(594174),
-    o = n(246364),
-    s = n(489813),
+    s = n(246364),
+    o = n(489813),
     c = n(186078),
     d = n(73880),
     u = n(196345),
@@ -18,7 +18,7 @@ let h = function (e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   j &&
-                      (0, r.jsx)(s.Ih, {
+                      (0, r.jsx)(o.Ih, {
                           icon: i.b7C,
                           text: x.NW.string(x.t.v2z4c3),
                           meetsRequirement: !0
@@ -26,13 +26,13 @@ let h = function (e) {
                   n.map((e, t) =>
                       (function (e, t) {
                           switch (e.field_type) {
-                              case o.QJ.TERMS:
+                              case s.QJ.TERMS:
                                   return (0, r.jsx)(u.QC, { formField: e }, t);
-                              case o.QJ.TEXT_INPUT:
+                              case s.QJ.TEXT_INPUT:
                                   return (0, r.jsx)(m.YJ, { formField: e }, t);
-                              case o.QJ.PARAGRAPH:
+                              case s.QJ.PARAGRAPH:
                                   return (0, r.jsx)(d.jn, { formField: e }, t);
-                              case o.QJ.MULTIPLE_CHOICE:
+                              case s.QJ.MULTIPLE_CHOICE:
                                   return (0, r.jsx)(c.QH, { formField: e }, t);
                           }
                       })(e, t)

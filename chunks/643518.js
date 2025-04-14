@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I }), t(539854);
+t.d(n, { Z: () => g }), t(539854);
 var r = t(442837),
     o = t(468363),
     i = t(158776),
@@ -12,13 +12,13 @@ var r = t(442837),
     p = t(228168),
     b = t(981631),
     m = t(388032);
-function I(e) {
-    let { user: n, currentUser: t, guildId: I, initialSubsection: g } = e,
+function g(e) {
+    let { user: n, currentUser: t, guildId: g, initialSubsection: I } = e,
         { voiceActivityStatusEnabled: y } = (0, o.U)({ location: 'useUserProfileModalTabBarItems' }),
         { live: h, recent: j, stream: v, outbox: x } = (0, s.Z)(n.id),
         { voiceChannel: _, voiceActivity: O } = (0, a.Z)({
             userId: n.id,
-            guildId: I,
+            guildId: g,
             surface: 'use-user-profile-modal-tab-bar-items'
         }),
         Z = n.id === (null == t ? void 0 : t.id),
@@ -46,7 +46,7 @@ function I(e) {
                   section: p.oh.ACTIVITY,
                   text: m.NW.string(m.t.chq59f)
               })
-            : (E || (null == x && g === p.Tb.RECENT_ACTIVITY)) &&
+            : (E || (null == x && I === p.Tb.RECENT_ACTIVITY)) &&
               L.push({
                   section: p.oh.ACTIVITY,
                   text: m.NW.string(m.t.chq59f)

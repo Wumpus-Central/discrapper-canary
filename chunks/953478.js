@@ -9,8 +9,8 @@ var o = t(793030),
     c = t(430824),
     d = t(63063),
     u = t(317169),
-    m = t(639660),
-    p = t(767218),
+    p = t(639660),
+    m = t(767218),
     x = t(981631),
     _ = t(680278),
     v = t(388032),
@@ -40,21 +40,21 @@ function g(e) {
                 (0, r.jsxs)('div', {
                     className: f.contentContainer,
                     children: [
-                        (0, r.jsx)(p.Z, {
+                        (0, r.jsx)(m.Z, {
                             count: g,
-                            type: p.b.AVAILABLE
+                            type: m.b.AVAILABLE
                         }),
-                        (0, r.jsx)(p.Z, {
+                        (0, r.jsx)(m.Z, {
                             count: h,
-                            type: p.b.SPENT
+                            type: m.b.SPENT
                         }),
-                        (0, r.jsx)(p.Z, {
+                        (0, r.jsx)(m.Z, {
                             count: j,
-                            type: p.b.TOTAL
+                            type: m.b.TOTAL
                         })
                     ]
                 }),
-                (0, r.jsx)(m.Z, { guildId: n }),
+                (0, r.jsx)(p.Z, { guildId: n }),
                 (0, r.jsx)(a.Z, {
                     className: f.boostButton,
                     guild: t,

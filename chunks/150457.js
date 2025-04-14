@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(798681),
     i = n(450109);
 let o = 10 * n(70956).Z.Millis.SECOND,
-    a = 5;
+    a = 15;
 function s() {
     return r.w.isIncomingVideoEnabled() && Date.now() - r.w.lastIncomingVideoEnabledChangeTime() > o;
 }

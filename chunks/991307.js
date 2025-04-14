@@ -1,33 +1,33 @@
-n.d(t, { Z: () => v });
-var i = n(200651);
+n.d(t, { Z: () => N });
+var l = n(200651);
 n(192379);
-var l = n(442837),
+var i = n(442837),
     r = n(481060),
-    a = n(668781),
-    o = n(846027),
+    o = n(668781),
+    a = n(846027),
     s = n(763296),
     u = n(131951),
-    c = n(19780),
-    d = n(914010),
-    g = n(594174),
-    f = n(626135),
-    b = n(981631),
-    Z = n(65154),
-    N = n(388032),
+    d = n(19780),
+    c = n(914010),
+    f = n(594174),
+    g = n(626135),
+    Z = n(981631),
+    b = n(65154),
+    O = n(388032),
     m = n(752420);
-function v(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Z.Yn.DEFAULT,
-        n = (0, l.e7)([g.default], () => {
+function N(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.Yn.DEFAULT,
+        n = (0, i.e7)([f.default], () => {
             var t;
-            return (null == (t = g.default.getCurrentUser()) ? void 0 : t.id) === e;
+            return (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) === e;
         }),
-        v = (0, l.e7)([s.Z], () => s.Z.isLocalSoundboardMuted(e)),
+        N = (0, i.e7)([s.Z], () => s.Z.isLocalSoundboardMuted(e)),
         {
-            muted: p,
-            deafened: O = !1,
-            localVideoDisabled: h = !1,
-            localVideoAutoDisabled: j = !1
-        } = (0, l.cj)(
+            muted: h,
+            deafened: E = !1,
+            localVideoDisabled: j = !1,
+            localVideoAutoDisabled: v = !1
+        } = (0, i.cj)(
             [u.Z],
             () =>
                 n
@@ -42,37 +42,37 @@ function v(e) {
                       },
             [n, t, e]
         ),
-        x =
-            u.Z.supports(Z.AN.DISABLE_VIDEO) && !n
-                ? (0, i.jsx)(
+        p =
+            u.Z.supports(b.AN.DISABLE_VIDEO) && !n
+                ? (0, l.jsx)(
                       r.S89,
                       {
                           id: 'disable-video',
-                          label: N.NW.string(N.t['4MMsWF']),
+                          label: O.NW.string(O.t['4MMsWF']),
                           action: () => {
-                              if (j)
-                                  return void a.Z.show({
-                                      title: N.NW.string(N.t.m2Hyj4),
-                                      body: N.NW.string(N.t.EhaK6O),
-                                      confirmText: N.NW.string(N.t.ND1my8),
-                                      cancelText: N.NW.string(N.t.jEqEh4),
-                                      onConfirm: () => o.Z.setDisableLocalVideo(e, b.ZUi.MANUAL_ENABLED)
+                              if (v)
+                                  return void o.Z.show({
+                                      title: O.NW.string(O.t.m2Hyj4),
+                                      body: O.NW.string(O.t.EhaK6O),
+                                      confirmText: O.NW.string(O.t.ND1my8),
+                                      cancelText: O.NW.string(O.t.jEqEh4),
+                                      onConfirm: () => a.Z.setDisableLocalVideo(e, Z.ZUi.MANUAL_ENABLED)
                                   });
-                              let n = h ? b.ZUi.MANUAL_ENABLED : b.ZUi.DISABLED;
-                              o.Z.setDisableLocalVideo(e, n, t);
+                              let n = j ? Z.ZUi.MANUAL_ENABLED : Z.ZUi.DISABLED;
+                              a.Z.setDisableLocalVideo(e, n, t);
                           },
-                          checked: h,
-                          subtext: j
-                              ? (0, i.jsxs)('div', {
+                          checked: j,
+                          subtext: v
+                              ? (0, l.jsxs)('div', {
                                     className: m.videoPaused,
                                     children: [
-                                        (0, i.jsx)(r.P4T, {
+                                        (0, l.jsx)(r.P4T, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 12,
                                             className: m.warningCircle
                                         }),
-                                        N.NW.string(N.t.m2Hyj4)
+                                        O.NW.string(O.t.m2Hyj4)
                                     ]
                                 })
                               : null
@@ -80,72 +80,72 @@ function v(e) {
                       'disable-video'
                   )
                 : null,
-        _ = n
+        P = n
             ? null
-            : (0, i.jsx)(
+            : (0, l.jsx)(
                   r.S89,
                   {
                       id: 'soundboard-sound-mute',
-                      label: N.NW.string(N.t.LxhEuL),
+                      label: O.NW.string(O.t.LxhEuL),
                       action: () => {
-                          let n = c.Z.getRTCConnection();
-                          f.default.track(b.rMx.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
-                              guild_id: d.Z.getGuildId(),
+                          let n = d.Z.getRTCConnection();
+                          g.default.track(Z.rMx.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
+                              guild_id: c.Z.getGuildId(),
                               target_user_id: e,
                               media_session_id: null == n ? void 0 : n.getMediaSessionId(),
                               parent_media_session_id: null == n ? void 0 : n.parentMediaSessionId,
-                              mute_soundboard: !v
+                              mute_soundboard: !N
                           }),
-                              o.Z.toggleLocalSoundboardMute(e, t);
+                              a.Z.toggleLocalSoundboardMute(e, t);
                       },
-                      checked: v
+                      checked: N
                   },
                   'soundboard-sound-mute'
               );
     return n
         ? [
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: 'mute',
-                      label: N.NW.string(N.t.sWmtIy),
+                      label: O.NW.string(O.t.sWmtIy),
                       action: () =>
-                          o.Z.toggleSelfMute({
+                          a.Z.toggleSelfMute({
                               context: t,
                               location: 'User Context Menu'
                           }),
-                      checked: p
+                      checked: h
                   },
                   'self-mute'
               ),
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: 'deafen',
-                      label: N.NW.string(N.t.wjcRFR),
+                      label: O.NW.string(O.t.wjcRFR),
                       action: () =>
-                          o.Z.toggleSelfDeaf({
+                          a.Z.toggleSelfDeaf({
                               context: t,
                               location: 'User Context Menu'
                           }),
-                      checked: O
+                      checked: E
                   },
                   'self-deafen'
               ),
-              x
+              p
           ]
         : [
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: 'mute',
-                      label: N.NW.string(N.t.sWmtIy),
-                      action: () => o.Z.toggleLocalMute(e, t),
-                      checked: p
+                      label: O.NW.string(O.t.sWmtIy),
+                      action: () => a.Z.toggleLocalMute(e, t),
+                      checked: h
                   },
                   'self-mute'
               ),
-              _,
-              x
+              P,
+              p
           ];
 }

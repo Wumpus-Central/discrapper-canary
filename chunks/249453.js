@@ -1,25 +1,25 @@
-r.d(t, { Z: () => s });
+r.d(t, { Z: () => p });
 var n = r(200651),
     o = r(192379),
-    i = r(392711),
+    a = r(392711),
     c = r(481060),
-    a = r(765250),
+    i = r(765250),
     l = r(444295),
     u = r(388032);
-let f = (0, i.throttle)((e, t) => {
+let s = (0, a.throttle)((e, t) => {
     (0, l.JS)(e.type, { opacity: t });
 }, 1000);
-function s(e) {
-    let t = o.useCallback((t) => f(e, t), [e]);
+function p(e) {
+    let t = o.useCallback((t) => s(e, t), [e]);
     return (0, n.jsx)(c.II_, {
         id: 'opacity',
         'aria-haspopup': !0,
         label: u.NW.string(u.t.OVovCQ),
         control: (r, o) => {
-            var i, l;
+            var a, l;
             return (0, n.jsx)(
                 c._wy,
-                ((i = (function (e) {
+                ((a = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
@@ -50,7 +50,7 @@ function s(e) {
                         value: 100 * e.opacity,
                         maxValue: 100,
                         onChange: (r) => {
-                            (0, a.nv)({
+                            (0, i.nv)({
                                 widgetId: e.id,
                                 opacity: r / 100
                             }),
@@ -59,7 +59,7 @@ function s(e) {
                         'aria-label': u.NW.string(u.t.kbFsAA)
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -68,9 +68,9 @@ function s(e) {
                           }
                           return r;
                       })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                          Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
-                i)
+                a)
             );
         }
     });

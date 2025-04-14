@@ -5,8 +5,8 @@ var n = s(200651),
     a = s(626135),
     l = s(115345),
     c = s(57927),
-    d = s(273236),
-    o = s(931839),
+    o = s(273236),
+    d = s(931839),
     m = s(905987),
     x = s(789662),
     h = s(981631),
@@ -14,9 +14,9 @@ var n = s(200651),
     j = s(699343);
 function g(e) {
     let { onClose: t, transitionState: s, dismissable: c, guildPain: g, myUsage: _ } = e,
-        [b, v] = i.useState(o.O.Intro),
+        [b, v] = i.useState(d.O.Intro),
         { submitted: f, submitting: p, saveSettings: W } = (0, l.vo)(t),
-        { guildPlans: C, overrideGuild: T, getDebug: y } = (0, l.F6)(g, _),
+        { guildPlans: C, overrideGuild: y, getDebug: T } = (0, l.F6)(g, _),
         w = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -28,18 +28,18 @@ function g(e) {
             'aria-label': u.NW.string(u.t.HcoRu7),
             size: r.CgR.DYNAMIC,
             children: [
-                (0, n.jsx)(o.Z, {
+                (0, n.jsx)(d.Z, {
                     selectedTab: b,
                     onClick: v,
                     submitted: f
                 }),
-                b === o.O.Intro
-                    ? (0, n.jsx)(d.Z, { ref: w })
-                    : b === o.O.Customize
+                b === d.O.Intro
+                    ? (0, n.jsx)(o.Z, { ref: w })
+                    : b === d.O.Customize
                       ? (0, n.jsx)(N, {
                             guildPlans: C,
-                            overrideGuild: T,
-                            getDebug: y
+                            overrideGuild: y,
+                            getDebug: T
                         })
                       : (0, n.jsx)(m.Z, {
                             count: Object.values(C).filter((e) => {
@@ -53,7 +53,7 @@ function g(e) {
                         (0, n.jsxs)('div', {
                             className: j.__invalid_left,
                             children: [
-                                c || (b !== o.O.Tips && b !== o.O.Customize)
+                                c || (b !== d.O.Tips && b !== d.O.Customize)
                                     ? null
                                     : (0, n.jsx)(r.eee, {
                                           className: j.dismiss,
@@ -64,7 +64,7 @@ function g(e) {
                                               children: u.NW.string(u.t.hvVgAQ)
                                           })
                                       }),
-                                c && b === o.O.Intro
+                                c && b === d.O.Intro
                                     ? (0, n.jsx)(r.P3F, {
                                           className: j.dismiss,
                                           onClick: t,
@@ -75,7 +75,7 @@ function g(e) {
                                           })
                                       })
                                     : null,
-                                c && b === o.O.Customize
+                                c && b === d.O.Customize
                                     ? (0, n.jsx)(r.P3F, {
                                           className: j.dismiss,
                                           onClick: t,
@@ -91,7 +91,7 @@ function g(e) {
                         (0, n.jsxs)('div', {
                             className: j.right,
                             children: [
-                                b === o.O.Customize
+                                b === d.O.Customize
                                     ? (0, n.jsx)(r.Text, {
                                           className: j.warning,
                                           variant: 'text-xs/medium',
@@ -99,10 +99,10 @@ function g(e) {
                                           children: u.NW.string(u.t.nlpqxM)
                                       })
                                     : null,
-                                b !== o.O.Customize || f
+                                b !== d.O.Customize || f
                                     ? null
                                     : (0, n.jsxs)(r.zxk, {
-                                          onClick: () => v(o.O.Intro),
+                                          onClick: () => v(d.O.Intro),
                                           color: r.zxk.Colors.TRANSPARENT,
                                           children: [
                                               (0, n.jsx)(r.whL, {
@@ -113,11 +113,11 @@ function g(e) {
                                               u.NW.string(u.t['13/7kZ'])
                                           ]
                                       }),
-                                b === o.O.Intro
+                                b === d.O.Intro
                                     ? (0, n.jsxs)(r.zxk, {
                                           onClick: () => {
                                               var e;
-                                              (null == (e = w.current) ? void 0 : e.maybeChangeToAfterTab()) && v(o.O.Customize);
+                                              (null == (e = w.current) ? void 0 : e.maybeChangeToAfterTab()) && v(d.O.Customize);
                                           },
                                           children: [
                                               u.NW.string(u.t.uw9zIy),
@@ -128,10 +128,10 @@ function g(e) {
                                               })
                                           ]
                                       })
-                                    : b === o.O.Customize
+                                    : b === d.O.Customize
                                       ? (0, n.jsxs)(r.zxk, {
                                             onClick: () => {
-                                                v(o.O.Tips), W(C);
+                                                v(d.O.Tips), W(C);
                                             },
                                             children: [
                                                 u.NW.string(u.t['1Qm829']),

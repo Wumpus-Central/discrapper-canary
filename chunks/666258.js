@@ -21,8 +21,8 @@ var l = n(200651),
     _ = n(626135),
     E = n(934415),
     S = n(572004),
-    b = n(971130),
-    T = n(366980),
+    T = n(971130),
+    b = n(366980),
     O = n(76234),
     y = n(981631),
     C = n(388032),
@@ -270,7 +270,7 @@ function V(e) {
         Y = (0, I.Dt)(),
         K = (0, I.Dt)(),
         X = (0, I.Dt)(),
-        J = i.useMemo(() => (x && null != r.vanityURLCode ? (0, T.Z)(r.vanityURLCode, !1) : null), [r, x]),
+        J = i.useMemo(() => (x && null != r.vanityURLCode ? (0, b.Z)(r.vanityURLCode, !1) : null), [r, x]),
         Q = i.useCallback(async () => {
             if (N) return;
             null !== H.current && clearTimeout(H.current);
@@ -279,7 +279,7 @@ function V(e) {
                 var t, n;
                 let l = await p();
                 o()(null != l, 'Invite key could not be determined.');
-                let i = (0, T.Z)(l);
+                let i = (0, b.Z)(l);
                 (0, S.JG)(i),
                     _.default.track(y.rMx.COPY_INSTANT_INVITE, {
                         server: r.id,
@@ -360,16 +360,16 @@ function V(e) {
                 });
             return null == t || null == n
                 ? null
-                : t.value === b.ZP.INVITE_OPTIONS_FOREVER.value && n.value === b.ZP.INVITE_OPTIONS_UNLIMITED.value
+                : t.value === T.ZP.INVITE_OPTIONS_FOREVER.value && n.value === T.ZP.INVITE_OPTIONS_UNLIMITED.value
                   ? C.NW.string(C.t['5u4A6e'])
-                  : t.value !== b.ZP.INVITE_OPTIONS_FOREVER.value && n.value !== b.ZP.INVITE_OPTIONS_UNLIMITED.value
+                  : t.value !== T.ZP.INVITE_OPTIONS_FOREVER.value && n.value !== T.ZP.INVITE_OPTIONS_UNLIMITED.value
                     ? C.NW.formatToPlainString(C.t['Z5Vt5+'], {
                           maxAge: t.label,
                           maxUses: n.label
                       })
-                    : n.value === b.ZP.INVITE_OPTIONS_UNLIMITED.value && t.value !== b.ZP.INVITE_OPTIONS_FOREVER.value
+                    : n.value === T.ZP.INVITE_OPTIONS_UNLIMITED.value && t.value !== T.ZP.INVITE_OPTIONS_FOREVER.value
                       ? t.label
-                      : n.value !== b.ZP.INVITE_OPTIONS_UNLIMITED.value && t.value === b.ZP.INVITE_OPTIONS_FOREVER.value
+                      : n.value !== T.ZP.INVITE_OPTIONS_UNLIMITED.value && t.value === T.ZP.INVITE_OPTIONS_FOREVER.value
                         ? n.label
                         : null;
         })(E);

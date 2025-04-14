@@ -1,5 +1,5 @@
 t.d(n, {
-    Z: () => m,
+    Z: () => p,
     b: () => u
 });
 var r,
@@ -12,7 +12,7 @@ var s = t(657707),
     c = t(388032),
     d = t(154142),
     u = (((r = {})[(r.AVAILABLE = 0)] = 'AVAILABLE'), (r[(r.SPENT = 1)] = 'SPENT'), (r[(r.TOTAL = 2)] = 'TOTAL'), r);
-function m(e) {
+function p(e) {
     let { count: n, type: t } = e;
     return (0, o.jsxs)('div', {
         className: d.container,

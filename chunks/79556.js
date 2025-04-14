@@ -95,7 +95,7 @@ class k extends I.ZP {
     }
     render() {
         let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: a, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: p, connectDragPreview: h, canReorderChannel: m, isSubscriptionGated: _, isFavoriteSuggestion: y, subtitle: v, forceTopLevelThread: O, embeddedApps: j, resolvedUnreadSetting: C, withGuildIcon: x, enableActivities: S } = this.props,
-            P = (0, b.jW)({ location: 'text_channel' }),
+            P = (0, b.jW)({ location: 'text_channel' }).entrypoints,
             I = S && null != j && j.length > 0,
             N = (0, g.D)(v),
             E = (0, r.jsx)('li', {

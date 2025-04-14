@@ -8,8 +8,8 @@ var r = t(200651),
     c = t(808189),
     d = t(690786),
     u = t(838968),
-    m = t(262212),
-    p = t(279604),
+    p = t(262212),
+    m = t(279604),
     x = t(981631),
     _ = t(680278),
     v = t(388032),
@@ -87,7 +87,7 @@ function b(e) {
         x = null != (0, d.Z)(t, l),
         [_, v] = o.useState(void 0);
     return (
-        (0, p.KT)(_),
+        (0, m.KT)(_),
         (n = 0 === s ? 'start' : null == l ? 'end' : 'middle'),
         (0, r.jsxs)(u.Z, {
             guildId: t,
@@ -116,7 +116,7 @@ function b(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: g.buttonContainer,
-                    children: (0, r.jsx)(m.ZP, {
+                    children: (0, r.jsx)(p.ZP, {
                         guildId: t,
                         powerup: i,
                         onError: v

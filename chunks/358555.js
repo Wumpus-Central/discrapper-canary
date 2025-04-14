@@ -149,7 +149,7 @@ function C(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e,
         a = (0, c.Z)(t),
         f = (0, l.Q3)('GuildStatusBadge'),
-        { enabled: _ } = (0, p._k)({ location: 'guild_status_badge' });
+        { entrypoints: _ } = (0, p._k)({ location: 'guild_status_badge' });
     return a
         ? (0, r.jsx)('div', {
               className: o()(y.guildIconV2Container, { [y.invitesRefresh]: _ }),
