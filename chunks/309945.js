@@ -17,13 +17,13 @@ function x(e) {
             return null != (t = null == (e = d.Z.getStateForGuild(n)) ? void 0 : e.appliedBoosts) ? t : 0;
         }),
         _ = (0, a.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(n), [n]),
-        f =
+        v =
             x -
             o.useMemo(() => {
                 var e, n, t;
                 return null != (t = null == _ || null == (n = _.filter) || null == (e = n.call(_, (e) => !e.ended && null == e.endsAt)) ? void 0 : e.length) ? t : 0;
             }, [_]);
-    return f <= 0
+    return v <= 0
         ? null
         : (0, r.jsxs)('div', {
               className: p.container,
@@ -40,7 +40,7 @@ function x(e) {
                   (0, r.jsx)(i.xv, {
                       variant: 'text-sm/medium',
                       children: m.NW.formatToPlainString(u.Z.iAaAiI, {
-                          boostCount: f,
+                          boostCount: v,
                           perksString: t.map((e) => e.title).join(', ')
                       })
                   })

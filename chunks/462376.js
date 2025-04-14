@@ -1,5 +1,5 @@
 n.d(t, {
-    d: () => S,
+    d: () => b,
     k: () => j
 }),
     n(388685);
@@ -34,7 +34,7 @@ function f(e, t, n) {
     );
 }
 let j = 44;
-class S extends i.Component {
+class b extends i.Component {
     shouldComponentUpdate(e, t) {
         return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
     }

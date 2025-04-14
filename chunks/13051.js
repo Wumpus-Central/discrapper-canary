@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
+n.d(t, { Z: () => P }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -18,14 +18,14 @@ var r = n(200651),
     j = n(246946),
     O = n(259580),
     N = n(531087),
-    y = n(768581),
-    v = n(709054),
+    v = n(768581),
+    y = n(709054),
     _ = n(486199),
     C = n(981631),
     I = n(388032),
     S = n(796920),
     E = n(20493);
-function P(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,9 +50,9 @@ function P(e) {
     }
     return e;
 }
-function w(e) {
+function P(e) {
     let t,
-        { guild: n, integration: l, editedIntegration: a, isExpanded: w, onToggleExpand: T, onDisable: Z, onEnable: W } = e,
+        { guild: n, integration: l, editedIntegration: a, isExpanded: P, onToggleExpand: T, onDisable: Z, onEnable: W } = e,
         k = (0, d.e7)([x.Z], () => x.Z.getRoles(n.id)),
         [A, D] = i.useState(!1),
         R = (0, d.e7)([j.Z], () => j.Z.hidePersonalInformation),
@@ -66,7 +66,7 @@ function w(e) {
                     let i = 0 === l.expire_behavior ? I.NW.string(I.t['6kpw4u']) : I.NW.string(I.t.fQUQIC);
                     return (0, r.jsx)(
                         u.ConfirmModal,
-                        ((t = P({}, e)),
+                        ((t = w({}, e)),
                         (n = n =
                             {
                                 header: I.NW.string(I.t.emx3lJ),
@@ -179,10 +179,10 @@ function w(e) {
             {
                 icon: u.T39,
                 text: R
-                    ? I.NW.formatToPlainString(I.t.gcdJ8P, { timestamp: v.default.extractTimestamp(l.id) })
+                    ? I.NW.formatToPlainString(I.t.gcdJ8P, { timestamp: y.default.extractTimestamp(l.id) })
                     : I.NW.formatToPlainString(I.t.Nu9sam, {
                           user: null != l.user ? new h.Z(l.user).tag : null,
-                          timestamp: v.default.extractTimestamp(l.id)
+                          timestamp: y.default.extractTimestamp(l.id)
                       })
             }
         ];
@@ -213,7 +213,7 @@ function w(e) {
                           grow: 0,
                           children: (0, r.jsx)(O.Z, {
                               className: S.expandIcon,
-                              expanded: w && !A,
+                              expanded: P && !A,
                               'aria-hidden': !0
                           })
                       })
@@ -237,7 +237,7 @@ function w(e) {
         }),
         $ = null;
     return (
-        w &&
+        P &&
             !A &&
             null != a &&
             ($ = (0, r.jsxs)(b.Z, {
@@ -406,12 +406,12 @@ function w(e) {
                                                       children: (t) =>
                                                           (0, r.jsx)(
                                                               'img',
-                                                              P(
+                                                              w(
                                                                   {
                                                                       alt: I.NW.formatToPlainString(I.t.n6ZZn5, { name: e.name }),
                                                                       draggable: !1,
                                                                       className: o()(S.emoji, 'emoji', 'jumboable'),
-                                                                      src: y.ZP.getEmojiURL({
+                                                                      src: v.ZP.getEmojiURL({
                                                                           id: e.id,
                                                                           animated: e.animated,
                                                                           size: 28
@@ -458,7 +458,7 @@ function w(e) {
                     l.enabled
                         ? (0, r.jsx)(u.P3F, {
                               className: S.expandableHeader,
-                              'aria-expanded': w && !A,
+                              'aria-expanded': P && !A,
                               onClick: T,
                               children: X
                           })

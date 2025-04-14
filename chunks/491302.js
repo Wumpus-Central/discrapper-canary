@@ -88,14 +88,14 @@ function f(e) {
                 );
             });
         }, [t.guild_id, t.id, t.name]),
-        y = [];
+        v = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (y.push({
+        (v.push({
             icon: l.MqZ,
             text: t.source_channel.name
         }),
-        y.push({
+        v.push({
             text: (0, r.jsx)(
                 'span',
                 {
@@ -115,11 +115,11 @@ function f(e) {
                 'guild-source'
             )
         }));
-    let v = null;
+    let y = null;
     return (
         h &&
             null != n &&
-            (v = (0, r.jsxs)('div', {
+            (y = (0, r.jsxs)('div', {
                 className: g.body,
                 children: [
                     (0, r.jsx)(l.$i$, { className: g.topDivider }),
@@ -191,7 +191,7 @@ function f(e) {
                                     name: t.name,
                                     imageSrc: O,
                                     detailsClassName: g.__invalid_description,
-                                    details: y
+                                    details: v
                                 }),
                                 (0, r.jsx)(d.Z, {
                                     className: g.expandIcon,
@@ -201,7 +201,7 @@ function f(e) {
                             ]
                         })
                     }),
-                    v
+                    y
                 ]
             })
         })

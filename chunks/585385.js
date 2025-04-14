@@ -13,7 +13,7 @@ var i = n(120356),
 let g = (e) => {
     let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: p, isGuestInviteCreationToggleEnabled: I, onSetInviteFlags: N } = e,
         f = (0, a.ZP)(),
-        { maxAge: j, maxUses: S, temporary: E, flags: b } = i;
+        { maxAge: j, maxUses: b, temporary: S, flags: T } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.xBx, {
@@ -36,15 +36,15 @@ let g = (e) => {
             (0, l.jsx)(o.Z, {
                 shouldHideTemporaryInviteToggle: g,
                 maxAge: j,
-                maxUses: S,
-                temporary: E,
+                maxUses: b,
+                temporary: S,
                 onToggleTemporary: v,
                 onSelectMaxAge: x,
                 onSelectMaxUses: p,
                 onGenerateNewLink: m,
                 isGuestInviteCreationToggleEnabled: I,
                 onSetInviteFlags: N,
-                inviteFlags: b
+                inviteFlags: T
             }),
             (0, l.jsx)(s.mzw, {
                 className: c.settingsFooter,

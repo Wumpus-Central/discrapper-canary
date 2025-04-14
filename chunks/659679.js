@@ -17,7 +17,7 @@ function x(e) {
         {
             username: x,
             roleColor: _,
-            roleColorStrings: f
+            roleColorStrings: v
         } = (0, s.cj)(
             [l.ZP],
             () => {
@@ -31,7 +31,7 @@ function x(e) {
             },
             [n]
         ),
-        v = (0, d.X)(n.guildId, f);
+        f = (0, d.X)(n.guildId, v);
     return (0, r.jsx)(a.Z, {
         className: p.systemMessageContainer,
         contentClassName: p.systemMessageContent,
@@ -57,7 +57,7 @@ function x(e) {
                         children: x
                     }),
                     color: null != _ ? _ : void 0,
-                    roleColors: v
+                    roleColors: f
                 }),
                 (0, r.jsx)(o.xv, {
                     variant: 'text-md/medium',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(392711),
@@ -18,8 +18,8 @@ var r = n(200651),
     j = n(643886),
     O = n(869157),
     N = n(454092),
-    y = n(289465),
-    v = n(981631),
+    v = n(289465),
+    y = n(981631),
     _ = n(689079),
     C = n(388032),
     I = n(190434);
@@ -66,8 +66,8 @@ function E(e, t) {
         e
     );
 }
-function P(e) {
-    let { applicationId: t, commandId: l, guildId: x, inModal: j, editedTargetPermissions: P, originalApplicationPermissions: Z, originalCommandPermissions: W, selectedPermissionCount: k } = e,
+function w(e) {
+    let { applicationId: t, commandId: l, guildId: x, inModal: j, editedTargetPermissions: w, originalApplicationPermissions: Z, originalCommandPermissions: W, selectedPermissionCount: k } = e,
         A = (0, s.e7)([h.Z], () => (null == l ? null : h.Z.getCommand(l)), [l]),
         D = (null == A ? void 0 : A.defaultMemberPermissions) != null,
         R = (0, s.e7)(
@@ -94,9 +94,9 @@ function P(e) {
         [M, B] = i.useMemo(() => {
             let e = {},
                 t = {};
-            for (let [n, r] of Object.entries(P)) r.type === d.Kw.CHANNEL ? (e[n] = r) : (t[n] = r);
+            for (let [n, r] of Object.entries(w)) r.type === d.Kw.CHANNEL ? (e[n] = r) : (t[n] = r);
             return [e, t];
-        }, [P]),
+        }, [w]),
         U = i.useCallback(
             (e) => {
                 let t = b.Z.getGuild(x),
@@ -128,7 +128,7 @@ function P(e) {
                 let n,
                     r = null;
                 if (0 !== t.length) {
-                    let e = P[t[0]];
+                    let e = w[t[0]];
                     if (e.type === d.Kw.USER) n = N.s.REMOVE_SELF;
                     else {
                         let t = e.id;
@@ -148,12 +148,12 @@ function P(e) {
                 }
                 (0, N._)(n, r);
             },
-            [x, P]
+            [x, w]
         ),
         H = i.useCallback(
             (e, n) => {
                 let r = {};
-                for (let [e, t] of Object.entries(P))
+                for (let [e, t] of Object.entries(w))
                     r[e] = {
                         id: t.id,
                         permission: t.permission,
@@ -162,7 +162,7 @@ function P(e) {
                 if (((r = Object.assign(r, e)), n.length > 0 && (r = o().omit(r, n)), !U(r))) return void z(e, n);
                 f.W4(t, L, r);
             },
-            [t, P, L, U, z]
+            [t, w, L, U, z]
         ),
         G = i.useCallback(() => {
             let e = Object.keys(M);
@@ -178,7 +178,7 @@ function P(e) {
                                 headerText: C.NW.string(C.t['i1c+kZ']),
                                 hasMemberSearch: !1,
                                 overwrittenKeys: e,
-                                search: w,
+                                search: P,
                                 searchPlaceholderText: C.NW.string(C.t['TLQo/v']),
                                 selectedPermissionCount: k
                             },
@@ -215,7 +215,7 @@ function P(e) {
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e('21897').then(n.bind(n, 303313)),
                         t = A.defaultMemberPermissions;
-                    return a.fS(t, u.BO) && (t = v.Plq.ADMINISTRATOR), (n) => (0, r.jsx)(e, E(S({}, n), { defaultMemberPermissions: t }));
+                    return a.fS(t, u.BO) && (t = y.Plq.ADMINISTRATOR), (n) => (0, r.jsx)(e, E(S({}, n), { defaultMemberPermissions: t }));
                 }),
             [A]
         ),
@@ -285,7 +285,7 @@ function P(e) {
                 return (
                     R ? q && (i = C.NW.string(C.t.XTwtW1)) : (i = null != l ? C.NW.string(C.t.tybdam) : C.NW.string(C.t.z2hjk5)),
                     (0, r.jsx)(
-                        y.Z,
+                        v.Z,
                         {
                             bar: (0, r.jsx)(c.ua7, {
                                 tooltipClassName: I.tooltip,
@@ -314,7 +314,7 @@ function P(e) {
         ]
     });
 }
-function w(e) {
+function P(e) {
     let t = (0, x.w)(e);
     return E(S({}, t), { results: t.results.map((e) => E(S({}, e), { type: d.Kw.CHANNEL })) });
 }

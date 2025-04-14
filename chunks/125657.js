@@ -20,9 +20,9 @@ var r = n(200651),
 function N(e) {
     var t;
     let { guild: n, applicationIntegration: N } = e,
-        y = (0, o.e7)([f.Z], () => f.Z.getRoles(n.id)),
-        { application: v } = N,
-        _ = null != v.bot ? new b.Z(v.bot) : null,
+        v = (0, o.e7)([f.Z], () => f.Z.getRoles(n.id)),
+        { application: y } = N,
+        _ = null != y.bot ? new b.Z(y.bot) : null,
         C = (0, o.e7)([g.ZP], () => (null != _ ? g.ZP.getMember(n.id, _.id) : null), [_, n]),
         I = null == _ ? void 0 : _.id;
     i.useEffect(() => {
@@ -30,12 +30,12 @@ function N(e) {
     }, [n.id, I]);
     let S = i.useMemo(() => {
         var e, t, r;
-        let i = y[n.getEveryoneRoleId()],
-            o = null != (t = null == C || null == (e = C.roles) ? void 0 : e.map((e) => y[e]).filter(h.lm)) ? t : [],
+        let i = v[n.getEveryoneRoleId()],
+            o = null != (t = null == C || null == (e = C.roles) ? void 0 : e.map((e) => v[e]).filter(h.lm)) ? t : [],
             a = null != (r = null == i ? void 0 : i.permissions) ? r : x.Hn;
         for (let e of o) a = l.IH(a, e.permissions);
         return a;
-    }, [n, y, C]);
+    }, [n, v, C]);
     return null == _
         ? null
         : (0, r.jsx)(a.Zbd, {

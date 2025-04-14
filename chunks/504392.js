@@ -12,8 +12,8 @@ var r = t(200651),
     p = t(905128),
     x = t(27237),
     _ = t(51859),
-    f = t(953478),
-    v = t(460608),
+    v = t(953478),
+    f = t(460608),
     g = t(279604),
     h = t(332538),
     j = t(535396),
@@ -34,16 +34,16 @@ function w(e) {
             (0, m.jd)(n), null == s || null == (e = s.popout) || e.markAsDismissed(N.L.AUTO_DISMISS);
         }, [n, s]);
     let w = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(n)),
-        T = (0, a.e7)([u.Z], () => {
+        S = (0, a.e7)([u.Z], () => {
             var e;
             return (null == (e = u.Z.getGuild(n)) ? void 0 : e.hasFeature(b.oNc.INTERNAL_EMPLOYEE_ONLY)) === !0;
         }),
-        S = o.useRef(!1);
+        T = o.useRef(!1);
     return (o.useEffect(() => {
         var e, r;
         if (null == t) return;
         let o = null == w || null == (r = w.powerups) || null == (e = r.get) ? void 0 : e.call(r, t);
-        null == o || S.current || ((0, g.KE)(n, o), (S.current = !0));
+        null == o || T.current || ((0, g.KE)(n, o), (T.current = !0));
     }, [n, t, null == w ? void 0 : w.powerups]),
     (null == w ? void 0 : w.catalog) == null)
         ? null
@@ -69,7 +69,7 @@ function w(e) {
                           (0, r.jsxs)('div', {
                               className: E.powerupsContainer,
                               children: [
-                                  T &&
+                                  S &&
                                       (0, r.jsxs)('div', {
                                           className: E.staffContainer,
                                           children: [
@@ -177,7 +177,7 @@ function w(e) {
                           }),
                           (0, r.jsxs)('div', {
                               className: E.sidebarContainer,
-                              children: [(0, r.jsx)(f.Z, { guildId: n }), (0, r.jsx)(v.Z, { guildId: n })]
+                              children: [(0, r.jsx)(v.Z, { guildId: n }), (0, r.jsx)(f.Z, { guildId: n })]
                           })
                       ]
                   })

@@ -18,15 +18,15 @@ function u(e) {
     });
 }
 function d(e) {
-    let { className: t, powerup: n } = e,
-        i = (0, o.Z)(n);
+    let { className: t, powerup: n, isHovering: i } = e,
+        c = (0, o.Z)(n, i);
     switch (n.type) {
         case a.Us.LEVEL:
             return (0, r.jsx)(u, {});
         case a.Us.PERK:
             return (0, r.jsx)('img', {
                 alt: '',
-                src: i,
+                src: c,
                 className: l()(s.background, { [s.gradientRoleColorsImage]: n.skuId === a.If }, t)
             });
     }

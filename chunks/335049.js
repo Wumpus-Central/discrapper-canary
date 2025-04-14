@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -18,8 +18,8 @@ var r = n(200651),
     j = n(271383),
     O = n(430824),
     N = n(246946),
-    y = n(594174),
-    v = n(51144),
+    v = n(594174),
+    y = n(51144),
     _ = n(981631),
     C = n(388032),
     I = n(555781);
@@ -66,7 +66,7 @@ function E(e, t) {
         e
     );
 }
-function P(e) {
+function w(e) {
     let { guild: t, id: l, type: o, isLocked: a, lockTooltipText: c } = e,
         d = !a || null != c;
     s()(d, 'No lockTooltipText provided while isLocked=true');
@@ -88,7 +88,7 @@ function P(e) {
     );
     switch (o) {
         case m.Kw.CHANNEL:
-            return (0, r.jsx)(w, {
+            return (0, r.jsx)(P, {
                 guild: t,
                 id: l,
                 isLocked: a,
@@ -113,7 +113,7 @@ function P(e) {
             });
     }
 }
-function w(e) {
+function P(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: a, openEntryContextMenu: s } = e,
         c = (0, b.bD)(t.id),
         {
@@ -228,7 +228,7 @@ function T(e) {
 }
 function Z(e) {
     let { guild: t, id: n, isLocked: i, lockTooltipText: l, openEntryContextMenu: o } = e,
-        a = (0, d.e7)([y.default], () => y.default.getUser(n)),
+        a = (0, d.e7)([v.default], () => v.default.getUser(n)),
         s = (0, d.e7)(
             [j.ZP],
             () => {
@@ -261,7 +261,7 @@ function Z(e) {
                       : (0, r.jsx)(u.Text, {
                             className: I.tag,
                             variant: 'text-sm/normal',
-                            children: v.ZP.getUserTag(a)
+                            children: y.ZP.getUserTag(a)
                         }),
                   i ? (0, r.jsx)(W, { tooltipText: l }) : null
               ]

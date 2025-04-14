@@ -13,7 +13,7 @@ function h(e) {
     var t;
     let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: p, isGuestInviteCreationToggleEnabled: I, inviteFlags: N, onSetInviteFlags: f } = e,
         j = d.find((e) => e.value === a),
-        S = c.find((e) => e.value === h);
+        b = c.find((e) => e.value === h);
     return (0, l.jsx)('div', {
         className: u.settingsContent,
         children: (0, l.jsxs)('form', {
@@ -32,7 +32,7 @@ function h(e) {
                     title: o.NW.string(o.t.jDqWHR),
                     children: (0, l.jsx)(r.VcW, {
                         options: c,
-                        value: null == S ? void 0 : S.value,
+                        value: null == b ? void 0 : b.value,
                         onChange: p
                     })
                 }),

@@ -18,15 +18,15 @@ var r = n(200651),
     j = n(430824),
     O = n(594174),
     N = n(626135),
-    y = n(5192),
-    v = n(709054),
+    v = n(5192),
+    y = n(709054),
     _ = n(360606),
     C = n(905753),
     I = n(399860),
     S = n(335049),
     E = n(617012),
-    P = n(981631),
-    w = n(388032),
+    w = n(981631),
+    P = n(388032),
     T = n(981263);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -95,11 +95,11 @@ function k(e) {
                                 let i = O.default.getUser(e.id),
                                     l = O.default.getUser(t.id);
                                 if (null != i && null != l) {
-                                    let e = y.ZP.getName(n, void 0, i),
-                                        t = y.ZP.getName(n, void 0, l);
+                                    let e = v.ZP.getName(n, void 0, i),
+                                        t = v.ZP.getName(n, void 0, l);
                                     return null == e ? void 0 : e.localeCompare(t);
                                 }
-                                return v.default.compare(e.id, t.id);
+                                return y.default.compare(e.id, t.id);
                             })(n, r, l);
                         case m.Kw.ROLE:
                             if (n.id === l) return -1;
@@ -109,17 +109,17 @@ function k(e) {
                             if (n.id === e) return -1;
                             if (r.id === e) return 1;
                             let o = Number(n.canWrite) - Number(r.canWrite);
-                            return 0 !== o ? o : v.default.compare(n.id, r.id);
+                            return 0 !== o ? o : y.default.compare(n.id, r.id);
                     }
                 });
         }, [l, p, x]),
-        P = i.useCallback(
+        w = i.useCallback(
             (e, t) => {
                 n({}, [(0, I.rE)(e, t)]);
             },
             [n]
         ),
-        w = i.useCallback(
+        P = i.useCallback(
             (e, t, r) => {
                 let i = (0, I.rE)(e, t);
                 null != p[i] &&
@@ -159,8 +159,8 @@ function k(e) {
                   {
                       guild: h,
                       commandId: t,
-                      onChange: (t) => w(e.id, e.type, t),
-                      onRemove: () => P(e.id, e.type),
+                      onChange: (t) => P(e.id, e.type, t),
+                      onRemove: () => w(e.id, e.type),
                       overwrite: e,
                       integration: W,
                       canShowMigrationTooltip: k,
@@ -181,18 +181,18 @@ function k(e) {
 function A(e) {
     var t, n, l;
     let o,
-        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: y } = e,
-        v = f.id === a.id || f.id === (0, b.bD)(a.id),
+        { guild: a, commandId: s, onChange: c, onRemove: u, overwrite: f, integration: j, canShowMigrationTooltip: O, hasAccessToMutatePermissions: v } = e,
+        y = f.id === a.id || f.id === (0, b.bD)(a.id),
         _ = null == j || null == (n = j.application) || null == (t = n.bot) ? void 0 : t.username,
-        C = !f.canWrite || !y,
+        C = !f.canWrite || !v,
         I = x.default.getId();
-    y ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? w.NW.string(w.t['1VF/09']) : w.NW.string(w.t.P1GnER)) : f.type === m.Kw.ROLE && (o = w.NW.string(w.t.mcAijY))) : (o = null != s ? w.NW.string(w.t.tybdam) : w.NW.string(w.t.z2hjk5));
+    v ? f.canWrite || (f.type === m.Kw.USER ? (o = f.id === I ? P.NW.string(P.t['1VF/09']) : P.NW.string(P.t.P1GnER)) : f.type === m.Kw.ROLE && (o = P.NW.string(P.t.mcAijY))) : (o = null != s ? P.NW.string(P.t.tybdam) : P.NW.string(P.t.z2hjk5));
     let k = O && null != j && f.id === a.id && void 0 !== _ && !f.permission;
     i.useEffect(() => {
         if (k) {
             var e;
             N.default.track(
-                P.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+                w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 W(Z({}, (0, p.hH)(a.id)), {
                     application_id: null == j || null == (e = j.application) ? void 0 : e.id,
                     location: 'toggle'
@@ -230,7 +230,7 @@ function A(e) {
                     },
                     children: (0, r.jsx)(h.ZP, {
                         className: T.tooltip,
-                        content: w.NW.format(w.t.pW4Cr6, {
+                        content: P.NW.format(P.t.pW4Cr6, {
                             botName: _,
                             link: 'https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/'
                         }),
@@ -265,8 +265,8 @@ function A(e) {
                     children: [
                         (0, r.jsx)(D, {
                             commandId: s,
-                            isSentinel: v,
-                            isDisabled: !y,
+                            isSentinel: y,
+                            isDisabled: !v,
                             onRemove: u
                         }),
                         R
@@ -287,7 +287,7 @@ function D(e) {
                 className: T.removeActions,
                 children: (0, r.jsx)(d.P3F, {
                     className: T.removeContainer,
-                    'aria-label': w.NW.string(w.t.mT0CQE),
+                    'aria-label': P.NW.string(P.t.mT0CQE),
                     onClick: l,
                     children: (0, r.jsx)(d.XHJ, {
                         size: 'md',

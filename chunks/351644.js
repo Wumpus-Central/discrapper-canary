@@ -18,15 +18,15 @@ var r = n(200651),
     j = n(258971),
     O = n(685929),
     N = n(163400),
-    y = n(553795),
-    v = n(496675),
+    v = n(553795),
+    y = n(496675),
     _ = n(626135),
     C = n(768581),
     I = n(63063),
     S = n(709054),
     E = n(51144),
-    P = n(466070),
-    w = n(585835),
+    w = n(466070),
+    P = n(585835),
     T = n(997787),
     Z = n(981631),
     W = n(49898),
@@ -64,18 +64,18 @@ function U(e) {
         ee = (0, m.ZP)(),
         [et, en] = i.useState(''),
         { isFetchingConnections: er, accounts: ei } = (0, c.cj)(
-            [y.Z],
+            [v.Z],
             () => ({
-                isFetchingConnections: y.Z.isFetching(),
-                accounts: y.Z.getAccounts()
+                isFetchingConnections: v.Z.isFetching(),
+                accounts: v.Z.getAccounts()
             }),
             []
         ),
         { canManageWebhooks: el, canManageGuild: eo } = (0, c.cj)(
-            [v.Z],
+            [y.Z],
             () => ({
-                canManageWebhooks: (null != U && v.Z.can(Z.Plq.MANAGE_WEBHOOKS, U)) || (null != z && v.Z.can(Z.Plq.MANAGE_WEBHOOKS, z)),
-                canManageGuild: null != U && null == z && v.Z.can(Z.Plq.MANAGE_GUILD, U)
+                canManageWebhooks: (null != U && y.Z.can(Z.Plq.MANAGE_WEBHOOKS, U)) || (null != z && y.Z.can(Z.Plq.MANAGE_WEBHOOKS, z)),
+                canManageGuild: null != U && null == z && y.Z.can(Z.Plq.MANAGE_GUILD, U)
             }),
             [U, z]
         ),
@@ -128,13 +128,13 @@ function U(e) {
         ),
         ej = i.useMemo(() => (void 0 !== ex ? [ex, ...eh.filter((e) => e.integration.id !== ex.integration.id)] : eh), [eh, ex]),
         eO = (0, u.s9z)(u.JQI),
-        [eN, ey] = i.useState(!1),
-        ev = i.useRef(0),
+        [eN, ev] = i.useState(!1),
+        ey = i.useRef(0),
         e_ = () => {
-            ey(!0),
-                clearTimeout(ev.current),
-                (ev.current = setTimeout(() => {
-                    ey(!1);
+            ev(!0),
+                clearTimeout(ey.current),
+                (ey.current = setTimeout(() => {
+                    ev(!1);
                 }, 200));
         };
     i.useEffect(() => (window.addEventListener('scroll', e_, !0), () => window.removeEventListener('scroll', e_)));
@@ -157,7 +157,7 @@ function U(e) {
                           text: k.NW.formatToPlainString(k.t.gcdJ8P, { timestamp: S.default.extractTimestamp(l.id) })
                       }),
                 (0, r.jsx)(
-                    w.Z,
+                    P.Z,
                     {
                         name: i.name,
                         imageSrc: null != (t = i.getIconURL(48)) ? t : C.pK['0'],
@@ -169,7 +169,7 @@ function U(e) {
                                 _.default.track(Z.rMx.APP_MANAGE_CTA_CLICKED, {
                                     application_id: i.id,
                                     guild_id: null == U ? void 0 : U.id,
-                                    is_admin: null != U ? v.Z.can(Z.Plq.ADMINISTRATOR, U) : void 0
+                                    is_admin: null != U ? y.Z.can(Z.Plq.ADMINISTRATOR, U) : void 0
                                 });
                         },
                         details: o,
@@ -247,14 +247,14 @@ function U(e) {
         (eI = null));
     let eS = I.Z.getArticleURL(Z.BhN.INTEGRATIONS),
         eE = null != z ? k.t.YV0vh4 : k.t.FnZEJi,
-        eP = [];
+        ew = [];
     if (el) {
         let e, t, i, o, a;
-        eP.push(
+        ew.push(
             ((n = F.length),
             n > 0 ? (t = (0, r.jsx)(u.LJT, { size: 'xs' })) : (e = k.NW.string(k.t.lOQqJC)),
             (0, r.jsx)(
-                w.Z,
+                P.Z,
                 {
                     name: k.NW.string(k.t.xOg4SE),
                     icon: u.tYf,
@@ -270,11 +270,11 @@ function U(e) {
         ),
             (null == z ? void 0 : z.type) === Z.d4z.GUILD_VOICE ||
                 ((null == z ? void 0 : z.type) != null && Z.TPd.GUILD_THREADS_ONLY.has(z.type)) ||
-                eP.push(
+                ew.push(
                     ((l = V.length),
                     l > 0 ? ((a = (0, r.jsx)(u.LJT, { size: 'xs' })), (o = $)) : ((i = k.NW.string(k.t['ZwSt+f'])), (o = () => open(I.Z.getArticleURL(Z.BhN.CHANNEL_FOLLOWING)))),
                     (0, r.jsx)(
-                        w.Z,
+                        P.Z,
                         {
                             name: k.NW.string(k.t.OrV60t),
                             icon: u.AsW,
@@ -290,10 +290,10 @@ function U(e) {
     }
     null == z &&
         ec.length > 0 &&
-        eP.push(
+        ew.push(
             ((a = ec.length),
             (0, r.jsx)(
-                w.Z,
+                P.Z,
                 {
                     name: k.NW.string(k.t.tqtDXF),
                     icon: u.DuK,
@@ -306,7 +306,7 @@ function U(e) {
             ))
         ),
         eb &&
-            eP.push(
+            ew.push(
                 (function (e, t, n) {
                     let i,
                         l,
@@ -324,7 +324,7 @@ function U(e) {
                                       location: 'Integration Settings'
                                   }))),
                         (0, r.jsx)(
-                            w.Z,
+                            P.Z,
                             {
                                 name: k.NW.string(k.t.q4pBGx),
                                 icon: s.icon.whiteSVG,
@@ -342,7 +342,7 @@ function U(e) {
                 })(ed, ep, Y)
             ),
         eg &&
-            eP.push(
+            ew.push(
                 (function (e, t, n) {
                     let i,
                         l,
@@ -360,7 +360,7 @@ function U(e) {
                                       location: 'Integration Settings'
                                   }))),
                         (0, r.jsx)(
-                            w.Z,
+                            P.Z,
                             {
                                 name: k.NW.string(k.t.aS6cKy),
                                 icon: s.icon.whiteSVG,
@@ -377,7 +377,7 @@ function U(e) {
                     );
                 })(eu, em, Y)
             );
-    let ew = null != z && ea && null != es;
+    let eP = null != z && ea && null != es;
     return (0, r.jsxs)(u.hjN, {
         className: o()(null != eI ? A.footerPlaceholder : null),
         children: [
@@ -393,17 +393,17 @@ function U(e) {
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          eP,
-                          ew &&
+                          ew,
+                          eP &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      eP.length > 0 ? (0, r.jsx)(u.$i$, { className: A.divider }) : null,
+                                      ew.length > 0 ? (0, r.jsx)(u.$i$, { className: A.divider }) : null,
                                       (0, r.jsx)(u.X6q, {
                                           variant: 'heading-md/semibold',
                                           className: A.sectionHeader,
                                           children: k.NW.string(k.t.oAvIAg)
                                       }),
-                                      (0, r.jsx)(P.t, {
+                                      (0, r.jsx)(w.t, {
                                           channel: z,
                                           application: es,
                                           showApplicationImage: !0,
@@ -417,7 +417,7 @@ function U(e) {
                           eo
                               ? (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        eP.length > 0 || ew ? (0, r.jsx)(u.$i$, { className: A.divider }) : null,
+                                        ew.length > 0 || eP ? (0, r.jsx)(u.$i$, { className: A.divider }) : null,
                                         (0, r.jsx)(u.X6q, {
                                             variant: 'heading-md/semibold',
                                             className: A.sectionHeader,

@@ -14,9 +14,9 @@ function p(e) {
         p = (0, s.e7)([l.Z], () => l.Z.getGuild(n)),
         x = (0, s.e7)([i.Z], () => i.Z.hasLoadedExperiments),
         _ = (0, d.Z)(n),
-        f = (0, c.Ek)(n, 'GuildPowerupsPage');
+        v = (0, c.Ek)(n, 'GuildPowerupsPage');
     return x && null != _ && null != p
-        ? f
+        ? v
             ? _
                 ? (0, r.jsx)(u.Z, {
                       guildId: n,

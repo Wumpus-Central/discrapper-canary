@@ -12,29 +12,29 @@ var d,
     N = n(592125),
     f = n(496675),
     j = n(699516),
-    S = n(981631),
-    E = n(245335);
-let b = new Set(),
-    T = [],
+    b = n(981631),
+    S = n(245335);
+let T = new Set(),
+    E = [],
     _ = new Map();
 function O(e) {
     let t = new Set(),
-        n = null == s || u === E.Iq.EMBEDDED_APPLICATION ? void 0 : s.id,
-        l = (0, I.rh)(b, n);
+        n = null == s || u === S.Iq.EMBEDDED_APPLICATION ? void 0 : s.id,
+        l = (0, I.rh)(T, n);
     for (let e of (null == l || j.Z.isBlocked(l.id) || t.add(l.id), x.Z.getUserAffinitiesUserIds())) t.add(e);
     let i = new Set();
     return (
-        u === E.Iq.EMBEDDED_APPLICATION &&
+        u === S.Iq.EMBEDDED_APPLICATION &&
             v.Z.getChannelHistory()
                 .map((e) => N.Z.getChannel(e))
                 .filter(p.lm)
-                .filter((e) => e.type === S.d4z.GUILD_TEXT)
-                .filter((e) => f.Z.can(S.Plq.SEND_MESSAGES, e))
+                .filter((e) => e.type === b.d4z.GUILD_TEXT)
+                .filter((e) => f.Z.can(b.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
                 .forEach((e) => i.add(e.id)),
         (0, I.an)({
             query: e,
-            omitUserIds: b,
+            omitUserIds: T,
             suggestedUserIds: t,
             maxRowsWithoutQuery: 100,
             omitGuildId: n,
@@ -44,7 +44,7 @@ function O(e) {
     );
 }
 function y(e) {
-    (T = e),
+    (E = e),
         (_ = new Map()),
         e.forEach((e, t) => {
             _.set(e, { index: t });
@@ -55,7 +55,7 @@ class C extends (d = g.ZP.Store) {
         this.waitFor(j.Z, x.Z);
     }
     getInviteSuggestionRows() {
-        return T;
+        return E;
     }
     getTotalSuggestionsCount() {
         return i;
@@ -70,7 +70,7 @@ class C extends (d = g.ZP.Store) {
             ? {
                   rowNum: t.index,
                   isAffinitySuggestion: e.isSuggested,
-                  numTotal: T.length,
+                  numTotal: E.length,
                   numAffinityConnections: n.size,
                   isFiltered: r
               }
@@ -93,7 +93,7 @@ let P = new C(m.Z, {
             (a = d),
             (o = c),
             (u = h),
-            (b = new Set([
+            (T = new Set([
                 ...t,
                 ...j.Z.getBlockedOrIgnoredIDs(),
                 ...(0, I.Sz)({
@@ -104,7 +104,7 @@ let P = new C(m.Z, {
             ])),
             (r = !1);
         let { rows: g, counts: m } = O('');
-        y(g), (l = m), (i = T.length);
+        y(g), (l = m), (i = E.length);
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;
