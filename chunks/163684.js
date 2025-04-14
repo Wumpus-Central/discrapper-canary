@@ -18,6 +18,14 @@ let o = (0, r.B)({
                 enabled: !0,
                 getNitroCTA: !1
             }
+        },
+        {
+            id: 2,
+            label: 'Enable upsells for outbound promos w/ Nagbar variant 2 - get nitro cta',
+            config: {
+                enabled: !0,
+                getNitroCTA: !0
+            }
         }
     ]
 });
