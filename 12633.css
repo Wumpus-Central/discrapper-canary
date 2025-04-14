@@ -19854,6 +19854,7 @@ span.clanTag__5d473 {
 }
 
 .authedAppV2__50a54 {
+    background-color: var(--bg-surface-raised);
     border-radius: var(--radius-sm);
     margin-bottom: 16px;
     overflow: hidden
@@ -19867,7 +19868,7 @@ span.clanTag__5d473 {
 }
 
 .headerV2__50a54 {
-    background-color: var(--background-secondary-alt);
+    background-color: var(--bg-mod-subtle);
     padding: 16px
 }
 
@@ -19888,13 +19889,12 @@ span.clanTag__5d473 {
 }
 
 .appDetailsContainer__50a54 {
-    background-color: var(--background-secondary);
     padding: 4px 16px
 }
 
 .appDetailsContainer__50a54 .appDetailsSection__50a54 {
     background-color: inherit;
-    border-bottom: 1px solid var(--background-modifier-accent);
+    border-bottom: 1px solid var(--border-subtle);
     border-radius: 0;
     margin-bottom: 0;
     padding: 16px 0
