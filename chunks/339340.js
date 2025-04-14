@@ -32,12 +32,12 @@ let T = 'VoiceChannelStatusModal',
 function A(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: o, onClose: A } = e,
         C = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
-        P = (0, s.e7)([b.ZP], () => b.ZP.getMediaSessionId()),
-        [R, w] = i.useState(null != C ? C : ''),
+        R = (0, s.e7)([b.Z], () => b.Z.getMediaSessionId()),
+        [P, w] = i.useState(null != C ? C : ''),
         [D, L] = i.useState(!1),
         [x, M] = i.useState(null),
         k = (0, s.e7)([y.default], () => y.default.getCurrentUser()),
-        j = R.length > N,
+        j = P.length > N,
         U = (0, g.Q3)('VoiceChannelStatusModal');
     i.useEffect(() => {
         v.default.track(O.rMx.OPEN_MODAL, {
@@ -58,10 +58,10 @@ function A(e) {
             return { hasErrors: !1 };
         },
         V = async (e) => {
-            R === C && A(), null == e || e.preventDefault(), M(null), L(!0);
-            let n = R.length,
-                r = R.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
-                i = E.ZP.parse(void 0, R),
+            P === C && A(), null == e || e.preventDefault(), M(null), L(!0);
+            let n = P.length,
+                r = P.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
+                i = E.ZP.parse(void 0, P),
                 { hasErrors: a } = B(i);
             if (!a) {
                 try {
@@ -70,7 +70,7 @@ function A(e) {
                         ? (v.default.track(O.rMx.VOICE_CHANNEL_TOPIC_SET, {
                               guild_id: t.guild_id,
                               channel_id: t.id,
-                              media_session_id: P,
+                              media_session_id: R,
                               raw_length: n,
                               text_length: r,
                               location_stack: o
@@ -83,7 +83,7 @@ function A(e) {
                 L(!1);
             }
         },
-        [F, Z] = i.useState((0, p.JM)(R)),
+        [F, Z] = i.useState((0, p.JM)(P)),
         H = (e, t, n) => {
             w(t), Z(n);
         },
@@ -133,7 +133,7 @@ function A(e) {
                             children: [
                                 (0, r.jsx)(h.Z, {
                                     innerClassName: S.textArea,
-                                    textValue: R,
+                                    textValue: P,
                                     richValue: F,
                                     placeholder: I.NW.formatToPlainString(I.t.DUXxBg, { channelName: t.name }),
                                     focused: !0,

@@ -42,7 +42,7 @@ function m(e) {
 }
 let g = () => {
     let [e, t] = (0, o.Wu)([c.ZP], () => [c.ZP.canShowAdminWarning, c.ZP.getVisibleGame()], []),
-        n = (0, o.e7)([d.ZP], () => d.ZP.isConnected(), []),
+        n = (0, o.e7)([d.Z], () => d.Z.isConnected(), []),
         h = (0, o.e7)([u.Z], () => u.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
         g = null != t && t.elevated && n && h && e,
         E = i.useRef(null);

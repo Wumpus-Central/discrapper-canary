@@ -57,21 +57,21 @@ function T(e) {
 let N = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
     A = 220,
     C = 1220,
-    P = Array.from({ length: 16 }).map((e, t) => ({
+    R = Array.from({ length: 16 }).map((e, t) => ({
         id: ''.concat(t),
         height: Math.floor(100 * Math.random()) + 120
     }));
-function R(e) {
+function P(e) {
     var t;
     return null != (t = e.id) ? t : e.src;
 }
 function w(e, t) {
-    let n = P[t];
+    let n = R[t];
     return null == n ? 0 : n.height;
 }
 function D(e, t, n, i) {
     if (!(e > 0))
-        return null == P[t]
+        return null == R[t]
             ? null
             : (0, r.jsx)(
                   'div',
@@ -84,7 +84,7 @@ function D(e, t, n, i) {
 }
 function L(e, t) {
     var n, r;
-    return e > 0 ? '' : null != (r = null == (n = P[t]) ? void 0 : n.id) ? r : '';
+    return e > 0 ? '' : null != (r = null == (n = R[t]) ? void 0 : n.id) ? r : '';
 }
 function x(e) {
     return e === u.EO.VIDEO;
@@ -274,7 +274,7 @@ class U extends i.PureComponent {
             S(this, 'handleSelect', (e) => {
                 let t,
                     { data: n } = this.props,
-                    r = n.findIndex((t) => R(t) === e);
+                    r = n.findIndex((t) => P(t) === e);
                 -1 !== r && (t = n[r]), null != t && this.selectItem(t, r);
             }),
             S(this, 'handleClickItem', (e, t) => {
@@ -303,7 +303,7 @@ class U extends i.PureComponent {
                               coords: n,
                               onClick: this.handleClickItem,
                               renderExtras: () => (0, r.jsx)(E.Z, T({ className: I.favButton }, a)),
-                              focused: R(a) === o,
+                              focused: P(a) === o,
                               imagePool: this.props.imagePool,
                               videoPool: this.props.videoPool
                           },
@@ -372,7 +372,7 @@ class U extends i.PureComponent {
                           {
                               fade: !0,
                               className: a()(I.results, i),
-                              sections: [P.length],
+                              sections: [R.length],
                               columns: e,
                               itemGutter: 12,
                               getItemKey: L,

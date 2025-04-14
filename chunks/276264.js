@@ -29,8 +29,8 @@ var r = n(200651),
     N = n(624138),
     A = n(51144),
     C = n(981631),
-    P = n(674563),
-    R = n(524484),
+    R = n(674563),
+    P = n(524484),
     w = n(388032),
     D = n(938159);
 function L(e, t, n) {
@@ -114,12 +114,12 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 guildId: Q
             }),
             eC = (0, y.X)(Q, s),
-            [eP, eR] = i.useState(!1);
+            [eR, eP] = i.useState(!1);
         i.useEffect(() => {
-            n && eR(!1);
+            n && eP(!1);
         }, [n]);
         let ew = (0, v.Fr)(Z),
-            eD = null != ew && !em && n && !eP,
+            eD = null != ew && !em && n && !eR,
             eL = () => {
                 eb(!0);
             },
@@ -196,7 +196,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                               })
                       }),
             eG = () => {
-                let e = (null == V ? void 0 : V.isClyde()) ? P.Hb.AI : P.Hb.BOT;
+                let e = (null == V ? void 0 : V.isClyde()) ? R.Hb.AI : R.Hb.BOT;
                 return null != V && V.bot
                     ? (0, r.jsx)(p.Z, {
                           className: D.botTag,
@@ -233,7 +233,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                             (0, r.jsx)(b.Z, {
                                 confettiSpawnRef: ey,
                                 shouldFire: G && null != F && e.id !== F.id,
-                                confettiLocation: R.Hn.MEMBER_USER
+                                confettiLocation: P.Hn.MEMBER_USER
                             })
                         ]
                     })
@@ -271,7 +271,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                             },
                             e
                         ),
-                        { closePopout: () => eR(!0) }
+                        { closePopout: () => eP(!0) }
                     )
                 ),
             eH = W === C.Skl.OFFLINE;

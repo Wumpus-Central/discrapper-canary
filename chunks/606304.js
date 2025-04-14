@@ -92,12 +92,12 @@ function T(e) {
         let { userId: n, channelId: r, sessionId: i } = t,
             o = !1,
             a = g;
-        return n === h && i === m && (g = null != r ? r : null), a !== g && (o = p.delete(f.Yn.DEFAULT) || o), null == r ? (o = n === h && i === m ? p.delete(f.Yn.DEFAULT) || o : b(f.Yn.DEFAULT, n) || o) : n === h && i !== m ? (o = p.delete(f.Yn.DEFAULT) || o) : n !== h && r !== c.ZP.getChannelId() && (o = b(f.Yn.DEFAULT, n) || o), o || e;
+        return n === h && i === m && (g = null != r ? r : null), a !== g && (o = p.delete(f.Yn.DEFAULT) || o), null == r ? (o = n === h && i === m ? p.delete(f.Yn.DEFAULT) || o : b(f.Yn.DEFAULT, n) || o) : n === h && i !== m ? (o = p.delete(f.Yn.DEFAULT) || o) : n !== h && r !== c.Z.getChannelId() && (o = b(f.Yn.DEFAULT, n) || o), o || e;
     }, !1);
 }
 class N extends (r = i.ZP.Store) {
     initialize() {
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(c.ZP);
+        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(c.Z);
     }
     getSpeakingDuration(e, t) {
         var n, r;

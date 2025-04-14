@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(195387),
     A = n(272510),
     C = n(4517),
-    P = n(171368),
-    R = n(978395),
+    R = n(171368),
+    P = n(978395),
     w = n(161572),
     D = n(228168),
     L = n(981631),
@@ -113,7 +113,7 @@ function B(e) {
         ei = i.useMemo(() => (0, _.Z)(), []),
         eo = (e) => {
             null == Z || Z(),
-                (0, P.openUserProfileModal)(
+                (0, R.openUserProfileModal)(
                     G(
                         j(
                             {
@@ -229,7 +229,7 @@ function B(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(R.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: $,

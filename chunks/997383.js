@@ -52,8 +52,8 @@ let T = 100,
     N = 1000,
     A = 0.2,
     C = 0.1,
-    P = Object.freeze({}),
-    R = 300;
+    R = Object.freeze({}),
+    P = 300;
 function w() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t = arguments.length > 1 ? arguments[1] : void 0;
@@ -133,7 +133,7 @@ class L {
             return;
         }
         (this.options.frecencyBoosters ? s.DZ.loadIfNecessary() : Promise.resolve()).finally(() => {
-            this.queryUsers(e, t, this._limit), (this._groupDMResults = this.queryGroupDMs(e, this._limit)), (this._textChannelResults = this.queryTextChannels(e, this._limit)), (this._voiceChannelResults = this.queryVoiceChannels(e, this._limit)), (this._guildResults = this.queryGuilds(e, this._limit)), (this._applicationResults = this.queryApplications(e, this._limit)), (this._linkResults = this.queryLink(e, this._limit)), (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)), this._isAsyncSearch() ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, R))) : this.updateAllResults();
+            this.queryUsers(e, t, this._limit), (this._groupDMResults = this.queryGroupDMs(e, this._limit)), (this._textChannelResults = this.queryTextChannels(e, this._limit)), (this._voiceChannelResults = this.queryVoiceChannels(e, this._limit)), (this._guildResults = this.queryGuilds(e, this._limit)), (this._applicationResults = this.queryApplications(e, this._limit)), (this._linkResults = this.queryLink(e, this._limit)), (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)), this._isAsyncSearch() ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, P))) : this.updateAllResults();
         });
     }
     clear() {
@@ -253,9 +253,9 @@ class L {
               })
             : [];
     }
-    constructor(e, t, n = T, r = P) {
+    constructor(e, t, n = T, r = R) {
         I(this, 'query', ''),
-            I(this, 'options', P),
+            I(this, 'options', R),
             I(this, 'results', []),
             I(this, '_userResults', []),
             I(this, '_groupDMResults', []),

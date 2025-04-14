@@ -64,7 +64,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -168,7 +168,7 @@ function x(e) {
             delay: 750,
             position: 'top',
             'aria-label': O.ZP.getUserTag(l, { decoration: 'never' }),
-            children: (e) => (0, r.jsx)(o.P3F, R(C({ tag: 'span' }, e), { children: d }))
+            children: (e) => (0, r.jsx)(o.P3F, P(C({ tag: 'span' }, e), { children: d }))
         });
     }
     return d;

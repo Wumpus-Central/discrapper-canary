@@ -37,11 +37,11 @@ let g = '33kozedd0zs6fbauka98psnc7zwom2s',
     N = null,
     A = new Set(),
     C = {};
-function P(e) {
+function R(e) {
     var t;
     return null == (t = O.exec(e)) ? void 0 : t[1];
 }
-function R(e, t, n) {
+function P(e, t, n) {
     return s.tn.get({
         url: ''.concat(v).concat(e),
         query: t,
@@ -58,7 +58,7 @@ async function w(e, t) {
     if (null != r) return r;
     let {
             body: { data: i }
-        } = await R('/games', { id: e }, t),
+        } = await P('/games', { id: e }, t),
         o = null == (n = i[0]) ? void 0 : n.name;
     return (C[e] = o), o;
 }
@@ -83,7 +83,7 @@ class D {
             var n, r, i;
             let {
                     body: { data: o }
-                } = await R(
+                } = await P(
                     '/streams',
                     {
                         user_id: e.id,
@@ -97,7 +97,7 @@ class D {
                 f = { large_image: null != s && null != (r = (0, d.f)(h.ABu.TWITCH, s)) ? r : void 0 },
                 _ = await w(l, t),
                 p = u.Z.get(h.ABu.TWITCH),
-                m = null != (i = P(s)) ? i : e.name,
+                m = null != (i = R(s)) ? i : e.name,
                 g = null != c && '' !== c ? c.slice(0, I) : void 0,
                 E = null != _ && '' !== _ ? _.slice(0, I) : void 0;
             return {

@@ -23,7 +23,7 @@ var r = n(200651),
     S = n(981631),
     T = n(843856);
 function N(e) {
-    let { premiumSubscription: t, setPurchaseState: n, onBack: o, onNext: N, legalTermsNodeRef: A, flashLegalTerms: C, invoiceError: P, planError: R, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: M, analyticsLocation: k, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: V, isTrial: F = !1 } = e,
+    let { premiumSubscription: t, setPurchaseState: n, onBack: o, onNext: N, legalTermsNodeRef: A, flashLegalTerms: C, invoiceError: R, planError: P, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: M, analyticsLocation: k, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: V, isTrial: F = !1 } = e,
         { selectedPlan: Z, priceOptions: H, setHasAcceptedTerms: W, setPurchaseError: Y, purchaseType: K, paymentSourceId: z, paymentSources: q, selectedSkuId: Q, skusById: X, skuPricePreviewsById: J, referralCode: $, contextMetadata: ee, invoicePreview: et, inReverseTrial: en } = (0, b.JL)(),
         { isGift: er, selectedGiftStyle: ei, customGiftMessage: eo, emojiConfetti: ea, soundEffect: es, giftRecipient: el, selectedGiftingPromotionReward: ec } = (0, E.wD)(),
         eu = (0, u.a5)(Z),
@@ -81,7 +81,7 @@ function N(e) {
                 invoicePreview: et
             });
         },
-        eP = {
+        eR = {
             baseAnalyticsData: D,
             flowStartTime: L,
             makePurchase: eC,
@@ -92,12 +92,12 @@ function N(e) {
             purchaseTokenAuthState: j,
             setPurchaseState: n
         },
-        eR = i.useRef(eP);
+        eP = i.useRef(eR);
     i.useEffect(() => {
-        eR.current = eP;
+        eP.current = eR;
     }),
         i.useEffect(() => {
-            let { makePurchase: e } = eR.current;
+            let { makePurchase: e } = eP.current;
             ep && !er && null == t && e();
         }, [ep, er, t]);
     let ew = null != U || (K === S.GZQ.ONE_TIME && !er);
@@ -108,8 +108,8 @@ function N(e) {
               children: [
                   (0, r.jsx)(p.Z, {
                       legalTermsNodeRef: A,
-                      invoiceError: P,
-                      planError: R,
+                      invoiceError: R,
+                      planError: P,
                       disablePurchase: V,
                       flashLegalTerms: C,
                       isSubmitting: eg,

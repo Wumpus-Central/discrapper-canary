@@ -39,8 +39,8 @@ let y = (e, t) => {
                 selectedChannelId: j
             }),
             I = P === u.FN.CONTEXT_MENU,
-            [N, E] = (0, s.US)(C && I && x && S ? [l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            Z = (0, c.m)(g.p9.TIER_2),
+            [N, Z] = (0, s.US)(C && I && x && S ? [l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            E = (0, c.m)(g.p9.TIER_2),
             w = (0, p.Z)(n),
             T = N === l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             A = (0, i.useRef)(null),
@@ -62,9 +62,9 @@ let y = (e, t) => {
         )
             return t;
         let k = () => {
-                E(f.L.USER_DISMISS);
+                Z(f.L.USER_DISMISS);
             },
-            M = y(Z, null != w ? w : null),
+            M = y(E, null != w ? w : null),
             G = v(M),
             B = O(M);
         return (0, r.jsx)('div', {

@@ -70,8 +70,8 @@ function j(e) {
         Z = (0, o.e7)([S.default, h.default], () => ((0, d.J)(i, h.default) ? null : S.default.getUser(i.userId))),
         x = l.useMemo(() => (null != Z ? [Z] : []), [Z]),
         N = (0, g.q)(m),
-        { analyticsLocations: P } = (0, E.ZP)(),
-        w = (0, u.O)(),
+        { analyticsLocations: w } = (0, E.ZP)(),
+        P = (0, u.O)(),
         R = i.activity.session_id,
         A = (0, f.Z)(i.activity, y.xjy.EMBEDDED) && (0, f.Z)(i.activity, y.xjy.CONTEXTLESS),
         [T, C] = l.useState(!1),
@@ -85,8 +85,8 @@ function j(e) {
                         await (0, c.Z)({
                             applicationId: m,
                             activityChannelId: n,
-                            locationObject: w.location,
-                            analyticsLocations: P,
+                            locationObject: P.location,
+                            analyticsLocations: w,
                             joinUserId: D,
                             joinSessionId: R,
                             instanceId: void 0,
@@ -94,7 +94,7 @@ function j(e) {
                         }),
                         C(!1));
             },
-            [m, D, w.location, P, R, n, A]
+            [m, D, P.location, w, R, n, A]
         );
     return null == j || null == Z || null == N
         ? null

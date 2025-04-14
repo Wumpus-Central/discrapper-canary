@@ -25,8 +25,8 @@ var r = n(664751),
     N = n(254854),
     A = n(981631),
     C = n(701488),
-    P = n(388032);
-let R = 3,
+    R = n(388032);
+let P = 3,
     w = 20;
 function D(e) {
     let { applicationId: t, secret: n, channelId: r, intent: i = C.Ws.PLAY, embedded: o = !1, source: a, partyId: s, locationObject: c, analyticsLocations: u, joinUserId: d, joinSessionId: f, activity: _ } = e;
@@ -152,7 +152,7 @@ async function M(e) {
                   pids: e
               });
           }).catch((e) => {
-              N.Z.show(A.kVF.LAUNCH_GAME_FAILURE, P.NW.string(P.t.YZEBdn)),
+              N.Z.show(A.kVF.LAUNCH_GAME_FAILURE, R.NW.string(R.t.YZEBdn)),
                   l.Z.dispatch({
                       type: 'GAME_LAUNCH_FAIL',
                       applicationId: t,
@@ -315,7 +315,7 @@ let k = {
                         distributor_application: L(i, o),
                         executable: c,
                         publisher: r,
-                        report_version: R
+                        report_version: P
                     },
                     retries: 1,
                     oldFormErrors: !0,

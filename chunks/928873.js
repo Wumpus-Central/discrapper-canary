@@ -307,7 +307,7 @@ class N {
 let A = new N();
 'u' > typeof window && A.setContainer(document.body);
 let C = o.createContext(A);
-var P = function (e, t, n, r) {
+var R = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
@@ -324,13 +324,13 @@ var P = function (e, t, n, r) {
     }
     return !0;
 };
-let R = !1,
+let P = !1,
     w,
     D = {};
 function L() {
-    if (!R) return;
+    if (!P) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || P(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()), (w = requestAnimationFrame(L));
+    null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()), (w = requestAnimationFrame(L));
 }
 let x = !1,
     M = {
@@ -341,10 +341,10 @@ let x = !1,
             (x = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (R = !0), (w = requestAnimationFrame(L));
+            (P = !0), (w = requestAnimationFrame(L));
         },
         disableAnimationTracking() {
-            (R = !1), null != w && cancelAnimationFrame(w);
+            (P = !1), null != w && cancelAnimationFrame(w);
         }
     };
 function k(e) {

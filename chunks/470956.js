@@ -20,7 +20,7 @@ var r = n(192379),
     g = n(979651),
     b = n(823379);
 function O(e, t) {
-    let n = (0, i.e7)([p.Z, f.ZP], () => (e === f.ZP.getChannelId() ? p.Z.getDesyncedVoiceStates() : null)),
+    let n = (0, i.e7)([p.Z, f.Z], () => (e === f.Z.getChannelId() ? p.Z.getDesyncedVoiceStates() : null)),
         o = (0, i.Wu)([a.Z], () => (null == e ? [] : [...a.Z.getGuildRingingUsers(e)])),
         c = (0, i.Wu)([m.default], () => o.map((e) => m.default.getUser(e)).filter(b.lm)),
         g = (0, i.e7)([u.Z], () => u.Z.getBasicChannel(e)),
@@ -62,7 +62,7 @@ function O(e, t) {
     );
 }
 function y(e, t) {
-    let n = (0, i.e7)([p.Z, f.ZP], () => (e === f.ZP.getChannelId() ? p.Z.getDesyncedParticipants() : null));
+    let n = (0, i.e7)([p.Z, f.Z], () => (e === f.Z.getChannelId() ? p.Z.getDesyncedParticipants() : null));
     return r.useMemo(
         () =>
             (function (e, t) {
@@ -84,12 +84,12 @@ function y(e, t) {
 }
 function h(e, t) {
     let n = (0, i.e7)([c.default], () => c.default.getId() === t),
-        l = (0, i.e7)([f.ZP], () => f.ZP.getChannelId()),
+        l = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         o = r.useRef(null),
         [a, s] = r.useState(!1),
         [u, d] = r.useState(!1),
-        p = (0, i.e7)([f.ZP, g.Z], () => null != t && null != e && f.ZP.getChannelId() === e && null != g.Z.isInChannel(e, t) && f.ZP.isUserConnected(t)),
-        m = (0, i.e7)([f.ZP, g.Z], () => null != t && null != e && f.ZP.getChannelId() === e && null != g.Z.isInChannel(e, t) && !f.ZP.isUserConnected(t));
+        p = (0, i.e7)([f.Z, g.Z], () => null != t && null != e && f.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && f.Z.isUserConnected(t)),
+        m = (0, i.e7)([f.Z, g.Z], () => null != t && null != e && f.Z.getChannelId() === e && null != g.Z.isInChannel(e, t) && !f.Z.isUserConnected(t));
     return (
         r.useEffect(() => {
             p && d(!0);

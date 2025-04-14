@@ -62,7 +62,7 @@ let D = {
 };
 function N(e, t, r, a, N) {
     return e.map((b, E) => {
-        let P = [];
+        let j = [];
         for (let e of Object.keys(b).sort((e, t) => {
             let r = D[e],
                 n = D[t];
@@ -71,7 +71,7 @@ function N(e, t, r, a, N) {
             let t = b[e];
             p.al[e] ||
                 void 0 === t ||
-                P.push(
+                j.push(
                     (0, n.jsx)(
                         p.ck,
                         {
@@ -109,7 +109,7 @@ function N(e, t, r, a, N) {
                                   })
                                 : null;
                         })(b, r, a, N),
-                    v(P),
+                    v(j),
                     'video' === b.type &&
                         E === e.length - 1 &&
                         null != r &&

@@ -6,7 +6,7 @@ n.d(t, {
     Ex: () => ew,
     Fg: () => q,
     G6: () => el,
-    H1: () => R,
+    H1: () => P,
     I0: () => L,
     JG: () => ex,
     L1: () => eO,
@@ -24,10 +24,10 @@ n.d(t, {
     SE: () => eA,
     Sb: () => ev,
     Sh: () => eM,
-    T4: () => P,
+    T4: () => R,
     UP: () => ea,
     Wp: () => eT,
-    Wz: () => eR,
+    Wz: () => eP,
     Xc: () => j,
     Xk: () => w,
     Xr: () => es,
@@ -54,7 +54,7 @@ n.d(t, {
     h2: () => K,
     hg: () => ej,
     iG: () => W,
-    iH: () => eP,
+    iH: () => eR,
     jU: () => X,
     kJ: () => H,
     kU: () => J,
@@ -192,13 +192,13 @@ let I = (0, u.Zc)(
         (e) => (null != e ? e : N),
         (e) => e
     ),
-    P = (0, u.Zc)(
+    R = (0, u.Zc)(
         'textAndImages',
         'soundboardPickerCollapsedSections',
         (e) => (null != e ? e : N),
         (e) => e
     ),
-    R = (0, u.Zc)(
+    P = (0, u.Zc)(
         'textAndImages',
         'viewImageDescriptions',
         (e) => {
@@ -721,13 +721,13 @@ let ev = (0, u.KM)(
         (e) => e
     ),
     eC = [],
-    eP = (0, u.Zc)(
+    eR = (0, u.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
         (e) => (null != e ? e : eC),
         (e) => e
     ),
-    eR = (0, u.TG)({
+    eP = (0, u.TG)({
         baseSetting: (0, u.Zc)(
             'privacy',
             'defaultGuildsActivityRestricted',

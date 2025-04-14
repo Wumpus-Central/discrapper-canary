@@ -25,8 +25,8 @@ var r = n(98405),
     N = n(530575),
     A = n(533610),
     C = n(800054),
-    P = n(682564),
-    R = n(338045),
+    R = n(682564),
+    P = n(338045),
     w = n(751736),
     D = n(992914),
     L = w('iterator'),
@@ -153,15 +153,15 @@ var r = n(98405),
             var e = U(this),
                 t = e.target,
                 n = e.index++;
-            if (!t || n >= t.length) return (e.target = null), P(void 0, !0);
+            if (!t || n >= t.length) return (e.target = null), R(void 0, !0);
             var r = t[n];
             switch (e.kind) {
                 case 'keys':
-                    return P(r.key, !1);
+                    return R(r.key, !1);
                 case 'values':
-                    return P(r.value, !1);
+                    return R(r.value, !1);
             }
-            return P([r.key, r.value], !1);
+            return R([r.key, r.value], !1);
         },
         !0
     ),
@@ -232,7 +232,7 @@ if (
         {
             append: function (e, t) {
                 var n = j(this);
-                R(arguments.length, 2),
+                P(arguments.length, 2),
                     X(n.entries, {
                         key: S(e),
                         value: S(t)
@@ -241,7 +241,7 @@ if (
                     n.updateURL();
             },
             delete: function (e) {
-                for (var t = j(this), n = R(arguments.length, 1), r = t.entries, i = S(e), o = n < 2 ? void 0 : arguments[1], a = void 0 === o ? o : S(o), s = 0; s < r.length; ) {
+                for (var t = j(this), n = P(arguments.length, 1), r = t.entries, i = S(e), o = n < 2 ? void 0 : arguments[1], a = void 0 === o ? o : S(o), s = 0; s < r.length; ) {
                     var l = r[s];
                     if (l.key === i && (void 0 === a || l.value === a)) {
                         if ((ee(r, s, 1), void 0 !== a)) break;
@@ -251,18 +251,18 @@ if (
             },
             get: function (e) {
                 var t = j(this).entries;
-                R(arguments.length, 1);
+                P(arguments.length, 1);
                 for (var n = S(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
                 return null;
             },
             getAll: function (e) {
                 var t = j(this).entries;
-                R(arguments.length, 1);
+                P(arguments.length, 1);
                 for (var n = S(e), r = [], i = 0; i < t.length; i++) t[i].key === n && X(r, t[i].value);
                 return r;
             },
             has: function (e) {
-                for (var t = j(this).entries, n = R(arguments.length, 1), r = S(e), i = n < 2 ? void 0 : arguments[1], o = void 0 === i ? i : S(i), a = 0; a < t.length; ) {
+                for (var t = j(this).entries, n = P(arguments.length, 1), r = S(e), i = n < 2 ? void 0 : arguments[1], o = void 0 === i ? i : S(i), a = 0; a < t.length; ) {
                     var s = t[a++];
                     if (s.key === r && (void 0 === o || s.value === o)) return !0;
                 }
@@ -271,7 +271,7 @@ if (
             set: function (e, t) {
                 var n,
                     r = j(this);
-                R(arguments.length, 1);
+                P(arguments.length, 1);
                 for (var i = r.entries, o = !1, a = S(e), s = S(t), l = 0; l < i.length; l++) (n = i[l]).key === a && (o ? ee(i, l--, 1) : ((o = !0), (n.value = s)));
                 o ||
                     X(i, {

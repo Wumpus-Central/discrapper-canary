@@ -52,8 +52,8 @@ let d = {
                         );
                     }, []),
                     C = t.rects.reference,
-                    P = t.rects.popper,
-                    R = new Map(),
+                    R = t.rects.popper,
+                    P = new Map(),
                     w = !0,
                     D = A[0],
                     L = 0;
@@ -73,7 +73,7 @@ let d = {
                         padding: m
                     }),
                     B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
-                C[U] > P[U] && (B = (0, r.Z)(B));
+                C[U] > R[U] && (B = (0, r.Z)(B));
                 var V = (0, r.Z)(B),
                     F = [];
                 if (
@@ -86,14 +86,14 @@ let d = {
                     (D = x), (w = !1);
                     break;
                 }
-                R.set(x, F);
+                P.set(x, F);
             }
             if (w)
                 for (
                     var Z = v ? 3 : 1,
                         H = function (e) {
                             var t = A.find(function (t) {
-                                var n = R.get(t);
+                                var n = P.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
                                         return e;

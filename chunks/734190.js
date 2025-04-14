@@ -25,8 +25,8 @@ var r = n(200651),
     P = n(388032),
     I = n(915887),
     N = n(768107),
-    E = n(995453);
-function Z(e) {
+    Z = n(995453);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -72,7 +72,7 @@ function w(e, t) {
 function T(e) {
     let { style: t, withGuildIcon: n, inverted: i } = e,
         l = {
-            className: o()(E.spine, { [E.spineWithGuildIcon]: n }, { [E.invertedSpine]: i }),
+            className: o()(Z.spine, { [Z.spineWithGuildIcon]: n }, { [Z.invertedSpine]: i }),
             style: t
         },
         { density: a } = (0, c.TCT)();
@@ -80,7 +80,7 @@ function T(e) {
         case 'cozy':
             return (0, r.jsxs)(
                 'svg',
-                w(Z({}, l), {
+                w(E({}, l), {
                     width: '10',
                     height: '20',
                     viewBox: '0 0 10 20',
@@ -101,7 +101,7 @@ function T(e) {
         case 'compact':
             return (0, r.jsxs)(
                 'svg',
-                w(Z({}, l), {
+                w(E({}, l), {
                     width: '10',
                     height: '19',
                     viewBox: '0 0 10 19',
@@ -122,7 +122,7 @@ function T(e) {
         default:
             return (0, r.jsxs)(
                 'svg',
-                w(Z({}, l), {
+                w(E({}, l), {
                     width: '10',
                     height: '19',
                     viewBox: '0 0 10 19',
@@ -145,7 +145,7 @@ function T(e) {
 function A(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, r.jsx)('svg', {
-        className: o()(E.spine, { [E.spineWithGuildIcon]: n }),
+        className: o()(Z.spine, { [Z.spineWithGuildIcon]: n }),
         width: '12',
         height: '11',
         viewBox: '0 0 12 11',
@@ -159,7 +159,7 @@ function A(e) {
     });
 }
 let D = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: E, isLast: D, withGuildIcon: R } = e,
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: Z, isLast: D, withGuildIcon: R } = e,
         L = (0, s.e7)([y.ZP], () => y.ZP.getVoiceStatesForChannel(t), [t]),
         k = (0, s.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         {
@@ -181,18 +181,18 @@ let D = i.memo(function (e) {
         V = i.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        H = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 let i = m.Z.getChannel(t.id);
                 null != i &&
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('40157').then(n.bind(n, 422200));
-                        return (t) => (0, r.jsx)(e, w(Z({}, t), { channel: i }));
+                        return (t) => (0, r.jsx)(e, w(E({}, t), { channel: i }));
                     });
             },
             [t.id]
         ),
-        F = null == L ? 0 : L.length,
+        H = null == L ? 0 : L.length,
         z = (0, a.JA)(t.id),
         { role: Y } = z,
         q = (function (e, t) {
@@ -253,12 +253,12 @@ let D = i.memo(function (e) {
                         [N.withGuildIcon]: R
                     }),
                     onMouseDown: V,
-                    onContextMenu: H,
+                    onContextMenu: F,
                     children: [
                         !M || U || l ? null : (0, r.jsx)('div', { className: o()(N.unread, N.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
-                            w(Z({}, q), {
+                            w(E({}, q), {
                                 innerRef: K,
                                 className: N.link,
                                 onClick: W,
@@ -275,9 +275,9 @@ let D = i.memo(function (e) {
                                         (0, r.jsxs)('div', {
                                             className: N.children,
                                             children: [
-                                                F > 0 && t.userLimit > 0
+                                                H > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(O.Z, {
-                                                          userCount: F,
+                                                          userCount: H,
                                                           video: k,
                                                           channel: t
                                                       })
@@ -299,7 +299,7 @@ let D = i.memo(function (e) {
             }),
             (0, r.jsx)(C.Z, {
                 channel: t,
-                collapsed: !E,
+                collapsed: !Z,
                 collapsedMax: 6,
                 voiceStates: L,
                 location: x.Sbl.GUILD_CHANNEL_LIST

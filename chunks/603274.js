@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(361932), n(187205), n(539854);
+n.d(t, { Z: () => Z }), n(388685), n(361932), n(187205), n(539854);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -100,11 +100,11 @@ function I() {
         ),
         I = (0, s.Wu)([b.default], () => S.map((e) => b.default.getUser(e)), [S]),
         N = (0, s.Wu)([b.default], () => C.map((e) => b.default.getUser(e)), [C]),
-        E = P(
+        Z = P(
             c.gj8,
             l.filter((e) => !C.includes(e.id) && !S.includes(e.id))
         ),
-        Z =
+        E =
             0 === o.length
                 ? null
                 : (0, r.jsxs)('div', {
@@ -143,7 +143,7 @@ function I() {
         ),
         T = P(c.nG3, I);
     return (0, r.jsxs)(r.Fragment, {
-        children: [Z, E, w, T]
+        children: [E, Z, w, T]
     });
 }
 function N() {
@@ -160,7 +160,7 @@ function N() {
         ]
     });
 }
-function E(e) {
+function Z(e) {
     let { 'aria-label': t = !1, onShow: n, children: i } = e,
         l = (0, p.Q3)('FavoritesTooltip');
     return (0, r.jsx)(c.ua7, {

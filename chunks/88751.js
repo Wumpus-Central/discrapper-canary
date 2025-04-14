@@ -91,7 +91,7 @@ function C(e) {
     let { guildId: t, user: n } = e;
     return null != n && null != t && S(n.id, t);
 }
-function P(e) {
+function R(e) {
     let { voiceStates: t } = e;
     return (
         !o().isEmpty(g) &&
@@ -101,7 +101,7 @@ function P(e) {
         }, !1)
     );
 }
-function R(e) {
+function P(e) {
     return T(e.guildId);
 }
 function w() {
@@ -147,8 +147,8 @@ let x = new L(s.Z, {
     GUILD_MEMBER_REMOVE: C,
     GUILD_MEMBER_UPDATE: C,
     GUILD_ROLE_UPDATE: A,
-    PASSIVE_UPDATE_V2: R,
-    VOICE_STATE_UPDATES: P,
+    PASSIVE_UPDATE_V2: P,
+    VOICE_STATE_UPDATES: R,
     GUILD_CREATE: D,
     GUILD_DELETE: D
 });

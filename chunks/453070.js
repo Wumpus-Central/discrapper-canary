@@ -1,8 +1,8 @@
 n.d(t, {
-    Go: () => P,
+    Go: () => R,
     LZ: () => D,
     Pq: () => O,
-    RJ: () => R,
+    RJ: () => P,
     Sd: () => M,
     XW: () => x,
     el: () => S,
@@ -183,12 +183,12 @@ let O = (e) => {
         }, [t, n, a, e]);
     },
     C = [];
-function P() {
+function R() {
     var e, t;
     return null != (t = null == (e = (0, s.D)().favoriteStickers) ? void 0 : e.stickerIds) ? t : C;
 }
-function R() {
-    let e = P();
+function P() {
+    let e = R();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => null != e && (!(0, b.J8)(e) || (0, b.V9)(e))), [e]);
 }
 function w() {
@@ -202,7 +202,7 @@ function D() {
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
 let L = (e) => {
-        let t = R(),
+        let t = P(),
             { packs: n, frequentlyUsedStickers: o } = (0, i.cj)(
                 [g.Z, m.Z],
                 () => ({

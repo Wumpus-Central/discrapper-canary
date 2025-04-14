@@ -34,8 +34,8 @@ let y = (e) => {
             [y]
         ),
         {
-            commands: P,
-            sectionDescriptors: x,
+            commands: x,
+            sectionDescriptors: P,
             loading: I
         } = c.wi({
             context: S,
@@ -46,12 +46,12 @@ let y = (e) => {
         { sections: w } = i.useMemo(() => {
             let e = {};
             return (
-                x.forEach((n) => {
+                P.forEach((n) => {
                     e[n.id] = n;
                 }),
                 { sections: e }
             );
-        }, [x]),
+        }, [P]),
         A = i.useRef(I);
     i.useEffect(() => {
         I !== A.current && ((A.current = I), null == E || E());
@@ -105,7 +105,7 @@ let y = (e) => {
                   'menu-commands-placeholder'
               ))
             : ((n =
-                  0 === P.length
+                  0 === x.length
                       ? (0, r.jsx)(
                             s.sNh,
                             {
@@ -115,7 +115,7 @@ let y = (e) => {
                             },
                             'menu-commands-empty'
                         )
-                      : P.map(C)),
+                      : x.map(C)),
               null != N &&
                   N.length > 0 &&
                   (n = (0, r.jsxs)(r.Fragment, {

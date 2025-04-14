@@ -37,8 +37,8 @@ let p = {
                 altBoundary: v
             }),
             C = (0, i.Z)(t.placement),
-            P = (0, d.Z)(t.placement),
-            R = !P,
+            R = (0, d.Z)(t.placement),
+            P = !R,
             w = (0, o.Z)(C),
             D = (0, a.Z)(w),
             L = t.modifiersData.popperOffsets,
@@ -73,8 +73,8 @@ let p = {
                     W = H + A[V],
                     Y = H - A[F],
                     K = S ? -M[Z] / 2 : 0,
-                    z = P === r.BL ? x[Z] : M[Z],
-                    q = P === r.BL ? -M[Z] : -x[Z],
+                    z = R === r.BL ? x[Z] : M[Z],
+                    q = R === r.BL ? -M[Z] : -x[Z],
                     Q = t.elements.arrow,
                     X =
                         S && Q
@@ -87,8 +87,8 @@ let p = {
                     $ = J[V],
                     ee = J[F],
                     et = (0, s.u)(0, x[Z], X[Z]),
-                    en = R ? x[Z] / 2 - K - et - $ - j.mainAxis : z - et - $ - j.mainAxis,
-                    er = R ? -x[Z] / 2 + K + et + ee + j.mainAxis : q + et + ee + j.mainAxis,
+                    en = P ? x[Z] / 2 - K - et - $ - j.mainAxis : z - et - $ - j.mainAxis,
+                    er = P ? -x[Z] / 2 + K + et + ee + j.mainAxis : q + et + ee + j.mainAxis,
                     ei = t.elements.arrow && (0, c.Z)(t.elements.arrow),
                     eo = ei ? ('y' === w ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
                     ea = null != (B = null == U ? void 0 : U[w]) ? B : 0,

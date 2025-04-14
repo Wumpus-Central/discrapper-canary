@@ -81,16 +81,16 @@ let T = new d.Z('AuthenticationActionCreators'),
 var C = (function (e) {
     return (e.MFA = 'MFA'), (e.SUCCESS = 'SUCCESS'), e;
 })({});
-function P(e) {
+function R(e) {
     let t = O({ type: 'LOGOUT' }, e);
     l.Z.dispatch(t).catch((e) => {
         var t;
         throw (T.error('Error while dispatching LOGOUT', e), null == (t = window.DiscordErrors) || t.softCrash(e), e);
     });
 }
-function R(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.Z5c.DEFAULT_LOGGED_OUT;
-    if ((P(), null == t)) return;
+    if ((R(), null == t)) return;
     let n = (0, f.D)();
     if (null == n) return void (0, _.uL)(t, { source: e });
     E.Z.popAll(),
@@ -345,7 +345,7 @@ let w = {
         l.Z.dispatch({ type: 'LOGIN_STATUS_RESET' });
     },
     logoutInternal(e) {
-        P(e);
+        R(e);
     },
     logout(e) {
         var t;
@@ -373,7 +373,7 @@ let w = {
                 { rejectWithError: !1 }
             )
         ).finally(() => {
-            (null == r || r === h.default.getId()) && R(e, n);
+            (null == r || r === h.default.getId()) && P(e, n);
         });
     },
     switchAccountToken(e) {
@@ -384,7 +384,7 @@ let w = {
                 wasLoggedIn: null != n,
                 tokenHasChanged: e !== n
             }),
-            P({
+            R({
                 isSwitchingAccount: !0,
                 goHomeAfterSwitching: t
             }),
@@ -402,7 +402,7 @@ let w = {
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
-            .catch(() => R(e, t));
+            .catch(() => P(e, t));
     },
     async verify(e) {
         let t = await g.Z.post({

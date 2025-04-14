@@ -3,7 +3,7 @@ n.d(t, {
     I5: () => v,
     KP: () => S,
     Mn: () => b,
-    P6: () => P,
+    P6: () => R,
     S2: () => E,
     V3: () => y,
     W0: () => O,
@@ -207,6 +207,6 @@ function A() {
 function C() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function P() {
+function R() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

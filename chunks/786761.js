@@ -1,6 +1,6 @@
 n.d(t, {
     Pv: () => G,
-    e5: () => R,
+    e5: () => P,
     gx: () => w,
     lp: () => U,
     wi: () => D
@@ -92,7 +92,7 @@ function A(e) {
 function C(e) {
     return !1;
 }
-function P(e) {
+function R(e) {
     var t;
     return new d.pi(
         T(I({}, e), {
@@ -105,15 +105,15 @@ function P(e) {
         })
     );
 }
-function R(e) {
+function P(e) {
     var t, n, r, i, a, s, c;
     let f,
         h,
         { reactions: m, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        O = P(e),
+        O = R(e),
         S = null != (i = null == (t = e.mentions) ? void 0 : t.map((e) => e.id)) ? i : [],
         N = null != (a = e.mention_roles) ? a : [],
-        R = null != (s = e.mention_channels) ? s : [],
+        P = null != (s = e.mention_channels) ? s : [],
         w = e.message_reference,
         D = A(e),
         L = null,
@@ -140,7 +140,7 @@ function R(e) {
                   mentionEveryone: e.mention_everyone,
                   mentions: S,
                   mentionRoles: N,
-                  mentionChannels: R,
+                  mentionChannels: P,
                   messageReference: w,
                   mentioned: (0, b.Sz)({
                       userId: _.default.getId(),
@@ -178,7 +178,7 @@ function w(e, t) {
 }
 function D(e, t) {
     if (null != t.edited_timestamp)
-        return R(t, {
+        return P(t, {
             reactions: e.reactions,
             interactionData: e.interactionData
         });
@@ -263,7 +263,7 @@ function j(e) {
         ? []
         : e.message_snapshots.map((e) => {
               let { message: t } = e;
-              return new d.Hx({ message: P(t) });
+              return new d.Hx({ message: R(t) });
           });
 }
 let U = (e) => 0 === (0, c.cv)(e).length || '' !== e.content;

@@ -25,12 +25,12 @@ var r = n(200651),
 let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     I = (0, s.animated)(d.Kqy),
     N = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: s, mediaState: u, mentionCount: g = 0, isMentionLowImportance: N, unread: E = !1, defaultFolderName: Z, useCircleMask: w = !1, draggable: T = !1, sorting: A = !1, onDragStart: D, onDragEnd: R, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: G, folderIconContentClassName: B } = e,
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: s, mediaState: u, mentionCount: g = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: E, useCircleMask: w = !1, draggable: T = !1, sorting: A = !1, onDragStart: D, onDragEnd: R, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: G, folderIconContentClassName: B } = e,
             { id: U, name: W, children: V } = t,
-            H = (0, h.Q3)('FolderItem'),
-            [F, z] = i.useState(!1),
+            F = (0, h.Q3)('FolderItem'),
+            [H, z] = i.useState(!1),
             [Y, q] = i.useState(!1),
-            K = F || Y;
+            K = H || Y;
         i.useEffect(() => {
             A && z(!1);
         }, [A]);
@@ -57,7 +57,7 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [L, s]
             ),
-            ee = null != W && '' !== W ? W : null != Z && '' !== Z ? Z : C.NW.string(C.t.xV9hVl),
+            ee = null != W && '' !== W ? W : null != E && '' !== E ? E : C.NW.string(C.t.xV9hVl),
             et = (0, c.Ie)(''.concat(U)),
             en = 'folder-items-'.concat(U),
             er = (function (e) {
@@ -80,9 +80,9 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 children: [
                     (0, r.jsx)(b.Z, {
                         disabled: Q || s,
-                        hovered: F,
+                        hovered: H,
                         selected: l,
-                        unread: E,
+                        unread: Z,
                         className: S.pill
                     }),
                     (0, r.jsx)(j.Z, {
@@ -151,7 +151,7 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             I,
                             {
                                 as: 'ul',
-                                gap: H ? 'xs' : 0,
+                                gap: F ? 'xs' : 0,
                                 id: en,
                                 style: {
                                     height: e.height.to((e) => e * er),

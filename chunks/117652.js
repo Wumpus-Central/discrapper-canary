@@ -26,8 +26,8 @@ var i = n(442837),
     N = n(981631),
     A = n(474936),
     C = n(388032),
-    P = n(997433),
-    R = n(651427);
+    R = n(997433),
+    P = n(651427);
 function w(e, t, n) {
     return (
         t in e
@@ -114,7 +114,7 @@ function M(e) {
                     price: o,
                     isSelected: e === U,
                     onSelect: (e) => q(e),
-                    className: P.recommendedGiftPreview
+                    className: R.recommendedGiftPreview
                 },
                 e
             );
@@ -126,18 +126,18 @@ function M(e) {
                 pendingText: s,
                 currentText: s,
                 disableThemedBackground: !0,
-                className: P.customGiftMessageWrapper,
-                innerClassName: P.customGiftMessage
+                className: R.customGiftMessageWrapper,
+                innerClassName: R.customGiftMessage
             }),
         J = () =>
             Y
                 ? (0, r.jsxs)('div', {
-                      className: P.bodyColumnLeft,
+                      className: R.bodyColumnLeft,
                       children: [
                           (0, r.jsx)(o.Text, {
                               variant: 'text-xs/bold',
                               color: 'header-secondary',
-                              className: P.selectGiftTitle,
+                              className: R.selectGiftTitle,
                               children: K.toLocaleUpperCase()
                           }),
                           L.map((e) => Q(e)),
@@ -145,30 +145,30 @@ function M(e) {
                       ]
                   })
                 : (0, r.jsx)('div', {
-                      className: P.bodyColumnMiddle,
+                      className: R.bodyColumnMiddle,
                       children: (0, r.jsx)(h.q, { isShopGift: !0 })
                   }),
         $ = () => {
             if (Y)
                 return (0, r.jsxs)('div', {
-                    className: P.bodyColumnRight,
+                    className: R.bodyColumnRight,
                     children: [
                         (0, r.jsx)(g.s, { giftRecipient: D }),
                         (0, r.jsx)(h.q, {
                             isShopGift: !0,
-                            className: R.adjustedGiftMainAnimation,
-                            optionsContainerClassName: R.adjustedGiftBoxOptionContainer
+                            className: P.adjustedGiftMainAnimation,
+                            optionsContainerClassName: P.adjustedGiftBoxOptionContainer
                         }),
                         X()
                     ]
                 });
             let e = null != B ? (0, v.T4)(B.amount, B.currency) : void 0;
             return (0, r.jsxs)('div', {
-                className: P.bodyColumnRight,
+                className: R.bodyColumnRight,
                 children: [
                     (0, r.jsx)(d.Z, {
                         selectedSkuId: U,
-                        className: P.sendTo,
+                        className: R.sendTo,
                         validateSelectedGift: z
                     }),
                     X(),
@@ -176,7 +176,7 @@ function M(e) {
                         (0, r.jsx)(u.Z, {
                             skuId: U,
                             price: e,
-                            className: P.giftPreview,
+                            className: R.giftPreview,
                             isSelected: !0,
                             shouldDisplayHeader: !0
                         })
@@ -187,7 +187,7 @@ function M(e) {
         children: [
             (0, r.jsx)(T.C3, {
                 children: (0, r.jsxs)('div', {
-                    className: P.stepBody,
+                    className: R.stepBody,
                     children: [J(), $()]
                 })
             }),
@@ -221,13 +221,13 @@ function k(e) {
     return (0, r.jsx)(o.P3F, {
         onClick: i,
         children: (0, r.jsxs)('div', {
-            className: P.navigateToShopButton,
+            className: R.navigateToShopButton,
             children: [
                 (0, r.jsxs)('div', {
-                    className: P.navigateToShopBody,
+                    className: R.navigateToShopBody,
                     children: [
                         (0, r.jsx)('div', {
-                            className: P.shopIcon,
+                            className: R.shopIcon,
                             children: (0, r.jsx)(o.EOn, {
                                 size: 'custom',
                                 width: 18,
@@ -236,7 +236,7 @@ function k(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: P.navigateToShopTextWrapper,
+                            className: R.navigateToShopTextWrapper,
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     color: 'header-primary',

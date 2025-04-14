@@ -87,12 +87,12 @@ function E(e) {
             scale: 1,
             config: h
         })),
-        [C, P] = (0, l.q_F)(() => ({
+        [C, R] = (0, l.q_F)(() => ({
             x: 0,
             y: 0,
             config: h
         })),
-        [R, w] = i.useState(!1),
+        [P, w] = i.useState(!1),
         [D, L] = i.useState({
             x: 0,
             y: 0
@@ -109,12 +109,12 @@ function E(e) {
                   scale: 1,
                   immediate: e
               }),
-              P({
+              R({
                   x: 0,
                   y: 0,
                   immediate: e
               }));
-    }, [n, A, I, C, P]);
+    }, [n, A, I, C, R]);
     let M = (e, t) => {
             var n;
             let r = null == S ? (null == (n = O.current) ? void 0 : n.getBoundingClientRect()) : null,
@@ -153,12 +153,12 @@ function E(e) {
         ref: O,
         onMouseDown: k,
         onMouseUp: j,
-        onMouseMove: (e) => R && M(e.movementX, e.movementY),
+        onMouseMove: (e) => P && M(e.movementX, e.movementY),
         onWheel: (e) => !e.ctrlKey && M(-e.deltaX, -e.deltaY),
         onMouseLeave: () => w(!1),
         onClick: (e) => e.stopPropagation(),
         className: a()(f, d.wrapper, {
-            [d.panning]: n && R,
+            [d.panning]: n && P,
             [d.pannable]: n && x
         }),
         style: _({}, N, C),

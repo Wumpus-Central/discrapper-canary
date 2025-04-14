@@ -30,8 +30,8 @@ var r = n(200651),
     N = n(350327),
     A = n(507808),
     C = n(594174),
-    P = n(626135),
-    R = n(585483),
+    R = n(626135),
+    P = n(585483),
     w = n(597688),
     D = n(1870),
     L = n(429368),
@@ -278,8 +278,8 @@ let ec = 880,
                 return null != e ? w.Z.getProduct(e) : void 0;
             }, [O, I.skuId, I.type, T]),
             { confettiColors: A } = (0, B.Z)(I.styles),
-            P = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
-            R = i.useRef(null),
+            R = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
+            P = i.useRef(null),
             { analyticsLocations: D } = (0, g.ZP)([...l, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
             { collectedModalBackground: L } = (0, X.Ac)(I);
         function x() {
@@ -311,7 +311,7 @@ let ec = 880,
                             (0, r.jsx)(ef, {
                                 product: I,
                                 pairedProduct: N,
-                                reducedMotion: P
+                                reducedMotion: R
                             })
                         ]
                     }),
@@ -339,13 +339,13 @@ let ec = 880,
             children: [
                 (0, r.jsx)('div', {
                     className: ei.modalInner,
-                    ref: R,
+                    ref: P,
                     children: x()
                 }),
                 !s &&
-                    !P &&
+                    !R &&
                     (0, r.jsx)(V.Z, {
-                        confettiTarget: null != o ? o : R.current,
+                        confettiTarget: null != o ? o : P.current,
                         confettiCanvas: a,
                         sprites: (0, Z.vK)(I.categorySkuId),
                         colors: null == A ? void 0 : A.map((e) => e.toHexString())
@@ -373,7 +373,7 @@ let ec = 880,
         i.useEffect(() => {
             $.Vt.ORB_PROFILE_BADGE === n.skuId && (0, N.Ls)([(0, Y.X2)()], ep);
         }, [n.skuId]);
-        let P = i.useMemo(
+        let R = i.useMemo(
                 () =>
                     null != l
                         ? l
@@ -416,7 +416,7 @@ let ec = 880,
                                   (0, r.jsx)(_.zxk, {
                                       color: _.Ttl.BRAND,
                                       onClick: () => {
-                                          a(), R.S.dispatch(ee.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                                          a(), P.S.dispatch(ee.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
                                       },
                                       children: er.NW.string(en.Z.yfwZu7)
                                   }),
@@ -446,7 +446,7 @@ let ec = 880,
                     children: [
                         (0, r.jsx)(_.X6q, {
                             variant: 'heading-lg/bold',
-                            children: P
+                            children: R
                         }),
                         (0, r.jsx)(_.Text, {
                             variant: 'text-sm/normal',
@@ -555,7 +555,7 @@ let ec = 880,
             T = i.useMemo(() => (0, x.jm)(b.type, b.skuId), [b.type, b.skuId]);
         return (
             i.useEffect(() => {
-                P.default.track(ee.rMx.OPEN_MODAL, {
+                R.default.track(ee.rMx.OPEN_MODAL, {
                     type: ee.jXE.COLLECTIBLES_SHOP_COLLECTED_MODAL,
                     location_stack: S,
                     sku_id: b.skuId,

@@ -61,10 +61,10 @@ function O(e) {
         S = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [T, N] = (0, f.US)(S),
         [A, C] = i.useState(!1),
-        [P, R] = (0, u.q_F)(() => ({})),
+        [R, P] = (0, u.q_F)(() => ({})),
         w = (0, s.animated)(u.Pt5);
     function D() {
-        R({
+        P({
             from: { rotate: t ? '360deg' : '0deg' },
             to: { rotate: t ? '0deg' : '360deg' },
             config: E
@@ -108,7 +108,7 @@ function O(e) {
                           })
                         : null,
                     (0, r.jsx)(w, {
-                        style: O ? void 0 : P,
+                        style: O ? void 0 : R,
                         size: 'custom',
                         width: b,
                         height: b,

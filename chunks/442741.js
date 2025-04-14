@@ -43,8 +43,8 @@ function d() {
     return u(
         {
             channelId: null != t ? t : void 0,
-            mediaSessionId: null != (e = a.ZP.getMediaSessionId()) ? e : void 0,
-            rtcConnectionId: a.ZP.getRTCConnectionId(),
+            mediaSessionId: null != (e = a.Z.getMediaSessionId()) ? e : void 0,
+            rtcConnectionId: a.Z.getRTCConnectionId(),
             mediaContext: r.Yn.DEFAULT
         },
         _()

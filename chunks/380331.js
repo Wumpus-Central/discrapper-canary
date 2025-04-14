@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(981631),
     A = n(957825),
     C = n(388032),
-    P = n(171166);
-function R(e, t, n) {
+    R = n(171166);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                P(e, t, n[t]);
             });
     }
     return e;
@@ -83,7 +83,7 @@ let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
     j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
-    G = (0, y.Mg)(P.__invalid_unicodeCategoryShortcutHeight),
+    G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     V = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     F = k + M + 2 * U,
@@ -102,10 +102,10 @@ function K(e) {
             L(w({}, p), {
                 'aria-label': (0, v.Nf)(l, E),
                 className: a()({
-                    [P.categoryItemGuildCategory]: null != E,
-                    [P.categoryItemDefaultCategory]: null == E,
-                    [P.categoryItemDefaultCategorySelected]: null == E && m,
-                    [P.categoryItemRecentEmoji]: l.type === T.En.RECENT
+                    [R.categoryItemGuildCategory]: null != E,
+                    [R.categoryItemDefaultCategory]: null == E,
+                    [R.categoryItemDefaultCategorySelected]: null == E && m,
+                    [R.categoryItemRecentEmoji]: l.type === T.En.RECENT
                 }),
                 onClick: () => {
                     null != E &&
@@ -128,7 +128,7 @@ function K(e) {
                     null == E && null != h
                         ? (0, r.jsx)(O.Z, {
                               categoryId: h,
-                              className: P.categoryIcon,
+                              className: R.categoryIcon,
                               height: k,
                               width: k,
                               size: 'custom'
@@ -147,7 +147,7 @@ function K(e) {
                       includeActivity: !1,
                       children: (0, r.jsx)('div', { children: y })
                   }),
-                  C ? (0, r.jsx)('hr', { className: P.guildCategorySeparator }, 'separator') : null
+                  C ? (0, r.jsx)('hr', { className: R.guildCategorySeparator }, 'separator') : null
               ]
           })
         : y;
@@ -164,7 +164,7 @@ let z = (e) => {
         I = i.useRef(null),
         N = (0, u.e7)([E.Z], () => E.Z.isFocused()),
         A = (0, u.e7)([p.Z], () => p.Z.useReducedMotion, []),
-        R = i.useMemo(
+        P = i.useMemo(
             () =>
                 l().memoize((e, t) => {
                     let n = O[t];
@@ -269,7 +269,7 @@ let z = (e) => {
         categories: O,
         listPadding: w,
         onScroll: X,
-        renderCategoryListItem: R,
+        renderCategoryListItem: P,
         renderSection: ee,
         rowCount: O.length,
         categoryHeight: D,
@@ -282,7 +282,7 @@ let z = (e) => {
                 {
                     'aria-hidden': !q,
                     'aria-label': C.NW.string(C.t.dT0ct7),
-                    className: a()(P.unicodeShortcut, { [P.unicodeShortcutInvisible]: !q }),
+                    className: a()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !q }),
                     tabIndex: q ? 0 : -1,
                     onClick: () => J(e),
                     children: (0, r.jsx)(f.EO4, {

@@ -28,8 +28,8 @@ var r = n(200651),
     Z = n(981631),
     x = n(65154),
     N = n(388032),
-    P = n(519417);
-let w = s.EFr.SIZE_80,
+    w = n(519417);
+let P = s.EFr.SIZE_80,
     R = s.EFr.SIZE_40;
 function A(e) {
     let { channelId: t, participant: n } = e;
@@ -69,7 +69,7 @@ function A(e) {
                       })({}, e)),
                       (n = n =
                           {
-                              className: P.interactive,
+                              className: w.interactive,
                               children: (0, r.jsx)(s.P4T, { color: s.TVs.colors.STATUS_WARNING_BACKGROUND })
                           }),
                       Object.getOwnPropertyDescriptors
@@ -103,7 +103,7 @@ function T(e) {
         J = (0, o.e7)([b.ZP], () => b.ZP.isGuestOrLurker(n.guild_id, V.id)),
         X = I.ZP.getName(n.getGuildId(), n.id, V) + (J ? ' '.concat(N.NW.string(N.t['pFO/Pj'])) : ''),
         Q = H && (B || K),
-        $ = s < 124 ? R : w,
+        $ = s < 124 ? R : P,
         { avatarSrc: ee, avatarDecorationSrc: et } = (0, h.Z)({
             user: V,
             guildId: n.guild_id,
@@ -137,8 +137,8 @@ function T(e) {
                   E.Z,
                   {
                       onResize: C,
-                      wrapperClassName: P.videoWrapper,
-                      className: P.content,
+                      wrapperClassName: w.videoWrapper,
+                      className: w.content,
                       mirror: z,
                       streamId: Y,
                       videoComponent: W,
@@ -150,7 +150,7 @@ function T(e) {
                   Y
               )
         : (0, r.jsx)('div', {
-              className: a()(P.content, { [P.blockedAvatar]: D || M }),
+              className: a()(w.content, { [w.blockedAvatar]: D || M }),
               children: (0, r.jsx)(p.Z, {
                   'aria-label': X,
                   src: ee,

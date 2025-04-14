@@ -25,8 +25,8 @@ var r = n(200651),
     P = n(378844),
     I = n(340541),
     N = n(335353),
-    E = n(896835),
-    Z = n(359110),
+    Z = n(896835),
+    E = n(359110),
     w = n(155409),
     T = n(695346),
     A = n(447564),
@@ -40,8 +40,8 @@ var r = n(200651),
     U = n(934415),
     W = n(63063),
     V = n(98597),
-    H = n(648501),
-    F = n(473403),
+    F = n(648501),
+    H = n(473403),
     z = n(830993),
     Y = n(653577),
     q = n(207055),
@@ -162,7 +162,7 @@ class en extends V.ZP {
                       return (0, r.jsx)(c.P3F, {
                           className: o()(X.iconItem, X.alwaysShown),
                           onClick: () => {
-                              (0, E.X)('VoiceChannel') ? (0, A.k)(e, 'VoiceChannel') : window.open(W.Z.getArticleURL(K.BhN.HD_STREAMING_POTION), '_blank');
+                              (0, Z.X)('VoiceChannel') ? (0, A.k)(e, 'VoiceChannel') : window.open(W.Z.getArticleURL(K.BhN.HD_STREAMING_POTION), '_blank');
                           },
                           'aria-label': J.NW.string(J.t.gpF6QU),
                           onMouseEnter: n,
@@ -180,8 +180,8 @@ class en extends V.ZP {
     }
     render() {
         let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: a, locked: s, sorting: u, isUserOver: d, connectChannelDropTarget: p, connectChannelDragSource: h, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: y, showTutorial: v, hasActiveEvent: O, embeddedApps: j, isSubscriptionGated: C, isFavoriteSuggestion: x, withGuildIcon: S } = this.props,
-            { shouldShowActivities: P, shouldShowGuildVerificationPopout: E } = this.state,
-            Z = (0, I.jW)({ location: 'voice_channel' }),
+            { shouldShowActivities: P, shouldShowGuildVerificationPopout: Z } = this.state,
+            E = (0, I.jW)({ location: 'voice_channel' }),
             T = this.getVoiceStatesCount(),
             A = (0, r.jsxs)('li', {
                 ref: this.ref,
@@ -197,7 +197,7 @@ class en extends V.ZP {
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (P && !u && !d && !E) || E,
+                            shouldShow: (P && !u && !d && !Z) || Z,
                             children: () =>
                                 (0, r.jsx)(c.ua7, {
                                     text: this.getTooltipText(),
@@ -225,7 +225,7 @@ class en extends V.ZP {
                                         return (0, r.jsx)(N.Z, {
                                             channel: e,
                                             children: (0, r.jsxs)(
-                                                F.ZP,
+                                                H.ZP,
                                                 et(
                                                     ee(
                                                         {
@@ -273,7 +273,7 @@ class en extends V.ZP {
                                                                 }),
                                                             !x &&
                                                                 (0, r.jsxs)(r.Fragment, {
-                                                                    children: [this.renderOpenChatButton(), this.renderInviteButton(), Z ? this.renderOptionsButton({ onContextMenu: this.handleContextMenu }) : this.renderEditButton(), this.renderChannelInfo(), this.renderHDSplashedIcon()]
+                                                                    children: [this.renderOpenChatButton(), this.renderInviteButton(), E ? this.renderOptionsButton({ onContextMenu: this.handleContextMenu }) : this.renderEditButton(), this.renderChannelInfo(), this.renderHDSplashedIcon()]
                                                                 })
                                                         ]
                                                     }
@@ -399,7 +399,7 @@ class en extends V.ZP {
                             return (0, r.jsx)(c.P3F, {
                                 className: o()(X.iconItem, n ? X.alwaysShown : null),
                                 onClick: () => {
-                                    u.Z.updateChatOpen(e.id, !0), (0, Z.Kh)(e.id);
+                                    u.Z.updateChatOpen(e.id, !0), (0, E.Kh)(e.id);
                                 },
                                 'aria-label': J.NW.string(J.t.ZXxLQk),
                                 onMouseEnter: i,
@@ -449,7 +449,7 @@ function ei(e) {
         j = (0, O.Z)(),
         C = (0, a.e7)([G.ZP], () => G.ZP.isFavorite(t.id, n.id)),
         P = e.connected || (null == j ? void 0 : j.channelId) === n.id,
-        I = (0, H.Z)({
+        I = (0, F.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: s,

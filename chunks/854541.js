@@ -97,8 +97,8 @@ function N(e, t) {
 }
 let A = i.lazy(() => Promise.all([n.e('26436'), n.e('28102')]).then(n.bind(n, 534828))),
     C = 7,
-    P = () => Promise.resolve();
-function R(e) {
+    R = () => Promise.resolve();
+function P(e) {
     return null == e ? null : 'string' == typeof e ? ((0, c.FX)(e) ? (0, c._i)(e) : null) : e;
 }
 function w(e) {
@@ -204,12 +204,12 @@ class L extends i.PureComponent {
 function x(e) {
     let { value: t, eagerUpdate: n = !1, onChange: o, onClose: s, suggestedColors: l, middle: f, footer: m, showEyeDropper: E, wrapperComponentType: v, className: I } = e,
         T = (0, h.Z)(),
-        N = R(t),
-        P = null != N ? N : 0,
-        w = (0, c.Rf)(P),
-        D = (0, c.O)(P),
+        N = P(t),
+        R = null != N ? N : 0,
+        w = (0, c.Rf)(R),
+        D = (0, c.O)(R),
         [L, x] = i.useState({
-            current: P,
+            current: R,
             pending: {
                 hex: w,
                 hsl: D
@@ -370,8 +370,8 @@ function k(e) {
         I = (0, l.ZP)({
             id: 'color-picker',
             isEnabled: !0,
-            scrollToStart: P,
-            scrollToEnd: P
+            scrollToStart: R,
+            scrollToEnd: R
         });
     return (0, r.jsx)(s.bG, {
         navigator: I,

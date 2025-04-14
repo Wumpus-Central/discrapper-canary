@@ -1,7 +1,7 @@
 n.d(t, {
     Dp: () => A,
     Hh: () => C,
-    ZP: () => P,
+    ZP: () => R,
     hq: () => T
 }),
     n(388685);
@@ -226,7 +226,7 @@ function C(e) {
             })
     });
 }
-function P(e) {
+function R(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [

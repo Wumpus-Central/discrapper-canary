@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(287954),
     A = n(810097),
     C = n(64621),
-    P = n(913002),
-    R = n(228168),
+    R = n(913002),
+    P = n(228168),
     w = n(388032),
     D = n(484822);
 function L(e, t, n) {
@@ -111,9 +111,9 @@ let G = 1.25,
 function Y(e) {
     let { profileType: t, children: n, className: i } = e,
         o = {
-            [D.biteSize]: t === R.y0.BITE_SIZE,
-            [D.fullSize]: t === R.y0.FULL_SIZE,
-            [D.panel]: t === R.y0.PANEL
+            [D.biteSize]: t === P.y0.BITE_SIZE,
+            [D.fullSize]: t === P.y0.FULL_SIZE,
+            [D.panel]: t === P.y0.PANEL
         };
     return (0, r.jsx)('div', {
         className: a()(D.referenceContainer, o, i),
@@ -132,9 +132,9 @@ function K(e) {
         { trackUserProfileAction: c } = (0, I.KZ)(),
         u = (0, m.Z)({ location: 'AddCustomStatusBubble' }),
         f = {
-            [D.biteSize]: t === R.y0.BITE_SIZE,
-            [D.fullSize]: t === R.y0.FULL_SIZE,
-            [D.panel]: t === R.y0.PANEL
+            [D.biteSize]: t === P.y0.BITE_SIZE,
+            [D.fullSize]: t === P.y0.FULL_SIZE,
+            [D.panel]: t === P.y0.PANEL
         },
         _ = () => {
             c({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
@@ -254,11 +254,11 @@ let q = i.forwardRef(function (e, t) {
         N = (0, T.yi)(),
         { trackUserProfileAction: A } = (0, I.KZ)(),
         C = {
-            [D.biteSize]: h === R.y0.BITE_SIZE,
-            [D.fullSize]: h === R.y0.FULL_SIZE,
-            [D.panel]: h === R.y0.PANEL
+            [D.biteSize]: h === P.y0.BITE_SIZE,
+            [D.fullSize]: h === P.y0.FULL_SIZE,
+            [D.panel]: h === P.y0.PANEL
         },
-        P = (0, g.p)({ location: 'CustomStatusBubble' }),
+        R = (0, g.p)({ location: 'CustomStatusBubble' }),
         L = null != l ? G : 0,
         x = null != O ? W : 0,
         M = B + L + x,
@@ -316,7 +316,7 @@ let q = i.forwardRef(function (e, t) {
                       emoji: l,
                       animate: m,
                       hideTooltip: !1,
-                      tooltipDelay: R.vB,
+                      tooltipDelay: P.vB,
                       className: D.statusEmoji
                   })
                 : null,
@@ -329,13 +329,13 @@ let q = i.forwardRef(function (e, t) {
                   })
                 : null,
         e_ =
-            void 0 === v || (null != l && P)
+            void 0 === v || (null != l && R)
                 ? null
                 : (0, r.jsx)(d.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-muted',
                       'aria-label': ''.concat(w.NW.string(w.t.EVV6ub), ': ').concat(v),
-                      className: a()(D.statusText, P && D.italicPrompt),
+                      className: a()(D.statusText, R && D.italicPrompt),
                       children: null != v ? v : ''
                   }),
         ep = null == ef || '' === p ? e_ : ef,
@@ -439,7 +439,7 @@ function Q(e) {
             className: D.editable,
             onShowToolbar: l,
             renderToolbar: (e) =>
-                (0, r.jsx)(P.Z, {
+                (0, r.jsx)(R.Z, {
                     isVisible: s,
                     isExpandable: e,
                     onCloseProfile: o
@@ -452,14 +452,14 @@ function X(e) {
         c = j(e, ['emoji', 'text', 'user', 'guildId', 'channelId', 'profileType']);
     let { trackUserProfileAction: u } = (0, I.KZ)(),
         { interactionType: d, interactionSource: f, resetInteraction: _ } = (0, T.Xo)(),
-        p = f === R.n_.STATUS && d === R.P.REACT,
-        h = f === R.n_.STATUS && d === R.P.REPLY,
+        p = f === P.n_.STATUS && d === P.P.REACT,
+        h = f === P.n_.STATUS && d === P.P.REPLY,
         m = p || h,
         g = i.useRef(null),
         E = i.useRef(t),
         b = i.useRef(n);
     i.useEffect(() => {
-        f === R.n_.STATUS && ((E.current !== t || b.current !== n) && _(), (E.current = t), (b.current = n));
+        f === P.n_.STATUS && ((E.current !== t || b.current !== n) && _(), (E.current = t), (b.current = n));
     }, [f, _, t, n]);
     let [y, O] = i.useState(!1),
         S = i.useCallback(
@@ -468,7 +468,7 @@ function X(e) {
             },
             [m]
         ),
-        P = () => {
+        R = () => {
             if (null == t) return n;
             let e = null != t.id ? '`' + ':'.concat(t.name, ':') + '`' : v.ZP.translateSurrogatesToInlineEmoji(t.name);
             return null == n ? e : ''.concat(e, ' ').concat(n);
@@ -478,13 +478,13 @@ function X(e) {
         guildId: a,
         channelId: s,
         profileType: l,
-        sourceDetails: P(),
-        sourceType: R.n_.STATUS,
+        sourceDetails: R(),
+        sourceType: P.n_.STATUS,
         onAction: u,
         onClose: () => O(!1),
         children: () =>
             (0, r.jsx)(C.Z, {
-                sourceType: R.n_.STATUS,
+                sourceType: P.n_.STATUS,
                 user: o,
                 children: (0, r.jsx)(
                     q,
@@ -499,7 +499,7 @@ function X(e) {
                             (0, r.jsx)(A.ZP, {
                                 targetRef: g,
                                 user: o,
-                                sourceType: R.n_.STATUS,
+                                sourceType: P.n_.STATUS,
                                 isVisible: y && !m,
                                 isExpandable: e,
                                 onAction: u

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(35282), n(388685);
+n.d(t, { Z: () => P }), n(35282), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -265,7 +265,7 @@ function A(e) {
                 y(E({}, t), {
                     className: h.openFullPreviewSection,
                     onClick: () => {
-                        (0, l.h7j)((t) => (0, r.jsx)(P, E({}, e, t)));
+                        (0, l.h7j)((t) => (0, r.jsx)(R, E({}, e, t)));
                     },
                     children: (0, r.jsx)(l.bJT, {
                         size: 'xs',
@@ -284,8 +284,8 @@ function C(e) {
         O = 0 === g,
         C = '';
     O && c && y > v ? (C = '\n...') : O || (C = '...'), '' !== C && (O ? (C += ' ' + p.NW.formatToPlainString(p.t.DQnFp6, { lines: y - v })) : (C += ' ' + p.NW.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(g) })));
-    let P = (null == b ? void 0 : b.slice(0, v).join('\n')) + C,
-        R = (0, u.yx)(P),
+    let R = (null == b ? void 0 : b.slice(0, v).join('\n')) + C,
+        P = (0, u.yx)(R),
         w = c || v < y;
     return (0, r.jsxs)('div', {
         className: a()(E, h.container),
@@ -296,7 +296,7 @@ function C(e) {
                     null == s
                         ? (0, r.jsx)(l.$jN, { className: h.spinner })
                         : (0, r.jsx)(I, {
-                              text: R,
+                              text: P,
                               language: f
                           })
             }),
@@ -340,7 +340,7 @@ function C(e) {
         ]
     });
 }
-function P(e) {
+function R(e) {
     let { url: t, fileName: n, fileSize: o, transitionState: a, language: s, fileContents: c, bytesLeft: u } = e,
         [d, f] = i.useState(s),
         m = null != c ? c : '';
@@ -386,7 +386,7 @@ function P(e) {
         })
     );
 }
-let R = i.memo(
+let P = i.memo(
     function (e) {
         let { url: t, fileName: n, fileSize: o, contentType: s, className: l, onClick: u, onContextMenu: d } = e,
             [f, _] = i.useState(!1),

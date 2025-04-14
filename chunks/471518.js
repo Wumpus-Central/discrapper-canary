@@ -1,11 +1,11 @@
 n.d(t, {
     CP: () => C,
-    T4: () => P,
+    T4: () => R,
     XK: () => D,
     g5: () => L,
     gZ: () => N,
     i6: () => A,
-    yC: () => R
+    yC: () => P
 }),
     n(388685);
 var r = n(261470),
@@ -120,7 +120,7 @@ async function C() {
         categories: n.body
     });
 }
-async function P(e) {
+async function R(e) {
     var t;
     let { applicationId: n, guildId: r, options: i } = e,
         { page: o } = null != i ? i : {},
@@ -173,7 +173,7 @@ async function P(e) {
         }
     }
 }
-async function R(e) {
+async function P(e) {
     var t;
     let { query: n, guildId: r, options: i, onSuccessCallback: o } = e,
         { page: a, pageSize: d, categoryId: f, integrationType: _, minUserInstallCommandCount: p, excludeAppsWithCustomInstallUrl: h, excludeNonEmbeddedApps: g, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E, source: y = s.F.APP_DIRECTORY } = null != i ? i : {},

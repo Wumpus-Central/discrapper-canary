@@ -73,18 +73,18 @@ function C(e, t) {
         e
     );
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,8 +94,8 @@ function R(e, t) {
     return i;
 }
 let w = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: T, targetBoostedGuildTier: A, onClose: R = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
-        U = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: T, targetBoostedGuildTier: A, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
+        U = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: G } = (0, d.ZP)(),
         B = (0, u.bp)() === v.IlC.POPOUT,
         [V, F] = i.useState(!1),
@@ -114,7 +114,7 @@ let w = (e) => {
                     analyticsSourceLocation: n,
                     guild: o,
                     numberOfBoostsToAdd: K,
-                    onClose: R,
+                    onClose: P,
                     closeLayer: w,
                     inPopout: B,
                     applicationId: L,

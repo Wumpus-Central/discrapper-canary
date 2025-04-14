@@ -27,8 +27,8 @@ var r = n(200651),
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function S(e) {
-    let { containerContext: t, image: n, title: o, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: N, onClose: A, onDisplay: C, onLearnMore: P } = e,
-        R = (0, s.e7)([h.Z], () => h.Z.affinities),
+    let { containerContext: t, image: n, title: o, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: N, onClose: A, onDisplay: C, onLearnMore: R } = e,
+        P = (0, s.e7)([h.Z], () => h.Z.affinities),
         w = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         !w && S && c.MH();
@@ -36,14 +36,14 @@ function S(e) {
         i.useEffect(() => {
             _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, N), null == C || C();
         }, [C, N]);
-    let D = R.length > 1 && S,
+    let D = P.length > 1 && S,
         L = () => (2 === t ? O.hasTabParentContainer : 1 === t ? O.hasParentContainer : O.noParentContainer),
         x = () => {
             _.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: T,
                 location_object: y.qAy.NAVIGATION_LINK
             }),
-                null == P || P(),
+                null == R || R(),
                 (0, d.Z)(),
                 A(),
                 (0, u.xf)(),
@@ -84,7 +84,7 @@ function S(e) {
                                 variant: 'heading-xl/bold',
                                 children: o
                             }),
-                            D && (0, r.jsx)(E.Z, { affinities: R }),
+                            D && (0, r.jsx)(E.Z, { affinities: P }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 className: O.body,

@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(94795),
     A = n(327943),
     C = n(907459),
-    P = n(559407),
-    R = n(556766),
+    R = n(559407),
+    P = n(556766),
     w = n(514361),
     D = n(724145),
     L = n(195302),
@@ -185,13 +185,13 @@ let em = (0, et.Un)({
         }, [eT, eN, eS, o]);
         let eA = i.useRef(document.body),
             eC = ey || eN,
-            eP = ev && !eN,
-            eR = ef || ep,
+            eR = ev && !eN,
+            eP = ef || ep,
             { enabled: ew } = W.Z.useExperiment(
                 { location: 'AppSkeleton' },
                 {
-                    autoTrackExposure: eR && (eC || eP),
-                    disable: !eR
+                    autoTrackExposure: eP && (eC || eR),
+                    disable: !eP
                 }
             ),
             eD = ''.concat(J ? 'enabled' : 'disabled').concat(et);
@@ -239,7 +239,7 @@ let em = (0, et.Un)({
                                                                                             className: a()(b ? ed.mobileApp : ed.app),
                                                                                             children: t
                                                                                         }),
-                                                                                        (0, r.jsx)(P.Z, {}),
+                                                                                        (0, r.jsx)(R.Z, {}),
                                                                                         (0, r.jsx)(m.Z, {}),
                                                                                         (0, r.jsx)(_.nKe, {}),
                                                                                         (0, r.jsx)(g.Z, {}),
@@ -257,7 +257,7 @@ let em = (0, et.Un)({
                                                                         })
                                                                     })
                                                                 }),
-                                                                (0, r.jsx)(R.Z, {}),
+                                                                (0, r.jsx)(P.Z, {}),
                                                                 (0, r.jsx)(h.Z, {}),
                                                                 eC &&
                                                                     !ew &&
@@ -272,16 +272,16 @@ let em = (0, et.Un)({
                                                                               },
                                                                         showClientThemesCoachmark: eN
                                                                     }),
-                                                                eP &&
+                                                                eR &&
                                                                     !ew &&
                                                                     (0, r.jsx)(C.Z, {
                                                                         isCoachmark: eT,
                                                                         markAsDismissed: eS
                                                                     }),
-                                                                (eC || eP) &&
+                                                                (eC || eR) &&
                                                                     ew &&
                                                                     (0, r.jsx)(z.Z, {
-                                                                        initialTab: eP ? z._.APP_ICONS : z._.CLIENT_THEMES,
+                                                                        initialTab: eR ? z._.APP_ICONS : z._.CLIENT_THEMES,
                                                                         markAsDismissed: eS,
                                                                         isCoachmark: eN
                                                                     }),

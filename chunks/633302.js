@@ -125,10 +125,10 @@ function C(e) {
     let t = o.Z.convert.toCodePoint(e);
     return null != t ? t : '';
 }
-function P(e) {
+function R(e) {
     c = null != e && '' !== e ? e : null;
 }
-function R() {
+function P() {
     return c;
 }
 function w() {
@@ -239,8 +239,8 @@ function Y(e) {
     );
 }
 let K = {
-    getDefaultDiversitySurrogate: R,
-    setDefaultDiversitySurrogate: P,
+    getDefaultDiversitySurrogate: P,
+    setDefaultDiversitySurrogate: R,
     getCategories: w,
     getByName: D,
     getByCategory: x,

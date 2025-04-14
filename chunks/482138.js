@@ -25,8 +25,8 @@ var r,
     N = O.URLSearchParams,
     A = O.getState,
     C = s.URL,
-    P = s.TypeError,
-    R = s.parseInt,
+    R = s.TypeError,
+    P = s.parseInt,
     w = Math.floor,
     D = Math.pow,
     L = c(''.charAt),
@@ -72,7 +72,7 @@ var r,
             if (((o = 10), i.length > 1 && '0' === L(i, 0) && ((o = x(J, i) ? 16 : 8), (i = F(i, 8 === o ? 1 : 2))), '' === i)) a = 0;
             else {
                 if (!x(10 === o ? ee : 8 === o ? $ : et, i)) return e;
-                a = R(i, o);
+                a = P(i, o);
             }
             U(n, a);
         }
@@ -109,7 +109,7 @@ var r,
                 d++, (u = ++c);
                 continue;
             }
-            for (t = n = 0; n < 4 && x(et, f()); ) (t = 16 * t + R(f(), 16)), d++, n++;
+            for (t = n = 0; n < 4 && x(et, f()); ) (t = 16 * t + P(f(), 16)), d++, n++;
             if ('.' === f()) {
                 if (0 === n || ((d -= n), c > 6)) return;
                 for (r = 0; f(); ) {
@@ -118,7 +118,7 @@ var r,
                         else d++;
                     if (!x(X, f())) return;
                     for (; x(X, f()); ) {
-                        if (((o = R(f(), 10)), null === i)) i = o;
+                        if (((o = P(f(), 10)), null === i)) i = o;
                         else {
                             if (0 === i) return;
                             i = 10 * i + o;
@@ -216,8 +216,8 @@ var r,
     eN = {},
     eA = {},
     eC = {},
-    eP = {},
     eR = {},
+    eP = {},
     ew = {},
     eD = {},
     eL = {},
@@ -235,10 +235,10 @@ var r,
             o,
             a = b(e);
         if (t) {
-            if ((i = this.parse(a))) throw new P(i);
+            if ((i = this.parse(a))) throw new R(i);
             this.searchParams = null;
         } else {
-            if ((void 0 !== n && (r = new eF(n, !0)), (i = this.parse(a, null, r)))) throw new P(i);
+            if ((void 0 !== n && (r = new eF(n, !0)), (i = this.parse(a, null, r)))) throw new R(i);
             (o = A(new N())).bindURL(this), (this.searchParams = o);
         }
     };
@@ -290,7 +290,7 @@ eF.prototype = {
                     c = 'file' === n.scheme ? ex : eN;
                     continue;
                 case eS:
-                    if ('/' === o && '/' === i[u + 1]) (c = eP), u++;
+                    if ('/' === o && '/' === i[u + 1]) (c = eR), u++;
                     else {
                         c = eN;
                         continue;
@@ -298,7 +298,7 @@ eF.prototype = {
                     break;
                 case eT:
                     if ('/' === o) {
-                        c = eR;
+                        c = eP;
                         break;
                     }
                     c = eU;
@@ -314,24 +314,24 @@ eF.prototype = {
                     }
                     break;
                 case eA:
-                    if (l.isSpecial() && ('/' === o || '\\' === o)) c = eP;
-                    else if ('/' === o) c = eR;
+                    if (l.isSpecial() && ('/' === o || '\\' === o)) c = eR;
+                    else if ('/' === o) c = eP;
                     else {
                         (l.username = n.username), (l.password = n.password), (l.host = n.host), (l.port = n.port), (c = eU);
                         continue;
                     }
                     break;
                 case eC:
-                    if (((c = eP), '/' !== o || '/' !== L(d, u + 1))) continue;
+                    if (((c = eR), '/' !== o || '/' !== L(d, u + 1))) continue;
                     u++;
                     break;
-                case eP:
+                case eR:
                     if ('/' !== o && '\\' !== o) {
-                        c = eR;
+                        c = eP;
                         continue;
                     }
                     break;
-                case eR:
+                case eP:
                     if ('@' === o) {
                         f && (d = '%40' + d), (f = !0), (a = h(d));
                         for (var E = 0; E < a.length; E++) {
@@ -374,7 +374,7 @@ eF.prototype = {
                     else {
                         if (!(o === r || '/' === o || '?' === o || '#' === o || ('\\' === o && l.isSpecial())) && !t) return z;
                         if ('' !== d) {
-                            var O = R(d, 10);
+                            var O = P(d, 10);
                             if (O > 65535) return z;
                             (l.port = l.isSpecial() && O === em[l.scheme] ? null : O), (d = '');
                         }
@@ -497,7 +497,7 @@ eF.prototype = {
     },
     setHref: function (e) {
         var t = this.parse(e);
-        if (t) throw new P(t);
+        if (t) throw new R(t);
         this.searchParams.update();
     },
     getOrigin: function () {

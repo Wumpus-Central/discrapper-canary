@@ -55,7 +55,7 @@ let S = (0, f.kt)({
         }
     };
 function A(e) {
-    let { user: t, guildId: n, channelId: o, profileType: s, sourceType: f, sourceDetails: _, setPopoutRef: E, modalKey: A, onAction: C, onClose: P, entry: R } = e,
+    let { user: t, guildId: n, channelId: o, profileType: s, sourceType: f, sourceDetails: _, setPopoutRef: E, modalKey: A, onAction: C, onClose: R, entry: P } = e,
         { resetInteraction: w, setInteractionToast: D } = (0, g.Xo)(),
         { primaryColor: L } = (0, b.z)(),
         [x, M] = i.useState(''),
@@ -88,7 +88,7 @@ function A(e) {
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1,
-                    entry: R
+                    entry: P
                 });
             } catch (e) {}
             D(y.P.REPLY);
@@ -138,7 +138,7 @@ function A(e) {
                         return (
                             await V(n),
                             w(),
-                            null == P || P(),
+                            null == R || R(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1

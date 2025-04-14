@@ -24,8 +24,8 @@ var r = n(620014),
     N = 2,
     A = 4,
     C = '[object Arguments]',
-    P = '[object Array]',
-    R = '[object Boolean]',
+    R = '[object Array]',
+    P = '[object Boolean]',
     w = '[object Date]',
     D = '[object Error]',
     L = '[object Function]',
@@ -50,12 +50,12 @@ var r = n(620014),
     J = '[object Uint16Array]',
     $ = '[object Uint32Array]',
     ee = {};
-function et(e, t, n, P, R, w) {
+function et(e, t, n, R, P, w) {
     var D,
         M = t & T,
         k = t & N,
         U = t & A;
-    if ((n && (D = R ? n(e, P, R, w) : n(e)), void 0 !== D)) return D;
+    if ((n && (D = P ? n(e, R, P, w) : n(e)), void 0 !== D)) return D;
     if (!v(e)) return e;
     var G = E(e);
     if (G) {
@@ -64,10 +64,10 @@ function et(e, t, n, P, R, w) {
         var B = p(e),
             V = B == L || B == x;
         if (b(e)) return l(e, M);
-        if (B == j || B == C || (V && !R)) {
+        if (B == j || B == C || (V && !P)) {
             if (((D = k || V ? {} : g(e)), !M)) return k ? d(e, s(D, e)) : u(e, a(D, e));
         } else {
-            if (!ee[B]) return R ? e : {};
+            if (!ee[B]) return P ? e : {};
             D = m(e, B, M);
         }
     }
@@ -92,4 +92,4 @@ function et(e, t, n, P, R, w) {
         D
     );
 }
-(ee[C] = ee[P] = ee[Z] = ee[H] = ee[R] = ee[w] = ee[W] = ee[Y] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[V] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[F] = !1), (e.exports = et);
+(ee[C] = ee[R] = ee[Z] = ee[H] = ee[P] = ee[w] = ee[W] = ee[Y] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[j] = ee[U] = ee[G] = ee[B] = ee[V] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[D] = ee[L] = ee[F] = !1), (e.exports = et);

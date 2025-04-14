@@ -31,8 +31,8 @@ var r = n(200651),
     N = n(501655),
     A = n(517334),
     C = n(344185),
-    P = n(199902),
-    R = n(984933),
+    R = n(199902),
+    P = n(984933),
     w = n(699516),
     D = n(9156),
     L = n(594174),
@@ -93,10 +93,10 @@ function F(e, t) {
 function Z(e) {
     let t = e.id,
         n = (0, c.Wu)(
-            [R.ZP, C.Z],
+            [P.ZP, C.Z],
             () => [
-                ...R.ZP.getChannels(t)
-                    [R.Zb].filter((e) => {
+                ...P.ZP.getChannels(t)
+                    [P.Zb].filter((e) => {
                         let { channel: t } = e;
                         return t.type === M.d4z.GUILD_VOICE;
                     })
@@ -140,9 +140,9 @@ function Z(e) {
             return e;
         }),
         g = (0, c.Wu)(
-            [P.Z],
+            [R.Z],
             () => {
-                let e = P.Z.getAllApplicationStreams()
+                let e = R.Z.getAllApplicationStreams()
                     .filter((e) => e.guildId === t)
                     .map((e) => e.ownerId);
                 return u ? (0, p._j)(e, s) : e;

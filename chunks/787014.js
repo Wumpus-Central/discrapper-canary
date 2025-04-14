@@ -66,7 +66,7 @@ function p(e) {
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: N, availableTags: A, defaultSortOrder: C, defaultForumLayout: P, iconEmoji: R, themeColor: w } = t,
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: N, availableTags: A, defaultSortOrder: C, defaultForumLayout: R, iconEmoji: P, themeColor: w } = t,
         D = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
@@ -113,14 +113,14 @@ async function h(e, t) {
                                   moderated: e.moderated
                               })),
                     default_sort_order: C,
-                    default_forum_layout: P,
+                    default_forum_layout: R,
                     icon_emoji:
-                        null != R
+                        null != P
                             ? {
-                                  id: R.id,
-                                  name: R.name
+                                  id: P.id,
+                                  name: P.name
                               }
-                            : null === R
+                            : null === P
                               ? null
                               : void 0,
                     theme_color: w

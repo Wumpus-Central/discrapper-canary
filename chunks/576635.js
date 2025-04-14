@@ -27,11 +27,11 @@ function _(e) {
     let N = null == h ? void 0 : h.getPreviewThemeColors(m),
         A = null != (t = null == N ? void 0 : N[0]) ? t : (0, r._i)(I),
         C = null != (n = null == N ? void 0 : N[1]) ? n : (0, r._i)(S),
-        P = y ? b : null != (_ = (0, d.V3)(A)) ? _ : b;
+        R = y ? b : null != (_ = (0, d.V3)(A)) ? _ : b;
     return (
-        T && (P === f.BRd.DARK && (0, o.wj)(b) ? (P = b) : P === f.BRd.DARK && (0, o.ap)(b) && (P = f.BRd.DARKER)),
+        T && (R === f.BRd.DARK && (0, o.wj)(b) ? (R = b) : R === f.BRd.DARK && (0, o.ap)(b) && (R = f.BRd.DARKER)),
         {
-            theme: P,
+            theme: R,
             primaryColor: A,
             secondaryColor: C
         }

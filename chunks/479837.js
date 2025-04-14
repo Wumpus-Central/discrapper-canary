@@ -20,7 +20,7 @@ function b() {
         b = Object.values(p.Z.getVideoDevices())[0],
         _ = !1 === (null == (t = null == b ? void 0 : b.disabled) || t),
         E = p.Z.supportsInApp(m.AN.VIDEO) && p.Z.supportsInApp(m.AN.DESKTOP_CAPTURE),
-        O = d.Z.getChannel(h.ZP.getChannelId()),
+        O = d.Z.getChannel(h.Z.getChannelId()),
         N = null == (e = f.default.getCurrentUser()) ? void 0 : e.id;
     if (null == O || null == N) return;
     let { reachedLimit: y } = (0, s.t)(O);

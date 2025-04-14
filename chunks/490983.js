@@ -25,8 +25,8 @@ var r,
     N = n(823379),
     A = n(780570),
     C = n(358085),
-    P = n(998502),
-    R = n(804739),
+    R = n(998502),
+    P = n(804739),
     w = n(7956),
     D = n(981631);
 function L(e, t, n) {
@@ -98,7 +98,7 @@ function q(e, t, n, r, i) {
               isNew: B(e, a),
               isLaunching: p.Z.launchingGames.has(e.id),
               isRunning: r.has(e.id),
-              isLaunchable: (0, R.t)({
+              isLaunchable: (0, P.t)({
                   LibraryApplicationStore: E.Z,
                   LaunchableGameStore: p.Z,
                   DispatchApplicationStore: O.Z,
@@ -126,7 +126,7 @@ function Q(e, t, n, r) {
             isNew: !1,
             isLaunching: p.Z.launchingGames.has(e),
             isRunning: r.has(e),
-            isLaunchable: (0, R.t)({
+            isLaunchable: (0, P.t)({
                 LibraryApplicationStore: E.Z,
                 LaunchableGameStore: p.Z,
                 DispatchApplicationStore: O.Z,
@@ -158,7 +158,7 @@ function X() {
         !s().isEqual(o, k) &&
             ((k = o),
             C.isPlatformEmbedded &&
-                P.ZP.setSystemTrayApplications(
+                R.ZP.setSystemTrayApplications(
                     Z(k)
                         .map((e) => e.application)
                         .slice(0, x)

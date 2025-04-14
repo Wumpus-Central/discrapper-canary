@@ -56,13 +56,13 @@ function T() {
 function P() {
     return (
         S(
-            [g.Z, E.ZP, O.Z, s.Z],
+            [g.Z, E.Z, O.Z, s.Z],
             () => {
                 let e = g.Z.getChannel(O.Z.getVoiceChannelId()),
                     t = null == e ? void 0 : e.type,
                     n = null == e ? void 0 : e.getGuildId(),
-                    r = E.ZP.getWasEverRtcConnected(),
-                    i = E.ZP.getState();
+                    r = E.Z.getWasEverRtcConnected(),
+                    i = E.Z.getState();
                 return {
                     channelType: t,
                     guildId: n,

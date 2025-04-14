@@ -30,7 +30,7 @@ var r = n(997945),
     N = n(473974),
     A = n(563856);
 let C = 60;
-function P() {
+function R() {
     return {
         id: r.aH.DEFAULT,
         iconSource: a,
@@ -38,7 +38,7 @@ function P() {
         isPremium: !1
     };
 }
-function R() {
+function P() {
     return [
         {
             id: r.Ru.BRAND_DARK,
@@ -175,7 +175,7 @@ function R() {
     ];
 }
 function w() {
-    return [P(), ...R()];
+    return [R(), ...P()];
 }
 function D(e) {
     return w().find((t) => t.id === e);

@@ -91,7 +91,7 @@ function N(e, t) {
     return i;
 }
 let A = function (e) {
-    var { isGift: t, subscriptionTier: i, onClick: v, size: I, className: N, isTrialCTA: A, buttonText: C, buttonTextClassName: P, subscribeButtonText: R, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: V, paymentModalBanner: F } = e,
+    var { isGift: t, subscriptionTier: i, onClick: v, size: I, className: N, isTrialCTA: A, buttonText: C, buttonTextClassName: R, subscribeButtonText: P, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: V, paymentModalBanner: F } = e,
         Z = T(e, ['isGift', 'subscriptionTier', 'onClick', 'size', 'className', 'isTrialCTA', 'buttonText', 'buttonTextClassName', 'subscribeButtonText', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
     let H = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         W = (0, a.e7)([h.Z], () => h.Z.isFocused()),
@@ -104,7 +104,7 @@ let A = function (e) {
             isTrialCTA: A,
             isGift: t,
             buttonTextOverride: C,
-            defaultTextOverride: R
+            defaultTextOverride: P
         }),
         X = (e) => {
             var o;
@@ -178,7 +178,7 @@ let A = function (e) {
                                 className: y.premiumIcon
                             }),
                         (0, r.jsx)('span', {
-                            className: o()(y.buttonText, P),
+                            className: o()(y.buttonText, R),
                             children: Q.buttonText
                         })
                     ]
@@ -207,7 +207,7 @@ let A = function (e) {
                             className: y.giftIcon
                         }),
                         (0, r.jsx)('span', {
-                            className: o()(y.buttonText, P),
+                            className: o()(y.buttonText, R),
                             children: Q.buttonText
                         })
                     ]
@@ -247,7 +247,7 @@ let A = function (e) {
                                 className: o()(y.premiumIcon, w)
                             }),
                         (0, r.jsx)('span', {
-                            className: o()(y.buttonText, P),
+                            className: o()(y.buttonText, R),
                             children: Q.buttonText
                         })
                     ]

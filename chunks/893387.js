@@ -10,7 +10,7 @@ function l(e, t, n) {
         source_platform: null != n ? (null == (l = o.Z.getSessionById(n)) ? void 0 : l.clientInfo.os) : 'discord_client',
         guild_id: null == (c = r.Z.getChannel(e)) ? void 0 : c.guild_id,
         channel_id: e,
-        rtc_connection_id: i.ZP.getRTCConnectionId(),
+        rtc_connection_id: i.Z.getRTCConnectionId(),
         target_platform: t
     });
 }

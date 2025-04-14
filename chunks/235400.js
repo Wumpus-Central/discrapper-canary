@@ -1,4 +1,4 @@
-n.d(t, { default: () => P }), n(388685);
+n.d(t, { default: () => R }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -27,8 +27,8 @@ var r = n(200651),
 function C(e) {
     let { user: t, categories: n, purchases: o, analyticsLocations: l, onClose: f, initialSelectedDecoration: E, initialSelectedDecorationId: b, isTryItOutFlow: S, guild: C } = e,
         {
-            pendingAvatarDecoration: P,
-            setPendingAvatarDecoration: R,
+            pendingAvatarDecoration: R,
+            setPendingAvatarDecoration: P,
             savedAvatarDecoration: w
         } = (0, g.Z)({
             analyticsLocations: l,
@@ -39,18 +39,18 @@ function C(e) {
             var e, t;
             if (null != E) return E;
             let r = (0, u.iC)(o, n);
-            return null != b ? (null != (e = r.find((e) => e.id === b)) ? e : null) : void 0 !== P ? P : null == w ? null : null != (t = r.find((e) => (0, v.sr)(e, w))) ? t : null;
+            return null != b ? (null != (e = r.find((e) => e.id === b)) ? e : null) : void 0 !== R ? R : null == w ? null : null != (t = r.find((e) => (0, v.sr)(e, w))) ? t : null;
         }),
         { product: x, purchase: M } = (0, d.Z)(null == D ? void 0 : D.skuId),
         k = y.ZP.canUseCollectibles(t),
         j = i.useRef(null),
         U = (0, _.Z)(l),
-        G = (0, v.sr)(D, void 0 === P ? w : P),
+        G = (0, v.sr)(D, void 0 === R ? w : R),
         B = (e) => {
             L(e), null != e && U(e);
         },
         V = () => {
-            R(D), f();
+            P(D), f();
         },
         F = i.useCallback(
             (e) => {
@@ -139,7 +139,7 @@ function C(e) {
         ]
     });
 }
-function P(e) {
+function R(e) {
     let { transitionState: t, analyticsLocations: n, onClose: c, onCloseModal: u, initialSelectedDecoration: d, initialSelectedDecorationId: _, isTryItOutFlow: p, guild: h } = e,
         m = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: g } = (0, l.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),

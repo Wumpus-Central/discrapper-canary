@@ -255,7 +255,7 @@ function L(e) {
         M = (0, a.QN)(null == r ? void 0 : r.id),
         A = (0, c.gM)(null == r ? void 0 : r.id),
         L = null != (t = null == r ? void 0 : r.hasFeature(w.oNc.COMMUNITY)) && t,
-        z = (0, o.e7)([j.ZP], () => j.ZP.getChannelId()),
+        z = (0, o.e7)([j.Z], () => j.Z.getChannelId()),
         W = (0, o.e7)([E.Z], () => E.Z.desyncedVoiceStatesCount);
     return (0, i.jsx)(R, {
         guildId: n,

@@ -22,7 +22,7 @@ function m(e) {
         T = !0,
         N = (0, c.LD)(E, T),
         A = (0, c.PL)(S, T),
-        { isUserApp: C, isGuildApp: P } = i.useMemo(() => {
+        { isUserApp: C, isGuildApp: R } = i.useMemo(() => {
             var e, t, n, r;
             if (null == v)
                 return {
@@ -45,7 +45,7 @@ function m(e) {
     i.useEffect(() => {
         n(360606);
     }, []);
-    let R = i.useCallback(() => {
+    let P = i.useCallback(() => {
             (null == O ? void 0 : O.id) != null && (u.Z.open(O.id, p.pNK.INTEGRATIONS), s.Z.setSection(p.b4C.APPLICATION, v), null == y || y());
         }, [v, null == O ? void 0 : O.id, y]),
         w = i.useCallback(() => {
@@ -56,7 +56,7 @@ function m(e) {
     if (b === p.IlC.POPOUT) return null;
     let D = [];
     return (
-        P &&
+        R &&
             I &&
             D.push(
                 (0, r.jsx)(
@@ -64,7 +64,7 @@ function m(e) {
                     {
                         id: 'manage-server-integration',
                         label: h.NW.string(h.t.IuSJT0),
-                        action: R
+                        action: P
                     },
                     'manage-server-integration'
                 )

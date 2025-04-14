@@ -53,14 +53,14 @@ let S = 8,
     N = 4,
     A = 40,
     C = 6;
-function P(e, t) {
+function R(e, t) {
     return (0, r.jsx)(f.Z, {
         sticker: e,
         isInteracting: t,
         size: 40
     });
 }
-function R(e) {
+function P(e) {
     return ''.concat(E.Iv).concat(e.name).concat(E.Iv);
 }
 function w(e) {
@@ -196,7 +196,7 @@ let D = {
                     getProps: (e) => {
                         let { comparator: t, sticker: n } = e;
                         return {
-                            renderSticker: P,
+                            renderSticker: R,
                             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                             sticker: n,
                             key: n.id
@@ -242,7 +242,7 @@ let D = {
         if (o < t.length) {
             let e = t[o];
             return (
-                a.insertText(R(e), w(e)),
+                a.insertText(P(e), w(e)),
                 {
                     type: g.z2.EMOJI,
                     metadata: {

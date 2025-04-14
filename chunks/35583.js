@@ -87,7 +87,7 @@ class g extends i.PureComponent {
                 clicked: !1
             }),
             h(this, 'handleInstallDownload', () => {
-                u.ZP.isConnected()
+                u.Z.isConnected()
                     ? o.Z.show({
                           title: m.NW.string(m.t.tiu1l5),
                           body: m.NW.string(m.t['zK+lqa']),

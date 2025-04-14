@@ -215,8 +215,8 @@ let eW = [eD.kVF.QUARANTINED, eD.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eD.kVF.VI
                 return null != t && h.Z.isLurking(t);
             }
         },
-        [eD.kVF.VOICE_DISABLED]: { predicate: () => null != el.ZP.getRemoteDisconnectVoiceChannelId() },
-        [eD.kVF.VOICE_CONNECTED_LAST_SESSION]: { predicate: () => null != el.ZP.getLastSessionVoiceChannelId() },
+        [eD.kVF.VOICE_DISABLED]: { predicate: () => null != el.Z.getRemoteDisconnectVoiceChannelId() },
+        [eD.kVF.VOICE_CONNECTED_LAST_SESSION]: { predicate: () => null != el.Z.getLastSessionVoiceChannelId() },
         [eD.kVF.NO_INPUT_DETECTED]: { predicate: () => S.Z.hasActiveErrorOfType(T.u.NO_AUDIO_INPUT_DETECTED) },
         [eD.kVF.NO_INPUT_DEVICES_DETECTED]: { predicate: () => S.Z.hasActiveErrorOfType(T.u.NO_INPUT_DEVICES) },
         [eD.kVF.H264_DISABLED]: {
@@ -227,7 +227,7 @@ let eW = [eD.kVF.QUARANTINED, eD.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eD.kVF.VI
             }
         },
         [eD.kVF.HARDWARE_MUTE]: {
-            predicate: () => el.ZP.isConnected() && et.Z.isHardwareMute() && et.Z.isEnableHardwareMuteNotice(),
+            predicate: () => el.Z.isConnected() && et.Z.isHardwareMute() && et.Z.isEnableHardwareMuteNotice(),
             metadata: () => {
                 let e = et.Z.getInputDeviceId(),
                     t = X.Z.getVendor(e),
@@ -625,7 +625,7 @@ function eY() {
 }
 class eK extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([eu.Z, ei.Z, Q.Z, ea.Z, v.Z, eT.Z, K.Z, J.Z, z.Z, D.Z, V.Z, H.Z], eH), this.waitFor(ed.default, es.Z, ee.Z, $.ZP, el.ZP, et.Z, ec.Z, p.Z, ea.Z, eE.Z, W.Z, R.ZP, ei.Z, eP.Z, eC.Z, ep.Z, en.Z, eO.ZP, ef.Z, Q.Z, eN.Z, er.Z, v.Z, eS.Z, eT.Z, J.Z, h.Z, N.Z, x.Z, V.Z, H.Z);
+        this.syncWith([eu.Z, ei.Z, Q.Z, ea.Z, v.Z, eT.Z, K.Z, J.Z, z.Z, D.Z, V.Z, H.Z], eH), this.waitFor(ed.default, es.Z, ee.Z, $.ZP, el.Z, et.Z, ec.Z, p.Z, ea.Z, eE.Z, W.Z, R.ZP, ei.Z, eP.Z, eC.Z, ep.Z, en.Z, eO.ZP, ef.Z, Q.Z, eN.Z, er.Z, v.Z, eS.Z, eT.Z, J.Z, h.Z, N.Z, x.Z, V.Z, H.Z);
     }
     hasNotice() {
         return null != ex && null != ex.type;

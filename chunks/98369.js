@@ -27,7 +27,7 @@ function y() {
 }
 function O() {
     var e;
-    let t = null != (e = d.ZP.getUserIds()) ? e : new Set(),
+    let t = null != (e = d.Z.getUserIds()) ? e : new Set(),
         n = c.default.getId(),
         r = !0;
     for (let e of t)
@@ -42,11 +42,11 @@ function I(e) {
     let { userId: t } = e;
     if (c.default.getId() === t) return !1;
     let n = (function (e) {
-            let t = d.ZP.getSecureFramesRosterMapEntry(e);
+            let t = d.Z.getSecureFramesRosterMapEntry(e);
             if (null == t) return !1;
             let n = new Uint8Array(t),
                 r = E.Z.isKeyVerified(e, n) || p.Z.isKeyVerified(e, n),
-                l = (0, m.UB)(e, [d.ZP, f.Z]),
+                l = (0, m.UB)(e, [d.Z, f.Z]),
                 i = r && !l,
                 a = i !== h.get(e);
             return h.set(e, i), a;
@@ -60,7 +60,7 @@ function _() {
 }
 class j extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, E.Z, d.ZP, f.Z);
+        this.waitFor(p.Z, E.Z, d.Z, f.Z);
     }
     isCallVerified() {
         return S;

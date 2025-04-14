@@ -41,13 +41,13 @@ let p = function (e) {
                     }
                 }
         }, [A, n]),
-        P = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 v || e.empty || O(!0), null != p && p(e.complete), null != e.error && y(!1);
             },
             [v, p]
         ),
-        R = i.useCallback(() => {
+        P = i.useCallback(() => {
             y(!0), null == h || h();
         }, [h]),
         w = i.useCallback(() => {
@@ -60,9 +60,9 @@ let p = function (e) {
                         let e = A.getElement(o.CardNumberElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            g !== e.brand && E(e.brand), e.empty && v ? S(d.NW.string(d.t.eOIfu7)) : null != e.error ? S(d.NW.string(d.t.x4pWtL)) : S(null), P(e);
+                            g !== e.brand && E(e.brand), e.empty && v ? S(d.NW.string(d.t.eOIfu7)) : null != e.error ? S(d.NW.string(d.t.x4pWtL)) : S(null), R(e);
                         }),
-                            e.on('focus', R),
+                            e.on('focus', P),
                             e.on('blur', w);
                         break;
                     }
@@ -70,9 +70,9 @@ let p = function (e) {
                         let e = A.getElement(o.CardExpiryElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && v) ? S(d.NW.string(d.t['9/zZdn'])) : S(null), P(e);
+                            null != e.error || (e.empty && v) ? S(d.NW.string(d.t['9/zZdn'])) : S(null), R(e);
                         }),
-                            e.on('focus', R),
+                            e.on('focus', P),
                             e.on('blur', w);
                         break;
                     }
@@ -80,13 +80,13 @@ let p = function (e) {
                         let e = A.getElement(o.CardCvcElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && v) ? S(d.NW.string(d.t.ro4isb)) : S(null), P(e);
+                            null != e.error || (e.empty && v) ? S(d.NW.string(d.t.ro4isb)) : S(null), R(e);
                         }),
-                            e.on('focus', R),
+                            e.on('focus', P),
                             e.on('blur', w);
                     }
                 }
-        }, [w, P, R, g, A, v, n]);
+        }, [w, R, P, g, A, v, n]);
     i.useEffect(
         () => (
             D(),

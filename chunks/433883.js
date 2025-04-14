@@ -40,8 +40,8 @@ let d = 30,
     p = {
         getActiveErrors: () => {
             var e, t, n, a, c, p;
-            if ((null != (c = null == (e = o.ZP.getRTCConnection()) ? void 0 : e.getDurationSeconds()) ? c : 0) < d || performance.now() - i.Z.getLastAudioInputDeviceChangeTimestamp() < f) return;
-            let h = null != (p = null == (n = r.Z.getConnectionStats(null == (a = o.ZP.getRTCConnection()) ? void 0 : a.getMediaEngineConnectionId())) || null == (t = n.stats.rtp.outbound.find((e) => 'audio' === e.type)) ? void 0 : t.sampleRateMismatchPercent) ? p : 0;
+            if ((null != (c = null == (e = o.Z.getRTCConnection()) ? void 0 : e.getDurationSeconds()) ? c : 0) < d || performance.now() - i.Z.getLastAudioInputDeviceChangeTimestamp() < f) return;
+            let h = null != (p = null == (n = r.Z.getConnectionStats(null == (a = o.Z.getRTCConnection()) ? void 0 : a.getMediaEngineConnectionId())) || null == (t = n.stats.rtp.outbound.find((e) => 'audio' === e.type)) ? void 0 : t.sampleRateMismatchPercent) ? p : 0;
             if (Math.abs(h) > _)
                 return [
                     u(

@@ -6,7 +6,7 @@ n.d(t, {
     P_: () => g,
     X8: () => f,
     hj: () => I,
-    qT: () => P,
+    qT: () => R,
     qc: () => S,
     sS: () => m,
     tY: () => _
@@ -125,7 +125,7 @@ function C(e, t, n) {
     }
     return !0;
 }
-function P(e) {
+function R(e) {
     return null == e
         ? {
               source: s.d.DEFAULT,

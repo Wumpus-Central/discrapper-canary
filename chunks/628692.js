@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => P,
+    ZP: () => R,
     ku: () => A
 });
 var r = n(200651),
@@ -131,7 +131,7 @@ function C(e) {
           })
         : null;
 }
-let P = function (e) {
+let R = function (e) {
     let { channelId: t, messageId: n, soundId: o, messageSounds: a, jumbo: c = !1 } = e,
         d = E.jU.useSetting(),
         y = (0, s.e7)([h.Z], () => h.Z.getSoundById(o), [o]),
@@ -141,12 +141,12 @@ let P = function (e) {
         }, [t, n, o, a, y]),
         S = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
         A = (0, u.X0)({ location: 'SoundboardMention' }),
-        P = i.useRef(null),
-        { isPlaying: R, playSound: w } = (0, p.Z)(O, S),
+        R = i.useRef(null),
+        { isPlaying: P, playSound: w } = (0, p.Z)(O, S),
         D = i.useCallback(async () => {
             if (await w()) {
                 var e;
-                null == (e = P.current) || e.addAnimation();
+                null == (e = R.current) || e.addAnimation();
             }
         }, [w]);
     return A
@@ -162,13 +162,13 @@ let P = function (e) {
                         channel: S,
                         refreshEnabled: !0,
                         onSelectItem: D,
-                        isPlayingSoundOverride: R,
+                        isPlayingSoundOverride: P,
                         isSoundmoji: !0,
                         buttonOverlay: m.Pb.SOUNDMOJI,
                         tooltipClassName: v.tooltip,
                         tooltipContentClassName: v.tooltipContainer,
                         tooltipOverride: (0, r.jsx)(_.Dp, { sound: O }),
-                        soundmojiVisualEffectRef: P
+                        soundmojiVisualEffectRef: R
                     },
                     ''.concat(O.soundId)
                 )
@@ -186,7 +186,7 @@ let P = function (e) {
                                 children: (0, r.jsx)(C, {
                                     sound: O,
                                     playSound: D,
-                                    isPlaying: R
+                                    isPlaying: P
                                 })
                             })
                         )

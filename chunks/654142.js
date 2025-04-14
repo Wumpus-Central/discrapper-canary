@@ -96,8 +96,8 @@ let _ = i.memo(function (e) {
         I = (0, f.Z)(t),
         {
             mentionCount: N,
-            isMentionLowImportance: E,
-            unread: Z
+            isMentionLowImportance: Z,
+            unread: E
         } = (0, l.cj)([u.default], () => ({
             mentionCount: C.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             isMentionLowImportance: C.every((e) => u.default.getIsMentionLowImportance(e)),
@@ -117,12 +117,12 @@ let _ = i.memo(function (e) {
                                 folderId: y,
                                 folderName: v,
                                 folderColor: O,
-                                unread: Z || N > 0
+                                unread: E || N > 0
                             })
                         );
                 });
             },
-            [y, v, O, Z, N]
+            [y, v, O, E, N]
         );
     return (0, r.jsx)(
         h.Z,
@@ -131,8 +131,8 @@ let _ = i.memo(function (e) {
             expanded: S,
             selected: null != x && C.includes(x),
             mentionCount: N,
-            isMentionLowImportance: E,
-            unread: Z,
+            isMentionLowImportance: Z,
+            unread: E,
             mediaState: I,
             defaultFolderName: P,
             onExpandCollapse: w,

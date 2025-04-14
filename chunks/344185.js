@@ -127,12 +127,12 @@ function C(e) {
     let { channel: t } = e;
     return A(t);
 }
-function P(e) {
+function R(e) {
     let { channel: t } = e;
     if (null == t.guild_id || !(t.guild_id in h)) return !1;
     (h[t.guild_id] = f({}, h[t.guild_id])), delete h[t.guild_id][t.id];
 }
-let R = {};
+let P = {};
 class w extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
@@ -142,11 +142,11 @@ class w extends (r = a.ZP.Store) {
     }
     getThreadsForGuild(e) {
         var t;
-        return null != (t = h[e]) ? t : R;
+        return null != (t = h[e]) ? t : P;
     }
     getThreadsForParent(e, t) {
         var n;
-        return null != (n = this.getThreadsForGuild(e)[t]) ? n : R;
+        return null != (n = this.getThreadsForGuild(e)[t]) ? n : P;
     }
     hasThreadsForChannel(e, t) {
         return !o().isEmpty(this.getThreadsForParent(e, t));
@@ -170,5 +170,5 @@ let D = new w(s.Z, {
     THREAD_UPDATE: T,
     THREAD_LIST_SYNC: N,
     THREAD_DELETE: C,
-    CHANNEL_DELETE: P
+    CHANNEL_DELETE: R
 });

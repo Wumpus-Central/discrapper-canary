@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => D,
-    u: () => R
+    u: () => P
 }),
     n(388685);
 var r = n(200651),
@@ -77,8 +77,8 @@ function A(e, t) {
     );
 }
 let C = v.Hz.CHAT,
-    P = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(b.lm);
-function R(e) {
+    R = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(b.lm);
+function P(e) {
     let { emoji: t, isDisabled: n = !1, onClick: o, className: s } = e,
         f = i.useRef(null),
         _ = (0, d.Z)(f);
@@ -135,7 +135,7 @@ function D(e) {
         N = (0, f.Dt)(),
         [D, L] = i.useState(!1),
         x = (0, _.wC)(t.guild_id),
-        M = (0, s.uniqBy)([...x, ...P], 'name')
+        M = (0, s.uniqBy)([...x, ...R], 'name')
             .filter(
                 (e) =>
                     !E.ZP.isEmojiFilteredOrLocked({
@@ -211,7 +211,7 @@ function D(e) {
                                             'aria-label': e.name,
                                             tooltipClassName: I.tooltipContainer,
                                             color: c.ua7.Colors.BRAND,
-                                            children: (0, r.jsx)(R, {
+                                            children: (0, r.jsx)(P, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

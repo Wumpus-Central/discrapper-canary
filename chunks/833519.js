@@ -29,8 +29,8 @@ var r = n(200651),
     Z = n(592125),
     x = n(131951),
     N = n(451478),
-    P = n(685203),
-    w = n(112560),
+    w = n(685203),
+    P = n(112560),
     R = n(442168),
     A = n(822296),
     T = n(916771),
@@ -148,7 +148,7 @@ function z(e) {
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(P.a, {
+                              (0, r.jsx)(w.a, {
                                   isSmall: el,
                                   children: (0, r.jsx)(s.Text, {
                                       variant: el ? 'text-sm/semibold' : 'text-md/semibold',
@@ -157,7 +157,7 @@ function z(e) {
                                   })
                               }),
                               $
-                                  ? (0, r.jsx)(P.a, {
+                                  ? (0, r.jsx)(w.a, {
                                         className: V.addCTA,
                                         tooltip: F.NW.string(F.t.wCrzur),
                                         onClick: (e) => {
@@ -231,7 +231,7 @@ function z(e) {
                                       });
                               }
                               return e;
-                          })({ size: (0, w.L)(M) }, er)
+                          })({ size: (0, P.L)(M) }, er)
                       )
                     : null,
                 (0, r.jsx)(R.Z, {

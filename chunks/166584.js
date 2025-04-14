@@ -91,13 +91,13 @@ function C(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let P = 4,
-    R = 268,
+let R = 4,
+    P = 268,
     w = 2,
     D = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
-        return t > 0 ? t + P : 0;
+        return t > 0 ? t + R : 0;
     };
 function L(e) {
     let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: f, canManageRoles: _, onAddRole: p, onRemoveRole: I } = e,
@@ -106,7 +106,7 @@ function L(e) {
             null != t ? (T.current[e] = t) : delete T.current[e];
         },
         [L, x] = i.useState(d),
-        [M, k] = i.useState(R),
+        [M, k] = i.useState(P),
         [j, U] = i.useState(!1),
         G = i.useRef(null),
         B = i.useRef(null),
@@ -119,9 +119,9 @@ function L(e) {
             let e = D(G.current),
                 t = D(B.current),
                 n = [],
-                r = R - e - t;
+                r = P - e - t;
             for (let e = 0; e < w; e++) {
-                let t = e === w - 1 ? r : R;
+                let t = e === w - 1 ? r : P;
                 for (let e = 0, r = n.length; r < d.length; r++) {
                     let i = d[r],
                         o = T.current[i.id];
@@ -131,7 +131,7 @@ function L(e) {
                     }
                     let a = Math.min(o.getBoundingClientRect().width, t);
                     if (e + a > t) break;
-                    (e += a + P), n.push(i);
+                    (e += a + R), n.push(i);
                 }
             }
             x(n.length === L.length ? L : n), k(r), V.current++;
@@ -153,7 +153,7 @@ function L(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: j || i !== L.length - 1 ? R : M },
+                    style: { maxWidth: j || i !== L.length - 1 ? P : M },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => I(e),

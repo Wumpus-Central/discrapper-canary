@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(826298),
     A = n(689079),
     C = n(981631),
-    P = n(388032),
-    R = n(702854),
+    R = n(388032),
+    P = n(702854),
     w = n(239840);
 let D = 512,
     L = 7,
@@ -175,7 +175,7 @@ let D = 512,
                     return (0, r.jsx)(
                         E.Z,
                         {
-                            className: R.categoryHeader,
+                            className: P.categoryHeader,
                             icon: o,
                             children: t.name
                         },
@@ -194,14 +194,14 @@ let D = 512,
                         {
                             role: 'group',
                             'aria-label': i.name,
-                            className: a()(R.categorySection, { [R.categorySectionLast]: n }),
+                            className: a()(P.categorySection, { [P.categorySectionLast]: n }),
                             children: [
                                 t,
                                 0 === o.length &&
                                     (0, r.jsx)(c.Z, {
-                                        message: P.NW.format(P.t.WoQXT0, { applicationName: i.name }),
+                                        message: R.NW.format(R.t.WoQXT0, { applicationName: i.name }),
                                         noResultsImageURL: w,
-                                        className: R.noSearchResults
+                                        className: P.noSearchResults
                                     })
                             ]
                         },
@@ -224,7 +224,7 @@ let D = 512,
                             index: e,
                             command: a,
                             channel: n,
-                            className: R.itemWrapper,
+                            className: P.itemWrapper,
                             selected: V === e,
                             showImage: o.section.id !== a.applicationId,
                             section: l,
@@ -249,12 +249,12 @@ let D = 512,
             ),
             (0, r.jsxs)(f.ZP, {
                 id: ef,
-                className: R.outerWrapper,
-                innerClassName: R.wrapper,
+                className: P.outerWrapper,
+                innerClassName: P.wrapper,
                 onMouseDown: F,
                 children: [
                     (0, r.jsx)(S.Z, {
-                        className: R.rail,
+                        className: P.rail,
                         channel: n,
                         sections: z,
                         filteredSectionId: $,
@@ -264,7 +264,7 @@ let D = 512,
                     }),
                     (0, r.jsx)(p.Z, {
                         role: 'listbox',
-                        className: R.list,
+                        className: P.list,
                         listPadding: G,
                         onScroll: er,
                         renderRow: ed,

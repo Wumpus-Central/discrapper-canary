@@ -102,7 +102,7 @@ let N = i.forwardRef((e, t) => {
             height: O,
             maxWidth: T = y,
             maxHeight: N = O,
-            minWidth: R = 0,
+            minWidth: P = 0,
             minHeight: w = 0,
             mediaLayoutType: D,
             limitResponsiveWidth: L = !0,
@@ -115,7 +115,7 @@ let N = i.forwardRef((e, t) => {
                     className: null != o ? o : void 0,
                     alt: null != i ? i : m.NW.string(m.t.X4IxWF),
                     src: t,
-                    style: P(n, a)
+                    style: R(n, a)
                 });
             },
             renderAccessory: U,
@@ -134,7 +134,7 @@ let N = i.forwardRef((e, t) => {
             height: O,
             maxWidth: T,
             maxHeight: N,
-            minWidth: R,
+            minWidth: P,
             minHeight: w
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
@@ -157,7 +157,7 @@ let N = i.forwardRef((e, t) => {
             aspectRatio: z,
             placeholder: h,
             placeholderVersion: E,
-            placeholderStyle: P(K, D),
+            placeholderStyle: R(K, D),
             children: n
         }));
     let q = null != U ? U() : null;
@@ -228,7 +228,7 @@ function A(e) {
         o = (0, c.ZP)();
     return (0, r.jsx)('div', {
         className: g.imageErrorWrapper,
-        style: R(t, n),
+        style: P(t, n),
         children: (0, r.jsx)('img', {
             src: (0, s.ap)(o) ? b : E,
             className: g.imageError,
@@ -253,7 +253,7 @@ function C(e, t, n, r) {
             }
           : e;
 }
-function P(e, t) {
+function R(e, t) {
     switch (t) {
         case h.hV.MOSAIC:
             return {
@@ -269,7 +269,7 @@ function P(e, t) {
             return e;
     }
 }
-function R(e, t) {
+function P(e, t) {
     switch (t) {
         case h.hV.MOSAIC:
             return {

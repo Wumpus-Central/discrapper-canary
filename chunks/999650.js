@@ -107,20 +107,20 @@ function A() {
 function C(e, t) {
     return [e, e.clone().add(1, t)];
 }
-function P(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return C(l()().startOf(e).add(t, e), e);
 }
-function R(e, t, n) {
+function P(e, t, n) {
     return C(l()(e, t).local(), n);
 }
 function w() {
     return {
-        [y.NW.string(y.t.HYiVER)]: () => P('day'),
-        [y.NW.string(y.t.cu86KC)]: () => P('day', -1),
-        [y.NW.string(y.t['FvBj//'])]: () => P('week'),
-        [y.NW.string(y.t['20uWCw'])]: () => P('month'),
-        [y.NW.string(y.t['dXC/ho'])]: () => P('year')
+        [y.NW.string(y.t.HYiVER)]: () => R('day'),
+        [y.NW.string(y.t.cu86KC)]: () => R('day', -1),
+        [y.NW.string(y.t['FvBj//'])]: () => R('week'),
+        [y.NW.string(y.t['20uWCw'])]: () => R('month'),
+        [y.NW.string(y.t['dXC/ho'])]: () => R('year')
     };
 }
 let D = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
@@ -146,7 +146,7 @@ function V(e, t) {
         r,
         i = e.getFullMatch().trim().toLowerCase(),
         o = w()[i];
-    return null != o ? ([n, r] = o()) : T().has(i) ? ([n, r] = R(i, 'MMMM', 'month')) : N().has(i) ? ([n, r] = R(i, 'dddd', 'day')) : A().has(i) ? ([n, r] = R(i, 'YYYY', 'year')) : ([n, r] = R(i, b.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
+    return null != o ? ([n, r] = o()) : T().has(i) ? ([n, r] = P(i, 'MMMM', 'month')) : N().has(i) ? ([n, r] = P(i, 'dddd', 'day')) : A().has(i) ? ([n, r] = P(i, 'YYYY', 'year')) : ([n, r] = P(i, b.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
 function F(e) {
     let t = e.getMatch(1),

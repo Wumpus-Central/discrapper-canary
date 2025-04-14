@@ -34,8 +34,8 @@ var c = n(442837),
     N = n(258609),
     A = n(810568),
     C = n(168524),
-    P = n(102172),
-    R = n(871118),
+    R = n(102172),
+    P = n(871118),
     w = n(565138),
     D = n(66999),
     L = n(790642),
@@ -194,8 +194,8 @@ function ev(e) {
         [O, S] = i.useState(null),
         T = (0, c.e7)([B.Z], () => null != t && el.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && B.Z.can(el.Plq.SEND_MESSAGES, t)),
         [N, A] = i.useState(!1),
-        [C, P] = i.useState(!1),
-        { voiceBar: R, joinVoiceButton: w } = eP({
+        [C, R] = i.useState(!1),
+        { voiceBar: P, joinVoiceButton: w } = eR({
             channel: t,
             entry: p,
             onVoiceChannelPreview: g
@@ -220,7 +220,7 @@ function ev(e) {
                     }),
                     (0, I.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
                     A(!0),
-                    P(!1),
+                    R(!1),
                     E)
                 )
                     l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t);
@@ -235,7 +235,7 @@ function ev(e) {
                         reply: ':'.concat(e.name, ':'),
                         sendToChannel: r,
                         onComplete: (e, t) => {
-                            P(!0),
+                            R(!0),
                                 setTimeout(() => {
                                     A(!1), s(e, t);
                                 }, 600);
@@ -284,7 +284,7 @@ function ev(e) {
             }
             null == r || r(i, n);
         },
-        Q = null != m ? m : null != R ? R : null != x ? x : void 0;
+        Q = null != m ? m : null != P ? P : null != x ? x : void 0;
     return (
         i.useEffect(() => {
             G && (null == O || O.focus());
@@ -618,7 +618,7 @@ function eN(e) {
         { title: n, subtitle: o, badges: a, stream: s, onClickThumbnail: l, onClickTitle: u, onClickSubtitle: d, onUserPopoutClosed: _, trackRankingItemInteraction: p } = e,
         g = eh(e, ['title', 'subtitle', 'badges', 'stream', 'onClickThumbnail', 'onClickTitle', 'onClickSubtitle', 'onUserPopoutClosed', 'trackRankingItemInteraction']);
     let E = (0, c.e7)([U.Z], () => U.Z.getChannel(null == s ? void 0 : s.channelId)),
-        [b] = i.useMemo(() => (0, P.p9)(E, H.Z, G.Z, B.Z, N.Z), [E]),
+        [b] = i.useMemo(() => (0, R.p9)(E, H.Z, G.Z, B.Z, N.Z), [E]),
         { entry: y } = g,
         v = (0, Q.dX)(y),
         O = (0, C.Z)(
@@ -652,7 +652,7 @@ function eN(e) {
                         children: (0, r.jsxs)('div', {
                             className: eu.streamingPopoutPreviewContainer,
                             children: [
-                                (0, r.jsx)(R.Z, {
+                                (0, r.jsx)(P.Z, {
                                     className: eu.streamingPopoutImg,
                                     stream: s
                                 }),
@@ -799,7 +799,7 @@ function eC(e) {
           })
         : null;
 }
-function eP(e) {
+function eR(e) {
     let { channel: t, entry: n, onVoiceChannelPreview: o } = e,
         { streamPreviewUrl: a, channel: s } = (0, en.Z)(n),
         { needSubscriptionToAccess: l } = (0, D.Z)(null == t ? void 0 : t.id),

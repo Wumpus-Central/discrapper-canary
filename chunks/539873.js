@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function P(e, t) {
         e
     );
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,7 +112,7 @@ function D(e) {
             labelledBy: M
         }),
         { ref: j } = k,
-        U = R(k, ['ref']),
+        U = P(k, ['ref']),
         G = (0, f.Q3)('AppIconSelectionGroup'),
         B = (e) => {
             if (L && !N && e !== E.aH.DEFAULT)
@@ -142,7 +142,7 @@ function D(e) {
         ref: x,
         children: (0, r.jsx)(
             'div',
-            P(A({}, U), {
+            R(A({}, U), {
                 ref: j,
                 className: S.__invalid_container,
                 children: (0, r.jsxs)('div', {

@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(526617),
     g = n(268365);
 function E(e) {
-    let { guildId: t, channel: n, containerWidth: o, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: v, shouldValidateSelectedSound: O, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: N, listPadding: A, renderHeader: C, defaultSoundsOnly: P } = e,
-        R = (0, s.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
+    let { guildId: t, channel: n, containerWidth: o, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: v, shouldValidateSelectedSound: O, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: N, listPadding: A, renderHeader: C, defaultSoundsOnly: R } = e,
+        P = (0, s.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
         { analyticsLocations: w } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     i.useEffect(() => {
         _.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)('');
@@ -26,11 +26,11 @@ function E(e) {
         value: w,
         children: (0, r.jsx)(l.VqE, {
             className: a()(g.picker, {
-                [g.fetching]: R,
+                [g.fetching]: P,
                 [g.inExpressionPicker]: T,
                 [g.refresh]: D
             }),
-            children: R
+            children: P
                 ? (0, r.jsx)(l.$jN, {})
                 : (0, r.jsx)(m.Z, {
                       guildId: t,
@@ -45,7 +45,7 @@ function E(e) {
                       soundButtonOverlay: N,
                       listPadding: A,
                       renderHeader: C,
-                      defaultSoundsOnly: P,
+                      defaultSoundsOnly: R,
                       inExpressionPicker: T,
                       refreshEnabled: D,
                       analyticsSource: y

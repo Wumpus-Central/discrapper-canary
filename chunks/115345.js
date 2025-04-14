@@ -35,8 +35,8 @@ var r = n(192379),
     N = n(630114),
     A = n(506712),
     C = n(468788),
-    P = n(789662),
-    R = n(981631),
+    R = n(789662),
+    P = n(981631),
     w = n(490897),
     D = n(526761),
     L = n(388032);
@@ -93,7 +93,7 @@ function j(e, t) {
     );
 }
 function U(e, t) {
-    let [n, i] = r.useState(P.nf),
+    let [n, i] = r.useState(R.nf),
         [o, s] = r.useState({});
     (0, _.D)();
     let l = (0, a.Wu)([g.Z], () => Object.values(g.Z.getGuilds())),
@@ -117,8 +117,8 @@ function U(e, t) {
 }
 function G(e, t) {
     return Object.values(g.Z.getGuilds()).some((n) => {
-        let [r] = p.Z.hasConsented(R.pjP.PERSONALIZATION) ? (0, A.q)(n, P.nf, e, t, !1) : (0, A.A)(n, e);
-        return r === P.AR.UseGreyDot;
+        let [r] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, A.q)(n, R.nf, e, t, !1) : (0, A.A)(n, e);
+        return r === R.AR.UseGreyDot;
     });
 }
 function B() {
@@ -130,14 +130,14 @@ function B() {
         (e = (0, v.mB)(e, D.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, v.mB)(e, D.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
     }
     Y(t),
-        y.default.track(R.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+        y.default.track(P.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter((e) => m.default.hasUnread(e.id)).length
         });
 }
 function V(e, t, n, r, i) {
     var o;
-    let [a, s, l] = p.Z.hasConsented(R.pjP.PERSONALIZATION) ? (0, A.q)(e, t, n, r, !0) : (0, A.A)(e, n),
+    let [a, s, l] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, A.q)(e, t, n, r, !0) : (0, A.A)(e, n),
         c = null != (o = n.filter((t) => t.guild_id === e.id)[0]) ? o : {},
         u = (0, N.Z)(e, null != i ? i : a, c, r, t);
     return {
@@ -146,7 +146,7 @@ function V(e, t, n, r, i) {
         debugReason: l,
         actions: u,
         overrideMode: i,
-        messagePain: c.messages === P.XR.High,
+        messagePain: c.messages === R.XR.High,
         visitsALot: s,
         muted: b.ZP.isMuted(e.id) && !b.ZP.isTemporarilyMuted(e.id)
     };
@@ -166,8 +166,8 @@ function F(e, t) {
             return -1 === t ? i.length : t;
         }),
         s = [
-            ['Use Grey Dot', new Set([P.AR.UseGreyDot])],
-            ['Keep As Is', new Set([P.AR.KeepAsIs])]
+            ['Use Grey Dot', new Set([R.AR.UseGreyDot])],
+            ['Keep As Is', new Set([R.AR.KeepAsIs])]
         ].map((e) => {
             let [t, n] = e,
                 r = a
@@ -249,7 +249,7 @@ function W(e) {
     let t = Object.values(e)
             .filter((e) => {
                 var t;
-                return (null != (t = e.overrideMode) ? t : e.mode) === P.AR.UseGreyDot;
+                return (null != (t = e.overrideMode) ? t : e.mode) === R.AR.UseGreyDot;
             })
             .map((e) => {
                 var t;
@@ -264,11 +264,11 @@ function W(e) {
         };
     return () => {
         y.default.track(
-            R.rMx.NOTIFICATION_MIGRATION_COMPLETED,
+            P.rMx.NOTIFICATION_MIGRATION_COMPLETED,
             j(M({}, n), {
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
-                    .filter((e) => e.mode === P.AR.UseGreyDot)
+                    .filter((e) => e.mode === R.AR.UseGreyDot)
                     .map((e) => e.guildId),
                 final_selected_server_ids: t.map((e) => e.plan.guildId),
                 num_unread_guids_after: S.default.keys(e).filter((e) => m.default.hasUnread(e)).length,
@@ -319,7 +319,7 @@ function q() {
     });
 }
 async function Q() {
-    s.K.set('turnedOffNewNotifications', !0), y.default.track(R.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => b.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length });
+    s.K.set('turnedOffNewNotifications', !0), y.default.track(P.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => b.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length });
     let e = await (0, T.Tn)(),
         t = o().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {

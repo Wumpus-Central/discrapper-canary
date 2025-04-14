@@ -3,7 +3,7 @@ n.d(t, {
     Fx: () => x,
     IM: () => D,
     J2: () => G,
-    r$: () => R
+    r$: () => P
 }),
     n(539854),
     n(388685),
@@ -100,20 +100,20 @@ function T(e, t) {
 let N = new _.Z('ReadyPayloadUtils'),
     A = {},
     C = null,
-    P = {};
-function R(e, t) {
+    R = {};
+function P(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: o } = e,
         a = S(e, ['guilds', 'merged_members', 'merged_presences']);
-    let s = M(P, null == o ? void 0 : o.friends),
+    let s = M(R, null == o ? void 0 : o.friends),
         l =
             null !=
             (n =
                 null == r
                     ? void 0
                     : r.map((e, t) => {
-                          let n = M(P, null == o ? void 0 : o.guilds[t]),
-                              r = M(P, null == i ? void 0 : i[t]);
+                          let n = M(R, null == o ? void 0 : o.guilds[t]),
+                              r = M(R, null == i ? void 0 : i[t]);
                           return I(v({}, e), {
                               unavailable: void 0 === e.voice_states,
                               presences: n,
@@ -132,7 +132,7 @@ function R(e, t) {
         }));
     return (
         null != c && l.push(c),
-        (P = {}),
+        (R = {}),
         I(v({}, a), {
             presences: s,
             guilds: l
@@ -156,13 +156,13 @@ function D(e, t, n) {
         { users: o, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
         d = S(e, ['users', 'relationships', 'private_channels', 'merged_members', 'guilds']);
     j(n);
-    let f = M((P = a().keyBy(o, (e) => e.id)), s);
+    let f = M((R = a().keyBy(o, (e) => e.id)), s);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
-            null != t && (e.recipients = t.map((e) => (i()(null != P[e], 'Missing user in compressed ready payload'), P[e]))), delete e.recipient_ids;
+            null != t && (e.recipients = t.map((e) => (i()(null != R[e], 'Missing user in compressed ready payload'), R[e]))), delete e.recipient_ids;
         });
-    let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = M(P, null == c ? void 0 : c[t])), U(e))))) ? r : [],
+    let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = M(R, null == c ? void 0 : c[t])), U(e))))) ? r : [],
         p = L(t, u, (e) => U(e));
     return (
         null != p && _.push(p),

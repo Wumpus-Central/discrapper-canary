@@ -81,7 +81,7 @@ function T(e) {
             from: { width: '0%' },
             config: { duration: I }
         })),
-        P = (e) => {
+        R = (e) => {
             f(),
                 v(1),
                 null != p &&
@@ -93,7 +93,7 @@ function T(e) {
                         })
                     );
         },
-        R = async (e) => {
+        P = async (e) => {
             1 === e && (await A({ width: '100%' }), a());
         };
     return (
@@ -108,7 +108,7 @@ function T(e) {
             children: (0, r.jsxs)(l.MyZ, {
                 activeSlide: b,
                 width: S,
-                onSlideReady: R,
+                onSlideReady: P,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
                         id: 0,
@@ -145,7 +145,7 @@ function T(e) {
                                         N,
                                         {
                                             choice: e,
-                                            onClick: P
+                                            onClick: R
                                         },
                                         e.key
                                     )

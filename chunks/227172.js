@@ -28,8 +28,8 @@ var r = n(200651),
     N = n(297781),
     A = n(591853),
     C = n(410441),
-    P = n(797342),
-    R = n(981631),
+    R = n(797342),
+    P = n(981631),
     w = n(388032);
 function D(e, t, n) {
     return (
@@ -73,14 +73,14 @@ let x = {
     M = (e) => {
         let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
             { largeImage: j } = (0, g.rv)({ entry: n }),
-            { user: U, details: G, appName: B, activity: V } = (0, P.n)(n),
+            { user: U, details: G, appName: B, activity: V } = (0, R.n)(n),
             { primaryColor: F, secondaryColor: Z } = (0, S.Z)(null == j ? void 0 : j.src),
             H = (0, a.e7)([_.default], () => _.default.locale),
             { streamPreviewUrl: W, stream: Y } = (0, b.Z)(n),
             { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: Q } = (0, E.Z)(n, 3),
             X = n.extra.platform,
             J = null != X ? x[X] : null,
-            $ = X === o.z.XBOX ? R.ABu.XBOX : X === o.z.PLAYSTATION ? R.ABu.PLAYSTATION : void 0,
+            $ = X === o.z.XBOX ? P.ABu.XBOX : X === o.z.PLAYSTATION ? P.ABu.PLAYSTATION : void 0,
             ee = (0, I.Z)($),
             et = i.useCallback(
                 (e) => {
@@ -144,7 +144,7 @@ let x = {
                           trackRankingItemInteraction: k
                       }),
             ei = [
-                (0, l.Z)(V, R.xjy.JOIN) || (0, c.Z)(V)
+                (0, l.Z)(V, P.xjy.JOIN) || (0, c.Z)(V)
                     ? (0, r.jsx)(d.Z, {
                           activity: V,
                           user: U,

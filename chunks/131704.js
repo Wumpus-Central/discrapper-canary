@@ -5,7 +5,7 @@ n.d(t, {
     Ec: () => Z,
     Em: () => K,
     Gz: () => ef,
-    Km: () => P,
+    Km: () => R,
     Lr: () => D,
     Q5: () => W,
     Qm: () => U,
@@ -30,7 +30,7 @@ n.d(t, {
     q_: () => ek,
     r8: () => I,
     sR: () => j,
-    tx: () => R,
+    tx: () => P,
     uC: () => H,
     vc: () => F,
     vd: () => B,
@@ -120,13 +120,13 @@ function N(e) {
 }
 let A = new Set([m.d4z.GUILD_TEXT, m.d4z.GUILD_ANNOUNCEMENT, m.d4z.GUILD_FORUM, m.d4z.GUILD_MEDIA, m.d4z.GUILD_VOICE, m.d4z.GUILD_STAGE_VOICE]),
     C = new Set([m.d4z.GUILD_TEXT, m.d4z.GUILD_VOICE, m.d4z.GUILD_STAGE_VOICE, m.d4z.GUILD_CATEGORY, m.d4z.GUILD_ANNOUNCEMENT, m.d4z.GUILD_STORE, m.d4z.ANNOUNCEMENT_THREAD, m.d4z.PUBLIC_THREAD, m.d4z.PRIVATE_THREAD, m.d4z.GUILD_DIRECTORY, m.d4z.GUILD_FORUM, m.d4z.GUILD_MEDIA]);
-function P(e) {
+function R(e) {
     return C.has(e);
 }
 m.d4z.GUILD_TEXT, m.d4z.GUILD_ANNOUNCEMENT, m.d4z.GUILD_FORUM, m.d4z.GUILD_MEDIA;
-let R = new Set([m.d4z.GUILD_VOICE, m.d4z.GUILD_STAGE_VOICE]);
+let P = new Set([m.d4z.GUILD_VOICE, m.d4z.GUILD_STAGE_VOICE]);
 function w(e) {
-    return 'SELECTABLE' !== e && R.has(e);
+    return 'SELECTABLE' !== e && P.has(e);
 }
 let D = new Set([m.d4z.GUILD_STAGE_VOICE]),
     L = new Set([m.d4z.DM, m.d4z.GROUP_DM]);
@@ -616,12 +616,12 @@ class eC {
         E(this, 'cache', void 0), (this.cache = new (a())(e));
     }
 }
-let eP = new eC(),
-    eR = new eC();
+let eR = new eC(),
+    eP = new eC();
 class ew extends em {
     static sortRecipients(e, t) {
-        let n = eP.getOrCompute(t);
-        return [...(null != e ? e : [])].sort((e, t) => (eR.getOrCompute(e.id) ^ n) - (eR.getOrCompute(t.id) ^ n));
+        let n = eR.getOrCompute(t);
+        return [...(null != e ? e : [])].sort((e, t) => (eP.getOrCompute(e.id) ^ n) - (eP.getOrCompute(t.id) ^ n));
     }
     static fromServer(e) {
         var t, n;

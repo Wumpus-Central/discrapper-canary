@@ -11,9 +11,9 @@ function d() {
     (0, l.e7)([a.Z], () => a.Z.getPrivateChannelsVersion());
     let e = a.Z.getMutablePrivateChannels(),
         t = (0, l.Wu)([s.Z], () => s.Z.getUnreadPrivateChannelIds()),
-        { selectedVoiceGuildId: n, selectedVoiceChannelId: d } = (0, l.cj)([c.ZP], () => ({
-            selectedVoiceGuildId: c.ZP.getGuildId(),
-            selectedVoiceChannelId: c.ZP.getChannelId()
+        { selectedVoiceGuildId: n, selectedVoiceChannelId: d } = (0, l.cj)([c.Z], () => ({
+            selectedVoiceGuildId: c.Z.getGuildId(),
+            selectedVoiceChannelId: c.Z.getChannelId()
         })),
         p = t.map((t) => {
             let n = e[t];

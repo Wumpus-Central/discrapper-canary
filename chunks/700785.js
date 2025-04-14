@@ -13,7 +13,7 @@ n.d(t, {
     r6: () => U,
     uB: () => x,
     we: () => V,
-    ym: () => P
+    ym: () => R
 }),
     n(388685);
 var r = n(392711),
@@ -69,8 +69,8 @@ let O = o.vB(0),
     N = o.$e(b.Plq.VIEW_CHANNEL, b.Plq.SEND_MESSAGES, b.Plq.CONNECT, b.Plq.SPEAK, b.Plq.STREAM, b.Plq.USE_EMBEDDED_ACTIVITIES, b.Plq.USE_EXTERNAL_APPS, b.Plq.USE_EXTERNAL_EMOJIS, b.Plq.USE_EXTERNAL_SOUNDS, b.Plq.USE_EXTERNAL_STICKERS, b.Plq.USE_SOUNDBOARD, b.Plq.USE_VAD),
     A = o.$e(b.Plq.VIEW_CHANNEL, b.Plq.READ_MESSAGE_HISTORY),
     C = o.$e(b.Plq.VIEW_CHANNEL, b.Plq.READ_MESSAGE_HISTORY, b.Plq.CHANGE_NICKNAME),
-    P = o.$e(b.Plq.MANAGE_GUILD, b.Plq.MANAGE_ROLES, b.Plq.ADMINISTRATOR, b.Plq.BAN_MEMBERS, b.Plq.MANAGE_NICKNAMES, b.Plq.CREATE_GUILD_EXPRESSIONS, b.Plq.MANAGE_GUILD_EXPRESSIONS, b.Plq.MANAGE_WEBHOOKS, b.Plq.VIEW_AUDIT_LOG);
-function R(e, t, n) {
+    R = o.$e(b.Plq.MANAGE_GUILD, b.Plq.MANAGE_ROLES, b.Plq.ADMINISTRATOR, b.Plq.BAN_MEMBERS, b.Plq.MANAGE_NICKNAMES, b.Plq.CREATE_GUILD_EXPRESSIONS, b.Plq.MANAGE_GUILD_EXPRESSIONS, b.Plq.MANAGE_WEBHOOKS, b.Plq.VIEW_AUDIT_LOG);
+function P(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (r && t.mfaLevel === b.BpS.ELEVATED && n === _.default.getId()) {
         var i;
@@ -105,7 +105,7 @@ function D(e) {
             let t = a[n.roles[e]];
             void 0 !== t && (f = o.IH(f, t.permissions));
         }
-    return (f = o.e$(f, b.Plq.ADMINISTRATOR) ? I : w(r.id, n, f, i)), (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = o.hX(f, c)), h.ZP.isCurrentUserGuest(r.id) && (f = o.hX(f, N)), R(f, r, t, s);
+    return (f = o.e$(f, b.Plq.ADMINISTRATOR) ? I : w(r.id, n, f, i)), (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = o.hX(f, c)), h.ZP.isCurrentUserGuest(r.id) && (f = o.hX(f, N)), P(f, r, t, s);
 }
 function L(e) {
     let t,
@@ -192,7 +192,7 @@ function x(e) {
         i = null != e ? m.Z.getGuild(e) : null;
     } else (s = null != s ? s : {}), (i = a);
     if (null == i) return O;
-    if (!(E === (null == (t = g.default.getCurrentUser()) ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) && i.isOwner(E)) return R(I, i, E, u);
+    if (!(E === (null == (t = g.default.getCurrentUser()) ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) && i.isOwner(E)) return P(I, i, E, u);
     let y = h.ZP.getMember(i.id, E);
     return D({
         userId: E,

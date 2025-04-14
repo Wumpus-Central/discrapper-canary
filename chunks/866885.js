@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(531826),
     A = n(175894),
     C = n(963614),
-    P = n(917107),
-    R = n(208156),
+    R = n(917107),
+    P = n(208156),
     w = n(748492),
     D = n(701488),
     L = n(918559),
@@ -120,7 +120,7 @@ function Z(e) {
             participantsOpen: g.Z.getParticipantsOpen(_.id)
         })),
         X = H || null != K,
-        J = (0, P.Z)(_.id),
+        J = (0, R.Z)(_.id),
         $ = J && (null == q ? void 0 : q.type) !== M.fO.ACTIVITY,
         ee = !J && V === L.Ez.PIP,
         et = X && ($ || ee) && null == W,
@@ -210,7 +210,7 @@ function Z(e) {
                 });
             }
         }, [null == B ? void 0 : B.applicationId, en]),
-        null == B || null == Z || (null == z && (0, P.Z)(_.id)) || null == F)
+        null == B || null == Z || (null == z && (0, R.Z)(_.id)) || null == F)
     )
         return null;
     let es = Array.from(B.userIds)
@@ -254,7 +254,7 @@ function Z(e) {
                                       [k.pipModeTall]: en && A
                                   })
                               })
-                            : (0, r.jsx)(R.J, {
+                            : (0, r.jsx)(P.J, {
                                   allowPopups: (0, C.h)(F),
                                   referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
                                   url: B.url,

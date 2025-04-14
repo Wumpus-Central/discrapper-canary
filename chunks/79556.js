@@ -25,8 +25,8 @@ var r = n(200651),
     P = n(109446),
     I = n(98597),
     N = n(648501),
-    E = n(473403),
-    Z = n(304471),
+    Z = n(473403),
+    E = n(304471),
     w = n(981631),
     T = n(647086),
     A = n(915887);
@@ -98,7 +98,7 @@ class k extends I.ZP {
             P = (0, b.jW)({ location: 'text_channel' }),
             I = S && null != j && j.length > 0,
             N = (0, g.D)(v),
-            Z = (0, r.jsx)('li', {
+            E = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
                     [A.selected]: n
@@ -114,7 +114,7 @@ class k extends I.ZP {
                     onRequestClose: this.handleClosePopout,
                     shouldShow: (c && this.state.shouldShowThreadsPopout) || (I && this.state.shouldShowActivities),
                     children: () =>
-                        (0, r.jsxs)(E.ZP, {
+                        (0, r.jsxs)(Z.ZP, {
                             ref: this.channelItemRef,
                             className: A.iconVisibility,
                             channel: e,
@@ -159,7 +159,7 @@ class k extends I.ZP {
                         })
                 })
             });
-        return m ? d(p(Z)) : Z;
+        return m ? d(p(E)) : E;
     }
     constructor(...e) {
         super(...e),
@@ -202,7 +202,7 @@ class k extends I.ZP {
                 let { channel: t, sorting: n, embeddedApps: i } = this.props,
                     { shouldShowActivities: l } = this.state;
                 return null != i && i.length > 0 && l && !n
-                    ? (0, r.jsx)(Z.Z, {
+                    ? (0, r.jsx)(E.Z, {
                           onAction: this.handleActivitiesPopoutClose,
                           channel: t
                       })
@@ -275,7 +275,7 @@ function G(e) {
         b = (0, a.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: O, isSubscriptionGated: P } = (0, m.Z)(t.id),
         I = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)),
-        E = (0, a.e7)(
+        Z = (0, a.e7)(
             [S.default],
             () => {
                 let e = S.default.getCurrentUser();
@@ -283,7 +283,7 @@ function G(e) {
             },
             [t]
         ),
-        Z = (0, p.NX)(t.id),
+        E = (0, p.NX)(t.id),
         A = (0, N.Z)({
             channel: t,
             isChannelCollapsed: !1,
@@ -292,7 +292,7 @@ function G(e) {
             needSubscriptionToAccess: O,
             isNewChannel: b,
             muted: o,
-            enableActivities: Z,
+            enableActivities: E,
             resolvedUnreadSetting: f
         }),
         D = (0, h.ZP)(t);
@@ -305,12 +305,12 @@ function G(e) {
             needSubscriptionToAccess: O,
             isNewChannel: b && e.canBeNewChannel,
             isFavoriteSuggestion: l && !I,
-            canShowThreadPreviewForUser: E,
+            canShowThreadPreviewForUser: Z,
             channelInfo: A,
             embeddedApps: D,
             resolvedUnreadSetting: f,
             hasChannelInfo: null != A,
-            enableActivities: Z
+            enableActivities: E
         })
     );
 }

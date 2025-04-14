@@ -25,8 +25,8 @@ var r = n(481060),
     N = n(623292),
     A = n(807092),
     C = n(467798),
-    P = n(703558),
-    R = n(117530),
+    R = n(703558),
+    P = n(117530),
     w = n(630388),
     D = n(226351),
     L = n(981631),
@@ -114,8 +114,8 @@ async function G(e) {
             poll: (0, y.x9)(V.poll)
         });
     function Q() {
-        '' !== W.content && '' === P.Z.getDraft(M, G) && o.Z.saveDraft(M, W.content, G),
-            0 === R.Z.getUploadCount(M, G) &&
+        '' !== W.content && '' === R.Z.getDraft(M, G) && o.Z.saveDraft(M, W.content, G),
+            0 === P.Z.getUploadCount(M, G) &&
                 s.Z.setUploads({
                     channelId: M,
                     uploads: j,
@@ -283,7 +283,7 @@ function B(e) {
                     }
                 })
             }),
-                '' !== f.content && '' === P.Z.getDraft(t, s) && o.Z.saveDraft(t, f.content, s);
+                '' !== f.content && '' === R.Z.getDraft(t, s) && o.Z.saveDraft(t, f.content, s);
         }),
         h.on('complete', (e) => {
             i.Z.dispatch({
@@ -326,12 +326,12 @@ let V = {
         }),
             null != e.draftContent &&
                 null != e.channelId &&
-                '' === P.Z.getDraft(e.channelId, P.d.ChannelMessage) &&
+                '' === R.Z.getDraft(e.channelId, R.d.ChannelMessage) &&
                 i.Z.dispatch({
                     type: 'DRAFT_SAVE',
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: P.d.ChannelMessage
+                    draftType: R.d.ChannelMessage
                 });
     }
 };

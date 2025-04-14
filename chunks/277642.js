@@ -17,8 +17,8 @@ function a(e) {
     });
 }
 function c() {
-    return (0, r.e7)([o.ZP, i.default], () => {
-        let e = o.ZP.getUserIds();
+    return (0, r.e7)([o.Z, i.default], () => {
+        let e = o.Z.getUserIds();
         return null == e || s(e, i.default.getId());
     });
 }

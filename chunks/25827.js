@@ -117,8 +117,8 @@ function T(e) {
     let T = E ? h.d : h.Z,
         { mode: N } = (0, d.ZP)({ location: 'VideoButton' }),
         { squareButtonsEnabled: A, coloredIconsEnabled: C } = (0, f.Z)({ location: 'VideoButton' }),
-        P = (0, _.Z)({ location: 'VideoButton' }),
-        R = () => (n ? 'join' : C && t ? 'green' : P || N === d.BK.GroupedButtonsRedMic ? 'primaryDark' : 'green'),
+        R = (0, _.Z)({ location: 'VideoButton' }),
+        P = () => (n ? 'join' : C && t ? 'green' : R || N === d.BK.GroupedButtonsRedMic ? 'primaryDark' : 'green'),
         w = (e) => (n ? 'join' : (A || N === d.BK.GroupedButtonsRedMic) && e ? 'green' : I.color);
     return (0, r.jsx)(S, {
         enabled: t,
@@ -137,7 +137,7 @@ function T(e) {
                 T,
                 v(b({}, l, I), {
                     color: w(s),
-                    caretColor: R(),
+                    caretColor: P(),
                     isActive: s,
                     onMouseEnter: (e) => {
                         var t;

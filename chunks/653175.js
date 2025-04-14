@@ -62,18 +62,18 @@ function m(e, t) {
     );
 }
 let g = (e, t) => {
-        let n = u.ZP.getVoiceFilterSpeakingDurationMs();
+        let n = u.Z.getVoiceFilterSpeakingDurationMs();
         return m(
             p(
                 {
                     channel_id: e.id,
                     channel_type: e.type,
                     guild_id: e.getGuildId(),
-                    rtc_connection_id: u.ZP.getRTCConnectionId(),
-                    duration: u.ZP.getDuration(),
-                    media_session_id: u.ZP.getMediaSessionId()
+                    rtc_connection_id: u.Z.getRTCConnectionId(),
+                    duration: u.Z.getDuration(),
+                    media_session_id: u.Z.getMediaSessionId()
                 },
-                (0, i.kO)(u.ZP.getGuildId(), u.ZP.getChannelId(), t)
+                (0, i.kO)(u.Z.getGuildId(), u.Z.getChannelId(), t)
             ),
             {
                 duration_speaking_voice_filter_ids: null != n ? [...n.keys()] : null,

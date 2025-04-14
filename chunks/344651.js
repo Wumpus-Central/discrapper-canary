@@ -26,8 +26,8 @@ var o = n(442837),
     N = n(509545),
     A = n(78839),
     C = n(936101),
-    P = n(868158),
-    R = n(483012),
+    R = n(868158),
+    P = n(483012),
     w = n(955132);
 function D(e, t, n) {
     return (
@@ -102,7 +102,7 @@ function j(e, t) {
     return i;
 }
 let U = new d.Z('ConnectionStore'),
-    G = new R.Z(
+    G = new P.Z(
         w.Wb,
         (e, t) => {
             var n;
@@ -128,7 +128,7 @@ let U = new d.Z('ConnectionStore'),
         },
         (e) => 'CHANNEL_UPDATE' !== e
     ),
-    B = new R.Z(
+    B = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -154,7 +154,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
-    V = new R.Z(
+    V = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -168,7 +168,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
-    F = new R.Z(
+    F = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -271,7 +271,7 @@ W(
     (e) => {
         m.Z.initialGuild.measure(() => {
             o.ZP.Emitter.batched(() => {
-                let t = P.Fx(e, w.Wb.identifyStartTime);
+                let t = R.Fx(e, w.Wb.identifyStartTime);
                 null != S.default.getCurrentUser() &&
                     (K({
                         type: 'GUILD_CREATE',
@@ -307,7 +307,7 @@ W(
         m.Z.readySupplemental.measure(() => {
             o.ZP.Emitter.batched(() => {
                 var t, n;
-                e = m.Z.hydrateReadySupplemental.measure(() => P.r$(e, w.Wb.identifyStartTime));
+                e = m.Z.hydrateReadySupplemental.measure(() => R.r$(e, w.Wb.identifyStartTime));
                 let r = (e) =>
                         e.map((e) => ({
                             user: e.user,
@@ -367,7 +367,7 @@ W(
         ['READY'],
         (e) => {
             var t;
-            let n = P.Eb(),
+            let n = R.Eb(),
                 r = e.guilds
                     .filter((e) => {
                         var t, n;
@@ -383,7 +383,7 @@ W(
             if (e.user.bot) return void K({ type: 'LOGOUT' });
             m.Z.ready.measure(() => {
                 o.ZP.Emitter.batched(() => {
-                    let t = (e = m.Z.hydrateReady.measure(() => P.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
+                    let t = (e = m.Z.hydrateReady.measure(() => R.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
                         o = e.guilds.filter((e) => !0 === e.geo_restricted);
@@ -736,7 +736,7 @@ W(
                     guildId: e.id
                 });
             else {
-                let t = P.J2(e);
+                let t = R.J2(e);
                 s.Z.createGuild(t),
                     K({
                         type: 'VOICE_STATE_UPDATES',
@@ -810,7 +810,7 @@ W(
                             clientStatus: i
                         });
                     }),
-                R.Z.flush('GUILD_MEMBERS_CHUNK');
+                P.Z.flush('GUILD_MEMBERS_CHUNK');
         });
     }),
     H(['THREAD_MEMBER_LIST_UPDATE'], (e) => {
@@ -833,7 +833,7 @@ W(
                             clientStatus: i
                         });
                     }),
-                R.Z.flush();
+                P.Z.flush();
         });
     }),
     H(['GUILD_BAN_ADD', 'GUILD_BAN_REMOVE', 'GUILD_MEMBER_ADD', 'GUILD_MEMBER_UPDATE', 'GUILD_MEMBER_REMOVE'], (e, t) => {
@@ -1296,7 +1296,7 @@ W(
                         t(i);
                 }
             }),
-                R.Z.flush(),
+                P.Z.flush(),
                 K({
                     type: 'GUILD_MEMBER_LIST_UPDATE',
                     guildId: e.guild_id,

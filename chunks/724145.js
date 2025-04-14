@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(705262),
     A = n(981631),
     C = n(921944),
-    P = n(474936),
-    R = n(388032),
+    R = n(474936),
+    P = n(388032),
     w = n(595532);
 let D = () =>
         (0, r.jsx)('div', {
@@ -38,7 +38,7 @@ let D = () =>
                     (0, r.jsx)(u.X6q, {
                         variant: 'heading-md/bold',
                         color: 'always-white',
-                        children: R.NW.string(R.t.POSLGR)
+                        children: P.NW.string(P.t.POSLGR)
                     })
                 ]
             })
@@ -63,7 +63,7 @@ let D = () =>
                 }),
                 (0, r.jsx)(u.X6q, {
                     variant: 'heading-lg/extrabold',
-                    children: R.NW.string(R.t['xSR+a2'])
+                    children: P.NW.string(P.t['xSR+a2'])
                 })
             ]
         });
@@ -95,8 +95,8 @@ let D = () =>
             };
         return (0, r.jsx)(E.Z, {
             size: u.zxk.Sizes.MEDIUM,
-            buttonText: _ ? R.NW.string(R.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === P.Si.TIER_2 ? b : R.NW.string(R.t.mr4K7O),
-            subscriptionTier: P.Si.TIER_2,
+            buttonText: _ ? P.NW.string(P.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === R.Si.TIER_2 ? b : P.NW.string(P.t.mr4K7O),
+            subscriptionTier: R.Si.TIER_2,
             onSubscribeModalClose: v
         });
     },
@@ -113,9 +113,9 @@ let D = () =>
                 isCoachmark: n,
                 forceShowCloseButton: a
             })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => R.NW.string(R.t.cpT0Cg))
-                .with({ isPreview: !0 }, () => R.NW.string(R.t['dqH+qq']))
-                .otherwise(() => R.NW.string(R.t.Olc2Ky));
+                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => P.NW.string(P.t.cpT0Cg))
+                .with({ isPreview: !0 }, () => P.NW.string(P.t['dqH+qq']))
+                .otherwise(() => P.NW.string(P.t.Olc2Ky));
         return (0, r.jsxs)('div', {
             className: w.editorFooter,
             children: [
@@ -153,7 +153,7 @@ function k(e) {
         i.useEffect(() => {
             s &&
                 v.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    type: R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: o
                 });
         }, [s, o]);

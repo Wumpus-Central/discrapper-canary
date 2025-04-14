@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -96,7 +96,7 @@ function D(e, t) {
     return i;
 }
 let L = (e) => {
-    let { emojiDescriptors: t, emojiSize: o, onSelect: A, onSelectSoundmoji: P, onInspect: D, surrogateCodePoint: L, getEmojiItemProps: x, getEmojiRowProps: M, isScrolling: k, isUsingKeyboardNavigation: j, rowIndex: U, allowAnimatedEmoji: G, showEmojiFavoriteTooltip: B, channelGuildId: V, category: F, selectedItemClassName: Z, channelId: H, messageId: W, isBurstReaction: Y, inNitroLockedSection: K, handleScrollUpOnSectionCollapse: z } = e,
+    let { emojiDescriptors: t, emojiSize: o, onSelect: A, onSelectSoundmoji: R, onInspect: D, surrogateCodePoint: L, getEmojiItemProps: x, getEmojiRowProps: M, isScrolling: k, isUsingKeyboardNavigation: j, rowIndex: U, allowAnimatedEmoji: G, showEmojiFavoriteTooltip: B, channelGuildId: V, category: F, selectedItemClassName: Z, channelId: H, messageId: W, isBurstReaction: Y, inNitroLockedSection: K, handleScrollUpOnSectionCollapse: z } = e,
         { enabled: q } = y.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         Q = n(187119),
         X = n(39874),
@@ -139,7 +139,7 @@ let L = (e) => {
                         };
                     return (0, i.createElement)(
                         'li',
-                        R(C({}, b), { key: t }),
+                        P(C({}, b), { key: t }),
                         (0, r.jsx)(l.tEY, {
                             children: (0, r.jsx)('button', {
                                 'aria-label': d,
@@ -257,7 +257,7 @@ let L = (e) => {
         ep = (e) =>
             (0, r.jsx)(
                 'ul',
-                R(C({}, M(U)), {
+                P(C({}, M(U)), {
                     className: a()(N.emojiListRow, {
                         [N.emojiListRowLargeSize]: ed,
                         [N.emojiListRowMediumSize]: ef
@@ -272,7 +272,7 @@ let L = (e) => {
             ref: eu,
             children: (0, r.jsx)(m.Z, {
                 channelId: H,
-                onSelectSoundmoji: P
+                onSelectSoundmoji: R
             })
         });
     if (F !== I.En.TOP_GUILD_EMOJI) return ep(t);

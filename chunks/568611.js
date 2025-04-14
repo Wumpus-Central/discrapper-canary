@@ -116,7 +116,7 @@ void 0 === b && (b = E),
                 a = f(d(T, n), n),
                 l = a.pathname,
                 C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
-                P = C
+                R = C
                     ? (0, r.LX)(n.pathname, {
                           path: C,
                           exact: h,
@@ -124,12 +124,12 @@ void 0 === b && (b = E),
                           strict: I
                       })
                     : null,
-                R = !!(m ? m(P, n) : P),
-                w = R ? y(p, u) : p,
-                D = R ? (0, s.Z)({}, S, {}, _) : S,
+                P = !!(m ? m(R, n) : R),
+                w = P ? y(p, u) : p,
+                D = P ? (0, s.Z)({}, S, {}, _) : S,
                 L = (0, s.Z)(
                     {
-                        'aria-current': (R && i) || null,
+                        'aria-current': (P && i) || null,
                         className: w,
                         style: D,
                         to: a

@@ -108,7 +108,7 @@ function C(e) {
     let s = y[n];
     i && N(s), r ? ((s.proto = (0, p.re)(s.ProtoClass, s.proto, t)), o()('string' != typeof s.proto, 'UserSettingsProto cannot be a string')) : ((s.proto = t), o()('string' != typeof s.proto, 'UserSettingsProto cannot be a string'), (s.editInfo.loaded = !0), (s.editInfo.loading = !1));
 }
-function P(e) {
+function R(e) {
     let {
         settings: { type: t, changes: n }
     } = e;
@@ -116,7 +116,7 @@ function P(e) {
     let r = y[t];
     return (r.editInfo = g({}, r.editInfo, n)), !1;
 }
-function R(e) {
+function P(e) {
     let { userSettings: t } = e;
     w(t);
 }
@@ -198,10 +198,10 @@ class D extends (r = l.ZP.PersistedStore) {
 }
 m(D, 'displayName', 'UserSettingsProtoStore'), m(D, 'persistKey', 'UserSettingsProtoStore-Cache');
 let L = new D(f.Z, {
-    CACHE_LOADED: R,
+    CACHE_LOADED: P,
     USER_SETTINGS_PROTO_UPDATE: C,
     USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,
-    USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: P,
+    USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: R,
     CONNECTION_OPEN: O,
     CONNECTION_CLOSED: I,
     CONNECTION_RESUMED: I,

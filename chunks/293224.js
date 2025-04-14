@@ -627,11 +627,11 @@ function ed(e) {
     var t, n;
     let { voiceChannel: r } = e,
         l = null == r ? void 0 : r.id,
-        a = (0, o.cj)([G.ZP], () => ({
-            channelId: G.ZP.getChannelId(),
-            quality: G.ZP.getQuality(),
-            state: G.ZP.getState(),
-            lastPing: G.ZP.getLastPing()
+        a = (0, o.cj)([G.Z], () => ({
+            channelId: G.Z.getChannelId(),
+            quality: G.Z.getQuality(),
+            state: G.Z.getState(),
+            lastPing: G.Z.getLastPing()
         })),
         s = null != l,
         c = (0, o.e7)([H.Z], () => null != l && H.Z.hasVideo(l), [l]);

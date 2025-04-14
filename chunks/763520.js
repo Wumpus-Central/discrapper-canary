@@ -42,7 +42,7 @@ class m {
             i = (0, o.zO)() - this.spinnerVisibleStart;
         if (((this.spinnerVisibleStart = null), i < 0)) return void this.logger.warn('spinner duration is negative: '.concat(i, ' ms\n        [').concat(e, ', count for stream: ').concat(r, ']'));
         this.logger.info('spinner visible for '.concat(i, ' ms\n      [').concat(e, ', count for stream: ').concat(r, ']'));
-        let h = c.ZP.getGuildId(),
+        let h = c.Z.getGuildId(),
             f = u.Z.getUserVoiceChannelId(h, l.default.getId()),
             m = (function (e) {
                 if (null != e) {
@@ -56,8 +56,8 @@ class m {
         d.default.track(p.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: i,
-            rtc_connection_id: c.ZP.getRTCConnectionId(),
-            media_session_id: c.ZP.getMediaSessionId(),
+            rtc_connection_id: c.Z.getRTCConnectionId(),
+            media_session_id: c.Z.getMediaSessionId(),
             event_count_for_stream: r,
             guild_id: h,
             channel_id: f,

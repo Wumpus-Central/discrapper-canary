@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => R,
+    ZP: () => P,
     _1: () => N,
     jd: () => A
 }),
@@ -83,13 +83,13 @@ let N = 2700,
         [b.n_.STATUS]: () => y.NW.string(y.t.TKdBCw),
         [b.n_.ACTIVITY]: () => y.NW.string(y.t.bSe71N)
     },
-    P = {
+    R = {
         [b.n_.AVATAR]: () => y.NW.string(y.t.xvN0fX),
         [b.n_.STATUS]: () => y.NW.string(y.t['C/vzS0']),
         [b.n_.ACTIVITY]: () => y.NW.string(y.t.ObfsSk)
     };
-function R(e) {
-    let { user: t, sourceType: n, isVisible: o, isExpandable: O, interactionSourceId: S, targetRef: N, onAction: A, renderMoreButtonPopout: R } = e,
+function P(e) {
+    let { user: t, sourceType: n, isVisible: o, isExpandable: O, interactionSourceId: S, targetRef: N, onAction: A, renderMoreButtonPopout: P } = e,
         w = i.useRef(null),
         D = (0, c.e7)([p.default], () => p.default.getId() === t.id),
         L = (0, h.Z)(t.id),
@@ -174,7 +174,7 @@ function R(e) {
                 children: (0, r.jsx)(f.zx, {
                     onClick: Z,
                     className: v.button,
-                    'aria-label': P[n](),
+                    'aria-label': R[n](),
                     'aria-haspopup': 'dialog',
                     children: (0, r.jsx)(d.n$P, {
                         size: 'xs',
@@ -182,9 +182,9 @@ function R(e) {
                     })
                 })
             }),
-            null == R
+            null == P
                 ? void 0
-                : R((e) => {
+                : P((e) => {
                       let t = () => {
                           var t;
                           k(w), null == (t = e.onClick) || t.call(e);

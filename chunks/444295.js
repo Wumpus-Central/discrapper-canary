@@ -73,7 +73,7 @@ function _(e, t) {
             shown_user_ids: c,
             live_user_ids: u,
             content_inventory_ids: d,
-            media_session_id: a.ZP.getMediaSessionId()
+            media_session_id: a.Z.getMediaSessionId()
         });
 }
 function p(e, t) {
@@ -97,6 +97,6 @@ function g(e, t) {
         interaction_type: n,
         interaction_value: r,
         target_user_id: i,
-        media_session_id: a.ZP.getMediaSessionId()
+        media_session_id: a.Z.getMediaSessionId()
     });
 }

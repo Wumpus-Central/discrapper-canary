@@ -74,7 +74,7 @@ async function O(e) {
         o,
         a,
         m,
-        { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: N, analyticsLocation: A, showGuildProfile: C = !0, appContext: P, customStatusPrompt: R } = e,
+        { userId: b, section: O, subsection: I, guildId: S, channelId: T, friendToken: N, analyticsLocation: A, showGuildProfile: C = !0, appContext: R, customStatusPrompt: P } = e,
         w = E(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'analyticsLocation', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
     let D = d.default.getUser(b);
     if (null == D) return;
@@ -104,7 +104,7 @@ async function O(e) {
                             initialSubsection: I,
                             channelId: T,
                             showGuildProfile: C,
-                            customStatusPrompt: R
+                            customStatusPrompt: P
                         },
                         t,
                         w
@@ -113,7 +113,7 @@ async function O(e) {
         },
         {
             modalKey: v(b, C ? S : void 0),
-            contextKey: (0, i.VnL)(null != P ? P : p.IlC.APP)
+            contextKey: (0, i.VnL)(null != R ? R : p.IlC.APP)
         }
     )),
         f.default.track(

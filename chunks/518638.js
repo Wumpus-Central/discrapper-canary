@@ -4,7 +4,7 @@ n.d(t, {
     Pz: () => y,
     Qf: () => w,
     X_: () => v,
-    ZC: () => P,
+    ZC: () => R,
     a0: () => A,
     kr: () => O,
     t8: () => S,
@@ -108,7 +108,7 @@ function A() {
         f = c.ZP.getPremiumTypeSubscription(),
         p = (null == f ? void 0 : f.trialId) != null,
         g = u.Z.hasAnyUnexpiredOffer(),
-        E = p || g ? s.filter((e) => R(e)) : s;
+        E = p || g ? s.filter((e) => P(e)) : s;
     return 0 === E.length ? null : E.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
 }
 function C() {
@@ -134,7 +134,7 @@ function C() {
             o = c.ZP.getPremiumTypeSubscription(),
             a = (null == o ? void 0 : o.trialId) != null,
             s = u.Z.hasAnyUnexpiredOffer(),
-            l = a || s ? i.filter((e) => R(e)) : i;
+            l = a || s ? i.filter((e) => P(e)) : i;
         if (0 === l.length) return !1;
         let f = h.Z.lastDismissedOutboundPromotionStartDate;
         return (
@@ -146,12 +146,12 @@ function C() {
         );
     }
 }
-function P(e) {
+function R(e) {
     return !(0, f.isIOS)() || !(0, d.yE)(e.flags, m.TD.IS_BLOCKED_IOS);
 }
-function R(e) {
+function P(e) {
     return (0, d.yE)(e.flags, m.TD.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
 }
 function w(e, t) {
-    return null != t[e.id] || R(e);
+    return null != t[e.id] || P(e);
 }

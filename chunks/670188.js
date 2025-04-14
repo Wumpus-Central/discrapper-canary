@@ -97,7 +97,7 @@ let O = (0, a.pxk)(a.EFr.SIZE_80),
         position: void 0
     };
 function T(e) {
-    var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestOpen: A, onRequestClose: C, onClosePopout: P, shouldShow: R, shouldPreload: w = !0, shouldShowOnHover: D = !1 } = e,
+    var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestOpen: A, onRequestClose: C, onClosePopout: R, shouldShow: P, shouldPreload: w = !0, shouldShowOnHover: D = !1 } = e,
         L = y(e, ['children', 'userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload', 'shouldShowOnHover']);
     let x = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         M = (0, o.e7)([c.default], () => (null != p ? p : c.default.getUser(n))),
@@ -137,7 +137,7 @@ function T(e) {
                             channelId: E,
                             openedAt: H.current,
                             closePopout: () => {
-                                e.closePopout(), null == P || P();
+                                e.closePopout(), null == R || R();
                             }
                         })
                     );
@@ -173,7 +173,7 @@ function T(e) {
                       g(
                           {
                               popoutKey: _.Tg,
-                              shouldShow: !0 === R || k,
+                              shouldShow: !0 === P || k,
                               preload: !w || U || k ? void 0 : z,
                               renderPopout: q,
                               onRequestOpen: () => {
@@ -195,7 +195,7 @@ function T(e) {
                   g(
                       {
                           popoutKey: _.Tg,
-                          shouldShow: R,
+                          shouldShow: P,
                           preload: w ? z : void 0,
                           renderPopout: q,
                           onRequestOpen: () => {

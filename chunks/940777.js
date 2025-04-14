@@ -25,8 +25,8 @@ var r = n(200651),
     P = n(593214),
     I = n(919755),
     N = n(110977),
-    E = n(603274),
-    Z = n(981631),
+    Z = n(603274),
+    E = n(981631),
     w = n(388032),
     T = n(940751);
 function A(e) {
@@ -56,9 +56,9 @@ function A(e) {
 }
 let D = {
     analyticsSource: {
-        page: Z.ZY5.GUILD_CHANNEL,
-        section: Z.jXE.CHANNEL_LIST,
-        object: Z.qAy.CHANNEL
+        page: E.ZY5.GUILD_CHANNEL,
+        section: E.jXE.CHANNEL_LIST,
+        object: E.qAy.CHANNEL
     }
 };
 function R() {
@@ -70,10 +70,10 @@ function R() {
             favoriteChannels: S.Z.getFavoriteChannels(),
             favoriteServerMuted: S.Z.favoriteServerMuted
         })),
-        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(Z.I_8)),
+        U = (0, s.e7)([j.Z], () => j.Z.getChannelId(E.I_8)),
         W = (0, s.e7)([O.Z], () => O.Z.getChannel(U)),
-        V = (0, y.Z)((e) => e.guildId) === Z.I_8,
-        { badge: H, unread: F } = (0, I.Z)(B),
+        V = (0, y.Z)((e) => e.guildId) === E.I_8,
+        { badge: F, unread: H } = (0, I.Z)(B),
         z = (function (e) {
             let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -109,7 +109,7 @@ function R() {
                 })
             );
         })(B),
-        Y = H > 0 ? (0, _.N)(H) : null,
+        Y = F > 0 ? (0, _.N)(F) : null,
         q = (0, f.Q3)('FavoritesButton'),
         K = i.useCallback(() => {
             L();
@@ -119,10 +119,10 @@ function R() {
             (0, r.jsx)(g.Z, {
                 selected: V,
                 hovered: k,
-                unread: F && !G,
+                unread: H && !G,
                 className: T.pill
             }),
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(Z.Z, {
                 onShow: K,
                 children: (0, r.jsx)(N.S, {
                     children: (0, r.jsx)(c.aRk, {
@@ -136,10 +136,10 @@ function R() {
                                 {
                                     ariaLabel: w.NW.formatToPlainString(w.t['/uzRsr'], {
                                         guildName: w.NW.string(w.t.wMWycn),
-                                        mentions: H
+                                        mentions: F
                                     }),
                                     to: {
-                                        pathname: Z.Z5c.CHANNEL(Z.I_8, U),
+                                        pathname: E.Z5c.CHANNEL(E.I_8, U),
                                         state: D
                                     },
                                     selected: V || k,

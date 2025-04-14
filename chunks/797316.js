@@ -44,7 +44,7 @@ function N(e, t) {
     let n = {};
     T.forEach((i) => {
         var o;
-        i !== O.Z.getGuildId() && i !== b.ZP.getGuildId() && i !== (null == (o = h.Z.getChannel(v.Z.getChannelId())) ? void 0 : o.getGuildId()) && (null == r || r.guildId !== i) && (T.clearWithoutFlushing(i, e), t && (n[i] = T.get(i)));
+        i !== O.Z.getGuildId() && i !== b.Z.getGuildId() && i !== (null == (o = h.Z.getChannel(v.Z.getChannelId())) ? void 0 : o.getGuildId()) && (null == r || r.guildId !== i) && (T.clearWithoutFlushing(i, e), t && (n[i] = T.get(i)));
     }),
         a().isEmpty(n) ||
             l.Z.dispatch({
@@ -62,7 +62,7 @@ function C(e, t, n) {
     let i = r.getGuildId();
     return (i !== e && e === I.I_8 && T.subscribeToGuild(i), null != r && r.isThread()) ? (r.type === I.d4z.ANNOUNCEMENT_THREAD ? T.subscribeChannel(i, r.parent_id, n) : !!r.isActiveThread() && T.subscribeThreadMemberList(i, t, v.Z.getChannelId())) : T.subscribeChannel(i, t, n);
 }
-function P(e) {
+function R(e) {
     let { type: t } = e;
     'CONNECTION_OPEN' === t && N(!0, !1);
     let n = O.Z.getGuildId();
@@ -77,7 +77,7 @@ function P(e) {
                 subscriptions: r
             });
 }
-function R() {
+function P() {
     N(!1, !1);
 }
 function w(e) {
@@ -173,7 +173,7 @@ function K(e) {
 }
 class z extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, E.Z, O.Z, v.Z, b.ZP, f.default, p.ZP, u.Z), this.syncWith([d.Z], Y), this.syncWith([p.ZP], Z);
+        this.waitFor(h.Z, E.Z, O.Z, v.Z, b.Z, f.default, p.ZP, u.Z), this.syncWith([d.Z], Y), this.syncWith([p.ZP], Z);
     }
     getSubscribedThreadIds() {
         return T.getSubscribedThreadIds();
@@ -194,9 +194,9 @@ class z extends (i = s.ZP.Store) {
 }
 S(z, 'displayName', 'GuildSubscriptionsStore');
 let q = new z(l.Z, {
-    CONNECTION_OPEN: P,
-    CONNECTION_RESUMED: P,
-    CONNECTION_CLOSED: R,
+    CONNECTION_OPEN: R,
+    CONNECTION_RESUMED: R,
+    CONNECTION_CLOSED: P,
     IDLE: w,
     LOGOUT: D,
     VOICE_CHANNEL_SELECT: F,

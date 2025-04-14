@@ -26,7 +26,7 @@ var i = n(442837),
     P = n(990252);
 function I(e) {
     var t;
-    let { channel: n, isChannelSelected: I, isChannelCollapsed: N, voiceStates: E, enableConnectedUserLimit: Z, enableActivities: w, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: D, muted: R, resolvedUnreadSetting: L } = e,
+    let { channel: n, isChannelSelected: I, isChannelCollapsed: N, voiceStates: Z, enableConnectedUserLimit: E, enableActivities: w, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: D, muted: R, resolvedUnreadSetting: L } = e,
         k = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         M = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
         G = (0, a.ZP)(n),
@@ -39,8 +39,8 @@ function I(e) {
             video: U || W,
             selected: I
         }),
-        H = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
-        F = (0, s.n2)(n.guild_id, n.id),
+        F = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
+        H = (0, s.n2)(n.guild_id, n.id),
         z = (0, i.e7)([p.Z], () => {
             var e, t;
             return null != (t = null == (e = p.Z.getGuild(n.guild_id)) ? void 0 : e.hasFeature(C.oNc.COMMUNITY)) && t;
@@ -57,26 +57,26 @@ function I(e) {
             color: l.Z.unsafe_rawColors.BRAND_260.css,
             className: P.newChannel
         });
-    if (!R && L === x.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
+    if (!R && L === x.i.ALL_MESSAGES && n.isForumLikeChannel() && null != F && F > 0)
         return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: S.NW.format(S.t.GkAbqa, { count: (0, o.NGo)(H) })
+            children: S.NW.format(S.t.GkAbqa, { count: (0, o.NGo)(F) })
         });
-    if (!R && n.isForumLikeChannel() && null != F && F > 0)
+    if (!R && n.isForumLikeChannel() && null != H && H > 0)
         return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: (0, o.NGo)(F)
+            children: (0, o.NGo)(H)
         });
-    let Y = null != (t = null == E ? void 0 : E.length) ? t : 0;
-    return null != Z && Z && V
+    let Y = null != (t = null == Z ? void 0 : Z.length) ? t : 0;
+    return null != E && E && V
         ? (0, r.jsx)(O.Z, {
               userCount: Y,
               video: U || W,
               channel: n
           })
-        : N && (0, m.a)(E) && z
+        : N && (0, m.a)(Z) && z
           ? (0, r.jsx)(o.IGR, {
                 text: S.NW.string(S.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css

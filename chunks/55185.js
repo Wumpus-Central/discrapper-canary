@@ -211,7 +211,7 @@ function N(e) {
         ]
     });
 }
-function E() {
+function Z() {
     let e = h.G6.useSetting();
     return (0, i.jsxs)(x, {
         children: [
@@ -225,7 +225,7 @@ function E() {
         ]
     });
 }
-function Z(e) {
+function E(e) {
     let { closePopout: t } = e;
     return (0, i.jsxs)(x, {
         children: [
@@ -290,9 +290,9 @@ function A(e) {
         case 3:
             return (0, i.jsx)(P, { closePopout: n });
         case 4:
-            return (0, i.jsx)(E, {});
+            return (0, i.jsx)(Z, {});
         case 5:
-            return (0, i.jsx)(Z, { closePopout: n });
+            return (0, i.jsx)(E, { closePopout: n });
         case 6:
             return (0, i.jsx)(w, {});
         default:

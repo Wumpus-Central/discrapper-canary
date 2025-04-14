@@ -115,8 +115,8 @@ let O = function (e) {
         [T, N] = i.useState(!1),
         A = (0, _.Q3)('Switch'),
         C = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-        P = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
-        { state: R, opacity: w } = (0, f.q_F)(
+        R = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
+        { state: P, opacity: w } = (0, f.q_F)(
             {
                 config: b,
                 opacity: h ? (A ? 0.5 : 0.3) : 1,
@@ -149,8 +149,8 @@ let O = function (e) {
                 onMouseLeave: () => N(!1),
                 style: {
                     opacity: w,
-                    backgroundColor: R.to({
-                        output: [C, P]
+                    backgroundColor: P.to({
+                        output: [C, R]
                     })
                 },
                 children: [
@@ -159,7 +159,7 @@ let O = function (e) {
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
-                            left: R.to({
+                            left: P.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [A ? -4 : -3, 1, 8, 12]
                             })
@@ -168,25 +168,25 @@ let O = function (e) {
                         children: [
                             (0, r.jsx)(s.animated.rect, {
                                 fill: 'white',
-                                x: R.to({
+                                x: P.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [4, 0, 0, 4]
                                 }),
-                                y: R.to({
+                                y: P.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [0, 1, 1, 0]
                                 }),
-                                height: R.to({
+                                height: P.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 18, 18, 20]
                                 }),
-                                width: R.to({
+                                width: P.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 28, 28, 20]
                                 }),
                                 rx: '10'
                             }),
-                            v(R, C, P, I.enabled)
+                            v(P, C, R, I.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {

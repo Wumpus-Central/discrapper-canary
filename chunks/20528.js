@@ -52,8 +52,8 @@ let T = (0, r.debounce)(a.xc, 1000),
     N = new i.V7(),
     A = new i.V7(),
     C = 3 * b.Z.Millis.MINUTE,
-    P = 5 * b.Z.Millis.SECOND,
-    R = 12 * b.Z.Millis.SECOND,
+    R = 5 * b.Z.Millis.SECOND,
+    P = 12 * b.Z.Millis.SECOND,
     w = null;
 function D(e, t) {
     if (m.Z.getVoiceChannelId() !== e) return !1;
@@ -70,7 +70,7 @@ function L(e, t) {
 }
 function x(e, t) {
     g.Z.getAllActiveStreamKeys().includes(e) ||
-        A.start(t ? R : P, () => {
+        A.start(t ? P : R, () => {
             o.Z.dispatch({
                 type: 'STREAM_TIMED_OUT',
                 streamKey: e

@@ -25,8 +25,8 @@ var r,
     P = n(869404),
     I = n(333984),
     N = n(210887),
-    E = n(592125),
-    Z = n(158776),
+    Z = n(592125),
+    E = n(158776),
     w = n(55589),
     T = n(515753),
     A = n(981631),
@@ -353,7 +353,7 @@ class B extends (r = l.Component) {
                     c = n.some((e) => (0, b.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && Z.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && E.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     g.ZP.trackWithMetadata(
@@ -470,7 +470,7 @@ let U = (e) => {
         { density: r } = (0, p.TCT)(),
         { version: o, theme: a, children: d, showDMHeader: h } = e,
         g = l.Children.count(d),
-        m = E.Z.getMutablePrivateChannels(),
+        m = Z.Z.getMutablePrivateChannels(),
         b = (0, P.k1)(m),
         _ = (0, u.Wu)(
             [w.Z, S.Z, I.Z],
@@ -481,16 +481,16 @@ let U = (e) => {
             []
         );
     (0, C.z)(j.R);
-    let y = (0, u.cj)([f.Z, N.Z, E.Z], () => ({
+    let y = (0, u.cj)([f.Z, N.Z, Z.Z], () => ({
             theme: N.Z.darkSidebar ? A.BRd.DARK : a,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
-            version: null != o ? ''.concat(o, ':').concat(E.Z.getPrivateChannelsVersion()) : E.Z.getPrivateChannelsVersion()
+            version: null != o ? ''.concat(o, ':').concat(Z.Z.getPrivateChannelsVersion()) : Z.Z.getPrivateChannelsVersion()
         })),
         x = l.useRef(null),
-        Z = null != (t = e.listScrollerRef) ? t : x,
+        E = null != (t = e.listScrollerRef) ? t : x,
         T = l.useCallback(
             (e) => {
-                let t = Z.current,
+                let t = E.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -504,21 +504,21 @@ let U = (e) => {
                         }
                     });
             },
-            [Z]
+            [E]
         ),
         D = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = Z.current;
+                    let t = E.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            [Z]
+            [E]
         ),
         R = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = Z.current;
+                    let t = E.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -526,7 +526,7 @@ let U = (e) => {
                         }
                     });
                 }),
-            [Z]
+            [E]
         ),
         L = (0, v.Dt)(),
         G = (0, c.ZP)({
@@ -549,7 +549,7 @@ let U = (e) => {
                             isVisualRefreshEnabled: n,
                             channels: b,
                             privateChannelIds: _,
-                            listRef: Z,
+                            listRef: E,
                             theme: a,
                             version: o
                         },

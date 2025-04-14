@@ -68,11 +68,11 @@ function C(e) {
         n = a.default.getId();
     return y(t).updateMembersByMemberIds([n]);
 }
-function P(e) {
+function R(e) {
     let { guildId: t, user: n } = e;
     return y(t).removeMember(n.id);
 }
-function R(e) {
+function P(e) {
     let t = !1,
         n = y(e.guildId);
     return 'GUILD_ROLE_DELETE' === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
@@ -336,9 +336,9 @@ let J = new X(o.Z, {
     GUILD_MEMBER_ADD: T,
     GUILD_MEMBER_UPDATE: T,
     GUILD_MEMBER_UPDATE_LOCAL: C,
-    GUILD_MEMBER_REMOVE: P,
-    GUILD_ROLE_UPDATE: R,
-    GUILD_ROLE_DELETE: R,
+    GUILD_MEMBER_REMOVE: R,
+    GUILD_ROLE_UPDATE: P,
+    GUILD_ROLE_DELETE: P,
     GUILD_MEMBER_PROFILE_UPDATE: k,
     GUILD_ROLE_MEMBER_REMOVE: w,
     GUILD_ROLE_MEMBER_ADD: w,

@@ -26,8 +26,8 @@ var i = n(120356),
     N = n(788858),
     A = n(849755),
     C = n(384298),
-    P = n(670451),
-    R = n(228168),
+    R = n(670451),
+    P = n(228168),
     w = n(388032),
     D = n(227832);
 function L(e, t, n) {
@@ -85,7 +85,7 @@ function k(e, t) {
 function j(e) {
     let { user: t, currentUser: n, voiceChannel: i, className: L, onClose: M } = e,
         { profileType: j } = (0, v.z)(),
-        U = { [D.fullSize]: j === R.y0.FULL_SIZE },
+        U = { [D.fullSize]: j === P.y0.FULL_SIZE },
         { analyticsLocations: G } = (0, d.ZP)(u.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         B = (0, b.Z)({
             display: 'voice',
@@ -179,7 +179,7 @@ function j(e) {
                 (0, r.jsx)(I.Z, {
                     text: Y(),
                     tags: K(),
-                    contextMenu: (0, r.jsx)(P.Z, {
+                    contextMenu: (0, r.jsx)(R.Z, {
                         display: 'voice',
                         user: t,
                         onClose: M
@@ -195,11 +195,11 @@ function j(e) {
                                 channel: i
                             }),
                             z(),
-                            j === R.y0.FULL_SIZE && q()
+                            j === P.y0.FULL_SIZE && q()
                         ]
                     })
                 }),
-                j !== R.y0.FULL_SIZE && q()
+                j !== P.y0.FULL_SIZE && q()
             ]
         })
     });

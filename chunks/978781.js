@@ -30,8 +30,8 @@ var r = n(200651),
     N = n(727939),
     A = n(981631),
     C = n(921944),
-    P = n(474936),
-    R = n(388032),
+    R = n(474936),
+    P = n(388032),
     w = n(16534);
 function D(e, t, n) {
     return (
@@ -97,9 +97,9 @@ function j(e) {
             isPreview: o,
             isCoachmark: l
         })
-            .with({ isCoachmark: !0 }, () => R.NW.string(R.t.cpT0Cg))
-            .with({ isPreview: !0 }, () => R.NW.string(R.t['dqH+qq']))
-            .otherwise(() => R.NW.string(R.t.Olc2Ky)),
+            .with({ isCoachmark: !0 }, () => P.NW.string(P.t.cpT0Cg))
+            .with({ isPreview: !0 }, () => P.NW.string(P.t['dqH+qq']))
+            .otherwise(() => P.NW.string(P.t.Olc2Ky)),
         h = i.useCallback(
             () =>
                 1 === t
@@ -150,7 +150,7 @@ function j(e) {
                         (0, r.jsx)(c.Text, {
                             className: w.footerText,
                             variant: 'text-sm/medium',
-                            children: R.NW.format(R.t.x2dQxM, { onClick: h })
+                            children: P.NW.format(P.t.x2dQxM, { onClick: h })
                         })
                     ]
                 }),
@@ -170,10 +170,10 @@ function j(e) {
                     o &&
                         (0, r.jsx)(S.Z, {
                             className: w.footerButton,
-                            subscriptionTier: P.Si.TIER_2,
+                            subscriptionTier: R.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: R.NW.string(R.t.pj0XBA)
+                            buttonText: P.NW.string(P.t.pj0XBA)
                         })
                 ]
             })
@@ -186,11 +186,11 @@ function U(e) {
         d = i.useMemo(
             () => [
                 {
-                    name: R.NW.string(R.t.Ksh3io),
+                    name: P.NW.string(P.t.Ksh3io),
                     value: 0
                 },
                 {
-                    name: R.NW.string(R.t.RPh2oq),
+                    name: P.NW.string(P.t.RPh2oq),
                     value: 1
                 }
             ],
@@ -205,7 +205,7 @@ function U(e) {
             _ && O(), m && (0, p.O7)();
         }, [_, m, O]),
         S = (0, f.Z)(null, g ? I : A.dG4),
-        P = i.useCallback(() => {
+        R = i.useCallback(() => {
             g && (0, u.ZI)({ theme: v }), (0, p.G8)(), (0, E.Mo)(), I(), null == n || n(C.L.DISMISS);
         }, [I, n, g, v]);
     return (0, r.jsx)(N.Z, {
@@ -222,13 +222,13 @@ function U(e) {
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-lg/extrabold',
-                                    children: R.NW.string(R.t.viGN6e)
+                                    children: P.NW.string(P.t.viGN6e)
                                 }),
                                 (0, r.jsx)(c.olH, {
                                     className: w.closeContainer,
                                     innerClassName: w.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: P
+                                    onClick: R
                                 })
                             ]
                         }),
@@ -250,7 +250,7 @@ function U(e) {
                 (0, r.jsx)(j, {
                     tab: a,
                     isPreview: g,
-                    onClose: P,
+                    onClose: R,
                     isCoachmark: !1
                 })
             ]

@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(981631),
     A = n(616922),
     C = n(388032),
-    P = n(292199),
-    R = n(610220);
+    R = n(292199),
+    P = n(610220);
 function w(e, t) {
     return C.NW.formatToPlainString(C.t.h2yWWV, {
         username: t.username,
@@ -62,18 +62,18 @@ function L(e) {
     return null == s
         ? null
         : (0, r.jsxs)('div', {
-              className: P.listeningTimeline,
+              className: R.listeningTimeline,
               children: [
                   (0, r.jsx)(S.x3, { entry: n }),
                   (0, r.jsx)('div', {
-                      className: P.seekBarContainer,
+                      className: R.seekBarContainer,
                       children: (0, r.jsx)('div', {
-                          className: P.seekBarFill,
+                          className: R.seekBarFill,
                           style: s
                       })
                   }),
                   (0, r.jsx)(l.Text, {
-                      className: P.timestamp,
+                      className: R.timestamp,
                       variant: 'text-xs/normal',
                       tabularNumbers: !0,
                       color: void 0,
@@ -87,7 +87,7 @@ function x(e) {
     let n,
         m,
         S,
-        { channel: P, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
+        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
         { activity: G, currentEntry: B, artist: V, title: F, user: Z } = (0, O.pi)(x),
         { primaryColor: H, secondaryColor: W } = (0, v.Z)(null == U ? void 0 : U.src),
@@ -95,12 +95,12 @@ function x(e) {
         K = (0, a.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === N.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
         z = i.useCallback(() => {
             var e;
-            if (null == P || null == Z) return;
+            if (null == R || null == Z) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
                 n = (0, E.T_)(null != t ? { start: t } : x, Date.now());
             return (0, b.CR)({
                 user: Z,
-                channel: P,
+                channel: R,
                 mediaImageSrc: null == U ? void 0 : U.src,
                 artist: V,
                 description: D(
@@ -108,13 +108,13 @@ function x(e) {
                         artist: V,
                         media: F
                     },
-                    P,
+                    R,
                     Z
                 ),
                 colors: [H, W],
                 badges: (0, b.jE)({ timestamp: n })
             });
-        }, [G, V, P, x, null == U ? void 0 : U.src, H, W, F, Z]);
+        }, [G, V, R, x, null == U ? void 0 : U.src, H, W, F, Z]);
     if (null == G || null == B) return null;
     let q = V,
         Q = [];
@@ -136,7 +136,7 @@ function x(e) {
             ((q = (0, r.jsx)(d.Z, {
                 artists: V,
                 canOpen: null != G.sync_id,
-                linkClassName: R.popoutTextSecondary,
+                linkClassName: P.popoutTextSecondary,
                 onOpenSpotifyArtist: e
             })),
             (null == K ? void 0 : K.syncDisabled) === !1)
@@ -159,7 +159,7 @@ function x(e) {
     }
     let X = (0, r.jsx)(I.wG, {
         onClickThumbnail: S,
-        channel: P,
+        channel: R,
         entry: x,
         headerIcons:
             B.media.provider === o.p.SPOTIFY
@@ -184,7 +184,7 @@ function x(e) {
                     onReaction: k,
                     onVoiceChannelPreview: j,
                     user: Z,
-                    channel: P,
+                    channel: R,
                     generateReactionImage: z,
                     reactionImageAltText: w(V, Z),
                     entry: x,

@@ -73,8 +73,8 @@ let b = [],
     N = 20,
     A = 12,
     C = 48,
-    P = 0.01,
-    R = new Set(['jack_o_lantern', 'nose']),
+    R = 0.01,
+    P = new Set(['jack_o_lantern', 'nose']),
     w = {
         jack_o_lantern: {
             sprites: (0, c.Z)(['chocolate_bar', 'lollipop', 'candy'])
@@ -83,7 +83,7 @@ let b = [],
     };
 function D(e) {
     if (null == e) return null;
-    for (let t of R) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+    for (let t of P) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
     return null;
 }
 let L = {
@@ -157,7 +157,7 @@ let k = i.forwardRef(function (e, t) {
                             },
                             dragCoefficient: {
                                 type: 'static',
-                                value: P
+                                value: R
                             }
                         }),
                         N

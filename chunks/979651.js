@@ -58,13 +58,13 @@ function C(e, t) {
     let n = N(e);
     n.has(t) && ((n = new Set(n)).delete(t), 0 === n.size ? E.delete(e) : E.set(e, n));
 }
-function P(e, t, n) {
+function R(e, t, n) {
     let r = S(m, null != e ? e : d.ME),
         i = r[t],
         o = n(i);
     return i === o ? [!1, o, i] : (null != i && (delete r[t], null != i.channelId && (delete S(b, i.channelId)[t], delete S(y, i.channelId)[t]), null != i.sessionId && delete S(v, t)[i.sessionId], C(null != e ? e : d.ME, t)), null != o && ((r[t] = o), null != o.channelId && ((S(b, o.channelId)[t] = o), o.selfVideo && ((S(y, o.channelId)[t] = o), A(null != e ? e : d.ME, t))), null != o.sessionId && (S(v, t)[o.sessionId] = o)), [!0, o, i]);
 }
-function R(e) {
+function P(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let [n, r, o] = L(t.guildId, t);
@@ -77,7 +77,7 @@ function w(e) {
         let [r] = L(e.guildId, n);
         t = t || r;
     }
-    for (let n of e.removedVoiceStateUsers) P(e.guildId, n, () => null), (t = !0);
+    for (let n of e.removedVoiceStateUsers) R(e.guildId, n, () => null), (t = !0);
     return t && h++, t;
 }
 function D(e) {
@@ -85,7 +85,7 @@ function D(e) {
     O[I(t, n)] = r;
 }
 function L(e, t) {
-    return P(e, t.userId, (e) => {
+    return R(e, t.userId, (e) => {
         if (null == t.channelId) return null;
         {
             let n = {
@@ -108,7 +108,7 @@ function L(e, t) {
 }
 function x(e) {
     let { guildId: t, channelId: n } = e,
-        [i] = P(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
+        [i] = R(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
     return i;
 }
 function M(e) {
@@ -121,13 +121,13 @@ function k() {
 }
 function j(e) {
     let { voiceStates: t, user: n, sessionId: o } = e;
-    for (let [e, n] of ((m = {}), (b = {}), (v = {}), (y = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) P(e, t, () => new u.Z(r));
+    for (let [e, n] of ((m = {}), (b = {}), (v = {}), (y = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) R(e, t, () => new u.Z(r));
     (r = n.id), (i = o);
 }
 function U(e) {
     let { guild: t } = e;
     s().forEach(m[t.id], (e) => {
-        P(t.id, e.userId, () => null);
+        R(t.id, e.userId, () => null);
     }),
         delete m[t.id];
 }
@@ -217,7 +217,7 @@ let F = new V(c.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: k,
     OVERLAY_INITIALIZE: j,
     VOICE_CHANNEL_SELECT: x,
-    VOICE_STATE_UPDATES: R,
+    VOICE_STATE_UPDATES: P,
     GUILD_DELETE: U,
     GUILD_CREATE: U,
     CHANNEL_DELETE: G,

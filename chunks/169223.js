@@ -149,8 +149,8 @@ class I extends m.Z {
                     d = (0, a.pY)(i),
                     _ = f.Z.getChannel(d),
                     h = {
-                        rtc_connection_id: p.ZP.getRTCConnectionId(),
-                        media_session_id: p.ZP.getMediaSessionId()
+                        rtc_connection_id: p.Z.getRTCConnectionId(),
+                        media_session_id: p.Z.getMediaSessionId()
                     },
                     m = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? o.u1M : o.z1l;
                 null != c &&

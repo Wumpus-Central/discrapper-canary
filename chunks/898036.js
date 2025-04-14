@@ -9,7 +9,7 @@ var r = n(252258),
 function a(e) {
     let { flags: t, embeddedActivity: n } = e;
     t |= l.xjy.CONTEXTLESS;
-    let a = i.ZP.getChannelId();
+    let a = i.Z.getChannelId();
     return null != a && n.location.kind === r.E.CONTEXTLESS && n.location.starting_channel_id === a && (t |= l.xjy.PARTY_PRIVACY_VOICE_CHANNEL), t;
 }
 let o = [1, 0];

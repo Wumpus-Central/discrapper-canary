@@ -136,7 +136,7 @@ class T extends (r = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: o, markerPositions: a, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
-            { disabled: m, stickToMarkers: E, className: y, children: O, barStyles: I, fillStyles: S, mini: T, hideBubble: A, defaultValue: C, orientation: P, onValueRender: R, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
+            { disabled: m, stickToMarkers: E, className: y, children: O, barStyles: I, fillStyles: S, mini: T, hideBubble: A, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
             V = 0;
         E ? null != a && (null != c ? (V = a[c]) : null != l && (V = a[l])) : (V = this.scaleValue(t));
         let F = ''.concat(V, '%'),
@@ -172,7 +172,7 @@ class T extends (r = o.PureComponent) {
                           );
                       })
                     : null,
-            H = null != R ? R(t) : ''.concat(V.toFixed(0), '%'),
+            H = null != P ? P(t) : ''.concat(V.toFixed(0), '%'),
             W = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
         return (0, i.jsx)(N, {
             active: n,
@@ -193,7 +193,7 @@ class T extends (r = o.PureComponent) {
                         'aria-valuemax': f,
                         'aria-valuenow': t,
                         'aria-disabled': m,
-                        'aria-orientation': P,
+                        'aria-orientation': R,
                         'aria-hidden': j,
                         'aria-label': U,
                         'aria-labelledby': G,

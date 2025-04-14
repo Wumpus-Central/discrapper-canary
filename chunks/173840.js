@@ -202,8 +202,8 @@ let I = /\b\B/,
     N = '\\b\\d+(\\.\\d+)?',
     A = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
     C = '\\b(0b[01]+)',
-    P = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
-    R = (e = {}) => {
+    R = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
+    P = (e = {}) => {
         let t = /^#![ ]*\//;
         return (
             e.binary && (e.begin = m(t, /.*\b/, e.binary, /\b.*/)),
@@ -332,8 +332,8 @@ var F = Object.freeze({
     PHRASAL_WORDS_MODE: x,
     QUOTE_STRING_MODE: L,
     REGEXP_MODE: G,
-    RE_STARTERS_RE: P,
-    SHEBANG: R,
+    RE_STARTERS_RE: R,
+    SHEBANG: P,
     TITLE_MODE: B,
     UNDERSCORE_IDENT_RE: T,
     UNDERSCORE_TITLE_MODE: V
@@ -597,10 +597,10 @@ let em = r,
             t += e.parentNode ? e.parentNode.className : '';
             let n = c.languageDetectRe.exec(t);
             if (n) {
-                let t = R(n[1]);
+                let t = P(n[1]);
                 return t || (er(s.replace('{}', n[1])), er('Falling back to no-highlight mode for this block.', e)), t ? n[1] : 'no-highlight';
             }
-            return t.split(/\s+/).find((e) => u(e) || R(e));
+            return t.split(/\s+/).find((e) => u(e) || P(e));
         }
         function g(e, t, n) {
             let r = '',
@@ -737,10 +737,10 @@ let em = r,
                 if (j > 100000 && j > 3 * r.index) throw Error('potential infinite loop, way more iterations than matches');
                 return (x += o), o.length;
             }
-            let A = R(e);
+            let A = P(e);
             if (!A) throw (en(s.replace('{}', e)), Error('Unknown language: "' + e + '"'));
             let C = ed(A),
-                P = '',
+                R = '',
                 w = o || C,
                 D = {},
                 L = new c.__emitter(c);
@@ -765,10 +765,10 @@ let em = r,
                 }
                 return (
                     L.finalize(),
-                    (P = L.toHTML()),
+                    (R = L.toHTML()),
                     {
                         language: e,
-                        value: P,
+                        value: R,
                         relevance: M,
                         illegal: !1,
                         _emitter: L,
@@ -787,7 +787,7 @@ let em = r,
                             index: k,
                             context: t.slice(k - 100, k + 100),
                             mode: n.mode,
-                            resultSoFar: P
+                            resultSoFar: R
                         },
                         _emitter: L
                     };
@@ -818,15 +818,15 @@ let em = r,
             t = t || c.languages || Object.keys(r);
             let n = v(e),
                 i = t
-                    .filter(R)
+                    .filter(P)
                     .filter(D)
                     .map((t) => b(t, e, !1));
             i.unshift(n);
             let [o, a] = i.sort((e, t) => {
                     if (e.relevance !== t.relevance) return t.relevance - e.relevance;
                     if (e.language && t.language) {
-                        if (R(e.language).supersetOf === t.language) return 1;
-                        else if (R(t.language).supersetOf === e.language) return -1;
+                        if (P(e.language).supersetOf === t.language) return 1;
+                        else if (P(t.language).supersetOf === e.language) return -1;
                     }
                     return 0;
                 }),
@@ -893,7 +893,7 @@ let em = r,
             }
             document.querySelectorAll(c.cssSelector).forEach(S);
         }
-        function P(t, n) {
+        function R(t, n) {
             let i = null;
             try {
                 i = n(e);
@@ -904,7 +904,7 @@ let em = r,
             }
             i.name || (i.name = t), (r[t] = i), (i.rawDefinition = n.bind(null, e)), i.aliases && w(i.aliases, { languageName: t });
         }
-        function R(e) {
+        function P(e) {
             return r[(e = (e || '').toLowerCase())] || r[i[e]];
         }
         function w(e, { languageName: t }) {
@@ -914,7 +914,7 @@ let em = r,
                 });
         }
         function D(e) {
-            let t = R(e);
+            let t = P(e);
             return t && !t.disableAutodetect;
         }
         function L(e) {
@@ -949,14 +949,14 @@ let em = r,
             },
             initHighlighting: T,
             initHighlightingOnLoad: N,
-            registerLanguage: P,
+            registerLanguage: R,
             unregisterLanguage: function (e) {
                 for (let t of (delete r[e], Object.keys(i))) i[t] === e && delete i[t];
             },
             listLanguages: function () {
                 return Object.keys(r);
             },
-            getLanguage: R,
+            getLanguage: P,
             registerAliases: w,
             autoDetection: D,
             inherit: eg,

@@ -78,7 +78,7 @@ function T(e) {
     (O = o().omitBy(O, (t) => t.parentId === e)), delete I[e];
 }
 function N(e, t) {
-    c.AW.has(e.type) && A(P(e), t);
+    c.AW.has(e.type) && A(R(e), t);
 }
 function A(e, t) {
     var n;
@@ -87,9 +87,9 @@ function A(e, t) {
 }
 function C(e) {
     var t;
-    null == (t = e.threads) || t.forEach(R);
+    null == (t = e.threads) || t.forEach(P);
 }
-function P(e) {
+function R(e) {
     if (!(e.id in O)) {
         var t;
         O[e.id] = {
@@ -102,7 +102,7 @@ function P(e) {
     }
     return O[e.id];
 }
-function R(e) {
+function P(e) {
     N(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
@@ -113,7 +113,7 @@ function R(e) {
 function w(e) {
     if (null != e && !(e.id in O)) {
         let t = f.Z.getChannel(e.id);
-        if (null != t) return R(t), !0;
+        if (null != t) return P(t), !0;
     }
     return !1;
 }
@@ -137,11 +137,11 @@ function M(e) {
 }
 function k(e) {
     let { channel: t } = e;
-    R(t);
+    P(t);
 }
 function j(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach(R),
+    t.forEach(P),
         null == n ||
             n.forEach((e) => {
                 let t = f.Z.getChannel(e.channel_id);

@@ -73,8 +73,8 @@ let S = 200,
     N = +_.Z.Millis.MINUTE,
     A = {},
     C = 'content',
-    P = 'file://',
-    R = !1,
+    R = 'file://',
+    P = !1,
     w = 0,
     D = 0,
     L = 0,
@@ -83,7 +83,7 @@ let S = 200,
     k = [],
     j = !1;
 function U() {
-    R = !1;
+    P = !1;
 }
 function G(e, t) {
     return t.some((t) => t.platforms.includes(e));
@@ -109,7 +109,7 @@ function B(e) {
                                 { executable: r, name: i, working_dir: o } = n,
                                 a = i,
                                 s = l.Z.fileManager.join(e, r);
-                            (0, h.isMac)() && !s.startsWith(P) && (s = ''.concat(P).concat(s)),
+                            (0, h.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)),
                                 (t = null != o ? l.Z.fileManager.join(e, o) : l.Z.fileManager.dirname(s)),
                                 (E[a] = I(v({}, n), {
                                     id: a,
@@ -232,7 +232,7 @@ function Q(e, t, n) {
 }
 function X(e) {
     let { state: t } = e;
-    R = !0;
+    P = !0;
     let n = {},
         r = t.applications,
         i = null != t.currentTask ? t.currentTask.branchId : null,
@@ -336,7 +336,7 @@ class J extends (r = a.ZP.Store) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (R) return setImmediate(e), !1;
+            if (P) return setImmediate(e), !1;
         });
     }
 }

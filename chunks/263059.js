@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(194811),
     A = n(373826),
     C = n(262210),
-    P = n(666984),
-    R = n(386019),
+    R = n(666984),
+    P = n(386019),
     w = n(228168),
     D = n(227832);
 function L(e, t, n) {
@@ -131,7 +131,7 @@ function M(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: a()(D.actions, G),
-                      children: (0, r.jsx)(P.Z, {
+                      children: (0, r.jsx)(R.Z, {
                           user: n,
                           activity: L,
                           onAction: Y
@@ -163,7 +163,7 @@ function M(e) {
                         onAction: Y,
                         onShowToolbar: () => Y({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
-                            (0, r.jsx)(R.Z, {
+                            (0, r.jsx)(P.Z, {
                                 display: 'live',
                                 user: n,
                                 activity: L,

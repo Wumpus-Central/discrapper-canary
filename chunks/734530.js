@@ -240,7 +240,7 @@
                 };
             return u.every(_);
         },
-        P = function (e, t, n) {
+        R = function (e, t, n) {
             return S(e)
                 ? Object.keys(e).reduce(function (i, a) {
                       var s = !S(t) || !C(e[a], t[a]);
@@ -248,14 +248,14 @@
                   }, null)
                 : null;
         },
-        R = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+        P = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
         w = function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R;
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P;
             if (null === e || N(e)) return e;
             throw Error(t);
         },
         D = function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R;
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P;
             if (T(e))
                 return {
                     tag: 'async',
@@ -350,7 +350,7 @@
                 t.useEffect(
                     function () {
                         if (s.elements) {
-                            var e = P(r, d, ['clientSecret', 'fonts']);
+                            var e = R(r, d, ['clientSecret', 'fonts']);
                             e && s.elements.update(e);
                         }
                     },
@@ -543,30 +543,30 @@
                         N = 'elements' in T ? T.elements : null,
                         A = 'customCheckoutSdk' in T ? T.customCheckoutSdk : null,
                         C = l(t.useState(null), 2),
-                        R = C[0],
+                        P = C[0],
                         w = C[1],
                         D = t.useRef(null),
                         L = t.useRef(null);
-                    O(R, 'blur', u),
-                        O(R, 'focus', d),
-                        O(R, 'escape', p),
-                        O(R, 'click', h),
-                        O(R, 'loaderror', m),
-                        O(R, 'loaderstart', g),
-                        O(R, 'networkschange', E),
-                        O(R, 'confirm', b),
-                        O(R, 'cancel', y),
-                        O(R, 'shippingaddresschange', v),
-                        O(R, 'shippingratechange', S),
-                        O(R, 'change', _),
+                    O(P, 'blur', u),
+                        O(P, 'focus', d),
+                        O(P, 'escape', p),
+                        O(P, 'click', h),
+                        O(P, 'loaderror', m),
+                        O(P, 'loaderstart', g),
+                        O(P, 'networkschange', E),
+                        O(P, 'confirm', b),
+                        O(P, 'cancel', y),
+                        O(P, 'shippingaddresschange', v),
+                        O(P, 'shippingratechange', S),
+                        O(P, 'change', _),
                         f &&
                             (i =
                                 'expressCheckout' === e
                                     ? f
                                     : function () {
-                                          f(R);
+                                          f(P);
                                       }),
-                        O(R, 'ready', i),
+                        O(P, 'ready', i),
                         t.useLayoutEffect(
                             function () {
                                 if (null === D.current && null !== L.current && (N || A)) {
@@ -581,7 +581,7 @@
                         t.useEffect(
                             function () {
                                 if (D.current) {
-                                    var e = P(c, x, ['paymentRequest']);
+                                    var e = R(c, x, ['paymentRequest']);
                                     e && D.current.update(e);
                                 }
                             },

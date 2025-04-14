@@ -1,11 +1,11 @@
 n.d(t, {
-    B0: () => P,
+    B0: () => R,
     Hc: () => L,
     J8: () => x,
     Q6: () => A,
     V9: () => j,
     WD: () => D,
-    X_: () => R,
+    X_: () => P,
     Zt: () => I,
     Zv: () => T,
     _V: () => N,
@@ -112,8 +112,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    P = (e) => null != e.match('development' !== m ? v : O),
-    R = (e) =>
+    R = (e) => null != e.match('development' !== m ? v : O),
+    P = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
             return t === d.u3.APNG || t === d.u3.LOTTIE || t === d.u3.GIF;

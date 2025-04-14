@@ -66,11 +66,11 @@ function x(e, t) {
     );
 }
 let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
-    P = {
+    w = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
-    w = {
+    P = {
         opacity: 1,
         transform: 'translate3d(0%, 0, 0)'
     },
@@ -87,7 +87,7 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     M = (e) => {
         let t,
             i,
-            { participant: o, isUpsellEnabled: s, shape: d, size: g, didTrackUpsellViewed: N, setDidTrackUpsellViewed: P, className: w, premiumIndicator: R } = e,
+            { participant: o, isUpsellEnabled: s, shape: d, size: g, didTrackUpsellViewed: N, setDidTrackUpsellViewed: w, className: P, premiumIndicator: R } = e,
             A = (0, b.Wc)(o),
             { analyticsLocations: T } = (0, p.ZP)(),
             C = null != (0, y.Z)(o);
@@ -123,8 +123,8 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         has_premium_stream_resolution: i,
                         location_stack: T
                     }),
-                    P(!0));
-            }, [t, i, D, N, P, T]),
+                    w(!0));
+            }, [t, i, D, N, w, T]),
             null == A)
         )
             return null;
@@ -157,7 +157,7 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         });
         return (0, r.jsx)(f.IGR, {
             text: W,
-            className: a()(w, j.qualityIndicatorBadge, { [j.qualityIndicatorBadgePremium]: D && R }),
+            className: a()(P, j.qualityIndicatorBadge, { [j.qualityIndicatorBadgePremium]: D && R }),
             color: c.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
@@ -175,10 +175,10 @@ let N = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 v,
                 {
                     enter: {
-                        from: h.enabled ? R : P,
-                        to: h.enabled ? A : w
+                        from: h.enabled ? R : w,
+                        to: h.enabled ? A : P
                     },
-                    leave: h.enabled ? R : P,
+                    leave: h.enabled ? R : w,
                     config: D
                 },
                 'animate-always'

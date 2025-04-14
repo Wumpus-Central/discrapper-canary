@@ -32,8 +32,8 @@ var r = n(200651),
     N = n(514361),
     A = n(583901),
     C = n(469115),
-    P = n(981631),
-    R = n(474936),
+    R = n(981631),
+    P = n(474936),
     w = n(874893),
     D = n(526761),
     L = n(231338),
@@ -121,8 +121,8 @@ let Z = Object.freeze({
     H = i.createContext({}),
     W = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
-        S.default.track(P.rMx.CLIENT_THEME_UPDATED, {
-            feature_name: R.QP.CLIENT_THEME,
+        S.default.track(R.rMx.CLIENT_THEME_UPDATED, {
+            feature_name: P.QP.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
             location_stack: r
@@ -179,7 +179,7 @@ let Z = Object.freeze({
     K = (e) => {
         var t, n;
         let { type: i, isPreview: o, isCoachmark: a } = e,
-            l = (null == (n = (0, E.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === R.Si.TIER_2,
+            l = (null == (n = (0, E.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === P.Si.TIER_2,
             { enabled: c } = b.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
@@ -246,11 +246,11 @@ let Z = Object.freeze({
         let { renderCTAButtons: o, isCoachmark: a } = e,
             { type: s } = i.useContext(H),
             [c] = (0, l.Wu)([N.Z], () => [N.Z.isPreview]),
-            u = (null == (n = (0, E.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === R.Si.TIER_2;
+            u = (null == (n = (0, E.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === P.Si.TIER_2;
         return 'EDITOR' === s && c && u
             ? (0, r.jsx)(y.ZP, {
-                  type: R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                  subscriptionTier: R.Si.TIER_2,
+                  type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                  subscriptionTier: P.Si.TIER_2,
                   children: x.NW.format(x.t.G8yQXl, { onPremiumClick: () => g.z })
               })
             : (0, r.jsxs)('div', {
@@ -311,8 +311,8 @@ let Z = Object.freeze({
                                             {
                                                 analyticsSource: _.Z.CLIENT_THEMES_THEME_SELECTOR,
                                                 analyticsLocation: {
-                                                    section: P.jXE.SETTINGS_APPEARANCE_THEME_PICKER,
-                                                    object: P.qAy.BUTTON_ICON
+                                                    section: R.jXE.SETTINGS_APPEARANCE_THEME_PICKER,
+                                                    object: R.qAy.BUTTON_ICON
                                                 }
                                             },
                                             t
@@ -338,7 +338,7 @@ let Z = Object.freeze({
                     v((e) => e + 1);
                 }
             },
-            R = () => {
+            P = () => {
                 if (!g) return null;
                 let e = C.qt[c.Us.EASTER_EGG];
                 if (null == e) return null;
@@ -382,7 +382,7 @@ let Z = Object.freeze({
                         e.id
                     )
                 ),
-                R()
+                P()
             ]
         });
     },

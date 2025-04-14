@@ -44,8 +44,8 @@ let S = 'SELECTABLE',
     N = null,
     A = {},
     C = {},
-    P = {},
-    R = null,
+    R = {},
+    P = null,
     w = {},
     D = {
         comparator: -1,
@@ -114,7 +114,7 @@ function Z(e) {
     return (
         o().forEach(n, (n) => {
             let r = n.channel;
-            if (((e.count += 1), _.zS.has(r.type) && !b.Z.can(O.Plq.VIEW_CHANNEL, r) && !c.Z.isChannelGated(r.guild_id, r.id) && r.id !== R)) return;
+            if (((e.count += 1), _.zS.has(r.type) && !b.Z.can(O.Plq.VIEW_CHANNEL, r) && !c.Z.isChannelGated(r.guild_id, r.id) && r.id !== P)) return;
             let i = B(r.type);
             r.type === O.d4z.GUILD_DIRECTORY && (null == w[t] && (w[t] = []), w[t].push(n)), null != e[i] && e[i].push(n);
         }),
@@ -122,7 +122,7 @@ function Z(e) {
     );
 }
 function H() {
-    (A = {}), (w = {}), (C = {}), (P = {}), null != N && W(N);
+    (A = {}), (w = {}), (C = {}), (R = {}), null != N && W(N);
 }
 function W(e) {
     let t = k(e);
@@ -153,7 +153,7 @@ function z(e) {
     let {
         guild: { id: t }
     } = e;
-    return delete A[t], delete C[t], delete P[t], delete w[t], !0;
+    return delete A[t], delete C[t], delete R[t], delete w[t], !0;
 }
 function q(e) {
     let { guildId: t, user: n } = e;
@@ -205,18 +205,18 @@ function et(e, t) {
     return !1;
 }
 function en(e) {
-    et(v.default.getCurrentUser(), e) ? (P[e] = !0) : delete P[e];
+    et(v.default.getCurrentUser(), e) ? (R[e] = !0) : delete R[e];
 }
 function er(e, t) {
     var n;
-    R = t;
+    P = t;
     let r = null != (n = null == e ? void 0 : e.getGuildId()) ? n : null;
     if (null == r) return !1;
     (A[r] = void 0), r === N && W(r);
 }
 function ei(e) {
     let { channelId: t } = e;
-    return null == t && null != R ? er(m.Z.getChannel(R), null) : er(m.Z.getChannel(t), t);
+    return null == t && null != P ? er(m.Z.getChannel(P), null) : er(m.Z.getChannel(t), t);
 }
 function eo(e) {
     let { voiceStates: t } = e;
@@ -294,7 +294,7 @@ class el extends (r = s.ZP.Store) {
         return this.getSelectableChannelIds(e).includes(t);
     }
     hasElevatedPermissions(e) {
-        return P[e] || !1;
+        return R[e] || !1;
     }
     hasChannels(e) {
         return this.getChannels(e).count > 0;

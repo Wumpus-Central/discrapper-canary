@@ -49,7 +49,7 @@ function P(e) {
 }
 function N() {
     var e;
-    let t = f.ZP.getChannelId();
+    let t = f.Z.getChannelId();
     if (null == t) return !1;
     let n = null == (e = p.Z.getChannel(t)) ? void 0 : e.getGuildId(),
         r = !1;
@@ -67,7 +67,7 @@ function E() {
 }
 class I extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, m.default, p.Z, f.ZP), this.syncWith([m.default], N);
+        this.waitFor(g.Z, m.default, p.Z, f.Z), this.syncWith([m.default], N);
     }
     get desyncedVoiceStatesCount() {
         return h.size();
@@ -103,7 +103,7 @@ let Z = new I(s.Z, {
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
-            n = f.ZP.getChannelId();
+            n = f.Z.getChannelId();
         return (
             null != n &&
             t.reduce((e, t) => {

@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function P(e, t) {
         e
     );
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -178,10 +178,10 @@ function L(e) {
                       children: (0, r.jsx)(s.SJ, {
                           children: (e) => {
                               var { ref: i } = e,
-                                  s = R(e, ['ref']);
+                                  s = P(e, ['ref']);
                               return (0, r.jsx)(
                                   'ul',
-                                  P(A({ ref: i }, s), {
+                                  R(A({ ref: i }, s), {
                                       className: a()(S.channelAttachmentArea, T.scrollbarGhost),
                                       children: w
                                           ? M.map((e) =>

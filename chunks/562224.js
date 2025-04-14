@@ -17,7 +17,7 @@ var r = n(268146),
     O = n(37113),
     b = n(761274);
 async function v(e, t) {
-    var n, v, x, m, E, C, j, I, P, S;
+    var n, v, x, m, E, C, j, I, S, P;
     let T = f.default.getCurrentUser(),
         w = h.Z.getVoiceChannelId(),
         Z = c.Z.getChannel(w),
@@ -45,7 +45,7 @@ async function v(e, t) {
         (0, l.WH)(
             _,
             w,
-            ((P = (function (e) {
+            ((S = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -84,7 +84,7 @@ async function v(e, t) {
                           };
                 })(A)
             )),
-            (S = S =
+            (P = P =
                 {
                     audioSourceId: (null == (v = A.id) ? void 0 : v.startsWith(r.vA.CAMERA)) ? (null == t ? void 0 : t.audioSourceId) : void 0,
                     sound: K,
@@ -92,7 +92,7 @@ async function v(e, t) {
                     goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(P, Object.getOwnPropertyDescriptors(S))
+                ? Object.defineProperties(S, Object.getOwnPropertyDescriptors(P))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -100,10 +100,10 @@ async function v(e, t) {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(S)).forEach(function (e) {
-                      Object.defineProperty(P, e, Object.getOwnPropertyDescriptor(S, e));
+                  })(Object(P)).forEach(function (e) {
+                      Object.defineProperty(S, e, Object.getOwnPropertyDescriptor(P, e));
                   }),
-            P)
+            S)
         ),
         [!0, void 0]
     );

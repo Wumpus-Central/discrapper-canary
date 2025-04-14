@@ -62,7 +62,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,12 +74,12 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -133,7 +133,7 @@ function L(e) {
     );
 }
 function x(e) {
-    return (0, r.jsx)(L, R(C({}, e), { headerClassName: N.headerSuccess }));
+    return (0, r.jsx)(L, P(C({}, e), { headerClassName: N.headerSuccess }));
 }
 function M(e) {
     var { guild: t, application: n } = e,
@@ -239,7 +239,7 @@ function k(e) {
         : null;
 }
 function j(e) {
-    return (0, r.jsx)(L, R(C({}, e), { headerClassName: N.headerFailure }));
+    return (0, r.jsx)(L, P(C({}, e), { headerClassName: N.headerFailure }));
 }
 function U() {
     var e, t;

@@ -36,12 +36,12 @@ function T(e, t, n) {
 }
 let N = 'NO_GUILD',
     A = new c.h(
-        (e) => [R(e)],
+        (e) => [P(e)],
         (e) => e.id
     ),
     C = new Set(),
-    P = {};
-function R(e) {
+    R = {};
+function P(e) {
     var t;
     return null != (t = e.getGuildId()) ? t : N;
 }
@@ -61,14 +61,14 @@ function D(e) {
             }));
 }
 function L(e) {
-    let t = P[e];
+    let t = R[e];
     if (null != t) return t;
     let n = p.Z.getChannel(e);
     return null != n && n.isGuildStageVoice() && (D(n.guild_id), M(n)) ? x(e) : null;
 }
 function x(e) {
-    let t = P[e];
-    return null == t && ((t = new O.ZP(e)), (P[e] = t), t.rebuild()), t;
+    let t = R[e];
+    return null == t && ((t = new O.ZP(e)), (R[e] = t), t.rebuild()), t;
 }
 function M(e) {
     return null != e && e.isGuildStageVoice() && v.ZP.countVoiceStatesForChannel(e.id) > 0;
@@ -89,14 +89,14 @@ function U(e) {
     return j((t) => t.updateParticipant(e), t);
 }
 function G(e) {
-    for (let t of A.values(e)) A.delete(t.id), delete P[t.id];
+    for (let t of A.values(e)) A.delete(t.id), delete R[t.id];
     C.delete(e);
 }
 function B(e) {
-    return null != e && (delete P[e], A.delete(e), !0);
+    return null != e && (delete R[e], A.delete(e), !0);
 }
 function V() {
-    C.clear(), A.clear(), (P = {});
+    C.clear(), A.clear(), (R = {});
 }
 function F(e, t, n) {
     if (null == n || e.has(n)) return;

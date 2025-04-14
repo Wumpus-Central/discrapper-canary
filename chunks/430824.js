@@ -116,11 +116,11 @@ function C(e) {
             }),
         (b = e.allGuildsRoles);
 }
-function P(e) {
+function R(e) {
     let t = c.wD(e.guild, y[e.guild.id]);
     null == y[t.id] && r++, (y = E(m({}, y), { [t.id]: t })), (b[t.id] = e.guild.roles instanceof Array ? u.C5(t.id, e.guild.roles) : e.guild.roles);
 }
-function R(e) {
+function P(e) {
     let t = c.di(e.guild, y[e.guild.id]);
     null == y[t.id] && r++, (y = E(m({}, y), { [t.id]: t })), (b[t.id] = u.C5(t.id, e.guild.roles));
 }
@@ -211,8 +211,8 @@ let G = new U(s.Z, {
     OVERLAY_INITIALIZE: C,
     CACHE_LOADED: N,
     CACHE_LOADED_LAZY: A,
-    GUILD_CREATE: P,
-    GUILD_UPDATE: R,
+    GUILD_CREATE: R,
+    GUILD_UPDATE: P,
     GUILD_DELETE: D,
     GUILD_ROLE_CREATE: L,
     GUILD_ROLE_UPDATE: L,

@@ -71,7 +71,7 @@ function I(e, t) {
 }
 function S(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: o, preventIdleComponent: l } = e,
-        u = (0, a.e7)([p.ZP], () => p.ZP.getChannelId()),
+        u = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
         _ =
             null != u
                 ? (0, r.jsx)(h.Z, {

@@ -45,7 +45,7 @@ function m(e) {
         channel_id: e.id,
         guild_id: e.guild_id,
         topic: null == t ? void 0 : t.topic,
-        media_session_id: r.ZP.getMediaSessionId(),
+        media_session_id: r.Z.getMediaSessionId(),
         request_to_speak_state: a.Uu(s.Plq.REQUEST_TO_SPEAK, e) ? o.BM.EVERYONE : o.BM.NO_ONE,
         stage_instance_id: null == t ? void 0 : t.id
     };

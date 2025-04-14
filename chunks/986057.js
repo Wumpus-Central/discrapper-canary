@@ -28,8 +28,8 @@ function _() {
     });
 }
 function p() {
-    if (!_() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.ZP.isConnected() || null == l.Z.getActiveVoiceFilter()) return !1;
-    let e = c.ZP.getChannelId(),
+    if (!_() || !l.Z.getVoiceFilterPlaybackEnabled() || !c.Z.isConnected() || null == l.Z.getActiveVoiceFilter()) return !1;
+    let e = c.Z.getChannelId(),
         t = null != e ? s.Z.getChannel(e) : null,
         { mute: n, selfMute: r, suppress: i } = (0, a.b)({ channel: t });
     return !(n || r || i);

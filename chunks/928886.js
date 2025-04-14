@@ -25,9 +25,9 @@ function I(e, t) {
 function S(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: o, handleClose: S } = e,
-        { selectedSkuId: T, step: N, selectedPlan: A, purchaseState: C, purchaseType: P, selectedSku: R } = (0, g.JL)(),
+        { selectedSkuId: T, step: N, selectedPlan: A, purchaseState: C, purchaseType: R, selectedSku: P } = (0, g.JL)(),
         { isGift: w, selectedGiftStyle: D, giftRecipient: L } = (0, m.wD)(),
-        x = w && (0, h.pO)(L) && N === E.h8.CONFIRM && null != D && (null == R ? void 0 : R.productLine) !== b.POd.COLLECTIBLES,
+        x = w && (0, h.pO)(L) && N === E.h8.CONFIRM && null != D && (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
         M = null != n && null != N,
         k = [E.h8.SKU_SELECT, E.h8.SELECT_FREE_SKU],
         j = null != N && !k.includes(N) && null != T,
@@ -60,7 +60,7 @@ function S(e) {
                   }))
                 : M
                   ? (e = n(null != A ? A : null, S, N))
-                  : P === v.GZ.ONE_TIME
+                  : R === v.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(p.t, {
                           step: N,
                           onClose: S
@@ -80,5 +80,5 @@ function S(e) {
                       }))),
             e
         );
-    }, [D, S, C, n, A, T, N, G, F, x, j, M, P, w, L, W]);
+    }, [D, S, C, n, A, T, N, G, F, x, j, M, R, w, L, W]);
 }

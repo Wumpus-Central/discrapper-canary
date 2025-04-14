@@ -20,15 +20,15 @@ function O() {
     var e;
     let t = r;
     if (null == t || !h.Z.isOpen(t)) return !1;
-    i.Z.wait(() => l.xv(t)), null == (e = f.ZP.getRTCConnection()) || e.setPipOpen(!1), (r = null);
+    i.Z.wait(() => l.xv(t)), null == (e = f.Z.getRTCConnection()) || e.setPipOpen(!1), (r = null);
 }
 function N() {
     var e;
-    let t = f.ZP.getChannelId(),
+    let t = f.Z.getChannelId(),
         n = r === t;
     if (
         (function () {
-            let e = f.ZP.getChannelId(),
+            let e = f.Z.getChannelId(),
                 t = g.Z.getChannelId();
             if (!p.Z.supports(E.AN.VIDEO) || s.Z.getWindowOpen(_.KJ3.CHANNEL_CALL_POPOUT)) return !0;
             let n = c.Z.getAllActiveStreams().length > 0;
@@ -50,14 +50,14 @@ function N() {
         return O();
     if ((n || O(), null == t)) return !1;
     let a = u.Z.getChannel(t);
-    return !(null == a || h.Z.isOpen(t)) && (i.Z.wait(() => l.bA(a.id, _.NYg.VIDEO, { channel: a })), null == (e = f.ZP.getRTCConnection()) || e.setPipOpen(!0), void (r = t));
+    return !(null == a || h.Z.isOpen(t)) && (i.Z.wait(() => l.bA(a.id, _.NYg.VIDEO, { channel: a })), null == (e = f.Z.getRTCConnection()) || e.setPipOpen(!0), void (r = t));
 }
 class y extends a.Z {
     _initialize() {
-        g.Z.addChangeListener(N), m.Z.addChangeListener(N), f.ZP.addChangeListener(N), b.Z.addChangeListener(N), d.Z.addChangeListener(N), c.Z.addChangeListener(N), s.Z.addChangeListener(N), p.Z.addChangeListener(N), o.ZP.addChangeListener(N);
+        g.Z.addChangeListener(N), m.Z.addChangeListener(N), f.Z.addChangeListener(N), b.Z.addChangeListener(N), d.Z.addChangeListener(N), c.Z.addChangeListener(N), s.Z.addChangeListener(N), p.Z.addChangeListener(N), o.ZP.addChangeListener(N);
     }
     _terminate() {
-        g.Z.removeChangeListener(N), m.Z.removeChangeListener(N), f.ZP.removeChangeListener(N), b.Z.removeChangeListener(N), d.Z.removeChangeListener(N), c.Z.removeChangeListener(N), s.Z.removeChangeListener(N), p.Z.removeChangeListener(N), o.ZP.removeChangeListener(N);
+        g.Z.removeChangeListener(N), m.Z.removeChangeListener(N), f.Z.removeChangeListener(N), b.Z.removeChangeListener(N), d.Z.removeChangeListener(N), c.Z.removeChangeListener(N), s.Z.removeChangeListener(N), p.Z.removeChangeListener(N), o.ZP.removeChangeListener(N);
     }
 }
 let I = new y();

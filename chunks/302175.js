@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(388032),
     A = n(840969),
     C = n(501867);
-function P(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function P(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -83,7 +83,7 @@ function L(e) {
         c = null != (0, y.Z)(t, n),
         m = (0, v.Z)(t),
         [g, E] = i.useState(!1),
-        [I, P] = i.useState(!1),
+        [I, R] = i.useState(!1),
         w = I,
         L = i.useCallback(() => {
             let e = h.Z.getGuild(t);
@@ -127,8 +127,8 @@ function L(e) {
         V = (0, b.Z)(n, I);
     return (0, r.jsxs)('div', {
         className: a()(C.topPerksCard, C.animatedTopPerksCard, A.powerupCard, { [C.animate]: g }),
-        onMouseEnter: () => P(!0),
-        onMouseLeave: () => P(!1),
+        onMouseEnter: () => R(!0),
+        onMouseLeave: () => R(!1),
         children: [
             (0, r.jsx)('div', {
                 className: C.intObserver,
@@ -144,7 +144,7 @@ function L(e) {
                 })
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: D(R({}, j), { transform: j.y.to((e) => 'translateY('.concat(e, 'px)')) }),
+                style: D(P({}, j), { transform: j.y.to((e) => 'translateY('.concat(e, 'px)')) }),
                 className: a()(C.contentContainer, A.contentContainer),
                 children: [
                     (0, r.jsx)(p.xm, {

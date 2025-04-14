@@ -155,11 +155,11 @@ let A = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = {
-                    state: (0, _.zy)(f.ZP.getState()),
-                    hostname: f.ZP.getHostname(),
-                    pings: f.ZP.getPings(),
-                    average_ping: f.ZP.getAveragePing(),
-                    last_ping: f.ZP.getLastPing()
+                    state: (0, _.zy)(f.Z.getState()),
+                    hostname: f.Z.getHostname(),
+                    pings: f.Z.getPings(),
+                    average_ping: f.Z.getAveragePing(),
+                    last_ping: f.Z.getLastPing()
                 };
             return i().isEqual(r, t) || n(r), r;
         }

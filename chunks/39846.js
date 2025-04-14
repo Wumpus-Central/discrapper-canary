@@ -47,7 +47,7 @@ class y extends r.Z {
         let { voiceStates: t } = e;
         t.forEach((e) => {
             let { userId: t, channelId: n } = e;
-            if (null != n && l.default.getId() === t && null != d.ZP.getRTCConnectionId() && m !== n) {
+            if (null != n && l.default.getId() === t && null != d.Z.getRTCConnectionId() && m !== n) {
                 if (E(t, n)) {
                     (m = n), g();
                     return;

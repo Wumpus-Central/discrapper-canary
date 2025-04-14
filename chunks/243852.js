@@ -39,7 +39,7 @@ function A(e) {
     let i = (0, m.OT)(e.applicationId, E.Z),
         l = N.Z.getVoiceChannelId(),
         a = b.default.getSessionId(),
-        o = O.ZP.getMediaSessionId();
+        o = O.Z.getMediaSessionId();
     d.Z.updateActivity({
         applicationId: e.applicationId,
         distributor: e.isDiscordApplication ? y.GQo.DISCORD : e.distributor,

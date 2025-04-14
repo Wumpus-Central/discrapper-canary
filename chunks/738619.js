@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(594174),
     A = n(451478),
     C = n(626135),
-    P = n(823379),
-    R = n(5192),
+    R = n(823379),
+    P = n(5192),
     w = n(981631),
     D = n(388032),
     L = n(486850);
@@ -179,8 +179,8 @@ function Z(e) {
                   .filter((e) => e !== (null == y ? void 0 : y.id))
                   .reject((e) => I.Z.isBlockedOrIgnored(e))
                   .map((e) => N.default.getUser(e))
-                  .filter(P.lm)
-                  .map((e) => R.ZP.getName(t, u.id, e))
+                  .filter(R.lm)
+                  .map((e) => P.ZP.getName(t, u.id, e))
                   .value(),
         A = (0, m.R6)('TypingUsers');
     if (0 === T.length && !S && !g)

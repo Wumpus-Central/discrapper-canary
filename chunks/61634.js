@@ -37,8 +37,8 @@ function P(e) {
         I = (0, a.pY)(null == (t = P[0]) ? void 0 : t.location),
         N = (0, l.NX)(I),
         {
-            guildHasVoice: E,
-            guildHasVideo: Z,
+            guildHasVoice: Z,
+            guildHasVideo: E,
             selectedVoiceChannelHasVideo: w
         } = (0, i.cj)(
             [v.Z, j.Z, b.Z, _.Z, m.Z],
@@ -108,7 +108,7 @@ function P(e) {
                 })(),
                 M = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                u ? ((g = !0), (b = (null == r ? void 0 : r.channel_id) === c), (y = A), (O = L), (j = D), (S = M)) : ((g = E), (b = null != r), (y = I), (O = Z), (j = R), (S = k)),
+                u ? ((g = !0), (b = (null == r ? void 0 : r.channel_id) === c), (y = A), (O = L), (j = D), (S = M)) : ((g = Z), (b = null != r), (y = I), (O = E), (j = R), (S = k)),
                 {
                     audio: g,
                     video: O,
@@ -120,6 +120,6 @@ function P(e) {
                 }
             );
         },
-        [e, n, x, w, T, N, P, r, E, Z]
+        [e, n, x, w, T, N, P, r, Z, E]
     );
 }

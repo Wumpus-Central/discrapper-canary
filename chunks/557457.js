@@ -49,7 +49,7 @@ function E(e) {
 function b(e, t, n) {
     let l = h(e, t, n),
         u = o.default.getCurrentUser(),
-        d = i.ZP.getGuildId(),
+        d = i.Z.getGuildId(),
         f = null != d ? r.Z.getGuild(d) : null;
     a.default.track(s.rMx.STREAM_SETTINGS_UPDATE, {
         user_premium_tier: null == u ? void 0 : u.premiumType,

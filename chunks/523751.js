@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(981631),
     A = n(388032),
     C = n(90235);
-function P(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function P(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -217,7 +217,7 @@ function U(e) {
     let t, n;
     var o,
         l,
-        { guild: _, tooltipColor: y = u.ua7.Colors.BRAND, tooltipPosition: v, className: O, flowerStarClassName: T, iconClassName: A, badgeStrokeColor: P, badgeColor: w, disableBoostClick: x, 'aria-label': k = !1 } = e,
+        { guild: _, tooltipColor: y = u.ua7.Colors.BRAND, tooltipPosition: v, className: O, flowerStarClassName: T, iconClassName: A, badgeStrokeColor: R, badgeColor: w, disableBoostClick: x, 'aria-label': k = !1 } = e,
         U = L(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
     let G = (0, p.Q3)('GuildBadgeV2'),
         B = null != (o = U.size) ? o : G ? 18 : 16,
@@ -261,7 +261,7 @@ function U(e) {
                   children: (t) =>
                       (0, r.jsx)(
                           u.P3F,
-                          D(R({}, t), {
+                          D(P({}, t), {
                               onClick: Y,
                               className: a()(C.clanBadgeContainer, O),
                               children: (0, r.jsx)(f.KQ, {
@@ -294,12 +294,12 @@ function U(e) {
                 tabIndex: W ? 0 : -1,
                 children: (0, r.jsx)(
                     m.Z,
-                    D(R({}, e), {
+                    D(P({}, e), {
                         className: O,
                         flowerStarClassName: T,
                         allowFullSizedIcon: !0,
                         color: null != n ? n : w,
-                        stroke: P,
+                        stroke: R,
                         size: B,
                         children: (0, r.jsx)(K, {
                             size: 'custom',

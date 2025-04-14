@@ -38,23 +38,23 @@ let y = (e, t, n, r) => {
             { user: I, details: S, appName: T } = (0, g.n)(n),
             { primaryColor: N, secondaryColor: A } = (0, d.Z)(null == O ? void 0 : O.src),
             C = (0, c.yA)(n),
-            P = (0, c.Nq)(n),
-            R = i.useCallback(
+            R = (0, c.Nq)(n),
+            P = i.useCallback(
                 (e) => {
-                    if (null != t && null != I && null != C && null != P && (0, _.qy)(P))
+                    if (null != t && null != I && null != C && null != R && (0, _.qy)(R))
                         return (0, u.SO)({
                             entry: n,
                             applicationImageSrc: null == O ? void 0 : O.src,
                             avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                            description: y(n, t, I, P),
+                            description: y(n, t, I, R),
                             timestamp: E.NW.formatToPlainString(E.t.YL7UEx, { hours: Math.round(C / a.Z.Seconds.HOUR) }),
                             colors: [N, A],
                             channelId: e
                         });
                 },
-                [null == O ? void 0 : O.src, t, C, n, N, P, A, I]
+                [null == O ? void 0 : O.src, t, C, n, N, R, A, I]
             );
-        if (null == I || null == C || null == P || !(0, _.qy)(P)) return null;
+        if (null == I || null == C || null == R || !(0, _.qy)(R)) return null;
         let w = null != n.extra.platform ? f.v[n.extra.platform] : null;
         return (0, r.jsxs)(h.yR, {
             children: [
@@ -83,7 +83,7 @@ let y = (e, t, n, r) => {
                         onVoiceChannelPreview: b,
                         user: I,
                         channel: t,
-                        generateReactionImage: R,
+                        generateReactionImage: P,
                         reactionImageAltText: v(n, I),
                         entry: n
                     })

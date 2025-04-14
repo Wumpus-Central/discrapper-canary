@@ -25,11 +25,11 @@ let S = 300000,
     N = {},
     A = new f.V7(),
     C = !1,
-    P = window.document.createElement('canvas'),
-    R = 512,
+    R = window.document.createElement('canvas'),
+    P = 512,
     w = 288;
-(P.width = 512), (P.height = w);
-let D = P.getContext('2d');
+(R.width = 512), (R.height = w);
+let D = R.getContext('2d');
 function L() {
     A.stop(), null != r && (u.Z.removeSink(r, N), (r = null));
 }
@@ -45,10 +45,10 @@ let x = s().debounce((e, t, n, r) => {
     );
 }, 500);
 function M(e) {
-    let t = Math.min(R / e.width, w / e.height),
+    let t = Math.min(P / e.width, w / e.height),
         n = e.width * t,
         r = e.height * t;
-    (P.width = n), (P.height = r);
+    (R.width = n), (R.height = r);
     let i = window.document.createElement('canvas'),
         o = i.getContext('2d');
     (i.width = e.width), (i.height = e.height);
@@ -67,7 +67,7 @@ async function k(e, t) {
         try {
             let n = await j(e, 60);
             await M(n);
-            let r = P.toDataURL('image/jpeg');
+            let r = R.toDataURL('image/jpeg');
             if (
                 (_.Z.dispatch({
                     type: 'STREAM_PREVIEW_FETCH_SUCCESS',
@@ -113,7 +113,7 @@ function U(e, t) {
     let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
         o = document.createElement('video'),
         a = document.createElement('canvas');
-    (o.width = a.width = null != r ? r : R), (o.height = a.height = null != i ? i : w), (o.srcObject = n), o.play();
+    (o.width = a.width = null != r ? r : P), (o.height = a.height = null != i ? i : w), (o.srcObject = n), o.play();
     let s = a.getContext('2d');
     return new Promise((e, n) => {
         o.ontimeupdate = () => {

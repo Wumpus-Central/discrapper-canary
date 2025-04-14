@@ -137,7 +137,7 @@ function A(e) {
                 e
             );
         }),
-        R = d.ZP.canUseSoundboardEverywhere(u),
+        P = d.ZP.canUseSoundboardEverywhere(u),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
         D = (0, i.e7)(
             [l.Z],
@@ -151,7 +151,7 @@ function A(e) {
             location: 'soundboard-useSoundGrid',
             autoTrackExposure: !0
         }),
-        M = P(),
+        M = R(),
         k = (0, i.Wu)([p.Z], () => p.Z.recentlyHeardSoundIds),
         j = h.w.useExperiment({ location: 'soundboard-useSoundGrid' });
     return r.useMemo(() => {
@@ -204,7 +204,7 @@ function A(e) {
                       rowLimit: j.numRows,
                       shownAllGuildIds: n
                   }),
-              R || N(i, b),
+              P || N(i, b),
               S({
                   sections: i,
                   guilds: C,
@@ -214,7 +214,7 @@ function A(e) {
                   rowLimit: j.numRows,
                   shownAllGuildIds: n
               }),
-              R && N(i, b),
+              P && N(i, b),
               i.forEach((t) => {
                   t.categoryInfo.type === g.bg.GUILD && (t.categoryInfo.isNitroLocked ? (r += t.items.length) : (e += t.items.length));
               }),
@@ -228,7 +228,7 @@ function A(e) {
                       lockedCustomSoundCount: r
                   }
               });
-    }, [A, b, v, k, M, x, L, w, D, t, R, C, a, O, f, j.numRows, n]);
+    }, [A, b, v, k, M, x, L, w, D, t, P, C, a, O, f, j.numRows, n]);
 }
 function C(e, t, n) {
     return r.useMemo(
@@ -245,7 +245,7 @@ function C(e, t, n) {
         [e, n.length, t]
     );
 }
-function P() {
+function R() {
     return (
         r.useEffect(() => {
             a.DZ.loadIfNecessary();

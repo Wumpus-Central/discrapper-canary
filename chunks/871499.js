@@ -94,12 +94,12 @@ function T(e, t) {
 }
 let N = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
 function A(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: y = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': P, look: R, buttonText: w, size: D } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: y = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': R, look: P, buttonText: w, size: D } = e;
     return (0, r.jsx)(m.Z, {
         children: (0, r.jsx)(l.ua7, {
             position: O,
             text: t,
-            'aria-label': P,
+            'aria-label': R,
             shouldShow: T,
             forceOpen: N,
             children: (e) => {
@@ -110,7 +110,7 @@ function A(e) {
                     I(
                         v(
                             {
-                                look: null != R ? R : l.zxk.Looks.BLANK,
+                                look: null != P ? P : l.zxk.Looks.BLANK,
                                 size: null != D ? D : l.zxk.Sizes.NONE,
                                 onKeyDown: (e) => {
                                     null == i || i(e);
@@ -139,7 +139,7 @@ function A(e) {
                                 wrapperClassName: f,
                                 buttonRef: A,
                                 grow: C,
-                                'aria-label': P
+                                'aria-label': R
                             },
                             N
                         ),
@@ -175,7 +175,7 @@ let C = {
         activeLight: b.activeLight,
         premiumGradient: b.premiumGradient
     },
-    P = {
+    R = {
         disconnect: b.disconnect,
         join: b.join,
         red: b.experimentRed,
@@ -187,7 +187,7 @@ let C = {
         activeLight: b.experimentActiveLight,
         premiumGradient: b.premiumGradient
     },
-    R = {
+    P = {
         disconnect: b.disconnect,
         join: b.join,
         red: b.redGlow,
@@ -214,7 +214,7 @@ function w(e) {
     }, [V]);
     let Z = (0, _.Z)({ location: 'CenterControlButton' }),
         H = M || Z,
-        W = H ? [b.experimentButton, F ? R[j] : P[j], x && null == T && b.fullRegionButton, F && !x && null != T && b.attachedButton] : [C[j]],
+        W = H ? [b.experimentButton, F ? P[j] : R[j], x && null == T && b.fullRegionButton, F && !x && null != T && b.attachedButton] : [C[j]],
         Y = null != (t = k.onContextMenu) ? t : T,
         K = (0, r.jsx)(
             A,
@@ -229,7 +229,7 @@ function w(e) {
         ? K
         : H
           ? (0, r.jsxs)('div', {
-                className: a()(F ? b.attachedCaretButtonContainer : b.caretButtonContainer, F && w && b.popoutOpen, y, x && null != T && [b.fullRegionDropdownButton, P[j]]),
+                className: a()(F ? b.attachedCaretButtonContainer : b.caretButtonContainer, F && w && b.popoutOpen, y, x && null != T && [b.fullRegionDropdownButton, R[j]]),
                 children: [
                     K,
                     null != T
@@ -238,7 +238,7 @@ function w(e) {
                                   'aria-label': E.NW.string(E.t.PdRCRk),
                                   onClick: D ? void 0 : T,
                                   onContextMenu: D ? void 0 : T,
-                                  className: a()(b.contextMenuNubExperiment, F && !x && b.attachedCaret, F ? R[U] : P[U], {
+                                  className: a()(b.contextMenuNubExperiment, F && !x && b.attachedCaret, F ? P[U] : R[U], {
                                       [b.popoutOpen]: w && F,
                                       [b.active]: w,
                                       [b.disabled]: D

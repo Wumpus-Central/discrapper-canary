@@ -17,14 +17,14 @@ n.d(t, {
     H0: () => k,
     Hh: () => eO,
     I$: () => eY,
-    IU: () => eP,
+    IU: () => eR,
     KD: () => G,
     KE: () => eE,
     Mc: () => W,
     OU: () => eS,
     On: () => ep,
     Or: () => e2,
-    R7: () => eR,
+    R7: () => eP,
     Rb: () => ek,
     Rs: () => eN,
     S: () => V,
@@ -268,8 +268,8 @@ function A(e, t, n) {
 function C(e, t, n, i) {
     r.closure487_externref_shim(e, t, n, i);
 }
-let P = ['omit', 'same-origin', 'include'],
-    R = ['same-origin', 'no-cors', 'cors', 'navigate'],
+let R = ['omit', 'same-origin', 'include'],
+    P = ['same-origin', 'no-cors', 'cors', 'navigate'],
     w =
         'undefined' == typeof FinalizationRegistry
             ? {
@@ -503,7 +503,7 @@ function eS(e, t) {
     e.body = t;
 }
 function eT(e, t) {
-    e.credentials = P[t];
+    e.credentials = R[t];
 }
 function eN(e, t) {
     e.headers = t;
@@ -514,10 +514,10 @@ function eA(e, t) {
 function eC(e, t, n) {
     e.method = l(t, n);
 }
-function eP(e, t) {
-    e.mode = R[t];
-}
 function eR(e, t) {
+    e.mode = P[t];
+}
+function eP(e, t) {
     e.signal = t;
 }
 function ew(e, t) {

@@ -37,11 +37,11 @@ let T = new c.Z('GameConsoleManager'),
     N = 3000,
     A = 60000,
     C = 180000;
-async function P(e) {
-    let t = f.ZP.getChannelId();
+async function R(e) {
+    let t = f.Z.getChannelId();
     i()(null == t, 'Syncing to remote while in voice!'), e.selfMute !== d.Z.isSelfMute() && (await s.Z.toggleSelfMute({ syncRemote: !1 })), e.selfDeaf !== d.Z.isSelfDeaf() && s.Z.toggleSelfDeaf({ syncRemote: !1 });
 }
-function R(e) {
+function P(e) {
     let t = E.Z.getAwaitingRemoteSessionInfo();
     return e.find((e) => {
         let n = v.al.has(e.clientInfo.os),
@@ -67,11 +67,11 @@ class w extends l.Z {
                 REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
             }),
             S(this, 'maybeConnect', (e) => {
-                let t = R(e);
+                let t = P(e);
                 if (null == t) return null;
                 this.awaitRemoteTimeout.stop(), (0, m.ef)(t.sessionId);
                 let n = p.Z.getVoiceStateForSession(u.default.getId(), t.sessionId);
-                null != n && P(n);
+                null != n && R(n);
             }),
             S(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
@@ -89,7 +89,7 @@ class w extends l.Z {
                         selfMute: i
                     }),
                     this.rollbackCommandTimeout.start(N, () => {
-                        P(s);
+                        R(s);
                     }));
             }),
             S(this, 'handleVoiceStateUpdates', (e) => {
@@ -108,7 +108,7 @@ class w extends l.Z {
                     let { sessionId: t } = e;
                     return t === n;
                 });
-                null != r && (this.rollbackCommandTimeout.stop(), P(r));
+                null != r && (this.rollbackCommandTimeout.stop(), R(r));
             }),
             S(this, 'handleSessionsChanged', () => {
                 let e = E.Z.getRemoteSessionId();

@@ -68,7 +68,7 @@ e.exports = function (e) {
             literal: d
         },
         C = [E, S, N],
-        P = [
+        R = [
             {
                 match: r(/\./, o(...p)),
                 relevance: 0
@@ -78,12 +78,12 @@ e.exports = function (e) {
                 match: r(/\b/, o(...p), /(?=\()/)
             }
         ],
-        R = {
+        P = {
             match: /->/,
             relevance: 0
         },
         w = [
-            R,
+            P,
             {
                 className: 'operator',
                 relevance: 0,
@@ -226,7 +226,7 @@ e.exports = function (e) {
             begin: /</,
             end: />/,
             keywords: A,
-            contains: [...h, ...C, ...K, R, z]
+            contains: [...h, ...C, ...K, P, z]
         };
     z.contains.push(q);
     let Q = {
@@ -244,7 +244,7 @@ e.exports = function (e) {
                 ...h,
                 H,
                 ...C,
-                ...P,
+                ...R,
                 ...w,
                 x,
                 B,
@@ -366,7 +366,7 @@ e.exports = function (e) {
     for (let e of B.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = A;
-        let n = [...C, ...P, ...w, x, B, ...Y];
+        let n = [...C, ...R, ...w, x, B, ...Y];
         t.contains = [
             ...n,
             {
@@ -396,7 +396,7 @@ e.exports = function (e) {
             },
             H,
             ...C,
-            ...P,
+            ...R,
             ...w,
             x,
             B,

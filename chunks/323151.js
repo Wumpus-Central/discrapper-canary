@@ -30,8 +30,8 @@ e.exports = function (e, t, n, m, g, E) {
             A = S && h.call(t, '__wrapped__');
         if (N || A) {
             var C = N ? e.value() : e,
-                P = A ? t.value() : t;
-            return E || (E = new r()), g(C, P, n, m, E);
+                R = A ? t.value() : t;
+            return E || (E = new r()), g(C, R, n, m, E);
         }
     }
     return !!T && (E || (E = new r()), a(e, t, n, m, g, E));

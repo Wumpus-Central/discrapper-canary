@@ -117,7 +117,7 @@ function m(e) {
                     });
             })
         })),
-        P = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 if (!E.current) return;
                 e.key === o.R8.ESCAPE && null != g && (e.stopPropagation(), e.preventDefault(), g());
@@ -139,7 +139,7 @@ function m(e) {
             },
             [v, t, O, c, g]
         ),
-        R = r.useCallback(() => {
+        P = r.useCallback(() => {
             I || S(!0);
         }, [I]),
         w = r.useCallback(
@@ -161,13 +161,13 @@ function m(e) {
                 role: 'menu',
                 id: t,
                 tabIndex: -1,
-                onKeyDown: P,
-                onFocus: R,
+                onKeyDown: R,
+                onFocus: P,
                 onBlur: w,
                 onMouseLeave: D,
                 'aria-activedescendant': O.length > 0 ? (0, a.qR)(t, O.join(d)) : void 0
             }),
-            [t, P, R, w, D, O]
+            [t, R, P, w, D, O]
         ),
         M = r.useCallback(
             (e) => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(200651),
     i = n(192379),
     o = n(442837),
@@ -70,28 +70,28 @@ function C(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function P(e) {
+function R(e) {
     var { user: t, closePopout: n } = e,
         T = A(e, ['user', 'closePopout']);
     let C = (0, o.e7)([y.Z], () => {
             var e;
             return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        P = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
-        R = (0, o.e7)([p.Z], () => p.Z.getChannel(P)),
+        R = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
+        P = (0, o.e7)([p.Z], () => p.Z.getChannel(R)),
         w = (0, o.e7)([p.Z], () => {
             var e;
-            return null == (e = p.Z.getChannel(P)) ? void 0 : e.guild_id;
+            return null == (e = p.Z.getChannel(R)) ? void 0 : e.guild_id;
         }),
         D = i.useMemo(
             () =>
-                null != R
+                null != P
                     ? {
-                          channel: R,
+                          channel: P,
                           type: 'channel'
                       }
                     : { type: 'contextless' },
-            [R]
+            [P]
         ),
         L = (0, s.Z)({ context: D }),
         x = t.id,

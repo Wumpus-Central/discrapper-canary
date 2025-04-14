@@ -66,10 +66,10 @@ function S(e) {
             },
             'animate-always'
         ),
-        E = y ? N : void 0;
+        Z = y ? N : void 0;
     (y || S) &&
         (t = (0, r.jsx)(a.animated.div, {
-            style: E,
+            style: Z,
             className: v.expandedFolderIconWrapper,
             children: (0, r.jsx)(d.ROc, {
                 size: u ? 'sm' : 'md',
@@ -79,7 +79,7 @@ function S(e) {
         })),
         (y || !S) &&
             (n = (0, r.jsx)(a.animated.div, {
-                style: E,
+                style: Z,
                 className: v.closedFolderIconWrapper,
                 children: b.slice(0, 4).map((e, t) =>
                     (0, r.jsx)(
@@ -93,10 +93,10 @@ function S(e) {
                     )
                 )
             }));
-    let Z = { backgroundColor: u && m ? d.TVs.colors.BG_MOD_SUBTLE.css : (0, s.br)(g, 0.4) };
+    let E = { backgroundColor: u && m ? d.TVs.colors.BG_MOD_SUBTLE.css : (0, s.br)(g, 0.4) };
     return (0, r.jsxs)('div', {
         'aria-hidden': !0,
-        style: c ? void 0 : Z,
+        style: c ? void 0 : E,
         className: v.folderIconWrapper,
         children: [t, n]
     });
@@ -121,7 +121,7 @@ function P(e) {
             onKeyDown: I,
             treeItemProps: { onFocus: N }
         } = e,
-        E = (function (e, t) {
+        Z = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -140,7 +140,7 @@ function P(e) {
             }
             return i;
         })(e.treeItemProps, ['onFocus']),
-        [Z, w] = i.useState(!1),
+        [E, w] = i.useState(!1),
         T = i.useCallback(() => {
             c || w(!0), null == P || P(!0);
         }, [c, P]),
@@ -191,7 +191,7 @@ function P(e) {
                 return e;
             })(
                 {
-                    className: o()(v.folder, { [v.hover]: Z }),
+                    className: o()(v.folder, { [v.hover]: E }),
                     onClick: C,
                     onContextMenu: x,
                     onMouseEnter: T,
@@ -206,7 +206,7 @@ function P(e) {
                     'aria-owns': _,
                     focusProps: { enabled: !1 }
                 },
-                E
+                Z
             )),
             (n = n =
                 {
@@ -219,7 +219,7 @@ function P(e) {
                               })
                             : (0, r.jsx)(S, {
                                   folderNode: l,
-                                  hovered: Z,
+                                  hovered: E,
                                   expanded: s
                               })
                 }),

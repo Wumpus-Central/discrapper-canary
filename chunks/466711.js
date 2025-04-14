@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -100,7 +100,7 @@ function D(e) {
         };
     return (0, r.jsx)(
         v.Z,
-        R(
+        P(
             C(
                 {
                     innerClassName: N.button,
@@ -146,10 +146,10 @@ function x(e) {
         [S, N] = i.useState(!1),
         A = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
         C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        P = null != C ? b.default.age(C.id) : 0,
-        { giftBoxAnimation: R, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
+        R = null != C ? b.default.age(C.id) : 0,
+        { giftBoxAnimation: P, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         M = (0, p.u)(),
-        k = void 0 !== M && !s && A && P >= L,
+        k = void 0 !== M && !s && A && R >= L,
         [j, U] = (0, f.XR)(k ? a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         G = null != j,
         B = S || G,
@@ -173,9 +173,9 @@ function x(e) {
             N(!1), U(I.L.TAKE_ACTION), F();
         },
         H =
-            void 0 !== R
+            void 0 !== P
                 ? (0, r.jsx)(w, {
-                      config: R,
+                      config: P,
                       hovered: B,
                       onClick: Z
                   })

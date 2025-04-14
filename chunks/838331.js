@@ -1,6 +1,6 @@
 n.d(t, {
     A7: () => N,
-    hQ: () => P,
+    hQ: () => R,
     lo: () => w
 }),
     n(388685);
@@ -117,8 +117,8 @@ let C = i.createContext({
     setSelected: () => null,
     itemToString: A
 });
-function P(e) {
-    let { placeholder: t, children: n, value: o, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: O = !1, autoFocus: T = !1, maxVisibleItems: N = 5, itemToString: P = A, showScrollbar: R = !1 } = e,
+function R(e) {
+    let { placeholder: t, children: n, value: o, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: O = !1, autoFocus: T = !1, maxVisibleItems: N = 5, itemToString: R = A, showScrollbar: P = !1 } = e,
         [w, D] = i.useState(''),
         [L] = i.useState(!0),
         [x, M] = i.useState(null),
@@ -169,7 +169,7 @@ function P(e) {
             scrollToEnd: F,
             setFocus: Z
         }),
-        W = R ? d.Tv : d.lW;
+        W = P ? d.Tv : d.lW;
     return (0, r.jsx)(l.bG, {
         navigator: H,
         children: (0, r.jsx)(l.SJ, {
@@ -195,7 +195,7 @@ function P(e) {
                             onKeyDown: i,
                             onBlur: () => M(null),
                             onClear: () => D(''),
-                            className: a()({ [m.searchWithScrollbar]: R }),
+                            className: a()({ [m.searchWithScrollbar]: P }),
                             inputProps: {
                                 'aria-multiline': !1,
                                 'aria-activedescendant': null != x ? x : void 0
@@ -224,7 +224,7 @@ function P(e) {
                                               activeDescendant: x,
                                               selected: o,
                                               setSelected: c,
-                                              itemToString: P
+                                              itemToString: R
                                           },
                                           children: (0, r.jsx)(
                                               W,
@@ -233,7 +233,7 @@ function P(e) {
                                                   'aria-multiselectable': O,
                                                   id: k,
                                                   ref: j,
-                                                  className: a()(m.list, g, { [m.scroller]: R }),
+                                                  className: a()(m.list, g, { [m.scroller]: P }),
                                                   sections: [U.length],
                                                   sectionHeight: 0,
                                                   rowHeight: S,
@@ -252,7 +252,7 @@ function P(e) {
         })
     });
 }
-let R = i.createContext(null);
+let P = i.createContext(null);
 function w(e) {
     var t,
         { value: n, children: o, disabled: s = !1, selectedColor: c = T.STANDARD } = e,
@@ -283,7 +283,7 @@ function w(e) {
                 role: 'option',
                 'aria-selected': O,
                 'aria-disabled': s,
-                children: (0, r.jsx)(R.Provider, {
+                children: (0, r.jsx)(P.Provider, {
                     value: n,
                     children: o
                 })
@@ -309,7 +309,7 @@ function w(e) {
     (w.Checkbox = function (e) {
         let { checked: t } = e,
             { selected: n } = i.useContext(C),
-            o = i.useContext(R);
+            o = i.useContext(P);
         return (0, r.jsx)('span', {
             className: m.itemCheckbox,
             children: (0, r.jsx)(c.X, {
@@ -322,7 +322,7 @@ function w(e) {
     }),
     (w.Checkmark = function () {
         let { selected: e } = i.useContext(C),
-            t = i.useContext(R);
+            t = i.useContext(P);
         return e.has(t)
             ? (0, r.jsx)('span', {
                   className: m.itemCheckbox,

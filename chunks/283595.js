@@ -80,22 +80,22 @@ function A() {
 function C() {
     s.K.set(E, g(h({}, b()), { activeLibraryApplicationBranchIds: S }));
 }
-function P(e) {
+function R(e) {
     for (let t of e) {
         let e = c.Z.createFromServer(t);
         v[(0, d.Tu)(e.id, e.branchId)] = e;
     }
 }
-function R() {
+function P() {
     y = !1;
 }
 function w(e) {
     let { libraryApplications: t } = e;
-    (v = {}), P(t), (y = !0);
+    (v = {}), R(t), (y = !0);
 }
 function D(e) {
     let { libraryApplications: t } = e;
-    P(t);
+    R(t);
 }
 function L(e) {
     let { applicationId: t, branchId: n, flags: r } = e,
@@ -210,7 +210,7 @@ class F extends (r = a.ZP.Store) {
 }
 p(F, 'displayName', 'LibraryApplicationStore');
 let Z = new F(l.Z, {
-    LOGOUT: R,
+    LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: D,
     LIBRARY_APPLICATION_FLAGS_UPDATE_START: L,

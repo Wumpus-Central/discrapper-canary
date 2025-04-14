@@ -53,8 +53,8 @@ function N(e) {
 }
 let A = O.kod,
     C = {},
-    P = new Set(),
-    R = 0;
+    R = new Set(),
+    P = 0;
 function w(e) {
     var t;
     let n = C[null != e ? e : A];
@@ -75,7 +75,7 @@ function D(e) {
 }
 function L(e) {
     let t = D(e);
-    t.sentinel++, R++;
+    t.sentinel++, P++;
 }
 function x(e, t, n) {
     return null != e.guild_id && n && !((0, d.Q5)(e.type) || y.ZP.isChannelRecordOrParentOptedIn(e)) && 0 === t;
@@ -122,7 +122,7 @@ function Z(e, t, n) {
             let { count: n, isMentionLowImportance: r } = e;
             r ? (t.lowImportanceMentionCount += n) : (t.highImportanceMentionCount += n);
         }),
-        (t.unread !== n.unread || t.lowImportanceMentionCount !== n.lowImportanceMentionCount || t.highImportanceMentionCount !== n.highImportanceMentionCount) && ((C[null != e ? e : A] = t), null != e && (t.unread ? P.add(e) : P.delete(e)), R++, L(null != e ? e : A), F(t, n), !0)
+        (t.unread !== n.unread || t.lowImportanceMentionCount !== n.lowImportanceMentionCount || t.highImportanceMentionCount !== n.highImportanceMentionCount) && ((C[null != e ? e : A] = t), null != e && (t.unread ? R.add(e) : R.delete(e)), P++, L(null != e ? e : A), F(t, n), !0)
     );
 }
 function H(e, t) {
@@ -152,7 +152,7 @@ function H(e, t) {
     ) {
         let e = p.Z.getChannel(r.unreadChannelId);
         if (!(null != e && !t.includes(e.id) && g.ZP.hasUnread(e.id) && M(e))) return Y(n);
-        null != n && P.add(n), (i.unreadByType[S.W.CHANNEL] = !0);
+        null != n && R.add(n), (i.unreadByType[S.W.CHANNEL] = !0);
     }
     return Z(n, i, r);
 }
@@ -221,11 +221,11 @@ function Y(e, t) {
     }
     V(r);
     let f = D(n);
-    return (r.unread !== f.unread || r.highImportanceMentionCount !== f.highImportanceMentionCount || r.lowImportanceMentionCount !== f.lowImportanceMentionCount) && ((C[null != n ? n : A] = r), null != n && (r.unread ? P.add(n) : P.delete(n)), R++, L(null != n ? n : A), F(r, f), !0);
+    return (r.unread !== f.unread || r.highImportanceMentionCount !== f.highImportanceMentionCount || r.lowImportanceMentionCount !== f.lowImportanceMentionCount) && ((C[null != n ? n : A] = r), null != n && (r.unread ? R.add(n) : R.delete(n)), P++, L(null != n ? n : A), F(r, f), !0);
 }
 function K(e) {
     let { guilds: t } = e;
-    (C = {}), (R = 0), (P = new Set()), Y(null);
+    (C = {}), (P = 0), (R = new Set()), Y(null);
     let { length: n } = t;
     for (let e = 0; e < n; e++) {
         let n = t[e];
@@ -234,7 +234,7 @@ function K(e) {
 }
 function z(e) {
     let { guilds: t, readState: n } = e;
-    (C = {}), (R = 0), (P = new Set());
+    (C = {}), (P = 0), (R = new Set());
     let r = n.entries.length < 500,
         i = new Set();
     for (let e of (r &&
@@ -250,7 +250,7 @@ function z(e) {
         Y(e.id, r ? i.has(e.id) : void 0);
 }
 function q() {
-    for (let e of ((C = {}), (P = new Set()), Y(null), Object.values(h.Z.getGuildIds()))) Y(e);
+    for (let e of ((C = {}), (R = new Set()), Y(null), Object.values(h.Z.getGuildIds()))) Y(e);
 }
 function Q(e) {
     let { guild: t } = e;
@@ -258,7 +258,7 @@ function Q(e) {
 }
 function X(e) {
     let { guild: t } = e;
-    return null != C[t.id] && (delete C[t.id], P.delete(t.id), R++, !0);
+    return null != C[t.id] && (delete C[t.id], R.delete(t.id), P++, !0);
 }
 function J(e) {
     let {
@@ -401,31 +401,31 @@ class ev extends b.Z {
     }
     loadCache() {
         let e = this.readSnapshot(ev.LATEST_SNAPSHOT_VERSION);
-        null != e && ((C = e.guilds), (P = new Set(e.unreadGuilds)));
+        null != e && ((C = e.guilds), (R = new Set(e.unreadGuilds)));
     }
     takeSnapshot() {
         return {
             version: ev.LATEST_SNAPSHOT_VERSION,
             data: {
                 guilds: C,
-                unreadGuilds: Array.from(P)
+                unreadGuilds: Array.from(R)
             }
         };
     }
     hasAnyUnread() {
-        return P.size > 0;
+        return R.size > 0;
     }
     getStoreChangeSentinel() {
-        return R;
+        return P;
     }
     getMutableUnreadGuilds() {
-        return P;
+        return R;
     }
     getMutableGuildStates() {
         return C;
     }
     hasUnread(e) {
-        return P.has(e);
+        return R.has(e);
     }
     getMentionCount(e) {
         let t = D(e);

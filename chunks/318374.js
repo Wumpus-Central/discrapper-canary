@@ -64,7 +64,7 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, avatarClassName: b, size: y = c.EFr.SIZE_24, overflowCountVariant: v = 'text-xs/medium', overflowCountColor: O = 'interactive-normal', overflowCountClassName: I, hideOverflowCount: S = !1, disableUsernameTooltip: T = !1, disableUserPopout: N = !1, onClick: A, onFocus: C, onUserClick: P, onUserPopoutRequestClose: R } = e,
+    let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, avatarClassName: b, size: y = c.EFr.SIZE_24, overflowCountVariant: v = 'text-xs/medium', overflowCountColor: O = 'interactive-normal', overflowCountClassName: I, hideOverflowCount: S = !1, disableUsernameTooltip: T = !1, disableUserPopout: N = !1, onClick: A, onFocus: C, onUserClick: R, onUserPopoutRequestClose: P } = e,
         [w, D] = i.useState(!1);
     function L() {
         return (0, r.jsx)(c.VqE, {
@@ -80,9 +80,9 @@ function b(e) {
                             channelId: h,
                             nick: f.ZP.getNickname(s, h, e),
                             disablePopout: 'function' == typeof N ? N(e.id) : N,
-                            onClick: P,
+                            onClick: R,
                             onPopoutRequestClose: () => {
-                                D(!1), null == R || R();
+                                D(!1), null == P || P();
                             },
                             onContextMenu: (t) =>
                                 (0, u.jW)(

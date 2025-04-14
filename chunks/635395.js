@@ -54,13 +54,13 @@ g.isPlatformEmbedded &&
     m.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
         a.Z.open(b.oAB.VOICE);
     }),
-    (O = i.ZP.connectStores([p.ZP, u.Z, f.Z, c.default, h.Z, d.Z, o.Z], () => {
+    (O = i.ZP.connectStores([p.Z, u.Z, f.Z, c.default, h.Z, d.Z, o.Z], () => {
         let e = c.default.getTotalMentionCount(),
             t = c.default.hasAnyUnread(),
             n = (0, s.m$)([h.Z, o.Z]),
             r = !d.Z.getDisableUnreadBadge() && !!(t || e + n > 0);
         return {
-            connected: p.ZP.isConnected(),
+            connected: p.Z.isConnected(),
             speaking: f.Z.isCurrentUserSpeaking(),
             muted: u.Z.isSelfMute() || u.Z.isSelfMutedTemporarily(),
             deafened: u.Z.isSelfDeaf(),

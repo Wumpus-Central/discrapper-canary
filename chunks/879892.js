@@ -86,8 +86,8 @@ function y(e, t) {
 }
 let v = 'apply-guild-boost-modal';
 async function O(e) {
-    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: y, onClose: O, closeLayer: I, onSubscriptionConfirmation: S, onSubscribeComplete: T, guild: N, handleSubscribeModalClose: A, disablePremiumUpsell: C, inPopout: P, applicationId: R, intent: w } = e,
-        D = P ? i.u1M : i.z1l,
+    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: y, onClose: O, closeLayer: I, onSubscriptionConfirmation: S, onSubscribeComplete: T, guild: N, handleSubscribeModalClose: A, disablePremiumUpsell: C, inPopout: R, applicationId: P, intent: w } = e,
+        D = R ? i.u1M : i.z1l,
         L = l.default.getCurrentUser();
     if (null == L) return;
     if (!L.verified)
@@ -159,8 +159,8 @@ async function O(e) {
             disablePremiumUpsell: C,
             onSubscriptionConfirmation: S,
             onSubscribeComplete: T,
-            inPopout: P,
-            applicationId: R,
+            inPopout: R,
+            applicationId: P,
             intent: w
         });
 }

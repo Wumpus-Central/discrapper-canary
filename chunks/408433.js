@@ -1,7 +1,7 @@
 n.d(t, {
-    En: () => R,
+    En: () => P,
     dY: () => T,
-    eC: () => P,
+    eC: () => R,
     jz: () => A,
     kC: () => O,
     l3: () => N,
@@ -182,9 +182,9 @@ function C(e, t, n) {
                 maxMediaHeight: 300
             };
 }
-function P(e, t) {
+function R(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
 }
-function R(e) {
+function P(e) {
     return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }

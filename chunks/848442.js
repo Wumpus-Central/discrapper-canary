@@ -50,7 +50,7 @@ function N(e) {
     }
     return e;
 }
-function E(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,18 +68,18 @@ function E(e, t) {
         e
     );
 }
-function Z(e) {
+function E(e) {
     let { guildId: t, selected: n, handleClick: i } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         g = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
         x = (null == g ? void 0 : g.hasFeature(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        Z = 'false' === s.K.get(S.tM, 'false'),
+        E = 'false' === s.K.get(S.tM, 'false'),
         w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(j.m, {
         id: 'shop-'.concat(t),
         className: l()(I.previewChannelRow, {
             [I.selected]: n,
-            [I.phantomPreview]: Z
+            [I.phantomPreview]: E
         }),
         innerClassName: I.previewChannelRowContent,
         renderIcon: (e) =>
@@ -109,7 +109,7 @@ function Z(e) {
                     (0, r.jsx)(c.P3F, {
                         className: I.closeButton,
                         onClick: (e) => {
-                            if ((e.stopPropagation(), (0, b.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), O.default.track(C.rMx.GUILD_SHOP_PREVIEW_CLICK, E(N({}, (0, p.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !x)) {
+                            if ((e.stopPropagation(), (0, b.EW)(a.z.SERVER_SHOP_PHANTOM_PREVIEW), O.default.track(C.rMx.GUILD_SHOP_PREVIEW_CLICK, Z(N({}, (0, p.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW })), !u || !x)) {
                                 var n;
                                 (0, _.dL)(C.Z5c.CHANNEL(t, null == (n = y.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }
@@ -131,7 +131,7 @@ function w(e) {
             s.K.set(S.tM, 'true'), (0, _.uL)(C.Z5c.CHANNEL(t.id, x.oC.GUILD_SHOP));
         };
     return l
-        ? (0, r.jsx)(Z, {
+        ? (0, r.jsx)(E, {
               guildId: t.id,
               selected: i,
               handleClick: o
@@ -151,7 +151,7 @@ function w(e) {
                   null != t &&
                       (0, u.jW)(e, async () => {
                           let { default: e } = await n.e('66050').then(n.bind(n, 376573));
-                          return (n) => (0, r.jsx)(e, E(N({}, n), { guild: t }));
+                          return (n) => (0, r.jsx)(e, Z(N({}, n), { guild: t }));
                       });
               }
           });

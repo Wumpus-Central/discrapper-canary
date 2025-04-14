@@ -691,8 +691,8 @@ function e7() {
         u = (0, C.Z)({ userId: n }),
         m = eF.ZP.useUserTag(t, { decoration: 'never' }),
         g = (0, o.e7)([eZ.Z], () => eZ.Z.hidePersonalInformation),
-        p = (0, o.e7)([eP.ZP, eI.Z], () => {
-            let e = eP.ZP.getChannelId();
+        p = (0, o.e7)([eP.Z, eI.Z], () => {
+            let e = eP.Z.getChannelId();
             return null != e ? eI.Z.getChannel(e) : null;
         }),
         { mute: h, selfMute: N, suppress: x } = (0, ex.Z)(p),
@@ -838,7 +838,7 @@ function tt(e) {
         { activeVoice: y } = (0, ej.o)(),
         R = null != y,
         D = (0, eE.z)(y),
-        Z = (0, o.e7)([eP.ZP], () => eP.ZP.isConnected()),
+        Z = (0, o.e7)([eP.Z], () => eP.Z.isConnected()),
         { Component: w, events: k, play: L } = R ? I : T,
         B = n || s ? f.v0G : w,
         { mode: M } = (0, ef.ZP)({ location: 'RTC Microphone Button' }),

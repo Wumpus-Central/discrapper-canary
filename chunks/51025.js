@@ -2,7 +2,7 @@ n.d(t, {
     A1: () => A,
     LO: () => y,
     S1: () => E,
-    Wx: () => R,
+    Wx: () => P,
     XT: () => w,
     al: () => C,
     cG: () => v,
@@ -11,7 +11,7 @@ n.d(t, {
     pC: () => S,
     v4: () => T,
     wO: () => N,
-    wi: () => P
+    wi: () => R
 }),
     n(415506);
 var r = n(544891),
@@ -153,14 +153,14 @@ function C(e, t) {
             branchId: t
         });
 }
-function P(e, t) {
+function R(e, t) {
     i.Z.dispatch({
         type: 'DISPATCH_APPLICATION_REMOVE_FINISHED',
         applicationId: e,
         branchId: t
     });
 }
-function R(e, t) {
+function P(e, t) {
     let n = o.Z.getApplication(e);
     null != n && f.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), n.name, n.id, t.installPath);
 }

@@ -90,10 +90,10 @@ function O(e) {
         { skuId: n, isGift: u = !1, giftMessage: _, giftingOrigin: h, onClose: E, onComplete: O, analyticsLocations: I, analyticsObject: S, giftRecipient: T, variantsReturnStyle: N } = e,
         A = !1,
         C = (0, i.Z)(),
-        P = (e) => {
+        R = (e) => {
             t = e;
         },
-        R = u ? y : b;
+        P = u ? y : b;
     (0, o.ZDy)(
         async () => (e) => {
             var { onClose: t, returnRef: i } = e,
@@ -115,12 +115,12 @@ function O(e) {
                         (A = !0), null == O || O();
                     },
                     returnRef: i,
-                    onStepChange: P
+                    onStepChange: R
                 })
             );
         },
         {
-            modalKey: R,
+            modalKey: P,
             onCloseCallback: () => {
                 A ||
                     c.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
@@ -141,7 +141,7 @@ function O(e) {
                         });
             },
             onCloseRequest: () => {
-                null != t && v.has(t) && (0, o.Mr3)(R);
+                null != t && v.has(t) && (0, o.Mr3)(P);
             }
         }
     );

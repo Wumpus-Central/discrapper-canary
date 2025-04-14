@@ -135,7 +135,7 @@ function O(e) {
     return !0;
 }
 function I(e) {
-    return !c.ZP.getWasEverRtcConnected() || c.ZP.getWasEverMultiParticipant();
+    return !c.Z.getWasEverRtcConnected() || c.Z.getWasEverMultiParticipant();
 }
 function S(e) {
     let t = E[e];

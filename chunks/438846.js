@@ -7,8 +7,8 @@ let a = {
     comboKeysBindGlobal: !0,
     action(e) {
         e.preventDefault(), e.stopPropagation();
-        let t = i.ZP.getGuildId(),
-            n = i.ZP.getChannelId();
+        let t = i.Z.getGuildId(),
+            n = i.Z.getChannelId();
         return null != n && (0, r.K)(null != t ? t : s.ME, n), !1;
     }
 };

@@ -26,8 +26,8 @@ function x(e) {
         P = (0, u.wE)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([h.Z], () => Array.from(h.Z.getNewChannelIds(t.id)).filter((e) => h.Z.shouldIndicateNewChannel(t.id, e))),
         N = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, O.W.GUILD_ONBOARDING_QUESTION)),
-        E = I.length > b.Cb,
-        Z = (0, l.e7)([d.Z, g.ZP], () => {
+        Z = I.length > b.Cb,
+        E = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
                 n = g.ZP.lastMessageId(t.id, O.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
@@ -92,9 +92,9 @@ function x(e) {
         ),
         A = null;
     return (
-        (P && !N && !E) ||
+        (P && !N && !Z) ||
             x ||
-            Z ||
+            E ||
             (A = (0, r.jsx)(s.IGR, {
                 color: a.Z.colors.BADGE_BRAND_BG.css,
                 text: j.NW.string(j.t.y2b7CA),

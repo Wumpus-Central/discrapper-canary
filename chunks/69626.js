@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => R,
-    wz: () => P
+    ZP: () => P,
+    wz: () => R
 });
 var r = n(200651),
     i = n(192379),
@@ -206,7 +206,7 @@ function C(e) {
               children: [y.GI, s(n.content, p)]
           });
 }
-function P(e) {
+function R(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: s, onClick: l } = e,
         u = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         d = (e) => {
@@ -229,7 +229,7 @@ function P(e) {
         }
     });
 }
-function R(e) {
+function P(e) {
     return {
         react: (e, t, n) =>
             (0, r.jsx)(C, {

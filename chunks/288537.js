@@ -24,8 +24,8 @@ var r,
     N = 8,
     A = 9,
     C = 15,
-    P = 8,
-    R = 286,
+    R = 8,
+    P = 286,
     w = 30,
     D = 19,
     L = 573,
@@ -189,7 +189,7 @@ function ef(e) {
     (e.window_size = 2 * e.w_size), $(e.head), (e.max_lazy_match = r[e.level].max_lazy), (e.good_match = r[e.level].good_length), (e.nice_match = r[e.level].nice_length), (e.max_chain_length = r[e.level].max_chain), (e.strstart = 0), (e.block_start = 0), (e.lookahead = 0), (e.insert = 0), (e.match_length = e.prev_length = M - 1), (e.match_available = 0), (e.ins_h = 0);
 }
 function e_() {
-    (this.strm = null), (this.status = 0), (this.pending_buf = null), (this.pending_buf_size = 0), (this.pending_out = 0), (this.pending = 0), (this.wrap = 0), (this.gzhead = null), (this.gzindex = 0), (this.method = N), (this.last_flush = -1), (this.w_size = 0), (this.w_bits = 0), (this.w_mask = 0), (this.window = null), (this.window_size = 0), (this.prev = null), (this.head = null), (this.ins_h = 0), (this.hash_size = 0), (this.hash_bits = 0), (this.hash_mask = 0), (this.hash_shift = 0), (this.block_start = 0), (this.match_length = 0), (this.prev_match = 0), (this.match_available = 0), (this.strstart = 0), (this.match_start = 0), (this.lookahead = 0), (this.prev_length = 0), (this.max_chain_length = 0), (this.max_lazy_match = 0), (this.level = 0), (this.strategy = 0), (this.good_match = 0), (this.nice_match = 0), (this.dyn_ltree = new i.Buf16(2 * L)), (this.dyn_dtree = new i.Buf16((2 * w + 1) * 2)), (this.bl_tree = new i.Buf16((2 * D + 1) * 2)), $(this.dyn_ltree), $(this.dyn_dtree), $(this.bl_tree), (this.l_desc = null), (this.d_desc = null), (this.bl_desc = null), (this.bl_count = new i.Buf16(x + 1)), (this.heap = new i.Buf16(2 * R + 1)), $(this.heap), (this.heap_len = 0), (this.heap_max = 0), (this.depth = new i.Buf16(2 * R + 1)), $(this.depth), (this.l_buf = 0), (this.lit_bufsize = 0), (this.last_lit = 0), (this.d_buf = 0), (this.opt_len = 0), (this.static_len = 0), (this.matches = 0), (this.insert = 0), (this.bi_buf = 0), (this.bi_valid = 0);
+    (this.strm = null), (this.status = 0), (this.pending_buf = null), (this.pending_buf_size = 0), (this.pending_out = 0), (this.pending = 0), (this.wrap = 0), (this.gzhead = null), (this.gzindex = 0), (this.method = N), (this.last_flush = -1), (this.w_size = 0), (this.w_bits = 0), (this.w_mask = 0), (this.window = null), (this.window_size = 0), (this.prev = null), (this.head = null), (this.ins_h = 0), (this.hash_size = 0), (this.hash_bits = 0), (this.hash_mask = 0), (this.hash_shift = 0), (this.block_start = 0), (this.match_length = 0), (this.prev_match = 0), (this.match_available = 0), (this.strstart = 0), (this.match_start = 0), (this.lookahead = 0), (this.prev_length = 0), (this.max_chain_length = 0), (this.max_lazy_match = 0), (this.level = 0), (this.strategy = 0), (this.good_match = 0), (this.nice_match = 0), (this.dyn_ltree = new i.Buf16(2 * L)), (this.dyn_dtree = new i.Buf16((2 * w + 1) * 2)), (this.bl_tree = new i.Buf16((2 * D + 1) * 2)), $(this.dyn_ltree), $(this.dyn_dtree), $(this.bl_tree), (this.l_desc = null), (this.d_desc = null), (this.bl_desc = null), (this.bl_count = new i.Buf16(x + 1)), (this.heap = new i.Buf16(2 * P + 1)), $(this.heap), (this.heap_len = 0), (this.heap_max = 0), (this.depth = new i.Buf16(2 * P + 1)), $(this.depth), (this.l_buf = 0), (this.lit_bufsize = 0), (this.last_lit = 0), (this.d_buf = 0), (this.opt_len = 0), (this.static_len = 0), (this.matches = 0), (this.insert = 0), (this.bi_buf = 0), (this.bi_valid = 0);
 }
 function ep(e) {
     var t;
@@ -312,7 +312,7 @@ function ey(e, t) {
     new ed(32, 258, 258, 4096, el)
 ]),
     (t.deflateInit = function (e, t) {
-        return eg(e, t, N, C, P, S);
+        return eg(e, t, N, C, R, S);
     }),
     (t.deflateInit2 = eg),
     (t.deflateReset = eh),

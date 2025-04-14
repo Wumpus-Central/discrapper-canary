@@ -1,6 +1,6 @@
 r.d(t, {
     al: () => N,
-    ck: () => j
+    ck: () => C
 }),
     r(388685),
     r(539854),
@@ -250,7 +250,7 @@ let N = {
         videoEntropy: D
     },
     E = (e) => e,
-    P = (e) => {
+    j = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -265,7 +265,7 @@ let N = {
             })
         );
     };
-function j(e) {
+function C(e) {
     var t, r, a;
     let { label: i, value: s, section: u } = e,
         m = null != (r = b[i]) ? r : E,
@@ -278,7 +278,7 @@ function j(e) {
                       height: 100
                   })
                 : 'number' == typeof s
-                  ? (0, n.jsx)(P, {
+                  ? (0, n.jsx)(j, {
                         value: s,
                         width: 300,
                         height: 100

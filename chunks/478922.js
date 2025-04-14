@@ -91,7 +91,7 @@ function g(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, m) {
         var g,
-            { onScroll: E, dir: b = 'ltr', sections: y, columns: v, getItemKey: O, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: N, renderItem: A, getSectionProps: C, itemGutter: P, removeEdgeItemGutters: R, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
+            { onScroll: E, dir: b = 'ltr', sections: y, columns: v, getItemKey: O, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: N, renderItem: A, getSectionProps: C, itemGutter: R, removeEdgeItemGutters: P, sectionGutter: w, padding: D, paddingVertical: L, paddingHorizontal: x, fade: M = !1, className: k, style: j, maxContentWidth: U, renderAccessory: G, onItemVisibilityChange: B } = n,
             V = h(n, ['onScroll', 'dir', 'sections', 'columns', 'getItemKey', 'getItemHeight', 'getSectionHeight', 'chunkSize', 'renderSection', 'renderItem', 'getSectionProps', 'itemGutter', 'removeEdgeItemGutters', 'sectionGutter', 'padding', 'paddingVertical', 'paddingHorizontal', 'fade', 'className', 'style', 'maxContentWidth', 'renderAccessory', 'onItemVisibilityChange']);
         let F = i.useRef(null),
             Z = i.useRef(null),
@@ -120,8 +120,8 @@ function g(e, t, n) {
             getItemHeight: I,
             getSectionHeight: S,
             chunkSize: T,
-            itemGutter: P,
-            removeEdgeItemGutters: R,
+            itemGutter: R,
+            removeEdgeItemGutters: P,
             sectionGutter: w,
             padding: D,
             paddingVertical: L,

@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function P(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -258,7 +258,7 @@ class j {
             screentype_fullscreen_duration: r[l.Jx.FULLSCREEN],
             screentype_minimized_duration: r[l.Jx.MINIMIZED]
         };
-        return R(C({}, c), {
+        return P(C({}, c), {
             screentype_global_supported_duration: c.screentype_windowed_duration + c.screentype_maximized_duration + c.screentype_borderless_fullscreen_duration,
             screentype_global_unsupported_duration: c.screentype_fullscreen_duration,
             screentype_initial: l.Jx[this.game.fullscreenType],
@@ -328,7 +328,7 @@ class G {
         }
         if (null == n) return C({ original_method: e }, o);
         let a = n.any_other_method;
-        return C(R(C({}, n), { any_other_method: e !== a ? e : a }), o);
+        return C(P(C({}, n), { any_other_method: e !== a ? e : a }), o);
     }
     static getGameName(e) {
         var t, n;
@@ -403,9 +403,9 @@ class G {
             O = null != v.any_other_method ? s.gl[v.any_other_method] : null,
             I = b.enabledLegacy || b.enabledOOP;
         return {
-            usage: R(
+            usage: P(
                 C(
-                    R(
+                    P(
                         C(
                             {
                                 event_uuid: this.uuid,

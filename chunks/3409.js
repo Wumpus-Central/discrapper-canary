@@ -32,8 +32,8 @@ var r = n(200651),
     N = n(409813),
     A = n(51499),
     C = n(586585),
-    P = n(614277),
-    R = n(620824),
+    R = n(614277),
+    P = n(620824),
     w = n(737143),
     D = n(926841),
     L = n(35248),
@@ -275,11 +275,11 @@ function eN(e) {
             steps: [...m, ...eu, ...g],
             methodType: z.He.EPS
         },
-        eP = {
+        eR = {
             steps: [...m, ...ed, ...g],
             methodType: z.He.IDEAL
         },
-        eR = {
+        eP = {
             steps: [...m, ...ef, ...g],
             methodType: z.He.CASH_APP
         };
@@ -288,7 +288,7 @@ function eN(e) {
             case N.h8.CREDIT_CARD_INFORMATION:
                 return er;
             case N.h8.CASH_APP_INFORMATION:
-                return eR;
+                return eP;
             default:
                 return { steps: [N.h8.ADD_PAYMENT_STEPS] };
         }
@@ -335,7 +335,7 @@ function eN(e) {
     }
     let ti = (0, w.q1)().enabled && J,
         to = (0, D.a)().enabled && J,
-        ta = (0, R.b)().enabled,
+        ta = (0, P.b)().enabled,
         ts = ta && J,
         tl = (0, V.isDesktop)() ? [] : [...(ta ? ['applePay'] : []), 'googlePay'];
     to && !tl.includes('googlePay') && tl.push('googlePay'), ts && !tl.includes('applePay') && tl.push('applePay');
@@ -369,10 +369,10 @@ function eN(e) {
                             ej(eC), eW(N.h8.EPS_INFORMATION);
                             break;
                         case z.He.IDEAL:
-                            ej(eP), eW(N.h8.IDEAL_INFORMATION);
+                            ej(eR), eW(N.h8.IDEAL_INFORMATION);
                             break;
                         case z.He.CASH_APP:
-                            ej(eR), eW(N.h8.CASH_APP_INFORMATION);
+                            ej(eP), eW(N.h8.CASH_APP_INFORMATION);
                             break;
                         case z.He.GIROPAY:
                         case z.He.PAYSAFE_CARD:
@@ -756,10 +756,10 @@ function eN(e) {
                           className: Q.paymentModalBreadcrumbs,
                           isEligibleForTrial: K
                       }),
-                  (0, r.jsxs)(P.C3, {
+                  (0, r.jsxs)(R.C3, {
                       children: [(0, r.jsx)(M.Z, { className: Q.paymentModalError }), tI]
                   }),
-                  (0, r.jsx)(P.O3, { children: tS })
+                  (0, r.jsx)(R.O3, { children: tS })
               ]
           })
         : (0, r.jsx)(H.Z, {
@@ -799,7 +799,7 @@ function eA(e) {
         [E, b] = i.useState(''),
         [y, O] = i.useState(() => ({ token: null })),
         [I, S, T, N, A] = (0, l.Wu)([j.Z], () => [j.Z.braintreeEmail, j.Z.braintreeNonce, j.Z.error, j.Z.venmoUsername, j.Z.adyenPaymentData]),
-        [C, P] = (0, l.Wu)([U.Z], () => [U.Z.error, U.Z.isAwaitingAuthentication]);
+        [C, R] = (0, l.Wu)([U.Z], () => [U.Z.error, U.Z.isAwaitingAuthentication]);
     i.useEffect(() => {
         let e = (e) => {
             let { billingAddress: t } = e;
@@ -815,7 +815,7 @@ function eA(e) {
             }
         );
     }, []);
-    let [R, w] = i.useState(!1),
+    let [P, w] = i.useState(!1),
         [D, L] = i.useState(!1),
         [x, M] = i.useState(null),
         k = i.useRef(null),
@@ -836,7 +836,7 @@ function eA(e) {
             setTokenState: O,
             billingAddressState: p,
             setBillingAddressState: h,
-            isSubmittingCurrentStep: R,
+            isSubmittingCurrentStep: P,
             setIsSubmittingCurrentStep: w,
             hasRedirectURL: D,
             setHasRedirectURL: L,
@@ -845,7 +845,7 @@ function eA(e) {
             venmoUsername: N,
             adyenPaymentData: A,
             paymentError: null != C ? C : T,
-            paymentAuthenticationState: P ? Z.wr.PENDING : null != C ? Z.wr.ERROR : Z.wr.NONE,
+            paymentAuthenticationState: R ? Z.wr.PENDING : null != C ? Z.wr.ERROR : Z.wr.NONE,
             purchaseError: x,
             setPurchaseError: M,
             purchaseErrorBlockRef: k,

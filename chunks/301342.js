@@ -1,7 +1,7 @@
 n.d(t, {
-    P: () => Z,
+    P: () => E,
     Qo: () => w,
-    ZP: () => E,
+    ZP: () => Z,
     kw: () => A,
     rj: () => T
 });
@@ -75,12 +75,12 @@ function I(e) {
 }
 let N = i.memo(function (e) {
         let t,
-            { channel: l, connectChannelDragSource: p, connectChannelDropTarget: v, disableManageChannels: O, position: N, sortingPosition: E, hideIcon: Z, children: w } = e,
+            { channel: l, connectChannelDragSource: p, connectChannelDropTarget: v, disableManageChannels: O, position: N, sortingPosition: Z, hideIcon: E, children: w } = e,
             T = (0, g.Q3)('CategoryChannel'),
             A = (0, s.e7)([y.ZP], () => y.ZP.isChannelMuted(l.getGuildId(), l.id)),
             D = (0, s.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
             R = (0, s.e7)([_.Z], () => _.Z.can(j.Plq.MANAGE_CHANNELS, l));
-        t = null != E ? (N > E ? x.containerDragAfter : x.containerDragBefore) : x.containerDefault;
+        t = null != Z ? (N > Z ? x.containerDragAfter : x.containerDragBefore) : x.containerDefault;
         let L = i.useCallback(() => {
                 D ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
             }, [l.id, D]),
@@ -143,20 +143,20 @@ let N = i.memo(function (e) {
                 return i;
             })(G, ['role', 'tabIndex']),
             V = i.useRef(null),
-            H = i.useRef(null),
-            F = (0, r.jsxs)('li', {
+            F = i.useRef(null),
+            H = (0, r.jsxs)('li', {
                 className: t,
                 'data-dnd-name': l.name,
                 children: [
                     (0, r.jsx)(c.tEY, {
                         focusTarget: V,
-                        ringTarget: H,
+                        ringTarget: F,
                         offset: {
                             left: 4,
                             right: 4
                         },
                         children: (0, r.jsxs)('div', {
-                            ref: H,
+                            ref: F,
                             className: o()(x.iconVisibility, x.wrapper, {
                                 [x.collapsed]: D,
                                 [x.muted]: A,
@@ -181,7 +181,7 @@ let N = i.memo(function (e) {
                                             'aria-expanded': !D,
                                             focusProps: { enabled: !1 },
                                             children: [
-                                                T || Z
+                                                T || E
                                                     ? null
                                                     : (0, r.jsx)(c.CJ0, {
                                                           size: 'md',
@@ -192,7 +192,7 @@ let N = i.memo(function (e) {
                                                     className: x.name,
                                                     children: (0, r.jsx)(f.Z, { children: l.name })
                                                 }),
-                                                T && !Z
+                                                T && !E
                                                     ? (0, r.jsx)(c.CJ0, {
                                                           size: 'md',
                                                           color: 'currentColor',
@@ -251,10 +251,10 @@ let N = i.memo(function (e) {
                     w
                 ]
             });
-        return null != v && null != p ? v(p(F)) : F;
+        return null != v && null != p ? v(p(H)) : H;
     }),
-    E = (0, p.B)(N),
-    Z = i.memo(function (e) {
+    Z = (0, p.B)(N),
+    E = i.memo(function (e) {
         let { name: t, onDismiss: n, className: i } = e;
         return (0, r.jsx)('li', {
             className: o()(i, x.containerDefault),

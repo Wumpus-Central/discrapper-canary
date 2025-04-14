@@ -87,10 +87,10 @@ function y(e) {
             id: A,
             label: _.NW.string(_.t['FfCL+/'])
         }),
-        P = (0, d.dX)(y),
-        R = (0, c.Z)({
+        R = (0, d.dX)(y),
+        P = (0, c.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: P && !0 !== O ? (null == (t = y.extra) ? void 0 : t.application_id) : void 0,
+            applicationId: R && !0 !== O ? (null == (t = y.extra) ? void 0 : t.application_id) : void 0,
             source: l.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: y.author_id
@@ -114,12 +114,12 @@ function y(e) {
                         (0, r.jsxs)(o.kSQ, {
                             children: [
                                 T,
-                                null != R &&
+                                null != P &&
                                     (0, r.jsx)(o.sNh, {
                                         id: 'game-profile',
                                         label: _.NW.string(_.t.f7aVGh),
                                         action: (e) => {
-                                            R(e), null == S || S();
+                                            P(e), null == S || S();
                                         }
                                     })
                             ]

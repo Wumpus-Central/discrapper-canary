@@ -24,18 +24,18 @@ var r = n(127849),
     N = s.PROPER,
     A = s.CONFIGURABLE,
     C = 'ArrayBuffer',
-    P = 'DataView',
-    R = 'prototype',
+    R = 'DataView',
+    P = 'prototype',
     w = 'Wrong length',
     D = 'Wrong index',
     L = T.getterFor(C),
-    x = T.getterFor(P),
+    x = T.getterFor(R),
     M = T.set,
     k = r[C],
     j = k,
-    U = j && j[R],
-    G = r[P],
-    B = G && G[R],
+    U = j && j[P],
+    G = r[R],
+    B = G && G[P],
     V = Object.prototype,
     F = r.Array,
     Z = r.RangeError,
@@ -62,7 +62,7 @@ var r = n(127849),
         return Y(e, 52, 8);
     },
     ee = function (e, t, n) {
-        c(e[R], t, {
+        c(e[P], t, {
             configurable: !0,
             get: function () {
                 return n(this)[t];
@@ -100,7 +100,7 @@ if (a) {
     })
         ? (((j = function (e) {
               return f(this, U), O(new k(h(e)), this, j);
-          })[R] = U),
+          })[P] = U),
           (U.constructor = j),
           I(j, k))
         : er && A && l(k, 'name', C),
@@ -132,7 +132,7 @@ if (a) {
             byteLength: t
         }),
             o || ((this.byteLength = t), (this.detached = !1));
-    })[R]),
+    })[P]),
         (B = (G = function (e, t, n) {
             f(this, B), f(e, U);
             var r = L(e),
@@ -141,14 +141,14 @@ if (a) {
             if (a < 0 || a > i) throw new Z('Wrong offset');
             if (((n = void 0 === n ? i - a : p(n)), a + n > i)) throw new Z(w);
             M(this, {
-                type: P,
+                type: R,
                 buffer: e,
                 byteLength: n,
                 byteOffset: a,
                 bytes: r.bytes
             }),
                 o || ((this.buffer = e), (this.byteLength = n), (this.byteOffset = a));
-        })[R]),
+        })[P]),
         o && (ee(j, 'byteLength', L), ee(G, 'buffer', x), ee(G, 'byteLength', x), ee(G, 'byteOffset', x)),
         u(B, {
             getInt8: function (e) {
@@ -203,7 +203,7 @@ if (a) {
             }
         });
 S(j, C),
-    S(G, P),
+    S(G, R),
     (e.exports = {
         ArrayBuffer: j,
         DataView: G

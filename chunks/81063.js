@@ -1,7 +1,7 @@
 n.d(t, {
     Vh: () => T,
     f: () => I,
-    hR: () => P,
+    hR: () => R,
     xF: () => S
 }),
     n(35282),
@@ -137,7 +137,7 @@ function C(e, t, n, r) {
     }
     return i;
 }
-async function P(e, t) {
+async function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     a.Z.dispatch({
         type: 'APPLICATION_ASSETS_FETCH',
@@ -160,7 +160,7 @@ async function P(e, t) {
         assets: o
     }),
     C(t, r, o, n))
-        ? v(e).then(() => P(e, t, n - 1))
+        ? v(e).then(() => R(e, t, n - 1))
         : (a.Z.dispatch({
               type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
               applicationId: e

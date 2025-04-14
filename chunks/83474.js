@@ -31,7 +31,7 @@ var r = n(200651),
     N = n(13647),
     A = n(892561),
     C = n(494536);
-function P(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function P(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -147,7 +147,7 @@ function G() {
 function B(e) {
     var t, n;
     let { guild: o, channelId: c, messageId: d } = e,
-        { name: y, id: v, discoverySplash: O, icon: I, description: A, presenceCount: C, memberCount: P, emojis: w } = o,
+        { name: y, id: v, discoverySplash: O, icon: I, description: A, presenceCount: C, memberCount: R, emojis: w } = o,
         U = v,
         G = (0, s.e7)([m.default], () => m.default.getId()),
         B = (0, s.e7)([g.ZP], () => g.ZP.isMember(U, G), [U, G]),
@@ -263,7 +263,7 @@ function B(e) {
                                           ]
                                       })
                                     : null,
-                                null != P
+                                null != R
                                     ? (0, r.jsxs)('div', {
                                           className: N.memberCount,
                                           children: [
@@ -271,7 +271,7 @@ function B(e) {
                                               (0, r.jsx)(u.Text, {
                                                   variant: 'text-xs/normal',
                                                   className: N.memberText,
-                                                  children: T.NW.format(T.t.zRl6XV, { count: P })
+                                                  children: T.NW.format(T.t.zRl6XV, { count: R })
                                               })
                                           ]
                                       })
@@ -308,7 +308,7 @@ function B(e) {
                                                           children: (e) =>
                                                               (0, r.jsx)(
                                                                   'img',
-                                                                  D(R({}, e), {
+                                                                  D(P({}, e), {
                                                                       width: j,
                                                                       height: j,
                                                                       src: t,
@@ -387,5 +387,5 @@ function F(e) {
               guildId: e.guildId,
               name: e.name
           })
-        : (0, r.jsx)(V, R({}, e));
+        : (0, r.jsx)(V, P({}, e));
 }

@@ -148,7 +148,7 @@ function C(e) {
         regionUpdated: a
     });
 }
-function P(e) {
+function R(e) {
     let { channelId: t, unavailable: n } = e,
         r = g[t];
     !0 === n && null != r
@@ -163,7 +163,7 @@ function P(e) {
           }),
         null != E[t] && delete E[t];
 }
-function R(e) {
+function P(e) {
     let { channelId: t } = e;
     null == t && (E = {});
 }
@@ -206,7 +206,7 @@ let D = new w(l.Z, {
     CHANNEL_DELETE: T,
     CALL_CREATE: N,
     CALL_UPDATE: C,
-    CALL_DELETE: P,
+    CALL_DELETE: R,
     CALL_ENQUEUE_RING: A,
-    VOICE_CHANNEL_SELECT: R
+    VOICE_CHANNEL_SELECT: P
 });

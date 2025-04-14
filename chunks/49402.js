@@ -97,7 +97,7 @@ function m(e, t, n) {
                 ),
             [N, A, E, C]
         );
-        let P = (0, c.tT)({
+        let R = (0, c.tT)({
             paddingFix: v,
             orientation: E,
             dir: g,
@@ -126,7 +126,7 @@ function m(e, t, n) {
                       {
                           children: (0, r.jsxs)(s.Jc, {
                               containerRef: N,
-                              children: [h, P]
+                              children: [h, R]
                           })
                       }
                   )
@@ -150,7 +150,7 @@ function m(e, t, n) {
                       {
                           children: (0, r.jsxs)(s.Jc, {
                               containerRef: N,
-                              children: [h, P]
+                              children: [h, R]
                           })
                       }
                   )

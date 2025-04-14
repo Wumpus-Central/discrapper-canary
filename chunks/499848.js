@@ -14,7 +14,7 @@ class h extends a.PureComponent {
     render() {
         let { streams: e, context: t, userId: r, mediaEngineConnectionId: a, videoStreams: i } = this.props;
         if (null == r || null == e || 0 === e.length) return (0, n.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
-        let c = o.ZP.getGuildId(),
+        let c = o.Z.getGuildId(),
             h = d.default.getUser(r),
             y = l.ZP.getNick(c, r),
             g = null == h ? p.NW.string(p.t.SJmZam) : ''.concat(p.NW.string(p.t.SJmZam), ' \u2014 ').concat(null != y ? y : u.ZP.getName(h));

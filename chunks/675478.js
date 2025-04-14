@@ -1,5 +1,5 @@
 n.d(t, {
-    BU: () => P,
+    BU: () => R,
     Bn: () => w,
     DZ: () => N,
     PS: () => C,
@@ -9,7 +9,7 @@ n.d(t, {
     bE: () => j,
     fy: () => g.fy,
     hW: () => T,
-    nm: () => R,
+    nm: () => P,
     po: () => L,
     sr: () => k,
     w9: () => x,
@@ -297,10 +297,10 @@ let T = new S(c.o8, g.yP.PRELOADED_USER_SETTINGS),
 function C(e, t, n) {
     return T.updateAsync('guilds', (n) => (0, m.u0)(n, e, t), n);
 }
-function P(e, t, n, r) {
+function R(e, t, n, r) {
     return C(e, (e) => (0, m.uL)(e, t, n), r);
 }
-function R(e) {
+function P(e) {
     return T.updateAsync(
         'userContent',
         (t) => {

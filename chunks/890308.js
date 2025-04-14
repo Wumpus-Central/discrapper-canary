@@ -42,13 +42,13 @@
             for (var t, n, r = [], i = 0, o = e.length; i < o; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < o ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
             return r;
         }
-        function P(e) {
+        function R(e) {
             return N(e, function (e) {
                 var t = '';
                 return e > 65535 && ((e -= 65536), (t += S(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += S(e));
             }).join('');
         }
-        function R(e) {
+        function P(e) {
             return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : u;
         }
         function w(e, t) {
@@ -77,10 +77,10 @@
                 O = h;
             for ((n = e.lastIndexOf(g)) < 0 && (n = 0), r = 0; r < n; ++r) e.charCodeAt(r) >= 128 && T('not-basic'), E.push(e.charCodeAt(r));
             for (i = n > 0 ? n + 1 : 0; i < b; ) {
-                for (o = y, a = 1, s = u; i >= b && T('invalid-input'), ((l = R(e.charCodeAt(i++))) >= u || l > I((c - y) / a)) && T('overflow'), (y += l * a), !(l < (_ = s <= O ? d : s >= O + f ? f : s - O)); s += u) a > I(c / (p = u - _)) && T('overflow'), (a *= p);
+                for (o = y, a = 1, s = u; i >= b && T('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / a)) && T('overflow'), (y += l * a), !(l < (_ = s <= O ? d : s >= O + f ? f : s - O)); s += u) a > I(c / (p = u - _)) && T('overflow'), (a *= p);
                 (O = D(y - o, (t = E.length + 1), 0 == o)), I(y / t) > c - v && T('overflow'), (v += I(y / t)), (y %= t), E.splice(y++, 0, v);
             }
-            return P(E);
+            return R(E);
         }
         function x(e) {
             var t,
@@ -126,7 +126,7 @@
                 version: '1.4.1',
                 ucs2: {
                     decode: C,
-                    encode: P
+                    encode: R
                 },
                 decode: L,
                 encode: x,

@@ -24,7 +24,7 @@ let m = new Set(['PageDown', 'PageUp', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'A
                 ('Tab' === t && o.S.hasSubscribers(u.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]')
                     ? (e.preventDefault(), o.S.dispatch(u.CkL.TEXTAREA_FOCUS), !1)
                     : !(
-                          l.ZP.isConnected() &&
+                          l.Z.isConnected() &&
                           a.Z.getMode() === u.pM4.PUSH_TO_TALK &&
                           !a.Z.isSelfMute() &&
                           Object.values(a.Z.getShortcuts())

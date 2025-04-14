@@ -69,8 +69,8 @@ class h extends i.Z {
             f(this, 'logRunningGameHeartbeats', () => {
                 let e = u.ZP.getRunningGames(),
                     t = {
-                        rtc_connection_id: a.ZP.getRTCConnectionId(),
-                        media_session_id: a.ZP.getMediaSessionId()
+                        rtc_connection_id: a.Z.getRTCConnectionId(),
+                        media_session_id: a.Z.getMediaSessionId()
                     },
                     n = new Set();
                 e.forEach((e) => {

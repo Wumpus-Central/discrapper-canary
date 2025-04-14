@@ -176,10 +176,10 @@ let C = m(p({}, l().defaultRules.link), {
             g = f.whitespaceSanitized,
             b = _.fullySanitized,
             C = h.fullySanitized,
-            P = b.trim();
-        if (0 === g.trim().length || 0 === P.length) return u();
-        let R = A(l().unescapeUrl(a)),
-            w = null == R,
+            R = b.trim();
+        if (0 === g.trim().length || 0 === R.length) return u();
+        let P = A(l().unescapeUrl(a)),
+            w = null == P,
             D = (0, c.ZP)(o).length > 0 || (0, c.ZP)(s).length > 0;
         if (w || D) return u();
         let L = m(p({}, n), {
@@ -195,7 +195,7 @@ let C = m(p({}, l().defaultRules.link), {
         let G = i().pick(t.rules, x),
             B = l().parserFor(G)(_.whitespaceSanitized, L),
             V = h.whitespaceSanitized,
-            { target: F } = R;
+            { target: F } = P;
         return {
             content: B,
             target: F,

@@ -26,8 +26,8 @@ var i = n(120356),
     P = n(592125),
     I = n(430824),
     N = n(607744),
-    E = n(496675),
-    Z = n(306680),
+    Z = n(496675),
+    E = n(306680),
     w = n(9156),
     T = n(979651),
     A = n(934415),
@@ -53,7 +53,7 @@ function V(e, t, n) {
         e
     );
 }
-function H(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function H(e) {
     }
     return e;
 }
-function F(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -159,8 +159,8 @@ class z extends D.ZP {
                                         })(o, ['onClick', 'onContextMenu']);
                                     return (0, r.jsxs)(
                                         L.ZP,
-                                        F(
-                                            H(
+                                        H(
+                                            F(
                                                 {
                                                     className: U.iconVisibility,
                                                     iconClassName: l()({ [W.iconLive]: null != f }),
@@ -228,7 +228,7 @@ class z extends D.ZP {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                F(H({}, n), {
+                                H(F({}, n), {
                                     channel: t,
                                     guild: i
                                 })
@@ -286,20 +286,20 @@ class z extends D.ZP {
 let Y = (0, u.B)((0, d.Q)(z));
 function q(e) {
     let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, collapsed: a, voiceStates: s } = e,
-        c = (0, o.cj)([Z.ZP], () => ({
-            unread: Z.ZP.hasUnread(n.id),
-            mentionCount: Z.ZP.getMentionCount(n.id)
+        c = (0, o.cj)([E.ZP], () => ({
+            unread: E.ZP.hasUnread(n.id),
+            mentionCount: E.ZP.getMentionCount(n.id)
         })),
         u = (0, o.e7)([w.ZP], () => w.ZP.resolveUnreadSetting(n)),
-        d = (0, o.cj)([P.Z, N.Z, E.Z], () => {
+        d = (0, o.cj)([P.Z, N.Z, Z.Z], () => {
             let e = P.Z.getChannel(n.parent_id),
                 r = N.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && E.Z.can(M.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== i && (t.id === G._ || (null != e ? E.Z.can(M.Plq.MANAGE_CHANNELS, e) : E.Z.can(M.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: E.Z.can(M.Plq.MOVE_MEMBERS, n),
-                locked: !E.Z.can(M.Plq.CONNECT, n),
-                bypassLimit: E.Z.can(M.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && Z.Z.can(M.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== i && (t.id === G._ || (null != e ? Z.Z.can(M.Plq.MANAGE_CHANNELS, e) : Z.Z.can(M.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: Z.Z.can(M.Plq.MOVE_MEMBERS, n),
+                locked: !Z.Z.can(M.Plq.CONNECT, n),
+                bypassLimit: Z.Z.can(M.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !r.canChat
             };
         }),
@@ -322,8 +322,8 @@ function q(e) {
         A = e.connected && null == T;
     return (0, r.jsx)(
         Y,
-        F(
-            H(
+        H(
+            F(
                 {
                     categoryCollapsed: p,
                     connectAction: h,

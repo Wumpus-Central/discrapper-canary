@@ -98,7 +98,7 @@ function N(e) {
                 p.Xyh.test(n) &&
                 ((r = !0),
                 I.track(n),
-                P.pendingUsages.push({
+                R.pendingUsages.push({
                     key: n,
                     timestamp: Date.now()
                 }))),
@@ -108,7 +108,7 @@ function N(e) {
                 p.Xyh.test(t) &&
                 ((r = !0),
                 I.track(t),
-                P.pendingUsages.push({
+                R.pendingUsages.push({
                     key: t,
                     timestamp: Date.now()
                 }))),
@@ -120,7 +120,7 @@ function A(e) {
         settings: { type: t },
         wasSaved: n
     } = e;
-    return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((P.pendingUsages = []), !0);
+    return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((R.pendingUsages = []), !0);
 }
 function C() {
     var e;
@@ -128,19 +128,19 @@ function C() {
     if (null == t) return !1;
     I.overwriteHistory(
         o().mapValues(t, (e) => b(g({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        P.pendingUsages
+        R.pendingUsages
     );
 }
-let P = { pendingUsages: [] };
-class R extends (r = a.ZP.PersistedStore) {
+let R = { pendingUsages: [] };
+class P extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (P = e)), this.syncWith([c.Z], C);
+        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (R = e)), this.syncWith([c.Z], C);
     }
     getState() {
-        return P;
+        return R;
     }
     hasPendingUsage() {
-        return P.pendingUsages.length > 0;
+        return R.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
         return I;
@@ -163,8 +163,8 @@ class R extends (r = a.ZP.PersistedStore) {
         return v;
     }
 }
-m(R, 'displayName', 'FrecencyStore'), m(R, 'persistKey', 'FrecencyStore');
-let w = new R(s.Z, {
+m(P, 'displayName', 'FrecencyStore'), m(P, 'persistKey', 'FrecencyStore');
+let w = new P(s.Z, {
     CHANNEL_SELECT: N,
     VOICE_CHANNEL_SELECT: N,
     USER_SETTINGS_PROTO_UPDATE: A

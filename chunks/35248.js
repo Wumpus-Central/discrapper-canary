@@ -60,7 +60,7 @@ let N = (e) => {
         let t,
             n,
             { step: o, onPurchaseComplete: a, onHandoffFailure: u } = e,
-            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: A, browserCheckoutStateLoadId: C, browserCheckoutStateSkuId: P, browserCheckoutStatePlanId: R, contextMetadata: w } = (0, p.JL)(),
+            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: A, browserCheckoutStateLoadId: C, browserCheckoutStateSkuId: R, browserCheckoutStatePlanId: P, contextMetadata: w } = (0, p.JL)(),
             { isGift: D } = (0, _.wD)(),
             [L, x] = i.useState(!1);
         switch (o) {
@@ -85,8 +85,8 @@ let N = (e) => {
                 return () => clearTimeout(e);
             }, [d, D, w, u, x, L, t, n.delay]),
             i.useEffect(() => {
-                null !== P && (v.YQ.includes(P) && ((0, c.GZ)(P), (0, l.jg)()), N(P)), null !== R && f(R), C === w.loadId && A === b.Y.DONE && a();
-            }, [N, f, A, C, P, R, w, a]),
+                null !== R && (v.YQ.includes(R) && ((0, c.GZ)(R), (0, l.jg)()), N(R)), null !== P && f(P), C === w.loadId && A === b.Y.DONE && a();
+            }, [N, f, A, C, R, P, w, a]),
             (0, r.jsxs)('div', {
                 className: I.body,
                 children: [

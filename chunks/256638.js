@@ -326,7 +326,7 @@ let eC =
                               eb.NW.string(eb.t.bOQ3jY),
                               (0, r.jsx)(c.NoS, {
                                   onClick: () => {
-                                      let e = er.ZP.getRemoteDisconnectVoiceChannelId();
+                                      let e = er.Z.getRemoteDisconnectVoiceChannelId();
                                       null != e && null != ee.Z.getChannel(e) && _.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ef.kVF.VOICE_DISABLED,
@@ -347,7 +347,7 @@ let eC =
                               eb.NW.string(eb.t.jY2lUF),
                               (0, r.jsx)(c.NoS, {
                                   onClick: () => {
-                                      let e = er.ZP.getLastSessionVoiceChannelId();
+                                      let e = er.Z.getLastSessionVoiceChannelId();
                                       null != e && null != ee.Z.getChannel(e) && _.default.selectVoiceChannel(e);
                                   },
                                   noticeType: ef.kVF.VOICE_CONNECTED_LAST_SESSION,

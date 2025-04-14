@@ -14,8 +14,8 @@ function f(e, t, n, f) {
     var _;
     let p = i.Z.getChannel(a.Z.getVoiceChannelId()),
         h = null == p ? void 0 : p.getGuildId(),
-        m = o.ZP.getMediaSessionId(),
-        g = o.ZP.getRTCConnectionId(),
+        m = o.Z.getMediaSessionId(),
+        g = o.Z.getRTCConnectionId(),
         E = null == (_ = r.ZP.getCurrentGameForAnalytics()) ? void 0 : _.name,
         b = h !== n.guildId && n.guildId !== l.X8,
         y = d(n, b);

@@ -1,5 +1,5 @@
 n.d(t, {
-    q: () => P,
+    q: () => R,
     r: () => C
 });
 var r = n(477660),
@@ -32,10 +32,10 @@ function C(e, t) {
     let r = E.Z.getChannel(S.Z.getChannelId());
     return (null == r || r.type !== N.d4z.DM || !!I.Z.isFriend(null != (n = r.getRecipientId()) ? n : '')) && e === t;
 }
-function P(e, t) {
+function R(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         I = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: S, onClick: C, onConfirm: P, onCancel: R, shouldConfirm: w, messageId: D, channelId: L } = e,
+        { trusted: S, onClick: C, onConfirm: R, onCancel: P, shouldConfirm: w, messageId: D, channelId: L } = e,
         x = i().sanitizeUrl(e.href);
     if (null == x) {
         null != t && t.preventDefault(),
@@ -107,12 +107,12 @@ function P(e, t) {
                         sourceChannelId: G,
                         sourceGuildId: B
                     }),
-                null != P)
+                null != R)
             )
-                return void P();
+                return void R();
             (0, s.Z)(M);
         },
-        W = null != R ? R : () => {};
+        W = null != P ? P : () => {};
     if (null !== c.Z.isBlockedDomain(M)) {
         null == t || t.preventDefault(), l.Z.show(M);
         return;

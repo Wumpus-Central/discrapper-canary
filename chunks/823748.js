@@ -755,7 +755,7 @@ let to = (0, j.Z)(tl),
                 return (null != (e = null == v ? void 0 : v.channelId) ? e : eV.Z.getVoiceChannelId()) === (null == c ? void 0 : c.id);
             }),
             I = (0, p.e7)([N.ZP], () => (null != c ? N.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
-            A = (0, p.e7)([eF.ZP], () => eF.ZP.isConnected()),
+            A = (0, p.e7)([eF.Z], () => eF.Z.isConnected()),
             w = (0, E.Z)(A),
             R = A && !1 === w;
         i.useEffect(() => {

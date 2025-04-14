@@ -57,7 +57,7 @@ function E(e, t) {
     );
 }
 function T(e) {
-    let t = (0, r.e7)([_.ZP], () => _.ZP.getChannelId() === e.id),
+    let t = (0, r.e7)([_.Z], () => _.Z.getChannelId() === e.id),
         T = (0, p.Z)(),
         U = (null == T ? void 0 : T.channelId) === e.id,
         L = (0, l.V)(e) && !e.isPrivate(),

@@ -1,7 +1,7 @@
 n.d(t, {
     L6: () => V,
     Rc: () => G,
-    WH: () => P,
+    WH: () => R,
     aP: () => k,
     dV: () => B,
     g: () => M,
@@ -9,7 +9,7 @@ n.d(t, {
     n9: () => j,
     pR: () => L,
     rn: () => D,
-    tK: () => R,
+    tK: () => P,
     xc: () => U
 });
 var r = n(512722),
@@ -67,7 +67,7 @@ function A(e) {
     return e;
 }
 let C = 2;
-function P(e, t, n) {
+function R(e, t, n) {
     s.Z.dispatch(
         A(
             {
@@ -81,7 +81,7 @@ function P(e, t, n) {
         )
     );
 }
-function R(e, t) {
+function P(e, t) {
     let n = (0, c.V9)(e);
     s.Z.dispatch({
         type: 'STREAM_SET_PAUSED',

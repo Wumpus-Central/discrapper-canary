@@ -91,10 +91,10 @@ function C(e) {
         n = e.aliases.map((e) => b(g({}, t), { name: e }));
     return [t, ...n];
 }
-function P(e) {
+function R(e) {
     return { id: e };
 }
-async function R(e) {
+async function P(e) {
     if (
         (Array.isArray(e) || (e = [e]),
         c.Z.isDeveloper ||
@@ -142,10 +142,10 @@ let L = {
         return new Promise(w.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
-        R(C(e))
+        P(C(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => R(C(e)).then(D),
+    launch: (e) => P(C(e)).then(D),
     launchDispatchApplication(e, t, n, i, a) {
         let { launchOptions: l, defaultLaunchOptionId: c, installPath: f, applicationId: _, branchId: p, buildId: m, shouldPatch: g } = e;
         if (null == l || null == c || null == f) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
@@ -189,10 +189,10 @@ let L = {
         });
     },
     isGameLaunchable: (e) =>
-        R(P(e))
+        P(R(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : R(P(e)).then(D)),
+    launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : P(R(e)).then(D)),
     isProtocolRegistered: (e) =>
         A().then((t) => {
             var n, r;

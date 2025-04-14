@@ -25,8 +25,8 @@ var r = n(200651),
     P = n(40153),
     I = n(593618),
     N = n(252686),
-    E = n(682662),
-    Z = n(674552),
+    Z = n(682662),
+    E = n(674552),
     w = n(981631),
     T = n(388032),
     A = n(335426);
@@ -88,12 +88,12 @@ function k(e, t) {
 }
 let M = i.memo(function (e) {
     var t, n, l, f, M;
-    let { guildNode: G, setRef: B, onDragStart: U, onDragEnd: W, route: V, guild: H, animatable: F, selected: z = !1, unread: Y = !1, mediaState: q, unavailable: K = !1, badge: Q = 0, isMentionLowImportance: J, contextMenu: X = k, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er } = e,
+    let { guildNode: G, setRef: B, onDragStart: U, onDragEnd: W, route: V, guild: F, animatable: H, selected: z = !1, unread: Y = !1, mediaState: q, unavailable: K = !1, badge: Q = 0, isMentionLowImportance: J, contextMenu: X = k, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er } = e,
         { id: ei, parentId: el } = G,
         eo = (0, b.Q3)('GuildItem'),
-        ea = null != (t = e.upperBadge) ? t : K ? (0, Z.Ny)() : null != q ? (0, Z.Or)(q) : void 0,
+        ea = null != (t = e.upperBadge) ? t : K ? (0, E.Ny)() : null != q ? (0, E.Or)(q) : void 0,
         es = null != (n = e.lowerBadge) ? n : void 0;
-    null == es && Q > 0 ? (es = null != (l = (0, Z.Ne)(Q, J ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0) : null == es && null != en && (es = null != (f = (0, Z.jt)({ guildJoinRequestStatus: en })) ? f : void 0);
+    null == es && Q > 0 ? (es = null != (l = (0, E.Ne)(Q, J ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0) : null == es && null != en && (es = null != (f = (0, E.jt)({ guildJoinRequestStatus: en })) ? f : void 0);
     let ec = null != (M = e.lowerBadgeSize) ? M : { width: (0, p.OVM)(Q) },
         [{ dragging: eu }, ed] = (0, a.c)({
             type: C.eD.GUILD,
@@ -123,16 +123,16 @@ let M = i.memo(function (e) {
             (0, v.X)(ei, { state: L });
         }, [ei, V]),
         ej = i.useCallback(() => {
-            if (null != V || null == H || K || !et) return;
-            let e = (0, _.V)(H.id);
-            null != e && h.Z.preload(H.id, e);
-        }, [V, H, K, et]),
+            if (null != V || null == F || K || !et) return;
+            let e = (0, _.V)(F.id);
+            null != e && h.Z.preload(F.id, e);
+        }, [V, F, K, et]),
         eC = (0, u.e7)([O.ZP], () => O.ZP.isCurrentUserGuest(ei)),
         ex = i.useCallback(
             (e) => {
-                null == H || eC || X(e, H);
+                null == F || eC || X(e, F);
             },
-            [H, X, eC]
+            [F, X, eC]
         ),
         eS = i.useCallback(
             (e) => {
@@ -157,11 +157,11 @@ let M = i.memo(function (e) {
             [ei, B]
         ),
         eN = (0, p.dQu)(p.TVs.modules.guildbar.AVATAR_SIZE);
-    if (null == H) return null;
-    let eE =
+    if (null == F) return null;
+    let eZ =
             e_ || em
                 ? (0, r.jsx)(S.Z, {
-                      guild: H,
+                      guild: F,
                       show: e_,
                       active: z,
                       onAnimationStart: function () {
@@ -177,10 +177,10 @@ let M = i.memo(function (e) {
                           D(
                               {
                                   ariaLabel: T.NW.formatToPlainString(T.t['/uzRsr'], {
-                                      guildName: H.toString(),
+                                      guildName: F.toString(),
                                       mentions: Q
                                   }),
-                                  name: H.toString(),
+                                  name: F.toString(),
                                   onClick: eO,
                                   onMouseEnter: function () {
                                       ee || ef(!0);
@@ -191,7 +191,7 @@ let M = i.memo(function (e) {
                                   onMouseDown: ej,
                                   onContextMenu: ex,
                                   onKeyDown: eS,
-                                  icon: H.getIconURL(2 * eN, eg && F, eo),
+                                  icon: F.getIconURL(2 * eN, eg && H, eo),
                                   selected: z || eg
                               },
                               ep
@@ -199,7 +199,7 @@ let M = i.memo(function (e) {
                           { role: 'treeitem' }
                       )
                   ),
-        eZ = eu
+        eE = eu
             ? (0, r.jsx)(P.OG, { children: (0, r.jsx)(N.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   ref: $
@@ -207,7 +207,7 @@ let M = i.memo(function (e) {
                             ed(e);
                         }
                       : void 0,
-                  'data-dnd-name': H.toString(),
+                  'data-dnd-name': F.toString(),
                   style: { scale: null == er ? 1 : er },
                   'data-drop-hovering': e_,
                   className: o()(A.blobContainer, {
@@ -220,10 +220,10 @@ let M = i.memo(function (e) {
                       upperBadge: ea,
                       lowerBadge: es,
                       lowerBadgeSize: ec,
-                      children: eE
+                      children: eZ
                   })
               });
-    return (0, r.jsxs)(E.H, {
+    return (0, r.jsxs)(Z.H, {
         ref: eI,
         children: [
             (0, r.jsx)(x.Z, {
@@ -233,14 +233,14 @@ let M = i.memo(function (e) {
                 className: A.pill
             }),
             (0, r.jsx)(I.Z, {
-                guild: H,
+                guild: F,
                 disabled: ee,
                 isDragging: eu,
-                children: eZ
+                children: eE
             }),
             $
                 ? (0, r.jsx)(P.ZP, {
-                      name: H.name,
+                      name: F.name,
                       targetNode: G,
                       onDragOverChanged: eP
                   })

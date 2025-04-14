@@ -78,7 +78,7 @@ let g = null,
     N = !1,
     A = null,
     C = new a.Z('SubscriptionStore');
-function P(e) {
+function R(e) {
     let { subscriptions: t } = e,
         n = {},
         r = {},
@@ -106,7 +106,7 @@ function P(e) {
         (y = i),
         (v = o);
 }
-function R(e) {
+function P(e) {
     let { activeSubscriptions: t, record: n } = e,
         r = t.findIndex((e) => e.id === n.id);
     if (-1 === r) return [n, ...t];
@@ -122,13 +122,13 @@ function w(e) {
         U(n) && (E = m(p({}, E), { [n.id]: n })),
         null != y &&
             n.type === d.NYc.GUILD &&
-            (y = R({
+            (y = P({
                 activeSubscriptions: y,
                 record: n
             })),
         null != v &&
             n.type === d.NYc.APPLICATION &&
-            (y = R({
+            (y = P({
                 activeSubscriptions: v,
                 record: n
             }));
@@ -277,7 +277,7 @@ class V extends (r = i.ZP.Store) {
 }
 _(V, 'displayName', 'SubscriptionStore');
 let F = new V(o.Z, {
-    BILLING_SUBSCRIPTION_FETCH_SUCCESS: P,
+    BILLING_SUBSCRIPTION_FETCH_SUCCESS: R,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: w,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: D,
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: L,

@@ -43,17 +43,17 @@ let O = function (e) {
             },
             [S, o.id, e]
         ),
-        P = i.useRef(null),
-        R = i.useRef(O),
+        R = i.useRef(null),
+        P = i.useRef(O),
         w = (0, p.Bg)(o.config);
     return (
         i.useEffect(() => {
-            if (null != P.current) {
+            if (null != R.current) {
                 if (!A.isAnimated || N) {
-                    (P.current.currentTime = 0), P.current.pause();
+                    (R.current.currentTime = 0), R.current.pause();
                     return;
                 }
-                O && !R.current ? P.current.play() : !O && R.current && ((P.current.currentTime = 0), P.current.pause()), (R.current = O);
+                O && !P.current ? R.current.play() : !O && P.current && ((R.current.currentTime = 0), R.current.pause()), (P.current = O);
             }
         }, [O, A, N]),
         (t = w
@@ -72,7 +72,7 @@ let O = function (e) {
                         var t;
                         return (0, r.jsx)(d.Z, {
                             ref: (t) => {
-                                (e.current = t), (P.current = t);
+                                (e.current = t), (R.current = t);
                             },
                             autoPlay: !N && O,
                             loop: !0,

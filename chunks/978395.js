@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(200651),
     i = n(442837),
     o = n(481060),
@@ -25,9 +25,9 @@ var r = n(200651),
     N = n(228168),
     A = n(981631),
     C = n(200669);
-function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guild: R, isHovering: w, onOpenProfile: D, channelId: L, onClose: x } = e,
-        M = d.ZP.useName(null == R ? void 0 : R.id, L, t),
+function R(e) {
+    let { user: t, currentUser: n, displayProfile: R, guild: P, isHovering: w, onOpenProfile: D, channelId: L, onClose: x } = e,
+        M = d.ZP.useName(null == P ? void 0 : P.id, L, t),
         { relationshipType: k, originApplicationId: j } = (0, i.cj)([c.Z], () => ({
             relationshipType: c.Z.getRelationshipType(t.id),
             originApplicationId: c.Z.getOriginApplicationId(t.id)
@@ -46,15 +46,15 @@ function P(e) {
                 profileType: N.y0.BITE_SIZE,
                 onOpenProfile: D,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == R ? void 0 : R.id) &&
+                    t.hasAvatarForGuild(null == P ? void 0 : P.id) &&
                     (0, r.jsx)(I.Z, {
                         user: t,
                         nickname: M
                     }),
                 nickname: M,
-                pronouns: null == P ? void 0 : P.pronouns,
+                pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
-                    displayProfile: P,
+                    displayProfile: R,
                     profileType: N.y0.BITE_SIZE,
                     onClose: x
                 }),
@@ -74,7 +74,7 @@ function P(e) {
                 (0, r.jsx)(b.Z.Overlay, {
                     children: (0, r.jsx)(g.Z, {
                         user: t,
-                        guildId: null == R ? void 0 : R.id,
+                        guildId: null == P ? void 0 : P.id,
                         channelId: L,
                         applicationId: G ? j : void 0
                     })
@@ -107,7 +107,7 @@ function P(e) {
                   })
                 : (0, r.jsx)(O.Z, {
                       user: t,
-                      bio: null == P ? void 0 : P.bio,
+                      bio: null == R ? void 0 : R.bio,
                       hidePersonalInformation: B,
                       onClose: x
                   }),
@@ -119,15 +119,15 @@ function P(e) {
             (0, r.jsx)(h.Z, {
                 user: t,
                 currentUser: n,
-                displayProfile: P,
-                guildId: null == R ? void 0 : R.id,
+                displayProfile: R,
+                guildId: null == P ? void 0 : P.id,
                 onClose: x
             }),
-            null != R &&
+            null != P &&
                 (0, r.jsx)(S.Z, {
                     user: t,
                     currentUser: n,
-                    guild: R
+                    guild: P
                 })
         ]
     });

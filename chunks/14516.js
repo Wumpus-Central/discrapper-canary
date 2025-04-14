@@ -17,12 +17,12 @@ function a(e, t, n) {
 }
 class s extends r.Z {
     handleFocusParticipant() {
-        let e = i.ZP.getChannelId();
+        let e = i.Z.getChannelId();
         if (null != e) {
             var t, n;
             let r = o.Z.getSelectedParticipantId(e),
                 a = o.Z.getVideoParticipants(e);
-            null == (n = i.ZP.getRTCConnection()) || n.setSelectedParticipant(null == (t = a.find((e) => e.id === r && !e.localVideoDisabled)) ? void 0 : t.id);
+            null == (n = i.Z.getRTCConnection()) || n.setSelectedParticipant(null == (t = a.find((e) => e.id === r && !e.localVideoDisabled)) ? void 0 : t.id);
         }
     }
     constructor(...e) {

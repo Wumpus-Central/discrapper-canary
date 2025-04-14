@@ -81,8 +81,8 @@ let v = function (e) {
         N = S && null == v && null == O,
         A = S && null != v && null == O,
         C = S && null == v && null != O,
-        P = A || C;
-    function R() {
+        R = A || C;
+    function P() {
         null != I &&
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('73217').then(n.bind(n, 139964));
@@ -97,10 +97,10 @@ let v = function (e) {
             });
     }
     function w() {
-        return N || P ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : R();
+        return N || R ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : P();
     }
     function D() {
-        return N ? h.NW.string(h.t.w6VSSE) : P ? h.NW.string(h.t.CHNBdn) : h.NW.string(h.t['0yRXHx']);
+        return N ? h.NW.string(h.t.w6VSSE) : R ? h.NW.string(h.t.CHNBdn) : h.NW.string(h.t['0yRXHx']);
     }
     function L() {
         if (b) return null;

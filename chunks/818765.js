@@ -37,7 +37,7 @@ let f = (0, o.uk)('poggermode_applause', l.Z.getSoundpack()),
     },
     v = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            n = a.ZP.isConnected();
+            n = a.Z.isConnected();
         b.push([e, t * (n ? 0.1 : 1)]), C();
     };
 class N extends i.Z {

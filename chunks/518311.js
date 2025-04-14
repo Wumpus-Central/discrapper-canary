@@ -667,7 +667,7 @@ class ed extends (r = l.PureComponent) {
             en(this, 'pushToExistingDM', (e, t) => {
                 let n = this._searchCounter,
                     r = (0, E.v_)(e),
-                    i = D.ZP.getChannelId() === e.id;
+                    i = D.Z.getChannelId() === e.id;
                 b.Z.addRecipients(e.id, t, J.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void g.Z.call(n, !1, !0);

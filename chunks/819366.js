@@ -94,12 +94,12 @@ function N(e) {
 }
 function A(e) {
     let { className: t, userId: i, channelId: d, parsedUserId: O, content: S, inlinePreview: A = !1, viewingChannelId: C } = e,
-        { analyticsLocations: P } = (0, c.ZP)(l.Z.USER_MENTION),
-        R = (0, a.e7)([E.default], () => E.default.getUser(i)),
+        { analyticsLocations: R } = (0, c.ZP)(l.Z.USER_MENTION),
+        P = (0, a.e7)([E.default], () => E.default.getUser(i)),
         w = (0, a.e7)([p.Z], () => p.Z.getChannel(d)),
         D = null != w ? w.getGuildId() : null,
         L =
-            A || null == R || null == D || null == d
+            A || null == P || null == D || null == d
                 ? void 0
                 : (e) => {
                       null != w &&
@@ -110,18 +110,18 @@ function A(e) {
                                       e,
                                       T(I({}, t), {
                                           viewingChannelId: C,
-                                          user: R,
+                                          user: P,
                                           channel: w,
                                           guildId: D
                                       })
                                   );
                           });
                   },
-        x = y.ZP.useName(R),
-        M = (0, a.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(D, d, R)),
+        x = y.ZP.useName(P),
+        M = (0, a.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(D, d, P)),
         k = m.Z.getGuild(D),
         j = (0, u.Ib)(k, w) && i === v.fL ? v.jM : null;
-    if (null == R)
+    if (null == P)
         return (0, r.jsx)(N, {
             userId: O,
             className: t,
@@ -144,13 +144,13 @@ function A(e) {
         );
     return A
         ? (0, r.jsx)(c.Gt, {
-              value: P,
+              value: R,
               children: U()
           })
         : (0, r.jsx)(c.Gt, {
-              value: P,
+              value: R,
               children: (0, r.jsx)(_.Z, {
-                  user: R,
+                  user: P,
                   guildId: null != D ? D : void 0,
                   channelId: d,
                   position: o.tq ? 'top' : 'right',

@@ -19,8 +19,8 @@ var r = n(200651),
     v = n(710111),
     x = n(840558);
 function m(e) {
-    let { guildId: t, channel: n, width: m, height: E, keepOpen: C, interactive: j = !0, analyticsSource: I, onClose: P } = e,
-        S = (function (e) {
+    let { guildId: t, channel: n, width: m, height: E, keepOpen: C, interactive: j = !0, analyticsSource: I, onClose: S } = e,
+        P = (function (e) {
             let [t, n] = (0, o.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
             return l.useMemo(() => {
                 let r = [],
@@ -38,20 +38,20 @@ function m(e) {
         T = (0, N.j)(),
         w = l.useRef(null),
         [Z, _] = l.useState(void 0),
-        R = (0, o.e7)([d.ZP], () => d.ZP.getMediaSessionId()),
+        R = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: A } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
         D = l.useCallback(
             (e) => {
-                (0, g.GN)(e, n.id, A), P();
+                (0, g.GN)(e, n.id, A), S();
             },
-            [A, n.id, P]
+            [A, n.id, S]
         );
     l.useEffect(() => {
         f.w(), u.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === S.length && 0 === T.length && P();
-        }, [S.length, T, P]),
+            0 === P.length && 0 === T.length && S();
+        }, [P.length, T, S]),
         l.useEffect(
             () => () => {
                 let e = w.current;
@@ -77,22 +77,22 @@ function m(e) {
         k = l.useCallback(
             (e) => {
                 if (null == e) return void W(null);
-                let t = S[e];
+                let t = P[e];
                 null != t && W(t);
             },
-            [W, S]
+            [W, P]
         ),
         B = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = S[e];
+                let t = P[e];
                 null != t && D(t);
             },
-            [S, D]
+            [P, D]
         ),
         M = l.useMemo(
             () =>
-                S.map((e) =>
+                P.map((e) =>
                     (0, r.jsx)(
                         b.ZP,
                         {
@@ -105,9 +105,9 @@ function m(e) {
                         e.soundId
                     )
                 ),
-            [Z, n, j, S]
+            [Z, n, j, P]
         );
-    return 0 === S.length
+    return 0 === P.length
         ? null
         : (0, r.jsx)(s.Gt, {
               value: A,
@@ -120,7 +120,7 @@ function m(e) {
                   activeItem: Z,
                   onItemSelect: k,
                   onItemAction: B,
-                  onClose: P,
+                  onClose: S,
                   interactive: j,
                   children: M
               })

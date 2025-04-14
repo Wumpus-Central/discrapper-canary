@@ -86,12 +86,12 @@ function b(e) {
                 width: 268
             };
         },
-        P = (0, l.useRef)(null),
-        w = (0, s.Yzy)(
+        w = (0, l.useRef)(null),
+        P = (0, s.Yzy)(
             j,
             {
                 keys: (e) => e.timestamp,
-                ref: P,
+                ref: w,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: h
@@ -147,14 +147,14 @@ function b(e) {
             'animate-always'
         );
     return (
-        (0, i.useChain)([P, R], [0, 0.1], 3000),
+        (0, i.useChain)([w, R], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
                     className: p.hidden,
                     ref: y
                 }),
-                w(
+                P(
                     (e, t) =>
                         null != t &&
                         (0, r.jsx)(i.animated.div, {

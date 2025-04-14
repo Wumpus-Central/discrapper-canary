@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(981631),
     A = n(302800),
     C = n(215023),
-    P = n(231338),
-    R = n(770977);
+    R = n(231338),
+    P = n(770977);
 function w(e, t, n) {
     return (
         t in e
@@ -142,8 +142,8 @@ function M(e) {
                             })
                         ),
                     options: {
-                        bodyClassName: R.modalOverrideBody,
-                        sliderBodyClassName: R.modalOverrideSliderBody
+                        bodyClassName: P.modalOverrideBody,
+                        sliderBodyClassName: P.modalOverrideSliderBody
                     }
                 }
             ],
@@ -154,12 +154,12 @@ function M(e) {
         children: [
             (0, r.jsx)(s.O_, {
                 ref: Y,
-                className: R.confettiCanvas,
+                className: P.confettiCanvas,
                 environment: H.current
             }),
             (0, r.jsx)(_.i, {
                 options: q,
-                className: a()(R.customConfetti, { [R.hidden]: !K })
+                className: a()(P.customConfetti, { [P.hidden]: !K })
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
                 loadId: M,
@@ -168,7 +168,7 @@ function M(e) {
                 skuIDs: X,
                 isGift: j,
                 activeSubscription: null,
-                purchaseType: P.GZ.ONE_TIME,
+                purchaseType: R.GZ.ONE_TIME,
                 children: (0, r.jsx)(E.c1, {
                     children: (0, r.jsx)(h.KB, {
                         isGift: j,

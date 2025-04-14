@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(388032),
     A = n(870751),
     C = n(302195);
-function P(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function P(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
@@ -113,8 +113,8 @@ function M(e) {
         { analyticsLocations: o } = (0, f.ZP)(d.Z.GIFT_BUTTON),
         [a, u] = i.useState(!1),
         y = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
-        P = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        w = null != P ? v.default.age(P.id) : 0,
+        R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+        w = null != R ? v.default.age(R.id) : 0,
         M = !t && y && w >= L,
         { enabled: k } = m.O.useExperiment({ location: 'gift-button' }),
         j = [];
@@ -157,7 +157,7 @@ function M(e) {
             (0, r.jsx)(
                 I.Z,
                 D(
-                    R(
+                    P(
                         {
                             innerClassName: C.button,
                             'aria-label': N.NW.string(N.t.Z1RnTk),

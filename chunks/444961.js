@@ -25,18 +25,18 @@ class b extends a.Z {
         if (!h.isPlatformEmbedded) return;
         for (let e of (g.stop(), m.stop(), o.Z.getAllActiveStreams())) if (e.state !== f.jm8.ENDED) return;
         if (null == e) return;
-        let t = d.ZP.getChannelId();
+        let t = d.Z.getChannelId();
         if (null == t) return;
         m.start(18000000, () => {
             l.default.selectVoiceChannel(null);
         });
-        let n = c.Z.getGuild(d.ZP.getGuildId());
+        let n = c.Z.getGuild(d.Z.getGuildId());
         if (null == n || null == n.afkChannelId || n.afkChannelId === t || null == n.afkTimeout) return;
         let r = s.Z.getChannel(t);
         null != r &&
             (r.isGuildStageVoice() ||
                 g.start(e + n.afkTimeout * p.Z.Millis.SECOND - Date.now(), () => {
-                    null != (n = c.Z.getGuild(d.ZP.getGuildId())) && null != n.afkChannelId && l.default.selectVoiceChannel(n.afkChannelId);
+                    null != (n = c.Z.getGuild(d.Z.getGuildId())) && null != n.afkChannelId && l.default.selectVoiceChannel(n.afkChannelId);
                 }));
     }
 }

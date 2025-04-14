@@ -77,7 +77,7 @@ function C(e) {
     }
     return !!S.has(t) && !r && A(t);
 }
-function P(e) {
+function R(e) {
     let { channelId: t } = e;
     return (
         ('GUILD_RING_STOP' !== e.type ||
@@ -89,7 +89,7 @@ function P(e) {
         A(t)
     );
 }
-function R(e) {
+function P(e) {
     let { channelId: t } = e;
     return A(t);
 }
@@ -140,10 +140,10 @@ g(M, 'displayName', 'IncomingCallStore');
 let k = new M(s.Z, {
     CALL_CREATE: C,
     CALL_UPDATE: C,
-    CALL_DELETE: P,
+    CALL_DELETE: R,
     GUILD_RING_START: C,
-    GUILD_RING_STOP: P,
-    VOICE_CHANNEL_SELECT: R,
+    GUILD_RING_STOP: R,
+    VOICE_CHANNEL_SELECT: P,
     INCOMING_CALL_MOVE: w,
     CHANNEL_DELETE: D
 });

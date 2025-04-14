@@ -92,7 +92,7 @@ let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFoc
 function N(e) {
     var t,
         n,
-        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: P, canSelect: R = !0, autoplay: w, registerAnimatedElementRef: D, registerInnerRef: L } = e,
+        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: v, size: S = 'default', isInteracting: N = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerAnimatedElementRef: D, registerInnerRef: L } = e,
         x = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerAnimatedElementRef', 'registerInnerRef']);
     let [M, k] = i.useState(!1),
         [j, U] = i.useState(void 0),
@@ -130,9 +130,9 @@ function N(e) {
         ),
         Q = i.useCallback(
             (e) => {
-                v && k(!1), null == f && V(p), null == P || P(e);
+                v && k(!1), null == f && V(p), null == R || R(e);
             },
-            [v, f, p, P, V]
+            [v, f, p, R, V]
         ),
         X = i.useMemo(() => {
             let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
@@ -178,7 +178,7 @@ function N(e) {
                       disable: !1 === H || !1 === F,
                       emojiRef: $
                   }),
-                  R
+                  P
                       ? (0, r.jsx)(
                             'img',
                             O(y({}, X), {

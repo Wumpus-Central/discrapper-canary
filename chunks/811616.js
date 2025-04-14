@@ -23,13 +23,13 @@ function O(e) {
     let { premiumSubscription: t, planId: n, selectPlan: i, selected: a, priceOptions: O, shouldShowUpdatedPaymentModal: I, isEligibleForDiscount: S, discountAmountOff: T, isEligibleForTrial: N } = e,
         A = (0, l.e7)([f.default], () => f.default.locale),
         C = (0, l.e7)([_.Z], () => _.Z.get(n)),
-        { isGift: P, giftRecipient: R } = (0, d.wD)(),
-        w = P && (0, p.pO)(R);
+        { isGift: R, giftRecipient: P } = (0, d.wD)(),
+        w = R && (0, p.pO)(P);
     s()(null != C, 'Missing subscriptionPlan');
     let D = null != t && t.planId === n,
         L = D || (n === b.Xh.PREMIUM_MONTH_TIER_2 && null != t && [b.Xh.PREMIUM_YEAR_TIER_0, b.Xh.PREMIUM_YEAR_TIER_1].includes(t.planId)),
         x = b.nH[n],
-        M = (0, m.aS)(n, !1, P, O),
+        M = (0, m.aS)(n, !1, R, O),
         k = (0, m.Ap)(O.paymentSourceId),
         j = null != x && !I,
         U = (0, E.Ng)(),
@@ -62,7 +62,7 @@ function O(e) {
                             [v.optionSelected]: a || w,
                             [v.updatedOptionSelected]: I && (a || w)
                         }),
-                        children: [(0, m.L7)(C.interval, P, k, C.intervalCount, w, (0, m.Rd)(C.id)), w && V()]
+                        children: [(0, m.L7)(C.interval, R, k, C.intervalCount, w, (0, m.Rd)(C.id)), w && V()]
                     }),
                     w &&
                         (0, r.jsx)('div', {

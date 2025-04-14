@@ -96,7 +96,7 @@ function W(e, t) {
         );
     }
     {
-        let t = !T.tx.has(u.type) || I.ZP.getChannelId() === u.id;
+        let t = !T.tx.has(u.type) || I.Z.getChannelId() === u.id;
         if (v.ZP.allowAllMessages(u) && t) return !0;
         let n = v.ZP.isSuppressEveryoneEnabled(u.getGuildId()),
             i = v.ZP.isSuppressRolesEnabled(u.getGuildId());

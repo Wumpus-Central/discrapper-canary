@@ -119,8 +119,8 @@ function C(e) {
             guildId: t,
             leaderboardId: _
         }),
-        { leaderboardsDisabled: P } = (0, h.O)(t, _),
-        R =
+        { leaderboardsDisabled: R } = (0, h.O)(t, _),
+        P =
             null != N && null != S
                 ? () => {
                       f.default.track(b.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
@@ -133,7 +133,7 @@ function C(e) {
                           });
                   }
                 : b.dG4,
-        w = null == S || P ? y.NW.string(y.t['0yRXHx']) : y.NW.string(y.t['KWpU6+']),
+        w = null == S || R ? y.NW.string(y.t['0yRXHx']) : y.NW.string(y.t['KWpU6+']),
         { lastUpdateRequested: D, statisticLastUpdatedDate: L } = (0, g.Z)({
             userId: O,
             guildId: t,
@@ -171,7 +171,7 @@ function C(e) {
                                   (0, r.jsx)(a.sNh, {
                                       id: 'refresh-my-data',
                                       label: y.NW.string(y.t.iopWUV),
-                                      action: R,
+                                      action: P,
                                       disabled: x,
                                       subtext: M
                                   }),

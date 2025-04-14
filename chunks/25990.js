@@ -29,12 +29,12 @@ function A() {
 function C() {
     (S = O.QZA.SUBMITTING), (T = {});
 }
-function P(e) {
+function R(e) {
     var t;
     if (S !== O.QZA.SUBMITTING) return !1;
     (S = O.QZA.OPEN), (T = null != (t = e.errors) ? t : {});
 }
-function R(e) {
+function P(e) {
     let { section: t } = e;
     return t === O.oAB.ACCOUNT && N();
 }
@@ -217,11 +217,11 @@ let er = new en(v.Z, {
     USER_SETTINGS_ACCOUNT_INIT: N,
     USER_SETTINGS_MODAL_INIT: N,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: N,
-    USER_SETTINGS_MODAL_SET_SECTION: R,
+    USER_SETTINGS_MODAL_SET_SECTION: P,
     USER_SETTINGS_ACCOUNT_CLOSE: A,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: et,
     USER_SETTINGS_ACCOUNT_SUBMIT: C,
-    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: P,
+    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: R,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: w,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: D,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: L,

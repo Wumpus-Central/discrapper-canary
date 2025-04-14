@@ -94,7 +94,7 @@ function p(e) {
                 })
             );
         },
-        P = o()(
+        R = o()(
             u.wrapper,
             {
                 [u.clickable]: null != v,
@@ -103,18 +103,18 @@ function p(e) {
             },
             I
         ),
-        R = (0, s.pxk)(n),
+        P = (0, s.pxk)(n),
         w = f(
             {
-                height: R,
-                width: R
+                height: P,
+                width: P
             },
             y
         );
     return (0, r.jsx)('div', {
         style: w,
         onContextMenu: O,
-        className: P,
+        className: R,
         children: C()
     });
 }

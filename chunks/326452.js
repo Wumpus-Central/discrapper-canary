@@ -138,7 +138,7 @@ class O extends (r = o.PureComponent) {
     render() {
         let e = this.props,
             { query: t, autoFocus: n, onClear: r, className: o, placeholder: a = f.NW.string(f.t['5h0QOD']), iconClassName: l, onKeyDown: u, onKeyUp: d, onKeyPress: p, isLoading: m, size: b, disabled: y, onChange: O, onBlur: I, onFocus: S, autoComplete: T, inputProps: N, hideSearchIcon: A, 'aria-label': C = f.NW.string(f.t['5h0QOD']) } = e,
-            P = E(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'iconClassName', 'onKeyDown', 'onKeyUp', 'onKeyPress', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'hideSearchIcon', 'aria-label']);
+            R = E(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'iconClassName', 'onKeyDown', 'onKeyUp', 'onKeyPress', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'hideSearchIcon', 'aria-label']);
         return (0, i.jsx)(c.t, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
@@ -150,7 +150,7 @@ class O extends (r = o.PureComponent) {
                             className: s()(o, _.container, b, { [_.disabled]: y }),
                             ref: this.containerRef
                         },
-                        P
+                        R
                     ),
                     {
                         children: (0, i.jsxs)('div', {

@@ -76,15 +76,15 @@ function O(e) {
             frame_id: S,
             platform: h.S4.DESKTOP
         }),
-        [C, P] = i.useState(!1),
-        R = u.Z.theme,
+        [C, R] = i.useState(!1),
+        P = u.Z.theme,
         w = b({}, o);
     function D(e) {
         var n;
         null == a || a(e.target), (T.current = e.target), N(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, A], null != t ? t : '');
     }
     return (
-        R === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
+        P === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
         i.useEffect(
             () => (
                 d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: S }),
@@ -97,7 +97,7 @@ function O(e) {
         i.useEffect(() => {
             let e = (e) => {
                 let { resizing: t } = e;
-                P(t);
+                R(t);
             };
             return (
                 d.S.subscribe(m.CkL.MANUAL_IFRAME_RESIZING, e),

@@ -23,7 +23,7 @@ let v = (e) => {
         N = (0, a.e7)([_.Z], () => (0, s.wj)(_.Z.theme)),
         A = null != n ? (0, m.EU)(n) : i,
         C = (0, a.e7)([p.Z], () => p.Z.getStatus(t.id)),
-        P = N ? '#706F74' : '#aaaab2';
+        R = N ? '#706F74' : '#aaaab2';
     return (0, r.jsxs)('div', {
         className: o()(v, E.nameplatePreview, { [E.nameplatePurchased]: T && !O }),
         style: { color: N ? 'white' : 'black' },
@@ -64,7 +64,7 @@ let v = (e) => {
                                 size: l.EFr.SIZE_32,
                                 'aria-label': g.NW.string(g.t.cqpybG),
                                 status: l.Skl.ONLINE,
-                                statusColor: P
+                                statusColor: R
                             }),
                             name: (0, r.jsx)('div', { className: o()(E.placeholderUsername, E.placeholderUsernameColor) }),
                             innerClassName: E.avatarWithTextInnerClassName,

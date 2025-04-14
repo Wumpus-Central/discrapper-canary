@@ -116,13 +116,13 @@ function C(e) {
         return null == (e = n.cancel) ? void 0 : e.call(n);
     });
 }
-function P(e) {
+function R(e) {
     let { file: t, itemId: n } = e,
         r = _[t.id];
     if (null == r) return !1;
     setImmediate(() => r.cancelItem(n));
 }
-function R(e) {
+function P(e) {
     let { channelId: t, file: n } = e,
         r = p[n.id];
     null != r && r.nonce, T(t, n);
@@ -159,7 +159,7 @@ let L = new D(o.Z, {
     UPLOAD_COMPLETE: N,
     UPLOAD_FAIL: A,
     UPLOAD_CANCEL_REQUEST: C,
-    UPLOAD_ITEM_CANCEL_REQUEST: P,
-    UPLOAD_FILE_UPDATE: R,
+    UPLOAD_ITEM_CANCEL_REQUEST: R,
+    UPLOAD_FILE_UPDATE: P,
     UPLOAD_RESTORE_FAILED_UPLOAD: w
 });

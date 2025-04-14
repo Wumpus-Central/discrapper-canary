@@ -90,12 +90,12 @@ let N = new _.Z('ChoosePaymentSourceType'),
         [E.HeQ.CASH_APP]: p.ZP.Types.CASH_APP
     },
     C = [E.HeQ.CARD, E.HeQ.PAYPAL],
-    P = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
-    R = new Map([
+    R = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
+    P = new Map([
         [E.HeQ.SOFORT, new Set([])],
         [E.HeQ.PRZELEWY24, new Set(['ALL', 'PL'])],
         [E.HeQ.GIROPAY, new Set(['ALL', 'DE'])],
-        [E.HeQ.PAYSAFE_CARD, new Set(['ALL', ...P])],
+        [E.HeQ.PAYSAFE_CARD, new Set(['ALL', ...R])],
         [E.HeQ.GCASH, new Set(['ALL', 'PH'])],
         [E.HeQ.GRABPAY_MY, new Set(['ALL', 'MY'])],
         [E.HeQ.MOMO_WALLET, new Set(['ALL', 'VN'])],
@@ -117,7 +117,7 @@ function x(e) {
     let o = new Set(),
         a = [];
     return (
-        R.forEach((e, n) => {
+        P.forEach((e, n) => {
             t.includes(n) && (e.has(i) ? o.add(n) : a.push(n));
         }),
         w.forEach((e, t) => {

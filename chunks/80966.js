@@ -81,7 +81,7 @@ function h(e, t) {
 class m extends i.Component {
     render() {
         let e = this.props,
-            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: v, autoMute: O, responsive: I, mediaLayoutType: S, mimeType: T, renderOverlayContent: N, renderLinkComponent: A, onClick: C, onPlay: P, onPause: R, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, alt: k = c.NW.string(c.t.FlNoSU) } = e,
+            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: v, autoMute: O, responsive: I, mediaLayoutType: S, mimeType: T, renderOverlayContent: N, renderLinkComponent: A, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, alt: k = c.NW.string(c.t.FlNoSU) } = e,
             j = p(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'alt']);
         return (0, r.jsx)(
             a.ZP,
@@ -127,8 +127,8 @@ class m extends i.Component {
                             renderLinkComponent: A,
                             renderOverlayContent: N,
                             onClick: C,
-                            onPlay: P,
-                            onPause: R,
+                            onPlay: R,
+                            onPause: P,
                             onEnded: w,
                             onVolumeChange: x,
                             onMute: M,

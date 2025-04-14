@@ -45,7 +45,7 @@ function P(e) {
                 instance: B
             }
         }),
-        q = (0, i.e7)([d.ZP], () => d.ZP.getChannelId()),
+        q = (0, i.e7)([d.Z], () => d.Z.getChannelId()),
         K = (0, h.xt)(C),
         F = q === D && null != q && K,
         Q = V.filter((e) => e.type === c.Ui.VOICE),

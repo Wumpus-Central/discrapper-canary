@@ -29,8 +29,8 @@ var r = n(200651),
     N = n(639119),
     A = n(197115),
     C = n(823188),
-    P = n(474936),
-    R = n(981631),
+    R = n(474936),
+    P = n(981631),
     w = n(388032),
     D = n(110588),
     L = n(867250);
@@ -51,11 +51,11 @@ function M(e) {
     let { className: o, children: s, withBottomMargin: l, discountOffer: c, trialOffer: u } = e,
         d = null != (t = null == u ? void 0 : u.expires_at) ? t : null == c ? void 0 : c.expires_at,
         f = null == u ? void 0 : u.subscription_trial,
-        _ = null != (i = null != (n = e.subscriptionTier) ? n : null == f ? void 0 : f.sku_id) ? i : P.Si.TIER_2;
+        _ = null != (i = null != (n = e.subscriptionTier) ? n : null == f ? void 0 : f.sku_id) ? i : R.Si.TIER_2;
     return (0, r.jsxs)('div', {
         className: a()(o, D.gradientUpsellWrapper, {
-            [D.gradientUpsellWrapperTier0]: _ === P.Si.TIER_0,
-            [D.gradientUpsellWrapperTier2]: _ === P.Si.TIER_2,
+            [D.gradientUpsellWrapperTier0]: _ === R.Si.TIER_0,
+            [D.gradientUpsellWrapperTier2]: _ === R.Si.TIER_2,
             [D.gradientUpsellWrapperWithBottomMargin]: l
         }),
         children: [
@@ -67,8 +67,8 @@ function M(e) {
                         color: 'currentColor',
                         className: D.logoIcon
                     }),
-                    _ === P.Si.TIER_0 && (0, r.jsx)(y.Z, { className: D.logoWordmark }),
-                    _ === P.Si.TIER_2 && (0, r.jsx)(b.Z, { className: D.logoWordmark })
+                    _ === R.Si.TIER_0 && (0, r.jsx)(y.Z, { className: D.logoWordmark }),
+                    _ === R.Si.TIER_2 && (0, r.jsx)(b.Z, { className: D.logoWordmark })
                 ]
             }),
             (0, r.jsx)(p.Text, {
@@ -79,7 +79,7 @@ function M(e) {
             }),
             (0, r.jsx)(C.Cy, {
                 text: null != c ? w.NW.formatToPlainString(w.t.iiLbvr, { percent: c.discount.amount }) : w.NW.string(w.t.IBYG5e),
-                colorOptions: _ === P.Si.TIER_0 ? C.VE.PREMIUM_TIER_0_WHITE_FILL : C.VE.PREMIUM_TIER_2_WHITE_FILL
+                colorOptions: _ === R.Si.TIER_0 ? C.VE.PREMIUM_TIER_0_WHITE_FILL : C.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
             (0, r.jsx)(p.Text, {
                 variant: 'eyebrow',
@@ -119,12 +119,12 @@ function k(e) {
 function j(e) {
     var t, n;
     let i = null == (t = (0, N.N)()) ? void 0 : t.subscription_trial,
-        o = null != (n = null == i ? void 0 : i.sku_id) ? n : P.Si.TIER_2;
+        o = null != (n = null == i ? void 0 : i.sku_id) ? n : R.Si.TIER_2;
     return (0, r.jsx)(p.Text, {
         variant: 'text-xs/bold',
         className: a()(D.trialBadge, e.className, {
-            [D.trialBadgeGradientTier0]: o === P.Si.TIER_0,
-            [D.trialBadgeGradientTier2]: o === P.Si.TIER_2
+            [D.trialBadgeGradientTier0]: o === R.Si.TIER_0,
+            [D.trialBadgeGradientTier2]: o === R.Si.TIER_2
         }),
         color: 'none',
         children: (0, O.a5)({
@@ -175,7 +175,7 @@ function G(e) {
             (0, r.jsx)(k, {
                 trialOffer: i,
                 className: D.subscribeButtonWide,
-                subscriptionTier: P.Si.TIER_2,
+                subscriptionTier: R.Si.TIER_2,
                 analyticsLocationObject: n,
                 onClose: t
             }),
@@ -216,7 +216,7 @@ function V(e) {
         A = (0, h.ZP)(),
         C = (0, v.BU)(S.zz / v.XD, { useKibibytes: !0 });
     switch (c) {
-        case P.cd.EMPTY_STICKER_PICKER_UPSELL:
+        case R.cd.EMPTY_STICKER_PICKER_UPSELL:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(p.P3F, {
@@ -245,7 +245,7 @@ function V(e) {
                                 discountOffer: T,
                                 children: w.NW.format(w.t['2HoFKC'], {
                                     planName: (0, O.jP)(u),
-                                    onClick: () => (0, E.uL)(R.Z5c.APPLICATION_STORE)
+                                    onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
                                 })
                             })
                         ]
@@ -254,15 +254,15 @@ function V(e) {
                         subscriptionTier: u,
                         onClose: s,
                         analyticsLocationObject: {
-                            section: R.jXE.EXPRESSION_PICKER,
-                            object: R.qAy.BUTTON_CTA
+                            section: P.jXE.EXPRESSION_PICKER,
+                            object: P.qAy.BUTTON_CTA
                         },
                         trialOffer: y,
                         discountOffer: T
                     })
                 ]
             });
-        case P.cd.STICKER_PICKER_UPSELL:
+        case R.cd.STICKER_PICKER_UPSELL:
             return (
                 l()(null != o, 'You must specify children for this upsell type'),
                 (0, r.jsxs)(r.Fragment, {
@@ -285,7 +285,7 @@ function V(e) {
                                     discountOffer: T,
                                     children: w.NW.format(w.t['2HoFKC'], {
                                         planName: (0, O.jP)(u),
-                                        onClick: () => (0, E.uL)(R.Z5c.APPLICATION_STORE)
+                                        onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
                                     })
                                 })
                             ]
@@ -294,8 +294,8 @@ function V(e) {
                             subscriptionTier: u,
                             onClose: s,
                             analyticsLocationObject: {
-                                section: R.jXE.EXPRESSION_PICKER,
-                                object: R.qAy.BUTTON_CTA
+                                section: P.jXE.EXPRESSION_PICKER,
+                                object: P.qAy.BUTTON_CTA
                             },
                             trialOffer: y,
                             discountOffer: T
@@ -303,7 +303,7 @@ function V(e) {
                     ]
                 })
             );
-        case P.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
+        case R.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
             l()(null != o, 'You must specify children for this upsell type');
             let x = (0, _.ap)(A) ? n(537381) : n(341048);
             return (0, r.jsxs)(r.Fragment, {
@@ -326,7 +326,7 @@ function V(e) {
                                 discountOffer: T,
                                 children: w.NW.format(w.t.md4nPz, {
                                     planName: (0, O.jP)(u),
-                                    onClick: () => (0, E.uL)(R.Z5c.APPLICATION_STORE)
+                                    onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
                                 })
                             })
                         ]
@@ -335,49 +335,49 @@ function V(e) {
                         subscriptionTier: u,
                         onClose: s,
                         analyticsLocationObject: {
-                            section: R.jXE.EMOJI_PICKER_POPOUT,
-                            object: R.qAy.BUTTON_CTA
+                            section: P.jXE.EMOJI_PICKER_POPOUT,
+                            object: P.qAy.BUTTON_CTA
                         },
                         trialOffer: y,
                         discountOffer: T
                     })
                 ]
             });
-        case P.cd.UPLOAD_ERROR_UPSELL:
-        case P.cd.BURST_REACTION_UPSELL:
-        case P.cd.STREAM_QUALITY_UPSELL:
-        case P.cd.MESSAGE_LENGTH_UPSELL:
+        case R.cd.UPLOAD_ERROR_UPSELL:
+        case R.cd.BURST_REACTION_UPSELL:
+        case R.cd.STREAM_QUALITY_UPSELL:
+        case R.cd.MESSAGE_LENGTH_UPSELL:
             let j;
             switch (c) {
-                case P.cd.UPLOAD_ERROR_UPSELL:
+                case R.cd.UPLOAD_ERROR_UPSELL:
                     j = w.NW.format(w.t.F4qoDw, {
                         planName: (0, O.jP)(u),
-                        premiumMaxSize: u === P.Si.TIER_0 ? w.NW.string(w.t['C/Rhb2']) : C,
+                        premiumMaxSize: u === R.Si.TIER_0 ? w.NW.string(w.t['C/Rhb2']) : C,
                         onClick: () => {
-                            (0, E.uL)(R.Z5c.APPLICATION_STORE), null == s || s();
+                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
                         }
                     });
                     break;
-                case P.cd.BURST_REACTION_UPSELL:
+                case R.cd.BURST_REACTION_UPSELL:
                     j = w.NW.format(w.t.poib9P, {
                         planName: (0, O.jP)(u),
                         onClick: () => {
-                            (0, E.uL)(R.Z5c.APPLICATION_STORE), null == s || s();
+                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
                         }
                     });
                     break;
-                case P.cd.STREAM_QUALITY_UPSELL:
+                case R.cd.STREAM_QUALITY_UPSELL:
                     j = w.NW.format(w.t.WspKp6, {
                         onClick: () => {
-                            (0, E.uL)(R.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)();
+                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)();
                         }
                     });
                     break;
-                case P.cd.MESSAGE_LENGTH_UPSELL:
+                case R.cd.MESSAGE_LENGTH_UPSELL:
                     j = w.NW.format(w.t.GUHtEx, {
-                        premiumMaxMessageLength: R.en1,
+                        premiumMaxMessageLength: P.en1,
                         onClick: () => {
-                            (0, E.uL)(R.Z5c.APPLICATION_STORE), null == s || s();
+                            (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
                         }
                     });
             }
@@ -403,7 +403,7 @@ function V(e) {
                     ]
                 })
             );
-        case P.cd.BURST_REACTION_QUICK_ACTION_UPSELL:
+        case R.cd.BURST_REACTION_QUICK_ACTION_UPSELL:
             return (0, r.jsxs)('div', {
                 className: D.contentContainer,
                 children: [
@@ -421,7 +421,7 @@ function V(e) {
                         discountOffer: T,
                         children: w.NW.format(w.t.poib9P, {
                             planName: (0, O.jP)(u),
-                            onClick: () => (0, E.uL)(R.Z5c.APPLICATION_STORE)
+                            onClick: () => (0, E.uL)(P.Z5c.APPLICATION_STORE)
                         })
                     }),
                     (0, r.jsx)(k, {
@@ -434,7 +434,7 @@ function V(e) {
                     })
                 ]
             });
-        case P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
+        case R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
             return (
                 l()(null != o, 'You must specify children for this upsell type'),
                 (0, r.jsx)(M, {
@@ -442,12 +442,12 @@ function V(e) {
                     discountOffer: T,
                     children: w.NW.format(w.t['5KMAnJ'], {
                         onClick: () => {
-                            (0, E.uL)(R.Z5c.APPLICATION_STORE), (0, g.Mo)();
+                            (0, E.uL)(P.Z5c.APPLICATION_STORE), (0, g.Mo)();
                         }
                     })
                 })
             );
-        case P.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
+        case R.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
             return (0, r.jsxs)('div', {
                 className: a()(D.messageLengthUpsellContainer, { [D.messageLengthUpsellAppearAnimation]: !N }),
                 children: [
@@ -469,9 +469,9 @@ function V(e) {
                         className: D.messageLengthBrandedContainer,
                         subscriptionTier: u,
                         children: w.NW.format(w.t.GUHtEx, {
-                            premiumMaxMessageLength: R.en1,
+                            premiumMaxMessageLength: P.en1,
                             onClick: () => {
-                                (0, E.uL)(R.Z5c.APPLICATION_STORE), null == s || s();
+                                (0, E.uL)(P.Z5c.APPLICATION_STORE), null == s || s();
                             }
                         })
                     }),
@@ -484,21 +484,21 @@ function V(e) {
                     })
                 ]
             });
-        case P.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL:
-        case P.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
+        case R.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL:
+        case R.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
             return (0, r.jsx)(G, {});
-        case P.cd.GUILD_CAP_MODAL_UPSELL:
-        case P.cd.PREMIUM_GUILD_IDENTITY_MODAL:
-        case P.cd.CUSTOM_PROFILE_UPSELL:
-        case P.cd.VIDEO_BACKGROUNDS_MODAL:
-        case P.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
-        case P.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
-        case P.cd.EMOJI_PICKER_EMOJI_CLICKED:
-        case P.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
-        case P.cd.APP_ICON_UPSELL:
-        case P.cd.CLIENT_THEMES_UPSELL:
-        case P.cd.TRY_IT_OUT_MODAL_UPSELL:
-        case P.cd.VOICE_FILTERS_UPSELL:
+        case R.cd.GUILD_CAP_MODAL_UPSELL:
+        case R.cd.PREMIUM_GUILD_IDENTITY_MODAL:
+        case R.cd.CUSTOM_PROFILE_UPSELL:
+        case R.cd.VIDEO_BACKGROUNDS_MODAL:
+        case R.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
+        case R.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
+        case R.cd.EMOJI_PICKER_EMOJI_CLICKED:
+        case R.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
+        case R.cd.APP_ICON_UPSELL:
+        case R.cd.CLIENT_THEMES_UPSELL:
+        case R.cd.TRY_IT_OUT_MODAL_UPSELL:
+        case R.cd.VOICE_FILTERS_UPSELL:
             return (0, r.jsx)(B, {
                 trialOffer: y,
                 discountOffer: T,

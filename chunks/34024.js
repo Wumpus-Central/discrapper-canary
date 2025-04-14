@@ -39,7 +39,7 @@ let u = {
             l = r.Z.getChannel(t),
             u = (null == l ? void 0 : l.isGuildStageVoice()) && (null == n ? void 0 : n.suppress),
             d = 0 === Object.keys(i.Z.getInputDevices()).length,
-            f = o.ZP.getMediaSessionId();
+            f = o.Z.getMediaSessionId();
         if (d && null != l && null != f && !u) return [c({ type: a.u.NO_INPUT_DEVICES }, (0, s.Y9)())];
     },
     makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)

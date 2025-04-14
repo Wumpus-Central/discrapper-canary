@@ -41,8 +41,8 @@ var r = n(990547),
     N = n(973616),
     A = n(314897),
     C = n(592125),
-    P = n(430824),
-    R = n(496675),
+    R = n(430824),
+    P = n(496675),
     w = n(594174),
     D = n(979651),
     L = n(626135),
@@ -106,7 +106,7 @@ function et(e) {
 }
 async function en(e) {
     var t, n;
-    let { channelId: r, applicationId: o, isStart: s, analyticsLocations: l, locationObject: c, embeddedActivitiesManager: u, componentId: d, commandOrigin: _, sectionName: p, source: h, partyId: m, onExecutedCallback: g, referrerId: E, customId: b, joinUserId: y, joinSessionId: I, secret: T, inviterUserId: N, instanceId: A, isContextlessActivity: P, onConfirmActivityLaunchChecksAlertOpen: R } = e,
+    let { channelId: r, applicationId: o, isStart: s, analyticsLocations: l, locationObject: c, embeddedActivitiesManager: u, componentId: d, commandOrigin: _, sectionName: p, source: h, partyId: m, onExecutedCallback: g, referrerId: E, customId: b, joinUserId: y, joinSessionId: I, secret: T, inviterUserId: N, instanceId: A, isContextlessActivity: R, onConfirmActivityLaunchChecksAlertOpen: P } = e,
         D = C.Z.getChannel(r),
         L = null != (t = null == D ? void 0 : D.getGuildId()) ? t : void 0,
         x = (0, G.sq)();
@@ -158,9 +158,9 @@ async function en(e) {
                 source: h,
                 onExecutedCallback: g,
                 clientSupportsContextlessActivityLaunch: x,
-                onConfirmActivityLaunchChecksAlertOpen: R,
+                onConfirmActivityLaunchChecksAlertOpen: P,
                 embeddedActivitiesManager: u,
-                isContextlessActivity: P
+                isContextlessActivity: R
             });
             if ('failure' === e.result && 4 !== e.reason) throw new v.Z(v.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
@@ -174,7 +174,7 @@ async function en(e) {
                 joinSessionId: I,
                 secret: T,
                 instanceId: A,
-                isContextlessActivity: P
+                isContextlessActivity: R
             });
             if ((null == g || g(), 'failure' === e.result)) throw new v.Z(v.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
@@ -185,7 +185,7 @@ async function en(e) {
             channelId: null != r ? r : null
         });
     } catch (t) {
-        let e = P ? i.E.CONTEXTLESS : null != L ? i.E.GUILD_CHANNEL : i.E.PRIVATE_CHANNEL;
+        let e = R ? i.E.CONTEXTLESS : null != L ? i.E.GUILD_CHANNEL : i.E.PRIVATE_CHANNEL;
         return (
             a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
@@ -242,7 +242,7 @@ async function ei(e) {
             };
     }
     let I = C.Z.getChannel(r),
-        S = null != i ? P.Z.getGuild(i) : null;
+        S = null != i ? R.Z.getGuild(i) : null;
     if (null == I)
         return {
             result: 'failure',
@@ -359,8 +359,8 @@ async function eo(e) {
     let v = (0, H.e4)({
         channelId: i,
         ChannelStore: C.Z,
-        GuildStore: P.Z,
-        PermissionStore: R.Z,
+        GuildStore: R.Z,
+        PermissionStore: P.Z,
         VoiceStateStore: D.Z
     });
     if (v !== H.jy.CAN_LAUNCH) {

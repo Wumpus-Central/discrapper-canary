@@ -53,9 +53,9 @@ function m(e, t) {
                   }
                 : (0, u.m)(m),
         C = !(0, f.Z)('lottie_hover_multiple_loop'),
-        P = i.useContext(c.S).reducedMotion.enabled,
-        { enabled: R } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
-        w = P || !R,
+        R = i.useContext(c.S).reducedMotion.enabled,
+        { enabled: P } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
+        w = R || !P,
         D = i.useRef(y);
     return (
         i.useImperativeHandle(

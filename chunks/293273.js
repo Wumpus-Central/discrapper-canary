@@ -73,7 +73,7 @@ function N(e, t) {
 }
 let A = [],
     C = {};
-function P() {
+function R() {
     let e = [],
         t = g.Ok.getSetting();
     null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, _.I)(t));
@@ -103,21 +103,21 @@ function P() {
     let I = m.Z.getActivity();
     null != I && e.push(S({ type: O.IIU.LISTENING }, I)), a()(A, e) || (A = e);
 }
-function R() {
-    (C = {}), P();
+function P() {
+    (C = {}), R();
 }
 function w(e) {
     let { socketId: t, pid: n, activity: r } = e;
     if (a()(C[t], [n, r])) return !1;
-    null != r ? (C[t] = [n, r]) : delete C[t], P();
+    null != r ? (C[t] = [n, r]) : delete C[t], R();
 }
 function D(e) {
     let { socketId: t } = e;
-    delete C[t], P();
+    delete C[t], R();
 }
 function L(e) {
     let { localActivities: t } = e;
-    (C = S({}, t)), P();
+    (C = S({}, t)), R();
 }
 function x(e) {
     let t = {},
@@ -128,7 +128,7 @@ function x(e) {
             c = (0, f.Ix)(l);
         'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[o] = [a, N(S({}, s), { flags: c })]), (n = !0)) : (t[o] = [a, s]);
     }
-    n && ((C = t), P());
+    n && ((C = t), R());
 }
 function M(e) {
     let { state: t, channelId: n } = e;
@@ -136,7 +136,7 @@ function M(e) {
 }
 class k extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, d.ZP, y.Z, b.Z, m.Z, E.Z, v.Z), this.syncWith([h.Z], () => P());
+        this.waitFor(p.ZP, d.ZP, y.Z, b.Z, m.Z, E.Z, v.Z), this.syncWith([h.Z], () => R());
     }
     getActivities() {
         return A;
@@ -164,18 +164,18 @@ class k extends (i = c.ZP.Store) {
 I(k, 'displayName', 'LocalActivityStore');
 let j = new k(u.Z, {
     OVERLAY_INITIALIZE: L,
-    START_SESSION: R,
+    START_SESSION: P,
     LOCAL_ACTIVITY_UPDATE: w,
     RPC_APP_DISCONNECTED: D,
-    RUNNING_GAMES_CHANGE: P,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: P,
-    SPOTIFY_PLAYER_STATE: P,
-    SPOTIFY_PLAYER_PLAY: P,
-    STREAMING_UPDATE: P,
-    USER_CONNECTIONS_UPDATE: P,
-    STREAM_START: P,
-    STREAM_STOP: P,
-    USER_SETTINGS_PROTO_UPDATE: P,
-    EMBEDDED_ACTIVITY_CLOSE: P,
+    RUNNING_GAMES_CHANGE: R,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: R,
+    SPOTIFY_PLAYER_STATE: R,
+    SPOTIFY_PLAYER_PLAY: R,
+    STREAMING_UPDATE: R,
+    USER_CONNECTIONS_UPDATE: R,
+    STREAM_START: R,
+    STREAM_STOP: R,
+    USER_SETTINGS_PROTO_UPDATE: R,
+    EMBEDDED_ACTIVITY_CLOSE: R,
     RTC_CONNECTION_STATE: M
 });

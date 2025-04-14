@@ -1,7 +1,7 @@
 n.d(t, {
     GE: () => N,
     GL: () => h,
-    Jd: () => P,
+    Jd: () => R,
     Jg: () => v,
     Nq: () => I,
     Ol: () => b,
@@ -15,7 +15,7 @@ n.d(t, {
     kr: () => E,
     n2: () => y,
     q_: () => w,
-    vU: () => R,
+    vU: () => P,
     yA: () => O,
     yh: () => m,
     zo: () => D
@@ -169,15 +169,15 @@ function C(e, t) {
         null != a && null != e ? ''.concat(e, ' (').concat(a, ')') : null != e ? e : a
     );
 }
-function P(e) {
+function R(e) {
     return e.content_type === s.s.TOP_GAME;
 }
-function R(e) {
+function P(e) {
     var t;
     return null == (t = g(e, a.N.STREAK_DAYS)) ? void 0 : t.streak_count_days;
 }
 function w(e) {
-    let t = R(e);
+    let t = P(e);
     if (null == t || t < 3) return !1;
     let n = c.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.Z.Millis.HOUR);

@@ -60,7 +60,7 @@ function u(e) {
     return t;
 }
 function d(e, t) {
-    var n, i, o, a, c, u, d, f, _, p, h, m, g, E, b, y, v, O, I, S, T, N, A, C, P, R, w, D;
+    var n, i, o, a, c, u, d, f, _, p, h, m, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D;
     let L = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == L) return;
     let x = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0),
@@ -106,8 +106,8 @@ function d(e, t) {
         encoderQualityVmaf: null != (N = null == (u = L.encoderQualityStats) ? void 0 : u.imageQualityVmaf_v061) ? N : void 0,
         encoderQualityPsnr: null != (A = null == (d = L.encoderQualityStats) ? void 0 : d.imageQualityWebrtcPsnrDb) ? A : void 0,
         qualityDecodeErrors: null != (C = null == (f = L.encoderQualityStats) ? void 0 : f.decodeErrors) ? C : void 0,
-        qualityDecoderReboots: null != (P = null == (_ = L.encoderQualityStats) ? void 0 : _.decoderReboots) ? P : void 0,
-        qualityScoreErrors: null != (R = null == (p = L.encoderQualityStats) ? void 0 : p.scoreErrors) ? R : void 0,
+        qualityDecoderReboots: null != (R = null == (_ = L.encoderQualityStats) ? void 0 : _.decoderReboots) ? R : void 0,
+        qualityScoreErrors: null != (P = null == (p = L.encoderQualityStats) ? void 0 : p.scoreErrors) ? P : void 0,
         qualityFrameDrops: null != (w = null == (h = L.encoderQualityStats) ? void 0 : h.frameDrops) ? w : void 0,
         qualitySizeMismatches: null != (D = null == (m = L.encoderQualityStats) ? void 0 : m.sizeMismatches) ? D : void 0,
         filter: e.filter,

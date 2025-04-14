@@ -24,8 +24,8 @@ var r = n(98405),
     N = n(264750).f,
     A = n(522169),
     C = n(920029).forEach,
-    P = n(108015),
-    R = n(573078),
+    R = n(108015),
+    P = n(573078),
     w = n(117895),
     D = n(840991),
     L = n(335024),
@@ -48,7 +48,7 @@ var r = n(98405),
     Q = 'BYTES_PER_ELEMENT',
     X = 'Wrong length',
     J = function (e, t) {
-        R(e, t, {
+        P(e, t, {
             configurable: !0,
             get: function () {
                 return k(this)[t];
@@ -98,7 +98,7 @@ a
                   var i = k(e);
                   i.view[d](t * a + i.byteOffset, n ? g(r) : r, !0);
               },
-              R = function (e, t) {
+              P = function (e, t) {
                   G(e, t, {
                       get: function () {
                           return O(this, t);
@@ -157,7 +157,7 @@ a
                         c < l;
 
                     )
-                        R(e, c++);
+                        P(e, c++);
                 })),
                 T && T(E, K),
                 (b = E.prototype = I(z))),
@@ -177,6 +177,6 @@ a
               ),
               Q in E || f(E, Q, a),
               Q in b || f(b, Q, a),
-              P(l);
+              R(l);
       }))
     : (e.exports = function () {});

@@ -79,13 +79,13 @@ function v(e) {
         C = i.useCallback(() => {
             null == b || b(), N(), null == n || n();
         }, [N, n, b]),
-        P = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 e.stopPropagation(), (0, c.uL)(p.Z5c.GUILD_MEMBER_VERIFICATION(v)), null == n || n();
             },
             [v, n]
         ),
-        R = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 e.stopPropagation(),
                     null != O &&
@@ -99,9 +99,9 @@ function v(e) {
         ),
         w = i.useCallback(
             (e) => {
-                e.stopPropagation(), t.visibility !== f.k.PUBLIC_WITH_RECRUITMENT && null != O ? R(e) : s.Z.openMemberVerificationModal(v, void 0, O), null == n || n();
+                e.stopPropagation(), t.visibility !== f.k.PUBLIC_WITH_RECRUITMENT && null != O ? P(e) : s.Z.openMemberVerificationModal(v, void 0, O), null == n || n();
             },
-            [v, R, n, t.visibility, O]
+            [v, P, n, t.visibility, O]
         ),
         D = i.useCallback(
             async (e) => {
@@ -144,7 +144,7 @@ function v(e) {
             return (0, r.jsx)(
                 o.zxk,
                 y(E({}, L), {
-                    onClick: P,
+                    onClick: R,
                     children: m.NW.string(m.t['4yfIDg'])
                 })
             );
@@ -168,7 +168,7 @@ function v(e) {
             return (0, r.jsx)(
                 o.zxk,
                 y(E({}, L), {
-                    onClick: R,
+                    onClick: P,
                     children: m.NW.string(m.t.eb9gDA)
                 })
             );

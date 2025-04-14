@@ -11,8 +11,8 @@ var r = n(592125),
     })({});
 function l(e, t, n) {
     var s;
-    let l = i.ZP.getChannelId(),
-        c = i.ZP.getGuildId(),
+    let l = i.Z.getChannelId(),
+        c = i.Z.getGuildId(),
         u = null == (s = r.Z.getChannel(l)) ? void 0 : s.type;
     o.default.track(a.rMx.CALL_BUTTON_CLICKED, {
         location: e,

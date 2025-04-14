@@ -8,7 +8,7 @@ function a(e) {
     let { channelId: t, userId: r, nickname: a, onAlertOpen: o } = e,
         c = (function (e) {
             let { userId: t } = e;
-            return (0, l.e7)([i.ZP, u.Z], () => (0, s.UB)(t, [i.ZP, u.Z]));
+            return (0, l.e7)([i.Z, u.Z], () => (0, s.UB)(t, [i.Z, u.Z]));
         })({ userId: r }),
         d = n.useRef(null);
     n.useEffect(() => {

@@ -29,8 +29,8 @@ var i = n(772848),
     N = n(585483),
     A = n(358085),
     C = n(624138),
-    P = n(24933),
-    R = n(115130),
+    R = n(24933),
+    P = n(115130),
     w = n(566620),
     D = n(317381),
     L = n(969345),
@@ -155,17 +155,17 @@ function et(e) {
         E = null != (r = (0, U.pY)(f)) ? r : (0, U.wq)(f),
         b = v.Z.getChannel(E);
     if ((l && null != b && b.isPrivate() && a && null == g && s.Z.selectParticipant(b.id, null), null == g)) return;
-    let I = O.ZP.getMediaSessionId(),
+    let I = O.Z.getMediaSessionId(),
         N = u.compositeInstanceId,
         A = null == I && (null == b ? void 0 : b.isVocal()) === !0 && (null == b ? void 0 : b.isPrivate()) === !1;
     if (null == N || A) return;
-    let R = (0, i.Z)(),
+    let P = (0, i.Z)(),
         w = 'location' in u ? 2 : 1,
         x = null == b ? void 0 : b.getGuildId(),
         M = S.default.getCurrentUser();
     if (null == M) return;
     let k = D.ZP.getShelfActivities(x),
-        j = P.Z.getState().shelfOrder,
+        j = R.Z.getState().shelfOrder,
         G = (0, L.Z)({
             applicationId: o,
             activityConfigs: k
@@ -176,7 +176,7 @@ function et(e) {
         H = null != I ? [I] : [],
         W = {
             activitySessionId: N,
-            activityUserSessionId: R,
+            activityUserSessionId: P,
             launchId: u.launchId,
             mediaSessionIds: H,
             activitiesInfraVersion: w
@@ -198,7 +198,7 @@ function et(e) {
             release_phase: V,
             shelf_rank: null == G || null == (t = G.activity) ? void 0 : t.shelf_rank,
             shelf_sorted_rank: B > 0 ? B : null,
-            activity_user_session_id: R,
+            activity_user_session_id: P,
             channel_type: null == b ? void 0 : b.type,
             source: null == z ? void 0 : z.source,
             command_context_type: null != b ? (0, d.Vh)(b, o) : null,
@@ -214,7 +214,7 @@ function et(e) {
             application_id: o,
             instance_id: u.launchId,
             initial_media_session_id: H[0],
-            activity_user_session_id: R,
+            activity_user_session_id: P,
             raw_thermal_state: Z,
             is_activity_start: l,
             shelf_rank: null == G || null == (n = G.activity) ? void 0 : n.shelf_rank,
@@ -285,10 +285,10 @@ class er extends c.Z {
                     d = Z.NW.string(Z.t['IOy+Iy']);
                 if (i instanceof h.Z) {
                     (t = 0), (r = i.reason);
-                    let e = R.Z.getFetchState();
-                    switch ((E.Sb.getSetting() && e !== R.O.LOADED && (await (0, w.$h)()), i.reason)) {
+                    let e = P.Z.getFetchState();
+                    switch ((E.Sb.getSetting() && e !== P.O.LOADED && (await (0, w.$h)()), i.reason)) {
                         case h.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                            R.Z.inDevModeForApplication(s) && (d = Z.NW.string(Z.t.hXRXf3));
+                            P.Z.inDevModeForApplication(s) && (d = Z.NW.string(Z.t.hXRXf3));
                             break;
                         case h.Z.Reasons.INVALID_CHANNEL:
                             d = Z.NW.string(Z.t.j29zCg);

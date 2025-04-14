@@ -25,8 +25,8 @@ var r = n(200651),
     N = n(104494),
     A = n(639119),
     C = n(53691),
-    P = n(75145),
-    R = n(631771),
+    R = n(75145),
+    P = n(631771),
     w = n(695346),
     D = n(594174),
     L = n(626135),
@@ -58,7 +58,7 @@ let z = 0,
     eo = 33,
     ea = (e) => e + 2 * er,
     es = (e) => {
-        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: o, emojiSize: s, onEmojiSelect: c, onSelectSoundmoji: f, searchQuery: p, sectionDescriptors: m, setCollapsedSections: g, getEmojiItemProps: v, getEmojiRowProps: T, isScrolling: N, isUsingKeyboardNavigation: A, allowAnimatedEmoji: C, channelGuildId: R, channelId: w, messageId: D, isBurstReaction: x, listHeaderClassName: M, activeSectionIndex: k, upsellGlowOpacity: W, emojiListRef: z } = e,
+        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: o, emojiSize: s, onEmojiSelect: c, onSelectSoundmoji: f, searchQuery: p, sectionDescriptors: m, setCollapsedSections: g, getEmojiItemProps: v, getEmojiRowProps: T, isScrolling: N, isUsingKeyboardNavigation: A, allowAnimatedEmoji: C, channelGuildId: P, channelId: w, messageId: D, isBurstReaction: x, listHeaderClassName: M, activeSectionIndex: k, upsellGlowOpacity: W, emojiListRef: z } = e,
             er = (0, h.O)(),
             ea = i.useRef(Z.xAR),
             es = i.useMemo(() => ('' !== n ? d.Z.convert.toCodePoint(n) : ''), [n]),
@@ -131,7 +131,7 @@ let z = 0,
                                 rowIndex: e,
                                 allowAnimatedEmoji: C,
                                 showEmojiFavoriteTooltip: ef,
-                                channelGuildId: R,
+                                channelGuildId: P,
                                 category: i.sectionId,
                                 selectedItemClassName: K.__invalid_selectedItem,
                                 channelId: w,
@@ -143,7 +143,7 @@ let z = 0,
                             e
                         );
                     }),
-                [o, m, s, es, ed, c, f, v, T, N, A, C, ef, R, w, D, x, z]
+                [o, m, s, es, ed, c, f, v, T, N, A, C, ef, P, w, D, x, z]
             );
         i.useEffect(
             () => () => {
@@ -232,7 +232,7 @@ let z = 0,
                 },
                 [t, m, ec, el]
             ),
-            eg = i.useCallback((e) => (ec(e) ? (eh ? (0, r.jsx)(P.fi, {}) : (0, r.jsx)(P.ZP, { glowOpacity: W })) : el(e) ? (0, r.jsx)('div', { className: K.nitroBottomDivider }) : null), [W, ec, el, eh]),
+            eg = i.useCallback((e) => (ec(e) ? (eh ? (0, r.jsx)(R.fi, {}) : (0, r.jsx)(R.ZP, { glowOpacity: W })) : el(e) ? (0, r.jsx)('div', { className: K.nitroBottomDivider }) : null), [W, ec, el, eh]),
             eE = i.useCallback((e) => (ec(e) ? ei : el(e) ? eo : 0), [ec, el]),
             eb = i.useCallback(
                 (e) => {
@@ -253,7 +253,7 @@ let z = 0,
         };
     },
     el = i.memo(function (e) {
-        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: o, emojiSize: a, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: O, getEmojiItemProps: I, getEmojiRowProps: S, rowCount: P, isUsingKeyboardNavigation: k, channelGuildId: j, channelId: U, messageId: G, isBurstReaction: V, listHeaderClassName: F } = e,
+        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: o, emojiSize: a, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: O, getEmojiItemProps: I, getEmojiRowProps: S, rowCount: R, isUsingKeyboardNavigation: k, channelGuildId: j, channelId: U, messageId: G, isBurstReaction: V, listHeaderClassName: F } = e,
             H = i.useRef(!1),
             q = E.kJ.useStore((e) => e.activeCategoryIndex),
             Q = (0, b.Iu)((e) => e.searchQuery),
@@ -269,7 +269,7 @@ let z = 0,
             ed = (0, N.Ng)(),
             ef = ei && !$ && !c.tq,
             e_ = null != eu || null != ed,
-            { enabled: ep } = R.G.useExperiment(
+            { enabled: ep } = P.G.useExperiment(
                 { location: 'Premium Emoji Roadblock' },
                 {
                     autoTrackExposure: ef && !e_,
@@ -341,7 +341,7 @@ let z = 0,
                 [eT, eN]
             ),
             eC = f.length > 0;
-        function eP() {
+        function eR() {
             if (!eh) return Y.NW.string(Y.t.EtmOFh);
             {
                 let e = (0, M.Px)(W.p9.TIER_2);
@@ -356,7 +356,7 @@ let z = 0,
                 });
             }
         }
-        function eR() {
+        function eP() {
             if (eh) {
                 var e;
                 let t = (0, T.J0)();
@@ -389,7 +389,7 @@ let z = 0,
                               renderSection: eE,
                               renderSectionHeader: eb,
                               renderSectionFooter: ey,
-                              rowCount: P,
+                              rowCount: R,
                               rowCountBySection: _,
                               rowHeight: ea(a),
                               sectionHeaderHeight: eO,
@@ -406,8 +406,8 @@ let z = 0,
                         ? null
                         : (0, r.jsx)(C.p, {
                               showUpsell: ei,
-                              text: eP(),
-                              button: eR(),
+                              text: eR(),
+                              button: eP(),
                               buttonAnalyticsObject: { section: Z.jXE.EMOJI_PICKER_FLOATING_UPSELL }
                           })
                 ]

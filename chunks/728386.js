@@ -94,8 +94,8 @@ function y(e, t) {
             }
         );
     }, [y]);
-    let { Component: A, events: C, play: P } = (0, l.z)(),
-        R = (0, u.Q3)('ChannelStickerPickerButton');
+    let { Component: A, events: C, play: R } = (0, l.z)(),
+        P = (0, u.Q3)('ChannelStickerPickerButton');
     if (n) return null;
     let w = O;
     return (0, r.jsx)('div', {
@@ -105,7 +105,7 @@ function y(e, t) {
             f.Z,
             b(g({ innerClassName: a()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !S }) }, C), {
                 onClick: () => {
-                    N(), P();
+                    N(), R();
                 },
                 isActive: S,
                 'aria-label': p.NW.string(p.t.rZpidX),
@@ -115,7 +115,7 @@ function y(e, t) {
                 sparkle: v,
                 notification: T ? f.j.UPDATE : null,
                 children: (0, r.jsx)(A, {
-                    size: R ? 'refresh_sm' : void 0,
+                    size: P ? 'refresh_sm' : void 0,
                     color: 'currentColor'
                 })
             })

@@ -40,8 +40,8 @@ var r = n(192379),
     N = n(981631),
     A = n(37113);
 let C = 3500000,
-    P = 10000,
-    R = new a.Yd('HDStreamingConsumableModal'),
+    R = 10000,
+    P = new a.Yd('HDStreamingConsumableModal'),
     w = (e) => {
         let t = (0, s.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
             n = (0, s.e7)([g.default], () => {
@@ -58,14 +58,14 @@ let C = 3500000,
         (0, s.e7)(
             [m.Z],
             () => {
-                if (null == a || Date.now() - a > P) {
+                if (null == a || Date.now() - a > R) {
                     let e = i.map((e) => {
                         var t;
                         let n = (0, d.V9)(e),
                             r = m.Z.getRTCConnection(n);
                         return null == r || null == (t = r.getVideoStats()) ? void 0 : t.inbound_bitrate_estimate_percentile99;
                     });
-                    R.info('Setting bitrates', e), u(e), l(Date.now());
+                    P.info('Setting bitrates', e), u(e), l(Date.now());
                 }
             },
             [a, i]

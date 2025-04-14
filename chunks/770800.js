@@ -1,4 +1,4 @@
-r.d(t, { Z: () => Z }), r(784620), r(973216);
+r.d(t, { Z: () => P }), r(784620), r(973216);
 var n = r(200651),
     a = r(192379),
     i = r(392711),
@@ -19,9 +19,9 @@ var n = r(200651),
     N = r(513547),
     b = r(65154),
     E = r(388032),
-    P = r(442122),
-    j = r(20493);
-class C extends a.PureComponent {
+    j = r(442122),
+    C = r(20493);
+class Z extends a.PureComponent {
     render() {
         var e, t;
         let { transport: r, mediaSessionId: a, hidePersonalInformation: i, hostname: l } = this.props;
@@ -128,19 +128,19 @@ class C extends a.PureComponent {
         return (0, n.jsxs)(o.hjN, {
             tag: o.RB0.H2,
             title: E.NW.string(E.t.wU9INz) + (null != a ? ' - ' + a : ''),
-            className: P.allowSelection,
-            children: [(0, v.a)(u), 0 === f.length ? null : (0, n.jsx)(o.$i$, { className: j.marginBottom20 }), (0, v.a)(f)]
+            className: j.allowSelection,
+            children: [(0, v.a)(u), 0 === f.length ? null : (0, n.jsx)(o.$i$, { className: C.marginBottom20 }), (0, v.a)(f)]
         });
     }
 }
-let Z = l.ZP.connectStores([u.ZP, d.ZP, h.Z, p.Z], (e) => {
+let P = l.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     let { context: t, index: r } = e,
         n = u.ZP.getAllStats(t)[r],
-        a = t === b.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.ZP.getHostname();
+        a = t === b.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.Z.getHostname();
     return {
         hidePersonalInformation: h.Z.hidePersonalInformation,
         transport: null != n ? n.transport : null,
-        mediaSessionId: d.ZP.getMediaSessionId(),
+        mediaSessionId: d.Z.getMediaSessionId(),
         hostname: f.Z.getShortHostname(a)
     };
-})(C);
+})(Z);

@@ -6,7 +6,7 @@ var n = r(192379),
     s = r(760373);
 function a(e) {
     let { userId: t } = e,
-        r = (0, l.e7)([i.ZP], () => i.ZP.getSecureFramesRosterMapEntry(t)),
+        r = (0, l.e7)([i.Z], () => i.Z.getSecureFramesRosterMapEntry(t)),
         [a, o] = n.useState(!0),
         [c, d] = n.useState(!1),
         [f, E] = n.useState(!1),

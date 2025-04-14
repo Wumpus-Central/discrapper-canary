@@ -25,7 +25,7 @@ var r,
     P = n(674552),
     I = n(981631),
     N = n(223203);
-function E(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function E(e, t, n) {
         e
     );
 }
-function Z(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function Z(e) {
                 })
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                Z(e, t, n[t]);
             });
     }
     return e;
@@ -80,9 +80,9 @@ function A(e) {
     switch (e) {
         case 'height':
         case 'opacity':
-            return Z({ duration: 150 }, T);
+            return E({ duration: 150 }, T);
         case 'scale':
-            return Z({}, T);
+            return E({}, T);
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -180,7 +180,7 @@ class D extends (r = l.PureComponent) {
                                 children: (r) =>
                                     (0, i.jsx)(
                                         c.LYs,
-                                        Z(
+                                        E(
                                             {
                                                 to: I.Z5c.CHANNEL(I.ME, e.id),
                                                 onMouseEnter: () => this.setState({ hovered: !0 }),
@@ -212,7 +212,7 @@ class D extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', {
+            Z(this, 'state', {
                 hovered: !1,
                 animating: !0,
                 controller: new o.Controller({
@@ -222,7 +222,7 @@ class D extends (r = l.PureComponent) {
                     config: A
                 })
             }),
-            E(this, 'handleContextMenu', (e) => {
+            Z(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     r = t.type === I.d4z.DM ? O.default.getUser(t.getRecipientId()) : null;
                 null != r
@@ -231,7 +231,7 @@ class D extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  w(Z({}, n), {
+                                  w(E({}, n), {
                                       channel: t,
                                       user: r
                                   })
@@ -242,7 +242,7 @@ class D extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  w(Z({}, n), {
+                                  w(E({}, n), {
                                       channel: t,
                                       selected: !1
                                   })
@@ -251,7 +251,7 @@ class D extends (r = l.PureComponent) {
             });
     }
 }
-E(D, 'defaultProps', {
+Z(D, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,
@@ -260,7 +260,7 @@ E(D, 'defaultProps', {
 let R = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         r = (0, h.ZP)(e.channel),
-        l = (0, s.e7)([_.ZP], () => _.ZP.getChannelId(), []),
+        l = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
         o = (0, s.e7)([d.Z], () => (null != l ? d.Z.getMode(l) : I.WtW.VOICE), [l]),
         a = (0, s.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
         u = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
@@ -274,7 +274,7 @@ let R = l.forwardRef(function (e, t) {
         S = (0, f.Q3)('DirectMessage');
     return (0, i.jsx)(
         D,
-        w(Z({}, e), {
+        w(E({}, e), {
             ref: t,
             channelName: r,
             unread: p > 0,

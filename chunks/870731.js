@@ -39,7 +39,7 @@ function i() {
     }
     function _(e, t, n, r) {
         var i = Object.create((t && t.prototype instanceof y ? t : y).prototype);
-        return s(i, '_invoke', { value: P(e, n, new L(r || [])) }), i;
+        return s(i, '_invoke', { value: R(e, n, new L(r || [])) }), i;
     }
     function p(e, t, n) {
         try {
@@ -116,7 +116,7 @@ function i() {
             }
         });
     }
-    function P(e, n, r) {
+    function R(e, n, r) {
         var i = h;
         return function (o, a) {
             if (i === g) throw Error('Generator is already running');
@@ -130,7 +130,7 @@ function i() {
             for (r.method = o, r.arg = a; ; ) {
                 var s = r.delegate;
                 if (s) {
-                    var l = R(s, r);
+                    var l = P(s, r);
                     if (l) {
                         if (l === b) continue;
                         return l;
@@ -154,10 +154,10 @@ function i() {
             }
         };
     }
-    function R(e, n) {
+    function P(e, n) {
         var r = n.method,
             i = e.iterator[r];
-        if (i === t) return (n.delegate = null), ('throw' === r && e.iterator.return && ((n.method = 'return'), (n.arg = t), R(e, n), 'throw' === n.method)) || ('return' !== r && ((n.method = 'throw'), (n.arg = TypeError("The iterator does not provide a '" + r + "' method")))), b;
+        if (i === t) return (n.delegate = null), ('throw' === r && e.iterator.return && ((n.method = 'return'), (n.arg = t), P(e, n), 'throw' === n.method)) || ('return' !== r && ((n.method = 'throw'), (n.arg = TypeError("The iterator does not provide a '" + r + "' method")))), b;
         var o = p(i, e.iterator, n.arg);
         if ('throw' === o.type) return (n.method = 'throw'), (n.arg = o.arg), (n.delegate = null), b;
         var a = o.arg;

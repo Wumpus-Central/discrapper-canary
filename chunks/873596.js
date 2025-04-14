@@ -78,13 +78,13 @@ function x(e) {
 }
 function m(e) {
     let { closePopout: t, connectionTypeText: n } = e,
-        l = (0, i.cj)([s.ZP], () => ({
-            connectionState: s.ZP.getState(),
-            hostname: s.ZP.getHostname(),
-            averagePing: s.ZP.getAveragePing(),
-            lastPing: s.ZP.getLastPing(),
-            outboundLossRate: s.ZP.getOutboundLossRate(),
-            pings: s.ZP.getPings()
+        l = (0, i.cj)([s.Z], () => ({
+            connectionState: s.Z.getState(),
+            hostname: s.Z.getHostname(),
+            averagePing: s.Z.getAveragePing(),
+            lastPing: s.Z.getLastPing(),
+            outboundLossRate: s.Z.getOutboundLossRate(),
+            pings: s.Z.getPings()
         }));
     return (0, r.jsx)(
         p.Z,

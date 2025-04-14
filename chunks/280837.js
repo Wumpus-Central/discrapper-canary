@@ -40,6 +40,6 @@ async function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = s.Z.lurkingGuildIds();
     if (0 === t.length || !(null == e || !t.includes(e))) return;
-    let n = [e, o.ZP.getGuildId()].filter(a.lm);
+    let n = [e, o.Z.getGuildId()].filter(a.lm);
     await c(n);
 }

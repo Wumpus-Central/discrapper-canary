@@ -143,7 +143,7 @@ function C(e) {
     if (!(t.id in h)) return !1;
     (h = f({}, h)), delete h[t.id];
 }
-function P(e) {
+function R(e) {
     if (u.default.getId() !== e.userId) return !1;
     (h[e.id] = {
         threadId: e.id,
@@ -155,7 +155,7 @@ function P(e) {
     }),
         v(e.id);
 }
-function R(e) {
+function P(e) {
     let { id: t, userId: n, guildId: r, isJoining: i } = e;
     if (u.default.getId() !== n || null === r) return !1;
     i
@@ -230,8 +230,8 @@ let L = new D(s.Z, {
         LOAD_THREADS_SUCCESS: A,
         LOAD_ARCHIVED_THREADS_SUCCESS: A,
         THREAD_DELETE: C,
-        THREAD_MEMBER_UPDATE: P,
-        THREAD_MEMBER_LOCAL_UPDATE: R,
+        THREAD_MEMBER_UPDATE: R,
+        THREAD_MEMBER_LOCAL_UPDATE: P,
         THREAD_MEMBERS_UPDATE: w
     }),
     x = L;
