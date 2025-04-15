@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I }), t(953529);
+t.d(n, { Z: () => E }), t(953529);
 var r = t(200651),
     o = t(192379),
     s = t(120356),
@@ -7,51 +7,45 @@ var r = t(200651),
     l = t(481060),
     c = t(377171),
     d = t(984370),
-    u = t(430824),
-    p = t(713081),
-    m = t(905128),
-    x = t(27237),
-    _ = t(51859),
-    v = t(953478),
-    f = t(460608),
-    g = t(279604),
-    h = t(332538),
+    u = t(713081),
+    p = t(905128),
+    m = t(27237),
+    x = t(51859),
+    _ = t(953478),
+    v = t(460608),
+    f = t(279604),
+    g = t(332538),
     j = t(535396),
-    b = t(981631),
-    N = t(921944),
-    C = t(680278),
-    Z = t(388032),
-    E = t(782285);
-let w = [j.Us.LEVEL, j.Us.PERK];
-function I(e) {
+    h = t(921944),
+    b = t(680278),
+    N = t(388032),
+    Z = t(782285);
+let C = [j.Us.LEVEL, j.Us.PERK];
+function E(e) {
     let { guildId: n, powerupSkuId: t } = e,
-        s = (0, h.ZP)(n);
+        s = (0, g.ZP)(n);
     o.useEffect(() => {
-        (0, p.Sn)(n), (0, p.Fm)(n);
+        (0, u.Sn)(n), (0, u.Fm)(n);
     }, [n]),
         o.useEffect(() => {
             var e;
-            (0, p.jd)(n), null == s || null == (e = s.popout) || e.markAsDismissed(N.L.AUTO_DISMISS);
+            (0, u.jd)(n), null == s || null == (e = s.popout) || e.markAsDismissed(h.L.AUTO_DISMISS);
         }, [n, s]);
-    let I = (0, a.e7)([m.Z], () => m.Z.getStateForGuild(n)),
-        S = (0, a.e7)([u.Z], () => {
-            var e;
-            return (null == (e = u.Z.getGuild(n)) ? void 0 : e.hasFeature(b.oNc.INTERNAL_EMPLOYEE_ONLY)) === !0;
-        }),
-        T = o.useRef(!1);
+    let E = (0, a.e7)([p.Z], () => p.Z.getStateForGuild(n)),
+        I = o.useRef(!1);
     return (o.useEffect(() => {
         var e, r;
         if (null == t) return;
-        let o = null == I || null == (r = I.powerups) || null == (e = r.get) ? void 0 : e.call(r, t);
-        null == o || T.current || ((0, g.KE)(n, o), (T.current = !0));
-    }, [n, t, null == I ? void 0 : I.powerups]),
-    (null == I ? void 0 : I.catalog) == null)
+        let o = null == E || null == (r = E.powerups) || null == (e = r.get) ? void 0 : e.call(r, t);
+        null == o || I.current || ((0, f.KE)(n, o), (I.current = !0));
+    }, [n, t, null == E ? void 0 : E.powerups]),
+    (null == E ? void 0 : E.catalog) == null)
         ? null
         : (0, r.jsxs)('div', {
-              className: E.container,
+              className: Z.container,
               children: [
                   (0, r.jsxs)(d.Z, {
-                      className: E.toolbar,
+                      className: Z.toolbar,
                       hideSearch: !0,
                       toolbar: (0, r.jsx)('div', {}),
                       children: [
@@ -60,125 +54,100 @@ function I(e) {
                               disabled: !0,
                               'aria-label': ''
                           }),
-                          (0, r.jsx)(d.Z.Title, { children: Z.NW.string(C.Z.yv3DJC) })
+                          (0, r.jsx)(d.Z.Title, { children: N.NW.string(b.Z.yv3DJC) })
                       ]
                   }),
                   (0, r.jsxs)('div', {
-                      className: E.contentContainer,
+                      className: Z.contentContainer,
                       children: [
-                          (0, r.jsxs)(l.zJl, {
-                              className: E.powerupsContainer,
-                              children: [
-                                  S &&
-                                      (0, r.jsxs)('div', {
-                                          className: E.staffContainer,
+                          (0, r.jsx)(l.zJl, {
+                              className: Z.powerupsContainer,
+                              children: C.map((e) => {
+                                  let t = E.catalog.get(e);
+                                  if (null == t) return;
+                                  let { title: o, description: s } = (function (e) {
+                                          switch (e) {
+                                              case j.Us.LEVEL:
+                                                  return {
+                                                      title: N.NW.string(b.Z['TXY/b2']),
+                                                      description: N.NW.string(b.Z.aJv4PD)
+                                                  };
+                                              case j.Us.PERK:
+                                                  return {
+                                                      title: N.NW.string(b.Z.TV3Vm5),
+                                                      description: N.NW.string(b.Z.NHjM1t)
+                                                  };
+                                          }
+                                      })(e),
+                                      a = e === j.Us.LEVEL ? l.zJl : 'div';
+                                  return (0, r.jsxs)(
+                                      'div',
+                                      {
+                                          className: Z.powerupsSection,
                                           children: [
                                               (0, r.jsxs)('div', {
-                                                  className: E.staffHeader,
+                                                  className: Z.powerupHorizontalPadding,
                                                   children: [
-                                                      (0, r.jsx)(l.Ymb, {
-                                                          color: l.TVs.colors.TEXT_BRAND,
-                                                          size: 'sm'
+                                                      (0, r.jsxs)('div', {
+                                                          className: Z.headerContainer,
+                                                          children: [
+                                                              (0, r.jsx)(l.X6q, {
+                                                                  color: 'header-primary',
+                                                                  variant: 'heading-lg/semibold',
+                                                                  children: o
+                                                              }),
+                                                              e === j.Us.PERK &&
+                                                                  (0, r.jsx)(l.IGR, {
+                                                                      text: N.NW.string(N.t.oW0eUV),
+                                                                      color: c.Z.BG_BRAND
+                                                                  })
+                                                          ]
                                                       }),
-                                                      (0, r.jsx)(l.X6q, {
-                                                          variant: 'heading-sm/semibold',
-                                                          children: 'Staff Server Notice'
+                                                      (0, r.jsx)(l.Text, {
+                                                          color: 'text-muted',
+                                                          variant: 'text-sm/medium',
+                                                          children: s
                                                       })
                                                   ]
                                               }),
-                                              (0, r.jsx)(l.Text, {
-                                                  variant: 'text-sm/medium',
-                                                  children: 'Staff servers have the perks of every level, even if they\u2019re not enabled. This may (read: will) break parts of the Boosting UI. Additional perks such as Enhanced Role Colors and Server Tags still need to be purchased with boosts.'
+                                              (0, r.jsx)(a, {
+                                                  orientation: 'horizontal',
+                                                  className: i()(Z.powerupContainer, Z.powerupHorizontalPadding, { [Z.powerupsLevelContainer]: e === j.Us.LEVEL }),
+                                                  fade: !0,
+                                                  children: t.map((e, o) => {
+                                                      switch (e.type) {
+                                                          case j.Us.LEVEL:
+                                                              return (0, r.jsx)(
+                                                                  m.ZP,
+                                                                  {
+                                                                      guildId: n,
+                                                                      index: o,
+                                                                      powerup: e,
+                                                                      nextPowerup: t[o + 1]
+                                                                  },
+                                                                  'powerup-'.concat(e.skuId)
+                                                              );
+                                                          case j.Us.PERK:
+                                                              return (0, r.jsx)(
+                                                                  x.Z,
+                                                                  {
+                                                                      guildId: n,
+                                                                      powerup: e
+                                                                  },
+                                                                  'powerup-'.concat(e.skuId)
+                                                              );
+                                                      }
+                                                  })
                                               })
                                           ]
-                                      }),
-                                  w.map((e) => {
-                                      let t = I.catalog.get(e);
-                                      if (null == t) return;
-                                      let { title: o, description: s } = (function (e) {
-                                              switch (e) {
-                                                  case j.Us.LEVEL:
-                                                      return {
-                                                          title: Z.NW.string(C.Z['TXY/b2']),
-                                                          description: Z.NW.string(C.Z.aJv4PD)
-                                                      };
-                                                  case j.Us.PERK:
-                                                      return {
-                                                          title: Z.NW.string(C.Z.TV3Vm5),
-                                                          description: Z.NW.string(C.Z.NHjM1t)
-                                                      };
-                                              }
-                                          })(e),
-                                          a = e === j.Us.LEVEL ? l.zJl : 'div';
-                                      return (0, r.jsxs)(
-                                          'div',
-                                          {
-                                              className: E.powerupsSection,
-                                              children: [
-                                                  (0, r.jsxs)('div', {
-                                                      className: E.powerupHorizontalPadding,
-                                                      children: [
-                                                          (0, r.jsxs)('div', {
-                                                              className: E.headerContainer,
-                                                              children: [
-                                                                  (0, r.jsx)(l.X6q, {
-                                                                      color: 'header-primary',
-                                                                      variant: 'heading-lg/semibold',
-                                                                      children: o
-                                                                  }),
-                                                                  e === j.Us.PERK &&
-                                                                      (0, r.jsx)(l.IGR, {
-                                                                          text: Z.NW.string(Z.t.oW0eUV),
-                                                                          color: c.Z.BG_BRAND
-                                                                      })
-                                                              ]
-                                                          }),
-                                                          (0, r.jsx)(l.Text, {
-                                                              color: 'text-muted',
-                                                              variant: 'text-sm/medium',
-                                                              children: s
-                                                          })
-                                                      ]
-                                                  }),
-                                                  (0, r.jsx)(a, {
-                                                      orientation: 'horizontal',
-                                                      className: i()(E.powerupContainer, E.powerupHorizontalPadding, { [E.powerupsLevelContainer]: e === j.Us.LEVEL }),
-                                                      fade: !0,
-                                                      children: t.map((e, o) => {
-                                                          switch (e.type) {
-                                                              case j.Us.LEVEL:
-                                                                  return (0, r.jsx)(
-                                                                      x.ZP,
-                                                                      {
-                                                                          guildId: n,
-                                                                          index: o,
-                                                                          powerup: e,
-                                                                          nextPowerup: t[o + 1]
-                                                                      },
-                                                                      'powerup-'.concat(e.skuId)
-                                                                  );
-                                                              case j.Us.PERK:
-                                                                  return (0, r.jsx)(
-                                                                      _.Z,
-                                                                      {
-                                                                          guildId: n,
-                                                                          powerup: e
-                                                                      },
-                                                                      'powerup-'.concat(e.skuId)
-                                                                  );
-                                                          }
-                                                      })
-                                                  })
-                                              ]
-                                          },
-                                          'section-'.concat(e)
-                                      );
-                                  })
-                              ]
+                                      },
+                                      'section-'.concat(e)
+                                  );
+                              })
                           }),
                           (0, r.jsxs)('div', {
-                              className: E.sidebarContainer,
-                              children: [(0, r.jsx)(v.Z, { guildId: n }), (0, r.jsx)(f.Z, { guildId: n })]
+                              className: Z.sidebarContainer,
+                              children: [(0, r.jsx)(_.Z, { guildId: n }), (0, r.jsx)(v.Z, { guildId: n })]
                           })
                       ]
                   })

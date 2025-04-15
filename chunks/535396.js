@@ -1,16 +1,17 @@
 n.d(t, {
-    Cp: () => p,
-    Fq: () => _,
-    H2: () => E,
-    IN: () => m,
-    If: () => g,
-    KW: () => b,
+    Cp: () => h,
+    Fq: () => p,
+    H2: () => b,
+    IN: () => g,
+    If: () => E,
+    KW: () => y,
     NO: () => c,
-    Q1: () => h,
+    Q1: () => m,
     Us: () => l,
     XW: () => f,
-    d5: () => v,
-    uc: () => y
+    ad: () => _,
+    d5: () => O,
+    uc: () => v
 }),
     n(388685);
 var r = n(704215),
@@ -25,25 +26,26 @@ let c = '1340102344645283891',
     u = '1341586379779604621',
     d = '1341586379779604622',
     f = '1341586379779604623',
-    _ = '525479941211684874',
-    p = {
+    _ = new Set([u, d, f]),
+    p = '525479941211684874',
+    h = {
         [a.Eu4.TIER_1]: u,
         [a.Eu4.TIER_2]: d,
         [a.Eu4.TIER_3]: f,
         [a.Eu4.NONE]: void 0
     },
-    h = {
+    m = {
         [a.Eu4.TIER_1]: r.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
         [a.Eu4.TIER_2]: r.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
         [a.Eu4.TIER_3]: r.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
         [a.Eu4.NONE]: void 0
     },
-    m = '1351706802684952639',
-    g = '1354906318279807056',
-    E = 'guild_powerup_modal',
-    b = new Set([m, g]),
-    y = new Set([m, g]),
-    v = () => ({
+    g = '1351706802684952639',
+    E = '1354906318279807056',
+    b = 'guild_powerup_modal',
+    y = new Set([g, E]),
+    v = new Set([g, E]),
+    O = () => ({
         [a.oNc.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: i.Ro.STREAM,
             description: s.NW.string(s.t.y4ft4O)

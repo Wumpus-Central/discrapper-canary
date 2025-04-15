@@ -1,22 +1,23 @@
 t.d(n, {
-    Z: () => _,
-    u: () => x
+    Z: () => v,
+    u: () => _
 });
 var r = t(200651);
 t(192379);
 var o = t(120356),
     s = t.n(o),
     i = t(481060),
-    a = t(690786),
-    l = t(192371),
-    c = t(279604),
-    d = t(680278),
-    u = t(388032),
-    p = t(117172);
-function m(e) {
+    a = t(477415),
+    l = t(690786),
+    c = t(192371),
+    d = t(279604),
+    u = t(680278),
+    p = t(388032),
+    m = t(117172);
+function x(e) {
     let { dateString: n } = e;
     return (0, r.jsxs)('div', {
-        className: p.inline,
+        className: m.inline,
         children: [
             (0, r.jsx)(i.owK, {
                 size: 'xs',
@@ -25,19 +26,19 @@ function m(e) {
             (0, r.jsx)(i.Text, {
                 color: 'status-warning',
                 variant: 'text-sm/bold',
-                children: u.NW.formatToMarkdownString(d.Z['ol/ao6'], { dateString: (0, l.Z)(n) })
+                children: p.NW.formatToMarkdownString(u.Z['ol/ao6'], { dateString: (0, c.Z)(n) })
             })
         ]
     });
 }
-function x(e) {
+function _(e) {
     let { guildId: n, powerup: t, className: o } = e,
-        l = (0, a.Z)(n, t);
+        a = (0, l.Z)(n, t);
     return (0, r.jsxs)('div', {
-        className: s()(p.labelContainer, o),
+        className: s()(m.labelContainer, o),
         children: [
             (0, r.jsxs)('div', {
-                className: s()(p.inline, p.inlineBoost),
+                className: s()(m.inline, m.inlineBoost),
                 children: [
                     (0, r.jsx)(i.$Eu, {
                         size: 'sm',
@@ -50,11 +51,11 @@ function x(e) {
                     })
                 ]
             }),
-            null != l &&
-                ((null == l ? void 0 : l.ends_at) != null
-                    ? (0, r.jsx)(m, { dateString: l.ends_at })
+            null != a &&
+                ((null == a ? void 0 : a.ends_at) != null
+                    ? (0, r.jsx)(x, { dateString: a.ends_at })
                     : (0, r.jsxs)('div', {
-                          className: p.inline,
+                          className: m.inline,
                           children: [
                               (0, r.jsx)(i.owK, {
                                   size: 'xs',
@@ -63,35 +64,36 @@ function x(e) {
                               (0, r.jsx)(i.Text, {
                                   color: 'text-positive',
                                   variant: 'text-sm/bold',
-                                  children: u.NW.string(d.Z.FFLkm5)
+                                  children: p.NW.string(u.Z.FFLkm5)
                               })
                           ]
                       }))
         ]
     });
 }
-function _(e) {
-    let { guildId: n, powerup: t, className: o, onHover: l, children: d } = e,
-        u = (0, a.Z)(n, t),
-        m = null != u,
-        x = (null == u ? void 0 : u.ends_at) != null,
-        { onShowMore: _ } = (0, c.ZP)(n, t);
+function v(e) {
+    let { guildId: n, powerup: t, className: o, onHover: c, children: u } = e,
+        p = (0, a.Z)(n, t),
+        x = (0, l.Z)(n, t),
+        _ = null != x || p,
+        v = (null == x ? void 0 : x.ends_at) != null,
+        { onShowMore: f } = (0, d.ZP)(n, t);
     return (0, r.jsx)('div', {
-        className: p.parentContainer,
+        className: m.parentContainer,
         children: (0, r.jsx)(i.kL8, {
             'aria-label': t.title,
-            onClick: _,
-            onMouseOver: () => (null == l ? void 0 : l(!0)),
-            onMouseLeave: () => (null == l ? void 0 : l(!1)),
+            onClick: f,
+            onMouseOver: () => (null == c ? void 0 : c(!0)),
+            onMouseLeave: () => (null == c ? void 0 : c(!1)),
             className: s()(
-                p.container,
+                m.container,
                 {
-                    [p.active]: m,
-                    [p.warning]: x
+                    [m.active]: _,
+                    [m.warning]: v
                 },
                 o
             ),
-            children: d
+            children: u
         })
     });
 }
