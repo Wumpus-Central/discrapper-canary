@@ -1,5 +1,6 @@
 e.exports = {
-    containerWithMargin: 'containerWithMargin_d4883c',
+    marginContainer: 'marginContainer_d4883c',
+    gradientContainer: 'gradientContainer_d4883c',
     promoHeaderContainer: 'promoHeaderContainer_d4883c',
     promoDescription: 'promoDescription_d4883c',
     promoNitroButton: 'promoNitroButton_d4883c',
@@ -16,5 +17,6 @@ e.exports = {
     promotionCardButton: 'promotionCardButton_d4883c',
     promotionIcon: 'promotionIcon_d4883c',
     promotionIconImage: 'promotionIconImage_d4883c',
-    promotionLegalese: 'promotionLegalese_d4883c'
+    promotionLegalese: 'promotionLegalese_d4883c',
+    premiumIcon: 'premiumIcon_d4883c'
 };

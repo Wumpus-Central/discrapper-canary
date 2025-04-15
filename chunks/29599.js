@@ -99,14 +99,15 @@ function Z(e) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(d.zxk, {
-                                className: D.promotionCardButton,
-                                color: d.zxk.Colors.BRAND,
-                                size: d.zxk.Sizes.SMALL,
-                                onClick: () => g(!0),
-                                disabled: !0 === o,
-                                children: O
-                            })
+                            !o &&
+                                (0, r.jsx)(d.zxk, {
+                                    className: D.promotionCardButton,
+                                    color: d.zxk.Colors.BRAND,
+                                    size: d.zxk.Sizes.SMALL,
+                                    onClick: () => g(!0),
+                                    disabled: o,
+                                    children: O
+                                })
                         ]
                     }),
                     c &&
@@ -211,26 +212,27 @@ let w = function () {
                               let { subscriptionPlanId: t } = e;
                               return t === P.Xh.PREMIUM_YEAR_TIER_2;
                           }),
-                          u = L
+                          u = (0, r.jsx)(d.X6q, {
+                              variant: 'heading-md/semibold',
+                              children: W ? R.NW.string(R.t.wFsj3N) : void 0
+                          }),
+                          m = L
                               ? (0, r.jsxs)('div', {
                                     className: D.promoHeaderContainer,
                                     children: [
-                                        (0, r.jsxs)('div', {
-                                            children: [
-                                                (0, r.jsx)(d.X6q, {
-                                                    variant: 'heading-md/semibold',
-                                                    children: W ? R.NW.string(R.t.wFsj3N) : void 0
-                                                }),
-                                                (0, r.jsx)(d.X6q, {
-                                                    variant: 'text-sm/normal',
-                                                    className: D.promoDescription,
-                                                    children: R.NW.format(R.t.G4fwxM, {
-                                                        onClick: () => {
-                                                            (0, g.xf)(), (0, O.uL)(A.Z5c.APPLICATION_STORE);
-                                                        }
-                                                    })
-                                                })
-                                            ]
+                                        (0, r.jsx)(d.SrA, {
+                                            size: 'md',
+                                            color: d.TVs.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2,
+                                            className: D.premiumIcon
+                                        }),
+                                        (0, r.jsx)(d.Text, {
+                                            variant: 'text-md/normal',
+                                            className: D.promoDescription,
+                                            children: R.NW.format(R.t.G4fwxM, {
+                                                onClick: () => {
+                                                    (0, g.xf)(), (0, O.uL)(A.Z5c.APPLICATION_STORE);
+                                                }
+                                            })
                                         }),
                                         (0, r.jsx)(j.Z, {
                                             showGradient: !0,
@@ -240,90 +242,93 @@ let w = function () {
                                         })
                                     ]
                                 })
-                              : (0, r.jsx)(d.X6q, {
-                                    variant: 'heading-md/semibold',
-                                    children: W ? R.NW.string(R.t.wFsj3N) : void 0
-                                });
-                      return (0, r.jsx)(C.Z, {
-                          className: D.containerWithMargin,
-                          isShown: L,
-                          type: C.Y.PREMIUM,
-                          hasBackground: !0,
-                          children: (0, r.jsxs)(d.hjN, {
-                              className: a()({ [D.containerWithMargin]: !L }),
-                              children: [
-                                  u,
-                                  W ? (0, r.jsx)(d.$i$, { className: D.divider }) : null,
-                                  E.map((e) => {
-                                      let { code: t, promotion: n } = e;
-                                      return (0, r.jsx)(
-                                          Z,
-                                          {
-                                              outboundPromotion: n,
-                                              code: t,
-                                              addClaimedOutboundPromotionCode: k,
-                                              disabled: !s
-                                          },
-                                          n.id
-                                      );
-                                  }),
-                                  N.map((e) =>
-                                      (0, r.jsx)(
-                                          Z,
-                                          {
-                                              outboundPromotion: e,
-                                              code: w[e.id],
-                                              addClaimedOutboundPromotionCode: k,
-                                              disabled: !s
-                                          },
-                                          e.id
-                                      )
-                                  ),
-                                  null != t
-                                      ? (0, r.jsx)(
-                                            y.Z,
-                                            {
-                                                className: D.skuCard,
-                                                skuId: t.skuId,
-                                                subscriptionPlanId: t.subscriptionPlanId,
-                                                entitlements: [t],
-                                                giftCodeBatchId: P.m8
-                                            },
-                                            (0, T.Bg)(t.skuId, t.subscriptionPlanId)
-                                        )
-                                      : null,
-                                  l.length > 0
-                                      ? (0, r.jsx)(
-                                            y.Z,
-                                            {
-                                                className: D.skuCard,
-                                                skuId: l[0].skuId,
-                                                subscriptionPlanId: l[0].subscriptionPlanId,
-                                                entitlements: l,
-                                                giftCodeBatchId: P.rX
-                                            },
-                                            (0, T.Bg)(l[0].skuId, l[0].subscriptionPlanId)
-                                        )
-                                      : null,
-                                  c.length > 0
-                                      ? (0, r.jsx)(
-                                            y.Z,
-                                            {
-                                                className: D.skuCard,
-                                                skuId: c[0].skuId,
-                                                subscriptionPlanId: c[0].subscriptionPlanId,
-                                                entitlements: c,
-                                                giftCodeBatchId: P.rX
-                                            },
-                                            (0, T.Bg)(c[0].skuId, c[0].subscriptionPlanId)
-                                        )
-                                      : null
-                              ]
-                          })
+                              : null;
+                      return (0, r.jsxs)('div', {
+                          className: D.marginContainer,
+                          children: [
+                              u,
+                              W ? (0, r.jsx)(d.$i$, { className: D.divider }) : null,
+                              (0, r.jsx)(C.Z, {
+                                  className: D.gradientContainer,
+                                  isShown: L,
+                                  type: C.Y.PREMIUM,
+                                  hasBackground: !0,
+                                  children: (0, r.jsxs)(d.hjN, {
+                                      className: a()({ [D.marginContainer]: !L }),
+                                      children: [
+                                          m,
+                                          E.map((e) => {
+                                              let { code: t, promotion: n } = e;
+                                              return (0, r.jsx)(
+                                                  Z,
+                                                  {
+                                                      outboundPromotion: n,
+                                                      code: t,
+                                                      addClaimedOutboundPromotionCode: k,
+                                                      disabled: !s
+                                                  },
+                                                  n.id
+                                              );
+                                          }),
+                                          N.map((e) =>
+                                              (0, r.jsx)(
+                                                  Z,
+                                                  {
+                                                      outboundPromotion: e,
+                                                      code: w[e.id],
+                                                      addClaimedOutboundPromotionCode: k,
+                                                      disabled: !s
+                                                  },
+                                                  e.id
+                                              )
+                                          ),
+                                          null != t
+                                              ? (0, r.jsx)(
+                                                    y.Z,
+                                                    {
+                                                        className: D.skuCard,
+                                                        skuId: t.skuId,
+                                                        subscriptionPlanId: t.subscriptionPlanId,
+                                                        entitlements: [t],
+                                                        giftCodeBatchId: P.m8
+                                                    },
+                                                    (0, T.Bg)(t.skuId, t.subscriptionPlanId)
+                                                )
+                                              : null,
+                                          l.length > 0
+                                              ? (0, r.jsx)(
+                                                    y.Z,
+                                                    {
+                                                        className: D.skuCard,
+                                                        skuId: l[0].skuId,
+                                                        subscriptionPlanId: l[0].subscriptionPlanId,
+                                                        entitlements: l,
+                                                        giftCodeBatchId: P.rX
+                                                    },
+                                                    (0, T.Bg)(l[0].skuId, l[0].subscriptionPlanId)
+                                                )
+                                              : null,
+                                          c.length > 0
+                                              ? (0, r.jsx)(
+                                                    y.Z,
+                                                    {
+                                                        className: D.skuCard,
+                                                        skuId: c[0].skuId,
+                                                        subscriptionPlanId: c[0].subscriptionPlanId,
+                                                        entitlements: c,
+                                                        giftCodeBatchId: P.rX
+                                                    },
+                                                    (0, T.Bg)(c[0].skuId, c[0].subscriptionPlanId)
+                                                )
+                                              : null
+                                      ]
+                                  })
+                              })
+                          ]
                       });
                   })(),
                   (0, r.jsx)(d.hjN, {
-                      className: D.containerWithMargin,
+                      className: D.marginContainer,
                       children: (0, r.jsxs)(d.y5t, {
                           component: (0, r.jsx)(d.X6q, {
                               variant: 'heading-md/semibold',
