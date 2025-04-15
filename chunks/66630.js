@@ -19,8 +19,8 @@ var r = n(200651),
     x = n(684269),
     v = n(397416),
     O = n(745579),
-    _ = n(429467),
-    N = n(676035),
+    N = n(429467),
+    _ = n(676035),
     y = n(926563),
     C = n(875425),
     T = n(981631),
@@ -32,12 +32,12 @@ function D(e) {
     var t, n;
     let { transitionState: i, onClose: D, sourceAnalyticsContext: k, sourceAnalyticsLocations: Z, prompt: B = null } = e,
         A = (0, j.p)({ location: 'CustomStatusModalWithPreview' }),
-        R = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
-        W = (0, o.e7)([h.default], () => {
+        W = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
+        R = (0, o.e7)([h.default], () => {
             var e;
             return null != (e = h.default.getCurrentUser()) ? e : null;
         }),
-        M = (0, N.a)(),
+        M = (0, _.a)(),
         [U, z] = a.useState(null != (t = null == M ? void 0 : M.state) ? t : ''),
         [L, F] = a.useState(null != (n = null == M ? void 0 : M.emoji) ? n : null),
         [H, Y] = a.useState((0, x.Z)()),
@@ -132,11 +132,11 @@ function D(e) {
             }),
             (0, r.jsxs)(s.hzk, {
                 children: [
-                    null != W &&
+                    null != R &&
                         (0, r.jsx)('div', {
                             className: E.profilePreview,
                             children: (0, r.jsx)(y.Z, {
-                                user: W,
+                                user: R,
                                 previewText: U,
                                 previewEmoji: L,
                                 placeHolderText: Q,
@@ -286,7 +286,7 @@ function D(e) {
                                     onClick: $
                                         ? void 0
                                         : () => {
-                                              let e = (0, _.Z)((null == V ? void 0 : V.value) != null ? new Set([V.value, ...I]) : void 0);
+                                              let e = (0, N.Z)((null == V ? void 0 : V.value) != null ? new Set([V.value, ...I]) : void 0);
                                               b.default.track(T.rMx.CUSTOM_STATUS_RANDOMIZER_CLICKED, {
                                                   previous_prompt_type: null == V ? void 0 : V.value,
                                                   new_prompt_type: null == e ? void 0 : e.value,
@@ -320,12 +320,12 @@ function D(e) {
                                 options: C.wS.map((e) => ({
                                     value: e,
                                     key: e,
-                                    label: (0, v.Z)(e, R)
+                                    label: (0, v.Z)(e, W)
                                 })),
                                 onChange: (e) => Y(e),
                                 renderOptionLabel: (e) => {
                                     let { value: t } = e;
-                                    return (0, O.Z)(t, R);
+                                    return (0, O.Z)(t, W);
                                 },
                                 look: s.qQH.CUSTOM,
                                 popoutWidth: 200,

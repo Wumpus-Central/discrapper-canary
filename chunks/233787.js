@@ -1,12 +1,12 @@
-n.d(t, { Z: () => b });
-var r,
-    s = n(200651);
-n(192379);
-var i = n(481060),
-    c = n(600164),
-    o = n(390668),
-    a = (((r = a || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
-let l = {
+r.d(t, { Z: () => d });
+var n,
+    s = r(200651);
+r(192379);
+var i = r(481060),
+    a = r(600164),
+    o = r(390668),
+    l = (((n = l || {}).UPGRADE = 'UPGRADE'), (n.CANCEL = 'CANCEL'), (n.UNVERIFIED = 'UNVERIFIED'), (n.UNCLAIMED = 'UNCLAIMED'), (n.GRANDFATHERED = 'GRANDFATHERED'), n);
+let c = {
         UPGRADE: 'imageUpgrade',
         CANCEL: 'imageCancel',
         UNVERIFIED: 'imageUnverified',
@@ -15,24 +15,24 @@ let l = {
     },
     u = (e) => {
         var t,
-            n,
-            { children: r } = e,
-            c = (function (e, t) {
+            r,
+            { children: n } = e,
+            a = (function (e, t) {
                 if (null == e) return {};
-                var n,
-                    r,
+                var r,
+                    n,
                     s = (function (e, t) {
                         if (null == e) return {};
-                        var n,
-                            r,
+                        var r,
+                            n,
                             s = {},
                             i = Object.keys(e);
-                        for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                        for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (s[r] = e[r]);
                         return s;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var i = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
+                    for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (s[r] = e[r]);
                 }
                 return s;
             })(e, ['children']);
@@ -40,69 +40,69 @@ let l = {
             i.Y0X,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = r[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: n,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = n);
                         });
                 }
                 return e;
-            })({}, c)),
-            (n = n = { children: r }),
+            })({}, a)),
+            (r = r = { children: n }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                 : (function (e, t) {
-                      var n = Object.keys(e);
+                      var r = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
                       }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                   }),
             t)
         );
     };
 (u.Header = (e) => {
-    let { children: t, onClose: n } = e;
+    let { children: t, onClose: r } = e;
     return (0, s.jsxs)(i.xBx, {
-        justify: c.Z.Justify.BETWEEN,
+        justify: a.Z.Justify.BETWEEN,
         separator: !1,
         children: [
             (0, s.jsx)(i.vwX, {
                 tag: i.RB0.H4,
                 children: t
             }),
-            null != n
+            null != r
                 ? (0, s.jsx)(i.olH, {
                       className: o.__invalid_closeIcon,
-                      onClick: n
+                      onClick: r
                   })
                 : null
         ]
     });
 }),
     (u.Content = (e) => {
-        let { children: t, type: n } = e;
+        let { children: t, type: r } = e;
         return (0, s.jsxs)(i.hzk, {
             children: [
-                (0, s.jsx)('div', { className: o[l[n]] }),
+                (0, s.jsx)('div', { className: o[c[r]] }),
                 (0, s.jsx)('div', {
                     className: o.message,
                     children: t
@@ -111,17 +111,17 @@ let l = {
         });
     }),
     (u.Footer = (e) => {
-        let { primary: t, primaryRenderer: n, secondary: r } = e;
+        let { primary: t, primaryRenderer: r, secondary: n } = e;
         return (0, s.jsx)(i.mzw, {
-            children: (0, s.jsxs)(c.Z, {
-                justify: c.Z.Justify.END,
+            children: (0, s.jsxs)(a.Z, {
+                justify: a.Z.Justify.END,
                 children: [
-                    null != r
+                    null != n
                         ? (0, s.jsx)(i.zxk, {
-                              onClick: r.onClick,
+                              onClick: n.onClick,
                               look: i.zxk.Looks.LINK,
                               innerClassName: o.secondaryButton,
-                              children: r.label
+                              children: n.label
                           })
                         : null,
                     null != t
@@ -130,10 +130,10 @@ let l = {
                               color: i.zxk.Colors.BRAND,
                               children: t.label
                           })
-                        : n
+                        : r
                 ]
             })
         });
     }),
-    (u.Types = a);
-let b = u;
+    (u.Types = l);
+let d = u;

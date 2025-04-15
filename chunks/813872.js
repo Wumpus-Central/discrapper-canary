@@ -1,36 +1,36 @@
-n.d(t, { Z: () => _ });
-var r = n(200651),
-    l = n(192379),
-    i = n(442837),
+n.d(t, { Z: () => m });
+var l = n(200651),
+    i = n(192379),
+    r = n(442837),
     o = n(481060),
     a = n(40851),
-    u = n(549879),
-    c = n(189432),
-    s = n(189357),
-    d = n(944486),
+    s = n(549879),
+    u = n(189432),
+    d = n(189357),
+    c = n(944486),
     f = n(626135),
     g = n(981631),
-    b = n(176505),
-    O = n(50493),
-    E = n(388032);
-function _(e) {
-    let { userId: t, guildId: n, channelId: _, location: y, onAction: v, appContext: h } = e,
-        Z = l.useContext(f.AnalyticsContext),
-        m = (0, a.Aq)(),
-        p = (0, i.e7)([d.Z], () => (null != _ ? _ : d.Z.getChannelId(n, !0)), [_, n]),
-        S = (0, s.m)(n);
-    return null != n && S
-        ? (0, r.jsx)(o.sNh, {
+    Z = n(176505),
+    b = n(50493),
+    O = n(388032);
+function m(e) {
+    let { userId: t, guildId: n, channelId: m, location: N, onAction: h, appContext: E } = e,
+        j = i.useContext(f.AnalyticsContext),
+        v = (0, a.Aq)(),
+        p = (0, r.e7)([c.Z], () => (null != m ? m : c.Z.getChannelId(n, !0)), [m, n]),
+        P = (0, d.m)(n);
+    return null != n && P
+        ? (0, l.jsx)(o.sNh, {
               id: 'mod-view',
-              label: E.NW.string(E.t.kj3tz8),
+              label: O.NW.string(O.t.kj3tz8),
               action: () => {
-                  null == v || v(),
-                      (0, u.i)(h),
-                      (0, c.r)(n, t, null != p ? p : b.oC.MEMBER_SAFETY, {
-                          modViewPanel: O.k.INFO,
-                          sourceLocation: null != y ? y : Z.location
+                  null == h || h(),
+                      (0, s.i)(E),
+                      (0, u.r)(n, t, null != p ? p : Z.oC.MEMBER_SAFETY, {
+                          modViewPanel: b.k.INFO,
+                          sourceLocation: null != N ? N : j.location
                       }),
-                      m.dispatch(g.CkL.POPOUT_CLOSE);
+                      v.dispatch(g.CkL.POPOUT_CLOSE);
               }
           })
         : null;
