@@ -15626,44 +15626,54 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     opacity: 1
 }
 
-.plate__4bbc6 {
-    position: relative
-}
-
-.theme-light .img__4bbc6 {
+.theme-light .img__4bbc6:not(.updated__4bbc6) {
     opacity: .8
 }
 
-.theme-light .img__4bbc6.hover__4bbc6 {
+.theme-light .img__4bbc6.hover__4bbc6:not(.updated__4bbc6) {
     opacity: .9
 }
 
-.theme-light .img__4bbc6.selected__4bbc6 {
+.theme-light .img__4bbc6.selected__4bbc6:not(.updated__4bbc6) {
     opacity: 1
 }
 
-.theme-light .account__4bbc6 {
+.theme-light .img__4bbc6.account__4bbc6 {
     opacity: .4
 }
 
-.theme-light .account__4bbc6.hover__4bbc6 {
+.theme-light .img__4bbc6.account__4bbc6.hover__4bbc6 {
     opacity: .4
 }
 
-.account__4bbc6 {
+.img__4bbc6.updated__4bbc6,
+.img__4bbc6.updated__4bbc6.hover__4bbc6 {
+    opacity: .6
+}
+
+.img__4bbc6.updated__4bbc6.selected__4bbc6 {
+    opacity: .9
+}
+
+.img__4bbc6.updated__4bbc6.channel__4bbc6.hover__4bbc6 {
     opacity: .4
 }
 
-.preview__4bbc6 {
+.img__4bbc6.updated__4bbc6.channel__4bbc6.selected__4bbc6 {
+    opacity: .9
+}
+
+.img__4bbc6.account__4bbc6,
+.img__4bbc6.account__4bbc6.hover__4bbc6 {
+    opacity: .4
+}
+
+.img__4bbc6.preview__4bbc6 {
     opacity: .8
 }
 
-.preview__4bbc6.hover__4bbc6 {
+.img__4bbc6.preview__4bbc6.hover__4bbc6 {
     opacity: 1
-}
-
-.account__4bbc6.hover__4bbc6 {
-    opacity: .4
 }
 
 .videoContainer__4bbc6 {
