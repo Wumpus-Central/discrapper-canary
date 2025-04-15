@@ -1,8 +1,8 @@
-n.d(t, { B: () => i }), n(539854);
+n.d(t, { B: () => a }), n(539854);
 var o = n(392711),
-    a = n.n(o);
-let i = (e, t) => {
-    let n = a().shuffle(e),
+    i = n.n(o);
+let a = (e, t) => {
+    let n = i().shuffle(e),
         o = n.findIndex((e) => e.value === t);
     if (o > -1) {
         let e = n[o];

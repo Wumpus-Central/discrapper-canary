@@ -18,7 +18,7 @@ var o = t(793030),
 function g(e) {
     let { guildId: n } = e,
         t = (0, s.e7)([c.Z], () => c.Z.getGuild(n)),
-        { available: g, spent: h, total: j } = (0, u.Z)(n);
+        { available: g, spent: j, total: h } = (0, u.Z)(n);
     if (null != t)
         return (0, r.jsxs)('div', {
             className: f.container,
@@ -45,16 +45,15 @@ function g(e) {
                             type: m.b.AVAILABLE
                         }),
                         (0, r.jsx)(m.Z, {
-                            count: h,
+                            count: j,
                             type: m.b.SPENT
                         }),
                         (0, r.jsx)(m.Z, {
-                            count: j,
+                            count: h,
                             type: m.b.TOTAL
                         })
                     ]
                 }),
-                (0, r.jsx)(p.Z, { guildId: n }),
                 (0, r.jsx)(a.Z, {
                     className: f.boostButton,
                     guild: t,
@@ -70,7 +69,8 @@ function g(e) {
                         size: 'sm',
                         color: i.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                     })
-                })
+                }),
+                (0, r.jsx)(p.Z, { guildId: n })
             ]
         });
 }
