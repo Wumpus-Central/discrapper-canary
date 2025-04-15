@@ -1,29 +1,37 @@
-n.d(t, { R: () => c }), n(388685);
+n.d(t, { R: () => d }), n(388685);
 var r = n(442837),
     i = n(704215),
     o = n(243778),
     a = n(944486),
-    s = n(839606),
-    l = n(54480);
-function c(e) {
+    s = n(436952),
+    l = n(839606),
+    c = n(54480),
+    u = n(921944);
+function d(e) {
     let { isSettingsOpen: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: c, setLastShownChatWallpaperPickerType: u, lastShownChatWallpaperPickerType: d } = (0, s.B)(),
-        f = (0, r.e7)([a.Z], () => a.Z.getCurrentlySelectedChannelId()),
-        { canAccessPicker: _ } = (0, l.m)({
+        { activePickerChannelId: n, openPickerForChannel: d, setLastShownChatWallpaperPickerType: f, lastShownChatWallpaperPickerType: _ } = (0, l.B)(),
+        p = (0, r.e7)([a.Z], () => a.Z.getCurrentlySelectedChannelId()),
+        { canAccessPicker: h, entryPoint: m } = (0, c.m)({
             location: 'useChatWallpaperPickerConfig',
-            selectedChannelId: f
+            selectedChannelId: p
         }),
-        p = _ && !t,
-        [h, m] = (0, o.US)(p ? [i.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []);
-    if (!_) return;
-    let g = h === i.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
-    if ((g && null != f && null == n && d !== s.j.COACHMARK && c(f), n === f)) {
-        let e = g ? s.j.COACHMARK : s.j.DEFAULT;
+        g = h && !t,
+        [E, b] = (0, o.US)(g ? [i.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
+        y = E === i.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+        [v, O] = (0, o.US)(y ? [i.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []);
+    if (!h) return;
+    let I = y && v === i.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
+    if ((I && null != p && null == n && _ !== l.j.COACHMARK && d(p), n === p)) {
+        let e = I ? l.j.COACHMARK : l.j.DEFAULT;
         return (
-            d !== e && u(e),
+            _ !== e && f(e),
             {
                 pickerType: e,
-                markDismissed: g ? m : void 0
+                markDismissed: I
+                    ? (e) => {
+                          O(e), m === s.FN.TOOLBAR && b(u.L.INDIRECT_ACTION);
+                      }
+                    : void 0
             }
         );
     }
