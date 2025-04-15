@@ -126,7 +126,7 @@ function U() {
     O = {};
 }
 function G(e) {
-    let t = V();
+    let t = F();
     return (
         Object.keys(t).forEach((n) => {
             e(t[n]) || delete t[n];
@@ -139,10 +139,10 @@ function B(e, t) {
     let r = (0, d.Tu)(e, t);
     return null != (n = v[r]) ? n : O[r];
 }
-function V() {
+function F() {
     return h({}, O, v);
 }
-class F extends (r = a.ZP.Store) {
+class V extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
         let e = s.K.get(E);
@@ -152,10 +152,10 @@ class F extends (r = a.ZP.Store) {
         return G((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
-        return V();
+        return F();
     }
     hasLibraryApplication() {
-        return Object.keys(V()).length > 0;
+        return Object.keys(F()).length > 0;
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -176,7 +176,7 @@ class F extends (r = a.ZP.Store) {
                 o = null != (r = v[i]) ? r : O[i];
             if (null != o && (0, d.Je)(o) && (t || !o.isHidden())) return o;
         }
-        let i = V();
+        let i = F();
         for (let n in i)
             if (i[n].id === e) {
                 let e = i[n];
@@ -193,7 +193,7 @@ class F extends (r = a.ZP.Store) {
         return y;
     }
     get entitledBranchIds() {
-        return o()(V())
+        return o()(F())
             .values()
             .filter((e) => (0, d.Je)(e))
             .map((e) => e.branchId)
@@ -208,8 +208,8 @@ class F extends (r = a.ZP.Store) {
         });
     }
 }
-p(F, 'displayName', 'LibraryApplicationStore');
-let Z = new F(l.Z, {
+p(V, 'displayName', 'LibraryApplicationStore');
+let Z = new V(l.Z, {
     LOGOUT: P,
     LIBRARY_FETCH_SUCCESS: w,
     SKU_PURCHASE_SUCCESS: D,

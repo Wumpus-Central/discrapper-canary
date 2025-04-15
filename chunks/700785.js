@@ -1,5 +1,5 @@
 n.d(t, {
-    BT: () => F,
+    BT: () => V,
     Hn: () => O,
     Hu: () => B,
     I0: () => L,
@@ -12,7 +12,7 @@ n.d(t, {
     oz: () => H,
     r6: () => U,
     uB: () => x,
-    we: () => V,
+    we: () => F,
     ym: () => R
 }),
     n(388685);
@@ -215,8 +215,8 @@ function k(e, t) {
     let r = v({}, e.permissionOverwrites),
         i = v({}, t.permissionOverwrites);
     return (
-        null == r[n] && (r[n] = V(n)),
-        null == i[n] && (i[n] = V(n)),
+        null == r[n] && (r[n] = F(n)),
+        null == i[n] && (i[n] = F(n)),
         Object.keys(r).length === Object.keys(i).length &&
             !Object.keys(r).some((e) => {
                 let t = r[e],
@@ -249,7 +249,7 @@ function G(e, t) {
 function B(e, t) {
     return null == t.hoistRoleId ? null : m.Z.getRole(e.id, t.hoistRoleId);
 }
-function V(e) {
+function F(e) {
     return {
         id: e,
         type: a.BN.ROLE,
@@ -257,7 +257,7 @@ function V(e) {
         deny: O
     };
 }
-function F(e) {
+function V(e) {
     let { permission: t, user: n, context: r, overwrites: i, roles: a, excludeGuildPermissions: s } = e;
     return o.e$(
         x({

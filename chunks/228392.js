@@ -3,7 +3,7 @@ n.d(t, {
     B5: () => R,
     Do: () => w,
     GX: () => k,
-    HR: () => F,
+    HR: () => V,
     Hr: () => C,
     Je: () => N,
     Js: () => b,
@@ -20,7 +20,7 @@ n.d(t, {
     nE: () => G,
     nH: () => I,
     qs: () => E,
-    qz: () => V,
+    qz: () => F,
     ws: () => x,
     xI: () => M,
     zI: () => y
@@ -314,13 +314,13 @@ function B(e) {
     ),
         (0, o.a)(_.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e.id });
 }
-function V() {
+function F() {
     r.ZP.trackWithMetadata(_.rMx.OPEN_MODAL, {
         type: 'Forum Channel Upsell Modal',
         location: { section: _.jXE.CHANNEL_WELCOME_CTA }
     });
 }
-function F(e) {
+function V(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(
         _.rMx.THREAD_CREATION_STARTED,

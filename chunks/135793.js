@@ -172,7 +172,7 @@ function B(e) {
             return 0;
         }, [y, R, s]),
         M = (0, i.useMemo)(() => (0 === x ? 1 : f ? 2 : 3 * (null == _)), [f, _, x]);
-    return (0, r.jsx)(V, {
+    return (0, r.jsx)(F, {
         channel: t,
         buttonPurchaseState: x,
         buttonDisabledState: M,
@@ -183,7 +183,7 @@ function B(e) {
         isReaction: c
     });
 }
-let V = (e) => {
+let F = (e) => {
         let { channel: t, buttonPurchaseState: n, buttonDisabledState: o, price: a, onActionClick: s, loading: l, selectedEmoji: c, isReaction: u } = e,
             d = (0, i.useRef)(null);
         return ((0, i.useEffect)(() => {
@@ -214,7 +214,7 @@ let V = (e) => {
                         (0, r.jsx)('div', {
                             className: R.modal,
                             ref: d,
-                            children: (0, r.jsx)(F, {
+                            children: (0, r.jsx)(V, {
                                 channel: t,
                                 selectedEmoji: c,
                                 isReaction: u
@@ -229,7 +229,7 @@ let V = (e) => {
                     ]
                 });
     },
-    F = (e) => {
+    V = (e) => {
         let { channel: t, selectedEmoji: n, isReaction: i } = e;
         return (0, r.jsxs)('div', {
             className: R.body,

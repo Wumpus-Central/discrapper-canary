@@ -65,9 +65,9 @@ function T(e) {
                   spacing: I,
                   dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
               },
-        V = (0, c.N)(a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        F = D && !V ? [B] : [],
-        [Z, H] = (0, u.US)(F);
+        F = (0, c.N)(a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
+        V = D && !F ? [B] : [],
+        [Z, H] = (0, u.US)(V);
     return (0, r.jsx)(s.yRy, {
         targetElementRef: N,
         align: 'center',

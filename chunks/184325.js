@@ -76,9 +76,9 @@ function k(e) {
         { analyticsLocations: j } = (0, c.ZP)(l.Z.BADGE),
         { context: U, trackUserProfileAction: G } = (0, O.KZ)(),
         B = E.default.getCurrentUser(),
-        V = (0, y.yd)(null == B ? void 0 : B.premiumType, R.p9.TIER_2),
-        F = (0, T.Of)(null != (t = null == B ? void 0 : B.id) ? t : null),
-        Z = (0, S.Z)(F).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
+        F = (0, y.yd)(null == B ? void 0 : B.premiumType, R.p9.TIER_2),
+        V = (0, T.Of)(null != (t = null == B ? void 0 : B.id) ? t : null),
+        Z = (0, S.Z)(V).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)('div', {
         className: o()(D.container, i),
         'aria-label': w.NW.string(w.t.VWV0y8),
@@ -113,10 +113,10 @@ function k(e) {
                             (t.preventDefault(),
                             b.default.track(A.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
-                                premium_type: V,
+                                premium_type: F,
                                 viewed_user_id: null == g ? void 0 : g.userId
                             }),
-                            V)
+                            F)
                         ) {
                             (null == g ? void 0 : g.userId) === (null == B ? void 0 : B.id)
                                 ? (0, h.uL)(A.Z5c.NITRO_HOME)

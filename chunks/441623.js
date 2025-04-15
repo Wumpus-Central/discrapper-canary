@@ -118,10 +118,10 @@ function B(e) {
     let { recipientUserId: t } = e;
     Z(t);
 }
-function V() {
+function F() {
     N.friendsTabBadgeLastDismissedTime = Date.now();
 }
-function F(e) {
+function V(e) {
     let { recipientUserId: t } = e;
     Z(t);
 }
@@ -218,8 +218,8 @@ let X = new Q(c.Z, {
     LOGOUT: U,
     MESSAGE_GIFT_INTENT_SHOWN: B,
     FRIENDS_LIST_GIFT_INTENTS_SHOWN: G,
-    FRIENDS_TAB_BADGE_DISMISS: V,
-    GIFT_INTENT_FLOW_PURCHASED_GIFT: F,
+    FRIENDS_TAB_BADGE_DISMISS: F,
+    GIFT_INTENT_FLOW_PURCHASED_GIFT: V,
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: W,
     DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: Y,
     DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET: K,

@@ -48,7 +48,7 @@ function P(e) {
     var t,
         n,
         o,
-        { title: R, type: P, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: M, glowUp: k, modalClassName: j, modalContentClassName: U, artContainerClassName: G, headerClassName: B, bodyClassName: V, transitionState: F, onClose: Z, onSubscribeClick: H, onSubscribeFinish: W, onSecondaryClick: Y, secondaryCTA: K, subscribeButtonText: z, showNewBadge: q = !1, showBetaBadge: Q = !1, enableArtBoxShadow: X = !0, subscriptionTier: J = I.Si.TIER_2, isLoading: $ = !1, hideBackButton: ee, backButtonText: et, showEnhancedUpsell: en, useSubscribeButtonGradient: er, subscribeButtonClassname: ei, hidePremiumOfferUpsell: eo, children: ea, LeadingComponent: es, backgroundElements: el, smallText: ec = !1, footerClassName: eu } = e,
+        { title: R, type: P, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: M, glowUp: k, modalClassName: j, modalContentClassName: U, artContainerClassName: G, headerClassName: B, bodyClassName: F, transitionState: V, onClose: Z, onSubscribeClick: H, onSubscribeFinish: W, onSecondaryClick: Y, secondaryCTA: K, subscribeButtonText: z, showNewBadge: q = !1, showBetaBadge: Q = !1, enableArtBoxShadow: X = !0, subscriptionTier: J = I.Si.TIER_2, isLoading: $ = !1, hideBackButton: ee, backButtonText: et, showEnhancedUpsell: en, useSubscribeButtonGradient: er, subscribeButtonClassname: ei, hidePremiumOfferUpsell: eo, children: ea, LeadingComponent: es, backgroundElements: el, smallText: ec = !1, footerClassName: eu } = e,
         ed = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
     let ef = null != w,
         e_ = (0, E.N)(),
@@ -134,7 +134,7 @@ function P(e) {
         (0, r.jsxs)(l.Y0X, {
             className: a()(N.root, !eh && j),
             'aria-label': R,
-            transitionState: F,
+            transitionState: V,
             children: [
                 null != eS &&
                     (0, r.jsxs)('div', {
@@ -183,7 +183,7 @@ function P(e) {
                                             ea,
                                             (0, r.jsx)(l.Text, {
                                                 variant: ec ? 'text-sm/normal' : 'text-md/normal',
-                                                className: a()(V, N.subHeader),
+                                                className: a()(F, N.subHeader),
                                                 children: x
                                             })
                                         ]

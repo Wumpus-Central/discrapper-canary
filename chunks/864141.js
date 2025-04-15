@@ -94,11 +94,11 @@ function j(e) {
             user: t,
             analyticsLocations: G
         }),
-        V = (0, y.Z)({
+        F = (0, y.Z)({
             userId: t.id,
             onAction: B
         }),
-        F = (0, s.e7)([m.Z], () => m.Z.getGuild(i.guild_id)),
+        V = (0, s.e7)([m.Z], () => m.Z.getGuild(i.guild_id)),
         Z = (0, E.Z)(i),
         H = (0, f.ZP)(i),
         { channelStatusEnabled: W } = (0, g.D)({ location: 'UserProfileVoiceActivityCard' }),
@@ -141,10 +141,10 @@ function j(e) {
                                     })
                                 ]
                             }),
-                            null != F &&
+                            null != V &&
                                 (0, r.jsx)(S.Z, {
                                     variant: 'text-xs/normal',
-                                    text: w.NW.formatToPlainString(w.t['hq/Qzc'], { guildName: F.name }),
+                                    text: w.NW.formatToPlainString(w.t['hq/Qzc'], { guildName: V.name }),
                                     onClick: t
                                 })
                         ]
@@ -171,7 +171,7 @@ function j(e) {
     return (0, r.jsx)(d.Gt, {
         value: G,
         children: (0, r.jsxs)(O.Z, {
-            ref: V,
+            ref: F,
             className: o()(D.card, L),
             onAction: B,
             onClose: M,

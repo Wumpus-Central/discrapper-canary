@@ -37,9 +37,9 @@ var r = n(98405),
     U = m.getterFor(M),
     G = o('fetch'),
     B = o('Request'),
-    V = o('Headers'),
-    F = B && B.prototype,
-    Z = V && V.prototype,
+    F = o('Headers'),
+    V = B && B.prototype,
+    Z = F && F.prototype,
     H = i.TypeError,
     W = i.encodeURIComponent,
     Y = String.fromCharCode,
@@ -329,7 +329,7 @@ if (
         },
         { URLSearchParams: eg }
     ),
-    !u && E(V))
+    !u && E(F))
 ) {
     var eb = l(Z.has),
         ey = l(Z.set),
@@ -339,7 +339,7 @@ if (
                     n = e.body;
                 if (v(n) === x)
                     return (
-                        eb((t = e.headers ? new V(e.headers) : new V()), 'content-type') || ey(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
+                        eb((t = e.headers ? new F(e.headers) : new F()), 'content-type') || ey(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
                         T(e, {
                             body: N(0, S(n)),
                             headers: N(0, t)
@@ -366,10 +366,10 @@ if (
         E(B))
     ) {
         var eO = function (e) {
-            return g(this, F), new B(e, arguments.length > 1 ? ev(arguments[1]) : {});
+            return g(this, V), new B(e, arguments.length > 1 ? ev(arguments[1]) : {});
         };
-        (F.constructor = eO),
-            (eO.prototype = F),
+        (V.constructor = eO),
+            (eO.prototype = V),
             r(
                 {
                     global: !0,

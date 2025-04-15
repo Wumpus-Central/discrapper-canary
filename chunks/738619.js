@@ -103,7 +103,7 @@ function G(e, t) {
     return i;
 }
 let B = [];
-class V extends i.PureComponent {
+class F extends i.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
             this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
@@ -155,7 +155,7 @@ class V extends i.PureComponent {
             });
     }
 }
-function F(e) {
+function V(e) {
     let { channel: t, guild: n } = e,
         i = [];
     return (0, r.jsx)(g.ZP, {
@@ -185,12 +185,12 @@ function Z(e) {
         A = (0, m.R6)('TypingUsers');
     if (0 === T.length && !S && !g)
         return i && null != n
-            ? (0, r.jsx)(V, {
+            ? (0, r.jsx)(F, {
                   activity: n,
                   isFocused: o,
                   isRefreshChatInputEnabled: A
               })
-            : (0, r.jsx)(F, {
+            : (0, r.jsx)(V, {
                   channel: u,
                   guild: v
               });

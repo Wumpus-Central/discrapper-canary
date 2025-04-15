@@ -15,9 +15,9 @@ n.d(t, {
     f: () => H,
     m7: () => M,
     n8: () => K,
-    pQ: () => F,
+    pQ: () => V,
     v1: () => Z,
-    wO: () => V
+    wO: () => F
 });
 var r = n(200651),
     i = n(192379),
@@ -115,10 +115,10 @@ function P(e, t) {
 }
 let w = {
     [c.s.TOP_ARTIST]: [Y],
-    [c.s.PLAYED_GAME]: [U, G, j, z, V, H, K, Z, F],
+    [c.s.PLAYED_GAME]: [U, G, j, z, F, H, K, Z, V],
     [c.s.TOP_GAME]: [W],
     [c.s.WATCHED_MEDIA]: [q, Q],
-    [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, F]
+    [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, V]
 };
 var D = (function (e) {
     return (e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), (e[(e.FRIENDS_POPOUT = 8)] = 'FRIENDS_POPOUT'), e;
@@ -239,7 +239,7 @@ function B(e) {
         ]
     });
 }
-function V(e) {
+function F(e) {
     let { entry: t } = e,
         { location: n } = x(),
         i = (0, h.Hi)(n, [0, 3]) ? f.TVs.colors.STATUS_POSITIVE : void 0;
@@ -251,7 +251,7 @@ function V(e) {
           })
         : null;
 }
-function F(e) {
+function V(e) {
     let { entry: t } = e,
         { location: n } = x();
     if (!(0, b.V5)(t)) return null;

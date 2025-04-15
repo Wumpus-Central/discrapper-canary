@@ -1,11 +1,11 @@
-t.d(n, { Z: () => a });
-var r = t(442837),
-    o = t(430824),
-    s = t(535396),
-    i = t(981631);
-function a(e, n) {
+n.d(t, { Z: () => c });
+var r = n(442837),
+    o = n(430824),
+    a = n(535396),
+    s = n(981631);
+function c(e, t) {
     return (0, r.e7)([o.Z], () => {
-        var t;
-        return null != n && (null == (t = o.Z.getGuild(e)) ? void 0 : t.hasFeature(i.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 && s.ad.has(n.skuId);
+        var n;
+        return null != t && (null == (n = o.Z.getGuild(e)) ? void 0 : n.hasFeature(s.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0 && a.ad.has(t.skuId);
     });
 }

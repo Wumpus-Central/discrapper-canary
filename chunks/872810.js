@@ -1,5 +1,5 @@
 n.d(t, {
-    L6: () => V,
+    L6: () => F,
     Rc: () => G,
     WH: () => R,
     aP: () => k,
@@ -198,7 +198,7 @@ function B(e, t) {
         rejectWithError: !0
     });
 }
-function V() {
+function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = _.Z.getCurrentUserActiveStream();
     null != t && M((0, c.V9)(t), e);

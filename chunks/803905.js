@@ -2,8 +2,8 @@ n.d(t, {
     $0: () => P,
     AN: () => j,
     Ct: () => A,
-    DU: () => F,
-    EQ: () => V,
+    DU: () => V,
+    EQ: () => F,
     Ej: () => S,
     ME: () => m,
     O1: () => O,
@@ -91,12 +91,12 @@ new a.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
 let U = new _(r.q.INCREASED_GUILD_LIMIT),
     G = new _(r.q.INCREASED_MESSAGE_LENGTH),
     B = new _('increasedVideoUploadQuality'),
-    V = new _('uploadLargeFiles'),
-    F = new _(r.q.CHAT_WALLPAPERS),
+    F = new _('uploadLargeFiles'),
+    V = new _(r.q.CHAT_WALLPAPERS),
     Z = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, B, V, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, v, I, R, w, x, B, V, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, v, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, V, A, T, L, b, N, F])
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, B, F, A]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, v, I, R, w, x, B, F, A]),
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, v, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, F, A, T, L, b, N, V])
     }),
     H = [R, P];
 function W(e, t, n) {

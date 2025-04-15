@@ -97,10 +97,10 @@ function N(e) {
     let [M, k] = i.useState(!1),
         [j, U] = i.useState(void 0),
         G = i.useRef(void 0),
-        { triggerAnimation: B, untriggerAnimation: V } = i.useContext(u.Rm),
-        F = _.Yk.useSetting(),
+        { triggerAnimation: B, untriggerAnimation: F } = i.useContext(u.Rm),
+        V = _.Yk.useSetting(),
         Z = T(),
-        H = null == w ? F : w,
+        H = null == w ? V : w,
         W = E.kV[S],
         Y = i.useRef(null),
         K = i.useMemo(() => {
@@ -130,9 +130,9 @@ function N(e) {
         ),
         Q = i.useCallback(
             (e) => {
-                v && k(!1), null == f && V(p), null == R || R(e);
+                v && k(!1), null == f && F(p), null == R || R(e);
             },
-            [v, f, p, R, V]
+            [v, f, p, R, F]
         ),
         X = i.useMemo(() => {
             let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
@@ -175,7 +175,7 @@ function N(e) {
                       channelId: g,
                       messageId: b,
                       emojiName: p,
-                      disable: !1 === H || !1 === F,
+                      disable: !1 === H || !1 === V,
                       emojiRef: $
                   }),
                   P

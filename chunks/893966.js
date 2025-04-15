@@ -168,7 +168,7 @@ function G(e) {
 function B(e) {
     return U(e);
 }
-function V(e) {
+function F(e) {
     let { guildMembers: t } = e,
         n = !1;
     return (
@@ -180,7 +180,7 @@ function V(e) {
         n
     );
 }
-function F(e) {
+function V(e) {
     let { guildId: t, members: n } = e;
     if (null == t || null == l.Z.getGuild(t)) return !1;
     E = !0;
@@ -327,8 +327,8 @@ g(X, 'displayName', 'MemberSafetyStore');
 let J = new X(o.Z, {
     CONNECTION_OPEN: G,
     CONNECTION_OPEN_SUPPLEMENTAL: B,
-    LOCAL_MESSAGES_LOADED: F,
-    CACHE_LOADED: V,
+    LOCAL_MESSAGES_LOADED: V,
+    CACHE_LOADED: F,
     PASSIVE_UPDATE_V2: Z,
     GUILD_CREATE: I,
     GUILD_DELETE: S,

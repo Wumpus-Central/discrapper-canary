@@ -152,8 +152,8 @@ function j(e) {
 let U = u.Z.RULES,
     G = d.ZP,
     B = /^<@!?(\d+)>/,
-    V = /^<@&(\d+)>/,
-    F = /^<#(\d+)>/,
+    F = /^<@&(\d+)>/,
+    V = /^<#(\d+)>/,
     Z = /^<a?:(\w+):(\d+)>/,
     H = /(@everyone|@here|@Clyde)\b/,
     W = {
@@ -163,8 +163,8 @@ let U = u.Z.RULES,
         inlineCode: k(U.inlineCode),
         codeBlock: k(U.codeBlock),
         rawUserMention: j(B),
-        rawRoleMention: j(V),
-        rawChannelMention: j(F),
+        rawRoleMention: j(F),
+        rawChannelMention: j(V),
         rawEmoji: j(Z),
         mention: {
             match(e, t, n) {
@@ -288,7 +288,7 @@ let U = u.Z.RULES,
             }
         },
         roleMention: {
-            match: a().anyScopeRegex(V),
+            match: a().anyScopeRegex(F),
             parse(e, t, n) {
                 let { guild: r } = n;
                 if (null != r) {
@@ -299,7 +299,7 @@ let U = u.Z.RULES,
             }
         },
         channel: {
-            match: a().anyScopeRegex(F),
+            match: a().anyScopeRegex(V),
             parse(e) {
                 let t = m.Z.getChannel(e[1]);
                 return { content: null == t ? e[0] : (0, s.F6)(t, I.default, v.Z, !0, !0) };

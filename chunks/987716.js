@@ -101,9 +101,9 @@ let N = (e) => {
         U = k !== u.xr.DEFAULT,
         G = (0, f.rK)(),
         { enabled: B } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: G }),
-        { enabled: V } = _.O.useExperiment({ location: 'gift card' }),
-        F = null;
-    U && (F = G && B ? g.kJ : g.QI), V && (F = g.RQ);
+        { enabled: F } = _.O.useExperiment({ location: 'gift card' }),
+        V = null;
+    U && (V = G && B ? g.kJ : g.QI), F && (V = g.RQ);
     let Z = (e) => {
         null != R && R(null == e ? void 0 : e);
     };
@@ -162,8 +162,8 @@ let N = (e) => {
                     ),
                     {
                         children:
-                            null != F &&
-                            F.map((e, t) =>
+                            null != V &&
+                            V.map((e, t) =>
                                 (0, r.jsx)(
                                     m.m,
                                     {

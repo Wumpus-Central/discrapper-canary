@@ -37,8 +37,8 @@ var r = n(654861),
     U = n(626135),
     G = n(12647),
     B = n(630388),
-    V = n(931619),
-    F = n(358085),
+    F = n(931619),
+    V = n(358085),
     Z = n(591759),
     H = n(579806),
     W = n(859401),
@@ -162,14 +162,14 @@ class ey extends d.Z {
     }
     destroy() {
         var e, t, n, r, i, o, a;
-        if ((this.logger.info('Destroy RTCConnection'), V.Z.removeOnlineCallback(this._handleNetworkOnline), V.Z.removeOfflineCallback(this._handleNetworkOffline), (0, F.isDesktop)() && (null == (o = (a = this).powerMonitorListener) || o.call(a)), er.w.off(er.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged), er.w.off(er.e.WindowVisibilityChanged, this.windowVisibilityChanged), this._backoff.cancel(), this._cleanupSocket(), null == (e = this._voiceQuality) || e.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), null == (t = this._systemResponsiveness) || t.stop(), (this._systemResponsiveness = null), (this._noiseCancellationError = 0), null == (n = this._voiceDuration) || n.stop(), (this._voiceDuration = null), null == (r = this._videoQuality) || r.stop(), (this._videoQuality = null), (this._videoHealthManager = null), (this._secureFramesState = null), null == (i = this._localMediaSinkWantsManager) || i.reset(), null != this._connection)) {
+        if ((this.logger.info('Destroy RTCConnection'), F.Z.removeOnlineCallback(this._handleNetworkOnline), F.Z.removeOfflineCallback(this._handleNetworkOffline), (0, V.isDesktop)() && (null == (o = (a = this).powerMonitorListener) || o.call(a)), er.w.off(er.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged), er.w.off(er.e.WindowVisibilityChanged, this.windowVisibilityChanged), this._backoff.cancel(), this._cleanupSocket(), null == (e = this._voiceQuality) || e.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), null == (t = this._systemResponsiveness) || t.stop(), (this._systemResponsiveness = null), (this._noiseCancellationError = 0), null == (n = this._voiceDuration) || n.stop(), (this._voiceDuration = null), null == (r = this._videoQuality) || r.stop(), (this._videoQuality = null), (this._videoHealthManager = null), (this._secureFramesState = null), null == (i = this._localMediaSinkWantsManager) || i.reset(), null != this._connection)) {
             let e = this._connection;
             (this._connection = null), e.destroy();
         }
         this.removeAllListeners(), (this._destroyed = !0);
     }
     shouldSendSpeaking(e, t) {
-        if ((0, F.isWeb)()) return !0;
+        if ((0, V.isWeb)()) return !0;
         let n = (0, B.yE)(e, eo.Dg.PRIORITY),
             r = (0, B.yE)(this._lastSentSpeakingStatus, eo.Dg.PRIORITY);
         return (this._lastSentSSRC !== t || n !== r) && (void 0 !== this._lastSentSSRC || e !== eo.Dg.NONE) && (this._lastSentSSRC === t || e !== eo.Dg.NONE) && ((this._lastSentSpeakingStatus = e), (this._lastSentSSRC = t), !0);
@@ -1374,9 +1374,9 @@ class ey extends d.Z {
             er.w.on(er.e.WindowVisibilityChanged, this.windowVisibilityChanged),
             M.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), g.TC(!1)) : (this._recordingEnabled = !1),
             (this._soundshareStats = new Q.Z()),
-            V.Z.addOnlineCallback(this._handleNetworkOnline),
-            V.Z.addOfflineCallback(this._handleNetworkOffline),
-            (0, F.isDesktop)() && (this.powerMonitorListener = H.Z.remotePowerMonitor.on('resume', this._handlePowerResume)),
+            F.Z.addOnlineCallback(this._handleNetworkOnline),
+            F.Z.addOfflineCallback(this._handleNetworkOffline),
+            (0, V.isDesktop)() && (this.powerMonitorListener = H.Z.remotePowerMonitor.on('resume', this._handlePowerResume)),
             (this._supportedBandwidthEstimationExperiments = []),
             (this._bandwidthEstimationExperiment = null),
             L.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {

@@ -2,7 +2,7 @@ n.d(t, {
     BH: () => N,
     Cs: () => R,
     G1: () => E,
-    IC: () => V,
+    IC: () => F,
     OT: () => Z,
     Vw: () => y,
     WW: () => W,
@@ -209,12 +209,12 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     G = (e) => e.applicationId === _.XAJ,
     B = 3.8,
-    V = (e) => B * e,
-    F = 86400000,
+    F = (e) => B * e,
+    V = 86400000,
     Z = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
-        return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / F);
+        return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / V);
     },
     H = (e) => {
         let t = f.yf[e];

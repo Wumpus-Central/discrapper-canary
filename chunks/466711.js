@@ -153,12 +153,12 @@ function x(e) {
         [j, U] = (0, f.XR)(k ? a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         G = null != j,
         B = S || G,
-        V = (0, y.Ft)(E);
+        F = (0, y.Ft)(E);
     if (s) return null;
-    let F = () => {
+    let V = () => {
             (0, _.Z)({
                 isGift: !0,
-                giftRecipient: null == V ? void 0 : V,
+                giftRecipient: null == F ? void 0 : F,
                 initialPlanId: null,
                 analyticsLocations: v,
                 analyticsObject: {
@@ -170,7 +170,7 @@ function x(e) {
             });
         },
         Z = () => {
-            N(!1), U(I.L.TAKE_ACTION), F();
+            N(!1), U(I.L.TAKE_ACTION), V();
         },
         H =
             void 0 !== P
@@ -198,7 +198,7 @@ function x(e) {
             void 0 !== M && G
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => N(!1),
-                      onCheckItOutClick: F,
+                      onCheckItOutClick: V,
                       markAsDismissed: U,
                       config: M,
                       children: H

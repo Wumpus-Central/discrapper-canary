@@ -91,7 +91,7 @@ function N(e, t) {
     return i;
 }
 let A = function (e) {
-    var { isGift: t, subscriptionTier: i, onClick: v, size: I, className: N, isTrialCTA: A, buttonText: C, buttonTextClassName: R, subscribeButtonText: P, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: V, paymentModalBanner: F } = e,
+    var { isGift: t, subscriptionTier: i, onClick: v, size: I, className: N, isTrialCTA: A, buttonText: C, buttonTextClassName: R, subscribeButtonText: P, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: F, paymentModalBanner: V } = e,
         Z = T(e, ['isGift', 'subscriptionTier', 'onClick', 'size', 'className', 'isTrialCTA', 'buttonText', 'buttonTextClassName', 'subscribeButtonText', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
     let H = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         W = (0, a.e7)([h.Z], () => h.Z.isFocused()),
@@ -151,8 +151,8 @@ let A = function (e) {
                     onClose: L,
                     applicationId: j,
                     giftMessage: U,
-                    confirmationFooter: V,
-                    paymentModalBanner: F
+                    confirmationFooter: F,
+                    paymentModalBanner: V
                 });
         };
     if (A)

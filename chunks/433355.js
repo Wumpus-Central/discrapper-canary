@@ -150,12 +150,12 @@ function B() {
     }
     return e;
 }
-function V(e) {
+function F(e) {
     let { baseChannelId: t } = e,
         n = A(t);
     null != n && delete T[n];
 }
-function F() {
+function V() {
     if (S === f.Z.isActive()) return !1;
     S = f.Z.isActive();
 }
@@ -168,7 +168,7 @@ class H extends (r = o.ZP.PersistedStore) {
             var t, n, r, i, o;
             (v = null != (t = e.isMembersOpen) && t), (O = null != (n = e.isSummariesOpen) && n), (I = null == (r = e.isProfileOpen) || r), (T = null != (i = e.sidebars) ? i : {}), (N = null != (o = e.guildSidebars) ? o : {});
         }
-        this.syncWith([f.Z], F), this.syncWith([d.Z], B);
+        this.syncWith([f.Z], V), this.syncWith([d.Z], B);
     }
     getState() {
         return {
@@ -213,7 +213,7 @@ let W = new H(a.Z, {
     SIDEBAR_VIEW_CHANNEL: M,
     SIDEBAR_VIEW_GUILD: L,
     SIDEBAR_CREATE_THREAD: k,
-    SIDEBAR_CLOSE: V,
+    SIDEBAR_CLOSE: F,
     SIDEBAR_CLOSE_GUILD: x,
     CHANNEL_DELETE: j,
     CHANNEL_SELECT: Z,

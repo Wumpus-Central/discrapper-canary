@@ -71,7 +71,7 @@ function A(e) {
     i.useEffect(() => {
         null == E || E(null == G ? void 0 : G.current);
     }, [G, E]);
-    let V = async (e) => {
+    let F = async (e) => {
             if (null == e) return;
             f === y.n_.AVATAR ? C({ action: 'SEND_REPLY_AVATAR' }) : f === y.n_.STATUS ? C({ action: 'SEND_REPLY_CUSTOM_STATUS' }) : C({ action: 'SEND_REPLY_ACTIVITY' });
             let n = T({
@@ -93,7 +93,7 @@ function A(e) {
             } catch (e) {}
             D(y.P.REPLY);
         },
-        F = {
+        V = {
             [I.biteSize]: s === y.y0.BITE_SIZE,
             [I.panel]: s === y.y0.PANEL,
             [I.fullSize]: s === y.y0.FULL_SIZE
@@ -107,7 +107,7 @@ function A(e) {
         ref: G,
         onKeyDown: B,
         children: (0, r.jsx)('div', {
-            className: a()(I.container, F, Z, { [I.customProfileTheme]: null != L }),
+            className: a()(I.container, V, Z, { [I.customProfileTheme]: null != L }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: A,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -136,7 +136,7 @@ function A(e) {
                         };
                     try {
                         return (
-                            await V(n),
+                            await F(n),
                             w(),
                             null == R || R(),
                             {

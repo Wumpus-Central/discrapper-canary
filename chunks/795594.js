@@ -45,8 +45,8 @@ var r = n(200651),
     U = n(881998),
     G = n(592125),
     B = n(944486),
-    V = n(246946),
-    F = n(9156),
+    F = n(246946),
+    V = n(9156),
     Z = n(768581),
     H = n(585483),
     W = n(49012),
@@ -430,7 +430,7 @@ let ef = (e) => {
             ),
             T = o.bot,
             N = (0, _.e7)([G.Z], () => G.Z.getDMFromUserId(null == T ? void 0 : T.id)),
-            A = (0, _.e7)([F.ZP], () => (null == N ? null : F.ZP.isChannelMuted(null, N))),
+            A = (0, _.e7)([V.ZP], () => (null == N ? null : V.ZP.isChannelMuted(null, N))),
             [C, P] = i.useState(!1),
             [D, x] = i.useState(!1),
             U = L.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
@@ -509,7 +509,7 @@ let ef = (e) => {
                         }
                     });
             },
-            V = i.useMemo(() => {
+            F = i.useMemo(() => {
                 if (null != o.description && '' !== o.description)
                     return (0, r.jsx)(g.Text, {
                         className: ei.markup,
@@ -528,7 +528,7 @@ let ef = (e) => {
                           collapsibleContent: (0, r.jsxs)('div', {
                               className: er.appDetailsContent,
                               children: [
-                                  e && V,
+                                  e && F,
                                   t &&
                                       (0, r.jsx)(eh, {
                                           application: o,
@@ -719,7 +719,7 @@ let ef = (e) => {
     },
     eE = (0, d.U)(() => ({ searchQuery: '' })),
     eb = () => {
-        let e = (0, _.e7)([V.Z], () => V.Z.hidePersonalInformation),
+        let e = (0, _.e7)([F.Z], () => F.Z.hidePersonalInformation),
             t = (0, _.e7)([U.Z], () => U.Z.getApps()),
             o = (0, _.e7)([z.default], () => z.default.locale),
             a = (0, _.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),

@@ -191,7 +191,7 @@ function B(e) {
     let { guild: t } = e;
     d.Z.isLurking(t.id) || (G(t), 1 === v && null == t.stickers && null != t.stickerUpdates && (v = 0));
 }
-function V(e) {
+function F(e) {
     var t;
     let { guild: n } = e;
     (null != (t = C.get(n.id)) ? t : []).forEach((e) => {
@@ -200,7 +200,7 @@ function V(e) {
         C.delete(n.id),
         (C = new Map(C));
 }
-let F = () => {
+let V = () => {
         (v = 0), (T = []), I.clear(), O.clear(), (S = null), C.clear(), (C = new Map(C)), (A = !1), (N = null);
     },
     Z = () => {
@@ -293,8 +293,8 @@ let X = new Q(a.Z, {
     BACKGROUND_SYNC: U,
     CONNECTION_OPEN: j,
     GUILD_CREATE: B,
-    GUILD_DELETE: V,
-    LOGOUT: F,
+    GUILD_DELETE: F,
+    LOGOUT: V,
     STICKER_PACKS_FETCH_START: Z,
     STICKER_PACKS_FETCH_SUCCESS: H,
     STICKER_PACK_FETCH_SUCCESS: W,

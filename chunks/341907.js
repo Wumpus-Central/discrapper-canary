@@ -1,8 +1,8 @@
 n.r(t),
     n.d(t, {
         loadVideoQuestModal: () => Z,
-        maybeShowSurveyForQuest: () => F,
-        navigateToQuestHome: () => V,
+        maybeShowSurveyForQuest: () => V,
+        navigateToQuestHome: () => F,
         openAppWithQuest: () => Y,
         openDisclosureModal: () => B,
         openQuestInGameRewardModal: () => U,
@@ -180,7 +180,7 @@ function B(e, t) {
                 );
         });
 }
-function V() {
+function F() {
     let { fromContent: e, questId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, N.Z.getState().setUtmCurrentContext)({
         utmSourceCurrent: M,
@@ -191,7 +191,7 @@ function V() {
     let n = null != t ? '#'.concat(t) : '';
     l.Z.setState({ selectedTab: R.GlobalDiscoveryTab.QUESTS }), (0, u.uL)(C.Z5c.QUEST_HOME + n);
 }
-function F(e) {
+function V(e) {
     let t = (0, I.T)({ quest: e }),
         n = { location: A.dr.QUESTS_BAR };
     if (!(0, O.j)(n)) return;

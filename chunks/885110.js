@@ -95,11 +95,11 @@ function G(e) {
 function B() {
     return (S = !1), U();
 }
-function V() {
+function F() {
     (P = !1), (N = O.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
 }
-function F() {
-    V();
+function V() {
+    F();
 }
 class Z extends (r = l.ZP.Store) {
     initialize() {
@@ -139,9 +139,9 @@ class Z extends (r = l.ZP.Store) {
 I(Z, 'displayName', 'SelfPresenceStore');
 let H = new Z(c.Z, {
     START_SESSION: U,
-    CONNECTION_OPEN: F,
-    CONNECTION_OPEN_SUPPLEMENTAL: V,
-    OVERLAY_INITIALIZE: V,
+    CONNECTION_OPEN: V,
+    CONNECTION_OPEN_SUPPLEMENTAL: F,
+    OVERLAY_INITIALIZE: F,
     CONNECTION_CLOSED: U,
     IDLE: U,
     AFK: U,

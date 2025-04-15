@@ -131,7 +131,7 @@ function D(e) {
                         )
                     });
         },
-        V = () => {
+        F = () => {
             let { timestamps: e } = o;
             if (null == e) return null;
             let { start: t, end: n } = e;
@@ -142,7 +142,7 @@ function D(e) {
                       end: n
                   });
         },
-        F = () =>
+        V = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
@@ -206,14 +206,14 @@ function D(e) {
                                         activity: o,
                                         className: A.badges
                                     }),
-                                    V()
+                                    F()
                                 ]
                             }),
-                            D === N.y0.FULL_SIZE && F()
+                            D === N.y0.FULL_SIZE && V()
                         ]
                     })
                 }),
-                D !== N.y0.FULL_SIZE && F()
+                D !== N.y0.FULL_SIZE && V()
             ]
         })
     });

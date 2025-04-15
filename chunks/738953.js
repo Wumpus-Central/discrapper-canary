@@ -85,7 +85,7 @@ function G(e, t) {
     );
 }
 function B(e) {
-    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: V, openedAt: F, closePopout: Z, setPopoutRef: H, disableUserProfileLink: W = __OVERLAY__, newAnalyticsLocations: Y = [], appContext: K = L.IlC.APP } = e,
+    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: F, openedAt: V, closePopout: Z, setPopoutRef: H, disableUserProfileLink: W = __OVERLAY__, newAnalyticsLocations: Y = [], appContext: K = L.IlC.APP } = e,
         { analyticsLocations: z } = (0, d.ZP)([...Y, u.Z.BITE_SIZE_PROFILE_POPOUT]),
         q = (0, m.ZB)({
             layout: 'BITE_SIZE_POPOUT',
@@ -93,7 +93,7 @@ function B(e) {
             guildId: k,
             channelId: U,
             messageId: B,
-            roleId: V
+            roleId: F
         }),
         Q = (0, a.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
         X = i.useMemo(() => (null != k ? { [k]: [t.id] } : {}), [k, t.id]);
@@ -150,7 +150,7 @@ function B(e) {
         value: z,
         children: (0, r.jsx)(m.Mt, {
             value: q,
-            openedAt: F,
+            openedAt: V,
             fetchStartedAt: null == $ ? void 0 : $.fetchStartedAt,
             fetchEndedAt: null == $ ? void 0 : $.fetchEndedAt,
             isLoaded: null == $ ? void 0 : $.isLoaded,

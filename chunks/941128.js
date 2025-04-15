@@ -90,7 +90,7 @@ function j(e) {
     C.set((0, _.Tu)(t, n), 'Install'), M(t, n, !1, 'Patch');
 }
 function U(e) {
-    V(e), Z(e);
+    F(e), Z(e);
 }
 function G(e) {
     let { applicationId: t, branchId: n } = e;
@@ -100,11 +100,11 @@ function B(e) {
     let { applicationId: t, branchId: n, automatic: r } = e;
     M(t, n, r, 'Patch');
 }
-function V(e) {
+function F(e) {
     let { applicationId: t, branchId: n } = e;
     k(t, n);
 }
-function F(e) {
+function V(e) {
     let { applicationId: t, branchId: n } = e,
         r = x(t, n);
     if (r < 1) return !1;
@@ -223,9 +223,9 @@ let J = new X(l.Z, {
     DISPATCH_APPLICATION_INSTALL: j,
     DISPATCH_APPLICATION_UPDATE: B,
     DISPATCH_APPLICATION_UNINSTALL: U,
-    DISPATCH_APPLICATION_CANCEL: V,
+    DISPATCH_APPLICATION_CANCEL: F,
     DISPATCH_APPLICATION_REPAIR: G,
-    DISPATCH_APPLICATION_MOVE_UP: F,
+    DISPATCH_APPLICATION_MOVE_UP: V,
     DISPATCH_APPLICATION_REMOVE_FINISHED: Z,
     DISPATCH_APPLICATION_STATE_UPDATE: H,
     DISPATCH_APPLICATION_ERROR: Y,

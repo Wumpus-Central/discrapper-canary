@@ -175,11 +175,11 @@ function B(e) {
     let { guildScheduledEvent: t } = e;
     return N(t), !0;
 }
-function V(e) {
+function F(e) {
     let { guildScheduledEvent: t } = e;
     return A(t.id), !0;
 }
-function F(e) {
+function V(e) {
     let { eventException: t } = e,
         n = y.get(t.event_id);
     if (null == n) return !1;
@@ -323,15 +323,15 @@ let en = new et(l.Z, {
     FETCH_GUILD_EVENTS_FOR_GUILD: k,
     GUILD_SCHEDULED_EVENT_CREATE: B,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
-    GUILD_SCHEDULED_EVENT_DELETE: V,
+    GUILD_SCHEDULED_EVENT_DELETE: F,
     GUILD_SCHEDULED_EVENT_USER_ADD: K,
     GUILD_SCHEDULED_EVENT_USER_REMOVE: z,
     GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: W,
     GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: Y,
     GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: q,
     INVITE_RESOLVE_SUCCESS: X,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: F,
-    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: F,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: V,
+    GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: V,
     GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: Z,
     GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: H,
     LOGOUT: Q

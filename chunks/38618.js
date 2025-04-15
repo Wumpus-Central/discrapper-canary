@@ -75,10 +75,10 @@ async function G(e) {
 function B() {
     P.verbose('connection closed dispatched'), (D = Date.now());
 }
-function V(e) {
+function F(e) {
     return e.resetSocket && (I.Wb.close(), I.Wb.dispatcher.clear(), I.Wb.connect()), !1;
 }
-function F(e) {
+function V(e) {
     return (
         I.GC.update({
             guildId: e.guildId,
@@ -272,13 +272,13 @@ let eg = new em(s.Z, {
     START_SESSION: k,
     LOGIN_SUCCESS: U,
     LOGOUT: j,
-    CLEAR_CACHES: V,
+    CLEAR_CACHES: F,
     CONNECTION_OPEN: (e) => {
         G(e);
     },
     CONNECTION_CLOSED: B,
     RTC_CONNECTION_STATE: q,
-    VOICE_CHANNEL_SELECT: F,
+    VOICE_CHANNEL_SELECT: V,
     VOICE_STATE_UPDATES: W,
     GUILD_DELETE: Y,
     CHANNEL_DELETE: z,

@@ -121,13 +121,13 @@ function M(e) {
     k && M && j.push(l.z.NITROWEEN_COACHMARKS);
     let [U, G] = (0, p.US)(j),
         B = null != U,
-        V = (0, O.Ft)(n),
-        { Component: F, events: Z, play: H } = (0, c.$)();
+        F = (0, O.Ft)(n),
+        { Component: V, events: Z, play: H } = (0, c.$)();
     if (t) return null;
     let W = () => {
         (0, h.Z)({
             isGift: !0,
-            giftRecipient: null == V ? void 0 : V,
+            giftRecipient: null == F ? void 0 : F,
             giftMessage: N.NW.string(N.t['rX/m/f']),
             initialPlanId: null,
             analyticsLocations: o,
@@ -170,7 +170,7 @@ function M(e) {
                     ),
                     {
                         children: (0, r.jsx)(x, {
-                            animatedIconComponent: F,
+                            animatedIconComponent: V,
                             hovered: a,
                             isCoachmarkDismissed: !B
                         })

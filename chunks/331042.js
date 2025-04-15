@@ -42,8 +42,8 @@ var r = n(200651),
     U = n(905357),
     G = n(328456),
     B = n(624377),
-    V = n(530618),
-    F = n(141011),
+    F = n(530618),
+    V = n(141011),
     Z = n(372654),
     H = n(197831),
     W = n(508925),
@@ -302,7 +302,7 @@ let ec = 880,
                         children: [
                             b
                                 ? (0, r.jsx)('div', { className: ei.promotionalBanner })
-                                : (0, r.jsx)(F.Z, {
+                                : (0, r.jsx)(V.Z, {
                                       asset: L,
                                       size: (0, Z.ML)(ec),
                                       className: ei.decorationBanner,
@@ -344,7 +344,7 @@ let ec = 880,
                 }),
                 !s &&
                     !R &&
-                    (0, r.jsx)(V.Z, {
+                    (0, r.jsx)(F.Z, {
                         confettiTarget: null != o ? o : P.current,
                         confettiCanvas: a,
                         sprites: (0, Z.vK)(I.categorySkuId),

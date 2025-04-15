@@ -85,7 +85,7 @@ function G(e) {
                         preventFetch: el
                     })
                   : (0, N.R4)(n, P, W)
-                    ? (0, r.jsx)(V, {
+                    ? (0, r.jsx)(F, {
                           premiumSubscription: n,
                           newPlan: ei,
                           onInvoiceError: G,
@@ -168,7 +168,7 @@ function G(e) {
                     ref: x,
                     children:
                         null != n && (0, N.R4)(n, P, W)
-                            ? (0, r.jsx)(F, {
+                            ? (0, r.jsx)(V, {
                                   premiumSubscription: n,
                                   newPlan: ei,
                                   onInvoiceError: G,
@@ -230,7 +230,7 @@ function B(e) {
           })
         : (0, r.jsx)(c.$jN, {});
 }
-function V(e) {
+function F(e) {
     let t,
         { premiumSubscription: n, newPlan: o, onInvoiceError: a, planGroup: s, priceOptions: l, fractionalPremiumInfo: u, preventFetch: d } = e,
         { selectedSkuId: f, startedPaymentFlowWithPaymentSourcesRef: _ } = (0, E.JL)(),
@@ -304,7 +304,7 @@ function V(e) {
         ]
     });
 }
-function F(e) {
+function V(e) {
     let t,
         { premiumSubscription: n, newPlan: o, onInvoiceError: a, planGroup: s, priceOptions: l, preventFetch: u, disabled: f, isEEA: m, paymentSources: g, setHasAcceptedTerms: E } = e,
         { analyticsLocations: b } = (0, h.ZP)(),

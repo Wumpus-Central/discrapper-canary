@@ -238,7 +238,7 @@ function B(e) {
         c = window.GLOBAL_ENV.CDN_HOST;
     return (t = (null != c ? ''.concat(location.protocol, '//').concat(c, '/banners/').concat(n, '/').concat(r, '.').concat(s) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_BANNER(n, r, s)) + '?size='.concat(o)), 'jpg' === s && (t += '&quality=lossless'), t;
 }
-function V(e) {
+function F(e) {
     let t,
         { id: n, homeHeader: r } = e;
     if (null == r) return null;
@@ -246,7 +246,7 @@ function V(e) {
         o = window.GLOBAL_ENV.CDN_HOST;
     return (null != o ? ''.concat(location.protocol, '//').concat(o, '/home-headers/').concat(n, '/').concat(r, '.png') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_HOME_HEADER(n, r)) + '?size='.concat(i);
 }
-function F(e) {
+function V(e) {
     let t,
         { id: n, splash: r, size: i } = e;
     if (null == r) return null;
@@ -255,7 +255,7 @@ function F(e) {
     return (null != o ? ''.concat(location.protocol, '//').concat(o, '/discovery-splashes/').concat(n, '/').concat(r, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.GUILD_DISCOVERY_SPLASH(n, r)) + '?size='.concat(i);
 }
 function Z(e) {
-    return et(F(e));
+    return et(V(e));
 }
 function H(e) {
     let { id: t, icon: n, size: r, canAnimate: i = !1, lossless: o = !1 } = e;
@@ -389,10 +389,10 @@ let en = {
     getGuildIconURL: H,
     getGuildSplashURL: U,
     getGuildSplashSource: G,
-    getGuildDiscoverySplashURL: F,
+    getGuildDiscoverySplashURL: V,
     getGuildDiscoverySplashSource: Z,
     getGuildBannerURL: B,
-    getGuildHomeHeaderURL: V,
+    getGuildHomeHeaderURL: F,
     getResourceChannelIconURL: function e(e) {
         let { channelId: t, icon: n } = e;
         return null == n
@@ -432,7 +432,7 @@ let en = {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return et(B(e, t));
     },
-    getGuildHomeHeaderSource: (e) => et(V(e)),
+    getGuildHomeHeaderSource: (e) => et(F(e)),
     getChannelIconSource: (e) => et(Q(e)),
     getApplicationIconSource: (e) => et(Y(e)),
     makeSource: et,

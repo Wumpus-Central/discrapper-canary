@@ -53,8 +53,8 @@ var r = n(990547),
     U = n(595519),
     G = n(774226),
     B = n(317381),
-    V = n(882347),
-    F = n(16609),
+    F = n(882347),
+    V = n(16609),
     Z = n(224189),
     H = n(374065),
     W = n(917107),
@@ -256,7 +256,7 @@ async function ei(e) {
         let i = w.default.getCurrentUser();
         if (
             null != i &&
-            !(await (0, V.p)({
+            !(await (0, F.p)({
                 applicationId: t,
                 application: n,
                 channel: I,
@@ -386,7 +386,7 @@ async function eo(e) {
         ((null == O ? void 0 : O.applicationId) != null && (t = g.Z.getApplication(null == O ? void 0 : O.applicationId)),
         !(
             !a ||
-            (await (0, V.p)({
+            (await (0, F.p)({
                 applicationId: n,
                 application: b,
                 channel: y,
@@ -506,7 +506,7 @@ function ea(e) {
         instanceId: null == i ? void 0 : i.launchId,
         showFeedback: r
     });
-    let o = (0, F.pY)(t);
+    let o = (0, V.pY)(t);
     if (null != o) {
         var s;
         let e = y.Z.getSelectedParticipantId(o),

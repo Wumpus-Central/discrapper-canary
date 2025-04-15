@@ -221,14 +221,14 @@ function U(e) {
         U = L(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
     let G = (0, p.Q3)('GuildBadgeV2'),
         B = null != (o = U.size) ? o : G ? 18 : 16,
-        V = (0, s.e7)([b.default, E.ZP], () => {
+        F = (0, s.e7)([b.default, E.ZP], () => {
             let e = b.default.getCurrentUser();
             return E.ZP.isMember(null == _ ? void 0 : _.id, null == e ? void 0 : e.id);
         }),
-        F = (0, s.e7)([g.Z], () => g.Z.theme),
+        V = (0, s.e7)([g.Z], () => g.Z.theme),
         Z = (0, S.XX)(_),
         H = (0, I.i)(Z),
-        W = i.useMemo(() => Z.premium && V && !x, [x, Z.premium, V]),
+        W = i.useMemo(() => Z.premium && F && !x, [x, Z.premium, F]),
         Y = i.useCallback(
             (e) => {
                 W &&
@@ -275,8 +275,8 @@ function U(e) {
     let { IconComponent: K, backgroundDarkColor: z, backgroundLightColor: q, foregroundDarkColor: Q, foregroundLightColor: X, premiumBackgroundColor: J, premiumForegroundColor: $, sizeAdjustment: ee } = M[H];
     if (null == K) return null;
     Z.premium && ((t = $), (n = J));
-    let et = (0, c.wj)(F) ? Q : X,
-        en = (0, c.wj)(F) ? z : q;
+    let et = (0, c.wj)(V) ? Q : X,
+        en = (0, c.wj)(V) ? z : q;
     (t = null != t ? t : et), (n = null != n ? n : en);
     let er = Math.floor(0.75 * B) - (null != ee ? ee : 0);
     return (0, r.jsx)(u.ua7, {

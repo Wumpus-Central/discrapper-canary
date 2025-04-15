@@ -549,7 +549,7 @@ function B(e, t, n, r, i) {
     }
     return i;
 }
-function V(e, t, n, r, i) {
+function F(e, t, n, r, i) {
     var o = e[t];
     if (void 0 !== o) {
         if (isNaN((o = Number(o))) || o < n || o > r) throw RangeError('Value is not a number or outside accepted range');
@@ -557,7 +557,7 @@ function V(e, t, n, r, i) {
     }
     return i;
 }
-function F() {
+function V() {
     var e = arguments[0],
         t = arguments[1];
     return this && this !== a ? Z(em(this), e, t) : new a.NumberFormat(e, t);
@@ -592,16 +592,16 @@ function Z(e, t, n) {
     }
     var m = B(n, 'currencyDisplay', 'string', new e_('code', 'symbol', 'name'), 'symbol');
     'currency' === _ && (r['[[currencyDisplay]]'] = m);
-    var g = V(n, 'minimumIntegerDigits', 1, 21, 1);
+    var g = F(n, 'minimumIntegerDigits', 1, 21, 1);
     r['[[minimumIntegerDigits]]'] = g;
-    var E = V(n, 'minimumFractionDigits', 0, 20, 'currency' === _ ? h : 0);
+    var E = F(n, 'minimumFractionDigits', 0, 20, 'currency' === _ ? h : 0);
     r['[[minimumFractionDigits]]'] = E;
     var v = 'currency' === _ ? Math.max(E, h) : 'percent' === _ ? Math.max(E, 0) : Math.max(E, 3),
-        O = V(n, 'maximumFractionDigits', E, 20, v);
+        O = F(n, 'maximumFractionDigits', E, 20, v);
     r['[[maximumFractionDigits]]'] = O;
     var I = n.minimumSignificantDigits,
         S = n.maximumSignificantDigits;
-    (void 0 !== I || void 0 !== S) && ((I = V(n, 'minimumSignificantDigits', 1, 21, 1)), (S = V(n, 'maximumSignificantDigits', I, 21, 21)), (r['[[minimumSignificantDigits]]'] = I), (r['[[maximumSignificantDigits]]'] = S));
+    (void 0 !== I || void 0 !== S) && ((I = F(n, 'minimumSignificantDigits', 1, 21, 1)), (S = F(n, 'maximumSignificantDigits', I, 21, 21)), (r['[[minimumSignificantDigits]]'] = I), (r['[[maximumSignificantDigits]]'] = S));
     var T = B(n, 'useGrouping', 'boolean', void 0, !0);
     r['[[useGrouping]]'] = T;
     var N = c[f].patterns[_];
@@ -694,7 +694,7 @@ function z(e, t, n, r) {
 u(a, 'NumberFormat', {
     configurable: !0,
     writable: !0,
-    value: F
+    value: V
 }),
     u(a.NumberFormat, 'prototype', { writable: !1 }),
     (b.NumberFormat = {
@@ -1046,7 +1046,7 @@ function eg(e) {
 }
 (es.Number.toLocaleString = function () {
     if ('[object Number]' !== Object.prototype.toString.call(this)) throw TypeError('`this` value must be a number for Number.prototype.toLocaleString()');
-    return Y(new F(arguments[0], arguments[1]), this);
+    return Y(new V(arguments[0], arguments[1]), this);
 }),
     (es.Date.toLocaleString = function () {
         if ('[object Date]' !== Object.prototype.toString.call(this)) throw TypeError('`this` value must be a Date instance for Date.prototype.toLocaleString()');

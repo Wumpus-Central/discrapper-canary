@@ -1,4 +1,4 @@
-n.d(t, { Ns: () => m }), n(388685);
+n.d(t, { Ns: () => p }), n(388685);
 var r = n(192379),
     a = n(392711),
     i = n.n(a),
@@ -10,8 +10,8 @@ var r = n(192379),
     _ = n(709054),
     d = n(206583);
 let f = new Set([o.s.PLAYED_GAME, o.s.LAUNCHED_ACTIVITY]),
-    p = (e) => f.has(e.content_type);
-function m(e) {
+    m = (e) => f.has(e.content_type);
+function p(e) {
     let { entries: t } = (function () {
         let e = (0, u.Z)(d.YN.GAME_PROFILE_FEED),
             t = (0, u.Z)(d.YN.GLOBAL_FEED),
@@ -19,7 +19,7 @@ function m(e) {
                 () =>
                     i()(t)
                         .unionBy(e, (e) => e.id)
-                        .filter(p)
+                        .filter(m)
                         .orderBy((e) => _.default.extractTimestamp(e.id), 'desc')
                         .uniqWith((e, t) => e.author_id === t.author_id && e.extra.application_id === t.extra.application_id)
                         .value(),

@@ -176,7 +176,7 @@ class m extends h {
         );
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, r, i, o, a, s, l, c, d, f, _, p, h, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k, j, U, G, B, V, F, Z, H;
+        var t, n, r, i, o, a, s, l, c, d, f, _, p, h, g, E, b, y, v, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k, j, U, G, B, F, V, Z, H;
         return new m({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
@@ -216,8 +216,8 @@ class m extends h {
             privacyPolicyUrl: null != (U = e.privacyPolicyUrl) ? U : this.privacyPolicyUrl,
             isVerified: null != (G = e.isVerified) ? G : this.isVerified,
             customInstallUrl: null != (B = e.customInstallUrl) ? B : this.customInstallUrl,
-            installParams: null != (V = e.installParams) ? V : this.installParams,
-            isDiscoverable: null != (F = e.isDiscoverable) ? F : this.isDiscoverable,
+            installParams: null != (F = e.installParams) ? F : this.installParams,
+            isDiscoverable: null != (V = e.isDiscoverable) ? V : this.isDiscoverable,
             directoryEntry: null != (Z = e.directoryEntry) ? Z : this.directoryEntry,
             categories: null != (H = e.categories) ? H : this.categories
         });

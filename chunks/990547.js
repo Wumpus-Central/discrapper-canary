@@ -232,11 +232,11 @@ function B() {
         { os_version: null != (t = null === d() || void 0 === d() || null == (e = d().os) ? void 0 : e.version) ? t : '' }
     );
 }
-function V() {
+function F() {
     let e = {};
     return (e.referrer = document.referrer), (e.referring_domain = U()), (e = O({}, e, D(window.location.href), x()));
 }
-function F(e, t) {
+function V(e, t) {
     let n = {};
     return Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n;
 }
@@ -244,9 +244,9 @@ function Z() {
     let e = p.K.get(T);
     null == e && ((e = G()), p.K.set(T, e));
     let t = p.K.get(N);
-    null == t && ((t = V()), p.K.set(N, t));
+    null == t && ((t = F()), p.K.set(N, t));
     let n = h.x.get(N);
-    return null == n && ((n = F(V(), '_current')), h.x.set(N, n)), O({}, e, B(), t, n);
+    return null == n && ((n = V(F(), '_current')), h.x.set(N, n)), O({}, e, B(), t, n);
 }
 function H() {
     try {
@@ -259,7 +259,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || '' === n.release_channel) && (n.release_channel = r.split('-')[0]);
-    let i = parseInt('390179', 10);
+    let i = parseInt('390234', 10);
     isNaN(i) || (n.client_build_number = i);
     let o = null == R || null == (e = (t = R.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return isNaN(o) || (n.native_build_number = o), (n.client_event_source = H()), (n.has_client_mods = (0, f.e)()), n;

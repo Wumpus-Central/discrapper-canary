@@ -88,20 +88,20 @@ function B(e, t) {
         r = null == n ? void 0 : n.userStatus;
     null != r && null == r.claimedAt && U(e, { userStatus: x(D({}, r), { claimedAt: t.claimedAt }) });
 }
-function V(e) {
+function F(e) {
     var t;
     let { entitlements: n } = e,
         r = null == (t = n.items[0].tenantMetadata) ? void 0 : t.questRewards.reward;
     return (null == r ? void 0 : r.tag) !== I.w.REWARD_CODE ? null : r.rewardCode;
 }
-function F(e, t) {
+function V(e, t) {
     let n = new Map(h);
     n.set(e, t.items), (h = n);
     let r = o.get(e),
         i = null == r ? void 0 : r.userStatus;
     if (null != i && null == i.claimedAt) {
         var a;
-        let n = V({ entitlements: t });
+        let n = F({ entitlements: t });
         null != n && G(e, n),
             U(e, {
                 userStatus: x(D({}, i), {
@@ -196,7 +196,7 @@ function es(e) {
 function el(e) {
     let { questId: t, entitlements: n } = e,
         r = new Set(u);
-    r.delete(t), (u = r), F(t, n);
+    r.delete(t), (u = r), V(t, n);
 }
 function ec(e) {
     let { questId: t } = e,

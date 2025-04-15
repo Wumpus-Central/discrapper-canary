@@ -98,7 +98,7 @@ let w = (e) => {
         U = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: G } = (0, d.ZP)(),
         B = (0, u.bp)() === v.IlC.POPOUT,
-        [V, F] = i.useState(!1),
+        [F, V] = i.useState(!1),
         Z = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { fractionalState: H } = (0, f.Z)(),
         W = (0, p.y)('guild_boosting_subscribe_button', Z, H);
@@ -107,7 +107,7 @@ let w = (e) => {
         K = null != A ? Math.max((0, b.KK)(o, A), 1) : 1,
         z = (0, b.aq)({ isBoostManagementDisabledForFractionalPremium: W }),
         q = async () => {
-            F(!0),
+            V(!0),
                 await (0, y.u)({
                     analyticsLocations: G,
                     analyticsLocation: t,
@@ -121,7 +121,7 @@ let w = (e) => {
                     handleSubscribeModalClose: x,
                     intent: j
                 }),
-                F(!1);
+                V(!1);
         },
         Q = E.ZP.getPremiumTypeSubscription(),
         X = (0, r.jsxs)('div', {
@@ -167,7 +167,7 @@ let w = (e) => {
               l.gtL,
               C(N({ size: l.zxk.Sizes.SMALL }, U), {
                   className: a()(U.className, { [S.buttonHighlighted]: M }),
-                  submitting: V,
+                  submitting: F,
                   onClick: q,
                   pauseAnimation: D,
                   children: X

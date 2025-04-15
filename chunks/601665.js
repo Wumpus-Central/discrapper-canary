@@ -65,11 +65,11 @@ function C(e) {
         U = (0, _.ZP)(t.id, N),
         G = (0, o.e7)([u.Z], () => (null != N ? u.Z.getGuild(N) : null)),
         B = i.useRef(null),
-        V = (0, s.Z)(B);
+        F = (0, s.Z)(B);
     i.useEffect(() => {
         null == L || L(null == B ? void 0 : B.current);
     }, [B, L]);
-    let F = (e) => {
+    let V = (e) => {
             null == D || D(), (0, y.openUserProfileModal)(A({ sourceAnalyticsLocations: k }, j, e));
         },
         Z = () =>
@@ -79,7 +79,7 @@ function C(e) {
                       id: 'view-profile',
                       label: S.NW.string(S.t['+Xp3ho']),
                       action: () => {
-                          F(),
+                          V(),
                               (0, f.pQ)(
                                   A(
                                       {
@@ -131,7 +131,7 @@ function C(e) {
                                     guildId: N,
                                     channelId: C,
                                     profileType: I.y0.BITE_SIZE,
-                                    onOpenProfile: x ? void 0 : F
+                                    onOpenProfile: x ? void 0 : V
                                 }),
                                 (0, r.jsx)(b.Z, {
                                     location: 'BotUserProfilePopout',
@@ -146,8 +146,8 @@ function C(e) {
                             currentUser: n,
                             displayProfile: U,
                             guild: G,
-                            isHovering: V,
-                            onOpenProfile: x ? void 0 : F,
+                            isHovering: F,
+                            onOpenProfile: x ? void 0 : V,
                             channelId: C,
                             onClose: D
                         }),

@@ -356,10 +356,10 @@ function G(e) {
           };
 }
 let B = () => h.E.NONE;
-function V(e) {
+function F(e) {
     B = e;
 }
-let F = (0, o.trackMaker)({
+let V = (0, o.trackMaker)({
     analyticEventConfigs: j,
     dispatcher: a.Z,
     TRACK_ACTION_NAME: 'TRACK'
@@ -423,7 +423,7 @@ function $(e, t) {
     let i = H(t);
     return (
         W(r, i, n.logEventProperties),
-        F(e, i, {
+        V(e, i, {
             flush: n.flush,
             fingerprint: n.fingerprint
         })
@@ -443,7 +443,7 @@ function en() {
 }
 let er = y(E({}, o), {
     getCampaignParams: o.getCampaignParams,
-    setSystemAccessibilityFeatures: V,
+    setSystemAccessibilityFeatures: F,
     expandEventProperties: H,
     track: $
 });

@@ -123,7 +123,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                       })
               });
     }),
-    V = i.memo(function (e) {
+    F = i.memo(function (e) {
         let { user: t } = e;
         if (null == t || !t.bot) return null;
         let n = t.isClyde() ? R.Hb.AI : R.Hb.BOT;
@@ -133,11 +133,11 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             verified: t.isVerifiedBot()
         });
     }),
-    F = i.memo(function (e) {
+    V = i.memo(function (e) {
         let { user: t, isOwner: n, lostPermissionTooltipText: i, ownerTooltipText: o, premiumSince: a, onClickPremiumGuildIcon: s } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(V, { user: t }),
+                (0, r.jsx)(F, { user: t }),
                 (0, r.jsx)(G, {
                     isOwner: n,
                     lostPermissionTooltipText: i,
@@ -246,7 +246,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     }),
     Y = i.memo(function (e) {
         var t;
-        let { selected: n = !1, colorString: o, colorStrings: s, colorRoleName: c, isOwner: d, ownerTooltipText: _, lostPermissionTooltipText: p, isTyping: m = !1, nick: E, user: b, currentUser: T, activities: N, applicationStream: R, status: P, shouldAnimateStatus: w = !1, isMobile: L, premiumSince: M, channel: j, guildId: G, className: B, nameplate: V, hideClanTag: Y = !1, hideSubtext: K = !1, onMouseDown: z, onKeyDown: q, onClick: Q, onContextMenu: X, onClickPremiumGuildIcon: J, onFocus: $, 'aria-controls': ee, 'aria-expanded': et, 'aria-posinset': en, 'aria-setsize': er, id: ei, tabIndex: eo, itemProps: ea } = e,
+        let { selected: n = !1, colorString: o, colorStrings: s, colorRoleName: c, isOwner: d, ownerTooltipText: _, lostPermissionTooltipText: p, isTyping: m = !1, nick: E, user: b, currentUser: T, activities: N, applicationStream: R, status: P, shouldAnimateStatus: w = !1, isMobile: L, premiumSince: M, channel: j, guildId: G, className: B, nameplate: F, hideClanTag: Y = !1, hideSubtext: K = !1, onMouseDown: z, onKeyDown: q, onClick: Q, onContextMenu: X, onClickPremiumGuildIcon: J, onFocus: $, 'aria-controls': ee, 'aria-expanded': et, 'aria-posinset': en, 'aria-setsize': er, id: ei, tabIndex: eo, itemProps: ea } = e,
             es = null == b ? void 0 : b.id,
             el = A.ZP.useName(b),
             ec = (null == (t = S.default.getCurrentUser()) ? void 0 : t.id) === es,
@@ -381,7 +381,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       typingRef: e_,
                                       currentUser: T
                                   }),
-                                  nameplate: V,
+                                  nameplate: F,
                                   subText: (0, r.jsx)(W, {
                                       hideSubtext: K,
                                       activities: N,
@@ -393,7 +393,7 @@ let j = (0, N.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       isHovering: ed,
                                       quest: eS
                                   }),
-                                  decorators: (0, r.jsx)(F, {
+                                  decorators: (0, r.jsx)(V, {
                                       user: b,
                                       isOwner: d,
                                       lostPermissionTooltipText: p,

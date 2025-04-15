@@ -114,8 +114,8 @@ let L = '1001',
     U = !0,
     G = {},
     B = !1,
-    V = !1,
-    F = [O.kg4.PUSH_TO_TALK, O.kg4.TOGGLE_OVERLAY_INPUT_LOCK, O.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
+    F = !1,
+    V = [O.kg4.PUSH_TO_TALK, O.kg4.TOGGLE_OVERLAY_INPUT_LOCK, O.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
 function Z(e) {
     switch (e) {
         case w.id:
@@ -132,11 +132,11 @@ function H(e, t) {
 }
 function W() {
     let e = x();
-    null == l().find(k, (t) => e.action === t.action && t.enabled && t.shortcut.length > 0) && U && !V && (J(e), (V = !0));
+    null == l().find(k, (t) => e.action === t.action && t.enabled && t.shortcut.length > 0) && U && !F && (J(e), (F = !0));
 }
 function Y() {
     let e = x();
-    V && (X(e.id), (V = !1));
+    F && (X(e.id), (F = !1));
 }
 function K() {
     let { showKeybindIndicators: e } = p.Z.getCurrentConfig({ location: 'KeybindsStore' });
@@ -250,7 +250,7 @@ function eo(e) {
     (G = t),
         (M = {}),
         (j = 0),
-        Object.values(k).filter((e) => F.includes(e.action) && e.managed).length !== F.length && ec(),
+        Object.values(k).filter((e) => V.includes(e.action) && e.managed).length !== V.length && ec(),
         l().forEach(k, (e) => {
             j = Math.max(parseInt(e.id, 10), j) + 1;
             try {

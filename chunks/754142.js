@@ -79,8 +79,8 @@ function D(e, t) {
         U = 'mediaContext' in t ? t.mediaContext : void 0,
         G = 'underlyingError' in t ? t.underlyingError : void 0,
         B = 'errorMessage' in t ? t.errorMessage : void 0,
-        V = 'mediaSessionId' in t ? t.mediaSessionId : void 0,
-        F = 'rtcConnectionId' in t ? t.rtcConnectionId : void 0,
+        F = 'mediaSessionId' in t ? t.mediaSessionId : void 0,
+        V = 'rtcConnectionId' in t ? t.rtcConnectionId : void 0,
         Z = 'videoCodec' in t ? t.videoCodec : void 0,
         H = 'videoEncoder' in t ? t.videoEncoder : void 0,
         W = 'videoDecoder' in t ? t.videoDecoder : void 0,
@@ -102,7 +102,7 @@ function D(e, t) {
         ed = null != (r = null == $ ? void 0 : $.getMediaEngineConnectionId()) ? r : null;
     (L = null != j && null != X ? (es ? (null == $ || null == (c = $.getOutboundStats()) ? void 0 : c.find((e) => e.quality === I.y7)) : null == $ ? void 0 : $.getInboundStats(X.ownerId)) : es ? (null != (D = i().maxBy(null != (h = null == $ ? void 0 : $.getOutboundStats()) ? h : [], (e) => e.num_frames)) ? D : null) : null != ec ? (null == $ ? void 0 : $.getInboundStats(ec)) : null),
         (0, g.q)().then((t) => {
-            var n, r, i, s, l, c, u, d, h, m, g, v, P, D, j, Q, ee, ef, e_, ep, eh, em, eg, eE, eb, ey, ev, eO, eI, eS, eT, eN, eA, eC, eR, eP, ew, eD, eL, ex, eM, ek, ej, eU, eG, eB, eV, eF, eZ;
+            var n, r, i, s, l, c, u, d, h, m, g, v, P, D, j, Q, ee, ef, e_, ep, eh, em, eg, eE, eb, ey, ev, eO, eI, eS, eT, eN, eA, eC, eR, eP, ew, eD, eL, ex, eM, ek, ej, eU, eG, eB, eF, eV, eZ;
             let eH = {
                 error_name: e.valueOf(),
                 error_code: x.errorCode,
@@ -113,8 +113,8 @@ function D(e, t) {
                 guild_id: null != (D = null == k ? void 0 : k.guild_id) ? D : null,
                 channel_id: null != M ? M : null,
                 channel_type: null != (j = null == k ? void 0 : k.type) ? j : null,
-                rtc_connection_id: null != F ? F : null,
-                media_session_id: null != (Q = null != V ? V : _.Z.getMediaSessionId()) ? Q : null,
+                rtc_connection_id: null != V ? V : null,
+                media_session_id: null != (Q = null != F ? F : _.Z.getMediaSessionId()) ? Q : null,
                 parent_media_session_id: null != (ee = null == J ? void 0 : J.parentMediaSessionId) ? ee : null,
                 context: null != U ? U : null,
                 voice_backend_version: null != (ef = null == (n = _.Z.getRTCConnection()) ? void 0 : n.getVoiceVersion()) ? ef : null,
@@ -157,8 +157,8 @@ function D(e, t) {
                 gpu_device_device_id: null != (eU = null == t ? void 0 : t.gpu_device_device_id) ? eU : null,
                 gpu_device_sub_sys_id: null != (eG = null == t ? void 0 : t.gpu_device_sub_sys_id) ? eG : null,
                 gpu_device_revision: null != (eB = null == t ? void 0 : t.gpu_device_revision) ? eB : null,
-                gpu_driver_version: null != (eV = null == t ? void 0 : t.gpu_driver_version) ? eV : null,
-                cpu_usage: null != (eF = y.Z.getCurrentCPUUsagePercent()) ? eF : null,
+                gpu_driver_version: null != (eF = null == t ? void 0 : t.gpu_driver_version) ? eF : null,
+                cpu_usage: null != (eV = y.Z.getCurrentCPUUsagePercent()) ? eV : null,
                 memory_usage: null != (eZ = y.Z.getCurrentMemoryUsageKB()) ? eZ : null,
                 outbound_bitrate_estimate: A(ed),
                 inbound_bitrate_estimate: C(ed),

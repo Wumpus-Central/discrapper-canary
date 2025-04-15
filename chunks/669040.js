@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(883661),
     G = n(880949),
     B = n(784222),
-    V = n(172800),
-    F = n(149203),
+    F = n(172800),
+    V = n(149203),
     Z = n(981631),
     H = n(957825),
     W = n(474936),
@@ -92,7 +92,7 @@ let z = 0,
                                 collapsed: !i,
                                 guild_id: n.id
                             }),
-                        e === F.UX.SOUNDMOJI && L.default.track(Z.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
+                        e === V.UX.SOUNDMOJI && L.default.track(Z.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
                         g(r);
                 },
                 [er, t, g]
@@ -116,7 +116,7 @@ let z = 0,
                                 null == (e = z.current) || e.scrollToSectionTop(t.sectionIndex, { animate: !0 });
                             };
                         return (0, r.jsx)(
-                            V.Z,
+                            F.Z,
                             {
                                 emojiDescriptors: n,
                                 emojiSize: s,
@@ -158,9 +158,9 @@ let z = 0,
                         let n = m[e];
                         if (null == n) return;
                         let { guild: i, categoryId: o, type: s, sectionId: l } = n;
-                        if (s === F.En.SEARCH_RESULTS) return;
+                        if (s === V.En.SEARCH_RESULTS) return;
                         let c =
-                                s === F.En.GUILD
+                                s === V.En.GUILD
                                     ? null != i
                                         ? (0, r.jsx)(G.Z, {
                                               guild: i,
@@ -183,7 +183,7 @@ let z = 0,
                             p = f && !d,
                             h = f && d,
                             g =
-                                s === F.En.SOUNDMOJI
+                                s === V.En.SOUNDMOJI
                                     ? (0, r.jsx)(_.P3F, {
                                           className: K.soundmojiViewMore,
                                           onClick: () => {
@@ -248,12 +248,12 @@ let z = 0,
             renderSectionHeader: ep,
             renderSectionFooter: eg,
             sectionMarginBottom: eb,
-            sectionHeaderHeight: i.useCallback((e) => (m[e].type === F.En.SEARCH_RESULTS ? 0 : ee), [m]),
+            sectionHeaderHeight: i.useCallback((e) => (m[e].type === V.En.SEARCH_RESULTS ? 0 : ee), [m]),
             sectionFooterHeight: eE
         };
     },
     el = i.memo(function (e) {
-        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: o, emojiSize: a, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: O, getEmojiItemProps: I, getEmojiRowProps: S, rowCount: R, isUsingKeyboardNavigation: k, channelGuildId: j, channelId: U, messageId: G, isBurstReaction: V, listHeaderClassName: F } = e,
+        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: o, emojiSize: a, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: O, getEmojiItemProps: I, getEmojiRowProps: S, rowCount: R, isUsingKeyboardNavigation: k, channelGuildId: j, channelId: U, messageId: G, isBurstReaction: F, listHeaderClassName: V } = e,
             H = i.useRef(!1),
             q = E.kJ.useStore((e) => e.activeCategoryIndex),
             Q = (0, b.Iu)((e) => e.searchQuery),
@@ -304,8 +304,8 @@ let z = 0,
                 channelGuildId: j,
                 channelId: U,
                 messageId: G,
-                isBurstReaction: V,
-                listHeaderClassName: F,
+                isBurstReaction: F,
+                listHeaderClassName: V,
                 activeSectionIndex: en,
                 upsellGlowOpacity: el,
                 emojiListRef: o

@@ -81,8 +81,8 @@ function x(e, t) {
 }
 function M(e) {
     var t;
-    let { onClose: n, onComplete: o, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: V, returnRef: F } = e,
-        { analyticsLocations: Z } = (0, d.ZP)([...V, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
+    let { onClose: n, onComplete: o, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: F, returnRef: V } = e,
+        { analyticsLocations: Z } = (0, d.ZP)([...F, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [W, Y] = i.useState(null),
         [K, z] = i.useState(!1),
@@ -184,7 +184,7 @@ function M(e) {
                             analyticsLocations: Z,
                             transitionState: L,
                             renderHeader: en,
-                            returnRef: F,
+                            returnRef: V,
                             onStepChange: w,
                             skipConfirm: $,
                             hideShadow: !0

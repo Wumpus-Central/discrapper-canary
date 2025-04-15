@@ -82,7 +82,7 @@ function G(e) {
 function B(e) {
     return (0, _.r8)(e) ? S : (0, _.bw)(e) ? T : e;
 }
-function V() {
+function F() {
     let e = {},
         t = d.Z.getFavoriteChannels();
     for (let n in t) {
@@ -97,8 +97,8 @@ function V() {
     }
     return e;
 }
-function F(e) {
-    if (e === O.I_8) return V();
+function V(e) {
+    if (e === O.I_8) return F();
     let t = {},
         n = m.Z.getMutableGuildChannelsForGuild(e);
     for (let e in n)
@@ -110,7 +110,7 @@ function F(e) {
 }
 function Z(e) {
     let { id: t } = e,
-        n = F(t);
+        n = V(t);
     return (
         o().forEach(n, (n) => {
             let r = n.channel;

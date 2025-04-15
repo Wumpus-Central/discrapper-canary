@@ -506,13 +506,13 @@ function B(e) {
     }
     for (let t of e.removed) G.destroy(t), L.verbose('handleRunningGamesChange removed', t);
 }
-function V(e) {
+function F(e) {
     if (e.pid === v.DEV_PID) return;
     let t = G.getByPid(e.pid);
     if ((L.verbose('OVERLAY_SET_INPUT_LOCKED', t), null == t)) return void L.error('OVERLAY_SET_INPUT_LOCKED: Unable to find game', e, G.debug);
     t.setLocked(e.locked);
 }
-function F(e) {
+function V(e) {
     var t;
     if ((L.verbose('OVERLAY_NOTIFICATION_EVENT', e), null == e.gameName && null == e.gameId)) return;
     let n = G.getByName(null != (t = e.gameName) ? t : e.gameId);
@@ -647,8 +647,8 @@ class et extends c.Z {
                       }
                     : {
                           OVERLAY_FOCUSED: H,
-                          OVERLAY_NOTIFICATION_EVENT: F,
-                          OVERLAY_SET_INPUT_LOCKED: V,
+                          OVERLAY_NOTIFICATION_EVENT: V,
+                          OVERLAY_SET_INPUT_LOCKED: F,
                           OVERLAY_WIDGET_CHANGED: Z,
                           OVERLAY_MESSAGE_EVENT_ACTION: Y,
                           RUNNING_GAMES_CHANGE: B,

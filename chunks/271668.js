@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -39,11 +39,11 @@ let D = 512,
     B = l().debounce(() => {
         (0, d.yw)(C.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
-    V = i.forwardRef(function (e, t) {
+    F = i.forwardRef(function (e, t) {
         let { channel: n, canOnlyUseTextCommands: o } = e,
             s = i.useRef(!1),
             l = i.useRef(0),
-            [V, Z] = i.useState(0),
+            [F, Z] = i.useState(0),
             H = i.useRef(null),
             [W, Y] = i.useState(!1),
             K = m.Xn.useStore((e) => e.activeCategoryIndex);
@@ -104,8 +104,8 @@ let D = 512,
         let eo = i.useCallback((e) => (e !== q.length - 1 || X ? M : 0), [q.length, X]),
             ea = Q.map((e) => e.data.length);
         i.useEffect(() => {
-            null != H.current && W && null != V && H.current.scrollRowIntoView(V);
-        }, [W, V]),
+            null != H.current && W && null != F && H.current.scrollRowIntoView(F);
+        }, [W, F]),
             i.useLayoutEffect(() => {
                 if (null != $) {
                     var e;
@@ -137,13 +137,13 @@ let D = 512,
             t,
             () => ({
                 onTabOrEnter: (e) => {
-                    if (null == V) return !e && (Z(0), !0);
-                    if (null == V) return !1;
+                    if (null == F) return !e && (Z(0), !0);
+                    if (null == F) return !1;
                     let t = 0,
                         n = 0;
                     for (let e of Q)
-                        if (((t = n), V < (n += e.data.length))) {
-                            let n = e.data[V - t],
+                        if (((t = n), F < (n += e.data.length))) {
+                            let n = e.data[F - t],
                                 r = z.find((e) => e.id === n.applicationId);
                             el(n, r, (0, I.tI)(e.section));
                             break;
@@ -154,11 +154,11 @@ let D = 512,
                     if (0 === J.length) return !0;
                     let t = X ? L : 0,
                         n = J.length + t,
-                        r = null == V ? 0 : V + e;
+                        r = null == F ? 0 : F + e;
                     return r >= n ? (r = n - 1) : r < 0 && (r = 0), Z(r), Y(!0), !0;
                 }
             }),
-            [J.length, Q, X, z, el, V]
+            [J.length, Q, X, z, el, F]
         );
         let ec = i.useCallback(
                 (e) => {
@@ -225,7 +225,7 @@ let D = 512,
                             command: a,
                             channel: n,
                             className: P.itemWrapper,
-                            selected: V === e,
+                            selected: F === e,
                             showImage: o.section.id !== a.applicationId,
                             section: l,
                             onClick: () => el(a, l, (0, I.tI)(o.section)),
@@ -236,11 +236,11 @@ let D = 512,
                         s
                     );
                 },
-                [n, Q, el, z, V]
+                [n, Q, el, z, F]
             ),
             ef = (0, h.Dt)();
         return (
-            (0, _.KR)(ef, !0, (0, f.DJ)(V)),
+            (0, _.KR)(ef, !0, (0, f.DJ)(F)),
             i.useEffect(
                 () => () => {
                     (0, _.sJ)();
@@ -251,7 +251,7 @@ let D = 512,
                 id: ef,
                 className: P.outerWrapper,
                 innerClassName: P.wrapper,
-                onMouseDown: F,
+                onMouseDown: V,
                 children: [
                     (0, r.jsx)(S.Z, {
                         className: P.rail,
@@ -282,6 +282,6 @@ let D = 512,
             })
         );
     });
-function F(e) {
+function V(e) {
     e.preventDefault();
 }

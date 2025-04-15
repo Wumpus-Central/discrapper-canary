@@ -161,7 +161,7 @@ function B(e) {
     }),
         n && b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, { viewer_clips_enabled: t });
 }
-function V(e) {
+function F(e) {
     var t;
     let n, r, i;
     if (null != e) {
@@ -184,7 +184,7 @@ function V(e) {
         application_name: null == o ? void 0 : o.name
     };
 }
-function F(e, t) {
+function V(e, t) {
     var n, r, i, o, a, l, c, u, d, f;
     let p = new Map();
     for (let e in t.framesEncodedByEncoder) {
@@ -229,7 +229,7 @@ async function Z(e) {
         s = m.Z.getMediaEngine(),
         l = JSON.stringify(n),
         u = null != e ? (0, c.my)(e).ownerId : void 0,
-        d = V(e);
+        d = F(e);
     null != e &&
         o.Z.dispatch({
             type: 'CLIPS_SAVE_CLIP_PLACEHOLDER',
@@ -238,7 +238,7 @@ async function Z(e) {
     try {
         var f;
         let { duration: e, clipStats: t } = await (null != u ? s.saveClipForUser(u, i, l) : s.saveClip(i, l)),
-            r = F(d, t);
+            r = V(d, t);
         (r.clip_save_time_ms = t.clipSaveTimeMs), (r.clip_size_bytes = t.clipSizeBytes), null != t.viewerDecodeFps && ((r.decode_fps_during_clip = t.viewerDecodeFps), (r.encode_fps_during_clip = t.viewerEncodeFps), (r.target_fps = null)), b.default.track(C.rMx.CLIP_SAVED, r);
         let o = await (0, N.R)(a.Z.clips.getClipProtocolURLFromPath(i), 0);
         return (n.thumbnail = o), (n.length = e), A.jF.info('Clip save succeeded with '.concat(e, 'ms and thumbnail ').concat(null != (f = null == o ? void 0 : o.length) ? f : 0, ' bytes thumbnail.')), await s.updateClipMetadata(i, JSON.stringify(n)), D(P({}, n), { filepath: i });
@@ -253,7 +253,7 @@ async function Z(e) {
         )
             throw (b.default.track(C.rMx.CLIP_SAVE_FAILURE, d), i);
         let t = i,
-            r = F(d, t);
+            r = V(d, t);
         throw ((r.error_at = t.errorAt), (r.error_message = t.errorMessage), b.default.track(C.rMx.CLIP_SAVE_FAILURE, r), t.errorMessage);
     }
 }

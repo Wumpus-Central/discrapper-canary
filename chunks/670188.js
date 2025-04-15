@@ -104,14 +104,14 @@ let O = (0, a.pxk)(a.EFr.SIZE_80),
             [k, j] = i.useState(!1),
             [U, G] = i.useState(!1),
             B = i.useRef(!1),
-            V = i.useRef(void 0),
             F = i.useRef(void 0),
+            V = i.useRef(void 0),
             Z = i.useRef(void 0),
             H = i.useRef(void 0),
             W = (0, u.Z)(),
             Y = (0, l.Z)(W),
             K = i.useCallback(() => {
-                clearTimeout(V.current), clearTimeout(F.current), clearTimeout(Z.current);
+                clearTimeout(F.current), clearTimeout(V.current), clearTimeout(Z.current);
             }, []);
         (0, s.zq)(K);
         let z = i.useCallback(
@@ -155,7 +155,7 @@ let O = (0, a.pxk)(a.EFr.SIZE_80),
                 K(),
                     (B.current = !0),
                     w &&
-                        (V.current = setTimeout(async () => {
+                        (F.current = setTimeout(async () => {
                             if (B.current)
                                 try {
                                     G(!0), await z();
@@ -163,7 +163,7 @@ let O = (0, a.pxk)(a.EFr.SIZE_80),
                                     G(!1);
                                 }
                         }, _.a6)),
-                    (F.current = setTimeout(() => {
+                    (V.current = setTimeout(() => {
                         (0, a.$sL)() || Y.current || (B.current && (null == H.current && (H.current = Date.now()), j(!0)));
                     }, _.JX));
             }, [K, w, z, Y]),

@@ -299,7 +299,7 @@ function U(e, t, n) {
             type: 'paragraph',
             content: o(l, !0, i)
         };
-    V(r, l, c, 0, []);
+    F(r, l, c, 0, []);
     let u = B(r);
     return a.set(e, u), u;
 }
@@ -343,7 +343,7 @@ function B(e) {
     }
     return t;
 }
-function V(e, t, n, r, o) {
+function F(e, t, n, r, o) {
     let { content: a, type: s, originalMatch: l } = n;
     switch ((i()(null != l, 'Slate: originalMatch must be set ' + JSON.stringify(n, void 0, 2)), s)) {
         case 'newline':
@@ -446,14 +446,14 @@ function V(e, t, n, r, o) {
         case 'link':
         case 'subtext': {
             r = Y(t, r);
-            let { before: n, after: i } = F(t, s, r, l);
+            let { before: n, after: i } = V(t, s, r, l);
             return (r = H(e, t, n, r, 'syntaxBefore')), o.push(s), (r = Z(e, t, null != a ? a : '', r, o)), o.pop(), (r = H(e, t, i, r, 'syntaxAfter')), Y(t, r);
         }
         default:
             throw Error('Slate: Unknown rule type: '.concat(s));
     }
 }
-function F(e, t, n, r) {
+function V(e, t, n, r) {
     if ('inlineCode' === t)
         return {
             before: r[1],
@@ -486,7 +486,7 @@ function Z(e, t, n, r, i) {
               }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
-                  r = V(e, t, n, r, i);
+                  r = F(e, t, n, r, i);
               })),
         Y(t, r)
     );

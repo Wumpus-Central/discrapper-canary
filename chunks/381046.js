@@ -90,8 +90,8 @@ var r = n(260674),
                 var G = b && f ? String(j).replace(/\./g, '%2E') : String(j),
                     B = l(A) ? ('function' == typeof o ? o(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
                 T.set(t, R);
-                var V = r();
-                V.set(h, T), u(D, e(U, B, o, a, s, c, d, f, 'comma' === o && I && l(A) ? null : m, g, E, b, y, v, O, I, S, V));
+                var F = r();
+                F.set(h, T), u(D, e(U, B, o, a, s, c, d, f, 'comma' === o && I && l(A) ? null : m, g, E, b, y, v, O, I, S, F));
             }
         }
         return D;

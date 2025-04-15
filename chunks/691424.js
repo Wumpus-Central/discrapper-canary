@@ -85,7 +85,7 @@ function B(e, t) {
         e
     );
 }
-function V(e) {
+function F(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
@@ -106,7 +106,7 @@ function V(e) {
         }
     };
 }
-function F(e) {
+function V(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, o) {
@@ -382,8 +382,8 @@ function Y(e) {
     return B(U({}, W), {
         link: (0, w.Z)(e),
         devLink: (0, P.Z)(e),
-        emoji: V(e),
-        customEmoji: F(e),
+        emoji: F(e),
+        customEmoji: V(e),
         channelMention: (0, C.Z)(e),
         commandMention: (0, R.ZP)(e),
         attachmentLink: (0, A.Z)(e),

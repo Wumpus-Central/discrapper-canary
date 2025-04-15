@@ -86,7 +86,7 @@ function G(e, t) {
     );
 }
 function B(e) {
-    let { user: t, currentUser: n, activity: i, application: k, voiceGuild: U, voiceChannel: B, className: V, onClose: F, appContext: Z } = e,
+    let { user: t, currentUser: n, activity: i, application: k, voiceGuild: U, voiceChannel: B, className: F, onClose: V, appContext: Z } = e,
         { analyticsLocations: H } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: W } = (0, v.z)(),
         Y = { [M.fullSize]: W === w.y0.FULL_SIZE },
@@ -114,7 +114,7 @@ function B(e) {
             activity: i,
             application: k,
             entry: K,
-            onClose: F
+            onClose: V
         }),
         ee = () => {
             let e = (0, s.Z)(i) ? 'crunchyroll' : 'default';
@@ -169,7 +169,7 @@ function B(e) {
                       variant: 'text-xs/normal',
                       text: x.NW.formatToPlainString(x.t['hq/Qzc'], { guildName: U.name }),
                       onClick: () => {
-                          (0, m.X)(U.id), z({ action: 'OPEN_VOICE_GUILD' }), null == F || F();
+                          (0, m.X)(U.id), z({ action: 'OPEN_VOICE_GUILD' }), null == V || V();
                       }
                   })
                 : (0, c.Z)(i)
@@ -266,7 +266,7 @@ function B(e) {
                       guild: U,
                       channel: B,
                       onAction: z,
-                      onClose: F
+                      onClose: V
                   }),
         el = () =>
             t.id === n.id
@@ -277,16 +277,16 @@ function B(e) {
                           activity: i,
                           user: t,
                           onAction: z,
-                          onClose: F
+                          onClose: V
                       })
                   });
     return (0, r.jsx)(f.Gt, {
         value: H,
         children: (0, r.jsxs)(S.Z, {
             ref: q,
-            className: o()(M.card, V),
+            className: o()(M.card, F),
             onAction: z,
-            onClose: F,
+            onClose: V,
             children: [
                 (0, r.jsx)(
                     T.Z,
@@ -296,7 +296,7 @@ function B(e) {
                             user: t,
                             activity: i,
                             entry: K,
-                            onClose: F,
+                            onClose: V,
                             appContext: Z
                         })
                     })

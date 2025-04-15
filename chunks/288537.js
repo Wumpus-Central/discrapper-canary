@@ -36,8 +36,8 @@ var r,
     U = 32,
     G = 42,
     B = 69,
-    V = 73,
-    F = 91,
+    F = 73,
+    V = 91,
     Z = 103,
     H = 113,
     W = 666,
@@ -227,9 +227,9 @@ function eE(e, t) {
     if (i.status === B)
         if (i.gzhead.extra) {
             for (a = i.pending; i.gzindex < (65535 & i.gzhead.extra.length) && (i.pending !== i.pending_buf_size || (i.gzhead.hcrc && i.pending > a && (e.adler = s(e.adler, i.pending_buf, i.pending - a, a)), ee(e), (a = i.pending), i.pending !== i.pending_buf_size)); ) en(i, 255 & i.gzhead.extra[i.gzindex]), i.gzindex++;
-            i.gzhead.hcrc && i.pending > a && (e.adler = s(e.adler, i.pending_buf, i.pending - a, a)), i.gzindex === i.gzhead.extra.length && ((i.gzindex = 0), (i.status = V));
-        } else i.status = V;
-    if (i.status === V)
+            i.gzhead.hcrc && i.pending > a && (e.adler = s(e.adler, i.pending_buf, i.pending - a, a)), i.gzindex === i.gzhead.extra.length && ((i.gzindex = 0), (i.status = F));
+        } else i.status = F;
+    if (i.status === F)
         if (i.gzhead.name) {
             a = i.pending;
             do {
@@ -239,9 +239,9 @@ function eE(e, t) {
                 }
                 (l = i.gzindex < i.gzhead.name.length ? 255 & i.gzhead.name.charCodeAt(i.gzindex++) : 0), en(i, l);
             } while (0 !== l);
-            i.gzhead.hcrc && i.pending > a && (e.adler = s(e.adler, i.pending_buf, i.pending - a, a)), 0 === l && ((i.gzindex = 0), (i.status = F));
-        } else i.status = F;
-    if (i.status === F)
+            i.gzhead.hcrc && i.pending > a && (e.adler = s(e.adler, i.pending_buf, i.pending - a, a)), 0 === l && ((i.gzindex = 0), (i.status = V));
+        } else i.status = V;
+    if (i.status === V)
         if (i.gzhead.comment) {
             a = i.pending;
             do {
@@ -266,7 +266,7 @@ function eE(e, t) {
 }
 function eb(e) {
     var t;
-    return e && e.state ? ((t = e.state.status) !== G && t !== B && t !== V && t !== F && t !== Z && t !== H && t !== W ? X(e, m) : ((e.state = null), t === H ? X(e, g) : p)) : m;
+    return e && e.state ? ((t = e.state.status) !== G && t !== B && t !== F && t !== V && t !== Z && t !== H && t !== W ? X(e, m) : ((e.state = null), t === H ? X(e, g) : p)) : m;
 }
 function ey(e, t) {
     var n,

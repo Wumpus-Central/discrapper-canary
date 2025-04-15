@@ -37,7 +37,7 @@ var r = n(200651),
     U = n(611480),
     G = n(388032),
     B = n(460594);
-function V(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function V(e, t, n) {
         e
     );
 }
-function F(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function F(e) {
                 })
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -116,7 +116,7 @@ let K = L.Om + k.Su.MEDIUM,
         return (0, r.jsx)(
             p.zxk,
             H(
-                F(
+                V(
                     {
                         role: 'tab',
                         autoFocus: o,
@@ -198,7 +198,7 @@ let K = L.Om + k.Su.MEDIUM,
     };
 function Q(e) {
     var t, n, o, s;
-    let { positionTargetRef: l, hideGifFavorites: h, includeCreateEmojiButton: R, onSelectGIF: V, onSelectEmoji: F, onSelectSticker: Z, onSelectSound: H, channel: W, type: Y, position: Q, align: X, positionLayerClassName: J, closeOnModalOuterClick: $ = !1, parentModalKey: ee } = e,
+    let { positionTargetRef: l, hideGifFavorites: h, includeCreateEmojiButton: R, onSelectGIF: F, onSelectEmoji: V, onSelectSticker: Z, onSelectSound: H, channel: W, type: Y, position: Q, align: X, positionLayerClassName: J, closeOnModalOuterClick: $ = !1, parentModalKey: ee } = e,
         et = i.useRef(null),
         en = i.useRef(!1),
         er = i.useRef(null),
@@ -281,7 +281,7 @@ function Q(e) {
                         (en.current = !0));
             }
         });
-    let ev = (null == (t = Y.gifs) ? void 0 : t.allowSending) && !c.tq && null != V,
+    let ev = (null == (t = Y.gifs) ? void 0 : t.allowSending) && !c.tq && null != F,
         eO = (null == (n = Y.stickers) ? void 0 : n.allowSending) && null != Z,
         eI = i.useCallback((e, t) => (null == H ? void 0 : H(e, 'emoji_picker', t)), [H]),
         eS = i.useCallback((e, t) => (null == H ? void 0 : H(e, 'soundboard_picker', t)), [H]),
@@ -395,7 +395,7 @@ function Q(e) {
                                               : null,
                                           es === L.X1.GIF && ev
                                               ? (0, r.jsx)(O.Z, {
-                                                    onSelectGIF: V,
+                                                    onSelectGIF: F,
                                                     hideFavorites: h,
                                                     persistSearch: !0
                                                 })
@@ -411,7 +411,7 @@ function Q(e) {
                                                     emojiSize: null != eo && eo < K ? k.Su.MEDIUM : k.Su.LARGE,
                                                     pickerIntention: j.Hz.CHAT,
                                                     closePopout: em,
-                                                    onSelectEmoji: F,
+                                                    onSelectEmoji: V,
                                                     onSelectSoundmoji: eI,
                                                     ref: (e) => {
                                                         er.current = e;

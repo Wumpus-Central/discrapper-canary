@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(200651),
     i = n(192379),
     o = n(200100),
@@ -66,9 +66,9 @@ let j = '4px',
 function B(e, t) {
     return null != e && null != t && (0, m.p9)(t, v.Z, b.Z, y.Z, h.Z)[0];
 }
-function V(e) {
+function F(e) {
     var t, n, h, m, b;
-    let { quest: y, memberListItemRef: v, applicationStream: N, position: M, closePopout: k, updatePosition: V, impressionRef: F } = e,
+    let { quest: y, memberListItemRef: v, applicationStream: N, position: M, closePopout: k, updatePosition: F, impressionRef: V } = e,
         Z = (0, s.e7)([E.Z], () => {
             var e;
             return null != (e = E.Z.getChannel(null == N ? void 0 : N.channelId)) ? e : null;
@@ -101,7 +101,7 @@ function V(e) {
             let e = er.current,
                 t = v.current;
             if (null == e || null == t) return;
-            let n = new MutationObserver(() => V());
+            let n = new MutationObserver(() => F());
             return (
                 n.observe(e, {
                     childList: !0,
@@ -111,7 +111,7 @@ function V(e) {
                     n.disconnect();
                 }
             );
-        }, [v, er, V]);
+        }, [v, er, F]);
     let ei = (0, c.q_F)({
             from: { height: 0 },
             height: null != $ ? $ : 0,
@@ -207,7 +207,7 @@ function V(e) {
                       };
     return (0, r.jsx)(o.animated.div, {
         ref: (e) => {
-            F.current = e;
+            V.current = e;
         },
         'aria-expanded': ee,
         className: x.wrapper,
@@ -305,13 +305,13 @@ function V(e) {
         })
     });
 }
-function F(e) {
+function V(e) {
     return null == e.quest
         ? null
         : (0, r.jsx)(N.A, {
               questOrQuests: e.quest,
               questContent: S.jn.MEMBERS_LIST,
               trackGuildAndChannelMetadata: !0,
-              children: (t) => (0, r.jsx)(V, k({ impressionRef: t }, e))
+              children: (t) => (0, r.jsx)(F, k({ impressionRef: t }, e))
           });
 }

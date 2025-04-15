@@ -103,13 +103,13 @@ function B(e) {
         i = (N = 0 === I.size ? n : n.filter(k(I))).find((e) => x(e));
     r = null == i ? null : i;
 }
-function V(e) {
+function F(e) {
     var t;
     let { guildId: n } = e;
     if (null == O || n !== (null == (t = _.Z.getChannel(O)) ? void 0 : t.guild_id)) return !1;
     B({ refreshThreadIds: !0 });
 }
-function F(e) {
+function V(e) {
     let { channel: t } = e;
     if (null == t.parent_id || t.parent_id !== O) return !1;
     let n = (0, E.yv)(t.id),
@@ -179,9 +179,9 @@ let q = new z(c.Z, {
     GUILD_CREATE: U,
     CHANNEL_SELECT: U,
     CHANNEL_DELETE: W,
-    THREAD_LIST_SYNC: V,
+    THREAD_LIST_SYNC: F,
     THREAD_CREATE: Z,
-    THREAD_UPDATE: F,
+    THREAD_UPDATE: V,
     THREAD_DELETE: H,
     RESORT_THREADS: Y,
     CHANNEL_ACK: K

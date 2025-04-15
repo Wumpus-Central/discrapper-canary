@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(336383),
     G = n(194811),
     B = n(373826),
-    V = n(315324),
-    F = n(788858),
+    F = n(315324),
+    V = n(788858),
     Z = n(384298),
     H = n(386019),
     W = n(228168),
@@ -182,7 +182,7 @@ function J(e) {
                                 color: 'text-normal',
                                 className: z.voiceChannelHeading,
                                 children: [
-                                    (0, r.jsx)(F.Z, {
+                                    (0, r.jsx)(V.Z, {
                                         channel: eu,
                                         size: 'xxs',
                                         color: l.TVs.colors.TEXT_NORMAL,
@@ -206,7 +206,7 @@ function J(e) {
                         users: ed,
                         guildId: ec.id,
                         channelId: eu.id,
-                        maxUsers: V.W,
+                        maxUsers: F.W,
                         size: l.EFr.SIZE_16,
                         onClick: (e) => {
                             null == e || e.stopPropagation(), null == ep || ep({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
@@ -222,7 +222,7 @@ function J(e) {
         eN = () =>
             en === W.y0.FULL_SIZE
                 ? null
-                : (0, r.jsx)(V.Z, {
+                : (0, r.jsx)(F.Z, {
                       user: t,
                       guild: ec,
                       channel: eu,

@@ -85,10 +85,10 @@ let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    V = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    F = k + M + 2 * U,
+    F = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+    V = k + M + 2 * U,
     Z = x + M,
-    H = Z + (B + 2 * V),
+    H = Z + (B + 2 * F),
     W = k + j + 2 * U,
     Y = 7;
 function K(e) {
@@ -190,7 +190,7 @@ let z = (e) => {
         D = i.useCallback(
             (e, t) => {
                 let n = O[t];
-                if (n.type === T.En.RECENT) return F;
+                if (n.type === T.En.RECENT) return V;
                 if (n.type === T.En.GUILD) {
                     let e = O[t + 1];
                     return null != e && e.type !== T.En.GUILD ? H : Z;
@@ -212,7 +212,7 @@ let z = (e) => {
             O.forEach((i) => {
                 i.type === T.En.GUILD ? ((t += 1), (n += 1)) : i.type === T.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
-            let i = F + t * Z + H;
+            let i = V + t * Z + H;
             return {
                 nonUnicodeCategoryCount: t,
                 firstUnicodeCategoryIndex: t,
@@ -247,7 +247,7 @@ let z = (e) => {
                 if (n.type === T.En.RECENT) return t ? 0 : j;
                 if (n.type === T.En.GUILD) {
                     let n = O[e + 1];
-                    return null != n && n.type !== T.En.GUILD ? (t ? B + -2 * V + M + r : M) : t ? r : M;
+                    return null != n && n.type !== T.En.GUILD ? (t ? B + -2 * F + M + r : M) : t ? r : M;
                 }
                 return t ? M + r : 2 * M;
             },

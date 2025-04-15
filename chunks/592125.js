@@ -93,8 +93,8 @@ let C = new h.Z('ChannelStore'),
     U = {},
     G = new Set(),
     B = {},
-    V = 0,
-    F = {},
+    F = 0,
+    V = {},
     Z = 0,
     H = 0,
     W = !1;
@@ -112,7 +112,7 @@ class Y {
         if (0 === t.length) return null;
         let n = c.Z.database();
         if (null == n || !t.some((e) => !G.has(e))) return null;
-        let r = V;
+        let r = F;
         return (0, u.gs)('loadChannels', async () => {
             let e = t
                     .map((e) => {
@@ -139,7 +139,7 @@ class Y {
                 i = e.map((e) => e.promise);
             try {
                 let t = await Promise.all(i);
-                if (V !== r) return C.fileOnly('lastResetTime has changed, skipping loads for ' + e.map((e) => e.guildId)), null;
+                if (F !== r) return C.fileOnly('lastResetTime has changed, skipping loads for ' + e.map((e) => e.guildId)), null;
                 let n = t.filter((e) => !G.has(e.guildId));
                 await l.Z.dispatch({
                     type: 'LOAD_CHANNELS',
@@ -185,10 +185,10 @@ function Q(e) {
 }
 function X(e) {
     var t, n, r, i;
-    return z(e, 1, 'getChannel'), null != (i = null != (r = null != (n = null != (t = P[e]) ? t : D[e]) ? n : x[e]) ? r : U[e]) ? i : F[e];
+    return z(e, 1, 'getChannel'), null != (i = null != (r = null != (n = null != (t = P[e]) ? t : D[e]) ? n : x[e]) ? r : U[e]) ? i : V[e];
 }
 function J(e) {
-    e.isPrivate() ? (delete F[e.id], $(e)) : e.isThread() ? ee(e) : g.oj.has(e.type) && en(e);
+    e.isPrivate() ? (delete V[e.id], $(e)) : e.isThread() ? ee(e) : g.oj.has(e.type) && en(e);
 }
 function $(e) {
     if (null != e.recipients.find((e) => (0, p.Z)(e))) return !1;
@@ -223,7 +223,7 @@ function er(e) {
 }
 function ei(e) {
     let t = w;
-    for (let n of ((M = {}), (P = {}), (w = {}), (x = {}), (j = {}), (F = {}), (B = {}), (V = Date.now()), (L = e.initialPrivateChannels), e.initialPrivateChannels.forEach($), e.guilds)) 'partial' === n.dataMode && (o().forEach(t[n.id], et), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eL(n.id)))), eo(n);
+    for (let n of ((M = {}), (P = {}), (w = {}), (x = {}), (j = {}), (V = {}), (B = {}), (F = Date.now()), (L = e.initialPrivateChannels), e.initialPrivateChannels.forEach($), e.guilds)) 'partial' === n.dataMode && (o().forEach(t[n.id], et), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eL(n.id)))), eo(n);
     eP();
 }
 function eo(e) {
@@ -260,7 +260,7 @@ function el(e) {
     return !1;
 }
 function ec() {
-    C.fileOnly('initializeClear()'), (M = {}), (P = {}), (w = {}), (j = {}), (D = {}), (F = {}), (x = {}), (G = new Set()), (B = {}), (V = Date.now());
+    C.fileOnly('initializeClear()'), (M = {}), (P = {}), (w = {}), (j = {}), (D = {}), (V = {}), (x = {}), (G = new Set()), (B = {}), (F = Date.now());
 }
 function eu(e) {
     var t;
@@ -367,8 +367,8 @@ function eC(e) {
             r.forEach((e) => {
                 let t = (0, g.q_)(e),
                     n = null != X(e.id),
-                    r = null != F[e.id];
-                t.isPrivate() && (!n || r) ? (F[t.id] = t) : n || J(t);
+                    r = null != V[e.id];
+                t.isPrivate() && (!n || r) ? (V[t.id] = t) : n || J(t);
             });
 }
 function eR(e) {

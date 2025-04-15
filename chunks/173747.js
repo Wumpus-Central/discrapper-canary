@@ -111,7 +111,7 @@ function B(e) {
     let { buildId: t } = e;
     null == I[t] && delete I[t];
 }
-function V(e) {
+function F(e) {
     let { branches: t } = e,
         n = {};
     for (let e in _.Z.libraryApplications) {
@@ -128,7 +128,7 @@ function V(e) {
     }
     P(A);
 }
-function F() {
+function V() {
     P(C);
 }
 function Z() {
@@ -177,8 +177,8 @@ let Y = new W(l.Z, {
     APPLICATION_BUILD_SIZE_FETCH_START: U,
     APPLICATION_BUILD_SIZE_FETCH_SUCCESS: G,
     APPLICATION_BUILD_SIZE_FETCH_FAIL: B,
-    APPLICATION_BRANCHES_FETCH_SUCCESS: V,
-    APPLICATION_BRANCHES_FETCH_FAIL: F,
+    APPLICATION_BRANCHES_FETCH_SUCCESS: F,
+    APPLICATION_BRANCHES_FETCH_FAIL: V,
     CONNECTION_CLOSED: Z,
     LOGOUT: Z,
     SKU_PURCHASE_SUCCESS: H

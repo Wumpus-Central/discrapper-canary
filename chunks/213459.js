@@ -103,20 +103,20 @@ function j(e, t) {
 let U = new s.Yd('ApplicationCommandIndexStore'),
     G = Symbol('currentUser'),
     B = Symbol('stale'),
-    V = Symbol('current'),
-    F = Object.freeze({
+    F = Symbol('current'),
+    V = Object.freeze({
         descriptors: [],
         commands: [],
         sectionedCommands: [],
         loading: !0
     }),
     Z = Object.freeze({
-        serverVersion: V,
+        serverVersion: F,
         fetchState: { fetching: !1 },
         result: {
             sections: {},
             sectionIdsByBotId: {},
-            version: V
+            version: F
         }
     }),
     H = Object.freeze({
@@ -251,7 +251,7 @@ function ei(e) {
         }
         t.commands[e.id] = e;
     }
-    let d = null != (n = o.version) ? n : V;
+    let d = null != (n = o.version) ? n : F;
     Q(
         i,
         {
@@ -431,7 +431,7 @@ class ep extends (r = l.ZP.Store) {
         return e in this.indices;
     }
     query(e, t, n) {
-        if (null == y.default.getCurrentUser()) return F;
+        if (null == y.default.getCurrentUser()) return V;
         let r = 'channel' === e.type ? e.channel : void 0,
             i = this.getContextState(e),
             o = this.getUserState(),
@@ -784,7 +784,7 @@ function eN(e) {
         let e = eA(I.Tm[D.bi.BUILT_IN], w, !0, !0, x);
         null != e && L.push(e);
     }
-    let V = L.flatMap((e) => e.data.map((t) => j(M({}, t), { section: e.section })));
+    let F = L.flatMap((e) => e.data.map((t) => j(M({}, t), { section: e.section })));
     if (v === A.p.COMMAND_ONLY || v === A.p.COMMAND_OR_APPLICATION) {
         let e = c.context,
             t = b.Z.getGuild(null == c || null == (l = c.context) ? void 0 : l.guild_id);
@@ -796,7 +796,7 @@ function eN(e) {
                       guild: t
                   }
                 : void 0;
-        V.sort((e, t) => {
+        F.sort((e, t) => {
             if (O.commands.useScore) {
                 var r, i;
                 let n = null != (r = e.score) ? r : 0,
@@ -812,7 +812,7 @@ function eN(e) {
         });
     }
     return {
-        commands: V,
+        commands: F,
         descriptors: L.map((e) => e.section),
         sectionedCommands: L,
         loading: (null == u ? void 0 : u.fetchState.fetching) === !0 || (null == d ? void 0 : d.fetchState.fetching) === !0 || (null != E && (null == (r = f.get(E)) ? void 0 : r.fetchState.fetching) === !0)

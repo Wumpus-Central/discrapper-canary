@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => W,
-    hU: () => V
+    hU: () => F
 }),
     n(388685);
 var r = n(200651),
@@ -107,7 +107,7 @@ let k = '1',
     U = 0.1,
     G = 0.01,
     B = 1000;
-function V(e) {
+function F(e) {
     let { disabled: t = !1, onClick: n, text: i, children: o, tooltipPosition: s = 'top', refreshEnabled: l = !1 } = e;
     return (0, r.jsx)(d.ua7, {
         text: i,
@@ -124,12 +124,12 @@ function V(e) {
             )
     });
 }
-function F(e) {
+function V(e) {
     let { sound: t, previewSound: n, disabled: i = !1, tooltipPosition: o = 'top', refreshEnabled: a = !1 } = e;
     function s(e) {
         e.stopPropagation(), e.currentTarget.blur(), n();
     }
-    return (0, r.jsx)(V, {
+    return (0, r.jsx)(F, {
         tooltipPosition: o,
         disabled: i,
         onClick: s,
@@ -154,7 +154,7 @@ function Z(e) {
             },
             [s, t.soundId]
         );
-    return (0, r.jsx)(V, {
+    return (0, r.jsx)(F, {
         disabled: o,
         onClick: c,
         text: C.NW.formatToPlainString(s ? C.t.lQLsjY : C.t.Y5DOs7, {
@@ -198,7 +198,7 @@ let W = i.forwardRef(function (e, t) {
         P,
         D,
         M,
-        V,
+        F,
         W,
         { sound: Y, channel: K, containerClassName: z, className: q, focused: Q, forceSecondaryActions: X = !1, interactive: J = !0, enableSecondaryActions: $ = !1, suppressPlaySound: ee, onMouseEnter: et, onSelectItem: en, analyticsLocations: er, buttonOverlay: ei = O.Pb.PLAY, showLockForDisabledSound: eo = !0, inNitroLockedSection: ea = !1, refreshEnabled: es = !1, isAnimated: el = !0, isPlayingSoundOverride: ec, isSoundmoji: eu, soundmojiVisualEffectRef: ed, tooltipOverride: ef, tooltipClassName: e_, tooltipContentClassName: ep } = e,
         eh = x(e, ['sound', 'channel', 'containerClassName', 'className', 'focused', 'forceSecondaryActions', 'interactive', 'enableSecondaryActions', 'suppressPlaySound', 'onMouseEnter', 'onSelectItem', 'analyticsLocations', 'buttonOverlay', 'showLockForDisabledSound', 'inNitroLockedSection', 'refreshEnabled', 'isAnimated', 'isPlayingSoundOverride', 'isSoundmoji', 'soundmojiVisualEffectRef', 'tooltipOverride', 'tooltipClassName', 'tooltipContentClassName']);
@@ -220,9 +220,9 @@ let W = i.forwardRef(function (e, t) {
         ek = X || ($ && !eM),
         ej = i.useRef(null),
         eU = (null != (D = null == (o = ej.current) ? void 0 : o.scrollHeight) ? D : 0) > (null != (M = null == (u = ej.current) ? void 0 : u.offsetHeight) ? M : 0),
-        eG = null != (V = h.Wq.useStore().bottomPosition) ? V : 0,
+        eG = null != (F = h.Wq.useStore().bottomPosition) ? F : 0,
         eB = (null != (W = null == (y = eN.current) ? void 0 : y.getBoundingClientRect().bottom) ? W : 0) + 50 > eG ? 'top' : 'bottom',
-        [eV, eF] = i.useState(!1),
+        [eF, eV] = i.useState(!1),
         eZ = eM && eo;
     function eH() {
         ee || ev(er);
@@ -231,7 +231,7 @@ let W = i.forwardRef(function (e, t) {
         if ((ew && !eC && ((eR.current = Math.min(eR.current + G, U)), Math.random() < eR.current && eT(eA.x, eA.y, void 0, void 0, { sprite: N.vv })), null != en)) return void en(e);
         eH();
     }
-    let eY = F({
+    let eY = V({
             sound: Y,
             previewSound: eO,
             disabled: eM && !X,
@@ -282,7 +282,7 @@ let W = i.forwardRef(function (e, t) {
                                       ? (0, r.jsx)(m.ZP, {
                                             sound: Y,
                                             channel: K,
-                                            setTooltipShowing: eF
+                                            setTooltipShowing: eV
                                         })
                                       : (0, r.jsxs)(r.Fragment, {
                                             children: [ek && eY, eK(), ek && ez]
@@ -360,7 +360,7 @@ let W = i.forwardRef(function (e, t) {
                 tooltipClassName: e_,
                 tooltipContentClassName: ep,
                 position: eB,
-                shouldShow: !eV,
+                shouldShow: !eF,
                 delay: 500,
                 children: (e) =>
                     (0, r.jsxs)(

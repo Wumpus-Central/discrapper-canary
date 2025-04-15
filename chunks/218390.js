@@ -167,7 +167,7 @@ function ea() {
                               })
                             : null,
                     (0, r.jsx)(H.nT, { featureSet: g ? H.uZ.FRACTIONAL_PREMIUM : H.uZ.DEFAULT }),
-                    g && !d && (0, B.$)('nitro-settings-hero', e)
+                    g && !d && (0, B.C)('nitro-settings-hero', e)
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(F.Z, {

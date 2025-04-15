@@ -37,8 +37,8 @@ var r = n(200651),
     U = n(459965),
     G = n(251660),
     B = n(474936),
-    V = n(981631),
-    F = n(231338),
+    F = n(981631),
+    V = n(231338),
     Z = n(388032),
     H = n(236691);
 function W(e, t, n) {
@@ -50,8 +50,8 @@ function W(e, t, n) {
             s = (0, A.og)((0, A.T4)(t.total, t.currency), e, a),
             l = null != n ? n : t.subscriptionPeriodEnd;
         (r = Z.NW.format(Z.t.ZzmrTk, {
-            termsURL: V.EYA.TERMS,
-            paidURL: V.EYA.PAID_TERMS,
+            termsURL: F.EYA.TERMS,
+            paidURL: F.EYA.PAID_TERMS,
             rate: s,
             renewalDate: l
         })),
@@ -65,7 +65,7 @@ function W(e, t, n) {
     };
 }
 function Y(e) {
-    var t, n, o, V;
+    var t, n, o, F;
     let Y,
         K,
         { selectedPlanId: z, planGroup: q, paymentSources: Q, priceOptions: X, currencies: J, onCurrencyChange: $, onPaymentSourceChange: ee, handlePaymentSourceAdd: et, setHasAcceptedTerms: en, legalTermsNodeRef: er, hasLegalTermsFlash: ei, trialId: eo, trialFooterMessageOverride: ea, reviewWarningMessage: es, metadata: el, purchaseState: ec, hideSubscriptionDetails: eu, referralTrialOfferId: ed, isTrial: ef = !1, isDiscount: e_ = !1, handleClose: ep } = e,
@@ -117,7 +117,7 @@ function Y(e) {
             currency: X.currency,
             metadata: el
         }),
-        [eB, eV] = (0, R.o5)({
+        [eB, eF] = (0, R.o5)({
             paymentSourceId: X.paymentSourceId,
             skuId: eg,
             subscriptionPlanId: z,
@@ -128,8 +128,8 @@ function Y(e) {
     i.useEffect(() => {
         ev(eB);
     }, [ev, eB]);
-    let eF = eT && (0, T.pO)(eN),
-        eZ = null != (o = null != (n = null != eM ? eM : ej) ? n : eG) ? o : eV;
+    let eV = eT && (0, T.pO)(eN),
+        eZ = null != (o = null != (n = null != eM ? eM : ej) ? n : eG) ? o : eF;
     i.useEffect(() => {
         eS(eZ);
     }, [eZ, eS]);
@@ -171,7 +171,7 @@ function Y(e) {
             plan: ew,
             className: H.invoice,
             isPrepaidPaymentSource: eq,
-            isCustomGift: eF,
+            isCustomGift: eV,
             invoicePreview: eB
         });
     else if (null != e4)
@@ -249,7 +249,7 @@ function Y(e) {
         { checkboxLabel: e6, checkboxClassname: e8, checkboxLabelClassname: e7 } = W(null != ef && ef, ek, Y),
         e9 = Z.NW.formatToPlainString(Z.t['sBpy9/'], { planName: ew.name });
     return (
-        eT && !eF ? (e9 = Z.NW.string(Z.t.J5a0eX)) : eT && eF ? (e9 = '') : (0, N.PV)(ew.id) && (e9 = N.ZP.getBillingReviewSubheader(null, ew)),
+        eT && !eV ? (e9 = Z.NW.string(Z.t.J5a0eX)) : eT && eV ? (e9 = '') : (0, N.PV)(ew.id) && (e9 = N.ZP.getBillingReviewSubheader(null, ew)),
         eQ
             ? null
             : (0, r.jsxs)('div', {
@@ -307,7 +307,7 @@ function Y(e) {
                               tag: u.RB0.H5,
                               children: e9
                           }),
-                      eF &&
+                      eV &&
                           null != eA &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -384,8 +384,8 @@ function Y(e) {
                               checkboxClassname: e8,
                               checkboxLabelClassname: e7,
                               finePrint:
-                                  null != (V = !eI && ea)
-                                      ? V
+                                  null != (F = !eI && ea)
+                                      ? F
                                       : (0, r.jsx)(f.Z, {
                                             hide: ef || e_,
                                             subscriptionPlan: ew,
@@ -395,7 +395,7 @@ function Y(e) {
                                             isEmbeddedIAP: eh,
                                             basePrice: (0, N.aS)(ew.id, !1, eT, X)
                                         }),
-                              showPricingLink: ew.currency !== F.pK.USD,
+                              showPricingLink: ew.currency !== V.pK.USD,
                               showWithdrawalWaiver: e5,
                               disabled: eL,
                               isTrial: ef && null == ea,

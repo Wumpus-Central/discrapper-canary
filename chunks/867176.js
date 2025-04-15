@@ -111,9 +111,9 @@ function C(e) {
             canAnimate: D || !j ? x : k
         }),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        V = n.getAvatarURL(b, (0, u.pxk)(S)),
-        F = (0, s._i)((0, d.ZP)(V, B, !1)),
-        Z = (0, f.Z)(null != (t = null != w ? w : null == o ? void 0 : o.primaryColor) ? t : F).hex,
+        F = n.getAvatarURL(b, (0, u.pxk)(S)),
+        V = (0, s._i)((0, d.ZP)(F, B, !1)),
+        Z = (0, f.Z)(null != (t = null != w ? w : null == o ? void 0 : o.primaryColor) ? t : V).hex,
         H = A(S),
         W = H + T - P,
         Y = R - N - P;

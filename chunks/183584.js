@@ -1,6 +1,6 @@
 n.d(t, {
     IN: () => s,
-    oZ: () => c
+    oZ: () => u
 }),
     n(200651),
     n(192379);
@@ -42,7 +42,7 @@ function s(e, t) {
             keepOpen: e
         });
 }
-function c(e) {
+function u(e) {
     r.Z.dispatch({
         type: 'SOUNDBOARD_SET_OVERLAY_ENABLED',
         pid: e,

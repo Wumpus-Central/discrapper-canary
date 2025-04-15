@@ -39,9 +39,9 @@ var M = n(857192),
     U = n(44163),
     G = n(710845),
     B = n(70956),
-    V = n(378799);
-M.default.cssDebuggingEnabled && n.e('34600').then(n.bind(n, 671996)), (0, k.ZP)(), (0, V.s5)();
-let F = 5 * B.Z.Millis.MINUTE,
+    F = n(378799);
+M.default.cssDebuggingEnabled && n.e('34600').then(n.bind(n, 671996)), (0, k.ZP)(), (0, F.s5)();
+let V = 5 * B.Z.Millis.MINUTE,
     Z = document.getElementById('app-mount');
 _()(null != Z, 'Could not find app-mount'), (Z.className = __OVERLAY__ ? '' : j.appMount);
 let H = (0, d.createRoot)(Z),
@@ -82,7 +82,7 @@ else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedC
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), A.isPlatformEmbedded)) {
         (window.onbeforeunload = () => S.ZP.beforeUnload()), S.ZP.on('HELP_OPEN', () => window.open(O.Z.getCommunityURL()));
-        let e = new w.sW(F, () => S.ZP.purgeMemory());
+        let e = new w.sW(V, () => S.ZP.purgeMemory());
         S.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), S.ZP.setFocused(!1), (0, R.T_)(window, !1);
         }),

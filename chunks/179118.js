@@ -39,9 +39,9 @@ function M(e) {
         U = (null == o ? void 0 : o.productLine) === P.POd.COLLECTIBLES,
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, R.wD)(),
-        V = null == G ? void 0 : G.giftPurchaseConfirmation,
-        F = (0, g.tK)(null == B ? void 0 : B.skuId),
-        Z = (0, g.a5)(s) && null != F && null != V,
+        F = null == G ? void 0 : G.giftPurchaseConfirmation,
+        V = (0, g.tK)(null == B ? void 0 : B.skuId),
+        Z = (0, g.a5)(s) && null != V && null != F,
         H = () => (null != s ? s.skuId : null != o ? o.id : null),
         W = () => {
             let e;
@@ -49,7 +49,7 @@ function M(e) {
                 ? D.NW.string(D.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === w.rV.MONTH ? (j ? (Z ? V.monthGiftText : D.t['4ZJ+7e']) : D.t['P+z55e']) : j ? (Z ? V.yearGiftText : D.t.p0pZXF) : D.t.bXqk3t),
+                  : ((e = s.interval === w.rV.MONTH ? (j ? (Z ? F.monthGiftText : D.t['4ZJ+7e']) : D.t['P+z55e']) : j ? (Z ? F.yearGiftText : D.t.p0pZXF) : D.t.bXqk3t),
                     D.NW.format(e, {
                         skuName: (0, A.aq)(s.id),
                         intervalCount: s.intervalCount

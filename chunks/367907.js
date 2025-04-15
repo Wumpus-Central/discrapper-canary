@@ -1,10 +1,10 @@
 n.d(t, {
-    $H: () => V,
+    $H: () => F,
     AB: () => U,
     JS: () => k,
     ZP: () => H,
     hH: () => x,
-    kO: () => F,
+    kO: () => V,
     oG: () => Z,
     v_: () => j,
     yw: () => B
@@ -142,7 +142,7 @@ function U(e) {
             guild_id: t.getGuildId(),
             media_session_id: r
         },
-        F(t.getGuildId(), t.id, n),
+        V(t.getGuildId(), t.id, n),
         (0, C.V)()
     );
 }
@@ -161,7 +161,7 @@ function B(e) {
         s = D({}, t, x(G(a, i)), null != i && null != o && (0, P.AB)(o) ? M(i, o) : j(a));
     T.default.track(e, s, { flush: n });
 }
-function V(e) {
+function F(e) {
     if ((0, P.AB)(e)) return { channel_static_route: e };
     let t = u.Z.getChannel(e);
     if (null == t) return { channel_id: e };
@@ -199,7 +199,7 @@ function V(e) {
         is_app_dm: !1
     };
 }
-function F(e, t, n) {
+function V(e, t, n) {
     let r = {
         voice_state_count: 0,
         video_stream_count: 0,
@@ -226,5 +226,5 @@ function Z(e, t) {
 }
 let H = {
     trackWithMetadata: B,
-    getVoiceStateMetadata: F
+    getVoiceStateMetadata: V
 };

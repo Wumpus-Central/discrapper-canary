@@ -55,8 +55,8 @@ var r = n(200651),
     U = n(176354),
     G = n(700785),
     B = n(591759),
-    V = n(807675),
-    F = n(489863),
+    F = n(807675),
+    V = n(489863),
     Z = n(228763),
     H = n(422559),
     W = n(713938),
@@ -151,7 +151,7 @@ function e_(e, t) {
 let ep = 'oauth2-authorize-header-id';
 function eh() {
     let e = (0, s.TH)(),
-        t = i.useMemo(() => (0, V.y)(e.search), [e.search]);
+        t = i.useMemo(() => (0, F.y)(e.search), [e.search]);
     (0, T.Z)();
     let o = !e.search.includes('response_type'),
         [a, c] = i.useState(!1),
@@ -267,8 +267,8 @@ function eg(e) {
     let [ex, eM] = i.useState(null),
         [ek, ej] = i.useState(null),
         [eU, eG] = i.useState(null),
-        [eB, eV] = i.useState(!1),
-        [eF, eZ] = i.useState(!1),
+        [eB, eF] = i.useState(!1),
+        [eV, eZ] = i.useState(!1),
         eH = null == ex ? void 0 : ex.guilds,
         [eW, eY] = i.useState(null != eE ? eE : null),
         [eK, ez] = i.useState(null != eb ? eb : null),
@@ -290,7 +290,7 @@ function eg(e) {
         }, [null == e2 ? void 0 : e2.integrationTypesConfig, e$]),
         { requestedScopes: e5, accountScopes: e6 } = i.useMemo(() => {
             let e = e1 ? (null == e4 ? void 0 : e4.scopes) : em,
-                t = (0, V.K)(null != e ? e : []),
+                t = (0, F.K)(null != e ? e : []),
                 n = W.Qe.filter((e) => t.includes(e));
             return {
                 requestedScopes: t,
@@ -314,21 +314,21 @@ function eg(e) {
                 tn(!t), te(e);
             } catch (n) {
                 let { status: e, body: t } = n;
-                if (401 === e) return void (0, F.c$)(eD, 'oauth2_error_failed_disclosures');
+                if (401 === e) return void (0, V.c$)(eD, 'oauth2_error_failed_disclosures');
                 eG(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
             } finally {
                 e7.current = !1;
             }
         };
         if (null == eR) {
-            if (!k.default.isAuthenticated()) return void (0, F.c$)(eD, 'oauth2_error_not_authenticated');
+            if (!k.default.isAuthenticated()) return void (0, V.c$)(eD, 'oauth2_error_not_authenticated');
             e();
         }
     }, [D, eD, eR, te, eG, tn, ej]);
     let tr = i.useCallback(
             async (e) => {
                 if (null != eA) {
-                    eV(!0), eA(e);
+                    eF(!0), eA(e);
                     return;
                 }
                 if (!e && !eI) {
@@ -342,8 +342,8 @@ function eg(e) {
                 }
                 if (null == e$) return void eG(Error('No integration type was selected.'));
                 try {
-                    eV(!0);
-                    let n = await (0, F.Iq)({
+                    eF(!0);
+                    let n = await (0, V.Iq)({
                         authorize: e,
                         clientId: D,
                         scopes: e5,
@@ -383,24 +383,24 @@ function eg(e) {
                                   }
                               })
                             : (window.location = n.location);
-                    } else eV(!1);
+                    } else eF(!1);
                 } catch (t) {
                     let e = t.body;
-                    (null == e ? void 0 : e.message) != null && '' !== e.message ? eG(Error(e.message)) : eG(e), ej('AUTHORIZE_SCOPES'), eV(!1);
+                    (null == e ? void 0 : e.message) != null && '' !== e.message ? eG(Error(e.message)) : eG(e), ej('AUTHORIZE_SCOPES'), eF(!1);
                 }
             },
             [eA, eI, eN, null == ex ? void 0 : ex.application, eJ, eC, D, e5, j, ee, eo, el, eu, ef, e8, eq, eW, e$, eK, e9]
         ),
         ti = i.useRef(!1),
         to = i.useCallback(async () => {
-            if (!k.default.isAuthenticated()) return void (0, F.c$)(eD, 'oauth2_error_not_authenticated');
+            if (!k.default.isAuthenticated()) return void (0, V.c$)(eD, 'oauth2_error_not_authenticated');
             if (!e7.current && !ti.current) {
                 ti.current = !0;
                 try {
                     let e =
                         null != ew
                             ? ew
-                            : await (0, F.Ww)({
+                            : await (0, V.Ww)({
                                   clientId: D,
                                   scopes: e5,
                                   responseType: j,
@@ -414,7 +414,7 @@ function eg(e) {
                     eM((0, Z.d)(e)), e_ === Y.s.NONE && e.authorized && !tt && tr(!0), (0, S.yw)(ei.rMx.OAUTH2_AUTHORIZE_VIEWED, { application_id: e.application.id });
                 } catch (n) {
                     let { status: e, body: t } = n;
-                    if (401 === e) return void (0, F.c$)(eD, 'oauth2_error_unauthorized');
+                    if (401 === e) return void (0, V.c$)(eD, 'oauth2_error_unauthorized');
                     eG(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
                 } finally {
                     ti.current = !1;
@@ -640,7 +640,7 @@ function eg(e) {
                               children: ea.NW.string(ea.t['ETE/oK'])
                           }),
                     'SELECT_INSTALL_TYPE' !== ek
-                        ? eF
+                        ? eV
                             ? (0, r.jsx)('div', {
                                   className: es.action,
                                   children: (0, r.jsx)(h.zx, {
@@ -763,5 +763,5 @@ function ey(e, t) {
 function ev(e) {
     var t;
     let { hostname: n = '', host: r, pathname: i, search: o } = null != (t = B.Z.toURLSafe(e)) ? t : {};
-    return null != i && null != o && (B.Z.isDiscordHostname(n) || r === window.location.host) && (i.startsWith('/api'.concat(ei.ANM.OAUTH2_AUTHORIZE)) || i.startsWith(ei.Z5c.OAUTH2_AUTHORIZE)) ? (0, V.y)(o) : null;
+    return null != i && null != o && (B.Z.isDiscordHostname(n) || r === window.location.host) && (i.startsWith('/api'.concat(ei.ANM.OAUTH2_AUTHORIZE)) || i.startsWith(ei.Z5c.OAUTH2_AUTHORIZE)) ? (0, F.y)(o) : null;
 }

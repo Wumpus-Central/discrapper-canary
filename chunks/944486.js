@@ -1,6 +1,6 @@
 let r, i, o, a, s, l, c;
 n.d(t, {
-    C: () => F,
+    C: () => V,
     Z: () => eo
 }),
     n(388685);
@@ -110,14 +110,14 @@ function B(e) {
         if (null != t) return t.id;
     }
 }
-function V(e, t) {
+function F(e, t) {
     if (null == e || null == t || k[e] === t) return !1;
     let n = y.Z.getChannel(t),
         r = null != n && (0, g.zi)(n.type),
         i = (null == n ? void 0 : n.getGuildId()) === e;
     return !!r && !!i && ((k[e] = t), !0);
 }
-function F(e) {
+function V(e) {
     let t = y.Z.getMutableBasicGuildChannelsForGuild(e),
         n = f().find(t, (e) => e.type === T.d4z.GUILD_VOICE);
     return null == n ? void 0 : n.id;
@@ -134,7 +134,7 @@ function Z() {
         }),
         f().each(t, (e) => {
             let t = x[e.id];
-            null == k[e.id] && V(e.id, t);
+            null == k[e.id] && F(e.id, t);
         }),
         null != l && Date.now() - l >= D && ((s = null), (e = !0)),
         e
@@ -144,7 +144,7 @@ function H(e) {
     (r = e.sessionId), null != s && null == y.Z.getChannel(s) && (s = null), Z() && G();
 }
 function W(e) {
-    (r = e.sessionId), (s = e.selectedVoiceChannelId), (x = {}), (M = {}), (o = e.selectedChannelId), (x[e.selectedGuildId] = e.selectedChannelId), V(e.selectedGuildId, o), Z();
+    (r = e.sessionId), (s = e.selectedVoiceChannelId), (x = {}), (M = {}), (o = e.selectedChannelId), (x[e.selectedGuildId] = e.selectedChannelId), F(e.selectedGuildId, o), Z();
 }
 function Y() {
     r = null;
@@ -152,7 +152,7 @@ function Y() {
 function K(e) {
     let { guildId: t, channelId: n } = e;
     if (void 0 === t) return !1;
-    null == n && (n = B(t)), null != o && n !== o && (i = o), (o = n), V(t, n), x[U(t)] !== n && ((M[U(t)] = x[U(t)]), (x[U(t)] = o)), G();
+    null == n && (n = B(t)), null != o && n !== o && (i = o), (o = n), F(t, n), x[U(t)] !== n && ((M[U(t)] = x[U(t)]), (x[U(t)] = o)), G();
 }
 function z(e) {
     let { channelId: t } = e;
@@ -186,7 +186,7 @@ function J(e) {
     let { guild: t } = e;
     if (null == x[t.id]) {
         let e = B(t.id);
-        (x[t.id] = e), V(t.id, e), G();
+        (x[t.id] = e), F(t.id, e), G();
     }
 }
 function $(e) {

@@ -96,14 +96,14 @@ let m = new Map(),
     B = () => {
         (v = m), (O = g), (T = y), (i = void 0), (A = !1), (C = new Set()), (r = void 0), (o = void 0), (w = {});
     },
-    V = () => {
+    F = () => {
         if (!u.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
         e !== N && (i = void 0), (N = e);
     };
-class F extends (a = l.ZP.Store) {
+class V extends (a = l.ZP.Store) {
     initialize() {
-        this.syncWith([f.default], B), this.syncWith([u.Z], V);
+        this.syncWith([f.default], B), this.syncWith([u.Z], F);
     }
     get isFetchingCategories() {
         return A;
@@ -155,8 +155,8 @@ class F extends (a = l.ZP.Store) {
         return this.getCategory(null == t ? void 0 : t.categorySkuId);
     }
 }
-h(F, 'displayName', 'CollectiblesCategoryStore');
-let Z = new F(c.Z, {
+h(V, 'displayName', 'CollectiblesCategoryStore');
+let Z = new V(c.Z, {
     COLLECTIBLES_CATEGORIES_FETCH: M,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: j,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: k,

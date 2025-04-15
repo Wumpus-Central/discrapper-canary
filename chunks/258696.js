@@ -60,14 +60,14 @@ function R(e) {
         { paymentsBlocked: U } = u.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
         G = [],
         B = !S.isDM() || void 0 === S.recipients || S.recipients.length > 1,
-        V = (0, a.e7)([g.default], () => (B ? null : g.default.getUser(S.recipients[0]))),
-        F = (0, d.R6)('ChannelTextAreaButtons'),
+        F = (0, a.e7)([g.default], () => (B ? null : g.default.getUser(S.recipients[0]))),
+        V = (0, d.R6)('ChannelTextAreaButtons'),
         Z = (0, f.Nt)() && (null == (t = v.confetti) ? void 0 : t.button) != null;
     return (o.tq ||
         ((null == (p = v.gifts) ? void 0 : p.button) != null &&
             null == k &&
             !U &&
-            (null == V || E.ZP.isPremiumEligible(V)) &&
+            (null == F || E.ZP.isPremiumEligible(F)) &&
             G.push(
                 (0, r.jsx)(
                     C,
@@ -129,10 +129,10 @@ function R(e) {
                 'emoji'
             )
         ),
-    F || null == L || G.push(L),
+    V || null == L || G.push(L),
     (null == (i = v.submit) ? void 0 : i.button) != null &&
         ((null == (_ = v.submit) ? void 0 : _.ignorePreference) || x) &&
-        !F &&
+        !V &&
         G.push(
             (0, r.jsx)(
                 T.Z,
@@ -143,7 +143,7 @@ function R(e) {
                 'submit'
             )
         ),
-    F && null != L && G.push(L),
+    V && null != L && G.push(L),
     0 === G.length)
         ? null
         : (0, r.jsx)('div', {

@@ -53,7 +53,7 @@ function G(e, t) {
 function B(e, t) {
     return null != e && c()(e.createdAt).isAfter(M) && 0 === t;
 }
-let V = {
+let F = {
         [D.iEv.NAME]: G,
         [D.iEv.PLATFORM]: (e, t, n) => {
             let r = e.libraryApplication.getDistributor(),
@@ -63,11 +63,11 @@ let V = {
         [D.iEv.LAST_PLAYED]: (e, t) => (e.isNew && !t.isNew ? -1 : !e.isNew && t.isNew ? 1 : e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1),
         [D.iEv.ACTIONS]: null
     },
-    F = (0, T.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
+    V = (0, T.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
     Z = (0, T.oH)((e) => e.filter((e) => null != e.libraryApplication && O.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
     H = (0, T.oH)((e, t) => e.filter((e) => o()(t.toLowerCase(), e.application.name.toLowerCase()))),
     W = (0, T.oH)((e, t, n, r) => {
-        let i = V[t];
+        let i = F[t];
         if (null == i) return e;
         let o = [...e].sort(i);
         return n === D.sHY.DESCENDING ? o.reverse() : o;
@@ -180,7 +180,7 @@ class J extends (r = u.ZP.Store) {
         return Z(k);
     }
     get libraryApplicationViewItems() {
-        return F(k);
+        return V(k);
     }
     get filteredLibraryApplicationViewItems() {
         return H(this.libraryApplicationViewItems, j);

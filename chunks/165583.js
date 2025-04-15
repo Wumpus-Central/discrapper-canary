@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => V,
+    ZP: () => F,
     dz: () => j
 }),
     n(388685);
@@ -210,7 +210,7 @@ function B(e) {
         ]
     });
 }
-function V(e) {
+function F(e) {
     let { headingText: t, context: i, children: o, onClose: s, type: c, subscriptionTier: u, analyticsLocationObject: b, trialOffer: y, discountOffer: T } = e,
         N = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         A = (0, h.ZP)(),

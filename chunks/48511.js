@@ -65,32 +65,32 @@ function B(e, t, n) {
     var r = U[n.quoteStyle || t];
     return r + e + r;
 }
-function V(e) {
+function F(e) {
     return b.call(String(e), /"/g, '&quot;');
 }
-function F(e) {
+function V(e) {
     return !w || !('object' == typeof e && (w in e || void 0 !== e[w]));
 }
 function Z(e) {
-    return '[object Array]' === ee(e) && F(e);
+    return '[object Array]' === ee(e) && V(e);
 }
 function H(e) {
-    return '[object Date]' === ee(e) && F(e);
+    return '[object Date]' === ee(e) && V(e);
 }
 function W(e) {
-    return '[object RegExp]' === ee(e) && F(e);
+    return '[object RegExp]' === ee(e) && V(e);
 }
 function Y(e) {
-    return '[object Error]' === ee(e) && F(e);
+    return '[object Error]' === ee(e) && V(e);
 }
 function K(e) {
-    return '[object String]' === ee(e) && F(e);
+    return '[object String]' === ee(e) && V(e);
 }
 function z(e) {
-    return '[object Number]' === ee(e) && F(e);
+    return '[object Number]' === ee(e) && V(e);
 }
 function q(e) {
-    return '[object Boolean]' === ee(e) && F(e);
+    return '[object Boolean]' === ee(e) && V(e);
 }
 function Q(e) {
     if (P) return e && 'object' == typeof e && e instanceof Symbol;
@@ -152,7 +152,7 @@ e.exports = function e(t, r, i, s) {
         return 'object' != typeof t || P ? C : ed(C);
     }
     if (el(t)) {
-        for (var k = '<' + v.call(String(t.nodeName)), G = t.attributes || [], F = 0; F < G.length; F++) k += ' ' + G[F].name + '=' + B(V(G[F].value), 'double', l);
+        for (var k = '<' + v.call(String(t.nodeName)), G = t.attributes || [], V = 0; V < G.length; V++) k += ' ' + G[V].name + '=' + B(F(G[V].value), 'double', l);
         return (k += '>'), t.childNodes && t.childNodes.length && (k += '...'), (k += '</' + v.call(String(t.nodeName)) + '>');
     }
     if (Z(t)) {

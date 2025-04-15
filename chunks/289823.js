@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(200651),
     a = n(192379),
     i = n(120356),
@@ -10,8 +10,8 @@ var r = n(200651),
     _ = n(3682),
     d = n(630403);
 let f = {},
-    p = 1 / 4;
-function m(e) {
+    m = 1 / 4;
+function p(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)('div', {
         style: {
@@ -25,7 +25,7 @@ function m(e) {
         },
         children: (0, r.jsx)(c.b, {
             className: d.dots,
-            dotRadius: t * p
+            dotRadius: t * m
         })
     });
 }
@@ -39,7 +39,7 @@ function g(e) {
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(m, {
+              children: (0, r.jsx)(p, {
                   height: n.height,
                   fillColor: i
               })
@@ -56,7 +56,7 @@ function g(e) {
             })
           : null;
 }
-function h(e) {
+function v(e) {
     let { src: t, size: n } = e;
     return (0, r.jsx)('img', {
         className: d.circularImage,
@@ -66,7 +66,7 @@ function h(e) {
         height: n
     });
 }
-let v = {
+let b = {
         [s.EFr.SIZE_16]: {
             default: u.QS.DIAGONAL_FACEPILE_16,
             typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
@@ -113,9 +113,9 @@ let v = {
             status: u.QS.DIAGONAL_FACEPILE_STATUS_120
         }
     },
-    b = function (e) {
+    h = function (e) {
         var t,
-            { backSrc: n, frontSrc: i, size: c, isTyping: p, status: m, style: b, className: I } = e,
+            { backSrc: n, frontSrc: i, size: c, isTyping: m, status: p, style: h, className: I } = e,
             y = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -143,7 +143,7 @@ let v = {
                 backAvatarSizePx: P
             } = a.useMemo(() => {
                 var e;
-                let t = ''.concat(S, '-').concat(p);
+                let t = ''.concat(S, '-').concat(m);
                 return null != (e = f[t])
                     ? e
                     : (function (e, t, n) {
@@ -159,9 +159,9 @@ let v = {
                                   frontAvatarCenter: o + i / 2
                               };
                           return (f[n] = c), c;
-                      })(c, p, t);
-            }, [S, p, c]),
-            A = ((t = null != m), p ? v[c].typing : t ? v[c].status : v[c].default);
+                      })(c, m, t);
+            }, [S, m, c]),
+            A = ((t = null != p), m ? b[c].typing : t ? b[c].status : b[c].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -192,7 +192,7 @@ let v = {
                     width: S,
                     height: S
                 },
-                b
+                h
             ),
             'aria-label': y['aria-label'],
             'aria-hidden': y['aria-hidden'],
@@ -215,19 +215,19 @@ let v = {
                                 top: C,
                                 left: C
                             },
-                            children: (0, r.jsx)(h, {
+                            children: (0, r.jsx)(v, {
                                 src: i,
                                 size: O,
-                                isTyping: p,
-                                status: m
+                                isTyping: m,
+                                status: p
                             })
                         })
                     ]
                 }),
                 (0, r.jsx)(g, {
                     statusCoords: E,
-                    status: m,
-                    isTyping: p
+                    status: p,
+                    isTyping: m
                 })
             ]
         });

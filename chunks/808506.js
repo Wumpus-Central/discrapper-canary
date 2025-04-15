@@ -92,7 +92,7 @@ function B(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -104,12 +104,12 @@ function V(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -166,7 +166,7 @@ class et {
                     (this.isDispatching
                         ? this.waitingActionsToFlush.add(e)
                         : ('USER_SETTINGS_PROTO_UPDATE' === e.type &&
-                              (e = F(B({}, e), {
+                              (e = V(B({}, e), {
                                   settings: {
                                       type: e.settings.type,
                                       proto: (0, N.cv)(e.settings.type, e.settings.proto)
@@ -229,7 +229,7 @@ let ed = 'none',
             let r = el((0, M.getPID)());
             ec(
                 (0, M.getPID)(),
-                F(B({}, r), {
+                V(B({}, r), {
                     error_description: n,
                     success: !1
                 })
@@ -494,7 +494,7 @@ function eC(e) {
                         (0, M.setPID)(i),
                         f.Z.overlayReady(i);
                     let a = el(i);
-                    ec(i, F(B({}, a), { total_mount_time_ms: null != a.mounting_started_at ? new Date().getTime() - a.mounting_started_at : void 0 }));
+                    ec(i, V(B({}, a), { total_mount_time_ms: null != a.mounting_started_at ? new Date().getTime() - a.mounting_started_at : void 0 }));
                 });
             break;
         case j.BmY.DISPATCH:
@@ -547,7 +547,7 @@ function eM(e) {
     let { port: t } = e;
     $ = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', '98cb86c281db36d9d0461aadb56bd15b71bda433'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+    n.append('build_id', '60fdc59fdfd70b80856db44314ff914292577d0e'), n.append('rpc', String(t)), n.append('rpc_auth_token', $), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function ek(e) {
     let { channelId: t, ring: n } = e;
@@ -576,10 +576,10 @@ function eG() {
 function eB() {
     (Q = !1), (X = null), ey(void 0), ea.verbose('OverlayBridgeStore: handleConnectionClosed');
 }
-function eV() {
+function eF() {
     return !0;
 }
-function eF(e) {
+function eV(e) {
     let { legacyEnabled: t } = e;
     return eI(t), !1;
 }
@@ -710,10 +710,10 @@ let eJ = new eX(
                   LOGOUT: eQ,
                   CONNECTION_OPEN: eG,
                   CONNECTION_CLOSED: eB,
-                  EXPERIMENT_OVERRIDE_BUCKET: eV,
+                  EXPERIMENT_OVERRIDE_BUCKET: eF,
                   RUNNING_GAME_TOGGLE_OVERLAY: eY,
                   RUNNING_GAMES_CHANGE: eW,
-                  OVERLAY_SET_ENABLED: eF,
+                  OVERLAY_SET_ENABLED: eV,
                   OVERLAY_FOCUSED: ej,
                   OVERLAY_SET_INPUT_LOCKED: eD,
                   OVERLAY_ACTIVATE_REGION: eL,

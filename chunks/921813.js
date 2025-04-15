@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(388032),
     A = n(826938);
 function C(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: s, pendingAccentColor: c, pendingBio: g, pendingPronouns: E, pendingAvatar: N, pendingAvatarDecoration: C, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: s, pendingAccentColor: c, pendingBio: g, pendingPronouns: E, pendingAvatar: N, pendingAvatarDecoration: C, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: F = !1, pendingBadges: V, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
         W = (0, f.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: Y, avatarDecorationSrc: K } = (0, p.Z)({
             user: t,
@@ -105,13 +105,13 @@ function C(e) {
                         pendingPronouns: E,
                         isTryItOutFlow: k,
                         hideBioSection: G,
-                        pendingBadges: F,
+                        pendingBadges: V,
                         shouldOpenBadgeTooltip: Z
                     }),
                     (0, r.jsx)(I.Z, {
                         user: t,
                         hideMessageInput: B,
-                        hideExampleButton: V
+                        hideExampleButton: F
                     }),
                     null != z && (0, r.jsx)(d.Z, { profileEffectId: z })
                 ]

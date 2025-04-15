@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     I: () => b,
-    Z: () => V
+    Z: () => F
 }),
     n(388685),
     n(642613),
@@ -138,7 +138,7 @@ class B extends (i = l.ZP.Store) {
     }
 }
 E(B, 'displayName', 'ArchivedThreadsStore');
-let V = new B(c.Z, {
+let F = new B(c.Z, {
     CONNECTION_OPEN: C,
     THREAD_DELETE: j,
     THREAD_UPDATE: U,

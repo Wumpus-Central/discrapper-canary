@@ -85,7 +85,7 @@ let R = (e, t) =>
             { user: x, details: M, activity: k, embeddedActivity: j } = (0, S.n)(n),
             { primaryColor: U, secondaryColor: G } = (0, v.Z)(null == L ? void 0 : L.src),
             B = (0, o.e7)([p.default], () => p.default.locale),
-            { displayParticipants: V, participant1: F, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
+            { displayParticipants: F, participant1: V, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
             W = () => {
                 d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
@@ -97,21 +97,21 @@ let R = (e, t) =>
                             ? w({
                                   entry: n,
                                   channel: t,
-                                  users: [F, Z],
+                                  users: [V, Z],
                                   countOthers: H
                               })
                             : P(n, t, x);
                     return (0, y.C4)({
                         entry: n,
                         applicationImageSrc: null == L ? void 0 : L.src,
-                        avatarSrcs: V.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        avatarSrcs: F.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
                         timestamp: (0, b.yh)(n, B),
                         colors: [U, G],
                         channelId: e
                     });
                 },
-                [null == L ? void 0 : L.src, t, V, n, B, H, F, Z, U, G, x]
+                [null == L ? void 0 : L.src, t, F, n, B, H, V, Z, U, G, x]
             ),
             { enabled: K } = s.c.useExperiment({ location: 'MemberListAcitivtyContentPopout' }, { autoTrackExposure: !0 });
         if (null == x) return null;

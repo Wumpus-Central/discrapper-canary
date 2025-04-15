@@ -1,12 +1,12 @@
 n.d(t, {
     Bg: () => U,
     E5: () => ee,
-    Fp: () => V,
+    Fp: () => F,
     JT: () => $,
     L2: () => z,
     MY: () => k,
     Nz: () => Z,
-    Q_: () => F,
+    Q_: () => V,
     TO: () => Y,
     Z0: () => G,
     bT: () => H,
@@ -112,8 +112,8 @@ function G(e) {
 function B(e) {
     return e.replace(/[^A-Za-z0-9]/g, '');
 }
-let V = (e) => (null == e ? void 0 : e.type) === h.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.hBH.GIFT,
-    F = (e) => {
+let F = (e) => (null == e ? void 0 : e.type) === h.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === h.hBH.GIFT,
+    V = (e) => {
         let t;
         if (null == e) return [];
         let n = new Set();

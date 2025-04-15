@@ -70,7 +70,7 @@ n.d(t, {
     x4: () => ep,
     xM: () => er,
     xq: () => z,
-    zA: () => F
+    zA: () => V
 }),
     n(388685);
 var r = n(442837),
@@ -280,11 +280,11 @@ let I = (0, u.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    V = [],
-    F = (0, u.Zc)(
+    F = [],
+    V = (0, u.Zc)(
         'privacy',
         'messageRequestRestrictedGuildIds',
-        (e) => (null != e ? e : V),
+        (e) => (null != e ? e : F),
         (e) => e
     ),
     Z = (0, u.Zc)(

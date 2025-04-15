@@ -5,8 +5,8 @@ var r = n(200651),
     o = n.n(i),
     a = n(481060),
     s = n(572004),
-    c = n(388032),
-    u = n(798665);
+    u = n(388032),
+    c = n(798665);
 function d(e) {
     var { chunks: t, className: n, onCopy: i } = e,
         d = (function (e, t) {
@@ -29,22 +29,22 @@ function d(e) {
             return l;
         })(e, ['chunks', 'className', 'onCopy']);
     let h = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
-        [f, p] = l.useState(!1),
+        [p, f] = l.useState(!1),
         g = l.useCallback(() => {
             (0, s.JG)(h, () => {
-                p(!0), null == i || i();
+                f(!0), null == i || i();
             });
         }, [i, h]),
-        N = f ? a.owK : a.TIy;
+        y = p ? a.owK : a.TIy;
     return (0, r.jsx)(a.P3F, {
-        className: o()(u.container, n),
+        className: o()(c.container, n),
         onClick: g,
         children: (0, r.jsx)(a.ua7, {
-            text: f ? c.NW.string(c.t['t5VZ8/']) : c.NW.string(c.t.OpuAlJ),
+            text: p ? u.NW.string(u.t['t5VZ8/']) : u.NW.string(u.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    N,
+                    y,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +73,7 @@ function d(e) {
                     (n = n =
                         {
                             size: 'xxs',
-                            color: f ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
+                            color: p ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -77,7 +77,7 @@ function h(e) {
             break;
         case c.O0b.PAUSE_PENDING:
         case c.O0b.PAUSED:
-            N === d.a$.NONE && ((E.transfer.disabled = !0), (E.transfer.subtext = u.NW.string(u.t.LiLRRU))), (E.cancel.subtext = u.NW.string(u.t['1ywaWF'])), (E.cancel.disabled = !0), (E.uncancel.disabled = !0);
+            N === d.a$.NONE && ((E.transfer.disabled = !0), (E.transfer.subtext = u.NW.string(u.t.LiLRRU)), (0, l.y)('guild_boost_slot_popout', x, N) || ((E.cancel.subtext = u.NW.string(u.t['1ywaWF'])), (E.cancel.disabled = !0), (E.uncancel.disabled = !0)));
     }
     (0, l.y)('guild_boost_slot_popout', x, N) && ((E.cancel.subtext = u.NW.string(u.t.dq4vq6)), (E.cancel.disabled = !0), (E.uncancel.disabled = !0));
     let j = i.useMemo(

@@ -7,7 +7,7 @@ n.d(t, {
     GI: () => e_,
     Gd: () => eC,
     I: () => eE,
-    J2: () => V,
+    J2: () => F,
     Jf: () => eo,
     KX: () => eh,
     KZ: () => eP,
@@ -78,7 +78,7 @@ var r = n(192379),
     U = n(388032);
 let G = -1,
     B = 1;
-function V() {
+function F() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { fetchPolicy: 'cache-only' },
         [t, n] = r.useState(!1),
         i = (0, d.Wu)([C.Z], () => [...C.Z.quests.values()]),
@@ -99,7 +99,7 @@ function V() {
         }
     );
 }
-function F(e) {
+function V(e) {
     return e.sort((e, t) => {
         var n, r, i, o, a, s;
         let l = !(0, P.zi)(e),
@@ -118,7 +118,7 @@ function H(e) {
     return r.useMemo(() => {
         if (0 === e.length) return [];
         if (t.current.length > 0 && t.current.length === e.length) return t.current;
-        let n = F(e).map((e) => e.id);
+        let n = V(e).map((e) => e.id);
         return (t.current = n), n;
     }, [e]);
 }
@@ -151,7 +151,7 @@ var Y = (function (e) {
     return (e.ALL = 'all'), (e.CLAIMED = 'claimed'), e;
 })({});
 function K(e) {
-    let { quests: t, isFetchingCurrentQuests: n } = V({ fetchPolicy: 'cache-and-network' }),
+    let { quests: t, isFetchingCurrentQuests: n } = F({ fetchPolicy: 'cache-and-network' }),
         r = new Map(t.map((e) => [e.id, e])),
         i = H(t),
         o = W(t),
@@ -182,7 +182,7 @@ function z() {
 }
 let q = 2147483648 - 1;
 function Q() {
-    let { quests: e, isFetchingCurrentQuests: t } = V({ fetchPolicy: 'cache-only' }),
+    let { quests: e, isFetchingCurrentQuests: t } = F({ fetchPolicy: 'cache-only' }),
         [n, i] = r.useState(() => new Map(e.map((e) => [e.id, (0, P.zi)(e)])));
     return (
         r.useEffect(() => {
@@ -319,7 +319,7 @@ function es(e, t, n) {
     );
 }
 function el() {
-    let { quests: e, isFetchingCurrentQuests: t } = V({ fetchPolicy: 'cache-or-network' }),
+    let { quests: e, isFetchingCurrentQuests: t } = F({ fetchPolicy: 'cache-or-network' }),
         n = Q();
     return r.useMemo(() => {
         let r = [];

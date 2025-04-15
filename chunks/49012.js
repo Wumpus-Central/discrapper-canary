@@ -59,13 +59,13 @@ function R(e, t) {
         G = L,
         B = null;
     if (null != D && null != L) {
-        var V, F, Z;
+        var F, V, Z;
         let e = O.Z.getMessage(L, D),
             t = E.Z.getBasicChannel(L);
         k = null != (Z = null == t ? void 0 : t.guild_id) ? Z : null;
         let n = b.Z.getGuild(k),
-            r = (null == e || null == (V = e.messageReference) ? void 0 : V.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != k;
-        r && (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null ? ((U = e.messageReference.message_id), (G = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = k);
+            r = (null == e || null == (F = e.messageReference) ? void 0 : F.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != k;
+        r && (null == e || null == (V = e.messageReference) ? void 0 : V.guild_id) != null ? ((U = e.messageReference.message_id), (G = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = k);
         let i = (null == t ? void 0 : t.type) === N.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(N.oNc.COMMUNITY)) === !0,
             o = (null == e ? void 0 : e.hasFlag(N.iLy.EPHEMERAL)) === !0;
         j = null != e && !o && (r || i);

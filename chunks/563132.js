@@ -69,7 +69,7 @@ function B(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,12 +81,12 @@ function V(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -95,7 +95,7 @@ function F(e, t) {
 let [Z, H, W] = (0, v.Z)();
 function Y(e) {
     var t, n, a;
-    let { loadId: v, activeSubscription: G, stepConfigs: V, breadcrumbs: H = [], skuIDs: W, isGift: Y = !1, children: K, defaultPlanId: z, purchaseType: q = j.GZQ.SUBSCRIPTION, applicationId: Q, referralCode: X, repeatPurchase: J = !1 } = e,
+    let { loadId: v, activeSubscription: G, stepConfigs: F, breadcrumbs: H = [], skuIDs: W, isGift: Y = !1, children: K, defaultPlanId: z, purchaseType: q = j.GZQ.SUBSCRIPTION, applicationId: Q, referralCode: X, repeatPurchase: J = !1 } = e,
         $ = (0, M.Z)(),
         ee = (0, h.Q)(),
         et = (0, A.Z)(),
@@ -131,7 +131,7 @@ function Y(e) {
             breadcrumbsData: eb,
             previousStepRef: ey
         } = (0, x.Z)({
-            stepConfigs: V,
+            stepConfigs: F,
             breadcrumbs: H
         }),
         [ev, eO] = (0, w.Z)(em),
@@ -150,7 +150,7 @@ function Y(e) {
         { selectedSkuId: eR, selectedPlan: eP, selectedPlanNotification: ew, setSelectedSkuId: eD, setSelectedPlanId: eL, setSelectedPlanNotification: ex } = (0, T.Z)(),
         [eM, ek] = (0, c.Wu)([E.Z], () => [E.Z.purchaseTokenAuthState, E.Z.purchaseTokenHash]),
         [ej, eU, eG, eB] = (0, c.Wu)([k.Z], () => [k.Z.browserCheckoutState, k.Z.loadId, k.Z.skuId, k.Z.planId]),
-        [eV, eF] = i.useState(null),
+        [eF, eV] = i.useState(null),
         [eZ, eH] = i.useState(null),
         [eW, eY] = i.useState(null),
         [eK, ez] = i.useState(null),
@@ -204,7 +204,7 @@ function Y(e) {
         [td, tf] = i.useState(null),
         t_ = null != (a = null == G ? void 0 : G.inReverseTrial) && a && !Y;
     return (0, r.jsx)(Z.Provider, {
-        value: F(
+        value: V(
             B(
                 {
                     stripe: $,
@@ -235,7 +235,7 @@ function Y(e) {
                 step: em,
                 setStep: eg,
                 steps: eE,
-                stepConfigs: V,
+                stepConfigs: F,
                 breadcrumbs: eb,
                 previousStepRef: ey,
                 purchaseState: ev,
@@ -253,8 +253,8 @@ function Y(e) {
                 browserCheckoutStateLoadId: eU,
                 browserCheckoutStateSkuId: eG,
                 browserCheckoutStatePlanId: eB,
-                bodyNode: eV,
-                setBodyNode: eF,
+                bodyNode: eF,
+                setBodyNode: eV,
                 footerNode: eZ,
                 setFooterNode: eH,
                 modalOverlayNode: eW,

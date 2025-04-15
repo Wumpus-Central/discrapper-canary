@@ -10,7 +10,7 @@ n.d(t, {
     B8: () => S,
     BQ: () => ea,
     C2: () => eh,
-    Cn: () => F,
+    Cn: () => V,
     D7: () => ed,
     F8: () => q,
     G6: () => eH,
@@ -27,7 +27,7 @@ n.d(t, {
     R7: () => eP,
     Rb: () => ek,
     Rs: () => eN,
-    S: () => V,
+    S: () => F,
     Tc: () => eD,
     UE: () => ef,
     V3: () => ex,
@@ -71,7 +71,7 @@ n.d(t, {
     oH: () => e$,
     oT: () => i,
     of: () => eB,
-    p0: () => eV,
+    p0: () => eF,
     pC: () => M,
     pj: () => eC,
     qb: () => Q,
@@ -82,7 +82,7 @@ n.d(t, {
     up: () => ev,
     w7: () => eA,
     xQ: () => eq,
-    xb: () => eF,
+    xb: () => eV,
     yR: () => U,
     z3: () => ec,
     z9: () => Y,
@@ -333,10 +333,10 @@ function B() {
         return e.call(t, n);
     }, arguments);
 }
-function V(e) {
+function F(e) {
     return clearTimeout(e);
 }
-function F(e) {
+function V(e) {
     return clearTimeout(e);
 }
 function Z(e) {
@@ -556,12 +556,12 @@ function eG(e, t) {
 function eB(e, t, n) {
     return e.then(t, n);
 }
-function eV(e, t) {
+function eF(e, t) {
     let n = h(t.url, r.__wbindgen_malloc, r.__wbindgen_realloc),
         i = f;
     g().setInt32(e + 4, i, !0), g().setInt32(e + 0, n, !0);
 }
-function eF(e) {
+function eV(e) {
     return e.value;
 }
 function eZ(e, t) {

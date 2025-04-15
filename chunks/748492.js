@@ -53,8 +53,8 @@ function k(e) {
         U = (0, s.e7)([N.Z], () => N.Z.isVideoEnabled()),
         G = (0, s.e7)([N.Z], () => Object.values(N.Z.getVideoDevices())[0]),
         B = !1 === (null == (t = null == G ? void 0 : G.disabled) || t),
-        V = (0, f.Z)([o])[0],
-        F = (0, g.Z)(i),
+        F = (0, f.Z)([o])[0],
+        V = (0, g.Z)(i),
         { parentAnalyticsLocation: Z } = (0, d.ZP)(),
         H = (e) => {
             (0, p.v)(Z, p.d.CAMERA, e), c.Z.setVideoEnabled(e);
@@ -75,7 +75,7 @@ function k(e) {
                 className: x.topControls,
                 children: (0, r.jsx)(y.r, {
                     idle: D,
-                    title: null != (n = null == V ? void 0 : V.name) ? n : i.name,
+                    title: null != (n = null == F ? void 0 : F.name) ? n : i.name,
                     onJumpToChannel: C,
                     preventIdleComponent: b.Z
                 })
@@ -93,7 +93,7 @@ function k(e) {
                                 className: L.leftPipIcon,
                                 enabled: U,
                                 cameraUnavailable: !B,
-                                hasPermission: F,
+                                hasPermission: V,
                                 onChange: H,
                                 onCameraUnavailable: W
                             }),

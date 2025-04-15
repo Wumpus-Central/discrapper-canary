@@ -227,11 +227,11 @@ function B(e) {
         );
     }
 }
-function V(e) {
+function F(e) {
     let { userId: t, applicationId: n } = e;
     y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, t, n) && !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, t, n));
 }
-function F(e) {
+function V(e) {
     let { item_enum: t } = e;
     y.notifCenterItems = y.notifCenterItems
         .map((e) =>
@@ -327,8 +327,8 @@ let K = new Y(o.Z, {
     RELATIONSHIP_UPDATE: U,
     RELATIONSHIP_REMOVE: G,
     GAME_RELATIONSHIP_ADD: B,
-    GAME_RELATIONSHIP_REMOVE: V,
-    NOTIFICATION_CENTER_ITEM_COMPLETED: F,
+    GAME_RELATIONSHIP_REMOVE: F,
+    NOTIFICATION_CENTER_ITEM_COMPLETED: V,
     SET_RECENT_MENTIONS_FILTER: () => I(),
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: W
 });

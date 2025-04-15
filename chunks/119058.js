@@ -44,15 +44,15 @@ function b(e, t, n) {
     if (!(B >= 0 && B <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     if (!U.localize) throw RangeError('locale must contain localize property');
     if (!U.formatLong) throw RangeError('locale must contain formatLong property');
-    var V = (0, o.default)(e);
-    if (!(0, r.default)(V)) throw RangeError('Invalid time value');
-    var F = (0, l.Z)(V),
-        Z = (0, i.Z)(V, F),
+    var F = (0, o.default)(e);
+    if (!(0, r.default)(F)) throw RangeError('Invalid time value');
+    var V = (0, l.Z)(F),
+        Z = (0, i.Z)(F, V),
         H = {
             firstWeekContainsDate: G,
             weekStartsOn: B,
             locale: U,
-            _originalDate: V
+            _originalDate: F
         };
     return k
         .match(h)
