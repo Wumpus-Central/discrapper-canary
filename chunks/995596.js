@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -7,34 +7,35 @@ var r = n(200651),
     o = n(21260),
     c = n(780384),
     d = n(481060),
-    u = n(410030),
-    m = n(328977),
-    x = n(571728),
-    h = n(984370),
-    j = n(433355),
-    b = n(889711),
-    f = n(384433),
+    u = n(393903),
+    m = n(448986),
+    x = n(410030),
+    h = n(328977),
+    j = n(571728),
+    b = n(984370),
+    f = n(433355),
+    N = n(384433),
     p = n(388032),
-    N = n(86931);
-let g = (e) => [
+    g = n(86931);
+let _ = (e) => [
         {
-            id: f.e.ALL_MEMBERS,
+            id: N.e.ALL_MEMBERS,
             label: p.NW.string(p.t.NOOm1d)
         },
         {
-            id: f.e.PENDING,
+            id: N.e.PENDING,
             label: e > 0 ? p.NW.formatToPlainString(p.t['Wo+zLy'], { count: e }) : p.NW.string(p.t['4eQVBA'])
         },
         {
-            id: f.e.REJECTED,
+            id: N.e.REJECTED,
             label: p.NW.string(p.t.bSZklZ)
         },
         {
-            id: f.e.APPROVED,
+            id: N.e.APPROVED,
             label: p.NW.string(p.t.aURgY2)
         }
     ],
-    _ = (e) => {
+    v = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: l, onClose: i } = e;
         return (0, r.jsx)(d.v2r, {
             navId: 'members-tabs-overflow-menu',
@@ -65,9 +66,9 @@ let g = (e) => [
     };
 function C(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
-        s = (0, u.ZP)(),
+        s = (0, x.ZP)(),
         o = (0, c.wj)(s),
-        m = l.useMemo(
+        u = l.useMemo(
             () =>
                 null !=
                 n.find((e) => {
@@ -76,12 +77,12 @@ function C(e) {
                 }),
             [i, n]
         ),
-        x = m ? 'header-primary' : o ? 'text-muted' : 'header-primary',
-        h = m ? d.TVs.colors.HEADER_PRIMARY : o ? d.TVs.colors.TEXT_MUTED : d.TVs.colors.HEADER_PRIMARY;
+        m = u ? 'header-primary' : o ? 'text-muted' : 'header-primary',
+        h = u ? d.TVs.colors.HEADER_PRIMARY : o ? d.TVs.colors.TEXT_MUTED : d.TVs.colors.HEADER_PRIMARY;
     return (0, r.jsx)(d.yRy, {
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, r.jsx)(_, {
+            return (0, r.jsx)(v, {
                 selectedTab: i,
                 onClose: l,
                 tabs: n,
@@ -124,12 +125,12 @@ function C(e) {
                     {
                         id: 'more',
                         color: 'text-muted',
-                        className: a()(N.more, { [N.selected]: m }),
+                        className: a()(g.more, { [g.selected]: u }),
                         'aria-label': p.NW.string(p.t.UKOtz8),
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-md/medium',
-                                color: x,
+                                color: m,
                                 children: p.NW.string(p.t.UKOtz8)
                             }),
                             i
@@ -160,57 +161,50 @@ function C(e) {
         }
     });
 }
-function v(e) {
+function T(e) {
     let { guildId: t, currentTab: n, onTabSelect: i } = e,
         [a, c] = l.useState(0),
-        u = l.useRef(null),
-        _ = l.useRef(a),
-        v = (0, x.A)({ guildId: t }),
-        E = g(null != v ? v : 0),
+        x = l.useRef(null),
+        v = l.useRef(a),
+        T = (0, j.A)({ guildId: t }),
+        E = _(null != T ? T : 0),
         {
-            lastVisibleIndex: T,
-            onItemLayout: I,
-            overflowItemsRef: S
+            lastVisibleIndex: I,
+            onItemLayout: S,
+            overflowItemsRef: P
         } = (0, o.zP)({
             items: E,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: a - 200
         }),
-        P = (0, s.e7)([j.ZP], () => null != j.ZP.getGuildSidebarState(t), [t]),
-        O = (0, m.L)({ guildId: t }),
-        R = l.useMemo(() => (n === f.e.ALL_MEMBERS ? P : null != O && null != O.user), [n, P, O]),
-        y = l.useMemo(() => E.slice(0, T + 1), [T, E]),
-        A = l.useMemo(() => E.slice(T + 1), [T, E]),
-        w = l.useCallback(() => {
-            var e;
-            let t = null == (e = u.current) ? void 0 : e.getBoundingClientRect();
-            null != t && _.current !== t.width && (c(t.width), (_.current = t.width));
-        }, []);
+        O = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
+        R = (0, h.L)({ guildId: t }),
+        y = l.useMemo(() => (n === N.e.ALL_MEMBERS ? O : null != R && null != R.user), [n, O, R]),
+        A = l.useMemo(() => E.slice(0, I + 1), [I, E]),
+        w = l.useMemo(() => E.slice(I + 1), [I, E]),
+        M = (0, m.Z)((e) => {
+            let t = e.contentRect.width;
+            null != t && v.current !== t && (c(t), (v.current = t));
+        });
     return (
-        l.useEffect(() => {
-            let e = (0, b.pP)(w);
-            return (0, b.YP)(e, document.body), () => (0, b.UC)(e, document.body);
-        }, [w]),
-        l.useEffect(() => {
-            w();
-        }, [w, R]),
+        (0, u.s)(x, M, [y]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(h.Z.Divider, { className: N.divider }),
+                (0, r.jsx)(b.Z.Divider, { className: g.divider }),
                 (0, r.jsxs)('div', {
-                    className: N.tabsContainer,
-                    ref: u,
+                    className: g.tabsContainer,
+                    ref: x,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: N.measurements,
+                            className: g.measurements,
                             children: [
                                 E.map((e, t) =>
                                     (0, r.jsx)(
                                         o.AJ,
                                         {
                                             index: t,
-                                            onItemLayout: I,
+                                            onItemLayout: S,
                                             children: (0, r.jsx)(d.njP.Item, {
                                                 id: e.id,
                                                 'aria-label': e.label,
@@ -221,9 +215,9 @@ function v(e) {
                                     )
                                 ),
                                 (0, r.jsx)('div', {
-                                    ref: S,
+                                    ref: P,
                                     children: (0, r.jsx)(C, {
-                                        tabs: A,
+                                        tabs: w,
                                         onTabSelect: i,
                                         selectedTab: n
                                     })
@@ -236,7 +230,7 @@ function v(e) {
                             type: 'top-pill',
                             onItemSelect: i,
                             children: [
-                                y.map((e) =>
+                                A.map((e) =>
                                     (0, r.jsx)(
                                         d.njP.Item,
                                         {
@@ -247,9 +241,9 @@ function v(e) {
                                         e.id
                                     )
                                 ),
-                                0 !== A.length
+                                0 !== w.length
                                     ? (0, r.jsx)(C, {
-                                          tabs: A,
+                                          tabs: w,
                                           onTabSelect: i,
                                           selectedTab: n
                                       })

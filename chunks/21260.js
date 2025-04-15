@@ -9,9 +9,10 @@ var r = n(200651),
     o = n(120356),
     a = n.n(o),
     s = n(481060),
-    l = n(388032),
-    c = n(831704);
-function u(e, t, n) {
+    l = n(393238),
+    c = n(388032),
+    u = n(831704);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +25,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +36,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,29 +53,29 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,7 +84,7 @@ function h(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function g(e) {
     let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: o, overflowWidth: a } = e,
         s = 0,
         l = 0,
@@ -101,35 +102,6 @@ function m(e) {
     }
     return c;
 }
-function g() {
-    let [e, t] = i.useState(0),
-        n = i.useRef(null),
-        r = new Map(),
-        o = new ResizeObserver((e) => {
-            e.forEach((e) => {
-                var t;
-                let { target: n } = e;
-                null == (t = r.get(n)) || t(e);
-            });
-        });
-    return (
-        (0, s.znF)({
-            ref: n,
-            key: 'horizontal-overflow-list',
-            onUpdate: (e) => {
-                var n;
-                let r = null == (n = e.target) ? void 0 : n.getBoundingClientRect();
-                null != r && t(r.width);
-            },
-            resizeObserver: o,
-            listenerMap: r
-        }),
-        {
-            ref: n,
-            width: e
-        }
-    );
-}
 function E(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: o } = e,
         [a, s] = i.useState(0),
@@ -145,7 +117,7 @@ function E(e) {
             var e;
             if (null == d.current) return;
             (l.current.length = n.length), (c.current = null != (e = d.current.getBoundingClientRect().width) ? e : 0);
-            let i = m({
+            let i = g({
                 items: n,
                 maxLines: r,
                 itemGapPx: t,
@@ -169,16 +141,16 @@ function E(e) {
 }
 function b(e) {
     var { items: t, renderItem: n } = e,
-        i = p(e, ['items', 'renderItem']);
+        i = h(e, ['items', 'renderItem']);
     return (0, r.jsx)(
         s.ua7,
-        _(d({}, i), {
+        p(f({}, i), {
             text: (0, r.jsx)('div', {
-                className: c.tooltip,
+                className: u.tooltip,
                 children: t.map(n)
             }),
             'aria-label': 'overflow',
-            children: (e) => (0, r.jsx)('div', _(d({}, e), { children: n(l.NW.formatToPlainString(l.t.vGclWl, { count: t.length })) }))
+            children: (e) => (0, r.jsx)('div', p(f({}, e), { children: n(c.NW.formatToPlainString(c.t.vGclWl, { count: t.length })) }))
         })
     );
 }
@@ -199,17 +171,17 @@ function v(e) {
     return 'string' == typeof e ? e : e.key;
 }
 function O(e) {
-    let { className: t, items: n, renderItem: o, itemGapPx: s = 0, maxLines: u, renderOverflow: d } = e,
-        { ref: f, width: _ } = g(),
+    let { className: t, items: n, renderItem: o, itemGapPx: s = 0, maxLines: d, renderOverflow: f } = e,
+        { ref: _, width: p = 0 } = (0, l.ZP)(),
         {
-            lastVisibleIndex: p,
-            onItemLayout: h,
-            overflowItemsRef: m
+            lastVisibleIndex: h,
+            onItemLayout: m,
+            overflowItemsRef: g
         } = E({
             items: n,
             itemGapPx: s,
-            maxLines: u,
-            containerWidth: _
+            maxLines: d,
+            containerWidth: p
         }),
         O = i.useCallback(
             (e) =>
@@ -219,25 +191,25 @@ function O(e) {
                 }),
             [o]
         ),
-        I = null != d ? d : O,
-        S = i.useMemo(() => n.slice(0, p + 1), [n, p]),
-        T = i.useMemo(() => n.slice(p + 1), [n, p]);
+        I = null != f ? f : O,
+        S = i.useMemo(() => n.slice(0, h + 1), [n, h]),
+        T = i.useMemo(() => n.slice(h + 1), [n, h]);
     return (0, r.jsxs)('div', {
-        className: a()(t, c.items),
-        ref: f,
+        className: a()(t, u.items),
+        ref: _,
         children: [
             (0, r.jsxs)('div', {
                 'aria-hidden': !0,
-                className: c.measurements,
+                className: u.measurements,
                 children: [
                     (0, r.jsx)('div', {
-                        className: c.itemMeasurements,
+                        className: u.itemMeasurements,
                         children: n.map((e, t) =>
                             (0, r.jsx)(
                                 y,
                                 {
                                     index: t,
-                                    onItemLayout: h,
+                                    onItemLayout: m,
                                     children: o(e)
                                 },
                                 v(e)
@@ -245,9 +217,9 @@ function O(e) {
                         )
                     }),
                     (0, r.jsx)('div', {
-                        className: c.overflowMeasurement,
-                        ref: m,
-                        children: o(l.NW.formatToPlainString(l.t.vGclWl, { count: Number('1'.concat(n.length)) }))
+                        className: u.overflowMeasurement,
+                        ref: g,
+                        children: o(c.NW.formatToPlainString(c.t.vGclWl, { count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),

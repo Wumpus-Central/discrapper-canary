@@ -1,29 +1,28 @@
 n.d(t, {
-    O: () => l,
-    h: () => a
+    O: () => c,
+    h: () => l
 }),
     n(388685);
 var r = n(192379),
     s = n(481060),
-    o = n(393238),
-    i = n(87894);
-function a() {
-    let e = r.useRef(null),
-        [t, n] = r.useState('lg'),
-        [s, a] = r.useState(void 0);
-    return (
-        (0, o.P)(e, (e) => {
-            let { width: t, scrollHeight: r } = e;
-            return (a(r), null == t || t > i.j2) ? n('lg') : t > i.Z0 ? n('sm') : n('xs');
-        }),
-        {
-            containerRef: e,
-            size: t,
-            height: s
-        }
-    );
+    o = n(393903),
+    i = n(448986),
+    a = n(87894);
+function l() {
+    let [e, t] = r.useState('lg'),
+        [n, s] = r.useState(void 0),
+        l = (0, i.Z)((e) => {
+            let n = e.target,
+                r = e.contentRect.width;
+            return (s(n.scrollHeight), null == r || r > a.j2) ? t('lg') : r > a.Z0 ? t('sm') : t('xs');
+        });
+    return {
+        containerRef: (0, o.y)(l),
+        size: e,
+        height: n
+    };
 }
-function l(e) {
+function c(e) {
     let { initiallyExpanded: t } = e,
         [n, o] = r.useState(t),
         [i, a] = r.useState(!1),

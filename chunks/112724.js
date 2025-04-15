@@ -1,8 +1,9 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
-    o = n(393903);
-function a(e, t, n) {
+    o = n(393903),
+    a = n(448986);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +16,7 @@ function a(e, t, n) {
         e
     );
 }
-function s(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,12 +27,12 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -43,58 +44,62 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = {
+let d = {
         width: '100%',
         height: '100%',
         display: 'flex'
     },
-    d = {
+    f = {
         width: '100%',
         height: '100%',
         flex: 1
     };
-function f(e) {
+function _(e) {
     return i.forwardRef(function (t, n) {
-        let [a, l] = i.useState({
+        let [s, c] = i.useState({
                 width: 0,
                 height: 0
             }),
-            f = i.useCallback((e) => {
+            _ = (0, a.Z)((e) => {
                 if (null != e) {
-                    let { width: t, height: n } = e.getBoundingClientRect();
-                    l({
+                    let { width: t, height: n } = e;
+                    c({
                         width: t,
                         height: n
                     });
                 }
-            }, []),
-            _ = (0, o.y)(f);
+            }),
+            p = (0, a.Z)((e) => {
+                _(e.contentRect);
+            }),
+            h = (0, o.y)(p);
         return (
             i.useImperativeHandle(n, () => ({
                 triggerResize: () => {
-                    f(_.current);
+                    var e;
+                    _(null == (e = h.current) ? void 0 : e.getBoundingClientRect());
                 }
             })),
             (0, r.jsx)('div', {
-                ref: _,
-                style: u,
+                ref: h,
+                style: d,
                 children: (0, r.jsx)(
                     e,
-                    c(s({}, t), {
-                        width: a.width,
-                        height: a.height,
-                        style: d
+                    u(l({}, t), {
+                        width: s.width,
+                        height: s.height,
+                        style: f
                     })
                 )
             })

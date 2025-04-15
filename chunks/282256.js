@@ -1,19 +1,18 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
     o = n.n(i),
-    a = n(434650),
-    s = n(393903),
-    c = n(448986),
-    u = n(353093),
-    d = n(979264),
-    p = n(464271);
-let f = l.memo(function (e) {
+    a = n(393903),
+    s = n(448986),
+    c = n(353093),
+    u = n(979264),
+    d = n(464271);
+let p = l.memo(function (e) {
     var t,
         n,
-        { children: i, isOverlay: f, contextGuildId: m } = e,
-        g = (function (e, t) {
+        { children: i, isOverlay: p, contextGuildId: f } = e,
+        m = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -32,51 +31,36 @@ let f = l.memo(function (e) {
             }
             return l;
         })(e, ['children', 'isOverlay', 'contextGuildId']);
-    let b = l.useRef(null),
-        [O, y] = l.useState({ maskImage: 'none' }),
-        h = (0, c.Z)(() => {
-            var e, t;
-            if (f) return void y({ maskImage: 'none' });
-            let n = null == (e = v.current) ? void 0 : e.getBoundingClientRect(),
-                r = null == (t = b.current) ? void 0 : t.getBoundingClientRect();
-            if (null == n || null == r) return void y({ maskImage: 'none' });
-            let l = r.right - n.right,
-                i = r.width - l;
-            if (i > r.width) return void y({ maskImage: 'none' });
-            y({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(i, 'px)') });
+    let [g, b] = l.useState({ maskImage: 'none' }),
+        O = l.useRef(null),
+        y = (0, s.Z)(() => {
+            var e, t, n, r;
+            let l = null != (n = null == (e = h.current) ? void 0 : e.getBoundingClientRect()) ? n : null,
+                i = null != (r = null == (t = O.current) ? void 0 : t.getBoundingClientRect()) ? r : null;
+            if (p || null == l || null == i) return void b({ maskImage: 'none' });
+            let o = i.right - l.right,
+                a = i.width - o;
+            if (a > i.width) return void b({ maskImage: 'none' });
+            b({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(a, 'px)') });
         }),
-        v = (0, s.y)(h),
-        j = (0, u.p0)(g.userId, m),
-        S = {
-            handleResize: h,
-            positionTrackerRef: v
-        },
-        P = l.useRef(S);
-    l.useEffect(() => {
-        P.current = S;
-    }),
-        l.useEffect(() => {
-            let { handleResize: e, positionTrackerRef: t } = P.current;
-            null != t.current && e();
-        }, [j]);
-    let N = (0, a.O)(h);
+        h = (0, a.y)(y),
+        v = (0, c.p0)(m.userId, f);
     return (0, r.jsxs)('div', {
-        className: o()(p.container, f && p.isOverlayContainer),
-        ref: v,
+        className: o()(d.container, p && d.isOverlayContainer),
+        ref: h,
         children: [
             (0, r.jsx)('div', {
-                className: p.usernameContainer,
+                className: d.usernameContainer,
                 children: i
             }),
             (0, r.jsx)('div', {
-                className: p.chipletParent,
-                ref: N,
+                className: d.chipletParent,
                 children: (0, r.jsx)('span', {
-                    className: o()(p.chipletContainer, !j && f && p.noPadding),
-                    ref: b,
-                    style: O,
+                    className: o()(d.chipletContainer, !v && p && d.noPadding),
+                    ref: O,
+                    style: g,
                     children: (0, r.jsx)(
-                        d.ZP,
+                        u.ZP,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -101,11 +85,11 @@ let f = l.memo(function (e) {
                                     });
                             }
                             return e;
-                        })({}, g)),
+                        })({}, m)),
                         (n = n =
                             {
-                                contextGuildId: m,
-                                className: o()(g.className, f && p.isOverlayTag)
+                                contextGuildId: f,
+                                className: o()(m.className, p && d.isOverlayTag)
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
