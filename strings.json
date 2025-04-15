@@ -4192,6 +4192,7 @@
   "H8zoFB": "Clears in !!{hours}!! hours",
   "F8TWHx": "Clears in !!{minutes}!! minutes",
   "E45wvL": "Clear after",
+  "HSGxPj": "!!{date}!! at !!{time}!!",
   "Yizuvb": "Clear after {hours, plural, =1 { hour} other { hours} }",
   "/XUoq6": "Clear after {minutes, plural, =1 { minute} other { minutes} }",
   "TOEOaW": "Clear after today",
