@@ -87,44 +87,52 @@ function p(e) {
         [t]
     );
 }
-function b(e, t, n) {
+function b(e, t, n, a) {
     let {
-            canLoadMore: a,
-            loading: d,
-            nextOffset: u,
-            isInitialLoad: h
+            canLoadMore: d,
+            loading: u,
+            nextOffset: h,
+            isInitialLoad: g
         } = (0, s.cj)([m.Z], () => ({
-            loading: m.Z.isLoading(e.id, t, n),
+            loading: m.Z.isLoading(e.id, t, n, a),
             isInitialLoad: m.Z.isInitialLoad,
             canLoadMore: m.Z.canLoadMore,
             nextOffset: m.Z.nextOffset
         })),
-        g = r.useCallback(() => {
-            c.Z.can(v.Pl.READ_MESSAGE_HISTORY, e) && x.Z.loadArchivedThreads(e.guild_id, e.id, t, n, u);
-        }, [e, t, n, u]),
-        f = r.useRef(g);
+        f = r.useCallback(() => {
+            c.Z.can(v.Pl.READ_MESSAGE_HISTORY, e) &&
+                x.Z.loadArchivedThreads({
+                    guildId: e.guild_id,
+                    channelId: e.id,
+                    sortOrder: t,
+                    tagFilter: n,
+                    tagSetting: a,
+                    offset: h
+                });
+        }, [e, t, n, a, h]),
+        j = r.useRef(f);
     return (
         r.useEffect(() => {
-            f.current = g;
+            j.current = f;
         }),
         r.useEffect(() => {
-            h && f.current();
-        }, [e.id, t, n, h]),
+            g && j.current();
+        }, [e.id, t, n, g]),
         r.useEffect(() => {
             i.Z.resort(e.id);
         }, [e.id]),
         {
             threadIds: (0, s.Wu)([m.Z, o.Z, c.Z], () =>
-                l()(m.Z.getThreads(e.id, t, n))
+                l()(m.Z.getThreads(e.id, t, n, a))
                     .filter((e) => {
                         let t = o.Z.getChannel(e);
                         return null != t && c.Z.can(v.Pl.VIEW_CHANNEL, t);
                     })
                     .value()
             ),
-            canLoadMore: a,
-            loading: d || h,
-            loadMore: g
+            canLoadMore: d,
+            loading: u || g,
+            loadMore: f
         }
     );
 }

@@ -281,89 +281,95 @@ let S = {
             })
         );
     },
-    loadArchivedThreads(e, t, n, a, s) {
-        h.Z.isLoading(t, n, a) ||
+    loadArchivedThreads(e) {
+        let { guildId: t, channelId: n, sortOrder: r, tagFilter: a, tagSetting: s, offset: l } = e;
+        h.Z.isLoading(n, r, a, s) ||
             (o.Z.dispatch({
                 type: 'LOAD_ARCHIVED_THREADS',
-                channelId: t,
-                sortOrder: n,
-                tagFilter: a
+                channelId: n,
+                sortOrder: r,
+                tagFilter: a,
+                tagSetting: s
             }),
             i.tn
                 .get({
-                    url: b.ANM.THREAD_SEARCH(t),
+                    url: b.ANM.THREAD_SEARCH(n),
                     query: {
                         archived: !0,
                         sort_by: 'last_message_time',
                         sort_order: 'desc',
                         limit: h.I,
                         tag: a.size > 0 ? Array.from(a).join(',') : void 0,
-                        tag_setting: r.z.MATCH_SOME,
-                        offset: s
+                        tag_setting: s,
+                        offset: l
                     },
                     retries: 2,
                     rejectWithError: !0
                 })
                 .then(
-                    (r) => {
+                    (e) => {
                         let {
-                            body: { threads: i, members: l, has_more: c, first_messages: u, most_recent_messages: d }
-                        } = r;
+                            body: { threads: i, members: c, has_more: u, first_messages: d, most_recent_messages: f }
+                        } = e;
                         null == i
                             ? o.Z.dispatch({
                                   type: 'LOAD_ARCHIVED_THREADS_FAIL',
-                                  channelId: t,
-                                  sortOrder: n,
-                                  tagFilter: a
+                                  channelId: n,
+                                  sortOrder: r,
+                                  tagFilter: a,
+                                  tagSetting: s
                               })
                             : o.Z.dispatch({
                                   type: 'LOAD_ARCHIVED_THREADS_SUCCESS',
-                                  guildId: e,
-                                  channelId: t,
-                                  offset: s,
-                                  sortOrder: n,
+                                  guildId: t,
+                                  channelId: n,
+                                  offset: l,
+                                  sortOrder: r,
                                   tagFilter: a,
+                                  tagSetting: s,
                                   threads: i,
-                                  firstMessages: u,
-                                  mostRecentMessages: d,
-                                  members: (null != l ? l : []).map((e) => (0, E.Z)(e)),
+                                  firstMessages: d,
+                                  mostRecentMessages: f,
+                                  members: (null != c ? c : []).map((e) => (0, E.Z)(e)),
                                   owners: i.map((e) => e.owner).filter(p.lm),
-                                  hasMore: c
+                                  hasMore: u
                               });
                     },
                     () => {
                         o.Z.dispatch({
                             type: 'LOAD_ARCHIVED_THREADS_FAIL',
-                            channelId: t,
-                            sortOrder: n,
-                            tagFilter: a
+                            channelId: n,
+                            sortOrder: r,
+                            tagFilter: a,
+                            tagSetting: s
                         });
                     }
                 ));
     },
     async searchThreads(e, t, n, a) {
-        let s = null != a && a.size > 0 ? Array.from(a).join(',') : void 0,
+        let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.z.MATCH_SOME,
+            l = null != a && a.size > 0 ? Array.from(a).join(',') : void 0,
             {
-                body: { threads: l, members: c, first_messages: u, most_recent_messages: d }
+                body: { threads: c, members: u, first_messages: d, most_recent_messages: f }
             } = await i.tn.get({
                 url: b.ANM.THREAD_SEARCH(t),
                 query: {
                     name: n,
-                    tag: s,
-                    tag_setting: r.z.MATCH_SOME
+                    tag: l,
+                    tag_setting: s
                 },
                 rejectWithError: !1
             });
         return (
             o.Z.dispatch({
                 type: 'LOAD_THREADS_SUCCESS',
-                threads: l,
-                members: c,
+                threads: c,
+                members: u,
                 guildId: e,
-                firstMessages: u,
-                mostRecentMessages: d
+                firstMessages: d,
+                mostRecentMessages: f
             }),
-            l.map((e) => e.id)
+            c.map((e) => e.id)
         );
     }
 };

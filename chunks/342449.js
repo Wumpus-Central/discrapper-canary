@@ -1,77 +1,78 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(200651),
     a = n(192379),
-    l = n(683860),
-    s = n(481060),
-    i = n(235449),
-    o = n(487894),
-    c = n(300234),
-    d = n(388032),
-    u = n(258033);
-let h = new Set();
-function g(e) {
-    let { channel: t, startThread: n, goToThread: g } = e,
-        { joinedThreadIds: f, unjoinedThreadIds: x } = (0, i.FO)(t),
-        { threadIds: j, canLoadMore: v, loading: Z, loadMore: N } = (0, i.qQ)(t, l.z.LATEST_ACTIVITY, h),
-        p = a.useRef(null);
-    (0, i.r7)();
-    let b = a.useCallback(
+    l = n(697988),
+    s = n(683860),
+    i = n(481060),
+    o = n(235449),
+    c = n(487894),
+    d = n(300234),
+    u = n(388032),
+    h = n(258033);
+let g = new Set();
+function m(e) {
+    let { channel: t, startThread: n, goToThread: m } = e,
+        { joinedThreadIds: x, unjoinedThreadIds: j } = (0, o.FO)(t),
+        { threadIds: v, canLoadMore: Z, loading: N, loadMore: p } = (0, o.qQ)(t, s.z.LATEST_ACTIVITY, g, l.z.MATCH_SOME),
+        b = a.useRef(null);
+    (0, o.r7)();
+    let T = a.useCallback(
             (e) => {
-                let t = 0 === e.section ? f : 1 === e.section ? x : j;
+                let t = 0 === e.section ? x : 1 === e.section ? j : v;
                 return (0, r.jsx)(
-                    c.Z,
+                    d.Z,
                     {
                         threadId: t[e.row],
-                        goToThread: g
+                        goToThread: m
                     },
                     ''.concat(e.section, '-').concat(e.row)
                 );
             },
-            [j, f, x, g]
+            [v, x, j, m]
         ),
-        T = a.useCallback((e) => (0 === e.section ? (0, r.jsx)(m, { text: d.NW.formatToPlainString(d.t['4E27f3'], { count: f.length }) }, e.section) : 1 === e.section ? (0, r.jsx)(m, { text: d.NW.formatToPlainString(d.t.csPc4O, { count: x.length }) }, e.section) : (0, r.jsx)(m, { text: d.NW.string(d.t['wUNQ+/']) }, e.section)), [f.length, x.length]),
-        y = a.useCallback((e) => ((1 === e && f.length > 0) || (2 === e && (f.length > 0 || x.length > 0)) ? 64 : 32), [f.length, x.length]),
-        P = a.useCallback(() => {
+        y = a.useCallback((e) => (0 === e.section ? (0, r.jsx)(f, { text: u.NW.formatToPlainString(u.t['4E27f3'], { count: x.length }) }, e.section) : 1 === e.section ? (0, r.jsx)(f, { text: u.NW.formatToPlainString(u.t.csPc4O, { count: j.length }) }, e.section) : (0, r.jsx)(f, { text: u.NW.string(u.t['wUNQ+/']) }, e.section)), [x.length, j.length]),
+        P = a.useCallback((e) => ((1 === e && x.length > 0) || (2 === e && (x.length > 0 || j.length > 0)) ? 64 : 32), [x.length, j.length]),
+        C = a.useCallback(() => {
             var e;
-            let t = null == (e = p.current) ? void 0 : e.getScrollerState();
+            let t = null == (e = b.current) ? void 0 : e.getScrollerState();
             if (null == t) return;
             let n = t.scrollTop + t.offsetHeight;
-            t.scrollHeight - n < 200 && N();
-        }, [N]);
-    if (0 === f.length && 0 === x.length && 0 === j.length)
-        if (Z)
+            t.scrollHeight - n < 200 && p();
+        }, [p]);
+    if (0 === x.length && 0 === j.length && 0 === v.length)
+        if (N)
             return (0, r.jsx)('div', {
-                className: u.list,
-                children: (0, r.jsx)(s.$jN, { className: u.spinner })
+                className: h.list,
+                children: (0, r.jsx)(i.$jN, { className: h.spinner })
             });
         else
             return (0, r.jsx)('div', {
-                className: u.list,
-                children: (0, r.jsx)(o.Z, {
+                className: h.list,
+                children: (0, r.jsx)(c.Z, {
                     channel: t,
-                    header: d.NW.string(d.t.HgTQ8v),
+                    header: u.NW.string(u.t.HgTQ8v),
                     startThread: n
                 })
             });
-    return (0, r.jsx)(s.aVo, {
-        ref: p,
-        className: u.list,
+    return (0, r.jsx)(i.aVo, {
+        ref: b,
+        className: h.list,
         fade: !0,
-        sections: [f.length, x.length, j.length],
-        sectionHeight: y,
+        sections: [x.length, j.length, v.length],
+        sectionHeight: P,
         rowHeight: 80,
-        renderRow: b,
-        renderSection: T,
+        renderRow: T,
+        renderSection: y,
         chunkSize: 20,
-        onScroll: v ? P : void 0
+        onScroll: Z ? C : void 0
     });
 }
-function m(e) {
+function f(e) {
     let { text: t } = e;
-    return (0, r.jsx)(s.Text, {
+    return (0, r.jsx)(i.Text, {
         color: 'header-secondary',
         variant: 'text-xs/bold',
-        className: u.sectionHeader,
+        className: h.sectionHeader,
         children: t
     });
 }
