@@ -68,6 +68,9 @@ class v extends (r = i.ZP.Store) {
     get hasFetchedWallpapers() {
         return 2 === u;
     }
+    get failedToFetchWallpapers() {
+        return 3 === u;
+    }
     get wallpapers() {
         return Object.values(c);
     }
