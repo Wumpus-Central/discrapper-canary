@@ -29,7 +29,6 @@ let d = function (e) {
             })
           ? (0, r.jsx)(o.Z, {
                 textClassName: u.text,
-                emojiClassName: u.customStatusEmoji,
                 activities: n,
                 applicationStream: d,
                 voiceChannel: b,

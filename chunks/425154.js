@@ -20,7 +20,8 @@ e.exports = {
     favoriteIcon: 'favoriteIcon__972a0',
     closeIcon: 'closeIcon__972a0',
     subtext: 'subtext__972a0',
-    mutedEmoji: 'mutedEmoji__972a0',
+    mutedIcon: 'mutedIcon__972a0',
+    activityStatusText: 'activityStatusText__972a0',
     decorator: 'decorator__972a0',
     dm: 'dm__972a0'
 };

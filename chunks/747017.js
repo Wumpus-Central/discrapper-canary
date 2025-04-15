@@ -19,7 +19,7 @@ var r = n(200651),
     y = n(981631),
     v = n(843280);
 function O(e) {
-    let { user: t, activities: n, applicationStream: o, voiceChannel: O, textClassName: I, emojiClassName: S, textSize: T = 'xs', animate: N = !0, hasQuest: A = !1, hideEmoji: C = !1, hideTooltip: R = !1 } = e,
+    let { user: t, activities: n, applicationStream: o, voiceChannel: O, textClassName: I, iconClassName: S, textSize: T = 'xs', animate: N = !0, hasQuest: A = !1, hideEmoji: C = !1, hideTooltip: R = !1 } = e,
         P = 'activity-status-web',
         { blockeeExperimentEnabled: w, blockerExperimentEnabled: D } = (0, u.NR)(P);
     (0, d.Z)(null == t ? void 0 : t.id, P);
@@ -48,6 +48,7 @@ function O(e) {
                     game: null == n ? void 0 : n.find(c.Z),
                     textVariant: 'text-'.concat(T, '/medium'),
                     textClassName: I,
+                    iconClassName: S,
                     hideText: j,
                     hideIcon: k,
                     hideTooltip: R
@@ -64,6 +65,7 @@ function O(e) {
                       activity: e,
                       textVariant: 'text-'.concat(T, '/medium'),
                       textClassName: I,
+                      iconClassName: S,
                       hideText: j,
                       hideIcon: k,
                       hideTooltip: R
@@ -73,6 +75,7 @@ function O(e) {
                         channel: O,
                         textVariant: 'text-'.concat(T, '/medium'),
                         textClassName: I,
+                        iconClassName: S,
                         hideText: j,
                         hideTooltip: R
                     })

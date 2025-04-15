@@ -15,26 +15,27 @@ let _ = function (e) {
     return (0, a.Z)(e) ? (t ? i.iWm : i.jje) : e.type === f.IIU.PLAYING ? i.iWm : e.type === f.IIU.LISTENING ? i.RZG : e.type === f.IIU.WATCHING || e.type === f.IIU.STREAMING ? i.ARS : e.type === f.IIU.COMPETING ? i.iWm : null;
 };
 function p(e) {
-    let { activity: t, textVariant: n, textClassName: i, hideIcon: a = !1, hideText: f = !1, hideTooltip: p = !1 } = e,
-        { enabled: h } = o.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
-        { descriptiveTextEnabled: m } = (0, l.f)({ location: 'PresenceActivityStatus' }),
-        { enabled: g } = (0, s.C)({ location: 'PresenceActivityStatus' });
-    if (a && f) return null;
-    let { text: E, tooltip: b } = (0, c.Z)(t, m || g),
-        y = _(t, h);
+    let { activity: t, textVariant: n, textClassName: i, iconClassName: a, hideIcon: f = !1, hideText: p = !1, hideTooltip: h = !1 } = e,
+        { enabled: m } = o.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
+        { descriptiveTextEnabled: g } = (0, l.f)({ location: 'PresenceActivityStatus' }),
+        { enabled: E } = (0, s.C)({ location: 'PresenceActivityStatus' });
+    if (f && p) return null;
+    let { text: b, tooltip: y } = (0, c.Z)(t, g || E),
+        v = _(t, m);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !a &&
-                null != y &&
-                (0, r.jsx)(u.Z, {
-                    icon: y,
-                    tooltipText: f && !p ? b : void 0
-                }),
             !f &&
+                null != v &&
+                (0, r.jsx)(u.Z, {
+                    icon: v,
+                    tooltipText: p && !h ? y : void 0,
+                    className: a
+                }),
+            !p &&
                 (0, r.jsx)(d.Z, {
                     variant: n,
                     className: i,
-                    children: E
+                    children: b
                 })
         ]
     });

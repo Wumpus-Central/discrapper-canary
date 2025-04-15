@@ -5,18 +5,17 @@ var r = n(200651),
     a = n.n(o),
     s = n(462991);
 let l = i.forwardRef((e, t) => {
-    let { selected: n, muted: i = !1, highlighted: o = !1, wrapContent: l = !1, avatar: c, decorators: u, name: d, subText: f, avatarClassName: _, innerClassName: p } = e;
+    let { muted: n = !1, highlighted: i = !1, avatar: o, decorators: l, name: c, subText: u, avatarClassName: d, innerClassName: f } = e;
     return (0, r.jsxs)('div', {
         ref: t,
-        className: a()(p, s.layout, {
-            [s.muted]: !n && i,
-            [s.highlighted]: o,
-            [s.wrappedLayout]: l
+        className: a()(f, s.layout, {
+            [s.muted]: n,
+            [s.highlighted]: i
         }),
         children: [
             (0, r.jsx)('div', {
-                className: a()(s.avatar, _),
-                children: c
+                className: a()(s.avatar, d),
+                children: o
             }),
             (0, r.jsxs)('div', {
                 className: s.content,
@@ -25,16 +24,16 @@ let l = i.forwardRef((e, t) => {
                         className: s.nameAndDecorators,
                         children: [
                             (0, r.jsx)('div', {
-                                className: a()(s.name, { [s.wrappedName]: l }),
-                                children: d
+                                className: s.name,
+                                children: c
                             }),
-                            u
+                            l
                         ]
                     }),
-                    null != f
+                    null != u
                         ? (0, r.jsx)('div', {
                               className: s.subText,
-                              children: f
+                              children: u
                           })
                         : null
                 ]

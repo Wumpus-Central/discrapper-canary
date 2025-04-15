@@ -52,8 +52,7 @@ let v = (e) => {
                                 'aria-hidden': !0
                             }),
                             name: h.ZP.getName(null, null, t),
-                            innerClassName: E.avatarWithTextInnerClassName,
-                            selected: !1
+                            innerClassName: E.avatarWithTextInnerClassName
                         })
                     }),
                     (0, r.jsx)('div', {
@@ -67,8 +66,7 @@ let v = (e) => {
                                 statusColor: R
                             }),
                             name: (0, r.jsx)('div', { className: o()(E.placeholderUsername, E.placeholderUsernameColor) }),
-                            innerClassName: E.avatarWithTextInnerClassName,
-                            selected: !1
+                            innerClassName: E.avatarWithTextInnerClassName
                         })
                     })
                 ]
