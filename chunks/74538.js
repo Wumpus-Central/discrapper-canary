@@ -29,18 +29,18 @@ n.d(t, {
     Zx: () => eq,
     _O: () => tS,
     a5: () => eG,
-    aS: () => V,
+    aS: () => F,
     al: () => eK,
     aq: () => J,
     bt: () => eA,
     dn: () => eU,
     eP: () => z,
-    fr: () => eV,
+    fr: () => eF,
     gB: () => eQ,
     gq: () => ee,
     gy: () => eC,
     he: () => e1,
-    if: () => eF,
+    if: () => eV,
     jP: () => X,
     k5: () => e0,
     lY: () => eg,
@@ -175,9 +175,9 @@ function B(e) {
         r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = null != (t = _.Z.defaultPaymentSourceId) ? t : void 0,
         o = h.ZP.getPremiumTypeSubscription();
-    return null != o && null != o.paymentSourceId && (i = o.paymentSourceId), V(e, n, r, { paymentSourceId: i });
+    return null != o && null != o.paymentSourceId && (i = o.paymentSourceId), F(e, n, r, { paymentSourceId: i });
 }
-function V(e) {
+function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -218,7 +218,7 @@ function V(e) {
         a)
     );
 }
-function F(e, t) {
+function V(e, t) {
     let n = p.Z.get(e);
     if (null == n) {
         let n = Error('Plan not found');
@@ -239,7 +239,7 @@ function F(e, t) {
 }
 function Z(e) {
     let { paymentSourceId: t, purchaseType: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { purchaseType: S.tuJ.DEFAULT },
-        r = F(e, n);
+        r = V(e, n);
     if (null != t) {
         let i = r.paymentSourcePrices[t];
         if (null == i) {
@@ -922,68 +922,69 @@ function eN(e) {
 }
 function eA(e) {
     var t, n, r;
-    let { subscription: o, user: a, price: s, renewalInvoicePreview: l } = e,
-        { planId: c, additionalPlans: u } = o,
-        d = p.Z.get(c);
-    i()(null != d, 'Missing plan');
-    let f = ed(u),
-        _ = eM(o.planId, o.paymentSourceId, o.currency, a).amount * f;
+    let { subscription: o, user: a, price: s, renewalInvoicePreview: l, fractionalPremiumInfo: c } = e,
+        { planId: u, additionalPlans: d } = o,
+        f = p.Z.get(u);
+    i()(null != f, 'Missing plan');
+    let _ = ed(d),
+        h = eM(o.planId, o.paymentSourceId, o.currency, a).amount * _;
     if (null != l) {
         let e = l.invoiceItems.find((e) => N.Z1.has(e.subscriptionPlanId));
-        null != e && (_ = e.amount);
+        null != e && (h = e.amount);
     }
-    s = null != s ? s : (0, I.T4)(_, o.currency);
-    let h = null == (r = null != (n = null == l ? void 0 : l.taxInclusive) ? n : null == (t = o.latestInvoice) ? void 0 : t.taxInclusive) || r;
+    s = null != s ? s : (0, I.T4)(h, o.currency);
+    let m = null == (r = null != (n = null == l ? void 0 : l.taxInclusive) ? n : null == (t = o.latestInvoice) ? void 0 : t.taxInclusive) || r;
     if (eN(o))
         return o.isPurchasedViaGoogle
-            ? C.NW.format(C.t['3/WTrK'], { quantity: f })
-            : h
+            ? C.NW.format(C.t['3/WTrK'], { quantity: _ })
+            : m
               ? C.NW.format(C.t['0ozBSE'], {
-                    quantity: f,
-                    rate: (0, I.og)(s, d.interval, d.intervalCount)
+                    quantity: _,
+                    rate: (0, I.og)(s, f.interval, f.intervalCount)
                 })
               : C.NW.format(C.t['yjsv/v'], {
-                    quantity: f,
-                    rate: (0, I.og)(s, d.interval, d.intervalCount)
+                    quantity: _,
+                    rate: (0, I.og)(s, f.interval, f.intervalCount)
                 });
     switch (o.status) {
         case S.O0b.ACCOUNT_HOLD:
             return o.isPurchasedViaGoogle
                 ? C.NW.format(C.t.Nlf3nZ, {
-                      quantity: f,
-                      boostQuantity: f
+                      quantity: _,
+                      boostQuantity: _
                   })
-                : h
+                : m
                   ? C.NW.format(C.t.oiRy7u, {
-                        quantity: f,
-                        boostQuantity: f,
-                        rate: (0, I.og)(s, d.interval, d.intervalCount)
+                        quantity: _,
+                        boostQuantity: _,
+                        rate: (0, I.og)(s, f.interval, f.intervalCount)
                     })
                   : C.NW.format(C.t['0QxOAg'], {
-                        quantity: f,
-                        boostQuantity: f,
-                        rate: (0, I.og)(s, d.interval, d.intervalCount)
+                        quantity: _,
+                        boostQuantity: _,
+                        rate: (0, I.og)(s, f.interval, f.intervalCount)
                     });
         case S.O0b.PAUSE_PENDING:
         case S.O0b.PAUSED:
-            return C.NW.string(C.t.CduWAg);
+            if (null != c && !c.isFractionalPremiumActive) return C.NW.string(C.t.CduWAg);
+            return C.NW.format(C.t['5iud9v'], { quantity: _ });
         default:
             return o.isPurchasedViaGoogle
-                ? C.NW.format(C.t['5iud9v'], { quantity: f })
-                : h
+                ? C.NW.format(C.t['5iud9v'], { quantity: _ })
+                : m
                   ? C.NW.format(C.t.eDwrLC, {
-                        quantity: f,
-                        rate: (0, I.og)(s, d.interval, d.intervalCount)
+                        quantity: _,
+                        rate: (0, I.og)(s, f.interval, f.intervalCount)
                     })
                   : C.NW.format(C.t.ijSDcH, {
-                        quantity: f,
-                        rate: (0, I.og)(s, d.interval, d.intervalCount)
+                        quantity: _,
+                        rate: (0, I.og)(s, f.interval, f.intervalCount)
                     });
     }
 }
 function eC(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = null != t ? V(e.id, !1, r, t) : B(e.id, !1, r),
+        i = null != t ? F(e.id, !1, r, t) : B(e.id, !1, r),
         o = (0, I.T4)(i.amount, i.currency);
     return e.currency !== A.pK.USD && !0 === n && (o = o.concat('*')), o;
 }
@@ -1025,7 +1026,7 @@ function ex(e, t, n) {
         }),
         i =
             null == r
-                ? V(n.id, !1, !1, {
+                ? F(n.id, !1, !1, {
                       paymentSourceId: t.paymentSourceId,
                       currency: t.currency
                   }).amount
@@ -1053,7 +1054,7 @@ function eM(e, t, n, r) {
         let t = Error('Unsupported plan');
         throw ((0, m.q2)(t, { tags: { planId: e } }), t);
     }
-    return V(a.id, (0, O.I5)(r), !1, i);
+    return F(a.id, (0, O.I5)(r), !1, i);
 }
 function ek(e) {
     return (
@@ -1150,7 +1151,7 @@ function eB(e) {
             throw Error('Unsupported interval duration.');
     }
 }
-function eV(e) {
+function eF(e) {
     if (null != e && null != e.subscription_trial) {
         let t = e.subscription_trial;
         return eB({
@@ -1160,7 +1161,7 @@ function eV(e) {
     }
     return null;
 }
-function eF(e) {
+function eV(e) {
     let { intervalType: t = N.rV.MONTH, intervalCount: n = 1, capitalize: r = !1 } = e;
     switch (t) {
         case N.rV.DAY:
@@ -1417,7 +1418,7 @@ let tP = Object.freeze({
     isPremium: O.I5,
     isPremiumExactly: O.M5,
     isPremiumEligible: tA,
-    getPrice: V,
+    getPrice: F,
     getDefaultPrice: B,
     getInterval: W,
     getIntervalString: K,

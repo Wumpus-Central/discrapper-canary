@@ -6093,6 +6093,8 @@
   "XSbQZW": "{minutes, plural, =1 {!!{minutes}!! minute} other {!!{minutes}!! minutes} } left",
   "SBd+Bg": "{minutes, plural, other {} }< 1H LEFT",
   "r77oHR": "{minutes, plural, =1 {!!{minutes}!! minute} other {!!{minutes}!! minutes} }",
+  "Hzqe6+": "Are you sure you want to cancel this Server Boost? We’ll smash this gem to pieces.\\n\\nIt will be removed from the associated servers and canceled from your subscription once your Nitro credits end on {expirationDate, date, medium}.\\n\\n",
+  "eb0xgY": "This Server Boost subscription will be canceled when your Nitro credits end on {expirationDate, date, medium}.\\n\\nThe changes to your subscription are reflected below:\\n\\n",
   "gFaKd3": "Boost success!\\n\\nYour remaining Nitro credits will be saved and activated later. [Learn more.](Learn more.)\\n\\n",
   "8Xm6uL": "**{hours, plural, =1 { hour} other { hours} }** of **Nitro credit** will be saved and activated at the end of your billing cycle. Choose a plan to begin now!",
   "J9Lu4u": "!!{hours}!!-hour",

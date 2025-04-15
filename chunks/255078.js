@@ -132,6 +132,9 @@ class m extends o.Z {
     get isPaused() {
         return this.status === u.O0b.PAUSED;
     }
+    get isPausedForFractionalPremium() {
+        return this.status === u.O0b.PAUSED && this.pauseReason === d.Id.FRACTIONAL_PREMIUM;
+    }
     get isPausedAllowsUpdatesButNotResume() {
         return this.status === u.O0b.PAUSED && d.rN.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason);
     }
