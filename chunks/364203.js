@@ -380,7 +380,9 @@ let z = function (e) {
                     is_blur_enabled: x,
                     channel_id: c
                 }),
-                X(c, E.wallpaperId));
+                X(c, E.wallpaperId, () => {
+                    (0, d.showToast)((0, d.createToast)(D.NW.string(D.t.F8FvU1), d.ToastType.FAILURE));
+                }));
         }, [c, E, X, x]),
         ee = i.useCallback(
             (e) => {

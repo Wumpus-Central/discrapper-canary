@@ -75,7 +75,12 @@ function N(e) {
               (S = (0, r.jsx)(l.zxk, {
                   className: v.action,
                   onClick: () => {
-                      g.X(T, A, { shouldClear: !G });
+                      g.X(T, A, {
+                          shouldClear: !G,
+                          onError: () => {
+                              (0, l.showToast)((0, l.createToast)(E.NW.string(E.t.F8FvU1), l.ToastType.FAILURE));
+                          }
+                      });
                   },
                   submitting: D,
                   children: E.NW.string(G ? E.t.o6850d : E.t['/ubFp6'])
