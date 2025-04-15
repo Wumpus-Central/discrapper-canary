@@ -1,92 +1,96 @@
-n.d(t, { s: () => C }), n(388685);
+n.d(t, { s: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
-    l = n(704215),
-    o = n(481060),
-    s = n(605236),
-    a = n(243778),
-    c = n(612659),
-    u = n(436952),
-    d = n(54480),
-    h = n(680783),
-    p = n(13186),
-    f = n(921944),
-    g = n(474936),
-    m = n(388032),
-    b = n(706442),
-    _ = n(777091);
-let y = (e, t) => {
+    l = n(442837),
+    o = n(704215),
+    s = n(481060),
+    a = n(605236),
+    c = n(243778),
+    u = n(612659),
+    d = n(819640),
+    h = n(436952),
+    p = n(54480),
+    f = n(680783),
+    g = n(13186),
+    m = n(981631),
+    b = n(921944),
+    _ = n(474936),
+    y = n(388032),
+    v = n(706442),
+    O = n(777091);
+let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    v = (e) => ('has-wallpaper-nitro' === e ? m.NW.string(m.t.T9dXPj) : m.NW.string(m.t.zyvzQ0)),
-    O = (e) => {
+    S = (e) => ('has-wallpaper-nitro' === e ? y.NW.string(y.t.T9dXPj) : y.NW.string(y.t.zyvzQ0)),
+    j = (e) => {
         switch (e) {
             case 'non-nitro':
-                return m.NW.string(m.t.VU8fxM);
+                return y.NW.string(y.t.VU8fxM);
             case 'no-wallpaper-nitro':
-                return m.NW.string(m.t.BQBNjY);
+                return y.NW.string(y.t.BQBNjY);
             case 'has-wallpaper-nitro':
-                return m.NW.string(m.t.eZMxlZ);
+                return y.NW.string(y.t.eZMxlZ);
         }
     },
-    C = (e) => {
-        let { children: t, channelId: n, selectedChannelId: C } = e,
-            S = (0, s.wE)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            j = C === n,
-            { canAccessPicker: E, entryPoint: x } = (0, d.m)({
+    E = (e) => {
+        let { children: t, channelId: n, selectedChannelId: E } = e,
+            x = (0, a.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+            N = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
+            I = E === n,
+            { canAccessPicker: P, entryPoint: w } = (0, p.m)({
                 location: 'ChatWallpaperDMListCoachmark',
-                selectedChannelId: C
+                selectedChannelId: E
             }),
-            N = x === u.FN.CONTEXT_MENU,
-            [I, P] = (0, a.US)(S && N && j && E ? [l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            w = (0, c.m)(g.p9.TIER_2),
-            Z = (0, h.Z)(n),
-            T = I === l.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
-            A = (0, i.useRef)(null),
-            R = (0, i.useRef)(null),
-            [D, L] = (0, i.useState)(p.U.TOP);
+            Z = w === h.FN.CONTEXT_MENU,
+            [T, A] = (0, c.US)(x && Z && I && P && !N ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            R = (0, u.m)(_.p9.TIER_2),
+            D = (0, f.Z)(n),
+            L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+            k = (0, i.useRef)(null),
+            M = (0, i.useRef)(null),
+            [U, G] = (0, i.useState)(g.U.TOP);
         if (
             ((0, i.useLayoutEffect)(() => {
-                if (null === A.current) return;
+                if (null === k.current) return;
                 let e = () => {
                     var e, t, n;
-                    let r = null == (e = A.current) ? void 0 : e.getBoundingClientRect();
+                    let r = null == (e = k.current) ? void 0 : e.getBoundingClientRect();
                     if (null == r) return;
-                    let i = null != (n = null == (t = R.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
-                    window.innerHeight - r.bottom < i ? L(p.U.BOTTOM) : L(p.U.TOP);
+                    let i = null != (n = null == (t = M.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
+                    window.innerHeight - r.bottom < i ? G(g.U.BOTTOM) : G(g.U.TOP);
                 };
                 return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-            }, [T]),
-            !T)
+            }, [L]),
+            !L)
         )
             return t;
-        let k = () => {
-                P(f.L.USER_DISMISS);
+        let B = () => {
+                A(b.L.USER_DISMISS);
             },
-            M = y(w, null != Z ? Z : null),
-            U = v(M),
-            G = O(M);
+            W = C(R, null != D ? D : null),
+            V = S(W),
+            H = j(W);
         return (0, r.jsx)('div', {
-            ref: A,
-            children: (0, r.jsx)(o.yRy, {
-                align: D,
+            ref: k,
+            children: (0, r.jsx)(s.yRy, {
+                align: U,
                 position: 'right',
-                shouldShow: T,
-                onRequestClose: k,
+                shouldShow: L,
+                onRequestClose: B,
                 renderPopout: () =>
-                    (0, r.jsx)(p.Z, {
-                        ref: R,
-                        onClose: k,
-                        buttonText: m.NW.string(m.t['+IrDzM']),
-                        header: U,
+                    (0, r.jsx)(g.Z, {
+                        ref: M,
+                        onClose: B,
+                        buttonText: y.NW.string(y.t['+IrDzM']),
+                        header: V,
                         art: (0, r.jsx)('img', {
-                            src: _.Z,
+                            src: O.Z,
                             alt: '',
-                            className: b.chatWallpaperDMListCoachmarkArt
+                            className: v.chatWallpaperDMListCoachmarkArt
                         }),
-                        body: G,
-                        align: D
+                        body: H,
+                        align: U
                     }),
                 children: () => t
             })
