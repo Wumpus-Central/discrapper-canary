@@ -121,6 +121,7 @@ let F = function () {
                           tabs: n,
                           icon: c.qDn,
                           children: (0, r.jsx)(S.V9, {
+                              analyticsPage: k.ZY5.GLOBAL_DISCOVERY_QUESTS,
                               cardAlignment: S.ek.END,
                               ctaText: U.NW.string(U.t['J+vlIS']),
                               ctaOnClick: () => {
