@@ -5,22 +5,21 @@ var r = n(442837),
     a = n(158776),
     s = n(979651);
 function l(e) {
-    let { userId: t, guildId: n, surface: l } = e,
-        { voiceState: c, voiceChannel: u } = (0, o.Z)({
+    let { userId: t, guildId: n } = e,
+        { voiceState: l, voiceChannel: c } = (0, o.Z)({
             userId: t,
-            guildId: n,
-            surface: l
+            guildId: n
         }),
-        d = null == u ? void 0 : u.id;
+        u = null == c ? void 0 : c.id;
     return {
-        voiceState: c,
-        voiceChannel: u,
+        voiceState: l,
+        voiceChannel: c,
         voiceActivity: (0, r.e7)([a.Z, s.Z], () => {
-            if (null == t || null == d) return;
+            if (null == t || null == u) return;
             let e = a.Z.findActivity(t, (e) => {
                 if (!(0, i.Z)(e)) return !1;
                 let n = s.Z.getVoiceStateForSession(t, e.session_id);
-                return (null == n ? void 0 : n.channelId) === d;
+                return (null == n ? void 0 : n.channelId) === u;
             });
             return null != e ? e : void 0;
         })

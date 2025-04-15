@@ -219,10 +219,7 @@ function Z(e) {
             };
         }),
         { voiceActivityStatusEnabled: s } = (0, c.U)({ location: 'RecentsChannelHeader' }),
-        { voiceChannel: m } = (0, d.Z)({
-            userId: null == n ? void 0 : n.id,
-            surface: 'recents-channel-header'
-        }),
+        { voiceChannel: m } = (0, d.Z)({ userId: null == n ? void 0 : n.id }),
         f = s ? m : void 0;
     return (0, u.Z)({
         activities: a,

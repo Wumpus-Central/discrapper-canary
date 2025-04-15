@@ -1,40 +1,20 @@
-n.d(t, { Z: () => _ });
-var r = n(192379),
-    i = n(442837),
-    o = n(750881),
-    a = n(592125),
-    s = n(496675),
-    l = n(699516),
-    c = n(979651),
-    u = n(626135),
-    d = n(981631),
-    f = n(231338);
-function _(e) {
-    let { userId: t, guildId: n, surface: _ } = e,
-        { enabled: p, analyticsEligible: h } = (0, o.R4)(_),
-        m = (0, i.e7)([c.Z], () => (null != n && null != t && p ? c.Z.getDiscoverableVoiceState(n, t) : null != n && null != t ? c.Z.getVoiceState(n, t) : null != t && p ? c.Z.getDiscoverableVoiceStateForUser(t) : null != t ? c.Z.getVoiceStateForUser(t) : void 0)),
-        g = (0, i.e7)([c.Z], () => (null != n && null != t ? c.Z.getVoiceState(n, t) : null != t ? c.Z.getVoiceStateForUser(t) : void 0)),
-        E = (0, i.e7)([l.Z], () => (null != t ? l.Z.getRelationshipType(t) : d.OGo.NONE));
-    (0, r.useEffect)(() => {
-        var e;
-        h &&
-            null != g &&
-            u.default.track(d.rMx.USER_VOICE_ACTIVITY_VIEWED, {
-                surface: _,
-                activity_user_id: t,
-                discoverable: null == (e = g.discoverable) || e,
-                relationship_type: E,
-                treatment: p && !1 === g.discoverable ? o.h9.HIDE : o.h9.SHOW
-            });
-    }, [g, h, p, E, _, t]);
-    let b = null == m ? void 0 : m.channelId,
-        y = (0, i.e7)([a.Z], () => {
-            if (null != b) return a.Z.getChannel(b);
+n.d(t, { Z: () => l });
+var r = n(442837),
+    i = n(592125),
+    o = n(496675),
+    a = n(979651),
+    s = n(231338);
+function l(e) {
+    let { userId: t, guildId: n } = e,
+        l = (0, r.e7)([a.Z], () => (null != n && null != t ? a.Z.getDiscoverableVoiceState(n, t) : null != t ? a.Z.getDiscoverableVoiceStateForUser(t) : void 0)),
+        c = null == l ? void 0 : l.channelId,
+        u = (0, r.e7)([i.Z], () => {
+            if (null != c) return i.Z.getChannel(c);
         });
-    return (0, i.e7)([s.Z], () => (null == y ? void 0 : y.isPrivate()) || s.Z.can(f.Pl.VIEW_CHANNEL, y))
+    return (0, r.e7)([o.Z], () => (null == u ? void 0 : u.isPrivate()) || o.Z.can(s.Pl.VIEW_CHANNEL, u))
         ? {
-              voiceState: m,
-              voiceChannel: y
+              voiceState: l,
+              voiceChannel: u
           }
         : {};
 }

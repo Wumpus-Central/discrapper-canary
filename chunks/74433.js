@@ -40,24 +40,23 @@ function c(e, t) {
           })(e.type, e.name, n);
 }
 function u(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = arguments.length > 3 ? arguments[3] : void 0;
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (Array.isArray(e)) {
-        let i = e;
-        null == t || (r && !1 === t.discoverable) || (i = [...i, null]);
-        let l = null;
-        for (let e of i) {
+        let r = e;
+        null != t && !1 !== t.discoverable && (r = [...r, null]);
+        let i = null;
+        for (let e of r) {
             let r = c(e, t, n);
             if (null != r)
                 return {
                     activity: e,
                     activityText: r
                 };
-            (null == e ? void 0 : e.type) === a.IIU.CUSTOM_STATUS && null != e.emoji && (l = e);
+            (null == e ? void 0 : e.type) === a.IIU.CUSTOM_STATUS && null != e.emoji && (i = e);
         }
-        return (null == l ? void 0 : l.emoji) != null
+        return (null == i ? void 0 : i.emoji) != null
             ? {
-                  activity: l,
+                  activity: i,
                   activityText: null
               }
             : null;

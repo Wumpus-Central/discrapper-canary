@@ -11,10 +11,7 @@ var i = n(468363),
 let d = function (e) {
     let { hovered: t, activities: n, applicationStream: d, status: p, user: h, userIgnored: f } = e,
         { voiceActivityStatusEnabled: g } = (0, i.U)({ location: 'StatusText' }),
-        { voiceChannel: m } = (0, a.Z)({
-            userId: null == h ? void 0 : h.id,
-            surface: 'status-text'
-        }),
+        { voiceChannel: m } = (0, a.Z)({ userId: null == h ? void 0 : h.id }),
         b = g ? m : void 0;
     return f
         ? (0, r.jsx)('div', {
@@ -28,7 +25,7 @@ let d = function (e) {
                 voiceChannel: b
             })
           ? (0, r.jsx)(o.Z, {
-                textClassName: u.text,
+                textClassName: u.statusText,
                 activities: n,
                 applicationStream: d,
                 voiceChannel: b,

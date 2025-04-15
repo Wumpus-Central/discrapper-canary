@@ -17,8 +17,7 @@ function p(e) {
         [y] = E,
         { voiceChannel: v } = (0, c.Z)({
             userId: t.id,
-            guildId: h,
-            surface: 'user-profile-featured-activity'
+            guildId: h
         }),
         O = t.id === n.id,
         I = (0, i.e7)([s.Z, a.Z], () => {

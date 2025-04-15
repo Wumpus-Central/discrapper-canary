@@ -26,8 +26,7 @@ function _(e) {
         { live: E, recent: S, stream: T } = (0, u.Z)(n.id),
         { voiceChannel: C, voiceActivity: A } = (0, f.Z)({
             userId: n.id,
-            guildId: O,
-            surface: 'user-profile-modal-activity'
+            guildId: O
         }),
         L = (0, o.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
         w = n.id === t.id,

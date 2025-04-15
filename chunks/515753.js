@@ -534,10 +534,7 @@ let eu =
                       [t, c, a]
                   ),
                   { voiceActivityStatusEnabled: u } = (0, b.U)({ location: 'PrivateChannel' }),
-                  { voiceChannel: g } = (0, N.Z)({
-                      userId: c,
-                      surface: 'private-channel'
-                  }),
+                  { voiceChannel: g } = (0, N.Z)({ userId: c }),
                   p = (0, w.K)({
                       location: 'PrivateChannel',
                       user: s,
