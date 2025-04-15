@@ -31,7 +31,9 @@ function d(e) {
     let h = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
         [f, p] = l.useState(!1),
         g = l.useCallback(() => {
-            p(!0), (0, s.JG)(h), null == i || i();
+            (0, s.JG)(h, () => {
+                p(!0), null == i || i();
+            });
         }, [i, h]),
         N = f ? a.owK : a.TIy;
     return (0, r.jsx)(a.P3F, {

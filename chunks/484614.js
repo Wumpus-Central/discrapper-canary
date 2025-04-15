@@ -69,9 +69,14 @@ class d extends (r = i.PureComponent) {
         );
     }
     handleCopy(e) {
-        let { onCopy: t, delay: s = 1000 } = this.props,
-            r = (0, a.JG)(e);
-        this.setState({ mode: r ? l.kO8.Modes.SUCCESS : l.kO8.Modes.ERROR }), this._timeout.start(s, () => this.setState({ mode: l.kO8.Modes.DEFAULT })), null == t || t(e);
+        let { onCopy: t, delay: s = 1000 } = this.props;
+        (0, a.JG)(
+            e,
+            () => this.setState({ mode: l.kO8.Modes.SUCCESS }),
+            () => this.setState({ mode: l.kO8.Modes.ERROR })
+        ),
+            this._timeout.start(s, () => this.setState({ mode: l.kO8.Modes.DEFAULT })),
+            null == t || t(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {

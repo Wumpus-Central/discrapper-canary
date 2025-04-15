@@ -112,12 +112,11 @@ function w(e) {
                               referrerId: null == V ? void 0 : V.id
                           })
                         : (0, p.J)(T({ id: l.id }, W));
-                    (0, v.JG)(e),
+                    (0, v.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.NW.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
                         C.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
-                        }),
-                        (0, s.showToast)((0, s.createToast)(I.NW.string(I.t['L/PwZW']), s.ToastType.SUCCESS));
+                        });
                 },
                 className: o()(S.clickable, R),
                 'aria-label': I.NW.string(I.t.WqhZsr),

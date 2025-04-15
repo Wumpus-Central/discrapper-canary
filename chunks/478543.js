@@ -24,7 +24,10 @@ function v(e) {
         [n, o] = i.useState(!1),
         s = i.useRef(void 0),
         l = i.useCallback(() => {
-            n || ((0, _.JG)(t) && o(!0), (s.current = setTimeout(() => o(!1), 2000)));
+            n ||
+                (0, _.JG)(t, () => {
+                    o(!0), (s.current = setTimeout(() => o(!1), 2000));
+                });
         }, [t, n]);
     return (
         i.useEffect(() => () => clearTimeout(s.current), []),

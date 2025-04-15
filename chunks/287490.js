@@ -75,14 +75,15 @@ function N(e) {
         ),
         S = i.useCallback(
             (e) => {
-                (0, g.JG)((0, c.sZ)(s)) &&
-                    ((0, o.showToast)({
+                (0, g.JG)((0, c.sZ)(s), () => {
+                    (0, o.showToast)({
                         id: 'experiment-link-copied',
                         message: 'Copied experiment link',
                         type: o.ToastType.SUCCESS
                     }),
-                    e.preventDefault(),
-                    e.stopPropagation());
+                        e.preventDefault(),
+                        e.stopPropagation();
+                });
             },
             [s]
         ),

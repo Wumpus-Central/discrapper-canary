@@ -254,7 +254,7 @@ function R(e) {
                 'media-viewer-details'
             );
         })(r);
-    async function f() {
+    async function b() {
         (0, S.yg)(S.uG.COPY_IMAGE_PRESSED);
         let e = (0, m.s$)(r.url);
         try {
@@ -278,7 +278,7 @@ function R(e) {
                                 label: T.NW.string(T.t.tvUqWl),
                                 id: 'media-viewer-copy-image',
                                 icon: s.TIy,
-                                action: f
+                                action: b
                             },
                             'media-viewer-copy-image'
                         ),
@@ -293,7 +293,7 @@ function R(e) {
                                     var e;
                                     (0, S.yg)(S.uG.COPY_LINK_PRESSED);
                                     let t = (0, m.s$)(null != (e = r.original) ? e : r.url);
-                                    O.isPlatformEmbedded ? h.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, s.showToast)((0, s.createToast)(T.NW.string(T.t['L/PwZW']), s.ToastType.SUCCESS));
+                                    (0, f.JG)(t, () => (0, s.showToast)((0, s.createToast)(T.NW.string(T.t['L/PwZW']), s.ToastType.SUCCESS)));
                                 }
                             },
                             'media-viewer-copy-link'
@@ -307,12 +307,13 @@ function R(e) {
 }
 function k(e, t, n) {
     let o = r.useCallback((e) => {
-        (0, f.JG)(e),
+        (0, f.JG)(e, () =>
             (0, s.showToast)({
                 message: T.NW.string(T.t.mGZ66O),
                 type: s.ToastType.SUCCESS,
                 id: 'media-viewer-detail-copied'
-            });
+            })
+        );
     }, []);
     return (r) =>
         null != r

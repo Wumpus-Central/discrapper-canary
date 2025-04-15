@@ -1,4 +1,4 @@
-t.d(s, { default: () => m }), t(388685), t(457542), t(953529);
+t.d(s, { default: () => u }), t(388685), t(457542), t(953529);
 var n = t(200651),
     o = t(192379),
     i = t(544891),
@@ -21,20 +21,24 @@ function N(e) {
                 mode: i,
                 supportsCopy: a.wS,
                 onCopy: () => {
-                    (0, a.JG)(t), r(l.uA3.SUCCESS);
+                    (0, a.JG)(
+                        t,
+                        () => r(l.uA3.SUCCESS),
+                        () => r(l.uA3.ERROR)
+                    );
                 }
             })
         ]
     });
 }
-function m(e) {
+function u(e) {
     let { onClose: s, transitionState: t } = e,
-        [a, m] = o.useState(''),
-        [u, j] = o.useState(''),
+        [a, u] = o.useState(''),
+        [m, j] = o.useState(''),
         [k, _] = o.useState(null),
         [g, p] = o.useState(!1),
         [C, v] = o.useState('DOMAIN'),
-        b = () => {
+        R = () => {
             p(!0),
                 _(null),
                 i.tn
@@ -81,7 +85,7 @@ function m(e) {
                         id: 'DOMAIN',
                         children: (0, n.jsxs)('form', {
                             onSubmit: (e) => {
-                                e.preventDefault(), b();
+                                e.preventDefault(), R();
                             },
                             children: [
                                 (0, n.jsxs)(l.hzk, {
@@ -97,7 +101,7 @@ function m(e) {
                                             title: x.NW.string(x.t['4jIAa2']),
                                             error: k,
                                             children: (0, n.jsx)(l.oil, {
-                                                onChange: m,
+                                                onChange: u,
                                                 placeholder: c.pL,
                                                 maxLength: 253,
                                                 value: a,
@@ -163,7 +167,7 @@ function m(e) {
                                                             }),
                                                             (0, n.jsx)(N, {
                                                                 name: x.NW.string(x.t.PVLriY),
-                                                                value: u
+                                                                value: m
                                                             })
                                                         ]
                                                     })
@@ -211,7 +215,7 @@ function m(e) {
                                             }),
                                             (0, n.jsx)(l.zxk, {
                                                 submitting: g,
-                                                onClick: b,
+                                                onClick: R,
                                                 children: x.NW.string(x.t['13ofGh'])
                                             })
                                         ]
@@ -240,7 +244,7 @@ function m(e) {
                                             }),
                                             (0, n.jsx)(N, {
                                                 name: x.NW.string(x.t.PVLriY),
-                                                value: u
+                                                value: m
                                             })
                                         ]
                                     }),
@@ -279,7 +283,7 @@ function m(e) {
                                             }),
                                             (0, n.jsx)(l.zxk, {
                                                 submitting: g,
-                                                onClick: b,
+                                                onClick: R,
                                                 children: x.NW.string(x.t['13ofGh'])
                                             })
                                         ]

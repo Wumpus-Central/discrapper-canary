@@ -36,12 +36,13 @@ function E(e, t) {
 function b(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
-            (0, l.JG)(t) &&
+            (0, l.JG)(t, () =>
                 (0, a.showToast)({
                     id: 'experiment-link-copied',
                     message: 'Copied experiment link',
                     type: a.ToastType.SUCCESS
-                });
+                })
+            );
         }, [t]);
     return (0, r.jsx)(a.P3F, {
         className: _.copyLinkButton,

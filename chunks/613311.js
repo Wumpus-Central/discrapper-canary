@@ -443,13 +443,15 @@ class ed extends i.PureComponent {
             }),
             es(this, 'copyCurrentUrl', () => {
                 var e;
-                let { location: t } = this.props;
-                (0, G.JG)(((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e))),
+                let { location: t } = this.props,
+                    n = ((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e));
+                (0, G.JG)(n, () =>
                     this.setState({ showLinkCopied: !0 }, () => {
                         this.showCopyLinkTextTimeout.start(1500, () => {
                             this.setState({ showLinkCopied: !1 });
                         });
-                    });
+                    })
+                );
             }),
             es(this, 'handleCreateInstantInvite', () => {
                 let { channel: e, guild: t } = this.props;

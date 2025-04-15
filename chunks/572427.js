@@ -11,14 +11,12 @@ function u(e, t, n) {
         { isMember: s } = (0, o.Z)(t, e);
     if (!s) return null;
     function d() {
-        let r = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (0, i.JG)(
-            ''
+        let r = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            o = ''
                 .concat(location.protocol, '//')
                 .concat(location.host)
-                .concat(c.Z5c.GUILD_EVENT_DETAILS(t, e, r ? null : n))
-        ),
-            (0, l.showToast)((0, l.createToast)(a.NW.string(a.t['L/PwZW']), l.ToastType.SUCCESS));
+                .concat(c.Z5c.GUILD_EVENT_DETAILS(t, e, r ? null : n));
+        (0, i.JG)(o, () => (0, l.showToast)((0, l.createToast)(a.NW.string(a.t['L/PwZW']), l.ToastType.SUCCESS)));
     }
     return (0, r.jsx)(l.sNh, {
         id: a.NW.string(a.t['9o+VKy']),

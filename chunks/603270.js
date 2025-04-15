@@ -345,7 +345,9 @@ function k(e) {
                             size: s.PhG.ICON,
                             'aria-label': T.NW.string(T.t.WqhZsr),
                             onClick: () => {
-                                (0, v.JG)(a), (0, s.showToast)((0, s.createToast)(T.NW.string(T.t['L/PwZW']), s.ToastType.SUCCESS)), c();
+                                (0, v.JG)(a, () => {
+                                    (0, s.showToast)((0, s.createToast)(T.NW.string(T.t['L/PwZW']), s.ToastType.SUCCESS)), c();
+                                });
                             },
                             children: (0, r.jsx)(s.xPt, { size: 'xs' })
                         })

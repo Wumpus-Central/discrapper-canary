@@ -11,16 +11,14 @@ var r = n(200651),
 function m(e) {
     let { skuId: t, tab: n } = e,
         m = i.useCallback(() => {
-            l.default.track(c.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
-                (0, s.JG)(
-                    ''
-                        .concat(location.protocol, '//')
-                        .concat(location.host)
-                        .concat(c.Z5c.COLLECTIBLES_SHOP)
-                        .concat((0, o.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
-                        .concat(t)
-                ),
-                (0, a.showToast)((0, a.createToast)(u.NW.string(u.t['L/PwZW']), a.ToastType.SUCCESS));
+            l.default.track(c.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t });
+            let e = ''
+                .concat(location.protocol, '//')
+                .concat(location.host)
+                .concat(c.Z5c.COLLECTIBLES_SHOP)
+                .concat((0, o.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
+                .concat(t);
+            (0, s.JG)(e, () => (0, a.showToast)((0, a.createToast)(u.NW.string(u.t['L/PwZW']), a.ToastType.SUCCESS)));
         }, [t, n]);
     return (0, r.jsx)(a.zxk, {
         'aria-label': u.NW.string(u.t.WqhZsr),
