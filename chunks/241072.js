@@ -10,7 +10,6 @@ e.exports = {
     layout: 'layout__91a9d',
     wrappedLayout: 'wrappedLayout__91a9d',
     selected: 'selected__91a9d',
-    wrapperPlated: 'wrapperPlated__91a9d',
     content: 'content__91a9d',
     name: 'name__91a9d',
     wrappedName: 'wrappedName__91a9d',

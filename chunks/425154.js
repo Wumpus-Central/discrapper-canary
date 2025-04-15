@@ -22,6 +22,5 @@ e.exports = {
     subtext: 'subtext__972a0',
     mutedEmoji: 'mutedEmoji__972a0',
     decorator: 'decorator__972a0',
-    platedWrapper: 'platedWrapper__972a0',
     dm: 'dm__972a0'
 };

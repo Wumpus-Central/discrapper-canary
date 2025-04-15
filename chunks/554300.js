@@ -89,8 +89,7 @@ let E = i.forwardRef(function (e, t) {
         [d.highlighted]: R,
         [d.active]: O,
         [null != N ? N : '']: O,
-        [d.clickable]: !O && (null != S || null != y),
-        [d.wrapperPlated]: null != p
+        [d.clickable]: !O && (null != S || null != y)
     })),
         (w['aria-selected'] = null != (n = w['aria-selected']) ? n : O);
     let D = i.useRef(null),
