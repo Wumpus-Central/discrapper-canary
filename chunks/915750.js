@@ -1,9 +1,9 @@
 n.d(t, {
-    B5: () => T,
-    PI: () => v,
-    WD: () => C,
-    aM: () => R,
-    ui: () => P
+    B5: () => N,
+    PI: () => O,
+    WD: () => R,
+    aM: () => P,
+    ui: () => w
 }),
     n(388685),
     n(642613),
@@ -12,15 +12,16 @@ var r = n(200651),
     i = n(192379),
     o = n(772848),
     a = n(286379),
-    s = n(110924),
-    l = n(797614),
-    c = n(617136),
-    u = n(113434),
-    d = n(918701),
-    f = n(882198),
-    _ = n(5881),
-    p = n(981631);
-function h(e, t, n) {
+    s = n(493773),
+    l = n(110924),
+    c = n(797614),
+    u = n(617136),
+    d = n(113434),
+    f = n(918701),
+    _ = n(882198),
+    p = n(5881),
+    h = n(981631);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +45,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,66 +62,66 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = 60,
-    y = 1,
-    v = 0.5,
-    O = new Set();
-function I(e, t) {
+let y = 60,
+    v = 1,
+    O = 0.5,
+    I = new Set();
+function S(e, t) {
     return ''.concat(e, '_').concat(t);
 }
-class S {
+class T {
     getId() {
         return this.id;
     }
     getQuestContentPosition() {
         return this.questContentPosition;
     }
-    constructor({ questOrQuests: e, questContent: t, adDecisionData: n, triggeredByStatusChange: r, trackGuildAndChannelMetadata: i, questContentPosition: s, questContentRowIndex: u, minViewTimeSeconds: g = y }) {
-        var T = this;
-        h(this, 'id', void 0),
-            h(this, 'quests', void 0),
-            h(this, 'questContent', void 0),
-            h(this, 'triggeredByStatusChange', void 0),
-            h(this, 'trackGuildAndChannelMetadata', void 0),
-            h(this, 'questContentPosition', void 0),
-            h(this, 'questContentRowIndex', void 0),
-            h(this, 'adDecisionData', void 0),
-            h(this, 'heartbeatTimeoutId', void 0),
-            h(this, 'lastBeatTime', void 0),
-            h(this, 'minViewTimeReachedTimeoutId', void 0),
-            h(this, 'minViewTimeSeconds', void 0),
-            h(this, 'minViewportPercentage', void 0),
-            h(this, 'isRunning', !1),
-            h(this, 'onMinViewTimeReached', () => {
+    constructor({ questOrQuests: e, questContent: t, adDecisionData: n, triggeredByStatusChange: r, trackGuildAndChannelMetadata: i, questContentPosition: s, questContentRowIndex: l, minViewTimeSeconds: d = v }) {
+        var E = this;
+        m(this, 'id', void 0),
+            m(this, 'quests', void 0),
+            m(this, 'questContent', void 0),
+            m(this, 'triggeredByStatusChange', void 0),
+            m(this, 'trackGuildAndChannelMetadata', void 0),
+            m(this, 'questContentPosition', void 0),
+            m(this, 'questContentRowIndex', void 0),
+            m(this, 'adDecisionData', void 0),
+            m(this, 'heartbeatTimeoutId', void 0),
+            m(this, 'lastBeatTime', void 0),
+            m(this, 'minViewTimeReachedTimeoutId', void 0),
+            m(this, 'minViewTimeSeconds', void 0),
+            m(this, 'minViewportPercentage', void 0),
+            m(this, 'isRunning', !1),
+            m(this, 'onMinViewTimeReached', () => {
                 this.quests.forEach((e) => {
-                    (0, _.T)().info(
+                    (0, p.T)().info(
                         ''
                             .concat(e.config.messages.questName, ' Quest viewed for at least ')
                             .concat(this.minViewTimeSeconds, 's at ')
-                            .concat((0, c._b)(this.questContent)),
+                            .concat((0, u._b)(this.questContent)),
                         { impressionId: this.id }
                     );
                     let t = !1,
-                        n = (0, d.Zp)(this.questContent);
+                        n = (0, f.Zp)(this.questContent);
                     if (null != n) {
-                        let r = I(e.id, n);
-                        (t = !O.has(r) && (0, d.VB)(this.questContent)) && O.add(r);
+                        let r = S(e.id, n);
+                        (t = !I.has(r) && (0, f.VB)(this.questContent)) && I.add(r);
                     }
-                    (0, c.dA)({
+                    (0, u.dA)({
                         questId: e.id,
-                        event: p.rMx.QUEST_CONTENT_VIEWED,
-                        properties: m(
+                        event: h.rMx.QUEST_CONTENT_VIEWED,
+                        properties: g(
                             {
                                 min_view_time_seconds: this.minViewTimeSeconds,
                                 min_viewport_percentage: this.minViewportPercentage,
@@ -133,41 +134,41 @@ class S {
                     });
                 });
             }),
-            h(this, 'beat', function () {
+            m(this, 'beat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                T.quests.forEach((t) => {
-                    if (null != T.lastBeatTime) {
-                        let n = Math.round(Date.now() - T.lastBeatTime);
-                        (0, _.T)().info(
+                E.quests.forEach((t) => {
+                    if (null != E.lastBeatTime) {
+                        let n = Math.round(Date.now() - E.lastBeatTime);
+                        (0, p.T)().info(
                             ''
                                 .concat(t.config.messages.questName, ' Quest impression ')
                                 .concat(e ? 'terminal ' : '', 'heartbeat: ')
                                 .concat(n, 'ms since last heartbeat'),
-                            { impressionId: T.id }
+                            { impressionId: E.id }
                         ),
-                            (0, c.dA)({
+                            (0, u.dA)({
                                 questId: t.id,
-                                event: p.rMx.QUEST_CONTENT_VIEW_TIME,
-                                properties: m(
+                                event: h.rMx.QUEST_CONTENT_VIEW_TIME,
+                                properties: g(
                                     {
                                         is_termination_beat: e,
                                         viewed_time_ms: n,
-                                        triggered_by_status_change: T.triggeredByStatusChange
+                                        triggered_by_status_change: E.triggeredByStatusChange
                                     },
-                                    T.commonProperties(t)
+                                    E.commonProperties(t)
                                 ),
-                                trackGuildAndChannelMetadata: T.trackGuildAndChannelMetadata
+                                trackGuildAndChannelMetadata: E.trackGuildAndChannelMetadata
                             });
                     }
                 }),
-                    (T.lastBeatTime = Date.now());
+                    (E.lastBeatTime = Date.now());
             }),
-            h(this, 'commonProperties', (e) => m(E(m({ impression_id: this.id }, (0, d.eE)(this.adDecisionData)), { quest_status: (0, c.uk)(e) }), (0, c.mH)(this.questContent, this.questContentPosition, this.questContentRowIndex))),
-            h(this, 'clone', (e) => {
+            m(this, 'commonProperties', (e) => g(b(g({ impression_id: this.id }, (0, f.eE)(this.adDecisionData)), { quest_status: (0, u.uk)(e) }), (0, u.mH)(this.questContent, this.questContentPosition, this.questContentRowIndex))),
+            m(this, 'clone', (e) => {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
-                    new S({
+                    new T({
                         questContent: this.questContent,
                         adDecisionData: this.adDecisionData,
                         questOrQuests: this.quests,
@@ -178,44 +179,44 @@ class S {
                     })
                 );
             }),
-            h(this, 'start', () => {
+            m(this, 'start', () => {
                 this.stop(!1),
                     (this.lastBeatTime = Date.now()),
-                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * b)),
+                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * y)),
                     (this.minViewTimeReachedTimeoutId = window.setTimeout(this.onMinViewTimeReached, 1000 * this.minViewTimeSeconds)),
                     this.quests.forEach((e) => {
-                        (0, _.T)().info(''.concat(e.config.messages.questName, ' Quest became visible at ').concat((0, c._b)(this.questContent)), { impressionId: this.id }),
-                            (0, c.dA)({
+                        (0, p.T)().info(''.concat(e.config.messages.questName, ' Quest became visible at ').concat((0, u._b)(this.questContent)), { impressionId: this.id }),
+                            (0, u.dA)({
                                 questId: e.id,
-                                event: p.rMx.QUEST_CONTENT_LOADED,
-                                properties: m({ triggered_by_status_change: this.triggeredByStatusChange }, this.commonProperties(e)),
+                                event: h.rMx.QUEST_CONTENT_LOADED,
+                                properties: g({ triggered_by_status_change: this.triggeredByStatusChange }, this.commonProperties(e)),
                                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata
                             });
                     }),
-                    (0, f.a)('QuestImpressionTracker') &&
-                        l.Z.increment({
+                    (0, _.a)('QuestImpressionTracker') &&
+                        c.Z.increment({
                             name: a.V.QUEST_CONTENT_IMPRESSION,
-                            tags: ['quest_content:'.concat((0, c._b)(this.questContent))]
+                            tags: ['quest_content:'.concat((0, u._b)(this.questContent))]
                         }),
                     (this.isRunning = !0);
             }),
-            h(this, 'stop', function () {
+            m(this, 'stop', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e && T.beat(!0), (T.lastBeatTime = void 0), clearInterval(T.heartbeatTimeoutId), clearTimeout(T.minViewTimeReachedTimeoutId), (T.isRunning = !1);
+                e && E.beat(!0), (E.lastBeatTime = void 0), clearInterval(E.heartbeatTimeoutId), clearTimeout(E.minViewTimeReachedTimeoutId), (E.isRunning = !1);
             }),
             (this.id = (0, o.Z)()),
             (this.adDecisionData = n),
             (this.questContent = t),
             (this.questContentPosition = s),
-            (this.minViewTimeSeconds = g),
-            (this.minViewportPercentage = v),
+            (this.minViewTimeSeconds = d),
+            (this.minViewportPercentage = O),
             (this.quests = Array.isArray(e) ? e : [e]),
             (this.trackGuildAndChannelMetadata = i),
             (this.triggeredByStatusChange = r),
-            (this.questContentRowIndex = u);
+            (this.questContentRowIndex = l);
     }
 }
-let T = (e, t) => {
+let N = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -224,39 +225,37 @@ let T = (e, t) => {
             : e.id;
         return ''.concat(n, '_').concat(t);
     },
-    N = (e) => {
-        let t = Array.isArray(e) ? null : (0, c.uk)(e),
-            n = (0, s.Z)(t);
+    A = (e) => {
+        let t = Array.isArray(e) ? null : (0, u.uk)(e),
+            n = (0, l.Z)(t);
         return t !== n;
     },
-    A = i.createContext(void 0);
-function C() {
-    let e = i.useContext(A);
+    C = i.createContext(void 0);
+function R() {
+    let e = i.useContext(C);
     return null == e ? void 0 : e.current;
 }
-function R() {
+function P() {
     var e;
-    return null == (e = C()) ? void 0 : e.getId();
+    return null == (e = R()) ? void 0 : e.getId();
 }
-function P(e) {
-    let { visible: t, visibleChanged: n, reference: o, focused: a, focusedChanged: s, impression: l } = e,
-        c = N(e.questOrQuests),
-        d = (0, u.KZ)(e.questContent);
+function w(e) {
+    let { visible: t, visibleChanged: n, focused: o, reference: a, focusedChanged: l } = e,
+        c = A(e.questOrQuests),
+        u = (0, d.KZ)(e.questContent),
+        f = i.useRef(null);
     return (
-        i.useEffect(
-            () => () => {
-                null != l.current && l.current.stop();
-            },
-            [l]
-        ),
+        (0, s.ZP)(() => () => {
+            null != f.current && f.current.stop();
+        }),
         i.useEffect(() => {
-            let r = a && t,
-                i = (n || s || c) && r,
-                o = ((n || s) && !r) || c;
-            (i || o) && null != l.current && l.current.stop(),
+            let r = o && t,
+                i = (n || l || c) && r,
+                a = ((n || l) && !r) || c;
+            (i || a) && null != f.current && f.current.stop(),
                 i &&
-                    ((l.current = new S({
-                        adDecisionData: d,
+                    ((f.current = new T({
+                        adDecisionData: u,
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -265,11 +264,11 @@ function P(e) {
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         minViewTimeSeconds: e.minViewTimeSeconds
                     })),
-                    l.current.start());
-        }, [a, t, l, s, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, c, e.minViewTimeSeconds, d]),
-        (0, r.jsx)(A.Provider, {
-            value: l,
-            children: e.children(o, l)
+                    f.current.start());
+        }, [o, t, l, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, c, e.minViewTimeSeconds, u]),
+        (0, r.jsx)(C.Provider, {
+            value: f,
+            children: e.children(a, f)
         })
     );
 }

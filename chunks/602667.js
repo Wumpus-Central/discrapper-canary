@@ -70,22 +70,25 @@ let p = (e) => {
     },
     h = () => {
         let e = (0, o.e7)([l.Z], () => l.Z.isFocused()),
-            t = e !== (0, s.Z)(e);
+            t = (0, s.Z)(e),
+            n = e !== t;
         return {
             focused: e,
-            focusedChanged: t
+            focusedChanged: n
         };
-    };
-function m(e) {
-    let { focused: t, focusedChanged: n } = h(),
-        { visible: o, visibleChanged: a, reference: s } = p(e.overrideVisibility),
-        l = _(d({}, e), {
-            focused: t,
-            focusedChanged: n,
-            visible: o,
-            visibleChanged: a,
-            reference: s,
-            impression: i.useRef(null)
-        });
-    return (0, r.jsx)(c.ui, d({}, l), (0, c.B5)(e.questOrQuests, e.questContent));
-}
+    },
+    m = i.memo(function (e) {
+        let { focused: t, focusedChanged: n } = h(),
+            { visible: i, visibleChanged: o, reference: a } = p(e.overrideVisibility);
+        return (0, r.jsx)(
+            c.ui,
+            _(d({}, e), {
+                focused: t,
+                focusedChanged: n,
+                visible: i,
+                visibleChanged: o,
+                reference: a
+            }),
+            (0, c.B5)(e.questOrQuests, e.questContent)
+        );
+    });

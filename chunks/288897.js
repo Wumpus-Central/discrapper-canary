@@ -265,8 +265,12 @@ class P extends i.PureComponent {
         let t = this.containerRef.current;
         if (null != e && null != t)
             for (let n = e.rangeCount - 1; n >= 0; n--) {
-                let r = e.getRangeAt(n);
-                if ((0, p.hasDomParent)(r.startContainer, t) || (!r.collapsed && (0, p.hasDomParent)(r.endContainer, t))) return !0;
+                let r = e.getRangeAt(n),
+                    i = r.startContainer,
+                    o = r.endContainer,
+                    a = r.startOffset,
+                    s = r.endOffset;
+                if ((0, p.hasDomParent)(i, t) || (!(0, p.isDOMRangeCollapsed)(i, a, o, s) && (0, p.hasDomParent)(o, t))) return !0;
             }
         return !1;
     }
@@ -276,16 +280,20 @@ class P extends i.PureComponent {
             r = !1;
         if (null != e && null != t)
             for (let i = e.rangeCount - 1; i >= 0; i--) {
-                let o = e.getRangeAt(i);
-                if ((0, p.hasDomParent)(o.startContainer, t)) {
+                let o = e.getRangeAt(i),
+                    a = o.startContainer,
+                    s = o.endContainer,
+                    l = o.startOffset,
+                    c = o.endOffset;
+                if ((0, p.hasDomParent)(a, t)) {
                     if (r) return !0;
                     n = !0;
                 } else {
                     if (n) return !0;
                     r = !0;
                 }
-                if (!o.collapsed)
-                    if ((0, p.hasDomParent)(o.startContainer, t)) {
+                if (!(0, p.isDOMRangeCollapsed)(a, l, s, c))
+                    if ((0, p.hasDomParent)(a, t)) {
                         if (r) return !0;
                         n = !0;
                     } else {

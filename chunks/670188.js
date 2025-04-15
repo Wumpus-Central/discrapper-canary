@@ -95,119 +95,133 @@ let O = (0, a.pxk)(a.EFr.SIZE_80),
     S = {
         isShown: !1,
         position: void 0
-    };
-function T(e) {
-    var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestOpen: A, onRequestClose: C, onClosePopout: R, shouldShow: P, shouldPreload: w = !0, shouldShowOnHover: D = !1 } = e,
-        L = y(e, ['children', 'userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload', 'shouldShowOnHover']);
-    let x = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        M = (0, o.e7)([c.default], () => (null != p ? p : c.default.getUser(n))),
-        [k, j] = i.useState(!1),
-        [U, G] = i.useState(!1),
-        B = i.useRef(!1),
-        V = i.useRef(void 0),
-        F = i.useRef(void 0),
-        Z = i.useRef(void 0),
-        H = i.useRef(void 0),
-        W = (0, u.Z)(),
-        Y = (0, l.Z)(W),
-        K = i.useCallback(() => {
-            clearTimeout(V.current), clearTimeout(F.current), clearTimeout(Z.current);
-        }, []);
-    if (((0, s.zq)(K), null == M || null == x)) return t(I, S);
-    let z = () =>
-            null != T
-                ? T()
-                : (0, d.Z)(M.id, null != v ? v : M.getAvatarURL(m, O), {
-                      withMutualGuilds: M.id !== x.id,
-                      withMutualFriends: !M.bot && M.id !== x.id,
-                      guildId: m,
-                      channelId: E
-                  }),
-        q = (e) =>
-            (null == H.current && (H.current = Date.now()), U)
-                ? (0, r.jsx)(a.xxz, {})
-                : null != N
-                  ? N(e, H.current)
-                  : (0, r.jsx)(
-                        f.Z,
-                        b(g({}, L, e), {
-                            userId: M.id,
-                            user: M,
-                            guildId: m,
-                            channelId: E,
-                            openedAt: H.current,
-                            closePopout: () => {
-                                e.closePopout(), null == R || R();
-                            }
-                        })
-                    );
-    return D
-        ? (0, r.jsx)('div', {
-              className: h.hoverable,
-              onMouseEnter: () => {
-                  K(),
-                      (B.current = !0),
-                      w &&
-                          (V.current = setTimeout(async () => {
-                              if (B.current)
-                                  try {
-                                      G(!0), await z();
-                                  } finally {
-                                      G(!1);
-                                  }
-                          }, _.a6)),
-                      (F.current = setTimeout(() => {
-                          (0, a.$sL)() || Y.current || (B.current && (null == H.current && (H.current = Date.now()), j(!0)));
-                      }, _.JX));
-              },
-              onMouseLeave: () => {
-                  K(),
-                      (B.current = !1),
-                      (Z.current = setTimeout(() => {
-                          B.current || ((H.current = void 0), j(!1));
-                      }, _.Ig));
-              },
-              children: (0, r.jsx)(
-                  a.yRy,
-                  b(
-                      g(
-                          {
-                              popoutKey: _.Tg,
-                              shouldShow: !0 === P || k,
-                              preload: !w || U || k ? void 0 : z,
-                              renderPopout: q,
-                              onRequestOpen: () => {
-                                  null == H.current && (H.current = Date.now()), null == A || A();
-                              },
-                              onRequestClose: () => {
-                                  (H.current = void 0), j(!1), null == C || C();
-                              }
-                          },
-                          L
-                      ),
-                      { children: t }
-                  )
-              )
-          })
-        : (0, r.jsx)(
-              a.yRy,
-              b(
-                  g(
-                      {
-                          popoutKey: _.Tg,
-                          shouldShow: P,
-                          preload: w ? z : void 0,
-                          renderPopout: q,
-                          onRequestOpen: () => {
-                              null == H.current && (H.current = Date.now()), null == A || A();
-                          },
-                          onRequestClose: () => {
-                              (H.current = void 0), null == C || C();
-                          }
-                      },
-                      L
-                  ),
-                  { children: t }
-              )
-          );
-}
+    },
+    T = i.memo(function (e) {
+        var { children: t, userId: n, user: p, guildId: m, channelId: E, avatarUrl: v, preload: T, renderPopout: N, onRequestOpen: A, onRequestClose: C, onClosePopout: R, shouldShow: P, shouldPreload: w = !0, shouldShowOnHover: D = !1 } = e,
+            L = y(e, ['children', 'userId', 'user', 'guildId', 'channelId', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload', 'shouldShowOnHover']);
+        let x = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+            M = (0, o.e7)([c.default], () => (null != p ? p : c.default.getUser(n))),
+            [k, j] = i.useState(!1),
+            [U, G] = i.useState(!1),
+            B = i.useRef(!1),
+            V = i.useRef(void 0),
+            F = i.useRef(void 0),
+            Z = i.useRef(void 0),
+            H = i.useRef(void 0),
+            W = (0, u.Z)(),
+            Y = (0, l.Z)(W),
+            K = i.useCallback(() => {
+                clearTimeout(V.current), clearTimeout(F.current), clearTimeout(Z.current);
+            }, []);
+        (0, s.zq)(K);
+        let z = i.useCallback(
+                () =>
+                    null == M || null == x
+                        ? Promise.resolve()
+                        : null != T
+                          ? T()
+                          : (0, d.Z)(M.id, null != v ? v : M.getAvatarURL(m, O), {
+                                withMutualGuilds: M.id !== x.id,
+                                withMutualFriends: !M.bot && M.id !== x.id,
+                                guildId: m,
+                                channelId: E
+                            }),
+                [T, x, M, v, m, E]
+            ),
+            q = i.useCallback(
+                (e) =>
+                    null == M
+                        ? null
+                        : (null == H.current && (H.current = Date.now()), U)
+                          ? (0, r.jsx)(a.xxz, {})
+                          : null != N
+                            ? N(e)
+                            : (0, r.jsx)(
+                                  f.Z,
+                                  b(g({}, L, e), {
+                                      userId: M.id,
+                                      user: M,
+                                      guildId: m,
+                                      channelId: E,
+                                      openedAt: H.current,
+                                      closePopout: () => {
+                                          e.closePopout(), null == R || R();
+                                      }
+                                  })
+                              ),
+                [M, U, N, L, m, E, R]
+            ),
+            Q = i.useCallback(() => {
+                K(),
+                    (B.current = !0),
+                    w &&
+                        (V.current = setTimeout(async () => {
+                            if (B.current)
+                                try {
+                                    G(!0), await z();
+                                } finally {
+                                    G(!1);
+                                }
+                        }, _.a6)),
+                    (F.current = setTimeout(() => {
+                        (0, a.$sL)() || Y.current || (B.current && (null == H.current && (H.current = Date.now()), j(!0)));
+                    }, _.JX));
+            }, [K, w, z, Y]),
+            X = i.useCallback(() => {
+                K(),
+                    (B.current = !1),
+                    (Z.current = setTimeout(() => {
+                        B.current || ((H.current = void 0), j(!1));
+                    }, _.Ig));
+            }, [K]);
+        return null == M || null == x
+            ? t(I, S)
+            : D
+              ? (0, r.jsx)('div', {
+                    className: h.hoverable,
+                    onMouseEnter: Q,
+                    onMouseLeave: X,
+                    children: (0, r.jsx)(
+                        a.yRy,
+                        b(
+                            g(
+                                {
+                                    popoutKey: _.Tg,
+                                    shouldShow: !0 === P || k,
+                                    preload: !w || U || k ? void 0 : z,
+                                    renderPopout: q,
+                                    onRequestOpen: () => {
+                                        null == H.current && (H.current = Date.now()), null == A || A();
+                                    },
+                                    onRequestClose: () => {
+                                        (H.current = void 0), j(!1), null == C || C();
+                                    }
+                                },
+                                L
+                            ),
+                            { children: t }
+                        )
+                    )
+                })
+              : (0, r.jsx)(
+                    a.yRy,
+                    b(
+                        g(
+                            {
+                                popoutKey: _.Tg,
+                                shouldShow: P,
+                                preload: w ? z : void 0,
+                                renderPopout: q,
+                                onRequestOpen: () => {
+                                    null == H.current && (H.current = Date.now()), null == A || A();
+                                },
+                                onRequestClose: () => {
+                                    (H.current = void 0), null == C || C();
+                                }
+                            },
+                            L
+                        ),
+                        { children: t }
+                    )
+                );
+    });

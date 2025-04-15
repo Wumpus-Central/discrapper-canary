@@ -134,23 +134,26 @@ let er = K.ZP.getEnableHardwareAcceleration(),
             N = en(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate', 'shouldShowPopoutOnHover']),
             [I, P] = i.useState(!1),
             S = null != j ? new Date(j) : null,
-            Z = (e) => {
-                (0, m.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387)),
-                        t = V.Z.isInChannel(G.Z.getVoiceChannelId(), u.id);
-                    return (n) =>
-                        (0, r.jsx)(
-                            e,
-                            et(ee({}, n), {
-                                user: u,
-                                guildId: C,
-                                channel: _,
-                                showMediaItems: t
-                            })
-                        );
-                });
-            },
-            T = () => {
+            Z = i.useCallback(
+                (e) => {
+                    (0, m.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387)),
+                            t = V.Z.isInChannel(G.Z.getVoiceChannelId(), u.id);
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                et(ee({}, n), {
+                                    user: u,
+                                    guildId: C,
+                                    channel: _,
+                                    showMediaItems: t
+                                })
+                            );
+                    });
+                },
+                [u, C, _]
+            ),
+            T = i.useCallback(() => {
                 let e = '@'.concat(q.ZP.getUserTag(u, { decoration: 'never' })),
                     t = '<@'.concat(u.id, '>');
                 z.S.dispatchToLastSubscribed(X.CkL.INSERT_TEXT, {
@@ -158,18 +161,21 @@ let er = K.ZP.getEnableHardwareAcceleration(),
                     rawText: t
                 }),
                     b.Z.startTyping(_.id);
-            },
-            w = (e) => {
-                null != C &&
-                    (e.stopPropagation(),
-                    (0, A.f)({
-                        guildId: C,
-                        location: {
-                            section: X.jXE.MEMBER_LIST,
-                            object: X.qAy.BOOST_GEM_ICON
-                        }
-                    }));
-            };
+            }, [u, _.id]),
+            w = i.useCallback(
+                (e) => {
+                    null != C &&
+                        (e.stopPropagation(),
+                        (0, A.f)({
+                            guildId: C,
+                            location: {
+                                section: X.jXE.MEMBER_LIST,
+                                object: X.qAy.BOOST_GEM_ICON
+                            }
+                        }));
+                },
+                [C]
+            );
         return (0, r.jsx)(D.Z, {
             user: u,
             guildId: C,
