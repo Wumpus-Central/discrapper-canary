@@ -51154,12 +51154,29 @@ img.thumbnail__0f2e8 {
 }
 
 .loadingContainer_f86e69 {
-    display: flex;
     height: 80vh;
-    justify-content: center;
     max-height: 442px;
     min-height: 300px;
     padding-top: var(--spacing-16)
+}
+
+.errorContainer_f86e69,
+.loadingContainer_f86e69 {
+    display: flex;
+    justify-content: center
+}
+
+.errorContainer_f86e69 {
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px
+}
+
+.errorText_f86e69 {
+    color: var(--text-muted);
+    max-width: 200px;
+    text-align: center
 }
 
 [data-popout-root],

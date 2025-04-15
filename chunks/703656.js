@@ -14,9 +14,16 @@ n.d(t, {
     uv: () => v
 }),
     n(539854),
+    n(190126),
+    n(368063),
+    n(65234),
+    n(111804),
+    n(490233),
+    n(97749),
+    n(388685),
+    n(35282),
     n(49124),
-    n(704826),
-    n(35282);
+    n(704826);
 var a = n(539528),
     s = n(710845),
     l = n(585483),
@@ -70,7 +77,21 @@ function b(e, t) {
     let n = null == t ? void 0 : t.source;
     null == t || delete t.source;
     let a = null == t ? void 0 : t.sourceLocationStack;
-    null == t || delete t.sourceLocationStack, null == t ? r.push(e) : r.push(f({ pathname: e }, t)), (i = n), (o = a);
+    if ((null == t || delete t.sourceLocationStack, null == t)) r.push(e);
+    else {
+        let n = new URL(e, 'https:'.concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT));
+        r.push(
+            f(
+                {
+                    pathname: n.pathname,
+                    search: n.search,
+                    hash: n.hash
+                },
+                t
+            )
+        );
+    }
+    (i = n), (o = a);
 }
 function y(e, t, n, r) {
     _.log(
